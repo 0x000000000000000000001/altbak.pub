@@ -106,7 +106,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Data_Monoid_monoidUnit
-$GLOBALS['Data_Monoid_monoidUnit'] = ["mempty" => $GLOBALS['Data_Unit_unit'], "Semigroup0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Monoid_monoidUnit'] = ["mempty" => $GLOBALS['Data_Unit_unit'], "Semigroup0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Semigroup_semigroupUnit'];
   goto __end;;
@@ -115,7 +115,7 @@ $GLOBALS['Data_Monoid_monoidUnit'] = ["mempty" => $GLOBALS['Data_Unit_unit'], "S
 }];
 
 // Data_Monoid_monoidString
-$GLOBALS['Data_Monoid_monoidString'] = ["mempty" => "", "Semigroup0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Monoid_monoidString'] = ["mempty" => "", "Semigroup0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Semigroup_semigroupString'];
   goto __end;;
@@ -130,7 +130,7 @@ $GLOBALS['Data_Monoid_monoidRecordNil'] = ["memptyRecord" => function($v_0 = nul
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "SemigroupRecord0" => function($dollar__unused_0 = null) {
+}, "SemigroupRecord0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Semigroup_semigroupRecordNil'];
   goto __end;;
@@ -139,7 +139,7 @@ $GLOBALS['Data_Monoid_monoidRecordNil'] = ["memptyRecord" => function($v_0 = nul
 }];
 
 // Data_Monoid_monoidOrdering
-$GLOBALS['Data_Monoid_monoidOrdering'] = ["mempty" => new Phpurs_Data0("EQ"), "Semigroup0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Monoid_monoidOrdering'] = ["mempty" => new Phpurs_Data0("EQ"), "Semigroup0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Ordering_semigroupOrdering'];
   goto __end;;
@@ -148,7 +148,7 @@ $GLOBALS['Data_Monoid_monoidOrdering'] = ["mempty" => new Phpurs_Data0("EQ"), "S
 }];
 
 // Data_Monoid_monoidArray
-$GLOBALS['Data_Monoid_monoidArray'] = ["mempty" => [], "Semigroup0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Monoid_monoidArray'] = ["mempty" => [], "Semigroup0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Semigroup_semigroupArray'];
   goto __end;;
@@ -167,13 +167,13 @@ $GLOBALS['Data_Monoid_memptyRecord'] = function($dict_0 = null) {
 
 // Data_Monoid_monoidRecord
 $GLOBALS['Data_Monoid_monoidRecord'] = (function() {
-  $__fn = function($dollar__unused_0 = null, $dictMonoidRecord_1 = null) use (&$__fn) {
+  $__fn = function($_dollar__unused_0 = null, $dictMonoidRecord_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $semigroupRecord1_2_0 = ["append" => (((($dictMonoidRecord_1)['SemigroupRecord0'])($GLOBALS['Prim_undefined']))['appendRecord'])(new Phpurs_Data0("Proxy"))];
-  $__res = ["mempty" => (($dictMonoidRecord_1)['memptyRecord'])(new Phpurs_Data0("Proxy")), "Semigroup0" => function($dollar__unused_3 = null) use ($semigroupRecord1_2_0) {
+  $semigroupRecord1_2_0 = ["append" => (((($dictMonoidRecord_1)['SemigroupRecord0'])(null))['appendRecord'])(new Phpurs_Data0("Proxy"))];
+  $__res = ["mempty" => (($dictMonoidRecord_1)['memptyRecord'])(new Phpurs_Data0("Proxy")), "Semigroup0" => function($_dollar__unused_3 = null) use ($semigroupRecord1_2_0) {
   $__num = \func_num_args();
   $__res = $semigroupRecord1_2_0;
   goto __end;;
@@ -200,7 +200,7 @@ $GLOBALS['Data_Monoid_mempty'] = function($dict_0 = null) {
 $GLOBALS['Data_Monoid_monoidFn'] = function($dictMonoid_0 = null) {
   $__num = \func_num_args();
   $mempty1_1_0 = ($dictMonoid_0)['mempty'];
-  $__local_var_2_1 = (($dictMonoid_0)['Semigroup0'])($GLOBALS['Prim_undefined']);
+  $__local_var_2_1 = (($dictMonoid_0)['Semigroup0'])(null);
   $semigroupFn_3_2 = ["append" => (function() use ($__local_var_2_1) {
   $__fn = function($f_3 = null, $g_4 = null, $x_5 = null) use ($__local_var_2_1, &$__fn) {
   $__num = \func_num_args();
@@ -220,7 +220,7 @@ $GLOBALS['Data_Monoid_monoidFn'] = function($dictMonoid_0 = null) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Semigroup0" => function($dollar__unused_4 = null) use ($semigroupFn_3_2) {
+}, "Semigroup0" => function($_dollar__unused_4 = null) use ($semigroupFn_3_2) {
   $__num = \func_num_args();
   $__res = $semigroupFn_3_2;
   goto __end;;
@@ -240,21 +240,21 @@ $GLOBALS['Data_Monoid_monoidRecordCons'] = (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $mempty1_2_0 = ($dictMonoid_1)['mempty'];
-  $Semigroup0_3_1 = (($dictMonoid_1)['Semigroup0'])($GLOBALS['Prim_undefined']);
+  $Semigroup0_3_1 = (($dictMonoid_1)['Semigroup0'])(null);
   $__res = (function() use ($Semigroup0_3_1, $dictIsSymbol_0, $mempty1_2_0) {
-  $__fn = function($dollar__unused_4 = null, $dictMonoidRecord_5 = null) use ($Semigroup0_3_1, $dictIsSymbol_0, $mempty1_2_0, &$__fn) {
+  $__fn = function($_dollar__unused_4 = null, $dictMonoidRecord_5 = null) use ($Semigroup0_3_1, $dictIsSymbol_0, $mempty1_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $semigroupRecordCons1_6_2 = (((($GLOBALS['Data_Semigroup_semigroupRecordCons'])($dictIsSymbol_0))($GLOBALS['Prim_undefined']))((($dictMonoidRecord_5)['SemigroupRecord0'])($GLOBALS['Prim_undefined'])))($Semigroup0_3_1);
+  $semigroupRecordCons1_6_2 = (((($GLOBALS['Data_Semigroup_semigroupRecordCons'])($dictIsSymbol_0))(null))((($dictMonoidRecord_5)['SemigroupRecord0'])(null)))($Semigroup0_3_1);
   $__res = ["memptyRecord" => function($v_7 = null) use ($dictIsSymbol_0, $dictMonoidRecord_5, $mempty1_2_0) {
   $__num = \func_num_args();
   $__res = ((($GLOBALS['Record_Unsafe_unsafeSet'])((($dictIsSymbol_0)['reflectSymbol'])(new Phpurs_Data0("Proxy"))))($mempty1_2_0))((($dictMonoidRecord_5)['memptyRecord'])(new Phpurs_Data0("Proxy")));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "SemigroupRecord0" => function($dollar__unused_7 = null) use ($semigroupRecordCons1_6_2) {
+}, "SemigroupRecord0" => function($_dollar__unused_7 = null) use ($semigroupRecordCons1_6_2) {
   $__num = \func_num_args();
   $__res = $semigroupRecordCons1_6_2;
   goto __end;;
@@ -278,45 +278,35 @@ $GLOBALS['Data_Monoid_monoidRecordCons'] = (function() {
 $GLOBALS['Data_Monoid_power'] = function($dictMonoid_0 = null) {
   $__num = \func_num_args();
   $mempty1_1_0 = ($dictMonoid_0)['mempty'];
-  $__local_var_2_1 = (($dictMonoid_0)['Semigroup0'])($GLOBALS['Prim_undefined']);
+  $__local_var_2_1 = (($dictMonoid_0)['Semigroup0'])(null);
   $__res = function($x_3 = null) use ($__local_var_2_1, $mempty1_1_0) {
   $__num = \func_num_args();
-  $go_4_2 = null;
-  $go_4_2 = function($p_5 = null) use ($__local_var_2_1, &$go_4_2, $mempty1_1_0, $x_3) {
+  $go__4_2 = null;
+  $go__4_2 = function($p_5 = null) use ($__local_var_2_1, &$go__4_2, $mempty1_1_0, $x_3) {
   $__num = \func_num_args();
   $__t4 = null;;
   if (($p_5 <= 0)) {
 $__t4 = $mempty1_1_0;
 goto end_branch_4;;
 };
-  switch ($p_5) {
-case 1:
+  if (((($GLOBALS['Data_Eq_eqInt'])['eq'])($p_5))(1)) {
 $__t4 = $x_3;
 goto end_branch_4;;
-break;
-default:
-;
-break;
 };
-  switch ((($GLOBALS['Data_EuclideanRing_intMod'])($p_5))(2)) {
-case 0:
-$x__prime___6_5 = ($go_4_2)(($p_5 / 2));
-$__t4 = ((($__local_var_2_1)['append'])($x__prime___6_5))($x__prime___6_5);
+  if (((($GLOBALS['Data_Eq_eqInt'])['eq'])(((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['mod'])($p_5))(2)))(0)) {
+$x_prime_6_5 = ($go__4_2)(((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['div'])($p_5))(2));
+$__t4 = ((($__local_var_2_1)['append'])($x_prime_6_5))($x_prime_6_5);
 goto end_branch_4;;
-break;
-default:
-;
-break;
 };
-  $x__prime___6_3 = ($go_4_2)(($p_5 / 2));
-  $__t4 = ((($__local_var_2_1)['append'])($x__prime___6_3))(((($__local_var_2_1)['append'])($x__prime___6_3))($x_3));
+  $x_prime_6_3 = ($go__4_2)(((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['div'])($p_5))(2));
+  $__t4 = ((($__local_var_2_1)['append'])($x_prime_6_3))(((($__local_var_2_1)['append'])($x_prime_6_3))($x_3));
   end_branch_4:;
   $__res = $__t4;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go_4_2;
+  $__res = $go__4_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

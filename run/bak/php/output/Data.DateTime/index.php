@@ -195,59 +195,7 @@ $GLOBALS['Data_DateTime_DateTime'] = (function() {
 // Data_DateTime_toRecord
 $GLOBALS['Data_DateTime_toRecord'] = function($v_0 = null) {
   $__num = \func_num_args();
-  $__t0 = null;;
-  if ((is_object((($v_0)->{'value0'})->{'value1'}) && (((($v_0)->{'value0'})->{'value1'})->{'tag'} === "January"))) {
-$__t0 = 1;
-goto end_branch_0;;
-};
-  if ((is_object((($v_0)->{'value0'})->{'value1'}) && (((($v_0)->{'value0'})->{'value1'})->{'tag'} === "February"))) {
-$__t0 = 2;
-goto end_branch_0;;
-};
-  if ((is_object((($v_0)->{'value0'})->{'value1'}) && (((($v_0)->{'value0'})->{'value1'})->{'tag'} === "March"))) {
-$__t0 = 3;
-goto end_branch_0;;
-};
-  if ((is_object((($v_0)->{'value0'})->{'value1'}) && (((($v_0)->{'value0'})->{'value1'})->{'tag'} === "April"))) {
-$__t0 = 4;
-goto end_branch_0;;
-};
-  if ((is_object((($v_0)->{'value0'})->{'value1'}) && (((($v_0)->{'value0'})->{'value1'})->{'tag'} === "May"))) {
-$__t0 = 5;
-goto end_branch_0;;
-};
-  if ((is_object((($v_0)->{'value0'})->{'value1'}) && (((($v_0)->{'value0'})->{'value1'})->{'tag'} === "June"))) {
-$__t0 = 6;
-goto end_branch_0;;
-};
-  if ((is_object((($v_0)->{'value0'})->{'value1'}) && (((($v_0)->{'value0'})->{'value1'})->{'tag'} === "July"))) {
-$__t0 = 7;
-goto end_branch_0;;
-};
-  if ((is_object((($v_0)->{'value0'})->{'value1'}) && (((($v_0)->{'value0'})->{'value1'})->{'tag'} === "August"))) {
-$__t0 = 8;
-goto end_branch_0;;
-};
-  if ((is_object((($v_0)->{'value0'})->{'value1'}) && (((($v_0)->{'value0'})->{'value1'})->{'tag'} === "September"))) {
-$__t0 = 9;
-goto end_branch_0;;
-};
-  if ((is_object((($v_0)->{'value0'})->{'value1'}) && (((($v_0)->{'value0'})->{'value1'})->{'tag'} === "October"))) {
-$__t0 = 10;
-goto end_branch_0;;
-};
-  if ((is_object((($v_0)->{'value0'})->{'value1'}) && (((($v_0)->{'value0'})->{'value1'})->{'tag'} === "November"))) {
-$__t0 = 11;
-goto end_branch_0;;
-};
-  if ((is_object((($v_0)->{'value0'})->{'value1'}) && (((($v_0)->{'value0'})->{'value1'})->{'tag'} === "December"))) {
-$__t0 = 12;
-goto end_branch_0;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t0 = null;
-  end_branch_0:;
-  $__res = ["year" => (($v_0)->{'value0'})->{'value0'}, "month" => $__t0, "day" => (($v_0)->{'value0'})->{'value2'}, "hour" => (($v_0)->{'value1'})->{'value0'}, "minute" => (($v_0)->{'value1'})->{'value1'}, "second" => (($v_0)->{'value1'})->{'value2'}, "millisecond" => (($v_0)->{'value1'})->{'value3'}];
+  $__res = ["year" => (($GLOBALS['Data_Date_Component_boundedEnumYear'])['fromEnum'])((($v_0)->{'value0'})->{'value0'}), "month" => (($GLOBALS['Data_Date_Component_boundedEnumMonth'])['fromEnum'])((($v_0)->{'value0'})->{'value1'}), "day" => (($GLOBALS['Data_Date_Component_boundedEnumDay'])['fromEnum'])((($v_0)->{'value0'})->{'value2'}), "hour" => (($GLOBALS['Data_Time_Component_boundedEnumHour'])['fromEnum'])((($v_0)->{'value1'})->{'value0'}), "minute" => (($GLOBALS['Data_Time_Component_boundedEnumMinute'])['fromEnum'])((($v_0)->{'value1'})->{'value1'}), "second" => (($GLOBALS['Data_Time_Component_boundedEnumSecond'])['fromEnum'])((($v_0)->{'value1'})->{'value2'}), "millisecond" => (($GLOBALS['Data_Time_Component_boundedEnumMillisecond'])['fromEnum'])((($v_0)->{'value1'})->{'value3'})];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -265,7 +213,7 @@ $GLOBALS['Data_DateTime_time'] = function($v_0 = null) {
 // Data_DateTime_showDateTime
 $GLOBALS['Data_DateTime_showDateTime'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = (((("(DateTime " . (($GLOBALS['Data_Date_showDate'])['show'])(($v_0)->{'value0'})) . " ") . (($GLOBALS['Data_Time_showTime'])['show'])(($v_0)->{'value1'})) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(DateTime "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Date_showDate'])['show'])(($v_0)->{'value0'})))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Time_showTime'])['show'])(($v_0)->{'value1'})))(")"))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -345,7 +293,7 @@ $GLOBALS['Data_DateTime_eqDateTime'] = ["eq" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Data_Date_eqDate'])['eq'])(($x_0)->{'value0'}))(($y_1)->{'value0'}) && (((((($x_0)->{'value1'})->{'value0'} === (($y_1)->{'value1'})->{'value0'}) && ((($x_0)->{'value1'})->{'value1'} === (($y_1)->{'value1'})->{'value1'})) && ((($x_0)->{'value1'})->{'value2'} === (($y_1)->{'value1'})->{'value2'})) && ((($x_0)->{'value1'})->{'value3'} === (($y_1)->{'value1'})->{'value3'})));
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($GLOBALS['Data_Date_eqDate'])['eq'])(($x_0)->{'value0'}))(($y_1)->{'value0'})))(((($GLOBALS['Data_Time_eqTime'])['eq'])(($x_0)->{'value1'}))(($y_1)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -378,7 +326,7 @@ goto end_branch_1;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Eq0" => function($dollar__unused_0 = null) {
+})(), "Eq0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_DateTime_eqDateTime'];
   goto __end;;
@@ -411,7 +359,7 @@ $GLOBALS['Data_DateTime_date'] = function($v_0 = null) {
 };
 
 // Data_DateTime_boundedDateTime
-$GLOBALS['Data_DateTime_boundedDateTime'] = ["bottom" => new Phpurs_Data2("DateTime", new Phpurs_Data3("Date", -271820, new Phpurs_Data0("January"), 1), new Phpurs_Data4("Time", 0, 0, 0, 0)), "top" => new Phpurs_Data2("DateTime", new Phpurs_Data3("Date", 275759, new Phpurs_Data0("December"), 31), new Phpurs_Data4("Time", 23, 59, 59, 999)), "Ord0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_DateTime_boundedDateTime'] = ["bottom" => new Phpurs_Data2("DateTime", ($GLOBALS['Data_Date_boundedDate'])['bottom'], ($GLOBALS['Data_Time_boundedTime'])['bottom']), "top" => new Phpurs_Data2("DateTime", ($GLOBALS['Data_Date_boundedDate'])['top'], ($GLOBALS['Data_Time_boundedTime'])['top']), "Ord0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_DateTime_ordDateTime'];
   goto __end;;
@@ -426,257 +374,13 @@ $GLOBALS['Data_DateTime_adjust'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__local_var_3_0 = (((($GLOBALS['Data_DateTime_adjustImpl'])($GLOBALS['Data_Maybe_Just']))(new Phpurs_Data0("Nothing")))((($dictDuration_0)['fromDuration'])($d_1)))(($GLOBALS['Data_DateTime_toRecord'])($dt_2));
-  $__t1 = null;;
-  if ((is_object($__local_var_3_0) && (($__local_var_3_0)->{'tag'} === "Just"))) {
-$__t2 = null;;
-if ((((($__local_var_3_0)->{'value0'})['year'] >= -271820) && ((($__local_var_3_0)->{'value0'})['year'] <= 275759))) {
-$__t2 = new Phpurs_Data1("Just", (($__local_var_3_0)->{'value0'})['year']);
-goto end_branch_2;;
-};
-$__t2 = new Phpurs_Data0("Nothing");
-end_branch_2:;
-$__local_var_4_2 = $__t2;
-$__t4 = null;;
-if ((is_object($__local_var_4_2) && (($__local_var_4_2)->{'tag'} === "Just"))) {
-$__t4 = new Phpurs_Data1("Just", ($GLOBALS['Data_Date_exactDate'])(($__local_var_4_2)->{'value0'}));
-goto end_branch_4;;
-};
-$__t4 = new Phpurs_Data0("Nothing");
-end_branch_4:;
-$__local_var_5_4 = $__t4;
-$__local_var_6_6 = match ((($__local_var_3_0)->{'value0'})['month']) { 1 => new Phpurs_Data1("Just", new Phpurs_Data0("January")), 2 => new Phpurs_Data1("Just", new Phpurs_Data0("February")), 3 => new Phpurs_Data1("Just", new Phpurs_Data0("March")), 4 => new Phpurs_Data1("Just", new Phpurs_Data0("April")), 5 => new Phpurs_Data1("Just", new Phpurs_Data0("May")), 6 => new Phpurs_Data1("Just", new Phpurs_Data0("June")), 7 => new Phpurs_Data1("Just", new Phpurs_Data0("July")), 8 => new Phpurs_Data1("Just", new Phpurs_Data0("August")), 9 => new Phpurs_Data1("Just", new Phpurs_Data0("September")), 10 => new Phpurs_Data1("Just", new Phpurs_Data0("October")), 11 => new Phpurs_Data1("Just", new Phpurs_Data0("November")), 12 => new Phpurs_Data1("Just", new Phpurs_Data0("December")), default => new Phpurs_Data0("Nothing") };
-$__t8 = null;;
-if ((is_object($__local_var_5_4) && (($__local_var_5_4)->{'tag'} === "Just"))) {
-$__t9 = null;;
-if ((is_object($__local_var_6_6) && (($__local_var_6_6)->{'tag'} === "Just"))) {
-$__t10 = null;;
-if ((((($__local_var_3_0)->{'value0'})['day'] >= 1) && ((($__local_var_3_0)->{'value0'})['day'] <= 31))) {
-$__t10 = new Phpurs_Data1("Just", ((($__local_var_5_4)->{'value0'})(($__local_var_6_6)->{'value0'}))((($__local_var_3_0)->{'value0'})['day']));
-goto end_branch_10;;
-};
-$__t10 = new Phpurs_Data0("Nothing");
-end_branch_10:;
-$__t9 = $__t10;
-goto end_branch_9;;
-};
-if ((((($__local_var_3_0)->{'value0'})['day'] >= 1) && ((($__local_var_3_0)->{'value0'})['day'] <= 31))) {
-$__t9 = new Phpurs_Data0("Nothing");
-goto end_branch_9;;
-};
-$__t9 = new Phpurs_Data0("Nothing");
-end_branch_9:;
-$__t8 = $__t9;
-goto end_branch_8;;
-};
-if ((is_object($__local_var_5_4) && (($__local_var_5_4)->{'tag'} === "Nothing"))) {
-$__t11 = null;;
-if ((((($__local_var_3_0)->{'value0'})['day'] >= 1) && ((($__local_var_3_0)->{'value0'})['day'] <= 31))) {
-$__t11 = new Phpurs_Data0("Nothing");
-goto end_branch_11;;
-};
-$__t11 = new Phpurs_Data0("Nothing");
-end_branch_11:;
-$__t8 = $__t11;
-goto end_branch_8;;
-};
-if ((((($__local_var_3_0)->{'value0'})['day'] >= 1) && ((($__local_var_3_0)->{'value0'})['day'] <= 31))) {
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t8 = null;
-goto end_branch_8;;
-};
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t8 = null;
-end_branch_8:;
-$__local_var_7_8 = $__t8;
-$__t13 = null;;
-if ((is_object($__local_var_7_8) && (($__local_var_7_8)->{'tag'} === "Just"))) {
-$__t13 = ($__local_var_7_8)->{'value0'};
-goto end_branch_13;;
-};
-if ((is_object($__local_var_7_8) && (($__local_var_7_8)->{'tag'} === "Nothing"))) {
-$__t13 = new Phpurs_Data0("Nothing");
-goto end_branch_13;;
-};
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t13 = null;
-end_branch_13:;
-$__local_var_8_13 = $__t13;
-$__t15 = null;;
-if ((is_object($__local_var_8_13) && (($__local_var_8_13)->{'tag'} === "Just"))) {
-$__t15 = new Phpurs_Data1("Just", ($GLOBALS['Data_DateTime_DateTime'])(($__local_var_8_13)->{'value0'}));
-goto end_branch_15;;
-};
-$__t15 = new Phpurs_Data0("Nothing");
-end_branch_15:;
-$__local_var_9_15 = $__t15;
-$__t17 = null;;
-if ((((($__local_var_3_0)->{'value0'})['hour'] >= 0) && ((($__local_var_3_0)->{'value0'})['hour'] <= 23))) {
-$__t18 = null;;
-if ((((($__local_var_3_0)->{'value0'})['minute'] >= 0) && ((($__local_var_3_0)->{'value0'})['minute'] <= 59))) {
-$__t19 = null;;
-if ((((($__local_var_3_0)->{'value0'})['second'] >= 0) && ((($__local_var_3_0)->{'value0'})['second'] <= 59))) {
-$__t20 = null;;
-if ((((($__local_var_3_0)->{'value0'})['millisecond'] >= 0) && ((($__local_var_3_0)->{'value0'})['millisecond'] <= 999))) {
-$__t21 = null;;
-if ((is_object($__local_var_9_15) && (($__local_var_9_15)->{'tag'} === "Just"))) {
-$__t21 = new Phpurs_Data1("Just", (($__local_var_9_15)->{'value0'})(new Phpurs_Data4("Time", (($__local_var_3_0)->{'value0'})['hour'], (($__local_var_3_0)->{'value0'})['minute'], (($__local_var_3_0)->{'value0'})['second'], (($__local_var_3_0)->{'value0'})['millisecond'])));
-goto end_branch_21;;
-};
-if ((is_object($__local_var_9_15) && (($__local_var_9_15)->{'tag'} === "Nothing"))) {
-$__t21 = new Phpurs_Data0("Nothing");
-goto end_branch_21;;
-};
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t21 = null;
-end_branch_21:;
-$__t20 = $__t21;
-goto end_branch_20;;
-};
-if ((is_object($__local_var_9_15) && (($__local_var_9_15)->{'tag'} === "Just"))) {
-$__t20 = new Phpurs_Data0("Nothing");
-goto end_branch_20;;
-};
-if ((is_object($__local_var_9_15) && (($__local_var_9_15)->{'tag'} === "Nothing"))) {
-$__t20 = new Phpurs_Data0("Nothing");
-goto end_branch_20;;
-};
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t20 = null;
-end_branch_20:;
-$__t19 = $__t20;
-goto end_branch_19;;
-};
-if ((((($__local_var_3_0)->{'value0'})['millisecond'] >= 0) && ((($__local_var_3_0)->{'value0'})['millisecond'] <= 999))) {
-$__t22 = null;;
-if ((is_object($__local_var_9_15) && (($__local_var_9_15)->{'tag'} === "Just"))) {
-$__t22 = new Phpurs_Data0("Nothing");
-goto end_branch_22;;
-};
-if ((is_object($__local_var_9_15) && (($__local_var_9_15)->{'tag'} === "Nothing"))) {
-$__t22 = new Phpurs_Data0("Nothing");
-goto end_branch_22;;
-};
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t22 = null;
-end_branch_22:;
-$__t19 = $__t22;
-goto end_branch_19;;
-};
-if ((is_object($__local_var_9_15) && (($__local_var_9_15)->{'tag'} === "Just"))) {
-$__t19 = new Phpurs_Data0("Nothing");
-goto end_branch_19;;
-};
-if ((is_object($__local_var_9_15) && (($__local_var_9_15)->{'tag'} === "Nothing"))) {
-$__t19 = new Phpurs_Data0("Nothing");
-goto end_branch_19;;
-};
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t19 = null;
-end_branch_19:;
-$__t18 = $__t19;
-goto end_branch_18;;
-};
-if ((((($__local_var_3_0)->{'value0'})['second'] >= 0) && ((($__local_var_3_0)->{'value0'})['second'] <= 59))) {
-$__t23 = null;;
-if ((((($__local_var_3_0)->{'value0'})['millisecond'] >= 0) && ((($__local_var_3_0)->{'value0'})['millisecond'] <= 999))) {
-$__t24 = null;;
-if ((is_object($__local_var_9_15) && (($__local_var_9_15)->{'tag'} === "Just"))) {
-$__t24 = new Phpurs_Data0("Nothing");
-goto end_branch_24;;
-};
-if ((is_object($__local_var_9_15) && (($__local_var_9_15)->{'tag'} === "Nothing"))) {
-$__t24 = new Phpurs_Data0("Nothing");
-goto end_branch_24;;
-};
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t24 = null;
-end_branch_24:;
-$__t23 = $__t24;
-goto end_branch_23;;
-};
-if ((is_object($__local_var_9_15) && (($__local_var_9_15)->{'tag'} === "Just"))) {
-$__t23 = new Phpurs_Data0("Nothing");
-goto end_branch_23;;
-};
-if ((is_object($__local_var_9_15) && (($__local_var_9_15)->{'tag'} === "Nothing"))) {
-$__t23 = new Phpurs_Data0("Nothing");
-goto end_branch_23;;
-};
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t23 = null;
-end_branch_23:;
-$__t18 = $__t23;
-goto end_branch_18;;
-};
-if ((((($__local_var_3_0)->{'value0'})['millisecond'] >= 0) && ((($__local_var_3_0)->{'value0'})['millisecond'] <= 999))) {
-$__t25 = null;;
-if ((is_object($__local_var_9_15) && (($__local_var_9_15)->{'tag'} === "Just"))) {
-$__t25 = new Phpurs_Data0("Nothing");
-goto end_branch_25;;
-};
-if ((is_object($__local_var_9_15) && (($__local_var_9_15)->{'tag'} === "Nothing"))) {
-$__t25 = new Phpurs_Data0("Nothing");
-goto end_branch_25;;
-};
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t25 = null;
-end_branch_25:;
-$__t18 = $__t25;
-goto end_branch_18;;
-};
-if ((is_object($__local_var_9_15) && (($__local_var_9_15)->{'tag'} === "Just"))) {
-$__t18 = new Phpurs_Data0("Nothing");
-goto end_branch_18;;
-};
-if ((is_object($__local_var_9_15) && (($__local_var_9_15)->{'tag'} === "Nothing"))) {
-$__t18 = new Phpurs_Data0("Nothing");
-goto end_branch_18;;
-};
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t18 = null;
-end_branch_18:;
-$__t17 = $__t18;
-goto end_branch_17;;
-};
-if ((((($__local_var_3_0)->{'value0'})['millisecond'] >= 0) && ((($__local_var_3_0)->{'value0'})['millisecond'] <= 999))) {
-$__t26 = null;;
-if ((is_object($__local_var_9_15) && (($__local_var_9_15)->{'tag'} === "Just"))) {
-$__t26 = new Phpurs_Data0("Nothing");
-goto end_branch_26;;
-};
-if ((is_object($__local_var_9_15) && (($__local_var_9_15)->{'tag'} === "Nothing"))) {
-$__t26 = new Phpurs_Data0("Nothing");
-goto end_branch_26;;
-};
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t26 = null;
-end_branch_26:;
-$__t17 = $__t26;
-goto end_branch_17;;
-};
-if ((is_object($__local_var_9_15) && (($__local_var_9_15)->{'tag'} === "Just"))) {
-$__t17 = new Phpurs_Data0("Nothing");
-goto end_branch_17;;
-};
-if ((is_object($__local_var_9_15) && (($__local_var_9_15)->{'tag'} === "Nothing"))) {
-$__t17 = new Phpurs_Data0("Nothing");
-goto end_branch_17;;
-};
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t17 = null;
-end_branch_17:;
-$__t1 = $__t17;
-goto end_branch_1;;
-};
-  if ((is_object($__local_var_3_0) && (($__local_var_3_0)->{'tag'} === "Nothing"))) {
-$__t1 = new Phpurs_Data0("Nothing");
-goto end_branch_1;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t1 = null;
-  end_branch_1:;
-  $__res = $__t1;
+  $__res = ((($GLOBALS['Data_Maybe_bindMaybe'])['bind'])((((($GLOBALS['Data_DateTime_adjustImpl'])($GLOBALS['Data_Maybe_Just']))(new Phpurs_Data0("Nothing")))((($dictDuration_0)['fromDuration'])($d_1)))(($GLOBALS['Data_DateTime_toRecord'])($dt_2))))(function($rec_3 = null) {
+  $__num = \func_num_args();
+  $__res = ((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])(((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_DateTime_DateTime']))(((($GLOBALS['Data_Maybe_bindMaybe'])['bind'])(((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])(((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])(((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Date_exactDate']))((($GLOBALS['Data_Date_Component_boundedEnumYear'])['toEnum'])(($rec_3)['year']))))((($GLOBALS['Data_Date_Component_boundedEnumMonth'])['toEnum'])(($rec_3)['month']))))((($GLOBALS['Data_Date_Component_boundedEnumDay'])['toEnum'])(($rec_3)['day']))))(($GLOBALS['Control_Category_categoryFn'])['identity']))))(((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])(((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])(((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])(((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Time_Time']))((($GLOBALS['Data_Time_Component_boundedEnumHour'])['toEnum'])(($rec_3)['hour']))))((($GLOBALS['Data_Time_Component_boundedEnumMinute'])['toEnum'])(($rec_3)['minute']))))((($GLOBALS['Data_Time_Component_boundedEnumSecond'])['toEnum'])(($rec_3)['second']))))((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'])['toEnum'])(($rec_3)['millisecond'])));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;

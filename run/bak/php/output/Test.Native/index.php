@@ -105,29 +105,7 @@ $GLOBALS['Test_Native_loopNative'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_Test_Native_loopNative_v_0 = $v_0;
-  $__tco_var_Test_Native_loopNative_v1_1 = $v1_1;
-  tco_loop_Test_Native_loopNative:;
-  $v_0 = $__tco_var_Test_Native_loopNative_v_0;
-  $v1_1 = $__tco_var_Test_Native_loopNative_v1_1;
-  $__t2 = null;;
-  switch ($v_0) {
-case 0:
-$__t2 = $v1_1;
-goto end_branch_2;;
-break;
-default:
-;
-break;
-};
-  $__tco_0 = ($v_0 - 1);
-  $__tco_1 = ($v1_1 + 1);
-  $__tco_var_Test_Native_loopNative_v_0 = $__tco_0;
-  $__tco_var_Test_Native_loopNative_v1_1 = $__tco_1;
-  goto tco_loop_Test_Native_loopNative;;
-  $__t2 = null;
-  end_branch_2:;
-  $__res = $__t2;
+  $__res = match ($v_0) { 0 => $v1_1, default => (($GLOBALS['Test_Native_loopNative'])(((($GLOBALS['Data_Ring_ringInt'])['sub'])($v_0))(1)))(((($GLOBALS['Data_Semiring_semiringInt'])['add'])($v1_1))(1)) };
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

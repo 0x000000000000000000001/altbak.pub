@@ -145,13 +145,19 @@ goto end_branch_1;;
 })();
 
 // Control_Monad_Gen_Common_genTuple
-$GLOBALS['Control_Monad_Gen_Common_genTuple'] = function($dictApply_0 = null) {
+$GLOBALS['Control_Monad_Gen_Common_genTuple'] = (function() {
+  $__fn = function($dictApply_0 = null, $a_1 = null, $b_2 = null) use (&$__fn) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Apply_lift2'])($dictApply_0))($GLOBALS['Data_Tuple_Tuple']);
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__res = ((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])(null))['map'])($GLOBALS['Data_Tuple_Tuple']))($a_1)))($b_2);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})();
 
 // Control_Monad_Gen_Common_genNonEmpty
 $GLOBALS['Control_Monad_Gen_Common_genNonEmpty'] = (function() {
@@ -160,16 +166,16 @@ $GLOBALS['Control_Monad_Gen_Common_genNonEmpty'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $Apply0_2_0 = (((((($dictMonadGen_1)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']))['Apply0'])($GLOBALS['Prim_undefined']);
+  $Apply0_2_0 = (((((($dictMonadGen_1)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null);
   $unfoldable1_3_1 = (($GLOBALS['Control_Monad_Gen_unfoldable'])($dictMonadRec_0))($dictMonadGen_1);
   $__res = function($dictUnfoldable_4 = null) use ($Apply0_2_0, $dictMonadGen_1, $unfoldable1_3_1) {
   $__num = \func_num_args();
   $unfoldable2_5_2 = ($unfoldable1_3_1)($dictUnfoldable_4);
   $__res = function($gen_6 = null) use ($Apply0_2_0, $dictMonadGen_1, $unfoldable2_5_2) {
   $__num = \func_num_args();
-  $__res = ((($Apply0_2_0)['apply'])(((((($Apply0_2_0)['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_NonEmpty_NonEmpty']))($gen_6)))(((($dictMonadGen_1)['resize'])((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Control_Monad_Gen_Common_max'])(0)))(function($v_7 = null) {
+  $__res = ((($Apply0_2_0)['apply'])(((((($Apply0_2_0)['Functor0'])(null))['map'])($GLOBALS['Data_NonEmpty_NonEmpty']))($gen_6)))(((($dictMonadGen_1)['resize'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($GLOBALS['Control_Monad_Gen_Common_max'])(0)))(function($v_7 = null) {
   $__num = \func_num_args();
-  $__res = ($v_7 - 1);
+  $__res = ((($GLOBALS['Data_Ring_ringInt'])['sub'])($v_7))(1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -192,8 +198,8 @@ $GLOBALS['Control_Monad_Gen_Common_genNonEmpty'] = (function() {
 // Control_Monad_Gen_Common_genMaybe'
 $GLOBALS['Control_Monad_Gen_Common_genMaybe__prime__'] = function($dictMonadGen_0 = null) {
   $__num = \func_num_args();
-  $Monad0_1_0 = (($dictMonadGen_0)['Monad0'])($GLOBALS['Prim_undefined']);
-  $Bind1_2_1 = (($Monad0_1_0)['Bind1'])($GLOBALS['Prim_undefined']);
+  $Monad0_1_0 = (($dictMonadGen_0)['Monad0'])(null);
+  $Bind1_2_1 = (($Monad0_1_0)['Bind1'])(null);
   $__res = (function() use ($Bind1_2_1, $Monad0_1_0, $dictMonadGen_0) {
   $__fn = function($bias_3 = null, $gen_4 = null) use ($Bind1_2_1, $Monad0_1_0, $dictMonadGen_0, &$__fn) {
   $__num = \func_num_args();
@@ -204,10 +210,10 @@ $GLOBALS['Control_Monad_Gen_Common_genMaybe__prime__'] = function($dictMonadGen_
   $__num = \func_num_args();
   $__t2 = null;;
   if (($n_5 < $bias_3)) {
-$__t2 = ((((((($Bind1_2_1)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_Maybe_Just']))($gen_4);
+$__t2 = ((((((($Bind1_2_1)['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Maybe_Just']))($gen_4);
 goto end_branch_2;;
 };
-  $__t2 = (((($Monad0_1_0)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'])(new Phpurs_Data0("Nothing"));
+  $__t2 = (((($Monad0_1_0)['Applicative0'])(null))['pure'])(new Phpurs_Data0("Nothing"));
   end_branch_2:;
   $__res = $__t2;
   goto __end;;
@@ -246,8 +252,8 @@ $GLOBALS['Control_Monad_Gen_Common_genIdentity'] = function($dictFunctor_0 = nul
 // Control_Monad_Gen_Common_genEither'
 $GLOBALS['Control_Monad_Gen_Common_genEither__prime__'] = function($dictMonadGen_0 = null) {
   $__num = \func_num_args();
-  $Bind1_1_0 = (((($dictMonadGen_0)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']);
-  $__local_var_2_1 = (((($Bind1_1_0)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']);
+  $Bind1_1_0 = (((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null);
+  $__local_var_2_1 = (((($Bind1_1_0)['Apply0'])(null))['Functor0'])(null);
   $__res = (function() use ($Bind1_1_0, $__local_var_2_1, $dictMonadGen_0) {
   $__fn = function($bias_3 = null, $genA_4 = null, $genB_5 = null) use ($Bind1_1_0, $__local_var_2_1, $dictMonadGen_0, &$__fn) {
   $__num = \func_num_args();

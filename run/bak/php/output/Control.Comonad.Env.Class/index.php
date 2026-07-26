@@ -114,7 +114,7 @@ $GLOBALS['Control_Comonad_Env_Class_local'] = function($dict_0 = null) {
 };
 
 // Control_Comonad_Env_Class_comonadAskTuple
-$GLOBALS['Control_Comonad_Env_Class_comonadAskTuple'] = ["ask" => $GLOBALS['Data_Tuple_fst'], "Comonad0" => function($dollar__unused_0 = null) {
+$GLOBALS['Control_Comonad_Env_Class_comonadAskTuple'] = ["ask" => $GLOBALS['Data_Tuple_fst'], "Comonad0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Tuple_comonadTuple'];
   goto __end;;
@@ -135,7 +135,7 @@ $GLOBALS['Control_Comonad_Env_Class_comonadEnvTuple'] = ["local" => (function() 
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "ComonadAsk0" => function($dollar__unused_0 = null) {
+})(), "ComonadAsk0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Comonad_Env_Class_comonadAskTuple'];
   goto __end;;
@@ -153,7 +153,7 @@ $GLOBALS['Control_Comonad_Env_Class_comonadAskEnvT'] = function($dictComonad_0 =
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Comonad0" => function($dollar__unused_2 = null) use ($comonadEnvT_1_0) {
+}, "Comonad0" => function($_dollar__unused_2 = null) use ($comonadEnvT_1_0) {
   $__num = \func_num_args();
   $__res = $comonadEnvT_1_0;
   goto __end;;
@@ -181,7 +181,7 @@ $GLOBALS['Control_Comonad_Env_Class_comonadEnvEnvT'] = function($dictComonad_0 =
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "ComonadAsk0" => function($dollar__unused_2 = null) use ($comonadEnvT_1_0) {
+})(), "ComonadAsk0" => function($_dollar__unused_2 = null) use ($comonadEnvT_1_0) {
   $__num = \func_num_args();
   $__res = ["ask" => function($v_3 = null) {
   $__num = \func_num_args();
@@ -189,7 +189,7 @@ $GLOBALS['Control_Comonad_Env_Class_comonadEnvEnvT'] = function($dictComonad_0 =
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Comonad0" => function($dollar__unused_3 = null) use ($comonadEnvT_1_0) {
+}, "Comonad0" => function($_dollar__unused_3 = null) use ($comonadEnvT_1_0) {
   $__num = \func_num_args();
   $__res = $comonadEnvT_1_0;
   goto __end;;
@@ -232,9 +232,9 @@ $GLOBALS['Control_Comonad_Env_Class_asks'] = (function() {
 // Control_Comonad_Env_Class_comonadAskStoreT
 $GLOBALS['Control_Comonad_Env_Class_comonadAskStoreT'] = function($dictComonadAsk_0 = null) {
   $__num = \func_num_args();
-  $Comonad0_1_0 = (($dictComonadAsk_0)['Comonad0'])($GLOBALS['Prim_undefined']);
+  $Comonad0_1_0 = (($dictComonadAsk_0)['Comonad0'])(null);
   $comonadStoreT_2_1 = ($GLOBALS['Control_Comonad_Store_Trans_comonadStoreT'])($Comonad0_1_0);
-  $__res = ["ask" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictComonadAsk_0)['ask']))((($GLOBALS['Control_Comonad_Store_Trans_comonadTransStoreT'])['lower'])($Comonad0_1_0)), "Comonad0" => function($dollar__unused_3 = null) use ($comonadStoreT_2_1) {
+  $__res = ["ask" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($dictComonadAsk_0)['ask']))((($GLOBALS['Control_Comonad_Store_Trans_comonadTransStoreT'])['lower'])($Comonad0_1_0)), "Comonad0" => function($_dollar__unused_3 = null) use ($comonadStoreT_2_1) {
   $__num = \func_num_args();
   $__res = $comonadStoreT_2_1;
   goto __end;;
@@ -249,7 +249,7 @@ $GLOBALS['Control_Comonad_Env_Class_comonadAskStoreT'] = function($dictComonadAs
 // Control_Comonad_Env_Class_comonadEnvStoreT
 $GLOBALS['Control_Comonad_Env_Class_comonadEnvStoreT'] = function($dictComonadEnv_0 = null) {
   $__num = \func_num_args();
-  $comonadAskStoreT1_1_0 = ($GLOBALS['Control_Comonad_Env_Class_comonadAskStoreT'])((($dictComonadEnv_0)['ComonadAsk0'])($GLOBALS['Prim_undefined']));
+  $comonadAskStoreT1_1_0 = ($GLOBALS['Control_Comonad_Env_Class_comonadAskStoreT'])((($dictComonadEnv_0)['ComonadAsk0'])(null));
   $__res = ["local" => (function() use ($dictComonadEnv_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($dictComonadEnv_0, &$__fn) {
   $__num = \func_num_args();
@@ -262,7 +262,7 @@ $GLOBALS['Control_Comonad_Env_Class_comonadEnvStoreT'] = function($dictComonadEn
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "ComonadAsk0" => function($dollar__unused_2 = null) use ($comonadAskStoreT1_1_0) {
+})(), "ComonadAsk0" => function($_dollar__unused_2 = null) use ($comonadAskStoreT1_1_0) {
   $__num = \func_num_args();
   $__res = $comonadAskStoreT1_1_0;
   goto __end;;
@@ -278,12 +278,25 @@ $GLOBALS['Control_Comonad_Env_Class_comonadEnvStoreT'] = function($dictComonadEn
 $GLOBALS['Control_Comonad_Env_Class_comonadAskTracedT'] = function($dictComonadAsk_0 = null) {
   $__num = \func_num_args();
   $ask1_1_0 = ($dictComonadAsk_0)['ask'];
-  $Comonad0_2_1 = (($dictComonadAsk_0)['Comonad0'])($GLOBALS['Prim_undefined']);
+  $Comonad0_2_1 = (($dictComonadAsk_0)['Comonad0'])(null);
   $comonadTracedT_3_2 = ($GLOBALS['Control_Comonad_Traced_Trans_comonadTracedT'])($Comonad0_2_1);
   $__res = function($dictMonoid_4 = null) use ($Comonad0_2_1, $ask1_1_0, $comonadTracedT_3_2) {
   $__num = \func_num_args();
   $comonadTracedT1_5_3 = ($comonadTracedT_3_2)($dictMonoid_4);
-  $__res = ["ask" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($ask1_1_0))(((($GLOBALS['Control_Comonad_Traced_Trans_comonadTransTracedT'])($dictMonoid_4))['lower'])($Comonad0_2_1)), "Comonad0" => function($dollar__unused_6 = null) use ($comonadTracedT1_5_3) {
+  $mempty_6_4 = ($dictMonoid_4)['mempty'];
+  $__res = ["ask" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($ask1_1_0))(function($v_7 = null) use ($Comonad0_2_1, $mempty_6_4) {
+  $__num = \func_num_args();
+  $__res = ((((((($Comonad0_2_1)['Extend0'])(null))['Functor0'])(null))['map'])(function($f_8 = null) use ($mempty_6_4) {
+  $__num = \func_num_args();
+  $__res = ($f_8)($mempty_6_4);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))($v_7);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}), "Comonad0" => function($_dollar__unused_6 = null) use ($comonadTracedT1_5_3) {
   $__num = \func_num_args();
   $__res = $comonadTracedT1_5_3;
   goto __end;;
@@ -302,7 +315,7 @@ $GLOBALS['Control_Comonad_Env_Class_comonadAskTracedT'] = function($dictComonadA
 // Control_Comonad_Env_Class_comonadEnvTracedT
 $GLOBALS['Control_Comonad_Env_Class_comonadEnvTracedT'] = function($dictComonadEnv_0 = null) {
   $__num = \func_num_args();
-  $comonadAskTracedT1_1_0 = ($GLOBALS['Control_Comonad_Env_Class_comonadAskTracedT'])((($dictComonadEnv_0)['ComonadAsk0'])($GLOBALS['Prim_undefined']));
+  $comonadAskTracedT1_1_0 = ($GLOBALS['Control_Comonad_Env_Class_comonadAskTracedT'])((($dictComonadEnv_0)['ComonadAsk0'])(null));
   $__res = function($dictMonoid_2 = null) use ($comonadAskTracedT1_1_0, $dictComonadEnv_0) {
   $__num = \func_num_args();
   $comonadAskTracedT2_3_1 = ($comonadAskTracedT1_1_0)($dictMonoid_2);
@@ -318,7 +331,7 @@ $GLOBALS['Control_Comonad_Env_Class_comonadEnvTracedT'] = function($dictComonadE
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "ComonadAsk0" => function($dollar__unused_4 = null) use ($comonadAskTracedT2_3_1) {
+})(), "ComonadAsk0" => function($_dollar__unused_4 = null) use ($comonadAskTracedT2_3_1) {
   $__num = \func_num_args();
   $__res = $comonadAskTracedT2_3_1;
   goto __end;;

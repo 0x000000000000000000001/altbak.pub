@@ -178,7 +178,7 @@ $GLOBALS['Data_Tuple_showTuple'] = (function() {
   }
   $__res = ["show" => function($v_2 = null) use ($dictShow1_1, $dictShow_0) {
   $__num = \func_num_args();
-  $__res = (((("(Tuple " . (($dictShow_0)['show'])(($v_2)->{'value0'})) . " ") . (($dictShow1_1)['show'])(($v_2)->{'value1'})) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Tuple "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])(($v_2)->{'value0'})))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow1_1)['show'])(($v_2)->{'value1'})))(")"))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -276,7 +276,7 @@ $GLOBALS['Data_Tuple_semigroupTuple'] = (function() {
 // Data_Tuple_ringTuple
 $GLOBALS['Data_Tuple_ringTuple'] = function($dictRing_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictRing_0)['Semiring0'])($GLOBALS['Prim_undefined']);
+  $__local_var_1_0 = (($dictRing_0)['Semiring0'])(null);
   $one_2_1 = ($__local_var_1_0)['one'];
   $zero_3_2 = ($__local_var_1_0)['zero'];
   $semiringTuple1_3_2 = function($dictSemiring1_4 = null) use ($__local_var_1_0, $one_2_1, $zero_3_2) {
@@ -312,7 +312,7 @@ $GLOBALS['Data_Tuple_ringTuple'] = function($dictRing_0 = null) {
 };
   $__res = function($dictRing1_4 = null) use ($dictRing_0, $semiringTuple1_3_2) {
   $__num = \func_num_args();
-  $semiringTuple2_5_4 = ($semiringTuple1_3_2)((($dictRing1_4)['Semiring0'])($GLOBALS['Prim_undefined']));
+  $semiringTuple2_5_4 = ($semiringTuple1_3_2)((($dictRing1_4)['Semiring0'])(null));
   $__res = ["sub" => (function() use ($dictRing1_4, $dictRing_0) {
   $__fn = function($v_6 = null, $v1_7 = null) use ($dictRing1_4, $dictRing_0, &$__fn) {
   $__num = \func_num_args();
@@ -325,7 +325,7 @@ $GLOBALS['Data_Tuple_ringTuple'] = function($dictRing_0 = null) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Semiring0" => function($dollar__unused_6 = null) use ($semiringTuple2_5_4) {
+})(), "Semiring0" => function($_dollar__unused_6 = null) use ($semiringTuple2_5_4) {
   $__num = \func_num_args();
   $__res = $semiringTuple2_5_4;
   goto __end;;
@@ -345,10 +345,10 @@ $GLOBALS['Data_Tuple_ringTuple'] = function($dictRing_0 = null) {
 $GLOBALS['Data_Tuple_monoidTuple'] = function($dictMonoid_0 = null) {
   $__num = \func_num_args();
   $mempty_1_0 = ($dictMonoid_0)['mempty'];
-  $__local_var_2_1 = (($dictMonoid_0)['Semigroup0'])($GLOBALS['Prim_undefined']);
+  $__local_var_2_1 = (($dictMonoid_0)['Semigroup0'])(null);
   $__res = function($dictMonoid1_3 = null) use ($__local_var_2_1, $mempty_1_0) {
   $__num = \func_num_args();
-  $__local_var_4_2 = (($dictMonoid1_3)['Semigroup0'])($GLOBALS['Prim_undefined']);
+  $__local_var_4_2 = (($dictMonoid1_3)['Semigroup0'])(null);
   $semigroupTuple2_5_3 = ["append" => (function() use ($__local_var_2_1, $__local_var_4_2) {
   $__fn = function($v_5 = null, $v1_6 = null) use ($__local_var_2_1, $__local_var_4_2, &$__fn) {
   $__num = \func_num_args();
@@ -362,7 +362,7 @@ $GLOBALS['Data_Tuple_monoidTuple'] = function($dictMonoid_0 = null) {
   };
   return $__fn;
 })()];
-  $__res = ["mempty" => new Phpurs_Data2("Tuple", $mempty_1_0, ($dictMonoid1_3)['mempty']), "Semigroup0" => function($dollar__unused_6 = null) use ($semigroupTuple2_5_3) {
+  $__res = ["mempty" => new Phpurs_Data2("Tuple", $mempty_1_0, ($dictMonoid1_3)['mempty']), "Semigroup0" => function($_dollar__unused_6 = null) use ($semigroupTuple2_5_3) {
   $__num = \func_num_args();
   $__res = $semigroupTuple2_5_3;
   goto __end;;
@@ -469,15 +469,15 @@ $GLOBALS['Data_Tuple_functorTuple'] = ["map" => (function() {
 
 // Data_Tuple_invariantTuple
 $GLOBALS['Data_Tuple_invariantTuple'] = ["imap" => (function() {
-  $__fn = function($f_0 = null, $v_1 = null, $m_2 = null) use (&$__fn) {
+  $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($m_2)->{'value0'}, ($f_0)(($m_2)->{'value1'}));
+  $__res = (($GLOBALS['Data_Tuple_functorTuple'])['map'])($f_0);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
@@ -537,7 +537,7 @@ $GLOBALS['Data_Tuple_extendTuple'] = ["extend" => (function() {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0 = null) {
+})(), "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Tuple_functorTuple'];
   goto __end;;
@@ -558,7 +558,7 @@ $GLOBALS['Data_Tuple_eqTuple'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictEq_0)['eq'])(($x_2)->{'value0'}))(($y_3)->{'value0'}) && ((($dictEq1_1)['eq'])(($x_2)->{'value1'}))(($y_3)->{'value1'}));
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($dictEq_0)['eq'])(($x_2)->{'value0'}))(($y_3)->{'value0'})))(((($dictEq1_1)['eq'])(($x_2)->{'value1'}))(($y_3)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -575,50 +575,37 @@ $GLOBALS['Data_Tuple_eqTuple'] = (function() {
 // Data_Tuple_ordTuple
 $GLOBALS['Data_Tuple_ordTuple'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictOrd_0)['Eq0'])($GLOBALS['Prim_undefined']);
-  $__res = function($dictOrd1_2 = null) use ($__local_var_1_0, $dictOrd_0) {
+  $eqTuple1_1_0 = ($GLOBALS['Data_Tuple_eqTuple'])((($dictOrd_0)['Eq0'])(null));
+  $__res = function($dictOrd1_2 = null) use ($dictOrd_0, $eqTuple1_1_0) {
   $__num = \func_num_args();
-  $__local_var_3_1 = (($dictOrd1_2)['Eq0'])($GLOBALS['Prim_undefined']);
-  $eqTuple2_4_2 = ["eq" => (function() use ($__local_var_1_0, $__local_var_3_1) {
-  $__fn = function($x_4 = null, $y_5 = null) use ($__local_var_1_0, $__local_var_3_1, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (((($__local_var_1_0)['eq'])(($x_4)->{'value0'}))(($y_5)->{'value0'}) && ((($__local_var_3_1)['eq'])(($x_4)->{'value1'}))(($y_5)->{'value1'}));
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  $eqTuple2_3_1 = ($eqTuple1_1_0)((($dictOrd1_2)['Eq0'])(null));
   $__res = ["compare" => (function() use ($dictOrd1_2, $dictOrd_0) {
-  $__fn = function($x_5 = null, $y_6 = null) use ($dictOrd1_2, $dictOrd_0, &$__fn) {
+  $__fn = function($x_4 = null, $y_5 = null) use ($dictOrd1_2, $dictOrd_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v_7_3 = ((($dictOrd_0)['compare'])(($x_5)->{'value0'}))(($y_6)->{'value0'});
-  $__t4 = null;;
-  if ((is_object($v_7_3) && (($v_7_3)->{'tag'} === "LT"))) {
-$__t4 = new Phpurs_Data0("LT");
-goto end_branch_4;;
+  $v_6_2 = ((($dictOrd_0)['compare'])(($x_4)->{'value0'}))(($y_5)->{'value0'});
+  $__t3 = null;;
+  if ((is_object($v_6_2) && (($v_6_2)->{'tag'} === "LT"))) {
+$__t3 = new Phpurs_Data0("LT");
+goto end_branch_3;;
 };
-  if ((is_object($v_7_3) && (($v_7_3)->{'tag'} === "GT"))) {
-$__t4 = new Phpurs_Data0("GT");
-goto end_branch_4;;
+  if ((is_object($v_6_2) && (($v_6_2)->{'tag'} === "GT"))) {
+$__t3 = new Phpurs_Data0("GT");
+goto end_branch_3;;
 };
-  $__t4 = ((($dictOrd1_2)['compare'])(($x_5)->{'value1'}))(($y_6)->{'value1'});
-  end_branch_4:;
-  $__res = $__t4;
+  $__t3 = ((($dictOrd1_2)['compare'])(($x_4)->{'value1'}))(($y_5)->{'value1'});
+  end_branch_3:;
+  $__res = $__t3;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Eq0" => function($dollar__unused_5 = null) use ($eqTuple2_4_2) {
+})(), "Eq0" => function($_dollar__unused_4 = null) use ($eqTuple2_3_1) {
   $__num = \func_num_args();
-  $__res = $eqTuple2_4_2;
+  $__res = $eqTuple2_3_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -635,19 +622,13 @@ goto end_branch_4;;
 // Data_Tuple_eq1Tuple
 $GLOBALS['Data_Tuple_eq1Tuple'] = function($dictEq_0 = null) {
   $__num = \func_num_args();
-  $__res = ["eq1" => (function() use ($dictEq_0) {
-  $__fn = function($dictEq1_1 = null, $x_2 = null, $y_3 = null) use ($dictEq_0, &$__fn) {
+  $__res = ["eq1" => function($dictEq1_1 = null) use ($dictEq_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  $__res = (((($dictEq_0)['eq'])(($x_2)->{'value0'}))(($y_3)->{'value0'}) && ((($dictEq1_1)['eq'])(($x_2)->{'value1'}))(($y_3)->{'value1'}));
+  $__res = ((($GLOBALS['Data_Tuple_eqTuple'])($dictEq_0))($dictEq1_1))['eq'];
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -657,27 +638,21 @@ $GLOBALS['Data_Tuple_eq1Tuple'] = function($dictEq_0 = null) {
 $GLOBALS['Data_Tuple_ord1Tuple'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
   $ordTuple1_1_0 = ($GLOBALS['Data_Tuple_ordTuple'])($dictOrd_0);
-  $__local_var_2_1 = (($dictOrd_0)['Eq0'])($GLOBALS['Prim_undefined']);
-  $eq1Tuple1_3_2 = ["eq1" => (function() use ($__local_var_2_1) {
-  $__fn = function($dictEq1_3 = null, $x_4 = null, $y_5 = null) use ($__local_var_2_1, &$__fn) {
+  $__local_var_2_1 = (($dictOrd_0)['Eq0'])(null);
+  $eq1Tuple1_3_2 = ["eq1" => function($dictEq1_3 = null) use ($__local_var_2_1) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  $__res = (((($__local_var_2_1)['eq'])(($x_4)->{'value0'}))(($y_5)->{'value0'}) && ((($dictEq1_3)['eq'])(($x_4)->{'value1'}))(($y_5)->{'value1'}));
+  $__res = ((($GLOBALS['Data_Tuple_eqTuple'])($__local_var_2_1))($dictEq1_3))['eq'];
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   $__res = ["compare1" => function($dictOrd1_4 = null) use ($ordTuple1_1_0) {
   $__num = \func_num_args();
   $__res = (($ordTuple1_1_0)($dictOrd1_4))['compare'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Eq10" => function($dollar__unused_4 = null) use ($eq1Tuple1_3_2) {
+}, "Eq10" => function($_dollar__unused_4 = null) use ($eq1Tuple1_3_2) {
   $__num = \func_num_args();
   $__res = $eq1Tuple1_3_2;
   goto __end;;
@@ -705,7 +680,7 @@ $GLOBALS['Data_Tuple_curry'] = (function() {
 })();
 
 // Data_Tuple_comonadTuple
-$GLOBALS['Data_Tuple_comonadTuple'] = ["extract" => $GLOBALS['Data_Tuple_snd'], "Extend0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Tuple_comonadTuple'] = ["extract" => $GLOBALS['Data_Tuple_snd'], "Extend0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Tuple_extendTuple'];
   goto __end;;
@@ -716,11 +691,11 @@ $GLOBALS['Data_Tuple_comonadTuple'] = ["extract" => $GLOBALS['Data_Tuple_snd'], 
 // Data_Tuple_commutativeRingTuple
 $GLOBALS['Data_Tuple_commutativeRingTuple'] = function($dictCommutativeRing_0 = null) {
   $__num = \func_num_args();
-  $ringTuple1_1_0 = ($GLOBALS['Data_Tuple_ringTuple'])((($dictCommutativeRing_0)['Ring0'])($GLOBALS['Prim_undefined']));
+  $ringTuple1_1_0 = ($GLOBALS['Data_Tuple_ringTuple'])((($dictCommutativeRing_0)['Ring0'])(null));
   $__res = function($dictCommutativeRing1_2 = null) use ($ringTuple1_1_0) {
   $__num = \func_num_args();
-  $ringTuple2_3_1 = ($ringTuple1_1_0)((($dictCommutativeRing1_2)['Ring0'])($GLOBALS['Prim_undefined']));
-  $__res = ["Ring0" => function($dollar__unused_4 = null) use ($ringTuple2_3_1) {
+  $ringTuple2_3_1 = ($ringTuple1_1_0)((($dictCommutativeRing1_2)['Ring0'])(null));
+  $__res = ["Ring0" => function($_dollar__unused_4 = null) use ($ringTuple2_3_1) {
   $__num = \func_num_args();
   $__res = $ringTuple2_3_1;
   goto __end;;
@@ -741,11 +716,11 @@ $GLOBALS['Data_Tuple_boundedTuple'] = function($dictBounded_0 = null) {
   $__num = \func_num_args();
   $top_1_0 = ($dictBounded_0)['top'];
   $bottom_2_1 = ($dictBounded_0)['bottom'];
-  $ordTuple1_3_2 = ($GLOBALS['Data_Tuple_ordTuple'])((($dictBounded_0)['Ord0'])($GLOBALS['Prim_undefined']));
+  $ordTuple1_3_2 = ($GLOBALS['Data_Tuple_ordTuple'])((($dictBounded_0)['Ord0'])(null));
   $__res = function($dictBounded1_4 = null) use ($bottom_2_1, $ordTuple1_3_2, $top_1_0) {
   $__num = \func_num_args();
-  $ordTuple2_5_3 = ($ordTuple1_3_2)((($dictBounded1_4)['Ord0'])($GLOBALS['Prim_undefined']));
-  $__res = ["top" => new Phpurs_Data2("Tuple", $top_1_0, ($dictBounded1_4)['top']), "bottom" => new Phpurs_Data2("Tuple", $bottom_2_1, ($dictBounded1_4)['bottom']), "Ord0" => function($dollar__unused_6 = null) use ($ordTuple2_5_3) {
+  $ordTuple2_5_3 = ($ordTuple1_3_2)((($dictBounded1_4)['Ord0'])(null));
+  $__res = ["top" => new Phpurs_Data2("Tuple", $top_1_0, ($dictBounded1_4)['top']), "bottom" => new Phpurs_Data2("Tuple", $bottom_2_1, ($dictBounded1_4)['bottom']), "Ord0" => function($_dollar__unused_6 = null) use ($ordTuple2_5_3) {
   $__num = \func_num_args();
   $__res = $ordTuple2_5_3;
   goto __end;;
@@ -764,11 +739,11 @@ $GLOBALS['Data_Tuple_boundedTuple'] = function($dictBounded_0 = null) {
 // Data_Tuple_booleanAlgebraTuple
 $GLOBALS['Data_Tuple_booleanAlgebraTuple'] = function($dictBooleanAlgebra_0 = null) {
   $__num = \func_num_args();
-  $heytingAlgebraTuple1_1_0 = ($GLOBALS['Data_Tuple_heytingAlgebraTuple'])((($dictBooleanAlgebra_0)['HeytingAlgebra0'])($GLOBALS['Prim_undefined']));
+  $heytingAlgebraTuple1_1_0 = ($GLOBALS['Data_Tuple_heytingAlgebraTuple'])((($dictBooleanAlgebra_0)['HeytingAlgebra0'])(null));
   $__res = function($dictBooleanAlgebra1_2 = null) use ($heytingAlgebraTuple1_1_0) {
   $__num = \func_num_args();
-  $heytingAlgebraTuple2_3_1 = ($heytingAlgebraTuple1_1_0)((($dictBooleanAlgebra1_2)['HeytingAlgebra0'])($GLOBALS['Prim_undefined']));
-  $__res = ["HeytingAlgebra0" => function($dollar__unused_4 = null) use ($heytingAlgebraTuple2_3_1) {
+  $heytingAlgebraTuple2_3_1 = ($heytingAlgebraTuple1_1_0)((($dictBooleanAlgebra1_2)['HeytingAlgebra0'])(null));
+  $__res = ["HeytingAlgebra0" => function($_dollar__unused_4 = null) use ($heytingAlgebraTuple2_3_1) {
   $__num = \func_num_args();
   $__res = $heytingAlgebraTuple2_3_1;
   goto __end;;
@@ -799,7 +774,7 @@ $GLOBALS['Data_Tuple_applyTuple'] = function($dictSemigroup_0 = null) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_1 = null) {
+})(), "Functor0" => function($_dollar__unused_1 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Tuple_functorTuple'];
   goto __end;;
@@ -828,7 +803,7 @@ $GLOBALS['Data_Tuple_bindTuple'] = function($dictSemigroup_0 = null) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Apply0" => function($dollar__unused_2 = null) use ($applyTuple1_1_0) {
+})(), "Apply0" => function($_dollar__unused_2 = null) use ($applyTuple1_1_0) {
   $__num = \func_num_args();
   $__res = $applyTuple1_1_0;
   goto __end;;
@@ -843,8 +818,8 @@ $GLOBALS['Data_Tuple_bindTuple'] = function($dictSemigroup_0 = null) {
 // Data_Tuple_applicativeTuple
 $GLOBALS['Data_Tuple_applicativeTuple'] = function($dictMonoid_0 = null) {
   $__num = \func_num_args();
-  $applyTuple1_1_0 = ($GLOBALS['Data_Tuple_applyTuple'])((($dictMonoid_0)['Semigroup0'])($GLOBALS['Prim_undefined']));
-  $__res = ["pure" => ($GLOBALS['Data_Tuple_Tuple'])(($dictMonoid_0)['mempty']), "Apply0" => function($dollar__unused_2 = null) use ($applyTuple1_1_0) {
+  $applyTuple1_1_0 = ($GLOBALS['Data_Tuple_applyTuple'])((($dictMonoid_0)['Semigroup0'])(null));
+  $__res = ["pure" => ($GLOBALS['Data_Tuple_Tuple'])(($dictMonoid_0)['mempty']), "Apply0" => function($_dollar__unused_2 = null) use ($applyTuple1_1_0) {
   $__num = \func_num_args();
   $__res = $applyTuple1_1_0;
   goto __end;;
@@ -860,14 +835,14 @@ $GLOBALS['Data_Tuple_applicativeTuple'] = function($dictMonoid_0 = null) {
 $GLOBALS['Data_Tuple_monadTuple'] = function($dictMonoid_0 = null) {
   $__num = \func_num_args();
   $applicativeTuple1_1_0 = ($GLOBALS['Data_Tuple_applicativeTuple'])($dictMonoid_0);
-  $bindTuple1_2_1 = ($GLOBALS['Data_Tuple_bindTuple'])((($dictMonoid_0)['Semigroup0'])($GLOBALS['Prim_undefined']));
-  $__res = ["Applicative0" => function($dollar__unused_3 = null) use ($applicativeTuple1_1_0) {
+  $bindTuple1_2_1 = ($GLOBALS['Data_Tuple_bindTuple'])((($dictMonoid_0)['Semigroup0'])(null));
+  $__res = ["Applicative0" => function($_dollar__unused_3 = null) use ($applicativeTuple1_1_0) {
   $__num = \func_num_args();
   $__res = $applicativeTuple1_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bind1" => function($dollar__unused_3 = null) use ($bindTuple1_2_1) {
+}, "Bind1" => function($_dollar__unused_3 = null) use ($bindTuple1_2_1) {
   $__num = \func_num_args();
   $__res = $bindTuple1_2_1;
   goto __end;;

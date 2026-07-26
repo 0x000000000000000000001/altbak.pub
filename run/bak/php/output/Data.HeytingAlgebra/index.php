@@ -413,7 +413,7 @@ $GLOBALS['Data_HeytingAlgebra_conjRecord'] = function($dict_0 = null) {
 
 // Data_HeytingAlgebra_heytingAlgebraRecord
 $GLOBALS['Data_HeytingAlgebra_heytingAlgebraRecord'] = (function() {
-  $__fn = function($dollar__unused_0 = null, $dictHeytingAlgebraRecord_1 = null) use (&$__fn) {
+  $__fn = function($_dollar__unused_0 = null, $dictHeytingAlgebraRecord_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
@@ -508,7 +508,7 @@ $GLOBALS['Data_HeytingAlgebra_heytingAlgebraFunction'] = function($dictHeytingAl
 
 // Data_HeytingAlgebra_heytingAlgebraRecordCons
 $GLOBALS['Data_HeytingAlgebra_heytingAlgebraRecordCons'] = (function() {
-  $__fn = function($dictIsSymbol_0 = null, $dollar__unused_1 = null, $dictHeytingAlgebraRecord_2 = null, $dictHeytingAlgebra_3 = null) use (&$__fn) {
+  $__fn = function($dictIsSymbol_0 = null, $_dollar__unused_1 = null, $dictHeytingAlgebraRecord_2 = null, $dictHeytingAlgebra_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);

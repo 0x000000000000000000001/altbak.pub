@@ -123,7 +123,7 @@ $GLOBALS['Data_Monoid_Disj_showDisj'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (("(Disj " . (($dictShow_0)['show'])($v_1)) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Disj "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -212,7 +212,7 @@ $GLOBALS['Data_Monoid_Disj_monoidDisj'] = function($dictHeytingAlgebra_0 = null)
   };
   return $__fn;
 })()];
-  $__res = ["mempty" => ($dictHeytingAlgebra_0)['ff'], "Semigroup0" => function($dollar__unused_2 = null) use ($semigroupDisj1_1_0) {
+  $__res = ["mempty" => ($dictHeytingAlgebra_0)['ff'], "Semigroup0" => function($_dollar__unused_2 = null) use ($semigroupDisj1_1_0) {
   $__num = \func_num_args();
   $__res = $semigroupDisj1_1_0;
   goto __end;;
@@ -264,7 +264,7 @@ $GLOBALS['Data_Monoid_Disj_ord1Disj'] = ["compare1" => function($dictOrd_0 = nul
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Eq10" => function($dollar__unused_0 = null) {
+}, "Eq10" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Monoid_Disj_eq1Disj'];
   goto __end;;
@@ -294,7 +294,7 @@ $GLOBALS['Data_Monoid_Disj_applyDisj'] = ["apply" => (function() {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0 = null) {
+})(), "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Monoid_Disj_functorDisj'];
   goto __end;;
@@ -315,7 +315,7 @@ $GLOBALS['Data_Monoid_Disj_bindDisj'] = ["bind" => (function() {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Apply0" => function($dollar__unused_0 = null) {
+})(), "Apply0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Monoid_Disj_applyDisj'];
   goto __end;;
@@ -324,7 +324,7 @@ $GLOBALS['Data_Monoid_Disj_bindDisj'] = ["bind" => (function() {
 }];
 
 // Data_Monoid_Disj_applicativeDisj
-$GLOBALS['Data_Monoid_Disj_applicativeDisj'] = ["pure" => $GLOBALS['Data_Monoid_Disj_Disj'], "Apply0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Monoid_Disj_applicativeDisj'] = ["pure" => $GLOBALS['Data_Monoid_Disj_Disj'], "Apply0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Monoid_Disj_applyDisj'];
   goto __end;;
@@ -333,13 +333,13 @@ $GLOBALS['Data_Monoid_Disj_applicativeDisj'] = ["pure" => $GLOBALS['Data_Monoid_
 }];
 
 // Data_Monoid_Disj_monadDisj
-$GLOBALS['Data_Monoid_Disj_monadDisj'] = ["Applicative0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Monoid_Disj_monadDisj'] = ["Applicative0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Monoid_Disj_applicativeDisj'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bind1" => function($dollar__unused_0 = null) {
+}, "Bind1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Monoid_Disj_bindDisj'];
   goto __end;;

@@ -107,7 +107,7 @@ $GLOBALS['Control_Monad_State_withState'] = $GLOBALS['Control_Monad_State_Trans_
 // Control_Monad_State_runState
 $GLOBALS['Control_Monad_State_runState'] = function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($v_0);
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($v_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -116,7 +116,7 @@ $GLOBALS['Control_Monad_State_runState'] = function($v_0 = null) {
 // Control_Monad_State_mapState
 $GLOBALS['Control_Monad_State_mapState'] = function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_State_Trans_mapStateT'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))($GLOBALS['Unsafe_Coerce_unsafeCoerce'])));
+  $__res = ($GLOBALS['Control_Monad_State_Trans_mapStateT'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Identity_Identity']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_0))($GLOBALS['Unsafe_Coerce_unsafeCoerce'])));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

@@ -130,10 +130,10 @@ $GLOBALS['Data_Bounded_Generic_genericTopConstructor'] = function($dictGenericTo
 // Data_Bounded_Generic_genericTopProduct
 $GLOBALS['Data_Bounded_Generic_genericTopProduct'] = function($dictGenericTop_0 = null) {
   $__num = \func_num_args();
-  $genericTop__prime__1_1_0 = ($dictGenericTop_0)['genericTop__prime__'];
-  $__res = function($dictGenericTop1_2 = null) use ($genericTop__prime__1_1_0) {
+  $genericTop_prime1_1_0 = ($dictGenericTop_0)['genericTop__prime__'];
+  $__res = function($dictGenericTop1_2 = null) use ($genericTop_prime1_1_0) {
   $__num = \func_num_args();
-  $__res = ["genericTop__prime__" => new Phpurs_Data2("Product", $genericTop__prime__1_1_0, ($dictGenericTop1_2)['genericTop__prime__'])];
+  $__res = ["genericTop__prime__" => new Phpurs_Data2("Product", $genericTop_prime1_1_0, ($dictGenericTop1_2)['genericTop__prime__'])];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -200,10 +200,10 @@ $GLOBALS['Data_Bounded_Generic_genericBottomConstructor'] = function($dictGeneri
 // Data_Bounded_Generic_genericBottomProduct
 $GLOBALS['Data_Bounded_Generic_genericBottomProduct'] = function($dictGenericBottom_0 = null) {
   $__num = \func_num_args();
-  $genericBottom__prime__1_1_0 = ($dictGenericBottom_0)['genericBottom__prime__'];
-  $__res = function($dictGenericBottom1_2 = null) use ($genericBottom__prime__1_1_0) {
+  $genericBottom_prime1_1_0 = ($dictGenericBottom_0)['genericBottom__prime__'];
+  $__res = function($dictGenericBottom1_2 = null) use ($genericBottom_prime1_1_0) {
   $__num = \func_num_args();
-  $__res = ["genericBottom__prime__" => new Phpurs_Data2("Product", $genericBottom__prime__1_1_0, ($dictGenericBottom1_2)['genericBottom__prime__'])];
+  $__res = ["genericBottom__prime__" => new Phpurs_Data2("Product", $genericBottom_prime1_1_0, ($dictGenericBottom1_2)['genericBottom__prime__'])];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

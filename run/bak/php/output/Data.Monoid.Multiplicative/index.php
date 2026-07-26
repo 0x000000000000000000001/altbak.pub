@@ -122,7 +122,7 @@ $GLOBALS['Data_Monoid_Multiplicative_showMultiplicative'] = function($dictShow_0
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (("(Multiplicative " . (($dictShow_0)['show'])($v_1)) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Multiplicative "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -178,7 +178,7 @@ $GLOBALS['Data_Monoid_Multiplicative_monoidMultiplicative'] = function($dictSemi
   };
   return $__fn;
 })()];
-  $__res = ["mempty" => ($dictSemiring_0)['one'], "Semigroup0" => function($dollar__unused_2 = null) use ($semigroupMultiplicative1_1_0) {
+  $__res = ["mempty" => ($dictSemiring_0)['one'], "Semigroup0" => function($_dollar__unused_2 = null) use ($semigroupMultiplicative1_1_0) {
   $__num = \func_num_args();
   $__res = $semigroupMultiplicative1_1_0;
   goto __end;;
@@ -230,7 +230,7 @@ $GLOBALS['Data_Monoid_Multiplicative_ord1Multiplicative'] = ["compare1" => funct
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Eq10" => function($dollar__unused_0 = null) {
+}, "Eq10" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Monoid_Multiplicative_eq1Multiplicative'];
   goto __end;;
@@ -260,7 +260,7 @@ $GLOBALS['Data_Monoid_Multiplicative_applyMultiplicative'] = ["apply" => (functi
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0 = null) {
+})(), "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Monoid_Multiplicative_functorMultiplicative'];
   goto __end;;
@@ -281,7 +281,7 @@ $GLOBALS['Data_Monoid_Multiplicative_bindMultiplicative'] = ["bind" => (function
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Apply0" => function($dollar__unused_0 = null) {
+})(), "Apply0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Monoid_Multiplicative_applyMultiplicative'];
   goto __end;;
@@ -290,7 +290,7 @@ $GLOBALS['Data_Monoid_Multiplicative_bindMultiplicative'] = ["bind" => (function
 }];
 
 // Data_Monoid_Multiplicative_applicativeMultiplicative
-$GLOBALS['Data_Monoid_Multiplicative_applicativeMultiplicative'] = ["pure" => $GLOBALS['Data_Monoid_Multiplicative_Multiplicative'], "Apply0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Monoid_Multiplicative_applicativeMultiplicative'] = ["pure" => $GLOBALS['Data_Monoid_Multiplicative_Multiplicative'], "Apply0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Monoid_Multiplicative_applyMultiplicative'];
   goto __end;;
@@ -299,13 +299,13 @@ $GLOBALS['Data_Monoid_Multiplicative_applicativeMultiplicative'] = ["pure" => $G
 }];
 
 // Data_Monoid_Multiplicative_monadMultiplicative
-$GLOBALS['Data_Monoid_Multiplicative_monadMultiplicative'] = ["Applicative0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Monoid_Multiplicative_monadMultiplicative'] = ["Applicative0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Monoid_Multiplicative_applicativeMultiplicative'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bind1" => function($dollar__unused_0 = null) {
+}, "Bind1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Monoid_Multiplicative_bindMultiplicative'];
   goto __end;;

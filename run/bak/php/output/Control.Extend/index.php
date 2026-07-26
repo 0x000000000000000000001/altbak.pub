@@ -108,9 +108,9 @@ $GLOBALS['Control_Extend_extendFn'] = function($dictSemigroup_0 = null) {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($f_1)(function($w__prime___4 = null) use ($dictSemigroup_0, $g_2, $w_3) {
+  $__res = ($f_1)(function($w_prime_4 = null) use ($dictSemigroup_0, $g_2, $w_3) {
   $__num = \func_num_args();
-  $__res = ($g_2)(((($dictSemigroup_0)['append'])($w_3))($w__prime___4));
+  $__res = ($g_2)(((($dictSemigroup_0)['append'])($w_3))($w_prime_4));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -120,7 +120,7 @@ $GLOBALS['Control_Extend_extendFn'] = function($dictSemigroup_0 = null) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_1 = null) {
+})(), "Functor0" => function($_dollar__unused_1 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Functor_functorFn'];
   goto __end;;
@@ -133,7 +133,7 @@ $GLOBALS['Control_Extend_extendFn'] = function($dictSemigroup_0 = null) {
 };
 
 // Control_Extend_extendArray
-$GLOBALS['Control_Extend_extendArray'] = ["extend" => $GLOBALS['Control_Extend_arrayExtend'], "Functor0" => function($dollar__unused_0 = null) {
+$GLOBALS['Control_Extend_extendArray'] = ["extend" => $GLOBALS['Control_Extend_arrayExtend'], "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Functor_functorArray'];
   goto __end;;

@@ -144,6 +144,15 @@ $GLOBALS['Effect_Ref_read'] = $ffi_Effect_Ref['read'] ?? new class { public func
 $GLOBALS['Effect_Ref_write'] = $ffi_Effect_Ref['write'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+// Effect_Ref_void
+$GLOBALS['Effect_Ref_void'] = (($GLOBALS['Effect_functorEffect'])['map'])(function($v_0 = null) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Data_Unit_unit'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+
 // Effect_Ref_new
 $GLOBALS['Effect_Ref_new'] = $GLOBALS['Effect_Ref__new'];
 
@@ -155,8 +164,8 @@ $GLOBALS['Effect_Ref_modify'] = function($f_0 = null) {
   $__num = \func_num_args();
   $__res = ($GLOBALS['Effect_Ref_modifyImpl'])(function($s_1 = null) use ($f_0) {
   $__num = \func_num_args();
-  $s__prime___2_0 = ($f_0)($s_1);
-  $__res = ["state" => $s__prime___2_0, "value" => $s__prime___2_0];
+  $s_prime_2_0 = ($f_0)($s_1);
+  $__res = ["state" => $s_prime_2_0, "value" => $s_prime_2_0];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -173,16 +182,10 @@ $GLOBALS['Effect_Ref_modify_'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Effect_applyEffect'])['apply'])(($GLOBALS['Effect_pureE'])(function($v_2 = null) {
+  $__res = ($GLOBALS['Effect_Ref_void'])((($GLOBALS['Effect_Ref_modifyImpl'])(function($s_2 = null) use ($f_0) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Data_Unit_unit'];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))((($GLOBALS['Effect_Ref_modifyImpl'])(function($s_2 = null) use ($f_0) {
-  $__num = \func_num_args();
-  $s__prime___3_0 = ($f_0)($s_2);
-  $__res = ["state" => $s__prime___3_0, "value" => $s__prime___3_0];
+  $s_prime_3_0 = ($f_0)($s_2);
+  $__res = ["state" => $s_prime_3_0, "value" => $s_prime_3_0];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

@@ -122,7 +122,7 @@ $GLOBALS['Data_Reflectable_reifiableBoolean'] = [];
 
 // Data_Reflectable_reifyType
 $GLOBALS['Data_Reflectable_reifyType'] = (function() {
-  $__fn = function($dollar__unused_0 = null, $s_1 = null, $f_2 = null) use (&$__fn) {
+  $__fn = function($_dollar__unused_0 = null, $s_1 = null, $f_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);

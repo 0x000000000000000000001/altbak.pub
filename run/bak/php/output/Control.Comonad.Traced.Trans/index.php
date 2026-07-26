@@ -123,9 +123,9 @@ $GLOBALS['Control_Comonad_Traced_Trans_runTracedT'] = function($v_0 = null) {
 };
 
 // Control_Comonad_Traced_Trans_newtypeTracedT
-$GLOBALS['Control_Comonad_Traced_Trans_newtypeTracedT'] = ["Coercible0" => function($dollar__unused_0 = null) {
+$GLOBALS['Control_Comonad_Traced_Trans_newtypeTracedT'] = ["Coercible0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Prim_undefined'];
+  $__res = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -167,7 +167,7 @@ $GLOBALS['Control_Comonad_Traced_Trans_functorTracedT'] = function($dictFunctor_
 // Control_Comonad_Traced_Trans_extendTracedT
 $GLOBALS['Control_Comonad_Traced_Trans_extendTracedT'] = function($dictExtend_0 = null) {
   $__num = \func_num_args();
-  $Functor0_1_0 = (($dictExtend_0)['Functor0'])($GLOBALS['Prim_undefined']);
+  $Functor0_1_0 = (($dictExtend_0)['Functor0'])(null);
   $functorTracedT1_2_1 = ["map" => (function() use ($Functor0_1_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($Functor0_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -202,24 +202,24 @@ $GLOBALS['Control_Comonad_Traced_Trans_extendTracedT'] = function($dictExtend_0 
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ((($dictExtend_0)['extend'])((function() use ($Functor0_1_0, $dictSemigroup_3, $f_4) {
-  $__fn = function($w__prime___6 = null, $t_7 = null) use ($Functor0_1_0, $dictSemigroup_3, $f_4, &$__fn) {
+  $__fn = function($w_prime_6 = null, $t_7 = null) use ($Functor0_1_0, $dictSemigroup_3, $f_4, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = ($f_4)(((($Functor0_1_0)['map'])((function() use ($dictSemigroup_3, $t_7) {
-  $__fn = function($h_8 = null, $t__prime___9 = null) use ($dictSemigroup_3, $t_7, &$__fn) {
+  $__fn = function($h_8 = null, $t_prime_9 = null) use ($dictSemigroup_3, $t_7, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($h_8)(((($dictSemigroup_3)['append'])($t_7))($t__prime___9));
+  $__res = ($h_8)(((($dictSemigroup_3)['append'])($t_7))($t_prime_9));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($w__prime___6));
+})()))($w_prime_6));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -231,7 +231,7 @@ $GLOBALS['Control_Comonad_Traced_Trans_extendTracedT'] = function($dictExtend_0 
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_4 = null) use ($functorTracedT1_2_1) {
+})(), "Functor0" => function($_dollar__unused_4 = null) use ($functorTracedT1_2_1) {
   $__num = \func_num_args();
   $__res = $functorTracedT1_2_1;
   goto __end;;
@@ -257,7 +257,7 @@ $GLOBALS['Control_Comonad_Traced_Trans_comonadTransTracedT'] = function($dictMon
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((((($dictComonad_2)['Extend0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])(function($f_4 = null) use ($mempty_1_0) {
+  $__res = ((((((($dictComonad_2)['Extend0'])(null))['Functor0'])(null))['map'])(function($f_4 = null) use ($mempty_1_0) {
   $__num = \func_num_args();
   $__res = ($f_4)($mempty_1_0);
   goto __end;;
@@ -278,20 +278,95 @@ $GLOBALS['Control_Comonad_Traced_Trans_comonadTransTracedT'] = function($dictMon
 // Control_Comonad_Traced_Trans_comonadTracedT
 $GLOBALS['Control_Comonad_Traced_Trans_comonadTracedT'] = function($dictComonad_0 = null) {
   $__num = \func_num_args();
-  $extendTracedT1_1_0 = ($GLOBALS['Control_Comonad_Traced_Trans_extendTracedT'])((($dictComonad_0)['Extend0'])($GLOBALS['Prim_undefined']));
-  $__res = function($dictMonoid_2 = null) use ($dictComonad_0, $extendTracedT1_1_0) {
+  $__local_var_1_0 = (($dictComonad_0)['Extend0'])(null);
+  $Functor0_2_1 = (($__local_var_1_0)['Functor0'])(null);
+  $functorTracedT1_3_2 = ["map" => (function() use ($Functor0_2_1) {
+  $__fn = function($f_3 = null, $v_4 = null) use ($Functor0_2_1, &$__fn) {
   $__num = \func_num_args();
-  $mempty_3_1 = ($dictMonoid_2)['mempty'];
-  $extendTracedT2_4_2 = ($extendTracedT1_1_0)((($dictMonoid_2)['Semigroup0'])($GLOBALS['Prim_undefined']));
-  $__res = ["extract" => function($v_5 = null) use ($dictComonad_0, $mempty_3_1) {
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ((($Functor0_2_1)['map'])((function() use ($f_3) {
+  $__fn = function($g_5 = null, $t_6 = null) use ($f_3, &$__fn) {
   $__num = \func_num_args();
-  $__res = ((($dictComonad_0)['extract'])($v_5))($mempty_3_1);
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($f_3)(($g_5)($t_6));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()))($v_4);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
+  $extendTracedT1_3_2 = function($dictSemigroup_4 = null) use ($Functor0_2_1, $__local_var_1_0, $functorTracedT1_3_2) {
+  $__num = \func_num_args();
+  $__res = ["extend" => (function() use ($Functor0_2_1, $__local_var_1_0, $dictSemigroup_4) {
+  $__fn = function($f_5 = null, $v_6 = null) use ($Functor0_2_1, $__local_var_1_0, $dictSemigroup_4, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ((($__local_var_1_0)['extend'])((function() use ($Functor0_2_1, $dictSemigroup_4, $f_5) {
+  $__fn = function($w_prime_7 = null, $t_8 = null) use ($Functor0_2_1, $dictSemigroup_4, $f_5, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($f_5)(((($Functor0_2_1)['map'])((function() use ($dictSemigroup_4, $t_8) {
+  $__fn = function($h_9 = null, $t_prime_10 = null) use ($dictSemigroup_4, $t_8, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($h_9)(((($dictSemigroup_4)['append'])($t_8))($t_prime_10));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()))($w_prime_7));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()))($v_6);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "Functor0" => function($_dollar__unused_5 = null) use ($functorTracedT1_3_2) {
+  $__num = \func_num_args();
+  $__res = $functorTracedT1_3_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Extend0" => function($dollar__unused_5 = null) use ($extendTracedT2_4_2) {
+}];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  $__res = function($dictMonoid_4 = null) use ($dictComonad_0, $extendTracedT1_3_2) {
   $__num = \func_num_args();
-  $__res = $extendTracedT2_4_2;
+  $mempty_5_4 = ($dictMonoid_4)['mempty'];
+  $extendTracedT2_6_5 = ($extendTracedT1_3_2)((($dictMonoid_4)['Semigroup0'])(null));
+  $__res = ["extract" => function($v_7 = null) use ($dictComonad_0, $mempty_5_4) {
+  $__num = \func_num_args();
+  $__res = ((($dictComonad_0)['extract'])($v_7))($mempty_5_4);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Extend0" => function($_dollar__unused_7 = null) use ($extendTracedT2_6_5) {
+  $__num = \func_num_args();
+  $__res = $extendTracedT2_6_5;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

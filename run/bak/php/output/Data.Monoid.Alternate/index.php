@@ -127,7 +127,7 @@ $GLOBALS['Data_Monoid_Alternate_showAlternate'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (("(Alternate " . (($dictShow_0)['show'])($v_1)) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Alternate "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -186,9 +186,9 @@ $GLOBALS['Data_Monoid_Alternate_ord1Alternate'] = function($dictOrd1_0 = null) {
 };
 
 // Data_Monoid_Alternate_newtypeAlternate
-$GLOBALS['Data_Monoid_Alternate_newtypeAlternate'] = ["Coercible0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Monoid_Alternate_newtypeAlternate'] = ["Coercible0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Prim_undefined'];
+  $__res = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -197,7 +197,7 @@ $GLOBALS['Data_Monoid_Alternate_newtypeAlternate'] = ["Coercible0" => function($
 // Data_Monoid_Alternate_monoidAlternate
 $GLOBALS['Data_Monoid_Alternate_monoidAlternate'] = function($dictPlus_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictPlus_0)['Alt0'])($GLOBALS['Prim_undefined']);
+  $__local_var_1_0 = (($dictPlus_0)['Alt0'])(null);
   $semigroupAlternate1_2_1 = ["append" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2 = null, $v1_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -211,7 +211,7 @@ $GLOBALS['Data_Monoid_Alternate_monoidAlternate'] = function($dictPlus_0 = null)
   };
   return $__fn;
 })()];
-  $__res = ["mempty" => ($dictPlus_0)['empty'], "Semigroup0" => function($dollar__unused_3 = null) use ($semigroupAlternate1_2_1) {
+  $__res = ["mempty" => ($dictPlus_0)['empty'], "Semigroup0" => function($_dollar__unused_3 = null) use ($semigroupAlternate1_2_1) {
   $__num = \func_num_args();
   $__res = $semigroupAlternate1_2_1;
   goto __end;;

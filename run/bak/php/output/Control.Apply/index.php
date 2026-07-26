@@ -130,7 +130,7 @@ $GLOBALS['Control_Apply_applyProxy'] = ["apply" => (function() {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0 = null) {
+})(), "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Functor_functorProxy'];
   goto __end;;
@@ -151,7 +151,7 @@ $GLOBALS['Control_Apply_applyFn'] = ["apply" => (function() {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0 = null) {
+})(), "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Functor_functorFn'];
   goto __end;;
@@ -160,7 +160,7 @@ $GLOBALS['Control_Apply_applyFn'] = ["apply" => (function() {
 }];
 
 // Control_Apply_applyArray
-$GLOBALS['Control_Apply_applyArray'] = ["apply" => $GLOBALS['Control_Apply_arrayApply'], "Functor0" => function($dollar__unused_0 = null) {
+$GLOBALS['Control_Apply_applyArray'] = ["apply" => $GLOBALS['Control_Apply_arrayApply'], "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Functor_functorArray'];
   goto __end;;
@@ -184,7 +184,7 @@ $GLOBALS['Control_Apply_applyFirst'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_Function_const']))($a_1)))($b_2);
+  $__res = ((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])(null))['map'])($GLOBALS['Data_Function_const']))($a_1)))($b_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -199,7 +199,7 @@ $GLOBALS['Control_Apply_applySecond'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])($GLOBALS['Prim_undefined']))['map'])(function($v_3 = null) {
+  $__res = ((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])(null))['map'])(function($v_3 = null) {
   $__num = \func_num_args();
   $__res = ($GLOBALS['Control_Category_categoryFn'])['identity'];
   goto __end;;
@@ -220,7 +220,7 @@ $GLOBALS['Control_Apply_lift2'] = (function() {
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])($GLOBALS['Prim_undefined']))['map'])($f_1))($a_2)))($b_3);
+  $__res = ((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])(null))['map'])($f_1))($a_2)))($b_3);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -235,7 +235,7 @@ $GLOBALS['Control_Apply_lift3'] = (function() {
   if ($__num < 5) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
-  $__res = ((($dictApply_0)['apply'])(((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])($GLOBALS['Prim_undefined']))['map'])($f_1))($a_2)))($b_3)))($c_4);
+  $__res = ((($dictApply_0)['apply'])(((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])(null))['map'])($f_1))($a_2)))($b_3)))($c_4);
   goto __end;;
   __end:
   return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
@@ -250,7 +250,7 @@ $GLOBALS['Control_Apply_lift4'] = (function() {
   if ($__num < 6) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 6);
   }
-  $__res = ((($dictApply_0)['apply'])(((($dictApply_0)['apply'])(((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])($GLOBALS['Prim_undefined']))['map'])($f_1))($a_2)))($b_3)))($c_4)))($d_5);
+  $__res = ((($dictApply_0)['apply'])(((($dictApply_0)['apply'])(((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])(null))['map'])($f_1))($a_2)))($b_3)))($c_4)))($d_5);
   goto __end;;
   __end:
   return $__num > 6 ? $__res(...\array_slice(\func_get_args(), 6)) : $__res;
@@ -265,7 +265,7 @@ $GLOBALS['Control_Apply_lift5'] = (function() {
   if ($__num < 7) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 7);
   }
-  $__res = ((($dictApply_0)['apply'])(((($dictApply_0)['apply'])(((($dictApply_0)['apply'])(((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])($GLOBALS['Prim_undefined']))['map'])($f_1))($a_2)))($b_3)))($c_4)))($d_5)))($e_6);
+  $__res = ((($dictApply_0)['apply'])(((($dictApply_0)['apply'])(((($dictApply_0)['apply'])(((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])(null))['map'])($f_1))($a_2)))($b_3)))($c_4)))($d_5)))($e_6);
   goto __end;;
   __end:
   return $__num > 7 ? $__res(...\array_slice(\func_get_args(), 7)) : $__res;

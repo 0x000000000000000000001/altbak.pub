@@ -137,7 +137,7 @@ $GLOBALS['Data_Maybe_showMaybe'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_1) && (($v_1)->{'tag'} === "Just"))) {
-$__t0 = (("(Just " . (($dictShow_0)['show'])(($v_1)->{'value0'})) . ")");
+$__t0 = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Just "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])(($v_1)->{'value0'})))(")"));
 goto end_branch_0;;
 };
   if ((is_object($v_1) && (($v_1)->{'tag'} === "Nothing"))) {
@@ -201,7 +201,7 @@ $GLOBALS['Data_Maybe_optional'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictAlt_0)['alt'])(((((($dictAlt_0)['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_Maybe_Just']))($a_2)))((($dictApplicative_1)['pure'])(new Phpurs_Data0("Nothing")));
+  $__res = ((($dictAlt_0)['alt'])(((((($dictAlt_0)['Functor0'])(null))['map'])($GLOBALS['Data_Maybe_Just']))($a_2)))((($dictApplicative_1)['pure'])(new Phpurs_Data0("Nothing")));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -241,7 +241,7 @@ goto end_branch_0;;
   };
   return $__fn;
 })()];
-  $__res = ["mempty" => new Phpurs_Data0("Nothing"), "Semigroup0" => function($dollar__unused_2 = null) use ($semigroupMaybe1_1_0) {
+  $__res = ["mempty" => new Phpurs_Data0("Nothing"), "Semigroup0" => function($_dollar__unused_2 = null) use ($semigroupMaybe1_1_0) {
   $__num = \func_num_args();
   $__res = $semigroupMaybe1_1_0;
   goto __end;;
@@ -412,22 +412,15 @@ goto end_branch_0;;
 
 // Data_Maybe_invariantMaybe
 $GLOBALS['Data_Maybe_invariantMaybe'] = ["imap" => (function() {
-  $__fn = function($f_0 = null, $v_1 = null, $v1_2 = null) use (&$__fn) {
+  $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__t0 = null;;
-  if ((is_object($v1_2) && (($v1_2)->{'tag'} === "Just"))) {
-$__t0 = new Phpurs_Data1("Just", ($f_0)(($v1_2)->{'value0'}));
-goto end_branch_0;;
-};
-  $__t0 = new Phpurs_Data0("Nothing");
-  end_branch_0:;
-  $__res = $__t0;
+  $__res = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])($f_0);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
@@ -454,7 +447,7 @@ $__t0 = $a_0;
 goto end_branch_0;;
 };
   if ((is_object($v2_1) && (($v2_1)->{'tag'} === "Just"))) {
-$__t0 = ($v2_1)->{'value0'};
+$__t0 = (($GLOBALS['Control_Category_categoryFn'])['identity'])(($v2_1)->{'value0'});
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -470,7 +463,7 @@ goto end_branch_0;;
 
 // Data_Maybe_fromJust
 $GLOBALS['Data_Maybe_fromJust'] = (function() {
-  $__fn = function($dollar__unused_0 = null, $v_1 = null) use (&$__fn) {
+  $__fn = function($_dollar__unused_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
@@ -511,7 +504,7 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0 = null) {
+})(), "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Maybe_functorMaybe'];
   goto __end;;
@@ -550,7 +543,7 @@ goto end_branch_0;;
 // Data_Maybe_ordMaybe
 $GLOBALS['Data_Maybe_ordMaybe'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictOrd_0)['Eq0'])($GLOBALS['Prim_undefined']);
+  $__local_var_1_0 = (($dictOrd_0)['Eq0'])(null);
   $eqMaybe1_2_1 = ["eq" => (function() use ($__local_var_1_0) {
   $__fn = function($x_2 = null, $y_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -606,7 +599,7 @@ goto end_branch_3;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Eq0" => function($dollar__unused_3 = null) use ($eqMaybe1_2_1) {
+})(), "Eq0" => function($_dollar__unused_3 = null) use ($eqMaybe1_2_1) {
   $__num = \func_num_args();
   $__res = $eqMaybe1_2_1;
   goto __end;;
@@ -641,13 +634,42 @@ goto end_branch_0;;
 })()];
 
 // Data_Maybe_ord1Maybe
-$GLOBALS['Data_Maybe_ord1Maybe'] = ["compare1" => function($dictOrd_0 = null) {
+$GLOBALS['Data_Maybe_ord1Maybe'] = ["compare1" => (function() {
+  $__fn = function($dictOrd_0 = null, $x_1 = null, $y_2 = null) use (&$__fn) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Maybe_ordMaybe'])($dictOrd_0))['compare'];
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__t0 = null;;
+  if ((is_object($x_1) && (($x_1)->{'tag'} === "Nothing"))) {
+$__t1 = null;;
+if ((is_object($y_2) && (($y_2)->{'tag'} === "Nothing"))) {
+$__t1 = new Phpurs_Data0("EQ");
+goto end_branch_1;;
+};
+$__t1 = new Phpurs_Data0("LT");
+end_branch_1:;
+$__t0 = $__t1;
+goto end_branch_0;;
+};
+  if ((is_object($y_2) && (($y_2)->{'tag'} === "Nothing"))) {
+$__t0 = new Phpurs_Data0("GT");
+goto end_branch_0;;
+};
+  if (((is_object($x_1) && (($x_1)->{'tag'} === "Just")) && (is_object($y_2) && (($y_2)->{'tag'} === "Just")))) {
+$__t0 = ((($dictOrd_0)['compare'])(($x_1)->{'value0'}))(($y_2)->{'value0'});
+goto end_branch_0;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t0 = null;
+  end_branch_0:;
+  $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Eq10" => function($dollar__unused_0 = null) {
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})(), "Eq10" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Maybe_eq1Maybe'];
   goto __end;;
@@ -658,10 +680,73 @@ $GLOBALS['Data_Maybe_ord1Maybe'] = ["compare1" => function($dictOrd_0 = null) {
 // Data_Maybe_boundedMaybe
 $GLOBALS['Data_Maybe_boundedMaybe'] = function($dictBounded_0 = null) {
   $__num = \func_num_args();
-  $ordMaybe1_1_0 = ($GLOBALS['Data_Maybe_ordMaybe'])((($dictBounded_0)['Ord0'])($GLOBALS['Prim_undefined']));
-  $__res = ["top" => new Phpurs_Data1("Just", ($dictBounded_0)['top']), "bottom" => new Phpurs_Data0("Nothing"), "Ord0" => function($dollar__unused_2 = null) use ($ordMaybe1_1_0) {
+  $__local_var_1_0 = (($dictBounded_0)['Ord0'])(null);
+  $__local_var_2_1 = (($__local_var_1_0)['Eq0'])(null);
+  $eqMaybe1_3_2 = ["eq" => (function() use ($__local_var_2_1) {
+  $__fn = function($x_3 = null, $y_4 = null) use ($__local_var_2_1, &$__fn) {
   $__num = \func_num_args();
-  $__res = $ordMaybe1_1_0;
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__t2 = null;;
+  if ((is_object($x_3) && (($x_3)->{'tag'} === "Nothing"))) {
+$__t2 = (is_object($y_4) && (($y_4)->{'tag'} === "Nothing"));
+goto end_branch_2;;
+};
+  $__t2 = ((is_object($x_3) && (($x_3)->{'tag'} === "Just")) && ((is_object($y_4) && (($y_4)->{'tag'} === "Just")) && ((($__local_var_2_1)['eq'])(($x_3)->{'value0'}))(($y_4)->{'value0'})));
+  end_branch_2:;
+  $__res = $__t2;
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
+  $ordMaybe1_3_2 = ["compare" => (function() use ($__local_var_1_0) {
+  $__fn = function($x_4 = null, $y_5 = null) use ($__local_var_1_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__t4 = null;;
+  if ((is_object($x_4) && (($x_4)->{'tag'} === "Nothing"))) {
+$__t5 = null;;
+if ((is_object($y_5) && (($y_5)->{'tag'} === "Nothing"))) {
+$__t5 = new Phpurs_Data0("EQ");
+goto end_branch_5;;
+};
+$__t5 = new Phpurs_Data0("LT");
+end_branch_5:;
+$__t4 = $__t5;
+goto end_branch_4;;
+};
+  if ((is_object($y_5) && (($y_5)->{'tag'} === "Nothing"))) {
+$__t4 = new Phpurs_Data0("GT");
+goto end_branch_4;;
+};
+  if (((is_object($x_4) && (($x_4)->{'tag'} === "Just")) && (is_object($y_5) && (($y_5)->{'tag'} === "Just")))) {
+$__t4 = ((($__local_var_1_0)['compare'])(($x_4)->{'value0'}))(($y_5)->{'value0'});
+goto end_branch_4;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t4 = null;
+  end_branch_4:;
+  $__res = $__t4;
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "Eq0" => function($_dollar__unused_4 = null) use ($eqMaybe1_3_2) {
+  $__num = \func_num_args();
+  $__res = $eqMaybe1_3_2;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = ["top" => new Phpurs_Data1("Just", ($dictBounded_0)['top']), "bottom" => new Phpurs_Data0("Nothing"), "Ord0" => function($_dollar__unused_4 = null) use ($ordMaybe1_3_2) {
+  $__num = \func_num_args();
+  $__res = $ordMaybe1_3_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -680,14 +765,7 @@ $GLOBALS['Data_Maybe_applyMaybe'] = ["apply" => (function() {
   }
   $__t0 = null;;
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Just"))) {
-$__t1 = null;;
-if ((is_object($v1_1) && (($v1_1)->{'tag'} === "Just"))) {
-$__t1 = new Phpurs_Data1("Just", (($v_0)->{'value0'})(($v1_1)->{'value0'}));
-goto end_branch_1;;
-};
-$__t1 = new Phpurs_Data0("Nothing");
-end_branch_1:;
-$__t0 = $__t1;
+$__t0 = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])(($v_0)->{'value0'}))($v1_1);
 goto end_branch_0;;
 };
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Nothing"))) {
@@ -703,7 +781,7 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0 = null) {
+})(), "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Maybe_functorMaybe'];
   goto __end;;
@@ -736,7 +814,7 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Apply0" => function($dollar__unused_0 = null) {
+})(), "Apply0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Maybe_applyMaybe'];
   goto __end;;
@@ -747,48 +825,42 @@ goto end_branch_0;;
 // Data_Maybe_semiringMaybe
 $GLOBALS['Data_Maybe_semiringMaybe'] = function($dictSemiring_0 = null) {
   $__num = \func_num_args();
+  $mul_1_0 = ($dictSemiring_0)['mul'];
   $__res = ["zero" => new Phpurs_Data0("Nothing"), "one" => new Phpurs_Data1("Just", ($dictSemiring_0)['one']), "add" => (function() use ($dictSemiring_0) {
-  $__fn = function($v_1 = null, $v1_2 = null) use ($dictSemiring_0, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__t0 = null;;
-  if ((is_object($v_1) && (($v_1)->{'tag'} === "Nothing"))) {
-$__t0 = $v1_2;
-goto end_branch_0;;
-};
-  if ((is_object($v1_2) && (($v1_2)->{'tag'} === "Nothing"))) {
-$__t0 = $v_1;
-goto end_branch_0;;
-};
-  if (((is_object($v_1) && (($v_1)->{'tag'} === "Just")) && (is_object($v1_2) && (($v1_2)->{'tag'} === "Just")))) {
-$__t0 = new Phpurs_Data1("Just", ((($dictSemiring_0)['add'])(($v_1)->{'value0'}))(($v1_2)->{'value0'}));
-goto end_branch_0;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t0 = null;
-  end_branch_0:;
-  $__res = $__t0;
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "mul" => (function() use ($dictSemiring_0) {
-  $__fn = function($x_1 = null, $y_2 = null) use ($dictSemiring_0, &$__fn) {
+  $__fn = function($v_2 = null, $v1_3 = null) use ($dictSemiring_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t1 = null;;
-  if (((is_object($x_1) && (($x_1)->{'tag'} === "Just")) && (is_object($y_2) && (($y_2)->{'tag'} === "Just")))) {
-$__t1 = new Phpurs_Data1("Just", ((($dictSemiring_0)['mul'])(($x_1)->{'value0'}))(($y_2)->{'value0'}));
+  if ((is_object($v_2) && (($v_2)->{'tag'} === "Nothing"))) {
+$__t1 = $v1_3;
 goto end_branch_1;;
 };
-  $__t1 = new Phpurs_Data0("Nothing");
+  if ((is_object($v1_3) && (($v1_3)->{'tag'} === "Nothing"))) {
+$__t1 = $v_2;
+goto end_branch_1;;
+};
+  if (((is_object($v_2) && (($v_2)->{'tag'} === "Just")) && (is_object($v1_3) && (($v1_3)->{'tag'} === "Just")))) {
+$__t1 = new Phpurs_Data1("Just", ((($dictSemiring_0)['add'])(($v_2)->{'value0'}))(($v1_3)->{'value0'}));
+goto end_branch_1;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t1 = null;
   end_branch_1:;
   $__res = $__t1;
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "mul" => (function() use ($mul_1_0) {
+  $__fn = function($x_2 = null, $y_3 = null) use ($mul_1_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])(((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($mul_1_0))($x_2)))($y_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -801,7 +873,7 @@ goto end_branch_1;;
 };
 
 // Data_Maybe_applicativeMaybe
-$GLOBALS['Data_Maybe_applicativeMaybe'] = ["pure" => $GLOBALS['Data_Maybe_Just'], "Apply0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Maybe_applicativeMaybe'] = ["pure" => $GLOBALS['Data_Maybe_Just'], "Apply0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Maybe_applyMaybe'];
   goto __end;;
@@ -810,13 +882,13 @@ $GLOBALS['Data_Maybe_applicativeMaybe'] = ["pure" => $GLOBALS['Data_Maybe_Just']
 }];
 
 // Data_Maybe_monadMaybe
-$GLOBALS['Data_Maybe_monadMaybe'] = ["Applicative0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Maybe_monadMaybe'] = ["Applicative0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Maybe_applicativeMaybe'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bind1" => function($dollar__unused_0 = null) {
+}, "Bind1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Maybe_bindMaybe'];
   goto __end;;
@@ -844,7 +916,7 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0 = null) {
+})(), "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Maybe_functorMaybe'];
   goto __end;;
@@ -853,7 +925,7 @@ goto end_branch_0;;
 }];
 
 // Data_Maybe_plusMaybe
-$GLOBALS['Data_Maybe_plusMaybe'] = ["empty" => new Phpurs_Data0("Nothing"), "Alt0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Maybe_plusMaybe'] = ["empty" => new Phpurs_Data0("Nothing"), "Alt0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Maybe_altMaybe'];
   goto __end;;
@@ -862,13 +934,13 @@ $GLOBALS['Data_Maybe_plusMaybe'] = ["empty" => new Phpurs_Data0("Nothing"), "Alt
 }];
 
 // Data_Maybe_alternativeMaybe
-$GLOBALS['Data_Maybe_alternativeMaybe'] = ["Applicative0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Maybe_alternativeMaybe'] = ["Applicative0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Maybe_applicativeMaybe'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Plus1" => function($dollar__unused_0 = null) {
+}, "Plus1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Maybe_plusMaybe'];
   goto __end;;

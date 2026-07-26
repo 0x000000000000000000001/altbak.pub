@@ -124,7 +124,7 @@ goto end_branch_0;;
 // Data_Date_Component_Gen_genYear
 $GLOBALS['Data_Date_Component_Gen_genYear'] = function($dictMonadGen_0 = null) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadGen_0)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']))['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Date_Component_Gen_fromJust']))(($GLOBALS['Data_Date_Component_boundedEnumYear'])['toEnum'])))(((($dictMonadGen_0)['chooseInt'])(1900))(2100));
+  $__res = ((((((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Date_Component_Gen_fromJust']))(($GLOBALS['Data_Date_Component_boundedEnumYear'])['toEnum'])))(((($dictMonadGen_0)['chooseInt'])(1900))(2100));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

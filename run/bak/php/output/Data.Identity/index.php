@@ -133,7 +133,7 @@ $GLOBALS['Data_Identity_showIdentity'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (("(Identity " . (($dictShow_0)['show'])($v_1)) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Identity "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -180,9 +180,9 @@ $GLOBALS['Data_Identity_ordIdentity'] = function($dictOrd_0 = null) {
 };
 
 // Data_Identity_newtypeIdentity
-$GLOBALS['Data_Identity_newtypeIdentity'] = ["Coercible0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Identity_newtypeIdentity'] = ["Coercible0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Prim_undefined'];
+  $__res = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -232,15 +232,15 @@ $GLOBALS['Data_Identity_functorIdentity'] = ["map" => (function() {
 
 // Data_Identity_invariantIdentity
 $GLOBALS['Data_Identity_invariantIdentity'] = ["imap" => (function() {
-  $__fn = function($f_0 = null, $v_1 = null, $m_2 = null) use (&$__fn) {
+  $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($f_0)($m_2);
+  $__res = (($GLOBALS['Data_Identity_functorIdentity'])['map'])($f_0);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
@@ -258,7 +258,7 @@ $GLOBALS['Data_Identity_extendIdentity'] = ["extend" => (function() {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0 = null) {
+})(), "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Identity_functorIdentity'];
   goto __end;;
@@ -300,7 +300,7 @@ $GLOBALS['Data_Identity_ord1Identity'] = ["compare1" => function($dictOrd_0 = nu
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Eq10" => function($dollar__unused_0 = null) {
+}, "Eq10" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Identity_eq1Identity'];
   goto __end;;
@@ -315,7 +315,7 @@ $GLOBALS['Data_Identity_comonadIdentity'] = ["extract" => function($v_0 = null) 
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Extend0" => function($dollar__unused_0 = null) {
+}, "Extend0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Identity_extendIdentity'];
   goto __end;;
@@ -363,7 +363,7 @@ $GLOBALS['Data_Identity_applyIdentity'] = ["apply" => (function() {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0 = null) {
+})(), "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Identity_functorIdentity'];
   goto __end;;
@@ -384,7 +384,7 @@ $GLOBALS['Data_Identity_bindIdentity'] = ["bind" => (function() {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Apply0" => function($dollar__unused_0 = null) {
+})(), "Apply0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Identity_applyIdentity'];
   goto __end;;
@@ -393,7 +393,7 @@ $GLOBALS['Data_Identity_bindIdentity'] = ["bind" => (function() {
 }];
 
 // Data_Identity_applicativeIdentity
-$GLOBALS['Data_Identity_applicativeIdentity'] = ["pure" => $GLOBALS['Data_Identity_Identity'], "Apply0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Identity_applicativeIdentity'] = ["pure" => $GLOBALS['Data_Identity_Identity'], "Apply0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Identity_applyIdentity'];
   goto __end;;
@@ -402,13 +402,13 @@ $GLOBALS['Data_Identity_applicativeIdentity'] = ["pure" => $GLOBALS['Data_Identi
 }];
 
 // Data_Identity_monadIdentity
-$GLOBALS['Data_Identity_monadIdentity'] = ["Applicative0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Identity_monadIdentity'] = ["Applicative0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Identity_applicativeIdentity'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bind1" => function($dollar__unused_0 = null) {
+}, "Bind1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Identity_bindIdentity'];
   goto __end;;
@@ -429,7 +429,7 @@ $GLOBALS['Data_Identity_altIdentity'] = ["alt" => (function() {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0 = null) {
+})(), "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Identity_functorIdentity'];
   goto __end;;

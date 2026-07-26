@@ -115,16 +115,16 @@ $GLOBALS['Data_String_NonEmpty_CaseInsensitive_CaseInsensitiveNonEmptyString'] =
 // Data_String_NonEmpty_CaseInsensitive_showCaseInsensitiveNonEmptyString
 $GLOBALS['Data_String_NonEmpty_CaseInsensitive_showCaseInsensitiveNonEmptyString'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = (("(CaseInsensitiveNonEmptyString (NonEmptyString.unsafeFromString " . ($GLOBALS['Data_Show_showStringImpl'])($v_0)) . "))");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(CaseInsensitiveNonEmptyString "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_String_NonEmpty_Internal_showNonEmptyString'])['show'])($v_0)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
 
 // Data_String_NonEmpty_CaseInsensitive_newtypeCaseInsensitiveNonEmptyString
-$GLOBALS['Data_String_NonEmpty_CaseInsensitive_newtypeCaseInsensitiveNonEmptyString'] = ["Coercible0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_String_NonEmpty_CaseInsensitive_newtypeCaseInsensitiveNonEmptyString'] = ["Coercible0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Prim_undefined'];
+  $__res = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -137,7 +137,7 @@ $GLOBALS['Data_String_NonEmpty_CaseInsensitive_eqCaseInsensitiveNonEmptyString']
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_String_Common_toLower'])($v_0) === ($GLOBALS['Data_String_Common_toLower'])($v1_1));
+  $__res = ((($GLOBALS['Data_Eq_eqString'])['eq'])(($GLOBALS['Data_String_Common_toLower'])($v_0)))(($GLOBALS['Data_String_Common_toLower'])($v1_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -158,7 +158,7 @@ $GLOBALS['Data_String_NonEmpty_CaseInsensitive_ordCaseInsensitiveNonEmptyString'
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Eq0" => function($dollar__unused_0 = null) {
+})(), "Eq0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_String_NonEmpty_CaseInsensitive_eqCaseInsensitiveNonEmptyString'];
   goto __end;;

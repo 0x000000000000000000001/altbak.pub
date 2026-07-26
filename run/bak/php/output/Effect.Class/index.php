@@ -99,7 +99,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Effect_Class_monadEffectEffect
-$GLOBALS['Effect_Class_monadEffectEffect'] = ["liftEffect" => ($GLOBALS['Control_Category_categoryFn'])['identity'], "Monad0" => function($dollar__unused_0 = null) {
+$GLOBALS['Effect_Class_monadEffectEffect'] = ["liftEffect" => ($GLOBALS['Control_Category_categoryFn'])['identity'], "Monad0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Effect_monadEffect'];
   goto __end;;

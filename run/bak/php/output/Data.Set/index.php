@@ -197,33 +197,7 @@ $GLOBALS['Data_Set_toMap'] = function($v_0 = null) {
 // Data_Set_toList
 $GLOBALS['Data_Set_toList'] = function($v_0 = null) {
   $__num = \func_num_args();
-  $go_1_0 = null;
-  $go_1_0 = (function() use (&$go_1_0) {
-  $__fn = function($m__prime___2 = null, $z__prime___3 = null) use (&$go_1_0, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__t1 = null;;
-  if ((is_object($m__prime___2) && (($m__prime___2)->{'tag'} === "Leaf"))) {
-$__t1 = $z__prime___3;
-goto end_branch_1;;
-};
-  if ((is_object($m__prime___2) && (($m__prime___2)->{'tag'} === "Node"))) {
-$__t1 = ($go_1_0)(($m__prime___2)->{'value4'}, new Phpurs_Data2("Cons", ($m__prime___2)->{'value2'}, ($go_1_0)(($m__prime___2)->{'value5'}, $z__prime___3)));
-goto end_branch_1;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t1 = null;
-  end_branch_1:;
-  $__res = $__t1;
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
-  $__res = ($go_1_0)($v_0, new Phpurs_Data0("Nil"));
+  $__res = ($GLOBALS['Data_Map_Internal_keys'])($v_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -232,32 +206,14 @@ goto end_branch_1;;
 // Data_Set_toUnfoldable
 $GLOBALS['Data_Set_toUnfoldable'] = function($dictUnfoldable_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictUnfoldable_0)['unfoldr'])(function($xs_1 = null) {
-  $__num = \func_num_args();
-  $__t0 = null;;
-  if ((is_object($xs_1) && (($xs_1)->{'tag'} === "Nil"))) {
-$__t0 = new Phpurs_Data0("Nothing");
-goto end_branch_0;;
-};
-  if ((is_object($xs_1) && (($xs_1)->{'tag'} === "Cons"))) {
-$__t0 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", ($xs_1)->{'value0'}, ($xs_1)->{'value1'}));
-goto end_branch_0;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t0 = null;
-  end_branch_0:;
-  $__res = $__t0;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))($GLOBALS['Data_Set_toList']);
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($GLOBALS['Data_List_toUnfoldable'])($dictUnfoldable_0)))($GLOBALS['Data_Set_toList']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
 
 // Data_Set_toUnfoldable1
-$GLOBALS['Data_Set_toUnfoldable1'] = ($GLOBALS['Data_Set_toUnfoldable'])($GLOBALS['Data_Unfoldable_unfoldableArray']);
+$GLOBALS['Data_Set_toUnfoldable1'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($GLOBALS['Data_List_toUnfoldable'])($GLOBALS['Data_Unfoldable_unfoldableArray'])))($GLOBALS['Data_Set_toList']);
 
 // Data_Set_size
 $GLOBALS['Data_Set_size'] = $GLOBALS['Data_Map_Internal_size'];
@@ -276,7 +232,7 @@ $GLOBALS['Data_Set_showSet'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($s_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (("(fromFoldable " . (($GLOBALS['Data_Show_showArrayImpl'])(($dictShow_0)['show']))(($GLOBALS['Data_Set_toUnfoldable1'])($s_1))) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(fromFoldable "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Show_showArrayImpl'])(($dictShow_0)['show']))(($GLOBALS['Data_Set_toUnfoldable1'])($s_1))))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -315,12 +271,12 @@ $GLOBALS['Data_Set_member'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go_2_0 = null;
-  $go_2_0 = function($v_3 = null) use ($dictOrd_0, &$go_2_0, $k_1) {
+  $go__2_0 = null;
+  $go__2_0 = function($v_3 = null) use ($dictOrd_0, &$go__2_0, $k_1) {
   $__num = \func_num_args();
-  $__tco_var_go_2_0_0_v_3 = $v_3;
-  tco_loop_go_2_0_0:;
-  $v_3 = $__tco_var_go_2_0_0_v_3;
+  $__tco_var_go__2_0_0_v_3 = $v_3;
+  tco_loop_go__2_0_0:;
+  $v_3 = $__tco_var_go__2_0_0_v_3;
   $__t0 = null;;
   if ((is_object($v_3) && (($v_3)->{'tag'} === "Leaf"))) {
 $__t0 = false;
@@ -331,15 +287,15 @@ $v1_4_1 = ((($dictOrd_0)['compare'])($k_1))(($v_3)->{'value2'});
 $__t2 = null;;
 if ((is_object($v1_4_1) && (($v1_4_1)->{'tag'} === "LT"))) {
 $__tco_3 = ($v_3)->{'value4'};
-$__tco_var_go_2_0_0_v_3 = $__tco_3;
-goto tco_loop_go_2_0_0;;
+$__tco_var_go__2_0_0_v_3 = $__tco_3;
+goto tco_loop_go__2_0_0;;
 $__t2 = null;
 goto end_branch_2;;
 };
 if ((is_object($v1_4_1) && (($v1_4_1)->{'tag'} === "GT"))) {
 $__tco_4 = ($v_3)->{'value5'};
-$__tco_var_go_2_0_0_v_3 = $__tco_4;
-goto tco_loop_go_2_0_0;;
+$__tco_var_go__2_0_0_v_3 = $__tco_4;
+goto tco_loop_go__2_0_0;;
 $__t2 = null;
 goto end_branch_2;;
 };
@@ -361,7 +317,7 @@ goto end_branch_0;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go_2_0;
+  $__res = $go__2_0;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -418,7 +374,7 @@ $GLOBALS['Data_Set_foldableSet'] = ["foldMap" => function($dictMonoid_0 = null) 
   $foldMap1_1_0 = (($GLOBALS['Data_List_Types_foldableList'])['foldMap'])($dictMonoid_0);
   $__res = function($f_2 = null) use ($foldMap1_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($foldMap1_1_0)($f_2)))($GLOBALS['Data_Set_toList']);
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($foldMap1_1_0)($f_2)))($GLOBALS['Data_Set_toList']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -432,43 +388,7 @@ $GLOBALS['Data_Set_foldableSet'] = ["foldMap" => function($dictMonoid_0 = null) 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go_2_1 = null;
-  $go_2_1 = (function() use ($f_0, &$go_2_1) {
-  $__fn = function($b_3 = null, $v_4 = null) use ($f_0, &$go_2_1, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__tco_var_go_2_1_1_b_3 = $b_3;
-  $__tco_var_go_2_1_1_v_4 = $v_4;
-  tco_loop_go_2_1_1:;
-  $b_3 = $__tco_var_go_2_1_1_b_3;
-  $v_4 = $__tco_var_go_2_1_1_v_4;
-  $__t1 = null;;
-  if ((is_object($v_4) && (($v_4)->{'tag'} === "Nil"))) {
-$__t1 = $b_3;
-goto end_branch_1;;
-};
-  if ((is_object($v_4) && (($v_4)->{'tag'} === "Cons"))) {
-$__tco_2 = (($f_0)($b_3))(($v_4)->{'value0'});
-$__tco_3 = ($v_4)->{'value1'};
-$__tco_var_go_2_1_1_b_3 = $__tco_2;
-$__tco_var_go_2_1_1_v_4 = $__tco_3;
-goto tco_loop_go_2_1_1;;
-$__t1 = null;
-goto end_branch_1;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t1 = null;
-  end_branch_1:;
-  $__res = $__t1;
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($go_2_1)($x_1)))($GLOBALS['Data_Set_toList']);
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(((($GLOBALS['Data_List_Types_foldableList'])['foldl'])($f_0))($x_1)))($GLOBALS['Data_Set_toList']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -480,7 +400,7 @@ goto end_branch_1;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(((($GLOBALS['Data_List_Types_foldableList'])['foldr'])($f_0))($x_1)))($GLOBALS['Data_Set_toList']);
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(((($GLOBALS['Data_List_Types_foldableList'])['foldr'])($f_0))($x_1)))($GLOBALS['Data_Set_toList']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -491,15 +411,13 @@ goto end_branch_1;;
 // Data_Set_findMin
 $GLOBALS['Data_Set_findMin'] = function($v_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = ($GLOBALS['Data_Map_Internal_findMin'])($v_0);
-  $__t1 = null;;
-  if ((is_object($__local_var_1_0) && (($__local_var_1_0)->{'tag'} === "Just"))) {
-$__t1 = new Phpurs_Data1("Just", (($__local_var_1_0)->{'value0'})['key']);
-goto end_branch_1;;
-};
-  $__t1 = new Phpurs_Data0("Nothing");
-  end_branch_1:;
-  $__res = $__t1;
+  $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($v1_1 = null) {
+  $__num = \func_num_args();
+  $__res = ($v1_1)['key'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))(($GLOBALS['Data_Map_Internal_findMin'])($v_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -508,15 +426,13 @@ goto end_branch_1;;
 // Data_Set_findMax
 $GLOBALS['Data_Set_findMax'] = function($v_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = ($GLOBALS['Data_Map_Internal_findMax'])($v_0);
-  $__t1 = null;;
-  if ((is_object($__local_var_1_0) && (($__local_var_1_0)->{'tag'} === "Just"))) {
-$__t1 = new Phpurs_Data1("Just", (($__local_var_1_0)->{'value0'})['key']);
-goto end_branch_1;;
-};
-  $__t1 = new Phpurs_Data0("Nothing");
-  end_branch_1:;
-  $__res = $__t1;
+  $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($v1_1 = null) {
+  $__num = \func_num_args();
+  $__res = ($v1_1)['key'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))(($GLOBALS['Data_Map_Internal_findMax'])($v_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -555,7 +471,7 @@ $GLOBALS['Data_Set_eqSet'] = function($dictEq_0 = null) {
 // Data_Set_ordSet
 $GLOBALS['Data_Set_ordSet'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictOrd_0)['Eq0'])($GLOBALS['Prim_undefined']);
+  $__local_var_1_0 = (($dictOrd_0)['Eq0'])(null);
   $eqSet1_2_1 = ["eq" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2 = null, $v1_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -575,65 +491,13 @@ $GLOBALS['Data_Set_ordSet'] = function($dictOrd_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go_5_2 = null;
-  $go_5_2 = (function() use (&$go_5_2) {
-  $__fn = function($m__prime___6 = null, $z__prime___7 = null) use (&$go_5_2, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__t3 = null;;
-  if ((is_object($m__prime___6) && (($m__prime___6)->{'tag'} === "Leaf"))) {
-$__t3 = $z__prime___7;
-goto end_branch_3;;
-};
-  if ((is_object($m__prime___6) && (($m__prime___6)->{'tag'} === "Node"))) {
-$__t3 = ($go_5_2)(($m__prime___6)->{'value4'}, new Phpurs_Data2("Cons", ($m__prime___6)->{'value2'}, ($go_5_2)(($m__prime___6)->{'value5'}, $z__prime___7)));
-goto end_branch_3;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t3 = null;
-  end_branch_3:;
-  $__res = $__t3;
+  $__res = (((($GLOBALS['Data_List_Types_ordList'])($dictOrd_0))['compare'])(($GLOBALS['Data_Map_Internal_keys'])($s1_3)))(($GLOBALS['Data_Map_Internal_keys'])($s2_4));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})();
-  $go_5_4 = null;
-  $go_5_4 = (function() use (&$go_5_4) {
-  $__fn = function($m__prime___6 = null, $z__prime___7 = null) use (&$go_5_4, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__t5 = null;;
-  if ((is_object($m__prime___6) && (($m__prime___6)->{'tag'} === "Leaf"))) {
-$__t5 = $z__prime___7;
-goto end_branch_5;;
-};
-  if ((is_object($m__prime___6) && (($m__prime___6)->{'tag'} === "Node"))) {
-$__t5 = ($go_5_4)(($m__prime___6)->{'value4'}, new Phpurs_Data2("Cons", ($m__prime___6)->{'value2'}, ($go_5_4)(($m__prime___6)->{'value5'}, $z__prime___7)));
-goto end_branch_5;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t5 = null;
-  end_branch_5:;
-  $__res = $__t5;
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
-  $__res = (((($GLOBALS['Data_List_Types_ordList'])($dictOrd_0))['compare'])(($go_5_2)($s1_3, new Phpurs_Data0("Nil"))))(($go_5_4)($s2_4, new Phpurs_Data0("Nil")));
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Eq0" => function($dollar__unused_3 = null) use ($eqSet1_2_1) {
+})(), "Eq0" => function($_dollar__unused_3 = null) use ($eqSet1_2_1) {
   $__num = \func_num_args();
   $__res = $eqSet1_2_1;
   goto __end;;
@@ -667,7 +531,7 @@ $GLOBALS['Data_Set_ord1Set'] = ["compare1" => function($dictOrd_0 = null) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Eq10" => function($dollar__unused_0 = null) {
+}, "Eq10" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Set_eq1Set'];
   goto __end;;
@@ -739,7 +603,7 @@ $GLOBALS['Data_Set_mapMaybe'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(((($GLOBALS['Data_List_Types_foldableList'])['foldr'])((function() use ($dictOrd_0, $f_1) {
+  $__res = ((($GLOBALS['Data_Set_foldableSet'])['foldr'])((function() use ($dictOrd_0, $f_1) {
   $__fn = function($a_2 = null, $acc_3 = null) use ($dictOrd_0, $f_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -764,7 +628,7 @@ goto end_branch_1;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))(new Phpurs_Data0("Leaf"))))($GLOBALS['Data_Set_toList']);
+})()))(new Phpurs_Data0("Leaf"));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -789,7 +653,7 @@ $GLOBALS['Data_Set_monoidSet'] = function($dictOrd_0 = null) {
   };
   return $__fn;
 })()];
-  $__res = ["mempty" => new Phpurs_Data0("Leaf"), "Semigroup0" => function($dollar__unused_2 = null) use ($semigroupSet1_1_0) {
+  $__res = ["mempty" => new Phpurs_Data0("Leaf"), "Semigroup0" => function($_dollar__unused_2 = null) use ($semigroupSet1_1_0) {
   $__num = \func_num_args();
   $__res = $semigroupSet1_1_0;
   goto __end;;
@@ -907,7 +771,7 @@ goto end_branch_2;;
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
   $__t2 = null;
   end_branch_2:;
-  $__res = (($__t1 !== $__t2) && (is_object(($GLOBALS['Data_Map_Internal_unsafeDifference'])($compare_1_0, $s1_2, $s2_3)) && ((($GLOBALS['Data_Map_Internal_unsafeDifference'])($compare_1_0, $s1_2, $s2_3))->{'tag'} === "Leaf")));
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($GLOBALS['Data_Eq_eqBoolean'])['eq'])(((($GLOBALS['Data_Eq_eqInt'])['eq'])($__t1))($__t2)))(false)))((is_object(($GLOBALS['Data_Map_Internal_unsafeDifference'])($compare_1_0, $s1_2, $s2_3)) && ((($GLOBALS['Data_Map_Internal_unsafeDifference'])($compare_1_0, $s1_2, $s2_3))->{'tag'} === "Leaf")));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

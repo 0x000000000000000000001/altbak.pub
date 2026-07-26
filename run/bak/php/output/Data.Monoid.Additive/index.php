@@ -122,7 +122,7 @@ $GLOBALS['Data_Monoid_Additive_showAdditive'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (("(Additive " . (($dictShow_0)['show'])($v_1)) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Additive "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -178,7 +178,7 @@ $GLOBALS['Data_Monoid_Additive_monoidAdditive'] = function($dictSemiring_0 = nul
   };
   return $__fn;
 })()];
-  $__res = ["mempty" => ($dictSemiring_0)['zero'], "Semigroup0" => function($dollar__unused_2 = null) use ($semigroupAdditive1_1_0) {
+  $__res = ["mempty" => ($dictSemiring_0)['zero'], "Semigroup0" => function($_dollar__unused_2 = null) use ($semigroupAdditive1_1_0) {
   $__num = \func_num_args();
   $__res = $semigroupAdditive1_1_0;
   goto __end;;
@@ -230,7 +230,7 @@ $GLOBALS['Data_Monoid_Additive_ord1Additive'] = ["compare1" => function($dictOrd
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Eq10" => function($dollar__unused_0 = null) {
+}, "Eq10" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Monoid_Additive_eq1Additive'];
   goto __end;;
@@ -260,7 +260,7 @@ $GLOBALS['Data_Monoid_Additive_applyAdditive'] = ["apply" => (function() {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0 = null) {
+})(), "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Monoid_Additive_functorAdditive'];
   goto __end;;
@@ -281,7 +281,7 @@ $GLOBALS['Data_Monoid_Additive_bindAdditive'] = ["bind" => (function() {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Apply0" => function($dollar__unused_0 = null) {
+})(), "Apply0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Monoid_Additive_applyAdditive'];
   goto __end;;
@@ -290,7 +290,7 @@ $GLOBALS['Data_Monoid_Additive_bindAdditive'] = ["bind" => (function() {
 }];
 
 // Data_Monoid_Additive_applicativeAdditive
-$GLOBALS['Data_Monoid_Additive_applicativeAdditive'] = ["pure" => $GLOBALS['Data_Monoid_Additive_Additive'], "Apply0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Monoid_Additive_applicativeAdditive'] = ["pure" => $GLOBALS['Data_Monoid_Additive_Additive'], "Apply0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Monoid_Additive_applyAdditive'];
   goto __end;;
@@ -299,13 +299,13 @@ $GLOBALS['Data_Monoid_Additive_applicativeAdditive'] = ["pure" => $GLOBALS['Data
 }];
 
 // Data_Monoid_Additive_monadAdditive
-$GLOBALS['Data_Monoid_Additive_monadAdditive'] = ["Applicative0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Monoid_Additive_monadAdditive'] = ["Applicative0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Monoid_Additive_applicativeAdditive'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bind1" => function($dollar__unused_0 = null) {
+}, "Bind1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Monoid_Additive_bindAdditive'];
   goto __end;;

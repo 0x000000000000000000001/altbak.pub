@@ -114,7 +114,7 @@ $GLOBALS['Data_DivisionRing_rightDiv'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((((($dictDivisionRing_0)['Ring0'])($GLOBALS['Prim_undefined']))['Semiring0'])($GLOBALS['Prim_undefined']))['mul'])($a_1))((($dictDivisionRing_0)['recip'])($b_2));
+  $__res = ((((((($dictDivisionRing_0)['Ring0'])(null))['Semiring0'])(null))['mul'])($a_1))((($dictDivisionRing_0)['recip'])($b_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -129,7 +129,7 @@ $GLOBALS['Data_DivisionRing_leftDiv'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((((($dictDivisionRing_0)['Ring0'])($GLOBALS['Prim_undefined']))['Semiring0'])($GLOBALS['Prim_undefined']))['mul'])((($dictDivisionRing_0)['recip'])($b_2)))($a_1);
+  $__res = ((((((($dictDivisionRing_0)['Ring0'])(null))['Semiring0'])(null))['mul'])((($dictDivisionRing_0)['recip'])($b_2)))($a_1);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -140,11 +140,11 @@ $GLOBALS['Data_DivisionRing_leftDiv'] = (function() {
 // Data_DivisionRing_divisionringNumber
 $GLOBALS['Data_DivisionRing_divisionringNumber'] = ["recip" => function($x_0 = null) {
   $__num = \func_num_args();
-  $__res = (1.0 / $x_0);
+  $__res = ((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])['div'])(1.0))($x_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Ring0" => function($dollar__unused_0 = null) {
+}, "Ring0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Ring_ringNumber'];
   goto __end;;

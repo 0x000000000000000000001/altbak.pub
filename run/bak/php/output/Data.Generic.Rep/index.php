@@ -174,11 +174,11 @@ $GLOBALS['Data_Generic_Rep_showSum'] = (function() {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_2) && (($v_2)->{'tag'} === "Inl"))) {
-$__t0 = (("(Inl " . (($dictShow_0)['show'])(($v_2)->{'value0'})) . ")");
+$__t0 = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Inl "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])(($v_2)->{'value0'})))(")"));
 goto end_branch_0;;
 };
   if ((is_object($v_2) && (($v_2)->{'tag'} === "Inr"))) {
-$__t0 = (("(Inr " . (($dictShow1_1)['show'])(($v_2)->{'value0'})) . ")");
+$__t0 = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Inr "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow1_1)['show'])(($v_2)->{'value0'})))(")"));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -205,7 +205,7 @@ $GLOBALS['Data_Generic_Rep_showProduct'] = (function() {
   }
   $__res = ["show" => function($v_2 = null) use ($dictShow1_1, $dictShow_0) {
   $__num = \func_num_args();
-  $__res = (((("(Product " . (($dictShow_0)['show'])(($v_2)->{'value0'})) . " ") . (($dictShow1_1)['show'])(($v_2)->{'value1'})) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Product "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])(($v_2)->{'value0'})))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow1_1)['show'])(($v_2)->{'value1'})))(")"))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -235,7 +235,7 @@ $GLOBALS['Data_Generic_Rep_showConstructor'] = (function() {
   }
   $__res = ["show" => function($v_2 = null) use ($dictIsSymbol_0, $dictShow_1) {
   $__num = \func_num_args();
-  $__res = (((("(Constructor @" . ($GLOBALS['Data_Show_showStringImpl'])((($dictIsSymbol_0)['reflectSymbol'])(new Phpurs_Data0("Proxy")))) . " ") . (($dictShow_1)['show'])($v_2)) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Constructor @"))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Show_showString'])['show'])((($dictIsSymbol_0)['reflectSymbol'])(new Phpurs_Data0("Proxy")))))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_1)['show'])($v_2)))(")"))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -252,7 +252,7 @@ $GLOBALS['Data_Generic_Rep_showArgument'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (("(Argument " . (($dictShow_0)['show'])($v_1)) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Argument "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

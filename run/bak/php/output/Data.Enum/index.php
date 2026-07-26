@@ -193,30 +193,25 @@ $GLOBALS['Data_Enum_succ'] = function($dict_0 = null) {
 };
 
 // Data_Enum_upFromIncluding
-$GLOBALS['Data_Enum_upFromIncluding'] = (function() {
-  $__fn = function($dictEnum_0 = null, $dictUnfoldable1_1 = null) use (&$__fn) {
+$GLOBALS['Data_Enum_upFromIncluding'] = function($dictEnum_0 = null) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (($dictUnfoldable1_1)['unfoldr1'])(function($x_2 = null) use ($dictEnum_0) {
+  $succ1_1_0 = ($dictEnum_0)['succ'];
+  $__res = function($dictUnfoldable1_2 = null) use ($succ1_1_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", $x_2, (($dictEnum_0)['succ'])($x_2));
+  $__res = (($dictUnfoldable1_2)['unfoldr1'])(((($GLOBALS['Control_Apply_applyFn'])['apply'])($GLOBALS['Data_Tuple_Tuple']))($succ1_1_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
+};
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
 // Data_Enum_showCardinality
 $GLOBALS['Data_Enum_showCardinality'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = (("(Cardinality " . ($GLOBALS['Data_Show_showIntImpl'])($v_0)) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Cardinality "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Show_showInt'])['show'])($v_0)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -235,9 +230,9 @@ $GLOBALS['Data_Enum_pred'] = function($dict_0 = null) {
 $GLOBALS['Data_Enum_ordCardinality'] = $GLOBALS['Data_Ord_ordInt'];
 
 // Data_Enum_newtypeCardinality
-$GLOBALS['Data_Enum_newtypeCardinality'] = ["Coercible0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Enum_newtypeCardinality'] = ["Coercible0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Prim_undefined'];
+  $__res = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -255,7 +250,7 @@ $GLOBALS['Data_Enum_fromEnum'] = function($dict_0 = null) {
 // Data_Enum_toEnumWithDefaults
 $GLOBALS['Data_Enum_toEnumWithDefaults'] = function($dictBoundedEnum_0 = null) {
   $__num = \func_num_args();
-  $bottom2_1_0 = ((($dictBoundedEnum_0)['Bounded0'])($GLOBALS['Prim_undefined']))['bottom'];
+  $bottom2_1_0 = ((($dictBoundedEnum_0)['Bounded0'])(null))['bottom'];
   $__res = (function() use ($bottom2_1_0, $dictBoundedEnum_0) {
   $__fn = function($low_2 = null, $high_3 = null, $x_4 = null) use ($bottom2_1_0, $dictBoundedEnum_0, &$__fn) {
   $__num = \func_num_args();
@@ -310,7 +305,7 @@ $GLOBALS['Data_Enum_enumUnit'] = ["succ" => function($v_0 = null) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Ord0" => function($dollar__unused_0 = null) {
+}, "Ord0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Ord_ordUnit'];
   goto __end;;
@@ -321,73 +316,69 @@ $GLOBALS['Data_Enum_enumUnit'] = ["succ" => function($v_0 = null) {
 // Data_Enum_enumTuple
 $GLOBALS['Data_Enum_enumTuple'] = function($dictEnum_0 = null) {
   $__num = \func_num_args();
-  $ordTuple_1_0 = ($GLOBALS['Data_Tuple_ordTuple'])((($dictEnum_0)['Ord0'])($GLOBALS['Prim_undefined']));
+  $ordTuple_1_0 = ($GLOBALS['Data_Tuple_ordTuple'])((($dictEnum_0)['Ord0'])(null));
   $__res = function($dictBoundedEnum_2 = null) use ($dictEnum_0, $ordTuple_1_0) {
   $__num = \func_num_args();
-  $Bounded0_3_1 = (($dictBoundedEnum_2)['Bounded0'])($GLOBALS['Prim_undefined']);
+  $Bounded0_3_1 = (($dictBoundedEnum_2)['Bounded0'])(null);
   $bottom2_4_2 = ($Bounded0_3_1)['bottom'];
-  $Enum1_5_3 = (($dictBoundedEnum_2)['Enum1'])($GLOBALS['Prim_undefined']);
+  $Enum1_5_3 = (($dictBoundedEnum_2)['Enum1'])(null);
   $top2_6_4 = ($Bounded0_3_1)['top'];
-  $ordTuple1_7_5 = ($ordTuple_1_0)((($Enum1_5_3)['Ord0'])($GLOBALS['Prim_undefined']));
+  $ordTuple1_7_5 = ($ordTuple_1_0)((($Enum1_5_3)['Ord0'])(null));
   $__res = ["succ" => function($v_8 = null) use ($Enum1_5_3, $bottom2_4_2, $dictEnum_0) {
   $__num = \func_num_args();
-  $__local_var_9_6 = (($dictEnum_0)['succ'])(($v_8)->{'value0'});
-  $__t7 = null;;
-  if ((is_object($__local_var_9_6) && (($__local_var_9_6)->{'tag'} === "Just"))) {
-$__t7 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", ($__local_var_9_6)->{'value0'}, $bottom2_4_2));
-goto end_branch_7;;
+  $__local_var_9_6 = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($a_9 = null) use ($bottom2_4_2) {
+  $__num = \func_num_args();
+  $__res = new Phpurs_Data2("Tuple", $a_9, $bottom2_4_2);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))((($dictEnum_0)['succ'])(($v_8)->{'value0'}));
+  $__local_var_10_7 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Maybe_Just']))(($GLOBALS['Data_Tuple_Tuple'])(($v_8)->{'value0'}));
+  $__local_var_11_8 = (($Enum1_5_3)['succ'])(($v_8)->{'value1'});
+  $__t9 = null;;
+  if ((is_object($__local_var_11_8) && (($__local_var_11_8)->{'tag'} === "Nothing"))) {
+$__t9 = $__local_var_9_6;
+goto end_branch_9;;
 };
-  $__t7 = new Phpurs_Data0("Nothing");
-  end_branch_7:;
-  $__local_var_10_7 = $__t7;
-  $__local_var_11_9 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_Just']))(($GLOBALS['Data_Tuple_Tuple'])(($v_8)->{'value0'}));
-  $__local_var_12_10 = (($Enum1_5_3)['succ'])(($v_8)->{'value1'});
-  $__t11 = null;;
-  if ((is_object($__local_var_12_10) && (($__local_var_12_10)->{'tag'} === "Nothing"))) {
-$__t11 = $__local_var_10_7;
-goto end_branch_11;;
-};
-  if ((is_object($__local_var_12_10) && (($__local_var_12_10)->{'tag'} === "Just"))) {
-$__t11 = ($__local_var_11_9)(($__local_var_12_10)->{'value0'});
-goto end_branch_11;;
+  if ((is_object($__local_var_11_8) && (($__local_var_11_8)->{'tag'} === "Just"))) {
+$__t9 = ($__local_var_10_7)(($__local_var_11_8)->{'value0'});
+goto end_branch_9;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t11 = null;
-  end_branch_11:;
-  $__res = $__t11;
+  $__t9 = null;
+  end_branch_9:;
+  $__res = $__t9;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "pred" => function($v_8 = null) use ($Enum1_5_3, $dictEnum_0, $top2_6_4) {
   $__num = \func_num_args();
-  $__local_var_9_12 = (($dictEnum_0)['pred'])(($v_8)->{'value0'});
-  $__t13 = null;;
-  if ((is_object($__local_var_9_12) && (($__local_var_9_12)->{'tag'} === "Just"))) {
-$__t13 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", ($__local_var_9_12)->{'value0'}, $top2_6_4));
-goto end_branch_13;;
-};
-  $__t13 = new Phpurs_Data0("Nothing");
-  end_branch_13:;
-  $__local_var_10_13 = $__t13;
-  $__local_var_11_15 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_Just']))(($GLOBALS['Data_Tuple_Tuple'])(($v_8)->{'value0'}));
-  $__local_var_12_16 = (($Enum1_5_3)['pred'])(($v_8)->{'value1'});
-  $__t17 = null;;
-  if ((is_object($__local_var_12_16) && (($__local_var_12_16)->{'tag'} === "Nothing"))) {
-$__t17 = $__local_var_10_13;
-goto end_branch_17;;
-};
-  if ((is_object($__local_var_12_16) && (($__local_var_12_16)->{'tag'} === "Just"))) {
-$__t17 = ($__local_var_11_15)(($__local_var_12_16)->{'value0'});
-goto end_branch_17;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t17 = null;
-  end_branch_17:;
-  $__res = $__t17;
+  $__local_var_9_10 = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($a_9 = null) use ($top2_6_4) {
+  $__num = \func_num_args();
+  $__res = new Phpurs_Data2("Tuple", $a_9, $top2_6_4);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Ord0" => function($dollar__unused_8 = null) use ($ordTuple1_7_5) {
+}))((($dictEnum_0)['pred'])(($v_8)->{'value0'}));
+  $__local_var_10_11 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Maybe_Just']))(($GLOBALS['Data_Tuple_Tuple'])(($v_8)->{'value0'}));
+  $__local_var_11_12 = (($Enum1_5_3)['pred'])(($v_8)->{'value1'});
+  $__t13 = null;;
+  if ((is_object($__local_var_11_12) && (($__local_var_11_12)->{'tag'} === "Nothing"))) {
+$__t13 = $__local_var_9_10;
+goto end_branch_13;;
+};
+  if ((is_object($__local_var_11_12) && (($__local_var_11_12)->{'tag'} === "Just"))) {
+$__t13 = ($__local_var_10_11)(($__local_var_11_12)->{'value0'});
+goto end_branch_13;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t13 = null;
+  end_branch_13:;
+  $__res = $__t13;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Ord0" => function($_dollar__unused_8 = null) use ($ordTuple1_7_5) {
   $__num = \func_num_args();
   $__res = $ordTuple1_7_5;
   goto __end;;
@@ -448,7 +439,7 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Ord0" => function($dollar__unused_0 = null) {
+}, "Ord0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Ord_ordOrdering'];
   goto __end;;
@@ -459,44 +450,54 @@ goto end_branch_1;;
 // Data_Enum_enumMaybe
 $GLOBALS['Data_Enum_enumMaybe'] = function($dictBoundedEnum_0 = null) {
   $__num = \func_num_args();
-  $bottom2_1_0 = ((($dictBoundedEnum_0)['Bounded0'])($GLOBALS['Prim_undefined']))['bottom'];
-  $Enum1_2_1 = (($dictBoundedEnum_0)['Enum1'])($GLOBALS['Prim_undefined']);
-  $ordMaybe_3_2 = ($GLOBALS['Data_Maybe_ordMaybe'])((($Enum1_2_1)['Ord0'])($GLOBALS['Prim_undefined']));
-  $__res = ["succ" => function($v_4 = null) use ($Enum1_2_1, $bottom2_1_0) {
+  $bottom2_1_0 = ((($dictBoundedEnum_0)['Bounded0'])(null))['bottom'];
+  $Enum1_2_1 = (($dictBoundedEnum_0)['Enum1'])(null);
+  $__local_var_3_2 = (($Enum1_2_1)['Ord0'])(null);
+  $__local_var_4_3 = (($__local_var_3_2)['Eq0'])(null);
+  $eqMaybe1_5_4 = ["eq" => (function() use ($__local_var_4_3) {
+  $__fn = function($x_5 = null, $y_6 = null) use ($__local_var_4_3, &$__fn) {
   $__num = \func_num_args();
-  $__t3 = null;;
-  if ((is_object($v_4) && (($v_4)->{'tag'} === "Nothing"))) {
-$__t3 = new Phpurs_Data1("Just", new Phpurs_Data1("Just", $bottom2_1_0));
-goto end_branch_3;;
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__t4 = null;;
+  if ((is_object($x_5) && (($x_5)->{'tag'} === "Nothing"))) {
+$__t4 = (is_object($y_6) && (($y_6)->{'tag'} === "Nothing"));
+goto end_branch_4;;
 };
-  if ((is_object($v_4) && (($v_4)->{'tag'} === "Just"))) {
-$__local_var_5_4 = (($Enum1_2_1)['succ'])(($v_4)->{'value0'});
-$__t5 = null;;
-if ((is_object($__local_var_5_4) && (($__local_var_5_4)->{'tag'} === "Just"))) {
-$__t5 = new Phpurs_Data1("Just", new Phpurs_Data1("Just", ($__local_var_5_4)->{'value0'}));
-goto end_branch_5;;
-};
-$__t5 = new Phpurs_Data0("Nothing");
-end_branch_5:;
-$__t3 = $__t5;
-goto end_branch_3;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t3 = null;
-  end_branch_3:;
-  $__res = $__t3;
+  $__t4 = ((is_object($x_5) && (($x_5)->{'tag'} === "Just")) && ((is_object($y_6) && (($y_6)->{'tag'} === "Just")) && ((($__local_var_4_3)['eq'])(($x_5)->{'value0'}))(($y_6)->{'value0'})));
+  end_branch_4:;
+  $__res = $__t4;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "pred" => function($v_4 = null) use ($Enum1_2_1) {
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
+  $ordMaybe_5_4 = ["compare" => (function() use ($__local_var_3_2) {
+  $__fn = function($x_6 = null, $y_7 = null) use ($__local_var_3_2, &$__fn) {
   $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
   $__t6 = null;;
-  if ((is_object($v_4) && (($v_4)->{'tag'} === "Nothing"))) {
-$__t6 = new Phpurs_Data0("Nothing");
+  if ((is_object($x_6) && (($x_6)->{'tag'} === "Nothing"))) {
+$__t7 = null;;
+if ((is_object($y_7) && (($y_7)->{'tag'} === "Nothing"))) {
+$__t7 = new Phpurs_Data0("EQ");
+goto end_branch_7;;
+};
+$__t7 = new Phpurs_Data0("LT");
+end_branch_7:;
+$__t6 = $__t7;
 goto end_branch_6;;
 };
-  if ((is_object($v_4) && (($v_4)->{'tag'} === "Just"))) {
-$__t6 = new Phpurs_Data1("Just", (($Enum1_2_1)['pred'])(($v_4)->{'value0'}));
+  if ((is_object($y_7) && (($y_7)->{'tag'} === "Nothing"))) {
+$__t6 = new Phpurs_Data0("GT");
+goto end_branch_6;;
+};
+  if (((is_object($x_6) && (($x_6)->{'tag'} === "Just")) && (is_object($y_7) && (($y_7)->{'tag'} === "Just")))) {
+$__t6 = ((($__local_var_3_2)['compare'])(($x_6)->{'value0'}))(($y_7)->{'value0'});
 goto end_branch_6;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -505,10 +506,55 @@ goto end_branch_6;;
   $__res = $__t6;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Ord0" => function($dollar__unused_4 = null) use ($ordMaybe_3_2) {
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "Eq0" => function($_dollar__unused_6 = null) use ($eqMaybe1_5_4) {
   $__num = \func_num_args();
-  $__res = $ordMaybe_3_2;
+  $__res = $eqMaybe1_5_4;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = ["succ" => function($v_6 = null) use ($Enum1_2_1, $bottom2_1_0) {
+  $__num = \func_num_args();
+  $__t9 = null;;
+  if ((is_object($v_6) && (($v_6)->{'tag'} === "Nothing"))) {
+$__t9 = new Phpurs_Data1("Just", new Phpurs_Data1("Just", $bottom2_1_0));
+goto end_branch_9;;
+};
+  if ((is_object($v_6) && (($v_6)->{'tag'} === "Just"))) {
+$__t9 = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Maybe_Just']))((($Enum1_2_1)['succ'])(($v_6)->{'value0'}));
+goto end_branch_9;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t9 = null;
+  end_branch_9:;
+  $__res = $__t9;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "pred" => function($v_6 = null) use ($Enum1_2_1) {
+  $__num = \func_num_args();
+  $__t10 = null;;
+  if ((is_object($v_6) && (($v_6)->{'tag'} === "Nothing"))) {
+$__t10 = new Phpurs_Data0("Nothing");
+goto end_branch_10;;
+};
+  if ((is_object($v_6) && (($v_6)->{'tag'} === "Just"))) {
+$__t10 = new Phpurs_Data1("Just", (($Enum1_2_1)['pred'])(($v_6)->{'value0'}));
+goto end_branch_10;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t10 = null;
+  end_branch_10:;
+  $__res = $__t10;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Ord0" => function($_dollar__unused_6 = null) use ($ordMaybe_5_4) {
+  $__num = \func_num_args();
+  $__res = $ordMaybe_5_4;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -522,8 +568,8 @@ goto end_branch_6;;
 $GLOBALS['Data_Enum_enumInt'] = ["succ" => function($n_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if (($n_0 < $GLOBALS['Data_Bounded_topInt'])) {
-$__t0 = new Phpurs_Data1("Just", ($n_0 + 1));
+  if (($n_0 < ($GLOBALS['Data_Bounded_boundedInt'])['top'])) {
+$__t0 = new Phpurs_Data1("Just", ((($GLOBALS['Data_Semiring_semiringInt'])['add'])($n_0))(1));
 goto end_branch_0;;
 };
   $__t0 = new Phpurs_Data0("Nothing");
@@ -535,8 +581,8 @@ goto end_branch_0;;
 }, "pred" => function($n_0 = null) {
   $__num = \func_num_args();
   $__t1 = null;;
-  if (($n_0 > $GLOBALS['Data_Bounded_bottomInt'])) {
-$__t1 = new Phpurs_Data1("Just", ($n_0 - 1));
+  if (($n_0 > ($GLOBALS['Data_Bounded_boundedInt'])['bottom'])) {
+$__t1 = new Phpurs_Data1("Just", ((($GLOBALS['Data_Ring_ringInt'])['sub'])($n_0))(1));
 goto end_branch_1;;
 };
   $__t1 = new Phpurs_Data0("Nothing");
@@ -545,7 +591,7 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Ord0" => function($dollar__unused_0 = null) {
+}, "Ord0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Ord_ordInt'];
   goto __end;;
@@ -556,90 +602,61 @@ goto end_branch_1;;
 // Data_Enum_enumFromTo
 $GLOBALS['Data_Enum_enumFromTo'] = function($dictEnum_0 = null) {
   $__num = \func_num_args();
-  $Ord0_1_0 = (($dictEnum_0)['Ord0'])($GLOBALS['Prim_undefined']);
+  $Ord0_1_0 = (($dictEnum_0)['Ord0'])(null);
   $__res = (function() use ($Ord0_1_0, $dictEnum_0) {
   $__fn = function($dictUnfoldable1_2 = null, $v_3 = null, $v1_4 = null) use ($Ord0_1_0, $dictEnum_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__t4 = null;;
-  if (((((($Ord0_1_0)['Eq0'])($GLOBALS['Prim_undefined']))['eq'])($v_3))($v1_4)) {
-$__t4 = ((($dictUnfoldable1_2)['unfoldr1'])(function($i_5 = null) use ($v_3) {
-  $__num = \func_num_args();
-  $__t5 = null;;
-  if (($i_5 <= 0)) {
-$__t5 = new Phpurs_Data2("Tuple", $v_3, new Phpurs_Data0("Nothing"));
-goto end_branch_5;;
-};
-  $__t5 = new Phpurs_Data2("Tuple", $v_3, new Phpurs_Data1("Just", ($i_5 - 1)));
-  end_branch_5:;
-  $__res = $__t5;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(0);
-goto end_branch_4;;
+  $__t1 = null;;
+  if (((((($Ord0_1_0)['Eq0'])(null))['eq'])($v_3))($v1_4)) {
+$__t1 = ((($GLOBALS['Data_Unfoldable1_replicate1'])($dictUnfoldable1_2))(1))($v_3);
+goto end_branch_1;;
 };
   if ((is_object(((($Ord0_1_0)['compare'])($v_3))($v1_4)) && ((((($Ord0_1_0)['compare'])($v_3))($v1_4))->{'tag'} === "LT"))) {
-$__t4 = ((($dictUnfoldable1_2)['unfoldr1'])(function($a_5 = null) use ($Ord0_1_0, $dictEnum_0, $v1_4) {
+$__t1 = ((($dictUnfoldable1_2)['unfoldr1'])(function($a_5 = null) use ($Ord0_1_0, $dictEnum_0, $v1_4) {
   $__num = \func_num_args();
-  $__local_var_6_6 = (($dictEnum_0)['succ'])($a_5);
-  $__t7 = null;;
-  if ((is_object($__local_var_6_6) && (($__local_var_6_6)->{'tag'} === "Just"))) {
-$__t8 = null;;
-if ((is_object(($GLOBALS['Data_Enum_guard'])(( ! (is_object(((($Ord0_1_0)['compare'])(($__local_var_6_6)->{'value0'}))($v1_4)) && ((((($Ord0_1_0)['compare'])(($__local_var_6_6)->{'value0'}))($v1_4))->{'tag'} === "GT"))))) && ((($GLOBALS['Data_Enum_guard'])(( ! (is_object(((($Ord0_1_0)['compare'])(($__local_var_6_6)->{'value0'}))($v1_4)) && ((((($Ord0_1_0)['compare'])(($__local_var_6_6)->{'value0'}))($v1_4))->{'tag'} === "GT")))))->{'tag'} === "Just"))) {
-$__t8 = new Phpurs_Data1("Just", ($__local_var_6_6)->{'value0'});
-goto end_branch_8;;
-};
-$__t8 = new Phpurs_Data0("Nothing");
-end_branch_8:;
-$__t7 = $__t8;
-goto end_branch_7;;
-};
-  if ((is_object($__local_var_6_6) && (($__local_var_6_6)->{'tag'} === "Nothing"))) {
-$__t7 = new Phpurs_Data0("Nothing");
-goto end_branch_7;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t7 = null;
-  end_branch_7:;
-  $__res = new Phpurs_Data2("Tuple", $a_5, $__t7);
+  $__res = new Phpurs_Data2("Tuple", $a_5, ((($GLOBALS['Data_Maybe_bindMaybe'])['bind'])((($dictEnum_0)['succ'])($a_5)))(function($a_prime_6 = null) use ($Ord0_1_0, $v1_4) {
+  $__num = \func_num_args();
+  $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($v_7 = null) use ($a_prime_6) {
+  $__num = \func_num_args();
+  $__res = $a_prime_6;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))(($GLOBALS['Data_Enum_guard'])(( ! (is_object(((($Ord0_1_0)['compare'])($a_prime_6))($v1_4)) && ((((($Ord0_1_0)['compare'])($a_prime_6))($v1_4))->{'tag'} === "GT")))));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }))($v_3);
-goto end_branch_4;;
+goto end_branch_1;;
 };
-  $__t4 = ((($dictUnfoldable1_2)['unfoldr1'])(function($a_5 = null) use ($Ord0_1_0, $dictEnum_0, $v1_4) {
+  $__t1 = ((($dictUnfoldable1_2)['unfoldr1'])(function($a_5 = null) use ($Ord0_1_0, $dictEnum_0, $v1_4) {
   $__num = \func_num_args();
-  $__local_var_6_1 = (($dictEnum_0)['pred'])($a_5);
-  $__t2 = null;;
-  if ((is_object($__local_var_6_1) && (($__local_var_6_1)->{'tag'} === "Just"))) {
-$__t3 = null;;
-if ((is_object(($GLOBALS['Data_Enum_guard'])(( ! (is_object(((($Ord0_1_0)['compare'])(($__local_var_6_1)->{'value0'}))($v1_4)) && ((((($Ord0_1_0)['compare'])(($__local_var_6_1)->{'value0'}))($v1_4))->{'tag'} === "LT"))))) && ((($GLOBALS['Data_Enum_guard'])(( ! (is_object(((($Ord0_1_0)['compare'])(($__local_var_6_1)->{'value0'}))($v1_4)) && ((((($Ord0_1_0)['compare'])(($__local_var_6_1)->{'value0'}))($v1_4))->{'tag'} === "LT")))))->{'tag'} === "Just"))) {
-$__t3 = new Phpurs_Data1("Just", ($__local_var_6_1)->{'value0'});
-goto end_branch_3;;
-};
-$__t3 = new Phpurs_Data0("Nothing");
-end_branch_3:;
-$__t2 = $__t3;
-goto end_branch_2;;
-};
-  if ((is_object($__local_var_6_1) && (($__local_var_6_1)->{'tag'} === "Nothing"))) {
-$__t2 = new Phpurs_Data0("Nothing");
-goto end_branch_2;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t2 = null;
-  end_branch_2:;
-  $__res = new Phpurs_Data2("Tuple", $a_5, $__t2);
+  $__res = new Phpurs_Data2("Tuple", $a_5, ((($GLOBALS['Data_Maybe_bindMaybe'])['bind'])((($dictEnum_0)['pred'])($a_5)))(function($a_prime_6 = null) use ($Ord0_1_0, $v1_4) {
+  $__num = \func_num_args();
+  $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($v_7 = null) use ($a_prime_6) {
+  $__num = \func_num_args();
+  $__res = $a_prime_6;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))(($GLOBALS['Data_Enum_guard'])(( ! (is_object(((($Ord0_1_0)['compare'])($a_prime_6))($v1_4)) && ((((($Ord0_1_0)['compare'])($a_prime_6))($v1_4))->{'tag'} === "LT")))));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }))($v_3);
-  end_branch_4:;
-  $__res = $__t4;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -665,14 +682,14 @@ $GLOBALS['Data_Enum_enumFromThenTo'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $a__prime___7_1 = (($dictBoundedEnum_2)['fromEnum'])($a_4);
-  $__local_var_8_2 = ((($dictBoundedEnum_2)['fromEnum'])($b_5) - $a__prime___7_1);
+  $a_prime_7_1 = (($dictBoundedEnum_2)['fromEnum'])($a_4);
+  $__local_var_8_2 = ((($GLOBALS['Data_Ring_ringInt'])['sub'])((($dictBoundedEnum_2)['fromEnum'])($b_5)))($a_prime_7_1);
   $__local_var_9_3 = (($dictBoundedEnum_2)['fromEnum'])($c_6);
-  $__res = ((($dictFunctor_1)['map'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Enum_fromJust']))($toEnum1_3_0)))(((($dictUnfoldable_0)['unfoldr'])(function($e_10 = null) use ($__local_var_8_2, $__local_var_9_3) {
+  $__res = ((($dictFunctor_1)['map'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Enum_fromJust']))($toEnum1_3_0)))(((($dictUnfoldable_0)['unfoldr'])(function($e_10 = null) use ($__local_var_8_2, $__local_var_9_3) {
   $__num = \func_num_args();
   $__t4 = null;;
   if (($e_10 <= $__local_var_9_3)) {
-$__t4 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", $e_10, ($e_10 + $__local_var_8_2)));
+$__t4 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", $e_10, ((($GLOBALS['Data_Semiring_semiringInt'])['add'])($e_10))($__local_var_8_2)));
 goto end_branch_4;;
 };
   $__t4 = new Phpurs_Data0("Nothing");
@@ -681,7 +698,7 @@ goto end_branch_4;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($a__prime___7_1));
+}))($a_prime_7_1));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -698,19 +715,19 @@ goto end_branch_4;;
 // Data_Enum_enumEither
 $GLOBALS['Data_Enum_enumEither'] = function($dictBoundedEnum_0 = null) {
   $__num = \func_num_args();
-  $Enum1_1_0 = (($dictBoundedEnum_0)['Enum1'])($GLOBALS['Prim_undefined']);
-  $top2_2_1 = ((($dictBoundedEnum_0)['Bounded0'])($GLOBALS['Prim_undefined']))['top'];
-  $ordEither_3_2 = ($GLOBALS['Data_Either_ordEither'])((($Enum1_1_0)['Ord0'])($GLOBALS['Prim_undefined']));
+  $Enum1_1_0 = (($dictBoundedEnum_0)['Enum1'])(null);
+  $top2_2_1 = ((($dictBoundedEnum_0)['Bounded0'])(null))['top'];
+  $ordEither_3_2 = ($GLOBALS['Data_Either_ordEither'])((($Enum1_1_0)['Ord0'])(null));
   $__res = function($dictBoundedEnum1_4 = null) use ($Enum1_1_0, $ordEither_3_2, $top2_2_1) {
   $__num = \func_num_args();
-  $bottom2_5_3 = ((($dictBoundedEnum1_4)['Bounded0'])($GLOBALS['Prim_undefined']))['bottom'];
-  $Enum11_6_4 = (($dictBoundedEnum1_4)['Enum1'])($GLOBALS['Prim_undefined']);
-  $ordEither1_7_5 = ($ordEither_3_2)((($Enum11_6_4)['Ord0'])($GLOBALS['Prim_undefined']));
+  $bottom2_5_3 = ((($dictBoundedEnum1_4)['Bounded0'])(null))['bottom'];
+  $Enum11_6_4 = (($dictBoundedEnum1_4)['Enum1'])(null);
+  $ordEither1_7_5 = ($ordEither_3_2)((($Enum11_6_4)['Ord0'])(null));
   $__res = ["succ" => function($v_8 = null) use ($Enum11_6_4, $Enum1_1_0, $bottom2_5_3) {
   $__num = \func_num_args();
   $__t6 = null;;
   if ((is_object($v_8) && (($v_8)->{'tag'} === "Left"))) {
-$__local_var_9_7 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_Just']))($GLOBALS['Data_Either_Left']);
+$__local_var_9_7 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Maybe_Just']))($GLOBALS['Data_Either_Left']);
 $__local_var_10_8 = (($Enum1_1_0)['succ'])(($v_8)->{'value0'});
 $__t9 = null;;
 if ((is_object($__local_var_10_8) && (($__local_var_10_8)->{'tag'} === "Nothing"))) {
@@ -728,7 +745,7 @@ $__t6 = $__t9;
 goto end_branch_6;;
 };
   if ((is_object($v_8) && (($v_8)->{'tag'} === "Right"))) {
-$__local_var_9_10 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_Just']))($GLOBALS['Data_Either_Right']);
+$__local_var_9_10 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Maybe_Just']))($GLOBALS['Data_Either_Right']);
 $__local_var_10_11 = (($Enum11_6_4)['succ'])(($v_8)->{'value0'});
 $__t12 = null;;
 if ((is_object($__local_var_10_11) && (($__local_var_10_11)->{'tag'} === "Nothing"))) {
@@ -756,7 +773,7 @@ goto end_branch_6;;
   $__num = \func_num_args();
   $__t13 = null;;
   if ((is_object($v_8) && (($v_8)->{'tag'} === "Left"))) {
-$__local_var_9_14 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_Just']))($GLOBALS['Data_Either_Left']);
+$__local_var_9_14 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Maybe_Just']))($GLOBALS['Data_Either_Left']);
 $__local_var_10_15 = (($Enum1_1_0)['pred'])(($v_8)->{'value0'});
 $__t16 = null;;
 if ((is_object($__local_var_10_15) && (($__local_var_10_15)->{'tag'} === "Nothing"))) {
@@ -774,7 +791,7 @@ $__t13 = $__t16;
 goto end_branch_13;;
 };
   if ((is_object($v_8) && (($v_8)->{'tag'} === "Right"))) {
-$__local_var_9_17 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_Just']))($GLOBALS['Data_Either_Right']);
+$__local_var_9_17 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Maybe_Just']))($GLOBALS['Data_Either_Right']);
 $__local_var_10_18 = (($Enum11_6_4)['pred'])(($v_8)->{'value0'});
 $__t19 = null;;
 if ((is_object($__local_var_10_18) && (($__local_var_10_18)->{'tag'} === "Nothing"))) {
@@ -798,7 +815,7 @@ goto end_branch_13;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Ord0" => function($dollar__unused_8 = null) use ($ordEither1_7_5) {
+}, "Ord0" => function($_dollar__unused_8 = null) use ($ordEither1_7_5) {
   $__num = \func_num_args();
   $__res = $ordEither1_7_5;
   goto __end;;
@@ -841,7 +858,7 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Ord0" => function($dollar__unused_0 = null) {
+}, "Ord0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Ord_ordBoolean'];
   goto __end;;
@@ -850,25 +867,29 @@ goto end_branch_1;;
 }];
 
 // Data_Enum_downFromIncluding
-$GLOBALS['Data_Enum_downFromIncluding'] = (function() {
-  $__fn = function($dictEnum_0 = null, $dictUnfoldable1_1 = null) use (&$__fn) {
+$GLOBALS['Data_Enum_downFromIncluding'] = function($dictEnum_0 = null) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (($dictUnfoldable1_1)['unfoldr1'])(function($x_2 = null) use ($dictEnum_0) {
+  $pred1_1_0 = ($dictEnum_0)['pred'];
+  $__res = function($dictUnfoldable1_2 = null) use ($pred1_1_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", $x_2, (($dictEnum_0)['pred'])($x_2));
+  $__res = (($dictUnfoldable1_2)['unfoldr1'])(((($GLOBALS['Control_Apply_applyFn'])['apply'])($GLOBALS['Data_Tuple_Tuple']))($pred1_1_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
+};
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+
+// Data_Enum_diag
+$GLOBALS['Data_Enum_diag'] = function($a_0 = null) {
+  $__num = \func_num_args();
+  $__res = new Phpurs_Data2("Tuple", $a_0, $a_0);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 
 // Data_Enum_downFrom
 $GLOBALS['Data_Enum_downFrom'] = function($dictEnum_0 = null) {
@@ -876,20 +897,7 @@ $GLOBALS['Data_Enum_downFrom'] = function($dictEnum_0 = null) {
   $pred1_1_0 = ($dictEnum_0)['pred'];
   $__res = function($dictUnfoldable_2 = null) use ($pred1_1_0) {
   $__num = \func_num_args();
-  $__res = (($dictUnfoldable_2)['unfoldr'])((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v1_3 = null) {
-  $__num = \func_num_args();
-  $__t1 = null;;
-  if ((is_object($v1_3) && (($v1_3)->{'tag'} === "Just"))) {
-$__t1 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", ($v1_3)->{'value0'}, ($v1_3)->{'value0'}));
-goto end_branch_1;;
-};
-  $__t1 = new Phpurs_Data0("Nothing");
-  end_branch_1:;
-  $__res = $__t1;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($pred1_1_0));
+  $__res = (($dictUnfoldable_2)['unfoldr'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Enum_diag'])))($pred1_1_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -905,20 +913,7 @@ $GLOBALS['Data_Enum_upFrom'] = function($dictEnum_0 = null) {
   $succ1_1_0 = ($dictEnum_0)['succ'];
   $__res = function($dictUnfoldable_2 = null) use ($succ1_1_0) {
   $__num = \func_num_args();
-  $__res = (($dictUnfoldable_2)['unfoldr'])((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v1_3 = null) {
-  $__num = \func_num_args();
-  $__t1 = null;;
-  if ((is_object($v1_3) && (($v1_3)->{'tag'} === "Just"))) {
-$__t1 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", ($v1_3)->{'value0'}, ($v1_3)->{'value0'}));
-goto end_branch_1;;
-};
-  $__t1 = new Phpurs_Data0("Nothing");
-  end_branch_1:;
-  $__res = $__t1;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($succ1_1_0));
+  $__res = (($dictUnfoldable_2)['unfoldr'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Enum_diag'])))($succ1_1_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -933,41 +928,36 @@ $GLOBALS['Data_Enum_defaultToEnum'] = function($dictBounded_0 = null) {
   $__num = \func_num_args();
   $bottom2_1_0 = ($dictBounded_0)['bottom'];
   $__res = (function() use ($bottom2_1_0) {
-  $__fn = function($dictEnum_2 = null, $i__prime___3 = null) use ($bottom2_1_0, &$__fn) {
+  $__fn = function($dictEnum_2 = null, $i_prime_3 = null) use ($bottom2_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go_4_1 = null;
-  $go_4_1 = (function() use ($dictEnum_2, &$go_4_1) {
-  $__fn = function($i_5 = null, $x_6 = null) use ($dictEnum_2, &$go_4_1, &$__fn) {
+  $go__4_1 = null;
+  $go__4_1 = (function() use ($dictEnum_2, &$go__4_1) {
+  $__fn = function($i_5 = null, $x_6 = null) use ($dictEnum_2, &$go__4_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_go_4_1_1_i_5 = $i_5;
-  $__tco_var_go_4_1_1_x_6 = $x_6;
-  tco_loop_go_4_1_1:;
-  $i_5 = $__tco_var_go_4_1_1_i_5;
-  $x_6 = $__tco_var_go_4_1_1_x_6;
+  $__tco_var_go__4_1_1_i_5 = $i_5;
+  $__tco_var_go__4_1_1_x_6 = $x_6;
+  tco_loop_go__4_1_1:;
+  $i_5 = $__tco_var_go__4_1_1_i_5;
+  $x_6 = $__tco_var_go__4_1_1_x_6;
   $__t5 = null;;
-  switch ($i_5) {
-case 0:
+  if (((($GLOBALS['Data_Eq_eqInt'])['eq'])($i_5))(0)) {
 $__t5 = new Phpurs_Data1("Just", $x_6);
 goto end_branch_5;;
-break;
-default:
-;
-break;
 };
   $v_7_1 = (($dictEnum_2)['succ'])($x_6);
   $__t2 = null;;
   if ((is_object($v_7_1) && (($v_7_1)->{'tag'} === "Just"))) {
-$__tco_3 = ($i_5 - 1);
+$__tco_3 = ((($GLOBALS['Data_Ring_ringInt'])['sub'])($i_5))(1);
 $__tco_4 = ($v_7_1)->{'value0'};
-$__tco_var_go_4_1_1_i_5 = $__tco_3;
-$__tco_var_go_4_1_1_x_6 = $__tco_4;
-goto tco_loop_go_4_1_1;;
+$__tco_var_go__4_1_1_i_5 = $__tco_3;
+$__tco_var_go__4_1_1_x_6 = $__tco_4;
+goto tco_loop_go__4_1_1;;
 $__t2 = null;
 goto end_branch_2;;
 };
@@ -988,11 +978,11 @@ goto end_branch_2;;
   return $__fn;
 })();
   $__t2 = null;;
-  if (($i__prime___3 < 0)) {
+  if (($i_prime_3 < 0)) {
 $__t2 = new Phpurs_Data0("Nothing");
 goto end_branch_2;;
 };
-  $__t2 = (($go_4_1)($i__prime___3))($bottom2_1_0);
+  $__t2 = (($go__4_1)($i_prime_3))($bottom2_1_0);
   end_branch_2:;
   $__res = $__t2;
   goto __end;;
@@ -1008,12 +998,12 @@ goto end_branch_2;;
 
 // Data_Enum_defaultSucc
 $GLOBALS['Data_Enum_defaultSucc'] = (function() {
-  $__fn = function($toEnum__prime___0 = null, $fromEnum__prime___1 = null, $a_2 = null) use (&$__fn) {
+  $__fn = function($toEnum_prime_0 = null, $fromEnum_prime_1 = null, $a_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($toEnum__prime___0)((($fromEnum__prime___1)($a_2) + 1));
+  $__res = ($toEnum_prime_0)(((($GLOBALS['Data_Semiring_semiringInt'])['add'])(($fromEnum_prime_1)($a_2)))(1));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1023,12 +1013,12 @@ $GLOBALS['Data_Enum_defaultSucc'] = (function() {
 
 // Data_Enum_defaultPred
 $GLOBALS['Data_Enum_defaultPred'] = (function() {
-  $__fn = function($toEnum__prime___0 = null, $fromEnum__prime___1 = null, $a_2 = null) use (&$__fn) {
+  $__fn = function($toEnum_prime_0 = null, $fromEnum_prime_1 = null, $a_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($toEnum__prime___0)((($fromEnum__prime___1)($a_2) - 1));
+  $__res = ($toEnum_prime_0)(((($GLOBALS['Data_Ring_ringInt'])['sub'])(($fromEnum_prime_1)($a_2)))(1));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1039,26 +1029,26 @@ $GLOBALS['Data_Enum_defaultPred'] = (function() {
 // Data_Enum_defaultFromEnum
 $GLOBALS['Data_Enum_defaultFromEnum'] = function($dictEnum_0 = null) {
   $__num = \func_num_args();
-  $go_1_0 = null;
-  $go_1_0 = (function() use ($dictEnum_0, &$go_1_0) {
-  $__fn = function($i_2 = null, $x_3 = null) use ($dictEnum_0, &$go_1_0, &$__fn) {
+  $go__1_0 = null;
+  $go__1_0 = (function() use ($dictEnum_0, &$go__1_0) {
+  $__fn = function($i_2 = null, $x_3 = null) use ($dictEnum_0, &$go__1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_go_1_0_0_i_2 = $i_2;
-  $__tco_var_go_1_0_0_x_3 = $x_3;
-  tco_loop_go_1_0_0:;
-  $i_2 = $__tco_var_go_1_0_0_i_2;
-  $x_3 = $__tco_var_go_1_0_0_x_3;
+  $__tco_var_go__1_0_0_i_2 = $i_2;
+  $__tco_var_go__1_0_0_x_3 = $x_3;
+  tco_loop_go__1_0_0:;
+  $i_2 = $__tco_var_go__1_0_0_i_2;
+  $x_3 = $__tco_var_go__1_0_0_x_3;
   $v_4_0 = (($dictEnum_0)['pred'])($x_3);
   $__t1 = null;;
   if ((is_object($v_4_0) && (($v_4_0)->{'tag'} === "Just"))) {
-$__tco_2 = ($i_2 + 1);
+$__tco_2 = ((($GLOBALS['Data_Semiring_semiringInt'])['add'])($i_2))(1);
 $__tco_3 = ($v_4_0)->{'value0'};
-$__tco_var_go_1_0_0_i_2 = $__tco_2;
-$__tco_var_go_1_0_0_x_3 = $__tco_3;
-goto tco_loop_go_1_0_0;;
+$__tco_var_go__1_0_0_i_2 = $__tco_2;
+$__tco_var_go__1_0_0_x_3 = $__tco_3;
+goto tco_loop_go__1_0_0;;
 $__t1 = null;
 goto end_branch_1;;
 };
@@ -1076,7 +1066,7 @@ goto end_branch_1;;
   };
   return $__fn;
 })();
-  $__res = ($go_1_0)(0);
+  $__res = ($go__1_0)(0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1088,26 +1078,26 @@ $GLOBALS['Data_Enum_defaultCardinality'] = function($dictBounded_0 = null) {
   $bottom2_1_0 = ($dictBounded_0)['bottom'];
   $__res = function($dictEnum_2 = null) use ($bottom2_1_0) {
   $__num = \func_num_args();
-  $go_3_1 = null;
-  $go_3_1 = (function() use ($dictEnum_2, &$go_3_1) {
-  $__fn = function($i_4 = null, $x_5 = null) use ($dictEnum_2, &$go_3_1, &$__fn) {
+  $go__3_1 = null;
+  $go__3_1 = (function() use ($dictEnum_2, &$go__3_1) {
+  $__fn = function($i_4 = null, $x_5 = null) use ($dictEnum_2, &$go__3_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_go_3_1_1_i_4 = $i_4;
-  $__tco_var_go_3_1_1_x_5 = $x_5;
-  tco_loop_go_3_1_1:;
-  $i_4 = $__tco_var_go_3_1_1_i_4;
-  $x_5 = $__tco_var_go_3_1_1_x_5;
+  $__tco_var_go__3_1_1_i_4 = $i_4;
+  $__tco_var_go__3_1_1_x_5 = $x_5;
+  tco_loop_go__3_1_1:;
+  $i_4 = $__tco_var_go__3_1_1_i_4;
+  $x_5 = $__tco_var_go__3_1_1_x_5;
   $v_6_1 = (($dictEnum_2)['succ'])($x_5);
   $__t2 = null;;
   if ((is_object($v_6_1) && (($v_6_1)->{'tag'} === "Just"))) {
-$__tco_3 = ($i_4 + 1);
+$__tco_3 = ((($GLOBALS['Data_Semiring_semiringInt'])['add'])($i_4))(1);
 $__tco_4 = ($v_6_1)->{'value0'};
-$__tco_var_go_3_1_1_i_4 = $__tco_3;
-$__tco_var_go_3_1_1_x_5 = $__tco_4;
-goto tco_loop_go_3_1_1;;
+$__tco_var_go__3_1_1_i_4 = $__tco_3;
+$__tco_var_go__3_1_1_x_5 = $__tco_4;
+goto tco_loop_go__3_1_1;;
 $__t2 = null;
 goto end_branch_2;;
 };
@@ -1125,7 +1115,7 @@ goto end_branch_2;;
   };
   return $__fn;
 })();
-  $__res = (($go_3_1)(1))($bottom2_1_0);
+  $__res = (($go__3_1)(1))($bottom2_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1139,7 +1129,7 @@ goto end_branch_2;;
 $GLOBALS['Data_Enum_charToEnum'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((($v_0 >= ($GLOBALS['Data_Enum_toCharCode'])($GLOBALS['Data_Bounded_bottomChar'])) && ($v_0 <= ($GLOBALS['Data_Enum_toCharCode'])($GLOBALS['Data_Bounded_topChar'])))) {
+  if (((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(($v_0 >= ($GLOBALS['Data_Enum_toCharCode'])(($GLOBALS['Data_Bounded_boundedChar'])['bottom']))))(($v_0 <= ($GLOBALS['Data_Enum_toCharCode'])(($GLOBALS['Data_Bounded_boundedChar'])['top'])))) {
 $__t0 = new Phpurs_Data1("Just", ($GLOBALS['Data_Enum_fromCharCode'])($v_0));
 goto end_branch_0;;
 };
@@ -1152,19 +1142,7 @@ goto end_branch_0;;
 };
 
 // Data_Enum_enumChar
-$GLOBALS['Data_Enum_enumChar'] = ["succ" => function($a_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Enum_charToEnum'])((($GLOBALS['Data_Enum_toCharCode'])($a_0) + 1));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "pred" => function($a_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Enum_charToEnum'])((($GLOBALS['Data_Enum_toCharCode'])($a_0) - 1));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Ord0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Enum_enumChar'] = ["succ" => (($GLOBALS['Data_Enum_defaultSucc'])($GLOBALS['Data_Enum_charToEnum']))($GLOBALS['Data_Enum_toCharCode']), "pred" => (($GLOBALS['Data_Enum_defaultPred'])($GLOBALS['Data_Enum_charToEnum']))($GLOBALS['Data_Enum_toCharCode']), "Ord0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Ord_ordChar'];
   goto __end;;
@@ -1194,13 +1172,13 @@ $GLOBALS['Data_Enum_boundedEnumUnit'] = ["cardinality" => 1, "toEnum" => functio
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bounded0" => function($dollar__unused_0 = null) {
+}, "Bounded0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Bounded_boundedUnit'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Enum1" => function($dollar__unused_0 = null) {
+}, "Enum1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Enum_enumUnit'];
   goto __end;;
@@ -1237,13 +1215,13 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bounded0" => function($dollar__unused_0 = null) {
+}, "Bounded0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Bounded_boundedOrdering'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Enum1" => function($dollar__unused_0 = null) {
+}, "Enum1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Enum_enumOrdering'];
   goto __end;;
@@ -1252,13 +1230,13 @@ goto end_branch_1;;
 }];
 
 // Data_Enum_boundedEnumChar
-$GLOBALS['Data_Enum_boundedEnumChar'] = ["cardinality" => (($GLOBALS['Data_Enum_toCharCode'])($GLOBALS['Data_Bounded_topChar']) - ($GLOBALS['Data_Enum_toCharCode'])($GLOBALS['Data_Bounded_bottomChar'])), "toEnum" => $GLOBALS['Data_Enum_charToEnum'], "fromEnum" => $GLOBALS['Data_Enum_toCharCode'], "Bounded0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Enum_boundedEnumChar'] = ["cardinality" => ((($GLOBALS['Data_Ring_ringInt'])['sub'])(($GLOBALS['Data_Enum_toCharCode'])(($GLOBALS['Data_Bounded_boundedChar'])['top'])))(($GLOBALS['Data_Enum_toCharCode'])(($GLOBALS['Data_Bounded_boundedChar'])['bottom'])), "toEnum" => $GLOBALS['Data_Enum_charToEnum'], "fromEnum" => $GLOBALS['Data_Enum_toCharCode'], "Bounded0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Bounded_boundedChar'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Enum1" => function($dollar__unused_0 = null) {
+}, "Enum1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Enum_enumChar'];
   goto __end;;
@@ -1291,13 +1269,13 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bounded0" => function($dollar__unused_0 = null) {
+}, "Bounded0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Bounded_boundedBoolean'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Enum1" => function($dollar__unused_0 = null) {
+}, "Enum1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Enum_enumBoolean'];
   goto __end;;

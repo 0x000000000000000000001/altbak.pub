@@ -106,7 +106,7 @@ $GLOBALS['Data_Profunctor_profunctorFn'] = ["dimap" => (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($c2d_1))($b2c_2)))($a2b_0);
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($c2d_1))($b2c_2)))($a2b_0);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -155,7 +155,7 @@ $GLOBALS['Data_Profunctor_rmap'] = (function() {
 
 // Data_Profunctor_unwrapIso
 $GLOBALS['Data_Profunctor_unwrapIso'] = (function() {
-  $__fn = function($dictProfunctor_0 = null, $dollar__unused_1 = null) use (&$__fn) {
+  $__fn = function($dictProfunctor_0 = null, $_dollar__unused_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
@@ -170,7 +170,7 @@ $GLOBALS['Data_Profunctor_unwrapIso'] = (function() {
 
 // Data_Profunctor_wrapIso
 $GLOBALS['Data_Profunctor_wrapIso'] = (function() {
-  $__fn = function($dictProfunctor_0 = null, $dollar__unused_1 = null, $v_2 = null) use (&$__fn) {
+  $__fn = function($dictProfunctor_0 = null, $_dollar__unused_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);

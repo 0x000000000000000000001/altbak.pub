@@ -121,7 +121,7 @@ $GLOBALS['Data_Equivalence_semigroupEquivalence'] = ["append" => (function() {
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((($v_0)($a_2))($b_3) && (($v1_1)($a_2))($b_3));
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($v_0)($a_2))($b_3)))((($v1_1)($a_2))($b_3));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -130,9 +130,9 @@ $GLOBALS['Data_Equivalence_semigroupEquivalence'] = ["append" => (function() {
 })()];
 
 // Data_Equivalence_newtypeEquivalence
-$GLOBALS['Data_Equivalence_newtypeEquivalence'] = ["Coercible0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Equivalence_newtypeEquivalence'] = ["Coercible0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Prim_undefined'];
+  $__res = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -151,7 +151,7 @@ $GLOBALS['Data_Equivalence_monoidEquivalence'] = ["mempty" => (function() {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Semigroup0" => function($dollar__unused_0 = null) {
+})(), "Semigroup0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Equivalence_semigroupEquivalence'];
   goto __end;;
@@ -190,7 +190,7 @@ $GLOBALS['Data_Equivalence_comparisonEquivalence'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (is_object((($v_0)($a_1))($b_2)) && (((($v_0)($a_1))($b_2))->{'tag'} === "EQ"));
+  $__res = ((($GLOBALS['Data_Ordering_eqOrdering'])['eq'])((($v_0)($a_1))($b_2)))(new Phpurs_Data0("EQ"));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;

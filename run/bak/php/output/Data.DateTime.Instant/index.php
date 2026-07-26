@@ -159,8 +159,20 @@ $GLOBALS['Data_DateTime_Instant_fromDateTimeImpl'] = $ffi_Data_DateTime_Instant[
 $GLOBALS['Data_DateTime_Instant_toDateTimeImpl'] = $ffi_Data_DateTime_Instant['toDateTimeImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+// Data_DateTime_Instant_negate
+$GLOBALS['Data_DateTime_Instant_negate'] = (function() use (&$__fn) {
+$zero_0_0 = ((($GLOBALS['Data_Ring_ringNumber'])['Semiring0'])(null))['zero'];
+return function($a_1 = null) use ($zero_0_0) {
+  $__num = \func_num_args();
+  $__res = ((($GLOBALS['Data_Ring_ringNumber'])['sub'])($zero_0_0))($a_1);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+})();
+
 // Data_DateTime_Instant_negateDuration
-$GLOBALS['Data_DateTime_Instant_negateDuration'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Control_Category_categoryFn'])['identity']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Time_Duration_negate']))(($GLOBALS['Control_Category_categoryFn'])['identity']));
+$GLOBALS['Data_DateTime_Instant_negateDuration'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($GLOBALS['Data_Time_Duration_durationMilliseconds'])['toDuration']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Time_Duration_negate']))(($GLOBALS['Data_Time_Duration_durationMilliseconds'])['fromDuration']));
 
 // Data_DateTime_Instant_unInstant
 $GLOBALS['Data_DateTime_Instant_unInstant'] = function($v_0 = null) {
@@ -178,119 +190,16 @@ $GLOBALS['Data_DateTime_Instant_toDateTime'] = ($GLOBALS['Data_DateTime_Instant_
   if ($__num < 7) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 7);
   }
-  $__t0 = null;;
-  switch ($mo_1) {
-case 1:
-$__t0 = new Phpurs_Data0("January");
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  switch ($mo_1) {
-case 2:
-$__t0 = new Phpurs_Data0("February");
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  switch ($mo_1) {
-case 3:
-$__t0 = new Phpurs_Data0("March");
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  switch ($mo_1) {
-case 4:
-$__t0 = new Phpurs_Data0("April");
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  switch ($mo_1) {
-case 5:
-$__t0 = new Phpurs_Data0("May");
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  switch ($mo_1) {
-case 6:
-$__t0 = new Phpurs_Data0("June");
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  switch ($mo_1) {
-case 7:
-$__t0 = new Phpurs_Data0("July");
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  switch ($mo_1) {
-case 8:
-$__t0 = new Phpurs_Data0("August");
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  switch ($mo_1) {
-case 9:
-$__t0 = new Phpurs_Data0("September");
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  switch ($mo_1) {
-case 10:
-$__t0 = new Phpurs_Data0("October");
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  switch ($mo_1) {
-case 11:
-$__t0 = new Phpurs_Data0("November");
-goto end_branch_0;;
-break;
-default:
-;
-break;
-};
-  switch ($mo_1) {
-case 12:
-$__t0 = new Phpurs_Data0("December");
-goto end_branch_0;;
-break;
-default:
-;
-break;
+  $__local_var_7_0 = (($GLOBALS['Data_Date_Component_boundedEnumMonth'])['toEnum'])($mo_1);
+  $__t1 = null;;
+  if ((is_object($__local_var_7_0) && (($__local_var_7_0)->{'tag'} === "Just"))) {
+$__t1 = ($__local_var_7_0)->{'value0'};
+goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t0 = null;
-  end_branch_0:;
-  $__res = new Phpurs_Data2("DateTime", ((($GLOBALS['Data_Date_canonicalDate'])($y_0))($__t0))($d_2), new Phpurs_Data4("Time", $h_3, $mi_4, $s_5, $ms_6));
+  $__t1 = null;
+  end_branch_1:;
+  $__res = new Phpurs_Data2("DateTime", ((($GLOBALS['Data_Date_canonicalDate'])($y_0))($__t1))($d_2), new Phpurs_Data4("Time", $h_3, $mi_4, $s_5, $ms_6));
   goto __end;;
   __end:
   return $__num > 7 ? $__res(...\array_slice(\func_get_args(), 7)) : $__res;
@@ -301,7 +210,7 @@ break;
 // Data_DateTime_Instant_showInstant
 $GLOBALS['Data_DateTime_Instant_showInstant'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = (("(Instant (Milliseconds " . ($GLOBALS['Data_Show_showNumberImpl'])($v_0)) . "))");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Instant "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Time_Duration_showMilliseconds'])['show'])($v_0)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -314,7 +223,7 @@ $GLOBALS['Data_DateTime_Instant_ordDateTime'] = $GLOBALS['Data_Ord_ordNumber'];
 $GLOBALS['Data_DateTime_Instant_instant'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((($v_0 >= -8639977881600000.0) && ($v_0 <= 8639977881599999.0))) {
+  if (((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(($v_0 >= ($GLOBALS['Data_DateTime_Instant_negate'])(8639977881600000.0))))(($v_0 <= 8639977881599999.0))) {
 $__t0 = new Phpurs_Data1("Just", $v_0);
 goto end_branch_0;;
 };
@@ -329,59 +238,7 @@ goto end_branch_0;;
 // Data_DateTime_Instant_fromDateTime
 $GLOBALS['Data_DateTime_Instant_fromDateTime'] = function($v_0 = null) {
   $__num = \func_num_args();
-  $__t0 = null;;
-  if ((is_object((($v_0)->{'value0'})->{'value1'}) && (((($v_0)->{'value0'})->{'value1'})->{'tag'} === "January"))) {
-$__t0 = 1;
-goto end_branch_0;;
-};
-  if ((is_object((($v_0)->{'value0'})->{'value1'}) && (((($v_0)->{'value0'})->{'value1'})->{'tag'} === "February"))) {
-$__t0 = 2;
-goto end_branch_0;;
-};
-  if ((is_object((($v_0)->{'value0'})->{'value1'}) && (((($v_0)->{'value0'})->{'value1'})->{'tag'} === "March"))) {
-$__t0 = 3;
-goto end_branch_0;;
-};
-  if ((is_object((($v_0)->{'value0'})->{'value1'}) && (((($v_0)->{'value0'})->{'value1'})->{'tag'} === "April"))) {
-$__t0 = 4;
-goto end_branch_0;;
-};
-  if ((is_object((($v_0)->{'value0'})->{'value1'}) && (((($v_0)->{'value0'})->{'value1'})->{'tag'} === "May"))) {
-$__t0 = 5;
-goto end_branch_0;;
-};
-  if ((is_object((($v_0)->{'value0'})->{'value1'}) && (((($v_0)->{'value0'})->{'value1'})->{'tag'} === "June"))) {
-$__t0 = 6;
-goto end_branch_0;;
-};
-  if ((is_object((($v_0)->{'value0'})->{'value1'}) && (((($v_0)->{'value0'})->{'value1'})->{'tag'} === "July"))) {
-$__t0 = 7;
-goto end_branch_0;;
-};
-  if ((is_object((($v_0)->{'value0'})->{'value1'}) && (((($v_0)->{'value0'})->{'value1'})->{'tag'} === "August"))) {
-$__t0 = 8;
-goto end_branch_0;;
-};
-  if ((is_object((($v_0)->{'value0'})->{'value1'}) && (((($v_0)->{'value0'})->{'value1'})->{'tag'} === "September"))) {
-$__t0 = 9;
-goto end_branch_0;;
-};
-  if ((is_object((($v_0)->{'value0'})->{'value1'}) && (((($v_0)->{'value0'})->{'value1'})->{'tag'} === "October"))) {
-$__t0 = 10;
-goto end_branch_0;;
-};
-  if ((is_object((($v_0)->{'value0'})->{'value1'}) && (((($v_0)->{'value0'})->{'value1'})->{'tag'} === "November"))) {
-$__t0 = 11;
-goto end_branch_0;;
-};
-  if ((is_object((($v_0)->{'value0'})->{'value1'}) && (((($v_0)->{'value0'})->{'value1'})->{'tag'} === "December"))) {
-$__t0 = 12;
-goto end_branch_0;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t0 = null;
-  end_branch_0:;
-  $__res = ($GLOBALS['Data_DateTime_Instant_fromDateTimeImpl'])((($v_0)->{'value0'})->{'value0'}, $__t0, (($v_0)->{'value0'})->{'value2'}, (($v_0)->{'value1'})->{'value0'}, (($v_0)->{'value1'})->{'value1'}, (($v_0)->{'value1'})->{'value2'}, (($v_0)->{'value1'})->{'value3'});
+  $__res = ($GLOBALS['Data_DateTime_Instant_fromDateTimeImpl'])((($v_0)->{'value0'})->{'value0'}, (($GLOBALS['Data_Date_Component_boundedEnumMonth'])['fromEnum'])((($v_0)->{'value0'})->{'value1'}), (($v_0)->{'value0'})->{'value2'}, (($v_0)->{'value1'})->{'value0'}, (($v_0)->{'value1'})->{'value1'}, (($v_0)->{'value1'})->{'value2'}, (($v_0)->{'value1'})->{'value3'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -390,59 +247,7 @@ goto end_branch_0;;
 // Data_DateTime_Instant_fromDate
 $GLOBALS['Data_DateTime_Instant_fromDate'] = function($d_0 = null) {
   $__num = \func_num_args();
-  $__t0 = null;;
-  if ((is_object(($d_0)->{'value1'}) && ((($d_0)->{'value1'})->{'tag'} === "January"))) {
-$__t0 = 1;
-goto end_branch_0;;
-};
-  if ((is_object(($d_0)->{'value1'}) && ((($d_0)->{'value1'})->{'tag'} === "February"))) {
-$__t0 = 2;
-goto end_branch_0;;
-};
-  if ((is_object(($d_0)->{'value1'}) && ((($d_0)->{'value1'})->{'tag'} === "March"))) {
-$__t0 = 3;
-goto end_branch_0;;
-};
-  if ((is_object(($d_0)->{'value1'}) && ((($d_0)->{'value1'})->{'tag'} === "April"))) {
-$__t0 = 4;
-goto end_branch_0;;
-};
-  if ((is_object(($d_0)->{'value1'}) && ((($d_0)->{'value1'})->{'tag'} === "May"))) {
-$__t0 = 5;
-goto end_branch_0;;
-};
-  if ((is_object(($d_0)->{'value1'}) && ((($d_0)->{'value1'})->{'tag'} === "June"))) {
-$__t0 = 6;
-goto end_branch_0;;
-};
-  if ((is_object(($d_0)->{'value1'}) && ((($d_0)->{'value1'})->{'tag'} === "July"))) {
-$__t0 = 7;
-goto end_branch_0;;
-};
-  if ((is_object(($d_0)->{'value1'}) && ((($d_0)->{'value1'})->{'tag'} === "August"))) {
-$__t0 = 8;
-goto end_branch_0;;
-};
-  if ((is_object(($d_0)->{'value1'}) && ((($d_0)->{'value1'})->{'tag'} === "September"))) {
-$__t0 = 9;
-goto end_branch_0;;
-};
-  if ((is_object(($d_0)->{'value1'}) && ((($d_0)->{'value1'})->{'tag'} === "October"))) {
-$__t0 = 10;
-goto end_branch_0;;
-};
-  if ((is_object(($d_0)->{'value1'}) && ((($d_0)->{'value1'})->{'tag'} === "November"))) {
-$__t0 = 11;
-goto end_branch_0;;
-};
-  if ((is_object(($d_0)->{'value1'}) && ((($d_0)->{'value1'})->{'tag'} === "December"))) {
-$__t0 = 12;
-goto end_branch_0;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t0 = null;
-  end_branch_0:;
-  $__res = ($GLOBALS['Data_DateTime_Instant_fromDateTimeImpl'])(($d_0)->{'value0'}, $__t0, ($d_0)->{'value2'}, 0, 0, 0, 0);
+  $__res = ($GLOBALS['Data_DateTime_Instant_fromDateTimeImpl'])(($d_0)->{'value0'}, (($GLOBALS['Data_Date_Component_boundedEnumMonth'])['fromEnum'])(($d_0)->{'value1'}), ($d_0)->{'value2'}, ($GLOBALS['Data_Time_Component_boundedHour'])['bottom'], ($GLOBALS['Data_Time_Component_boundedMinute'])['bottom'], ($GLOBALS['Data_Time_Component_boundedSecond'])['bottom'], ($GLOBALS['Data_Time_Component_boundedMillisecond'])['bottom']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -458,7 +263,7 @@ $GLOBALS['Data_DateTime_Instant_diff'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictDuration_0)['toDuration'])(($dt1_1 + ($GLOBALS['Data_DateTime_Instant_negateDuration'])($dt2_2)));
+  $__res = (($dictDuration_0)['toDuration'])(((($GLOBALS['Data_Time_Duration_semigroupMilliseconds'])['append'])($dt1_1))(($GLOBALS['Data_DateTime_Instant_negateDuration'])($dt2_2)));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -467,7 +272,7 @@ $GLOBALS['Data_DateTime_Instant_diff'] = (function() {
 })();
 
 // Data_DateTime_Instant_boundedInstant
-$GLOBALS['Data_DateTime_Instant_boundedInstant'] = ["bottom" => -8639977881600000.0, "top" => 8639977881599999.0, "Ord0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_DateTime_Instant_boundedInstant'] = ["bottom" => ($GLOBALS['Data_DateTime_Instant_negate'])(8639977881600000.0), "top" => 8639977881599999.0, "Ord0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Ord_ordNumber'];
   goto __end;;

@@ -117,34 +117,34 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // App_main
-$GLOBALS['App_main'] = (($GLOBALS['Effect_bindE'])((($GLOBALS['Bench_runBench'])($GLOBALS['Test_AstTree_describe']))($GLOBALS['Test_AstTree_act'])))(function($t1_0 = null) {
+$GLOBALS['App_main'] = ((($GLOBALS['Effect_bindEffect'])['bind'])((($GLOBALS['Bench_runBench'])($GLOBALS['Test_AstTree_describe']))($GLOBALS['Test_AstTree_act'])))(function($t1_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_bindE'])((($GLOBALS['Bench_runBench'])($GLOBALS['Test_Fib_describe']))($GLOBALS['Test_Fib_act'])))(function($t2_1 = null) use ($t1_0) {
+  $__res = ((($GLOBALS['Effect_bindEffect'])['bind'])((($GLOBALS['Bench_runBench'])($GLOBALS['Test_Fib_describe']))($GLOBALS['Test_Fib_act'])))(function($t2_1 = null) use ($t1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_bindE'])((($GLOBALS['Bench_runBench'])($GLOBALS['Test_ListOps_describe']))($GLOBALS['Test_ListOps_act'])))(function($t3_2 = null) use ($t1_0, $t2_1) {
+  $__res = ((($GLOBALS['Effect_bindEffect'])['bind'])((($GLOBALS['Bench_runBench'])($GLOBALS['Test_ListOps_describe']))($GLOBALS['Test_ListOps_act'])))(function($t3_2 = null) use ($t1_0, $t2_1) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_bindE'])((($GLOBALS['Bench_runBench'])($GLOBALS['Test_TCO_describe']))($GLOBALS['Test_TCO_act'])))(function($t4_3 = null) use ($t1_0, $t2_1, $t3_2) {
+  $__res = ((($GLOBALS['Effect_bindEffect'])['bind'])((($GLOBALS['Bench_runBench'])($GLOBALS['Test_TCO_describe']))($GLOBALS['Test_TCO_act'])))(function($t4_3 = null) use ($t1_0, $t2_1, $t3_2) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_bindE'])((($GLOBALS['Bench_runBench'])($GLOBALS['Test_Records_describe']))($GLOBALS['Test_Records_act'])))(function($t5_4 = null) use ($t1_0, $t2_1, $t3_2, $t4_3) {
+  $__res = ((($GLOBALS['Effect_bindEffect'])['bind'])((($GLOBALS['Bench_runBench'])($GLOBALS['Test_Records_describe']))($GLOBALS['Test_Records_act'])))(function($t5_4 = null) use ($t1_0, $t2_1, $t3_2, $t4_3) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_bindE'])((($GLOBALS['Bench_runBench'])($GLOBALS['Test_Ackermann_describe']))($GLOBALS['Test_Ackermann_act'])))(function($t6_5 = null) use ($t1_0, $t2_1, $t3_2, $t4_3, $t5_4) {
+  $__res = ((($GLOBALS['Effect_bindEffect'])['bind'])((($GLOBALS['Bench_runBench'])($GLOBALS['Test_Ackermann_describe']))($GLOBALS['Test_Ackermann_act'])))(function($t6_5 = null) use ($t1_0, $t2_1, $t3_2, $t4_3, $t5_4) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_bindE'])((($GLOBALS['Bench_runBench'])($GLOBALS['Test_Church_describe']))($GLOBALS['Test_Church_act'])))(function($t7_6 = null) use ($t1_0, $t2_1, $t3_2, $t4_3, $t5_4, $t6_5) {
+  $__res = ((($GLOBALS['Effect_bindEffect'])['bind'])((($GLOBALS['Bench_runBench'])($GLOBALS['Test_Church_describe']))($GLOBALS['Test_Church_act'])))(function($t7_6 = null) use ($t1_0, $t2_1, $t3_2, $t4_3, $t5_4, $t6_5) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_bindE'])((($GLOBALS['Bench_runBench'])($GLOBALS['Test_Primes_describe']))($GLOBALS['Test_Primes_act'])))(function($t8_7 = null) use ($t1_0, $t2_1, $t3_2, $t4_3, $t5_4, $t6_5, $t7_6) {
+  $__res = ((($GLOBALS['Effect_bindEffect'])['bind'])((($GLOBALS['Bench_runBench'])($GLOBALS['Test_Primes_describe']))($GLOBALS['Test_Primes_act'])))(function($t8_7 = null) use ($t1_0, $t2_1, $t3_2, $t4_3, $t5_4, $t6_5, $t7_6) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_bindE'])((($GLOBALS['Bench_runBench'])($GLOBALS['Test_RBTree_describe']))($GLOBALS['Test_RBTree_act'])))(function($t9_8 = null) use ($t1_0, $t2_1, $t3_2, $t4_3, $t5_4, $t6_5, $t7_6, $t8_7) {
+  $__res = ((($GLOBALS['Effect_bindEffect'])['bind'])((($GLOBALS['Bench_runBench'])($GLOBALS['Test_RBTree_describe']))($GLOBALS['Test_RBTree_act'])))(function($t9_8 = null) use ($t1_0, $t2_1, $t3_2, $t4_3, $t5_4, $t6_5, $t7_6, $t8_7) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_bindE'])((($GLOBALS['Bench_runBench'])($GLOBALS['Test_Polymorphism_describe']))($GLOBALS['Test_Polymorphism_act'])))(function($t10_9 = null) use ($t1_0, $t2_1, $t3_2, $t4_3, $t5_4, $t6_5, $t7_6, $t8_7, $t9_8) {
+  $__res = ((($GLOBALS['Effect_bindEffect'])['bind'])((($GLOBALS['Bench_runBench'])($GLOBALS['Test_Polymorphism_describe']))($GLOBALS['Test_Polymorphism_act'])))(function($t10_9 = null) use ($t1_0, $t2_1, $t3_2, $t4_3, $t5_4, $t6_5, $t7_6, $t8_7, $t9_8) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_bindE'])((($GLOBALS['Bench_runBench'])($GLOBALS['Test_StateMonad_describe']))($GLOBALS['Test_StateMonad_act'])))(function($t11_10 = null) use ($t10_9, $t1_0, $t2_1, $t3_2, $t4_3, $t5_4, $t6_5, $t7_6, $t8_7, $t9_8) {
+  $__res = ((($GLOBALS['Effect_bindEffect'])['bind'])((($GLOBALS['Bench_runBench'])($GLOBALS['Test_StateMonad_describe']))($GLOBALS['Test_StateMonad_act'])))(function($t11_10 = null) use ($t10_9, $t1_0, $t2_1, $t3_2, $t4_3, $t5_4, $t6_5, $t7_6, $t8_7, $t9_8) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_bindE'])((($GLOBALS['Bench_runBench'])($GLOBALS['Test_LazyEvaluation_describe']))($GLOBALS['Test_LazyEvaluation_act'])))(function($t12_11 = null) use ($t10_9, $t11_10, $t1_0, $t2_1, $t3_2, $t4_3, $t5_4, $t6_5, $t7_6, $t8_7, $t9_8) {
+  $__res = ((($GLOBALS['Effect_bindEffect'])['bind'])((($GLOBALS['Bench_runBench'])($GLOBALS['Test_LazyEvaluation_describe']))($GLOBALS['Test_LazyEvaluation_act'])))(function($t12_11 = null) use ($t10_9, $t11_10, $t1_0, $t2_1, $t3_2, $t4_3, $t5_4, $t6_5, $t7_6, $t8_7, $t9_8) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_bindE'])((($GLOBALS['Bench_runBench'])($GLOBALS['Test_ArrayOps_describe']))($GLOBALS['Test_ArrayOps_act'])))(function($t13_12 = null) use ($t10_9, $t11_10, $t12_11, $t1_0, $t2_1, $t3_2, $t4_3, $t5_4, $t6_5, $t7_6, $t8_7, $t9_8) {
+  $__res = ((($GLOBALS['Effect_bindEffect'])['bind'])((($GLOBALS['Bench_runBench'])($GLOBALS['Test_ArrayOps_describe']))($GLOBALS['Test_ArrayOps_act'])))(function($t13_12 = null) use ($t10_9, $t11_10, $t12_11, $t1_0, $t2_1, $t3_2, $t4_3, $t5_4, $t6_5, $t7_6, $t8_7, $t9_8) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Console_log'])((("Total exec time: " . ($GLOBALS['Bench_formatNumber'])(((((((((((((($t1_0 / 1000.0) + ($t2_1 / 1000.0)) + ($t3_2 / 1000.0)) + ($t4_3 / 1000.0)) + ($t5_4 / 1000.0)) + ($t6_5 / 1000.0)) + ($t7_6 / 1000.0)) + ($t8_7 / 1000.0)) + ($t9_8 / 1000.0)) + ($t10_9 / 1000.0)) + ($t11_10 / 1000.0)) + ($t12_11 / 1000.0)) + ($t13_12 / 1000.0)))) . " ms
-"));
+  $__res = ($GLOBALS['Effect_Console_log'])(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("Total exec time: "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(($GLOBALS['Bench_formatNumber'])(((($GLOBALS['Data_Semiring_semiringNumber'])['add'])(((($GLOBALS['Data_Semiring_semiringNumber'])['add'])(((($GLOBALS['Data_Semiring_semiringNumber'])['add'])(((($GLOBALS['Data_Semiring_semiringNumber'])['add'])(((($GLOBALS['Data_Semiring_semiringNumber'])['add'])(((($GLOBALS['Data_Semiring_semiringNumber'])['add'])(((($GLOBALS['Data_Semiring_semiringNumber'])['add'])(((($GLOBALS['Data_Semiring_semiringNumber'])['add'])(((($GLOBALS['Data_Semiring_semiringNumber'])['add'])(((($GLOBALS['Data_Semiring_semiringNumber'])['add'])(((($GLOBALS['Data_Semiring_semiringNumber'])['add'])(((($GLOBALS['Data_Semiring_semiringNumber'])['add'])(((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])['div'])($t1_0))(1000.0)))(((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])['div'])($t2_1))(1000.0))))(((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])['div'])($t3_2))(1000.0))))(((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])['div'])($t4_3))(1000.0))))(((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])['div'])($t5_4))(1000.0))))(((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])['div'])($t6_5))(1000.0))))(((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])['div'])($t7_6))(1000.0))))(((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])['div'])($t8_7))(1000.0))))(((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])['div'])($t9_8))(1000.0))))(((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])['div'])($t10_9))(1000.0))))(((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])['div'])($t11_10))(1000.0))))(((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])['div'])($t12_11))(1000.0))))(((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])['div'])($t13_12))(1000.0)))))(" ms
+")));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

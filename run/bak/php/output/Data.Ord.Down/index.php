@@ -117,7 +117,7 @@ $GLOBALS['Data_Ord_Down_showDown'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (("(Down " . (($dictShow_0)['show'])($v_1)) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Down "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -128,9 +128,9 @@ $GLOBALS['Data_Ord_Down_showDown'] = function($dictShow_0 = null) {
 };
 
 // Data_Ord_Down_newtypeDown
-$GLOBALS['Data_Ord_Down_newtypeDown'] = ["Coercible0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Ord_Down_newtypeDown'] = ["Coercible0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Prim_undefined'];
+  $__res = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -148,7 +148,7 @@ $GLOBALS['Data_Ord_Down_eqDown'] = function($dictEq_0 = null) {
 // Data_Ord_Down_ordDown
 $GLOBALS['Data_Ord_Down_ordDown'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictOrd_0)['Eq0'])($GLOBALS['Prim_undefined']);
+  $__local_var_1_0 = (($dictOrd_0)['Eq0'])(null);
   $__res = ["compare" => (function() use ($dictOrd_0) {
   $__fn = function($v_2 = null, $v1_3 = null) use ($dictOrd_0, &$__fn) {
   $__num = \func_num_args();
@@ -178,7 +178,7 @@ goto end_branch_2;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Eq0" => function($dollar__unused_2 = null) use ($__local_var_1_0) {
+})(), "Eq0" => function($_dollar__unused_2 = null) use ($__local_var_1_0) {
   $__num = \func_num_args();
   $__res = $__local_var_1_0;
   goto __end;;
@@ -193,10 +193,47 @@ goto end_branch_2;;
 // Data_Ord_Down_boundedDown
 $GLOBALS['Data_Ord_Down_boundedDown'] = function($dictBounded_0 = null) {
   $__num = \func_num_args();
-  $ordDown1_1_0 = ($GLOBALS['Data_Ord_Down_ordDown'])((($dictBounded_0)['Ord0'])($GLOBALS['Prim_undefined']));
-  $__res = ["top" => ($dictBounded_0)['bottom'], "bottom" => ($dictBounded_0)['top'], "Ord0" => function($dollar__unused_2 = null) use ($ordDown1_1_0) {
+  $__local_var_1_0 = (($dictBounded_0)['Ord0'])(null);
+  $__local_var_2_1 = (($__local_var_1_0)['Eq0'])(null);
+  $ordDown1_3_2 = ["compare" => (function() use ($__local_var_1_0) {
+  $__fn = function($v_3 = null, $v1_4 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
-  $__res = $ordDown1_1_0;
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__local_var_5_2 = ((($__local_var_1_0)['compare'])($v_3))($v1_4);
+  $__t3 = null;;
+  if ((is_object($__local_var_5_2) && (($__local_var_5_2)->{'tag'} === "GT"))) {
+$__t3 = new Phpurs_Data0("LT");
+goto end_branch_3;;
+};
+  if ((is_object($__local_var_5_2) && (($__local_var_5_2)->{'tag'} === "EQ"))) {
+$__t3 = new Phpurs_Data0("EQ");
+goto end_branch_3;;
+};
+  if ((is_object($__local_var_5_2) && (($__local_var_5_2)->{'tag'} === "LT"))) {
+$__t3 = new Phpurs_Data0("GT");
+goto end_branch_3;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t3 = null;
+  end_branch_3:;
+  $__res = $__t3;
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "Eq0" => function($_dollar__unused_3 = null) use ($__local_var_2_1) {
+  $__num = \func_num_args();
+  $__res = $__local_var_2_1;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = ["top" => ($dictBounded_0)['bottom'], "bottom" => ($dictBounded_0)['top'], "Ord0" => function($_dollar__unused_4 = null) use ($ordDown1_3_2) {
+  $__num = \func_num_args();
+  $__res = $ordDown1_3_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

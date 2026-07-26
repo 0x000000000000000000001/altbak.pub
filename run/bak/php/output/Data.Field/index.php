@@ -107,13 +107,13 @@ $GLOBALS['Data_Field_field'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ["EuclideanRing0" => function($dollar__unused_2 = null) use ($dictEuclideanRing_0) {
+  $__res = ["EuclideanRing0" => function($_dollar__unused_2 = null) use ($dictEuclideanRing_0) {
   $__num = \func_num_args();
   $__res = $dictEuclideanRing_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "DivisionRing1" => function($dollar__unused_2 = null) use ($dictDivisionRing_1) {
+}, "DivisionRing1" => function($_dollar__unused_2 = null) use ($dictDivisionRing_1) {
   $__num = \func_num_args();
   $__res = $dictDivisionRing_1;
   goto __end;;

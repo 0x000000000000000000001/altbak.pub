@@ -102,7 +102,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 // Data_Time_Duration_Gen_genSeconds
 $GLOBALS['Data_Time_Duration_Gen_genSeconds'] = function($dictMonadGen_0 = null) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadGen_0)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']))['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_Time_Duration_Seconds']))(((($dictMonadGen_0)['chooseFloat'])(0.0))(600.0));
+  $__res = ((((((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Time_Duration_Seconds']))(((($dictMonadGen_0)['chooseFloat'])(0.0))(600.0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -111,7 +111,7 @@ $GLOBALS['Data_Time_Duration_Gen_genSeconds'] = function($dictMonadGen_0 = null)
 // Data_Time_Duration_Gen_genMinutes
 $GLOBALS['Data_Time_Duration_Gen_genMinutes'] = function($dictMonadGen_0 = null) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadGen_0)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']))['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_Time_Duration_Minutes']))(((($dictMonadGen_0)['chooseFloat'])(0.0))(600.0));
+  $__res = ((((((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Time_Duration_Minutes']))(((($dictMonadGen_0)['chooseFloat'])(0.0))(600.0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -120,7 +120,7 @@ $GLOBALS['Data_Time_Duration_Gen_genMinutes'] = function($dictMonadGen_0 = null)
 // Data_Time_Duration_Gen_genMilliseconds
 $GLOBALS['Data_Time_Duration_Gen_genMilliseconds'] = function($dictMonadGen_0 = null) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadGen_0)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']))['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_Time_Duration_Milliseconds']))(((($dictMonadGen_0)['chooseFloat'])(0.0))(600000.0));
+  $__res = ((((((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Time_Duration_Milliseconds']))(((($dictMonadGen_0)['chooseFloat'])(0.0))(600000.0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -129,7 +129,7 @@ $GLOBALS['Data_Time_Duration_Gen_genMilliseconds'] = function($dictMonadGen_0 = 
 // Data_Time_Duration_Gen_genHours
 $GLOBALS['Data_Time_Duration_Gen_genHours'] = function($dictMonadGen_0 = null) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadGen_0)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']))['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_Time_Duration_Hours']))(((($dictMonadGen_0)['chooseFloat'])(0.0))(240.0));
+  $__res = ((((((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Time_Duration_Hours']))(((($dictMonadGen_0)['chooseFloat'])(0.0))(240.0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -138,7 +138,7 @@ $GLOBALS['Data_Time_Duration_Gen_genHours'] = function($dictMonadGen_0 = null) {
 // Data_Time_Duration_Gen_genDays
 $GLOBALS['Data_Time_Duration_Gen_genDays'] = function($dictMonadGen_0 = null) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadGen_0)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']))['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_Time_Duration_Days']))(((($dictMonadGen_0)['chooseFloat'])(0.0))(42.0));
+  $__res = ((((((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Time_Duration_Days']))(((($dictMonadGen_0)['chooseFloat'])(0.0))(42.0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

@@ -130,10 +130,10 @@ $GLOBALS['Data_Monoid_Generic_genericMonoidConstructor'] = function($dictGeneric
 // Data_Monoid_Generic_genericMonoidProduct
 $GLOBALS['Data_Monoid_Generic_genericMonoidProduct'] = function($dictGenericMonoid_0 = null) {
   $__num = \func_num_args();
-  $genericMempty__prime__1_1_0 = ($dictGenericMonoid_0)['genericMempty__prime__'];
-  $__res = function($dictGenericMonoid1_2 = null) use ($genericMempty__prime__1_1_0) {
+  $genericMempty_prime1_1_0 = ($dictGenericMonoid_0)['genericMempty__prime__'];
+  $__res = function($dictGenericMonoid1_2 = null) use ($genericMempty_prime1_1_0) {
   $__num = \func_num_args();
-  $__res = ["genericMempty__prime__" => new Phpurs_Data2("Product", $genericMempty__prime__1_1_0, ($dictGenericMonoid1_2)['genericMempty__prime__'])];
+  $__res = ["genericMempty__prime__" => new Phpurs_Data2("Product", $genericMempty_prime1_1_0, ($dictGenericMonoid1_2)['genericMempty__prime__'])];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

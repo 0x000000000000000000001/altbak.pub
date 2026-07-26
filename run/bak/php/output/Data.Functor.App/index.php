@@ -129,7 +129,7 @@ $GLOBALS['Data_Functor_App_showApp'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (("(App " . (($dictShow_0)['show'])($v_1)) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(App "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -153,7 +153,7 @@ $GLOBALS['Data_Functor_App_semigroupApp'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Control_Apply_lift2'])($dictApply_0))($append1_2_0))($v_3))($v1_4);
+  $__res = ((($dictApply_0)['apply'])(((((($dictApply_0)['Functor0'])(null))['map'])($append1_2_0))($v_3)))($v1_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -177,9 +177,9 @@ $GLOBALS['Data_Functor_App_plusApp'] = function($dictPlus_0 = null) {
 };
 
 // Data_Functor_App_newtypeApp
-$GLOBALS['Data_Functor_App_newtypeApp'] = ["Coercible0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Functor_App_newtypeApp'] = ["Coercible0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Prim_undefined'];
+  $__res = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -188,13 +188,26 @@ $GLOBALS['Data_Functor_App_newtypeApp'] = ["Coercible0" => function($dollar__unu
 // Data_Functor_App_monoidApp
 $GLOBALS['Data_Functor_App_monoidApp'] = function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $semigroupApp1_1_0 = ($GLOBALS['Data_Functor_App_semigroupApp'])((($dictApplicative_0)['Apply0'])($GLOBALS['Prim_undefined']));
-  $__res = function($dictMonoid_2 = null) use ($dictApplicative_0, $semigroupApp1_1_0) {
+  $__local_var_1_0 = (($dictApplicative_0)['Apply0'])(null);
+  $__res = function($dictMonoid_2 = null) use ($__local_var_1_0, $dictApplicative_0) {
   $__num = \func_num_args();
-  $semigroupApp2_3_1 = ($semigroupApp1_1_0)((($dictMonoid_2)['Semigroup0'])($GLOBALS['Prim_undefined']));
-  $__res = ["mempty" => (($dictApplicative_0)['pure'])(($dictMonoid_2)['mempty']), "Semigroup0" => function($dollar__unused_4 = null) use ($semigroupApp2_3_1) {
+  $append1_3_1 = ((($dictMonoid_2)['Semigroup0'])(null))['append'];
+  $semigroupApp2_4_2 = ["append" => (function() use ($__local_var_1_0, $append1_3_1) {
+  $__fn = function($v_4 = null, $v1_5 = null) use ($__local_var_1_0, $append1_3_1, &$__fn) {
   $__num = \func_num_args();
-  $__res = $semigroupApp2_3_1;
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ((($__local_var_1_0)['apply'])(((((($__local_var_1_0)['Functor0'])(null))['map'])($append1_3_1))($v_4)))($v1_5);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
+  $__res = ["mempty" => (($dictApplicative_0)['pure'])(($dictMonoid_2)['mempty']), "Semigroup0" => function($_dollar__unused_5 = null) use ($semigroupApp2_4_2) {
+  $__num = \func_num_args();
+  $__res = $semigroupApp2_4_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -305,11 +318,11 @@ $GLOBALS['Data_Functor_App_eqApp'] = (function() {
 // Data_Functor_App_ordApp
 $GLOBALS['Data_Functor_App_ordApp'] = function($dictOrd1_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictOrd1_0)['Eq10'])($GLOBALS['Prim_undefined']);
+  $__local_var_1_0 = (($dictOrd1_0)['Eq10'])(null);
   $__res = function($dictOrd_2 = null) use ($__local_var_1_0, $dictOrd1_0) {
   $__num = \func_num_args();
   $compare11_3_1 = (($dictOrd1_0)['compare1'])($dictOrd_2);
-  $eq11_4_2 = (($__local_var_1_0)['eq1'])((($dictOrd_2)['Eq0'])($GLOBALS['Prim_undefined']));
+  $eq11_4_2 = (($__local_var_1_0)['eq1'])((($dictOrd_2)['Eq0'])(null));
   $eqApp2_5_3 = ["eq" => (function() use ($eq11_4_2) {
   $__fn = function($x_5 = null, $y_6 = null) use ($eq11_4_2, &$__fn) {
   $__num = \func_num_args();
@@ -335,7 +348,7 @@ $GLOBALS['Data_Functor_App_ordApp'] = function($dictOrd1_0 = null) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Eq0" => function($dollar__unused_6 = null) use ($eqApp2_5_3) {
+})(), "Eq0" => function($_dollar__unused_6 = null) use ($eqApp2_5_3) {
   $__num = \func_num_args();
   $__res = $eqApp2_5_3;
   goto __end;;
@@ -369,8 +382,8 @@ $GLOBALS['Data_Functor_App_eq1App'] = function($dictEq1_0 = null) {
 // Data_Functor_App_ord1App
 $GLOBALS['Data_Functor_App_ord1App'] = function($dictOrd1_0 = null) {
   $__num = \func_num_args();
-  $ordApp1_1_0 = ($GLOBALS['Data_Functor_App_ordApp'])($dictOrd1_0);
-  $__local_var_2_1 = (($dictOrd1_0)['Eq10'])($GLOBALS['Prim_undefined']);
+  $__local_var_1_0 = (($dictOrd1_0)['Eq10'])(null);
+  $__local_var_2_1 = (($dictOrd1_0)['Eq10'])(null);
   $eq1App1_3_2 = ["eq1" => function($dictEq_3 = null) use ($__local_var_2_1) {
   $__num = \func_num_args();
   $__res = (($__local_var_2_1)['eq1'])($dictEq_3);
@@ -378,13 +391,46 @@ $GLOBALS['Data_Functor_App_ord1App'] = function($dictOrd1_0 = null) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["compare1" => function($dictOrd_4 = null) use ($ordApp1_1_0) {
+  $__res = ["compare1" => function($dictOrd_4 = null) use ($__local_var_1_0, $dictOrd1_0) {
   $__num = \func_num_args();
-  $__res = (($ordApp1_1_0)($dictOrd_4))['compare'];
+  $compare11_5_3 = (($dictOrd1_0)['compare1'])($dictOrd_4);
+  $eq11_6_4 = (($__local_var_1_0)['eq1'])((($dictOrd_4)['Eq0'])(null));
+  $eqApp2_7_5 = ["eq" => (function() use ($eq11_6_4) {
+  $__fn = function($x_7 = null, $y_8 = null) use ($eq11_6_4, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($eq11_6_4)($x_7))($y_8);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
+  $__res = (["compare" => (function() use ($compare11_5_3) {
+  $__fn = function($x_8 = null, $y_9 = null) use ($compare11_5_3, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($compare11_5_3)($x_8))($y_9);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "Eq0" => function($_dollar__unused_8 = null) use ($eqApp2_7_5) {
+  $__num = \func_num_args();
+  $__res = $eqApp2_7_5;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Eq10" => function($dollar__unused_4 = null) use ($eq1App1_3_2) {
+}])['compare'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Eq10" => function($_dollar__unused_4 = null) use ($eq1App1_3_2) {
   $__num = \func_num_args();
   $__res = $eq1App1_3_2;
   goto __end;;

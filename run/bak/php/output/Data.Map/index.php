@@ -202,9 +202,9 @@ $GLOBALS['Data_Map_ord1SemigroupMap'] = function($dictOrd_0 = null) {
 };
 
 // Data_Map_newtypeSemigroupMap
-$GLOBALS['Data_Map_newtypeSemigroupMap'] = ["Coercible0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Map_newtypeSemigroupMap'] = ["Coercible0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Prim_undefined'];
+  $__res = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -217,7 +217,7 @@ $GLOBALS['Data_Map_monoidSemigroupMap'] = function($dictOrd_0 = null) {
   $__res = function($dictSemigroup_2 = null) use ($semigroupSemigroupMap1_1_0) {
   $__num = \func_num_args();
   $semigroupSemigroupMap2_3_1 = ($semigroupSemigroupMap1_1_0)($dictSemigroup_2);
-  $__res = ["mempty" => new Phpurs_Data0("Leaf"), "Semigroup0" => function($dollar__unused_4 = null) use ($semigroupSemigroupMap2_3_1) {
+  $__res = ["mempty" => new Phpurs_Data0("Leaf"), "Semigroup0" => function($_dollar__unused_4 = null) use ($semigroupSemigroupMap2_3_1) {
   $__num = \func_num_args();
   $__res = $semigroupSemigroupMap2_3_1;
   goto __end;;
@@ -234,29 +234,13 @@ $GLOBALS['Data_Map_monoidSemigroupMap'] = function($dictOrd_0 = null) {
 };
 
 // Data_Map_keys
-$GLOBALS['Data_Map_keys'] = (function() use (&$__fn) {
-$go_0_0 = null;
-$go_0_0 = function($v_1 = null) use (&$go_0_0) {
+$GLOBALS['Data_Map_keys'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Set_Set']))((($GLOBALS['Data_Map_Internal_functorMap'])['map'])(function($v_0 = null) {
   $__num = \func_num_args();
-  $__t1 = null;;
-  if ((is_object($v_1) && (($v_1)->{'tag'} === "Leaf"))) {
-$__t1 = new Phpurs_Data0("Leaf");
-goto end_branch_1;;
-};
-  if ((is_object($v_1) && (($v_1)->{'tag'} === "Node"))) {
-$__t1 = new Phpurs_Data6("Node", ($v_1)->{'value0'}, ($v_1)->{'value1'}, ($v_1)->{'value2'}, $GLOBALS['Data_Unit_unit'], ($go_0_0)(($v_1)->{'value4'}), ($go_0_0)(($v_1)->{'value5'}));
-goto end_branch_1;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t1 = null;
-  end_branch_1:;
-  $__res = $__t1;
+  $__res = $GLOBALS['Data_Unit_unit'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
-return (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Set_Set']))($go_0_0);
-})();
+}));
 
 // Data_Map_functorWithIndexSemigroupMap
 $GLOBALS['Data_Map_functorWithIndexSemigroupMap'] = $GLOBALS['Data_Map_Internal_functorWithIndexMap'];
@@ -325,7 +309,7 @@ $GLOBALS['Data_Map_applySemigroupMap'] = function($dictOrd_0 = null) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_1 = null) {
+})(), "Functor0" => function($_dollar__unused_1 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Map_Internal_functorMap'];
   goto __end;;
@@ -353,7 +337,7 @@ $GLOBALS['Data_Map_altSemigroupMap'] = function($dictOrd_0 = null) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_1 = null) {
+})(), "Functor0" => function($_dollar__unused_1 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Map_Internal_functorMap'];
   goto __end;;

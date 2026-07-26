@@ -106,6 +106,48 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Control_Monad_RWS_execRWST
+$GLOBALS['Control_Monad_RWS_execRWST'] = (function() {
+  $__fn = function($v_0 = null, $r_1 = null, $s_2 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__res = ((((($GLOBALS['Data_Identity_monadIdentity'])['Bind1'])(null))['bind'])((($v_0)($r_1))($s_2)))(function($v1_3 = null) {
+  $__num = \func_num_args();
+  $__res = (((($GLOBALS['Data_Identity_monadIdentity'])['Applicative0'])(null))['pure'])(new Phpurs_Data2("Tuple", ($v1_3)->{'value0'}, ($v1_3)->{'value2'}));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})();
+
+// Control_Monad_RWS_evalRWST
+$GLOBALS['Control_Monad_RWS_evalRWST'] = (function() {
+  $__fn = function($v_0 = null, $r_1 = null, $s_2 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__res = ((((($GLOBALS['Data_Identity_monadIdentity'])['Bind1'])(null))['bind'])((($v_0)($r_1))($s_2)))(function($v1_3 = null) {
+  $__num = \func_num_args();
+  $__res = (((($GLOBALS['Data_Identity_monadIdentity'])['Applicative0'])(null))['pure'])(new Phpurs_Data2("Tuple", ($v1_3)->{'value1'}, ($v1_3)->{'value2'}));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})();
+
 // Control_Monad_RWS_withRWS
 $GLOBALS['Control_Monad_RWS_withRWS'] = $GLOBALS['Control_Monad_RWS_Trans_withRWST'];
 
@@ -116,7 +158,7 @@ $GLOBALS['Control_Monad_RWS_rws'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($f_0)($r_1))($s_2);
+  $__res = (($GLOBALS['Data_Identity_applicativeIdentity'])['pure'])((($f_0)($r_1))($s_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -142,7 +184,7 @@ $GLOBALS['Control_Monad_RWS_runRWS'] = (function() {
 // Control_Monad_RWS_mapRWS
 $GLOBALS['Control_Monad_RWS_mapRWS'] = function($f_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity']))($f_0)))($GLOBALS['Unsafe_Coerce_unsafeCoerce']);
+  $__local_var_1_0 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Identity_Identity']))($f_0)))($GLOBALS['Unsafe_Coerce_unsafeCoerce']);
   $__res = (function() use ($__local_var_1_0) {
   $__fn = function($v_2 = null, $r_3 = null, $s_4 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -168,7 +210,7 @@ $GLOBALS['Control_Monad_RWS_execRWS'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($GLOBALS['Control_Monad_RWS_Trans_execRWST'])($GLOBALS['Data_Identity_monadIdentity']))($m_0))($r_1))($s_2);
+  $__res = ((($GLOBALS['Control_Monad_RWS_execRWST'])($m_0))($r_1))($s_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -183,7 +225,7 @@ $GLOBALS['Control_Monad_RWS_evalRWS'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($GLOBALS['Control_Monad_RWS_Trans_evalRWST'])($GLOBALS['Data_Identity_monadIdentity']))($m_0))($r_1))($s_2);
+  $__res = ((($GLOBALS['Control_Monad_RWS_evalRWST'])($m_0))($r_1))($s_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;

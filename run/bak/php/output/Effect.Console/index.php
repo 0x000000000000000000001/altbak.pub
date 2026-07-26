@@ -143,6 +143,9 @@ $GLOBALS['Effect_Console_timeLog'] = $ffi_Effect_Console['timeLog'] ?? new class
 $GLOBALS['Effect_Console_warn'] = $ffi_Effect_Console['warn'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+// Effect_Console_discard
+$GLOBALS['Effect_Console_discard'] = (($GLOBALS['Control_Bind_discardUnit'])['discard'])($GLOBALS['Effect_bindEffect']);
+
 // Effect_Console_warnShow
 $GLOBALS['Effect_Console_warnShow'] = (function() {
   $__fn = function($dictShow_0 = null, $a_1 = null) use (&$__fn) {
@@ -195,13 +198,13 @@ $GLOBALS['Effect_Console_grouped'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Effect_bindE'])(($GLOBALS['Effect_Console_group'])($name_0)))(function($dollar__unused_2 = null) use ($inner_1) {
+  $__res = (($GLOBALS['Effect_Console_discard'])(($GLOBALS['Effect_Console_group'])($name_0)))(function($_dollar__unused_2 = null) use ($inner_1) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_bindE'])($inner_1))(function($result_3 = null) {
+  $__res = ((($GLOBALS['Effect_bindEffect'])['bind'])($inner_1))(function($result_3 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_bindE'])($GLOBALS['Effect_Console_groupEnd']))(function($dollar__unused_4 = null) use ($result_3) {
+  $__res = (($GLOBALS['Effect_Console_discard'])($GLOBALS['Effect_Console_groupEnd']))(function($_dollar__unused_4 = null) use ($result_3) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_pureE'])($result_3);
+  $__res = (($GLOBALS['Effect_applicativeEffect'])['pure'])($result_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

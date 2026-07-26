@@ -142,10 +142,10 @@ $GLOBALS['Control_Comonad_Store_Class_peeks'] = (function() {
 // Control_Comonad_Store_Class_seeks
 $GLOBALS['Control_Comonad_Store_Class_seeks'] = function($dictComonadStore_0 = null) {
   $__num = \func_num_args();
-  $duplicate_1_0 = (((((($dictComonadStore_0)['Comonad0'])($GLOBALS['Prim_undefined']))['Extend0'])($GLOBALS['Prim_undefined']))['extend'])(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $duplicate_1_0 = (((((($dictComonadStore_0)['Comonad0'])(null))['Extend0'])(null))['extend'])(($GLOBALS['Control_Category_categoryFn'])['identity']);
   $__res = function($f_2 = null) use ($dictComonadStore_0, $duplicate_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($x_3 = null) use ($dictComonadStore_0, $f_2) {
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(function($x_3 = null) use ($dictComonadStore_0, $f_2) {
   $__num = \func_num_args();
   $__res = ((($dictComonadStore_0)['peek'])(($f_2)((($dictComonadStore_0)['pos'])($x_3))))($x_3);
   goto __end;;
@@ -164,10 +164,10 @@ $GLOBALS['Control_Comonad_Store_Class_seeks'] = function($dictComonadStore_0 = n
 // Control_Comonad_Store_Class_seek
 $GLOBALS['Control_Comonad_Store_Class_seek'] = function($dictComonadStore_0 = null) {
   $__num = \func_num_args();
-  $duplicate_1_0 = (((((($dictComonadStore_0)['Comonad0'])($GLOBALS['Prim_undefined']))['Extend0'])($GLOBALS['Prim_undefined']))['extend'])(($GLOBALS['Control_Category_categoryFn'])['identity']);
+  $duplicate_1_0 = (((((($dictComonadStore_0)['Comonad0'])(null))['Extend0'])(null))['extend'])(($GLOBALS['Control_Category_categoryFn'])['identity']);
   $__res = function($s_2 = null) use ($dictComonadStore_0, $duplicate_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictComonadStore_0)['peek'])($s_2)))($duplicate_1_0);
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($dictComonadStore_0)['peek'])($s_2)))($duplicate_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -202,21 +202,34 @@ $GLOBALS['Control_Comonad_Store_Class_experiment'] = (function() {
 $GLOBALS['Control_Comonad_Store_Class_comonadStoreTracedT'] = function($dictComonadStore_0 = null) {
   $__num = \func_num_args();
   $pos1_1_0 = ($dictComonadStore_0)['pos'];
-  $Comonad0_2_1 = (($dictComonadStore_0)['Comonad0'])($GLOBALS['Prim_undefined']);
+  $Comonad0_2_1 = (($dictComonadStore_0)['Comonad0'])(null);
   $comonadTracedT_3_2 = ($GLOBALS['Control_Comonad_Traced_Trans_comonadTracedT'])($Comonad0_2_1);
   $__res = function($dictMonoid_4 = null) use ($Comonad0_2_1, $comonadTracedT_3_2, $dictComonadStore_0, $pos1_1_0) {
   $__num = \func_num_args();
-  $lower1_5_3 = ((($GLOBALS['Control_Comonad_Traced_Trans_comonadTransTracedT'])($dictMonoid_4))['lower'])($Comonad0_2_1);
-  $comonadTracedT1_6_4 = ($comonadTracedT_3_2)($dictMonoid_4);
-  $__res = ["pos" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($pos1_1_0))($lower1_5_3), "peek" => function($s_7 = null) use ($dictComonadStore_0, $lower1_5_3) {
+  $mempty_5_3 = ($dictMonoid_4)['mempty'];
+  $lower1_6_4 = function($v_6 = null) use ($Comonad0_2_1, $mempty_5_3) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictComonadStore_0)['peek'])($s_7)))($lower1_5_3);
+  $__res = ((((((($Comonad0_2_1)['Extend0'])(null))['Functor0'])(null))['map'])(function($f_7 = null) use ($mempty_5_3) {
+  $__num = \func_num_args();
+  $__res = ($f_7)($mempty_5_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Comonad0" => function($dollar__unused_7 = null) use ($comonadTracedT1_6_4) {
+}))($v_6);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  $comonadTracedT1_7_5 = ($comonadTracedT_3_2)($dictMonoid_4);
+  $__res = ["pos" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($pos1_1_0))($lower1_6_4), "peek" => function($s_8 = null) use ($dictComonadStore_0, $lower1_6_4) {
   $__num = \func_num_args();
-  $__res = $comonadTracedT1_6_4;
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($dictComonadStore_0)['peek'])($s_8)))($lower1_6_4);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Comonad0" => function($_dollar__unused_8 = null) use ($comonadTracedT1_7_5) {
+  $__num = \func_num_args();
+  $__res = $comonadTracedT1_7_5;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -252,7 +265,7 @@ $GLOBALS['Control_Comonad_Store_Class_comonadStoreStoreT'] = function($dictComon
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Comonad0" => function($dollar__unused_2 = null) use ($comonadStoreT_1_0) {
+})(), "Comonad0" => function($_dollar__unused_2 = null) use ($comonadStoreT_1_0) {
   $__num = \func_num_args();
   $__res = $comonadStoreT_1_0;
   goto __end;;
@@ -267,28 +280,18 @@ $GLOBALS['Control_Comonad_Store_Class_comonadStoreStoreT'] = function($dictComon
 // Control_Comonad_Store_Class_comonadStoreEnvT
 $GLOBALS['Control_Comonad_Store_Class_comonadStoreEnvT'] = function($dictComonadStore_0 = null) {
   $__num = \func_num_args();
-  $comonadEnvT_1_0 = ($GLOBALS['Control_Comonad_Env_Trans_comonadEnvT'])((($dictComonadStore_0)['Comonad0'])($GLOBALS['Prim_undefined']));
-  $__res = ["pos" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictComonadStore_0)['pos']))(function($v_2 = null) {
+  $Comonad0_1_0 = (($dictComonadStore_0)['Comonad0'])(null);
+  $lower1_2_1 = (($GLOBALS['Control_Comonad_Env_Trans_comonadTransEnvT'])['lower'])($Comonad0_1_0);
+  $comonadEnvT_3_2 = ($GLOBALS['Control_Comonad_Env_Trans_comonadEnvT'])($Comonad0_1_0);
+  $__res = ["pos" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($dictComonadStore_0)['pos']))($lower1_2_1), "peek" => function($s_4 = null) use ($dictComonadStore_0, $lower1_2_1) {
   $__num = \func_num_args();
-  $__res = ($v_2)->{'value1'};
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($dictComonadStore_0)['peek'])($s_4)))($lower1_2_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}), "peek" => function($s_2 = null) use ($dictComonadStore_0) {
+}, "Comonad0" => function($_dollar__unused_4 = null) use ($comonadEnvT_3_2) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictComonadStore_0)['peek'])($s_2)))(function($v_3 = null) {
-  $__num = \func_num_args();
-  $__res = ($v_3)->{'value1'};
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Comonad0" => function($dollar__unused_2 = null) use ($comonadEnvT_1_0) {
-  $__num = \func_num_args();
-  $__res = $comonadEnvT_1_0;
+  $__res = $comonadEnvT_3_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

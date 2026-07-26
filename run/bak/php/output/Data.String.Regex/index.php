@@ -318,7 +318,7 @@ goto end_branch_5;;
 };
   $__t5 = "";
   end_branch_5:;
-  $__res = ((((($__t0 . $__t1) . $__t2) . $__t3) . $__t4) . $__t5);
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])($__t0))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])($__t1))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])($__t2))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])($__t3))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])($__t4))($__t5)))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -331,49 +331,7 @@ $GLOBALS['Data_String_Regex_regex'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__t0 = null;;
-  if (($f_1)['global']) {
-$__t0 = "g";
-goto end_branch_0;;
-};
-  $__t0 = "";
-  end_branch_0:;
-  $__t1 = null;;
-  if (($f_1)['ignoreCase']) {
-$__t1 = "i";
-goto end_branch_1;;
-};
-  $__t1 = "";
-  end_branch_1:;
-  $__t2 = null;;
-  if (($f_1)['multiline']) {
-$__t2 = "m";
-goto end_branch_2;;
-};
-  $__t2 = "";
-  end_branch_2:;
-  $__t3 = null;;
-  if (($f_1)['dotAll']) {
-$__t3 = "s";
-goto end_branch_3;;
-};
-  $__t3 = "";
-  end_branch_3:;
-  $__t4 = null;;
-  if (($f_1)['sticky']) {
-$__t4 = "y";
-goto end_branch_4;;
-};
-  $__t4 = "";
-  end_branch_4:;
-  $__t5 = null;;
-  if (($f_1)['unicode']) {
-$__t5 = "u";
-goto end_branch_5;;
-};
-  $__t5 = "";
-  end_branch_5:;
-  $__res = (((($GLOBALS['Data_String_Regex_regexImpl'])($GLOBALS['Data_Either_Left']))($GLOBALS['Data_Either_Right']))($s_0))(((((($__t0 . $__t1) . $__t2) . $__t3) . $__t4) . $__t5));
+  $__res = (((($GLOBALS['Data_String_Regex_regexImpl'])($GLOBALS['Data_Either_Left']))($GLOBALS['Data_Either_Right']))($s_0))(($GLOBALS['Data_String_Regex_renderFlags'])($f_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -384,7 +342,7 @@ goto end_branch_5;;
 // Data_String_Regex_parseFlags
 $GLOBALS['Data_String_Regex_parseFlags'] = function($s_0 = null) {
   $__num = \func_num_args();
-  $__res = ["global" => ((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_isJust']))(($GLOBALS['Data_String_CodeUnits_indexOf'])("g")))($s_0), "ignoreCase" => ((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_isJust']))(($GLOBALS['Data_String_CodeUnits_indexOf'])("i")))($s_0), "multiline" => ((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_isJust']))(($GLOBALS['Data_String_CodeUnits_indexOf'])("m")))($s_0), "dotAll" => ((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_isJust']))(($GLOBALS['Data_String_CodeUnits_indexOf'])("s")))($s_0), "sticky" => ((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_isJust']))(($GLOBALS['Data_String_CodeUnits_indexOf'])("y")))($s_0), "unicode" => ((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_isJust']))(($GLOBALS['Data_String_CodeUnits_indexOf'])("u")))($s_0)];
+  $__res = ["global" => (((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Maybe_isJust']))(($GLOBALS['Data_String_CodeUnits_indexOf'])("g")))($s_0), "ignoreCase" => (((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Maybe_isJust']))(($GLOBALS['Data_String_CodeUnits_indexOf'])("i")))($s_0), "multiline" => (((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Maybe_isJust']))(($GLOBALS['Data_String_CodeUnits_indexOf'])("m")))($s_0), "dotAll" => (((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Maybe_isJust']))(($GLOBALS['Data_String_CodeUnits_indexOf'])("s")))($s_0), "sticky" => (((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Maybe_isJust']))(($GLOBALS['Data_String_CodeUnits_indexOf'])("y")))($s_0), "unicode" => (((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Maybe_isJust']))(($GLOBALS['Data_String_CodeUnits_indexOf'])("u")))($s_0)];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -394,5 +352,5 @@ $GLOBALS['Data_String_Regex_parseFlags'] = function($s_0 = null) {
 $GLOBALS['Data_String_Regex_match'] = (($GLOBALS['Data_String_Regex__match'])($GLOBALS['Data_Maybe_Just']))(new Phpurs_Data0("Nothing"));
 
 // Data_String_Regex_flags
-$GLOBALS['Data_String_Regex_flags'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_Regex_Flags_RegexFlags']))($GLOBALS['Data_String_Regex_flagsImpl']);
+$GLOBALS['Data_String_Regex_flags'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_String_Regex_Flags_RegexFlags']))($GLOBALS['Data_String_Regex_flagsImpl']);
 

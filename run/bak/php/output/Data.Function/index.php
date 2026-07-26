@@ -147,28 +147,28 @@ $GLOBALS['Data_Function_const'] = (function() {
 // Data_Function_applyN
 $GLOBALS['Data_Function_applyN'] = function($f_0 = null) {
   $__num = \func_num_args();
-  $go_1_0 = null;
-  $go_1_0 = (function() use ($f_0, &$go_1_0) {
-  $__fn = function($n_2 = null, $acc_3 = null) use ($f_0, &$go_1_0, &$__fn) {
+  $go__1_0 = null;
+  $go__1_0 = (function() use ($f_0, &$go__1_0) {
+  $__fn = function($n_2 = null, $acc_3 = null) use ($f_0, &$go__1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_go_1_0_0_n_2 = $n_2;
-  $__tco_var_go_1_0_0_acc_3 = $acc_3;
-  tco_loop_go_1_0_0:;
-  $n_2 = $__tco_var_go_1_0_0_n_2;
-  $acc_3 = $__tco_var_go_1_0_0_acc_3;
+  $__tco_var_go__1_0_0_n_2 = $n_2;
+  $__tco_var_go__1_0_0_acc_3 = $acc_3;
+  tco_loop_go__1_0_0:;
+  $n_2 = $__tco_var_go__1_0_0_n_2;
+  $acc_3 = $__tco_var_go__1_0_0_acc_3;
   $__t2 = null;;
   if (($n_2 <= 0)) {
 $__t2 = $acc_3;
 goto end_branch_2;;
 };
-  $__tco_0 = ($n_2 - 1);
+  $__tco_0 = ((($GLOBALS['Data_Ring_ringInt'])['sub'])($n_2))(1);
   $__tco_1 = ($f_0)($acc_3);
-  $__tco_var_go_1_0_0_n_2 = $__tco_0;
-  $__tco_var_go_1_0_0_acc_3 = $__tco_1;
-  goto tco_loop_go_1_0_0;;
+  $__tco_var_go__1_0_0_n_2 = $__tco_0;
+  $__tco_var_go__1_0_0_acc_3 = $__tco_1;
+  goto tco_loop_go__1_0_0;;
   $__t2 = null;
   end_branch_2:;
   $__res = $__t2;
@@ -178,7 +178,7 @@ goto end_branch_2;;
   };
   return $__fn;
 })();
-  $__res = $go_1_0;
+  $__res = $go__1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

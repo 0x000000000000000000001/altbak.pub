@@ -124,7 +124,7 @@ $GLOBALS['Data_Functor_Compose_showCompose'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (("(Compose " . (($dictShow_0)['show'])($v_1)) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Compose "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -135,9 +135,9 @@ $GLOBALS['Data_Functor_Compose_showCompose'] = function($dictShow_0 = null) {
 };
 
 // Data_Functor_Compose_newtypeCompose
-$GLOBALS['Data_Functor_Compose_newtypeCompose'] = ["Coercible0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Functor_Compose_newtypeCompose'] = ["Coercible0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Prim_undefined'];
+  $__res = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -214,16 +214,16 @@ $GLOBALS['Data_Functor_Compose_eqCompose'] = (function() {
 // Data_Functor_Compose_ordCompose
 $GLOBALS['Data_Functor_Compose_ordCompose'] = function($dictOrd1_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictOrd1_0)['Eq10'])($GLOBALS['Prim_undefined']);
+  $__local_var_1_0 = (($dictOrd1_0)['Eq10'])(null);
   $__res = function($dictOrd11_2 = null) use ($__local_var_1_0, $dictOrd1_0) {
   $__num = \func_num_args();
-  $ordApp_3_1 = ($GLOBALS['Data_Functor_App_ordApp'])($dictOrd11_2);
-  $__local_var_4_2 = (($dictOrd11_2)['Eq10'])($GLOBALS['Prim_undefined']);
-  $__res = function($dictOrd_5 = null) use ($__local_var_1_0, $__local_var_4_2, $dictOrd1_0, $ordApp_3_1) {
+  $__local_var_3_1 = (($dictOrd11_2)['Eq10'])(null);
+  $__local_var_4_2 = (($dictOrd11_2)['Eq10'])(null);
+  $__res = function($dictOrd_5 = null) use ($__local_var_1_0, $__local_var_3_1, $__local_var_4_2, $dictOrd11_2, $dictOrd1_0) {
   $__num = \func_num_args();
-  $compare11_6_3 = (($dictOrd1_0)['compare1'])(($ordApp_3_1)($dictOrd_5));
-  $eq11_7_4 = (($__local_var_4_2)['eq1'])((($dictOrd_5)['Eq0'])($GLOBALS['Prim_undefined']));
-  $eq11_7_4 = (($__local_var_1_0)['eq1'])(["eq" => (function() use ($eq11_7_4) {
+  $compare11_6_3 = (($dictOrd11_2)['compare1'])($dictOrd_5);
+  $eq11_7_4 = (($__local_var_3_1)['eq1'])((($dictOrd_5)['Eq0'])(null));
+  $eqApp2_8_5 = ["eq" => (function() use ($eq11_7_4) {
   $__fn = function($x_8 = null, $y_9 = null) use ($eq11_7_4, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -235,14 +235,47 @@ $GLOBALS['Data_Functor_Compose_ordCompose'] = function($dictOrd1_0 = null) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()]);
-  $eqCompose3_8_6 = ["eq" => (function() use ($eq11_7_4) {
-  $__fn = function($v_8 = null, $v1_9 = null) use ($eq11_7_4, &$__fn) {
+})()];
+  $compare11_6_3 = (($dictOrd1_0)['compare1'])(["compare" => (function() use ($compare11_6_3) {
+  $__fn = function($x_9 = null, $y_10 = null) use ($compare11_6_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($eq11_7_4)($v_8))($v1_9);
+  $__res = (($compare11_6_3)($x_9))($y_10);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "Eq0" => function($_dollar__unused_9 = null) use ($eqApp2_8_5) {
+  $__num = \func_num_args();
+  $__res = $eqApp2_8_5;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}]);
+  $eq11_7_7 = (($__local_var_4_2)['eq1'])((($dictOrd_5)['Eq0'])(null));
+  $eq11_7_7 = (($__local_var_1_0)['eq1'])(["eq" => (function() use ($eq11_7_7) {
+  $__fn = function($x_8 = null, $y_9 = null) use ($eq11_7_7, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($eq11_7_7)($x_8))($y_9);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()]);
+  $eqCompose3_8_9 = ["eq" => (function() use ($eq11_7_7) {
+  $__fn = function($v_8 = null, $v1_9 = null) use ($eq11_7_7, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($eq11_7_7)($v_8))($v1_9);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -261,9 +294,9 @@ $GLOBALS['Data_Functor_Compose_ordCompose'] = function($dictOrd1_0 = null) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Eq0" => function($dollar__unused_9 = null) use ($eqCompose3_8_6) {
+})(), "Eq0" => function($_dollar__unused_9 = null) use ($eqCompose3_8_9) {
   $__num = \func_num_args();
-  $__res = $eqCompose3_8_6;
+  $__res = $eqCompose3_8_9;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -319,11 +352,11 @@ $GLOBALS['Data_Functor_Compose_eq1Compose'] = (function() {
 $GLOBALS['Data_Functor_Compose_ord1Compose'] = function($dictOrd1_0 = null) {
   $__num = \func_num_args();
   $ordCompose1_1_0 = ($GLOBALS['Data_Functor_Compose_ordCompose'])($dictOrd1_0);
-  $__local_var_2_1 = (($dictOrd1_0)['Eq10'])($GLOBALS['Prim_undefined']);
+  $__local_var_2_1 = (($dictOrd1_0)['Eq10'])(null);
   $__res = function($dictOrd11_3 = null) use ($__local_var_2_1, $ordCompose1_1_0) {
   $__num = \func_num_args();
   $ordCompose2_4_2 = ($ordCompose1_1_0)($dictOrd11_3);
-  $__local_var_5_3 = (($dictOrd11_3)['Eq10'])($GLOBALS['Prim_undefined']);
+  $__local_var_5_3 = (($dictOrd11_3)['Eq10'])(null);
   $eq1Compose2_6_4 = ["eq1" => function($dictEq_6 = null) use ($__local_var_2_1, $__local_var_5_3) {
   $__num = \func_num_args();
   $eq11_7_4 = (($__local_var_5_3)['eq1'])($dictEq_6);
@@ -350,7 +383,7 @@ $GLOBALS['Data_Functor_Compose_ord1Compose'] = function($dictOrd1_0 = null) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Eq10" => function($dollar__unused_7 = null) use ($eq1Compose2_6_4) {
+}, "Eq10" => function($_dollar__unused_7 = null) use ($eq1Compose2_6_4) {
   $__num = \func_num_args();
   $__res = $eq1Compose2_6_4;
   goto __end;;
@@ -384,11 +417,11 @@ $GLOBALS['Data_Functor_Compose_bihoistCompose'] = (function() {
 // Data_Functor_Compose_applyCompose
 $GLOBALS['Data_Functor_Compose_applyCompose'] = function($dictApply_0 = null) {
   $__num = \func_num_args();
-  $Functor0_1_0 = (($dictApply_0)['Functor0'])($GLOBALS['Prim_undefined']);
+  $Functor0_1_0 = (($dictApply_0)['Functor0'])(null);
   $__res = function($dictApply1_2 = null) use ($Functor0_1_0, $dictApply_0) {
   $__num = \func_num_args();
   $apply1_3_1 = ($dictApply1_2)['apply'];
-  $__local_var_4_2 = (($dictApply1_2)['Functor0'])($GLOBALS['Prim_undefined']);
+  $__local_var_4_2 = (($dictApply1_2)['Functor0'])(null);
   $functorCompose2_5_3 = ["map" => (function() use ($Functor0_1_0, $__local_var_4_2) {
   $__fn = function($f_5 = null, $v_6 = null) use ($Functor0_1_0, $__local_var_4_2, &$__fn) {
   $__num = \func_num_args();
@@ -414,7 +447,7 @@ $GLOBALS['Data_Functor_Compose_applyCompose'] = function($dictApply_0 = null) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_6 = null) use ($functorCompose2_5_3) {
+})(), "Functor0" => function($_dollar__unused_6 = null) use ($functorCompose2_5_3) {
   $__num = \func_num_args();
   $__res = $functorCompose2_5_3;
   goto __end;;
@@ -434,13 +467,48 @@ $GLOBALS['Data_Functor_Compose_applyCompose'] = function($dictApply_0 = null) {
 $GLOBALS['Data_Functor_Compose_applicativeCompose'] = function($dictApplicative_0 = null) {
   $__num = \func_num_args();
   $pure_1_0 = ($dictApplicative_0)['pure'];
-  $applyCompose1_2_1 = ($GLOBALS['Data_Functor_Compose_applyCompose'])((($dictApplicative_0)['Apply0'])($GLOBALS['Prim_undefined']));
-  $__res = function($dictApplicative1_3 = null) use ($applyCompose1_2_1, $pure_1_0) {
+  $__local_var_2_1 = (($dictApplicative_0)['Apply0'])(null);
+  $Functor0_3_2 = (($__local_var_2_1)['Functor0'])(null);
+  $__res = function($dictApplicative1_4 = null) use ($Functor0_3_2, $__local_var_2_1, $pure_1_0) {
   $__num = \func_num_args();
-  $applyCompose2_4_2 = ($applyCompose1_2_1)((($dictApplicative1_3)['Apply0'])($GLOBALS['Prim_undefined']));
-  $__res = ["pure" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Compose_Compose']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($pure_1_0))(($dictApplicative1_3)['pure'])), "Apply0" => function($dollar__unused_5 = null) use ($applyCompose2_4_2) {
+  $__local_var_5_3 = (($dictApplicative1_4)['Apply0'])(null);
+  $apply1_6_4 = ($__local_var_5_3)['apply'];
+  $__local_var_7_5 = (($__local_var_5_3)['Functor0'])(null);
+  $functorCompose2_8_6 = ["map" => (function() use ($Functor0_3_2, $__local_var_7_5) {
+  $__fn = function($f_8 = null, $v_9 = null) use ($Functor0_3_2, $__local_var_7_5, &$__fn) {
   $__num = \func_num_args();
-  $__res = $applyCompose2_4_2;
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ((($Functor0_3_2)['map'])((($__local_var_7_5)['map'])($f_8)))($v_9);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
+  $applyCompose2_7_5 = ["apply" => (function() use ($Functor0_3_2, $__local_var_2_1, $apply1_6_4) {
+  $__fn = function($v_9 = null, $v1_10 = null) use ($Functor0_3_2, $__local_var_2_1, $apply1_6_4, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ((($__local_var_2_1)['apply'])(((($Functor0_3_2)['map'])($apply1_6_4))($v_9)))($v1_10);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "Functor0" => function($_dollar__unused_9 = null) use ($functorCompose2_8_6) {
+  $__num = \func_num_args();
+  $__res = $functorCompose2_8_6;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = ["pure" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Functor_Compose_Compose']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($pure_1_0))(($dictApplicative1_4)['pure'])), "Apply0" => function($_dollar__unused_8 = null) use ($applyCompose2_7_5) {
+  $__num = \func_num_args();
+  $__res = $applyCompose2_7_5;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -457,7 +525,7 @@ $GLOBALS['Data_Functor_Compose_applicativeCompose'] = function($dictApplicative_
 // Data_Functor_Compose_altCompose
 $GLOBALS['Data_Functor_Compose_altCompose'] = function($dictAlt_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictAlt_0)['Functor0'])($GLOBALS['Prim_undefined']);
+  $__local_var_1_0 = (($dictAlt_0)['Functor0'])(null);
   $__res = function($dictFunctor_2 = null) use ($__local_var_1_0, $dictAlt_0) {
   $__num = \func_num_args();
   $functorCompose2_3_1 = ["map" => (function() use ($__local_var_1_0, $dictFunctor_2) {
@@ -485,7 +553,7 @@ $GLOBALS['Data_Functor_Compose_altCompose'] = function($dictAlt_0 = null) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_4 = null) use ($functorCompose2_3_1) {
+})(), "Functor0" => function($_dollar__unused_4 = null) use ($functorCompose2_3_1) {
   $__num = \func_num_args();
   $__res = $functorCompose2_3_1;
   goto __end;;
@@ -505,13 +573,45 @@ $GLOBALS['Data_Functor_Compose_altCompose'] = function($dictAlt_0 = null) {
 $GLOBALS['Data_Functor_Compose_plusCompose'] = function($dictPlus_0 = null) {
   $__num = \func_num_args();
   $empty_1_0 = ($dictPlus_0)['empty'];
-  $altCompose1_2_1 = ($GLOBALS['Data_Functor_Compose_altCompose'])((($dictPlus_0)['Alt0'])($GLOBALS['Prim_undefined']));
-  $__res = function($dictFunctor_3 = null) use ($altCompose1_2_1, $empty_1_0) {
+  $__local_var_2_1 = (($dictPlus_0)['Alt0'])(null);
+  $__local_var_3_2 = (($__local_var_2_1)['Functor0'])(null);
+  $__res = function($dictFunctor_4 = null) use ($__local_var_2_1, $__local_var_3_2, $empty_1_0) {
   $__num = \func_num_args();
-  $altCompose2_4_2 = ($altCompose1_2_1)($dictFunctor_3);
-  $__res = ["empty" => $empty_1_0, "Alt0" => function($dollar__unused_5 = null) use ($altCompose2_4_2) {
+  $functorCompose2_5_3 = ["map" => (function() use ($__local_var_3_2, $dictFunctor_4) {
+  $__fn = function($f_5 = null, $v_6 = null) use ($__local_var_3_2, $dictFunctor_4, &$__fn) {
   $__num = \func_num_args();
-  $__res = $altCompose2_4_2;
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ((($__local_var_3_2)['map'])((($dictFunctor_4)['map'])($f_5)))($v_6);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
+  $altCompose2_6_4 = ["alt" => (function() use ($__local_var_2_1) {
+  $__fn = function($v_6 = null, $v1_7 = null) use ($__local_var_2_1, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ((($__local_var_2_1)['alt'])($v_6))($v1_7);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "Functor0" => function($_dollar__unused_6 = null) use ($functorCompose2_5_3) {
+  $__num = \func_num_args();
+  $__res = $functorCompose2_5_3;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = ["empty" => $empty_1_0, "Alt0" => function($_dollar__unused_7 = null) use ($altCompose2_6_4) {
+  $__num = \func_num_args();
+  $__res = $altCompose2_6_4;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -528,21 +628,69 @@ $GLOBALS['Data_Functor_Compose_plusCompose'] = function($dictPlus_0 = null) {
 // Data_Functor_Compose_alternativeCompose
 $GLOBALS['Data_Functor_Compose_alternativeCompose'] = function($dictAlternative_0 = null) {
   $__num = \func_num_args();
-  $applicativeCompose1_1_0 = ($GLOBALS['Data_Functor_Compose_applicativeCompose'])((($dictAlternative_0)['Applicative0'])($GLOBALS['Prim_undefined']));
-  $plusCompose1_2_1 = ($GLOBALS['Data_Functor_Compose_plusCompose'])((($dictAlternative_0)['Plus1'])($GLOBALS['Prim_undefined']));
-  $__res = function($dictApplicative_3 = null) use ($applicativeCompose1_1_0, $plusCompose1_2_1) {
+  $applicativeCompose1_1_0 = ($GLOBALS['Data_Functor_Compose_applicativeCompose'])((($dictAlternative_0)['Applicative0'])(null));
+  $__local_var_2_1 = (($dictAlternative_0)['Plus1'])(null);
+  $empty_3_2 = ($__local_var_2_1)['empty'];
+  $__local_var_4_3 = (($__local_var_2_1)['Alt0'])(null);
+  $__local_var_5_4 = (($__local_var_4_3)['Functor0'])(null);
+  $plusCompose1_4_3 = function($dictFunctor_6 = null) use ($__local_var_4_3, $__local_var_5_4, $empty_3_2) {
   $__num = \func_num_args();
-  $applicativeCompose2_4_2 = ($applicativeCompose1_1_0)($dictApplicative_3);
-  $plusCompose2_5_3 = ($plusCompose1_2_1)((((($dictApplicative_3)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']));
-  $__res = ["Applicative0" => function($dollar__unused_6 = null) use ($applicativeCompose2_4_2) {
+  $functorCompose2_7_5 = ["map" => (function() use ($__local_var_5_4, $dictFunctor_6) {
+  $__fn = function($f_7 = null, $v_8 = null) use ($__local_var_5_4, $dictFunctor_6, &$__fn) {
   $__num = \func_num_args();
-  $__res = $applicativeCompose2_4_2;
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ((($__local_var_5_4)['map'])((($dictFunctor_6)['map'])($f_7)))($v_8);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
+  $altCompose2_8_6 = ["alt" => (function() use ($__local_var_4_3) {
+  $__fn = function($v_8 = null, $v1_9 = null) use ($__local_var_4_3, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ((($__local_var_4_3)['alt'])($v_8))($v1_9);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "Functor0" => function($_dollar__unused_8 = null) use ($functorCompose2_7_5) {
+  $__num = \func_num_args();
+  $__res = $functorCompose2_7_5;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Plus1" => function($dollar__unused_6 = null) use ($plusCompose2_5_3) {
+}];
+  $__res = ["empty" => $empty_3_2, "Alt0" => function($_dollar__unused_9 = null) use ($altCompose2_8_6) {
   $__num = \func_num_args();
-  $__res = $plusCompose2_5_3;
+  $__res = $altCompose2_8_6;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  $__res = function($dictApplicative_5 = null) use ($applicativeCompose1_1_0, $plusCompose1_4_3) {
+  $__num = \func_num_args();
+  $applicativeCompose2_6_8 = ($applicativeCompose1_1_0)($dictApplicative_5);
+  $plusCompose2_7_9 = ($plusCompose1_4_3)((((($dictApplicative_5)['Apply0'])(null))['Functor0'])(null));
+  $__res = ["Applicative0" => function($_dollar__unused_8 = null) use ($applicativeCompose2_6_8) {
+  $__num = \func_num_args();
+  $__res = $applicativeCompose2_6_8;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Plus1" => function($_dollar__unused_8 = null) use ($plusCompose2_7_9) {
+  $__num = \func_num_args();
+  $__res = $plusCompose2_7_9;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

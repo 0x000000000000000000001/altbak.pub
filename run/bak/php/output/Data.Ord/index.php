@@ -166,6 +166,18 @@ $GLOBALS['Data_Ord_ordNumberImpl'] = $ffi_Data_Ord['ordNumberImpl'] ?? new class
 $GLOBALS['Data_Ord_ordStringImpl'] = $ffi_Data_Ord['ordStringImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
 
 
+// Data_Ord_negate
+$GLOBALS['Data_Ord_negate'] = (function() use (&$__fn) {
+$zero_0_0 = ((($GLOBALS['Data_Ring_ringInt'])['Semiring0'])(null))['zero'];
+return function($a_1 = null) use ($zero_0_0) {
+  $__num = \func_num_args();
+  $__res = ((($GLOBALS['Data_Ring_ringInt'])['sub'])($zero_0_0))($a_1);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+})();
+
 // Data_Ord_ordVoid
 $GLOBALS['Data_Ord_ordVoid'] = ["compare" => (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
@@ -179,7 +191,7 @@ $GLOBALS['Data_Ord_ordVoid'] = ["compare" => (function() {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Eq0" => function($dollar__unused_0 = null) {
+})(), "Eq0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Eq_eqVoid'];
   goto __end;;
@@ -200,7 +212,7 @@ $GLOBALS['Data_Ord_ordUnit'] = ["compare" => (function() {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Eq0" => function($dollar__unused_0 = null) {
+})(), "Eq0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Eq_eqUnit'];
   goto __end;;
@@ -209,7 +221,7 @@ $GLOBALS['Data_Ord_ordUnit'] = ["compare" => (function() {
 }];
 
 // Data_Ord_ordString
-$GLOBALS['Data_Ord_ordString'] = ["compare" => ((($GLOBALS['Data_Ord_ordStringImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT")), "Eq0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Ord_ordString'] = ["compare" => ((($GLOBALS['Data_Ord_ordStringImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT")), "Eq0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Eq_eqString'];
   goto __end;;
@@ -230,7 +242,7 @@ $GLOBALS['Data_Ord_ordRecordNil'] = ["compareRecord" => (function() {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "EqRecord0" => function($dollar__unused_0 = null) {
+})(), "EqRecord0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Eq_eqRowNil'];
   goto __end;;
@@ -251,7 +263,7 @@ $GLOBALS['Data_Ord_ordProxy'] = ["compare" => (function() {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Eq0" => function($dollar__unused_0 = null) {
+})(), "Eq0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Eq_eqProxy'];
   goto __end;;
@@ -318,7 +330,7 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Eq0" => function($dollar__unused_0 = null) {
+})(), "Eq0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Ordering_eqOrdering'];
   goto __end;;
@@ -327,7 +339,7 @@ goto end_branch_0;;
 }];
 
 // Data_Ord_ordNumber
-$GLOBALS['Data_Ord_ordNumber'] = ["compare" => ((($GLOBALS['Data_Ord_ordNumberImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT")), "Eq0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Ord_ordNumber'] = ["compare" => ((($GLOBALS['Data_Ord_ordNumberImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT")), "Eq0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Eq_eqNumber'];
   goto __end;;
@@ -336,7 +348,7 @@ $GLOBALS['Data_Ord_ordNumber'] = ["compare" => ((($GLOBALS['Data_Ord_ordNumberIm
 }];
 
 // Data_Ord_ordInt
-$GLOBALS['Data_Ord_ordInt'] = ["compare" => ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT")), "Eq0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Ord_ordInt'] = ["compare" => ((($GLOBALS['Data_Ord_ordIntImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT")), "Eq0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Eq_eqInt'];
   goto __end;;
@@ -345,7 +357,7 @@ $GLOBALS['Data_Ord_ordInt'] = ["compare" => ((($GLOBALS['Data_Ord_ordIntImpl'])(
 }];
 
 // Data_Ord_ordChar
-$GLOBALS['Data_Ord_ordChar'] = ["compare" => ((($GLOBALS['Data_Ord_ordCharImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT")), "Eq0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Ord_ordChar'] = ["compare" => ((($GLOBALS['Data_Ord_ordCharImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT")), "Eq0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Eq_eqChar'];
   goto __end;;
@@ -354,7 +366,7 @@ $GLOBALS['Data_Ord_ordChar'] = ["compare" => ((($GLOBALS['Data_Ord_ordCharImpl']
 }];
 
 // Data_Ord_ordBoolean
-$GLOBALS['Data_Ord_ordBoolean'] = ["compare" => ((($GLOBALS['Data_Ord_ordBooleanImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT")), "Eq0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Ord_ordBoolean'] = ["compare" => ((($GLOBALS['Data_Ord_ordBooleanImpl'])(new Phpurs_Data0("LT")))(new Phpurs_Data0("EQ")))(new Phpurs_Data0("GT")), "Eq0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Eq_eqBoolean'];
   goto __end;;
@@ -373,13 +385,13 @@ $GLOBALS['Data_Ord_compareRecord'] = function($dict_0 = null) {
 
 // Data_Ord_ordRecord
 $GLOBALS['Data_Ord_ordRecord'] = (function() {
-  $__fn = function($dollar__unused_0 = null, $dictOrdRecord_1 = null) use (&$__fn) {
+  $__fn = function($_dollar__unused_0 = null, $dictOrdRecord_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $eqRec1_2_0 = ["eq" => (((($dictOrdRecord_1)['EqRecord0'])($GLOBALS['Prim_undefined']))['eqRecord'])(new Phpurs_Data0("Proxy"))];
-  $__res = ["compare" => (($dictOrdRecord_1)['compareRecord'])(new Phpurs_Data0("Proxy")), "Eq0" => function($dollar__unused_3 = null) use ($eqRec1_2_0) {
+  $eqRec1_2_0 = ["eq" => (((($dictOrdRecord_1)['EqRecord0'])(null))['eqRecord'])(new Phpurs_Data0("Proxy"))];
+  $__res = ["compare" => (($dictOrdRecord_1)['compareRecord'])(new Phpurs_Data0("Proxy")), "Eq0" => function($_dollar__unused_3 = null) use ($eqRec1_2_0) {
   $__num = \func_num_args();
   $__res = $eqRec1_2_0;
   goto __end;;
@@ -478,9 +490,9 @@ $GLOBALS['Data_Ord_signum'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $Semiring0_2_0 = (($dictRing_1)['Semiring0'])($GLOBALS['Prim_undefined']);
+  $Semiring0_2_0 = (($dictRing_1)['Semiring0'])(null);
   $zero_3_1 = ($Semiring0_2_0)['zero'];
-  $zero_4_2 = ((($dictRing_1)['Semiring0'])($GLOBALS['Prim_undefined']))['zero'];
+  $zero_4_2 = ((($dictRing_1)['Semiring0'])(null))['zero'];
   $one_5_3 = ($Semiring0_2_0)['one'];
   $__res = function($x_6 = null) use ($dictOrd_0, $dictRing_1, $one_5_3, $zero_3_1, $zero_4_2) {
   $__num = \func_num_args();
@@ -589,7 +601,7 @@ goto end_branch_1;;
 // Data_Ord_ordArray
 $GLOBALS['Data_Ord_ordArray'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $eqArray_1_0 = ["eq" => ($GLOBALS['Data_Eq_eqArrayImpl'])(((($dictOrd_0)['Eq0'])($GLOBALS['Prim_undefined']))['eq'])];
+  $eqArray_1_0 = ["eq" => ($GLOBALS['Data_Eq_eqArrayImpl'])(((($dictOrd_0)['Eq0'])(null))['eq'])];
   $__res = ["compare" => (function() use ($dictOrd_0) {
   $__fn = function($xs_2 = null, $ys_3 = null) use ($dictOrd_0, &$__fn) {
   $__num = \func_num_args();
@@ -613,7 +625,7 @@ $__t2 = 1;
 goto end_branch_2;;
 };
   if ((is_object($v_6_1) && (($v_6_1)->{'tag'} === "GT"))) {
-$__t2 = -1;
+$__t2 = ($GLOBALS['Data_Ord_negate'])(1);
 goto end_branch_2;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -631,7 +643,7 @@ goto end_branch_2;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Eq0" => function($dollar__unused_2 = null) use ($eqArray_1_0) {
+})(), "Eq0" => function($_dollar__unused_2 = null) use ($eqArray_1_0) {
   $__num = \func_num_args();
   $__res = $eqArray_1_0;
   goto __end;;
@@ -650,7 +662,7 @@ $GLOBALS['Data_Ord_ord1Array'] = ["compare1" => function($dictOrd_0 = null) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Eq10" => function($dollar__unused_0 = null) {
+}, "Eq10" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Eq_eq1Array'];
   goto __end;;
@@ -661,9 +673,9 @@ $GLOBALS['Data_Ord_ord1Array'] = ["compare1" => function($dictOrd_0 = null) {
 // Data_Ord_ordRecordCons
 $GLOBALS['Data_Ord_ordRecordCons'] = function($dictOrdRecord_0 = null) {
   $__num = \func_num_args();
-  $eqRowCons_1_0 = (($GLOBALS['Data_Eq_eqRowCons'])((($dictOrdRecord_0)['EqRecord0'])($GLOBALS['Prim_undefined'])))($GLOBALS['Prim_undefined']);
+  $eqRowCons_1_0 = (($GLOBALS['Data_Eq_eqRowCons'])((($dictOrdRecord_0)['EqRecord0'])(null)))(null);
   $__res = (function() use ($dictOrdRecord_0, $eqRowCons_1_0) {
-  $__fn = function($dollar__unused_2 = null, $dictIsSymbol_3 = null) use ($dictOrdRecord_0, $eqRowCons_1_0, &$__fn) {
+  $__fn = function($_dollar__unused_2 = null, $dictIsSymbol_3 = null) use ($dictOrdRecord_0, $eqRowCons_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
@@ -671,7 +683,7 @@ $GLOBALS['Data_Ord_ordRecordCons'] = function($dictOrdRecord_0 = null) {
   $eqRowCons1_4_1 = ($eqRowCons_1_0)($dictIsSymbol_3);
   $__res = function($dictOrd_5 = null) use ($dictIsSymbol_3, $dictOrdRecord_0, $eqRowCons1_4_1) {
   $__num = \func_num_args();
-  $eqRowCons2_6_2 = ($eqRowCons1_4_1)((($dictOrd_5)['Eq0'])($GLOBALS['Prim_undefined']));
+  $eqRowCons2_6_2 = ($eqRowCons1_4_1)((($dictOrd_5)['Eq0'])(null));
   $__res = ["compareRecord" => (function() use ($dictIsSymbol_3, $dictOrdRecord_0, $dictOrd_5) {
   $__fn = function($v_7 = null, $ra_8 = null, $rb_9 = null) use ($dictIsSymbol_3, $dictOrdRecord_0, $dictOrd_5, &$__fn) {
   $__num = \func_num_args();
@@ -681,7 +693,7 @@ $GLOBALS['Data_Ord_ordRecordCons'] = function($dictOrdRecord_0 = null) {
   $key_10_3 = (($dictIsSymbol_3)['reflectSymbol'])(new Phpurs_Data0("Proxy"));
   $left_11_4 = ((($dictOrd_5)['compare'])((($GLOBALS['Record_Unsafe_unsafeGet'])($key_10_3))($ra_8)))((($GLOBALS['Record_Unsafe_unsafeGet'])($key_10_3))($rb_9));
   $__t5 = null;;
-  if (((is_object($left_11_4) && (($left_11_4)->{'tag'} === "LT")) || ((is_object($left_11_4) && (($left_11_4)->{'tag'} === "GT")) || ( ! (is_object($left_11_4) && (($left_11_4)->{'tag'} === "EQ")))))) {
+  if (((($GLOBALS['Data_Eq_eqBoolean'])['eq'])(((($GLOBALS['Data_Ordering_eqOrdering'])['eq'])($left_11_4))(new Phpurs_Data0("EQ"))))(false)) {
 $__t5 = $left_11_4;
 goto end_branch_5;;
 };
@@ -693,7 +705,7 @@ goto end_branch_5;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "EqRecord0" => function($dollar__unused_7 = null) use ($eqRowCons2_6_2) {
+})(), "EqRecord0" => function($_dollar__unused_7 = null) use ($eqRowCons2_6_2) {
   $__num = \func_num_args();
   $__res = $eqRowCons2_6_2;
   goto __end;;
@@ -794,8 +806,8 @@ $GLOBALS['Data_Ord_abs'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $zero_2_0 = ((($dictRing_1)['Semiring0'])($GLOBALS['Prim_undefined']))['zero'];
-  $zero_3_1 = ((($dictRing_1)['Semiring0'])($GLOBALS['Prim_undefined']))['zero'];
+  $zero_2_0 = ((($dictRing_1)['Semiring0'])(null))['zero'];
+  $zero_3_1 = ((($dictRing_1)['Semiring0'])(null))['zero'];
   $__res = function($x_4 = null) use ($dictOrd_0, $dictRing_1, $zero_2_0, $zero_3_1) {
   $__num = \func_num_args();
   $__t2 = null;;

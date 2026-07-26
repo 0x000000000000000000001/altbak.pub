@@ -120,7 +120,7 @@ $GLOBALS['Data_Semigroup_Last_showLast'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (("(Last " . (($dictShow_0)['show'])($v_1)) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Last "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -194,7 +194,7 @@ $GLOBALS['Data_Semigroup_Last_ord1Last'] = ["compare1" => function($dictOrd_0 = 
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Eq10" => function($dollar__unused_0 = null) {
+}, "Eq10" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Semigroup_Last_eq1Last'];
   goto __end;;
@@ -224,7 +224,7 @@ $GLOBALS['Data_Semigroup_Last_applyLast'] = ["apply" => (function() {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0 = null) {
+})(), "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Semigroup_Last_functorLast'];
   goto __end;;
@@ -245,7 +245,7 @@ $GLOBALS['Data_Semigroup_Last_bindLast'] = ["bind" => (function() {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Apply0" => function($dollar__unused_0 = null) {
+})(), "Apply0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Semigroup_Last_applyLast'];
   goto __end;;
@@ -254,7 +254,7 @@ $GLOBALS['Data_Semigroup_Last_bindLast'] = ["bind" => (function() {
 }];
 
 // Data_Semigroup_Last_applicativeLast
-$GLOBALS['Data_Semigroup_Last_applicativeLast'] = ["pure" => $GLOBALS['Data_Semigroup_Last_Last'], "Apply0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Semigroup_Last_applicativeLast'] = ["pure" => $GLOBALS['Data_Semigroup_Last_Last'], "Apply0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Semigroup_Last_applyLast'];
   goto __end;;
@@ -263,13 +263,13 @@ $GLOBALS['Data_Semigroup_Last_applicativeLast'] = ["pure" => $GLOBALS['Data_Semi
 }];
 
 // Data_Semigroup_Last_monadLast
-$GLOBALS['Data_Semigroup_Last_monadLast'] = ["Applicative0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Semigroup_Last_monadLast'] = ["Applicative0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Semigroup_Last_applicativeLast'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bind1" => function($dollar__unused_0 = null) {
+}, "Bind1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Semigroup_Last_bindLast'];
   goto __end;;

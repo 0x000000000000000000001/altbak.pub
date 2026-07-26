@@ -112,7 +112,7 @@ $GLOBALS['Data_Decide_choosePredicate'] = ["choose" => (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v2_3 = null) use ($v1_2, $v_1) {
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(function($v2_3 = null) use ($v1_2, $v_1) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v2_3) && (($v2_3)->{'tag'} === "Left"))) {
@@ -136,7 +136,7 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "Divide0" => function($dollar__unused_0 = null) {
+})(), "Divide0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Divide_dividePredicate'];
   goto __end;;
@@ -154,7 +154,7 @@ $GLOBALS['Data_Decide_chooseOp'] = function($dictSemigroup_0 = null) {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v2_5 = null) use ($v1_4, $v_3) {
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(function($v2_5 = null) use ($v1_4, $v_3) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ((is_object($v2_5) && (($v2_5)->{'tag'} === "Left"))) {
@@ -178,7 +178,7 @@ goto end_branch_1;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "Divide0" => function($dollar__unused_2 = null) use ($divideOp_1_0) {
+})(), "Divide0" => function($_dollar__unused_2 = null) use ($divideOp_1_0) {
   $__num = \func_num_args();
   $__res = $divideOp_1_0;
   goto __end;;
@@ -242,7 +242,7 @@ goto end_branch_1;;
   return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
   };
   return $__fn;
-})(), "Divide0" => function($dollar__unused_0 = null) {
+})(), "Divide0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Divide_divideEquivalence'];
   goto __end;;
@@ -302,7 +302,7 @@ goto end_branch_1;;
   return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
   };
   return $__fn;
-})(), "Divide0" => function($dollar__unused_0 = null) {
+})(), "Divide0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Divide_divideComparison'];
   goto __end;;

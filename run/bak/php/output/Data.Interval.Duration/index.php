@@ -185,16 +185,16 @@ $GLOBALS['Data_Interval_Duration_show'] = ((($GLOBALS['Data_Map_Internal_showMap
 // Data_Interval_Duration_showDuration
 $GLOBALS['Data_Interval_Duration_showDuration'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = (("(Duration " . ($GLOBALS['Data_Interval_Duration_show'])($v_0)) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Duration "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(($GLOBALS['Data_Interval_Duration_show'])($v_0)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
 
 // Data_Interval_Duration_newtypeDuration
-$GLOBALS['Data_Interval_Duration_newtypeDuration'] = ["Coercible0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Interval_Duration_newtypeDuration'] = ["Coercible0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Prim_undefined'];
+  $__res = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -356,7 +356,7 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Eq0" => function($dollar__unused_0 = null) {
+})(), "Eq0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Interval_Duration_eqDurationComponent'];
   goto __end;;
@@ -374,7 +374,7 @@ $GLOBALS['Data_Interval_Duration_semigroupDuration'] = ["append" => (function() 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Map_Internal_unsafeUnionWith'])(($GLOBALS['Data_Interval_Duration_ordDurationComponent'])['compare'], $GLOBALS['Data_Semiring_numAdd'], $v_0, $v1_1);
+  $__res = ($GLOBALS['Data_Map_Internal_unsafeUnionWith'])(($GLOBALS['Data_Interval_Duration_ordDurationComponent'])['compare'], ($GLOBALS['Data_Semiring_semiringNumber'])['add'], $v_0, $v1_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -383,7 +383,7 @@ $GLOBALS['Data_Interval_Duration_semigroupDuration'] = ["append" => (function() 
 })()];
 
 // Data_Interval_Duration_monoidDuration
-$GLOBALS['Data_Interval_Duration_monoidDuration'] = ["mempty" => new Phpurs_Data0("Leaf"), "Semigroup0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Interval_Duration_monoidDuration'] = ["mempty" => new Phpurs_Data0("Leaf"), "Semigroup0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Interval_Duration_semigroupDuration'];
   goto __end;;
@@ -419,7 +419,7 @@ $GLOBALS['Data_Interval_Duration_ordDuration'] = ["compare" => (function() {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Eq0" => function($dollar__unused_0 = null) {
+})(), "Eq0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Interval_Duration_eqDuration'];
   goto __end;;
@@ -437,7 +437,7 @@ $GLOBALS['Data_Interval_Duration_hour'] = function($v_0 = null) {
 };
 
 // Data_Interval_Duration_millisecond
-$GLOBALS['Data_Interval_Duration_millisecond'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0 = null) {
+$GLOBALS['Data_Interval_Duration_millisecond'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(function($v_0 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data6("Node", 1, 1, new Phpurs_Data0("Second"), $v_0, new Phpurs_Data0("Leaf"), new Phpurs_Data0("Leaf"));
   goto __end;;
@@ -445,7 +445,7 @@ $GLOBALS['Data_Interval_Duration_millisecond'] = (($GLOBALS['Control_Semigroupoi
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }))(function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = ($v_0 / 1000.0);
+  $__res = ((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])['div'])($v_0))(1000.0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

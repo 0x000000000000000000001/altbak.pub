@@ -276,9 +276,9 @@ $GLOBALS['Data_Semiring_Generic_genericSemiringConstructor'] = function($dictGen
 // Data_Semiring_Generic_genericSemiringProduct
 $GLOBALS['Data_Semiring_Generic_genericSemiringProduct'] = function($dictGenericSemiring_0 = null) {
   $__num = \func_num_args();
-  $genericZero__prime__1_1_0 = ($dictGenericSemiring_0)['genericZero__prime__'];
-  $genericOne__prime__1_2_1 = ($dictGenericSemiring_0)['genericOne__prime__'];
-  $__res = function($dictGenericSemiring1_3 = null) use ($dictGenericSemiring_0, $genericOne__prime__1_2_1, $genericZero__prime__1_1_0) {
+  $genericZero_prime1_1_0 = ($dictGenericSemiring_0)['genericZero__prime__'];
+  $genericOne_prime1_2_1 = ($dictGenericSemiring_0)['genericOne__prime__'];
+  $__res = function($dictGenericSemiring1_3 = null) use ($dictGenericSemiring_0, $genericOne_prime1_2_1, $genericZero_prime1_1_0) {
   $__num = \func_num_args();
   $__res = ["genericAdd__prime__" => (function() use ($dictGenericSemiring1_3, $dictGenericSemiring_0) {
   $__fn = function($v_4 = null, $v1_5 = null) use ($dictGenericSemiring1_3, $dictGenericSemiring_0, &$__fn) {
@@ -292,7 +292,7 @@ $GLOBALS['Data_Semiring_Generic_genericSemiringProduct'] = function($dictGeneric
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "genericZero__prime__" => new Phpurs_Data2("Product", $genericZero__prime__1_1_0, ($dictGenericSemiring1_3)['genericZero__prime__']), "genericMul__prime__" => (function() use ($dictGenericSemiring1_3, $dictGenericSemiring_0) {
+})(), "genericZero__prime__" => new Phpurs_Data2("Product", $genericZero_prime1_1_0, ($dictGenericSemiring1_3)['genericZero__prime__']), "genericMul__prime__" => (function() use ($dictGenericSemiring1_3, $dictGenericSemiring_0) {
   $__fn = function($v_4 = null, $v1_5 = null) use ($dictGenericSemiring1_3, $dictGenericSemiring_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -304,7 +304,7 @@ $GLOBALS['Data_Semiring_Generic_genericSemiringProduct'] = function($dictGeneric
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "genericOne__prime__" => new Phpurs_Data2("Product", $genericOne__prime__1_2_1, ($dictGenericSemiring1_3)['genericOne__prime__'])];
+})(), "genericOne__prime__" => new Phpurs_Data2("Product", $genericOne_prime1_2_1, ($dictGenericSemiring1_3)['genericOne__prime__'])];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

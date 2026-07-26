@@ -142,17 +142,15 @@ $GLOBALS['Data_List_Lazy_NonEmpty_toList'] = function($v_0 = null) {
 // Data_List_Lazy_NonEmpty_toUnfoldable
 $GLOBALS['Data_List_Lazy_NonEmpty_toUnfoldable'] = function($dictUnfoldable_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictUnfoldable_0)['unfoldr'])(function($xs_1 = null) {
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($dictUnfoldable_0)['unfoldr'])(function($xs_1 = null) {
   $__num = \func_num_args();
-  $__local_var_2_0 = ($GLOBALS['Data_List_Lazy_uncons'])($xs_1);
-  $__t1 = null;;
-  if ((is_object($__local_var_2_0) && (($__local_var_2_0)->{'tag'} === "Just"))) {
-$__t1 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", (($__local_var_2_0)->{'value0'})['head'], (($__local_var_2_0)->{'value0'})['tail']));
-goto end_branch_1;;
-};
-  $__t1 = new Phpurs_Data0("Nothing");
-  end_branch_1:;
-  $__res = $__t1;
+  $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($rec_2 = null) {
+  $__num = \func_num_args();
+  $__res = new Phpurs_Data2("Tuple", ($rec_2)['head'], ($rec_2)['tail']);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))(($GLOBALS['Data_List_Lazy_uncons'])($xs_1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -179,7 +177,21 @@ $GLOBALS['Data_List_Lazy_NonEmpty_repeat'] = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = ($GLOBALS['Data_Lazy_defer'])(function($v_1 = null) use ($x_0) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("NonEmpty", $x_0, ($GLOBALS['Data_List_Lazy_repeat'])($x_0));
+  $go__2_0 = null;
+  $go__2_0 = (($GLOBALS['Data_List_Lazy_Types_lazyList'])['defer'])(function($v_3 = null) use (&$go__2_0, $x_0) {
+  $__num = \func_num_args();
+  $__res = ($GLOBALS['Data_Lazy_defer'])(function($v_4 = null) use (&$go__2_0, $x_0) {
+  $__num = \func_num_args();
+  $__res = new Phpurs_Data2("Cons", $x_0, $go__2_0);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  $__res = new Phpurs_Data2("NonEmpty", $x_0, $go__2_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -192,7 +204,7 @@ $GLOBALS['Data_List_Lazy_NonEmpty_repeat'] = function($x_0 = null) {
 // Data_List_Lazy_NonEmpty_length
 $GLOBALS['Data_List_Lazy_NonEmpty_length'] = function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = (1 + ($GLOBALS['Data_List_Lazy_length'])((($GLOBALS['Data_Lazy_force'])($v_0))->{'value1'}));
+  $__res = ((($GLOBALS['Data_Semiring_semiringInt'])['add'])(1))(($GLOBALS['Data_List_Lazy_length'])((($GLOBALS['Data_Lazy_force'])($v_0))->{'value1'}));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -209,7 +221,7 @@ $__t2 = ($v1_1_0)->{'value0'};
 goto end_branch_2;;
 };
   if ((is_object($__local_var_2_1) && (($__local_var_2_1)->{'tag'} === "Just"))) {
-$__t2 = ($__local_var_2_1)->{'value0'};
+$__t2 = (($GLOBALS['Control_Category_categoryFn'])['identity'])(($__local_var_2_1)->{'value0'});
 goto end_branch_2;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -314,7 +326,7 @@ goto end_branch_1;;
 // Data_List_Lazy_NonEmpty_fromFoldable
 $GLOBALS['Data_List_Lazy_NonEmpty_fromFoldable'] = function($dictFoldable_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_NonEmpty_fromList']))(((($dictFoldable_0)['foldr'])($GLOBALS['Data_List_Lazy_Types_cons']))($GLOBALS['Data_List_Lazy_Types_nil']));
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_List_Lazy_NonEmpty_fromList']))(((($dictFoldable_0)['foldr'])($GLOBALS['Data_List_Lazy_Types_cons']))($GLOBALS['Data_List_Lazy_Types_nil']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

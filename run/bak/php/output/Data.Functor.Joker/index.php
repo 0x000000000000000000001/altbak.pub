@@ -128,7 +128,7 @@ $GLOBALS['Data_Functor_Joker_showJoker'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (("(Joker " . (($dictShow_0)['show'])($v_1)) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Joker "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -169,9 +169,9 @@ $GLOBALS['Data_Functor_Joker_ordJoker'] = function($dictOrd_0 = null) {
 };
 
 // Data_Functor_Joker_newtypeJoker
-$GLOBALS['Data_Functor_Joker_newtypeJoker'] = ["Coercible0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Functor_Joker_newtypeJoker'] = ["Coercible0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Prim_undefined'];
+  $__res = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -250,7 +250,7 @@ $GLOBALS['Data_Functor_Joker_choiceJoker'] = function($dictFunctor_0 = null) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Profunctor0" => function($dollar__unused_2 = null) use ($profunctorJoker1_1_0) {
+}, "Profunctor0" => function($_dollar__unused_2 = null) use ($profunctorJoker1_1_0) {
   $__num = \func_num_args();
   $__res = $profunctorJoker1_1_0;
   goto __end;;
@@ -286,7 +286,7 @@ $GLOBALS['Data_Functor_Joker_bifunctorJoker'] = function($dictFunctor_0 = null) 
 // Data_Functor_Joker_biapplyJoker
 $GLOBALS['Data_Functor_Joker_biapplyJoker'] = function($dictApply_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictApply_0)['Functor0'])($GLOBALS['Prim_undefined']);
+  $__local_var_1_0 = (($dictApply_0)['Functor0'])(null);
   $bifunctorJoker1_2_1 = ["bimap" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2 = null, $g_3 = null, $v1_4 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -312,7 +312,7 @@ $GLOBALS['Data_Functor_Joker_biapplyJoker'] = function($dictApply_0 = null) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Bifunctor0" => function($dollar__unused_3 = null) use ($bifunctorJoker1_2_1) {
+})(), "Bifunctor0" => function($_dollar__unused_3 = null) use ($bifunctorJoker1_2_1) {
   $__num = \func_num_args();
   $__res = $bifunctorJoker1_2_1;
   goto __end;;
@@ -327,22 +327,55 @@ $GLOBALS['Data_Functor_Joker_biapplyJoker'] = function($dictApply_0 = null) {
 // Data_Functor_Joker_biapplicativeJoker
 $GLOBALS['Data_Functor_Joker_biapplicativeJoker'] = function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $biapplyJoker1_1_0 = ($GLOBALS['Data_Functor_Joker_biapplyJoker'])((($dictApplicative_0)['Apply0'])($GLOBALS['Prim_undefined']));
-  $__res = ["bipure" => (function() use ($dictApplicative_0) {
-  $__fn = function($v_2 = null, $b_3 = null) use ($dictApplicative_0, &$__fn) {
+  $__local_var_1_0 = (($dictApplicative_0)['Apply0'])(null);
+  $__local_var_2_1 = (($__local_var_1_0)['Functor0'])(null);
+  $bifunctorJoker1_3_2 = ["bimap" => (function() use ($__local_var_2_1) {
+  $__fn = function($v_3 = null, $g_4 = null, $v1_5 = null) use ($__local_var_2_1, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__res = ((($__local_var_2_1)['map'])($g_4))($v1_5);
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})()];
+  $biapplyJoker1_3_2 = ["biapply" => (function() use ($__local_var_1_0) {
+  $__fn = function($v_4 = null, $v1_5 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictApplicative_0)['pure'])($b_3);
+  $__res = ((($__local_var_1_0)['apply'])($v_4))($v1_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Biapply0" => function($dollar__unused_2 = null) use ($biapplyJoker1_1_0) {
+})(), "Bifunctor0" => function($_dollar__unused_4 = null) use ($bifunctorJoker1_3_2) {
   $__num = \func_num_args();
-  $__res = $biapplyJoker1_1_0;
+  $__res = $bifunctorJoker1_3_2;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = ["bipure" => (function() use ($dictApplicative_0) {
+  $__fn = function($v_4 = null, $b_5 = null) use ($dictApplicative_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($dictApplicative_0)['pure'])($b_5);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "Biapply0" => function($_dollar__unused_4 = null) use ($biapplyJoker1_3_2) {
+  $__num = \func_num_args();
+  $__res = $biapplyJoker1_3_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -355,7 +388,7 @@ $GLOBALS['Data_Functor_Joker_biapplicativeJoker'] = function($dictApplicative_0 
 // Data_Functor_Joker_applyJoker
 $GLOBALS['Data_Functor_Joker_applyJoker'] = function($dictApply_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictApply_0)['Functor0'])($GLOBALS['Prim_undefined']);
+  $__local_var_1_0 = (($dictApply_0)['Functor0'])(null);
   $functorJoker1_2_1 = ["map" => (function() use ($__local_var_1_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -381,7 +414,7 @@ $GLOBALS['Data_Functor_Joker_applyJoker'] = function($dictApply_0 = null) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_3 = null) use ($functorJoker1_2_1) {
+})(), "Functor0" => function($_dollar__unused_3 = null) use ($functorJoker1_2_1) {
   $__num = \func_num_args();
   $__res = $functorJoker1_2_1;
   goto __end;;
@@ -396,22 +429,55 @@ $GLOBALS['Data_Functor_Joker_applyJoker'] = function($dictApply_0 = null) {
 // Data_Functor_Joker_bindJoker
 $GLOBALS['Data_Functor_Joker_bindJoker'] = function($dictBind_0 = null) {
   $__num = \func_num_args();
-  $applyJoker1_1_0 = ($GLOBALS['Data_Functor_Joker_applyJoker'])((($dictBind_0)['Apply0'])($GLOBALS['Prim_undefined']));
-  $__res = ["bind" => (function() use ($dictBind_0) {
-  $__fn = function($v_2 = null, $amb_3 = null) use ($dictBind_0, &$__fn) {
+  $__local_var_1_0 = (($dictBind_0)['Apply0'])(null);
+  $__local_var_2_1 = (($__local_var_1_0)['Functor0'])(null);
+  $functorJoker1_3_2 = ["map" => (function() use ($__local_var_2_1) {
+  $__fn = function($f_3 = null, $v_4 = null) use ($__local_var_2_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictBind_0)['bind'])($v_2))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($amb_3));
+  $__res = ((($__local_var_2_1)['map'])($f_3))($v_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Apply0" => function($dollar__unused_2 = null) use ($applyJoker1_1_0) {
+})()];
+  $applyJoker1_3_2 = ["apply" => (function() use ($__local_var_1_0) {
+  $__fn = function($v_4 = null, $v1_5 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
-  $__res = $applyJoker1_1_0;
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ((($__local_var_1_0)['apply'])($v_4))($v1_5);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "Functor0" => function($_dollar__unused_4 = null) use ($functorJoker1_3_2) {
+  $__num = \func_num_args();
+  $__res = $functorJoker1_3_2;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = ["bind" => (function() use ($dictBind_0) {
+  $__fn = function($v_4 = null, $amb_5 = null) use ($dictBind_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ((($dictBind_0)['bind'])($v_4))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($amb_5));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "Apply0" => function($_dollar__unused_4 = null) use ($applyJoker1_3_2) {
+  $__num = \func_num_args();
+  $__res = $applyJoker1_3_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -424,10 +490,43 @@ $GLOBALS['Data_Functor_Joker_bindJoker'] = function($dictBind_0 = null) {
 // Data_Functor_Joker_applicativeJoker
 $GLOBALS['Data_Functor_Joker_applicativeJoker'] = function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $applyJoker1_1_0 = ($GLOBALS['Data_Functor_Joker_applyJoker'])((($dictApplicative_0)['Apply0'])($GLOBALS['Prim_undefined']));
-  $__res = ["pure" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Joker_Joker']))(($dictApplicative_0)['pure']), "Apply0" => function($dollar__unused_2 = null) use ($applyJoker1_1_0) {
+  $__local_var_1_0 = (($dictApplicative_0)['Apply0'])(null);
+  $__local_var_2_1 = (($__local_var_1_0)['Functor0'])(null);
+  $functorJoker1_3_2 = ["map" => (function() use ($__local_var_2_1) {
+  $__fn = function($f_3 = null, $v_4 = null) use ($__local_var_2_1, &$__fn) {
   $__num = \func_num_args();
-  $__res = $applyJoker1_1_0;
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ((($__local_var_2_1)['map'])($f_3))($v_4);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
+  $applyJoker1_3_2 = ["apply" => (function() use ($__local_var_1_0) {
+  $__fn = function($v_4 = null, $v1_5 = null) use ($__local_var_1_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ((($__local_var_1_0)['apply'])($v_4))($v1_5);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "Functor0" => function($_dollar__unused_4 = null) use ($functorJoker1_3_2) {
+  $__num = \func_num_args();
+  $__res = $functorJoker1_3_2;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = ["pure" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Functor_Joker_Joker']))(($dictApplicative_0)['pure']), "Apply0" => function($_dollar__unused_4 = null) use ($applyJoker1_3_2) {
+  $__num = \func_num_args();
+  $__res = $applyJoker1_3_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -440,15 +539,15 @@ $GLOBALS['Data_Functor_Joker_applicativeJoker'] = function($dictApplicative_0 = 
 // Data_Functor_Joker_monadJoker
 $GLOBALS['Data_Functor_Joker_monadJoker'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $applicativeJoker1_1_0 = ($GLOBALS['Data_Functor_Joker_applicativeJoker'])((($dictMonad_0)['Applicative0'])($GLOBALS['Prim_undefined']));
-  $bindJoker1_2_1 = ($GLOBALS['Data_Functor_Joker_bindJoker'])((($dictMonad_0)['Bind1'])($GLOBALS['Prim_undefined']));
-  $__res = ["Applicative0" => function($dollar__unused_3 = null) use ($applicativeJoker1_1_0) {
+  $applicativeJoker1_1_0 = ($GLOBALS['Data_Functor_Joker_applicativeJoker'])((($dictMonad_0)['Applicative0'])(null));
+  $bindJoker1_2_1 = ($GLOBALS['Data_Functor_Joker_bindJoker'])((($dictMonad_0)['Bind1'])(null));
+  $__res = ["Applicative0" => function($_dollar__unused_3 = null) use ($applicativeJoker1_1_0) {
   $__num = \func_num_args();
   $__res = $applicativeJoker1_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bind1" => function($dollar__unused_3 = null) use ($bindJoker1_2_1) {
+}, "Bind1" => function($_dollar__unused_3 = null) use ($bindJoker1_2_1) {
   $__num = \func_num_args();
   $__res = $bindJoker1_2_1;
   goto __end;;

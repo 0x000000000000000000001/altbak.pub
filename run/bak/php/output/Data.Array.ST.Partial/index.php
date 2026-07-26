@@ -132,7 +132,7 @@ $GLOBALS['Data_Array_ST_Partial_pokeImpl'] = $ffi_Data_Array_ST_Partial['pokeImp
 
 
 // Data_Array_ST_Partial_poke
-$GLOBALS['Data_Array_ST_Partial_poke'] = function($dollar__unused_0 = null) {
+$GLOBALS['Data_Array_ST_Partial_poke'] = function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = ($GLOBALS['Control_Monad_ST_Uncurried_runSTFn3'])($GLOBALS['Data_Array_ST_Partial_pokeImpl']);
   goto __end;;
@@ -141,7 +141,7 @@ $GLOBALS['Data_Array_ST_Partial_poke'] = function($dollar__unused_0 = null) {
 };
 
 // Data_Array_ST_Partial_peek
-$GLOBALS['Data_Array_ST_Partial_peek'] = function($dollar__unused_0 = null) {
+$GLOBALS['Data_Array_ST_Partial_peek'] = function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = ($GLOBALS['Control_Monad_ST_Uncurried_runSTFn2'])($GLOBALS['Data_Array_ST_Partial_peekImpl']);
   goto __end;;

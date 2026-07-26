@@ -104,7 +104,42 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Data_Char_Gen_toEnumWithDefaults
-$GLOBALS['Data_Char_Gen_toEnumWithDefaults'] = ($GLOBALS['Data_Enum_toEnumWithDefaults'])($GLOBALS['Data_Enum_boundedEnumChar']);
+$GLOBALS['Data_Char_Gen_toEnumWithDefaults'] = (function() use (&$__fn) {
+$bottom2_0_0 = ((($GLOBALS['Data_Enum_boundedEnumChar'])['Bounded0'])(null))['bottom'];
+return (function() use ($bottom2_0_0) {
+  $__fn = function($low_1 = null, $high_2 = null, $x_3 = null) use ($bottom2_0_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $v_4_1 = (($GLOBALS['Data_Enum_boundedEnumChar'])['toEnum'])($x_3);
+  $__t2 = null;;
+  if ((is_object($v_4_1) && (($v_4_1)->{'tag'} === "Just"))) {
+$__t2 = ($v_4_1)->{'value0'};
+goto end_branch_2;;
+};
+  if ((is_object($v_4_1) && (($v_4_1)->{'tag'} === "Nothing"))) {
+$__t3 = null;;
+if (($x_3 < (($GLOBALS['Data_Enum_boundedEnumChar'])['fromEnum'])($bottom2_0_0))) {
+$__t3 = $low_1;
+goto end_branch_3;;
+};
+$__t3 = $high_2;
+end_branch_3:;
+$__t2 = $__t3;
+goto end_branch_2;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t2 = null;
+  end_branch_2:;
+  $__res = $__t2;
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})();
+})();
 
 // Data_Char_Gen_foldable1NonEmpty
 $GLOBALS['Data_Char_Gen_foldable1NonEmpty'] = ($GLOBALS['Data_NonEmpty_foldable1NonEmpty'])($GLOBALS['Data_Foldable_foldableArray']);
@@ -112,7 +147,7 @@ $GLOBALS['Data_Char_Gen_foldable1NonEmpty'] = ($GLOBALS['Data_NonEmpty_foldable1
 // Data_Char_Gen_genUnicodeChar
 $GLOBALS['Data_Char_Gen_genUnicodeChar'] = function($dictMonadGen_0 = null) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadGen_0)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']))['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])((($GLOBALS['Data_Char_Gen_toEnumWithDefaults'])($GLOBALS['Data_Bounded_bottomChar']))($GLOBALS['Data_Bounded_topChar'])))(((($dictMonadGen_0)['chooseInt'])(0))(65536));
+  $__res = ((((((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])((($GLOBALS['Data_Char_Gen_toEnumWithDefaults'])(($GLOBALS['Data_Bounded_boundedChar'])['bottom']))(($GLOBALS['Data_Bounded_boundedChar'])['top'])))(((($dictMonadGen_0)['chooseInt'])(0))(65536));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -121,7 +156,7 @@ $GLOBALS['Data_Char_Gen_genUnicodeChar'] = function($dictMonadGen_0 = null) {
 // Data_Char_Gen_genDigitChar
 $GLOBALS['Data_Char_Gen_genDigitChar'] = function($dictMonadGen_0 = null) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadGen_0)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']))['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])((($GLOBALS['Data_Char_Gen_toEnumWithDefaults'])($GLOBALS['Data_Bounded_bottomChar']))($GLOBALS['Data_Bounded_topChar'])))(((($dictMonadGen_0)['chooseInt'])(48))(57));
+  $__res = ((((((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])((($GLOBALS['Data_Char_Gen_toEnumWithDefaults'])(($GLOBALS['Data_Bounded_boundedChar'])['bottom']))(($GLOBALS['Data_Bounded_boundedChar'])['top'])))(((($dictMonadGen_0)['chooseInt'])(48))(57));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -130,7 +165,7 @@ $GLOBALS['Data_Char_Gen_genDigitChar'] = function($dictMonadGen_0 = null) {
 // Data_Char_Gen_genAsciiChar'
 $GLOBALS['Data_Char_Gen_genAsciiChar__prime__'] = function($dictMonadGen_0 = null) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadGen_0)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']))['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])((($GLOBALS['Data_Char_Gen_toEnumWithDefaults'])($GLOBALS['Data_Bounded_bottomChar']))($GLOBALS['Data_Bounded_topChar'])))(((($dictMonadGen_0)['chooseInt'])(0))(127));
+  $__res = ((((((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])((($GLOBALS['Data_Char_Gen_toEnumWithDefaults'])(($GLOBALS['Data_Bounded_boundedChar'])['bottom']))(($GLOBALS['Data_Bounded_boundedChar'])['top'])))(((($dictMonadGen_0)['chooseInt'])(0))(127));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -139,7 +174,7 @@ $GLOBALS['Data_Char_Gen_genAsciiChar__prime__'] = function($dictMonadGen_0 = nul
 // Data_Char_Gen_genAsciiChar
 $GLOBALS['Data_Char_Gen_genAsciiChar'] = function($dictMonadGen_0 = null) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadGen_0)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']))['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])((($GLOBALS['Data_Char_Gen_toEnumWithDefaults'])($GLOBALS['Data_Bounded_bottomChar']))($GLOBALS['Data_Bounded_topChar'])))(((($dictMonadGen_0)['chooseInt'])(32))(127));
+  $__res = ((((((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])((($GLOBALS['Data_Char_Gen_toEnumWithDefaults'])(($GLOBALS['Data_Bounded_boundedChar'])['bottom']))(($GLOBALS['Data_Bounded_boundedChar'])['top'])))(((($dictMonadGen_0)['chooseInt'])(32))(127));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -148,7 +183,7 @@ $GLOBALS['Data_Char_Gen_genAsciiChar'] = function($dictMonadGen_0 = null) {
 // Data_Char_Gen_genAlphaUppercase
 $GLOBALS['Data_Char_Gen_genAlphaUppercase'] = function($dictMonadGen_0 = null) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadGen_0)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']))['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])((($GLOBALS['Data_Char_Gen_toEnumWithDefaults'])($GLOBALS['Data_Bounded_bottomChar']))($GLOBALS['Data_Bounded_topChar'])))(((($dictMonadGen_0)['chooseInt'])(65))(90));
+  $__res = ((((((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])((($GLOBALS['Data_Char_Gen_toEnumWithDefaults'])(($GLOBALS['Data_Bounded_boundedChar'])['bottom']))(($GLOBALS['Data_Bounded_boundedChar'])['top'])))(((($dictMonadGen_0)['chooseInt'])(65))(90));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -157,7 +192,7 @@ $GLOBALS['Data_Char_Gen_genAlphaUppercase'] = function($dictMonadGen_0 = null) {
 // Data_Char_Gen_genAlphaLowercase
 $GLOBALS['Data_Char_Gen_genAlphaLowercase'] = function($dictMonadGen_0 = null) {
   $__num = \func_num_args();
-  $__res = ((((((((((($dictMonadGen_0)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']))['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])((($GLOBALS['Data_Char_Gen_toEnumWithDefaults'])($GLOBALS['Data_Bounded_bottomChar']))($GLOBALS['Data_Bounded_topChar'])))(((($dictMonadGen_0)['chooseInt'])(97))(122));
+  $__res = ((((((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])((($GLOBALS['Data_Char_Gen_toEnumWithDefaults'])(($GLOBALS['Data_Bounded_boundedChar'])['bottom']))(($GLOBALS['Data_Bounded_boundedChar'])['top'])))(((($dictMonadGen_0)['chooseInt'])(97))(122));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

@@ -142,7 +142,7 @@ $GLOBALS['Control_Bind_bindProxy'] = ["bind" => (function() {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Apply0" => function($dollar__unused_0 = null) {
+})(), "Apply0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Apply_applyProxy'];
   goto __end;;
@@ -163,7 +163,7 @@ $GLOBALS['Control_Bind_bindFn'] = ["bind" => (function() {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "Apply0" => function($dollar__unused_0 = null) {
+})(), "Apply0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Apply_applyFn'];
   goto __end;;
@@ -172,7 +172,7 @@ $GLOBALS['Control_Bind_bindFn'] = ["bind" => (function() {
 }];
 
 // Control_Bind_bindArray
-$GLOBALS['Control_Bind_bindArray'] = ["bind" => $GLOBALS['Control_Bind_arrayBind'], "Apply0" => function($dollar__unused_0 = null) {
+$GLOBALS['Control_Bind_bindArray'] = ["bind" => $GLOBALS['Control_Bind_arrayBind'], "Apply0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Apply_applyArray'];
   goto __end;;
@@ -259,10 +259,10 @@ $GLOBALS['Control_Bind_ifM'] = (function() {
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((($dictBind_0)['bind'])($cond_1))(function($cond__prime___4 = null) use ($f_3, $t_2) {
+  $__res = ((($dictBind_0)['bind'])($cond_1))(function($cond_prime_4 = null) use ($f_3, $t_2) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ($cond__prime___4) {
+  if ($cond_prime_4) {
 $__t0 = $t_2;
 goto end_branch_0;;
 };

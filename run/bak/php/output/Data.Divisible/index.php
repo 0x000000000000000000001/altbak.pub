@@ -111,7 +111,7 @@ $GLOBALS['Data_Divisible_divisiblePredicate'] = ["conquer" => function($v_0 = nu
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Divide0" => function($dollar__unused_0 = null) {
+}, "Divide0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Divide_dividePredicate'];
   goto __end;;
@@ -122,7 +122,7 @@ $GLOBALS['Data_Divisible_divisiblePredicate'] = ["conquer" => function($v_0 = nu
 // Data_Divisible_divisibleOp
 $GLOBALS['Data_Divisible_divisibleOp'] = function($dictMonoid_0 = null) {
   $__num = \func_num_args();
-  $divideOp_1_0 = ($GLOBALS['Data_Divide_divideOp'])((($dictMonoid_0)['Semigroup0'])($GLOBALS['Prim_undefined']));
+  $divideOp_1_0 = ($GLOBALS['Data_Divide_divideOp'])((($dictMonoid_0)['Semigroup0'])(null));
   $__local_var_2_1 = ($dictMonoid_0)['mempty'];
   $__res = ["conquer" => function($v_3 = null) use ($__local_var_2_1) {
   $__num = \func_num_args();
@@ -130,7 +130,7 @@ $GLOBALS['Data_Divisible_divisibleOp'] = function($dictMonoid_0 = null) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Divide0" => function($dollar__unused_2 = null) use ($divideOp_1_0) {
+}, "Divide0" => function($_dollar__unused_2 = null) use ($divideOp_1_0) {
   $__num = \func_num_args();
   $__res = $divideOp_1_0;
   goto __end;;
@@ -155,7 +155,7 @@ $GLOBALS['Data_Divisible_divisibleEquivalence'] = ["conquer" => (function() {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Divide0" => function($dollar__unused_0 = null) {
+})(), "Divide0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Divide_divideEquivalence'];
   goto __end;;
@@ -176,7 +176,7 @@ $GLOBALS['Data_Divisible_divisibleComparison'] = ["conquer" => (function() {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Divide0" => function($dollar__unused_0 = null) {
+})(), "Divide0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Divide_divideComparison'];
   goto __end;;

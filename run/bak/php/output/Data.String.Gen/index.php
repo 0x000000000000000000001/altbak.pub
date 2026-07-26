@@ -145,7 +145,7 @@ $GLOBALS['Data_String_Gen_genString'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $Bind1_2_0 = (((($dictMonadGen_1)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']);
+  $Bind1_2_0 = (((($dictMonadGen_1)['Monad0'])(null))['Bind1'])(null);
   $unfoldable1_3_1 = ((($GLOBALS['Control_Monad_Gen_unfoldable'])($dictMonadRec_0))($dictMonadGen_1))($GLOBALS['Data_Unfoldable_unfoldableArray']);
   $__res = function($genChar_4 = null) use ($Bind1_2_0, $dictMonadGen_1, $unfoldable1_3_1) {
   $__num = \func_num_args();
@@ -159,7 +159,7 @@ $GLOBALS['Data_String_Gen_genString'] = (function() {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(((((((($Bind1_2_0)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_String_CodeUnits_fromCharArray']))(($unfoldable1_3_1)($genChar_4)));
+}))(((((((($Bind1_2_0)['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_String_CodeUnits_fromCharArray']))(($unfoldable1_3_1)($genChar_4)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

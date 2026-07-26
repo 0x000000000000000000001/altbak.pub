@@ -104,12 +104,12 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 // Control_Alternative_guard
 $GLOBALS['Control_Alternative_guard'] = function($dictAlternative_0 = null) {
   $__num = \func_num_args();
-  $empty_1_0 = ((($dictAlternative_0)['Plus1'])($GLOBALS['Prim_undefined']))['empty'];
+  $empty_1_0 = ((($dictAlternative_0)['Plus1'])(null))['empty'];
   $__res = function($v_2 = null) use ($dictAlternative_0, $empty_1_0) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ($v_2) {
-$__t1 = (((($dictAlternative_0)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'])($GLOBALS['Data_Unit_unit']);
+$__t1 = (((($dictAlternative_0)['Applicative0'])(null))['pure'])($GLOBALS['Data_Unit_unit']);
 goto end_branch_1;;
 };
   $__t1 = $empty_1_0;
@@ -125,13 +125,13 @@ goto end_branch_1;;
 };
 
 // Control_Alternative_alternativeArray
-$GLOBALS['Control_Alternative_alternativeArray'] = ["Applicative0" => function($dollar__unused_0 = null) {
+$GLOBALS['Control_Alternative_alternativeArray'] = ["Applicative0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Applicative_applicativeArray'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Plus1" => function($dollar__unused_0 = null) {
+}, "Plus1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Plus_plusArray'];
   goto __end;;

@@ -130,10 +130,10 @@ $GLOBALS['Data_TraversableWithIndex_traverseWithIndexDefault'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $sequence1_2_0 = (((($dictTraversableWithIndex_0)['Traversable2'])($GLOBALS['Prim_undefined']))['sequence'])($dictApplicative_1);
+  $sequence1_2_0 = (((($dictTraversableWithIndex_0)['Traversable2'])(null))['sequence'])($dictApplicative_1);
   $__res = function($f_3 = null) use ($dictTraversableWithIndex_0, $sequence1_2_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($sequence1_2_0))((((($dictTraversableWithIndex_0)['FunctorWithIndex0'])($GLOBALS['Prim_undefined']))['mapWithIndex'])($f_3));
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($sequence1_2_0))((((($dictTraversableWithIndex_0)['FunctorWithIndex0'])(null))['mapWithIndex'])($f_3));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -189,25 +189,25 @@ $GLOBALS['Data_TraversableWithIndex_traversableWithIndexTuple'] = ["traverseWith
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((((($dictApplicative_0)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])(($GLOBALS['Data_Tuple_Tuple'])(($v_2)->{'value0'})))((($f_1)($GLOBALS['Data_Unit_unit']))(($v_2)->{'value1'}));
+  $__res = ((((((($dictApplicative_0)['Apply0'])(null))['Functor0'])(null))['map'])(($GLOBALS['Data_Tuple_Tuple'])(($v_2)->{'value0'})))((($f_1)($GLOBALS['Data_Unit_unit']))(($v_2)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "FunctorWithIndex0" => function($dollar__unused_0 = null) {
+})(), "FunctorWithIndex0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_FunctorWithIndex_functorWithIndexTuple'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "FoldableWithIndex1" => function($dollar__unused_0 = null) {
+}, "FoldableWithIndex1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_FoldableWithIndex_foldableWithIndexTuple'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Traversable2" => function($dollar__unused_0 = null) {
+}, "Traversable2" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Traversable_traversableTuple'];
   goto __end;;
@@ -218,26 +218,26 @@ $GLOBALS['Data_TraversableWithIndex_traversableWithIndexTuple'] = ["traverseWith
 // Data_TraversableWithIndex_traversableWithIndexProduct
 $GLOBALS['Data_TraversableWithIndex_traversableWithIndexProduct'] = function($dictTraversableWithIndex_0 = null) {
   $__num = \func_num_args();
-  $functorWithIndexProduct_1_0 = ($GLOBALS['Data_FunctorWithIndex_functorWithIndexProduct'])((($dictTraversableWithIndex_0)['FunctorWithIndex0'])($GLOBALS['Prim_undefined']));
-  $foldableWithIndexProduct_2_1 = ($GLOBALS['Data_FoldableWithIndex_foldableWithIndexProduct'])((($dictTraversableWithIndex_0)['FoldableWithIndex1'])($GLOBALS['Prim_undefined']));
-  $traversableProduct_3_2 = ($GLOBALS['Data_Traversable_traversableProduct'])((($dictTraversableWithIndex_0)['Traversable2'])($GLOBALS['Prim_undefined']));
+  $functorWithIndexProduct_1_0 = ($GLOBALS['Data_FunctorWithIndex_functorWithIndexProduct'])((($dictTraversableWithIndex_0)['FunctorWithIndex0'])(null));
+  $foldableWithIndexProduct_2_1 = ($GLOBALS['Data_FoldableWithIndex_foldableWithIndexProduct'])((($dictTraversableWithIndex_0)['FoldableWithIndex1'])(null));
+  $traversableProduct_3_2 = ($GLOBALS['Data_Traversable_traversableProduct'])((($dictTraversableWithIndex_0)['Traversable2'])(null));
   $__res = function($dictTraversableWithIndex1_4 = null) use ($dictTraversableWithIndex_0, $foldableWithIndexProduct_2_1, $functorWithIndexProduct_1_0, $traversableProduct_3_2) {
   $__num = \func_num_args();
-  $functorWithIndexProduct1_5_3 = ($functorWithIndexProduct_1_0)((($dictTraversableWithIndex1_4)['FunctorWithIndex0'])($GLOBALS['Prim_undefined']));
-  $foldableWithIndexProduct1_6_4 = ($foldableWithIndexProduct_2_1)((($dictTraversableWithIndex1_4)['FoldableWithIndex1'])($GLOBALS['Prim_undefined']));
-  $traversableProduct1_7_5 = ($traversableProduct_3_2)((($dictTraversableWithIndex1_4)['Traversable2'])($GLOBALS['Prim_undefined']));
+  $functorWithIndexProduct1_5_3 = ($functorWithIndexProduct_1_0)((($dictTraversableWithIndex1_4)['FunctorWithIndex0'])(null));
+  $foldableWithIndexProduct1_6_4 = ($foldableWithIndexProduct_2_1)((($dictTraversableWithIndex1_4)['FoldableWithIndex1'])(null));
+  $traversableProduct1_7_5 = ($traversableProduct_3_2)((($dictTraversableWithIndex1_4)['Traversable2'])(null));
   $__res = ["traverseWithIndex" => function($dictApplicative_8 = null) use ($dictTraversableWithIndex1_4, $dictTraversableWithIndex_0) {
   $__num = \func_num_args();
-  $lift2_9_6 = ($GLOBALS['Control_Apply_lift2'])((($dictApplicative_8)['Apply0'])($GLOBALS['Prim_undefined']));
+  $__local_var_9_6 = (($dictApplicative_8)['Apply0'])(null);
   $traverseWithIndex3_10_7 = (($dictTraversableWithIndex_0)['traverseWithIndex'])($dictApplicative_8);
   $traverseWithIndex4_11_8 = (($dictTraversableWithIndex1_4)['traverseWithIndex'])($dictApplicative_8);
-  $__res = (function() use ($lift2_9_6, $traverseWithIndex3_10_7, $traverseWithIndex4_11_8) {
-  $__fn = function($f_12 = null, $v_13 = null) use ($lift2_9_6, $traverseWithIndex3_10_7, $traverseWithIndex4_11_8, &$__fn) {
+  $__res = (function() use ($__local_var_9_6, $traverseWithIndex3_10_7, $traverseWithIndex4_11_8) {
+  $__fn = function($f_12 = null, $v_13 = null) use ($__local_var_9_6, $traverseWithIndex3_10_7, $traverseWithIndex4_11_8, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($lift2_9_6)($GLOBALS['Data_Functor_Product_product']))((($traverseWithIndex3_10_7)((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_12))($GLOBALS['Data_Either_Left'])))(($v_13)->{'value0'})))((($traverseWithIndex4_11_8)((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_12))($GLOBALS['Data_Either_Right'])))(($v_13)->{'value1'}));
+  $__res = ((($__local_var_9_6)['apply'])(((((($__local_var_9_6)['Functor0'])(null))['map'])($GLOBALS['Data_Functor_Product_product']))((($traverseWithIndex3_10_7)(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_12))($GLOBALS['Data_Either_Left'])))(($v_13)->{'value0'}))))((($traverseWithIndex4_11_8)(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_12))($GLOBALS['Data_Either_Right'])))(($v_13)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -247,19 +247,19 @@ $GLOBALS['Data_TraversableWithIndex_traversableWithIndexProduct'] = function($di
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "FunctorWithIndex0" => function($dollar__unused_8 = null) use ($functorWithIndexProduct1_5_3) {
+}, "FunctorWithIndex0" => function($_dollar__unused_8 = null) use ($functorWithIndexProduct1_5_3) {
   $__num = \func_num_args();
   $__res = $functorWithIndexProduct1_5_3;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "FoldableWithIndex1" => function($dollar__unused_8 = null) use ($foldableWithIndexProduct1_6_4) {
+}, "FoldableWithIndex1" => function($_dollar__unused_8 = null) use ($foldableWithIndexProduct1_6_4) {
   $__num = \func_num_args();
   $__res = $foldableWithIndexProduct1_6_4;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Traversable2" => function($dollar__unused_8 = null) use ($traversableProduct1_7_5) {
+}, "Traversable2" => function($_dollar__unused_8 = null) use ($traversableProduct1_7_5) {
   $__num = \func_num_args();
   $__res = $traversableProduct1_7_5;
   goto __end;;
@@ -276,31 +276,32 @@ $GLOBALS['Data_TraversableWithIndex_traversableWithIndexProduct'] = function($di
 };
 
 // Data_TraversableWithIndex_traversableWithIndexMultiplicative
-$GLOBALS['Data_TraversableWithIndex_traversableWithIndexMultiplicative'] = ["traverseWithIndex" => (function() {
-  $__fn = function($dictApplicative_0 = null, $f_1 = null) use (&$__fn) {
+$GLOBALS['Data_TraversableWithIndex_traversableWithIndexMultiplicative'] = ["traverseWithIndex" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($GLOBALS['Data_Traversable_traversableMultiplicative'])['traverse'])($dictApplicative_0))(($f_1)($GLOBALS['Data_Unit_unit']));
+  $traverse8_1_0 = (($GLOBALS['Data_Traversable_traversableMultiplicative'])['traverse'])($dictApplicative_0);
+  $__res = function($f_2 = null) use ($traverse8_1_0) {
+  $__num = \func_num_args();
+  $__res = ($traverse8_1_0)(($f_2)($GLOBALS['Data_Unit_unit']));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "FunctorWithIndex0" => function($dollar__unused_0 = null) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "FunctorWithIndex0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_FunctorWithIndex_functorWithIndexMultiplicative'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "FoldableWithIndex1" => function($dollar__unused_0 = null) {
+}, "FoldableWithIndex1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_FoldableWithIndex_foldableWithIndexMultiplicative'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Traversable2" => function($dollar__unused_0 = null) {
+}, "Traversable2" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Traversable_traversableMultiplicative'];
   goto __end;;
@@ -309,31 +310,32 @@ $GLOBALS['Data_TraversableWithIndex_traversableWithIndexMultiplicative'] = ["tra
 }];
 
 // Data_TraversableWithIndex_traversableWithIndexMaybe
-$GLOBALS['Data_TraversableWithIndex_traversableWithIndexMaybe'] = ["traverseWithIndex" => (function() {
-  $__fn = function($dictApplicative_0 = null, $f_1 = null) use (&$__fn) {
+$GLOBALS['Data_TraversableWithIndex_traversableWithIndexMaybe'] = ["traverseWithIndex" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($GLOBALS['Data_Traversable_traversableMaybe'])['traverse'])($dictApplicative_0))(($f_1)($GLOBALS['Data_Unit_unit']));
+  $traverse8_1_0 = (($GLOBALS['Data_Traversable_traversableMaybe'])['traverse'])($dictApplicative_0);
+  $__res = function($f_2 = null) use ($traverse8_1_0) {
+  $__num = \func_num_args();
+  $__res = ($traverse8_1_0)(($f_2)($GLOBALS['Data_Unit_unit']));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "FunctorWithIndex0" => function($dollar__unused_0 = null) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "FunctorWithIndex0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_FunctorWithIndex_functorWithIndexMaybe'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "FoldableWithIndex1" => function($dollar__unused_0 = null) {
+}, "FoldableWithIndex1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_FoldableWithIndex_foldableWithIndexMaybe'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Traversable2" => function($dollar__unused_0 = null) {
+}, "Traversable2" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Traversable_traversableMaybe'];
   goto __end;;
@@ -342,31 +344,32 @@ $GLOBALS['Data_TraversableWithIndex_traversableWithIndexMaybe'] = ["traverseWith
 }];
 
 // Data_TraversableWithIndex_traversableWithIndexLast
-$GLOBALS['Data_TraversableWithIndex_traversableWithIndexLast'] = ["traverseWithIndex" => (function() {
-  $__fn = function($dictApplicative_0 = null, $f_1 = null) use (&$__fn) {
+$GLOBALS['Data_TraversableWithIndex_traversableWithIndexLast'] = ["traverseWithIndex" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($GLOBALS['Data_Traversable_traversableLast'])['traverse'])($dictApplicative_0))(($f_1)($GLOBALS['Data_Unit_unit']));
+  $traverse8_1_0 = (($GLOBALS['Data_Traversable_traversableLast'])['traverse'])($dictApplicative_0);
+  $__res = function($f_2 = null) use ($traverse8_1_0) {
+  $__num = \func_num_args();
+  $__res = ($traverse8_1_0)(($f_2)($GLOBALS['Data_Unit_unit']));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "FunctorWithIndex0" => function($dollar__unused_0 = null) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "FunctorWithIndex0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_FunctorWithIndex_functorWithIndexLast'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "FoldableWithIndex1" => function($dollar__unused_0 = null) {
+}, "FoldableWithIndex1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_FoldableWithIndex_foldableWithIndexLast'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Traversable2" => function($dollar__unused_0 = null) {
+}, "Traversable2" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Traversable_traversableLast'];
   goto __end;;
@@ -381,25 +384,25 @@ $GLOBALS['Data_TraversableWithIndex_traversableWithIndexIdentity'] = ["traverseW
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((((($dictApplicative_0)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_Identity_Identity']))((($f_1)($GLOBALS['Data_Unit_unit']))($v_2));
+  $__res = ((((((($dictApplicative_0)['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Identity_Identity']))((($f_1)($GLOBALS['Data_Unit_unit']))($v_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "FunctorWithIndex0" => function($dollar__unused_0 = null) {
+})(), "FunctorWithIndex0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_FunctorWithIndex_functorWithIndexIdentity'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "FoldableWithIndex1" => function($dollar__unused_0 = null) {
+}, "FoldableWithIndex1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_FoldableWithIndex_foldableWithIndexIdentity'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Traversable2" => function($dollar__unused_0 = null) {
+}, "Traversable2" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Traversable_traversableIdentity'];
   goto __end;;
@@ -408,31 +411,32 @@ $GLOBALS['Data_TraversableWithIndex_traversableWithIndexIdentity'] = ["traverseW
 }];
 
 // Data_TraversableWithIndex_traversableWithIndexFirst
-$GLOBALS['Data_TraversableWithIndex_traversableWithIndexFirst'] = ["traverseWithIndex" => (function() {
-  $__fn = function($dictApplicative_0 = null, $f_1 = null) use (&$__fn) {
+$GLOBALS['Data_TraversableWithIndex_traversableWithIndexFirst'] = ["traverseWithIndex" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($GLOBALS['Data_Traversable_traversableFirst'])['traverse'])($dictApplicative_0))(($f_1)($GLOBALS['Data_Unit_unit']));
+  $traverse8_1_0 = (($GLOBALS['Data_Traversable_traversableFirst'])['traverse'])($dictApplicative_0);
+  $__res = function($f_2 = null) use ($traverse8_1_0) {
+  $__num = \func_num_args();
+  $__res = ($traverse8_1_0)(($f_2)($GLOBALS['Data_Unit_unit']));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "FunctorWithIndex0" => function($dollar__unused_0 = null) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "FunctorWithIndex0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_FunctorWithIndex_functorWithIndexFirst'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "FoldableWithIndex1" => function($dollar__unused_0 = null) {
+}, "FoldableWithIndex1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_FoldableWithIndex_foldableWithIndexFirst'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Traversable2" => function($dollar__unused_0 = null) {
+}, "Traversable2" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Traversable_traversableFirst'];
   goto __end;;
@@ -453,7 +457,7 @@ $__t0 = (($dictApplicative_0)['pure'])(new Phpurs_Data1("Left", ($v1_2)->{'value
 goto end_branch_0;;
 };
   if ((is_object($v1_2) && (($v1_2)->{'tag'} === "Right"))) {
-$__t0 = ((((((($dictApplicative_0)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_Either_Right']))((($v_1)($GLOBALS['Data_Unit_unit']))(($v1_2)->{'value0'}));
+$__t0 = ((((((($dictApplicative_0)['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Either_Right']))((($v_1)($GLOBALS['Data_Unit_unit']))(($v1_2)->{'value0'}));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -465,19 +469,19 @@ goto end_branch_0;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "FunctorWithIndex0" => function($dollar__unused_0 = null) {
+})(), "FunctorWithIndex0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_FunctorWithIndex_functorWithIndexEither'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "FoldableWithIndex1" => function($dollar__unused_0 = null) {
+}, "FoldableWithIndex1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_FoldableWithIndex_foldableWithIndexEither'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Traversable2" => function($dollar__unused_0 = null) {
+}, "Traversable2" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Traversable_traversableEither'];
   goto __end;;
@@ -486,31 +490,32 @@ goto end_branch_0;;
 }];
 
 // Data_TraversableWithIndex_traversableWithIndexDual
-$GLOBALS['Data_TraversableWithIndex_traversableWithIndexDual'] = ["traverseWithIndex" => (function() {
-  $__fn = function($dictApplicative_0 = null, $f_1 = null) use (&$__fn) {
+$GLOBALS['Data_TraversableWithIndex_traversableWithIndexDual'] = ["traverseWithIndex" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($GLOBALS['Data_Traversable_traversableDual'])['traverse'])($dictApplicative_0))(($f_1)($GLOBALS['Data_Unit_unit']));
+  $traverse8_1_0 = (($GLOBALS['Data_Traversable_traversableDual'])['traverse'])($dictApplicative_0);
+  $__res = function($f_2 = null) use ($traverse8_1_0) {
+  $__num = \func_num_args();
+  $__res = ($traverse8_1_0)(($f_2)($GLOBALS['Data_Unit_unit']));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "FunctorWithIndex0" => function($dollar__unused_0 = null) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "FunctorWithIndex0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_FunctorWithIndex_functorWithIndexDual'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "FoldableWithIndex1" => function($dollar__unused_0 = null) {
+}, "FoldableWithIndex1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_FoldableWithIndex_foldableWithIndexDual'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Traversable2" => function($dollar__unused_0 = null) {
+}, "Traversable2" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Traversable_traversableDual'];
   goto __end;;
@@ -519,31 +524,32 @@ $GLOBALS['Data_TraversableWithIndex_traversableWithIndexDual'] = ["traverseWithI
 }];
 
 // Data_TraversableWithIndex_traversableWithIndexDisj
-$GLOBALS['Data_TraversableWithIndex_traversableWithIndexDisj'] = ["traverseWithIndex" => (function() {
-  $__fn = function($dictApplicative_0 = null, $f_1 = null) use (&$__fn) {
+$GLOBALS['Data_TraversableWithIndex_traversableWithIndexDisj'] = ["traverseWithIndex" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($GLOBALS['Data_Traversable_traversableDisj'])['traverse'])($dictApplicative_0))(($f_1)($GLOBALS['Data_Unit_unit']));
+  $traverse8_1_0 = (($GLOBALS['Data_Traversable_traversableDisj'])['traverse'])($dictApplicative_0);
+  $__res = function($f_2 = null) use ($traverse8_1_0) {
+  $__num = \func_num_args();
+  $__res = ($traverse8_1_0)(($f_2)($GLOBALS['Data_Unit_unit']));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "FunctorWithIndex0" => function($dollar__unused_0 = null) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "FunctorWithIndex0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_FunctorWithIndex_functorWithIndexDisj'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "FoldableWithIndex1" => function($dollar__unused_0 = null) {
+}, "FoldableWithIndex1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_FoldableWithIndex_foldableWithIndexDisj'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Traversable2" => function($dollar__unused_0 = null) {
+}, "Traversable2" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Traversable_traversableDisj'];
   goto __end;;
@@ -554,23 +560,23 @@ $GLOBALS['Data_TraversableWithIndex_traversableWithIndexDisj'] = ["traverseWithI
 // Data_TraversableWithIndex_traversableWithIndexCoproduct
 $GLOBALS['Data_TraversableWithIndex_traversableWithIndexCoproduct'] = function($dictTraversableWithIndex_0 = null) {
   $__num = \func_num_args();
-  $functorWithIndexCoproduct_1_0 = ($GLOBALS['Data_FunctorWithIndex_functorWithIndexCoproduct'])((($dictTraversableWithIndex_0)['FunctorWithIndex0'])($GLOBALS['Prim_undefined']));
-  $foldableWithIndexCoproduct_2_1 = ($GLOBALS['Data_FoldableWithIndex_foldableWithIndexCoproduct'])((($dictTraversableWithIndex_0)['FoldableWithIndex1'])($GLOBALS['Prim_undefined']));
-  $traversableCoproduct_3_2 = ($GLOBALS['Data_Traversable_traversableCoproduct'])((($dictTraversableWithIndex_0)['Traversable2'])($GLOBALS['Prim_undefined']));
+  $functorWithIndexCoproduct_1_0 = ($GLOBALS['Data_FunctorWithIndex_functorWithIndexCoproduct'])((($dictTraversableWithIndex_0)['FunctorWithIndex0'])(null));
+  $foldableWithIndexCoproduct_2_1 = ($GLOBALS['Data_FoldableWithIndex_foldableWithIndexCoproduct'])((($dictTraversableWithIndex_0)['FoldableWithIndex1'])(null));
+  $traversableCoproduct_3_2 = ($GLOBALS['Data_Traversable_traversableCoproduct'])((($dictTraversableWithIndex_0)['Traversable2'])(null));
   $__res = function($dictTraversableWithIndex1_4 = null) use ($dictTraversableWithIndex_0, $foldableWithIndexCoproduct_2_1, $functorWithIndexCoproduct_1_0, $traversableCoproduct_3_2) {
   $__num = \func_num_args();
-  $functorWithIndexCoproduct1_5_3 = ($functorWithIndexCoproduct_1_0)((($dictTraversableWithIndex1_4)['FunctorWithIndex0'])($GLOBALS['Prim_undefined']));
-  $foldableWithIndexCoproduct1_6_4 = ($foldableWithIndexCoproduct_2_1)((($dictTraversableWithIndex1_4)['FoldableWithIndex1'])($GLOBALS['Prim_undefined']));
-  $traversableCoproduct1_7_5 = ($traversableCoproduct_3_2)((($dictTraversableWithIndex1_4)['Traversable2'])($GLOBALS['Prim_undefined']));
+  $functorWithIndexCoproduct1_5_3 = ($functorWithIndexCoproduct_1_0)((($dictTraversableWithIndex1_4)['FunctorWithIndex0'])(null));
+  $foldableWithIndexCoproduct1_6_4 = ($foldableWithIndexCoproduct_2_1)((($dictTraversableWithIndex1_4)['FoldableWithIndex1'])(null));
+  $traversableCoproduct1_7_5 = ($traversableCoproduct_3_2)((($dictTraversableWithIndex1_4)['Traversable2'])(null));
   $__res = ["traverseWithIndex" => function($dictApplicative_8 = null) use ($dictTraversableWithIndex1_4, $dictTraversableWithIndex_0) {
   $__num = \func_num_args();
-  $__local_var_9_6 = (((($dictApplicative_8)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']);
+  $__local_var_9_6 = (((($dictApplicative_8)['Apply0'])(null))['Functor0'])(null);
   $traverseWithIndex3_10_7 = (($dictTraversableWithIndex_0)['traverseWithIndex'])($dictApplicative_8);
   $traverseWithIndex4_11_8 = (($dictTraversableWithIndex1_4)['traverseWithIndex'])($dictApplicative_8);
   $__res = function($f_12 = null) use ($__local_var_9_6, $traverseWithIndex3_10_7, $traverseWithIndex4_11_8) {
   $__num = \func_num_args();
-  $__local_var_13_9 = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($__local_var_9_6)['map'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))($GLOBALS['Data_Either_Left']))))(($traverseWithIndex3_10_7)((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_12))($GLOBALS['Data_Either_Left'])));
-  $__local_var_14_10 = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($__local_var_9_6)['map'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))($GLOBALS['Data_Either_Right']))))(($traverseWithIndex4_11_8)((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_12))($GLOBALS['Data_Either_Right'])));
+  $__local_var_13_9 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($__local_var_9_6)['map'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))($GLOBALS['Data_Either_Left']))))(($traverseWithIndex3_10_7)(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_12))($GLOBALS['Data_Either_Left'])));
+  $__local_var_14_10 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($__local_var_9_6)['map'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))($GLOBALS['Data_Either_Right']))))(($traverseWithIndex4_11_8)(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_12))($GLOBALS['Data_Either_Right'])));
   $__res = function($v2_15 = null) use ($__local_var_13_9, $__local_var_14_10) {
   $__num = \func_num_args();
   $__t11 = null;;
@@ -597,19 +603,19 @@ goto end_branch_11;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "FunctorWithIndex0" => function($dollar__unused_8 = null) use ($functorWithIndexCoproduct1_5_3) {
+}, "FunctorWithIndex0" => function($_dollar__unused_8 = null) use ($functorWithIndexCoproduct1_5_3) {
   $__num = \func_num_args();
   $__res = $functorWithIndexCoproduct1_5_3;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "FoldableWithIndex1" => function($dollar__unused_8 = null) use ($foldableWithIndexCoproduct1_6_4) {
+}, "FoldableWithIndex1" => function($_dollar__unused_8 = null) use ($foldableWithIndexCoproduct1_6_4) {
   $__num = \func_num_args();
   $__res = $foldableWithIndexCoproduct1_6_4;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Traversable2" => function($dollar__unused_8 = null) use ($traversableCoproduct1_7_5) {
+}, "Traversable2" => function($_dollar__unused_8 = null) use ($traversableCoproduct1_7_5) {
   $__num = \func_num_args();
   $__res = $traversableCoproduct1_7_5;
   goto __end;;
@@ -638,19 +644,19 @@ $GLOBALS['Data_TraversableWithIndex_traversableWithIndexConst'] = ["traverseWith
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "FunctorWithIndex0" => function($dollar__unused_0 = null) {
+})(), "FunctorWithIndex0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_FunctorWithIndex_functorWithIndexConst'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "FoldableWithIndex1" => function($dollar__unused_0 = null) {
+}, "FoldableWithIndex1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_FoldableWithIndex_foldableWithIndexConst'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Traversable2" => function($dollar__unused_0 = null) {
+}, "Traversable2" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Traversable_traversableConst'];
   goto __end;;
@@ -659,31 +665,32 @@ $GLOBALS['Data_TraversableWithIndex_traversableWithIndexConst'] = ["traverseWith
 }];
 
 // Data_TraversableWithIndex_traversableWithIndexConj
-$GLOBALS['Data_TraversableWithIndex_traversableWithIndexConj'] = ["traverseWithIndex" => (function() {
-  $__fn = function($dictApplicative_0 = null, $f_1 = null) use (&$__fn) {
+$GLOBALS['Data_TraversableWithIndex_traversableWithIndexConj'] = ["traverseWithIndex" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($GLOBALS['Data_Traversable_traversableConj'])['traverse'])($dictApplicative_0))(($f_1)($GLOBALS['Data_Unit_unit']));
+  $traverse8_1_0 = (($GLOBALS['Data_Traversable_traversableConj'])['traverse'])($dictApplicative_0);
+  $__res = function($f_2 = null) use ($traverse8_1_0) {
+  $__num = \func_num_args();
+  $__res = ($traverse8_1_0)(($f_2)($GLOBALS['Data_Unit_unit']));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "FunctorWithIndex0" => function($dollar__unused_0 = null) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "FunctorWithIndex0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_FunctorWithIndex_functorWithIndexConj'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "FoldableWithIndex1" => function($dollar__unused_0 = null) {
+}, "FoldableWithIndex1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_FoldableWithIndex_foldableWithIndexConj'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Traversable2" => function($dollar__unused_0 = null) {
+}, "Traversable2" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Traversable_traversableConj'];
   goto __end;;
@@ -694,14 +701,14 @@ $GLOBALS['Data_TraversableWithIndex_traversableWithIndexConj'] = ["traverseWithI
 // Data_TraversableWithIndex_traversableWithIndexCompose
 $GLOBALS['Data_TraversableWithIndex_traversableWithIndexCompose'] = function($dictTraversableWithIndex_0 = null) {
   $__num = \func_num_args();
-  $functorWithIndexCompose_1_0 = ($GLOBALS['Data_FunctorWithIndex_functorWithIndexCompose'])((($dictTraversableWithIndex_0)['FunctorWithIndex0'])($GLOBALS['Prim_undefined']));
-  $foldableWithIndexCompose_2_1 = ($GLOBALS['Data_FoldableWithIndex_foldableWithIndexCompose'])((($dictTraversableWithIndex_0)['FoldableWithIndex1'])($GLOBALS['Prim_undefined']));
-  $traversableCompose_3_2 = ($GLOBALS['Data_Traversable_traversableCompose'])((($dictTraversableWithIndex_0)['Traversable2'])($GLOBALS['Prim_undefined']));
+  $functorWithIndexCompose_1_0 = ($GLOBALS['Data_FunctorWithIndex_functorWithIndexCompose'])((($dictTraversableWithIndex_0)['FunctorWithIndex0'])(null));
+  $foldableWithIndexCompose_2_1 = ($GLOBALS['Data_FoldableWithIndex_foldableWithIndexCompose'])((($dictTraversableWithIndex_0)['FoldableWithIndex1'])(null));
+  $traversableCompose_3_2 = ($GLOBALS['Data_Traversable_traversableCompose'])((($dictTraversableWithIndex_0)['Traversable2'])(null));
   $__res = function($dictTraversableWithIndex1_4 = null) use ($dictTraversableWithIndex_0, $foldableWithIndexCompose_2_1, $functorWithIndexCompose_1_0, $traversableCompose_3_2) {
   $__num = \func_num_args();
-  $functorWithIndexCompose1_5_3 = ($functorWithIndexCompose_1_0)((($dictTraversableWithIndex1_4)['FunctorWithIndex0'])($GLOBALS['Prim_undefined']));
-  $foldableWithIndexCompose1_6_4 = ($foldableWithIndexCompose_2_1)((($dictTraversableWithIndex1_4)['FoldableWithIndex1'])($GLOBALS['Prim_undefined']));
-  $traversableCompose1_7_5 = ($traversableCompose_3_2)((($dictTraversableWithIndex1_4)['Traversable2'])($GLOBALS['Prim_undefined']));
+  $functorWithIndexCompose1_5_3 = ($functorWithIndexCompose_1_0)((($dictTraversableWithIndex1_4)['FunctorWithIndex0'])(null));
+  $foldableWithIndexCompose1_6_4 = ($foldableWithIndexCompose_2_1)((($dictTraversableWithIndex1_4)['FoldableWithIndex1'])(null));
+  $traversableCompose1_7_5 = ($traversableCompose_3_2)((($dictTraversableWithIndex1_4)['Traversable2'])(null));
   $__res = ["traverseWithIndex" => function($dictApplicative_8 = null) use ($dictTraversableWithIndex1_4, $dictTraversableWithIndex_0) {
   $__num = \func_num_args();
   $traverseWithIndex3_9_6 = (($dictTraversableWithIndex_0)['traverseWithIndex'])($dictApplicative_8);
@@ -712,7 +719,7 @@ $GLOBALS['Data_TraversableWithIndex_traversableWithIndexCompose'] = function($di
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((((($dictApplicative_8)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_Functor_Compose_Compose']))((($traverseWithIndex3_9_6)((($GLOBALS['Control_Semigroupoid_composeImpl'])($traverseWithIndex4_10_7))((function() use ($f_11) {
+  $__res = ((((((($dictApplicative_8)['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Functor_Compose_Compose']))((($traverseWithIndex3_9_6)(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($traverseWithIndex4_10_7))((function() use ($f_11) {
   $__fn = function($a_13 = null, $b_14 = null) use ($f_11, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -734,19 +741,19 @@ $GLOBALS['Data_TraversableWithIndex_traversableWithIndexCompose'] = function($di
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "FunctorWithIndex0" => function($dollar__unused_8 = null) use ($functorWithIndexCompose1_5_3) {
+}, "FunctorWithIndex0" => function($_dollar__unused_8 = null) use ($functorWithIndexCompose1_5_3) {
   $__num = \func_num_args();
   $__res = $functorWithIndexCompose1_5_3;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "FoldableWithIndex1" => function($dollar__unused_8 = null) use ($foldableWithIndexCompose1_6_4) {
+}, "FoldableWithIndex1" => function($_dollar__unused_8 = null) use ($foldableWithIndexCompose1_6_4) {
   $__num = \func_num_args();
   $__res = $foldableWithIndexCompose1_6_4;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Traversable2" => function($dollar__unused_8 = null) use ($traversableCompose1_7_5) {
+}, "Traversable2" => function($_dollar__unused_8 = null) use ($traversableCompose1_7_5) {
   $__num = \func_num_args();
   $__res = $traversableCompose1_7_5;
   goto __end;;
@@ -769,19 +776,19 @@ $GLOBALS['Data_TraversableWithIndex_traversableWithIndexArray'] = ["traverseWith
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "FunctorWithIndex0" => function($dollar__unused_0 = null) {
+}, "FunctorWithIndex0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_FunctorWithIndex_functorWithIndexArray'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "FoldableWithIndex1" => function($dollar__unused_0 = null) {
+}, "FoldableWithIndex1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_FoldableWithIndex_foldableWithIndexArray'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Traversable2" => function($dollar__unused_0 = null) {
+}, "Traversable2" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Traversable_traversableArray'];
   goto __end;;
@@ -792,19 +799,108 @@ $GLOBALS['Data_TraversableWithIndex_traversableWithIndexArray'] = ["traverseWith
 // Data_TraversableWithIndex_traversableWithIndexApp
 $GLOBALS['Data_TraversableWithIndex_traversableWithIndexApp'] = function($dictTraversableWithIndex_0 = null) {
   $__num = \func_num_args();
-  $functorWithIndexApp_1_0 = ($GLOBALS['Data_FunctorWithIndex_functorWithIndexApp'])((($dictTraversableWithIndex_0)['FunctorWithIndex0'])($GLOBALS['Prim_undefined']));
-  $foldableWithIndexApp_2_1 = ($GLOBALS['Data_FoldableWithIndex_foldableWithIndexApp'])((($dictTraversableWithIndex_0)['FoldableWithIndex1'])($GLOBALS['Prim_undefined']));
-  $traversableApp_3_2 = ($GLOBALS['Data_Traversable_traversableApp'])((($dictTraversableWithIndex_0)['Traversable2'])($GLOBALS['Prim_undefined']));
-  $__res = ["traverseWithIndex" => function($dictApplicative_4 = null) use ($dictTraversableWithIndex_0) {
-  $__num = \func_num_args();
-  $traverseWithIndex2_5_3 = (($dictTraversableWithIndex_0)['traverseWithIndex'])($dictApplicative_4);
-  $__res = (function() use ($dictApplicative_4, $traverseWithIndex2_5_3) {
-  $__fn = function($f_6 = null, $v_7 = null) use ($dictApplicative_4, $traverseWithIndex2_5_3, &$__fn) {
+  $__local_var_1_0 = (($dictTraversableWithIndex_0)['FunctorWithIndex0'])(null);
+  $__local_var_2_1 = (($__local_var_1_0)['Functor0'])(null);
+  $functorWithIndexApp_3_2 = ["mapWithIndex" => (function() use ($__local_var_1_0) {
+  $__fn = function($f_3 = null, $v_4 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((((($dictApplicative_4)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_Functor_App_App']))((($traverseWithIndex2_5_3)($f_6))($v_7));
+  $__res = ((($__local_var_1_0)['mapWithIndex'])($f_3))($v_4);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "Functor0" => function($_dollar__unused_3 = null) use ($__local_var_2_1) {
+  $__num = \func_num_args();
+  $__res = $__local_var_2_1;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__local_var_4_3 = (($dictTraversableWithIndex_0)['FoldableWithIndex1'])(null);
+  $__local_var_5_4 = (($__local_var_4_3)['Foldable0'])(null);
+  $foldableApp_6_5 = ["foldr" => (function() use ($__local_var_5_4) {
+  $__fn = function($f_6 = null, $i_7 = null, $v_8 = null) use ($__local_var_5_4, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__res = (((($__local_var_5_4)['foldr'])($f_6))($i_7))($v_8);
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})(), "foldl" => (function() use ($__local_var_5_4) {
+  $__fn = function($f_6 = null, $i_7 = null, $v_8 = null) use ($__local_var_5_4, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__res = (((($__local_var_5_4)['foldl'])($f_6))($i_7))($v_8);
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})(), "foldMap" => function($dictMonoid_6 = null) use ($__local_var_5_4) {
+  $__num = \func_num_args();
+  $__res = (($__local_var_5_4)['foldMap'])($dictMonoid_6);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $foldableWithIndexApp_6_5 = ["foldrWithIndex" => (function() use ($__local_var_4_3) {
+  $__fn = function($f_7 = null, $z_8 = null, $v_9 = null) use ($__local_var_4_3, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__res = (((($__local_var_4_3)['foldrWithIndex'])($f_7))($z_8))($v_9);
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})(), "foldlWithIndex" => (function() use ($__local_var_4_3) {
+  $__fn = function($f_7 = null, $z_8 = null, $v_9 = null) use ($__local_var_4_3, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__res = (((($__local_var_4_3)['foldlWithIndex'])($f_7))($z_8))($v_9);
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})(), "foldMapWithIndex" => function($dictMonoid_7 = null) use ($__local_var_4_3) {
+  $__num = \func_num_args();
+  $__res = (($__local_var_4_3)['foldMapWithIndex'])($dictMonoid_7);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Foldable0" => function($_dollar__unused_7 = null) use ($foldableApp_6_5) {
+  $__num = \func_num_args();
+  $__res = $foldableApp_6_5;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $traversableApp_7_7 = ($GLOBALS['Data_Traversable_traversableApp'])((($dictTraversableWithIndex_0)['Traversable2'])(null));
+  $__res = ["traverseWithIndex" => function($dictApplicative_8 = null) use ($dictTraversableWithIndex_0) {
+  $__num = \func_num_args();
+  $traverseWithIndex2_9_8 = (($dictTraversableWithIndex_0)['traverseWithIndex'])($dictApplicative_8);
+  $__res = (function() use ($dictApplicative_8, $traverseWithIndex2_9_8) {
+  $__fn = function($f_10 = null, $v_11 = null) use ($dictApplicative_8, $traverseWithIndex2_9_8, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ((((((($dictApplicative_8)['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Functor_App_App']))((($traverseWithIndex2_9_8)($f_10))($v_11));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -814,21 +910,21 @@ $GLOBALS['Data_TraversableWithIndex_traversableWithIndexApp'] = function($dictTr
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "FunctorWithIndex0" => function($dollar__unused_4 = null) use ($functorWithIndexApp_1_0) {
+}, "FunctorWithIndex0" => function($_dollar__unused_8 = null) use ($functorWithIndexApp_3_2) {
   $__num = \func_num_args();
-  $__res = $functorWithIndexApp_1_0;
+  $__res = $functorWithIndexApp_3_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "FoldableWithIndex1" => function($dollar__unused_4 = null) use ($foldableWithIndexApp_2_1) {
+}, "FoldableWithIndex1" => function($_dollar__unused_8 = null) use ($foldableWithIndexApp_6_5) {
   $__num = \func_num_args();
-  $__res = $foldableWithIndexApp_2_1;
+  $__res = $foldableWithIndexApp_6_5;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Traversable2" => function($dollar__unused_4 = null) use ($traversableApp_3_2) {
+}, "Traversable2" => function($_dollar__unused_8 = null) use ($traversableApp_7_7) {
   $__num = \func_num_args();
-  $__res = $traversableApp_3_2;
+  $__res = $traversableApp_7_7;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -839,31 +935,32 @@ $GLOBALS['Data_TraversableWithIndex_traversableWithIndexApp'] = function($dictTr
 };
 
 // Data_TraversableWithIndex_traversableWithIndexAdditive
-$GLOBALS['Data_TraversableWithIndex_traversableWithIndexAdditive'] = ["traverseWithIndex" => (function() {
-  $__fn = function($dictApplicative_0 = null, $f_1 = null) use (&$__fn) {
+$GLOBALS['Data_TraversableWithIndex_traversableWithIndexAdditive'] = ["traverseWithIndex" => function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($GLOBALS['Data_Traversable_traversableAdditive'])['traverse'])($dictApplicative_0))(($f_1)($GLOBALS['Data_Unit_unit']));
+  $traverse8_1_0 = (($GLOBALS['Data_Traversable_traversableAdditive'])['traverse'])($dictApplicative_0);
+  $__res = function($f_2 = null) use ($traverse8_1_0) {
+  $__num = \func_num_args();
+  $__res = ($traverse8_1_0)(($f_2)($GLOBALS['Data_Unit_unit']));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "FunctorWithIndex0" => function($dollar__unused_0 = null) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "FunctorWithIndex0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_FunctorWithIndex_functorWithIndexAdditive'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "FoldableWithIndex1" => function($dollar__unused_0 = null) {
+}, "FoldableWithIndex1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_FoldableWithIndex_foldableWithIndexAdditive'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Traversable2" => function($dollar__unused_0 = null) {
+}, "Traversable2" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Traversable_traversableAdditive'];
   goto __end;;
@@ -921,8 +1018,8 @@ $GLOBALS['Data_TraversableWithIndex_scanrWithIndex'] = function($dictTraversable
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $b__prime___8_1 = ((($f_2)($i_5))($a_7))($b_6);
-  $__res = ["accum" => $b__prime___8_1, "value" => $b__prime___8_1];
+  $b_prime_8_1 = ((($f_2)($i_5))($a_7))($b_6);
+  $__res = ["accum" => $b_prime_8_1, "value" => $b_prime_8_1];
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -990,8 +1087,8 @@ $GLOBALS['Data_TraversableWithIndex_scanlWithIndex'] = function($dictTraversable
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $b__prime___8_1 = ((($f_2)($i_5))($b_6))($a_7);
-  $__res = ["accum" => $b__prime___8_1, "value" => $b__prime___8_1];
+  $b_prime_8_1 = ((($f_2)($i_5))($b_6))($a_7);
+  $__res = ["accum" => $b_prime_8_1, "value" => $b_prime_8_1];
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;

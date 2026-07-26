@@ -168,9 +168,9 @@ $GLOBALS['Control_Monad_Identity_Trans_plusIdentityT'] = function($dictPlus_0 = 
 };
 
 // Control_Monad_Identity_Trans_newtypeIdentityT
-$GLOBALS['Control_Monad_Identity_Trans_newtypeIdentityT'] = ["Coercible0" => function($dollar__unused_0 = null) {
+$GLOBALS['Control_Monad_Identity_Trans_newtypeIdentityT'] = ["Coercible0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Prim_undefined'];
+  $__res = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -329,20 +329,20 @@ $GLOBALS['Control_Monad_Identity_Trans_foldableIdentityT'] = function($dictFolda
 // Control_Monad_Identity_Trans_extendIdentityI
 $GLOBALS['Control_Monad_Identity_Trans_extendIdentityI'] = function($dictExtend_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictExtend_0)['Functor0'])($GLOBALS['Prim_undefined']);
+  $__local_var_1_0 = (($dictExtend_0)['Functor0'])(null);
   $__res = ["extend" => (function() use ($dictExtend_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($dictExtend_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictExtend_0)['extend'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_2))($GLOBALS['Control_Monad_Identity_Trans_IdentityT'])))($v_3);
+  $__res = ((($dictExtend_0)['extend'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_2))($GLOBALS['Control_Monad_Identity_Trans_IdentityT'])))($v_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_2 = null) use ($__local_var_1_0) {
+})(), "Functor0" => function($_dollar__unused_2 = null) use ($__local_var_1_0) {
   $__num = \func_num_args();
   $__res = $__local_var_1_0;
   goto __end;;
@@ -385,11 +385,11 @@ $GLOBALS['Control_Monad_Identity_Trans_eqIdentityT'] = (function() {
 // Control_Monad_Identity_Trans_ordIdentityT
 $GLOBALS['Control_Monad_Identity_Trans_ordIdentityT'] = function($dictOrd1_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictOrd1_0)['Eq10'])($GLOBALS['Prim_undefined']);
+  $__local_var_1_0 = (($dictOrd1_0)['Eq10'])(null);
   $__res = function($dictOrd_2 = null) use ($__local_var_1_0, $dictOrd1_0) {
   $__num = \func_num_args();
   $compare11_3_1 = (($dictOrd1_0)['compare1'])($dictOrd_2);
-  $eq11_4_2 = (($__local_var_1_0)['eq1'])((($dictOrd_2)['Eq0'])($GLOBALS['Prim_undefined']));
+  $eq11_4_2 = (($__local_var_1_0)['eq1'])((($dictOrd_2)['Eq0'])(null));
   $eqIdentityT2_5_3 = ["eq" => (function() use ($eq11_4_2) {
   $__fn = function($x_5 = null, $y_6 = null) use ($eq11_4_2, &$__fn) {
   $__num = \func_num_args();
@@ -415,7 +415,7 @@ $GLOBALS['Control_Monad_Identity_Trans_ordIdentityT'] = function($dictOrd1_0 = n
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Eq0" => function($dollar__unused_6 = null) use ($eqIdentityT2_5_3) {
+})(), "Eq0" => function($_dollar__unused_6 = null) use ($eqIdentityT2_5_3) {
   $__num = \func_num_args();
   $__res = $eqIdentityT2_5_3;
   goto __end;;
@@ -449,8 +449,8 @@ $GLOBALS['Control_Monad_Identity_Trans_eq1IdentityT'] = function($dictEq1_0 = nu
 // Control_Monad_Identity_Trans_ord1IdentityT
 $GLOBALS['Control_Monad_Identity_Trans_ord1IdentityT'] = function($dictOrd1_0 = null) {
   $__num = \func_num_args();
-  $ordIdentityT1_1_0 = ($GLOBALS['Control_Monad_Identity_Trans_ordIdentityT'])($dictOrd1_0);
-  $__local_var_2_1 = (($dictOrd1_0)['Eq10'])($GLOBALS['Prim_undefined']);
+  $__local_var_1_0 = (($dictOrd1_0)['Eq10'])(null);
+  $__local_var_2_1 = (($dictOrd1_0)['Eq10'])(null);
   $eq1IdentityT1_3_2 = ["eq1" => function($dictEq_3 = null) use ($__local_var_2_1) {
   $__num = \func_num_args();
   $__res = (($__local_var_2_1)['eq1'])($dictEq_3);
@@ -458,13 +458,46 @@ $GLOBALS['Control_Monad_Identity_Trans_ord1IdentityT'] = function($dictOrd1_0 = 
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["compare1" => function($dictOrd_4 = null) use ($ordIdentityT1_1_0) {
+  $__res = ["compare1" => function($dictOrd_4 = null) use ($__local_var_1_0, $dictOrd1_0) {
   $__num = \func_num_args();
-  $__res = (($ordIdentityT1_1_0)($dictOrd_4))['compare'];
+  $compare11_5_3 = (($dictOrd1_0)['compare1'])($dictOrd_4);
+  $eq11_6_4 = (($__local_var_1_0)['eq1'])((($dictOrd_4)['Eq0'])(null));
+  $eqIdentityT2_7_5 = ["eq" => (function() use ($eq11_6_4) {
+  $__fn = function($x_7 = null, $y_8 = null) use ($eq11_6_4, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($eq11_6_4)($x_7))($y_8);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
+  $__res = (["compare" => (function() use ($compare11_5_3) {
+  $__fn = function($x_8 = null, $y_9 = null) use ($compare11_5_3, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($compare11_5_3)($x_8))($y_9);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "Eq0" => function($_dollar__unused_8 = null) use ($eqIdentityT2_7_5) {
+  $__num = \func_num_args();
+  $__res = $eqIdentityT2_7_5;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Eq10" => function($dollar__unused_4 = null) use ($eq1IdentityT1_3_2) {
+}])['compare'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Eq10" => function($_dollar__unused_4 = null) use ($eq1IdentityT1_3_2) {
   $__num = \func_num_args();
   $__res = $eq1IdentityT1_3_2;
   goto __end;;
@@ -479,8 +512,8 @@ $GLOBALS['Control_Monad_Identity_Trans_ord1IdentityT'] = function($dictOrd1_0 = 
 // Control_Monad_Identity_Trans_comonadIdentityT
 $GLOBALS['Control_Monad_Identity_Trans_comonadIdentityT'] = function($dictComonad_0 = null) {
   $__num = \func_num_args();
-  $extendIdentityI1_1_0 = ($GLOBALS['Control_Monad_Identity_Trans_extendIdentityI'])((($dictComonad_0)['Extend0'])($GLOBALS['Prim_undefined']));
-  $__res = ["extract" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictComonad_0)['extract']))($GLOBALS['Control_Monad_Identity_Trans_runIdentityT']), "Extend0" => function($dollar__unused_2 = null) use ($extendIdentityI1_1_0) {
+  $extendIdentityI1_1_0 = ($GLOBALS['Control_Monad_Identity_Trans_extendIdentityI'])((($dictComonad_0)['Extend0'])(null));
+  $__res = ["extract" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($dictComonad_0)['extract']))($GLOBALS['Control_Monad_Identity_Trans_runIdentityT']), "Extend0" => function($_dollar__unused_2 = null) use ($extendIdentityI1_1_0) {
   $__num = \func_num_args();
   $__res = $extendIdentityI1_1_0;
   goto __end;;

@@ -206,7 +206,7 @@ $GLOBALS['Data_Eq_eqRecord'] = function($dict_0 = null) {
 
 // Data_Eq_eqRec
 $GLOBALS['Data_Eq_eqRec'] = (function() {
-  $__fn = function($dollar__unused_0 = null, $dictEqRecord_1 = null) use (&$__fn) {
+  $__fn = function($_dollar__unused_0 = null, $dictEqRecord_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
@@ -284,7 +284,7 @@ $GLOBALS['Data_Eq_eq1Array'] = ["eq1" => function($dictEq_0 = null) {
 
 // Data_Eq_eqRowCons
 $GLOBALS['Data_Eq_eqRowCons'] = (function() {
-  $__fn = function($dictEqRecord_0 = null, $dollar__unused_1 = null, $dictIsSymbol_2 = null, $dictEq_3 = null) use (&$__fn) {
+  $__fn = function($dictEqRecord_0 = null, $_dollar__unused_1 = null, $dictIsSymbol_2 = null, $dictEq_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
@@ -296,7 +296,7 @@ $GLOBALS['Data_Eq_eqRowCons'] = (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $get_7_0 = ($GLOBALS['Record_Unsafe_unsafeGet'])((($dictIsSymbol_2)['reflectSymbol'])(new Phpurs_Data0("Proxy")));
-  $__res = (((($dictEq_3)['eq'])(($get_7_0)($ra_5)))(($get_7_0)($rb_6)) && (((($dictEqRecord_0)['eqRecord'])(new Phpurs_Data0("Proxy")))($ra_5))($rb_6));
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($dictEq_3)['eq'])(($get_7_0)($ra_5)))(($get_7_0)($rb_6))))((((($dictEqRecord_0)['eqRecord'])(new Phpurs_Data0("Proxy")))($ra_5))($rb_6));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -317,7 +317,7 @@ $GLOBALS['Data_Eq_notEq'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ( ! ((($dictEq_0)['eq'])($x_1))($y_2));
+  $__res = ((($GLOBALS['Data_Eq_eqBoolean'])['eq'])(((($dictEq_0)['eq'])($x_1))($y_2)))(false);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -339,7 +339,7 @@ $GLOBALS['Data_Eq_notEq1'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ( ! (($eq12_2_0)($x_3))($y_4));
+  $__res = ((($GLOBALS['Data_Eq_eqBoolean'])['eq'])((($eq12_2_0)($x_3))($y_4)))(false);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

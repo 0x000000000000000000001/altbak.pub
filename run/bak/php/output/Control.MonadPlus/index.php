@@ -104,13 +104,13 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Control_MonadPlus_monadPlusArray
-$GLOBALS['Control_MonadPlus_monadPlusArray'] = ["Monad0" => function($dollar__unused_0 = null) {
+$GLOBALS['Control_MonadPlus_monadPlusArray'] = ["Monad0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Monad_monadArray'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Alternative1" => function($dollar__unused_0 = null) {
+}, "Alternative1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Alternative_alternativeArray'];
   goto __end;;

@@ -144,7 +144,7 @@ $GLOBALS['Data_Bounded_top'] = function($dict_0 = null) {
 };
 
 // Data_Bounded_boundedUnit
-$GLOBALS['Data_Bounded_boundedUnit'] = ["top" => $GLOBALS['Data_Unit_unit'], "bottom" => $GLOBALS['Data_Unit_unit'], "Ord0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Bounded_boundedUnit'] = ["top" => $GLOBALS['Data_Unit_unit'], "bottom" => $GLOBALS['Data_Unit_unit'], "Ord0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Ord_ordUnit'];
   goto __end;;
@@ -177,7 +177,7 @@ $GLOBALS['Data_Bounded_boundedRecordNil'] = ["topRecord" => (function() {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "OrdRecord0" => function($dollar__unused_0 = null) {
+})(), "OrdRecord0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Ord_ordRecordNil'];
   goto __end;;
@@ -186,7 +186,7 @@ $GLOBALS['Data_Bounded_boundedRecordNil'] = ["topRecord" => (function() {
 }];
 
 // Data_Bounded_boundedProxy
-$GLOBALS['Data_Bounded_boundedProxy'] = ["bottom" => new Phpurs_Data0("Proxy"), "top" => new Phpurs_Data0("Proxy"), "Ord0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Bounded_boundedProxy'] = ["bottom" => new Phpurs_Data0("Proxy"), "top" => new Phpurs_Data0("Proxy"), "Ord0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Ord_ordProxy'];
   goto __end;;
@@ -195,7 +195,7 @@ $GLOBALS['Data_Bounded_boundedProxy'] = ["bottom" => new Phpurs_Data0("Proxy"), 
 }];
 
 // Data_Bounded_boundedOrdering
-$GLOBALS['Data_Bounded_boundedOrdering'] = ["top" => new Phpurs_Data0("GT"), "bottom" => new Phpurs_Data0("LT"), "Ord0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Bounded_boundedOrdering'] = ["top" => new Phpurs_Data0("GT"), "bottom" => new Phpurs_Data0("LT"), "Ord0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Ord_ordOrdering'];
   goto __end;;
@@ -204,7 +204,7 @@ $GLOBALS['Data_Bounded_boundedOrdering'] = ["top" => new Phpurs_Data0("GT"), "bo
 }];
 
 // Data_Bounded_boundedNumber
-$GLOBALS['Data_Bounded_boundedNumber'] = ["top" => $GLOBALS['Data_Bounded_topNumber'], "bottom" => $GLOBALS['Data_Bounded_bottomNumber'], "Ord0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Bounded_boundedNumber'] = ["top" => $GLOBALS['Data_Bounded_topNumber'], "bottom" => $GLOBALS['Data_Bounded_bottomNumber'], "Ord0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Ord_ordNumber'];
   goto __end;;
@@ -213,7 +213,7 @@ $GLOBALS['Data_Bounded_boundedNumber'] = ["top" => $GLOBALS['Data_Bounded_topNum
 }];
 
 // Data_Bounded_boundedInt
-$GLOBALS['Data_Bounded_boundedInt'] = ["top" => $GLOBALS['Data_Bounded_topInt'], "bottom" => $GLOBALS['Data_Bounded_bottomInt'], "Ord0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Bounded_boundedInt'] = ["top" => $GLOBALS['Data_Bounded_topInt'], "bottom" => $GLOBALS['Data_Bounded_bottomInt'], "Ord0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Ord_ordInt'];
   goto __end;;
@@ -222,7 +222,7 @@ $GLOBALS['Data_Bounded_boundedInt'] = ["top" => $GLOBALS['Data_Bounded_topInt'],
 }];
 
 // Data_Bounded_boundedChar
-$GLOBALS['Data_Bounded_boundedChar'] = ["top" => $GLOBALS['Data_Bounded_topChar'], "bottom" => $GLOBALS['Data_Bounded_bottomChar'], "Ord0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Bounded_boundedChar'] = ["top" => $GLOBALS['Data_Bounded_topChar'], "bottom" => $GLOBALS['Data_Bounded_bottomChar'], "Ord0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Ord_ordChar'];
   goto __end;;
@@ -231,7 +231,7 @@ $GLOBALS['Data_Bounded_boundedChar'] = ["top" => $GLOBALS['Data_Bounded_topChar'
 }];
 
 // Data_Bounded_boundedBoolean
-$GLOBALS['Data_Bounded_boundedBoolean'] = ["top" => true, "bottom" => false, "Ord0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Bounded_boundedBoolean'] = ["top" => true, "bottom" => false, "Ord0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Ord_ordBoolean'];
   goto __end;;
@@ -250,15 +250,23 @@ $GLOBALS['Data_Bounded_bottomRecord'] = function($dict_0 = null) {
 
 // Data_Bounded_boundedRecord
 $GLOBALS['Data_Bounded_boundedRecord'] = (function() {
-  $__fn = function($dollar__unused_0 = null, $dictBoundedRecord_1 = null) use (&$__fn) {
+  $__fn = function($_dollar__unused_0 = null, $dictBoundedRecord_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $ordRecord1_2_0 = (($GLOBALS['Data_Ord_ordRecord'])($GLOBALS['Prim_undefined']))((($dictBoundedRecord_1)['OrdRecord0'])($GLOBALS['Prim_undefined']));
-  $__res = ["top" => ((($dictBoundedRecord_1)['topRecord'])(new Phpurs_Data0("Proxy")))(new Phpurs_Data0("Proxy")), "bottom" => ((($dictBoundedRecord_1)['bottomRecord'])(new Phpurs_Data0("Proxy")))(new Phpurs_Data0("Proxy")), "Ord0" => function($dollar__unused_3 = null) use ($ordRecord1_2_0) {
+  $__local_var_2_0 = (($dictBoundedRecord_1)['OrdRecord0'])(null);
+  $eqRec1_3_1 = ["eq" => (((($__local_var_2_0)['EqRecord0'])(null))['eqRecord'])(new Phpurs_Data0("Proxy"))];
+  $ordRecord1_4_2 = ["compare" => (($__local_var_2_0)['compareRecord'])(new Phpurs_Data0("Proxy")), "Eq0" => function($_dollar__unused_4 = null) use ($eqRec1_3_1) {
   $__num = \func_num_args();
-  $__res = $ordRecord1_2_0;
+  $__res = $eqRec1_3_1;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = ["top" => ((($dictBoundedRecord_1)['topRecord'])(new Phpurs_Data0("Proxy")))(new Phpurs_Data0("Proxy")), "bottom" => ((($dictBoundedRecord_1)['bottomRecord'])(new Phpurs_Data0("Proxy")))(new Phpurs_Data0("Proxy")), "Ord0" => function($_dollar__unused_5 = null) use ($ordRecord1_4_2) {
+  $__num = \func_num_args();
+  $__res = $ordRecord1_4_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -288,14 +296,14 @@ $GLOBALS['Data_Bounded_boundedRecordCons'] = (function() {
   }
   $top1_2_0 = ($dictBounded_1)['top'];
   $bottom1_3_1 = ($dictBounded_1)['bottom'];
-  $Ord0_4_2 = (($dictBounded_1)['Ord0'])($GLOBALS['Prim_undefined']);
+  $Ord0_4_2 = (($dictBounded_1)['Ord0'])(null);
   $__res = (function() use ($Ord0_4_2, $bottom1_3_1, $dictIsSymbol_0, $top1_2_0) {
-  $__fn = function($dollar__unused_5 = null, $dollar__unused_6 = null, $dictBoundedRecord_7 = null) use ($Ord0_4_2, $bottom1_3_1, $dictIsSymbol_0, $top1_2_0, &$__fn) {
+  $__fn = function($_dollar__unused_5 = null, $_dollar__unused_6 = null, $dictBoundedRecord_7 = null) use ($Ord0_4_2, $bottom1_3_1, $dictIsSymbol_0, $top1_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $ordRecordCons_8_3 = (((($GLOBALS['Data_Ord_ordRecordCons'])((($dictBoundedRecord_7)['OrdRecord0'])($GLOBALS['Prim_undefined'])))($GLOBALS['Prim_undefined']))($dictIsSymbol_0))($Ord0_4_2);
+  $ordRecordCons_8_3 = (((($GLOBALS['Data_Ord_ordRecordCons'])((($dictBoundedRecord_7)['OrdRecord0'])(null)))(null))($dictIsSymbol_0))($Ord0_4_2);
   $__res = ["topRecord" => (function() use ($dictBoundedRecord_7, $dictIsSymbol_0, $top1_2_0) {
   $__fn = function($v_9 = null, $rowProxy_10 = null) use ($dictBoundedRecord_7, $dictIsSymbol_0, $top1_2_0, &$__fn) {
   $__num = \func_num_args();
@@ -320,7 +328,7 @@ $GLOBALS['Data_Bounded_boundedRecordCons'] = (function() {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "OrdRecord0" => function($dollar__unused_9 = null) use ($ordRecordCons_8_3) {
+})(), "OrdRecord0" => function($_dollar__unused_9 = null) use ($ordRecordCons_8_3) {
   $__num = \func_num_args();
   $__res = $ordRecordCons_8_3;
   goto __end;;

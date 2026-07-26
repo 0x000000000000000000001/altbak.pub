@@ -136,15 +136,15 @@ $GLOBALS['Control_Lazy_fix'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go_2_0 = null;
-  $go_2_0 = (($dictLazy_0)['defer'])(function($v_3 = null) use ($f_1, &$go_2_0) {
+  $go__2_0 = null;
+  $go__2_0 = (($dictLazy_0)['defer'])(function($v_3 = null) use ($f_1, &$go__2_0) {
   $__num = \func_num_args();
-  $__res = ($f_1)($go_2_0);
+  $__res = ($f_1)($go__2_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
-  $__res = $go_2_0;
+  $__res = $go__2_0;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

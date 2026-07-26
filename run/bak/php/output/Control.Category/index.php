@@ -112,7 +112,7 @@ $GLOBALS['Control_Category_categoryFn'] = ["identity" => function($x_0 = null) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Semigroupoid0" => function($dollar__unused_0 = null) {
+}, "Semigroupoid0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Semigroupoid_semigroupoidFn'];
   goto __end;;

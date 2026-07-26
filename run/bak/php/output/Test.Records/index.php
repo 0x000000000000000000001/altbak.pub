@@ -111,38 +111,28 @@ $GLOBALS['Test_Records_updateRec'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_Test_Records_updateRec_v_0 = $v_0;
-  $__tco_var_Test_Records_updateRec_v1_1 = $v1_1;
-  tco_loop_Test_Records_updateRec:;
-  $v_0 = $__tco_var_Test_Records_updateRec_v_0;
-  $v1_1 = $__tco_var_Test_Records_updateRec_v1_1;
-  $__t5 = null;;
+  $__t3 = null;;
   switch ($v_0) {
 case 0:
-$__t5 = $v1_1;
-goto end_branch_5;;
+$__t3 = $v1_1;
+goto end_branch_3;;
 break;
 default:
 ;
 break;
 };
   $__obj0 = $v1_1;
-  ($__obj0)['a'] = (($v1_1)['a'] + 1);
+  ($__obj0)['a'] = ((($GLOBALS['Data_Semiring_semiringInt'])['add'])(($v1_1)['a']))(1);
   $__obj1 = ($v1_1)['b'];
-  ($__obj1)['c'] = ((($v1_1)['b'])['c'] + 2);
+  ($__obj1)['c'] = ((($GLOBALS['Data_Semiring_semiringInt'])['add'])((($v1_1)['b'])['c']))(2);
   $__obj2 = (($v1_1)['b'])['d'];
-  ($__obj2)['e'] = (((($v1_1)['b'])['d'])['e'] + 3);
-  ($__obj2)['f'] = (((($v1_1)['b'])['d'])['f'] + (($GLOBALS['Data_EuclideanRing_intMod'])($v_0))(5));
+  ($__obj2)['e'] = ((($GLOBALS['Data_Semiring_semiringInt'])['add'])(((($v1_1)['b'])['d'])['e']))(3);
+  ($__obj2)['f'] = ((($GLOBALS['Data_Semiring_semiringInt'])['add'])(((($v1_1)['b'])['d'])['f']))(((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['mod'])($v_0))(5));
   ($__obj1)['d'] = $__obj2;
   ($__obj0)['b'] = $__obj1;
-  $__tco_3 = ($v_0 - 1);
-  $__tco_4 = $__obj0;
-  $__tco_var_Test_Records_updateRec_v_0 = $__tco_3;
-  $__tco_var_Test_Records_updateRec_v1_1 = $__tco_4;
-  goto tco_loop_Test_Records_updateRec;;
-  $__t5 = null;
-  end_branch_5:;
-  $__res = $__t5;
+  $__t3 = (($GLOBALS['Test_Records_updateRec'])(((($GLOBALS['Data_Ring_ringInt'])['sub'])($v_0))(1)))($__obj0);
+  end_branch_3:;
+  $__res = $__t3;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -157,9 +147,9 @@ $GLOBALS['Test_Records_initial'] = ["a" => 0, "b" => ["c" => 0, "d" => ["e" => 0
 $GLOBALS['Test_Records_describe'] = ($GLOBALS['Effect_Console_log'])("Deep Record Updates (10k iterations):");
 
 // Test_Records_act
-$GLOBALS['Test_Records_act'] = (($GLOBALS['Effect_bindE'])(($GLOBALS['Bench_opaque'])(10000)))(function($dummy_0 = null) {
+$GLOBALS['Test_Records_act'] = ((($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(10000)))(function($dummy_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Console_log'])(($GLOBALS['Data_Show_showIntImpl'])(((((($GLOBALS['Test_Records_updateRec'])($dummy_0))($GLOBALS['Test_Records_initial']))['b'])['d'])['f']));
+  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])(((((($GLOBALS['Test_Records_updateRec'])($dummy_0))($GLOBALS['Test_Records_initial']))['b'])['d'])['f']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

@@ -183,7 +183,7 @@ $GLOBALS['Data_Traversable_Accum_Internal_applyStateR'] = ["apply" => (function(
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0 = null) {
+})(), "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Traversable_Accum_Internal_functorStateR'];
   goto __end;;
@@ -206,7 +206,7 @@ $GLOBALS['Data_Traversable_Accum_Internal_applyStateL'] = ["apply" => (function(
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0 = null) {
+})(), "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Traversable_Accum_Internal_functorStateL'];
   goto __end;;
@@ -227,7 +227,7 @@ $GLOBALS['Data_Traversable_Accum_Internal_applicativeStateR'] = ["pure" => (func
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Apply0" => function($dollar__unused_0 = null) {
+})(), "Apply0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Traversable_Accum_Internal_applyStateR'];
   goto __end;;
@@ -248,7 +248,7 @@ $GLOBALS['Data_Traversable_Accum_Internal_applicativeStateL'] = ["pure" => (func
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Apply0" => function($dollar__unused_0 = null) {
+})(), "Apply0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Traversable_Accum_Internal_applyStateL'];
   goto __end;;

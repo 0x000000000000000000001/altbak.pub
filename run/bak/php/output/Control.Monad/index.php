@@ -104,14 +104,14 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 // Control_Monad_whenM
 $GLOBALS['Control_Monad_whenM'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $when_1_0 = ($GLOBALS['Control_Applicative_when'])((($dictMonad_0)['Applicative0'])($GLOBALS['Prim_undefined']));
+  $when_1_0 = ($GLOBALS['Control_Applicative_when'])((($dictMonad_0)['Applicative0'])(null));
   $__res = (function() use ($dictMonad_0, $when_1_0) {
   $__fn = function($mb_2 = null, $m_3 = null) use ($dictMonad_0, $when_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($dictMonad_0)['Bind1'])($GLOBALS['Prim_undefined']))['bind'])($mb_2))(function($b_4 = null) use ($m_3, $when_1_0) {
+  $__res = ((((($dictMonad_0)['Bind1'])(null))['bind'])($mb_2))(function($b_4 = null) use ($m_3, $when_1_0) {
   $__num = \func_num_args();
   $__res = (($when_1_0)($b_4))($m_3);
   goto __end;;
@@ -132,14 +132,14 @@ $GLOBALS['Control_Monad_whenM'] = function($dictMonad_0 = null) {
 // Control_Monad_unlessM
 $GLOBALS['Control_Monad_unlessM'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $unless_1_0 = ($GLOBALS['Control_Applicative_unless'])((($dictMonad_0)['Applicative0'])($GLOBALS['Prim_undefined']));
+  $unless_1_0 = ($GLOBALS['Control_Applicative_unless'])((($dictMonad_0)['Applicative0'])(null));
   $__res = (function() use ($dictMonad_0, $unless_1_0) {
   $__fn = function($mb_2 = null, $m_3 = null) use ($dictMonad_0, $unless_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($dictMonad_0)['Bind1'])($GLOBALS['Prim_undefined']))['bind'])($mb_2))(function($b_4 = null) use ($m_3, $unless_1_0) {
+  $__res = ((((($dictMonad_0)['Bind1'])(null))['bind'])($mb_2))(function($b_4 = null) use ($m_3, $unless_1_0) {
   $__num = \func_num_args();
   $__res = (($unless_1_0)($b_4))($m_3);
   goto __end;;
@@ -158,13 +158,13 @@ $GLOBALS['Control_Monad_unlessM'] = function($dictMonad_0 = null) {
 };
 
 // Control_Monad_monadProxy
-$GLOBALS['Control_Monad_monadProxy'] = ["Applicative0" => function($dollar__unused_0 = null) {
+$GLOBALS['Control_Monad_monadProxy'] = ["Applicative0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Applicative_applicativeProxy'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bind1" => function($dollar__unused_0 = null) {
+}, "Bind1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Bind_bindProxy'];
   goto __end;;
@@ -173,13 +173,13 @@ $GLOBALS['Control_Monad_monadProxy'] = ["Applicative0" => function($dollar__unus
 }];
 
 // Control_Monad_monadFn
-$GLOBALS['Control_Monad_monadFn'] = ["Applicative0" => function($dollar__unused_0 = null) {
+$GLOBALS['Control_Monad_monadFn'] = ["Applicative0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Applicative_applicativeFn'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bind1" => function($dollar__unused_0 = null) {
+}, "Bind1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Bind_bindFn'];
   goto __end;;
@@ -188,13 +188,13 @@ $GLOBALS['Control_Monad_monadFn'] = ["Applicative0" => function($dollar__unused_
 }];
 
 // Control_Monad_monadArray
-$GLOBALS['Control_Monad_monadArray'] = ["Applicative0" => function($dollar__unused_0 = null) {
+$GLOBALS['Control_Monad_monadArray'] = ["Applicative0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Applicative_applicativeArray'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bind1" => function($dollar__unused_0 = null) {
+}, "Bind1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Bind_bindArray'];
   goto __end;;
@@ -209,9 +209,9 @@ $GLOBALS['Control_Monad_liftM1'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((($dictMonad_0)['Bind1'])($GLOBALS['Prim_undefined']))['bind'])($a_2))(function($a__prime___3 = null) use ($dictMonad_0, $f_1) {
+  $__res = ((((($dictMonad_0)['Bind1'])(null))['bind'])($a_2))(function($a_prime_3 = null) use ($dictMonad_0, $f_1) {
   $__num = \func_num_args();
-  $__res = (((($dictMonad_0)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'])(($f_1)($a__prime___3));
+  $__res = (((($dictMonad_0)['Applicative0'])(null))['pure'])(($f_1)($a_prime_3));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -226,18 +226,18 @@ $GLOBALS['Control_Monad_liftM1'] = (function() {
 // Control_Monad_ap
 $GLOBALS['Control_Monad_ap'] = function($dictMonad_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictMonad_0)['Bind1'])($GLOBALS['Prim_undefined']);
+  $__local_var_1_0 = (($dictMonad_0)['Bind1'])(null);
   $__res = (function() use ($__local_var_1_0, $dictMonad_0) {
   $__fn = function($f_2 = null, $a_3 = null) use ($__local_var_1_0, $dictMonad_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($__local_var_1_0)['bind'])($f_2))(function($f__prime___4 = null) use ($__local_var_1_0, $a_3, $dictMonad_0) {
+  $__res = ((($__local_var_1_0)['bind'])($f_2))(function($f_prime_4 = null) use ($__local_var_1_0, $a_3, $dictMonad_0) {
   $__num = \func_num_args();
-  $__res = ((($__local_var_1_0)['bind'])($a_3))(function($a__prime___5 = null) use ($dictMonad_0, $f__prime___4) {
+  $__res = ((($__local_var_1_0)['bind'])($a_3))(function($a_prime_5 = null) use ($dictMonad_0, $f_prime_4) {
   $__num = \func_num_args();
-  $__res = (((($dictMonad_0)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'])(($f__prime___4)($a__prime___5));
+  $__res = (((($dictMonad_0)['Applicative0'])(null))['pure'])(($f_prime_4)($a_prime_5));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

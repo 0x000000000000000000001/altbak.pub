@@ -214,7 +214,7 @@ $GLOBALS['Data_Functor_functorProxy'] = ["map" => (function() {
 })()];
 
 // Data_Functor_functorFn
-$GLOBALS['Data_Functor_functorFn'] = ["map" => $GLOBALS['Control_Semigroupoid_composeImpl']];
+$GLOBALS['Data_Functor_functorFn'] = ["map" => ($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose']];
 
 // Data_Functor_functorArray
 $GLOBALS['Data_Functor_functorArray'] = ["map" => $GLOBALS['Data_Functor_arrayMap']];

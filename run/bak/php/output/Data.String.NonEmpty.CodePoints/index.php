@@ -130,7 +130,7 @@ $GLOBALS['Data_String_NonEmpty_CodePoints_snoc'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($s_1 . ($GLOBALS['Data_String_CodePoints_singleton'])($c_0));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])($s_1))(($GLOBALS['Data_String_CodePoints_singleton'])($c_0));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -139,7 +139,7 @@ $GLOBALS['Data_String_NonEmpty_CodePoints_snoc'] = (function() {
 })();
 
 // Data_String_NonEmpty_CodePoints_singleton
-$GLOBALS['Data_String_NonEmpty_CodePoints_singleton'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_NonEmptyString']))($GLOBALS['Data_String_CodePoints_singleton']);
+$GLOBALS['Data_String_NonEmpty_CodePoints_singleton'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_String_NonEmpty_Internal_NonEmptyString']))($GLOBALS['Data_String_CodePoints_singleton']);
 
 // Data_String_NonEmpty_CodePoints_liftS
 $GLOBALS['Data_String_NonEmpty_CodePoints_liftS'] = (function() {
@@ -159,7 +159,7 @@ $GLOBALS['Data_String_NonEmpty_CodePoints_liftS'] = (function() {
 // Data_String_NonEmpty_CodePoints_takeWhile
 $GLOBALS['Data_String_NonEmpty_CodePoints_takeWhile'] = function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_fromString']))(function($v_1 = null) use ($f_0) {
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_String_NonEmpty_Internal_fromString']))(function($v_1 = null) use ($f_0) {
   $__num = \func_num_args();
   $__res = (($GLOBALS['Data_String_CodePoints_take'])((($GLOBALS['Data_String_CodePoints_countPrefix'])($f_0))($v_1)))($v_1);
   goto __end;;
@@ -174,26 +174,26 @@ $GLOBALS['Data_String_NonEmpty_CodePoints_takeWhile'] = function($f_0 = null) {
 // Data_String_NonEmpty_CodePoints_lastIndexOf'
 $GLOBALS['Data_String_NonEmpty_CodePoints_lastIndexOf__prime__'] = function($pat_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodePoints_liftS']))(($GLOBALS['Data_String_CodePoints_lastIndexOf__prime__'])($pat_0));
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_String_NonEmpty_CodePoints_liftS']))(($GLOBALS['Data_String_CodePoints_lastIndexOf__prime__'])($pat_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
 
 // Data_String_NonEmpty_CodePoints_lastIndexOf
-$GLOBALS['Data_String_NonEmpty_CodePoints_lastIndexOf'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodePoints_liftS']))($GLOBALS['Data_String_CodePoints_lastIndexOf']);
+$GLOBALS['Data_String_NonEmpty_CodePoints_lastIndexOf'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_String_NonEmpty_CodePoints_liftS']))($GLOBALS['Data_String_CodePoints_lastIndexOf']);
 
 // Data_String_NonEmpty_CodePoints_indexOf'
 $GLOBALS['Data_String_NonEmpty_CodePoints_indexOf__prime__'] = function($pat_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodePoints_liftS']))(($GLOBALS['Data_String_CodePoints_indexOf__prime__'])($pat_0));
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_String_NonEmpty_CodePoints_liftS']))(($GLOBALS['Data_String_CodePoints_indexOf__prime__'])($pat_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
 
 // Data_String_NonEmpty_CodePoints_indexOf
-$GLOBALS['Data_String_NonEmpty_CodePoints_indexOf'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodePoints_liftS']))($GLOBALS['Data_String_CodePoints_indexOf']);
+$GLOBALS['Data_String_NonEmpty_CodePoints_indexOf'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_String_NonEmpty_CodePoints_liftS']))($GLOBALS['Data_String_CodePoints_indexOf']);
 
 // Data_String_NonEmpty_CodePoints_fromNonEmptyString
 $GLOBALS['Data_String_NonEmpty_CodePoints_fromNonEmptyString'] = function($v_0 = null) {
@@ -205,7 +205,7 @@ $GLOBALS['Data_String_NonEmpty_CodePoints_fromNonEmptyString'] = function($v_0 =
 };
 
 // Data_String_NonEmpty_CodePoints_length
-$GLOBALS['Data_String_NonEmpty_CodePoints_length'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_CodePoints_length']))($GLOBALS['Data_String_NonEmpty_CodePoints_fromNonEmptyString']);
+$GLOBALS['Data_String_NonEmpty_CodePoints_length'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_String_CodePoints_length']))($GLOBALS['Data_String_NonEmpty_CodePoints_fromNonEmptyString']);
 
 // Data_String_NonEmpty_CodePoints_splitAt
 $GLOBALS['Data_String_NonEmpty_CodePoints_splitAt'] = (function() {
@@ -246,10 +246,10 @@ goto end_branch_0;;
 })();
 
 // Data_String_NonEmpty_CodePoints_toCodePointArray
-$GLOBALS['Data_String_NonEmpty_CodePoints_toCodePointArray'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_CodePoints_toCodePointArray']))($GLOBALS['Data_String_NonEmpty_CodePoints_fromNonEmptyString']);
+$GLOBALS['Data_String_NonEmpty_CodePoints_toCodePointArray'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_String_CodePoints_toCodePointArray']))($GLOBALS['Data_String_NonEmpty_CodePoints_fromNonEmptyString']);
 
 // Data_String_NonEmpty_CodePoints_toNonEmptyCodePointArray
-$GLOBALS['Data_String_NonEmpty_CodePoints_toNonEmptyCodePointArray'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodePoints_fromJust']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_fromArray']))($GLOBALS['Data_String_NonEmpty_CodePoints_toCodePointArray']));
+$GLOBALS['Data_String_NonEmpty_CodePoints_toNonEmptyCodePointArray'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_String_NonEmpty_CodePoints_fromJust']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Array_NonEmpty_fromArray']))($GLOBALS['Data_String_NonEmpty_CodePoints_toCodePointArray']));
 
 // Data_String_NonEmpty_CodePoints_uncons
 $GLOBALS['Data_String_NonEmpty_CodePoints_uncons'] = function($nes_0 = null) {
@@ -289,12 +289,12 @@ $GLOBALS['Data_String_NonEmpty_CodePoints_fromCodePointArray'] = function($v_0 =
 };
 
 // Data_String_NonEmpty_CodePoints_fromNonEmptyCodePointArray
-$GLOBALS['Data_String_NonEmpty_CodePoints_fromNonEmptyCodePointArray'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodePoints_fromJust']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodePoints_fromCodePointArray']))($GLOBALS['Data_Array_NonEmpty_toArray']));
+$GLOBALS['Data_String_NonEmpty_CodePoints_fromNonEmptyCodePointArray'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_String_NonEmpty_CodePoints_fromJust']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_String_NonEmpty_CodePoints_fromCodePointArray']))($GLOBALS['Data_Array_NonEmpty_toArray']));
 
 // Data_String_NonEmpty_CodePoints_dropWhile
 $GLOBALS['Data_String_NonEmpty_CodePoints_dropWhile'] = function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_Internal_fromString']))(function($v_1 = null) use ($f_0) {
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_String_NonEmpty_Internal_fromString']))(function($v_1 = null) use ($f_0) {
   $__num = \func_num_args();
   $__res = (($GLOBALS['Data_String_CodePoints_dropWhile'])($f_0))($v_1);
   goto __end;;
@@ -329,7 +329,7 @@ goto end_branch_0;;
 })();
 
 // Data_String_NonEmpty_CodePoints_countPrefix
-$GLOBALS['Data_String_NonEmpty_CodePoints_countPrefix'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodePoints_liftS']))($GLOBALS['Data_String_CodePoints_countPrefix']);
+$GLOBALS['Data_String_NonEmpty_CodePoints_countPrefix'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_String_NonEmpty_CodePoints_liftS']))($GLOBALS['Data_String_CodePoints_countPrefix']);
 
 // Data_String_NonEmpty_CodePoints_cons
 $GLOBALS['Data_String_NonEmpty_CodePoints_cons'] = (function() {
@@ -338,7 +338,7 @@ $GLOBALS['Data_String_NonEmpty_CodePoints_cons'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_String_CodePoints_singleton'])($c_0) . $s_1);
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(($GLOBALS['Data_String_CodePoints_singleton'])($c_0)))($s_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -347,5 +347,5 @@ $GLOBALS['Data_String_NonEmpty_CodePoints_cons'] = (function() {
 })();
 
 // Data_String_NonEmpty_CodePoints_codePointAt
-$GLOBALS['Data_String_NonEmpty_CodePoints_codePointAt'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodePoints_liftS']))($GLOBALS['Data_String_CodePoints_codePointAt']);
+$GLOBALS['Data_String_NonEmpty_CodePoints_codePointAt'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_String_NonEmpty_CodePoints_liftS']))($GLOBALS['Data_String_CodePoints_codePointAt']);
 

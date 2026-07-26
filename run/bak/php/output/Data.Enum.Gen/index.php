@@ -112,8 +112,8 @@ $GLOBALS['Data_Enum_Gen_genBoundedEnum'] = function($dictMonadGen_0 = null) {
   $elements_1_0 = (($GLOBALS['Control_Monad_Gen_elements'])($dictMonadGen_0))($GLOBALS['Data_Enum_Gen_foldable1NonEmpty']);
   $__res = function($dictBoundedEnum_2 = null) use ($dictMonadGen_0, $elements_1_0) {
   $__num = \func_num_args();
-  $Enum1_3_1 = (($dictBoundedEnum_2)['Enum1'])($GLOBALS['Prim_undefined']);
-  $Bounded0_4_2 = (($dictBoundedEnum_2)['Bounded0'])($GLOBALS['Prim_undefined']);
+  $Enum1_3_1 = (($dictBoundedEnum_2)['Enum1'])(null);
+  $Bounded0_4_2 = (($dictBoundedEnum_2)['Bounded0'])(null);
   $v_5_3 = (($Enum1_3_1)['succ'])(($Bounded0_4_2)['bottom']);
   $__t4 = null;;
   if ((is_object($v_5_3) && (($v_5_3)->{'tag'} === "Just"))) {
@@ -121,7 +121,7 @@ $__t4 = ($elements_1_0)(new Phpurs_Data2("NonEmpty", ($Bounded0_4_2)['bottom'], 
 goto end_branch_4;;
 };
   if ((is_object($v_5_3) && (($v_5_3)->{'tag'} === "Nothing"))) {
-$__t4 = (((((($dictMonadGen_0)['Monad0'])($GLOBALS['Prim_undefined']))['Applicative0'])($GLOBALS['Prim_undefined']))['pure'])(($Bounded0_4_2)['bottom']);
+$__t4 = (((((($dictMonadGen_0)['Monad0'])(null))['Applicative0'])(null))['pure'])(($Bounded0_4_2)['bottom']);
 goto end_branch_4;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);

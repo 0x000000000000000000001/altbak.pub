@@ -102,7 +102,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Control_Monad_ST_Class_monadSTST
-$GLOBALS['Control_Monad_ST_Class_monadSTST'] = ["liftST" => ($GLOBALS['Control_Category_categoryFn'])['identity'], "Monad0" => function($dollar__unused_0 = null) {
+$GLOBALS['Control_Monad_ST_Class_monadSTST'] = ["liftST" => ($GLOBALS['Control_Category_categoryFn'])['identity'], "Monad0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Monad_ST_Internal_monadST'];
   goto __end;;
@@ -111,7 +111,7 @@ $GLOBALS['Control_Monad_ST_Class_monadSTST'] = ["liftST" => ($GLOBALS['Control_C
 }];
 
 // Control_Monad_ST_Class_monadSTEffect
-$GLOBALS['Control_Monad_ST_Class_monadSTEffect'] = ["liftST" => $GLOBALS['Unsafe_Coerce_unsafeCoerce'], "Monad0" => function($dollar__unused_0 = null) {
+$GLOBALS['Control_Monad_ST_Class_monadSTEffect'] = ["liftST" => $GLOBALS['Unsafe_Coerce_unsafeCoerce'], "Monad0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Effect_monadEffect'];
   goto __end;;

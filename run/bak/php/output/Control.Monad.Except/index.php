@@ -108,13 +108,15 @@ $GLOBALS['Control_Monad_Except_withExcept'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
+  $__res = ((($GLOBALS['Data_Identity_functorIdentity'])['map'])(function($v2_2 = null) use ($f_0) {
+  $__num = \func_num_args();
   $__t0 = null;;
-  if ((is_object($v_1) && (($v_1)->{'tag'} === "Right"))) {
-$__t0 = new Phpurs_Data1("Right", ($v_1)->{'value0'});
+  if ((is_object($v2_2) && (($v2_2)->{'tag'} === "Right"))) {
+$__t0 = new Phpurs_Data1("Right", ($v2_2)->{'value0'});
 goto end_branch_0;;
 };
-  if ((is_object($v_1) && (($v_1)->{'tag'} === "Left"))) {
-$__t0 = new Phpurs_Data1("Left", ($f_0)(($v_1)->{'value0'}));
+  if ((is_object($v2_2) && (($v2_2)->{'tag'} === "Left"))) {
+$__t0 = new Phpurs_Data1("Left", ($f_0)(($v2_2)->{'value0'}));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -123,18 +125,22 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))($v_1);
+  goto __end;;
+  __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })();
 
 // Control_Monad_Except_runExcept
-$GLOBALS['Control_Monad_Except_runExcept'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($GLOBALS['Control_Monad_Except_Trans_runExceptT']);
+$GLOBALS['Control_Monad_Except_runExcept'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($GLOBALS['Control_Monad_Except_Trans_runExceptT']);
 
 // Control_Monad_Except_mapExcept
 $GLOBALS['Control_Monad_Except_mapExcept'] = function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Identity_Identity']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_0))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

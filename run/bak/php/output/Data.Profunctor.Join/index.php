@@ -120,7 +120,7 @@ $GLOBALS['Data_Profunctor_Join_showJoin'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (("(Join " . (($dictShow_0)['show'])($v_1)) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Join "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -161,9 +161,9 @@ $GLOBALS['Data_Profunctor_Join_ordJoin'] = function($dictOrd_0 = null) {
 };
 
 // Data_Profunctor_Join_newtypeJoin
-$GLOBALS['Data_Profunctor_Join_newtypeJoin'] = ["Coercible0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Profunctor_Join_newtypeJoin'] = ["Coercible0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Prim_undefined'];
+  $__res = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -172,7 +172,7 @@ $GLOBALS['Data_Profunctor_Join_newtypeJoin'] = ["Coercible0" => function($dollar
 // Data_Profunctor_Join_monoidJoin
 $GLOBALS['Data_Profunctor_Join_monoidJoin'] = function($dictCategory_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictCategory_0)['Semigroupoid0'])($GLOBALS['Prim_undefined']);
+  $__local_var_1_0 = (($dictCategory_0)['Semigroupoid0'])(null);
   $semigroupJoin1_2_1 = ["append" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2 = null, $v1_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -186,7 +186,7 @@ $GLOBALS['Data_Profunctor_Join_monoidJoin'] = function($dictCategory_0 = null) {
   };
   return $__fn;
 })()];
-  $__res = ["mempty" => ($dictCategory_0)['identity'], "Semigroup0" => function($dollar__unused_3 = null) use ($semigroupJoin1_2_1) {
+  $__res = ["mempty" => ($dictCategory_0)['identity'], "Semigroup0" => function($_dollar__unused_3 = null) use ($semigroupJoin1_2_1) {
   $__num = \func_num_args();
   $__res = $semigroupJoin1_2_1;
   goto __end;;

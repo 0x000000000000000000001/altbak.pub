@@ -99,12 +99,12 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 // Data_Tuple_Nested_uncurry9
 $GLOBALS['Data_Tuple_Nested_uncurry9'] = (function() {
-  $__fn = function($f__prime___0 = null, $v_1 = null) use (&$__fn) {
+  $__fn = function($f_prime_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((((((($f__prime___0)(($v_1)->{'value0'}))((($v_1)->{'value1'})->{'value0'}))(((($v_1)->{'value1'})->{'value1'})->{'value0'}))((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
+  $__res = ((((((((($f_prime_0)(($v_1)->{'value0'}))((($v_1)->{'value1'})->{'value0'}))(((($v_1)->{'value1'})->{'value1'})->{'value0'}))((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -114,12 +114,12 @@ $GLOBALS['Data_Tuple_Nested_uncurry9'] = (function() {
 
 // Data_Tuple_Nested_uncurry8
 $GLOBALS['Data_Tuple_Nested_uncurry8'] = (function() {
-  $__fn = function($f__prime___0 = null, $v_1 = null) use (&$__fn) {
+  $__fn = function($f_prime_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((((((($f__prime___0)(($v_1)->{'value0'}))((($v_1)->{'value1'})->{'value0'}))(((($v_1)->{'value1'})->{'value1'})->{'value0'}))((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
+  $__res = (((((((($f_prime_0)(($v_1)->{'value0'}))((($v_1)->{'value1'})->{'value0'}))(((($v_1)->{'value1'})->{'value1'})->{'value0'}))((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -129,12 +129,12 @@ $GLOBALS['Data_Tuple_Nested_uncurry8'] = (function() {
 
 // Data_Tuple_Nested_uncurry7
 $GLOBALS['Data_Tuple_Nested_uncurry7'] = (function() {
-  $__fn = function($f__prime___0 = null, $v_1 = null) use (&$__fn) {
+  $__fn = function($f_prime_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((((($f__prime___0)(($v_1)->{'value0'}))((($v_1)->{'value1'})->{'value0'}))(((($v_1)->{'value1'})->{'value1'})->{'value0'}))((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
+  $__res = ((((((($f_prime_0)(($v_1)->{'value0'}))((($v_1)->{'value1'})->{'value0'}))(((($v_1)->{'value1'})->{'value1'})->{'value0'}))((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -144,12 +144,12 @@ $GLOBALS['Data_Tuple_Nested_uncurry7'] = (function() {
 
 // Data_Tuple_Nested_uncurry6
 $GLOBALS['Data_Tuple_Nested_uncurry6'] = (function() {
-  $__fn = function($f__prime___0 = null, $v_1 = null) use (&$__fn) {
+  $__fn = function($f_prime_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((((($f__prime___0)(($v_1)->{'value0'}))((($v_1)->{'value1'})->{'value0'}))(((($v_1)->{'value1'})->{'value1'})->{'value0'}))((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
+  $__res = (((((($f_prime_0)(($v_1)->{'value0'}))((($v_1)->{'value1'})->{'value0'}))(((($v_1)->{'value1'})->{'value1'})->{'value0'}))((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -219,12 +219,12 @@ $GLOBALS['Data_Tuple_Nested_uncurry2'] = (function() {
 
 // Data_Tuple_Nested_uncurry10
 $GLOBALS['Data_Tuple_Nested_uncurry10'] = (function() {
-  $__fn = function($f__prime___0 = null, $v_1 = null) use (&$__fn) {
+  $__fn = function($f_prime_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((((((((($f__prime___0)(($v_1)->{'value0'}))((($v_1)->{'value1'})->{'value0'}))(((($v_1)->{'value1'})->{'value1'})->{'value0'}))((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
+  $__res = (((((((((($f_prime_0)(($v_1)->{'value0'}))((($v_1)->{'value1'})->{'value0'}))(((($v_1)->{'value1'})->{'value1'})->{'value0'}))((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -633,12 +633,12 @@ $GLOBALS['Data_Tuple_Nested_get1'] = function($v_0 = null) {
 
 // Data_Tuple_Nested_curry9
 $GLOBALS['Data_Tuple_Nested_curry9'] = (function() {
-  $__fn = function($z_0 = null, $f__prime___1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null, $e_6 = null, $f_7 = null, $g_8 = null, $h_9 = null, $i_10 = null) use (&$__fn) {
+  $__fn = function($z_0 = null, $f_prime_1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null, $e_6 = null, $f_7 = null, $g_8 = null, $h_9 = null, $i_10 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 11) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 11);
   }
-  $__res = ($f__prime___1)(new Phpurs_Data2("Tuple", $a_2, new Phpurs_Data2("Tuple", $b_3, new Phpurs_Data2("Tuple", $c_4, new Phpurs_Data2("Tuple", $d_5, new Phpurs_Data2("Tuple", $e_6, new Phpurs_Data2("Tuple", $f_7, new Phpurs_Data2("Tuple", $g_8, new Phpurs_Data2("Tuple", $h_9, new Phpurs_Data2("Tuple", $i_10, $z_0))))))))));
+  $__res = ($f_prime_1)(new Phpurs_Data2("Tuple", $a_2, new Phpurs_Data2("Tuple", $b_3, new Phpurs_Data2("Tuple", $c_4, new Phpurs_Data2("Tuple", $d_5, new Phpurs_Data2("Tuple", $e_6, new Phpurs_Data2("Tuple", $f_7, new Phpurs_Data2("Tuple", $g_8, new Phpurs_Data2("Tuple", $h_9, new Phpurs_Data2("Tuple", $i_10, $z_0))))))))));
   goto __end;;
   __end:
   return $__num > 11 ? $__res(...\array_slice(\func_get_args(), 11)) : $__res;
@@ -648,12 +648,12 @@ $GLOBALS['Data_Tuple_Nested_curry9'] = (function() {
 
 // Data_Tuple_Nested_curry8
 $GLOBALS['Data_Tuple_Nested_curry8'] = (function() {
-  $__fn = function($z_0 = null, $f__prime___1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null, $e_6 = null, $f_7 = null, $g_8 = null, $h_9 = null) use (&$__fn) {
+  $__fn = function($z_0 = null, $f_prime_1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null, $e_6 = null, $f_7 = null, $g_8 = null, $h_9 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 10) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 10);
   }
-  $__res = ($f__prime___1)(new Phpurs_Data2("Tuple", $a_2, new Phpurs_Data2("Tuple", $b_3, new Phpurs_Data2("Tuple", $c_4, new Phpurs_Data2("Tuple", $d_5, new Phpurs_Data2("Tuple", $e_6, new Phpurs_Data2("Tuple", $f_7, new Phpurs_Data2("Tuple", $g_8, new Phpurs_Data2("Tuple", $h_9, $z_0)))))))));
+  $__res = ($f_prime_1)(new Phpurs_Data2("Tuple", $a_2, new Phpurs_Data2("Tuple", $b_3, new Phpurs_Data2("Tuple", $c_4, new Phpurs_Data2("Tuple", $d_5, new Phpurs_Data2("Tuple", $e_6, new Phpurs_Data2("Tuple", $f_7, new Phpurs_Data2("Tuple", $g_8, new Phpurs_Data2("Tuple", $h_9, $z_0)))))))));
   goto __end;;
   __end:
   return $__num > 10 ? $__res(...\array_slice(\func_get_args(), 10)) : $__res;
@@ -663,12 +663,12 @@ $GLOBALS['Data_Tuple_Nested_curry8'] = (function() {
 
 // Data_Tuple_Nested_curry7
 $GLOBALS['Data_Tuple_Nested_curry7'] = (function() {
-  $__fn = function($z_0 = null, $f__prime___1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null, $e_6 = null, $f_7 = null, $g_8 = null) use (&$__fn) {
+  $__fn = function($z_0 = null, $f_prime_1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null, $e_6 = null, $f_7 = null, $g_8 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 9) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 9);
   }
-  $__res = ($f__prime___1)(new Phpurs_Data2("Tuple", $a_2, new Phpurs_Data2("Tuple", $b_3, new Phpurs_Data2("Tuple", $c_4, new Phpurs_Data2("Tuple", $d_5, new Phpurs_Data2("Tuple", $e_6, new Phpurs_Data2("Tuple", $f_7, new Phpurs_Data2("Tuple", $g_8, $z_0))))))));
+  $__res = ($f_prime_1)(new Phpurs_Data2("Tuple", $a_2, new Phpurs_Data2("Tuple", $b_3, new Phpurs_Data2("Tuple", $c_4, new Phpurs_Data2("Tuple", $d_5, new Phpurs_Data2("Tuple", $e_6, new Phpurs_Data2("Tuple", $f_7, new Phpurs_Data2("Tuple", $g_8, $z_0))))))));
   goto __end;;
   __end:
   return $__num > 9 ? $__res(...\array_slice(\func_get_args(), 9)) : $__res;
@@ -678,12 +678,12 @@ $GLOBALS['Data_Tuple_Nested_curry7'] = (function() {
 
 // Data_Tuple_Nested_curry6
 $GLOBALS['Data_Tuple_Nested_curry6'] = (function() {
-  $__fn = function($z_0 = null, $f__prime___1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null, $e_6 = null, $f_7 = null) use (&$__fn) {
+  $__fn = function($z_0 = null, $f_prime_1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null, $e_6 = null, $f_7 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 8) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 8);
   }
-  $__res = ($f__prime___1)(new Phpurs_Data2("Tuple", $a_2, new Phpurs_Data2("Tuple", $b_3, new Phpurs_Data2("Tuple", $c_4, new Phpurs_Data2("Tuple", $d_5, new Phpurs_Data2("Tuple", $e_6, new Phpurs_Data2("Tuple", $f_7, $z_0)))))));
+  $__res = ($f_prime_1)(new Phpurs_Data2("Tuple", $a_2, new Phpurs_Data2("Tuple", $b_3, new Phpurs_Data2("Tuple", $c_4, new Phpurs_Data2("Tuple", $d_5, new Phpurs_Data2("Tuple", $e_6, new Phpurs_Data2("Tuple", $f_7, $z_0)))))));
   goto __end;;
   __end:
   return $__num > 8 ? $__res(...\array_slice(\func_get_args(), 8)) : $__res;
@@ -753,12 +753,12 @@ $GLOBALS['Data_Tuple_Nested_curry2'] = (function() {
 
 // Data_Tuple_Nested_curry10
 $GLOBALS['Data_Tuple_Nested_curry10'] = (function() {
-  $__fn = function($z_0 = null, $f__prime___1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null, $e_6 = null, $f_7 = null, $g_8 = null, $h_9 = null, $i_10 = null, $j_11 = null) use (&$__fn) {
+  $__fn = function($z_0 = null, $f_prime_1 = null, $a_2 = null, $b_3 = null, $c_4 = null, $d_5 = null, $e_6 = null, $f_7 = null, $g_8 = null, $h_9 = null, $i_10 = null, $j_11 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 12) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 12);
   }
-  $__res = ($f__prime___1)(new Phpurs_Data2("Tuple", $a_2, new Phpurs_Data2("Tuple", $b_3, new Phpurs_Data2("Tuple", $c_4, new Phpurs_Data2("Tuple", $d_5, new Phpurs_Data2("Tuple", $e_6, new Phpurs_Data2("Tuple", $f_7, new Phpurs_Data2("Tuple", $g_8, new Phpurs_Data2("Tuple", $h_9, new Phpurs_Data2("Tuple", $i_10, new Phpurs_Data2("Tuple", $j_11, $z_0)))))))))));
+  $__res = ($f_prime_1)(new Phpurs_Data2("Tuple", $a_2, new Phpurs_Data2("Tuple", $b_3, new Phpurs_Data2("Tuple", $c_4, new Phpurs_Data2("Tuple", $d_5, new Phpurs_Data2("Tuple", $e_6, new Phpurs_Data2("Tuple", $f_7, new Phpurs_Data2("Tuple", $g_8, new Phpurs_Data2("Tuple", $h_9, new Phpurs_Data2("Tuple", $i_10, new Phpurs_Data2("Tuple", $j_11, $z_0)))))))))));
   goto __end;;
   __end:
   return $__num > 12 ? $__res(...\array_slice(\func_get_args(), 12)) : $__res;

@@ -113,7 +113,7 @@ $GLOBALS['Data_Profunctor_Strong_strongFn'] = ["first" => (function() {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "second" => ($GLOBALS['Data_Tuple_functorTuple'])['map'], "Profunctor0" => function($dollar__unused_0 = null) {
+})(), "second" => ($GLOBALS['Data_Tuple_functorTuple'])['map'], "Profunctor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Profunctor_profunctorFn'];
   goto __end;;
@@ -161,7 +161,7 @@ $GLOBALS['Data_Profunctor_Strong_fanout'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $lcmap_2_0 = ($GLOBALS['Data_Profunctor_lcmap'])((($dictStrong_1)['Profunctor0'])($GLOBALS['Prim_undefined']));
+  $lcmap_2_0 = ($GLOBALS['Data_Profunctor_lcmap'])((($dictStrong_1)['Profunctor0'])(null));
   $__res = (function() use ($dictSemigroupoid_0, $dictStrong_1, $lcmap_2_0) {
   $__fn = function($l_3 = null, $r_4 = null) use ($dictSemigroupoid_0, $dictStrong_1, $lcmap_2_0, &$__fn) {
   $__num = \func_num_args();

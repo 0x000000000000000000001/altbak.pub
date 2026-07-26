@@ -158,14 +158,14 @@ $GLOBALS['Effect_Exception_throwException'] = $ffi_Effect_Exception['throwExcept
 // Effect_Exception_try
 $GLOBALS['Effect_Exception_try'] = function($action_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Exception_catchException'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_pureE']))($GLOBALS['Data_Either_Left'])))(((($GLOBALS['Effect_applyEffect'])['apply'])(($GLOBALS['Effect_pureE'])($GLOBALS['Data_Either_Right'])))($action_0));
+  $__res = (($GLOBALS['Effect_Exception_catchException'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($GLOBALS['Effect_applicativeEffect'])['pure']))($GLOBALS['Data_Either_Left'])))(((($GLOBALS['Effect_functorEffect'])['map'])($GLOBALS['Data_Either_Right']))($action_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
 
 // Effect_Exception_throw
-$GLOBALS['Effect_Exception_throw'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Exception_throwException']))($GLOBALS['Effect_Exception_error']);
+$GLOBALS['Effect_Exception_throw'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Effect_Exception_throwException']))($GLOBALS['Effect_Exception_error']);
 
 // Effect_Exception_stack
 $GLOBALS['Effect_Exception_stack'] = (($GLOBALS['Effect_Exception_stackImpl'])($GLOBALS['Data_Maybe_Just']))(new Phpurs_Data0("Nothing"));

@@ -96,7 +96,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Safe_Coerce_coerce
-$GLOBALS['Safe_Coerce_coerce'] = function($dollar__unused_0 = null) {
+$GLOBALS['Safe_Coerce_coerce'] = function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Unsafe_Coerce_unsafeCoerce'];
   goto __end;;

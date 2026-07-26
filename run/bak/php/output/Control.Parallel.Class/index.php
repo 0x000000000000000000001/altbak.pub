@@ -147,9 +147,9 @@ $GLOBALS['Control_Parallel_Class_parallel'] = function($dict_0 = null) {
 };
 
 // Control_Parallel_Class_newtypeParCont
-$GLOBALS['Control_Parallel_Class_newtypeParCont'] = ["Coercible0" => function($dollar__unused_0 = null) {
+$GLOBALS['Control_Parallel_Class_newtypeParCont'] = ["Coercible0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Prim_undefined'];
+  $__res = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -158,32 +158,83 @@ $GLOBALS['Control_Parallel_Class_newtypeParCont'] = ["Coercible0" => function($d
 // Control_Parallel_Class_monadParWriterT
 $GLOBALS['Control_Parallel_Class_monadParWriterT'] = function($dictMonoid_0 = null) {
   $__num = \func_num_args();
-  $applyWriterT_1_0 = ($GLOBALS['Control_Monad_Writer_Trans_applyWriterT'])((($dictMonoid_0)['Semigroup0'])($GLOBALS['Prim_undefined']));
-  $__res = function($dictParallel_2 = null) use ($applyWriterT_1_0) {
+  $__local_var_1_0 = (($dictMonoid_0)['Semigroup0'])(null);
+  $applyWriterT_2_1 = function($dictApply_2 = null) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  $applyWriterT1_3_1 = ($applyWriterT_1_0)((($dictParallel_2)['Apply0'])($GLOBALS['Prim_undefined']));
-  $applyWriterT2_4_2 = ($applyWriterT_1_0)((($dictParallel_2)['Apply1'])($GLOBALS['Prim_undefined']));
-  $__res = ["parallel" => function($v_5 = null) use ($dictParallel_2) {
+  $Functor0_3_1 = (($dictApply_2)['Functor0'])(null);
+  $functorWriterT1_4_2 = ["map" => function($f_4 = null) use ($Functor0_3_1) {
   $__num = \func_num_args();
-  $__res = (($dictParallel_2)['parallel'])($v_5);
+  $__res = (($Functor0_3_1)['map'])(function($v_5 = null) use ($f_4) {
+  $__num = \func_num_args();
+  $__res = new Phpurs_Data2("Tuple", ($f_4)(($v_5)->{'value0'}), ($v_5)->{'value1'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "sequential" => function($v_5 = null) use ($dictParallel_2) {
-  $__num = \func_num_args();
-  $__res = (($dictParallel_2)['sequential'])($v_5);
+});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Apply0" => function($dollar__unused_5 = null) use ($applyWriterT1_3_1) {
+}];
+  $__res = ["apply" => (function() use ($Functor0_3_1, $__local_var_1_0, $dictApply_2) {
+  $__fn = function($v_5 = null, $v1_6 = null) use ($Functor0_3_1, $__local_var_1_0, $dictApply_2, &$__fn) {
   $__num = \func_num_args();
-  $__res = $applyWriterT1_3_1;
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ((($dictApply_2)['apply'])(((($Functor0_3_1)['map'])((function() use ($__local_var_1_0) {
+  $__fn = function($v3_7 = null, $v4_8 = null) use ($__local_var_1_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = new Phpurs_Data2("Tuple", (($v3_7)->{'value0'})(($v4_8)->{'value0'}), ((($__local_var_1_0)['append'])(($v3_7)->{'value1'}))(($v4_8)->{'value1'}));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()))($v_5)))($v1_6);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "Functor0" => function($_dollar__unused_5 = null) use ($functorWriterT1_4_2) {
+  $__num = \func_num_args();
+  $__res = $functorWriterT1_4_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Apply1" => function($dollar__unused_5 = null) use ($applyWriterT2_4_2) {
+}];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  $__res = function($dictParallel_3 = null) use ($applyWriterT_2_1) {
   $__num = \func_num_args();
-  $__res = $applyWriterT2_4_2;
+  $applyWriterT1_4_4 = ($applyWriterT_2_1)((($dictParallel_3)['Apply0'])(null));
+  $applyWriterT2_5_5 = ($applyWriterT_2_1)((($dictParallel_3)['Apply1'])(null));
+  $__res = ["parallel" => function($v_6 = null) use ($dictParallel_3) {
+  $__num = \func_num_args();
+  $__res = (($dictParallel_3)['parallel'])($v_6);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "sequential" => function($v_6 = null) use ($dictParallel_3) {
+  $__num = \func_num_args();
+  $__res = (($dictParallel_3)['sequential'])($v_6);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Apply0" => function($_dollar__unused_6 = null) use ($applyWriterT1_4_4) {
+  $__num = \func_num_args();
+  $__res = $applyWriterT1_4_4;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Apply1" => function($_dollar__unused_6 = null) use ($applyWriterT2_5_5) {
+  $__num = \func_num_args();
+  $__res = $applyWriterT2_5_5;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -202,27 +253,27 @@ $GLOBALS['Control_Parallel_Class_monadParStar'] = function($dictParallel_0 = nul
   $__num = \func_num_args();
   $parallel1_1_0 = ($dictParallel_0)['parallel'];
   $sequential1_2_1 = ($dictParallel_0)['sequential'];
-  $applyStar_3_2 = ($GLOBALS['Data_Profunctor_Star_applyStar'])((($dictParallel_0)['Apply0'])($GLOBALS['Prim_undefined']));
-  $applyStar1_4_3 = ($GLOBALS['Data_Profunctor_Star_applyStar'])((($dictParallel_0)['Apply1'])($GLOBALS['Prim_undefined']));
+  $applyStar_3_2 = ($GLOBALS['Data_Profunctor_Star_applyStar'])((($dictParallel_0)['Apply0'])(null));
+  $applyStar1_4_3 = ($GLOBALS['Data_Profunctor_Star_applyStar'])((($dictParallel_0)['Apply1'])(null));
   $__res = ["parallel" => function($v_5 = null) use ($parallel1_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($parallel1_1_0))($v_5);
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($parallel1_1_0))($v_5);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "sequential" => function($v_5 = null) use ($sequential1_2_1) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($sequential1_2_1))($v_5);
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($sequential1_2_1))($v_5);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Apply0" => function($dollar__unused_5 = null) use ($applyStar_3_2) {
+}, "Apply0" => function($_dollar__unused_5 = null) use ($applyStar_3_2) {
   $__num = \func_num_args();
   $__res = $applyStar_3_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Apply1" => function($dollar__unused_5 = null) use ($applyStar1_4_3) {
+}, "Apply1" => function($_dollar__unused_5 = null) use ($applyStar1_4_3) {
   $__num = \func_num_args();
   $__res = $applyStar1_4_3;
   goto __end;;
@@ -237,15 +288,15 @@ $GLOBALS['Control_Parallel_Class_monadParStar'] = function($dictParallel_0 = nul
 // Control_Parallel_Class_monadParReaderT
 $GLOBALS['Control_Parallel_Class_monadParReaderT'] = function($dictParallel_0 = null) {
   $__num = \func_num_args();
-  $applyReaderT_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_applyReaderT'])((($dictParallel_0)['Apply0'])($GLOBALS['Prim_undefined']));
-  $applyReaderT1_2_1 = ($GLOBALS['Control_Monad_Reader_Trans_applyReaderT'])((($dictParallel_0)['Apply1'])($GLOBALS['Prim_undefined']));
-  $__res = ["parallel" => ($GLOBALS['Control_Monad_Reader_Trans_mapReaderT'])(($dictParallel_0)['parallel']), "sequential" => ($GLOBALS['Control_Monad_Reader_Trans_mapReaderT'])(($dictParallel_0)['sequential']), "Apply0" => function($dollar__unused_3 = null) use ($applyReaderT_1_0) {
+  $applyReaderT_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_applyReaderT'])((($dictParallel_0)['Apply0'])(null));
+  $applyReaderT1_2_1 = ($GLOBALS['Control_Monad_Reader_Trans_applyReaderT'])((($dictParallel_0)['Apply1'])(null));
+  $__res = ["parallel" => ($GLOBALS['Control_Monad_Reader_Trans_mapReaderT'])(($dictParallel_0)['parallel']), "sequential" => ($GLOBALS['Control_Monad_Reader_Trans_mapReaderT'])(($dictParallel_0)['sequential']), "Apply0" => function($_dollar__unused_3 = null) use ($applyReaderT_1_0) {
   $__num = \func_num_args();
   $__res = $applyReaderT_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Apply1" => function($dollar__unused_3 = null) use ($applyReaderT1_2_1) {
+}, "Apply1" => function($_dollar__unused_3 = null) use ($applyReaderT1_2_1) {
   $__num = \func_num_args();
   $__res = $applyReaderT1_2_1;
   goto __end;;
@@ -260,31 +311,65 @@ $GLOBALS['Control_Parallel_Class_monadParReaderT'] = function($dictParallel_0 = 
 // Control_Parallel_Class_monadParMaybeT
 $GLOBALS['Control_Parallel_Class_monadParMaybeT'] = function($dictParallel_0 = null) {
   $__num = \func_num_args();
-  $applyCompose_1_0 = (($GLOBALS['Data_Functor_Compose_applyCompose'])((($dictParallel_0)['Apply1'])($GLOBALS['Prim_undefined'])))($GLOBALS['Data_Maybe_applyMaybe']);
-  $__res = function($dictMonad_2 = null) use ($applyCompose_1_0, $dictParallel_0) {
+  $__local_var_1_0 = (($dictParallel_0)['Apply1'])(null);
+  $Functor0_2_1 = (($__local_var_1_0)['Functor0'])(null);
+  $__local_var_3_2 = (($GLOBALS['Data_Maybe_applyMaybe'])['Functor0'])(null);
+  $functorCompose2_4_3 = ["map" => (function() use ($Functor0_2_1, $__local_var_3_2) {
+  $__fn = function($f_4 = null, $v_5 = null) use ($Functor0_2_1, $__local_var_3_2, &$__fn) {
   $__num = \func_num_args();
-  $applyMaybeT_3_1 = ($GLOBALS['Control_Monad_Maybe_Trans_applyMaybeT'])($dictMonad_2);
-  $__res = ["parallel" => function($v_4 = null) use ($dictParallel_0) {
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ((($Functor0_2_1)['map'])((($__local_var_3_2)['map'])($f_4)))($v_5);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
+  $applyCompose_4_3 = ["apply" => (function() use ($Functor0_2_1, $__local_var_1_0) {
+  $__fn = function($v_5 = null, $v1_6 = null) use ($Functor0_2_1, $__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
-  $__res = (($dictParallel_0)['parallel'])($v_4);
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ((($__local_var_1_0)['apply'])(((($Functor0_2_1)['map'])(($GLOBALS['Data_Maybe_applyMaybe'])['apply']))($v_5)))($v1_6);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "Functor0" => function($_dollar__unused_5 = null) use ($functorCompose2_4_3) {
+  $__num = \func_num_args();
+  $__res = $functorCompose2_4_3;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "sequential" => function($v_4 = null) use ($dictParallel_0) {
+}];
+  $__res = function($dictMonad_5 = null) use ($applyCompose_4_3, $dictParallel_0) {
   $__num = \func_num_args();
-  $__res = (($dictParallel_0)['sequential'])($v_4);
+  $applyMaybeT_6_5 = ($GLOBALS['Control_Monad_Maybe_Trans_applyMaybeT'])($dictMonad_5);
+  $__res = ["parallel" => function($v_7 = null) use ($dictParallel_0) {
+  $__num = \func_num_args();
+  $__res = (($dictParallel_0)['parallel'])($v_7);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Apply0" => function($dollar__unused_4 = null) use ($applyMaybeT_3_1) {
+}, "sequential" => function($v_7 = null) use ($dictParallel_0) {
   $__num = \func_num_args();
-  $__res = $applyMaybeT_3_1;
+  $__res = (($dictParallel_0)['sequential'])($v_7);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Apply1" => function($dollar__unused_4 = null) use ($applyCompose_1_0) {
+}, "Apply0" => function($_dollar__unused_7 = null) use ($applyMaybeT_6_5) {
   $__num = \func_num_args();
-  $__res = $applyCompose_1_0;
+  $__res = $applyMaybeT_6_5;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Apply1" => function($_dollar__unused_7 = null) use ($applyCompose_4_3) {
+  $__num = \func_num_args();
+  $__res = $applyCompose_4_3;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -301,31 +386,65 @@ $GLOBALS['Control_Parallel_Class_monadParMaybeT'] = function($dictParallel_0 = n
 // Control_Parallel_Class_monadParExceptT
 $GLOBALS['Control_Parallel_Class_monadParExceptT'] = function($dictParallel_0 = null) {
   $__num = \func_num_args();
-  $applyCompose_1_0 = (($GLOBALS['Data_Functor_Compose_applyCompose'])((($dictParallel_0)['Apply1'])($GLOBALS['Prim_undefined'])))($GLOBALS['Data_Either_applyEither']);
-  $__res = function($dictMonad_2 = null) use ($applyCompose_1_0, $dictParallel_0) {
+  $__local_var_1_0 = (($dictParallel_0)['Apply1'])(null);
+  $Functor0_2_1 = (($__local_var_1_0)['Functor0'])(null);
+  $__local_var_3_2 = (($GLOBALS['Data_Either_applyEither'])['Functor0'])(null);
+  $functorCompose2_4_3 = ["map" => (function() use ($Functor0_2_1, $__local_var_3_2) {
+  $__fn = function($f_4 = null, $v_5 = null) use ($Functor0_2_1, $__local_var_3_2, &$__fn) {
   $__num = \func_num_args();
-  $applyExceptT_3_1 = ($GLOBALS['Control_Monad_Except_Trans_applyExceptT'])($dictMonad_2);
-  $__res = ["parallel" => function($v_4 = null) use ($dictParallel_0) {
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ((($Functor0_2_1)['map'])((($__local_var_3_2)['map'])($f_4)))($v_5);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
+  $applyCompose_4_3 = ["apply" => (function() use ($Functor0_2_1, $__local_var_1_0) {
+  $__fn = function($v_5 = null, $v1_6 = null) use ($Functor0_2_1, $__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
-  $__res = (($dictParallel_0)['parallel'])($v_4);
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ((($__local_var_1_0)['apply'])(((($Functor0_2_1)['map'])(($GLOBALS['Data_Either_applyEither'])['apply']))($v_5)))($v1_6);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "Functor0" => function($_dollar__unused_5 = null) use ($functorCompose2_4_3) {
+  $__num = \func_num_args();
+  $__res = $functorCompose2_4_3;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "sequential" => function($v_4 = null) use ($dictParallel_0) {
+}];
+  $__res = function($dictMonad_5 = null) use ($applyCompose_4_3, $dictParallel_0) {
   $__num = \func_num_args();
-  $__res = (($dictParallel_0)['sequential'])($v_4);
+  $applyExceptT_6_5 = ($GLOBALS['Control_Monad_Except_Trans_applyExceptT'])($dictMonad_5);
+  $__res = ["parallel" => function($v_7 = null) use ($dictParallel_0) {
+  $__num = \func_num_args();
+  $__res = (($dictParallel_0)['parallel'])($v_7);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Apply0" => function($dollar__unused_4 = null) use ($applyExceptT_3_1) {
+}, "sequential" => function($v_7 = null) use ($dictParallel_0) {
   $__num = \func_num_args();
-  $__res = $applyExceptT_3_1;
+  $__res = (($dictParallel_0)['sequential'])($v_7);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Apply1" => function($dollar__unused_4 = null) use ($applyCompose_1_0) {
+}, "Apply0" => function($_dollar__unused_7 = null) use ($applyExceptT_6_5) {
   $__num = \func_num_args();
-  $__res = $applyCompose_1_0;
+  $__res = $applyExceptT_6_5;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Apply1" => function($_dollar__unused_7 = null) use ($applyCompose_4_3) {
+  $__num = \func_num_args();
+  $__res = $applyCompose_4_3;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -346,23 +465,23 @@ $GLOBALS['Control_Parallel_Class_monadParCostar'] = function($dictParallel_0 = n
   $parallel1_2_1 = ($dictParallel_0)['parallel'];
   $__res = ["parallel" => function($v_3 = null) use ($sequential1_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($v_3))($sequential1_1_0);
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($v_3))($sequential1_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "sequential" => function($v_3 = null) use ($parallel1_2_1) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($v_3))($parallel1_2_1);
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($v_3))($parallel1_2_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Apply0" => function($dollar__unused_3 = null) {
+}, "Apply0" => function($_dollar__unused_3 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Functor_Costar_applyCostar'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Apply1" => function($dollar__unused_3 = null) {
+}, "Apply1" => function($_dollar__unused_3 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Functor_Costar_applyCostar'];
   goto __end;;
@@ -420,7 +539,7 @@ $GLOBALS['Control_Parallel_Class_monadParParCont'] = function($dictMonadEffect_0
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_2 = null) use ($functorContT1_1_0) {
+})(), "Functor0" => function($_dollar__unused_2 = null) use ($functorContT1_1_0) {
   $__num = \func_num_args();
   $__res = $functorContT1_1_0;
   goto __end;;
@@ -433,13 +552,13 @@ $GLOBALS['Control_Parallel_Class_monadParParCont'] = function($dictMonadEffect_0
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Apply0" => function($dollar__unused_3 = null) use ($applyContT_2_1) {
+}, "Apply0" => function($_dollar__unused_3 = null) use ($applyContT_2_1) {
   $__num = \func_num_args();
   $__res = $applyContT_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Apply1" => function($dollar__unused_3 = null) use ($dictMonadEffect_0) {
+}, "Apply1" => function($_dollar__unused_3 = null) use ($dictMonadEffect_0) {
   $__num = \func_num_args();
   $__res = ($GLOBALS['Control_Parallel_Class_applyParCont'])($dictMonadEffect_0);
   goto __end;;
@@ -456,7 +575,7 @@ $GLOBALS['Control_Parallel_Class_functorParCont'] = function($dictMonadEffect_0 
   $__num = \func_num_args();
   $__res = ["map" => function($f_1 = null) use ($dictMonadEffect_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Parallel_Class_monadParParCont'])($dictMonadEffect_0))['parallel']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((function() use ($f_1) {
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Control_Parallel_Class_monadParParCont'])($dictMonadEffect_0))['parallel']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((function() use ($f_1) {
   $__fn = function($v_2 = null, $k_3 = null) use ($f_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -487,34 +606,35 @@ $GLOBALS['Control_Parallel_Class_functorParCont'] = function($dictMonadEffect_0 
 // Control_Parallel_Class_applyParCont
 $GLOBALS['Control_Parallel_Class_applyParCont'] = function($dictMonadEffect_0 = null) {
   $__num = \func_num_args();
-  $Bind1_1_0 = (((($dictMonadEffect_0)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']);
-  $__res = ["apply" => (function() use ($Bind1_1_0, $dictMonadEffect_0) {
-  $__fn = function($v_2 = null, $v1_3 = null, $k_4 = null) use ($Bind1_1_0, $dictMonadEffect_0, &$__fn) {
+  $Bind1_1_0 = (((($dictMonadEffect_0)['Monad0'])(null))['Bind1'])(null);
+  $discard1_2_1 = (($GLOBALS['Control_Bind_discardUnit'])['discard'])($Bind1_1_0);
+  $__res = ["apply" => (function() use ($Bind1_1_0, $dictMonadEffect_0, $discard1_2_1) {
+  $__fn = function($v_3 = null, $v1_4 = null, $k_5 = null) use ($Bind1_1_0, $dictMonadEffect_0, $discard1_2_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($Bind1_1_0)['bind'])((($dictMonadEffect_0)['liftEffect'])(($GLOBALS['Effect_Ref__new'])(new Phpurs_Data0("Nothing")))))(function($ra_5 = null) use ($Bind1_1_0, $dictMonadEffect_0, $k_4, $v1_3, $v_2) {
+  $__res = ((($Bind1_1_0)['bind'])((($dictMonadEffect_0)['liftEffect'])(($GLOBALS['Effect_Ref__new'])(new Phpurs_Data0("Nothing")))))(function($ra_6 = null) use ($Bind1_1_0, $dictMonadEffect_0, $discard1_2_1, $k_5, $v1_4, $v_3) {
   $__num = \func_num_args();
-  $__res = ((($Bind1_1_0)['bind'])((($dictMonadEffect_0)['liftEffect'])(($GLOBALS['Effect_Ref__new'])(new Phpurs_Data0("Nothing")))))(function($rb_6 = null) use ($Bind1_1_0, $dictMonadEffect_0, $k_4, $ra_5, $v1_3, $v_2) {
+  $__res = ((($Bind1_1_0)['bind'])((($dictMonadEffect_0)['liftEffect'])(($GLOBALS['Effect_Ref__new'])(new Phpurs_Data0("Nothing")))))(function($rb_7 = null) use ($Bind1_1_0, $dictMonadEffect_0, $discard1_2_1, $k_5, $ra_6, $v1_4, $v_3) {
   $__num = \func_num_args();
-  $__res = ((($Bind1_1_0)['bind'])(($v_2)(function($a_7 = null) use ($Bind1_1_0, $dictMonadEffect_0, $k_4, $ra_5, $rb_6) {
+  $__res = (($discard1_2_1)(($v_3)(function($a_8 = null) use ($Bind1_1_0, $dictMonadEffect_0, $k_5, $ra_6, $rb_7) {
   $__num = \func_num_args();
-  $__res = ((($Bind1_1_0)['bind'])((($dictMonadEffect_0)['liftEffect'])(($GLOBALS['Effect_Ref_read'])($rb_6))))(function($mb_8 = null) use ($a_7, $dictMonadEffect_0, $k_4, $ra_5) {
+  $__res = ((($Bind1_1_0)['bind'])((($dictMonadEffect_0)['liftEffect'])(($GLOBALS['Effect_Ref_read'])($rb_7))))(function($mb_9 = null) use ($a_8, $dictMonadEffect_0, $k_5, $ra_6) {
   $__num = \func_num_args();
-  $__t1 = null;;
-  if ((is_object($mb_8) && (($mb_8)->{'tag'} === "Nothing"))) {
-$__t1 = (($dictMonadEffect_0)['liftEffect'])((($GLOBALS['Effect_Ref_write'])(new Phpurs_Data1("Just", $a_7)))($ra_5));
-goto end_branch_1;;
+  $__t2 = null;;
+  if ((is_object($mb_9) && (($mb_9)->{'tag'} === "Nothing"))) {
+$__t2 = (($dictMonadEffect_0)['liftEffect'])((($GLOBALS['Effect_Ref_write'])(new Phpurs_Data1("Just", $a_8)))($ra_6));
+goto end_branch_2;;
 };
-  if ((is_object($mb_8) && (($mb_8)->{'tag'} === "Just"))) {
-$__t1 = ($k_4)(($a_7)(($mb_8)->{'value0'}));
-goto end_branch_1;;
+  if ((is_object($mb_9) && (($mb_9)->{'tag'} === "Just"))) {
+$__t2 = ($k_5)(($a_8)(($mb_9)->{'value0'}));
+goto end_branch_2;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t1 = null;
-  end_branch_1:;
-  $__res = $__t1;
+  $__t2 = null;
+  end_branch_2:;
+  $__res = $__t2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -522,25 +642,25 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))(function($dollar__unused_7 = null) use ($Bind1_1_0, $dictMonadEffect_0, $k_4, $ra_5, $rb_6, $v1_3) {
+})))(function($_dollar__unused_8 = null) use ($Bind1_1_0, $dictMonadEffect_0, $k_5, $ra_6, $rb_7, $v1_4) {
   $__num = \func_num_args();
-  $__res = ($v1_3)(function($b_8 = null) use ($Bind1_1_0, $dictMonadEffect_0, $k_4, $ra_5, $rb_6) {
+  $__res = ($v1_4)(function($b_9 = null) use ($Bind1_1_0, $dictMonadEffect_0, $k_5, $ra_6, $rb_7) {
   $__num = \func_num_args();
-  $__res = ((($Bind1_1_0)['bind'])((($dictMonadEffect_0)['liftEffect'])(($GLOBALS['Effect_Ref_read'])($ra_5))))(function($ma_9 = null) use ($b_8, $dictMonadEffect_0, $k_4, $rb_6) {
+  $__res = ((($Bind1_1_0)['bind'])((($dictMonadEffect_0)['liftEffect'])(($GLOBALS['Effect_Ref_read'])($ra_6))))(function($ma_10 = null) use ($b_9, $dictMonadEffect_0, $k_5, $rb_7) {
   $__num = \func_num_args();
-  $__t2 = null;;
-  if ((is_object($ma_9) && (($ma_9)->{'tag'} === "Nothing"))) {
-$__t2 = (($dictMonadEffect_0)['liftEffect'])((($GLOBALS['Effect_Ref_write'])(new Phpurs_Data1("Just", $b_8)))($rb_6));
-goto end_branch_2;;
+  $__t3 = null;;
+  if ((is_object($ma_10) && (($ma_10)->{'tag'} === "Nothing"))) {
+$__t3 = (($dictMonadEffect_0)['liftEffect'])((($GLOBALS['Effect_Ref_write'])(new Phpurs_Data1("Just", $b_9)))($rb_7));
+goto end_branch_3;;
 };
-  if ((is_object($ma_9) && (($ma_9)->{'tag'} === "Just"))) {
-$__t2 = ($k_4)((($ma_9)->{'value0'})($b_8));
-goto end_branch_2;;
+  if ((is_object($ma_10) && (($ma_10)->{'tag'} === "Just"))) {
+$__t3 = ($k_5)((($ma_10)->{'value0'})($b_9));
+goto end_branch_3;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t2 = null;
-  end_branch_2:;
-  $__res = $__t2;
+  $__t3 = null;
+  end_branch_3:;
+  $__res = $__t3;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -566,7 +686,7 @@ goto end_branch_2;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_2 = null) use ($dictMonadEffect_0) {
+})(), "Functor0" => function($_dollar__unused_3 = null) use ($dictMonadEffect_0) {
   $__num = \func_num_args();
   $__res = ($GLOBALS['Control_Parallel_Class_functorParCont'])($dictMonadEffect_0);
   goto __end;;
@@ -582,7 +702,7 @@ goto end_branch_2;;
 $GLOBALS['Control_Parallel_Class_applicativeParCont'] = function($dictMonadEffect_0 = null) {
   $__num = \func_num_args();
   $applyParCont1_1_0 = ($GLOBALS['Control_Parallel_Class_applyParCont'])($dictMonadEffect_0);
-  $__res = ["pure" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Parallel_Class_monadParParCont'])($dictMonadEffect_0))['parallel']))((function() {
+  $__res = ["pure" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Control_Parallel_Class_monadParParCont'])($dictMonadEffect_0))['parallel']))((function() {
   $__fn = function($a_2 = null, $k_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -594,7 +714,7 @@ $GLOBALS['Control_Parallel_Class_applicativeParCont'] = function($dictMonadEffec
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()), "Apply0" => function($dollar__unused_2 = null) use ($applyParCont1_1_0) {
+})()), "Apply0" => function($_dollar__unused_2 = null) use ($applyParCont1_1_0) {
   $__num = \func_num_args();
   $__res = $applyParCont1_1_0;
   goto __end;;
@@ -609,63 +729,64 @@ $GLOBALS['Control_Parallel_Class_applicativeParCont'] = function($dictMonadEffec
 // Control_Parallel_Class_altParCont
 $GLOBALS['Control_Parallel_Class_altParCont'] = function($dictMonadEffect_0 = null) {
   $__num = \func_num_args();
-  $Monad0_1_0 = (($dictMonadEffect_0)['Monad0'])($GLOBALS['Prim_undefined']);
-  $Bind1_2_1 = (($Monad0_1_0)['Bind1'])($GLOBALS['Prim_undefined']);
-  $__local_var_3_2 = (($Monad0_1_0)['Applicative0'])($GLOBALS['Prim_undefined']);
-  $functorParCont1_4_3 = ($GLOBALS['Control_Parallel_Class_functorParCont'])($dictMonadEffect_0);
-  $__res = ["alt" => (function() use ($Bind1_2_1, $__local_var_3_2, $dictMonadEffect_0) {
-  $__fn = function($v_5 = null, $v1_6 = null, $k_7 = null) use ($Bind1_2_1, $__local_var_3_2, $dictMonadEffect_0, &$__fn) {
+  $Monad0_1_0 = (($dictMonadEffect_0)['Monad0'])(null);
+  $Bind1_2_1 = (($Monad0_1_0)['Bind1'])(null);
+  $discard1_3_2 = (($GLOBALS['Control_Bind_discardUnit'])['discard'])($Bind1_2_1);
+  $__local_var_4_3 = (($Monad0_1_0)['Applicative0'])(null);
+  $functorParCont1_5_4 = ($GLOBALS['Control_Parallel_Class_functorParCont'])($dictMonadEffect_0);
+  $__res = ["alt" => (function() use ($Bind1_2_1, $__local_var_4_3, $dictMonadEffect_0, $discard1_3_2) {
+  $__fn = function($v_6 = null, $v1_7 = null, $k_8 = null) use ($Bind1_2_1, $__local_var_4_3, $dictMonadEffect_0, $discard1_3_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($Bind1_2_1)['bind'])((($dictMonadEffect_0)['liftEffect'])(($GLOBALS['Effect_Ref__new'])(false))))(function($done_8 = null) use ($Bind1_2_1, $__local_var_3_2, $dictMonadEffect_0, $k_7, $v1_6, $v_5) {
+  $__res = ((($Bind1_2_1)['bind'])((($dictMonadEffect_0)['liftEffect'])(($GLOBALS['Effect_Ref__new'])(false))))(function($done_9 = null) use ($Bind1_2_1, $__local_var_4_3, $dictMonadEffect_0, $discard1_3_2, $k_8, $v1_7, $v_6) {
   $__num = \func_num_args();
-  $__res = ((($Bind1_2_1)['bind'])(($v_5)(function($a_9 = null) use ($Bind1_2_1, $__local_var_3_2, $dictMonadEffect_0, $done_8, $k_7) {
+  $__res = (($discard1_3_2)(($v_6)(function($a_10 = null) use ($Bind1_2_1, $__local_var_4_3, $dictMonadEffect_0, $discard1_3_2, $done_9, $k_8) {
   $__num = \func_num_args();
-  $__res = ((($Bind1_2_1)['bind'])((($dictMonadEffect_0)['liftEffect'])(($GLOBALS['Effect_Ref_read'])($done_8))))(function($b_10 = null) use ($Bind1_2_1, $__local_var_3_2, $a_9, $dictMonadEffect_0, $done_8, $k_7) {
-  $__num = \func_num_args();
-  $__t4 = null;;
-  if ($b_10) {
-$__t4 = (($__local_var_3_2)['pure'])($GLOBALS['Data_Unit_unit']);
-goto end_branch_4;;
-};
-  $__t4 = ((($Bind1_2_1)['bind'])((($dictMonadEffect_0)['liftEffect'])((($GLOBALS['Effect_Ref_write'])(true))($done_8))))(function($dollar__unused_11 = null) use ($a_9, $k_7) {
-  $__num = \func_num_args();
-  $__res = ($k_7)($a_9);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  end_branch_4:;
-  $__res = $__t4;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))(function($dollar__unused_9 = null) use ($Bind1_2_1, $__local_var_3_2, $dictMonadEffect_0, $done_8, $k_7, $v1_6) {
-  $__num = \func_num_args();
-  $__res = ($v1_6)(function($a_10 = null) use ($Bind1_2_1, $__local_var_3_2, $dictMonadEffect_0, $done_8, $k_7) {
-  $__num = \func_num_args();
-  $__res = ((($Bind1_2_1)['bind'])((($dictMonadEffect_0)['liftEffect'])(($GLOBALS['Effect_Ref_read'])($done_8))))(function($b_11 = null) use ($Bind1_2_1, $__local_var_3_2, $a_10, $dictMonadEffect_0, $done_8, $k_7) {
+  $__res = ((($Bind1_2_1)['bind'])((($dictMonadEffect_0)['liftEffect'])(($GLOBALS['Effect_Ref_read'])($done_9))))(function($b_11 = null) use ($__local_var_4_3, $a_10, $dictMonadEffect_0, $discard1_3_2, $done_9, $k_8) {
   $__num = \func_num_args();
   $__t5 = null;;
   if ($b_11) {
-$__t5 = (($__local_var_3_2)['pure'])($GLOBALS['Data_Unit_unit']);
+$__t5 = (($__local_var_4_3)['pure'])($GLOBALS['Data_Unit_unit']);
 goto end_branch_5;;
 };
-  $__t5 = ((($Bind1_2_1)['bind'])((($dictMonadEffect_0)['liftEffect'])((($GLOBALS['Effect_Ref_write'])(true))($done_8))))(function($dollar__unused_12 = null) use ($a_10, $k_7) {
+  $__t5 = (($discard1_3_2)((($dictMonadEffect_0)['liftEffect'])((($GLOBALS['Effect_Ref_write'])(true))($done_9))))(function($_dollar__unused_12 = null) use ($a_10, $k_8) {
   $__num = \func_num_args();
-  $__res = ($k_7)($a_10);
+  $__res = ($k_8)($a_10);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
   end_branch_5:;
   $__res = $__t5;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+})))(function($_dollar__unused_10 = null) use ($Bind1_2_1, $__local_var_4_3, $dictMonadEffect_0, $discard1_3_2, $done_9, $k_8, $v1_7) {
+  $__num = \func_num_args();
+  $__res = ($v1_7)(function($a_11 = null) use ($Bind1_2_1, $__local_var_4_3, $dictMonadEffect_0, $discard1_3_2, $done_9, $k_8) {
+  $__num = \func_num_args();
+  $__res = ((($Bind1_2_1)['bind'])((($dictMonadEffect_0)['liftEffect'])(($GLOBALS['Effect_Ref_read'])($done_9))))(function($b_12 = null) use ($__local_var_4_3, $a_11, $dictMonadEffect_0, $discard1_3_2, $done_9, $k_8) {
+  $__num = \func_num_args();
+  $__t6 = null;;
+  if ($b_12) {
+$__t6 = (($__local_var_4_3)['pure'])($GLOBALS['Data_Unit_unit']);
+goto end_branch_6;;
+};
+  $__t6 = (($discard1_3_2)((($dictMonadEffect_0)['liftEffect'])((($GLOBALS['Effect_Ref_write'])(true))($done_9))))(function($_dollar__unused_13 = null) use ($a_11, $k_8) {
+  $__num = \func_num_args();
+  $__res = ($k_8)($a_11);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  end_branch_6:;
+  $__res = $__t6;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -687,9 +808,9 @@ goto end_branch_5;;
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_5 = null) use ($functorParCont1_4_3) {
+})(), "Functor0" => function($_dollar__unused_6 = null) use ($functorParCont1_5_4) {
   $__num = \func_num_args();
-  $__res = $functorParCont1_4_3;
+  $__res = $functorParCont1_5_4;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -705,11 +826,11 @@ $GLOBALS['Control_Parallel_Class_plusParCont'] = function($dictMonadEffect_0 = n
   $altParCont1_1_0 = ($GLOBALS['Control_Parallel_Class_altParCont'])($dictMonadEffect_0);
   $__res = ["empty" => function($v_2 = null) use ($dictMonadEffect_0) {
   $__num = \func_num_args();
-  $__res = (((((($dictMonadEffect_0)['Monad0'])($GLOBALS['Prim_undefined']))['Applicative0'])($GLOBALS['Prim_undefined']))['pure'])($GLOBALS['Data_Unit_unit']);
+  $__res = (((((($dictMonadEffect_0)['Monad0'])(null))['Applicative0'])(null))['pure'])($GLOBALS['Data_Unit_unit']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Alt0" => function($dollar__unused_2 = null) use ($altParCont1_1_0) {
+}, "Alt0" => function($_dollar__unused_2 = null) use ($altParCont1_1_0) {
   $__num = \func_num_args();
   $__res = $altParCont1_1_0;
   goto __end;;
@@ -726,13 +847,13 @@ $GLOBALS['Control_Parallel_Class_alternativeParCont'] = function($dictMonadEffec
   $__num = \func_num_args();
   $applicativeParCont1_1_0 = ($GLOBALS['Control_Parallel_Class_applicativeParCont'])($dictMonadEffect_0);
   $plusParCont1_2_1 = ($GLOBALS['Control_Parallel_Class_plusParCont'])($dictMonadEffect_0);
-  $__res = ["Applicative0" => function($dollar__unused_3 = null) use ($applicativeParCont1_1_0) {
+  $__res = ["Applicative0" => function($_dollar__unused_3 = null) use ($applicativeParCont1_1_0) {
   $__num = \func_num_args();
   $__res = $applicativeParCont1_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Plus1" => function($dollar__unused_3 = null) use ($plusParCont1_2_1) {
+}, "Plus1" => function($_dollar__unused_3 = null) use ($plusParCont1_2_1) {
   $__num = \func_num_args();
   $__res = $plusParCont1_2_1;
   goto __end;;

@@ -122,7 +122,7 @@ $GLOBALS['Data_String_Pattern_Pattern'] = function($x_0 = null) {
 // Data_String_Pattern_showReplacement
 $GLOBALS['Data_String_Pattern_showReplacement'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = (("(Replacement " . ($GLOBALS['Data_Show_showStringImpl'])($v_0)) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Replacement "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Show_showString'])['show'])($v_0)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -131,25 +131,25 @@ $GLOBALS['Data_String_Pattern_showReplacement'] = ["show" => function($v_0 = nul
 // Data_String_Pattern_showPattern
 $GLOBALS['Data_String_Pattern_showPattern'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = (("(Pattern " . ($GLOBALS['Data_Show_showStringImpl'])($v_0)) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Pattern "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Show_showString'])['show'])($v_0)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
 
 // Data_String_Pattern_newtypeReplacement
-$GLOBALS['Data_String_Pattern_newtypeReplacement'] = ["Coercible0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_String_Pattern_newtypeReplacement'] = ["Coercible0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Prim_undefined'];
+  $__res = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
 
 // Data_String_Pattern_newtypePattern
-$GLOBALS['Data_String_Pattern_newtypePattern'] = ["Coercible0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_String_Pattern_newtypePattern'] = ["Coercible0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Prim_undefined'];
+  $__res = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -162,7 +162,7 @@ $GLOBALS['Data_String_Pattern_eqReplacement'] = ["eq" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($x_0 === $y_1);
+  $__res = ((($GLOBALS['Data_Eq_eqString'])['eq'])($x_0))($y_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -183,7 +183,7 @@ $GLOBALS['Data_String_Pattern_ordReplacement'] = ["compare" => (function() {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Eq0" => function($dollar__unused_0 = null) {
+})(), "Eq0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_String_Pattern_eqReplacement'];
   goto __end;;
@@ -198,7 +198,7 @@ $GLOBALS['Data_String_Pattern_eqPattern'] = ["eq" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($x_0 === $y_1);
+  $__res = ((($GLOBALS['Data_Eq_eqString'])['eq'])($x_0))($y_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -219,7 +219,7 @@ $GLOBALS['Data_String_Pattern_ordPattern'] = ["compare" => (function() {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Eq0" => function($dollar__unused_0 = null) {
+})(), "Eq0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_String_Pattern_eqPattern'];
   goto __end;;

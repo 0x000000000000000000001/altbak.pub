@@ -180,14 +180,14 @@ $GLOBALS['Data_Show_showRecordFields'] = function($dict_0 = null) {
 
 // Data_Show_showRecord
 $GLOBALS['Data_Show_showRecord'] = (function() {
-  $__fn = function($dollar__unused_0 = null, $dollar__unused_1 = null, $dictShowRecordFields_2 = null) use (&$__fn) {
+  $__fn = function($_dollar__unused_0 = null, $_dollar__unused_1 = null, $dictShowRecordFields_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__res = ["show" => function($record_3 = null) use ($dictShowRecordFields_2) {
   $__num = \func_num_args();
-  $__res = (("{" . ((($dictShowRecordFields_2)['showRecordFields'])(new Phpurs_Data0("Proxy")))($record_3)) . "}");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("{"))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(((($dictShowRecordFields_2)['showRecordFields'])(new Phpurs_Data0("Proxy")))($record_3)))("}"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -265,7 +265,7 @@ $GLOBALS['Data_Show_showRecordFieldsCons'] = (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $key_5_0 = (($dictIsSymbol_0)['reflectSymbol'])(new Phpurs_Data0("Proxy"));
-  $__res = (((((" " . $key_5_0) . ": ") . (($dictShow_2)['show'])((($GLOBALS['Record_Unsafe_unsafeGet'])($key_5_0))($record_4))) . ",") . ((($dictShowRecordFields_1)['showRecordFields'])(new Phpurs_Data0("Proxy")))($record_4));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])($key_5_0))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(": "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_2)['show'])((($GLOBALS['Record_Unsafe_unsafeGet'])($key_5_0))($record_4))))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(","))(((($dictShowRecordFields_1)['showRecordFields'])(new Phpurs_Data0("Proxy")))($record_4))))));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -293,7 +293,7 @@ $GLOBALS['Data_Show_showRecordFieldsConsNil'] = (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $key_4_0 = (($dictIsSymbol_0)['reflectSymbol'])(new Phpurs_Data0("Proxy"));
-  $__res = ((((" " . $key_4_0) . ": ") . (($dictShow_1)['show'])((($GLOBALS['Record_Unsafe_unsafeGet'])($key_4_0))($record_3))) . " ");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])($key_4_0))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(": "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_1)['show'])((($GLOBALS['Record_Unsafe_unsafeGet'])($key_4_0))($record_3))))(" "))));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

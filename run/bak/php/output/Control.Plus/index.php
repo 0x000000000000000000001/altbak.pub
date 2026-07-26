@@ -98,7 +98,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Control_Plus_plusArray
-$GLOBALS['Control_Plus_plusArray'] = ["empty" => [], "Alt0" => function($dollar__unused_0 = null) {
+$GLOBALS['Control_Plus_plusArray'] = ["empty" => [], "Alt0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Alt_altArray'];
   goto __end;;

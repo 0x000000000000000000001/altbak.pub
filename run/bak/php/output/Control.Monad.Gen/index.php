@@ -125,14 +125,14 @@ $semigroupAdditive1_0_0 = ["append" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($v_0 + $v1_1);
+  $__res = ((($GLOBALS['Data_Semiring_semiringNumber'])['add'])($v_0))($v1_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-return ["mempty" => 0.0, "Semigroup0" => function($dollar__unused_1 = null) use ($semigroupAdditive1_0_0) {
+return ["mempty" => ($GLOBALS['Data_Semiring_semiringNumber'])['zero'], "Semigroup0" => function($_dollar__unused_1 = null) use ($semigroupAdditive1_0_0) {
   $__num = \func_num_args();
   $__res = $semigroupAdditive1_0_0;
   goto __end;;
@@ -166,16 +166,16 @@ $GLOBALS['Control_Monad_Gen_unfoldable'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $Monad0_2_0 = (($dictMonadGen_1)['Monad0'])($GLOBALS['Prim_undefined']);
-  $__local_var_3_1 = (($Monad0_2_0)['Applicative0'])($GLOBALS['Prim_undefined']);
-  $Bind1_4_2 = (($Monad0_2_0)['Bind1'])($GLOBALS['Prim_undefined']);
+  $Monad0_2_0 = (($dictMonadGen_1)['Monad0'])(null);
+  $__local_var_3_1 = (($Monad0_2_0)['Applicative0'])(null);
+  $Bind1_4_2 = (($Monad0_2_0)['Bind1'])(null);
   $__res = (function() use ($Bind1_4_2, $__local_var_3_1, $dictMonadGen_1, $dictMonadRec_0) {
   $__fn = function($dictUnfoldable_5 = null, $gen_6 = null) use ($Bind1_4_2, $__local_var_3_1, $dictMonadGen_1, $dictMonadRec_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((((($Bind1_4_2)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])((($dictUnfoldable_5)['unfoldr'])(function($v_7 = null) {
+  $__res = ((((((($Bind1_4_2)['Apply0'])(null))['Functor0'])(null))['map'])((($dictUnfoldable_5)['unfoldr'])(function($v_7 = null) {
   $__num = \func_num_args();
   $__t3 = null;;
   if ((is_object($v_7) && (($v_7)->{'tag'} === "Nil"))) {
@@ -193,7 +193,7 @@ goto end_branch_3;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))((($dictMonadGen_1)['sized'])((($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictMonadRec_0)['tailRecM'])(function($v_7 = null) use ($Bind1_4_2, $__local_var_3_1, $gen_6) {
+})))((($dictMonadGen_1)['sized'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($dictMonadRec_0)['tailRecM'])(function($v_7 = null) use ($Bind1_4_2, $__local_var_3_1, $gen_6) {
   $__num = \func_num_args();
   $__t6 = null;;
   if ((($v_7)->{'value1'} <= 0)) {
@@ -204,7 +204,7 @@ goto end_branch_6;;
   $__local_var_9_5 = ($v_7)->{'value1'};
   $__t6 = ((($Bind1_4_2)['bind'])($gen_6))(function($x_10 = null) use ($__local_var_3_1, $__local_var_8_4, $__local_var_9_5) {
   $__num = \func_num_args();
-  $__res = (($__local_var_3_1)['pure'])(new Phpurs_Data1("Loop", new Phpurs_Data2("Tuple", new Phpurs_Data2("Cons", $x_10, $__local_var_8_4), ($__local_var_9_5 - 1))));
+  $__res = (($__local_var_3_1)['pure'])(new Phpurs_Data1("Loop", new Phpurs_Data2("Tuple", new Phpurs_Data2("Cons", $x_10, $__local_var_8_4), ((($GLOBALS['Data_Ring_ringInt'])['sub'])($__local_var_9_5))(1))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -261,18 +261,18 @@ $GLOBALS['Control_Monad_Gen_fromIndex'] = function($dictFoldable1_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go_4_1 = null;
-  $go_4_1 = (function() use ($foldMap1_1_0, &$go_4_1, $xs_3) {
-  $__fn = function($v_5 = null, $v1_6 = null) use ($foldMap1_1_0, &$go_4_1, $xs_3, &$__fn) {
+  $go__4_1 = null;
+  $go__4_1 = (function() use ($foldMap1_1_0, &$go__4_1, $xs_3) {
+  $__fn = function($v_5 = null, $v1_6 = null) use ($foldMap1_1_0, &$go__4_1, $xs_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_go_4_1_1_v_5 = $v_5;
-  $__tco_var_go_4_1_1_v1_6 = $v1_6;
-  tco_loop_go_4_1_1:;
-  $v_5 = $__tco_var_go_4_1_1_v_5;
-  $v1_6 = $__tco_var_go_4_1_1_v1_6;
+  $__tco_var_go__4_1_1_v_5 = $v_5;
+  $__tco_var_go__4_1_1_v1_6 = $v1_6;
+  tco_loop_go__4_1_1:;
+  $v_5 = $__tco_var_go__4_1_1_v_5;
+  $v1_6 = $__tco_var_go__4_1_1_v1_6;
   $__t1 = null;;
   if ((is_object($v1_6) && (($v1_6)->{'tag'} === "Cons"))) {
 $__t4 = null;;
@@ -284,11 +284,11 @@ if (($v_5 <= 0)) {
 $__t4 = ($v1_6)->{'value0'};
 goto end_branch_4;;
 };
-$__tco_2 = ($v_5 - 1);
+$__tco_2 = ((($GLOBALS['Data_Ring_ringInt'])['sub'])($v_5))(1);
 $__tco_3 = ($v1_6)->{'value1'};
-$__tco_var_go_4_1_1_v_5 = $__tco_2;
-$__tco_var_go_4_1_1_v1_6 = $__tco_3;
-goto tco_loop_go_4_1_1;;
+$__tco_var_go__4_1_1_v_5 = $__tco_2;
+$__tco_var_go__4_1_1_v1_6 = $__tco_3;
+goto tco_loop_go__4_1_1;;
 $__t4 = null;
 end_branch_4:;
 $__t1 = $__t4;
@@ -308,7 +308,7 @@ goto end_branch_1;;
   };
   return $__fn;
 })();
-  $__res = (($go_4_1)($i_2))((((((($dictFoldable1_0)['Foldable0'])($GLOBALS['Prim_undefined']))['foldr'])($GLOBALS['Control_Monad_Gen_Cons']))(new Phpurs_Data0("Nil")))($xs_3));
+  $__res = (($go__4_1)($i_2))((((((($dictFoldable1_0)['Foldable0'])(null))['foldr'])($GLOBALS['Control_Monad_Gen_Cons']))(new Phpurs_Data0("Nil")))($xs_3));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -327,23 +327,23 @@ $GLOBALS['Control_Monad_Gen_oneOf'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $length_2_0 = ((((($dictFoldable1_1)['Foldable0'])($GLOBALS['Prim_undefined']))['foldl'])((function() {
+  $length_2_0 = ((((($dictFoldable1_1)['Foldable0'])(null))['foldl'])((function() {
   $__fn = function($c_2 = null, $v_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (1 + $c_2);
+  $__res = ((($GLOBALS['Data_Semiring_semiringInt'])['add'])(($GLOBALS['Data_Semiring_semiringInt'])['one']))($c_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))(0);
+})()))(($GLOBALS['Data_Semiring_semiringInt'])['zero']);
   $fromIndex1_3_1 = ($GLOBALS['Control_Monad_Gen_fromIndex'])($dictFoldable1_1);
   $__res = function($xs_4 = null) use ($dictMonadGen_0, $fromIndex1_3_1, $length_2_0) {
   $__num = \func_num_args();
-  $__res = ((((((($dictMonadGen_0)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']))['bind'])(((($dictMonadGen_0)['chooseInt'])(0))((($length_2_0)($xs_4) - 1))))(function($n_5 = null) use ($fromIndex1_3_1, $xs_4) {
+  $__res = ((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['bind'])(((($dictMonadGen_0)['chooseInt'])(0))(((($GLOBALS['Data_Ring_ringInt'])['sub'])(($length_2_0)($xs_4)))(1))))(function($n_5 = null) use ($fromIndex1_3_1, $xs_4) {
   $__num = \func_num_args();
   $__res = (($fromIndex1_3_1)($n_5))($xs_4);
   goto __end;;
@@ -370,7 +370,7 @@ $GLOBALS['Control_Monad_Gen_freqSemigroup'] = function($v_0 = null) {
   $__num = \func_num_args();
   $__t2 = null;;
   if (($pos_3 >= $__local_var_1_0)) {
-$__t2 = new Phpurs_Data2("Tuple", new Phpurs_Data1("Just", ($pos_3 - $__local_var_1_0)), $__local_var_2_1);
+$__t2 = new Phpurs_Data2("Tuple", new Phpurs_Data1("Just", ((($GLOBALS['Data_Ring_ringNumber'])['sub'])($pos_3))($__local_var_1_0)), $__local_var_2_1);
 goto end_branch_2;;
 };
   $__t2 = new Phpurs_Data2("Tuple", new Phpurs_Data0("Nothing"), $__local_var_2_1);
@@ -392,11 +392,11 @@ $GLOBALS['Control_Monad_Gen_frequency'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $foldMap_2_0 = (((($dictFoldable1_1)['Foldable0'])($GLOBALS['Prim_undefined']))['foldMap'])($GLOBALS['Control_Monad_Gen_monoidAdditive']);
+  $foldMap_2_0 = (((($dictFoldable1_1)['Foldable0'])(null))['foldMap'])($GLOBALS['Control_Monad_Gen_monoidAdditive']);
   $foldMap1_3_1 = (($dictFoldable1_1)['foldMap1'])($GLOBALS['Control_Monad_Gen_semigroupFreqSemigroup']);
   $__res = function($xs_4 = null) use ($dictMonadGen_0, $foldMap1_3_1, $foldMap_2_0) {
   $__num = \func_num_args();
-  $__res = ((((((($dictMonadGen_0)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']))['bind'])(((($dictMonadGen_0)['chooseFloat'])(0.0))((($foldMap_2_0)($GLOBALS['Data_Tuple_fst']))($xs_4))))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Tuple_snd']))((($foldMap1_3_1)($GLOBALS['Control_Monad_Gen_freqSemigroup']))($xs_4)));
+  $__res = ((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['bind'])(((($dictMonadGen_0)['chooseFloat'])(0.0))((($foldMap_2_0)($GLOBALS['Data_Tuple_fst']))($xs_4))))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Tuple_snd']))((($foldMap1_3_1)($GLOBALS['Control_Monad_Gen_freqSemigroup']))($xs_4)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -415,7 +415,7 @@ $GLOBALS['Control_Monad_Gen_filtered'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_2_0 = (((((((($dictMonadGen_1)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']))['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']);
+  $__local_var_2_0 = (((((((($dictMonadGen_1)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null);
   $__res = function($gen_3 = null) use ($__local_var_2_0, $dictMonadRec_0) {
   $__num = \func_num_args();
   $__res = ((($dictMonadRec_0)['tailRecM'])(function($v_4 = null) use ($__local_var_2_0, $gen_3) {
@@ -462,7 +462,7 @@ $GLOBALS['Control_Monad_Gen_suchThat'] = (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $filtered2_2_0 = (($GLOBALS['Control_Monad_Gen_filtered'])($dictMonadRec_0))($dictMonadGen_1);
-  $__local_var_3_1 = (((((((($dictMonadGen_1)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']))['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']);
+  $__local_var_3_1 = (((((((($dictMonadGen_1)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null);
   $__res = (function() use ($__local_var_3_1, $filtered2_2_0) {
   $__fn = function($gen_4 = null, $pred_5 = null) use ($__local_var_3_1, $filtered2_2_0, &$__fn) {
   $__num = \func_num_args();
@@ -499,28 +499,28 @@ goto end_branch_2;;
 // Control_Monad_Gen_elements
 $GLOBALS['Control_Monad_Gen_elements'] = function($dictMonadGen_0 = null) {
   $__num = \func_num_args();
-  $Monad0_1_0 = (($dictMonadGen_0)['Monad0'])($GLOBALS['Prim_undefined']);
+  $Monad0_1_0 = (($dictMonadGen_0)['Monad0'])(null);
   $__res = function($dictFoldable1_2 = null) use ($Monad0_1_0, $dictMonadGen_0) {
   $__num = \func_num_args();
-  $length_3_1 = ((((($dictFoldable1_2)['Foldable0'])($GLOBALS['Prim_undefined']))['foldl'])((function() {
+  $length_3_1 = ((((($dictFoldable1_2)['Foldable0'])(null))['foldl'])((function() {
   $__fn = function($c_3 = null, $v_4 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (1 + $c_3);
+  $__res = ((($GLOBALS['Data_Semiring_semiringInt'])['add'])(($GLOBALS['Data_Semiring_semiringInt'])['one']))($c_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))(0);
+})()))(($GLOBALS['Data_Semiring_semiringInt'])['zero']);
   $fromIndex1_4_2 = ($GLOBALS['Control_Monad_Gen_fromIndex'])($dictFoldable1_2);
   $__res = function($xs_5 = null) use ($Monad0_1_0, $dictMonadGen_0, $fromIndex1_4_2, $length_3_1) {
   $__num = \func_num_args();
-  $__res = ((((($Monad0_1_0)['Bind1'])($GLOBALS['Prim_undefined']))['bind'])(((($dictMonadGen_0)['chooseInt'])(0))((($length_3_1)($xs_5) - 1))))(function($n_6 = null) use ($Monad0_1_0, $fromIndex1_4_2, $xs_5) {
+  $__res = ((((($Monad0_1_0)['Bind1'])(null))['bind'])(((($dictMonadGen_0)['chooseInt'])(0))(((($GLOBALS['Data_Ring_ringInt'])['sub'])(($length_3_1)($xs_5)))(1))))(function($n_6 = null) use ($Monad0_1_0, $fromIndex1_4_2, $xs_5) {
   $__num = \func_num_args();
-  $__res = (((($Monad0_1_0)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'])((($fromIndex1_4_2)($n_6))($xs_5));
+  $__res = (((($Monad0_1_0)['Applicative0'])(null))['pure'])((($fromIndex1_4_2)($n_6))($xs_5));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -548,7 +548,7 @@ $GLOBALS['Control_Monad_Gen_choose'] = function($dictMonadGen_0 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((((($dictMonadGen_0)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']))['bind'])($chooseBool_1_0))(function($v_4 = null) use ($genA_2, $genB_3) {
+  $__res = ((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['bind'])($chooseBool_1_0))(function($v_4 = null) use ($genA_2, $genB_3) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ($v_4) {

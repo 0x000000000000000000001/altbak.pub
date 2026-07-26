@@ -103,6 +103,29 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Data_Comparison_append
+$GLOBALS['Data_Comparison_append'] = (function() {
+  $__fn = function($f_0 = null, $g_1 = null, $x_2 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__local_var_3_0 = ($f_0)($x_2);
+  $__local_var_4_1 = ($g_1)($x_2);
+  $__res = function($x_5 = null) use ($__local_var_3_0, $__local_var_4_1) {
+  $__num = \func_num_args();
+  $__res = ((($GLOBALS['Data_Ordering_semigroupOrdering'])['append'])(($__local_var_3_0)($x_5)))(($__local_var_4_1)($x_5));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})();
+
 // Data_Comparison_Comparison
 $GLOBALS['Data_Comparison_Comparison'] = function($x_0 = null) {
   $__num = \func_num_args();
@@ -114,49 +137,23 @@ $GLOBALS['Data_Comparison_Comparison'] = function($x_0 = null) {
 
 // Data_Comparison_semigroupComparison
 $GLOBALS['Data_Comparison_semigroupComparison'] = ["append" => (function() {
-  $__fn = function($v_0 = null, $v1_1 = null, $x_2 = null) use (&$__fn) {
+  $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_3_0 = ($v_0)($x_2);
-  $__local_var_4_1 = ($v1_1)($x_2);
-  $__res = function($x_5 = null) use ($__local_var_3_0, $__local_var_4_1) {
-  $__num = \func_num_args();
-  $__local_var_6_2 = ($__local_var_3_0)($x_5);
-  $__local_var_7_3 = ($__local_var_4_1)($x_5);
-  $__t4 = null;;
-  if ((is_object($__local_var_6_2) && (($__local_var_6_2)->{'tag'} === "LT"))) {
-$__t4 = new Phpurs_Data0("LT");
-goto end_branch_4;;
-};
-  if ((is_object($__local_var_6_2) && (($__local_var_6_2)->{'tag'} === "GT"))) {
-$__t4 = new Phpurs_Data0("GT");
-goto end_branch_4;;
-};
-  if ((is_object($__local_var_6_2) && (($__local_var_6_2)->{'tag'} === "EQ"))) {
-$__t4 = $__local_var_7_3;
-goto end_branch_4;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t4 = null;
-  end_branch_4:;
-  $__res = $__t4;
+  $__res = (($GLOBALS['Data_Comparison_append'])($v_0))($v1_1);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
-  goto __end;;
-  __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
 
 // Data_Comparison_newtypeComparison
-$GLOBALS['Data_Comparison_newtypeComparison'] = ["Coercible0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Comparison_newtypeComparison'] = ["Coercible0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Prim_undefined'];
+  $__res = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -175,7 +172,7 @@ $GLOBALS['Data_Comparison_monoidComparison'] = ["mempty" => (function() {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Semigroup0" => function($dollar__unused_0 = null) {
+})(), "Semigroup0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Comparison_semigroupComparison'];
   goto __end;;

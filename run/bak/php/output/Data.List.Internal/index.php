@@ -228,11 +228,6 @@ $GLOBALS['Data_List_Internal_fromZipper'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_Data_List_Internal_fromZipper_v_0 = $v_0;
-  $__tco_var_Data_List_Internal_fromZipper_v1_1 = $v1_1;
-  tco_loop_Data_List_Internal_fromZipper:;
-  $v_0 = $__tco_var_Data_List_Internal_fromZipper_v_0;
-  $v1_1 = $__tco_var_Data_List_Internal_fromZipper_v1_1;
   $__t0 = null;;
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Nil"))) {
 $__t0 = $v1_1;
@@ -241,48 +236,23 @@ goto end_branch_0;;
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Cons"))) {
 $__t1 = null;;
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "TwoLeft"))) {
-$__tco_2 = ($v_0)->{'value1'};
-$__tco_3 = new Phpurs_Data3("Two", $v1_1, (($v_0)->{'value0'})->{'value0'}, (($v_0)->{'value0'})->{'value1'});
-$__tco_var_Data_List_Internal_fromZipper_v_0 = $__tco_2;
-$__tco_var_Data_List_Internal_fromZipper_v1_1 = $__tco_3;
-goto tco_loop_Data_List_Internal_fromZipper;;
-$__t1 = null;
+$__t1 = (($GLOBALS['Data_List_Internal_fromZipper'])(($v_0)->{'value1'}))(new Phpurs_Data3("Two", $v1_1, (($v_0)->{'value0'})->{'value0'}, (($v_0)->{'value0'})->{'value1'}));
 goto end_branch_1;;
 };
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "TwoRight"))) {
-$__tco_4 = ($v_0)->{'value1'};
-$__tco_5 = new Phpurs_Data3("Two", (($v_0)->{'value0'})->{'value0'}, (($v_0)->{'value0'})->{'value1'}, $v1_1);
-$__tco_var_Data_List_Internal_fromZipper_v_0 = $__tco_4;
-$__tco_var_Data_List_Internal_fromZipper_v1_1 = $__tco_5;
-goto tco_loop_Data_List_Internal_fromZipper;;
-$__t1 = null;
+$__t1 = (($GLOBALS['Data_List_Internal_fromZipper'])(($v_0)->{'value1'}))(new Phpurs_Data3("Two", (($v_0)->{'value0'})->{'value0'}, (($v_0)->{'value0'})->{'value1'}, $v1_1));
 goto end_branch_1;;
 };
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "ThreeLeft"))) {
-$__tco_6 = ($v_0)->{'value1'};
-$__tco_7 = new Phpurs_Data5("Three", $v1_1, (($v_0)->{'value0'})->{'value0'}, (($v_0)->{'value0'})->{'value1'}, (($v_0)->{'value0'})->{'value2'}, (($v_0)->{'value0'})->{'value3'});
-$__tco_var_Data_List_Internal_fromZipper_v_0 = $__tco_6;
-$__tco_var_Data_List_Internal_fromZipper_v1_1 = $__tco_7;
-goto tco_loop_Data_List_Internal_fromZipper;;
-$__t1 = null;
+$__t1 = (($GLOBALS['Data_List_Internal_fromZipper'])(($v_0)->{'value1'}))(new Phpurs_Data5("Three", $v1_1, (($v_0)->{'value0'})->{'value0'}, (($v_0)->{'value0'})->{'value1'}, (($v_0)->{'value0'})->{'value2'}, (($v_0)->{'value0'})->{'value3'}));
 goto end_branch_1;;
 };
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "ThreeMiddle"))) {
-$__tco_8 = ($v_0)->{'value1'};
-$__tco_9 = new Phpurs_Data5("Three", (($v_0)->{'value0'})->{'value0'}, (($v_0)->{'value0'})->{'value1'}, $v1_1, (($v_0)->{'value0'})->{'value2'}, (($v_0)->{'value0'})->{'value3'});
-$__tco_var_Data_List_Internal_fromZipper_v_0 = $__tco_8;
-$__tco_var_Data_List_Internal_fromZipper_v1_1 = $__tco_9;
-goto tco_loop_Data_List_Internal_fromZipper;;
-$__t1 = null;
+$__t1 = (($GLOBALS['Data_List_Internal_fromZipper'])(($v_0)->{'value1'}))(new Phpurs_Data5("Three", (($v_0)->{'value0'})->{'value0'}, (($v_0)->{'value0'})->{'value1'}, $v1_1, (($v_0)->{'value0'})->{'value2'}, (($v_0)->{'value0'})->{'value3'}));
 goto end_branch_1;;
 };
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "ThreeRight"))) {
-$__tco_10 = ($v_0)->{'value1'};
-$__tco_11 = new Phpurs_Data5("Three", (($v_0)->{'value0'})->{'value0'}, (($v_0)->{'value0'})->{'value1'}, (($v_0)->{'value0'})->{'value2'}, (($v_0)->{'value0'})->{'value3'}, $v1_1);
-$__tco_var_Data_List_Internal_fromZipper_v_0 = $__tco_10;
-$__tco_var_Data_List_Internal_fromZipper_v1_1 = $__tco_11;
-goto tco_loop_Data_List_Internal_fromZipper;;
-$__t1 = null;
+$__t1 = (($GLOBALS['Data_List_Internal_fromZipper'])(($v_0)->{'value1'}))(new Phpurs_Data5("Three", (($v_0)->{'value0'})->{'value0'}, (($v_0)->{'value0'})->{'value1'}, (($v_0)->{'value0'})->{'value2'}, (($v_0)->{'value0'})->{'value3'}, $v1_1));
 goto end_branch_1;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);

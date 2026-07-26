@@ -149,13 +149,13 @@ $GLOBALS['Data_Decidable_decidablePredicate'] = ["lose" => (function() {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Decide0" => function($dollar__unused_0 = null) {
+})(), "Decide0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Decide_choosePredicate'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Divisible1" => function($dollar__unused_0 = null) {
+}, "Divisible1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Divisible_divisiblePredicate'];
   goto __end;;
@@ -166,7 +166,7 @@ $GLOBALS['Data_Decidable_decidablePredicate'] = ["lose" => (function() {
 // Data_Decidable_decidableOp
 $GLOBALS['Data_Decidable_decidableOp'] = function($dictMonoid_0 = null) {
   $__num = \func_num_args();
-  $chooseOp_1_0 = ($GLOBALS['Data_Decide_chooseOp'])((($dictMonoid_0)['Semigroup0'])($GLOBALS['Prim_undefined']));
+  $chooseOp_1_0 = ($GLOBALS['Data_Decide_chooseOp'])((($dictMonoid_0)['Semigroup0'])(null));
   $divisibleOp_2_1 = ($GLOBALS['Data_Divisible_divisibleOp'])($dictMonoid_0);
   $__res = ["lose" => (function() {
   $__fn = function($f_3 = null, $a_4 = null) use (&$__fn) {
@@ -194,13 +194,13 @@ $GLOBALS['Data_Decidable_decidableOp'] = function($dictMonoid_0 = null) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Decide0" => function($dollar__unused_3 = null) use ($chooseOp_1_0) {
+})(), "Decide0" => function($_dollar__unused_3 = null) use ($chooseOp_1_0) {
   $__num = \func_num_args();
   $__res = $chooseOp_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Divisible1" => function($dollar__unused_3 = null) use ($divisibleOp_2_1) {
+}, "Divisible1" => function($_dollar__unused_3 = null) use ($divisibleOp_2_1) {
   $__num = \func_num_args();
   $__res = $divisibleOp_2_1;
   goto __end;;
@@ -239,13 +239,13 @@ $GLOBALS['Data_Decidable_decidableEquivalence'] = ["lose" => (function() {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Decide0" => function($dollar__unused_0 = null) {
+})(), "Decide0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Decide_chooseEquivalence'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Divisible1" => function($dollar__unused_0 = null) {
+}, "Divisible1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Divisible_divisibleEquivalence'];
   goto __end;;
@@ -280,13 +280,13 @@ $GLOBALS['Data_Decidable_decidableComparison'] = ["lose" => (function() {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "Decide0" => function($dollar__unused_0 = null) {
+})(), "Decide0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Decide_chooseComparison'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Divisible1" => function($dollar__unused_0 = null) {
+}, "Divisible1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Divisible_divisibleComparison'];
   goto __end;;

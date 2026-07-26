@@ -378,11 +378,11 @@ $GLOBALS['Data_HeytingAlgebra_Generic_genericHeytingAlgebraConstructor'] = funct
 // Data_HeytingAlgebra_Generic_genericHeytingAlgebraProduct
 $GLOBALS['Data_HeytingAlgebra_Generic_genericHeytingAlgebraProduct'] = function($dictGenericHeytingAlgebra_0 = null) {
   $__num = \func_num_args();
-  $genericFF__prime__1_1_0 = ($dictGenericHeytingAlgebra_0)['genericFF__prime__'];
-  $genericTT__prime__1_2_1 = ($dictGenericHeytingAlgebra_0)['genericTT__prime__'];
-  $__res = function($dictGenericHeytingAlgebra1_3 = null) use ($dictGenericHeytingAlgebra_0, $genericFF__prime__1_1_0, $genericTT__prime__1_2_1) {
+  $genericFF_prime1_1_0 = ($dictGenericHeytingAlgebra_0)['genericFF__prime__'];
+  $genericTT_prime1_2_1 = ($dictGenericHeytingAlgebra_0)['genericTT__prime__'];
+  $__res = function($dictGenericHeytingAlgebra1_3 = null) use ($dictGenericHeytingAlgebra_0, $genericFF_prime1_1_0, $genericTT_prime1_2_1) {
   $__num = \func_num_args();
-  $__res = ["genericFF__prime__" => new Phpurs_Data2("Product", $genericFF__prime__1_1_0, ($dictGenericHeytingAlgebra1_3)['genericFF__prime__']), "genericTT__prime__" => new Phpurs_Data2("Product", $genericTT__prime__1_2_1, ($dictGenericHeytingAlgebra1_3)['genericTT__prime__']), "genericImplies__prime__" => (function() use ($dictGenericHeytingAlgebra1_3, $dictGenericHeytingAlgebra_0) {
+  $__res = ["genericFF__prime__" => new Phpurs_Data2("Product", $genericFF_prime1_1_0, ($dictGenericHeytingAlgebra1_3)['genericFF__prime__']), "genericTT__prime__" => new Phpurs_Data2("Product", $genericTT_prime1_2_1, ($dictGenericHeytingAlgebra1_3)['genericTT__prime__']), "genericImplies__prime__" => (function() use ($dictGenericHeytingAlgebra1_3, $dictGenericHeytingAlgebra_0) {
   $__fn = function($v_4 = null, $v1_5 = null) use ($dictGenericHeytingAlgebra1_3, $dictGenericHeytingAlgebra_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {

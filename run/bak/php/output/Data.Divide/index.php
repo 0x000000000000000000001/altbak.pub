@@ -114,13 +114,13 @@ $GLOBALS['Data_Divide_dividePredicate'] = ["divide" => (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
   $v2_4_0 = ($f_0)($a_3);
-  $__res = (($v_1)(($v2_4_0)->{'value0'}) && ($v1_2)(($v2_4_0)->{'value1'}));
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(($v_1)(($v2_4_0)->{'value0'})))(($v1_2)(($v2_4_0)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(), "Contravariant0" => function($dollar__unused_0 = null) {
+})(), "Contravariant0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Predicate_contravariantPredicate'];
   goto __end;;
@@ -144,7 +144,7 @@ $GLOBALS['Data_Divide_divideOp'] = function($dictSemigroup_0 = null) {
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
-})(), "Contravariant0" => function($dollar__unused_1 = null) {
+})(), "Contravariant0" => function($_dollar__unused_1 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Op_contravariantOp'];
   goto __end;;
@@ -165,13 +165,13 @@ $GLOBALS['Data_Divide_divideEquivalence'] = ["divide" => (function() {
   }
   $v2_5_0 = ($f_0)($a_3);
   $v3_6_1 = ($f_0)($b_4);
-  $__res = ((($v_1)(($v2_5_0)->{'value0'}))(($v3_6_1)->{'value0'}) && (($v1_2)(($v2_5_0)->{'value1'}))(($v3_6_1)->{'value1'}));
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($v_1)(($v2_5_0)->{'value0'}))(($v3_6_1)->{'value0'})))((($v1_2)(($v2_5_0)->{'value1'}))(($v3_6_1)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
   };
   return $__fn;
-})(), "Contravariant0" => function($dollar__unused_0 = null) {
+})(), "Contravariant0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Equivalence_contravariantEquivalence'];
   goto __end;;
@@ -188,31 +188,13 @@ $GLOBALS['Data_Divide_divideComparison'] = ["divide" => (function() {
   }
   $v2_5_0 = ($f_0)($a_3);
   $v3_6_1 = ($f_0)($b_4);
-  $__local_var_7_2 = (($v_1)(($v2_5_0)->{'value0'}))(($v3_6_1)->{'value0'});
-  $__local_var_8_3 = (($v1_2)(($v2_5_0)->{'value1'}))(($v3_6_1)->{'value1'});
-  $__t4 = null;;
-  if ((is_object($__local_var_7_2) && (($__local_var_7_2)->{'tag'} === "LT"))) {
-$__t4 = new Phpurs_Data0("LT");
-goto end_branch_4;;
-};
-  if ((is_object($__local_var_7_2) && (($__local_var_7_2)->{'tag'} === "GT"))) {
-$__t4 = new Phpurs_Data0("GT");
-goto end_branch_4;;
-};
-  if ((is_object($__local_var_7_2) && (($__local_var_7_2)->{'tag'} === "EQ"))) {
-$__t4 = $__local_var_8_3;
-goto end_branch_4;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t4 = null;
-  end_branch_4:;
-  $__res = $__t4;
+  $__res = ((($GLOBALS['Data_Ordering_semigroupOrdering'])['append'])((($v_1)(($v2_5_0)->{'value0'}))(($v3_6_1)->{'value0'})))((($v1_2)(($v2_5_0)->{'value1'}))(($v3_6_1)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
   };
   return $__fn;
-})(), "Contravariant0" => function($dollar__unused_0 = null) {
+})(), "Contravariant0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Comparison_contravariantComparison'];
   goto __end;;

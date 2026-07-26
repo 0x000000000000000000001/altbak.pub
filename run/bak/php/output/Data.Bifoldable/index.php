@@ -118,10 +118,54 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Data_Bifoldable_monoidEndo
-$GLOBALS['Data_Bifoldable_monoidEndo'] = ($GLOBALS['Data_Monoid_Endo_monoidEndo'])($GLOBALS['Control_Category_categoryFn']);
+$GLOBALS['Data_Bifoldable_monoidEndo'] = (function() use (&$__fn) {
+$__local_var_0_0 = (($GLOBALS['Control_Category_categoryFn'])['Semigroupoid0'])(null);
+$semigroupEndo1_1_1 = ["append" => (function() use ($__local_var_0_0) {
+  $__fn = function($v_1 = null, $v1_2 = null) use ($__local_var_0_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ((($__local_var_0_0)['compose'])($v_1))($v1_2);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
+return ["mempty" => ($GLOBALS['Control_Category_categoryFn'])['identity'], "Semigroup0" => function($_dollar__unused_2 = null) use ($semigroupEndo1_1_1) {
+  $__num = \func_num_args();
+  $__res = $semigroupEndo1_1_1;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+})();
 
 // Data_Bifoldable_monoidDual
-$GLOBALS['Data_Bifoldable_monoidDual'] = ($GLOBALS['Data_Monoid_Dual_monoidDual'])($GLOBALS['Data_Bifoldable_monoidEndo']);
+$GLOBALS['Data_Bifoldable_monoidDual'] = (function() use (&$__fn) {
+$__local_var_0_0 = (($GLOBALS['Data_Bifoldable_monoidEndo'])['Semigroup0'])(null);
+$semigroupDual1_1_1 = ["append" => (function() use ($__local_var_0_0) {
+  $__fn = function($v_1 = null, $v1_2 = null) use ($__local_var_0_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ((($__local_var_0_0)['append'])($v1_2))($v_1);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
+return ["mempty" => ($GLOBALS['Data_Bifoldable_monoidEndo'])['mempty'], "Semigroup0" => function($_dollar__unused_2 = null) use ($semigroupDual1_1_1) {
+  $__num = \func_num_args();
+  $__res = $semigroupDual1_1_1;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+})();
 
 // Data_Bifoldable_bifoldr
 $GLOBALS['Data_Bifoldable_bifoldr'] = function($dict_0 = null) {
@@ -139,14 +183,14 @@ $GLOBALS['Data_Bifoldable_bitraverse_'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $applySecond_2_0 = ($GLOBALS['Control_Apply_applySecond'])((($dictApplicative_1)['Apply0'])($GLOBALS['Prim_undefined']));
+  $applySecond_2_0 = ($GLOBALS['Control_Apply_applySecond'])((($dictApplicative_1)['Apply0'])(null));
   $__res = (function() use ($applySecond_2_0, $dictApplicative_1, $dictBifoldable_0) {
   $__fn = function($f_3 = null, $g_4 = null) use ($applySecond_2_0, $dictApplicative_1, $dictBifoldable_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictBifoldable_0)['bifoldr'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($applySecond_2_0))($f_3)))((($GLOBALS['Control_Semigroupoid_composeImpl'])($applySecond_2_0))($g_4)))((($dictApplicative_1)['pure'])($GLOBALS['Data_Unit_unit']));
+  $__res = (((($dictBifoldable_0)['bifoldr'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($applySecond_2_0))($f_3)))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($applySecond_2_0))($g_4)))((($dictApplicative_1)['pure'])($GLOBALS['Data_Unit_unit']));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -219,7 +263,7 @@ $GLOBALS['Data_Bifoldable_bifoldableTuple'] = ["bifoldMap" => (function() {
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((((($dictMonoid_0)['Semigroup0'])($GLOBALS['Prim_undefined']))['append'])(($f_1)(($v_3)->{'value0'})))(($g_2)(($v_3)->{'value1'}));
+  $__res = ((((($dictMonoid_0)['Semigroup0'])(null))['append'])(($f_1)(($v_3)->{'value0'})))(($g_2)(($v_3)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -476,7 +520,7 @@ $GLOBALS['Data_Bifoldable_bifoldMapDefaultR'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $append_2_0 = ((($dictMonoid_1)['Semigroup0'])($GLOBALS['Prim_undefined']))['append'];
+  $append_2_0 = ((($dictMonoid_1)['Semigroup0'])(null))['append'];
   $mempty_3_1 = ($dictMonoid_1)['mempty'];
   $__res = (function() use ($append_2_0, $dictBifoldable_0, $mempty_3_1) {
   $__fn = function($f_4 = null, $g_5 = null) use ($append_2_0, $dictBifoldable_0, $mempty_3_1, &$__fn) {
@@ -484,7 +528,7 @@ $GLOBALS['Data_Bifoldable_bifoldMapDefaultR'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictBifoldable_0)['bifoldr'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($append_2_0))($f_4)))((($GLOBALS['Control_Semigroupoid_composeImpl'])($append_2_0))($g_5)))($mempty_3_1);
+  $__res = (((($dictBifoldable_0)['bifoldr'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($append_2_0))($f_4)))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($append_2_0))($g_5)))($mempty_3_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -505,7 +549,7 @@ $GLOBALS['Data_Bifoldable_bifoldMapDefaultL'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_2_0 = (($dictMonoid_1)['Semigroup0'])($GLOBALS['Prim_undefined']);
+  $__local_var_2_0 = (($dictMonoid_1)['Semigroup0'])(null);
   $mempty_3_1 = ($dictMonoid_1)['mempty'];
   $__res = (function() use ($__local_var_2_0, $dictBifoldable_0, $mempty_3_1) {
   $__fn = function($f_4 = null, $g_5 = null) use ($__local_var_2_0, $dictBifoldable_0, $mempty_3_1, &$__fn) {
@@ -622,7 +666,7 @@ $GLOBALS['Data_Bifoldable_bifoldlDefault'] = function($dictBifoldable_0 = null) 
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (((($bifoldMap1_1_0)((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Dual_Dual']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Endo_Endo']))((function() use ($f_2) {
+  $__res = (((($bifoldMap1_1_0)(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Monoid_Dual_Dual']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Monoid_Endo_Endo']))((function() use ($f_2) {
   $__fn = function($b_6 = null, $a_7 = null) use ($f_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -634,7 +678,7 @@ $GLOBALS['Data_Bifoldable_bifoldlDefault'] = function($dictBifoldable_0 = null) 
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Dual_Dual']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Endo_Endo']))((function() use ($g_3) {
+})()))))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Monoid_Dual_Dual']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Monoid_Endo_Endo']))((function() use ($g_3) {
   $__fn = function($b_6 = null, $a_7 = null) use ($g_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -668,7 +712,7 @@ $GLOBALS['Data_Bifoldable_bifoldrDefault'] = function($dictBifoldable_0 = null) 
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (((($bifoldMap1_1_0)((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Endo_Endo']))($f_2)))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Endo_Endo']))($g_3)))($p_5))($z_4);
+  $__res = (((($bifoldMap1_1_0)(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Monoid_Endo_Endo']))($f_2)))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Monoid_Endo_Endo']))($g_3)))($p_5))($z_4);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -687,11 +731,6 @@ $GLOBALS['Data_Bifoldable_bifoldableProduct2'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_Data_Bifoldable_bifoldableProduct2_dictBifoldable_0 = $dictBifoldable_0;
-  $__tco_var_Data_Bifoldable_bifoldableProduct2_dictBifoldable1_1 = $dictBifoldable1_1;
-  tco_loop_Data_Bifoldable_bifoldableProduct2:;
-  $dictBifoldable_0 = $__tco_var_Data_Bifoldable_bifoldableProduct2_dictBifoldable_0;
-  $dictBifoldable1_1 = $__tco_var_Data_Bifoldable_bifoldableProduct2_dictBifoldable1_1;
   $__res = ["bifoldr" => (function() use ($dictBifoldable1_1, $dictBifoldable_0) {
   $__fn = function($l_2 = null, $r_3 = null, $u_4 = null, $m_5 = null) use ($dictBifoldable1_1, $dictBifoldable_0, &$__fn) {
   $__num = \func_num_args();
@@ -726,7 +765,7 @@ $GLOBALS['Data_Bifoldable_bifoldableProduct2'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((($dictMonoid_2)['Semigroup0'])($GLOBALS['Prim_undefined']))['append'])(((($bifoldMap3_3_0)($l_5))($r_6))(($v_7)->{'value0'})))(((($bifoldMap4_4_1)($l_5))($r_6))(($v_7)->{'value1'}));
+  $__res = ((((($dictMonoid_2)['Semigroup0'])(null))['append'])(((($bifoldMap3_3_0)($l_5))($r_6))(($v_7)->{'value0'})))(((($bifoldMap4_4_1)($l_5))($r_6))(($v_7)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -766,7 +805,7 @@ $GLOBALS['Data_Bifoldable_biany'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_2_0 = (($dictBooleanAlgebra_1)['HeytingAlgebra0'])($GLOBALS['Prim_undefined']);
+  $__local_var_2_0 = (($dictBooleanAlgebra_1)['HeytingAlgebra0'])(null);
   $semigroupDisj1_3_1 = ["append" => (function() use ($__local_var_2_0) {
   $__fn = function($v_3 = null, $v1_4 = null) use ($__local_var_2_0, &$__fn) {
   $__num = \func_num_args();
@@ -780,7 +819,7 @@ $GLOBALS['Data_Bifoldable_biany'] = (function() {
   };
   return $__fn;
 })()];
-  $bifoldMap2_2_0 = (($dictBifoldable_0)['bifoldMap'])(["mempty" => ($__local_var_2_0)['ff'], "Semigroup0" => function($dollar__unused_4 = null) use ($semigroupDisj1_3_1) {
+  $bifoldMap2_2_0 = (($dictBifoldable_0)['bifoldMap'])(["mempty" => ($__local_var_2_0)['ff'], "Semigroup0" => function($_dollar__unused_4 = null) use ($semigroupDisj1_3_1) {
   $__num = \func_num_args();
   $__res = $semigroupDisj1_3_1;
   goto __end;;
@@ -793,7 +832,7 @@ $GLOBALS['Data_Bifoldable_biany'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))((($bifoldMap2_2_0)((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Disj_Disj']))($p_3)))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Disj_Disj']))($q_4)));
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))((($bifoldMap2_2_0)(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Monoid_Disj_Disj']))($p_3)))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Monoid_Disj_Disj']))($q_4)));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -814,7 +853,7 @@ $GLOBALS['Data_Bifoldable_biall'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_2_0 = (($dictBooleanAlgebra_1)['HeytingAlgebra0'])($GLOBALS['Prim_undefined']);
+  $__local_var_2_0 = (($dictBooleanAlgebra_1)['HeytingAlgebra0'])(null);
   $semigroupConj1_3_1 = ["append" => (function() use ($__local_var_2_0) {
   $__fn = function($v_3 = null, $v1_4 = null) use ($__local_var_2_0, &$__fn) {
   $__num = \func_num_args();
@@ -828,7 +867,7 @@ $GLOBALS['Data_Bifoldable_biall'] = (function() {
   };
   return $__fn;
 })()];
-  $bifoldMap2_2_0 = (($dictBifoldable_0)['bifoldMap'])(["mempty" => ($__local_var_2_0)['tt'], "Semigroup0" => function($dollar__unused_4 = null) use ($semigroupConj1_3_1) {
+  $bifoldMap2_2_0 = (($dictBifoldable_0)['bifoldMap'])(["mempty" => ($__local_var_2_0)['tt'], "Semigroup0" => function($_dollar__unused_4 = null) use ($semigroupConj1_3_1) {
   $__num = \func_num_args();
   $__res = $semigroupConj1_3_1;
   goto __end;;
@@ -841,7 +880,7 @@ $GLOBALS['Data_Bifoldable_biall'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))((($bifoldMap2_2_0)((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Conj_Conj']))($p_3)))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Conj_Conj']))($q_4)));
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))((($bifoldMap2_2_0)(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Monoid_Conj_Conj']))($p_3)))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Monoid_Conj_Conj']))($q_4)));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

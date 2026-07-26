@@ -167,21 +167,13 @@ $GLOBALS['Data_Unfoldable_unfoldableMaybe'] = ["unfoldr" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_2_0 = ($f_0)($b_1);
-  $__t1 = null;;
-  if ((is_object($__local_var_2_0) && (($__local_var_2_0)->{'tag'} === "Just"))) {
-$__t1 = new Phpurs_Data1("Just", (($__local_var_2_0)->{'value0'})->{'value0'});
-goto end_branch_1;;
-};
-  $__t1 = new Phpurs_Data0("Nothing");
-  end_branch_1:;
-  $__res = $__t1;
+  $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Tuple_fst']))(($f_0)($b_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Unfoldable10" => function($dollar__unused_0 = null) {
+})(), "Unfoldable10" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Unfoldable1_unfoldable1Maybe'];
   goto __end;;
@@ -190,7 +182,7 @@ goto end_branch_1;;
 }];
 
 // Data_Unfoldable_unfoldableArray
-$GLOBALS['Data_Unfoldable_unfoldableArray'] = ["unfoldr" => (((($GLOBALS['Data_Unfoldable_unfoldrArrayImpl'])($GLOBALS['Data_Maybe_isNothing']))($GLOBALS['Data_Unfoldable_fromJust']))($GLOBALS['Data_Tuple_fst']))($GLOBALS['Data_Tuple_snd']), "Unfoldable10" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Unfoldable_unfoldableArray'] = ["unfoldr" => (((($GLOBALS['Data_Unfoldable_unfoldrArrayImpl'])($GLOBALS['Data_Maybe_isNothing']))($GLOBALS['Data_Unfoldable_fromJust']))($GLOBALS['Data_Tuple_fst']))($GLOBALS['Data_Tuple_snd']), "Unfoldable10" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Unfoldable1_unfoldable1Array'];
   goto __end;;
@@ -212,7 +204,7 @@ $GLOBALS['Data_Unfoldable_replicate'] = (function() {
 $__t0 = new Phpurs_Data0("Nothing");
 goto end_branch_0;;
 };
-  $__t0 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", $v_2, ($i_3 - 1)));
+  $__t0 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", $v_2, ((($GLOBALS['Data_Ring_ringInt'])['sub'])($i_3))(1)));
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
@@ -240,20 +232,7 @@ $GLOBALS['Data_Unfoldable_replicateA'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($sequence_3_0)(((($dictUnfoldable_1)['unfoldr'])(function($i_6 = null) use ($m_5) {
-  $__num = \func_num_args();
-  $__t1 = null;;
-  if (($i_6 <= 0)) {
-$__t1 = new Phpurs_Data0("Nothing");
-goto end_branch_1;;
-};
-  $__t1 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", $m_5, ($i_6 - 1)));
-  end_branch_1:;
-  $__res = $__t1;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($n_4));
+  $__res = ($sequence_3_0)(((($GLOBALS['Data_Unfoldable_replicate'])($dictUnfoldable_1))($n_4))($m_5));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -287,14 +266,13 @@ $GLOBALS['Data_Unfoldable_fromMaybe'] = function($dictUnfoldable_0 = null) {
   $__num = \func_num_args();
   $__res = (($dictUnfoldable_0)['unfoldr'])(function($b_1 = null) {
   $__num = \func_num_args();
-  $__t0 = null;;
-  if ((is_object($b_1) && (($b_1)->{'tag'} === "Just"))) {
-$__t0 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", ($b_1)->{'value0'}, new Phpurs_Data0("Nothing")));
-goto end_branch_0;;
-};
-  $__t0 = new Phpurs_Data0("Nothing");
-  end_branch_0:;
-  $__res = $__t0;
+  $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($a_2 = null) {
+  $__num = \func_num_args();
+  $__res = new Phpurs_Data2("Tuple", $a_2, new Phpurs_Data0("Nothing"));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))($b_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

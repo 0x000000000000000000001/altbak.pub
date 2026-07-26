@@ -120,7 +120,8 @@ $GLOBALS['Control_Comonad_Store_store'] = (function() {
 // Control_Comonad_Store_runStore
 $GLOBALS['Control_Comonad_Store_runStore'] = function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($v_0)->{'value0'}, ($v_0)->{'value1'});
+  $__local_var_1_0 = ((($GLOBALS['Data_Tuple_functorTuple'])['map'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))(new Phpurs_Data2("Tuple", ($v_0)->{'value1'}, ($v_0)->{'value0'}));
+  $__res = new Phpurs_Data2("Tuple", ($__local_var_1_0)->{'value1'}, ($__local_var_1_0)->{'value0'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

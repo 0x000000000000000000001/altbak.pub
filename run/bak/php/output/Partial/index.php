@@ -106,7 +106,7 @@ $GLOBALS['Partial__crashWith'] = $ffi_Partial['_crashWith'] ?? new class { publi
 
 
 // Partial_crashWith
-$GLOBALS['Partial_crashWith'] = function($dollar__unused_0 = null) {
+$GLOBALS['Partial_crashWith'] = function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Partial__crashWith'];
   goto __end;;
@@ -115,7 +115,7 @@ $GLOBALS['Partial_crashWith'] = function($dollar__unused_0 = null) {
 };
 
 // Partial_crash
-$GLOBALS['Partial_crash'] = function($dollar__unused_0 = null) {
+$GLOBALS['Partial_crash'] = function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = ($GLOBALS['Partial__crashWith'])("Partial.crash: partial function");
   goto __end;;

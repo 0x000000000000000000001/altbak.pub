@@ -311,7 +311,7 @@ $GLOBALS['Data_Semiring_addRecord'] = function($dict_0 = null) {
 
 // Data_Semiring_semiringRecord
 $GLOBALS['Data_Semiring_semiringRecord'] = (function() {
-  $__fn = function($dollar__unused_0 = null, $dictSemiringRecord_1 = null) use (&$__fn) {
+  $__fn = function($_dollar__unused_0 = null, $dictSemiringRecord_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
@@ -382,7 +382,7 @@ $GLOBALS['Data_Semiring_semiringFn'] = function($dictSemiring_0 = null) {
 
 // Data_Semiring_semiringRecordCons
 $GLOBALS['Data_Semiring_semiringRecordCons'] = (function() {
-  $__fn = function($dictIsSymbol_0 = null, $dollar__unused_1 = null, $dictSemiringRecord_2 = null, $dictSemiring_3 = null) use (&$__fn) {
+  $__fn = function($dictIsSymbol_0 = null, $_dollar__unused_1 = null, $dictSemiringRecord_2 = null, $dictSemiring_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);

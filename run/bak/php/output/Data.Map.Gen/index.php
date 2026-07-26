@@ -114,9 +114,9 @@ $GLOBALS['Data_Map_Gen_genMap'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $Bind1_2_0 = (((($dictMonadGen_1)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']);
-  $Apply0_3_1 = (($Bind1_2_0)['Apply0'])($GLOBALS['Prim_undefined']);
-  $__local_var_4_2 = (($Apply0_3_1)['Functor0'])($GLOBALS['Prim_undefined']);
+  $Bind1_2_0 = (((($dictMonadGen_1)['Monad0'])(null))['Bind1'])(null);
+  $Apply0_3_1 = (($Bind1_2_0)['Apply0'])(null);
+  $__local_var_4_2 = (($Apply0_3_1)['Functor0'])(null);
   $unfoldable1_5_3 = ((($GLOBALS['Control_Monad_Gen_unfoldable'])($dictMonadRec_0))($dictMonadGen_1))($GLOBALS['Data_List_Types_unfoldableList']);
   $__res = function($dictOrd_6 = null) use ($Apply0_3_1, $Bind1_2_0, $__local_var_4_2, $dictMonadGen_1, $unfoldable1_5_3) {
   $__num = \func_num_args();

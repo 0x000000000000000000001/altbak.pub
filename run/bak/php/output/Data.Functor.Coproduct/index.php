@@ -128,11 +128,11 @@ $GLOBALS['Data_Functor_Coproduct_showCoproduct'] = (function() {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_2) && (($v_2)->{'tag'} === "Left"))) {
-$__t0 = (("(left " . (($dictShow_0)['show'])(($v_2)->{'value0'})) . ")");
+$__t0 = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(left "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])(($v_2)->{'value0'})))(")"));
 goto end_branch_0;;
 };
   if ((is_object($v_2) && (($v_2)->{'tag'} === "Right"))) {
-$__t0 = (("(right " . (($dictShow1_1)['show'])(($v_2)->{'value0'})) . ")");
+$__t0 = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(right "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow1_1)['show'])(($v_2)->{'value0'})))(")"));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -160,9 +160,9 @@ $GLOBALS['Data_Functor_Coproduct_right'] = function($ga_0 = null) {
 };
 
 // Data_Functor_Coproduct_newtypeCoproduct
-$GLOBALS['Data_Functor_Coproduct_newtypeCoproduct'] = ["Coercible0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Functor_Coproduct_newtypeCoproduct'] = ["Coercible0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Prim_undefined'];
+  $__res = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -190,21 +190,7 @@ $GLOBALS['Data_Functor_Coproduct_functorCoproduct'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_4_0 = (($dictFunctor_0)['map'])($f_2);
-  $__local_var_5_1 = (($dictFunctor1_1)['map'])($f_2);
-  $__t2 = null;;
-  if ((is_object($v_3) && (($v_3)->{'tag'} === "Left"))) {
-$__t2 = new Phpurs_Data1("Left", ($__local_var_4_0)(($v_3)->{'value0'}));
-goto end_branch_2;;
-};
-  if ((is_object($v_3) && (($v_3)->{'tag'} === "Right"))) {
-$__t2 = new Phpurs_Data1("Right", ($__local_var_5_1)(($v_3)->{'value0'}));
-goto end_branch_2;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t2 = null;
-  end_branch_2:;
-  $__res = $__t2;
+  $__res = (((($GLOBALS['Data_Bifunctor_bifunctorEither'])['bimap'])((($dictFunctor_0)['map'])($f_2)))((($dictFunctor1_1)['map'])($f_2)))($v_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -299,10 +285,10 @@ goto end_branch_2;;
 // Data_Functor_Coproduct_ord1Coproduct
 $GLOBALS['Data_Functor_Coproduct_ord1Coproduct'] = function($dictOrd1_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictOrd1_0)['Eq10'])($GLOBALS['Prim_undefined']);
+  $__local_var_1_0 = (($dictOrd1_0)['Eq10'])(null);
   $__res = function($dictOrd11_2 = null) use ($__local_var_1_0, $dictOrd1_0) {
   $__num = \func_num_args();
-  $__local_var_3_1 = (($dictOrd11_2)['Eq10'])($GLOBALS['Prim_undefined']);
+  $__local_var_3_1 = (($dictOrd11_2)['Eq10'])(null);
   $eq1Coproduct2_4_2 = ["eq1" => function($dictEq_4 = null) use ($__local_var_1_0, $__local_var_3_1) {
   $__num = \func_num_args();
   $eq12_5_2 = (($__local_var_1_0)['eq1'])($dictEq_4);
@@ -374,7 +360,7 @@ goto end_branch_8;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Eq10" => function($dollar__unused_5 = null) use ($eq1Coproduct2_4_2) {
+}, "Eq10" => function($_dollar__unused_5 = null) use ($eq1Coproduct2_4_2) {
   $__num = \func_num_args();
   $__res = $eq1Coproduct2_4_2;
   goto __end;;
@@ -394,13 +380,13 @@ goto end_branch_8;;
 $GLOBALS['Data_Functor_Coproduct_ordCoproduct'] = function($dictOrd1_0 = null) {
   $__num = \func_num_args();
   $ord1Coproduct1_1_0 = ($GLOBALS['Data_Functor_Coproduct_ord1Coproduct'])($dictOrd1_0);
-  $__local_var_2_1 = (($dictOrd1_0)['Eq10'])($GLOBALS['Prim_undefined']);
+  $__local_var_2_1 = (($dictOrd1_0)['Eq10'])(null);
   $__res = function($dictOrd11_3 = null) use ($__local_var_2_1, $ord1Coproduct1_1_0) {
   $__num = \func_num_args();
-  $__local_var_4_2 = (($dictOrd11_3)['Eq10'])($GLOBALS['Prim_undefined']);
+  $__local_var_4_2 = (($dictOrd11_3)['Eq10'])(null);
   $__res = function($dictOrd_5 = null) use ($__local_var_2_1, $__local_var_4_2, $dictOrd11_3, $ord1Coproduct1_1_0) {
   $__num = \func_num_args();
-  $__local_var_6_3 = (($dictOrd_5)['Eq0'])($GLOBALS['Prim_undefined']);
+  $__local_var_6_3 = (($dictOrd_5)['Eq0'])(null);
   $eq12_7_4 = (($__local_var_2_1)['eq1'])($__local_var_6_3);
   $eq13_8_5 = (($__local_var_4_2)['eq1'])($__local_var_6_3);
   $eqCoproduct3_7_4 = ["eq" => (function() use ($eq12_7_4, $eq13_8_5) {
@@ -423,7 +409,7 @@ goto end_branch_6;;
   };
   return $__fn;
 })()];
-  $__res = ["compare" => ((($ord1Coproduct1_1_0)($dictOrd11_3))['compare1'])($dictOrd_5), "Eq0" => function($dollar__unused_8 = null) use ($eqCoproduct3_7_4) {
+  $__res = ["compare" => ((($ord1Coproduct1_1_0)($dictOrd11_3))['compare1'])($dictOrd_5), "Eq0" => function($_dollar__unused_8 = null) use ($eqCoproduct3_7_4) {
   $__num = \func_num_args();
   $__res = $eqCoproduct3_7_4;
   goto __end;;
@@ -473,25 +459,23 @@ goto end_branch_0;;
 // Data_Functor_Coproduct_extendCoproduct
 $GLOBALS['Data_Functor_Coproduct_extendCoproduct'] = function($dictExtend_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictExtend_0)['Functor0'])($GLOBALS['Prim_undefined']);
-  $__res = function($dictExtend1_2 = null) use ($__local_var_1_0, $dictExtend_0) {
+  $functorCoproduct1_1_0 = ($GLOBALS['Data_Functor_Coproduct_functorCoproduct'])((($dictExtend_0)['Functor0'])(null));
+  $__res = function($dictExtend1_2 = null) use ($dictExtend_0, $functorCoproduct1_1_0) {
   $__num = \func_num_args();
-  $__local_var_3_1 = (($dictExtend1_2)['Functor0'])($GLOBALS['Prim_undefined']);
-  $functorCoproduct2_4_2 = ["map" => (function() use ($__local_var_1_0, $__local_var_3_1) {
-  $__fn = function($f_4 = null, $v_5 = null) use ($__local_var_1_0, $__local_var_3_1, &$__fn) {
+  $functorCoproduct2_3_1 = ($functorCoproduct1_1_0)((($dictExtend1_2)['Functor0'])(null));
+  $__res = ["extend" => function($f_4 = null) use ($dictExtend1_2, $dictExtend_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__local_var_6_2 = (($__local_var_1_0)['map'])($f_4);
-  $__local_var_7_3 = (($__local_var_3_1)['map'])($f_4);
+  $__local_var_5_2 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Either_Left']))((($dictExtend_0)['extend'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_4))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))($GLOBALS['Data_Either_Left']))));
+  $__local_var_6_3 = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Either_Right']))((($dictExtend1_2)['extend'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_4))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))($GLOBALS['Data_Either_Right']))));
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))(function($v2_7 = null) use ($__local_var_5_2, $__local_var_6_3) {
+  $__num = \func_num_args();
   $__t4 = null;;
-  if ((is_object($v_5) && (($v_5)->{'tag'} === "Left"))) {
-$__t4 = new Phpurs_Data1("Left", ($__local_var_6_2)(($v_5)->{'value0'}));
+  if ((is_object($v2_7) && (($v2_7)->{'tag'} === "Left"))) {
+$__t4 = ($__local_var_5_2)(($v2_7)->{'value0'});
 goto end_branch_4;;
 };
-  if ((is_object($v_5) && (($v_5)->{'tag'} === "Right"))) {
-$__t4 = new Phpurs_Data1("Right", ($__local_var_7_3)(($v_5)->{'value0'}));
+  if ((is_object($v2_7) && (($v2_7)->{'tag'} === "Right"))) {
+$__t4 = ($__local_var_6_3)(($v2_7)->{'value0'});
 goto end_branch_4;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -500,39 +484,14 @@ goto end_branch_4;;
   $__res = $__t4;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
-  $__res = ["extend" => function($f_5 = null) use ($dictExtend1_2, $dictExtend_0) {
-  $__num = \func_num_args();
-  $__local_var_6_6 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Either_Left']))((($dictExtend_0)['extend'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_5))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))($GLOBALS['Data_Either_Left']))));
-  $__local_var_7_7 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Either_Right']))((($dictExtend1_2)['extend'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_5))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))($GLOBALS['Data_Either_Right']))));
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))(function($v2_8 = null) use ($__local_var_6_6, $__local_var_7_7) {
-  $__num = \func_num_args();
-  $__t8 = null;;
-  if ((is_object($v2_8) && (($v2_8)->{'tag'} === "Left"))) {
-$__t8 = ($__local_var_6_6)(($v2_8)->{'value0'});
-goto end_branch_8;;
-};
-  if ((is_object($v2_8) && (($v2_8)->{'tag'} === "Right"))) {
-$__t8 = ($__local_var_7_7)(($v2_8)->{'value0'});
-goto end_branch_8;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t8 = null;
-  end_branch_8:;
-  $__res = $__t8;
-  goto __end;;
-  __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Functor0" => function($dollar__unused_5 = null) use ($functorCoproduct2_4_2) {
+}, "Functor0" => function($_dollar__unused_4 = null) use ($functorCoproduct2_3_1) {
   $__num = \func_num_args();
-  $__res = $functorCoproduct2_4_2;
+  $__res = $functorCoproduct2_3_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -549,10 +508,10 @@ goto end_branch_8;;
 // Data_Functor_Coproduct_comonadCoproduct
 $GLOBALS['Data_Functor_Coproduct_comonadCoproduct'] = function($dictComonad_0 = null) {
   $__num = \func_num_args();
-  $extendCoproduct1_1_0 = ($GLOBALS['Data_Functor_Coproduct_extendCoproduct'])((($dictComonad_0)['Extend0'])($GLOBALS['Prim_undefined']));
+  $extendCoproduct1_1_0 = ($GLOBALS['Data_Functor_Coproduct_extendCoproduct'])((($dictComonad_0)['Extend0'])(null));
   $__res = function($dictComonad1_2 = null) use ($dictComonad_0, $extendCoproduct1_1_0) {
   $__num = \func_num_args();
-  $extendCoproduct2_3_1 = ($extendCoproduct1_1_0)((($dictComonad1_2)['Extend0'])($GLOBALS['Prim_undefined']));
+  $extendCoproduct2_3_1 = ($extendCoproduct1_1_0)((($dictComonad1_2)['Extend0'])(null));
   $__res = ["extract" => function($v2_4 = null) use ($dictComonad1_2, $dictComonad_0) {
   $__num = \func_num_args();
   $__t2 = null;;
@@ -571,7 +530,7 @@ goto end_branch_2;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Extend0" => function($dollar__unused_4 = null) use ($extendCoproduct2_3_1) {
+}, "Extend0" => function($_dollar__unused_4 = null) use ($extendCoproduct2_3_1) {
   $__num = \func_num_args();
   $__res = $extendCoproduct2_3_1;
   goto __end;;
@@ -594,19 +553,7 @@ $GLOBALS['Data_Functor_Coproduct_bihoistCoproduct'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__t0 = null;;
-  if ((is_object($v_2) && (($v_2)->{'tag'} === "Left"))) {
-$__t0 = new Phpurs_Data1("Left", ($natF_0)(($v_2)->{'value0'}));
-goto end_branch_0;;
-};
-  if ((is_object($v_2) && (($v_2)->{'tag'} === "Right"))) {
-$__t0 = new Phpurs_Data1("Right", ($natG_1)(($v_2)->{'value0'}));
-goto end_branch_0;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t0 = null;
-  end_branch_0:;
-  $__res = $__t0;
+  $__res = (((($GLOBALS['Data_Bifunctor_bifunctorEither'])['bimap'])($natF_0))($natG_1))($v_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;

@@ -106,14 +106,14 @@ $GLOBALS['Data_String_Regex_Unsafe_unsafeRegex'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_2_0 = (($GLOBALS['Data_String_Regex_regex'])($s_0))($f_1);
+  $__local_var_2_0 = (((($GLOBALS['Data_String_Regex_regexImpl'])($GLOBALS['Data_Either_Left']))($GLOBALS['Data_Either_Right']))($s_0))(($GLOBALS['Data_String_Regex_renderFlags'])($f_1));
   $__t1 = null;;
   if ((is_object($__local_var_2_0) && (($__local_var_2_0)->{'tag'} === "Left"))) {
 $__t1 = ($GLOBALS['Partial__crashWith'])(($__local_var_2_0)->{'value0'});
 goto end_branch_1;;
 };
   if ((is_object($__local_var_2_0) && (($__local_var_2_0)->{'tag'} === "Right"))) {
-$__t1 = ($__local_var_2_0)->{'value0'};
+$__t1 = (($GLOBALS['Control_Category_categoryFn'])['identity'])(($__local_var_2_0)->{'value0'});
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);

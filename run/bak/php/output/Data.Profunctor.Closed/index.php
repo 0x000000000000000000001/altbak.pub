@@ -99,7 +99,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Data_Profunctor_Closed_closedFunction
-$GLOBALS['Data_Profunctor_Closed_closedFunction'] = ["closed" => $GLOBALS['Control_Semigroupoid_composeImpl'], "Profunctor0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Profunctor_Closed_closedFunction'] = ["closed" => ($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'], "Profunctor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Profunctor_profunctorFn'];
   goto __end;;

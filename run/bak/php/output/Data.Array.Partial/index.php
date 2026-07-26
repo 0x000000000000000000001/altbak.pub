@@ -99,7 +99,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 // Data_Array_Partial_tail
 $GLOBALS['Data_Array_Partial_tail'] = (function() {
-  $__fn = function($dollar__unused_0 = null, $xs_1 = null) use (&$__fn) {
+  $__fn = function($_dollar__unused_0 = null, $xs_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
@@ -114,7 +114,7 @@ $GLOBALS['Data_Array_Partial_tail'] = (function() {
 
 // Data_Array_Partial_last
 $GLOBALS['Data_Array_Partial_last'] = (function() {
-  $__fn = function($dollar__unused_0 = null, $xs_1 = null) use (&$__fn) {
+  $__fn = function($_dollar__unused_0 = null, $xs_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
@@ -129,12 +129,12 @@ $GLOBALS['Data_Array_Partial_last'] = (function() {
 
 // Data_Array_Partial_init
 $GLOBALS['Data_Array_Partial_init'] = (function() {
-  $__fn = function($dollar__unused_0 = null, $xs_1 = null) use (&$__fn) {
+  $__fn = function($_dollar__unused_0 = null, $xs_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Array_sliceImpl'])(0, (count($xs_1) - 1), $xs_1);
+  $__res = ($GLOBALS['Data_Array_sliceImpl'])(0, ((($GLOBALS['Data_Ring_ringInt'])['sub'])(count($xs_1)))(1), $xs_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -144,7 +144,7 @@ $GLOBALS['Data_Array_Partial_init'] = (function() {
 
 // Data_Array_Partial_head
 $GLOBALS['Data_Array_Partial_head'] = (function() {
-  $__fn = function($dollar__unused_0 = null, $xs_1 = null) use (&$__fn) {
+  $__fn = function($_dollar__unused_0 = null, $xs_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);

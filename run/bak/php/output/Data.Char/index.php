@@ -97,8 +97,8 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Data_Char_toCharCode
-$GLOBALS['Data_Char_toCharCode'] = $GLOBALS['Data_Enum_toCharCode'];
+$GLOBALS['Data_Char_toCharCode'] = ($GLOBALS['Data_Enum_boundedEnumChar'])['fromEnum'];
 
 // Data_Char_fromCharCode
-$GLOBALS['Data_Char_fromCharCode'] = $GLOBALS['Data_Enum_charToEnum'];
+$GLOBALS['Data_Char_fromCharCode'] = ($GLOBALS['Data_Enum_boundedEnumChar'])['toEnum'];
 

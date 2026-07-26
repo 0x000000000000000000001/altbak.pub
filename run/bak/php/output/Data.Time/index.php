@@ -119,7 +119,19 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Data_Time_negateDuration
-$GLOBALS['Data_Time_negateDuration'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Control_Category_categoryFn'])['identity']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Time_Duration_negate']))(($GLOBALS['Control_Category_categoryFn'])['identity']));
+$GLOBALS['Data_Time_negateDuration'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($GLOBALS['Data_Time_Duration_durationMilliseconds'])['toDuration']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Time_Duration_negate']))(($GLOBALS['Data_Time_Duration_durationMilliseconds'])['fromDuration']));
+
+// Data_Time_negate
+$GLOBALS['Data_Time_negate'] = (function() use (&$__fn) {
+$zero_0_0 = ((($GLOBALS['Data_Ring_ringNumber'])['Semiring0'])(null))['zero'];
+return function($a_1 = null) use ($zero_0_0) {
+  $__num = \func_num_args();
+  $__res = ((($GLOBALS['Data_Ring_ringNumber'])['sub'])($zero_0_0))($a_1);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+})();
 
 // Data_Time_Time
 $GLOBALS['Data_Time_Time'] = (function() {
@@ -139,7 +151,7 @@ $GLOBALS['Data_Time_Time'] = (function() {
 // Data_Time_showTime
 $GLOBALS['Data_Time_showTime'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = (((((((("(Time (Hour " . ($GLOBALS['Data_Show_showIntImpl'])(($v_0)->{'value0'})) . ") (Minute ") . ($GLOBALS['Data_Show_showIntImpl'])(($v_0)->{'value1'})) . ") (Second ") . ($GLOBALS['Data_Show_showIntImpl'])(($v_0)->{'value2'})) . ") (Millisecond ") . ($GLOBALS['Data_Show_showIntImpl'])(($v_0)->{'value3'})) . "))");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Time "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Time_Component_showHour'])['show'])(($v_0)->{'value0'})))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Time_Component_showMinute'])['show'])(($v_0)->{'value1'})))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Time_Component_showSecond'])['show'])(($v_0)->{'value2'})))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Time_Component_showMillisecond'])['show'])(($v_0)->{'value3'})))(")"))))))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -235,145 +247,19 @@ $GLOBALS['Data_Time_millisecond'] = function($v_0 = null) {
 // Data_Time_millisToTime
 $GLOBALS['Data_Time_millisToTime'] = function($v_0 = null) {
   $__num = \func_num_args();
-  $hours_1_0 = ($GLOBALS['Data_Number_floor'])(($v_0 / 3600000.0));
-  $minutes_2_1 = ($GLOBALS['Data_Number_floor'])((($v_0 - ($hours_1_0 * 3600000.0)) / 60000.0));
-  $seconds_3_2 = ($GLOBALS['Data_Number_floor'])((($v_0 - (($hours_1_0 * 3600000.0) + ($minutes_2_1 * 60000.0))) / 1000.0));
-  $__local_var_4_3 = ($GLOBALS['Data_Int_floor'])($hours_1_0);
-  $__t18 = null;;
-  if ((($__local_var_4_3 >= 0) && ($__local_var_4_3 <= 23))) {
-$__local_var_5_19 = ($GLOBALS['Data_Int_floor'])($minutes_2_1);
-$__t26 = null;;
-if ((($__local_var_5_19 >= 0) && ($__local_var_5_19 <= 59))) {
-$__local_var_6_27 = ($GLOBALS['Data_Int_floor'])($seconds_3_2);
-$__t30 = null;;
-if ((($__local_var_6_27 >= 0) && ($__local_var_6_27 <= 59))) {
-$__local_var_7_31 = ($GLOBALS['Data_Int_floor'])(($v_0 - ((($hours_1_0 * 3600000.0) + ($minutes_2_1 * 60000.0)) + ($seconds_3_2 * 1000.0))));
-$__t32 = null;;
-if ((($__local_var_7_31 >= 0) && ($__local_var_7_31 <= 999))) {
-$__t32 = new Phpurs_Data4("Time", $__local_var_4_3, $__local_var_5_19, $__local_var_6_27, $__local_var_7_31);
-goto end_branch_32;;
-};
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t32 = null;
-end_branch_32:;
-$__t30 = $__t32;
-goto end_branch_30;;
-};
-$__local_var_7_28 = ($GLOBALS['Data_Int_floor'])(($v_0 - ((($hours_1_0 * 3600000.0) + ($minutes_2_1 * 60000.0)) + ($seconds_3_2 * 1000.0))));
-$__t29 = null;;
-if ((($__local_var_7_28 >= 0) && ($__local_var_7_28 <= 999))) {
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t29 = null;
-goto end_branch_29;;
-};
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t29 = null;
-end_branch_29:;
-$__t30 = $__t29;
-end_branch_30:;
-$__t26 = $__t30;
-goto end_branch_26;;
-};
-$__local_var_6_20 = ($GLOBALS['Data_Int_floor'])($seconds_3_2);
-$__t23 = null;;
-if ((($__local_var_6_20 >= 0) && ($__local_var_6_20 <= 59))) {
-$__local_var_7_24 = ($GLOBALS['Data_Int_floor'])(($v_0 - ((($hours_1_0 * 3600000.0) + ($minutes_2_1 * 60000.0)) + ($seconds_3_2 * 1000.0))));
-$__t25 = null;;
-if ((($__local_var_7_24 >= 0) && ($__local_var_7_24 <= 999))) {
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t25 = null;
-goto end_branch_25;;
-};
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t25 = null;
-end_branch_25:;
-$__t23 = $__t25;
-goto end_branch_23;;
-};
-$__local_var_7_21 = ($GLOBALS['Data_Int_floor'])(($v_0 - ((($hours_1_0 * 3600000.0) + ($minutes_2_1 * 60000.0)) + ($seconds_3_2 * 1000.0))));
-$__t22 = null;;
-if ((($__local_var_7_21 >= 0) && ($__local_var_7_21 <= 999))) {
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t22 = null;
-goto end_branch_22;;
-};
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t22 = null;
-end_branch_22:;
-$__t23 = $__t22;
-end_branch_23:;
-$__t26 = $__t23;
-end_branch_26:;
-$__t18 = $__t26;
-goto end_branch_18;;
-};
-  $__local_var_5_4 = ($GLOBALS['Data_Int_floor'])($minutes_2_1);
-  $__t11 = null;;
-  if ((($__local_var_5_4 >= 0) && ($__local_var_5_4 <= 59))) {
-$__local_var_6_12 = ($GLOBALS['Data_Int_floor'])($seconds_3_2);
-$__t15 = null;;
-if ((($__local_var_6_12 >= 0) && ($__local_var_6_12 <= 59))) {
-$__local_var_7_16 = ($GLOBALS['Data_Int_floor'])(($v_0 - ((($hours_1_0 * 3600000.0) + ($minutes_2_1 * 60000.0)) + ($seconds_3_2 * 1000.0))));
-$__t17 = null;;
-if ((($__local_var_7_16 >= 0) && ($__local_var_7_16 <= 999))) {
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t17 = null;
-goto end_branch_17;;
-};
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t17 = null;
-end_branch_17:;
-$__t15 = $__t17;
-goto end_branch_15;;
-};
-$__local_var_7_13 = ($GLOBALS['Data_Int_floor'])(($v_0 - ((($hours_1_0 * 3600000.0) + ($minutes_2_1 * 60000.0)) + ($seconds_3_2 * 1000.0))));
-$__t14 = null;;
-if ((($__local_var_7_13 >= 0) && ($__local_var_7_13 <= 999))) {
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t14 = null;
-goto end_branch_14;;
-};
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t14 = null;
-end_branch_14:;
-$__t15 = $__t14;
-end_branch_15:;
-$__t11 = $__t15;
-goto end_branch_11;;
-};
-  $__local_var_6_5 = ($GLOBALS['Data_Int_floor'])($seconds_3_2);
-  $__t8 = null;;
-  if ((($__local_var_6_5 >= 0) && ($__local_var_6_5 <= 59))) {
-$__local_var_7_9 = ($GLOBALS['Data_Int_floor'])(($v_0 - ((($hours_1_0 * 3600000.0) + ($minutes_2_1 * 60000.0)) + ($seconds_3_2 * 1000.0))));
-$__t10 = null;;
-if ((($__local_var_7_9 >= 0) && ($__local_var_7_9 <= 999))) {
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t10 = null;
-goto end_branch_10;;
-};
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t10 = null;
-end_branch_10:;
-$__t8 = $__t10;
-goto end_branch_8;;
-};
-  $__local_var_7_6 = ($GLOBALS['Data_Int_floor'])(($v_0 - ((($hours_1_0 * 3600000.0) + ($minutes_2_1 * 60000.0)) + ($seconds_3_2 * 1000.0))));
-  $__t7 = null;;
-  if ((($__local_var_7_6 >= 0) && ($__local_var_7_6 <= 999))) {
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t7 = null;
-goto end_branch_7;;
+  $hours_1_0 = ($GLOBALS['Data_Number_floor'])(((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])['div'])($v_0))(3600000.0));
+  $minutes_2_1 = ($GLOBALS['Data_Number_floor'])(((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])['div'])(((($GLOBALS['Data_Ring_ringNumber'])['sub'])($v_0))(((($GLOBALS['Data_Semiring_semiringNumber'])['mul'])($hours_1_0))(3600000.0))))(60000.0));
+  $seconds_3_2 = ($GLOBALS['Data_Number_floor'])(((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])['div'])(((($GLOBALS['Data_Ring_ringNumber'])['sub'])($v_0))(((($GLOBALS['Data_Semiring_semiringNumber'])['add'])(((($GLOBALS['Data_Semiring_semiringNumber'])['mul'])($hours_1_0))(3600000.0)))(((($GLOBALS['Data_Semiring_semiringNumber'])['mul'])($minutes_2_1))(60000.0)))))(1000.0));
+  $__local_var_4_3 = ((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])(((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])(((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])(((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Time_Time']))((($GLOBALS['Data_Time_Component_boundedEnumHour'])['toEnum'])(($GLOBALS['Data_Int_floor'])($hours_1_0)))))((($GLOBALS['Data_Time_Component_boundedEnumMinute'])['toEnum'])(($GLOBALS['Data_Int_floor'])($minutes_2_1)))))((($GLOBALS['Data_Time_Component_boundedEnumSecond'])['toEnum'])(($GLOBALS['Data_Int_floor'])($seconds_3_2)))))((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'])['toEnum'])(($GLOBALS['Data_Int_floor'])(((($GLOBALS['Data_Ring_ringNumber'])['sub'])($v_0))(((($GLOBALS['Data_Semiring_semiringNumber'])['add'])(((($GLOBALS['Data_Semiring_semiringNumber'])['add'])(((($GLOBALS['Data_Semiring_semiringNumber'])['mul'])($hours_1_0))(3600000.0)))(((($GLOBALS['Data_Semiring_semiringNumber'])['mul'])($minutes_2_1))(60000.0))))(((($GLOBALS['Data_Semiring_semiringNumber'])['mul'])($seconds_3_2))(1000.0))))));
+  $__t4 = null;;
+  if ((is_object($__local_var_4_3) && (($__local_var_4_3)->{'tag'} === "Just"))) {
+$__t4 = ($__local_var_4_3)->{'value0'};
+goto end_branch_4;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t7 = null;
-  end_branch_7:;
-  $__t8 = $__t7;
-  end_branch_8:;
-  $__t11 = $__t8;
-  end_branch_11:;
-  $__t18 = $__t11;
-  end_branch_18:;
-  $__res = $__t18;
+  $__t4 = null;
+  end_branch_4:;
+  $__res = $__t4;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -391,7 +277,7 @@ $GLOBALS['Data_Time_hour'] = function($v_0 = null) {
 // Data_Time_timeToMillis
 $GLOBALS['Data_Time_timeToMillis'] = function($t_0 = null) {
   $__num = \func_num_args();
-  $__res = ((((3600000.0 * ($GLOBALS['Data_Int_toNumber'])(($t_0)->{'value0'})) + (60000.0 * ($GLOBALS['Data_Int_toNumber'])(($t_0)->{'value1'}))) + (1000.0 * ($GLOBALS['Data_Int_toNumber'])(($t_0)->{'value2'}))) + ($GLOBALS['Data_Int_toNumber'])(($t_0)->{'value3'}));
+  $__res = ((($GLOBALS['Data_Semiring_semiringNumber'])['add'])(((($GLOBALS['Data_Semiring_semiringNumber'])['add'])(((($GLOBALS['Data_Semiring_semiringNumber'])['add'])(((($GLOBALS['Data_Semiring_semiringNumber'])['mul'])(3600000.0))(($GLOBALS['Data_Int_toNumber'])((($GLOBALS['Data_Time_Component_boundedEnumHour'])['fromEnum'])(($t_0)->{'value0'})))))(((($GLOBALS['Data_Semiring_semiringNumber'])['mul'])(60000.0))(($GLOBALS['Data_Int_toNumber'])((($GLOBALS['Data_Time_Component_boundedEnumMinute'])['fromEnum'])(($t_0)->{'value1'}))))))(((($GLOBALS['Data_Semiring_semiringNumber'])['mul'])(1000.0))(($GLOBALS['Data_Int_toNumber'])((($GLOBALS['Data_Time_Component_boundedEnumSecond'])['fromEnum'])(($t_0)->{'value2'}))))))(($GLOBALS['Data_Int_toNumber'])((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'])['fromEnum'])(($t_0)->{'value3'})));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -404,7 +290,7 @@ $GLOBALS['Data_Time_eqTime'] = ["eq" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($x_0)->{'value0'} === ($y_1)->{'value0'}) && (($x_0)->{'value1'} === ($y_1)->{'value1'})) && (($x_0)->{'value2'} === ($y_1)->{'value2'})) && (($x_0)->{'value3'} === ($y_1)->{'value3'}));
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(((($GLOBALS['Data_Eq_eqInt'])['eq'])(($x_0)->{'value0'}))(($y_1)->{'value0'})))(((($GLOBALS['Data_Eq_eqInt'])['eq'])(($x_0)->{'value1'}))(($y_1)->{'value1'}))))(((($GLOBALS['Data_Eq_eqInt'])['eq'])(($x_0)->{'value2'}))(($y_1)->{'value2'}))))(((($GLOBALS['Data_Eq_eqInt'])['eq'])(($x_0)->{'value3'}))(($y_1)->{'value3'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -461,7 +347,7 @@ goto end_branch_3;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Eq0" => function($dollar__unused_0 = null) {
+})(), "Eq0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Time_eqTime'];
   goto __end;;
@@ -476,7 +362,7 @@ $GLOBALS['Data_Time_diff'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictDuration_0)['toDuration'])((($GLOBALS['Data_Time_timeToMillis'])($t1_1) + ($GLOBALS['Data_Time_negateDuration'])(($GLOBALS['Data_Time_timeToMillis'])($t2_2))));
+  $__res = (($dictDuration_0)['toDuration'])(((($GLOBALS['Data_Time_Duration_semigroupMilliseconds'])['append'])(($GLOBALS['Data_Time_timeToMillis'])($t1_1)))(($GLOBALS['Data_Time_negateDuration'])(($GLOBALS['Data_Time_timeToMillis'])($t2_2))));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -485,7 +371,7 @@ $GLOBALS['Data_Time_diff'] = (function() {
 })();
 
 // Data_Time_boundedTime
-$GLOBALS['Data_Time_boundedTime'] = ["bottom" => new Phpurs_Data4("Time", 0, 0, 0, 0), "top" => new Phpurs_Data4("Time", 23, 59, 59, 999), "Ord0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Time_boundedTime'] = ["bottom" => new Phpurs_Data4("Time", ($GLOBALS['Data_Time_Component_boundedHour'])['bottom'], ($GLOBALS['Data_Time_Component_boundedMinute'])['bottom'], ($GLOBALS['Data_Time_Component_boundedSecond'])['bottom'], ($GLOBALS['Data_Time_Component_boundedMillisecond'])['bottom']), "top" => new Phpurs_Data4("Time", ($GLOBALS['Data_Time_Component_boundedHour'])['top'], ($GLOBALS['Data_Time_Component_boundedMinute'])['top'], ($GLOBALS['Data_Time_Component_boundedSecond'])['top'], ($GLOBALS['Data_Time_Component_boundedMillisecond'])['top']), "Ord0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Time_ordTime'];
   goto __end;;
@@ -494,10 +380,10 @@ $GLOBALS['Data_Time_boundedTime'] = ["bottom" => new Phpurs_Data4("Time", 0, 0, 
 }];
 
 // Data_Time_maxTime
-$GLOBALS['Data_Time_maxTime'] = ($GLOBALS['Data_Time_timeToMillis'])(new Phpurs_Data4("Time", 23, 59, 59, 999));
+$GLOBALS['Data_Time_maxTime'] = ($GLOBALS['Data_Time_timeToMillis'])(($GLOBALS['Data_Time_boundedTime'])['top']);
 
 // Data_Time_minTime
-$GLOBALS['Data_Time_minTime'] = ($GLOBALS['Data_Time_timeToMillis'])(new Phpurs_Data4("Time", 0, 0, 0, 0));
+$GLOBALS['Data_Time_minTime'] = ($GLOBALS['Data_Time_timeToMillis'])(($GLOBALS['Data_Time_boundedTime'])['bottom']);
 
 // Data_Time_adjust
 $GLOBALS['Data_Time_adjust'] = (function() {
@@ -506,22 +392,22 @@ $GLOBALS['Data_Time_adjust'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $d__prime___3_0 = (($dictDuration_0)['fromDuration'])($d_1);
-  $wholeDays_4_1 = ($GLOBALS['Data_Number_floor'])(($d__prime___3_0 / 86400000.0));
-  $msAdjusted_5_2 = ((($GLOBALS['Data_Time_timeToMillis'])($t_2) + $d__prime___3_0) + ($GLOBALS['Data_Time_negateDuration'])(($wholeDays_4_1 * 86400000.0)));
+  $d_prime_3_0 = (($dictDuration_0)['fromDuration'])($d_1);
+  $wholeDays_4_1 = ($GLOBALS['Data_Number_floor'])(((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])['div'])($d_prime_3_0))(86400000.0));
+  $msAdjusted_5_2 = ((($GLOBALS['Data_Time_Duration_semigroupMilliseconds'])['append'])(($GLOBALS['Data_Time_timeToMillis'])($t_2)))(((($GLOBALS['Data_Time_Duration_semigroupMilliseconds'])['append'])($d_prime_3_0))(($GLOBALS['Data_Time_negateDuration'])((($GLOBALS['Data_Time_Duration_durationDays'])['fromDuration'])($wholeDays_4_1))));
   $__t3 = null;;
   if (($msAdjusted_5_2 > $GLOBALS['Data_Time_maxTime'])) {
 $__t3 = 1.0;
 goto end_branch_3;;
 };
   if (($msAdjusted_5_2 < $GLOBALS['Data_Time_minTime'])) {
-$__t3 = -1.0;
+$__t3 = ($GLOBALS['Data_Time_negate'])(1.0);
 goto end_branch_3;;
 };
   $__t3 = 0.0;
   end_branch_3:;
   $wrap_6_3 = $__t3;
-  $__res = new Phpurs_Data2("Tuple", ($wholeDays_4_1 + $wrap_6_3), ($GLOBALS['Data_Time_millisToTime'])(($msAdjusted_5_2 + (86400000.0 * ( - $wrap_6_3)))));
+  $__res = new Phpurs_Data2("Tuple", ((($GLOBALS['Data_Time_Duration_semigroupDays'])['append'])($wholeDays_4_1))($wrap_6_3), ($GLOBALS['Data_Time_millisToTime'])(((($GLOBALS['Data_Time_Duration_semigroupMilliseconds'])['append'])($msAdjusted_5_2))(((($GLOBALS['Data_Semiring_semiringNumber'])['mul'])(86400000.0))(($GLOBALS['Data_Time_negate'])($wrap_6_3)))));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;

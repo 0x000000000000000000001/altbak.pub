@@ -117,7 +117,7 @@ $GLOBALS['Data_Ord_Min_showMin'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (("(Min " . (($dictShow_0)['show'])($v_1)) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Min "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -166,9 +166,9 @@ goto end_branch_1;;
 };
 
 // Data_Ord_Min_newtypeMin
-$GLOBALS['Data_Ord_Min_newtypeMin'] = ["Coercible0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Ord_Min_newtypeMin'] = ["Coercible0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Prim_undefined'];
+  $__res = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -177,7 +177,7 @@ $GLOBALS['Data_Ord_Min_newtypeMin'] = ["Coercible0" => function($dollar__unused_
 // Data_Ord_Min_monoidMin
 $GLOBALS['Data_Ord_Min_monoidMin'] = function($dictBounded_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictBounded_0)['Ord0'])($GLOBALS['Prim_undefined']);
+  $__local_var_1_0 = (($dictBounded_0)['Ord0'])(null);
   $semigroupMin1_2_1 = ["append" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2 = null, $v1_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -208,7 +208,7 @@ goto end_branch_2;;
   };
   return $__fn;
 })()];
-  $__res = ["mempty" => ($dictBounded_0)['top'], "Semigroup0" => function($dollar__unused_3 = null) use ($semigroupMin1_2_1) {
+  $__res = ["mempty" => ($dictBounded_0)['top'], "Semigroup0" => function($_dollar__unused_3 = null) use ($semigroupMin1_2_1) {
   $__num = \func_num_args();
   $__res = $semigroupMin1_2_1;
   goto __end;;
@@ -232,7 +232,7 @@ $GLOBALS['Data_Ord_Min_eqMin'] = function($dictEq_0 = null) {
 // Data_Ord_Min_ordMin
 $GLOBALS['Data_Ord_Min_ordMin'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictOrd_0)['Eq0'])($GLOBALS['Prim_undefined']);
+  $__local_var_1_0 = (($dictOrd_0)['Eq0'])(null);
   $__res = ["compare" => (function() use ($dictOrd_0) {
   $__fn = function($v_2 = null, $v1_3 = null) use ($dictOrd_0, &$__fn) {
   $__num = \func_num_args();
@@ -245,7 +245,7 @@ $GLOBALS['Data_Ord_Min_ordMin'] = function($dictOrd_0 = null) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Eq0" => function($dollar__unused_2 = null) use ($__local_var_1_0) {
+})(), "Eq0" => function($_dollar__unused_2 = null) use ($__local_var_1_0) {
   $__num = \func_num_args();
   $__res = $__local_var_1_0;
   goto __end;;

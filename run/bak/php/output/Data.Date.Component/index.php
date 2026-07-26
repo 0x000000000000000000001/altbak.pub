@@ -109,6 +109,18 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Data_Date_Component_negate
+$GLOBALS['Data_Date_Component_negate'] = (function() use (&$__fn) {
+$zero_0_0 = ((($GLOBALS['Data_Ring_ringInt'])['Semiring0'])(null))['zero'];
+return function($a_1 = null) use ($zero_0_0) {
+  $__num = \func_num_args();
+  $__res = ((($GLOBALS['Data_Ring_ringInt'])['sub'])($zero_0_0))($a_1);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+})();
+
 // Data_Date_Component_Monday
 $GLOBALS['Data_Date_Component_Monday'] = ($GLOBALS['__phpurs_data0_Monday'] ??= new Phpurs_Data0("Monday"));
 
@@ -169,7 +181,7 @@ $GLOBALS['Data_Date_Component_December'] = ($GLOBALS['__phpurs_data0_December'] 
 // Data_Date_Component_showYear
 $GLOBALS['Data_Date_Component_showYear'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = (("(Year " . ($GLOBALS['Data_Show_showIntImpl'])($v_0)) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Year "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Show_showInt'])['show'])($v_0)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -280,7 +292,7 @@ goto end_branch_0;;
 // Data_Date_Component_showDay
 $GLOBALS['Data_Date_Component_showDay'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = (("(Day " . ($GLOBALS['Data_Show_showIntImpl'])($v_0)) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Day "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Show_showInt'])['show'])($v_0)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -448,7 +460,7 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Eq0" => function($dollar__unused_0 = null) {
+})(), "Eq0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Date_Component_eqWeekday'];
   goto __end;;
@@ -704,7 +716,7 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Eq0" => function($dollar__unused_0 = null) {
+})(), "Eq0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Date_Component_eqMonth'];
   goto __end;;
@@ -716,7 +728,7 @@ goto end_branch_0;;
 $GLOBALS['Data_Date_Component_eqDay'] = $GLOBALS['Data_Eq_eqInt'];
 
 // Data_Date_Component_boundedYear
-$GLOBALS['Data_Date_Component_boundedYear'] = ["bottom" => -271820, "top" => 275759, "Ord0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Date_Component_boundedYear'] = ["bottom" => ($GLOBALS['Data_Date_Component_negate'])(271820), "top" => 275759, "Ord0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Ord_ordInt'];
   goto __end;;
@@ -725,7 +737,7 @@ $GLOBALS['Data_Date_Component_boundedYear'] = ["bottom" => -271820, "top" => 275
 }];
 
 // Data_Date_Component_boundedWeekday
-$GLOBALS['Data_Date_Component_boundedWeekday'] = ["bottom" => new Phpurs_Data0("Monday"), "top" => new Phpurs_Data0("Sunday"), "Ord0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Date_Component_boundedWeekday'] = ["bottom" => new Phpurs_Data0("Monday"), "top" => new Phpurs_Data0("Sunday"), "Ord0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Date_Component_ordWeekday'];
   goto __end;;
@@ -734,7 +746,7 @@ $GLOBALS['Data_Date_Component_boundedWeekday'] = ["bottom" => new Phpurs_Data0("
 }];
 
 // Data_Date_Component_boundedMonth
-$GLOBALS['Data_Date_Component_boundedMonth'] = ["bottom" => new Phpurs_Data0("January"), "top" => new Phpurs_Data0("December"), "Ord0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Date_Component_boundedMonth'] = ["bottom" => new Phpurs_Data0("January"), "top" => new Phpurs_Data0("December"), "Ord0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Date_Component_ordMonth'];
   goto __end;;
@@ -746,7 +758,7 @@ $GLOBALS['Data_Date_Component_boundedMonth'] = ["bottom" => new Phpurs_Data0("Ja
 $GLOBALS['Data_Date_Component_boundedEnumYear'] = ["cardinality" => 547580, "toEnum" => function($n_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((($n_0 >= -271820) && ($n_0 <= 275759))) {
+  if (((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(($n_0 >= ($GLOBALS['Data_Date_Component_negate'])(271820))))(($n_0 <= 275759))) {
 $__t0 = new Phpurs_Data1("Just", $n_0);
 goto end_branch_0;;
 };
@@ -762,13 +774,13 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bounded0" => function($dollar__unused_0 = null) {
+}, "Bounded0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Date_Component_boundedYear'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Enum1" => function($dollar__unused_0 = null) {
+}, "Enum1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Date_Component_enumYear'];
   goto __end;;
@@ -777,19 +789,19 @@ goto end_branch_0;;
 }];
 
 // Data_Date_Component_enumYear
-$GLOBALS['Data_Date_Component_enumYear'] = ["succ" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Date_Component_boundedEnumYear'])['toEnum']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0 = null) {
+$GLOBALS['Data_Date_Component_enumYear'] = ["succ" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($GLOBALS['Data_Date_Component_boundedEnumYear'])['toEnum']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = ($v_0 + 1);
+  $__res = ((($GLOBALS['Data_Semiring_semiringInt'])['add'])($v_0))(1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_Date_Component_boundedEnumYear'])['fromEnum'])), "pred" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Date_Component_boundedEnumYear'])['toEnum']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0 = null) {
+}))(($GLOBALS['Data_Date_Component_boundedEnumYear'])['fromEnum'])), "pred" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($GLOBALS['Data_Date_Component_boundedEnumYear'])['toEnum']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = ($v_0 - 1);
+  $__res = ((($GLOBALS['Data_Ring_ringInt'])['sub'])($v_0))(1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_Date_Component_boundedEnumYear'])['fromEnum'])), "Ord0" => function($dollar__unused_0 = null) {
+}))(($GLOBALS['Data_Date_Component_boundedEnumYear'])['fromEnum'])), "Ord0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Ord_ordInt'];
   goto __end;;
@@ -842,13 +854,13 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bounded0" => function($dollar__unused_0 = null) {
+}, "Bounded0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Date_Component_boundedWeekday'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Enum1" => function($dollar__unused_0 = null) {
+}, "Enum1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Date_Component_enumWeekday'];
   goto __end;;
@@ -857,19 +869,19 @@ goto end_branch_1;;
 }];
 
 // Data_Date_Component_enumWeekday
-$GLOBALS['Data_Date_Component_enumWeekday'] = ["succ" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Date_Component_boundedEnumWeekday'])['toEnum']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0 = null) {
+$GLOBALS['Data_Date_Component_enumWeekday'] = ["succ" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($GLOBALS['Data_Date_Component_boundedEnumWeekday'])['toEnum']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = ($v_0 + 1);
+  $__res = ((($GLOBALS['Data_Semiring_semiringInt'])['add'])($v_0))(1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_Date_Component_boundedEnumWeekday'])['fromEnum'])), "pred" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Date_Component_boundedEnumWeekday'])['toEnum']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0 = null) {
+}))(($GLOBALS['Data_Date_Component_boundedEnumWeekday'])['fromEnum'])), "pred" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($GLOBALS['Data_Date_Component_boundedEnumWeekday'])['toEnum']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = ($v_0 - 1);
+  $__res = ((($GLOBALS['Data_Ring_ringInt'])['sub'])($v_0))(1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_Date_Component_boundedEnumWeekday'])['fromEnum'])), "Ord0" => function($dollar__unused_0 = null) {
+}))(($GLOBALS['Data_Date_Component_boundedEnumWeekday'])['fromEnum'])), "Ord0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Date_Component_ordWeekday'];
   goto __end;;
@@ -942,13 +954,13 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bounded0" => function($dollar__unused_0 = null) {
+}, "Bounded0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Date_Component_boundedMonth'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Enum1" => function($dollar__unused_0 = null) {
+}, "Enum1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Date_Component_enumMonth'];
   goto __end;;
@@ -957,19 +969,19 @@ goto end_branch_1;;
 }];
 
 // Data_Date_Component_enumMonth
-$GLOBALS['Data_Date_Component_enumMonth'] = ["succ" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Date_Component_boundedEnumMonth'])['toEnum']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0 = null) {
+$GLOBALS['Data_Date_Component_enumMonth'] = ["succ" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($GLOBALS['Data_Date_Component_boundedEnumMonth'])['toEnum']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = ($v_0 + 1);
+  $__res = ((($GLOBALS['Data_Semiring_semiringInt'])['add'])($v_0))(1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_Date_Component_boundedEnumMonth'])['fromEnum'])), "pred" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Date_Component_boundedEnumMonth'])['toEnum']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0 = null) {
+}))(($GLOBALS['Data_Date_Component_boundedEnumMonth'])['fromEnum'])), "pred" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($GLOBALS['Data_Date_Component_boundedEnumMonth'])['toEnum']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = ($v_0 - 1);
+  $__res = ((($GLOBALS['Data_Ring_ringInt'])['sub'])($v_0))(1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_Date_Component_boundedEnumMonth'])['fromEnum'])), "Ord0" => function($dollar__unused_0 = null) {
+}))(($GLOBALS['Data_Date_Component_boundedEnumMonth'])['fromEnum'])), "Ord0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Date_Component_ordMonth'];
   goto __end;;
@@ -978,7 +990,7 @@ $GLOBALS['Data_Date_Component_enumMonth'] = ["succ" => (($GLOBALS['Control_Semig
 }];
 
 // Data_Date_Component_boundedDay
-$GLOBALS['Data_Date_Component_boundedDay'] = ["bottom" => 1, "top" => 31, "Ord0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Date_Component_boundedDay'] = ["bottom" => 1, "top" => 31, "Ord0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Ord_ordInt'];
   goto __end;;
@@ -990,7 +1002,7 @@ $GLOBALS['Data_Date_Component_boundedDay'] = ["bottom" => 1, "top" => 31, "Ord0"
 $GLOBALS['Data_Date_Component_boundedEnumDay'] = ["cardinality" => 31, "toEnum" => function($n_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((($n_0 >= 1) && ($n_0 <= 31))) {
+  if (((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(($n_0 >= 1)))(($n_0 <= 31))) {
 $__t0 = new Phpurs_Data1("Just", $n_0);
 goto end_branch_0;;
 };
@@ -1006,13 +1018,13 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bounded0" => function($dollar__unused_0 = null) {
+}, "Bounded0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Date_Component_boundedDay'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Enum1" => function($dollar__unused_0 = null) {
+}, "Enum1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Date_Component_enumDay'];
   goto __end;;
@@ -1021,19 +1033,19 @@ goto end_branch_0;;
 }];
 
 // Data_Date_Component_enumDay
-$GLOBALS['Data_Date_Component_enumDay'] = ["succ" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Date_Component_boundedEnumDay'])['toEnum']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0 = null) {
+$GLOBALS['Data_Date_Component_enumDay'] = ["succ" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($GLOBALS['Data_Date_Component_boundedEnumDay'])['toEnum']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = ($v_0 + 1);
+  $__res = ((($GLOBALS['Data_Semiring_semiringInt'])['add'])($v_0))(1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_Date_Component_boundedEnumDay'])['fromEnum'])), "pred" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Date_Component_boundedEnumDay'])['toEnum']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0 = null) {
+}))(($GLOBALS['Data_Date_Component_boundedEnumDay'])['fromEnum'])), "pred" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(($GLOBALS['Data_Date_Component_boundedEnumDay'])['toEnum']))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = ($v_0 - 1);
+  $__res = ((($GLOBALS['Data_Ring_ringInt'])['sub'])($v_0))(1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_Date_Component_boundedEnumDay'])['fromEnum'])), "Ord0" => function($dollar__unused_0 = null) {
+}))(($GLOBALS['Data_Date_Component_boundedEnumDay'])['fromEnum'])), "Ord0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Ord_ordInt'];
   goto __end;;

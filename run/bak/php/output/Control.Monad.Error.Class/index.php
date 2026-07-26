@@ -122,7 +122,7 @@ $GLOBALS['Control_Monad_Error_Class_monadThrowMaybe'] = ["throwError" => functio
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Monad0" => function($dollar__unused_0 = null) {
+}, "Monad0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Maybe_monadMaybe'];
   goto __end;;
@@ -131,7 +131,7 @@ $GLOBALS['Control_Monad_Error_Class_monadThrowMaybe'] = ["throwError" => functio
 }];
 
 // Control_Monad_Error_Class_monadThrowEither
-$GLOBALS['Control_Monad_Error_Class_monadThrowEither'] = ["throwError" => $GLOBALS['Data_Either_Left'], "Monad0" => function($dollar__unused_0 = null) {
+$GLOBALS['Control_Monad_Error_Class_monadThrowEither'] = ["throwError" => $GLOBALS['Data_Either_Left'], "Monad0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Either_monadEither'];
   goto __end;;
@@ -140,7 +140,7 @@ $GLOBALS['Control_Monad_Error_Class_monadThrowEither'] = ["throwError" => $GLOBA
 }];
 
 // Control_Monad_Error_Class_monadThrowEffect
-$GLOBALS['Control_Monad_Error_Class_monadThrowEffect'] = ["throwError" => $GLOBALS['Effect_Exception_throwException'], "Monad0" => function($dollar__unused_0 = null) {
+$GLOBALS['Control_Monad_Error_Class_monadThrowEffect'] = ["throwError" => $GLOBALS['Effect_Exception_throwException'], "Monad0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Effect_monadEffect'];
   goto __end;;
@@ -173,7 +173,7 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "MonadThrow0" => function($dollar__unused_0 = null) {
+})(), "MonadThrow0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Monad_Error_Class_monadThrowMaybe'];
   goto __end;;
@@ -206,7 +206,7 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "MonadThrow0" => function($dollar__unused_0 = null) {
+})(), "MonadThrow0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Monad_Error_Class_monadThrowEither'];
   goto __end;;
@@ -227,7 +227,7 @@ $GLOBALS['Control_Monad_Error_Class_monadErrorEffect'] = ["catchError" => (funct
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "MonadThrow0" => function($dollar__unused_0 = null) {
+})(), "MonadThrow0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Monad_Error_Class_monadThrowEffect'];
   goto __end;;
@@ -238,7 +238,7 @@ $GLOBALS['Control_Monad_Error_Class_monadErrorEffect'] = ["catchError" => (funct
 // Control_Monad_Error_Class_liftMaybe
 $GLOBALS['Control_Monad_Error_Class_liftMaybe'] = function($dictMonadThrow_0 = null) {
   $__num = \func_num_args();
-  $pure_1_0 = ((((($dictMonadThrow_0)['Monad0'])($GLOBALS['Prim_undefined']))['Applicative0'])($GLOBALS['Prim_undefined']))['pure'];
+  $pure_1_0 = ((((($dictMonadThrow_0)['Monad0'])(null))['Applicative0'])(null))['pure'];
   $__res = function($error_2 = null) use ($dictMonadThrow_0, $pure_1_0) {
   $__num = \func_num_args();
   $__local_var_3_1 = (($dictMonadThrow_0)['throwError'])($error_2);
@@ -273,7 +273,7 @@ goto end_branch_2;;
 // Control_Monad_Error_Class_liftEither
 $GLOBALS['Control_Monad_Error_Class_liftEither'] = function($dictMonadThrow_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = ((((($dictMonadThrow_0)['Monad0'])($GLOBALS['Prim_undefined']))['Applicative0'])($GLOBALS['Prim_undefined']))['pure'];
+  $__local_var_1_0 = ((((($dictMonadThrow_0)['Monad0'])(null))['Applicative0'])(null))['pure'];
   $__res = function($v2_2 = null) use ($__local_var_1_0, $dictMonadThrow_0) {
   $__num = \func_num_args();
   $__t1 = null;;
@@ -319,7 +319,7 @@ $GLOBALS['Control_Monad_Error_Class_catchJust'] = (function() {
   $v_5_0 = ($p_1)($e_4);
   $__t1 = null;;
   if ((is_object($v_5_0) && (($v_5_0)->{'tag'} === "Nothing"))) {
-$__t1 = (((($dictMonadError_0)['MonadThrow0'])($GLOBALS['Prim_undefined']))['throwError'])($e_4);
+$__t1 = (((($dictMonadError_0)['MonadThrow0'])(null))['throwError'])($e_4);
 goto end_branch_1;;
 };
   if ((is_object($v_5_0) && (($v_5_0)->{'tag'} === "Just"))) {
@@ -344,11 +344,11 @@ goto end_branch_1;;
 // Control_Monad_Error_Class_try
 $GLOBALS['Control_Monad_Error_Class_try'] = function($dictMonadError_0 = null) {
   $__num = \func_num_args();
-  $Monad0_1_0 = (((($dictMonadError_0)['MonadThrow0'])($GLOBALS['Prim_undefined']))['Monad0'])($GLOBALS['Prim_undefined']);
-  $pure_2_1 = ((($Monad0_1_0)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'];
+  $Monad0_1_0 = (((($dictMonadError_0)['MonadThrow0'])(null))['Monad0'])(null);
+  $pure_2_1 = ((($Monad0_1_0)['Applicative0'])(null))['pure'];
   $__res = function($a_3 = null) use ($Monad0_1_0, $dictMonadError_0, $pure_2_1) {
   $__num = \func_num_args();
-  $__res = ((($dictMonadError_0)['catchError'])(((((((((($Monad0_1_0)['Bind1'])($GLOBALS['Prim_undefined']))['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])($GLOBALS['Data_Either_Right']))($a_3)))((($GLOBALS['Control_Semigroupoid_composeImpl'])($pure_2_1))($GLOBALS['Data_Either_Left']));
+  $__res = ((($dictMonadError_0)['catchError'])(((((((((($Monad0_1_0)['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Either_Right']))($a_3)))(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($pure_2_1))($GLOBALS['Data_Either_Left']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -361,35 +361,36 @@ $GLOBALS['Control_Monad_Error_Class_try'] = function($dictMonadError_0 = null) {
 // Control_Monad_Error_Class_withResource
 $GLOBALS['Control_Monad_Error_Class_withResource'] = function($dictMonadError_0 = null) {
   $__num = \func_num_args();
-  $MonadThrow0_1_0 = (($dictMonadError_0)['MonadThrow0'])($GLOBALS['Prim_undefined']);
-  $Monad0_2_1 = (($MonadThrow0_1_0)['Monad0'])($GLOBALS['Prim_undefined']);
-  $Bind1_3_2 = (($Monad0_2_1)['Bind1'])($GLOBALS['Prim_undefined']);
+  $MonadThrow0_1_0 = (($dictMonadError_0)['MonadThrow0'])(null);
+  $Monad0_2_1 = (($MonadThrow0_1_0)['Monad0'])(null);
+  $Bind1_3_2 = (($Monad0_2_1)['Bind1'])(null);
   $try1_4_3 = ($GLOBALS['Control_Monad_Error_Class_try'])($dictMonadError_0);
-  $__res = (function() use ($Bind1_3_2, $Monad0_2_1, $MonadThrow0_1_0, $try1_4_3) {
-  $__fn = function($acquire_5 = null, $release_6 = null, $kleisli_7 = null) use ($Bind1_3_2, $Monad0_2_1, $MonadThrow0_1_0, $try1_4_3, &$__fn) {
+  $discard1_5_4 = (($GLOBALS['Control_Bind_discardUnit'])['discard'])($Bind1_3_2);
+  $__res = (function() use ($Bind1_3_2, $Monad0_2_1, $MonadThrow0_1_0, $discard1_5_4, $try1_4_3) {
+  $__fn = function($acquire_6 = null, $release_7 = null, $kleisli_8 = null) use ($Bind1_3_2, $Monad0_2_1, $MonadThrow0_1_0, $discard1_5_4, $try1_4_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($Bind1_3_2)['bind'])($acquire_5))(function($resource_8 = null) use ($Bind1_3_2, $Monad0_2_1, $MonadThrow0_1_0, $kleisli_7, $release_6, $try1_4_3) {
+  $__res = ((($Bind1_3_2)['bind'])($acquire_6))(function($resource_9 = null) use ($Bind1_3_2, $Monad0_2_1, $MonadThrow0_1_0, $discard1_5_4, $kleisli_8, $release_7, $try1_4_3) {
   $__num = \func_num_args();
-  $__res = ((($Bind1_3_2)['bind'])(($try1_4_3)(($kleisli_7)($resource_8))))(function($result_9 = null) use ($Bind1_3_2, $Monad0_2_1, $MonadThrow0_1_0, $release_6, $resource_8) {
+  $__res = ((($Bind1_3_2)['bind'])(($try1_4_3)(($kleisli_8)($resource_9))))(function($result_10 = null) use ($Monad0_2_1, $MonadThrow0_1_0, $discard1_5_4, $release_7, $resource_9) {
   $__num = \func_num_args();
-  $__res = ((($Bind1_3_2)['bind'])(($release_6)($resource_8)))(function($dollar__unused_10 = null) use ($Monad0_2_1, $MonadThrow0_1_0, $result_9) {
+  $__res = (($discard1_5_4)(($release_7)($resource_9)))(function($_dollar__unused_11 = null) use ($Monad0_2_1, $MonadThrow0_1_0, $result_10) {
   $__num = \func_num_args();
-  $__t4 = null;;
-  if ((is_object($result_9) && (($result_9)->{'tag'} === "Left"))) {
-$__t4 = (($MonadThrow0_1_0)['throwError'])(($result_9)->{'value0'});
-goto end_branch_4;;
+  $__t5 = null;;
+  if ((is_object($result_10) && (($result_10)->{'tag'} === "Left"))) {
+$__t5 = (($MonadThrow0_1_0)['throwError'])(($result_10)->{'value0'});
+goto end_branch_5;;
 };
-  if ((is_object($result_9) && (($result_9)->{'tag'} === "Right"))) {
-$__t4 = (((($Monad0_2_1)['Applicative0'])($GLOBALS['Prim_undefined']))['pure'])(($result_9)->{'value0'});
-goto end_branch_4;;
+  if ((is_object($result_10) && (($result_10)->{'tag'} === "Right"))) {
+$__t5 = (((($Monad0_2_1)['Applicative0'])(null))['pure'])(($result_10)->{'value0'});
+goto end_branch_5;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t4 = null;
-  end_branch_4:;
-  $__res = $__t4;
+  $__t5 = null;
+  end_branch_5:;
+  $__res = $__t5;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

@@ -123,9 +123,9 @@ $GLOBALS['Control_Comonad_Store_Trans_runStoreT'] = function($v_0 = null) {
 };
 
 // Control_Comonad_Store_Trans_newtypeStoreT
-$GLOBALS['Control_Comonad_Store_Trans_newtypeStoreT'] = ["Coercible0" => function($dollar__unused_0 = null) {
+$GLOBALS['Control_Comonad_Store_Trans_newtypeStoreT'] = ["Coercible0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Prim_undefined'];
+  $__res = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -142,7 +142,7 @@ $GLOBALS['Control_Comonad_Store_Trans_functorStoreT'] = function($dictFunctor_0 
   }
   $__res = new Phpurs_Data2("Tuple", ((($dictFunctor_0)['map'])(function($h_3 = null) use ($f_1) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($f_1))($h_3);
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_1))($h_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -161,7 +161,7 @@ $GLOBALS['Control_Comonad_Store_Trans_functorStoreT'] = function($dictFunctor_0 
 // Control_Comonad_Store_Trans_extendStoreT
 $GLOBALS['Control_Comonad_Store_Trans_extendStoreT'] = function($dictExtend_0 = null) {
   $__num = \func_num_args();
-  $functorStoreT1_1_0 = ($GLOBALS['Control_Comonad_Store_Trans_functorStoreT'])((($dictExtend_0)['Functor0'])($GLOBALS['Prim_undefined']));
+  $functorStoreT1_1_0 = ($GLOBALS['Control_Comonad_Store_Trans_functorStoreT'])((($dictExtend_0)['Functor0'])(null));
   $__res = ["extend" => (function() use ($dictExtend_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($dictExtend_0, &$__fn) {
   $__num = \func_num_args();
@@ -169,12 +169,12 @@ $GLOBALS['Control_Comonad_Store_Trans_extendStoreT'] = function($dictExtend_0 = 
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__res = new Phpurs_Data2("Tuple", ((($dictExtend_0)['extend'])((function() use ($f_2) {
-  $__fn = function($w__prime___4 = null, $s__prime___5 = null) use ($f_2, &$__fn) {
+  $__fn = function($w_prime_4 = null, $s_prime_5 = null) use ($f_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($f_2)(new Phpurs_Data2("Tuple", $w__prime___4, $s__prime___5));
+  $__res = ($f_2)(new Phpurs_Data2("Tuple", $w_prime_4, $s_prime_5));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -186,7 +186,7 @@ $GLOBALS['Control_Comonad_Store_Trans_extendStoreT'] = function($dictExtend_0 = 
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_2 = null) use ($functorStoreT1_1_0) {
+})(), "Functor0" => function($_dollar__unused_2 = null) use ($functorStoreT1_1_0) {
   $__num = \func_num_args();
   $__res = $functorStoreT1_1_0;
   goto __end;;
@@ -206,7 +206,7 @@ $GLOBALS['Control_Comonad_Store_Trans_comonadTransStoreT'] = ["lower" => (functi
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__local_var_2_0 = ($v_1)->{'value1'};
-  $__res = ((((((($dictComonad_0)['Extend0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])(function($v1_3 = null) use ($__local_var_2_0) {
+  $__res = ((((((($dictComonad_0)['Extend0'])(null))['Functor0'])(null))['map'])(function($v1_3 = null) use ($__local_var_2_0) {
   $__num = \func_num_args();
   $__res = ($v1_3)($__local_var_2_0);
   goto __end;;
@@ -223,14 +223,14 @@ $GLOBALS['Control_Comonad_Store_Trans_comonadTransStoreT'] = ["lower" => (functi
 // Control_Comonad_Store_Trans_comonadStoreT
 $GLOBALS['Control_Comonad_Store_Trans_comonadStoreT'] = function($dictComonad_0 = null) {
   $__num = \func_num_args();
-  $extendStoreT1_1_0 = ($GLOBALS['Control_Comonad_Store_Trans_extendStoreT'])((($dictComonad_0)['Extend0'])($GLOBALS['Prim_undefined']));
+  $extendStoreT1_1_0 = ($GLOBALS['Control_Comonad_Store_Trans_extendStoreT'])((($dictComonad_0)['Extend0'])(null));
   $__res = ["extract" => function($v_2 = null) use ($dictComonad_0) {
   $__num = \func_num_args();
   $__res = ((($dictComonad_0)['extract'])(($v_2)->{'value0'}))(($v_2)->{'value1'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Extend0" => function($dollar__unused_2 = null) use ($extendStoreT1_1_0) {
+}, "Extend0" => function($_dollar__unused_2 = null) use ($extendStoreT1_1_0) {
   $__num = \func_num_args();
   $__res = $extendStoreT1_1_0;
   goto __end;;

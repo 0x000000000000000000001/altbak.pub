@@ -198,7 +198,7 @@ $GLOBALS['Data_String_Common_trim'] = $ffi_Data_String_Common['trim'] ?? new cla
 // Data_String_Common_null
 $GLOBALS['Data_String_Common_null'] = function($s_0 = null) {
   $__num = \func_num_args();
-  $__res = ($s_0 === "");
+  $__res = ((($GLOBALS['Data_Eq_eqString'])['eq'])($s_0))("");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

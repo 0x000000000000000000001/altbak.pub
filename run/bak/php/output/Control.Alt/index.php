@@ -98,7 +98,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Control_Alt_altArray
-$GLOBALS['Control_Alt_altArray'] = ["alt" => $GLOBALS['Data_Semigroup_concatArray'], "Functor0" => function($dollar__unused_0 = null) {
+$GLOBALS['Control_Alt_altArray'] = ["alt" => ($GLOBALS['Data_Semigroup_semigroupArray'])['append'], "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Functor_functorArray'];
   goto __end;;

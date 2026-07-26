@@ -160,7 +160,7 @@ $GLOBALS['Data_Show_Generic_genericShowArgsProduct'] = (function() {
   }
   $__res = ["genericShowArgs" => function($v_2 = null) use ($dictGenericShowArgs1_1, $dictGenericShowArgs_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_concatArray'])((($dictGenericShowArgs_0)['genericShowArgs'])(($v_2)->{'value0'})))((($dictGenericShowArgs1_1)['genericShowArgs'])(($v_2)->{'value1'}));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupArray'])['append'])((($dictGenericShowArgs_0)['genericShowArgs'])(($v_2)->{'value0'})))((($dictGenericShowArgs1_1)['genericShowArgs'])(($v_2)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -183,7 +183,7 @@ $GLOBALS['Data_Show_Generic_genericShowConstructor'] = (function() {
   $__num = \func_num_args();
   $ctor_3_0 = (($dictIsSymbol_1)['reflectSymbol'])(new Phpurs_Data0("Proxy"));
   $v1_4_1 = (($dictGenericShowArgs_0)['genericShowArgs'])($v_2);
-  $__res = match (count($v1_4_1)) { 0 => $ctor_3_0, default => (("(" . (($GLOBALS['Data_Show_Generic_intercalate'])(" "))((($GLOBALS['Data_Semigroup_concatArray'])([$ctor_3_0]))($v1_4_1))) . ")") };
+  $__res = match (count($v1_4_1)) { 0 => $ctor_3_0, default => ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("("))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Show_Generic_intercalate'])(" "))(((($GLOBALS['Data_Semigroup_semigroupArray'])['append'])([$ctor_3_0]))($v1_4_1))))(")")) };
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

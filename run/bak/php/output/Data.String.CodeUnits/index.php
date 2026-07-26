@@ -312,7 +312,7 @@ $GLOBALS['Data_String_CodeUnits_toCharArray'] = $ffi_Data_String_CodeUnits['toCh
 // Data_String_CodeUnits_uncons
 $GLOBALS['Data_String_CodeUnits_uncons'] = function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = match ($v_0) { "" => new Phpurs_Data0("Nothing"), default => new Phpurs_Data1("Just", ["head" => (($GLOBALS['Data_String_Unsafe_charAt'])(0))($v_0), "tail" => (($GLOBALS['Data_String_CodeUnits_drop'])(1))($v_0)]) };
+  $__res = match ($v_0) { "" => new Phpurs_Data0("Nothing"), default => new Phpurs_Data1("Just", ["head" => (($GLOBALS['Data_String_Unsafe_charAt'])(($GLOBALS['Data_Semiring_semiringInt'])['zero']))($v_0), "tail" => (($GLOBALS['Data_String_CodeUnits_drop'])(($GLOBALS['Data_Semiring_semiringInt'])['one']))($v_0)]) };
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -343,7 +343,7 @@ $GLOBALS['Data_String_CodeUnits_takeRight'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_String_CodeUnits_drop'])((($GLOBALS['Data_String_CodeUnits_length'])($s_1) - $i_0)))($s_1);
+  $__res = (($GLOBALS['Data_String_CodeUnits_drop'])(((($GLOBALS['Data_Ring_ringInt'])['sub'])(($GLOBALS['Data_String_CodeUnits_length'])($s_1)))($i_0)))($s_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -358,8 +358,15 @@ $GLOBALS['Data_String_CodeUnits_stripSuffix'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v1_2_0 = (($GLOBALS['Data_String_CodeUnits_splitAt'])((($GLOBALS['Data_String_CodeUnits_length'])($str_1) - ($GLOBALS['Data_String_CodeUnits_length'])($v_0))))($str_1);
-  $__res = match (($v1_2_0)['after']) { $v_0 => new Phpurs_Data1("Just", ($v1_2_0)['before']), default => new Phpurs_Data0("Nothing") };
+  $v1_2_0 = (($GLOBALS['Data_String_CodeUnits_splitAt'])(((($GLOBALS['Data_Ring_ringInt'])['sub'])(($GLOBALS['Data_String_CodeUnits_length'])($str_1)))(($GLOBALS['Data_String_CodeUnits_length'])($v_0))))($str_1);
+  $__t1 = null;;
+  if (((($GLOBALS['Data_Eq_eqString'])['eq'])(($v1_2_0)['after']))($v_0)) {
+$__t1 = new Phpurs_Data1("Just", ($v1_2_0)['before']);
+goto end_branch_1;;
+};
+  $__t1 = new Phpurs_Data0("Nothing");
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -375,7 +382,14 @@ $GLOBALS['Data_String_CodeUnits_stripPrefix'] = (function() {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $v1_2_0 = (($GLOBALS['Data_String_CodeUnits_splitAt'])(($GLOBALS['Data_String_CodeUnits_length'])($v_0)))($str_1);
-  $__res = match (($v1_2_0)['before']) { $v_0 => new Phpurs_Data1("Just", ($v1_2_0)['after']), default => new Phpurs_Data0("Nothing") };
+  $__t1 = null;;
+  if (((($GLOBALS['Data_Eq_eqString'])['eq'])(($v1_2_0)['before']))($v_0)) {
+$__t1 = new Phpurs_Data1("Just", ($v1_2_0)['after']);
+goto end_branch_1;;
+};
+  $__t1 = new Phpurs_Data0("Nothing");
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -386,7 +400,7 @@ $GLOBALS['Data_String_CodeUnits_stripPrefix'] = (function() {
 // Data_String_CodeUnits_startsWith
 $GLOBALS['Data_String_CodeUnits_startsWith'] = function($pat_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_isJust']))(($GLOBALS['Data_String_CodeUnits_stripPrefix'])($pat_0));
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Maybe_isJust']))(($GLOBALS['Data_String_CodeUnits_stripPrefix'])($pat_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -407,7 +421,7 @@ $GLOBALS['Data_String_CodeUnits_indexOf'] = (($GLOBALS['Data_String_CodeUnits__i
 // Data_String_CodeUnits_endsWith
 $GLOBALS['Data_String_CodeUnits_endsWith'] = function($pat_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_isJust']))(($GLOBALS['Data_String_CodeUnits_stripSuffix'])($pat_0));
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Maybe_isJust']))(($GLOBALS['Data_String_CodeUnits_stripSuffix'])($pat_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -435,7 +449,7 @@ $GLOBALS['Data_String_CodeUnits_dropRight'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_String_CodeUnits_take'])((($GLOBALS['Data_String_CodeUnits_length'])($s_1) - $i_0)))($s_1);
+  $__res = (($GLOBALS['Data_String_CodeUnits_take'])(((($GLOBALS['Data_Ring_ringInt'])['sub'])(($GLOBALS['Data_String_CodeUnits_length'])($s_1)))($i_0)))($s_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -446,7 +460,7 @@ $GLOBALS['Data_String_CodeUnits_dropRight'] = (function() {
 // Data_String_CodeUnits_contains
 $GLOBALS['Data_String_CodeUnits_contains'] = function($pat_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Maybe_isJust']))(($GLOBALS['Data_String_CodeUnits_indexOf'])($pat_0));
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Maybe_isJust']))(($GLOBALS['Data_String_CodeUnits_indexOf'])($pat_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

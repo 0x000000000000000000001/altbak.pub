@@ -118,7 +118,7 @@ $GLOBALS['Data_Monoid_Endo_showEndo'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (("(Endo " . (($dictShow_0)['show'])($v_1)) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Endo "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -161,7 +161,7 @@ $GLOBALS['Data_Monoid_Endo_ordEndo'] = function($dictOrd_0 = null) {
 // Data_Monoid_Endo_monoidEndo
 $GLOBALS['Data_Monoid_Endo_monoidEndo'] = function($dictCategory_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictCategory_0)['Semigroupoid0'])($GLOBALS['Prim_undefined']);
+  $__local_var_1_0 = (($dictCategory_0)['Semigroupoid0'])(null);
   $semigroupEndo1_2_1 = ["append" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2 = null, $v1_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -175,7 +175,7 @@ $GLOBALS['Data_Monoid_Endo_monoidEndo'] = function($dictCategory_0 = null) {
   };
   return $__fn;
 })()];
-  $__res = ["mempty" => ($dictCategory_0)['identity'], "Semigroup0" => function($dollar__unused_3 = null) use ($semigroupEndo1_2_1) {
+  $__res = ["mempty" => ($dictCategory_0)['identity'], "Semigroup0" => function($_dollar__unused_3 = null) use ($semigroupEndo1_2_1) {
   $__num = \func_num_args();
   $__res = $semigroupEndo1_2_1;
   goto __end;;

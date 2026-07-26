@@ -123,7 +123,7 @@ $GLOBALS['Data_Functor_Clown_showClown'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (("(Clown " . (($dictShow_0)['show'])($v_1)) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Clown "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -164,9 +164,9 @@ $GLOBALS['Data_Functor_Clown_ordClown'] = function($dictOrd_0 = null) {
 };
 
 // Data_Functor_Clown_newtypeClown
-$GLOBALS['Data_Functor_Clown_newtypeClown'] = ["Coercible0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Functor_Clown_newtypeClown'] = ["Coercible0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Prim_undefined'];
+  $__res = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -235,7 +235,7 @@ $GLOBALS['Data_Functor_Clown_bifunctorClown'] = function($dictFunctor_0 = null) 
 // Data_Functor_Clown_biapplyClown
 $GLOBALS['Data_Functor_Clown_biapplyClown'] = function($dictApply_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictApply_0)['Functor0'])($GLOBALS['Prim_undefined']);
+  $__local_var_1_0 = (($dictApply_0)['Functor0'])(null);
   $bifunctorClown1_2_1 = ["bimap" => (function() use ($__local_var_1_0) {
   $__fn = function($f_2 = null, $v_3 = null, $v1_4 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -261,7 +261,7 @@ $GLOBALS['Data_Functor_Clown_biapplyClown'] = function($dictApply_0 = null) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Bifunctor0" => function($dollar__unused_3 = null) use ($bifunctorClown1_2_1) {
+})(), "Bifunctor0" => function($_dollar__unused_3 = null) use ($bifunctorClown1_2_1) {
   $__num = \func_num_args();
   $__res = $bifunctorClown1_2_1;
   goto __end;;
@@ -276,22 +276,55 @@ $GLOBALS['Data_Functor_Clown_biapplyClown'] = function($dictApply_0 = null) {
 // Data_Functor_Clown_biapplicativeClown
 $GLOBALS['Data_Functor_Clown_biapplicativeClown'] = function($dictApplicative_0 = null) {
   $__num = \func_num_args();
-  $biapplyClown1_1_0 = ($GLOBALS['Data_Functor_Clown_biapplyClown'])((($dictApplicative_0)['Apply0'])($GLOBALS['Prim_undefined']));
-  $__res = ["bipure" => (function() use ($dictApplicative_0) {
-  $__fn = function($a_2 = null, $v_3 = null) use ($dictApplicative_0, &$__fn) {
+  $__local_var_1_0 = (($dictApplicative_0)['Apply0'])(null);
+  $__local_var_2_1 = (($__local_var_1_0)['Functor0'])(null);
+  $bifunctorClown1_3_2 = ["bimap" => (function() use ($__local_var_2_1) {
+  $__fn = function($f_3 = null, $v_4 = null, $v1_5 = null) use ($__local_var_2_1, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__res = ((($__local_var_2_1)['map'])($f_3))($v1_5);
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})()];
+  $biapplyClown1_3_2 = ["biapply" => (function() use ($__local_var_1_0) {
+  $__fn = function($v_4 = null, $v1_5 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictApplicative_0)['pure'])($a_2);
+  $__res = ((($__local_var_1_0)['apply'])($v_4))($v1_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Biapply0" => function($dollar__unused_2 = null) use ($biapplyClown1_1_0) {
+})(), "Bifunctor0" => function($_dollar__unused_4 = null) use ($bifunctorClown1_3_2) {
   $__num = \func_num_args();
-  $__res = $biapplyClown1_1_0;
+  $__res = $bifunctorClown1_3_2;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = ["bipure" => (function() use ($dictApplicative_0) {
+  $__fn = function($a_4 = null, $v_5 = null) use ($dictApplicative_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($dictApplicative_0)['pure'])($a_4);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "Biapply0" => function($_dollar__unused_4 = null) use ($biapplyClown1_3_2) {
+  $__num = \func_num_args();
+  $__res = $biapplyClown1_3_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

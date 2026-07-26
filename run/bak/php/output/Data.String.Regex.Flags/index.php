@@ -112,7 +112,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $GLOBALS['Data_String_Regex_Flags_guard'] = ($GLOBALS['Control_Alternative_guard'])($GLOBALS['Control_Alternative_alternativeArray']);
 
 // Data_String_Regex_Flags_eq
-$GLOBALS['Data_String_Regex_Flags_eq'] = ($GLOBALS['Data_Eq_eqArrayImpl'])($GLOBALS['Data_Eq_eqStringImpl']);
+$GLOBALS['Data_String_Regex_Flags_eq'] = ($GLOBALS['Data_Eq_eqArrayImpl'])(($GLOBALS['Data_Eq_eqString'])['eq']);
 
 // Data_String_Regex_Flags_RegexFlags
 $GLOBALS['Data_String_Regex_Flags_RegexFlags'] = function($x_0 = null) {
@@ -132,49 +132,49 @@ $GLOBALS['Data_String_Regex_Flags_sticky'] = ["global" => false, "ignoreCase" =>
 // Data_String_Regex_Flags_showRegexFlags
 $GLOBALS['Data_String_Regex_Flags_showRegexFlags'] = ["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $usedFlags_1_0 = (($GLOBALS['Data_Semigroup_concatArray'])((($GLOBALS['Data_Semigroup_concatArray'])((($GLOBALS['Data_Semigroup_concatArray'])((($GLOBALS['Data_Semigroup_concatArray'])((($GLOBALS['Data_Semigroup_concatArray'])((($GLOBALS['Data_Semigroup_concatArray'])([]))((($GLOBALS['Data_Functor_arrayMap'])(function($v_1 = null) {
+  $usedFlags_1_0 = ((($GLOBALS['Data_Semigroup_semigroupArray'])['append'])([]))(((($GLOBALS['Data_Semigroup_semigroupArray'])['append'])(((($GLOBALS['Data_Functor_functorArray'])['map'])(function($v_1 = null) {
   $__num = \func_num_args();
   $__res = "global";
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_String_Regex_Flags_guard'])(($v_0)['global'])))))((($GLOBALS['Data_Functor_arrayMap'])(function($v_1 = null) {
+}))(($GLOBALS['Data_String_Regex_Flags_guard'])(($v_0)['global']))))(((($GLOBALS['Data_Semigroup_semigroupArray'])['append'])(((($GLOBALS['Data_Functor_functorArray'])['map'])(function($v_1 = null) {
   $__num = \func_num_args();
   $__res = "ignoreCase";
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_String_Regex_Flags_guard'])(($v_0)['ignoreCase'])))))((($GLOBALS['Data_Functor_arrayMap'])(function($v_1 = null) {
+}))(($GLOBALS['Data_String_Regex_Flags_guard'])(($v_0)['ignoreCase']))))(((($GLOBALS['Data_Semigroup_semigroupArray'])['append'])(((($GLOBALS['Data_Functor_functorArray'])['map'])(function($v_1 = null) {
   $__num = \func_num_args();
   $__res = "multiline";
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_String_Regex_Flags_guard'])(($v_0)['multiline'])))))((($GLOBALS['Data_Functor_arrayMap'])(function($v_1 = null) {
+}))(($GLOBALS['Data_String_Regex_Flags_guard'])(($v_0)['multiline']))))(((($GLOBALS['Data_Semigroup_semigroupArray'])['append'])(((($GLOBALS['Data_Functor_functorArray'])['map'])(function($v_1 = null) {
   $__num = \func_num_args();
   $__res = "dotAll";
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_String_Regex_Flags_guard'])(($v_0)['dotAll'])))))((($GLOBALS['Data_Functor_arrayMap'])(function($v_1 = null) {
+}))(($GLOBALS['Data_String_Regex_Flags_guard'])(($v_0)['dotAll']))))(((($GLOBALS['Data_Semigroup_semigroupArray'])['append'])(((($GLOBALS['Data_Functor_functorArray'])['map'])(function($v_1 = null) {
   $__num = \func_num_args();
   $__res = "sticky";
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_String_Regex_Flags_guard'])(($v_0)['sticky'])))))((($GLOBALS['Data_Functor_arrayMap'])(function($v_1 = null) {
+}))(($GLOBALS['Data_String_Regex_Flags_guard'])(($v_0)['sticky']))))(((($GLOBALS['Data_Functor_functorArray'])['map'])(function($v_1 = null) {
   $__num = \func_num_args();
   $__res = "unicode";
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_String_Regex_Flags_guard'])(($v_0)['unicode'])));
+}))(($GLOBALS['Data_String_Regex_Flags_guard'])(($v_0)['unicode']))))))));
   $__t1 = null;;
   if ((($GLOBALS['Data_String_Regex_Flags_eq'])($usedFlags_1_0))([])) {
 $__t1 = "noFlags";
 goto end_branch_1;;
 };
-  $__t1 = (("(" . (($GLOBALS['Data_String_Common_joinWith'])(" <> "))($usedFlags_1_0)) . ")");
+  $__t1 = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("("))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_String_Common_joinWith'])(" <> "))($usedFlags_1_0)))(")"));
   end_branch_1:;
   $__res = $__t1;
   goto __end;;
@@ -189,7 +189,7 @@ $GLOBALS['Data_String_Regex_Flags_semigroupRegexFlags'] = ["append" => (function
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ["global" => (($v_0)['global'] || ($v1_1)['global']), "ignoreCase" => (($v_0)['ignoreCase'] || ($v1_1)['ignoreCase']), "multiline" => (($v_0)['multiline'] || ($v1_1)['multiline']), "dotAll" => (($v_0)['dotAll'] || ($v1_1)['dotAll']), "sticky" => (($v_0)['sticky'] || ($v1_1)['sticky']), "unicode" => (($v_0)['unicode'] || ($v1_1)['unicode'])];
+  $__res = ["global" => ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['disj'])(($v_0)['global']))(($v1_1)['global']), "ignoreCase" => ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['disj'])(($v_0)['ignoreCase']))(($v1_1)['ignoreCase']), "multiline" => ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['disj'])(($v_0)['multiline']))(($v1_1)['multiline']), "dotAll" => ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['disj'])(($v_0)['dotAll']))(($v1_1)['dotAll']), "sticky" => ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['disj'])(($v_0)['sticky']))(($v1_1)['sticky']), "unicode" => ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['disj'])(($v_0)['unicode']))(($v1_1)['unicode'])];
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -201,9 +201,9 @@ $GLOBALS['Data_String_Regex_Flags_semigroupRegexFlags'] = ["append" => (function
 $GLOBALS['Data_String_Regex_Flags_noFlags'] = ["global" => false, "ignoreCase" => false, "multiline" => false, "dotAll" => false, "sticky" => false, "unicode" => false];
 
 // Data_String_Regex_Flags_newtypeRegexFlags
-$GLOBALS['Data_String_Regex_Flags_newtypeRegexFlags'] = ["Coercible0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_String_Regex_Flags_newtypeRegexFlags'] = ["Coercible0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Prim_undefined'];
+  $__res = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -213,7 +213,7 @@ $GLOBALS['Data_String_Regex_Flags_newtypeRegexFlags'] = ["Coercible0" => functio
 $GLOBALS['Data_String_Regex_Flags_multiline'] = ["global" => false, "ignoreCase" => false, "multiline" => true, "dotAll" => false, "sticky" => false, "unicode" => false];
 
 // Data_String_Regex_Flags_monoidRegexFlags
-$GLOBALS['Data_String_Regex_Flags_monoidRegexFlags'] = ["mempty" => $GLOBALS['Data_String_Regex_Flags_noFlags'], "Semigroup0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_String_Regex_Flags_monoidRegexFlags'] = ["mempty" => $GLOBALS['Data_String_Regex_Flags_noFlags'], "Semigroup0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_String_Regex_Flags_semigroupRegexFlags'];
   goto __end;;
@@ -228,37 +228,37 @@ $GLOBALS['Data_String_Regex_Flags_ignoreCase'] = ["global" => false, "ignoreCase
 $GLOBALS['Data_String_Regex_Flags_global'] = ["global" => true, "ignoreCase" => false, "multiline" => false, "dotAll" => false, "sticky" => false, "unicode" => false];
 
 // Data_String_Regex_Flags_eqRegexFlags
-$GLOBALS['Data_String_Regex_Flags_eqRegexFlags'] = ["eq" => (((((($GLOBALS['Data_Eq_eqRowCons'])((((($GLOBALS['Data_Eq_eqRowCons'])((((($GLOBALS['Data_Eq_eqRowCons'])((((($GLOBALS['Data_Eq_eqRowCons'])((((($GLOBALS['Data_Eq_eqRowCons'])((((($GLOBALS['Data_Eq_eqRowCons'])($GLOBALS['Data_Eq_eqRowNil']))($GLOBALS['Prim_undefined']))(["reflectSymbol" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_String_Regex_Flags_eqRegexFlags'] = ["eq" => (((((($GLOBALS['Data_Eq_eqRowCons'])((((($GLOBALS['Data_Eq_eqRowCons'])((((($GLOBALS['Data_Eq_eqRowCons'])((((($GLOBALS['Data_Eq_eqRowCons'])((((($GLOBALS['Data_Eq_eqRowCons'])((((($GLOBALS['Data_Eq_eqRowCons'])($GLOBALS['Data_Eq_eqRowNil']))(null))(["reflectSymbol" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = "unicode";
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]))($GLOBALS['Data_Eq_eqBoolean'])))($GLOBALS['Prim_undefined']))(["reflectSymbol" => function($dollar__unused_0 = null) {
+}]))($GLOBALS['Data_Eq_eqBoolean'])))(null))(["reflectSymbol" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = "sticky";
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]))($GLOBALS['Data_Eq_eqBoolean'])))($GLOBALS['Prim_undefined']))(["reflectSymbol" => function($dollar__unused_0 = null) {
+}]))($GLOBALS['Data_Eq_eqBoolean'])))(null))(["reflectSymbol" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = "multiline";
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]))($GLOBALS['Data_Eq_eqBoolean'])))($GLOBALS['Prim_undefined']))(["reflectSymbol" => function($dollar__unused_0 = null) {
+}]))($GLOBALS['Data_Eq_eqBoolean'])))(null))(["reflectSymbol" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = "ignoreCase";
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]))($GLOBALS['Data_Eq_eqBoolean'])))($GLOBALS['Prim_undefined']))(["reflectSymbol" => function($dollar__unused_0 = null) {
+}]))($GLOBALS['Data_Eq_eqBoolean'])))(null))(["reflectSymbol" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = "global";
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]))($GLOBALS['Data_Eq_eqBoolean'])))($GLOBALS['Prim_undefined']))(["reflectSymbol" => function($dollar__unused_0 = null) {
+}]))($GLOBALS['Data_Eq_eqBoolean'])))(null))(["reflectSymbol" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = "dotAll";
   goto __end;;

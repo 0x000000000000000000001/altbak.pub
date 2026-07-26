@@ -107,7 +107,7 @@ $GLOBALS['Control_Biapplicative_bipure'] = function($dict_0 = null) {
 };
 
 // Control_Biapplicative_biapplicativeTuple
-$GLOBALS['Control_Biapplicative_biapplicativeTuple'] = ["bipure" => $GLOBALS['Data_Tuple_Tuple'], "Biapply0" => function($dollar__unused_0 = null) {
+$GLOBALS['Control_Biapplicative_biapplicativeTuple'] = ["bipure" => $GLOBALS['Data_Tuple_Tuple'], "Biapply0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Biapply_biapplyTuple'];
   goto __end;;

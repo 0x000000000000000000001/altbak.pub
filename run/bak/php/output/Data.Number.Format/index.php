@@ -205,11 +205,11 @@ goto end_branch_0;;
 };
 
 // Data_Number_Format_precision
-$GLOBALS['Data_Number_Format_precision'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Number_Format_Precision']))((($GLOBALS['Data_Number_Format_clamp'])(1))(21));
+$GLOBALS['Data_Number_Format_precision'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Number_Format_Precision']))((($GLOBALS['Data_Number_Format_clamp'])(1))(21));
 
 // Data_Number_Format_fixed
-$GLOBALS['Data_Number_Format_fixed'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Number_Format_Fixed']))((($GLOBALS['Data_Number_Format_clamp'])(0))(20));
+$GLOBALS['Data_Number_Format_fixed'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Number_Format_Fixed']))((($GLOBALS['Data_Number_Format_clamp'])(0))(20));
 
 // Data_Number_Format_exponential
-$GLOBALS['Data_Number_Format_exponential'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Number_Format_Exponential']))((($GLOBALS['Data_Number_Format_clamp'])(0))(20));
+$GLOBALS['Data_Number_Format_exponential'] = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Number_Format_Exponential']))((($GLOBALS['Data_Number_Format_clamp'])(0))(20));
 

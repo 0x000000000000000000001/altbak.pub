@@ -246,7 +246,7 @@ $GLOBALS['Data_Array_NonEmpty_Internal_showNonEmptyArray'] = function($dictShow_
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (("(NonEmptyArray " . (($GLOBALS['Data_Show_showArrayImpl'])(($dictShow_0)['show']))($v_1)) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(NonEmptyArray "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Show_showArrayImpl'])(($dictShow_0)['show']))($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -317,7 +317,7 @@ $GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'] = ["foldMap1" =>
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Foldable0" => function($dollar__unused_0 = null) {
+})(), "Foldable0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Foldable_foldableArray'];
   goto __end;;
@@ -329,10 +329,10 @@ $GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'] = ["foldMap1" =>
 $GLOBALS['Data_Array_NonEmpty_Internal_traversable1NonEmptyArray'] = ["traverse1" => function($dictApply_0 = null) {
   $__num = \func_num_args();
   $apply_1_0 = ($dictApply_0)['apply'];
-  $map_2_1 = ((($dictApply_0)['Functor0'])($GLOBALS['Prim_undefined']))['map'];
-  $__res = function($f_3 = null) use ($apply_1_0, $map_2_1) {
+  $map__2_1 = ((($dictApply_0)['Functor0'])(null))['map'];
+  $__res = function($f_3 = null) use ($apply_1_0, $map__2_1) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Array_NonEmpty_Internal_traverse1Impl'])($apply_1_0, $map_2_1, $f_3);
+  $__res = ($GLOBALS['Data_Array_NonEmpty_Internal_traverse1Impl'])($apply_1_0, $map__2_1, $f_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -346,13 +346,13 @@ $GLOBALS['Data_Array_NonEmpty_Internal_traversable1NonEmptyArray'] = ["traverse1
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Foldable10" => function($dollar__unused_0 = null) {
+}, "Foldable10" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Traversable1" => function($dollar__unused_0 = null) {
+}, "Traversable1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Traversable_traversableArray'];
   goto __end;;

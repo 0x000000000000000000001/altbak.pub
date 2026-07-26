@@ -128,7 +128,7 @@ $GLOBALS['Data_Const_showConst'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (("(Const " . (($dictShow_0)['show'])($v_1)) . ")");
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Const "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -190,9 +190,9 @@ $GLOBALS['Data_Const_ordConst'] = function($dictOrd_0 = null) {
 };
 
 // Data_Const_newtypeConst
-$GLOBALS['Data_Const_newtypeConst'] = ["Coercible0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Const_newtypeConst'] = ["Coercible0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Prim_undefined'];
+  $__res = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -233,15 +233,15 @@ $GLOBALS['Data_Const_functorConst'] = ["map" => (function() {
 
 // Data_Const_invariantConst
 $GLOBALS['Data_Const_invariantConst'] = ["imap" => (function() {
-  $__fn = function($f_0 = null, $v_1 = null, $m_2 = null) use (&$__fn) {
+  $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = $m_2;
+  $__res = (($GLOBALS['Data_Const_functorConst'])['map'])($f_0);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
@@ -284,14 +284,14 @@ $GLOBALS['Data_Const_eq1Const'] = function($dictEq_0 = null) {
 $GLOBALS['Data_Const_ord1Const'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
   $compare_1_0 = ($dictOrd_0)['compare'];
-  $eq_2_1 = ((($dictOrd_0)['Eq0'])($GLOBALS['Prim_undefined']))['eq'];
+  $eq_2_1 = ((($dictOrd_0)['Eq0'])(null))['eq'];
   $__res = ["compare1" => function($dictOrd1_3 = null) use ($compare_1_0) {
   $__num = \func_num_args();
   $__res = $compare_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Eq10" => function($dollar__unused_3 = null) use ($eq_2_1) {
+}, "Eq10" => function($_dollar__unused_3 = null) use ($eq_2_1) {
   $__num = \func_num_args();
   $__res = ["eq1" => function($dictEq1_4 = null) use ($eq_2_1) {
   $__num = \func_num_args();
@@ -351,7 +351,7 @@ $GLOBALS['Data_Const_applyConst'] = function($dictSemigroup_0 = null) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_1 = null) {
+})(), "Functor0" => function($_dollar__unused_1 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Const_functorConst'];
   goto __end;;
@@ -367,7 +367,7 @@ $GLOBALS['Data_Const_applyConst'] = function($dictSemigroup_0 = null) {
 $GLOBALS['Data_Const_applicativeConst'] = function($dictMonoid_0 = null) {
   $__num = \func_num_args();
   $mempty_1_0 = ($dictMonoid_0)['mempty'];
-  $__local_var_2_1 = (($dictMonoid_0)['Semigroup0'])($GLOBALS['Prim_undefined']);
+  $__local_var_2_1 = (($dictMonoid_0)['Semigroup0'])(null);
   $applyConst1_3_2 = ["apply" => (function() use ($__local_var_2_1) {
   $__fn = function($v_3 = null, $v1_4 = null) use ($__local_var_2_1, &$__fn) {
   $__num = \func_num_args();
@@ -380,7 +380,7 @@ $GLOBALS['Data_Const_applicativeConst'] = function($dictMonoid_0 = null) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_3 = null) {
+})(), "Functor0" => function($_dollar__unused_3 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Const_functorConst'];
   goto __end;;
@@ -393,7 +393,7 @@ $GLOBALS['Data_Const_applicativeConst'] = function($dictMonoid_0 = null) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Apply0" => function($dollar__unused_4 = null) use ($applyConst1_3_2) {
+}, "Apply0" => function($_dollar__unused_4 = null) use ($applyConst1_3_2) {
   $__num = \func_num_args();
   $__res = $applyConst1_3_2;
   goto __end;;

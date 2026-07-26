@@ -173,7 +173,7 @@ $GLOBALS['Control_Applicative_liftA1'] = (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((($dictApplicative_0)['Apply0'])($GLOBALS['Prim_undefined']))['apply'])((($dictApplicative_0)['pure'])($f_1)))($a_2);
+  $__res = ((((($dictApplicative_0)['Apply0'])(null))['apply'])((($dictApplicative_0)['pure'])($f_1)))($a_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -188,7 +188,7 @@ $GLOBALS['Control_Applicative_applicativeProxy'] = ["pure" => function($v_0 = nu
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Apply0" => function($dollar__unused_0 = null) {
+}, "Apply0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Apply_applyProxy'];
   goto __end;;
@@ -209,7 +209,7 @@ $GLOBALS['Control_Applicative_applicativeFn'] = ["pure" => (function() {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Apply0" => function($dollar__unused_0 = null) {
+})(), "Apply0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Apply_applyFn'];
   goto __end;;
@@ -224,7 +224,7 @@ $GLOBALS['Control_Applicative_applicativeArray'] = ["pure" => function($x_0 = nu
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Apply0" => function($dollar__unused_0 = null) {
+}, "Apply0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Apply_applyArray'];
   goto __end;;

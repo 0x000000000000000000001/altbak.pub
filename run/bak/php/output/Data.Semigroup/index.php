@@ -201,7 +201,7 @@ $GLOBALS['Data_Semigroup_appendRecord'] = function($dict_0 = null) {
 
 // Data_Semigroup_semigroupRecord
 $GLOBALS['Data_Semigroup_semigroupRecord'] = (function() {
-  $__fn = function($dollar__unused_0 = null, $dictSemigroupRecord_1 = null) use (&$__fn) {
+  $__fn = function($_dollar__unused_0 = null, $dictSemigroupRecord_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
@@ -246,7 +246,7 @@ $GLOBALS['Data_Semigroup_semigroupFn'] = function($dictSemigroup_0 = null) {
 
 // Data_Semigroup_semigroupRecordCons
 $GLOBALS['Data_Semigroup_semigroupRecordCons'] = (function() {
-  $__fn = function($dictIsSymbol_0 = null, $dollar__unused_1 = null, $dictSemigroupRecord_2 = null, $dictSemigroup_3 = null) use (&$__fn) {
+  $__fn = function($dictIsSymbol_0 = null, $_dollar__unused_1 = null, $dictSemigroupRecord_2 = null, $dictSemigroup_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);

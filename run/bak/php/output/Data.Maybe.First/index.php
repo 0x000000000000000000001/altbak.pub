@@ -128,19 +128,7 @@ $GLOBALS['Data_Maybe_First_showFirst'] = function($dictShow_0 = null) {
   $__num = \func_num_args();
   $__res = ["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__t0 = null;;
-  if ((is_object($v_1) && (($v_1)->{'tag'} === "Just"))) {
-$__t0 = (("First ((Just " . (($dictShow_0)['show'])(($v_1)->{'value0'})) . "))");
-goto end_branch_0;;
-};
-  if ((is_object($v_1) && (($v_1)->{'tag'} === "Nothing"))) {
-$__t0 = "First (Nothing)";
-goto end_branch_0;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t0 = null;
-  end_branch_0:;
-  $__res = $__t0;
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("First ("))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])(((($GLOBALS['Data_Maybe_showMaybe'])($dictShow_0))['show'])($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -175,7 +163,69 @@ goto end_branch_0;;
 // Data_Maybe_First_ordFirst
 $GLOBALS['Data_Maybe_First_ordFirst'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Maybe_ordMaybe'])($dictOrd_0);
+  $__local_var_1_0 = (($dictOrd_0)['Eq0'])(null);
+  $eqMaybe1_2_1 = ["eq" => (function() use ($__local_var_1_0) {
+  $__fn = function($x_2 = null, $y_3 = null) use ($__local_var_1_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__t1 = null;;
+  if ((is_object($x_2) && (($x_2)->{'tag'} === "Nothing"))) {
+$__t1 = (is_object($y_3) && (($y_3)->{'tag'} === "Nothing"));
+goto end_branch_1;;
+};
+  $__t1 = ((is_object($x_2) && (($x_2)->{'tag'} === "Just")) && ((is_object($y_3) && (($y_3)->{'tag'} === "Just")) && ((($__local_var_1_0)['eq'])(($x_2)->{'value0'}))(($y_3)->{'value0'})));
+  end_branch_1:;
+  $__res = $__t1;
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
+  $__res = ["compare" => (function() use ($dictOrd_0) {
+  $__fn = function($x_3 = null, $y_4 = null) use ($dictOrd_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__t3 = null;;
+  if ((is_object($x_3) && (($x_3)->{'tag'} === "Nothing"))) {
+$__t4 = null;;
+if ((is_object($y_4) && (($y_4)->{'tag'} === "Nothing"))) {
+$__t4 = new Phpurs_Data0("EQ");
+goto end_branch_4;;
+};
+$__t4 = new Phpurs_Data0("LT");
+end_branch_4:;
+$__t3 = $__t4;
+goto end_branch_3;;
+};
+  if ((is_object($y_4) && (($y_4)->{'tag'} === "Nothing"))) {
+$__t3 = new Phpurs_Data0("GT");
+goto end_branch_3;;
+};
+  if (((is_object($x_3) && (($x_3)->{'tag'} === "Just")) && (is_object($y_4) && (($y_4)->{'tag'} === "Just")))) {
+$__t3 = ((($dictOrd_0)['compare'])(($x_3)->{'value0'}))(($y_4)->{'value0'});
+goto end_branch_3;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t3 = null;
+  end_branch_3:;
+  $__res = $__t3;
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "Eq0" => function($_dollar__unused_3 = null) use ($eqMaybe1_2_1) {
+  $__num = \func_num_args();
+  $__res = $eqMaybe1_2_1;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -185,16 +235,16 @@ $GLOBALS['Data_Maybe_First_ordFirst'] = function($dictOrd_0 = null) {
 $GLOBALS['Data_Maybe_First_ord1First'] = $GLOBALS['Data_Maybe_ord1Maybe'];
 
 // Data_Maybe_First_newtypeFirst
-$GLOBALS['Data_Maybe_First_newtypeFirst'] = ["Coercible0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Maybe_First_newtypeFirst'] = ["Coercible0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Prim_undefined'];
+  $__res = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
 
 // Data_Maybe_First_monoidFirst
-$GLOBALS['Data_Maybe_First_monoidFirst'] = ["mempty" => new Phpurs_Data0("Nothing"), "Semigroup0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Maybe_First_monoidFirst'] = ["mempty" => new Phpurs_Data0("Nothing"), "Semigroup0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Maybe_First_semigroupFirst'];
   goto __end;;
@@ -264,7 +314,7 @@ $GLOBALS['Data_Maybe_First_applyFirst'] = $GLOBALS['Data_Maybe_applyMaybe'];
 $GLOBALS['Data_Maybe_First_applicativeFirst'] = $GLOBALS['Data_Maybe_applicativeMaybe'];
 
 // Data_Maybe_First_altFirst
-$GLOBALS['Data_Maybe_First_altFirst'] = ["alt" => ($GLOBALS['Data_Maybe_First_semigroupFirst'])['append'], "Functor0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Maybe_First_altFirst'] = ["alt" => ($GLOBALS['Data_Maybe_First_semigroupFirst'])['append'], "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Maybe_functorMaybe'];
   goto __end;;
@@ -273,7 +323,7 @@ $GLOBALS['Data_Maybe_First_altFirst'] = ["alt" => ($GLOBALS['Data_Maybe_First_se
 }];
 
 // Data_Maybe_First_plusFirst
-$GLOBALS['Data_Maybe_First_plusFirst'] = ["empty" => new Phpurs_Data0("Nothing"), "Alt0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Maybe_First_plusFirst'] = ["empty" => ($GLOBALS['Data_Maybe_First_monoidFirst'])['mempty'], "Alt0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Maybe_First_altFirst'];
   goto __end;;
@@ -282,13 +332,13 @@ $GLOBALS['Data_Maybe_First_plusFirst'] = ["empty" => new Phpurs_Data0("Nothing")
 }];
 
 // Data_Maybe_First_alternativeFirst
-$GLOBALS['Data_Maybe_First_alternativeFirst'] = ["Applicative0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Maybe_First_alternativeFirst'] = ["Applicative0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Maybe_applicativeMaybe'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Plus1" => function($dollar__unused_0 = null) {
+}, "Plus1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Maybe_First_plusFirst'];
   goto __end;;

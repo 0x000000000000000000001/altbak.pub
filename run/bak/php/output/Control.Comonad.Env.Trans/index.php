@@ -143,9 +143,9 @@ $GLOBALS['Control_Comonad_Env_Trans_runEnvT'] = function($v_0 = null) {
 };
 
 // Control_Comonad_Env_Trans_newtypeEnvT
-$GLOBALS['Control_Comonad_Env_Trans_newtypeEnvT'] = ["Coercible0" => function($dollar__unused_0 = null) {
+$GLOBALS['Control_Comonad_Env_Trans_newtypeEnvT'] = ["Coercible0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Prim_undefined'];
+  $__res = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -190,7 +190,7 @@ $GLOBALS['Control_Comonad_Env_Trans_functorEnvT'] = function($dictFunctor_0 = nu
 // Control_Comonad_Env_Trans_functorWithIndexEnvT
 $GLOBALS['Control_Comonad_Env_Trans_functorWithIndexEnvT'] = function($dictFunctorWithIndex_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictFunctorWithIndex_0)['Functor0'])($GLOBALS['Prim_undefined']);
+  $__local_var_1_0 = (($dictFunctorWithIndex_0)['Functor0'])(null);
   $functorEnvT1_2_1 = ["map" => (function() use ($__local_var_1_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -216,7 +216,7 @@ $GLOBALS['Control_Comonad_Env_Trans_functorWithIndexEnvT'] = function($dictFunct
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_3 = null) use ($functorEnvT1_2_1) {
+})(), "Functor0" => function($_dollar__unused_3 = null) use ($functorEnvT1_2_1) {
   $__num = \func_num_args();
   $__res = $functorEnvT1_2_1;
   goto __end;;
@@ -283,7 +283,7 @@ $GLOBALS['Control_Comonad_Env_Trans_foldableEnvT'] = function($dictFoldable_0 = 
 // Control_Comonad_Env_Trans_foldableWithIndexEnvT
 $GLOBALS['Control_Comonad_Env_Trans_foldableWithIndexEnvT'] = function($dictFoldableWithIndex_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictFoldableWithIndex_0)['Foldable0'])($GLOBALS['Prim_undefined']);
+  $__local_var_1_0 = (($dictFoldableWithIndex_0)['Foldable0'])(null);
   $foldableEnvT1_2_1 = ["foldl" => (function() use ($__local_var_1_0) {
   $__fn = function($fn_2 = null, $a_3 = null, $v_4 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -371,7 +371,7 @@ $GLOBALS['Control_Comonad_Env_Trans_foldableWithIndexEnvT'] = function($dictFold
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Foldable0" => function($dollar__unused_3 = null) use ($foldableEnvT1_2_1) {
+}, "Foldable0" => function($_dollar__unused_3 = null) use ($foldableEnvT1_2_1) {
   $__num = \func_num_args();
   $__res = $foldableEnvT1_2_1;
   goto __end;;
@@ -386,7 +386,7 @@ $GLOBALS['Control_Comonad_Env_Trans_foldableWithIndexEnvT'] = function($dictFold
 // Control_Comonad_Env_Trans_traversableEnvT
 $GLOBALS['Control_Comonad_Env_Trans_traversableEnvT'] = function($dictTraversable_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictTraversable_0)['Functor0'])($GLOBALS['Prim_undefined']);
+  $__local_var_1_0 = (($dictTraversable_0)['Functor0'])(null);
   $functorEnvT1_2_1 = ["map" => (function() use ($__local_var_1_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -400,7 +400,7 @@ $GLOBALS['Control_Comonad_Env_Trans_traversableEnvT'] = function($dictTraversabl
   };
   return $__fn;
 })()];
-  $__local_var_3_2 = (($dictTraversable_0)['Foldable1'])($GLOBALS['Prim_undefined']);
+  $__local_var_3_2 = (($dictTraversable_0)['Foldable1'])(null);
   $foldableEnvT1_4_3 = ["foldl" => (function() use ($__local_var_3_2) {
   $__fn = function($fn_4 = null, $a_5 = null, $v_6 = null) use ($__local_var_3_2, &$__fn) {
   $__num = \func_num_args();
@@ -450,7 +450,7 @@ $GLOBALS['Control_Comonad_Env_Trans_traversableEnvT'] = function($dictTraversabl
   $sequence1_6_5 = (($dictTraversable_0)['sequence'])($dictApplicative_5);
   $__res = function($v_7 = null) use ($dictApplicative_5, $sequence1_6_5) {
   $__num = \func_num_args();
-  $__res = ((((((($dictApplicative_5)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Comonad_Env_Trans_EnvT']))(($GLOBALS['Data_Tuple_Tuple'])(($v_7)->{'value0'}))))(($sequence1_6_5)(($v_7)->{'value1'}));
+  $__res = ((((((($dictApplicative_5)['Apply0'])(null))['Functor0'])(null))['map'])(((($GLOBALS['Data_Functor_functorFn'])['map'])($GLOBALS['Control_Comonad_Env_Trans_EnvT']))(($GLOBALS['Data_Tuple_Tuple'])(($v_7)->{'value0'}))))(($sequence1_6_5)(($v_7)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -467,7 +467,7 @@ $GLOBALS['Control_Comonad_Env_Trans_traversableEnvT'] = function($dictTraversabl
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((((($dictApplicative_5)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Comonad_Env_Trans_EnvT']))(($GLOBALS['Data_Tuple_Tuple'])(($v_8)->{'value0'}))))((($traverse1_6_6)($f_7))(($v_8)->{'value1'}));
+  $__res = ((((((($dictApplicative_5)['Apply0'])(null))['Functor0'])(null))['map'])(((($GLOBALS['Data_Functor_functorFn'])['map'])($GLOBALS['Control_Comonad_Env_Trans_EnvT']))(($GLOBALS['Data_Tuple_Tuple'])(($v_8)->{'value0'}))))((($traverse1_6_6)($f_7))(($v_8)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -477,13 +477,13 @@ $GLOBALS['Control_Comonad_Env_Trans_traversableEnvT'] = function($dictTraversabl
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Functor0" => function($dollar__unused_5 = null) use ($functorEnvT1_2_1) {
+}, "Functor0" => function($_dollar__unused_5 = null) use ($functorEnvT1_2_1) {
   $__num = \func_num_args();
   $__res = $functorEnvT1_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Foldable1" => function($dollar__unused_5 = null) use ($foldableEnvT1_4_3) {
+}, "Foldable1" => function($_dollar__unused_5 = null) use ($foldableEnvT1_4_3) {
   $__num = \func_num_args();
   $__res = $foldableEnvT1_4_3;
   goto __end;;
@@ -498,19 +498,52 @@ $GLOBALS['Control_Comonad_Env_Trans_traversableEnvT'] = function($dictTraversabl
 // Control_Comonad_Env_Trans_traversableWithIndexEnvT
 $GLOBALS['Control_Comonad_Env_Trans_traversableWithIndexEnvT'] = function($dictTraversableWithIndex_0 = null) {
   $__num = \func_num_args();
-  $functorWithIndexEnvT1_1_0 = ($GLOBALS['Control_Comonad_Env_Trans_functorWithIndexEnvT'])((($dictTraversableWithIndex_0)['FunctorWithIndex0'])($GLOBALS['Prim_undefined']));
-  $foldableWithIndexEnvT1_2_1 = ($GLOBALS['Control_Comonad_Env_Trans_foldableWithIndexEnvT'])((($dictTraversableWithIndex_0)['FoldableWithIndex1'])($GLOBALS['Prim_undefined']));
-  $traversableEnvT1_3_2 = ($GLOBALS['Control_Comonad_Env_Trans_traversableEnvT'])((($dictTraversableWithIndex_0)['Traversable2'])($GLOBALS['Prim_undefined']));
-  $__res = ["traverseWithIndex" => function($dictApplicative_4 = null) use ($dictTraversableWithIndex_0) {
-  $__num = \func_num_args();
-  $traverseWithIndex1_5_3 = (($dictTraversableWithIndex_0)['traverseWithIndex'])($dictApplicative_4);
-  $__res = (function() use ($dictApplicative_4, $traverseWithIndex1_5_3) {
-  $__fn = function($f_6 = null, $v_7 = null) use ($dictApplicative_4, $traverseWithIndex1_5_3, &$__fn) {
+  $__local_var_1_0 = (($dictTraversableWithIndex_0)['FunctorWithIndex0'])(null);
+  $__local_var_2_1 = (($__local_var_1_0)['Functor0'])(null);
+  $functorEnvT1_3_2 = ["map" => (function() use ($__local_var_2_1) {
+  $__fn = function($f_3 = null, $v_4 = null) use ($__local_var_2_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((((($dictApplicative_4)['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']))['map'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Comonad_Env_Trans_EnvT']))(($GLOBALS['Data_Tuple_Tuple'])(($v_7)->{'value0'}))))((($traverseWithIndex1_5_3)($f_6))(($v_7)->{'value1'}));
+  $__res = new Phpurs_Data2("Tuple", ($v_4)->{'value0'}, ((($__local_var_2_1)['map'])($f_3))(($v_4)->{'value1'}));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
+  $functorWithIndexEnvT1_3_2 = ["mapWithIndex" => (function() use ($__local_var_1_0) {
+  $__fn = function($f_4 = null, $v_5 = null) use ($__local_var_1_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = new Phpurs_Data2("Tuple", ($v_5)->{'value0'}, ((($__local_var_1_0)['mapWithIndex'])($f_4))(($v_5)->{'value1'}));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(), "Functor0" => function($_dollar__unused_4 = null) use ($functorEnvT1_3_2) {
+  $__num = \func_num_args();
+  $__res = $functorEnvT1_3_2;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $foldableWithIndexEnvT1_4_4 = ($GLOBALS['Control_Comonad_Env_Trans_foldableWithIndexEnvT'])((($dictTraversableWithIndex_0)['FoldableWithIndex1'])(null));
+  $traversableEnvT1_5_5 = ($GLOBALS['Control_Comonad_Env_Trans_traversableEnvT'])((($dictTraversableWithIndex_0)['Traversable2'])(null));
+  $__res = ["traverseWithIndex" => function($dictApplicative_6 = null) use ($dictTraversableWithIndex_0) {
+  $__num = \func_num_args();
+  $traverseWithIndex1_7_6 = (($dictTraversableWithIndex_0)['traverseWithIndex'])($dictApplicative_6);
+  $__res = (function() use ($dictApplicative_6, $traverseWithIndex1_7_6) {
+  $__fn = function($f_8 = null, $v_9 = null) use ($dictApplicative_6, $traverseWithIndex1_7_6, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ((((((($dictApplicative_6)['Apply0'])(null))['Functor0'])(null))['map'])(((($GLOBALS['Data_Functor_functorFn'])['map'])($GLOBALS['Control_Comonad_Env_Trans_EnvT']))(($GLOBALS['Data_Tuple_Tuple'])(($v_9)->{'value0'}))))((($traverseWithIndex1_7_6)($f_8))(($v_9)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -520,21 +553,21 @@ $GLOBALS['Control_Comonad_Env_Trans_traversableWithIndexEnvT'] = function($dictT
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "FunctorWithIndex0" => function($dollar__unused_4 = null) use ($functorWithIndexEnvT1_1_0) {
+}, "FunctorWithIndex0" => function($_dollar__unused_6 = null) use ($functorWithIndexEnvT1_3_2) {
   $__num = \func_num_args();
-  $__res = $functorWithIndexEnvT1_1_0;
+  $__res = $functorWithIndexEnvT1_3_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "FoldableWithIndex1" => function($dollar__unused_4 = null) use ($foldableWithIndexEnvT1_2_1) {
+}, "FoldableWithIndex1" => function($_dollar__unused_6 = null) use ($foldableWithIndexEnvT1_4_4) {
   $__num = \func_num_args();
-  $__res = $foldableWithIndexEnvT1_2_1;
+  $__res = $foldableWithIndexEnvT1_4_4;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Traversable2" => function($dollar__unused_4 = null) use ($traversableEnvT1_3_2) {
+}, "Traversable2" => function($_dollar__unused_6 = null) use ($traversableEnvT1_5_5) {
   $__num = \func_num_args();
-  $__res = $traversableEnvT1_3_2;
+  $__res = $traversableEnvT1_5_5;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -547,7 +580,7 @@ $GLOBALS['Control_Comonad_Env_Trans_traversableWithIndexEnvT'] = function($dictT
 // Control_Comonad_Env_Trans_extendEnvT
 $GLOBALS['Control_Comonad_Env_Trans_extendEnvT'] = function($dictExtend_0 = null) {
   $__num = \func_num_args();
-  $Functor0_1_0 = (($dictExtend_0)['Functor0'])($GLOBALS['Prim_undefined']);
+  $Functor0_1_0 = (($dictExtend_0)['Functor0'])(null);
   $functorEnvT1_2_1 = ["map" => (function() use ($Functor0_1_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($Functor0_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -567,13 +600,13 @@ $GLOBALS['Control_Comonad_Env_Trans_extendEnvT'] = function($dictExtend_0 = null
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ($v_4)->{'value0'}, ((($Functor0_1_0)['map'])($f_3))(((($dictExtend_0)['extend'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Comonad_Env_Trans_EnvT']))(($GLOBALS['Data_Tuple_Tuple'])(($v_4)->{'value0'}))))(($v_4)->{'value1'})));
+  $__res = new Phpurs_Data2("Tuple", ($v_4)->{'value0'}, ((($Functor0_1_0)['map'])($f_3))(((($dictExtend_0)['extend'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Control_Comonad_Env_Trans_EnvT']))(($GLOBALS['Data_Tuple_Tuple'])(($v_4)->{'value0'}))))(($v_4)->{'value1'})));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_3 = null) use ($functorEnvT1_2_1) {
+})(), "Functor0" => function($_dollar__unused_3 = null) use ($functorEnvT1_2_1) {
   $__num = \func_num_args();
   $__res = $functorEnvT1_2_1;
   goto __end;;
@@ -603,14 +636,14 @@ $GLOBALS['Control_Comonad_Env_Trans_comonadTransEnvT'] = ["lower" => (function()
 // Control_Comonad_Env_Trans_comonadEnvT
 $GLOBALS['Control_Comonad_Env_Trans_comonadEnvT'] = function($dictComonad_0 = null) {
   $__num = \func_num_args();
-  $extendEnvT1_1_0 = ($GLOBALS['Control_Comonad_Env_Trans_extendEnvT'])((($dictComonad_0)['Extend0'])($GLOBALS['Prim_undefined']));
+  $extendEnvT1_1_0 = ($GLOBALS['Control_Comonad_Env_Trans_extendEnvT'])((($dictComonad_0)['Extend0'])(null));
   $__res = ["extract" => function($v_2 = null) use ($dictComonad_0) {
   $__num = \func_num_args();
   $__res = (($dictComonad_0)['extract'])(($v_2)->{'value1'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Extend0" => function($dollar__unused_2 = null) use ($extendEnvT1_1_0) {
+}, "Extend0" => function($_dollar__unused_2 = null) use ($extendEnvT1_1_0) {
   $__num = \func_num_args();
   $__res = $extendEnvT1_1_0;
   goto __end;;

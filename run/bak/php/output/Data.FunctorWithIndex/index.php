@@ -175,18 +175,11 @@ $GLOBALS['Data_FunctorWithIndex_mapDefault'] = (function() {
 // Data_FunctorWithIndex_functorWithIndexTuple
 $GLOBALS['Data_FunctorWithIndex_functorWithIndexTuple'] = ["mapWithIndex" => function($f_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = ($f_0)($GLOBALS['Data_Unit_unit']);
-  $__res = function($m_2 = null) use ($__local_var_1_0) {
-  $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($m_2)->{'value0'}, ($__local_var_1_0)(($m_2)->{'value1'}));
+  $__res = (($GLOBALS['Data_Tuple_functorTuple'])['map'])(($f_0)($GLOBALS['Data_Unit_unit']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Functor0" => function($dollar__unused_0 = null) {
+}, "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Tuple_functorTuple'];
   goto __end;;
@@ -197,38 +190,25 @@ $GLOBALS['Data_FunctorWithIndex_functorWithIndexTuple'] = ["mapWithIndex" => fun
 // Data_FunctorWithIndex_functorWithIndexProduct
 $GLOBALS['Data_FunctorWithIndex_functorWithIndexProduct'] = function($dictFunctorWithIndex_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictFunctorWithIndex_0)['Functor0'])($GLOBALS['Prim_undefined']);
-  $__res = function($dictFunctorWithIndex1_2 = null) use ($__local_var_1_0, $dictFunctorWithIndex_0) {
+  $functorProduct_1_0 = ($GLOBALS['Data_Functor_Product_functorProduct'])((($dictFunctorWithIndex_0)['Functor0'])(null));
+  $__res = function($dictFunctorWithIndex1_2 = null) use ($dictFunctorWithIndex_0, $functorProduct_1_0) {
   $__num = \func_num_args();
-  $__local_var_3_1 = (($dictFunctorWithIndex1_2)['Functor0'])($GLOBALS['Prim_undefined']);
-  $functorProduct1_4_2 = ["map" => (function() use ($__local_var_1_0, $__local_var_3_1) {
-  $__fn = function($f_4 = null, $v_5 = null) use ($__local_var_1_0, $__local_var_3_1, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = new Phpurs_Data2("Tuple", ((($__local_var_1_0)['map'])($f_4))(($v_5)->{'value0'}), ((($__local_var_3_1)['map'])($f_4))(($v_5)->{'value1'}));
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  $functorProduct1_3_1 = ($functorProduct_1_0)((($dictFunctorWithIndex1_2)['Functor0'])(null));
   $__res = ["mapWithIndex" => (function() use ($dictFunctorWithIndex1_2, $dictFunctorWithIndex_0) {
-  $__fn = function($f_5 = null, $v_6 = null) use ($dictFunctorWithIndex1_2, $dictFunctorWithIndex_0, &$__fn) {
+  $__fn = function($f_4 = null, $v_5 = null) use ($dictFunctorWithIndex1_2, $dictFunctorWithIndex_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data2("Tuple", ((($dictFunctorWithIndex_0)['mapWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_5))($GLOBALS['Data_Either_Left'])))(($v_6)->{'value0'}), ((($dictFunctorWithIndex1_2)['mapWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_5))($GLOBALS['Data_Either_Right'])))(($v_6)->{'value1'}));
+  $__res = (((($GLOBALS['Data_Bifunctor_bifunctorTuple'])['bimap'])((($dictFunctorWithIndex_0)['mapWithIndex'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_4))($GLOBALS['Data_Either_Left']))))((($dictFunctorWithIndex1_2)['mapWithIndex'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_4))($GLOBALS['Data_Either_Right']))))($v_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_5 = null) use ($functorProduct1_4_2) {
+})(), "Functor0" => function($_dollar__unused_4 = null) use ($functorProduct1_3_1) {
   $__num = \func_num_args();
-  $__res = $functorProduct1_4_2;
+  $__res = $functorProduct1_3_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -245,11 +225,11 @@ $GLOBALS['Data_FunctorWithIndex_functorWithIndexProduct'] = function($dictFuncto
 // Data_FunctorWithIndex_functorWithIndexMultiplicative
 $GLOBALS['Data_FunctorWithIndex_functorWithIndexMultiplicative'] = ["mapWithIndex" => function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = ($f_0)($GLOBALS['Data_Unit_unit']);
+  $__res = (($GLOBALS['Data_Monoid_Multiplicative_functorMultiplicative'])['map'])(($f_0)($GLOBALS['Data_Unit_unit']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Functor0" => function($dollar__unused_0 = null) {
+}, "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Monoid_Multiplicative_functorMultiplicative'];
   goto __end;;
@@ -260,25 +240,11 @@ $GLOBALS['Data_FunctorWithIndex_functorWithIndexMultiplicative'] = ["mapWithInde
 // Data_FunctorWithIndex_functorWithIndexMaybe
 $GLOBALS['Data_FunctorWithIndex_functorWithIndexMaybe'] = ["mapWithIndex" => function($f_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = ($f_0)($GLOBALS['Data_Unit_unit']);
-  $__res = function($v1_2 = null) use ($__local_var_1_0) {
-  $__num = \func_num_args();
-  $__t1 = null;;
-  if ((is_object($v1_2) && (($v1_2)->{'tag'} === "Just"))) {
-$__t1 = new Phpurs_Data1("Just", ($__local_var_1_0)(($v1_2)->{'value0'}));
-goto end_branch_1;;
-};
-  $__t1 = new Phpurs_Data0("Nothing");
-  end_branch_1:;
-  $__res = $__t1;
+  $__res = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])(($f_0)($GLOBALS['Data_Unit_unit']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Functor0" => function($dollar__unused_0 = null) {
+}, "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Maybe_functorMaybe'];
   goto __end;;
@@ -289,25 +255,11 @@ goto end_branch_1;;
 // Data_FunctorWithIndex_functorWithIndexLast
 $GLOBALS['Data_FunctorWithIndex_functorWithIndexLast'] = ["mapWithIndex" => function($f_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = ($f_0)($GLOBALS['Data_Unit_unit']);
-  $__res = function($v1_2 = null) use ($__local_var_1_0) {
-  $__num = \func_num_args();
-  $__t1 = null;;
-  if ((is_object($v1_2) && (($v1_2)->{'tag'} === "Just"))) {
-$__t1 = new Phpurs_Data1("Just", ($__local_var_1_0)(($v1_2)->{'value0'}));
-goto end_branch_1;;
-};
-  $__t1 = new Phpurs_Data0("Nothing");
-  end_branch_1:;
-  $__res = $__t1;
+  $__res = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])(($f_0)($GLOBALS['Data_Unit_unit']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Functor0" => function($dollar__unused_0 = null) {
+}, "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Maybe_functorMaybe'];
   goto __end;;
@@ -328,7 +280,7 @@ $GLOBALS['Data_FunctorWithIndex_functorWithIndexIdentity'] = ["mapWithIndex" => 
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0 = null) {
+})(), "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Identity_functorIdentity'];
   goto __end;;
@@ -339,25 +291,11 @@ $GLOBALS['Data_FunctorWithIndex_functorWithIndexIdentity'] = ["mapWithIndex" => 
 // Data_FunctorWithIndex_functorWithIndexFirst
 $GLOBALS['Data_FunctorWithIndex_functorWithIndexFirst'] = ["mapWithIndex" => function($f_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = ($f_0)($GLOBALS['Data_Unit_unit']);
-  $__res = function($v1_2 = null) use ($__local_var_1_0) {
-  $__num = \func_num_args();
-  $__t1 = null;;
-  if ((is_object($v1_2) && (($v1_2)->{'tag'} === "Just"))) {
-$__t1 = new Phpurs_Data1("Just", ($__local_var_1_0)(($v1_2)->{'value0'}));
-goto end_branch_1;;
-};
-  $__t1 = new Phpurs_Data0("Nothing");
-  end_branch_1:;
-  $__res = $__t1;
+  $__res = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])(($f_0)($GLOBALS['Data_Unit_unit']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Functor0" => function($dollar__unused_0 = null) {
+}, "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Maybe_functorMaybe'];
   goto __end;;
@@ -368,30 +306,11 @@ goto end_branch_1;;
 // Data_FunctorWithIndex_functorWithIndexEither
 $GLOBALS['Data_FunctorWithIndex_functorWithIndexEither'] = ["mapWithIndex" => function($f_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = ($f_0)($GLOBALS['Data_Unit_unit']);
-  $__res = function($m_2 = null) use ($__local_var_1_0) {
-  $__num = \func_num_args();
-  $__t1 = null;;
-  if ((is_object($m_2) && (($m_2)->{'tag'} === "Left"))) {
-$__t1 = new Phpurs_Data1("Left", ($m_2)->{'value0'});
-goto end_branch_1;;
-};
-  if ((is_object($m_2) && (($m_2)->{'tag'} === "Right"))) {
-$__t1 = new Phpurs_Data1("Right", ($__local_var_1_0)(($m_2)->{'value0'}));
-goto end_branch_1;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t1 = null;
-  end_branch_1:;
-  $__res = $__t1;
+  $__res = (($GLOBALS['Data_Either_functorEither'])['map'])(($f_0)($GLOBALS['Data_Unit_unit']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Functor0" => function($dollar__unused_0 = null) {
+}, "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Either_functorEither'];
   goto __end;;
@@ -402,11 +321,11 @@ goto end_branch_1;;
 // Data_FunctorWithIndex_functorWithIndexDual
 $GLOBALS['Data_FunctorWithIndex_functorWithIndexDual'] = ["mapWithIndex" => function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = ($f_0)($GLOBALS['Data_Unit_unit']);
+  $__res = (($GLOBALS['Data_Monoid_Dual_functorDual'])['map'])(($f_0)($GLOBALS['Data_Unit_unit']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Functor0" => function($dollar__unused_0 = null) {
+}, "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Monoid_Dual_functorDual'];
   goto __end;;
@@ -417,11 +336,11 @@ $GLOBALS['Data_FunctorWithIndex_functorWithIndexDual'] = ["mapWithIndex" => func
 // Data_FunctorWithIndex_functorWithIndexDisj
 $GLOBALS['Data_FunctorWithIndex_functorWithIndexDisj'] = ["mapWithIndex" => function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = ($f_0)($GLOBALS['Data_Unit_unit']);
+  $__res = (($GLOBALS['Data_Monoid_Disj_functorDisj'])['map'])(($f_0)($GLOBALS['Data_Unit_unit']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Functor0" => function($dollar__unused_0 = null) {
+}, "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Monoid_Disj_functorDisj'];
   goto __end;;
@@ -432,66 +351,25 @@ $GLOBALS['Data_FunctorWithIndex_functorWithIndexDisj'] = ["mapWithIndex" => func
 // Data_FunctorWithIndex_functorWithIndexCoproduct
 $GLOBALS['Data_FunctorWithIndex_functorWithIndexCoproduct'] = function($dictFunctorWithIndex_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictFunctorWithIndex_0)['Functor0'])($GLOBALS['Prim_undefined']);
-  $__res = function($dictFunctorWithIndex1_2 = null) use ($__local_var_1_0, $dictFunctorWithIndex_0) {
+  $functorCoproduct_1_0 = ($GLOBALS['Data_Functor_Coproduct_functorCoproduct'])((($dictFunctorWithIndex_0)['Functor0'])(null));
+  $__res = function($dictFunctorWithIndex1_2 = null) use ($dictFunctorWithIndex_0, $functorCoproduct_1_0) {
   $__num = \func_num_args();
-  $__local_var_3_1 = (($dictFunctorWithIndex1_2)['Functor0'])($GLOBALS['Prim_undefined']);
-  $functorCoproduct1_4_2 = ["map" => (function() use ($__local_var_1_0, $__local_var_3_1) {
-  $__fn = function($f_4 = null, $v_5 = null) use ($__local_var_1_0, $__local_var_3_1, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__local_var_6_2 = (($__local_var_1_0)['map'])($f_4);
-  $__local_var_7_3 = (($__local_var_3_1)['map'])($f_4);
-  $__t4 = null;;
-  if ((is_object($v_5) && (($v_5)->{'tag'} === "Left"))) {
-$__t4 = new Phpurs_Data1("Left", ($__local_var_6_2)(($v_5)->{'value0'}));
-goto end_branch_4;;
-};
-  if ((is_object($v_5) && (($v_5)->{'tag'} === "Right"))) {
-$__t4 = new Phpurs_Data1("Right", ($__local_var_7_3)(($v_5)->{'value0'}));
-goto end_branch_4;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t4 = null;
-  end_branch_4:;
-  $__res = $__t4;
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  $functorCoproduct1_3_1 = ($functorCoproduct_1_0)((($dictFunctorWithIndex1_2)['Functor0'])(null));
   $__res = ["mapWithIndex" => (function() use ($dictFunctorWithIndex1_2, $dictFunctorWithIndex_0) {
-  $__fn = function($f_5 = null, $v_6 = null) use ($dictFunctorWithIndex1_2, $dictFunctorWithIndex_0, &$__fn) {
+  $__fn = function($f_4 = null, $v_5 = null) use ($dictFunctorWithIndex1_2, $dictFunctorWithIndex_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_7_6 = (($dictFunctorWithIndex_0)['mapWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_5))($GLOBALS['Data_Either_Left']));
-  $__local_var_8_7 = (($dictFunctorWithIndex1_2)['mapWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_5))($GLOBALS['Data_Either_Right']));
-  $__t8 = null;;
-  if ((is_object($v_6) && (($v_6)->{'tag'} === "Left"))) {
-$__t8 = new Phpurs_Data1("Left", ($__local_var_7_6)(($v_6)->{'value0'}));
-goto end_branch_8;;
-};
-  if ((is_object($v_6) && (($v_6)->{'tag'} === "Right"))) {
-$__t8 = new Phpurs_Data1("Right", ($__local_var_8_7)(($v_6)->{'value0'}));
-goto end_branch_8;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t8 = null;
-  end_branch_8:;
-  $__res = $__t8;
+  $__res = (((($GLOBALS['Data_Bifunctor_bifunctorEither'])['bimap'])((($dictFunctorWithIndex_0)['mapWithIndex'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_4))($GLOBALS['Data_Either_Left']))))((($dictFunctorWithIndex1_2)['mapWithIndex'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($f_4))($GLOBALS['Data_Either_Right']))))($v_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_5 = null) use ($functorCoproduct1_4_2) {
+})(), "Functor0" => function($_dollar__unused_4 = null) use ($functorCoproduct1_3_1) {
   $__num = \func_num_args();
-  $__res = $functorCoproduct1_4_2;
+  $__res = $functorCoproduct1_3_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -518,7 +396,7 @@ $GLOBALS['Data_FunctorWithIndex_functorWithIndexConst'] = ["mapWithIndex" => (fu
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0 = null) {
+})(), "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Const_functorConst'];
   goto __end;;
@@ -529,11 +407,11 @@ $GLOBALS['Data_FunctorWithIndex_functorWithIndexConst'] = ["mapWithIndex" => (fu
 // Data_FunctorWithIndex_functorWithIndexConj
 $GLOBALS['Data_FunctorWithIndex_functorWithIndexConj'] = ["mapWithIndex" => function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = ($f_0)($GLOBALS['Data_Unit_unit']);
+  $__res = (($GLOBALS['Data_Monoid_Conj_functorConj'])['map'])(($f_0)($GLOBALS['Data_Unit_unit']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Functor0" => function($dollar__unused_0 = null) {
+}, "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Monoid_Conj_functorConj'];
   goto __end;;
@@ -544,11 +422,11 @@ $GLOBALS['Data_FunctorWithIndex_functorWithIndexConj'] = ["mapWithIndex" => func
 // Data_FunctorWithIndex_functorWithIndexCompose
 $GLOBALS['Data_FunctorWithIndex_functorWithIndexCompose'] = function($dictFunctorWithIndex_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictFunctorWithIndex_0)['Functor0'])($GLOBALS['Prim_undefined']);
+  $__local_var_1_0 = (($dictFunctorWithIndex_0)['Functor0'])(null);
   $__res = function($dictFunctorWithIndex1_2 = null) use ($__local_var_1_0, $dictFunctorWithIndex_0) {
   $__num = \func_num_args();
   $mapWithIndex2_3_1 = ($dictFunctorWithIndex1_2)['mapWithIndex'];
-  $__local_var_4_2 = (($dictFunctorWithIndex1_2)['Functor0'])($GLOBALS['Prim_undefined']);
+  $__local_var_4_2 = (($dictFunctorWithIndex1_2)['Functor0'])(null);
   $functorCompose1_5_3 = ["map" => (function() use ($__local_var_1_0, $__local_var_4_2) {
   $__fn = function($f_5 = null, $v_6 = null) use ($__local_var_1_0, $__local_var_4_2, &$__fn) {
   $__num = \func_num_args();
@@ -568,7 +446,7 @@ $GLOBALS['Data_FunctorWithIndex_functorWithIndexCompose'] = function($dictFuncto
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictFunctorWithIndex_0)['mapWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($mapWithIndex2_3_1))((function() use ($f_6) {
+  $__res = ((($dictFunctorWithIndex_0)['mapWithIndex'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($mapWithIndex2_3_1))((function() use ($f_6) {
   $__fn = function($a_8 = null, $b_9 = null) use ($f_6, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -586,7 +464,7 @@ $GLOBALS['Data_FunctorWithIndex_functorWithIndexCompose'] = function($dictFuncto
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_6 = null) use ($functorCompose1_5_3) {
+})(), "Functor0" => function($_dollar__unused_6 = null) use ($functorCompose1_5_3) {
   $__num = \func_num_args();
   $__res = $functorCompose1_5_3;
   goto __end;;
@@ -603,7 +481,7 @@ $GLOBALS['Data_FunctorWithIndex_functorWithIndexCompose'] = function($dictFuncto
 };
 
 // Data_FunctorWithIndex_functorWithIndexArray
-$GLOBALS['Data_FunctorWithIndex_functorWithIndexArray'] = ["mapWithIndex" => $GLOBALS['Data_FunctorWithIndex_mapWithIndexArray'], "Functor0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_FunctorWithIndex_functorWithIndexArray'] = ["mapWithIndex" => $GLOBALS['Data_FunctorWithIndex_mapWithIndexArray'], "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Functor_functorArray'];
   goto __end;;
@@ -614,7 +492,7 @@ $GLOBALS['Data_FunctorWithIndex_functorWithIndexArray'] = ["mapWithIndex" => $GL
 // Data_FunctorWithIndex_functorWithIndexApp
 $GLOBALS['Data_FunctorWithIndex_functorWithIndexApp'] = function($dictFunctorWithIndex_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictFunctorWithIndex_0)['Functor0'])($GLOBALS['Prim_undefined']);
+  $__local_var_1_0 = (($dictFunctorWithIndex_0)['Functor0'])(null);
   $__res = ["mapWithIndex" => (function() use ($dictFunctorWithIndex_0) {
   $__fn = function($f_2 = null, $v_3 = null) use ($dictFunctorWithIndex_0, &$__fn) {
   $__num = \func_num_args();
@@ -627,7 +505,7 @@ $GLOBALS['Data_FunctorWithIndex_functorWithIndexApp'] = function($dictFunctorWit
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_2 = null) use ($__local_var_1_0) {
+})(), "Functor0" => function($_dollar__unused_2 = null) use ($__local_var_1_0) {
   $__num = \func_num_args();
   $__res = $__local_var_1_0;
   goto __end;;
@@ -642,11 +520,11 @@ $GLOBALS['Data_FunctorWithIndex_functorWithIndexApp'] = function($dictFunctorWit
 // Data_FunctorWithIndex_functorWithIndexAdditive
 $GLOBALS['Data_FunctorWithIndex_functorWithIndexAdditive'] = ["mapWithIndex" => function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = ($f_0)($GLOBALS['Data_Unit_unit']);
+  $__res = (($GLOBALS['Data_Monoid_Additive_functorAdditive'])['map'])(($f_0)($GLOBALS['Data_Unit_unit']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Functor0" => function($dollar__unused_0 = null) {
+}, "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Monoid_Additive_functorAdditive'];
   goto __end;;

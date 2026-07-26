@@ -158,8 +158,8 @@ $GLOBALS['Control_Monad_State_Class_modify'] = (function() {
   }
   $__res = (($dictMonadState_0)['state'])(function($s_2 = null) use ($f_1) {
   $__num = \func_num_args();
-  $s__prime___3_0 = ($f_1)($s_2);
-  $__res = new Phpurs_Data2("Tuple", $s__prime___3_0, $s__prime___3_0);
+  $s_prime_3_0 = ($f_1)($s_2);
+  $__res = new Phpurs_Data2("Tuple", $s_prime_3_0, $s_prime_3_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

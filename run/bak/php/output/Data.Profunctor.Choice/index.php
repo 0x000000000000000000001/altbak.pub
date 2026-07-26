@@ -142,7 +142,7 @@ $GLOBALS['Data_Profunctor_Choice_fanin'] = (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $rmap_2_0 = ($GLOBALS['Data_Profunctor_rmap'])((($dictChoice_1)['Profunctor0'])($GLOBALS['Prim_undefined']));
+  $rmap_2_0 = ($GLOBALS['Data_Profunctor_rmap'])((($dictChoice_1)['Profunctor0'])(null));
   $__res = (function() use ($dictChoice_1, $dictSemigroupoid_0, $rmap_2_0) {
   $__fn = function($l_3 = null, $r_4 = null) use ($dictChoice_1, $dictSemigroupoid_0, $rmap_2_0, &$__fn) {
   $__num = \func_num_args();
@@ -153,11 +153,11 @@ $GLOBALS['Data_Profunctor_Choice_fanin'] = (function() {
   $__num = \func_num_args();
   $__t1 = null;;
   if ((is_object($v2_5) && (($v2_5)->{'tag'} === "Left"))) {
-$__t1 = ($v2_5)->{'value0'};
+$__t1 = (($GLOBALS['Control_Category_categoryFn'])['identity'])(($v2_5)->{'value0'});
 goto end_branch_1;;
 };
   if ((is_object($v2_5) && (($v2_5)->{'tag'} === "Right"))) {
-$__t1 = ($v2_5)->{'value0'};
+$__t1 = (($GLOBALS['Control_Category_categoryFn'])['identity'])(($v2_5)->{'value0'});
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -206,7 +206,7 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "right" => ($GLOBALS['Data_Either_functorEither'])['map'], "Profunctor0" => function($dollar__unused_0 = null) {
+})(), "right" => ($GLOBALS['Data_Either_functorEither'])['map'], "Profunctor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Profunctor_profunctorFn'];
   goto __end;;

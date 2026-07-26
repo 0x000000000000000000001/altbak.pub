@@ -144,11 +144,11 @@ $GLOBALS['Data_Either_showEither'] = (function() {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_2) && (($v_2)->{'tag'} === "Left"))) {
-$__t0 = (("(Left " . (($dictShow_0)['show'])(($v_2)->{'value0'})) . ")");
+$__t0 = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Left "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])(($v_2)->{'value0'})))(")"));
 goto end_branch_0;;
 };
   if ((is_object($v_2) && (($v_2)->{'tag'} === "Right"))) {
-$__t0 = (("(Right " . (($dictShow1_1)['show'])(($v_2)->{'value0'})) . ")");
+$__t0 = ((($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Right "))(((($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow1_1)['show'])(($v_2)->{'value0'})))(")"));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -169,7 +169,7 @@ goto end_branch_0;;
 // Data_Either_note'
 $GLOBALS['Data_Either_note__prime__'] = function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Maybe_maybe__prime__'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Either_Left']))($f_0)))($GLOBALS['Data_Either_Right']);
+  $__res = (($GLOBALS['Data_Maybe_maybe__prime__'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Either_Left']))($f_0)))($GLOBALS['Data_Either_Right']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -270,27 +270,15 @@ goto end_branch_0;;
 
 // Data_Either_invariantEither
 $GLOBALS['Data_Either_invariantEither'] = ["imap" => (function() {
-  $__fn = function($f_0 = null, $v_1 = null, $m_2 = null) use (&$__fn) {
+  $__fn = function($f_0 = null, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__t0 = null;;
-  if ((is_object($m_2) && (($m_2)->{'tag'} === "Left"))) {
-$__t0 = new Phpurs_Data1("Left", ($m_2)->{'value0'});
-goto end_branch_0;;
-};
-  if ((is_object($m_2) && (($m_2)->{'tag'} === "Right"))) {
-$__t0 = new Phpurs_Data1("Right", ($f_0)(($m_2)->{'value0'}));
-goto end_branch_0;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t0 = null;
-  end_branch_0:;
-  $__res = $__t0;
+  $__res = (($GLOBALS['Data_Either_functorEither'])['map'])($f_0);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
@@ -403,7 +391,7 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0 = null) {
+})(), "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Either_functorEither'];
   goto __end;;
@@ -448,10 +436,10 @@ goto end_branch_0;;
 // Data_Either_ordEither
 $GLOBALS['Data_Either_ordEither'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictOrd_0)['Eq0'])($GLOBALS['Prim_undefined']);
+  $__local_var_1_0 = (($dictOrd_0)['Eq0'])(null);
   $__res = function($dictOrd1_2 = null) use ($__local_var_1_0, $dictOrd_0) {
   $__num = \func_num_args();
-  $__local_var_3_1 = (($dictOrd1_2)['Eq0'])($GLOBALS['Prim_undefined']);
+  $__local_var_3_1 = (($dictOrd1_2)['Eq0'])(null);
   $eqEither2_4_2 = ["eq" => (function() use ($__local_var_1_0, $__local_var_3_1) {
   $__fn = function($x_4 = null, $y_5 = null) use ($__local_var_1_0, $__local_var_3_1, &$__fn) {
   $__num = \func_num_args();
@@ -507,7 +495,7 @@ goto end_branch_4;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Eq0" => function($dollar__unused_5 = null) use ($eqEither2_4_2) {
+})(), "Eq0" => function($_dollar__unused_5 = null) use ($eqEither2_4_2) {
   $__num = \func_num_args();
   $__res = $eqEither2_4_2;
   goto __end;;
@@ -555,7 +543,7 @@ goto end_branch_0;;
 $GLOBALS['Data_Either_ord1Either'] = function($dictOrd_0 = null) {
   $__num = \func_num_args();
   $ordEither1_1_0 = ($GLOBALS['Data_Either_ordEither'])($dictOrd_0);
-  $__local_var_2_1 = (($dictOrd_0)['Eq0'])($GLOBALS['Prim_undefined']);
+  $__local_var_2_1 = (($dictOrd_0)['Eq0'])(null);
   $eq1Either1_3_2 = ["eq1" => (function() use ($__local_var_2_1) {
   $__fn = function($dictEq1_3 = null, $x_4 = null, $y_5 = null) use ($__local_var_2_1, &$__fn) {
   $__num = \func_num_args();
@@ -582,7 +570,7 @@ goto end_branch_2;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Eq10" => function($dollar__unused_4 = null) use ($eq1Either1_3_2) {
+}, "Eq10" => function($_dollar__unused_4 = null) use ($eq1Either1_3_2) {
   $__num = \func_num_args();
   $__res = $eq1Either1_3_2;
   goto __end;;
@@ -687,7 +675,7 @@ goto end_branch_0;;
 // Data_Either_choose
 $GLOBALS['Data_Either_choose'] = function($dictAlt_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($dictAlt_0)['Functor0'])($GLOBALS['Prim_undefined']);
+  $__local_var_1_0 = (($dictAlt_0)['Functor0'])(null);
   $__res = (function() use ($__local_var_1_0, $dictAlt_0) {
   $__fn = function($a_2 = null, $b_3 = null) use ($__local_var_1_0, $dictAlt_0, &$__fn) {
   $__num = \func_num_args();
@@ -710,11 +698,11 @@ $GLOBALS['Data_Either_choose'] = function($dictAlt_0 = null) {
 $GLOBALS['Data_Either_boundedEither'] = function($dictBounded_0 = null) {
   $__num = \func_num_args();
   $bottom_1_0 = ($dictBounded_0)['bottom'];
-  $ordEither1_2_1 = ($GLOBALS['Data_Either_ordEither'])((($dictBounded_0)['Ord0'])($GLOBALS['Prim_undefined']));
+  $ordEither1_2_1 = ($GLOBALS['Data_Either_ordEither'])((($dictBounded_0)['Ord0'])(null));
   $__res = function($dictBounded1_3 = null) use ($bottom_1_0, $ordEither1_2_1) {
   $__num = \func_num_args();
-  $ordEither2_4_2 = ($ordEither1_2_1)((($dictBounded1_3)['Ord0'])($GLOBALS['Prim_undefined']));
-  $__res = ["top" => new Phpurs_Data1("Right", ($dictBounded1_3)['top']), "bottom" => new Phpurs_Data1("Left", $bottom_1_0), "Ord0" => function($dollar__unused_5 = null) use ($ordEither2_4_2) {
+  $ordEither2_4_2 = ($ordEither1_2_1)((($dictBounded1_3)['Ord0'])(null));
+  $__res = ["top" => new Phpurs_Data1("Right", ($dictBounded1_3)['top']), "bottom" => new Phpurs_Data1("Left", $bottom_1_0), "Ord0" => function($_dollar__unused_5 = null) use ($ordEither2_4_2) {
   $__num = \func_num_args();
   $__res = $ordEither2_4_2;
   goto __end;;
@@ -764,19 +752,7 @@ $__t0 = new Phpurs_Data1("Left", ($v_0)->{'value0'});
 goto end_branch_0;;
 };
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Right"))) {
-$__t1 = null;;
-if ((is_object($v1_1) && (($v1_1)->{'tag'} === "Left"))) {
-$__t1 = new Phpurs_Data1("Left", ($v1_1)->{'value0'});
-goto end_branch_1;;
-};
-if ((is_object($v1_1) && (($v1_1)->{'tag'} === "Right"))) {
-$__t1 = new Phpurs_Data1("Right", (($v_0)->{'value0'})(($v1_1)->{'value0'}));
-goto end_branch_1;;
-};
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t1 = null;
-end_branch_1:;
-$__t0 = $__t1;
+$__t0 = ((($GLOBALS['Data_Either_functorEither'])['map'])(($v_0)->{'value0'}))($v1_1);
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -788,7 +764,7 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0 = null) {
+})(), "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Either_functorEither'];
   goto __end;;
@@ -829,7 +805,7 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Apply0" => function($dollar__unused_0 = null) {
+}, "Apply0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Either_applyEither'];
   goto __end;;
@@ -840,37 +816,14 @@ goto end_branch_0;;
 // Data_Either_semigroupEither
 $GLOBALS['Data_Either_semigroupEither'] = function($dictSemigroup_0 = null) {
   $__num = \func_num_args();
-  $__res = ["append" => (function() use ($dictSemigroup_0) {
-  $__fn = function($x_1 = null, $y_2 = null) use ($dictSemigroup_0, &$__fn) {
+  $append1_1_0 = ($dictSemigroup_0)['append'];
+  $__res = ["append" => (function() use ($append1_1_0) {
+  $__fn = function($x_2 = null, $y_3 = null) use ($append1_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__t0 = null;;
-  if ((is_object($x_1) && (($x_1)->{'tag'} === "Left"))) {
-$__t0 = new Phpurs_Data1("Left", ($x_1)->{'value0'});
-goto end_branch_0;;
-};
-  if ((is_object($x_1) && (($x_1)->{'tag'} === "Right"))) {
-$__t1 = null;;
-if ((is_object($y_2) && (($y_2)->{'tag'} === "Left"))) {
-$__t1 = new Phpurs_Data1("Left", ($y_2)->{'value0'});
-goto end_branch_1;;
-};
-if ((is_object($y_2) && (($y_2)->{'tag'} === "Right"))) {
-$__t1 = new Phpurs_Data1("Right", ((($dictSemigroup_0)['append'])(($x_1)->{'value0'}))(($y_2)->{'value0'}));
-goto end_branch_1;;
-};
-throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t1 = null;
-end_branch_1:;
-$__t0 = $__t1;
-goto end_branch_0;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t0 = null;
-  end_branch_0:;
-  $__res = $__t0;
+  $__res = ((($GLOBALS['Data_Either_applyEither'])['apply'])(((($GLOBALS['Data_Either_functorEither'])['map'])($append1_1_0))($x_2)))($y_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -883,7 +836,7 @@ goto end_branch_0;;
 };
 
 // Data_Either_applicativeEither
-$GLOBALS['Data_Either_applicativeEither'] = ["pure" => $GLOBALS['Data_Either_Right'], "Apply0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Either_applicativeEither'] = ["pure" => $GLOBALS['Data_Either_Right'], "Apply0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Either_applyEither'];
   goto __end;;
@@ -892,13 +845,13 @@ $GLOBALS['Data_Either_applicativeEither'] = ["pure" => $GLOBALS['Data_Either_Rig
 }];
 
 // Data_Either_monadEither
-$GLOBALS['Data_Either_monadEither'] = ["Applicative0" => function($dollar__unused_0 = null) {
+$GLOBALS['Data_Either_monadEither'] = ["Applicative0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Either_applicativeEither'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bind1" => function($dollar__unused_0 = null) {
+}, "Bind1" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Either_bindEither'];
   goto __end;;
@@ -926,7 +879,7 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_0 = null) {
+})(), "Functor0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Either_functorEither'];
   goto __end;;

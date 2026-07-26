@@ -112,6 +112,9 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
+// Control_Monad_Rec_Class_discard
+$GLOBALS['Control_Monad_Rec_Class_discard'] = (($GLOBALS['Control_Bind_discardUnit'])['discard'])($GLOBALS['Effect_bindEffect']);
+
 // Control_Monad_Rec_Class_Loop
 $GLOBALS['Control_Monad_Rec_Class_Loop'] = function($value0 = null) {
   $__num = \func_num_args();
@@ -184,7 +187,7 @@ $GLOBALS['Control_Monad_Rec_Class_tailRecM3'] = (function() {
 // Control_Monad_Rec_Class_untilJust
 $GLOBALS['Control_Monad_Rec_Class_untilJust'] = function($dictMonadRec_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (((((((($dictMonadRec_0)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']))['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']);
+  $__local_var_1_0 = (((((((($dictMonadRec_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null);
   $__res = function($m_2 = null) use ($__local_var_1_0, $dictMonadRec_0) {
   $__num = \func_num_args();
   $__res = ((($dictMonadRec_0)['tailRecM'])(function($v_3 = null) use ($__local_var_1_0, $m_2) {
@@ -227,7 +230,7 @@ $GLOBALS['Control_Monad_Rec_Class_whileJust'] = function($dictMonoid_0 = null) {
   $mempty_1_0 = ($dictMonoid_0)['mempty'];
   $__res = function($dictMonadRec_2 = null) use ($dictMonoid_0, $mempty_1_0) {
   $__num = \func_num_args();
-  $__local_var_3_1 = (((((((($dictMonadRec_2)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']))['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']);
+  $__local_var_3_1 = (((((((($dictMonadRec_2)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null);
   $__res = function($m_4 = null) use ($__local_var_3_1, $dictMonadRec_2, $dictMonoid_0, $mempty_1_0) {
   $__num = \func_num_args();
   $__res = ((($dictMonadRec_2)['tailRecM'])(function($v_5 = null) use ($__local_var_3_1, $dictMonoid_0, $m_4) {
@@ -240,7 +243,7 @@ $__t2 = new Phpurs_Data1("Done", $v_5);
 goto end_branch_2;;
 };
   if ((is_object($v1_6) && (($v1_6)->{'tag'} === "Just"))) {
-$__t2 = new Phpurs_Data1("Loop", ((((($dictMonoid_0)['Semigroup0'])($GLOBALS['Prim_undefined']))['append'])($v_5))(($v1_6)->{'value0'}));
+$__t2 = new Phpurs_Data1("Loop", ((((($dictMonoid_0)['Semigroup0'])(null))['append'])($v_5))(($v1_6)->{'value0'}));
 goto end_branch_2;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -271,17 +274,17 @@ goto end_branch_2;;
 // Control_Monad_Rec_Class_tailRec
 $GLOBALS['Control_Monad_Rec_Class_tailRec'] = function($f_0 = null) {
   $__num = \func_num_args();
-  $go_1_0 = null;
-  $go_1_0 = function($v_2 = null) use ($f_0, &$go_1_0) {
+  $go__1_0 = null;
+  $go__1_0 = function($v_2 = null) use ($f_0, &$go__1_0) {
   $__num = \func_num_args();
-  $__tco_var_go_1_0_0_v_2 = $v_2;
-  tco_loop_go_1_0_0:;
-  $v_2 = $__tco_var_go_1_0_0_v_2;
+  $__tco_var_go__1_0_0_v_2 = $v_2;
+  tco_loop_go__1_0_0:;
+  $v_2 = $__tco_var_go__1_0_0_v_2;
   $__t0 = null;;
   if ((is_object($v_2) && (($v_2)->{'tag'} === "Loop"))) {
 $__tco_1 = ($f_0)(($v_2)->{'value0'});
-$__tco_var_go_1_0_0_v_2 = $__tco_1;
-goto tco_loop_go_1_0_0;;
+$__tco_var_go__1_0_0_v_2 = $__tco_1;
+goto tco_loop_go__1_0_0;;
 $__t0 = null;
 goto end_branch_0;;
 };
@@ -297,7 +300,7 @@ goto end_branch_0;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($go_1_0))($f_0);
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($go__1_0))($f_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -388,7 +391,7 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Monad0" => function($dollar__unused_0 = null) {
+})(), "Monad0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Maybe_monadMaybe'];
   goto __end;;
@@ -399,7 +402,7 @@ goto end_branch_0;;
 // Control_Monad_Rec_Class_monadRecIdentity
 $GLOBALS['Control_Monad_Rec_Class_monadRecIdentity'] = ["tailRecM" => function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity']))(($GLOBALS['Control_Monad_Rec_Class_tailRec'])((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_1 = null) {
+  $__res = ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Identity_Identity']))(($GLOBALS['Control_Monad_Rec_Class_tailRec'])(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])(function($v_1 = null) {
   $__num = \func_num_args();
   $__res = $v_1;
   goto __end;;
@@ -409,7 +412,7 @@ $GLOBALS['Control_Monad_Rec_Class_monadRecIdentity'] = ["tailRecM" => function($
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Monad0" => function($dollar__unused_0 = null) {
+}, "Monad0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Identity_monadIdentity'];
   goto __end;;
@@ -436,7 +439,7 @@ $GLOBALS['Control_Monad_Rec_Class_monadRecFunction'] = ["tailRecM" => (function(
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "Monad0" => function($dollar__unused_0 = null) {
+})(), "Monad0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Monad_monadFn'];
   goto __end;;
@@ -487,7 +490,7 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Monad0" => function($dollar__unused_0 = null) {
+})(), "Monad0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Either_monadEither'];
   goto __end;;
@@ -502,17 +505,17 @@ $GLOBALS['Control_Monad_Rec_Class_monadRecEffect'] = ["tailRecM" => (function() 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Effect_bindE'])((($GLOBALS['Effect_bindE'])(($f_0)($a_1)))($GLOBALS['Effect_Ref__new'])))(function($r_2 = null) use ($f_0) {
+  $__res = ((($GLOBALS['Effect_bindEffect'])['bind'])(((($GLOBALS['Effect_bindEffect'])['bind'])(($f_0)($a_1)))($GLOBALS['Effect_Ref__new'])))(function($r_2 = null) use ($f_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_bindE'])(($GLOBALS['Effect_untilE'])((($GLOBALS['Effect_bindE'])(($GLOBALS['Effect_Ref_read'])($r_2)))(function($v_3 = null) use ($f_0, $r_2) {
+  $__res = (($GLOBALS['Control_Monad_Rec_Class_discard'])(($GLOBALS['Effect_untilE'])(((($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Effect_Ref_read'])($r_2)))(function($v_3 = null) use ($f_0, $r_2) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_3) && (($v_3)->{'tag'} === "Loop"))) {
-$__t0 = (($GLOBALS['Effect_bindE'])(($f_0)(($v_3)->{'value0'})))(function($e_4 = null) use ($r_2) {
+$__t0 = ((($GLOBALS['Effect_bindEffect'])['bind'])(($f_0)(($v_3)->{'value0'})))(function($e_4 = null) use ($r_2) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_bindE'])((($GLOBALS['Effect_Ref_write'])($e_4))($r_2)))(function($dollar__unused_5 = null) {
+  $__res = ((($GLOBALS['Effect_bindEffect'])['bind'])((($GLOBALS['Effect_Ref_write'])($e_4))($r_2)))(function($_dollar__unused_5 = null) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_pureE'])(false);
+  $__res = (($GLOBALS['Effect_applicativeEffect'])['pure'])(false);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -524,7 +527,7 @@ $__t0 = (($GLOBALS['Effect_bindE'])(($f_0)(($v_3)->{'value0'})))(function($e_4 =
 goto end_branch_0;;
 };
   if ((is_object($v_3) && (($v_3)->{'tag'} === "Done"))) {
-$__t0 = ($GLOBALS['Effect_pureE'])(true);
+$__t0 = (($GLOBALS['Effect_applicativeEffect'])['pure'])(true);
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -534,9 +537,9 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))))(function($dollar__unused_3 = null) use ($r_2) {
+}))))(function($_dollar__unused_3 = null) use ($r_2) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Effect_applyEffect'])['apply'])(($GLOBALS['Effect_pureE'])(function($v_4 = null) {
+  $__res = ((($GLOBALS['Effect_functorEffect'])['map'])(function($v_4 = null) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ((is_object($v_4) && (($v_4)->{'tag'} === "Done"))) {
@@ -550,7 +553,7 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))(($GLOBALS['Effect_Ref_read'])($r_2));
+}))(($GLOBALS['Effect_Ref_read'])($r_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -564,7 +567,7 @@ goto end_branch_1;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Monad0" => function($dollar__unused_0 = null) {
+})(), "Monad0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Effect_monadEffect'];
   goto __end;;
@@ -632,7 +635,7 @@ goto end_branch_0;;
 // Control_Monad_Rec_Class_forever
 $GLOBALS['Control_Monad_Rec_Class_forever'] = function($dictMonadRec_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (((((((($dictMonadRec_0)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']))['Apply0'])($GLOBALS['Prim_undefined']))['Functor0'])($GLOBALS['Prim_undefined']);
+  $__local_var_1_0 = (((((((($dictMonadRec_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null);
   $__res = function($ma_2 = null) use ($__local_var_1_0, $dictMonadRec_0) {
   $__num = \func_num_args();
   $__res = ((($dictMonadRec_0)['tailRecM'])(function($u_3 = null) use ($__local_var_1_0, $ma_2) {

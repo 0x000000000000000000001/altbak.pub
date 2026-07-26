@@ -152,22 +152,28 @@ $GLOBALS['Control_Monad_Cont_Trans_runContT'] = (function() {
 })();
 
 // Control_Monad_Cont_Trans_newtypeContT
-$GLOBALS['Control_Monad_Cont_Trans_newtypeContT'] = ["Coercible0" => function($dollar__unused_0 = null) {
+$GLOBALS['Control_Monad_Cont_Trans_newtypeContT'] = ["Coercible0" => function($_dollar__unused_0 = null) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Prim_undefined'];
+  $__res = null;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
 
 // Control_Monad_Cont_Trans_monadTransContT
-$GLOBALS['Control_Monad_Cont_Trans_monadTransContT'] = ["lift" => function($dictMonad_0 = null) {
+$GLOBALS['Control_Monad_Cont_Trans_monadTransContT'] = ["lift" => (function() {
+  $__fn = function($dictMonad_0 = null, $m_1 = null, $k_2 = null) use (&$__fn) {
   $__num = \func_num_args();
-  $__res = ((($dictMonad_0)['Bind1'])($GLOBALS['Prim_undefined']))['bind'];
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__res = ((((($dictMonad_0)['Bind1'])(null))['bind'])($m_1))($k_2);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}];
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})()];
 
 // Control_Monad_Cont_Trans_mapContT
 $GLOBALS['Control_Monad_Cont_Trans_mapContT'] = (function() {
@@ -257,7 +263,7 @@ $GLOBALS['Control_Monad_Cont_Trans_applyContT'] = function($dictApply_0 = null) 
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_2 = null) use ($functorContT1_1_0) {
+})(), "Functor0" => function($_dollar__unused_2 = null) use ($functorContT1_1_0) {
   $__num = \func_num_args();
   $__res = $functorContT1_1_0;
   goto __end;;
@@ -315,7 +321,7 @@ $GLOBALS['Control_Monad_Cont_Trans_bindContT'] = function($dictBind_0 = null) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_2 = null) use ($functorContT1_1_0) {
+})(), "Functor0" => function($_dollar__unused_2 = null) use ($functorContT1_1_0) {
   $__num = \func_num_args();
   $__res = $functorContT1_1_0;
   goto __end;;
@@ -323,14 +329,14 @@ $GLOBALS['Control_Monad_Cont_Trans_bindContT'] = function($dictBind_0 = null) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   $__res = ["bind" => (function() {
-  $__fn = function($v_3 = null, $k_4 = null, $k__prime___5 = null) use (&$__fn) {
+  $__fn = function($v_3 = null, $k_4 = null, $k_prime_5 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($v_3)(function($a_6 = null) use ($k__prime___5, $k_4) {
+  $__res = ($v_3)(function($a_6 = null) use ($k_4, $k_prime_5) {
   $__num = \func_num_args();
-  $__res = (($k_4)($a_6))($k__prime___5);
+  $__res = (($k_4)($a_6))($k_prime_5);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -340,7 +346,7 @@ $GLOBALS['Control_Monad_Cont_Trans_bindContT'] = function($dictBind_0 = null) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "Apply0" => function($dollar__unused_3 = null) use ($applyContT1_2_1) {
+})(), "Apply0" => function($_dollar__unused_3 = null) use ($applyContT1_2_1) {
   $__num = \func_num_args();
   $__res = $applyContT1_2_1;
   goto __end;;
@@ -353,38 +359,24 @@ $GLOBALS['Control_Monad_Cont_Trans_bindContT'] = function($dictBind_0 = null) {
 };
 
 // Control_Monad_Cont_Trans_semigroupContT
-$GLOBALS['Control_Monad_Cont_Trans_semigroupContT'] = function($dictApply_0 = null) {
+$GLOBALS['Control_Monad_Cont_Trans_semigroupContT'] = (function() {
+  $__fn = function($dictApply_0 = null, $dictSemigroup_1 = null) use (&$__fn) {
   $__num = \func_num_args();
-  $functorContT1_1_0 = ["map" => (function() {
-  $__fn = function($f_1 = null, $v_2 = null, $k_3 = null) use (&$__fn) {
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ["append" => (function() use ($dictSemigroup_1) {
+  $__fn = function($a_2 = null, $b_3 = null, $k_4 = null) use ($dictSemigroup_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($v_2)(function($a_4 = null) use ($f_1, $k_3) {
+  $__res = ($a_2)(function($a_5 = null) use ($b_3, $dictSemigroup_1, $k_4) {
   $__num = \func_num_args();
-  $__res = ($k_3)(($f_1)($a_4));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
-  $lift2_1_0 = ($GLOBALS['Control_Apply_lift2'])(["apply" => (function() {
-  $__fn = function($v_2 = null, $v1_3 = null, $k_4 = null) use (&$__fn) {
+  $__local_var_6_0 = (($dictSemigroup_1)['append'])($a_5);
+  $__res = ($b_3)(function($a_7 = null) use ($__local_var_6_0, $k_4) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  $__res = ($v_2)(function($g_5 = null) use ($k_4, $v1_3) {
-  $__num = \func_num_args();
-  $__res = ($v1_3)(function($a_6 = null) use ($g_5, $k_4) {
-  $__num = \func_num_args();
-  $__res = ($k_4)(($g_5)($a_6));
+  $__res = ($k_4)(($__local_var_6_0)($a_7));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -398,24 +390,13 @@ $GLOBALS['Control_Monad_Cont_Trans_semigroupContT'] = function($dictApply_0 = nu
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_2 = null) use ($functorContT1_1_0) {
-  $__num = \func_num_args();
-  $__res = $functorContT1_1_0;
+})()];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]);
-  $__res = function($dictSemigroup_2 = null) use ($lift2_1_0) {
-  $__num = \func_num_args();
-  $__res = ["append" => ($lift2_1_0)(($dictSemigroup_2)['append'])];
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
 
 // Control_Monad_Cont_Trans_applicativeContT
 $GLOBALS['Control_Monad_Cont_Trans_applicativeContT'] = function($dictApplicative_0 = null) {
@@ -463,7 +444,7 @@ $GLOBALS['Control_Monad_Cont_Trans_applicativeContT'] = function($dictApplicativ
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_2 = null) use ($functorContT1_1_0) {
+})(), "Functor0" => function($_dollar__unused_2 = null) use ($functorContT1_1_0) {
   $__num = \func_num_args();
   $__res = $functorContT1_1_0;
   goto __end;;
@@ -482,7 +463,7 @@ $GLOBALS['Control_Monad_Cont_Trans_applicativeContT'] = function($dictApplicativ
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Apply0" => function($dollar__unused_3 = null) use ($applyContT1_2_1) {
+})(), "Apply0" => function($_dollar__unused_3 = null) use ($applyContT1_2_1) {
   $__num = \func_num_args();
   $__res = $applyContT1_2_1;
   goto __end;;
@@ -540,7 +521,7 @@ $GLOBALS['Control_Monad_Cont_Trans_monadContT'] = function($dictMonad_0 = null) 
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_2 = null) use ($functorContT1_1_0) {
+})(), "Functor0" => function($_dollar__unused_2 = null) use ($functorContT1_1_0) {
   $__num = \func_num_args();
   $__res = $functorContT1_1_0;
   goto __end;;
@@ -559,7 +540,7 @@ $GLOBALS['Control_Monad_Cont_Trans_monadContT'] = function($dictMonad_0 = null) 
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Apply0" => function($dollar__unused_3 = null) use ($applyContT1_2_1) {
+})(), "Apply0" => function($_dollar__unused_3 = null) use ($applyContT1_2_1) {
   $__num = \func_num_args();
   $__res = $applyContT1_2_1;
   goto __end;;
@@ -609,7 +590,7 @@ $GLOBALS['Control_Monad_Cont_Trans_monadContT'] = function($dictMonad_0 = null) 
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "Functor0" => function($dollar__unused_4 = null) use ($functorContT1_3_3) {
+})(), "Functor0" => function($_dollar__unused_4 = null) use ($functorContT1_3_3) {
   $__num = \func_num_args();
   $__res = $functorContT1_3_3;
   goto __end;;
@@ -617,14 +598,14 @@ $GLOBALS['Control_Monad_Cont_Trans_monadContT'] = function($dictMonad_0 = null) 
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   $bindContT1_4_4 = ["bind" => (function() {
-  $__fn = function($v_5 = null, $k_6 = null, $k__prime___7 = null) use (&$__fn) {
+  $__fn = function($v_5 = null, $k_6 = null, $k_prime_7 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($v_5)(function($a_8 = null) use ($k__prime___7, $k_6) {
+  $__res = ($v_5)(function($a_8 = null) use ($k_6, $k_prime_7) {
   $__num = \func_num_args();
-  $__res = (($k_6)($a_8))($k__prime___7);
+  $__res = (($k_6)($a_8))($k_prime_7);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -634,20 +615,20 @@ $GLOBALS['Control_Monad_Cont_Trans_monadContT'] = function($dictMonad_0 = null) 
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "Apply0" => function($dollar__unused_5 = null) use ($applyContT1_4_4) {
+})(), "Apply0" => function($_dollar__unused_5 = null) use ($applyContT1_4_4) {
   $__num = \func_num_args();
   $__res = $applyContT1_4_4;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["Applicative0" => function($dollar__unused_5 = null) use ($applicativeContT1_2_1) {
+  $__res = ["Applicative0" => function($_dollar__unused_5 = null) use ($applicativeContT1_2_1) {
   $__num = \func_num_args();
   $__res = $applicativeContT1_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bind1" => function($dollar__unused_5 = null) use ($bindContT1_4_4) {
+}, "Bind1" => function($_dollar__unused_5 = null) use ($bindContT1_4_4) {
   $__num = \func_num_args();
   $__res = $bindContT1_4_4;
   goto __end;;
@@ -662,9 +643,9 @@ $GLOBALS['Control_Monad_Cont_Trans_monadContT'] = function($dictMonad_0 = null) 
 // Control_Monad_Cont_Trans_monadAskContT
 $GLOBALS['Control_Monad_Cont_Trans_monadAskContT'] = function($dictMonadAsk_0 = null) {
   $__num = \func_num_args();
-  $Monad0_1_0 = (($dictMonadAsk_0)['Monad0'])($GLOBALS['Prim_undefined']);
+  $Monad0_1_0 = (($dictMonadAsk_0)['Monad0'])(null);
   $monadContT1_2_1 = ($GLOBALS['Control_Monad_Cont_Trans_monadContT'])($Monad0_1_0);
-  $__res = ["ask" => (((($Monad0_1_0)['Bind1'])($GLOBALS['Prim_undefined']))['bind'])(($dictMonadAsk_0)['ask']), "Monad0" => function($dollar__unused_3 = null) use ($monadContT1_2_1) {
+  $__res = ["ask" => ((($GLOBALS['Control_Monad_Cont_Trans_monadTransContT'])['lift'])($Monad0_1_0))(($dictMonadAsk_0)['ask']), "Monad0" => function($_dollar__unused_3 = null) use ($monadContT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadContT1_2_1;
   goto __end;;
@@ -679,7 +660,7 @@ $GLOBALS['Control_Monad_Cont_Trans_monadAskContT'] = function($dictMonadAsk_0 = 
 // Control_Monad_Cont_Trans_monadReaderContT
 $GLOBALS['Control_Monad_Cont_Trans_monadReaderContT'] = function($dictMonadReader_0 = null) {
   $__num = \func_num_args();
-  $MonadAsk0_1_0 = (($dictMonadReader_0)['MonadAsk0'])($GLOBALS['Prim_undefined']);
+  $MonadAsk0_1_0 = (($dictMonadReader_0)['MonadAsk0'])(null);
   $ask_2_1 = ($MonadAsk0_1_0)['ask'];
   $monadAskContT1_3_2 = ($GLOBALS['Control_Monad_Cont_Trans_monadAskContT'])($MonadAsk0_1_0);
   $__res = ["local" => (function() use ($MonadAsk0_1_0, $ask_2_1, $dictMonadReader_0) {
@@ -688,9 +669,9 @@ $GLOBALS['Control_Monad_Cont_Trans_monadReaderContT'] = function($dictMonadReade
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((((($MonadAsk0_1_0)['Monad0'])($GLOBALS['Prim_undefined']))['Bind1'])($GLOBALS['Prim_undefined']))['bind'])($ask_2_1))(function($r_7 = null) use ($dictMonadReader_0, $f_4, $k_6, $v_5) {
+  $__res = ((((((($MonadAsk0_1_0)['Monad0'])(null))['Bind1'])(null))['bind'])($ask_2_1))(function($r_7 = null) use ($dictMonadReader_0, $f_4, $k_6, $v_5) {
   $__num = \func_num_args();
-  $__res = ((($dictMonadReader_0)['local'])($f_4))(($v_5)((($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictMonadReader_0)['local'])(function($v_8 = null) use ($r_7) {
+  $__res = ((($dictMonadReader_0)['local'])($f_4))(($v_5)(((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($dictMonadReader_0)['local'])(function($v_8 = null) use ($r_7) {
   $__num = \func_num_args();
   $__res = $r_7;
   goto __end;;
@@ -706,7 +687,7 @@ $GLOBALS['Control_Monad_Cont_Trans_monadReaderContT'] = function($dictMonadReade
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), "MonadAsk0" => function($dollar__unused_4 = null) use ($monadAskContT1_3_2) {
+})(), "MonadAsk0" => function($_dollar__unused_4 = null) use ($monadAskContT1_3_2) {
   $__num = \func_num_args();
   $__res = $monadAskContT1_3_2;
   goto __end;;
@@ -746,7 +727,7 @@ $GLOBALS['Control_Monad_Cont_Trans_monadContContT'] = function($dictMonad_0 = nu
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Monad0" => function($dollar__unused_2 = null) use ($monadContT1_1_0) {
+})(), "Monad0" => function($_dollar__unused_2 = null) use ($monadContT1_1_0) {
   $__num = \func_num_args();
   $__res = $monadContT1_1_0;
   goto __end;;
@@ -761,9 +742,9 @@ $GLOBALS['Control_Monad_Cont_Trans_monadContContT'] = function($dictMonad_0 = nu
 // Control_Monad_Cont_Trans_monadEffectContT
 $GLOBALS['Control_Monad_Cont_Trans_monadEffectContT'] = function($dictMonadEffect_0 = null) {
   $__num = \func_num_args();
-  $Monad0_1_0 = (($dictMonadEffect_0)['Monad0'])($GLOBALS['Prim_undefined']);
+  $Monad0_1_0 = (($dictMonadEffect_0)['Monad0'])(null);
   $monadContT1_2_1 = ($GLOBALS['Control_Monad_Cont_Trans_monadContT'])($Monad0_1_0);
-  $__res = ["liftEffect" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(((($Monad0_1_0)['Bind1'])($GLOBALS['Prim_undefined']))['bind']))(($dictMonadEffect_0)['liftEffect']), "Monad0" => function($dollar__unused_3 = null) use ($monadContT1_2_1) {
+  $__res = ["liftEffect" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Control_Monad_Cont_Trans_monadTransContT'])['lift'])($Monad0_1_0)))(($dictMonadEffect_0)['liftEffect']), "Monad0" => function($_dollar__unused_3 = null) use ($monadContT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadContT1_2_1;
   goto __end;;
@@ -778,9 +759,9 @@ $GLOBALS['Control_Monad_Cont_Trans_monadEffectContT'] = function($dictMonadEffec
 // Control_Monad_Cont_Trans_monadStateContT
 $GLOBALS['Control_Monad_Cont_Trans_monadStateContT'] = function($dictMonadState_0 = null) {
   $__num = \func_num_args();
-  $Monad0_1_0 = (($dictMonadState_0)['Monad0'])($GLOBALS['Prim_undefined']);
+  $Monad0_1_0 = (($dictMonadState_0)['Monad0'])(null);
   $monadContT1_2_1 = ($GLOBALS['Control_Monad_Cont_Trans_monadContT'])($Monad0_1_0);
-  $__res = ["state" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(((($Monad0_1_0)['Bind1'])($GLOBALS['Prim_undefined']))['bind']))(($dictMonadState_0)['state']), "Monad0" => function($dollar__unused_3 = null) use ($monadContT1_2_1) {
+  $__res = ["state" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Control_Monad_Cont_Trans_monadTransContT'])['lift'])($Monad0_1_0)))(($dictMonadState_0)['state']), "Monad0" => function($_dollar__unused_3 = null) use ($monadContT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadContT1_2_1;
   goto __end;;
@@ -795,9 +776,9 @@ $GLOBALS['Control_Monad_Cont_Trans_monadStateContT'] = function($dictMonadState_
 // Control_Monad_Cont_Trans_monadSTContT
 $GLOBALS['Control_Monad_Cont_Trans_monadSTContT'] = function($dictMonadST_0 = null) {
   $__num = \func_num_args();
-  $Monad0_1_0 = (($dictMonadST_0)['Monad0'])($GLOBALS['Prim_undefined']);
+  $Monad0_1_0 = (($dictMonadST_0)['Monad0'])(null);
   $monadContT1_2_1 = ($GLOBALS['Control_Monad_Cont_Trans_monadContT'])($Monad0_1_0);
-  $__res = ["liftST" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(((($Monad0_1_0)['Bind1'])($GLOBALS['Prim_undefined']))['bind']))(($dictMonadST_0)['liftST']), "Monad0" => function($dollar__unused_3 = null) use ($monadContT1_2_1) {
+  $__res = ["liftST" => ((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])((($GLOBALS['Control_Monad_Cont_Trans_monadTransContT'])['lift'])($Monad0_1_0)))(($dictMonadST_0)['liftST']), "Monad0" => function($_dollar__unused_3 = null) use ($monadContT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadContT1_2_1;
   goto __end;;
@@ -810,20 +791,47 @@ $GLOBALS['Control_Monad_Cont_Trans_monadSTContT'] = function($dictMonadST_0 = nu
 };
 
 // Control_Monad_Cont_Trans_monoidContT
-$GLOBALS['Control_Monad_Cont_Trans_monoidContT'] = function($dictApplicative_0 = null) {
+$GLOBALS['Control_Monad_Cont_Trans_monoidContT'] = (function() {
+  $__fn = function($dictApplicative_0 = null, $dictMonoid_1 = null) use (&$__fn) {
   $__num = \func_num_args();
-  $semigroupContT1_1_0 = ($GLOBALS['Control_Monad_Cont_Trans_semigroupContT'])((($dictApplicative_0)['Apply0'])($GLOBALS['Prim_undefined']));
-  $__res = function($dictMonoid_2 = null) use ($semigroupContT1_1_0) {
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__local_var_2_0 = (($dictMonoid_1)['Semigroup0'])(null);
+  $semigroupContT2_3_1 = ["append" => (function() use ($__local_var_2_0) {
+  $__fn = function($a_3 = null, $b_4 = null, $k_5 = null) use ($__local_var_2_0, &$__fn) {
   $__num = \func_num_args();
-  $semigroupContT2_3_1 = ($semigroupContT1_1_0)((($dictMonoid_2)['Semigroup0'])($GLOBALS['Prim_undefined']));
-  $__local_var_4_2 = ($dictMonoid_2)['mempty'];
-  $__res = ["mempty" => function($k_5 = null) use ($__local_var_4_2) {
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__res = ($a_3)(function($a_6 = null) use ($__local_var_2_0, $b_4, $k_5) {
   $__num = \func_num_args();
-  $__res = ($k_5)($__local_var_4_2);
+  $__local_var_7_1 = (($__local_var_2_0)['append'])($a_6);
+  $__res = ($b_4)(function($a_8 = null) use ($__local_var_7_1, $k_5) {
+  $__num = \func_num_args();
+  $__res = ($k_5)(($__local_var_7_1)($a_8));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Semigroup0" => function($dollar__unused_4 = null) use ($semigroupContT2_3_1) {
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})()];
+  $__local_var_4_3 = ($dictMonoid_1)['mempty'];
+  $__res = ["mempty" => function($k_5 = null) use ($__local_var_4_3) {
+  $__num = \func_num_args();
+  $__res = ($k_5)($__local_var_4_3);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Semigroup0" => function($_dollar__unused_4 = null) use ($semigroupContT2_3_1) {
   $__num = \func_num_args();
   $__res = $semigroupContT2_3_1;
   goto __end;;
@@ -832,10 +840,8 @@ $GLOBALS['Control_Monad_Cont_Trans_monoidContT'] = function($dictApplicative_0 =
 }];
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
 
