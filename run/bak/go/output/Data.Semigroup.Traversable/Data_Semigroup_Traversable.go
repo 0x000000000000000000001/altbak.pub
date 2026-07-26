@@ -143,7 +143,7 @@ return x_0
 func Call_traverse1(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData2)(dict_0.UnsafePtr)).V1
+return gopurs_runtime.RecordGet(dict_0, "traverse1")
 }
 
 func Call_sequence1Default(dictTraversable1_0_loop gopurs_runtime.Value, dictApply_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -151,13 +151,13 @@ var dictTraversable1_0 gopurs_runtime.Value = dictTraversable1_0_loop
 _ = dictTraversable1_0
 var dictApply_1 gopurs_runtime.Value = dictApply_1_loop
 _ = dictApply_1
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData2)(dictTraversable1_0.UnsafePtr)).V1, dictApply_1, Get_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictTraversable1_0, "traverse1"), dictApply_1, Get_identity())
 }
 
 func Call_sequence1(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData2)(dict_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dict_0, "sequence1")
 }
 
 func Call_traverse1Default(dictTraversable1_0_loop gopurs_runtime.Value, dictApply_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -165,7 +165,7 @@ var dictTraversable1_0 gopurs_runtime.Value = dictTraversable1_0_loop
 _ = dictTraversable1_0
 var dictApply_1 gopurs_runtime.Value = dictApply_1_loop
 _ = dictApply_1
-sequence12_2_0 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictTraversable1_0.UnsafePtr)).V0, dictApply_1)
+sequence12_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable1_0, "sequence1"), dictApply_1)
 _ = sequence12_2_0
 return gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, ta_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(sequence12_2_0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable1_0, "Traversable1"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), f_3, ta_4))

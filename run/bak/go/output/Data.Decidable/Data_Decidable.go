@@ -150,13 +150,13 @@ return x_0
 func Call_lose(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dict_0, "lose")
 }
 
 func Call_lost(dictDecidable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictDecidable_0 gopurs_runtime.Value = dictDecidable_0_loop
 _ = dictDecidable_0
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictDecidable_0.UnsafePtr)).V0, Get_identity())
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDecidable_0, "lose"), Get_identity())
 }
 
 func Call_decidableOp(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {

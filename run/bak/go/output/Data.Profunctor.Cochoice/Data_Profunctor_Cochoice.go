@@ -30,13 +30,13 @@ return Call_unleft(dict_0_box)
 func Call_unright(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData2)(dict_0.UnsafePtr)).V1
+return gopurs_runtime.RecordGet(dict_0, "unright")
 }
 
 func Call_unleft(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData2)(dict_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dict_0, "unleft")
 }
 
 

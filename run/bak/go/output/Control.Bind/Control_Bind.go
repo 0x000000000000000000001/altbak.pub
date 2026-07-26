@@ -162,13 +162,13 @@ return x_0
 func Call_discard(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dict_0, "discard")
 }
 
 func Call_bind(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dict_0, "bind")
 }
 
 func Call_bindFlipped(dictBind_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -178,7 +178,7 @@ var b_1 gopurs_runtime.Value = b_1_loop
 _ = b_1
 var a_2 gopurs_runtime.Value = a_2_loop
 _ = a_2
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictBind_0.UnsafePtr)).V0, a_2, b_1)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBind_0, "bind"), a_2, b_1)
 }
 
 func Call_composeKleisliFlipped(dictBind_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, g_2_loop gopurs_runtime.Value, a_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -190,7 +190,7 @@ var g_2 gopurs_runtime.Value = g_2_loop
 _ = g_2
 var a_3 gopurs_runtime.Value = a_3_loop
 _ = a_3
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictBind_0.UnsafePtr)).V0, gopurs_runtime.Apply(g_2, a_3), f_1)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBind_0, "bind"), gopurs_runtime.Apply(g_2, a_3), f_1)
 }
 
 func Call_composeKleisli(dictBind_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, g_2_loop gopurs_runtime.Value, a_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -202,7 +202,7 @@ var g_2 gopurs_runtime.Value = g_2_loop
 _ = g_2
 var a_3 gopurs_runtime.Value = a_3_loop
 _ = a_3
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictBind_0.UnsafePtr)).V0, gopurs_runtime.Apply(f_1, a_3), g_2)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBind_0, "bind"), gopurs_runtime.Apply(f_1, a_3), g_2)
 }
 
 func Call_ifM(dictBind_0_loop gopurs_runtime.Value, cond_1_loop gopurs_runtime.Value, t_2_loop gopurs_runtime.Value, f_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -214,7 +214,7 @@ var t_2 gopurs_runtime.Value = t_2_loop
 _ = t_2
 var f_3 gopurs_runtime.Value = f_3_loop
 _ = f_3
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictBind_0.UnsafePtr)).V0, cond_1, gopurs_runtime.Func(func(cond_prime_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBind_0, "bind"), cond_1, gopurs_runtime.Func(func(cond_prime_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (cond_prime_4.IntVal) != (0) {
@@ -237,7 +237,7 @@ var dictBind_0 gopurs_runtime.Value = dictBind_0_loop
 _ = dictBind_0
 var m_1 gopurs_runtime.Value = m_1_loop
 _ = m_1
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictBind_0.UnsafePtr)).V0, m_1, Get_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBind_0, "bind"), m_1, Get_identity())
 }
 
 func Get_arrayBind() gopurs_runtime.Value {

@@ -427,14 +427,14 @@ func Call_nonEmptyNonEmpty(dictIsSymbol_0_loop gopurs_runtime.Value) gopurs_runt
 var dictIsSymbol_0 gopurs_runtime.Value = dictIsSymbol_0_loop
 _ = dictIsSymbol_0
 return gopurs_runtime.RecordDict1("nes", gopurs_runtime.Func(func(p_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictIsSymbol_0.UnsafePtr)).V0, p_1)
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), p_1)
 }))
 }
 
 func Call_nes(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dict_0, "nes")
 }
 
 func Call_makeNonEmptyBad(_dollar__unused_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -470,7 +470,7 @@ __local_var_2_0 := gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_stripPref
 _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
-if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 3589588149) {
+if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 930809136 && __local_var_2_0.UnsafePtr == nil) {
 __t1 = gopurs_runtime.Bool(false)
 goto end_branch_1
 } else {
@@ -478,7 +478,7 @@ goto end_branch_1
 }
 }
 {
-if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 930809136) {
+if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 930809136 && __local_var_2_0.UnsafePtr != nil) {
 __t1 = gopurs_runtime.Bool(true)
 goto end_branch_1
 } else {
@@ -525,7 +525,7 @@ _ = dictFoldable_0
 __local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Monoid.Get_monoidString(), "Semigroup0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 return gopurs_runtime.Func2(func(splice_2 gopurs_runtime.Value, xs_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(gopurs_runtime.Apply3(((*gopurs_runtime.RecordData3)(dictFoldable_0.UnsafePtr)).V1, gopurs_runtime.Func2(func(v_4 gopurs_runtime.Value, v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordGet(gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictFoldable_0, "foldl"), gopurs_runtime.Func2(func(v_4 gopurs_runtime.Value, v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.RecordGet(v_4, "init").IntVal) != (0) {
@@ -556,7 +556,7 @@ _ = v_0
 var __t0 gopurs_runtime.Value
 {
 if (v_0) == ("") {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
 goto end_branch_0
 } else {
 
@@ -593,7 +593,7 @@ _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
 if (__local_var_1_0.StrVal()) == ("") {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
 goto end_branch_1
 } else {
 
@@ -636,7 +636,7 @@ __local_var_2_0 := gopurs_runtime.Apply2(pkg_Data_String_CodeUnits.Get_stripSuff
 _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
-if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 3589588149) {
+if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 930809136 && __local_var_2_0.UnsafePtr == nil) {
 __t1 = gopurs_runtime.Bool(false)
 goto end_branch_1
 } else {
@@ -644,7 +644,7 @@ goto end_branch_1
 }
 }
 {
-if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 930809136) {
+if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 930809136 && __local_var_2_0.UnsafePtr != nil) {
 __t1 = gopurs_runtime.Bool(true)
 goto end_branch_1
 } else {

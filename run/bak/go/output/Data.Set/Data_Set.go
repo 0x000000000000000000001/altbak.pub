@@ -3,13 +3,13 @@ package Data_Set
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	pkg_Data_List "gopurs/output/Data.List"
 	pkg_Data_Unfoldable "gopurs/output/Data.Unfoldable"
 	pkg_Data_Map_Internal "gopurs/output/Data.Map.Internal"
 	pkg_Data_List_Types "gopurs/output/Data.List.Types"
 	pkg_Data_Eq "gopurs/output/Data.Eq"
 	pkg_Data_Function "gopurs/output/Data.Function"
-	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Show "gopurs/output/Data.Show"
@@ -22,7 +22,7 @@ var once_identity sync.Once
 func Get_identity() gopurs_runtime.Value {
 	once_identity.Do(func() {
 		cache_identity = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_identity(x_0_box)
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_identity((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(x_0_box.UnsafePtr)))}
 })
 	})
 	return cache_identity
@@ -305,7 +305,7 @@ var cache_empty gopurs_runtime.Value
 var once_empty sync.Once
 func Get_empty() gopurs_runtime.Value {
 	once_empty.Do(func() {
-		cache_empty = gopurs_runtime.Value{Type: 9, IntVal: 687041424, UnsafePtr: nil}
+		cache_empty = gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}
 	})
 	return cache_empty
 }
@@ -431,8 +431,8 @@ return Call_catMaybes(dictOrd_0_box)
 	return cache_catMaybes
 }
 
-func Call_identity(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var x_0 gopurs_runtime.Value = x_0_loop
+func Call_identity(x_0_loop *pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]) *pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value] {
+var x_0 *pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value] = x_0_loop
 _ = x_0
 return x_0
 }
@@ -446,7 +446,7 @@ return x_0
 func Call_union(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-compare_1_0 := ((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0
+compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0, "compare")
 _ = compare_1_0
 return gopurs_runtime.Func2(func(m1_2 gopurs_runtime.Value, m2_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp4(pkg_Data_Map_Internal.Get_unsafeUnionWith(), compare_1_0, pkg_Data_Function.Get_const_(), m1_2, m2_3)
@@ -462,7 +462,7 @@ return gopurs_runtime.Func2(func(a_2 gopurs_runtime.Value, v_3 gopurs_runtime.Va
 return gopurs_runtime.Apply3(alter_1_0, gopurs_runtime.Func(func(v2_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if (v2_4.Type == 9 && v2_4.IntVal == 3589588149) {
+if (v2_4.Type == 9 && v2_4.IntVal == 930809136 && v2_4.UnsafePtr == nil) {
 __t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{pkg_Data_Unit.Get_unit()})}
 goto end_branch_1
 } else {
@@ -470,8 +470,8 @@ goto end_branch_1
 }
 }
 {
-if (v2_4.Type == 9 && v2_4.IntVal == 930809136) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil}
+if (v2_4.Type == 9 && v2_4.IntVal == 930809136 && v2_4.UnsafePtr != nil) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
 goto end_branch_1
 } else {
 
@@ -505,21 +505,21 @@ return gopurs_runtime.Apply(__local_var_1_0, gopurs_runtime.Apply(pkg_Data_Map_I
 func Call_singleton(a_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var a_0 gopurs_runtime.Value = a_0_loop
 _ = a_0
-return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]{1, 1, a_0, pkg_Data_Unit.Get_unit(), gopurs_runtime.Value{Type: 9, IntVal: 687041424, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 687041424, UnsafePtr: nil}})}
+return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]{1, 1, a_0, pkg_Data_Unit.Get_unit(), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr)})}
 }
 
 func Call_showSet(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
 _ = dictShow_0
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str("(fromFoldable "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply2(pkg_Data_Show.Get_showArrayImpl(), ((*gopurs_runtime.RecordData1)(dictShow_0.UnsafePtr)).V0, gopurs_runtime.Apply(Get_toUnfoldable1(), s_1)), gopurs_runtime.Str(")")))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str("(fromFoldable "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply2(pkg_Data_Show.Get_showArrayImpl(), gopurs_runtime.RecordGet(dictShow_0, "show"), gopurs_runtime.Apply(Get_toUnfoldable1(), s_1)), gopurs_runtime.Str(")")))
 }))
 }
 
 func Call_semigroupSet(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-compare_1_0 := ((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0
+compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0, "compare")
 _ = compare_1_0
 return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(m1_2 gopurs_runtime.Value, m2_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp4(pkg_Data_Map_Internal.Get_unsafeUnionWith(), compare_1_0, pkg_Data_Function.Get_const_(), m1_2, m2_3)
@@ -542,7 +542,7 @@ var v_3 gopurs_runtime.Value = v_3_loop
 _ = v_3
 var __t1 gopurs_runtime.Value
 {
-if (v_3.Type == 9 && v_3.IntVal == 687041424) {
+if (v_3.Type == 9 && v_3.IntVal == 324739070 && v_3.UnsafePtr == nil) {
 __t1 = gopurs_runtime.Bool(false)
 goto end_branch_1
 } else {
@@ -550,13 +550,13 @@ goto end_branch_1
 }
 }
 {
-if (v_3.Type == 9 && v_3.IntVal == 324739070) {
-v1_4_2 := gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0, k_1, (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V2)
+if (v_3.Type == 9 && v_3.IntVal == 324739070 && v_3.UnsafePtr != nil) {
+v1_4_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), k_1, (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V2)
 _ = v1_4_2
 var __t3 gopurs_runtime.Value
 {
 if (v1_4_2.Type == 9 && v1_4_2.IntVal == 1527465420) {
-v_3_loop = (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V4
+v_3_loop = gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer((*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V4)}
 continue go__2_0
 __t3 = gopurs_runtime.Value{}
 goto end_branch_3
@@ -566,7 +566,7 @@ goto end_branch_3
 }
 {
 if (v1_4_2.Type == 9 && v1_4_2.IntVal == 380165415) {
-v_3_loop = (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V5
+v_3_loop = gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer((*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V5)}
 continue go__2_0
 __t3 = gopurs_runtime.Value{}
 goto end_branch_3
@@ -606,7 +606,7 @@ return go__2_0
 func Call_intersection(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-compare_1_0 := ((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0
+compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0, "compare")
 _ = compare_1_0
 return gopurs_runtime.Func2(func(m1_2 gopurs_runtime.Value, m2_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp4(pkg_Data_Map_Internal.Get_unsafeIntersectionWith(), compare_1_0, pkg_Data_Function.Get_const_(), m1_2, m2_3)
@@ -674,9 +674,9 @@ var dictFoldable_0 gopurs_runtime.Value = dictFoldable_0_loop
 _ = dictFoldable_0
 var dictOrd_1 gopurs_runtime.Value = dictOrd_1_loop
 _ = dictOrd_1
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData3)(dictFoldable_0.UnsafePtr)).V1, gopurs_runtime.Func2(func(m_2 gopurs_runtime.Value, a_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFoldable_0, "foldl"), gopurs_runtime.Func2(func(m_2 gopurs_runtime.Value, a_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply4(pkg_Data_Map_Internal.Get_insert(), dictOrd_1, a_3, pkg_Data_Unit.Get_unit(), m_2)
-}), gopurs_runtime.Value{Type: 9, IntVal: 687041424, UnsafePtr: nil})
+}), gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil})
 }
 
 func Call_map_(dictOrd_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -686,7 +686,7 @@ var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_foldableSet(), "foldl"), gopurs_runtime.Func2(func(m_2 gopurs_runtime.Value, a_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply4(pkg_Data_Map_Internal.Get_insert(), dictOrd_0, gopurs_runtime.Apply(f_1, a_3), pkg_Data_Unit.Get_unit(), m_2)
-}), gopurs_runtime.Value{Type: 9, IntVal: 687041424, UnsafePtr: nil})
+}), gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil})
 }
 
 func Call_mapMaybe(dictOrd_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -699,7 +699,7 @@ __local_var_4_0 := gopurs_runtime.Apply(f_1, a_2)
 _ = __local_var_4_0
 var __t1 gopurs_runtime.Value
 {
-if (__local_var_4_0.Type == 9 && __local_var_4_0.IntVal == 3589588149) {
+if (__local_var_4_0.Type == 9 && __local_var_4_0.IntVal == 930809136 && __local_var_4_0.UnsafePtr == nil) {
 __t1 = acc_3
 goto end_branch_1
 } else {
@@ -707,7 +707,7 @@ goto end_branch_1
 }
 }
 {
-if (__local_var_4_0.Type == 9 && __local_var_4_0.IntVal == 930809136) {
+if (__local_var_4_0.Type == 9 && __local_var_4_0.IntVal == 930809136 && __local_var_4_0.UnsafePtr != nil) {
 __t1 = gopurs_runtime.Apply4(pkg_Data_Map_Internal.Get_insert(), dictOrd_0, (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(__local_var_4_0.UnsafePtr).V0, pkg_Data_Unit.Get_unit(), acc_3)
 goto end_branch_1
 } else {
@@ -719,13 +719,13 @@ __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
 return __t1
-}), gopurs_runtime.Value{Type: 9, IntVal: 687041424, UnsafePtr: nil})
+}), gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil})
 }
 
 func Call_monoidSet(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-compare_1_1 := ((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0
+compare_1_1 := gopurs_runtime.RecordGet(dictOrd_0, "compare")
 _ = compare_1_1
 semigroupSet1_1_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(m1_2 gopurs_runtime.Value, m2_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp4(pkg_Data_Map_Internal.Get_unsafeUnionWith(), compare_1_1, pkg_Data_Function.Get_const_(), m1_2, m2_3)
@@ -733,7 +733,7 @@ return gopurs_runtime.UncurriedApp4(pkg_Data_Map_Internal.Get_unsafeUnionWith(),
 _ = semigroupSet1_1_0
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupSet1_1_0
-}), gopurs_runtime.Value{Type: 9, IntVal: 687041424, UnsafePtr: nil})
+}), gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil})
 }
 
 func Call_unions(dictFoldable_0_loop gopurs_runtime.Value, dictOrd_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -741,17 +741,17 @@ var dictFoldable_0 gopurs_runtime.Value = dictFoldable_0_loop
 _ = dictFoldable_0
 var dictOrd_1 gopurs_runtime.Value = dictOrd_1_loop
 _ = dictOrd_1
-compare_2_0 := ((*gopurs_runtime.RecordData1)(dictOrd_1.UnsafePtr)).V0
+compare_2_0 := gopurs_runtime.RecordGet(dictOrd_1, "compare")
 _ = compare_2_0
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData3)(dictFoldable_0.UnsafePtr)).V1, gopurs_runtime.Func2(func(m1_3 gopurs_runtime.Value, m2_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFoldable_0, "foldl"), gopurs_runtime.Func2(func(m1_3 gopurs_runtime.Value, m2_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp4(pkg_Data_Map_Internal.Get_unsafeUnionWith(), compare_2_0, pkg_Data_Function.Get_const_(), m1_3, m2_4)
-}), gopurs_runtime.Value{Type: 9, IntVal: 687041424, UnsafePtr: nil})
+}), gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil})
 }
 
 func Call_difference(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-compare_1_0 := ((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0
+compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0, "compare")
 _ = compare_1_0
 return gopurs_runtime.Func2(func(m1_2 gopurs_runtime.Value, m2_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp3(pkg_Data_Map_Internal.Get_unsafeDifference(), compare_1_0, m1_2, m2_3)
@@ -761,23 +761,23 @@ return gopurs_runtime.UncurriedApp3(pkg_Data_Map_Internal.Get_unsafeDifference()
 func Call_subset(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-compare_1_0 := ((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0
+compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0, "compare")
 _ = compare_1_0
 return gopurs_runtime.Func2(func(s1_2 gopurs_runtime.Value, s2_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t_tag_1 gopurs_runtime.Value = gopurs_runtime.UncurriedApp3(pkg_Data_Map_Internal.Get_unsafeDifference(), compare_1_0, s1_2, s2_3)
-return gopurs_runtime.Bool((__t_tag_1.Type == 9 && __t_tag_1.IntVal == 687041424))
+return gopurs_runtime.Bool((__t_tag_1.Type == 9 && __t_tag_1.IntVal == 324739070 && __t_tag_1.UnsafePtr == nil))
 })
 }
 
 func Call_properSubset(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-compare_1_0 := ((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0
+compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0, "compare")
 _ = compare_1_0
 return gopurs_runtime.Func2(func(s1_2 gopurs_runtime.Value, s2_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if (s1_2.Type == 9 && s1_2.IntVal == 687041424) {
+if (s1_2.Type == 9 && s1_2.IntVal == 324739070 && s1_2.UnsafePtr == nil) {
 __t1 = gopurs_runtime.Int(0)
 goto end_branch_1
 } else {
@@ -785,7 +785,7 @@ goto end_branch_1
 }
 }
 {
-if (s1_2.Type == 9 && s1_2.IntVal == 324739070) {
+if (s1_2.Type == 9 && s1_2.IntVal == 324739070 && s1_2.UnsafePtr != nil) {
 __t1 = gopurs_runtime.Int((*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(s1_2.UnsafePtr).V1)
 goto end_branch_1
 } else {
@@ -798,7 +798,7 @@ __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 end_branch_1:
 var __t2 gopurs_runtime.Value
 {
-if (s2_3.Type == 9 && s2_3.IntVal == 687041424) {
+if (s2_3.Type == 9 && s2_3.IntVal == 324739070 && s2_3.UnsafePtr == nil) {
 __t2 = gopurs_runtime.Int(0)
 goto end_branch_2
 } else {
@@ -806,7 +806,7 @@ goto end_branch_2
 }
 }
 {
-if (s2_3.Type == 9 && s2_3.IntVal == 324739070) {
+if (s2_3.Type == 9 && s2_3.IntVal == 324739070 && s2_3.UnsafePtr != nil) {
 __t2 = gopurs_runtime.Int((*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(s2_3.UnsafePtr).V1)
 goto end_branch_2
 } else {
@@ -818,7 +818,7 @@ __t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_2:
 var __t_tag_3 gopurs_runtime.Value = gopurs_runtime.UncurriedApp3(pkg_Data_Map_Internal.Get_unsafeDifference(), compare_1_0, s1_2, s2_3)
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Bool((__t1.IntVal) == (__t2.IntVal)), gopurs_runtime.Bool(false)), gopurs_runtime.Bool((__t_tag_3.Type == 9 && __t_tag_3.IntVal == 687041424)))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Bool((__t1.IntVal) == (__t2.IntVal)), gopurs_runtime.Bool(false)), gopurs_runtime.Bool((__t_tag_3.Type == 9 && __t_tag_3.IntVal == 324739070 && __t_tag_3.UnsafePtr == nil)))
 })
 }
 

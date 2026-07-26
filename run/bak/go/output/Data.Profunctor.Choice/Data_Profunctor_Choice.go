@@ -89,13 +89,13 @@ return __t0
 func Call_right(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData2)(dict_0.UnsafePtr)).V1
+return gopurs_runtime.RecordGet(dict_0, "right")
 }
 
 func Call_left(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData2)(dict_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dict_0, "left")
 }
 
 func Call_splitChoice(dictSemigroupoid_0_loop gopurs_runtime.Value, dictChoice_1_loop gopurs_runtime.Value, l_2_loop gopurs_runtime.Value, r_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -107,7 +107,7 @@ var l_2 gopurs_runtime.Value = l_2_loop
 _ = l_2
 var r_3 gopurs_runtime.Value = r_3_loop
 _ = r_3
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictSemigroupoid_0.UnsafePtr)).V0, gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictChoice_1.UnsafePtr)).V1, r_3), gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictChoice_1.UnsafePtr)).V0, l_2))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroupoid_0, "compose"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictChoice_1, "right"), r_3), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictChoice_1, "left"), l_2))
 }
 
 func Call_fanin(dictSemigroupoid_0_loop gopurs_runtime.Value, dictChoice_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -141,7 +141,7 @@ __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
 return __t1
-}), gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictSemigroupoid_0.UnsafePtr)).V0, gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictChoice_1.UnsafePtr)).V1, r_4), gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictChoice_1.UnsafePtr)).V0, l_3)))
+}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroupoid_0, "compose"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictChoice_1, "right"), r_4), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictChoice_1, "left"), l_3)))
 })
 }
 

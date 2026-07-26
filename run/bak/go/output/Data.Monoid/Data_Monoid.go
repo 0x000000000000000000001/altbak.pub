@@ -164,7 +164,7 @@ return Call_guard(dictMonoid_0_box)
 func Call_memptyRecord(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dict_0, "memptyRecord")
 }
 
 func Call_monoidRecord(_dollar__unused_0_loop gopurs_runtime.Value, dictMonoidRecord_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -176,19 +176,19 @@ semigroupRecord1_2_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Appl
 _ = semigroupRecord1_2_0
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupRecord1_2_0
-}), gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictMonoidRecord_1.UnsafePtr)).V0, gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}))
+}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoidRecord_1, "memptyRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}))
 }
 
 func Call_mempty(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dict_0, "mempty")
 }
 
 func Call_monoidFn(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
-mempty1_1_0 := ((*gopurs_runtime.RecordData1)(dictMonoid_0.UnsafePtr)).V0
+mempty1_1_0 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
 _ = mempty1_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
@@ -208,7 +208,7 @@ var dictIsSymbol_0 gopurs_runtime.Value = dictIsSymbol_0_loop
 _ = dictIsSymbol_0
 var dictMonoid_1 gopurs_runtime.Value = dictMonoid_1_loop
 _ = dictMonoid_1
-mempty1_2_0 := ((*gopurs_runtime.RecordData1)(dictMonoid_1.UnsafePtr)).V0
+mempty1_2_0 := gopurs_runtime.RecordGet(dictMonoid_1, "mempty")
 _ = mempty1_2_0
 Semigroup0_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_1, "Semigroup0"), gopurs_runtime.Value{})
 _ = Semigroup0_3_1
@@ -216,7 +216,7 @@ return gopurs_runtime.Func2(func(_dollar__unused_4 gopurs_runtime.Value, dictMon
 __local_var_6_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoidRecord_5, "SemigroupRecord0"), gopurs_runtime.Value{})
 _ = __local_var_6_2
 semigroupRecordCons1_7_3 := gopurs_runtime.RecordDict1("appendRecord", gopurs_runtime.Func3(func(v_7 gopurs_runtime.Value, ra_8 gopurs_runtime.Value, rb_9 gopurs_runtime.Value) gopurs_runtime.Value {
-key_10_4 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictIsSymbol_0.UnsafePtr)).V0, gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil})
+key_10_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil})
 _ = key_10_4
 get_11_5 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), key_10_4)
 _ = get_11_5
@@ -226,7 +226,7 @@ _ = semigroupRecordCons1_7_3
 return gopurs_runtime.RecordDict2("SemigroupRecord0", "memptyRecord", gopurs_runtime.Func(func(_dollar__unused_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupRecordCons1_7_3
 }), gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictIsSymbol_0.UnsafePtr)).V0, gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}), mempty1_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoidRecord_5, "memptyRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}))
+return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}), mempty1_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoidRecord_5, "memptyRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}))
 }))
 })
 }
@@ -234,7 +234,7 @@ return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), gopurs_runtime.A
 func Call_power(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
-mempty1_1_0 := ((*gopurs_runtime.RecordData1)(dictMonoid_0.UnsafePtr)).V0
+mempty1_1_0 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
 _ = mempty1_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
@@ -284,7 +284,7 @@ return go__4_2
 func Call_guard(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
-mempty1_1_0 := ((*gopurs_runtime.RecordData1)(dictMonoid_0.UnsafePtr)).V0
+mempty1_1_0 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
 _ = mempty1_1_0
 return gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value

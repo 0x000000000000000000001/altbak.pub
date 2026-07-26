@@ -63,31 +63,31 @@ return Call_chooseBool(dict_0_box)
 func Call_sized(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData5)(dict_0.UnsafePtr)).V4
+return gopurs_runtime.RecordGet(dict_0, "sized")
 }
 
 func Call_resize(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData5)(dict_0.UnsafePtr)).V3
+return gopurs_runtime.RecordGet(dict_0, "resize")
 }
 
 func Call_chooseInt(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData5)(dict_0.UnsafePtr)).V2
+return gopurs_runtime.RecordGet(dict_0, "chooseInt")
 }
 
 func Call_chooseFloat(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData5)(dict_0.UnsafePtr)).V1
+return gopurs_runtime.RecordGet(dict_0, "chooseFloat")
 }
 
 func Call_chooseBool(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData5)(dict_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dict_0, "chooseBool")
 }
 
 

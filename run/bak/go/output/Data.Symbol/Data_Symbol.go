@@ -42,7 +42,7 @@ return gopurs_runtime.Str(s_0)
 func Call_reflectSymbol(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dict_0, "reflectSymbol")
 }
 
 func Get_unsafeCoerce() gopurs_runtime.Value {

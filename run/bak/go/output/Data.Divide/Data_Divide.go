@@ -119,20 +119,20 @@ return pkg_Data_Op.Get_contravariantOp()
 }), gopurs_runtime.Func4(func(f_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value, a_4 gopurs_runtime.Value) gopurs_runtime.Value {
 v2_5_0 := gopurs_runtime.Apply(f_1, a_4)
 _ = v2_5_0
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictSemigroup_0.UnsafePtr)).V0, gopurs_runtime.Apply(v_2, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5_0.UnsafePtr).V0), gopurs_runtime.Apply(v1_3, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5_0.UnsafePtr).V1))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append"), gopurs_runtime.Apply(v_2, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5_0.UnsafePtr).V0), gopurs_runtime.Apply(v1_3, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5_0.UnsafePtr).V1))
 }))
 }
 
 func Call_divide(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dict_0, "divide")
 }
 
 func Call_divided(dictDivide_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictDivide_0 gopurs_runtime.Value = dictDivide_0_loop
 _ = dictDivide_0
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictDivide_0.UnsafePtr)).V0, Get_identity())
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDivide_0, "divide"), Get_identity())
 }
 
 

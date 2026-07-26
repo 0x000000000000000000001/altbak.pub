@@ -68,13 +68,13 @@ return Call_fanout(dictSemigroupoid_0_box, dictStrong_1_box)
 func Call_second(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData2)(dict_0.UnsafePtr)).V1
+return gopurs_runtime.RecordGet(dict_0, "second")
 }
 
 func Call_first(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData2)(dict_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dict_0, "first")
 }
 
 func Call_splitStrong(dictSemigroupoid_0_loop gopurs_runtime.Value, dictStrong_1_loop gopurs_runtime.Value, l_2_loop gopurs_runtime.Value, r_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -86,7 +86,7 @@ var l_2 gopurs_runtime.Value = l_2_loop
 _ = l_2
 var r_3 gopurs_runtime.Value = r_3_loop
 _ = r_3
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictSemigroupoid_0.UnsafePtr)).V0, gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictStrong_1.UnsafePtr)).V1, r_3), gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictStrong_1.UnsafePtr)).V0, l_2))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroupoid_0, "compose"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictStrong_1, "second"), r_3), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictStrong_1, "first"), l_2))
 }
 
 func Call_fanout(dictSemigroupoid_0_loop gopurs_runtime.Value, dictStrong_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -99,7 +99,7 @@ _ = lcmap_2_0
 return gopurs_runtime.Func2(func(l_3 gopurs_runtime.Value, r_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(lcmap_2_0, gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{a_5, a_5})}
-}), gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictSemigroupoid_0.UnsafePtr)).V0, gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictStrong_1.UnsafePtr)).V1, r_4), gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictStrong_1.UnsafePtr)).V0, l_3)))
+}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroupoid_0, "compose"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictStrong_1, "second"), r_4), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictStrong_1, "first"), l_3)))
 })
 }
 

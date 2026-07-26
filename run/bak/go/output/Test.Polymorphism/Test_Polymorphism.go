@@ -110,19 +110,19 @@ return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(g
 func Call_mempty_(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData2)(dict_0.UnsafePtr)).V1
+return gopurs_runtime.RecordGet(dict_0, "mempty_")
 }
 
 func Call_mappend_(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData2)(dict_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dict_0, "mappend_")
 }
 
 func Call_polyLoop(dictMonoidish_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonoidish_0 gopurs_runtime.Value = dictMonoidish_0_loop
 _ = dictMonoidish_0
-mempty_1_1_0 := ((*gopurs_runtime.RecordData2)(dictMonoidish_0.UnsafePtr)).V1
+mempty_1_1_0 := gopurs_runtime.RecordGet(dictMonoidish_0, "mempty_")
 _ = mempty_1_1_0
 return gopurs_runtime.Func2(func(n_init_2 gopurs_runtime.Value, acc_init_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__4_1 gopurs_runtime.Value
@@ -149,7 +149,7 @@ goto end_branch_2
 }
 {
 v_5_loop = gopurs_runtime.Int((v_5.IntVal) - (1))
-v1_6_loop = gopurs_runtime.Apply2(((*gopurs_runtime.RecordData2)(dictMonoidish_0.UnsafePtr)).V0, v1_6, mempty_1_1_0)
+v1_6_loop = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonoidish_0, "mappend_"), v1_6, mempty_1_1_0)
 continue go__4_1
 __t2 = gopurs_runtime.Value{}
 }

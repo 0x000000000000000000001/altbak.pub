@@ -93,7 +93,7 @@ return gopurs_runtime.Array([]gopurs_runtime.Value{x_0})
 func Call_pure(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dict_0, "pure")
 }
 
 func Call_unless(dictApplicative_0_loop gopurs_runtime.Value, v_1_loop bool, v1_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -114,7 +114,7 @@ goto end_branch_0
 }
 {
 if v_1 {
-__t0 = gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictApplicative_0.UnsafePtr)).V0, pkg_Data_Unit.Get_unit())
+__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), pkg_Data_Unit.Get_unit())
 goto end_branch_0
 } else {
 
@@ -144,7 +144,7 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictApplicative_0.UnsafePtr)).V0, pkg_Data_Unit.Get_unit())
+__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), pkg_Data_Unit.Get_unit())
 }
 end_branch_0:
 return __t0
@@ -157,7 +157,7 @@ var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 var a_2 gopurs_runtime.Value = a_2_loop
 _ = a_2
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "apply"), gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictApplicative_0.UnsafePtr)).V0, f_1), a_2)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "apply"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), f_1), a_2)
 }
 
 

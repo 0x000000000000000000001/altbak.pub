@@ -30,7 +30,7 @@ func Get_monadThrowMaybe() gopurs_runtime.Value {
 		cache_monadThrowMaybe = gopurs_runtime.RecordDict2("Monad0", "throwError", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Maybe.Get_monadMaybe()
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil}
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
 }))
 	})
 	return cache_monadThrowMaybe
@@ -67,7 +67,7 @@ return Get_monadThrowMaybe()
 }), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (v_0.Type == 9 && v_0.IntVal == 3589588149) {
+if (v_0.Type == 9 && v_0.IntVal == 930809136 && v_0.UnsafePtr == nil) {
 __t0 = gopurs_runtime.Apply(v1_1, pkg_Data_Unit.Get_unit())
 goto end_branch_0
 } else {
@@ -75,7 +75,7 @@ goto end_branch_0
 }
 }
 {
-if (v_0.Type == 9 && v_0.IntVal == 930809136) {
+if (v_0.Type == 9 && v_0.IntVal == 930809136 && v_0.UnsafePtr != nil) {
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{(*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v_0.UnsafePtr).V0})}
 goto end_branch_0
 } else {
@@ -208,7 +208,7 @@ return Call_withResource(dictMonadError_0_box)
 func Call_throwError(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dict_0, "throwError")
 }
 
 func Call_liftMaybe(dictMonadThrow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -217,12 +217,12 @@ _ = dictMonadThrow_0
 pure_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadThrow_0, "Monad0"), gopurs_runtime.Value{}), "Applicative0"), gopurs_runtime.Value{}), "pure")
 _ = pure_1_0
 return gopurs_runtime.Func(func(error_2 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_3_1 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictMonadThrow_0.UnsafePtr)).V0, error_2)
+__local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadThrow_0, "throwError"), error_2)
 _ = __local_var_3_1
 return gopurs_runtime.Func(func(v2_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value
 {
-if (v2_4.Type == 9 && v2_4.IntVal == 3589588149) {
+if (v2_4.Type == 9 && v2_4.IntVal == 930809136 && v2_4.UnsafePtr == nil) {
 __t2 = __local_var_3_1
 goto end_branch_2
 } else {
@@ -230,7 +230,7 @@ goto end_branch_2
 }
 }
 {
-if (v2_4.Type == 9 && v2_4.IntVal == 930809136) {
+if (v2_4.Type == 9 && v2_4.IntVal == 930809136 && v2_4.UnsafePtr != nil) {
 __t2 = gopurs_runtime.Apply(pure_1_0, (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v2_4.UnsafePtr).V0)
 goto end_branch_2
 } else {
@@ -255,7 +255,7 @@ return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value 
 var __t1 gopurs_runtime.Value
 {
 if (v2_2.Type == 9 && v2_2.IntVal == 3711209382) {
-__t1 = gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictMonadThrow_0.UnsafePtr)).V0, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0)
+__t1 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadThrow_0, "throwError"), (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0)
 goto end_branch_1
 } else {
 
@@ -280,7 +280,7 @@ return __t1
 func Call_catchError(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dict_0, "catchError")
 }
 
 func Call_catchJust(dictMonadError_0_loop gopurs_runtime.Value, p_1_loop gopurs_runtime.Value, act_2_loop gopurs_runtime.Value, handler_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -292,12 +292,12 @@ var act_2 gopurs_runtime.Value = act_2_loop
 _ = act_2
 var handler_3 gopurs_runtime.Value = handler_3_loop
 _ = handler_3
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictMonadError_0.UnsafePtr)).V0, act_2, gopurs_runtime.Func(func(e_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadError_0, "catchError"), act_2, gopurs_runtime.Func(func(e_4 gopurs_runtime.Value) gopurs_runtime.Value {
 v_5_0 := gopurs_runtime.Apply(p_1, e_4)
 _ = v_5_0
 var __t1 gopurs_runtime.Value
 {
-if (v_5_0.Type == 9 && v_5_0.IntVal == 3589588149) {
+if (v_5_0.Type == 9 && v_5_0.IntVal == 930809136 && v_5_0.UnsafePtr == nil) {
 __t1 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadError_0, "MonadThrow0"), gopurs_runtime.Value{}), "throwError"), e_4)
 goto end_branch_1
 } else {
@@ -305,7 +305,7 @@ goto end_branch_1
 }
 }
 {
-if (v_5_0.Type == 9 && v_5_0.IntVal == 930809136) {
+if (v_5_0.Type == 9 && v_5_0.IntVal == 930809136 && v_5_0.UnsafePtr != nil) {
 __t1 = gopurs_runtime.Apply(handler_3, (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v_5_0.UnsafePtr).V0)
 goto end_branch_1
 } else {
@@ -326,7 +326,7 @@ _ = dictMonadError_0
 Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadError_0, "MonadThrow0"), gopurs_runtime.Value{}), "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
 return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictMonadError_0.UnsafePtr)).V0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Either.Get_Right(), a_2), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadError_0, "catchError"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Either.Get_Right(), a_2), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{x_3})})
 }))
 })

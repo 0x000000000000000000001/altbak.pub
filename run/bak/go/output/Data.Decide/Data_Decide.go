@@ -295,13 +295,13 @@ return __t2
 func Call_choose(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dict_0, "choose")
 }
 
 func Call_chosen(dictDecide_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictDecide_0 gopurs_runtime.Value = dictDecide_0_loop
 _ = dictDecide_0
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictDecide_0.UnsafePtr)).V0, Get_identity())
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDecide_0, "choose"), Get_identity())
 }
 
 

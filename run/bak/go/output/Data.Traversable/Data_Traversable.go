@@ -92,15 +92,15 @@ return pkg_Data_Maybe.Get_functorMaybe()
 }), gopurs_runtime.Func2(func(dictApplicative_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (v_1.Type == 9 && v_1.IntVal == 3589588149) {
-__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil})
+if (v_1.Type == 9 && v_1.IntVal == 930809136 && v_1.UnsafePtr == nil) {
+__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil})
 goto end_branch_0
 } else {
 
 }
 }
 {
-if (v_1.Type == 9 && v_1.IntVal == 930809136) {
+if (v_1.Type == 9 && v_1.IntVal == 930809136 && v_1.UnsafePtr != nil) {
 __t0 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Maybe.Get_Just(), (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v_1.UnsafePtr).V0)
 goto end_branch_0
 } else {
@@ -115,15 +115,15 @@ return __t0
 }), gopurs_runtime.Func3(func(dictApplicative_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if (v1_2.Type == 9 && v1_2.IntVal == 3589588149) {
-__t1 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil})
+if (v1_2.Type == 9 && v1_2.IntVal == 930809136 && v1_2.UnsafePtr == nil) {
+__t1 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil})
 goto end_branch_1
 } else {
 
 }
 }
 {
-if (v1_2.Type == 9 && v1_2.IntVal == 930809136) {
+if (v1_2.Type == 9 && v1_2.IntVal == 930809136 && v1_2.UnsafePtr != nil) {
 __t1 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Apply(v_1, (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v1_2.UnsafePtr).V0))
 goto end_branch_1
 } else {
@@ -511,7 +511,7 @@ return x_0
 func Call_traverse(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData2)(dict_0.UnsafePtr)).V1
+return gopurs_runtime.RecordGet(dict_0, "traverse")
 }
 
 func Call_traversableCompose(dictTraversable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -558,7 +558,7 @@ return functorCompose1_5_3
 }), gopurs_runtime.Func(func(dictApplicative_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply2(Get_traversableCompose(), dictTraversable_0, dictTraversable1_3), "traverse"), dictApplicative_8, Get_identity())
 }), gopurs_runtime.Func(func(dictApplicative_8 gopurs_runtime.Value) gopurs_runtime.Value {
-traverse4_9_9 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictTraversable_0.UnsafePtr)).V1, dictApplicative_8)
+traverse4_9_9 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable_0, "traverse"), dictApplicative_8)
 _ = traverse4_9_9
 traverse5_10_10 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable1_3, "traverse"), dictApplicative_8)
 _ = traverse5_10_10
@@ -575,13 +575,13 @@ var dictTraversable_0 gopurs_runtime.Value = dictTraversable_0_loop
 _ = dictTraversable_0
 var dictApplicative_1 gopurs_runtime.Value = dictApplicative_1_loop
 _ = dictApplicative_1
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData2)(dictTraversable_0.UnsafePtr)).V1, dictApplicative_1, Get_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictTraversable_0, "traverse"), dictApplicative_1, Get_identity())
 }
 
 func Call_sequence(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData2)(dict_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dict_0, "sequence")
 }
 
 func Call_traversableApp(dictTraversable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -604,13 +604,13 @@ return foldableApp_3_2
 }), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return __local_var_1_0
 }), gopurs_runtime.Func(func(dictApplicative_4 gopurs_runtime.Value) gopurs_runtime.Value {
-sequence3_5_3 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictTraversable_0.UnsafePtr)).V0, dictApplicative_4)
+sequence3_5_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable_0, "sequence"), dictApplicative_4)
 _ = sequence3_5_3
 return gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_4, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Functor_App.Get_App(), gopurs_runtime.Apply(sequence3_5_3, v_6))
 })
 }), gopurs_runtime.Func(func(dictApplicative_4 gopurs_runtime.Value) gopurs_runtime.Value {
-traverse3_5_4 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictTraversable_0.UnsafePtr)).V1, dictApplicative_4)
+traverse3_5_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable_0, "traverse"), dictApplicative_4)
 _ = traverse3_5_4
 return gopurs_runtime.Func2(func(f_6 gopurs_runtime.Value, v_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_4, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Functor_App.Get_App(), gopurs_runtime.Apply2(traverse3_5_4, f_6, v_7))
@@ -641,7 +641,7 @@ __local_var_8_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_7_4
 return gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{x_8})}
 }))
 _ = __local_var_8_5
-__local_var_9_6 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictTraversable_0.UnsafePtr)).V0, dictApplicative_6)
+__local_var_9_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable_0, "sequence"), dictApplicative_6)
 _ = __local_var_9_6
 __local_var_10_7 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_7_4, "map"), gopurs_runtime.Func(func(x_10 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{x_10})}
@@ -676,7 +676,7 @@ return __t9
 }), gopurs_runtime.Func(func(dictApplicative_6 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_7_10 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_6, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_7_10
-traverse4_8_11 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictTraversable_0.UnsafePtr)).V1, dictApplicative_6)
+traverse4_8_11 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable_0, "traverse"), dictApplicative_6)
 _ = traverse4_8_11
 traverse5_9_12 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable1_3, "traverse"), dictApplicative_6)
 _ = traverse5_9_12
@@ -741,7 +741,7 @@ return functorProduct1_4_2
 }), gopurs_runtime.Func(func(dictApplicative_6 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_7_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_6, "Apply0"), gopurs_runtime.Value{})
 _ = __local_var_7_4
-sequence4_8_5 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictTraversable_0.UnsafePtr)).V0, dictApplicative_6)
+sequence4_8_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable_0, "sequence"), dictApplicative_6)
 _ = sequence4_8_5
 sequence5_9_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable1_3, "sequence"), dictApplicative_6)
 _ = sequence5_9_6
@@ -751,7 +751,7 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_7_4, "apply"),
 }), gopurs_runtime.Func(func(dictApplicative_6 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_7_7 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_6, "Apply0"), gopurs_runtime.Value{})
 _ = __local_var_7_7
-traverse4_8_8 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictTraversable_0.UnsafePtr)).V1, dictApplicative_6)
+traverse4_8_8 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable_0, "traverse"), dictApplicative_6)
 _ = traverse4_8_8
 traverse5_9_9 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable1_3, "traverse"), dictApplicative_6)
 _ = traverse5_9_9
@@ -767,7 +767,7 @@ var dictTraversable_0 gopurs_runtime.Value = dictTraversable_0_loop
 _ = dictTraversable_0
 var dictApplicative_1 gopurs_runtime.Value = dictApplicative_1_loop
 _ = dictApplicative_1
-sequence3_2_0 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictTraversable_0.UnsafePtr)).V0, dictApplicative_1)
+sequence3_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable_0, "sequence"), dictApplicative_1)
 _ = sequence3_2_0
 return gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, ta_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(sequence3_2_0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable_0, "Functor0"), gopurs_runtime.Value{}), "map"), f_3, ta_4))
@@ -777,7 +777,7 @@ return gopurs_runtime.Apply(sequence3_2_0, gopurs_runtime.Apply2(gopurs_runtime.
 func Call_mapAccumR(dictTraversable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictTraversable_0 gopurs_runtime.Value = dictTraversable_0_loop
 _ = dictTraversable_0
-traverse2_1_0 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictTraversable_0.UnsafePtr)).V1, pkg_Data_Traversable_Accum_Internal.Get_applicativeStateR())
+traverse2_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable_0, "traverse"), pkg_Data_Traversable_Accum_Internal.Get_applicativeStateR())
 _ = traverse2_1_0
 return gopurs_runtime.Func3(func(f_2 gopurs_runtime.Value, s0_3 gopurs_runtime.Value, xs_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply3(traverse2_1_0, gopurs_runtime.Func2(func(a_5 gopurs_runtime.Value, s_6 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -803,7 +803,7 @@ return gopurs_runtime.RecordDict2("accum", "value", b_prime_7_1, b_prime_7_1)
 func Call_mapAccumL(dictTraversable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictTraversable_0 gopurs_runtime.Value = dictTraversable_0_loop
 _ = dictTraversable_0
-traverse2_1_0 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictTraversable_0.UnsafePtr)).V1, pkg_Data_Traversable_Accum_Internal.Get_applicativeStateL())
+traverse2_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable_0, "traverse"), pkg_Data_Traversable_Accum_Internal.Get_applicativeStateL())
 _ = traverse2_1_0
 return gopurs_runtime.Func3(func(f_2 gopurs_runtime.Value, s0_3 gopurs_runtime.Value, xs_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply3(traverse2_1_0, gopurs_runtime.Func2(func(a_5 gopurs_runtime.Value, s_6 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -831,7 +831,7 @@ var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
 _ = dictApplicative_0
 var dictTraversable_1 gopurs_runtime.Value = dictTraversable_1_loop
 _ = dictTraversable_1
-traverse2_2_0 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictTraversable_1.UnsafePtr)).V1, dictApplicative_0)
+traverse2_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable_1, "traverse"), dictApplicative_0)
 _ = traverse2_2_0
 return gopurs_runtime.Func2(func(x_3 gopurs_runtime.Value, f_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(traverse2_2_0, f_4, x_3)

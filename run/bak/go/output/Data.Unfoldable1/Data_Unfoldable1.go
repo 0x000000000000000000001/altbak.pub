@@ -3,8 +3,8 @@ package Data_Unfoldable1
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
+	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	unsafe "unsafe"
 )
@@ -14,7 +14,7 @@ var once_fromJust sync.Once
 func Get_fromJust() gopurs_runtime.Value {
 	once_fromJust.Do(func() {
 		cache_fromJust = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_fromJust(v_0_box)
+return Call_fromJust((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v_0_box.UnsafePtr))
 })
 	})
 	return cache_fromJust
@@ -154,13 +154,13 @@ return Call_iterateN(dictUnfoldable1_0_box, n_1_box.IntVal, f_2_box, s_3_box)
 	return cache_iterateN
 }
 
-func Call_fromJust(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
+func Call_fromJust(v_0_loop *pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]) gopurs_runtime.Value {
+var v_0 *pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value] = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
-if (v_0.Type == 9 && v_0.IntVal == 930809136) {
-__t0 = (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v_0.UnsafePtr).V0
+if (gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(v_0)}.Type == 9 && gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(v_0)}.IntVal == 930809136 && gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr != nil) {
+__t0 = (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0
 goto end_branch_0
 } else {
 
@@ -176,7 +176,7 @@ return __t0
 func Call_unfoldr1(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dict_0, "unfoldr1")
 }
 
 func Call_replicate1(dictUnfoldable1_0_loop gopurs_runtime.Value, n_1_loop int64, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -186,11 +186,11 @@ var n_1 int64 = n_1_loop
 _ = n_1
 var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictUnfoldable1_0.UnsafePtr)).V0, gopurs_runtime.Func(func(i_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictUnfoldable1_0, "unfoldr1"), gopurs_runtime.Func(func(i_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Apply2(Get_lessThanOrEq(), i_3, gopurs_runtime.Int(0)).IntVal) != (0) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{v_2, gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil}})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{v_2, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}})}
 goto end_branch_0
 } else {
 
@@ -211,7 +211,7 @@ var dictUnfoldable1_1 gopurs_runtime.Value = dictUnfoldable1_1_loop
 _ = dictUnfoldable1_1
 var dictTraversable1_2 gopurs_runtime.Value = dictTraversable1_2_loop
 _ = dictTraversable1_2
-sequence1_3_0 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictTraversable1_2.UnsafePtr)).V0, dictApply_0)
+sequence1_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable1_2, "sequence1"), dictApply_0)
 _ = sequence1_3_0
 return gopurs_runtime.Func2(func(n_4 gopurs_runtime.Value, m_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(sequence1_3_0, Call_replicate1(dictUnfoldable1_1, n_4.IntVal, m_5))
@@ -246,13 +246,13 @@ __t1 = gopurs_runtime.Int(-1)
 end_branch_1:
 __local_var_3_0 := __t1
 _ = __local_var_3_0
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictUnfoldable1_0.UnsafePtr)).V0, gopurs_runtime.Func(func(i_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictUnfoldable1_0, "unfoldr1"), gopurs_runtime.Func(func(i_4 gopurs_runtime.Value) gopurs_runtime.Value {
 i_prime_5_2 := (i_4.IntVal) + (__local_var_3_0.IntVal)
 _ = i_prime_5_2
 var __t3 gopurs_runtime.Value
 {
 if (i_4.IntVal) == (end_2) {
-__t3 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil}
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
 goto end_branch_3
 } else {
 
@@ -275,7 +275,7 @@ var f_2 gopurs_runtime.Value = f_2_loop
 _ = f_2
 var s_3 gopurs_runtime.Value = s_3_loop
 _ = s_3
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictUnfoldable1_0.UnsafePtr)).V0, gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictUnfoldable1_0, "unfoldr1"), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Apply2(Get_greaterThan(), (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_4.UnsafePtr).V1, gopurs_runtime.Int(0)).IntVal) != (0) {
@@ -286,7 +286,7 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
 }
 end_branch_0:
 return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{(*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_4.UnsafePtr).V0, __t0})}

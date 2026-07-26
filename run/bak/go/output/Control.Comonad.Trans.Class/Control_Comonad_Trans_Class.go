@@ -31,7 +31,7 @@ return pkg_Control_Monad_Identity_Trans.Get_runIdentityT()
 func Call_lower(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dict_0, "lower")
 }
 
 

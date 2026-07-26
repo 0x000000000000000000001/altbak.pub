@@ -138,7 +138,7 @@ var cache_fromStringAs gopurs_runtime.Value
 var once_fromStringAs sync.Once
 func Get_fromStringAs() gopurs_runtime.Value {
 	once_fromStringAs.Do(func() {
-		cache_fromStringAs = gopurs_runtime.Apply2(Get_fromStringAsImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil})
+		cache_fromStringAs = gopurs_runtime.Apply2(Get_fromStringAsImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil})
 	})
 	return cache_fromStringAs
 }
@@ -156,7 +156,7 @@ var cache_fromNumber gopurs_runtime.Value
 var once_fromNumber sync.Once
 func Get_fromNumber() gopurs_runtime.Value {
 	once_fromNumber.Do(func() {
-		cache_fromNumber = gopurs_runtime.Apply2(Get_fromNumberImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil})
+		cache_fromNumber = gopurs_runtime.Apply2(Get_fromNumberImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil})
 	})
 	return cache_fromNumber
 }
@@ -490,7 +490,7 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
 }
 end_branch_0:
 return __t0
@@ -535,7 +535,7 @@ __local_var_1_0 := gopurs_runtime.Apply(Get_fromNumber(), gopurs_runtime.Float(x
 _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
-if (__local_var_1_0.Type == 9 && __local_var_1_0.IntVal == 3589588149) {
+if (__local_var_1_0.Type == 9 && __local_var_1_0.IntVal == 930809136 && __local_var_1_0.UnsafePtr == nil) {
 __t1 = gopurs_runtime.Int(0)
 goto end_branch_1
 } else {
@@ -543,7 +543,7 @@ goto end_branch_1
 }
 }
 {
-if (__local_var_1_0.Type == 9 && __local_var_1_0.IntVal == 930809136) {
+if (__local_var_1_0.Type == 9 && __local_var_1_0.IntVal == 930809136 && __local_var_1_0.UnsafePtr != nil) {
 __t1 = (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(__local_var_1_0.UnsafePtr).V0
 goto end_branch_1
 } else {

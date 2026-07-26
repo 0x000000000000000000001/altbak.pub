@@ -136,7 +136,7 @@ return x_0
 func Call_distribute(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData2)(dict_0.UnsafePtr)).V1
+return gopurs_runtime.RecordGet(dict_0, "distribute")
 }
 
 func Call_cotraverse(dictDistributive_0_loop gopurs_runtime.Value, dictFunctor_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -144,7 +144,7 @@ var dictDistributive_0 gopurs_runtime.Value = dictDistributive_0_loop
 _ = dictDistributive_0
 var dictFunctor_1 gopurs_runtime.Value = dictFunctor_1_loop
 _ = dictFunctor_1
-distribute2_2_0 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictDistributive_0.UnsafePtr)).V1, dictFunctor_1)
+distribute2_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDistributive_0, "distribute"), dictFunctor_1)
 _ = distribute2_2_0
 return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDistributive_0, "Functor0"), gopurs_runtime.Value{}), "map"), f_3)
@@ -160,10 +160,10 @@ var dictDistributive_0 gopurs_runtime.Value = dictDistributive_0_loop
 _ = dictDistributive_0
 var dictFunctor_1 gopurs_runtime.Value = dictFunctor_1_loop
 _ = dictFunctor_1
-distribute2_2_0 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictDistributive_0.UnsafePtr)).V1, dictFunctor_1)
+distribute2_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDistributive_0, "distribute"), dictFunctor_1)
 _ = distribute2_2_0
 return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_4_1 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictFunctor_1.UnsafePtr)).V0, f_3)
+__local_var_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_1, "map"), f_3)
 _ = __local_var_4_1
 return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(distribute2_2_0, gopurs_runtime.Apply(__local_var_4_1, x_5))
@@ -177,7 +177,7 @@ for {
 if false { continue distributiveTuple }
 var dictTypeEquals_0 gopurs_runtime.Value = dictTypeEquals_0_loop
 _ = dictTypeEquals_0
-from_1_0 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictTypeEquals_0.UnsafePtr)).V0, gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
+from_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTypeEquals_0, "proof"), gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return a_1
 }))
 _ = from_1_0
@@ -208,7 +208,7 @@ return gopurs_runtime.Apply(__local_var_3_3, gopurs_runtime.Apply(__local_var_4_
 func Call_collect(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData2)(dict_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dict_0, "collect")
 }
 
 func Call_distributeDefault(dictDistributive_0_loop gopurs_runtime.Value, dictFunctor_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -216,7 +216,7 @@ var dictDistributive_0 gopurs_runtime.Value = dictDistributive_0_loop
 _ = dictDistributive_0
 var dictFunctor_1 gopurs_runtime.Value = dictFunctor_1_loop
 _ = dictFunctor_1
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData2)(dictDistributive_0.UnsafePtr)).V0, dictFunctor_1, Get_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictDistributive_0, "collect"), dictFunctor_1, Get_identity())
 }
 
 

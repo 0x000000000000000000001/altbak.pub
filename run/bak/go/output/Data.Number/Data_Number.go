@@ -101,7 +101,7 @@ func Get_e() gopurs_runtime.Value {
 func Call_fromString(str_0_loop string) gopurs_runtime.Value {
 var str_0 string = str_0_loop
 _ = str_0
-return gopurs_runtime.UncurriedApp4(Get_fromStringImpl(), gopurs_runtime.Str(str_0), Get_isFinite(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil})
+return gopurs_runtime.UncurriedApp4(Get_fromStringImpl(), gopurs_runtime.Str(str_0), Get_isFinite(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil})
 }
 
 func Get_abs() gopurs_runtime.Value {

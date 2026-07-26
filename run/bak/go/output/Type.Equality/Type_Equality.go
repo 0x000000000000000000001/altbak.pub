@@ -54,13 +54,13 @@ return Call_from(dictTypeEquals_0_box)
 func Call_proof(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dict_0, "proof")
 }
 
 func Call_to(dictTypeEquals_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictTypeEquals_0 gopurs_runtime.Value = dictTypeEquals_0_loop
 _ = dictTypeEquals_0
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictTypeEquals_0.UnsafePtr)).V0, gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTypeEquals_0, "proof"), gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return a_1
 }))
 }
@@ -68,7 +68,7 @@ return a_1
 func Call_from(dictTypeEquals_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictTypeEquals_0 gopurs_runtime.Value = dictTypeEquals_0_loop
 _ = dictTypeEquals_0
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictTypeEquals_0.UnsafePtr)).V0, gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTypeEquals_0, "proof"), gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return a_1
 }))
 }

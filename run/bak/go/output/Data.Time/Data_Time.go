@@ -385,7 +385,7 @@ __local_var_4_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe
 _ = __local_var_4_3
 var __t4 gopurs_runtime.Value
 {
-if (__local_var_4_3.Type == 9 && __local_var_4_3.IntVal == 930809136) {
+if (__local_var_4_3.Type == 9 && __local_var_4_3.IntVal == 930809136 && __local_var_4_3.UnsafePtr != nil) {
 __t4 = (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(__local_var_4_3.UnsafePtr).V0
 goto end_branch_4
 } else {
@@ -418,7 +418,7 @@ var t1_1 gopurs_runtime.Value = t1_1_loop
 _ = t1_1
 var t2_2 gopurs_runtime.Value = t2_2_loop
 _ = t2_2
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictDuration_0.UnsafePtr)).V1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupMilliseconds(), "append"), gopurs_runtime.Apply(Get_timeToMillis(), t1_1), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationMilliseconds(), "toDuration"), gopurs_runtime.Apply(pkg_Data_Time_Duration.Get_negate(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationMilliseconds(), "fromDuration"), gopurs_runtime.Apply(Get_timeToMillis(), t2_2))))))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "toDuration"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupMilliseconds(), "append"), gopurs_runtime.Apply(Get_timeToMillis(), t1_1), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationMilliseconds(), "toDuration"), gopurs_runtime.Apply(pkg_Data_Time_Duration.Get_negate(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationMilliseconds(), "fromDuration"), gopurs_runtime.Apply(Get_timeToMillis(), t2_2))))))
 }
 
 func Call_adjust(dictDuration_0_loop gopurs_runtime.Value, d_1_loop gopurs_runtime.Value, t_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -428,7 +428,7 @@ var d_1 gopurs_runtime.Value = d_1_loop
 _ = d_1
 var t_2 gopurs_runtime.Value = t_2_loop
 _ = t_2
-d_prime_3_0 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictDuration_0.UnsafePtr)).V0, d_1)
+d_prime_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "fromDuration"), d_1)
 _ = d_prime_3_0
 wholeDays_4_1 := gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingNumber(), "div"), d_prime_3_0, gopurs_runtime.Float(86400000.0)))
 _ = wholeDays_4_1

@@ -127,13 +127,13 @@ return x_0
 func Call_bimap(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dict_0, "bimap")
 }
 
 func Call_bivoid(dictBifunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictBifunctor_0 gopurs_runtime.Value = dictBifunctor_0_loop
 _ = dictBifunctor_0
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictBifunctor_0.UnsafePtr)).V0, gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBifunctor_0, "bimap"), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Unit.Get_unit()
 }), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Unit.Get_unit()
@@ -145,13 +145,13 @@ var dictBifunctor_0 gopurs_runtime.Value = dictBifunctor_0_loop
 _ = dictBifunctor_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictBifunctor_0.UnsafePtr)).V0, f_1, Get_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBifunctor_0, "bimap"), f_1, Get_identity())
 }
 
 func Call_rmap(dictBifunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictBifunctor_0 gopurs_runtime.Value = dictBifunctor_0_loop
 _ = dictBifunctor_0
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictBifunctor_0.UnsafePtr)).V0, Get_identity())
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBifunctor_0, "bimap"), Get_identity())
 }
 
 

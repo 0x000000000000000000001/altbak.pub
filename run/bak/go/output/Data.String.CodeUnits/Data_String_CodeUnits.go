@@ -24,7 +24,7 @@ var cache_toChar gopurs_runtime.Value
 var once_toChar sync.Once
 func Get_toChar() gopurs_runtime.Value {
 	once_toChar.Do(func() {
-		cache_toChar = gopurs_runtime.Apply2(Get__toChar(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil})
+		cache_toChar = gopurs_runtime.Apply2(Get__toChar(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil})
 	})
 	return cache_toChar
 }
@@ -88,7 +88,7 @@ var cache_lastIndexOf_prime gopurs_runtime.Value
 var once_lastIndexOf_prime sync.Once
 func Get_lastIndexOf_prime() gopurs_runtime.Value {
 	once_lastIndexOf_prime.Do(func() {
-		cache_lastIndexOf_prime = gopurs_runtime.Apply2(Get__lastIndexOfStartingAt(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil})
+		cache_lastIndexOf_prime = gopurs_runtime.Apply2(Get__lastIndexOfStartingAt(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil})
 	})
 	return cache_lastIndexOf_prime
 }
@@ -97,7 +97,7 @@ var cache_lastIndexOf gopurs_runtime.Value
 var once_lastIndexOf sync.Once
 func Get_lastIndexOf() gopurs_runtime.Value {
 	once_lastIndexOf.Do(func() {
-		cache_lastIndexOf = gopurs_runtime.Apply2(Get__lastIndexOf(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil})
+		cache_lastIndexOf = gopurs_runtime.Apply2(Get__lastIndexOf(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil})
 	})
 	return cache_lastIndexOf
 }
@@ -106,7 +106,7 @@ var cache_indexOf_prime gopurs_runtime.Value
 var once_indexOf_prime sync.Once
 func Get_indexOf_prime() gopurs_runtime.Value {
 	once_indexOf_prime.Do(func() {
-		cache_indexOf_prime = gopurs_runtime.Apply2(Get__indexOfStartingAt(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil})
+		cache_indexOf_prime = gopurs_runtime.Apply2(Get__indexOfStartingAt(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil})
 	})
 	return cache_indexOf_prime
 }
@@ -115,7 +115,7 @@ var cache_indexOf gopurs_runtime.Value
 var once_indexOf sync.Once
 func Get_indexOf() gopurs_runtime.Value {
 	once_indexOf.Do(func() {
-		cache_indexOf = gopurs_runtime.Apply2(Get__indexOf(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil})
+		cache_indexOf = gopurs_runtime.Apply2(Get__indexOf(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil})
 	})
 	return cache_indexOf
 }
@@ -168,7 +168,7 @@ var cache_charAt gopurs_runtime.Value
 var once_charAt sync.Once
 func Get_charAt() gopurs_runtime.Value {
 	once_charAt.Do(func() {
-		cache_charAt = gopurs_runtime.Apply2(Get__charAt(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil})
+		cache_charAt = gopurs_runtime.Apply2(Get__charAt(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil})
 	})
 	return cache_charAt
 }
@@ -179,7 +179,7 @@ _ = v_0
 var __t0 gopurs_runtime.Value
 {
 if (v_0) == ("") {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
 goto end_branch_0
 } else {
 
@@ -225,7 +225,7 @@ goto end_branch_1
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
 }
 end_branch_1:
 return __t1
@@ -248,7 +248,7 @@ goto end_branch_1
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
 }
 end_branch_1:
 return __t1
@@ -263,7 +263,7 @@ __local_var_2_0 := Call_stripPrefix(pat_0, x_1)
 _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
-if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 3589588149) {
+if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 930809136 && __local_var_2_0.UnsafePtr == nil) {
 __t1 = gopurs_runtime.Bool(false)
 goto end_branch_1
 } else {
@@ -271,7 +271,7 @@ goto end_branch_1
 }
 }
 {
-if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 930809136) {
+if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 930809136 && __local_var_2_0.UnsafePtr != nil) {
 __t1 = gopurs_runtime.Bool(true)
 goto end_branch_1
 } else {
@@ -294,7 +294,7 @@ __local_var_2_0 := Call_stripSuffix(pat_0, x_1)
 _ = __local_var_2_0
 var __t1 gopurs_runtime.Value
 {
-if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 3589588149) {
+if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 930809136 && __local_var_2_0.UnsafePtr == nil) {
 __t1 = gopurs_runtime.Bool(false)
 goto end_branch_1
 } else {
@@ -302,7 +302,7 @@ goto end_branch_1
 }
 }
 {
-if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 930809136) {
+if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 930809136 && __local_var_2_0.UnsafePtr != nil) {
 __t1 = gopurs_runtime.Bool(true)
 goto end_branch_1
 } else {
@@ -342,7 +342,7 @@ __local_var_3_1 := gopurs_runtime.Apply(__local_var_1_0, x_2)
 _ = __local_var_3_1
 var __t2 gopurs_runtime.Value
 {
-if (__local_var_3_1.Type == 9 && __local_var_3_1.IntVal == 3589588149) {
+if (__local_var_3_1.Type == 9 && __local_var_3_1.IntVal == 930809136 && __local_var_3_1.UnsafePtr == nil) {
 __t2 = gopurs_runtime.Bool(false)
 goto end_branch_2
 } else {
@@ -350,7 +350,7 @@ goto end_branch_2
 }
 }
 {
-if (__local_var_3_1.Type == 9 && __local_var_3_1.IntVal == 930809136) {
+if (__local_var_3_1.Type == 9 && __local_var_3_1.IntVal == 930809136 && __local_var_3_1.UnsafePtr != nil) {
 __t2 = gopurs_runtime.Bool(true)
 goto end_branch_2
 } else {

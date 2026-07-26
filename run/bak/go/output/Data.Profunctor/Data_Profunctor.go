@@ -103,7 +103,7 @@ return x_0
 func Call_dimap(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dict_0, "dimap")
 }
 
 func Call_lcmap(dictProfunctor_0_loop gopurs_runtime.Value, a2b_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -111,7 +111,7 @@ var dictProfunctor_0 gopurs_runtime.Value = dictProfunctor_0_loop
 _ = dictProfunctor_0
 var a2b_1 gopurs_runtime.Value = a2b_1_loop
 _ = a2b_1
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictProfunctor_0.UnsafePtr)).V0, a2b_1, Get_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictProfunctor_0, "dimap"), a2b_1, Get_identity())
 }
 
 func Call_rmap(dictProfunctor_0_loop gopurs_runtime.Value, b2c_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -119,7 +119,7 @@ var dictProfunctor_0 gopurs_runtime.Value = dictProfunctor_0_loop
 _ = dictProfunctor_0
 var b2c_1 gopurs_runtime.Value = b2c_1_loop
 _ = b2c_1
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictProfunctor_0.UnsafePtr)).V0, Get_identity(), b2c_1)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictProfunctor_0, "dimap"), Get_identity(), b2c_1)
 }
 
 func Call_unwrapIso(dictProfunctor_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -127,7 +127,7 @@ var dictProfunctor_0 gopurs_runtime.Value = dictProfunctor_0_loop
 _ = dictProfunctor_0
 var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
 _ = _dollar__unused_1
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictProfunctor_0.UnsafePtr)).V0, pkg_Unsafe_Coerce.Get_unsafeCoerce(), pkg_Unsafe_Coerce.Get_unsafeCoerce())
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictProfunctor_0, "dimap"), pkg_Unsafe_Coerce.Get_unsafeCoerce(), pkg_Unsafe_Coerce.Get_unsafeCoerce())
 }
 
 func Call_wrapIso(dictProfunctor_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -137,13 +137,13 @@ var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
 _ = _dollar__unused_1
 var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictProfunctor_0.UnsafePtr)).V0, pkg_Unsafe_Coerce.Get_unsafeCoerce(), pkg_Unsafe_Coerce.Get_unsafeCoerce())
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictProfunctor_0, "dimap"), pkg_Unsafe_Coerce.Get_unsafeCoerce(), pkg_Unsafe_Coerce.Get_unsafeCoerce())
 }
 
 func Call_arr(dictCategory_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictCategory_0 gopurs_runtime.Value = dictCategory_0_loop
 _ = dictCategory_0
-identity1_1_0 := ((*gopurs_runtime.RecordData1)(dictCategory_0.UnsafePtr)).V0
+identity1_1_0 := gopurs_runtime.RecordGet(dictCategory_0, "identity")
 _ = identity1_1_0
 return gopurs_runtime.Func2(func(dictProfunctor_2 gopurs_runtime.Value, f_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictProfunctor_2, "dimap"), Get_identity(), f_3, identity1_1_0)

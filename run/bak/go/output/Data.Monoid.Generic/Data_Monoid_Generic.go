@@ -74,25 +74,25 @@ return Call_genericMempty(dictGeneric_0_box, dictGenericMonoid_1_box)
 func Call_genericMonoidArgument(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
-return gopurs_runtime.RecordDict1("genericMempty'", ((*gopurs_runtime.RecordData1)(dictMonoid_0.UnsafePtr)).V0)
+return gopurs_runtime.RecordDict1("genericMempty'", gopurs_runtime.RecordGet(dictMonoid_0, "mempty"))
 }
 
 func Call_genericMempty_prime(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dict_0, "genericMempty'")
 }
 
 func Call_genericMonoidConstructor(dictGenericMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictGenericMonoid_0 gopurs_runtime.Value = dictGenericMonoid_0_loop
 _ = dictGenericMonoid_0
-return gopurs_runtime.RecordDict1("genericMempty'", ((*gopurs_runtime.RecordData1)(dictGenericMonoid_0.UnsafePtr)).V0)
+return gopurs_runtime.RecordDict1("genericMempty'", gopurs_runtime.RecordGet(dictGenericMonoid_0, "genericMempty'"))
 }
 
 func Call_genericMonoidProduct(dictGenericMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictGenericMonoid_0 gopurs_runtime.Value = dictGenericMonoid_0_loop
 _ = dictGenericMonoid_0
-genericMempty_prime1_1_0 := ((*gopurs_runtime.RecordData1)(dictGenericMonoid_0.UnsafePtr)).V0
+genericMempty_prime1_1_0 := gopurs_runtime.RecordGet(dictGenericMonoid_0, "genericMempty'")
 _ = genericMempty_prime1_1_0
 return gopurs_runtime.Func(func(dictGenericMonoid1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("genericMempty'", gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]{genericMempty_prime1_1_0, gopurs_runtime.RecordGet(dictGenericMonoid1_2, "genericMempty'")})})
@@ -104,7 +104,7 @@ var dictGeneric_0 gopurs_runtime.Value = dictGeneric_0_loop
 _ = dictGeneric_0
 var dictGenericMonoid_1 gopurs_runtime.Value = dictGenericMonoid_1_loop
 _ = dictGenericMonoid_1
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictGeneric_0.UnsafePtr)).V1, ((*gopurs_runtime.RecordData1)(dictGenericMonoid_1.UnsafePtr)).V0)
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "to"), gopurs_runtime.RecordGet(dictGenericMonoid_1, "genericMempty'"))
 }
 
 

@@ -72,7 +72,7 @@ var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
 divideOp_1_0 := gopurs_runtime.Apply(pkg_Data_Divide.Get_divideOp(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
 _ = divideOp_1_0
-__local_var_2_1 := ((*gopurs_runtime.RecordData1)(dictMonoid_0.UnsafePtr)).V0
+__local_var_2_1 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
 _ = __local_var_2_1
 return gopurs_runtime.RecordDict2("Divide0", "conquer", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return divideOp_1_0
@@ -84,7 +84,7 @@ return __local_var_2_1
 func Call_conquer(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dict_0, "conquer")
 }
 
 

@@ -22,7 +22,7 @@ var cache_search gopurs_runtime.Value
 var once_search sync.Once
 func Get_search() gopurs_runtime.Value {
 	once_search.Do(func() {
-		cache_search = gopurs_runtime.Apply2(Get__search(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil})
+		cache_search = gopurs_runtime.Apply2(Get__search(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil})
 	})
 	return cache_search
 }
@@ -31,7 +31,7 @@ var cache_replace_prime gopurs_runtime.Value
 var once_replace_prime sync.Once
 func Get_replace_prime() gopurs_runtime.Value {
 	once_replace_prime.Do(func() {
-		cache_replace_prime = gopurs_runtime.Apply2(Get__replaceBy(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil})
+		cache_replace_prime = gopurs_runtime.Apply2(Get__replaceBy(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil})
 	})
 	return cache_replace_prime
 }
@@ -73,7 +73,7 @@ var cache_match gopurs_runtime.Value
 var once_match sync.Once
 func Get_match() gopurs_runtime.Value {
 	once_match.Do(func() {
-		cache_match = gopurs_runtime.Apply2(Get__match(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil})
+		cache_match = gopurs_runtime.Apply2(Get__match(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil})
 	})
 	return cache_match
 }

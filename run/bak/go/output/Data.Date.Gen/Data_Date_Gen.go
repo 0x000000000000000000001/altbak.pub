@@ -44,14 +44,14 @@ __t2 = gopurs_runtime.Int(364)
 end_branch_2:
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Bind1_2_1, "bind"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Bind1_2_1, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(pkg_Data_Int.Get_toNumber(), x_4)
-}), gopurs_runtime.Apply2(((*gopurs_runtime.RecordData5)(dictMonadGen_0.UnsafePtr)).V2, gopurs_runtime.Int(0), __t2)), gopurs_runtime.Func(func(days_4 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0, "chooseInt"), gopurs_runtime.Int(0), __t2)), gopurs_runtime.Func(func(days_4 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_5_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_bindMaybe(), "bind"), gopurs_runtime.Apply3(pkg_Data_Date.Get_exactDate(), year_3, gopurs_runtime.RecordGet(pkg_Data_Date_Component.Get_boundedMonth(), "bottom"), gopurs_runtime.RecordGet(pkg_Data_Date_Component.Get_boundedDay(), "bottom")), gopurs_runtime.Func(func(janFirst_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(pkg_Data_Date.Get_adjust(), days_4, janFirst_5)
 }))
 _ = __local_var_5_3
 var __t4 gopurs_runtime.Value
 {
-if (__local_var_5_3.Type == 9 && __local_var_5_3.IntVal == 930809136) {
+if (__local_var_5_3.Type == 9 && __local_var_5_3.IntVal == 930809136 && __local_var_5_3.UnsafePtr != nil) {
 __t4 = (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(__local_var_5_3.UnsafePtr).V0
 goto end_branch_4
 } else {

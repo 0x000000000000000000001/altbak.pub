@@ -212,7 +212,7 @@ var dictShow_1 gopurs_runtime.Value = dictShow_1_loop
 _ = dictShow_1
 var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictMonadEffect_0.UnsafePtr)).V0, gopurs_runtime.Apply(pkg_Effect_Console.Get_warn(), gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictShow_1.UnsafePtr)).V0, x_2)))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_warn(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_1, "show"), x_2)))
 }
 
 func Call_warn(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) gopurs_runtime.Value {
@@ -220,7 +220,7 @@ var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
 var x_1 string = x_1_loop
 _ = x_1
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictMonadEffect_0.UnsafePtr)).V0, gopurs_runtime.Apply(pkg_Effect_Console.Get_warn(), gopurs_runtime.Str(x_1)))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_warn(), gopurs_runtime.Str(x_1)))
 }
 
 func Call_timeLog(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) gopurs_runtime.Value {
@@ -228,7 +228,7 @@ var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
 var x_1 string = x_1_loop
 _ = x_1
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictMonadEffect_0.UnsafePtr)).V0, gopurs_runtime.Apply(pkg_Effect_Console.Get_timeLog(), gopurs_runtime.Str(x_1)))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_timeLog(), gopurs_runtime.Str(x_1)))
 }
 
 func Call_timeEnd(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) gopurs_runtime.Value {
@@ -236,7 +236,7 @@ var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
 var x_1 string = x_1_loop
 _ = x_1
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictMonadEffect_0.UnsafePtr)).V0, gopurs_runtime.Apply(pkg_Effect_Console.Get_timeEnd(), gopurs_runtime.Str(x_1)))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_timeEnd(), gopurs_runtime.Str(x_1)))
 }
 
 func Call_time(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) gopurs_runtime.Value {
@@ -244,7 +244,7 @@ var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
 var x_1 string = x_1_loop
 _ = x_1
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictMonadEffect_0.UnsafePtr)).V0, gopurs_runtime.Apply(pkg_Effect_Console.Get_time(), gopurs_runtime.Str(x_1)))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_time(), gopurs_runtime.Str(x_1)))
 }
 
 func Call_logShow(dictMonadEffect_0_loop gopurs_runtime.Value, dictShow_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -254,7 +254,7 @@ var dictShow_1 gopurs_runtime.Value = dictShow_1_loop
 _ = dictShow_1
 var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictMonadEffect_0.UnsafePtr)).V0, gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictShow_1.UnsafePtr)).V0, x_2)))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_1, "show"), x_2)))
 }
 
 func Call_log(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) gopurs_runtime.Value {
@@ -262,7 +262,7 @@ var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
 var x_1 string = x_1_loop
 _ = x_1
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictMonadEffect_0.UnsafePtr)).V0, gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str(x_1)))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str(x_1)))
 }
 
 func Call_infoShow(dictMonadEffect_0_loop gopurs_runtime.Value, dictShow_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -272,7 +272,7 @@ var dictShow_1 gopurs_runtime.Value = dictShow_1_loop
 _ = dictShow_1
 var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictMonadEffect_0.UnsafePtr)).V0, gopurs_runtime.Apply(pkg_Effect_Console.Get_info(), gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictShow_1.UnsafePtr)).V0, x_2)))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_info(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_1, "show"), x_2)))
 }
 
 func Call_info(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) gopurs_runtime.Value {
@@ -280,13 +280,13 @@ var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
 var x_1 string = x_1_loop
 _ = x_1
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictMonadEffect_0.UnsafePtr)).V0, gopurs_runtime.Apply(pkg_Effect_Console.Get_info(), gopurs_runtime.Str(x_1)))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_info(), gopurs_runtime.Str(x_1)))
 }
 
 func Call_groupEnd(dictMonadEffect_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictMonadEffect_0.UnsafePtr)).V0, pkg_Effect_Console.Get_groupEnd())
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), pkg_Effect_Console.Get_groupEnd())
 }
 
 func Call_groupCollapsed(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) gopurs_runtime.Value {
@@ -294,7 +294,7 @@ var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
 var x_1 string = x_1_loop
 _ = x_1
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictMonadEffect_0.UnsafePtr)).V0, gopurs_runtime.Apply(pkg_Effect_Console.Get_groupCollapsed(), gopurs_runtime.Str(x_1)))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_groupCollapsed(), gopurs_runtime.Str(x_1)))
 }
 
 func Call_group(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) gopurs_runtime.Value {
@@ -302,7 +302,7 @@ var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
 var x_1 string = x_1_loop
 _ = x_1
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictMonadEffect_0.UnsafePtr)).V0, gopurs_runtime.Apply(pkg_Effect_Console.Get_group(), gopurs_runtime.Str(x_1)))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_group(), gopurs_runtime.Str(x_1)))
 }
 
 func Call_grouped(dictMonadEffect_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -314,10 +314,10 @@ Bind1_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bind1"),
 _ = Bind1_2_1
 discard1_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Control_Bind.Get_discardUnit(), "discard"), Bind1_2_1)
 _ = discard1_3_2
-groupEnd1_4_3 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictMonadEffect_0.UnsafePtr)).V0, pkg_Effect_Console.Get_groupEnd())
+groupEnd1_4_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), pkg_Effect_Console.Get_groupEnd())
 _ = groupEnd1_4_3
 return gopurs_runtime.Func2(func(name_5 gopurs_runtime.Value, inner_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(discard1_3_2, gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictMonadEffect_0.UnsafePtr)).V0, gopurs_runtime.Apply(pkg_Effect_Console.Get_group(), name_5)), gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(discard1_3_2, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_group(), name_5)), gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Bind1_2_1, "bind"), inner_6, gopurs_runtime.Func(func(result_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(discard1_3_2, groupEnd1_4_3, gopurs_runtime.Func(func(_dollar__unused_9 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), result_8)
@@ -334,7 +334,7 @@ var dictShow_1 gopurs_runtime.Value = dictShow_1_loop
 _ = dictShow_1
 var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictMonadEffect_0.UnsafePtr)).V0, gopurs_runtime.Apply(pkg_Effect_Console.Get_error(), gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictShow_1.UnsafePtr)).V0, x_2)))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_error(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_1, "show"), x_2)))
 }
 
 func Call_error(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) gopurs_runtime.Value {
@@ -342,7 +342,7 @@ var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
 var x_1 string = x_1_loop
 _ = x_1
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictMonadEffect_0.UnsafePtr)).V0, gopurs_runtime.Apply(pkg_Effect_Console.Get_error(), gopurs_runtime.Str(x_1)))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_error(), gopurs_runtime.Str(x_1)))
 }
 
 func Call_debugShow(dictMonadEffect_0_loop gopurs_runtime.Value, dictShow_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -352,7 +352,7 @@ var dictShow_1 gopurs_runtime.Value = dictShow_1_loop
 _ = dictShow_1
 var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictMonadEffect_0.UnsafePtr)).V0, gopurs_runtime.Apply(pkg_Effect_Console.Get_debug(), gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictShow_1.UnsafePtr)).V0, x_2)))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_debug(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_1, "show"), x_2)))
 }
 
 func Call_debug(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) gopurs_runtime.Value {
@@ -360,13 +360,13 @@ var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
 var x_1 string = x_1_loop
 _ = x_1
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictMonadEffect_0.UnsafePtr)).V0, gopurs_runtime.Apply(pkg_Effect_Console.Get_debug(), gopurs_runtime.Str(x_1)))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_debug(), gopurs_runtime.Str(x_1)))
 }
 
 func Call_clear(dictMonadEffect_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictMonadEffect_0.UnsafePtr)).V0, pkg_Effect_Console.Get_clear())
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), pkg_Effect_Console.Get_clear())
 }
 
 

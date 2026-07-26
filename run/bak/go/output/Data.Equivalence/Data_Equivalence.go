@@ -95,7 +95,7 @@ return x_0
 func Call_defaultEquivalence(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
 _ = dictEq_0
-return ((*gopurs_runtime.RecordData1)(dictEq_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dictEq_0, "eq")
 }
 
 func Call_comparisonEquivalence(v_0_loop gopurs_runtime.Value, a_1_loop gopurs_runtime.Value, b_2_loop gopurs_runtime.Value) gopurs_runtime.Value {

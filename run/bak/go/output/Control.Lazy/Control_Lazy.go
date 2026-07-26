@@ -53,7 +53,7 @@ return Call_fix(dictLazy_0_box, f_1_box)
 func Call_defer_(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dict_0, "defer")
 }
 
 func Call_fix(dictLazy_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -63,7 +63,7 @@ var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 var go__2_0 gopurs_runtime.Value
 _ = go__2_0
-go__2_0 = gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictLazy_0.UnsafePtr)).V0, gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+go__2_0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictLazy_0, "defer"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_1, go__2_0)
 }))
 return go__2_0

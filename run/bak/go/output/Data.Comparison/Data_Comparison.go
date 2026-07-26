@@ -110,7 +110,7 @@ return x_0
 func Call_defaultComparison(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-return ((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dictOrd_0, "compare")
 }
 
 

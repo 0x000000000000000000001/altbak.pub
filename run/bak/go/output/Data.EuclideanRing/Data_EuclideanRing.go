@@ -91,7 +91,7 @@ return Call_degree(dict_0_box)
 func Call_mod(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData3)(dict_0.UnsafePtr)).V2
+return gopurs_runtime.RecordGet(dict_0, "mod")
 }
 
 func Call_gcd(dictEq_0_loop gopurs_runtime.Value, dictEuclideanRing_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -107,7 +107,7 @@ _ = zero_2_0
 return gopurs_runtime.Func2(func(a_3 gopurs_runtime.Value, b_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictEq_0.UnsafePtr)).V0, b_4, zero_2_0).IntVal) != (0) {
+if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), b_4, zero_2_0).IntVal) != (0) {
 __t1 = a_3
 goto end_branch_1
 } else {
@@ -115,7 +115,7 @@ goto end_branch_1
 }
 }
 {
-__t1 = gopurs_runtime.Apply2(Call_gcd(dictEq_0, dictEuclideanRing_1), b_4, gopurs_runtime.Apply2(((*gopurs_runtime.RecordData3)(dictEuclideanRing_1.UnsafePtr)).V2, a_3, b_4))
+__t1 = gopurs_runtime.Apply2(Call_gcd(dictEq_0, dictEuclideanRing_1), b_4, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEuclideanRing_1, "mod"), a_3, b_4))
 }
 end_branch_1:
 return __t1
@@ -126,7 +126,7 @@ return __t1
 func Call_div(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData3)(dict_0.UnsafePtr)).V1
+return gopurs_runtime.RecordGet(dict_0, "div")
 }
 
 func Call_lcm(dictEq_0_loop gopurs_runtime.Value, dictEuclideanRing_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -143,7 +143,7 @@ _ = gcd2_4_2
 return gopurs_runtime.Func2(func(a_5 gopurs_runtime.Value, b_6 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t3 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "disj"), gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictEq_0.UnsafePtr)).V0, a_5, zero_3_1), gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictEq_0.UnsafePtr)).V0, b_6, zero_3_1)).IntVal) != (0) {
+if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "disj"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), a_5, zero_3_1), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), b_6, zero_3_1)).IntVal) != (0) {
 __t3 = zero_3_1
 goto end_branch_3
 } else {
@@ -151,7 +151,7 @@ goto end_branch_3
 }
 }
 {
-__t3 = gopurs_runtime.Apply2(((*gopurs_runtime.RecordData3)(dictEuclideanRing_1.UnsafePtr)).V1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Semiring0_2_0, "mul"), a_5, b_6), gopurs_runtime.Apply2(gcd2_4_2, a_5, b_6))
+__t3 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEuclideanRing_1, "div"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Semiring0_2_0, "mul"), a_5, b_6), gopurs_runtime.Apply2(gcd2_4_2, a_5, b_6))
 }
 end_branch_3:
 return __t3
@@ -161,7 +161,7 @@ return __t3
 func Call_degree(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData3)(dict_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dict_0, "degree")
 }
 
 func Get_intDegree() gopurs_runtime.Value {

@@ -448,7 +448,7 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
 }
 end_branch_0:
 return __t0
@@ -480,7 +480,7 @@ _ = v_1_0
 var __t4 gopurs_runtime.Value
 {
 if (v_1_0.IntVal) == (0) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil}
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
 goto end_branch_4
 } else {
 
@@ -635,7 +635,7 @@ v2_2_0 := gopurs_runtime.Apply(Get_uncons(), gopurs_runtime.Str(v1_1))
 _ = v2_2_0
 var __t1 gopurs_runtime.Value
 {
-if (v2_2_0.Type == 9 && v2_2_0.IntVal == 930809136) {
+if (v2_2_0.Type == 9 && v2_2_0.IntVal == 930809136 && v2_2_0.UnsafePtr != nil) {
 __t1 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply(Get_singleton(), gopurs_runtime.RecordGet((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v2_2_0.UnsafePtr).V0, "head")), Call_takeFallback((v_0) - (1), gopurs_runtime.RecordGet((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v2_2_0.UnsafePtr).V0, "tail").StrVal()))
 goto end_branch_1
 } else {
@@ -711,7 +711,7 @@ v_3_0 := gopurs_runtime.Apply(Get_uncons(), gopurs_runtime.Str(s_1))
 _ = v_3_0
 var __t1 gopurs_runtime.Value
 {
-if ((v_3_0.Type == 9 && v_3_0.IntVal == 930809136)) && ((gopurs_runtime.Apply(p_0, gopurs_runtime.RecordGet((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v_3_0.UnsafePtr).V0, "head")).IntVal) != (0)) {
+if ((v_3_0.Type == 9 && v_3_0.IntVal == 930809136 && v_3_0.UnsafePtr != nil)) && ((gopurs_runtime.Apply(p_0, gopurs_runtime.RecordGet((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v_3_0.UnsafePtr).V0, "head")).IntVal) != (0)) {
 p_0_loop = p_0
 s_1_loop = gopurs_runtime.RecordGet((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v_3_0.UnsafePtr).V0, "tail").StrVal()
 accum_2_loop = (accum_2) + (1)
@@ -772,7 +772,7 @@ v_2_0 := gopurs_runtime.Apply(Get_uncons(), gopurs_runtime.Str(s_1))
 _ = v_2_0
 var __t1 gopurs_runtime.Value
 {
-if (v_2_0.Type == 9 && v_2_0.IntVal == 930809136) {
+if (v_2_0.Type == 9 && v_2_0.IntVal == 930809136 && v_2_0.UnsafePtr != nil) {
 var __t2 gopurs_runtime.Value
 {
 if (n_0) == (0) {
@@ -796,7 +796,7 @@ goto end_branch_1
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
 }
 end_branch_1:
 return __t1
@@ -811,7 +811,7 @@ _ = v1_1
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Apply2(Get_lessThan(), gopurs_runtime.Int(v_0), gopurs_runtime.Int(0)).IntVal) != (0) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
 goto end_branch_0
 } else {
 
@@ -822,7 +822,7 @@ if (v_0) == (0) {
 var __t1 gopurs_runtime.Value
 {
 if (v1_1) == ("") {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
 goto end_branch_1
 } else {
 
@@ -839,7 +839,7 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.Apply6(Get__codePointAt(), Get_codePointAtFallback(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil}, Get_unsafeCodePointAt0(), gopurs_runtime.Int(v_0), gopurs_runtime.Str(v1_1))
+__t0 = gopurs_runtime.Apply6(Get__codePointAt(), Get_codePointAtFallback(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}, Get_unsafeCodePointAt0(), gopurs_runtime.Int(v_0), gopurs_runtime.Str(v1_1))
 }
 end_branch_0:
 return __t0

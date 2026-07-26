@@ -35,7 +35,7 @@ var cache_stack gopurs_runtime.Value
 var once_stack sync.Once
 func Get_stack() gopurs_runtime.Value {
 	once_stack.Do(func() {
-		cache_stack = gopurs_runtime.Apply2(Get_stackImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 3589588149, UnsafePtr: nil})
+		cache_stack = gopurs_runtime.Apply2(Get_stackImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil})
 	})
 	return cache_stack
 }

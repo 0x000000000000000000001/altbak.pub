@@ -107,7 +107,7 @@ return gopurs_runtime.RecordDict2("Functor0", "extend", gopurs_runtime.Func(func
 return pkg_Data_Functor.Get_functorFn()
 }), gopurs_runtime.Func3(func(f_1 gopurs_runtime.Value, g_2 gopurs_runtime.Value, w_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_1, gopurs_runtime.Func(func(w_prime_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(g_2, gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictSemigroup_0.UnsafePtr)).V0, w_3, w_prime_4))
+return gopurs_runtime.Apply(g_2, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append"), w_3, w_prime_4))
 }))
 }))
 }
@@ -115,7 +115,7 @@ return gopurs_runtime.Apply(g_2, gopurs_runtime.Apply2(((*gopurs_runtime.RecordD
 func Call_extend(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
+return gopurs_runtime.RecordGet(dict_0, "extend")
 }
 
 func Call_extendFlipped(dictExtend_0_loop gopurs_runtime.Value, w_1_loop gopurs_runtime.Value, f_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -125,13 +125,13 @@ var w_1 gopurs_runtime.Value = w_1_loop
 _ = w_1
 var f_2 gopurs_runtime.Value = f_2_loop
 _ = f_2
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictExtend_0.UnsafePtr)).V0, f_2, w_1)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictExtend_0, "extend"), f_2, w_1)
 }
 
 func Call_duplicate(dictExtend_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictExtend_0 gopurs_runtime.Value = dictExtend_0_loop
 _ = dictExtend_0
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictExtend_0.UnsafePtr)).V0, Get_identity())
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictExtend_0, "extend"), Get_identity())
 }
 
 func Call_composeCoKleisliFlipped(dictExtend_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, g_2_loop gopurs_runtime.Value, w_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -143,7 +143,7 @@ var g_2 gopurs_runtime.Value = g_2_loop
 _ = g_2
 var w_3 gopurs_runtime.Value = w_3_loop
 _ = w_3
-return gopurs_runtime.Apply(f_1, gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictExtend_0.UnsafePtr)).V0, g_2, w_3))
+return gopurs_runtime.Apply(f_1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictExtend_0, "extend"), g_2, w_3))
 }
 
 func Call_composeCoKleisli(dictExtend_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, g_2_loop gopurs_runtime.Value, w_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -155,7 +155,7 @@ var g_2 gopurs_runtime.Value = g_2_loop
 _ = g_2
 var w_3 gopurs_runtime.Value = w_3_loop
 _ = w_3
-return gopurs_runtime.Apply(g_2, gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictExtend_0.UnsafePtr)).V0, f_1, w_3))
+return gopurs_runtime.Apply(g_2, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictExtend_0, "extend"), f_1, w_3))
 }
 
 func Get_arrayExtend() gopurs_runtime.Value {
