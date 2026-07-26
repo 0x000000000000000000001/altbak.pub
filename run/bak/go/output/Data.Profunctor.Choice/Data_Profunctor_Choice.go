@@ -115,7 +115,7 @@ var dictSemigroupoid_0 gopurs_runtime.Value = dictSemigroupoid_0_loop
 _ = dictSemigroupoid_0
 var dictChoice_1 gopurs_runtime.Value = dictChoice_1_loop
 _ = dictChoice_1
-rmap_2_0 := gopurs_runtime.Apply(pkg_Data_Profunctor.Get_rmap(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictChoice_1, "Profunctor0_NOT_FOUND"), gopurs_runtime.Value{}))
+rmap_2_0 := gopurs_runtime.Apply(pkg_Data_Profunctor.Get_rmap(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictChoice_1, "Profunctor0"), gopurs_runtime.Value{}))
 _ = rmap_2_0
 return gopurs_runtime.Func2(func(l_3 gopurs_runtime.Value, r_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(rmap_2_0, gopurs_runtime.Func(func(v2_5 gopurs_runtime.Value) gopurs_runtime.Value {

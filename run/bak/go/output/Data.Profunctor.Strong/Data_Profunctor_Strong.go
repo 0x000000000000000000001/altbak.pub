@@ -94,7 +94,7 @@ var dictSemigroupoid_0 gopurs_runtime.Value = dictSemigroupoid_0_loop
 _ = dictSemigroupoid_0
 var dictStrong_1 gopurs_runtime.Value = dictStrong_1_loop
 _ = dictStrong_1
-lcmap_2_0 := gopurs_runtime.Apply(pkg_Data_Profunctor.Get_lcmap(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictStrong_1, "Profunctor0_NOT_FOUND"), gopurs_runtime.Value{}))
+lcmap_2_0 := gopurs_runtime.Apply(pkg_Data_Profunctor.Get_lcmap(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictStrong_1, "Profunctor0"), gopurs_runtime.Value{}))
 _ = lcmap_2_0
 return gopurs_runtime.Func2(func(l_3 gopurs_runtime.Value, r_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(lcmap_2_0, gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {

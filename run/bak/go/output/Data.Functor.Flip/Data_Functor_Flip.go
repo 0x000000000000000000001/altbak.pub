@@ -193,7 +193,7 @@ return gopurs_runtime.Apply3(((*gopurs_runtime.RecordData1)(dictProfunctor_0.Uns
 func Call_categoryFlip(dictCategory_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictCategory_0 gopurs_runtime.Value = dictCategory_0_loop
 _ = dictCategory_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictCategory_0, "Semigroupoid0_NOT_FOUND"), gopurs_runtime.Value{})
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictCategory_0, "Semigroupoid0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 semigroupoidFlip1_2_1 := gopurs_runtime.RecordDict1("compose", gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "compose"), v1_3, v_2)
@@ -215,7 +215,7 @@ return gopurs_runtime.Apply3(((*gopurs_runtime.RecordData1)(dictBifunctor_0.Unsa
 func Call_biapplyFlip(dictBiapply_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictBiapply_0 gopurs_runtime.Value = dictBiapply_0_loop
 _ = dictBiapply_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBiapply_0, "Bifunctor0_NOT_FOUND"), gopurs_runtime.Value{})
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBiapply_0, "Bifunctor0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 bifunctorFlip1_2_1 := gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func3(func(f_2 gopurs_runtime.Value, g_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_1_0, "bimap"), g_3, f_2, v_4)
@@ -231,7 +231,7 @@ return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictBiapply_0.Unsafe
 func Call_biapplicativeFlip(dictBiapplicative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictBiapplicative_0 gopurs_runtime.Value = dictBiapplicative_0_loop
 _ = dictBiapplicative_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBiapplicative_0, "Biapply0_NOT_FOUND"), gopurs_runtime.Value{})
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBiapplicative_0, "Biapply0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "Bifunctor0"), gopurs_runtime.Value{})
 _ = __local_var_2_1

@@ -354,7 +354,7 @@ func Call_semigroupAct(dictApply_0_loop gopurs_runtime.Value) gopurs_runtime.Val
 var dictApply_0 gopurs_runtime.Value = dictApply_0_loop
 _ = dictApply_0
 return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictApply_0.UnsafePtr)).V0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_0, "Functor0_NOT_FOUND"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictApply_0.UnsafePtr)).V0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_0, "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Apply.Get_identity()
 }), v_1), v1_2)
 }))
@@ -617,7 +617,7 @@ var dictFoldable1_0 gopurs_runtime.Value = dictFoldable1_0_loop
 _ = dictFoldable1_0
 var dictApply_1 gopurs_runtime.Value = dictApply_1_loop
 _ = dictApply_1
-__local_var_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_1, "Functor0_NOT_FOUND"), gopurs_runtime.Value{})
+__local_var_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_1, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_2_0
 foldMap12_3_1 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData3)(dictFoldable1_0.UnsafePtr)).V0, gopurs_runtime.Apply(Get_semigroupAct(), dictApply_1))
 _ = foldMap12_3_1

@@ -371,7 +371,7 @@ var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
 mempty_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(pkg_Effect.Get_monoidEffect(), dictMonoid_0), "mempty")
 _ = mempty_1_0
-semigroupEffectFn91_2_1 := gopurs_runtime.Apply(Get_semigroupEffectFn9(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0_NOT_FOUND"), gopurs_runtime.Value{}))
+semigroupEffectFn91_2_1 := gopurs_runtime.Apply(Get_semigroupEffectFn9(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
 _ = semigroupEffectFn91_2_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEffectFn91_2_1
@@ -385,7 +385,7 @@ var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
 mempty_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(pkg_Effect.Get_monoidEffect(), dictMonoid_0), "mempty")
 _ = mempty_1_0
-semigroupEffectFn81_2_1 := gopurs_runtime.Apply(Get_semigroupEffectFn8(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0_NOT_FOUND"), gopurs_runtime.Value{}))
+semigroupEffectFn81_2_1 := gopurs_runtime.Apply(Get_semigroupEffectFn8(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
 _ = semigroupEffectFn81_2_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEffectFn81_2_1
@@ -399,7 +399,7 @@ var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
 mempty_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(pkg_Effect.Get_monoidEffect(), dictMonoid_0), "mempty")
 _ = mempty_1_0
-semigroupEffectFn71_2_1 := gopurs_runtime.Apply(Get_semigroupEffectFn7(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0_NOT_FOUND"), gopurs_runtime.Value{}))
+semigroupEffectFn71_2_1 := gopurs_runtime.Apply(Get_semigroupEffectFn7(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
 _ = semigroupEffectFn71_2_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEffectFn71_2_1
@@ -413,7 +413,7 @@ var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
 mempty_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(pkg_Effect.Get_monoidEffect(), dictMonoid_0), "mempty")
 _ = mempty_1_0
-semigroupEffectFn61_2_1 := gopurs_runtime.Apply(Get_semigroupEffectFn6(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0_NOT_FOUND"), gopurs_runtime.Value{}))
+semigroupEffectFn61_2_1 := gopurs_runtime.Apply(Get_semigroupEffectFn6(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
 _ = semigroupEffectFn61_2_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEffectFn61_2_1
@@ -427,7 +427,7 @@ var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
 mempty_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(pkg_Effect.Get_monoidEffect(), dictMonoid_0), "mempty")
 _ = mempty_1_0
-semigroupEffectFn51_2_1 := gopurs_runtime.Apply(Get_semigroupEffectFn5(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0_NOT_FOUND"), gopurs_runtime.Value{}))
+semigroupEffectFn51_2_1 := gopurs_runtime.Apply(Get_semigroupEffectFn5(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
 _ = semigroupEffectFn51_2_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEffectFn51_2_1
@@ -441,7 +441,7 @@ var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
 mempty_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(pkg_Effect.Get_monoidEffect(), dictMonoid_0), "mempty")
 _ = mempty_1_0
-semigroupEffectFn41_2_1 := gopurs_runtime.Apply(Get_semigroupEffectFn4(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0_NOT_FOUND"), gopurs_runtime.Value{}))
+semigroupEffectFn41_2_1 := gopurs_runtime.Apply(Get_semigroupEffectFn4(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
 _ = semigroupEffectFn41_2_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEffectFn41_2_1
@@ -455,7 +455,7 @@ var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
 mempty_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(pkg_Effect.Get_monoidEffect(), dictMonoid_0), "mempty")
 _ = mempty_1_0
-semigroupEffectFn31_2_1 := gopurs_runtime.Apply(Get_semigroupEffectFn3(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0_NOT_FOUND"), gopurs_runtime.Value{}))
+semigroupEffectFn31_2_1 := gopurs_runtime.Apply(Get_semigroupEffectFn3(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
 _ = semigroupEffectFn31_2_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEffectFn31_2_1
@@ -469,7 +469,7 @@ var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
 mempty_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(pkg_Effect.Get_monoidEffect(), dictMonoid_0), "mempty")
 _ = mempty_1_0
-semigroupEffectFn21_2_1 := gopurs_runtime.Apply(Get_semigroupEffectFn2(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0_NOT_FOUND"), gopurs_runtime.Value{}))
+semigroupEffectFn21_2_1 := gopurs_runtime.Apply(Get_semigroupEffectFn2(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
 _ = semigroupEffectFn21_2_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEffectFn21_2_1
@@ -483,7 +483,7 @@ var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
 mempty_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(pkg_Effect.Get_monoidEffect(), dictMonoid_0), "mempty")
 _ = mempty_1_0
-semigroupEffectFn101_2_1 := gopurs_runtime.Apply(Get_semigroupEffectFn10(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0_NOT_FOUND"), gopurs_runtime.Value{}))
+semigroupEffectFn101_2_1 := gopurs_runtime.Apply(Get_semigroupEffectFn10(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
 _ = semigroupEffectFn101_2_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEffectFn101_2_1
@@ -497,7 +497,7 @@ var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
 mempty_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(pkg_Effect.Get_monoidEffect(), dictMonoid_0), "mempty")
 _ = mempty_1_0
-__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0_NOT_FOUND"), gopurs_runtime.Value{})
+__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
 semigroupEffectFn11_3_2 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(f1_3 gopurs_runtime.Value, f2_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {

@@ -700,7 +700,7 @@ return __t0
 func Call_ordEither(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0, "Eq0_NOT_FOUND"), gopurs_runtime.Value{})
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0, "Eq0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(dictOrd1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_2, "Eq0"), gopurs_runtime.Value{})
@@ -798,7 +798,7 @@ var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
 ordEither1_1_0 := gopurs_runtime.Apply(Get_ordEither(), dictOrd_0)
 _ = ordEither1_1_0
-__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0, "Eq0_NOT_FOUND"), gopurs_runtime.Value{})
+__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0, "Eq0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
 eq1Either1_3_2 := gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func3(func(dictEq1_3 gopurs_runtime.Value, x_4 gopurs_runtime.Value, y_5 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t3 gopurs_runtime.Value
@@ -939,7 +939,7 @@ return __t0
 func Call_choose(dictAlt_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictAlt_0 gopurs_runtime.Value = dictAlt_0_loop
 _ = dictAlt_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictAlt_0, "Functor0_NOT_FOUND"), gopurs_runtime.Value{})
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictAlt_0, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 return gopurs_runtime.Func2(func(a_2 gopurs_runtime.Value, b_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictAlt_0.UnsafePtr)).V0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "map"), Get_Left(), a_2), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "map"), Get_Right(), b_3))
@@ -951,7 +951,7 @@ var dictBounded_0 gopurs_runtime.Value = dictBounded_0_loop
 _ = dictBounded_0
 bottom_1_0 := ((*gopurs_runtime.RecordData2)(dictBounded_0.UnsafePtr)).V0
 _ = bottom_1_0
-ordEither1_2_1 := gopurs_runtime.Apply(Get_ordEither(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBounded_0, "Ord0_NOT_FOUND"), gopurs_runtime.Value{}))
+ordEither1_2_1 := gopurs_runtime.Apply(Get_ordEither(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBounded_0, "Ord0"), gopurs_runtime.Value{}))
 _ = ordEither1_2_1
 return gopurs_runtime.Func(func(dictBounded1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 ordEither2_4_2 := gopurs_runtime.Apply(ordEither1_2_1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBounded1_3, "Ord0"), gopurs_runtime.Value{}))

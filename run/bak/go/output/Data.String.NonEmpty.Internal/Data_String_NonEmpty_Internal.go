@@ -495,7 +495,7 @@ return __t1
 func Call_joinWith1(dictFoldable1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictFoldable1_0 gopurs_runtime.Value = dictFoldable1_0_loop
 _ = dictFoldable1_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_0, "Foldable0_NOT_FOUND"), gopurs_runtime.Value{})
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_0, "Foldable0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Monoid.Get_monoidString(), "Semigroup0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
@@ -547,7 +547,7 @@ return __t1
 func Call_join1With(dictFoldable1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictFoldable1_0 gopurs_runtime.Value = dictFoldable1_0_loop
 _ = dictFoldable1_0
-return gopurs_runtime.Apply(Get_joinWith(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_0, "Foldable0_NOT_FOUND"), gopurs_runtime.Value{}))
+return gopurs_runtime.Apply(Get_joinWith(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_0, "Foldable0"), gopurs_runtime.Value{}))
 }
 
 func Call_fromString(v_0_loop string) gopurs_runtime.Value {

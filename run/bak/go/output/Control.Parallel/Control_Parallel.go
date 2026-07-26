@@ -175,7 +175,7 @@ var dictParallel_0 gopurs_runtime.Value = dictParallel_0_loop
 _ = dictParallel_0
 var dictAlternative_1 gopurs_runtime.Value = dictAlternative_1_loop
 _ = dictAlternative_1
-Plus1_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictAlternative_1, "Plus1_NOT_FOUND"), gopurs_runtime.Value{})
+Plus1_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictAlternative_1, "Plus1"), gopurs_runtime.Value{})
 _ = Plus1_2_0
 return gopurs_runtime.Func(func(dictFoldable_3 gopurs_runtime.Value) gopurs_runtime.Value {
 empty_4_1 := gopurs_runtime.RecordGet(Plus1_2_0, "empty")
@@ -197,7 +197,7 @@ var dictParallel_0 gopurs_runtime.Value = dictParallel_0_loop
 _ = dictParallel_0
 var dictAlternative_1 gopurs_runtime.Value = dictAlternative_1_loop
 _ = dictAlternative_1
-Plus1_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictAlternative_1, "Plus1_NOT_FOUND"), gopurs_runtime.Value{})
+Plus1_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictAlternative_1, "Plus1"), gopurs_runtime.Value{})
 _ = Plus1_2_0
 return gopurs_runtime.Func(func(dictFoldable_3 gopurs_runtime.Value) gopurs_runtime.Value {
 empty_4_1 := gopurs_runtime.RecordGet(Plus1_2_0, "empty")
@@ -221,7 +221,7 @@ var mf_1 gopurs_runtime.Value = mf_1_loop
 _ = mf_1
 var ma_2 gopurs_runtime.Value = ma_2_loop
 _ = ma_2
-return gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictParallel_0.UnsafePtr)).V1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictParallel_0, "Apply1_NOT_FOUND"), gopurs_runtime.Value{}), "apply"), gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictParallel_0.UnsafePtr)).V0, mf_1), gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictParallel_0.UnsafePtr)).V0, ma_2)))
+return gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictParallel_0.UnsafePtr)).V1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictParallel_0, "Apply1"), gopurs_runtime.Value{}), "apply"), gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictParallel_0.UnsafePtr)).V0, mf_1), gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictParallel_0.UnsafePtr)).V0, ma_2)))
 }
 
 

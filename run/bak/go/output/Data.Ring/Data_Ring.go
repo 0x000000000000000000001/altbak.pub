@@ -154,7 +154,7 @@ var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
 _ = _dollar__unused_1
 var dictRingRecord_2 gopurs_runtime.Value = dictRingRecord_2_loop
 _ = dictRingRecord_2
-semiringRecordCons1_3_0 := gopurs_runtime.Apply3(pkg_Data_Semiring.Get_semiringRecordCons(), dictIsSymbol_0, gopurs_runtime.Value{}, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictRingRecord_2, "SemiringRecord0_NOT_FOUND"), gopurs_runtime.Value{}))
+semiringRecordCons1_3_0 := gopurs_runtime.Apply3(pkg_Data_Semiring.Get_semiringRecordCons(), dictIsSymbol_0, gopurs_runtime.Value{}, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictRingRecord_2, "SemiringRecord0"), gopurs_runtime.Value{}))
 _ = semiringRecordCons1_3_0
 return gopurs_runtime.Func(func(dictRing_4 gopurs_runtime.Value) gopurs_runtime.Value {
 semiringRecordCons2_5_1 := gopurs_runtime.Apply(semiringRecordCons1_3_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictRing_4, "Semiring0"), gopurs_runtime.Value{}))
@@ -176,7 +176,7 @@ var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var dictRingRecord_1 gopurs_runtime.Value = dictRingRecord_1_loop
 _ = dictRingRecord_1
-__local_var_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictRingRecord_1, "SemiringRecord0_NOT_FOUND"), gopurs_runtime.Value{})
+__local_var_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictRingRecord_1, "SemiringRecord0"), gopurs_runtime.Value{})
 _ = __local_var_2_0
 semiringRecord1_3_1 := gopurs_runtime.RecordDict4("add", "mul", "one", "zero", gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_0, "addRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_0, "mulRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_0, "oneRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_0, "zeroRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}))
 _ = semiringRecord1_3_1
@@ -188,7 +188,7 @@ return semiringRecord1_3_1
 func Call_ringFn(dictRing_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictRing_0 gopurs_runtime.Value = dictRing_0_loop
 _ = dictRing_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictRing_0, "Semiring0_NOT_FOUND"), gopurs_runtime.Value{})
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictRing_0, "Semiring0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
 zero1_2_1 := gopurs_runtime.RecordGet(__local_var_1_0, "zero")
 _ = zero1_2_1
@@ -214,7 +214,7 @@ return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictRing_0.UnsafePtr
 func Call_negate(dictRing_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictRing_0 gopurs_runtime.Value = dictRing_0_loop
 _ = dictRing_0
-zero_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictRing_0, "Semiring0_NOT_FOUND"), gopurs_runtime.Value{}), "zero")
+zero_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictRing_0, "Semiring0"), gopurs_runtime.Value{}), "zero")
 _ = zero_1_0
 return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictRing_0.UnsafePtr)).V0, zero_1_0, a_2)

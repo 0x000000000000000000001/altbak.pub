@@ -66,7 +66,7 @@ var a_1 gopurs_runtime.Value = a_1_loop
 _ = a_1
 var b_2 gopurs_runtime.Value = b_2_loop
 _ = b_2
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDivisionRing_0, "Ring0_NOT_FOUND"), gopurs_runtime.Value{}), "Semiring0"), gopurs_runtime.Value{}), "mul"), a_1, gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictDivisionRing_0.UnsafePtr)).V0, b_2))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDivisionRing_0, "Ring0"), gopurs_runtime.Value{}), "Semiring0"), gopurs_runtime.Value{}), "mul"), a_1, gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictDivisionRing_0.UnsafePtr)).V0, b_2))
 }
 
 func Call_leftDiv(dictDivisionRing_0_loop gopurs_runtime.Value, a_1_loop gopurs_runtime.Value, b_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -76,7 +76,7 @@ var a_1 gopurs_runtime.Value = a_1_loop
 _ = a_1
 var b_2 gopurs_runtime.Value = b_2_loop
 _ = b_2
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDivisionRing_0, "Ring0_NOT_FOUND"), gopurs_runtime.Value{}), "Semiring0"), gopurs_runtime.Value{}), "mul"), gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictDivisionRing_0.UnsafePtr)).V0, b_2), a_1)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDivisionRing_0, "Ring0"), gopurs_runtime.Value{}), "Semiring0"), gopurs_runtime.Value{}), "mul"), gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictDivisionRing_0.UnsafePtr)).V0, b_2), a_1)
 }
 
 

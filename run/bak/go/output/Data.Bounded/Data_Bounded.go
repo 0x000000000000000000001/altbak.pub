@@ -194,7 +194,7 @@ var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var dictBoundedRecord_1 gopurs_runtime.Value = dictBoundedRecord_1_loop
 _ = dictBoundedRecord_1
-__local_var_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedRecord_1, "OrdRecord0_NOT_FOUND"), gopurs_runtime.Value{})
+__local_var_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedRecord_1, "OrdRecord0"), gopurs_runtime.Value{})
 _ = __local_var_2_0
 eqRec1_3_1 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_0, "EqRecord0"), gopurs_runtime.Value{}), "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}))
 _ = eqRec1_3_1
@@ -222,7 +222,7 @@ top1_2_0 := ((*gopurs_runtime.RecordData2)(dictBounded_1.UnsafePtr)).V1
 _ = top1_2_0
 bottom1_3_1 := ((*gopurs_runtime.RecordData2)(dictBounded_1.UnsafePtr)).V0
 _ = bottom1_3_1
-Ord0_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBounded_1, "Ord0_NOT_FOUND"), gopurs_runtime.Value{})
+Ord0_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBounded_1, "Ord0"), gopurs_runtime.Value{})
 _ = Ord0_4_2
 return gopurs_runtime.Func3(func(_dollar__unused_5 gopurs_runtime.Value, _dollar__unused_6 gopurs_runtime.Value, dictBoundedRecord_7 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_8_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedRecord_7, "OrdRecord0"), gopurs_runtime.Value{})

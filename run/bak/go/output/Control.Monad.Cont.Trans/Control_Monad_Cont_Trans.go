@@ -407,7 +407,7 @@ return bindContT1_4_4
 func Call_monadAskContT(dictMonadAsk_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadAsk_0 gopurs_runtime.Value = dictMonadAsk_0_loop
 _ = dictMonadAsk_0
-Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAsk_0, "Monad0_NOT_FOUND"), gopurs_runtime.Value{})
+Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAsk_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
 monadContT1_2_1 := gopurs_runtime.Apply(Get_monadContT(), Monad0_1_0)
 _ = monadContT1_2_1
@@ -419,7 +419,7 @@ return monadContT1_2_1
 func Call_monadReaderContT(dictMonadReader_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadReader_0 gopurs_runtime.Value = dictMonadReader_0_loop
 _ = dictMonadReader_0
-MonadAsk0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadReader_0, "MonadAsk0_NOT_FOUND"), gopurs_runtime.Value{})
+MonadAsk0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadReader_0, "MonadAsk0"), gopurs_runtime.Value{})
 _ = MonadAsk0_1_0
 ask_2_1 := gopurs_runtime.RecordGet(MonadAsk0_1_0, "ask")
 _ = ask_2_1
@@ -457,7 +457,7 @@ return gopurs_runtime.Apply(k_3, a_4)
 func Call_monadEffectContT(dictMonadEffect_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
-Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "Monad0_NOT_FOUND"), gopurs_runtime.Value{})
+Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
 monadContT1_2_1 := gopurs_runtime.Apply(Get_monadContT(), Monad0_1_0)
 _ = monadContT1_2_1
@@ -473,7 +473,7 @@ return gopurs_runtime.Apply(__local_var_3_2, gopurs_runtime.Apply(((*gopurs_runt
 func Call_monadStateContT(dictMonadState_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadState_0 gopurs_runtime.Value = dictMonadState_0_loop
 _ = dictMonadState_0
-Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0, "Monad0_NOT_FOUND"), gopurs_runtime.Value{})
+Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
 monadContT1_2_1 := gopurs_runtime.Apply(Get_monadContT(), Monad0_1_0)
 _ = monadContT1_2_1
@@ -489,7 +489,7 @@ return gopurs_runtime.Apply(__local_var_3_2, gopurs_runtime.Apply(((*gopurs_runt
 func Call_monadSTContT(dictMonadST_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadST_0 gopurs_runtime.Value = dictMonadST_0_loop
 _ = dictMonadST_0
-Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadST_0, "Monad0_NOT_FOUND"), gopurs_runtime.Value{})
+Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadST_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
 monadContT1_2_1 := gopurs_runtime.Apply(Get_monadContT(), Monad0_1_0)
 _ = monadContT1_2_1
@@ -507,7 +507,7 @@ var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
 _ = dictApplicative_0
 var dictMonoid_1 gopurs_runtime.Value = dictMonoid_1_loop
 _ = dictMonoid_1
-__local_var_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_1, "Semigroup0_NOT_FOUND"), gopurs_runtime.Value{})
+__local_var_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_1, "Semigroup0"), gopurs_runtime.Value{})
 _ = __local_var_2_0
 semigroupContT2_3_1 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func3(func(a_3 gopurs_runtime.Value, b_4 gopurs_runtime.Value, k_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(a_3, gopurs_runtime.Func(func(a_6 gopurs_runtime.Value) gopurs_runtime.Value {

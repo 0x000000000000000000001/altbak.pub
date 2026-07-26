@@ -147,7 +147,7 @@ _ = dictFunctor_1
 distribute2_2_0 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData2)(dictDistributive_0.UnsafePtr)).V1, dictFunctor_1)
 _ = distribute2_2_0
 return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDistributive_0, "Functor0_NOT_FOUND"), gopurs_runtime.Value{}), "map"), f_3)
+__local_var_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDistributive_0, "Functor0"), gopurs_runtime.Value{}), "map"), f_3)
 _ = __local_var_4_1
 return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_4_1, gopurs_runtime.Apply(distribute2_2_0, x_5))

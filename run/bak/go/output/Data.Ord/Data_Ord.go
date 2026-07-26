@@ -432,7 +432,7 @@ var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var dictOrdRecord_1 gopurs_runtime.Value = dictOrdRecord_1_loop
 _ = dictOrdRecord_1
-eqRec1_2_0 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrdRecord_1, "EqRecord0_NOT_FOUND"), gopurs_runtime.Value{}), "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}))
+eqRec1_2_0 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrdRecord_1, "EqRecord0"), gopurs_runtime.Value{}), "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}))
 _ = eqRec1_2_0
 return gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return eqRec1_2_0
@@ -501,11 +501,11 @@ var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
 var dictRing_1 gopurs_runtime.Value = dictRing_1_loop
 _ = dictRing_1
-Semiring0_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictRing_1, "Semiring0_NOT_FOUND"), gopurs_runtime.Value{})
+Semiring0_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictRing_1, "Semiring0"), gopurs_runtime.Value{})
 _ = Semiring0_2_0
 zero_3_1 := gopurs_runtime.RecordGet(Semiring0_2_0, "zero")
 _ = zero_3_1
-zero_4_2 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictRing_1, "Semiring0_NOT_FOUND"), gopurs_runtime.Value{}), "zero")
+zero_4_2 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictRing_1, "Semiring0"), gopurs_runtime.Value{}), "zero")
 _ = zero_4_2
 one_5_3 := gopurs_runtime.RecordGet(Semiring0_2_0, "one")
 _ = one_5_3
@@ -633,7 +633,7 @@ return __t1
 func Call_ordArray(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-eqArray_1_0 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(pkg_Data_Eq.Get_eqArrayImpl(), gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0, "Eq0_NOT_FOUND"), gopurs_runtime.Value{}), "eq")))
+eqArray_1_0 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(pkg_Data_Eq.Get_eqArrayImpl(), gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0, "Eq0"), gopurs_runtime.Value{}), "eq")))
 _ = eqArray_1_0
 return gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return eqArray_1_0
@@ -678,7 +678,7 @@ return __t2
 func Call_ordRecordCons(dictOrdRecord_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrdRecord_0 gopurs_runtime.Value = dictOrdRecord_0_loop
 _ = dictOrdRecord_0
-eqRowCons_1_0 := gopurs_runtime.Apply2(pkg_Data_Eq.Get_eqRowCons(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrdRecord_0, "EqRecord0_NOT_FOUND"), gopurs_runtime.Value{}), gopurs_runtime.Value{})
+eqRowCons_1_0 := gopurs_runtime.Apply2(pkg_Data_Eq.Get_eqRowCons(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrdRecord_0, "EqRecord0"), gopurs_runtime.Value{}), gopurs_runtime.Value{})
 _ = eqRowCons_1_0
 return gopurs_runtime.Func2(func(_dollar__unused_2 gopurs_runtime.Value, dictIsSymbol_3 gopurs_runtime.Value) gopurs_runtime.Value {
 eqRowCons1_4_1 := gopurs_runtime.Apply(eqRowCons_1_0, dictIsSymbol_3)
@@ -820,9 +820,9 @@ var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
 var dictRing_1 gopurs_runtime.Value = dictRing_1_loop
 _ = dictRing_1
-zero_2_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictRing_1, "Semiring0_NOT_FOUND"), gopurs_runtime.Value{}), "zero")
+zero_2_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictRing_1, "Semiring0"), gopurs_runtime.Value{}), "zero")
 _ = zero_2_0
-zero_3_1 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictRing_1, "Semiring0_NOT_FOUND"), gopurs_runtime.Value{}), "zero")
+zero_3_1 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictRing_1, "Semiring0"), gopurs_runtime.Value{}), "zero")
 _ = zero_3_1
 return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value

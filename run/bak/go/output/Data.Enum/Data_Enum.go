@@ -793,7 +793,7 @@ return ((*gopurs_runtime.RecordData3)(dict_0.UnsafePtr)).V1
 func Call_toEnumWithDefaults(dictBoundedEnum_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictBoundedEnum_0 gopurs_runtime.Value = dictBoundedEnum_0_loop
 _ = dictBoundedEnum_0
-bottom2_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0, "Bounded0_NOT_FOUND"), gopurs_runtime.Value{}), "bottom")
+bottom2_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0, "Bounded0"), gopurs_runtime.Value{}), "bottom")
 _ = bottom2_1_0
 return gopurs_runtime.Func3(func(low_2 gopurs_runtime.Value, high_3 gopurs_runtime.Value, x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 v_5_1 := gopurs_runtime.Apply(((*gopurs_runtime.RecordData3)(dictBoundedEnum_0.UnsafePtr)).V2, x_4)
@@ -839,7 +839,7 @@ return __t2
 func Call_enumTuple(dictEnum_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictEnum_0 gopurs_runtime.Value = dictEnum_0_loop
 _ = dictEnum_0
-ordTuple_1_0 := gopurs_runtime.Apply(pkg_Data_Tuple.Get_ordTuple(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0, "Ord0_NOT_FOUND"), gopurs_runtime.Value{}))
+ordTuple_1_0 := gopurs_runtime.Apply(pkg_Data_Tuple.Get_ordTuple(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0, "Ord0"), gopurs_runtime.Value{}))
 _ = ordTuple_1_0
 return gopurs_runtime.Func(func(dictBoundedEnum_2 gopurs_runtime.Value) gopurs_runtime.Value {
 Bounded0_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_2, "Bounded0"), gopurs_runtime.Value{})
@@ -923,9 +923,9 @@ return __t13
 func Call_enumMaybe(dictBoundedEnum_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictBoundedEnum_0 gopurs_runtime.Value = dictBoundedEnum_0_loop
 _ = dictBoundedEnum_0
-bottom2_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0, "Bounded0_NOT_FOUND"), gopurs_runtime.Value{}), "bottom")
+bottom2_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0, "Bounded0"), gopurs_runtime.Value{}), "bottom")
 _ = bottom2_1_0
-Enum1_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0, "Enum1_NOT_FOUND"), gopurs_runtime.Value{})
+Enum1_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0, "Enum1"), gopurs_runtime.Value{})
 _ = Enum1_2_1
 __local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Enum1_2_1, "Ord0"), gopurs_runtime.Value{})
 _ = __local_var_3_2
@@ -1050,7 +1050,7 @@ return __t10
 func Call_enumFromTo(dictEnum_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictEnum_0 gopurs_runtime.Value = dictEnum_0_loop
 _ = dictEnum_0
-Ord0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0, "Ord0_NOT_FOUND"), gopurs_runtime.Value{})
+Ord0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEnum_0, "Ord0"), gopurs_runtime.Value{})
 _ = Ord0_1_0
 return gopurs_runtime.Func3(func(dictUnfoldable1_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value, v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value
@@ -1150,9 +1150,9 @@ return __t5
 func Call_enumEither(dictBoundedEnum_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictBoundedEnum_0 gopurs_runtime.Value = dictBoundedEnum_0_loop
 _ = dictBoundedEnum_0
-Enum1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0, "Enum1_NOT_FOUND"), gopurs_runtime.Value{})
+Enum1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0, "Enum1"), gopurs_runtime.Value{})
 _ = Enum1_1_0
-top2_2_1 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0, "Bounded0_NOT_FOUND"), gopurs_runtime.Value{}), "top")
+top2_2_1 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_0, "Bounded0"), gopurs_runtime.Value{}), "top")
 _ = top2_2_1
 ordEither_3_2 := gopurs_runtime.Apply(pkg_Data_Either.Get_ordEither(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Enum1_1_0, "Ord0"), gopurs_runtime.Value{}))
 _ = ordEither_3_2

@@ -137,7 +137,7 @@ return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
 func Call_monadAffContT(dictMonadAff_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadAff_0 gopurs_runtime.Value = dictMonadAff_0_loop
 _ = dictMonadAff_0
-MonadEffect0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAff_0, "MonadEffect0_NOT_FOUND"), gopurs_runtime.Value{})
+MonadEffect0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAff_0, "MonadEffect0"), gopurs_runtime.Value{})
 _ = MonadEffect0_1_0
 monadEffectContT_2_1 := gopurs_runtime.Apply(pkg_Control_Monad_Cont_Trans.Get_monadEffectContT(), MonadEffect0_1_0)
 _ = monadEffectContT_2_1
@@ -153,7 +153,7 @@ return gopurs_runtime.Apply(__local_var_3_2, gopurs_runtime.Apply(((*gopurs_runt
 func Call_monadAffExceptT(dictMonadAff_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadAff_0 gopurs_runtime.Value = dictMonadAff_0_loop
 _ = dictMonadAff_0
-MonadEffect0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAff_0, "MonadEffect0_NOT_FOUND"), gopurs_runtime.Value{})
+MonadEffect0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAff_0, "MonadEffect0"), gopurs_runtime.Value{})
 _ = MonadEffect0_1_0
 monadEffectExceptT_2_1 := gopurs_runtime.Apply(pkg_Control_Monad_Except_Trans.Get_monadEffectExceptT(), MonadEffect0_1_0)
 _ = monadEffectExceptT_2_1
@@ -169,7 +169,7 @@ return gopurs_runtime.Apply(__local_var_3_2, gopurs_runtime.Apply(((*gopurs_runt
 func Call_monadAffListT(dictMonadAff_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadAff_0 gopurs_runtime.Value = dictMonadAff_0_loop
 _ = dictMonadAff_0
-MonadEffect0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAff_0, "MonadEffect0_NOT_FOUND"), gopurs_runtime.Value{})
+MonadEffect0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAff_0, "MonadEffect0"), gopurs_runtime.Value{})
 _ = MonadEffect0_1_0
 monadEffectListT_2_1 := gopurs_runtime.Apply(pkg_Control_Monad_List_Trans.Get_monadEffectListT(), MonadEffect0_1_0)
 _ = monadEffectListT_2_1
@@ -185,7 +185,7 @@ return gopurs_runtime.Apply(__local_var_3_2, gopurs_runtime.Apply(((*gopurs_runt
 func Call_monadAffMaybe(dictMonadAff_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadAff_0 gopurs_runtime.Value = dictMonadAff_0_loop
 _ = dictMonadAff_0
-MonadEffect0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAff_0, "MonadEffect0_NOT_FOUND"), gopurs_runtime.Value{})
+MonadEffect0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAff_0, "MonadEffect0"), gopurs_runtime.Value{})
 _ = MonadEffect0_1_0
 monadEffectMaybe_2_1 := gopurs_runtime.Apply(pkg_Control_Monad_Maybe_Trans.Get_monadEffectMaybe(), MonadEffect0_1_0)
 _ = monadEffectMaybe_2_1
@@ -201,7 +201,7 @@ return gopurs_runtime.Apply(__local_var_3_2, gopurs_runtime.Apply(((*gopurs_runt
 func Call_monadAffRWS(dictMonadAff_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadAff_0 gopurs_runtime.Value = dictMonadAff_0_loop
 _ = dictMonadAff_0
-MonadEffect0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAff_0, "MonadEffect0_NOT_FOUND"), gopurs_runtime.Value{})
+MonadEffect0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAff_0, "MonadEffect0"), gopurs_runtime.Value{})
 _ = MonadEffect0_1_0
 Monad0_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(MonadEffect0_1_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_2_1
@@ -227,7 +227,7 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs
 func Call_monadAffReader(dictMonadAff_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadAff_0 gopurs_runtime.Value = dictMonadAff_0_loop
 _ = dictMonadAff_0
-MonadEffect0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAff_0, "MonadEffect0_NOT_FOUND"), gopurs_runtime.Value{})
+MonadEffect0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAff_0, "MonadEffect0"), gopurs_runtime.Value{})
 _ = MonadEffect0_1_0
 monadEffectReader_2_1 := gopurs_runtime.Apply(pkg_Control_Monad_Reader_Trans.Get_monadEffectReader(), MonadEffect0_1_0)
 _ = monadEffectReader_2_1
@@ -243,7 +243,7 @@ return gopurs_runtime.Apply(__local_var_3_2, gopurs_runtime.Apply(((*gopurs_runt
 func Call_monadAffState(dictMonadAff_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadAff_0 gopurs_runtime.Value = dictMonadAff_0_loop
 _ = dictMonadAff_0
-MonadEffect0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAff_0, "MonadEffect0_NOT_FOUND"), gopurs_runtime.Value{})
+MonadEffect0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAff_0, "MonadEffect0"), gopurs_runtime.Value{})
 _ = MonadEffect0_1_0
 monadEffectState_2_1 := gopurs_runtime.Apply(pkg_Control_Monad_State_Trans.Get_monadEffectState(), MonadEffect0_1_0)
 _ = monadEffectState_2_1
@@ -259,7 +259,7 @@ return gopurs_runtime.Apply(__local_var_3_2, gopurs_runtime.Apply(((*gopurs_runt
 func Call_monadAffWriter(dictMonadAff_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadAff_0 gopurs_runtime.Value = dictMonadAff_0_loop
 _ = dictMonadAff_0
-MonadEffect0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAff_0, "MonadEffect0_NOT_FOUND"), gopurs_runtime.Value{})
+MonadEffect0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAff_0, "MonadEffect0"), gopurs_runtime.Value{})
 _ = MonadEffect0_1_0
 Monad0_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(MonadEffect0_1_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_2_1
