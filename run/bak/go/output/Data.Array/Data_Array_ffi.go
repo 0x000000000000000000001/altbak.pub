@@ -261,286 +261,215 @@ var _Gopurs_RangeImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg
 		}()
 })
 func Call_replicateImpl[T any](arg0 int64, arg1 T) []T {
-	return ReplicateImpl(arg0, arg1)
+	return ReplicateImpl[T](arg0, arg1)
 }
 var _Gopurs_ReplicateImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int64](arg0)
-	go_arg1 := gopurs_runtime.Unbox[T](arg1)
-	go_res := ReplicateImpl(go_arg0, go_arg1)
-	return func() gopurs_runtime.Value {
-			res_arr := make([]gopurs_runtime.Value, len(go_res))
-			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
-			return gopurs_runtime.Array(res_arr)
-		}()
+	go_arg1 := arg1
+	go_res := ReplicateImpl[gopurs_runtime.Value](go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
 })
 func Call_length[T any](arg0 []T) int64 {
-	return Length(arg0)
+	return Length[T](arg0)
 }
 var _Gopurs_Length = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
-	arg0_arr := *(*[]gopurs_runtime.Value)(arg0.UnsafePtr)
-	go_arg0 := make([]T, len(arg0_arr))
-	for i, v := range arg0_arr { go_arg0[i] = gopurs_runtime.Unbox[T](v) }
-	go_res := Length(go_arg0)
+	go_arg0 := gopurs_runtime.Unbox[[]gopurs_runtime.Value](arg0)
+	go_res := Length[gopurs_runtime.Value](go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
 func Call_unconsImpl[T any](arg0 func(interface{}) interface{}, arg1 func(T) func([]T) interface{}, arg2 []T) interface{} {
-	return UnconsImpl(arg0, arg1, arg2)
+	return UnconsImpl[T](arg0, arg1, arg2)
 }
 var _Gopurs_UnconsImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 interface{}) interface{} {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
-	go_arg1 := func(p0_0 T) func([]T) interface{} {
-			inner_res0 := gopurs_runtime.Apply(arg1, gopurs_runtime.Box(p0_0))
-			return func(p1_0 []T) interface{} {
+	go_arg1 := func(p0_0 gopurs_runtime.Value) func([]gopurs_runtime.Value) interface{} {
+			inner_res0 := gopurs_runtime.Apply(arg1, p0_0)
+			return func(p1_0 []gopurs_runtime.Value) interface{} {
 			return gopurs_runtime.Apply(inner_res0, gopurs_runtime.Box(p1_0))
 		}
 		}
-	arg2_arr := *(*[]gopurs_runtime.Value)(arg2.UnsafePtr)
-	go_arg2 := make([]T, len(arg2_arr))
-	for i, v := range arg2_arr { go_arg2[i] = gopurs_runtime.Unbox[T](v) }
-	go_res := UnconsImpl(go_arg0, go_arg1, go_arg2)
+	go_arg2 := gopurs_runtime.Unbox[[]gopurs_runtime.Value](arg2)
+	go_res := UnconsImpl[gopurs_runtime.Value](go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
 })
 func Call_indexImpl[T any](arg0 func(T) interface{}, arg1 interface{}, arg2 []T, arg3 int64) interface{} {
-	return IndexImpl(arg0, arg1, arg2, arg3)
+	return IndexImpl[T](arg0, arg1, arg2, arg3)
 }
 var _Gopurs_IndexImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 T) interface{} {
-			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
+	go_arg0 := func(p0_0 gopurs_runtime.Value) interface{} {
+			return gopurs_runtime.Apply(arg0, p0_0)
 		}
 	go_arg1 := arg1
-	arg2_arr := *(*[]gopurs_runtime.Value)(arg2.UnsafePtr)
-	go_arg2 := make([]T, len(arg2_arr))
-	for i, v := range arg2_arr { go_arg2[i] = gopurs_runtime.Unbox[T](v) }
+	go_arg2 := gopurs_runtime.Unbox[[]gopurs_runtime.Value](arg2)
 	go_arg3 := gopurs_runtime.Unbox[int64](arg3)
-	go_res := IndexImpl(go_arg0, go_arg1, go_arg2, go_arg3)
+	go_res := IndexImpl[gopurs_runtime.Value](go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
 })
 func Call__UpdateAt[T any](arg0 func([]T) interface{}, arg1 interface{}, arg2 int64, arg3 T, arg4 []T) interface{} {
-	return _UpdateAt(arg0, arg1, arg2, arg3, arg4)
+	return _UpdateAt[T](arg0, arg1, arg2, arg3, arg4)
 }
 var _Gopurs__UpdateAt = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 []T) interface{} {
+	go_arg0 := func(p0_0 []gopurs_runtime.Value) interface{} {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
 	go_arg1 := arg1
 	go_arg2 := gopurs_runtime.Unbox[int64](arg2)
-	go_arg3 := gopurs_runtime.Unbox[T](arg3)
-	arg4_arr := *(*[]gopurs_runtime.Value)(arg4.UnsafePtr)
-	go_arg4 := make([]T, len(arg4_arr))
-	for i, v := range arg4_arr { go_arg4[i] = gopurs_runtime.Unbox[T](v) }
-	go_res := _UpdateAt(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
+	go_arg3 := arg3
+	go_arg4 := gopurs_runtime.Unbox[[]gopurs_runtime.Value](arg4)
+	go_res := _UpdateAt[gopurs_runtime.Value](go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
 	return gopurs_runtime.Box(go_res)
 })
 func Call__InsertAt[T any](arg0 func([]T) interface{}, arg1 interface{}, arg2 int64, arg3 T, arg4 []T) interface{} {
-	return _InsertAt(arg0, arg1, arg2, arg3, arg4)
+	return _InsertAt[T](arg0, arg1, arg2, arg3, arg4)
 }
 var _Gopurs__InsertAt = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 []T) interface{} {
+	go_arg0 := func(p0_0 []gopurs_runtime.Value) interface{} {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
 	go_arg1 := arg1
 	go_arg2 := gopurs_runtime.Unbox[int64](arg2)
-	go_arg3 := gopurs_runtime.Unbox[T](arg3)
-	arg4_arr := *(*[]gopurs_runtime.Value)(arg4.UnsafePtr)
-	go_arg4 := make([]T, len(arg4_arr))
-	for i, v := range arg4_arr { go_arg4[i] = gopurs_runtime.Unbox[T](v) }
-	go_res := _InsertAt(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
+	go_arg3 := arg3
+	go_arg4 := gopurs_runtime.Unbox[[]gopurs_runtime.Value](arg4)
+	go_res := _InsertAt[gopurs_runtime.Value](go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
 	return gopurs_runtime.Box(go_res)
 })
 func Call__DeleteAt[T any](arg0 func([]T) interface{}, arg1 interface{}, arg2 int64, arg3 []T) interface{} {
-	return _DeleteAt(arg0, arg1, arg2, arg3)
+	return _DeleteAt[T](arg0, arg1, arg2, arg3)
 }
 var _Gopurs__DeleteAt = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 []T) interface{} {
+	go_arg0 := func(p0_0 []gopurs_runtime.Value) interface{} {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
 	go_arg1 := arg1
 	go_arg2 := gopurs_runtime.Unbox[int64](arg2)
-	arg3_arr := *(*[]gopurs_runtime.Value)(arg3.UnsafePtr)
-	go_arg3 := make([]T, len(arg3_arr))
-	for i, v := range arg3_arr { go_arg3[i] = gopurs_runtime.Unbox[T](v) }
-	go_res := _DeleteAt(go_arg0, go_arg1, go_arg2, go_arg3)
+	go_arg3 := gopurs_runtime.Unbox[[]gopurs_runtime.Value](arg3)
+	go_res := _DeleteAt[gopurs_runtime.Value](go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
 })
 func Call_reverse[T any](arg0 []T) []T {
-	return Reverse(arg0)
+	return Reverse[T](arg0)
 }
 var _Gopurs_Reverse = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
-	arg0_arr := *(*[]gopurs_runtime.Value)(arg0.UnsafePtr)
-	go_arg0 := make([]T, len(arg0_arr))
-	for i, v := range arg0_arr { go_arg0[i] = gopurs_runtime.Unbox[T](v) }
-	go_res := Reverse(go_arg0)
-	return func() gopurs_runtime.Value {
-			res_arr := make([]gopurs_runtime.Value, len(go_res))
-			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
-			return gopurs_runtime.Array(res_arr)
-		}()
+	go_arg0 := gopurs_runtime.Unbox[[]gopurs_runtime.Value](arg0)
+	go_res := Reverse[gopurs_runtime.Value](go_arg0)
+	return gopurs_runtime.Box(go_res)
 })
 func Call_concat[T any](arg0 [][]T) []T {
-	return Concat(arg0)
+	return Concat[T](arg0)
 }
 var _Gopurs_Concat = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	arg0_arr := *(*[]gopurs_runtime.Value)(arg0.UnsafePtr)
-	go_arg0 := make([][]T, len(arg0_arr))
-	for i, v := range arg0_arr { go_arg0[i] = gopurs_runtime.Unbox[[]T](v) }
-	go_res := Concat(go_arg0)
-	return func() gopurs_runtime.Value {
-			res_arr := make([]gopurs_runtime.Value, len(go_res))
-			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
-			return gopurs_runtime.Array(res_arr)
-		}()
+	go_arg0 := make([][]gopurs_runtime.Value, len(arg0_arr))
+	for i, v := range arg0_arr { go_arg0[i] = gopurs_runtime.Unbox[[]gopurs_runtime.Value](v) }
+	go_res := Concat[gopurs_runtime.Value](go_arg0)
+	return gopurs_runtime.Box(go_res)
 })
 func Call_filterImpl[T any](arg0 func(T) bool, arg1 []T) []T {
-	return FilterImpl(arg0, arg1)
+	return FilterImpl[T](arg0, arg1)
 }
 var _Gopurs_FilterImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 T) bool {
-			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
+	go_arg0 := func(p0_0 gopurs_runtime.Value) bool {
+			inner_res0 := gopurs_runtime.Apply(arg0, p0_0)
 			return gopurs_runtime.Unbox[bool](inner_res0)
 		}
-	arg1_arr := *(*[]gopurs_runtime.Value)(arg1.UnsafePtr)
-	go_arg1 := make([]T, len(arg1_arr))
-	for i, v := range arg1_arr { go_arg1[i] = gopurs_runtime.Unbox[T](v) }
-	go_res := FilterImpl(go_arg0, go_arg1)
-	return func() gopurs_runtime.Value {
-			res_arr := make([]gopurs_runtime.Value, len(go_res))
-			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
-			return gopurs_runtime.Array(res_arr)
-		}()
+	go_arg1 := gopurs_runtime.Unbox[[]gopurs_runtime.Value](arg1)
+	go_res := FilterImpl[gopurs_runtime.Value](go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
 })
 func Call_sliceImpl[T any](arg0 int64, arg1 int64, arg2 []T) []T {
-	return SliceImpl(arg0, arg1, arg2)
+	return SliceImpl[T](arg0, arg1, arg2)
 }
 var _Gopurs_SliceImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int64](arg0)
 	go_arg1 := gopurs_runtime.Unbox[int64](arg1)
-	arg2_arr := *(*[]gopurs_runtime.Value)(arg2.UnsafePtr)
-	go_arg2 := make([]T, len(arg2_arr))
-	for i, v := range arg2_arr { go_arg2[i] = gopurs_runtime.Unbox[T](v) }
-	go_res := SliceImpl(go_arg0, go_arg1, go_arg2)
-	return func() gopurs_runtime.Value {
-			res_arr := make([]gopurs_runtime.Value, len(go_res))
-			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
-			return gopurs_runtime.Array(res_arr)
-		}()
-})
-func Call_zipWithImpl[T1 any, T2 any, T3 any](arg0 func(T1) func(T2) T3, arg1 []T1, arg2 []T2) []T3 {
-	return ZipWithImpl(arg0, arg1, arg2)
-}
-var _Gopurs_ZipWithImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 T1) func(T2) T3 {
-			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
-			return func(p1_0 T2) T3 {
-			inner_res1 := gopurs_runtime.Apply(inner_res0, gopurs_runtime.Box(p1_0))
-			return gopurs_runtime.Unbox[T3](inner_res1)
-		}
-		}
-	arg1_arr := *(*[]gopurs_runtime.Value)(arg1.UnsafePtr)
-	go_arg1 := make([]T1, len(arg1_arr))
-	for i, v := range arg1_arr { go_arg1[i] = gopurs_runtime.Unbox[T1](v) }
-	arg2_arr := *(*[]gopurs_runtime.Value)(arg2.UnsafePtr)
-	go_arg2 := make([]T2, len(arg2_arr))
-	for i, v := range arg2_arr { go_arg2[i] = gopurs_runtime.Unbox[T2](v) }
-	go_res := ZipWithImpl(go_arg0, go_arg1, go_arg2)
-	return func() gopurs_runtime.Value {
-			res_arr := make([]gopurs_runtime.Value, len(go_res))
-			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
-			return gopurs_runtime.Array(res_arr)
-		}()
-})
-func Call_unsafeIndexImpl[T any](arg0 []T, arg1 int64) T {
-	return UnsafeIndexImpl(arg0, arg1)
-}
-var _Gopurs_UnsafeIndexImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-	arg0_arr := *(*[]gopurs_runtime.Value)(arg0.UnsafePtr)
-	go_arg0 := make([]T, len(arg0_arr))
-	for i, v := range arg0_arr { go_arg0[i] = gopurs_runtime.Unbox[T](v) }
-	go_arg1 := gopurs_runtime.Unbox[int64](arg1)
-	go_res := UnsafeIndexImpl(go_arg0, go_arg1)
+	go_arg2 := gopurs_runtime.Unbox[[]gopurs_runtime.Value](arg2)
+	go_res := SliceImpl[gopurs_runtime.Value](go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
 })
+func Call_zipWithImpl[T1 any, T2 any, T3 any](arg0 func(T1) func(T2) T3, arg1 []T1, arg2 []T2) []T3 {
+	return ZipWithImpl[T1, T2, T3](arg0, arg1, arg2)
+}
+var _Gopurs_ZipWithImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0_0 gopurs_runtime.Value) func(gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res0 := gopurs_runtime.Apply(arg0, p0_0)
+			return func(p1_0 gopurs_runtime.Value) gopurs_runtime.Value {
+			return gopurs_runtime.Apply(inner_res0, p1_0)
+		}
+		}
+	go_arg1 := gopurs_runtime.Unbox[[]gopurs_runtime.Value](arg1)
+	go_arg2 := gopurs_runtime.Unbox[[]gopurs_runtime.Value](arg2)
+	go_res := ZipWithImpl[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value](go_arg0, go_arg1, go_arg2)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_unsafeIndexImpl[T any](arg0 []T, arg1 int64) T {
+	return UnsafeIndexImpl[T](arg0, arg1)
+}
+var _Gopurs_UnsafeIndexImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[[]gopurs_runtime.Value](arg0)
+	go_arg1 := gopurs_runtime.Unbox[int64](arg1)
+	go_res := UnsafeIndexImpl[gopurs_runtime.Value](go_arg0, go_arg1)
+	return go_res
+})
 func Call_sortByImpl[T any](arg0 func(T) func(T) interface{}, arg1 func(interface{}) int64, arg2 []T) []T {
-	return SortByImpl(arg0, arg1, arg2)
+	return SortByImpl[T](arg0, arg1, arg2)
 }
 var _Gopurs_SortByImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 T) func(T) interface{} {
-			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
-			return func(p1_0 T) interface{} {
-			return gopurs_runtime.Apply(inner_res0, gopurs_runtime.Box(p1_0))
+	go_arg0 := func(p0_0 gopurs_runtime.Value) func(gopurs_runtime.Value) interface{} {
+			inner_res0 := gopurs_runtime.Apply(arg0, p0_0)
+			return func(p1_0 gopurs_runtime.Value) interface{} {
+			return gopurs_runtime.Apply(inner_res0, p1_0)
 		}
 		}
 	go_arg1 := func(p0_0 interface{}) int64 {
 			inner_res0 := gopurs_runtime.Apply(arg1, gopurs_runtime.Box(p0_0))
 			return gopurs_runtime.Unbox[int64](inner_res0)
 		}
-	arg2_arr := *(*[]gopurs_runtime.Value)(arg2.UnsafePtr)
-	go_arg2 := make([]T, len(arg2_arr))
-	for i, v := range arg2_arr { go_arg2[i] = gopurs_runtime.Unbox[T](v) }
-	go_res := SortByImpl(go_arg0, go_arg1, go_arg2)
-	return func() gopurs_runtime.Value {
-			res_arr := make([]gopurs_runtime.Value, len(go_res))
-			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
-			return gopurs_runtime.Array(res_arr)
-		}()
+	go_arg2 := gopurs_runtime.Unbox[[]gopurs_runtime.Value](arg2)
+	go_res := SortByImpl[gopurs_runtime.Value](go_arg0, go_arg1, go_arg2)
+	return gopurs_runtime.Box(go_res)
 })
 func Call_scanrImpl[T1 any, T2 any](arg0 func(T1) func(T2) T2, arg1 T2, arg2 []T1) []T2 {
-	return ScanrImpl(arg0, arg1, arg2)
+	return ScanrImpl[T1, T2](arg0, arg1, arg2)
 }
 var _Gopurs_ScanrImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 T1) func(T2) T2 {
-			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
-			return func(p1_0 T2) T2 {
-			inner_res1 := gopurs_runtime.Apply(inner_res0, gopurs_runtime.Box(p1_0))
-			return gopurs_runtime.Unbox[T2](inner_res1)
+	go_arg0 := func(p0_0 gopurs_runtime.Value) func(gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res0 := gopurs_runtime.Apply(arg0, p0_0)
+			return func(p1_0 gopurs_runtime.Value) gopurs_runtime.Value {
+			return gopurs_runtime.Apply(inner_res0, p1_0)
 		}
 		}
-	go_arg1 := gopurs_runtime.Unbox[T2](arg1)
-	arg2_arr := *(*[]gopurs_runtime.Value)(arg2.UnsafePtr)
-	go_arg2 := make([]T1, len(arg2_arr))
-	for i, v := range arg2_arr { go_arg2[i] = gopurs_runtime.Unbox[T1](v) }
-	go_res := ScanrImpl(go_arg0, go_arg1, go_arg2)
-	return func() gopurs_runtime.Value {
-			res_arr := make([]gopurs_runtime.Value, len(go_res))
-			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
-			return gopurs_runtime.Array(res_arr)
-		}()
+	go_arg1 := arg1
+	go_arg2 := gopurs_runtime.Unbox[[]gopurs_runtime.Value](arg2)
+	go_res := ScanrImpl[gopurs_runtime.Value, gopurs_runtime.Value](go_arg0, go_arg1, go_arg2)
+	return gopurs_runtime.Box(go_res)
 })
 func Call_scanlImpl[T1 any, T2 any](arg0 func(T2) func(T1) T2, arg1 T2, arg2 []T1) []T2 {
-	return ScanlImpl(arg0, arg1, arg2)
+	return ScanlImpl[T1, T2](arg0, arg1, arg2)
 }
 var _Gopurs_ScanlImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 T2) func(T1) T2 {
-			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
-			return func(p1_0 T1) T2 {
-			inner_res1 := gopurs_runtime.Apply(inner_res0, gopurs_runtime.Box(p1_0))
-			return gopurs_runtime.Unbox[T2](inner_res1)
+	go_arg0 := func(p0_0 gopurs_runtime.Value) func(gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res0 := gopurs_runtime.Apply(arg0, p0_0)
+			return func(p1_0 gopurs_runtime.Value) gopurs_runtime.Value {
+			return gopurs_runtime.Apply(inner_res0, p1_0)
 		}
 		}
-	go_arg1 := gopurs_runtime.Unbox[T2](arg1)
-	arg2_arr := *(*[]gopurs_runtime.Value)(arg2.UnsafePtr)
-	go_arg2 := make([]T1, len(arg2_arr))
-	for i, v := range arg2_arr { go_arg2[i] = gopurs_runtime.Unbox[T1](v) }
-	go_res := ScanlImpl(go_arg0, go_arg1, go_arg2)
-	return func() gopurs_runtime.Value {
-			res_arr := make([]gopurs_runtime.Value, len(go_res))
-			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
-			return gopurs_runtime.Array(res_arr)
-		}()
+	go_arg1 := arg1
+	go_arg2 := gopurs_runtime.Unbox[[]gopurs_runtime.Value](arg2)
+	go_res := ScanlImpl[gopurs_runtime.Value, gopurs_runtime.Value](go_arg0, go_arg1, go_arg2)
+	return gopurs_runtime.Box(go_res)
 })
 func Call_partitionImpl[T any](arg0 func(T) bool, arg1 []T) map[string]interface{} {
-	return PartitionImpl(arg0, arg1)
+	return PartitionImpl[T](arg0, arg1)
 }
 var _Gopurs_PartitionImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 T) bool {
-			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
+	go_arg0 := func(p0_0 gopurs_runtime.Value) bool {
+			inner_res0 := gopurs_runtime.Apply(arg0, p0_0)
 			return gopurs_runtime.Unbox[bool](inner_res0)
 		}
-	arg1_arr := *(*[]gopurs_runtime.Value)(arg1.UnsafePtr)
-	go_arg1 := make([]T, len(arg1_arr))
-	for i, v := range arg1_arr { go_arg1[i] = gopurs_runtime.Unbox[T](v) }
-	go_res := PartitionImpl(go_arg0, go_arg1)
+	go_arg1 := gopurs_runtime.Unbox[[]gopurs_runtime.Value](arg1)
+	go_res := PartitionImpl[gopurs_runtime.Value](go_arg0, go_arg1)
 	return func() gopurs_runtime.Value {
 			res_map := make(map[string]gopurs_runtime.Value)
 			for k, v := range go_res { res_map[k] = gopurs_runtime.Box(v) }
@@ -561,7 +490,7 @@ var _Gopurs_FromFoldableImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Val
 		}()
 })
 func Call_findMapImpl[T1 any, T2 any](arg0 interface{}, arg1 func(interface{}) bool, arg2 func(T1) interface{}, arg3 []T1) interface{} {
-	return FindMapImpl(arg0, arg1, arg2, arg3)
+	return FindMapImpl[T1, T2](arg0, arg1, arg2, arg3)
 }
 var _Gopurs_FindMapImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
@@ -569,76 +498,66 @@ var _Gopurs_FindMapImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, a
 			inner_res0 := gopurs_runtime.Apply(arg1, gopurs_runtime.Box(p0_0))
 			return gopurs_runtime.Unbox[bool](inner_res0)
 		}
-	go_arg2 := func(p0_0 T1) interface{} {
-			return gopurs_runtime.Apply(arg2, gopurs_runtime.Box(p0_0))
+	go_arg2 := func(p0_0 gopurs_runtime.Value) interface{} {
+			return gopurs_runtime.Apply(arg2, p0_0)
 		}
-	arg3_arr := *(*[]gopurs_runtime.Value)(arg3.UnsafePtr)
-	go_arg3 := make([]T1, len(arg3_arr))
-	for i, v := range arg3_arr { go_arg3[i] = gopurs_runtime.Unbox[T1](v) }
-	go_res := FindMapImpl(go_arg0, go_arg1, go_arg2, go_arg3)
+	go_arg3 := gopurs_runtime.Unbox[[]gopurs_runtime.Value](arg3)
+	go_res := FindMapImpl[gopurs_runtime.Value, gopurs_runtime.Value](go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
 })
 func Call_findLastIndexImpl[T any](arg0 func(int64) interface{}, arg1 interface{}, arg2 func(T) bool, arg3 []T) interface{} {
-	return FindLastIndexImpl(arg0, arg1, arg2, arg3)
+	return FindLastIndexImpl[T](arg0, arg1, arg2, arg3)
 }
 var _Gopurs_FindLastIndexImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 int64) interface{} {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
 	go_arg1 := arg1
-	go_arg2 := func(p0_0 T) bool {
-			inner_res0 := gopurs_runtime.Apply(arg2, gopurs_runtime.Box(p0_0))
+	go_arg2 := func(p0_0 gopurs_runtime.Value) bool {
+			inner_res0 := gopurs_runtime.Apply(arg2, p0_0)
 			return gopurs_runtime.Unbox[bool](inner_res0)
 		}
-	arg3_arr := *(*[]gopurs_runtime.Value)(arg3.UnsafePtr)
-	go_arg3 := make([]T, len(arg3_arr))
-	for i, v := range arg3_arr { go_arg3[i] = gopurs_runtime.Unbox[T](v) }
-	go_res := FindLastIndexImpl(go_arg0, go_arg1, go_arg2, go_arg3)
+	go_arg3 := gopurs_runtime.Unbox[[]gopurs_runtime.Value](arg3)
+	go_res := FindLastIndexImpl[gopurs_runtime.Value](go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
 })
 func Call_findIndexImpl[T any](arg0 func(int64) interface{}, arg1 interface{}, arg2 func(T) bool, arg3 []T) interface{} {
-	return FindIndexImpl(arg0, arg1, arg2, arg3)
+	return FindIndexImpl[T](arg0, arg1, arg2, arg3)
 }
 var _Gopurs_FindIndexImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 int64) interface{} {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
 	go_arg1 := arg1
-	go_arg2 := func(p0_0 T) bool {
-			inner_res0 := gopurs_runtime.Apply(arg2, gopurs_runtime.Box(p0_0))
+	go_arg2 := func(p0_0 gopurs_runtime.Value) bool {
+			inner_res0 := gopurs_runtime.Apply(arg2, p0_0)
 			return gopurs_runtime.Unbox[bool](inner_res0)
 		}
-	arg3_arr := *(*[]gopurs_runtime.Value)(arg3.UnsafePtr)
-	go_arg3 := make([]T, len(arg3_arr))
-	for i, v := range arg3_arr { go_arg3[i] = gopurs_runtime.Unbox[T](v) }
-	go_res := FindIndexImpl(go_arg0, go_arg1, go_arg2, go_arg3)
+	go_arg3 := gopurs_runtime.Unbox[[]gopurs_runtime.Value](arg3)
+	go_res := FindIndexImpl[gopurs_runtime.Value](go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
 })
 func Call_anyImpl[T any](arg0 func(T) bool, arg1 []T) bool {
-	return AnyImpl(arg0, arg1)
+	return AnyImpl[T](arg0, arg1)
 }
 var _Gopurs_AnyImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 T) bool {
-			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
+	go_arg0 := func(p0_0 gopurs_runtime.Value) bool {
+			inner_res0 := gopurs_runtime.Apply(arg0, p0_0)
 			return gopurs_runtime.Unbox[bool](inner_res0)
 		}
-	arg1_arr := *(*[]gopurs_runtime.Value)(arg1.UnsafePtr)
-	go_arg1 := make([]T, len(arg1_arr))
-	for i, v := range arg1_arr { go_arg1[i] = gopurs_runtime.Unbox[T](v) }
-	go_res := AnyImpl(go_arg0, go_arg1)
+	go_arg1 := gopurs_runtime.Unbox[[]gopurs_runtime.Value](arg1)
+	go_res := AnyImpl[gopurs_runtime.Value](go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
 func Call_allImpl[T any](arg0 func(T) bool, arg1 []T) bool {
-	return AllImpl(arg0, arg1)
+	return AllImpl[T](arg0, arg1)
 }
 var _Gopurs_AllImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 T) bool {
-			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
+	go_arg0 := func(p0_0 gopurs_runtime.Value) bool {
+			inner_res0 := gopurs_runtime.Apply(arg0, p0_0)
 			return gopurs_runtime.Unbox[bool](inner_res0)
 		}
-	arg1_arr := *(*[]gopurs_runtime.Value)(arg1.UnsafePtr)
-	go_arg1 := make([]T, len(arg1_arr))
-	for i, v := range arg1_arr { go_arg1[i] = gopurs_runtime.Unbox[T](v) }
-	go_res := AllImpl(go_arg0, go_arg1)
+	go_arg1 := gopurs_runtime.Unbox[[]gopurs_runtime.Value](arg1)
+	go_res := AllImpl[gopurs_runtime.Value](go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
