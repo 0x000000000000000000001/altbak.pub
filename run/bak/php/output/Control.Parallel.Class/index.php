@@ -465,17 +465,17 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($Bind1_1_0)->{'bind'})((($dictMonadEffect_0)->{'liftEffect'})((($GLOBALS['Effect_Ref__new'] ?? \PhpursThunks::eval('Effect_Ref__new')))(new Phpurs_Data0("Nothing")))))(function($ra_5 = null) use ($Bind1_1_0, $dictMonadEffect_0, $k_4, $v1_3, $v_2) {
+  $__res = ((($Bind1_1_0)->{'bind'})((($dictMonadEffect_0)->{'liftEffect'})("TODO_PrimEffect")))(function($ra_5 = null) use ($Bind1_1_0, $dictMonadEffect_0, $k_4, $v1_3, $v_2) {
   $__num = \func_num_args();
-  $__res = ((($Bind1_1_0)->{'bind'})((($dictMonadEffect_0)->{'liftEffect'})((($GLOBALS['Effect_Ref__new'] ?? \PhpursThunks::eval('Effect_Ref__new')))(new Phpurs_Data0("Nothing")))))(function($rb_6 = null) use ($Bind1_1_0, $dictMonadEffect_0, $k_4, $ra_5, $v1_3, $v_2) {
+  $__res = ((($Bind1_1_0)->{'bind'})((($dictMonadEffect_0)->{'liftEffect'})("TODO_PrimEffect")))(function($rb_6 = null) use ($Bind1_1_0, $dictMonadEffect_0, $k_4, $v1_3, $v_2) {
   $__num = \func_num_args();
-  $__res = ((($Bind1_1_0)->{'bind'})(($v_2)(function($a_7 = null) use ($Bind1_1_0, $dictMonadEffect_0, $k_4, $ra_5, $rb_6) {
+  $__res = ((($Bind1_1_0)->{'bind'})(($v_2)(function($a_7 = null) use ($Bind1_1_0, $dictMonadEffect_0, $k_4) {
   $__num = \func_num_args();
-  $__res = ((($Bind1_1_0)->{'bind'})((($dictMonadEffect_0)->{'liftEffect'})((($GLOBALS['Effect_Ref_read'] ?? \PhpursThunks::eval('Effect_Ref_read')))($rb_6))))(function($mb_8 = null) use ($a_7, $dictMonadEffect_0, $k_4, $ra_5) {
+  $__res = ((($Bind1_1_0)->{'bind'})((($dictMonadEffect_0)->{'liftEffect'})("TODO_PrimEffect")))(function($mb_8 = null) use ($a_7, $dictMonadEffect_0, $k_4) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ((is_object($mb_8) && (($mb_8)->{'tag'} === "Nothing"))) {
-$__t1 = (($dictMonadEffect_0)->{'liftEffect'})(((($GLOBALS['Effect_Ref_write'] ?? \PhpursThunks::eval('Effect_Ref_write')))(new Phpurs_Data1("Just", $a_7)))($ra_5));
+$__t1 = (($dictMonadEffect_0)->{'liftEffect'})("TODO_PrimEffect");
 goto end_branch_1;;
 };
   if ((is_object($mb_8) && (($mb_8)->{'tag'} === "Just"))) {
@@ -493,15 +493,15 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))(function($dollar__unused_7 = null) use ($Bind1_1_0, $dictMonadEffect_0, $k_4, $ra_5, $rb_6, $v1_3) {
+})))(function($dollar__unused_7 = null) use ($Bind1_1_0, $dictMonadEffect_0, $k_4, $v1_3) {
   $__num = \func_num_args();
-  $__res = ($v1_3)(function($b_8 = null) use ($Bind1_1_0, $dictMonadEffect_0, $k_4, $ra_5, $rb_6) {
+  $__res = ($v1_3)(function($b_8 = null) use ($Bind1_1_0, $dictMonadEffect_0, $k_4) {
   $__num = \func_num_args();
-  $__res = ((($Bind1_1_0)->{'bind'})((($dictMonadEffect_0)->{'liftEffect'})((($GLOBALS['Effect_Ref_read'] ?? \PhpursThunks::eval('Effect_Ref_read')))($ra_5))))(function($ma_9 = null) use ($b_8, $dictMonadEffect_0, $k_4, $rb_6) {
+  $__res = ((($Bind1_1_0)->{'bind'})((($dictMonadEffect_0)->{'liftEffect'})("TODO_PrimEffect")))(function($ma_9 = null) use ($b_8, $dictMonadEffect_0, $k_4) {
   $__num = \func_num_args();
   $__t2 = null;;
   if ((is_object($ma_9) && (($ma_9)->{'tag'} === "Nothing"))) {
-$__t2 = (($dictMonadEffect_0)->{'liftEffect'})(((($GLOBALS['Effect_Ref_write'] ?? \PhpursThunks::eval('Effect_Ref_write')))(new Phpurs_Data1("Just", $b_8)))($rb_6));
+$__t2 = (($dictMonadEffect_0)->{'liftEffect'})("TODO_PrimEffect");
 goto end_branch_2;;
 };
   if ((is_object($ma_9) && (($ma_9)->{'tag'} === "Just"))) {
@@ -586,18 +586,18 @@ goto end_branch_2;;
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($Bind1_2_1)->{'bind'})((($dictMonadEffect_0)->{'liftEffect'})((($GLOBALS['Effect_Ref__new'] ?? \PhpursThunks::eval('Effect_Ref__new')))(false))))(function($done_8 = null) use ($Bind1_2_1, $__local_var_3_2, $dictMonadEffect_0, $k_7, $v1_6, $v_5) {
+  $__res = ((($Bind1_2_1)->{'bind'})((($dictMonadEffect_0)->{'liftEffect'})("TODO_PrimEffect")))(function($done_8 = null) use ($Bind1_2_1, $__local_var_3_2, $dictMonadEffect_0, $k_7, $v1_6, $v_5) {
   $__num = \func_num_args();
-  $__res = ((($Bind1_2_1)->{'bind'})(($v_5)(function($a_9 = null) use ($Bind1_2_1, $__local_var_3_2, $dictMonadEffect_0, $done_8, $k_7) {
+  $__res = ((($Bind1_2_1)->{'bind'})(($v_5)(function($a_9 = null) use ($Bind1_2_1, $__local_var_3_2, $dictMonadEffect_0, $k_7) {
   $__num = \func_num_args();
-  $__res = ((($Bind1_2_1)->{'bind'})((($dictMonadEffect_0)->{'liftEffect'})((($GLOBALS['Effect_Ref_read'] ?? \PhpursThunks::eval('Effect_Ref_read')))($done_8))))(function($b_10 = null) use ($Bind1_2_1, $__local_var_3_2, $a_9, $dictMonadEffect_0, $done_8, $k_7) {
+  $__res = ((($Bind1_2_1)->{'bind'})((($dictMonadEffect_0)->{'liftEffect'})("TODO_PrimEffect")))(function($b_10 = null) use ($Bind1_2_1, $__local_var_3_2, $a_9, $dictMonadEffect_0, $k_7) {
   $__num = \func_num_args();
   $__t4 = null;;
   if ($b_10) {
 $__t4 = (($__local_var_3_2)->{'pure'})(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
 goto end_branch_4;;
 };
-  $__t4 = ((($Bind1_2_1)->{'bind'})((($dictMonadEffect_0)->{'liftEffect'})(((($GLOBALS['Effect_Ref_write'] ?? \PhpursThunks::eval('Effect_Ref_write')))(true))($done_8))))(function($dollar__unused_11 = null) use ($a_9, $k_7) {
+  $__t4 = ((($Bind1_2_1)->{'bind'})((($dictMonadEffect_0)->{'liftEffect'})("TODO_PrimEffect")))(function($dollar__unused_11 = null) use ($a_9, $k_7) {
   $__num = \func_num_args();
   $__res = ($k_7)($a_9);
   goto __end;;
@@ -613,18 +613,18 @@ goto end_branch_4;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))(function($dollar__unused_9 = null) use ($Bind1_2_1, $__local_var_3_2, $dictMonadEffect_0, $done_8, $k_7, $v1_6) {
+})))(function($dollar__unused_9 = null) use ($Bind1_2_1, $__local_var_3_2, $dictMonadEffect_0, $k_7, $v1_6) {
   $__num = \func_num_args();
-  $__res = ($v1_6)(function($a_10 = null) use ($Bind1_2_1, $__local_var_3_2, $dictMonadEffect_0, $done_8, $k_7) {
+  $__res = ($v1_6)(function($a_10 = null) use ($Bind1_2_1, $__local_var_3_2, $dictMonadEffect_0, $k_7) {
   $__num = \func_num_args();
-  $__res = ((($Bind1_2_1)->{'bind'})((($dictMonadEffect_0)->{'liftEffect'})((($GLOBALS['Effect_Ref_read'] ?? \PhpursThunks::eval('Effect_Ref_read')))($done_8))))(function($b_11 = null) use ($Bind1_2_1, $__local_var_3_2, $a_10, $dictMonadEffect_0, $done_8, $k_7) {
+  $__res = ((($Bind1_2_1)->{'bind'})((($dictMonadEffect_0)->{'liftEffect'})("TODO_PrimEffect")))(function($b_11 = null) use ($Bind1_2_1, $__local_var_3_2, $a_10, $dictMonadEffect_0, $k_7) {
   $__num = \func_num_args();
   $__t5 = null;;
   if ($b_11) {
 $__t5 = (($__local_var_3_2)->{'pure'})(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
 goto end_branch_5;;
 };
-  $__t5 = ((($Bind1_2_1)->{'bind'})((($dictMonadEffect_0)->{'liftEffect'})(((($GLOBALS['Effect_Ref_write'] ?? \PhpursThunks::eval('Effect_Ref_write')))(true))($done_8))))(function($dollar__unused_12 = null) use ($a_10, $k_7) {
+  $__t5 = ((($Bind1_2_1)->{'bind'})((($dictMonadEffect_0)->{'liftEffect'})("TODO_PrimEffect")))(function($dollar__unused_12 = null) use ($a_10, $k_7) {
   $__num = \func_num_args();
   $__res = ($k_7)($a_10);
   goto __end;;

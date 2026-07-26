@@ -134,7 +134,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   }
   $__res = (object)["show" => function($record_3 = null) use ($dictShowRecordFields_2) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("{"))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(((($dictShowRecordFields_2)->{'showRecordFields'})(new Phpurs_Data0("Proxy")))($record_3)))("}"));
+  $__res = (("{" . ((($dictShowRecordFields_2)->{'showRecordFields'})(new Phpurs_Data0("Proxy")))($record_3)) . "}");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -196,7 +196,7 @@ goto end_branch_0;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $key_5_0 = (($dictIsSymbol_0)->{'reflectSymbol'})(new Phpurs_Data0("Proxy"));
-  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(" "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))($key_5_0))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(": "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($dictShow_2)->{'show'})(((($GLOBALS['Record_Unsafe_unsafeGet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeGet')))($key_5_0))($record_4))))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(","))(((($dictShowRecordFields_1)->{'showRecordFields'})(new Phpurs_Data0("Proxy")))($record_4))))));
+  $__res = (((((" " . $key_5_0) . ": ") . (($dictShow_2)->{'show'})(((($GLOBALS['Record_Unsafe_unsafeGet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeGet')))($key_5_0))($record_4))) . ",") . ((($dictShowRecordFields_1)->{'showRecordFields'})(new Phpurs_Data0("Proxy")))($record_4));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -222,7 +222,7 @@ goto end_branch_0;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $key_4_0 = (($dictIsSymbol_0)->{'reflectSymbol'})(new Phpurs_Data0("Proxy"));
-  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(" "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))($key_4_0))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(": "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($dictShow_1)->{'show'})(((($GLOBALS['Record_Unsafe_unsafeGet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeGet')))($key_4_0))($record_3))))(" "))));
+  $__res = ((((" " . $key_4_0) . ": ") . (($dictShow_1)->{'show'})(((($GLOBALS['Record_Unsafe_unsafeGet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeGet')))($key_4_0))($record_3))) . " ");
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

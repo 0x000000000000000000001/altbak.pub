@@ -143,7 +143,8 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }; return $v; };
 \PhpursThunks::$thunks['Effect_monoidEffect'] = function() { $v = function($dictMonoid_0 = null) {
   $__num = \func_num_args();
-  $__res = (object)["mempty" => (($GLOBALS['Effect_pureE'] ?? \PhpursThunks::eval('Effect_pureE')))(($dictMonoid_0)->{'mempty'}), "Semigroup0" => function($dollar__unused_1 = null) use ($dictMonoid_0) {
+  $__local_var_1_0 = ($dictMonoid_0)->{'mempty'};
+  $__res = (object)["mempty" => $__local_var_1_0, "Semigroup0" => function($dollar__unused_1 = null) use ($dictMonoid_0) {
   $__num = \func_num_args();
   $__res = (object)["append" => ((($GLOBALS['Control_Apply_lift2'] ?? \PhpursThunks::eval('Control_Apply_lift2')))(($GLOBALS['Effect_applyEffect'] ?? \PhpursThunks::eval('Effect_applyEffect'))))(((($dictMonoid_0)->{'Semigroup0'})(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->{'append'})];
   goto __end;;

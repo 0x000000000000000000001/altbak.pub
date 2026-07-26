@@ -495,7 +495,7 @@ goto end_branch_0;;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Semigroup_Foldable_foldl1Default'] = function() { $v = function($dictFoldable1_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Semigroup_Foldable_runFoldRight1'] ?? \PhpursThunks::eval('Data_Semigroup_Foldable_runFoldRight1'))))(((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))((($dictFoldable1_0)->{'foldMap1'})(($GLOBALS['Data_Semigroup_Foldable_semigroupDual'] ?? \PhpursThunks::eval('Data_Semigroup_Foldable_semigroupDual')))))(($GLOBALS['Data_Semigroup_Foldable_mkFoldRight1'] ?? \PhpursThunks::eval('Data_Semigroup_Foldable_mkFoldRight1'))));
+  $__local_var_1_0 = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Semigroup_Foldable_runFoldRight1'] ?? \PhpursThunks::eval('Data_Semigroup_Foldable_runFoldRight1'))))(((($dictFoldable1_0)->{'foldMap1'})(($GLOBALS['Data_Semigroup_Foldable_semigroupDual'] ?? \PhpursThunks::eval('Data_Semigroup_Foldable_semigroupDual'))))(($GLOBALS['Data_Semigroup_Foldable_mkFoldRight1'] ?? \PhpursThunks::eval('Data_Semigroup_Foldable_mkFoldRight1'))));
   $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((function() use ($__local_var_1_0) {
   $__fn = function($b_2 = null, $a_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -625,7 +625,7 @@ goto end_branch_1;;
 })()];
   $__res = function($dictFoldable1_2 = null) use ($semigroupMax_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(((($dictFoldable1_2)->{'foldMap1'})($semigroupMax_1_0))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))));
+  $__res = ((($dictFoldable1_2)->{'foldMap1'})($semigroupMax_1_0))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -668,7 +668,7 @@ goto end_branch_1;;
 })()];
   $__res = function($dictFoldable1_2 = null) use ($semigroupMin_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(((($dictFoldable1_2)->{'foldMap1'})($semigroupMin_1_0))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce'))));
+  $__res = ((($dictFoldable1_2)->{'foldMap1'})($semigroupMin_1_0))(($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

@@ -101,7 +101,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 \PhpursThunks::$thunks['Control_Comonad_Env_withEnv'] = function() { $v = ($GLOBALS['Control_Comonad_Env_Trans_withEnvT'] ?? \PhpursThunks::eval('Control_Comonad_Env_Trans_withEnvT')); return $v; };
 \PhpursThunks::$thunks['Control_Comonad_Env_runEnv'] = function() { $v = function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = new Phpurs_Data2("Tuple", ($v_0)->{'value0'}, (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(($v_0)->{'value1'}));
+  $__res = new Phpurs_Data2("Tuple", ($v_0)->{'value0'}, ($v_0)->{'value1'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

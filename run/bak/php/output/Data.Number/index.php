@@ -103,7 +103,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 \PhpursThunks::$thunks['Data_Number_ln10'] = function() { $v = 2.302585092994046; return $v; };
 \PhpursThunks::$thunks['Data_Number_fromString'] = function() { $v = function($str_0 = null) {
   $__num = \func_num_args();
-  $__res = (((((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Number_fromStringImpl'] ?? \PhpursThunks::eval('Data_Number_fromStringImpl'))))($str_0))(($GLOBALS['Data_Number_isFinite'] ?? \PhpursThunks::eval('Data_Number_isFinite'))))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))(new Phpurs_Data0("Nothing"));
+  $__res = (($GLOBALS['Data_Number_fromStringImpl'] ?? \PhpursThunks::eval('Data_Number_fromStringImpl')))($str_0, ($GLOBALS['Data_Number_isFinite'] ?? \PhpursThunks::eval('Data_Number_isFinite')), ($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')), new Phpurs_Data0("Nothing"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

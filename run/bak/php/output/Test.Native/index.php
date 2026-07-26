@@ -123,8 +123,8 @@ default:
 ;
 break;
 };
-  $__tco_0 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1);
-  $__tco_1 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($v1_1))(1);
+  $__tco_0 = ($v_0 - 1);
+  $__tco_1 = ($v1_1 + 1);
   $__tco_var_Test_Native_loopNative_v_0 = $__tco_0;
   $__tco_var_Test_Native_loopNative_v1_1 = $__tco_1;
   $__tco_done_Test_Native_loopNative = false;

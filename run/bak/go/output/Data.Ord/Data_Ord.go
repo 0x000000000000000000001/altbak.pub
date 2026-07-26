@@ -6,7 +6,6 @@ import (
 	pkg_Data_Eq "gopurs/output/Data.Eq"
 	pkg_Data_Ordering "gopurs/output/Data.Ordering"
 	pkg_Record_Unsafe "gopurs/output/Record.Unsafe"
-	unsafe "unsafe"
 )
 
 var cache_ordVoid gopurs_runtime.Value
@@ -218,7 +217,7 @@ var once_compareRecord sync.Once
 func Get_compareRecord() gopurs_runtime.Value {
 	once_compareRecord.Do(func() {
 		cache_compareRecord = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_compareRecord((*Record_compareRecord_gopurs_runtime_Value)(dict_0_box.UnsafePtr))
+return Call_compareRecord(dict_0_box)
 })
 	})
 	return cache_compareRecord
@@ -229,7 +228,7 @@ var once_ordRecord sync.Once
 func Get_ordRecord() gopurs_runtime.Value {
 	once_ordRecord.Do(func() {
 		cache_ordRecord = gopurs_runtime.Func2(func(_dollar__unused_0_box gopurs_runtime.Value, dictOrdRecord_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_ordRecord((*Record_)(_dollar__unused_0_box.UnsafePtr), (*Record_compareRecord_gopurs_runtime_Value)(dictOrdRecord_1_box.UnsafePtr))
+return Call_ordRecord(_dollar__unused_0_box, dictOrdRecord_1_box)
 })
 	})
 	return cache_ordRecord
@@ -240,7 +239,7 @@ var once_compare1 sync.Once
 func Get_compare1() gopurs_runtime.Value {
 	once_compare1.Do(func() {
 		cache_compare1 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_compare1((*Record_compare1_gopurs_runtime_Value)(dict_0_box.UnsafePtr))
+return Call_compare1(dict_0_box)
 })
 	})
 	return cache_compare1
@@ -251,7 +250,7 @@ var once_compare sync.Once
 func Get_compare() gopurs_runtime.Value {
 	once_compare.Do(func() {
 		cache_compare = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_compare((*Record_compare_gopurs_runtime_Value)(dict_0_box.UnsafePtr))
+return Call_compare(dict_0_box)
 })
 	})
 	return cache_compare
@@ -271,7 +270,7 @@ var once_comparing sync.Once
 func Get_comparing() gopurs_runtime.Value {
 	once_comparing.Do(func() {
 		cache_comparing = gopurs_runtime.Func4(func(dictOrd_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value, y_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_comparing((*Record_compare_gopurs_runtime_Value)(dictOrd_0_box.UnsafePtr), f_1_box, x_2_box, y_3_box)
+return Call_comparing(dictOrd_0_box, f_1_box, x_2_box, y_3_box)
 })
 	})
 	return cache_comparing
@@ -282,7 +281,7 @@ var once_greaterThan sync.Once
 func Get_greaterThan() gopurs_runtime.Value {
 	once_greaterThan.Do(func() {
 		cache_greaterThan = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_greaterThan((*Record_compare_gopurs_runtime_Value)(dictOrd_0_box.UnsafePtr), a1_1_box, a2_2_box))
+return gopurs_runtime.Bool(Call_greaterThan(dictOrd_0_box, a1_1_box, a2_2_box))
 })
 	})
 	return cache_greaterThan
@@ -293,7 +292,7 @@ var once_greaterThanOrEq sync.Once
 func Get_greaterThanOrEq() gopurs_runtime.Value {
 	once_greaterThanOrEq.Do(func() {
 		cache_greaterThanOrEq = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_greaterThanOrEq((*Record_compare_gopurs_runtime_Value)(dictOrd_0_box.UnsafePtr), a1_1_box, a2_2_box))
+return gopurs_runtime.Bool(Call_greaterThanOrEq(dictOrd_0_box, a1_1_box, a2_2_box))
 })
 	})
 	return cache_greaterThanOrEq
@@ -304,7 +303,7 @@ var once_lessThan sync.Once
 func Get_lessThan() gopurs_runtime.Value {
 	once_lessThan.Do(func() {
 		cache_lessThan = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_lessThan((*Record_compare_gopurs_runtime_Value)(dictOrd_0_box.UnsafePtr), a1_1_box, a2_2_box))
+return gopurs_runtime.Bool(Call_lessThan(dictOrd_0_box, a1_1_box, a2_2_box))
 })
 	})
 	return cache_lessThan
@@ -315,7 +314,7 @@ var once_signum sync.Once
 func Get_signum() gopurs_runtime.Value {
 	once_signum.Do(func() {
 		cache_signum = gopurs_runtime.Func2(func(dictOrd_0_box gopurs_runtime.Value, dictRing_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_signum((*Record_compare_gopurs_runtime_Value)(dictOrd_0_box.UnsafePtr), (*Record_sub_gopurs_runtime_Value)(dictRing_1_box.UnsafePtr))
+return Call_signum(dictOrd_0_box, dictRing_1_box)
 })
 	})
 	return cache_signum
@@ -326,7 +325,7 @@ var once_lessThanOrEq sync.Once
 func Get_lessThanOrEq() gopurs_runtime.Value {
 	once_lessThanOrEq.Do(func() {
 		cache_lessThanOrEq = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_lessThanOrEq((*Record_compare_gopurs_runtime_Value)(dictOrd_0_box.UnsafePtr), a1_1_box, a2_2_box))
+return gopurs_runtime.Bool(Call_lessThanOrEq(dictOrd_0_box, a1_1_box, a2_2_box))
 })
 	})
 	return cache_lessThanOrEq
@@ -337,7 +336,7 @@ var once_max sync.Once
 func Get_max() gopurs_runtime.Value {
 	once_max.Do(func() {
 		cache_max = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value, y_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_max((*Record_compare_gopurs_runtime_Value)(dictOrd_0_box.UnsafePtr), x_1_box, y_2_box)
+return Call_max(dictOrd_0_box, x_1_box, y_2_box)
 })
 	})
 	return cache_max
@@ -348,7 +347,7 @@ var once_min sync.Once
 func Get_min() gopurs_runtime.Value {
 	once_min.Do(func() {
 		cache_min = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value, y_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_min((*Record_compare_gopurs_runtime_Value)(dictOrd_0_box.UnsafePtr), x_1_box, y_2_box)
+return Call_min(dictOrd_0_box, x_1_box, y_2_box)
 })
 	})
 	return cache_min
@@ -359,7 +358,7 @@ var once_ordArray sync.Once
 func Get_ordArray() gopurs_runtime.Value {
 	once_ordArray.Do(func() {
 		cache_ordArray = gopurs_runtime.Func(func(dictOrd_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_ordArray((*Record_compare_gopurs_runtime_Value)(dictOrd_0_box.UnsafePtr))
+return Call_ordArray(dictOrd_0_box)
 })
 	})
 	return cache_ordArray
@@ -383,7 +382,7 @@ var once_ordRecordCons sync.Once
 func Get_ordRecordCons() gopurs_runtime.Value {
 	once_ordRecordCons.Do(func() {
 		cache_ordRecordCons = gopurs_runtime.Func(func(dictOrdRecord_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_ordRecordCons((*Record_compareRecord_gopurs_runtime_Value)(dictOrdRecord_0_box.UnsafePtr))
+return Call_ordRecordCons(dictOrdRecord_0_box)
 })
 	})
 	return cache_ordRecordCons
@@ -394,7 +393,7 @@ var once_clamp sync.Once
 func Get_clamp() gopurs_runtime.Value {
 	once_clamp.Do(func() {
 		cache_clamp = gopurs_runtime.Func4(func(dictOrd_0_box gopurs_runtime.Value, low_1_box gopurs_runtime.Value, hi_2_box gopurs_runtime.Value, x_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_clamp((*Record_compare_gopurs_runtime_Value)(dictOrd_0_box.UnsafePtr), low_1_box, hi_2_box, x_3_box)
+return Call_clamp(dictOrd_0_box, low_1_box, hi_2_box, x_3_box)
 })
 	})
 	return cache_clamp
@@ -405,7 +404,7 @@ var once_between sync.Once
 func Get_between() gopurs_runtime.Value {
 	once_between.Do(func() {
 		cache_between = gopurs_runtime.Func4(func(dictOrd_0_box gopurs_runtime.Value, low_1_box gopurs_runtime.Value, hi_2_box gopurs_runtime.Value, x_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_between((*Record_compare_gopurs_runtime_Value)(dictOrd_0_box.UnsafePtr), low_1_box, hi_2_box, x_3_box)
+return Call_between(dictOrd_0_box, low_1_box, hi_2_box, x_3_box)
 })
 	})
 	return cache_between
@@ -416,526 +415,44 @@ var once_abs sync.Once
 func Get_abs() gopurs_runtime.Value {
 	once_abs.Do(func() {
 		cache_abs = gopurs_runtime.Func2(func(dictOrd_0_box gopurs_runtime.Value, dictRing_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_abs((*Record_compare_gopurs_runtime_Value)(dictOrd_0_box.UnsafePtr), (*Record_sub_gopurs_runtime_Value)(dictRing_1_box.UnsafePtr))
+return Call_abs(dictOrd_0_box, dictRing_1_box)
 })
 	})
 	return cache_abs
 }
 
-type Record_alt_gopurs_runtime_Value struct {
-	alt gopurs_runtime.Value
-}
-
-type Record_ struct {
-	
-}
-
-type Record_pure_gopurs_runtime_Value struct {
-	pure gopurs_runtime.Value
-}
-
-type Record_apply_gopurs_runtime_Value struct {
-	apply gopurs_runtime.Value
-}
-
-type Record_bipure_gopurs_runtime_Value struct {
-	bipure gopurs_runtime.Value
-}
-
-type Record_biapply_gopurs_runtime_Value struct {
-	biapply gopurs_runtime.Value
-}
-
-type Record_bind_gopurs_runtime_Value struct {
-	bind gopurs_runtime.Value
-}
-
-type Record_discard_gopurs_runtime_Value struct {
-	discard gopurs_runtime.Value
-}
-
-type Record_identity_gopurs_runtime_Value struct {
-	identity gopurs_runtime.Value
-}
-
-type Record_ask_gopurs_runtime_Value struct {
-	ask gopurs_runtime.Value
-}
-
-type Record_local_gopurs_runtime_Value struct {
-	local gopurs_runtime.Value
-}
-
-type Record_peek_gopurs_runtime_Value_pos_gopurs_runtime_Value struct {
-	peek gopurs_runtime.Value
-	pos gopurs_runtime.Value
-}
-
-type Record_track_gopurs_runtime_Value struct {
-	track gopurs_runtime.Value
-}
-
-type Record_extract_gopurs_runtime_Value struct {
-	extract gopurs_runtime.Value
-}
-
-type Record_extend_gopurs_runtime_Value struct {
-	extend gopurs_runtime.Value
-}
-
-type Record_defer__gopurs_runtime_Value struct {
-	defer_ gopurs_runtime.Value
-}
-
-type Record_callCC_gopurs_runtime_Value struct {
-	callCC gopurs_runtime.Value
-}
-
-type Record_catchError_gopurs_runtime_Value struct {
-	catchError gopurs_runtime.Value
-}
-
-type Record_throwError_gopurs_runtime_Value struct {
-	throwError gopurs_runtime.Value
-}
-
-type Record_chooseBool_gopurs_runtime_Value_chooseFloat_gopurs_runtime_Value_chooseInt_gopurs_runtime_Value_resize_gopurs_runtime_Value_sized_gopurs_runtime_Value struct {
-	chooseBool gopurs_runtime.Value
-	chooseFloat gopurs_runtime.Value
-	chooseInt gopurs_runtime.Value
-	resize gopurs_runtime.Value
-	sized gopurs_runtime.Value
-}
-
-type Record_foldMap1_gopurs_runtime_Value_foldl1_gopurs_runtime_Value_foldr1_gopurs_runtime_Value struct {
-	foldMap1 gopurs_runtime.Value
-	foldl1 gopurs_runtime.Value
-	foldr1 gopurs_runtime.Value
-}
-
-type Record_append__gopurs_runtime_Value struct {
-	append_ gopurs_runtime.Value
-}
-
-type Record_tailRecM_gopurs_runtime_Value struct {
-	tailRecM gopurs_runtime.Value
-}
-
-type Record_unfoldr_gopurs_runtime_Value struct {
-	unfoldr gopurs_runtime.Value
-}
-
-type Record_map__gopurs_runtime_Value struct {
-	map_ gopurs_runtime.Value
-}
-
-type Record_state_gopurs_runtime_Value struct {
-	state gopurs_runtime.Value
-}
-
-type Record_lift_gopurs_runtime_Value struct {
-	lift gopurs_runtime.Value
-}
-
-type Record_listen_gopurs_runtime_Value_pass_gopurs_runtime_Value struct {
-	listen gopurs_runtime.Value
-	pass gopurs_runtime.Value
-}
-
-type Record_parallel_gopurs_runtime_Value_sequential_gopurs_runtime_Value struct {
-	parallel gopurs_runtime.Value
-	sequential gopurs_runtime.Value
-}
-
-type Record_foldMap_gopurs_runtime_Value_foldl_gopurs_runtime_Value_foldr_gopurs_runtime_Value struct {
-	foldMap gopurs_runtime.Value
-	foldl gopurs_runtime.Value
-	foldr gopurs_runtime.Value
-}
-
-type Record_mempty_gopurs_runtime_Value struct {
-	mempty gopurs_runtime.Value
-}
-
-type Record_sequence_gopurs_runtime_Value_traverse_gopurs_runtime_Value struct {
-	sequence gopurs_runtime.Value
-	traverse gopurs_runtime.Value
-}
-
-type Record_empty_gopurs_runtime_Value struct {
-	empty gopurs_runtime.Value
-}
-
-type Record_compose_gopurs_runtime_Value struct {
-	compose gopurs_runtime.Value
-}
-
-type Record_eq_gopurs_runtime_Value struct {
-	eq gopurs_runtime.Value
-}
-
-type Record_compare_gopurs_runtime_Value struct {
-	compare gopurs_runtime.Value
-}
-
-type Record_bifoldMap_gopurs_runtime_Value_bifoldl_gopurs_runtime_Value_bifoldr_gopurs_runtime_Value struct {
-	bifoldMap gopurs_runtime.Value
-	bifoldl gopurs_runtime.Value
-	bifoldr gopurs_runtime.Value
-}
-
-type Record_bimap_gopurs_runtime_Value struct {
-	bimap gopurs_runtime.Value
-}
-
-type Record_bisequence_gopurs_runtime_Value_bitraverse_gopurs_runtime_Value struct {
-	bisequence gopurs_runtime.Value
-	bitraverse gopurs_runtime.Value
-}
-
-type Record_genericBottom_prime_gopurs_runtime_Value struct {
-	genericBottom_prime gopurs_runtime.Value
-}
-
-type Record_genericTop_prime_gopurs_runtime_Value struct {
-	genericTop_prime gopurs_runtime.Value
-}
-
-type Record_bottom_gopurs_runtime_Value_top_gopurs_runtime_Value struct {
-	bottom gopurs_runtime.Value
-	top gopurs_runtime.Value
-}
-
-type Record_lose_gopurs_runtime_Value struct {
-	lose gopurs_runtime.Value
-}
-
-type Record_choose_gopurs_runtime_Value struct {
-	choose gopurs_runtime.Value
-}
-
-type Record_collect_gopurs_runtime_Value_distribute_gopurs_runtime_Value struct {
-	collect gopurs_runtime.Value
-	distribute gopurs_runtime.Value
-}
-
-type Record_divide_gopurs_runtime_Value struct {
-	divide gopurs_runtime.Value
-}
-
-type Record_recip_gopurs_runtime_Value struct {
-	recip gopurs_runtime.Value
-}
-
-type Record_genericCardinality_prime_gopurs_runtime_Value_genericFromEnum_prime_gopurs_runtime_Value_genericToEnum_prime_gopurs_runtime_Value struct {
-	genericCardinality_prime gopurs_runtime.Value
-	genericFromEnum_prime gopurs_runtime.Value
-	genericToEnum_prime gopurs_runtime.Value
-}
-
-type Record_genericPred_prime_gopurs_runtime_Value_genericSucc_prime_gopurs_runtime_Value struct {
-	genericPred_prime gopurs_runtime.Value
-	genericSucc_prime gopurs_runtime.Value
-}
-
-type Record_pred_gopurs_runtime_Value_succ_gopurs_runtime_Value struct {
-	pred gopurs_runtime.Value
-	succ gopurs_runtime.Value
-}
-
-type Record_unfoldr1_gopurs_runtime_Value struct {
-	unfoldr1 gopurs_runtime.Value
-}
-
-type Record_cardinality_gopurs_runtime_Value_fromEnum_gopurs_runtime_Value_toEnum_gopurs_runtime_Value struct {
-	cardinality gopurs_runtime.Value
-	fromEnum gopurs_runtime.Value
-	toEnum gopurs_runtime.Value
-}
-
-type Record_genericEq_prime_gopurs_runtime_Value struct {
-	genericEq_prime gopurs_runtime.Value
-}
-
-type Record_eq1_gopurs_runtime_Value struct {
-	eq1 gopurs_runtime.Value
-}
-
-type Record_degree_gopurs_runtime_Value_div_gopurs_runtime_Value_mod_gopurs_runtime_Value struct {
-	degree gopurs_runtime.Value
-	div gopurs_runtime.Value
-	mod gopurs_runtime.Value
-}
-
-type Record_conj_gopurs_runtime_Value_disj_gopurs_runtime_Value_ff_gopurs_runtime_Value_implies_gopurs_runtime_Value_not_gopurs_runtime_Value_tt_gopurs_runtime_Value struct {
-	conj gopurs_runtime.Value
-	disj gopurs_runtime.Value
-	ff gopurs_runtime.Value
-	implies gopurs_runtime.Value
-	not gopurs_runtime.Value
-	tt gopurs_runtime.Value
-}
-
-type Record_add_gopurs_runtime_Value_mul_gopurs_runtime_Value_one_gopurs_runtime_Value_zero_gopurs_runtime_Value struct {
-	add gopurs_runtime.Value
-	mul gopurs_runtime.Value
-	one gopurs_runtime.Value
-	zero gopurs_runtime.Value
-}
-
-type Record_foldMapWithIndex_gopurs_runtime_Value_foldlWithIndex_gopurs_runtime_Value_foldrWithIndex_gopurs_runtime_Value struct {
-	foldMapWithIndex gopurs_runtime.Value
-	foldlWithIndex gopurs_runtime.Value
-	foldrWithIndex gopurs_runtime.Value
-}
-
-type Record_cmap_gopurs_runtime_Value struct {
-	cmap gopurs_runtime.Value
-}
-
-type Record_imap_gopurs_runtime_Value struct {
-	imap gopurs_runtime.Value
-}
-
-type Record_mapWithIndex_gopurs_runtime_Value struct {
-	mapWithIndex gopurs_runtime.Value
-}
-
-type Record_from_gopurs_runtime_Value_to_gopurs_runtime_Value struct {
-	from gopurs_runtime.Value
-	to gopurs_runtime.Value
-}
-
-type Record_genericConj_prime_gopurs_runtime_Value_genericDisj_prime_gopurs_runtime_Value_genericFF_prime_gopurs_runtime_Value_genericImplies_prime_gopurs_runtime_Value_genericNot_prime_gopurs_runtime_Value_genericTT_prime_gopurs_runtime_Value struct {
-	genericConj_prime gopurs_runtime.Value
-	genericDisj_prime gopurs_runtime.Value
-	genericFF_prime gopurs_runtime.Value
-	genericImplies_prime gopurs_runtime.Value
-	genericNot_prime gopurs_runtime.Value
-	genericTT_prime gopurs_runtime.Value
-}
-
-type Record_conj_gopurs_runtime_Value_disj_gopurs_runtime_Value_ff_bool_implies_gopurs_runtime_Value_not_gopurs_runtime_Value_tt_bool struct {
-	conj gopurs_runtime.Value
-	disj gopurs_runtime.Value
-	ff bool
-	implies gopurs_runtime.Value
-	not gopurs_runtime.Value
-	tt bool
-}
-
-type Record_genericMempty_prime_gopurs_runtime_Value struct {
-	genericMempty_prime gopurs_runtime.Value
-}
-
-type Record_genericCompare_prime_gopurs_runtime_Value struct {
-	genericCompare_prime gopurs_runtime.Value
-}
-
-type Record_sub_gopurs_runtime_Value struct {
-	sub gopurs_runtime.Value
-}
-
-type Record_compare1_gopurs_runtime_Value struct {
-	compare1 gopurs_runtime.Value
-}
-
-type Record_left_gopurs_runtime_Value_right_gopurs_runtime_Value struct {
-	left gopurs_runtime.Value
-	right gopurs_runtime.Value
-}
-
-type Record_first_gopurs_runtime_Value_second_gopurs_runtime_Value struct {
-	first gopurs_runtime.Value
-	second gopurs_runtime.Value
-}
-
-type Record_dimap_gopurs_runtime_Value struct {
-	dimap gopurs_runtime.Value
-}
-
-type Record_genericSub_prime_gopurs_runtime_Value struct {
-	genericSub_prime gopurs_runtime.Value
-}
-
-type Record_genericAppend_prime_gopurs_runtime_Value struct {
-	genericAppend_prime gopurs_runtime.Value
-}
-
-type Record_sequence1_gopurs_runtime_Value_traverse1_gopurs_runtime_Value struct {
-	sequence1 gopurs_runtime.Value
-	traverse1 gopurs_runtime.Value
-}
-
-type Record_genericAdd_prime_gopurs_runtime_Value_genericMul_prime_gopurs_runtime_Value_genericOne_prime_gopurs_runtime_Value_genericZero_prime_gopurs_runtime_Value struct {
-	genericAdd_prime gopurs_runtime.Value
-	genericMul_prime gopurs_runtime.Value
-	genericOne_prime gopurs_runtime.Value
-	genericZero_prime gopurs_runtime.Value
-}
-
-type Record_genericShow_prime_gopurs_runtime_Value struct {
-	genericShow_prime gopurs_runtime.Value
-}
-
-type Record_genericShowArgs_gopurs_runtime_Value struct {
-	genericShowArgs gopurs_runtime.Value
-}
-
-type Record_show_gopurs_runtime_Value struct {
-	show gopurs_runtime.Value
-}
-
-type Record_fromDuration_gopurs_runtime_Value_toDuration_gopurs_runtime_Value struct {
-	fromDuration gopurs_runtime.Value
-	toDuration gopurs_runtime.Value
-}
-
-type Record_traverseWithIndex_gopurs_runtime_Value struct {
-	traverseWithIndex gopurs_runtime.Value
-}
-
-type Record_liftEffect_gopurs_runtime_Value struct {
-	liftEffect gopurs_runtime.Value
-}
-
-type Record_mappend__gopurs_runtime_Value_mempty__gopurs_runtime_Value struct {
-	mappend_ gopurs_runtime.Value
-	mempty_ gopurs_runtime.Value
-}
-
-type Record_proof_gopurs_runtime_Value struct {
-	proof gopurs_runtime.Value
-}
-
-type Record_lower_gopurs_runtime_Value struct {
-	lower gopurs_runtime.Value
-}
-
-type Record_liftST_gopurs_runtime_Value struct {
-	liftST gopurs_runtime.Value
-}
-
-type Record_tell_gopurs_runtime_Value struct {
-	tell gopurs_runtime.Value
-}
-
-type Record_reflectSymbol_gopurs_runtime_Value struct {
-	reflectSymbol gopurs_runtime.Value
-}
-
-type Record_bottomRecord_gopurs_runtime_Value_topRecord_gopurs_runtime_Value struct {
-	bottomRecord gopurs_runtime.Value
-	topRecord gopurs_runtime.Value
-}
-
-type Record_conquer_gopurs_runtime_Value struct {
-	conquer gopurs_runtime.Value
-}
-
-type Record_inj_gopurs_runtime_Value_prj_gopurs_runtime_Value struct {
-	inj gopurs_runtime.Value
-	prj gopurs_runtime.Value
-}
-
-type Record_eqRecord_gopurs_runtime_Value struct {
-	eqRecord gopurs_runtime.Value
-}
-
-type Record_conjRecord_gopurs_runtime_Value_disjRecord_gopurs_runtime_Value_ffRecord_gopurs_runtime_Value_impliesRecord_gopurs_runtime_Value_notRecord_gopurs_runtime_Value_ttRecord_gopurs_runtime_Value struct {
-	conjRecord gopurs_runtime.Value
-	disjRecord gopurs_runtime.Value
-	ffRecord gopurs_runtime.Value
-	impliesRecord gopurs_runtime.Value
-	notRecord gopurs_runtime.Value
-	ttRecord gopurs_runtime.Value
-}
-
-type Record_memptyRecord_gopurs_runtime_Value struct {
-	memptyRecord gopurs_runtime.Value
-}
-
-type Record_compareRecord_gopurs_runtime_Value struct {
-	compareRecord gopurs_runtime.Value
-}
-
-type Record_closed_gopurs_runtime_Value struct {
-	closed gopurs_runtime.Value
-}
-
-type Record_unleft_gopurs_runtime_Value_unright_gopurs_runtime_Value struct {
-	unleft gopurs_runtime.Value
-	unright gopurs_runtime.Value
-}
-
-type Record_unfirst_gopurs_runtime_Value_unsecond_gopurs_runtime_Value struct {
-	unfirst gopurs_runtime.Value
-	unsecond gopurs_runtime.Value
-}
-
-type Record_reflectType_gopurs_runtime_Value struct {
-	reflectType gopurs_runtime.Value
-}
-
-type Record_subRecord_gopurs_runtime_Value struct {
-	subRecord gopurs_runtime.Value
-}
-
-type Record_appendRecord_gopurs_runtime_Value struct {
-	appendRecord gopurs_runtime.Value
-}
-
-type Record_addRecord_gopurs_runtime_Value_mulRecord_gopurs_runtime_Value_oneRecord_gopurs_runtime_Value_zeroRecord_gopurs_runtime_Value struct {
-	addRecord gopurs_runtime.Value
-	mulRecord gopurs_runtime.Value
-	oneRecord gopurs_runtime.Value
-	zeroRecord gopurs_runtime.Value
-}
-
-type Record_showRecordFields_gopurs_runtime_Value struct {
-	showRecordFields gopurs_runtime.Value
-}
-
-type Record_nes_gopurs_runtime_Value struct {
-	nes gopurs_runtime.Value
-}
-
-type Record_liftAff_gopurs_runtime_Value struct {
-	liftAff gopurs_runtime.Value
-}
-
-func Call_compareRecord(dict_0_loop *Record_compareRecord_gopurs_runtime_Value) gopurs_runtime.Value {
-var dict_0 *Record_compareRecord_gopurs_runtime_Value = dict_0_loop
+func Call_compareRecord(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return dict_0.compareRecord
+return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
 }
 
-func Call_ordRecord(_dollar__unused_0_loop *Record_, dictOrdRecord_1_loop *Record_compareRecord_gopurs_runtime_Value) gopurs_runtime.Value {
-var _dollar__unused_0 *Record_ = _dollar__unused_0_loop
+func Call_ordRecord(_dollar__unused_0_loop gopurs_runtime.Value, dictOrdRecord_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
-var dictOrdRecord_1 *Record_compareRecord_gopurs_runtime_Value = dictOrdRecord_1_loop
+var dictOrdRecord_1 gopurs_runtime.Value = dictOrdRecord_1_loop
 _ = dictOrdRecord_1
-eqRec1_2_0 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Value{Type: 8, IntVal: 0, UnsafePtr: unsafe.Pointer(dictOrdRecord_1)}, "EqRecord0_NOT_FOUND"), gopurs_runtime.Value{}), "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}))
+eqRec1_2_0 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrdRecord_1, "EqRecord0_NOT_FOUND"), gopurs_runtime.Value{}), "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}))
 _ = eqRec1_2_0
 return gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return eqRec1_2_0
-}), gopurs_runtime.Apply(dictOrdRecord_1.compareRecord, gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}))
+}), gopurs_runtime.Apply(((*gopurs_runtime.RecordData1)(dictOrdRecord_1.UnsafePtr)).V0, gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}))
 }
 
-func Call_compare1(dict_0_loop *Record_compare1_gopurs_runtime_Value) gopurs_runtime.Value {
-var dict_0 *Record_compare1_gopurs_runtime_Value = dict_0_loop
+func Call_compare1(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return dict_0.compare1
+return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
 }
 
-func Call_compare(dict_0_loop *Record_compare_gopurs_runtime_Value) gopurs_runtime.Value {
-var dict_0 *Record_compare_gopurs_runtime_Value = dict_0_loop
+func Call_compare(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return dict_0.compare
+return ((*gopurs_runtime.RecordData1)(dict_0.UnsafePtr)).V0
 }
 
-func Call_comparing(dictOrd_0_loop *Record_compare_gopurs_runtime_Value, f_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value, y_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictOrd_0 *Record_compare_gopurs_runtime_Value = dictOrd_0_loop
+func Call_comparing(dictOrd_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value, y_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
@@ -943,68 +460,68 @@ var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
 var y_3 gopurs_runtime.Value = y_3_loop
 _ = y_3
-return gopurs_runtime.Apply2(dictOrd_0.compare, gopurs_runtime.Apply(f_1, x_2), gopurs_runtime.Apply(f_1, y_3))
+return gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0, gopurs_runtime.Apply(f_1, x_2), gopurs_runtime.Apply(f_1, y_3))
 }
 
-func Call_greaterThan(dictOrd_0_loop *Record_compare_gopurs_runtime_Value, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
-var dictOrd_0 *Record_compare_gopurs_runtime_Value = dictOrd_0_loop
+func Call_greaterThan(dictOrd_0_loop gopurs_runtime.Value, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
+var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
 var a1_1 gopurs_runtime.Value = a1_1_loop
 _ = a1_1
 var a2_2 gopurs_runtime.Value = a2_2_loop
 _ = a2_2
-var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(dictOrd_0.compare, a1_1, a2_2)
+var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0, a1_1, a2_2)
 return (__t_tag_0.Type == 9 && __t_tag_0.IntVal == 380165415)
 }
 
-func Call_greaterThanOrEq(dictOrd_0_loop *Record_compare_gopurs_runtime_Value, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
-var dictOrd_0 *Record_compare_gopurs_runtime_Value = dictOrd_0_loop
+func Call_greaterThanOrEq(dictOrd_0_loop gopurs_runtime.Value, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
+var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
 var a1_1 gopurs_runtime.Value = a1_1_loop
 _ = a1_1
 var a2_2 gopurs_runtime.Value = a2_2_loop
 _ = a2_2
-var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(dictOrd_0.compare, a1_1, a2_2)
+var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0, a1_1, a2_2)
 return ((__t_tag_0.Type == 9 && __t_tag_0.IntVal == 1527465420)) != (true)
 }
 
-func Call_lessThan(dictOrd_0_loop *Record_compare_gopurs_runtime_Value, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
-var dictOrd_0 *Record_compare_gopurs_runtime_Value = dictOrd_0_loop
+func Call_lessThan(dictOrd_0_loop gopurs_runtime.Value, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
+var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
 var a1_1 gopurs_runtime.Value = a1_1_loop
 _ = a1_1
 var a2_2 gopurs_runtime.Value = a2_2_loop
 _ = a2_2
-var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(dictOrd_0.compare, a1_1, a2_2)
+var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0, a1_1, a2_2)
 return (__t_tag_0.Type == 9 && __t_tag_0.IntVal == 1527465420)
 }
 
-func Call_signum(dictOrd_0_loop *Record_compare_gopurs_runtime_Value, dictRing_1_loop *Record_sub_gopurs_runtime_Value) gopurs_runtime.Value {
-var dictOrd_0 *Record_compare_gopurs_runtime_Value = dictOrd_0_loop
+func Call_signum(dictOrd_0_loop gopurs_runtime.Value, dictRing_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-var dictRing_1 *Record_sub_gopurs_runtime_Value = dictRing_1_loop
+var dictRing_1 gopurs_runtime.Value = dictRing_1_loop
 _ = dictRing_1
-Semiring0_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Value{Type: 8, IntVal: 0, UnsafePtr: unsafe.Pointer(dictRing_1)}, "Semiring0_NOT_FOUND"), gopurs_runtime.Value{})
+Semiring0_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictRing_1, "Semiring0_NOT_FOUND"), gopurs_runtime.Value{})
 _ = Semiring0_2_0
 zero_3_1 := gopurs_runtime.RecordGet(Semiring0_2_0, "zero")
 _ = zero_3_1
-zero_4_2 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Value{Type: 8, IntVal: 0, UnsafePtr: unsafe.Pointer(dictRing_1)}, "Semiring0_NOT_FOUND"), gopurs_runtime.Value{}), "zero")
+zero_4_2 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictRing_1, "Semiring0_NOT_FOUND"), gopurs_runtime.Value{}), "zero")
 _ = zero_4_2
 one_5_3 := gopurs_runtime.RecordGet(Semiring0_2_0, "one")
 _ = one_5_3
 return gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t4 gopurs_runtime.Value
 {
-var __t_tag_5 gopurs_runtime.Value = gopurs_runtime.Apply2(dictOrd_0.compare, x_6, zero_3_1)
+var __t_tag_5 gopurs_runtime.Value = gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0, x_6, zero_3_1)
 if (__t_tag_5.Type == 9 && __t_tag_5.IntVal == 1527465420) {
-__t4 = gopurs_runtime.Apply2(dictRing_1.sub, zero_4_2, one_5_3)
+__t4 = gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictRing_1.UnsafePtr)).V0, zero_4_2, one_5_3)
 goto end_branch_4
 } else {
 
 }
 }
 {
-var __t_tag_6 gopurs_runtime.Value = gopurs_runtime.Apply2(dictOrd_0.compare, x_6, zero_3_1)
+var __t_tag_6 gopurs_runtime.Value = gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0, x_6, zero_3_1)
 if (__t_tag_6.Type == 9 && __t_tag_6.IntVal == 380165415) {
 __t4 = one_5_3
 goto end_branch_4
@@ -1020,25 +537,25 @@ return __t4
 })
 }
 
-func Call_lessThanOrEq(dictOrd_0_loop *Record_compare_gopurs_runtime_Value, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
-var dictOrd_0 *Record_compare_gopurs_runtime_Value = dictOrd_0_loop
+func Call_lessThanOrEq(dictOrd_0_loop gopurs_runtime.Value, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
+var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
 var a1_1 gopurs_runtime.Value = a1_1_loop
 _ = a1_1
 var a2_2 gopurs_runtime.Value = a2_2_loop
 _ = a2_2
-var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(dictOrd_0.compare, a1_1, a2_2)
+var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0, a1_1, a2_2)
 return ((__t_tag_0.Type == 9 && __t_tag_0.IntVal == 380165415)) != (true)
 }
 
-func Call_max(dictOrd_0_loop *Record_compare_gopurs_runtime_Value, x_1_loop gopurs_runtime.Value, y_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictOrd_0 *Record_compare_gopurs_runtime_Value = dictOrd_0_loop
+func Call_max(dictOrd_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value, y_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
 var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
 var y_2 gopurs_runtime.Value = y_2_loop
 _ = y_2
-v_3_0 := gopurs_runtime.Apply2(dictOrd_0.compare, x_1, y_2)
+v_3_0 := gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0, x_1, y_2)
 _ = v_3_0
 var __t1 gopurs_runtime.Value
 {
@@ -1072,14 +589,14 @@ end_branch_1:
 return __t1
 }
 
-func Call_min(dictOrd_0_loop *Record_compare_gopurs_runtime_Value, x_1_loop gopurs_runtime.Value, y_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictOrd_0 *Record_compare_gopurs_runtime_Value = dictOrd_0_loop
+func Call_min(dictOrd_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value, y_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
 var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
 var y_2 gopurs_runtime.Value = y_2_loop
 _ = y_2
-v_3_0 := gopurs_runtime.Apply2(dictOrd_0.compare, x_1, y_2)
+v_3_0 := gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0, x_1, y_2)
 _ = v_3_0
 var __t1 gopurs_runtime.Value
 {
@@ -1113,16 +630,16 @@ end_branch_1:
 return __t1
 }
 
-func Call_ordArray(dictOrd_0_loop *Record_compare_gopurs_runtime_Value) gopurs_runtime.Value {
-var dictOrd_0 *Record_compare_gopurs_runtime_Value = dictOrd_0_loop
+func Call_ordArray(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-eqArray_1_0 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(pkg_Data_Eq.Get_eqArrayImpl(), gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Value{Type: 8, IntVal: 0, UnsafePtr: unsafe.Pointer(dictOrd_0)}, "Eq0_NOT_FOUND"), gopurs_runtime.Value{}), "eq")))
+eqArray_1_0 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(pkg_Data_Eq.Get_eqArrayImpl(), gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0, "Eq0_NOT_FOUND"), gopurs_runtime.Value{}), "eq")))
 _ = eqArray_1_0
 return gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return eqArray_1_0
 }), gopurs_runtime.Func2(func(xs_2 gopurs_runtime.Value, ys_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(Get_compare2(), gopurs_runtime.Int(0), gopurs_runtime.Apply3(Get_ordArrayImpl(), gopurs_runtime.Func2(func(x_4 gopurs_runtime.Value, y_5 gopurs_runtime.Value) gopurs_runtime.Value {
-v_6_1 := gopurs_runtime.Apply2(dictOrd_0.compare, x_4, y_5)
+v_6_1 := gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0, x_4, y_5)
 _ = v_6_1
 var __t2 gopurs_runtime.Value
 {
@@ -1158,10 +675,10 @@ return __t2
 }))
 }
 
-func Call_ordRecordCons(dictOrdRecord_0_loop *Record_compareRecord_gopurs_runtime_Value) gopurs_runtime.Value {
-var dictOrdRecord_0 *Record_compareRecord_gopurs_runtime_Value = dictOrdRecord_0_loop
+func Call_ordRecordCons(dictOrdRecord_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictOrdRecord_0 gopurs_runtime.Value = dictOrdRecord_0_loop
 _ = dictOrdRecord_0
-eqRowCons_1_0 := gopurs_runtime.Apply2(pkg_Data_Eq.Get_eqRowCons(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Value{Type: 8, IntVal: 0, UnsafePtr: unsafe.Pointer(dictOrdRecord_0)}, "EqRecord0_NOT_FOUND"), gopurs_runtime.Value{}), gopurs_runtime.Value{})
+eqRowCons_1_0 := gopurs_runtime.Apply2(pkg_Data_Eq.Get_eqRowCons(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrdRecord_0, "EqRecord0_NOT_FOUND"), gopurs_runtime.Value{}), gopurs_runtime.Value{})
 _ = eqRowCons_1_0
 return gopurs_runtime.Func2(func(_dollar__unused_2 gopurs_runtime.Value, dictIsSymbol_3 gopurs_runtime.Value) gopurs_runtime.Value {
 eqRowCons1_4_1 := gopurs_runtime.Apply(eqRowCons_1_0, dictIsSymbol_3)
@@ -1186,7 +703,7 @@ goto end_branch_5
 }
 }
 {
-__t5 = gopurs_runtime.Apply3(dictOrdRecord_0.compareRecord, gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}, ra_8, rb_9)
+__t5 = gopurs_runtime.Apply3(((*gopurs_runtime.RecordData1)(dictOrdRecord_0.UnsafePtr)).V0, gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}, ra_8, rb_9)
 }
 end_branch_5:
 return __t5
@@ -1195,8 +712,8 @@ return __t5
 })
 }
 
-func Call_clamp(dictOrd_0_loop *Record_compare_gopurs_runtime_Value, low_1_loop gopurs_runtime.Value, hi_2_loop gopurs_runtime.Value, x_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictOrd_0 *Record_compare_gopurs_runtime_Value = dictOrd_0_loop
+func Call_clamp(dictOrd_0_loop gopurs_runtime.Value, low_1_loop gopurs_runtime.Value, hi_2_loop gopurs_runtime.Value, x_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
 var low_1 gopurs_runtime.Value = low_1_loop
 _ = low_1
@@ -1204,7 +721,7 @@ var hi_2 gopurs_runtime.Value = hi_2_loop
 _ = hi_2
 var x_3 gopurs_runtime.Value = x_3_loop
 _ = x_3
-v_4_0 := gopurs_runtime.Apply2(dictOrd_0.compare, low_1, x_3)
+v_4_0 := gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0, low_1, x_3)
 _ = v_4_0
 var __t2 gopurs_runtime.Value
 {
@@ -1237,7 +754,7 @@ __t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 end_branch_2:
 __local_var_5_1 := __t2
 _ = __local_var_5_1
-v_6_3 := gopurs_runtime.Apply2(dictOrd_0.compare, hi_2, __local_var_5_1)
+v_6_3 := gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0, hi_2, __local_var_5_1)
 _ = v_6_3
 var __t4 gopurs_runtime.Value
 {
@@ -1271,8 +788,8 @@ end_branch_4:
 return __t4
 }
 
-func Call_between(dictOrd_0_loop *Record_compare_gopurs_runtime_Value, low_1_loop gopurs_runtime.Value, hi_2_loop gopurs_runtime.Value, x_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictOrd_0 *Record_compare_gopurs_runtime_Value = dictOrd_0_loop
+func Call_between(dictOrd_0_loop gopurs_runtime.Value, low_1_loop gopurs_runtime.Value, hi_2_loop gopurs_runtime.Value, x_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
 var low_1 gopurs_runtime.Value = low_1_loop
 _ = low_1
@@ -1282,7 +799,7 @@ var x_3 gopurs_runtime.Value = x_3_loop
 _ = x_3
 var __t1 gopurs_runtime.Value
 {
-var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Apply2(dictOrd_0.compare, x_3, low_1)
+var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0, x_3, low_1)
 if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 1527465420) {
 __t1 = gopurs_runtime.Bool(false)
 goto end_branch_1
@@ -1291,26 +808,26 @@ goto end_branch_1
 }
 }
 {
-var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(dictOrd_0.compare, x_3, hi_2)
+var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0, x_3, hi_2)
 __t1 = gopurs_runtime.Bool(((__t_tag_0.Type == 9 && __t_tag_0.IntVal == 380165415)) != (true))
 }
 end_branch_1:
 return __t1
 }
 
-func Call_abs(dictOrd_0_loop *Record_compare_gopurs_runtime_Value, dictRing_1_loop *Record_sub_gopurs_runtime_Value) gopurs_runtime.Value {
-var dictOrd_0 *Record_compare_gopurs_runtime_Value = dictOrd_0_loop
+func Call_abs(dictOrd_0_loop gopurs_runtime.Value, dictRing_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-var dictRing_1 *Record_sub_gopurs_runtime_Value = dictRing_1_loop
+var dictRing_1 gopurs_runtime.Value = dictRing_1_loop
 _ = dictRing_1
-zero_2_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Value{Type: 8, IntVal: 0, UnsafePtr: unsafe.Pointer(dictRing_1)}, "Semiring0_NOT_FOUND"), gopurs_runtime.Value{}), "zero")
+zero_2_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictRing_1, "Semiring0_NOT_FOUND"), gopurs_runtime.Value{}), "zero")
 _ = zero_2_0
-zero_3_1 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Value{Type: 8, IntVal: 0, UnsafePtr: unsafe.Pointer(dictRing_1)}, "Semiring0_NOT_FOUND"), gopurs_runtime.Value{}), "zero")
+zero_3_1 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictRing_1, "Semiring0_NOT_FOUND"), gopurs_runtime.Value{}), "zero")
 _ = zero_3_1
 return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value
 {
-var __t_tag_3 gopurs_runtime.Value = gopurs_runtime.Apply2(dictOrd_0.compare, x_4, zero_2_0)
+var __t_tag_3 gopurs_runtime.Value = gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictOrd_0.UnsafePtr)).V0, x_4, zero_2_0)
 if ((__t_tag_3.Type == 9 && __t_tag_3.IntVal == 1527465420)) != (true) {
 __t2 = x_4
 goto end_branch_2
@@ -1319,7 +836,7 @@ goto end_branch_2
 }
 }
 {
-__t2 = gopurs_runtime.Apply2(dictRing_1.sub, zero_3_1, x_4)
+__t2 = gopurs_runtime.Apply2(((*gopurs_runtime.RecordData1)(dictRing_1.UnsafePtr)).V0, zero_3_1, x_4)
 }
 end_branch_2:
 return __t2

@@ -146,10 +146,10 @@ default:
 ;
 break;
 };
-  $__tco_0 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1);
+  $__tco_0 = ($v_0 - 1);
   $__tco_1 = function($v2_2 = null) use ($v1_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(($v1_1)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')))))(1);
+  $__res = (($v1_1)(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'))) + 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -207,8 +207,8 @@ default:
 ;
 break;
 };
-  $__tco_0 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1);
-  $__tco_1 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($v1_1))((((($GLOBALS['Test_LazyEvaluation_buildThunks'] ?? \PhpursThunks::eval('Test_LazyEvaluation_buildThunks')))(1000))(function($v2_2 = null) {
+  $__tco_0 = ($v_0 - 1);
+  $__tco_1 = ($v1_1 + (((($GLOBALS['Test_LazyEvaluation_buildThunks'] ?? \PhpursThunks::eval('Test_LazyEvaluation_buildThunks')))(1000))(function($v2_2 = null) {
   $__num = \func_num_args();
   $__res = 0;
   goto __end;;
@@ -239,13 +239,11 @@ $__tco_res_Test_LazyEvaluation_runManyTimes = ($__tco_loop_Test_LazyEvaluation_r
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Test_LazyEvaluation_act'] = function() { $v = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($GLOBALS['Bench_opaque'] ?? \PhpursThunks::eval('Bench_opaque')))(1000)))(function($dummy_0 = null) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(((($GLOBALS['Test_LazyEvaluation_runManyTimes'] ?? \PhpursThunks::eval('Test_LazyEvaluation_runManyTimes')))($dummy_0))(0)));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}); return $v; };
+\PhpursThunks::$thunks['Test_LazyEvaluation_act'] = function() { $v = (function() use (&$__fn) {
+$__local_var_0_0 = (($GLOBALS['Bench_opaque'] ?? \PhpursThunks::eval('Bench_opaque')))(1000);
+$dummy_1_1 = $__local_var_0_0;
+return (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(((($GLOBALS['Test_LazyEvaluation_runManyTimes'] ?? \PhpursThunks::eval('Test_LazyEvaluation_runManyTimes')))($dummy_1_1))(0)));
+})(); return $v; };
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 

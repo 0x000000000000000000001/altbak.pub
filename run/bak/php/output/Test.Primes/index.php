@@ -146,7 +146,7 @@ goto end_branch_0;;
 };
   if ((is_object($v_2) && (($v_2)->{'tag'} === "Cons"))) {
 $__tco_1 = ($v_2)->{'value1'};
-$__tco_2 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($v1_3))(($v_2)->{'value0'});
+$__tco_2 = ($v1_3 + ($v_2)->{'value0'});
 $__tco_var_go_1_0_0_v_2 = $__tco_1;
 $__tco_var_go_1_0_0_v1_3 = $__tco_2;
 $__tco_done_go_1_0_0 = false;
@@ -270,11 +270,11 @@ $__tco_res_go_1_0_0 = ($__tco_loop_go_1_0_0)($__tco_var_go_1_0_0_v_2, $__tco_var
   $curr_3 = $__tco_var_go_2_0_0_curr_3;
   $acc_4 = $__tco_var_go_2_0_0_acc_4;
   $__t2 = null;;
-  if ((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($curr_3))($start_0)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($curr_3))($start_0))->{'tag'} === "LT"))) {
+  if (($curr_3 < $start_0)) {
 $__t2 = $acc_4;
 goto end_branch_2;;
 };
-  $__tco_0 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($curr_3))(1);
+  $__tco_0 = ($curr_3 - 1);
   $__tco_1 = new Phpurs_Data2("Cons", $curr_3, $acc_4);
   $__tco_var_go_2_0_0_curr_3 = $__tco_0;
   $__tco_var_go_2_0_0_acc_4 = $__tco_1;
@@ -545,7 +545,7 @@ goto end_branch_2;;
 };
   if ((is_object($v_3) && (($v_3)->{'tag'} === "Cons"))) {
 $__t6 = null;;
-if (((($GLOBALS['Data_Eq_eqBooleanImpl'] ?? \PhpursThunks::eval('Data_Eq_eqBooleanImpl')))(((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))(((($GLOBALS['Data_EuclideanRing_intMod'] ?? \PhpursThunks::eval('Data_EuclideanRing_intMod')))(($v_3)->{'value0'}))($__local_var_1_1)))(0)))(false)) {
+if ((((($GLOBALS['Data_EuclideanRing_intMod'] ?? \PhpursThunks::eval('Data_EuclideanRing_intMod')))(($v_3)->{'value0'}))($__local_var_1_1) !== 0)) {
 $__tco_7 = ($v_3)->{'value1'};
 $__tco_8 = new Phpurs_Data2("Cons", ($v_3)->{'value0'}, $v1_4);
 $__tco_var_go_2_2_2_v_3 = $__tco_7;
@@ -608,13 +608,118 @@ $__tco_res_Test_Primes_sieve = ($__tco_loop_Test_Primes_sieve)($__tco_var_Test_P
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Test_Primes_describe'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))("Prime Sieve (sum primes up to 500):"); return $v; };
-\PhpursThunks::$thunks['Test_Primes_act'] = function() { $v = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($GLOBALS['Bench_opaque'] ?? \PhpursThunks::eval('Bench_opaque')))(500)))(function($dummy_0 = null) {
+\PhpursThunks::$thunks['Test_Primes_act'] = function() { $v = (function() use (&$__fn) {
+$__local_var_0_0 = (($GLOBALS['Bench_opaque'] ?? \PhpursThunks::eval('Bench_opaque')))(500);
+$dummy_1_1 = $__local_var_0_0;
+$go_2_2 = null;
+$go_2_2 = (function() use (&$go_2_2) {
+  $__fn = function($v_3 = null, $v1_4 = null) use (&$go_2_2, &$__fn) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))((($GLOBALS['Test_Primes_sumList'] ?? \PhpursThunks::eval('Test_Primes_sumList')))((($GLOBALS['Test_Primes_sieve'] ?? \PhpursThunks::eval('Test_Primes_sieve')))(((($GLOBALS['Test_Primes_range'] ?? \PhpursThunks::eval('Test_Primes_range')))(2))($dummy_0)))));
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__tco_var_go_2_2_2_v_3 = $v_3;
+  $__tco_var_go_2_2_2_v1_4 = $v1_4;
+  $__tco_done_go_2_2_2 = false;
+  $__tco_res_go_2_2_2 = null;
+  $__tco_loop_go_2_2_2 = (function() use (&$__tco_done_go_2_2_2, &$__tco_var_go_2_2_2_v_3, &$__tco_var_go_2_2_2_v1_4, &$go_2_2) {
+  $__fn = function($v_3 = null, $v1_4 = null) use (&$__tco_done_go_2_2_2, &$__tco_var_go_2_2_2_v_3, &$__tco_var_go_2_2_2_v1_4, &$go_2_2, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__tco_done_go_2_2_2 = true;
+  $v_3 = $__tco_var_go_2_2_2_v_3;
+  $v1_4 = $__tco_var_go_2_2_2_v1_4;
+  $__t2 = null;;
+  if ((is_object($v_3) && (($v_3)->{'tag'} === "Nil"))) {
+$__t2 = $v1_4;
+goto end_branch_2;;
+};
+  if ((is_object($v_3) && (($v_3)->{'tag'} === "Cons"))) {
+$__tco_3 = ($v_3)->{'value1'};
+$__tco_4 = ($v1_4 + ($v_3)->{'value0'});
+$__tco_var_go_2_2_2_v_3 = $__tco_3;
+$__tco_var_go_2_2_2_v1_4 = $__tco_4;
+$__tco_done_go_2_2_2 = false;
+$__res = null;
+goto __end;;
+$__t2 = null;
+goto end_branch_2;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t2 = null;
+  end_branch_2:;
+  $__res = $__t2;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}); return $v; };
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+  while (($__tco_done_go_2_2_2 === false)) {
+$__tco_res_go_2_2_2 = ($__tco_loop_go_2_2_2)($__tco_var_go_2_2_2_v_3, $__tco_var_go_2_2_2_v1_4);
+};
+  $__res = $__tco_res_go_2_2_2;
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+$go_3_3 = null;
+$go_3_3 = (function() use (&$go_3_3) {
+  $__fn = function($curr_4 = null, $acc_5 = null) use (&$go_3_3, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__tco_var_go_3_3_3_curr_4 = $curr_4;
+  $__tco_var_go_3_3_3_acc_5 = $acc_5;
+  $__tco_done_go_3_3_3 = false;
+  $__tco_res_go_3_3_3 = null;
+  $__tco_loop_go_3_3_3 = (function() use (&$__tco_done_go_3_3_3, &$__tco_var_go_3_3_3_curr_4, &$__tco_var_go_3_3_3_acc_5, &$go_3_3) {
+  $__fn = function($curr_4 = null, $acc_5 = null) use (&$__tco_done_go_3_3_3, &$__tco_var_go_3_3_3_curr_4, &$__tco_var_go_3_3_3_acc_5, &$go_3_3, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__tco_done_go_3_3_3 = true;
+  $curr_4 = $__tco_var_go_3_3_3_curr_4;
+  $acc_5 = $__tco_var_go_3_3_3_acc_5;
+  $__t5 = null;;
+  if (($curr_4 < 2)) {
+$__t5 = $acc_5;
+goto end_branch_5;;
+};
+  $__tco_3 = ($curr_4 - 1);
+  $__tco_4 = new Phpurs_Data2("Cons", $curr_4, $acc_5);
+  $__tco_var_go_3_3_3_curr_4 = $__tco_3;
+  $__tco_var_go_3_3_3_acc_5 = $__tco_4;
+  $__tco_done_go_3_3_3 = false;
+  $__res = null;
+  goto __end;;
+  $__t5 = null;
+  end_branch_5:;
+  $__res = $__t5;
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+  while (($__tco_done_go_3_3_3 === false)) {
+$__tco_res_go_3_3_3 = ($__tco_loop_go_3_3_3)($__tco_var_go_3_3_3_curr_4, $__tco_var_go_3_3_3_acc_5);
+};
+  $__res = $__tco_res_go_3_3_3;
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+return (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))((($go_2_2)((($GLOBALS['Test_Primes_sieve'] ?? \PhpursThunks::eval('Test_Primes_sieve')))((($go_3_3)($dummy_1_1))(new Phpurs_Data0("Nil")))))(0)));
+})(); return $v; };
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 

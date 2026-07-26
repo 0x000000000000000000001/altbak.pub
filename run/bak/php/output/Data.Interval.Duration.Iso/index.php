@@ -325,7 +325,7 @@ $semigroupAdditive1_0_0 = (object)["append" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')))($v_0))($v1_1);
+  $__res = ($v_0 + $v1_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -486,7 +486,7 @@ $__tco_res_go_1_0_0 = ($__tco_loop_go_1_0_0)($__tco_var_go_1_0_0_source_2, $__tc
 }; return $v; };
 \PhpursThunks::$thunks['Data_Interval_Duration_Iso_showIsoDuration'] = function() { $v = (object)["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(IsoDuration "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(Duration "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($GLOBALS['Data_Interval_Duration_show'] ?? \PhpursThunks::eval('Data_Interval_Duration_show')))($v_0)))(")"))))(")"));
+  $__res = (("(IsoDuration (Duration " . (($GLOBALS['Data_Interval_Duration_show'] ?? \PhpursThunks::eval('Data_Interval_Duration_show')))($v_0)) . "))");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -505,73 +505,73 @@ goto end_branch_0;;
   if ((is_object($v_0) && (($v_0)->{'tag'} === "ContainsNegativeValue"))) {
 $__t1 = null;;
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "Minute"))) {
-$__t1 = "Minute";
+$__t1 = "(ContainsNegativeValue Minute)";
 goto end_branch_1;;
 };
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "Second"))) {
-$__t1 = "Second";
+$__t1 = "(ContainsNegativeValue Second)";
 goto end_branch_1;;
 };
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "Hour"))) {
-$__t1 = "Hour";
+$__t1 = "(ContainsNegativeValue Hour)";
 goto end_branch_1;;
 };
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "Day"))) {
-$__t1 = "Day";
+$__t1 = "(ContainsNegativeValue Day)";
 goto end_branch_1;;
 };
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "Week"))) {
-$__t1 = "Week";
+$__t1 = "(ContainsNegativeValue Week)";
 goto end_branch_1;;
 };
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "Month"))) {
-$__t1 = "Month";
+$__t1 = "(ContainsNegativeValue Month)";
 goto end_branch_1;;
 };
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "Year"))) {
-$__t1 = "Year";
+$__t1 = "(ContainsNegativeValue Year)";
 goto end_branch_1;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t1 = null;
 end_branch_1:;
-$__t0 = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(ContainsNegativeValue "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))($__t1))(")"));
+$__t0 = $__t1;
 goto end_branch_0;;
 };
   if ((is_object($v_0) && (($v_0)->{'tag'} === "InvalidFractionalUse"))) {
 $__t2 = null;;
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "Minute"))) {
-$__t2 = "Minute";
+$__t2 = "(InvalidFractionalUse Minute)";
 goto end_branch_2;;
 };
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "Second"))) {
-$__t2 = "Second";
+$__t2 = "(InvalidFractionalUse Second)";
 goto end_branch_2;;
 };
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "Hour"))) {
-$__t2 = "Hour";
+$__t2 = "(InvalidFractionalUse Hour)";
 goto end_branch_2;;
 };
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "Day"))) {
-$__t2 = "Day";
+$__t2 = "(InvalidFractionalUse Day)";
 goto end_branch_2;;
 };
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "Week"))) {
-$__t2 = "Week";
+$__t2 = "(InvalidFractionalUse Week)";
 goto end_branch_2;;
 };
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "Month"))) {
-$__t2 = "Month";
+$__t2 = "(InvalidFractionalUse Month)";
 goto end_branch_2;;
 };
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "Year"))) {
-$__t2 = "Year";
+$__t2 = "(InvalidFractionalUse Year)";
 goto end_branch_2;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t2 = null;
 end_branch_2:;
-$__t0 = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(InvalidFractionalUse "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))($__t2))(")"));
+$__t0 = $__t2;
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -596,73 +596,73 @@ goto end_branch_0;;
   if ((is_object($v_0) && (($v_0)->{'tag'} === "ContainsNegativeValue"))) {
 $__t1 = null;;
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "Minute"))) {
-$__t1 = "Minute";
+$__t1 = "Component `Minute` contains negative value";
 goto end_branch_1;;
 };
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "Second"))) {
-$__t1 = "Second";
+$__t1 = "Component `Second` contains negative value";
 goto end_branch_1;;
 };
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "Hour"))) {
-$__t1 = "Hour";
+$__t1 = "Component `Hour` contains negative value";
 goto end_branch_1;;
 };
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "Day"))) {
-$__t1 = "Day";
+$__t1 = "Component `Day` contains negative value";
 goto end_branch_1;;
 };
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "Week"))) {
-$__t1 = "Week";
+$__t1 = "Component `Week` contains negative value";
 goto end_branch_1;;
 };
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "Month"))) {
-$__t1 = "Month";
+$__t1 = "Component `Month` contains negative value";
 goto end_branch_1;;
 };
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "Year"))) {
-$__t1 = "Year";
+$__t1 = "Component `Year` contains negative value";
 goto end_branch_1;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t1 = null;
 end_branch_1:;
-$__t0 = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("Component `"))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))($__t1))("` contains negative value"));
+$__t0 = $__t1;
 goto end_branch_0;;
 };
   if ((is_object($v_0) && (($v_0)->{'tag'} === "InvalidFractionalUse"))) {
 $__t2 = null;;
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "Minute"))) {
-$__t2 = "Minute";
+$__t2 = "Invalid usage of Fractional value at component `Minute`";
 goto end_branch_2;;
 };
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "Second"))) {
-$__t2 = "Second";
+$__t2 = "Invalid usage of Fractional value at component `Second`";
 goto end_branch_2;;
 };
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "Hour"))) {
-$__t2 = "Hour";
+$__t2 = "Invalid usage of Fractional value at component `Hour`";
 goto end_branch_2;;
 };
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "Day"))) {
-$__t2 = "Day";
+$__t2 = "Invalid usage of Fractional value at component `Day`";
 goto end_branch_2;;
 };
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "Week"))) {
-$__t2 = "Week";
+$__t2 = "Invalid usage of Fractional value at component `Week`";
 goto end_branch_2;;
 };
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "Month"))) {
-$__t2 = "Month";
+$__t2 = "Invalid usage of Fractional value at component `Month`";
 goto end_branch_2;;
 };
 if ((is_object(($v_0)->{'value0'}) && ((($v_0)->{'value0'})->{'tag'} === "Year"))) {
-$__t2 = "Year";
+$__t2 = "Invalid usage of Fractional value at component `Year`";
 goto end_branch_2;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t2 = null;
 end_branch_2:;
-$__t0 = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("Invalid usage of Fractional value at component `"))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))($__t2))("`"));
+$__t0 = $__t2;
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -1074,17 +1074,17 @@ $__t2 = null;
 end_branch_2:;
 $__t3 = null;;
 if ((is_object(($v_0)->{'asMap'}) && ((($v_0)->{'asMap'})->{'tag'} === "Leaf"))) {
-$__t3 = 0;
+$__t3 = false;
 goto end_branch_3;;
 };
 if ((is_object(($v_0)->{'asMap'}) && ((($v_0)->{'asMap'})->{'tag'} === "Node"))) {
-$__t3 = (($v_0)->{'asMap'})->{'value1'};
+$__t3 = ((($v_0)->{'asMap'})->{'value1'} > 1);
 goto end_branch_3;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
 $__t3 = null;
 end_branch_3:;
-return ((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))($__t2))((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($__t3))(1)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($__t3))(1))->{'tag'} === "GT")));
+return ($__t2 && $__t3);
 })()) {
 $__t0 = new Phpurs_Data2("Cons", new Phpurs_Data0("InvalidWeekComponentUsage"), new Phpurs_Data0("Nil"));
 goto end_branch_0;;
@@ -1101,7 +1101,7 @@ goto end_branch_0;;
   $__res = ((($GLOBALS['Data_Interval_Duration_Iso_foldMap1'] ?? \PhpursThunks::eval('Data_Interval_Duration_Iso_foldMap1')))(function($v1_1 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if (( ! (is_object((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->{'compare'})(($v1_1)->{'value1'}))(0.0)) && (((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->{'compare'})(($v1_1)->{'value1'}))(0.0))->{'tag'} === "LT")))) {
+  if ((($v1_1)->{'value1'} >= 0.0)) {
 $__t0 = new Phpurs_Data0("Nil");
 goto end_branch_0;;
 };
@@ -1120,13 +1120,13 @@ goto end_branch_0;;
   $__num = \func_num_args();
   $__local_var_1_0 = ((($GLOBALS['Data_List_span'] ?? \PhpursThunks::eval('Data_List_span')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($a_1 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_HeytingAlgebra_boolNot'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolNot')))(((($GLOBALS['Data_Eq_eqBooleanImpl'] ?? \PhpursThunks::eval('Data_Eq_eqBooleanImpl')))(((($GLOBALS['Data_Eq_eqNumberImpl'] ?? \PhpursThunks::eval('Data_Eq_eqNumberImpl')))((($GLOBALS['Data_Number_floor'] ?? \PhpursThunks::eval('Data_Number_floor')))($a_1)))($a_1)))(false));
+  $__res = ((($GLOBALS['Data_Number_floor'] ?? \PhpursThunks::eval('Data_Number_floor')))($a_1) === $a_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }))(($GLOBALS['Data_Tuple_snd'] ?? \PhpursThunks::eval('Data_Tuple_snd')))))(($v_0)->{'asList'});
   $__t1 = null;;
-  if (((is_object(($__local_var_1_0)->{'rest'}) && ((($__local_var_1_0)->{'rest'})->{'tag'} === "Cons")) && (is_object((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->{'compare'})((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(((($GLOBALS['Data_Interval_Duration_Iso_foldMap2'] ?? \PhpursThunks::eval('Data_Interval_Duration_Iso_foldMap2')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Additive_Additive'] ?? \PhpursThunks::eval('Data_Monoid_Additive_Additive'))))(($GLOBALS['Data_Number_abs'] ?? \PhpursThunks::eval('Data_Number_abs')))))(($GLOBALS['Data_Tuple_snd'] ?? \PhpursThunks::eval('Data_Tuple_snd')))))((($__local_var_1_0)->{'rest'})->{'value1'}))))(0.0)) && (((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->{'compare'})((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(((($GLOBALS['Data_Interval_Duration_Iso_foldMap2'] ?? \PhpursThunks::eval('Data_Interval_Duration_Iso_foldMap2')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Additive_Additive'] ?? \PhpursThunks::eval('Data_Monoid_Additive_Additive'))))(($GLOBALS['Data_Number_abs'] ?? \PhpursThunks::eval('Data_Number_abs')))))(($GLOBALS['Data_Tuple_snd'] ?? \PhpursThunks::eval('Data_Tuple_snd')))))((($__local_var_1_0)->{'rest'})->{'value1'}))))(0.0))->{'tag'} === "GT")))) {
+  if (((is_object(($__local_var_1_0)->{'rest'}) && ((($__local_var_1_0)->{'rest'})->{'tag'} === "Cons")) && (((($GLOBALS['Data_Interval_Duration_Iso_foldMap2'] ?? \PhpursThunks::eval('Data_Interval_Duration_Iso_foldMap2')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Monoid_Additive_Additive'] ?? \PhpursThunks::eval('Data_Monoid_Additive_Additive'))))(($GLOBALS['Data_Number_abs'] ?? \PhpursThunks::eval('Data_Number_abs')))))(($GLOBALS['Data_Tuple_snd'] ?? \PhpursThunks::eval('Data_Tuple_snd')))))((($__local_var_1_0)->{'rest'})->{'value1'}) > 0.0))) {
 $__t1 = new Phpurs_Data2("Cons", new Phpurs_Data1("InvalidFractionalUse", ((($__local_var_1_0)->{'rest'})->{'value0'})->{'value0'}), new Phpurs_Data0("Nil"));
 goto end_branch_1;;
 };

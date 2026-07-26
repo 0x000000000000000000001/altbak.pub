@@ -123,7 +123,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   $__t2 = null;;
   switch ($v_0) {
 case 0:
-$__t2 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($v1_1))(1);
+$__t2 = ($v1_1 + 1);
 goto end_branch_2;;
 break;
 default:
@@ -132,7 +132,7 @@ break;
 };
   switch ($v1_1) {
 case 0:
-$__tco_3 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1);
+$__tco_3 = ($v_0 - 1);
 $__tco_4 = 1;
 $__tco_var_Test_Ackermann_ackermann_v_0 = $__tco_3;
 $__tco_var_Test_Ackermann_ackermann_v1_1 = $__tco_4;
@@ -146,8 +146,8 @@ default:
 ;
 break;
 };
-  $__tco_0 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1);
-  $__tco_1 = ((($GLOBALS['Test_Ackermann_ackermann'] ?? \PhpursThunks::eval('Test_Ackermann_ackermann')))($v_0))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v1_1))(1));
+  $__tco_0 = ($v_0 - 1);
+  $__tco_1 = ((($GLOBALS['Test_Ackermann_ackermann'] ?? \PhpursThunks::eval('Test_Ackermann_ackermann')))($v_0))(($v1_1 - 1));
   $__tco_var_Test_Ackermann_ackermann_v_0 = $__tco_0;
   $__tco_var_Test_Ackermann_ackermann_v1_1 = $__tco_1;
   $__tco_done_Test_Ackermann_ackermann = false;
@@ -172,13 +172,11 @@ $__tco_res_Test_Ackermann_ackermann = ($__tco_loop_Test_Ackermann_ackermann)($__
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Test_Ackermann_act'] = function() { $v = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($GLOBALS['Bench_opaque'] ?? \PhpursThunks::eval('Bench_opaque')))(3)))(function($dummy_0 = null) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(((($GLOBALS['Test_Ackermann_ackermann'] ?? \PhpursThunks::eval('Test_Ackermann_ackermann')))($dummy_0))(4)));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}); return $v; };
+\PhpursThunks::$thunks['Test_Ackermann_act'] = function() { $v = (function() use (&$__fn) {
+$__local_var_0_0 = (($GLOBALS['Bench_opaque'] ?? \PhpursThunks::eval('Bench_opaque')))(3);
+$dummy_1_1 = $__local_var_0_0;
+return (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(((($GLOBALS['Test_Ackermann_ackermann'] ?? \PhpursThunks::eval('Test_Ackermann_ackermann')))($dummy_1_1))(4)));
+})(); return $v; };
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 

@@ -135,11 +135,11 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_2) && (($v_2)->{'tag'} === "Left"))) {
-$__t0 = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(Left "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($dictShow_0)->{'show'})(($v_2)->{'value0'})))(")"));
+$__t0 = (("(Left " . (($dictShow_0)->{'show'})(($v_2)->{'value0'})) . ")");
 goto end_branch_0;;
 };
   if ((is_object($v_2) && (($v_2)->{'tag'} === "Right"))) {
-$__t0 = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(Right "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($dictShow1_1)->{'show'})(($v_2)->{'value0'})))(")"));
+$__t0 = (("(Right " . (($dictShow1_1)->{'show'})(($v_2)->{'value0'})) . ")");
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);

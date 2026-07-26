@@ -153,7 +153,7 @@ default:
 ;
 break;
 };
-  $__tco_1 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_5))(1);
+  $__tco_1 = ($v_5 - 1);
   $__tco_2 = ((($dictMonoidish_0)->{'mappend_'})($v1_6))($mempty_1_1_0);
   $__tco_var_go_4_1_1_v_5 = $__tco_1;
   $__tco_var_go_4_1_1_v1_6 = $__tco_2;
@@ -196,24 +196,76 @@ $__tco_res_go_4_1_1 = ($__tco_loop_go_4_1_1)($__tco_var_go_4_1_1_v_5, $__tco_var
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($x_0))($y_1);
+  $__res = ($x_0 + $y_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()]; return $v; };
-\PhpursThunks::$thunks['Test_Polymorphism_polyLoop1'] = function() { $v = (($GLOBALS['Test_Polymorphism_polyLoop'] ?? \PhpursThunks::eval('Test_Polymorphism_polyLoop')))(($GLOBALS['Test_Polymorphism_intMonoidish'] ?? \PhpursThunks::eval('Test_Polymorphism_intMonoidish'))); return $v; };
 \PhpursThunks::$thunks['Test_Polymorphism_describe'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))("Polymorphism (10M Type Class Dict Lookups):"); return $v; };
-\PhpursThunks::$thunks['Test_Polymorphism_act'] = function() { $v = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($GLOBALS['Bench_opaque'] ?? \PhpursThunks::eval('Bench_opaque')))(10000000)))(function($dummy_0 = null) {
+\PhpursThunks::$thunks['Test_Polymorphism_act'] = function() { $v = (function() use (&$__fn) {
+$__local_var_0_0 = (($GLOBALS['Bench_opaque'] ?? \PhpursThunks::eval('Bench_opaque')))(10000000);
+$dummy_1_1 = $__local_var_0_0;
+$go_2_2 = null;
+$go_2_2 = (function() use (&$go_2_2) {
+  $__fn = function($v_3 = null, $v1_4 = null) use (&$go_2_2, &$__fn) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(((($GLOBALS['Test_Polymorphism_polyLoop1'] ?? \PhpursThunks::eval('Test_Polymorphism_polyLoop1')))($dummy_0))(0)));
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__tco_var_go_2_2_2_v_3 = $v_3;
+  $__tco_var_go_2_2_2_v1_4 = $v1_4;
+  $__tco_done_go_2_2_2 = false;
+  $__tco_res_go_2_2_2 = null;
+  $__tco_loop_go_2_2_2 = (function() use (&$__tco_done_go_2_2_2, &$__tco_var_go_2_2_2_v_3, &$__tco_var_go_2_2_2_v1_4, &$go_2_2) {
+  $__fn = function($v_3 = null, $v1_4 = null) use (&$__tco_done_go_2_2_2, &$__tco_var_go_2_2_2_v_3, &$__tco_var_go_2_2_2_v1_4, &$go_2_2, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__tco_done_go_2_2_2 = true;
+  $v_3 = $__tco_var_go_2_2_2_v_3;
+  $v1_4 = $__tco_var_go_2_2_2_v1_4;
+  $__t4 = null;;
+  switch ($v_3) {
+case 0:
+$__t4 = $v1_4;
+goto end_branch_4;;
+break;
+default:
+;
+break;
+};
+  $__tco_2 = ($v_3 - 1);
+  $__tco_3 = ($v1_4 + 1);
+  $__tco_var_go_2_2_2_v_3 = $__tco_2;
+  $__tco_var_go_2_2_2_v1_4 = $__tco_3;
+  $__tco_done_go_2_2_2 = false;
+  $__res = null;
+  goto __end;;
+  $__t4 = null;
+  end_branch_4:;
+  $__res = $__t4;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}); return $v; };
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+  while (($__tco_done_go_2_2_2 === false)) {
+$__tco_res_go_2_2_2 = ($__tco_loop_go_2_2_2)($__tco_var_go_2_2_2_v_3, $__tco_var_go_2_2_2_v1_4);
+};
+  $__res = $__tco_res_go_2_2_2;
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+return (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))((($go_2_2)($dummy_1_1))(0)));
+})(); return $v; };
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
 
 
 

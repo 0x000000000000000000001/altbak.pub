@@ -144,11 +144,11 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   $curr_3 = $__tco_var_go_2_0_0_curr_3;
   $acc_4 = $__tco_var_go_2_0_0_acc_4;
   $__t2 = null;;
-  if ((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($curr_3))($start_0)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($curr_3))($start_0))->{'tag'} === "LT"))) {
+  if (($curr_3 < $start_0)) {
 $__t2 = $acc_4;
 goto end_branch_2;;
 };
-  $__tco_0 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($curr_3))(1);
+  $__tco_0 = ($curr_3 - 1);
   $__tco_1 = new Phpurs_Data2("Cons", $curr_3, $acc_4);
   $__tco_var_go_2_0_0_curr_3 = $__tco_0;
   $__tco_var_go_2_0_0_acc_4 = $__tco_1;
@@ -269,7 +269,8 @@ goto end_branch_0;;
 };
   if ((is_object($v_2) && (($v_2)->{'tag'} === "Cons"))) {
 $__t3 = null;;
-if (((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))(((($GLOBALS['Data_EuclideanRing_intMod'] ?? \PhpursThunks::eval('Data_EuclideanRing_intMod')))(($v_2)->{'value0'}))(2)))(0)) {
+switch (((($GLOBALS['Data_EuclideanRing_intMod'] ?? \PhpursThunks::eval('Data_EuclideanRing_intMod')))(($v_2)->{'value0'}))(2)) {
+case 0:
 $__tco_4 = ($v_2)->{'value1'};
 $__tco_5 = new Phpurs_Data2("Cons", ($v_2)->{'value0'}, $v1_3);
 $__tco_var_go_1_0_0_v_2 = $__tco_4;
@@ -279,6 +280,10 @@ $__res = null;
 goto __end;;
 $__t3 = null;
 goto end_branch_3;;
+break;
+default:
+;
+break;
 };
 $__tco_1 = ($v_2)->{'value1'};
 $__tco_2 = $v1_3;
@@ -319,19 +324,68 @@ $__tco_res_go_1_0_0 = ($__tco_loop_go_1_0_0)($__tco_var_go_1_0_0_v_2, $__tco_var
 }; return $v; };
 \PhpursThunks::$thunks['Test_ListOps_sumEvens'] = function() { $v = function($n_0 = null) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Test_ListOps_foldl'] ?? \PhpursThunks::eval('Test_ListOps_foldl')))(($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd'))))(0))((($GLOBALS['Test_ListOps_filterEvens'] ?? \PhpursThunks::eval('Test_ListOps_filterEvens')))(((($GLOBALS['Test_ListOps_range'] ?? \PhpursThunks::eval('Test_ListOps_range')))(1))($n_0)));
+  $go_1_0 = null;
+  $go_1_0 = (function() use (&$go_1_0) {
+  $__fn = function($curr_2 = null, $acc_3 = null) use (&$go_1_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__tco_var_go_1_0_0_curr_2 = $curr_2;
+  $__tco_var_go_1_0_0_acc_3 = $acc_3;
+  $__tco_done_go_1_0_0 = false;
+  $__tco_res_go_1_0_0 = null;
+  $__tco_loop_go_1_0_0 = (function() use (&$__tco_done_go_1_0_0, &$__tco_var_go_1_0_0_curr_2, &$__tco_var_go_1_0_0_acc_3, &$go_1_0) {
+  $__fn = function($curr_2 = null, $acc_3 = null) use (&$__tco_done_go_1_0_0, &$__tco_var_go_1_0_0_curr_2, &$__tco_var_go_1_0_0_acc_3, &$go_1_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__tco_done_go_1_0_0 = true;
+  $curr_2 = $__tco_var_go_1_0_0_curr_2;
+  $acc_3 = $__tco_var_go_1_0_0_acc_3;
+  $__t2 = null;;
+  if (($curr_2 < 1)) {
+$__t2 = $acc_3;
+goto end_branch_2;;
+};
+  $__tco_0 = ($curr_2 - 1);
+  $__tco_1 = new Phpurs_Data2("Cons", $curr_2, $acc_3);
+  $__tco_var_go_1_0_0_curr_2 = $__tco_0;
+  $__tco_var_go_1_0_0_acc_3 = $__tco_1;
+  $__tco_done_go_1_0_0 = false;
+  $__res = null;
+  goto __end;;
+  $__t2 = null;
+  end_branch_2:;
+  $__res = $__t2;
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+  while (($__tco_done_go_1_0_0 === false)) {
+$__tco_res_go_1_0_0 = ($__tco_loop_go_1_0_0)($__tco_var_go_1_0_0_curr_2, $__tco_var_go_1_0_0_acc_3);
+};
+  $__res = $__tco_res_go_1_0_0;
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+  $__res = (((($GLOBALS['Test_ListOps_foldl'] ?? \PhpursThunks::eval('Test_ListOps_foldl')))(($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd'))))(0))((($GLOBALS['Test_ListOps_filterEvens'] ?? \PhpursThunks::eval('Test_ListOps_filterEvens')))((($go_1_0)($n_0))(new Phpurs_Data0("Nil"))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Test_ListOps_describe'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))("List Processing (900 elements):"); return $v; };
-\PhpursThunks::$thunks['Test_ListOps_act'] = function() { $v = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($GLOBALS['Bench_opaque'] ?? \PhpursThunks::eval('Bench_opaque')))(900)))(function($dummy_0 = null) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))((((($GLOBALS['Test_ListOps_foldl'] ?? \PhpursThunks::eval('Test_ListOps_foldl')))(($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd'))))(0))((($GLOBALS['Test_ListOps_filterEvens'] ?? \PhpursThunks::eval('Test_ListOps_filterEvens')))(((($GLOBALS['Test_ListOps_range'] ?? \PhpursThunks::eval('Test_ListOps_range')))(1))($dummy_0)))));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}); return $v; };
+\PhpursThunks::$thunks['Test_ListOps_act'] = function() { $v = (function() use (&$__fn) {
+$__local_var_0_0 = (($GLOBALS['Bench_opaque'] ?? \PhpursThunks::eval('Bench_opaque')))(900);
+$dummy_1_1 = $__local_var_0_0;
+return (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))((($GLOBALS['Test_ListOps_sumEvens'] ?? \PhpursThunks::eval('Test_ListOps_sumEvens')))($dummy_1_1)));
+})(); return $v; };
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 

@@ -520,7 +520,7 @@ $__t0 = $b_4;
 goto end_branch_0;;
 };
   if ((is_object($v_5) && (($v_5)->{'tag'} === "Cons"))) {
-$__tco_1 = new Phpurs_Data2("Tuple", ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(($b_4)->{'value0'}))(1), new Phpurs_Data2("Cons", ($v_5)->{'value0'}, ($b_4)->{'value1'}));
+$__tco_1 = new Phpurs_Data2("Tuple", (($b_4)->{'value0'} + 1), new Phpurs_Data2("Cons", ($v_5)->{'value0'}, ($b_4)->{'value1'}));
 $__tco_2 = ($v_5)->{'value1'};
 $__tco_var_go_3_0_0_b_4 = $__tco_1;
 $__tco_var_go_3_0_0_v_5 = $__tco_2;
@@ -577,7 +577,7 @@ $__t2 = $b_6;
 goto end_branch_2;;
 };
   if ((is_object($v_7) && (($v_7)->{'tag'} === "Cons"))) {
-$__tco_3 = new Phpurs_Data2("Tuple", ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))(($b_6)->{'value0'}))(1), ((($f_0)(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))(($b_6)->{'value0'}))(1)))(($v_7)->{'value0'}))(($b_6)->{'value1'}));
+$__tco_3 = new Phpurs_Data2("Tuple", (($b_6)->{'value0'} - 1), ((($f_0)((($b_6)->{'value0'} - 1)))(($v_7)->{'value0'}))(($b_6)->{'value1'}));
 $__tco_4 = ($v_7)->{'value1'};
 $__tco_var_go_5_2_2_b_6 = $__tco_3;
 $__tco_var_go_5_2_2_v_7 = $__tco_4;
@@ -645,7 +645,7 @@ $__t3 = $b_3;
 goto end_branch_3;;
 };
   if ((is_object($v_4) && (($v_4)->{'tag'} === "Cons"))) {
-$__tco_4 = new Phpurs_Data2("Tuple", ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(($b_3)->{'value0'}))(1), ((($f_0)(($b_3)->{'value0'}))(($b_3)->{'value1'}))(($v_4)->{'value0'}));
+$__tco_4 = new Phpurs_Data2("Tuple", (($b_3)->{'value0'} + 1), ((($f_0)(($b_3)->{'value0'}))(($b_3)->{'value1'}))(($v_4)->{'value0'}));
 $__tco_5 = ($v_4)->{'value1'};
 $__tco_var_go_2_3_3_b_3 = $__tco_4;
 $__tco_var_go_2_3_3_v_4 = $__tco_5;
@@ -723,22 +723,21 @@ $__tco_res_go_2_3_3 = ($__tco_loop_go_2_3_3)($__tco_var_go_2_3_3_b_3, $__tco_var
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_4_1 = (($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(1);
-  $__res = (($foldMapWithIndex1_1_0)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_2))(function($v2_5 = null) use ($__local_var_4_1) {
+  $__res = (($foldMapWithIndex1_1_0)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_2))(function($v2_4 = null) {
   $__num = \func_num_args();
-  $__t2 = null;;
-  if ((is_object($v2_5) && (($v2_5)->{'tag'} === "Nothing"))) {
-$__t2 = 0;
-goto end_branch_2;;
+  $__t1 = null;;
+  if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Nothing"))) {
+$__t1 = 0;
+goto end_branch_1;;
 };
-  if ((is_object($v2_5) && (($v2_5)->{'tag'} === "Just"))) {
-$__t2 = ($__local_var_4_1)(($v2_5)->{'value0'});
-goto end_branch_2;;
+  if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Just"))) {
+$__t1 = (1 + ($v2_4)->{'value0'});
+goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t2 = null;
-  end_branch_2:;
-  $__res = $__t2;
+  $__t1 = null;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -758,22 +757,21 @@ goto end_branch_2;;
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__local_var_3_3 = (($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(1);
-  $__res = ((((($GLOBALS['Data_List_Types_foldableWithIndexNonEmpty'] ?? \PhpursThunks::eval('Data_List_Types_foldableWithIndexNonEmpty')))->{'foldlWithIndex'})(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_0))(function($v2_4 = null) use ($__local_var_3_3) {
+  $__res = ((((($GLOBALS['Data_List_Types_foldableWithIndexNonEmpty'] ?? \PhpursThunks::eval('Data_List_Types_foldableWithIndexNonEmpty')))->{'foldlWithIndex'})(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_0))(function($v2_3 = null) {
   $__num = \func_num_args();
-  $__t4 = null;;
-  if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Nothing"))) {
-$__t4 = 0;
-goto end_branch_4;;
+  $__t2 = null;;
+  if ((is_object($v2_3) && (($v2_3)->{'tag'} === "Nothing"))) {
+$__t2 = 0;
+goto end_branch_2;;
 };
-  if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Just"))) {
-$__t4 = ($__local_var_3_3)(($v2_4)->{'value0'});
-goto end_branch_4;;
+  if ((is_object($v2_3) && (($v2_3)->{'tag'} === "Just"))) {
+$__t2 = (1 + ($v2_3)->{'value0'});
+goto end_branch_2;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t4 = null;
-  end_branch_4:;
-  $__res = $__t4;
+  $__t2 = null;
+  end_branch_2:;
+  $__res = $__t2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -789,22 +787,21 @@ goto end_branch_4;;
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__local_var_3_5 = (($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(1);
-  $__res = ((((($GLOBALS['Data_List_Types_foldableWithIndexNonEmpty'] ?? \PhpursThunks::eval('Data_List_Types_foldableWithIndexNonEmpty')))->{'foldrWithIndex'})(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_0))(function($v2_4 = null) use ($__local_var_3_5) {
+  $__res = ((((($GLOBALS['Data_List_Types_foldableWithIndexNonEmpty'] ?? \PhpursThunks::eval('Data_List_Types_foldableWithIndexNonEmpty')))->{'foldrWithIndex'})(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_0))(function($v2_3 = null) {
   $__num = \func_num_args();
-  $__t6 = null;;
-  if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Nothing"))) {
-$__t6 = 0;
-goto end_branch_6;;
+  $__t3 = null;;
+  if ((is_object($v2_3) && (($v2_3)->{'tag'} === "Nothing"))) {
+$__t3 = 0;
+goto end_branch_3;;
 };
-  if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Just"))) {
-$__t6 = ($__local_var_3_5)(($v2_4)->{'value0'});
-goto end_branch_6;;
+  if ((is_object($v2_3) && (($v2_3)->{'tag'} === "Just"))) {
+$__t3 = (1 + ($v2_3)->{'value0'});
+goto end_branch_3;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t6 = null;
-  end_branch_6:;
-  $__res = $__t6;
+  $__t3 = null;
+  end_branch_3:;
+  $__res = $__t3;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -853,22 +850,21 @@ goto end_branch_6;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_2_0 = (($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(1);
-  $__res = ((($GLOBALS['Data_List_Types_mapWithIndex'] ?? \PhpursThunks::eval('Data_List_Types_mapWithIndex')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($fn_0))(function($v2_3 = null) use ($__local_var_2_0) {
+  $__res = ((($GLOBALS['Data_List_Types_mapWithIndex'] ?? \PhpursThunks::eval('Data_List_Types_mapWithIndex')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($fn_0))(function($v2_2 = null) {
   $__num = \func_num_args();
-  $__t1 = null;;
-  if ((is_object($v2_3) && (($v2_3)->{'tag'} === "Nothing"))) {
-$__t1 = 0;
-goto end_branch_1;;
+  $__t0 = null;;
+  if ((is_object($v2_2) && (($v2_2)->{'tag'} === "Nothing"))) {
+$__t0 = 0;
+goto end_branch_0;;
 };
-  if ((is_object($v2_3) && (($v2_3)->{'tag'} === "Just"))) {
-$__t1 = ($__local_var_2_0)(($v2_3)->{'value0'});
-goto end_branch_1;;
+  if ((is_object($v2_2) && (($v2_2)->{'tag'} === "Just"))) {
+$__t0 = (1 + ($v2_2)->{'value0'});
+goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t1 = null;
-  end_branch_1:;
-  $__res = $__t1;
+  $__t0 = null;
+  end_branch_0:;
+  $__res = $__t0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -928,7 +924,7 @@ goto end_branch_1;;
 $__t1 = "Nil";
 goto end_branch_1;;
 };
-  $__t1 = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("("))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(((($GLOBALS['Data_List_Types_intercalate'] ?? \PhpursThunks::eval('Data_List_Types_intercalate')))(" : "))(((($GLOBALS['Data_List_Types_listMap'] ?? \PhpursThunks::eval('Data_List_Types_listMap')))($show_1_0))($v_2))))(" : Nil)"));
+  $__t1 = (("(" . ((($GLOBALS['Data_List_Types_intercalate'] ?? \PhpursThunks::eval('Data_List_Types_intercalate')))(" : "))(((($GLOBALS['Data_List_Types_listMap'] ?? \PhpursThunks::eval('Data_List_Types_listMap')))($show_1_0))($v_2))) . " : Nil)");
   end_branch_1:;
   $__res = $__t1;
   goto __end;;
@@ -941,9 +937,10 @@ goto end_branch_1;;
 }; return $v; };
 \PhpursThunks::$thunks['Data_List_Types_showNonEmptyList'] = function() { $v = function($dictShow_0 = null) {
   $__num = \func_num_args();
-  $__res = (object)["show" => function($v_1 = null) use ($dictShow_0) {
+  $__local_var_1_0 = (($GLOBALS['Data_List_Types_showList'] ?? \PhpursThunks::eval('Data_List_Types_showList')))($dictShow_0);
+  $__res = (object)["show" => function($v_2 = null) use ($__local_var_1_0, $dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(NonEmptyList "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(((((($GLOBALS['Data_NonEmpty_showNonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_showNonEmpty')))($dictShow_0))((($GLOBALS['Data_List_Types_showList'] ?? \PhpursThunks::eval('Data_List_Types_showList')))($dictShow_0)))->{'show'})($v_1)))(")"));
+  $__res = (((("(NonEmptyList (NonEmpty " . (($dictShow_0)->{'show'})(($v_2)->{'value0'})) . " ") . (($__local_var_1_0)->{'show'})(($v_2)->{'value1'})) . "))");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1231,22 +1228,21 @@ $__tco_res_go_3_1_1 = ($__tco_loop_go_3_1_1)($__tco_var_go_3_1_1_b_4, $__tco_var
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_4_1 = (($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(1);
-  $__res = ((((((($dictApplicative_0)->{'Apply0'})(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->{'Functor0'})(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->{'map'})(($GLOBALS['Data_List_Types_NonEmptyList'] ?? \PhpursThunks::eval('Data_List_Types_NonEmptyList'))))((($traverseWithIndex1_1_0)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_2))(function($v2_5 = null) use ($__local_var_4_1) {
+  $__res = ((((((($dictApplicative_0)->{'Apply0'})(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->{'Functor0'})(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->{'map'})(($GLOBALS['Data_List_Types_NonEmptyList'] ?? \PhpursThunks::eval('Data_List_Types_NonEmptyList'))))((($traverseWithIndex1_1_0)(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($f_2))(function($v2_4 = null) {
   $__num = \func_num_args();
-  $__t2 = null;;
-  if ((is_object($v2_5) && (($v2_5)->{'tag'} === "Nothing"))) {
-$__t2 = 0;
-goto end_branch_2;;
+  $__t1 = null;;
+  if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Nothing"))) {
+$__t1 = 0;
+goto end_branch_1;;
 };
-  if ((is_object($v2_5) && (($v2_5)->{'tag'} === "Just"))) {
-$__t2 = ($__local_var_4_1)(($v2_5)->{'value0'});
-goto end_branch_2;;
+  if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Just"))) {
+$__t1 = (1 + ($v2_4)->{'value0'});
+goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t2 = null;
-  end_branch_2:;
-  $__res = $__t2;
+  $__t1 = null;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1755,7 +1751,7 @@ goto end_branch_1;;
 $__t1 = ((is_object($v1_5) && (($v1_5)->{'tag'} === "Nil")) && $v2_6);
 goto end_branch_1;;
 };
-  $__t1 = ((is_object($v_4) && (($v_4)->{'tag'} === "Cons")) && ((is_object($v1_5) && (($v1_5)->{'tag'} === "Cons")) && ((($go_3_0)(($v_4)->{'value1'}))(($v1_5)->{'value1'}))(((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))($v2_6))(((($dictEq_0)->{'eq'})(($v1_5)->{'value0'}))(($v_4)->{'value0'})))));
+  $__t1 = ((is_object($v_4) && (($v_4)->{'tag'} === "Cons")) && ((is_object($v1_5) && (($v1_5)->{'tag'} === "Cons")) && ((($go_3_0)(($v_4)->{'value1'}))(($v1_5)->{'value1'}))(($v2_6 && ((($dictEq_0)->{'eq'})(($v1_5)->{'value0'}))(($v_4)->{'value0'})))));
   end_branch_1:;
   $__res = $__t1;
   goto __end;;
@@ -1771,23 +1767,128 @@ goto end_branch_1;;
   };
   return $__fn;
 })()]; return $v; };
-\PhpursThunks::$thunks['Data_List_Types_eq1NonEmptyList'] = function() { $v = (object)["eq1" => function($dictEq_0 = null) {
+\PhpursThunks::$thunks['Data_List_Types_eq1NonEmptyList'] = function() { $v = (object)["eq1" => (function() {
+  $__fn = function($dictEq_0 = null, $x_1 = null, $y_2 = null) use (&$__fn) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_NonEmpty_eqNonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_eqNonEmpty')))(($GLOBALS['Data_List_Types_eq1List'] ?? \PhpursThunks::eval('Data_List_Types_eq1List'))))($dictEq_0))->{'eq'};
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $go_3_0 = null;
+  $go_3_0 = (function() use ($dictEq_0, &$go_3_0) {
+  $__fn = function($v_4 = null, $v1_5 = null, $v2_6 = null) use ($dictEq_0, &$go_3_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__t1 = null;;
+  if (( ! $v2_6)) {
+$__t1 = false;
+goto end_branch_1;;
+};
+  if ((is_object($v_4) && (($v_4)->{'tag'} === "Nil"))) {
+$__t1 = ((is_object($v1_5) && (($v1_5)->{'tag'} === "Nil")) && $v2_6);
+goto end_branch_1;;
+};
+  $__t1 = ((is_object($v_4) && (($v_4)->{'tag'} === "Cons")) && ((is_object($v1_5) && (($v1_5)->{'tag'} === "Cons")) && ((($go_3_0)(($v_4)->{'value1'}))(($v1_5)->{'value1'}))(($v2_6 && ((($dictEq_0)->{'eq'})(($v1_5)->{'value0'}))(($v_4)->{'value0'})))));
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]; return $v; };
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})();
+  $__res = (((($dictEq_0)->{'eq'})(($x_1)->{'value0'}))(($y_2)->{'value0'}) && ((($go_3_0)(($x_1)->{'value1'}))(($y_2)->{'value1'}))(true));
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})()]; return $v; };
 \PhpursThunks::$thunks['Data_List_Types_eqList'] = function() { $v = function($dictEq_0 = null) {
   $__num = \func_num_args();
-  $__res = (object)["eq" => ((($GLOBALS['Data_List_Types_eq1List'] ?? \PhpursThunks::eval('Data_List_Types_eq1List')))->{'eq1'})($dictEq_0)];
+  $__res = (object)["eq" => (function() use ($dictEq_0) {
+  $__fn = function($xs_1 = null, $ys_2 = null) use ($dictEq_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $go_3_0 = null;
+  $go_3_0 = (function() use ($dictEq_0, &$go_3_0) {
+  $__fn = function($v_4 = null, $v1_5 = null, $v2_6 = null) use ($dictEq_0, &$go_3_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__t1 = null;;
+  if (( ! $v2_6)) {
+$__t1 = false;
+goto end_branch_1;;
+};
+  if ((is_object($v_4) && (($v_4)->{'tag'} === "Nil"))) {
+$__t1 = ((is_object($v1_5) && (($v1_5)->{'tag'} === "Nil")) && $v2_6);
+goto end_branch_1;;
+};
+  $__t1 = ((is_object($v_4) && (($v_4)->{'tag'} === "Cons")) && ((is_object($v1_5) && (($v1_5)->{'tag'} === "Cons")) && ((($go_3_0)(($v_4)->{'value1'}))(($v1_5)->{'value1'}))(($v2_6 && ((($dictEq_0)->{'eq'})(($v1_5)->{'value0'}))(($v_4)->{'value0'})))));
+  end_branch_1:;
+  $__res = $__t1;
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})();
+  $__res = ((($go_3_0)($xs_1))($ys_2))(true);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_List_Types_eqNonEmptyList'] = function() { $v = function($dictEq_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_NonEmpty_eqNonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_eqNonEmpty')))(($GLOBALS['Data_List_Types_eq1List'] ?? \PhpursThunks::eval('Data_List_Types_eq1List'))))($dictEq_0);
+  $__res = (object)["eq" => (function() use ($dictEq_0) {
+  $__fn = function($x_1 = null, $y_2 = null) use ($dictEq_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $go_3_0 = null;
+  $go_3_0 = (function() use ($dictEq_0, &$go_3_0) {
+  $__fn = function($v_4 = null, $v1_5 = null, $v2_6 = null) use ($dictEq_0, &$go_3_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__t1 = null;;
+  if (( ! $v2_6)) {
+$__t1 = false;
+goto end_branch_1;;
+};
+  if ((is_object($v_4) && (($v_4)->{'tag'} === "Nil"))) {
+$__t1 = ((is_object($v1_5) && (($v1_5)->{'tag'} === "Nil")) && $v2_6);
+goto end_branch_1;;
+};
+  $__t1 = ((is_object($v_4) && (($v_4)->{'tag'} === "Cons")) && ((is_object($v1_5) && (($v1_5)->{'tag'} === "Cons")) && ((($go_3_0)(($v_4)->{'value1'}))(($v1_5)->{'value1'}))(($v2_6 && ((($dictEq_0)->{'eq'})(($v1_5)->{'value0'}))(($v_4)->{'value0'})))));
+  end_branch_1:;
+  $__res = $__t1;
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})();
+  $__res = (((($dictEq_0)->{'eq'})(($x_1)->{'value0'}))(($y_2)->{'value0'}) && ((($go_3_0)(($x_1)->{'value1'}))(($y_2)->{'value1'}))(true));
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1890,96 +1991,135 @@ $__tco_res_go_3_0_0 = ($__tco_loop_go_3_0_0)($__tco_var_go_3_0_0_v_4, $__tco_var
 \PhpursThunks::$thunks['Data_List_Types_ord1NonEmptyList'] = function() { $v = (($GLOBALS['Data_NonEmpty_ord1NonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_ord1NonEmpty')))(($GLOBALS['Data_List_Types_ord1List'] ?? \PhpursThunks::eval('Data_List_Types_ord1List'))); return $v; };
 \PhpursThunks::$thunks['Data_List_Types_ordList'] = function() { $v = function($dictOrd_0 = null) {
   $__num = \func_num_args();
+  $__local_var_1_0 = (($dictOrd_0)->{'Eq0'})(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined')));
+  $eqList1_2_1 = (object)["eq" => (function() use ($__local_var_1_0) {
+  $__fn = function($xs_2 = null, $ys_3 = null) use ($__local_var_1_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $go_4_1 = null;
+  $go_4_1 = (function() use ($__local_var_1_0, &$go_4_1) {
+  $__fn = function($v_5 = null, $v1_6 = null, $v2_7 = null) use ($__local_var_1_0, &$go_4_1, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__t2 = null;;
+  if (( ! $v2_7)) {
+$__t2 = false;
+goto end_branch_2;;
+};
+  if ((is_object($v_5) && (($v_5)->{'tag'} === "Nil"))) {
+$__t2 = ((is_object($v1_6) && (($v1_6)->{'tag'} === "Nil")) && $v2_7);
+goto end_branch_2;;
+};
+  $__t2 = ((is_object($v_5) && (($v_5)->{'tag'} === "Cons")) && ((is_object($v1_6) && (($v1_6)->{'tag'} === "Cons")) && ((($go_4_1)(($v_5)->{'value1'}))(($v1_6)->{'value1'}))(($v2_7 && ((($__local_var_1_0)->{'eq'})(($v1_6)->{'value0'}))(($v_5)->{'value0'})))));
+  end_branch_2:;
+  $__res = $__t2;
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})();
+  $__res = ((($go_4_1)($xs_2))($ys_3))(true);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
   $__res = (object)["compare" => (function() use ($dictOrd_0) {
-  $__fn = function($xs_1 = null, $ys_2 = null) use ($dictOrd_0, &$__fn) {
+  $__fn = function($xs_3 = null, $ys_4 = null) use ($dictOrd_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go_3_0 = null;
-  $go_3_0 = (function() use ($dictOrd_0, &$go_3_0) {
-  $__fn = function($v_4 = null, $v1_5 = null) use ($dictOrd_0, &$go_3_0, &$__fn) {
+  $go_5_4 = null;
+  $go_5_4 = (function() use ($dictOrd_0, &$go_5_4) {
+  $__fn = function($v_6 = null, $v1_7 = null) use ($dictOrd_0, &$go_5_4, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_go_3_0_0_v_4 = $v_4;
-  $__tco_var_go_3_0_0_v1_5 = $v1_5;
-  $__tco_done_go_3_0_0 = false;
-  $__tco_res_go_3_0_0 = null;
-  $__tco_loop_go_3_0_0 = (function() use (&$__tco_done_go_3_0_0, &$__tco_var_go_3_0_0_v_4, &$__tco_var_go_3_0_0_v1_5, $dictOrd_0, &$go_3_0) {
-  $__fn = function($v_4 = null, $v1_5 = null) use (&$__tco_done_go_3_0_0, &$__tco_var_go_3_0_0_v_4, &$__tco_var_go_3_0_0_v1_5, $dictOrd_0, &$go_3_0, &$__fn) {
+  $__tco_var_go_5_4_4_v_6 = $v_6;
+  $__tco_var_go_5_4_4_v1_7 = $v1_7;
+  $__tco_done_go_5_4_4 = false;
+  $__tco_res_go_5_4_4 = null;
+  $__tco_loop_go_5_4_4 = (function() use (&$__tco_done_go_5_4_4, &$__tco_var_go_5_4_4_v_6, &$__tco_var_go_5_4_4_v1_7, $dictOrd_0, &$go_5_4) {
+  $__fn = function($v_6 = null, $v1_7 = null) use (&$__tco_done_go_5_4_4, &$__tco_var_go_5_4_4_v_6, &$__tco_var_go_5_4_4_v1_7, $dictOrd_0, &$go_5_4, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_done_go_3_0_0 = true;
-  $v_4 = $__tco_var_go_3_0_0_v_4;
-  $v1_5 = $__tco_var_go_3_0_0_v1_5;
-  $__t0 = null;;
-  if ((is_object($v_4) && (($v_4)->{'tag'} === "Nil"))) {
-$__t1 = null;;
-if ((is_object($v1_5) && (($v1_5)->{'tag'} === "Nil"))) {
-$__t1 = new Phpurs_Data0("EQ");
-goto end_branch_1;;
+  $__tco_done_go_5_4_4 = true;
+  $v_6 = $__tco_var_go_5_4_4_v_6;
+  $v1_7 = $__tco_var_go_5_4_4_v1_7;
+  $__t4 = null;;
+  if ((is_object($v_6) && (($v_6)->{'tag'} === "Nil"))) {
+$__t5 = null;;
+if ((is_object($v1_7) && (($v1_7)->{'tag'} === "Nil"))) {
+$__t5 = new Phpurs_Data0("EQ");
+goto end_branch_5;;
 };
-$__t1 = new Phpurs_Data0("LT");
-end_branch_1:;
-$__t0 = $__t1;
-goto end_branch_0;;
+$__t5 = new Phpurs_Data0("LT");
+end_branch_5:;
+$__t4 = $__t5;
+goto end_branch_4;;
 };
-  if ((is_object($v1_5) && (($v1_5)->{'tag'} === "Nil"))) {
-$__t0 = new Phpurs_Data0("GT");
-goto end_branch_0;;
+  if ((is_object($v1_7) && (($v1_7)->{'tag'} === "Nil"))) {
+$__t4 = new Phpurs_Data0("GT");
+goto end_branch_4;;
 };
-  if (((is_object($v_4) && (($v_4)->{'tag'} === "Cons")) && (is_object($v1_5) && (($v1_5)->{'tag'} === "Cons")))) {
-$v2_6_2 = ((($dictOrd_0)->{'compare'})(($v_4)->{'value0'}))(($v1_5)->{'value0'});
-$__t3 = null;;
-if ((is_object($v2_6_2) && (($v2_6_2)->{'tag'} === "EQ"))) {
-$__tco_4 = ($v_4)->{'value1'};
-$__tco_5 = ($v1_5)->{'value1'};
-$__tco_var_go_3_0_0_v_4 = $__tco_4;
-$__tco_var_go_3_0_0_v1_5 = $__tco_5;
-$__tco_done_go_3_0_0 = false;
+  if (((is_object($v_6) && (($v_6)->{'tag'} === "Cons")) && (is_object($v1_7) && (($v1_7)->{'tag'} === "Cons")))) {
+$v2_8_6 = ((($dictOrd_0)->{'compare'})(($v_6)->{'value0'}))(($v1_7)->{'value0'});
+$__t7 = null;;
+if ((is_object($v2_8_6) && (($v2_8_6)->{'tag'} === "EQ"))) {
+$__tco_8 = ($v_6)->{'value1'};
+$__tco_9 = ($v1_7)->{'value1'};
+$__tco_var_go_5_4_4_v_6 = $__tco_8;
+$__tco_var_go_5_4_4_v1_7 = $__tco_9;
+$__tco_done_go_5_4_4 = false;
 $__res = null;
 goto __end;;
-$__t3 = null;
-goto end_branch_3;;
+$__t7 = null;
+goto end_branch_7;;
 };
-$__t3 = $v2_6_2;
-end_branch_3:;
-$__t0 = $__t3;
-goto end_branch_0;;
+$__t7 = $v2_8_6;
+end_branch_7:;
+$__t4 = $__t7;
+goto end_branch_4;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t0 = null;
-  end_branch_0:;
-  $__res = $__t0;
+  $__t4 = null;
+  end_branch_4:;
+  $__res = $__t4;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })();
-  while (($__tco_done_go_3_0_0 === false)) {
-$__tco_res_go_3_0_0 = ($__tco_loop_go_3_0_0)($__tco_var_go_3_0_0_v_4, $__tco_var_go_3_0_0_v1_5);
+  while (($__tco_done_go_5_4_4 === false)) {
+$__tco_res_go_5_4_4 = ($__tco_loop_go_5_4_4)($__tco_var_go_5_4_4_v_6, $__tco_var_go_5_4_4_v1_7);
 };
-  $__res = $__tco_res_go_3_0_0;
+  $__res = $__tco_res_go_5_4_4;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })();
-  $__res = (($go_3_0)($xs_1))($ys_2);
+  $__res = (($go_5_4)($xs_3))($ys_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "Eq0" => function($dollar__unused_1 = null) use ($dictOrd_0) {
+})(), "Eq0" => function($dollar__unused_3 = null) use ($eqList1_2_1) {
   $__num = \func_num_args();
-  $__res = (object)["eq" => ((($GLOBALS['Data_List_Types_eq1List'] ?? \PhpursThunks::eval('Data_List_Types_eq1List')))->{'eq1'})((($dictOrd_0)->{'Eq0'})(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))];
+  $__res = $eqList1_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

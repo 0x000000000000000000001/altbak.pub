@@ -133,7 +133,7 @@ goto end_branch_0;;
 \PhpursThunks::$thunks['Data_Int_radix'] = function() { $v = function($n_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if (((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))(( ! (is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($n_0))(2)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($n_0))(2))->{'tag'} === "LT")))))(( ! (is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($n_0))(36)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($n_0))(36))->{'tag'} === "GT"))))) {
+  if ((($n_0 >= 2) && ($n_0 <= 36))) {
 $__t0 = new Phpurs_Data1("Just", $n_0);
 goto end_branch_0;;
 };
@@ -146,7 +146,7 @@ goto end_branch_0;;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Int_odd'] = function() { $v = function($x_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Eq_eqBooleanImpl'] ?? \PhpursThunks::eval('Data_Eq_eqBooleanImpl')))(((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))(((($GLOBALS['Data_Int_Bits_and'] ?? \PhpursThunks::eval('Data_Int_Bits_and')))($x_0))(1)))(0)))(false);
+  $__res = (($x_0 & 1) !== 0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -159,15 +159,15 @@ goto end_branch_0;;
 \PhpursThunks::$thunks['Data_Int_unsafeClamp'] = function() { $v = function($x_0 = null) {
   $__num = \func_num_args();
   $__t2 = null;;
-  if ((($GLOBALS['Data_HeytingAlgebra_boolNot'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolNot')))((($GLOBALS['Data_Number_isFinite'] ?? \PhpursThunks::eval('Data_Number_isFinite')))($x_0))) {
+  if (( ! (($GLOBALS['Data_Number_isFinite'] ?? \PhpursThunks::eval('Data_Number_isFinite')))($x_0))) {
 $__t2 = 0;
 goto end_branch_2;;
 };
-  if (( ! (is_object((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->{'compare'})($x_0))((($GLOBALS['Data_Int_toNumber'] ?? \PhpursThunks::eval('Data_Int_toNumber')))(($GLOBALS['Data_Bounded_topInt'] ?? \PhpursThunks::eval('Data_Bounded_topInt'))))) && (((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->{'compare'})($x_0))((($GLOBALS['Data_Int_toNumber'] ?? \PhpursThunks::eval('Data_Int_toNumber')))(($GLOBALS['Data_Bounded_topInt'] ?? \PhpursThunks::eval('Data_Bounded_topInt')))))->{'tag'} === "LT")))) {
+  if (($x_0 >= (($GLOBALS['Data_Int_toNumber'] ?? \PhpursThunks::eval('Data_Int_toNumber')))(($GLOBALS['Data_Bounded_topInt'] ?? \PhpursThunks::eval('Data_Bounded_topInt'))))) {
 $__t2 = ($GLOBALS['Data_Bounded_topInt'] ?? \PhpursThunks::eval('Data_Bounded_topInt'));
 goto end_branch_2;;
 };
-  if (( ! (is_object((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->{'compare'})($x_0))((($GLOBALS['Data_Int_toNumber'] ?? \PhpursThunks::eval('Data_Int_toNumber')))(($GLOBALS['Data_Bounded_bottomInt'] ?? \PhpursThunks::eval('Data_Bounded_bottomInt'))))) && (((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->{'compare'})($x_0))((($GLOBALS['Data_Int_toNumber'] ?? \PhpursThunks::eval('Data_Int_toNumber')))(($GLOBALS['Data_Bounded_bottomInt'] ?? \PhpursThunks::eval('Data_Bounded_bottomInt')))))->{'tag'} === "GT")))) {
+  if (($x_0 <= (($GLOBALS['Data_Int_toNumber'] ?? \PhpursThunks::eval('Data_Int_toNumber')))(($GLOBALS['Data_Bounded_bottomInt'] ?? \PhpursThunks::eval('Data_Bounded_bottomInt'))))) {
 $__t2 = ($GLOBALS['Data_Bounded_bottomInt'] ?? \PhpursThunks::eval('Data_Bounded_bottomInt'));
 goto end_branch_2;;
 };
@@ -196,7 +196,7 @@ goto end_branch_1;;
 \PhpursThunks::$thunks['Data_Int_floor'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Int_unsafeClamp'] ?? \PhpursThunks::eval('Data_Int_unsafeClamp'))))(($GLOBALS['Data_Number_floor'] ?? \PhpursThunks::eval('Data_Number_floor'))); return $v; };
 \PhpursThunks::$thunks['Data_Int_even'] = function() { $v = function($x_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))(((($GLOBALS['Data_Int_Bits_and'] ?? \PhpursThunks::eval('Data_Int_Bits_and')))($x_0))(1)))(0);
+  $__res = (($x_0 & 1) === 0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -204,9 +204,14 @@ goto end_branch_1;;
 \PhpursThunks::$thunks['Data_Int_parity'] = function() { $v = function($n_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if (((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))(((($GLOBALS['Data_Int_Bits_and'] ?? \PhpursThunks::eval('Data_Int_Bits_and')))($n_0))(1)))(0)) {
+  switch (($n_0 & 1)) {
+case 0:
 $__t0 = new Phpurs_Data0("Even");
 goto end_branch_0;;
+break;
+default:
+;
+break;
 };
   $__t0 = new Phpurs_Data0("Odd");
   end_branch_0:;

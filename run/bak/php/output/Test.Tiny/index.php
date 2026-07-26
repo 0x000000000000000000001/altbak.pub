@@ -117,11 +117,11 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Circle"))) {
-$__t0 = ((($GLOBALS['Data_Semiring_intMul'] ?? \PhpursThunks::eval('Data_Semiring_intMul')))(($v_0)->{'value0'}))(($v_0)->{'value0'});
+$__t0 = (($v_0)->{'value0'} * ($v_0)->{'value0'});
 goto end_branch_0;;
 };
   if ((is_object($v_0) && (($v_0)->{'tag'} === "Rect"))) {
-$__t0 = ((($GLOBALS['Data_Semiring_intMul'] ?? \PhpursThunks::eval('Data_Semiring_intMul')))(($v_0)->{'value0'}))(($v_0)->{'value1'});
+$__t0 = (($v_0)->{'value0'} * ($v_0)->{'value1'});
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);

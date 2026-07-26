@@ -525,7 +525,7 @@ break;
   $__t2 = null;;
   if ((is_object($v2_5) && (($v2_5)->{'tag'} === "Yield"))) {
 $__local_var_6_3 = ($v2_5)->{'value1'};
-$__local_var_7_4 = ((($GLOBALS['Control_Monad_List_Trans_take'] ?? \PhpursThunks::eval('Control_Monad_List_Trans_take')))($dictApplicative_0))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_3))(1));
+$__local_var_7_4 = ((($GLOBALS['Control_Monad_List_Trans_take'] ?? \PhpursThunks::eval('Control_Monad_List_Trans_take')))($dictApplicative_0))(($v_3 - 1));
 $__t2 = new Phpurs_Data2("Yield", ($v2_5)->{'value0'}, (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_8 = null) use ($__local_var_6_3, $__local_var_7_4) {
   $__num = \func_num_args();
   $__res = ($__local_var_7_4)((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($__local_var_6_3));
@@ -1377,7 +1377,7 @@ break;
   $__t1 = null;;
   if ((is_object($v2_4) && (($v2_4)->{'tag'} === "Yield"))) {
 $__local_var_5_2 = ($v2_4)->{'value1'};
-$__local_var_6_3 = ((($GLOBALS['Control_Monad_List_Trans_drop'] ?? \PhpursThunks::eval('Control_Monad_List_Trans_drop')))($dictApplicative_0))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_2))(1));
+$__local_var_6_3 = ((($GLOBALS['Control_Monad_List_Trans_drop'] ?? \PhpursThunks::eval('Control_Monad_List_Trans_drop')))($dictApplicative_0))(($v_2 - 1));
 $__t1 = new Phpurs_Data1("Skip", (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_7 = null) use ($__local_var_5_2, $__local_var_6_3) {
   $__num = \func_num_args();
   $__res = ($__local_var_6_3)((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($__local_var_5_2));

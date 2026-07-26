@@ -45,11 +45,11 @@ State Monad             | ~ 425 μs      | ~ 170 μs       | ~ 63 μs   | ~ 5 μ
 Lazy Evaluation         | ~ 16372 μs    | ~ 13986 μs     | ~ 21985 μs| ~ 2868 μs  | ~ 10325 μs    | ~ 629215 μs
 Array Processing        | ~ 218 μs      | ~ 222 μs       | ~ 93 μs   | ~ 13 μs    | ~ 5430 μs     | ~ 886 μs
 ----------------------- | ------------- | -------------- | --------- | ---------- | ------------- | ---------
-Total Execution Time    | ~ 125.77 ms   | ~ 81.21 ms     | ~ 79.69 ms| ~ 46.87 ms | ~ 131.04 ms   | ~ 11877.01 ms BUG! Regression under fix (usually ~500ms, still under improvements)
+Total Execution Time    | ~ 125.77 ms   | ~ 81.21 ms     | ~ 79.69 ms| ~ 46.87 ms | ~ 131.04 ms   | ~ 4889.50 ms BUG! Regression under fix (usually ~500ms, still under improvements)
 ```
 > [!NOTE]
 > **Single-Threaded Benchmark**
-> All benchmarks presented here are strictly **single-threaded**. They measure raw sequential execution speed and do not take into account the powerful multi-threading and concurrency capabilities inherent to languages like Go or Erlang (BEAM).
+> All benchmarks presented here are strictly **single-threaded**. They measure raw sequential execution speed and do not take into account the powerful multi-threading capabilities inherent to languages like Go or Erlang (BEAM).
 
 ### Extended benchmark results (I/O, mutability, async)
 Command: `./bin/run --x` (Skips runtimes lacking necessary FFI bindings like Scheme and Erlang)
@@ -63,7 +63,7 @@ WIP. Usually +20% everywhere, when this is supported (e.g. JS or Go, but not Sch
 
 > [!WARNING]
 > **About the PHP results**
-> Please note that the `phpurs` backend is a brand new, completely experimental, and homemade compiler built entirely from scratch for this repository. Its execution time is not yet representative of PHP's actual performance limit. The currently displayed time (~11s) is due to a recent regression bug; prior to this, it was running at around **900 ms** (which itself was still a WIP milestone, not the final optimized limit). It is actively undergoing optimization and debugging!
+> Please note that the `phpurs` backend is a brand new, completely experimental, and homemade compiler built entirely from scratch for this repository. Its execution time is not yet representative of PHP's actual performance limit. The currently displayed time (~4.8s) is due to a recent regression bug; prior to this, it was running at around **900 ms** (which itself was still a WIP milestone, not the final optimized limit). It is actively undergoing optimization and debugging!
 
 
 > [!NOTE]

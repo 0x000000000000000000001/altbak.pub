@@ -121,7 +121,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   $__num = \func_num_args();
   $__res = (object)["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(Last "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((((($GLOBALS['Data_Maybe_showMaybe'] ?? \PhpursThunks::eval('Data_Maybe_showMaybe')))($dictShow_0))->{'show'})($v_1)))(")"));
+  $__t0 = null;;
+  if ((is_object($v_1) && (($v_1)->{'tag'} === "Just"))) {
+$__t0 = (("(Last (Just " . (($dictShow_0)->{'show'})(($v_1)->{'value0'})) . "))");
+goto end_branch_0;;
+};
+  if ((is_object($v_1) && (($v_1)->{'tag'} === "Nothing"))) {
+$__t0 = "(Last Nothing)";
+goto end_branch_0;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t0 = null;
+  end_branch_0:;
+  $__res = $__t0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

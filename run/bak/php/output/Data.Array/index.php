@@ -125,13 +125,6 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   }
 }
 \PhpursThunks::$thunks['Data_Array_traverse_'] = function() { $v = (($GLOBALS['Data_Foldable_traverse_'] ?? \PhpursThunks::eval('Data_Foldable_traverse_')))(($GLOBALS['Control_Monad_ST_Internal_applicativeST'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_applicativeST'))); return $v; };
-\PhpursThunks::$thunks['Data_Array_void'] = function() { $v = (($GLOBALS['Control_Monad_ST_Internal_map_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_map_')))(function($v_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}); return $v; };
 \PhpursThunks::$thunks['Data_Array_fromJust'] = function() { $v = function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
@@ -147,7 +140,19 @@ goto end_branch_0;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Array_zipWith'] = function() { $v = (($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Data_Array_zipWithImpl'] ?? \PhpursThunks::eval('Data_Array_zipWithImpl'))); return $v; };
+\PhpursThunks::$thunks['Data_Array_zipWith'] = function() { $v = (function() {
+  $__fn = function($__local_var_0 = null, $__local_var_1 = null, $__local_var_2 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__res = (($GLOBALS['Data_Array_zipWithImpl'] ?? \PhpursThunks::eval('Data_Array_zipWithImpl')))($__local_var_0, $__local_var_1, $__local_var_2);
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})(); return $v; };
 \PhpursThunks::$thunks['Data_Array_zipWithA'] = function() { $v = function($dictApplicative_0 = null) {
   $__num = \func_num_args();
   $sequence1_1_0 = (((($GLOBALS['Data_Traversable_traversableArray'] ?? \PhpursThunks::eval('Data_Traversable_traversableArray')))->{'traverse'})($dictApplicative_0))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->{'identity'});
@@ -157,7 +162,7 @@ goto end_branch_0;;
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($sequence1_1_0)((((($GLOBALS['Data_Array_zipWith'] ?? \PhpursThunks::eval('Data_Array_zipWith')))($f_2))($xs_3))($ys_4));
+  $__res = ($sequence1_1_0)((($GLOBALS['Data_Array_zipWithImpl'] ?? \PhpursThunks::eval('Data_Array_zipWithImpl')))($f_2, $xs_3, $ys_4));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -201,52 +206,69 @@ goto end_branch_0;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Array_updateAt'] = function() { $v = (((($GLOBALS['Data_Function_Uncurried_runFn5'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn5')))(($GLOBALS['Data_Array__updateAt'] ?? \PhpursThunks::eval('Data_Array__updateAt'))))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))(new Phpurs_Data0("Nothing")); return $v; };
-\PhpursThunks::$thunks['Data_Array_unsafeIndex'] = function() { $v = function($dollar__unused_0 = null) {
+\PhpursThunks::$thunks['Data_Array_updateAt'] = function() { $v = (function() {
+  $__fn = function($__local_var_0 = null, $__local_var_1 = null, $__local_var_2 = null) use (&$__fn) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($GLOBALS['Data_Array_unsafeIndexImpl'] ?? \PhpursThunks::eval('Data_Array_unsafeIndexImpl')));
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__res = (($GLOBALS['Data_Array__updateAt'] ?? \PhpursThunks::eval('Data_Array__updateAt')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')), new Phpurs_Data0("Nothing"), $__local_var_0, $__local_var_1, $__local_var_2);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Array_unsafeIndex1'] = function() { $v = (($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($GLOBALS['Data_Array_unsafeIndexImpl'] ?? \PhpursThunks::eval('Data_Array_unsafeIndexImpl'))); return $v; };
-\PhpursThunks::$thunks['Data_Array_uncons'] = function() { $v = (((($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Data_Array_unconsImpl'] ?? \PhpursThunks::eval('Data_Array_unconsImpl'))))(function($v_0 = null) {
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})(); return $v; };
+\PhpursThunks::$thunks['Data_Array_unsafeIndex'] = function() { $v = (function() {
+  $__fn = function($dollar__unused_0 = null, $__local_var_1 = null, $__local_var_2 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__res = ($__local_var_1)[0];
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})(); return $v; };
+\PhpursThunks::$thunks['Data_Array_uncons'] = function() { $v = function($__local_var_0 = null) {
+  $__num = \func_num_args();
+  $__res = (($GLOBALS['Data_Array_unconsImpl'] ?? \PhpursThunks::eval('Data_Array_unconsImpl')))(function($v_1 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data0("Nothing");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((function() {
-  $__fn = function($x_0 = null, $xs_1 = null) use (&$__fn) {
+}, (function() {
+  $__fn = function($x_1 = null, $xs_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data1("Just", (object)["head" => $x_0, "tail" => $xs_1]);
+  $__res = new Phpurs_Data1("Just", (object)["head" => $x_1, "tail" => $xs_2]);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()); return $v; };
+})(), $__local_var_0);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}; return $v; };
 \PhpursThunks::$thunks['Data_Array_toUnfoldable'] = function() { $v = (function() {
   $__fn = function($dictUnfoldable_0 = null, $xs_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $len_2_0 = (($GLOBALS['Data_Array_length'] ?? \PhpursThunks::eval('Data_Array_length')))($xs_1);
+  $len_2_0 = count($xs_1);
   $__res = ((($dictUnfoldable_0)->{'unfoldr'})(function($i_3 = null) use ($len_2_0, $xs_1) {
   $__num = \func_num_args();
   $__t1 = null;;
-  if ((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($i_3))($len_2_0)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($i_3))($len_2_0))->{'tag'} === "LT"))) {
-$__t1 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", (($GLOBALS['Partial_Unsafe__unsafePartial'] ?? \PhpursThunks::eval('Partial_Unsafe__unsafePartial')))(function($dollar__unused_4 = null) use ($i_3, $xs_1) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Array_unsafeIndex1'] ?? \PhpursThunks::eval('Data_Array_unsafeIndex1')))($xs_1))($i_3);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}), ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($i_3))(1)));
+  if (($i_3 < $len_2_0)) {
+$__t1 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", ($xs_1)[0], ($i_3 + 1)));
 goto end_branch_1;;
 };
   $__t1 = new Phpurs_Data0("Nothing");
@@ -262,40 +284,50 @@ goto end_branch_1;;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_Array_tail'] = function() { $v = (((($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Data_Array_unconsImpl'] ?? \PhpursThunks::eval('Data_Array_unconsImpl'))))(function($v_0 = null) {
+\PhpursThunks::$thunks['Data_Array_tail'] = function() { $v = function($__local_var_0 = null) {
+  $__num = \func_num_args();
+  $__res = (($GLOBALS['Data_Array_unconsImpl'] ?? \PhpursThunks::eval('Data_Array_unconsImpl')))(function($v_1 = null) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data0("Nothing");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((function() {
-  $__fn = function($v_0 = null, $xs_1 = null) use (&$__fn) {
+}, (function() {
+  $__fn = function($v_1 = null, $xs_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new Phpurs_Data1("Just", $xs_1);
+  $__res = new Phpurs_Data1("Just", $xs_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()); return $v; };
-\PhpursThunks::$thunks['Data_Array_sortBy'] = function() { $v = function($comp_0 = null) {
+})(), $__local_var_0);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}; return $v; };
+\PhpursThunks::$thunks['Data_Array_sortBy'] = function() { $v = (function() {
+  $__fn = function($comp_0 = null, $__local_var_1 = null) use (&$__fn) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Data_Array_sortByImpl'] ?? \PhpursThunks::eval('Data_Array_sortByImpl'))))($comp_0))(function($v_1 = null) {
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($GLOBALS['Data_Array_sortByImpl'] ?? \PhpursThunks::eval('Data_Array_sortByImpl')))($comp_0, function($v_2 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((is_object($v_1) && (($v_1)->{'tag'} === "GT"))) {
+  if ((is_object($v_2) && (($v_2)->{'tag'} === "GT"))) {
 $__t0 = 1;
 goto end_branch_0;;
 };
-  if ((is_object($v_1) && (($v_1)->{'tag'} === "EQ"))) {
+  if ((is_object($v_2) && (($v_2)->{'tag'} === "EQ"))) {
 $__t0 = 0;
 goto end_branch_0;;
 };
-  if ((is_object($v_1) && (($v_1)->{'tag'} === "LT"))) {
-$__t0 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))(0))(1);
+  if ((is_object($v_2) && (($v_2)->{'tag'} === "LT"))) {
+$__t0 = -1;
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -305,11 +337,13 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
+}, $__local_var_1);
   goto __end;;
   __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(); return $v; };
 \PhpursThunks::$thunks['Data_Array_sortWith'] = function() { $v = (function() {
   $__fn = function($dictOrd_0 = null, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
@@ -362,7 +396,19 @@ goto end_branch_0;;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_Array_slice'] = function() { $v = (($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Data_Array_sliceImpl'] ?? \PhpursThunks::eval('Data_Array_sliceImpl'))); return $v; };
+\PhpursThunks::$thunks['Data_Array_slice'] = function() { $v = (function() {
+  $__fn = function($__local_var_0 = null, $__local_var_1 = null, $__local_var_2 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__res = (($GLOBALS['Data_Array_sliceImpl'] ?? \PhpursThunks::eval('Data_Array_sliceImpl')))($__local_var_0, $__local_var_1, $__local_var_2);
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})(); return $v; };
 \PhpursThunks::$thunks['Data_Array_splitAt'] = function() { $v = (function() {
   $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
@@ -370,11 +416,11 @@ goto end_branch_0;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t0 = null;;
-  if (( ! (is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($v_0))(0)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($v_0))(0))->{'tag'} === "GT")))) {
+  if (($v_0 <= 0)) {
 $__t0 = (object)["before" => [], "after" => $v1_1];
 goto end_branch_0;;
 };
-  $__t0 = (object)["before" => (((($GLOBALS['Data_Array_slice'] ?? \PhpursThunks::eval('Data_Array_slice')))(0))($v_0))($v1_1), "after" => (((($GLOBALS['Data_Array_slice'] ?? \PhpursThunks::eval('Data_Array_slice')))($v_0))((($GLOBALS['Data_Array_length'] ?? \PhpursThunks::eval('Data_Array_length')))($v1_1)))($v1_1)];
+  $__t0 = (object)["before" => (($GLOBALS['Data_Array_sliceImpl'] ?? \PhpursThunks::eval('Data_Array_sliceImpl')))(0, $v_0, $v1_1), "after" => (($GLOBALS['Data_Array_sliceImpl'] ?? \PhpursThunks::eval('Data_Array_sliceImpl')))($v_0, count($v1_1), $v1_1)];
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
@@ -390,11 +436,11 @@ goto end_branch_0;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t0 = null;;
-  if ((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($n_0))(1)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($n_0))(1))->{'tag'} === "LT"))) {
+  if (($n_0 < 1)) {
 $__t0 = [];
 goto end_branch_0;;
 };
-  $__t0 = (((($GLOBALS['Data_Array_slice'] ?? \PhpursThunks::eval('Data_Array_slice')))(0))($n_0))($xs_1);
+  $__t0 = (($GLOBALS['Data_Array_sliceImpl'] ?? \PhpursThunks::eval('Data_Array_sliceImpl')))(0, $n_0, $xs_1);
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
@@ -410,14 +456,74 @@ goto end_branch_0;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Array_scanr'] = function() { $v = (($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Data_Array_scanrImpl'] ?? \PhpursThunks::eval('Data_Array_scanrImpl'))); return $v; };
-\PhpursThunks::$thunks['Data_Array_scanl'] = function() { $v = (($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Data_Array_scanlImpl'] ?? \PhpursThunks::eval('Data_Array_scanlImpl'))); return $v; };
-\PhpursThunks::$thunks['Data_Array_replicate'] = function() { $v = (($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($GLOBALS['Data_Array_replicateImpl'] ?? \PhpursThunks::eval('Data_Array_replicateImpl'))); return $v; };
-\PhpursThunks::$thunks['Data_Array_range'] = function() { $v = (($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($GLOBALS['Data_Array_rangeImpl'] ?? \PhpursThunks::eval('Data_Array_rangeImpl'))); return $v; };
-\PhpursThunks::$thunks['Data_Array_partition'] = function() { $v = (($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($GLOBALS['Data_Array_partitionImpl'] ?? \PhpursThunks::eval('Data_Array_partitionImpl'))); return $v; };
+\PhpursThunks::$thunks['Data_Array_scanr'] = function() { $v = (function() {
+  $__fn = function($__local_var_0 = null, $__local_var_1 = null, $__local_var_2 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__res = (($GLOBALS['Data_Array_scanrImpl'] ?? \PhpursThunks::eval('Data_Array_scanrImpl')))($__local_var_0, $__local_var_1, $__local_var_2);
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})(); return $v; };
+\PhpursThunks::$thunks['Data_Array_scanl'] = function() { $v = (function() {
+  $__fn = function($__local_var_0 = null, $__local_var_1 = null, $__local_var_2 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__res = (($GLOBALS['Data_Array_scanlImpl'] ?? \PhpursThunks::eval('Data_Array_scanlImpl')))($__local_var_0, $__local_var_1, $__local_var_2);
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})(); return $v; };
+\PhpursThunks::$thunks['Data_Array_replicate'] = function() { $v = (function() {
+  $__fn = function($__local_var_0 = null, $__local_var_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($GLOBALS['Data_Array_replicateImpl'] ?? \PhpursThunks::eval('Data_Array_replicateImpl')))($__local_var_0, $__local_var_1);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(); return $v; };
+\PhpursThunks::$thunks['Data_Array_range'] = function() { $v = (function() {
+  $__fn = function($__local_var_0 = null, $__local_var_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($GLOBALS['Data_Array_rangeImpl'] ?? \PhpursThunks::eval('Data_Array_rangeImpl')))($__local_var_0, $__local_var_1);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(); return $v; };
+\PhpursThunks::$thunks['Data_Array_partition'] = function() { $v = (function() {
+  $__fn = function($__local_var_0 = null, $__local_var_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($GLOBALS['Data_Array_partitionImpl'] ?? \PhpursThunks::eval('Data_Array_partitionImpl')))($__local_var_0, $__local_var_1);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(); return $v; };
 \PhpursThunks::$thunks['Data_Array_null'] = function() { $v = function($xs_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))((($GLOBALS['Data_Array_length'] ?? \PhpursThunks::eval('Data_Array_length')))($xs_0)))(0);
+  $__res = (count($xs_0) === 0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -461,57 +567,27 @@ goto end_branch_0;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v_2_0 = (($GLOBALS['Data_Array_length'] ?? \PhpursThunks::eval('Data_Array_length')))($arr_1);
-  $__t1 = null;;
-  if ((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($v_2_0))(2)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($v_2_0))(2))->{'tag'} === "LT"))) {
-$__t1 = $arr_1;
-goto end_branch_1;;
+  $v_2_0 = count($arr_1);
+  $__t7 = null;;
+  if (($v_2_0 < 2)) {
+$__t7 = $arr_1;
+goto end_branch_7;;
 };
-  $__t1 = (($GLOBALS['Control_Monad_ST_Internal_run'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_run')))(((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(($GLOBALS['Data_Array_ST_new'] ?? \PhpursThunks::eval('Data_Array_ST_new'))))(function($out_3 = null) use ($a_0, $arr_1, $v_2_0) {
+  $out_3_1 = ($GLOBALS['Data_Array_ST_new'] ?? \PhpursThunks::eval('Data_Array_ST_new'));
+  $dollar__unused_4_2 = ((($GLOBALS['Data_Array_ST_push'] ?? \PhpursThunks::eval('Data_Array_ST_push')))(($arr_1)[0]))($out_3_1);
+  $dollar__unused_5_3 = (((($GLOBALS['Control_Monad_ST_Internal_for'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_for')))(1))($v_2_0))(function($idx_5 = null) use ($a_0, $arr_1, $out_3_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(((($GLOBALS['Data_Array_ST_push'] ?? \PhpursThunks::eval('Data_Array_ST_push')))((($GLOBALS['Partial_Unsafe__unsafePartial'] ?? \PhpursThunks::eval('Partial_Unsafe__unsafePartial')))(function($dollar__unused_4 = null) use ($arr_1) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Array_unsafeIndex1'] ?? \PhpursThunks::eval('Data_Array_unsafeIndex1')))($arr_1))(0);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))($out_3)))(function($dollar__unused_4 = null) use ($a_0, $arr_1, $out_3, $v_2_0) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))((((($GLOBALS['Control_Monad_ST_Internal_for'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_for')))(1))($v_2_0))(function($idx_5 = null) use ($a_0, $arr_1, $out_3) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(((($GLOBALS['Data_Array_ST_push'] ?? \PhpursThunks::eval('Data_Array_ST_push')))($a_0))($out_3)))(function($dollar__unused_6 = null) use ($arr_1, $idx_5, $out_3) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Array_void'] ?? \PhpursThunks::eval('Data_Array_void')))(((($GLOBALS['Data_Array_ST_push'] ?? \PhpursThunks::eval('Data_Array_ST_push')))((($GLOBALS['Partial_Unsafe__unsafePartial'] ?? \PhpursThunks::eval('Partial_Unsafe__unsafePartial')))(function($dollar__unused_7 = null) use ($arr_1, $idx_5) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Array_unsafeIndex1'] ?? \PhpursThunks::eval('Data_Array_unsafeIndex1')))($arr_1))($idx_5);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))($out_3));
+  $__local_var_6_3 = ((($GLOBALS['Data_Array_ST_push'] ?? \PhpursThunks::eval('Data_Array_ST_push')))($a_0))($out_3_1);
+  $dollar__unused_7_4 = $__local_var_6_3;
+  $__local_var_8_5 = ((($GLOBALS['Data_Array_ST_push'] ?? \PhpursThunks::eval('Data_Array_ST_push')))(($arr_1)[0]))($out_3_1);
+  $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))(function($dollar__unused_5 = null) use ($out_3) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_ST_Internal_pure_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_pure_')))($out_3);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))(($GLOBALS['Data_Array_ST_unsafeFreeze'] ?? \PhpursThunks::eval('Data_Array_ST_unsafeFreeze'))));
-  end_branch_1:;
-  $__res = $__t1;
+  $__t7 = (($GLOBALS['Control_Monad_ST_Internal_run'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_run')))((($GLOBALS['Data_Array_ST_unsafeFreeze'] ?? \PhpursThunks::eval('Data_Array_ST_unsafeFreeze')))($out_3_1));
+  end_branch_7:;
+  $__res = $__t7;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -525,48 +601,81 @@ goto end_branch_1;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Array_insertAt'] = function() { $v = (((($GLOBALS['Data_Function_Uncurried_runFn5'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn5')))(($GLOBALS['Data_Array__insertAt'] ?? \PhpursThunks::eval('Data_Array__insertAt'))))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))(new Phpurs_Data0("Nothing")); return $v; };
+\PhpursThunks::$thunks['Data_Array_insertAt'] = function() { $v = (function() {
+  $__fn = function($__local_var_0 = null, $__local_var_1 = null, $__local_var_2 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__res = (($GLOBALS['Data_Array__insertAt'] ?? \PhpursThunks::eval('Data_Array__insertAt')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')), new Phpurs_Data0("Nothing"), $__local_var_0, $__local_var_1, $__local_var_2);
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  };
+  return $__fn;
+})(); return $v; };
 \PhpursThunks::$thunks['Data_Array_init'] = function() { $v = function($xs_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if (((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))((($GLOBALS['Data_Array_length'] ?? \PhpursThunks::eval('Data_Array_length')))($xs_0)))(0)) {
+  switch (count($xs_0)) {
+case 0:
 $__t0 = new Phpurs_Data0("Nothing");
 goto end_branch_0;;
+break;
+default:
+;
+break;
 };
-  $__t0 = new Phpurs_Data1("Just", (((($GLOBALS['Data_Array_slice'] ?? \PhpursThunks::eval('Data_Array_slice')))(0))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))((($GLOBALS['Data_Array_length'] ?? \PhpursThunks::eval('Data_Array_length')))($xs_0)))(1)))($xs_0));
+  $__t0 = new Phpurs_Data1("Just", (($GLOBALS['Data_Array_sliceImpl'] ?? \PhpursThunks::eval('Data_Array_sliceImpl')))(0, (count($xs_0) - 1), $xs_0));
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Array_index'] = function() { $v = (((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Array_indexImpl'] ?? \PhpursThunks::eval('Data_Array_indexImpl'))))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))(new Phpurs_Data0("Nothing")); return $v; };
+\PhpursThunks::$thunks['Data_Array_index'] = function() { $v = (function() {
+  $__fn = function($__local_var_0 = null, $__local_var_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($GLOBALS['Data_Array_indexImpl'] ?? \PhpursThunks::eval('Data_Array_indexImpl')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')), new Phpurs_Data0("Nothing"), $__local_var_0, $__local_var_1);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(); return $v; };
 \PhpursThunks::$thunks['Data_Array_last'] = function() { $v = function($xs_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Array_index'] ?? \PhpursThunks::eval('Data_Array_index')))($xs_0))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))((($GLOBALS['Data_Array_length'] ?? \PhpursThunks::eval('Data_Array_length')))($xs_0)))(1));
+  $__res = (($GLOBALS['Data_Array_indexImpl'] ?? \PhpursThunks::eval('Data_Array_indexImpl')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')), new Phpurs_Data0("Nothing"), $xs_0, (count($xs_0) - 1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Array_unsnoc'] = function() { $v = function($xs_0 = null) {
   $__num = \func_num_args();
-  $__local_var_1_0 = (($GLOBALS['Data_Array_init'] ?? \PhpursThunks::eval('Data_Array_init')))($xs_0);
+  $__t2 = null;;
+  switch (count($xs_0)) {
+case 0:
+$__t2 = new Phpurs_Data0("Nothing");
+goto end_branch_2;;
+break;
+default:
+;
+break;
+};
+  $__local_var_1_0 = (($GLOBALS['Data_Array_indexImpl'] ?? \PhpursThunks::eval('Data_Array_indexImpl')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')), new Phpurs_Data0("Nothing"), $xs_0, (count($xs_0) - 1));
   $__t1 = null;;
   if ((is_object($__local_var_1_0) && (($__local_var_1_0)->{'tag'} === "Just"))) {
-$__local_var_2_2 = ((($GLOBALS['Data_Array_index'] ?? \PhpursThunks::eval('Data_Array_index')))($xs_0))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))((($GLOBALS['Data_Array_length'] ?? \PhpursThunks::eval('Data_Array_length')))($xs_0)))(1));
-$__t3 = null;;
-if ((is_object($__local_var_2_2) && (($__local_var_2_2)->{'tag'} === "Just"))) {
-$__t3 = new Phpurs_Data1("Just", (object)["init" => ($__local_var_1_0)->{'value0'}, "last" => ($__local_var_2_2)->{'value0'}]);
-goto end_branch_3;;
-};
-$__t3 = new Phpurs_Data0("Nothing");
-end_branch_3:;
-$__t1 = $__t3;
+$__t1 = new Phpurs_Data1("Just", (object)["init" => (($GLOBALS['Data_Array_sliceImpl'] ?? \PhpursThunks::eval('Data_Array_sliceImpl')))(0, (count($xs_0) - 1), $xs_0), "last" => ($__local_var_1_0)->{'value0'}]);
 goto end_branch_1;;
 };
   $__t1 = new Phpurs_Data0("Nothing");
   end_branch_1:;
-  $__res = $__t1;
+  $__t2 = $__t1;
+  end_branch_2:;
+  $__res = $__t2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -577,14 +686,14 @@ goto end_branch_1;;
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__local_var_3_0 = ((($GLOBALS['Data_Array_index'] ?? \PhpursThunks::eval('Data_Array_index')))($xs_2))($i_0);
+  $__local_var_3_0 = (($GLOBALS['Data_Array_indexImpl'] ?? \PhpursThunks::eval('Data_Array_indexImpl')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')), new Phpurs_Data0("Nothing"), $xs_2, $i_0);
   $__t1 = null;;
   if ((is_object($__local_var_3_0) && (($__local_var_3_0)->{'tag'} === "Nothing"))) {
 $__t1 = new Phpurs_Data0("Nothing");
 goto end_branch_1;;
 };
   if ((is_object($__local_var_3_0) && (($__local_var_3_0)->{'tag'} === "Just"))) {
-$__t1 = (((($GLOBALS['Data_Array_updateAt'] ?? \PhpursThunks::eval('Data_Array_updateAt')))($i_0))(($f_1)(($__local_var_3_0)->{'value0'})))($xs_2);
+$__t1 = (($GLOBALS['Data_Array__updateAt'] ?? \PhpursThunks::eval('Data_Array__updateAt')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')), new Phpurs_Data0("Nothing"), $i_0, ($f_1)(($__local_var_3_0)->{'value0'}), $xs_2);
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -613,12 +722,12 @@ goto end_branch_1;;
   $__num = \func_num_args();
   $__tco_done_go_2_0_0 = true;
   $i_3 = $__tco_var_go_2_0_0_i_3;
-  $v_4_0 = ((($GLOBALS['Data_Array_index'] ?? \PhpursThunks::eval('Data_Array_index')))($arr_1))($i_3);
+  $v_4_0 = (($GLOBALS['Data_Array_indexImpl'] ?? \PhpursThunks::eval('Data_Array_indexImpl')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')), new Phpurs_Data0("Nothing"), $arr_1, $i_3);
   $__t1 = null;;
   if ((is_object($v_4_0) && (($v_4_0)->{'tag'} === "Just"))) {
 $__t2 = null;;
 if (($p_0)(($v_4_0)->{'value0'})) {
-$__tco_3 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($i_3))(1);
+$__tco_3 = ($i_3 + 1);
 $__tco_var_go_2_0_0_i_3 = $__tco_3;
 $__tco_done_go_2_0_0 = false;
 $__res = null;
@@ -664,7 +773,7 @@ default:
 ;
 break;
 };
-$__t3 = (object)["init" => (((($GLOBALS['Data_Array_slice'] ?? \PhpursThunks::eval('Data_Array_slice')))(0))(($breakIndex_3_1)->{'value0'}))($arr_1), "rest" => (((($GLOBALS['Data_Array_slice'] ?? \PhpursThunks::eval('Data_Array_slice')))(($breakIndex_3_1)->{'value0'}))((($GLOBALS['Data_Array_length'] ?? \PhpursThunks::eval('Data_Array_length')))($arr_1)))($arr_1)];
+$__t3 = (object)["init" => (($GLOBALS['Data_Array_sliceImpl'] ?? \PhpursThunks::eval('Data_Array_sliceImpl')))(0, ($breakIndex_3_1)->{'value0'}, $arr_1), "rest" => (($GLOBALS['Data_Array_sliceImpl'] ?? \PhpursThunks::eval('Data_Array_sliceImpl')))(($breakIndex_3_1)->{'value0'}, count($arr_1), $arr_1)];
 end_branch_3:;
 $__t2 = $__t3;
 goto end_branch_2;;
@@ -698,69 +807,36 @@ goto end_branch_2;;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Array_unzip'] = function() { $v = function($xs_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_ST_Internal_run'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_run')))(((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(($GLOBALS['Data_Array_ST_new'] ?? \PhpursThunks::eval('Data_Array_ST_new'))))(function($fsts_1 = null) use ($xs_0) {
+  $fsts_1_0 = ($GLOBALS['Data_Array_ST_new'] ?? \PhpursThunks::eval('Data_Array_ST_new'));
+  $snds_2_1 = ($GLOBALS['Data_Array_ST_new'] ?? \PhpursThunks::eval('Data_Array_ST_new'));
+  $__local_var_3_2 = "TODO_PrimEffect";
+  $dollar__unused_4_3 = ((($GLOBALS['Data_Array_ST_Iterator_iterate'] ?? \PhpursThunks::eval('Data_Array_ST_Iterator_iterate')))(new Phpurs_Data2("Iterator", function($v_4 = null) use ($xs_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(($GLOBALS['Data_Array_ST_new'] ?? \PhpursThunks::eval('Data_Array_ST_new'))))(function($snds_2 = null) use ($fsts_1, $xs_0) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(((($GLOBALS['Control_Monad_ST_Internal_map_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_map_')))((($GLOBALS['Data_Array_ST_Iterator_Iterator'] ?? \PhpursThunks::eval('Data_Array_ST_Iterator_Iterator')))(function($v_3 = null) use ($xs_0) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Array_index'] ?? \PhpursThunks::eval('Data_Array_index')))($xs_0))($v_3);
+  $__res = (($GLOBALS['Data_Array_indexImpl'] ?? \PhpursThunks::eval('Data_Array_indexImpl')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')), new Phpurs_Data0("Nothing"), $xs_0, $v_4);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))((($GLOBALS['Control_Monad_ST_Internal_new'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_new')))(0))))(function($iter_3 = null) use ($fsts_1, $snds_2) {
+}, $__local_var_3_2)))(function($v_4 = null) use ($fsts_1_0, $snds_2_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(((($GLOBALS['Data_Array_ST_Iterator_iterate'] ?? \PhpursThunks::eval('Data_Array_ST_Iterator_iterate')))($iter_3))(function($v_4 = null) use ($fsts_1, $snds_2) {
-  $__num = \func_num_args();
-  $__local_var_5_0 = ($v_4)->{'value1'};
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))((($GLOBALS['Data_Array_void'] ?? \PhpursThunks::eval('Data_Array_void')))(((($GLOBALS['Data_Array_ST_push'] ?? \PhpursThunks::eval('Data_Array_ST_push')))(($v_4)->{'value0'}))($fsts_1))))(function($dollar__unused_6 = null) use ($__local_var_5_0, $snds_2) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Array_void'] ?? \PhpursThunks::eval('Data_Array_void')))(((($GLOBALS['Data_Array_ST_push'] ?? \PhpursThunks::eval('Data_Array_ST_push')))($__local_var_5_0))($snds_2));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))(function($dollar__unused_4 = null) use ($fsts_1, $snds_2) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))((($GLOBALS['Data_Array_ST_unsafeFreeze'] ?? \PhpursThunks::eval('Data_Array_ST_unsafeFreeze')))($fsts_1)))(function($fsts__prime___5 = null) use ($snds_2) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))((($GLOBALS['Data_Array_ST_unsafeFreeze'] ?? \PhpursThunks::eval('Data_Array_ST_unsafeFreeze')))($snds_2)))(function($snds__prime___6 = null) use ($fsts__prime___5) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_ST_Internal_pure_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_pure_')))(new Phpurs_Data2("Tuple", $fsts__prime___5, $snds__prime___6));
+  $__local_var_5_3 = ($v_4)->{'value1'};
+  $__local_var_6_4 = ((($GLOBALS['Data_Array_ST_push'] ?? \PhpursThunks::eval('Data_Array_ST_push')))(($v_4)->{'value0'}))($fsts_1_0);
+  $__local_var_7_5 = $__local_var_6_4;
+  $__local_var_8_6 = ((($GLOBALS['Data_Array_ST_push'] ?? \PhpursThunks::eval('Data_Array_ST_push')))($__local_var_5_3))($snds_2_1);
+  $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}));
+  $fsts__prime___5_8 = (($GLOBALS['Data_Array_ST_unsafeFreeze'] ?? \PhpursThunks::eval('Data_Array_ST_unsafeFreeze')))($fsts_1_0);
+  $snds__prime___6_9 = (($GLOBALS['Data_Array_ST_unsafeFreeze'] ?? \PhpursThunks::eval('Data_Array_ST_unsafeFreeze')))($snds_2_1);
+  $__res = (($GLOBALS['Control_Monad_ST_Internal_run'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_run')))(new Phpurs_Data2("Tuple", $fsts__prime___5_8, $snds__prime___6_9));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Array_head'] = function() { $v = function($xs_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Array_index'] ?? \PhpursThunks::eval('Data_Array_index')))($xs_0))(0);
+  $__res = (($GLOBALS['Data_Array_indexImpl'] ?? \PhpursThunks::eval('Data_Array_indexImpl')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')), new Phpurs_Data0("Nothing"), $xs_0, 0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -784,53 +860,37 @@ goto end_branch_2;;
   };
   return $__fn;
 })()))(((($GLOBALS['Data_FunctorWithIndex_mapWithIndexArray'] ?? \PhpursThunks::eval('Data_FunctorWithIndex_mapWithIndexArray')))(($GLOBALS['Data_Tuple_Tuple'] ?? \PhpursThunks::eval('Data_Tuple_Tuple'))))($xs_1));
-  $v_3_1 = ((($GLOBALS['Data_Array_index'] ?? \PhpursThunks::eval('Data_Array_index')))($indexedAndSorted_2_0))(0);
+  $v_3_1 = (($GLOBALS['Data_Array_indexImpl'] ?? \PhpursThunks::eval('Data_Array_indexImpl')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')), new Phpurs_Data0("Nothing"), $indexedAndSorted_2_0, 0);
   $__t2 = null;;
   if ((is_object($v_3_1) && (($v_3_1)->{'tag'} === "Nothing"))) {
 $__t2 = [];
 goto end_branch_2;;
 };
   if ((is_object($v_3_1) && (($v_3_1)->{'tag'} === "Just"))) {
-$__t2 = ((($GLOBALS['Data_Functor_arrayMap'] ?? \PhpursThunks::eval('Data_Functor_arrayMap')))(($GLOBALS['Data_Tuple_snd'] ?? \PhpursThunks::eval('Data_Tuple_snd'))))((((($GLOBALS['Data_Array_sortWith'] ?? \PhpursThunks::eval('Data_Array_sortWith')))(($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt'))))(($GLOBALS['Data_Tuple_fst'] ?? \PhpursThunks::eval('Data_Tuple_fst'))))((($GLOBALS['Control_Monad_ST_Internal_run'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_run')))(((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))((($GLOBALS['Data_Array_ST_unsafeThaw'] ?? \PhpursThunks::eval('Data_Array_ST_unsafeThaw')))([($v_3_1)->{'value0'}])))(function($result_4 = null) use ($comp_0, $indexedAndSorted_2_0) {
+$__local_var_4_3 = (($GLOBALS['Data_Array_ST_unsafeThaw'] ?? \PhpursThunks::eval('Data_Array_ST_unsafeThaw')))([($v_3_1)->{'value0'}]);
+$result_5_4 = $__local_var_4_3;
+$dollar__unused_6_5 = ((($GLOBALS['Control_Monad_ST_Internal_foreach'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_foreach')))($indexedAndSorted_2_0))(function($v1_6 = null) use ($comp_0, $result_5_4) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(((($GLOBALS['Control_Monad_ST_Internal_foreach'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_foreach')))($indexedAndSorted_2_0))(function($v1_5 = null) use ($comp_0, $result_4) {
-  $__num = \func_num_args();
-  $__local_var_6_3 = ($v1_5)->{'value1'};
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(((($GLOBALS['Control_Monad_ST_Internal_map_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_map_')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Tuple_snd'] ?? \PhpursThunks::eval('Data_Tuple_snd'))))((($GLOBALS['Partial_Unsafe__unsafePartial'] ?? \PhpursThunks::eval('Partial_Unsafe__unsafePartial')))(function($dollar__unused_7 = null) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_fromJust'] ?? \PhpursThunks::eval('Data_Array_fromJust'))))(($GLOBALS['Data_Array_last'] ?? \PhpursThunks::eval('Data_Array_last')));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))))((($GLOBALS['Data_Array_ST_unsafeFreeze'] ?? \PhpursThunks::eval('Data_Array_ST_unsafeFreeze')))($result_4))))(function($lst_7 = null) use ($__local_var_6_3, $comp_0, $result_4, $v1_5) {
-  $__num = \func_num_args();
-  $__local_var_8_4 = (($GLOBALS['Data_Array_void'] ?? \PhpursThunks::eval('Data_Array_void')))(((($GLOBALS['Data_Array_ST_push'] ?? \PhpursThunks::eval('Data_Array_ST_push')))($v1_5))($result_4));
-  $__t5 = null;;
-  if (((($GLOBALS['Data_Eq_eqBooleanImpl'] ?? \PhpursThunks::eval('Data_Eq_eqBooleanImpl')))((is_object((($comp_0)($lst_7))($__local_var_6_3)) && (((($comp_0)($lst_7))($__local_var_6_3))->{'tag'} === "EQ"))))(false)) {
-$__t5 = $__local_var_8_4;
-goto end_branch_5;;
+  $__local_var_7_5 = ($v1_6)->{'value1'};
+  $__local_var_8_6 = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Tuple_snd'] ?? \PhpursThunks::eval('Data_Tuple_snd'))))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Array_fromJust'] ?? \PhpursThunks::eval('Data_Array_fromJust'))))(($GLOBALS['Data_Array_last'] ?? \PhpursThunks::eval('Data_Array_last'))));
+  $__local_var_9_7 = (($GLOBALS['Data_Array_ST_unsafeFreeze'] ?? \PhpursThunks::eval('Data_Array_ST_unsafeFreeze')))($result_5_4);
+  $__local_var_10_8 = $__local_var_9_7;
+  $__local_var_11_9 = (($comp_0)(($__local_var_8_6)($__local_var_10_8)))($__local_var_7_5);
+  $__local_var_12_10 = ((($GLOBALS['Data_Array_ST_push'] ?? \PhpursThunks::eval('Data_Array_ST_push')))($v1_6))($result_5_4);
+  $__t11 = null;;
+  if (((is_object($__local_var_11_9) && (($__local_var_11_9)->{'tag'} === "LT")) || ((is_object($__local_var_11_9) && (($__local_var_11_9)->{'tag'} === "GT")) || ( ! (is_object($__local_var_11_9) && (($__local_var_11_9)->{'tag'} === "EQ")))))) {
+$__local_var_13_12 = $__local_var_12_10;
+$__t11 = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
+goto end_branch_11;;
 };
-  $__t5 = (($GLOBALS['Control_Monad_ST_Internal_pure_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_pure_')))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
-  end_branch_5:;
-  $__res = $__t5;
+  $__t11 = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
+  end_branch_11:;
+  $__res = $__t11;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))(function($dollar__unused_5 = null) use ($result_4) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Array_ST_unsafeFreeze'] ?? \PhpursThunks::eval('Data_Array_ST_unsafeFreeze')))($result_4);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))));
+$__t2 = ((($GLOBALS['Data_Functor_arrayMap'] ?? \PhpursThunks::eval('Data_Functor_arrayMap')))(($GLOBALS['Data_Tuple_snd'] ?? \PhpursThunks::eval('Data_Tuple_snd'))))((((($GLOBALS['Data_Array_sortWith'] ?? \PhpursThunks::eval('Data_Array_sortWith')))(($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt'))))(($GLOBALS['Data_Tuple_fst'] ?? \PhpursThunks::eval('Data_Tuple_fst'))))((($GLOBALS['Control_Monad_ST_Internal_run'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_run')))((($GLOBALS['Data_Array_ST_unsafeFreeze'] ?? \PhpursThunks::eval('Data_Array_ST_unsafeFreeze')))($result_5_4))));
 goto end_branch_2;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -856,61 +916,28 @@ goto end_branch_2;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Control_Monad_ST_Internal_run'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_run')))(((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(($GLOBALS['Data_Array_ST_new'] ?? \PhpursThunks::eval('Data_Array_ST_new'))))(function($result_2 = null) use ($op_0, $xs_1) {
+  $result_2_0 = ($GLOBALS['Data_Array_ST_new'] ?? \PhpursThunks::eval('Data_Array_ST_new'));
+  $__local_var_3_1 = "TODO_PrimEffect";
+  $iter_4_2 = new Phpurs_Data2("Iterator", function($v_4 = null) use ($xs_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(((($GLOBALS['Control_Monad_ST_Internal_map_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_map_')))((($GLOBALS['Data_Array_ST_Iterator_Iterator'] ?? \PhpursThunks::eval('Data_Array_ST_Iterator_Iterator')))(function($v_3 = null) use ($xs_1) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Array_index'] ?? \PhpursThunks::eval('Data_Array_index')))($xs_1))($v_3);
+  $__res = (($GLOBALS['Data_Array_indexImpl'] ?? \PhpursThunks::eval('Data_Array_indexImpl')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')), new Phpurs_Data0("Nothing"), $xs_1, $v_4);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))((($GLOBALS['Control_Monad_ST_Internal_new'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_new')))(0))))(function($iter_3 = null) use ($op_0, $result_2) {
+}, $__local_var_3_1);
+  $dollar__unused_5_3 = ((($GLOBALS['Data_Array_ST_Iterator_iterate'] ?? \PhpursThunks::eval('Data_Array_ST_Iterator_iterate')))($iter_4_2))(function($x_5 = null) use ($iter_4_2, $op_0, $result_2_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(((($GLOBALS['Data_Array_ST_Iterator_iterate'] ?? \PhpursThunks::eval('Data_Array_ST_Iterator_iterate')))($iter_3))(function($x_4 = null) use ($iter_3, $op_0, $result_2) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Array_void'] ?? \PhpursThunks::eval('Data_Array_void')))(((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(($GLOBALS['Data_Array_ST_new'] ?? \PhpursThunks::eval('Data_Array_ST_new'))))(function($sub1_5 = null) use ($iter_3, $op_0, $result_2, $x_4) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(((($GLOBALS['Data_Array_ST_push'] ?? \PhpursThunks::eval('Data_Array_ST_push')))($x_4))($sub1_5)))(function($dollar__unused_6 = null) use ($iter_3, $op_0, $result_2, $sub1_5, $x_4) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))((((($GLOBALS['Data_Array_ST_Iterator_pushWhile'] ?? \PhpursThunks::eval('Data_Array_ST_Iterator_pushWhile')))(($op_0)($x_4)))($iter_3))($sub1_5)))(function($dollar__unused_7 = null) use ($result_2, $sub1_5) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))((($GLOBALS['Data_Array_ST_unsafeFreeze'] ?? \PhpursThunks::eval('Data_Array_ST_unsafeFreeze')))($sub1_5)))(function($grp_8 = null) use ($result_2) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Array_ST_push'] ?? \PhpursThunks::eval('Data_Array_ST_push')))($grp_8))($result_2);
+  $sub1_6_3 = ($GLOBALS['Data_Array_ST_new'] ?? \PhpursThunks::eval('Data_Array_ST_new'));
+  $dollar__unused_7_4 = ((($GLOBALS['Data_Array_ST_push'] ?? \PhpursThunks::eval('Data_Array_ST_push')))($x_5))($sub1_6_3);
+  $dollar__unused_8_5 = (((($GLOBALS['Data_Array_ST_Iterator_pushWhile'] ?? \PhpursThunks::eval('Data_Array_ST_Iterator_pushWhile')))(($op_0)($x_5)))($iter_4_2))($sub1_6_3);
+  $grp_9_6 = (($GLOBALS['Data_Array_ST_unsafeFreeze'] ?? \PhpursThunks::eval('Data_Array_ST_unsafeFreeze')))($sub1_6_3);
+  $__local_var_10_7 = ((($GLOBALS['Data_Array_ST_push'] ?? \PhpursThunks::eval('Data_Array_ST_push')))($grp_9_6))($result_2_0);
+  $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))(function($dollar__unused_4 = null) use ($result_2) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Array_ST_unsafeFreeze'] ?? \PhpursThunks::eval('Data_Array_ST_unsafeFreeze')))($result_2);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}));
+  $__res = (($GLOBALS['Control_Monad_ST_Internal_run'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_run')))((($GLOBALS['Data_Array_ST_unsafeFreeze'] ?? \PhpursThunks::eval('Data_Array_ST_unsafeFreeze')))($result_2_0));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -959,7 +986,14 @@ goto end_branch_2;;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Array_fromFoldable'] = function() { $v = function($dictFoldable_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($GLOBALS['Data_Array_fromFoldableImpl'] ?? \PhpursThunks::eval('Data_Array_fromFoldableImpl'))))(($dictFoldable_0)->{'foldr'});
+  $__local_var_1_0 = ($dictFoldable_0)->{'foldr'};
+  $__res = function($__local_var_2 = null) use ($__local_var_1_0) {
+  $__num = \func_num_args();
+  $__res = (($GLOBALS['Data_Array_fromFoldableImpl'] ?? \PhpursThunks::eval('Data_Array_fromFoldableImpl')))($__local_var_1_0, $__local_var_2);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -994,7 +1028,7 @@ goto end_branch_2;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_6_0 = ((($GLOBALS['Data_Array_index'] ?? \PhpursThunks::eval('Data_Array_index')))($nextArr_5))($idx_2);
+  $__local_var_6_0 = (($GLOBALS['Data_Array_indexImpl'] ?? \PhpursThunks::eval('Data_Array_indexImpl')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')), new Phpurs_Data0("Nothing"), $nextArr_5, $idx_2);
   $__t1 = null;;
   if ((is_object($__local_var_6_0) && (($__local_var_6_0)->{'tag'} === "Nothing"))) {
 $__t1 = $acc_4;
@@ -1032,7 +1066,7 @@ $__t4 = $allArrays_3;
 goto end_branch_4;;
 };
   if ((is_object($v_4_0) && (($v_4_0)->{'tag'} === "Just"))) {
-$__tco_5 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($idx_2))(1);
+$__tco_5 = ($idx_2 + 1);
 $__tco_6 = (($GLOBALS['Control_Monad_ST_Internal_run'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_run')))(((($GLOBALS['Data_Array_ST_withArray'] ?? \PhpursThunks::eval('Data_Array_ST_withArray')))((($GLOBALS['Data_Array_ST_push'] ?? \PhpursThunks::eval('Data_Array_ST_push')))(($v_4_0)->{'value0'})))($allArrays_3));
 $__tco_var_go_1_0_0_idx_2 = $__tco_5;
 $__tco_var_go_1_0_0_allArrays_3 = $__tco_6;
@@ -1080,19 +1114,13 @@ $__tco_res_go_1_0_0 = ($__tco_loop_go_1_0_0)($__tco_var_go_1_0_0_idx_2, $__tco_v
   $__res = ((($dictMonadRec_0)->{'tailRecM'})(function($o_6 = null) use ($Monad0_1_0, $__local_var_2_1, $array_5, $f_3) {
   $__num = \func_num_args();
   $__t2 = null;;
-  if (( ! (is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})(($o_6)->{'b'}))((($GLOBALS['Data_Array_length'] ?? \PhpursThunks::eval('Data_Array_length')))($array_5))) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})(($o_6)->{'b'}))((($GLOBALS['Data_Array_length'] ?? \PhpursThunks::eval('Data_Array_length')))($array_5)))->{'tag'} === "LT")))) {
+  if ((($o_6)->{'b'} >= count($array_5))) {
 $__t2 = (($__local_var_2_1)->{'pure'})(new Phpurs_Data1("Done", ($o_6)->{'a'}));
 goto end_branch_2;;
 };
-  $__t2 = ((((($Monad0_1_0)->{'Bind1'})(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->{'bind'})((($f_3)(($o_6)->{'a'}))((($GLOBALS['Partial_Unsafe__unsafePartial'] ?? \PhpursThunks::eval('Partial_Unsafe__unsafePartial')))(function($dollar__unused_7 = null) use ($array_5, $o_6) {
+  $__t2 = ((((($Monad0_1_0)->{'Bind1'})(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->{'bind'})((($f_3)(($o_6)->{'a'}))(($array_5)[0])))(function($res__prime___7 = null) use ($__local_var_2_1, $o_6) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Array_unsafeIndex1'] ?? \PhpursThunks::eval('Data_Array_unsafeIndex1')))($array_5))(($o_6)->{'b'});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))))(function($res__prime___7 = null) use ($__local_var_2_1, $o_6) {
-  $__num = \func_num_args();
-  $__res = (($__local_var_2_1)->{'pure'})(new Phpurs_Data1("Loop", (object)["a" => $res__prime___7, "b" => ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(($o_6)->{'b'}))(1)]));
+  $__res = (($__local_var_2_1)->{'pure'})(new Phpurs_Data1("Loop", (object)["a" => $res__prime___7, "b" => (($o_6)->{'b'} + 1)]));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1121,41 +1149,43 @@ goto end_branch_2;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Array_foldM'] = function() { $v = (function() {
-  $__fn = function($dictMonad_0 = null, $f_1 = null, $b_2 = null) use (&$__fn) {
+  $__fn = function($dictMonad_0 = null, $f_1 = null, $b_2 = null, $__local_var_3 = null) use (&$__fn) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  if ($__num < 4) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
   $__tco_var_Data_Array_foldM_dictMonad_0 = $dictMonad_0;
   $__tco_var_Data_Array_foldM_f_1 = $f_1;
   $__tco_var_Data_Array_foldM_b_2 = $b_2;
+  $__tco_var_Data_Array_foldM___local_var_3 = $__local_var_3;
   $__tco_done_Data_Array_foldM = false;
   $__tco_res_Data_Array_foldM = null;
-  $__tco_loop_Data_Array_foldM = (function() use (&$__tco_done_Data_Array_foldM, &$__tco_var_Data_Array_foldM_dictMonad_0, &$__tco_var_Data_Array_foldM_f_1, &$__tco_var_Data_Array_foldM_b_2) {
-  $__fn = function($dictMonad_0 = null, $f_1 = null, $b_2 = null) use (&$__tco_done_Data_Array_foldM, &$__tco_var_Data_Array_foldM_dictMonad_0, &$__tco_var_Data_Array_foldM_f_1, &$__tco_var_Data_Array_foldM_b_2, &$__fn) {
+  $__tco_loop_Data_Array_foldM = (function() use (&$__tco_done_Data_Array_foldM, &$__tco_var_Data_Array_foldM_dictMonad_0, &$__tco_var_Data_Array_foldM_f_1, &$__tco_var_Data_Array_foldM_b_2, &$__tco_var_Data_Array_foldM___local_var_3) {
+  $__fn = function($dictMonad_0 = null, $f_1 = null, $b_2 = null, $__local_var_3 = null) use (&$__tco_done_Data_Array_foldM, &$__tco_var_Data_Array_foldM_dictMonad_0, &$__tco_var_Data_Array_foldM_f_1, &$__tco_var_Data_Array_foldM_b_2, &$__tco_var_Data_Array_foldM___local_var_3, &$__fn) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  if ($__num < 4) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
   $__tco_done_Data_Array_foldM = true;
   $dictMonad_0 = $__tco_var_Data_Array_foldM_dictMonad_0;
   $f_1 = $__tco_var_Data_Array_foldM_f_1;
   $b_2 = $__tco_var_Data_Array_foldM_b_2;
-  $__res = (((($GLOBALS['Data_Function_Uncurried_runFn3'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn3')))(($GLOBALS['Data_Array_unconsImpl'] ?? \PhpursThunks::eval('Data_Array_unconsImpl'))))(function($v_3 = null) use ($b_2, $dictMonad_0) {
+  $__local_var_3 = $__tco_var_Data_Array_foldM___local_var_3;
+  $__res = (($GLOBALS['Data_Array_unconsImpl'] ?? \PhpursThunks::eval('Data_Array_unconsImpl')))(function($v_4 = null) use ($b_2, $dictMonad_0) {
   $__num = \func_num_args();
   $__res = (((($dictMonad_0)->{'Applicative0'})(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->{'pure'})($b_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((function() use ($b_2, $dictMonad_0, $f_1) {
-  $__fn = function($a_3 = null, $as_4 = null) use ($b_2, $dictMonad_0, $f_1, &$__fn) {
+}, (function() use ($b_2, $dictMonad_0, $f_1) {
+  $__fn = function($a_4 = null, $as_5 = null) use ($b_2, $dictMonad_0, $f_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($dictMonad_0)->{'Bind1'})(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->{'bind'})((($f_1)($b_2))($a_3)))(function($b__prime___5 = null) use ($as_4, $dictMonad_0, $f_1) {
+  $__res = ((((($dictMonad_0)->{'Bind1'})(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->{'bind'})((($f_1)($b_2))($a_4)))(function($b__prime___6 = null) use ($as_5, $dictMonad_0, $f_1) {
   $__num = \func_num_args();
-  $__res = ((((($GLOBALS['Data_Array_foldM'] ?? \PhpursThunks::eval('Data_Array_foldM')))($dictMonad_0))($f_1))($b__prime___5))($as_4);
+  $__res = ((((($GLOBALS['Data_Array_foldM'] ?? \PhpursThunks::eval('Data_Array_foldM')))($dictMonad_0))($f_1))($b__prime___6))($as_5);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1165,20 +1195,20 @@ goto end_branch_2;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})());
+})(), $__local_var_3);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
 })();
   while (($__tco_done_Data_Array_foldM === false)) {
-$__tco_res_Data_Array_foldM = ($__tco_loop_Data_Array_foldM)($__tco_var_Data_Array_foldM_dictMonad_0, $__tco_var_Data_Array_foldM_f_1, $__tco_var_Data_Array_foldM_b_2);
+$__tco_res_Data_Array_foldM = ($__tco_loop_Data_Array_foldM)($__tco_var_Data_Array_foldM_dictMonad_0, $__tco_var_Data_Array_foldM_f_1, $__tco_var_Data_Array_foldM_b_2, $__tco_var_Data_Array_foldM___local_var_3);
 };
   $__res = $__tco_res_Data_Array_foldM;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
   };
   return $__fn;
 })(); return $v; };
@@ -1189,50 +1219,67 @@ $__tco_res_Data_Array_foldM = ($__tco_loop_Data_Array_foldM)($__tco_var_Data_Arr
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Array_findMap'] = function() { $v = (((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Array_findMapImpl'] ?? \PhpursThunks::eval('Data_Array_findMapImpl'))))(new Phpurs_Data0("Nothing")))(($GLOBALS['Data_Maybe_isJust'] ?? \PhpursThunks::eval('Data_Maybe_isJust'))); return $v; };
-\PhpursThunks::$thunks['Data_Array_findLastIndex'] = function() { $v = (((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Array_findLastIndexImpl'] ?? \PhpursThunks::eval('Data_Array_findLastIndexImpl'))))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))(new Phpurs_Data0("Nothing")); return $v; };
+\PhpursThunks::$thunks['Data_Array_findMap'] = function() { $v = (function() {
+  $__fn = function($__local_var_0 = null, $__local_var_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($GLOBALS['Data_Array_findMapImpl'] ?? \PhpursThunks::eval('Data_Array_findMapImpl')))(new Phpurs_Data0("Nothing"), ($GLOBALS['Data_Maybe_isJust'] ?? \PhpursThunks::eval('Data_Maybe_isJust')), $__local_var_0, $__local_var_1);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(); return $v; };
+\PhpursThunks::$thunks['Data_Array_findLastIndex'] = function() { $v = (function() {
+  $__fn = function($__local_var_0 = null, $__local_var_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($GLOBALS['Data_Array_findLastIndexImpl'] ?? \PhpursThunks::eval('Data_Array_findLastIndexImpl')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')), new Phpurs_Data0("Nothing"), $__local_var_0, $__local_var_1);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(); return $v; };
 \PhpursThunks::$thunks['Data_Array_insertBy'] = function() { $v = (function() {
   $__fn = function($cmp_0 = null, $x_1 = null, $ys_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__local_var_3_0 = ((($GLOBALS['Data_Array_findLastIndex'] ?? \PhpursThunks::eval('Data_Array_findLastIndex')))(function($y_3 = null) use ($cmp_0, $x_1) {
+  $__local_var_3_0 = (($GLOBALS['Data_Array_findLastIndexImpl'] ?? \PhpursThunks::eval('Data_Array_findLastIndexImpl')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')), new Phpurs_Data0("Nothing"), function($y_3 = null) use ($cmp_0, $x_1) {
   $__num = \func_num_args();
   $__res = (is_object((($cmp_0)($x_1))($y_3)) && (((($cmp_0)($x_1))($y_3))->{'tag'} === "GT"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($ys_2);
+}, $ys_2);
   $__t1 = null;;
   if ((is_object($__local_var_3_0) && (($__local_var_3_0)->{'tag'} === "Nothing"))) {
 $__t1 = 0;
 goto end_branch_1;;
 };
   if ((is_object($__local_var_3_0) && (($__local_var_3_0)->{'tag'} === "Just"))) {
-$__t1 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(($__local_var_3_0)->{'value0'}))(1);
+$__t1 = (($__local_var_3_0)->{'value0'} + 1);
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
   $__t1 = null;
   end_branch_1:;
-  $i_4_1 = $__t1;
-  $__res = (($GLOBALS['Partial_Unsafe__unsafePartial'] ?? \PhpursThunks::eval('Partial_Unsafe__unsafePartial')))(function($dollar__unused_5 = null) use ($i_4_1, $x_1, $ys_2) {
-  $__num = \func_num_args();
-  $__local_var_6_3 = (((($GLOBALS['Data_Array_insertAt'] ?? \PhpursThunks::eval('Data_Array_insertAt')))($i_4_1))($x_1))($ys_2);
-  $__t4 = null;;
-  if ((is_object($__local_var_6_3) && (($__local_var_6_3)->{'tag'} === "Just"))) {
-$__t4 = ($__local_var_6_3)->{'value0'};
-goto end_branch_4;;
+  $__local_var_3_0 = (($GLOBALS['Data_Array__insertAt'] ?? \PhpursThunks::eval('Data_Array__insertAt')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')), new Phpurs_Data0("Nothing"), $__t1, $x_1, $ys_2);
+  $__t3 = null;;
+  if ((is_object($__local_var_3_0) && (($__local_var_3_0)->{'tag'} === "Just"))) {
+$__t3 = ($__local_var_3_0)->{'value0'};
+goto end_branch_3;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t4 = null;
-  end_branch_4:;
-  $__res = $__t4;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
+  $__t3 = null;
+  end_branch_3:;
+  $__res = $__t3;
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1246,45 +1293,62 @@ goto end_branch_4;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_Array_findIndex'] = function() { $v = (((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Array_findIndexImpl'] ?? \PhpursThunks::eval('Data_Array_findIndexImpl'))))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))(new Phpurs_Data0("Nothing")); return $v; };
-\PhpursThunks::$thunks['Data_Array_find'] = function() { $v = (function() {
-  $__fn = function($f_0 = null, $xs_1 = null) use (&$__fn) {
+\PhpursThunks::$thunks['Data_Array_findIndex'] = function() { $v = (function() {
+  $__fn = function($__local_var_0 = null, $__local_var_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_2_0 = (($GLOBALS['Partial_Unsafe__unsafePartial'] ?? \PhpursThunks::eval('Partial_Unsafe__unsafePartial')))(function($dollar__unused_2 = null) use ($xs_1) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Array_unsafeIndex1'] ?? \PhpursThunks::eval('Data_Array_unsafeIndex1')))($xs_1);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  $__local_var_3_1 = ((($GLOBALS['Data_Array_findIndex'] ?? \PhpursThunks::eval('Data_Array_findIndex')))($f_0))($xs_1);
-  $__t2 = null;;
-  if ((is_object($__local_var_3_1) && (($__local_var_3_1)->{'tag'} === "Just"))) {
-$__t2 = new Phpurs_Data1("Just", ($__local_var_2_0)(($__local_var_3_1)->{'value0'}));
-goto end_branch_2;;
-};
-  $__t2 = new Phpurs_Data0("Nothing");
-  end_branch_2:;
-  $__res = $__t2;
+  $__res = (($GLOBALS['Data_Array_findIndexImpl'] ?? \PhpursThunks::eval('Data_Array_findIndexImpl')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')), new Phpurs_Data0("Nothing"), $__local_var_0, $__local_var_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_Array_filter'] = function() { $v = (($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($GLOBALS['Data_Array_filterImpl'] ?? \PhpursThunks::eval('Data_Array_filterImpl'))); return $v; };
+\PhpursThunks::$thunks['Data_Array_find'] = function() { $v = (function() {
+  $__fn = function($f_0 = null, $xs_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__local_var_2_0 = (($GLOBALS['Data_Array_findIndexImpl'] ?? \PhpursThunks::eval('Data_Array_findIndexImpl')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')), new Phpurs_Data0("Nothing"), $f_0, $xs_1);
+  $__t1 = null;;
+  if ((is_object($__local_var_2_0) && (($__local_var_2_0)->{'tag'} === "Just"))) {
+$__t1 = new Phpurs_Data1("Just", ($xs_1)[0]);
+goto end_branch_1;;
+};
+  $__t1 = new Phpurs_Data0("Nothing");
+  end_branch_1:;
+  $__res = $__t1;
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(); return $v; };
+\PhpursThunks::$thunks['Data_Array_filter'] = function() { $v = (function() {
+  $__fn = function($__local_var_0 = null, $__local_var_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($GLOBALS['Data_Array_filterImpl'] ?? \PhpursThunks::eval('Data_Array_filterImpl')))($__local_var_0, $__local_var_1);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(); return $v; };
 \PhpursThunks::$thunks['Data_Array_intersectBy'] = function() { $v = (function() {
   $__fn = function($eq2_0 = null, $xs_1 = null, $ys_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Data_Array_filter'] ?? \PhpursThunks::eval('Data_Array_filter')))(function($x_3 = null) use ($eq2_0, $ys_2) {
+  $__res = (($GLOBALS['Data_Array_filterImpl'] ?? \PhpursThunks::eval('Data_Array_filterImpl')))(function($x_3 = null) use ($eq2_0, $ys_2) {
   $__num = \func_num_args();
-  $__local_var_4_0 = ((($GLOBALS['Data_Array_findIndex'] ?? \PhpursThunks::eval('Data_Array_findIndex')))(($eq2_0)($x_3)))($ys_2);
+  $__local_var_4_0 = (($GLOBALS['Data_Array_findIndexImpl'] ?? \PhpursThunks::eval('Data_Array_findIndexImpl')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')), new Phpurs_Data0("Nothing"), ($eq2_0)($x_3), $ys_2);
   $__t1 = null;;
   if ((is_object($__local_var_4_0) && (($__local_var_4_0)->{'tag'} === "Nothing"))) {
 $__t1 = false;
@@ -1301,7 +1365,7 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($xs_1);
+}, $xs_1);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1359,13 +1423,13 @@ goto end_branch_1;;
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__local_var_3_0 = ((($GLOBALS['Data_Array_findIndex'] ?? \PhpursThunks::eval('Data_Array_findIndex')))(function($v_3 = null) use ($a_1, $dictEq_0) {
+  $__local_var_3_0 = (($GLOBALS['Data_Array_findIndexImpl'] ?? \PhpursThunks::eval('Data_Array_findIndexImpl')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')), new Phpurs_Data0("Nothing"), function($v_3 = null) use ($a_1, $dictEq_0) {
   $__num = \func_num_args();
   $__res = ((($dictEq_0)->{'eq'})($v_3))($a_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($arr_2);
+}, $arr_2);
   $__t1 = null;;
   if ((is_object($__local_var_3_0) && (($__local_var_3_0)->{'tag'} === "Nothing"))) {
 $__t1 = true;
@@ -1391,13 +1455,13 @@ goto end_branch_1;;
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__local_var_3_0 = ((($GLOBALS['Data_Array_findIndex'] ?? \PhpursThunks::eval('Data_Array_findIndex')))(function($v_3 = null) use ($a_1, $dictEq_0) {
+  $__local_var_3_0 = (($GLOBALS['Data_Array_findIndexImpl'] ?? \PhpursThunks::eval('Data_Array_findIndexImpl')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')), new Phpurs_Data0("Nothing"), function($v_3 = null) use ($a_1, $dictEq_0) {
   $__num = \func_num_args();
   $__res = ((($dictEq_0)->{'eq'})($v_3))($a_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($arr_2);
+}, $arr_2);
   $__t1 = null;;
   if ((is_object($__local_var_3_0) && (($__local_var_3_0)->{'tag'} === "Nothing"))) {
 $__t1 = false;
@@ -1436,13 +1500,13 @@ goto end_branch_1;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_2_0 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))((($GLOBALS['Data_Array_length'] ?? \PhpursThunks::eval('Data_Array_length')))($xs_1)))($n_0);
+  $__local_var_2_0 = (count($xs_1) - $n_0);
   $__t1 = null;;
-  if ((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($__local_var_2_0))(1)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($__local_var_2_0))(1))->{'tag'} === "LT"))) {
+  if (($__local_var_2_0 < 1)) {
 $__t1 = [];
 goto end_branch_1;;
 };
-  $__t1 = (((($GLOBALS['Data_Array_slice'] ?? \PhpursThunks::eval('Data_Array_slice')))(0))($__local_var_2_0))($xs_1);
+  $__t1 = (($GLOBALS['Data_Array_sliceImpl'] ?? \PhpursThunks::eval('Data_Array_sliceImpl')))(0, $__local_var_2_0, $xs_1);
   end_branch_1:;
   $__res = $__t1;
   goto __end;;
@@ -1458,11 +1522,11 @@ goto end_branch_1;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t0 = null;;
-  if ((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($n_0))(1)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($n_0))(1))->{'tag'} === "LT"))) {
+  if (($n_0 < 1)) {
 $__t0 = $xs_1;
 goto end_branch_0;;
 };
-  $__t0 = (((($GLOBALS['Data_Array_slice'] ?? \PhpursThunks::eval('Data_Array_slice')))($n_0))((($GLOBALS['Data_Array_length'] ?? \PhpursThunks::eval('Data_Array_length')))($xs_1)))($xs_1);
+  $__t0 = (($GLOBALS['Data_Array_sliceImpl'] ?? \PhpursThunks::eval('Data_Array_sliceImpl')))($n_0, count($xs_1), $xs_1);
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
@@ -1477,62 +1541,75 @@ goto end_branch_0;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Array_drop'] ?? \PhpursThunks::eval('Data_Array_drop')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))((($GLOBALS['Data_Array_length'] ?? \PhpursThunks::eval('Data_Array_length')))($xs_1)))($n_0)))($xs_1);
+  $__local_var_2_0 = (count($xs_1) - $n_0);
+  $__t1 = null;;
+  if (($__local_var_2_0 < 1)) {
+$__t1 = $xs_1;
+goto end_branch_1;;
+};
+  $__t1 = (($GLOBALS['Data_Array_sliceImpl'] ?? \PhpursThunks::eval('Data_Array_sliceImpl')))($__local_var_2_0, count($xs_1), $xs_1);
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_Array_deleteAt'] = function() { $v = (((($GLOBALS['Data_Function_Uncurried_runFn4'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn4')))(($GLOBALS['Data_Array__deleteAt'] ?? \PhpursThunks::eval('Data_Array__deleteAt'))))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))(new Phpurs_Data0("Nothing")); return $v; };
+\PhpursThunks::$thunks['Data_Array_deleteAt'] = function() { $v = (function() {
+  $__fn = function($__local_var_0 = null, $__local_var_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($GLOBALS['Data_Array__deleteAt'] ?? \PhpursThunks::eval('Data_Array__deleteAt')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')), new Phpurs_Data0("Nothing"), $__local_var_0, $__local_var_1);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(); return $v; };
 \PhpursThunks::$thunks['Data_Array_deleteBy'] = function() { $v = (function() {
   $__fn = function($v_0 = null, $v1_1 = null, $v2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__t5 = null;;
+  $__t4 = null;;
   switch (count($v2_2)) {
 case 0:
-$__t5 = [];
-goto end_branch_5;;
+$__t4 = [];
+goto end_branch_4;;
 break;
 default:
 ;
 break;
 };
-  $__local_var_3_0 = ((($GLOBALS['Data_Array_findIndex'] ?? \PhpursThunks::eval('Data_Array_findIndex')))(($v_0)($v1_1)))($v2_2);
+  $__local_var_3_0 = (($GLOBALS['Data_Array_findIndexImpl'] ?? \PhpursThunks::eval('Data_Array_findIndexImpl')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')), new Phpurs_Data0("Nothing"), ($v_0)($v1_1), $v2_2);
   $__t1 = null;;
   if ((is_object($__local_var_3_0) && (($__local_var_3_0)->{'tag'} === "Nothing"))) {
 $__t1 = $v2_2;
 goto end_branch_1;;
 };
   if ((is_object($__local_var_3_0) && (($__local_var_3_0)->{'tag'} === "Just"))) {
-$__local_var_4_2 = ($__local_var_3_0)->{'value0'};
-$__t1 = (($GLOBALS['Partial_Unsafe__unsafePartial'] ?? \PhpursThunks::eval('Partial_Unsafe__unsafePartial')))(function($dollar__unused_5 = null) use ($__local_var_4_2, $v2_2) {
-  $__num = \func_num_args();
-  $__local_var_6_3 = ((($GLOBALS['Data_Array_deleteAt'] ?? \PhpursThunks::eval('Data_Array_deleteAt')))($__local_var_4_2))($v2_2);
-  $__t4 = null;;
-  if ((is_object($__local_var_6_3) && (($__local_var_6_3)->{'tag'} === "Just"))) {
-$__t4 = ($__local_var_6_3)->{'value0'};
-goto end_branch_4;;
+$__local_var_4_2 = (($GLOBALS['Data_Array__deleteAt'] ?? \PhpursThunks::eval('Data_Array__deleteAt')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')), new Phpurs_Data0("Nothing"), ($__local_var_3_0)->{'value0'}, $v2_2);
+$__t3 = null;;
+if ((is_object($__local_var_4_2) && (($__local_var_4_2)->{'tag'} === "Just"))) {
+$__t3 = ($__local_var_4_2)->{'value0'};
+goto end_branch_3;;
 };
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t4 = null;
-  end_branch_4:;
-  $__res = $__t4;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
+throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+$__t3 = null;
+end_branch_3:;
+$__t1 = $__t3;
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
   $__t1 = null;
   end_branch_1:;
-  $__t5 = $__t1;
-  end_branch_5:;
-  $__res = $__t5;
+  $__t4 = $__t1;
+  end_branch_4:;
+  $__res = $__t4;
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1671,52 +1748,52 @@ goto end_branch_2;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Array_catMaybes'] = function() { $v = (($GLOBALS['Data_Array_mapMaybe'] ?? \PhpursThunks::eval('Data_Array_mapMaybe')))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->{'identity'}); return $v; };
-\PhpursThunks::$thunks['Data_Array_any'] = function() { $v = (($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($GLOBALS['Data_Array_anyImpl'] ?? \PhpursThunks::eval('Data_Array_anyImpl'))); return $v; };
+\PhpursThunks::$thunks['Data_Array_any'] = function() { $v = (function() {
+  $__fn = function($__local_var_0 = null, $__local_var_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($GLOBALS['Data_Array_anyImpl'] ?? \PhpursThunks::eval('Data_Array_anyImpl')))($__local_var_0, $__local_var_1);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(); return $v; };
 \PhpursThunks::$thunks['Data_Array_nubByEq'] = function() { $v = (function() {
   $__fn = function($eq2_0 = null, $xs_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Control_Monad_ST_Internal_run'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_run')))(((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(($GLOBALS['Data_Array_ST_new'] ?? \PhpursThunks::eval('Data_Array_ST_new'))))(function($arr_2 = null) use ($eq2_0, $xs_1) {
+  $arr_2_0 = ($GLOBALS['Data_Array_ST_new'] ?? \PhpursThunks::eval('Data_Array_ST_new'));
+  $dollar__unused_3_1 = ((($GLOBALS['Control_Monad_ST_Internal_foreach'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_foreach')))($xs_1))(function($x_3 = null) use ($arr_2_0, $eq2_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(((($GLOBALS['Control_Monad_ST_Internal_foreach'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_foreach')))($xs_1))(function($x_3 = null) use ($arr_2, $eq2_0) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(((($GLOBALS['Control_Monad_ST_Internal_map_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_map_')))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_HeytingAlgebra_boolNot'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolNot'))))((($GLOBALS['Data_Array_any'] ?? \PhpursThunks::eval('Data_Array_any')))(function($v_4 = null) use ($eq2_0, $x_3) {
+  $__local_var_4_1 = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_HeytingAlgebra_boolNot'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolNot'))))((($GLOBALS['Data_Array_any'] ?? \PhpursThunks::eval('Data_Array_any')))(function($v_4 = null) use ($eq2_0, $x_3) {
   $__num = \func_num_args();
   $__res = (($eq2_0)($v_4))($x_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))))((($GLOBALS['Data_Array_ST_unsafeFreeze'] ?? \PhpursThunks::eval('Data_Array_ST_unsafeFreeze')))($arr_2))))(function($e_4 = null) use ($arr_2, $x_3) {
-  $__num = \func_num_args();
-  $__local_var_5_0 = (($GLOBALS['Data_Array_void'] ?? \PhpursThunks::eval('Data_Array_void')))(((($GLOBALS['Data_Array_ST_push'] ?? \PhpursThunks::eval('Data_Array_ST_push')))($x_3))($arr_2));
-  $__t1 = null;;
-  if ($e_4) {
-$__t1 = $__local_var_5_0;
-goto end_branch_1;;
-};
-  $__t1 = (($GLOBALS['Control_Monad_ST_Internal_pure_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_pure_')))(($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit')));
-  end_branch_1:;
-  $__res = $__t1;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})))(function($dollar__unused_3 = null) use ($arr_2) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Array_ST_unsafeFreeze'] ?? \PhpursThunks::eval('Data_Array_ST_unsafeFreeze')))($arr_2);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }));
+  $__local_var_5_2 = (($GLOBALS['Data_Array_ST_unsafeFreeze'] ?? \PhpursThunks::eval('Data_Array_ST_unsafeFreeze')))($arr_2_0);
+  $__local_var_6_3 = $__local_var_5_2;
+  $__local_var_7_4 = ((($GLOBALS['Data_Array_ST_push'] ?? \PhpursThunks::eval('Data_Array_ST_push')))($x_3))($arr_2_0);
+  $__t5 = null;;
+  if (($__local_var_4_1)($__local_var_6_3)) {
+$__local_var_8_6 = $__local_var_7_4;
+$__t5 = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
+goto end_branch_5;;
+};
+  $__t5 = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
+  end_branch_5:;
+  $__res = $__t5;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  $__res = (($GLOBALS['Control_Monad_ST_Internal_run'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_run')))((($GLOBALS['Data_Array_ST_unsafeFreeze'] ?? \PhpursThunks::eval('Data_Array_ST_unsafeFreeze')))($arr_2_0));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1768,7 +1845,7 @@ goto end_branch_1;;
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__local_var_3_0 = ((($GLOBALS['Data_Array_index'] ?? \PhpursThunks::eval('Data_Array_index')))($xs_2))($i_0);
+  $__local_var_3_0 = (($GLOBALS['Data_Array_indexImpl'] ?? \PhpursThunks::eval('Data_Array_indexImpl')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')), new Phpurs_Data0("Nothing"), $xs_2, $i_0);
   $__t1 = null;;
   if ((is_object($__local_var_3_0) && (($__local_var_3_0)->{'tag'} === "Nothing"))) {
 $__t1 = new Phpurs_Data0("Nothing");
@@ -1778,11 +1855,11 @@ goto end_branch_1;;
 $v_4_2 = ($f_1)(($__local_var_3_0)->{'value0'});
 $__t3 = null;;
 if ((is_object($v_4_2) && (($v_4_2)->{'tag'} === "Nothing"))) {
-$__t3 = ((($GLOBALS['Data_Array_deleteAt'] ?? \PhpursThunks::eval('Data_Array_deleteAt')))($i_0))($xs_2);
+$__t3 = (($GLOBALS['Data_Array__deleteAt'] ?? \PhpursThunks::eval('Data_Array__deleteAt')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')), new Phpurs_Data0("Nothing"), $i_0, $xs_2);
 goto end_branch_3;;
 };
 if ((is_object($v_4_2) && (($v_4_2)->{'tag'} === "Just"))) {
-$__t3 = (((($GLOBALS['Data_Array_updateAt'] ?? \PhpursThunks::eval('Data_Array_updateAt')))($i_0))(($v_4_2)->{'value0'}))($xs_2);
+$__t3 = (($GLOBALS['Data_Array__updateAt'] ?? \PhpursThunks::eval('Data_Array__updateAt')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just')), new Phpurs_Data0("Nothing"), $i_0, ($v_4_2)->{'value0'}, $xs_2);
 goto end_branch_3;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -1801,7 +1878,19 @@ goto end_branch_1;;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_Array_all'] = function() { $v = (($GLOBALS['Data_Function_Uncurried_runFn2'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn2')))(($GLOBALS['Data_Array_allImpl'] ?? \PhpursThunks::eval('Data_Array_allImpl'))); return $v; };
+\PhpursThunks::$thunks['Data_Array_all'] = function() { $v = (function() {
+  $__fn = function($__local_var_0 = null, $__local_var_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($GLOBALS['Data_Array_allImpl'] ?? \PhpursThunks::eval('Data_Array_allImpl')))($__local_var_0, $__local_var_1);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})(); return $v; };
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Array = \call_user_func(function() {
   $exports = [];
@@ -2194,8 +2283,6 @@ return $exports;
 \PhpursThunks::$thunks['Data_Array_unconsImpl'] = function() use (&$ffi_Data_Array) { return $ffi_Data_Array['unconsImpl']; };
 \PhpursThunks::$thunks['Data_Array_unsafeIndexImpl'] = function() use (&$ffi_Data_Array) { return $ffi_Data_Array['unsafeIndexImpl']; };
 \PhpursThunks::$thunks['Data_Array_zipWithImpl'] = function() use (&$ffi_Data_Array) { return $ffi_Data_Array['zipWithImpl']; };
-
-
 
 
 

@@ -163,7 +163,7 @@ default:
 ;
 break;
 };
-  $__t2 = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("("))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(((($GLOBALS['Data_Show_Generic_intercalate'] ?? \PhpursThunks::eval('Data_Show_Generic_intercalate')))(" "))(((($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray')))([$ctor_3_0]))($v1_4_1))))(")"));
+  $__t2 = (("(" . ((($GLOBALS['Data_Show_Generic_intercalate'] ?? \PhpursThunks::eval('Data_Show_Generic_intercalate')))(" "))(((($GLOBALS['Data_Semigroup_concatArray'] ?? \PhpursThunks::eval('Data_Semigroup_concatArray')))([$ctor_3_0]))($v1_4_1))) . ")");
   end_branch_2:;
   $__res = $__t2;
   goto __end;;

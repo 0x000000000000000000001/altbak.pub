@@ -502,7 +502,7 @@ $__t2 = 1;
 goto end_branch_2;;
 };
   if ((is_object($v_6_1) && (($v_6_1)->{'tag'} === "GT"))) {
-$__t2 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))(0))(1);
+$__t2 = -1;
 goto end_branch_2;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -566,7 +566,7 @@ goto end_branch_2;;
   $key_10_3 = (($dictIsSymbol_3)->{'reflectSymbol'})(new Phpurs_Data0("Proxy"));
   $left_11_4 = ((($dictOrd_5)->{'compare'})(((($GLOBALS['Record_Unsafe_unsafeGet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeGet')))($key_10_3))($ra_8)))(((($GLOBALS['Record_Unsafe_unsafeGet'] ?? \PhpursThunks::eval('Record_Unsafe_unsafeGet')))($key_10_3))($rb_9));
   $__t5 = null;;
-  if (((($GLOBALS['Data_Eq_eqBooleanImpl'] ?? \PhpursThunks::eval('Data_Eq_eqBooleanImpl')))((is_object($left_11_4) && (($left_11_4)->{'tag'} === "EQ"))))(false)) {
+  if (((is_object($left_11_4) && (($left_11_4)->{'tag'} === "LT")) || ((is_object($left_11_4) && (($left_11_4)->{'tag'} === "GT")) || ( ! (is_object($left_11_4) && (($left_11_4)->{'tag'} === "EQ")))))) {
 $__t5 = $left_11_4;
 goto end_branch_5;;
 };

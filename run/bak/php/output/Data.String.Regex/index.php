@@ -150,7 +150,7 @@ goto end_branch_5;;
 };
   $__t5 = "";
   end_branch_5:;
-  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))($__t0))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))($__t1))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))($__t2))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))($__t3))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))($__t4))($__t5)))));
+  $__res = ((((($__t0 . $__t1) . $__t2) . $__t3) . $__t4) . $__t5);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -161,7 +161,49 @@ goto end_branch_5;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((((($GLOBALS['Data_String_Regex_regexImpl'] ?? \PhpursThunks::eval('Data_String_Regex_regexImpl')))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))($s_0))((($GLOBALS['Data_String_Regex_renderFlags'] ?? \PhpursThunks::eval('Data_String_Regex_renderFlags')))($f_1));
+  $__t0 = null;;
+  if (($f_1)->{'global'}) {
+$__t0 = "g";
+goto end_branch_0;;
+};
+  $__t0 = "";
+  end_branch_0:;
+  $__t1 = null;;
+  if (($f_1)->{'ignoreCase'}) {
+$__t1 = "i";
+goto end_branch_1;;
+};
+  $__t1 = "";
+  end_branch_1:;
+  $__t2 = null;;
+  if (($f_1)->{'multiline'}) {
+$__t2 = "m";
+goto end_branch_2;;
+};
+  $__t2 = "";
+  end_branch_2:;
+  $__t3 = null;;
+  if (($f_1)->{'dotAll'}) {
+$__t3 = "s";
+goto end_branch_3;;
+};
+  $__t3 = "";
+  end_branch_3:;
+  $__t4 = null;;
+  if (($f_1)->{'sticky'}) {
+$__t4 = "y";
+goto end_branch_4;;
+};
+  $__t4 = "";
+  end_branch_4:;
+  $__t5 = null;;
+  if (($f_1)->{'unicode'}) {
+$__t5 = "u";
+goto end_branch_5;;
+};
+  $__t5 = "";
+  end_branch_5:;
+  $__res = ((((($GLOBALS['Data_String_Regex_regexImpl'] ?? \PhpursThunks::eval('Data_String_Regex_regexImpl')))(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))(($GLOBALS['Data_Either_Right'] ?? \PhpursThunks::eval('Data_Either_Right'))))($s_0))(((((($__t0 . $__t1) . $__t2) . $__t3) . $__t4) . $__t5));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

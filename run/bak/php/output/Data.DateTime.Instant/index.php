@@ -110,7 +110,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_DateTime_Instant_negateDuration'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->{'identity'}))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(($GLOBALS['Data_Time_Duration_negate'] ?? \PhpursThunks::eval('Data_Time_Duration_negate')))))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->{'identity'})); return $v; };
+\PhpursThunks::$thunks['Data_DateTime_Instant_negateDuration'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->{'identity'}))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Time_Duration_negate'] ?? \PhpursThunks::eval('Data_Time_Duration_negate'))))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->{'identity'})); return $v; };
 \PhpursThunks::$thunks['Data_DateTime_Instant_unInstant'] = function() { $v = function($v_0 = null) {
   $__num = \func_num_args();
   $__res = $v_0;
@@ -118,14 +118,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
-\PhpursThunks::$thunks['Data_DateTime_Instant_toDateTime'] = function() { $v = (($GLOBALS['Data_DateTime_Instant_toDateTimeImpl'] ?? \PhpursThunks::eval('Data_DateTime_Instant_toDateTimeImpl')))((($GLOBALS['Partial_Unsafe__unsafePartial'] ?? \PhpursThunks::eval('Partial_Unsafe__unsafePartial')))((function() {
-  $__fn = function($dollar__unused_0 = null, $y_1 = null, $mo_2 = null, $d_3 = null, $h_4 = null, $mi_5 = null, $s_6 = null, $ms_7 = null) use (&$__fn) {
+\PhpursThunks::$thunks['Data_DateTime_Instant_toDateTime'] = function() { $v = (($GLOBALS['Data_DateTime_Instant_toDateTimeImpl'] ?? \PhpursThunks::eval('Data_DateTime_Instant_toDateTimeImpl')))((function() {
+  $__fn = function($y_0 = null, $mo_1 = null, $d_2 = null, $h_3 = null, $mi_4 = null, $s_5 = null, $ms_6 = null) use (&$__fn) {
   $__num = \func_num_args();
-  if ($__num < 8) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 8);
+  if ($__num < 7) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 7);
   }
   $__t0 = null;;
-  switch ($mo_2) {
+  switch ($mo_1) {
 case 1:
 $__t0 = new Phpurs_Data0("January");
 goto end_branch_0;;
@@ -134,7 +134,7 @@ default:
 ;
 break;
 };
-  switch ($mo_2) {
+  switch ($mo_1) {
 case 2:
 $__t0 = new Phpurs_Data0("February");
 goto end_branch_0;;
@@ -143,7 +143,7 @@ default:
 ;
 break;
 };
-  switch ($mo_2) {
+  switch ($mo_1) {
 case 3:
 $__t0 = new Phpurs_Data0("March");
 goto end_branch_0;;
@@ -152,7 +152,7 @@ default:
 ;
 break;
 };
-  switch ($mo_2) {
+  switch ($mo_1) {
 case 4:
 $__t0 = new Phpurs_Data0("April");
 goto end_branch_0;;
@@ -161,7 +161,7 @@ default:
 ;
 break;
 };
-  switch ($mo_2) {
+  switch ($mo_1) {
 case 5:
 $__t0 = new Phpurs_Data0("May");
 goto end_branch_0;;
@@ -170,7 +170,7 @@ default:
 ;
 break;
 };
-  switch ($mo_2) {
+  switch ($mo_1) {
 case 6:
 $__t0 = new Phpurs_Data0("June");
 goto end_branch_0;;
@@ -179,7 +179,7 @@ default:
 ;
 break;
 };
-  switch ($mo_2) {
+  switch ($mo_1) {
 case 7:
 $__t0 = new Phpurs_Data0("July");
 goto end_branch_0;;
@@ -188,7 +188,7 @@ default:
 ;
 break;
 };
-  switch ($mo_2) {
+  switch ($mo_1) {
 case 8:
 $__t0 = new Phpurs_Data0("August");
 goto end_branch_0;;
@@ -197,7 +197,7 @@ default:
 ;
 break;
 };
-  switch ($mo_2) {
+  switch ($mo_1) {
 case 9:
 $__t0 = new Phpurs_Data0("September");
 goto end_branch_0;;
@@ -206,7 +206,7 @@ default:
 ;
 break;
 };
-  switch ($mo_2) {
+  switch ($mo_1) {
 case 10:
 $__t0 = new Phpurs_Data0("October");
 goto end_branch_0;;
@@ -215,7 +215,7 @@ default:
 ;
 break;
 };
-  switch ($mo_2) {
+  switch ($mo_1) {
 case 11:
 $__t0 = new Phpurs_Data0("November");
 goto end_branch_0;;
@@ -224,7 +224,7 @@ default:
 ;
 break;
 };
-  switch ($mo_2) {
+  switch ($mo_1) {
 case 12:
 $__t0 = new Phpurs_Data0("December");
 goto end_branch_0;;
@@ -236,16 +236,16 @@ break;
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
   $__t0 = null;
   end_branch_0:;
-  $__res = new Phpurs_Data2("DateTime", (((($GLOBALS['Data_Date_canonicalDate'] ?? \PhpursThunks::eval('Data_Date_canonicalDate')))($y_1))($__t0))($d_3), new Phpurs_Data4("Time", $h_4, $mi_5, $s_6, $ms_7));
+  $__res = new Phpurs_Data2("DateTime", (((($GLOBALS['Data_Date_canonicalDate'] ?? \PhpursThunks::eval('Data_Date_canonicalDate')))($y_0))($__t0))($d_2), new Phpurs_Data4("Time", $h_3, $mi_4, $s_5, $ms_6));
   goto __end;;
   __end:
-  return $__num > 8 ? $__res(...\array_slice(\func_get_args(), 8)) : $__res;
+  return $__num > 7 ? $__res(...\array_slice(\func_get_args(), 7)) : $__res;
   };
   return $__fn;
-})())); return $v; };
+})()); return $v; };
 \PhpursThunks::$thunks['Data_DateTime_Instant_showInstant'] = function() { $v = (object)["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(Instant "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(Milliseconds "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($GLOBALS['Data_Show_showNumberImpl'] ?? \PhpursThunks::eval('Data_Show_showNumberImpl')))($v_0)))(")"))))(")"));
+  $__res = (("(Instant (Milliseconds " . (($GLOBALS['Data_Show_showNumberImpl'] ?? \PhpursThunks::eval('Data_Show_showNumberImpl')))($v_0)) . "))");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -254,7 +254,7 @@ break;
 \PhpursThunks::$thunks['Data_DateTime_Instant_instant'] = function() { $v = function($v_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if (((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))(( ! (is_object((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->{'compare'})($v_0))(((($GLOBALS['Data_Ring_numSub'] ?? \PhpursThunks::eval('Data_Ring_numSub')))(0.0))(8639977881600000.0))) && (((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->{'compare'})($v_0))(((($GLOBALS['Data_Ring_numSub'] ?? \PhpursThunks::eval('Data_Ring_numSub')))(0.0))(8639977881600000.0)))->{'tag'} === "LT")))))(( ! (is_object((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->{'compare'})($v_0))(8639977881599999.0)) && (((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->{'compare'})($v_0))(8639977881599999.0))->{'tag'} === "GT"))))) {
+  if ((($v_0 >= -8639977881600000.0) && ($v_0 <= 8639977881599999.0))) {
 $__t0 = new Phpurs_Data1("Just", $v_0);
 goto end_branch_0;;
 };
@@ -319,7 +319,7 @@ goto end_branch_0;;
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
   $__t0 = null;
   end_branch_0:;
-  $__res = ((((((((($GLOBALS['Data_Function_Uncurried_runFn7'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn7')))(($GLOBALS['Data_DateTime_Instant_fromDateTimeImpl'] ?? \PhpursThunks::eval('Data_DateTime_Instant_fromDateTimeImpl'))))((($v_0)->{'value0'})->{'value0'}))($__t0))((($v_0)->{'value0'})->{'value2'}))((($v_0)->{'value1'})->{'value0'}))((($v_0)->{'value1'})->{'value1'}))((($v_0)->{'value1'})->{'value2'}))((($v_0)->{'value1'})->{'value3'});
+  $__res = (($GLOBALS['Data_DateTime_Instant_fromDateTimeImpl'] ?? \PhpursThunks::eval('Data_DateTime_Instant_fromDateTimeImpl')))((($v_0)->{'value0'})->{'value0'}, $__t0, (($v_0)->{'value0'})->{'value2'}, (($v_0)->{'value1'})->{'value0'}, (($v_0)->{'value1'})->{'value1'}, (($v_0)->{'value1'})->{'value2'}, (($v_0)->{'value1'})->{'value3'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -378,7 +378,7 @@ goto end_branch_0;;
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
   $__t0 = null;
   end_branch_0:;
-  $__res = ((((((((($GLOBALS['Data_Function_Uncurried_runFn7'] ?? \PhpursThunks::eval('Data_Function_Uncurried_runFn7')))(($GLOBALS['Data_DateTime_Instant_fromDateTimeImpl'] ?? \PhpursThunks::eval('Data_DateTime_Instant_fromDateTimeImpl'))))(($d_0)->{'value0'}))($__t0))(($d_0)->{'value2'}))(0))(0))(0))(0);
+  $__res = (($GLOBALS['Data_DateTime_Instant_fromDateTimeImpl'] ?? \PhpursThunks::eval('Data_DateTime_Instant_fromDateTimeImpl')))(($d_0)->{'value0'}, $__t0, ($d_0)->{'value2'}, 0, 0, 0, 0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -390,14 +390,14 @@ goto end_branch_0;;
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictDuration_0)->{'toDuration'})(((($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')))($dt1_1))((($GLOBALS['Data_DateTime_Instant_negateDuration'] ?? \PhpursThunks::eval('Data_DateTime_Instant_negateDuration')))($dt2_2)));
+  $__res = (($dictDuration_0)->{'toDuration'})(($dt1_1 + (($GLOBALS['Data_DateTime_Instant_negateDuration'] ?? \PhpursThunks::eval('Data_DateTime_Instant_negateDuration')))($dt2_2)));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_DateTime_Instant_boundedInstant'] = function() { $v = (object)["bottom" => ((($GLOBALS['Data_Ring_numSub'] ?? \PhpursThunks::eval('Data_Ring_numSub')))(0.0))(8639977881600000.0), "top" => 8639977881599999.0, "Ord0" => function($dollar__unused_0 = null) {
+\PhpursThunks::$thunks['Data_DateTime_Instant_boundedInstant'] = function() { $v = (object)["bottom" => -8639977881600000.0, "top" => 8639977881599999.0, "Ord0" => function($dollar__unused_0 = null) {
   $__num = \func_num_args();
   $__res = ($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber'));
   goto __end;;

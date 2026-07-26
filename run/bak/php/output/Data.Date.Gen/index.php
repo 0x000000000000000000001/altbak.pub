@@ -121,35 +121,29 @@ goto end_branch_2;;
   end_branch_2:;
   $__res = ((($Bind1_2_1)->{'bind'})(((((((($Bind1_2_1)->{'Apply0'})(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->{'Functor0'})(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->{'map'})(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Time_Duration_Days'] ?? \PhpursThunks::eval('Data_Time_Duration_Days'))))(($GLOBALS['Data_Int_toNumber'] ?? \PhpursThunks::eval('Data_Int_toNumber')))))(((($dictMonadGen_0)->{'chooseInt'})(0))($__t2))))(function($days_4 = null) use ($Monad0_1_0, $year_3) {
   $__num = \func_num_args();
-  $__res = (((($Monad0_1_0)->{'Applicative0'})(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->{'pure'})((($GLOBALS['Partial_Unsafe__unsafePartial'] ?? \PhpursThunks::eval('Partial_Unsafe__unsafePartial')))(function($dollar__unused_5 = null) use ($days_4, $year_3) {
-  $__num = \func_num_args();
-  $__local_var_6_3 = (((($GLOBALS['Data_Date_exactDate'] ?? \PhpursThunks::eval('Data_Date_exactDate')))($year_3))(new Phpurs_Data0("January")))(1);
+  $__local_var_5_3 = (((($GLOBALS['Data_Date_exactDate'] ?? \PhpursThunks::eval('Data_Date_exactDate')))($year_3))(new Phpurs_Data0("January")))(1);
   $__t4 = null;;
-  if ((is_object($__local_var_6_3) && (($__local_var_6_3)->{'tag'} === "Just"))) {
-$__t4 = ((($GLOBALS['Data_Date_adjust'] ?? \PhpursThunks::eval('Data_Date_adjust')))($days_4))(($__local_var_6_3)->{'value0'});
+  if ((is_object($__local_var_5_3) && (($__local_var_5_3)->{'tag'} === "Just"))) {
+$__t4 = ((($GLOBALS['Data_Date_adjust'] ?? \PhpursThunks::eval('Data_Date_adjust')))($days_4))(($__local_var_5_3)->{'value0'});
 goto end_branch_4;;
 };
-  if ((is_object($__local_var_6_3) && (($__local_var_6_3)->{'tag'} === "Nothing"))) {
+  if ((is_object($__local_var_5_3) && (($__local_var_5_3)->{'tag'} === "Nothing"))) {
 $__t4 = new Phpurs_Data0("Nothing");
 goto end_branch_4;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
   $__t4 = null;
   end_branch_4:;
-  $__local_var_7_4 = $__t4;
+  $__local_var_6_4 = $__t4;
   $__t6 = null;;
-  if ((is_object($__local_var_7_4) && (($__local_var_7_4)->{'tag'} === "Just"))) {
-$__t6 = ($__local_var_7_4)->{'value0'};
+  if ((is_object($__local_var_6_4) && (($__local_var_6_4)->{'tag'} === "Just"))) {
+$__t6 = ($__local_var_6_4)->{'value0'};
 goto end_branch_6;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
   $__t6 = null;
   end_branch_6:;
-  $__res = $__t6;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}));
+  $__res = (((($Monad0_1_0)->{'Applicative0'})(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->{'pure'})($__t6);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

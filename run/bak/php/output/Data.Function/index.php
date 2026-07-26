@@ -157,11 +157,11 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   $n_2 = $__tco_var_go_1_0_0_n_2;
   $acc_3 = $__tco_var_go_1_0_0_acc_3;
   $__t2 = null;;
-  if (( ! (is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($n_2))(0)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($n_2))(0))->{'tag'} === "GT")))) {
+  if (($n_2 <= 0)) {
 $__t2 = $acc_3;
 goto end_branch_2;;
 };
-  $__tco_0 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($n_2))(1);
+  $__tco_0 = ($n_2 - 1);
   $__tco_1 = ($f_0)($acc_3);
   $__tco_var_go_1_0_0_n_2 = $__tco_0;
   $__tco_var_go_1_0_0_acc_3 = $__tco_1;

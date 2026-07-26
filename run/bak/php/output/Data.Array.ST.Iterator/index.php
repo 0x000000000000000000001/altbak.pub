@@ -104,13 +104,6 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Array_ST_Iterator_void'] = function() { $v = (($GLOBALS['Control_Monad_ST_Internal_map_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_map_')))(function($v_0 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}); return $v; };
 \PhpursThunks::$thunks['Data_Array_ST_Iterator_Iterator'] = function() { $v = (function() {
   $__fn = function($value0 = null, $value1 = null) use (&$__fn) {
   $__num = \func_num_args();
@@ -126,13 +119,9 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Array_ST_Iterator_peek'] = function() { $v = function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))((($GLOBALS['Control_Monad_ST_Internal_read'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_read')))(($v_0)->{'value1'})))(function($i_1 = null) use ($v_0) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_ST_Internal_pure_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_pure_')))((($v_0)->{'value0'})($i_1));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
+  $__local_var_1_0 = ($v_0)->{'value1'};
+  $i_2_1 = "TODO_PrimEffect";
+  $__res = (($v_0)->{'value0'})($i_2_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -140,26 +129,16 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 \PhpursThunks::$thunks['Data_Array_ST_Iterator_next'] = function() { $v = function($v_0 = null) {
   $__num = \func_num_args();
   $__local_var_1_0 = ($v_0)->{'value1'};
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))((($GLOBALS['Control_Monad_ST_Internal_read'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_read')))($__local_var_1_0)))(function($i_2 = null) use ($__local_var_1_0, $v_0) {
+  $i_2_1 = "TODO_PrimEffect";
+  $dollar__unused_3_2 = ((($GLOBALS['Control_Monad_ST_Internal_modifyImpl'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_modifyImpl')))(function($s_3 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(((($GLOBALS['Control_Monad_ST_Internal_modifyImpl'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_modifyImpl')))(function($s_3 = null) {
-  $__num = \func_num_args();
-  $s__prime___4_1 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($s_3))(1);
-  $__res = (object)["state" => $s__prime___4_1, "value" => $s__prime___4_1];
+  $s__prime___4_2 = ($s_3 + 1);
+  $__res = (object)["state" => $s__prime___4_2, "value" => $s__prime___4_2];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($__local_var_1_0)))(function($dollar__unused_3 = null) use ($i_2, $v_0) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_ST_Internal_pure_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_pure_')))((($v_0)->{'value0'})($i_2));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
+}))($__local_var_1_0);
+  $__res = (($v_0)->{'value0'})($i_2_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -170,32 +149,22 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))((($GLOBALS['Control_Monad_ST_Internal_new'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_new')))(false)))(function($break_3 = null) use ($array_2, $iter_1, $p_0) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_while'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_while')))(((($GLOBALS['Control_Monad_ST_Internal_map_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_map_')))(($GLOBALS['Data_HeytingAlgebra_boolNot'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolNot'))))((($GLOBALS['Control_Monad_ST_Internal_read'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_read')))($break_3))))(((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))((($GLOBALS['Data_Array_ST_Iterator_peek'] ?? \PhpursThunks::eval('Data_Array_ST_Iterator_peek')))($iter_1)))(function($mx_4 = null) use ($array_2, $break_3, $iter_1, $p_0) {
-  $__num = \func_num_args();
-  $__t0 = null;;
-  if (((is_object($mx_4) && (($mx_4)->{'tag'} === "Just")) && ($p_0)(($mx_4)->{'value0'}))) {
-$__t0 = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(((($GLOBALS['Data_Array_ST_push'] ?? \PhpursThunks::eval('Data_Array_ST_push')))(($mx_4)->{'value0'}))($array_2)))(function($dollar__unused_5 = null) use ($iter_1) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Array_ST_Iterator_void'] ?? \PhpursThunks::eval('Data_Array_ST_Iterator_void')))((($GLOBALS['Data_Array_ST_Iterator_next'] ?? \PhpursThunks::eval('Data_Array_ST_Iterator_next')))($iter_1));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-goto end_branch_0;;
+  $break_3_0 = "TODO_PrimEffect";
+  $__local_var_4_1 = "TODO_PrimEffect";
+  $__local_var_4_2 = ($iter_1)->{'value1'};
+  $i_5_3 = "TODO_PrimEffect";
+  $mx_6_4 = (($iter_1)->{'value0'})($i_5_3);
+  $__t6 = null;;
+  if (((is_object($mx_6_4) && (($mx_6_4)->{'tag'} === "Just")) && ($p_0)(($mx_6_4)->{'value0'}))) {
+$dollar__unused_7_7 = ((($GLOBALS['Data_Array_ST_push'] ?? \PhpursThunks::eval('Data_Array_ST_push')))(($mx_6_4)->{'value0'}))($array_2);
+$__local_var_8_8 = (($GLOBALS['Data_Array_ST_Iterator_next'] ?? \PhpursThunks::eval('Data_Array_ST_Iterator_next')))($iter_1);
+$__t6 = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
+goto end_branch_6;;
 };
-  $__t0 = (($GLOBALS['Data_Array_ST_Iterator_void'] ?? \PhpursThunks::eval('Data_Array_ST_Iterator_void')))(((($GLOBALS['Control_Monad_ST_Internal_write'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_write')))(true))($break_3));
-  end_branch_0:;
-  $__res = $__t0;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
+  $__local_var_7_5 = "TODO_PrimEffect";
+  $__t6 = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
+  end_branch_6:;
+  $__res = ((($GLOBALS['Control_Monad_ST_Internal_while'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_while')))(( ! $__local_var_4_1)))($__t6);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -211,7 +180,9 @@ goto end_branch_0;;
 }); return $v; };
 \PhpursThunks::$thunks['Data_Array_ST_Iterator_iterator'] = function() { $v = function($f_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_map_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_map_')))((($GLOBALS['Data_Array_ST_Iterator_Iterator'] ?? \PhpursThunks::eval('Data_Array_ST_Iterator_Iterator')))($f_0)))((($GLOBALS['Control_Monad_ST_Internal_new'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_new')))(0));
+  $__local_var_1_0 = (($GLOBALS['Data_Array_ST_Iterator_Iterator'] ?? \PhpursThunks::eval('Data_Array_ST_Iterator_Iterator')))($f_0);
+  $__local_var_2_1 = "TODO_PrimEffect";
+  $__res = ($__local_var_1_0)($__local_var_2_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -222,40 +193,51 @@ goto end_branch_0;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))((($GLOBALS['Control_Monad_ST_Internal_new'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_new')))(false)))(function($break_2 = null) use ($f_1, $iter_0) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_while'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_while')))(((($GLOBALS['Control_Monad_ST_Internal_map_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_map_')))(($GLOBALS['Data_HeytingAlgebra_boolNot'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolNot'))))((($GLOBALS['Control_Monad_ST_Internal_read'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_read')))($break_2))))(((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))((($GLOBALS['Data_Array_ST_Iterator_next'] ?? \PhpursThunks::eval('Data_Array_ST_Iterator_next')))($iter_0)))(function($mx_3 = null) use ($break_2, $f_1) {
-  $__num = \func_num_args();
-  $__t0 = null;;
-  if ((is_object($mx_3) && (($mx_3)->{'tag'} === "Just"))) {
-$__t0 = ($f_1)(($mx_3)->{'value0'});
-goto end_branch_0;;
+  $break_2_0 = "TODO_PrimEffect";
+  $__local_var_3_1 = "TODO_PrimEffect";
+  $__local_var_3_2 = (($GLOBALS['Data_Array_ST_Iterator_next'] ?? \PhpursThunks::eval('Data_Array_ST_Iterator_next')))($iter_0);
+  $mx_4_3 = $__local_var_3_2;
+  $__t4 = null;;
+  if ((is_object($mx_4_3) && (($mx_4_3)->{'tag'} === "Just"))) {
+$__t4 = ($f_1)(($mx_4_3)->{'value0'});
+goto end_branch_4;;
 };
-  if ((is_object($mx_3) && (($mx_3)->{'tag'} === "Nothing"))) {
-$__t0 = (($GLOBALS['Data_Array_ST_Iterator_void'] ?? \PhpursThunks::eval('Data_Array_ST_Iterator_void')))(((($GLOBALS['Control_Monad_ST_Internal_write'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_write')))(true))($break_2));
-goto end_branch_0;;
+  if ((is_object($mx_4_3) && (($mx_4_3)->{'tag'} === "Nothing"))) {
+$__local_var_5_5 = "TODO_PrimEffect";
+$__t4 = ($GLOBALS['Data_Unit_unit'] ?? \PhpursThunks::eval('Data_Unit_unit'));
+goto end_branch_4;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t0 = null;
-  end_branch_0:;
-  $__res = $__t0;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
+  $__t4 = null;
+  end_branch_4:;
+  $__res = ((($GLOBALS['Control_Monad_ST_Internal_while'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_while')))(( ! $__local_var_3_1)))($__t4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_Array_ST_Iterator_exhausted'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Control_Monad_ST_Internal_map_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_map_')))(($GLOBALS['Data_Maybe_isNothing'] ?? \PhpursThunks::eval('Data_Maybe_isNothing')))))(($GLOBALS['Data_Array_ST_Iterator_peek'] ?? \PhpursThunks::eval('Data_Array_ST_Iterator_peek'))); return $v; };
+\PhpursThunks::$thunks['Data_Array_ST_Iterator_exhausted'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(function($__local_var_0 = null) {
+  $__num = \func_num_args();
+  $__local_var_1_0 = $__local_var_0;
+  $__t1 = null;;
+  if ((is_object($__local_var_1_0) && (($__local_var_1_0)->{'tag'} === "Nothing"))) {
+$__t1 = true;
+goto end_branch_1;;
+};
+  if ((is_object($__local_var_1_0) && (($__local_var_1_0)->{'tag'} === "Just"))) {
+$__t1 = false;
+goto end_branch_1;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t1 = null;
+  end_branch_1:;
+  $__res = $__t1;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))(($GLOBALS['Data_Array_ST_Iterator_peek'] ?? \PhpursThunks::eval('Data_Array_ST_Iterator_peek'))); return $v; };
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
 
 
 

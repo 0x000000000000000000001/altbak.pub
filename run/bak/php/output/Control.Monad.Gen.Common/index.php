@@ -160,7 +160,7 @@ goto end_branch_1;;
   $__num = \func_num_args();
   $__res = ((($Apply0_2_0)->{'apply'})(((((($Apply0_2_0)->{'Functor0'})(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->{'map'})(($GLOBALS['Data_NonEmpty_NonEmpty'] ?? \PhpursThunks::eval('Data_NonEmpty_NonEmpty'))))($gen_6)))(((($dictMonadGen_1)->{'resize'})(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Control_Monad_Gen_Common_max'] ?? \PhpursThunks::eval('Control_Monad_Gen_Common_max')))(0)))(function($v_7 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_7))(1);
+  $__res = ($v_7 - 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -192,7 +192,7 @@ goto end_branch_1;;
   $__res = ((($Bind1_2_1)->{'bind'})(((($dictMonadGen_0)->{'chooseFloat'})(0.0))(1.0)))(function($n_5 = null) use ($Bind1_2_1, $Monad0_1_0, $bias_3, $gen_4) {
   $__num = \func_num_args();
   $__t2 = null;;
-  if ((is_object((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->{'compare'})($n_5))($bias_3)) && (((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->{'compare'})($n_5))($bias_3))->{'tag'} === "LT"))) {
+  if (($n_5 < $bias_3)) {
 $__t2 = ((((((($Bind1_2_1)->{'Apply0'})(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->{'Functor0'})(($GLOBALS['Prim_undefined'] ?? \PhpursThunks::eval('Prim_undefined'))))->{'map'})(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))($gen_4);
 goto end_branch_2;;
 };
@@ -240,7 +240,7 @@ goto end_branch_2;;
   $__res = ((($Bind1_1_0)->{'bind'})(((($dictMonadGen_0)->{'chooseFloat'})(0.0))(1.0)))(function($n_6 = null) use ($__local_var_2_1, $bias_3, $genA_4, $genB_5) {
   $__num = \func_num_args();
   $__t2 = null;;
-  if ((is_object((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->{'compare'})($n_6))($bias_3)) && (((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->{'compare'})($n_6))($bias_3))->{'tag'} === "LT"))) {
+  if (($n_6 < $bias_3)) {
 $__t2 = ((($__local_var_2_1)->{'map'})(($GLOBALS['Data_Either_Left'] ?? \PhpursThunks::eval('Data_Either_Left'))))($genA_4);
 goto end_branch_2;;
 };

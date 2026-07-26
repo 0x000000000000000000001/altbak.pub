@@ -131,8 +131,8 @@ default:
 ;
 break;
 };
-  $__tco_0 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1);
-  $__tco_1 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($v1_1))(((($GLOBALS['Data_EuclideanRing_intMod'] ?? \PhpursThunks::eval('Data_EuclideanRing_intMod')))($v_0))(3));
+  $__tco_0 = ($v_0 - 1);
+  $__tco_1 = ($v1_1 + ((($GLOBALS['Data_EuclideanRing_intMod'] ?? \PhpursThunks::eval('Data_EuclideanRing_intMod')))($v_0))(3));
   $__tco_var_Test_TCO_deepTailRec_v_0 = $__tco_0;
   $__tco_var_Test_TCO_deepTailRec_v1_1 = $__tco_1;
   $__tco_done_Test_TCO_deepTailRec = false;
@@ -157,13 +157,11 @@ $__tco_res_Test_TCO_deepTailRec = ($__tco_loop_Test_TCO_deepTailRec)($__tco_var_
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Test_TCO_act'] = function() { $v = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($GLOBALS['Bench_opaque'] ?? \PhpursThunks::eval('Bench_opaque')))(100000)))(function($dummy_0 = null) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(((($GLOBALS['Test_TCO_deepTailRec'] ?? \PhpursThunks::eval('Test_TCO_deepTailRec')))($dummy_0))(0)));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}); return $v; };
+\PhpursThunks::$thunks['Test_TCO_act'] = function() { $v = (function() use (&$__fn) {
+$__local_var_0_0 = (($GLOBALS['Bench_opaque'] ?? \PhpursThunks::eval('Bench_opaque')))(100000);
+$dummy_1_1 = $__local_var_0_0;
+return (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(((($GLOBALS['Test_TCO_deepTailRec'] ?? \PhpursThunks::eval('Test_TCO_deepTailRec')))($dummy_1_1))(0)));
+})(); return $v; };
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 

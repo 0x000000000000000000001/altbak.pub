@@ -119,19 +119,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))((($GLOBALS['Data_Array_ST_thaw'] ?? \PhpursThunks::eval('Data_Array_ST_thaw')))($xs_1)))(function($result_2 = null) use ($f_0) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(($f_0)($result_2)))(function($dollar__unused_3 = null) use ($result_2) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Array_ST_unsafeFreeze'] ?? \PhpursThunks::eval('Data_Array_ST_unsafeFreeze')))($result_2);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
+  $__local_var_2_0 = (($GLOBALS['Data_Array_ST_thaw'] ?? \PhpursThunks::eval('Data_Array_ST_thaw')))($xs_1);
+  $result_3_1 = $__local_var_2_0;
+  $dollar__unused_4_2 = ($f_0)($result_3_1);
+  $__res = (($GLOBALS['Data_Array_ST_unsafeFreeze'] ?? \PhpursThunks::eval('Data_Array_ST_unsafeFreeze')))($result_3_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -153,7 +144,7 @@ $__t0 = 0;
 goto end_branch_0;;
 };
   if ((is_object($v_1) && (($v_1)->{'tag'} === "LT"))) {
-$__t0 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))(0))(1);
+$__t0 = -1;
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -203,7 +194,8 @@ goto end_branch_0;;
 \PhpursThunks::$thunks['Data_Array_ST_shift'] = function() { $v = (((($GLOBALS['Control_Monad_ST_Uncurried_runSTFn3'] ?? \PhpursThunks::eval('Control_Monad_ST_Uncurried_runSTFn3')))(($GLOBALS['Data_Array_ST_shiftImpl'] ?? \PhpursThunks::eval('Data_Array_ST_shiftImpl'))))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))(new Phpurs_Data0("Nothing")); return $v; };
 \PhpursThunks::$thunks['Data_Array_ST_run'] = function() { $v = function($st_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_ST_Internal_run'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_run')))(((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))($st_0))(($GLOBALS['Data_Array_ST_unsafeFreeze'] ?? \PhpursThunks::eval('Data_Array_ST_unsafeFreeze'))));
+  $__local_var_1_0 = $st_0;
+  $__res = (($GLOBALS['Control_Monad_ST_Internal_run'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_run')))((($GLOBALS['Data_Array_ST_unsafeFreeze'] ?? \PhpursThunks::eval('Data_Array_ST_unsafeFreeze')))($__local_var_1_0));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -219,25 +211,21 @@ goto end_branch_0;;
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bind_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_bind_')))(((($GLOBALS['Data_Array_ST_peek'] ?? \PhpursThunks::eval('Data_Array_ST_peek')))($i_0))($xs_2)))(function($entry_3 = null) use ($f_1, $i_0, $xs_2) {
-  $__num = \func_num_args();
-  $__t0 = null;;
-  if ((is_object($entry_3) && (($entry_3)->{'tag'} === "Just"))) {
-$__t0 = (((($GLOBALS['Data_Array_ST_poke'] ?? \PhpursThunks::eval('Data_Array_ST_poke')))($i_0))(($f_1)(($entry_3)->{'value0'})))($xs_2);
-goto end_branch_0;;
+  $__local_var_3_0 = ((($GLOBALS['Data_Array_ST_peek'] ?? \PhpursThunks::eval('Data_Array_ST_peek')))($i_0))($xs_2);
+  $entry_4_1 = $__local_var_3_0;
+  $__t2 = null;;
+  if ((is_object($entry_4_1) && (($entry_4_1)->{'tag'} === "Just"))) {
+$__t2 = (((($GLOBALS['Data_Array_ST_poke'] ?? \PhpursThunks::eval('Data_Array_ST_poke')))($i_0))(($f_1)(($entry_4_1)->{'value0'})))($xs_2);
+goto end_branch_2;;
 };
-  if ((is_object($entry_3) && (($entry_3)->{'tag'} === "Nothing"))) {
-$__t0 = (($GLOBALS['Control_Monad_ST_Internal_pure_'] ?? \PhpursThunks::eval('Control_Monad_ST_Internal_pure_')))(false);
-goto end_branch_0;;
+  if ((is_object($entry_4_1) && (($entry_4_1)->{'tag'} === "Nothing"))) {
+$__t2 = false;
+goto end_branch_2;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t0 = null;
-  end_branch_0:;
-  $__res = $__t0;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
+  $__t2 = null;
+  end_branch_2:;
+  $__res = $__t2;
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;

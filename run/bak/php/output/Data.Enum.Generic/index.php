@@ -506,7 +506,7 @@ goto end_branch_3;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(($dictGenericBoundedEnum_1)->{'genericCardinality__prime__'});
+  $__res = ($dictGenericBoundedEnum_1)->{'genericCardinality__prime__'};
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -518,10 +518,10 @@ goto end_branch_3;;
   $genericCardinality__prime__1_1_0 = ($dictGenericBoundedEnum_0)->{'genericCardinality__prime__'};
   $__res = function($dictGenericBoundedEnum1_2 = null) use ($dictGenericBoundedEnum_0, $genericCardinality__prime__1_1_0) {
   $__num = \func_num_args();
-  $__res = (object)["genericCardinality__prime__" => ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))($genericCardinality__prime__1_1_0)))((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(($dictGenericBoundedEnum1_2)->{'genericCardinality__prime__'})), "genericToEnum__prime__" => function($n_3 = null) use ($dictGenericBoundedEnum1_2, $dictGenericBoundedEnum_0, $genericCardinality__prime__1_1_0) {
+  $__res = (object)["genericCardinality__prime__" => ($genericCardinality__prime__1_1_0 + ($dictGenericBoundedEnum1_2)->{'genericCardinality__prime__'}), "genericToEnum__prime__" => function($n_3 = null) use ($dictGenericBoundedEnum1_2, $dictGenericBoundedEnum_0, $genericCardinality__prime__1_1_0) {
   $__num = \func_num_args();
   $__t3 = null;;
-  if (((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))(( ! (is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($n_3))(0)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($n_3))(0))->{'tag'} === "LT")))))((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($n_3))($genericCardinality__prime__1_1_0)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($n_3))($genericCardinality__prime__1_1_0))->{'tag'} === "LT")))) {
+  if ((($n_3 >= 0) && ($n_3 < $genericCardinality__prime__1_1_0))) {
 $__local_var_4_4 = (($dictGenericBoundedEnum_0)->{'genericToEnum__prime__'})($n_3);
 $__t5 = null;;
 if ((is_object($__local_var_4_4) && (($__local_var_4_4)->{'tag'} === "Just"))) {
@@ -533,7 +533,7 @@ end_branch_5:;
 $__t3 = $__t5;
 goto end_branch_3;;
 };
-  $__local_var_4_1 = (($dictGenericBoundedEnum1_2)->{'genericToEnum__prime__'})(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($n_3))($genericCardinality__prime__1_1_0));
+  $__local_var_4_1 = (($dictGenericBoundedEnum1_2)->{'genericToEnum__prime__'})(($n_3 - $genericCardinality__prime__1_1_0));
   $__t2 = null;;
   if ((is_object($__local_var_4_1) && (($__local_var_4_1)->{'tag'} === "Just"))) {
 $__t2 = new Phpurs_Data1("Just", new Phpurs_Data1("Inr", ($__local_var_4_1)->{'value0'}));
@@ -555,7 +555,7 @@ $__t6 = (($dictGenericBoundedEnum_0)->{'genericFromEnum__prime__'})(($v_3)->{'va
 goto end_branch_6;;
 };
   if ((is_object($v_3) && (($v_3)->{'tag'} === "Inr"))) {
-$__t6 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))((($dictGenericBoundedEnum1_2)->{'genericFromEnum__prime__'})(($v_3)->{'value0'})))((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))($genericCardinality__prime__1_1_0));
+$__t6 = ((($dictGenericBoundedEnum1_2)->{'genericFromEnum__prime__'})(($v_3)->{'value0'}) + $genericCardinality__prime__1_1_0);
 goto end_branch_6;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -580,9 +580,9 @@ goto end_branch_6;;
   $__res = function($dictGenericBoundedEnum1_2 = null) use ($dictGenericBoundedEnum_0, $genericCardinality__prime__1_1_0) {
   $__num = \func_num_args();
   $genericCardinality__prime__2_3_1 = ($dictGenericBoundedEnum1_2)->{'genericCardinality__prime__'};
-  $__res = (object)["genericCardinality__prime__" => ((($GLOBALS['Data_Semiring_intMul'] ?? \PhpursThunks::eval('Data_Semiring_intMul')))((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))($genericCardinality__prime__1_1_0)))((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))($genericCardinality__prime__2_3_1)), "genericToEnum__prime__" => function($n_4 = null) use ($dictGenericBoundedEnum1_2, $dictGenericBoundedEnum_0, $genericCardinality__prime__2_3_1) {
+  $__res = (object)["genericCardinality__prime__" => ($genericCardinality__prime__1_1_0 * $genericCardinality__prime__2_3_1), "genericToEnum__prime__" => function($n_4 = null) use ($dictGenericBoundedEnum1_2, $dictGenericBoundedEnum_0, $genericCardinality__prime__2_3_1) {
   $__num = \func_num_args();
-  $__local_var_5_2 = (($dictGenericBoundedEnum_0)->{'genericToEnum__prime__'})(((($GLOBALS['Data_EuclideanRing_intDiv'] ?? \PhpursThunks::eval('Data_EuclideanRing_intDiv')))($n_4))($genericCardinality__prime__2_3_1));
+  $__local_var_5_2 = (($dictGenericBoundedEnum_0)->{'genericToEnum__prime__'})(($n_4 / $genericCardinality__prime__2_3_1));
   $__t3 = null;;
   if ((is_object($__local_var_5_2) && (($__local_var_5_2)->{'tag'} === "Just"))) {
 $__local_var_6_4 = (($dictGenericBoundedEnum1_2)->{'genericToEnum__prime__'})(((($GLOBALS['Data_EuclideanRing_intMod'] ?? \PhpursThunks::eval('Data_EuclideanRing_intMod')))($n_4))($genericCardinality__prime__2_3_1));
@@ -604,7 +604,7 @@ goto end_branch_3;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "genericFromEnum__prime__" => function($v1_4 = null) use ($dictGenericBoundedEnum1_2, $dictGenericBoundedEnum_0, $genericCardinality__prime__2_3_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(((($GLOBALS['Data_Semiring_intMul'] ?? \PhpursThunks::eval('Data_Semiring_intMul')))((($dictGenericBoundedEnum_0)->{'genericFromEnum__prime__'})(($v1_4)->{'value0'})))($genericCardinality__prime__2_3_1)))((($dictGenericBoundedEnum1_2)->{'genericFromEnum__prime__'})(($v1_4)->{'value1'}));
+  $__res = (((($dictGenericBoundedEnum_0)->{'genericFromEnum__prime__'})(($v1_4)->{'value0'}) * $genericCardinality__prime__2_3_1) + (($dictGenericBoundedEnum1_2)->{'genericFromEnum__prime__'})(($v1_4)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -620,9 +620,14 @@ goto end_branch_3;;
 \PhpursThunks::$thunks['Data_Enum_Generic_genericBoundedEnumNoArguments'] = function() { $v = (object)["genericCardinality__prime__" => 1, "genericToEnum__prime__" => function($i_0 = null) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if (((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))($i_0))(0)) {
+  switch ($i_0) {
+case 0:
 $__t0 = new Phpurs_Data1("Just", new Phpurs_Data0("NoArguments"));
 goto end_branch_0;;
+break;
+default:
+;
+break;
 };
   $__t0 = new Phpurs_Data0("Nothing");
   end_branch_0:;
@@ -639,7 +644,7 @@ goto end_branch_0;;
 }]; return $v; };
 \PhpursThunks::$thunks['Data_Enum_Generic_genericBoundedEnumConstructor'] = function() { $v = function($dictGenericBoundedEnum_0 = null) {
   $__num = \func_num_args();
-  $__res = (object)["genericCardinality__prime__" => (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(($dictGenericBoundedEnum_0)->{'genericCardinality__prime__'}), "genericToEnum__prime__" => function($i_1 = null) use ($dictGenericBoundedEnum_0) {
+  $__res = (object)["genericCardinality__prime__" => ($dictGenericBoundedEnum_0)->{'genericCardinality__prime__'}, "genericToEnum__prime__" => function($i_1 = null) use ($dictGenericBoundedEnum_0) {
   $__num = \func_num_args();
   $__local_var_2_0 = (($dictGenericBoundedEnum_0)->{'genericToEnum__prime__'})($i_1);
   $__t1 = null;;
@@ -666,7 +671,7 @@ goto end_branch_1;;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Enum_Generic_genericBoundedEnumArgument'] = function() { $v = function($dictBoundedEnum_0 = null) {
   $__num = \func_num_args();
-  $__res = (object)["genericCardinality__prime__" => (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(($dictBoundedEnum_0)->{'cardinality'}), "genericToEnum__prime__" => function($i_1 = null) use ($dictBoundedEnum_0) {
+  $__res = (object)["genericCardinality__prime__" => ($dictBoundedEnum_0)->{'cardinality'}, "genericToEnum__prime__" => function($i_1 = null) use ($dictBoundedEnum_0) {
   $__num = \func_num_args();
   $__local_var_2_0 = (($dictBoundedEnum_0)->{'toEnum'})($i_1);
   $__t1 = null;;

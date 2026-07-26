@@ -186,11 +186,11 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $__t0 = $cursor_3;
 goto end_branch_0;;
 };
-  if (((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))(($cursor_3)->{'pos'}))($idx_1)) {
+  if ((($cursor_3)->{'pos'} === $idx_1)) {
 $__t0 = (object)["elem" => new Phpurs_Data1("Just", $a_2), "pos" => ($cursor_3)->{'pos'}];
 goto end_branch_0;;
 };
-  $__t0 = (object)["pos" => ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(($cursor_3)->{'pos'}))(1), "elem" => ($cursor_3)->{'elem'}];
+  $__t0 = (object)["pos" => (($cursor_3)->{'pos'} + 1), "elem" => ($cursor_3)->{'elem'}];
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
@@ -349,11 +349,11 @@ goto end_branch_0;;
 $__t0 = $cursor_2;
 goto end_branch_0;;
 };
-  if (((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))(($cursor_2)->{'pos'}))($idx_1)) {
+  if ((($cursor_2)->{'pos'} === $idx_1)) {
 $__t0 = (object)["elem" => new Phpurs_Data1("Just", $a_3), "pos" => ($cursor_2)->{'pos'}];
 goto end_branch_0;;
 };
-  $__t0 = (object)["pos" => ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(($cursor_2)->{'pos'}))(1), "elem" => ($cursor_2)->{'elem'}];
+  $__t0 = (object)["pos" => (($cursor_2)->{'pos'} + 1), "elem" => ($cursor_2)->{'elem'}];
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
@@ -1979,7 +1979,7 @@ goto end_branch_1;;
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))((($foldMap2_1_0)((function() use ($d_3, $dictSemigroup_2, $t_4) {
+  $__res = ((($foldMap2_1_0)((function() use ($d_3, $dictSemigroup_2, $t_4) {
   $__fn = function($a_6 = null, $m_7 = null) use ($d_3, $dictSemigroup_2, $t_4, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -1991,7 +1991,7 @@ goto end_branch_1;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($f_5)))($d_3);
+})()))($f_5))($d_3);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -2150,13 +2150,13 @@ goto end_branch_0;;
   };
   return $__fn;
 })()];
-  $__res = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))((($dictFoldable_0)->{'foldMap'})((object)["mempty" => ($dictHeytingAlgebra_1)->{'ff'}, "Semigroup0" => function($dollar__unused_3 = null) use ($semigroupDisj1_2_0) {
+  $__res = (($dictFoldable_0)->{'foldMap'})((object)["mempty" => ($dictHeytingAlgebra_1)->{'ff'}, "Semigroup0" => function($dollar__unused_3 = null) use ($semigroupDisj1_2_0) {
   $__num = \func_num_args();
   $__res = $semigroupDisj1_2_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]));
+}]);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -2165,7 +2165,26 @@ goto end_branch_0;;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Foldable_elem'] = function() { $v = function($dictFoldable_0 = null) {
   $__num = \func_num_args();
-  $any1_1_0 = ((($GLOBALS['Data_Foldable_any'] ?? \PhpursThunks::eval('Data_Foldable_any')))($dictFoldable_0))(($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_heytingAlgebraBoolean')));
+  $semigroupDisj1_1_0 = (object)["append" => (function() {
+  $__fn = function($v_1 = null, $v1_2 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($v_1 || $v1_2);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
+  $any1_1_0 = (($dictFoldable_0)->{'foldMap'})((object)["mempty" => false, "Semigroup0" => function($dollar__unused_2 = null) use ($semigroupDisj1_1_0) {
+  $__num = \func_num_args();
+  $__res = $semigroupDisj1_1_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}]);
   $__res = function($dictEq_2 = null) use ($any1_1_0) {
   $__num = \func_num_args();
   $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($any1_1_0))(($dictEq_2)->{'eq'});
@@ -2179,10 +2198,10 @@ goto end_branch_0;;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Foldable_notElem'] = function() { $v = function($dictFoldable_0 = null) {
   $__num = \func_num_args();
-  $any1_1_0 = ((($GLOBALS['Data_Foldable_any'] ?? \PhpursThunks::eval('Data_Foldable_any')))($dictFoldable_0))(($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_heytingAlgebraBoolean')));
-  $__res = function($dictEq_2 = null) use ($any1_1_0) {
+  $elem1_1_0 = (($GLOBALS['Data_Foldable_elem'] ?? \PhpursThunks::eval('Data_Foldable_elem')))($dictFoldable_0);
+  $__res = function($dictEq_2 = null) use ($elem1_1_0) {
   $__num = \func_num_args();
-  $elem2_3_1 = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))($any1_1_0))(($dictEq_2)->{'eq'});
+  $elem2_3_1 = ($elem1_1_0)($dictEq_2);
   $__res = function($x_4 = null) use ($elem2_3_1) {
   $__num = \func_num_args();
   $__res = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_HeytingAlgebra_boolNot'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolNot'))))(($elem2_3_1)($x_4));
@@ -2204,7 +2223,26 @@ goto end_branch_0;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Data_Foldable_any'] ?? \PhpursThunks::eval('Data_Foldable_any')))($dictFoldable_0))($dictHeytingAlgebra_1))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->{'identity'});
+  $semigroupDisj1_2_0 = (object)["append" => (function() use ($dictHeytingAlgebra_1) {
+  $__fn = function($v_2 = null, $v1_3 = null) use ($dictHeytingAlgebra_1, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ((($dictHeytingAlgebra_1)->{'disj'})($v_2))($v1_3);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
+  $__res = ((($dictFoldable_0)->{'foldMap'})((object)["mempty" => ($dictHeytingAlgebra_1)->{'ff'}, "Semigroup0" => function($dollar__unused_3 = null) use ($semigroupDisj1_2_0) {
+  $__num = \func_num_args();
+  $__res = $semigroupDisj1_2_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}]))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->{'identity'});
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -2230,13 +2268,13 @@ goto end_branch_0;;
   };
   return $__fn;
 })()];
-  $__res = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))((($dictFoldable_0)->{'foldMap'})((object)["mempty" => ($dictHeytingAlgebra_1)->{'tt'}, "Semigroup0" => function($dollar__unused_3 = null) use ($semigroupConj1_2_0) {
+  $__res = (($dictFoldable_0)->{'foldMap'})((object)["mempty" => ($dictHeytingAlgebra_1)->{'tt'}, "Semigroup0" => function($dollar__unused_3 = null) use ($semigroupConj1_2_0) {
   $__num = \func_num_args();
   $__res = $semigroupConj1_2_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]));
+}]);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -2249,7 +2287,26 @@ goto end_branch_0;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Data_Foldable_all'] ?? \PhpursThunks::eval('Data_Foldable_all')))($dictFoldable_0))($dictHeytingAlgebra_1))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->{'identity'});
+  $semigroupConj1_2_0 = (object)["append" => (function() use ($dictHeytingAlgebra_1) {
+  $__fn = function($v_2 = null, $v1_3 = null) use ($dictHeytingAlgebra_1, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ((($dictHeytingAlgebra_1)->{'conj'})($v_2))($v1_3);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
+  $__res = ((($dictFoldable_0)->{'foldMap'})((object)["mempty" => ($dictHeytingAlgebra_1)->{'tt'}, "Semigroup0" => function($dollar__unused_3 = null) use ($semigroupConj1_2_0) {
+  $__num = \func_num_args();
+  $__res = $semigroupConj1_2_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}]))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->{'identity'});
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

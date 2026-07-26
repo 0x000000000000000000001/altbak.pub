@@ -260,20 +260,30 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   $go_4_2 = function($p_5 = null) use ($__local_var_2_1, &$go_4_2, $mempty1_1_0, $x_3) {
   $__num = \func_num_args();
   $__t4 = null;;
-  if (( ! (is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($p_5))(0)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($p_5))(0))->{'tag'} === "GT")))) {
+  if (($p_5 <= 0)) {
 $__t4 = $mempty1_1_0;
 goto end_branch_4;;
 };
-  if (((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))($p_5))(1)) {
+  switch ($p_5) {
+case 1:
 $__t4 = $x_3;
 goto end_branch_4;;
+break;
+default:
+;
+break;
 };
-  if (((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))(((($GLOBALS['Data_EuclideanRing_intMod'] ?? \PhpursThunks::eval('Data_EuclideanRing_intMod')))($p_5))(2)))(0)) {
-$x__prime___6_5 = ($go_4_2)(((($GLOBALS['Data_EuclideanRing_intDiv'] ?? \PhpursThunks::eval('Data_EuclideanRing_intDiv')))($p_5))(2));
+  switch (((($GLOBALS['Data_EuclideanRing_intMod'] ?? \PhpursThunks::eval('Data_EuclideanRing_intMod')))($p_5))(2)) {
+case 0:
+$x__prime___6_5 = ($go_4_2)(($p_5 / 2));
 $__t4 = ((($__local_var_2_1)->{'append'})($x__prime___6_5))($x__prime___6_5);
 goto end_branch_4;;
+break;
+default:
+;
+break;
 };
-  $x__prime___6_3 = ($go_4_2)(((($GLOBALS['Data_EuclideanRing_intDiv'] ?? \PhpursThunks::eval('Data_EuclideanRing_intDiv')))($p_5))(2));
+  $x__prime___6_3 = ($go_4_2)(($p_5 / 2));
   $__t4 = ((($__local_var_2_1)->{'append'})($x__prime___6_3))(((($__local_var_2_1)->{'append'})($x__prime___6_3))($x_3));
   end_branch_4:;
   $__res = $__t4;

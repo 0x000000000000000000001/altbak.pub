@@ -124,7 +124,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t0 = null;;
-  if ((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($x_0))($y_1)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($x_0))($y_1))->{'tag'} === "GT"))) {
+  if (($x_0 > $y_1)) {
 $__t0 = $x_0;
 goto end_branch_0;;
 };
@@ -175,13 +175,13 @@ goto end_branch_0;;
 $__local_var_1_1 = (($GLOBALS['Test_RBTree_depth'] ?? \PhpursThunks::eval('Test_RBTree_depth')))(($v_0)->{'value1'});
 $__local_var_2_2 = (($GLOBALS['Test_RBTree_depth'] ?? \PhpursThunks::eval('Test_RBTree_depth')))(($v_0)->{'value3'});
 $__t3 = null;;
-if ((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($__local_var_1_1))($__local_var_2_2)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($__local_var_1_1))($__local_var_2_2))->{'tag'} === "GT"))) {
-$__t3 = $__local_var_1_1;
+if (($__local_var_1_1 > $__local_var_2_2)) {
+$__t3 = (1 + $__local_var_1_1);
 goto end_branch_3;;
 };
-$__t3 = $__local_var_2_2;
+$__t3 = (1 + $__local_var_2_2);
 end_branch_3:;
-$__t0 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(1))($__t3);
+$__t0 = $__t3;
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -452,11 +452,11 @@ goto end_branch_0;;
 };
   if ((is_object($v1_1) && (($v1_1)->{'tag'} === "T"))) {
 $__t1 = null;;
-if ((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($v_0))(($v1_1)->{'value2'})) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($v_0))(($v1_1)->{'value2'}))->{'tag'} === "LT"))) {
+if (($v_0 < ($v1_1)->{'value2'})) {
 $__t1 = ((((($GLOBALS['Test_RBTree_balance'] ?? \PhpursThunks::eval('Test_RBTree_balance')))(($v1_1)->{'value0'}))(((($GLOBALS['Test_RBTree_ins'] ?? \PhpursThunks::eval('Test_RBTree_ins')))($v_0))(($v1_1)->{'value1'})))(($v1_1)->{'value2'}))(($v1_1)->{'value3'});
 goto end_branch_1;;
 };
-if ((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($v_0))(($v1_1)->{'value2'})) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($v_0))(($v1_1)->{'value2'}))->{'tag'} === "GT"))) {
+if (($v_0 > ($v1_1)->{'value2'})) {
 $__t1 = ((((($GLOBALS['Test_RBTree_balance'] ?? \PhpursThunks::eval('Test_RBTree_balance')))(($v1_1)->{'value0'}))(($v1_1)->{'value1'}))(($v1_1)->{'value2'}))(((($GLOBALS['Test_RBTree_ins'] ?? \PhpursThunks::eval('Test_RBTree_ins')))($v_0))(($v1_1)->{'value3'}));
 goto end_branch_1;;
 };
@@ -540,7 +540,7 @@ default:
 ;
 break;
 };
-  $__tco_0 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1);
+  $__tco_0 = ($v_0 - 1);
   $__tco_1 = ((($GLOBALS['Test_RBTree_insert'] ?? \PhpursThunks::eval('Test_RBTree_insert')))($v_0))($v1_1);
   $__tco_var_Test_RBTree_buildTree_v_0 = $__tco_0;
   $__tco_var_Test_RBTree_buildTree_v1_1 = $__tco_1;
@@ -566,13 +566,11 @@ $__tco_res_Test_RBTree_buildTree = ($__tco_loop_Test_RBTree_buildTree)($__tco_va
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Test_RBTree_act'] = function() { $v = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($GLOBALS['Bench_opaque'] ?? \PhpursThunks::eval('Bench_opaque')))(100000)))(function($dummy_0 = null) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))((($GLOBALS['Test_RBTree_depth'] ?? \PhpursThunks::eval('Test_RBTree_depth')))(((($GLOBALS['Test_RBTree_buildTree'] ?? \PhpursThunks::eval('Test_RBTree_buildTree')))($dummy_0))(new Phpurs_Data0("E")))));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}); return $v; };
+\PhpursThunks::$thunks['Test_RBTree_act'] = function() { $v = (function() use (&$__fn) {
+$__local_var_0_0 = (($GLOBALS['Bench_opaque'] ?? \PhpursThunks::eval('Bench_opaque')))(100000);
+$dummy_1_1 = $__local_var_0_0;
+return (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))((($GLOBALS['Test_RBTree_depth'] ?? \PhpursThunks::eval('Test_RBTree_depth')))(((($GLOBALS['Test_RBTree_buildTree'] ?? \PhpursThunks::eval('Test_RBTree_buildTree')))($dummy_1_1))(new Phpurs_Data0("E")))));
+})(); return $v; };
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 

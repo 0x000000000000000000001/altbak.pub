@@ -6,7 +6,7 @@ func UnsafeCoerce(x interface{}) interface{} { return x }
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_unsafeCoerce(arg0 interface{}) interface{} { return x } {
+func Call_unsafeCoerce(arg0 interface{}) interface{} {
 	return UnsafeCoerce(arg0)
 }
 var _Gopurs_UnsafeCoerce = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {

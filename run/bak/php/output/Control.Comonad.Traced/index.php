@@ -99,7 +99,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 \PhpursThunks::$thunks['Control_Comonad_Traced_traced'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Control_Comonad_Traced_Trans_TracedT'] ?? \PhpursThunks::eval('Control_Comonad_Traced_Trans_TracedT'))))(($GLOBALS['Data_Identity_Identity'] ?? \PhpursThunks::eval('Data_Identity_Identity'))); return $v; };
 \PhpursThunks::$thunks['Control_Comonad_Traced_runTraced'] = function() { $v = function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))($v_0);
+  $__res = $v_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

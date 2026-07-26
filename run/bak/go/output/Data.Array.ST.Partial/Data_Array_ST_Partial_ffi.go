@@ -7,7 +7,7 @@ func PokeImpl(i int, a interface{}, xs []interface{}) func() bool { return func(
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_peekImpl(arg0 int, arg1 []interface{}) func() interface{} { return func() interface{} { return xs[i] } } {
+func Call_peekImpl(arg0 int, arg1 []interface{}) func() interface{} {
 	return PeekImpl(arg0, arg1)
 }
 var _Gopurs_PeekImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -21,7 +21,7 @@ var _Gopurs_PeekImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1
 			return gopurs_runtime.Box(inner_res)
 		})
 })
-func Call_pokeImpl(arg0 int, arg1 interface{}, arg2 []interface{}) func() bool { return func() bool { xs[i] = a; return true } } {
+func Call_pokeImpl(arg0 int, arg1 interface{}, arg2 []interface{}) func() bool {
 	return PokeImpl(arg0, arg1, arg2)
 }
 var _Gopurs_PokeImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {

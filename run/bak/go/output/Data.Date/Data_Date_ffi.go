@@ -62,7 +62,7 @@ var _Gopurs_CalcWeekday = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, a
 	go_res := CalcWeekday(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_calcDiff(arg0 int, arg1 int, arg2 int) int { return 0 } {
+func Call_calcDiff(arg0 int, arg1 int, arg2 int) int {
 	return CalcDiff(arg0, arg1, arg2)
 }
 var _Gopurs_CalcDiff = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {

@@ -281,14 +281,7 @@ $__t1 = new Phpurs_Data2("NonEmpty", ($v2_4_0)->{'value0'}, ($v2_4_0)->{'value1'
 goto end_branch_1;;
 };
   if ((is_object($v2_4_0) && (($v2_4_0)->{'tag'} === "Nil"))) {
-$__local_var_5_2 = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("Impossible: empty list in NonEmptyList "))($name_0);
-$__t1 = (($GLOBALS['Partial_Unsafe__unsafePartial'] ?? \PhpursThunks::eval('Partial_Unsafe__unsafePartial')))(function($dollar__unused_6 = null) use ($__local_var_5_2) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Partial__crashWith'] ?? \PhpursThunks::eval('Partial__crashWith')))($__local_var_5_2);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
+$__t1 = (($GLOBALS['Partial__crashWith'] ?? \PhpursThunks::eval('Partial__crashWith')))(("Impossible: empty list in NonEmptyList " . $name_0));
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -314,14 +307,7 @@ $__t1 = new Phpurs_Data2("NonEmpty", ($v1_3_0)->{'value0'}, ($v1_3_0)->{'value1'
 goto end_branch_1;;
 };
   if ((is_object($v1_3_0) && (($v1_3_0)->{'tag'} === "Nil"))) {
-$__local_var_4_2 = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("Impossible: empty list in NonEmptyList "))($name_0);
-$__t1 = (($GLOBALS['Partial_Unsafe__unsafePartial'] ?? \PhpursThunks::eval('Partial_Unsafe__unsafePartial')))(function($dollar__unused_5 = null) use ($__local_var_4_2) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Partial__crashWith'] ?? \PhpursThunks::eval('Partial__crashWith')))($__local_var_4_2);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
+$__t1 = (($GLOBALS['Partial__crashWith'] ?? \PhpursThunks::eval('Partial__crashWith')))(("Impossible: empty list in NonEmptyList " . $name_0));
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -341,9 +327,14 @@ goto end_branch_1;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__t4 = null;;
-  if (((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))($i_0))(0)) {
+  switch ($i_0) {
+case 0:
 $__t4 = new Phpurs_Data1("Just", new Phpurs_Data2("NonEmpty", $a_1, ($v_2)->{'value1'}));
 goto end_branch_4;;
+break;
+default:
+;
+break;
 };
   $__local_var_3_0 = ($v_2)->{'value0'};
   $__local_var_4_1 = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_List_Types_NonEmptyList'] ?? \PhpursThunks::eval('Data_List_Types_NonEmptyList'))))(function($v1_4 = null) use ($__local_var_3_0) {
@@ -353,7 +344,7 @@ goto end_branch_4;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
-  $__local_var_5_2 = (((($GLOBALS['Data_List_updateAt'] ?? \PhpursThunks::eval('Data_List_updateAt')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($i_0))(1)))($a_1))(($v_2)->{'value1'});
+  $__local_var_5_2 = (((($GLOBALS['Data_List_updateAt'] ?? \PhpursThunks::eval('Data_List_updateAt')))(($i_0 - 1)))($a_1))(($v_2)->{'value1'});
   $__t3 = null;;
   if ((is_object($__local_var_5_2) && (($__local_var_5_2)->{'tag'} === "Just"))) {
 $__t3 = new Phpurs_Data1("Just", ($__local_var_4_1)(($__local_var_5_2)->{'value0'}));
@@ -535,9 +526,14 @@ goto end_branch_0;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__t4 = null;;
-  if (((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))($i_0))(0)) {
+  switch ($i_0) {
+case 0:
 $__t4 = new Phpurs_Data1("Just", new Phpurs_Data2("NonEmpty", ($f_1)(($v_2)->{'value0'}), ($v_2)->{'value1'}));
 goto end_branch_4;;
+break;
+default:
+;
+break;
 };
   $__local_var_3_0 = ($v_2)->{'value0'};
   $__local_var_4_1 = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_List_Types_NonEmptyList'] ?? \PhpursThunks::eval('Data_List_Types_NonEmptyList'))))(function($v1_4 = null) use ($__local_var_3_0) {
@@ -547,7 +543,7 @@ goto end_branch_4;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
-  $__local_var_5_2 = (((($GLOBALS['Data_List_alterAt'] ?? \PhpursThunks::eval('Data_List_alterAt')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($i_0))(1)))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))($f_1)))(($v_2)->{'value1'});
+  $__local_var_5_2 = (((($GLOBALS['Data_List_alterAt'] ?? \PhpursThunks::eval('Data_List_alterAt')))(($i_0 - 1)))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Maybe_Just'] ?? \PhpursThunks::eval('Data_Maybe_Just'))))($f_1)))(($v_2)->{'value1'});
   $__t3 = null;;
   if ((is_object($__local_var_5_2) && (($__local_var_5_2)->{'tag'} === "Just"))) {
 $__t3 = new Phpurs_Data1("Just", ($__local_var_4_1)(($__local_var_5_2)->{'value0'}));
@@ -584,7 +580,63 @@ goto end_branch_3;;
 \PhpursThunks::$thunks['Data_List_NonEmpty_takeWhile'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_List_NonEmpty_lift'] ?? \PhpursThunks::eval('Data_List_NonEmpty_lift'))))(($GLOBALS['Data_List_takeWhile'] ?? \PhpursThunks::eval('Data_List_takeWhile'))); return $v; };
 \PhpursThunks::$thunks['Data_List_NonEmpty_length'] = function() { $v = function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(1))((($GLOBALS['Data_List_length'] ?? \PhpursThunks::eval('Data_List_length')))(($v_0)->{'value1'}));
+  $go_1_0 = null;
+  $go_1_0 = (function() use (&$go_1_0) {
+  $__fn = function($b_2 = null, $v_3 = null) use (&$go_1_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__tco_var_go_1_0_0_b_2 = $b_2;
+  $__tco_var_go_1_0_0_v_3 = $v_3;
+  $__tco_done_go_1_0_0 = false;
+  $__tco_res_go_1_0_0 = null;
+  $__tco_loop_go_1_0_0 = (function() use (&$__tco_done_go_1_0_0, &$__tco_var_go_1_0_0_b_2, &$__tco_var_go_1_0_0_v_3, &$go_1_0) {
+  $__fn = function($b_2 = null, $v_3 = null) use (&$__tco_done_go_1_0_0, &$__tco_var_go_1_0_0_b_2, &$__tco_var_go_1_0_0_v_3, &$go_1_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__tco_done_go_1_0_0 = true;
+  $b_2 = $__tco_var_go_1_0_0_b_2;
+  $v_3 = $__tco_var_go_1_0_0_v_3;
+  $__t0 = null;;
+  if ((is_object($v_3) && (($v_3)->{'tag'} === "Nil"))) {
+$__t0 = $b_2;
+goto end_branch_0;;
+};
+  if ((is_object($v_3) && (($v_3)->{'tag'} === "Cons"))) {
+$__tco_1 = ($b_2 + 1);
+$__tco_2 = ($v_3)->{'value1'};
+$__tco_var_go_1_0_0_b_2 = $__tco_1;
+$__tco_var_go_1_0_0_v_3 = $__tco_2;
+$__tco_done_go_1_0_0 = false;
+$__res = null;
+goto __end;;
+$__t0 = null;
+goto end_branch_0;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t0 = null;
+  end_branch_0:;
+  $__res = $__t0;
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+  while (($__tco_done_go_1_0_0 === false)) {
+$__tco_res_go_1_0_0 = ($__tco_loop_go_1_0_0)($__tco_var_go_1_0_0_b_2, $__tco_var_go_1_0_0_v_3);
+};
+  $__res = $__tco_res_go_1_0_0;
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+  $__res = (1 + (($go_1_0)(0))(($v_0)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -634,9 +686,14 @@ goto end_branch_0;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $__t4 = null;;
-  if (((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))($i_0))(0)) {
+  switch ($i_0) {
+case 0:
 $__t4 = new Phpurs_Data1("Just", new Phpurs_Data2("NonEmpty", $a_1, new Phpurs_Data2("Cons", ($v_2)->{'value0'}, ($v_2)->{'value1'})));
 goto end_branch_4;;
+break;
+default:
+;
+break;
 };
   $__local_var_3_0 = ($v_2)->{'value0'};
   $__local_var_4_1 = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_List_Types_NonEmptyList'] ?? \PhpursThunks::eval('Data_List_Types_NonEmptyList'))))(function($v1_4 = null) use ($__local_var_3_0) {
@@ -646,7 +703,7 @@ goto end_branch_4;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
-  $__local_var_5_2 = (((($GLOBALS['Data_List_insertAt'] ?? \PhpursThunks::eval('Data_List_insertAt')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($i_0))(1)))($a_1))(($v_2)->{'value1'});
+  $__local_var_5_2 = (((($GLOBALS['Data_List_insertAt'] ?? \PhpursThunks::eval('Data_List_insertAt')))(($i_0 - 1)))($a_1))(($v_2)->{'value1'});
   $__t3 = null;;
   if ((is_object($__local_var_5_2) && (($__local_var_5_2)->{'tag'} === "Just"))) {
 $__t3 = new Phpurs_Data1("Just", ($__local_var_4_1)(($__local_var_5_2)->{'value0'}));
@@ -685,11 +742,16 @@ goto end_branch_1;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t0 = null;;
-  if (((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))($i_1))(0)) {
+  switch ($i_1) {
+case 0:
 $__t0 = new Phpurs_Data1("Just", ($v_0)->{'value0'});
 goto end_branch_0;;
+break;
+default:
+;
+break;
 };
-  $__t0 = ((($GLOBALS['Data_List_index'] ?? \PhpursThunks::eval('Data_List_index')))(($v_0)->{'value1'}))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($i_1))(1));
+  $__t0 = ((($GLOBALS['Data_List_index'] ?? \PhpursThunks::eval('Data_List_index')))(($v_0)->{'value1'}))(($i_1 - 1));
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
@@ -776,7 +838,7 @@ goto end_branch_0;;
   $v1_2_0 = ((($GLOBALS['Data_List_findLastIndex'] ?? \PhpursThunks::eval('Data_List_findLastIndex')))($f_0))(($v_1)->{'value1'});
   $__t1 = null;;
   if ((is_object($v1_2_0) && (($v1_2_0)->{'tag'} === "Just"))) {
-$__t1 = new Phpurs_Data1("Just", ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(($v1_2_0)->{'value0'}))(1));
+$__t1 = new Phpurs_Data1("Just", (($v1_2_0)->{'value0'} + 1));
 goto end_branch_1;;
 };
   if ((is_object($v1_2_0) && (($v1_2_0)->{'tag'} === "Nothing"))) {
@@ -806,22 +868,85 @@ goto end_branch_1;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__t2 = null;;
+  $__t3 = null;;
   if (($f_0)(($v_1)->{'value0'})) {
-$__t2 = new Phpurs_Data1("Just", 0);
+$__t3 = new Phpurs_Data1("Just", 0);
+goto end_branch_3;;
+};
+  $go_2_0 = null;
+  $go_2_0 = (function() use ($f_0, &$go_2_0) {
+  $__fn = function($v_3 = null, $v1_4 = null) use ($f_0, &$go_2_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__tco_var_go_2_0_0_v_3 = $v_3;
+  $__tco_var_go_2_0_0_v1_4 = $v1_4;
+  $__tco_done_go_2_0_0 = false;
+  $__tco_res_go_2_0_0 = null;
+  $__tco_loop_go_2_0_0 = (function() use (&$__tco_done_go_2_0_0, &$__tco_var_go_2_0_0_v_3, &$__tco_var_go_2_0_0_v1_4, $f_0, &$go_2_0) {
+  $__fn = function($v_3 = null, $v1_4 = null) use (&$__tco_done_go_2_0_0, &$__tco_var_go_2_0_0_v_3, &$__tco_var_go_2_0_0_v1_4, $f_0, &$go_2_0, &$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__tco_done_go_2_0_0 = true;
+  $v_3 = $__tco_var_go_2_0_0_v_3;
+  $v1_4 = $__tco_var_go_2_0_0_v1_4;
+  $__t0 = null;;
+  if ((is_object($v1_4) && (($v1_4)->{'tag'} === "Cons"))) {
+$__t3 = null;;
+if (($f_0)(($v1_4)->{'value0'})) {
+$__t3 = new Phpurs_Data1("Just", $v_3);
+goto end_branch_3;;
+};
+$__tco_1 = ($v_3 + 1);
+$__tco_2 = ($v1_4)->{'value1'};
+$__tco_var_go_2_0_0_v_3 = $__tco_1;
+$__tco_var_go_2_0_0_v1_4 = $__tco_2;
+$__tco_done_go_2_0_0 = false;
+$__res = null;
+goto __end;;
+$__t3 = null;
+end_branch_3:;
+$__t0 = $__t3;
+goto end_branch_0;;
+};
+  if ((is_object($v1_4) && (($v1_4)->{'tag'} === "Nil"))) {
+$__t0 = new Phpurs_Data0("Nothing");
+goto end_branch_0;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t0 = null;
+  end_branch_0:;
+  $__res = $__t0;
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+  while (($__tco_done_go_2_0_0 === false)) {
+$__tco_res_go_2_0_0 = ($__tco_loop_go_2_0_0)($__tco_var_go_2_0_0_v_3, $__tco_var_go_2_0_0_v1_4);
+};
+  $__res = $__tco_res_go_2_0_0;
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+  $__local_var_3_1 = (($go_2_0)(0))(($v_1)->{'value1'});
+  $__t2 = null;;
+  if ((is_object($__local_var_3_1) && (($__local_var_3_1)->{'tag'} === "Just"))) {
+$__t2 = new Phpurs_Data1("Just", (($__local_var_3_1)->{'value0'} + 1));
 goto end_branch_2;;
 };
-  $__local_var_2_0 = ((($GLOBALS['Data_List_findIndex'] ?? \PhpursThunks::eval('Data_List_findIndex')))($f_0))(($v_1)->{'value1'});
-  $__t1 = null;;
-  if ((is_object($__local_var_2_0) && (($__local_var_2_0)->{'tag'} === "Just"))) {
-$__t1 = new Phpurs_Data1("Just", ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))(($__local_var_2_0)->{'value0'}))(1));
-goto end_branch_1;;
-};
-  $__t1 = new Phpurs_Data0("Nothing");
-  end_branch_1:;
-  $__t2 = $__t1;
+  $__t2 = new Phpurs_Data0("Nothing");
   end_branch_2:;
-  $__res = $__t2;
+  $__t3 = $__t2;
+  end_branch_3:;
+  $__res = $__t3;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -856,21 +981,93 @@ goto end_branch_1;;
   return $__fn;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_List_NonEmpty_elemIndex'] = function() { $v = (function() {
-  $__fn = function($dictEq_0 = null, $x_1 = null) use (&$__fn) {
+  $__fn = function($dictEq_0 = null, $x_1 = null, $v_2 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  $__t3 = null;;
+  if (((($dictEq_0)->{'eq'})(($v_2)->{'value0'}))($x_1)) {
+$__t3 = new Phpurs_Data1("Just", 0);
+goto end_branch_3;;
+};
+  $go_3_0 = null;
+  $go_3_0 = (function() use ($dictEq_0, &$go_3_0, $x_1) {
+  $__fn = function($v_4 = null, $v1_5 = null) use ($dictEq_0, &$go_3_0, $x_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_List_NonEmpty_findIndex'] ?? \PhpursThunks::eval('Data_List_NonEmpty_findIndex')))(function($v_2 = null) use ($dictEq_0, $x_1) {
+  $__tco_var_go_3_0_0_v_4 = $v_4;
+  $__tco_var_go_3_0_0_v1_5 = $v1_5;
+  $__tco_done_go_3_0_0 = false;
+  $__tco_res_go_3_0_0 = null;
+  $__tco_loop_go_3_0_0 = (function() use (&$__tco_done_go_3_0_0, &$__tco_var_go_3_0_0_v_4, &$__tco_var_go_3_0_0_v1_5, $dictEq_0, &$go_3_0, $x_1) {
+  $__fn = function($v_4 = null, $v1_5 = null) use (&$__tco_done_go_3_0_0, &$__tco_var_go_3_0_0_v_4, &$__tco_var_go_3_0_0_v1_5, $dictEq_0, &$go_3_0, $x_1, &$__fn) {
   $__num = \func_num_args();
-  $__res = ((($dictEq_0)->{'eq'})($v_2))($x_1);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-});
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__tco_done_go_3_0_0 = true;
+  $v_4 = $__tco_var_go_3_0_0_v_4;
+  $v1_5 = $__tco_var_go_3_0_0_v1_5;
+  $__t0 = null;;
+  if ((is_object($v1_5) && (($v1_5)->{'tag'} === "Cons"))) {
+$__t3 = null;;
+if (((($dictEq_0)->{'eq'})(($v1_5)->{'value0'}))($x_1)) {
+$__t3 = new Phpurs_Data1("Just", $v_4);
+goto end_branch_3;;
+};
+$__tco_1 = ($v_4 + 1);
+$__tco_2 = ($v1_5)->{'value1'};
+$__tco_var_go_3_0_0_v_4 = $__tco_1;
+$__tco_var_go_3_0_0_v1_5 = $__tco_2;
+$__tco_done_go_3_0_0 = false;
+$__res = null;
+goto __end;;
+$__t3 = null;
+end_branch_3:;
+$__t0 = $__t3;
+goto end_branch_0;;
+};
+  if ((is_object($v1_5) && (($v1_5)->{'tag'} === "Nil"))) {
+$__t0 = new Phpurs_Data0("Nothing");
+goto end_branch_0;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t0 = null;
+  end_branch_0:;
+  $__res = $__t0;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+  while (($__tco_done_go_3_0_0 === false)) {
+$__tco_res_go_3_0_0 = ($__tco_loop_go_3_0_0)($__tco_var_go_3_0_0_v_4, $__tco_var_go_3_0_0_v1_5);
+};
+  $__res = $__tco_res_go_3_0_0;
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})();
+  $__local_var_4_1 = (($go_3_0)(0))(($v_2)->{'value1'});
+  $__t2 = null;;
+  if ((is_object($__local_var_4_1) && (($__local_var_4_1)->{'tag'} === "Just"))) {
+$__t2 = new Phpurs_Data1("Just", (($__local_var_4_1)->{'value0'} + 1));
+goto end_branch_2;;
+};
+  $__t2 = new Phpurs_Data0("Nothing");
+  end_branch_2:;
+  $__t3 = $__t2;
+  end_branch_3:;
+  $__res = $__t3;
+  goto __end;;
+  __end:
+  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
 })(); return $v; };

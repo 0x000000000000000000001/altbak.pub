@@ -117,7 +117,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   $__num = \func_num_args();
   $__res = (($n_0)(function($x_1 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($x_1))(1);
+  $__res = ($x_1 + 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -171,7 +171,7 @@ default:
 ;
 break;
 };
-  $__local_var_1_0 = (($GLOBALS['Test_Church_fromInt'] ?? \PhpursThunks::eval('Test_Church_fromInt')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1));
+  $__local_var_1_0 = (($GLOBALS['Test_Church_fromInt'] ?? \PhpursThunks::eval('Test_Church_fromInt')))(($v_0 - 1));
   $__t1 = (function() use ($__local_var_1_0) {
   $__fn = function($f_2 = null, $x_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -283,19 +283,17 @@ $__tco_res_Test_Church_fromInt = ($__tco_loop_Test_Church_fromInt)($__tco_var_Te
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Test_Church_act'] = function() { $v = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($GLOBALS['Bench_opaque'] ?? \PhpursThunks::eval('Bench_opaque')))(10)))(function($dummy_0 = null) {
+\PhpursThunks::$thunks['Test_Church_act'] = function() { $v = (function() use (&$__fn) {
+$__local_var_0_0 = (($GLOBALS['Bench_opaque'] ?? \PhpursThunks::eval('Bench_opaque')))(10);
+$dummy_1_1 = $__local_var_0_0;
+return (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))((((($GLOBALS['Test_Church_c100k'] ?? \PhpursThunks::eval('Test_Church_c100k')))($dummy_1_1))(function($x_2 = null) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))((((($GLOBALS['Test_Church_c100k'] ?? \PhpursThunks::eval('Test_Church_c100k')))($dummy_0))(function($x_1 = null) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($x_1))(1);
+  $__res = ($x_2 + 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }))(0)));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}); return $v; };
+})(); return $v; };
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 

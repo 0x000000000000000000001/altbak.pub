@@ -128,7 +128,7 @@ default:
 ;
 break;
 };
-  $__t0 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))((($GLOBALS['Test_Fib_fib'] ?? \PhpursThunks::eval('Test_Fib_fib')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1))))((($GLOBALS['Test_Fib_fib'] ?? \PhpursThunks::eval('Test_Fib_fib')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(2)));
+  $__t0 = ((($GLOBALS['Test_Fib_fib'] ?? \PhpursThunks::eval('Test_Fib_fib')))(($v_0 - 1)) + (($GLOBALS['Test_Fib_fib'] ?? \PhpursThunks::eval('Test_Fib_fib')))(($v_0 - 2)));
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
@@ -144,13 +144,11 @@ $__tco_res_Test_Fib_fib = ($__tco_loop_Test_Fib_fib)($__tco_var_Test_Fib_fib_v_0
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }; return $v; };
 \PhpursThunks::$thunks['Test_Fib_describe'] = function() { $v = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))("Fibonacci:"); return $v; };
-\PhpursThunks::$thunks['Test_Fib_act'] = function() { $v = ((($GLOBALS['Effect_bindE'] ?? \PhpursThunks::eval('Effect_bindE')))((($GLOBALS['Bench_opaque'] ?? \PhpursThunks::eval('Bench_opaque')))(10)))(function($dummy_0 = null) {
-  $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))((($GLOBALS['Test_Fib_fib'] ?? \PhpursThunks::eval('Test_Fib_fib')))($dummy_0)));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}); return $v; };
+\PhpursThunks::$thunks['Test_Fib_act'] = function() { $v = (function() use (&$__fn) {
+$__local_var_0_0 = (($GLOBALS['Bench_opaque'] ?? \PhpursThunks::eval('Bench_opaque')))(10);
+$dummy_1_1 = $__local_var_0_0;
+return (($GLOBALS['Effect_Console_log'] ?? \PhpursThunks::eval('Effect_Console_log')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))((($GLOBALS['Test_Fib_fib'] ?? \PhpursThunks::eval('Test_Fib_fib')))($dummy_1_1)));
+})(); return $v; };
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 

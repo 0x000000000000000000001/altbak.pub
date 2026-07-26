@@ -141,7 +141,28 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   };
   return $__fn;
 })(); return $v; };
-\PhpursThunks::$thunks['Data_List_Lazy_any'] = function() { $v = ((($GLOBALS['Data_Foldable_any'] ?? \PhpursThunks::eval('Data_Foldable_any')))(($GLOBALS['Data_List_Lazy_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableList'))))(($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_heytingAlgebraBoolean'))); return $v; };
+\PhpursThunks::$thunks['Data_List_Lazy_any'] = function() { $v = (function() use (&$__fn) {
+$semigroupDisj1_0_0 = (object)["append" => (function() {
+  $__fn = function($v_0 = null, $v1_1 = null) use (&$__fn) {
+  $__num = \func_num_args();
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($v_0 || $v1_1);
+  goto __end;;
+  __end:
+  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  };
+  return $__fn;
+})()];
+return ((($GLOBALS['Data_List_Lazy_Types_foldableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_foldableList')))->{'foldMap'})((object)["mempty" => false, "Semigroup0" => function($dollar__unused_1 = null) use ($semigroupDisj1_0_0) {
+  $__num = \func_num_args();
+  $__res = $semigroupDisj1_0_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}]);
+})(); return $v; };
 \PhpursThunks::$thunks['Data_List_Lazy_Pattern'] = function() { $v = function($x_0 = null) {
   $__num = \func_num_args();
   $__res = $x_0;
@@ -170,29 +191,28 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
   $f_0 = $__tco_var_Data_List_Lazy_zipWith_f_0;
   $xs_1 = $__tco_var_Data_List_Lazy_zipWith_xs_1;
   $ys_2 = $__tco_var_Data_List_Lazy_zipWith_ys_2;
-  $__local_var_3_0 = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))($xs_1);
-  $__local_var_4_1 = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_4 = null) use ($__local_var_3_0, $f_0) {
+  $__local_var_3_0 = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_3 = null) use ($f_0, $xs_1) {
   $__num = \func_num_args();
-  $__local_var_5_1 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($__local_var_3_0);
-  $__res = function($v1_6 = null) use ($__local_var_5_1, $f_0) {
+  $__local_var_4_0 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($xs_1);
+  $__res = function($v1_5 = null) use ($__local_var_4_0, $f_0) {
   $__num = \func_num_args();
-  $__t2 = null;;
-  if ((is_object($__local_var_5_1) && (($__local_var_5_1)->{'tag'} === "Nil"))) {
-$__t2 = new Phpurs_Data0("Nil");
-goto end_branch_2;;
+  $__t1 = null;;
+  if ((is_object($__local_var_4_0) && (($__local_var_4_0)->{'tag'} === "Nil"))) {
+$__t1 = new Phpurs_Data0("Nil");
+goto end_branch_1;;
 };
-  if ((is_object($v1_6) && (($v1_6)->{'tag'} === "Nil"))) {
-$__t2 = new Phpurs_Data0("Nil");
-goto end_branch_2;;
+  if ((is_object($v1_5) && (($v1_5)->{'tag'} === "Nil"))) {
+$__t1 = new Phpurs_Data0("Nil");
+goto end_branch_1;;
 };
-  if (((is_object($__local_var_5_1) && (($__local_var_5_1)->{'tag'} === "Cons")) && (is_object($v1_6) && (($v1_6)->{'tag'} === "Cons")))) {
-$__t2 = new Phpurs_Data2("Cons", (($f_0)(($__local_var_5_1)->{'value0'}))(($v1_6)->{'value0'}), (((($GLOBALS['Data_List_Lazy_zipWith'] ?? \PhpursThunks::eval('Data_List_Lazy_zipWith')))($f_0))(($__local_var_5_1)->{'value1'}))(($v1_6)->{'value1'}));
-goto end_branch_2;;
+  if (((is_object($__local_var_4_0) && (($__local_var_4_0)->{'tag'} === "Cons")) && (is_object($v1_5) && (($v1_5)->{'tag'} === "Cons")))) {
+$__t1 = new Phpurs_Data2("Cons", (($f_0)(($__local_var_4_0)->{'value0'}))(($v1_5)->{'value0'}), (((($GLOBALS['Data_List_Lazy_zipWith'] ?? \PhpursThunks::eval('Data_List_Lazy_zipWith')))($f_0))(($__local_var_4_0)->{'value1'}))(($v1_5)->{'value1'}));
+goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t2 = null;
-  end_branch_2:;
-  $__res = $__t2;
+  $__t1 = null;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -201,10 +221,9 @@ goto end_branch_2;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
-  $__local_var_5_4 = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))($ys_2);
-  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_6 = null) use ($__local_var_4_1, $__local_var_5_4) {
+  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_4 = null) use ($__local_var_3_0, $ys_2) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($__local_var_4_1))((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($__local_var_5_4));
+  $__res = ((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($__local_var_3_0))((($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($ys_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -267,35 +286,34 @@ $__tco_res_Data_List_Lazy_zipWith = ($__tco_loop_Data_List_Lazy_zipWith)($__tco_
   $n_0 = $__tco_var_Data_List_Lazy_updateAt_n_0;
   $x_1 = $__tco_var_Data_List_Lazy_updateAt_x_1;
   $xs_2 = $__tco_var_Data_List_Lazy_updateAt_xs_2;
-  $__local_var_3_0 = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))($xs_2);
-  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_4 = null) use ($__local_var_3_0, $n_0, $x_1) {
+  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_3 = null) use ($n_0, $x_1, $xs_2) {
   $__num = \func_num_args();
-  $__local_var_5_1 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($__local_var_3_0);
-  $__t2 = null;;
-  if ((is_object($__local_var_5_1) && (($__local_var_5_1)->{'tag'} === "Nil"))) {
-$__t2 = new Phpurs_Data0("Nil");
-goto end_branch_2;;
+  $__local_var_4_0 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($xs_2);
+  $__t1 = null;;
+  if ((is_object($__local_var_4_0) && (($__local_var_4_0)->{'tag'} === "Nil"))) {
+$__t1 = new Phpurs_Data0("Nil");
+goto end_branch_1;;
 };
-  if ((is_object($__local_var_5_1) && (($__local_var_5_1)->{'tag'} === "Cons"))) {
-$__t3 = null;;
+  if ((is_object($__local_var_4_0) && (($__local_var_4_0)->{'tag'} === "Cons"))) {
+$__t2 = null;;
 switch ($n_0) {
 case 0:
-$__t3 = new Phpurs_Data2("Cons", $x_1, ($__local_var_5_1)->{'value1'});
-goto end_branch_3;;
+$__t2 = new Phpurs_Data2("Cons", $x_1, ($__local_var_4_0)->{'value1'});
+goto end_branch_2;;
 break;
 default:
 ;
 break;
 };
-$__t3 = new Phpurs_Data2("Cons", ($__local_var_5_1)->{'value0'}, (((($GLOBALS['Data_List_Lazy_updateAt'] ?? \PhpursThunks::eval('Data_List_Lazy_updateAt')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($n_0))(1)))($x_1))(($__local_var_5_1)->{'value1'}));
-end_branch_3:;
-$__t2 = $__t3;
-goto end_branch_2;;
+$__t2 = new Phpurs_Data2("Cons", ($__local_var_4_0)->{'value0'}, (((($GLOBALS['Data_List_Lazy_updateAt'] ?? \PhpursThunks::eval('Data_List_Lazy_updateAt')))(($n_0 - 1)))($x_1))(($__local_var_4_0)->{'value1'}));
+end_branch_2:;
+$__t1 = $__t2;
+goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t2 = null;
-  end_branch_2:;
-  $__res = $__t2;
+  $__t1 = null;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -431,7 +449,7 @@ $__tco_res_Data_List_Lazy_takeWhile = ($__tco_loop_Data_List_Lazy_takeWhile)($__
   $__tco_done_Data_List_Lazy_take = true;
   $n_0 = $__tco_var_Data_List_Lazy_take_n_0;
   $__t1 = null;;
-  if (( ! (is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($n_0))(0)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($n_0))(0))->{'tag'} === "GT")))) {
+  if (($n_0 <= 0)) {
 $__t1 = function($v_1 = null) {
   $__num = \func_num_args();
   $__res = ($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil'));
@@ -449,7 +467,7 @@ $__t0 = new Phpurs_Data0("Nil");
 goto end_branch_0;;
 };
   if ((is_object($v1_1) && (($v1_1)->{'tag'} === "Cons"))) {
-$__t0 = new Phpurs_Data2("Cons", ($v1_1)->{'value0'}, ((($GLOBALS['Data_List_Lazy_take'] ?? \PhpursThunks::eval('Data_List_Lazy_take')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($n_0))(1)))(($v1_1)->{'value1'}));
+$__t0 = new Phpurs_Data2("Cons", ($v1_1)->{'value0'}, ((($GLOBALS['Data_List_Lazy_take'] ?? \PhpursThunks::eval('Data_List_Lazy_take')))(($n_0 - 1)))(($v1_1)->{'value1'}));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -624,7 +642,7 @@ $__tco_res_Data_List_Lazy_span = ($__tco_loop_Data_List_Lazy_span)($__tco_var_Da
   $__num = \func_num_args();
   $__res = (object)["show" => function($v_1 = null) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(Pattern "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((((($GLOBALS['Data_List_Lazy_Types_showList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_showList')))($dictShow_0))->{'show'})($v_1)))(")"));
+  $__res = (("(Pattern " . (((($GLOBALS['Data_List_Lazy_Types_showList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_showList')))($dictShow_0))->{'show'})($v_1)) . ")");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -654,24 +672,23 @@ $__tco_res_Data_List_Lazy_span = ($__tco_loop_Data_List_Lazy_span)($__tco_var_Da
   $f_0 = $__tco_var_Data_List_Lazy_scanlLazy_f_0;
   $acc_1 = $__tco_var_Data_List_Lazy_scanlLazy_acc_1;
   $xs_2 = $__tco_var_Data_List_Lazy_scanlLazy_xs_2;
-  $__local_var_3_0 = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))($xs_2);
-  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_4 = null) use ($__local_var_3_0, $acc_1, $f_0) {
+  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_3 = null) use ($acc_1, $f_0, $xs_2) {
   $__num = \func_num_args();
-  $__local_var_5_1 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($__local_var_3_0);
-  $__t2 = null;;
-  if ((is_object($__local_var_5_1) && (($__local_var_5_1)->{'tag'} === "Nil"))) {
-$__t2 = new Phpurs_Data0("Nil");
-goto end_branch_2;;
+  $__local_var_4_0 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($xs_2);
+  $__t1 = null;;
+  if ((is_object($__local_var_4_0) && (($__local_var_4_0)->{'tag'} === "Nil"))) {
+$__t1 = new Phpurs_Data0("Nil");
+goto end_branch_1;;
 };
-  if ((is_object($__local_var_5_1) && (($__local_var_5_1)->{'tag'} === "Cons"))) {
-$acc__prime___6_3 = (($f_0)($acc_1))(($__local_var_5_1)->{'value0'});
-$__t2 = new Phpurs_Data2("Cons", $acc__prime___6_3, (((($GLOBALS['Data_List_Lazy_scanlLazy'] ?? \PhpursThunks::eval('Data_List_Lazy_scanlLazy')))($f_0))($acc__prime___6_3))(($__local_var_5_1)->{'value1'}));
-goto end_branch_2;;
+  if ((is_object($__local_var_4_0) && (($__local_var_4_0)->{'tag'} === "Cons"))) {
+$acc__prime___5_2 = (($f_0)($acc_1))(($__local_var_4_0)->{'value0'});
+$__t1 = new Phpurs_Data2("Cons", $acc__prime___5_2, (((($GLOBALS['Data_List_Lazy_scanlLazy'] ?? \PhpursThunks::eval('Data_List_Lazy_scanlLazy')))($f_0))($acc__prime___5_2))(($__local_var_4_0)->{'value1'}));
+goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t2 = null;
-  end_branch_2:;
-  $__res = $__t2;
+  $__t1 = null;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -741,13 +758,13 @@ $__tco_res_Data_List_Lazy_scanlLazy = ($__tco_loop_Data_List_Lazy_scanlLazy)($__
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t2 = null;;
-  if ((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($n_3))(1)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($n_3))(1))->{'tag'} === "LT"))) {
+  if (($n_3 < 1)) {
 $__t2 = (($__local_var_1_0)->{'pure'})(($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil')));
 goto end_branch_2;;
 };
   $__t2 = ((($__local_var_2_1)->{'bind'})($m_4))(function($a_5 = null) use ($__local_var_1_0, $__local_var_2_1, $dictMonad_0, $m_4, $n_3) {
   $__num = \func_num_args();
-  $__res = ((($__local_var_2_1)->{'bind'})((((($GLOBALS['Data_List_Lazy_replicateM'] ?? \PhpursThunks::eval('Data_List_Lazy_replicateM')))($dictMonad_0))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($n_3))(1)))($m_4)))(function($as_6 = null) use ($__local_var_1_0, $a_5) {
+  $__res = ((($__local_var_2_1)->{'bind'})((((($GLOBALS['Data_List_Lazy_replicateM'] ?? \PhpursThunks::eval('Data_List_Lazy_replicateM')))($dictMonad_0))(($n_3 - 1)))($m_4)))(function($as_6 = null) use ($__local_var_1_0, $a_5) {
   $__num = \func_num_args();
   $__res = (($__local_var_1_0)->{'pure'})((($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_7 = null) use ($a_5, $as_6) {
   $__num = \func_num_args();
@@ -825,12 +842,12 @@ $__tco_res_Data_List_Lazy_replicateM = ($__tco_loop_Data_List_Lazy_replicateM)($
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t1 = null;;
-  if ((is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($start_0))($end_1)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($start_0))($end_1))->{'tag'} === "GT"))) {
+  if (($start_0 > $end_1)) {
 $__t1 = (((($GLOBALS['Data_List_Lazy_Types_unfoldableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_unfoldableList')))->{'unfoldr'})(function($x_2 = null) use ($end_1) {
   $__num = \func_num_args();
   $__t2 = null;;
-  if (( ! (is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($x_2))($end_1)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($x_2))($end_1))->{'tag'} === "LT")))) {
-$__t2 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", $x_2, ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($x_2))(1)));
+  if (($x_2 >= $end_1)) {
+$__t2 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", $x_2, ($x_2 - 1)));
 goto end_branch_2;;
 };
   $__t2 = new Phpurs_Data0("Nothing");
@@ -845,8 +862,8 @@ goto end_branch_1;;
   $__t1 = (((($GLOBALS['Data_List_Lazy_Types_unfoldableList'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_unfoldableList')))->{'unfoldr'})(function($x_2 = null) use ($end_1) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if (( ! (is_object((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($x_2))($end_1)) && (((((($GLOBALS['Data_Ord_ordInt'] ?? \PhpursThunks::eval('Data_Ord_ordInt')))->{'compare'})($x_2))($end_1))->{'tag'} === "GT")))) {
-$__t0 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", $x_2, ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($x_2))(1)));
+  if (($x_2 <= $end_1)) {
+$__t0 = new Phpurs_Data1("Just", new Phpurs_Data2("Tuple", $x_2, ($x_2 + 1)));
 goto end_branch_0;;
 };
   $__t0 = new Phpurs_Data0("Nothing");
@@ -1092,7 +1109,7 @@ $__tco_res_Data_List_Lazy_mapMaybe = ($__tco_loop_Data_List_Lazy_mapMaybe)($__tc
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($l_0))(1);
+  $__res = ($l_0 + 1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1193,45 +1210,44 @@ return ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('C
   $v_0 = $__tco_var_Data_List_Lazy_insertAt_v_0;
   $v1_1 = $__tco_var_Data_List_Lazy_insertAt_v1_1;
   $v2_2 = $__tco_var_Data_List_Lazy_insertAt_v2_2;
-  $__t3 = null;;
+  $__t2 = null;;
   switch ($v_0) {
 case 0:
-$__t3 = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_3 = null) use ($v1_1, $v2_2) {
+$__t2 = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_3 = null) use ($v1_1, $v2_2) {
   $__num = \func_num_args();
   $__res = new Phpurs_Data2("Cons", $v1_1, $v2_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
-goto end_branch_3;;
+goto end_branch_2;;
 break;
 default:
 ;
 break;
 };
-  $__local_var_3_0 = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))($v2_2);
-  $__t3 = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_4 = null) use ($__local_var_3_0, $v1_1, $v_0) {
+  $__t2 = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_3 = null) use ($v1_1, $v2_2, $v_0) {
   $__num = \func_num_args();
-  $__local_var_5_1 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($__local_var_3_0);
-  $__t2 = null;;
-  if ((is_object($__local_var_5_1) && (($__local_var_5_1)->{'tag'} === "Nil"))) {
-$__t2 = new Phpurs_Data2("Cons", $v1_1, ($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil')));
-goto end_branch_2;;
+  $__local_var_4_0 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($v2_2);
+  $__t1 = null;;
+  if ((is_object($__local_var_4_0) && (($__local_var_4_0)->{'tag'} === "Nil"))) {
+$__t1 = new Phpurs_Data2("Cons", $v1_1, ($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil')));
+goto end_branch_1;;
 };
-  if ((is_object($__local_var_5_1) && (($__local_var_5_1)->{'tag'} === "Cons"))) {
-$__t2 = new Phpurs_Data2("Cons", ($__local_var_5_1)->{'value0'}, (((($GLOBALS['Data_List_Lazy_insertAt'] ?? \PhpursThunks::eval('Data_List_Lazy_insertAt')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_0))(1)))($v1_1))(($__local_var_5_1)->{'value1'}));
-goto end_branch_2;;
+  if ((is_object($__local_var_4_0) && (($__local_var_4_0)->{'tag'} === "Cons"))) {
+$__t1 = new Phpurs_Data2("Cons", ($__local_var_4_0)->{'value0'}, (((($GLOBALS['Data_List_Lazy_insertAt'] ?? \PhpursThunks::eval('Data_List_Lazy_insertAt')))(($v_0 - 1)))($v1_1))(($__local_var_4_0)->{'value1'}));
+goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t2 = null;
-  end_branch_2:;
-  $__res = $__t2;
+  $__t1 = null;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
-  end_branch_3:;
-  $__res = $__t3;
+  end_branch_2:;
+  $__res = $__t2;
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1328,7 +1344,7 @@ default:
 break;
 };
 $__tco_1 = (($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))(($v_2)->{'value1'});
-$__tco_2 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v1_3))(1);
+$__tco_2 = ($v1_3 - 1);
 $__tco_var_go_1_0_0_v_2 = $__tco_1;
 $__tco_var_go_1_0_0_v1_3 = $__tco_2;
 $__tco_done_go_1_0_0 = false;
@@ -1534,30 +1550,29 @@ $__tco_res_Data_List_Lazy_groupBy = ($__tco_loop_Data_List_Lazy_groupBy)($__tco_
   $cmp_0 = $__tco_var_Data_List_Lazy_insertBy_cmp_0;
   $x_1 = $__tco_var_Data_List_Lazy_insertBy_x_1;
   $xs_2 = $__tco_var_Data_List_Lazy_insertBy_xs_2;
-  $__local_var_3_0 = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))($xs_2);
-  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_4 = null) use ($__local_var_3_0, $cmp_0, $x_1) {
+  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_3 = null) use ($cmp_0, $x_1, $xs_2) {
   $__num = \func_num_args();
-  $__local_var_5_1 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($__local_var_3_0);
-  $__t2 = null;;
-  if ((is_object($__local_var_5_1) && (($__local_var_5_1)->{'tag'} === "Nil"))) {
-$__t2 = new Phpurs_Data2("Cons", $x_1, ($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil')));
+  $__local_var_4_0 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($xs_2);
+  $__t1 = null;;
+  if ((is_object($__local_var_4_0) && (($__local_var_4_0)->{'tag'} === "Nil"))) {
+$__t1 = new Phpurs_Data2("Cons", $x_1, ($GLOBALS['Data_List_Lazy_Types_nil'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_nil')));
+goto end_branch_1;;
+};
+  if ((is_object($__local_var_4_0) && (($__local_var_4_0)->{'tag'} === "Cons"))) {
+$__t2 = null;;
+if ((is_object((($cmp_0)($x_1))(($__local_var_4_0)->{'value0'})) && (((($cmp_0)($x_1))(($__local_var_4_0)->{'value0'}))->{'tag'} === "GT"))) {
+$__t2 = new Phpurs_Data2("Cons", ($__local_var_4_0)->{'value0'}, (((($GLOBALS['Data_List_Lazy_insertBy'] ?? \PhpursThunks::eval('Data_List_Lazy_insertBy')))($cmp_0))($x_1))(($__local_var_4_0)->{'value1'}));
 goto end_branch_2;;
 };
-  if ((is_object($__local_var_5_1) && (($__local_var_5_1)->{'tag'} === "Cons"))) {
-$__t3 = null;;
-if ((is_object((($cmp_0)($x_1))(($__local_var_5_1)->{'value0'})) && (((($cmp_0)($x_1))(($__local_var_5_1)->{'value0'}))->{'tag'} === "GT"))) {
-$__t3 = new Phpurs_Data2("Cons", ($__local_var_5_1)->{'value0'}, (((($GLOBALS['Data_List_Lazy_insertBy'] ?? \PhpursThunks::eval('Data_List_Lazy_insertBy')))($cmp_0))($x_1))(($__local_var_5_1)->{'value1'}));
-goto end_branch_3;;
-};
-$__t3 = new Phpurs_Data2("Cons", $x_1, (($GLOBALS['Data_List_Lazy_fromStep'] ?? \PhpursThunks::eval('Data_List_Lazy_fromStep')))($__local_var_5_1));
-end_branch_3:;
-$__t2 = $__t3;
-goto end_branch_2;;
+$__t2 = new Phpurs_Data2("Cons", $x_1, (($GLOBALS['Data_List_Lazy_fromStep'] ?? \PhpursThunks::eval('Data_List_Lazy_fromStep')))($__local_var_4_0));
+end_branch_2:;
+$__t1 = $__t2;
+goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t2 = null;
-  end_branch_2:;
-  $__res = $__t2;
+  $__t1 = null;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1724,7 +1739,7 @@ if (($fn_0)((($__local_var_4_0)->{'value0'})->{'head'})) {
 $__t4 = new Phpurs_Data1("Just", $n_2);
 goto end_branch_4;;
 };
-$__tco_2 = ((($GLOBALS['Data_Semiring_intAdd'] ?? \PhpursThunks::eval('Data_Semiring_intAdd')))($n_2))(1);
+$__tco_2 = ($n_2 + 1);
 $__tco_3 = (($__local_var_4_0)->{'value0'})->{'tail'};
 $__tco_var_go_1_0_0_n_2 = $__tco_2;
 $__tco_var_go_1_0_0_list_3 = $__tco_3;
@@ -1774,7 +1789,7 @@ $__tco_res_go_1_0_0 = ($__tco_loop_go_1_0_0)($__tco_var_go_1_0_0_n_2, $__tco_var
   $__local_var_2_0 = ((($GLOBALS['Data_List_Lazy_findIndex'] ?? \PhpursThunks::eval('Data_List_Lazy_findIndex')))($fn_0))((($GLOBALS['Data_List_Lazy_reverse'] ?? \PhpursThunks::eval('Data_List_Lazy_reverse')))($xs_1));
   $__t1 = null;;
   if ((is_object($__local_var_2_0) && (($__local_var_2_0)->{'tag'} === "Just"))) {
-$__t1 = new Phpurs_Data1("Just", ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))((($GLOBALS['Data_List_Lazy_length'] ?? \PhpursThunks::eval('Data_List_Lazy_length')))($xs_1)))(1)))(($__local_var_2_0)->{'value0'}));
+$__t1 = new Phpurs_Data1("Just", (((($GLOBALS['Data_List_Lazy_length'] ?? \PhpursThunks::eval('Data_List_Lazy_length')))($xs_1) - 1) - ($__local_var_2_0)->{'value0'}));
 goto end_branch_1;;
 };
   $__t1 = new Phpurs_Data0("Nothing");
@@ -1977,7 +1992,7 @@ goto end_branch_0;;
 $__local_var_2_1 = ($v_1)->{'value0'};
 $__t0 = new Phpurs_Data2("Cons", $__local_var_2_1, ((($GLOBALS['Data_List_Lazy_nubByEq'] ?? \PhpursThunks::eval('Data_List_Lazy_nubByEq')))($eq_0))(((($GLOBALS['Data_List_Lazy_filter'] ?? \PhpursThunks::eval('Data_List_Lazy_filter')))(function($y_3 = null) use ($__local_var_2_1, $eq_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_HeytingAlgebra_boolNot'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolNot')))((($eq_0)($__local_var_2_1))($y_3));
+  $__res = ( ! (($eq_0)($__local_var_2_1))($y_3));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2186,7 +2201,7 @@ $__t0 = new Phpurs_Data0("Nil");
 goto end_branch_0;;
 };
   if ((is_object($v1_3) && (($v1_3)->{'tag'} === "Cons"))) {
-$__tco_1 = ((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($v_2))(1);
+$__tco_1 = ($v_2 - 1);
 $__tco_2 = (($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))(($v1_3)->{'value1'});
 $__tco_var_go_1_0_0_v_2 = $__tco_1;
 $__tco_var_go_1_0_0_v1_3 = $__tco_2;
@@ -2227,7 +2242,7 @@ $__tco_res_go_1_0_0 = ($__tco_loop_go_1_0_0)($__tco_var_go_1_0_0_v_2, $__tco_var
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Data_List_Lazy_take'] ?? \PhpursThunks::eval('Data_List_Lazy_take')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($end_1))($start_0)))(((($GLOBALS['Data_List_Lazy_drop'] ?? \PhpursThunks::eval('Data_List_Lazy_drop')))($start_0))($xs_2));
+  $__res = ((($GLOBALS['Data_List_Lazy_take'] ?? \PhpursThunks::eval('Data_List_Lazy_take')))(($end_1 - $start_0)))(((($GLOBALS['Data_List_Lazy_drop'] ?? \PhpursThunks::eval('Data_List_Lazy_drop')))($start_0))($xs_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -2255,30 +2270,29 @@ $__tco_res_go_1_0_0 = ($__tco_loop_go_1_0_0)($__tco_var_go_1_0_0_v_2, $__tco_var
   $eq_0 = $__tco_var_Data_List_Lazy_deleteBy_eq_0;
   $x_1 = $__tco_var_Data_List_Lazy_deleteBy_x_1;
   $xs_2 = $__tco_var_Data_List_Lazy_deleteBy_xs_2;
-  $__local_var_3_0 = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))($xs_2);
-  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_4 = null) use ($__local_var_3_0, $eq_0, $x_1) {
+  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_3 = null) use ($eq_0, $x_1, $xs_2) {
   $__num = \func_num_args();
-  $__local_var_5_1 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($__local_var_3_0);
-  $__t2 = null;;
-  if ((is_object($__local_var_5_1) && (($__local_var_5_1)->{'tag'} === "Nil"))) {
-$__t2 = new Phpurs_Data0("Nil");
+  $__local_var_4_0 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($xs_2);
+  $__t1 = null;;
+  if ((is_object($__local_var_4_0) && (($__local_var_4_0)->{'tag'} === "Nil"))) {
+$__t1 = new Phpurs_Data0("Nil");
+goto end_branch_1;;
+};
+  if ((is_object($__local_var_4_0) && (($__local_var_4_0)->{'tag'} === "Cons"))) {
+$__t2 = null;;
+if ((($eq_0)($x_1))(($__local_var_4_0)->{'value0'})) {
+$__t2 = (($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))(($__local_var_4_0)->{'value1'});
 goto end_branch_2;;
 };
-  if ((is_object($__local_var_5_1) && (($__local_var_5_1)->{'tag'} === "Cons"))) {
-$__t3 = null;;
-if ((($eq_0)($x_1))(($__local_var_5_1)->{'value0'})) {
-$__t3 = (($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))(($__local_var_5_1)->{'value1'});
-goto end_branch_3;;
-};
-$__t3 = new Phpurs_Data2("Cons", ($__local_var_5_1)->{'value0'}, (((($GLOBALS['Data_List_Lazy_deleteBy'] ?? \PhpursThunks::eval('Data_List_Lazy_deleteBy')))($eq_0))($x_1))(($__local_var_5_1)->{'value1'}));
-end_branch_3:;
-$__t2 = $__t3;
-goto end_branch_2;;
+$__t2 = new Phpurs_Data2("Cons", ($__local_var_4_0)->{'value0'}, (((($GLOBALS['Data_List_Lazy_deleteBy'] ?? \PhpursThunks::eval('Data_List_Lazy_deleteBy')))($eq_0))($x_1))(($__local_var_4_0)->{'value1'}));
+end_branch_2:;
+$__t1 = $__t2;
+goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t2 = null;
-  end_branch_2:;
-  $__res = $__t2;
+  $__t1 = null;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2350,35 +2364,34 @@ $__tco_res_Data_List_Lazy_deleteBy = ($__tco_loop_Data_List_Lazy_deleteBy)($__tc
   $__tco_done_Data_List_Lazy_deleteAt = true;
   $n_0 = $__tco_var_Data_List_Lazy_deleteAt_n_0;
   $xs_1 = $__tco_var_Data_List_Lazy_deleteAt_xs_1;
-  $__local_var_2_0 = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))($xs_1);
-  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_3 = null) use ($__local_var_2_0, $n_0) {
+  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_2 = null) use ($n_0, $xs_1) {
   $__num = \func_num_args();
-  $__local_var_4_1 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($__local_var_2_0);
-  $__t2 = null;;
-  if ((is_object($__local_var_4_1) && (($__local_var_4_1)->{'tag'} === "Nil"))) {
-$__t2 = new Phpurs_Data0("Nil");
-goto end_branch_2;;
+  $__local_var_3_0 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($xs_1);
+  $__t1 = null;;
+  if ((is_object($__local_var_3_0) && (($__local_var_3_0)->{'tag'} === "Nil"))) {
+$__t1 = new Phpurs_Data0("Nil");
+goto end_branch_1;;
 };
-  if ((is_object($__local_var_4_1) && (($__local_var_4_1)->{'tag'} === "Cons"))) {
-$__t3 = null;;
+  if ((is_object($__local_var_3_0) && (($__local_var_3_0)->{'tag'} === "Cons"))) {
+$__t2 = null;;
 switch ($n_0) {
 case 0:
-$__t3 = (($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))(($__local_var_4_1)->{'value1'});
-goto end_branch_3;;
+$__t2 = (($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))(($__local_var_3_0)->{'value1'});
+goto end_branch_2;;
 break;
 default:
 ;
 break;
 };
-$__t3 = new Phpurs_Data2("Cons", ($__local_var_4_1)->{'value0'}, ((($GLOBALS['Data_List_Lazy_deleteAt'] ?? \PhpursThunks::eval('Data_List_Lazy_deleteAt')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($n_0))(1)))(($__local_var_4_1)->{'value1'}));
-end_branch_3:;
-$__t2 = $__t3;
-goto end_branch_2;;
+$__t2 = new Phpurs_Data2("Cons", ($__local_var_3_0)->{'value0'}, ((($GLOBALS['Data_List_Lazy_deleteAt'] ?? \PhpursThunks::eval('Data_List_Lazy_deleteAt')))(($n_0 - 1)))(($__local_var_3_0)->{'value1'}));
+end_branch_2:;
+$__t1 = $__t2;
+goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t2 = null;
-  end_branch_2:;
-  $__res = $__t2;
+  $__t1 = null;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2482,48 +2495,47 @@ $__tco_res_Data_List_Lazy_deleteAt = ($__tco_loop_Data_List_Lazy_deleteAt)($__tc
   $n_0 = $__tco_var_Data_List_Lazy_alterAt_n_0;
   $f_1 = $__tco_var_Data_List_Lazy_alterAt_f_1;
   $xs_2 = $__tco_var_Data_List_Lazy_alterAt_xs_2;
-  $__local_var_3_0 = (($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))($xs_2);
-  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_4 = null) use ($__local_var_3_0, $f_1, $n_0) {
+  $__res = (($GLOBALS['Data_Lazy_defer'] ?? \PhpursThunks::eval('Data_Lazy_defer')))(function($v_3 = null) use ($f_1, $n_0, $xs_2) {
   $__num = \func_num_args();
-  $__local_var_5_1 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($__local_var_3_0);
-  $__t2 = null;;
-  if ((is_object($__local_var_5_1) && (($__local_var_5_1)->{'tag'} === "Nil"))) {
-$__t2 = new Phpurs_Data0("Nil");
-goto end_branch_2;;
+  $__local_var_4_0 = (($GLOBALS['Data_Lazy_force'] ?? \PhpursThunks::eval('Data_Lazy_force')))($xs_2);
+  $__t1 = null;;
+  if ((is_object($__local_var_4_0) && (($__local_var_4_0)->{'tag'} === "Nil"))) {
+$__t1 = new Phpurs_Data0("Nil");
+goto end_branch_1;;
 };
-  if ((is_object($__local_var_5_1) && (($__local_var_5_1)->{'tag'} === "Cons"))) {
-$__t3 = null;;
+  if ((is_object($__local_var_4_0) && (($__local_var_4_0)->{'tag'} === "Cons"))) {
+$__t2 = null;;
 switch ($n_0) {
 case 0:
-$v2_6_4 = ($f_1)(($__local_var_5_1)->{'value0'});
-$__t5 = null;;
-if ((is_object($v2_6_4) && (($v2_6_4)->{'tag'} === "Nothing"))) {
-$__t5 = (($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))(($__local_var_5_1)->{'value1'});
-goto end_branch_5;;
+$v2_5_3 = ($f_1)(($__local_var_4_0)->{'value0'});
+$__t4 = null;;
+if ((is_object($v2_5_3) && (($v2_5_3)->{'tag'} === "Nothing"))) {
+$__t4 = (($GLOBALS['Data_List_Lazy_Types_step'] ?? \PhpursThunks::eval('Data_List_Lazy_Types_step')))(($__local_var_4_0)->{'value1'});
+goto end_branch_4;;
 };
-if ((is_object($v2_6_4) && (($v2_6_4)->{'tag'} === "Just"))) {
-$__t5 = new Phpurs_Data2("Cons", ($v2_6_4)->{'value0'}, ($__local_var_5_1)->{'value1'});
-goto end_branch_5;;
+if ((is_object($v2_5_3) && (($v2_5_3)->{'tag'} === "Just"))) {
+$__t4 = new Phpurs_Data2("Cons", ($v2_5_3)->{'value0'}, ($__local_var_4_0)->{'value1'});
+goto end_branch_4;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-$__t5 = null;
-end_branch_5:;
-$__t3 = $__t5;
-goto end_branch_3;;
+$__t4 = null;
+end_branch_4:;
+$__t2 = $__t4;
+goto end_branch_2;;
 break;
 default:
 ;
 break;
 };
-$__t3 = new Phpurs_Data2("Cons", ($__local_var_5_1)->{'value0'}, (((($GLOBALS['Data_List_Lazy_alterAt'] ?? \PhpursThunks::eval('Data_List_Lazy_alterAt')))(((($GLOBALS['Data_Ring_intSub'] ?? \PhpursThunks::eval('Data_Ring_intSub')))($n_0))(1)))($f_1))(($__local_var_5_1)->{'value1'}));
-end_branch_3:;
-$__t2 = $__t3;
-goto end_branch_2;;
+$__t2 = new Phpurs_Data2("Cons", ($__local_var_4_0)->{'value0'}, (((($GLOBALS['Data_List_Lazy_alterAt'] ?? \PhpursThunks::eval('Data_List_Lazy_alterAt')))(($n_0 - 1)))($f_1))(($__local_var_4_0)->{'value1'}));
+end_branch_2:;
+$__t1 = $__t2;
+goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t2 = null;
-  end_branch_2:;
-  $__res = $__t2;
+  $__t1 = null;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

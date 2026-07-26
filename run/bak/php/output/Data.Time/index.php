@@ -114,22 +114,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
     };
   }
 }
-\PhpursThunks::$thunks['Data_Time_fromJust'] = function() { $v = function($v_0 = null) {
-  $__num = \func_num_args();
-  $__t0 = null;;
-  if ((is_object($v_0) && (($v_0)->{'tag'} === "Just"))) {
-$__t0 = ($v_0)->{'value0'};
-goto end_branch_0;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t0 = null;
-  end_branch_0:;
-  $__res = $__t0;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}; return $v; };
-\PhpursThunks::$thunks['Data_Time_negateDuration'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->{'identity'}))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))(($GLOBALS['Data_Time_Duration_negate'] ?? \PhpursThunks::eval('Data_Time_Duration_negate')))))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->{'identity'})); return $v; };
+\PhpursThunks::$thunks['Data_Time_negateDuration'] = function() { $v = ((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->{'identity'}))(((($GLOBALS['Control_Semigroupoid_composeImpl'] ?? \PhpursThunks::eval('Control_Semigroupoid_composeImpl')))(($GLOBALS['Data_Time_Duration_negate'] ?? \PhpursThunks::eval('Data_Time_Duration_negate'))))((($GLOBALS['Control_Category_categoryFn'] ?? \PhpursThunks::eval('Control_Category_categoryFn')))->{'identity'})); return $v; };
 \PhpursThunks::$thunks['Data_Time_Time'] = function() { $v = (function() {
   $__fn = function($value0 = null, $value1 = null, $value2 = null, $value3 = null) use (&$__fn) {
   $__num = \func_num_args();
@@ -145,7 +130,7 @@ goto end_branch_0;;
 })(); return $v; };
 \PhpursThunks::$thunks['Data_Time_showTime'] = function() { $v = (object)["show" => function($v_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(Time "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(Hour "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(($v_0)->{'value0'})))(")"))))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(" "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(Minute "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(($v_0)->{'value1'})))(")"))))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(" "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(Second "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(($v_0)->{'value2'})))(")"))))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(" "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))("(Millisecond "))(((($GLOBALS['Data_Semigroup_concatString'] ?? \PhpursThunks::eval('Data_Semigroup_concatString')))((($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(($v_0)->{'value3'})))(")"))))(")"))))))));
+  $__res = (((((((("(Time (Hour " . (($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(($v_0)->{'value0'})) . ") (Minute ") . (($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(($v_0)->{'value1'})) . ") (Second ") . (($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(($v_0)->{'value2'})) . ") (Millisecond ") . (($GLOBALS['Data_Show_showIntImpl'] ?? \PhpursThunks::eval('Data_Show_showIntImpl')))(($v_0)->{'value3'})) . "))");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -225,48 +210,145 @@ goto end_branch_0;;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Time_millisToTime'] = function() { $v = function($v_0 = null) {
   $__num = \func_num_args();
-  $hours_1_0 = (($GLOBALS['Data_Number_floor'] ?? \PhpursThunks::eval('Data_Number_floor')))(((($GLOBALS['Data_EuclideanRing_numDiv'] ?? \PhpursThunks::eval('Data_EuclideanRing_numDiv')))($v_0))(3600000.0));
-  $minutes_2_1 = (($GLOBALS['Data_Number_floor'] ?? \PhpursThunks::eval('Data_Number_floor')))(((($GLOBALS['Data_EuclideanRing_numDiv'] ?? \PhpursThunks::eval('Data_EuclideanRing_numDiv')))(((($GLOBALS['Data_Ring_numSub'] ?? \PhpursThunks::eval('Data_Ring_numSub')))($v_0))(((($GLOBALS['Data_Semiring_numMul'] ?? \PhpursThunks::eval('Data_Semiring_numMul')))($hours_1_0))(3600000.0))))(60000.0));
-  $seconds_3_2 = (($GLOBALS['Data_Number_floor'] ?? \PhpursThunks::eval('Data_Number_floor')))(((($GLOBALS['Data_EuclideanRing_numDiv'] ?? \PhpursThunks::eval('Data_EuclideanRing_numDiv')))(((($GLOBALS['Data_Ring_numSub'] ?? \PhpursThunks::eval('Data_Ring_numSub')))($v_0))(((($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')))(((($GLOBALS['Data_Semiring_numMul'] ?? \PhpursThunks::eval('Data_Semiring_numMul')))($hours_1_0))(3600000.0)))(((($GLOBALS['Data_Semiring_numMul'] ?? \PhpursThunks::eval('Data_Semiring_numMul')))($minutes_2_1))(60000.0)))))(1000.0));
-  $__local_var_4_3 = ((($GLOBALS['Data_Time_Component_boundedEnumHour'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumHour')))->{'toEnum'})((($GLOBALS['Data_Int_floor'] ?? \PhpursThunks::eval('Data_Int_floor')))($hours_1_0));
-  $__t4 = null;;
-  if ((is_object($__local_var_4_3) && (($__local_var_4_3)->{'tag'} === "Just"))) {
-$__local_var_5_5 = ((($GLOBALS['Data_Time_Component_boundedEnumMinute'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMinute')))->{'toEnum'})((($GLOBALS['Data_Int_floor'] ?? \PhpursThunks::eval('Data_Int_floor')))($minutes_2_1));
-$__t6 = null;;
-if ((is_object($__local_var_5_5) && (($__local_var_5_5)->{'tag'} === "Just"))) {
-$__local_var_6_7 = ((($GLOBALS['Data_Time_Component_boundedEnumSecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumSecond')))->{'toEnum'})((($GLOBALS['Data_Int_floor'] ?? \PhpursThunks::eval('Data_Int_floor')))($seconds_3_2));
-$__t8 = null;;
-if ((is_object($__local_var_6_7) && (($__local_var_6_7)->{'tag'} === "Just"))) {
-$__local_var_7_9 = ((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'] ?? \PhpursThunks::eval('Data_Time_Component_boundedEnumMillisecond')))->{'toEnum'})((($GLOBALS['Data_Int_floor'] ?? \PhpursThunks::eval('Data_Int_floor')))(((($GLOBALS['Data_Ring_numSub'] ?? \PhpursThunks::eval('Data_Ring_numSub')))($v_0))(((($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')))(((($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')))(((($GLOBALS['Data_Semiring_numMul'] ?? \PhpursThunks::eval('Data_Semiring_numMul')))($hours_1_0))(3600000.0)))(((($GLOBALS['Data_Semiring_numMul'] ?? \PhpursThunks::eval('Data_Semiring_numMul')))($minutes_2_1))(60000.0))))(((($GLOBALS['Data_Semiring_numMul'] ?? \PhpursThunks::eval('Data_Semiring_numMul')))($seconds_3_2))(1000.0)))));
+  $hours_1_0 = (($GLOBALS['Data_Number_floor'] ?? \PhpursThunks::eval('Data_Number_floor')))(($v_0 / 3600000.0));
+  $minutes_2_1 = (($GLOBALS['Data_Number_floor'] ?? \PhpursThunks::eval('Data_Number_floor')))((($v_0 - ($hours_1_0 * 3600000.0)) / 60000.0));
+  $seconds_3_2 = (($GLOBALS['Data_Number_floor'] ?? \PhpursThunks::eval('Data_Number_floor')))((($v_0 - (($hours_1_0 * 3600000.0) + ($minutes_2_1 * 60000.0))) / 1000.0));
+  $__local_var_4_3 = (($GLOBALS['Data_Int_floor'] ?? \PhpursThunks::eval('Data_Int_floor')))($hours_1_0);
+  $__t18 = null;;
+  if ((($__local_var_4_3 >= 0) && ($__local_var_4_3 <= 23))) {
+$__local_var_5_19 = (($GLOBALS['Data_Int_floor'] ?? \PhpursThunks::eval('Data_Int_floor')))($minutes_2_1);
+$__t26 = null;;
+if ((($__local_var_5_19 >= 0) && ($__local_var_5_19 <= 59))) {
+$__local_var_6_27 = (($GLOBALS['Data_Int_floor'] ?? \PhpursThunks::eval('Data_Int_floor')))($seconds_3_2);
+$__t30 = null;;
+if ((($__local_var_6_27 >= 0) && ($__local_var_6_27 <= 59))) {
+$__local_var_7_31 = (($GLOBALS['Data_Int_floor'] ?? \PhpursThunks::eval('Data_Int_floor')))(($v_0 - ((($hours_1_0 * 3600000.0) + ($minutes_2_1 * 60000.0)) + ($seconds_3_2 * 1000.0))));
+$__t32 = null;;
+if ((($__local_var_7_31 >= 0) && ($__local_var_7_31 <= 999))) {
+$__t32 = new Phpurs_Data4("Time", $__local_var_4_3, $__local_var_5_19, $__local_var_6_27, $__local_var_7_31);
+goto end_branch_32;;
+};
+throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+$__t32 = null;
+end_branch_32:;
+$__t30 = $__t32;
+goto end_branch_30;;
+};
+$__local_var_7_28 = (($GLOBALS['Data_Int_floor'] ?? \PhpursThunks::eval('Data_Int_floor')))(($v_0 - ((($hours_1_0 * 3600000.0) + ($minutes_2_1 * 60000.0)) + ($seconds_3_2 * 1000.0))));
+$__t29 = null;;
+if ((($__local_var_7_28 >= 0) && ($__local_var_7_28 <= 999))) {
+throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+$__t29 = null;
+goto end_branch_29;;
+};
+throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+$__t29 = null;
+end_branch_29:;
+$__t30 = $__t29;
+end_branch_30:;
+$__t26 = $__t30;
+goto end_branch_26;;
+};
+$__local_var_6_20 = (($GLOBALS['Data_Int_floor'] ?? \PhpursThunks::eval('Data_Int_floor')))($seconds_3_2);
+$__t23 = null;;
+if ((($__local_var_6_20 >= 0) && ($__local_var_6_20 <= 59))) {
+$__local_var_7_24 = (($GLOBALS['Data_Int_floor'] ?? \PhpursThunks::eval('Data_Int_floor')))(($v_0 - ((($hours_1_0 * 3600000.0) + ($minutes_2_1 * 60000.0)) + ($seconds_3_2 * 1000.0))));
+$__t25 = null;;
+if ((($__local_var_7_24 >= 0) && ($__local_var_7_24 <= 999))) {
+throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+$__t25 = null;
+goto end_branch_25;;
+};
+throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+$__t25 = null;
+end_branch_25:;
+$__t23 = $__t25;
+goto end_branch_23;;
+};
+$__local_var_7_21 = (($GLOBALS['Data_Int_floor'] ?? \PhpursThunks::eval('Data_Int_floor')))(($v_0 - ((($hours_1_0 * 3600000.0) + ($minutes_2_1 * 60000.0)) + ($seconds_3_2 * 1000.0))));
+$__t22 = null;;
+if ((($__local_var_7_21 >= 0) && ($__local_var_7_21 <= 999))) {
+throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+$__t22 = null;
+goto end_branch_22;;
+};
+throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+$__t22 = null;
+end_branch_22:;
+$__t23 = $__t22;
+end_branch_23:;
+$__t26 = $__t23;
+end_branch_26:;
+$__t18 = $__t26;
+goto end_branch_18;;
+};
+  $__local_var_5_4 = (($GLOBALS['Data_Int_floor'] ?? \PhpursThunks::eval('Data_Int_floor')))($minutes_2_1);
+  $__t11 = null;;
+  if ((($__local_var_5_4 >= 0) && ($__local_var_5_4 <= 59))) {
+$__local_var_6_12 = (($GLOBALS['Data_Int_floor'] ?? \PhpursThunks::eval('Data_Int_floor')))($seconds_3_2);
+$__t15 = null;;
+if ((($__local_var_6_12 >= 0) && ($__local_var_6_12 <= 59))) {
+$__local_var_7_16 = (($GLOBALS['Data_Int_floor'] ?? \PhpursThunks::eval('Data_Int_floor')))(($v_0 - ((($hours_1_0 * 3600000.0) + ($minutes_2_1 * 60000.0)) + ($seconds_3_2 * 1000.0))));
+$__t17 = null;;
+if ((($__local_var_7_16 >= 0) && ($__local_var_7_16 <= 999))) {
+throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+$__t17 = null;
+goto end_branch_17;;
+};
+throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+$__t17 = null;
+end_branch_17:;
+$__t15 = $__t17;
+goto end_branch_15;;
+};
+$__local_var_7_13 = (($GLOBALS['Data_Int_floor'] ?? \PhpursThunks::eval('Data_Int_floor')))(($v_0 - ((($hours_1_0 * 3600000.0) + ($minutes_2_1 * 60000.0)) + ($seconds_3_2 * 1000.0))));
+$__t14 = null;;
+if ((($__local_var_7_13 >= 0) && ($__local_var_7_13 <= 999))) {
+throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+$__t14 = null;
+goto end_branch_14;;
+};
+throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+$__t14 = null;
+end_branch_14:;
+$__t15 = $__t14;
+end_branch_15:;
+$__t11 = $__t15;
+goto end_branch_11;;
+};
+  $__local_var_6_5 = (($GLOBALS['Data_Int_floor'] ?? \PhpursThunks::eval('Data_Int_floor')))($seconds_3_2);
+  $__t8 = null;;
+  if ((($__local_var_6_5 >= 0) && ($__local_var_6_5 <= 59))) {
+$__local_var_7_9 = (($GLOBALS['Data_Int_floor'] ?? \PhpursThunks::eval('Data_Int_floor')))(($v_0 - ((($hours_1_0 * 3600000.0) + ($minutes_2_1 * 60000.0)) + ($seconds_3_2 * 1000.0))));
 $__t10 = null;;
-if ((is_object($__local_var_7_9) && (($__local_var_7_9)->{'tag'} === "Just"))) {
-$__t10 = new Phpurs_Data1("Just", new Phpurs_Data4("Time", ($__local_var_4_3)->{'value0'}, ($__local_var_5_5)->{'value0'}, ($__local_var_6_7)->{'value0'}, ($__local_var_7_9)->{'value0'}));
+if ((($__local_var_7_9 >= 0) && ($__local_var_7_9 <= 999))) {
+throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+$__t10 = null;
 goto end_branch_10;;
 };
-$__t10 = new Phpurs_Data0("Nothing");
+throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+$__t10 = null;
 end_branch_10:;
 $__t8 = $__t10;
 goto end_branch_8;;
 };
-$__t8 = new Phpurs_Data0("Nothing");
-end_branch_8:;
-$__t6 = $__t8;
-goto end_branch_6;;
+  $__local_var_7_6 = (($GLOBALS['Data_Int_floor'] ?? \PhpursThunks::eval('Data_Int_floor')))(($v_0 - ((($hours_1_0 * 3600000.0) + ($minutes_2_1 * 60000.0)) + ($seconds_3_2 * 1000.0))));
+  $__t7 = null;;
+  if ((($__local_var_7_6 >= 0) && ($__local_var_7_6 <= 999))) {
+throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+$__t7 = null;
+goto end_branch_7;;
 };
-$__t6 = new Phpurs_Data0("Nothing");
-end_branch_6:;
-$__t4 = $__t6;
-goto end_branch_4;;
-};
-  $__t4 = new Phpurs_Data0("Nothing");
-  end_branch_4:;
-  $__res = ((($GLOBALS['Partial_Unsafe__unsafePartial'] ?? \PhpursThunks::eval('Partial_Unsafe__unsafePartial')))(function($dollar__unused_4 = null) {
-  $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Time_fromJust'] ?? \PhpursThunks::eval('Data_Time_fromJust'));
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($__t4);
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t7 = null;
+  end_branch_7:;
+  $__t8 = $__t7;
+  end_branch_8:;
+  $__t11 = $__t8;
+  end_branch_11:;
+  $__t18 = $__t11;
+  end_branch_18:;
+  $__res = $__t18;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -280,7 +362,7 @@ goto end_branch_4;;
 }; return $v; };
 \PhpursThunks::$thunks['Data_Time_timeToMillis'] = function() { $v = function($t_0 = null) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')))(((($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')))(((($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')))(((($GLOBALS['Data_Semiring_numMul'] ?? \PhpursThunks::eval('Data_Semiring_numMul')))(3600000.0))((($GLOBALS['Data_Int_toNumber'] ?? \PhpursThunks::eval('Data_Int_toNumber')))(($t_0)->{'value0'}))))(((($GLOBALS['Data_Semiring_numMul'] ?? \PhpursThunks::eval('Data_Semiring_numMul')))(60000.0))((($GLOBALS['Data_Int_toNumber'] ?? \PhpursThunks::eval('Data_Int_toNumber')))(($t_0)->{'value1'})))))(((($GLOBALS['Data_Semiring_numMul'] ?? \PhpursThunks::eval('Data_Semiring_numMul')))(1000.0))((($GLOBALS['Data_Int_toNumber'] ?? \PhpursThunks::eval('Data_Int_toNumber')))(($t_0)->{'value2'})))))((($GLOBALS['Data_Int_toNumber'] ?? \PhpursThunks::eval('Data_Int_toNumber')))(($t_0)->{'value3'}));
+  $__res = ((((3600000.0 * (($GLOBALS['Data_Int_toNumber'] ?? \PhpursThunks::eval('Data_Int_toNumber')))(($t_0)->{'value0'})) + (60000.0 * (($GLOBALS['Data_Int_toNumber'] ?? \PhpursThunks::eval('Data_Int_toNumber')))(($t_0)->{'value1'}))) + (1000.0 * (($GLOBALS['Data_Int_toNumber'] ?? \PhpursThunks::eval('Data_Int_toNumber')))(($t_0)->{'value2'}))) + (($GLOBALS['Data_Int_toNumber'] ?? \PhpursThunks::eval('Data_Int_toNumber')))(($t_0)->{'value3'}));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -291,7 +373,7 @@ goto end_branch_4;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))(((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))(((($GLOBALS['Data_HeytingAlgebra_boolConj'] ?? \PhpursThunks::eval('Data_HeytingAlgebra_boolConj')))(((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))(($x_0)->{'value0'}))(($y_1)->{'value0'})))(((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))(($x_0)->{'value1'}))(($y_1)->{'value1'}))))(((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))(($x_0)->{'value2'}))(($y_1)->{'value2'}))))(((($GLOBALS['Data_Eq_eqIntImpl'] ?? \PhpursThunks::eval('Data_Eq_eqIntImpl')))(($x_0)->{'value3'}))(($y_1)->{'value3'}));
+  $__res = ((((($x_0)->{'value0'} === ($y_1)->{'value0'}) && (($x_0)->{'value1'} === ($y_1)->{'value1'})) && (($x_0)->{'value2'} === ($y_1)->{'value2'})) && (($x_0)->{'value3'} === ($y_1)->{'value3'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -359,7 +441,7 @@ goto end_branch_3;;
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictDuration_0)->{'toDuration'})(((($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')))((($GLOBALS['Data_Time_timeToMillis'] ?? \PhpursThunks::eval('Data_Time_timeToMillis')))($t1_1)))((($GLOBALS['Data_Time_negateDuration'] ?? \PhpursThunks::eval('Data_Time_negateDuration')))((($GLOBALS['Data_Time_timeToMillis'] ?? \PhpursThunks::eval('Data_Time_timeToMillis')))($t2_2))));
+  $__res = (($dictDuration_0)->{'toDuration'})(((($GLOBALS['Data_Time_timeToMillis'] ?? \PhpursThunks::eval('Data_Time_timeToMillis')))($t1_1) + (($GLOBALS['Data_Time_negateDuration'] ?? \PhpursThunks::eval('Data_Time_negateDuration')))((($GLOBALS['Data_Time_timeToMillis'] ?? \PhpursThunks::eval('Data_Time_timeToMillis')))($t2_2))));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -382,21 +464,21 @@ goto end_branch_3;;
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $d__prime___3_0 = (($dictDuration_0)->{'fromDuration'})($d_1);
-  $wholeDays_4_1 = (($GLOBALS['Data_Number_floor'] ?? \PhpursThunks::eval('Data_Number_floor')))(((($GLOBALS['Data_EuclideanRing_numDiv'] ?? \PhpursThunks::eval('Data_EuclideanRing_numDiv')))((($GLOBALS['Unsafe_Coerce_unsafeCoerce'] ?? \PhpursThunks::eval('Unsafe_Coerce_unsafeCoerce')))($d__prime___3_0)))(86400000.0));
-  $msAdjusted_5_2 = ((($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')))((($GLOBALS['Data_Time_timeToMillis'] ?? \PhpursThunks::eval('Data_Time_timeToMillis')))($t_2)))(((($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')))($d__prime___3_0))((($GLOBALS['Data_Time_negateDuration'] ?? \PhpursThunks::eval('Data_Time_negateDuration')))(((($GLOBALS['Data_Time_Duration_durationDays'] ?? \PhpursThunks::eval('Data_Time_Duration_durationDays')))->{'fromDuration'})($wholeDays_4_1))));
+  $wholeDays_4_1 = (($GLOBALS['Data_Number_floor'] ?? \PhpursThunks::eval('Data_Number_floor')))(($d__prime___3_0 / 86400000.0));
+  $msAdjusted_5_2 = (((($GLOBALS['Data_Time_timeToMillis'] ?? \PhpursThunks::eval('Data_Time_timeToMillis')))($t_2) + $d__prime___3_0) + (($GLOBALS['Data_Time_negateDuration'] ?? \PhpursThunks::eval('Data_Time_negateDuration')))(($wholeDays_4_1 * 86400000.0)));
   $__t3 = null;;
-  if ((is_object((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->{'compare'})($msAdjusted_5_2))(($GLOBALS['Data_Time_maxTime'] ?? \PhpursThunks::eval('Data_Time_maxTime')))) && (((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->{'compare'})($msAdjusted_5_2))(($GLOBALS['Data_Time_maxTime'] ?? \PhpursThunks::eval('Data_Time_maxTime'))))->{'tag'} === "GT"))) {
+  if (($msAdjusted_5_2 > ($GLOBALS['Data_Time_maxTime'] ?? \PhpursThunks::eval('Data_Time_maxTime')))) {
 $__t3 = 1.0;
 goto end_branch_3;;
 };
-  if ((is_object((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->{'compare'})($msAdjusted_5_2))(($GLOBALS['Data_Time_minTime'] ?? \PhpursThunks::eval('Data_Time_minTime')))) && (((((($GLOBALS['Data_Ord_ordNumber'] ?? \PhpursThunks::eval('Data_Ord_ordNumber')))->{'compare'})($msAdjusted_5_2))(($GLOBALS['Data_Time_minTime'] ?? \PhpursThunks::eval('Data_Time_minTime'))))->{'tag'} === "LT"))) {
-$__t3 = ((($GLOBALS['Data_Ring_numSub'] ?? \PhpursThunks::eval('Data_Ring_numSub')))(0.0))(1.0);
+  if (($msAdjusted_5_2 < ($GLOBALS['Data_Time_minTime'] ?? \PhpursThunks::eval('Data_Time_minTime')))) {
+$__t3 = -1.0;
 goto end_branch_3;;
 };
   $__t3 = 0.0;
   end_branch_3:;
   $wrap_6_3 = $__t3;
-  $__res = new Phpurs_Data2("Tuple", ((($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')))($wholeDays_4_1))($wrap_6_3), (($GLOBALS['Data_Time_millisToTime'] ?? \PhpursThunks::eval('Data_Time_millisToTime')))(((($GLOBALS['Data_Semiring_numAdd'] ?? \PhpursThunks::eval('Data_Semiring_numAdd')))($msAdjusted_5_2))(((($GLOBALS['Data_Semiring_numMul'] ?? \PhpursThunks::eval('Data_Semiring_numMul')))(86400000.0))(((($GLOBALS['Data_Ring_numSub'] ?? \PhpursThunks::eval('Data_Ring_numSub')))(0.0))($wrap_6_3)))));
+  $__res = new Phpurs_Data2("Tuple", ($wholeDays_4_1 + $wrap_6_3), (($GLOBALS['Data_Time_millisToTime'] ?? \PhpursThunks::eval('Data_Time_millisToTime')))(($msAdjusted_5_2 + (86400000.0 * ( - $wrap_6_3)))));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -404,7 +486,6 @@ goto end_branch_3;;
   return $__fn;
 })(); return $v; };
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-
 
 
 
