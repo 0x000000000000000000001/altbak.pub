@@ -47,69 +47,13 @@ workspace:
       path: "../phpurs-arrays"
     strings:
       path: "../phpurs-strings"
-    foreign-object:
-      path: "../phpurs-foreign-object"
-    js-uri:
-      path: "../phpurs-js-uri"
-    variant:
-      path: "../phpurs-variant"
-    node-path:
-      path: "../phpurs-node-path"
-    integers:
-      path: "../phpurs-integers"
-    record:
-      path: "../phpurs-record"
-    free:
-      path: "../phpurs-free"
-    node-streams:
-      path: "../phpurs-node-streams"
-    avar:
-      path: "../phpurs-avar"
-    node-net:
-      path: "../phpurs-node-net"
-    simple-json:
-      path: "../phpurs-simple-json"
-    foreign:
-      path: "../phpurs-foreign"
-    spec:
-      path: "../phpurs-spec"
-    unfoldable:
-      path: "../phpurs-unfoldable"
-    yoga-json:
-      path: "../phpurs-yoga-json"
-    assert:
-      path: "../phpurs-assert"
-    node-event-emitter:
-      path: "../phpurs-node-event-emitter"
-    math:
-      path: "../phpurs-math"
-    js-promise-aff:
-      path: "../phpurs-js-promise-aff"
-    js-promise:
-      path: "../phpurs-js-promise"
-    catenable-lists:
-      path: "../phpurs-catenable-lists"
-    numbers:
-      path: "../phpurs-numbers"
     enums:
       path: "../phpurs-enums"
-    ordered-collections:
-      path: "../phpurs-ordered-collections"
-    lazy:
-      path: "../phpurs-lazy"
-    argonaut-core:
-      path: "../phpurs-argonaut-core"
-    nullable:
-      path: "../phpurs-nullable"
-    random:
-      path: "../phpurs-random"
-    uuid:
-      path: "../phpurs-uuid"
-    node-http:
-      path: "../phpurs-node-http"
-    node-process:
-      path: "../phpurs-node-process"
-    node-fs:
-      path: "../phpurs-node-fs"
+    integers:
+      path: "../phpurs-integers"
+    unfoldable:
+      path: "../phpurs-unfoldable"
+    math:
+      path: "../phpurs-math"
   backend:
     cmd: "../phpurs/bin/phpurs"
