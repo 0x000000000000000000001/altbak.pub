@@ -98,15 +98,15 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
-final class Data_List_Internal_Leaf { public function __construct() {} }
-final class Data_List_Internal_Two { public function __construct(public  $value0, public  $value1, public  $value2) {} }
-final class Data_List_Internal_Three { public function __construct(public  $value0, public  $value1, public  $value2, public  $value3, public  $value4) {} }
-final class Data_List_Internal_TwoLeft { public function __construct(public  $value0, public  $value1) {} }
-final class Data_List_Internal_TwoRight { public function __construct(public  $value0, public  $value1) {} }
-final class Data_List_Internal_ThreeLeft { public function __construct(public  $value0, public  $value1, public  $value2, public  $value3) {} }
-final class Data_List_Internal_ThreeMiddle { public function __construct(public  $value0, public  $value1, public  $value2, public  $value3) {} }
-final class Data_List_Internal_ThreeRight { public function __construct(public  $value0, public  $value1, public  $value2, public  $value3) {} }
-final class Data_List_Internal_KickUp { public function __construct(public  $value0, public  $value1, public  $value2) {} }
+final class Data_List_Internal_Leaf { public $tag = 'Leaf'; public function __construct() {} }
+final class Data_List_Internal_Two { public $tag = 'Two'; public function __construct(public  $value0, public  $value1, public  $value2) {} }
+final class Data_List_Internal_Three { public $tag = 'Three'; public function __construct(public  $value0, public  $value1, public  $value2, public  $value3, public  $value4) {} }
+final class Data_List_Internal_TwoLeft { public $tag = 'TwoLeft'; public function __construct(public  $value0, public  $value1) {} }
+final class Data_List_Internal_TwoRight { public $tag = 'TwoRight'; public function __construct(public  $value0, public  $value1) {} }
+final class Data_List_Internal_ThreeLeft { public $tag = 'ThreeLeft'; public function __construct(public  $value0, public  $value1, public  $value2, public  $value3) {} }
+final class Data_List_Internal_ThreeMiddle { public $tag = 'ThreeMiddle'; public function __construct(public  $value0, public  $value1, public  $value2, public  $value3) {} }
+final class Data_List_Internal_ThreeRight { public $tag = 'ThreeRight'; public function __construct(public  $value0, public  $value1, public  $value2, public  $value3) {} }
+final class Data_List_Internal_KickUp { public $tag = 'KickUp'; public function __construct(public  $value0, public  $value1, public  $value2) {} }
 
 // Data_List_Internal_Leaf
 $GLOBALS['Data_List_Internal_Leaf'] = ($GLOBALS['__phpurs_data0_Leaf'] ??= new \Data\List\Internal\Data_List_Internal_Leaf());
@@ -338,11 +338,11 @@ goto end_branch_0;;
   if ($v_4 instanceof \Data\List\Types\Data_List_Types_Cons) {
 $__t1 = null;;
 if (($v_4)->{'value0'} instanceof \Data\List\Internal\Data_List_Internal_TwoLeft) {
-$__t1 = ($GLOBALS['Data_List_Internal_fromZipper'])(($v_4)->{'value1'}, new \Data\List\Internal\Data_List_Internal_Three(($v1_5)->{'value0'}, ($v1_5)->{'value1'}, ($v1_5)->{'value2'}, (($v_4)->{'value0'})->{'value0'}, (($v_4)->{'value0'})->{'value1'}));
+$__t1 = \Data\List\Internal\majData_majList_majInternal_frommajZipper(($v_4)->{'value1'}, new \Data\List\Internal\Data_List_Internal_Three(($v1_5)->{'value0'}, ($v1_5)->{'value1'}, ($v1_5)->{'value2'}, (($v_4)->{'value0'})->{'value0'}, (($v_4)->{'value0'})->{'value1'}));
 goto end_branch_1;;
 };
 if (($v_4)->{'value0'} instanceof \Data\List\Internal\Data_List_Internal_TwoRight) {
-$__t1 = ($GLOBALS['Data_List_Internal_fromZipper'])(($v_4)->{'value1'}, new \Data\List\Internal\Data_List_Internal_Three((($v_4)->{'value0'})->{'value0'}, (($v_4)->{'value0'})->{'value1'}, ($v1_5)->{'value0'}, ($v1_5)->{'value1'}, ($v1_5)->{'value2'}));
+$__t1 = \Data\List\Internal\majData_majList_majInternal_frommajZipper(($v_4)->{'value1'}, new \Data\List\Internal\Data_List_Internal_Three((($v_4)->{'value0'})->{'value0'}, (($v_4)->{'value0'})->{'value1'}, ($v1_5)->{'value0'}, ($v1_5)->{'value1'}, ($v1_5)->{'value2'}));
 goto end_branch_1;;
 };
 if (($v_4)->{'value0'} instanceof \Data\List\Internal\Data_List_Internal_ThreeLeft) {
@@ -402,14 +402,14 @@ goto end_branch_0;;
   $v1_6 = $__tco_var_down_4_1_1_v1_6;
   $__t1 = null;;
   if ($v1_6 instanceof \Data\List\Internal\Data_List_Internal_Leaf) {
-$__t1 = ["found" => false, "result" => ($up_3_0)($v_5, new \Data\List\Internal\Data_List_Internal_KickUp(new \Data\List\Internal\Data_List_Internal_Leaf(), $k_1, new \Data\List\Internal\Data_List_Internal_Leaf()))];
+$__t1 = (object)["found" => false, "result" => (($up_3_0)($v_5))(new \Data\List\Internal\Data_List_Internal_KickUp(new \Data\List\Internal\Data_List_Internal_Leaf(), $k_1, new \Data\List\Internal\Data_List_Internal_Leaf()))];
 goto end_branch_1;;
 };
   if ($v1_6 instanceof \Data\List\Internal\Data_List_Internal_Two) {
-$v2_7_2 = ($comp_0)($k_1, ($v1_6)->{'value1'});
+$v2_7_2 = (($comp_0)($k_1))(($v1_6)->{'value1'});
 $__t5 = null;;
 if ($v2_7_2 instanceof \Data\Ordering\Data_Ordering_EQ) {
-$__t5 = ["found" => true, "result" => $orig_2];
+$__t5 = (object)["found" => true, "result" => $orig_2];
 goto end_branch_5;;
 };
 if ($v2_7_2 instanceof \Data\Ordering\Data_Ordering_LT) {
@@ -432,16 +432,16 @@ $__t1 = $__t5;
 goto end_branch_1;;
 };
   if ($v1_6 instanceof \Data\List\Internal\Data_List_Internal_Three) {
-$v2_7_8 = ($comp_0)($k_1, ($v1_6)->{'value1'});
+$v2_7_8 = (($comp_0)($k_1))(($v1_6)->{'value1'});
 $__t17 = null;;
 if ($v2_7_8 instanceof \Data\Ordering\Data_Ordering_EQ) {
-$__t17 = ["found" => true, "result" => $orig_2];
+$__t17 = (object)["found" => true, "result" => $orig_2];
 goto end_branch_17;;
 };
-$v3_8_9 = ($comp_0)($k_1, ($v1_6)->{'value3'});
+$v3_8_9 = (($comp_0)($k_1))(($v1_6)->{'value3'});
 $__t12 = null;;
 if ($v3_8_9 instanceof \Data\Ordering\Data_Ordering_EQ) {
-$__t12 = ["found" => true, "result" => $orig_2];
+$__t12 = (object)["found" => true, "result" => $orig_2];
 goto end_branch_12;;
 };
 if ($v2_7_8 instanceof \Data\Ordering\Data_Ordering_LT) {
@@ -484,7 +484,7 @@ goto end_branch_1;;
   };
   return $__fn;
 })();
-  $__res = ($down_4_1)(new \Data\List\Types\Data_List_Types_Nil(), $orig_2);
+  $__res = (($down_4_1)(new \Data\List\Types\Data_List_Types_Nil()))($orig_2);
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;

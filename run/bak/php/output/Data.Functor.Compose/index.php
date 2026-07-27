@@ -133,9 +133,9 @@ function majData_majFunctor_majCompose_showmajCompose($dictShow_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["show" => function($v_1) use ($dictShow_0) {
+  $__res = (object)["show" => function($v_1) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Compose ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(Compose "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_0)->{'show'})($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -147,7 +147,7 @@ function majData_majFunctor_majCompose_showmajCompose($dictShow_0) {
 $GLOBALS['Data_Functor_Compose_showCompose'] = __NAMESPACE__ . '\\majData_majFunctor_majCompose_showmajCompose';
 
 // Data_Functor_Compose_newtypeCompose
-$GLOBALS['Data_Functor_Compose_newtypeCompose'] = ["Coercible0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Functor_Compose_newtypeCompose'] = (object)["Coercible0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = null;
   goto __end;;
@@ -162,13 +162,13 @@ function majData_majFunctor_majCompose_functormajCompose($dictFunctor_0, $dictFu
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ["map" => (function() use ($dictFunctor1_1, $dictFunctor_0) {
+  $__res = (object)["map" => (function() use ($dictFunctor1_1, $dictFunctor_0) {
   $__fn = function($f_2, $v_3 = null) use ($dictFunctor1_1, $dictFunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictFunctor_0)['map'])((($dictFunctor1_1)['map'])($f_2), $v_3);
+  $__res = ((($dictFunctor_0)->{'map'})((($dictFunctor1_1)->{'map'})($f_2)))($v_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -188,27 +188,27 @@ function majData_majFunctor_majCompose_eqmajCompose($dictEq1_0, $dictEq11_1 = nu
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $eq11_3_0 = (($dictEq11_1)['eq1'])($dictEq_2);
-  $eq11_3_0 = (($dictEq1_0)['eq1'])(["eq" => (function() use ($eq11_3_0) {
+  $eq11_3_0 = (($dictEq11_1)->{'eq1'})($dictEq_2);
+  $eq11_3_0 = (($dictEq1_0)->{'eq1'})((object)["eq" => (function() use ($eq11_3_0) {
   $__fn = function($x_4, $y_5 = null) use ($eq11_3_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($eq11_3_0)($x_4, $y_5);
+  $__res = (($eq11_3_0)($x_4))($y_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()]);
-  $__res = ["eq" => (function() use ($eq11_3_0) {
+  $__res = (object)["eq" => (function() use ($eq11_3_0) {
   $__fn = function($v_4, $v1_5 = null) use ($eq11_3_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($eq11_3_0)($v_4, $v1_5);
+  $__res = (($eq11_3_0)($v_4))($v1_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -228,35 +228,35 @@ function majData_majFunctor_majCompose_ordmajCompose($dictOrd1_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($dictOrd1_0)['Eq10'])(null);
+  $__local_var_1_0 = (($dictOrd1_0)->{'Eq10'})(null);
   $__res = function($dictOrd11_2) use ($__local_var_1_0, $dictOrd1_0) {
   $__num = \func_num_args();
-  $__local_var_3_1 = (($dictOrd11_2)['Eq10'])(null);
-  $__local_var_4_2 = (($dictOrd11_2)['Eq10'])(null);
+  $__local_var_3_1 = (($dictOrd11_2)->{'Eq10'})(null);
+  $__local_var_4_2 = (($dictOrd11_2)->{'Eq10'})(null);
   $__res = function($dictOrd_5) use ($__local_var_1_0, $__local_var_3_1, $__local_var_4_2, $dictOrd11_2, $dictOrd1_0) {
   $__num = \func_num_args();
-  $compare11_6_3 = (($dictOrd11_2)['compare1'])($dictOrd_5);
-  $eq11_7_4 = (($__local_var_3_1)['eq1'])((($dictOrd_5)['Eq0'])(null));
-  $eqApp2_8_5 = ["eq" => (function() use ($eq11_7_4) {
+  $compare11_6_3 = (($dictOrd11_2)->{'compare1'})($dictOrd_5);
+  $eq11_7_4 = (($__local_var_3_1)->{'eq1'})((($dictOrd_5)->{'Eq0'})(null));
+  $eqApp2_8_5 = (object)["eq" => (function() use ($eq11_7_4) {
   $__fn = function($x_8, $y_9 = null) use ($eq11_7_4, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($eq11_7_4)($x_8, $y_9);
+  $__res = (($eq11_7_4)($x_8))($y_9);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $compare11_6_3 = (($dictOrd1_0)['compare1'])(["compare" => (function() use ($compare11_6_3) {
+  $compare11_6_3 = (($dictOrd1_0)->{'compare1'})((object)["compare" => (function() use ($compare11_6_3) {
   $__fn = function($x_9, $y_10 = null) use ($compare11_6_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($compare11_6_3)($x_9, $y_10);
+  $__res = (($compare11_6_3)($x_9))($y_10);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -269,40 +269,40 @@ function majData_majFunctor_majCompose_ordmajCompose($dictOrd1_0) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }]);
-  $eq11_7_7 = (($__local_var_4_2)['eq1'])((($dictOrd_5)['Eq0'])(null));
-  $eq11_7_7 = (($__local_var_1_0)['eq1'])(["eq" => (function() use ($eq11_7_7) {
+  $eq11_7_7 = (($__local_var_4_2)->{'eq1'})((($dictOrd_5)->{'Eq0'})(null));
+  $eq11_7_7 = (($__local_var_1_0)->{'eq1'})((object)["eq" => (function() use ($eq11_7_7) {
   $__fn = function($x_8, $y_9 = null) use ($eq11_7_7, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($eq11_7_7)($x_8, $y_9);
+  $__res = (($eq11_7_7)($x_8))($y_9);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()]);
-  $eqCompose3_8_9 = ["eq" => (function() use ($eq11_7_7) {
+  $eqCompose3_8_9 = (object)["eq" => (function() use ($eq11_7_7) {
   $__fn = function($v_8, $v1_9 = null) use ($eq11_7_7, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($eq11_7_7)($v_8, $v1_9);
+  $__res = (($eq11_7_7)($v_8))($v1_9);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = ["compare" => (function() use ($compare11_6_3) {
+  $__res = (object)["compare" => (function() use ($compare11_6_3) {
   $__fn = function($v_9, $v1_10 = null) use ($compare11_6_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($compare11_6_3)($v_9, $v1_10);
+  $__res = (($compare11_6_3)($v_9))($v1_10);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -336,16 +336,16 @@ function majData_majFunctor_majCompose_eq1majCompose($dictEq1_0, $dictEq11_1 = n
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ["eq1" => function($dictEq_2) use ($dictEq11_1, $dictEq1_0) {
+  $__res = (object)["eq1" => function($dictEq_2) use ($dictEq11_1, $dictEq1_0) {
   $__num = \func_num_args();
-  $eq11_3_0 = (($dictEq11_1)['eq1'])($dictEq_2);
-  $__res = (($dictEq1_0)['eq1'])(["eq" => (function() use ($eq11_3_0) {
+  $eq11_3_0 = (($dictEq11_1)->{'eq1'})($dictEq_2);
+  $__res = (($dictEq1_0)->{'eq1'})((object)["eq" => (function() use ($eq11_3_0) {
   $__fn = function($x_4, $y_5 = null) use ($eq11_3_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($eq11_3_0)($x_4, $y_5);
+  $__res = (($eq11_3_0)($x_4))($y_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -370,21 +370,21 @@ function majData_majFunctor_majCompose_ord1majCompose($dictOrd1_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $ordCompose1_1_0 = ($GLOBALS['Data_Functor_Compose_ordCompose'])($dictOrd1_0);
-  $__local_var_2_1 = (($dictOrd1_0)['Eq10'])(null);
+  $__local_var_2_1 = (($dictOrd1_0)->{'Eq10'})(null);
   $__res = function($dictOrd11_3) use ($__local_var_2_1, $ordCompose1_1_0) {
   $__num = \func_num_args();
   $ordCompose2_4_2 = ($ordCompose1_1_0)($dictOrd11_3);
-  $__local_var_5_3 = (($dictOrd11_3)['Eq10'])(null);
-  $eq1Compose2_6_4 = ["eq1" => function($dictEq_6) use ($__local_var_2_1, $__local_var_5_3) {
+  $__local_var_5_3 = (($dictOrd11_3)->{'Eq10'})(null);
+  $eq1Compose2_6_4 = (object)["eq1" => function($dictEq_6) use ($__local_var_2_1, $__local_var_5_3) {
   $__num = \func_num_args();
-  $eq11_7_4 = (($__local_var_5_3)['eq1'])($dictEq_6);
-  $__res = (($__local_var_2_1)['eq1'])(["eq" => (function() use ($eq11_7_4) {
+  $eq11_7_4 = (($__local_var_5_3)->{'eq1'})($dictEq_6);
+  $__res = (($__local_var_2_1)->{'eq1'})((object)["eq" => (function() use ($eq11_7_4) {
   $__fn = function($x_8, $y_9 = null) use ($eq11_7_4, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($eq11_7_4)($x_8, $y_9);
+  $__res = (($eq11_7_4)($x_8))($y_9);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -395,9 +395,9 @@ function majData_majFunctor_majCompose_ord1majCompose($dictOrd1_0) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["compare1" => function($dictOrd_7) use ($ordCompose2_4_2) {
+  $__res = (object)["compare1" => function($dictOrd_7) use ($ordCompose2_4_2) {
   $__num = \func_num_args();
-  $__res = (($ordCompose2_4_2)($dictOrd_7))['compare'];
+  $__res = (($ordCompose2_4_2)($dictOrd_7))->{'compare'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -425,7 +425,7 @@ function majData_majFunctor_majCompose_bihoistmajCompose($dictFunctor_0, $natF_1
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ($natF_1)((($dictFunctor_0)['map'])($natG_2, $v_3));
+  $__res = ($natF_1)(((($dictFunctor_0)->{'map'})($natG_2))($v_3));
   goto __end;;
   __end:
   return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -439,31 +439,31 @@ function majData_majFunctor_majCompose_applymajCompose($dictApply_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $Functor0_1_0 = (($dictApply_0)['Functor0'])(null);
+  $Functor0_1_0 = (($dictApply_0)->{'Functor0'})(null);
   $__res = function($dictApply1_2) use ($Functor0_1_0, $dictApply_0) {
   $__num = \func_num_args();
-  $apply1_3_1 = ($dictApply1_2)['apply'];
-  $__local_var_4_2 = (($dictApply1_2)['Functor0'])(null);
-  $functorCompose2_5_3 = ["map" => (function() use ($Functor0_1_0, $__local_var_4_2) {
+  $apply1_3_1 = ($dictApply1_2)->{'apply'};
+  $__local_var_4_2 = (($dictApply1_2)->{'Functor0'})(null);
+  $functorCompose2_5_3 = (object)["map" => (function() use ($Functor0_1_0, $__local_var_4_2) {
   $__fn = function($f_5, $v_6 = null) use ($Functor0_1_0, $__local_var_4_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($Functor0_1_0)['map'])((($__local_var_4_2)['map'])($f_5), $v_6);
+  $__res = ((($Functor0_1_0)->{'map'})((($__local_var_4_2)->{'map'})($f_5)))($v_6);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = ["apply" => (function() use ($Functor0_1_0, $apply1_3_1, $dictApply_0) {
+  $__res = (object)["apply" => (function() use ($Functor0_1_0, $apply1_3_1, $dictApply_0) {
   $__fn = function($v_6, $v1_7 = null) use ($Functor0_1_0, $apply1_3_1, $dictApply_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictApply_0)['apply'])((($Functor0_1_0)['map'])($apply1_3_1, $v_6), $v1_7);
+  $__res = ((($dictApply_0)->{'apply'})(((($Functor0_1_0)->{'map'})($apply1_3_1))($v_6)))($v1_7);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -493,34 +493,34 @@ function majData_majFunctor_majCompose_applicativemajCompose($dictApplicative_0)
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $pure_1_0 = ($dictApplicative_0)['pure'];
-  $__local_var_2_1 = (($dictApplicative_0)['Apply0'])(null);
-  $Functor0_3_2 = (($__local_var_2_1)['Functor0'])(null);
+  $pure_1_0 = ($dictApplicative_0)->{'pure'};
+  $__local_var_2_1 = (($dictApplicative_0)->{'Apply0'})(null);
+  $Functor0_3_2 = (($__local_var_2_1)->{'Functor0'})(null);
   $__res = function($dictApplicative1_4) use ($Functor0_3_2, $__local_var_2_1, $pure_1_0) {
   $__num = \func_num_args();
-  $__local_var_5_3 = (($dictApplicative1_4)['Apply0'])(null);
-  $apply1_6_4 = ($__local_var_5_3)['apply'];
-  $__local_var_7_5 = (($__local_var_5_3)['Functor0'])(null);
-  $functorCompose2_8_6 = ["map" => (function() use ($Functor0_3_2, $__local_var_7_5) {
+  $__local_var_5_3 = (($dictApplicative1_4)->{'Apply0'})(null);
+  $apply1_6_4 = ($__local_var_5_3)->{'apply'};
+  $__local_var_7_5 = (($__local_var_5_3)->{'Functor0'})(null);
+  $functorCompose2_8_6 = (object)["map" => (function() use ($Functor0_3_2, $__local_var_7_5) {
   $__fn = function($f_8, $v_9 = null) use ($Functor0_3_2, $__local_var_7_5, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($Functor0_3_2)['map'])((($__local_var_7_5)['map'])($f_8), $v_9);
+  $__res = ((($Functor0_3_2)->{'map'})((($__local_var_7_5)->{'map'})($f_8)))($v_9);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $applyCompose2_7_5 = ["apply" => (function() use ($Functor0_3_2, $__local_var_2_1, $apply1_6_4) {
+  $applyCompose2_7_5 = (object)["apply" => (function() use ($Functor0_3_2, $__local_var_2_1, $apply1_6_4) {
   $__fn = function($v_9, $v1_10 = null) use ($Functor0_3_2, $__local_var_2_1, $apply1_6_4, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_2_1)['apply'])((($Functor0_3_2)['map'])($apply1_6_4, $v_9), $v1_10);
+  $__res = ((($__local_var_2_1)->{'apply'})(((($Functor0_3_2)->{'map'})($apply1_6_4))($v_9)))($v1_10);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -533,7 +533,7 @@ function majData_majFunctor_majCompose_applicativemajCompose($dictApplicative_0)
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["pure" => ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Compose_Compose'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($pure_1_0, ($dictApplicative1_4)['pure'])), "Apply0" => function($_dollar__unused_8) use ($applyCompose2_7_5) {
+  $__res = (object)["pure" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Compose_Compose']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($pure_1_0))(($dictApplicative1_4)->{'pure'})), "Apply0" => function($_dollar__unused_8) use ($applyCompose2_7_5) {
   $__num = \func_num_args();
   $__res = $applyCompose2_7_5;
   goto __end;;
@@ -557,29 +557,29 @@ function majData_majFunctor_majCompose_altmajCompose($dictAlt_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($dictAlt_0)['Functor0'])(null);
+  $__local_var_1_0 = (($dictAlt_0)->{'Functor0'})(null);
   $__res = function($dictFunctor_2) use ($__local_var_1_0, $dictAlt_0) {
   $__num = \func_num_args();
-  $functorCompose2_3_1 = ["map" => (function() use ($__local_var_1_0, $dictFunctor_2) {
+  $functorCompose2_3_1 = (object)["map" => (function() use ($__local_var_1_0, $dictFunctor_2) {
   $__fn = function($f_3, $v_4 = null) use ($__local_var_1_0, $dictFunctor_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_1_0)['map'])((($dictFunctor_2)['map'])($f_3), $v_4);
+  $__res = ((($__local_var_1_0)->{'map'})((($dictFunctor_2)->{'map'})($f_3)))($v_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = ["alt" => (function() use ($dictAlt_0) {
+  $__res = (object)["alt" => (function() use ($dictAlt_0) {
   $__fn = function($v_4, $v1_5 = null) use ($dictAlt_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictAlt_0)['alt'])($v_4, $v1_5);
+  $__res = ((($dictAlt_0)->{'alt'})($v_4))($v1_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -609,31 +609,31 @@ function majData_majFunctor_majCompose_plusmajCompose($dictPlus_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $empty_1_0 = ($dictPlus_0)['empty'];
-  $__local_var_2_1 = (($dictPlus_0)['Alt0'])(null);
-  $__local_var_3_2 = (($__local_var_2_1)['Functor0'])(null);
+  $empty_1_0 = ($dictPlus_0)->{'empty'};
+  $__local_var_2_1 = (($dictPlus_0)->{'Alt0'})(null);
+  $__local_var_3_2 = (($__local_var_2_1)->{'Functor0'})(null);
   $__res = function($dictFunctor_4) use ($__local_var_2_1, $__local_var_3_2, $empty_1_0) {
   $__num = \func_num_args();
-  $functorCompose2_5_3 = ["map" => (function() use ($__local_var_3_2, $dictFunctor_4) {
+  $functorCompose2_5_3 = (object)["map" => (function() use ($__local_var_3_2, $dictFunctor_4) {
   $__fn = function($f_5, $v_6 = null) use ($__local_var_3_2, $dictFunctor_4, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_3_2)['map'])((($dictFunctor_4)['map'])($f_5), $v_6);
+  $__res = ((($__local_var_3_2)->{'map'})((($dictFunctor_4)->{'map'})($f_5)))($v_6);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $altCompose2_6_4 = ["alt" => (function() use ($__local_var_2_1) {
+  $altCompose2_6_4 = (object)["alt" => (function() use ($__local_var_2_1) {
   $__fn = function($v_6, $v1_7 = null) use ($__local_var_2_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_2_1)['alt'])($v_6, $v1_7);
+  $__res = ((($__local_var_2_1)->{'alt'})($v_6))($v1_7);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -646,7 +646,7 @@ function majData_majFunctor_majCompose_plusmajCompose($dictPlus_0) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["empty" => $empty_1_0, "Alt0" => function($_dollar__unused_7) use ($altCompose2_6_4) {
+  $__res = (object)["empty" => $empty_1_0, "Alt0" => function($_dollar__unused_7) use ($altCompose2_6_4) {
   $__num = \func_num_args();
   $__res = $altCompose2_6_4;
   goto __end;;
@@ -670,33 +670,33 @@ function majData_majFunctor_majCompose_alternativemajCompose($dictAlternative_0)
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $applicativeCompose1_1_0 = ($GLOBALS['Data_Functor_Compose_applicativeCompose'])((($dictAlternative_0)['Applicative0'])(null));
-  $__local_var_2_1 = (($dictAlternative_0)['Plus1'])(null);
-  $empty_3_2 = ($__local_var_2_1)['empty'];
-  $__local_var_4_3 = (($__local_var_2_1)['Alt0'])(null);
-  $__local_var_5_4 = (($__local_var_4_3)['Functor0'])(null);
+  $applicativeCompose1_1_0 = ($GLOBALS['Data_Functor_Compose_applicativeCompose'])((($dictAlternative_0)->{'Applicative0'})(null));
+  $__local_var_2_1 = (($dictAlternative_0)->{'Plus1'})(null);
+  $empty_3_2 = ($__local_var_2_1)->{'empty'};
+  $__local_var_4_3 = (($__local_var_2_1)->{'Alt0'})(null);
+  $__local_var_5_4 = (($__local_var_4_3)->{'Functor0'})(null);
   $plusCompose1_4_3 = function($dictFunctor_6) use ($__local_var_4_3, $__local_var_5_4, $empty_3_2) {
   $__num = \func_num_args();
-  $functorCompose2_7_5 = ["map" => (function() use ($__local_var_5_4, $dictFunctor_6) {
+  $functorCompose2_7_5 = (object)["map" => (function() use ($__local_var_5_4, $dictFunctor_6) {
   $__fn = function($f_7, $v_8 = null) use ($__local_var_5_4, $dictFunctor_6, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_5_4)['map'])((($dictFunctor_6)['map'])($f_7), $v_8);
+  $__res = ((($__local_var_5_4)->{'map'})((($dictFunctor_6)->{'map'})($f_7)))($v_8);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $altCompose2_8_6 = ["alt" => (function() use ($__local_var_4_3) {
+  $altCompose2_8_6 = (object)["alt" => (function() use ($__local_var_4_3) {
   $__fn = function($v_8, $v1_9 = null) use ($__local_var_4_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_4_3)['alt'])($v_8, $v1_9);
+  $__res = ((($__local_var_4_3)->{'alt'})($v_8))($v1_9);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -709,7 +709,7 @@ function majData_majFunctor_majCompose_alternativemajCompose($dictAlternative_0)
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["empty" => $empty_3_2, "Alt0" => function($_dollar__unused_9) use ($altCompose2_8_6) {
+  $__res = (object)["empty" => $empty_3_2, "Alt0" => function($_dollar__unused_9) use ($altCompose2_8_6) {
   $__num = \func_num_args();
   $__res = $altCompose2_8_6;
   goto __end;;
@@ -723,8 +723,8 @@ function majData_majFunctor_majCompose_alternativemajCompose($dictAlternative_0)
   $__res = function($dictApplicative_5) use ($applicativeCompose1_1_0, $plusCompose1_4_3) {
   $__num = \func_num_args();
   $applicativeCompose2_6_8 = ($applicativeCompose1_1_0)($dictApplicative_5);
-  $plusCompose2_7_9 = ($plusCompose1_4_3)((((($dictApplicative_5)['Apply0'])(null))['Functor0'])(null));
-  $__res = ["Applicative0" => function($_dollar__unused_8) use ($applicativeCompose2_6_8) {
+  $plusCompose2_7_9 = ($plusCompose1_4_3)((((($dictApplicative_5)->{'Apply0'})(null))->{'Functor0'})(null));
+  $__res = (object)["Applicative0" => function($_dollar__unused_8) use ($applicativeCompose2_6_8) {
   $__num = \func_num_args();
   $__res = $applicativeCompose2_6_8;
   goto __end;;

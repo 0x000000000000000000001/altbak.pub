@@ -129,9 +129,9 @@ function majData_majSemigroup_majLast_showmajLast($dictShow_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["show" => function($v_1) use ($dictShow_0) {
+  $__res = (object)["show" => function($v_1) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Last ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(Last "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_0)->{'show'})($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -143,7 +143,7 @@ function majData_majSemigroup_majLast_showmajLast($dictShow_0) {
 $GLOBALS['Data_Semigroup_Last_showLast'] = __NAMESPACE__ . '\\majData_majSemigroup_majLast_showmajLast';
 
 // Data_Semigroup_Last_semigroupLast
-$GLOBALS['Data_Semigroup_Last_semigroupLast'] = ["append" => (function() {
+$GLOBALS['Data_Semigroup_Last_semigroupLast'] = (object)["append" => (function() {
   $__fn = function($v_0, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -172,7 +172,7 @@ function majData_majSemigroup_majLast_ordmajLast($dictOrd_0) {
 $GLOBALS['Data_Semigroup_Last_ordLast'] = __NAMESPACE__ . '\\majData_majSemigroup_majLast_ordmajLast';
 
 // Data_Semigroup_Last_functorLast
-$GLOBALS['Data_Semigroup_Last_functorLast'] = ["map" => (function() {
+$GLOBALS['Data_Semigroup_Last_functorLast'] = (object)["map" => (function() {
   $__fn = function($f_0, $m_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -201,18 +201,18 @@ function majData_majSemigroup_majLast_eqmajLast($dictEq_0) {
 $GLOBALS['Data_Semigroup_Last_eqLast'] = __NAMESPACE__ . '\\majData_majSemigroup_majLast_eqmajLast';
 
 // Data_Semigroup_Last_eq1Last
-$GLOBALS['Data_Semigroup_Last_eq1Last'] = ["eq1" => function($dictEq_0) {
+$GLOBALS['Data_Semigroup_Last_eq1Last'] = (object)["eq1" => function($dictEq_0) {
   $__num = \func_num_args();
-  $__res = ($dictEq_0)['eq'];
+  $__res = ($dictEq_0)->{'eq'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
 
 // Data_Semigroup_Last_ord1Last
-$GLOBALS['Data_Semigroup_Last_ord1Last'] = ["compare1" => function($dictOrd_0) {
+$GLOBALS['Data_Semigroup_Last_ord1Last'] = (object)["compare1" => function($dictOrd_0) {
   $__num = \func_num_args();
-  $__res = ($dictOrd_0)['compare'];
+  $__res = ($dictOrd_0)->{'compare'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -239,7 +239,7 @@ function majData_majSemigroup_majLast_boundedmajLast($dictBounded_0) {
 $GLOBALS['Data_Semigroup_Last_boundedLast'] = __NAMESPACE__ . '\\majData_majSemigroup_majLast_boundedmajLast';
 
 // Data_Semigroup_Last_applyLast
-$GLOBALS['Data_Semigroup_Last_applyLast'] = ["apply" => (function() {
+$GLOBALS['Data_Semigroup_Last_applyLast'] = (object)["apply" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -260,7 +260,7 @@ $GLOBALS['Data_Semigroup_Last_applyLast'] = ["apply" => (function() {
 }];
 
 // Data_Semigroup_Last_bindLast
-$GLOBALS['Data_Semigroup_Last_bindLast'] = ["bind" => (function() {
+$GLOBALS['Data_Semigroup_Last_bindLast'] = (object)["bind" => (function() {
   $__fn = function($v_0, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -281,7 +281,7 @@ $GLOBALS['Data_Semigroup_Last_bindLast'] = ["bind" => (function() {
 }];
 
 // Data_Semigroup_Last_applicativeLast
-$GLOBALS['Data_Semigroup_Last_applicativeLast'] = ["pure" => $GLOBALS['Data_Semigroup_Last_Last'], "Apply0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Semigroup_Last_applicativeLast'] = (object)["pure" => $GLOBALS['Data_Semigroup_Last_Last'], "Apply0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Semigroup_Last_applyLast'];
   goto __end;;
@@ -290,7 +290,7 @@ $GLOBALS['Data_Semigroup_Last_applicativeLast'] = ["pure" => $GLOBALS['Data_Semi
 }];
 
 // Data_Semigroup_Last_monadLast
-$GLOBALS['Data_Semigroup_Last_monadLast'] = ["Applicative0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Semigroup_Last_monadLast'] = (object)["Applicative0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Semigroup_Last_applicativeLast'];
   goto __end;;

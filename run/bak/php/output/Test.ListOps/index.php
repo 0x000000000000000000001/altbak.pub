@@ -107,19 +107,19 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
-final class Test_ListOps_Nil { public function __construct() {} }
-final class Test_ListOps_Cons { public function __construct(public  $value0, public  $value1) {} }
+final class Test_ListOps_Nil { public $tag = 'Nil'; public function __construct() {} }
+final class Test_ListOps_Cons { public $tag = 'Cons'; public function __construct(public  $value0, public  $value1) {} }
 
 // Test_ListOps_lessThan
 $GLOBALS['Test_ListOps_lessThan'] = (function() use (&$__fn) {
-$__local_var_0_0 = ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT());
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
 return (function() use ($__local_var_0_0) {
   $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($__local_var_0_0)($a1_1, $a2_2) instanceof \Data\Ordering\Data_Ordering_LT;
+  $__res = (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -166,7 +166,7 @@ function majTest_majListmajOps_range(int $start_0, $end_1 = null) {
   $curr_3 = $__tco_var_go__2_0_0_curr_3;
   $acc_4 = $__tco_var_go__2_0_0_acc_4;
   $__t2 = null;;
-  if (($GLOBALS['Test_ListOps_lessThan'])($curr_3, $start_0)) {
+  if ((($GLOBALS['Test_ListOps_lessThan'])($curr_3))($start_0)) {
 $__t2 = $acc_4;
 goto end_branch_2;;
 };
@@ -184,7 +184,7 @@ goto end_branch_2;;
   };
   return $__fn;
 })();
-  $__res = ($go__2_0)($end_1, new \Test\ListOps\Test_ListOps_Nil());
+  $__res = (($go__2_0)($end_1))(new \Test\ListOps\Test_ListOps_Nil());
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -212,7 +212,7 @@ goto end_branch_0;;
 };
   if ($v2_2 instanceof \Test\ListOps\Test_ListOps_Cons) {
 $__tco_1 = $v_0;
-$__tco_2 = ($v_0)($v1_1, ($v2_2)->{'value0'});
+$__tco_2 = (($v_0)($v1_1))(($v2_2)->{'value0'});
 $__tco_3 = ($v2_2)->{'value1'};
 $__tco_var_Test_ListOps_foldl_v_0 = $__tco_1;
 $__tco_var_Test_ListOps_foldl_v1_1 = $__tco_2;
@@ -257,7 +257,7 @@ goto end_branch_0;;
 };
   if ($v_2 instanceof \Test\ListOps\Test_ListOps_Cons) {
 $__t3 = null;;
-switch ((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['mod'])(($v_2)->{'value0'}, 2)) {
+switch (((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])->{'mod'})(($v_2)->{'value0'}))(2)) {
 case 0:
 $__tco_4 = ($v_2)->{'value1'};
 $__tco_5 = new \Test\ListOps\Test_ListOps_Cons(($v_2)->{'value0'}, $v1_3);
@@ -291,7 +291,7 @@ goto end_branch_0;;
   };
   return $__fn;
 })();
-  $__res = ($go__1_0)($lst_0, new \Test\ListOps\Test_ListOps_Nil());
+  $__res = (($go__1_0)($lst_0))(new \Test\ListOps\Test_ListOps_Nil());
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -305,7 +305,7 @@ function majTest_majListmajOps_summajEvens(int $n_0): int|\Closure {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Test_ListOps_foldl'])($GLOBALS['Data_Semiring_intAdd'], 0, ($GLOBALS['Test_ListOps_filterEvens'])(($GLOBALS['Test_ListOps_range'])(1, $n_0)));
+  $__res = \Test\ListOps\majTest_majListmajOps_foldl($GLOBALS['Data_Semiring_intAdd'], 0, \Test\ListOps\majTest_majListmajOps_filtermajEvens(\Test\ListOps\majTest_majListmajOps_range(1, $n_0)));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -313,12 +313,12 @@ function majTest_majListmajOps_summajEvens(int $n_0): int|\Closure {
 $GLOBALS['Test_ListOps_sumEvens'] = __NAMESPACE__ . '\\majTest_majListmajOps_summajEvens';
 
 // Test_ListOps_describe
-$GLOBALS['Test_ListOps_describe'] = ($GLOBALS['Effect_Console_log'])("List Processing (900 elements):");
+$GLOBALS['Test_ListOps_describe'] = \Effect\Console\majEffect_majConsole_log("List Processing (900 elements):");
 
 // Test_ListOps_act
-$GLOBALS['Test_ListOps_act'] = (($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(900), function($dummy_0) {
+$GLOBALS['Test_ListOps_act'] = ((($GLOBALS['Effect_bindEffect'])->{'bind'})(\Bench\majBench_opaque(900)))(function($dummy_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])(($GLOBALS['Test_ListOps_foldl'])($GLOBALS['Data_Semiring_intAdd'], 0, ($GLOBALS['Test_ListOps_filterEvens'])(($GLOBALS['Test_ListOps_range'])(1, $dummy_0)))));
+  $__res = \Effect\Console\majEffect_majConsole_log((($GLOBALS['Data_Show_showInt'])->{'show'})(\Test\ListOps\majTest_majListmajOps_foldl($GLOBALS['Data_Semiring_intAdd'], 0, \Test\ListOps\majTest_majListmajOps_filtermajEvens(\Test\ListOps\majTest_majListmajOps_range(1, $dummy_0)))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

@@ -125,8 +125,28 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }
 
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-$GLOBALS['Data_Lazy_defer'] = new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Lazy_force'] = new class { public function __invoke(...$args) { return $this; } };
+function majData_majLazy_defer($v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majLazy_defer';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $f = new class { public function __invoke(...$args) { return $this; } };
+  return $f($v0);
+}
+$GLOBALS['Data_Lazy_defer'] = __NAMESPACE__ . '\\majData_majLazy_defer';
+
+function majData_majLazy_force($v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majLazy_force';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $f = new class { public function __invoke(...$args) { return $this; } };
+  return $f($v0);
+}
+$GLOBALS['Data_Lazy_force'] = __NAMESPACE__ . '\\majData_majLazy_force';
+
 
 
 
@@ -138,9 +158,9 @@ function majData_majLazy_showmajLazy($dictShow_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["show" => function($x_1) use ($dictShow_0) {
+  $__res = (object)["show" => function($x_1) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(defer \\_ -> ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])(($GLOBALS['Data_Lazy_force'])($x_1)), ")"));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(defer \\_ -> "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_0)->{'show'})(\Data\Lazy\majData_majLazy_force($x_1))))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -158,17 +178,17 @@ function majData_majLazy_semiringmajLazy($dictSemiring_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $zero_1_0 = ($dictSemiring_0)['zero'];
-  $one_2_1 = ($dictSemiring_0)['one'];
-  $__res = ["add" => (function() use ($dictSemiring_0) {
+  $zero_1_0 = ($dictSemiring_0)->{'zero'};
+  $one_2_1 = ($dictSemiring_0)->{'one'};
+  $__res = (object)["add" => (function() use ($dictSemiring_0) {
   $__fn = function($a_3, $b_4 = null) use ($dictSemiring_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Lazy_defer'])(function($v_5) use ($a_3, $b_4, $dictSemiring_0) {
+  $__res = \Data\Lazy\majData_majLazy_defer(function($v_5) use ($a_3, $b_4, $dictSemiring_0) {
   $__num = \func_num_args();
-  $__res = (($dictSemiring_0)['add'])(($GLOBALS['Data_Lazy_force'])($a_3), ($GLOBALS['Data_Lazy_force'])($b_4));
+  $__res = ((($dictSemiring_0)->{'add'})(\Data\Lazy\majData_majLazy_force($a_3)))(\Data\Lazy\majData_majLazy_force($b_4));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -178,7 +198,7 @@ function majData_majLazy_semiringmajLazy($dictSemiring_0) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "zero" => ($GLOBALS['Data_Lazy_defer'])(function($v_3) use ($zero_1_0) {
+})(), "zero" => \Data\Lazy\majData_majLazy_defer(function($v_3) use ($zero_1_0) {
   $__num = \func_num_args();
   $__res = $zero_1_0;
   goto __end;;
@@ -190,9 +210,9 @@ function majData_majLazy_semiringmajLazy($dictSemiring_0) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Lazy_defer'])(function($v_5) use ($a_3, $b_4, $dictSemiring_0) {
+  $__res = \Data\Lazy\majData_majLazy_defer(function($v_5) use ($a_3, $b_4, $dictSemiring_0) {
   $__num = \func_num_args();
-  $__res = (($dictSemiring_0)['mul'])(($GLOBALS['Data_Lazy_force'])($a_3), ($GLOBALS['Data_Lazy_force'])($b_4));
+  $__res = ((($dictSemiring_0)->{'mul'})(\Data\Lazy\majData_majLazy_force($a_3)))(\Data\Lazy\majData_majLazy_force($b_4));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -202,7 +222,7 @@ function majData_majLazy_semiringmajLazy($dictSemiring_0) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "one" => ($GLOBALS['Data_Lazy_defer'])(function($v_3) use ($one_2_1) {
+})(), "one" => \Data\Lazy\majData_majLazy_defer(function($v_3) use ($one_2_1) {
   $__num = \func_num_args();
   $__res = $one_2_1;
   goto __end;;
@@ -222,15 +242,15 @@ function majData_majLazy_semigroupmajLazy($dictSemigroup_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["append" => (function() use ($dictSemigroup_0) {
+  $__res = (object)["append" => (function() use ($dictSemigroup_0) {
   $__fn = function($a_1, $b_2 = null) use ($dictSemigroup_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Lazy_defer'])(function($v_3) use ($a_1, $b_2, $dictSemigroup_0) {
+  $__res = \Data\Lazy\majData_majLazy_defer(function($v_3) use ($a_1, $b_2, $dictSemigroup_0) {
   $__num = \func_num_args();
-  $__res = (($dictSemigroup_0)['append'])(($GLOBALS['Data_Lazy_force'])($a_1), ($GLOBALS['Data_Lazy_force'])($b_2));
+  $__res = ((($dictSemigroup_0)->{'append'})(\Data\Lazy\majData_majLazy_force($a_1)))(\Data\Lazy\majData_majLazy_force($b_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -254,16 +274,16 @@ function majData_majLazy_ringmajLazy($dictRing_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $semiringLazy1_1_0 = ($GLOBALS['Data_Lazy_semiringLazy'])((($dictRing_0)['Semiring0'])(null));
-  $__res = ["sub" => (function() use ($dictRing_0) {
+  $semiringLazy1_1_0 = \Data\Lazy\majData_majLazy_semiringmajLazy((($dictRing_0)->{'Semiring0'})(null));
+  $__res = (object)["sub" => (function() use ($dictRing_0) {
   $__fn = function($a_2, $b_3 = null) use ($dictRing_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Lazy_defer'])(function($v_4) use ($a_2, $b_3, $dictRing_0) {
+  $__res = \Data\Lazy\majData_majLazy_defer(function($v_4) use ($a_2, $b_3, $dictRing_0) {
   $__num = \func_num_args();
-  $__res = (($dictRing_0)['sub'])(($GLOBALS['Data_Lazy_force'])($a_2), ($GLOBALS['Data_Lazy_force'])($b_3));
+  $__res = ((($dictRing_0)->{'sub'})(\Data\Lazy\majData_majLazy_force($a_2)))(\Data\Lazy\majData_majLazy_force($b_3));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -293,9 +313,9 @@ function majData_majLazy_monoidmajLazy($dictMonoid_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $mempty_1_0 = ($dictMonoid_0)['mempty'];
-  $semigroupLazy1_2_1 = ($GLOBALS['Data_Lazy_semigroupLazy'])((($dictMonoid_0)['Semigroup0'])(null));
-  $__res = ["mempty" => ($GLOBALS['Data_Lazy_defer'])(function($v_3) use ($mempty_1_0) {
+  $mempty_1_0 = ($dictMonoid_0)->{'mempty'};
+  $semigroupLazy1_2_1 = \Data\Lazy\majData_majLazy_semigroupmajLazy((($dictMonoid_0)->{'Semigroup0'})(null));
+  $__res = (object)["mempty" => \Data\Lazy\majData_majLazy_defer(function($v_3) use ($mempty_1_0) {
   $__num = \func_num_args();
   $__res = $mempty_1_0;
   goto __end;;
@@ -315,11 +335,11 @@ function majData_majLazy_monoidmajLazy($dictMonoid_0) {
 $GLOBALS['Data_Lazy_monoidLazy'] = __NAMESPACE__ . '\\majData_majLazy_monoidmajLazy';
 
 // Data_Lazy_lazyLazy
-$GLOBALS['Data_Lazy_lazyLazy'] = ["defer" => function($f_0) {
+$GLOBALS['Data_Lazy_lazyLazy'] = (object)["defer" => function($f_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Lazy_defer'])(function($v_1) use ($f_0) {
+  $__res = \Data\Lazy\majData_majLazy_defer(function($v_1) use ($f_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Lazy_force'])(($f_0)($GLOBALS['Data_Unit_unit']));
+  $__res = \Data\Lazy\majData_majLazy_force(($f_0)($GLOBALS['Data_Unit_unit']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -330,15 +350,15 @@ $GLOBALS['Data_Lazy_lazyLazy'] = ["defer" => function($f_0) {
 }];
 
 // Data_Lazy_functorLazy
-$GLOBALS['Data_Lazy_functorLazy'] = ["map" => (function() {
+$GLOBALS['Data_Lazy_functorLazy'] = (object)["map" => (function() {
   $__fn = function($f_0, $l_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Lazy_defer'])(function($v_2) use ($f_0, $l_1) {
+  $__res = \Data\Lazy\majData_majLazy_defer(function($v_2) use ($f_0, $l_1) {
   $__num = \func_num_args();
-  $__res = ($f_0)(($GLOBALS['Data_Lazy_force'])($l_1));
+  $__res = ($f_0)(\Data\Lazy\majData_majLazy_force($l_1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -351,9 +371,9 @@ $GLOBALS['Data_Lazy_functorLazy'] = ["map" => (function() {
 })()];
 
 // Data_Lazy_functorWithIndexLazy
-$GLOBALS['Data_Lazy_functorWithIndexLazy'] = ["mapWithIndex" => function($f_0) {
+$GLOBALS['Data_Lazy_functorWithIndexLazy'] = (object)["mapWithIndex" => function($f_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Lazy_functorLazy'])['map'])(($f_0)($GLOBALS['Data_Unit_unit']));
+  $__res = (($GLOBALS['Data_Lazy_functorLazy'])->{'map'})(($f_0)($GLOBALS['Data_Unit_unit']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -366,13 +386,13 @@ $GLOBALS['Data_Lazy_functorWithIndexLazy'] = ["mapWithIndex" => function($f_0) {
 }];
 
 // Data_Lazy_invariantLazy
-$GLOBALS['Data_Lazy_invariantLazy'] = ["imap" => (function() {
+$GLOBALS['Data_Lazy_invariantLazy'] = (object)["imap" => (function() {
   $__fn = function($f_0, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Lazy_functorLazy'])['map'])($f_0);
+  $__res = (($GLOBALS['Data_Lazy_functorLazy'])->{'map'})($f_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -381,13 +401,13 @@ $GLOBALS['Data_Lazy_invariantLazy'] = ["imap" => (function() {
 })()];
 
 // Data_Lazy_foldableLazy
-$GLOBALS['Data_Lazy_foldableLazy'] = ["foldr" => (function() {
+$GLOBALS['Data_Lazy_foldableLazy'] = (object)["foldr" => (function() {
   $__fn = function($f_0, $z_1 = null, $l_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($f_0)(($GLOBALS['Data_Lazy_force'])($l_2), $z_1);
+  $__res = (($f_0)(\Data\Lazy\majData_majLazy_force($l_2)))($z_1);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -399,7 +419,7 @@ $GLOBALS['Data_Lazy_foldableLazy'] = ["foldr" => (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($f_0)($z_1, ($GLOBALS['Data_Lazy_force'])($l_2));
+  $__res = (($f_0)($z_1))(\Data\Lazy\majData_majLazy_force($l_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -411,7 +431,7 @@ $GLOBALS['Data_Lazy_foldableLazy'] = ["foldr" => (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($f_1)(($GLOBALS['Data_Lazy_force'])($l_2));
+  $__res = ($f_1)(\Data\Lazy\majData_majLazy_force($l_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -420,21 +440,21 @@ $GLOBALS['Data_Lazy_foldableLazy'] = ["foldr" => (function() {
 })()];
 
 // Data_Lazy_foldableWithIndexLazy
-$GLOBALS['Data_Lazy_foldableWithIndexLazy'] = ["foldrWithIndex" => function($f_0) {
+$GLOBALS['Data_Lazy_foldableWithIndexLazy'] = (object)["foldrWithIndex" => function($f_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Lazy_foldableLazy'])['foldr'])(($f_0)($GLOBALS['Data_Unit_unit']));
+  $__res = (($GLOBALS['Data_Lazy_foldableLazy'])->{'foldr'})(($f_0)($GLOBALS['Data_Unit_unit']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "foldlWithIndex" => function($f_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Lazy_foldableLazy'])['foldl'])(($f_0)($GLOBALS['Data_Unit_unit']));
+  $__res = (($GLOBALS['Data_Lazy_foldableLazy'])->{'foldl'})(($f_0)($GLOBALS['Data_Unit_unit']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "foldMapWithIndex" => function($dictMonoid_0) {
   $__num = \func_num_args();
-  $foldMap1_1_0 = (($GLOBALS['Data_Lazy_foldableLazy'])['foldMap'])($dictMonoid_0);
+  $foldMap1_1_0 = (($GLOBALS['Data_Lazy_foldableLazy'])->{'foldMap'})($dictMonoid_0);
   $__res = function($f_2) use ($foldMap1_1_0) {
   $__num = \func_num_args();
   $__res = ($foldMap1_1_0)(($f_2)($GLOBALS['Data_Unit_unit']));
@@ -454,13 +474,13 @@ $GLOBALS['Data_Lazy_foldableWithIndexLazy'] = ["foldrWithIndex" => function($f_0
 }];
 
 // Data_Lazy_traversableLazy
-$GLOBALS['Data_Lazy_traversableLazy'] = ["traverse" => (function() {
+$GLOBALS['Data_Lazy_traversableLazy'] = (object)["traverse" => (function() {
   $__fn = function($dictApplicative_0, $f_1 = null, $l_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((((($dictApplicative_0)['Apply0'])(null))['Functor0'])(null))['map'])(($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Lazy_defer'], $GLOBALS['Data_Function_const']), ($f_1)(($GLOBALS['Data_Lazy_force'])($l_2)));
+  $__res = ((((((($dictApplicative_0)->{'Apply0'})(null))->{'Functor0'})(null))->{'map'})((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Lazy_defer']))($GLOBALS['Data_Function_const'])))(($f_1)(\Data\Lazy\majData_majLazy_force($l_2)));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -472,7 +492,7 @@ $GLOBALS['Data_Lazy_traversableLazy'] = ["traverse" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((((($dictApplicative_0)['Apply0'])(null))['Functor0'])(null))['map'])(($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Lazy_defer'], $GLOBALS['Data_Function_const']), ($GLOBALS['Data_Lazy_force'])($l_1));
+  $__res = ((((((($dictApplicative_0)->{'Apply0'})(null))->{'Functor0'})(null))->{'map'})((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Lazy_defer']))($GLOBALS['Data_Function_const'])))(\Data\Lazy\majData_majLazy_force($l_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -493,9 +513,9 @@ $GLOBALS['Data_Lazy_traversableLazy'] = ["traverse" => (function() {
 }];
 
 // Data_Lazy_traversableWithIndexLazy
-$GLOBALS['Data_Lazy_traversableWithIndexLazy'] = ["traverseWithIndex" => function($dictApplicative_0) {
+$GLOBALS['Data_Lazy_traversableWithIndexLazy'] = (object)["traverseWithIndex" => function($dictApplicative_0) {
   $__num = \func_num_args();
-  $traverse1_1_0 = (($GLOBALS['Data_Lazy_traversableLazy'])['traverse'])($dictApplicative_0);
+  $traverse1_1_0 = (($GLOBALS['Data_Lazy_traversableLazy'])->{'traverse'})($dictApplicative_0);
   $__res = function($f_2) use ($traverse1_1_0) {
   $__num = \func_num_args();
   $__res = ($traverse1_1_0)(($f_2)($GLOBALS['Data_Unit_unit']));
@@ -527,13 +547,13 @@ $GLOBALS['Data_Lazy_traversableWithIndexLazy'] = ["traverseWithIndex" => functio
 }];
 
 // Data_Lazy_foldable1Lazy
-$GLOBALS['Data_Lazy_foldable1Lazy'] = ["foldMap1" => (function() {
+$GLOBALS['Data_Lazy_foldable1Lazy'] = (object)["foldMap1" => (function() {
   $__fn = function($dictSemigroup_0, $f_1 = null, $l_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($f_1)(($GLOBALS['Data_Lazy_force'])($l_2));
+  $__res = ($f_1)(\Data\Lazy\majData_majLazy_force($l_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -545,7 +565,7 @@ $GLOBALS['Data_Lazy_foldable1Lazy'] = ["foldMap1" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Lazy_force'])($l_1);
+  $__res = \Data\Lazy\majData_majLazy_force($l_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -557,7 +577,7 @@ $GLOBALS['Data_Lazy_foldable1Lazy'] = ["foldMap1" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Lazy_force'])($l_1);
+  $__res = \Data\Lazy\majData_majLazy_force($l_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -572,13 +592,13 @@ $GLOBALS['Data_Lazy_foldable1Lazy'] = ["foldMap1" => (function() {
 }];
 
 // Data_Lazy_traversable1Lazy
-$GLOBALS['Data_Lazy_traversable1Lazy'] = ["traverse1" => (function() {
+$GLOBALS['Data_Lazy_traversable1Lazy'] = (object)["traverse1" => (function() {
   $__fn = function($dictApply_0, $f_1 = null, $l_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($dictApply_0)['Functor0'])(null))['map'])(($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Lazy_defer'], $GLOBALS['Data_Function_const']), ($f_1)(($GLOBALS['Data_Lazy_force'])($l_2)));
+  $__res = ((((($dictApply_0)->{'Functor0'})(null))->{'map'})((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Lazy_defer']))($GLOBALS['Data_Function_const'])))(($f_1)(\Data\Lazy\majData_majLazy_force($l_2)));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -590,7 +610,7 @@ $GLOBALS['Data_Lazy_traversable1Lazy'] = ["traverse1" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictApply_0)['Functor0'])(null))['map'])(($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Lazy_defer'], $GLOBALS['Data_Function_const']), ($GLOBALS['Data_Lazy_force'])($l_1));
+  $__res = ((((($dictApply_0)->{'Functor0'})(null))->{'map'})((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Lazy_defer']))($GLOBALS['Data_Function_const'])))(\Data\Lazy\majData_majLazy_force($l_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -611,13 +631,13 @@ $GLOBALS['Data_Lazy_traversable1Lazy'] = ["traverse1" => (function() {
 }];
 
 // Data_Lazy_extendLazy
-$GLOBALS['Data_Lazy_extendLazy'] = ["extend" => (function() {
+$GLOBALS['Data_Lazy_extendLazy'] = (object)["extend" => (function() {
   $__fn = function($f_0, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Lazy_defer'])(function($v_2) use ($f_0, $x_1) {
+  $__res = \Data\Lazy\majData_majLazy_defer(function($v_2) use ($f_0, $x_1) {
   $__num = \func_num_args();
   $__res = ($f_0)($x_1);
   goto __end;;
@@ -644,13 +664,13 @@ function majData_majLazy_eqmajLazy($dictEq_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["eq" => (function() use ($dictEq_0) {
+  $__res = (object)["eq" => (function() use ($dictEq_0) {
   $__fn = function($x_1, $y_2 = null) use ($dictEq_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictEq_0)['eq'])(($GLOBALS['Data_Lazy_force'])($x_1), ($GLOBALS['Data_Lazy_force'])($y_2));
+  $__res = ((($dictEq_0)->{'eq'})(\Data\Lazy\majData_majLazy_force($x_1)))(\Data\Lazy\majData_majLazy_force($y_2));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -670,27 +690,27 @@ function majData_majLazy_ordmajLazy($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($dictOrd_0)['Eq0'])(null);
-  $eqLazy1_2_1 = ["eq" => (function() use ($__local_var_1_0) {
+  $__local_var_1_0 = (($dictOrd_0)->{'Eq0'})(null);
+  $eqLazy1_2_1 = (object)["eq" => (function() use ($__local_var_1_0) {
   $__fn = function($x_2, $y_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_1_0)['eq'])(($GLOBALS['Data_Lazy_force'])($x_2), ($GLOBALS['Data_Lazy_force'])($y_3));
+  $__res = ((($__local_var_1_0)->{'eq'})(\Data\Lazy\majData_majLazy_force($x_2)))(\Data\Lazy\majData_majLazy_force($y_3));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = ["compare" => (function() use ($dictOrd_0) {
+  $__res = (object)["compare" => (function() use ($dictOrd_0) {
   $__fn = function($x_3, $y_4 = null) use ($dictOrd_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictOrd_0)['compare'])(($GLOBALS['Data_Lazy_force'])($x_3), ($GLOBALS['Data_Lazy_force'])($y_4));
+  $__res = ((($dictOrd_0)->{'compare'})(\Data\Lazy\majData_majLazy_force($x_3)))(\Data\Lazy\majData_majLazy_force($y_4));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -710,13 +730,13 @@ function majData_majLazy_ordmajLazy($dictOrd_0) {
 $GLOBALS['Data_Lazy_ordLazy'] = __NAMESPACE__ . '\\majData_majLazy_ordmajLazy';
 
 // Data_Lazy_eq1Lazy
-$GLOBALS['Data_Lazy_eq1Lazy'] = ["eq1" => (function() {
+$GLOBALS['Data_Lazy_eq1Lazy'] = (object)["eq1" => (function() {
   $__fn = function($dictEq_0, $x_1 = null, $y_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictEq_0)['eq'])(($GLOBALS['Data_Lazy_force'])($x_1), ($GLOBALS['Data_Lazy_force'])($y_2));
+  $__res = ((($dictEq_0)->{'eq'})(\Data\Lazy\majData_majLazy_force($x_1)))(\Data\Lazy\majData_majLazy_force($y_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -725,9 +745,9 @@ $GLOBALS['Data_Lazy_eq1Lazy'] = ["eq1" => (function() {
 })()];
 
 // Data_Lazy_ord1Lazy
-$GLOBALS['Data_Lazy_ord1Lazy'] = ["compare1" => function($dictOrd_0) {
+$GLOBALS['Data_Lazy_ord1Lazy'] = (object)["compare1" => function($dictOrd_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Lazy_ordLazy'])($dictOrd_0))['compare'];
+  $__res = (\Data\Lazy\majData_majLazy_ordmajLazy($dictOrd_0))->{'compare'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -740,7 +760,7 @@ $GLOBALS['Data_Lazy_ord1Lazy'] = ["compare1" => function($dictOrd_0) {
 }];
 
 // Data_Lazy_comonadLazy
-$GLOBALS['Data_Lazy_comonadLazy'] = ["extract" => $GLOBALS['Data_Lazy_force'], "Extend0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Lazy_comonadLazy'] = (object)["extract" => $GLOBALS['Data_Lazy_force'], "Extend0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Lazy_extendLazy'];
   goto __end;;
@@ -755,8 +775,8 @@ function majData_majLazy_commutativemajRingmajLazy($dictCommutativeRing_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $ringLazy1_1_0 = ($GLOBALS['Data_Lazy_ringLazy'])((($dictCommutativeRing_0)['Ring0'])(null));
-  $__res = ["Ring0" => function($_dollar__unused_2) use ($ringLazy1_1_0) {
+  $ringLazy1_1_0 = \Data\Lazy\majData_majLazy_ringmajLazy((($dictCommutativeRing_0)->{'Ring0'})(null));
+  $__res = (object)["Ring0" => function($_dollar__unused_2) use ($ringLazy1_1_0) {
   $__num = \func_num_args();
   $__res = $ringLazy1_1_0;
   goto __end;;
@@ -776,16 +796,16 @@ function majData_majLazy_euclideanmajRingmajLazy($dictEuclideanRing_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $ringLazy1_1_0 = ($GLOBALS['Data_Lazy_ringLazy'])((((($dictEuclideanRing_0)['CommutativeRing0'])(null))['Ring0'])(null));
-  $__res = ["degree" => ($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictEuclideanRing_0)['degree'], $GLOBALS['Data_Lazy_force']), "div" => (function() use ($dictEuclideanRing_0) {
+  $ringLazy1_1_0 = \Data\Lazy\majData_majLazy_ringmajLazy((((($dictEuclideanRing_0)->{'CommutativeRing0'})(null))->{'Ring0'})(null));
+  $__res = (object)["degree" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictEuclideanRing_0)->{'degree'}))($GLOBALS['Data_Lazy_force']), "div" => (function() use ($dictEuclideanRing_0) {
   $__fn = function($a_2, $b_3 = null) use ($dictEuclideanRing_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Lazy_defer'])(function($v_4) use ($a_2, $b_3, $dictEuclideanRing_0) {
+  $__res = \Data\Lazy\majData_majLazy_defer(function($v_4) use ($a_2, $b_3, $dictEuclideanRing_0) {
   $__num = \func_num_args();
-  $__res = (($dictEuclideanRing_0)['div'])(($GLOBALS['Data_Lazy_force'])($a_2), ($GLOBALS['Data_Lazy_force'])($b_3));
+  $__res = ((($dictEuclideanRing_0)->{'div'})(\Data\Lazy\majData_majLazy_force($a_2)))(\Data\Lazy\majData_majLazy_force($b_3));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -801,9 +821,9 @@ function majData_majLazy_euclideanmajRingmajLazy($dictEuclideanRing_0) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Lazy_defer'])(function($v_4) use ($a_2, $b_3, $dictEuclideanRing_0) {
+  $__res = \Data\Lazy\majData_majLazy_defer(function($v_4) use ($a_2, $b_3, $dictEuclideanRing_0) {
   $__num = \func_num_args();
-  $__res = (($dictEuclideanRing_0)['mod'])(($GLOBALS['Data_Lazy_force'])($a_2), ($GLOBALS['Data_Lazy_force'])($b_3));
+  $__res = ((($dictEuclideanRing_0)->{'mod'})(\Data\Lazy\majData_majLazy_force($a_2)))(\Data\Lazy\majData_majLazy_force($b_3));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -815,7 +835,7 @@ function majData_majLazy_euclideanmajRingmajLazy($dictEuclideanRing_0) {
   return $__fn;
 })(), "CommutativeRing0" => function($_dollar__unused_2) use ($ringLazy1_1_0) {
   $__num = \func_num_args();
-  $__res = ["Ring0" => function($_dollar__unused_3) use ($ringLazy1_1_0) {
+  $__res = (object)["Ring0" => function($_dollar__unused_3) use ($ringLazy1_1_0) {
   $__num = \func_num_args();
   $__res = $ringLazy1_1_0;
   goto __end;;
@@ -839,16 +859,16 @@ function majData_majLazy_boundedmajLazy($dictBounded_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $top_1_0 = ($dictBounded_0)['top'];
-  $bottom_2_1 = ($dictBounded_0)['bottom'];
-  $ordLazy1_3_2 = ($GLOBALS['Data_Lazy_ordLazy'])((($dictBounded_0)['Ord0'])(null));
-  $__res = ["top" => ($GLOBALS['Data_Lazy_defer'])(function($v_4) use ($top_1_0) {
+  $top_1_0 = ($dictBounded_0)->{'top'};
+  $bottom_2_1 = ($dictBounded_0)->{'bottom'};
+  $ordLazy1_3_2 = \Data\Lazy\majData_majLazy_ordmajLazy((($dictBounded_0)->{'Ord0'})(null));
+  $__res = (object)["top" => \Data\Lazy\majData_majLazy_defer(function($v_4) use ($top_1_0) {
   $__num = \func_num_args();
   $__res = $top_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}), "bottom" => ($GLOBALS['Data_Lazy_defer'])(function($v_4) use ($bottom_2_1) {
+}), "bottom" => \Data\Lazy\majData_majLazy_defer(function($v_4) use ($bottom_2_1) {
   $__num = \func_num_args();
   $__res = $bottom_2_1;
   goto __end;;
@@ -868,15 +888,15 @@ function majData_majLazy_boundedmajLazy($dictBounded_0) {
 $GLOBALS['Data_Lazy_boundedLazy'] = __NAMESPACE__ . '\\majData_majLazy_boundedmajLazy';
 
 // Data_Lazy_applyLazy
-$GLOBALS['Data_Lazy_applyLazy'] = ["apply" => (function() {
+$GLOBALS['Data_Lazy_applyLazy'] = (object)["apply" => (function() {
   $__fn = function($f_0, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Lazy_defer'])(function($v_2) use ($f_0, $x_1) {
+  $__res = \Data\Lazy\majData_majLazy_defer(function($v_2) use ($f_0, $x_1) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Lazy_force'])($f_0, ($GLOBALS['Data_Lazy_force'])($x_1));
+  $__res = (\Data\Lazy\majData_majLazy_force($f_0))(\Data\Lazy\majData_majLazy_force($x_1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -895,15 +915,15 @@ $GLOBALS['Data_Lazy_applyLazy'] = ["apply" => (function() {
 }];
 
 // Data_Lazy_bindLazy
-$GLOBALS['Data_Lazy_bindLazy'] = ["bind" => (function() {
+$GLOBALS['Data_Lazy_bindLazy'] = (object)["bind" => (function() {
   $__fn = function($l_0, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Lazy_defer'])(function($v_2) use ($f_1, $l_0) {
+  $__res = \Data\Lazy\majData_majLazy_defer(function($v_2) use ($f_1, $l_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Lazy_force'])(($f_1)(($GLOBALS['Data_Lazy_force'])($l_0)));
+  $__res = \Data\Lazy\majData_majLazy_force(($f_1)(\Data\Lazy\majData_majLazy_force($l_0)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -928,19 +948,19 @@ function majData_majLazy_heytingmajAlgebramajLazy($dictHeytingAlgebra_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $ff_1_0 = ($dictHeytingAlgebra_0)['ff'];
-  $tt_2_1 = ($dictHeytingAlgebra_0)['tt'];
-  $implies_3_2 = ($dictHeytingAlgebra_0)['implies'];
-  $conj_4_3 = ($dictHeytingAlgebra_0)['conj'];
-  $disj_5_4 = ($dictHeytingAlgebra_0)['disj'];
-  $not_6_5 = ($dictHeytingAlgebra_0)['not'];
-  $__res = ["ff" => ($GLOBALS['Data_Lazy_defer'])(function($v_7) use ($ff_1_0) {
+  $ff_1_0 = ($dictHeytingAlgebra_0)->{'ff'};
+  $tt_2_1 = ($dictHeytingAlgebra_0)->{'tt'};
+  $implies_3_2 = ($dictHeytingAlgebra_0)->{'implies'};
+  $conj_4_3 = ($dictHeytingAlgebra_0)->{'conj'};
+  $disj_5_4 = ($dictHeytingAlgebra_0)->{'disj'};
+  $not_6_5 = ($dictHeytingAlgebra_0)->{'not'};
+  $__res = (object)["ff" => \Data\Lazy\majData_majLazy_defer(function($v_7) use ($ff_1_0) {
   $__num = \func_num_args();
   $__res = $ff_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}), "tt" => ($GLOBALS['Data_Lazy_defer'])(function($v_7) use ($tt_2_1) {
+}), "tt" => \Data\Lazy\majData_majLazy_defer(function($v_7) use ($tt_2_1) {
   $__num = \func_num_args();
   $__res = $tt_2_1;
   goto __end;;
@@ -952,7 +972,7 @@ function majData_majLazy_heytingmajAlgebramajLazy($dictHeytingAlgebra_0) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Lazy_applyLazy'])['apply'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])($implies_3_2, $a_7), $b_8);
+  $__res = ((($GLOBALS['Data_Lazy_applyLazy'])->{'apply'})(((($GLOBALS['Data_Lazy_functorLazy'])->{'map'})($implies_3_2))($a_7)))($b_8);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -964,7 +984,7 @@ function majData_majLazy_heytingmajAlgebramajLazy($dictHeytingAlgebra_0) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Lazy_applyLazy'])['apply'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])($conj_4_3, $a_7), $b_8);
+  $__res = ((($GLOBALS['Data_Lazy_applyLazy'])->{'apply'})(((($GLOBALS['Data_Lazy_functorLazy'])->{'map'})($conj_4_3))($a_7)))($b_8);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -976,7 +996,7 @@ function majData_majLazy_heytingmajAlgebramajLazy($dictHeytingAlgebra_0) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Lazy_applyLazy'])['apply'])((($GLOBALS['Data_Lazy_functorLazy'])['map'])($disj_5_4, $a_7), $b_8);
+  $__res = ((($GLOBALS['Data_Lazy_applyLazy'])->{'apply'})(((($GLOBALS['Data_Lazy_functorLazy'])->{'map'})($disj_5_4))($a_7)))($b_8);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -984,7 +1004,7 @@ function majData_majLazy_heytingmajAlgebramajLazy($dictHeytingAlgebra_0) {
   return $__fn;
 })(), "not" => function($a_7) use ($not_6_5) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Lazy_functorLazy'])['map'])($not_6_5, $a_7);
+  $__res = ((($GLOBALS['Data_Lazy_functorLazy'])->{'map'})($not_6_5))($a_7);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1002,8 +1022,8 @@ function majData_majLazy_booleanmajAlgebramajLazy($dictBooleanAlgebra_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $heytingAlgebraLazy1_1_0 = ($GLOBALS['Data_Lazy_heytingAlgebraLazy'])((($dictBooleanAlgebra_0)['HeytingAlgebra0'])(null));
-  $__res = ["HeytingAlgebra0" => function($_dollar__unused_2) use ($heytingAlgebraLazy1_1_0) {
+  $heytingAlgebraLazy1_1_0 = \Data\Lazy\majData_majLazy_heytingmajAlgebramajLazy((($dictBooleanAlgebra_0)->{'HeytingAlgebra0'})(null));
+  $__res = (object)["HeytingAlgebra0" => function($_dollar__unused_2) use ($heytingAlgebraLazy1_1_0) {
   $__num = \func_num_args();
   $__res = $heytingAlgebraLazy1_1_0;
   goto __end;;
@@ -1017,9 +1037,9 @@ function majData_majLazy_booleanmajAlgebramajLazy($dictBooleanAlgebra_0) {
 $GLOBALS['Data_Lazy_booleanAlgebraLazy'] = __NAMESPACE__ . '\\majData_majLazy_booleanmajAlgebramajLazy';
 
 // Data_Lazy_applicativeLazy
-$GLOBALS['Data_Lazy_applicativeLazy'] = ["pure" => function($a_0) {
+$GLOBALS['Data_Lazy_applicativeLazy'] = (object)["pure" => function($a_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Lazy_defer'])(function($v_1) use ($a_0) {
+  $__res = \Data\Lazy\majData_majLazy_defer(function($v_1) use ($a_0) {
   $__num = \func_num_args();
   $__res = $a_0;
   goto __end;;
@@ -1038,7 +1058,7 @@ $GLOBALS['Data_Lazy_applicativeLazy'] = ["pure" => function($a_0) {
 }];
 
 // Data_Lazy_monadLazy
-$GLOBALS['Data_Lazy_monadLazy'] = ["Applicative0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Lazy_monadLazy'] = (object)["Applicative0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Lazy_applicativeLazy'];
   goto __end;;

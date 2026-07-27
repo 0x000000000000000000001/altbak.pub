@@ -275,7 +275,7 @@ function majData_majNewtype_over($_dollar__unused_0, $_dollar__unused_1 = null, 
 $GLOBALS['Data_Newtype_over'] = __NAMESPACE__ . '\\majData_majNewtype_over';
 
 // Data_Newtype_newtypeMultiplicative
-$GLOBALS['Data_Newtype_newtypeMultiplicative'] = ["Coercible0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Newtype_newtypeMultiplicative'] = (object)["Coercible0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = null;
   goto __end;;
@@ -284,7 +284,7 @@ $GLOBALS['Data_Newtype_newtypeMultiplicative'] = ["Coercible0" => function($_dol
 }];
 
 // Data_Newtype_newtypeLast
-$GLOBALS['Data_Newtype_newtypeLast'] = ["Coercible0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Newtype_newtypeLast'] = (object)["Coercible0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = null;
   goto __end;;
@@ -293,7 +293,7 @@ $GLOBALS['Data_Newtype_newtypeLast'] = ["Coercible0" => function($_dollar__unuse
 }];
 
 // Data_Newtype_newtypeFirst
-$GLOBALS['Data_Newtype_newtypeFirst'] = ["Coercible0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Newtype_newtypeFirst'] = (object)["Coercible0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = null;
   goto __end;;
@@ -302,7 +302,7 @@ $GLOBALS['Data_Newtype_newtypeFirst'] = ["Coercible0" => function($_dollar__unus
 }];
 
 // Data_Newtype_newtypeEndo
-$GLOBALS['Data_Newtype_newtypeEndo'] = ["Coercible0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Newtype_newtypeEndo'] = (object)["Coercible0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = null;
   goto __end;;
@@ -311,7 +311,7 @@ $GLOBALS['Data_Newtype_newtypeEndo'] = ["Coercible0" => function($_dollar__unuse
 }];
 
 // Data_Newtype_newtypeDual
-$GLOBALS['Data_Newtype_newtypeDual'] = ["Coercible0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Newtype_newtypeDual'] = (object)["Coercible0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = null;
   goto __end;;
@@ -320,7 +320,7 @@ $GLOBALS['Data_Newtype_newtypeDual'] = ["Coercible0" => function($_dollar__unuse
 }];
 
 // Data_Newtype_newtypeDisj
-$GLOBALS['Data_Newtype_newtypeDisj'] = ["Coercible0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Newtype_newtypeDisj'] = (object)["Coercible0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = null;
   goto __end;;
@@ -329,7 +329,7 @@ $GLOBALS['Data_Newtype_newtypeDisj'] = ["Coercible0" => function($_dollar__unuse
 }];
 
 // Data_Newtype_newtypeConj
-$GLOBALS['Data_Newtype_newtypeConj'] = ["Coercible0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Newtype_newtypeConj'] = (object)["Coercible0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = null;
   goto __end;;
@@ -338,7 +338,7 @@ $GLOBALS['Data_Newtype_newtypeConj'] = ["Coercible0" => function($_dollar__unuse
 }];
 
 // Data_Newtype_newtypeAdditive
-$GLOBALS['Data_Newtype_newtypeAdditive'] = ["Coercible0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Newtype_newtypeAdditive'] = (object)["Coercible0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = null;
   goto __end;;

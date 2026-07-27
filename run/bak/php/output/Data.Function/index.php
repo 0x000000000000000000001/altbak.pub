@@ -103,14 +103,14 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 // Data_Function_lessThanOrEq
 $GLOBALS['Data_Function_lessThanOrEq'] = (function() use (&$__fn) {
-$__local_var_0_0 = ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT());
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
 return (function() use ($__local_var_0_0) {
   $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ( ! ($__local_var_0_0)($a1_1, $a2_2) instanceof \Data\Ordering\Data_Ordering_GT);
+  $__res = ( ! (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_GT);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -126,7 +126,7 @@ function majData_majFunction_on($f_0, $g_1 = null, $x_2 = null, $y_3 = null) {
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ($f_0)(($g_1)($x_2), ($g_1)($y_3));
+  $__res = (($f_0)(($g_1)($x_2)))(($g_1)($y_3));
   goto __end;;
   __end:
   return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -140,7 +140,7 @@ function majData_majFunction_flip($f_0, $b_1 = null, $a_2 = null) {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($f_0)($a_2, $b_1);
+  $__res = (($f_0)($a_2))($b_1);
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -181,7 +181,7 @@ function majData_majFunction_applymajN($f_0) {
   $n_2 = $__tco_var_go__1_0_0_n_2;
   $acc_3 = $__tco_var_go__1_0_0_acc_3;
   $__t2 = null;;
-  if (($GLOBALS['Data_Function_lessThanOrEq'])($n_2, 0)) {
+  if ((($GLOBALS['Data_Function_lessThanOrEq'])($n_2))(0)) {
 $__t2 = $acc_3;
 goto end_branch_2;;
 };

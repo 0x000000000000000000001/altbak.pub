@@ -18,15 +18,15 @@ return Call_mod(dict_0_box)
 	return cache_mod
 }
 
-var cache_mod__gopurs_runtime_Value_3400734130 gopurs_runtime.Value
-var once_mod__gopurs_runtime_Value_3400734130 sync.Once
-func Get_mod__gopurs_runtime_Value_3400734130() gopurs_runtime.Value {
-	once_mod__gopurs_runtime_Value_3400734130.Do(func() {
-		cache_mod__gopurs_runtime_Value_3400734130 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_mod__gopurs_runtime_Value_3400734130(dict_0_box)
+var cache_mod__func_gopurs_runtime_Value__interface____interface____interface___3400734130 gopurs_runtime.Value
+var once_mod__func_gopurs_runtime_Value__interface____interface____interface___3400734130 sync.Once
+func Get_mod__func_gopurs_runtime_Value__interface____interface____interface___3400734130() gopurs_runtime.Value {
+	once_mod__func_gopurs_runtime_Value__interface____interface____interface___3400734130.Do(func() {
+		cache_mod__func_gopurs_runtime_Value__interface____interface____interface___3400734130 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mod__func_gopurs_runtime_Value__interface____interface____interface___3400734130(dict_0_box)
 })
 	})
-	return cache_mod__gopurs_runtime_Value_3400734130
+	return cache_mod__func_gopurs_runtime_Value__interface____interface____interface___3400734130
 }
 
 var cache_gcd gopurs_runtime.Value
@@ -40,28 +40,28 @@ return Call_gcd(dictEq_0_box, dictEuclideanRing_1_box)
 	return cache_gcd
 }
 
-var cache_gcd__gopurs_runtime_Value_1405932337 gopurs_runtime.Value
-var once_gcd__gopurs_runtime_Value_1405932337 sync.Once
-func Get_gcd__gopurs_runtime_Value_1405932337() gopurs_runtime.Value {
-	once_gcd__gopurs_runtime_Value_1405932337.Do(func() {
-		cache_gcd__gopurs_runtime_Value_1405932337 = gopurs_runtime.Func2(func(dictEq_0_box gopurs_runtime.Value, dictEuclideanRing_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_gcd__gopurs_runtime_Value_1405932337(dictEq_0_box, dictEuclideanRing_1_box)
+var cache_gcd__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface____interface___1405932337 gopurs_runtime.Value
+var once_gcd__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface____interface___1405932337 sync.Once
+func Get_gcd__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface____interface___1405932337() gopurs_runtime.Value {
+	once_gcd__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface____interface___1405932337.Do(func() {
+		cache_gcd__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface____interface___1405932337 = gopurs_runtime.Func2(func(dictEq_0_box gopurs_runtime.Value, dictEuclideanRing_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_gcd__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface____interface___1405932337(dictEq_0_box, dictEuclideanRing_1_box)
 })
 	})
-	return cache_gcd__gopurs_runtime_Value_1405932337
+	return cache_gcd__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface____interface___1405932337
 }
 
 var cache_euclideanRingNumber gopurs_runtime.Value
 var once_euclideanRingNumber sync.Once
 func Get_euclideanRingNumber() gopurs_runtime.Value {
 	once_euclideanRingNumber.Do(func() {
-		cache_euclideanRingNumber = gopurs_runtime.RecordDict4("CommutativeRing0", "degree", "div", "mod", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_euclideanRingNumber = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict4("CommutativeRing0", "degree", "div", "mod", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_CommutativeRing.Get_commutativeRingNumber()
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Int(1)
 }), Get_numDiv(), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Float(0.0)
-}))
+}))))
 	})
 	return cache_euclideanRingNumber
 }
@@ -70,9 +70,9 @@ var cache_euclideanRingInt gopurs_runtime.Value
 var once_euclideanRingInt sync.Once
 func Get_euclideanRingInt() gopurs_runtime.Value {
 	once_euclideanRingInt.Do(func() {
-		cache_euclideanRingInt = gopurs_runtime.RecordDict4("CommutativeRing0", "degree", "div", "mod", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_euclideanRingInt = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict4("CommutativeRing0", "degree", "div", "mod", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_CommutativeRing.Get_commutativeRingInt()
-}), Get_intDegree(), Get_intDiv(), Get_intMod())
+}), Get_intDegree(), Get_intDiv(), Get_intMod())))
 	})
 	return cache_euclideanRingInt
 }
@@ -88,15 +88,15 @@ return Call_div(dict_0_box)
 	return cache_div
 }
 
-var cache_div__gopurs_runtime_Value_3400734130 gopurs_runtime.Value
-var once_div__gopurs_runtime_Value_3400734130 sync.Once
-func Get_div__gopurs_runtime_Value_3400734130() gopurs_runtime.Value {
-	once_div__gopurs_runtime_Value_3400734130.Do(func() {
-		cache_div__gopurs_runtime_Value_3400734130 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_div__gopurs_runtime_Value_3400734130(dict_0_box)
+var cache_div__func_gopurs_runtime_Value__interface____interface____interface___3400734130 gopurs_runtime.Value
+var once_div__func_gopurs_runtime_Value__interface____interface____interface___3400734130 sync.Once
+func Get_div__func_gopurs_runtime_Value__interface____interface____interface___3400734130() gopurs_runtime.Value {
+	once_div__func_gopurs_runtime_Value__interface____interface____interface___3400734130.Do(func() {
+		cache_div__func_gopurs_runtime_Value__interface____interface____interface___3400734130 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_div__func_gopurs_runtime_Value__interface____interface____interface___3400734130(dict_0_box)
 })
 	})
-	return cache_div__gopurs_runtime_Value_3400734130
+	return cache_div__func_gopurs_runtime_Value__interface____interface____interface___3400734130
 }
 
 var cache_lcm gopurs_runtime.Value
@@ -121,13 +121,57 @@ return Call_degree(dict_0_box)
 	return cache_degree
 }
 
+var cache_intDegree gopurs_runtime.Value
+var once_intDegree sync.Once
+func Get_intDegree() gopurs_runtime.Value {
+	once_intDegree.Do(func() {
+		cache_intDegree = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Int(IntDegree(arg0.IntVal))
+})
+	})
+	return cache_intDegree
+}
+
+var cache_intDiv gopurs_runtime.Value
+var once_intDiv sync.Once
+func Get_intDiv() gopurs_runtime.Value {
+	once_intDiv.Do(func() {
+		cache_intDiv = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Int(IntDiv(arg0.IntVal, arg1.IntVal))
+})
+	})
+	return cache_intDiv
+}
+
+var cache_intMod gopurs_runtime.Value
+var once_intMod sync.Once
+func Get_intMod() gopurs_runtime.Value {
+	once_intMod.Do(func() {
+		cache_intMod = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Int(IntMod(arg0.IntVal, arg1.IntVal))
+})
+	})
+	return cache_intMod
+}
+
+var cache_numDiv gopurs_runtime.Value
+var once_numDiv sync.Once
+func Get_numDiv() gopurs_runtime.Value {
+	once_numDiv.Do(func() {
+		cache_numDiv = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float(NumDiv(arg0.FloatVal(), arg1.FloatVal()))
+})
+	})
+	return cache_numDiv
+}
+
 func Call_mod(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "mod")
 }
 
-func Call_mod__gopurs_runtime_Value_3400734130(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_mod__func_gopurs_runtime_Value__interface____interface____interface___3400734130(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "mod")
@@ -158,7 +202,7 @@ return __t1
 })
 }
 
-func Call_gcd__gopurs_runtime_Value_1405932337(dictEq_0_loop gopurs_runtime.Value, dictEuclideanRing_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_gcd__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface____interface___1405932337(dictEq_0_loop gopurs_runtime.Value, dictEuclideanRing_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
 _ = dictEq_0
 var dictEuclideanRing_1 gopurs_runtime.Value = dictEuclideanRing_1_loop
@@ -189,7 +233,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "div")
 }
 
-func Call_div__gopurs_runtime_Value_3400734130(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_div__func_gopurs_runtime_Value__interface____interface____interface___3400734130(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "div")
@@ -228,20 +272,4 @@ func Call_degree(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "degree")
-}
-
-func Get_intDegree() gopurs_runtime.Value {
-	return _Gopurs_IntDegree
-}
-
-func Get_intDiv() gopurs_runtime.Value {
-	return _Gopurs_IntDiv
-}
-
-func Get_intMod() gopurs_runtime.Value {
-	return _Gopurs_IntMod
-}
-
-func Get_numDiv() gopurs_runtime.Value {
-	return _Gopurs_NumDiv
 }

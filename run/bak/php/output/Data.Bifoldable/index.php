@@ -135,21 +135,21 @@ $GLOBALS['Data_Bifoldable_identity'] = __NAMESPACE__ . '\\majData_majBifoldable_
 
 // Data_Bifoldable_monoidEndo
 $GLOBALS['Data_Bifoldable_monoidEndo'] = (function() use (&$__fn) {
-$__local_var_0_0 = (($GLOBALS['Control_Category_categoryFn'])['Semigroupoid0'])(null);
-$semigroupEndo1_1_1 = ["append" => (function() use ($__local_var_0_0) {
+$__local_var_0_0 = (($GLOBALS['Control_Category_categoryFn'])->{'Semigroupoid0'})(null);
+$semigroupEndo1_1_1 = (object)["append" => (function() use ($__local_var_0_0) {
   $__fn = function($v_1, $v1_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_0_0)['compose'])($v_1, $v1_2);
+  $__res = ((($__local_var_0_0)->{'compose'})($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-return ["mempty" => function($x_2) {
+return (object)["mempty" => function($x_2) {
   $__num = \func_num_args();
   $__res = $x_2;
   goto __end;;
@@ -166,21 +166,21 @@ return ["mempty" => function($x_2) {
 
 // Data_Bifoldable_monoidDual
 $GLOBALS['Data_Bifoldable_monoidDual'] = (function() use (&$__fn) {
-$__local_var_0_0 = (($GLOBALS['Data_Bifoldable_monoidEndo'])['Semigroup0'])(null);
-$semigroupDual1_1_1 = ["append" => (function() use ($__local_var_0_0) {
+$__local_var_0_0 = (($GLOBALS['Data_Bifoldable_monoidEndo'])->{'Semigroup0'})(null);
+$semigroupDual1_1_1 = (object)["append" => (function() use ($__local_var_0_0) {
   $__fn = function($v_1, $v1_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_0_0)['append'])($v1_2, $v_1);
+  $__res = ((($__local_var_0_0)->{'append'})($v1_2))($v_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-return ["mempty" => ($GLOBALS['Data_Bifoldable_monoidEndo'])['mempty'], "Semigroup0" => function($_dollar__unused_2) use ($semigroupDual1_1_1) {
+return (object)["mempty" => ($GLOBALS['Data_Bifoldable_monoidEndo'])->{'mempty'}, "Semigroup0" => function($_dollar__unused_2) use ($semigroupDual1_1_1) {
   $__num = \func_num_args();
   $__res = $semigroupDual1_1_1;
   goto __end;;
@@ -196,7 +196,7 @@ function majData_majBifoldable_bifoldr($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['bifoldr'];
+  $__res = ($dict_0)->{'bifoldr'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -210,20 +210,20 @@ function majData_majBifoldable_bitraverse_($dictBifoldable_0, $dictApplicative_1
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_2_0 = (($dictApplicative_1)['Apply0'])(null);
+  $__local_var_2_0 = (($dictApplicative_1)->{'Apply0'})(null);
   $applySecond_3_1 = (function() use ($__local_var_2_0) {
   $__fn = function($a_3, $b_4 = null) use ($__local_var_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_2_0)['apply'])((((($__local_var_2_0)['Functor0'])(null))['map'])(function($v_5) {
+  $__res = ((($__local_var_2_0)->{'apply'})(((((($__local_var_2_0)->{'Functor0'})(null))->{'map'})(function($v_5) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Apply_identity'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, $a_3), $b_4);
+}))($a_3)))($b_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -236,7 +236,7 @@ function majData_majBifoldable_bitraverse_($dictBifoldable_0, $dictApplicative_1
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictBifoldable_0)['bifoldr'])(($GLOBALS['Control_Semigroupoid_composeImpl'])($applySecond_3_1, $f_4), ($GLOBALS['Control_Semigroupoid_composeImpl'])($applySecond_3_1, $g_5), (($dictApplicative_1)['pure'])($GLOBALS['Data_Unit_unit']));
+  $__res = (((($dictBifoldable_0)->{'bifoldr'})((($GLOBALS['Control_Semigroupoid_composeImpl'])($applySecond_3_1))($f_4)))((($GLOBALS['Control_Semigroupoid_composeImpl'])($applySecond_3_1))($g_5)))((($dictApplicative_1)->{'pure'})($GLOBALS['Data_Unit_unit']));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -256,14 +256,14 @@ function majData_majBifoldable_bifor_($dictBifoldable_0, $dictApplicative_1 = nu
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $bitraverse_2_2_0 = ($GLOBALS['Data_Bifoldable_bitraverse_'])($dictBifoldable_0, $dictApplicative_1);
+  $bitraverse_2_2_0 = (($GLOBALS['Data_Bifoldable_bitraverse_'])($dictBifoldable_0))($dictApplicative_1);
   $__res = (function() use ($bitraverse_2_2_0) {
   $__fn = function($t_3, $f_4 = null, $g_5 = null) use ($bitraverse_2_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($bitraverse_2_2_0)($f_4, $g_5, $t_3);
+  $__res = ((($bitraverse_2_2_0)($f_4))($g_5))($t_3);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -283,7 +283,7 @@ function majData_majBifoldable_bisequence_($dictBifoldable_0, $dictApplicative_1
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Bifoldable_bitraverse_'])($dictBifoldable_0, $dictApplicative_1, $GLOBALS['Data_Bifoldable_identity'], $GLOBALS['Data_Bifoldable_identity']);
+  $__res = (((($GLOBALS['Data_Bifoldable_bitraverse_'])($dictBifoldable_0))($dictApplicative_1))($GLOBALS['Data_Bifoldable_identity']))($GLOBALS['Data_Bifoldable_identity']);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -297,7 +297,7 @@ function majData_majBifoldable_bifoldl($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['bifoldl'];
+  $__res = ($dict_0)->{'bifoldl'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -305,13 +305,13 @@ function majData_majBifoldable_bifoldl($dict_0) {
 $GLOBALS['Data_Bifoldable_bifoldl'] = __NAMESPACE__ . '\\majData_majBifoldable_bifoldl';
 
 // Data_Bifoldable_bifoldableTuple
-$GLOBALS['Data_Bifoldable_bifoldableTuple'] = ["bifoldMap" => (function() {
+$GLOBALS['Data_Bifoldable_bifoldableTuple'] = (object)["bifoldMap" => (function() {
   $__fn = function($dictMonoid_0, $f_1 = null, $g_2 = null, $v_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (((($dictMonoid_0)['Semigroup0'])(null))['append'])(($f_1)(($v_3)->{'value0'}), ($g_2)(($v_3)->{'value1'}));
+  $__res = ((((($dictMonoid_0)->{'Semigroup0'})(null))->{'append'})(($f_1)(($v_3)->{'value0'})))(($g_2)(($v_3)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -323,7 +323,7 @@ $GLOBALS['Data_Bifoldable_bifoldableTuple'] = ["bifoldMap" => (function() {
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ($f_0)(($v_3)->{'value0'}, ($g_1)(($v_3)->{'value1'}, $z_2));
+  $__res = (($f_0)(($v_3)->{'value0'}))((($g_1)(($v_3)->{'value1'}))($z_2));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -335,7 +335,7 @@ $GLOBALS['Data_Bifoldable_bifoldableTuple'] = ["bifoldMap" => (function() {
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ($g_1)(($f_0)($z_2, ($v_3)->{'value0'}), ($v_3)->{'value1'});
+  $__res = (($g_1)((($f_0)($z_2))(($v_3)->{'value0'})))(($v_3)->{'value1'});
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -350,13 +350,13 @@ function majData_majBifoldable_bifoldablemajJoker($dictFoldable_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["bifoldr" => (function() use ($dictFoldable_0) {
+  $__res = (object)["bifoldr" => (function() use ($dictFoldable_0) {
   $__fn = function($v_1, $r_2 = null, $u_3 = null, $v1_4 = null) use ($dictFoldable_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($dictFoldable_0)['foldr'])($r_2, $u_3, $v1_4);
+  $__res = (((($dictFoldable_0)->{'foldr'})($r_2))($u_3))($v1_4);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -368,7 +368,7 @@ function majData_majBifoldable_bifoldablemajJoker($dictFoldable_0) {
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($dictFoldable_0)['foldl'])($r_2, $u_3, $v1_4);
+  $__res = (((($dictFoldable_0)->{'foldl'})($r_2))($u_3))($v1_4);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -376,14 +376,14 @@ function majData_majBifoldable_bifoldablemajJoker($dictFoldable_0) {
   return $__fn;
 })(), "bifoldMap" => function($dictMonoid_1) use ($dictFoldable_0) {
   $__num = \func_num_args();
-  $foldMap1_2_0 = (($dictFoldable_0)['foldMap'])($dictMonoid_1);
+  $foldMap1_2_0 = (($dictFoldable_0)->{'foldMap'})($dictMonoid_1);
   $__res = (function() use ($foldMap1_2_0) {
   $__fn = function($v_3, $r_4 = null, $v1_5 = null) use ($foldMap1_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($foldMap1_2_0)($r_4, $v1_5);
+  $__res = (($foldMap1_2_0)($r_4))($v1_5);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -401,7 +401,7 @@ function majData_majBifoldable_bifoldablemajJoker($dictFoldable_0) {
 $GLOBALS['Data_Bifoldable_bifoldableJoker'] = __NAMESPACE__ . '\\majData_majBifoldable_bifoldablemajJoker';
 
 // Data_Bifoldable_bifoldableEither
-$GLOBALS['Data_Bifoldable_bifoldableEither'] = ["bifoldr" => (function() {
+$GLOBALS['Data_Bifoldable_bifoldableEither'] = (object)["bifoldr" => (function() {
   $__fn = function($v_0, $v1_1 = null, $v2_2 = null, $v3_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
@@ -409,11 +409,11 @@ $GLOBALS['Data_Bifoldable_bifoldableEither'] = ["bifoldr" => (function() {
   }
   $__t0 = null;;
   if ($v3_3 instanceof \Data\Either\Data_Either_Left) {
-$__t0 = ($v_0)(($v3_3)->{'value0'}, $v2_2);
+$__t0 = (($v_0)(($v3_3)->{'value0'}))($v2_2);
 goto end_branch_0;;
 };
   if ($v3_3 instanceof \Data\Either\Data_Either_Right) {
-$__t0 = ($v1_1)(($v3_3)->{'value0'}, $v2_2);
+$__t0 = (($v1_1)(($v3_3)->{'value0'}))($v2_2);
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -433,11 +433,11 @@ goto end_branch_0;;
   }
   $__t1 = null;;
   if ($v3_3 instanceof \Data\Either\Data_Either_Left) {
-$__t1 = ($v_0)($v2_2, ($v3_3)->{'value0'});
+$__t1 = (($v_0)($v2_2))(($v3_3)->{'value0'});
 goto end_branch_1;;
 };
   if ($v3_3 instanceof \Data\Either\Data_Either_Right) {
-$__t1 = ($v1_1)($v2_2, ($v3_3)->{'value0'});
+$__t1 = (($v1_1)($v2_2))(($v3_3)->{'value0'});
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -476,13 +476,13 @@ goto end_branch_2;;
 })()];
 
 // Data_Bifoldable_bifoldableConst
-$GLOBALS['Data_Bifoldable_bifoldableConst'] = ["bifoldr" => (function() {
+$GLOBALS['Data_Bifoldable_bifoldableConst'] = (object)["bifoldr" => (function() {
   $__fn = function($f_0, $v_1 = null, $z_2 = null, $v1_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ($f_0)($v1_3, $z_2);
+  $__res = (($f_0)($v1_3))($z_2);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -494,7 +494,7 @@ $GLOBALS['Data_Bifoldable_bifoldableConst'] = ["bifoldr" => (function() {
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ($f_0)($z_2, $v1_3);
+  $__res = (($f_0)($z_2))($v1_3);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -521,13 +521,13 @@ function majData_majBifoldable_bifoldablemajClown($dictFoldable_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["bifoldr" => (function() use ($dictFoldable_0) {
+  $__res = (object)["bifoldr" => (function() use ($dictFoldable_0) {
   $__fn = function($l_1, $v_2 = null, $u_3 = null, $v1_4 = null) use ($dictFoldable_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($dictFoldable_0)['foldr'])($l_1, $u_3, $v1_4);
+  $__res = (((($dictFoldable_0)->{'foldr'})($l_1))($u_3))($v1_4);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -539,7 +539,7 @@ function majData_majBifoldable_bifoldablemajClown($dictFoldable_0) {
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($dictFoldable_0)['foldl'])($l_1, $u_3, $v1_4);
+  $__res = (((($dictFoldable_0)->{'foldl'})($l_1))($u_3))($v1_4);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -547,14 +547,14 @@ function majData_majBifoldable_bifoldablemajClown($dictFoldable_0) {
   return $__fn;
 })(), "bifoldMap" => function($dictMonoid_1) use ($dictFoldable_0) {
   $__num = \func_num_args();
-  $foldMap1_2_0 = (($dictFoldable_0)['foldMap'])($dictMonoid_1);
+  $foldMap1_2_0 = (($dictFoldable_0)->{'foldMap'})($dictMonoid_1);
   $__res = (function() use ($foldMap1_2_0) {
   $__fn = function($l_3, $v_4 = null, $v1_5 = null) use ($foldMap1_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($foldMap1_2_0)($l_3, $v1_5);
+  $__res = (($foldMap1_2_0)($l_3))($v1_5);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -578,15 +578,15 @@ function majData_majBifoldable_bifoldmajMapmajDefaultmajR($dictBifoldable_0, $di
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $append_2_0 = ((($dictMonoid_1)['Semigroup0'])(null))['append'];
-  $mempty_3_1 = ($dictMonoid_1)['mempty'];
+  $append_2_0 = ((($dictMonoid_1)->{'Semigroup0'})(null))->{'append'};
+  $mempty_3_1 = ($dictMonoid_1)->{'mempty'};
   $__res = (function() use ($append_2_0, $dictBifoldable_0, $mempty_3_1) {
   $__fn = function($f_4, $g_5 = null) use ($append_2_0, $dictBifoldable_0, $mempty_3_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictBifoldable_0)['bifoldr'])(($GLOBALS['Control_Semigroupoid_composeImpl'])($append_2_0, $f_4), ($GLOBALS['Control_Semigroupoid_composeImpl'])($append_2_0, $g_5), $mempty_3_1);
+  $__res = (((($dictBifoldable_0)->{'bifoldr'})((($GLOBALS['Control_Semigroupoid_composeImpl'])($append_2_0))($f_4)))((($GLOBALS['Control_Semigroupoid_composeImpl'])($append_2_0))($g_5)))($mempty_3_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -606,39 +606,39 @@ function majData_majBifoldable_bifoldmajMapmajDefaultmajL($dictBifoldable_0, $di
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_2_0 = (($dictMonoid_1)['Semigroup0'])(null);
-  $mempty_3_1 = ($dictMonoid_1)['mempty'];
+  $__local_var_2_0 = (($dictMonoid_1)->{'Semigroup0'})(null);
+  $mempty_3_1 = ($dictMonoid_1)->{'mempty'};
   $__res = (function() use ($__local_var_2_0, $dictBifoldable_0, $mempty_3_1) {
   $__fn = function($f_4, $g_5 = null) use ($__local_var_2_0, $dictBifoldable_0, $mempty_3_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictBifoldable_0)['bifoldl'])((function() use ($__local_var_2_0, $f_4) {
+  $__res = (((($dictBifoldable_0)->{'bifoldl'})((function() use ($__local_var_2_0, $f_4) {
   $__fn = function($m_6, $a_7 = null) use ($__local_var_2_0, $f_4, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_2_0)['append'])($m_6, ($f_4)($a_7));
+  $__res = ((($__local_var_2_0)->{'append'})($m_6))(($f_4)($a_7));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), (function() use ($__local_var_2_0, $g_5) {
+})()))((function() use ($__local_var_2_0, $g_5) {
   $__fn = function($m_6, $b_7 = null) use ($__local_var_2_0, $g_5, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_2_0)['append'])($m_6, ($g_5)($b_7));
+  $__res = ((($__local_var_2_0)->{'append'})($m_6))(($g_5)($b_7));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), $mempty_3_1);
+})()))($mempty_3_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -658,7 +658,7 @@ function majData_majBifoldable_bifoldmajMap($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['bifoldMap'];
+  $__res = ($dict_0)->{'bifoldMap'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -672,13 +672,13 @@ function majData_majBifoldable_bifoldablemajFlip($dictBifoldable_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["bifoldr" => (function() use ($dictBifoldable_0) {
+  $__res = (object)["bifoldr" => (function() use ($dictBifoldable_0) {
   $__fn = function($r_1, $l_2 = null, $u_3 = null, $v_4 = null) use ($dictBifoldable_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($dictBifoldable_0)['bifoldr'])($l_2, $r_1, $u_3, $v_4);
+  $__res = ((((($dictBifoldable_0)->{'bifoldr'})($l_2))($r_1))($u_3))($v_4);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -690,7 +690,7 @@ function majData_majBifoldable_bifoldablemajFlip($dictBifoldable_0) {
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($dictBifoldable_0)['bifoldl'])($l_2, $r_1, $u_3, $v_4);
+  $__res = ((((($dictBifoldable_0)->{'bifoldl'})($l_2))($r_1))($u_3))($v_4);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -698,14 +698,14 @@ function majData_majBifoldable_bifoldablemajFlip($dictBifoldable_0) {
   return $__fn;
 })(), "bifoldMap" => function($dictMonoid_1) use ($dictBifoldable_0) {
   $__num = \func_num_args();
-  $bifoldMap2_2_0 = (($dictBifoldable_0)['bifoldMap'])($dictMonoid_1);
+  $bifoldMap2_2_0 = (($dictBifoldable_0)->{'bifoldMap'})($dictMonoid_1);
   $__res = (function() use ($bifoldMap2_2_0) {
   $__fn = function($r_3, $l_4 = null, $v_5 = null) use ($bifoldMap2_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($bifoldMap2_2_0)($l_4, $r_3, $v_5);
+  $__res = ((($bifoldMap2_2_0)($l_4))($r_3))($v_5);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -729,38 +729,38 @@ function majData_majBifoldable_bifoldlmajDefault($dictBifoldable_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $bifoldMap1_1_0 = (($dictBifoldable_0)['bifoldMap'])($GLOBALS['Data_Bifoldable_monoidDual']);
+  $bifoldMap1_1_0 = (($dictBifoldable_0)->{'bifoldMap'})($GLOBALS['Data_Bifoldable_monoidDual']);
   $__res = (function() use ($bifoldMap1_1_0) {
   $__fn = function($f_2, $g_3 = null, $z_4 = null, $p_5 = null) use ($bifoldMap1_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ($bifoldMap1_1_0)(($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Dual_Dual'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Endo_Endo'], (function() use ($f_2) {
+  $__res = (((($bifoldMap1_1_0)((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Dual_Dual']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Endo_Endo']))((function() use ($f_2) {
   $__fn = function($b_6, $a_7 = null) use ($f_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($f_2)($a_7, $b_6);
+  $__res = (($f_2)($a_7))($b_6);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})())), ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Dual_Dual'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Endo_Endo'], (function() use ($g_3) {
+})()))))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Dual_Dual']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Endo_Endo']))((function() use ($g_3) {
   $__fn = function($b_6, $a_7 = null) use ($g_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($g_3)($a_7, $b_6);
+  $__res = (($g_3)($a_7))($b_6);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})())), $p_5, $z_4);
+})()))))($p_5))($z_4);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -780,14 +780,14 @@ function majData_majBifoldable_bifoldrmajDefault($dictBifoldable_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $bifoldMap1_1_0 = (($dictBifoldable_0)['bifoldMap'])($GLOBALS['Data_Bifoldable_monoidEndo']);
+  $bifoldMap1_1_0 = (($dictBifoldable_0)->{'bifoldMap'})($GLOBALS['Data_Bifoldable_monoidEndo']);
   $__res = (function() use ($bifoldMap1_1_0) {
   $__fn = function($f_2, $g_3 = null, $z_4 = null, $p_5 = null) use ($bifoldMap1_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ($bifoldMap1_1_0)(($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Endo_Endo'], $f_2), ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Endo_Endo'], $g_3), $p_5, $z_4);
+  $__res = (((($bifoldMap1_1_0)((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Endo_Endo']))($f_2)))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Endo_Endo']))($g_3)))($p_5))($z_4);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -812,13 +812,13 @@ function majData_majBifoldable_bifoldablemajProduct2($dictBifoldable_0, $dictBif
   tco_loop_Data_Bifoldable_bifoldableProduct2:;
   $dictBifoldable_0 = $__tco_var_Data_Bifoldable_bifoldableProduct2_dictBifoldable_0;
   $dictBifoldable1_1 = $__tco_var_Data_Bifoldable_bifoldableProduct2_dictBifoldable1_1;
-  $__res = ["bifoldr" => (function() use ($dictBifoldable1_1, $dictBifoldable_0) {
+  $__res = (object)["bifoldr" => (function() use ($dictBifoldable1_1, $dictBifoldable_0) {
   $__fn = function($l_2, $r_3 = null, $u_4 = null, $m_5 = null) use ($dictBifoldable1_1, $dictBifoldable_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ($GLOBALS['Data_Bifoldable_bifoldrDefault'])(($GLOBALS['Data_Bifoldable_bifoldableProduct2'])($dictBifoldable_0, $dictBifoldable1_1), $l_2, $r_3, $u_4, $m_5);
+  $__res = \Data\Bifoldable\majData_majBifoldable_bifoldrmajDefault(\Data\Bifoldable\majData_majBifoldable_bifoldablemajProduct2($dictBifoldable_0, $dictBifoldable1_1), $l_2, $r_3, $u_4, $m_5);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -830,7 +830,7 @@ function majData_majBifoldable_bifoldablemajProduct2($dictBifoldable_0, $dictBif
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ($GLOBALS['Data_Bifoldable_bifoldlDefault'])(($GLOBALS['Data_Bifoldable_bifoldableProduct2'])($dictBifoldable_0, $dictBifoldable1_1), $l_2, $r_3, $u_4, $m_5);
+  $__res = \Data\Bifoldable\majData_majBifoldable_bifoldlmajDefault(\Data\Bifoldable\majData_majBifoldable_bifoldablemajProduct2($dictBifoldable_0, $dictBifoldable1_1), $l_2, $r_3, $u_4, $m_5);
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -838,15 +838,15 @@ function majData_majBifoldable_bifoldablemajProduct2($dictBifoldable_0, $dictBif
   return $__fn;
 })(), "bifoldMap" => function($dictMonoid_2) use ($dictBifoldable1_1, $dictBifoldable_0) {
   $__num = \func_num_args();
-  $bifoldMap3_3_0 = (($dictBifoldable_0)['bifoldMap'])($dictMonoid_2);
-  $bifoldMap4_4_1 = (($dictBifoldable1_1)['bifoldMap'])($dictMonoid_2);
+  $bifoldMap3_3_0 = (($dictBifoldable_0)->{'bifoldMap'})($dictMonoid_2);
+  $bifoldMap4_4_1 = (($dictBifoldable1_1)->{'bifoldMap'})($dictMonoid_2);
   $__res = (function() use ($bifoldMap3_3_0, $bifoldMap4_4_1, $dictMonoid_2) {
   $__fn = function($l_5, $r_6 = null, $v_7 = null) use ($bifoldMap3_3_0, $bifoldMap4_4_1, $dictMonoid_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($dictMonoid_2)['Semigroup0'])(null))['append'])(($bifoldMap3_3_0)($l_5, $r_6, ($v_7)->{'value0'}), ($bifoldMap4_4_1)($l_5, $r_6, ($v_7)->{'value1'}));
+  $__res = ((((($dictMonoid_2)->{'Semigroup0'})(null))->{'append'})(((($bifoldMap3_3_0)($l_5))($r_6))(($v_7)->{'value0'})))(((($bifoldMap4_4_1)($l_5))($r_6))(($v_7)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -870,7 +870,7 @@ function majData_majBifoldable_bifold($dictBifoldable_0, $dictMonoid_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictBifoldable_0)['bifoldMap'])($dictMonoid_1, $GLOBALS['Data_Bifoldable_identity'], $GLOBALS['Data_Bifoldable_identity']);
+  $__res = (((($dictBifoldable_0)->{'bifoldMap'})($dictMonoid_1))($GLOBALS['Data_Bifoldable_identity']))($GLOBALS['Data_Bifoldable_identity']);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -884,21 +884,21 @@ function majData_majBifoldable_biany($dictBifoldable_0, $dictBooleanAlgebra_1 = 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_2_0 = (($dictBooleanAlgebra_1)['HeytingAlgebra0'])(null);
-  $semigroupDisj1_3_1 = ["append" => (function() use ($__local_var_2_0) {
+  $__local_var_2_0 = (($dictBooleanAlgebra_1)->{'HeytingAlgebra0'})(null);
+  $semigroupDisj1_3_1 = (object)["append" => (function() use ($__local_var_2_0) {
   $__fn = function($v_3, $v1_4 = null) use ($__local_var_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_2_0)['disj'])($v_3, $v1_4);
+  $__res = ((($__local_var_2_0)->{'disj'})($v_3))($v1_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $bifoldMap2_2_0 = (($dictBifoldable_0)['bifoldMap'])(["mempty" => ($__local_var_2_0)['ff'], "Semigroup0" => function($_dollar__unused_4) use ($semigroupDisj1_3_1) {
+  $bifoldMap2_2_0 = (($dictBifoldable_0)->{'bifoldMap'})((object)["mempty" => ($__local_var_2_0)->{'ff'}, "Semigroup0" => function($_dollar__unused_4) use ($semigroupDisj1_3_1) {
   $__num = \func_num_args();
   $__res = $semigroupDisj1_3_1;
   goto __end;;
@@ -911,7 +911,7 @@ function majData_majBifoldable_biany($dictBifoldable_0, $dictBooleanAlgebra_1 = 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'], ($bifoldMap2_2_0)(($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Disj_Disj'], $p_3), ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Disj_Disj'], $q_4)));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))((($bifoldMap2_2_0)((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Disj_Disj']))($p_3)))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Disj_Disj']))($q_4)));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -931,21 +931,21 @@ function majData_majBifoldable_biall($dictBifoldable_0, $dictBooleanAlgebra_1 = 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_2_0 = (($dictBooleanAlgebra_1)['HeytingAlgebra0'])(null);
-  $semigroupConj1_3_1 = ["append" => (function() use ($__local_var_2_0) {
+  $__local_var_2_0 = (($dictBooleanAlgebra_1)->{'HeytingAlgebra0'})(null);
+  $semigroupConj1_3_1 = (object)["append" => (function() use ($__local_var_2_0) {
   $__fn = function($v_3, $v1_4 = null) use ($__local_var_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_2_0)['conj'])($v_3, $v1_4);
+  $__res = ((($__local_var_2_0)->{'conj'})($v_3))($v1_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $bifoldMap2_2_0 = (($dictBifoldable_0)['bifoldMap'])(["mempty" => ($__local_var_2_0)['tt'], "Semigroup0" => function($_dollar__unused_4) use ($semigroupConj1_3_1) {
+  $bifoldMap2_2_0 = (($dictBifoldable_0)->{'bifoldMap'})((object)["mempty" => ($__local_var_2_0)->{'tt'}, "Semigroup0" => function($_dollar__unused_4) use ($semigroupConj1_3_1) {
   $__num = \func_num_args();
   $__res = $semigroupConj1_3_1;
   goto __end;;
@@ -958,7 +958,7 @@ function majData_majBifoldable_biall($dictBifoldable_0, $dictBooleanAlgebra_1 = 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'], ($bifoldMap2_2_0)(($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Conj_Conj'], $p_3), ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Conj_Conj'], $q_4)));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))((($bifoldMap2_2_0)((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Conj_Conj']))($p_3)))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Conj_Conj']))($q_4)));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

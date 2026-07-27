@@ -104,10 +104,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
-final class Test_AstTree_Val { public function __construct(public int $value0) {} }
-final class Test_AstTree_Add { public function __construct(public  $value0, public  $value1) {} }
-final class Test_AstTree_Mul { public function __construct(public  $value0, public  $value1) {} }
-final class Test_AstTree_Sub { public function __construct(public  $value0, public  $value1) {} }
+final class Test_AstTree_Val { public $tag = 'Val'; public function __construct(public int $value0) {} }
+final class Test_AstTree_Add { public $tag = 'Add'; public function __construct(public  $value0, public  $value1) {} }
+final class Test_AstTree_Mul { public $tag = 'Mul'; public function __construct(public  $value0, public  $value1) {} }
+final class Test_AstTree_Sub { public $tag = 'Sub'; public function __construct(public  $value0, public  $value1) {} }
 
 // Test_AstTree_Val
 $GLOBALS['Test_AstTree_Val'] = function($value0) {
@@ -179,15 +179,15 @@ $__t0 = ($v_0)->{'value0'};
 goto end_branch_0;;
 };
   if ($v_0 instanceof \Test\AstTree\Test_AstTree_Add) {
-$__t0 = (($GLOBALS['Test_AstTree_eval'])(($v_0)->{'value0'}) + ($GLOBALS['Test_AstTree_eval'])(($v_0)->{'value1'}));
+$__t0 = (\Test\AstTree\majTest_majAstmajTree_eval(($v_0)->{'value0'}) + \Test\AstTree\majTest_majAstmajTree_eval(($v_0)->{'value1'}));
 goto end_branch_0;;
 };
   if ($v_0 instanceof \Test\AstTree\Test_AstTree_Mul) {
-$__t0 = (($GLOBALS['Test_AstTree_eval'])(($v_0)->{'value0'}) * ($GLOBALS['Test_AstTree_eval'])(($v_0)->{'value1'}));
+$__t0 = (\Test\AstTree\majTest_majAstmajTree_eval(($v_0)->{'value0'}) * \Test\AstTree\majTest_majAstmajTree_eval(($v_0)->{'value1'}));
 goto end_branch_0;;
 };
   if ($v_0 instanceof \Test\AstTree\Test_AstTree_Sub) {
-$__t0 = (($GLOBALS['Test_AstTree_eval'])(($v_0)->{'value0'}) - ($GLOBALS['Test_AstTree_eval'])(($v_0)->{'value1'}));
+$__t0 = (\Test\AstTree\majTest_majAstmajTree_eval(($v_0)->{'value0'}) - \Test\AstTree\majTest_majAstmajTree_eval(($v_0)->{'value1'}));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -201,7 +201,7 @@ goto end_branch_0;;
 $GLOBALS['Test_AstTree_eval'] = __NAMESPACE__ . '\\majTest_majAstmajTree_eval';
 
 // Test_AstTree_describe
-$GLOBALS['Test_AstTree_describe'] = ($GLOBALS['Effect_Console_log'])("AST Evaluation:");
+$GLOBALS['Test_AstTree_describe'] = \Effect\Console\majEffect_majConsole_log("AST Evaluation:");
 
 // Test_AstTree_buildTree
 function majTest_majAstmajTree_buildmajTree(int $v_0) {
@@ -213,7 +213,7 @@ function majTest_majAstmajTree_buildmajTree(int $v_0) {
   $__tco_var_Test_AstTree_buildTree_v_0 = $v_0;
   tco_loop_Test_AstTree_buildTree:;
   $v_0 = $__tco_var_Test_AstTree_buildTree_v_0;
-  $__res = match ($v_0) { 0 => new \Test\AstTree\Test_AstTree_Val(1), default => new \Test\AstTree\Test_AstTree_Add(new \Test\AstTree\Test_AstTree_Mul(new \Test\AstTree\Test_AstTree_Val($v_0), ($GLOBALS['Test_AstTree_buildTree'])(($v_0 - 1))), new \Test\AstTree\Test_AstTree_Sub(($GLOBALS['Test_AstTree_buildTree'])(($v_0 - 1)), new \Test\AstTree\Test_AstTree_Val(1))) };
+  $__res = match ($v_0) { 0 => new \Test\AstTree\Test_AstTree_Val(1), default => new \Test\AstTree\Test_AstTree_Add(new \Test\AstTree\Test_AstTree_Mul(new \Test\AstTree\Test_AstTree_Val($v_0), \Test\AstTree\majTest_majAstmajTree_buildmajTree(($v_0 - 1))), new \Test\AstTree\Test_AstTree_Sub(\Test\AstTree\majTest_majAstmajTree_buildmajTree(($v_0 - 1)), new \Test\AstTree\Test_AstTree_Val(1))) };
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -221,9 +221,9 @@ function majTest_majAstmajTree_buildmajTree(int $v_0) {
 $GLOBALS['Test_AstTree_buildTree'] = __NAMESPACE__ . '\\majTest_majAstmajTree_buildmajTree';
 
 // Test_AstTree_act
-$GLOBALS['Test_AstTree_act'] = (($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(3), function($dummy_0) {
+$GLOBALS['Test_AstTree_act'] = ((($GLOBALS['Effect_bindEffect'])->{'bind'})(\Bench\majBench_opaque(3)))(function($dummy_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])(($GLOBALS['Test_AstTree_eval'])(($GLOBALS['Test_AstTree_buildTree'])($dummy_0))));
+  $__res = \Effect\Console\majEffect_majConsole_log((($GLOBALS['Data_Show_showInt'])->{'show'})(\Test\AstTree\majTest_majAstmajTree_eval(\Test\AstTree\majTest_majAstmajTree_buildmajTree($dummy_0))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

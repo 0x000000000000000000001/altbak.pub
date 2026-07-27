@@ -116,7 +116,7 @@ function majTest_majFib_fib(int $v_0): int|\Closure {
   $__tco_var_Test_Fib_fib_v_0 = $v_0;
   tco_loop_Test_Fib_fib:;
   $v_0 = $__tco_var_Test_Fib_fib_v_0;
-  $__res = match ($v_0) { 0 => 0, 1 => 1, default => (($GLOBALS['Test_Fib_fib'])(($v_0 - 1)) + ($GLOBALS['Test_Fib_fib'])(($v_0 - 2))) };
+  $__res = match ($v_0) { 0 => 0, 1 => 1, default => (\Test\Fib\majTest_majFib_fib(($v_0 - 1)) + \Test\Fib\majTest_majFib_fib(($v_0 - 2))) };
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -124,12 +124,12 @@ function majTest_majFib_fib(int $v_0): int|\Closure {
 $GLOBALS['Test_Fib_fib'] = __NAMESPACE__ . '\\majTest_majFib_fib';
 
 // Test_Fib_describe
-$GLOBALS['Test_Fib_describe'] = ($GLOBALS['Effect_Console_log'])("Fibonacci:");
+$GLOBALS['Test_Fib_describe'] = \Effect\Console\majEffect_majConsole_log("Fibonacci:");
 
 // Test_Fib_act
-$GLOBALS['Test_Fib_act'] = (($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(10), function($dummy_0) {
+$GLOBALS['Test_Fib_act'] = ((($GLOBALS['Effect_bindEffect'])->{'bind'})(\Bench\majBench_opaque(10)))(function($dummy_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])(($GLOBALS['Test_Fib_fib'])($dummy_0)));
+  $__res = \Effect\Console\majEffect_majConsole_log((($GLOBALS['Data_Show_showInt'])->{'show'})(\Test\Fib\majTest_majFib_fib($dummy_0)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

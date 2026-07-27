@@ -125,7 +125,7 @@ function majControl_majComonad_majStore_runmajStore($v_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($GLOBALS['Data_Tuple_functorTuple'])['map'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'], new \Data\Tuple\Data_Tuple_Tuple(($v_0)->{'value1'}, ($v_0)->{'value0'}));
+  $__local_var_1_0 = ((($GLOBALS['Data_Tuple_functorTuple'])->{'map'})($GLOBALS['Unsafe_Coerce_unsafeCoerce']))(new \Data\Tuple\Data_Tuple_Tuple(($v_0)->{'value1'}, ($v_0)->{'value0'}));
   $__res = new \Data\Tuple\Data_Tuple_Tuple(($__local_var_1_0)->{'value1'}, ($__local_var_1_0)->{'value0'});
   goto __end;;
   __end:

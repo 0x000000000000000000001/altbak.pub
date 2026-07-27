@@ -37,7 +37,7 @@ var cache_unfoldable1NonEmptyArray gopurs_runtime.Value
 var once_unfoldable1NonEmptyArray sync.Once
 func Get_unfoldable1NonEmptyArray() gopurs_runtime.Value {
 	once_unfoldable1NonEmptyArray.Do(func() {
-		cache_unfoldable1NonEmptyArray = pkg_Data_Unfoldable1.Get_unfoldable1Array()
+		cache_unfoldable1NonEmptyArray = gopurs_runtime.Any(gopurs_runtime.UnboxAny(pkg_Data_Unfoldable1.Get_unfoldable1Array()))
 	})
 	return cache_unfoldable1NonEmptyArray
 }
@@ -46,7 +46,7 @@ var cache_traversableWithIndexNonEmptyArray gopurs_runtime.Value
 var once_traversableWithIndexNonEmptyArray sync.Once
 func Get_traversableWithIndexNonEmptyArray() gopurs_runtime.Value {
 	once_traversableWithIndexNonEmptyArray.Do(func() {
-		cache_traversableWithIndexNonEmptyArray = pkg_Data_TraversableWithIndex.Get_traversableWithIndexArray()
+		cache_traversableWithIndexNonEmptyArray = gopurs_runtime.Any(gopurs_runtime.UnboxAny(pkg_Data_TraversableWithIndex.Get_traversableWithIndexArray()))
 	})
 	return cache_traversableWithIndexNonEmptyArray
 }
@@ -55,7 +55,7 @@ var cache_traversableNonEmptyArray gopurs_runtime.Value
 var once_traversableNonEmptyArray sync.Once
 func Get_traversableNonEmptyArray() gopurs_runtime.Value {
 	once_traversableNonEmptyArray.Do(func() {
-		cache_traversableNonEmptyArray = pkg_Data_Traversable.Get_traversableArray()
+		cache_traversableNonEmptyArray = gopurs_runtime.Any(gopurs_runtime.UnboxAny(pkg_Data_Traversable.Get_traversableArray()))
 	})
 	return cache_traversableNonEmptyArray
 }
@@ -65,7 +65,7 @@ var once_showNonEmptyArray sync.Once
 func Get_showNonEmptyArray() gopurs_runtime.Value {
 	once_showNonEmptyArray.Do(func() {
 		cache_showNonEmptyArray = gopurs_runtime.Func(func(dictShow_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_showNonEmptyArray(dictShow_0_box)
+return gopurs_runtime.Any(Call_showNonEmptyArray(dictShow_0_box))
 })
 	})
 	return cache_showNonEmptyArray
@@ -75,7 +75,7 @@ var cache_semigroupNonEmptyArray gopurs_runtime.Value
 var once_semigroupNonEmptyArray sync.Once
 func Get_semigroupNonEmptyArray() gopurs_runtime.Value {
 	once_semigroupNonEmptyArray.Do(func() {
-		cache_semigroupNonEmptyArray = pkg_Data_Semigroup.Get_semigroupArray()
+		cache_semigroupNonEmptyArray = gopurs_runtime.Any(gopurs_runtime.UnboxAny(pkg_Data_Semigroup.Get_semigroupArray()))
 	})
 	return cache_semigroupNonEmptyArray
 }
@@ -85,7 +85,7 @@ var once_ordNonEmptyArray sync.Once
 func Get_ordNonEmptyArray() gopurs_runtime.Value {
 	once_ordNonEmptyArray.Do(func() {
 		cache_ordNonEmptyArray = gopurs_runtime.Func(func(dictOrd_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_ordNonEmptyArray(dictOrd_0_box)
+return gopurs_runtime.Any(Call_ordNonEmptyArray(dictOrd_0_box))
 })
 	})
 	return cache_ordNonEmptyArray
@@ -95,7 +95,7 @@ var cache_ord1NonEmptyArray gopurs_runtime.Value
 var once_ord1NonEmptyArray sync.Once
 func Get_ord1NonEmptyArray() gopurs_runtime.Value {
 	once_ord1NonEmptyArray.Do(func() {
-		cache_ord1NonEmptyArray = pkg_Data_Ord.Get_ord1Array()
+		cache_ord1NonEmptyArray = gopurs_runtime.Any(gopurs_runtime.UnboxAny(pkg_Data_Ord.Get_ord1Array()))
 	})
 	return cache_ord1NonEmptyArray
 }
@@ -104,7 +104,7 @@ var cache_monadNonEmptyArray gopurs_runtime.Value
 var once_monadNonEmptyArray sync.Once
 func Get_monadNonEmptyArray() gopurs_runtime.Value {
 	once_monadNonEmptyArray.Do(func() {
-		cache_monadNonEmptyArray = pkg_Control_Monad.Get_monadArray()
+		cache_monadNonEmptyArray = gopurs_runtime.Any(gopurs_runtime.UnboxAny(pkg_Control_Monad.Get_monadArray()))
 	})
 	return cache_monadNonEmptyArray
 }
@@ -113,7 +113,7 @@ var cache_functorWithIndexNonEmptyArray gopurs_runtime.Value
 var once_functorWithIndexNonEmptyArray sync.Once
 func Get_functorWithIndexNonEmptyArray() gopurs_runtime.Value {
 	once_functorWithIndexNonEmptyArray.Do(func() {
-		cache_functorWithIndexNonEmptyArray = pkg_Data_FunctorWithIndex.Get_functorWithIndexArray()
+		cache_functorWithIndexNonEmptyArray = gopurs_runtime.Any(gopurs_runtime.UnboxAny(pkg_Data_FunctorWithIndex.Get_functorWithIndexArray()))
 	})
 	return cache_functorWithIndexNonEmptyArray
 }
@@ -122,7 +122,7 @@ var cache_functorNonEmptyArray gopurs_runtime.Value
 var once_functorNonEmptyArray sync.Once
 func Get_functorNonEmptyArray() gopurs_runtime.Value {
 	once_functorNonEmptyArray.Do(func() {
-		cache_functorNonEmptyArray = pkg_Data_Functor.Get_functorArray()
+		cache_functorNonEmptyArray = gopurs_runtime.Any(gopurs_runtime.UnboxAny(pkg_Data_Functor.Get_functorArray()))
 	})
 	return cache_functorNonEmptyArray
 }
@@ -131,7 +131,7 @@ var cache_foldableWithIndexNonEmptyArray gopurs_runtime.Value
 var once_foldableWithIndexNonEmptyArray sync.Once
 func Get_foldableWithIndexNonEmptyArray() gopurs_runtime.Value {
 	once_foldableWithIndexNonEmptyArray.Do(func() {
-		cache_foldableWithIndexNonEmptyArray = pkg_Data_FoldableWithIndex.Get_foldableWithIndexArray()
+		cache_foldableWithIndexNonEmptyArray = gopurs_runtime.Any(gopurs_runtime.UnboxAny(pkg_Data_FoldableWithIndex.Get_foldableWithIndexArray()))
 	})
 	return cache_foldableWithIndexNonEmptyArray
 }
@@ -140,7 +140,7 @@ var cache_foldableNonEmptyArray gopurs_runtime.Value
 var once_foldableNonEmptyArray sync.Once
 func Get_foldableNonEmptyArray() gopurs_runtime.Value {
 	once_foldableNonEmptyArray.Do(func() {
-		cache_foldableNonEmptyArray = pkg_Data_Foldable.Get_foldableArray()
+		cache_foldableNonEmptyArray = gopurs_runtime.Any(gopurs_runtime.UnboxAny(pkg_Data_Foldable.Get_foldableArray()))
 	})
 	return cache_foldableNonEmptyArray
 }
@@ -149,7 +149,7 @@ var cache_foldable1NonEmptyArray gopurs_runtime.Value
 var once_foldable1NonEmptyArray sync.Once
 func Get_foldable1NonEmptyArray() gopurs_runtime.Value {
 	once_foldable1NonEmptyArray.Do(func() {
-		cache_foldable1NonEmptyArray = gopurs_runtime.RecordDict4("Foldable0", "foldMap1", "foldl1", "foldr1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_foldable1NonEmptyArray = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict4("Foldable0", "foldMap1", "foldl1", "foldr1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Foldable.Get_foldableArray()
 }), gopurs_runtime.Func(func(dictSemigroup_0 gopurs_runtime.Value) gopurs_runtime.Value {
 append_1_0 := gopurs_runtime.RecordGet(dictSemigroup_0, "append")
@@ -167,7 +167,7 @@ return gopurs_runtime.Apply(__local_var_4_2, gopurs_runtime.Apply(__local_var_3_
 return gopurs_runtime.UncurriedApp2(Get_foldl1Impl(), __local_var_0, __local_var_1)
 }), gopurs_runtime.Func2(func(__local_var_0 gopurs_runtime.Value, __local_var_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp2(Get_foldr1Impl(), __local_var_0, __local_var_1)
-}))
+}))))
 	})
 	return cache_foldable1NonEmptyArray
 }
@@ -176,7 +176,7 @@ var cache_traversable1NonEmptyArray gopurs_runtime.Value
 var once_traversable1NonEmptyArray sync.Once
 func Get_traversable1NonEmptyArray() gopurs_runtime.Value {
 	once_traversable1NonEmptyArray.Do(func() {
-		cache_traversable1NonEmptyArray = gopurs_runtime.RecordDict4("Foldable10", "Traversable1", "sequence1", "traverse1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_traversable1NonEmptyArray = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict4("Foldable10", "Traversable1", "sequence1", "traverse1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_foldable1NonEmptyArray()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Traversable.Get_traversableArray()
@@ -190,7 +190,7 @@ _ = map__2_1
 return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp3(Get_traverse1Impl(), apply_1_0, map__2_1, f_3)
 })
-}))
+}))))
 	})
 	return cache_traversable1NonEmptyArray
 }
@@ -200,7 +200,7 @@ var once_eqNonEmptyArray sync.Once
 func Get_eqNonEmptyArray() gopurs_runtime.Value {
 	once_eqNonEmptyArray.Do(func() {
 		cache_eqNonEmptyArray = gopurs_runtime.Func(func(dictEq_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_eqNonEmptyArray(dictEq_0_box)
+return gopurs_runtime.Any(Call_eqNonEmptyArray(dictEq_0_box))
 })
 	})
 	return cache_eqNonEmptyArray
@@ -210,7 +210,7 @@ var cache_eq1NonEmptyArray gopurs_runtime.Value
 var once_eq1NonEmptyArray sync.Once
 func Get_eq1NonEmptyArray() gopurs_runtime.Value {
 	once_eq1NonEmptyArray.Do(func() {
-		cache_eq1NonEmptyArray = pkg_Data_Eq.Get_eq1Array()
+		cache_eq1NonEmptyArray = gopurs_runtime.Any(gopurs_runtime.UnboxAny(pkg_Data_Eq.Get_eq1Array()))
 	})
 	return cache_eq1NonEmptyArray
 }
@@ -219,7 +219,7 @@ var cache_bindNonEmptyArray gopurs_runtime.Value
 var once_bindNonEmptyArray sync.Once
 func Get_bindNonEmptyArray() gopurs_runtime.Value {
 	once_bindNonEmptyArray.Do(func() {
-		cache_bindNonEmptyArray = pkg_Control_Bind.Get_bindArray()
+		cache_bindNonEmptyArray = gopurs_runtime.Any(gopurs_runtime.UnboxAny(pkg_Control_Bind.Get_bindArray()))
 	})
 	return cache_bindNonEmptyArray
 }
@@ -228,7 +228,7 @@ var cache_applyNonEmptyArray gopurs_runtime.Value
 var once_applyNonEmptyArray sync.Once
 func Get_applyNonEmptyArray() gopurs_runtime.Value {
 	once_applyNonEmptyArray.Do(func() {
-		cache_applyNonEmptyArray = pkg_Control_Apply.Get_applyArray()
+		cache_applyNonEmptyArray = gopurs_runtime.Any(gopurs_runtime.UnboxAny(pkg_Control_Apply.Get_applyArray()))
 	})
 	return cache_applyNonEmptyArray
 }
@@ -237,7 +237,7 @@ var cache_applicativeNonEmptyArray gopurs_runtime.Value
 var once_applicativeNonEmptyArray sync.Once
 func Get_applicativeNonEmptyArray() gopurs_runtime.Value {
 	once_applicativeNonEmptyArray.Do(func() {
-		cache_applicativeNonEmptyArray = pkg_Control_Applicative.Get_applicativeArray()
+		cache_applicativeNonEmptyArray = gopurs_runtime.Any(gopurs_runtime.UnboxAny(pkg_Control_Applicative.Get_applicativeArray()))
 	})
 	return cache_applicativeNonEmptyArray
 }
@@ -246,9 +246,36 @@ var cache_altNonEmptyArray gopurs_runtime.Value
 var once_altNonEmptyArray sync.Once
 func Get_altNonEmptyArray() gopurs_runtime.Value {
 	once_altNonEmptyArray.Do(func() {
-		cache_altNonEmptyArray = pkg_Control_Alt.Get_altArray()
+		cache_altNonEmptyArray = gopurs_runtime.Any(gopurs_runtime.UnboxAny(pkg_Control_Alt.Get_altArray()))
 	})
 	return cache_altNonEmptyArray
+}
+
+var cache_foldl1Impl gopurs_runtime.Value
+var once_foldl1Impl sync.Once
+func Get_foldl1Impl() gopurs_runtime.Value {
+	once_foldl1Impl.Do(func() {
+		cache_foldl1Impl = Foldl1Impl
+	})
+	return cache_foldl1Impl
+}
+
+var cache_foldr1Impl gopurs_runtime.Value
+var once_foldr1Impl sync.Once
+func Get_foldr1Impl() gopurs_runtime.Value {
+	once_foldr1Impl.Do(func() {
+		cache_foldr1Impl = Foldr1Impl
+	})
+	return cache_foldr1Impl
+}
+
+var cache_traverse1Impl gopurs_runtime.Value
+var once_traverse1Impl sync.Once
+func Get_traverse1Impl() gopurs_runtime.Value {
+	once_traverse1Impl.Do(func() {
+		cache_traverse1Impl = Traverse1Impl
+	})
+	return cache_traverse1Impl
 }
 
 func Call_NonEmptyArray(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -257,34 +284,22 @@ _ = x_0
 return x_0
 }
 
-func Call_showNonEmptyArray(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_showNonEmptyArray(dictShow_0_loop gopurs_runtime.Value) interface{} {
 var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
 _ = dictShow_0
-return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str("(NonEmptyArray "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply2(pkg_Data_Show.Get_showArrayImpl(), gopurs_runtime.RecordGet(dictShow_0, "show"), v_1), gopurs_runtime.Str(")")))
-}))
+})))
 }
 
-func Call_ordNonEmptyArray(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_ordNonEmptyArray(dictOrd_0_loop gopurs_runtime.Value) interface{} {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-return gopurs_runtime.Apply(pkg_Data_Ord.Get_ordArray(), dictOrd_0)
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(pkg_Data_Ord.Get_ordArray(), dictOrd_0))
 }
 
-func Call_eqNonEmptyArray(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_eqNonEmptyArray(dictEq_0_loop gopurs_runtime.Value) interface{} {
 var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
 _ = dictEq_0
-return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(pkg_Data_Eq.Get_eqArrayImpl(), gopurs_runtime.RecordGet(dictEq_0, "eq")))
-}
-
-func Get_foldl1Impl() gopurs_runtime.Value {
-	return _Gopurs_Foldl1Impl
-}
-
-func Get_foldr1Impl() gopurs_runtime.Value {
-	return _Gopurs_Foldr1Impl
-}
-
-func Get_traverse1Impl() gopurs_runtime.Value {
-	return _Gopurs_Traverse1Impl
+return gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(pkg_Data_Eq.Get_eqArrayImpl(), gopurs_runtime.RecordGet(dictEq_0, "eq"))))
 }

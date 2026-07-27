@@ -12,21 +12,21 @@ var once_unsafeThrowException sync.Once
 func Get_unsafeThrowException() gopurs_runtime.Value {
 	once_unsafeThrowException.Do(func() {
 		cache_unsafeThrowException = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_unsafeThrowException(x_0_box)
+return gopurs_runtime.Any(Call_unsafeThrowException(x_0_box))
 })
 	})
 	return cache_unsafeThrowException
 }
 
-var cache_unsafeThrowException__gopurs_runtime_Value_3678007478 gopurs_runtime.Value
-var once_unsafeThrowException__gopurs_runtime_Value_3678007478 sync.Once
-func Get_unsafeThrowException__gopurs_runtime_Value_3678007478() gopurs_runtime.Value {
-	once_unsafeThrowException__gopurs_runtime_Value_3678007478.Do(func() {
-		cache_unsafeThrowException__gopurs_runtime_Value_3678007478 = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_unsafeThrowException__gopurs_runtime_Value_3678007478(x_0_box)
+var cache_unsafeThrowException__func_gopurs_runtime_Value__interface___1610202678 gopurs_runtime.Value
+var once_unsafeThrowException__func_gopurs_runtime_Value__interface___1610202678 sync.Once
+func Get_unsafeThrowException__func_gopurs_runtime_Value__interface___1610202678() gopurs_runtime.Value {
+	once_unsafeThrowException__func_gopurs_runtime_Value__interface___1610202678.Do(func() {
+		cache_unsafeThrowException__func_gopurs_runtime_Value__interface___1610202678 = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Any(Call_unsafeThrowException__func_gopurs_runtime_Value__interface___1610202678(x_0_box))
 })
 	})
-	return cache_unsafeThrowException__gopurs_runtime_Value_3678007478
+	return cache_unsafeThrowException__func_gopurs_runtime_Value__interface___1610202678
 }
 
 var cache_unsafeThrow gopurs_runtime.Value
@@ -34,28 +34,26 @@ var once_unsafeThrow sync.Once
 func Get_unsafeThrow() gopurs_runtime.Value {
 	once_unsafeThrow.Do(func() {
 		cache_unsafeThrow = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_unsafeThrow(x_0_box.StrVal())
+return gopurs_runtime.Any(Call_unsafeThrow(x_0_box.StrVal()))
 })
 	})
 	return cache_unsafeThrow
 }
 
-func Call_unsafeThrowException(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_unsafeThrowException(x_0_loop gopurs_runtime.Value) interface{} {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return gopurs_runtime.Apply(pkg_Effect_Unsafe.Get_unsafePerformEffect(), gopurs_runtime.Apply(pkg_Effect_Exception.Get_throwException(), x_0))
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(pkg_Effect_Unsafe.Get_unsafePerformEffect(), gopurs_runtime.Apply(pkg_Effect_Exception.Get_throwException(), x_0)))
 }
 
-func Call_unsafeThrowException__gopurs_runtime_Value_3678007478(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_unsafeThrowException__func_gopurs_runtime_Value__interface___1610202678(x_0_loop gopurs_runtime.Value) interface{} {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
-return gopurs_runtime.Apply(pkg_Effect_Unsafe.Get_unsafePerformEffect(), gopurs_runtime.Apply(pkg_Effect_Exception.Get_throwException(), x_0))
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(pkg_Effect_Unsafe.Get_unsafePerformEffect(), gopurs_runtime.Apply(pkg_Effect_Exception.Get_throwException(), x_0)))
 }
 
-func Call_unsafeThrow(x_0_loop string) gopurs_runtime.Value {
+func Call_unsafeThrow(x_0_loop string) interface{} {
 var x_0 string = x_0_loop
 _ = x_0
-return gopurs_runtime.Apply(pkg_Effect_Unsafe.Get_unsafePerformEffect(), gopurs_runtime.Apply(pkg_Effect_Exception.Get_throwException(), gopurs_runtime.Apply(pkg_Effect_Exception.Get_error(), gopurs_runtime.Str(x_0))))
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(pkg_Effect_Unsafe.Get_unsafePerformEffect(), gopurs_runtime.Apply(pkg_Effect_Exception.Get_throwException(), gopurs_runtime.Apply(pkg_Effect_Exception.Get_error(), gopurs_runtime.Str(x_0)))))
 }
-
-

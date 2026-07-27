@@ -99,7 +99,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Control_Lazy_lazyUnit
-$GLOBALS['Control_Lazy_lazyUnit'] = ["defer" => function($v_0) {
+$GLOBALS['Control_Lazy_lazyUnit'] = (object)["defer" => function($v_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Unit_unit'];
   goto __end;;
@@ -108,13 +108,13 @@ $GLOBALS['Control_Lazy_lazyUnit'] = ["defer" => function($v_0) {
 }];
 
 // Control_Lazy_lazyFn
-$GLOBALS['Control_Lazy_lazyFn'] = ["defer" => (function() {
+$GLOBALS['Control_Lazy_lazyFn'] = (object)["defer" => (function() {
   $__fn = function($f_0, $x_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($f_0)($GLOBALS['Data_Unit_unit'], $x_1);
+  $__res = (($f_0)($GLOBALS['Data_Unit_unit']))($x_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -129,7 +129,7 @@ function majControl_majLazy_defer($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['defer'];
+  $__res = ($dict_0)->{'defer'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -144,7 +144,7 @@ function majControl_majLazy_fix($dictLazy_0, $f_1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $go__2_0 = null;
-  $go__2_0 = (($dictLazy_0)['defer'])(function($v_3) use ($f_1, &$go__2_0) {
+  $go__2_0 = (($dictLazy_0)->{'defer'})(function($v_3) use ($f_1, &$go__2_0) {
   $__num = \func_num_args();
   $__res = ($f_1)($go__2_0);
   goto __end;;

@@ -11,9 +11,9 @@ var cache_altArray gopurs_runtime.Value
 var once_altArray sync.Once
 func Get_altArray() gopurs_runtime.Value {
 	once_altArray.Do(func() {
-		cache_altArray = gopurs_runtime.RecordDict2("Functor0", "alt", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_altArray = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Functor0", "alt", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Functor.Get_functorArray()
-}), gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupArray(), "append"))
+}), gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupArray(), "append"))))
 	})
 	return cache_altArray
 }
@@ -29,15 +29,15 @@ return Call_alt(dict_0_box)
 	return cache_alt
 }
 
-var cache_alt__gopurs_runtime_Value_3324946862 gopurs_runtime.Value
-var once_alt__gopurs_runtime_Value_3324946862 sync.Once
-func Get_alt__gopurs_runtime_Value_3324946862() gopurs_runtime.Value {
-	once_alt__gopurs_runtime_Value_3324946862.Do(func() {
-		cache_alt__gopurs_runtime_Value_3324946862 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_alt__gopurs_runtime_Value_3324946862(dict_0_box)
+var cache_alt__func_gopurs_runtime_Value__interface____interface____interface___3324946862 gopurs_runtime.Value
+var once_alt__func_gopurs_runtime_Value__interface____interface____interface___3324946862 sync.Once
+func Get_alt__func_gopurs_runtime_Value__interface____interface____interface___3324946862() gopurs_runtime.Value {
+	once_alt__func_gopurs_runtime_Value__interface____interface____interface___3324946862.Do(func() {
+		cache_alt__func_gopurs_runtime_Value__interface____interface____interface___3324946862 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_alt__func_gopurs_runtime_Value__interface____interface____interface___3324946862(dict_0_box)
 })
 	})
-	return cache_alt__gopurs_runtime_Value_3324946862
+	return cache_alt__func_gopurs_runtime_Value__interface____interface____interface___3324946862
 }
 
 func Call_alt(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -46,10 +46,8 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "alt")
 }
 
-func Call_alt__gopurs_runtime_Value_3324946862(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_alt__func_gopurs_runtime_Value__interface____interface____interface___3324946862(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "alt")
 }
-
-

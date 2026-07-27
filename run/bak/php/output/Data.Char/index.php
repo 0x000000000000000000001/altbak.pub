@@ -99,7 +99,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Data_Char_toCharCode_closure
-$GLOBALS['Data_Char_toCharCode_closure'] = ($GLOBALS['Data_Enum_boundedEnumChar'])['fromEnum'];
+$GLOBALS['Data_Char_toCharCode_closure'] = ($GLOBALS['Data_Enum_boundedEnumChar'])->{'fromEnum'};
 
 // Data_Char_toCharCode
 function majData_majChar_tomajCharmajCode($v_0): int|\Closure {
@@ -116,7 +116,7 @@ function majData_majChar_tomajCharmajCode($v_0): int|\Closure {
 $GLOBALS['Data_Char_toCharCode'] = __NAMESPACE__ . '\\majData_majChar_tomajCharmajCode';
 
 // Data_Char_fromCharCode_closure
-$GLOBALS['Data_Char_fromCharCode_closure'] = ($GLOBALS['Data_Enum_boundedEnumChar'])['toEnum'];
+$GLOBALS['Data_Char_fromCharCode_closure'] = ($GLOBALS['Data_Enum_boundedEnumChar'])->{'toEnum'};
 
 // Data_Char_fromCharCode
 function majData_majChar_frommajCharmajCode(int $v_0) {

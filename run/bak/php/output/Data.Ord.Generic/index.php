@@ -102,7 +102,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Data_Ord_Generic_genericOrdNoConstructors
-$GLOBALS['Data_Ord_Generic_genericOrdNoConstructors'] = ["genericCompare__prime__" => (function() {
+$GLOBALS['Data_Ord_Generic_genericOrdNoConstructors'] = (object)["genericCompare__prime__" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -117,7 +117,7 @@ $GLOBALS['Data_Ord_Generic_genericOrdNoConstructors'] = ["genericCompare__prime_
 })()];
 
 // Data_Ord_Generic_genericOrdNoArguments
-$GLOBALS['Data_Ord_Generic_genericOrdNoArguments'] = ["genericCompare__prime__" => (function() {
+$GLOBALS['Data_Ord_Generic_genericOrdNoArguments'] = (object)["genericCompare__prime__" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -138,13 +138,13 @@ function majData_majOrd_majGeneric_genericmajOrdmajArgument($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["genericCompare__prime__" => (function() use ($dictOrd_0) {
+  $__res = (object)["genericCompare__prime__" => (function() use ($dictOrd_0) {
   $__fn = function($v_1, $v1_2 = null) use ($dictOrd_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictOrd_0)['compare'])($v_1, $v1_2);
+  $__res = ((($dictOrd_0)->{'compare'})($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -164,7 +164,7 @@ function majData_majOrd_majGeneric_genericmajCompare__prime__($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['genericCompare__prime__'];
+  $__res = ($dict_0)->{'genericCompare__prime__'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -178,13 +178,13 @@ function majData_majOrd_majGeneric_genericmajOrdmajConstructor($dictGenericOrd_0
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["genericCompare__prime__" => (function() use ($dictGenericOrd_0) {
+  $__res = (object)["genericCompare__prime__" => (function() use ($dictGenericOrd_0) {
   $__fn = function($v_1, $v1_2 = null) use ($dictGenericOrd_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictGenericOrd_0)['genericCompare__prime__'])($v_1, $v1_2);
+  $__res = ((($dictGenericOrd_0)->{'genericCompare__prime__'})($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -204,16 +204,16 @@ function majData_majOrd_majGeneric_genericmajOrdmajProduct($dictGenericOrd_0, $d
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ["genericCompare__prime__" => (function() use ($dictGenericOrd1_1, $dictGenericOrd_0) {
+  $__res = (object)["genericCompare__prime__" => (function() use ($dictGenericOrd1_1, $dictGenericOrd_0) {
   $__fn = function($v_2, $v1_3 = null) use ($dictGenericOrd1_1, $dictGenericOrd_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v2_4_0 = (($dictGenericOrd_0)['genericCompare__prime__'])(($v_2)->{'value0'}, ($v1_3)->{'value0'});
+  $v2_4_0 = ((($dictGenericOrd_0)->{'genericCompare__prime__'})(($v_2)->{'value0'}))(($v1_3)->{'value0'});
   $__t1 = null;;
   if ($v2_4_0 instanceof \Data\Ordering\Data_Ordering_EQ) {
-$__t1 = (($dictGenericOrd1_1)['genericCompare__prime__'])(($v_2)->{'value1'}, ($v1_3)->{'value1'});
+$__t1 = ((($dictGenericOrd1_1)->{'genericCompare__prime__'})(($v_2)->{'value1'}))(($v1_3)->{'value1'});
 goto end_branch_1;;
 };
   $__t1 = $v2_4_0;
@@ -238,7 +238,7 @@ function majData_majOrd_majGeneric_genericmajOrdmajSum($dictGenericOrd_0, $dictG
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ["genericCompare__prime__" => (function() use ($dictGenericOrd1_1, $dictGenericOrd_0) {
+  $__res = (object)["genericCompare__prime__" => (function() use ($dictGenericOrd1_1, $dictGenericOrd_0) {
   $__fn = function($v_2, $v1_3 = null) use ($dictGenericOrd1_1, $dictGenericOrd_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -248,7 +248,7 @@ function majData_majOrd_majGeneric_genericmajOrdmajSum($dictGenericOrd_0, $dictG
   if ($v_2 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inl) {
 $__t1 = null;;
 if ($v1_3 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inl) {
-$__t1 = (($dictGenericOrd_0)['genericCompare__prime__'])(($v_2)->{'value0'}, ($v1_3)->{'value0'});
+$__t1 = ((($dictGenericOrd_0)->{'genericCompare__prime__'})(($v_2)->{'value0'}))(($v1_3)->{'value0'});
 goto end_branch_1;;
 };
 if ($v1_3 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inr) {
@@ -264,7 +264,7 @@ goto end_branch_0;;
   if ($v_2 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inr) {
 $__t2 = null;;
 if ($v1_3 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inr) {
-$__t2 = (($dictGenericOrd1_1)['genericCompare__prime__'])(($v_2)->{'value0'}, ($v1_3)->{'value0'});
+$__t2 = ((($dictGenericOrd1_1)->{'genericCompare__prime__'})(($v_2)->{'value0'}))(($v1_3)->{'value0'});
 goto end_branch_2;;
 };
 if ($v1_3 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inl) {
@@ -300,7 +300,7 @@ function majData_majOrd_majGeneric_genericmajCompare($dictGeneric_0, $dictGeneri
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($dictGenericOrd_1)['genericCompare__prime__'])((($dictGeneric_0)['from'])($x_2), (($dictGeneric_0)['from'])($y_3));
+  $__res = ((($dictGenericOrd_1)->{'genericCompare__prime__'})((($dictGeneric_0)->{'from'})($x_2)))((($dictGeneric_0)->{'from'})($y_3));
   goto __end;;
   __end:
   return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;

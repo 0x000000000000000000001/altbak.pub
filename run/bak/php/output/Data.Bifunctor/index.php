@@ -124,7 +124,7 @@ function majData_majBifunctor_bimap($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['bimap'];
+  $__res = ($dict_0)->{'bimap'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -138,13 +138,13 @@ function majData_majBifunctor_bivoid($dictBifunctor_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($dictBifunctor_0)['bimap'])(function($v_1) {
+  $__res = ((($dictBifunctor_0)->{'bimap'})(function($v_1) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Unit_unit'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, function($v_1) {
+}))(function($v_1) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Unit_unit'];
   goto __end;;
@@ -164,7 +164,7 @@ function majData_majBifunctor_lmap($dictBifunctor_0, $f_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictBifunctor_0)['bimap'])($f_1, $GLOBALS['Data_Bifunctor_identity']);
+  $__res = ((($dictBifunctor_0)->{'bimap'})($f_1))($GLOBALS['Data_Bifunctor_identity']);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -178,7 +178,7 @@ function majData_majBifunctor_rmap($dictBifunctor_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($dictBifunctor_0)['bimap'])($GLOBALS['Data_Bifunctor_identity']);
+  $__res = (($dictBifunctor_0)->{'bimap'})($GLOBALS['Data_Bifunctor_identity']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -186,7 +186,7 @@ function majData_majBifunctor_rmap($dictBifunctor_0) {
 $GLOBALS['Data_Bifunctor_rmap'] = __NAMESPACE__ . '\\majData_majBifunctor_rmap';
 
 // Data_Bifunctor_bifunctorTuple
-$GLOBALS['Data_Bifunctor_bifunctorTuple'] = ["bimap" => (function() {
+$GLOBALS['Data_Bifunctor_bifunctorTuple'] = (object)["bimap" => (function() {
   $__fn = function($f_0, $g_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -201,7 +201,7 @@ $GLOBALS['Data_Bifunctor_bifunctorTuple'] = ["bimap" => (function() {
 })()];
 
 // Data_Bifunctor_bifunctorEither
-$GLOBALS['Data_Bifunctor_bifunctorEither'] = ["bimap" => (function() {
+$GLOBALS['Data_Bifunctor_bifunctorEither'] = (object)["bimap" => (function() {
   $__fn = function($v_0, $v1_1 = null, $v2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -228,7 +228,7 @@ goto end_branch_0;;
 })()];
 
 // Data_Bifunctor_bifunctorConst
-$GLOBALS['Data_Bifunctor_bifunctorConst'] = ["bimap" => (function() {
+$GLOBALS['Data_Bifunctor_bifunctorConst'] = (object)["bimap" => (function() {
   $__fn = function($f_0, $v_1 = null, $v1_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {

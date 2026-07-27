@@ -106,7 +106,7 @@ function majControl_majBiapplicative_bipure($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['bipure'];
+  $__res = ($dict_0)->{'bipure'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -114,7 +114,7 @@ function majControl_majBiapplicative_bipure($dict_0) {
 $GLOBALS['Control_Biapplicative_bipure'] = __NAMESPACE__ . '\\majControl_majBiapplicative_bipure';
 
 // Control_Biapplicative_biapplicativeTuple
-$GLOBALS['Control_Biapplicative_biapplicativeTuple'] = ["bipure" => $GLOBALS['Data_Tuple_Tuple'], "Biapply0" => function($_dollar__unused_0) {
+$GLOBALS['Control_Biapplicative_biapplicativeTuple'] = (object)["bipure" => $GLOBALS['Data_Tuple_Tuple'], "Biapply0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Biapply_biapplyTuple'];
   goto __end;;

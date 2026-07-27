@@ -12,11 +12,11 @@ var cache_ordVoid gopurs_runtime.Value
 var once_ordVoid sync.Once
 func Get_ordVoid() gopurs_runtime.Value {
 	once_ordVoid.Do(func() {
-		cache_ordVoid = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ordVoid = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Eq.Get_eqVoid()
 }), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}
-}))
+return gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil})
+}))))
 	})
 	return cache_ordVoid
 }
@@ -25,11 +25,11 @@ var cache_ordUnit gopurs_runtime.Value
 var once_ordUnit sync.Once
 func Get_ordUnit() gopurs_runtime.Value {
 	once_ordUnit.Do(func() {
-		cache_ordUnit = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ordUnit = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Eq.Get_eqUnit()
 }), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}
-}))
+return gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil})
+}))))
 	})
 	return cache_ordUnit
 }
@@ -38,9 +38,9 @@ var cache_ordString gopurs_runtime.Value
 var once_ordString sync.Once
 func Get_ordString() gopurs_runtime.Value {
 	once_ordString.Do(func() {
-		cache_ordString = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ordString = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Eq.Get_eqString()
-}), gopurs_runtime.Apply3(Get_ordStringImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil}))
+}), gopurs_runtime.Apply3(Get_ordStringImpl(), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil})))))
 	})
 	return cache_ordString
 }
@@ -49,11 +49,11 @@ var cache_ordRecordNil gopurs_runtime.Value
 var once_ordRecordNil sync.Once
 func Get_ordRecordNil() gopurs_runtime.Value {
 	once_ordRecordNil.Do(func() {
-		cache_ordRecordNil = gopurs_runtime.RecordDict2("EqRecord0", "compareRecord", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ordRecordNil = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("EqRecord0", "compareRecord", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Eq.Get_eqRowNil()
 }), gopurs_runtime.Func3(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value, v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}
-}))
+return gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil})
+}))))
 	})
 	return cache_ordRecordNil
 }
@@ -62,11 +62,11 @@ var cache_ordProxy gopurs_runtime.Value
 var once_ordProxy sync.Once
 func Get_ordProxy() gopurs_runtime.Value {
 	once_ordProxy.Do(func() {
-		cache_ordProxy = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ordProxy = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Eq.Get_eqProxy()
 }), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}
-}))
+return gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil})
+}))))
 	})
 	return cache_ordProxy
 }
@@ -75,7 +75,7 @@ var cache_ordOrdering gopurs_runtime.Value
 var once_ordOrdering sync.Once
 func Get_ordOrdering() gopurs_runtime.Value {
 	once_ordOrdering.Do(func() {
-		cache_ordOrdering = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ordOrdering = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Ordering.Get_eqOrdering()
 }), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
@@ -84,14 +84,14 @@ if (v_0.Type == 9 && v_0.IntVal == 1527465420) {
 var __t1 gopurs_runtime.Value
 {
 if (v1_1.Type == 9 && v1_1.IntVal == 1527465420) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}
+__t1 = gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil})
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}
+__t1 = gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil})
 }
 end_branch_1:
 __t0 = __t1
@@ -105,7 +105,7 @@ if (v_0.Type == 9 && v_0.IntVal == 902936544) {
 var __t2 gopurs_runtime.Value
 {
 if (v1_1.Type == 9 && v1_1.IntVal == 902936544) {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}
+__t2 = gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil})
 goto end_branch_2
 } else {
 
@@ -113,7 +113,7 @@ goto end_branch_2
 }
 {
 if (v1_1.Type == 9 && v1_1.IntVal == 1527465420) {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil}
+__t2 = gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil})
 goto end_branch_2
 } else {
 
@@ -121,7 +121,7 @@ goto end_branch_2
 }
 {
 if (v1_1.Type == 9 && v1_1.IntVal == 380165415) {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}
+__t2 = gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil})
 goto end_branch_2
 } else {
 
@@ -142,14 +142,14 @@ if (v_0.Type == 9 && v_0.IntVal == 380165415) {
 var __t3 gopurs_runtime.Value
 {
 if (v1_1.Type == 9 && v1_1.IntVal == 380165415) {
-__t3 = gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}
+__t3 = gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil})
 goto end_branch_3
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil}
+__t3 = gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil})
 }
 end_branch_3:
 __t0 = __t3
@@ -163,7 +163,7 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
 return __t0
-}))
+}))))
 	})
 	return cache_ordOrdering
 }
@@ -172,9 +172,9 @@ var cache_ordNumber gopurs_runtime.Value
 var once_ordNumber sync.Once
 func Get_ordNumber() gopurs_runtime.Value {
 	once_ordNumber.Do(func() {
-		cache_ordNumber = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ordNumber = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Eq.Get_eqNumber()
-}), gopurs_runtime.Apply3(Get_ordNumberImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil}))
+}), gopurs_runtime.Apply3(Get_ordNumberImpl(), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil})))))
 	})
 	return cache_ordNumber
 }
@@ -183,9 +183,9 @@ var cache_ordInt gopurs_runtime.Value
 var once_ordInt sync.Once
 func Get_ordInt() gopurs_runtime.Value {
 	once_ordInt.Do(func() {
-		cache_ordInt = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ordInt = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("eq", pkg_Data_Eq.Get_eqIntImpl())
-}), gopurs_runtime.Apply3(Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil}))
+}), gopurs_runtime.Apply3(Get_ordIntImpl(), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil})))))
 	})
 	return cache_ordInt
 }
@@ -194,9 +194,9 @@ var cache_ordChar gopurs_runtime.Value
 var once_ordChar sync.Once
 func Get_ordChar() gopurs_runtime.Value {
 	once_ordChar.Do(func() {
-		cache_ordChar = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ordChar = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Eq.Get_eqChar()
-}), gopurs_runtime.Apply3(Get_ordCharImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil}))
+}), gopurs_runtime.Apply3(Get_ordCharImpl(), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil})))))
 	})
 	return cache_ordChar
 }
@@ -205,9 +205,9 @@ var cache_ordBoolean gopurs_runtime.Value
 var once_ordBoolean sync.Once
 func Get_ordBoolean() gopurs_runtime.Value {
 	once_ordBoolean.Do(func() {
-		cache_ordBoolean = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ordBoolean = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Eq.Get_eqBoolean()
-}), gopurs_runtime.Apply3(Get_ordBooleanImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil}))
+}), gopurs_runtime.Apply3(Get_ordBooleanImpl(), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil})))))
 	})
 	return cache_ordBoolean
 }
@@ -228,7 +228,7 @@ var once_ordRecord sync.Once
 func Get_ordRecord() gopurs_runtime.Value {
 	once_ordRecord.Do(func() {
 		cache_ordRecord = gopurs_runtime.Func2(func(_dollar__unused_0_box gopurs_runtime.Value, dictOrdRecord_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_ordRecord(_dollar__unused_0_box, dictOrdRecord_1_box)
+return gopurs_runtime.Any(Call_ordRecord(_dollar__unused_0_box, dictOrdRecord_1_box))
 })
 	})
 	return cache_ordRecord
@@ -245,15 +245,15 @@ return Call_compare1(dict_0_box)
 	return cache_compare1
 }
 
-var cache_compare1__gopurs_runtime_Value_3308723329 gopurs_runtime.Value
-var once_compare1__gopurs_runtime_Value_3308723329 sync.Once
-func Get_compare1__gopurs_runtime_Value_3308723329() gopurs_runtime.Value {
-	once_compare1__gopurs_runtime_Value_3308723329.Do(func() {
-		cache_compare1__gopurs_runtime_Value_3308723329 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_compare1__gopurs_runtime_Value_3308723329(dict_0_box)
+var cache_compare1__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface____gopurs_runtime_Value_3308723329 gopurs_runtime.Value
+var once_compare1__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface____gopurs_runtime_Value_3308723329 sync.Once
+func Get_compare1__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface____gopurs_runtime_Value_3308723329() gopurs_runtime.Value {
+	once_compare1__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface____gopurs_runtime_Value_3308723329.Do(func() {
+		cache_compare1__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface____gopurs_runtime_Value_3308723329 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_compare1__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface____gopurs_runtime_Value_3308723329(dict_0_box)
 })
 	})
-	return cache_compare1__gopurs_runtime_Value_3308723329
+	return cache_compare1__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface____gopurs_runtime_Value_3308723329
 }
 
 var cache_compare gopurs_runtime.Value
@@ -267,22 +267,22 @@ return Call_compare(dict_0_box)
 	return cache_compare
 }
 
-var cache_compare__gopurs_runtime_Value_592480496 gopurs_runtime.Value
-var once_compare__gopurs_runtime_Value_592480496 sync.Once
-func Get_compare__gopurs_runtime_Value_592480496() gopurs_runtime.Value {
-	once_compare__gopurs_runtime_Value_592480496.Do(func() {
-		cache_compare__gopurs_runtime_Value_592480496 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_compare__gopurs_runtime_Value_592480496(dict_0_box)
+var cache_compare__func_gopurs_runtime_Value__interface____interface____gopurs_runtime_Value_592480496 gopurs_runtime.Value
+var once_compare__func_gopurs_runtime_Value__interface____interface____gopurs_runtime_Value_592480496 sync.Once
+func Get_compare__func_gopurs_runtime_Value__interface____interface____gopurs_runtime_Value_592480496() gopurs_runtime.Value {
+	once_compare__func_gopurs_runtime_Value__interface____interface____gopurs_runtime_Value_592480496.Do(func() {
+		cache_compare__func_gopurs_runtime_Value__interface____interface____gopurs_runtime_Value_592480496 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_compare__func_gopurs_runtime_Value__interface____interface____gopurs_runtime_Value_592480496(dict_0_box)
 })
 	})
-	return cache_compare__gopurs_runtime_Value_592480496
+	return cache_compare__func_gopurs_runtime_Value__interface____interface____gopurs_runtime_Value_592480496
 }
 
 var cache_compare2 gopurs_runtime.Value
 var once_compare2 sync.Once
 func Get_compare2() gopurs_runtime.Value {
 	once_compare2.Do(func() {
-		cache_compare2 = gopurs_runtime.Apply3(Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil})
+		cache_compare2 = gopurs_runtime.Apply3(Get_ordIntImpl(), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil}))
 	})
 	return cache_compare2
 }
@@ -292,21 +292,25 @@ var once_comparing sync.Once
 func Get_comparing() gopurs_runtime.Value {
 	once_comparing.Do(func() {
 		cache_comparing = gopurs_runtime.Func4(func(dictOrd_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value, y_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_comparing(dictOrd_0_box, f_1_box, x_2_box, y_3_box)
+return Call_comparing(dictOrd_0_box, func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(f_1_box, gopurs_runtime.Any(inner_arg0)))
+}, gopurs_runtime.UnboxAny(x_2_box), gopurs_runtime.UnboxAny(y_3_box))
 })
 	})
 	return cache_comparing
 }
 
-var cache_comparing__gopurs_runtime_Value_689532050 gopurs_runtime.Value
-var once_comparing__gopurs_runtime_Value_689532050 sync.Once
-func Get_comparing__gopurs_runtime_Value_689532050() gopurs_runtime.Value {
-	once_comparing__gopurs_runtime_Value_689532050.Do(func() {
-		cache_comparing__gopurs_runtime_Value_689532050 = gopurs_runtime.Func4(func(dictOrd_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value, y_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_comparing__gopurs_runtime_Value_689532050(dictOrd_0_box, f_1_box, x_2_box, y_3_box)
+var cache_comparing__func_gopurs_runtime_Value__func_interface____interface____interface____interface____gopurs_runtime_Value_689532050 gopurs_runtime.Value
+var once_comparing__func_gopurs_runtime_Value__func_interface____interface____interface____interface____gopurs_runtime_Value_689532050 sync.Once
+func Get_comparing__func_gopurs_runtime_Value__func_interface____interface____interface____interface____gopurs_runtime_Value_689532050() gopurs_runtime.Value {
+	once_comparing__func_gopurs_runtime_Value__func_interface____interface____interface____interface____gopurs_runtime_Value_689532050.Do(func() {
+		cache_comparing__func_gopurs_runtime_Value__func_interface____interface____interface____interface____gopurs_runtime_Value_689532050 = gopurs_runtime.Func4(func(dictOrd_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value, y_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_comparing__func_gopurs_runtime_Value__func_interface____interface____interface____interface____gopurs_runtime_Value_689532050(dictOrd_0_box, func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(f_1_box, gopurs_runtime.Any(inner_arg0)))
+}, gopurs_runtime.UnboxAny(x_2_box), gopurs_runtime.UnboxAny(y_3_box))
 })
 	})
-	return cache_comparing__gopurs_runtime_Value_689532050
+	return cache_comparing__func_gopurs_runtime_Value__func_interface____interface____interface____interface____gopurs_runtime_Value_689532050
 }
 
 var cache_greaterThan gopurs_runtime.Value
@@ -314,21 +318,21 @@ var once_greaterThan sync.Once
 func Get_greaterThan() gopurs_runtime.Value {
 	once_greaterThan.Do(func() {
 		cache_greaterThan = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_greaterThan(dictOrd_0_box, a1_1_box, a2_2_box))
+return gopurs_runtime.Bool(Call_greaterThan(dictOrd_0_box, gopurs_runtime.UnboxAny(a1_1_box), gopurs_runtime.UnboxAny(a2_2_box)))
 })
 	})
 	return cache_greaterThan
 }
 
-var cache_greaterThan__gopurs_runtime_Value_3197484714 gopurs_runtime.Value
-var once_greaterThan__gopurs_runtime_Value_3197484714 sync.Once
-func Get_greaterThan__gopurs_runtime_Value_3197484714() gopurs_runtime.Value {
-	once_greaterThan__gopurs_runtime_Value_3197484714.Do(func() {
-		cache_greaterThan__gopurs_runtime_Value_3197484714 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_greaterThan__gopurs_runtime_Value_3197484714(dictOrd_0_box, a1_1_box, a2_2_box))
+var cache_greaterThan__func_gopurs_runtime_Value__interface____interface____bool_3197484714 gopurs_runtime.Value
+var once_greaterThan__func_gopurs_runtime_Value__interface____interface____bool_3197484714 sync.Once
+func Get_greaterThan__func_gopurs_runtime_Value__interface____interface____bool_3197484714() gopurs_runtime.Value {
+	once_greaterThan__func_gopurs_runtime_Value__interface____interface____bool_3197484714.Do(func() {
+		cache_greaterThan__func_gopurs_runtime_Value__interface____interface____bool_3197484714 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool(Call_greaterThan__func_gopurs_runtime_Value__interface____interface____bool_3197484714(dictOrd_0_box, gopurs_runtime.UnboxAny(a1_1_box), gopurs_runtime.UnboxAny(a2_2_box)))
 })
 	})
-	return cache_greaterThan__gopurs_runtime_Value_3197484714
+	return cache_greaterThan__func_gopurs_runtime_Value__interface____interface____bool_3197484714
 }
 
 var cache_greaterThanOrEq gopurs_runtime.Value
@@ -336,21 +340,21 @@ var once_greaterThanOrEq sync.Once
 func Get_greaterThanOrEq() gopurs_runtime.Value {
 	once_greaterThanOrEq.Do(func() {
 		cache_greaterThanOrEq = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_greaterThanOrEq(dictOrd_0_box, a1_1_box, a2_2_box))
+return gopurs_runtime.Bool(Call_greaterThanOrEq(dictOrd_0_box, gopurs_runtime.UnboxAny(a1_1_box), gopurs_runtime.UnboxAny(a2_2_box)))
 })
 	})
 	return cache_greaterThanOrEq
 }
 
-var cache_greaterThanOrEq__gopurs_runtime_Value_3197484714 gopurs_runtime.Value
-var once_greaterThanOrEq__gopurs_runtime_Value_3197484714 sync.Once
-func Get_greaterThanOrEq__gopurs_runtime_Value_3197484714() gopurs_runtime.Value {
-	once_greaterThanOrEq__gopurs_runtime_Value_3197484714.Do(func() {
-		cache_greaterThanOrEq__gopurs_runtime_Value_3197484714 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_greaterThanOrEq__gopurs_runtime_Value_3197484714(dictOrd_0_box, a1_1_box, a2_2_box))
+var cache_greaterThanOrEq__func_gopurs_runtime_Value__interface____interface____bool_3197484714 gopurs_runtime.Value
+var once_greaterThanOrEq__func_gopurs_runtime_Value__interface____interface____bool_3197484714 sync.Once
+func Get_greaterThanOrEq__func_gopurs_runtime_Value__interface____interface____bool_3197484714() gopurs_runtime.Value {
+	once_greaterThanOrEq__func_gopurs_runtime_Value__interface____interface____bool_3197484714.Do(func() {
+		cache_greaterThanOrEq__func_gopurs_runtime_Value__interface____interface____bool_3197484714 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool(Call_greaterThanOrEq__func_gopurs_runtime_Value__interface____interface____bool_3197484714(dictOrd_0_box, gopurs_runtime.UnboxAny(a1_1_box), gopurs_runtime.UnboxAny(a2_2_box)))
 })
 	})
-	return cache_greaterThanOrEq__gopurs_runtime_Value_3197484714
+	return cache_greaterThanOrEq__func_gopurs_runtime_Value__interface____interface____bool_3197484714
 }
 
 var cache_lessThan gopurs_runtime.Value
@@ -358,21 +362,21 @@ var once_lessThan sync.Once
 func Get_lessThan() gopurs_runtime.Value {
 	once_lessThan.Do(func() {
 		cache_lessThan = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_lessThan(dictOrd_0_box, a1_1_box, a2_2_box))
+return gopurs_runtime.Bool(Call_lessThan(dictOrd_0_box, gopurs_runtime.UnboxAny(a1_1_box), gopurs_runtime.UnboxAny(a2_2_box)))
 })
 	})
 	return cache_lessThan
 }
 
-var cache_lessThan__gopurs_runtime_Value_3197484714 gopurs_runtime.Value
-var once_lessThan__gopurs_runtime_Value_3197484714 sync.Once
-func Get_lessThan__gopurs_runtime_Value_3197484714() gopurs_runtime.Value {
-	once_lessThan__gopurs_runtime_Value_3197484714.Do(func() {
-		cache_lessThan__gopurs_runtime_Value_3197484714 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_lessThan__gopurs_runtime_Value_3197484714(dictOrd_0_box, a1_1_box, a2_2_box))
+var cache_lessThan__func_gopurs_runtime_Value__interface____interface____bool_3197484714 gopurs_runtime.Value
+var once_lessThan__func_gopurs_runtime_Value__interface____interface____bool_3197484714 sync.Once
+func Get_lessThan__func_gopurs_runtime_Value__interface____interface____bool_3197484714() gopurs_runtime.Value {
+	once_lessThan__func_gopurs_runtime_Value__interface____interface____bool_3197484714.Do(func() {
+		cache_lessThan__func_gopurs_runtime_Value__interface____interface____bool_3197484714 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool(Call_lessThan__func_gopurs_runtime_Value__interface____interface____bool_3197484714(dictOrd_0_box, gopurs_runtime.UnboxAny(a1_1_box), gopurs_runtime.UnboxAny(a2_2_box)))
 })
 	})
-	return cache_lessThan__gopurs_runtime_Value_3197484714
+	return cache_lessThan__func_gopurs_runtime_Value__interface____interface____bool_3197484714
 }
 
 var cache_signum gopurs_runtime.Value
@@ -391,21 +395,21 @@ var once_lessThanOrEq sync.Once
 func Get_lessThanOrEq() gopurs_runtime.Value {
 	once_lessThanOrEq.Do(func() {
 		cache_lessThanOrEq = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_lessThanOrEq(dictOrd_0_box, a1_1_box, a2_2_box))
+return gopurs_runtime.Bool(Call_lessThanOrEq(dictOrd_0_box, gopurs_runtime.UnboxAny(a1_1_box), gopurs_runtime.UnboxAny(a2_2_box)))
 })
 	})
 	return cache_lessThanOrEq
 }
 
-var cache_lessThanOrEq__gopurs_runtime_Value_3197484714 gopurs_runtime.Value
-var once_lessThanOrEq__gopurs_runtime_Value_3197484714 sync.Once
-func Get_lessThanOrEq__gopurs_runtime_Value_3197484714() gopurs_runtime.Value {
-	once_lessThanOrEq__gopurs_runtime_Value_3197484714.Do(func() {
-		cache_lessThanOrEq__gopurs_runtime_Value_3197484714 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_lessThanOrEq__gopurs_runtime_Value_3197484714(dictOrd_0_box, a1_1_box, a2_2_box))
+var cache_lessThanOrEq__func_gopurs_runtime_Value__interface____interface____bool_3197484714 gopurs_runtime.Value
+var once_lessThanOrEq__func_gopurs_runtime_Value__interface____interface____bool_3197484714 sync.Once
+func Get_lessThanOrEq__func_gopurs_runtime_Value__interface____interface____bool_3197484714() gopurs_runtime.Value {
+	once_lessThanOrEq__func_gopurs_runtime_Value__interface____interface____bool_3197484714.Do(func() {
+		cache_lessThanOrEq__func_gopurs_runtime_Value__interface____interface____bool_3197484714 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool(Call_lessThanOrEq__func_gopurs_runtime_Value__interface____interface____bool_3197484714(dictOrd_0_box, gopurs_runtime.UnboxAny(a1_1_box), gopurs_runtime.UnboxAny(a2_2_box)))
 })
 	})
-	return cache_lessThanOrEq__gopurs_runtime_Value_3197484714
+	return cache_lessThanOrEq__func_gopurs_runtime_Value__interface____interface____bool_3197484714
 }
 
 var cache_max gopurs_runtime.Value
@@ -413,21 +417,21 @@ var once_max sync.Once
 func Get_max() gopurs_runtime.Value {
 	once_max.Do(func() {
 		cache_max = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value, y_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_max(dictOrd_0_box, x_1_box, y_2_box)
+return gopurs_runtime.Any(Call_max(dictOrd_0_box, gopurs_runtime.UnboxAny(x_1_box), gopurs_runtime.UnboxAny(y_2_box)))
 })
 	})
 	return cache_max
 }
 
-var cache_max__gopurs_runtime_Value_2977499733 gopurs_runtime.Value
-var once_max__gopurs_runtime_Value_2977499733 sync.Once
-func Get_max__gopurs_runtime_Value_2977499733() gopurs_runtime.Value {
-	once_max__gopurs_runtime_Value_2977499733.Do(func() {
-		cache_max__gopurs_runtime_Value_2977499733 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value, y_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_max__gopurs_runtime_Value_2977499733(dictOrd_0_box, x_1_box, y_2_box)
+var cache_max__func_gopurs_runtime_Value__interface____interface____interface___2977499733 gopurs_runtime.Value
+var once_max__func_gopurs_runtime_Value__interface____interface____interface___2977499733 sync.Once
+func Get_max__func_gopurs_runtime_Value__interface____interface____interface___2977499733() gopurs_runtime.Value {
+	once_max__func_gopurs_runtime_Value__interface____interface____interface___2977499733.Do(func() {
+		cache_max__func_gopurs_runtime_Value__interface____interface____interface___2977499733 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value, y_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Any(Call_max__func_gopurs_runtime_Value__interface____interface____interface___2977499733(dictOrd_0_box, gopurs_runtime.UnboxAny(x_1_box), gopurs_runtime.UnboxAny(y_2_box)))
 })
 	})
-	return cache_max__gopurs_runtime_Value_2977499733
+	return cache_max__func_gopurs_runtime_Value__interface____interface____interface___2977499733
 }
 
 var cache_min gopurs_runtime.Value
@@ -435,21 +439,21 @@ var once_min sync.Once
 func Get_min() gopurs_runtime.Value {
 	once_min.Do(func() {
 		cache_min = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value, y_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_min(dictOrd_0_box, x_1_box, y_2_box)
+return gopurs_runtime.Any(Call_min(dictOrd_0_box, gopurs_runtime.UnboxAny(x_1_box), gopurs_runtime.UnboxAny(y_2_box)))
 })
 	})
 	return cache_min
 }
 
-var cache_min__gopurs_runtime_Value_2977499733 gopurs_runtime.Value
-var once_min__gopurs_runtime_Value_2977499733 sync.Once
-func Get_min__gopurs_runtime_Value_2977499733() gopurs_runtime.Value {
-	once_min__gopurs_runtime_Value_2977499733.Do(func() {
-		cache_min__gopurs_runtime_Value_2977499733 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value, y_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_min__gopurs_runtime_Value_2977499733(dictOrd_0_box, x_1_box, y_2_box)
+var cache_min__func_gopurs_runtime_Value__interface____interface____interface___2977499733 gopurs_runtime.Value
+var once_min__func_gopurs_runtime_Value__interface____interface____interface___2977499733 sync.Once
+func Get_min__func_gopurs_runtime_Value__interface____interface____interface___2977499733() gopurs_runtime.Value {
+	once_min__func_gopurs_runtime_Value__interface____interface____interface___2977499733.Do(func() {
+		cache_min__func_gopurs_runtime_Value__interface____interface____interface___2977499733 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value, y_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Any(Call_min__func_gopurs_runtime_Value__interface____interface____interface___2977499733(dictOrd_0_box, gopurs_runtime.UnboxAny(x_1_box), gopurs_runtime.UnboxAny(y_2_box)))
 })
 	})
-	return cache_min__gopurs_runtime_Value_2977499733
+	return cache_min__func_gopurs_runtime_Value__interface____interface____interface___2977499733
 }
 
 var cache_ordArray gopurs_runtime.Value
@@ -457,7 +461,7 @@ var once_ordArray sync.Once
 func Get_ordArray() gopurs_runtime.Value {
 	once_ordArray.Do(func() {
 		cache_ordArray = gopurs_runtime.Func(func(dictOrd_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_ordArray(dictOrd_0_box)
+return gopurs_runtime.Any(Call_ordArray(dictOrd_0_box))
 })
 	})
 	return cache_ordArray
@@ -467,11 +471,11 @@ var cache_ord1Array gopurs_runtime.Value
 var once_ord1Array sync.Once
 func Get_ord1Array() gopurs_runtime.Value {
 	once_ord1Array.Do(func() {
-		cache_ord1Array = gopurs_runtime.RecordDict2("Eq10", "compare1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_ord1Array = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Eq10", "compare1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Eq.Get_eq1Array()
 }), gopurs_runtime.Func(func(dictOrd_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(Call_ordArray(dictOrd_0), "compare")
-}))
+return gopurs_runtime.RecordGet(gopurs_runtime.Any(Call_ordArray(dictOrd_0)), "compare")
+}))))
 	})
 	return cache_ord1Array
 }
@@ -492,21 +496,21 @@ var once_clamp sync.Once
 func Get_clamp() gopurs_runtime.Value {
 	once_clamp.Do(func() {
 		cache_clamp = gopurs_runtime.Func4(func(dictOrd_0_box gopurs_runtime.Value, low_1_box gopurs_runtime.Value, hi_2_box gopurs_runtime.Value, x_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_clamp(dictOrd_0_box, low_1_box, hi_2_box, x_3_box)
+return gopurs_runtime.Any(Call_clamp(dictOrd_0_box, gopurs_runtime.UnboxAny(low_1_box), gopurs_runtime.UnboxAny(hi_2_box), gopurs_runtime.UnboxAny(x_3_box)))
 })
 	})
 	return cache_clamp
 }
 
-var cache_clamp__gopurs_runtime_Value_952165713 gopurs_runtime.Value
-var once_clamp__gopurs_runtime_Value_952165713 sync.Once
-func Get_clamp__gopurs_runtime_Value_952165713() gopurs_runtime.Value {
-	once_clamp__gopurs_runtime_Value_952165713.Do(func() {
-		cache_clamp__gopurs_runtime_Value_952165713 = gopurs_runtime.Func4(func(dictOrd_0_box gopurs_runtime.Value, low_1_box gopurs_runtime.Value, hi_2_box gopurs_runtime.Value, x_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_clamp__gopurs_runtime_Value_952165713(dictOrd_0_box, low_1_box, hi_2_box, x_3_box)
+var cache_clamp__func_gopurs_runtime_Value__interface____interface____interface____interface___952165713 gopurs_runtime.Value
+var once_clamp__func_gopurs_runtime_Value__interface____interface____interface____interface___952165713 sync.Once
+func Get_clamp__func_gopurs_runtime_Value__interface____interface____interface____interface___952165713() gopurs_runtime.Value {
+	once_clamp__func_gopurs_runtime_Value__interface____interface____interface____interface___952165713.Do(func() {
+		cache_clamp__func_gopurs_runtime_Value__interface____interface____interface____interface___952165713 = gopurs_runtime.Func4(func(dictOrd_0_box gopurs_runtime.Value, low_1_box gopurs_runtime.Value, hi_2_box gopurs_runtime.Value, x_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Any(Call_clamp__func_gopurs_runtime_Value__interface____interface____interface____interface___952165713(dictOrd_0_box, gopurs_runtime.UnboxAny(low_1_box), gopurs_runtime.UnboxAny(hi_2_box), gopurs_runtime.UnboxAny(x_3_box)))
 })
 	})
-	return cache_clamp__gopurs_runtime_Value_952165713
+	return cache_clamp__func_gopurs_runtime_Value__interface____interface____interface____interface___952165713
 }
 
 var cache_between gopurs_runtime.Value
@@ -514,7 +518,7 @@ var once_between sync.Once
 func Get_between() gopurs_runtime.Value {
 	once_between.Do(func() {
 		cache_between = gopurs_runtime.Func4(func(dictOrd_0_box gopurs_runtime.Value, low_1_box gopurs_runtime.Value, hi_2_box gopurs_runtime.Value, x_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_between(dictOrd_0_box, low_1_box, hi_2_box, x_3_box))
+return gopurs_runtime.Bool(Call_between(dictOrd_0_box, gopurs_runtime.UnboxAny(low_1_box), gopurs_runtime.UnboxAny(hi_2_box), gopurs_runtime.UnboxAny(x_3_box)))
 })
 	})
 	return cache_between
@@ -531,15 +535,93 @@ return Call_abs(dictOrd_0_box, dictRing_1_box)
 	return cache_abs
 }
 
-var cache_abs__gopurs_runtime_Value_1127813693 gopurs_runtime.Value
-var once_abs__gopurs_runtime_Value_1127813693 sync.Once
-func Get_abs__gopurs_runtime_Value_1127813693() gopurs_runtime.Value {
-	once_abs__gopurs_runtime_Value_1127813693.Do(func() {
-		cache_abs__gopurs_runtime_Value_1127813693 = gopurs_runtime.Func2(func(dictOrd_0_box gopurs_runtime.Value, dictRing_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_abs__gopurs_runtime_Value_1127813693(dictOrd_0_box, dictRing_1_box)
+var cache_abs__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface___1127813693 gopurs_runtime.Value
+var once_abs__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface___1127813693 sync.Once
+func Get_abs__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface___1127813693() gopurs_runtime.Value {
+	once_abs__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface___1127813693.Do(func() {
+		cache_abs__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface___1127813693 = gopurs_runtime.Func2(func(dictOrd_0_box gopurs_runtime.Value, dictRing_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_abs__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface___1127813693(dictOrd_0_box, dictRing_1_box)
 })
 	})
-	return cache_abs__gopurs_runtime_Value_1127813693
+	return cache_abs__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface___1127813693
+}
+
+var cache_ordArrayImpl gopurs_runtime.Value
+var once_ordArrayImpl sync.Once
+func Get_ordArrayImpl() gopurs_runtime.Value {
+	once_ordArrayImpl.Do(func() {
+		cache_ordArrayImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Int(OrdArrayImpl(func(inner_arg0 interface{}, inner_arg1 interface{}) int64 {
+return gopurs_runtime.Apply2(arg0, gopurs_runtime.Any(inner_arg0), gopurs_runtime.Any(inner_arg1)).IntVal
+}, func() []interface{} {
+					arr := *(*[]gopurs_runtime.Value)(arg1.UnsafePtr)
+					unboxed := make([]interface{}, len(arr))
+					for i, v := range arr { unboxed[i] = gopurs_runtime.UnboxAny(v) }
+					return unboxed
+				}(), func() []interface{} {
+					arr := *(*[]gopurs_runtime.Value)(arg2.UnsafePtr)
+					unboxed := make([]interface{}, len(arr))
+					for i, v := range arr { unboxed[i] = gopurs_runtime.UnboxAny(v) }
+					return unboxed
+				}()))
+})
+	})
+	return cache_ordArrayImpl
+}
+
+var cache_ordBooleanImpl gopurs_runtime.Value
+var once_ordBooleanImpl sync.Once
+func Get_ordBooleanImpl() gopurs_runtime.Value {
+	once_ordBooleanImpl.Do(func() {
+		cache_ordBooleanImpl = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
+return OrdBooleanImpl(arg0, arg1, arg2, (arg3.IntVal) != (0), (arg4.IntVal) != (0))
+})
+	})
+	return cache_ordBooleanImpl
+}
+
+var cache_ordCharImpl gopurs_runtime.Value
+var once_ordCharImpl sync.Once
+func Get_ordCharImpl() gopurs_runtime.Value {
+	once_ordCharImpl.Do(func() {
+		cache_ordCharImpl = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
+return OrdCharImpl(arg0, arg1, arg2, arg3.StrVal(), arg4.StrVal())
+})
+	})
+	return cache_ordCharImpl
+}
+
+var cache_ordIntImpl gopurs_runtime.Value
+var once_ordIntImpl sync.Once
+func Get_ordIntImpl() gopurs_runtime.Value {
+	once_ordIntImpl.Do(func() {
+		cache_ordIntImpl = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
+return OrdIntImpl(arg0, arg1, arg2, arg3.IntVal, arg4.IntVal)
+})
+	})
+	return cache_ordIntImpl
+}
+
+var cache_ordNumberImpl gopurs_runtime.Value
+var once_ordNumberImpl sync.Once
+func Get_ordNumberImpl() gopurs_runtime.Value {
+	once_ordNumberImpl.Do(func() {
+		cache_ordNumberImpl = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
+return OrdNumberImpl(arg0, arg1, arg2, arg3.FloatVal(), arg4.FloatVal())
+})
+	})
+	return cache_ordNumberImpl
+}
+
+var cache_ordStringImpl gopurs_runtime.Value
+var once_ordStringImpl sync.Once
+func Get_ordStringImpl() gopurs_runtime.Value {
+	once_ordStringImpl.Do(func() {
+		cache_ordStringImpl = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
+return OrdStringImpl(arg0, arg1, arg2, arg3.StrVal(), arg4.StrVal())
+})
+	})
+	return cache_ordStringImpl
 }
 
 func Call_compareRecord(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -548,16 +630,16 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "compareRecord")
 }
 
-func Call_ordRecord(_dollar__unused_0_loop gopurs_runtime.Value, dictOrdRecord_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_ordRecord(_dollar__unused_0_loop gopurs_runtime.Value, dictOrdRecord_1_loop gopurs_runtime.Value) interface{} {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var dictOrdRecord_1 gopurs_runtime.Value = dictOrdRecord_1_loop
 _ = dictOrdRecord_1
-eqRec1_2_0 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrdRecord_1, "EqRecord0"), gopurs_runtime.Value{}), "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}))
+eqRec1_2_0 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrdRecord_1, "EqRecord0"), gopurs_runtime.Value{}), "eqRecord"), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil})))
 _ = eqRec1_2_0
-return gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return eqRec1_2_0
-}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrdRecord_1, "compareRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}))
+}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrdRecord_1, "compareRecord"), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}))))
 }
 
 func Call_compare1(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -566,7 +648,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "compare1")
 }
 
-func Call_compare1__gopurs_runtime_Value_3308723329(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_compare1__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface____gopurs_runtime_Value_3308723329(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "compare1")
@@ -578,99 +660,99 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "compare")
 }
 
-func Call_compare__gopurs_runtime_Value_592480496(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_compare__func_gopurs_runtime_Value__interface____interface____gopurs_runtime_Value_592480496(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "compare")
 }
 
-func Call_comparing(dictOrd_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value, y_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_comparing(dictOrd_0_loop gopurs_runtime.Value, f_1_loop func(interface{}) interface{}, x_2_loop interface{}, y_3_loop interface{}) gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-var f_1 gopurs_runtime.Value = f_1_loop
+var f_1 func(interface{}) interface{} = f_1_loop
 _ = f_1
-var x_2 gopurs_runtime.Value = x_2_loop
+var x_2 interface{} = x_2_loop
 _ = x_2
-var y_3 gopurs_runtime.Value = y_3_loop
+var y_3 interface{} = y_3_loop
 _ = y_3
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.Apply(f_1, x_2), gopurs_runtime.Apply(f_1, y_3))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.Any(f_1(x_2)), gopurs_runtime.Any(f_1(y_3)))
 }
 
-func Call_comparing__gopurs_runtime_Value_689532050(dictOrd_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value, y_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_comparing__func_gopurs_runtime_Value__func_interface____interface____interface____interface____gopurs_runtime_Value_689532050(dictOrd_0_loop gopurs_runtime.Value, f_1_loop func(interface{}) interface{}, x_2_loop interface{}, y_3_loop interface{}) gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-var f_1 gopurs_runtime.Value = f_1_loop
+var f_1 func(interface{}) interface{} = f_1_loop
 _ = f_1
-var x_2 gopurs_runtime.Value = x_2_loop
+var x_2 interface{} = x_2_loop
 _ = x_2
-var y_3 gopurs_runtime.Value = y_3_loop
+var y_3 interface{} = y_3_loop
 _ = y_3
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.Apply(f_1, x_2), gopurs_runtime.Apply(f_1, y_3))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.Any(f_1(x_2)), gopurs_runtime.Any(f_1(y_3)))
 }
 
-func Call_greaterThan(dictOrd_0_loop gopurs_runtime.Value, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
+func Call_greaterThan(dictOrd_0_loop gopurs_runtime.Value, a1_1_loop interface{}, a2_2_loop interface{}) bool {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-var a1_1 gopurs_runtime.Value = a1_1_loop
+var a1_1 interface{} = a1_1_loop
 _ = a1_1
-var a2_2 gopurs_runtime.Value = a2_2_loop
+var a2_2 interface{} = a2_2_loop
 _ = a2_2
-var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), a1_1, a2_2)
+var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.Any(a1_1), gopurs_runtime.Any(a2_2))
 return (__t_tag_0.Type == 9 && __t_tag_0.IntVal == 380165415)
 }
 
-func Call_greaterThan__gopurs_runtime_Value_3197484714(dictOrd_0_loop gopurs_runtime.Value, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
+func Call_greaterThan__func_gopurs_runtime_Value__interface____interface____bool_3197484714(dictOrd_0_loop gopurs_runtime.Value, a1_1_loop interface{}, a2_2_loop interface{}) bool {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-var a1_1 gopurs_runtime.Value = a1_1_loop
+var a1_1 interface{} = a1_1_loop
 _ = a1_1
-var a2_2 gopurs_runtime.Value = a2_2_loop
+var a2_2 interface{} = a2_2_loop
 _ = a2_2
-var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), a1_1, a2_2)
+var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.Any(a1_1), gopurs_runtime.Any(a2_2))
 return (__t_tag_0.Type == 9 && __t_tag_0.IntVal == 380165415)
 }
 
-func Call_greaterThanOrEq(dictOrd_0_loop gopurs_runtime.Value, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
+func Call_greaterThanOrEq(dictOrd_0_loop gopurs_runtime.Value, a1_1_loop interface{}, a2_2_loop interface{}) bool {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-var a1_1 gopurs_runtime.Value = a1_1_loop
+var a1_1 interface{} = a1_1_loop
 _ = a1_1
-var a2_2 gopurs_runtime.Value = a2_2_loop
+var a2_2 interface{} = a2_2_loop
 _ = a2_2
-var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), a1_1, a2_2)
+var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.Any(a1_1), gopurs_runtime.Any(a2_2))
 return ((__t_tag_0.Type == 9 && __t_tag_0.IntVal == 1527465420)) != (true)
 }
 
-func Call_greaterThanOrEq__gopurs_runtime_Value_3197484714(dictOrd_0_loop gopurs_runtime.Value, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
+func Call_greaterThanOrEq__func_gopurs_runtime_Value__interface____interface____bool_3197484714(dictOrd_0_loop gopurs_runtime.Value, a1_1_loop interface{}, a2_2_loop interface{}) bool {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-var a1_1 gopurs_runtime.Value = a1_1_loop
+var a1_1 interface{} = a1_1_loop
 _ = a1_1
-var a2_2 gopurs_runtime.Value = a2_2_loop
+var a2_2 interface{} = a2_2_loop
 _ = a2_2
-var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), a1_1, a2_2)
+var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.Any(a1_1), gopurs_runtime.Any(a2_2))
 return ((__t_tag_0.Type == 9 && __t_tag_0.IntVal == 1527465420)) != (true)
 }
 
-func Call_lessThan(dictOrd_0_loop gopurs_runtime.Value, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
+func Call_lessThan(dictOrd_0_loop gopurs_runtime.Value, a1_1_loop interface{}, a2_2_loop interface{}) bool {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-var a1_1 gopurs_runtime.Value = a1_1_loop
+var a1_1 interface{} = a1_1_loop
 _ = a1_1
-var a2_2 gopurs_runtime.Value = a2_2_loop
+var a2_2 interface{} = a2_2_loop
 _ = a2_2
-var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), a1_1, a2_2)
+var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.Any(a1_1), gopurs_runtime.Any(a2_2))
 return (__t_tag_0.Type == 9 && __t_tag_0.IntVal == 1527465420)
 }
 
-func Call_lessThan__gopurs_runtime_Value_3197484714(dictOrd_0_loop gopurs_runtime.Value, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
+func Call_lessThan__func_gopurs_runtime_Value__interface____interface____bool_3197484714(dictOrd_0_loop gopurs_runtime.Value, a1_1_loop interface{}, a2_2_loop interface{}) bool {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-var a1_1 gopurs_runtime.Value = a1_1_loop
+var a1_1 interface{} = a1_1_loop
 _ = a1_1
-var a2_2 gopurs_runtime.Value = a2_2_loop
+var a2_2 interface{} = a2_2_loop
 _ = a2_2
-var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), a1_1, a2_2)
+var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.Any(a1_1), gopurs_runtime.Any(a2_2))
 return (__t_tag_0.Type == 9 && __t_tag_0.IntVal == 1527465420)
 }
 
@@ -715,41 +797,41 @@ return __t4
 })
 }
 
-func Call_lessThanOrEq(dictOrd_0_loop gopurs_runtime.Value, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
+func Call_lessThanOrEq(dictOrd_0_loop gopurs_runtime.Value, a1_1_loop interface{}, a2_2_loop interface{}) bool {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-var a1_1 gopurs_runtime.Value = a1_1_loop
+var a1_1 interface{} = a1_1_loop
 _ = a1_1
-var a2_2 gopurs_runtime.Value = a2_2_loop
+var a2_2 interface{} = a2_2_loop
 _ = a2_2
-var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), a1_1, a2_2)
+var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.Any(a1_1), gopurs_runtime.Any(a2_2))
 return ((__t_tag_0.Type == 9 && __t_tag_0.IntVal == 380165415)) != (true)
 }
 
-func Call_lessThanOrEq__gopurs_runtime_Value_3197484714(dictOrd_0_loop gopurs_runtime.Value, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
+func Call_lessThanOrEq__func_gopurs_runtime_Value__interface____interface____bool_3197484714(dictOrd_0_loop gopurs_runtime.Value, a1_1_loop interface{}, a2_2_loop interface{}) bool {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-var a1_1 gopurs_runtime.Value = a1_1_loop
+var a1_1 interface{} = a1_1_loop
 _ = a1_1
-var a2_2 gopurs_runtime.Value = a2_2_loop
+var a2_2 interface{} = a2_2_loop
 _ = a2_2
-var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), a1_1, a2_2)
+var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.Any(a1_1), gopurs_runtime.Any(a2_2))
 return ((__t_tag_0.Type == 9 && __t_tag_0.IntVal == 380165415)) != (true)
 }
 
-func Call_max(dictOrd_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value, y_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_max(dictOrd_0_loop gopurs_runtime.Value, x_1_loop interface{}, y_2_loop interface{}) interface{} {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-var x_1 gopurs_runtime.Value = x_1_loop
+var x_1 interface{} = x_1_loop
 _ = x_1
-var y_2 gopurs_runtime.Value = y_2_loop
+var y_2 interface{} = y_2_loop
 _ = y_2
-v_3_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), x_1, y_2)
+v_3_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.Any(x_1), gopurs_runtime.Any(y_2))
 _ = v_3_0
 var __t1 gopurs_runtime.Value
 {
 if (v_3_0.Type == 9 && v_3_0.IntVal == 1527465420) {
-__t1 = y_2
+__t1 = gopurs_runtime.Any(y_2)
 goto end_branch_1
 } else {
 
@@ -757,7 +839,7 @@ goto end_branch_1
 }
 {
 if (v_3_0.Type == 9 && v_3_0.IntVal == 902936544) {
-__t1 = x_1
+__t1 = gopurs_runtime.Any(x_1)
 goto end_branch_1
 } else {
 
@@ -765,7 +847,7 @@ goto end_branch_1
 }
 {
 if (v_3_0.Type == 9 && v_3_0.IntVal == 380165415) {
-__t1 = x_1
+__t1 = gopurs_runtime.Any(x_1)
 goto end_branch_1
 } else {
 
@@ -775,22 +857,22 @@ goto end_branch_1
 __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
-return __t1
+return gopurs_runtime.UnboxAny(__t1)
 }
 
-func Call_max__gopurs_runtime_Value_2977499733(dictOrd_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value, y_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_max__func_gopurs_runtime_Value__interface____interface____interface___2977499733(dictOrd_0_loop gopurs_runtime.Value, x_1_loop interface{}, y_2_loop interface{}) interface{} {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-var x_1 gopurs_runtime.Value = x_1_loop
+var x_1 interface{} = x_1_loop
 _ = x_1
-var y_2 gopurs_runtime.Value = y_2_loop
+var y_2 interface{} = y_2_loop
 _ = y_2
-v_3_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), x_1, y_2)
+v_3_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.Any(x_1), gopurs_runtime.Any(y_2))
 _ = v_3_0
 var __t1 gopurs_runtime.Value
 {
 if (v_3_0.Type == 9 && v_3_0.IntVal == 1527465420) {
-__t1 = y_2
+__t1 = gopurs_runtime.Any(y_2)
 goto end_branch_1
 } else {
 
@@ -798,7 +880,7 @@ goto end_branch_1
 }
 {
 if (v_3_0.Type == 9 && v_3_0.IntVal == 902936544) {
-__t1 = x_1
+__t1 = gopurs_runtime.Any(x_1)
 goto end_branch_1
 } else {
 
@@ -806,7 +888,7 @@ goto end_branch_1
 }
 {
 if (v_3_0.Type == 9 && v_3_0.IntVal == 380165415) {
-__t1 = x_1
+__t1 = gopurs_runtime.Any(x_1)
 goto end_branch_1
 } else {
 
@@ -816,22 +898,22 @@ goto end_branch_1
 __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
-return __t1
+return gopurs_runtime.UnboxAny(__t1)
 }
 
-func Call_min(dictOrd_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value, y_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_min(dictOrd_0_loop gopurs_runtime.Value, x_1_loop interface{}, y_2_loop interface{}) interface{} {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-var x_1 gopurs_runtime.Value = x_1_loop
+var x_1 interface{} = x_1_loop
 _ = x_1
-var y_2 gopurs_runtime.Value = y_2_loop
+var y_2 interface{} = y_2_loop
 _ = y_2
-v_3_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), x_1, y_2)
+v_3_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.Any(x_1), gopurs_runtime.Any(y_2))
 _ = v_3_0
 var __t1 gopurs_runtime.Value
 {
 if (v_3_0.Type == 9 && v_3_0.IntVal == 1527465420) {
-__t1 = x_1
+__t1 = gopurs_runtime.Any(x_1)
 goto end_branch_1
 } else {
 
@@ -839,7 +921,7 @@ goto end_branch_1
 }
 {
 if (v_3_0.Type == 9 && v_3_0.IntVal == 902936544) {
-__t1 = x_1
+__t1 = gopurs_runtime.Any(x_1)
 goto end_branch_1
 } else {
 
@@ -847,7 +929,7 @@ goto end_branch_1
 }
 {
 if (v_3_0.Type == 9 && v_3_0.IntVal == 380165415) {
-__t1 = y_2
+__t1 = gopurs_runtime.Any(y_2)
 goto end_branch_1
 } else {
 
@@ -857,22 +939,22 @@ goto end_branch_1
 __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
-return __t1
+return gopurs_runtime.UnboxAny(__t1)
 }
 
-func Call_min__gopurs_runtime_Value_2977499733(dictOrd_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value, y_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_min__func_gopurs_runtime_Value__interface____interface____interface___2977499733(dictOrd_0_loop gopurs_runtime.Value, x_1_loop interface{}, y_2_loop interface{}) interface{} {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-var x_1 gopurs_runtime.Value = x_1_loop
+var x_1 interface{} = x_1_loop
 _ = x_1
-var y_2 gopurs_runtime.Value = y_2_loop
+var y_2 interface{} = y_2_loop
 _ = y_2
-v_3_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), x_1, y_2)
+v_3_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.Any(x_1), gopurs_runtime.Any(y_2))
 _ = v_3_0
 var __t1 gopurs_runtime.Value
 {
 if (v_3_0.Type == 9 && v_3_0.IntVal == 1527465420) {
-__t1 = x_1
+__t1 = gopurs_runtime.Any(x_1)
 goto end_branch_1
 } else {
 
@@ -880,7 +962,7 @@ goto end_branch_1
 }
 {
 if (v_3_0.Type == 9 && v_3_0.IntVal == 902936544) {
-__t1 = x_1
+__t1 = gopurs_runtime.Any(x_1)
 goto end_branch_1
 } else {
 
@@ -888,7 +970,7 @@ goto end_branch_1
 }
 {
 if (v_3_0.Type == 9 && v_3_0.IntVal == 380165415) {
-__t1 = y_2
+__t1 = gopurs_runtime.Any(y_2)
 goto end_branch_1
 } else {
 
@@ -898,15 +980,15 @@ goto end_branch_1
 __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
-return __t1
+return gopurs_runtime.UnboxAny(__t1)
 }
 
-func Call_ordArray(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_ordArray(dictOrd_0_loop gopurs_runtime.Value) interface{} {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
 eqArray_1_0 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(pkg_Data_Eq.Get_eqArrayImpl(), gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0, "Eq0"), gopurs_runtime.Value{}), "eq")))
 _ = eqArray_1_0
-return gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return eqArray_1_0
 }), gopurs_runtime.Func2(func(xs_2 gopurs_runtime.Value, ys_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(Get_compare2(), gopurs_runtime.Int(0), gopurs_runtime.Apply3(Get_ordArrayImpl(), gopurs_runtime.Func2(func(x_4 gopurs_runtime.Value, y_5 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -943,7 +1025,7 @@ __t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 end_branch_2:
 return __t2
 }), xs_2, ys_3))
-}))
+})))
 }
 
 func Call_ordRecordCons(dictOrdRecord_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -960,13 +1042,13 @@ _ = eqRowCons2_6_2
 return gopurs_runtime.RecordDict2("EqRecord0", "compareRecord", gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return eqRowCons2_6_2
 }), gopurs_runtime.Func3(func(v_7 gopurs_runtime.Value, ra_8 gopurs_runtime.Value, rb_9 gopurs_runtime.Value) gopurs_runtime.Value {
-key_10_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_3, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil})
+key_10_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_3, "reflectSymbol"), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}))
 _ = key_10_3
 left_11_4 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_5, "compare"), gopurs_runtime.Apply2(pkg_Record_Unsafe.Get_unsafeGet(), key_10_3, ra_8), gopurs_runtime.Apply2(pkg_Record_Unsafe.Get_unsafeGet(), key_10_3, rb_9))
 _ = left_11_4
 var __t5 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ordering.Get_eqOrdering(), "eq"), left_11_4, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}), gopurs_runtime.Bool(false)).IntVal) != (0) {
+if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ordering.Get_eqOrdering(), "eq"), left_11_4, gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil})), gopurs_runtime.Bool(false)).IntVal) != (0) {
 __t5 = left_11_4
 goto end_branch_5
 } else {
@@ -974,7 +1056,7 @@ goto end_branch_5
 }
 }
 {
-__t5 = gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictOrdRecord_0, "compareRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}, ra_8, rb_9)
+__t5 = gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictOrdRecord_0, "compareRecord"), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}), ra_8, rb_9)
 }
 end_branch_5:
 return __t5
@@ -983,21 +1065,21 @@ return __t5
 })
 }
 
-func Call_clamp(dictOrd_0_loop gopurs_runtime.Value, low_1_loop gopurs_runtime.Value, hi_2_loop gopurs_runtime.Value, x_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_clamp(dictOrd_0_loop gopurs_runtime.Value, low_1_loop interface{}, hi_2_loop interface{}, x_3_loop interface{}) interface{} {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-var low_1 gopurs_runtime.Value = low_1_loop
+var low_1 interface{} = low_1_loop
 _ = low_1
-var hi_2 gopurs_runtime.Value = hi_2_loop
+var hi_2 interface{} = hi_2_loop
 _ = hi_2
-var x_3 gopurs_runtime.Value = x_3_loop
+var x_3 interface{} = x_3_loop
 _ = x_3
-v_4_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), low_1, x_3)
+v_4_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.Any(low_1), gopurs_runtime.Any(x_3))
 _ = v_4_0
 var __t2 gopurs_runtime.Value
 {
 if (v_4_0.Type == 9 && v_4_0.IntVal == 1527465420) {
-__t2 = x_3
+__t2 = gopurs_runtime.Any(x_3)
 goto end_branch_2
 } else {
 
@@ -1005,7 +1087,7 @@ goto end_branch_2
 }
 {
 if (v_4_0.Type == 9 && v_4_0.IntVal == 902936544) {
-__t2 = low_1
+__t2 = gopurs_runtime.Any(low_1)
 goto end_branch_2
 } else {
 
@@ -1013,7 +1095,7 @@ goto end_branch_2
 }
 {
 if (v_4_0.Type == 9 && v_4_0.IntVal == 380165415) {
-__t2 = low_1
+__t2 = gopurs_runtime.Any(low_1)
 goto end_branch_2
 } else {
 
@@ -1025,12 +1107,12 @@ __t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 end_branch_2:
 __local_var_5_1 := __t2
 _ = __local_var_5_1
-v_6_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), hi_2, __local_var_5_1)
+v_6_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.Any(hi_2), __local_var_5_1)
 _ = v_6_3
 var __t4 gopurs_runtime.Value
 {
 if (v_6_3.Type == 9 && v_6_3.IntVal == 1527465420) {
-__t4 = hi_2
+__t4 = gopurs_runtime.Any(hi_2)
 goto end_branch_4
 } else {
 
@@ -1038,7 +1120,7 @@ goto end_branch_4
 }
 {
 if (v_6_3.Type == 9 && v_6_3.IntVal == 902936544) {
-__t4 = hi_2
+__t4 = gopurs_runtime.Any(hi_2)
 goto end_branch_4
 } else {
 
@@ -1056,24 +1138,24 @@ goto end_branch_4
 __t4 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_4:
-return __t4
+return gopurs_runtime.UnboxAny(__t4)
 }
 
-func Call_clamp__gopurs_runtime_Value_952165713(dictOrd_0_loop gopurs_runtime.Value, low_1_loop gopurs_runtime.Value, hi_2_loop gopurs_runtime.Value, x_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_clamp__func_gopurs_runtime_Value__interface____interface____interface____interface___952165713(dictOrd_0_loop gopurs_runtime.Value, low_1_loop interface{}, hi_2_loop interface{}, x_3_loop interface{}) interface{} {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-var low_1 gopurs_runtime.Value = low_1_loop
+var low_1 interface{} = low_1_loop
 _ = low_1
-var hi_2 gopurs_runtime.Value = hi_2_loop
+var hi_2 interface{} = hi_2_loop
 _ = hi_2
-var x_3 gopurs_runtime.Value = x_3_loop
+var x_3 interface{} = x_3_loop
 _ = x_3
-v_4_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), low_1, x_3)
+v_4_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.Any(low_1), gopurs_runtime.Any(x_3))
 _ = v_4_0
 var __t2 gopurs_runtime.Value
 {
 if (v_4_0.Type == 9 && v_4_0.IntVal == 1527465420) {
-__t2 = x_3
+__t2 = gopurs_runtime.Any(x_3)
 goto end_branch_2
 } else {
 
@@ -1081,7 +1163,7 @@ goto end_branch_2
 }
 {
 if (v_4_0.Type == 9 && v_4_0.IntVal == 902936544) {
-__t2 = low_1
+__t2 = gopurs_runtime.Any(low_1)
 goto end_branch_2
 } else {
 
@@ -1089,7 +1171,7 @@ goto end_branch_2
 }
 {
 if (v_4_0.Type == 9 && v_4_0.IntVal == 380165415) {
-__t2 = low_1
+__t2 = gopurs_runtime.Any(low_1)
 goto end_branch_2
 } else {
 
@@ -1101,12 +1183,12 @@ __t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 end_branch_2:
 __local_var_5_1 := __t2
 _ = __local_var_5_1
-v_6_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), hi_2, __local_var_5_1)
+v_6_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.Any(hi_2), __local_var_5_1)
 _ = v_6_3
 var __t4 gopurs_runtime.Value
 {
 if (v_6_3.Type == 9 && v_6_3.IntVal == 1527465420) {
-__t4 = hi_2
+__t4 = gopurs_runtime.Any(hi_2)
 goto end_branch_4
 } else {
 
@@ -1114,7 +1196,7 @@ goto end_branch_4
 }
 {
 if (v_6_3.Type == 9 && v_6_3.IntVal == 902936544) {
-__t4 = hi_2
+__t4 = gopurs_runtime.Any(hi_2)
 goto end_branch_4
 } else {
 
@@ -1132,21 +1214,21 @@ goto end_branch_4
 __t4 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_4:
-return __t4
+return gopurs_runtime.UnboxAny(__t4)
 }
 
-func Call_between(dictOrd_0_loop gopurs_runtime.Value, low_1_loop gopurs_runtime.Value, hi_2_loop gopurs_runtime.Value, x_3_loop gopurs_runtime.Value) bool {
+func Call_between(dictOrd_0_loop gopurs_runtime.Value, low_1_loop interface{}, hi_2_loop interface{}, x_3_loop interface{}) bool {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-var low_1 gopurs_runtime.Value = low_1_loop
+var low_1 interface{} = low_1_loop
 _ = low_1
-var hi_2 gopurs_runtime.Value = hi_2_loop
+var hi_2 interface{} = hi_2_loop
 _ = hi_2
-var x_3 gopurs_runtime.Value = x_3_loop
+var x_3 interface{} = x_3_loop
 _ = x_3
 var __t1 gopurs_runtime.Value
 {
-var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), x_3, low_1)
+var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.Any(x_3), gopurs_runtime.Any(low_1))
 if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 1527465420) {
 __t1 = gopurs_runtime.Bool(false)
 goto end_branch_1
@@ -1155,7 +1237,7 @@ goto end_branch_1
 }
 }
 {
-var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), x_3, hi_2)
+var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.Any(x_3), gopurs_runtime.Any(hi_2))
 __t1 = gopurs_runtime.Bool(((__t_tag_0.Type == 9 && __t_tag_0.IntVal == 380165415)) != (true))
 }
 end_branch_1:
@@ -1190,7 +1272,7 @@ return __t2
 })
 }
 
-func Call_abs__gopurs_runtime_Value_1127813693(dictOrd_0_loop gopurs_runtime.Value, dictRing_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_abs__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface___1127813693(dictOrd_0_loop gopurs_runtime.Value, dictRing_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
 var dictRing_1 gopurs_runtime.Value = dictRing_1_loop
@@ -1216,28 +1298,4 @@ __t2 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictRing_1, "sub"), zero_3
 end_branch_2:
 return __t2
 })
-}
-
-func Get_ordArrayImpl() gopurs_runtime.Value {
-	return _Gopurs_OrdArrayImpl
-}
-
-func Get_ordBooleanImpl() gopurs_runtime.Value {
-	return _Gopurs_OrdBooleanImpl
-}
-
-func Get_ordCharImpl() gopurs_runtime.Value {
-	return _Gopurs_OrdCharImpl
-}
-
-func Get_ordIntImpl() gopurs_runtime.Value {
-	return _Gopurs_OrdIntImpl
-}
-
-func Get_ordNumberImpl() gopurs_runtime.Value {
-	return _Gopurs_OrdNumberImpl
-}
-
-func Get_ordStringImpl() gopurs_runtime.Value {
-	return _Gopurs_OrdStringImpl
 }

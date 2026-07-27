@@ -108,7 +108,7 @@ function majData_majSemiring_majGeneric_genericmajZero__prime__($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['genericZero__prime__'];
+  $__res = ($dict_0)->{'genericZero__prime__'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -122,7 +122,7 @@ function majData_majSemiring_majGeneric_genericmajZero($dictGeneric_0, $dictGene
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictGeneric_0)['to'])(($dictGenericSemiring_1)['genericZero__prime__']);
+  $__res = (($dictGeneric_0)->{'to'})(($dictGenericSemiring_1)->{'genericZero__prime__'});
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -130,7 +130,7 @@ function majData_majSemiring_majGeneric_genericmajZero($dictGeneric_0, $dictGene
 $GLOBALS['Data_Semiring_Generic_genericZero'] = __NAMESPACE__ . '\\majData_majSemiring_majGeneric_genericmajZero';
 
 // Data_Semiring_Generic_genericSemiringNoArguments
-$GLOBALS['Data_Semiring_Generic_genericSemiringNoArguments'] = ["genericAdd__prime__" => (function() {
+$GLOBALS['Data_Semiring_Generic_genericSemiringNoArguments'] = (object)["genericAdd__prime__" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -163,31 +163,31 @@ function majData_majSemiring_majGeneric_genericmajSemiringmajArgument($dictSemir
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["genericAdd__prime__" => (function() use ($dictSemiring_0) {
+  $__res = (object)["genericAdd__prime__" => (function() use ($dictSemiring_0) {
   $__fn = function($v_1, $v1_2 = null) use ($dictSemiring_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictSemiring_0)['add'])($v_1, $v1_2);
+  $__res = ((($dictSemiring_0)->{'add'})($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "genericZero__prime__" => ($dictSemiring_0)['zero'], "genericMul__prime__" => (function() use ($dictSemiring_0) {
+})(), "genericZero__prime__" => ($dictSemiring_0)->{'zero'}, "genericMul__prime__" => (function() use ($dictSemiring_0) {
   $__fn = function($v_1, $v1_2 = null) use ($dictSemiring_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictSemiring_0)['mul'])($v_1, $v1_2);
+  $__res = ((($dictSemiring_0)->{'mul'})($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "genericOne__prime__" => ($dictSemiring_0)['one']];
+})(), "genericOne__prime__" => ($dictSemiring_0)->{'one'}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -201,7 +201,7 @@ function majData_majSemiring_majGeneric_genericmajOne__prime__($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['genericOne__prime__'];
+  $__res = ($dict_0)->{'genericOne__prime__'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -215,7 +215,7 @@ function majData_majSemiring_majGeneric_genericmajOne($dictGeneric_0, $dictGener
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictGeneric_0)['to'])(($dictGenericSemiring_1)['genericOne__prime__']);
+  $__res = (($dictGeneric_0)->{'to'})(($dictGenericSemiring_1)->{'genericOne__prime__'});
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -229,7 +229,7 @@ function majData_majSemiring_majGeneric_genericmajMul__prime__($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['genericMul__prime__'];
+  $__res = ($dict_0)->{'genericMul__prime__'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -243,7 +243,7 @@ function majData_majSemiring_majGeneric_genericmajMul($dictGeneric_0, $dictGener
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($dictGeneric_0)['to'])((($dictGenericSemiring_1)['genericMul__prime__'])((($dictGeneric_0)['from'])($x_2), (($dictGeneric_0)['from'])($y_3)));
+  $__res = (($dictGeneric_0)->{'to'})(((($dictGenericSemiring_1)->{'genericMul__prime__'})((($dictGeneric_0)->{'from'})($x_2)))((($dictGeneric_0)->{'from'})($y_3)));
   goto __end;;
   __end:
   return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -257,7 +257,7 @@ function majData_majSemiring_majGeneric_genericmajAdd__prime__($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['genericAdd__prime__'];
+  $__res = ($dict_0)->{'genericAdd__prime__'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -271,31 +271,31 @@ function majData_majSemiring_majGeneric_genericmajSemiringmajConstructor($dictGe
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["genericAdd__prime__" => (function() use ($dictGenericSemiring_0) {
+  $__res = (object)["genericAdd__prime__" => (function() use ($dictGenericSemiring_0) {
   $__fn = function($v_1, $v1_2 = null) use ($dictGenericSemiring_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictGenericSemiring_0)['genericAdd__prime__'])($v_1, $v1_2);
+  $__res = ((($dictGenericSemiring_0)->{'genericAdd__prime__'})($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "genericZero__prime__" => ($dictGenericSemiring_0)['genericZero__prime__'], "genericMul__prime__" => (function() use ($dictGenericSemiring_0) {
+})(), "genericZero__prime__" => ($dictGenericSemiring_0)->{'genericZero__prime__'}, "genericMul__prime__" => (function() use ($dictGenericSemiring_0) {
   $__fn = function($v_1, $v1_2 = null) use ($dictGenericSemiring_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictGenericSemiring_0)['genericMul__prime__'])($v_1, $v1_2);
+  $__res = ((($dictGenericSemiring_0)->{'genericMul__prime__'})($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "genericOne__prime__" => ($dictGenericSemiring_0)['genericOne__prime__']];
+})(), "genericOne__prime__" => ($dictGenericSemiring_0)->{'genericOne__prime__'}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -309,35 +309,35 @@ function majData_majSemiring_majGeneric_genericmajSemiringmajProduct($dictGeneri
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $genericZero_prime1_1_0 = ($dictGenericSemiring_0)['genericZero__prime__'];
-  $genericOne_prime1_2_1 = ($dictGenericSemiring_0)['genericOne__prime__'];
+  $genericZero_prime1_1_0 = ($dictGenericSemiring_0)->{'genericZero__prime__'};
+  $genericOne_prime1_2_1 = ($dictGenericSemiring_0)->{'genericOne__prime__'};
   $__res = function($dictGenericSemiring1_3) use ($dictGenericSemiring_0, $genericOne_prime1_2_1, $genericZero_prime1_1_0) {
   $__num = \func_num_args();
-  $__res = ["genericAdd__prime__" => (function() use ($dictGenericSemiring1_3, $dictGenericSemiring_0) {
+  $__res = (object)["genericAdd__prime__" => (function() use ($dictGenericSemiring1_3, $dictGenericSemiring_0) {
   $__fn = function($v_4, $v1_5 = null) use ($dictGenericSemiring1_3, $dictGenericSemiring_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new \Data\Generic\Rep\Data_Generic_Rep_Product((($dictGenericSemiring_0)['genericAdd__prime__'])(($v_4)->{'value0'}, ($v1_5)->{'value0'}), (($dictGenericSemiring1_3)['genericAdd__prime__'])(($v_4)->{'value1'}, ($v1_5)->{'value1'}));
+  $__res = new \Data\Generic\Rep\Data_Generic_Rep_Product(((($dictGenericSemiring_0)->{'genericAdd__prime__'})(($v_4)->{'value0'}))(($v1_5)->{'value0'}), ((($dictGenericSemiring1_3)->{'genericAdd__prime__'})(($v_4)->{'value1'}))(($v1_5)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "genericZero__prime__" => new \Data\Generic\Rep\Data_Generic_Rep_Product($genericZero_prime1_1_0, ($dictGenericSemiring1_3)['genericZero__prime__']), "genericMul__prime__" => (function() use ($dictGenericSemiring1_3, $dictGenericSemiring_0) {
+})(), "genericZero__prime__" => new \Data\Generic\Rep\Data_Generic_Rep_Product($genericZero_prime1_1_0, ($dictGenericSemiring1_3)->{'genericZero__prime__'}), "genericMul__prime__" => (function() use ($dictGenericSemiring1_3, $dictGenericSemiring_0) {
   $__fn = function($v_4, $v1_5 = null) use ($dictGenericSemiring1_3, $dictGenericSemiring_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new \Data\Generic\Rep\Data_Generic_Rep_Product((($dictGenericSemiring_0)['genericMul__prime__'])(($v_4)->{'value0'}, ($v1_5)->{'value0'}), (($dictGenericSemiring1_3)['genericMul__prime__'])(($v_4)->{'value1'}, ($v1_5)->{'value1'}));
+  $__res = new \Data\Generic\Rep\Data_Generic_Rep_Product(((($dictGenericSemiring_0)->{'genericMul__prime__'})(($v_4)->{'value0'}))(($v1_5)->{'value0'}), ((($dictGenericSemiring1_3)->{'genericMul__prime__'})(($v_4)->{'value1'}))(($v1_5)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "genericOne__prime__" => new \Data\Generic\Rep\Data_Generic_Rep_Product($genericOne_prime1_2_1, ($dictGenericSemiring1_3)['genericOne__prime__'])];
+})(), "genericOne__prime__" => new \Data\Generic\Rep\Data_Generic_Rep_Product($genericOne_prime1_2_1, ($dictGenericSemiring1_3)->{'genericOne__prime__'})];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -355,7 +355,7 @@ function majData_majSemiring_majGeneric_genericmajAdd($dictGeneric_0, $dictGener
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($dictGeneric_0)['to'])((($dictGenericSemiring_1)['genericAdd__prime__'])((($dictGeneric_0)['from'])($x_2), (($dictGeneric_0)['from'])($y_3)));
+  $__res = (($dictGeneric_0)->{'to'})(((($dictGenericSemiring_1)->{'genericAdd__prime__'})((($dictGeneric_0)->{'from'})($x_2)))((($dictGeneric_0)->{'from'})($y_3)));
   goto __end;;
   __end:
   return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;

@@ -143,7 +143,7 @@ function majControl_majMonad_majReader_majTrans_withmajReadermajT($f_0, $v_1 = n
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($v_1, $f_0);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($v_1))($f_0);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -165,7 +165,7 @@ function majControl_majMonad_majReader_majTrans_runmajReadermajT($v_0) {
 $GLOBALS['Control_Monad_Reader_Trans_runReaderT'] = __NAMESPACE__ . '\\majControl_majMonad_majReader_majTrans_runmajReadermajT';
 
 // Control_Monad_Reader_Trans_newtypeReaderT
-$GLOBALS['Control_Monad_Reader_Trans_newtypeReaderT'] = ["Coercible0" => function($_dollar__unused_0) {
+$GLOBALS['Control_Monad_Reader_Trans_newtypeReaderT'] = (object)["Coercible0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = null;
   goto __end;;
@@ -174,9 +174,9 @@ $GLOBALS['Control_Monad_Reader_Trans_newtypeReaderT'] = ["Coercible0" => functio
 }];
 
 // Control_Monad_Reader_Trans_monadTransReaderT
-$GLOBALS['Control_Monad_Reader_Trans_monadTransReaderT'] = ["lift" => function($dictMonad_0) {
+$GLOBALS['Control_Monad_Reader_Trans_monadTransReaderT'] = (object)["lift" => function($dictMonad_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Reader_Trans_ReaderT'], $GLOBALS['Data_Function_const']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Reader_Trans_ReaderT']))($GLOBALS['Data_Function_const']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -189,7 +189,7 @@ function majControl_majMonad_majReader_majTrans_mapmajReadermajT($f_0, $v_1 = nu
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0, $v_1);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))($v_1);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -203,7 +203,7 @@ function majControl_majMonad_majReader_majTrans_functormajReadermajT($dictFuncto
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["map" => ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Reader_Trans_mapReaderT'], ($dictFunctor_0)['map'])];
+  $__res = (object)["map" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Reader_Trans_mapReaderT']))(($dictFunctor_0)->{'map'})];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -220,23 +220,23 @@ function majControl_majMonad_majReader_majTrans_distributivemajReadermajT($dictD
   $__tco_var_Control_Monad_Reader_Trans_distributiveReaderT_dictDistributive_0 = $dictDistributive_0;
   tco_loop_Control_Monad_Reader_Trans_distributiveReaderT:;
   $dictDistributive_0 = $__tco_var_Control_Monad_Reader_Trans_distributiveReaderT_dictDistributive_0;
-  $functorReaderT1_1_0 = ["map" => ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Reader_Trans_mapReaderT'], ((($dictDistributive_0)['Functor0'])(null))['map'])];
-  $__res = ["distribute" => function($dictFunctor_2) use ($dictDistributive_0) {
+  $functorReaderT1_1_0 = (object)["map" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Reader_Trans_mapReaderT']))(((($dictDistributive_0)->{'Functor0'})(null))->{'map'})];
+  $__res = (object)["distribute" => function($dictFunctor_2) use ($dictDistributive_0) {
   $__num = \func_num_args();
-  $collect1_3_1 = (($dictDistributive_0)['collect'])($dictFunctor_2);
+  $collect1_3_1 = (($dictDistributive_0)->{'collect'})($dictFunctor_2);
   $__res = (function() use ($collect1_3_1) {
   $__fn = function($a_4, $e_5 = null) use ($collect1_3_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($collect1_3_1)(function($r_6) use ($e_5) {
+  $__res = (($collect1_3_1)(function($r_6) use ($e_5) {
   $__num = \func_num_args();
   $__res = ($r_6)($e_5);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, $a_4);
+}))($a_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -252,7 +252,7 @@ function majControl_majMonad_majReader_majTrans_distributivemajReadermajT($dictD
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(((($GLOBALS['Control_Monad_Reader_Trans_distributiveReaderT'])($dictDistributive_0))['distribute'])($dictFunctor_2), (($dictFunctor_2)['map'])($f_3));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(((\Control\Monad\Reader\Trans\majControl_majMonad_majReader_majTrans_distributivemajReadermajT($dictDistributive_0))->{'distribute'})($dictFunctor_2)))((($dictFunctor_2)->{'map'})($f_3));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -278,14 +278,14 @@ function majControl_majMonad_majReader_majTrans_applymajReadermajT($dictApply_0)
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $functorReaderT1_1_0 = ["map" => ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Reader_Trans_mapReaderT'], ((($dictApply_0)['Functor0'])(null))['map'])];
-  $__res = ["apply" => (function() use ($dictApply_0) {
+  $functorReaderT1_1_0 = (object)["map" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Reader_Trans_mapReaderT']))(((($dictApply_0)->{'Functor0'})(null))->{'map'})];
+  $__res = (object)["apply" => (function() use ($dictApply_0) {
   $__fn = function($v_2, $v1_3 = null, $r_4 = null) use ($dictApply_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictApply_0)['apply'])(($v_2)($r_4), ($v1_3)($r_4));
+  $__res = ((($dictApply_0)->{'apply'})(($v_2)($r_4)))(($v1_3)($r_4));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -311,16 +311,16 @@ function majControl_majMonad_majReader_majTrans_bindmajReadermajT($dictBind_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $applyReaderT1_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_applyReaderT'])((($dictBind_0)['Apply0'])(null));
-  $__res = ["bind" => (function() use ($dictBind_0) {
+  $applyReaderT1_1_0 = \Control\Monad\Reader\Trans\majControl_majMonad_majReader_majTrans_applymajReadermajT((($dictBind_0)->{'Apply0'})(null));
+  $__res = (object)["bind" => (function() use ($dictBind_0) {
   $__fn = function($v_2, $k_3 = null, $r_4 = null) use ($dictBind_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictBind_0)['bind'])(($v_2)($r_4), function($a_5) use ($k_3, $r_4) {
+  $__res = ((($dictBind_0)->{'bind'})(($v_2)($r_4)))(function($a_5) use ($k_3, $r_4) {
   $__num = \func_num_args();
-  $__res = ($k_3)($a_5, $r_4);
+  $__res = (($k_3)($a_5))($r_4);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -350,17 +350,17 @@ function majControl_majMonad_majReader_majTrans_semigroupmajReadermajT($dictAppl
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_applyReaderT'])($dictApply_0);
+  $__local_var_1_0 = \Control\Monad\Reader\Trans\majControl_majMonad_majReader_majTrans_applymajReadermajT($dictApply_0);
   $__res = function($dictSemigroup_2) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  $__local_var_3_1 = ($dictSemigroup_2)['append'];
-  $__res = ["append" => (function() use ($__local_var_1_0, $__local_var_3_1) {
+  $__local_var_3_1 = ($dictSemigroup_2)->{'append'};
+  $__res = (object)["append" => (function() use ($__local_var_1_0, $__local_var_3_1) {
   $__fn = function($a_4, $b_5 = null) use ($__local_var_1_0, $__local_var_3_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_1_0)['apply'])((((($__local_var_1_0)['Functor0'])(null))['map'])($__local_var_3_1, $a_4), $b_5);
+  $__res = ((($__local_var_1_0)->{'apply'})(((((($__local_var_1_0)->{'Functor0'})(null))->{'map'})($__local_var_3_1))($a_4)))($b_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -384,8 +384,8 @@ function majControl_majMonad_majReader_majTrans_applicativemajReadermajT($dictAp
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $applyReaderT1_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_applyReaderT'])((($dictApplicative_0)['Apply0'])(null));
-  $__res = ["pure" => ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Reader_Trans_ReaderT'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Function_const'], ($dictApplicative_0)['pure'])), "Apply0" => function($_dollar__unused_2) use ($applyReaderT1_1_0) {
+  $applyReaderT1_1_0 = \Control\Monad\Reader\Trans\majControl_majMonad_majReader_majTrans_applymajReadermajT((($dictApplicative_0)->{'Apply0'})(null));
+  $__res = (object)["pure" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Reader_Trans_ReaderT']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Function_const']))(($dictApplicative_0)->{'pure'})), "Apply0" => function($_dollar__unused_2) use ($applyReaderT1_1_0) {
   $__num = \func_num_args();
   $__res = $applyReaderT1_1_0;
   goto __end;;
@@ -405,9 +405,9 @@ function majControl_majMonad_majReader_majTrans_monadmajReadermajT($dictMonad_0)
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $applicativeReaderT1_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_applicativeReaderT'])((($dictMonad_0)['Applicative0'])(null));
-  $bindReaderT1_2_1 = ($GLOBALS['Control_Monad_Reader_Trans_bindReaderT'])((($dictMonad_0)['Bind1'])(null));
-  $__res = ["Applicative0" => function($_dollar__unused_3) use ($applicativeReaderT1_1_0) {
+  $applicativeReaderT1_1_0 = \Control\Monad\Reader\Trans\majControl_majMonad_majReader_majTrans_applicativemajReadermajT((($dictMonad_0)->{'Applicative0'})(null));
+  $bindReaderT1_2_1 = \Control\Monad\Reader\Trans\majControl_majMonad_majReader_majTrans_bindmajReadermajT((($dictMonad_0)->{'Bind1'})(null));
+  $__res = (object)["Applicative0" => function($_dollar__unused_3) use ($applicativeReaderT1_1_0) {
   $__num = \func_num_args();
   $__res = $applicativeReaderT1_1_0;
   goto __end;;
@@ -433,8 +433,8 @@ function majControl_majMonad_majReader_majTrans_monadmajAskmajReadermajT($dictMo
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $monadReaderT1_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_monadReaderT'])($dictMonad_0);
-  $__res = ["ask" => ((($dictMonad_0)['Applicative0'])(null))['pure'], "Monad0" => function($_dollar__unused_2) use ($monadReaderT1_1_0) {
+  $monadReaderT1_1_0 = \Control\Monad\Reader\Trans\majControl_majMonad_majReader_majTrans_monadmajReadermajT($dictMonad_0);
+  $__res = (object)["ask" => ((($dictMonad_0)->{'Applicative0'})(null))->{'pure'}, "Monad0" => function($_dollar__unused_2) use ($monadReaderT1_1_0) {
   $__num = \func_num_args();
   $__res = $monadReaderT1_1_0;
   goto __end;;
@@ -454,15 +454,15 @@ function majControl_majMonad_majReader_majTrans_monadmajReadermajReadermajT($dic
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $monadReaderT1_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_monadReaderT'])($dictMonad_0);
-  $monadAskReaderT1_2_1 = ["ask" => ((($dictMonad_0)['Applicative0'])(null))['pure'], "Monad0" => function($_dollar__unused_2) use ($monadReaderT1_1_0) {
+  $monadReaderT1_1_0 = \Control\Monad\Reader\Trans\majControl_majMonad_majReader_majTrans_monadmajReadermajT($dictMonad_0);
+  $monadAskReaderT1_2_1 = (object)["ask" => ((($dictMonad_0)->{'Applicative0'})(null))->{'pure'}, "Monad0" => function($_dollar__unused_2) use ($monadReaderT1_1_0) {
   $__num = \func_num_args();
   $__res = $monadReaderT1_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["local" => $GLOBALS['Control_Monad_Reader_Trans_withReaderT'], "MonadAsk0" => function($_dollar__unused_3) use ($monadAskReaderT1_2_1) {
+  $__res = (object)["local" => $GLOBALS['Control_Monad_Reader_Trans_withReaderT'], "MonadAsk0" => function($_dollar__unused_3) use ($monadAskReaderT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadAskReaderT1_2_1;
   goto __end;;
@@ -482,16 +482,16 @@ function majControl_majMonad_majReader_majTrans_monadmajContmajReadermajT($dictM
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $monadReaderT1_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_monadReaderT'])((($dictMonadCont_0)['Monad0'])(null));
-  $__res = ["callCC" => (function() use ($dictMonadCont_0) {
+  $monadReaderT1_1_0 = \Control\Monad\Reader\Trans\majControl_majMonad_majReader_majTrans_monadmajReadermajT((($dictMonadCont_0)->{'Monad0'})(null));
+  $__res = (object)["callCC" => (function() use ($dictMonadCont_0) {
   $__fn = function($f_2, $r_3 = null) use ($dictMonadCont_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictMonadCont_0)['callCC'])(function($c_4) use ($f_2, $r_3) {
+  $__res = (($dictMonadCont_0)->{'callCC'})(function($c_4) use ($f_2, $r_3) {
   $__num = \func_num_args();
-  $__res = ($f_2)(($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Reader_Trans_ReaderT'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Function_const'], $c_4)), $r_3);
+  $__res = (($f_2)((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Reader_Trans_ReaderT']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Function_const']))($c_4))))($r_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -521,9 +521,9 @@ function majControl_majMonad_majReader_majTrans_monadmajEffectmajReader($dictMon
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $Monad0_1_0 = (($dictMonadEffect_0)['Monad0'])(null);
-  $monadReaderT1_2_1 = ($GLOBALS['Control_Monad_Reader_Trans_monadReaderT'])($Monad0_1_0);
-  $__res = ["liftEffect" => ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Reader_Trans_monadTransReaderT'])['lift'])($Monad0_1_0), ($dictMonadEffect_0)['liftEffect']), "Monad0" => function($_dollar__unused_3) use ($monadReaderT1_2_1) {
+  $Monad0_1_0 = (($dictMonadEffect_0)->{'Monad0'})(null);
+  $monadReaderT1_2_1 = \Control\Monad\Reader\Trans\majControl_majMonad_majReader_majTrans_monadmajReadermajT($Monad0_1_0);
+  $__res = (object)["liftEffect" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Reader_Trans_monadTransReaderT'])->{'lift'})($Monad0_1_0)))(($dictMonadEffect_0)->{'liftEffect'}), "Monad0" => function($_dollar__unused_3) use ($monadReaderT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadReaderT1_2_1;
   goto __end;;
@@ -543,23 +543,23 @@ function majControl_majMonad_majReader_majTrans_monadmajRecmajReadermajT($dictMo
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $Monad0_1_0 = (($dictMonadRec_0)['Monad0'])(null);
-  $__local_var_2_1 = (($Monad0_1_0)['Bind1'])(null);
-  $pure_3_2 = ((($Monad0_1_0)['Applicative0'])(null))['pure'];
-  $monadReaderT1_4_3 = ($GLOBALS['Control_Monad_Reader_Trans_monadReaderT'])($Monad0_1_0);
-  $__res = ["tailRecM" => (function() use ($__local_var_2_1, $dictMonadRec_0, $pure_3_2) {
+  $Monad0_1_0 = (($dictMonadRec_0)->{'Monad0'})(null);
+  $__local_var_2_1 = (($Monad0_1_0)->{'Bind1'})(null);
+  $pure_3_2 = ((($Monad0_1_0)->{'Applicative0'})(null))->{'pure'};
+  $monadReaderT1_4_3 = \Control\Monad\Reader\Trans\majControl_majMonad_majReader_majTrans_monadmajReadermajT($Monad0_1_0);
+  $__res = (object)["tailRecM" => (function() use ($__local_var_2_1, $dictMonadRec_0, $pure_3_2) {
   $__fn = function($k_5, $a_6 = null, $r_7 = null) use ($__local_var_2_1, $dictMonadRec_0, $pure_3_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictMonadRec_0)['tailRecM'])(function($a_prime_8) use ($__local_var_2_1, $k_5, $pure_3_2, $r_7) {
+  $__res = ((($dictMonadRec_0)->{'tailRecM'})(function($a_prime_8) use ($__local_var_2_1, $k_5, $pure_3_2, $r_7) {
   $__num = \func_num_args();
-  $__res = (($__local_var_2_1)['bind'])(($k_5)($a_prime_8, $r_7), $pure_3_2);
+  $__res = ((($__local_var_2_1)->{'bind'})((($k_5)($a_prime_8))($r_7)))($pure_3_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, $a_6);
+}))($a_6);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -585,9 +585,9 @@ function majControl_majMonad_majReader_majTrans_monadmajStatemajReadermajT($dict
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $Monad0_1_0 = (($dictMonadState_0)['Monad0'])(null);
-  $monadReaderT1_2_1 = ($GLOBALS['Control_Monad_Reader_Trans_monadReaderT'])($Monad0_1_0);
-  $__res = ["state" => ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Reader_Trans_monadTransReaderT'])['lift'])($Monad0_1_0), ($dictMonadState_0)['state']), "Monad0" => function($_dollar__unused_3) use ($monadReaderT1_2_1) {
+  $Monad0_1_0 = (($dictMonadState_0)->{'Monad0'})(null);
+  $monadReaderT1_2_1 = \Control\Monad\Reader\Trans\majControl_majMonad_majReader_majTrans_monadmajReadermajT($Monad0_1_0);
+  $__res = (object)["state" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Reader_Trans_monadTransReaderT'])->{'lift'})($Monad0_1_0)))(($dictMonadState_0)->{'state'}), "Monad0" => function($_dollar__unused_3) use ($monadReaderT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadReaderT1_2_1;
   goto __end;;
@@ -607,10 +607,10 @@ function majControl_majMonad_majReader_majTrans_monadmajTellmajReadermajT($dictM
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $Monad1_1_0 = (($dictMonadTell_0)['Monad1'])(null);
-  $Semigroup0_2_1 = (($dictMonadTell_0)['Semigroup0'])(null);
-  $monadReaderT1_3_2 = ($GLOBALS['Control_Monad_Reader_Trans_monadReaderT'])($Monad1_1_0);
-  $__res = ["tell" => ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Reader_Trans_monadTransReaderT'])['lift'])($Monad1_1_0), ($dictMonadTell_0)['tell']), "Semigroup0" => function($_dollar__unused_4) use ($Semigroup0_2_1) {
+  $Monad1_1_0 = (($dictMonadTell_0)->{'Monad1'})(null);
+  $Semigroup0_2_1 = (($dictMonadTell_0)->{'Semigroup0'})(null);
+  $monadReaderT1_3_2 = \Control\Monad\Reader\Trans\majControl_majMonad_majReader_majTrans_monadmajReadermajT($Monad1_1_0);
+  $__res = (object)["tell" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Reader_Trans_monadTransReaderT'])->{'lift'})($Monad1_1_0)))(($dictMonadTell_0)->{'tell'}), "Semigroup0" => function($_dollar__unused_4) use ($Semigroup0_2_1) {
   $__num = \func_num_args();
   $__res = $Semigroup0_2_1;
   goto __end;;
@@ -636,9 +636,9 @@ function majControl_majMonad_majReader_majTrans_monadmajWritermajReadermajT($dic
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $Monoid0_1_0 = (($dictMonadWriter_0)['Monoid0'])(null);
-  $monadTellReaderT1_2_1 = ($GLOBALS['Control_Monad_Reader_Trans_monadTellReaderT'])((($dictMonadWriter_0)['MonadTell1'])(null));
-  $__res = ["listen" => ($GLOBALS['Control_Monad_Reader_Trans_mapReaderT'])(($dictMonadWriter_0)['listen']), "pass" => ($GLOBALS['Control_Monad_Reader_Trans_mapReaderT'])(($dictMonadWriter_0)['pass']), "Monoid0" => function($_dollar__unused_3) use ($Monoid0_1_0) {
+  $Monoid0_1_0 = (($dictMonadWriter_0)->{'Monoid0'})(null);
+  $monadTellReaderT1_2_1 = \Control\Monad\Reader\Trans\majControl_majMonad_majReader_majTrans_monadmajTellmajReadermajT((($dictMonadWriter_0)->{'MonadTell1'})(null));
+  $__res = (object)["listen" => ($GLOBALS['Control_Monad_Reader_Trans_mapReaderT'])(($dictMonadWriter_0)->{'listen'}), "pass" => ($GLOBALS['Control_Monad_Reader_Trans_mapReaderT'])(($dictMonadWriter_0)->{'pass'}), "Monoid0" => function($_dollar__unused_3) use ($Monoid0_1_0) {
   $__num = \func_num_args();
   $__res = $Monoid0_1_0;
   goto __end;;
@@ -664,9 +664,9 @@ function majControl_majMonad_majReader_majTrans_monadmajThrowmajReadermajT($dict
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $Monad0_1_0 = (($dictMonadThrow_0)['Monad0'])(null);
-  $monadReaderT1_2_1 = ($GLOBALS['Control_Monad_Reader_Trans_monadReaderT'])($Monad0_1_0);
-  $__res = ["throwError" => ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Reader_Trans_monadTransReaderT'])['lift'])($Monad0_1_0), ($dictMonadThrow_0)['throwError']), "Monad0" => function($_dollar__unused_3) use ($monadReaderT1_2_1) {
+  $Monad0_1_0 = (($dictMonadThrow_0)->{'Monad0'})(null);
+  $monadReaderT1_2_1 = \Control\Monad\Reader\Trans\majControl_majMonad_majReader_majTrans_monadmajReadermajT($Monad0_1_0);
+  $__res = (object)["throwError" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Reader_Trans_monadTransReaderT'])->{'lift'})($Monad0_1_0)))(($dictMonadThrow_0)->{'throwError'}), "Monad0" => function($_dollar__unused_3) use ($monadReaderT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadReaderT1_2_1;
   goto __end;;
@@ -686,16 +686,16 @@ function majControl_majMonad_majReader_majTrans_monadmajErrormajReadermajT($dict
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $monadThrowReaderT1_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_monadThrowReaderT'])((($dictMonadError_0)['MonadThrow0'])(null));
-  $__res = ["catchError" => (function() use ($dictMonadError_0) {
+  $monadThrowReaderT1_1_0 = \Control\Monad\Reader\Trans\majControl_majMonad_majReader_majTrans_monadmajThrowmajReadermajT((($dictMonadError_0)->{'MonadThrow0'})(null));
+  $__res = (object)["catchError" => (function() use ($dictMonadError_0) {
   $__fn = function($v_2, $h_3 = null, $r_4 = null) use ($dictMonadError_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictMonadError_0)['catchError'])(($v_2)($r_4), function($e_5) use ($h_3, $r_4) {
+  $__res = ((($dictMonadError_0)->{'catchError'})(($v_2)($r_4)))(function($e_5) use ($h_3, $r_4) {
   $__num = \func_num_args();
-  $__res = ($h_3)($e_5, $r_4);
+  $__res = (($h_3)($e_5))($r_4);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -725,9 +725,9 @@ function majControl_majMonad_majReader_majTrans_monadmajSmajTmajReadermajT($dict
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $Monad0_1_0 = (($dictMonadST_0)['Monad0'])(null);
-  $monadReaderT1_2_1 = ($GLOBALS['Control_Monad_Reader_Trans_monadReaderT'])($Monad0_1_0);
-  $__res = ["liftST" => ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Reader_Trans_monadTransReaderT'])['lift'])($Monad0_1_0), ($dictMonadST_0)['liftST']), "Monad0" => function($_dollar__unused_3) use ($monadReaderT1_2_1) {
+  $Monad0_1_0 = (($dictMonadST_0)->{'Monad0'})(null);
+  $monadReaderT1_2_1 = \Control\Monad\Reader\Trans\majControl_majMonad_majReader_majTrans_monadmajReadermajT($Monad0_1_0);
+  $__res = (object)["liftST" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Reader_Trans_monadTransReaderT'])->{'lift'})($Monad0_1_0)))(($dictMonadST_0)->{'liftST'}), "Monad0" => function($_dollar__unused_3) use ($monadReaderT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadReaderT1_2_1;
   goto __end;;
@@ -747,11 +747,11 @@ function majControl_majMonad_majReader_majTrans_monoidmajReadermajT($dictApplica
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $semigroupReaderT1_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_semigroupReaderT'])((($dictApplicative_0)['Apply0'])(null));
+  $semigroupReaderT1_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_semigroupReaderT'])((($dictApplicative_0)->{'Apply0'})(null));
   $__res = function($dictMonoid_2) use ($dictApplicative_0, $semigroupReaderT1_1_0) {
   $__num = \func_num_args();
-  $semigroupReaderT2_3_1 = ($semigroupReaderT1_1_0)((($dictMonoid_2)['Semigroup0'])(null));
-  $__res = ["mempty" => ((($GLOBALS['Control_Monad_Reader_Trans_applicativeReaderT'])($dictApplicative_0))['pure'])(($dictMonoid_2)['mempty']), "Semigroup0" => function($_dollar__unused_4) use ($semigroupReaderT2_3_1) {
+  $semigroupReaderT2_3_1 = ($semigroupReaderT1_1_0)((($dictMonoid_2)->{'Semigroup0'})(null));
+  $__res = (object)["mempty" => ((\Control\Monad\Reader\Trans\majControl_majMonad_majReader_majTrans_applicativemajReadermajT($dictApplicative_0))->{'pure'})(($dictMonoid_2)->{'mempty'}), "Semigroup0" => function($_dollar__unused_4) use ($semigroupReaderT2_3_1) {
   $__num = \func_num_args();
   $__res = $semigroupReaderT2_3_1;
   goto __end;;
@@ -775,14 +775,14 @@ function majControl_majMonad_majReader_majTrans_altmajReadermajT($dictAlt_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $functorReaderT1_1_0 = ["map" => ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Reader_Trans_mapReaderT'], ((($dictAlt_0)['Functor0'])(null))['map'])];
-  $__res = ["alt" => (function() use ($dictAlt_0) {
+  $functorReaderT1_1_0 = (object)["map" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Reader_Trans_mapReaderT']))(((($dictAlt_0)->{'Functor0'})(null))->{'map'})];
+  $__res = (object)["alt" => (function() use ($dictAlt_0) {
   $__fn = function($v_2, $v1_3 = null, $r_4 = null) use ($dictAlt_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictAlt_0)['alt'])(($v_2)($r_4), ($v1_3)($r_4));
+  $__res = ((($dictAlt_0)->{'alt'})(($v_2)($r_4)))(($v1_3)($r_4));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -808,9 +808,9 @@ function majControl_majMonad_majReader_majTrans_plusmajReadermajT($dictPlus_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $altReaderT1_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_altReaderT'])((($dictPlus_0)['Alt0'])(null));
-  $__local_var_2_1 = ($dictPlus_0)['empty'];
-  $__res = ["empty" => function($v_3) use ($__local_var_2_1) {
+  $altReaderT1_1_0 = \Control\Monad\Reader\Trans\majControl_majMonad_majReader_majTrans_altmajReadermajT((($dictPlus_0)->{'Alt0'})(null));
+  $__local_var_2_1 = ($dictPlus_0)->{'empty'};
+  $__res = (object)["empty" => function($v_3) use ($__local_var_2_1) {
   $__num = \func_num_args();
   $__res = $__local_var_2_1;
   goto __end;;
@@ -836,9 +836,9 @@ function majControl_majMonad_majReader_majTrans_alternativemajReadermajT($dictAl
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $applicativeReaderT1_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_applicativeReaderT'])((($dictAlternative_0)['Applicative0'])(null));
-  $plusReaderT1_2_1 = ($GLOBALS['Control_Monad_Reader_Trans_plusReaderT'])((($dictAlternative_0)['Plus1'])(null));
-  $__res = ["Applicative0" => function($_dollar__unused_3) use ($applicativeReaderT1_1_0) {
+  $applicativeReaderT1_1_0 = \Control\Monad\Reader\Trans\majControl_majMonad_majReader_majTrans_applicativemajReadermajT((($dictAlternative_0)->{'Applicative0'})(null));
+  $plusReaderT1_2_1 = \Control\Monad\Reader\Trans\majControl_majMonad_majReader_majTrans_plusmajReadermajT((($dictAlternative_0)->{'Plus1'})(null));
+  $__res = (object)["Applicative0" => function($_dollar__unused_3) use ($applicativeReaderT1_1_0) {
   $__num = \func_num_args();
   $__res = $applicativeReaderT1_1_0;
   goto __end;;
@@ -864,9 +864,9 @@ function majControl_majMonad_majReader_majTrans_monadmajPlusmajReadermajT($dictM
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $monadReaderT1_1_0 = ($GLOBALS['Control_Monad_Reader_Trans_monadReaderT'])((($dictMonadPlus_0)['Monad0'])(null));
-  $alternativeReaderT1_2_1 = ($GLOBALS['Control_Monad_Reader_Trans_alternativeReaderT'])((($dictMonadPlus_0)['Alternative1'])(null));
-  $__res = ["Monad0" => function($_dollar__unused_3) use ($monadReaderT1_1_0) {
+  $monadReaderT1_1_0 = \Control\Monad\Reader\Trans\majControl_majMonad_majReader_majTrans_monadmajReadermajT((($dictMonadPlus_0)->{'Monad0'})(null));
+  $alternativeReaderT1_2_1 = \Control\Monad\Reader\Trans\majControl_majMonad_majReader_majTrans_alternativemajReadermajT((($dictMonadPlus_0)->{'Alternative1'})(null));
+  $__res = (object)["Monad0" => function($_dollar__unused_3) use ($monadReaderT1_1_0) {
   $__num = \func_num_args();
   $__res = $monadReaderT1_1_0;
   goto __end;;

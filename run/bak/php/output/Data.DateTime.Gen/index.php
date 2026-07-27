@@ -110,8 +110,8 @@ function majData_majDatemajTime_majGen_genmajDatemajTime($dictMonadGen_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $Apply0_1_0 = (((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null);
-  $__res = (($Apply0_1_0)['apply'])((((($Apply0_1_0)['Functor0'])(null))['map'])($GLOBALS['Data_DateTime_DateTime'], ($GLOBALS['Data_Date_Gen_genDate'])($dictMonadGen_0)), ($GLOBALS['Data_Time_Gen_genTime'])($dictMonadGen_0));
+  $Apply0_1_0 = (((((($dictMonadGen_0)->{'Monad0'})(null))->{'Bind1'})(null))->{'Apply0'})(null);
+  $__res = ((($Apply0_1_0)->{'apply'})(((((($Apply0_1_0)->{'Functor0'})(null))->{'map'})($GLOBALS['Data_DateTime_DateTime']))(\Data\Date\Gen\majData_majDate_majGen_genmajDate($dictMonadGen_0))))(\Data\Time\Gen\majData_majTime_majGen_genmajTime($dictMonadGen_0));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

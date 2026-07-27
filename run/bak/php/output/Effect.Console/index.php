@@ -129,24 +129,134 @@ $exports['groupEnd'] = $groupEnd;
 return $exports;
   return $exports;
 });
-$GLOBALS['Effect_Console_clear'] = $ffi_Effect_Console['clear'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Console_debug'] = $ffi_Effect_Console['debug'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Console_error'] = $ffi_Effect_Console['error'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Console_group'] = $ffi_Effect_Console['group'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Console_groupCollapsed'] = $ffi_Effect_Console['groupCollapsed'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Console_groupEnd'] = $ffi_Effect_Console['groupEnd'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Console_info'] = $ffi_Effect_Console['info'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Console_log'] = $ffi_Effect_Console['log'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Console_time'] = $ffi_Effect_Console['time'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Console_timeEnd'] = $ffi_Effect_Console['timeEnd'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Console_timeLog'] = $ffi_Effect_Console['timeLog'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Console_warn'] = $ffi_Effect_Console['warn'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Effect_Console_clear'] = ($ffi_Effect_Console['clear'] ?? new class { public function __invoke(...$args) { return $this; } });
+function majEffect_majConsole_debug(string $v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_majConsole_debug';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Effect_Console;
+  $f = ($ffi_Effect_Console['debug'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Effect_Console_debug'] = __NAMESPACE__ . '\\majEffect_majConsole_debug';
+
+function majEffect_majConsole_error(string $v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_majConsole_error';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Effect_Console;
+  $f = ($ffi_Effect_Console['error'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Effect_Console_error'] = __NAMESPACE__ . '\\majEffect_majConsole_error';
+
+function majEffect_majConsole_group(string $v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_majConsole_group';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Effect_Console;
+  $f = ($ffi_Effect_Console['group'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Effect_Console_group'] = __NAMESPACE__ . '\\majEffect_majConsole_group';
+
+function majEffect_majConsole_groupmajCollapsed(string $v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_majConsole_groupmajCollapsed';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Effect_Console;
+  $f = ($ffi_Effect_Console['groupCollapsed'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Effect_Console_groupCollapsed'] = __NAMESPACE__ . '\\majEffect_majConsole_groupmajCollapsed';
+
+$GLOBALS['Effect_Console_groupEnd'] = ($ffi_Effect_Console['groupEnd'] ?? new class { public function __invoke(...$args) { return $this; } });
+function majEffect_majConsole_info(string $v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_majConsole_info';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Effect_Console;
+  $f = ($ffi_Effect_Console['info'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Effect_Console_info'] = __NAMESPACE__ . '\\majEffect_majConsole_info';
+
+function majEffect_majConsole_log(string $v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_majConsole_log';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Effect_Console;
+  $f = ($ffi_Effect_Console['log'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Effect_Console_log'] = __NAMESPACE__ . '\\majEffect_majConsole_log';
+
+function majEffect_majConsole_time(string $v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_majConsole_time';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Effect_Console;
+  $f = ($ffi_Effect_Console['time'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Effect_Console_time'] = __NAMESPACE__ . '\\majEffect_majConsole_time';
+
+function majEffect_majConsole_timemajEnd(string $v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_majConsole_timemajEnd';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Effect_Console;
+  $f = ($ffi_Effect_Console['timeEnd'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Effect_Console_timeEnd'] = __NAMESPACE__ . '\\majEffect_majConsole_timemajEnd';
+
+function majEffect_majConsole_timemajLog(string $v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_majConsole_timemajLog';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Effect_Console;
+  $f = ($ffi_Effect_Console['timeLog'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Effect_Console_timeLog'] = __NAMESPACE__ . '\\majEffect_majConsole_timemajLog';
+
+function majEffect_majConsole_warn(string $v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_majConsole_warn';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Effect_Console;
+  $f = ($ffi_Effect_Console['warn'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Effect_Console_warn'] = __NAMESPACE__ . '\\majEffect_majConsole_warn';
+
 
 
 
 
 // Effect_Console_discard
-$GLOBALS['Effect_Console_discard'] = (($GLOBALS['Control_Bind_discardUnit'])['discard'])($GLOBALS['Effect_bindEffect']);
+$GLOBALS['Effect_Console_discard'] = (($GLOBALS['Control_Bind_discardUnit'])->{'discard'})($GLOBALS['Effect_bindEffect']);
 
 // Effect_Console_warnShow
 function majEffect_majConsole_warnmajShow($dictShow_0, $a_1 = null) {
@@ -155,7 +265,7 @@ function majEffect_majConsole_warnmajShow($dictShow_0, $a_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Effect_Console_warn'])((($dictShow_0)['show'])($a_1));
+  $__res = \Effect\Console\majEffect_majConsole_warn((($dictShow_0)->{'show'})($a_1));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -169,7 +279,7 @@ function majEffect_majConsole_logmajShow($dictShow_0, $a_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Effect_Console_log'])((($dictShow_0)['show'])($a_1));
+  $__res = \Effect\Console\majEffect_majConsole_log((($dictShow_0)->{'show'})($a_1));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -183,7 +293,7 @@ function majEffect_majConsole_infomajShow($dictShow_0, $a_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Effect_Console_info'])((($dictShow_0)['show'])($a_1));
+  $__res = \Effect\Console\majEffect_majConsole_info((($dictShow_0)->{'show'})($a_1));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -197,13 +307,13 @@ function majEffect_majConsole_grouped(string $name_0, $inner_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Effect_Console_discard'])(($GLOBALS['Effect_Console_group'])($name_0), function($_dollar__unused_2) use ($inner_1) {
+  $__res = (($GLOBALS['Effect_Console_discard'])(\Effect\Console\majEffect_majConsole_group($name_0)))(function($_dollar__unused_2) use ($inner_1) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_bindEffect'])['bind'])($inner_1, function($result_3) {
+  $__res = ((($GLOBALS['Effect_bindEffect'])->{'bind'})($inner_1))(function($result_3) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Console_discard'])($GLOBALS['Effect_Console_groupEnd'], function($_dollar__unused_4) use ($result_3) {
+  $__res = (($GLOBALS['Effect_Console_discard'])($GLOBALS['Effect_Console_groupEnd']))(function($_dollar__unused_4) use ($result_3) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_applicativeEffect'])['pure'])($result_3);
+  $__res = (($GLOBALS['Effect_applicativeEffect'])->{'pure'})($result_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -229,7 +339,7 @@ function majEffect_majConsole_errormajShow($dictShow_0, $a_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Effect_Console_error'])((($dictShow_0)['show'])($a_1));
+  $__res = \Effect\Console\majEffect_majConsole_error((($dictShow_0)->{'show'})($a_1));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -243,7 +353,7 @@ function majEffect_majConsole_debugmajShow($dictShow_0, $a_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Effect_Console_debug'])((($dictShow_0)['show'])($a_1));
+  $__res = \Effect\Console\majEffect_majConsole_debug((($dictShow_0)->{'show'})($a_1));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

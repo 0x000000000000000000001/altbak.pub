@@ -104,7 +104,18 @@ $exports['unsafeCoerce'] = $unsafeCoerce;
 return $exports;
   return $exports;
 });
-$GLOBALS['Data_Symbol_unsafeCoerce'] = $ffi_Data_Symbol['unsafeCoerce'] ?? new class { public function __invoke(...$args) { return $this; } };
+function majData_majSymbol_unsafemajCoerce($v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majSymbol_unsafemajCoerce';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Data_Symbol;
+  $f = ($ffi_Data_Symbol['unsafeCoerce'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Data_Symbol_unsafeCoerce'] = __NAMESPACE__ . '\\majData_majSymbol_unsafemajCoerce';
+
 
 
 
@@ -116,19 +127,19 @@ function majData_majSymbol_reifymajSymbol(string $s_0, $f_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Symbol_unsafeCoerce'])(function($dictIsSymbol_2) use ($f_1) {
+  $__res = ((\Data\Symbol\majData_majSymbol_unsafemajCoerce(function($dictIsSymbol_2) use ($f_1) {
   $__num = \func_num_args();
   $__res = ($f_1)($dictIsSymbol_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, ["reflectSymbol" => function($v_2) use ($s_0) {
+}))((object)["reflectSymbol" => function($v_2) use ($s_0) {
   $__num = \func_num_args();
   $__res = $s_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}], new \Type\Proxy\Type_Proxy_Proxy());
+}]))(new \Type\Proxy\Type_Proxy_Proxy());
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -142,7 +153,7 @@ function majData_majSymbol_reflectmajSymbol($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['reflectSymbol'];
+  $__res = ($dict_0)->{'reflectSymbol'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

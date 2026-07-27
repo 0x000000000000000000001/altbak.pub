@@ -117,8 +117,30 @@ $exports['char'] = $char;
 return $exports;
   return $exports;
 });
-$GLOBALS['Data_String_Unsafe_char'] = $ffi_Data_String_Unsafe['char'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_String_Unsafe_charAt'] = $ffi_Data_String_Unsafe['charAt'] ?? new class { public function __invoke(...$args) { return $this; } };
+function majData_majString_majUnsafe_char(string $v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majString_majUnsafe_char';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Data_String_Unsafe;
+  $f = ($ffi_Data_String_Unsafe['char'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Data_String_Unsafe_char'] = __NAMESPACE__ . '\\majData_majString_majUnsafe_char';
+
+function majData_majString_majUnsafe_charmajAt(int $v0, $v1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majString_majUnsafe_charmajAt';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Data_String_Unsafe;
+  $f = ($ffi_Data_String_Unsafe['charAt'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Data_String_Unsafe_charAt'] = __NAMESPACE__ . '\\majData_majString_majUnsafe_charmajAt';
+
 
 
 

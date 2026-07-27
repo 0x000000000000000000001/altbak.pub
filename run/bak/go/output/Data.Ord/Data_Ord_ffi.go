@@ -1,7 +1,5 @@
 package Data_Ord
 
-import "gopurs/output/gopurs_runtime"
-
 func OrdBooleanImpl(lt interface{}, eq interface{}, gt interface{}, x bool, y bool) interface{} {
 	if !x && y {
 		return lt
@@ -47,86 +45,3 @@ func OrdArrayImpl(f func(interface{}) func(interface{}) int, xs []interface{}, y
 		return -1
 	}
 }
-
-
-// --- Auto-generated FFI wrappers ---
-func Call_ordBooleanImpl(arg0 interface{}, arg1 interface{}, arg2 interface{}, arg3 bool, arg4 bool) interface{} {
-	return OrdBooleanImpl(arg0, arg1, arg2, arg3, arg4)
-}
-var _Gopurs_OrdBooleanImpl = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := arg0
-	go_arg1 := arg1
-	go_arg2 := arg2
-	go_arg3 := gopurs_runtime.Unbox[bool](arg3)
-	go_arg4 := gopurs_runtime.Unbox[bool](arg4)
-	go_res := OrdBooleanImpl(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
-	return gopurs_runtime.Box(go_res)
-})
-func Call_ordIntImpl(arg0 interface{}, arg1 interface{}, arg2 interface{}, arg3 int, arg4 int) interface{} {
-	return OrdIntImpl(arg0, arg1, arg2, arg3, arg4)
-}
-var _Gopurs_OrdIntImpl = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := arg0
-	go_arg1 := arg1
-	go_arg2 := arg2
-	go_arg3 := gopurs_runtime.Unbox[int](arg3)
-	go_arg4 := gopurs_runtime.Unbox[int](arg4)
-	go_res := OrdIntImpl(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
-	return gopurs_runtime.Box(go_res)
-})
-func Call_ordCharImpl(arg0 interface{}, arg1 interface{}, arg2 interface{}, arg3 string, arg4 string) interface{} {
-	return OrdCharImpl(arg0, arg1, arg2, arg3, arg4)
-}
-var _Gopurs_OrdCharImpl = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := arg0
-	go_arg1 := arg1
-	go_arg2 := arg2
-	go_arg3 := gopurs_runtime.Unbox[string](arg3)
-	go_arg4 := gopurs_runtime.Unbox[string](arg4)
-	go_res := OrdCharImpl(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
-	return gopurs_runtime.Box(go_res)
-})
-func Call_ordStringImpl(arg0 interface{}, arg1 interface{}, arg2 interface{}, arg3 string, arg4 string) interface{} {
-	return OrdStringImpl(arg0, arg1, arg2, arg3, arg4)
-}
-var _Gopurs_OrdStringImpl = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := arg0
-	go_arg1 := arg1
-	go_arg2 := arg2
-	go_arg3 := gopurs_runtime.Unbox[string](arg3)
-	go_arg4 := gopurs_runtime.Unbox[string](arg4)
-	go_res := OrdStringImpl(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
-	return gopurs_runtime.Box(go_res)
-})
-func Call_ordNumberImpl(arg0 interface{}, arg1 interface{}, arg2 interface{}, arg3 float64, arg4 float64) interface{} {
-	return OrdNumberImpl(arg0, arg1, arg2, arg3, arg4)
-}
-var _Gopurs_OrdNumberImpl = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := arg0
-	go_arg1 := arg1
-	go_arg2 := arg2
-	go_arg3 := gopurs_runtime.Unbox[float64](arg3)
-	go_arg4 := gopurs_runtime.Unbox[float64](arg4)
-	go_res := OrdNumberImpl(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
-	return gopurs_runtime.Box(go_res)
-})
-func Call_ordArrayImpl(arg0 func(interface{}) func(interface{}) int, arg1 []interface{}, arg2 []interface{}) int {
-	return OrdArrayImpl(arg0, arg1, arg2)
-}
-var _Gopurs_OrdArrayImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 interface{}) func(interface{}) int {
-			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
-			return func(p1_0 interface{}) int {
-			inner_res1 := gopurs_runtime.Apply(inner_res0, gopurs_runtime.Box(p1_0))
-			return gopurs_runtime.Unbox[int](inner_res1)
-		}
-		}
-	arg1_arr := *(*[]gopurs_runtime.Value)(arg1.UnsafePtr)
-	go_arg1 := make([]interface{}, len(arg1_arr))
-	for i, v := range arg1_arr { go_arg1[i] = v }
-	arg2_arr := *(*[]gopurs_runtime.Value)(arg2.UnsafePtr)
-	go_arg2 := make([]interface{}, len(arg2_arr))
-	for i, v := range arg2_arr { go_arg2[i] = v }
-	go_res := OrdArrayImpl(go_arg0, go_arg1, go_arg2)
-	return gopurs_runtime.Box(go_res)
-})

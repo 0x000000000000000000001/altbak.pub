@@ -136,9 +136,9 @@ function majData_majMonoid_majAlternate_showmajAlternate($dictShow_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["show" => function($v_1) use ($dictShow_0) {
+  $__res = (object)["show" => function($v_1) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Alternate ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(Alternate "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_0)->{'show'})($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -156,13 +156,13 @@ function majData_majMonoid_majAlternate_semigroupmajAlternate($dictAlt_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["append" => (function() use ($dictAlt_0) {
+  $__res = (object)["append" => (function() use ($dictAlt_0) {
   $__fn = function($v_1, $v1_2 = null) use ($dictAlt_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictAlt_0)['alt'])($v_1, $v1_2);
+  $__res = ((($dictAlt_0)->{'alt'})($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -218,7 +218,7 @@ function majData_majMonoid_majAlternate_ord1majAlternate($dictOrd1_0) {
 $GLOBALS['Data_Monoid_Alternate_ord1Alternate'] = __NAMESPACE__ . '\\majData_majMonoid_majAlternate_ord1majAlternate';
 
 // Data_Monoid_Alternate_newtypeAlternate
-$GLOBALS['Data_Monoid_Alternate_newtypeAlternate'] = ["Coercible0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Monoid_Alternate_newtypeAlternate'] = (object)["Coercible0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = null;
   goto __end;;
@@ -233,21 +233,21 @@ function majData_majMonoid_majAlternate_monoidmajAlternate($dictPlus_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($dictPlus_0)['Alt0'])(null);
-  $semigroupAlternate1_2_1 = ["append" => (function() use ($__local_var_1_0) {
+  $__local_var_1_0 = (($dictPlus_0)->{'Alt0'})(null);
+  $semigroupAlternate1_2_1 = (object)["append" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2, $v1_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_1_0)['alt'])($v_2, $v1_3);
+  $__res = ((($__local_var_1_0)->{'alt'})($v_2))($v1_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = ["mempty" => ($dictPlus_0)['empty'], "Semigroup0" => function($_dollar__unused_3) use ($semigroupAlternate1_2_1) {
+  $__res = (object)["mempty" => ($dictPlus_0)->{'empty'}, "Semigroup0" => function($_dollar__unused_3) use ($semigroupAlternate1_2_1) {
   $__num = \func_num_args();
   $__res = $semigroupAlternate1_2_1;
   goto __end;;

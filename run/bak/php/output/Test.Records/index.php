@@ -128,15 +128,15 @@ default:
 ;
 break;
 };
-  $__obj0 = $v1_1;
-  ($__obj0)['a'] = (($v1_1)['a'] + 1);
-  $__obj1 = ($v1_1)['b'];
-  ($__obj1)['c'] = ((($v1_1)['b'])['c'] + 2);
-  $__obj2 = (($v1_1)['b'])['d'];
-  ($__obj2)['e'] = (((($v1_1)['b'])['d'])['e'] + 3);
-  ($__obj2)['f'] = (((($v1_1)['b'])['d'])['f'] + (($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['mod'])($v_0, 5));
-  ($__obj1)['d'] = $__obj2;
-  ($__obj0)['b'] = $__obj1;
+  $__obj0 = clone $v1_1;
+  ($__obj0)->{'a'} = (($v1_1)->{'a'} + 1);
+  $__obj1 = clone ($v1_1)->{'b'};
+  ($__obj1)->{'c'} = ((($v1_1)->{'b'})->{'c'} + 2);
+  $__obj2 = clone (($v1_1)->{'b'})->{'d'};
+  ($__obj2)->{'e'} = (((($v1_1)->{'b'})->{'d'})->{'e'} + 3);
+  ($__obj2)->{'f'} = (((($v1_1)->{'b'})->{'d'})->{'f'} + ((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])->{'mod'})($v_0))(5));
+  ($__obj1)->{'d'} = $__obj2;
+  ($__obj0)->{'b'} = $__obj1;
   $__tco_3 = ($v_0 - 1);
   $__tco_4 = $__obj0;
   $__tco_var_Test_Records_updateRec_v_0 = $__tco_3;
@@ -152,15 +152,15 @@ break;
 $GLOBALS['Test_Records_updateRec'] = __NAMESPACE__ . '\\majTest_majRecords_updatemajRec';
 
 // Test_Records_initial
-$GLOBALS['Test_Records_initial'] = ["a" => 0, "b" => ["c" => 0, "d" => ["e" => 0, "f" => 0]]];
+$GLOBALS['Test_Records_initial'] = (object)["a" => 0, "b" => (object)["c" => 0, "d" => (object)["e" => 0, "f" => 0]]];
 
 // Test_Records_describe
-$GLOBALS['Test_Records_describe'] = ($GLOBALS['Effect_Console_log'])("Deep Record Updates (10k iterations):");
+$GLOBALS['Test_Records_describe'] = \Effect\Console\majEffect_majConsole_log("Deep Record Updates (10k iterations):");
 
 // Test_Records_act
-$GLOBALS['Test_Records_act'] = (($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(10000), function($dummy_0) {
+$GLOBALS['Test_Records_act'] = ((($GLOBALS['Effect_bindEffect'])->{'bind'})(\Bench\majBench_opaque(10000)))(function($dummy_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])((((($GLOBALS['Test_Records_updateRec'])($dummy_0, $GLOBALS['Test_Records_initial']))['b'])['d'])['f']));
+  $__res = \Effect\Console\majEffect_majConsole_log((($GLOBALS['Data_Show_showInt'])->{'show'})((((\Test\Records\majTest_majRecords_updatemajRec($dummy_0, $GLOBALS['Test_Records_initial']))->{'b'})->{'d'})->{'f'}));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

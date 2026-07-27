@@ -128,7 +128,7 @@ function majControl_majComonad_majEnv_runmajEnv($v_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($GLOBALS['Data_Tuple_functorTuple'])['map'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'], $v_0);
+  $__res = ((($GLOBALS['Data_Tuple_functorTuple'])->{'map'})($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($v_0);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -142,7 +142,7 @@ function majControl_majComonad_majEnv_mapmajEnv($f_0, $v_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new \Data\Tuple\Data_Tuple_Tuple(($v_1)->{'value0'}, (($GLOBALS['Data_Identity_functorIdentity'])['map'])($f_0, ($v_1)->{'value1'}));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($v_1)->{'value0'}, ((($GLOBALS['Data_Identity_functorIdentity'])->{'map'})($f_0))(($v_1)->{'value1'}));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

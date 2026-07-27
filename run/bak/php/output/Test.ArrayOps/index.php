@@ -131,7 +131,7 @@ function majTest_majArraymajOps_filtermajEvens($arr_0) {
   }
   $__res = ($GLOBALS['Data_Array_filterImpl'])(function($x_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['mod'])($x_1, 2) === 0);
+  $__res = (((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])->{'mod'})($x_1))(2) === 0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -149,9 +149,9 @@ function majTest_majArraymajOps_summajEvens(int $n_0): int|\Closure {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($GLOBALS['Data_Foldable_foldableArray'])['foldl'])($GLOBALS['Data_Semiring_intAdd'], 0, ($GLOBALS['Data_Array_filterImpl'])(function($x_1) {
+  $__res = (((($GLOBALS['Data_Foldable_foldableArray'])->{'foldl'})($GLOBALS['Data_Semiring_intAdd']))(0))(($GLOBALS['Data_Array_filterImpl'])(function($x_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['mod'])($x_1, 2) === 0);
+  $__res = (((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])->{'mod'})($x_1))(2) === 0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -163,12 +163,12 @@ function majTest_majArraymajOps_summajEvens(int $n_0): int|\Closure {
 $GLOBALS['Test_ArrayOps_sumEvens'] = __NAMESPACE__ . '\\majTest_majArraymajOps_summajEvens';
 
 // Test_ArrayOps_describe
-$GLOBALS['Test_ArrayOps_describe'] = ($GLOBALS['Effect_Console_log'])("Array Processing (900 elements):");
+$GLOBALS['Test_ArrayOps_describe'] = \Effect\Console\majEffect_majConsole_log("Array Processing (900 elements):");
 
 // Test_ArrayOps_act
-$GLOBALS['Test_ArrayOps_act'] = (($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(900), function($dummy_0) {
+$GLOBALS['Test_ArrayOps_act'] = ((($GLOBALS['Effect_bindEffect'])->{'bind'})(\Bench\majBench_opaque(900)))(function($dummy_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])(($GLOBALS['Test_ArrayOps_sumEvens'])($dummy_0)));
+  $__res = \Effect\Console\majEffect_majConsole_log((($GLOBALS['Data_Show_showInt'])->{'show'})(\Test\ArrayOps\majTest_majArraymajOps_summajEvens($dummy_0)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

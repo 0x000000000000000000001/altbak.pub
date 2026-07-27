@@ -176,18 +176,84 @@ $exports['foreachE'] = $foreachE;
 return $exports;
   return $exports;
 });
-$GLOBALS['Effect_bindE'] = $ffi_Effect['bindE'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_forE'] = $ffi_Effect['forE'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_foreachE'] = $ffi_Effect['foreachE'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_pureE'] = $ffi_Effect['pureE'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_untilE'] = $ffi_Effect['untilE'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_whileE'] = $ffi_Effect['whileE'] ?? new class { public function __invoke(...$args) { return $this; } };
+function majEffect_bindmajE($v0, $v1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_bindmajE';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Effect;
+  $f = ($ffi_Effect['bindE'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Effect_bindE'] = __NAMESPACE__ . '\\majEffect_bindmajE';
+
+function majEffect_formajE(int $v0, $v1 = null, $v2 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_formajE';
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  global $ffi_Effect;
+  $f = ($ffi_Effect['forE'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1, $v2);
+}
+$GLOBALS['Effect_forE'] = __NAMESPACE__ . '\\majEffect_formajE';
+
+function majEffect_foreachmajE($v0, $v1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_foreachmajE';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Effect;
+  $f = ($ffi_Effect['foreachE'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Effect_foreachE'] = __NAMESPACE__ . '\\majEffect_foreachmajE';
+
+function majEffect_puremajE($v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_puremajE';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Effect;
+  $f = ($ffi_Effect['pureE'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Effect_pureE'] = __NAMESPACE__ . '\\majEffect_puremajE';
+
+function majEffect_untilmajE($v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_untilmajE';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Effect;
+  $f = ($ffi_Effect['untilE'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Effect_untilE'] = __NAMESPACE__ . '\\majEffect_untilmajE';
+
+function majEffect_whilemajE($v0, $v1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_whilemajE';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Effect;
+  $f = ($ffi_Effect['whileE'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Effect_whileE'] = __NAMESPACE__ . '\\majEffect_whilemajE';
+
 
 
 
 
 // Effect_monadEffect
-$GLOBALS['Effect_monadEffect'] = ["Applicative0" => function($_dollar__unused_0) {
+$GLOBALS['Effect_monadEffect'] = (object)["Applicative0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Effect_applicativeEffect'];
   goto __end;;
@@ -202,7 +268,7 @@ $GLOBALS['Effect_monadEffect'] = ["Applicative0" => function($_dollar__unused_0)
 }];
 
 // Effect_bindEffect
-$GLOBALS['Effect_bindEffect'] = ["bind" => $GLOBALS['Effect_bindE'], "Apply0" => function($_dollar__unused_0) {
+$GLOBALS['Effect_bindEffect'] = (object)["bind" => $GLOBALS['Effect_bindE'], "Apply0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Effect_applyEffect'];
   goto __end;;
@@ -212,18 +278,18 @@ $GLOBALS['Effect_bindEffect'] = ["bind" => $GLOBALS['Effect_bindE'], "Apply0" =>
 
 // Effect_applyEffect
 $GLOBALS['Effect_applyEffect'] = (function() use (&$__fn) {
-$__local_var_0_0 = (($GLOBALS['Effect_monadEffect'])['Bind1'])(null);
-return ["apply" => (function() use ($__local_var_0_0) {
+$__local_var_0_0 = (($GLOBALS['Effect_monadEffect'])->{'Bind1'})(null);
+return (object)["apply" => (function() use ($__local_var_0_0) {
   $__fn = function($f_1, $a_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_0_0)['bind'])($f_1, function($f_prime_3) use ($__local_var_0_0, $a_2) {
+  $__res = ((($__local_var_0_0)->{'bind'})($f_1))(function($f_prime_3) use ($__local_var_0_0, $a_2) {
   $__num = \func_num_args();
-  $__res = (($__local_var_0_0)['bind'])($a_2, function($a_prime_4) use ($f_prime_3) {
+  $__res = ((($__local_var_0_0)->{'bind'})($a_2))(function($a_prime_4) use ($f_prime_3) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Effect_monadEffect'])['Applicative0'])(null))['pure'])(($f_prime_3)($a_prime_4));
+  $__res = (((($GLOBALS['Effect_monadEffect'])->{'Applicative0'})(null))->{'pure'})(($f_prime_3)($a_prime_4));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -247,7 +313,7 @@ return ["apply" => (function() use ($__local_var_0_0) {
 })();
 
 // Effect_applicativeEffect
-$GLOBALS['Effect_applicativeEffect'] = ["pure" => $GLOBALS['Effect_pureE'], "Apply0" => function($_dollar__unused_0) {
+$GLOBALS['Effect_applicativeEffect'] = (object)["pure" => $GLOBALS['Effect_pureE'], "Apply0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Effect_applyEffect'];
   goto __end;;
@@ -256,13 +322,13 @@ $GLOBALS['Effect_applicativeEffect'] = ["pure" => $GLOBALS['Effect_pureE'], "App
 }];
 
 // Effect_functorEffect
-$GLOBALS['Effect_functorEffect'] = ["map" => (function() {
+$GLOBALS['Effect_functorEffect'] = (object)["map" => (function() {
   $__fn = function($f_0, $a_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($GLOBALS['Effect_applicativeEffect'])['Apply0'])(null))['apply'])((($GLOBALS['Effect_applicativeEffect'])['pure'])($f_0), $a_1);
+  $__res = ((((($GLOBALS['Effect_applicativeEffect'])->{'Apply0'})(null))->{'apply'})((($GLOBALS['Effect_applicativeEffect'])->{'pure'})($f_0)))($a_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -277,12 +343,12 @@ function majEffect_lift2($f_0, $a_1 = null, $b_2 = null) {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__local_var_3_0 = (($GLOBALS['Effect_monadEffect'])['Bind1'])(null);
-  $__res = (($__local_var_3_0)['bind'])((((($GLOBALS['Effect_applyEffect'])['Functor0'])(null))['map'])($f_0, $a_1), function($f_prime_4) use ($__local_var_3_0, $b_2) {
+  $__local_var_3_0 = (($GLOBALS['Effect_monadEffect'])->{'Bind1'})(null);
+  $__res = ((($__local_var_3_0)->{'bind'})(((((($GLOBALS['Effect_applyEffect'])->{'Functor0'})(null))->{'map'})($f_0))($a_1)))(function($f_prime_4) use ($__local_var_3_0, $b_2) {
   $__num = \func_num_args();
-  $__res = (($__local_var_3_0)['bind'])($b_2, function($a_prime_5) use ($f_prime_4) {
+  $__res = ((($__local_var_3_0)->{'bind'})($b_2))(function($a_prime_5) use ($f_prime_4) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Effect_monadEffect'])['Applicative0'])(null))['pure'])(($f_prime_4)($a_prime_5));
+  $__res = (((($GLOBALS['Effect_monadEffect'])->{'Applicative0'})(null))->{'pure'})(($f_prime_4)($a_prime_5));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -304,7 +370,7 @@ function majEffect_semigroupmajEffect($dictSemigroup_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["append" => ($GLOBALS['Effect_lift2'])(($dictSemigroup_0)['append'])];
+  $__res = (object)["append" => ($GLOBALS['Effect_lift2'])(($dictSemigroup_0)->{'append'})];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -318,9 +384,9 @@ function majEffect_monoidmajEffect($dictMonoid_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["mempty" => ($GLOBALS['Effect_pureE'])(($dictMonoid_0)['mempty']), "Semigroup0" => function($_dollar__unused_1) use ($dictMonoid_0) {
+  $__res = (object)["mempty" => \Effect\majEffect_puremajE(($dictMonoid_0)->{'mempty'}), "Semigroup0" => function($_dollar__unused_1) use ($dictMonoid_0) {
   $__num = \func_num_args();
-  $__res = ["append" => ($GLOBALS['Effect_lift2'])(((($dictMonoid_0)['Semigroup0'])(null))['append'])];
+  $__res = (object)["append" => ($GLOBALS['Effect_lift2'])(((($dictMonoid_0)->{'Semigroup0'})(null))->{'append'})];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

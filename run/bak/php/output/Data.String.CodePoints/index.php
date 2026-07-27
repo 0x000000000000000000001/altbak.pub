@@ -252,27 +252,104 @@ $exports['_toCodePointArray'] = $_toCodePointArray;
 return $exports;
   return $exports;
 });
-$GLOBALS['Data_String_CodePoints__codePointAt'] = $ffi_Data_String_CodePoints['_codePointAt'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_String_CodePoints__countPrefix'] = $ffi_Data_String_CodePoints['_countPrefix'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_String_CodePoints__fromCodePointArray'] = $ffi_Data_String_CodePoints['_fromCodePointArray'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_String_CodePoints__singleton'] = $ffi_Data_String_CodePoints['_singleton'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_String_CodePoints__take'] = $ffi_Data_String_CodePoints['_take'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_String_CodePoints__toCodePointArray'] = $ffi_Data_String_CodePoints['_toCodePointArray'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_String_CodePoints__unsafeCodePointAt0'] = $ffi_Data_String_CodePoints['_unsafeCodePointAt0'] ?? new class { public function __invoke(...$args) { return $this; } };
+function majData_majString_majCodemajPoints__codemajPointmajAt($v0, $v1 = null, $v2 = null, $v3 = null, $v4 = null, $v5 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majString_majCodemajPoints__codemajPointmajAt';
+  if ($__num < 6) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 6);
+  }
+  global $ffi_Data_String_CodePoints;
+  $f = ($ffi_Data_String_CodePoints['_codePointAt'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1, $v2, $v3, $v4, $v5);
+}
+$GLOBALS['Data_String_CodePoints__codePointAt'] = __NAMESPACE__ . '\\majData_majString_majCodemajPoints__codemajPointmajAt';
+
+function majData_majString_majCodemajPoints__countmajPrefix($v0, $v1 = null, $v2 = null, $v3 = null): int|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majString_majCodemajPoints__countmajPrefix';
+  if ($__num < 4) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 4);
+  }
+  global $ffi_Data_String_CodePoints;
+  $f = ($ffi_Data_String_CodePoints['_countPrefix'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1, $v2, $v3);
+}
+$GLOBALS['Data_String_CodePoints__countPrefix'] = __NAMESPACE__ . '\\majData_majString_majCodemajPoints__countmajPrefix';
+
+function majData_majString_majCodemajPoints__frommajCodemajPointmajArray($v0, $v1 = null): string|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majString_majCodemajPoints__frommajCodemajPointmajArray';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Data_String_CodePoints;
+  $f = ($ffi_Data_String_CodePoints['_fromCodePointArray'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Data_String_CodePoints__fromCodePointArray'] = __NAMESPACE__ . '\\majData_majString_majCodemajPoints__frommajCodemajPointmajArray';
+
+function majData_majString_majCodemajPoints__singleton($v0, $v1 = null): string|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majString_majCodemajPoints__singleton';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Data_String_CodePoints;
+  $f = ($ffi_Data_String_CodePoints['_singleton'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Data_String_CodePoints__singleton'] = __NAMESPACE__ . '\\majData_majString_majCodemajPoints__singleton';
+
+function majData_majString_majCodemajPoints__take($v0, $v1 = null, $v2 = null): string|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majString_majCodemajPoints__take';
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  global $ffi_Data_String_CodePoints;
+  $f = ($ffi_Data_String_CodePoints['_take'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1, $v2);
+}
+$GLOBALS['Data_String_CodePoints__take'] = __NAMESPACE__ . '\\majData_majString_majCodemajPoints__take';
+
+function majData_majString_majCodemajPoints__tomajCodemajPointmajArray($v0, $v1 = null, $v2 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majString_majCodemajPoints__tomajCodemajPointmajArray';
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  global $ffi_Data_String_CodePoints;
+  $f = ($ffi_Data_String_CodePoints['_toCodePointArray'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1, $v2);
+}
+$GLOBALS['Data_String_CodePoints__toCodePointArray'] = __NAMESPACE__ . '\\majData_majString_majCodemajPoints__tomajCodemajPointmajArray';
+
+function majData_majString_majCodemajPoints__unsafemajCodemajPointmajAt0($v0, $v1 = null): int|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majString_majCodemajPoints__unsafemajCodemajPointmajAt0';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Data_String_CodePoints;
+  $f = ($ffi_Data_String_CodePoints['_unsafeCodePointAt0'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Data_String_CodePoints__unsafeCodePointAt0'] = __NAMESPACE__ . '\\majData_majString_majCodemajPoints__unsafemajCodemajPointmajAt0';
+
 
 
 
 
 // Data_String_CodePoints_lessThanOrEq
 $GLOBALS['Data_String_CodePoints_lessThanOrEq'] = (function() use (&$__fn) {
-$__local_var_0_0 = ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT());
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
 return (function() use ($__local_var_0_0) {
   $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ( ! ($__local_var_0_0)($a1_1, $a2_2) instanceof \Data\Ordering\Data_Ordering_GT);
+  $__res = ( ! (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_GT);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -283,14 +360,14 @@ return (function() use ($__local_var_0_0) {
 
 // Data_String_CodePoints_greaterThan
 $GLOBALS['Data_String_CodePoints_greaterThan'] = (function() use (&$__fn) {
-$__local_var_0_0 = ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT());
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
 return (function() use ($__local_var_0_0) {
   $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($__local_var_0_0)($a1_1, $a2_2) instanceof \Data\Ordering\Data_Ordering_GT;
+  $__res = (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_GT;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -301,14 +378,14 @@ return (function() use ($__local_var_0_0) {
 
 // Data_String_CodePoints_lessThan
 $GLOBALS['Data_String_CodePoints_lessThan'] = (function() use (&$__fn) {
-$__local_var_0_0 = ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT());
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
 return (function() use ($__local_var_0_0) {
   $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($__local_var_0_0)($a1_1, $a2_2) instanceof \Data\Ordering\Data_Ordering_LT;
+  $__res = (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -318,18 +395,18 @@ return (function() use ($__local_var_0_0) {
 })();
 
 // Data_String_CodePoints_compare
-$GLOBALS['Data_String_CodePoints_compare'] = ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT());
+$GLOBALS['Data_String_CodePoints_compare'] = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
 
 // Data_String_CodePoints_greaterThanOrEq
 $GLOBALS['Data_String_CodePoints_greaterThanOrEq'] = (function() use (&$__fn) {
-$__local_var_0_0 = ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT());
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
 return (function() use ($__local_var_0_0) {
   $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ( ! ($__local_var_0_0)($a1_1, $a2_2) instanceof \Data\Ordering\Data_Ordering_LT);
+  $__res = ( ! (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -353,9 +430,9 @@ function majData_majString_majCodemajPoints_majCodemajPoint($x_0) {
 $GLOBALS['Data_String_CodePoints_CodePoint'] = __NAMESPACE__ . '\\majData_majString_majCodemajPoints_majCodemajPoint';
 
 // Data_String_CodePoints_showCodePoint
-$GLOBALS['Data_String_CodePoints_showCodePoint'] = ["show" => function($v_0) {
+$GLOBALS['Data_String_CodePoints_showCodePoint'] = (object)["show" => function($v_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(CodePoint 0x", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(($GLOBALS['Data_String_Common_toUpper'])(($GLOBALS['Data_Int_toStringAs'])(16, $v_0)), ")"));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(CodePoint 0x"))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(\Data\String\Common\majData_majString_majCommon_tomajUpper(\Data\Int\majData_majInt_tomajStringmajAs(16, $v_0))))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -368,7 +445,7 @@ function majData_majString_majCodemajPoints_uncons(string $s_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $v_1_0 = ($GLOBALS['Data_String_CodeUnits_length'])($s_0);
+  $v_1_0 = \Data\String\CodeUnits\majData_majString_majCodemajUnits_length($s_0);
   $__t4 = null;;
   switch ($v_1_0) {
 case 0:
@@ -381,21 +458,21 @@ break;
 };
   switch ($v_1_0) {
 case 1:
-$__t4 = new \Data\Maybe\Data_Maybe_Just(["head" => (($GLOBALS['Data_Enum_boundedEnumChar'])['fromEnum'])(($GLOBALS['Data_String_Unsafe_charAt'])(0, $s_0)), "tail" => ""]);
+$__t4 = new \Data\Maybe\Data_Maybe_Just((object)["head" => (($GLOBALS['Data_Enum_boundedEnumChar'])->{'fromEnum'})(\Data\String\Unsafe\majData_majString_majUnsafe_charmajAt(0, $s_0)), "tail" => ""]);
 goto end_branch_4;;
 break;
 default:
 ;
 break;
 };
-  $cu1_2_1 = (($GLOBALS['Data_Enum_boundedEnumChar'])['fromEnum'])(($GLOBALS['Data_String_Unsafe_charAt'])(1, $s_0));
-  $cu0_3_2 = (($GLOBALS['Data_Enum_boundedEnumChar'])['fromEnum'])(($GLOBALS['Data_String_Unsafe_charAt'])(0, $s_0));
+  $cu1_2_1 = (($GLOBALS['Data_Enum_boundedEnumChar'])->{'fromEnum'})(\Data\String\Unsafe\majData_majString_majUnsafe_charmajAt(1, $s_0));
+  $cu0_3_2 = (($GLOBALS['Data_Enum_boundedEnumChar'])->{'fromEnum'})(\Data\String\Unsafe\majData_majString_majUnsafe_charmajAt(0, $s_0));
   $__t3 = null;;
-  if ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(($GLOBALS['Data_String_CodePoints_lessThanOrEq'])(55296, $cu0_3_2), ($GLOBALS['Data_String_CodePoints_lessThanOrEq'])($cu0_3_2, 56319)), (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(($GLOBALS['Data_String_CodePoints_lessThanOrEq'])(56320, $cu1_2_1), ($GLOBALS['Data_String_CodePoints_lessThanOrEq'])($cu1_2_1, 57343)))) {
-$__t3 = new \Data\Maybe\Data_Maybe_Just(["head" => (((($cu0_3_2 - 55296) * 1024) + ($cu1_2_1 - 56320)) + 65536), "tail" => ($GLOBALS['Data_String_CodeUnits_drop'])(2, $s_0)]);
+  if (((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})((($GLOBALS['Data_String_CodePoints_lessThanOrEq'])(55296))($cu0_3_2)))((($GLOBALS['Data_String_CodePoints_lessThanOrEq'])($cu0_3_2))(56319))))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})((($GLOBALS['Data_String_CodePoints_lessThanOrEq'])(56320))($cu1_2_1)))((($GLOBALS['Data_String_CodePoints_lessThanOrEq'])($cu1_2_1))(57343)))) {
+$__t3 = new \Data\Maybe\Data_Maybe_Just((object)["head" => (((($cu0_3_2 - 55296) * 1024) + ($cu1_2_1 - 56320)) + 65536), "tail" => \Data\String\CodeUnits\majData_majString_majCodemajUnits_drop(2, $s_0)]);
 goto end_branch_3;;
 };
-  $__t3 = new \Data\Maybe\Data_Maybe_Just(["head" => $cu0_3_2, "tail" => ($GLOBALS['Data_String_CodeUnits_drop'])(1, $s_0)]);
+  $__t3 = new \Data\Maybe\Data_Maybe_Just((object)["head" => $cu0_3_2, "tail" => \Data\String\CodeUnits\majData_majString_majCodemajUnits_drop(1, $s_0)]);
   end_branch_3:;
   $__t4 = $__t3;
   end_branch_4:;
@@ -413,13 +490,13 @@ function majData_majString_majCodemajPoints_unconsmajButmajWithmajTuple(string $
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($v_1) {
+  $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])->{'map'})(function($v_1) {
   $__num = \func_num_args();
-  $__res = new \Data\Tuple\Data_Tuple_Tuple(($v_1)['head'], ($v_1)['tail']);
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($v_1)->{'head'}, ($v_1)->{'tail'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, ($GLOBALS['Data_String_CodePoints_uncons'])($s_0));
+}))(\Data\String\CodePoints\majData_majString_majCodemajPoints_uncons($s_0));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -433,7 +510,7 @@ function majData_majString_majCodemajPoints_tomajCodemajPointmajArraymajFallback
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($GLOBALS['Data_Unfoldable_unfoldableArray'])['unfoldr'])($GLOBALS['Data_String_CodePoints_unconsButWithTuple'], $s_0);
+  $__res = ((($GLOBALS['Data_Unfoldable_unfoldableArray'])->{'unfoldr'})($GLOBALS['Data_String_CodePoints_unconsButWithTuple']))($s_0);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -441,18 +518,18 @@ function majData_majString_majCodemajPoints_tomajCodemajPointmajArraymajFallback
 $GLOBALS['Data_String_CodePoints_toCodePointArrayFallback'] = __NAMESPACE__ . '\\majData_majString_majCodemajPoints_tomajCodemajPointmajArraymajFallback';
 
 // Data_String_CodePoints_unsafeCodePointAt0Fallback
-function majData_majString_majCodemajPoints_unsafemajCodemajPointmajAt0majFallback(string $s_0) {
+function majData_majString_majCodemajPoints_unsafemajCodemajPointmajAt0majFallback(string $s_0): int|\Closure {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majCodemajPoints_unsafemajCodemajPointmajAt0majFallback';
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $cu0_1_0 = (($GLOBALS['Data_Enum_boundedEnumChar'])['fromEnum'])(($GLOBALS['Data_String_Unsafe_charAt'])(0, $s_0));
+  $cu0_1_0 = (($GLOBALS['Data_Enum_boundedEnumChar'])->{'fromEnum'})(\Data\String\Unsafe\majData_majString_majUnsafe_charmajAt(0, $s_0));
   $__t1 = null;;
-  if ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(($GLOBALS['Data_String_CodePoints_lessThanOrEq'])(55296, $cu0_1_0), ($GLOBALS['Data_String_CodePoints_lessThanOrEq'])($cu0_1_0, 56319)), ($GLOBALS['Data_String_CodePoints_greaterThan'])(($GLOBALS['Data_String_CodeUnits_length'])($s_0), 1))) {
-$cu1_2_2 = (($GLOBALS['Data_Enum_boundedEnumChar'])['fromEnum'])(($GLOBALS['Data_String_Unsafe_charAt'])(1, $s_0));
+  if (((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})((($GLOBALS['Data_String_CodePoints_lessThanOrEq'])(55296))($cu0_1_0)))((($GLOBALS['Data_String_CodePoints_lessThanOrEq'])($cu0_1_0))(56319))))((($GLOBALS['Data_String_CodePoints_greaterThan'])(\Data\String\CodeUnits\majData_majString_majCodemajUnits_length($s_0)))(1))) {
+$cu1_2_2 = (($GLOBALS['Data_Enum_boundedEnumChar'])->{'fromEnum'})(\Data\String\Unsafe\majData_majString_majUnsafe_charmajAt(1, $s_0));
 $__t3 = null;;
-if ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(($GLOBALS['Data_String_CodePoints_lessThanOrEq'])(56320, $cu1_2_2), ($GLOBALS['Data_String_CodePoints_lessThanOrEq'])($cu1_2_2, 57343))) {
+if (((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})((($GLOBALS['Data_String_CodePoints_lessThanOrEq'])(56320))($cu1_2_2)))((($GLOBALS['Data_String_CodePoints_lessThanOrEq'])($cu1_2_2))(57343))) {
 $__t3 = (((($cu0_1_0 - 55296) * 1024) + ($cu1_2_2 - 56320)) + 65536);
 goto end_branch_3;;
 };
@@ -474,7 +551,7 @@ $GLOBALS['Data_String_CodePoints_unsafeCodePointAt0Fallback'] = __NAMESPACE__ . 
 $GLOBALS['Data_String_CodePoints_unsafeCodePointAt0_closure'] = ($GLOBALS['Data_String_CodePoints__unsafeCodePointAt0'])($GLOBALS['Data_String_CodePoints_unsafeCodePointAt0Fallback']);
 
 // Data_String_CodePoints_unsafeCodePointAt0
-function majData_majString_majCodemajPoints_unsafemajCodemajPointmajAt0(string $v_0) {
+function majData_majString_majCodemajPoints_unsafemajCodemajPointmajAt0(string $v_0): int|\Closure {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majCodemajPoints_unsafemajCodemajPointmajAt0';
   if ($__num < 1) {
@@ -488,7 +565,7 @@ function majData_majString_majCodemajPoints_unsafemajCodemajPointmajAt0(string $
 $GLOBALS['Data_String_CodePoints_unsafeCodePointAt0'] = __NAMESPACE__ . '\\majData_majString_majCodemajPoints_unsafemajCodemajPointmajAt0';
 
 // Data_String_CodePoints_toCodePointArray_closure
-$GLOBALS['Data_String_CodePoints_toCodePointArray_closure'] = ($GLOBALS['Data_String_CodePoints__toCodePointArray'])($GLOBALS['Data_String_CodePoints_toCodePointArrayFallback'], $GLOBALS['Data_String_CodePoints_unsafeCodePointAt0']);
+$GLOBALS['Data_String_CodePoints_toCodePointArray_closure'] = (($GLOBALS['Data_String_CodePoints__toCodePointArray'])($GLOBALS['Data_String_CodePoints_toCodePointArrayFallback']))($GLOBALS['Data_String_CodePoints_unsafeCodePointAt0']);
 
 // Data_String_CodePoints_toCodePointArray
 function majData_majString_majCodemajPoints_tomajCodemajPointmajArray(string $v_0) {
@@ -505,7 +582,7 @@ function majData_majString_majCodemajPoints_tomajCodemajPointmajArray(string $v_
 $GLOBALS['Data_String_CodePoints_toCodePointArray'] = __NAMESPACE__ . '\\majData_majString_majCodemajPoints_tomajCodemajPointmajArray';
 
 // Data_String_CodePoints_length_closure
-$GLOBALS['Data_String_CodePoints_length_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_length'], $GLOBALS['Data_String_CodePoints_toCodePointArray']);
+$GLOBALS['Data_String_CodePoints_length_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_length']))($GLOBALS['Data_String_CodePoints_toCodePointArray']);
 
 // Data_String_CodePoints_length
 function majData_majString_majCodemajPoints_length(string $v_0): int|\Closure {
@@ -522,19 +599,19 @@ function majData_majString_majCodemajPoints_length(string $v_0): int|\Closure {
 $GLOBALS['Data_String_CodePoints_length'] = __NAMESPACE__ . '\\majData_majString_majCodemajPoints_length';
 
 // Data_String_CodePoints_lastIndexOf
-function majData_majString_majCodemajPoints_lastmajIndexmajOf($p_0, $s_1 = null) {
+function majData_majString_majCodemajPoints_lastmajIndexmajOf(string $p_0, $s_1 = null) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majCodemajPoints_lastmajIndexmajOf';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($i_2) use ($s_1) {
+  $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])->{'map'})(function($i_2) use ($s_1) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_String_CodePoints_length'])(($GLOBALS['Data_String_CodeUnits_take'])($i_2, $s_1));
+  $__res = \Data\String\CodePoints\majData_majString_majCodemajPoints_length(\Data\String\CodeUnits\majData_majString_majCodemajUnits_take($i_2, $s_1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, ($GLOBALS['Data_String_CodeUnits_lastIndexOf'])($p_0, $s_1));
+}))(\Data\String\CodeUnits\majData_majString_majCodemajUnits_lastmajIndexmajOf($p_0, $s_1));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -542,19 +619,19 @@ function majData_majString_majCodemajPoints_lastmajIndexmajOf($p_0, $s_1 = null)
 $GLOBALS['Data_String_CodePoints_lastIndexOf'] = __NAMESPACE__ . '\\majData_majString_majCodemajPoints_lastmajIndexmajOf';
 
 // Data_String_CodePoints_indexOf
-function majData_majString_majCodemajPoints_indexmajOf($p_0, $s_1 = null) {
+function majData_majString_majCodemajPoints_indexmajOf(string $p_0, $s_1 = null) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majCodemajPoints_indexmajOf';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($i_2) use ($s_1) {
+  $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])->{'map'})(function($i_2) use ($s_1) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_String_CodePoints_length'])(($GLOBALS['Data_String_CodeUnits_take'])($i_2, $s_1));
+  $__res = \Data\String\CodePoints\majData_majString_majCodemajPoints_length(\Data\String\CodeUnits\majData_majString_majCodemajUnits_take($i_2, $s_1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, ($GLOBALS['Data_String_CodeUnits_indexOf'])($p_0, $s_1));
+}))(\Data\String\CodeUnits\majData_majString_majCodemajUnits_indexmajOf($p_0, $s_1));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -562,7 +639,7 @@ function majData_majString_majCodemajPoints_indexmajOf($p_0, $s_1 = null) {
 $GLOBALS['Data_String_CodePoints_indexOf'] = __NAMESPACE__ . '\\majData_majString_majCodemajPoints_indexmajOf';
 
 // Data_String_CodePoints_fromCharCode_closure
-$GLOBALS['Data_String_CodePoints_fromCharCode_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_CodeUnits_singleton'], ($GLOBALS['Data_Enum_toEnumWithDefaults'])($GLOBALS['Data_Enum_boundedEnumChar'], ($GLOBALS['Data_Bounded_boundedChar'])['bottom'], ($GLOBALS['Data_Bounded_boundedChar'])['top']));
+$GLOBALS['Data_String_CodePoints_fromCharCode_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_CodeUnits_singleton']))(((($GLOBALS['Data_Enum_toEnumWithDefaults'])($GLOBALS['Data_Enum_boundedEnumChar']))(($GLOBALS['Data_Bounded_boundedChar'])->{'bottom'}))(($GLOBALS['Data_Bounded_boundedChar'])->{'top'}));
 
 // Data_String_CodePoints_fromCharCode
 function majData_majString_majCodemajPoints_frommajCharmajCode(int $v_0): string|\Closure {
@@ -579,18 +656,18 @@ function majData_majString_majCodemajPoints_frommajCharmajCode(int $v_0): string
 $GLOBALS['Data_String_CodePoints_fromCharCode'] = __NAMESPACE__ . '\\majData_majString_majCodemajPoints_frommajCharmajCode';
 
 // Data_String_CodePoints_singletonFallback
-function majData_majString_majCodemajPoints_singletonmajFallback($v_0): string|\Closure {
+function majData_majString_majCodemajPoints_singletonmajFallback(int $v_0): string|\Closure {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majCodemajPoints_singletonmajFallback';
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $__t0 = null;;
-  if (($GLOBALS['Data_String_CodePoints_lessThanOrEq'])($v_0, 65535)) {
-$__t0 = ($GLOBALS['Data_String_CodePoints_fromCharCode'])($v_0);
+  if ((($GLOBALS['Data_String_CodePoints_lessThanOrEq'])($v_0))(65535)) {
+$__t0 = \Data\String\CodePoints\majData_majString_majCodemajPoints_frommajCharmajCode($v_0);
 goto end_branch_0;;
 };
-  $__t0 = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(($GLOBALS['Data_String_CodePoints_fromCharCode'])(((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['div'])(($v_0 - 65536), 1024) + 55296)), ($GLOBALS['Data_String_CodePoints_fromCharCode'])(((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['mod'])(($v_0 - 65536), 1024) + 56320)));
+  $__t0 = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(\Data\String\CodePoints\majData_majString_majCodemajPoints_frommajCharmajCode((((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])->{'div'})(($v_0 - 65536)))(1024) + 55296))))(\Data\String\CodePoints\majData_majString_majCodemajPoints_frommajCharmajCode((((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])->{'mod'})(($v_0 - 65536)))(1024) + 56320)));
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
@@ -620,7 +697,7 @@ $GLOBALS['Data_String_CodePoints_fromCodePointArray'] = __NAMESPACE__ . '\\majDa
 $GLOBALS['Data_String_CodePoints_singleton_closure'] = ($GLOBALS['Data_String_CodePoints__singleton'])($GLOBALS['Data_String_CodePoints_singletonFallback']);
 
 // Data_String_CodePoints_singleton
-function majData_majString_majCodemajPoints_singleton($v_0): string|\Closure {
+function majData_majString_majCodemajPoints_singleton(int $v_0): string|\Closure {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majCodemajPoints_singleton';
   if ($__num < 1) {
@@ -646,14 +723,14 @@ function majData_majString_majCodemajPoints_takemajFallback(int $v_0, $v1_1 = nu
   $v_0 = $__tco_var_Data_String_CodePoints_takeFallback_v_0;
   $v1_1 = $__tco_var_Data_String_CodePoints_takeFallback_v1_1;
   $__t2 = null;;
-  if (($GLOBALS['Data_String_CodePoints_lessThan'])($v_0, 1)) {
+  if ((($GLOBALS['Data_String_CodePoints_lessThan'])($v_0))(1)) {
 $__t2 = "";
 goto end_branch_2;;
 };
-  $v2_2_0 = ($GLOBALS['Data_String_CodePoints_uncons'])($v1_1);
+  $v2_2_0 = \Data\String\CodePoints\majData_majString_majCodemajPoints_uncons($v1_1);
   $__t1 = null;;
   if ($v2_2_0 instanceof \Data\Maybe\Data_Maybe_Just) {
-$__t1 = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(($GLOBALS['Data_String_CodePoints_singleton'])((($v2_2_0)->{'value0'})['head']), ($GLOBALS['Data_String_CodePoints_takeFallback'])(($v_0 - 1), (($v2_2_0)->{'value0'})['tail']));
+$__t1 = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(\Data\String\CodePoints\majData_majString_majCodemajPoints_singleton((($v2_2_0)->{'value0'})->{'head'})))(\Data\String\CodePoints\majData_majString_majCodemajPoints_takemajFallback(($v_0 - 1), (($v2_2_0)->{'value0'})->{'tail'}));
 goto end_branch_1;;
 };
   $__t1 = $v1_1;
@@ -685,19 +762,19 @@ function majData_majString_majCodemajPoints_take(int $v_0, $v_1 = null): string|
 $GLOBALS['Data_String_CodePoints_take'] = __NAMESPACE__ . '\\majData_majString_majCodemajPoints_take';
 
 // Data_String_CodePoints_lastIndexOf'
-function majData_majString_majCodemajPoints_lastmajIndexmajOf__prime__($p_0, $i_1 = null, $s_2 = null) {
+function majData_majString_majCodemajPoints_lastmajIndexmajOf__prime__(string $p_0, $i_1 = null, $s_2 = null) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majCodemajPoints_lastmajIndexmajOf__prime__';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($k_3) use ($s_2) {
+  $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])->{'map'})(function($k_3) use ($s_2) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_String_CodePoints_length'])(($GLOBALS['Data_String_CodeUnits_take'])($k_3, $s_2));
+  $__res = \Data\String\CodePoints\majData_majString_majCodemajPoints_length(\Data\String\CodeUnits\majData_majString_majCodemajUnits_take($k_3, $s_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, ($GLOBALS['Data_String_CodeUnits_lastIndexOf__prime__'])($p_0, ($GLOBALS['Data_String_CodeUnits_length'])(($GLOBALS['Data_String_CodePoints_take'])($i_1, $s_2)), $s_2));
+}))(((($GLOBALS['Data_String_CodeUnits_lastIndexOf__prime__'])($p_0))(\Data\String\CodeUnits\majData_majString_majCodemajUnits_length(\Data\String\CodePoints\majData_majString_majCodemajPoints_take($i_1, $s_2))))($s_2));
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -711,8 +788,8 @@ function majData_majString_majCodemajPoints_splitmajAt(int $i_0, $s_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $before_2_0 = ($GLOBALS['Data_String_CodePoints_take'])($i_0, $s_1);
-  $__res = ["before" => $before_2_0, "after" => ($GLOBALS['Data_String_CodeUnits_drop'])(($GLOBALS['Data_String_CodeUnits_length'])($before_2_0), $s_1)];
+  $before_2_0 = \Data\String\CodePoints\majData_majString_majCodemajPoints_take($i_0, $s_1);
+  $__res = (object)["before" => $before_2_0, "after" => \Data\String\CodeUnits\majData_majString_majCodemajUnits_drop(\Data\String\CodeUnits\majData_majString_majCodemajUnits_length($before_2_0), $s_1)];
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -720,7 +797,7 @@ function majData_majString_majCodemajPoints_splitmajAt(int $i_0, $s_1 = null) {
 $GLOBALS['Data_String_CodePoints_splitAt'] = __NAMESPACE__ . '\\majData_majString_majCodemajPoints_splitmajAt';
 
 // Data_String_CodePoints_eqCodePoint
-$GLOBALS['Data_String_CodePoints_eqCodePoint'] = ["eq" => (function() {
+$GLOBALS['Data_String_CodePoints_eqCodePoint'] = (object)["eq" => (function() {
   $__fn = function($x_0, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -735,13 +812,13 @@ $GLOBALS['Data_String_CodePoints_eqCodePoint'] = ["eq" => (function() {
 })()];
 
 // Data_String_CodePoints_ordCodePoint
-$GLOBALS['Data_String_CodePoints_ordCodePoint'] = ["compare" => (function() {
+$GLOBALS['Data_String_CodePoints_ordCodePoint'] = (object)["compare" => (function() {
   $__fn = function($x_0, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_String_CodePoints_compare'])($x_0, $y_1);
+  $__res = (($GLOBALS['Data_String_CodePoints_compare'])($x_0))($y_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -762,7 +839,7 @@ function majData_majString_majCodemajPoints_drop(int $n_0, $s_1 = null): string|
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_String_CodeUnits_drop'])(($GLOBALS['Data_String_CodeUnits_length'])(($GLOBALS['Data_String_CodePoints_take'])($n_0, $s_1)), $s_1);
+  $__res = \Data\String\CodeUnits\majData_majString_majCodemajUnits_drop(\Data\String\CodeUnits\majData_majString_majCodemajUnits_length(\Data\String\CodePoints\majData_majString_majCodemajPoints_take($n_0, $s_1)), $s_1);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -770,20 +847,20 @@ function majData_majString_majCodemajPoints_drop(int $n_0, $s_1 = null): string|
 $GLOBALS['Data_String_CodePoints_drop'] = __NAMESPACE__ . '\\majData_majString_majCodemajPoints_drop';
 
 // Data_String_CodePoints_indexOf'
-function majData_majString_majCodemajPoints_indexmajOf__prime__($p_0, $i_1 = null, $s_2 = null) {
+function majData_majString_majCodemajPoints_indexmajOf__prime__(string $p_0, $i_1 = null, $s_2 = null) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majCodemajPoints_indexmajOf__prime__';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $s_prime_3_0 = ($GLOBALS['Data_String_CodeUnits_drop'])(($GLOBALS['Data_String_CodeUnits_length'])(($GLOBALS['Data_String_CodePoints_take'])($i_1, $s_2)), $s_2);
-  $__res = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($k_4) use ($i_1, $s_prime_3_0) {
+  $s_prime_3_0 = \Data\String\CodeUnits\majData_majString_majCodemajUnits_drop(\Data\String\CodeUnits\majData_majString_majCodemajUnits_length(\Data\String\CodePoints\majData_majString_majCodemajPoints_take($i_1, $s_2)), $s_2);
+  $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])->{'map'})(function($k_4) use ($i_1, $s_prime_3_0) {
   $__num = \func_num_args();
-  $__res = ($i_1 + ($GLOBALS['Data_String_CodePoints_length'])(($GLOBALS['Data_String_CodeUnits_take'])($k_4, $s_prime_3_0)));
+  $__res = ($i_1 + \Data\String\CodePoints\majData_majString_majCodemajPoints_length(\Data\String\CodeUnits\majData_majString_majCodemajUnits_take($k_4, $s_prime_3_0)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, ($GLOBALS['Data_String_CodeUnits_indexOf'])($p_0, $s_prime_3_0));
+}))(\Data\String\CodeUnits\majData_majString_majCodemajUnits_indexmajOf($p_0, $s_prime_3_0));
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -804,11 +881,11 @@ function majData_majString_majCodemajPoints_countmajTail($p_0, $s_1 = null, $acc
   $p_0 = $__tco_var_Data_String_CodePoints_countTail_p_0;
   $s_1 = $__tco_var_Data_String_CodePoints_countTail_s_1;
   $accum_2 = $__tco_var_Data_String_CodePoints_countTail_accum_2;
-  $v_3_0 = ($GLOBALS['Data_String_CodePoints_uncons'])($s_1);
+  $v_3_0 = \Data\String\CodePoints\majData_majString_majCodemajPoints_uncons($s_1);
   $__t1 = null;;
-  if (($v_3_0 instanceof \Data\Maybe\Data_Maybe_Just && ($p_0)((($v_3_0)->{'value0'})['head']))) {
+  if (($v_3_0 instanceof \Data\Maybe\Data_Maybe_Just && ($p_0)((($v_3_0)->{'value0'})->{'head'}))) {
 $__tco_2 = $p_0;
-$__tco_3 = (($v_3_0)->{'value0'})['tail'];
+$__tco_3 = (($v_3_0)->{'value0'})->{'tail'};
 $__tco_4 = ($accum_2 + 1);
 $__tco_var_Data_String_CodePoints_countTail_p_0 = $__tco_2;
 $__tco_var_Data_String_CodePoints_countTail_s_1 = $__tco_3;
@@ -833,7 +910,7 @@ function majData_majString_majCodemajPoints_countmajFallback($p_0, $s_1 = null):
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_String_CodePoints_countTail'])($p_0, $s_1, 0);
+  $__res = \Data\String\CodePoints\majData_majString_majCodemajPoints_countmajTail($p_0, $s_1, 0);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -841,7 +918,7 @@ function majData_majString_majCodemajPoints_countmajFallback($p_0, $s_1 = null):
 $GLOBALS['Data_String_CodePoints_countFallback'] = __NAMESPACE__ . '\\majData_majString_majCodemajPoints_countmajFallback';
 
 // Data_String_CodePoints_countPrefix_closure
-$GLOBALS['Data_String_CodePoints_countPrefix_closure'] = ($GLOBALS['Data_String_CodePoints__countPrefix'])($GLOBALS['Data_String_CodePoints_countFallback'], $GLOBALS['Data_String_CodePoints_unsafeCodePointAt0']);
+$GLOBALS['Data_String_CodePoints_countPrefix_closure'] = (($GLOBALS['Data_String_CodePoints__countPrefix'])($GLOBALS['Data_String_CodePoints_countFallback']))($GLOBALS['Data_String_CodePoints_unsafeCodePointAt0']);
 
 // Data_String_CodePoints_countPrefix
 function majData_majString_majCodemajPoints_countmajPrefix($v_0, $v_1 = null): int|\Closure {
@@ -864,7 +941,7 @@ function majData_majString_majCodemajPoints_dropmajWhile($p_0, $s_1 = null): str
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_String_CodeUnits_drop'])(($GLOBALS['Data_String_CodeUnits_length'])(($GLOBALS['Data_String_CodePoints_take'])(($GLOBALS['Data_String_CodePoints_countPrefix'])($p_0, $s_1), $s_1)), $s_1);
+  $__res = \Data\String\CodeUnits\majData_majString_majCodemajUnits_drop(\Data\String\CodeUnits\majData_majString_majCodemajUnits_length(\Data\String\CodePoints\majData_majString_majCodemajPoints_take(\Data\String\CodePoints\majData_majString_majCodemajPoints_countmajPrefix($p_0, $s_1), $s_1)), $s_1);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -878,7 +955,7 @@ function majData_majString_majCodemajPoints_takemajWhile($p_0, $s_1 = null): str
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_String_CodePoints_take'])(($GLOBALS['Data_String_CodePoints_countPrefix'])($p_0, $s_1), $s_1);
+  $__res = \Data\String\CodePoints\majData_majString_majCodemajPoints_take(\Data\String\CodePoints\majData_majString_majCodemajPoints_countmajPrefix($p_0, $s_1), $s_1);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -886,10 +963,10 @@ function majData_majString_majCodemajPoints_takemajWhile($p_0, $s_1 = null): str
 $GLOBALS['Data_String_CodePoints_takeWhile'] = __NAMESPACE__ . '\\majData_majString_majCodemajPoints_takemajWhile';
 
 // Data_String_CodePoints_codePointFromChar_closure
-$GLOBALS['Data_String_CodePoints_codePointFromChar_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_CodePoints_CodePoint'], ($GLOBALS['Data_Enum_boundedEnumChar'])['fromEnum']);
+$GLOBALS['Data_String_CodePoints_codePointFromChar_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_CodePoints_CodePoint']))(($GLOBALS['Data_Enum_boundedEnumChar'])->{'fromEnum'});
 
 // Data_String_CodePoints_codePointFromChar
-function majData_majString_majCodemajPoints_codemajPointmajFrommajChar($v_0) {
+function majData_majString_majCodemajPoints_codemajPointmajFrommajChar($v_0): int|\Closure {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majCodemajPoints_codemajPointmajFrommajChar';
   if ($__num < 1) {
@@ -914,13 +991,13 @@ function majData_majString_majCodemajPoints_codemajPointmajAtmajFallback(int $n_
   tco_loop_Data_String_CodePoints_codePointAtFallback:;
   $n_0 = $__tco_var_Data_String_CodePoints_codePointAtFallback_n_0;
   $s_1 = $__tco_var_Data_String_CodePoints_codePointAtFallback_s_1;
-  $v_2_0 = ($GLOBALS['Data_String_CodePoints_uncons'])($s_1);
+  $v_2_0 = \Data\String\CodePoints\majData_majString_majCodemajPoints_uncons($s_1);
   $__t1 = null;;
   if ($v_2_0 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__t4 = null;;
 switch ($n_0) {
 case 0:
-$__t4 = new \Data\Maybe\Data_Maybe_Just((($v_2_0)->{'value0'})['head']);
+$__t4 = new \Data\Maybe\Data_Maybe_Just((($v_2_0)->{'value0'})->{'head'});
 goto end_branch_4;;
 break;
 default:
@@ -928,7 +1005,7 @@ default:
 break;
 };
 $__tco_2 = ($n_0 - 1);
-$__tco_3 = (($v_2_0)->{'value0'})['tail'];
+$__tco_3 = (($v_2_0)->{'value0'})->{'tail'};
 $__tco_var_Data_String_CodePoints_codePointAtFallback_n_0 = $__tco_2;
 $__tco_var_Data_String_CodePoints_codePointAtFallback_s_1 = $__tco_3;
 goto tco_loop_Data_String_CodePoints_codePointAtFallback;;
@@ -954,20 +1031,20 @@ function majData_majString_majCodemajPoints_codemajPointmajAt(int $v_0, $v1_1 = 
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t0 = null;;
-  if (($GLOBALS['Data_String_CodePoints_lessThan'])($v_0, 0)) {
+  if ((($GLOBALS['Data_String_CodePoints_lessThan'])($v_0))(0)) {
 $__t0 = new \Data\Maybe\Data_Maybe_Nothing();
 goto end_branch_0;;
 };
   switch ($v_0) {
 case 0:
-$__t0 = match ($v1_1) { "" => new \Data\Maybe\Data_Maybe_Nothing(), default => new \Data\Maybe\Data_Maybe_Just(($GLOBALS['Data_String_CodePoints_unsafeCodePointAt0'])($v1_1)) };
+$__t0 = match ($v1_1) { "" => new \Data\Maybe\Data_Maybe_Nothing(), default => new \Data\Maybe\Data_Maybe_Just(\Data\String\CodePoints\majData_majString_majCodemajPoints_unsafemajCodemajPointmajAt0($v1_1)) };
 goto end_branch_0;;
 break;
 default:
 ;
 break;
 };
-  $__t0 = ($GLOBALS['Data_String_CodePoints__codePointAt'])($GLOBALS['Data_String_CodePoints_codePointAtFallback'], $GLOBALS['Data_Maybe_Just'], new \Data\Maybe\Data_Maybe_Nothing(), $GLOBALS['Data_String_CodePoints_unsafeCodePointAt0'], $v_0, $v1_1);
+  $__t0 = \Data\String\CodePoints\majData_majString_majCodemajPoints__codemajPointmajAt($GLOBALS['Data_String_CodePoints_codePointAtFallback'], $GLOBALS['Data_Maybe_Just'], new \Data\Maybe\Data_Maybe_Nothing(), $GLOBALS['Data_String_CodePoints_unsafeCodePointAt0'], $v_0, $v1_1);
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
@@ -977,7 +1054,7 @@ break;
 $GLOBALS['Data_String_CodePoints_codePointAt'] = __NAMESPACE__ . '\\majData_majString_majCodemajPoints_codemajPointmajAt';
 
 // Data_String_CodePoints_boundedCodePoint
-$GLOBALS['Data_String_CodePoints_boundedCodePoint'] = ["bottom" => 0, "top" => 1114111, "Ord0" => function($_dollar__unused_0) {
+$GLOBALS['Data_String_CodePoints_boundedCodePoint'] = (object)["bottom" => 0, "top" => 1114111, "Ord0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_String_CodePoints_ordCodePoint'];
   goto __end;;
@@ -986,7 +1063,7 @@ $GLOBALS['Data_String_CodePoints_boundedCodePoint'] = ["bottom" => 0, "top" => 1
 }];
 
 // Data_String_CodePoints_boundedEnumCodePoint
-$GLOBALS['Data_String_CodePoints_boundedEnumCodePoint'] = ["cardinality" => 1114112, "fromEnum" => function($v_0) {
+$GLOBALS['Data_String_CodePoints_boundedEnumCodePoint'] = (object)["cardinality" => 1114112, "fromEnum" => function($v_0) {
   $__num = \func_num_args();
   $__res = $v_0;
   goto __end;;
@@ -995,7 +1072,7 @@ $GLOBALS['Data_String_CodePoints_boundedEnumCodePoint'] = ["cardinality" => 1114
 }, "toEnum" => function($n_0) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(($GLOBALS['Data_String_CodePoints_greaterThanOrEq'])($n_0, 0), ($GLOBALS['Data_String_CodePoints_lessThanOrEq'])($n_0, 1114111))) {
+  if (((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})((($GLOBALS['Data_String_CodePoints_greaterThanOrEq'])($n_0))(0)))((($GLOBALS['Data_String_CodePoints_lessThanOrEq'])($n_0))(1114111))) {
 $__t0 = new \Data\Maybe\Data_Maybe_Just($n_0);
 goto end_branch_0;;
 };
@@ -1020,15 +1097,15 @@ goto end_branch_0;;
 }];
 
 // Data_String_CodePoints_enumCodePoint
-$GLOBALS['Data_String_CodePoints_enumCodePoint'] = ["succ" => function($a_0) {
+$GLOBALS['Data_String_CodePoints_enumCodePoint'] = (object)["succ" => function($a_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_String_CodePoints_boundedEnumCodePoint'])['toEnum'])(((($GLOBALS['Data_String_CodePoints_boundedEnumCodePoint'])['fromEnum'])($a_0) + 1));
+  $__res = (($GLOBALS['Data_String_CodePoints_boundedEnumCodePoint'])->{'toEnum'})(((($GLOBALS['Data_String_CodePoints_boundedEnumCodePoint'])->{'fromEnum'})($a_0) + 1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "pred" => function($a_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_String_CodePoints_boundedEnumCodePoint'])['toEnum'])(((($GLOBALS['Data_String_CodePoints_boundedEnumCodePoint'])['fromEnum'])($a_0) - 1));
+  $__res = (($GLOBALS['Data_String_CodePoints_boundedEnumCodePoint'])->{'toEnum'})(((($GLOBALS['Data_String_CodePoints_boundedEnumCodePoint'])->{'fromEnum'})($a_0) - 1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

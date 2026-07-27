@@ -118,17 +118,17 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
-final class Data_Time_Time { public function __construct(public  $value0, public  $value1, public  $value2, public  $value3) {} }
+final class Data_Time_Time { public $tag = 'Time'; public function __construct(public int $value0, public int $value1, public int $value2, public int $value3) {} }
 
 // Data_Time_negateDuration
-$GLOBALS['Data_Time_negateDuration'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Time_Duration_durationMilliseconds'])['toDuration'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Time_Duration_negate'], ($GLOBALS['Data_Time_Duration_durationMilliseconds'])['fromDuration']));
+$GLOBALS['Data_Time_negateDuration'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Time_Duration_durationMilliseconds'])->{'toDuration'}))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Time_Duration_negate']))(($GLOBALS['Data_Time_Duration_durationMilliseconds'])->{'fromDuration'}));
 
 // Data_Time_negate
 $GLOBALS['Data_Time_negate'] = (function() use (&$__fn) {
-$zero_0_0 = ((($GLOBALS['Data_Ring_ringNumber'])['Semiring0'])(null))['zero'];
+$zero_0_0 = ((($GLOBALS['Data_Ring_ringNumber'])->{'Semiring0'})(null))->{'zero'};
 return function($a_1) use ($zero_0_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Ring_ringNumber'])['sub'])($zero_0_0, $a_1);
+  $__res = ((($GLOBALS['Data_Ring_ringNumber'])->{'sub'})($zero_0_0))($a_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -151,16 +151,16 @@ $GLOBALS['Data_Time_Time'] = (function() {
 })();
 
 // Data_Time_showTime
-$GLOBALS['Data_Time_showTime'] = ["show" => function($v_0) {
+$GLOBALS['Data_Time_showTime'] = (object)["show" => function($v_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Time ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Time_Component_showHour'])['show'])(($v_0)->{'value0'}), (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Time_Component_showMinute'])['show'])(($v_0)->{'value1'}), (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Time_Component_showSecond'])['show'])(($v_0)->{'value2'}), (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Time_Component_showMillisecond'])['show'])(($v_0)->{'value3'}), ")"))))))));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(Time "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($GLOBALS['Data_Time_Component_showHour'])->{'show'})(($v_0)->{'value0'})))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(" "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($GLOBALS['Data_Time_Component_showMinute'])->{'show'})(($v_0)->{'value1'})))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(" "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($GLOBALS['Data_Time_Component_showSecond'])->{'show'})(($v_0)->{'value2'})))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(" "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($GLOBALS['Data_Time_Component_showMillisecond'])->{'show'})(($v_0)->{'value3'})))(")"))))))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
 
 // Data_Time_setSecond
-function majData_majTime_setmajSecond($s_0, $v_1 = null) {
+function majData_majTime_setmajSecond(int $s_0, $v_1 = null) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majTime_setmajSecond';
   if ($__num < 2) {
@@ -174,7 +174,7 @@ function majData_majTime_setmajSecond($s_0, $v_1 = null) {
 $GLOBALS['Data_Time_setSecond'] = __NAMESPACE__ . '\\majData_majTime_setmajSecond';
 
 // Data_Time_setMinute
-function majData_majTime_setmajMinute($m_0, $v_1 = null) {
+function majData_majTime_setmajMinute(int $m_0, $v_1 = null) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majTime_setmajMinute';
   if ($__num < 2) {
@@ -188,7 +188,7 @@ function majData_majTime_setmajMinute($m_0, $v_1 = null) {
 $GLOBALS['Data_Time_setMinute'] = __NAMESPACE__ . '\\majData_majTime_setmajMinute';
 
 // Data_Time_setMillisecond
-function majData_majTime_setmajMillisecond($ms_0, $v_1 = null) {
+function majData_majTime_setmajMillisecond(int $ms_0, $v_1 = null) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majTime_setmajMillisecond';
   if ($__num < 2) {
@@ -202,7 +202,7 @@ function majData_majTime_setmajMillisecond($ms_0, $v_1 = null) {
 $GLOBALS['Data_Time_setMillisecond'] = __NAMESPACE__ . '\\majData_majTime_setmajMillisecond';
 
 // Data_Time_setHour
-function majData_majTime_setmajHour($h_0, $v_1 = null) {
+function majData_majTime_setmajHour(int $h_0, $v_1 = null) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majTime_setmajHour';
   if ($__num < 2) {
@@ -216,7 +216,7 @@ function majData_majTime_setmajHour($h_0, $v_1 = null) {
 $GLOBALS['Data_Time_setHour'] = __NAMESPACE__ . '\\majData_majTime_setmajHour';
 
 // Data_Time_second
-function majData_majTime_second($v_0) {
+function majData_majTime_second($v_0): int|\Closure {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majTime_second';
   if ($__num < 1) {
@@ -230,7 +230,7 @@ function majData_majTime_second($v_0) {
 $GLOBALS['Data_Time_second'] = __NAMESPACE__ . '\\majData_majTime_second';
 
 // Data_Time_minute
-function majData_majTime_minute($v_0) {
+function majData_majTime_minute($v_0): int|\Closure {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majTime_minute';
   if ($__num < 1) {
@@ -244,7 +244,7 @@ function majData_majTime_minute($v_0) {
 $GLOBALS['Data_Time_minute'] = __NAMESPACE__ . '\\majData_majTime_minute';
 
 // Data_Time_millisecond
-function majData_majTime_millisecond($v_0) {
+function majData_majTime_millisecond($v_0): int|\Closure {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majTime_millisecond';
   if ($__num < 1) {
@@ -258,16 +258,16 @@ function majData_majTime_millisecond($v_0) {
 $GLOBALS['Data_Time_millisecond'] = __NAMESPACE__ . '\\majData_majTime_millisecond';
 
 // Data_Time_millisToTime
-function majData_majTime_millismajTomajTime($v_0) {
+function majData_majTime_millismajTomajTime(float $v_0) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majTime_millismajTomajTime';
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $hours_1_0 = ($GLOBALS['Data_Number_floor'])((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])['div'])($v_0, 3600000.0));
-  $minutes_2_1 = ($GLOBALS['Data_Number_floor'])((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])['div'])((($GLOBALS['Data_Ring_ringNumber'])['sub'])($v_0, (($GLOBALS['Data_Semiring_semiringNumber'])['mul'])($hours_1_0, 3600000.0)), 60000.0));
-  $seconds_3_2 = ($GLOBALS['Data_Number_floor'])((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])['div'])((($GLOBALS['Data_Ring_ringNumber'])['sub'])($v_0, (($GLOBALS['Data_Semiring_semiringNumber'])['add'])((($GLOBALS['Data_Semiring_semiringNumber'])['mul'])($hours_1_0, 3600000.0), (($GLOBALS['Data_Semiring_semiringNumber'])['mul'])($minutes_2_1, 60000.0))), 1000.0));
-  $__local_var_4_3 = (($GLOBALS['Data_Maybe_applyMaybe'])['apply'])((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])((($GLOBALS['Data_Maybe_applyMaybe'])['apply'])((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($GLOBALS['Data_Time_Time'], (($GLOBALS['Data_Time_Component_boundedEnumHour'])['toEnum'])(($GLOBALS['Data_Int_floor'])($hours_1_0))), (($GLOBALS['Data_Time_Component_boundedEnumMinute'])['toEnum'])(($GLOBALS['Data_Int_floor'])($minutes_2_1))), (($GLOBALS['Data_Time_Component_boundedEnumSecond'])['toEnum'])(($GLOBALS['Data_Int_floor'])($seconds_3_2))), (($GLOBALS['Data_Time_Component_boundedEnumMillisecond'])['toEnum'])(($GLOBALS['Data_Int_floor'])((($GLOBALS['Data_Ring_ringNumber'])['sub'])($v_0, (($GLOBALS['Data_Semiring_semiringNumber'])['add'])((($GLOBALS['Data_Semiring_semiringNumber'])['add'])((($GLOBALS['Data_Semiring_semiringNumber'])['mul'])($hours_1_0, 3600000.0), (($GLOBALS['Data_Semiring_semiringNumber'])['mul'])($minutes_2_1, 60000.0)), (($GLOBALS['Data_Semiring_semiringNumber'])['mul'])($seconds_3_2, 1000.0))))));
+  $hours_1_0 = \Data\Number\majData_majNumber_floor(((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])->{'div'})($v_0))(3600000.0));
+  $minutes_2_1 = \Data\Number\majData_majNumber_floor(((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])->{'div'})(((($GLOBALS['Data_Ring_ringNumber'])->{'sub'})($v_0))(((($GLOBALS['Data_Semiring_semiringNumber'])->{'mul'})($hours_1_0))(3600000.0))))(60000.0));
+  $seconds_3_2 = \Data\Number\majData_majNumber_floor(((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])->{'div'})(((($GLOBALS['Data_Ring_ringNumber'])->{'sub'})($v_0))(((($GLOBALS['Data_Semiring_semiringNumber'])->{'add'})(((($GLOBALS['Data_Semiring_semiringNumber'])->{'mul'})($hours_1_0))(3600000.0)))(((($GLOBALS['Data_Semiring_semiringNumber'])->{'mul'})($minutes_2_1))(60000.0)))))(1000.0));
+  $__local_var_4_3 = ((($GLOBALS['Data_Maybe_applyMaybe'])->{'apply'})(((($GLOBALS['Data_Maybe_applyMaybe'])->{'apply'})(((($GLOBALS['Data_Maybe_applyMaybe'])->{'apply'})(((($GLOBALS['Data_Maybe_functorMaybe'])->{'map'})($GLOBALS['Data_Time_Time']))((($GLOBALS['Data_Time_Component_boundedEnumHour'])->{'toEnum'})(\Data\Int\majData_majInt_floor($hours_1_0)))))((($GLOBALS['Data_Time_Component_boundedEnumMinute'])->{'toEnum'})(\Data\Int\majData_majInt_floor($minutes_2_1)))))((($GLOBALS['Data_Time_Component_boundedEnumSecond'])->{'toEnum'})(\Data\Int\majData_majInt_floor($seconds_3_2)))))((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'])->{'toEnum'})(\Data\Int\majData_majInt_floor(((($GLOBALS['Data_Ring_ringNumber'])->{'sub'})($v_0))(((($GLOBALS['Data_Semiring_semiringNumber'])->{'add'})(((($GLOBALS['Data_Semiring_semiringNumber'])->{'add'})(((($GLOBALS['Data_Semiring_semiringNumber'])->{'mul'})($hours_1_0))(3600000.0)))(((($GLOBALS['Data_Semiring_semiringNumber'])->{'mul'})($minutes_2_1))(60000.0))))(((($GLOBALS['Data_Semiring_semiringNumber'])->{'mul'})($seconds_3_2))(1000.0))))));
   $__t4 = null;;
   if ($__local_var_4_3 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__t4 = ($__local_var_4_3)->{'value0'};
@@ -284,7 +284,7 @@ goto end_branch_4;;
 $GLOBALS['Data_Time_millisToTime'] = __NAMESPACE__ . '\\majData_majTime_millismajTomajTime';
 
 // Data_Time_hour
-function majData_majTime_hour($v_0) {
+function majData_majTime_hour($v_0): int|\Closure {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majTime_hour';
   if ($__num < 1) {
@@ -298,13 +298,13 @@ function majData_majTime_hour($v_0) {
 $GLOBALS['Data_Time_hour'] = __NAMESPACE__ . '\\majData_majTime_hour';
 
 // Data_Time_timeToMillis
-function majData_majTime_timemajTomajMillis($t_0) {
+function majData_majTime_timemajTomajMillis($t_0): float|\Closure {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majTime_timemajTomajMillis';
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($GLOBALS['Data_Semiring_semiringNumber'])['add'])((($GLOBALS['Data_Semiring_semiringNumber'])['add'])((($GLOBALS['Data_Semiring_semiringNumber'])['add'])((($GLOBALS['Data_Semiring_semiringNumber'])['mul'])(3600000.0, ($GLOBALS['Data_Int_toNumber'])((($GLOBALS['Data_Time_Component_boundedEnumHour'])['fromEnum'])(($t_0)->{'value0'}))), (($GLOBALS['Data_Semiring_semiringNumber'])['mul'])(60000.0, ($GLOBALS['Data_Int_toNumber'])((($GLOBALS['Data_Time_Component_boundedEnumMinute'])['fromEnum'])(($t_0)->{'value1'})))), (($GLOBALS['Data_Semiring_semiringNumber'])['mul'])(1000.0, ($GLOBALS['Data_Int_toNumber'])((($GLOBALS['Data_Time_Component_boundedEnumSecond'])['fromEnum'])(($t_0)->{'value2'})))), ($GLOBALS['Data_Int_toNumber'])((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'])['fromEnum'])(($t_0)->{'value3'})));
+  $__res = ((($GLOBALS['Data_Semiring_semiringNumber'])->{'add'})(((($GLOBALS['Data_Semiring_semiringNumber'])->{'add'})(((($GLOBALS['Data_Semiring_semiringNumber'])->{'add'})(((($GLOBALS['Data_Semiring_semiringNumber'])->{'mul'})(3600000.0))(\Data\Int\majData_majInt_tomajNumber((($GLOBALS['Data_Time_Component_boundedEnumHour'])->{'fromEnum'})(($t_0)->{'value0'})))))(((($GLOBALS['Data_Semiring_semiringNumber'])->{'mul'})(60000.0))(\Data\Int\majData_majInt_tomajNumber((($GLOBALS['Data_Time_Component_boundedEnumMinute'])->{'fromEnum'})(($t_0)->{'value1'}))))))(((($GLOBALS['Data_Semiring_semiringNumber'])->{'mul'})(1000.0))(\Data\Int\majData_majInt_tomajNumber((($GLOBALS['Data_Time_Component_boundedEnumSecond'])->{'fromEnum'})(($t_0)->{'value2'}))))))(\Data\Int\majData_majInt_tomajNumber((($GLOBALS['Data_Time_Component_boundedEnumMillisecond'])->{'fromEnum'})(($t_0)->{'value3'})));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -312,13 +312,13 @@ function majData_majTime_timemajTomajMillis($t_0) {
 $GLOBALS['Data_Time_timeToMillis'] = __NAMESPACE__ . '\\majData_majTime_timemajTomajMillis';
 
 // Data_Time_eqTime
-$GLOBALS['Data_Time_eqTime'] = ["eq" => (function() {
+$GLOBALS['Data_Time_eqTime'] = (object)["eq" => (function() {
   $__fn = function($x_0, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($GLOBALS['Data_Time_Component_eqHour'])['eq'])(($x_0)->{'value0'}, ($y_1)->{'value0'}), (($GLOBALS['Data_Time_Component_eqMinute'])['eq'])(($x_0)->{'value1'}, ($y_1)->{'value1'})), (($GLOBALS['Data_Time_Component_eqSecond'])['eq'])(($x_0)->{'value2'}, ($y_1)->{'value2'})), (($GLOBALS['Data_Time_Component_eqMillisecond'])['eq'])(($x_0)->{'value3'}, ($y_1)->{'value3'}));
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($GLOBALS['Data_Time_Component_eqHour'])->{'eq'})(($x_0)->{'value0'}))(($y_1)->{'value0'})))(((($GLOBALS['Data_Time_Component_eqMinute'])->{'eq'})(($x_0)->{'value1'}))(($y_1)->{'value1'}))))(((($GLOBALS['Data_Time_Component_eqSecond'])->{'eq'})(($x_0)->{'value2'}))(($y_1)->{'value2'}))))(((($GLOBALS['Data_Time_Component_eqMillisecond'])->{'eq'})(($x_0)->{'value3'}))(($y_1)->{'value3'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -327,13 +327,13 @@ $GLOBALS['Data_Time_eqTime'] = ["eq" => (function() {
 })()];
 
 // Data_Time_ordTime
-$GLOBALS['Data_Time_ordTime'] = ["compare" => (function() {
+$GLOBALS['Data_Time_ordTime'] = (object)["compare" => (function() {
   $__fn = function($x_0, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v_2_0 = (($GLOBALS['Data_Time_Component_ordHour'])['compare'])(($x_0)->{'value0'}, ($y_1)->{'value0'});
+  $v_2_0 = ((($GLOBALS['Data_Time_Component_ordHour'])->{'compare'})(($x_0)->{'value0'}))(($y_1)->{'value0'});
   $__t5 = null;;
   if ($v_2_0 instanceof \Data\Ordering\Data_Ordering_LT) {
 $__t5 = new \Data\Ordering\Data_Ordering_LT();
@@ -343,7 +343,7 @@ goto end_branch_5;;
 $__t5 = new \Data\Ordering\Data_Ordering_GT();
 goto end_branch_5;;
 };
-  $v1_3_1 = (($GLOBALS['Data_Time_Component_ordMinute'])['compare'])(($x_0)->{'value1'}, ($y_1)->{'value1'});
+  $v1_3_1 = ((($GLOBALS['Data_Time_Component_ordMinute'])->{'compare'})(($x_0)->{'value1'}))(($y_1)->{'value1'});
   $__t4 = null;;
   if ($v1_3_1 instanceof \Data\Ordering\Data_Ordering_LT) {
 $__t4 = new \Data\Ordering\Data_Ordering_LT();
@@ -353,7 +353,7 @@ goto end_branch_4;;
 $__t4 = new \Data\Ordering\Data_Ordering_GT();
 goto end_branch_4;;
 };
-  $v2_4_2 = (($GLOBALS['Data_Time_Component_ordSecond'])['compare'])(($x_0)->{'value2'}, ($y_1)->{'value2'});
+  $v2_4_2 = ((($GLOBALS['Data_Time_Component_ordSecond'])->{'compare'})(($x_0)->{'value2'}))(($y_1)->{'value2'});
   $__t3 = null;;
   if ($v2_4_2 instanceof \Data\Ordering\Data_Ordering_LT) {
 $__t3 = new \Data\Ordering\Data_Ordering_LT();
@@ -363,7 +363,7 @@ goto end_branch_3;;
 $__t3 = new \Data\Ordering\Data_Ordering_GT();
 goto end_branch_3;;
 };
-  $__t3 = (($GLOBALS['Data_Time_Component_ordMillisecond'])['compare'])(($x_0)->{'value3'}, ($y_1)->{'value3'});
+  $__t3 = ((($GLOBALS['Data_Time_Component_ordMillisecond'])->{'compare'})(($x_0)->{'value3'}))(($y_1)->{'value3'});
   end_branch_3:;
   $__t4 = $__t3;
   end_branch_4:;
@@ -390,7 +390,7 @@ function majData_majTime_diff($dictDuration_0, $t1_1 = null, $t2_2 = null) {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictDuration_0)['toDuration'])((($GLOBALS['Data_Time_Duration_semigroupMilliseconds'])['append'])(($GLOBALS['Data_Time_timeToMillis'])($t1_1), ($GLOBALS['Data_Time_negateDuration'])(($GLOBALS['Data_Time_timeToMillis'])($t2_2))));
+  $__res = (($dictDuration_0)->{'toDuration'})(((($GLOBALS['Data_Time_Duration_semigroupMilliseconds'])->{'append'})(\Data\Time\majData_majTime_timemajTomajMillis($t1_1)))(($GLOBALS['Data_Time_negateDuration'])(\Data\Time\majData_majTime_timemajTomajMillis($t2_2))));
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -398,7 +398,7 @@ function majData_majTime_diff($dictDuration_0, $t1_1 = null, $t2_2 = null) {
 $GLOBALS['Data_Time_diff'] = __NAMESPACE__ . '\\majData_majTime_diff';
 
 // Data_Time_boundedTime
-$GLOBALS['Data_Time_boundedTime'] = ["bottom" => new \Data\Time\Data_Time_Time(($GLOBALS['Data_Time_Component_boundedHour'])['bottom'], ($GLOBALS['Data_Time_Component_boundedMinute'])['bottom'], ($GLOBALS['Data_Time_Component_boundedSecond'])['bottom'], ($GLOBALS['Data_Time_Component_boundedMillisecond'])['bottom']), "top" => new \Data\Time\Data_Time_Time(($GLOBALS['Data_Time_Component_boundedHour'])['top'], ($GLOBALS['Data_Time_Component_boundedMinute'])['top'], ($GLOBALS['Data_Time_Component_boundedSecond'])['top'], ($GLOBALS['Data_Time_Component_boundedMillisecond'])['top']), "Ord0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Time_boundedTime'] = (object)["bottom" => new \Data\Time\Data_Time_Time(($GLOBALS['Data_Time_Component_boundedHour'])->{'bottom'}, ($GLOBALS['Data_Time_Component_boundedMinute'])->{'bottom'}, ($GLOBALS['Data_Time_Component_boundedSecond'])->{'bottom'}, ($GLOBALS['Data_Time_Component_boundedMillisecond'])->{'bottom'}), "top" => new \Data\Time\Data_Time_Time(($GLOBALS['Data_Time_Component_boundedHour'])->{'top'}, ($GLOBALS['Data_Time_Component_boundedMinute'])->{'top'}, ($GLOBALS['Data_Time_Component_boundedSecond'])->{'top'}, ($GLOBALS['Data_Time_Component_boundedMillisecond'])->{'top'}), "Ord0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Time_ordTime'];
   goto __end;;
@@ -407,10 +407,10 @@ $GLOBALS['Data_Time_boundedTime'] = ["bottom" => new \Data\Time\Data_Time_Time((
 }];
 
 // Data_Time_maxTime
-$GLOBALS['Data_Time_maxTime'] = ($GLOBALS['Data_Time_timeToMillis'])(($GLOBALS['Data_Time_boundedTime'])['top']);
+$GLOBALS['Data_Time_maxTime'] = \Data\Time\majData_majTime_timemajTomajMillis(($GLOBALS['Data_Time_boundedTime'])->{'top'});
 
 // Data_Time_minTime
-$GLOBALS['Data_Time_minTime'] = ($GLOBALS['Data_Time_timeToMillis'])(($GLOBALS['Data_Time_boundedTime'])['bottom']);
+$GLOBALS['Data_Time_minTime'] = \Data\Time\majData_majTime_timemajTomajMillis(($GLOBALS['Data_Time_boundedTime'])->{'bottom'});
 
 // Data_Time_adjust
 function majData_majTime_adjust($dictDuration_0, $d_1 = null, $t_2 = null) {
@@ -419,9 +419,9 @@ function majData_majTime_adjust($dictDuration_0, $d_1 = null, $t_2 = null) {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $d_prime_3_0 = (($dictDuration_0)['fromDuration'])($d_1);
-  $wholeDays_4_1 = ($GLOBALS['Data_Number_floor'])((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])['div'])($d_prime_3_0, 86400000.0));
-  $msAdjusted_5_2 = (($GLOBALS['Data_Time_Duration_semigroupMilliseconds'])['append'])(($GLOBALS['Data_Time_timeToMillis'])($t_2), (($GLOBALS['Data_Time_Duration_semigroupMilliseconds'])['append'])($d_prime_3_0, ($GLOBALS['Data_Time_negateDuration'])((($GLOBALS['Data_Time_Duration_durationDays'])['fromDuration'])($wholeDays_4_1))));
+  $d_prime_3_0 = (($dictDuration_0)->{'fromDuration'})($d_1);
+  $wholeDays_4_1 = \Data\Number\majData_majNumber_floor(((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])->{'div'})($d_prime_3_0))(86400000.0));
+  $msAdjusted_5_2 = ((($GLOBALS['Data_Time_Duration_semigroupMilliseconds'])->{'append'})(\Data\Time\majData_majTime_timemajTomajMillis($t_2)))(((($GLOBALS['Data_Time_Duration_semigroupMilliseconds'])->{'append'})($d_prime_3_0))(($GLOBALS['Data_Time_negateDuration'])((($GLOBALS['Data_Time_Duration_durationDays'])->{'fromDuration'})($wholeDays_4_1))));
   $__t3 = null;;
   if (($msAdjusted_5_2 > $GLOBALS['Data_Time_maxTime'])) {
 $__t3 = 1.0;
@@ -434,7 +434,7 @@ goto end_branch_3;;
   $__t3 = 0.0;
   end_branch_3:;
   $wrap_6_3 = $__t3;
-  $__res = new \Data\Tuple\Data_Tuple_Tuple((($GLOBALS['Data_Time_Duration_semigroupDays'])['append'])($wholeDays_4_1, $wrap_6_3), ($GLOBALS['Data_Time_millisToTime'])((($GLOBALS['Data_Time_Duration_semigroupMilliseconds'])['append'])($msAdjusted_5_2, (($GLOBALS['Data_Semiring_semiringNumber'])['mul'])(86400000.0, ($GLOBALS['Data_Time_negate'])($wrap_6_3)))));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(((($GLOBALS['Data_Time_Duration_semigroupDays'])->{'append'})($wholeDays_4_1))($wrap_6_3), \Data\Time\majData_majTime_millismajTomajTime(((($GLOBALS['Data_Time_Duration_semigroupMilliseconds'])->{'append'})($msAdjusted_5_2))(((($GLOBALS['Data_Semiring_semiringNumber'])->{'mul'})(86400000.0))(($GLOBALS['Data_Time_negate'])($wrap_6_3)))));
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;

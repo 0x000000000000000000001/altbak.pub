@@ -103,19 +103,19 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Control_Comonad_Traced_traced_closure
-$GLOBALS['Control_Comonad_Traced_traced_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Comonad_Traced_Trans_TracedT'], $GLOBALS['Data_Identity_Identity']);
+$GLOBALS['Control_Comonad_Traced_traced_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Comonad_Traced_Trans_TracedT']))($GLOBALS['Data_Identity_Identity']);
 
 // Control_Comonad_Traced_traced
-function majControl_majComonad_majTraced_traced($v_0) {
+function majControl_majComonad_majTraced_traced($v_0, $v_1 = null) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majControl_majComonad_majTraced_traced';
-  if ($__num < 1) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Comonad_Traced_traced_closure'])($v_0);
+  $__res = ($GLOBALS['Control_Comonad_Traced_traced_closure'])($v_0, $v_1);
   goto __end;;
   __end:
-  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
 }
 $GLOBALS['Control_Comonad_Traced_traced'] = __NAMESPACE__ . '\\majControl_majComonad_majTraced_traced';
 

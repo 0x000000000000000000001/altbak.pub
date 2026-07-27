@@ -105,7 +105,7 @@ function majControl_majMonad_majCont_majClass_callmajCmajC($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['callCC'];
+  $__res = ($dict_0)->{'callCC'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

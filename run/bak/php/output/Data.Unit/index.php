@@ -101,7 +101,7 @@ $exports['unit'] = $unit;
 return $exports;
   return $exports;
 });
-$GLOBALS['Data_Unit_unit'] = $ffi_Data_Unit['unit'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Unit_unit'] = ($ffi_Data_Unit['unit'] ?? new class { public function __invoke(...$args) { return $this; } });
 
 
 

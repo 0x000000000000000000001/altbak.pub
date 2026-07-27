@@ -100,7 +100,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Data_Monoid_Generic_genericMonoidNoArguments
-$GLOBALS['Data_Monoid_Generic_genericMonoidNoArguments'] = ["genericMempty__prime__" => new \Data\Generic\Rep\Data_Generic_Rep_NoArguments()];
+$GLOBALS['Data_Monoid_Generic_genericMonoidNoArguments'] = (object)["genericMempty__prime__" => new \Data\Generic\Rep\Data_Generic_Rep_NoArguments()];
 
 // Data_Monoid_Generic_genericMonoidArgument
 function majData_majMonoid_majGeneric_genericmajMonoidmajArgument($dictMonoid_0) {
@@ -109,7 +109,7 @@ function majData_majMonoid_majGeneric_genericmajMonoidmajArgument($dictMonoid_0)
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["genericMempty__prime__" => ($dictMonoid_0)['mempty']];
+  $__res = (object)["genericMempty__prime__" => ($dictMonoid_0)->{'mempty'}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -123,7 +123,7 @@ function majData_majMonoid_majGeneric_genericmajMempty__prime__($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['genericMempty__prime__'];
+  $__res = ($dict_0)->{'genericMempty__prime__'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -137,7 +137,7 @@ function majData_majMonoid_majGeneric_genericmajMonoidmajConstructor($dictGeneri
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["genericMempty__prime__" => ($dictGenericMonoid_0)['genericMempty__prime__']];
+  $__res = (object)["genericMempty__prime__" => ($dictGenericMonoid_0)->{'genericMempty__prime__'}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -151,10 +151,10 @@ function majData_majMonoid_majGeneric_genericmajMonoidmajProduct($dictGenericMon
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $genericMempty_prime1_1_0 = ($dictGenericMonoid_0)['genericMempty__prime__'];
+  $genericMempty_prime1_1_0 = ($dictGenericMonoid_0)->{'genericMempty__prime__'};
   $__res = function($dictGenericMonoid1_2) use ($genericMempty_prime1_1_0) {
   $__num = \func_num_args();
-  $__res = ["genericMempty__prime__" => new \Data\Generic\Rep\Data_Generic_Rep_Product($genericMempty_prime1_1_0, ($dictGenericMonoid1_2)['genericMempty__prime__'])];
+  $__res = (object)["genericMempty__prime__" => new \Data\Generic\Rep\Data_Generic_Rep_Product($genericMempty_prime1_1_0, ($dictGenericMonoid1_2)->{'genericMempty__prime__'})];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -172,7 +172,7 @@ function majData_majMonoid_majGeneric_genericmajMempty($dictGeneric_0, $dictGene
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictGeneric_0)['to'])(($dictGenericMonoid_1)['genericMempty__prime__']);
+  $__res = (($dictGeneric_0)->{'to'})(($dictGenericMonoid_1)->{'genericMempty__prime__'});
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

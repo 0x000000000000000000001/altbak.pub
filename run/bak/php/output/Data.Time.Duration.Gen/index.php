@@ -108,7 +108,7 @@ function majData_majTime_majDuration_majGen_genmajSeconds($dictMonadGen_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (((((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Time_Duration_Seconds'], (($dictMonadGen_0)['chooseFloat'])(0.0, 600.0));
+  $__res = ((((((((((($dictMonadGen_0)->{'Monad0'})(null))->{'Bind1'})(null))->{'Apply0'})(null))->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Time_Duration_Seconds']))(((($dictMonadGen_0)->{'chooseFloat'})(0.0))(600.0));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -122,7 +122,7 @@ function majData_majTime_majDuration_majGen_genmajMinutes($dictMonadGen_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (((((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Time_Duration_Minutes'], (($dictMonadGen_0)['chooseFloat'])(0.0, 600.0));
+  $__res = ((((((((((($dictMonadGen_0)->{'Monad0'})(null))->{'Bind1'})(null))->{'Apply0'})(null))->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Time_Duration_Minutes']))(((($dictMonadGen_0)->{'chooseFloat'})(0.0))(600.0));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -136,7 +136,7 @@ function majData_majTime_majDuration_majGen_genmajMilliseconds($dictMonadGen_0) 
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (((((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Time_Duration_Milliseconds'], (($dictMonadGen_0)['chooseFloat'])(0.0, 600000.0));
+  $__res = ((((((((((($dictMonadGen_0)->{'Monad0'})(null))->{'Bind1'})(null))->{'Apply0'})(null))->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Time_Duration_Milliseconds']))(((($dictMonadGen_0)->{'chooseFloat'})(0.0))(600000.0));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -150,7 +150,7 @@ function majData_majTime_majDuration_majGen_genmajHours($dictMonadGen_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (((((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Time_Duration_Hours'], (($dictMonadGen_0)['chooseFloat'])(0.0, 240.0));
+  $__res = ((((((((((($dictMonadGen_0)->{'Monad0'})(null))->{'Bind1'})(null))->{'Apply0'})(null))->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Time_Duration_Hours']))(((($dictMonadGen_0)->{'chooseFloat'})(0.0))(240.0));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -164,7 +164,7 @@ function majData_majTime_majDuration_majGen_genmajDays($dictMonadGen_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (((((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_Time_Duration_Days'], (($dictMonadGen_0)['chooseFloat'])(0.0, 42.0));
+  $__res = ((((((((((($dictMonadGen_0)->{'Monad0'})(null))->{'Bind1'})(null))->{'Apply0'})(null))->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Time_Duration_Days']))(((($dictMonadGen_0)->{'chooseFloat'})(0.0))(42.0));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

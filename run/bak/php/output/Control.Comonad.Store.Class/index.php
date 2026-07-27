@@ -115,7 +115,7 @@ function majControl_majComonad_majStore_majClass_pos($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['pos'];
+  $__res = ($dict_0)->{'pos'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -129,7 +129,7 @@ function majControl_majComonad_majStore_majClass_peek($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['peek'];
+  $__res = ($dict_0)->{'peek'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -143,7 +143,7 @@ function majControl_majComonad_majStore_majClass_peeks($dictComonadStore_0, $f_1
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictComonadStore_0)['peek'])(($f_1)((($dictComonadStore_0)['pos'])($x_2)), $x_2);
+  $__res = ((($dictComonadStore_0)->{'peek'})(($f_1)((($dictComonadStore_0)->{'pos'})($x_2))))($x_2);
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -157,16 +157,16 @@ function majControl_majComonad_majStore_majClass_seeks($dictComonadStore_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $duplicate_1_0 = (((((($dictComonadStore_0)['Comonad0'])(null))['Extend0'])(null))['extend'])($GLOBALS['Control_Extend_identity']);
+  $duplicate_1_0 = (((((($dictComonadStore_0)->{'Comonad0'})(null))->{'Extend0'})(null))->{'extend'})($GLOBALS['Control_Extend_identity']);
   $__res = function($f_2) use ($dictComonadStore_0, $duplicate_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(function($x_3) use ($dictComonadStore_0, $f_2) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($x_3) use ($dictComonadStore_0, $f_2) {
   $__num = \func_num_args();
-  $__res = (($dictComonadStore_0)['peek'])(($f_2)((($dictComonadStore_0)['pos'])($x_3)), $x_3);
+  $__res = ((($dictComonadStore_0)->{'peek'})(($f_2)((($dictComonadStore_0)->{'pos'})($x_3))))($x_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, $duplicate_1_0);
+}))($duplicate_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -184,10 +184,10 @@ function majControl_majComonad_majStore_majClass_seek($dictComonadStore_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $duplicate_1_0 = (((((($dictComonadStore_0)['Comonad0'])(null))['Extend0'])(null))['extend'])($GLOBALS['Control_Extend_identity']);
+  $duplicate_1_0 = (((((($dictComonadStore_0)->{'Comonad0'})(null))->{'Extend0'})(null))->{'extend'})($GLOBALS['Control_Extend_identity']);
   $__res = function($s_2) use ($dictComonadStore_0, $duplicate_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictComonadStore_0)['peek'])($s_2), $duplicate_1_0);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictComonadStore_0)->{'peek'})($s_2)))($duplicate_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -205,13 +205,13 @@ function majControl_majComonad_majStore_majClass_experiment($dictComonadStore_0,
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($dictFunctor_1)['map'])(function($a_4) use ($dictComonadStore_0, $x_3) {
+  $__res = ((($dictFunctor_1)->{'map'})(function($a_4) use ($dictComonadStore_0, $x_3) {
   $__num = \func_num_args();
-  $__res = (($dictComonadStore_0)['peek'])($a_4, $x_3);
+  $__res = ((($dictComonadStore_0)->{'peek'})($a_4))($x_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, ($f_2)((($dictComonadStore_0)['pos'])($x_3)));
+}))(($f_2)((($dictComonadStore_0)->{'pos'})($x_3)));
   goto __end;;
   __end:
   return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -225,29 +225,29 @@ function majControl_majComonad_majStore_majClass_comonadmajStoremajTracedmajT($d
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $pos1_1_0 = ($dictComonadStore_0)['pos'];
-  $Comonad0_2_1 = (($dictComonadStore_0)['Comonad0'])(null);
+  $pos1_1_0 = ($dictComonadStore_0)->{'pos'};
+  $Comonad0_2_1 = (($dictComonadStore_0)->{'Comonad0'})(null);
   $comonadTracedT_3_2 = ($GLOBALS['Control_Comonad_Traced_Trans_comonadTracedT'])($Comonad0_2_1);
   $__res = function($dictMonoid_4) use ($Comonad0_2_1, $comonadTracedT_3_2, $dictComonadStore_0, $pos1_1_0) {
   $__num = \func_num_args();
-  $mempty_5_3 = ($dictMonoid_4)['mempty'];
+  $mempty_5_3 = ($dictMonoid_4)->{'mempty'};
   $lower1_6_4 = function($v_6) use ($Comonad0_2_1, $mempty_5_3) {
   $__num = \func_num_args();
-  $__res = (((((($Comonad0_2_1)['Extend0'])(null))['Functor0'])(null))['map'])(function($f_7) use ($mempty_5_3) {
+  $__res = ((((((($Comonad0_2_1)->{'Extend0'})(null))->{'Functor0'})(null))->{'map'})(function($f_7) use ($mempty_5_3) {
   $__num = \func_num_args();
   $__res = ($f_7)($mempty_5_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, $v_6);
+}))($v_6);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
   $comonadTracedT1_7_5 = ($comonadTracedT_3_2)($dictMonoid_4);
-  $__res = ["pos" => ($GLOBALS['Control_Semigroupoid_composeImpl'])($pos1_1_0, $lower1_6_4), "peek" => function($s_8) use ($dictComonadStore_0, $lower1_6_4) {
+  $__res = (object)["pos" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($pos1_1_0))($lower1_6_4), "peek" => function($s_8) use ($dictComonadStore_0, $lower1_6_4) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictComonadStore_0)['peek'])($s_8), $lower1_6_4);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictComonadStore_0)->{'peek'})($s_8)))($lower1_6_4);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -275,8 +275,8 @@ function majControl_majComonad_majStore_majClass_comonadmajStoremajStoremajT($di
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $comonadStoreT_1_0 = ($GLOBALS['Control_Comonad_Store_Trans_comonadStoreT'])($dictComonad_0);
-  $__res = ["pos" => function($v_2) {
+  $comonadStoreT_1_0 = \Control\Comonad\Store\Trans\majControl_majComonad_majStore_majTrans_comonadmajStoremajT($dictComonad_0);
+  $__res = (object)["pos" => function($v_2) {
   $__num = \func_num_args();
   $__res = ($v_2)->{'value1'};
   goto __end;;
@@ -288,7 +288,7 @@ function majControl_majComonad_majStore_majClass_comonadmajStoremajStoremajT($di
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictComonad_0)['extract'])(($v_3)->{'value0'}, $s_2);
+  $__res = ((($dictComonad_0)->{'extract'})(($v_3)->{'value0'}))($s_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -314,12 +314,12 @@ function majControl_majComonad_majStore_majClass_comonadmajStoremajEnvmajT($dict
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $Comonad0_1_0 = (($dictComonadStore_0)['Comonad0'])(null);
-  $lower1_2_1 = (($GLOBALS['Control_Comonad_Env_Trans_comonadTransEnvT'])['lower'])($Comonad0_1_0);
-  $comonadEnvT_3_2 = ($GLOBALS['Control_Comonad_Env_Trans_comonadEnvT'])($Comonad0_1_0);
-  $__res = ["pos" => ($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictComonadStore_0)['pos'], $lower1_2_1), "peek" => function($s_4) use ($dictComonadStore_0, $lower1_2_1) {
+  $Comonad0_1_0 = (($dictComonadStore_0)->{'Comonad0'})(null);
+  $lower1_2_1 = (($GLOBALS['Control_Comonad_Env_Trans_comonadTransEnvT'])->{'lower'})($Comonad0_1_0);
+  $comonadEnvT_3_2 = \Control\Comonad\Env\Trans\majControl_majComonad_majEnv_majTrans_comonadmajEnvmajT($Comonad0_1_0);
+  $__res = (object)["pos" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictComonadStore_0)->{'pos'}))($lower1_2_1), "peek" => function($s_4) use ($dictComonadStore_0, $lower1_2_1) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictComonadStore_0)['peek'])($s_4), $lower1_2_1);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictComonadStore_0)->{'peek'})($s_4)))($lower1_2_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

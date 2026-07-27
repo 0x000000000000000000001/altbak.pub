@@ -574,32 +574,153 @@ $exports['_parAffAlt'] = $_parAffAlt;
 return $exports;
   return $exports;
 });
-$GLOBALS['Effect_Aff__bind'] = $ffi_Effect_Aff['_bind'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Aff__catchError'] = $ffi_Effect_Aff['_catchError'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Aff__delay'] = $ffi_Effect_Aff['_delay'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Aff__fork'] = $ffi_Effect_Aff['_fork'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Aff__killAll'] = $ffi_Effect_Aff['_killAll'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Aff__liftEffect'] = $ffi_Effect_Aff['_liftEffect'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Aff__makeAff'] = $ffi_Effect_Aff['_makeAff'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Aff__makeFiber'] = $ffi_Effect_Aff['_makeFiber'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Aff__makeSupervisedFiber'] = $ffi_Effect_Aff['_makeSupervisedFiber'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Aff__map'] = $ffi_Effect_Aff['_map'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Aff__parAffAlt'] = $ffi_Effect_Aff['_parAffAlt'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Aff__parAffApply'] = $ffi_Effect_Aff['_parAffApply'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Aff__parAffMap'] = $ffi_Effect_Aff['_parAffMap'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Aff__pure'] = $ffi_Effect_Aff['_pure'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Aff__sequential'] = $ffi_Effect_Aff['_sequential'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Aff__throwError'] = $ffi_Effect_Aff['_throwError'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Aff_generalBracket'] = $ffi_Effect_Aff['generalBracket'] ?? new class { public function __invoke(...$args) { return $this; } };
+function majEffect_majAff__bind($v0, $v1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_majAff__bind';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Effect_Aff;
+  $f = ($ffi_Effect_Aff['_bind'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Effect_Aff__bind'] = __NAMESPACE__ . '\\majEffect_majAff__bind';
+
+function majEffect_majAff__catchmajError($v0, $v1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_majAff__catchmajError';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Effect_Aff;
+  $f = ($ffi_Effect_Aff['_catchError'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Effect_Aff__catchError'] = __NAMESPACE__ . '\\majEffect_majAff__catchmajError';
+
+$GLOBALS['Effect_Aff__delay'] = ($ffi_Effect_Aff['_delay'] ?? new class { public function __invoke(...$args) { return $this; } });
+function majEffect_majAff__fork(bool $v0, $v1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_majAff__fork';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Effect_Aff;
+  $f = ($ffi_Effect_Aff['_fork'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Effect_Aff__fork'] = __NAMESPACE__ . '\\majEffect_majAff__fork';
+
+$GLOBALS['Effect_Aff__killAll'] = ($ffi_Effect_Aff['_killAll'] ?? new class { public function __invoke(...$args) { return $this; } });
+function majEffect_majAff__liftmajEffect($v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_majAff__liftmajEffect';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Effect_Aff;
+  $f = ($ffi_Effect_Aff['_liftEffect'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Effect_Aff__liftEffect'] = __NAMESPACE__ . '\\majEffect_majAff__liftmajEffect';
+
+$GLOBALS['Effect_Aff__makeAff'] = ($ffi_Effect_Aff['_makeAff'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Effect_Aff__makeFiber'] = ($ffi_Effect_Aff['_makeFiber'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Effect_Aff__makeSupervisedFiber'] = ($ffi_Effect_Aff['_makeSupervisedFiber'] ?? new class { public function __invoke(...$args) { return $this; } });
+function majEffect_majAff__map($v0, $v1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_majAff__map';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Effect_Aff;
+  $f = ($ffi_Effect_Aff['_map'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Effect_Aff__map'] = __NAMESPACE__ . '\\majEffect_majAff__map';
+
+function majEffect_majAff__parmajAffmajAlt($v0, $v1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_majAff__parmajAffmajAlt';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Effect_Aff;
+  $f = ($ffi_Effect_Aff['_parAffAlt'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Effect_Aff__parAffAlt'] = __NAMESPACE__ . '\\majEffect_majAff__parmajAffmajAlt';
+
+function majEffect_majAff__parmajAffmajApply($v0, $v1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_majAff__parmajAffmajApply';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Effect_Aff;
+  $f = ($ffi_Effect_Aff['_parAffApply'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Effect_Aff__parAffApply'] = __NAMESPACE__ . '\\majEffect_majAff__parmajAffmajApply';
+
+function majEffect_majAff__parmajAffmajMap($v0, $v1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_majAff__parmajAffmajMap';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Effect_Aff;
+  $f = ($ffi_Effect_Aff['_parAffMap'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Effect_Aff__parAffMap'] = __NAMESPACE__ . '\\majEffect_majAff__parmajAffmajMap';
+
+function majEffect_majAff__pure($v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_majAff__pure';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Effect_Aff;
+  $f = ($ffi_Effect_Aff['_pure'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Effect_Aff__pure'] = __NAMESPACE__ . '\\majEffect_majAff__pure';
+
+$GLOBALS['Effect_Aff__sequential'] = ($ffi_Effect_Aff['_sequential'] ?? new class { public function __invoke(...$args) { return $this; } });
+function majEffect_majAff__throwmajError($v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_majAff__throwmajError';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Effect_Aff;
+  $f = ($ffi_Effect_Aff['_throwError'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Effect_Aff__throwError'] = __NAMESPACE__ . '\\majEffect_majAff__throwmajError';
+
+function majEffect_majAff_generalmajBracket($v0, $v1 = null, $v2 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_majAff_generalmajBracket';
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  global $ffi_Effect_Aff;
+  $f = ($ffi_Effect_Aff['generalBracket'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1, $v2);
+}
+$GLOBALS['Effect_Aff_generalBracket'] = __NAMESPACE__ . '\\majEffect_majAff_generalmajBracket';
+
 
 
 
 
 // Effect_Aff_discard
-$GLOBALS['Effect_Aff_discard'] = (($GLOBALS['Control_Bind_discardUnit'])['discard'])($GLOBALS['Effect_bindEffect']);
+$GLOBALS['Effect_Aff_discard'] = (($GLOBALS['Control_Bind_discardUnit'])->{'discard'})($GLOBALS['Effect_bindEffect']);
 
 // Effect_Aff_void_closure
-$GLOBALS['Effect_Aff_void_closure'] = (($GLOBALS['Effect_functorEffect'])['map'])(function($v_0) {
+$GLOBALS['Effect_Aff_void_closure'] = (($GLOBALS['Effect_functorEffect'])->{'map'})(function($v_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Unit_unit'];
   goto __end;;
@@ -648,7 +769,7 @@ $__t0 = ($v_0)->{'value0'};
 goto end_branch_0;;
 };
   if ($v_0 instanceof \Data\Either\Data_Either_Left) {
-$__t0 = ($GLOBALS['Partial__crashWith'])("unsafeFromRight: Left");
+$__t0 = \Partial\majPartial__crashmajWith("unsafeFromRight: Left");
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -674,7 +795,7 @@ $__t0 = ($v_0)->{'value0'};
 goto end_branch_0;;
 };
   if ($v_0 instanceof \Data\Either\Data_Either_Right) {
-$__t0 = ($GLOBALS['Partial__crashWith'])("unsafeFromLeft: Right");
+$__t0 = \Partial\majPartial__crashmajWith("unsafeFromLeft: Right");
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -705,7 +826,7 @@ function majEffect_majAff_suspendmajAff($v_0) {
 $GLOBALS['Effect_Aff_suspendAff'] = __NAMESPACE__ . '\\majEffect_majAff_suspendmajAff';
 
 // Effect_Aff_newtypeCanceler
-$GLOBALS['Effect_Aff_newtypeCanceler'] = ["Coercible0" => function($_dollar__unused_0) {
+$GLOBALS['Effect_Aff_newtypeCanceler'] = (object)["Coercible0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = null;
   goto __end;;
@@ -774,11 +895,11 @@ function majEffect_majAff_launchmajAff($aff_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Effect_Aff__makeFiber'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], $aff_0), function($fiber_1) {
+  $__res = ((($GLOBALS['Effect_bindEffect'])->{'bind'})(($GLOBALS['Effect_Aff__makeFiber'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], $aff_0)))(function($fiber_1) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff_discard'])(($fiber_1)['run'], function($_dollar__unused_2) use ($fiber_1) {
+  $__res = (($GLOBALS['Effect_Aff_discard'])(($fiber_1)->{'run'}))(function($_dollar__unused_2) use ($fiber_1) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_applicativeEffect'])['pure'])($fiber_1);
+  $__res = (($GLOBALS['Effect_applicativeEffect'])->{'pure'})($fiber_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -794,7 +915,7 @@ function majEffect_majAff_launchmajAff($aff_0) {
 $GLOBALS['Effect_Aff_launchAff'] = __NAMESPACE__ . '\\majEffect_majAff_launchmajAff';
 
 // Effect_Aff_launchAff__closure
-$GLOBALS['Effect_Aff_launchAff__closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Aff_void'], $GLOBALS['Effect_Aff_launchAff']);
+$GLOBALS['Effect_Aff_launchAff__closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Aff_void']))($GLOBALS['Effect_Aff_launchAff']);
 
 // Effect_Aff_launchAff_
 function majEffect_majAff_launchmajAff_($v_0) {
@@ -828,10 +949,10 @@ function majEffect_majAff_launchmajSuspendedmajAff($v_0) {
 $GLOBALS['Effect_Aff_launchSuspendedAff'] = __NAMESPACE__ . '\\majEffect_majAff_launchmajSuspendedmajAff';
 
 // Effect_Aff_functorParAff
-$GLOBALS['Effect_Aff_functorParAff'] = ["map" => $GLOBALS['Effect_Aff__parAffMap']];
+$GLOBALS['Effect_Aff_functorParAff'] = (object)["map" => $GLOBALS['Effect_Aff__parAffMap']];
 
 // Effect_Aff_functorAff
-$GLOBALS['Effect_Aff_functorAff'] = ["map" => $GLOBALS['Effect_Aff__map']];
+$GLOBALS['Effect_Aff_functorAff'] = (object)["map" => $GLOBALS['Effect_Aff__map']];
 
 // Effect_Aff_forkAff_closure
 $GLOBALS['Effect_Aff_forkAff_closure'] = ($GLOBALS['Effect_Aff__fork'])(true);
@@ -851,7 +972,7 @@ function majEffect_majAff_forkmajAff($v_0) {
 $GLOBALS['Effect_Aff_forkAff'] = __NAMESPACE__ . '\\majEffect_majAff_forkmajAff';
 
 // Effect_Aff_delay
-function majEffect_majAff_delay($v_0) {
+function majEffect_majAff_delay(float $v_0) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majEffect_majAff_delay';
   if ($__num < 1) {
@@ -871,7 +992,7 @@ function majEffect_majAff_bracket($acquire_0, $completed_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Effect_Aff_generalBracket'])($acquire_0, ["killed" => function($v_2) use ($completed_1) {
+  $__res = (($GLOBALS['Effect_Aff_generalBracket'])($acquire_0))((object)["killed" => function($v_2) use ($completed_1) {
   $__num = \func_num_args();
   $__res = $completed_1;
   goto __end;;
@@ -897,7 +1018,7 @@ function majEffect_majAff_bracket($acquire_0, $completed_1 = null) {
 $GLOBALS['Effect_Aff_bracket'] = __NAMESPACE__ . '\\majEffect_majAff_bracket';
 
 // Effect_Aff_applyParAff
-$GLOBALS['Effect_Aff_applyParAff'] = ["apply" => $GLOBALS['Effect_Aff__parAffApply'], "Functor0" => function($_dollar__unused_0) {
+$GLOBALS['Effect_Aff_applyParAff'] = (object)["apply" => $GLOBALS['Effect_Aff__parAffApply'], "Functor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Effect_Aff_functorParAff'];
   goto __end;;
@@ -912,7 +1033,7 @@ function majEffect_majAff_lift2($f_0, $a_1 = null, $b_2 = null) {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($GLOBALS['Effect_Aff_applyParAff'])['apply'])((((($GLOBALS['Effect_Aff_applyParAff'])['Functor0'])(null))['map'])($f_0, $a_1), $b_2);
+  $__res = ((($GLOBALS['Effect_Aff_applyParAff'])->{'apply'})(((((($GLOBALS['Effect_Aff_applyParAff'])->{'Functor0'})(null))->{'map'})($f_0))($a_1)))($b_2);
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -926,7 +1047,7 @@ function majEffect_majAff_semigroupmajParmajAff($dictSemigroup_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["append" => ($GLOBALS['Effect_Aff_lift2'])(($dictSemigroup_0)['append'])];
+  $__res = (object)["append" => ($GLOBALS['Effect_Aff_lift2'])(($dictSemigroup_0)->{'append'})];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -934,7 +1055,7 @@ function majEffect_majAff_semigroupmajParmajAff($dictSemigroup_0) {
 $GLOBALS['Effect_Aff_semigroupParAff'] = __NAMESPACE__ . '\\majEffect_majAff_semigroupmajParmajAff';
 
 // Effect_Aff_monadAff
-$GLOBALS['Effect_Aff_monadAff'] = ["Applicative0" => function($_dollar__unused_0) {
+$GLOBALS['Effect_Aff_monadAff'] = (object)["Applicative0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Effect_Aff_applicativeAff'];
   goto __end;;
@@ -949,7 +1070,7 @@ $GLOBALS['Effect_Aff_monadAff'] = ["Applicative0" => function($_dollar__unused_0
 }];
 
 // Effect_Aff_bindAff
-$GLOBALS['Effect_Aff_bindAff'] = ["bind" => $GLOBALS['Effect_Aff__bind'], "Apply0" => function($_dollar__unused_0) {
+$GLOBALS['Effect_Aff_bindAff'] = (object)["bind" => $GLOBALS['Effect_Aff__bind'], "Apply0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Effect_Aff_applyAff'];
   goto __end;;
@@ -959,18 +1080,18 @@ $GLOBALS['Effect_Aff_bindAff'] = ["bind" => $GLOBALS['Effect_Aff__bind'], "Apply
 
 // Effect_Aff_applyAff
 $GLOBALS['Effect_Aff_applyAff'] = (function() use (&$__fn) {
-$__local_var_0_0 = (($GLOBALS['Effect_Aff_monadAff'])['Bind1'])(null);
-return ["apply" => (function() use ($__local_var_0_0) {
+$__local_var_0_0 = (($GLOBALS['Effect_Aff_monadAff'])->{'Bind1'})(null);
+return (object)["apply" => (function() use ($__local_var_0_0) {
   $__fn = function($f_1, $a_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_0_0)['bind'])($f_1, function($f_prime_3) use ($__local_var_0_0, $a_2) {
+  $__res = ((($__local_var_0_0)->{'bind'})($f_1))(function($f_prime_3) use ($__local_var_0_0, $a_2) {
   $__num = \func_num_args();
-  $__res = (($__local_var_0_0)['bind'])($a_2, function($a_prime_4) use ($f_prime_3) {
+  $__res = ((($__local_var_0_0)->{'bind'})($a_2))(function($a_prime_4) use ($f_prime_3) {
   $__num = \func_num_args();
-  $__res = (((($GLOBALS['Effect_Aff_monadAff'])['Applicative0'])(null))['pure'])(($f_prime_3)($a_prime_4));
+  $__res = (((($GLOBALS['Effect_Aff_monadAff'])->{'Applicative0'})(null))->{'pure'})(($f_prime_3)($a_prime_4));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -994,7 +1115,7 @@ return ["apply" => (function() use ($__local_var_0_0) {
 })();
 
 // Effect_Aff_applicativeAff
-$GLOBALS['Effect_Aff_applicativeAff'] = ["pure" => $GLOBALS['Effect_Aff__pure'], "Apply0" => function($_dollar__unused_0) {
+$GLOBALS['Effect_Aff_applicativeAff'] = (object)["pure" => $GLOBALS['Effect_Aff__pure'], "Apply0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Effect_Aff_applyAff'];
   goto __end;;
@@ -1009,7 +1130,7 @@ function majEffect_majAff_lift21($f_0, $a_1 = null, $b_2 = null) {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($GLOBALS['Effect_Aff_applyAff'])['apply'])((((($GLOBALS['Effect_Aff_applyAff'])['Functor0'])(null))['map'])($f_0, $a_1), $b_2);
+  $__res = ((($GLOBALS['Effect_Aff_applyAff'])->{'apply'})(((((($GLOBALS['Effect_Aff_applyAff'])->{'Functor0'})(null))->{'map'})($f_0))($a_1)))($b_2);
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1023,7 +1144,7 @@ function majEffect_majAff_cancelmajWith($aff_0, $v_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Effect_Aff_generalBracket'])((($GLOBALS['Effect_Aff_applicativeAff'])['pure'])($GLOBALS['Data_Unit_unit']), ["killed" => (function() use ($v_1) {
+  $__res = \Effect\Aff\majEffect_majAff_generalmajBracket((($GLOBALS['Effect_Aff_applicativeAff'])->{'pure'})($GLOBALS['Data_Unit_unit']), (object)["killed" => (function() use ($v_1) {
   $__fn = function($e_2, $v1_3 = null) use ($v_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -1037,13 +1158,13 @@ function majEffect_majAff_cancelmajWith($aff_0, $v_1 = null) {
   return $__fn;
 })(), "failed" => function($v_2) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff_applicativeAff'])['pure'];
+  $__res = ($GLOBALS['Effect_Aff_applicativeAff'])->{'pure'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "completed" => function($v_2) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff_applicativeAff'])['pure'];
+  $__res = ($GLOBALS['Effect_Aff_applicativeAff'])->{'pure'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1067,7 +1188,7 @@ function majEffect_majAff_finally($fin_0, $a_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Effect_Aff_generalBracket'])((($GLOBALS['Effect_Aff_applicativeAff'])['pure'])($GLOBALS['Data_Unit_unit']), ["killed" => (function() use ($fin_0) {
+  $__res = \Effect\Aff\majEffect_majAff_generalmajBracket((($GLOBALS['Effect_Aff_applicativeAff'])->{'pure'})($GLOBALS['Data_Unit_unit']), (object)["killed" => (function() use ($fin_0) {
   $__fn = function($v_2, $v_3 = null) use ($fin_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -1123,8 +1244,8 @@ function majEffect_majAff_invincible($a_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($GLOBALS['Effect_Aff_applicativeAff'])['pure'])($GLOBALS['Data_Unit_unit']);
-  $__res = ($GLOBALS['Effect_Aff_generalBracket'])($a_0, ["killed" => (function() use ($__local_var_1_0) {
+  $__local_var_1_0 = (($GLOBALS['Effect_Aff_applicativeAff'])->{'pure'})($GLOBALS['Data_Unit_unit']);
+  $__res = \Effect\Aff\majEffect_majAff_generalmajBracket($a_0, (object)["killed" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2, $v_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -1160,7 +1281,7 @@ function majEffect_majAff_invincible($a_0) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()], ($GLOBALS['Effect_Aff_applicativeAff'])['pure']);
+})()], ($GLOBALS['Effect_Aff_applicativeAff'])->{'pure'});
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1168,16 +1289,16 @@ function majEffect_majAff_invincible($a_0) {
 $GLOBALS['Effect_Aff_invincible'] = __NAMESPACE__ . '\\majEffect_majAff_invincible';
 
 // Effect_Aff_lazyAff
-$GLOBALS['Effect_Aff_lazyAff'] = ["defer" => function($f_0) {
+$GLOBALS['Effect_Aff_lazyAff'] = (object)["defer" => function($f_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Aff_bindAff'])['bind'])((($GLOBALS['Effect_Aff_applicativeAff'])['pure'])($GLOBALS['Data_Unit_unit']), $f_0);
+  $__res = ((($GLOBALS['Effect_Aff_bindAff'])->{'bind'})((($GLOBALS['Effect_Aff_applicativeAff'])->{'pure'})($GLOBALS['Data_Unit_unit'])))($f_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
 
 // Effect_Aff_parallelAff
-$GLOBALS['Effect_Aff_parallelAff'] = ["parallel" => $GLOBALS['Unsafe_Coerce_unsafeCoerce'], "sequential" => $GLOBALS['Effect_Aff__sequential'], "Apply0" => function($_dollar__unused_0) {
+$GLOBALS['Effect_Aff_parallelAff'] = (object)["parallel" => $GLOBALS['Unsafe_Coerce_unsafeCoerce'], "sequential" => $GLOBALS['Effect_Aff__sequential'], "Apply0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Effect_Aff_applyAff'];
   goto __end;;
@@ -1192,7 +1313,7 @@ $GLOBALS['Effect_Aff_parallelAff'] = ["parallel" => $GLOBALS['Unsafe_Coerce_unsa
 }];
 
 // Effect_Aff_applicativeParAff
-$GLOBALS['Effect_Aff_applicativeParAff'] = ["pure" => ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Effect_Aff_parallelAff'])['parallel'], ($GLOBALS['Effect_Aff_applicativeAff'])['pure']), "Apply0" => function($_dollar__unused_0) {
+$GLOBALS['Effect_Aff_applicativeParAff'] = (object)["pure" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Effect_Aff_parallelAff'])->{'parallel'}))(($GLOBALS['Effect_Aff_applicativeAff'])->{'pure'}), "Apply0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Effect_Aff_applyParAff'];
   goto __end;;
@@ -1201,7 +1322,7 @@ $GLOBALS['Effect_Aff_applicativeParAff'] = ["pure" => ($GLOBALS['Control_Semigro
 }];
 
 // Effect_Aff_parSequence_
-$GLOBALS['Effect_Aff_parSequence_'] = ($GLOBALS['Control_Parallel_parSequence_'])($GLOBALS['Effect_Aff_parallelAff'], $GLOBALS['Effect_Aff_applicativeParAff'], $GLOBALS['Data_Foldable_foldableArray']);
+$GLOBALS['Effect_Aff_parSequence_'] = ((($GLOBALS['Control_Parallel_parSequence_'])($GLOBALS['Effect_Aff_parallelAff']))($GLOBALS['Effect_Aff_applicativeParAff']))($GLOBALS['Data_Foldable_foldableArray']);
 
 // Effect_Aff_monoidParAff
 function majEffect_majAff_monoidmajParmajAff($dictMonoid_0) {
@@ -1210,9 +1331,9 @@ function majEffect_majAff_monoidmajParmajAff($dictMonoid_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["mempty" => (($GLOBALS['Effect_Aff_applicativeParAff'])['pure'])(($dictMonoid_0)['mempty']), "Semigroup0" => function($_dollar__unused_1) use ($dictMonoid_0) {
+  $__res = (object)["mempty" => (($GLOBALS['Effect_Aff_applicativeParAff'])->{'pure'})(($dictMonoid_0)->{'mempty'}), "Semigroup0" => function($_dollar__unused_1) use ($dictMonoid_0) {
   $__num = \func_num_args();
-  $__res = ["append" => ($GLOBALS['Effect_Aff_lift2'])(((($dictMonoid_0)['Semigroup0'])(null))['append'])];
+  $__res = (object)["append" => ($GLOBALS['Effect_Aff_lift2'])(((($dictMonoid_0)->{'Semigroup0'})(null))->{'append'})];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1224,7 +1345,7 @@ function majEffect_majAff_monoidmajParmajAff($dictMonoid_0) {
 $GLOBALS['Effect_Aff_monoidParAff'] = __NAMESPACE__ . '\\majEffect_majAff_monoidmajParmajAff';
 
 // Effect_Aff_semigroupCanceler
-$GLOBALS['Effect_Aff_semigroupCanceler'] = ["append" => (function() {
+$GLOBALS['Effect_Aff_semigroupCanceler'] = (object)["append" => (function() {
   $__fn = function($v_0, $v1_1 = null, $err_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -1245,7 +1366,7 @@ function majEffect_majAff_semigroupmajAff($dictSemigroup_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["append" => ($GLOBALS['Effect_Aff_lift21'])(($dictSemigroup_0)['append'])];
+  $__res = (object)["append" => ($GLOBALS['Effect_Aff_lift21'])(($dictSemigroup_0)->{'append'})];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1253,7 +1374,7 @@ function majEffect_majAff_semigroupmajAff($dictSemigroup_0) {
 $GLOBALS['Effect_Aff_semigroupAff'] = __NAMESPACE__ . '\\majEffect_majAff_semigroupmajAff';
 
 // Effect_Aff_monadEffectAff
-$GLOBALS['Effect_Aff_monadEffectAff'] = ["liftEffect" => $GLOBALS['Effect_Aff__liftEffect'], "Monad0" => function($_dollar__unused_0) {
+$GLOBALS['Effect_Aff_monadEffectAff'] = (object)["liftEffect" => $GLOBALS['Effect_Aff__liftEffect'], "Monad0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Effect_Aff_monadAff'];
   goto __end;;
@@ -1262,19 +1383,19 @@ $GLOBALS['Effect_Aff_monadEffectAff'] = ["liftEffect" => $GLOBALS['Effect_Aff__l
 }];
 
 // Effect_Aff_effectCanceler_closure
-$GLOBALS['Effect_Aff_effectCanceler_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Aff_Canceler'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Function_const'], ($GLOBALS['Effect_Aff_monadEffectAff'])['liftEffect']));
+$GLOBALS['Effect_Aff_effectCanceler_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Aff_Canceler']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Function_const']))(($GLOBALS['Effect_Aff_monadEffectAff'])->{'liftEffect'}));
 
 // Effect_Aff_effectCanceler
-function majEffect_majAff_effectmajCanceler($v_0) {
+function majEffect_majAff_effectmajCanceler($v_0, $v_1 = null) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majEffect_majAff_effectmajCanceler';
-  if ($__num < 1) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Effect_Aff_effectCanceler_closure'])($v_0);
+  $__res = ($GLOBALS['Effect_Aff_effectCanceler_closure'])($v_0, $v_1);
   goto __end;;
   __end:
-  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
 }
 $GLOBALS['Effect_Aff_effectCanceler'] = __NAMESPACE__ . '\\majEffect_majAff_effectmajCanceler';
 
@@ -1287,7 +1408,7 @@ function majEffect_majAff_joinmajFiber($v_0) {
   }
   $__res = ($GLOBALS['Effect_Aff__makeAff'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], function($k_1) use ($v_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_functorEffect'])['map'])($GLOBALS['Effect_Aff_effectCanceler'], (($v_0)['join'])($k_1));
+  $__res = ((($GLOBALS['Effect_functorEffect'])->{'map'})($GLOBALS['Effect_Aff_effectCanceler']))((($v_0)->{'join'})($k_1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1299,13 +1420,13 @@ function majEffect_majAff_joinmajFiber($v_0) {
 $GLOBALS['Effect_Aff_joinFiber'] = __NAMESPACE__ . '\\majEffect_majAff_joinmajFiber';
 
 // Effect_Aff_functorFiber
-$GLOBALS['Effect_Aff_functorFiber'] = ["map" => (function() {
+$GLOBALS['Effect_Aff_functorFiber'] = (object)["map" => (function() {
   $__fn = function($f_0, $t_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Effect_Unsafe_unsafePerformEffect'])(($GLOBALS['Effect_Aff__makeFiber'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], (($GLOBALS['Effect_Aff_functorAff'])['map'])($f_0, ($GLOBALS['Effect_Aff_joinFiber'])($t_1))));
+  $__res = \Effect\Unsafe\majEffect_majUnsafe_unsafemajPerformmajEffect(($GLOBALS['Effect_Aff__makeFiber'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], ((($GLOBALS['Effect_Aff_functorAff'])->{'map'})($f_0))(\Effect\Aff\majEffect_majAff_joinmajFiber($t_1))));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1314,13 +1435,13 @@ $GLOBALS['Effect_Aff_functorFiber'] = ["map" => (function() {
 })()];
 
 // Effect_Aff_applyFiber
-$GLOBALS['Effect_Aff_applyFiber'] = ["apply" => (function() {
+$GLOBALS['Effect_Aff_applyFiber'] = (object)["apply" => (function() {
   $__fn = function($t1_0, $t2_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Effect_Unsafe_unsafePerformEffect'])(($GLOBALS['Effect_Aff__makeFiber'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], (($GLOBALS['Effect_Aff_applyAff'])['apply'])(($GLOBALS['Effect_Aff_joinFiber'])($t1_0), ($GLOBALS['Effect_Aff_joinFiber'])($t2_1))));
+  $__res = \Effect\Unsafe\majEffect_majUnsafe_unsafemajPerformmajEffect(($GLOBALS['Effect_Aff__makeFiber'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], ((($GLOBALS['Effect_Aff_applyAff'])->{'apply'})(\Effect\Aff\majEffect_majAff_joinmajFiber($t1_0)))(\Effect\Aff\majEffect_majAff_joinmajFiber($t2_1))));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1335,9 +1456,9 @@ $GLOBALS['Effect_Aff_applyFiber'] = ["apply" => (function() {
 }];
 
 // Effect_Aff_applicativeFiber
-$GLOBALS['Effect_Aff_applicativeFiber'] = ["pure" => function($a_0) {
+$GLOBALS['Effect_Aff_applicativeFiber'] = (object)["pure" => function($a_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Unsafe_unsafePerformEffect'])(($GLOBALS['Effect_Aff__makeFiber'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], (($GLOBALS['Effect_Aff_applicativeAff'])['pure'])($a_0)));
+  $__res = \Effect\Unsafe\majEffect_majUnsafe_unsafemajPerformmajEffect(($GLOBALS['Effect_Aff__makeFiber'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], (($GLOBALS['Effect_Aff_applicativeAff'])->{'pure'})($a_0)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1356,12 +1477,12 @@ function majEffect_majAff_killmajFiber($e_0, $v_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Effect_Aff_bindAff'])['bind'])((($GLOBALS['Effect_Aff_monadEffectAff'])['liftEffect'])(($v_1)['isSuspended']), function($suspended_2) use ($e_0, $v_1) {
+  $__res = ((($GLOBALS['Effect_Aff_bindAff'])->{'bind'})((($GLOBALS['Effect_Aff_monadEffectAff'])->{'liftEffect'})(($v_1)->{'isSuspended'})))(function($suspended_2) use ($e_0, $v_1) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ($suspended_2) {
-$__local_var_3_1 = (($GLOBALS['Effect_applicativeEffect'])['pure'])($GLOBALS['Data_Unit_unit']);
-$__t0 = (($GLOBALS['Effect_Aff_monadEffectAff'])['liftEffect'])(($GLOBALS['Effect_Aff_void'])((($v_1)['kill'])($e_0, function($v_4) use ($__local_var_3_1) {
+$__local_var_3_1 = (($GLOBALS['Effect_applicativeEffect'])->{'pure'})($GLOBALS['Data_Unit_unit']);
+$__t0 = (($GLOBALS['Effect_Aff_monadEffectAff'])->{'liftEffect'})(\Effect\Aff\majEffect_majAff_void((($v_1)->{'kill'})($e_0, function($v_4) use ($__local_var_3_1) {
   $__num = \func_num_args();
   $__res = $__local_var_3_1;
   goto __end;;
@@ -1372,7 +1493,7 @@ goto end_branch_0;;
 };
   $__t0 = ($GLOBALS['Effect_Aff__makeAff'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], function($k_3) use ($e_0, $v_1) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_functorEffect'])['map'])($GLOBALS['Effect_Aff_effectCanceler'], (($v_1)['kill'])($e_0, $k_3));
+  $__res = ((($GLOBALS['Effect_functorEffect'])->{'map'})($GLOBALS['Effect_Aff_effectCanceler']))((($v_1)->{'kill'})($e_0, $k_3));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1390,13 +1511,13 @@ goto end_branch_0;;
 $GLOBALS['Effect_Aff_killFiber'] = __NAMESPACE__ . '\\majEffect_majAff_killmajFiber';
 
 // Effect_Aff_fiberCanceler_closure
-$GLOBALS['Effect_Aff_fiberCanceler_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Aff_Canceler'], (function() {
+$GLOBALS['Effect_Aff_fiberCanceler_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Aff_Canceler']))((function() {
   $__fn = function($b_0, $a_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Effect_Aff_killFiber'])($a_1, $b_0);
+  $__res = \Effect\Aff\majEffect_majAff_killmajFiber($a_1, $b_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1405,16 +1526,16 @@ $GLOBALS['Effect_Aff_fiberCanceler_closure'] = ($GLOBALS['Control_Semigroupoid_c
 })());
 
 // Effect_Aff_fiberCanceler
-function majEffect_majAff_fibermajCanceler($v_0) {
+function majEffect_majAff_fibermajCanceler($v_0, $v_1 = null) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majEffect_majAff_fibermajCanceler';
-  if ($__num < 1) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Effect_Aff_fiberCanceler_closure'])($v_0);
+  $__res = ($GLOBALS['Effect_Aff_fiberCanceler_closure'])($v_0, $v_1);
   goto __end;;
   __end:
-  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
 }
 $GLOBALS['Effect_Aff_fiberCanceler'] = __NAMESPACE__ . '\\majEffect_majAff_fibermajCanceler';
 
@@ -1425,12 +1546,12 @@ function majEffect_majAff_supervise($aff_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $killError_1_0 = ($GLOBALS['Effect_Exception_error'])("[Aff] Child fiber outlived parent");
-  $__res = ($GLOBALS['Effect_Aff_generalBracket'])((($GLOBALS['Effect_Aff_monadEffectAff'])['liftEffect'])((($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Effect_Aff__makeSupervisedFiber'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], $aff_0), function($sup_2) {
+  $killError_1_0 = \Effect\Exception\majEffect_majException_error("[Aff] Child fiber outlived parent");
+  $__res = \Effect\Aff\majEffect_majAff_generalmajBracket((($GLOBALS['Effect_Aff_monadEffectAff'])->{'liftEffect'})(((($GLOBALS['Effect_bindEffect'])->{'bind'})(($GLOBALS['Effect_Aff__makeSupervisedFiber'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], $aff_0)))(function($sup_2) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff_discard'])((($sup_2)['fiber'])['run'], function($_dollar__unused_3) use ($sup_2) {
+  $__res = (($GLOBALS['Effect_Aff_discard'])((($sup_2)->{'fiber'})->{'run'}))(function($_dollar__unused_3) use ($sup_2) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_applicativeEffect'])['pure'])($sup_2);
+  $__res = (($GLOBALS['Effect_applicativeEffect'])->{'pure'})($sup_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1438,15 +1559,15 @@ function majEffect_majAff_supervise($aff_0) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})), ["killed" => (function() {
+})), (object)["killed" => (function() {
   $__fn = function($err_2, $sup_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Effect_Aff_parSequence_'])([($GLOBALS['Effect_Aff_killFiber'])($err_2, ($sup_3)['fiber']), ($GLOBALS['Effect_Aff__makeAff'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], function($k_4) use ($err_2, $sup_3) {
+  $__res = ($GLOBALS['Effect_Aff_parSequence_'])([\Effect\Aff\majEffect_majAff_killmajFiber($err_2, ($sup_3)->{'fiber'}), ($GLOBALS['Effect_Aff__makeAff'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], function($k_4) use ($err_2, $sup_3) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff__killAll'])($err_2, ($sup_3)['supervisor'], ($k_4)((($GLOBALS['Data_Either_applicativeEither'])['pure'])($GLOBALS['Data_Unit_unit'])));
+  $__res = ($GLOBALS['Effect_Aff__killAll'])($err_2, ($sup_3)->{'supervisor'}, ($k_4)((($GLOBALS['Data_Either_applicativeEither'])->{'pure'})($GLOBALS['Data_Unit_unit'])));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1464,7 +1585,7 @@ function majEffect_majAff_supervise($aff_0) {
   }
   $__res = ($GLOBALS['Effect_Aff__makeAff'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], function($k_4) use ($killError_1_0, $sup_3) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff__killAll'])($killError_1_0, ($sup_3)['supervisor'], ($k_4)((($GLOBALS['Data_Either_applicativeEither'])['pure'])($GLOBALS['Data_Unit_unit'])));
+  $__res = ($GLOBALS['Effect_Aff__killAll'])($killError_1_0, ($sup_3)->{'supervisor'}, ($k_4)((($GLOBALS['Data_Either_applicativeEither'])->{'pure'})($GLOBALS['Data_Unit_unit'])));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1482,7 +1603,7 @@ function majEffect_majAff_supervise($aff_0) {
   }
   $__res = ($GLOBALS['Effect_Aff__makeAff'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], function($k_4) use ($killError_1_0, $sup_3) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff__killAll'])($killError_1_0, ($sup_3)['supervisor'], ($k_4)((($GLOBALS['Data_Either_applicativeEither'])['pure'])($GLOBALS['Data_Unit_unit'])));
+  $__res = ($GLOBALS['Effect_Aff__killAll'])($killError_1_0, ($sup_3)->{'supervisor'}, ($k_4)((($GLOBALS['Data_Either_applicativeEither'])->{'pure'})($GLOBALS['Data_Unit_unit'])));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1492,9 +1613,9 @@ function majEffect_majAff_supervise($aff_0) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()], ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Aff_joinFiber'], function($v_2) {
+})()], (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Aff_joinFiber']))(function($v_2) {
   $__num = \func_num_args();
-  $__res = ($v_2)['fiber'];
+  $__res = ($v_2)->{'fiber'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1506,7 +1627,7 @@ function majEffect_majAff_supervise($aff_0) {
 $GLOBALS['Effect_Aff_supervise'] = __NAMESPACE__ . '\\majEffect_majAff_supervise';
 
 // Effect_Aff_monadSTAff
-$GLOBALS['Effect_Aff_monadSTAff'] = ["liftST" => ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Effect_Aff_monadEffectAff'])['liftEffect'], ($GLOBALS['Control_Monad_ST_Class_monadSTEffect'])['liftST']), "Monad0" => function($_dollar__unused_0) {
+$GLOBALS['Effect_Aff_monadSTAff'] = (object)["liftST" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Effect_Aff_monadEffectAff'])->{'liftEffect'}))(($GLOBALS['Control_Monad_ST_Class_monadSTEffect'])->{'liftST'}), "Monad0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Effect_Aff_monadAff'];
   goto __end;;
@@ -1515,7 +1636,7 @@ $GLOBALS['Effect_Aff_monadSTAff'] = ["liftST" => ($GLOBALS['Control_Semigroupoid
 }];
 
 // Effect_Aff_monadThrowAff
-$GLOBALS['Effect_Aff_monadThrowAff'] = ["throwError" => $GLOBALS['Effect_Aff__throwError'], "Monad0" => function($_dollar__unused_0) {
+$GLOBALS['Effect_Aff_monadThrowAff'] = (object)["throwError" => $GLOBALS['Effect_Aff__throwError'], "Monad0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Effect_Aff_monadAff'];
   goto __end;;
@@ -1524,7 +1645,7 @@ $GLOBALS['Effect_Aff_monadThrowAff'] = ["throwError" => $GLOBALS['Effect_Aff__th
 }];
 
 // Effect_Aff_monadErrorAff
-$GLOBALS['Effect_Aff_monadErrorAff'] = ["catchError" => $GLOBALS['Effect_Aff__catchError'], "MonadThrow0" => function($_dollar__unused_0) {
+$GLOBALS['Effect_Aff_monadErrorAff'] = (object)["catchError" => $GLOBALS['Effect_Aff__catchError'], "MonadThrow0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Effect_Aff_monadThrowAff'];
   goto __end;;
@@ -1559,7 +1680,7 @@ function majEffect_majAff_runmajAff($k_0, $aff_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Effect_Aff_launchAff'])((($GLOBALS['Effect_Aff_bindAff'])['bind'])(($GLOBALS['Effect_Aff_try'])($aff_1), ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Effect_Aff_monadEffectAff'])['liftEffect'], $k_0)));
+  $__res = \Effect\Aff\majEffect_majAff_launchmajAff(((($GLOBALS['Effect_Aff_bindAff'])->{'bind'})(\Effect\Aff\majEffect_majAff_try($aff_1)))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Effect_Aff_monadEffectAff'])->{'liftEffect'}))($k_0)));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1573,7 +1694,7 @@ function majEffect_majAff_runmajAff_($k_0, $aff_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Effect_Aff_void'])(($GLOBALS['Effect_Aff_runAff'])($k_0, $aff_1));
+  $__res = \Effect\Aff\majEffect_majAff_void(\Effect\Aff\majEffect_majAff_runmajAff($k_0, $aff_1));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1587,7 +1708,7 @@ function majEffect_majAff_runmajSuspendedmajAff($k_0, $aff_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Effect_Aff__makeFiber'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], (($GLOBALS['Effect_Aff_bindAff'])['bind'])(($GLOBALS['Effect_Aff_try'])($aff_1), ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Effect_Aff_monadEffectAff'])['liftEffect'], $k_0)));
+  $__res = ($GLOBALS['Effect_Aff__makeFiber'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], ((($GLOBALS['Effect_Aff_bindAff'])->{'bind'})(\Effect\Aff\majEffect_majAff_try($aff_1)))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Effect_Aff_monadEffectAff'])->{'liftEffect'}))($k_0)));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1595,16 +1716,16 @@ function majEffect_majAff_runmajSuspendedmajAff($k_0, $aff_1 = null) {
 $GLOBALS['Effect_Aff_runSuspendedAff'] = __NAMESPACE__ . '\\majEffect_majAff_runmajSuspendedmajAff';
 
 // Effect_Aff_monadRecAff
-$GLOBALS['Effect_Aff_monadRecAff'] = ["tailRecM" => function($k_0) {
+$GLOBALS['Effect_Aff_monadRecAff'] = (object)["tailRecM" => function($k_0) {
   $__num = \func_num_args();
   $go__1_0 = null;
   $go__1_0 = function($a_2) use (&$go__1_0, $k_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Aff_bindAff'])['bind'])(($k_0)($a_2), function($res_3) use (&$go__1_0) {
+  $__res = ((($GLOBALS['Effect_Aff_bindAff'])->{'bind'})(($k_0)($a_2)))(function($res_3) use (&$go__1_0) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ($res_3 instanceof \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Done) {
-$__t1 = (($GLOBALS['Effect_Aff_applicativeAff'])['pure'])(($res_3)->{'value0'});
+$__t1 = (($GLOBALS['Effect_Aff_applicativeAff'])->{'pure'})(($res_3)->{'value0'});
 goto end_branch_1;;
 };
   if ($res_3 instanceof \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Loop) {
@@ -1642,9 +1763,9 @@ function majEffect_majAff_monoidmajAff($dictMonoid_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["mempty" => (($GLOBALS['Effect_Aff_applicativeAff'])['pure'])(($dictMonoid_0)['mempty']), "Semigroup0" => function($_dollar__unused_1) use ($dictMonoid_0) {
+  $__res = (object)["mempty" => (($GLOBALS['Effect_Aff_applicativeAff'])->{'pure'})(($dictMonoid_0)->{'mempty'}), "Semigroup0" => function($_dollar__unused_1) use ($dictMonoid_0) {
   $__num = \func_num_args();
-  $__res = ["append" => ($GLOBALS['Effect_Aff_lift21'])(((($dictMonoid_0)['Semigroup0'])(null))['append'])];
+  $__res = (object)["append" => ($GLOBALS['Effect_Aff_lift21'])(((($dictMonoid_0)->{'Semigroup0'})(null))->{'append'})];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1655,9 +1776,9 @@ function majEffect_majAff_monoidmajAff($dictMonoid_0) {
 }
 $GLOBALS['Effect_Aff_monoidAff'] = __NAMESPACE__ . '\\majEffect_majAff_monoidmajAff';
 
-// Effect_Aff_nonCanceler
-$GLOBALS['Effect_Aff_nonCanceler'] = (function() use (&$__fn) {
-$__local_var_0_0 = (($GLOBALS['Effect_Aff_applicativeAff'])['pure'])($GLOBALS['Data_Unit_unit']);
+// Effect_Aff_nonCanceler_closure
+$GLOBALS['Effect_Aff_nonCanceler_closure'] = (function() use (&$__fn) {
+$__local_var_0_0 = (($GLOBALS['Effect_Aff_applicativeAff'])->{'pure'})($GLOBALS['Data_Unit_unit']);
 return function($v_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
   $__res = $__local_var_0_0;
@@ -1667,8 +1788,22 @@ return function($v_1) use ($__local_var_0_0) {
 };
 })();
 
+// Effect_Aff_nonCanceler
+function majEffect_majAff_nonmajCanceler($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_majAff_nonmajCanceler';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Effect_Aff_nonCanceler_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_Aff_nonCanceler'] = __NAMESPACE__ . '\\majEffect_majAff_nonmajCanceler';
+
 // Effect_Aff_monoidCanceler
-$GLOBALS['Effect_Aff_monoidCanceler'] = ["mempty" => $GLOBALS['Effect_Aff_nonCanceler'], "Semigroup0" => function($_dollar__unused_0) {
+$GLOBALS['Effect_Aff_monoidCanceler'] = (object)["mempty" => $GLOBALS['Effect_Aff_nonCanceler'], "Semigroup0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Effect_Aff_semigroupCanceler'];
   goto __end;;
@@ -1679,20 +1814,20 @@ $GLOBALS['Effect_Aff_monoidCanceler'] = ["mempty" => $GLOBALS['Effect_Aff_nonCan
 // Effect_Aff_never
 $GLOBALS['Effect_Aff_never'] = ($GLOBALS['Effect_Aff__makeAff'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], function($v_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_applicativeEffect'])['pure'])(($GLOBALS['Effect_Aff_monoidCanceler'])['mempty']);
+  $__res = (($GLOBALS['Effect_applicativeEffect'])->{'pure'})(($GLOBALS['Effect_Aff_monoidCanceler'])->{'mempty'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
 
 // Effect_Aff_apathize_closure
-$GLOBALS['Effect_Aff_apathize_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Effect_Aff_functorAff'])['map'])(function($v_0) {
+$GLOBALS['Effect_Aff_apathize_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Effect_Aff_functorAff'])->{'map'})(function($v_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Unit_unit'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}), $GLOBALS['Effect_Aff_try']);
+})))($GLOBALS['Effect_Aff_try']);
 
 // Effect_Aff_apathize
 function majEffect_majAff_apathize($v_0) {
@@ -1709,7 +1844,7 @@ function majEffect_majAff_apathize($v_0) {
 $GLOBALS['Effect_Aff_apathize'] = __NAMESPACE__ . '\\majEffect_majAff_apathize';
 
 // Effect_Aff_altParAff
-$GLOBALS['Effect_Aff_altParAff'] = ["alt" => $GLOBALS['Effect_Aff__parAffAlt'], "Functor0" => function($_dollar__unused_0) {
+$GLOBALS['Effect_Aff_altParAff'] = (object)["alt" => $GLOBALS['Effect_Aff__parAffAlt'], "Functor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Effect_Aff_functorParAff'];
   goto __end;;
@@ -1718,13 +1853,13 @@ $GLOBALS['Effect_Aff_altParAff'] = ["alt" => $GLOBALS['Effect_Aff__parAffAlt'], 
 }];
 
 // Effect_Aff_altAff
-$GLOBALS['Effect_Aff_altAff'] = ["alt" => (function() {
+$GLOBALS['Effect_Aff_altAff'] = (object)["alt" => (function() {
   $__fn = function($a1_0, $a2_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Effect_Aff_monadErrorAff'])['catchError'])($a1_0, function($v_2) use ($a2_1) {
+  $__res = ((($GLOBALS['Effect_Aff_monadErrorAff'])->{'catchError'})($a1_0))(function($v_2) use ($a2_1) {
   $__num = \func_num_args();
   $__res = $a2_1;
   goto __end;;
@@ -1745,7 +1880,7 @@ $GLOBALS['Effect_Aff_altAff'] = ["alt" => (function() {
 }];
 
 // Effect_Aff_plusAff
-$GLOBALS['Effect_Aff_plusAff'] = ["empty" => (($GLOBALS['Effect_Aff_monadThrowAff'])['throwError'])(($GLOBALS['Effect_Exception_error'])("Always fails")), "Alt0" => function($_dollar__unused_0) {
+$GLOBALS['Effect_Aff_plusAff'] = (object)["empty" => (($GLOBALS['Effect_Aff_monadThrowAff'])->{'throwError'})(\Effect\Exception\majEffect_majException_error("Always fails")), "Alt0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Effect_Aff_altAff'];
   goto __end;;
@@ -1754,7 +1889,7 @@ $GLOBALS['Effect_Aff_plusAff'] = ["empty" => (($GLOBALS['Effect_Aff_monadThrowAf
 }];
 
 // Effect_Aff_plusParAff
-$GLOBALS['Effect_Aff_plusParAff'] = ["empty" => (($GLOBALS['Effect_Aff_parallelAff'])['parallel'])(($GLOBALS['Effect_Aff_plusAff'])['empty']), "Alt0" => function($_dollar__unused_0) {
+$GLOBALS['Effect_Aff_plusParAff'] = (object)["empty" => (($GLOBALS['Effect_Aff_parallelAff'])->{'parallel'})(($GLOBALS['Effect_Aff_plusAff'])->{'empty'}), "Alt0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Effect_Aff_altParAff'];
   goto __end;;
@@ -1763,7 +1898,7 @@ $GLOBALS['Effect_Aff_plusParAff'] = ["empty" => (($GLOBALS['Effect_Aff_parallelA
 }];
 
 // Effect_Aff_alternativeParAff
-$GLOBALS['Effect_Aff_alternativeParAff'] = ["Applicative0" => function($_dollar__unused_0) {
+$GLOBALS['Effect_Aff_alternativeParAff'] = (object)["Applicative0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Effect_Aff_applicativeParAff'];
   goto __end;;

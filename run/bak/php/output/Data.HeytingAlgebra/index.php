@@ -127,9 +127,42 @@ $exports['boolNot'] = $boolNot;
 return $exports;
   return $exports;
 });
-$GLOBALS['Data_HeytingAlgebra_boolConj'] = $ffi_Data_HeytingAlgebra['boolConj'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_HeytingAlgebra_boolDisj'] = $ffi_Data_HeytingAlgebra['boolDisj'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_HeytingAlgebra_boolNot'] = $ffi_Data_HeytingAlgebra['boolNot'] ?? new class { public function __invoke(...$args) { return $this; } };
+function majData_majHeytingmajAlgebra_boolmajConj(bool $v0, $v1 = null): bool|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majHeytingmajAlgebra_boolmajConj';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Data_HeytingAlgebra;
+  $f = ($ffi_Data_HeytingAlgebra['boolConj'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Data_HeytingAlgebra_boolConj'] = __NAMESPACE__ . '\\majData_majHeytingmajAlgebra_boolmajConj';
+
+function majData_majHeytingmajAlgebra_boolmajDisj(bool $v0, $v1 = null): bool|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majHeytingmajAlgebra_boolmajDisj';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Data_HeytingAlgebra;
+  $f = ($ffi_Data_HeytingAlgebra['boolDisj'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Data_HeytingAlgebra_boolDisj'] = __NAMESPACE__ . '\\majData_majHeytingmajAlgebra_boolmajDisj';
+
+function majData_majHeytingmajAlgebra_boolmajNot(bool $v0): bool|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majHeytingmajAlgebra_boolmajNot';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Data_HeytingAlgebra;
+  $f = ($ffi_Data_HeytingAlgebra['boolNot'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Data_HeytingAlgebra_boolNot'] = __NAMESPACE__ . '\\majData_majHeytingmajAlgebra_boolmajNot';
+
 
 
 
@@ -141,7 +174,7 @@ function majData_majHeytingmajAlgebra_ttmajRecord($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['ttRecord'];
+  $__res = ($dict_0)->{'ttRecord'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -155,7 +188,7 @@ function majData_majHeytingmajAlgebra_tt($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['tt'];
+  $__res = ($dict_0)->{'tt'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -169,7 +202,7 @@ function majData_majHeytingmajAlgebra_notmajRecord($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['notRecord'];
+  $__res = ($dict_0)->{'notRecord'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -183,7 +216,7 @@ function majData_majHeytingmajAlgebra_not($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['not'];
+  $__res = ($dict_0)->{'not'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -197,7 +230,7 @@ function majData_majHeytingmajAlgebra_impliesmajRecord($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['impliesRecord'];
+  $__res = ($dict_0)->{'impliesRecord'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -211,7 +244,7 @@ function majData_majHeytingmajAlgebra_implies($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['implies'];
+  $__res = ($dict_0)->{'implies'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -219,7 +252,7 @@ function majData_majHeytingmajAlgebra_implies($dict_0) {
 $GLOBALS['Data_HeytingAlgebra_implies'] = __NAMESPACE__ . '\\majData_majHeytingmajAlgebra_implies';
 
 // Data_HeytingAlgebra_heytingAlgebraUnit
-$GLOBALS['Data_HeytingAlgebra_heytingAlgebraUnit'] = ["ff" => $GLOBALS['Data_Unit_unit'], "tt" => $GLOBALS['Data_Unit_unit'], "implies" => (function() {
+$GLOBALS['Data_HeytingAlgebra_heytingAlgebraUnit'] = (object)["ff" => $GLOBALS['Data_Unit_unit'], "tt" => $GLOBALS['Data_Unit_unit'], "implies" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -264,13 +297,13 @@ $GLOBALS['Data_HeytingAlgebra_heytingAlgebraUnit'] = ["ff" => $GLOBALS['Data_Uni
 }];
 
 // Data_HeytingAlgebra_heytingAlgebraRecordNil
-$GLOBALS['Data_HeytingAlgebra_heytingAlgebraRecordNil'] = ["conjRecord" => (function() {
+$GLOBALS['Data_HeytingAlgebra_heytingAlgebraRecordNil'] = (object)["conjRecord" => (function() {
   $__fn = function($v_0, $v1_1 = null, $v2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = [];
+  $__res = (object)[];
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -282,7 +315,7 @@ $GLOBALS['Data_HeytingAlgebra_heytingAlgebraRecordNil'] = ["conjRecord" => (func
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = [];
+  $__res = (object)[];
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -294,7 +327,7 @@ $GLOBALS['Data_HeytingAlgebra_heytingAlgebraRecordNil'] = ["conjRecord" => (func
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = [];
+  $__res = (object)[];
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -306,7 +339,7 @@ $GLOBALS['Data_HeytingAlgebra_heytingAlgebraRecordNil'] = ["conjRecord" => (func
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = [];
+  $__res = (object)[];
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -318,7 +351,7 @@ $GLOBALS['Data_HeytingAlgebra_heytingAlgebraRecordNil'] = ["conjRecord" => (func
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = [];
+  $__res = (object)[];
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -330,7 +363,7 @@ $GLOBALS['Data_HeytingAlgebra_heytingAlgebraRecordNil'] = ["conjRecord" => (func
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = [];
+  $__res = (object)[];
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -339,7 +372,7 @@ $GLOBALS['Data_HeytingAlgebra_heytingAlgebraRecordNil'] = ["conjRecord" => (func
 })()];
 
 // Data_HeytingAlgebra_heytingAlgebraProxy
-$GLOBALS['Data_HeytingAlgebra_heytingAlgebraProxy'] = ["conj" => (function() {
+$GLOBALS['Data_HeytingAlgebra_heytingAlgebraProxy'] = (object)["conj" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -390,7 +423,7 @@ function majData_majHeytingmajAlgebra_ffmajRecord($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['ffRecord'];
+  $__res = ($dict_0)->{'ffRecord'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -404,7 +437,7 @@ function majData_majHeytingmajAlgebra_ff($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['ff'];
+  $__res = ($dict_0)->{'ff'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -418,7 +451,7 @@ function majData_majHeytingmajAlgebra_disjmajRecord($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['disjRecord'];
+  $__res = ($dict_0)->{'disjRecord'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -432,7 +465,7 @@ function majData_majHeytingmajAlgebra_disj($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['disj'];
+  $__res = ($dict_0)->{'disj'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -440,13 +473,13 @@ function majData_majHeytingmajAlgebra_disj($dict_0) {
 $GLOBALS['Data_HeytingAlgebra_disj'] = __NAMESPACE__ . '\\majData_majHeytingmajAlgebra_disj';
 
 // Data_HeytingAlgebra_heytingAlgebraBoolean
-$GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'] = ["ff" => false, "tt" => true, "implies" => (function() {
+$GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'] = (object)["ff" => false, "tt" => true, "implies" => (function() {
   $__fn = function($a_0, $b_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['disj'])((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['not'])($a_0), $b_1);
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'disj'})((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'not'})($a_0)))($b_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -461,7 +494,7 @@ function majData_majHeytingmajAlgebra_conjmajRecord($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['conjRecord'];
+  $__res = ($dict_0)->{'conjRecord'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -475,7 +508,7 @@ function majData_majHeytingmajAlgebra_heytingmajAlgebramajRecord($_dollar__unuse
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ["ff" => (($dictHeytingAlgebraRecord_1)['ffRecord'])(new \Type\Proxy\Type_Proxy_Proxy(), new \Type\Proxy\Type_Proxy_Proxy()), "tt" => (($dictHeytingAlgebraRecord_1)['ttRecord'])(new \Type\Proxy\Type_Proxy_Proxy(), new \Type\Proxy\Type_Proxy_Proxy()), "conj" => (($dictHeytingAlgebraRecord_1)['conjRecord'])(new \Type\Proxy\Type_Proxy_Proxy()), "disj" => (($dictHeytingAlgebraRecord_1)['disjRecord'])(new \Type\Proxy\Type_Proxy_Proxy()), "implies" => (($dictHeytingAlgebraRecord_1)['impliesRecord'])(new \Type\Proxy\Type_Proxy_Proxy()), "not" => (($dictHeytingAlgebraRecord_1)['notRecord'])(new \Type\Proxy\Type_Proxy_Proxy())];
+  $__res = (object)["ff" => ((($dictHeytingAlgebraRecord_1)->{'ffRecord'})(new \Type\Proxy\Type_Proxy_Proxy()))(new \Type\Proxy\Type_Proxy_Proxy()), "tt" => ((($dictHeytingAlgebraRecord_1)->{'ttRecord'})(new \Type\Proxy\Type_Proxy_Proxy()))(new \Type\Proxy\Type_Proxy_Proxy()), "conj" => (($dictHeytingAlgebraRecord_1)->{'conjRecord'})(new \Type\Proxy\Type_Proxy_Proxy()), "disj" => (($dictHeytingAlgebraRecord_1)->{'disjRecord'})(new \Type\Proxy\Type_Proxy_Proxy()), "implies" => (($dictHeytingAlgebraRecord_1)->{'impliesRecord'})(new \Type\Proxy\Type_Proxy_Proxy()), "not" => (($dictHeytingAlgebraRecord_1)->{'notRecord'})(new \Type\Proxy\Type_Proxy_Proxy())];
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -489,7 +522,7 @@ function majData_majHeytingmajAlgebra_conj($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['conj'];
+  $__res = ($dict_0)->{'conj'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -503,9 +536,9 @@ function majData_majHeytingmajAlgebra_heytingmajAlgebramajFunction($dictHeytingA
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $ff1_1_0 = ($dictHeytingAlgebra_0)['ff'];
-  $tt1_2_1 = ($dictHeytingAlgebra_0)['tt'];
-  $__res = ["ff" => function($v_3) use ($ff1_1_0) {
+  $ff1_1_0 = ($dictHeytingAlgebra_0)->{'ff'};
+  $tt1_2_1 = ($dictHeytingAlgebra_0)->{'tt'};
+  $__res = (object)["ff" => function($v_3) use ($ff1_1_0) {
   $__num = \func_num_args();
   $__res = $ff1_1_0;
   goto __end;;
@@ -523,7 +556,7 @@ function majData_majHeytingmajAlgebra_heytingmajAlgebramajFunction($dictHeytingA
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictHeytingAlgebra_0)['implies'])(($f_3)($a_5), ($g_4)($a_5));
+  $__res = ((($dictHeytingAlgebra_0)->{'implies'})(($f_3)($a_5)))(($g_4)($a_5));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -535,7 +568,7 @@ function majData_majHeytingmajAlgebra_heytingmajAlgebramajFunction($dictHeytingA
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictHeytingAlgebra_0)['conj'])(($f_3)($a_5), ($g_4)($a_5));
+  $__res = ((($dictHeytingAlgebra_0)->{'conj'})(($f_3)($a_5)))(($g_4)($a_5));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -547,7 +580,7 @@ function majData_majHeytingmajAlgebra_heytingmajAlgebramajFunction($dictHeytingA
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictHeytingAlgebra_0)['disj'])(($f_3)($a_5), ($g_4)($a_5));
+  $__res = ((($dictHeytingAlgebra_0)->{'disj'})(($f_3)($a_5)))(($g_4)($a_5));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -559,7 +592,7 @@ function majData_majHeytingmajAlgebra_heytingmajAlgebramajFunction($dictHeytingA
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictHeytingAlgebra_0)['not'])(($f_3)($a_4));
+  $__res = (($dictHeytingAlgebra_0)->{'not'})(($f_3)($a_4));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -579,17 +612,17 @@ function majData_majHeytingmajAlgebra_heytingmajAlgebramajRecordmajCons($dictIsS
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $ff1_4_0 = ($dictHeytingAlgebra_3)['ff'];
-  $tt1_5_1 = ($dictHeytingAlgebra_3)['tt'];
-  $__res = ["conjRecord" => (function() use ($dictHeytingAlgebraRecord_2, $dictHeytingAlgebra_3, $dictIsSymbol_0) {
+  $ff1_4_0 = ($dictHeytingAlgebra_3)->{'ff'};
+  $tt1_5_1 = ($dictHeytingAlgebra_3)->{'tt'};
+  $__res = (object)["conjRecord" => (function() use ($dictHeytingAlgebraRecord_2, $dictHeytingAlgebra_3, $dictIsSymbol_0) {
   $__fn = function($v_6, $ra_7 = null, $rb_8 = null) use ($dictHeytingAlgebraRecord_2, $dictHeytingAlgebra_3, $dictIsSymbol_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $key_9_2 = (($dictIsSymbol_0)['reflectSymbol'])(new \Type\Proxy\Type_Proxy_Proxy());
+  $key_9_2 = (($dictIsSymbol_0)->{'reflectSymbol'})(new \Type\Proxy\Type_Proxy_Proxy());
   $get_10_3 = ($GLOBALS['Record_Unsafe_unsafeGet'])($key_9_2);
-  $__res = ($GLOBALS['Record_Unsafe_unsafeSet'])($key_9_2, (($dictHeytingAlgebra_3)['conj'])(($get_10_3)($ra_7), ($get_10_3)($rb_8)), (($dictHeytingAlgebraRecord_2)['conjRecord'])(new \Type\Proxy\Type_Proxy_Proxy(), $ra_7, $rb_8));
+  $__res = \Record\Unsafe\majRecord_majUnsafe_unsafemajSet($key_9_2, ((($dictHeytingAlgebra_3)->{'conj'})(($get_10_3)($ra_7)))(($get_10_3)($rb_8)), (((($dictHeytingAlgebraRecord_2)->{'conjRecord'})(new \Type\Proxy\Type_Proxy_Proxy()))($ra_7))($rb_8));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -601,9 +634,9 @@ function majData_majHeytingmajAlgebra_heytingmajAlgebramajRecordmajCons($dictIsS
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $key_9_4 = (($dictIsSymbol_0)['reflectSymbol'])(new \Type\Proxy\Type_Proxy_Proxy());
+  $key_9_4 = (($dictIsSymbol_0)->{'reflectSymbol'})(new \Type\Proxy\Type_Proxy_Proxy());
   $get_10_5 = ($GLOBALS['Record_Unsafe_unsafeGet'])($key_9_4);
-  $__res = ($GLOBALS['Record_Unsafe_unsafeSet'])($key_9_4, (($dictHeytingAlgebra_3)['disj'])(($get_10_5)($ra_7), ($get_10_5)($rb_8)), (($dictHeytingAlgebraRecord_2)['disjRecord'])(new \Type\Proxy\Type_Proxy_Proxy(), $ra_7, $rb_8));
+  $__res = \Record\Unsafe\majRecord_majUnsafe_unsafemajSet($key_9_4, ((($dictHeytingAlgebra_3)->{'disj'})(($get_10_5)($ra_7)))(($get_10_5)($rb_8)), (((($dictHeytingAlgebraRecord_2)->{'disjRecord'})(new \Type\Proxy\Type_Proxy_Proxy()))($ra_7))($rb_8));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -615,9 +648,9 @@ function majData_majHeytingmajAlgebra_heytingmajAlgebramajRecordmajCons($dictIsS
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $key_9_6 = (($dictIsSymbol_0)['reflectSymbol'])(new \Type\Proxy\Type_Proxy_Proxy());
+  $key_9_6 = (($dictIsSymbol_0)->{'reflectSymbol'})(new \Type\Proxy\Type_Proxy_Proxy());
   $get_10_7 = ($GLOBALS['Record_Unsafe_unsafeGet'])($key_9_6);
-  $__res = ($GLOBALS['Record_Unsafe_unsafeSet'])($key_9_6, (($dictHeytingAlgebra_3)['implies'])(($get_10_7)($ra_7), ($get_10_7)($rb_8)), (($dictHeytingAlgebraRecord_2)['impliesRecord'])(new \Type\Proxy\Type_Proxy_Proxy(), $ra_7, $rb_8));
+  $__res = \Record\Unsafe\majRecord_majUnsafe_unsafemajSet($key_9_6, ((($dictHeytingAlgebra_3)->{'implies'})(($get_10_7)($ra_7)))(($get_10_7)($rb_8)), (((($dictHeytingAlgebraRecord_2)->{'impliesRecord'})(new \Type\Proxy\Type_Proxy_Proxy()))($ra_7))($rb_8));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -629,7 +662,7 @@ function majData_majHeytingmajAlgebra_heytingmajAlgebramajRecordmajCons($dictIsS
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Record_Unsafe_unsafeSet'])((($dictIsSymbol_0)['reflectSymbol'])(new \Type\Proxy\Type_Proxy_Proxy()), $ff1_4_0, (($dictHeytingAlgebraRecord_2)['ffRecord'])(new \Type\Proxy\Type_Proxy_Proxy(), $row_7));
+  $__res = \Record\Unsafe\majRecord_majUnsafe_unsafemajSet((($dictIsSymbol_0)->{'reflectSymbol'})(new \Type\Proxy\Type_Proxy_Proxy()), $ff1_4_0, ((($dictHeytingAlgebraRecord_2)->{'ffRecord'})(new \Type\Proxy\Type_Proxy_Proxy()))($row_7));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -641,8 +674,8 @@ function majData_majHeytingmajAlgebra_heytingmajAlgebramajRecordmajCons($dictIsS
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $key_8_8 = (($dictIsSymbol_0)['reflectSymbol'])(new \Type\Proxy\Type_Proxy_Proxy());
-  $__res = ($GLOBALS['Record_Unsafe_unsafeSet'])($key_8_8, (($dictHeytingAlgebra_3)['not'])(($GLOBALS['Record_Unsafe_unsafeGet'])($key_8_8, $row_7)), (($dictHeytingAlgebraRecord_2)['notRecord'])(new \Type\Proxy\Type_Proxy_Proxy(), $row_7));
+  $key_8_8 = (($dictIsSymbol_0)->{'reflectSymbol'})(new \Type\Proxy\Type_Proxy_Proxy());
+  $__res = \Record\Unsafe\majRecord_majUnsafe_unsafemajSet($key_8_8, (($dictHeytingAlgebra_3)->{'not'})(\Record\Unsafe\majRecord_majUnsafe_unsafemajGet($key_8_8, $row_7)), ((($dictHeytingAlgebraRecord_2)->{'notRecord'})(new \Type\Proxy\Type_Proxy_Proxy()))($row_7));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -654,7 +687,7 @@ function majData_majHeytingmajAlgebra_heytingmajAlgebramajRecordmajCons($dictIsS
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Record_Unsafe_unsafeSet'])((($dictIsSymbol_0)['reflectSymbol'])(new \Type\Proxy\Type_Proxy_Proxy()), $tt1_5_1, (($dictHeytingAlgebraRecord_2)['ttRecord'])(new \Type\Proxy\Type_Proxy_Proxy(), $row_7));
+  $__res = \Record\Unsafe\majRecord_majUnsafe_unsafemajSet((($dictIsSymbol_0)->{'reflectSymbol'})(new \Type\Proxy\Type_Proxy_Proxy()), $tt1_5_1, ((($dictHeytingAlgebraRecord_2)->{'ttRecord'})(new \Type\Proxy\Type_Proxy_Proxy()))($row_7));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

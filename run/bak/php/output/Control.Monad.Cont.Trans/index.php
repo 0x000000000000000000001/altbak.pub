@@ -157,7 +157,7 @@ function majControl_majMonad_majCont_majTrans_runmajContmajT($v_0, $k_1 = null) 
 $GLOBALS['Control_Monad_Cont_Trans_runContT'] = __NAMESPACE__ . '\\majControl_majMonad_majCont_majTrans_runmajContmajT';
 
 // Control_Monad_Cont_Trans_newtypeContT
-$GLOBALS['Control_Monad_Cont_Trans_newtypeContT'] = ["Coercible0" => function($_dollar__unused_0) {
+$GLOBALS['Control_Monad_Cont_Trans_newtypeContT'] = (object)["Coercible0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = null;
   goto __end;;
@@ -166,13 +166,13 @@ $GLOBALS['Control_Monad_Cont_Trans_newtypeContT'] = ["Coercible0" => function($_
 }];
 
 // Control_Monad_Cont_Trans_monadTransContT
-$GLOBALS['Control_Monad_Cont_Trans_monadTransContT'] = ["lift" => (function() {
+$GLOBALS['Control_Monad_Cont_Trans_monadTransContT'] = (object)["lift" => (function() {
   $__fn = function($dictMonad_0, $m_1 = null, $k_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($dictMonad_0)['Bind1'])(null))['bind'])($m_1, $k_2);
+  $__res = ((((($dictMonad_0)->{'Bind1'})(null))->{'bind'})($m_1))($k_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -201,7 +201,7 @@ function majControl_majMonad_majCont_majTrans_functormajContmajT($dictFunctor_0)
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["map" => (function() {
+  $__res = (object)["map" => (function() {
   $__fn = function($f_1, $v_2 = null, $k_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -233,7 +233,7 @@ function majControl_majMonad_majCont_majTrans_applymajContmajT($dictApply_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $functorContT1_1_0 = ["map" => (function() {
+  $functorContT1_1_0 = (object)["map" => (function() {
   $__fn = function($f_1, $v_2 = null, $k_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -252,7 +252,7 @@ function majControl_majMonad_majCont_majTrans_applymajContmajT($dictApply_0) {
   };
   return $__fn;
 })()];
-  $__res = ["apply" => (function() {
+  $__res = (object)["apply" => (function() {
   $__fn = function($v_2, $v1_3 = null, $k_4 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -296,7 +296,7 @@ function majControl_majMonad_majCont_majTrans_bindmajContmajT($dictBind_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $functorContT1_1_0 = ["map" => (function() {
+  $functorContT1_1_0 = (object)["map" => (function() {
   $__fn = function($f_1, $v_2 = null, $k_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -315,7 +315,7 @@ function majControl_majMonad_majCont_majTrans_bindmajContmajT($dictBind_0) {
   };
   return $__fn;
 })()];
-  $applyContT1_2_1 = ["apply" => (function() {
+  $applyContT1_2_1 = (object)["apply" => (function() {
   $__fn = function($v_2, $v1_3 = null, $k_4 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -346,7 +346,7 @@ function majControl_majMonad_majCont_majTrans_bindmajContmajT($dictBind_0) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["bind" => (function() {
+  $__res = (object)["bind" => (function() {
   $__fn = function($v_3, $k_4 = null, $k_prime_5 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -354,7 +354,7 @@ function majControl_majMonad_majCont_majTrans_bindmajContmajT($dictBind_0) {
   }
   $__res = ($v_3)(function($a_6) use ($k_4, $k_prime_5) {
   $__num = \func_num_args();
-  $__res = ($k_4)($a_6, $k_prime_5);
+  $__res = (($k_4)($a_6))($k_prime_5);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -384,7 +384,7 @@ function majControl_majMonad_majCont_majTrans_semigroupmajContmajT($dictApply_0,
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ["append" => (function() use ($dictSemigroup_1) {
+  $__res = (object)["append" => (function() use ($dictSemigroup_1) {
   $__fn = function($a_2, $b_3 = null, $k_4 = null) use ($dictSemigroup_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -392,7 +392,7 @@ function majControl_majMonad_majCont_majTrans_semigroupmajContmajT($dictApply_0,
   }
   $__res = ($a_2)(function($a_5) use ($b_3, $dictSemigroup_1, $k_4) {
   $__num = \func_num_args();
-  $__local_var_6_0 = (($dictSemigroup_1)['append'])($a_5);
+  $__local_var_6_0 = (($dictSemigroup_1)->{'append'})($a_5);
   $__res = ($b_3)(function($a_7) use ($__local_var_6_0, $k_4) {
   $__num = \func_num_args();
   $__res = ($k_4)(($__local_var_6_0)($a_7));
@@ -423,7 +423,7 @@ function majControl_majMonad_majCont_majTrans_applicativemajContmajT($dictApplic
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $functorContT1_1_0 = ["map" => (function() {
+  $functorContT1_1_0 = (object)["map" => (function() {
   $__fn = function($f_1, $v_2 = null, $k_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -442,7 +442,7 @@ function majControl_majMonad_majCont_majTrans_applicativemajContmajT($dictApplic
   };
   return $__fn;
 })()];
-  $applyContT1_2_1 = ["apply" => (function() {
+  $applyContT1_2_1 = (object)["apply" => (function() {
   $__fn = function($v_2, $v1_3 = null, $k_4 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -473,7 +473,7 @@ function majControl_majMonad_majCont_majTrans_applicativemajContmajT($dictApplic
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["pure" => (function() {
+  $__res = (object)["pure" => (function() {
   $__fn = function($a_3, $k_4 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -505,7 +505,7 @@ function majControl_majMonad_majCont_majTrans_monadmajContmajT($dictMonad_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $functorContT1_1_0 = ["map" => (function() {
+  $functorContT1_1_0 = (object)["map" => (function() {
   $__fn = function($f_1, $v_2 = null, $k_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -524,7 +524,7 @@ function majControl_majMonad_majCont_majTrans_monadmajContmajT($dictMonad_0) {
   };
   return $__fn;
 })()];
-  $applyContT1_2_1 = ["apply" => (function() {
+  $applyContT1_2_1 = (object)["apply" => (function() {
   $__fn = function($v_2, $v1_3 = null, $k_4 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -555,7 +555,7 @@ function majControl_majMonad_majCont_majTrans_monadmajContmajT($dictMonad_0) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $applicativeContT1_2_1 = ["pure" => (function() {
+  $applicativeContT1_2_1 = (object)["pure" => (function() {
   $__fn = function($a_3, $k_4 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -574,7 +574,7 @@ function majControl_majMonad_majCont_majTrans_monadmajContmajT($dictMonad_0) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $functorContT1_3_3 = ["map" => (function() {
+  $functorContT1_3_3 = (object)["map" => (function() {
   $__fn = function($f_3, $v_4 = null, $k_5 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -593,7 +593,7 @@ function majControl_majMonad_majCont_majTrans_monadmajContmajT($dictMonad_0) {
   };
   return $__fn;
 })()];
-  $applyContT1_4_4 = ["apply" => (function() {
+  $applyContT1_4_4 = (object)["apply" => (function() {
   $__fn = function($v_4, $v1_5 = null, $k_6 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -624,7 +624,7 @@ function majControl_majMonad_majCont_majTrans_monadmajContmajT($dictMonad_0) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $bindContT1_4_4 = ["bind" => (function() {
+  $bindContT1_4_4 = (object)["bind" => (function() {
   $__fn = function($v_5, $k_6 = null, $k_prime_7 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -632,7 +632,7 @@ function majControl_majMonad_majCont_majTrans_monadmajContmajT($dictMonad_0) {
   }
   $__res = ($v_5)(function($a_8) use ($k_6, $k_prime_7) {
   $__num = \func_num_args();
-  $__res = ($k_6)($a_8, $k_prime_7);
+  $__res = (($k_6)($a_8))($k_prime_7);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -649,7 +649,7 @@ function majControl_majMonad_majCont_majTrans_monadmajContmajT($dictMonad_0) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["Applicative0" => function($_dollar__unused_5) use ($applicativeContT1_2_1) {
+  $__res = (object)["Applicative0" => function($_dollar__unused_5) use ($applicativeContT1_2_1) {
   $__num = \func_num_args();
   $__res = $applicativeContT1_2_1;
   goto __end;;
@@ -675,9 +675,9 @@ function majControl_majMonad_majCont_majTrans_monadmajAskmajContmajT($dictMonadA
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $Monad0_1_0 = (($dictMonadAsk_0)['Monad0'])(null);
-  $monadContT1_2_1 = ($GLOBALS['Control_Monad_Cont_Trans_monadContT'])($Monad0_1_0);
-  $__res = ["ask" => (($GLOBALS['Control_Monad_Cont_Trans_monadTransContT'])['lift'])($Monad0_1_0, ($dictMonadAsk_0)['ask']), "Monad0" => function($_dollar__unused_3) use ($monadContT1_2_1) {
+  $Monad0_1_0 = (($dictMonadAsk_0)->{'Monad0'})(null);
+  $monadContT1_2_1 = \Control\Monad\Cont\Trans\majControl_majMonad_majCont_majTrans_monadmajContmajT($Monad0_1_0);
+  $__res = (object)["ask" => ((($GLOBALS['Control_Monad_Cont_Trans_monadTransContT'])->{'lift'})($Monad0_1_0))(($dictMonadAsk_0)->{'ask'}), "Monad0" => function($_dollar__unused_3) use ($monadContT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadContT1_2_1;
   goto __end;;
@@ -697,24 +697,24 @@ function majControl_majMonad_majCont_majTrans_monadmajReadermajContmajT($dictMon
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $MonadAsk0_1_0 = (($dictMonadReader_0)['MonadAsk0'])(null);
-  $ask_2_1 = ($MonadAsk0_1_0)['ask'];
-  $monadAskContT1_3_2 = ($GLOBALS['Control_Monad_Cont_Trans_monadAskContT'])($MonadAsk0_1_0);
-  $__res = ["local" => (function() use ($MonadAsk0_1_0, $ask_2_1, $dictMonadReader_0) {
+  $MonadAsk0_1_0 = (($dictMonadReader_0)->{'MonadAsk0'})(null);
+  $ask_2_1 = ($MonadAsk0_1_0)->{'ask'};
+  $monadAskContT1_3_2 = \Control\Monad\Cont\Trans\majControl_majMonad_majCont_majTrans_monadmajAskmajContmajT($MonadAsk0_1_0);
+  $__res = (object)["local" => (function() use ($MonadAsk0_1_0, $ask_2_1, $dictMonadReader_0) {
   $__fn = function($f_4, $v_5 = null, $k_6 = null) use ($MonadAsk0_1_0, $ask_2_1, $dictMonadReader_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((((($MonadAsk0_1_0)['Monad0'])(null))['Bind1'])(null))['bind'])($ask_2_1, function($r_7) use ($dictMonadReader_0, $f_4, $k_6, $v_5) {
+  $__res = ((((((($MonadAsk0_1_0)->{'Monad0'})(null))->{'Bind1'})(null))->{'bind'})($ask_2_1))(function($r_7) use ($dictMonadReader_0, $f_4, $k_6, $v_5) {
   $__num = \func_num_args();
-  $__res = (($dictMonadReader_0)['local'])($f_4, ($v_5)(($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictMonadReader_0)['local'])(function($v_8) use ($r_7) {
+  $__res = ((($dictMonadReader_0)->{'local'})($f_4))(($v_5)((($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictMonadReader_0)->{'local'})(function($v_8) use ($r_7) {
   $__num = \func_num_args();
   $__res = $r_7;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}), $k_6)));
+})))($k_6)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -744,14 +744,14 @@ function majControl_majMonad_majCont_majTrans_monadmajContmajContmajT($dictMonad
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $monadContT1_1_0 = ($GLOBALS['Control_Monad_Cont_Trans_monadContT'])($dictMonad_0);
-  $__res = ["callCC" => (function() {
+  $monadContT1_1_0 = \Control\Monad\Cont\Trans\majControl_majMonad_majCont_majTrans_monadmajContmajT($dictMonad_0);
+  $__res = (object)["callCC" => (function() {
   $__fn = function($f_2, $k_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($f_2)((function() use ($k_3) {
+  $__res = (($f_2)((function() use ($k_3) {
   $__fn = function($a_4, $v1_5 = null) use ($k_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -763,7 +763,7 @@ function majControl_majMonad_majCont_majTrans_monadmajContmajContmajT($dictMonad
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), $k_3);
+})()))($k_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -789,9 +789,9 @@ function majControl_majMonad_majCont_majTrans_monadmajEffectmajContmajT($dictMon
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $Monad0_1_0 = (($dictMonadEffect_0)['Monad0'])(null);
-  $monadContT1_2_1 = ($GLOBALS['Control_Monad_Cont_Trans_monadContT'])($Monad0_1_0);
-  $__res = ["liftEffect" => ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Cont_Trans_monadTransContT'])['lift'])($Monad0_1_0), ($dictMonadEffect_0)['liftEffect']), "Monad0" => function($_dollar__unused_3) use ($monadContT1_2_1) {
+  $Monad0_1_0 = (($dictMonadEffect_0)->{'Monad0'})(null);
+  $monadContT1_2_1 = \Control\Monad\Cont\Trans\majControl_majMonad_majCont_majTrans_monadmajContmajT($Monad0_1_0);
+  $__res = (object)["liftEffect" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Cont_Trans_monadTransContT'])->{'lift'})($Monad0_1_0)))(($dictMonadEffect_0)->{'liftEffect'}), "Monad0" => function($_dollar__unused_3) use ($monadContT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadContT1_2_1;
   goto __end;;
@@ -811,9 +811,9 @@ function majControl_majMonad_majCont_majTrans_monadmajStatemajContmajT($dictMona
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $Monad0_1_0 = (($dictMonadState_0)['Monad0'])(null);
-  $monadContT1_2_1 = ($GLOBALS['Control_Monad_Cont_Trans_monadContT'])($Monad0_1_0);
-  $__res = ["state" => ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Cont_Trans_monadTransContT'])['lift'])($Monad0_1_0), ($dictMonadState_0)['state']), "Monad0" => function($_dollar__unused_3) use ($monadContT1_2_1) {
+  $Monad0_1_0 = (($dictMonadState_0)->{'Monad0'})(null);
+  $monadContT1_2_1 = \Control\Monad\Cont\Trans\majControl_majMonad_majCont_majTrans_monadmajContmajT($Monad0_1_0);
+  $__res = (object)["state" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Cont_Trans_monadTransContT'])->{'lift'})($Monad0_1_0)))(($dictMonadState_0)->{'state'}), "Monad0" => function($_dollar__unused_3) use ($monadContT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadContT1_2_1;
   goto __end;;
@@ -833,9 +833,9 @@ function majControl_majMonad_majCont_majTrans_monadmajSmajTmajContmajT($dictMona
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $Monad0_1_0 = (($dictMonadST_0)['Monad0'])(null);
-  $monadContT1_2_1 = ($GLOBALS['Control_Monad_Cont_Trans_monadContT'])($Monad0_1_0);
-  $__res = ["liftST" => ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Cont_Trans_monadTransContT'])['lift'])($Monad0_1_0), ($dictMonadST_0)['liftST']), "Monad0" => function($_dollar__unused_3) use ($monadContT1_2_1) {
+  $Monad0_1_0 = (($dictMonadST_0)->{'Monad0'})(null);
+  $monadContT1_2_1 = \Control\Monad\Cont\Trans\majControl_majMonad_majCont_majTrans_monadmajContmajT($Monad0_1_0);
+  $__res = (object)["liftST" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Cont_Trans_monadTransContT'])->{'lift'})($Monad0_1_0)))(($dictMonadST_0)->{'liftST'}), "Monad0" => function($_dollar__unused_3) use ($monadContT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadContT1_2_1;
   goto __end;;
@@ -855,8 +855,8 @@ function majControl_majMonad_majCont_majTrans_monoidmajContmajT($dictApplicative
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_2_0 = (($dictMonoid_1)['Semigroup0'])(null);
-  $semigroupContT2_3_1 = ["append" => (function() use ($__local_var_2_0) {
+  $__local_var_2_0 = (($dictMonoid_1)->{'Semigroup0'})(null);
+  $semigroupContT2_3_1 = (object)["append" => (function() use ($__local_var_2_0) {
   $__fn = function($a_3, $b_4 = null, $k_5 = null) use ($__local_var_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -864,7 +864,7 @@ function majControl_majMonad_majCont_majTrans_monoidmajContmajT($dictApplicative
   }
   $__res = ($a_3)(function($a_6) use ($__local_var_2_0, $b_4, $k_5) {
   $__num = \func_num_args();
-  $__local_var_7_1 = (($__local_var_2_0)['append'])($a_6);
+  $__local_var_7_1 = (($__local_var_2_0)->{'append'})($a_6);
   $__res = ($b_4)(function($a_8) use ($__local_var_7_1, $k_5) {
   $__num = \func_num_args();
   $__res = ($k_5)(($__local_var_7_1)($a_8));
@@ -882,8 +882,8 @@ function majControl_majMonad_majCont_majTrans_monoidmajContmajT($dictApplicative
   };
   return $__fn;
 })()];
-  $__local_var_4_3 = ($dictMonoid_1)['mempty'];
-  $__res = ["mempty" => function($k_5) use ($__local_var_4_3) {
+  $__local_var_4_3 = ($dictMonoid_1)->{'mempty'};
+  $__res = (object)["mempty" => function($k_5) use ($__local_var_4_3) {
   $__num = \func_num_args();
   $__res = ($k_5)($__local_var_4_3);
   goto __end;;

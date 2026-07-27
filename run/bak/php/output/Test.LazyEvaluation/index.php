@@ -136,22 +136,22 @@ function majTest_majLazymajEvaluation_force($v_0) {
 $GLOBALS['Test_LazyEvaluation_force'] = __NAMESPACE__ . '\\majTest_majLazymajEvaluation_force';
 
 // Test_LazyEvaluation_describe
-$GLOBALS['Test_LazyEvaluation_describe'] = ($GLOBALS['Effect_Console_log'])("Lazy Evaluation (1M Thunks Forced, 1k Depth):");
+$GLOBALS['Test_LazyEvaluation_describe'] = \Effect\Console\majEffect_majConsole_log("Lazy Evaluation (1M Thunks Forced, 1k Depth):");
 
 // Test_LazyEvaluation_defer_closure
 $GLOBALS['Test_LazyEvaluation_defer_closure'] = $GLOBALS['Test_LazyEvaluation_Lazy'];
 
 // Test_LazyEvaluation_defer
-function majTest_majLazymajEvaluation_defer($v_0) {
+function majTest_majLazymajEvaluation_defer($v_0, $v_1 = null) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majTest_majLazymajEvaluation_defer';
-  if ($__num < 1) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Test_LazyEvaluation_defer_closure'])($v_0);
+  $__res = ($GLOBALS['Test_LazyEvaluation_defer_closure'])($v_0, $v_1);
   goto __end;;
   __end:
-  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
 }
 $GLOBALS['Test_LazyEvaluation_defer'] = __NAMESPACE__ . '\\majTest_majLazymajEvaluation_defer';
 
@@ -220,7 +220,7 @@ default:
 break;
 };
   $__tco_0 = ($v_0 - 1);
-  $__tco_1 = ($v1_1 + ($GLOBALS['Test_LazyEvaluation_buildThunks'])(1000, function($v2_2) {
+  $__tco_1 = ($v1_1 + \Test\LazyEvaluation\majTest_majLazymajEvaluation_buildmajThunks(1000, function($v2_2) {
   $__num = \func_num_args();
   $__res = 0;
   goto __end;;
@@ -240,9 +240,9 @@ break;
 $GLOBALS['Test_LazyEvaluation_runManyTimes'] = __NAMESPACE__ . '\\majTest_majLazymajEvaluation_runmajManymajTimes';
 
 // Test_LazyEvaluation_act
-$GLOBALS['Test_LazyEvaluation_act'] = (($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(1000), function($dummy_0) {
+$GLOBALS['Test_LazyEvaluation_act'] = ((($GLOBALS['Effect_bindEffect'])->{'bind'})(\Bench\majBench_opaque(1000)))(function($dummy_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])(($GLOBALS['Test_LazyEvaluation_runManyTimes'])($dummy_0, 0)));
+  $__res = \Effect\Console\majEffect_majConsole_log((($GLOBALS['Data_Show_showInt'])->{'show'})(\Test\LazyEvaluation\majTest_majLazymajEvaluation_runmajManymajTimes($dummy_0, 0)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

@@ -130,9 +130,9 @@ function majData_majBifunctor_majJoin_showmajJoin($dictShow_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["show" => function($v_1) use ($dictShow_0) {
+  $__res = (object)["show" => function($v_1) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Join ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(Join "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_0)->{'show'})($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -158,7 +158,7 @@ function majData_majBifunctor_majJoin_ordmajJoin($dictOrd_0) {
 $GLOBALS['Data_Bifunctor_Join_ordJoin'] = __NAMESPACE__ . '\\majData_majBifunctor_majJoin_ordmajJoin';
 
 // Data_Bifunctor_Join_newtypeJoin
-$GLOBALS['Data_Bifunctor_Join_newtypeJoin'] = ["Coercible0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Bifunctor_Join_newtypeJoin'] = (object)["Coercible0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = null;
   goto __end;;
@@ -187,13 +187,13 @@ function majData_majBifunctor_majJoin_bifunctormajJoin($dictBifunctor_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["map" => (function() use ($dictBifunctor_0) {
+  $__res = (object)["map" => (function() use ($dictBifunctor_0) {
   $__fn = function($f_1, $v_2 = null) use ($dictBifunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictBifunctor_0)['bimap'])($f_1, $f_1, $v_2);
+  $__res = (((($dictBifunctor_0)->{'bimap'})($f_1))($f_1))($v_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -213,27 +213,27 @@ function majData_majBifunctor_majJoin_biapplymajJoin($dictBiapply_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($dictBiapply_0)['Bifunctor0'])(null);
-  $bifunctorJoin1_2_1 = ["map" => (function() use ($__local_var_1_0) {
+  $__local_var_1_0 = (($dictBiapply_0)->{'Bifunctor0'})(null);
+  $bifunctorJoin1_2_1 = (object)["map" => (function() use ($__local_var_1_0) {
   $__fn = function($f_2, $v_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_1_0)['bimap'])($f_2, $f_2, $v_3);
+  $__res = (((($__local_var_1_0)->{'bimap'})($f_2))($f_2))($v_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = ["apply" => (function() use ($dictBiapply_0) {
+  $__res = (object)["apply" => (function() use ($dictBiapply_0) {
   $__fn = function($v_3, $v1_4 = null) use ($dictBiapply_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictBiapply_0)['biapply'])($v_3, $v1_4);
+  $__res = ((($dictBiapply_0)->{'biapply'})($v_3))($v1_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -259,28 +259,28 @@ function majData_majBifunctor_majJoin_biapplicativemajJoin($dictBiapplicative_0)
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($dictBiapplicative_0)['Biapply0'])(null);
-  $__local_var_2_1 = (($__local_var_1_0)['Bifunctor0'])(null);
-  $bifunctorJoin1_3_2 = ["map" => (function() use ($__local_var_2_1) {
+  $__local_var_1_0 = (($dictBiapplicative_0)->{'Biapply0'})(null);
+  $__local_var_2_1 = (($__local_var_1_0)->{'Bifunctor0'})(null);
+  $bifunctorJoin1_3_2 = (object)["map" => (function() use ($__local_var_2_1) {
   $__fn = function($f_3, $v_4 = null) use ($__local_var_2_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_2_1)['bimap'])($f_3, $f_3, $v_4);
+  $__res = (((($__local_var_2_1)->{'bimap'})($f_3))($f_3))($v_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $biapplyJoin1_3_2 = ["apply" => (function() use ($__local_var_1_0) {
+  $biapplyJoin1_3_2 = (object)["apply" => (function() use ($__local_var_1_0) {
   $__fn = function($v_4, $v1_5 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_1_0)['biapply'])($v_4, $v1_5);
+  $__res = ((($__local_var_1_0)->{'biapply'})($v_4))($v1_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -293,9 +293,9 @@ function majData_majBifunctor_majJoin_biapplicativemajJoin($dictBiapplicative_0)
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["pure" => function($a_4) use ($dictBiapplicative_0) {
+  $__res = (object)["pure" => function($a_4) use ($dictBiapplicative_0) {
   $__num = \func_num_args();
-  $__res = (($dictBiapplicative_0)['bipure'])($a_4, $a_4);
+  $__res = ((($dictBiapplicative_0)->{'bipure'})($a_4))($a_4);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

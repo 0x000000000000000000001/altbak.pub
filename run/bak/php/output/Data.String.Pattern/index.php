@@ -132,25 +132,25 @@ function majData_majString_majPattern_majPattern($x_0) {
 $GLOBALS['Data_String_Pattern_Pattern'] = __NAMESPACE__ . '\\majData_majString_majPattern_majPattern';
 
 // Data_String_Pattern_showReplacement
-$GLOBALS['Data_String_Pattern_showReplacement'] = ["show" => function($v_0) {
+$GLOBALS['Data_String_Pattern_showReplacement'] = (object)["show" => function($v_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Replacement ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Show_showString'])['show'])($v_0), ")"));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(Replacement "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($GLOBALS['Data_Show_showString'])->{'show'})($v_0)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
 
 // Data_String_Pattern_showPattern
-$GLOBALS['Data_String_Pattern_showPattern'] = ["show" => function($v_0) {
+$GLOBALS['Data_String_Pattern_showPattern'] = (object)["show" => function($v_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Pattern ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Show_showString'])['show'])($v_0), ")"));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(Pattern "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($GLOBALS['Data_Show_showString'])->{'show'})($v_0)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
 
 // Data_String_Pattern_newtypeReplacement
-$GLOBALS['Data_String_Pattern_newtypeReplacement'] = ["Coercible0" => function($_dollar__unused_0) {
+$GLOBALS['Data_String_Pattern_newtypeReplacement'] = (object)["Coercible0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = null;
   goto __end;;
@@ -159,7 +159,7 @@ $GLOBALS['Data_String_Pattern_newtypeReplacement'] = ["Coercible0" => function($
 }];
 
 // Data_String_Pattern_newtypePattern
-$GLOBALS['Data_String_Pattern_newtypePattern'] = ["Coercible0" => function($_dollar__unused_0) {
+$GLOBALS['Data_String_Pattern_newtypePattern'] = (object)["Coercible0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = null;
   goto __end;;
@@ -168,13 +168,13 @@ $GLOBALS['Data_String_Pattern_newtypePattern'] = ["Coercible0" => function($_dol
 }];
 
 // Data_String_Pattern_eqReplacement
-$GLOBALS['Data_String_Pattern_eqReplacement'] = ["eq" => (function() {
+$GLOBALS['Data_String_Pattern_eqReplacement'] = (object)["eq" => (function() {
   $__fn = function($x_0, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Eq_eqString'])['eq'])($x_0, $y_1);
+  $__res = ((($GLOBALS['Data_Eq_eqString'])->{'eq'})($x_0))($y_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -183,13 +183,13 @@ $GLOBALS['Data_String_Pattern_eqReplacement'] = ["eq" => (function() {
 })()];
 
 // Data_String_Pattern_ordReplacement
-$GLOBALS['Data_String_Pattern_ordReplacement'] = ["compare" => (function() {
+$GLOBALS['Data_String_Pattern_ordReplacement'] = (object)["compare" => (function() {
   $__fn = function($x_0, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Ord_ordString'])['compare'])($x_0, $y_1);
+  $__res = ((($GLOBALS['Data_Ord_ordString'])->{'compare'})($x_0))($y_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -204,13 +204,13 @@ $GLOBALS['Data_String_Pattern_ordReplacement'] = ["compare" => (function() {
 }];
 
 // Data_String_Pattern_eqPattern
-$GLOBALS['Data_String_Pattern_eqPattern'] = ["eq" => (function() {
+$GLOBALS['Data_String_Pattern_eqPattern'] = (object)["eq" => (function() {
   $__fn = function($x_0, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Eq_eqString'])['eq'])($x_0, $y_1);
+  $__res = ((($GLOBALS['Data_Eq_eqString'])->{'eq'})($x_0))($y_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -219,13 +219,13 @@ $GLOBALS['Data_String_Pattern_eqPattern'] = ["eq" => (function() {
 })()];
 
 // Data_String_Pattern_ordPattern
-$GLOBALS['Data_String_Pattern_ordPattern'] = ["compare" => (function() {
+$GLOBALS['Data_String_Pattern_ordPattern'] = (object)["compare" => (function() {
   $__fn = function($x_0, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Ord_ordString'])['compare'])($x_0, $y_1);
+  $__res = ((($GLOBALS['Data_Ord_ordString'])->{'compare'})($x_0))($y_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

@@ -106,7 +106,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Control_Monad_Writer_writer_closure
-$GLOBALS['Control_Monad_Writer_writer_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Writer_Trans_WriterT'], ($GLOBALS['Data_Identity_applicativeIdentity'])['pure']);
+$GLOBALS['Control_Monad_Writer_writer_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Writer_Trans_WriterT']))(($GLOBALS['Data_Identity_applicativeIdentity'])->{'pure'});
 
 // Control_Monad_Writer_writer
 function majControl_majMonad_majWriter_writer($v_0) {
@@ -123,7 +123,7 @@ function majControl_majMonad_majWriter_writer($v_0) {
 $GLOBALS['Control_Monad_Writer_writer'] = __NAMESPACE__ . '\\majControl_majMonad_majWriter_writer';
 
 // Control_Monad_Writer_runWriter_closure
-$GLOBALS['Control_Monad_Writer_runWriter_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'], $GLOBALS['Control_Monad_Writer_Trans_runWriterT']);
+$GLOBALS['Control_Monad_Writer_runWriter_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($GLOBALS['Control_Monad_Writer_Trans_runWriterT']);
 
 // Control_Monad_Writer_runWriter
 function majControl_majMonad_majWriter_runmajWriter($v_0) {
@@ -146,7 +146,7 @@ function majControl_majMonad_majWriter_mapmajWriter($f_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0, $GLOBALS['Unsafe_Coerce_unsafeCoerce']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -160,7 +160,7 @@ function majControl_majMonad_majWriter_execmajWriter($m_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($GLOBALS['Control_Monad_Writer_runWriter'])($m_0))->{'value1'};
+  $__res = (\Control\Monad\Writer\majControl_majMonad_majWriter_runmajWriter($m_0))->{'value1'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

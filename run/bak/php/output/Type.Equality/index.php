@@ -98,7 +98,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Type_Equality_refl
-$GLOBALS['Type_Equality_refl'] = ["proof" => function($a_0) {
+$GLOBALS['Type_Equality_refl'] = (object)["proof" => function($a_0) {
   $__num = \func_num_args();
   $__res = $a_0;
   goto __end;;
@@ -119,7 +119,7 @@ function majType_majEquality_proof($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['proof'];
+  $__res = ($dict_0)->{'proof'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -133,7 +133,7 @@ function majType_majEquality_to($dictTypeEquals_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($dictTypeEquals_0)['proof'])(function($a_1) {
+  $__res = (($dictTypeEquals_0)->{'proof'})(function($a_1) {
   $__num = \func_num_args();
   $__res = $a_1;
   goto __end;;
@@ -153,7 +153,7 @@ function majType_majEquality_from($dictTypeEquals_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($dictTypeEquals_0)['proof'])(function($a_1) {
+  $__res = (($dictTypeEquals_0)->{'proof'})(function($a_1) {
   $__num = \func_num_args();
   $__res = $a_1;
   goto __end;;

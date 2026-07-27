@@ -127,9 +127,9 @@ function majData_majMonoid_majEndo_showmajEndo($dictShow_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["show" => function($v_1) use ($dictShow_0) {
+  $__res = (object)["show" => function($v_1) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Endo ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(Endo "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_0)->{'show'})($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -147,13 +147,13 @@ function majData_majMonoid_majEndo_semigroupmajEndo($dictSemigroupoid_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["append" => (function() use ($dictSemigroupoid_0) {
+  $__res = (object)["append" => (function() use ($dictSemigroupoid_0) {
   $__fn = function($v_1, $v1_2 = null) use ($dictSemigroupoid_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictSemigroupoid_0)['compose'])($v_1, $v1_2);
+  $__res = ((($dictSemigroupoid_0)->{'compose'})($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -187,21 +187,21 @@ function majData_majMonoid_majEndo_monoidmajEndo($dictCategory_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($dictCategory_0)['Semigroupoid0'])(null);
-  $semigroupEndo1_2_1 = ["append" => (function() use ($__local_var_1_0) {
+  $__local_var_1_0 = (($dictCategory_0)->{'Semigroupoid0'})(null);
+  $semigroupEndo1_2_1 = (object)["append" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2, $v1_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_1_0)['compose'])($v_2, $v1_3);
+  $__res = ((($__local_var_1_0)->{'compose'})($v_2))($v1_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = ["mempty" => ($dictCategory_0)['identity'], "Semigroup0" => function($_dollar__unused_3) use ($semigroupEndo1_2_1) {
+  $__res = (object)["mempty" => ($dictCategory_0)->{'identity'}, "Semigroup0" => function($_dollar__unused_3) use ($semigroupEndo1_2_1) {
   $__num = \func_num_args();
   $__res = $semigroupEndo1_2_1;
   goto __end;;

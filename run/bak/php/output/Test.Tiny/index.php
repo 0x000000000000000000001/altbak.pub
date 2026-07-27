@@ -97,8 +97,8 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
-final class Test_Tiny_Circle { public function __construct(public int $value0) {} }
-final class Test_Tiny_Rect { public function __construct(public int $value0, public int $value1) {} }
+final class Test_Tiny_Circle { public $tag = 'Circle'; public function __construct(public int $value0) {} }
+final class Test_Tiny_Rect { public $tag = 'Rect'; public function __construct(public int $value0, public int $value1) {} }
 
 // Test_Tiny_Circle
 $GLOBALS['Test_Tiny_Circle'] = function($value0) {

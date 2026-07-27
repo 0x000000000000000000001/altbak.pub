@@ -16,15 +16,15 @@ return Call_callCC(dict_0_box)
 	return cache_callCC
 }
 
-var cache_callCC__gopurs_runtime_Value_3542505365 gopurs_runtime.Value
-var once_callCC__gopurs_runtime_Value_3542505365 sync.Once
-func Get_callCC__gopurs_runtime_Value_3542505365() gopurs_runtime.Value {
-	once_callCC__gopurs_runtime_Value_3542505365.Do(func() {
-		cache_callCC__gopurs_runtime_Value_3542505365 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_callCC__gopurs_runtime_Value_3542505365(dict_0_box)
+var cache_callCC__func_gopurs_runtime_Value__func_func_interface____interface____interface____interface___3542505365 gopurs_runtime.Value
+var once_callCC__func_gopurs_runtime_Value__func_func_interface____interface____interface____interface___3542505365 sync.Once
+func Get_callCC__func_gopurs_runtime_Value__func_func_interface____interface____interface____interface___3542505365() gopurs_runtime.Value {
+	once_callCC__func_gopurs_runtime_Value__func_func_interface____interface____interface____interface___3542505365.Do(func() {
+		cache_callCC__func_gopurs_runtime_Value__func_func_interface____interface____interface____interface___3542505365 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_callCC__func_gopurs_runtime_Value__func_func_interface____interface____interface____interface___3542505365(dict_0_box)
 })
 	})
-	return cache_callCC__gopurs_runtime_Value_3542505365
+	return cache_callCC__func_gopurs_runtime_Value__func_func_interface____interface____interface____interface___3542505365
 }
 
 func Call_callCC(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -33,10 +33,8 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "callCC")
 }
 
-func Call_callCC__gopurs_runtime_Value_3542505365(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_callCC__func_gopurs_runtime_Value__func_func_interface____interface____interface____interface___3542505365(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "callCC")
 }
-
-

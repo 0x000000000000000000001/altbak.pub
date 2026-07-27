@@ -110,7 +110,7 @@ function majControl_majMonad_majExcept_withmajExcept($f_0, $v_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Identity_functorIdentity'])['map'])(function($v2_2) use ($f_0) {
+  $__res = ((($GLOBALS['Data_Identity_functorIdentity'])->{'map'})(function($v2_2) use ($f_0) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ($v2_2 instanceof \Data\Either\Data_Either_Right) {
@@ -128,7 +128,7 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, $v_1);
+}))($v_1);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -136,7 +136,7 @@ goto end_branch_0;;
 $GLOBALS['Control_Monad_Except_withExcept'] = __NAMESPACE__ . '\\majControl_majMonad_majExcept_withmajExcept';
 
 // Control_Monad_Except_runExcept_closure
-$GLOBALS['Control_Monad_Except_runExcept_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'], $GLOBALS['Control_Monad_Except_Trans_runExceptT']);
+$GLOBALS['Control_Monad_Except_runExcept_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($GLOBALS['Control_Monad_Except_Trans_runExceptT']);
 
 // Control_Monad_Except_runExcept
 function majControl_majMonad_majExcept_runmajExcept($v_0) {
@@ -159,7 +159,7 @@ function majControl_majMonad_majExcept_mapmajExcept($f_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0, $GLOBALS['Unsafe_Coerce_unsafeCoerce']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

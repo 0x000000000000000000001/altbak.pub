@@ -105,7 +105,7 @@ function majControl_majMonad_majGen_majClass_sized($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['sized'];
+  $__res = ($dict_0)->{'sized'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -119,7 +119,7 @@ function majControl_majMonad_majGen_majClass_resize($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['resize'];
+  $__res = ($dict_0)->{'resize'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -133,7 +133,7 @@ function majControl_majMonad_majGen_majClass_choosemajInt($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['chooseInt'];
+  $__res = ($dict_0)->{'chooseInt'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -147,7 +147,7 @@ function majControl_majMonad_majGen_majClass_choosemajFloat($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['chooseFloat'];
+  $__res = ($dict_0)->{'chooseFloat'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -161,7 +161,7 @@ function majControl_majMonad_majGen_majClass_choosemajBool($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['chooseBool'];
+  $__res = ($dict_0)->{'chooseBool'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

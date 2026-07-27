@@ -110,12 +110,12 @@ function majControl_majAlternative_guard($dictAlternative_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $empty_1_0 = ((($dictAlternative_0)['Plus1'])(null))['empty'];
+  $empty_1_0 = ((($dictAlternative_0)->{'Plus1'})(null))->{'empty'};
   $__res = function($v_2) use ($dictAlternative_0, $empty_1_0) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ($v_2) {
-$__t1 = (((($dictAlternative_0)['Applicative0'])(null))['pure'])($GLOBALS['Data_Unit_unit']);
+$__t1 = (((($dictAlternative_0)->{'Applicative0'})(null))->{'pure'})($GLOBALS['Data_Unit_unit']);
 goto end_branch_1;;
 };
   $__t1 = $empty_1_0;
@@ -132,7 +132,7 @@ goto end_branch_1;;
 $GLOBALS['Control_Alternative_guard'] = __NAMESPACE__ . '\\majControl_majAlternative_guard';
 
 // Control_Alternative_alternativeArray
-$GLOBALS['Control_Alternative_alternativeArray'] = ["Applicative0" => function($_dollar__unused_0) {
+$GLOBALS['Control_Alternative_alternativeArray'] = (object)["Applicative0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Applicative_applicativeArray'];
   goto __end;;

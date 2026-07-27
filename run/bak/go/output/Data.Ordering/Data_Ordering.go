@@ -36,7 +36,7 @@ var cache_showOrdering gopurs_runtime.Value
 var once_showOrdering sync.Once
 func Get_showOrdering() gopurs_runtime.Value {
 	once_showOrdering.Do(func() {
-		cache_showOrdering = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_showOrdering = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (v_0.Type == 9 && v_0.IntVal == 1527465420) {
@@ -67,7 +67,7 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
 return __t0
-}))
+}))))
 	})
 	return cache_showOrdering
 }
@@ -76,11 +76,11 @@ var cache_semigroupOrdering gopurs_runtime.Value
 var once_semigroupOrdering sync.Once
 func Get_semigroupOrdering() gopurs_runtime.Value {
 	once_semigroupOrdering.Do(func() {
-		cache_semigroupOrdering = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semigroupOrdering = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (v_0.Type == 9 && v_0.IntVal == 1527465420) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}
+__t0 = gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil})
 goto end_branch_0
 } else {
 
@@ -88,7 +88,7 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 380165415) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil}
+__t0 = gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil})
 goto end_branch_0
 } else {
 
@@ -107,7 +107,7 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
 return __t0
-}))
+}))))
 	})
 	return cache_semigroupOrdering
 }
@@ -127,7 +127,7 @@ var cache_eqOrdering gopurs_runtime.Value
 var once_eqOrdering sync.Once
 func Get_eqOrdering() gopurs_runtime.Value {
 	once_eqOrdering.Do(func() {
-		cache_eqOrdering = gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_eqOrdering = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (v_0.Type == 9 && v_0.IntVal == 1527465420) {
@@ -150,7 +150,7 @@ __t0 = gopurs_runtime.Bool(((v_0.Type == 9 && v_0.IntVal == 902936544)) && ((v1_
 }
 end_branch_0:
 return __t0
-}))
+}))))
 	})
 	return cache_eqOrdering
 }
@@ -176,7 +176,7 @@ _ = v_0
 var __t0 gopurs_runtime.Value
 {
 if (v_0.Type == 9 && v_0.IntVal == 380165415) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}
+__t0 = gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil})
 goto end_branch_0
 } else {
 
@@ -184,7 +184,7 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 902936544) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}
+__t0 = gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil})
 goto end_branch_0
 } else {
 
@@ -192,7 +192,7 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 1527465420) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil}
+__t0 = gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil})
 goto end_branch_0
 } else {
 
@@ -204,5 +204,3 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 end_branch_0:
 return __t0
 }
-
-

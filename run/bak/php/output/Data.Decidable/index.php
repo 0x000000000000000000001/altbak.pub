@@ -127,7 +127,7 @@ function majData_majDecidable_lose($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['lose'];
+  $__res = ($dict_0)->{'lose'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -141,7 +141,7 @@ function majData_majDecidable_lost($dictDecidable_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($dictDecidable_0)['lose'])($GLOBALS['Data_Decidable_identity']);
+  $__res = (($dictDecidable_0)->{'lose'})($GLOBALS['Data_Decidable_identity']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -149,7 +149,7 @@ function majData_majDecidable_lost($dictDecidable_0) {
 $GLOBALS['Data_Decidable_lost'] = __NAMESPACE__ . '\\majData_majDecidable_lost';
 
 // Data_Decidable_decidablePredicate
-$GLOBALS['Data_Decidable_decidablePredicate'] = ["lose" => (function() {
+$GLOBALS['Data_Decidable_decidablePredicate'] = (object)["lose" => (function() {
   $__fn = function($f_0, $a_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -196,9 +196,9 @@ function majData_majDecidable_decidablemajOp($dictMonoid_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $chooseOp_1_0 = ($GLOBALS['Data_Decide_chooseOp'])((($dictMonoid_0)['Semigroup0'])(null));
-  $divisibleOp_2_1 = ($GLOBALS['Data_Divisible_divisibleOp'])($dictMonoid_0);
-  $__res = ["lose" => (function() {
+  $chooseOp_1_0 = \Data\Decide\majData_majDecide_choosemajOp((($dictMonoid_0)->{'Semigroup0'})(null));
+  $divisibleOp_2_1 = \Data\Divisible\majData_majDivisible_divisiblemajOp($dictMonoid_0);
+  $__res = (object)["lose" => (function() {
   $__fn = function($f_3, $a_4 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -244,7 +244,7 @@ function majData_majDecidable_decidablemajOp($dictMonoid_0) {
 $GLOBALS['Data_Decidable_decidableOp'] = __NAMESPACE__ . '\\majData_majDecidable_decidablemajOp';
 
 // Data_Decidable_decidableEquivalence
-$GLOBALS['Data_Decidable_decidableEquivalence'] = ["lose" => (function() {
+$GLOBALS['Data_Decidable_decidableEquivalence'] = (object)["lose" => (function() {
   $__fn = function($f_0, $a_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -285,7 +285,7 @@ $GLOBALS['Data_Decidable_decidableEquivalence'] = ["lose" => (function() {
 }];
 
 // Data_Decidable_decidableComparison
-$GLOBALS['Data_Decidable_decidableComparison'] = ["lose" => (function() {
+$GLOBALS['Data_Decidable_decidableComparison'] = (object)["lose" => (function() {
   $__fn = function($f_0, $a_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {

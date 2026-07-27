@@ -127,13 +127,13 @@ function majTest_majChurch_tomajInt($n_0): int|\Closure {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($n_0)(function($x_1) {
+  $__res = (($n_0)(function($x_1) {
   $__num = \func_num_args();
   $__res = ($x_1 + 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, 0);
+}))(0);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -147,7 +147,7 @@ function majTest_majChurch_succmajC($n_0, $f_1 = null, $x_2 = null) {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($f_1)(($n_0)($f_1, $x_2));
+  $__res = ($f_1)((($n_0)($f_1))($x_2));
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -161,7 +161,7 @@ function majTest_majChurch_mulmajC($m_0, $n_1 = null, $f_2 = null, $x_3 = null) 
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ($m_0)(($n_1)($f_2), $x_3);
+  $__res = (($m_0)(($n_1)($f_2)))($x_3);
   goto __end;;
   __end:
   return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -195,7 +195,7 @@ break;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($f_2)(($__local_var_1_0)($f_2, $x_3));
+  $__res = ($f_2)((($__local_var_1_0)($f_2))($x_3));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -211,7 +211,7 @@ break;
 $GLOBALS['Test_Church_fromInt'] = __NAMESPACE__ . '\\majTest_majChurch_frommajInt';
 
 // Test_Church_describe
-$GLOBALS['Test_Church_describe'] = ($GLOBALS['Effect_Console_log'])("Church Numerals (100k Closure Applications):");
+$GLOBALS['Test_Church_describe'] = \Effect\Console\majEffect_majConsole_log("Church Numerals (100k Closure Applications):");
 
 // Test_Church_c10
 function majTest_majChurch_c10(int $n_0) {
@@ -242,7 +242,7 @@ function majTest_majChurch_c100(int $n_0) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($__local_var_1_0)(($__local_var_2_1)($f_3), $x_4);
+  $__res = (($__local_var_1_0)(($__local_var_2_1)($f_3)))($x_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -270,7 +270,7 @@ function majTest_majChurch_c10k(int $n_0) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($__local_var_1_0)(($__local_var_2_1)($f_3), $x_4);
+  $__res = (($__local_var_1_0)(($__local_var_2_1)($f_3)))($x_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -298,7 +298,7 @@ function majTest_majChurch_c100k(int $n_0) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($__local_var_1_0)(($__local_var_2_1)($f_3), $x_4);
+  $__res = (($__local_var_1_0)(($__local_var_2_1)($f_3)))($x_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -318,7 +318,7 @@ function majTest_majChurch_addmajC($m_0, $n_1 = null, $f_2 = null, $x_3 = null) 
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ($m_0)($f_2, ($n_1)($f_2, $x_3));
+  $__res = (($m_0)($f_2))((($n_1)($f_2))($x_3));
   goto __end;;
   __end:
   return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -326,9 +326,9 @@ function majTest_majChurch_addmajC($m_0, $n_1 = null, $f_2 = null, $x_3 = null) 
 $GLOBALS['Test_Church_addC'] = __NAMESPACE__ . '\\majTest_majChurch_addmajC';
 
 // Test_Church_act
-$GLOBALS['Test_Church_act'] = (($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(10), function($dummy_0) {
+$GLOBALS['Test_Church_act'] = ((($GLOBALS['Effect_bindEffect'])->{'bind'})(\Bench\majBench_opaque(10)))(function($dummy_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])(($GLOBALS['Test_Church_c100k'])($dummy_0, function($x_1) {
+  $__res = \Effect\Console\majEffect_majConsole_log((($GLOBALS['Data_Show_showInt'])->{'show'})(\Test\Church\majTest_majChurch_c100k($dummy_0, function($x_1) {
   $__num = \func_num_args();
   $__res = ($x_1 + 1);
   goto __end;;

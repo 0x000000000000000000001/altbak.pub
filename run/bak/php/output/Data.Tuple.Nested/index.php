@@ -106,7 +106,7 @@ function majData_majTuple_majNested_uncurry9($f_prime_0, $v_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($f_prime_0)(($v_1)->{'value0'}, (($v_1)->{'value1'})->{'value0'}, ((($v_1)->{'value1'})->{'value1'})->{'value0'}, (((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}, ((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, (((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, ((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, (((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, ((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
+  $__res = ((((((((($f_prime_0)(($v_1)->{'value0'}))((($v_1)->{'value1'})->{'value0'}))(((($v_1)->{'value1'})->{'value1'})->{'value0'}))((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -120,7 +120,7 @@ function majData_majTuple_majNested_uncurry8($f_prime_0, $v_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($f_prime_0)(($v_1)->{'value0'}, (($v_1)->{'value1'})->{'value0'}, ((($v_1)->{'value1'})->{'value1'})->{'value0'}, (((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}, ((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, (((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, ((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, (((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
+  $__res = (((((((($f_prime_0)(($v_1)->{'value0'}))((($v_1)->{'value1'})->{'value0'}))(((($v_1)->{'value1'})->{'value1'})->{'value0'}))((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -134,7 +134,7 @@ function majData_majTuple_majNested_uncurry7($f_prime_0, $v_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($f_prime_0)(($v_1)->{'value0'}, (($v_1)->{'value1'})->{'value0'}, ((($v_1)->{'value1'})->{'value1'})->{'value0'}, (((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}, ((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, (((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, ((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
+  $__res = ((((((($f_prime_0)(($v_1)->{'value0'}))((($v_1)->{'value1'})->{'value0'}))(((($v_1)->{'value1'})->{'value1'})->{'value0'}))((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -148,7 +148,7 @@ function majData_majTuple_majNested_uncurry6($f_prime_0, $v_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($f_prime_0)(($v_1)->{'value0'}, (($v_1)->{'value1'})->{'value0'}, ((($v_1)->{'value1'})->{'value1'})->{'value0'}, (((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}, ((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, (((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
+  $__res = (((((($f_prime_0)(($v_1)->{'value0'}))((($v_1)->{'value1'})->{'value0'}))(((($v_1)->{'value1'})->{'value1'})->{'value0'}))((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -162,7 +162,7 @@ function majData_majTuple_majNested_uncurry5($f_0, $v_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($f_0)(($v_1)->{'value0'}, (($v_1)->{'value1'})->{'value0'}, ((($v_1)->{'value1'})->{'value1'})->{'value0'}, (((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}, ((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
+  $__res = ((((($f_0)(($v_1)->{'value0'}))((($v_1)->{'value1'})->{'value0'}))(((($v_1)->{'value1'})->{'value1'})->{'value0'}))((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -176,7 +176,7 @@ function majData_majTuple_majNested_uncurry4($f_0, $v_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($f_0)(($v_1)->{'value0'}, (($v_1)->{'value1'})->{'value0'}, ((($v_1)->{'value1'})->{'value1'})->{'value0'}, (((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'});
+  $__res = (((($f_0)(($v_1)->{'value0'}))((($v_1)->{'value1'})->{'value0'}))(((($v_1)->{'value1'})->{'value1'})->{'value0'}))((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'});
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -190,7 +190,7 @@ function majData_majTuple_majNested_uncurry3($f_0, $v_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($f_0)(($v_1)->{'value0'}, (($v_1)->{'value1'})->{'value0'}, ((($v_1)->{'value1'})->{'value1'})->{'value0'});
+  $__res = ((($f_0)(($v_1)->{'value0'}))((($v_1)->{'value1'})->{'value0'}))(((($v_1)->{'value1'})->{'value1'})->{'value0'});
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -204,7 +204,7 @@ function majData_majTuple_majNested_uncurry2($f_0, $v_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($f_0)(($v_1)->{'value0'}, (($v_1)->{'value1'})->{'value0'});
+  $__res = (($f_0)(($v_1)->{'value0'}))((($v_1)->{'value1'})->{'value0'});
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -218,7 +218,7 @@ function majData_majTuple_majNested_uncurry10($f_prime_0, $v_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($f_prime_0)(($v_1)->{'value0'}, (($v_1)->{'value1'})->{'value0'}, ((($v_1)->{'value1'})->{'value1'})->{'value0'}, (((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}, ((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, (((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, ((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, (((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, ((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}, (((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
+  $__res = (((((((((($f_prime_0)(($v_1)->{'value0'}))((($v_1)->{'value1'})->{'value0'}))(((($v_1)->{'value1'})->{'value1'})->{'value0'}))((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))(((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'}))((((((((((($v_1)->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value1'})->{'value0'});
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

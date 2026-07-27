@@ -250,26 +250,246 @@ $exports['runSTFn10'] = $runSTFn10;
 return $exports;
   return $exports;
 });
-$GLOBALS['Control_Monad_ST_Uncurried_mkSTFn1'] = $ffi_Control_Monad_ST_Uncurried['mkSTFn1'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Control_Monad_ST_Uncurried_mkSTFn10'] = $ffi_Control_Monad_ST_Uncurried['mkSTFn10'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Control_Monad_ST_Uncurried_mkSTFn2'] = $ffi_Control_Monad_ST_Uncurried['mkSTFn2'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Control_Monad_ST_Uncurried_mkSTFn3'] = $ffi_Control_Monad_ST_Uncurried['mkSTFn3'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Control_Monad_ST_Uncurried_mkSTFn4'] = $ffi_Control_Monad_ST_Uncurried['mkSTFn4'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Control_Monad_ST_Uncurried_mkSTFn5'] = $ffi_Control_Monad_ST_Uncurried['mkSTFn5'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Control_Monad_ST_Uncurried_mkSTFn6'] = $ffi_Control_Monad_ST_Uncurried['mkSTFn6'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Control_Monad_ST_Uncurried_mkSTFn7'] = $ffi_Control_Monad_ST_Uncurried['mkSTFn7'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Control_Monad_ST_Uncurried_mkSTFn8'] = $ffi_Control_Monad_ST_Uncurried['mkSTFn8'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Control_Monad_ST_Uncurried_mkSTFn9'] = $ffi_Control_Monad_ST_Uncurried['mkSTFn9'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Control_Monad_ST_Uncurried_runSTFn1'] = $ffi_Control_Monad_ST_Uncurried['runSTFn1'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Control_Monad_ST_Uncurried_runSTFn10'] = $ffi_Control_Monad_ST_Uncurried['runSTFn10'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Control_Monad_ST_Uncurried_runSTFn2'] = $ffi_Control_Monad_ST_Uncurried['runSTFn2'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Control_Monad_ST_Uncurried_runSTFn3'] = $ffi_Control_Monad_ST_Uncurried['runSTFn3'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Control_Monad_ST_Uncurried_runSTFn4'] = $ffi_Control_Monad_ST_Uncurried['runSTFn4'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Control_Monad_ST_Uncurried_runSTFn5'] = $ffi_Control_Monad_ST_Uncurried['runSTFn5'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Control_Monad_ST_Uncurried_runSTFn6'] = $ffi_Control_Monad_ST_Uncurried['runSTFn6'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Control_Monad_ST_Uncurried_runSTFn7'] = $ffi_Control_Monad_ST_Uncurried['runSTFn7'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Control_Monad_ST_Uncurried_runSTFn8'] = $ffi_Control_Monad_ST_Uncurried['runSTFn8'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Control_Monad_ST_Uncurried_runSTFn9'] = $ffi_Control_Monad_ST_Uncurried['runSTFn9'] ?? new class { public function __invoke(...$args) { return $this; } };
+function majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn1($v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn1';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Control_Monad_ST_Uncurried;
+  $f = ($ffi_Control_Monad_ST_Uncurried['mkSTFn1'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Control_Monad_ST_Uncurried_mkSTFn1'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn1';
+
+function majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn10($v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn10';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Control_Monad_ST_Uncurried;
+  $f = ($ffi_Control_Monad_ST_Uncurried['mkSTFn10'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Control_Monad_ST_Uncurried_mkSTFn10'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn10';
+
+function majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn2($v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn2';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Control_Monad_ST_Uncurried;
+  $f = ($ffi_Control_Monad_ST_Uncurried['mkSTFn2'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Control_Monad_ST_Uncurried_mkSTFn2'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn2';
+
+function majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn3($v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn3';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Control_Monad_ST_Uncurried;
+  $f = ($ffi_Control_Monad_ST_Uncurried['mkSTFn3'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Control_Monad_ST_Uncurried_mkSTFn3'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn3';
+
+function majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn4($v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn4';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Control_Monad_ST_Uncurried;
+  $f = ($ffi_Control_Monad_ST_Uncurried['mkSTFn4'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Control_Monad_ST_Uncurried_mkSTFn4'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn4';
+
+function majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn5($v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn5';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Control_Monad_ST_Uncurried;
+  $f = ($ffi_Control_Monad_ST_Uncurried['mkSTFn5'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Control_Monad_ST_Uncurried_mkSTFn5'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn5';
+
+function majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn6($v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn6';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Control_Monad_ST_Uncurried;
+  $f = ($ffi_Control_Monad_ST_Uncurried['mkSTFn6'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Control_Monad_ST_Uncurried_mkSTFn6'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn6';
+
+function majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn7($v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn7';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Control_Monad_ST_Uncurried;
+  $f = ($ffi_Control_Monad_ST_Uncurried['mkSTFn7'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Control_Monad_ST_Uncurried_mkSTFn7'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn7';
+
+function majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn8($v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn8';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Control_Monad_ST_Uncurried;
+  $f = ($ffi_Control_Monad_ST_Uncurried['mkSTFn8'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Control_Monad_ST_Uncurried_mkSTFn8'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn8';
+
+function majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn9($v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn9';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Control_Monad_ST_Uncurried;
+  $f = ($ffi_Control_Monad_ST_Uncurried['mkSTFn9'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Control_Monad_ST_Uncurried_mkSTFn9'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn9';
+
+function majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn1($v0, $v1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn1';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Control_Monad_ST_Uncurried;
+  $f = ($ffi_Control_Monad_ST_Uncurried['runSTFn1'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Control_Monad_ST_Uncurried_runSTFn1'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn1';
+
+function majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn10($v0, $v1 = null, $v2 = null, $v3 = null, $v4 = null, $v5 = null, $v6 = null, $v7 = null, $v8 = null, $v9 = null, $v10 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn10';
+  if ($__num < 11) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 11);
+  }
+  global $ffi_Control_Monad_ST_Uncurried;
+  $f = ($ffi_Control_Monad_ST_Uncurried['runSTFn10'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1, $v2, $v3, $v4, $v5, $v6, $v7, $v8, $v9, $v10);
+}
+$GLOBALS['Control_Monad_ST_Uncurried_runSTFn10'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn10';
+
+function majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn2($v0, $v1 = null, $v2 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn2';
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  global $ffi_Control_Monad_ST_Uncurried;
+  $f = ($ffi_Control_Monad_ST_Uncurried['runSTFn2'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1, $v2);
+}
+$GLOBALS['Control_Monad_ST_Uncurried_runSTFn2'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn2';
+
+function majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn3($v0, $v1 = null, $v2 = null, $v3 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn3';
+  if ($__num < 4) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 4);
+  }
+  global $ffi_Control_Monad_ST_Uncurried;
+  $f = ($ffi_Control_Monad_ST_Uncurried['runSTFn3'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1, $v2, $v3);
+}
+$GLOBALS['Control_Monad_ST_Uncurried_runSTFn3'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn3';
+
+function majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn4($v0, $v1 = null, $v2 = null, $v3 = null, $v4 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn4';
+  if ($__num < 5) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 5);
+  }
+  global $ffi_Control_Monad_ST_Uncurried;
+  $f = ($ffi_Control_Monad_ST_Uncurried['runSTFn4'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1, $v2, $v3, $v4);
+}
+$GLOBALS['Control_Monad_ST_Uncurried_runSTFn4'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn4';
+
+function majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn5($v0, $v1 = null, $v2 = null, $v3 = null, $v4 = null, $v5 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn5';
+  if ($__num < 6) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 6);
+  }
+  global $ffi_Control_Monad_ST_Uncurried;
+  $f = ($ffi_Control_Monad_ST_Uncurried['runSTFn5'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1, $v2, $v3, $v4, $v5);
+}
+$GLOBALS['Control_Monad_ST_Uncurried_runSTFn5'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn5';
+
+function majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn6($v0, $v1 = null, $v2 = null, $v3 = null, $v4 = null, $v5 = null, $v6 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn6';
+  if ($__num < 7) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 7);
+  }
+  global $ffi_Control_Monad_ST_Uncurried;
+  $f = ($ffi_Control_Monad_ST_Uncurried['runSTFn6'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1, $v2, $v3, $v4, $v5, $v6);
+}
+$GLOBALS['Control_Monad_ST_Uncurried_runSTFn6'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn6';
+
+function majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn7($v0, $v1 = null, $v2 = null, $v3 = null, $v4 = null, $v5 = null, $v6 = null, $v7 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn7';
+  if ($__num < 8) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 8);
+  }
+  global $ffi_Control_Monad_ST_Uncurried;
+  $f = ($ffi_Control_Monad_ST_Uncurried['runSTFn7'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1, $v2, $v3, $v4, $v5, $v6, $v7);
+}
+$GLOBALS['Control_Monad_ST_Uncurried_runSTFn7'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn7';
+
+function majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn8($v0, $v1 = null, $v2 = null, $v3 = null, $v4 = null, $v5 = null, $v6 = null, $v7 = null, $v8 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn8';
+  if ($__num < 9) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 9);
+  }
+  global $ffi_Control_Monad_ST_Uncurried;
+  $f = ($ffi_Control_Monad_ST_Uncurried['runSTFn8'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1, $v2, $v3, $v4, $v5, $v6, $v7, $v8);
+}
+$GLOBALS['Control_Monad_ST_Uncurried_runSTFn8'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn8';
+
+function majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn9($v0, $v1 = null, $v2 = null, $v3 = null, $v4 = null, $v5 = null, $v6 = null, $v7 = null, $v8 = null, $v9 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn9';
+  if ($__num < 10) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 10);
+  }
+  global $ffi_Control_Monad_ST_Uncurried;
+  $f = ($ffi_Control_Monad_ST_Uncurried['runSTFn9'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1, $v2, $v3, $v4, $v5, $v6, $v7, $v8, $v9);
+}
+$GLOBALS['Control_Monad_ST_Uncurried_runSTFn9'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn9';
+
 
 
 

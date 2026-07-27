@@ -137,17 +137,72 @@ $exports['write'] = $write;
 return $exports;
   return $exports;
 });
-$GLOBALS['Effect_Ref__new'] = $ffi_Effect_Ref['_new'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Ref_modifyImpl'] = $ffi_Effect_Ref['modifyImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Ref_newWithSelf'] = $ffi_Effect_Ref['newWithSelf'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Ref_read'] = $ffi_Effect_Ref['read'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Effect_Ref_write'] = $ffi_Effect_Ref['write'] ?? new class { public function __invoke(...$args) { return $this; } };
+function majEffect_majRef__new($v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_majRef__new';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Effect_Ref;
+  $f = ($ffi_Effect_Ref['_new'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Effect_Ref__new'] = __NAMESPACE__ . '\\majEffect_majRef__new';
+
+function majEffect_majRef_modifymajImpl($v0, $v1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_majRef_modifymajImpl';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Effect_Ref;
+  $f = ($ffi_Effect_Ref['modifyImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Effect_Ref_modifyImpl'] = __NAMESPACE__ . '\\majEffect_majRef_modifymajImpl';
+
+function majEffect_majRef_newmajWithmajSelf($v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_majRef_newmajWithmajSelf';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Effect_Ref;
+  $f = ($ffi_Effect_Ref['newWithSelf'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Effect_Ref_newWithSelf'] = __NAMESPACE__ . '\\majEffect_majRef_newmajWithmajSelf';
+
+function majEffect_majRef_read($v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_majRef_read';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Effect_Ref;
+  $f = ($ffi_Effect_Ref['read'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Effect_Ref_read'] = __NAMESPACE__ . '\\majEffect_majRef_read';
+
+function majEffect_majRef_write($v0, $v1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_majRef_write';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Effect_Ref;
+  $f = ($ffi_Effect_Ref['write'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Effect_Ref_write'] = __NAMESPACE__ . '\\majEffect_majRef_write';
+
 
 
 
 
 // Effect_Ref_void_closure
-$GLOBALS['Effect_Ref_void_closure'] = (($GLOBALS['Effect_functorEffect'])['map'])(function($v_0) {
+$GLOBALS['Effect_Ref_void_closure'] = (($GLOBALS['Effect_functorEffect'])->{'map'})(function($v_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Unit_unit'];
   goto __end;;
@@ -213,7 +268,7 @@ function majEffect_majRef_modify($f_0) {
   $__res = ($GLOBALS['Effect_Ref_modifyImpl'])(function($s_1) use ($f_0) {
   $__num = \func_num_args();
   $s_prime_2_0 = ($f_0)($s_1);
-  $__res = ["state" => $s_prime_2_0, "value" => $s_prime_2_0];
+  $__res = (object)["state" => $s_prime_2_0, "value" => $s_prime_2_0];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -231,10 +286,10 @@ function majEffect_majRef_modify_($f_0, $s_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Effect_Ref_void'])(($GLOBALS['Effect_Ref_modifyImpl'])(function($s_2) use ($f_0) {
+  $__res = \Effect\Ref\majEffect_majRef_void(\Effect\Ref\majEffect_majRef_modifymajImpl(function($s_2) use ($f_0) {
   $__num = \func_num_args();
   $s_prime_3_0 = ($f_0)($s_2);
-  $__res = ["state" => $s_prime_3_0, "value" => $s_prime_3_0];
+  $__res = (object)["state" => $s_prime_3_0, "value" => $s_prime_3_0];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

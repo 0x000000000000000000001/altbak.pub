@@ -78,5 +78,3 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 end_branch_0:
 return __t0.IntVal
 }
-
-

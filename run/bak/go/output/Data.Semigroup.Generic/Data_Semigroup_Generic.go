@@ -11,9 +11,9 @@ var cache_genericSemigroupNoConstructors gopurs_runtime.Value
 var once_genericSemigroupNoConstructors sync.Once
 func Get_genericSemigroupNoConstructors() gopurs_runtime.Value {
 	once_genericSemigroupNoConstructors.Do(func() {
-		cache_genericSemigroupNoConstructors = gopurs_runtime.RecordDict1("genericAppend'", gopurs_runtime.Func2(func(a_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genericSemigroupNoConstructors = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("genericAppend'", gopurs_runtime.Func2(func(a_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return a_0
-}))
+}))))
 	})
 	return cache_genericSemigroupNoConstructors
 }
@@ -22,9 +22,9 @@ var cache_genericSemigroupNoArguments gopurs_runtime.Value
 var once_genericSemigroupNoArguments sync.Once
 func Get_genericSemigroupNoArguments() gopurs_runtime.Value {
 	once_genericSemigroupNoArguments.Do(func() {
-		cache_genericSemigroupNoArguments = gopurs_runtime.RecordDict1("genericAppend'", gopurs_runtime.Func2(func(a_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genericSemigroupNoArguments = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("genericAppend'", gopurs_runtime.Func2(func(a_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return a_0
-}))
+}))))
 	})
 	return cache_genericSemigroupNoArguments
 }
@@ -34,7 +34,7 @@ var once_genericSemigroupArgument sync.Once
 func Get_genericSemigroupArgument() gopurs_runtime.Value {
 	once_genericSemigroupArgument.Do(func() {
 		cache_genericSemigroupArgument = gopurs_runtime.Func(func(dictSemigroup_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericSemigroupArgument(dictSemigroup_0_box)
+return gopurs_runtime.Any(Call_genericSemigroupArgument(dictSemigroup_0_box))
 })
 	})
 	return cache_genericSemigroupArgument
@@ -51,15 +51,15 @@ return Call_genericAppend_prime(dict_0_box)
 	return cache_genericAppend_prime
 }
 
-var cache_genericAppend_prime__gopurs_runtime_Value_3136462287 gopurs_runtime.Value
-var once_genericAppend_prime__gopurs_runtime_Value_3136462287 sync.Once
-func Get_genericAppend_prime__gopurs_runtime_Value_3136462287() gopurs_runtime.Value {
-	once_genericAppend_prime__gopurs_runtime_Value_3136462287.Do(func() {
-		cache_genericAppend_prime__gopurs_runtime_Value_3136462287 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericAppend_prime__gopurs_runtime_Value_3136462287(dict_0_box)
+var cache_genericAppend_prime__func_gopurs_runtime_Value__interface____interface____interface___3136462287 gopurs_runtime.Value
+var once_genericAppend_prime__func_gopurs_runtime_Value__interface____interface____interface___3136462287 sync.Once
+func Get_genericAppend_prime__func_gopurs_runtime_Value__interface____interface____interface___3136462287() gopurs_runtime.Value {
+	once_genericAppend_prime__func_gopurs_runtime_Value__interface____interface____interface___3136462287.Do(func() {
+		cache_genericAppend_prime__func_gopurs_runtime_Value__interface____interface____interface___3136462287 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genericAppend_prime__func_gopurs_runtime_Value__interface____interface____interface___3136462287(dict_0_box)
 })
 	})
-	return cache_genericAppend_prime__gopurs_runtime_Value_3136462287
+	return cache_genericAppend_prime__func_gopurs_runtime_Value__interface____interface____interface___3136462287
 }
 
 var cache_genericSemigroupConstructor gopurs_runtime.Value
@@ -67,7 +67,7 @@ var once_genericSemigroupConstructor sync.Once
 func Get_genericSemigroupConstructor() gopurs_runtime.Value {
 	once_genericSemigroupConstructor.Do(func() {
 		cache_genericSemigroupConstructor = gopurs_runtime.Func(func(dictGenericSemigroup_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericSemigroupConstructor(dictGenericSemigroup_0_box)
+return gopurs_runtime.Any(Call_genericSemigroupConstructor(dictGenericSemigroup_0_box))
 })
 	})
 	return cache_genericSemigroupConstructor
@@ -78,7 +78,7 @@ var once_genericSemigroupProduct sync.Once
 func Get_genericSemigroupProduct() gopurs_runtime.Value {
 	once_genericSemigroupProduct.Do(func() {
 		cache_genericSemigroupProduct = gopurs_runtime.Func2(func(dictGenericSemigroup_0_box gopurs_runtime.Value, dictGenericSemigroup1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericSemigroupProduct(dictGenericSemigroup_0_box, dictGenericSemigroup1_1_box)
+return gopurs_runtime.Any(Call_genericSemigroupProduct(dictGenericSemigroup_0_box, dictGenericSemigroup1_1_box))
 })
 	})
 	return cache_genericSemigroupProduct
@@ -89,18 +89,18 @@ var once_genericAppend sync.Once
 func Get_genericAppend() gopurs_runtime.Value {
 	once_genericAppend.Do(func() {
 		cache_genericAppend = gopurs_runtime.Func4(func(dictGeneric_0_box gopurs_runtime.Value, dictGenericSemigroup_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value, y_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericAppend(dictGeneric_0_box, dictGenericSemigroup_1_box, x_2_box, y_3_box)
+return gopurs_runtime.Any(Call_genericAppend(dictGeneric_0_box, dictGenericSemigroup_1_box, gopurs_runtime.UnboxAny(x_2_box), gopurs_runtime.UnboxAny(y_3_box)))
 })
 	})
 	return cache_genericAppend
 }
 
-func Call_genericSemigroupArgument(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_genericSemigroupArgument(dictSemigroup_0_loop gopurs_runtime.Value) interface{} {
 var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
 _ = dictSemigroup_0
-return gopurs_runtime.RecordDict1("genericAppend'", gopurs_runtime.Func2(func(v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("genericAppend'", gopurs_runtime.Func2(func(v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append"), v_1, v1_2)
-}))
+})))
 }
 
 func Call_genericAppend_prime(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -109,40 +109,38 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "genericAppend'")
 }
 
-func Call_genericAppend_prime__gopurs_runtime_Value_3136462287(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_genericAppend_prime__func_gopurs_runtime_Value__interface____interface____interface___3136462287(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "genericAppend'")
 }
 
-func Call_genericSemigroupConstructor(dictGenericSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_genericSemigroupConstructor(dictGenericSemigroup_0_loop gopurs_runtime.Value) interface{} {
 var dictGenericSemigroup_0 gopurs_runtime.Value = dictGenericSemigroup_0_loop
 _ = dictGenericSemigroup_0
-return gopurs_runtime.RecordDict1("genericAppend'", gopurs_runtime.Func2(func(v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("genericAppend'", gopurs_runtime.Func2(func(v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericSemigroup_0, "genericAppend'"), v_1, v1_2)
-}))
+})))
 }
 
-func Call_genericSemigroupProduct(dictGenericSemigroup_0_loop gopurs_runtime.Value, dictGenericSemigroup1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_genericSemigroupProduct(dictGenericSemigroup_0_loop gopurs_runtime.Value, dictGenericSemigroup1_1_loop gopurs_runtime.Value) interface{} {
 var dictGenericSemigroup_0 gopurs_runtime.Value = dictGenericSemigroup_0_loop
 _ = dictGenericSemigroup_0
 var dictGenericSemigroup1_1 gopurs_runtime.Value = dictGenericSemigroup1_1_loop
 _ = dictGenericSemigroup1_1
-return gopurs_runtime.RecordDict1("genericAppend'", gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericSemigroup_0, "genericAppend'"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0, (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericSemigroup1_1, "genericAppend'"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1, (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V1)})}
-}))
+return gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("genericAppend'", gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.UnboxAny(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericSemigroup_0, "genericAppend'"), gopurs_runtime.Any((*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0), gopurs_runtime.Any((*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V0))), gopurs_runtime.UnboxAny(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericSemigroup1_1, "genericAppend'"), gopurs_runtime.Any((*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1), gopurs_runtime.Any((*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V1)))})})
+})))
 }
 
-func Call_genericAppend(dictGeneric_0_loop gopurs_runtime.Value, dictGenericSemigroup_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value, y_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_genericAppend(dictGeneric_0_loop gopurs_runtime.Value, dictGenericSemigroup_1_loop gopurs_runtime.Value, x_2_loop interface{}, y_3_loop interface{}) interface{} {
 var dictGeneric_0 gopurs_runtime.Value = dictGeneric_0_loop
 _ = dictGeneric_0
 var dictGenericSemigroup_1 gopurs_runtime.Value = dictGenericSemigroup_1_loop
 _ = dictGenericSemigroup_1
-var x_2 gopurs_runtime.Value = x_2_loop
+var x_2 interface{} = x_2_loop
 _ = x_2
-var y_3 gopurs_runtime.Value = y_3_loop
+var y_3 interface{} = y_3_loop
 _ = y_3
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "to"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericSemigroup_1, "genericAppend'"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "from"), x_2), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "from"), y_3)))
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "to"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericSemigroup_1, "genericAppend'"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "from"), gopurs_runtime.Any(x_2)), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "from"), gopurs_runtime.Any(y_3)))))
 }
-
-

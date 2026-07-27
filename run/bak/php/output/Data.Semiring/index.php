@@ -129,10 +129,54 @@ $exports['numMul'] = $numMul;
 return $exports;
   return $exports;
 });
-$GLOBALS['Data_Semiring_intAdd'] = $ffi_Data_Semiring['intAdd'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Semiring_intMul'] = $ffi_Data_Semiring['intMul'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Semiring_numAdd'] = $ffi_Data_Semiring['numAdd'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Semiring_numMul'] = $ffi_Data_Semiring['numMul'] ?? new class { public function __invoke(...$args) { return $this; } };
+function majData_majSemiring_intmajAdd(int $v0, $v1 = null): int|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majSemiring_intmajAdd';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Data_Semiring;
+  $f = ($ffi_Data_Semiring['intAdd'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Data_Semiring_intAdd'] = __NAMESPACE__ . '\\majData_majSemiring_intmajAdd';
+
+function majData_majSemiring_intmajMul(int $v0, $v1 = null): int|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majSemiring_intmajMul';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Data_Semiring;
+  $f = ($ffi_Data_Semiring['intMul'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Data_Semiring_intMul'] = __NAMESPACE__ . '\\majData_majSemiring_intmajMul';
+
+function majData_majSemiring_nummajAdd(float $v0, $v1 = null): float|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majSemiring_nummajAdd';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Data_Semiring;
+  $f = ($ffi_Data_Semiring['numAdd'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Data_Semiring_numAdd'] = __NAMESPACE__ . '\\majData_majSemiring_nummajAdd';
+
+function majData_majSemiring_nummajMul(float $v0, $v1 = null): float|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majSemiring_nummajMul';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Data_Semiring;
+  $f = ($ffi_Data_Semiring['numMul'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Data_Semiring_numMul'] = __NAMESPACE__ . '\\majData_majSemiring_nummajMul';
+
 
 
 
@@ -144,7 +188,7 @@ function majData_majSemiring_zeromajRecord($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['zeroRecord'];
+  $__res = ($dict_0)->{'zeroRecord'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -158,7 +202,7 @@ function majData_majSemiring_zero($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['zero'];
+  $__res = ($dict_0)->{'zero'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -166,7 +210,7 @@ function majData_majSemiring_zero($dict_0) {
 $GLOBALS['Data_Semiring_zero'] = __NAMESPACE__ . '\\majData_majSemiring_zero';
 
 // Data_Semiring_semiringUnit
-$GLOBALS['Data_Semiring_semiringUnit'] = ["add" => (function() {
+$GLOBALS['Data_Semiring_semiringUnit'] = (object)["add" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -193,13 +237,13 @@ $GLOBALS['Data_Semiring_semiringUnit'] = ["add" => (function() {
 })(), "one" => $GLOBALS['Data_Unit_unit']];
 
 // Data_Semiring_semiringRecordNil
-$GLOBALS['Data_Semiring_semiringRecordNil'] = ["addRecord" => (function() {
+$GLOBALS['Data_Semiring_semiringRecordNil'] = (object)["addRecord" => (function() {
   $__fn = function($v_0, $v1_1 = null, $v2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = [];
+  $__res = (object)[];
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -211,7 +255,7 @@ $GLOBALS['Data_Semiring_semiringRecordNil'] = ["addRecord" => (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = [];
+  $__res = (object)[];
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -223,7 +267,7 @@ $GLOBALS['Data_Semiring_semiringRecordNil'] = ["addRecord" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = [];
+  $__res = (object)[];
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -235,7 +279,7 @@ $GLOBALS['Data_Semiring_semiringRecordNil'] = ["addRecord" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = [];
+  $__res = (object)[];
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -244,7 +288,7 @@ $GLOBALS['Data_Semiring_semiringRecordNil'] = ["addRecord" => (function() {
 })()];
 
 // Data_Semiring_semiringProxy
-$GLOBALS['Data_Semiring_semiringProxy'] = ["add" => (function() {
+$GLOBALS['Data_Semiring_semiringProxy'] = (object)["add" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -271,10 +315,10 @@ $GLOBALS['Data_Semiring_semiringProxy'] = ["add" => (function() {
 })(), "one" => new \Type\Proxy\Type_Proxy_Proxy(), "zero" => new \Type\Proxy\Type_Proxy_Proxy()];
 
 // Data_Semiring_semiringNumber
-$GLOBALS['Data_Semiring_semiringNumber'] = ["add" => $GLOBALS['Data_Semiring_numAdd'], "zero" => 0.0, "mul" => $GLOBALS['Data_Semiring_numMul'], "one" => 1.0];
+$GLOBALS['Data_Semiring_semiringNumber'] = (object)["add" => $GLOBALS['Data_Semiring_numAdd'], "zero" => 0.0, "mul" => $GLOBALS['Data_Semiring_numMul'], "one" => 1.0];
 
 // Data_Semiring_semiringInt
-$GLOBALS['Data_Semiring_semiringInt'] = ["add" => $GLOBALS['Data_Semiring_intAdd'], "zero" => 0, "mul" => $GLOBALS['Data_Semiring_intMul'], "one" => 1];
+$GLOBALS['Data_Semiring_semiringInt'] = (object)["add" => $GLOBALS['Data_Semiring_intAdd'], "zero" => 0, "mul" => $GLOBALS['Data_Semiring_intMul'], "one" => 1];
 
 // Data_Semiring_oneRecord
 function majData_majSemiring_onemajRecord($dict_0) {
@@ -283,7 +327,7 @@ function majData_majSemiring_onemajRecord($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['oneRecord'];
+  $__res = ($dict_0)->{'oneRecord'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -297,7 +341,7 @@ function majData_majSemiring_one($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['one'];
+  $__res = ($dict_0)->{'one'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -311,7 +355,7 @@ function majData_majSemiring_mulmajRecord($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['mulRecord'];
+  $__res = ($dict_0)->{'mulRecord'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -325,7 +369,7 @@ function majData_majSemiring_mul($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['mul'];
+  $__res = ($dict_0)->{'mul'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -339,7 +383,7 @@ function majData_majSemiring_addmajRecord($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['addRecord'];
+  $__res = ($dict_0)->{'addRecord'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -353,7 +397,7 @@ function majData_majSemiring_semiringmajRecord($_dollar__unused_0, $dictSemiring
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ["add" => (($dictSemiringRecord_1)['addRecord'])(new \Type\Proxy\Type_Proxy_Proxy()), "mul" => (($dictSemiringRecord_1)['mulRecord'])(new \Type\Proxy\Type_Proxy_Proxy()), "one" => (($dictSemiringRecord_1)['oneRecord'])(new \Type\Proxy\Type_Proxy_Proxy(), new \Type\Proxy\Type_Proxy_Proxy()), "zero" => (($dictSemiringRecord_1)['zeroRecord'])(new \Type\Proxy\Type_Proxy_Proxy(), new \Type\Proxy\Type_Proxy_Proxy())];
+  $__res = (object)["add" => (($dictSemiringRecord_1)->{'addRecord'})(new \Type\Proxy\Type_Proxy_Proxy()), "mul" => (($dictSemiringRecord_1)->{'mulRecord'})(new \Type\Proxy\Type_Proxy_Proxy()), "one" => ((($dictSemiringRecord_1)->{'oneRecord'})(new \Type\Proxy\Type_Proxy_Proxy()))(new \Type\Proxy\Type_Proxy_Proxy()), "zero" => ((($dictSemiringRecord_1)->{'zeroRecord'})(new \Type\Proxy\Type_Proxy_Proxy()))(new \Type\Proxy\Type_Proxy_Proxy())];
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -367,7 +411,7 @@ function majData_majSemiring_add($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['add'];
+  $__res = ($dict_0)->{'add'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -381,15 +425,15 @@ function majData_majSemiring_semiringmajFn($dictSemiring_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $zero1_1_0 = ($dictSemiring_0)['zero'];
-  $one1_2_1 = ($dictSemiring_0)['one'];
-  $__res = ["add" => (function() use ($dictSemiring_0) {
+  $zero1_1_0 = ($dictSemiring_0)->{'zero'};
+  $one1_2_1 = ($dictSemiring_0)->{'one'};
+  $__res = (object)["add" => (function() use ($dictSemiring_0) {
   $__fn = function($f_3, $g_4 = null, $x_5 = null) use ($dictSemiring_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictSemiring_0)['add'])(($f_3)($x_5), ($g_4)($x_5));
+  $__res = ((($dictSemiring_0)->{'add'})(($f_3)($x_5)))(($g_4)($x_5));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -407,7 +451,7 @@ function majData_majSemiring_semiringmajFn($dictSemiring_0) {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictSemiring_0)['mul'])(($f_3)($x_5), ($g_4)($x_5));
+  $__res = ((($dictSemiring_0)->{'mul'})(($f_3)($x_5)))(($g_4)($x_5));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -433,17 +477,17 @@ function majData_majSemiring_semiringmajRecordmajCons($dictIsSymbol_0, $_dollar_
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $one1_4_0 = ($dictSemiring_3)['one'];
-  $zero1_5_1 = ($dictSemiring_3)['zero'];
-  $__res = ["addRecord" => (function() use ($dictIsSymbol_0, $dictSemiringRecord_2, $dictSemiring_3) {
+  $one1_4_0 = ($dictSemiring_3)->{'one'};
+  $zero1_5_1 = ($dictSemiring_3)->{'zero'};
+  $__res = (object)["addRecord" => (function() use ($dictIsSymbol_0, $dictSemiringRecord_2, $dictSemiring_3) {
   $__fn = function($v_6, $ra_7 = null, $rb_8 = null) use ($dictIsSymbol_0, $dictSemiringRecord_2, $dictSemiring_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $key_9_2 = (($dictIsSymbol_0)['reflectSymbol'])(new \Type\Proxy\Type_Proxy_Proxy());
+  $key_9_2 = (($dictIsSymbol_0)->{'reflectSymbol'})(new \Type\Proxy\Type_Proxy_Proxy());
   $get_10_3 = ($GLOBALS['Record_Unsafe_unsafeGet'])($key_9_2);
-  $__res = ($GLOBALS['Record_Unsafe_unsafeSet'])($key_9_2, (($dictSemiring_3)['add'])(($get_10_3)($ra_7), ($get_10_3)($rb_8)), (($dictSemiringRecord_2)['addRecord'])(new \Type\Proxy\Type_Proxy_Proxy(), $ra_7, $rb_8));
+  $__res = \Record\Unsafe\majRecord_majUnsafe_unsafemajSet($key_9_2, ((($dictSemiring_3)->{'add'})(($get_10_3)($ra_7)))(($get_10_3)($rb_8)), (((($dictSemiringRecord_2)->{'addRecord'})(new \Type\Proxy\Type_Proxy_Proxy()))($ra_7))($rb_8));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -455,9 +499,9 @@ function majData_majSemiring_semiringmajRecordmajCons($dictIsSymbol_0, $_dollar_
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $key_9_4 = (($dictIsSymbol_0)['reflectSymbol'])(new \Type\Proxy\Type_Proxy_Proxy());
+  $key_9_4 = (($dictIsSymbol_0)->{'reflectSymbol'})(new \Type\Proxy\Type_Proxy_Proxy());
   $get_10_5 = ($GLOBALS['Record_Unsafe_unsafeGet'])($key_9_4);
-  $__res = ($GLOBALS['Record_Unsafe_unsafeSet'])($key_9_4, (($dictSemiring_3)['mul'])(($get_10_5)($ra_7), ($get_10_5)($rb_8)), (($dictSemiringRecord_2)['mulRecord'])(new \Type\Proxy\Type_Proxy_Proxy(), $ra_7, $rb_8));
+  $__res = \Record\Unsafe\majRecord_majUnsafe_unsafemajSet($key_9_4, ((($dictSemiring_3)->{'mul'})(($get_10_5)($ra_7)))(($get_10_5)($rb_8)), (((($dictSemiringRecord_2)->{'mulRecord'})(new \Type\Proxy\Type_Proxy_Proxy()))($ra_7))($rb_8));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -469,7 +513,7 @@ function majData_majSemiring_semiringmajRecordmajCons($dictIsSymbol_0, $_dollar_
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Record_Unsafe_unsafeSet'])((($dictIsSymbol_0)['reflectSymbol'])(new \Type\Proxy\Type_Proxy_Proxy()), $one1_4_0, (($dictSemiringRecord_2)['oneRecord'])(new \Type\Proxy\Type_Proxy_Proxy(), new \Type\Proxy\Type_Proxy_Proxy()));
+  $__res = \Record\Unsafe\majRecord_majUnsafe_unsafemajSet((($dictIsSymbol_0)->{'reflectSymbol'})(new \Type\Proxy\Type_Proxy_Proxy()), $one1_4_0, ((($dictSemiringRecord_2)->{'oneRecord'})(new \Type\Proxy\Type_Proxy_Proxy()))(new \Type\Proxy\Type_Proxy_Proxy()));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -481,7 +525,7 @@ function majData_majSemiring_semiringmajRecordmajCons($dictIsSymbol_0, $_dollar_
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Record_Unsafe_unsafeSet'])((($dictIsSymbol_0)['reflectSymbol'])(new \Type\Proxy\Type_Proxy_Proxy()), $zero1_5_1, (($dictSemiringRecord_2)['zeroRecord'])(new \Type\Proxy\Type_Proxy_Proxy(), new \Type\Proxy\Type_Proxy_Proxy()));
+  $__res = \Record\Unsafe\majRecord_majUnsafe_unsafemajSet((($dictIsSymbol_0)->{'reflectSymbol'})(new \Type\Proxy\Type_Proxy_Proxy()), $zero1_5_1, ((($dictSemiringRecord_2)->{'zeroRecord'})(new \Type\Proxy\Type_Proxy_Proxy()))(new \Type\Proxy\Type_Proxy_Proxy()));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

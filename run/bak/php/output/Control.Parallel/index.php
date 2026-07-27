@@ -126,8 +126,8 @@ function majControl_majParallel_parmajTraverse_($dictParallel_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $sequential_1_0 = ($dictParallel_0)['sequential'];
-  $parallel_2_1 = ($dictParallel_0)['parallel'];
+  $sequential_1_0 = ($dictParallel_0)->{'sequential'};
+  $parallel_2_1 = ($dictParallel_0)->{'parallel'};
   $__res = function($dictApplicative_3) use ($parallel_2_1, $sequential_1_0) {
   $__num = \func_num_args();
   $traverse__4_2 = ($GLOBALS['Data_Foldable_traverse_'])($dictApplicative_3);
@@ -136,7 +136,7 @@ function majControl_majParallel_parmajTraverse_($dictParallel_0) {
   $traverse_1_6_3 = ($traverse__4_2)($dictFoldable_5);
   $__res = function($f_7) use ($parallel_2_1, $sequential_1_0, $traverse_1_6_3) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($sequential_1_0, ($traverse_1_6_3)(($GLOBALS['Control_Semigroupoid_composeImpl'])($parallel_2_1, $f_7)));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($sequential_1_0))(($traverse_1_6_3)((($GLOBALS['Control_Semigroupoid_composeImpl'])($parallel_2_1))($f_7)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -162,18 +162,18 @@ function majControl_majParallel_parmajTraverse($dictParallel_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $sequential_1_0 = ($dictParallel_0)['sequential'];
-  $parallel_2_1 = ($dictParallel_0)['parallel'];
+  $sequential_1_0 = ($dictParallel_0)->{'sequential'};
+  $parallel_2_1 = ($dictParallel_0)->{'parallel'};
   $__res = (function() use ($parallel_2_1, $sequential_1_0) {
   $__fn = function($dictApplicative_3, $dictTraversable_4 = null) use ($parallel_2_1, $sequential_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $traverse_5_2 = (($dictTraversable_4)['traverse'])($dictApplicative_3);
+  $traverse_5_2 = (($dictTraversable_4)->{'traverse'})($dictApplicative_3);
   $__res = function($f_6) use ($parallel_2_1, $sequential_1_0, $traverse_5_2) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($sequential_1_0, ($traverse_5_2)(($GLOBALS['Control_Semigroupoid_composeImpl'])($parallel_2_1, $f_6)));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($sequential_1_0))(($traverse_5_2)((($GLOBALS['Control_Semigroupoid_composeImpl'])($parallel_2_1))($f_6)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -203,7 +203,7 @@ function majControl_majParallel_parmajSequence_($dictParallel_0) {
   $parTraverse_2_3_1 = ($parTraverse_1_1_0)($dictApplicative_2);
   $__res = function($dictFoldable_4) use ($parTraverse_2_3_1) {
   $__num = \func_num_args();
-  $__res = ($parTraverse_2_3_1)($dictFoldable_4, $GLOBALS['Control_Parallel_identity']);
+  $__res = (($parTraverse_2_3_1)($dictFoldable_4))($GLOBALS['Control_Parallel_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -231,7 +231,7 @@ function majControl_majParallel_parmajSequence($dictParallel_0) {
   $parTraverse2_3_1 = ($parTraverse1_1_0)($dictApplicative_2);
   $__res = function($dictTraversable_4) use ($parTraverse2_3_1) {
   $__num = \func_num_args();
-  $__res = ($parTraverse2_3_1)($dictTraversable_4, $GLOBALS['Control_Parallel_identity']);
+  $__res = (($parTraverse2_3_1)($dictTraversable_4))($GLOBALS['Control_Parallel_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -253,21 +253,21 @@ function majControl_majParallel_parmajOnemajOfmajMap($dictParallel_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $sequential_1_0 = ($dictParallel_0)['sequential'];
-  $parallel_2_1 = ($dictParallel_0)['parallel'];
+  $sequential_1_0 = ($dictParallel_0)->{'sequential'};
+  $parallel_2_1 = ($dictParallel_0)->{'parallel'};
   $__res = function($dictAlternative_3) use ($parallel_2_1, $sequential_1_0) {
   $__num = \func_num_args();
-  $Plus1_4_2 = (($dictAlternative_3)['Plus1'])(null);
+  $Plus1_4_2 = (($dictAlternative_3)->{'Plus1'})(null);
   $__res = function($dictFoldable_5) use ($Plus1_4_2, $parallel_2_1, $sequential_1_0) {
   $__num = \func_num_args();
-  $oneOfMap_6_3 = ($GLOBALS['Data_Foldable_oneOfMap'])($dictFoldable_5, $Plus1_4_2);
+  $oneOfMap_6_3 = (($GLOBALS['Data_Foldable_oneOfMap'])($dictFoldable_5))($Plus1_4_2);
   $__res = (function() use ($oneOfMap_6_3, $parallel_2_1, $sequential_1_0) {
   $__fn = function($dictFunctor_7, $f_8 = null) use ($oneOfMap_6_3, $parallel_2_1, $sequential_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($sequential_1_0, ($oneOfMap_6_3)(($GLOBALS['Control_Semigroupoid_composeImpl'])($parallel_2_1, $f_8)));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($sequential_1_0))(($oneOfMap_6_3)((($GLOBALS['Control_Semigroupoid_composeImpl'])($parallel_2_1))($f_8)));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -295,17 +295,17 @@ function majControl_majParallel_parmajOnemajOf($dictParallel_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $sequential_1_0 = ($dictParallel_0)['sequential'];
-  $parallel_2_1 = ($dictParallel_0)['parallel'];
+  $sequential_1_0 = ($dictParallel_0)->{'sequential'};
+  $parallel_2_1 = ($dictParallel_0)->{'parallel'};
   $__res = function($dictAlternative_3) use ($parallel_2_1, $sequential_1_0) {
   $__num = \func_num_args();
-  $Plus1_4_2 = (($dictAlternative_3)['Plus1'])(null);
+  $Plus1_4_2 = (($dictAlternative_3)->{'Plus1'})(null);
   $__res = function($dictFoldable_5) use ($Plus1_4_2, $parallel_2_1, $sequential_1_0) {
   $__num = \func_num_args();
-  $oneOfMap_6_3 = ($GLOBALS['Data_Foldable_oneOfMap'])($dictFoldable_5, $Plus1_4_2);
+  $oneOfMap_6_3 = (($GLOBALS['Data_Foldable_oneOfMap'])($dictFoldable_5))($Plus1_4_2);
   $__res = function($dictFunctor_7) use ($oneOfMap_6_3, $parallel_2_1, $sequential_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($sequential_1_0, ($oneOfMap_6_3)($parallel_2_1));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($sequential_1_0))(($oneOfMap_6_3)($parallel_2_1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -331,7 +331,7 @@ function majControl_majParallel_parmajApply($dictParallel_0, $mf_1 = null, $ma_2
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictParallel_0)['sequential'])((((($dictParallel_0)['Apply1'])(null))['apply'])((($dictParallel_0)['parallel'])($mf_1), (($dictParallel_0)['parallel'])($ma_2)));
+  $__res = (($dictParallel_0)->{'sequential'})(((((($dictParallel_0)->{'Apply1'})(null))->{'apply'})((($dictParallel_0)->{'parallel'})($mf_1)))((($dictParallel_0)->{'parallel'})($ma_2)));
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;

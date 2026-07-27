@@ -126,9 +126,9 @@ function majData_majOrd_majDown_showmajDown($dictShow_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["show" => function($v_1) use ($dictShow_0) {
+  $__res = (object)["show" => function($v_1) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Down ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(Down "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_0)->{'show'})($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -140,7 +140,7 @@ function majData_majOrd_majDown_showmajDown($dictShow_0) {
 $GLOBALS['Data_Ord_Down_showDown'] = __NAMESPACE__ . '\\majData_majOrd_majDown_showmajDown';
 
 // Data_Ord_Down_newtypeDown
-$GLOBALS['Data_Ord_Down_newtypeDown'] = ["Coercible0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Ord_Down_newtypeDown'] = (object)["Coercible0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = null;
   goto __end;;
@@ -169,14 +169,14 @@ function majData_majOrd_majDown_ordmajDown($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($dictOrd_0)['Eq0'])(null);
-  $__res = ["compare" => (function() use ($dictOrd_0) {
+  $__local_var_1_0 = (($dictOrd_0)->{'Eq0'})(null);
+  $__res = (object)["compare" => (function() use ($dictOrd_0) {
   $__fn = function($v_2, $v1_3 = null) use ($dictOrd_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_4_1 = (($dictOrd_0)['compare'])($v_2, $v1_3);
+  $__local_var_4_1 = ((($dictOrd_0)->{'compare'})($v_2))($v1_3);
   $__t2 = null;;
   if ($__local_var_4_1 instanceof \Data\Ordering\Data_Ordering_GT) {
 $__t2 = new \Data\Ordering\Data_Ordering_LT();
@@ -219,15 +219,15 @@ function majData_majOrd_majDown_boundedmajDown($dictBounded_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($dictBounded_0)['Ord0'])(null);
-  $__local_var_2_1 = (($__local_var_1_0)['Eq0'])(null);
-  $ordDown1_3_2 = ["compare" => (function() use ($__local_var_1_0) {
+  $__local_var_1_0 = (($dictBounded_0)->{'Ord0'})(null);
+  $__local_var_2_1 = (($__local_var_1_0)->{'Eq0'})(null);
+  $ordDown1_3_2 = (object)["compare" => (function() use ($__local_var_1_0) {
   $__fn = function($v_3, $v1_4 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_5_2 = (($__local_var_1_0)['compare'])($v_3, $v1_4);
+  $__local_var_5_2 = ((($__local_var_1_0)->{'compare'})($v_3))($v1_4);
   $__t3 = null;;
   if ($__local_var_5_2 instanceof \Data\Ordering\Data_Ordering_GT) {
 $__t3 = new \Data\Ordering\Data_Ordering_LT();
@@ -257,7 +257,7 @@ goto end_branch_3;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["top" => ($dictBounded_0)['bottom'], "bottom" => ($dictBounded_0)['top'], "Ord0" => function($_dollar__unused_4) use ($ordDown1_3_2) {
+  $__res = (object)["top" => ($dictBounded_0)->{'bottom'}, "bottom" => ($dictBounded_0)->{'top'}, "Ord0" => function($_dollar__unused_4) use ($ordDown1_3_2) {
   $__num = \func_num_args();
   $__res = $ordDown1_3_2;
   goto __end;;

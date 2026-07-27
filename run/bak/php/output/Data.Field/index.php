@@ -109,7 +109,7 @@ function majData_majField_field($dictEuclideanRing_0, $dictDivisionRing_1 = null
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ["EuclideanRing0" => function($_dollar__unused_2) use ($dictEuclideanRing_0) {
+  $__res = (object)["EuclideanRing0" => function($_dollar__unused_2) use ($dictEuclideanRing_0) {
   $__num = \func_num_args();
   $__res = $dictEuclideanRing_0;
   goto __end;;

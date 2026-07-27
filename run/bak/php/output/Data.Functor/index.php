@@ -114,7 +114,18 @@ $exports['arrayMap'] = $arrayMap;
 return $exports;
   return $exports;
 });
-$GLOBALS['Data_Functor_arrayMap'] = $ffi_Data_Functor['arrayMap'] ?? new class { public function __invoke(...$args) { return $this; } };
+function majData_majFunctor_arraymajMap($v0, $v1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majFunctor_arraymajMap';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Data_Functor;
+  $f = ($ffi_Data_Functor['arrayMap'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Data_Functor_arrayMap'] = __NAMESPACE__ . '\\majData_majFunctor_arraymajMap';
+
 
 
 
@@ -126,7 +137,7 @@ function majData_majFunctor_map($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['map'];
+  $__res = ($dict_0)->{'map'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -140,7 +151,7 @@ function majData_majFunctor_mapmajFlipped($dictFunctor_0, $fa_1 = null, $f_2 = n
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictFunctor_0)['map'])($f_2, $fa_1);
+  $__res = ((($dictFunctor_0)->{'map'})($f_2))($fa_1);
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -154,7 +165,7 @@ function majData_majFunctor_void($dictFunctor_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($dictFunctor_0)['map'])(function($v_1) {
+  $__res = (($dictFunctor_0)->{'map'})(function($v_1) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Unit_unit'];
   goto __end;;
@@ -174,13 +185,13 @@ function majData_majFunctor_voidmajLeft($dictFunctor_0, $f_1 = null, $x_2 = null
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictFunctor_0)['map'])(function($v_3) use ($x_2) {
+  $__res = ((($dictFunctor_0)->{'map'})(function($v_3) use ($x_2) {
   $__num = \func_num_args();
   $__res = $x_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, $f_1);
+}))($f_1);
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -194,7 +205,7 @@ function majData_majFunctor_voidmajRight($dictFunctor_0, $x_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictFunctor_0)['map'])(function($v_2) use ($x_1) {
+  $__res = (($dictFunctor_0)->{'map'})(function($v_2) use ($x_1) {
   $__num = \func_num_args();
   $__res = $x_1;
   goto __end;;
@@ -208,7 +219,7 @@ function majData_majFunctor_voidmajRight($dictFunctor_0, $x_1 = null) {
 $GLOBALS['Data_Functor_voidRight'] = __NAMESPACE__ . '\\majData_majFunctor_voidmajRight';
 
 // Data_Functor_functorProxy
-$GLOBALS['Data_Functor_functorProxy'] = ["map" => (function() {
+$GLOBALS['Data_Functor_functorProxy'] = (object)["map" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -223,10 +234,10 @@ $GLOBALS['Data_Functor_functorProxy'] = ["map" => (function() {
 })()];
 
 // Data_Functor_functorFn
-$GLOBALS['Data_Functor_functorFn'] = ["map" => ($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose']];
+$GLOBALS['Data_Functor_functorFn'] = (object)["map" => ($GLOBALS['Control_Semigroupoid_semigroupoidFn'])->{'compose'}];
 
 // Data_Functor_functorArray
-$GLOBALS['Data_Functor_functorArray'] = ["map" => $GLOBALS['Data_Functor_arrayMap']];
+$GLOBALS['Data_Functor_functorArray'] = (object)["map" => $GLOBALS['Data_Functor_arrayMap']];
 
 // Data_Functor_flap
 function majData_majFunctor_flap($dictFunctor_0, $ff_1 = null, $x_2 = null) {
@@ -235,13 +246,13 @@ function majData_majFunctor_flap($dictFunctor_0, $ff_1 = null, $x_2 = null) {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictFunctor_0)['map'])(function($f_3) use ($x_2) {
+  $__res = ((($dictFunctor_0)->{'map'})(function($f_3) use ($x_2) {
   $__num = \func_num_args();
   $__res = ($f_3)($x_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, $ff_1);
+}))($ff_1);
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;

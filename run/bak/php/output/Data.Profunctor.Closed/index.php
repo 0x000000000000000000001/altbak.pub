@@ -101,7 +101,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Data_Profunctor_Closed_closedFunction
-$GLOBALS['Data_Profunctor_Closed_closedFunction'] = ["closed" => ($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'], "Profunctor0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Profunctor_Closed_closedFunction'] = (object)["closed" => ($GLOBALS['Control_Semigroupoid_semigroupoidFn'])->{'compose'}, "Profunctor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Profunctor_profunctorFn'];
   goto __end;;
@@ -116,7 +116,7 @@ function majData_majProfunctor_majClosed_closed($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['closed'];
+  $__res = ($dict_0)->{'closed'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

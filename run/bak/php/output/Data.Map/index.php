@@ -144,7 +144,7 @@ function majData_majMap_showmajSemigroupmajMap($dictShow_0, $dictShow1_1 = null)
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Map_Internal_showMap'])($dictShow_0, $dictShow1_1);
+  $__res = \Data\Map\Internal\majData_majMap_majInternal_showmajMap($dictShow_0, $dictShow1_1);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -158,11 +158,11 @@ function majData_majMap_semigroupmajSemigroupmajMap($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $compare_1_0 = ($dictOrd_0)['compare'];
+  $compare_1_0 = ($dictOrd_0)->{'compare'};
   $__res = function($dictSemigroup_2) use ($compare_1_0) {
   $__num = \func_num_args();
-  $append_3_1 = ($dictSemigroup_2)['append'];
-  $__res = ["append" => (function() use ($append_3_1, $compare_1_0) {
+  $append_3_1 = ($dictSemigroup_2)->{'append'};
+  $__res = (object)["append" => (function() use ($append_3_1, $compare_1_0) {
   $__fn = function($v_4, $v1_5 = null) use ($append_3_1, $compare_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -192,7 +192,7 @@ function majData_majMap_plusmajSemigroupmajMap($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Data_Map_Internal_plusMap'])($dictOrd_0);
+  $__res = \Data\Map\Internal\majData_majMap_majInternal_plusmajMap($dictOrd_0);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -220,7 +220,7 @@ function majData_majMap_ord1majSemigroupmajMap($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Data_Map_Internal_ord1Map'])($dictOrd_0);
+  $__res = \Data\Map\Internal\majData_majMap_majInternal_ord1majMap($dictOrd_0);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -228,7 +228,7 @@ function majData_majMap_ord1majSemigroupmajMap($dictOrd_0) {
 $GLOBALS['Data_Map_ord1SemigroupMap'] = __NAMESPACE__ . '\\majData_majMap_ord1majSemigroupmajMap';
 
 // Data_Map_newtypeSemigroupMap
-$GLOBALS['Data_Map_newtypeSemigroupMap'] = ["Coercible0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Map_newtypeSemigroupMap'] = (object)["Coercible0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = null;
   goto __end;;
@@ -247,7 +247,7 @@ function majData_majMap_monoidmajSemigroupmajMap($dictOrd_0) {
   $__res = function($dictSemigroup_2) use ($semigroupSemigroupMap1_1_0) {
   $__num = \func_num_args();
   $semigroupSemigroupMap2_3_1 = ($semigroupSemigroupMap1_1_0)($dictSemigroup_2);
-  $__res = ["mempty" => new \Data\Map\Internal\Data_Map_Internal_Leaf(), "Semigroup0" => function($_dollar__unused_4) use ($semigroupSemigroupMap2_3_1) {
+  $__res = (object)["mempty" => new \Data\Map\Internal\Data_Map_Internal_Leaf(), "Semigroup0" => function($_dollar__unused_4) use ($semigroupSemigroupMap2_3_1) {
   $__num = \func_num_args();
   $__res = $semigroupSemigroupMap2_3_1;
   goto __end;;
@@ -265,7 +265,7 @@ function majData_majMap_monoidmajSemigroupmajMap($dictOrd_0) {
 $GLOBALS['Data_Map_monoidSemigroupMap'] = __NAMESPACE__ . '\\majData_majMap_monoidmajSemigroupmajMap';
 
 // Data_Map_keys_closure
-$GLOBALS['Data_Map_keys_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Set_Set'], (($GLOBALS['Data_Map_Internal_functorMap'])['map'])(function($v_0) {
+$GLOBALS['Data_Map_keys_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Set_Set']))((($GLOBALS['Data_Map_Internal_functorMap'])->{'map'})(function($v_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Unit_unit'];
   goto __end;;
@@ -306,7 +306,7 @@ function majData_majMap_eqmajSemigroupmajMap($dictEq_0, $dictEq1_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Map_Internal_eqMap'])($dictEq_0, $dictEq1_1);
+  $__res = \Data\Map\Internal\majData_majMap_majInternal_eqmajMap($dictEq_0, $dictEq1_1);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -320,9 +320,9 @@ function majData_majMap_eq1majSemigroupmajMap($dictEq_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["eq1" => function($dictEq1_1) use ($dictEq_0) {
+  $__res = (object)["eq1" => function($dictEq1_1) use ($dictEq_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Map_Internal_eqMap'])($dictEq_0, $dictEq1_1))['eq'];
+  $__res = (\Data\Map\Internal\majData_majMap_majInternal_eqmajMap($dictEq_0, $dictEq1_1))->{'eq'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -340,7 +340,7 @@ function majData_majMap_bindmajSemigroupmajMap($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Data_Map_Internal_bindMap'])($dictOrd_0);
+  $__res = \Data\Map\Internal\majData_majMap_majInternal_bindmajMap($dictOrd_0);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -354,8 +354,8 @@ function majData_majMap_applymajSemigroupmajMap($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $compare_1_0 = ($dictOrd_0)['compare'];
-  $__res = ["apply" => (function() use ($compare_1_0) {
+  $compare_1_0 = ($dictOrd_0)->{'compare'};
+  $__res = (object)["apply" => (function() use ($compare_1_0) {
   $__fn = function($m1_2, $m2_3 = null) use ($compare_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -387,8 +387,8 @@ function majData_majMap_altmajSemigroupmajMap($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $compare_1_0 = ($dictOrd_0)['compare'];
-  $__res = ["alt" => (function() use ($compare_1_0) {
+  $compare_1_0 = ($dictOrd_0)->{'compare'};
+  $__res = (object)["alt" => (function() use ($compare_1_0) {
   $__fn = function($m1_2, $m2_3 = null) use ($compare_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {

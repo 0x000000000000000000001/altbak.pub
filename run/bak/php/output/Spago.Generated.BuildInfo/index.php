@@ -104,5 +104,5 @@ $GLOBALS['Spago_Generated_BuildInfo_spagoVersion'] = "1.0.4";
 $GLOBALS['Spago_Generated_BuildInfo_pursVersion'] = "0.15.16";
 
 // Spago_Generated_BuildInfo_packages
-$GLOBALS['Spago_Generated_BuildInfo_packages'] = ["ps-php-test" => "0.0.0"];
+$GLOBALS['Spago_Generated_BuildInfo_packages'] = (object)["ps-php-test" => "0.0.0"];
 

@@ -132,9 +132,9 @@ function majData_majMonoid_majConj_showmajConj($dictShow_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["show" => function($v_1) use ($dictShow_0) {
+  $__res = (object)["show" => function($v_1) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Conj ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(Conj "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_0)->{'show'})($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -152,13 +152,13 @@ function majData_majMonoid_majConj_semiringmajConj($dictHeytingAlgebra_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["zero" => ($dictHeytingAlgebra_0)['tt'], "one" => ($dictHeytingAlgebra_0)['ff'], "add" => (function() use ($dictHeytingAlgebra_0) {
+  $__res = (object)["zero" => ($dictHeytingAlgebra_0)->{'tt'}, "one" => ($dictHeytingAlgebra_0)->{'ff'}, "add" => (function() use ($dictHeytingAlgebra_0) {
   $__fn = function($v_1, $v1_2 = null) use ($dictHeytingAlgebra_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictHeytingAlgebra_0)['conj'])($v_1, $v1_2);
+  $__res = ((($dictHeytingAlgebra_0)->{'conj'})($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -170,7 +170,7 @@ function majData_majMonoid_majConj_semiringmajConj($dictHeytingAlgebra_0) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictHeytingAlgebra_0)['disj'])($v_1, $v1_2);
+  $__res = ((($dictHeytingAlgebra_0)->{'disj'})($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -190,13 +190,13 @@ function majData_majMonoid_majConj_semigroupmajConj($dictHeytingAlgebra_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["append" => (function() use ($dictHeytingAlgebra_0) {
+  $__res = (object)["append" => (function() use ($dictHeytingAlgebra_0) {
   $__fn = function($v_1, $v1_2 = null) use ($dictHeytingAlgebra_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictHeytingAlgebra_0)['conj'])($v_1, $v1_2);
+  $__res = ((($dictHeytingAlgebra_0)->{'conj'})($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -230,20 +230,20 @@ function majData_majMonoid_majConj_monoidmajConj($dictHeytingAlgebra_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $semigroupConj1_1_0 = ["append" => (function() use ($dictHeytingAlgebra_0) {
+  $semigroupConj1_1_0 = (object)["append" => (function() use ($dictHeytingAlgebra_0) {
   $__fn = function($v_1, $v1_2 = null) use ($dictHeytingAlgebra_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictHeytingAlgebra_0)['conj'])($v_1, $v1_2);
+  $__res = ((($dictHeytingAlgebra_0)->{'conj'})($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = ["mempty" => ($dictHeytingAlgebra_0)['tt'], "Semigroup0" => function($_dollar__unused_2) use ($semigroupConj1_1_0) {
+  $__res = (object)["mempty" => ($dictHeytingAlgebra_0)->{'tt'}, "Semigroup0" => function($_dollar__unused_2) use ($semigroupConj1_1_0) {
   $__num = \func_num_args();
   $__res = $semigroupConj1_1_0;
   goto __end;;
@@ -257,7 +257,7 @@ function majData_majMonoid_majConj_monoidmajConj($dictHeytingAlgebra_0) {
 $GLOBALS['Data_Monoid_Conj_monoidConj'] = __NAMESPACE__ . '\\majData_majMonoid_majConj_monoidmajConj';
 
 // Data_Monoid_Conj_functorConj
-$GLOBALS['Data_Monoid_Conj_functorConj'] = ["map" => (function() {
+$GLOBALS['Data_Monoid_Conj_functorConj'] = (object)["map" => (function() {
   $__fn = function($f_0, $m_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -286,18 +286,18 @@ function majData_majMonoid_majConj_eqmajConj($dictEq_0) {
 $GLOBALS['Data_Monoid_Conj_eqConj'] = __NAMESPACE__ . '\\majData_majMonoid_majConj_eqmajConj';
 
 // Data_Monoid_Conj_eq1Conj
-$GLOBALS['Data_Monoid_Conj_eq1Conj'] = ["eq1" => function($dictEq_0) {
+$GLOBALS['Data_Monoid_Conj_eq1Conj'] = (object)["eq1" => function($dictEq_0) {
   $__num = \func_num_args();
-  $__res = ($dictEq_0)['eq'];
+  $__res = ($dictEq_0)->{'eq'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
 
 // Data_Monoid_Conj_ord1Conj
-$GLOBALS['Data_Monoid_Conj_ord1Conj'] = ["compare1" => function($dictOrd_0) {
+$GLOBALS['Data_Monoid_Conj_ord1Conj'] = (object)["compare1" => function($dictOrd_0) {
   $__num = \func_num_args();
-  $__res = ($dictOrd_0)['compare'];
+  $__res = ($dictOrd_0)->{'compare'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -324,7 +324,7 @@ function majData_majMonoid_majConj_boundedmajConj($dictBounded_0) {
 $GLOBALS['Data_Monoid_Conj_boundedConj'] = __NAMESPACE__ . '\\majData_majMonoid_majConj_boundedmajConj';
 
 // Data_Monoid_Conj_applyConj
-$GLOBALS['Data_Monoid_Conj_applyConj'] = ["apply" => (function() {
+$GLOBALS['Data_Monoid_Conj_applyConj'] = (object)["apply" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -345,7 +345,7 @@ $GLOBALS['Data_Monoid_Conj_applyConj'] = ["apply" => (function() {
 }];
 
 // Data_Monoid_Conj_bindConj
-$GLOBALS['Data_Monoid_Conj_bindConj'] = ["bind" => (function() {
+$GLOBALS['Data_Monoid_Conj_bindConj'] = (object)["bind" => (function() {
   $__fn = function($v_0, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -366,7 +366,7 @@ $GLOBALS['Data_Monoid_Conj_bindConj'] = ["bind" => (function() {
 }];
 
 // Data_Monoid_Conj_applicativeConj
-$GLOBALS['Data_Monoid_Conj_applicativeConj'] = ["pure" => $GLOBALS['Data_Monoid_Conj_Conj'], "Apply0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Monoid_Conj_applicativeConj'] = (object)["pure" => $GLOBALS['Data_Monoid_Conj_Conj'], "Apply0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Monoid_Conj_applyConj'];
   goto __end;;
@@ -375,7 +375,7 @@ $GLOBALS['Data_Monoid_Conj_applicativeConj'] = ["pure" => $GLOBALS['Data_Monoid_
 }];
 
 // Data_Monoid_Conj_monadConj
-$GLOBALS['Data_Monoid_Conj_monadConj'] = ["Applicative0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Monoid_Conj_monadConj'] = (object)["Applicative0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Monoid_Conj_applicativeConj'];
   goto __end;;

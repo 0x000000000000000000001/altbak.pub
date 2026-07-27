@@ -155,18 +155,29 @@ $exports['toDateTimeImpl'] = $toDateTimeImpl;
 return $exports;
   return $exports;
 });
-$GLOBALS['Data_DateTime_Instant_fromDateTimeImpl'] = $ffi_Data_DateTime_Instant['fromDateTimeImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_DateTime_Instant_toDateTimeImpl'] = $ffi_Data_DateTime_Instant['toDateTimeImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_DateTime_Instant_fromDateTimeImpl'] = ($ffi_Data_DateTime_Instant['fromDateTimeImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+function majData_majDatemajTime_majInstant_tomajDatemajTimemajImpl($v0, $v1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majDatemajTime_majInstant_tomajDatemajTimemajImpl';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Data_DateTime_Instant;
+  $f = ($ffi_Data_DateTime_Instant['toDateTimeImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Data_DateTime_Instant_toDateTimeImpl'] = __NAMESPACE__ . '\\majData_majDatemajTime_majInstant_tomajDatemajTimemajImpl';
+
 
 
 
 
 // Data_DateTime_Instant_negate
 $GLOBALS['Data_DateTime_Instant_negate'] = (function() use (&$__fn) {
-$zero_0_0 = ((($GLOBALS['Data_Ring_ringNumber'])['Semiring0'])(null))['zero'];
+$zero_0_0 = ((($GLOBALS['Data_Ring_ringNumber'])->{'Semiring0'})(null))->{'zero'};
 return function($a_1) use ($zero_0_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Ring_ringNumber'])['sub'])($zero_0_0, $a_1);
+  $__res = ((($GLOBALS['Data_Ring_ringNumber'])->{'sub'})($zero_0_0))($a_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -174,10 +185,10 @@ return function($a_1) use ($zero_0_0) {
 })();
 
 // Data_DateTime_Instant_negateDuration
-$GLOBALS['Data_DateTime_Instant_negateDuration'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Time_Duration_durationMilliseconds'])['toDuration'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Time_Duration_negate'], ($GLOBALS['Data_Time_Duration_durationMilliseconds'])['fromDuration']));
+$GLOBALS['Data_DateTime_Instant_negateDuration'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Time_Duration_durationMilliseconds'])->{'toDuration'}))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Time_Duration_negate']))(($GLOBALS['Data_Time_Duration_durationMilliseconds'])->{'fromDuration'}));
 
 // Data_DateTime_Instant_unInstant
-function majData_majDatemajTime_majInstant_unmajInstant($v_0) {
+function majData_majDatemajTime_majInstant_unmajInstant(float $v_0): float|\Closure {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majDatemajTime_majInstant_unmajInstant';
   if ($__num < 1) {
@@ -197,7 +208,7 @@ $GLOBALS['Data_DateTime_Instant_toDateTime_closure'] = ($GLOBALS['Data_DateTime_
   if ($__num < 7) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 7);
   }
-  $__local_var_7_0 = (($GLOBALS['Data_Date_Component_boundedEnumMonth'])['toEnum'])($mo_1);
+  $__local_var_7_0 = (($GLOBALS['Data_Date_Component_boundedEnumMonth'])->{'toEnum'})($mo_1);
   $__t1 = null;;
   if ($__local_var_7_0 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__t1 = ($__local_var_7_0)->{'value0'};
@@ -206,7 +217,7 @@ goto end_branch_1;;
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
   $__t1 = null;
   end_branch_1:;
-  $__res = new \Data\DateTime\Data_DateTime_DateTime(($GLOBALS['Data_Date_canonicalDate'])($y_0, $__t1, $d_2), new \Data\Time\Data_Time_Time($h_3, $mi_4, $s_5, $ms_6));
+  $__res = new \Data\DateTime\Data_DateTime_DateTime(\Data\Date\majData_majDate_canonicalmajDate($y_0, $__t1, $d_2), new \Data\Time\Data_Time_Time($h_3, $mi_4, $s_5, $ms_6));
   goto __end;;
   __end:
   return $__num > 7 ? $__res(...\array_slice(\func_get_args(), 7)) : $__res;
@@ -215,7 +226,7 @@ goto end_branch_1;;
 })());
 
 // Data_DateTime_Instant_toDateTime
-function majData_majDatemajTime_majInstant_tomajDatemajTime($v_0) {
+function majData_majDatemajTime_majInstant_tomajDatemajTime(float $v_0) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majDatemajTime_majInstant_tomajDatemajTime';
   if ($__num < 1) {
@@ -229,9 +240,9 @@ function majData_majDatemajTime_majInstant_tomajDatemajTime($v_0) {
 $GLOBALS['Data_DateTime_Instant_toDateTime'] = __NAMESPACE__ . '\\majData_majDatemajTime_majInstant_tomajDatemajTime';
 
 // Data_DateTime_Instant_showInstant
-$GLOBALS['Data_DateTime_Instant_showInstant'] = ["show" => function($v_0) {
+$GLOBALS['Data_DateTime_Instant_showInstant'] = (object)["show" => function($v_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Instant ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Time_Duration_showMilliseconds'])['show'])($v_0), ")"));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(Instant "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($GLOBALS['Data_Time_Duration_showMilliseconds'])->{'show'})($v_0)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -241,14 +252,14 @@ $GLOBALS['Data_DateTime_Instant_showInstant'] = ["show" => function($v_0) {
 $GLOBALS['Data_DateTime_Instant_ordDateTime'] = $GLOBALS['Data_Ord_ordNumber'];
 
 // Data_DateTime_Instant_instant
-function majData_majDatemajTime_majInstant_instant($v_0) {
+function majData_majDatemajTime_majInstant_instant(float $v_0) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majDatemajTime_majInstant_instant';
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $__t0 = null;;
-  if ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(($v_0 >= ($GLOBALS['Data_DateTime_Instant_negate'])(8639977881600000.0)), ($v_0 <= 8639977881599999.0))) {
+  if (((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(($v_0 >= ($GLOBALS['Data_DateTime_Instant_negate'])(8639977881600000.0))))(($v_0 <= 8639977881599999.0))) {
 $__t0 = new \Data\Maybe\Data_Maybe_Just($v_0);
 goto end_branch_0;;
 };
@@ -262,13 +273,13 @@ goto end_branch_0;;
 $GLOBALS['Data_DateTime_Instant_instant'] = __NAMESPACE__ . '\\majData_majDatemajTime_majInstant_instant';
 
 // Data_DateTime_Instant_fromDateTime
-function majData_majDatemajTime_majInstant_frommajDatemajTime($v_0) {
+function majData_majDatemajTime_majInstant_frommajDatemajTime($v_0): float|\Closure {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majDatemajTime_majInstant_frommajDatemajTime';
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Data_DateTime_Instant_fromDateTimeImpl'])((($v_0)->{'value0'})->{'value0'}, (($GLOBALS['Data_Date_Component_boundedEnumMonth'])['fromEnum'])((($v_0)->{'value0'})->{'value1'}), (($v_0)->{'value0'})->{'value2'}, (($v_0)->{'value1'})->{'value0'}, (($v_0)->{'value1'})->{'value1'}, (($v_0)->{'value1'})->{'value2'}, (($v_0)->{'value1'})->{'value3'});
+  $__res = ($GLOBALS['Data_DateTime_Instant_fromDateTimeImpl'])((($v_0)->{'value0'})->{'value0'}, (($GLOBALS['Data_Date_Component_boundedEnumMonth'])->{'fromEnum'})((($v_0)->{'value0'})->{'value1'}), (($v_0)->{'value0'})->{'value2'}, (($v_0)->{'value1'})->{'value0'}, (($v_0)->{'value1'})->{'value1'}, (($v_0)->{'value1'})->{'value2'}, (($v_0)->{'value1'})->{'value3'});
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -276,13 +287,13 @@ function majData_majDatemajTime_majInstant_frommajDatemajTime($v_0) {
 $GLOBALS['Data_DateTime_Instant_fromDateTime'] = __NAMESPACE__ . '\\majData_majDatemajTime_majInstant_frommajDatemajTime';
 
 // Data_DateTime_Instant_fromDate
-function majData_majDatemajTime_majInstant_frommajDate($d_0) {
+function majData_majDatemajTime_majInstant_frommajDate($d_0): float|\Closure {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majDatemajTime_majInstant_frommajDate';
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Data_DateTime_Instant_fromDateTimeImpl'])(($d_0)->{'value0'}, (($GLOBALS['Data_Date_Component_boundedEnumMonth'])['fromEnum'])(($d_0)->{'value1'}), ($d_0)->{'value2'}, ($GLOBALS['Data_Time_Component_boundedHour'])['bottom'], ($GLOBALS['Data_Time_Component_boundedMinute'])['bottom'], ($GLOBALS['Data_Time_Component_boundedSecond'])['bottom'], ($GLOBALS['Data_Time_Component_boundedMillisecond'])['bottom']);
+  $__res = ($GLOBALS['Data_DateTime_Instant_fromDateTimeImpl'])(($d_0)->{'value0'}, (($GLOBALS['Data_Date_Component_boundedEnumMonth'])->{'fromEnum'})(($d_0)->{'value1'}), ($d_0)->{'value2'}, ($GLOBALS['Data_Time_Component_boundedHour'])->{'bottom'}, ($GLOBALS['Data_Time_Component_boundedMinute'])->{'bottom'}, ($GLOBALS['Data_Time_Component_boundedSecond'])->{'bottom'}, ($GLOBALS['Data_Time_Component_boundedMillisecond'])->{'bottom'});
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -299,7 +310,7 @@ function majData_majDatemajTime_majInstant_diff($dictDuration_0, $dt1_1 = null, 
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictDuration_0)['toDuration'])((($GLOBALS['Data_Time_Duration_semigroupMilliseconds'])['append'])($dt1_1, ($GLOBALS['Data_DateTime_Instant_negateDuration'])($dt2_2)));
+  $__res = (($dictDuration_0)->{'toDuration'})(((($GLOBALS['Data_Time_Duration_semigroupMilliseconds'])->{'append'})($dt1_1))(($GLOBALS['Data_DateTime_Instant_negateDuration'])($dt2_2)));
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -307,7 +318,7 @@ function majData_majDatemajTime_majInstant_diff($dictDuration_0, $dt1_1 = null, 
 $GLOBALS['Data_DateTime_Instant_diff'] = __NAMESPACE__ . '\\majData_majDatemajTime_majInstant_diff';
 
 // Data_DateTime_Instant_boundedInstant
-$GLOBALS['Data_DateTime_Instant_boundedInstant'] = ["bottom" => ($GLOBALS['Data_DateTime_Instant_negate'])(8639977881600000.0), "top" => 8639977881599999.0, "Ord0" => function($_dollar__unused_0) {
+$GLOBALS['Data_DateTime_Instant_boundedInstant'] = (object)["bottom" => ($GLOBALS['Data_DateTime_Instant_negate'])(8639977881600000.0), "top" => 8639977881599999.0, "Ord0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Ord_ordNumber'];
   goto __end;;

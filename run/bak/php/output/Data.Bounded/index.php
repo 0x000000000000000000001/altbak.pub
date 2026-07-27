@@ -117,12 +117,12 @@ $exports['bottomNumber'] = $bottomNumber;
 return $exports;
   return $exports;
 });
-$GLOBALS['Data_Bounded_bottomChar'] = $ffi_Data_Bounded['bottomChar'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Bounded_bottomInt'] = $ffi_Data_Bounded['bottomInt'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Bounded_bottomNumber'] = $ffi_Data_Bounded['bottomNumber'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Bounded_topChar'] = $ffi_Data_Bounded['topChar'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Bounded_topInt'] = $ffi_Data_Bounded['topInt'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Bounded_topNumber'] = $ffi_Data_Bounded['topNumber'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Bounded_bottomChar'] = ($ffi_Data_Bounded['bottomChar'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Bounded_bottomInt'] = ($ffi_Data_Bounded['bottomInt'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Bounded_bottomNumber'] = ($ffi_Data_Bounded['bottomNumber'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Bounded_topChar'] = ($ffi_Data_Bounded['topChar'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Bounded_topInt'] = ($ffi_Data_Bounded['topInt'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Bounded_topNumber'] = ($ffi_Data_Bounded['topNumber'] ?? new class { public function __invoke(...$args) { return $this; } });
 
 
 
@@ -134,7 +134,7 @@ function majData_majBounded_topmajRecord($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['topRecord'];
+  $__res = ($dict_0)->{'topRecord'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -148,7 +148,7 @@ function majData_majBounded_top($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['top'];
+  $__res = ($dict_0)->{'top'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -156,7 +156,7 @@ function majData_majBounded_top($dict_0) {
 $GLOBALS['Data_Bounded_top'] = __NAMESPACE__ . '\\majData_majBounded_top';
 
 // Data_Bounded_boundedUnit
-$GLOBALS['Data_Bounded_boundedUnit'] = ["top" => $GLOBALS['Data_Unit_unit'], "bottom" => $GLOBALS['Data_Unit_unit'], "Ord0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Bounded_boundedUnit'] = (object)["top" => $GLOBALS['Data_Unit_unit'], "bottom" => $GLOBALS['Data_Unit_unit'], "Ord0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Ord_ordUnit'];
   goto __end;;
@@ -165,13 +165,13 @@ $GLOBALS['Data_Bounded_boundedUnit'] = ["top" => $GLOBALS['Data_Unit_unit'], "bo
 }];
 
 // Data_Bounded_boundedRecordNil
-$GLOBALS['Data_Bounded_boundedRecordNil'] = ["topRecord" => (function() {
+$GLOBALS['Data_Bounded_boundedRecordNil'] = (object)["topRecord" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = [];
+  $__res = (object)[];
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -183,7 +183,7 @@ $GLOBALS['Data_Bounded_boundedRecordNil'] = ["topRecord" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = [];
+  $__res = (object)[];
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -198,7 +198,7 @@ $GLOBALS['Data_Bounded_boundedRecordNil'] = ["topRecord" => (function() {
 }];
 
 // Data_Bounded_boundedProxy
-$GLOBALS['Data_Bounded_boundedProxy'] = ["bottom" => new \Type\Proxy\Type_Proxy_Proxy(), "top" => new \Type\Proxy\Type_Proxy_Proxy(), "Ord0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Bounded_boundedProxy'] = (object)["bottom" => new \Type\Proxy\Type_Proxy_Proxy(), "top" => new \Type\Proxy\Type_Proxy_Proxy(), "Ord0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Ord_ordProxy'];
   goto __end;;
@@ -207,7 +207,7 @@ $GLOBALS['Data_Bounded_boundedProxy'] = ["bottom" => new \Type\Proxy\Type_Proxy_
 }];
 
 // Data_Bounded_boundedOrdering
-$GLOBALS['Data_Bounded_boundedOrdering'] = ["top" => new \Data\Ordering\Data_Ordering_GT(), "bottom" => new \Data\Ordering\Data_Ordering_LT(), "Ord0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Bounded_boundedOrdering'] = (object)["top" => new \Data\Ordering\Data_Ordering_GT(), "bottom" => new \Data\Ordering\Data_Ordering_LT(), "Ord0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Ord_ordOrdering'];
   goto __end;;
@@ -216,7 +216,7 @@ $GLOBALS['Data_Bounded_boundedOrdering'] = ["top" => new \Data\Ordering\Data_Ord
 }];
 
 // Data_Bounded_boundedNumber
-$GLOBALS['Data_Bounded_boundedNumber'] = ["top" => $GLOBALS['Data_Bounded_topNumber'], "bottom" => $GLOBALS['Data_Bounded_bottomNumber'], "Ord0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Bounded_boundedNumber'] = (object)["top" => $GLOBALS['Data_Bounded_topNumber'], "bottom" => $GLOBALS['Data_Bounded_bottomNumber'], "Ord0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Ord_ordNumber'];
   goto __end;;
@@ -225,11 +225,11 @@ $GLOBALS['Data_Bounded_boundedNumber'] = ["top" => $GLOBALS['Data_Bounded_topNum
 }];
 
 // Data_Bounded_boundedInt
-$GLOBALS['Data_Bounded_boundedInt'] = ["top" => $GLOBALS['Data_Bounded_topInt'], "bottom" => $GLOBALS['Data_Bounded_bottomInt'], "Ord0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Bounded_boundedInt'] = (object)["top" => $GLOBALS['Data_Bounded_topInt'], "bottom" => $GLOBALS['Data_Bounded_bottomInt'], "Ord0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
-  $__res = ["compare" => ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT()), "Eq0" => function($_dollar__unused_1) {
+  $__res = (object)["compare" => ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT()), "Eq0" => function($_dollar__unused_1) {
   $__num = \func_num_args();
-  $__res = ["eq" => $GLOBALS['Data_Eq_eqIntImpl']];
+  $__res = (object)["eq" => $GLOBALS['Data_Eq_eqIntImpl']];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -240,7 +240,7 @@ $GLOBALS['Data_Bounded_boundedInt'] = ["top" => $GLOBALS['Data_Bounded_topInt'],
 }];
 
 // Data_Bounded_boundedChar
-$GLOBALS['Data_Bounded_boundedChar'] = ["top" => $GLOBALS['Data_Bounded_topChar'], "bottom" => $GLOBALS['Data_Bounded_bottomChar'], "Ord0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Bounded_boundedChar'] = (object)["top" => $GLOBALS['Data_Bounded_topChar'], "bottom" => $GLOBALS['Data_Bounded_bottomChar'], "Ord0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Ord_ordChar'];
   goto __end;;
@@ -249,7 +249,7 @@ $GLOBALS['Data_Bounded_boundedChar'] = ["top" => $GLOBALS['Data_Bounded_topChar'
 }];
 
 // Data_Bounded_boundedBoolean
-$GLOBALS['Data_Bounded_boundedBoolean'] = ["top" => true, "bottom" => false, "Ord0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Bounded_boundedBoolean'] = (object)["top" => true, "bottom" => false, "Ord0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Ord_ordBoolean'];
   goto __end;;
@@ -264,7 +264,7 @@ function majData_majBounded_bottommajRecord($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['bottomRecord'];
+  $__res = ($dict_0)->{'bottomRecord'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -278,16 +278,16 @@ function majData_majBounded_boundedmajRecord($_dollar__unused_0, $dictBoundedRec
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_2_0 = (($dictBoundedRecord_1)['OrdRecord0'])(null);
-  $eqRec1_3_1 = ["eq" => (((($__local_var_2_0)['EqRecord0'])(null))['eqRecord'])(new \Type\Proxy\Type_Proxy_Proxy())];
-  $ordRecord1_4_2 = ["compare" => (($__local_var_2_0)['compareRecord'])(new \Type\Proxy\Type_Proxy_Proxy()), "Eq0" => function($_dollar__unused_4) use ($eqRec1_3_1) {
+  $__local_var_2_0 = (($dictBoundedRecord_1)->{'OrdRecord0'})(null);
+  $eqRec1_3_1 = (object)["eq" => (((($__local_var_2_0)->{'EqRecord0'})(null))->{'eqRecord'})(new \Type\Proxy\Type_Proxy_Proxy())];
+  $ordRecord1_4_2 = (object)["compare" => (($__local_var_2_0)->{'compareRecord'})(new \Type\Proxy\Type_Proxy_Proxy()), "Eq0" => function($_dollar__unused_4) use ($eqRec1_3_1) {
   $__num = \func_num_args();
   $__res = $eqRec1_3_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["top" => (($dictBoundedRecord_1)['topRecord'])(new \Type\Proxy\Type_Proxy_Proxy(), new \Type\Proxy\Type_Proxy_Proxy()), "bottom" => (($dictBoundedRecord_1)['bottomRecord'])(new \Type\Proxy\Type_Proxy_Proxy(), new \Type\Proxy\Type_Proxy_Proxy()), "Ord0" => function($_dollar__unused_5) use ($ordRecord1_4_2) {
+  $__res = (object)["top" => ((($dictBoundedRecord_1)->{'topRecord'})(new \Type\Proxy\Type_Proxy_Proxy()))(new \Type\Proxy\Type_Proxy_Proxy()), "bottom" => ((($dictBoundedRecord_1)->{'bottomRecord'})(new \Type\Proxy\Type_Proxy_Proxy()))(new \Type\Proxy\Type_Proxy_Proxy()), "Ord0" => function($_dollar__unused_5) use ($ordRecord1_4_2) {
   $__num = \func_num_args();
   $__res = $ordRecord1_4_2;
   goto __end;;
@@ -307,7 +307,7 @@ function majData_majBounded_bottom($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['bottom'];
+  $__res = ($dict_0)->{'bottom'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -321,46 +321,46 @@ function majData_majBounded_boundedmajRecordmajCons($dictIsSymbol_0, $dictBounde
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $top1_2_0 = ($dictBounded_1)['top'];
-  $bottom1_3_1 = ($dictBounded_1)['bottom'];
-  $Ord0_4_2 = (($dictBounded_1)['Ord0'])(null);
+  $top1_2_0 = ($dictBounded_1)->{'top'};
+  $bottom1_3_1 = ($dictBounded_1)->{'bottom'};
+  $Ord0_4_2 = (($dictBounded_1)->{'Ord0'})(null);
   $__res = (function() use ($Ord0_4_2, $bottom1_3_1, $dictIsSymbol_0, $top1_2_0) {
   $__fn = function($_dollar__unused_5, $_dollar__unused_6 = null, $dictBoundedRecord_7 = null) use ($Ord0_4_2, $bottom1_3_1, $dictIsSymbol_0, $top1_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__local_var_8_3 = (($dictBoundedRecord_7)['OrdRecord0'])(null);
-  $__local_var_9_4 = (($__local_var_8_3)['EqRecord0'])(null);
-  $__local_var_10_5 = (($Ord0_4_2)['Eq0'])(null);
-  $eqRowCons2_11_6 = ["eqRecord" => (function() use ($__local_var_10_5, $__local_var_9_4, $dictIsSymbol_0) {
+  $__local_var_8_3 = (($dictBoundedRecord_7)->{'OrdRecord0'})(null);
+  $__local_var_9_4 = (($__local_var_8_3)->{'EqRecord0'})(null);
+  $__local_var_10_5 = (($Ord0_4_2)->{'Eq0'})(null);
+  $eqRowCons2_11_6 = (object)["eqRecord" => (function() use ($__local_var_10_5, $__local_var_9_4, $dictIsSymbol_0) {
   $__fn = function($v_11, $ra_12 = null, $rb_13 = null) use ($__local_var_10_5, $__local_var_9_4, $dictIsSymbol_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $get_14_6 = ($GLOBALS['Record_Unsafe_unsafeGet'])((($dictIsSymbol_0)['reflectSymbol'])(new \Type\Proxy\Type_Proxy_Proxy()));
-  $__res = (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($__local_var_10_5)['eq'])(($get_14_6)($ra_12), ($get_14_6)($rb_13)), (($__local_var_9_4)['eqRecord'])(new \Type\Proxy\Type_Proxy_Proxy(), $ra_12, $rb_13));
+  $get_14_6 = ($GLOBALS['Record_Unsafe_unsafeGet'])((($dictIsSymbol_0)->{'reflectSymbol'})(new \Type\Proxy\Type_Proxy_Proxy()));
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($__local_var_10_5)->{'eq'})(($get_14_6)($ra_12)))(($get_14_6)($rb_13))))((((($__local_var_9_4)->{'eqRecord'})(new \Type\Proxy\Type_Proxy_Proxy()))($ra_12))($rb_13));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
 })()];
-  $ordRecordCons_11_6 = ["compareRecord" => (function() use ($Ord0_4_2, $__local_var_8_3, $dictIsSymbol_0) {
+  $ordRecordCons_11_6 = (object)["compareRecord" => (function() use ($Ord0_4_2, $__local_var_8_3, $dictIsSymbol_0) {
   $__fn = function($v_12, $ra_13 = null, $rb_14 = null) use ($Ord0_4_2, $__local_var_8_3, $dictIsSymbol_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $key_15_8 = (($dictIsSymbol_0)['reflectSymbol'])(new \Type\Proxy\Type_Proxy_Proxy());
-  $left_16_9 = (($Ord0_4_2)['compare'])(($GLOBALS['Record_Unsafe_unsafeGet'])($key_15_8, $ra_13), ($GLOBALS['Record_Unsafe_unsafeGet'])($key_15_8, $rb_14));
+  $key_15_8 = (($dictIsSymbol_0)->{'reflectSymbol'})(new \Type\Proxy\Type_Proxy_Proxy());
+  $left_16_9 = ((($Ord0_4_2)->{'compare'})(\Record\Unsafe\majRecord_majUnsafe_unsafemajGet($key_15_8, $ra_13)))(\Record\Unsafe\majRecord_majUnsafe_unsafemajGet($key_15_8, $rb_14));
   $__t10 = null;;
-  if ((($GLOBALS['Data_Eq_eqBoolean'])['eq'])((($GLOBALS['Data_Ordering_eqOrdering'])['eq'])($left_16_9, new \Data\Ordering\Data_Ordering_EQ()), false)) {
+  if (((($GLOBALS['Data_Eq_eqBoolean'])->{'eq'})(((($GLOBALS['Data_Ordering_eqOrdering'])->{'eq'})($left_16_9))(new \Data\Ordering\Data_Ordering_EQ())))(false)) {
 $__t10 = $left_16_9;
 goto end_branch_10;;
 };
-  $__t10 = (($__local_var_8_3)['compareRecord'])(new \Type\Proxy\Type_Proxy_Proxy(), $ra_13, $rb_14);
+  $__t10 = (((($__local_var_8_3)->{'compareRecord'})(new \Type\Proxy\Type_Proxy_Proxy()))($ra_13))($rb_14);
   end_branch_10:;
   $__res = $__t10;
   goto __end;;
@@ -375,13 +375,13 @@ goto end_branch_10;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["topRecord" => (function() use ($dictBoundedRecord_7, $dictIsSymbol_0, $top1_2_0) {
+  $__res = (object)["topRecord" => (function() use ($dictBoundedRecord_7, $dictIsSymbol_0, $top1_2_0) {
   $__fn = function($v_12, $rowProxy_13 = null) use ($dictBoundedRecord_7, $dictIsSymbol_0, $top1_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Record_Unsafe_unsafeSet'])((($dictIsSymbol_0)['reflectSymbol'])(new \Type\Proxy\Type_Proxy_Proxy()), $top1_2_0, (($dictBoundedRecord_7)['topRecord'])(new \Type\Proxy\Type_Proxy_Proxy(), $rowProxy_13));
+  $__res = \Record\Unsafe\majRecord_majUnsafe_unsafemajSet((($dictIsSymbol_0)->{'reflectSymbol'})(new \Type\Proxy\Type_Proxy_Proxy()), $top1_2_0, ((($dictBoundedRecord_7)->{'topRecord'})(new \Type\Proxy\Type_Proxy_Proxy()))($rowProxy_13));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -393,7 +393,7 @@ goto end_branch_10;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Record_Unsafe_unsafeSet'])((($dictIsSymbol_0)['reflectSymbol'])(new \Type\Proxy\Type_Proxy_Proxy()), $bottom1_3_1, (($dictBoundedRecord_7)['bottomRecord'])(new \Type\Proxy\Type_Proxy_Proxy(), $rowProxy_13));
+  $__res = \Record\Unsafe\majRecord_majUnsafe_unsafemajSet((($dictIsSymbol_0)->{'reflectSymbol'})(new \Type\Proxy\Type_Proxy_Proxy()), $bottom1_3_1, ((($dictBoundedRecord_7)->{'bottomRecord'})(new \Type\Proxy\Type_Proxy_Proxy()))($rowProxy_13));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

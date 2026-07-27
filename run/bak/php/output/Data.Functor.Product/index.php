@@ -134,9 +134,9 @@ function majData_majFunctor_majProduct_showmajProduct($dictShow_0, $dictShow1_1 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ["show" => function($v_2) use ($dictShow1_1, $dictShow_0) {
+  $__res = (object)["show" => function($v_2) use ($dictShow1_1, $dictShow_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(product ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])(($v_2)->{'value0'}), (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow1_1)['show'])(($v_2)->{'value1'}), ")"))));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(product "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_0)->{'show'})(($v_2)->{'value0'})))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(" "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow1_1)->{'show'})(($v_2)->{'value1'})))(")"))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -162,7 +162,7 @@ function majData_majFunctor_majProduct_product($fa_0, $ga_1 = null) {
 $GLOBALS['Data_Functor_Product_product'] = __NAMESPACE__ . '\\majData_majFunctor_majProduct_product';
 
 // Data_Functor_Product_newtypeProduct
-$GLOBALS['Data_Functor_Product_newtypeProduct'] = ["Coercible0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Functor_Product_newtypeProduct'] = (object)["Coercible0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = null;
   goto __end;;
@@ -177,13 +177,13 @@ function majData_majFunctor_majProduct_functormajProduct($dictFunctor_0, $dictFu
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ["map" => (function() use ($dictFunctor1_1, $dictFunctor_0) {
+  $__res = (object)["map" => (function() use ($dictFunctor1_1, $dictFunctor_0) {
   $__fn = function($f_2, $v_3 = null) use ($dictFunctor1_1, $dictFunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Bifunctor_bifunctorTuple'])['bimap'])((($dictFunctor_0)['map'])($f_2), (($dictFunctor1_1)['map'])($f_2), $v_3);
+  $__res = (((($GLOBALS['Data_Bifunctor_bifunctorTuple'])->{'bimap'})((($dictFunctor_0)->{'map'})($f_2)))((($dictFunctor1_1)->{'map'})($f_2)))($v_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -203,17 +203,17 @@ function majData_majFunctor_majProduct_eq1majProduct($dictEq1_0, $dictEq11_1 = n
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ["eq1" => function($dictEq_2) use ($dictEq11_1, $dictEq1_0) {
+  $__res = (object)["eq1" => function($dictEq_2) use ($dictEq11_1, $dictEq1_0) {
   $__num = \func_num_args();
-  $eq12_3_0 = (($dictEq1_0)['eq1'])($dictEq_2);
-  $eq13_4_1 = (($dictEq11_1)['eq1'])($dictEq_2);
+  $eq12_3_0 = (($dictEq1_0)->{'eq1'})($dictEq_2);
+  $eq13_4_1 = (($dictEq11_1)->{'eq1'})($dictEq_2);
   $__res = (function() use ($eq12_3_0, $eq13_4_1) {
   $__fn = function($v_5, $v1_6 = null) use ($eq12_3_0, $eq13_4_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(($eq12_3_0)(($v_5)->{'value0'}, ($v1_6)->{'value0'}), ($eq13_4_1)(($v_5)->{'value1'}, ($v1_6)->{'value1'}));
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})((($eq12_3_0)(($v_5)->{'value0'}))(($v1_6)->{'value0'})))((($eq13_4_1)(($v_5)->{'value1'}))(($v1_6)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -237,7 +237,7 @@ function majData_majFunctor_majProduct_eqmajProduct($dictEq1_0, $dictEq11_1 = nu
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ["eq" => ((($GLOBALS['Data_Functor_Product_eq1Product'])($dictEq1_0, $dictEq11_1))['eq1'])($dictEq_2)];
+  $__res = (object)["eq" => ((\Data\Functor\Product\majData_majFunctor_majProduct_eq1majProduct($dictEq1_0, $dictEq11_1))->{'eq1'})($dictEq_2)];
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -251,24 +251,24 @@ function majData_majFunctor_majProduct_ord1majProduct($dictOrd1_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $eq1Product1_1_0 = ($GLOBALS['Data_Functor_Product_eq1Product'])((($dictOrd1_0)['Eq10'])(null));
+  $eq1Product1_1_0 = ($GLOBALS['Data_Functor_Product_eq1Product'])((($dictOrd1_0)->{'Eq10'})(null));
   $__res = function($dictOrd11_2) use ($dictOrd1_0, $eq1Product1_1_0) {
   $__num = \func_num_args();
-  $eq1Product2_3_1 = ($eq1Product1_1_0)((($dictOrd11_2)['Eq10'])(null));
-  $__res = ["compare1" => function($dictOrd_4) use ($dictOrd11_2, $dictOrd1_0) {
+  $eq1Product2_3_1 = ($eq1Product1_1_0)((($dictOrd11_2)->{'Eq10'})(null));
+  $__res = (object)["compare1" => function($dictOrd_4) use ($dictOrd11_2, $dictOrd1_0) {
   $__num = \func_num_args();
-  $compare12_5_2 = (($dictOrd1_0)['compare1'])($dictOrd_4);
-  $compare13_6_3 = (($dictOrd11_2)['compare1'])($dictOrd_4);
+  $compare12_5_2 = (($dictOrd1_0)->{'compare1'})($dictOrd_4);
+  $compare13_6_3 = (($dictOrd11_2)->{'compare1'})($dictOrd_4);
   $__res = (function() use ($compare12_5_2, $compare13_6_3) {
   $__fn = function($v_7, $v1_8 = null) use ($compare12_5_2, $compare13_6_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v2_9_4 = ($compare12_5_2)(($v_7)->{'value0'}, ($v1_8)->{'value0'});
+  $v2_9_4 = (($compare12_5_2)(($v_7)->{'value0'}))(($v1_8)->{'value0'});
   $__t5 = null;;
   if ($v2_9_4 instanceof \Data\Ordering\Data_Ordering_EQ) {
-$__t5 = ($compare13_6_3)(($v_7)->{'value1'}, ($v1_8)->{'value1'});
+$__t5 = (($compare13_6_3)(($v_7)->{'value1'}))(($v1_8)->{'value1'});
 goto end_branch_5;;
 };
   $__t5 = $v2_9_4;
@@ -308,14 +308,14 @@ function majData_majFunctor_majProduct_ordmajProduct($dictOrd1_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $ord1Product1_1_0 = ($GLOBALS['Data_Functor_Product_ord1Product'])($dictOrd1_0);
-  $eqProduct1_2_1 = ($GLOBALS['Data_Functor_Product_eqProduct'])((($dictOrd1_0)['Eq10'])(null));
+  $eqProduct1_2_1 = ($GLOBALS['Data_Functor_Product_eqProduct'])((($dictOrd1_0)->{'Eq10'})(null));
   $__res = function($dictOrd11_3) use ($eqProduct1_2_1, $ord1Product1_1_0) {
   $__num = \func_num_args();
-  $eqProduct2_4_2 = ($eqProduct1_2_1)((($dictOrd11_3)['Eq10'])(null));
+  $eqProduct2_4_2 = ($eqProduct1_2_1)((($dictOrd11_3)->{'Eq10'})(null));
   $__res = function($dictOrd_5) use ($dictOrd11_3, $eqProduct2_4_2, $ord1Product1_1_0) {
   $__num = \func_num_args();
-  $eqProduct3_6_3 = ($eqProduct2_4_2)((($dictOrd_5)['Eq0'])(null));
-  $__res = ["compare" => ((($ord1Product1_1_0)($dictOrd11_3))['compare1'])($dictOrd_5), "Eq0" => function($_dollar__unused_7) use ($eqProduct3_6_3) {
+  $eqProduct3_6_3 = ($eqProduct2_4_2)((($dictOrd_5)->{'Eq0'})(null));
+  $__res = (object)["compare" => ((($ord1Product1_1_0)($dictOrd11_3))->{'compare1'})($dictOrd_5), "Eq0" => function($_dollar__unused_7) use ($eqProduct3_6_3) {
   $__num = \func_num_args();
   $__res = $eqProduct3_6_3;
   goto __end;;
@@ -343,7 +343,7 @@ function majData_majFunctor_majProduct_bihoistmajProduct($natF_0, $natG_1 = null
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($GLOBALS['Data_Bifunctor_bifunctorTuple'])['bimap'])($natF_0, $natG_1, $v_2);
+  $__res = (((($GLOBALS['Data_Bifunctor_bifunctorTuple'])->{'bimap'})($natF_0))($natG_1))($v_2);
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -357,17 +357,17 @@ function majData_majFunctor_majProduct_applymajProduct($dictApply_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $functorProduct1_1_0 = ($GLOBALS['Data_Functor_Product_functorProduct'])((($dictApply_0)['Functor0'])(null));
+  $functorProduct1_1_0 = ($GLOBALS['Data_Functor_Product_functorProduct'])((($dictApply_0)->{'Functor0'})(null));
   $__res = function($dictApply1_2) use ($dictApply_0, $functorProduct1_1_0) {
   $__num = \func_num_args();
-  $functorProduct2_3_1 = ($functorProduct1_1_0)((($dictApply1_2)['Functor0'])(null));
-  $__res = ["apply" => (function() use ($dictApply1_2, $dictApply_0) {
+  $functorProduct2_3_1 = ($functorProduct1_1_0)((($dictApply1_2)->{'Functor0'})(null));
+  $__res = (object)["apply" => (function() use ($dictApply1_2, $dictApply_0) {
   $__fn = function($v_4, $v1_5 = null) use ($dictApply1_2, $dictApply_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new \Data\Tuple\Data_Tuple_Tuple((($dictApply_0)['apply'])(($v_4)->{'value0'}, ($v1_5)->{'value0'}), (($dictApply1_2)['apply'])(($v_4)->{'value1'}, ($v1_5)->{'value1'}));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(((($dictApply_0)->{'apply'})(($v_4)->{'value0'}))(($v1_5)->{'value0'}), ((($dictApply1_2)->{'apply'})(($v_4)->{'value1'}))(($v1_5)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -397,17 +397,17 @@ function majData_majFunctor_majProduct_bindmajProduct($dictBind_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $applyProduct1_1_0 = ($GLOBALS['Data_Functor_Product_applyProduct'])((($dictBind_0)['Apply0'])(null));
+  $applyProduct1_1_0 = ($GLOBALS['Data_Functor_Product_applyProduct'])((($dictBind_0)->{'Apply0'})(null));
   $__res = function($dictBind1_2) use ($applyProduct1_1_0, $dictBind_0) {
   $__num = \func_num_args();
-  $applyProduct2_3_1 = ($applyProduct1_1_0)((($dictBind1_2)['Apply0'])(null));
-  $__res = ["bind" => (function() use ($dictBind1_2, $dictBind_0) {
+  $applyProduct2_3_1 = ($applyProduct1_1_0)((($dictBind1_2)->{'Apply0'})(null));
+  $__res = (object)["bind" => (function() use ($dictBind1_2, $dictBind_0) {
   $__fn = function($v_4, $f_5 = null) use ($dictBind1_2, $dictBind_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new \Data\Tuple\Data_Tuple_Tuple((($dictBind_0)['bind'])(($v_4)->{'value0'}, ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Tuple_fst'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'], $f_5))), (($dictBind1_2)['bind'])(($v_4)->{'value1'}, ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Tuple_snd'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'], $f_5))));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(((($dictBind_0)->{'bind'})(($v_4)->{'value0'}))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Tuple_fst']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($f_5))), ((($dictBind1_2)->{'bind'})(($v_4)->{'value1'}))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Tuple_snd']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($f_5))));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -437,13 +437,13 @@ function majData_majFunctor_majProduct_applicativemajProduct($dictApplicative_0)
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $applyProduct1_1_0 = ($GLOBALS['Data_Functor_Product_applyProduct'])((($dictApplicative_0)['Apply0'])(null));
+  $applyProduct1_1_0 = ($GLOBALS['Data_Functor_Product_applyProduct'])((($dictApplicative_0)->{'Apply0'})(null));
   $__res = function($dictApplicative1_2) use ($applyProduct1_1_0, $dictApplicative_0) {
   $__num = \func_num_args();
-  $applyProduct2_3_1 = ($applyProduct1_1_0)((($dictApplicative1_2)['Apply0'])(null));
-  $__res = ["pure" => function($a_4) use ($dictApplicative1_2, $dictApplicative_0) {
+  $applyProduct2_3_1 = ($applyProduct1_1_0)((($dictApplicative1_2)->{'Apply0'})(null));
+  $__res = (object)["pure" => function($a_4) use ($dictApplicative1_2, $dictApplicative_0) {
   $__num = \func_num_args();
-  $__res = new \Data\Tuple\Data_Tuple_Tuple((($dictApplicative_0)['pure'])($a_4), (($dictApplicative1_2)['pure'])($a_4));
+  $__res = new \Data\Tuple\Data_Tuple_Tuple((($dictApplicative_0)->{'pure'})($a_4), (($dictApplicative1_2)->{'pure'})($a_4));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -471,13 +471,13 @@ function majData_majFunctor_majProduct_monadmajProduct($dictMonad_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $applicativeProduct1_1_0 = ($GLOBALS['Data_Functor_Product_applicativeProduct'])((($dictMonad_0)['Applicative0'])(null));
-  $bindProduct1_2_1 = ($GLOBALS['Data_Functor_Product_bindProduct'])((($dictMonad_0)['Bind1'])(null));
+  $applicativeProduct1_1_0 = ($GLOBALS['Data_Functor_Product_applicativeProduct'])((($dictMonad_0)->{'Applicative0'})(null));
+  $bindProduct1_2_1 = ($GLOBALS['Data_Functor_Product_bindProduct'])((($dictMonad_0)->{'Bind1'})(null));
   $__res = function($dictMonad1_3) use ($applicativeProduct1_1_0, $bindProduct1_2_1) {
   $__num = \func_num_args();
-  $applicativeProduct2_4_2 = ($applicativeProduct1_1_0)((($dictMonad1_3)['Applicative0'])(null));
-  $bindProduct2_5_3 = ($bindProduct1_2_1)((($dictMonad1_3)['Bind1'])(null));
-  $__res = ["Applicative0" => function($_dollar__unused_6) use ($applicativeProduct2_4_2) {
+  $applicativeProduct2_4_2 = ($applicativeProduct1_1_0)((($dictMonad1_3)->{'Applicative0'})(null));
+  $bindProduct2_5_3 = ($bindProduct1_2_1)((($dictMonad1_3)->{'Bind1'})(null));
+  $__res = (object)["Applicative0" => function($_dollar__unused_6) use ($applicativeProduct2_4_2) {
   $__num = \func_num_args();
   $__res = $applicativeProduct2_4_2;
   goto __end;;

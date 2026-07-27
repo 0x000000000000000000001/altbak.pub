@@ -10,9 +10,9 @@ var cache_lazyUnit gopurs_runtime.Value
 var once_lazyUnit sync.Once
 func Get_lazyUnit() gopurs_runtime.Value {
 	once_lazyUnit.Do(func() {
-		cache_lazyUnit = gopurs_runtime.RecordDict1("defer", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_lazyUnit = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("defer", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Unit.Get_unit()
-}))
+}))))
 	})
 	return cache_lazyUnit
 }
@@ -21,9 +21,9 @@ var cache_lazyFn gopurs_runtime.Value
 var once_lazyFn sync.Once
 func Get_lazyFn() gopurs_runtime.Value {
 	once_lazyFn.Do(func() {
-		cache_lazyFn = gopurs_runtime.RecordDict1("defer", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_lazyFn = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("defer", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, x_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(f_0, pkg_Data_Unit.Get_unit(), x_1)
-}))
+}))))
 	})
 	return cache_lazyFn
 }
@@ -39,15 +39,15 @@ return Call_defer_(dict_0_box)
 	return cache_defer_
 }
 
-var cache_defer__gopurs_runtime_Value_2601398503 gopurs_runtime.Value
-var once_defer__gopurs_runtime_Value_2601398503 sync.Once
-func Get_defer__gopurs_runtime_Value_2601398503() gopurs_runtime.Value {
-	once_defer__gopurs_runtime_Value_2601398503.Do(func() {
-		cache_defer__gopurs_runtime_Value_2601398503 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_defer__gopurs_runtime_Value_2601398503(dict_0_box)
+var cache_defer__func_gopurs_runtime_Value__func_gopurs_runtime_Value__interface____interface___2018956455 gopurs_runtime.Value
+var once_defer__func_gopurs_runtime_Value__func_gopurs_runtime_Value__interface____interface___2018956455 sync.Once
+func Get_defer__func_gopurs_runtime_Value__func_gopurs_runtime_Value__interface____interface___2018956455() gopurs_runtime.Value {
+	once_defer__func_gopurs_runtime_Value__func_gopurs_runtime_Value__interface____interface___2018956455.Do(func() {
+		cache_defer__func_gopurs_runtime_Value__func_gopurs_runtime_Value__interface____interface___2018956455 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_defer__func_gopurs_runtime_Value__func_gopurs_runtime_Value__interface____interface___2018956455(dict_0_box)
 })
 	})
-	return cache_defer__gopurs_runtime_Value_2601398503
+	return cache_defer__func_gopurs_runtime_Value__func_gopurs_runtime_Value__interface____interface___2018956455
 }
 
 var cache_fix gopurs_runtime.Value
@@ -55,21 +55,25 @@ var once_fix sync.Once
 func Get_fix() gopurs_runtime.Value {
 	once_fix.Do(func() {
 		cache_fix = gopurs_runtime.Func2(func(dictLazy_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_fix(dictLazy_0_box, f_1_box)
+return gopurs_runtime.Any(Call_fix(dictLazy_0_box, func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(f_1_box, gopurs_runtime.Any(inner_arg0)))
+}))
 })
 	})
 	return cache_fix
 }
 
-var cache_fix__gopurs_runtime_Value_3125636615 gopurs_runtime.Value
-var once_fix__gopurs_runtime_Value_3125636615 sync.Once
-func Get_fix__gopurs_runtime_Value_3125636615() gopurs_runtime.Value {
-	once_fix__gopurs_runtime_Value_3125636615.Do(func() {
-		cache_fix__gopurs_runtime_Value_3125636615 = gopurs_runtime.Func2(func(dictLazy_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_fix__gopurs_runtime_Value_3125636615(dictLazy_0_box, f_1_box)
+var cache_fix__func_gopurs_runtime_Value__func_interface____interface____interface___3318955023 gopurs_runtime.Value
+var once_fix__func_gopurs_runtime_Value__func_interface____interface____interface___3318955023 sync.Once
+func Get_fix__func_gopurs_runtime_Value__func_interface____interface____interface___3318955023() gopurs_runtime.Value {
+	once_fix__func_gopurs_runtime_Value__func_interface____interface____interface___3318955023.Do(func() {
+		cache_fix__func_gopurs_runtime_Value__func_interface____interface____interface___3318955023 = gopurs_runtime.Func2(func(dictLazy_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Any(Call_fix__func_gopurs_runtime_Value__func_interface____interface____interface___3318955023(dictLazy_0_box, func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(f_1_box, gopurs_runtime.Any(inner_arg0)))
+}))
 })
 	})
-	return cache_fix__gopurs_runtime_Value_3125636615
+	return cache_fix__func_gopurs_runtime_Value__func_interface____interface____interface___3318955023
 }
 
 func Call_defer_(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -78,36 +82,34 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "defer")
 }
 
-func Call_defer__gopurs_runtime_Value_2601398503(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_defer__func_gopurs_runtime_Value__func_gopurs_runtime_Value__interface____interface___2018956455(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "defer")
 }
 
-func Call_fix(dictLazy_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_fix(dictLazy_0_loop gopurs_runtime.Value, f_1_loop func(interface{}) interface{}) interface{} {
 var dictLazy_0 gopurs_runtime.Value = dictLazy_0_loop
 _ = dictLazy_0
-var f_1 gopurs_runtime.Value = f_1_loop
+var f_1 func(interface{}) interface{} = f_1_loop
 _ = f_1
 var go__2_0 gopurs_runtime.Value
 _ = go__2_0
 go__2_0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictLazy_0, "defer"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_1, go__2_0)
+return gopurs_runtime.Any(f_1(go__2_0))
 }))
 return go__2_0
 }
 
-func Call_fix__gopurs_runtime_Value_3125636615(dictLazy_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_fix__func_gopurs_runtime_Value__func_interface____interface____interface___3318955023(dictLazy_0_loop gopurs_runtime.Value, f_1_loop func(interface{}) interface{}) interface{} {
 var dictLazy_0 gopurs_runtime.Value = dictLazy_0_loop
 _ = dictLazy_0
-var f_1 gopurs_runtime.Value = f_1_loop
+var f_1 func(interface{}) interface{} = f_1_loop
 _ = f_1
 var go__2_0 gopurs_runtime.Value
 _ = go__2_0
 go__2_0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictLazy_0, "defer"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_1, go__2_0)
+return gopurs_runtime.Any(f_1(go__2_0))
 }))
 return go__2_0
 }
-
-

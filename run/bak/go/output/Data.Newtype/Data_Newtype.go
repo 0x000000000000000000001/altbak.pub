@@ -17,15 +17,15 @@ return Call_wrap(_dollar__unused_0_box)
 	return cache_wrap
 }
 
-var cache_wrap__gopurs_runtime_Value_2113486499 gopurs_runtime.Value
-var once_wrap__gopurs_runtime_Value_2113486499 sync.Once
-func Get_wrap__gopurs_runtime_Value_2113486499() gopurs_runtime.Value {
-	once_wrap__gopurs_runtime_Value_2113486499.Do(func() {
-		cache_wrap__gopurs_runtime_Value_2113486499 = gopurs_runtime.Func(func(_dollar__unused_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_wrap__gopurs_runtime_Value_2113486499(_dollar__unused_0_box)
+var cache_wrap__func_gopurs_runtime_Value__interface____interface___2113486499 gopurs_runtime.Value
+var once_wrap__func_gopurs_runtime_Value__interface____interface___2113486499 sync.Once
+func Get_wrap__func_gopurs_runtime_Value__interface____interface___2113486499() gopurs_runtime.Value {
+	once_wrap__func_gopurs_runtime_Value__interface____interface___2113486499.Do(func() {
+		cache_wrap__func_gopurs_runtime_Value__interface____interface___2113486499 = gopurs_runtime.Func(func(_dollar__unused_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_wrap__func_gopurs_runtime_Value__interface____interface___2113486499(_dollar__unused_0_box)
 })
 	})
-	return cache_wrap__gopurs_runtime_Value_2113486499
+	return cache_wrap__func_gopurs_runtime_Value__interface____interface___2113486499
 }
 
 var cache_unwrap gopurs_runtime.Value
@@ -39,15 +39,15 @@ return Call_unwrap(_dollar__unused_0_box)
 	return cache_unwrap
 }
 
-var cache_unwrap__gopurs_runtime_Value_2015937635 gopurs_runtime.Value
-var once_unwrap__gopurs_runtime_Value_2015937635 sync.Once
-func Get_unwrap__gopurs_runtime_Value_2015937635() gopurs_runtime.Value {
-	once_unwrap__gopurs_runtime_Value_2015937635.Do(func() {
-		cache_unwrap__gopurs_runtime_Value_2015937635 = gopurs_runtime.Func(func(_dollar__unused_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_unwrap__gopurs_runtime_Value_2015937635(_dollar__unused_0_box)
+var cache_unwrap__func_gopurs_runtime_Value__interface____interface___2015937635 gopurs_runtime.Value
+var once_unwrap__func_gopurs_runtime_Value__interface____interface___2015937635 sync.Once
+func Get_unwrap__func_gopurs_runtime_Value__interface____interface___2015937635() gopurs_runtime.Value {
+	once_unwrap__func_gopurs_runtime_Value__interface____interface___2015937635.Do(func() {
+		cache_unwrap__func_gopurs_runtime_Value__interface____interface___2015937635 = gopurs_runtime.Func(func(_dollar__unused_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_unwrap__func_gopurs_runtime_Value__interface____interface___2015937635(_dollar__unused_0_box)
 })
 	})
-	return cache_unwrap__gopurs_runtime_Value_2015937635
+	return cache_unwrap__func_gopurs_runtime_Value__interface____interface___2015937635
 }
 
 var cache_underF2 gopurs_runtime.Value
@@ -55,7 +55,9 @@ var once_underF2 sync.Once
 func Get_underF2() gopurs_runtime.Value {
 	once_underF2.Do(func() {
 		cache_underF2 = gopurs_runtime.Func5(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, _dollar__unused_2_box gopurs_runtime.Value, _dollar__unused_3_box gopurs_runtime.Value, v_4_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_underF2(_dollar__unused_0_box, _dollar__unused_1_box, _dollar__unused_2_box, _dollar__unused_3_box, v_4_box)
+return Call_underF2(_dollar__unused_0_box, _dollar__unused_1_box, _dollar__unused_2_box, _dollar__unused_3_box, func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(v_4_box, gopurs_runtime.Any(inner_arg0)))
+})
 })
 	})
 	return cache_underF2
@@ -66,7 +68,9 @@ var once_underF sync.Once
 func Get_underF() gopurs_runtime.Value {
 	once_underF.Do(func() {
 		cache_underF = gopurs_runtime.Func5(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, _dollar__unused_2_box gopurs_runtime.Value, _dollar__unused_3_box gopurs_runtime.Value, v_4_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_underF(_dollar__unused_0_box, _dollar__unused_1_box, _dollar__unused_2_box, _dollar__unused_3_box, v_4_box)
+return Call_underF(_dollar__unused_0_box, _dollar__unused_1_box, _dollar__unused_2_box, _dollar__unused_3_box, func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(v_4_box, gopurs_runtime.Any(inner_arg0)))
+})
 })
 	})
 	return cache_underF
@@ -77,7 +81,9 @@ var once_under2 sync.Once
 func Get_under2() gopurs_runtime.Value {
 	once_under2.Do(func() {
 		cache_under2 = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_under2(_dollar__unused_0_box, _dollar__unused_1_box, v_2_box)
+return Call_under2(_dollar__unused_0_box, _dollar__unused_1_box, func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(v_2_box, gopurs_runtime.Any(inner_arg0)))
+})
 })
 	})
 	return cache_under2
@@ -88,7 +94,9 @@ var once_under sync.Once
 func Get_under() gopurs_runtime.Value {
 	once_under.Do(func() {
 		cache_under = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_under(_dollar__unused_0_box, _dollar__unused_1_box, v_2_box)
+return Call_under(_dollar__unused_0_box, _dollar__unused_1_box, func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(v_2_box, gopurs_runtime.Any(inner_arg0)))
+})
 })
 	})
 	return cache_under
@@ -99,21 +107,25 @@ var once_un sync.Once
 func Get_un() gopurs_runtime.Value {
 	once_un.Do(func() {
 		cache_un = gopurs_runtime.Func2(func(_dollar__unused_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_un(_dollar__unused_0_box, v_1_box)
+return Call_un(_dollar__unused_0_box, func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(v_1_box, gopurs_runtime.Any(inner_arg0)))
+})
 })
 	})
 	return cache_un
 }
 
-var cache_un__gopurs_runtime_Value_3240843223 gopurs_runtime.Value
-var once_un__gopurs_runtime_Value_3240843223 sync.Once
-func Get_un__gopurs_runtime_Value_3240843223() gopurs_runtime.Value {
-	once_un__gopurs_runtime_Value_3240843223.Do(func() {
-		cache_un__gopurs_runtime_Value_3240843223 = gopurs_runtime.Func2(func(_dollar__unused_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_un__gopurs_runtime_Value_3240843223(_dollar__unused_0_box, v_1_box)
+var cache_un__func_gopurs_runtime_Value__func_interface____interface____interface____interface___3240843223 gopurs_runtime.Value
+var once_un__func_gopurs_runtime_Value__func_interface____interface____interface____interface___3240843223 sync.Once
+func Get_un__func_gopurs_runtime_Value__func_interface____interface____interface____interface___3240843223() gopurs_runtime.Value {
+	once_un__func_gopurs_runtime_Value__func_interface____interface____interface____interface___3240843223.Do(func() {
+		cache_un__func_gopurs_runtime_Value__func_interface____interface____interface____interface___3240843223 = gopurs_runtime.Func2(func(_dollar__unused_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_un__func_gopurs_runtime_Value__func_interface____interface____interface____interface___3240843223(_dollar__unused_0_box, func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(v_1_box, gopurs_runtime.Any(inner_arg0)))
+})
 })
 	})
-	return cache_un__gopurs_runtime_Value_3240843223
+	return cache_un__func_gopurs_runtime_Value__func_interface____interface____interface____interface___3240843223
 }
 
 var cache_traverse gopurs_runtime.Value
@@ -121,7 +133,9 @@ var once_traverse sync.Once
 func Get_traverse() gopurs_runtime.Value {
 	once_traverse.Do(func() {
 		cache_traverse = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_traverse(_dollar__unused_0_box, _dollar__unused_1_box, v_2_box)
+return Call_traverse(_dollar__unused_0_box, _dollar__unused_1_box, func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(v_2_box, gopurs_runtime.Any(inner_arg0)))
+})
 })
 	})
 	return cache_traverse
@@ -132,7 +146,9 @@ var once_overF2 sync.Once
 func Get_overF2() gopurs_runtime.Value {
 	once_overF2.Do(func() {
 		cache_overF2 = gopurs_runtime.Func5(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, _dollar__unused_2_box gopurs_runtime.Value, _dollar__unused_3_box gopurs_runtime.Value, v_4_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_overF2(_dollar__unused_0_box, _dollar__unused_1_box, _dollar__unused_2_box, _dollar__unused_3_box, v_4_box)
+return Call_overF2(_dollar__unused_0_box, _dollar__unused_1_box, _dollar__unused_2_box, _dollar__unused_3_box, func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(v_4_box, gopurs_runtime.Any(inner_arg0)))
+})
 })
 	})
 	return cache_overF2
@@ -143,7 +159,9 @@ var once_overF sync.Once
 func Get_overF() gopurs_runtime.Value {
 	once_overF.Do(func() {
 		cache_overF = gopurs_runtime.Func5(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, _dollar__unused_2_box gopurs_runtime.Value, _dollar__unused_3_box gopurs_runtime.Value, v_4_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_overF(_dollar__unused_0_box, _dollar__unused_1_box, _dollar__unused_2_box, _dollar__unused_3_box, v_4_box)
+return Call_overF(_dollar__unused_0_box, _dollar__unused_1_box, _dollar__unused_2_box, _dollar__unused_3_box, func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(v_4_box, gopurs_runtime.Any(inner_arg0)))
+})
 })
 	})
 	return cache_overF
@@ -154,7 +172,9 @@ var once_over2 sync.Once
 func Get_over2() gopurs_runtime.Value {
 	once_over2.Do(func() {
 		cache_over2 = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_over2(_dollar__unused_0_box, _dollar__unused_1_box, v_2_box)
+return Call_over2(_dollar__unused_0_box, _dollar__unused_1_box, func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(v_2_box, gopurs_runtime.Any(inner_arg0)))
+})
 })
 	})
 	return cache_over2
@@ -165,30 +185,34 @@ var once_over sync.Once
 func Get_over() gopurs_runtime.Value {
 	once_over.Do(func() {
 		cache_over = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_over(_dollar__unused_0_box, _dollar__unused_1_box, v_2_box)
+return Call_over(_dollar__unused_0_box, _dollar__unused_1_box, func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(v_2_box, gopurs_runtime.Any(inner_arg0)))
+})
 })
 	})
 	return cache_over
 }
 
-var cache_over__gopurs_runtime_Value_9260554 gopurs_runtime.Value
-var once_over__gopurs_runtime_Value_9260554 sync.Once
-func Get_over__gopurs_runtime_Value_9260554() gopurs_runtime.Value {
-	once_over__gopurs_runtime_Value_9260554.Do(func() {
-		cache_over__gopurs_runtime_Value_9260554 = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_over__gopurs_runtime_Value_9260554(_dollar__unused_0_box, _dollar__unused_1_box, v_2_box)
+var cache_over__func_gopurs_runtime_Value__gopurs_runtime_Value__func_interface____interface____func_interface____interface____interface____interface___9260554 gopurs_runtime.Value
+var once_over__func_gopurs_runtime_Value__gopurs_runtime_Value__func_interface____interface____func_interface____interface____interface____interface___9260554 sync.Once
+func Get_over__func_gopurs_runtime_Value__gopurs_runtime_Value__func_interface____interface____func_interface____interface____interface____interface___9260554() gopurs_runtime.Value {
+	once_over__func_gopurs_runtime_Value__gopurs_runtime_Value__func_interface____interface____func_interface____interface____interface____interface___9260554.Do(func() {
+		cache_over__func_gopurs_runtime_Value__gopurs_runtime_Value__func_interface____interface____func_interface____interface____interface____interface___9260554 = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_over__func_gopurs_runtime_Value__gopurs_runtime_Value__func_interface____interface____func_interface____interface____interface____interface___9260554(_dollar__unused_0_box, _dollar__unused_1_box, func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(v_2_box, gopurs_runtime.Any(inner_arg0)))
+})
 })
 	})
-	return cache_over__gopurs_runtime_Value_9260554
+	return cache_over__func_gopurs_runtime_Value__gopurs_runtime_Value__func_interface____interface____func_interface____interface____interface____interface___9260554
 }
 
 var cache_newtypeMultiplicative gopurs_runtime.Value
 var once_newtypeMultiplicative sync.Once
 func Get_newtypeMultiplicative() gopurs_runtime.Value {
 	once_newtypeMultiplicative.Do(func() {
-		cache_newtypeMultiplicative = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypeMultiplicative = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
-}))
+}))))
 	})
 	return cache_newtypeMultiplicative
 }
@@ -197,9 +221,9 @@ var cache_newtypeLast gopurs_runtime.Value
 var once_newtypeLast sync.Once
 func Get_newtypeLast() gopurs_runtime.Value {
 	once_newtypeLast.Do(func() {
-		cache_newtypeLast = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypeLast = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
-}))
+}))))
 	})
 	return cache_newtypeLast
 }
@@ -208,9 +232,9 @@ var cache_newtypeFirst gopurs_runtime.Value
 var once_newtypeFirst sync.Once
 func Get_newtypeFirst() gopurs_runtime.Value {
 	once_newtypeFirst.Do(func() {
-		cache_newtypeFirst = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypeFirst = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
-}))
+}))))
 	})
 	return cache_newtypeFirst
 }
@@ -219,9 +243,9 @@ var cache_newtypeEndo gopurs_runtime.Value
 var once_newtypeEndo sync.Once
 func Get_newtypeEndo() gopurs_runtime.Value {
 	once_newtypeEndo.Do(func() {
-		cache_newtypeEndo = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypeEndo = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
-}))
+}))))
 	})
 	return cache_newtypeEndo
 }
@@ -230,9 +254,9 @@ var cache_newtypeDual gopurs_runtime.Value
 var once_newtypeDual sync.Once
 func Get_newtypeDual() gopurs_runtime.Value {
 	once_newtypeDual.Do(func() {
-		cache_newtypeDual = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypeDual = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
-}))
+}))))
 	})
 	return cache_newtypeDual
 }
@@ -241,9 +265,9 @@ var cache_newtypeDisj gopurs_runtime.Value
 var once_newtypeDisj sync.Once
 func Get_newtypeDisj() gopurs_runtime.Value {
 	once_newtypeDisj.Do(func() {
-		cache_newtypeDisj = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypeDisj = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
-}))
+}))))
 	})
 	return cache_newtypeDisj
 }
@@ -252,9 +276,9 @@ var cache_newtypeConj gopurs_runtime.Value
 var once_newtypeConj sync.Once
 func Get_newtypeConj() gopurs_runtime.Value {
 	once_newtypeConj.Do(func() {
-		cache_newtypeConj = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypeConj = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
-}))
+}))))
 	})
 	return cache_newtypeConj
 }
@@ -263,9 +287,9 @@ var cache_newtypeAdditive gopurs_runtime.Value
 var once_newtypeAdditive sync.Once
 func Get_newtypeAdditive() gopurs_runtime.Value {
 	once_newtypeAdditive.Do(func() {
-		cache_newtypeAdditive = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypeAdditive = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
-}))
+}))))
 	})
 	return cache_newtypeAdditive
 }
@@ -275,7 +299,9 @@ var once_modify sync.Once
 func Get_modify() gopurs_runtime.Value {
 	once_modify.Do(func() {
 		cache_modify = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, fn_1_box gopurs_runtime.Value, t_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_modify(_dollar__unused_0_box, fn_1_box, t_2_box)
+return gopurs_runtime.Any(Call_modify(_dollar__unused_0_box, func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(fn_1_box, gopurs_runtime.Any(inner_arg0)))
+}, gopurs_runtime.UnboxAny(t_2_box)))
 })
 	})
 	return cache_modify
@@ -286,7 +312,9 @@ var once_collect sync.Once
 func Get_collect() gopurs_runtime.Value {
 	once_collect.Do(func() {
 		cache_collect = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_collect(_dollar__unused_0_box, _dollar__unused_1_box, v_2_box)
+return Call_collect(_dollar__unused_0_box, _dollar__unused_1_box, func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(v_2_box, gopurs_runtime.Any(inner_arg0)))
+})
 })
 	})
 	return cache_collect
@@ -297,21 +325,25 @@ var once_alaF sync.Once
 func Get_alaF() gopurs_runtime.Value {
 	once_alaF.Do(func() {
 		cache_alaF = gopurs_runtime.Func5(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, _dollar__unused_2_box gopurs_runtime.Value, _dollar__unused_3_box gopurs_runtime.Value, v_4_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_alaF(_dollar__unused_0_box, _dollar__unused_1_box, _dollar__unused_2_box, _dollar__unused_3_box, v_4_box)
+return Call_alaF(_dollar__unused_0_box, _dollar__unused_1_box, _dollar__unused_2_box, _dollar__unused_3_box, func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(v_4_box, gopurs_runtime.Any(inner_arg0)))
+})
 })
 	})
 	return cache_alaF
 }
 
-var cache_alaF__gopurs_runtime_Value_2634372046 gopurs_runtime.Value
-var once_alaF__gopurs_runtime_Value_2634372046 sync.Once
-func Get_alaF__gopurs_runtime_Value_2634372046() gopurs_runtime.Value {
-	once_alaF__gopurs_runtime_Value_2634372046.Do(func() {
-		cache_alaF__gopurs_runtime_Value_2634372046 = gopurs_runtime.Func5(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, _dollar__unused_2_box gopurs_runtime.Value, _dollar__unused_3_box gopurs_runtime.Value, v_4_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_alaF__gopurs_runtime_Value_2634372046(_dollar__unused_0_box, _dollar__unused_1_box, _dollar__unused_2_box, _dollar__unused_3_box, v_4_box)
+var cache_alaF__func_gopurs_runtime_Value__gopurs_runtime_Value__gopurs_runtime_Value__gopurs_runtime_Value__func_interface____interface____func_interface____interface____interface____interface___2634372046 gopurs_runtime.Value
+var once_alaF__func_gopurs_runtime_Value__gopurs_runtime_Value__gopurs_runtime_Value__gopurs_runtime_Value__func_interface____interface____func_interface____interface____interface____interface___2634372046 sync.Once
+func Get_alaF__func_gopurs_runtime_Value__gopurs_runtime_Value__gopurs_runtime_Value__gopurs_runtime_Value__func_interface____interface____func_interface____interface____interface____interface___2634372046() gopurs_runtime.Value {
+	once_alaF__func_gopurs_runtime_Value__gopurs_runtime_Value__gopurs_runtime_Value__gopurs_runtime_Value__func_interface____interface____func_interface____interface____interface____interface___2634372046.Do(func() {
+		cache_alaF__func_gopurs_runtime_Value__gopurs_runtime_Value__gopurs_runtime_Value__gopurs_runtime_Value__func_interface____interface____func_interface____interface____interface____interface___2634372046 = gopurs_runtime.Func5(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, _dollar__unused_2_box gopurs_runtime.Value, _dollar__unused_3_box gopurs_runtime.Value, v_4_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_alaF__func_gopurs_runtime_Value__gopurs_runtime_Value__gopurs_runtime_Value__gopurs_runtime_Value__func_interface____interface____func_interface____interface____interface____interface___2634372046(_dollar__unused_0_box, _dollar__unused_1_box, _dollar__unused_2_box, _dollar__unused_3_box, func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(v_4_box, gopurs_runtime.Any(inner_arg0)))
+})
 })
 	})
-	return cache_alaF__gopurs_runtime_Value_2634372046
+	return cache_alaF__func_gopurs_runtime_Value__gopurs_runtime_Value__gopurs_runtime_Value__gopurs_runtime_Value__func_interface____interface____func_interface____interface____interface____interface___2634372046
 }
 
 var cache_ala gopurs_runtime.Value
@@ -319,21 +351,33 @@ var once_ala sync.Once
 func Get_ala() gopurs_runtime.Value {
 	once_ala.Do(func() {
 		cache_ala = gopurs_runtime.Func5(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, _dollar__unused_2_box gopurs_runtime.Value, v_3_box gopurs_runtime.Value, f_4_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_ala(_dollar__unused_0_box, _dollar__unused_1_box, _dollar__unused_2_box, v_3_box, f_4_box)
+return gopurs_runtime.Any(Call_ala(_dollar__unused_0_box, _dollar__unused_1_box, _dollar__unused_2_box, func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(v_3_box, gopurs_runtime.Any(inner_arg0)))
+}, func(inner_arg0 func(interface{}) interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(f_4_box, gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Any(inner_arg0(gopurs_runtime.UnboxAny(arg0)))
+})))
+}))
 })
 	})
 	return cache_ala
 }
 
-var cache_ala__gopurs_runtime_Value_2379211251 gopurs_runtime.Value
-var once_ala__gopurs_runtime_Value_2379211251 sync.Once
-func Get_ala__gopurs_runtime_Value_2379211251() gopurs_runtime.Value {
-	once_ala__gopurs_runtime_Value_2379211251.Do(func() {
-		cache_ala__gopurs_runtime_Value_2379211251 = gopurs_runtime.Func5(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, _dollar__unused_2_box gopurs_runtime.Value, v_3_box gopurs_runtime.Value, f_4_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_ala__gopurs_runtime_Value_2379211251(_dollar__unused_0_box, _dollar__unused_1_box, _dollar__unused_2_box, v_3_box, f_4_box)
+var cache_ala__func_gopurs_runtime_Value__gopurs_runtime_Value__gopurs_runtime_Value__func_interface____interface____func_func_interface____interface____interface____interface___2379211251 gopurs_runtime.Value
+var once_ala__func_gopurs_runtime_Value__gopurs_runtime_Value__gopurs_runtime_Value__func_interface____interface____func_func_interface____interface____interface____interface___2379211251 sync.Once
+func Get_ala__func_gopurs_runtime_Value__gopurs_runtime_Value__gopurs_runtime_Value__func_interface____interface____func_func_interface____interface____interface____interface___2379211251() gopurs_runtime.Value {
+	once_ala__func_gopurs_runtime_Value__gopurs_runtime_Value__gopurs_runtime_Value__func_interface____interface____func_func_interface____interface____interface____interface___2379211251.Do(func() {
+		cache_ala__func_gopurs_runtime_Value__gopurs_runtime_Value__gopurs_runtime_Value__func_interface____interface____func_func_interface____interface____interface____interface___2379211251 = gopurs_runtime.Func5(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, _dollar__unused_2_box gopurs_runtime.Value, v_3_box gopurs_runtime.Value, f_4_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Any(Call_ala__func_gopurs_runtime_Value__gopurs_runtime_Value__gopurs_runtime_Value__func_interface____interface____func_func_interface____interface____interface____interface___2379211251(_dollar__unused_0_box, _dollar__unused_1_box, _dollar__unused_2_box, func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(v_3_box, gopurs_runtime.Any(inner_arg0)))
+}, func(inner_arg0 func(interface{}) interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(f_4_box, gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Any(inner_arg0(gopurs_runtime.UnboxAny(arg0)))
+})))
+}))
 })
 	})
-	return cache_ala__gopurs_runtime_Value_2379211251
+	return cache_ala__func_gopurs_runtime_Value__gopurs_runtime_Value__gopurs_runtime_Value__func_interface____interface____func_func_interface____interface____interface____interface___2379211251
 }
 
 func Call_wrap(_dollar__unused_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -342,7 +386,7 @@ _ = _dollar__unused_0
 return pkg_Unsafe_Coerce.Get_unsafeCoerce()
 }
 
-func Call_wrap__gopurs_runtime_Value_2113486499(_dollar__unused_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_wrap__func_gopurs_runtime_Value__interface____interface___2113486499(_dollar__unused_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 return pkg_Unsafe_Coerce.Get_unsafeCoerce()
@@ -354,13 +398,13 @@ _ = _dollar__unused_0
 return pkg_Unsafe_Coerce.Get_unsafeCoerce()
 }
 
-func Call_unwrap__gopurs_runtime_Value_2015937635(_dollar__unused_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_unwrap__func_gopurs_runtime_Value__interface____interface___2015937635(_dollar__unused_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 return pkg_Unsafe_Coerce.Get_unsafeCoerce()
 }
 
-func Call_underF2(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop gopurs_runtime.Value, _dollar__unused_3_loop gopurs_runtime.Value, v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_underF2(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop gopurs_runtime.Value, _dollar__unused_3_loop gopurs_runtime.Value, v_4_loop func(interface{}) interface{}) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
@@ -369,12 +413,12 @@ var _dollar__unused_2 gopurs_runtime.Value = _dollar__unused_2_loop
 _ = _dollar__unused_2
 var _dollar__unused_3 gopurs_runtime.Value = _dollar__unused_3_loop
 _ = _dollar__unused_3
-var v_4 gopurs_runtime.Value = v_4_loop
+var v_4 func(interface{}) interface{} = v_4_loop
 _ = v_4
 return pkg_Unsafe_Coerce.Get_unsafeCoerce()
 }
 
-func Call_underF(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop gopurs_runtime.Value, _dollar__unused_3_loop gopurs_runtime.Value, v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_underF(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop gopurs_runtime.Value, _dollar__unused_3_loop gopurs_runtime.Value, v_4_loop func(interface{}) interface{}) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
@@ -383,58 +427,58 @@ var _dollar__unused_2 gopurs_runtime.Value = _dollar__unused_2_loop
 _ = _dollar__unused_2
 var _dollar__unused_3 gopurs_runtime.Value = _dollar__unused_3_loop
 _ = _dollar__unused_3
-var v_4 gopurs_runtime.Value = v_4_loop
+var v_4 func(interface{}) interface{} = v_4_loop
 _ = v_4
 return pkg_Unsafe_Coerce.Get_unsafeCoerce()
 }
 
-func Call_under2(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_under2(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, v_2_loop func(interface{}) interface{}) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
 _ = _dollar__unused_1
-var v_2 gopurs_runtime.Value = v_2_loop
+var v_2 func(interface{}) interface{} = v_2_loop
 _ = v_2
 return pkg_Unsafe_Coerce.Get_unsafeCoerce()
 }
 
-func Call_under(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_under(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, v_2_loop func(interface{}) interface{}) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
 _ = _dollar__unused_1
-var v_2 gopurs_runtime.Value = v_2_loop
+var v_2 func(interface{}) interface{} = v_2_loop
 _ = v_2
 return pkg_Unsafe_Coerce.Get_unsafeCoerce()
 }
 
-func Call_un(_dollar__unused_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_un(_dollar__unused_0_loop gopurs_runtime.Value, v_1_loop func(interface{}) interface{}) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
-var v_1 gopurs_runtime.Value = v_1_loop
+var v_1 func(interface{}) interface{} = v_1_loop
 _ = v_1
 return pkg_Unsafe_Coerce.Get_unsafeCoerce()
 }
 
-func Call_un__gopurs_runtime_Value_3240843223(_dollar__unused_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_un__func_gopurs_runtime_Value__func_interface____interface____interface____interface___3240843223(_dollar__unused_0_loop gopurs_runtime.Value, v_1_loop func(interface{}) interface{}) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
-var v_1 gopurs_runtime.Value = v_1_loop
+var v_1 func(interface{}) interface{} = v_1_loop
 _ = v_1
 return pkg_Unsafe_Coerce.Get_unsafeCoerce()
 }
 
-func Call_traverse(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_traverse(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, v_2_loop func(interface{}) interface{}) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
 _ = _dollar__unused_1
-var v_2 gopurs_runtime.Value = v_2_loop
+var v_2 func(interface{}) interface{} = v_2_loop
 _ = v_2
 return pkg_Unsafe_Coerce.Get_unsafeCoerce()
 }
 
-func Call_overF2(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop gopurs_runtime.Value, _dollar__unused_3_loop gopurs_runtime.Value, v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_overF2(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop gopurs_runtime.Value, _dollar__unused_3_loop gopurs_runtime.Value, v_4_loop func(interface{}) interface{}) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
@@ -443,12 +487,12 @@ var _dollar__unused_2 gopurs_runtime.Value = _dollar__unused_2_loop
 _ = _dollar__unused_2
 var _dollar__unused_3 gopurs_runtime.Value = _dollar__unused_3_loop
 _ = _dollar__unused_3
-var v_4 gopurs_runtime.Value = v_4_loop
+var v_4 func(interface{}) interface{} = v_4_loop
 _ = v_4
 return pkg_Unsafe_Coerce.Get_unsafeCoerce()
 }
 
-func Call_overF(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop gopurs_runtime.Value, _dollar__unused_3_loop gopurs_runtime.Value, v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_overF(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop gopurs_runtime.Value, _dollar__unused_3_loop gopurs_runtime.Value, v_4_loop func(interface{}) interface{}) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
@@ -457,62 +501,62 @@ var _dollar__unused_2 gopurs_runtime.Value = _dollar__unused_2_loop
 _ = _dollar__unused_2
 var _dollar__unused_3 gopurs_runtime.Value = _dollar__unused_3_loop
 _ = _dollar__unused_3
-var v_4 gopurs_runtime.Value = v_4_loop
+var v_4 func(interface{}) interface{} = v_4_loop
 _ = v_4
 return pkg_Unsafe_Coerce.Get_unsafeCoerce()
 }
 
-func Call_over2(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_over2(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, v_2_loop func(interface{}) interface{}) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
 _ = _dollar__unused_1
-var v_2 gopurs_runtime.Value = v_2_loop
+var v_2 func(interface{}) interface{} = v_2_loop
 _ = v_2
 return pkg_Unsafe_Coerce.Get_unsafeCoerce()
 }
 
-func Call_over(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_over(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, v_2_loop func(interface{}) interface{}) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
 _ = _dollar__unused_1
-var v_2 gopurs_runtime.Value = v_2_loop
+var v_2 func(interface{}) interface{} = v_2_loop
 _ = v_2
 return pkg_Unsafe_Coerce.Get_unsafeCoerce()
 }
 
-func Call_over__gopurs_runtime_Value_9260554(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_over__func_gopurs_runtime_Value__gopurs_runtime_Value__func_interface____interface____func_interface____interface____interface____interface___9260554(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, v_2_loop func(interface{}) interface{}) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
 _ = _dollar__unused_1
-var v_2 gopurs_runtime.Value = v_2_loop
+var v_2 func(interface{}) interface{} = v_2_loop
 _ = v_2
 return pkg_Unsafe_Coerce.Get_unsafeCoerce()
 }
 
-func Call_modify(_dollar__unused_0_loop gopurs_runtime.Value, fn_1_loop gopurs_runtime.Value, t_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_modify(_dollar__unused_0_loop gopurs_runtime.Value, fn_1_loop func(interface{}) interface{}, t_2_loop interface{}) interface{} {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
-var fn_1 gopurs_runtime.Value = fn_1_loop
+var fn_1 func(interface{}) interface{} = fn_1_loop
 _ = fn_1
-var t_2 gopurs_runtime.Value = t_2_loop
+var t_2 interface{} = t_2_loop
 _ = t_2
-return gopurs_runtime.Apply(fn_1, t_2)
+return gopurs_runtime.UnboxAny(gopurs_runtime.Any(fn_1(t_2)))
 }
 
-func Call_collect(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_collect(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, v_2_loop func(interface{}) interface{}) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
 _ = _dollar__unused_1
-var v_2 gopurs_runtime.Value = v_2_loop
+var v_2 func(interface{}) interface{} = v_2_loop
 _ = v_2
 return pkg_Unsafe_Coerce.Get_unsafeCoerce()
 }
 
-func Call_alaF(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop gopurs_runtime.Value, _dollar__unused_3_loop gopurs_runtime.Value, v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_alaF(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop gopurs_runtime.Value, _dollar__unused_3_loop gopurs_runtime.Value, v_4_loop func(interface{}) interface{}) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
@@ -521,12 +565,12 @@ var _dollar__unused_2 gopurs_runtime.Value = _dollar__unused_2_loop
 _ = _dollar__unused_2
 var _dollar__unused_3 gopurs_runtime.Value = _dollar__unused_3_loop
 _ = _dollar__unused_3
-var v_4 gopurs_runtime.Value = v_4_loop
+var v_4 func(interface{}) interface{} = v_4_loop
 _ = v_4
 return pkg_Unsafe_Coerce.Get_unsafeCoerce()
 }
 
-func Call_alaF__gopurs_runtime_Value_2634372046(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop gopurs_runtime.Value, _dollar__unused_3_loop gopurs_runtime.Value, v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_alaF__func_gopurs_runtime_Value__gopurs_runtime_Value__gopurs_runtime_Value__gopurs_runtime_Value__func_interface____interface____func_interface____interface____interface____interface___2634372046(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop gopurs_runtime.Value, _dollar__unused_3_loop gopurs_runtime.Value, v_4_loop func(interface{}) interface{}) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
@@ -535,37 +579,39 @@ var _dollar__unused_2 gopurs_runtime.Value = _dollar__unused_2_loop
 _ = _dollar__unused_2
 var _dollar__unused_3 gopurs_runtime.Value = _dollar__unused_3_loop
 _ = _dollar__unused_3
-var v_4 gopurs_runtime.Value = v_4_loop
+var v_4 func(interface{}) interface{} = v_4_loop
 _ = v_4
 return pkg_Unsafe_Coerce.Get_unsafeCoerce()
 }
 
-func Call_ala(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop gopurs_runtime.Value, v_3_loop gopurs_runtime.Value, f_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_ala(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop gopurs_runtime.Value, v_3_loop func(interface{}) interface{}, f_4_loop func(func(interface{}) interface{}) interface{}) interface{} {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
 _ = _dollar__unused_1
 var _dollar__unused_2 gopurs_runtime.Value = _dollar__unused_2_loop
 _ = _dollar__unused_2
-var v_3 gopurs_runtime.Value = v_3_loop
+var v_3 func(interface{}) interface{} = v_3_loop
 _ = v_3
-var f_4 gopurs_runtime.Value = f_4_loop
+var f_4 func(func(interface{}) interface{}) interface{} = f_4_loop
 _ = f_4
-return gopurs_runtime.Apply(f_4, pkg_Unsafe_Coerce.Get_unsafeCoerce())
+return gopurs_runtime.UnboxAny(gopurs_runtime.Any(f_4(func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(pkg_Unsafe_Coerce.Get_unsafeCoerce(), gopurs_runtime.Any(inner_arg0)))
+})))
 }
 
-func Call_ala__gopurs_runtime_Value_2379211251(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop gopurs_runtime.Value, v_3_loop gopurs_runtime.Value, f_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_ala__func_gopurs_runtime_Value__gopurs_runtime_Value__gopurs_runtime_Value__func_interface____interface____func_func_interface____interface____interface____interface___2379211251(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop gopurs_runtime.Value, v_3_loop func(interface{}) interface{}, f_4_loop func(func(interface{}) interface{}) interface{}) interface{} {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
 _ = _dollar__unused_1
 var _dollar__unused_2 gopurs_runtime.Value = _dollar__unused_2_loop
 _ = _dollar__unused_2
-var v_3 gopurs_runtime.Value = v_3_loop
+var v_3 func(interface{}) interface{} = v_3_loop
 _ = v_3
-var f_4 gopurs_runtime.Value = f_4_loop
+var f_4 func(func(interface{}) interface{}) interface{} = f_4_loop
 _ = f_4
-return gopurs_runtime.Apply(f_4, pkg_Unsafe_Coerce.Get_unsafeCoerce())
+return gopurs_runtime.UnboxAny(gopurs_runtime.Any(f_4(func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(pkg_Unsafe_Coerce.Get_unsafeCoerce(), gopurs_runtime.Any(inner_arg0)))
+})))
 }
-
-

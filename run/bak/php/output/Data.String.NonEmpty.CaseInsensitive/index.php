@@ -120,16 +120,16 @@ function majData_majString_majNonmajEmpty_majCasemajInsensitive_majCasemajInsens
 $GLOBALS['Data_String_NonEmpty_CaseInsensitive_CaseInsensitiveNonEmptyString'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majCasemajInsensitive_majCasemajInsensitivemajNonmajEmptymajString';
 
 // Data_String_NonEmpty_CaseInsensitive_showCaseInsensitiveNonEmptyString
-$GLOBALS['Data_String_NonEmpty_CaseInsensitive_showCaseInsensitiveNonEmptyString'] = ["show" => function($v_0) {
+$GLOBALS['Data_String_NonEmpty_CaseInsensitive_showCaseInsensitiveNonEmptyString'] = (object)["show" => function($v_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(CaseInsensitiveNonEmptyString ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_String_NonEmpty_Internal_showNonEmptyString'])['show'])($v_0), ")"));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(CaseInsensitiveNonEmptyString "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($GLOBALS['Data_String_NonEmpty_Internal_showNonEmptyString'])->{'show'})($v_0)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
 
 // Data_String_NonEmpty_CaseInsensitive_newtypeCaseInsensitiveNonEmptyString
-$GLOBALS['Data_String_NonEmpty_CaseInsensitive_newtypeCaseInsensitiveNonEmptyString'] = ["Coercible0" => function($_dollar__unused_0) {
+$GLOBALS['Data_String_NonEmpty_CaseInsensitive_newtypeCaseInsensitiveNonEmptyString'] = (object)["Coercible0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = null;
   goto __end;;
@@ -138,13 +138,13 @@ $GLOBALS['Data_String_NonEmpty_CaseInsensitive_newtypeCaseInsensitiveNonEmptyStr
 }];
 
 // Data_String_NonEmpty_CaseInsensitive_eqCaseInsensitiveNonEmptyString
-$GLOBALS['Data_String_NonEmpty_CaseInsensitive_eqCaseInsensitiveNonEmptyString'] = ["eq" => (function() {
+$GLOBALS['Data_String_NonEmpty_CaseInsensitive_eqCaseInsensitiveNonEmptyString'] = (object)["eq" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Eq_eqString'])['eq'])(($GLOBALS['Data_String_Common_toLower'])($v_0), ($GLOBALS['Data_String_Common_toLower'])($v1_1));
+  $__res = ((($GLOBALS['Data_Eq_eqString'])->{'eq'})(\Data\String\Common\majData_majString_majCommon_tomajLower($v_0)))(\Data\String\Common\majData_majString_majCommon_tomajLower($v1_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -153,13 +153,13 @@ $GLOBALS['Data_String_NonEmpty_CaseInsensitive_eqCaseInsensitiveNonEmptyString']
 })()];
 
 // Data_String_NonEmpty_CaseInsensitive_ordCaseInsensitiveNonEmptyString
-$GLOBALS['Data_String_NonEmpty_CaseInsensitive_ordCaseInsensitiveNonEmptyString'] = ["compare" => (function() {
+$GLOBALS['Data_String_NonEmpty_CaseInsensitive_ordCaseInsensitiveNonEmptyString'] = (object)["compare" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Ord_ordString'])['compare'])(($GLOBALS['Data_String_Common_toLower'])($v_0), ($GLOBALS['Data_String_Common_toLower'])($v1_1));
+  $__res = ((($GLOBALS['Data_Ord_ordString'])->{'compare'})(\Data\String\Common\majData_majString_majCommon_tomajLower($v_0)))(\Data\String\Common\majData_majString_majCommon_tomajLower($v1_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

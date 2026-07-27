@@ -103,7 +103,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Data_Profunctor_Strong_strongFn
-$GLOBALS['Data_Profunctor_Strong_strongFn'] = ["first" => (function() {
+$GLOBALS['Data_Profunctor_Strong_strongFn'] = (object)["first" => (function() {
   $__fn = function($a2b_0, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -115,7 +115,7 @@ $GLOBALS['Data_Profunctor_Strong_strongFn'] = ["first" => (function() {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "second" => ($GLOBALS['Data_Tuple_functorTuple'])['map'], "Profunctor0" => function($_dollar__unused_0) {
+})(), "second" => ($GLOBALS['Data_Tuple_functorTuple'])->{'map'}, "Profunctor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Profunctor_profunctorFn'];
   goto __end;;
@@ -130,7 +130,7 @@ function majData_majProfunctor_majStrong_second($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['second'];
+  $__res = ($dict_0)->{'second'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -144,7 +144,7 @@ function majData_majProfunctor_majStrong_first($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['first'];
+  $__res = ($dict_0)->{'first'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -158,7 +158,7 @@ function majData_majProfunctor_majStrong_splitmajStrong($dictSemigroupoid_0, $di
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($dictSemigroupoid_0)['compose'])((($dictStrong_1)['second'])($r_3), (($dictStrong_1)['first'])($l_2));
+  $__res = ((($dictSemigroupoid_0)->{'compose'})((($dictStrong_1)->{'second'})($r_3)))((($dictStrong_1)->{'first'})($l_2));
   goto __end;;
   __end:
   return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -172,20 +172,20 @@ function majData_majProfunctor_majStrong_fanout($dictSemigroupoid_0, $dictStrong
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $lcmap_2_0 = ($GLOBALS['Data_Profunctor_lcmap'])((($dictStrong_1)['Profunctor0'])(null));
+  $lcmap_2_0 = ($GLOBALS['Data_Profunctor_lcmap'])((($dictStrong_1)->{'Profunctor0'})(null));
   $__res = (function() use ($dictSemigroupoid_0, $dictStrong_1, $lcmap_2_0) {
   $__fn = function($l_3, $r_4 = null) use ($dictSemigroupoid_0, $dictStrong_1, $lcmap_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($lcmap_2_0)(function($a_5) {
+  $__res = (($lcmap_2_0)(function($a_5) {
   $__num = \func_num_args();
   $__res = new \Data\Tuple\Data_Tuple_Tuple($a_5, $a_5);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, (($dictSemigroupoid_0)['compose'])((($dictStrong_1)['second'])($r_4), (($dictStrong_1)['first'])($l_3)));
+}))(((($dictSemigroupoid_0)->{'compose'})((($dictStrong_1)->{'second'})($r_4)))((($dictStrong_1)->{'first'})($l_3)));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

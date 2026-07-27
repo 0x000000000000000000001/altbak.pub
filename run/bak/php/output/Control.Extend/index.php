@@ -96,7 +96,17 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }
 
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-$GLOBALS['Control_Extend_arrayExtend'] = new class { public function __invoke(...$args) { return $this; } };
+function majControl_majExtend_arraymajExtend($v0, $v1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majControl_majExtend_arraymajExtend';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $f = new class { public function __invoke(...$args) { return $this; } };
+  return $f($v0, $v1);
+}
+$GLOBALS['Control_Extend_arrayExtend'] = __NAMESPACE__ . '\\majControl_majExtend_arraymajExtend';
+
 
 
 
@@ -122,7 +132,7 @@ function majControl_majExtend_extendmajFn($dictSemigroup_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["extend" => (function() use ($dictSemigroup_0) {
+  $__res = (object)["extend" => (function() use ($dictSemigroup_0) {
   $__fn = function($f_1, $g_2 = null, $w_3 = null) use ($dictSemigroup_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -130,7 +140,7 @@ function majControl_majExtend_extendmajFn($dictSemigroup_0) {
   }
   $__res = ($f_1)(function($w_prime_4) use ($dictSemigroup_0, $g_2, $w_3) {
   $__num = \func_num_args();
-  $__res = ($g_2)((($dictSemigroup_0)['append'])($w_3, $w_prime_4));
+  $__res = ($g_2)(((($dictSemigroup_0)->{'append'})($w_3))($w_prime_4));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -154,7 +164,7 @@ function majControl_majExtend_extendmajFn($dictSemigroup_0) {
 $GLOBALS['Control_Extend_extendFn'] = __NAMESPACE__ . '\\majControl_majExtend_extendmajFn';
 
 // Control_Extend_extendArray
-$GLOBALS['Control_Extend_extendArray'] = ["extend" => $GLOBALS['Control_Extend_arrayExtend'], "Functor0" => function($_dollar__unused_0) {
+$GLOBALS['Control_Extend_extendArray'] = (object)["extend" => $GLOBALS['Control_Extend_arrayExtend'], "Functor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Functor_functorArray'];
   goto __end;;
@@ -169,7 +179,7 @@ function majControl_majExtend_extend($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['extend'];
+  $__res = ($dict_0)->{'extend'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -183,7 +193,7 @@ function majControl_majExtend_extendmajFlipped($dictExtend_0, $w_1 = null, $f_2 
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictExtend_0)['extend'])($f_2, $w_1);
+  $__res = ((($dictExtend_0)->{'extend'})($f_2))($w_1);
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -197,7 +207,7 @@ function majControl_majExtend_duplicate($dictExtend_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($dictExtend_0)['extend'])($GLOBALS['Control_Extend_identity']);
+  $__res = (($dictExtend_0)->{'extend'})($GLOBALS['Control_Extend_identity']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -211,7 +221,7 @@ function majControl_majExtend_composemajComajKleislimajFlipped($dictExtend_0, $f
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ($f_1)((($dictExtend_0)['extend'])($g_2, $w_3));
+  $__res = ($f_1)(((($dictExtend_0)->{'extend'})($g_2))($w_3));
   goto __end;;
   __end:
   return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -225,7 +235,7 @@ function majControl_majExtend_composemajComajKleisli($dictExtend_0, $f_1 = null,
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ($g_2)((($dictExtend_0)['extend'])($f_1, $w_3));
+  $__res = ($g_2)(((($dictExtend_0)->{'extend'})($f_1))($w_3));
   goto __end;;
   __end:
   return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;

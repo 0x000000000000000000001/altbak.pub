@@ -122,9 +122,9 @@ function majData_majDistributive_identity($x_0) {
 $GLOBALS['Data_Distributive_identity'] = __NAMESPACE__ . '\\majData_majDistributive_identity';
 
 // Data_Distributive_distributiveIdentity
-$GLOBALS['Data_Distributive_distributiveIdentity'] = ["distribute" => function($dictFunctor_0) {
+$GLOBALS['Data_Distributive_distributiveIdentity'] = (object)["distribute" => function($dictFunctor_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity'], (($dictFunctor_0)['map'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity']))((($dictFunctor_0)->{'map'})($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -134,7 +134,7 @@ $GLOBALS['Data_Distributive_distributiveIdentity'] = ["distribute" => function($
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity'], (($dictFunctor_0)['map'])(($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'], $f_1)));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity']))((($dictFunctor_0)->{'map'})((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($f_1)));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -155,7 +155,7 @@ function majData_majDistributive_distribute($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['distribute'];
+  $__res = ($dict_0)->{'distribute'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -163,19 +163,19 @@ function majData_majDistributive_distribute($dict_0) {
 $GLOBALS['Data_Distributive_distribute'] = __NAMESPACE__ . '\\majData_majDistributive_distribute';
 
 // Data_Distributive_distributiveFunction
-$GLOBALS['Data_Distributive_distributiveFunction'] = ["distribute" => (function() {
+$GLOBALS['Data_Distributive_distributiveFunction'] = (object)["distribute" => (function() {
   $__fn = function($dictFunctor_0, $a_1 = null, $e_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictFunctor_0)['map'])(function($v_3) use ($e_2) {
+  $__res = ((($dictFunctor_0)->{'map'})(function($v_3) use ($e_2) {
   $__num = \func_num_args();
   $__res = ($v_3)($e_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, $a_1);
+}))($a_1);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -187,7 +187,7 @@ $GLOBALS['Data_Distributive_distributiveFunction'] = ["distribute" => (function(
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Distributive_distributiveFunction'])['distribute'])($dictFunctor_0), (($dictFunctor_0)['map'])($f_1));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Distributive_distributiveFunction'])->{'distribute'})($dictFunctor_0)))((($dictFunctor_0)->{'map'})($f_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -208,10 +208,10 @@ function majData_majDistributive_cotraverse($dictDistributive_0, $dictFunctor_1 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $distribute2_2_0 = (($dictDistributive_0)['distribute'])($dictFunctor_1);
+  $distribute2_2_0 = (($dictDistributive_0)->{'distribute'})($dictFunctor_1);
   $__res = function($f_3) use ($dictDistributive_0, $distribute2_2_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])((((($dictDistributive_0)['Functor0'])(null))['map'])($f_3), $distribute2_2_0);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((((($dictDistributive_0)->{'Functor0'})(null))->{'map'})($f_3)))($distribute2_2_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -229,10 +229,10 @@ function majData_majDistributive_collectmajDefault($dictDistributive_0, $dictFun
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $distribute2_2_0 = (($dictDistributive_0)['distribute'])($dictFunctor_1);
+  $distribute2_2_0 = (($dictDistributive_0)->{'distribute'})($dictFunctor_1);
   $__res = function($f_3) use ($dictFunctor_1, $distribute2_2_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($distribute2_2_0, (($dictFunctor_1)['map'])($f_3));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($distribute2_2_0))((($dictFunctor_1)->{'map'})($f_3));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -253,22 +253,22 @@ function majData_majDistributive_distributivemajTuple($dictTypeEquals_0) {
   $__tco_var_Data_Distributive_distributiveTuple_dictTypeEquals_0 = $dictTypeEquals_0;
   tco_loop_Data_Distributive_distributiveTuple:;
   $dictTypeEquals_0 = $__tco_var_Data_Distributive_distributiveTuple_dictTypeEquals_0;
-  $from_1_0 = (($dictTypeEquals_0)['proof'])(function($a_1) {
+  $from_1_0 = (($dictTypeEquals_0)->{'proof'})(function($a_1) {
   $__num = \func_num_args();
   $__res = $a_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
-  $__res = ["collect" => function($dictFunctor_2) use ($dictTypeEquals_0) {
+  $__res = (object)["collect" => function($dictFunctor_2) use ($dictTypeEquals_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Distributive_collectDefault'])(($GLOBALS['Data_Distributive_distributiveTuple'])($dictTypeEquals_0), $dictFunctor_2);
+  $__res = (($GLOBALS['Data_Distributive_collectDefault'])(\Data\Distributive\majData_majDistributive_distributivemajTuple($dictTypeEquals_0)))($dictFunctor_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "distribute" => function($dictFunctor_2) use ($from_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Tuple_Tuple'])(($from_1_0)($GLOBALS['Data_Unit_unit'])), (($dictFunctor_2)['map'])($GLOBALS['Data_Tuple_snd']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Tuple_Tuple'])(($from_1_0)($GLOBALS['Data_Unit_unit']))))((($dictFunctor_2)->{'map'})($GLOBALS['Data_Tuple_snd']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -292,7 +292,7 @@ function majData_majDistributive_collect($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['collect'];
+  $__res = ($dict_0)->{'collect'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -306,7 +306,7 @@ function majData_majDistributive_distributemajDefault($dictDistributive_0, $dict
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictDistributive_0)['collect'])($dictFunctor_1, $GLOBALS['Data_Distributive_identity']);
+  $__res = ((($dictDistributive_0)->{'collect'})($dictFunctor_1))($GLOBALS['Data_Distributive_identity']);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

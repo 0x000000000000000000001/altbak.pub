@@ -112,14 +112,14 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 // Data_Time_Component_greaterThanOrEq
 $GLOBALS['Data_Time_Component_greaterThanOrEq'] = (function() use (&$__fn) {
-$__local_var_0_0 = ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT());
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
 return (function() use ($__local_var_0_0) {
   $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ( ! ($__local_var_0_0)($a1_1, $a2_2) instanceof \Data\Ordering\Data_Ordering_LT);
+  $__res = ( ! (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -130,14 +130,14 @@ return (function() use ($__local_var_0_0) {
 
 // Data_Time_Component_lessThanOrEq
 $GLOBALS['Data_Time_Component_lessThanOrEq'] = (function() use (&$__fn) {
-$__local_var_0_0 = ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT());
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
 return (function() use ($__local_var_0_0) {
   $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ( ! ($__local_var_0_0)($a1_1, $a2_2) instanceof \Data\Ordering\Data_Ordering_GT);
+  $__res = ( ! (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_GT);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -147,91 +147,91 @@ return (function() use ($__local_var_0_0) {
 })();
 
 // Data_Time_Component_showSecond
-$GLOBALS['Data_Time_Component_showSecond'] = ["show" => function($v_0) {
+$GLOBALS['Data_Time_Component_showSecond'] = (object)["show" => function($v_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Second ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Show_showInt'])['show'])($v_0), ")"));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(Second "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($GLOBALS['Data_Show_showInt'])->{'show'})($v_0)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
 
 // Data_Time_Component_showMinute
-$GLOBALS['Data_Time_Component_showMinute'] = ["show" => function($v_0) {
+$GLOBALS['Data_Time_Component_showMinute'] = (object)["show" => function($v_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Minute ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Show_showInt'])['show'])($v_0), ")"));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(Minute "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($GLOBALS['Data_Show_showInt'])->{'show'})($v_0)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
 
 // Data_Time_Component_showMillisecond
-$GLOBALS['Data_Time_Component_showMillisecond'] = ["show" => function($v_0) {
+$GLOBALS['Data_Time_Component_showMillisecond'] = (object)["show" => function($v_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Millisecond ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Show_showInt'])['show'])($v_0), ")"));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(Millisecond "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($GLOBALS['Data_Show_showInt'])->{'show'})($v_0)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
 
 // Data_Time_Component_showHour
-$GLOBALS['Data_Time_Component_showHour'] = ["show" => function($v_0) {
+$GLOBALS['Data_Time_Component_showHour'] = (object)["show" => function($v_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Hour ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Show_showInt'])['show'])($v_0), ")"));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(Hour "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($GLOBALS['Data_Show_showInt'])->{'show'})($v_0)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
 
 // Data_Time_Component_ordSecond
-$GLOBALS['Data_Time_Component_ordSecond'] = ["compare" => ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT()), "Eq0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Time_Component_ordSecond'] = (object)["compare" => ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT()), "Eq0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
-  $__res = ["eq" => $GLOBALS['Data_Eq_eqIntImpl']];
+  $__res = (object)["eq" => $GLOBALS['Data_Eq_eqIntImpl']];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
 
 // Data_Time_Component_ordMinute
-$GLOBALS['Data_Time_Component_ordMinute'] = ["compare" => ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT()), "Eq0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Time_Component_ordMinute'] = (object)["compare" => ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT()), "Eq0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
-  $__res = ["eq" => $GLOBALS['Data_Eq_eqIntImpl']];
+  $__res = (object)["eq" => $GLOBALS['Data_Eq_eqIntImpl']];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
 
 // Data_Time_Component_ordMillisecond
-$GLOBALS['Data_Time_Component_ordMillisecond'] = ["compare" => ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT()), "Eq0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Time_Component_ordMillisecond'] = (object)["compare" => ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT()), "Eq0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
-  $__res = ["eq" => $GLOBALS['Data_Eq_eqIntImpl']];
+  $__res = (object)["eq" => $GLOBALS['Data_Eq_eqIntImpl']];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
 
 // Data_Time_Component_ordHour
-$GLOBALS['Data_Time_Component_ordHour'] = ["compare" => ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT()), "Eq0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Time_Component_ordHour'] = (object)["compare" => ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT()), "Eq0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
-  $__res = ["eq" => $GLOBALS['Data_Eq_eqIntImpl']];
+  $__res = (object)["eq" => $GLOBALS['Data_Eq_eqIntImpl']];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
 
 // Data_Time_Component_eqSecond
-$GLOBALS['Data_Time_Component_eqSecond'] = ["eq" => $GLOBALS['Data_Eq_eqIntImpl']];
+$GLOBALS['Data_Time_Component_eqSecond'] = (object)["eq" => $GLOBALS['Data_Eq_eqIntImpl']];
 
 // Data_Time_Component_eqMinute
-$GLOBALS['Data_Time_Component_eqMinute'] = ["eq" => $GLOBALS['Data_Eq_eqIntImpl']];
+$GLOBALS['Data_Time_Component_eqMinute'] = (object)["eq" => $GLOBALS['Data_Eq_eqIntImpl']];
 
 // Data_Time_Component_eqMillisecond
-$GLOBALS['Data_Time_Component_eqMillisecond'] = ["eq" => $GLOBALS['Data_Eq_eqIntImpl']];
+$GLOBALS['Data_Time_Component_eqMillisecond'] = (object)["eq" => $GLOBALS['Data_Eq_eqIntImpl']];
 
 // Data_Time_Component_eqHour
-$GLOBALS['Data_Time_Component_eqHour'] = ["eq" => $GLOBALS['Data_Eq_eqIntImpl']];
+$GLOBALS['Data_Time_Component_eqHour'] = (object)["eq" => $GLOBALS['Data_Eq_eqIntImpl']];
 
 // Data_Time_Component_boundedSecond
-$GLOBALS['Data_Time_Component_boundedSecond'] = ["bottom" => 0, "top" => 59, "Ord0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Time_Component_boundedSecond'] = (object)["bottom" => 0, "top" => 59, "Ord0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Time_Component_ordSecond'];
   goto __end;;
@@ -240,7 +240,7 @@ $GLOBALS['Data_Time_Component_boundedSecond'] = ["bottom" => 0, "top" => 59, "Or
 }];
 
 // Data_Time_Component_boundedMinute
-$GLOBALS['Data_Time_Component_boundedMinute'] = ["bottom" => 0, "top" => 59, "Ord0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Time_Component_boundedMinute'] = (object)["bottom" => 0, "top" => 59, "Ord0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Time_Component_ordMinute'];
   goto __end;;
@@ -249,7 +249,7 @@ $GLOBALS['Data_Time_Component_boundedMinute'] = ["bottom" => 0, "top" => 59, "Or
 }];
 
 // Data_Time_Component_boundedMillisecond
-$GLOBALS['Data_Time_Component_boundedMillisecond'] = ["bottom" => 0, "top" => 999, "Ord0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Time_Component_boundedMillisecond'] = (object)["bottom" => 0, "top" => 999, "Ord0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Time_Component_ordMillisecond'];
   goto __end;;
@@ -258,7 +258,7 @@ $GLOBALS['Data_Time_Component_boundedMillisecond'] = ["bottom" => 0, "top" => 99
 }];
 
 // Data_Time_Component_boundedHour
-$GLOBALS['Data_Time_Component_boundedHour'] = ["bottom" => 0, "top" => 23, "Ord0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Time_Component_boundedHour'] = (object)["bottom" => 0, "top" => 23, "Ord0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Time_Component_ordHour'];
   goto __end;;
@@ -267,10 +267,10 @@ $GLOBALS['Data_Time_Component_boundedHour'] = ["bottom" => 0, "top" => 23, "Ord0
 }];
 
 // Data_Time_Component_boundedEnumSecond
-$GLOBALS['Data_Time_Component_boundedEnumSecond'] = ["cardinality" => 60, "toEnum" => function($n_0) {
+$GLOBALS['Data_Time_Component_boundedEnumSecond'] = (object)["cardinality" => 60, "toEnum" => function($n_0) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(($GLOBALS['Data_Time_Component_greaterThanOrEq'])($n_0, 0), ($GLOBALS['Data_Time_Component_lessThanOrEq'])($n_0, 59))) {
+  if (((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})((($GLOBALS['Data_Time_Component_greaterThanOrEq'])($n_0))(0)))((($GLOBALS['Data_Time_Component_lessThanOrEq'])($n_0))(59))) {
 $__t0 = new \Data\Maybe\Data_Maybe_Just($n_0);
 goto end_branch_0;;
 };
@@ -301,19 +301,19 @@ goto end_branch_0;;
 }];
 
 // Data_Time_Component_enumSecond
-$GLOBALS['Data_Time_Component_enumSecond'] = ["succ" => ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Time_Component_boundedEnumSecond'])['toEnum'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0) {
+$GLOBALS['Data_Time_Component_enumSecond'] = (object)["succ" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Time_Component_boundedEnumSecond'])->{'toEnum'}))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0) {
   $__num = \func_num_args();
   $__res = ($v_0 + 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, ($GLOBALS['Data_Time_Component_boundedEnumSecond'])['fromEnum'])), "pred" => ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Time_Component_boundedEnumSecond'])['toEnum'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0) {
+}))(($GLOBALS['Data_Time_Component_boundedEnumSecond'])->{'fromEnum'})), "pred" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Time_Component_boundedEnumSecond'])->{'toEnum'}))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0) {
   $__num = \func_num_args();
   $__res = ($v_0 - 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, ($GLOBALS['Data_Time_Component_boundedEnumSecond'])['fromEnum'])), "Ord0" => function($_dollar__unused_0) {
+}))(($GLOBALS['Data_Time_Component_boundedEnumSecond'])->{'fromEnum'})), "Ord0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Time_Component_ordSecond'];
   goto __end;;
@@ -322,10 +322,10 @@ $GLOBALS['Data_Time_Component_enumSecond'] = ["succ" => ($GLOBALS['Control_Semig
 }];
 
 // Data_Time_Component_boundedEnumMinute
-$GLOBALS['Data_Time_Component_boundedEnumMinute'] = ["cardinality" => 60, "toEnum" => function($n_0) {
+$GLOBALS['Data_Time_Component_boundedEnumMinute'] = (object)["cardinality" => 60, "toEnum" => function($n_0) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(($GLOBALS['Data_Time_Component_greaterThanOrEq'])($n_0, 0), ($GLOBALS['Data_Time_Component_lessThanOrEq'])($n_0, 59))) {
+  if (((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})((($GLOBALS['Data_Time_Component_greaterThanOrEq'])($n_0))(0)))((($GLOBALS['Data_Time_Component_lessThanOrEq'])($n_0))(59))) {
 $__t0 = new \Data\Maybe\Data_Maybe_Just($n_0);
 goto end_branch_0;;
 };
@@ -356,19 +356,19 @@ goto end_branch_0;;
 }];
 
 // Data_Time_Component_enumMinute
-$GLOBALS['Data_Time_Component_enumMinute'] = ["succ" => ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Time_Component_boundedEnumMinute'])['toEnum'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0) {
+$GLOBALS['Data_Time_Component_enumMinute'] = (object)["succ" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Time_Component_boundedEnumMinute'])->{'toEnum'}))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0) {
   $__num = \func_num_args();
   $__res = ($v_0 + 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, ($GLOBALS['Data_Time_Component_boundedEnumMinute'])['fromEnum'])), "pred" => ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Time_Component_boundedEnumMinute'])['toEnum'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0) {
+}))(($GLOBALS['Data_Time_Component_boundedEnumMinute'])->{'fromEnum'})), "pred" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Time_Component_boundedEnumMinute'])->{'toEnum'}))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0) {
   $__num = \func_num_args();
   $__res = ($v_0 - 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, ($GLOBALS['Data_Time_Component_boundedEnumMinute'])['fromEnum'])), "Ord0" => function($_dollar__unused_0) {
+}))(($GLOBALS['Data_Time_Component_boundedEnumMinute'])->{'fromEnum'})), "Ord0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Time_Component_ordMinute'];
   goto __end;;
@@ -377,10 +377,10 @@ $GLOBALS['Data_Time_Component_enumMinute'] = ["succ" => ($GLOBALS['Control_Semig
 }];
 
 // Data_Time_Component_boundedEnumMillisecond
-$GLOBALS['Data_Time_Component_boundedEnumMillisecond'] = ["cardinality" => 1000, "toEnum" => function($n_0) {
+$GLOBALS['Data_Time_Component_boundedEnumMillisecond'] = (object)["cardinality" => 1000, "toEnum" => function($n_0) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(($GLOBALS['Data_Time_Component_greaterThanOrEq'])($n_0, 0), ($GLOBALS['Data_Time_Component_lessThanOrEq'])($n_0, 999))) {
+  if (((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})((($GLOBALS['Data_Time_Component_greaterThanOrEq'])($n_0))(0)))((($GLOBALS['Data_Time_Component_lessThanOrEq'])($n_0))(999))) {
 $__t0 = new \Data\Maybe\Data_Maybe_Just($n_0);
 goto end_branch_0;;
 };
@@ -411,19 +411,19 @@ goto end_branch_0;;
 }];
 
 // Data_Time_Component_enumMillisecond
-$GLOBALS['Data_Time_Component_enumMillisecond'] = ["succ" => ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Time_Component_boundedEnumMillisecond'])['toEnum'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0) {
+$GLOBALS['Data_Time_Component_enumMillisecond'] = (object)["succ" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Time_Component_boundedEnumMillisecond'])->{'toEnum'}))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0) {
   $__num = \func_num_args();
   $__res = ($v_0 + 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, ($GLOBALS['Data_Time_Component_boundedEnumMillisecond'])['fromEnum'])), "pred" => ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Time_Component_boundedEnumMillisecond'])['toEnum'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0) {
+}))(($GLOBALS['Data_Time_Component_boundedEnumMillisecond'])->{'fromEnum'})), "pred" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Time_Component_boundedEnumMillisecond'])->{'toEnum'}))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0) {
   $__num = \func_num_args();
   $__res = ($v_0 - 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, ($GLOBALS['Data_Time_Component_boundedEnumMillisecond'])['fromEnum'])), "Ord0" => function($_dollar__unused_0) {
+}))(($GLOBALS['Data_Time_Component_boundedEnumMillisecond'])->{'fromEnum'})), "Ord0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Time_Component_ordMillisecond'];
   goto __end;;
@@ -432,10 +432,10 @@ $GLOBALS['Data_Time_Component_enumMillisecond'] = ["succ" => ($GLOBALS['Control_
 }];
 
 // Data_Time_Component_boundedEnumHour
-$GLOBALS['Data_Time_Component_boundedEnumHour'] = ["cardinality" => 24, "toEnum" => function($n_0) {
+$GLOBALS['Data_Time_Component_boundedEnumHour'] = (object)["cardinality" => 24, "toEnum" => function($n_0) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(($GLOBALS['Data_Time_Component_greaterThanOrEq'])($n_0, 0), ($GLOBALS['Data_Time_Component_lessThanOrEq'])($n_0, 23))) {
+  if (((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})((($GLOBALS['Data_Time_Component_greaterThanOrEq'])($n_0))(0)))((($GLOBALS['Data_Time_Component_lessThanOrEq'])($n_0))(23))) {
 $__t0 = new \Data\Maybe\Data_Maybe_Just($n_0);
 goto end_branch_0;;
 };
@@ -466,19 +466,19 @@ goto end_branch_0;;
 }];
 
 // Data_Time_Component_enumHour
-$GLOBALS['Data_Time_Component_enumHour'] = ["succ" => ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Time_Component_boundedEnumHour'])['toEnum'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0) {
+$GLOBALS['Data_Time_Component_enumHour'] = (object)["succ" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Time_Component_boundedEnumHour'])->{'toEnum'}))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0) {
   $__num = \func_num_args();
   $__res = ($v_0 + 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, ($GLOBALS['Data_Time_Component_boundedEnumHour'])['fromEnum'])), "pred" => ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Time_Component_boundedEnumHour'])['toEnum'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0) {
+}))(($GLOBALS['Data_Time_Component_boundedEnumHour'])->{'fromEnum'})), "pred" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Time_Component_boundedEnumHour'])->{'toEnum'}))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0) {
   $__num = \func_num_args();
   $__res = ($v_0 - 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, ($GLOBALS['Data_Time_Component_boundedEnumHour'])['fromEnum'])), "Ord0" => function($_dollar__unused_0) {
+}))(($GLOBALS['Data_Time_Component_boundedEnumHour'])->{'fromEnum'})), "Ord0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Time_Component_ordHour'];
   goto __end;;

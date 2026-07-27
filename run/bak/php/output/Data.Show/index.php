@@ -132,20 +132,75 @@ $exports['showArrayImpl'] = $showArrayImpl;
 return $exports;
   return $exports;
 });
-$GLOBALS['Data_Show_showArrayImpl'] = $ffi_Data_Show['showArrayImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Show_showCharImpl'] = $ffi_Data_Show['showCharImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Show_showIntImpl'] = $ffi_Data_Show['showIntImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Show_showNumberImpl'] = $ffi_Data_Show['showNumberImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Show_showStringImpl'] = $ffi_Data_Show['showStringImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
+function majData_majShow_showmajArraymajImpl($v0, $v1 = null): string|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majShow_showmajArraymajImpl';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Data_Show;
+  $f = ($ffi_Data_Show['showArrayImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Data_Show_showArrayImpl'] = __NAMESPACE__ . '\\majData_majShow_showmajArraymajImpl';
+
+function majData_majShow_showmajCharmajImpl($v0): string|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majShow_showmajCharmajImpl';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Data_Show;
+  $f = ($ffi_Data_Show['showCharImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Data_Show_showCharImpl'] = __NAMESPACE__ . '\\majData_majShow_showmajCharmajImpl';
+
+function majData_majShow_showmajIntmajImpl(int $v0): string|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majShow_showmajIntmajImpl';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Data_Show;
+  $f = ($ffi_Data_Show['showIntImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Data_Show_showIntImpl'] = __NAMESPACE__ . '\\majData_majShow_showmajIntmajImpl';
+
+function majData_majShow_showmajNumbermajImpl(float $v0): string|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majShow_showmajNumbermajImpl';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Data_Show;
+  $f = ($ffi_Data_Show['showNumberImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Data_Show_showNumberImpl'] = __NAMESPACE__ . '\\majData_majShow_showmajNumbermajImpl';
+
+function majData_majShow_showmajStringmajImpl(string $v0): string|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majShow_showmajStringmajImpl';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Data_Show;
+  $f = ($ffi_Data_Show['showStringImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Data_Show_showStringImpl'] = __NAMESPACE__ . '\\majData_majShow_showmajStringmajImpl';
+
 
 
 
 
 // Data_Show_showVoid
-$GLOBALS['Data_Show_showVoid'] = ["show" => $GLOBALS['Data_Void_absurd']];
+$GLOBALS['Data_Show_showVoid'] = (object)["show" => $GLOBALS['Data_Void_absurd']];
 
 // Data_Show_showUnit
-$GLOBALS['Data_Show_showUnit'] = ["show" => function($v_0) {
+$GLOBALS['Data_Show_showUnit'] = (object)["show" => function($v_0) {
   $__num = \func_num_args();
   $__res = "unit";
   goto __end;;
@@ -154,10 +209,10 @@ $GLOBALS['Data_Show_showUnit'] = ["show" => function($v_0) {
 }];
 
 // Data_Show_showString
-$GLOBALS['Data_Show_showString'] = ["show" => $GLOBALS['Data_Show_showStringImpl']];
+$GLOBALS['Data_Show_showString'] = (object)["show" => $GLOBALS['Data_Show_showStringImpl']];
 
 // Data_Show_showRecordFieldsNil
-$GLOBALS['Data_Show_showRecordFieldsNil'] = ["showRecordFields" => (function() {
+$GLOBALS['Data_Show_showRecordFieldsNil'] = (object)["showRecordFields" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -178,7 +233,7 @@ function majData_majShow_showmajRecordmajFields($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['showRecordFields'];
+  $__res = ($dict_0)->{'showRecordFields'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -192,9 +247,9 @@ function majData_majShow_showmajRecord($_dollar__unused_0, $_dollar__unused_1 = 
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ["show" => function($record_3) use ($dictShowRecordFields_2) {
+  $__res = (object)["show" => function($record_3) use ($dictShowRecordFields_2) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("{", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShowRecordFields_2)['showRecordFields'])(new \Type\Proxy\Type_Proxy_Proxy(), $record_3), "}"));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("{"))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(((($dictShowRecordFields_2)->{'showRecordFields'})(new \Type\Proxy\Type_Proxy_Proxy()))($record_3)))("}"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -206,7 +261,7 @@ function majData_majShow_showmajRecord($_dollar__unused_0, $_dollar__unused_1 = 
 $GLOBALS['Data_Show_showRecord'] = __NAMESPACE__ . '\\majData_majShow_showmajRecord';
 
 // Data_Show_showProxy
-$GLOBALS['Data_Show_showProxy'] = ["show" => function($v_0) {
+$GLOBALS['Data_Show_showProxy'] = (object)["show" => function($v_0) {
   $__num = \func_num_args();
   $__res = "Proxy";
   goto __end;;
@@ -215,16 +270,16 @@ $GLOBALS['Data_Show_showProxy'] = ["show" => function($v_0) {
 }];
 
 // Data_Show_showNumber
-$GLOBALS['Data_Show_showNumber'] = ["show" => $GLOBALS['Data_Show_showNumberImpl']];
+$GLOBALS['Data_Show_showNumber'] = (object)["show" => $GLOBALS['Data_Show_showNumberImpl']];
 
 // Data_Show_showInt
-$GLOBALS['Data_Show_showInt'] = ["show" => $GLOBALS['Data_Show_showIntImpl']];
+$GLOBALS['Data_Show_showInt'] = (object)["show" => $GLOBALS['Data_Show_showIntImpl']];
 
 // Data_Show_showChar
-$GLOBALS['Data_Show_showChar'] = ["show" => $GLOBALS['Data_Show_showCharImpl']];
+$GLOBALS['Data_Show_showChar'] = (object)["show" => $GLOBALS['Data_Show_showCharImpl']];
 
 // Data_Show_showBoolean
-$GLOBALS['Data_Show_showBoolean'] = ["show" => function($v_0) {
+$GLOBALS['Data_Show_showBoolean'] = (object)["show" => function($v_0) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ($v_0) {
@@ -246,7 +301,7 @@ function majData_majShow_show($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['show'];
+  $__res = ($dict_0)->{'show'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -260,7 +315,7 @@ function majData_majShow_showmajArray($dictShow_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["show" => ($GLOBALS['Data_Show_showArrayImpl'])(($dictShow_0)['show'])];
+  $__res = (object)["show" => ($GLOBALS['Data_Show_showArrayImpl'])(($dictShow_0)->{'show'})];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -274,14 +329,14 @@ function majData_majShow_showmajRecordmajFieldsmajCons($dictIsSymbol_0, $dictSho
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ["showRecordFields" => (function() use ($dictIsSymbol_0, $dictShowRecordFields_1, $dictShow_2) {
+  $__res = (object)["showRecordFields" => (function() use ($dictIsSymbol_0, $dictShowRecordFields_1, $dictShow_2) {
   $__fn = function($v_3, $record_4 = null) use ($dictIsSymbol_0, $dictShowRecordFields_1, $dictShow_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $key_5_0 = (($dictIsSymbol_0)['reflectSymbol'])(new \Type\Proxy\Type_Proxy_Proxy());
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])($key_5_0, (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(": ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_2)['show'])(($GLOBALS['Record_Unsafe_unsafeGet'])($key_5_0, $record_4)), (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(",", (($dictShowRecordFields_1)['showRecordFields'])(new \Type\Proxy\Type_Proxy_Proxy(), $record_4))))));
+  $key_5_0 = (($dictIsSymbol_0)->{'reflectSymbol'})(new \Type\Proxy\Type_Proxy_Proxy());
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(" "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})($key_5_0))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(": "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_2)->{'show'})(\Record\Unsafe\majRecord_majUnsafe_unsafemajGet($key_5_0, $record_4))))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(","))(((($dictShowRecordFields_1)->{'showRecordFields'})(new \Type\Proxy\Type_Proxy_Proxy()))($record_4))))));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -301,14 +356,14 @@ function majData_majShow_showmajRecordmajFieldsmajConsmajNil($dictIsSymbol_0, $d
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ["showRecordFields" => (function() use ($dictIsSymbol_0, $dictShow_1) {
+  $__res = (object)["showRecordFields" => (function() use ($dictIsSymbol_0, $dictShow_1) {
   $__fn = function($v_2, $record_3 = null) use ($dictIsSymbol_0, $dictShow_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $key_4_0 = (($dictIsSymbol_0)['reflectSymbol'])(new \Type\Proxy\Type_Proxy_Proxy());
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])($key_4_0, (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(": ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_1)['show'])(($GLOBALS['Record_Unsafe_unsafeGet'])($key_4_0, $record_3)), " "))));
+  $key_4_0 = (($dictIsSymbol_0)->{'reflectSymbol'})(new \Type\Proxy\Type_Proxy_Proxy());
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(" "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})($key_4_0))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(": "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_1)->{'show'})(\Record\Unsafe\majRecord_majUnsafe_unsafemajGet($key_4_0, $record_3))))(" "))));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

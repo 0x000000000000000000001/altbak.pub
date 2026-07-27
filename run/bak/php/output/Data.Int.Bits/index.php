@@ -176,13 +176,90 @@ $exports['complement'] = $complement;
 return $exports;
   return $exports;
 });
-$GLOBALS['Data_Int_Bits_and'] = $ffi_Data_Int_Bits['and'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Int_Bits_complement'] = $ffi_Data_Int_Bits['complement'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Int_Bits_or'] = $ffi_Data_Int_Bits['or'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Int_Bits_shl'] = $ffi_Data_Int_Bits['shl'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Int_Bits_shr'] = $ffi_Data_Int_Bits['shr'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Int_Bits_xor'] = $ffi_Data_Int_Bits['xor'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Int_Bits_zshr'] = $ffi_Data_Int_Bits['zshr'] ?? new class { public function __invoke(...$args) { return $this; } };
+function majData_majInt_majBits_and(int $v0, $v1 = null): int|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majInt_majBits_and';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Data_Int_Bits;
+  $f = ($ffi_Data_Int_Bits['and'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Data_Int_Bits_and'] = __NAMESPACE__ . '\\majData_majInt_majBits_and';
+
+function majData_majInt_majBits_complement(int $v0): int|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majInt_majBits_complement';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Data_Int_Bits;
+  $f = ($ffi_Data_Int_Bits['complement'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Data_Int_Bits_complement'] = __NAMESPACE__ . '\\majData_majInt_majBits_complement';
+
+function majData_majInt_majBits_or(int $v0, $v1 = null): int|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majInt_majBits_or';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Data_Int_Bits;
+  $f = ($ffi_Data_Int_Bits['or'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Data_Int_Bits_or'] = __NAMESPACE__ . '\\majData_majInt_majBits_or';
+
+function majData_majInt_majBits_shl(int $v0, $v1 = null): int|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majInt_majBits_shl';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Data_Int_Bits;
+  $f = ($ffi_Data_Int_Bits['shl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Data_Int_Bits_shl'] = __NAMESPACE__ . '\\majData_majInt_majBits_shl';
+
+function majData_majInt_majBits_shr(int $v0, $v1 = null): int|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majInt_majBits_shr';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Data_Int_Bits;
+  $f = ($ffi_Data_Int_Bits['shr'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Data_Int_Bits_shr'] = __NAMESPACE__ . '\\majData_majInt_majBits_shr';
+
+function majData_majInt_majBits_xor(int $v0, $v1 = null): int|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majInt_majBits_xor';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Data_Int_Bits;
+  $f = ($ffi_Data_Int_Bits['xor'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Data_Int_Bits_xor'] = __NAMESPACE__ . '\\majData_majInt_majBits_xor';
+
+function majData_majInt_majBits_zshr(int $v0, $v1 = null): int|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majInt_majBits_zshr';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Data_Int_Bits;
+  $f = ($ffi_Data_Int_Bits['zshr'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Data_Int_Bits_zshr'] = __NAMESPACE__ . '\\majData_majInt_majBits_zshr';
+
 
 
 

@@ -102,7 +102,18 @@ $exports['unsafePerformEffect'] = function($f) {
 return $exports;
   return $exports;
 });
-$GLOBALS['Effect_Unsafe_unsafePerformEffect'] = $ffi_Effect_Unsafe['unsafePerformEffect'] ?? new class { public function __invoke(...$args) { return $this; } };
+function majEffect_majUnsafe_unsafemajPerformmajEffect($v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_majUnsafe_unsafemajPerformmajEffect';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Effect_Unsafe;
+  $f = ($ffi_Effect_Unsafe['unsafePerformEffect'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Effect_Unsafe_unsafePerformEffect'] = __NAMESPACE__ . '\\majEffect_majUnsafe_unsafemajPerformmajEffect';
+
 
 
 

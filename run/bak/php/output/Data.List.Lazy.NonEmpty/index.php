@@ -120,8 +120,8 @@ function majData_majList_majLazy_majNonmajEmpty_uncons($v_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $v1_1_0 = ($GLOBALS['Data_Lazy_force'])($v_0);
-  $__res = ["head" => ($v1_1_0)->{'value0'}, "tail" => ($v1_1_0)->{'value1'}];
+  $v1_1_0 = \Data\Lazy\majData_majLazy_force($v_0);
+  $__res = (object)["head" => ($v1_1_0)->{'value0'}, "tail" => ($v1_1_0)->{'value1'}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -135,10 +135,10 @@ function majData_majList_majLazy_majNonmajEmpty_tomajList($v_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $v1_1_0 = ($GLOBALS['Data_Lazy_force'])($v_0);
+  $v1_1_0 = \Data\Lazy\majData_majLazy_force($v_0);
   $__local_var_2_1 = ($v1_1_0)->{'value0'};
   $__local_var_3_2 = ($v1_1_0)->{'value1'};
-  $__res = ($GLOBALS['Data_Lazy_defer'])(function($v_4) use ($__local_var_2_1, $__local_var_3_2) {
+  $__res = \Data\Lazy\majData_majLazy_defer(function($v_4) use ($__local_var_2_1, $__local_var_3_2) {
   $__num = \func_num_args();
   $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($__local_var_2_1, $__local_var_3_2);
   goto __end;;
@@ -158,19 +158,19 @@ function majData_majList_majLazy_majNonmajEmpty_tomajUnfoldable($dictUnfoldable_
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictUnfoldable_0)['unfoldr'])(function($xs_1) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictUnfoldable_0)->{'unfoldr'})(function($xs_1) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($rec_2) {
+  $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])->{'map'})(function($rec_2) {
   $__num = \func_num_args();
-  $__res = new \Data\Tuple\Data_Tuple_Tuple(($rec_2)['head'], ($rec_2)['tail']);
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(($rec_2)->{'head'}, ($rec_2)->{'tail'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, ($GLOBALS['Data_List_Lazy_uncons'])($xs_1));
+}))(\Data\List\Lazy\majData_majList_majLazy_uncons($xs_1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}), $GLOBALS['Data_List_Lazy_NonEmpty_toList']);
+})))($GLOBALS['Data_List_Lazy_NonEmpty_toList']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -184,7 +184,7 @@ function majData_majList_majLazy_majNonmajEmpty_tail($v_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($GLOBALS['Data_Lazy_force'])($v_0))->{'value1'};
+  $__res = (\Data\Lazy\majData_majLazy_force($v_0))->{'value1'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -192,7 +192,7 @@ function majData_majList_majLazy_majNonmajEmpty_tail($v_0) {
 $GLOBALS['Data_List_Lazy_NonEmpty_tail'] = __NAMESPACE__ . '\\majData_majList_majLazy_majNonmajEmpty_tail';
 
 // Data_List_Lazy_NonEmpty_singleton_closure
-$GLOBALS['Data_List_Lazy_NonEmpty_singleton_closure'] = ($GLOBALS['Data_List_Lazy_Types_applicativeNonEmptyList'])['pure'];
+$GLOBALS['Data_List_Lazy_NonEmpty_singleton_closure'] = ($GLOBALS['Data_List_Lazy_Types_applicativeNonEmptyList'])->{'pure'};
 
 // Data_List_Lazy_NonEmpty_singleton
 function majData_majList_majLazy_majNonmajEmpty_singleton($v_0) {
@@ -215,12 +215,12 @@ function majData_majList_majLazy_majNonmajEmpty_repeat($x_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Data_Lazy_defer'])(function($v_1) use ($x_0) {
+  $__res = \Data\Lazy\majData_majLazy_defer(function($v_1) use ($x_0) {
   $__num = \func_num_args();
   $go__2_0 = null;
-  $go__2_0 = (($GLOBALS['Data_List_Lazy_Types_lazyList'])['defer'])(function($v_3) use (&$go__2_0, $x_0) {
+  $go__2_0 = (($GLOBALS['Data_List_Lazy_Types_lazyList'])->{'defer'})(function($v_3) use (&$go__2_0, $x_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Lazy_defer'])(function($v_4) use (&$go__2_0, $x_0) {
+  $__res = \Data\Lazy\majData_majLazy_defer(function($v_4) use (&$go__2_0, $x_0) {
   $__num = \func_num_args();
   $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($x_0, $go__2_0);
   goto __end;;
@@ -249,7 +249,7 @@ function majData_majList_majLazy_majNonmajEmpty_length($v_0): int|\Closure {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (1 + ($GLOBALS['Data_List_Lazy_length'])((($GLOBALS['Data_Lazy_force'])($v_0))->{'value1'}));
+  $__res = (1 + \Data\List\Lazy\majData_majList_majLazy_length((\Data\Lazy\majData_majLazy_force($v_0))->{'value1'}));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -263,8 +263,8 @@ function majData_majList_majLazy_majNonmajEmpty_last($v_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $v1_1_0 = ($GLOBALS['Data_Lazy_force'])($v_0);
-  $__local_var_2_1 = ($GLOBALS['Data_List_Lazy_last'])(($v1_1_0)->{'value1'});
+  $v1_1_0 = \Data\Lazy\majData_majLazy_force($v_0);
+  $__local_var_2_1 = \Data\List\Lazy\majData_majList_majLazy_last(($v1_1_0)->{'value1'});
   $__t2 = null;;
   if ($__local_var_2_1 instanceof \Data\Maybe\Data_Maybe_Nothing) {
 $__t2 = ($v1_1_0)->{'value0'};
@@ -291,9 +291,9 @@ function majData_majList_majLazy_majNonmajEmpty_iterate($f_0, $x_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Lazy_defer'])(function($v_2) use ($f_0, $x_1) {
+  $__res = \Data\Lazy\majData_majLazy_defer(function($v_2) use ($f_0, $x_1) {
   $__num = \func_num_args();
-  $__res = new \Data\NonEmpty\Data_NonEmpty_NonEmpty($x_1, ($GLOBALS['Data_List_Lazy_iterate'])($f_0, ($f_0)($x_1)));
+  $__res = new \Data\NonEmpty\Data_NonEmpty_NonEmpty($x_1, \Data\List\Lazy\majData_majList_majLazy_iterate($f_0, ($f_0)($x_1)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -311,8 +311,8 @@ function majData_majList_majLazy_majNonmajEmpty_init($v_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $v1_1_0 = ($GLOBALS['Data_Lazy_force'])($v_0);
-  $__local_var_2_1 = ($GLOBALS['Data_List_Lazy_init'])(($v1_1_0)->{'value1'});
+  $v1_1_0 = \Data\Lazy\majData_majLazy_force($v_0);
+  $__local_var_2_1 = \Data\List\Lazy\majData_majList_majLazy_init(($v1_1_0)->{'value1'});
   $__t2 = null;;
   if ($__local_var_2_1 instanceof \Data\Maybe\Data_Maybe_Nothing) {
 $__t2 = $GLOBALS['Data_List_Lazy_Types_nil'];
@@ -320,7 +320,7 @@ goto end_branch_2;;
 };
   if ($__local_var_2_1 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__local_var_3_3 = ($__local_var_2_1)->{'value0'};
-$__t2 = ($GLOBALS['Data_Lazy_defer'])(function($v_4) use ($__local_var_3_3, $v1_1_0) {
+$__t2 = \Data\Lazy\majData_majLazy_defer(function($v_4) use ($__local_var_3_3, $v1_1_0) {
   $__num = \func_num_args();
   $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons(($v1_1_0)->{'value0'}, $__local_var_3_3);
   goto __end;;
@@ -346,7 +346,7 @@ function majData_majList_majLazy_majNonmajEmpty_head($v_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($GLOBALS['Data_Lazy_force'])($v_0))->{'value0'};
+  $__res = (\Data\Lazy\majData_majLazy_force($v_0))->{'value0'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -360,7 +360,7 @@ function majData_majList_majLazy_majNonmajEmpty_frommajList($l_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $v_1_0 = ($GLOBALS['Data_List_Lazy_Types_step'])($l_0);
+  $v_1_0 = \Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step($l_0);
   $__t1 = null;;
   if ($v_1_0 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil) {
 $__t1 = new \Data\Maybe\Data_Maybe_Nothing();
@@ -369,7 +369,7 @@ goto end_branch_1;;
   if ($v_1_0 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons) {
 $__local_var_2_2 = ($v_1_0)->{'value0'};
 $__local_var_3_3 = ($v_1_0)->{'value1'};
-$__t1 = new \Data\Maybe\Data_Maybe_Just(($GLOBALS['Data_Lazy_defer'])(function($v1_4) use ($__local_var_2_2, $__local_var_3_3) {
+$__t1 = new \Data\Maybe\Data_Maybe_Just(\Data\Lazy\majData_majLazy_defer(function($v1_4) use ($__local_var_2_2, $__local_var_3_3) {
   $__num = \func_num_args();
   $__res = new \Data\NonEmpty\Data_NonEmpty_NonEmpty($__local_var_2_2, $__local_var_3_3);
   goto __end;;
@@ -395,7 +395,7 @@ function majData_majList_majLazy_majNonmajEmpty_frommajFoldable($dictFoldable_0)
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_NonEmpty_fromList'], (($dictFoldable_0)['foldr'])($GLOBALS['Data_List_Lazy_Types_cons'], $GLOBALS['Data_List_Lazy_Types_nil']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_NonEmpty_fromList']))(((($dictFoldable_0)->{'foldr'})($GLOBALS['Data_List_Lazy_Types_cons']))($GLOBALS['Data_List_Lazy_Types_nil']));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -409,12 +409,12 @@ function majData_majList_majLazy_majNonmajEmpty_cons($y_0, $v_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Lazy_defer'])(function($v1_2) use ($v_1, $y_0) {
+  $__res = \Data\Lazy\majData_majLazy_defer(function($v1_2) use ($v_1, $y_0) {
   $__num = \func_num_args();
-  $v2_3_0 = ($GLOBALS['Data_Lazy_force'])($v_1);
+  $v2_3_0 = \Data\Lazy\majData_majLazy_force($v_1);
   $__local_var_4_1 = ($v2_3_0)->{'value0'};
   $__local_var_5_2 = ($v2_3_0)->{'value1'};
-  $__res = new \Data\NonEmpty\Data_NonEmpty_NonEmpty($y_0, ($GLOBALS['Data_Lazy_defer'])(function($v_6) use ($__local_var_4_1, $__local_var_5_2) {
+  $__res = new \Data\NonEmpty\Data_NonEmpty_NonEmpty($y_0, \Data\Lazy\majData_majLazy_defer(function($v_6) use ($__local_var_4_1, $__local_var_5_2) {
   $__num = \func_num_args();
   $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($__local_var_4_1, $__local_var_5_2);
   goto __end;;
@@ -438,7 +438,7 @@ function majData_majList_majLazy_majNonmajEmpty_concatmajMap($b_0, $a_1 = null) 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_List_Lazy_Types_bindNonEmptyList'])['bind'])($a_1, $b_0);
+  $__res = ((($GLOBALS['Data_List_Lazy_Types_bindNonEmptyList'])->{'bind'})($a_1))($b_0);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -452,16 +452,16 @@ function majData_majList_majLazy_majNonmajEmpty_appendmajFoldable($dictFoldable_
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $fromFoldable1_1_0 = (($dictFoldable_0)['foldr'])($GLOBALS['Data_List_Lazy_Types_cons'], $GLOBALS['Data_List_Lazy_Types_nil']);
+  $fromFoldable1_1_0 = ((($dictFoldable_0)->{'foldr'})($GLOBALS['Data_List_Lazy_Types_cons']))($GLOBALS['Data_List_Lazy_Types_nil']);
   $__res = (function() use ($fromFoldable1_1_0) {
   $__fn = function($nel_2, $ys_3 = null) use ($fromFoldable1_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Lazy_defer'])(function($v_4) use ($fromFoldable1_1_0, $nel_2, $ys_3) {
+  $__res = \Data\Lazy\majData_majLazy_defer(function($v_4) use ($fromFoldable1_1_0, $nel_2, $ys_3) {
   $__num = \func_num_args();
-  $__res = new \Data\NonEmpty\Data_NonEmpty_NonEmpty((($GLOBALS['Data_Lazy_force'])($nel_2))->{'value0'}, (($GLOBALS['Data_List_Lazy_Types_semigroupList'])['append'])((($GLOBALS['Data_Lazy_force'])($nel_2))->{'value1'}, ($fromFoldable1_1_0)($ys_3)));
+  $__res = new \Data\NonEmpty\Data_NonEmpty_NonEmpty((\Data\Lazy\majData_majLazy_force($nel_2))->{'value0'}, ((($GLOBALS['Data_List_Lazy_Types_semigroupList'])->{'append'})((\Data\Lazy\majData_majLazy_force($nel_2))->{'value1'}))(($fromFoldable1_1_0)($ys_3)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

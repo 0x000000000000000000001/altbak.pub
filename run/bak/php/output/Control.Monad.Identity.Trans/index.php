@@ -195,7 +195,7 @@ function majControl_majMonad_majIdentity_majTrans_plusmajIdentitymajT($dictPlus_
 $GLOBALS['Control_Monad_Identity_Trans_plusIdentityT'] = __NAMESPACE__ . '\\majControl_majMonad_majIdentity_majTrans_plusmajIdentitymajT';
 
 // Control_Monad_Identity_Trans_newtypeIdentityT
-$GLOBALS['Control_Monad_Identity_Trans_newtypeIdentityT'] = ["Coercible0" => function($_dollar__unused_0) {
+$GLOBALS['Control_Monad_Identity_Trans_newtypeIdentityT'] = (object)["Coercible0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = null;
   goto __end;;
@@ -218,7 +218,7 @@ function majControl_majMonad_majIdentity_majTrans_monadmajWritermajIdentitymajT(
 $GLOBALS['Control_Monad_Identity_Trans_monadWriterIdentityT'] = __NAMESPACE__ . '\\majControl_majMonad_majIdentity_majTrans_monadmajWritermajIdentitymajT';
 
 // Control_Monad_Identity_Trans_monadTransIdentityT
-$GLOBALS['Control_Monad_Identity_Trans_monadTransIdentityT'] = ["lift" => function($dictMonad_0) {
+$GLOBALS['Control_Monad_Identity_Trans_monadTransIdentityT'] = (object)["lift" => function($dictMonad_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Monad_Identity_Trans_IdentityT'];
   goto __end;;
@@ -429,14 +429,14 @@ function majControl_majMonad_majIdentity_majTrans_extendmajIdentitymajI($dictExt
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($dictExtend_0)['Functor0'])(null);
-  $__res = ["extend" => (function() use ($dictExtend_0) {
+  $__local_var_1_0 = (($dictExtend_0)->{'Functor0'})(null);
+  $__res = (object)["extend" => (function() use ($dictExtend_0) {
   $__fn = function($f_2, $v_3 = null) use ($dictExtend_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictExtend_0)['extend'])(($GLOBALS['Control_Semigroupoid_composeImpl'])($f_2, $GLOBALS['Control_Monad_Identity_Trans_IdentityT']), $v_3);
+  $__res = ((($dictExtend_0)->{'extend'})((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_2))($GLOBALS['Control_Monad_Identity_Trans_IdentityT'])))($v_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -462,14 +462,14 @@ function majControl_majMonad_majIdentity_majTrans_eqmajIdentitymajT($dictEq1_0, 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $eq11_2_0 = (($dictEq1_0)['eq1'])($dictEq_1);
-  $__res = ["eq" => (function() use ($eq11_2_0) {
+  $eq11_2_0 = (($dictEq1_0)->{'eq1'})($dictEq_1);
+  $__res = (object)["eq" => (function() use ($eq11_2_0) {
   $__fn = function($x_3, $y_4 = null) use ($eq11_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($eq11_2_0)($x_3, $y_4);
+  $__res = (($eq11_2_0)($x_3))($y_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -489,31 +489,31 @@ function majControl_majMonad_majIdentity_majTrans_ordmajIdentitymajT($dictOrd1_0
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($dictOrd1_0)['Eq10'])(null);
+  $__local_var_1_0 = (($dictOrd1_0)->{'Eq10'})(null);
   $__res = function($dictOrd_2) use ($__local_var_1_0, $dictOrd1_0) {
   $__num = \func_num_args();
-  $compare11_3_1 = (($dictOrd1_0)['compare1'])($dictOrd_2);
-  $eq11_4_2 = (($__local_var_1_0)['eq1'])((($dictOrd_2)['Eq0'])(null));
-  $eqIdentityT2_5_3 = ["eq" => (function() use ($eq11_4_2) {
+  $compare11_3_1 = (($dictOrd1_0)->{'compare1'})($dictOrd_2);
+  $eq11_4_2 = (($__local_var_1_0)->{'eq1'})((($dictOrd_2)->{'Eq0'})(null));
+  $eqIdentityT2_5_3 = (object)["eq" => (function() use ($eq11_4_2) {
   $__fn = function($x_5, $y_6 = null) use ($eq11_4_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($eq11_4_2)($x_5, $y_6);
+  $__res = (($eq11_4_2)($x_5))($y_6);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = ["compare" => (function() use ($compare11_3_1) {
+  $__res = (object)["compare" => (function() use ($compare11_3_1) {
   $__fn = function($x_6, $y_7 = null) use ($compare11_3_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($compare11_3_1)($x_6, $y_7);
+  $__res = (($compare11_3_1)($x_6))($y_7);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -543,9 +543,9 @@ function majControl_majMonad_majIdentity_majTrans_eq1majIdentitymajT($dictEq1_0)
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["eq1" => function($dictEq_1) use ($dictEq1_0) {
+  $__res = (object)["eq1" => function($dictEq_1) use ($dictEq1_0) {
   $__num = \func_num_args();
-  $__res = (($dictEq1_0)['eq1'])($dictEq_1);
+  $__res = (($dictEq1_0)->{'eq1'})($dictEq_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -563,39 +563,39 @@ function majControl_majMonad_majIdentity_majTrans_ord1majIdentitymajT($dictOrd1_
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($dictOrd1_0)['Eq10'])(null);
-  $__local_var_2_1 = (($dictOrd1_0)['Eq10'])(null);
-  $eq1IdentityT1_3_2 = ["eq1" => function($dictEq_3) use ($__local_var_2_1) {
+  $__local_var_1_0 = (($dictOrd1_0)->{'Eq10'})(null);
+  $__local_var_2_1 = (($dictOrd1_0)->{'Eq10'})(null);
+  $eq1IdentityT1_3_2 = (object)["eq1" => function($dictEq_3) use ($__local_var_2_1) {
   $__num = \func_num_args();
-  $__res = (($__local_var_2_1)['eq1'])($dictEq_3);
+  $__res = (($__local_var_2_1)->{'eq1'})($dictEq_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["compare1" => function($dictOrd_4) use ($__local_var_1_0, $dictOrd1_0) {
+  $__res = (object)["compare1" => function($dictOrd_4) use ($__local_var_1_0, $dictOrd1_0) {
   $__num = \func_num_args();
-  $compare11_5_3 = (($dictOrd1_0)['compare1'])($dictOrd_4);
-  $eq11_6_4 = (($__local_var_1_0)['eq1'])((($dictOrd_4)['Eq0'])(null));
-  $eqIdentityT2_7_5 = ["eq" => (function() use ($eq11_6_4) {
+  $compare11_5_3 = (($dictOrd1_0)->{'compare1'})($dictOrd_4);
+  $eq11_6_4 = (($__local_var_1_0)->{'eq1'})((($dictOrd_4)->{'Eq0'})(null));
+  $eqIdentityT2_7_5 = (object)["eq" => (function() use ($eq11_6_4) {
   $__fn = function($x_7, $y_8 = null) use ($eq11_6_4, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($eq11_6_4)($x_7, $y_8);
+  $__res = (($eq11_6_4)($x_7))($y_8);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = (["compare" => (function() use ($compare11_5_3) {
+  $__res = ((object)["compare" => (function() use ($compare11_5_3) {
   $__fn = function($x_8, $y_9 = null) use ($compare11_5_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($compare11_5_3)($x_8, $y_9);
+  $__res = (($compare11_5_3)($x_8))($y_9);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -607,7 +607,7 @@ function majControl_majMonad_majIdentity_majTrans_ord1majIdentitymajT($dictOrd1_
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}])['compare'];
+}])->{'compare'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -631,8 +631,8 @@ function majControl_majMonad_majIdentity_majTrans_comonadmajIdentitymajT($dictCo
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $extendIdentityI1_1_0 = ($GLOBALS['Control_Monad_Identity_Trans_extendIdentityI'])((($dictComonad_0)['Extend0'])(null));
-  $__res = ["extract" => ($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictComonad_0)['extract'], $GLOBALS['Control_Monad_Identity_Trans_runIdentityT']), "Extend0" => function($_dollar__unused_2) use ($extendIdentityI1_1_0) {
+  $extendIdentityI1_1_0 = \Control\Monad\Identity\Trans\majControl_majMonad_majIdentity_majTrans_extendmajIdentitymajI((($dictComonad_0)->{'Extend0'})(null));
+  $__res = (object)["extract" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictComonad_0)->{'extract'}))($GLOBALS['Control_Monad_Identity_Trans_runIdentityT']), "Extend0" => function($_dollar__unused_2) use ($extendIdentityI1_1_0) {
   $__num = \func_num_args();
   $__res = $extendIdentityI1_1_0;
   goto __end;;

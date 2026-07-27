@@ -111,7 +111,7 @@ function majData_majFunctor_majCoproduct_majInject_prj($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['prj'];
+  $__res = ($dict_0)->{'prj'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -119,7 +119,7 @@ function majData_majFunctor_majCoproduct_majInject_prj($dict_0) {
 $GLOBALS['Data_Functor_Coproduct_Inject_prj'] = __NAMESPACE__ . '\\majData_majFunctor_majCoproduct_majInject_prj';
 
 // Data_Functor_Coproduct_Inject_injectReflexive
-$GLOBALS['Data_Functor_Coproduct_Inject_injectReflexive'] = ["inj" => function($x_0) {
+$GLOBALS['Data_Functor_Coproduct_Inject_injectReflexive'] = (object)["inj" => function($x_0) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
@@ -128,7 +128,7 @@ $GLOBALS['Data_Functor_Coproduct_Inject_injectReflexive'] = ["inj" => function($
 }, "prj" => $GLOBALS['Data_Maybe_Just']];
 
 // Data_Functor_Coproduct_Inject_injectLeft
-$GLOBALS['Data_Functor_Coproduct_Inject_injectLeft'] = ["inj" => ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Coproduct_Coproduct'], $GLOBALS['Data_Either_Left']), "prj" => function($v2_0) {
+$GLOBALS['Data_Functor_Coproduct_Inject_injectLeft'] = (object)["inj" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))($GLOBALS['Data_Either_Left']), "prj" => function($v2_0) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ($v2_0 instanceof \Data\Either\Data_Either_Left) {
@@ -155,7 +155,7 @@ function majData_majFunctor_majCoproduct_majInject_inj($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['inj'];
+  $__res = ($dict_0)->{'inj'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -169,7 +169,7 @@ function majData_majFunctor_majCoproduct_majInject_injectmajRight($dictInject_0)
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["inj" => ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Coproduct_Coproduct'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Either_Right'], ($dictInject_0)['inj'])), "prj" => function($v2_1) use ($dictInject_0) {
+  $__res = (object)["inj" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Coproduct_Coproduct']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Either_Right']))(($dictInject_0)->{'inj'})), "prj" => function($v2_1) use ($dictInject_0) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ($v2_1 instanceof \Data\Either\Data_Either_Left) {
@@ -177,7 +177,7 @@ $__t0 = new \Data\Maybe\Data_Maybe_Nothing();
 goto end_branch_0;;
 };
   if ($v2_1 instanceof \Data\Either\Data_Either_Right) {
-$__t0 = (($dictInject_0)['prj'])(($v2_1)->{'value0'});
+$__t0 = (($dictInject_0)->{'prj'})(($v2_1)->{'value0'});
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);

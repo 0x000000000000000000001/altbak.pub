@@ -102,7 +102,18 @@ $exports['_crashWith'] = function ($msg) {
 return $exports;
   return $exports;
 });
-$GLOBALS['Partial__crashWith'] = $ffi_Partial['_crashWith'] ?? new class { public function __invoke(...$args) { return $this; } };
+function majPartial__crashmajWith(string $v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majPartial__crashmajWith';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Partial;
+  $f = ($ffi_Partial['_crashWith'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Partial__crashWith'] = __NAMESPACE__ . '\\majPartial__crashmajWith';
+
 
 
 
@@ -128,7 +139,7 @@ function majPartial_crash($_dollar__unused_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Partial__crashWith'])("Partial.crash: partial function");
+  $__res = \Partial\majPartial__crashmajWith("Partial.crash: partial function");
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

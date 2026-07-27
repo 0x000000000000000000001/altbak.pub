@@ -111,7 +111,7 @@ function majData_majProfunctor_majChoice_right($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['right'];
+  $__res = ($dict_0)->{'right'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -125,7 +125,7 @@ function majData_majProfunctor_majChoice_left($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['left'];
+  $__res = ($dict_0)->{'left'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -139,7 +139,7 @@ function majData_majProfunctor_majChoice_splitmajChoice($dictSemigroupoid_0, $di
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($dictSemigroupoid_0)['compose'])((($dictChoice_1)['right'])($r_3), (($dictChoice_1)['left'])($l_2));
+  $__res = ((($dictSemigroupoid_0)->{'compose'})((($dictChoice_1)->{'right'})($r_3)))((($dictChoice_1)->{'left'})($l_2));
   goto __end;;
   __end:
   return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -153,14 +153,14 @@ function majData_majProfunctor_majChoice_fanin($dictSemigroupoid_0, $dictChoice_
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $rmap_2_0 = ($GLOBALS['Data_Profunctor_rmap'])((($dictChoice_1)['Profunctor0'])(null));
+  $rmap_2_0 = ($GLOBALS['Data_Profunctor_rmap'])((($dictChoice_1)->{'Profunctor0'})(null));
   $__res = (function() use ($dictChoice_1, $dictSemigroupoid_0, $rmap_2_0) {
   $__fn = function($l_3, $r_4 = null) use ($dictChoice_1, $dictSemigroupoid_0, $rmap_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($rmap_2_0)(function($v2_5) {
+  $__res = (($rmap_2_0)(function($v2_5) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ($v2_5 instanceof \Data\Either\Data_Either_Left) {
@@ -178,7 +178,7 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, (($dictSemigroupoid_0)['compose'])((($dictChoice_1)['right'])($r_4), (($dictChoice_1)['left'])($l_3)));
+}))(((($dictSemigroupoid_0)->{'compose'})((($dictChoice_1)->{'right'})($r_4)))((($dictChoice_1)->{'left'})($l_3)));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -192,7 +192,7 @@ goto end_branch_1;;
 $GLOBALS['Data_Profunctor_Choice_fanin'] = __NAMESPACE__ . '\\majData_majProfunctor_majChoice_fanin';
 
 // Data_Profunctor_Choice_choiceFn
-$GLOBALS['Data_Profunctor_Choice_choiceFn'] = ["left" => (function() {
+$GLOBALS['Data_Profunctor_Choice_choiceFn'] = (object)["left" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -216,7 +216,7 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), "right" => ($GLOBALS['Data_Either_functorEither'])['map'], "Profunctor0" => function($_dollar__unused_0) {
+})(), "right" => ($GLOBALS['Data_Either_functorEither'])->{'map'}, "Profunctor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Profunctor_profunctorFn'];
   goto __end;;

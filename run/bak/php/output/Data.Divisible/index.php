@@ -107,7 +107,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Data_Divisible_divisiblePredicate
-$GLOBALS['Data_Divisible_divisiblePredicate'] = ["conquer" => function($v_0) {
+$GLOBALS['Data_Divisible_divisiblePredicate'] = (object)["conquer" => function($v_0) {
   $__num = \func_num_args();
   $__res = true;
   goto __end;;
@@ -128,9 +128,9 @@ function majData_majDivisible_divisiblemajOp($dictMonoid_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $divideOp_1_0 = ($GLOBALS['Data_Divide_divideOp'])((($dictMonoid_0)['Semigroup0'])(null));
-  $__local_var_2_1 = ($dictMonoid_0)['mempty'];
-  $__res = ["conquer" => function($v_3) use ($__local_var_2_1) {
+  $divideOp_1_0 = \Data\Divide\majData_majDivide_dividemajOp((($dictMonoid_0)->{'Semigroup0'})(null));
+  $__local_var_2_1 = ($dictMonoid_0)->{'mempty'};
+  $__res = (object)["conquer" => function($v_3) use ($__local_var_2_1) {
   $__num = \func_num_args();
   $__res = $__local_var_2_1;
   goto __end;;
@@ -150,7 +150,7 @@ function majData_majDivisible_divisiblemajOp($dictMonoid_0) {
 $GLOBALS['Data_Divisible_divisibleOp'] = __NAMESPACE__ . '\\majData_majDivisible_divisiblemajOp';
 
 // Data_Divisible_divisibleEquivalence
-$GLOBALS['Data_Divisible_divisibleEquivalence'] = ["conquer" => (function() {
+$GLOBALS['Data_Divisible_divisibleEquivalence'] = (object)["conquer" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -171,7 +171,7 @@ $GLOBALS['Data_Divisible_divisibleEquivalence'] = ["conquer" => (function() {
 }];
 
 // Data_Divisible_divisibleComparison
-$GLOBALS['Data_Divisible_divisibleComparison'] = ["conquer" => (function() {
+$GLOBALS['Data_Divisible_divisibleComparison'] = (object)["conquer" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -198,7 +198,7 @@ function majData_majDivisible_conquer($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['conquer'];
+  $__res = ($dict_0)->{'conquer'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

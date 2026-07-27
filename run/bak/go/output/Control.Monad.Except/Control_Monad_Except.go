@@ -13,7 +13,9 @@ var once_withExcept sync.Once
 func Get_withExcept() gopurs_runtime.Value {
 	once_withExcept.Do(func() {
 		cache_withExcept = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_withExcept(f_0_box, v_1_box)
+return Call_withExcept(func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(f_0_box, gopurs_runtime.Any(inner_arg0)))
+}, v_1_box)
 })
 	})
 	return cache_withExcept
@@ -35,14 +37,16 @@ var once_mapExcept sync.Once
 func Get_mapExcept() gopurs_runtime.Value {
 	once_mapExcept.Do(func() {
 		cache_mapExcept = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_mapExcept(f_0_box, v_1_box)
+return Call_mapExcept(func(inner_arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_0_box, inner_arg0)
+}, v_1_box)
 })
 	})
 	return cache_mapExcept
 }
 
-func Call_withExcept(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var f_0 gopurs_runtime.Value = f_0_loop
+func Call_withExcept(f_0_loop func(interface{}) interface{}, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 func(interface{}) interface{} = f_0_loop
 _ = f_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
@@ -50,7 +54,7 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Identity.Get_func
 var __t0 gopurs_runtime.Value
 {
 if (v2_2.Type == 9 && v2_2.IntVal == 2465973597) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{(*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0})}
+__t0 = gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.UnboxAny(gopurs_runtime.Any((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0))})})
 goto end_branch_0
 } else {
 
@@ -58,7 +62,7 @@ goto end_branch_0
 }
 {
 if (v2_2.Type == 9 && v2_2.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Apply(f_0, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0)})}
+__t0 = gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.UnboxAny(gopurs_runtime.Any(f_0(gopurs_runtime.UnboxAny(gopurs_runtime.Any((*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0)))))})})
 goto end_branch_0
 } else {
 
@@ -78,12 +82,10 @@ _ = x_0
 return x_0
 }
 
-func Call_mapExcept(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var f_0 gopurs_runtime.Value = f_0_loop
+func Call_mapExcept(f_0_loop func(gopurs_runtime.Value) gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 func(gopurs_runtime.Value) gopurs_runtime.Value = f_0_loop
 _ = f_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Apply(f_0, v_1)
+return f_0(v_1)
 }
-
-

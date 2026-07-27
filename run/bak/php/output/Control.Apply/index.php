@@ -114,7 +114,18 @@ $exports['arrayApply'] = $arrayApply;
 return $exports;
   return $exports;
 });
-$GLOBALS['Control_Apply_arrayApply'] = $ffi_Control_Apply['arrayApply'] ?? new class { public function __invoke(...$args) { return $this; } };
+function majControl_majApply_arraymajApply($v0, $v1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majControl_majApply_arraymajApply';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Control_Apply;
+  $f = ($ffi_Control_Apply['arrayApply'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Control_Apply_arrayApply'] = __NAMESPACE__ . '\\majControl_majApply_arraymajApply';
+
 
 
 
@@ -134,7 +145,7 @@ function majControl_majApply_identity($x_0) {
 $GLOBALS['Control_Apply_identity'] = __NAMESPACE__ . '\\majControl_majApply_identity';
 
 // Control_Apply_applyProxy
-$GLOBALS['Control_Apply_applyProxy'] = ["apply" => (function() {
+$GLOBALS['Control_Apply_applyProxy'] = (object)["apply" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -155,13 +166,13 @@ $GLOBALS['Control_Apply_applyProxy'] = ["apply" => (function() {
 }];
 
 // Control_Apply_applyFn
-$GLOBALS['Control_Apply_applyFn'] = ["apply" => (function() {
+$GLOBALS['Control_Apply_applyFn'] = (object)["apply" => (function() {
   $__fn = function($f_0, $g_1 = null, $x_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($f_0)($x_2, ($g_1)($x_2));
+  $__res = (($f_0)($x_2))(($g_1)($x_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -176,7 +187,7 @@ $GLOBALS['Control_Apply_applyFn'] = ["apply" => (function() {
 }];
 
 // Control_Apply_applyArray
-$GLOBALS['Control_Apply_applyArray'] = ["apply" => $GLOBALS['Control_Apply_arrayApply'], "Functor0" => function($_dollar__unused_0) {
+$GLOBALS['Control_Apply_applyArray'] = (object)["apply" => $GLOBALS['Control_Apply_arrayApply'], "Functor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Functor_functorArray'];
   goto __end;;
@@ -191,7 +202,7 @@ function majControl_majApply_apply($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['apply'];
+  $__res = ($dict_0)->{'apply'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -205,7 +216,7 @@ function majControl_majApply_applymajFirst($dictApply_0, $a_1 = null, $b_2 = nul
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictApply_0)['apply'])((((($dictApply_0)['Functor0'])(null))['map'])($GLOBALS['Data_Function_const'], $a_1), $b_2);
+  $__res = ((($dictApply_0)->{'apply'})(((((($dictApply_0)->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Function_const']))($a_1)))($b_2);
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -219,13 +230,13 @@ function majControl_majApply_applymajSecond($dictApply_0, $a_1 = null, $b_2 = nu
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictApply_0)['apply'])((((($dictApply_0)['Functor0'])(null))['map'])(function($v_3) {
+  $__res = ((($dictApply_0)->{'apply'})(((((($dictApply_0)->{'Functor0'})(null))->{'map'})(function($v_3) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Apply_identity'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, $a_1), $b_2);
+}))($a_1)))($b_2);
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -239,7 +250,7 @@ function majControl_majApply_lift2($dictApply_0, $f_1 = null, $a_2 = null, $b_3 
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($dictApply_0)['apply'])((((($dictApply_0)['Functor0'])(null))['map'])($f_1, $a_2), $b_3);
+  $__res = ((($dictApply_0)->{'apply'})(((((($dictApply_0)->{'Functor0'})(null))->{'map'})($f_1))($a_2)))($b_3);
   goto __end;;
   __end:
   return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -253,7 +264,7 @@ function majControl_majApply_lift3($dictApply_0, $f_1 = null, $a_2 = null, $b_3 
   if ($__num < 5) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
-  $__res = (($dictApply_0)['apply'])((($dictApply_0)['apply'])((((($dictApply_0)['Functor0'])(null))['map'])($f_1, $a_2), $b_3), $c_4);
+  $__res = ((($dictApply_0)->{'apply'})(((($dictApply_0)->{'apply'})(((((($dictApply_0)->{'Functor0'})(null))->{'map'})($f_1))($a_2)))($b_3)))($c_4);
   goto __end;;
   __end:
   return 5 < $__num ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
@@ -267,7 +278,7 @@ function majControl_majApply_lift4($dictApply_0, $f_1 = null, $a_2 = null, $b_3 
   if ($__num < 6) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 6);
   }
-  $__res = (($dictApply_0)['apply'])((($dictApply_0)['apply'])((($dictApply_0)['apply'])((((($dictApply_0)['Functor0'])(null))['map'])($f_1, $a_2), $b_3), $c_4), $d_5);
+  $__res = ((($dictApply_0)->{'apply'})(((($dictApply_0)->{'apply'})(((($dictApply_0)->{'apply'})(((((($dictApply_0)->{'Functor0'})(null))->{'map'})($f_1))($a_2)))($b_3)))($c_4)))($d_5);
   goto __end;;
   __end:
   return 6 < $__num ? $__res(...\array_slice(\func_get_args(), 6)) : $__res;
@@ -281,7 +292,7 @@ function majControl_majApply_lift5($dictApply_0, $f_1 = null, $a_2 = null, $b_3 
   if ($__num < 7) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 7);
   }
-  $__res = (($dictApply_0)['apply'])((($dictApply_0)['apply'])((($dictApply_0)['apply'])((($dictApply_0)['apply'])((((($dictApply_0)['Functor0'])(null))['map'])($f_1, $a_2), $b_3), $c_4), $d_5), $e_6);
+  $__res = ((($dictApply_0)->{'apply'})(((($dictApply_0)->{'apply'})(((($dictApply_0)->{'apply'})(((($dictApply_0)->{'apply'})(((((($dictApply_0)->{'Functor0'})(null))->{'map'})($f_1))($a_2)))($b_3)))($c_4)))($d_5)))($e_6);
   goto __end;;
   __end:
   return 7 < $__num ? $__res(...\array_slice(\func_get_args(), 7)) : $__res;

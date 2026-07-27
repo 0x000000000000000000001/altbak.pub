@@ -110,14 +110,14 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 // Data_String_Gen_max
 $GLOBALS['Data_String_Gen_max'] = (function() use (&$__fn) {
-$__local_var_0_0 = ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT());
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
 return (function() use ($__local_var_0_0) {
   $__fn = function($x_1, $y_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v_3_1 = ($__local_var_0_0)($x_1, $y_2);
+  $v_3_1 = (($__local_var_0_0)($x_1))($y_2);
   $__t2 = null;;
   if ($v_3_1 instanceof \Data\Ordering\Data_Ordering_LT) {
 $__t2 = $y_2;
@@ -150,21 +150,21 @@ function majData_majString_majGen_genmajString($dictMonadRec_0, $dictMonadGen_1 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $Bind1_2_0 = (((($dictMonadGen_1)['Monad0'])(null))['Bind1'])(null);
-  $unfoldable1_3_1 = ($GLOBALS['Control_Monad_Gen_unfoldable'])($dictMonadRec_0, $dictMonadGen_1, $GLOBALS['Data_Unfoldable_unfoldableArray']);
+  $Bind1_2_0 = (((($dictMonadGen_1)->{'Monad0'})(null))->{'Bind1'})(null);
+  $unfoldable1_3_1 = ((($GLOBALS['Control_Monad_Gen_unfoldable'])($dictMonadRec_0))($dictMonadGen_1))($GLOBALS['Data_Unfoldable_unfoldableArray']);
   $__res = function($genChar_4) use ($Bind1_2_0, $dictMonadGen_1, $unfoldable1_3_1) {
   $__num = \func_num_args();
-  $__res = (($dictMonadGen_1)['sized'])(function($size_5) use ($Bind1_2_0, $dictMonadGen_1, $genChar_4, $unfoldable1_3_1) {
+  $__res = (($dictMonadGen_1)->{'sized'})(function($size_5) use ($Bind1_2_0, $dictMonadGen_1, $genChar_4, $unfoldable1_3_1) {
   $__num = \func_num_args();
-  $__res = (($Bind1_2_0)['bind'])((($dictMonadGen_1)['chooseInt'])(1, ($GLOBALS['Data_String_Gen_max'])(1, $size_5)), function($newSize_6) use ($Bind1_2_0, $dictMonadGen_1, $genChar_4, $unfoldable1_3_1) {
+  $__res = ((($Bind1_2_0)->{'bind'})(((($dictMonadGen_1)->{'chooseInt'})(1))((($GLOBALS['Data_String_Gen_max'])(1))($size_5))))(function($newSize_6) use ($Bind1_2_0, $dictMonadGen_1, $genChar_4, $unfoldable1_3_1) {
   $__num = \func_num_args();
-  $__res = (($dictMonadGen_1)['resize'])(function($v_7) use ($newSize_6) {
+  $__res = ((($dictMonadGen_1)->{'resize'})(function($v_7) use ($newSize_6) {
   $__num = \func_num_args();
   $__res = $newSize_6;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, (((((($Bind1_2_0)['Apply0'])(null))['Functor0'])(null))['map'])($GLOBALS['Data_String_CodeUnits_fromCharArray'], ($unfoldable1_3_1)($genChar_4)));
+}))(((((((($Bind1_2_0)->{'Apply0'})(null))->{'Functor0'})(null))->{'map'})($GLOBALS['Data_String_CodeUnits_fromCharArray']))(($unfoldable1_3_1)($genChar_4)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -190,7 +190,7 @@ function majData_majString_majGen_genmajUnicodemajString($dictMonadRec_0, $dictM
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_String_Gen_genString'])($dictMonadRec_0, $dictMonadGen_1, ($GLOBALS['Data_Char_Gen_genUnicodeChar'])($dictMonadGen_1));
+  $__res = \Data\String\Gen\majData_majString_majGen_genmajString($dictMonadRec_0, $dictMonadGen_1, \Data\Char\Gen\majData_majChar_majGen_genmajUnicodemajChar($dictMonadGen_1));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -204,7 +204,7 @@ function majData_majString_majGen_genmajDigitmajString($dictMonadRec_0, $dictMon
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_String_Gen_genString'])($dictMonadRec_0, $dictMonadGen_1, ($GLOBALS['Data_Char_Gen_genDigitChar'])($dictMonadGen_1));
+  $__res = \Data\String\Gen\majData_majString_majGen_genmajString($dictMonadRec_0, $dictMonadGen_1, \Data\Char\Gen\majData_majChar_majGen_genmajDigitmajChar($dictMonadGen_1));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -218,7 +218,7 @@ function majData_majString_majGen_genmajAsciimajString__prime__($dictMonadRec_0,
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_String_Gen_genString'])($dictMonadRec_0, $dictMonadGen_1, ($GLOBALS['Data_Char_Gen_genAsciiChar__prime__'])($dictMonadGen_1));
+  $__res = \Data\String\Gen\majData_majString_majGen_genmajString($dictMonadRec_0, $dictMonadGen_1, ($GLOBALS['Data_Char_Gen_genAsciiChar__prime__'])($dictMonadGen_1));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -232,7 +232,7 @@ function majData_majString_majGen_genmajAsciimajString($dictMonadRec_0, $dictMon
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_String_Gen_genString'])($dictMonadRec_0, $dictMonadGen_1, ($GLOBALS['Data_Char_Gen_genAsciiChar'])($dictMonadGen_1));
+  $__res = \Data\String\Gen\majData_majString_majGen_genmajString($dictMonadRec_0, $dictMonadGen_1, \Data\Char\Gen\majData_majChar_majGen_genmajAsciimajChar($dictMonadGen_1));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -246,7 +246,7 @@ function majData_majString_majGen_genmajAlphamajUppercasemajString($dictMonadRec
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_String_Gen_genString'])($dictMonadRec_0, $dictMonadGen_1, ($GLOBALS['Data_Char_Gen_genAlphaUppercase'])($dictMonadGen_1));
+  $__res = \Data\String\Gen\majData_majString_majGen_genmajString($dictMonadRec_0, $dictMonadGen_1, \Data\Char\Gen\majData_majChar_majGen_genmajAlphamajUppercase($dictMonadGen_1));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -260,7 +260,7 @@ function majData_majString_majGen_genmajAlphamajString($dictMonadRec_0, $dictMon
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_String_Gen_genString'])($dictMonadRec_0, $dictMonadGen_1, ($GLOBALS['Data_Char_Gen_genAlpha'])($dictMonadGen_1));
+  $__res = \Data\String\Gen\majData_majString_majGen_genmajString($dictMonadRec_0, $dictMonadGen_1, \Data\Char\Gen\majData_majChar_majGen_genmajAlpha($dictMonadGen_1));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -274,7 +274,7 @@ function majData_majString_majGen_genmajAlphamajLowercasemajString($dictMonadRec
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_String_Gen_genString'])($dictMonadRec_0, $dictMonadGen_1, ($GLOBALS['Data_Char_Gen_genAlphaLowercase'])($dictMonadGen_1));
+  $__res = \Data\String\Gen\majData_majString_majGen_genmajString($dictMonadRec_0, $dictMonadGen_1, \Data\Char\Gen\majData_majChar_majGen_genmajAlphamajLowercase($dictMonadGen_1));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

@@ -106,7 +106,7 @@ function majData_majProfunctor_majCochoice_unright($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['unright'];
+  $__res = ($dict_0)->{'unright'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -120,7 +120,7 @@ function majData_majProfunctor_majCochoice_unleft($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['unleft'];
+  $__res = ($dict_0)->{'unleft'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

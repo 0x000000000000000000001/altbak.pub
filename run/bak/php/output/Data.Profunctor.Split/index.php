@@ -103,7 +103,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
-final class Data_Profunctor_Split_SplitF { public function __construct(public  $value0, public  $value1, public  $value2) {} }
+final class Data_Profunctor_Split_SplitF { public $tag = 'SplitF'; public function __construct(public  $value0, public  $value1, public  $value2) {} }
 
 // Data_Profunctor_Split_identity
 function majData_majProfunctor_majSplit_identity($x_0) {
@@ -141,7 +141,7 @@ function majData_majProfunctor_majSplit_unmajSplit($f_0, $v_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($f_0)(($v_1)->{'value0'}, ($v_1)->{'value1'}, ($v_1)->{'value2'});
+  $__res = ((($f_0)(($v_1)->{'value0'}))(($v_1)->{'value1'}))(($v_1)->{'value2'});
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -163,13 +163,13 @@ function majData_majProfunctor_majSplit_split($f_0, $g_1 = null, $fx_2 = null) {
 $GLOBALS['Data_Profunctor_Split_split'] = __NAMESPACE__ . '\\majData_majProfunctor_majSplit_split';
 
 // Data_Profunctor_Split_profunctorSplit
-$GLOBALS['Data_Profunctor_Split_profunctorSplit'] = ["dimap" => (function() {
+$GLOBALS['Data_Profunctor_Split_profunctorSplit'] = (object)["dimap" => (function() {
   $__fn = function($f_0, $g_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = new \Data\Profunctor\Split\Data_Profunctor_Split_SplitF(($GLOBALS['Control_Semigroupoid_composeImpl'])(($v_2)->{'value0'}, $f_0), ($GLOBALS['Control_Semigroupoid_composeImpl'])($g_1, ($v_2)->{'value1'}), ($v_2)->{'value2'});
+  $__res = new \Data\Profunctor\Split\Data_Profunctor_Split_SplitF((($GLOBALS['Control_Semigroupoid_composeImpl'])(($v_2)->{'value0'}))($f_0), (($GLOBALS['Control_Semigroupoid_composeImpl'])($g_1))(($v_2)->{'value1'}), ($v_2)->{'value2'});
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -184,7 +184,7 @@ function majData_majProfunctor_majSplit_lowermajSplit($dictInvariant_0, $v_1 = n
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictInvariant_0)['imap'])(($v_1)->{'value1'}, ($v_1)->{'value0'}, ($v_1)->{'value2'});
+  $__res = (((($dictInvariant_0)->{'imap'})(($v_1)->{'value1'}))(($v_1)->{'value0'}))(($v_1)->{'value2'});
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -214,7 +214,7 @@ function majData_majProfunctor_majSplit_hoistmajSplit($nat_0, $v_1 = null) {
   }
   $__local_var_2_0 = ($v_1)->{'value0'};
   $__local_var_3_1 = ($v_1)->{'value1'};
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(function($fx_4) use ($__local_var_2_0, $__local_var_3_1) {
+  $__res = \Control\Semigroupoid\majControl_majSemigroupoid_composemajImpl(function($fx_4) use ($__local_var_2_0, $__local_var_3_1) {
   $__num = \func_num_args();
   $__res = new \Data\Profunctor\Split\Data_Profunctor_Split_SplitF($__local_var_2_0, $__local_var_3_1, $fx_4);
   goto __end;;
@@ -228,13 +228,13 @@ function majData_majProfunctor_majSplit_hoistmajSplit($nat_0, $v_1 = null) {
 $GLOBALS['Data_Profunctor_Split_hoistSplit'] = __NAMESPACE__ . '\\majData_majProfunctor_majSplit_hoistmajSplit';
 
 // Data_Profunctor_Split_functorSplit
-$GLOBALS['Data_Profunctor_Split_functorSplit'] = ["map" => (function() {
+$GLOBALS['Data_Profunctor_Split_functorSplit'] = (object)["map" => (function() {
   $__fn = function($f_0, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new \Data\Profunctor\Split\Data_Profunctor_Split_SplitF(($v_1)->{'value0'}, ($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0, ($v_1)->{'value1'}), ($v_1)->{'value2'});
+  $__res = new \Data\Profunctor\Split\Data_Profunctor_Split_SplitF(($v_1)->{'value0'}, (($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))(($v_1)->{'value1'}), ($v_1)->{'value2'});
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

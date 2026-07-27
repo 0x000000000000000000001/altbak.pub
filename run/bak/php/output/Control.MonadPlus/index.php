@@ -106,7 +106,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Control_MonadPlus_monadPlusArray
-$GLOBALS['Control_MonadPlus_monadPlusArray'] = ["Monad0" => function($_dollar__unused_0) {
+$GLOBALS['Control_MonadPlus_monadPlusArray'] = (object)["Monad0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Monad_monadArray'];
   goto __end;;

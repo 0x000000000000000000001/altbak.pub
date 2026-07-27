@@ -102,7 +102,7 @@ $unsafeHas = function($label, $rec = null) use (&$unsafeHas) {
             return $unsafeHas(...\array_merge($__args, $more));
         };
     }
-    return property_exists($rec, $label);
+    return \is_array($rec) ? \array_key_exists($label, $rec) : \property_exists($rec, $label);
 };
 
 $unsafeGet = function($label, $rec = null) use (&$unsafeGet) {
@@ -113,7 +113,7 @@ $unsafeGet = function($label, $rec = null) use (&$unsafeGet) {
             return $unsafeGet(...\array_merge($__args, $more));
         };
     }
-    $res = $rec->$label ?? null;
+    $res = (\is_array($rec) ? ($rec[$label] ?? null) : ($rec->$label ?? null));
     if ($num > 2) {
         return $res(...\array_slice(\func_get_args(), 2));
     }
@@ -127,6 +127,11 @@ $unsafeSet = function($label, $value = null, $rec = null) use (&$unsafeSet) {
             return $unsafeSet(...\array_merge($__args, $more));
         };
     }
+    if (\is_array($rec)) {
+        $copy = $rec;
+        $copy[$label] = $value;
+        return $copy;
+    }
     $copy = clone $rec;
     $copy->$label = $value;
     return $copy;
@@ -138,6 +143,11 @@ $unsafeDelete = function($label, $rec = null) use (&$unsafeDelete) {
         return function(...$more) use ($__args, &$unsafeDelete) {
             return $unsafeDelete(...\array_merge($__args, $more));
         };
+    }
+    if (\is_array($rec)) {
+        $copy = $rec;
+        unset($copy[$label]);
+        return $copy;
     }
     $copy = clone $rec;
     unset($copy->$label);
@@ -151,10 +161,54 @@ $exports['unsafeDelete'] = $unsafeDelete;
 return $exports;
   return $exports;
 });
-$GLOBALS['Record_Unsafe_unsafeDelete'] = $ffi_Record_Unsafe['unsafeDelete'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Record_Unsafe_unsafeGet'] = $ffi_Record_Unsafe['unsafeGet'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Record_Unsafe_unsafeHas'] = $ffi_Record_Unsafe['unsafeHas'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Record_Unsafe_unsafeSet'] = $ffi_Record_Unsafe['unsafeSet'] ?? new class { public function __invoke(...$args) { return $this; } };
+function majRecord_majUnsafe_unsafemajDelete(string $v0, $v1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majRecord_majUnsafe_unsafemajDelete';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Record_Unsafe;
+  $f = ($ffi_Record_Unsafe['unsafeDelete'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Record_Unsafe_unsafeDelete'] = __NAMESPACE__ . '\\majRecord_majUnsafe_unsafemajDelete';
+
+function majRecord_majUnsafe_unsafemajGet(string $v0, $v1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majRecord_majUnsafe_unsafemajGet';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Record_Unsafe;
+  $f = ($ffi_Record_Unsafe['unsafeGet'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Record_Unsafe_unsafeGet'] = __NAMESPACE__ . '\\majRecord_majUnsafe_unsafemajGet';
+
+function majRecord_majUnsafe_unsafemajHas(string $v0, $v1 = null): bool|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majRecord_majUnsafe_unsafemajHas';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Record_Unsafe;
+  $f = ($ffi_Record_Unsafe['unsafeHas'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Record_Unsafe_unsafeHas'] = __NAMESPACE__ . '\\majRecord_majUnsafe_unsafemajHas';
+
+function majRecord_majUnsafe_unsafemajSet(string $v0, $v1 = null, $v2 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majRecord_majUnsafe_unsafemajSet';
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  global $ffi_Record_Unsafe;
+  $f = ($ffi_Record_Unsafe['unsafeSet'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1, $v2);
+}
+$GLOBALS['Record_Unsafe_unsafeSet'] = __NAMESPACE__ . '\\majRecord_majUnsafe_unsafemajSet';
+
 
 
 

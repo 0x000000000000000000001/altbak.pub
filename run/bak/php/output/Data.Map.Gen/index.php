@@ -116,30 +116,30 @@ function majData_majMap_majGen_genmajMap($dictMonadRec_0, $dictMonadGen_1 = null
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $Bind1_2_0 = (((($dictMonadGen_1)['Monad0'])(null))['Bind1'])(null);
-  $Apply0_3_1 = (($Bind1_2_0)['Apply0'])(null);
-  $__local_var_4_2 = (($Apply0_3_1)['Functor0'])(null);
-  $unfoldable1_5_3 = ($GLOBALS['Control_Monad_Gen_unfoldable'])($dictMonadRec_0, $dictMonadGen_1, $GLOBALS['Data_List_Types_unfoldableList']);
+  $Bind1_2_0 = (((($dictMonadGen_1)->{'Monad0'})(null))->{'Bind1'})(null);
+  $Apply0_3_1 = (($Bind1_2_0)->{'Apply0'})(null);
+  $__local_var_4_2 = (($Apply0_3_1)->{'Functor0'})(null);
+  $unfoldable1_5_3 = ((($GLOBALS['Control_Monad_Gen_unfoldable'])($dictMonadRec_0))($dictMonadGen_1))($GLOBALS['Data_List_Types_unfoldableList']);
   $__res = function($dictOrd_6) use ($Apply0_3_1, $Bind1_2_0, $__local_var_4_2, $dictMonadGen_1, $unfoldable1_5_3) {
   $__num = \func_num_args();
-  $fromFoldable_7_4 = ($GLOBALS['Data_Map_Internal_fromFoldable'])($dictOrd_6, $GLOBALS['Data_List_Types_foldableList']);
+  $fromFoldable_7_4 = (($GLOBALS['Data_Map_Internal_fromFoldable'])($dictOrd_6))($GLOBALS['Data_List_Types_foldableList']);
   $__res = (function() use ($Apply0_3_1, $Bind1_2_0, $__local_var_4_2, $dictMonadGen_1, $fromFoldable_7_4, $unfoldable1_5_3) {
   $__fn = function($genKey_8, $genValue_9 = null) use ($Apply0_3_1, $Bind1_2_0, $__local_var_4_2, $dictMonadGen_1, $fromFoldable_7_4, $unfoldable1_5_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictMonadGen_1)['sized'])(function($size_10) use ($Apply0_3_1, $Bind1_2_0, $__local_var_4_2, $dictMonadGen_1, $fromFoldable_7_4, $genKey_8, $genValue_9, $unfoldable1_5_3) {
+  $__res = (($dictMonadGen_1)->{'sized'})(function($size_10) use ($Apply0_3_1, $Bind1_2_0, $__local_var_4_2, $dictMonadGen_1, $fromFoldable_7_4, $genKey_8, $genValue_9, $unfoldable1_5_3) {
   $__num = \func_num_args();
-  $__res = (($Bind1_2_0)['bind'])((($dictMonadGen_1)['chooseInt'])(0, $size_10), function($newSize_11) use ($Apply0_3_1, $__local_var_4_2, $dictMonadGen_1, $fromFoldable_7_4, $genKey_8, $genValue_9, $unfoldable1_5_3) {
+  $__res = ((($Bind1_2_0)->{'bind'})(((($dictMonadGen_1)->{'chooseInt'})(0))($size_10)))(function($newSize_11) use ($Apply0_3_1, $__local_var_4_2, $dictMonadGen_1, $fromFoldable_7_4, $genKey_8, $genValue_9, $unfoldable1_5_3) {
   $__num = \func_num_args();
-  $__res = (($dictMonadGen_1)['resize'])(function($v_12) use ($newSize_11) {
+  $__res = ((($dictMonadGen_1)->{'resize'})(function($v_12) use ($newSize_11) {
   $__num = \func_num_args();
   $__res = $newSize_11;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, (($__local_var_4_2)['map'])($fromFoldable_7_4, ($unfoldable1_5_3)((($Apply0_3_1)['apply'])((($__local_var_4_2)['map'])($GLOBALS['Data_Tuple_Tuple'], $genKey_8), $genValue_9))));
+}))(((($__local_var_4_2)->{'map'})($fromFoldable_7_4))(($unfoldable1_5_3)(((($Apply0_3_1)->{'apply'})(((($__local_var_4_2)->{'map'})($GLOBALS['Data_Tuple_Tuple']))($genKey_8)))($genValue_9))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

@@ -108,10 +108,10 @@ function majData_majString_majRegex_majUnsafe_unsafemajRegex(string $s_0, $f_1 =
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_2_0 = ($GLOBALS['Data_String_Regex_regexImpl'])($GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], $s_0, ($GLOBALS['Data_String_Regex_renderFlags'])($f_1));
+  $__local_var_2_0 = \Data\String\Regex\majData_majString_majRegex_regexmajImpl($GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], $s_0, \Data\String\Regex\majData_majString_majRegex_rendermajFlags($f_1));
   $__t1 = null;;
   if ($__local_var_2_0 instanceof \Data\Either\Data_Either_Left) {
-$__t1 = ($GLOBALS['Partial__crashWith'])(($__local_var_2_0)->{'value0'});
+$__t1 = \Partial\majPartial__crashmajWith(($__local_var_2_0)->{'value0'});
 goto end_branch_1;;
 };
   if ($__local_var_2_0 instanceof \Data\Either\Data_Either_Right) {

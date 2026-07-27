@@ -105,10 +105,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
-final class Test_RBTree_R { public function __construct() {} }
-final class Test_RBTree_B { public function __construct() {} }
-final class Test_RBTree_E { public function __construct() {} }
-final class Test_RBTree_T { public function __construct(public  $value0, public  $value1, public int $value2, public  $value3) {} }
+final class Test_RBTree_R { public $tag = 'R'; public function __construct() {} }
+final class Test_RBTree_B { public $tag = 'B'; public function __construct() {} }
+final class Test_RBTree_E { public $tag = 'E'; public function __construct() {} }
+final class Test_RBTree_T { public $tag = 'T'; public function __construct(public  $value0, public  $value1, public int $value2, public  $value3) {} }
 
 // Test_RBTree_R
 $GLOBALS['Test_RBTree_R'] = ($GLOBALS['__phpurs_data0_R'] ??= new \Test\RBTree\Test_RBTree_R());
@@ -182,7 +182,7 @@ goto end_branch_0;;
 $GLOBALS['Test_RBTree_makeBlack'] = __NAMESPACE__ . '\\majTest_majRmajBmajTree_makemajBlack';
 
 // Test_RBTree_describe
-$GLOBALS['Test_RBTree_describe'] = ($GLOBALS['Effect_Console_log'])("Red-Black Tree (100k Worst-Case Insertions):");
+$GLOBALS['Test_RBTree_describe'] = \Effect\Console\majEffect_majConsole_log("Red-Black Tree (100k Worst-Case Insertions):");
 
 // Test_RBTree_depth
 function majTest_majRmajBmajTree_depth($v_0): int|\Closure {
@@ -200,8 +200,8 @@ $__t0 = 0;
 goto end_branch_0;;
 };
   if ($v_0 instanceof \Test\RBTree\Test_RBTree_T) {
-$__local_var_1_1 = ($GLOBALS['Test_RBTree_depth'])(($v_0)->{'value1'});
-$__local_var_2_2 = ($GLOBALS['Test_RBTree_depth'])(($v_0)->{'value3'});
+$__local_var_1_1 = \Test\RBTree\majTest_majRmajBmajTree_depth(($v_0)->{'value1'});
+$__local_var_2_2 = \Test\RBTree\majTest_majRmajBmajTree_depth(($v_0)->{'value3'});
 $__t3 = null;;
 if (($__local_var_1_1 > $__local_var_2_2)) {
 $__t3 = (1 + $__local_var_1_1);
@@ -469,11 +469,11 @@ goto end_branch_0;;
   if ($v1_1 instanceof \Test\RBTree\Test_RBTree_T) {
 $__t1 = null;;
 if (($v_0 < ($v1_1)->{'value2'})) {
-$__t1 = ($GLOBALS['Test_RBTree_balance'])(($v1_1)->{'value0'}, ($GLOBALS['Test_RBTree_ins'])($v_0, ($v1_1)->{'value1'}), ($v1_1)->{'value2'}, ($v1_1)->{'value3'});
+$__t1 = \Test\RBTree\majTest_majRmajBmajTree_balance(($v1_1)->{'value0'}, \Test\RBTree\majTest_majRmajBmajTree_ins($v_0, ($v1_1)->{'value1'}), ($v1_1)->{'value2'}, ($v1_1)->{'value3'});
 goto end_branch_1;;
 };
 if (($v_0 > ($v1_1)->{'value2'})) {
-$__t1 = ($GLOBALS['Test_RBTree_balance'])(($v1_1)->{'value0'}, ($v1_1)->{'value1'}, ($v1_1)->{'value2'}, ($GLOBALS['Test_RBTree_ins'])($v_0, ($v1_1)->{'value3'}));
+$__t1 = \Test\RBTree\majTest_majRmajBmajTree_balance(($v1_1)->{'value0'}, ($v1_1)->{'value1'}, ($v1_1)->{'value2'}, \Test\RBTree\majTest_majRmajBmajTree_ins($v_0, ($v1_1)->{'value3'}));
 goto end_branch_1;;
 };
 $__t1 = new \Test\RBTree\Test_RBTree_T(($v1_1)->{'value0'}, ($v1_1)->{'value1'}, ($v1_1)->{'value2'}, ($v1_1)->{'value3'});
@@ -498,7 +498,7 @@ function majTest_majRmajBmajTree_insert(int $x_0, $s_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__local_var_2_0 = ($GLOBALS['Test_RBTree_ins'])($x_0, $s_1);
+  $__local_var_2_0 = \Test\RBTree\majTest_majRmajBmajTree_ins($x_0, $s_1);
   $__t1 = null;;
   if ($__local_var_2_0 instanceof \Test\RBTree\Test_RBTree_T) {
 $__t1 = new \Test\RBTree\Test_RBTree_T(new \Test\RBTree\Test_RBTree_B(), ($__local_var_2_0)->{'value1'}, ($__local_var_2_0)->{'value2'}, ($__local_var_2_0)->{'value3'});
@@ -541,7 +541,7 @@ default:
 break;
 };
   $__tco_0 = ($v_0 - 1);
-  $__tco_1 = ($GLOBALS['Test_RBTree_insert'])($v_0, $v1_1);
+  $__tco_1 = \Test\RBTree\majTest_majRmajBmajTree_insert($v_0, $v1_1);
   $__tco_var_Test_RBTree_buildTree_v_0 = $__tco_0;
   $__tco_var_Test_RBTree_buildTree_v1_1 = $__tco_1;
   goto tco_loop_Test_RBTree_buildTree;;
@@ -555,9 +555,9 @@ break;
 $GLOBALS['Test_RBTree_buildTree'] = __NAMESPACE__ . '\\majTest_majRmajBmajTree_buildmajTree';
 
 // Test_RBTree_act
-$GLOBALS['Test_RBTree_act'] = (($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(100000), function($dummy_0) {
+$GLOBALS['Test_RBTree_act'] = ((($GLOBALS['Effect_bindEffect'])->{'bind'})(\Bench\majBench_opaque(100000)))(function($dummy_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])(($GLOBALS['Test_RBTree_depth'])(($GLOBALS['Test_RBTree_buildTree'])($dummy_0, new \Test\RBTree\Test_RBTree_E()))));
+  $__res = \Effect\Console\majEffect_majConsole_log((($GLOBALS['Data_Show_showInt'])->{'show'})(\Test\RBTree\majTest_majRmajBmajTree_depth(\Test\RBTree\majTest_majRmajBmajTree_buildmajTree($dummy_0, new \Test\RBTree\Test_RBTree_E()))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

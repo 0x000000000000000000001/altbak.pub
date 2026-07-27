@@ -47,5 +47,3 @@ return newSize_11
 })
 })
 }
-
-

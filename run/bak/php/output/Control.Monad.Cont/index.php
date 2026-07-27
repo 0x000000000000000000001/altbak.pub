@@ -109,7 +109,7 @@ function majControl_majMonad_majCont_withmajCont($f_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Data_Identity_Identity']), ($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0, (($GLOBALS['Control_Semigroupoid_semigroupoidFn'])['compose'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'])));
+  $__local_var_1_0 = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])->{'compose'})($GLOBALS['Data_Identity_Identity'])))((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])->{'compose'})($GLOBALS['Unsafe_Coerce_unsafeCoerce'])));
   $__res = (function() use ($__local_var_1_0) {
   $__fn = function($v_2, $k_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -136,7 +136,7 @@ function majControl_majMonad_majCont_runmajCont($cc_0, $k_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($cc_0)(($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity'], $k_1));
+  $__res = ($cc_0)((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity']))($k_1));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -150,7 +150,7 @@ function majControl_majMonad_majCont_mapmajCont($f_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0, $GLOBALS['Unsafe_Coerce_unsafeCoerce']));
+  $__local_var_1_0 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
   $__res = (function() use ($__local_var_1_0) {
   $__fn = function($v_2, $k_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -177,7 +177,7 @@ function majControl_majMonad_majCont_cont($f_0, $c_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($f_0)(($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'], $c_1));
+  $__res = ($f_0)((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($c_1));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

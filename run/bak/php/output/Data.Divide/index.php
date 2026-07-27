@@ -123,14 +123,14 @@ function majData_majDivide_identity($x_0) {
 $GLOBALS['Data_Divide_identity'] = __NAMESPACE__ . '\\majData_majDivide_identity';
 
 // Data_Divide_dividePredicate
-$GLOBALS['Data_Divide_dividePredicate'] = ["divide" => (function() {
+$GLOBALS['Data_Divide_dividePredicate'] = (object)["divide" => (function() {
   $__fn = function($f_0, $v_1 = null, $v1_2 = null, $a_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
   $v2_4_0 = ($f_0)($a_3);
-  $__res = (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(($v_1)(($v2_4_0)->{'value0'}), ($v1_2)(($v2_4_0)->{'value1'}));
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(($v_1)(($v2_4_0)->{'value0'})))(($v1_2)(($v2_4_0)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -151,14 +151,14 @@ function majData_majDivide_dividemajOp($dictSemigroup_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["divide" => (function() use ($dictSemigroup_0) {
+  $__res = (object)["divide" => (function() use ($dictSemigroup_0) {
   $__fn = function($f_1, $v_2 = null, $v1_3 = null, $a_4 = null) use ($dictSemigroup_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
   $v2_5_0 = ($f_1)($a_4);
-  $__res = (($dictSemigroup_0)['append'])(($v_2)(($v2_5_0)->{'value0'}), ($v1_3)(($v2_5_0)->{'value1'}));
+  $__res = ((($dictSemigroup_0)->{'append'})(($v_2)(($v2_5_0)->{'value0'})))(($v1_3)(($v2_5_0)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -178,7 +178,7 @@ function majData_majDivide_dividemajOp($dictSemigroup_0) {
 $GLOBALS['Data_Divide_divideOp'] = __NAMESPACE__ . '\\majData_majDivide_dividemajOp';
 
 // Data_Divide_divideEquivalence
-$GLOBALS['Data_Divide_divideEquivalence'] = ["divide" => (function() {
+$GLOBALS['Data_Divide_divideEquivalence'] = (object)["divide" => (function() {
   $__fn = function($f_0, $v_1 = null, $v1_2 = null, $a_3 = null, $b_4 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 5) {
@@ -186,7 +186,7 @@ $GLOBALS['Data_Divide_divideEquivalence'] = ["divide" => (function() {
   }
   $v2_5_0 = ($f_0)($a_3);
   $v3_6_1 = ($f_0)($b_4);
-  $__res = (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(($v_1)(($v2_5_0)->{'value0'}, ($v3_6_1)->{'value0'}), ($v1_2)(($v2_5_0)->{'value1'}, ($v3_6_1)->{'value1'}));
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})((($v_1)(($v2_5_0)->{'value0'}))(($v3_6_1)->{'value0'})))((($v1_2)(($v2_5_0)->{'value1'}))(($v3_6_1)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
@@ -201,7 +201,7 @@ $GLOBALS['Data_Divide_divideEquivalence'] = ["divide" => (function() {
 }];
 
 // Data_Divide_divideComparison
-$GLOBALS['Data_Divide_divideComparison'] = ["divide" => (function() {
+$GLOBALS['Data_Divide_divideComparison'] = (object)["divide" => (function() {
   $__fn = function($f_0, $v_1 = null, $v1_2 = null, $a_3 = null, $b_4 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 5) {
@@ -209,7 +209,7 @@ $GLOBALS['Data_Divide_divideComparison'] = ["divide" => (function() {
   }
   $v2_5_0 = ($f_0)($a_3);
   $v3_6_1 = ($f_0)($b_4);
-  $__res = (($GLOBALS['Data_Ordering_semigroupOrdering'])['append'])(($v_1)(($v2_5_0)->{'value0'}, ($v3_6_1)->{'value0'}), ($v1_2)(($v2_5_0)->{'value1'}, ($v3_6_1)->{'value1'}));
+  $__res = ((($GLOBALS['Data_Ordering_semigroupOrdering'])->{'append'})((($v_1)(($v2_5_0)->{'value0'}))(($v3_6_1)->{'value0'})))((($v1_2)(($v2_5_0)->{'value1'}))(($v3_6_1)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
@@ -230,7 +230,7 @@ function majData_majDivide_divide($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['divide'];
+  $__res = ($dict_0)->{'divide'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -244,7 +244,7 @@ function majData_majDivide_divided($dictDivide_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($dictDivide_0)['divide'])($GLOBALS['Data_Divide_identity']);
+  $__res = (($dictDivide_0)->{'divide'})($GLOBALS['Data_Divide_identity']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

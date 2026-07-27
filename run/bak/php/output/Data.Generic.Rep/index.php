@@ -100,10 +100,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
-final class Data_Generic_Rep_Inl { public function __construct(public  $value0) {} }
-final class Data_Generic_Rep_Inr { public function __construct(public  $value0) {} }
-final class Data_Generic_Rep_Product { public function __construct(public  $value0, public  $value1) {} }
-final class Data_Generic_Rep_NoArguments { public function __construct() {} }
+final class Data_Generic_Rep_Inl { public $tag = 'Inl'; public function __construct(public  $value0) {} }
+final class Data_Generic_Rep_Inr { public $tag = 'Inr'; public function __construct(public  $value0) {} }
+final class Data_Generic_Rep_Product { public $tag = 'Product'; public function __construct(public  $value0, public  $value1) {} }
+final class Data_Generic_Rep_NoArguments { public $tag = 'NoArguments'; public function __construct() {} }
 
 // Data_Generic_Rep_Inl
 $GLOBALS['Data_Generic_Rep_Inl'] = function($value0) {
@@ -176,7 +176,7 @@ function majData_majGeneric_majRep_to($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['to'];
+  $__res = ($dict_0)->{'to'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -190,15 +190,15 @@ function majData_majGeneric_majRep_showmajSum($dictShow_0, $dictShow1_1 = null) 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ["show" => function($v_2) use ($dictShow1_1, $dictShow_0) {
+  $__res = (object)["show" => function($v_2) use ($dictShow1_1, $dictShow_0) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ($v_2 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inl) {
-$__t0 = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Inl ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])(($v_2)->{'value0'}), ")"));
+$__t0 = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(Inl "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_0)->{'show'})(($v_2)->{'value0'})))(")"));
 goto end_branch_0;;
 };
   if ($v_2 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inr) {
-$__t0 = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Inr ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow1_1)['show'])(($v_2)->{'value0'}), ")"));
+$__t0 = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(Inr "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow1_1)->{'show'})(($v_2)->{'value0'})))(")"));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -222,9 +222,9 @@ function majData_majGeneric_majRep_showmajProduct($dictShow_0, $dictShow1_1 = nu
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ["show" => function($v_2) use ($dictShow1_1, $dictShow_0) {
+  $__res = (object)["show" => function($v_2) use ($dictShow1_1, $dictShow_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Product ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])(($v_2)->{'value0'}), (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow1_1)['show'])(($v_2)->{'value1'}), ")"))));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(Product "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_0)->{'show'})(($v_2)->{'value0'})))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(" "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow1_1)->{'show'})(($v_2)->{'value1'})))(")"))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -236,7 +236,7 @@ function majData_majGeneric_majRep_showmajProduct($dictShow_0, $dictShow1_1 = nu
 $GLOBALS['Data_Generic_Rep_showProduct'] = __NAMESPACE__ . '\\majData_majGeneric_majRep_showmajProduct';
 
 // Data_Generic_Rep_showNoArguments
-$GLOBALS['Data_Generic_Rep_showNoArguments'] = ["show" => function($v_0) {
+$GLOBALS['Data_Generic_Rep_showNoArguments'] = (object)["show" => function($v_0) {
   $__num = \func_num_args();
   $__res = "NoArguments";
   goto __end;;
@@ -251,9 +251,9 @@ function majData_majGeneric_majRep_showmajConstructor($dictIsSymbol_0, $dictShow
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ["show" => function($v_2) use ($dictIsSymbol_0, $dictShow_1) {
+  $__res = (object)["show" => function($v_2) use ($dictIsSymbol_0, $dictShow_1) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Constructor @", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($GLOBALS['Data_Show_showString'])['show'])((($dictIsSymbol_0)['reflectSymbol'])(new \Type\Proxy\Type_Proxy_Proxy())), (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_1)['show'])($v_2), ")"))));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(Constructor @"))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($GLOBALS['Data_Show_showString'])->{'show'})((($dictIsSymbol_0)->{'reflectSymbol'})(new \Type\Proxy\Type_Proxy_Proxy()))))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(" "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_1)->{'show'})($v_2)))(")"))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -271,9 +271,9 @@ function majData_majGeneric_majRep_showmajArgument($dictShow_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["show" => function($v_1) use ($dictShow_0) {
+  $__res = (object)["show" => function($v_1) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Argument ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(Argument "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_0)->{'show'})($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -305,7 +305,7 @@ function majData_majGeneric_majRep_from($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['from'];
+  $__res = ($dict_0)->{'from'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

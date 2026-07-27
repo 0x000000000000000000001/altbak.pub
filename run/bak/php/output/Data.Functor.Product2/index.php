@@ -107,7 +107,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
-final class Data_Functor_Product2_Product2 { public function __construct(public  $value0, public  $value1) {} }
+final class Data_Functor_Product2_Product2 { public $tag = 'Product2'; public function __construct(public  $value0, public  $value1) {} }
 
 // Data_Functor_Product2_Product2
 $GLOBALS['Data_Functor_Product2_Product2'] = (function() {
@@ -131,9 +131,9 @@ function majData_majFunctor_majProduct2_showmajProduct2($dictShow_0, $dictShow1_
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ["show" => function($v_2) use ($dictShow1_1, $dictShow_0) {
+  $__res = (object)["show" => function($v_2) use ($dictShow1_1, $dictShow_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Product2 ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])(($v_2)->{'value0'}), (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(" ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow1_1)['show'])(($v_2)->{'value1'}), ")"))));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(Product2 "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_0)->{'show'})(($v_2)->{'value0'})))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(" "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow1_1)->{'show'})(($v_2)->{'value1'})))(")"))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -151,13 +151,13 @@ function majData_majFunctor_majProduct2_profunctormajProduct2($dictProfunctor_0,
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ["dimap" => (function() use ($dictProfunctor1_1, $dictProfunctor_0) {
+  $__res = (object)["dimap" => (function() use ($dictProfunctor1_1, $dictProfunctor_0) {
   $__fn = function($f_2, $g_3 = null, $v_4 = null) use ($dictProfunctor1_1, $dictProfunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = new \Data\Functor\Product2\Data_Functor_Product2_Product2((($dictProfunctor_0)['dimap'])($f_2, $g_3, ($v_4)->{'value0'}), (($dictProfunctor1_1)['dimap'])($f_2, $g_3, ($v_4)->{'value1'}));
+  $__res = new \Data\Functor\Product2\Data_Functor_Product2_Product2((((($dictProfunctor_0)->{'dimap'})($f_2))($g_3))(($v_4)->{'value0'}), (((($dictProfunctor1_1)->{'dimap'})($f_2))($g_3))(($v_4)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -177,13 +177,13 @@ function majData_majFunctor_majProduct2_functormajProduct2($dictFunctor_0, $dict
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ["map" => (function() use ($dictFunctor1_1, $dictFunctor_0) {
+  $__res = (object)["map" => (function() use ($dictFunctor1_1, $dictFunctor_0) {
   $__fn = function($f_2, $v_3 = null) use ($dictFunctor1_1, $dictFunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new \Data\Functor\Product2\Data_Functor_Product2_Product2((($dictFunctor_0)['map'])($f_2, ($v_3)->{'value0'}), (($dictFunctor1_1)['map'])($f_2, ($v_3)->{'value1'}));
+  $__res = new \Data\Functor\Product2\Data_Functor_Product2_Product2(((($dictFunctor_0)->{'map'})($f_2))(($v_3)->{'value0'}), ((($dictFunctor1_1)->{'map'})($f_2))(($v_3)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -203,13 +203,13 @@ function majData_majFunctor_majProduct2_eqmajProduct2($dictEq_0, $dictEq1_1 = nu
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ["eq" => (function() use ($dictEq1_1, $dictEq_0) {
+  $__res = (object)["eq" => (function() use ($dictEq1_1, $dictEq_0) {
   $__fn = function($x_2, $y_3 = null) use ($dictEq1_1, $dictEq_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($dictEq_0)['eq'])(($x_2)->{'value0'}, ($y_3)->{'value0'}), (($dictEq1_1)['eq'])(($x_2)->{'value1'}, ($y_3)->{'value1'}));
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($dictEq_0)->{'eq'})(($x_2)->{'value0'}))(($y_3)->{'value0'})))(((($dictEq1_1)->{'eq'})(($x_2)->{'value1'}))(($y_3)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -229,17 +229,17 @@ function majData_majFunctor_majProduct2_ordmajProduct2($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $eqProduct21_1_0 = ($GLOBALS['Data_Functor_Product2_eqProduct2'])((($dictOrd_0)['Eq0'])(null));
+  $eqProduct21_1_0 = ($GLOBALS['Data_Functor_Product2_eqProduct2'])((($dictOrd_0)->{'Eq0'})(null));
   $__res = function($dictOrd1_2) use ($dictOrd_0, $eqProduct21_1_0) {
   $__num = \func_num_args();
-  $eqProduct22_3_1 = ($eqProduct21_1_0)((($dictOrd1_2)['Eq0'])(null));
-  $__res = ["compare" => (function() use ($dictOrd1_2, $dictOrd_0) {
+  $eqProduct22_3_1 = ($eqProduct21_1_0)((($dictOrd1_2)->{'Eq0'})(null));
+  $__res = (object)["compare" => (function() use ($dictOrd1_2, $dictOrd_0) {
   $__fn = function($x_4, $y_5 = null) use ($dictOrd1_2, $dictOrd_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v_6_2 = (($dictOrd_0)['compare'])(($x_4)->{'value0'}, ($y_5)->{'value0'});
+  $v_6_2 = ((($dictOrd_0)->{'compare'})(($x_4)->{'value0'}))(($y_5)->{'value0'});
   $__t3 = null;;
   if ($v_6_2 instanceof \Data\Ordering\Data_Ordering_LT) {
 $__t3 = new \Data\Ordering\Data_Ordering_LT();
@@ -249,7 +249,7 @@ goto end_branch_3;;
 $__t3 = new \Data\Ordering\Data_Ordering_GT();
 goto end_branch_3;;
 };
-  $__t3 = (($dictOrd1_2)['compare'])(($x_4)->{'value1'}, ($y_5)->{'value1'});
+  $__t3 = ((($dictOrd1_2)->{'compare'})(($x_4)->{'value1'}))(($y_5)->{'value1'});
   end_branch_3:;
   $__res = $__t3;
   goto __end;;
@@ -281,13 +281,13 @@ function majData_majFunctor_majProduct2_bifunctormajProduct2($dictBifunctor_0, $
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ["bimap" => (function() use ($dictBifunctor1_1, $dictBifunctor_0) {
+  $__res = (object)["bimap" => (function() use ($dictBifunctor1_1, $dictBifunctor_0) {
   $__fn = function($f_2, $g_3 = null, $v_4 = null) use ($dictBifunctor1_1, $dictBifunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = new \Data\Functor\Product2\Data_Functor_Product2_Product2((($dictBifunctor_0)['bimap'])($f_2, $g_3, ($v_4)->{'value0'}), (($dictBifunctor1_1)['bimap'])($f_2, $g_3, ($v_4)->{'value1'}));
+  $__res = new \Data\Functor\Product2\Data_Functor_Product2_Product2((((($dictBifunctor_0)->{'bimap'})($f_2))($g_3))(($v_4)->{'value0'}), (((($dictBifunctor1_1)->{'bimap'})($f_2))($g_3))(($v_4)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -307,30 +307,30 @@ function majData_majFunctor_majProduct2_biapplymajProduct2($dictBiapply_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($dictBiapply_0)['Bifunctor0'])(null);
+  $__local_var_1_0 = (($dictBiapply_0)->{'Bifunctor0'})(null);
   $__res = function($dictBiapply1_2) use ($__local_var_1_0, $dictBiapply_0) {
   $__num = \func_num_args();
-  $__local_var_3_1 = (($dictBiapply1_2)['Bifunctor0'])(null);
-  $bifunctorProduct22_4_2 = ["bimap" => (function() use ($__local_var_1_0, $__local_var_3_1) {
+  $__local_var_3_1 = (($dictBiapply1_2)->{'Bifunctor0'})(null);
+  $bifunctorProduct22_4_2 = (object)["bimap" => (function() use ($__local_var_1_0, $__local_var_3_1) {
   $__fn = function($f_4, $g_5 = null, $v_6 = null) use ($__local_var_1_0, $__local_var_3_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = new \Data\Functor\Product2\Data_Functor_Product2_Product2((($__local_var_1_0)['bimap'])($f_4, $g_5, ($v_6)->{'value0'}), (($__local_var_3_1)['bimap'])($f_4, $g_5, ($v_6)->{'value1'}));
+  $__res = new \Data\Functor\Product2\Data_Functor_Product2_Product2((((($__local_var_1_0)->{'bimap'})($f_4))($g_5))(($v_6)->{'value0'}), (((($__local_var_3_1)->{'bimap'})($f_4))($g_5))(($v_6)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = ["biapply" => (function() use ($dictBiapply1_2, $dictBiapply_0) {
+  $__res = (object)["biapply" => (function() use ($dictBiapply1_2, $dictBiapply_0) {
   $__fn = function($v_5, $v1_6 = null) use ($dictBiapply1_2, $dictBiapply_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new \Data\Functor\Product2\Data_Functor_Product2_Product2((($dictBiapply_0)['biapply'])(($v_5)->{'value0'}, ($v1_6)->{'value0'}), (($dictBiapply1_2)['biapply'])(($v_5)->{'value1'}, ($v1_6)->{'value1'}));
+  $__res = new \Data\Functor\Product2\Data_Functor_Product2_Product2(((($dictBiapply_0)->{'biapply'})(($v_5)->{'value0'}))(($v1_6)->{'value0'}), ((($dictBiapply1_2)->{'biapply'})(($v_5)->{'value1'}))(($v1_6)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -360,32 +360,32 @@ function majData_majFunctor_majProduct2_biapplicativemajProduct2($dictBiapplicat
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($dictBiapplicative_0)['Biapply0'])(null);
-  $__local_var_2_1 = (($__local_var_1_0)['Bifunctor0'])(null);
+  $__local_var_1_0 = (($dictBiapplicative_0)->{'Biapply0'})(null);
+  $__local_var_2_1 = (($__local_var_1_0)->{'Bifunctor0'})(null);
   $__res = function($dictBiapplicative1_3) use ($__local_var_1_0, $__local_var_2_1, $dictBiapplicative_0) {
   $__num = \func_num_args();
-  $__local_var_4_2 = (($dictBiapplicative1_3)['Biapply0'])(null);
-  $__local_var_5_3 = (($__local_var_4_2)['Bifunctor0'])(null);
-  $bifunctorProduct22_6_4 = ["bimap" => (function() use ($__local_var_2_1, $__local_var_5_3) {
+  $__local_var_4_2 = (($dictBiapplicative1_3)->{'Biapply0'})(null);
+  $__local_var_5_3 = (($__local_var_4_2)->{'Bifunctor0'})(null);
+  $bifunctorProduct22_6_4 = (object)["bimap" => (function() use ($__local_var_2_1, $__local_var_5_3) {
   $__fn = function($f_6, $g_7 = null, $v_8 = null) use ($__local_var_2_1, $__local_var_5_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = new \Data\Functor\Product2\Data_Functor_Product2_Product2((($__local_var_2_1)['bimap'])($f_6, $g_7, ($v_8)->{'value0'}), (($__local_var_5_3)['bimap'])($f_6, $g_7, ($v_8)->{'value1'}));
+  $__res = new \Data\Functor\Product2\Data_Functor_Product2_Product2((((($__local_var_2_1)->{'bimap'})($f_6))($g_7))(($v_8)->{'value0'}), (((($__local_var_5_3)->{'bimap'})($f_6))($g_7))(($v_8)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
 })()];
-  $biapplyProduct22_6_4 = ["biapply" => (function() use ($__local_var_1_0, $__local_var_4_2) {
+  $biapplyProduct22_6_4 = (object)["biapply" => (function() use ($__local_var_1_0, $__local_var_4_2) {
   $__fn = function($v_7, $v1_8 = null) use ($__local_var_1_0, $__local_var_4_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new \Data\Functor\Product2\Data_Functor_Product2_Product2((($__local_var_1_0)['biapply'])(($v_7)->{'value0'}, ($v1_8)->{'value0'}), (($__local_var_4_2)['biapply'])(($v_7)->{'value1'}, ($v1_8)->{'value1'}));
+  $__res = new \Data\Functor\Product2\Data_Functor_Product2_Product2(((($__local_var_1_0)->{'biapply'})(($v_7)->{'value0'}))(($v1_8)->{'value0'}), ((($__local_var_4_2)->{'biapply'})(($v_7)->{'value1'}))(($v1_8)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -398,13 +398,13 @@ function majData_majFunctor_majProduct2_biapplicativemajProduct2($dictBiapplicat
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["bipure" => (function() use ($dictBiapplicative1_3, $dictBiapplicative_0) {
+  $__res = (object)["bipure" => (function() use ($dictBiapplicative1_3, $dictBiapplicative_0) {
   $__fn = function($a_7, $b_8 = null) use ($dictBiapplicative1_3, $dictBiapplicative_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new \Data\Functor\Product2\Data_Functor_Product2_Product2((($dictBiapplicative_0)['bipure'])($a_7, $b_8), (($dictBiapplicative1_3)['bipure'])($a_7, $b_8));
+  $__res = new \Data\Functor\Product2\Data_Functor_Product2_Product2(((($dictBiapplicative_0)->{'bipure'})($a_7))($b_8), ((($dictBiapplicative1_3)->{'bipure'})($a_7))($b_8));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

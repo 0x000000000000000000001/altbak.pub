@@ -32,9 +32,9 @@ var cache_semigroupComparison gopurs_runtime.Value
 var once_semigroupComparison sync.Once
 func Get_semigroupComparison() gopurs_runtime.Value {
 	once_semigroupComparison.Do(func() {
-		cache_semigroupComparison = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semigroupComparison = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(Get_append_(), v_0, v1_1)
-}))
+}))))
 	})
 	return cache_semigroupComparison
 }
@@ -43,9 +43,9 @@ var cache_newtypeComparison gopurs_runtime.Value
 var once_newtypeComparison sync.Once
 func Get_newtypeComparison() gopurs_runtime.Value {
 	once_newtypeComparison.Do(func() {
-		cache_newtypeComparison = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypeComparison = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
-}))
+}))))
 	})
 	return cache_newtypeComparison
 }
@@ -54,11 +54,11 @@ var cache_monoidComparison gopurs_runtime.Value
 var once_monoidComparison sync.Once
 func Get_monoidComparison() gopurs_runtime.Value {
 	once_monoidComparison.Do(func() {
-		cache_monoidComparison = gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monoidComparison = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_semigroupComparison()
 }), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}
-}))
+return gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil})
+}))))
 	})
 	return cache_monoidComparison
 }
@@ -78,9 +78,9 @@ var cache_contravariantComparison gopurs_runtime.Value
 var once_contravariantComparison sync.Once
 func Get_contravariantComparison() gopurs_runtime.Value {
 	once_contravariantComparison.Do(func() {
-		cache_contravariantComparison = gopurs_runtime.RecordDict1("cmap", gopurs_runtime.Func4(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value, y_3 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_contravariantComparison = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("cmap", gopurs_runtime.Func4(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value, y_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(v_1, gopurs_runtime.Apply(f_0, x_2), gopurs_runtime.Apply(f_0, y_3))
-}))
+}))))
 	})
 	return cache_contravariantComparison
 }
@@ -112,5 +112,3 @@ var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
 return gopurs_runtime.RecordGet(dictOrd_0, "compare")
 }
-
-

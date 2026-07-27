@@ -112,7 +112,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Effect_Aff_Class_monadAffAff
-$GLOBALS['Effect_Aff_Class_monadAffAff'] = ["liftAff" => function($x_0) {
+$GLOBALS['Effect_Aff_Class_monadAffAff'] = (object)["liftAff" => function($x_0) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
@@ -133,7 +133,7 @@ function majEffect_majAff_majClass_liftmajAff($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['liftAff'];
+  $__res = ($dict_0)->{'liftAff'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -147,9 +147,9 @@ function majEffect_majAff_majClass_monadmajAffmajContmajT($dictMonadAff_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $MonadEffect0_1_0 = (($dictMonadAff_0)['MonadEffect0'])(null);
-  $monadEffectContT_2_1 = ($GLOBALS['Control_Monad_Cont_Trans_monadEffectContT'])($MonadEffect0_1_0);
-  $__res = ["liftAff" => ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Cont_Trans_monadTransContT'])['lift'])((($MonadEffect0_1_0)['Monad0'])(null)), ($dictMonadAff_0)['liftAff']), "MonadEffect0" => function($_dollar__unused_3) use ($monadEffectContT_2_1) {
+  $MonadEffect0_1_0 = (($dictMonadAff_0)->{'MonadEffect0'})(null);
+  $monadEffectContT_2_1 = \Control\Monad\Cont\Trans\majControl_majMonad_majCont_majTrans_monadmajEffectmajContmajT($MonadEffect0_1_0);
+  $__res = (object)["liftAff" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Cont_Trans_monadTransContT'])->{'lift'})((($MonadEffect0_1_0)->{'Monad0'})(null))))(($dictMonadAff_0)->{'liftAff'}), "MonadEffect0" => function($_dollar__unused_3) use ($monadEffectContT_2_1) {
   $__num = \func_num_args();
   $__res = $monadEffectContT_2_1;
   goto __end;;
@@ -169,9 +169,9 @@ function majEffect_majAff_majClass_monadmajAffmajExceptmajT($dictMonadAff_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $MonadEffect0_1_0 = (($dictMonadAff_0)['MonadEffect0'])(null);
-  $monadEffectExceptT_2_1 = ($GLOBALS['Control_Monad_Except_Trans_monadEffectExceptT'])($MonadEffect0_1_0);
-  $__res = ["liftAff" => ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Except_Trans_monadTransExceptT'])['lift'])((($MonadEffect0_1_0)['Monad0'])(null)), ($dictMonadAff_0)['liftAff']), "MonadEffect0" => function($_dollar__unused_3) use ($monadEffectExceptT_2_1) {
+  $MonadEffect0_1_0 = (($dictMonadAff_0)->{'MonadEffect0'})(null);
+  $monadEffectExceptT_2_1 = \Control\Monad\Except\Trans\majControl_majMonad_majExcept_majTrans_monadmajEffectmajExceptmajT($MonadEffect0_1_0);
+  $__res = (object)["liftAff" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Except_Trans_monadTransExceptT'])->{'lift'})((($MonadEffect0_1_0)->{'Monad0'})(null))))(($dictMonadAff_0)->{'liftAff'}), "MonadEffect0" => function($_dollar__unused_3) use ($monadEffectExceptT_2_1) {
   $__num = \func_num_args();
   $__res = $monadEffectExceptT_2_1;
   goto __end;;
@@ -191,9 +191,9 @@ function majEffect_majAff_majClass_monadmajAffmajListmajT($dictMonadAff_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $MonadEffect0_1_0 = (($dictMonadAff_0)['MonadEffect0'])(null);
-  $monadEffectListT_2_1 = ($GLOBALS['Control_Monad_List_Trans_monadEffectListT'])($MonadEffect0_1_0);
-  $__res = ["liftAff" => ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_List_Trans_monadTransListT'])['lift'])((($MonadEffect0_1_0)['Monad0'])(null)), ($dictMonadAff_0)['liftAff']), "MonadEffect0" => function($_dollar__unused_3) use ($monadEffectListT_2_1) {
+  $MonadEffect0_1_0 = (($dictMonadAff_0)->{'MonadEffect0'})(null);
+  $monadEffectListT_2_1 = \Control\Monad\List\Trans\majControl_majMonad_majList_majTrans_monadmajEffectmajListmajT($MonadEffect0_1_0);
+  $__res = (object)["liftAff" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_List_Trans_monadTransListT'])->{'lift'})((($MonadEffect0_1_0)->{'Monad0'})(null))))(($dictMonadAff_0)->{'liftAff'}), "MonadEffect0" => function($_dollar__unused_3) use ($monadEffectListT_2_1) {
   $__num = \func_num_args();
   $__res = $monadEffectListT_2_1;
   goto __end;;
@@ -213,9 +213,9 @@ function majEffect_majAff_majClass_monadmajAffmajMaybe($dictMonadAff_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $MonadEffect0_1_0 = (($dictMonadAff_0)['MonadEffect0'])(null);
-  $monadEffectMaybe_2_1 = ($GLOBALS['Control_Monad_Maybe_Trans_monadEffectMaybe'])($MonadEffect0_1_0);
-  $__res = ["liftAff" => ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Maybe_Trans_monadTransMaybeT'])['lift'])((($MonadEffect0_1_0)['Monad0'])(null)), ($dictMonadAff_0)['liftAff']), "MonadEffect0" => function($_dollar__unused_3) use ($monadEffectMaybe_2_1) {
+  $MonadEffect0_1_0 = (($dictMonadAff_0)->{'MonadEffect0'})(null);
+  $monadEffectMaybe_2_1 = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_monadmajEffectmajMaybe($MonadEffect0_1_0);
+  $__res = (object)["liftAff" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Maybe_Trans_monadTransMaybeT'])->{'lift'})((($MonadEffect0_1_0)->{'Monad0'})(null))))(($dictMonadAff_0)->{'liftAff'}), "MonadEffect0" => function($_dollar__unused_3) use ($monadEffectMaybe_2_1) {
   $__num = \func_num_args();
   $__res = $monadEffectMaybe_2_1;
   goto __end;;
@@ -235,22 +235,22 @@ function majEffect_majAff_majClass_monadmajAffmajRmajWmajS($dictMonadAff_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $MonadEffect0_1_0 = (($dictMonadAff_0)['MonadEffect0'])(null);
-  $Monad0_2_1 = (($MonadEffect0_1_0)['Monad0'])(null);
-  $liftAff1_3_2 = ($dictMonadAff_0)['liftAff'];
+  $MonadEffect0_1_0 = (($dictMonadAff_0)->{'MonadEffect0'})(null);
+  $Monad0_2_1 = (($MonadEffect0_1_0)->{'Monad0'})(null);
+  $liftAff1_3_2 = ($dictMonadAff_0)->{'liftAff'};
   $__res = function($dictMonoid_4) use ($Monad0_2_1, $MonadEffect0_1_0, $liftAff1_3_2) {
   $__num = \func_num_args();
-  $monadEffectRWS_5_3 = ($GLOBALS['Control_Monad_RWS_Trans_monadEffectRWS'])($dictMonoid_4, $MonadEffect0_1_0);
-  $mempty_6_4 = ($dictMonoid_4)['mempty'];
-  $__res = ["liftAff" => ($GLOBALS['Control_Semigroupoid_composeImpl'])((function() use ($Monad0_2_1, $mempty_6_4) {
+  $monadEffectRWS_5_3 = \Control\Monad\RWS\Trans\majControl_majMonad_majRmajWmajS_majTrans_monadmajEffectmajRmajWmajS($dictMonoid_4, $MonadEffect0_1_0);
+  $mempty_6_4 = ($dictMonoid_4)->{'mempty'};
+  $__res = (object)["liftAff" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((function() use ($Monad0_2_1, $mempty_6_4) {
   $__fn = function($m_7, $v_8 = null, $s_9 = null) use ($Monad0_2_1, $mempty_6_4, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($Monad0_2_1)['Bind1'])(null))['bind'])($m_7, function($a_10) use ($Monad0_2_1, $mempty_6_4, $s_9) {
+  $__res = ((((($Monad0_2_1)->{'Bind1'})(null))->{'bind'})($m_7))(function($a_10) use ($Monad0_2_1, $mempty_6_4, $s_9) {
   $__num = \func_num_args();
-  $__res = (((($Monad0_2_1)['Applicative0'])(null))['pure'])(new \Control\Monad\RWS\Trans\Control_Monad_RWS_Trans_RWSResult($s_9, $a_10, $mempty_6_4));
+  $__res = (((($Monad0_2_1)->{'Applicative0'})(null))->{'pure'})(new \Control\Monad\RWS\Trans\Control_Monad_RWS_Trans_RWSResult($s_9, $a_10, $mempty_6_4));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -260,7 +260,7 @@ function majEffect_majAff_majClass_monadmajAffmajRmajWmajS($dictMonadAff_0) {
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})(), $liftAff1_3_2), "MonadEffect0" => function($_dollar__unused_6) use ($monadEffectRWS_5_3) {
+})()))($liftAff1_3_2), "MonadEffect0" => function($_dollar__unused_6) use ($monadEffectRWS_5_3) {
   $__num = \func_num_args();
   $__res = $monadEffectRWS_5_3;
   goto __end;;
@@ -284,9 +284,9 @@ function majEffect_majAff_majClass_monadmajAffmajReader($dictMonadAff_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $MonadEffect0_1_0 = (($dictMonadAff_0)['MonadEffect0'])(null);
-  $monadEffectReader_2_1 = ($GLOBALS['Control_Monad_Reader_Trans_monadEffectReader'])($MonadEffect0_1_0);
-  $__res = ["liftAff" => ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Reader_Trans_monadTransReaderT'])['lift'])((($MonadEffect0_1_0)['Monad0'])(null)), ($dictMonadAff_0)['liftAff']), "MonadEffect0" => function($_dollar__unused_3) use ($monadEffectReader_2_1) {
+  $MonadEffect0_1_0 = (($dictMonadAff_0)->{'MonadEffect0'})(null);
+  $monadEffectReader_2_1 = \Control\Monad\Reader\Trans\majControl_majMonad_majReader_majTrans_monadmajEffectmajReader($MonadEffect0_1_0);
+  $__res = (object)["liftAff" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Reader_Trans_monadTransReaderT'])->{'lift'})((($MonadEffect0_1_0)->{'Monad0'})(null))))(($dictMonadAff_0)->{'liftAff'}), "MonadEffect0" => function($_dollar__unused_3) use ($monadEffectReader_2_1) {
   $__num = \func_num_args();
   $__res = $monadEffectReader_2_1;
   goto __end;;
@@ -306,9 +306,9 @@ function majEffect_majAff_majClass_monadmajAffmajState($dictMonadAff_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $MonadEffect0_1_0 = (($dictMonadAff_0)['MonadEffect0'])(null);
-  $monadEffectState_2_1 = ($GLOBALS['Control_Monad_State_Trans_monadEffectState'])($MonadEffect0_1_0);
-  $__res = ["liftAff" => ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_State_Trans_monadTransStateT'])['lift'])((($MonadEffect0_1_0)['Monad0'])(null)), ($dictMonadAff_0)['liftAff']), "MonadEffect0" => function($_dollar__unused_3) use ($monadEffectState_2_1) {
+  $MonadEffect0_1_0 = (($dictMonadAff_0)->{'MonadEffect0'})(null);
+  $monadEffectState_2_1 = \Control\Monad\State\Trans\majControl_majMonad_majState_majTrans_monadmajEffectmajState($MonadEffect0_1_0);
+  $__res = (object)["liftAff" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_State_Trans_monadTransStateT'])->{'lift'})((($MonadEffect0_1_0)->{'Monad0'})(null))))(($dictMonadAff_0)->{'liftAff'}), "MonadEffect0" => function($_dollar__unused_3) use ($monadEffectState_2_1) {
   $__num = \func_num_args();
   $__res = $monadEffectState_2_1;
   goto __end;;
@@ -328,18 +328,18 @@ function majEffect_majAff_majClass_monadmajAffmajWriter($dictMonadAff_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $MonadEffect0_1_0 = (($dictMonadAff_0)['MonadEffect0'])(null);
-  $Monad0_2_1 = (($MonadEffect0_1_0)['Monad0'])(null);
-  $liftAff1_3_2 = ($dictMonadAff_0)['liftAff'];
+  $MonadEffect0_1_0 = (($dictMonadAff_0)->{'MonadEffect0'})(null);
+  $Monad0_2_1 = (($MonadEffect0_1_0)->{'Monad0'})(null);
+  $liftAff1_3_2 = ($dictMonadAff_0)->{'liftAff'};
   $__res = function($dictMonoid_4) use ($Monad0_2_1, $MonadEffect0_1_0, $liftAff1_3_2) {
   $__num = \func_num_args();
-  $monadEffectWriter_5_3 = ($GLOBALS['Control_Monad_Writer_Trans_monadEffectWriter'])($dictMonoid_4, $MonadEffect0_1_0);
-  $mempty_6_4 = ($dictMonoid_4)['mempty'];
-  $__res = ["liftAff" => ($GLOBALS['Control_Semigroupoid_composeImpl'])(function($m_7) use ($Monad0_2_1, $mempty_6_4) {
+  $monadEffectWriter_5_3 = \Control\Monad\Writer\Trans\majControl_majMonad_majWriter_majTrans_monadmajEffectmajWriter($dictMonoid_4, $MonadEffect0_1_0);
+  $mempty_6_4 = ($dictMonoid_4)->{'mempty'};
+  $__res = (object)["liftAff" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($m_7) use ($Monad0_2_1, $mempty_6_4) {
   $__num = \func_num_args();
-  $__res = (((($Monad0_2_1)['Bind1'])(null))['bind'])($m_7, function($a_8) use ($Monad0_2_1, $mempty_6_4) {
+  $__res = ((((($Monad0_2_1)->{'Bind1'})(null))->{'bind'})($m_7))(function($a_8) use ($Monad0_2_1, $mempty_6_4) {
   $__num = \func_num_args();
-  $__res = (((($Monad0_2_1)['Applicative0'])(null))['pure'])(new \Data\Tuple\Data_Tuple_Tuple($a_8, $mempty_6_4));
+  $__res = (((($Monad0_2_1)->{'Applicative0'})(null))->{'pure'})(new \Data\Tuple\Data_Tuple_Tuple($a_8, $mempty_6_4));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -347,7 +347,7 @@ function majEffect_majAff_majClass_monadmajAffmajWriter($dictMonadAff_0) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, $liftAff1_3_2), "MonadEffect0" => function($_dollar__unused_6) use ($monadEffectWriter_5_3) {
+}))($liftAff1_3_2), "MonadEffect0" => function($_dollar__unused_6) use ($monadEffectWriter_5_3) {
   $__num = \func_num_args();
   $__res = $monadEffectWriter_5_3;
   goto __end;;

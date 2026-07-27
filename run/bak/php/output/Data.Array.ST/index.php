@@ -273,23 +273,23 @@ $exports['pushImpl'] = $pushImpl;
 return $exports;
   return $exports;
 });
-$GLOBALS['Data_Array_ST_cloneImpl'] = $ffi_Data_Array_ST['cloneImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Array_ST_freezeImpl'] = $ffi_Data_Array_ST['freezeImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Array_ST_lengthImpl'] = $ffi_Data_Array_ST['lengthImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Array_ST_new'] = $ffi_Data_Array_ST['new'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Array_ST_peekImpl'] = $ffi_Data_Array_ST['peekImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Array_ST_pokeImpl'] = $ffi_Data_Array_ST['pokeImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Array_ST_popImpl'] = $ffi_Data_Array_ST['popImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Array_ST_pushAllImpl'] = $ffi_Data_Array_ST['pushAllImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Array_ST_pushImpl'] = $ffi_Data_Array_ST['pushImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Array_ST_shiftImpl'] = $ffi_Data_Array_ST['shiftImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Array_ST_sortByImpl'] = $ffi_Data_Array_ST['sortByImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Array_ST_spliceImpl'] = $ffi_Data_Array_ST['spliceImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Array_ST_thawImpl'] = $ffi_Data_Array_ST['thawImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Array_ST_toAssocArrayImpl'] = $ffi_Data_Array_ST['toAssocArrayImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Array_ST_unsafeFreezeImpl'] = $ffi_Data_Array_ST['unsafeFreezeImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Array_ST_unsafeThawImpl'] = $ffi_Data_Array_ST['unsafeThawImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Array_ST_unshiftAllImpl'] = $ffi_Data_Array_ST['unshiftAllImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
+$GLOBALS['Data_Array_ST_cloneImpl'] = ($ffi_Data_Array_ST['cloneImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_freezeImpl'] = ($ffi_Data_Array_ST['freezeImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_lengthImpl'] = ($ffi_Data_Array_ST['lengthImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_new'] = ($ffi_Data_Array_ST['new'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_peekImpl'] = ($ffi_Data_Array_ST['peekImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_pokeImpl'] = ($ffi_Data_Array_ST['pokeImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_popImpl'] = ($ffi_Data_Array_ST['popImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_pushAllImpl'] = ($ffi_Data_Array_ST['pushAllImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_pushImpl'] = ($ffi_Data_Array_ST['pushImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_shiftImpl'] = ($ffi_Data_Array_ST['shiftImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_sortByImpl'] = ($ffi_Data_Array_ST['sortByImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_spliceImpl'] = ($ffi_Data_Array_ST['spliceImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_thawImpl'] = ($ffi_Data_Array_ST['thawImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_toAssocArrayImpl'] = ($ffi_Data_Array_ST['toAssocArrayImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_unsafeFreezeImpl'] = ($ffi_Data_Array_ST['unsafeFreezeImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_unsafeThawImpl'] = ($ffi_Data_Array_ST['unsafeThawImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_unshiftAllImpl'] = ($ffi_Data_Array_ST['unshiftAllImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
 
 
 
@@ -318,7 +318,7 @@ function majData_majArray_majSmajT_unshift($a_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Monad_ST_Uncurried_runSTFn2'])($GLOBALS['Data_Array_ST_unshiftAllImpl'], [$a_0]);
+  $__res = (($GLOBALS['Control_Monad_ST_Uncurried_runSTFn2'])($GLOBALS['Data_Array_ST_unshiftAllImpl']))([$a_0]);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -400,11 +400,11 @@ function majData_majArray_majSmajT_withmajArray($f_0, $xs_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(($GLOBALS['Control_Monad_ST_Uncurried_runSTFn1'])($GLOBALS['Data_Array_ST_thawImpl'], $xs_1), function($result_2) use ($f_0) {
+  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])->{'bind'})(\Control\Monad\ST\Uncurried\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn1($GLOBALS['Data_Array_ST_thawImpl'], $xs_1)))(function($result_2) use ($f_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(($f_0)($result_2), function($_dollar__unused_3) use ($result_2) {
+  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])->{'bind'})(($f_0)($result_2)))(function($_dollar__unused_3) use ($result_2) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_ST_Uncurried_runSTFn1'])($GLOBALS['Data_Array_ST_unsafeFreezeImpl'], $result_2);
+  $__res = \Control\Monad\ST\Uncurried\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn1($GLOBALS['Data_Array_ST_unsafeFreezeImpl'], $result_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -443,7 +443,7 @@ function majData_majArray_majSmajT_sortmajBy($comp_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Monad_ST_Uncurried_runSTFn3'])($GLOBALS['Data_Array_ST_sortByImpl'], $comp_0, function($v_1) {
+  $__res = ((($GLOBALS['Control_Monad_ST_Uncurried_runSTFn3'])($GLOBALS['Data_Array_ST_sortByImpl']))($comp_0))(function($v_1) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ($v_1 instanceof \Data\Ordering\Data_Ordering_GT) {
@@ -485,7 +485,7 @@ function majData_majArray_majSmajT_sortmajWith($dictOrd_0, $f_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictOrd_0)['compare'])(($f_1)($x_2), ($f_1)($y_3));
+  $__res = ((($dictOrd_0)->{'compare'})(($f_1)($x_2)))(($f_1)($y_3));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -505,7 +505,7 @@ function majData_majArray_majSmajT_sort($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Data_Array_ST_sortBy'])(($dictOrd_0)['compare']);
+  $__res = ($GLOBALS['Data_Array_ST_sortBy'])(($dictOrd_0)->{'compare'});
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -513,7 +513,7 @@ function majData_majArray_majSmajT_sort($dictOrd_0) {
 $GLOBALS['Data_Array_ST_sort'] = __NAMESPACE__ . '\\majData_majArray_majSmajT_sort';
 
 // Data_Array_ST_shift_closure
-$GLOBALS['Data_Array_ST_shift_closure'] = ($GLOBALS['Control_Monad_ST_Uncurried_runSTFn3'])($GLOBALS['Data_Array_ST_shiftImpl'], $GLOBALS['Data_Maybe_Just'], new \Data\Maybe\Data_Maybe_Nothing());
+$GLOBALS['Data_Array_ST_shift_closure'] = ((($GLOBALS['Control_Monad_ST_Uncurried_runSTFn3'])($GLOBALS['Data_Array_ST_shiftImpl']))($GLOBALS['Data_Maybe_Just']))(new \Data\Maybe\Data_Maybe_Nothing());
 
 // Data_Array_ST_shift
 function majData_majArray_majSmajT_shift($v_0) {
@@ -536,7 +536,7 @@ function majData_majArray_majSmajT_run($st_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Monad_ST_Internal_run'])((($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])($st_0, $GLOBALS['Data_Array_ST_unsafeFreeze']));
+  $__res = \Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_run(((($GLOBALS['Control_Monad_ST_Internal_bindST'])->{'bind'})($st_0))($GLOBALS['Data_Array_ST_unsafeFreeze']));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -578,7 +578,7 @@ function majData_majArray_majSmajT_push($v_0, $v_1 = null) {
 $GLOBALS['Data_Array_ST_push'] = __NAMESPACE__ . '\\majData_majArray_majSmajT_push';
 
 // Data_Array_ST_pop_closure
-$GLOBALS['Data_Array_ST_pop_closure'] = ($GLOBALS['Control_Monad_ST_Uncurried_runSTFn3'])($GLOBALS['Data_Array_ST_popImpl'], $GLOBALS['Data_Maybe_Just'], new \Data\Maybe\Data_Maybe_Nothing());
+$GLOBALS['Data_Array_ST_pop_closure'] = ((($GLOBALS['Control_Monad_ST_Uncurried_runSTFn3'])($GLOBALS['Data_Array_ST_popImpl']))($GLOBALS['Data_Maybe_Just']))(new \Data\Maybe\Data_Maybe_Nothing());
 
 // Data_Array_ST_pop
 function majData_majArray_majSmajT_pop($v_0) {
@@ -612,7 +612,7 @@ function majData_majArray_majSmajT_poke(int $v_0, $v_1 = null, $v_2 = null) {
 $GLOBALS['Data_Array_ST_poke'] = __NAMESPACE__ . '\\majData_majArray_majSmajT_poke';
 
 // Data_Array_ST_peek_closure
-$GLOBALS['Data_Array_ST_peek_closure'] = ($GLOBALS['Control_Monad_ST_Uncurried_runSTFn4'])($GLOBALS['Data_Array_ST_peekImpl'], $GLOBALS['Data_Maybe_Just'], new \Data\Maybe\Data_Maybe_Nothing());
+$GLOBALS['Data_Array_ST_peek_closure'] = ((($GLOBALS['Control_Monad_ST_Uncurried_runSTFn4'])($GLOBALS['Data_Array_ST_peekImpl']))($GLOBALS['Data_Maybe_Just']))(new \Data\Maybe\Data_Maybe_Nothing());
 
 // Data_Array_ST_peek
 function majData_majArray_majSmajT_peek(int $v_0, $v_1 = null) {
@@ -635,15 +635,15 @@ function majData_majArray_majSmajT_modify(int $i_0, $f_1 = null, $xs_2 = null) {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($GLOBALS['Control_Monad_ST_Internal_bindST'])['bind'])(($GLOBALS['Control_Monad_ST_Uncurried_runSTFn4'])($GLOBALS['Data_Array_ST_peekImpl'], $GLOBALS['Data_Maybe_Just'], new \Data\Maybe\Data_Maybe_Nothing(), $i_0, $xs_2), function($entry_3) use ($f_1, $i_0, $xs_2) {
+  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])->{'bind'})(\Control\Monad\ST\Uncurried\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn4($GLOBALS['Data_Array_ST_peekImpl'], $GLOBALS['Data_Maybe_Just'], new \Data\Maybe\Data_Maybe_Nothing(), $i_0, $xs_2)))(function($entry_3) use ($f_1, $i_0, $xs_2) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ($entry_3 instanceof \Data\Maybe\Data_Maybe_Just) {
-$__t0 = ($GLOBALS['Control_Monad_ST_Uncurried_runSTFn3'])($GLOBALS['Data_Array_ST_pokeImpl'], $i_0, ($f_1)(($entry_3)->{'value0'}), $xs_2);
+$__t0 = \Control\Monad\ST\Uncurried\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn3($GLOBALS['Data_Array_ST_pokeImpl'], $i_0, ($f_1)(($entry_3)->{'value0'}), $xs_2);
 goto end_branch_0;;
 };
   if ($entry_3 instanceof \Data\Maybe\Data_Maybe_Nothing) {
-$__t0 = (($GLOBALS['Control_Monad_ST_Internal_applicativeST'])['pure'])(false);
+$__t0 = (($GLOBALS['Control_Monad_ST_Internal_applicativeST'])->{'pure'})(false);
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);

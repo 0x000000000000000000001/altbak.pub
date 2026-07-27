@@ -105,7 +105,7 @@ function majControl_majCategory_identity($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['identity'];
+  $__res = ($dict_0)->{'identity'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -113,7 +113,7 @@ function majControl_majCategory_identity($dict_0) {
 $GLOBALS['Control_Category_identity'] = __NAMESPACE__ . '\\majControl_majCategory_identity';
 
 // Control_Category_categoryFn
-$GLOBALS['Control_Category_categoryFn'] = ["identity" => function($x_0) {
+$GLOBALS['Control_Category_categoryFn'] = (object)["identity" => function($x_0) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;

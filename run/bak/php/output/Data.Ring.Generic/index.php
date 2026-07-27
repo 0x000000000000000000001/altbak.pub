@@ -108,7 +108,7 @@ function majData_majRing_majGeneric_genericmajSub__prime__($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['genericSub__prime__'];
+  $__res = ($dict_0)->{'genericSub__prime__'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -122,7 +122,7 @@ function majData_majRing_majGeneric_genericmajSub($dictGeneric_0, $dictGenericRi
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($dictGeneric_0)['to'])((($dictGenericRing_1)['genericSub__prime__'])((($dictGeneric_0)['from'])($x_2), (($dictGeneric_0)['from'])($y_3)));
+  $__res = (($dictGeneric_0)->{'to'})(((($dictGenericRing_1)->{'genericSub__prime__'})((($dictGeneric_0)->{'from'})($x_2)))((($dictGeneric_0)->{'from'})($y_3)));
   goto __end;;
   __end:
   return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -136,13 +136,13 @@ function majData_majRing_majGeneric_genericmajRingmajProduct($dictGenericRing_0,
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ["genericSub__prime__" => (function() use ($dictGenericRing1_1, $dictGenericRing_0) {
+  $__res = (object)["genericSub__prime__" => (function() use ($dictGenericRing1_1, $dictGenericRing_0) {
   $__fn = function($v_2, $v1_3 = null) use ($dictGenericRing1_1, $dictGenericRing_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new \Data\Generic\Rep\Data_Generic_Rep_Product((($dictGenericRing_0)['genericSub__prime__'])(($v_2)->{'value0'}, ($v1_3)->{'value0'}), (($dictGenericRing1_1)['genericSub__prime__'])(($v_2)->{'value1'}, ($v1_3)->{'value1'}));
+  $__res = new \Data\Generic\Rep\Data_Generic_Rep_Product(((($dictGenericRing_0)->{'genericSub__prime__'})(($v_2)->{'value0'}))(($v1_3)->{'value0'}), ((($dictGenericRing1_1)->{'genericSub__prime__'})(($v_2)->{'value1'}))(($v1_3)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -156,7 +156,7 @@ function majData_majRing_majGeneric_genericmajRingmajProduct($dictGenericRing_0,
 $GLOBALS['Data_Ring_Generic_genericRingProduct'] = __NAMESPACE__ . '\\majData_majRing_majGeneric_genericmajRingmajProduct';
 
 // Data_Ring_Generic_genericRingNoArguments
-$GLOBALS['Data_Ring_Generic_genericRingNoArguments'] = ["genericSub__prime__" => (function() {
+$GLOBALS['Data_Ring_Generic_genericRingNoArguments'] = (object)["genericSub__prime__" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -177,13 +177,13 @@ function majData_majRing_majGeneric_genericmajRingmajConstructor($dictGenericRin
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["genericSub__prime__" => (function() use ($dictGenericRing_0) {
+  $__res = (object)["genericSub__prime__" => (function() use ($dictGenericRing_0) {
   $__fn = function($v_1, $v1_2 = null) use ($dictGenericRing_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictGenericRing_0)['genericSub__prime__'])($v_1, $v1_2);
+  $__res = ((($dictGenericRing_0)->{'genericSub__prime__'})($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -203,13 +203,13 @@ function majData_majRing_majGeneric_genericmajRingmajArgument($dictRing_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["genericSub__prime__" => (function() use ($dictRing_0) {
+  $__res = (object)["genericSub__prime__" => (function() use ($dictRing_0) {
   $__fn = function($v_1, $v1_2 = null) use ($dictRing_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictRing_0)['sub'])($v_1, $v1_2);
+  $__res = ((($dictRing_0)->{'sub'})($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

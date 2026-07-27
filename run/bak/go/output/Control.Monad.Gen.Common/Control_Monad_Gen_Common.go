@@ -17,7 +17,7 @@ var once_max sync.Once
 func Get_max() gopurs_runtime.Value {
 	once_max.Do(func() {
 		cache_max = func() gopurs_runtime.Value {
-__local_var_0_0 := gopurs_runtime.Apply3(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil})
+__local_var_0_0 := gopurs_runtime.Apply3(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil}))
 _ = __local_var_0_0
 return gopurs_runtime.Func2(func(x_1 gopurs_runtime.Value, y_2 gopurs_runtime.Value) gopurs_runtime.Value {
 v_3_1 := gopurs_runtime.Apply2(__local_var_0_0, x_1, y_2)
@@ -63,7 +63,7 @@ var once_genTuple sync.Once
 func Get_genTuple() gopurs_runtime.Value {
 	once_genTuple.Do(func() {
 		cache_genTuple = gopurs_runtime.Func3(func(dictApply_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value, b_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genTuple(dictApply_0_box, a_1_box, b_2_box)
+return gopurs_runtime.Any(Call_genTuple(dictApply_0_box, gopurs_runtime.UnboxAny(a_1_box), gopurs_runtime.UnboxAny(b_2_box)))
 })
 	})
 	return cache_genTuple
@@ -91,15 +91,15 @@ return Call_genMaybe_prime(dictMonadGen_0_box)
 	return cache_genMaybe_prime
 }
 
-var cache_genMaybe_prime__gopurs_runtime_Value_3295579624 gopurs_runtime.Value
-var once_genMaybe_prime__gopurs_runtime_Value_3295579624 sync.Once
-func Get_genMaybe_prime__gopurs_runtime_Value_3295579624() gopurs_runtime.Value {
-	once_genMaybe_prime__gopurs_runtime_Value_3295579624.Do(func() {
-		cache_genMaybe_prime__gopurs_runtime_Value_3295579624 = gopurs_runtime.Func(func(dictMonadGen_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genMaybe_prime__gopurs_runtime_Value_3295579624(dictMonadGen_0_box)
+var cache_genMaybe_prime__func_gopurs_runtime_Value__float64__interface____interface___3295579624 gopurs_runtime.Value
+var once_genMaybe_prime__func_gopurs_runtime_Value__float64__interface____interface___3295579624 sync.Once
+func Get_genMaybe_prime__func_gopurs_runtime_Value__float64__interface____interface___3295579624() gopurs_runtime.Value {
+	once_genMaybe_prime__func_gopurs_runtime_Value__float64__interface____interface___3295579624.Do(func() {
+		cache_genMaybe_prime__func_gopurs_runtime_Value__float64__interface____interface___3295579624 = gopurs_runtime.Func(func(dictMonadGen_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genMaybe_prime__func_gopurs_runtime_Value__float64__interface____interface___3295579624(dictMonadGen_0_box)
 })
 	})
-	return cache_genMaybe_prime__gopurs_runtime_Value_3295579624
+	return cache_genMaybe_prime__func_gopurs_runtime_Value__float64__interface____interface___3295579624
 }
 
 var cache_genMaybe gopurs_runtime.Value
@@ -135,15 +135,15 @@ return Call_genEither_prime(dictMonadGen_0_box)
 	return cache_genEither_prime
 }
 
-var cache_genEither_prime__gopurs_runtime_Value_4139285216 gopurs_runtime.Value
-var once_genEither_prime__gopurs_runtime_Value_4139285216 sync.Once
-func Get_genEither_prime__gopurs_runtime_Value_4139285216() gopurs_runtime.Value {
-	once_genEither_prime__gopurs_runtime_Value_4139285216.Do(func() {
-		cache_genEither_prime__gopurs_runtime_Value_4139285216 = gopurs_runtime.Func(func(dictMonadGen_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genEither_prime__gopurs_runtime_Value_4139285216(dictMonadGen_0_box)
+var cache_genEither_prime__func_gopurs_runtime_Value__float64__interface____interface____interface___4139285216 gopurs_runtime.Value
+var once_genEither_prime__func_gopurs_runtime_Value__float64__interface____interface____interface___4139285216 sync.Once
+func Get_genEither_prime__func_gopurs_runtime_Value__float64__interface____interface____interface___4139285216() gopurs_runtime.Value {
+	once_genEither_prime__func_gopurs_runtime_Value__float64__interface____interface____interface___4139285216.Do(func() {
+		cache_genEither_prime__func_gopurs_runtime_Value__float64__interface____interface____interface___4139285216 = gopurs_runtime.Func(func(dictMonadGen_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genEither_prime__func_gopurs_runtime_Value__float64__interface____interface____interface___4139285216(dictMonadGen_0_box)
 })
 	})
-	return cache_genEither_prime__gopurs_runtime_Value_4139285216
+	return cache_genEither_prime__func_gopurs_runtime_Value__float64__interface____interface____interface___4139285216
 }
 
 var cache_genEither gopurs_runtime.Value
@@ -157,14 +157,14 @@ return Call_genEither(dictMonadGen_0_box)
 	return cache_genEither
 }
 
-func Call_genTuple(dictApply_0_loop gopurs_runtime.Value, a_1_loop gopurs_runtime.Value, b_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_genTuple(dictApply_0_loop gopurs_runtime.Value, a_1_loop interface{}, b_2_loop interface{}) interface{} {
 var dictApply_0 gopurs_runtime.Value = dictApply_0_loop
 _ = dictApply_0
-var a_1 gopurs_runtime.Value = a_1_loop
+var a_1 interface{} = a_1_loop
 _ = a_1
-var b_2 gopurs_runtime.Value = b_2_loop
+var b_2 interface{} = b_2_loop
 _ = b_2
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictApply_0, "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_0, "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Tuple.Get_Tuple(), a_1), b_2)
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictApply_0, "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_0, "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Tuple.Get_Tuple(), gopurs_runtime.Any(a_1)), gopurs_runtime.Any(b_2)))
 }
 
 func Call_genNonEmpty(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -208,7 +208,7 @@ goto end_branch_2
 }
 }
 {
-__t2 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil})
+__t2 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}))
 }
 end_branch_2:
 return __t2
@@ -216,7 +216,7 @@ return __t2
 })
 }
 
-func Call_genMaybe_prime__gopurs_runtime_Value_3295579624(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_genMaybe_prime__func_gopurs_runtime_Value__float64__interface____interface___3295579624(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
 Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Monad0"), gopurs_runtime.Value{})
@@ -235,7 +235,7 @@ goto end_branch_2
 }
 }
 {
-__t2 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil})
+__t2 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}))
 }
 end_branch_2:
 return __t2
@@ -282,7 +282,7 @@ return __t2
 })
 }
 
-func Call_genEither_prime__gopurs_runtime_Value_4139285216(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_genEither_prime__func_gopurs_runtime_Value__float64__interface____interface____interface___4139285216(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
 Bind1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{})
@@ -314,5 +314,3 @@ var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
 return gopurs_runtime.Apply2(Get_genEither_prime(), dictMonadGen_0, gopurs_runtime.Float(0.5))
 }
-
-

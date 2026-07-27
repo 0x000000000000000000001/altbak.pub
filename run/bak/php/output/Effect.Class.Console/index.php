@@ -112,10 +112,10 @@ function majEffect_majClass_majConsole_warnmajShow($dictMonadEffect_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $liftEffect_1_0 = ($dictMonadEffect_0)['liftEffect'];
+  $liftEffect_1_0 = ($dictMonadEffect_0)->{'liftEffect'};
   $__res = function($dictShow_2) use ($liftEffect_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($liftEffect_1_0, ($GLOBALS['Effect_Console_warnShow'])($dictShow_2));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($liftEffect_1_0))(($GLOBALS['Effect_Console_warnShow'])($dictShow_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -133,7 +133,7 @@ function majEffect_majClass_majConsole_warn($dictMonadEffect_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)['liftEffect'], $GLOBALS['Effect_Console_warn']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)->{'liftEffect'}))($GLOBALS['Effect_Console_warn']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -147,7 +147,7 @@ function majEffect_majClass_majConsole_timemajLog($dictMonadEffect_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)['liftEffect'], $GLOBALS['Effect_Console_timeLog']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)->{'liftEffect'}))($GLOBALS['Effect_Console_timeLog']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -161,7 +161,7 @@ function majEffect_majClass_majConsole_timemajEnd($dictMonadEffect_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)['liftEffect'], $GLOBALS['Effect_Console_timeEnd']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)->{'liftEffect'}))($GLOBALS['Effect_Console_timeEnd']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -175,7 +175,7 @@ function majEffect_majClass_majConsole_time($dictMonadEffect_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)['liftEffect'], $GLOBALS['Effect_Console_time']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)->{'liftEffect'}))($GLOBALS['Effect_Console_time']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -189,10 +189,10 @@ function majEffect_majClass_majConsole_logmajShow($dictMonadEffect_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $liftEffect_1_0 = ($dictMonadEffect_0)['liftEffect'];
+  $liftEffect_1_0 = ($dictMonadEffect_0)->{'liftEffect'};
   $__res = function($dictShow_2) use ($liftEffect_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($liftEffect_1_0, ($GLOBALS['Effect_Console_logShow'])($dictShow_2));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($liftEffect_1_0))(($GLOBALS['Effect_Console_logShow'])($dictShow_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -210,7 +210,7 @@ function majEffect_majClass_majConsole_log($dictMonadEffect_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)['liftEffect'], $GLOBALS['Effect_Console_log']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)->{'liftEffect'}))($GLOBALS['Effect_Console_log']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -224,10 +224,10 @@ function majEffect_majClass_majConsole_infomajShow($dictMonadEffect_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $liftEffect_1_0 = ($dictMonadEffect_0)['liftEffect'];
+  $liftEffect_1_0 = ($dictMonadEffect_0)->{'liftEffect'};
   $__res = function($dictShow_2) use ($liftEffect_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($liftEffect_1_0, ($GLOBALS['Effect_Console_infoShow'])($dictShow_2));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($liftEffect_1_0))(($GLOBALS['Effect_Console_infoShow'])($dictShow_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -245,7 +245,7 @@ function majEffect_majClass_majConsole_info($dictMonadEffect_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)['liftEffect'], $GLOBALS['Effect_Console_info']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)->{'liftEffect'}))($GLOBALS['Effect_Console_info']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -259,7 +259,7 @@ function majEffect_majClass_majConsole_groupmajEnd($dictMonadEffect_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($dictMonadEffect_0)['liftEffect'])($GLOBALS['Effect_Console_groupEnd']);
+  $__res = (($dictMonadEffect_0)->{'liftEffect'})($GLOBALS['Effect_Console_groupEnd']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -273,7 +273,7 @@ function majEffect_majClass_majConsole_groupmajCollapsed($dictMonadEffect_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)['liftEffect'], $GLOBALS['Effect_Console_groupCollapsed']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)->{'liftEffect'}))($GLOBALS['Effect_Console_groupCollapsed']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -287,7 +287,7 @@ function majEffect_majClass_majConsole_group($dictMonadEffect_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)['liftEffect'], $GLOBALS['Effect_Console_group']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)->{'liftEffect'}))($GLOBALS['Effect_Console_group']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -301,24 +301,24 @@ function majEffect_majClass_majConsole_grouped($dictMonadEffect_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $Monad0_1_0 = (($dictMonadEffect_0)['Monad0'])(null);
-  $Bind1_2_1 = (($Monad0_1_0)['Bind1'])(null);
-  $discard1_3_2 = (($GLOBALS['Control_Bind_discardUnit'])['discard'])($Bind1_2_1);
-  $group1_4_3 = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)['liftEffect'], $GLOBALS['Effect_Console_group']);
-  $groupEnd1_5_4 = (($dictMonadEffect_0)['liftEffect'])($GLOBALS['Effect_Console_groupEnd']);
+  $Monad0_1_0 = (($dictMonadEffect_0)->{'Monad0'})(null);
+  $Bind1_2_1 = (($Monad0_1_0)->{'Bind1'})(null);
+  $discard1_3_2 = (($GLOBALS['Control_Bind_discardUnit'])->{'discard'})($Bind1_2_1);
+  $group1_4_3 = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)->{'liftEffect'}))($GLOBALS['Effect_Console_group']);
+  $groupEnd1_5_4 = (($dictMonadEffect_0)->{'liftEffect'})($GLOBALS['Effect_Console_groupEnd']);
   $__res = (function() use ($Bind1_2_1, $Monad0_1_0, $discard1_3_2, $group1_4_3, $groupEnd1_5_4) {
   $__fn = function($name_6, $inner_7 = null) use ($Bind1_2_1, $Monad0_1_0, $discard1_3_2, $group1_4_3, $groupEnd1_5_4, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($discard1_3_2)(($group1_4_3)($name_6), function($_dollar__unused_8) use ($Bind1_2_1, $Monad0_1_0, $discard1_3_2, $groupEnd1_5_4, $inner_7) {
+  $__res = (($discard1_3_2)(($group1_4_3)($name_6)))(function($_dollar__unused_8) use ($Bind1_2_1, $Monad0_1_0, $discard1_3_2, $groupEnd1_5_4, $inner_7) {
   $__num = \func_num_args();
-  $__res = (($Bind1_2_1)['bind'])($inner_7, function($result_9) use ($Monad0_1_0, $discard1_3_2, $groupEnd1_5_4) {
+  $__res = ((($Bind1_2_1)->{'bind'})($inner_7))(function($result_9) use ($Monad0_1_0, $discard1_3_2, $groupEnd1_5_4) {
   $__num = \func_num_args();
-  $__res = ($discard1_3_2)($groupEnd1_5_4, function($_dollar__unused_10) use ($Monad0_1_0, $result_9) {
+  $__res = (($discard1_3_2)($groupEnd1_5_4))(function($_dollar__unused_10) use ($Monad0_1_0, $result_9) {
   $__num = \func_num_args();
-  $__res = (((($Monad0_1_0)['Applicative0'])(null))['pure'])($result_9);
+  $__res = (((($Monad0_1_0)->{'Applicative0'})(null))->{'pure'})($result_9);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -350,10 +350,10 @@ function majEffect_majClass_majConsole_errormajShow($dictMonadEffect_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $liftEffect_1_0 = ($dictMonadEffect_0)['liftEffect'];
+  $liftEffect_1_0 = ($dictMonadEffect_0)->{'liftEffect'};
   $__res = function($dictShow_2) use ($liftEffect_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($liftEffect_1_0, ($GLOBALS['Effect_Console_errorShow'])($dictShow_2));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($liftEffect_1_0))(($GLOBALS['Effect_Console_errorShow'])($dictShow_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -371,7 +371,7 @@ function majEffect_majClass_majConsole_error($dictMonadEffect_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)['liftEffect'], $GLOBALS['Effect_Console_error']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)->{'liftEffect'}))($GLOBALS['Effect_Console_error']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -385,10 +385,10 @@ function majEffect_majClass_majConsole_debugmajShow($dictMonadEffect_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $liftEffect_1_0 = ($dictMonadEffect_0)['liftEffect'];
+  $liftEffect_1_0 = ($dictMonadEffect_0)->{'liftEffect'};
   $__res = function($dictShow_2) use ($liftEffect_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($liftEffect_1_0, ($GLOBALS['Effect_Console_debugShow'])($dictShow_2));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($liftEffect_1_0))(($GLOBALS['Effect_Console_debugShow'])($dictShow_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -406,7 +406,7 @@ function majEffect_majClass_majConsole_debug($dictMonadEffect_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)['liftEffect'], $GLOBALS['Effect_Console_debug']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)->{'liftEffect'}))($GLOBALS['Effect_Console_debug']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -420,7 +420,7 @@ function majEffect_majClass_majConsole_clear($dictMonadEffect_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($dictMonadEffect_0)['liftEffect'])($GLOBALS['Effect_Console_clear']);
+  $__res = (($dictMonadEffect_0)->{'liftEffect'})($GLOBALS['Effect_Console_clear']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

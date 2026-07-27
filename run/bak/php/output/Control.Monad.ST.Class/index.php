@@ -104,7 +104,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Control_Monad_ST_Class_monadSTST
-$GLOBALS['Control_Monad_ST_Class_monadSTST'] = ["liftST" => function($x_0) {
+$GLOBALS['Control_Monad_ST_Class_monadSTST'] = (object)["liftST" => function($x_0) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
@@ -119,7 +119,7 @@ $GLOBALS['Control_Monad_ST_Class_monadSTST'] = ["liftST" => function($x_0) {
 }];
 
 // Control_Monad_ST_Class_monadSTEffect
-$GLOBALS['Control_Monad_ST_Class_monadSTEffect'] = ["liftST" => $GLOBALS['Unsafe_Coerce_unsafeCoerce'], "Monad0" => function($_dollar__unused_0) {
+$GLOBALS['Control_Monad_ST_Class_monadSTEffect'] = (object)["liftST" => $GLOBALS['Unsafe_Coerce_unsafeCoerce'], "Monad0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Effect_monadEffect'];
   goto __end;;
@@ -134,7 +134,7 @@ function majControl_majMonad_majSmajT_majClass_liftmajSmajT($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['liftST'];
+  $__res = ($dict_0)->{'liftST'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

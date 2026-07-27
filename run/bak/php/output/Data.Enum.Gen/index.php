@@ -106,7 +106,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Data_Enum_Gen_foldable1NonEmpty
-$GLOBALS['Data_Enum_Gen_foldable1NonEmpty'] = ($GLOBALS['Data_NonEmpty_foldable1NonEmpty'])($GLOBALS['Data_Foldable_foldableArray']);
+$GLOBALS['Data_Enum_Gen_foldable1NonEmpty'] = \Data\NonEmpty\majData_majNonmajEmpty_foldable1majNonmajEmpty($GLOBALS['Data_Foldable_foldableArray']);
 
 // Data_Enum_Gen_genBoundedEnum
 function majData_majEnum_majGen_genmajBoundedmajEnum($dictMonadGen_0) {
@@ -115,19 +115,19 @@ function majData_majEnum_majGen_genmajBoundedmajEnum($dictMonadGen_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $elements_1_0 = ($GLOBALS['Control_Monad_Gen_elements'])($dictMonadGen_0, $GLOBALS['Data_Enum_Gen_foldable1NonEmpty']);
+  $elements_1_0 = (($GLOBALS['Control_Monad_Gen_elements'])($dictMonadGen_0))($GLOBALS['Data_Enum_Gen_foldable1NonEmpty']);
   $__res = function($dictBoundedEnum_2) use ($dictMonadGen_0, $elements_1_0) {
   $__num = \func_num_args();
-  $Enum1_3_1 = (($dictBoundedEnum_2)['Enum1'])(null);
-  $Bounded0_4_2 = (($dictBoundedEnum_2)['Bounded0'])(null);
-  $v_5_3 = (($Enum1_3_1)['succ'])(($Bounded0_4_2)['bottom']);
+  $Enum1_3_1 = (($dictBoundedEnum_2)->{'Enum1'})(null);
+  $Bounded0_4_2 = (($dictBoundedEnum_2)->{'Bounded0'})(null);
+  $v_5_3 = (($Enum1_3_1)->{'succ'})(($Bounded0_4_2)->{'bottom'});
   $__t4 = null;;
   if ($v_5_3 instanceof \Data\Maybe\Data_Maybe_Just) {
-$__t4 = ($elements_1_0)(new \Data\NonEmpty\Data_NonEmpty_NonEmpty(($Bounded0_4_2)['bottom'], ($GLOBALS['Data_Enum_enumFromTo'])($Enum1_3_1, $GLOBALS['Data_Unfoldable1_unfoldable1Array'], ($v_5_3)->{'value0'}, ($Bounded0_4_2)['top'])));
+$__t4 = ($elements_1_0)(new \Data\NonEmpty\Data_NonEmpty_NonEmpty(($Bounded0_4_2)->{'bottom'}, \Data\Enum\majData_majEnum_enummajFrommajTo($Enum1_3_1, $GLOBALS['Data_Unfoldable1_unfoldable1Array'], ($v_5_3)->{'value0'}, ($Bounded0_4_2)->{'top'})));
 goto end_branch_4;;
 };
   if ($v_5_3 instanceof \Data\Maybe\Data_Maybe_Nothing) {
-$__t4 = (((((($dictMonadGen_0)['Monad0'])(null))['Applicative0'])(null))['pure'])(($Bounded0_4_2)['bottom']);
+$__t4 = (((((($dictMonadGen_0)->{'Monad0'})(null))->{'Applicative0'})(null))->{'pure'})(($Bounded0_4_2)->{'bottom'});
 goto end_branch_4;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);

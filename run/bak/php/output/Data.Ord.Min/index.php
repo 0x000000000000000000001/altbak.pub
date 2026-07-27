@@ -126,9 +126,9 @@ function majData_majOrd_majMin_showmajMin($dictShow_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["show" => function($v_1) use ($dictShow_0) {
+  $__res = (object)["show" => function($v_1) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Min ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(Min "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_0)->{'show'})($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -146,13 +146,13 @@ function majData_majOrd_majMin_semigroupmajMin($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["append" => (function() use ($dictOrd_0) {
+  $__res = (object)["append" => (function() use ($dictOrd_0) {
   $__fn = function($v_1, $v1_2 = null) use ($dictOrd_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v_3_0 = (($dictOrd_0)['compare'])($v_1, $v1_2);
+  $v_3_0 = ((($dictOrd_0)->{'compare'})($v_1))($v1_2);
   $__t1 = null;;
   if ($v_3_0 instanceof \Data\Ordering\Data_Ordering_LT) {
 $__t1 = $v_1;
@@ -183,7 +183,7 @@ goto end_branch_1;;
 $GLOBALS['Data_Ord_Min_semigroupMin'] = __NAMESPACE__ . '\\majData_majOrd_majMin_semigroupmajMin';
 
 // Data_Ord_Min_newtypeMin
-$GLOBALS['Data_Ord_Min_newtypeMin'] = ["Coercible0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Ord_Min_newtypeMin'] = (object)["Coercible0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = null;
   goto __end;;
@@ -198,14 +198,14 @@ function majData_majOrd_majMin_monoidmajMin($dictBounded_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($dictBounded_0)['Ord0'])(null);
-  $semigroupMin1_2_1 = ["append" => (function() use ($__local_var_1_0) {
+  $__local_var_1_0 = (($dictBounded_0)->{'Ord0'})(null);
+  $semigroupMin1_2_1 = (object)["append" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2, $v1_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v_4_1 = (($__local_var_1_0)['compare'])($v_2, $v1_3);
+  $v_4_1 = ((($__local_var_1_0)->{'compare'})($v_2))($v1_3);
   $__t2 = null;;
   if ($v_4_1 instanceof \Data\Ordering\Data_Ordering_LT) {
 $__t2 = $v_2;
@@ -229,7 +229,7 @@ goto end_branch_2;;
   };
   return $__fn;
 })()];
-  $__res = ["mempty" => ($dictBounded_0)['top'], "Semigroup0" => function($_dollar__unused_3) use ($semigroupMin1_2_1) {
+  $__res = (object)["mempty" => ($dictBounded_0)->{'top'}, "Semigroup0" => function($_dollar__unused_3) use ($semigroupMin1_2_1) {
   $__num = \func_num_args();
   $__res = $semigroupMin1_2_1;
   goto __end;;
@@ -263,14 +263,14 @@ function majData_majOrd_majMin_ordmajMin($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($dictOrd_0)['Eq0'])(null);
-  $__res = ["compare" => (function() use ($dictOrd_0) {
+  $__local_var_1_0 = (($dictOrd_0)->{'Eq0'})(null);
+  $__res = (object)["compare" => (function() use ($dictOrd_0) {
   $__fn = function($v_2, $v1_3 = null) use ($dictOrd_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictOrd_0)['compare'])($v_2, $v1_3);
+  $__res = ((($dictOrd_0)->{'compare'})($v_2))($v1_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

@@ -122,13 +122,13 @@ function majData_majDecide_identity($x_0) {
 $GLOBALS['Data_Decide_identity'] = __NAMESPACE__ . '\\majData_majDecide_identity';
 
 // Data_Decide_choosePredicate
-$GLOBALS['Data_Decide_choosePredicate'] = ["choose" => (function() {
+$GLOBALS['Data_Decide_choosePredicate'] = (object)["choose" => (function() {
   $__fn = function($f_0, $v_1 = null, $v1_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v2_3) use ($v1_2, $v_1) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v2_3) use ($v1_2, $v_1) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ($v2_3 instanceof \Data\Either\Data_Either_Left) {
@@ -146,7 +146,7 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, $f_0);
+}))($f_0);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -167,14 +167,14 @@ function majData_majDecide_choosemajOp($dictSemigroup_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $divideOp_1_0 = ($GLOBALS['Data_Divide_divideOp'])($dictSemigroup_0);
-  $__res = ["choose" => (function() {
+  $divideOp_1_0 = \Data\Divide\majData_majDivide_dividemajOp($dictSemigroup_0);
+  $__res = (object)["choose" => (function() {
   $__fn = function($f_2, $v_3 = null, $v1_4 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v2_5) use ($v1_4, $v_3) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v2_5) use ($v1_4, $v_3) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ($v2_5 instanceof \Data\Either\Data_Either_Left) {
@@ -192,7 +192,7 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, $f_2);
+}))($f_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -212,7 +212,7 @@ goto end_branch_1;;
 $GLOBALS['Data_Decide_chooseOp'] = __NAMESPACE__ . '\\majData_majDecide_choosemajOp';
 
 // Data_Decide_chooseEquivalence
-$GLOBALS['Data_Decide_chooseEquivalence'] = ["choose" => (function() {
+$GLOBALS['Data_Decide_chooseEquivalence'] = (object)["choose" => (function() {
   $__fn = function($f_0, $v_1 = null, $v1_2 = null, $a_3 = null, $b_4 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 5) {
@@ -224,7 +224,7 @@ $GLOBALS['Data_Decide_chooseEquivalence'] = ["choose" => (function() {
 $v3_6_2 = ($f_0)($b_4);
 $__t3 = null;;
 if ($v3_6_2 instanceof \Data\Either\Data_Either_Left) {
-$__t3 = ($v_1)(($v2_5_0)->{'value0'}, ($v3_6_2)->{'value0'});
+$__t3 = (($v_1)(($v2_5_0)->{'value0'}))(($v3_6_2)->{'value0'});
 goto end_branch_3;;
 };
 if ($v3_6_2 instanceof \Data\Either\Data_Either_Right) {
@@ -245,7 +245,7 @@ $__t5 = false;
 goto end_branch_5;;
 };
 if ($v3_6_4 instanceof \Data\Either\Data_Either_Right) {
-$__t5 = ($v1_2)(($v2_5_0)->{'value0'}, ($v3_6_4)->{'value0'});
+$__t5 = (($v1_2)(($v2_5_0)->{'value0'}))(($v3_6_4)->{'value0'});
 goto end_branch_5;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -272,7 +272,7 @@ goto end_branch_1;;
 }];
 
 // Data_Decide_chooseComparison
-$GLOBALS['Data_Decide_chooseComparison'] = ["choose" => (function() {
+$GLOBALS['Data_Decide_chooseComparison'] = (object)["choose" => (function() {
   $__fn = function($f_0, $v_1 = null, $v1_2 = null, $a_3 = null, $b_4 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 5) {
@@ -284,7 +284,7 @@ $GLOBALS['Data_Decide_chooseComparison'] = ["choose" => (function() {
 $v3_6_2 = ($f_0)($b_4);
 $__t3 = null;;
 if ($v3_6_2 instanceof \Data\Either\Data_Either_Left) {
-$__t3 = ($v_1)(($v2_5_0)->{'value0'}, ($v3_6_2)->{'value0'});
+$__t3 = (($v_1)(($v2_5_0)->{'value0'}))(($v3_6_2)->{'value0'});
 goto end_branch_3;;
 };
 if ($v3_6_2 instanceof \Data\Either\Data_Either_Right) {
@@ -305,7 +305,7 @@ $__t5 = new \Data\Ordering\Data_Ordering_GT();
 goto end_branch_5;;
 };
 if ($v3_6_4 instanceof \Data\Either\Data_Either_Right) {
-$__t5 = ($v1_2)(($v2_5_0)->{'value0'}, ($v3_6_4)->{'value0'});
+$__t5 = (($v1_2)(($v2_5_0)->{'value0'}))(($v3_6_4)->{'value0'});
 goto end_branch_5;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -338,7 +338,7 @@ function majData_majDecide_choose($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['choose'];
+  $__res = ($dict_0)->{'choose'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -352,7 +352,7 @@ function majData_majDecide_chosen($dictDecide_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($dictDecide_0)['choose'])($GLOBALS['Data_Decide_identity']);
+  $__res = (($dictDecide_0)->{'choose'})($GLOBALS['Data_Decide_identity']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

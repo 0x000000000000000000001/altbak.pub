@@ -11,7 +11,7 @@ var once_identity sync.Once
 func Get_identity() gopurs_runtime.Value {
 	once_identity.Do(func() {
 		cache_identity = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_identity(x_0_box)
+return gopurs_runtime.Any(Call_identity(gopurs_runtime.UnboxAny(x_0_box)))
 })
 	})
 	return cache_identity
@@ -21,9 +21,9 @@ var cache_profunctorFn gopurs_runtime.Value
 var once_profunctorFn sync.Once
 func Get_profunctorFn() gopurs_runtime.Value {
 	once_profunctorFn.Do(func() {
-		cache_profunctorFn = gopurs_runtime.RecordDict1("dimap", gopurs_runtime.Func4(func(a2b_0 gopurs_runtime.Value, c2d_1 gopurs_runtime.Value, b2c_2 gopurs_runtime.Value, x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_profunctorFn = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("dimap", gopurs_runtime.Func4(func(a2b_0 gopurs_runtime.Value, c2d_1 gopurs_runtime.Value, b2c_2 gopurs_runtime.Value, x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(c2d_1, gopurs_runtime.Apply(b2c_2, gopurs_runtime.Apply(a2b_0, x_3)))
-}))
+}))))
 	})
 	return cache_profunctorFn
 }
@@ -39,15 +39,15 @@ return Call_dimap(dict_0_box)
 	return cache_dimap
 }
 
-var cache_dimap__gopurs_runtime_Value_820515366 gopurs_runtime.Value
-var once_dimap__gopurs_runtime_Value_820515366 sync.Once
-func Get_dimap__gopurs_runtime_Value_820515366() gopurs_runtime.Value {
-	once_dimap__gopurs_runtime_Value_820515366.Do(func() {
-		cache_dimap__gopurs_runtime_Value_820515366 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_dimap__gopurs_runtime_Value_820515366(dict_0_box)
+var cache_dimap__func_gopurs_runtime_Value__func_interface____interface____func_interface____interface____interface____interface___820515366 gopurs_runtime.Value
+var once_dimap__func_gopurs_runtime_Value__func_interface____interface____func_interface____interface____interface____interface___820515366 sync.Once
+func Get_dimap__func_gopurs_runtime_Value__func_interface____interface____func_interface____interface____interface____interface___820515366() gopurs_runtime.Value {
+	once_dimap__func_gopurs_runtime_Value__func_interface____interface____func_interface____interface____interface____interface___820515366.Do(func() {
+		cache_dimap__func_gopurs_runtime_Value__func_interface____interface____func_interface____interface____interface____interface___820515366 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_dimap__func_gopurs_runtime_Value__func_interface____interface____func_interface____interface____interface____interface___820515366(dict_0_box)
 })
 	})
-	return cache_dimap__gopurs_runtime_Value_820515366
+	return cache_dimap__func_gopurs_runtime_Value__func_interface____interface____func_interface____interface____interface____interface___820515366
 }
 
 var cache_lcmap gopurs_runtime.Value
@@ -55,21 +55,25 @@ var once_lcmap sync.Once
 func Get_lcmap() gopurs_runtime.Value {
 	once_lcmap.Do(func() {
 		cache_lcmap = gopurs_runtime.Func2(func(dictProfunctor_0_box gopurs_runtime.Value, a2b_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_lcmap(dictProfunctor_0_box, a2b_1_box)
+return Call_lcmap(dictProfunctor_0_box, func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(a2b_1_box, gopurs_runtime.Any(inner_arg0)))
+})
 })
 	})
 	return cache_lcmap
 }
 
-var cache_lcmap__gopurs_runtime_Value_4186617248 gopurs_runtime.Value
-var once_lcmap__gopurs_runtime_Value_4186617248 sync.Once
-func Get_lcmap__gopurs_runtime_Value_4186617248() gopurs_runtime.Value {
-	once_lcmap__gopurs_runtime_Value_4186617248.Do(func() {
-		cache_lcmap__gopurs_runtime_Value_4186617248 = gopurs_runtime.Func2(func(dictProfunctor_0_box gopurs_runtime.Value, a2b_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_lcmap__gopurs_runtime_Value_4186617248(dictProfunctor_0_box, a2b_1_box)
+var cache_lcmap__func_gopurs_runtime_Value__func_interface____interface____interface____interface___4186617248 gopurs_runtime.Value
+var once_lcmap__func_gopurs_runtime_Value__func_interface____interface____interface____interface___4186617248 sync.Once
+func Get_lcmap__func_gopurs_runtime_Value__func_interface____interface____interface____interface___4186617248() gopurs_runtime.Value {
+	once_lcmap__func_gopurs_runtime_Value__func_interface____interface____interface____interface___4186617248.Do(func() {
+		cache_lcmap__func_gopurs_runtime_Value__func_interface____interface____interface____interface___4186617248 = gopurs_runtime.Func2(func(dictProfunctor_0_box gopurs_runtime.Value, a2b_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_lcmap__func_gopurs_runtime_Value__func_interface____interface____interface____interface___4186617248(dictProfunctor_0_box, func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(a2b_1_box, gopurs_runtime.Any(inner_arg0)))
+})
 })
 	})
-	return cache_lcmap__gopurs_runtime_Value_4186617248
+	return cache_lcmap__func_gopurs_runtime_Value__func_interface____interface____interface____interface___4186617248
 }
 
 var cache_rmap gopurs_runtime.Value
@@ -77,21 +81,25 @@ var once_rmap sync.Once
 func Get_rmap() gopurs_runtime.Value {
 	once_rmap.Do(func() {
 		cache_rmap = gopurs_runtime.Func2(func(dictProfunctor_0_box gopurs_runtime.Value, b2c_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_rmap(dictProfunctor_0_box, b2c_1_box)
+return Call_rmap(dictProfunctor_0_box, func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(b2c_1_box, gopurs_runtime.Any(inner_arg0)))
+})
 })
 	})
 	return cache_rmap
 }
 
-var cache_rmap__gopurs_runtime_Value_3576846818 gopurs_runtime.Value
-var once_rmap__gopurs_runtime_Value_3576846818 sync.Once
-func Get_rmap__gopurs_runtime_Value_3576846818() gopurs_runtime.Value {
-	once_rmap__gopurs_runtime_Value_3576846818.Do(func() {
-		cache_rmap__gopurs_runtime_Value_3576846818 = gopurs_runtime.Func2(func(dictProfunctor_0_box gopurs_runtime.Value, b2c_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_rmap__gopurs_runtime_Value_3576846818(dictProfunctor_0_box, b2c_1_box)
+var cache_rmap__func_gopurs_runtime_Value__func_interface____interface____interface____interface___3576846818 gopurs_runtime.Value
+var once_rmap__func_gopurs_runtime_Value__func_interface____interface____interface____interface___3576846818 sync.Once
+func Get_rmap__func_gopurs_runtime_Value__func_interface____interface____interface____interface___3576846818() gopurs_runtime.Value {
+	once_rmap__func_gopurs_runtime_Value__func_interface____interface____interface____interface___3576846818.Do(func() {
+		cache_rmap__func_gopurs_runtime_Value__func_interface____interface____interface____interface___3576846818 = gopurs_runtime.Func2(func(dictProfunctor_0_box gopurs_runtime.Value, b2c_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_rmap__func_gopurs_runtime_Value__func_interface____interface____interface____interface___3576846818(dictProfunctor_0_box, func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(b2c_1_box, gopurs_runtime.Any(inner_arg0)))
+})
 })
 	})
-	return cache_rmap__gopurs_runtime_Value_3576846818
+	return cache_rmap__func_gopurs_runtime_Value__func_interface____interface____interface____interface___3576846818
 }
 
 var cache_unwrapIso gopurs_runtime.Value
@@ -110,7 +118,9 @@ var once_wrapIso sync.Once
 func Get_wrapIso() gopurs_runtime.Value {
 	once_wrapIso.Do(func() {
 		cache_wrapIso = gopurs_runtime.Func3(func(dictProfunctor_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_wrapIso(dictProfunctor_0_box, _dollar__unused_1_box, v_2_box)
+return Call_wrapIso(dictProfunctor_0_box, _dollar__unused_1_box, func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(v_2_box, gopurs_runtime.Any(inner_arg0)))
+})
 })
 	})
 	return cache_wrapIso
@@ -127,8 +137,8 @@ return Call_arr(dictCategory_0_box)
 	return cache_arr
 }
 
-func Call_identity(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var x_0 gopurs_runtime.Value = x_0_loop
+func Call_identity(x_0_loop interface{}) interface{} {
+var x_0 interface{} = x_0_loop
 _ = x_0
 return x_0
 }
@@ -139,42 +149,50 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "dimap")
 }
 
-func Call_dimap__gopurs_runtime_Value_820515366(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_dimap__func_gopurs_runtime_Value__func_interface____interface____func_interface____interface____interface____interface___820515366(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "dimap")
 }
 
-func Call_lcmap(dictProfunctor_0_loop gopurs_runtime.Value, a2b_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_lcmap(dictProfunctor_0_loop gopurs_runtime.Value, a2b_1_loop func(interface{}) interface{}) gopurs_runtime.Value {
 var dictProfunctor_0 gopurs_runtime.Value = dictProfunctor_0_loop
 _ = dictProfunctor_0
-var a2b_1 gopurs_runtime.Value = a2b_1_loop
+var a2b_1 func(interface{}) interface{} = a2b_1_loop
 _ = a2b_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictProfunctor_0, "dimap"), a2b_1, Get_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictProfunctor_0, "dimap"), gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Any(a2b_1(gopurs_runtime.UnboxAny(arg0)))
+}), Get_identity())
 }
 
-func Call_lcmap__gopurs_runtime_Value_4186617248(dictProfunctor_0_loop gopurs_runtime.Value, a2b_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_lcmap__func_gopurs_runtime_Value__func_interface____interface____interface____interface___4186617248(dictProfunctor_0_loop gopurs_runtime.Value, a2b_1_loop func(interface{}) interface{}) gopurs_runtime.Value {
 var dictProfunctor_0 gopurs_runtime.Value = dictProfunctor_0_loop
 _ = dictProfunctor_0
-var a2b_1 gopurs_runtime.Value = a2b_1_loop
+var a2b_1 func(interface{}) interface{} = a2b_1_loop
 _ = a2b_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictProfunctor_0, "dimap"), a2b_1, Get_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictProfunctor_0, "dimap"), gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Any(a2b_1(gopurs_runtime.UnboxAny(arg0)))
+}), Get_identity())
 }
 
-func Call_rmap(dictProfunctor_0_loop gopurs_runtime.Value, b2c_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_rmap(dictProfunctor_0_loop gopurs_runtime.Value, b2c_1_loop func(interface{}) interface{}) gopurs_runtime.Value {
 var dictProfunctor_0 gopurs_runtime.Value = dictProfunctor_0_loop
 _ = dictProfunctor_0
-var b2c_1 gopurs_runtime.Value = b2c_1_loop
+var b2c_1 func(interface{}) interface{} = b2c_1_loop
 _ = b2c_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictProfunctor_0, "dimap"), Get_identity(), b2c_1)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictProfunctor_0, "dimap"), Get_identity(), gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Any(b2c_1(gopurs_runtime.UnboxAny(arg0)))
+}))
 }
 
-func Call_rmap__gopurs_runtime_Value_3576846818(dictProfunctor_0_loop gopurs_runtime.Value, b2c_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_rmap__func_gopurs_runtime_Value__func_interface____interface____interface____interface___3576846818(dictProfunctor_0_loop gopurs_runtime.Value, b2c_1_loop func(interface{}) interface{}) gopurs_runtime.Value {
 var dictProfunctor_0 gopurs_runtime.Value = dictProfunctor_0_loop
 _ = dictProfunctor_0
-var b2c_1 gopurs_runtime.Value = b2c_1_loop
+var b2c_1 func(interface{}) interface{} = b2c_1_loop
 _ = b2c_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictProfunctor_0, "dimap"), Get_identity(), b2c_1)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictProfunctor_0, "dimap"), Get_identity(), gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Any(b2c_1(gopurs_runtime.UnboxAny(arg0)))
+}))
 }
 
 func Call_unwrapIso(dictProfunctor_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -185,12 +203,12 @@ _ = _dollar__unused_1
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictProfunctor_0, "dimap"), pkg_Unsafe_Coerce.Get_unsafeCoerce(), pkg_Unsafe_Coerce.Get_unsafeCoerce())
 }
 
-func Call_wrapIso(dictProfunctor_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_wrapIso(dictProfunctor_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, v_2_loop func(interface{}) interface{}) gopurs_runtime.Value {
 var dictProfunctor_0 gopurs_runtime.Value = dictProfunctor_0_loop
 _ = dictProfunctor_0
 var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
 _ = _dollar__unused_1
-var v_2 gopurs_runtime.Value = v_2_loop
+var v_2 func(interface{}) interface{} = v_2_loop
 _ = v_2
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictProfunctor_0, "dimap"), pkg_Unsafe_Coerce.Get_unsafeCoerce(), pkg_Unsafe_Coerce.Get_unsafeCoerce())
 }
@@ -204,5 +222,3 @@ return gopurs_runtime.Func2(func(dictProfunctor_2 gopurs_runtime.Value, f_3 gopu
 return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictProfunctor_2, "dimap"), Get_identity(), f_3, identity1_1_0)
 })
 }
-
-

@@ -140,10 +140,54 @@ $exports['numDiv'] = $numDiv;
 return $exports;
   return $exports;
 });
-$GLOBALS['Data_EuclideanRing_intDegree'] = $ffi_Data_EuclideanRing['intDegree'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_EuclideanRing_intDiv'] = $ffi_Data_EuclideanRing['intDiv'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_EuclideanRing_intMod'] = $ffi_Data_EuclideanRing['intMod'] ?? new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_EuclideanRing_numDiv'] = $ffi_Data_EuclideanRing['numDiv'] ?? new class { public function __invoke(...$args) { return $this; } };
+function majData_majEuclideanmajRing_intmajDegree(int $v0): int|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majEuclideanmajRing_intmajDegree';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Data_EuclideanRing;
+  $f = ($ffi_Data_EuclideanRing['intDegree'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Data_EuclideanRing_intDegree'] = __NAMESPACE__ . '\\majData_majEuclideanmajRing_intmajDegree';
+
+function majData_majEuclideanmajRing_intmajDiv(int $v0, $v1 = null): int|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majEuclideanmajRing_intmajDiv';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Data_EuclideanRing;
+  $f = ($ffi_Data_EuclideanRing['intDiv'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Data_EuclideanRing_intDiv'] = __NAMESPACE__ . '\\majData_majEuclideanmajRing_intmajDiv';
+
+function majData_majEuclideanmajRing_intmajMod(int $v0, $v1 = null): int|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majEuclideanmajRing_intmajMod';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Data_EuclideanRing;
+  $f = ($ffi_Data_EuclideanRing['intMod'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Data_EuclideanRing_intMod'] = __NAMESPACE__ . '\\majData_majEuclideanmajRing_intmajMod';
+
+function majData_majEuclideanmajRing_nummajDiv(float $v0, $v1 = null): float|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majEuclideanmajRing_nummajDiv';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Data_EuclideanRing;
+  $f = ($ffi_Data_EuclideanRing['numDiv'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Data_EuclideanRing_numDiv'] = __NAMESPACE__ . '\\majData_majEuclideanmajRing_nummajDiv';
+
 
 
 
@@ -155,7 +199,7 @@ function majData_majEuclideanmajRing_mod($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['mod'];
+  $__res = ($dict_0)->{'mod'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -174,7 +218,7 @@ function majData_majEuclideanmajRing_gcd($dictEq_0, $dictEuclideanRing_1 = null)
   tco_loop_Data_EuclideanRing_gcd:;
   $dictEq_0 = $__tco_var_Data_EuclideanRing_gcd_dictEq_0;
   $dictEuclideanRing_1 = $__tco_var_Data_EuclideanRing_gcd_dictEuclideanRing_1;
-  $zero_2_0 = ((((((($dictEuclideanRing_1)['CommutativeRing0'])(null))['Ring0'])(null))['Semiring0'])(null))['zero'];
+  $zero_2_0 = ((((((($dictEuclideanRing_1)->{'CommutativeRing0'})(null))->{'Ring0'})(null))->{'Semiring0'})(null))->{'zero'};
   $__res = (function() use ($dictEq_0, $dictEuclideanRing_1, $zero_2_0) {
   $__fn = function($a_3, $b_4 = null) use ($dictEq_0, $dictEuclideanRing_1, $zero_2_0, &$__fn) {
   $__num = \func_num_args();
@@ -182,11 +226,11 @@ function majData_majEuclideanmajRing_gcd($dictEq_0, $dictEuclideanRing_1 = null)
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t1 = null;;
-  if ((($dictEq_0)['eq'])($b_4, $zero_2_0)) {
+  if (((($dictEq_0)->{'eq'})($b_4))($zero_2_0)) {
 $__t1 = $a_3;
 goto end_branch_1;;
 };
-  $__t1 = ($GLOBALS['Data_EuclideanRing_gcd'])($dictEq_0, $dictEuclideanRing_1, $b_4, (($dictEuclideanRing_1)['mod'])($a_3, $b_4));
+  $__t1 = \Data\EuclideanRing\majData_majEuclideanmajRing_gcd($dictEq_0, $dictEuclideanRing_1, $b_4, ((($dictEuclideanRing_1)->{'mod'})($a_3))($b_4));
   end_branch_1:;
   $__res = $__t1;
   goto __end;;
@@ -202,7 +246,7 @@ goto end_branch_1;;
 $GLOBALS['Data_EuclideanRing_gcd'] = __NAMESPACE__ . '\\majData_majEuclideanmajRing_gcd';
 
 // Data_EuclideanRing_euclideanRingNumber
-$GLOBALS['Data_EuclideanRing_euclideanRingNumber'] = ["degree" => function($v_0) {
+$GLOBALS['Data_EuclideanRing_euclideanRingNumber'] = (object)["degree" => function($v_0) {
   $__num = \func_num_args();
   $__res = 1;
   goto __end;;
@@ -229,7 +273,7 @@ $GLOBALS['Data_EuclideanRing_euclideanRingNumber'] = ["degree" => function($v_0)
 }];
 
 // Data_EuclideanRing_euclideanRingInt
-$GLOBALS['Data_EuclideanRing_euclideanRingInt'] = ["degree" => $GLOBALS['Data_EuclideanRing_intDegree'], "div" => $GLOBALS['Data_EuclideanRing_intDiv'], "mod" => $GLOBALS['Data_EuclideanRing_intMod'], "CommutativeRing0" => function($_dollar__unused_0) {
+$GLOBALS['Data_EuclideanRing_euclideanRingInt'] = (object)["degree" => $GLOBALS['Data_EuclideanRing_intDegree'], "div" => $GLOBALS['Data_EuclideanRing_intDiv'], "mod" => $GLOBALS['Data_EuclideanRing_intMod'], "CommutativeRing0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_CommutativeRing_commutativeRingInt'];
   goto __end;;
@@ -244,7 +288,7 @@ function majData_majEuclideanmajRing_div($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['div'];
+  $__res = ($dict_0)->{'div'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -258,9 +302,9 @@ function majData_majEuclideanmajRing_lcm($dictEq_0, $dictEuclideanRing_1 = null)
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $Semiring0_2_0 = (((((($dictEuclideanRing_1)['CommutativeRing0'])(null))['Ring0'])(null))['Semiring0'])(null);
-  $zero_3_1 = ($Semiring0_2_0)['zero'];
-  $gcd2_4_2 = ($GLOBALS['Data_EuclideanRing_gcd'])($dictEq_0, $dictEuclideanRing_1);
+  $Semiring0_2_0 = (((((($dictEuclideanRing_1)->{'CommutativeRing0'})(null))->{'Ring0'})(null))->{'Semiring0'})(null);
+  $zero_3_1 = ($Semiring0_2_0)->{'zero'};
+  $gcd2_4_2 = (($GLOBALS['Data_EuclideanRing_gcd'])($dictEq_0))($dictEuclideanRing_1);
   $__res = (function() use ($Semiring0_2_0, $dictEq_0, $dictEuclideanRing_1, $gcd2_4_2, $zero_3_1) {
   $__fn = function($a_5, $b_6 = null) use ($Semiring0_2_0, $dictEq_0, $dictEuclideanRing_1, $gcd2_4_2, $zero_3_1, &$__fn) {
   $__num = \func_num_args();
@@ -268,11 +312,11 @@ function majData_majEuclideanmajRing_lcm($dictEq_0, $dictEuclideanRing_1 = null)
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t3 = null;;
-  if ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['disj'])((($dictEq_0)['eq'])($a_5, $zero_3_1), (($dictEq_0)['eq'])($b_6, $zero_3_1))) {
+  if (((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'disj'})(((($dictEq_0)->{'eq'})($a_5))($zero_3_1)))(((($dictEq_0)->{'eq'})($b_6))($zero_3_1))) {
 $__t3 = $zero_3_1;
 goto end_branch_3;;
 };
-  $__t3 = (($dictEuclideanRing_1)['div'])((($Semiring0_2_0)['mul'])($a_5, $b_6), ($gcd2_4_2)($a_5, $b_6));
+  $__t3 = ((($dictEuclideanRing_1)->{'div'})(((($Semiring0_2_0)->{'mul'})($a_5))($b_6)))((($gcd2_4_2)($a_5))($b_6));
   end_branch_3:;
   $__res = $__t3;
   goto __end;;
@@ -294,7 +338,7 @@ function majData_majEuclideanmajRing_degree($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['degree'];
+  $__res = ($dict_0)->{'degree'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

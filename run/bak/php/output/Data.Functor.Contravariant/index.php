@@ -102,7 +102,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Data_Functor_Contravariant_contravariantConst
-$GLOBALS['Data_Functor_Contravariant_contravariantConst'] = ["cmap" => (function() {
+$GLOBALS['Data_Functor_Contravariant_contravariantConst'] = (object)["cmap" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -123,7 +123,7 @@ function majData_majFunctor_majContravariant_cmap($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['cmap'];
+  $__res = ($dict_0)->{'cmap'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -137,7 +137,7 @@ function majData_majFunctor_majContravariant_cmapmajFlipped($dictContravariant_0
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictContravariant_0)['cmap'])($f_2, $x_1);
+  $__res = ((($dictContravariant_0)->{'cmap'})($f_2))($x_1);
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -151,7 +151,7 @@ function majData_majFunctor_majContravariant_coerce($dictContravariant_0, $dictF
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictFunctor_1)['map'])($GLOBALS['Data_Void_absurd'], (($dictContravariant_0)['cmap'])($GLOBALS['Data_Void_absurd'], $a_2));
+  $__res = ((($dictFunctor_1)->{'map'})($GLOBALS['Data_Void_absurd']))(((($dictContravariant_0)->{'cmap'})($GLOBALS['Data_Void_absurd']))($a_2));
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -165,7 +165,7 @@ function majData_majFunctor_majContravariant_imapmajC($dictContravariant_0, $v_1
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictContravariant_0)['cmap'])($f_2);
+  $__res = (($dictContravariant_0)->{'cmap'})($f_2);
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;

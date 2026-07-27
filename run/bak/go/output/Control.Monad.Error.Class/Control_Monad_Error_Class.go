@@ -23,26 +23,26 @@ return Call_throwError(dict_0_box)
 	return cache_throwError
 }
 
-var cache_throwError__gopurs_runtime_Value_4217979769 gopurs_runtime.Value
-var once_throwError__gopurs_runtime_Value_4217979769 sync.Once
-func Get_throwError__gopurs_runtime_Value_4217979769() gopurs_runtime.Value {
-	once_throwError__gopurs_runtime_Value_4217979769.Do(func() {
-		cache_throwError__gopurs_runtime_Value_4217979769 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_throwError__gopurs_runtime_Value_4217979769(dict_0_box)
+var cache_throwError__func_gopurs_runtime_Value__interface____interface___4217979769 gopurs_runtime.Value
+var once_throwError__func_gopurs_runtime_Value__interface____interface___4217979769 sync.Once
+func Get_throwError__func_gopurs_runtime_Value__interface____interface___4217979769() gopurs_runtime.Value {
+	once_throwError__func_gopurs_runtime_Value__interface____interface___4217979769.Do(func() {
+		cache_throwError__func_gopurs_runtime_Value__interface____interface___4217979769 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_throwError__func_gopurs_runtime_Value__interface____interface___4217979769(dict_0_box)
 })
 	})
-	return cache_throwError__gopurs_runtime_Value_4217979769
+	return cache_throwError__func_gopurs_runtime_Value__interface____interface___4217979769
 }
 
 var cache_monadThrowMaybe gopurs_runtime.Value
 var once_monadThrowMaybe sync.Once
 func Get_monadThrowMaybe() gopurs_runtime.Value {
 	once_monadThrowMaybe.Do(func() {
-		cache_monadThrowMaybe = gopurs_runtime.RecordDict2("Monad0", "throwError", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadThrowMaybe = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Monad0", "throwError", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Maybe.Get_monadMaybe()
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
-}))
+return gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil})
+}))))
 	})
 	return cache_monadThrowMaybe
 }
@@ -51,9 +51,9 @@ var cache_monadThrowEither gopurs_runtime.Value
 var once_monadThrowEither sync.Once
 func Get_monadThrowEither() gopurs_runtime.Value {
 	once_monadThrowEither.Do(func() {
-		cache_monadThrowEither = gopurs_runtime.RecordDict2("Monad0", "throwError", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadThrowEither = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Monad0", "throwError", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Either.Get_monadEither()
-}), pkg_Data_Either.Get_Left())
+}), pkg_Data_Either.Get_Left())))
 	})
 	return cache_monadThrowEither
 }
@@ -62,9 +62,9 @@ var cache_monadThrowEffect gopurs_runtime.Value
 var once_monadThrowEffect sync.Once
 func Get_monadThrowEffect() gopurs_runtime.Value {
 	once_monadThrowEffect.Do(func() {
-		cache_monadThrowEffect = gopurs_runtime.RecordDict2("Monad0", "throwError", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadThrowEffect = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Monad0", "throwError", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Effect.Get_monadEffect()
-}), pkg_Effect_Exception.Get_throwException())
+}), pkg_Effect_Exception.Get_throwException())))
 	})
 	return cache_monadThrowEffect
 }
@@ -73,7 +73,7 @@ var cache_monadErrorMaybe gopurs_runtime.Value
 var once_monadErrorMaybe sync.Once
 func Get_monadErrorMaybe() gopurs_runtime.Value {
 	once_monadErrorMaybe.Do(func() {
-		cache_monadErrorMaybe = gopurs_runtime.RecordDict2("MonadThrow0", "catchError", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadErrorMaybe = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("MonadThrow0", "catchError", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_monadThrowMaybe()
 }), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
@@ -87,7 +87,7 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 930809136 && v_0.UnsafePtr != nil) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{(*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v_0.UnsafePtr).V0})}
+__t0 = gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{gopurs_runtime.UnboxAny(gopurs_runtime.Any((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v_0.UnsafePtr).V0))})})
 goto end_branch_0
 } else {
 
@@ -98,7 +98,7 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
 return __t0
-}))
+}))))
 	})
 	return cache_monadErrorMaybe
 }
@@ -107,13 +107,13 @@ var cache_monadErrorEither gopurs_runtime.Value
 var once_monadErrorEither sync.Once
 func Get_monadErrorEither() gopurs_runtime.Value {
 	once_monadErrorEither.Do(func() {
-		cache_monadErrorEither = gopurs_runtime.RecordDict2("MonadThrow0", "catchError", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadErrorEither = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("MonadThrow0", "catchError", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_monadThrowEither()
 }), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (v_0.Type == 9 && v_0.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Apply(v1_1, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(v1_1, gopurs_runtime.Any((*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V0))
 goto end_branch_0
 } else {
 
@@ -121,7 +121,7 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 2465973597) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{(*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V0})}
+__t0 = gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.UnboxAny(gopurs_runtime.Any((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V0))})})
 goto end_branch_0
 } else {
 
@@ -132,7 +132,7 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
 return __t0
-}))
+}))))
 	})
 	return cache_monadErrorEither
 }
@@ -141,11 +141,11 @@ var cache_monadErrorEffect gopurs_runtime.Value
 var once_monadErrorEffect sync.Once
 func Get_monadErrorEffect() gopurs_runtime.Value {
 	once_monadErrorEffect.Do(func() {
-		cache_monadErrorEffect = gopurs_runtime.RecordDict2("MonadThrow0", "catchError", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadErrorEffect = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("MonadThrow0", "catchError", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_monadThrowEffect()
 }), gopurs_runtime.Func2(func(b_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(pkg_Effect_Exception.Get_catchException(), a_1, b_0)
-}))
+}))))
 	})
 	return cache_monadErrorEffect
 }
@@ -183,15 +183,15 @@ return Call_catchError(dict_0_box)
 	return cache_catchError
 }
 
-var cache_catchError__gopurs_runtime_Value_1778055282 gopurs_runtime.Value
-var once_catchError__gopurs_runtime_Value_1778055282 sync.Once
-func Get_catchError__gopurs_runtime_Value_1778055282() gopurs_runtime.Value {
-	once_catchError__gopurs_runtime_Value_1778055282.Do(func() {
-		cache_catchError__gopurs_runtime_Value_1778055282 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_catchError__gopurs_runtime_Value_1778055282(dict_0_box)
+var cache_catchError__func_gopurs_runtime_Value__interface____func_interface____interface____interface___1778055282 gopurs_runtime.Value
+var once_catchError__func_gopurs_runtime_Value__interface____func_interface____interface____interface___1778055282 sync.Once
+func Get_catchError__func_gopurs_runtime_Value__interface____func_interface____interface____interface___1778055282() gopurs_runtime.Value {
+	once_catchError__func_gopurs_runtime_Value__interface____func_interface____interface____interface___1778055282.Do(func() {
+		cache_catchError__func_gopurs_runtime_Value__interface____func_interface____interface____interface___1778055282 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_catchError__func_gopurs_runtime_Value__interface____func_interface____interface____interface___1778055282(dict_0_box)
 })
 	})
-	return cache_catchError__gopurs_runtime_Value_1778055282
+	return cache_catchError__func_gopurs_runtime_Value__interface____func_interface____interface____interface___1778055282
 }
 
 var cache_catchJust gopurs_runtime.Value
@@ -199,7 +199,11 @@ var once_catchJust sync.Once
 func Get_catchJust() gopurs_runtime.Value {
 	once_catchJust.Do(func() {
 		cache_catchJust = gopurs_runtime.Func4(func(dictMonadError_0_box gopurs_runtime.Value, p_1_box gopurs_runtime.Value, act_2_box gopurs_runtime.Value, handler_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_catchJust(dictMonadError_0_box, p_1_box, act_2_box, handler_3_box)
+return gopurs_runtime.Any(Call_catchJust(dictMonadError_0_box, func(inner_arg0 interface{}) *pkg_Data_Maybe.Constructor_Just[interface{}] {
+return (*pkg_Data_Maybe.Constructor_Just[interface{}])(gopurs_runtime.Apply(p_1_box, gopurs_runtime.Any(inner_arg0)).UnsafePtr)
+}, gopurs_runtime.UnboxAny(act_2_box), func(inner_arg0 interface{}) interface{} {
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(handler_3_box, gopurs_runtime.Any(inner_arg0)))
+}))
 })
 	})
 	return cache_catchJust
@@ -233,7 +237,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "throwError")
 }
 
-func Call_throwError__gopurs_runtime_Value_4217979769(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_throwError__func_gopurs_runtime_Value__interface____interface___4217979769(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "throwError")
@@ -259,7 +263,7 @@ goto end_branch_2
 }
 {
 if (v2_4.Type == 9 && v2_4.IntVal == 930809136 && v2_4.UnsafePtr != nil) {
-__t2 = gopurs_runtime.Apply(pure_1_0, (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v2_4.UnsafePtr).V0)
+__t2 = gopurs_runtime.Apply(pure_1_0, gopurs_runtime.Any((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v2_4.UnsafePtr).V0))
 goto end_branch_2
 } else {
 
@@ -283,7 +287,7 @@ return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value 
 var __t1 gopurs_runtime.Value
 {
 if (v2_2.Type == 9 && v2_2.IntVal == 3711209382) {
-__t1 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadThrow_0, "throwError"), (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0)
+__t1 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadThrow_0, "throwError"), gopurs_runtime.Any((*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0))
 goto end_branch_1
 } else {
 
@@ -291,7 +295,7 @@ goto end_branch_1
 }
 {
 if (v2_2.Type == 9 && v2_2.IntVal == 2465973597) {
-__t1 = gopurs_runtime.Apply(__local_var_1_0, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0)
+__t1 = gopurs_runtime.Apply(__local_var_1_0, gopurs_runtime.Any((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0))
 goto end_branch_1
 } else {
 
@@ -311,23 +315,23 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "catchError")
 }
 
-func Call_catchError__gopurs_runtime_Value_1778055282(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_catchError__func_gopurs_runtime_Value__interface____func_interface____interface____interface___1778055282(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "catchError")
 }
 
-func Call_catchJust(dictMonadError_0_loop gopurs_runtime.Value, p_1_loop gopurs_runtime.Value, act_2_loop gopurs_runtime.Value, handler_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_catchJust(dictMonadError_0_loop gopurs_runtime.Value, p_1_loop func(interface{}) *pkg_Data_Maybe.Constructor_Just[interface{}], act_2_loop interface{}, handler_3_loop func(interface{}) interface{}) interface{} {
 var dictMonadError_0 gopurs_runtime.Value = dictMonadError_0_loop
 _ = dictMonadError_0
-var p_1 gopurs_runtime.Value = p_1_loop
+var p_1 func(interface{}) *pkg_Data_Maybe.Constructor_Just[interface{}] = p_1_loop
 _ = p_1
-var act_2 gopurs_runtime.Value = act_2_loop
+var act_2 interface{} = act_2_loop
 _ = act_2
-var handler_3 gopurs_runtime.Value = handler_3_loop
+var handler_3 func(interface{}) interface{} = handler_3_loop
 _ = handler_3
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadError_0, "catchError"), act_2, gopurs_runtime.Func(func(e_4 gopurs_runtime.Value) gopurs_runtime.Value {
-v_5_0 := gopurs_runtime.Apply(p_1, e_4)
+return gopurs_runtime.UnboxAny(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadError_0, "catchError"), gopurs_runtime.Any(act_2), gopurs_runtime.Func(func(e_4 gopurs_runtime.Value) gopurs_runtime.Value {
+v_5_0 := gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(p_1(gopurs_runtime.UnboxAny(e_4)))}
 _ = v_5_0
 var __t1 gopurs_runtime.Value
 {
@@ -340,7 +344,7 @@ goto end_branch_1
 }
 {
 if (v_5_0.Type == 9 && v_5_0.IntVal == 930809136 && v_5_0.UnsafePtr != nil) {
-__t1 = gopurs_runtime.Apply(handler_3, (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v_5_0.UnsafePtr).V0)
+__t1 = gopurs_runtime.Any(handler_3(gopurs_runtime.UnboxAny(gopurs_runtime.Any((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v_5_0.UnsafePtr).V0))))
 goto end_branch_1
 } else {
 
@@ -351,7 +355,7 @@ __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
 return __t1
-}))
+})))
 }
 
 func Call_try(dictMonadError_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -361,7 +365,7 @@ Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply
 _ = Monad0_1_0
 return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadError_0, "catchError"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Either.Get_Right(), a_2), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{x_3})})
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.UnboxAny(x_3)})}))
 }))
 })
 }
@@ -386,7 +390,7 @@ return gopurs_runtime.Apply2(discard1_5_4, gopurs_runtime.Apply(release_7, resou
 var __t5 gopurs_runtime.Value
 {
 if (result_10.Type == 9 && result_10.IntVal == 3711209382) {
-__t5 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(MonadThrow0_1_0, "throwError"), (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(result_10.UnsafePtr).V0)
+__t5 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(MonadThrow0_1_0, "throwError"), gopurs_runtime.Any((*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(result_10.UnsafePtr).V0))
 goto end_branch_5
 } else {
 
@@ -394,7 +398,7 @@ goto end_branch_5
 }
 {
 if (result_10.Type == 9 && result_10.IntVal == 2465973597) {
-__t5 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_2_1, "Applicative0"), gopurs_runtime.Value{}), "pure"), (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(result_10.UnsafePtr).V0)
+__t5 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_2_1, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Any((*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(result_10.UnsafePtr).V0))
 goto end_branch_5
 } else {
 
@@ -410,5 +414,3 @@ return __t5
 }))
 })
 }
-
-

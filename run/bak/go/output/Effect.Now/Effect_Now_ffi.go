@@ -1,7 +1,5 @@
 package Effect_Now
 
-import "gopurs/output/gopurs_runtime"
-
 import (
 	"time"
 )
@@ -20,26 +18,3 @@ func GetTimezoneOffset() func() float64 {
 		return float64(-offset / 60)
 	}
 }
-
-
-// --- Auto-generated FFI wrappers ---
-func Call_now() func() float64 {
-	return Now()
-}
-var _Gopurs_Now = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-	go_res := Now()
-	return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-			inner_res := go_res()
-			return gopurs_runtime.Box(inner_res)
-		})
-})
-func Call_getTimezoneOffset() func() float64 {
-	return GetTimezoneOffset()
-}
-var _Gopurs_GetTimezoneOffset = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-	go_res := GetTimezoneOffset()
-	return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-			inner_res := go_res()
-			return gopurs_runtime.Box(inner_res)
-		})
-})

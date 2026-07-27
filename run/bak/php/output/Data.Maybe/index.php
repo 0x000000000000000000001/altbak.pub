@@ -118,8 +118,8 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
-final class Data_Maybe_Nothing { public function __construct() {} }
-final class Data_Maybe_Just { public function __construct(public  $value0) {} }
+final class Data_Maybe_Nothing { public $tag = 'Nothing'; public function __construct() {} }
+final class Data_Maybe_Just { public $tag = 'Just'; public function __construct(public  $value0) {} }
 
 // Data_Maybe_identity
 function majData_majMaybe_identity($x_0) {
@@ -154,11 +154,11 @@ function majData_majMaybe_showmajMaybe($dictShow_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["show" => function($v_1) use ($dictShow_0) {
+  $__res = (object)["show" => function($v_1) use ($dictShow_0) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ($v_1 instanceof \Data\Maybe\Data_Maybe_Just) {
-$__t0 = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Just ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])(($v_1)->{'value0'}), ")"));
+$__t0 = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(Just "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_0)->{'show'})(($v_1)->{'value0'})))(")"));
 goto end_branch_0;;
 };
   if ($v_1 instanceof \Data\Maybe\Data_Maybe_Nothing) {
@@ -186,7 +186,7 @@ function majData_majMaybe_semigroupmajMaybe($dictSemigroup_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["append" => (function() use ($dictSemigroup_0) {
+  $__res = (object)["append" => (function() use ($dictSemigroup_0) {
   $__fn = function($v_1, $v1_2 = null) use ($dictSemigroup_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -202,7 +202,7 @@ $__t0 = $v_1;
 goto end_branch_0;;
 };
   if (($v_1 instanceof \Data\Maybe\Data_Maybe_Just && $v1_2 instanceof \Data\Maybe\Data_Maybe_Just)) {
-$__t0 = new \Data\Maybe\Data_Maybe_Just((($dictSemigroup_0)['append'])(($v_1)->{'value0'}, ($v1_2)->{'value0'}));
+$__t0 = new \Data\Maybe\Data_Maybe_Just(((($dictSemigroup_0)->{'append'})(($v_1)->{'value0'}))(($v1_2)->{'value0'}));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -228,7 +228,7 @@ function majData_majMaybe_optional($dictAlt_0, $dictApplicative_1 = null, $a_2 =
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictAlt_0)['alt'])((((($dictAlt_0)['Functor0'])(null))['map'])($GLOBALS['Data_Maybe_Just'], $a_2), (($dictApplicative_1)['pure'])(new \Data\Maybe\Data_Maybe_Nothing()));
+  $__res = ((($dictAlt_0)->{'alt'})(((((($dictAlt_0)->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Maybe_Just']))($a_2)))((($dictApplicative_1)->{'pure'})(new \Data\Maybe\Data_Maybe_Nothing()));
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -242,7 +242,7 @@ function majData_majMaybe_monoidmajMaybe($dictSemigroup_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $semigroupMaybe1_1_0 = ["append" => (function() use ($dictSemigroup_0) {
+  $semigroupMaybe1_1_0 = (object)["append" => (function() use ($dictSemigroup_0) {
   $__fn = function($v_1, $v1_2 = null) use ($dictSemigroup_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -258,7 +258,7 @@ $__t0 = $v_1;
 goto end_branch_0;;
 };
   if (($v_1 instanceof \Data\Maybe\Data_Maybe_Just && $v1_2 instanceof \Data\Maybe\Data_Maybe_Just)) {
-$__t0 = new \Data\Maybe\Data_Maybe_Just((($dictSemigroup_0)['append'])(($v_1)->{'value0'}, ($v1_2)->{'value0'}));
+$__t0 = new \Data\Maybe\Data_Maybe_Just(((($dictSemigroup_0)->{'append'})(($v_1)->{'value0'}))(($v1_2)->{'value0'}));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -271,7 +271,7 @@ goto end_branch_0;;
   };
   return $__fn;
 })()];
-  $__res = ["mempty" => new \Data\Maybe\Data_Maybe_Nothing(), "Semigroup0" => function($_dollar__unused_2) use ($semigroupMaybe1_1_0) {
+  $__res = (object)["mempty" => new \Data\Maybe\Data_Maybe_Nothing(), "Semigroup0" => function($_dollar__unused_2) use ($semigroupMaybe1_1_0) {
   $__num = \func_num_args();
   $__res = $semigroupMaybe1_1_0;
   goto __end;;
@@ -389,7 +389,7 @@ goto end_branch_0;;
 $GLOBALS['Data_Maybe_isJust'] = __NAMESPACE__ . '\\majData_majMaybe_ismajJust';
 
 // Data_Maybe_genericMaybe
-$GLOBALS['Data_Maybe_genericMaybe'] = ["to" => function($x_0) {
+$GLOBALS['Data_Maybe_genericMaybe'] = (object)["to" => function($x_0) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ($x_0 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inl) {
@@ -428,7 +428,7 @@ goto end_branch_1;;
 }];
 
 // Data_Maybe_functorMaybe
-$GLOBALS['Data_Maybe_functorMaybe'] = ["map" => (function() {
+$GLOBALS['Data_Maybe_functorMaybe'] = (object)["map" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -450,13 +450,13 @@ goto end_branch_0;;
 })()];
 
 // Data_Maybe_invariantMaybe
-$GLOBALS['Data_Maybe_invariantMaybe'] = ["imap" => (function() {
+$GLOBALS['Data_Maybe_invariantMaybe'] = (object)["imap" => (function() {
   $__fn = function($f_0, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])($f_0);
+  $__res = (($GLOBALS['Data_Maybe_functorMaybe'])->{'map'})($f_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -471,7 +471,7 @@ function majData_majMaybe_frommajMaybe__prime__($a_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Data_Maybe_maybe__prime__'])($a_0, $GLOBALS['Data_Maybe_identity']);
+  $__res = (($GLOBALS['Data_Maybe_maybe__prime__'])($a_0))($GLOBALS['Data_Maybe_identity']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -527,7 +527,7 @@ goto end_branch_0;;
 $GLOBALS['Data_Maybe_fromJust'] = __NAMESPACE__ . '\\majData_majMaybe_frommajJust';
 
 // Data_Maybe_extendMaybe
-$GLOBALS['Data_Maybe_extendMaybe'] = ["extend" => (function() {
+$GLOBALS['Data_Maybe_extendMaybe'] = (object)["extend" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -561,7 +561,7 @@ function majData_majMaybe_eqmajMaybe($dictEq_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["eq" => (function() use ($dictEq_0) {
+  $__res = (object)["eq" => (function() use ($dictEq_0) {
   $__fn = function($x_1, $y_2 = null) use ($dictEq_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -572,7 +572,7 @@ function majData_majMaybe_eqmajMaybe($dictEq_0) {
 $__t0 = $y_2 instanceof \Data\Maybe\Data_Maybe_Nothing;
 goto end_branch_0;;
 };
-  $__t0 = ($x_1 instanceof \Data\Maybe\Data_Maybe_Just && ($y_2 instanceof \Data\Maybe\Data_Maybe_Just && (($dictEq_0)['eq'])(($x_1)->{'value0'}, ($y_2)->{'value0'})));
+  $__t0 = ($x_1 instanceof \Data\Maybe\Data_Maybe_Just && ($y_2 instanceof \Data\Maybe\Data_Maybe_Just && ((($dictEq_0)->{'eq'})(($x_1)->{'value0'}))(($y_2)->{'value0'})));
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
@@ -594,8 +594,8 @@ function majData_majMaybe_ordmajMaybe($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($dictOrd_0)['Eq0'])(null);
-  $eqMaybe1_2_1 = ["eq" => (function() use ($__local_var_1_0) {
+  $__local_var_1_0 = (($dictOrd_0)->{'Eq0'})(null);
+  $eqMaybe1_2_1 = (object)["eq" => (function() use ($__local_var_1_0) {
   $__fn = function($x_2, $y_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -606,7 +606,7 @@ function majData_majMaybe_ordmajMaybe($dictOrd_0) {
 $__t1 = $y_3 instanceof \Data\Maybe\Data_Maybe_Nothing;
 goto end_branch_1;;
 };
-  $__t1 = ($x_2 instanceof \Data\Maybe\Data_Maybe_Just && ($y_3 instanceof \Data\Maybe\Data_Maybe_Just && (($__local_var_1_0)['eq'])(($x_2)->{'value0'}, ($y_3)->{'value0'})));
+  $__t1 = ($x_2 instanceof \Data\Maybe\Data_Maybe_Just && ($y_3 instanceof \Data\Maybe\Data_Maybe_Just && ((($__local_var_1_0)->{'eq'})(($x_2)->{'value0'}))(($y_3)->{'value0'})));
   end_branch_1:;
   $__res = $__t1;
   goto __end;;
@@ -615,7 +615,7 @@ goto end_branch_1;;
   };
   return $__fn;
 })()];
-  $__res = ["compare" => (function() use ($dictOrd_0) {
+  $__res = (object)["compare" => (function() use ($dictOrd_0) {
   $__fn = function($x_3, $y_4 = null) use ($dictOrd_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -638,7 +638,7 @@ $__t3 = new \Data\Ordering\Data_Ordering_GT();
 goto end_branch_3;;
 };
   if (($x_3 instanceof \Data\Maybe\Data_Maybe_Just && $y_4 instanceof \Data\Maybe\Data_Maybe_Just)) {
-$__t3 = (($dictOrd_0)['compare'])(($x_3)->{'value0'}, ($y_4)->{'value0'});
+$__t3 = ((($dictOrd_0)->{'compare'})(($x_3)->{'value0'}))(($y_4)->{'value0'});
 goto end_branch_3;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -664,7 +664,7 @@ goto end_branch_3;;
 $GLOBALS['Data_Maybe_ordMaybe'] = __NAMESPACE__ . '\\majData_majMaybe_ordmajMaybe';
 
 // Data_Maybe_eq1Maybe
-$GLOBALS['Data_Maybe_eq1Maybe'] = ["eq1" => (function() {
+$GLOBALS['Data_Maybe_eq1Maybe'] = (object)["eq1" => (function() {
   $__fn = function($dictEq_0, $x_1 = null, $y_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -675,7 +675,7 @@ $GLOBALS['Data_Maybe_eq1Maybe'] = ["eq1" => (function() {
 $__t0 = $y_2 instanceof \Data\Maybe\Data_Maybe_Nothing;
 goto end_branch_0;;
 };
-  $__t0 = ($x_1 instanceof \Data\Maybe\Data_Maybe_Just && ($y_2 instanceof \Data\Maybe\Data_Maybe_Just && (($dictEq_0)['eq'])(($x_1)->{'value0'}, ($y_2)->{'value0'})));
+  $__t0 = ($x_1 instanceof \Data\Maybe\Data_Maybe_Just && ($y_2 instanceof \Data\Maybe\Data_Maybe_Just && ((($dictEq_0)->{'eq'})(($x_1)->{'value0'}))(($y_2)->{'value0'})));
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
@@ -686,7 +686,7 @@ goto end_branch_0;;
 })()];
 
 // Data_Maybe_ord1Maybe
-$GLOBALS['Data_Maybe_ord1Maybe'] = ["compare1" => (function() {
+$GLOBALS['Data_Maybe_ord1Maybe'] = (object)["compare1" => (function() {
   $__fn = function($dictOrd_0, $x_1 = null, $y_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
@@ -709,7 +709,7 @@ $__t0 = new \Data\Ordering\Data_Ordering_GT();
 goto end_branch_0;;
 };
   if (($x_1 instanceof \Data\Maybe\Data_Maybe_Just && $y_2 instanceof \Data\Maybe\Data_Maybe_Just)) {
-$__t0 = (($dictOrd_0)['compare'])(($x_1)->{'value0'}, ($y_2)->{'value0'});
+$__t0 = ((($dictOrd_0)->{'compare'})(($x_1)->{'value0'}))(($y_2)->{'value0'});
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -736,9 +736,9 @@ function majData_majMaybe_boundedmajMaybe($dictBounded_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($dictBounded_0)['Ord0'])(null);
-  $__local_var_2_1 = (($__local_var_1_0)['Eq0'])(null);
-  $eqMaybe1_3_2 = ["eq" => (function() use ($__local_var_2_1) {
+  $__local_var_1_0 = (($dictBounded_0)->{'Ord0'})(null);
+  $__local_var_2_1 = (($__local_var_1_0)->{'Eq0'})(null);
+  $eqMaybe1_3_2 = (object)["eq" => (function() use ($__local_var_2_1) {
   $__fn = function($x_3, $y_4 = null) use ($__local_var_2_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -749,7 +749,7 @@ function majData_majMaybe_boundedmajMaybe($dictBounded_0) {
 $__t2 = $y_4 instanceof \Data\Maybe\Data_Maybe_Nothing;
 goto end_branch_2;;
 };
-  $__t2 = ($x_3 instanceof \Data\Maybe\Data_Maybe_Just && ($y_4 instanceof \Data\Maybe\Data_Maybe_Just && (($__local_var_2_1)['eq'])(($x_3)->{'value0'}, ($y_4)->{'value0'})));
+  $__t2 = ($x_3 instanceof \Data\Maybe\Data_Maybe_Just && ($y_4 instanceof \Data\Maybe\Data_Maybe_Just && ((($__local_var_2_1)->{'eq'})(($x_3)->{'value0'}))(($y_4)->{'value0'})));
   end_branch_2:;
   $__res = $__t2;
   goto __end;;
@@ -758,7 +758,7 @@ goto end_branch_2;;
   };
   return $__fn;
 })()];
-  $ordMaybe1_3_2 = ["compare" => (function() use ($__local_var_1_0) {
+  $ordMaybe1_3_2 = (object)["compare" => (function() use ($__local_var_1_0) {
   $__fn = function($x_4, $y_5 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -781,7 +781,7 @@ $__t4 = new \Data\Ordering\Data_Ordering_GT();
 goto end_branch_4;;
 };
   if (($x_4 instanceof \Data\Maybe\Data_Maybe_Just && $y_5 instanceof \Data\Maybe\Data_Maybe_Just)) {
-$__t4 = (($__local_var_1_0)['compare'])(($x_4)->{'value0'}, ($y_5)->{'value0'});
+$__t4 = ((($__local_var_1_0)->{'compare'})(($x_4)->{'value0'}))(($y_5)->{'value0'});
 goto end_branch_4;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -800,7 +800,7 @@ goto end_branch_4;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["top" => new \Data\Maybe\Data_Maybe_Just(($dictBounded_0)['top']), "bottom" => new \Data\Maybe\Data_Maybe_Nothing(), "Ord0" => function($_dollar__unused_4) use ($ordMaybe1_3_2) {
+  $__res = (object)["top" => new \Data\Maybe\Data_Maybe_Just(($dictBounded_0)->{'top'}), "bottom" => new \Data\Maybe\Data_Maybe_Nothing(), "Ord0" => function($_dollar__unused_4) use ($ordMaybe1_3_2) {
   $__num = \func_num_args();
   $__res = $ordMaybe1_3_2;
   goto __end;;
@@ -814,7 +814,7 @@ goto end_branch_4;;
 $GLOBALS['Data_Maybe_boundedMaybe'] = __NAMESPACE__ . '\\majData_majMaybe_boundedmajMaybe';
 
 // Data_Maybe_applyMaybe
-$GLOBALS['Data_Maybe_applyMaybe'] = ["apply" => (function() {
+$GLOBALS['Data_Maybe_applyMaybe'] = (object)["apply" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -822,7 +822,7 @@ $GLOBALS['Data_Maybe_applyMaybe'] = ["apply" => (function() {
   }
   $__t0 = null;;
   if ($v_0 instanceof \Data\Maybe\Data_Maybe_Just) {
-$__t0 = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])(($v_0)->{'value0'}, $v1_1);
+$__t0 = ((($GLOBALS['Data_Maybe_functorMaybe'])->{'map'})(($v_0)->{'value0'}))($v1_1);
 goto end_branch_0;;
 };
   if ($v_0 instanceof \Data\Maybe\Data_Maybe_Nothing) {
@@ -847,7 +847,7 @@ goto end_branch_0;;
 }];
 
 // Data_Maybe_bindMaybe
-$GLOBALS['Data_Maybe_bindMaybe'] = ["bind" => (function() {
+$GLOBALS['Data_Maybe_bindMaybe'] = (object)["bind" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -886,8 +886,8 @@ function majData_majMaybe_semiringmajMaybe($dictSemiring_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $mul_1_0 = ($dictSemiring_0)['mul'];
-  $__res = ["zero" => new \Data\Maybe\Data_Maybe_Nothing(), "one" => new \Data\Maybe\Data_Maybe_Just(($dictSemiring_0)['one']), "add" => (function() use ($dictSemiring_0) {
+  $mul_1_0 = ($dictSemiring_0)->{'mul'};
+  $__res = (object)["zero" => new \Data\Maybe\Data_Maybe_Nothing(), "one" => new \Data\Maybe\Data_Maybe_Just(($dictSemiring_0)->{'one'}), "add" => (function() use ($dictSemiring_0) {
   $__fn = function($v_2, $v1_3 = null) use ($dictSemiring_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -903,7 +903,7 @@ $__t1 = $v_2;
 goto end_branch_1;;
 };
   if (($v_2 instanceof \Data\Maybe\Data_Maybe_Just && $v1_3 instanceof \Data\Maybe\Data_Maybe_Just)) {
-$__t1 = new \Data\Maybe\Data_Maybe_Just((($dictSemiring_0)['add'])(($v_2)->{'value0'}, ($v1_3)->{'value0'}));
+$__t1 = new \Data\Maybe\Data_Maybe_Just(((($dictSemiring_0)->{'add'})(($v_2)->{'value0'}))(($v1_3)->{'value0'}));
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -921,7 +921,7 @@ goto end_branch_1;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Maybe_applyMaybe'])['apply'])((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($mul_1_0, $x_2), $y_3);
+  $__res = ((($GLOBALS['Data_Maybe_applyMaybe'])->{'apply'})(((($GLOBALS['Data_Maybe_functorMaybe'])->{'map'})($mul_1_0))($x_2)))($y_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -935,7 +935,7 @@ goto end_branch_1;;
 $GLOBALS['Data_Maybe_semiringMaybe'] = __NAMESPACE__ . '\\majData_majMaybe_semiringmajMaybe';
 
 // Data_Maybe_applicativeMaybe
-$GLOBALS['Data_Maybe_applicativeMaybe'] = ["pure" => $GLOBALS['Data_Maybe_Just'], "Apply0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Maybe_applicativeMaybe'] = (object)["pure" => $GLOBALS['Data_Maybe_Just'], "Apply0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Maybe_applyMaybe'];
   goto __end;;
@@ -944,7 +944,7 @@ $GLOBALS['Data_Maybe_applicativeMaybe'] = ["pure" => $GLOBALS['Data_Maybe_Just']
 }];
 
 // Data_Maybe_monadMaybe
-$GLOBALS['Data_Maybe_monadMaybe'] = ["Applicative0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Maybe_monadMaybe'] = (object)["Applicative0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Maybe_applicativeMaybe'];
   goto __end;;
@@ -959,7 +959,7 @@ $GLOBALS['Data_Maybe_monadMaybe'] = ["Applicative0" => function($_dollar__unused
 }];
 
 // Data_Maybe_altMaybe
-$GLOBALS['Data_Maybe_altMaybe'] = ["alt" => (function() {
+$GLOBALS['Data_Maybe_altMaybe'] = (object)["alt" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -987,7 +987,7 @@ goto end_branch_0;;
 }];
 
 // Data_Maybe_plusMaybe
-$GLOBALS['Data_Maybe_plusMaybe'] = ["empty" => new \Data\Maybe\Data_Maybe_Nothing(), "Alt0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Maybe_plusMaybe'] = (object)["empty" => new \Data\Maybe\Data_Maybe_Nothing(), "Alt0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Maybe_altMaybe'];
   goto __end;;
@@ -996,7 +996,7 @@ $GLOBALS['Data_Maybe_plusMaybe'] = ["empty" => new \Data\Maybe\Data_Maybe_Nothin
 }];
 
 // Data_Maybe_alternativeMaybe
-$GLOBALS['Data_Maybe_alternativeMaybe'] = ["Applicative0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Maybe_alternativeMaybe'] = (object)["Applicative0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Maybe_applicativeMaybe'];
   goto __end;;

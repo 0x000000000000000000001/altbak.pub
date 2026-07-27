@@ -27,30 +27,30 @@ var once_top sync.Once
 func Get_top() gopurs_runtime.Value {
 	once_top.Do(func() {
 		cache_top = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_top(dict_0_box)
+return gopurs_runtime.Any(Call_top(dict_0_box))
 })
 	})
 	return cache_top
 }
 
-var cache_top__gopurs_runtime_Value_1655760489 gopurs_runtime.Value
-var once_top__gopurs_runtime_Value_1655760489 sync.Once
-func Get_top__gopurs_runtime_Value_1655760489() gopurs_runtime.Value {
-	once_top__gopurs_runtime_Value_1655760489.Do(func() {
-		cache_top__gopurs_runtime_Value_1655760489 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_top__gopurs_runtime_Value_1655760489(dict_0_box)
+var cache_top__func_gopurs_runtime_Value__interface___1655760489 gopurs_runtime.Value
+var once_top__func_gopurs_runtime_Value__interface___1655760489 sync.Once
+func Get_top__func_gopurs_runtime_Value__interface___1655760489() gopurs_runtime.Value {
+	once_top__func_gopurs_runtime_Value__interface___1655760489.Do(func() {
+		cache_top__func_gopurs_runtime_Value__interface___1655760489 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Any(Call_top__func_gopurs_runtime_Value__interface___1655760489(dict_0_box))
 })
 	})
-	return cache_top__gopurs_runtime_Value_1655760489
+	return cache_top__func_gopurs_runtime_Value__interface___1655760489
 }
 
 var cache_boundedUnit gopurs_runtime.Value
 var once_boundedUnit sync.Once
 func Get_boundedUnit() gopurs_runtime.Value {
 	once_boundedUnit.Do(func() {
-		cache_boundedUnit = gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_boundedUnit = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Ord.Get_ordUnit()
-}), pkg_Data_Unit.Get_unit(), pkg_Data_Unit.Get_unit())
+}), pkg_Data_Unit.Get_unit(), pkg_Data_Unit.Get_unit())))
 	})
 	return cache_boundedUnit
 }
@@ -59,13 +59,13 @@ var cache_boundedRecordNil gopurs_runtime.Value
 var once_boundedRecordNil sync.Once
 func Get_boundedRecordNil() gopurs_runtime.Value {
 	once_boundedRecordNil.Do(func() {
-		cache_boundedRecordNil = gopurs_runtime.RecordDict3("OrdRecord0", "bottomRecord", "topRecord", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_boundedRecordNil = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict3("OrdRecord0", "bottomRecord", "topRecord", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Ord.Get_ordRecordNil()
 }), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict0()
 }), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict0()
-}))
+}))))
 	})
 	return cache_boundedRecordNil
 }
@@ -74,9 +74,9 @@ var cache_boundedProxy gopurs_runtime.Value
 var once_boundedProxy sync.Once
 func Get_boundedProxy() gopurs_runtime.Value {
 	once_boundedProxy.Do(func() {
-		cache_boundedProxy = gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_boundedProxy = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Ord.Get_ordProxy()
-}), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil})
+}), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}))))
 	})
 	return cache_boundedProxy
 }
@@ -85,9 +85,9 @@ var cache_boundedOrdering gopurs_runtime.Value
 var once_boundedOrdering sync.Once
 func Get_boundedOrdering() gopurs_runtime.Value {
 	once_boundedOrdering.Do(func() {
-		cache_boundedOrdering = gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_boundedOrdering = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Ord.Get_ordOrdering()
-}), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil})
+}), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil}))))
 	})
 	return cache_boundedOrdering
 }
@@ -96,9 +96,9 @@ var cache_boundedNumber gopurs_runtime.Value
 var once_boundedNumber sync.Once
 func Get_boundedNumber() gopurs_runtime.Value {
 	once_boundedNumber.Do(func() {
-		cache_boundedNumber = gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_boundedNumber = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Ord.Get_ordNumber()
-}), Get_bottomNumber(), Get_topNumber())
+}), Get_bottomNumber(), Get_topNumber())))
 	})
 	return cache_boundedNumber
 }
@@ -107,11 +107,11 @@ var cache_boundedInt gopurs_runtime.Value
 var once_boundedInt sync.Once
 func Get_boundedInt() gopurs_runtime.Value {
 	once_boundedInt.Do(func() {
-		cache_boundedInt = gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_boundedInt = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict1("eq", pkg_Data_Eq.Get_eqIntImpl())
-}), gopurs_runtime.Apply3(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil}))
-}), Get_bottomInt(), Get_topInt())
+}), gopurs_runtime.Apply3(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil})))
+}), Get_bottomInt(), Get_topInt())))
 	})
 	return cache_boundedInt
 }
@@ -120,9 +120,9 @@ var cache_boundedChar gopurs_runtime.Value
 var once_boundedChar sync.Once
 func Get_boundedChar() gopurs_runtime.Value {
 	once_boundedChar.Do(func() {
-		cache_boundedChar = gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_boundedChar = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Ord.Get_ordChar()
-}), Get_bottomChar(), Get_topChar())
+}), Get_bottomChar(), Get_topChar())))
 	})
 	return cache_boundedChar
 }
@@ -131,9 +131,9 @@ var cache_boundedBoolean gopurs_runtime.Value
 var once_boundedBoolean sync.Once
 func Get_boundedBoolean() gopurs_runtime.Value {
 	once_boundedBoolean.Do(func() {
-		cache_boundedBoolean = gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_boundedBoolean = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Ord.Get_ordBoolean()
-}), gopurs_runtime.Bool(false), gopurs_runtime.Bool(true))
+}), gopurs_runtime.Bool(false), gopurs_runtime.Bool(true))))
 	})
 	return cache_boundedBoolean
 }
@@ -154,7 +154,7 @@ var once_boundedRecord sync.Once
 func Get_boundedRecord() gopurs_runtime.Value {
 	once_boundedRecord.Do(func() {
 		cache_boundedRecord = gopurs_runtime.Func2(func(_dollar__unused_0_box gopurs_runtime.Value, dictBoundedRecord_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_boundedRecord(_dollar__unused_0_box, dictBoundedRecord_1_box)
+return gopurs_runtime.Any(Call_boundedRecord(_dollar__unused_0_box, dictBoundedRecord_1_box))
 })
 	})
 	return cache_boundedRecord
@@ -165,21 +165,21 @@ var once_bottom sync.Once
 func Get_bottom() gopurs_runtime.Value {
 	once_bottom.Do(func() {
 		cache_bottom = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_bottom(dict_0_box)
+return gopurs_runtime.Any(Call_bottom(dict_0_box))
 })
 	})
 	return cache_bottom
 }
 
-var cache_bottom__gopurs_runtime_Value_1655760489 gopurs_runtime.Value
-var once_bottom__gopurs_runtime_Value_1655760489 sync.Once
-func Get_bottom__gopurs_runtime_Value_1655760489() gopurs_runtime.Value {
-	once_bottom__gopurs_runtime_Value_1655760489.Do(func() {
-		cache_bottom__gopurs_runtime_Value_1655760489 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_bottom__gopurs_runtime_Value_1655760489(dict_0_box)
+var cache_bottom__func_gopurs_runtime_Value__interface___1655760489 gopurs_runtime.Value
+var once_bottom__func_gopurs_runtime_Value__interface___1655760489 sync.Once
+func Get_bottom__func_gopurs_runtime_Value__interface___1655760489() gopurs_runtime.Value {
+	once_bottom__func_gopurs_runtime_Value__interface___1655760489.Do(func() {
+		cache_bottom__func_gopurs_runtime_Value__interface___1655760489 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Any(Call_bottom__func_gopurs_runtime_Value__interface___1655760489(dict_0_box))
 })
 	})
-	return cache_bottom__gopurs_runtime_Value_1655760489
+	return cache_bottom__func_gopurs_runtime_Value__interface___1655760489
 }
 
 var cache_boundedRecordCons gopurs_runtime.Value
@@ -193,22 +193,76 @@ return Call_boundedRecordCons(dictIsSymbol_0_box, dictBounded_1_box)
 	return cache_boundedRecordCons
 }
 
+var cache_bottomChar gopurs_runtime.Value
+var once_bottomChar sync.Once
+func Get_bottomChar() gopurs_runtime.Value {
+	once_bottomChar.Do(func() {
+		cache_bottomChar = gopurs_runtime.Str(BottomChar)
+	})
+	return cache_bottomChar
+}
+
+var cache_bottomInt gopurs_runtime.Value
+var once_bottomInt sync.Once
+func Get_bottomInt() gopurs_runtime.Value {
+	once_bottomInt.Do(func() {
+		cache_bottomInt = gopurs_runtime.Int(BottomInt)
+	})
+	return cache_bottomInt
+}
+
+var cache_bottomNumber gopurs_runtime.Value
+var once_bottomNumber sync.Once
+func Get_bottomNumber() gopurs_runtime.Value {
+	once_bottomNumber.Do(func() {
+		cache_bottomNumber = gopurs_runtime.Float(BottomNumber)
+	})
+	return cache_bottomNumber
+}
+
+var cache_topChar gopurs_runtime.Value
+var once_topChar sync.Once
+func Get_topChar() gopurs_runtime.Value {
+	once_topChar.Do(func() {
+		cache_topChar = gopurs_runtime.Str(TopChar)
+	})
+	return cache_topChar
+}
+
+var cache_topInt gopurs_runtime.Value
+var once_topInt sync.Once
+func Get_topInt() gopurs_runtime.Value {
+	once_topInt.Do(func() {
+		cache_topInt = gopurs_runtime.Int(TopInt)
+	})
+	return cache_topInt
+}
+
+var cache_topNumber gopurs_runtime.Value
+var once_topNumber sync.Once
+func Get_topNumber() gopurs_runtime.Value {
+	once_topNumber.Do(func() {
+		cache_topNumber = gopurs_runtime.Float(TopNumber)
+	})
+	return cache_topNumber
+}
+
 func Call_topRecord(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "topRecord")
 }
 
-func Call_top(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_top(dict_0_loop gopurs_runtime.Value) interface{} {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "top")
+return gopurs_runtime.UnboxAny(gopurs_runtime.RecordGet(dict_0, "top"))
 }
 
-func Call_top__gopurs_runtime_Value_1655760489(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_top__func_gopurs_runtime_Value__interface___1655760489(dict_0_loop gopurs_runtime.Value) interface{} {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "top")
+return gopurs_runtime.UnboxAny(gopurs_runtime.RecordGet(dict_0, "top"))
 }
 
 func Call_bottomRecord(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -217,34 +271,34 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "bottomRecord")
 }
 
-func Call_boundedRecord(_dollar__unused_0_loop gopurs_runtime.Value, dictBoundedRecord_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_boundedRecord(_dollar__unused_0_loop gopurs_runtime.Value, dictBoundedRecord_1_loop gopurs_runtime.Value) interface{} {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var dictBoundedRecord_1 gopurs_runtime.Value = dictBoundedRecord_1_loop
 _ = dictBoundedRecord_1
 __local_var_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedRecord_1, "OrdRecord0"), gopurs_runtime.Value{})
 _ = __local_var_2_0
-eqRec1_3_1 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_0, "EqRecord0"), gopurs_runtime.Value{}), "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}))
+eqRec1_3_1 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_0, "EqRecord0"), gopurs_runtime.Value{}), "eqRecord"), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil})))
 _ = eqRec1_3_1
 ordRecord1_4_2 := gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return eqRec1_3_1
-}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_0, "compareRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}))
+}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_0, "compareRecord"), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil})))
 _ = ordRecord1_4_2
-return gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return ordRecord1_4_2
-}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBoundedRecord_1, "bottomRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBoundedRecord_1, "topRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}))
+}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBoundedRecord_1, "bottomRecord"), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil})), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBoundedRecord_1, "topRecord"), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}))))
 }
 
-func Call_bottom(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_bottom(dict_0_loop gopurs_runtime.Value) interface{} {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "bottom")
+return gopurs_runtime.UnboxAny(gopurs_runtime.RecordGet(dict_0, "bottom"))
 }
 
-func Call_bottom__gopurs_runtime_Value_1655760489(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_bottom__func_gopurs_runtime_Value__interface___1655760489(dict_0_loop gopurs_runtime.Value) interface{} {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "bottom")
+return gopurs_runtime.UnboxAny(gopurs_runtime.RecordGet(dict_0, "bottom"))
 }
 
 func Call_boundedRecordCons(dictIsSymbol_0_loop gopurs_runtime.Value, dictBounded_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -266,21 +320,21 @@ _ = __local_var_9_4
 __local_var_10_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Ord0_4_2, "Eq0"), gopurs_runtime.Value{})
 _ = __local_var_10_5
 eqRowCons2_11_7 := gopurs_runtime.RecordDict1("eqRecord", gopurs_runtime.Func3(func(v_11 gopurs_runtime.Value, ra_12 gopurs_runtime.Value, rb_13 gopurs_runtime.Value) gopurs_runtime.Value {
-get_14_8 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}))
+get_14_8 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil})))
 _ = get_14_8
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_10_5, "eq"), gopurs_runtime.Apply(get_14_8, ra_12), gopurs_runtime.Apply(get_14_8, rb_13)), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_9_4, "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}, ra_12, rb_13))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_10_5, "eq"), gopurs_runtime.Apply(get_14_8, ra_12), gopurs_runtime.Apply(get_14_8, rb_13)), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_9_4, "eqRecord"), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}), ra_12, rb_13))
 }))
 _ = eqRowCons2_11_7
 ordRecordCons_11_6 := gopurs_runtime.RecordDict2("EqRecord0", "compareRecord", gopurs_runtime.Func(func(_dollar__unused_12 gopurs_runtime.Value) gopurs_runtime.Value {
 return eqRowCons2_11_7
 }), gopurs_runtime.Func3(func(v_12 gopurs_runtime.Value, ra_13 gopurs_runtime.Value, rb_14 gopurs_runtime.Value) gopurs_runtime.Value {
-key_15_9 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil})
+key_15_9 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}))
 _ = key_15_9
 left_16_10 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Ord0_4_2, "compare"), gopurs_runtime.Apply2(pkg_Record_Unsafe.Get_unsafeGet(), key_15_9, ra_13), gopurs_runtime.Apply2(pkg_Record_Unsafe.Get_unsafeGet(), key_15_9, rb_14))
 _ = left_16_10
 var __t11 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ordering.Get_eqOrdering(), "eq"), left_16_10, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}), gopurs_runtime.Bool(false)).IntVal) != (0) {
+if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ordering.Get_eqOrdering(), "eq"), left_16_10, gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil})), gopurs_runtime.Bool(false)).IntVal) != (0) {
 __t11 = left_16_10
 goto end_branch_11
 } else {
@@ -288,7 +342,7 @@ goto end_branch_11
 }
 }
 {
-__t11 = gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_8_3, "compareRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}, ra_13, rb_14)
+__t11 = gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_8_3, "compareRecord"), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}), ra_13, rb_14)
 }
 end_branch_11:
 return __t11
@@ -297,33 +351,9 @@ _ = ordRecordCons_11_6
 return gopurs_runtime.RecordDict3("OrdRecord0", "bottomRecord", "topRecord", gopurs_runtime.Func(func(_dollar__unused_12 gopurs_runtime.Value) gopurs_runtime.Value {
 return ordRecordCons_11_6
 }), gopurs_runtime.Func2(func(v_12 gopurs_runtime.Value, rowProxy_13 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}), bottom1_3_1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBoundedRecord_7, "bottomRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}, rowProxy_13))
+return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil})), bottom1_3_1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBoundedRecord_7, "bottomRecord"), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}), rowProxy_13))
 }), gopurs_runtime.Func2(func(v_12 gopurs_runtime.Value, rowProxy_13 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}), top1_2_0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBoundedRecord_7, "topRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}, rowProxy_13))
+return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil})), top1_2_0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBoundedRecord_7, "topRecord"), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}), rowProxy_13))
 }))
 })
-}
-
-func Get_bottomChar() gopurs_runtime.Value {
-	return _Gopurs_BottomChar
-}
-
-func Get_bottomInt() gopurs_runtime.Value {
-	return _Gopurs_BottomInt
-}
-
-func Get_bottomNumber() gopurs_runtime.Value {
-	return _Gopurs_BottomNumber
-}
-
-func Get_topChar() gopurs_runtime.Value {
-	return _Gopurs_TopChar
-}
-
-func Get_topInt() gopurs_runtime.Value {
-	return _Gopurs_TopInt
-}
-
-func Get_topNumber() gopurs_runtime.Value {
-	return _Gopurs_TopNumber
 }

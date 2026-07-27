@@ -103,7 +103,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Control_Monad_Reader_Class_monadAskFun
-$GLOBALS['Control_Monad_Reader_Class_monadAskFun'] = ["ask" => function($x_0) {
+$GLOBALS['Control_Monad_Reader_Class_monadAskFun'] = (object)["ask" => function($x_0) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
@@ -118,13 +118,13 @@ $GLOBALS['Control_Monad_Reader_Class_monadAskFun'] = ["ask" => function($x_0) {
 }];
 
 // Control_Monad_Reader_Class_monadReaderFun
-$GLOBALS['Control_Monad_Reader_Class_monadReaderFun'] = ["local" => (function() {
+$GLOBALS['Control_Monad_Reader_Class_monadReaderFun'] = (object)["local" => (function() {
   $__fn = function($f_0, $g_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($g_1, $f_0);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($g_1))($f_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -145,7 +145,7 @@ function majControl_majMonad_majReader_majClass_local($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['local'];
+  $__res = ($dict_0)->{'local'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -159,7 +159,7 @@ function majControl_majMonad_majReader_majClass_ask($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['ask'];
+  $__res = ($dict_0)->{'ask'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -173,10 +173,10 @@ function majControl_majMonad_majReader_majClass_asks($dictMonadAsk_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $ask1_1_0 = ($dictMonadAsk_0)['ask'];
+  $ask1_1_0 = ($dictMonadAsk_0)->{'ask'};
   $__res = function($f_2) use ($ask1_1_0, $dictMonadAsk_0) {
   $__num = \func_num_args();
-  $__res = (((((((((($dictMonadAsk_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])($f_2, $ask1_1_0);
+  $__res = ((((((((((($dictMonadAsk_0)->{'Monad0'})(null))->{'Bind1'})(null))->{'Apply0'})(null))->{'Functor0'})(null))->{'map'})($f_2))($ask1_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

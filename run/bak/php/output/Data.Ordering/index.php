@@ -98,9 +98,9 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
-final class Data_Ordering_LT { public function __construct() {} }
-final class Data_Ordering_GT { public function __construct() {} }
-final class Data_Ordering_EQ { public function __construct() {} }
+final class Data_Ordering_LT { public $tag = 'LT'; public function __construct() {} }
+final class Data_Ordering_GT { public $tag = 'GT'; public function __construct() {} }
+final class Data_Ordering_EQ { public $tag = 'EQ'; public function __construct() {} }
 
 // Data_Ordering_LT
 $GLOBALS['Data_Ordering_LT'] = ($GLOBALS['__phpurs_data0_LT'] ??= new \Data\Ordering\Data_Ordering_LT());
@@ -112,7 +112,7 @@ $GLOBALS['Data_Ordering_GT'] = ($GLOBALS['__phpurs_data0_GT'] ??= new \Data\Orde
 $GLOBALS['Data_Ordering_EQ'] = ($GLOBALS['__phpurs_data0_EQ'] ??= new \Data\Ordering\Data_Ordering_EQ());
 
 // Data_Ordering_showOrdering
-$GLOBALS['Data_Ordering_showOrdering'] = ["show" => function($v_0) {
+$GLOBALS['Data_Ordering_showOrdering'] = (object)["show" => function($v_0) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ($v_0 instanceof \Data\Ordering\Data_Ordering_LT) {
@@ -137,7 +137,7 @@ goto end_branch_0;;
 }];
 
 // Data_Ordering_semigroupOrdering
-$GLOBALS['Data_Ordering_semigroupOrdering'] = ["append" => (function() {
+$GLOBALS['Data_Ordering_semigroupOrdering'] = (object)["append" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -198,7 +198,7 @@ goto end_branch_0;;
 $GLOBALS['Data_Ordering_invert'] = __NAMESPACE__ . '\\majData_majOrdering_invert';
 
 // Data_Ordering_eqOrdering
-$GLOBALS['Data_Ordering_eqOrdering'] = ["eq" => (function() {
+$GLOBALS['Data_Ordering_eqOrdering'] = (object)["eq" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {

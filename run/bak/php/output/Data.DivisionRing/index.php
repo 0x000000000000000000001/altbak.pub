@@ -107,7 +107,7 @@ function majData_majDivisionmajRing_recip($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['recip'];
+  $__res = ($dict_0)->{'recip'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -121,7 +121,7 @@ function majData_majDivisionmajRing_rightmajDiv($dictDivisionRing_0, $a_1 = null
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((((($dictDivisionRing_0)['Ring0'])(null))['Semiring0'])(null))['mul'])($a_1, (($dictDivisionRing_0)['recip'])($b_2));
+  $__res = ((((((($dictDivisionRing_0)->{'Ring0'})(null))->{'Semiring0'})(null))->{'mul'})($a_1))((($dictDivisionRing_0)->{'recip'})($b_2));
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -135,7 +135,7 @@ function majData_majDivisionmajRing_leftmajDiv($dictDivisionRing_0, $a_1 = null,
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((((($dictDivisionRing_0)['Ring0'])(null))['Semiring0'])(null))['mul'])((($dictDivisionRing_0)['recip'])($b_2), $a_1);
+  $__res = ((((((($dictDivisionRing_0)->{'Ring0'})(null))->{'Semiring0'})(null))->{'mul'})((($dictDivisionRing_0)->{'recip'})($b_2)))($a_1);
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -143,9 +143,9 @@ function majData_majDivisionmajRing_leftmajDiv($dictDivisionRing_0, $a_1 = null,
 $GLOBALS['Data_DivisionRing_leftDiv'] = __NAMESPACE__ . '\\majData_majDivisionmajRing_leftmajDiv';
 
 // Data_DivisionRing_divisionringNumber
-$GLOBALS['Data_DivisionRing_divisionringNumber'] = ["recip" => function($x_0) {
+$GLOBALS['Data_DivisionRing_divisionringNumber'] = (object)["recip" => function($x_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])['div'])(1.0, $x_0);
+  $__res = ((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])->{'div'})(1.0))($x_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

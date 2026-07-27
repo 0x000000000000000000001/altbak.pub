@@ -112,11 +112,11 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
-final class Control_Monad_Rec_Class_Loop { public function __construct(public  $value0) {} }
-final class Control_Monad_Rec_Class_Done { public function __construct(public  $value0) {} }
+final class Control_Monad_Rec_Class_Loop { public $tag = 'Loop'; public function __construct(public  $value0) {} }
+final class Control_Monad_Rec_Class_Done { public $tag = 'Done'; public function __construct(public  $value0) {} }
 
 // Control_Monad_Rec_Class_discard
-$GLOBALS['Control_Monad_Rec_Class_discard'] = (($GLOBALS['Control_Bind_discardUnit'])['discard'])($GLOBALS['Effect_bindEffect']);
+$GLOBALS['Control_Monad_Rec_Class_discard'] = (($GLOBALS['Control_Bind_discardUnit'])->{'discard'})($GLOBALS['Effect_bindEffect']);
 
 // Control_Monad_Rec_Class_Loop
 $GLOBALS['Control_Monad_Rec_Class_Loop'] = function($value0) {
@@ -143,7 +143,7 @@ function majControl_majMonad_majRec_majClass_tailmajRecmajM($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['tailRecM'];
+  $__res = ($dict_0)->{'tailRecM'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -157,13 +157,13 @@ function majControl_majMonad_majRec_majClass_tailmajRecmajM2($dictMonadRec_0, $f
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (($dictMonadRec_0)['tailRecM'])(function($o_4) use ($f_1) {
+  $__res = ((($dictMonadRec_0)->{'tailRecM'})(function($o_4) use ($f_1) {
   $__num = \func_num_args();
-  $__res = ($f_1)(($o_4)['a'], ($o_4)['b']);
+  $__res = (($f_1)(($o_4)->{'a'}))(($o_4)->{'b'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, ["a" => $a_2, "b" => $b_3]);
+}))((object)["a" => $a_2, "b" => $b_3]);
   goto __end;;
   __end:
   return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -177,13 +177,13 @@ function majControl_majMonad_majRec_majClass_tailmajRecmajM3($dictMonadRec_0, $f
   if ($__num < 5) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
-  $__res = (($dictMonadRec_0)['tailRecM'])(function($o_5) use ($f_1) {
+  $__res = ((($dictMonadRec_0)->{'tailRecM'})(function($o_5) use ($f_1) {
   $__num = \func_num_args();
-  $__res = ($f_1)(($o_5)['a'], ($o_5)['b'], ($o_5)['c']);
+  $__res = ((($f_1)(($o_5)->{'a'}))(($o_5)->{'b'}))(($o_5)->{'c'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, ["a" => $a_2, "b" => $b_3, "c" => $c_4]);
+}))((object)["a" => $a_2, "b" => $b_3, "c" => $c_4]);
   goto __end;;
   __end:
   return 5 < $__num ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
@@ -197,12 +197,12 @@ function majControl_majMonad_majRec_majClass_untilmajJust($dictMonadRec_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (((((((($dictMonadRec_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null);
+  $__local_var_1_0 = (((((((($dictMonadRec_0)->{'Monad0'})(null))->{'Bind1'})(null))->{'Apply0'})(null))->{'Functor0'})(null);
   $__res = function($m_2) use ($__local_var_1_0, $dictMonadRec_0) {
   $__num = \func_num_args();
-  $__res = (($dictMonadRec_0)['tailRecM'])(function($v_3) use ($__local_var_1_0, $m_2) {
+  $__res = ((($dictMonadRec_0)->{'tailRecM'})(function($v_3) use ($__local_var_1_0, $m_2) {
   $__num = \func_num_args();
-  $__res = (($__local_var_1_0)['map'])(function($v1_4) {
+  $__res = ((($__local_var_1_0)->{'map'})(function($v1_4) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ($v1_4 instanceof \Data\Maybe\Data_Maybe_Nothing) {
@@ -220,11 +220,11 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, $m_2);
+}))($m_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, $GLOBALS['Data_Unit_unit']);
+}))($GLOBALS['Data_Unit_unit']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -242,15 +242,15 @@ function majControl_majMonad_majRec_majClass_whilemajJust($dictMonoid_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $mempty_1_0 = ($dictMonoid_0)['mempty'];
+  $mempty_1_0 = ($dictMonoid_0)->{'mempty'};
   $__res = function($dictMonadRec_2) use ($dictMonoid_0, $mempty_1_0) {
   $__num = \func_num_args();
-  $__local_var_3_1 = (((((((($dictMonadRec_2)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null);
+  $__local_var_3_1 = (((((((($dictMonadRec_2)->{'Monad0'})(null))->{'Bind1'})(null))->{'Apply0'})(null))->{'Functor0'})(null);
   $__res = function($m_4) use ($__local_var_3_1, $dictMonadRec_2, $dictMonoid_0, $mempty_1_0) {
   $__num = \func_num_args();
-  $__res = (($dictMonadRec_2)['tailRecM'])(function($v_5) use ($__local_var_3_1, $dictMonoid_0, $m_4) {
+  $__res = ((($dictMonadRec_2)->{'tailRecM'})(function($v_5) use ($__local_var_3_1, $dictMonoid_0, $m_4) {
   $__num = \func_num_args();
-  $__res = (($__local_var_3_1)['map'])(function($v1_6) use ($dictMonoid_0, $v_5) {
+  $__res = ((($__local_var_3_1)->{'map'})(function($v1_6) use ($dictMonoid_0, $v_5) {
   $__num = \func_num_args();
   $__t2 = null;;
   if ($v1_6 instanceof \Data\Maybe\Data_Maybe_Nothing) {
@@ -258,7 +258,7 @@ $__t2 = new \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Done($v_5);
 goto end_branch_2;;
 };
   if ($v1_6 instanceof \Data\Maybe\Data_Maybe_Just) {
-$__t2 = new \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Loop((((($dictMonoid_0)['Semigroup0'])(null))['append'])($v_5, ($v1_6)->{'value0'}));
+$__t2 = new \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Loop(((((($dictMonoid_0)->{'Semigroup0'})(null))->{'append'})($v_5))(($v1_6)->{'value0'}));
 goto end_branch_2;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -268,11 +268,11 @@ goto end_branch_2;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, $m_4);
+}))($m_4);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, $mempty_1_0);
+}))($mempty_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -320,7 +320,7 @@ goto end_branch_0;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($go__1_0, $f_0);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($go__1_0))($f_0);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -334,13 +334,13 @@ function majControl_majMonad_majRec_majClass_tailmajRec2($f_0, $a_1 = null, $b_2
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($GLOBALS['Control_Monad_Rec_Class_tailRec'])(function($o_3) use ($f_0) {
+  $__res = \Control\Monad\Rec\Class\majControl_majMonad_majRec_majClass_tailmajRec(function($o_3) use ($f_0) {
   $__num = \func_num_args();
-  $__res = ($f_0)(($o_3)['a'], ($o_3)['b']);
+  $__res = (($f_0)(($o_3)->{'a'}))(($o_3)->{'b'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, ["a" => $a_1, "b" => $b_2]);
+}, (object)["a" => $a_1, "b" => $b_2]);
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -354,13 +354,13 @@ function majControl_majMonad_majRec_majClass_tailmajRec3($f_0, $a_1 = null, $b_2
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ($GLOBALS['Control_Monad_Rec_Class_tailRec'])(function($o_4) use ($f_0) {
+  $__res = \Control\Monad\Rec\Class\majControl_majMonad_majRec_majClass_tailmajRec(function($o_4) use ($f_0) {
   $__num = \func_num_args();
-  $__res = ($f_0)(($o_4)['a'], ($o_4)['b'], ($o_4)['c']);
+  $__res = ((($f_0)(($o_4)->{'a'}))(($o_4)->{'b'}))(($o_4)->{'c'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, ["a" => $a_1, "b" => $b_2, "c" => $c_3]);
+}, (object)["a" => $a_1, "b" => $b_2, "c" => $c_3]);
   goto __end;;
   __end:
   return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -368,13 +368,13 @@ function majControl_majMonad_majRec_majClass_tailmajRec3($f_0, $a_1 = null, $b_2
 $GLOBALS['Control_Monad_Rec_Class_tailRec3'] = __NAMESPACE__ . '\\majControl_majMonad_majRec_majClass_tailmajRec3';
 
 // Control_Monad_Rec_Class_monadRecMaybe
-$GLOBALS['Control_Monad_Rec_Class_monadRecMaybe'] = ["tailRecM" => (function() {
+$GLOBALS['Control_Monad_Rec_Class_monadRecMaybe'] = (object)["tailRecM" => (function() {
   $__fn = function($f_0, $a0_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Monad_Rec_Class_tailRec'])(function($v_2) use ($f_0) {
+  $__res = \Control\Monad\Rec\Class\majControl_majMonad_majRec_majClass_tailmajRec(function($v_2) use ($f_0) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ($v_2 instanceof \Data\Maybe\Data_Maybe_Nothing) {
@@ -419,15 +419,15 @@ goto end_branch_0;;
 }];
 
 // Control_Monad_Rec_Class_monadRecIdentity
-$GLOBALS['Control_Monad_Rec_Class_monadRecIdentity'] = ["tailRecM" => function($f_0) {
+$GLOBALS['Control_Monad_Rec_Class_monadRecIdentity'] = (object)["tailRecM" => function($f_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity'], ($GLOBALS['Control_Monad_Rec_Class_tailRec'])(($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_1) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity']))(($GLOBALS['Control_Monad_Rec_Class_tailRec'])((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_1) {
   $__num = \func_num_args();
   $__res = $v_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, $f_0)));
+}))($f_0)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -440,15 +440,15 @@ $GLOBALS['Control_Monad_Rec_Class_monadRecIdentity'] = ["tailRecM" => function($
 }];
 
 // Control_Monad_Rec_Class_monadRecFunction
-$GLOBALS['Control_Monad_Rec_Class_monadRecFunction'] = ["tailRecM" => (function() {
+$GLOBALS['Control_Monad_Rec_Class_monadRecFunction'] = (object)["tailRecM" => (function() {
   $__fn = function($f_0, $a0_1 = null, $e_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($GLOBALS['Control_Monad_Rec_Class_tailRec'])(function($a_3) use ($e_2, $f_0) {
+  $__res = \Control\Monad\Rec\Class\majControl_majMonad_majRec_majClass_tailmajRec(function($a_3) use ($e_2, $f_0) {
   $__num = \func_num_args();
-  $__res = ($f_0)($a_3, $e_2);
+  $__res = (($f_0)($a_3))($e_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -467,13 +467,13 @@ $GLOBALS['Control_Monad_Rec_Class_monadRecFunction'] = ["tailRecM" => (function(
 }];
 
 // Control_Monad_Rec_Class_monadRecEither
-$GLOBALS['Control_Monad_Rec_Class_monadRecEither'] = ["tailRecM" => (function() {
+$GLOBALS['Control_Monad_Rec_Class_monadRecEither'] = (object)["tailRecM" => (function() {
   $__fn = function($f_0, $a0_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Monad_Rec_Class_tailRec'])(function($v_2) use ($f_0) {
+  $__res = \Control\Monad\Rec\Class\majControl_majMonad_majRec_majClass_tailmajRec(function($v_2) use ($f_0) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ($v_2 instanceof \Data\Either\Data_Either_Left) {
@@ -518,23 +518,23 @@ goto end_branch_0;;
 }];
 
 // Control_Monad_Rec_Class_monadRecEffect
-$GLOBALS['Control_Monad_Rec_Class_monadRecEffect'] = ["tailRecM" => (function() {
+$GLOBALS['Control_Monad_Rec_Class_monadRecEffect'] = (object)["tailRecM" => (function() {
   $__fn = function($f_0, $a_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Effect_bindEffect'])['bind'])((($GLOBALS['Effect_bindEffect'])['bind'])(($f_0)($a_1), $GLOBALS['Effect_Ref__new']), function($r_2) use ($f_0) {
+  $__res = ((($GLOBALS['Effect_bindEffect'])->{'bind'})(((($GLOBALS['Effect_bindEffect'])->{'bind'})(($f_0)($a_1)))($GLOBALS['Effect_Ref__new'])))(function($r_2) use ($f_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_Rec_Class_discard'])(($GLOBALS['Effect_untilE'])((($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Effect_Ref_read'])($r_2), function($v_3) use ($f_0, $r_2) {
+  $__res = (($GLOBALS['Control_Monad_Rec_Class_discard'])(\Effect\majEffect_untilmajE(((($GLOBALS['Effect_bindEffect'])->{'bind'})(\Effect\Ref\majEffect_majRef_read($r_2)))(function($v_3) use ($f_0, $r_2) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ($v_3 instanceof \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Loop) {
-$__t0 = (($GLOBALS['Effect_bindEffect'])['bind'])(($f_0)(($v_3)->{'value0'}), function($e_4) use ($r_2) {
+$__t0 = ((($GLOBALS['Effect_bindEffect'])->{'bind'})(($f_0)(($v_3)->{'value0'})))(function($e_4) use ($r_2) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Effect_Ref_write'])($e_4, $r_2), function($_dollar__unused_5) {
+  $__res = ((($GLOBALS['Effect_bindEffect'])->{'bind'})(\Effect\Ref\majEffect_majRef_write($e_4, $r_2)))(function($_dollar__unused_5) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_applicativeEffect'])['pure'])(false);
+  $__res = (($GLOBALS['Effect_applicativeEffect'])->{'pure'})(false);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -546,7 +546,7 @@ $__t0 = (($GLOBALS['Effect_bindEffect'])['bind'])(($f_0)(($v_3)->{'value0'}), fu
 goto end_branch_0;;
 };
   if ($v_3 instanceof \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Done) {
-$__t0 = (($GLOBALS['Effect_applicativeEffect'])['pure'])(true);
+$__t0 = (($GLOBALS['Effect_applicativeEffect'])->{'pure'})(true);
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -556,9 +556,9 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-})), function($_dollar__unused_3) use ($r_2) {
+}))))(function($_dollar__unused_3) use ($r_2) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_functorEffect'])['map'])(function($v_4) {
+  $__res = ((($GLOBALS['Effect_functorEffect'])->{'map'})(function($v_4) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ($v_4 instanceof \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Done) {
@@ -572,7 +572,7 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, ($GLOBALS['Effect_Ref_read'])($r_2));
+}))(\Effect\Ref\majEffect_majRef_read($r_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -601,7 +601,7 @@ function majControl_majMonad_majRec_majClass_loop3($a_0, $b_1 = null, $c_2 = nul
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = new \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Loop(["a" => $a_0, "b" => $b_1, "c" => $c_2]);
+  $__res = new \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Loop((object)["a" => $a_0, "b" => $b_1, "c" => $c_2]);
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -615,7 +615,7 @@ function majControl_majMonad_majRec_majClass_loop2($a_0, $b_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = new \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Loop(["a" => $a_0, "b" => $b_1]);
+  $__res = new \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Loop((object)["a" => $a_0, "b" => $b_1]);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -623,7 +623,7 @@ function majControl_majMonad_majRec_majClass_loop2($a_0, $b_1 = null) {
 $GLOBALS['Control_Monad_Rec_Class_loop2'] = __NAMESPACE__ . '\\majControl_majMonad_majRec_majClass_loop2';
 
 // Control_Monad_Rec_Class_functorStep
-$GLOBALS['Control_Monad_Rec_Class_functorStep'] = ["map" => (function() {
+$GLOBALS['Control_Monad_Rec_Class_functorStep'] = (object)["map" => (function() {
   $__fn = function($f_0, $m_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -656,22 +656,22 @@ function majControl_majMonad_majRec_majClass_forever($dictMonadRec_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (((((((($dictMonadRec_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null);
+  $__local_var_1_0 = (((((((($dictMonadRec_0)->{'Monad0'})(null))->{'Bind1'})(null))->{'Apply0'})(null))->{'Functor0'})(null);
   $__res = function($ma_2) use ($__local_var_1_0, $dictMonadRec_0) {
   $__num = \func_num_args();
-  $__res = (($dictMonadRec_0)['tailRecM'])(function($u_3) use ($__local_var_1_0, $ma_2) {
+  $__res = ((($dictMonadRec_0)->{'tailRecM'})(function($u_3) use ($__local_var_1_0, $ma_2) {
   $__num = \func_num_args();
-  $__res = (($__local_var_1_0)['map'])(function($v_4) use ($u_3) {
+  $__res = ((($__local_var_1_0)->{'map'})(function($v_4) use ($u_3) {
   $__num = \func_num_args();
   $__res = new \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Loop($u_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, $ma_2);
+}))($ma_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, $GLOBALS['Data_Unit_unit']);
+}))($GLOBALS['Data_Unit_unit']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -683,7 +683,7 @@ function majControl_majMonad_majRec_majClass_forever($dictMonadRec_0) {
 $GLOBALS['Control_Monad_Rec_Class_forever'] = __NAMESPACE__ . '\\majControl_majMonad_majRec_majClass_forever';
 
 // Control_Monad_Rec_Class_bifunctorStep
-$GLOBALS['Control_Monad_Rec_Class_bifunctorStep'] = ["bimap" => (function() {
+$GLOBALS['Control_Monad_Rec_Class_bifunctorStep'] = (object)["bimap" => (function() {
   $__fn = function($v_0, $v1_1 = null, $v2_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {

@@ -151,7 +151,7 @@ function majData_majSet_union($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $compare_1_0 = ($dictOrd_0)['compare'];
+  $compare_1_0 = ($dictOrd_0)->{'compare'};
   $__res = (function() use ($compare_1_0) {
   $__fn = function($m1_2, $m2_3 = null) use ($compare_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -185,7 +185,7 @@ function majData_majSet_toggle($dictOrd_0) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($alter_1_0)(function($v2_4) {
+  $__res = ((($alter_1_0)(function($v2_4) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ($v2_4 instanceof \Data\Maybe\Data_Maybe_Nothing) {
@@ -203,7 +203,7 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, $a_2, $v_3);
+}))($a_2))($v_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -237,7 +237,7 @@ function majData_majSet_tomajList($v_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Data_Map_Internal_keys'])($v_0);
+  $__res = \Data\Map\Internal\majData_majMap_majInternal_keys($v_0);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -251,7 +251,7 @@ function majData_majSet_tomajUnfoldable($dictUnfoldable_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_List_toUnfoldable'])($dictUnfoldable_0), $GLOBALS['Data_Set_toList']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_List_toUnfoldable'])($dictUnfoldable_0)))($GLOBALS['Data_Set_toList']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -259,7 +259,7 @@ function majData_majSet_tomajUnfoldable($dictUnfoldable_0) {
 $GLOBALS['Data_Set_toUnfoldable'] = __NAMESPACE__ . '\\majData_majSet_tomajUnfoldable';
 
 // Data_Set_toUnfoldable1
-$GLOBALS['Data_Set_toUnfoldable1'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_List_toUnfoldable'])($GLOBALS['Data_Unfoldable_unfoldableArray']), $GLOBALS['Data_Set_toList']);
+$GLOBALS['Data_Set_toUnfoldable1'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_List_toUnfoldable'])($GLOBALS['Data_Unfoldable_unfoldableArray'])))($GLOBALS['Data_Set_toList']);
 
 // Data_Set_size_closure
 $GLOBALS['Data_Set_size_closure'] = $GLOBALS['Data_Map_Internal_size'];
@@ -299,9 +299,9 @@ function majData_majSet_showmajSet($dictShow_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["show" => function($s_1) use ($dictShow_0) {
+  $__res = (object)["show" => function($s_1) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(fromFoldable ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])(($GLOBALS['Data_Show_showArrayImpl'])(($dictShow_0)['show'], ($GLOBALS['Data_Set_toUnfoldable1'])($s_1)), ")"));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(fromFoldable "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(\Data\Show\majData_majShow_showmajArraymajImpl(($dictShow_0)->{'show'}, ($GLOBALS['Data_Set_toUnfoldable1'])($s_1))))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -319,8 +319,8 @@ function majData_majSet_semigroupmajSet($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $compare_1_0 = ($dictOrd_0)['compare'];
-  $__res = ["append" => (function() use ($compare_1_0) {
+  $compare_1_0 = ($dictOrd_0)->{'compare'};
+  $__res = (object)["append" => (function() use ($compare_1_0) {
   $__fn = function($m1_2, $m2_3 = null) use ($compare_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -358,7 +358,7 @@ $__t0 = false;
 goto end_branch_0;;
 };
   if ($v_3 instanceof \Data\Map\Internal\Data_Map_Internal_Node) {
-$v1_4_1 = (($dictOrd_0)['compare'])($k_1, ($v_3)->{'value2'});
+$v1_4_1 = ((($dictOrd_0)->{'compare'})($k_1))(($v_3)->{'value2'});
 $__t2 = null;;
 if ($v1_4_1 instanceof \Data\Ordering\Data_Ordering_LT) {
 $__tco_3 = ($v_3)->{'value4'};
@@ -423,7 +423,7 @@ function majData_majSet_intersection($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $compare_1_0 = ($dictOrd_0)['compare'];
+  $compare_1_0 = ($dictOrd_0)->{'compare'};
   $__res = (function() use ($compare_1_0) {
   $__fn = function($m1_2, $m2_3 = null) use ($compare_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -450,7 +450,7 @@ function majData_majSet_insert($dictOrd_0, $a_1 = null, $v_2 = null) {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($GLOBALS['Data_Map_Internal_insert'])($dictOrd_0, $a_1, $GLOBALS['Data_Unit_unit'], $v_2);
+  $__res = \Data\Map\Internal\majData_majMap_majInternal_insert($dictOrd_0, $a_1, $GLOBALS['Data_Unit_unit'], $v_2);
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -475,12 +475,12 @@ function majData_majSet_frommajMap($v_0) {
 $GLOBALS['Data_Set_fromMap'] = __NAMESPACE__ . '\\majData_majSet_frommajMap';
 
 // Data_Set_foldableSet
-$GLOBALS['Data_Set_foldableSet'] = ["foldMap" => function($dictMonoid_0) {
+$GLOBALS['Data_Set_foldableSet'] = (object)["foldMap" => function($dictMonoid_0) {
   $__num = \func_num_args();
-  $foldMap1_1_0 = (($GLOBALS['Data_List_Types_foldableList'])['foldMap'])($dictMonoid_0);
+  $foldMap1_1_0 = (($GLOBALS['Data_List_Types_foldableList'])->{'foldMap'})($dictMonoid_0);
   $__res = function($f_2) use ($foldMap1_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($foldMap1_1_0)($f_2), $GLOBALS['Data_Set_toList']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($foldMap1_1_0)($f_2)))($GLOBALS['Data_Set_toList']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -494,7 +494,7 @@ $GLOBALS['Data_Set_foldableSet'] = ["foldMap" => function($dictMonoid_0) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_List_Types_foldableList'])['foldl'])($f_0, $x_1), $GLOBALS['Data_Set_toList']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(((($GLOBALS['Data_List_Types_foldableList'])->{'foldl'})($f_0))($x_1)))($GLOBALS['Data_Set_toList']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -506,7 +506,7 @@ $GLOBALS['Data_Set_foldableSet'] = ["foldMap" => function($dictMonoid_0) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_List_Types_foldableList'])['foldr'])($f_0, $x_1), $GLOBALS['Data_Set_toList']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(((($GLOBALS['Data_List_Types_foldableList'])->{'foldr'})($f_0))($x_1)))($GLOBALS['Data_Set_toList']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -521,13 +521,13 @@ function majData_majSet_findmajMin($v_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($v1_1) {
+  $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])->{'map'})(function($v1_1) {
   $__num = \func_num_args();
-  $__res = ($v1_1)['key'];
+  $__res = ($v1_1)->{'key'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, ($GLOBALS['Data_Map_Internal_findMin'])($v_0));
+}))(\Data\Map\Internal\majData_majMap_majInternal_findmajMin($v_0));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -541,13 +541,13 @@ function majData_majSet_findmajMax($v_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($v1_1) {
+  $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])->{'map'})(function($v1_1) {
   $__num = \func_num_args();
-  $__res = ($v1_1)['key'];
+  $__res = ($v1_1)->{'key'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, ($GLOBALS['Data_Map_Internal_findMax'])($v_0));
+}))(\Data\Map\Internal\majData_majMap_majInternal_findmajMax($v_0));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -575,13 +575,13 @@ function majData_majSet_eqmajSet($dictEq_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["eq" => (function() use ($dictEq_0) {
+  $__res = (object)["eq" => (function() use ($dictEq_0) {
   $__fn = function($v_1, $v1_2 = null) use ($dictEq_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Map_Internal_eqMap'])($dictEq_0, $GLOBALS['Data_Eq_eqUnit']))['eq'])($v_1, $v1_2);
+  $__res = (((\Data\Map\Internal\majData_majMap_majInternal_eqmajMap($dictEq_0, $GLOBALS['Data_Eq_eqUnit']))->{'eq'})($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -601,27 +601,27 @@ function majData_majSet_ordmajSet($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($dictOrd_0)['Eq0'])(null);
-  $eqSet1_2_1 = ["eq" => (function() use ($__local_var_1_0) {
+  $__local_var_1_0 = (($dictOrd_0)->{'Eq0'})(null);
+  $eqSet1_2_1 = (object)["eq" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2, $v1_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Map_Internal_eqMap'])($__local_var_1_0, $GLOBALS['Data_Eq_eqUnit']))['eq'])($v_2, $v1_3);
+  $__res = (((\Data\Map\Internal\majData_majMap_majInternal_eqmajMap($__local_var_1_0, $GLOBALS['Data_Eq_eqUnit']))->{'eq'})($v_2))($v1_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = ["compare" => (function() use ($dictOrd_0) {
+  $__res = (object)["compare" => (function() use ($dictOrd_0) {
   $__fn = function($s1_3, $s2_4 = null) use ($dictOrd_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_List_Types_ordList'])($dictOrd_0))['compare'])(($GLOBALS['Data_Map_Internal_keys'])($s1_3), ($GLOBALS['Data_Map_Internal_keys'])($s2_4));
+  $__res = (((\Data\List\Types\majData_majList_majTypes_ordmajList($dictOrd_0))->{'compare'})(\Data\Map\Internal\majData_majMap_majInternal_keys($s1_3)))(\Data\Map\Internal\majData_majMap_majInternal_keys($s2_4));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -641,13 +641,13 @@ function majData_majSet_ordmajSet($dictOrd_0) {
 $GLOBALS['Data_Set_ordSet'] = __NAMESPACE__ . '\\majData_majSet_ordmajSet';
 
 // Data_Set_eq1Set
-$GLOBALS['Data_Set_eq1Set'] = ["eq1" => (function() {
+$GLOBALS['Data_Set_eq1Set'] = (object)["eq1" => (function() {
   $__fn = function($dictEq_0, $v_1 = null, $v1_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Data_Map_Internal_eqMap'])($dictEq_0, $GLOBALS['Data_Eq_eqUnit']))['eq'])($v_1, $v1_2);
+  $__res = (((\Data\Map\Internal\majData_majMap_majInternal_eqmajMap($dictEq_0, $GLOBALS['Data_Eq_eqUnit']))->{'eq'})($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -656,9 +656,9 @@ $GLOBALS['Data_Set_eq1Set'] = ["eq1" => (function() {
 })()];
 
 // Data_Set_ord1Set
-$GLOBALS['Data_Set_ord1Set'] = ["compare1" => function($dictOrd_0) {
+$GLOBALS['Data_Set_ord1Set'] = (object)["compare1" => function($dictOrd_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Set_ordSet'])($dictOrd_0))['compare'];
+  $__res = (\Data\Set\majData_majSet_ordmajSet($dictOrd_0))->{'compare'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -680,19 +680,19 @@ function majData_majSet_frommajFoldable($dictFoldable_0, $dictOrd_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictFoldable_0)['foldl'])((function() use ($dictOrd_1) {
+  $__res = ((($dictFoldable_0)->{'foldl'})((function() use ($dictOrd_1) {
   $__fn = function($m_2, $a_3 = null) use ($dictOrd_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Map_Internal_insert'])($dictOrd_1, $a_3, $GLOBALS['Data_Unit_unit'], $m_2);
+  $__res = \Data\Map\Internal\majData_majMap_majInternal_insert($dictOrd_1, $a_3, $GLOBALS['Data_Unit_unit'], $m_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), new \Data\Map\Internal\Data_Map_Internal_Leaf());
+})()))(new \Data\Map\Internal\Data_Map_Internal_Leaf());
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -706,19 +706,19 @@ function majData_majSet_map($dictOrd_0, $f_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Set_foldableSet'])['foldl'])((function() use ($dictOrd_0, $f_1) {
+  $__res = ((($GLOBALS['Data_Set_foldableSet'])->{'foldl'})((function() use ($dictOrd_0, $f_1) {
   $__fn = function($m_2, $a_3 = null) use ($dictOrd_0, $f_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Map_Internal_insert'])($dictOrd_0, ($f_1)($a_3), $GLOBALS['Data_Unit_unit'], $m_2);
+  $__res = \Data\Map\Internal\majData_majMap_majInternal_insert($dictOrd_0, ($f_1)($a_3), $GLOBALS['Data_Unit_unit'], $m_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), new \Data\Map\Internal\Data_Map_Internal_Leaf());
+})()))(new \Data\Map\Internal\Data_Map_Internal_Leaf());
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -732,7 +732,7 @@ function majData_majSet_mapmajMaybe($dictOrd_0, $f_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Set_foldableSet'])['foldr'])((function() use ($dictOrd_0, $f_1) {
+  $__res = ((($GLOBALS['Data_Set_foldableSet'])->{'foldr'})((function() use ($dictOrd_0, $f_1) {
   $__fn = function($a_2, $acc_3 = null) use ($dictOrd_0, $f_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -745,7 +745,7 @@ $__t1 = $acc_3;
 goto end_branch_1;;
 };
   if ($__local_var_4_0 instanceof \Data\Maybe\Data_Maybe_Just) {
-$__t1 = ($GLOBALS['Data_Map_Internal_insert'])($dictOrd_0, ($__local_var_4_0)->{'value0'}, $GLOBALS['Data_Unit_unit'], $acc_3);
+$__t1 = \Data\Map\Internal\majData_majMap_majInternal_insert($dictOrd_0, ($__local_var_4_0)->{'value0'}, $GLOBALS['Data_Unit_unit'], $acc_3);
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -757,7 +757,7 @@ goto end_branch_1;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), new \Data\Map\Internal\Data_Map_Internal_Leaf());
+})()))(new \Data\Map\Internal\Data_Map_Internal_Leaf());
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -771,8 +771,8 @@ function majData_majSet_monoidmajSet($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $compare_1_0 = ($dictOrd_0)['compare'];
-  $semigroupSet1_1_0 = ["append" => (function() use ($compare_1_0) {
+  $compare_1_0 = ($dictOrd_0)->{'compare'};
+  $semigroupSet1_1_0 = (object)["append" => (function() use ($compare_1_0) {
   $__fn = function($m1_2, $m2_3 = null) use ($compare_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -785,7 +785,7 @@ function majData_majSet_monoidmajSet($dictOrd_0) {
   };
   return $__fn;
 })()];
-  $__res = ["mempty" => new \Data\Map\Internal\Data_Map_Internal_Leaf(), "Semigroup0" => function($_dollar__unused_2) use ($semigroupSet1_1_0) {
+  $__res = (object)["mempty" => new \Data\Map\Internal\Data_Map_Internal_Leaf(), "Semigroup0" => function($_dollar__unused_2) use ($semigroupSet1_1_0) {
   $__num = \func_num_args();
   $__res = $semigroupSet1_1_0;
   goto __end;;
@@ -805,8 +805,8 @@ function majData_majSet_unions($dictFoldable_0, $dictOrd_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $compare_2_0 = ($dictOrd_1)['compare'];
-  $__res = (($dictFoldable_0)['foldl'])((function() use ($compare_2_0) {
+  $compare_2_0 = ($dictOrd_1)->{'compare'};
+  $__res = ((($dictFoldable_0)->{'foldl'})((function() use ($compare_2_0) {
   $__fn = function($m1_3, $m2_4 = null) use ($compare_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -818,7 +818,7 @@ function majData_majSet_unions($dictFoldable_0, $dictOrd_1 = null) {
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})(), new \Data\Map\Internal\Data_Map_Internal_Leaf());
+})()))(new \Data\Map\Internal\Data_Map_Internal_Leaf());
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -832,7 +832,7 @@ function majData_majSet_difference($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $compare_1_0 = ($dictOrd_0)['compare'];
+  $compare_1_0 = ($dictOrd_0)->{'compare'};
   $__res = (function() use ($compare_1_0) {
   $__fn = function($m1_2, $m2_3 = null) use ($compare_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -859,7 +859,7 @@ function majData_majSet_subset($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $compare_1_0 = ($dictOrd_0)['compare'];
+  $compare_1_0 = ($dictOrd_0)->{'compare'};
   $__res = (function() use ($compare_1_0) {
   $__fn = function($s1_2, $s2_3 = null) use ($compare_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -886,7 +886,7 @@ function majData_majSet_propermajSubset($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $compare_1_0 = ($dictOrd_0)['compare'];
+  $compare_1_0 = ($dictOrd_0)->{'compare'};
   $__res = (function() use ($compare_1_0) {
   $__fn = function($s1_2, $s2_3 = null) use ($compare_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -917,7 +917,7 @@ goto end_branch_2;;
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
   $__t2 = null;
   end_branch_2:;
-  $__res = (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])((($GLOBALS['Data_Eq_eqBoolean'])['eq'])(($__t1 === $__t2), false), ($GLOBALS['Data_Map_Internal_unsafeDifference'])($compare_1_0, $s1_2, $s2_3) instanceof \Data\Map\Internal\Data_Map_Internal_Leaf);
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($GLOBALS['Data_Eq_eqBoolean'])->{'eq'})(($__t1 === $__t2)))(false)))(($GLOBALS['Data_Map_Internal_unsafeDifference'])($compare_1_0, $s1_2, $s2_3) instanceof \Data\Map\Internal\Data_Map_Internal_Leaf);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -965,7 +965,7 @@ function majData_majSet_catmajMaybes($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Data_Set_mapMaybe'])($dictOrd_0, $GLOBALS['Data_Set_identity']);
+  $__res = (($GLOBALS['Data_Set_mapMaybe'])($dictOrd_0))($GLOBALS['Data_Set_identity']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

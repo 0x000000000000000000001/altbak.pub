@@ -107,7 +107,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Data_Date_Component_Gen_fromJust
-function majData_majDate_majComponent_majGen_frommajJust($v_0) {
+function majData_majDate_majComponent_majGen_frommajJust($v_0): int|\Closure {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majDate_majComponent_majGen_frommajJust';
   if ($__num < 1) {
@@ -135,7 +135,7 @@ function majData_majDate_majComponent_majGen_genmajYear($dictMonadGen_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (((((((((($dictMonadGen_0)['Monad0'])(null))['Bind1'])(null))['Apply0'])(null))['Functor0'])(null))['map'])(($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Date_Component_Gen_fromJust'], ($GLOBALS['Data_Date_Component_boundedEnumYear'])['toEnum']), (($dictMonadGen_0)['chooseInt'])(1900, 2100));
+  $__res = ((((((((((($dictMonadGen_0)->{'Monad0'})(null))->{'Bind1'})(null))->{'Apply0'})(null))->{'Functor0'})(null))->{'map'})((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Date_Component_Gen_fromJust']))(($GLOBALS['Data_Date_Component_boundedEnumYear'])->{'toEnum'})))(((($dictMonadGen_0)->{'chooseInt'})(1900))(2100));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -149,7 +149,7 @@ function majData_majDate_majComponent_majGen_genmajWeekday($dictMonadGen_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Data_Enum_Gen_genBoundedEnum'])($dictMonadGen_0, $GLOBALS['Data_Date_Component_boundedEnumWeekday']);
+  $__res = \Data\Enum\Gen\majData_majEnum_majGen_genmajBoundedmajEnum($dictMonadGen_0, $GLOBALS['Data_Date_Component_boundedEnumWeekday']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -163,7 +163,7 @@ function majData_majDate_majComponent_majGen_genmajMonth($dictMonadGen_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Data_Enum_Gen_genBoundedEnum'])($dictMonadGen_0, $GLOBALS['Data_Date_Component_boundedEnumMonth']);
+  $__res = \Data\Enum\Gen\majData_majEnum_majGen_genmajBoundedmajEnum($dictMonadGen_0, $GLOBALS['Data_Date_Component_boundedEnumMonth']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -177,7 +177,7 @@ function majData_majDate_majComponent_majGen_genmajDay($dictMonadGen_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Data_Enum_Gen_genBoundedEnum'])($dictMonadGen_0, $GLOBALS['Data_Date_Component_boundedEnumDay']);
+  $__res = \Data\Enum\Gen\majData_majEnum_majGen_genmajBoundedmajEnum($dictMonadGen_0, $GLOBALS['Data_Date_Component_boundedEnumDay']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

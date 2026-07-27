@@ -116,7 +116,7 @@ function majData_majComparison_append($f_0, $g_1 = null, $x_2 = null) {
   $__local_var_4_1 = ($g_1)($x_2);
   $__res = function($x_5) use ($__local_var_3_0, $__local_var_4_1) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Ordering_semigroupOrdering'])['append'])(($__local_var_3_0)($x_5), ($__local_var_4_1)($x_5));
+  $__res = ((($GLOBALS['Data_Ordering_semigroupOrdering'])->{'append'})(($__local_var_3_0)($x_5)))(($__local_var_4_1)($x_5));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -142,13 +142,13 @@ function majData_majComparison_majComparison($x_0) {
 $GLOBALS['Data_Comparison_Comparison'] = __NAMESPACE__ . '\\majData_majComparison_majComparison';
 
 // Data_Comparison_semigroupComparison
-$GLOBALS['Data_Comparison_semigroupComparison'] = ["append" => (function() {
+$GLOBALS['Data_Comparison_semigroupComparison'] = (object)["append" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Comparison_append'])($v_0, $v1_1);
+  $__res = (($GLOBALS['Data_Comparison_append'])($v_0))($v1_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -157,7 +157,7 @@ $GLOBALS['Data_Comparison_semigroupComparison'] = ["append" => (function() {
 })()];
 
 // Data_Comparison_newtypeComparison
-$GLOBALS['Data_Comparison_newtypeComparison'] = ["Coercible0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Comparison_newtypeComparison'] = (object)["Coercible0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = null;
   goto __end;;
@@ -166,7 +166,7 @@ $GLOBALS['Data_Comparison_newtypeComparison'] = ["Coercible0" => function($_doll
 }];
 
 // Data_Comparison_monoidComparison
-$GLOBALS['Data_Comparison_monoidComparison'] = ["mempty" => (function() {
+$GLOBALS['Data_Comparison_monoidComparison'] = (object)["mempty" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -193,7 +193,7 @@ function majData_majComparison_defaultmajComparison($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dictOrd_0)['compare'];
+  $__res = ($dictOrd_0)->{'compare'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -201,13 +201,13 @@ function majData_majComparison_defaultmajComparison($dictOrd_0) {
 $GLOBALS['Data_Comparison_defaultComparison'] = __NAMESPACE__ . '\\majData_majComparison_defaultmajComparison';
 
 // Data_Comparison_contravariantComparison
-$GLOBALS['Data_Comparison_contravariantComparison'] = ["cmap" => (function() {
+$GLOBALS['Data_Comparison_contravariantComparison'] = (object)["cmap" => (function() {
   $__fn = function($f_0, $v_1 = null, $x_2 = null, $y_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = ($v_1)(($f_0)($x_2), ($f_0)($y_3));
+  $__res = (($v_1)(($f_0)($x_2)))(($f_0)($y_3));
   goto __end;;
   __end:
   return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;

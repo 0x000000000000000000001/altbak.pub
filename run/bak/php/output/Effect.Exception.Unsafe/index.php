@@ -101,7 +101,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Effect_Exception_Unsafe_unsafeThrowException_closure
-$GLOBALS['Effect_Exception_Unsafe_unsafeThrowException_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Unsafe_unsafePerformEffect'], $GLOBALS['Effect_Exception_throwException']);
+$GLOBALS['Effect_Exception_Unsafe_unsafeThrowException_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Unsafe_unsafePerformEffect']))($GLOBALS['Effect_Exception_throwException']);
 
 // Effect_Exception_Unsafe_unsafeThrowException
 function majEffect_majException_majUnsafe_unsafemajThrowmajException($v_0) {
@@ -118,7 +118,7 @@ function majEffect_majException_majUnsafe_unsafemajThrowmajException($v_0) {
 $GLOBALS['Effect_Exception_Unsafe_unsafeThrowException'] = __NAMESPACE__ . '\\majEffect_majException_majUnsafe_unsafemajThrowmajException';
 
 // Effect_Exception_Unsafe_unsafeThrow_closure
-$GLOBALS['Effect_Exception_Unsafe_unsafeThrow_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Exception_Unsafe_unsafeThrowException'], $GLOBALS['Effect_Exception_error']);
+$GLOBALS['Effect_Exception_Unsafe_unsafeThrow_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Effect_Exception_Unsafe_unsafeThrowException']))($GLOBALS['Effect_Exception_error']);
 
 // Effect_Exception_Unsafe_unsafeThrow
 function majEffect_majException_majUnsafe_unsafemajThrow(string $v_0) {

@@ -167,7 +167,7 @@ function majControl_majMonad_majMaybe_majTrans_runmajMaybemajT($v_0) {
 $GLOBALS['Control_Monad_Maybe_Trans_runMaybeT'] = __NAMESPACE__ . '\\majControl_majMonad_majMaybe_majTrans_runmajMaybemajT';
 
 // Control_Monad_Maybe_Trans_newtypeMaybeT
-$GLOBALS['Control_Monad_Maybe_Trans_newtypeMaybeT'] = ["Coercible0" => function($_dollar__unused_0) {
+$GLOBALS['Control_Monad_Maybe_Trans_newtypeMaybeT'] = (object)["Coercible0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = null;
   goto __end;;
@@ -176,13 +176,13 @@ $GLOBALS['Control_Monad_Maybe_Trans_newtypeMaybeT'] = ["Coercible0" => function(
 }];
 
 // Control_Monad_Maybe_Trans_monadTransMaybeT
-$GLOBALS['Control_Monad_Maybe_Trans_monadTransMaybeT'] = ["lift" => function($dictMonad_0) {
+$GLOBALS['Control_Monad_Maybe_Trans_monadTransMaybeT'] = (object)["lift" => function($dictMonad_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Maybe_Trans_MaybeT'], function($a_1) use ($dictMonad_0) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Maybe_Trans_MaybeT']))(function($a_1) use ($dictMonad_0) {
   $__num = \func_num_args();
-  $__res = (((($dictMonad_0)['Bind1'])(null))['bind'])($a_1, function($a_prime_2) use ($dictMonad_0) {
+  $__res = ((((($dictMonad_0)->{'Bind1'})(null))->{'bind'})($a_1))(function($a_prime_2) use ($dictMonad_0) {
   $__num = \func_num_args();
-  $__res = (((($dictMonad_0)['Applicative0'])(null))['pure'])(new \Data\Maybe\Data_Maybe_Just($a_prime_2));
+  $__res = (((($dictMonad_0)->{'Applicative0'})(null))->{'pure'})(new \Data\Maybe\Data_Maybe_Just($a_prime_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -217,13 +217,13 @@ function majControl_majMonad_majMaybe_majTrans_functormajMaybemajT($dictFunctor_
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["map" => (function() use ($dictFunctor_0) {
+  $__res = (object)["map" => (function() use ($dictFunctor_0) {
   $__fn = function($f_1, $v_2 = null) use ($dictFunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictFunctor_0)['map'])((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($f_1), $v_2);
+  $__res = ((($dictFunctor_0)->{'map'})((($GLOBALS['Data_Maybe_functorMaybe'])->{'map'})($f_1)))($v_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -243,15 +243,15 @@ function majControl_majMonad_majMaybe_majTrans_monadmajMaybemajT($dictMonad_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["Applicative0" => function($_dollar__unused_1) use ($dictMonad_0) {
+  $__res = (object)["Applicative0" => function($_dollar__unused_1) use ($dictMonad_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'])($dictMonad_0);
+  $__res = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_applicativemajMaybemajT($dictMonad_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($_dollar__unused_1) use ($dictMonad_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'])($dictMonad_0);
+  $__res = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_bindmajMaybemajT($dictMonad_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -269,17 +269,17 @@ function majControl_majMonad_majMaybe_majTrans_bindmajMaybemajT($dictMonad_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["bind" => (function() use ($dictMonad_0) {
+  $__res = (object)["bind" => (function() use ($dictMonad_0) {
   $__fn = function($v_1, $f_2 = null) use ($dictMonad_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictMonad_0)['Bind1'])(null))['bind'])($v_1, function($v1_3) use ($dictMonad_0, $f_2) {
+  $__res = ((((($dictMonad_0)->{'Bind1'})(null))->{'bind'})($v_1))(function($v1_3) use ($dictMonad_0, $f_2) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ($v1_3 instanceof \Data\Maybe\Data_Maybe_Nothing) {
-$__t0 = (((($dictMonad_0)['Applicative0'])(null))['pure'])(new \Data\Maybe\Data_Maybe_Nothing());
+$__t0 = (((($dictMonad_0)->{'Applicative0'})(null))->{'pure'})(new \Data\Maybe\Data_Maybe_Nothing());
 goto end_branch_0;;
 };
   if ($v1_3 instanceof \Data\Maybe\Data_Maybe_Just) {
@@ -301,7 +301,7 @@ goto end_branch_0;;
   return $__fn;
 })(), "Apply0" => function($_dollar__unused_1) use ($dictMonad_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_applyMaybeT'])($dictMonad_0);
+  $__res = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_applymajMaybemajT($dictMonad_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -319,32 +319,32 @@ function majControl_majMonad_majMaybe_majTrans_applymajMaybemajT($dictMonad_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (((((($dictMonad_0)['Bind1'])(null))['Apply0'])(null))['Functor0'])(null);
-  $functorMaybeT1_2_1 = ["map" => (function() use ($__local_var_1_0) {
+  $__local_var_1_0 = (((((($dictMonad_0)->{'Bind1'})(null))->{'Apply0'})(null))->{'Functor0'})(null);
+  $functorMaybeT1_2_1 = (object)["map" => (function() use ($__local_var_1_0) {
   $__fn = function($f_2, $v_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_1_0)['map'])((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($f_2), $v_3);
+  $__res = ((($__local_var_1_0)->{'map'})((($GLOBALS['Data_Maybe_functorMaybe'])->{'map'})($f_2)))($v_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__local_var_3_2 = ($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'])($dictMonad_0);
-  $__res = ["apply" => (function() use ($__local_var_3_2, $dictMonad_0) {
+  $__local_var_3_2 = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_bindmajMaybemajT($dictMonad_0);
+  $__res = (object)["apply" => (function() use ($__local_var_3_2, $dictMonad_0) {
   $__fn = function($f_4, $a_5 = null) use ($__local_var_3_2, $dictMonad_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_3_2)['bind'])($f_4, function($f_prime_6) use ($__local_var_3_2, $a_5, $dictMonad_0) {
+  $__res = ((($__local_var_3_2)->{'bind'})($f_4))(function($f_prime_6) use ($__local_var_3_2, $a_5, $dictMonad_0) {
   $__num = \func_num_args();
-  $__res = (($__local_var_3_2)['bind'])($a_5, function($a_prime_7) use ($dictMonad_0, $f_prime_6) {
+  $__res = ((($__local_var_3_2)->{'bind'})($a_5))(function($a_prime_7) use ($dictMonad_0, $f_prime_6) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'])($dictMonad_0))['pure'])(($f_prime_6)($a_prime_7));
+  $__res = ((\Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_applicativemajMaybemajT($dictMonad_0))->{'pure'})(($f_prime_6)($a_prime_7));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -378,9 +378,9 @@ function majControl_majMonad_majMaybe_majTrans_applicativemajMaybemajT($dictMona
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["pure" => ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Maybe_Trans_MaybeT'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(((($dictMonad_0)['Applicative0'])(null))['pure'], $GLOBALS['Data_Maybe_Just'])), "Apply0" => function($_dollar__unused_1) use ($dictMonad_0) {
+  $__res = (object)["pure" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Maybe_Trans_MaybeT']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(((($dictMonad_0)->{'Applicative0'})(null))->{'pure'}))($GLOBALS['Data_Maybe_Just'])), "Apply0" => function($_dollar__unused_1) use ($dictMonad_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_applyMaybeT'])($dictMonad_0);
+  $__res = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_applymajMaybemajT($dictMonad_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -398,17 +398,17 @@ function majControl_majMonad_majMaybe_majTrans_semigroupmajMaybemajT($dictMonad_
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = ($GLOBALS['Control_Monad_Maybe_Trans_applyMaybeT'])($dictMonad_0);
+  $__local_var_1_0 = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_applymajMaybemajT($dictMonad_0);
   $__res = function($dictSemigroup_2) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  $__local_var_3_1 = ($dictSemigroup_2)['append'];
-  $__res = ["append" => (function() use ($__local_var_1_0, $__local_var_3_1) {
+  $__local_var_3_1 = ($dictSemigroup_2)->{'append'};
+  $__res = (object)["append" => (function() use ($__local_var_1_0, $__local_var_3_1) {
   $__fn = function($a_4, $b_5 = null) use ($__local_var_1_0, $__local_var_3_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_1_0)['apply'])((((($__local_var_1_0)['Functor0'])(null))['map'])($__local_var_3_1, $a_4), $b_5);
+  $__res = ((($__local_var_1_0)->{'apply'})(((((($__local_var_1_0)->{'Functor0'})(null))->{'map'})($__local_var_3_1))($a_4)))($b_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -432,21 +432,21 @@ function majControl_majMonad_majMaybe_majTrans_monadmajAskmajMaybemajT($dictMona
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $Monad0_1_0 = (($dictMonadAsk_0)['Monad0'])(null);
-  $monadMaybeT1_2_1 = ["Applicative0" => function($_dollar__unused_2) use ($Monad0_1_0) {
+  $Monad0_1_0 = (($dictMonadAsk_0)->{'Monad0'})(null);
+  $monadMaybeT1_2_1 = (object)["Applicative0" => function($_dollar__unused_2) use ($Monad0_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'])($Monad0_1_0);
+  $__res = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_applicativemajMaybemajT($Monad0_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($_dollar__unused_2) use ($Monad0_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'])($Monad0_1_0);
+  $__res = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_bindmajMaybemajT($Monad0_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["ask" => (($GLOBALS['Control_Monad_Maybe_Trans_monadTransMaybeT'])['lift'])($Monad0_1_0, ($dictMonadAsk_0)['ask']), "Monad0" => function($_dollar__unused_3) use ($monadMaybeT1_2_1) {
+  $__res = (object)["ask" => ((($GLOBALS['Control_Monad_Maybe_Trans_monadTransMaybeT'])->{'lift'})($Monad0_1_0))(($dictMonadAsk_0)->{'ask'}), "Monad0" => function($_dollar__unused_3) use ($monadMaybeT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadMaybeT1_2_1;
   goto __end;;
@@ -466,10 +466,10 @@ function majControl_majMonad_majMaybe_majTrans_monadmajReadermajMaybemajT($dictM
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $monadAskMaybeT1_1_0 = ($GLOBALS['Control_Monad_Maybe_Trans_monadAskMaybeT'])((($dictMonadReader_0)['MonadAsk0'])(null));
-  $__res = ["local" => function($f_2) use ($dictMonadReader_0) {
+  $monadAskMaybeT1_1_0 = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_monadmajAskmajMaybemajT((($dictMonadReader_0)->{'MonadAsk0'})(null));
+  $__res = (object)["local" => function($f_2) use ($dictMonadReader_0) {
   $__num = \func_num_args();
-  $__res = (($dictMonadReader_0)['local'])($f_2);
+  $__res = (($dictMonadReader_0)->{'local'})($f_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -493,23 +493,23 @@ function majControl_majMonad_majMaybe_majTrans_monadmajContmajMaybemajT($dictMon
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($dictMonadCont_0)['Monad0'])(null);
-  $monadMaybeT1_2_1 = ["Applicative0" => function($_dollar__unused_2) use ($__local_var_1_0) {
+  $__local_var_1_0 = (($dictMonadCont_0)->{'Monad0'})(null);
+  $monadMaybeT1_2_1 = (object)["Applicative0" => function($_dollar__unused_2) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'])($__local_var_1_0);
+  $__res = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_applicativemajMaybemajT($__local_var_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($_dollar__unused_2) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'])($__local_var_1_0);
+  $__res = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_bindmajMaybemajT($__local_var_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["callCC" => function($f_3) use ($dictMonadCont_0) {
+  $__res = (object)["callCC" => function($f_3) use ($dictMonadCont_0) {
   $__num = \func_num_args();
-  $__res = (($dictMonadCont_0)['callCC'])(function($c_4) use ($f_3) {
+  $__res = (($dictMonadCont_0)->{'callCC'})(function($c_4) use ($f_3) {
   $__num = \func_num_args();
   $__res = ($f_3)(function($a_5) use ($c_4) {
   $__num = \func_num_args();
@@ -545,21 +545,21 @@ function majControl_majMonad_majMaybe_majTrans_monadmajEffectmajMaybe($dictMonad
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $Monad0_1_0 = (($dictMonadEffect_0)['Monad0'])(null);
-  $monadMaybeT1_2_1 = ["Applicative0" => function($_dollar__unused_2) use ($Monad0_1_0) {
+  $Monad0_1_0 = (($dictMonadEffect_0)->{'Monad0'})(null);
+  $monadMaybeT1_2_1 = (object)["Applicative0" => function($_dollar__unused_2) use ($Monad0_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'])($Monad0_1_0);
+  $__res = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_applicativemajMaybemajT($Monad0_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($_dollar__unused_2) use ($Monad0_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'])($Monad0_1_0);
+  $__res = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_bindmajMaybemajT($Monad0_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["liftEffect" => ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Maybe_Trans_monadTransMaybeT'])['lift'])($Monad0_1_0), ($dictMonadEffect_0)['liftEffect']), "Monad0" => function($_dollar__unused_3) use ($monadMaybeT1_2_1) {
+  $__res = (object)["liftEffect" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Maybe_Trans_monadTransMaybeT'])->{'lift'})($Monad0_1_0)))(($dictMonadEffect_0)->{'liftEffect'}), "Monad0" => function($_dollar__unused_3) use ($monadMaybeT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadMaybeT1_2_1;
   goto __end;;
@@ -579,25 +579,25 @@ function majControl_majMonad_majMaybe_majTrans_monadmajRecmajMaybemajT($dictMona
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $Monad0_1_0 = (($dictMonadRec_0)['Monad0'])(null);
-  $monadMaybeT1_2_1 = ["Applicative0" => function($_dollar__unused_2) use ($Monad0_1_0) {
+  $Monad0_1_0 = (($dictMonadRec_0)->{'Monad0'})(null);
+  $monadMaybeT1_2_1 = (object)["Applicative0" => function($_dollar__unused_2) use ($Monad0_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'])($Monad0_1_0);
+  $__res = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_applicativemajMaybemajT($Monad0_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($_dollar__unused_2) use ($Monad0_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'])($Monad0_1_0);
+  $__res = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_bindmajMaybemajT($Monad0_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["tailRecM" => function($f_3) use ($Monad0_1_0, $dictMonadRec_0) {
+  $__res = (object)["tailRecM" => function($f_3) use ($Monad0_1_0, $dictMonadRec_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Maybe_Trans_MaybeT'], (($dictMonadRec_0)['tailRecM'])(function($a_4) use ($Monad0_1_0, $f_3) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_Maybe_Trans_MaybeT']))((($dictMonadRec_0)->{'tailRecM'})(function($a_4) use ($Monad0_1_0, $f_3) {
   $__num = \func_num_args();
-  $__res = (((($Monad0_1_0)['Bind1'])(null))['bind'])(($f_3)($a_4), function($m_prime_5) use ($Monad0_1_0) {
+  $__res = ((((($Monad0_1_0)->{'Bind1'})(null))->{'bind'})(($f_3)($a_4)))(function($m_prime_5) use ($Monad0_1_0) {
   $__num = \func_num_args();
   $__t2 = null;;
   if ($m_prime_5 instanceof \Data\Maybe\Data_Maybe_Nothing) {
@@ -623,7 +623,7 @@ goto end_branch_2;;
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
   $__t2 = null;
   end_branch_2:;
-  $__res = (((($Monad0_1_0)['Applicative0'])(null))['pure'])($__t2);
+  $__res = (((($Monad0_1_0)->{'Applicative0'})(null))->{'pure'})($__t2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -655,24 +655,24 @@ function majControl_majMonad_majMaybe_majTrans_monadmajStatemajMaybemajT($dictMo
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $Monad0_1_0 = (($dictMonadState_0)['Monad0'])(null);
-  $lift1_2_1 = (($GLOBALS['Control_Monad_Maybe_Trans_monadTransMaybeT'])['lift'])($Monad0_1_0);
-  $monadMaybeT1_3_2 = ["Applicative0" => function($_dollar__unused_3) use ($Monad0_1_0) {
+  $Monad0_1_0 = (($dictMonadState_0)->{'Monad0'})(null);
+  $lift1_2_1 = (($GLOBALS['Control_Monad_Maybe_Trans_monadTransMaybeT'])->{'lift'})($Monad0_1_0);
+  $monadMaybeT1_3_2 = (object)["Applicative0" => function($_dollar__unused_3) use ($Monad0_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'])($Monad0_1_0);
+  $__res = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_applicativemajMaybemajT($Monad0_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($_dollar__unused_3) use ($Monad0_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'])($Monad0_1_0);
+  $__res = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_bindmajMaybemajT($Monad0_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["state" => function($f_4) use ($dictMonadState_0, $lift1_2_1) {
+  $__res = (object)["state" => function($f_4) use ($dictMonadState_0, $lift1_2_1) {
   $__num = \func_num_args();
-  $__res = ($lift1_2_1)((($dictMonadState_0)['state'])($f_4));
+  $__res = ($lift1_2_1)((($dictMonadState_0)->{'state'})($f_4));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -696,22 +696,22 @@ function majControl_majMonad_majMaybe_majTrans_monadmajTellmajMaybemajT($dictMon
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $Monad1_1_0 = (($dictMonadTell_0)['Monad1'])(null);
-  $Semigroup0_2_1 = (($dictMonadTell_0)['Semigroup0'])(null);
-  $monadMaybeT1_3_2 = ["Applicative0" => function($_dollar__unused_3) use ($Monad1_1_0) {
+  $Monad1_1_0 = (($dictMonadTell_0)->{'Monad1'})(null);
+  $Semigroup0_2_1 = (($dictMonadTell_0)->{'Semigroup0'})(null);
+  $monadMaybeT1_3_2 = (object)["Applicative0" => function($_dollar__unused_3) use ($Monad1_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'])($Monad1_1_0);
+  $__res = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_applicativemajMaybemajT($Monad1_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($_dollar__unused_3) use ($Monad1_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'])($Monad1_1_0);
+  $__res = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_bindmajMaybemajT($Monad1_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["tell" => ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Maybe_Trans_monadTransMaybeT'])['lift'])($Monad1_1_0), ($dictMonadTell_0)['tell']), "Semigroup0" => function($_dollar__unused_4) use ($Semigroup0_2_1) {
+  $__res = (object)["tell" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Maybe_Trans_monadTransMaybeT'])->{'lift'})($Monad1_1_0)))(($dictMonadTell_0)->{'tell'}), "Semigroup0" => function($_dollar__unused_4) use ($Semigroup0_2_1) {
   $__num = \func_num_args();
   $__res = $Semigroup0_2_1;
   goto __end;;
@@ -737,24 +737,24 @@ function majControl_majMonad_majMaybe_majTrans_monadmajWritermajMaybemajT($dictM
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $MonadTell1_1_0 = (($dictMonadWriter_0)['MonadTell1'])(null);
-  $Monad1_2_1 = (($MonadTell1_1_0)['Monad1'])(null);
-  $__local_var_3_2 = (($Monad1_2_1)['Bind1'])(null);
-  $__local_var_4_3 = (($Monad1_2_1)['Applicative0'])(null);
-  $Monoid0_5_4 = (($dictMonadWriter_0)['Monoid0'])(null);
-  $monadTellMaybeT1_6_5 = ($GLOBALS['Control_Monad_Maybe_Trans_monadTellMaybeT'])($MonadTell1_1_0);
-  $__res = ["listen" => function($v_7) use ($__local_var_3_2, $__local_var_4_3, $dictMonadWriter_0) {
+  $MonadTell1_1_0 = (($dictMonadWriter_0)->{'MonadTell1'})(null);
+  $Monad1_2_1 = (($MonadTell1_1_0)->{'Monad1'})(null);
+  $__local_var_3_2 = (($Monad1_2_1)->{'Bind1'})(null);
+  $__local_var_4_3 = (($Monad1_2_1)->{'Applicative0'})(null);
+  $Monoid0_5_4 = (($dictMonadWriter_0)->{'Monoid0'})(null);
+  $monadTellMaybeT1_6_5 = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_monadmajTellmajMaybemajT($MonadTell1_1_0);
+  $__res = (object)["listen" => function($v_7) use ($__local_var_3_2, $__local_var_4_3, $dictMonadWriter_0) {
   $__num = \func_num_args();
-  $__res = (($__local_var_3_2)['bind'])((($dictMonadWriter_0)['listen'])($v_7), function($v_8) use ($__local_var_4_3) {
+  $__res = ((($__local_var_3_2)->{'bind'})((($dictMonadWriter_0)->{'listen'})($v_7)))(function($v_8) use ($__local_var_4_3) {
   $__num = \func_num_args();
   $__local_var_9_6 = ($v_8)->{'value1'};
-  $__res = (($__local_var_4_3)['pure'])((($GLOBALS['Data_Maybe_functorMaybe'])['map'])(function($r_10) use ($__local_var_9_6) {
+  $__res = (($__local_var_4_3)->{'pure'})(((($GLOBALS['Data_Maybe_functorMaybe'])->{'map'})(function($r_10) use ($__local_var_9_6) {
   $__num = \func_num_args();
   $__res = new \Data\Tuple\Data_Tuple_Tuple($r_10, $__local_var_9_6);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, ($v_8)->{'value0'}));
+}))(($v_8)->{'value0'}));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -764,7 +764,7 @@ function majControl_majMonad_majMaybe_majTrans_monadmajWritermajMaybemajT($dictM
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "pass" => function($v_7) use ($__local_var_3_2, $__local_var_4_3, $dictMonadWriter_0) {
   $__num = \func_num_args();
-  $__res = (($dictMonadWriter_0)['pass'])((($__local_var_3_2)['bind'])($v_7, function($a_8) use ($__local_var_4_3) {
+  $__res = (($dictMonadWriter_0)->{'pass'})(((($__local_var_3_2)->{'bind'})($v_7))(function($a_8) use ($__local_var_4_3) {
   $__num = \func_num_args();
   $__t7 = null;;
   if ($a_8 instanceof \Data\Maybe\Data_Maybe_Nothing) {
@@ -778,7 +778,7 @@ goto end_branch_7;;
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
   $__t7 = null;
   end_branch_7:;
-  $__res = (($__local_var_4_3)['pure'])($__t7);
+  $__res = (($__local_var_4_3)->{'pure'})($__t7);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -812,24 +812,24 @@ function majControl_majMonad_majMaybe_majTrans_monadmajThrowmajMaybemajT($dictMo
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $Monad0_1_0 = (($dictMonadThrow_0)['Monad0'])(null);
-  $lift1_2_1 = (($GLOBALS['Control_Monad_Maybe_Trans_monadTransMaybeT'])['lift'])($Monad0_1_0);
-  $monadMaybeT1_3_2 = ["Applicative0" => function($_dollar__unused_3) use ($Monad0_1_0) {
+  $Monad0_1_0 = (($dictMonadThrow_0)->{'Monad0'})(null);
+  $lift1_2_1 = (($GLOBALS['Control_Monad_Maybe_Trans_monadTransMaybeT'])->{'lift'})($Monad0_1_0);
+  $monadMaybeT1_3_2 = (object)["Applicative0" => function($_dollar__unused_3) use ($Monad0_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'])($Monad0_1_0);
+  $__res = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_applicativemajMaybemajT($Monad0_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($_dollar__unused_3) use ($Monad0_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'])($Monad0_1_0);
+  $__res = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_bindmajMaybemajT($Monad0_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["throwError" => function($e_4) use ($dictMonadThrow_0, $lift1_2_1) {
+  $__res = (object)["throwError" => function($e_4) use ($dictMonadThrow_0, $lift1_2_1) {
   $__num = \func_num_args();
-  $__res = ($lift1_2_1)((($dictMonadThrow_0)['throwError'])($e_4));
+  $__res = ($lift1_2_1)((($dictMonadThrow_0)->{'throwError'})($e_4));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -853,14 +853,14 @@ function majControl_majMonad_majMaybe_majTrans_monadmajErrormajMaybemajT($dictMo
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $monadThrowMaybeT1_1_0 = ($GLOBALS['Control_Monad_Maybe_Trans_monadThrowMaybeT'])((($dictMonadError_0)['MonadThrow0'])(null));
-  $__res = ["catchError" => (function() use ($dictMonadError_0) {
+  $monadThrowMaybeT1_1_0 = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_monadmajThrowmajMaybemajT((($dictMonadError_0)->{'MonadThrow0'})(null));
+  $__res = (object)["catchError" => (function() use ($dictMonadError_0) {
   $__fn = function($v_2, $h_3 = null) use ($dictMonadError_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictMonadError_0)['catchError'])($v_2, function($a_4) use ($h_3) {
+  $__res = ((($dictMonadError_0)->{'catchError'})($v_2))(function($a_4) use ($h_3) {
   $__num = \func_num_args();
   $__res = ($h_3)($a_4);
   goto __end;;
@@ -892,21 +892,21 @@ function majControl_majMonad_majMaybe_majTrans_monadmajSmajTmajMaybemajT($dictMo
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $Monad0_1_0 = (($dictMonadST_0)['Monad0'])(null);
-  $monadMaybeT1_2_1 = ["Applicative0" => function($_dollar__unused_2) use ($Monad0_1_0) {
+  $Monad0_1_0 = (($dictMonadST_0)->{'Monad0'})(null);
+  $monadMaybeT1_2_1 = (object)["Applicative0" => function($_dollar__unused_2) use ($Monad0_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'])($Monad0_1_0);
+  $__res = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_applicativemajMaybemajT($Monad0_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($_dollar__unused_2) use ($Monad0_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'])($Monad0_1_0);
+  $__res = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_bindmajMaybemajT($Monad0_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["liftST" => ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Maybe_Trans_monadTransMaybeT'])['lift'])($Monad0_1_0), ($dictMonadST_0)['liftST']), "Monad0" => function($_dollar__unused_3) use ($monadMaybeT1_2_1) {
+  $__res = (object)["liftST" => (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Monad_Maybe_Trans_monadTransMaybeT'])->{'lift'})($Monad0_1_0)))(($dictMonadST_0)->{'liftST'}), "Monad0" => function($_dollar__unused_3) use ($monadMaybeT1_2_1) {
   $__num = \func_num_args();
   $__res = $monadMaybeT1_2_1;
   goto __end;;
@@ -929,8 +929,8 @@ function majControl_majMonad_majMaybe_majTrans_monoidmajMaybemajT($dictMonad_0) 
   $semigroupMaybeT1_1_0 = ($GLOBALS['Control_Monad_Maybe_Trans_semigroupMaybeT'])($dictMonad_0);
   $__res = function($dictMonoid_2) use ($dictMonad_0, $semigroupMaybeT1_1_0) {
   $__num = \func_num_args();
-  $semigroupMaybeT2_3_1 = ($semigroupMaybeT1_1_0)((($dictMonoid_2)['Semigroup0'])(null));
-  $__res = ["mempty" => ((($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'])($dictMonad_0))['pure'])(($dictMonoid_2)['mempty']), "Semigroup0" => function($_dollar__unused_4) use ($semigroupMaybeT2_3_1) {
+  $semigroupMaybeT2_3_1 = ($semigroupMaybeT1_1_0)((($dictMonoid_2)->{'Semigroup0'})(null));
+  $__res = (object)["mempty" => ((\Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_applicativemajMaybemajT($dictMonad_0))->{'pure'})(($dictMonoid_2)->{'mempty'}), "Semigroup0" => function($_dollar__unused_4) use ($semigroupMaybeT2_3_1) {
   $__num = \func_num_args();
   $__res = $semigroupMaybeT2_3_1;
   goto __end;;
@@ -954,35 +954,35 @@ function majControl_majMonad_majMaybe_majTrans_altmajMaybemajT($dictMonad_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $Bind1_1_0 = (($dictMonad_0)['Bind1'])(null);
-  $__local_var_2_1 = (((($Bind1_1_0)['Apply0'])(null))['Functor0'])(null);
-  $functorMaybeT1_3_2 = ["map" => (function() use ($__local_var_2_1) {
+  $Bind1_1_0 = (($dictMonad_0)->{'Bind1'})(null);
+  $__local_var_2_1 = (((($Bind1_1_0)->{'Apply0'})(null))->{'Functor0'})(null);
+  $functorMaybeT1_3_2 = (object)["map" => (function() use ($__local_var_2_1) {
   $__fn = function($f_3, $v_4 = null) use ($__local_var_2_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_2_1)['map'])((($GLOBALS['Data_Maybe_functorMaybe'])['map'])($f_3), $v_4);
+  $__res = ((($__local_var_2_1)->{'map'})((($GLOBALS['Data_Maybe_functorMaybe'])->{'map'})($f_3)))($v_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = ["alt" => (function() use ($Bind1_1_0, $dictMonad_0) {
+  $__res = (object)["alt" => (function() use ($Bind1_1_0, $dictMonad_0) {
   $__fn = function($v_4, $v1_5 = null) use ($Bind1_1_0, $dictMonad_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($Bind1_1_0)['bind'])($v_4, function($m_6) use ($dictMonad_0, $v1_5) {
+  $__res = ((($Bind1_1_0)->{'bind'})($v_4))(function($m_6) use ($dictMonad_0, $v1_5) {
   $__num = \func_num_args();
   $__t3 = null;;
   if ($m_6 instanceof \Data\Maybe\Data_Maybe_Nothing) {
 $__t3 = $v1_5;
 goto end_branch_3;;
 };
-  $__t3 = (((($dictMonad_0)['Applicative0'])(null))['pure'])($m_6);
+  $__t3 = (((($dictMonad_0)->{'Applicative0'})(null))->{'pure'})($m_6);
   end_branch_3:;
   $__res = $__t3;
   goto __end;;
@@ -1014,8 +1014,8 @@ function majControl_majMonad_majMaybe_majTrans_plusmajMaybemajT($dictMonad_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $altMaybeT1_1_0 = ($GLOBALS['Control_Monad_Maybe_Trans_altMaybeT'])($dictMonad_0);
-  $__res = ["empty" => (((($dictMonad_0)['Applicative0'])(null))['pure'])(new \Data\Maybe\Data_Maybe_Nothing()), "Alt0" => function($_dollar__unused_2) use ($altMaybeT1_1_0) {
+  $altMaybeT1_1_0 = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_altmajMaybemajT($dictMonad_0);
+  $__res = (object)["empty" => (((($dictMonad_0)->{'Applicative0'})(null))->{'pure'})(new \Data\Maybe\Data_Maybe_Nothing()), "Alt0" => function($_dollar__unused_2) use ($altMaybeT1_1_0) {
   $__num = \func_num_args();
   $__res = $altMaybeT1_1_0;
   goto __end;;
@@ -1035,9 +1035,9 @@ function majControl_majMonad_majMaybe_majTrans_alternativemajMaybemajT($dictMona
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $applicativeMaybeT1_1_0 = ($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'])($dictMonad_0);
-  $plusMaybeT1_2_1 = ($GLOBALS['Control_Monad_Maybe_Trans_plusMaybeT'])($dictMonad_0);
-  $__res = ["Applicative0" => function($_dollar__unused_3) use ($applicativeMaybeT1_1_0) {
+  $applicativeMaybeT1_1_0 = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_applicativemajMaybemajT($dictMonad_0);
+  $plusMaybeT1_2_1 = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_plusmajMaybemajT($dictMonad_0);
+  $__res = (object)["Applicative0" => function($_dollar__unused_3) use ($applicativeMaybeT1_1_0) {
   $__num = \func_num_args();
   $__res = $applicativeMaybeT1_1_0;
   goto __end;;
@@ -1063,21 +1063,21 @@ function majControl_majMonad_majMaybe_majTrans_monadmajPlusmajMaybemajT($dictMon
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $monadMaybeT1_1_0 = ["Applicative0" => function($_dollar__unused_1) use ($dictMonad_0) {
+  $monadMaybeT1_1_0 = (object)["Applicative0" => function($_dollar__unused_1) use ($dictMonad_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_applicativeMaybeT'])($dictMonad_0);
+  $__res = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_applicativemajMaybemajT($dictMonad_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($_dollar__unused_1) use ($dictMonad_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Monad_Maybe_Trans_bindMaybeT'])($dictMonad_0);
+  $__res = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_bindmajMaybemajT($dictMonad_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $alternativeMaybeT1_2_1 = ($GLOBALS['Control_Monad_Maybe_Trans_alternativeMaybeT'])($dictMonad_0);
-  $__res = ["Monad0" => function($_dollar__unused_3) use ($monadMaybeT1_1_0) {
+  $alternativeMaybeT1_2_1 = \Control\Monad\Maybe\Trans\majControl_majMonad_majMaybe_majTrans_alternativemajMaybemajT($dictMonad_0);
+  $__res = (object)["Monad0" => function($_dollar__unused_3) use ($monadMaybeT1_1_0) {
   $__num = \func_num_args();
   $__res = $monadMaybeT1_1_0;
   goto __end;;

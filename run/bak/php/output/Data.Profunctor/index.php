@@ -116,13 +116,13 @@ function majData_majProfunctor_identity($x_0) {
 $GLOBALS['Data_Profunctor_identity'] = __NAMESPACE__ . '\\majData_majProfunctor_identity';
 
 // Data_Profunctor_profunctorFn
-$GLOBALS['Data_Profunctor_profunctorFn'] = ["dimap" => (function() {
+$GLOBALS['Data_Profunctor_profunctorFn'] = (object)["dimap" => (function() {
   $__fn = function($a2b_0, $c2d_1 = null, $b2c_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Control_Semigroupoid_composeImpl'])($c2d_1, $b2c_2), $a2b_0);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($c2d_1))($b2c_2)))($a2b_0);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -137,7 +137,7 @@ function majData_majProfunctor_dimap($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['dimap'];
+  $__res = ($dict_0)->{'dimap'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -151,7 +151,7 @@ function majData_majProfunctor_lcmap($dictProfunctor_0, $a2b_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictProfunctor_0)['dimap'])($a2b_1, $GLOBALS['Data_Profunctor_identity']);
+  $__res = ((($dictProfunctor_0)->{'dimap'})($a2b_1))($GLOBALS['Data_Profunctor_identity']);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -165,7 +165,7 @@ function majData_majProfunctor_rmap($dictProfunctor_0, $b2c_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictProfunctor_0)['dimap'])($GLOBALS['Data_Profunctor_identity'], $b2c_1);
+  $__res = ((($dictProfunctor_0)->{'dimap'})($GLOBALS['Data_Profunctor_identity']))($b2c_1);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -179,7 +179,7 @@ function majData_majProfunctor_unwrapmajIso($dictProfunctor_0, $_dollar__unused_
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictProfunctor_0)['dimap'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'], $GLOBALS['Unsafe_Coerce_unsafeCoerce']);
+  $__res = ((($dictProfunctor_0)->{'dimap'})($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($GLOBALS['Unsafe_Coerce_unsafeCoerce']);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -193,7 +193,7 @@ function majData_majProfunctor_wrapmajIso($dictProfunctor_0, $_dollar__unused_1 
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictProfunctor_0)['dimap'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'], $GLOBALS['Unsafe_Coerce_unsafeCoerce']);
+  $__res = ((($dictProfunctor_0)->{'dimap'})($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($GLOBALS['Unsafe_Coerce_unsafeCoerce']);
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -207,14 +207,14 @@ function majData_majProfunctor_arr($dictCategory_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $identity1_1_0 = ($dictCategory_0)['identity'];
+  $identity1_1_0 = ($dictCategory_0)->{'identity'};
   $__res = (function() use ($identity1_1_0) {
   $__fn = function($dictProfunctor_2, $f_3 = null) use ($identity1_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictProfunctor_2)['dimap'])($GLOBALS['Data_Profunctor_identity'], $f_3, $identity1_1_0);
+  $__res = (((($dictProfunctor_2)->{'dimap'})($GLOBALS['Data_Profunctor_identity']))($f_3))($identity1_1_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

@@ -121,7 +121,8 @@ class PhpursCompose {
 }
 
 $_composeImpl = function($f, $g = null) {
-    if (\func_num_args() === 1) {
+    $num = \func_num_args();
+    if ($num === 1) {
         return function($g) use ($f) {
             return function($a = null) use ($f, $g) {
                 $__num = \func_num_args();
@@ -134,27 +135,43 @@ $_composeImpl = function($f, $g = null) {
         };
     }
     
-    return function($a = null) use ($f, $g) {
+    $res = function($a = null) use ($f, $g) {
         $__num = \func_num_args();
-        $res = $f($g($a));
+        $res2 = $f($g($a));
         if ($__num > 1) {
-            return $res(...\array_slice(\func_get_args(), 1));
+            return $res2(...\array_slice(\func_get_args(), 1));
         }
-        return $res;
+        return $res2;
     };
+
+    if ($num > 2) {
+        return $res(...\array_slice(\func_get_args(), 2));
+    }
+    return $res;
 };
 
 $exports['composeImpl'] = $_composeImpl;
 return $exports;
   return $exports;
 });
-$GLOBALS['Control_Semigroupoid_composeImpl'] = $ffi_Control_Semigroupoid['composeImpl'] ?? new class { public function __invoke(...$args) { return $this; } };
+function majControl_majSemigroupoid_composemajImpl($v0, $v1 = null, $v2 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majControl_majSemigroupoid_composemajImpl';
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  global $ffi_Control_Semigroupoid;
+  $f = ($ffi_Control_Semigroupoid['composeImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1, $v2);
+}
+$GLOBALS['Control_Semigroupoid_composeImpl'] = __NAMESPACE__ . '\\majControl_majSemigroupoid_composemajImpl';
+
 
 
 
 
 // Control_Semigroupoid_semigroupoidFn
-$GLOBALS['Control_Semigroupoid_semigroupoidFn'] = ["compose" => $GLOBALS['Control_Semigroupoid_composeImpl']];
+$GLOBALS['Control_Semigroupoid_semigroupoidFn'] = (object)["compose" => $GLOBALS['Control_Semigroupoid_composeImpl']];
 
 // Control_Semigroupoid_compose
 function majControl_majSemigroupoid_compose($dict_0) {
@@ -163,7 +180,7 @@ function majControl_majSemigroupoid_compose($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['compose'];
+  $__res = ($dict_0)->{'compose'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -177,7 +194,7 @@ function majControl_majSemigroupoid_composemajFlipped($dictSemigroupoid_0, $f_1 
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictSemigroupoid_0)['compose'])($g_2, $f_1);
+  $__res = ((($dictSemigroupoid_0)->{'compose'})($g_2))($f_1);
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;

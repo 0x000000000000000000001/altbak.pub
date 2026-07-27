@@ -131,9 +131,9 @@ function majData_majMonoid_majMultiplicative_showmajMultiplicative($dictShow_0) 
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["show" => function($v_1) use ($dictShow_0) {
+  $__res = (object)["show" => function($v_1) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Multiplicative ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(Multiplicative "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_0)->{'show'})($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -151,13 +151,13 @@ function majData_majMonoid_majMultiplicative_semigroupmajMultiplicative($dictSem
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["append" => (function() use ($dictSemiring_0) {
+  $__res = (object)["append" => (function() use ($dictSemiring_0) {
   $__fn = function($v_1, $v1_2 = null) use ($dictSemiring_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictSemiring_0)['mul'])($v_1, $v1_2);
+  $__res = ((($dictSemiring_0)->{'mul'})($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -191,20 +191,20 @@ function majData_majMonoid_majMultiplicative_monoidmajMultiplicative($dictSemiri
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $semigroupMultiplicative1_1_0 = ["append" => (function() use ($dictSemiring_0) {
+  $semigroupMultiplicative1_1_0 = (object)["append" => (function() use ($dictSemiring_0) {
   $__fn = function($v_1, $v1_2 = null) use ($dictSemiring_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictSemiring_0)['mul'])($v_1, $v1_2);
+  $__res = ((($dictSemiring_0)->{'mul'})($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = ["mempty" => ($dictSemiring_0)['one'], "Semigroup0" => function($_dollar__unused_2) use ($semigroupMultiplicative1_1_0) {
+  $__res = (object)["mempty" => ($dictSemiring_0)->{'one'}, "Semigroup0" => function($_dollar__unused_2) use ($semigroupMultiplicative1_1_0) {
   $__num = \func_num_args();
   $__res = $semigroupMultiplicative1_1_0;
   goto __end;;
@@ -218,7 +218,7 @@ function majData_majMonoid_majMultiplicative_monoidmajMultiplicative($dictSemiri
 $GLOBALS['Data_Monoid_Multiplicative_monoidMultiplicative'] = __NAMESPACE__ . '\\majData_majMonoid_majMultiplicative_monoidmajMultiplicative';
 
 // Data_Monoid_Multiplicative_functorMultiplicative
-$GLOBALS['Data_Monoid_Multiplicative_functorMultiplicative'] = ["map" => (function() {
+$GLOBALS['Data_Monoid_Multiplicative_functorMultiplicative'] = (object)["map" => (function() {
   $__fn = function($f_0, $m_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -247,18 +247,18 @@ function majData_majMonoid_majMultiplicative_eqmajMultiplicative($dictEq_0) {
 $GLOBALS['Data_Monoid_Multiplicative_eqMultiplicative'] = __NAMESPACE__ . '\\majData_majMonoid_majMultiplicative_eqmajMultiplicative';
 
 // Data_Monoid_Multiplicative_eq1Multiplicative
-$GLOBALS['Data_Monoid_Multiplicative_eq1Multiplicative'] = ["eq1" => function($dictEq_0) {
+$GLOBALS['Data_Monoid_Multiplicative_eq1Multiplicative'] = (object)["eq1" => function($dictEq_0) {
   $__num = \func_num_args();
-  $__res = ($dictEq_0)['eq'];
+  $__res = ($dictEq_0)->{'eq'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
 
 // Data_Monoid_Multiplicative_ord1Multiplicative
-$GLOBALS['Data_Monoid_Multiplicative_ord1Multiplicative'] = ["compare1" => function($dictOrd_0) {
+$GLOBALS['Data_Monoid_Multiplicative_ord1Multiplicative'] = (object)["compare1" => function($dictOrd_0) {
   $__num = \func_num_args();
-  $__res = ($dictOrd_0)['compare'];
+  $__res = ($dictOrd_0)->{'compare'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -285,7 +285,7 @@ function majData_majMonoid_majMultiplicative_boundedmajMultiplicative($dictBound
 $GLOBALS['Data_Monoid_Multiplicative_boundedMultiplicative'] = __NAMESPACE__ . '\\majData_majMonoid_majMultiplicative_boundedmajMultiplicative';
 
 // Data_Monoid_Multiplicative_applyMultiplicative
-$GLOBALS['Data_Monoid_Multiplicative_applyMultiplicative'] = ["apply" => (function() {
+$GLOBALS['Data_Monoid_Multiplicative_applyMultiplicative'] = (object)["apply" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -306,7 +306,7 @@ $GLOBALS['Data_Monoid_Multiplicative_applyMultiplicative'] = ["apply" => (functi
 }];
 
 // Data_Monoid_Multiplicative_bindMultiplicative
-$GLOBALS['Data_Monoid_Multiplicative_bindMultiplicative'] = ["bind" => (function() {
+$GLOBALS['Data_Monoid_Multiplicative_bindMultiplicative'] = (object)["bind" => (function() {
   $__fn = function($v_0, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -327,7 +327,7 @@ $GLOBALS['Data_Monoid_Multiplicative_bindMultiplicative'] = ["bind" => (function
 }];
 
 // Data_Monoid_Multiplicative_applicativeMultiplicative
-$GLOBALS['Data_Monoid_Multiplicative_applicativeMultiplicative'] = ["pure" => $GLOBALS['Data_Monoid_Multiplicative_Multiplicative'], "Apply0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Monoid_Multiplicative_applicativeMultiplicative'] = (object)["pure" => $GLOBALS['Data_Monoid_Multiplicative_Multiplicative'], "Apply0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Monoid_Multiplicative_applyMultiplicative'];
   goto __end;;
@@ -336,7 +336,7 @@ $GLOBALS['Data_Monoid_Multiplicative_applicativeMultiplicative'] = ["pure" => $G
 }];
 
 // Data_Monoid_Multiplicative_monadMultiplicative
-$GLOBALS['Data_Monoid_Multiplicative_monadMultiplicative'] = ["Applicative0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Monoid_Multiplicative_monadMultiplicative'] = (object)["Applicative0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Monoid_Multiplicative_applicativeMultiplicative'];
   goto __end;;

@@ -108,7 +108,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Test_TCO_describe
-$GLOBALS['Test_TCO_describe'] = ($GLOBALS['Effect_Console_log'])("Tail Call Optimization (100k calls):");
+$GLOBALS['Test_TCO_describe'] = \Effect\Console\majEffect_majConsole_log("Tail Call Optimization (100k calls):");
 
 // Test_TCO_deepTailRec
 function majTest_majTmajCmajO_deepmajTailmajRec(int $v_0, $v1_1 = null): int|\Closure {
@@ -133,7 +133,7 @@ default:
 break;
 };
   $__tco_0 = ($v_0 - 1);
-  $__tco_1 = ($v1_1 + (($GLOBALS['Data_EuclideanRing_euclideanRingInt'])['mod'])($v_0, 3));
+  $__tco_1 = ($v1_1 + ((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])->{'mod'})($v_0))(3));
   $__tco_var_Test_TCO_deepTailRec_v_0 = $__tco_0;
   $__tco_var_Test_TCO_deepTailRec_v1_1 = $__tco_1;
   goto tco_loop_Test_TCO_deepTailRec;;
@@ -147,9 +147,9 @@ break;
 $GLOBALS['Test_TCO_deepTailRec'] = __NAMESPACE__ . '\\majTest_majTmajCmajO_deepmajTailmajRec';
 
 // Test_TCO_act
-$GLOBALS['Test_TCO_act'] = (($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(100000), function($dummy_0) {
+$GLOBALS['Test_TCO_act'] = ((($GLOBALS['Effect_bindEffect'])->{'bind'})(\Bench\majBench_opaque(100000)))(function($dummy_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])(($GLOBALS['Test_TCO_deepTailRec'])($dummy_0, 0)));
+  $__res = \Effect\Console\majEffect_majConsole_log((($GLOBALS['Data_Show_showInt'])->{'show'})(\Test\TCO\majTest_majTmajCmajO_deepmajTailmajRec($dummy_0, 0)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

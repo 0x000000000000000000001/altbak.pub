@@ -100,7 +100,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Control_Plus_plusArray
-$GLOBALS['Control_Plus_plusArray'] = ["empty" => [], "Alt0" => function($_dollar__unused_0) {
+$GLOBALS['Control_Plus_plusArray'] = (object)["empty" => [], "Alt0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Alt_altArray'];
   goto __end;;
@@ -115,7 +115,7 @@ function majControl_majPlus_empty($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['empty'];
+  $__res = ($dict_0)->{'empty'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

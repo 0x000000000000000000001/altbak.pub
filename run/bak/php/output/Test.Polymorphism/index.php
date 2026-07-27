@@ -113,7 +113,7 @@ function majTest_majPolymorphism_mempty_($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['mempty_'];
+  $__res = ($dict_0)->{'mempty_'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -127,7 +127,7 @@ function majTest_majPolymorphism_mappend_($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['mappend_'];
+  $__res = ($dict_0)->{'mappend_'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -141,7 +141,7 @@ function majTest_majPolymorphism_polymajLoop($dictMonoidish_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $mempty_1_1_0 = ($dictMonoidish_0)['mempty_'];
+  $mempty_1_1_0 = ($dictMonoidish_0)->{'mempty_'};
   $__res = (function() use ($dictMonoidish_0, $mempty_1_1_0) {
   $__fn = function($n_init_2, $acc_init_3 = null) use ($dictMonoidish_0, $mempty_1_1_0, &$__fn) {
   $__num = \func_num_args();
@@ -171,7 +171,7 @@ default:
 break;
 };
   $__tco_1 = ($v_5 - 1);
-  $__tco_2 = (($dictMonoidish_0)['mappend_'])($v1_6, $mempty_1_1_0);
+  $__tco_2 = ((($dictMonoidish_0)->{'mappend_'})($v1_6))($mempty_1_1_0);
   $__tco_var_go__4_1_1_v_5 = $__tco_1;
   $__tco_var_go__4_1_1_v1_6 = $__tco_2;
   goto tco_loop_go__4_1_1;;
@@ -184,7 +184,7 @@ break;
   };
   return $__fn;
 })();
-  $__res = ($go__4_1)($n_init_2, $acc_init_3);
+  $__res = (($go__4_1)($n_init_2))($acc_init_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -198,7 +198,7 @@ break;
 $GLOBALS['Test_Polymorphism_polyLoop'] = __NAMESPACE__ . '\\majTest_majPolymorphism_polymajLoop';
 
 // Test_Polymorphism_intMonoidish
-$GLOBALS['Test_Polymorphism_intMonoidish'] = ["mempty_" => 1, "mappend_" => (function() {
+$GLOBALS['Test_Polymorphism_intMonoidish'] = (object)["mempty_" => 1, "mappend_" => (function() {
   $__fn = function($x_0, $y_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -213,10 +213,10 @@ $GLOBALS['Test_Polymorphism_intMonoidish'] = ["mempty_" => 1, "mappend_" => (fun
 })()];
 
 // Test_Polymorphism_describe
-$GLOBALS['Test_Polymorphism_describe'] = ($GLOBALS['Effect_Console_log'])("Polymorphism (10M Type Class Dict Lookups):");
+$GLOBALS['Test_Polymorphism_describe'] = \Effect\Console\majEffect_majConsole_log("Polymorphism (10M Type Class Dict Lookups):");
 
 // Test_Polymorphism_act
-$GLOBALS['Test_Polymorphism_act'] = (($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Bench_opaque'])(10000000), function($dummy_0) {
+$GLOBALS['Test_Polymorphism_act'] = ((($GLOBALS['Effect_bindEffect'])->{'bind'})(\Bench\majBench_opaque(10000000)))(function($dummy_0) {
   $__num = \func_num_args();
   $go__1_0 = null;
   $go__1_0 = (function() use (&$go__1_0) {
@@ -254,7 +254,7 @@ break;
   };
   return $__fn;
 })();
-  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])['show'])(($go__1_0)($dummy_0, 0)));
+  $__res = \Effect\Console\majEffect_majConsole_log((($GLOBALS['Data_Show_showInt'])->{'show'})((($go__1_0)($dummy_0))(0)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

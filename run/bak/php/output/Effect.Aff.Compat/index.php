@@ -108,7 +108,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Effect_Aff_Compat_discard
-$GLOBALS['Effect_Aff_Compat_discard'] = (($GLOBALS['Control_Bind_discardUnit'])['discard'])($GLOBALS['Effect_bindEffect']);
+$GLOBALS['Effect_Aff_Compat_discard'] = (($GLOBALS['Control_Bind_discardUnit'])->{'discard'})($GLOBALS['Effect_bindEffect']);
 
 // Effect_Aff_Compat_EffectFnCanceler
 function majEffect_majAff_majCompat_majEffectmajFnmajCanceler($x_0) {
@@ -147,15 +147,15 @@ function majEffect_majAff_majCompat_frommajEffectmajFnmajAff($v_0) {
   }
   $__res = ($GLOBALS['Effect_Aff__makeAff'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], function($k_1) use ($v_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_bindEffect'])['bind'])(($GLOBALS['Effect_Uncurried_runEffectFn2'])($v_0, ($GLOBALS['Effect_Uncurried_mkEffectFn1'])(($GLOBALS['Control_Semigroupoid_composeImpl'])($k_1, $GLOBALS['Data_Either_Left'])), ($GLOBALS['Effect_Uncurried_mkEffectFn1'])(($GLOBALS['Control_Semigroupoid_composeImpl'])($k_1, $GLOBALS['Data_Either_Right']))), function($v1_2) {
+  $__res = ((($GLOBALS['Effect_bindEffect'])->{'bind'})(\Effect\Uncurried\majEffect_majUncurried_runmajEffectmajFn2($v_0, \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn1((($GLOBALS['Control_Semigroupoid_composeImpl'])($k_1))($GLOBALS['Data_Either_Left'])), \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn1((($GLOBALS['Control_Semigroupoid_composeImpl'])($k_1))($GLOBALS['Data_Either_Right'])))))(function($v1_2) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_applicativeEffect'])['pure'])(function($e_3) use ($v1_2) {
+  $__res = (($GLOBALS['Effect_applicativeEffect'])->{'pure'})(function($e_3) use ($v1_2) {
   $__num = \func_num_args();
   $__res = ($GLOBALS['Effect_Aff__makeAff'])($GLOBALS['Effect_Aff_isLeft'], $GLOBALS['Effect_Aff_unsafeFromLeft'], $GLOBALS['Effect_Aff_unsafeFromRight'], $GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], function($k2_4) use ($e_3, $v1_2) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Effect_Aff_Compat_discard'])(($GLOBALS['Effect_Uncurried_runEffectFn3'])($v1_2, $e_3, ($GLOBALS['Effect_Uncurried_mkEffectFn1'])(($GLOBALS['Control_Semigroupoid_composeImpl'])($k2_4, $GLOBALS['Data_Either_Left'])), ($GLOBALS['Effect_Uncurried_mkEffectFn1'])(($GLOBALS['Control_Semigroupoid_composeImpl'])($k2_4, $GLOBALS['Data_Either_Right']))), function($_dollar__unused_5) {
+  $__res = (($GLOBALS['Effect_Aff_Compat_discard'])(\Effect\Uncurried\majEffect_majUncurried_runmajEffectmajFn3($v1_2, $e_3, \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn1((($GLOBALS['Control_Semigroupoid_composeImpl'])($k2_4))($GLOBALS['Data_Either_Left'])), \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn1((($GLOBALS['Control_Semigroupoid_composeImpl'])($k2_4))($GLOBALS['Data_Either_Right'])))))(function($_dollar__unused_5) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_applicativeEffect'])['pure'])($GLOBALS['Effect_Aff_nonCanceler']);
+  $__res = (($GLOBALS['Effect_applicativeEffect'])->{'pure'})($GLOBALS['Effect_Aff_nonCanceler']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

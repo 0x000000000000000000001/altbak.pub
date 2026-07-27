@@ -107,16 +107,16 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $GLOBALS['Control_Monad_Reader_withReader_closure'] = $GLOBALS['Control_Monad_Reader_Trans_withReaderT'];
 
 // Control_Monad_Reader_withReader
-function majControl_majMonad_majReader_withmajReader($v_0, $v_1 = null) {
+function majControl_majMonad_majReader_withmajReader($v_0, $v_1 = null, $v_2 = null) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majReader_withmajReader';
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($GLOBALS['Control_Monad_Reader_withReader_closure'])($v_0, $v_1);
+  $__res = ($GLOBALS['Control_Monad_Reader_withReader_closure'])($v_0, $v_1, $v_2);
   goto __end;;
   __end:
-  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
 }
 $GLOBALS['Control_Monad_Reader_withReader'] = __NAMESPACE__ . '\\majControl_majMonad_majReader_withmajReader';
 
@@ -127,7 +127,7 @@ function majControl_majMonad_majReader_runmajReader($v_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'], $v_0);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($v_0);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -141,7 +141,7 @@ function majControl_majMonad_majReader_mapmajReader($f_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Monad_Reader_Trans_mapReaderT'])(($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0, $GLOBALS['Unsafe_Coerce_unsafeCoerce'])));
+  $__res = ($GLOBALS['Control_Monad_Reader_Trans_mapReaderT'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))($GLOBALS['Unsafe_Coerce_unsafeCoerce'])));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

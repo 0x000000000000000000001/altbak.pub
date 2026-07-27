@@ -129,9 +129,9 @@ function majData_majProfunctor_majJoin_showmajJoin($dictShow_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["show" => function($v_1) use ($dictShow_0) {
+  $__res = (object)["show" => function($v_1) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Join ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(Join "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_0)->{'show'})($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -149,13 +149,13 @@ function majData_majProfunctor_majJoin_semigroupmajJoin($dictSemigroupoid_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["append" => (function() use ($dictSemigroupoid_0) {
+  $__res = (object)["append" => (function() use ($dictSemigroupoid_0) {
   $__fn = function($v_1, $v1_2 = null) use ($dictSemigroupoid_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictSemigroupoid_0)['compose'])($v_1, $v1_2);
+  $__res = ((($dictSemigroupoid_0)->{'compose'})($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -183,7 +183,7 @@ function majData_majProfunctor_majJoin_ordmajJoin($dictOrd_0) {
 $GLOBALS['Data_Profunctor_Join_ordJoin'] = __NAMESPACE__ . '\\majData_majProfunctor_majJoin_ordmajJoin';
 
 // Data_Profunctor_Join_newtypeJoin
-$GLOBALS['Data_Profunctor_Join_newtypeJoin'] = ["Coercible0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Profunctor_Join_newtypeJoin'] = (object)["Coercible0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = null;
   goto __end;;
@@ -198,21 +198,21 @@ function majData_majProfunctor_majJoin_monoidmajJoin($dictCategory_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($dictCategory_0)['Semigroupoid0'])(null);
-  $semigroupJoin1_2_1 = ["append" => (function() use ($__local_var_1_0) {
+  $__local_var_1_0 = (($dictCategory_0)->{'Semigroupoid0'})(null);
+  $semigroupJoin1_2_1 = (object)["append" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2, $v1_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_1_0)['compose'])($v_2, $v1_3);
+  $__res = ((($__local_var_1_0)->{'compose'})($v_2))($v1_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = ["mempty" => ($dictCategory_0)['identity'], "Semigroup0" => function($_dollar__unused_3) use ($semigroupJoin1_2_1) {
+  $__res = (object)["mempty" => ($dictCategory_0)->{'identity'}, "Semigroup0" => function($_dollar__unused_3) use ($semigroupJoin1_2_1) {
   $__num = \func_num_args();
   $__res = $semigroupJoin1_2_1;
   goto __end;;
@@ -232,13 +232,13 @@ function majData_majProfunctor_majJoin_invariantmajJoin($dictProfunctor_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["imap" => (function() use ($dictProfunctor_0) {
+  $__res = (object)["imap" => (function() use ($dictProfunctor_0) {
   $__fn = function($f_1, $g_2 = null, $v_3 = null) use ($dictProfunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictProfunctor_0)['dimap'])($g_2, $f_1, $v_3);
+  $__res = (((($dictProfunctor_0)->{'dimap'})($g_2))($f_1))($v_3);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;

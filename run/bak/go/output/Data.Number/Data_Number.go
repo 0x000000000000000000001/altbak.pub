@@ -99,108 +99,277 @@ func Get_e() gopurs_runtime.Value {
 	return cache_e
 }
 
+var cache_abs gopurs_runtime.Value
+var once_abs sync.Once
+func Get_abs() gopurs_runtime.Value {
+	once_abs.Do(func() {
+		cache_abs = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float(Abs(arg0.FloatVal()))
+})
+	})
+	return cache_abs
+}
+
+var cache_acos gopurs_runtime.Value
+var once_acos sync.Once
+func Get_acos() gopurs_runtime.Value {
+	once_acos.Do(func() {
+		cache_acos = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float(Acos(arg0.FloatVal()))
+})
+	})
+	return cache_acos
+}
+
+var cache_asin gopurs_runtime.Value
+var once_asin sync.Once
+func Get_asin() gopurs_runtime.Value {
+	once_asin.Do(func() {
+		cache_asin = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float(Asin(arg0.FloatVal()))
+})
+	})
+	return cache_asin
+}
+
+var cache_atan gopurs_runtime.Value
+var once_atan sync.Once
+func Get_atan() gopurs_runtime.Value {
+	once_atan.Do(func() {
+		cache_atan = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float(Atan(arg0.FloatVal()))
+})
+	})
+	return cache_atan
+}
+
+var cache_atan2 gopurs_runtime.Value
+var once_atan2 sync.Once
+func Get_atan2() gopurs_runtime.Value {
+	once_atan2.Do(func() {
+		cache_atan2 = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float(Atan2(arg0.FloatVal(), arg1.FloatVal()))
+})
+	})
+	return cache_atan2
+}
+
+var cache_ceil gopurs_runtime.Value
+var once_ceil sync.Once
+func Get_ceil() gopurs_runtime.Value {
+	once_ceil.Do(func() {
+		cache_ceil = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float(Ceil(arg0.FloatVal()))
+})
+	})
+	return cache_ceil
+}
+
+var cache_cos gopurs_runtime.Value
+var once_cos sync.Once
+func Get_cos() gopurs_runtime.Value {
+	once_cos.Do(func() {
+		cache_cos = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float(Cos(arg0.FloatVal()))
+})
+	})
+	return cache_cos
+}
+
+var cache_exp gopurs_runtime.Value
+var once_exp sync.Once
+func Get_exp() gopurs_runtime.Value {
+	once_exp.Do(func() {
+		cache_exp = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float(Exp(arg0.FloatVal()))
+})
+	})
+	return cache_exp
+}
+
+var cache_floor gopurs_runtime.Value
+var once_floor sync.Once
+func Get_floor() gopurs_runtime.Value {
+	once_floor.Do(func() {
+		cache_floor = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float(Floor(arg0.FloatVal()))
+})
+	})
+	return cache_floor
+}
+
+var cache_fromStringImpl gopurs_runtime.Value
+var once_fromStringImpl sync.Once
+func Get_fromStringImpl() gopurs_runtime.Value {
+	once_fromStringImpl.Do(func() {
+		cache_fromStringImpl = FromStringImpl
+	})
+	return cache_fromStringImpl
+}
+
+var cache_infinity gopurs_runtime.Value
+var once_infinity sync.Once
+func Get_infinity() gopurs_runtime.Value {
+	once_infinity.Do(func() {
+		cache_infinity = gopurs_runtime.Float(Infinity)
+	})
+	return cache_infinity
+}
+
+var cache_isFinite gopurs_runtime.Value
+var once_isFinite sync.Once
+func Get_isFinite() gopurs_runtime.Value {
+	once_isFinite.Do(func() {
+		cache_isFinite = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool(IsFinite(arg0.FloatVal()))
+})
+	})
+	return cache_isFinite
+}
+
+var cache_isNaN gopurs_runtime.Value
+var once_isNaN sync.Once
+func Get_isNaN() gopurs_runtime.Value {
+	once_isNaN.Do(func() {
+		cache_isNaN = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool(IsNaN(arg0.FloatVal()))
+})
+	})
+	return cache_isNaN
+}
+
+var cache_log gopurs_runtime.Value
+var once_log sync.Once
+func Get_log() gopurs_runtime.Value {
+	once_log.Do(func() {
+		cache_log = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float(Log(arg0.FloatVal()))
+})
+	})
+	return cache_log
+}
+
+var cache_max gopurs_runtime.Value
+var once_max sync.Once
+func Get_max() gopurs_runtime.Value {
+	once_max.Do(func() {
+		cache_max = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float(Max(arg0.FloatVal(), arg1.FloatVal()))
+})
+	})
+	return cache_max
+}
+
+var cache_min gopurs_runtime.Value
+var once_min sync.Once
+func Get_min() gopurs_runtime.Value {
+	once_min.Do(func() {
+		cache_min = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float(Min(arg0.FloatVal(), arg1.FloatVal()))
+})
+	})
+	return cache_min
+}
+
+var cache_nan gopurs_runtime.Value
+var once_nan sync.Once
+func Get_nan() gopurs_runtime.Value {
+	once_nan.Do(func() {
+		cache_nan = gopurs_runtime.Float(Nan)
+	})
+	return cache_nan
+}
+
+var cache_pow gopurs_runtime.Value
+var once_pow sync.Once
+func Get_pow() gopurs_runtime.Value {
+	once_pow.Do(func() {
+		cache_pow = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float(Pow(arg0.FloatVal(), arg1.FloatVal()))
+})
+	})
+	return cache_pow
+}
+
+var cache_remainder gopurs_runtime.Value
+var once_remainder sync.Once
+func Get_remainder() gopurs_runtime.Value {
+	once_remainder.Do(func() {
+		cache_remainder = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float(Remainder(arg0.FloatVal(), arg1.FloatVal()))
+})
+	})
+	return cache_remainder
+}
+
+var cache_round gopurs_runtime.Value
+var once_round sync.Once
+func Get_round() gopurs_runtime.Value {
+	once_round.Do(func() {
+		cache_round = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float(Round(arg0.FloatVal()))
+})
+	})
+	return cache_round
+}
+
+var cache_sign gopurs_runtime.Value
+var once_sign sync.Once
+func Get_sign() gopurs_runtime.Value {
+	once_sign.Do(func() {
+		cache_sign = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float(Sign(arg0.FloatVal()))
+})
+	})
+	return cache_sign
+}
+
+var cache_sin gopurs_runtime.Value
+var once_sin sync.Once
+func Get_sin() gopurs_runtime.Value {
+	once_sin.Do(func() {
+		cache_sin = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float(Sin(arg0.FloatVal()))
+})
+	})
+	return cache_sin
+}
+
+var cache_sqrt gopurs_runtime.Value
+var once_sqrt sync.Once
+func Get_sqrt() gopurs_runtime.Value {
+	once_sqrt.Do(func() {
+		cache_sqrt = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float(Sqrt(arg0.FloatVal()))
+})
+	})
+	return cache_sqrt
+}
+
+var cache_tan gopurs_runtime.Value
+var once_tan sync.Once
+func Get_tan() gopurs_runtime.Value {
+	once_tan.Do(func() {
+		cache_tan = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float(Tan(arg0.FloatVal()))
+})
+	})
+	return cache_tan
+}
+
+var cache_trunc gopurs_runtime.Value
+var once_trunc sync.Once
+func Get_trunc() gopurs_runtime.Value {
+	once_trunc.Do(func() {
+		cache_trunc = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float(Trunc(arg0.FloatVal()))
+})
+	})
+	return cache_trunc
+}
+
 func Call_fromString(str_0_loop string) *pkg_Data_Maybe.Constructor_Just[float64] {
 var str_0 string = str_0_loop
 _ = str_0
-return (*pkg_Data_Maybe.Constructor_Just[float64])(gopurs_runtime.UncurriedApp4(Get_fromStringImpl(), gopurs_runtime.Str(str_0), Get_isFinite(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}).UnsafePtr)
-}
-
-func Get_abs() gopurs_runtime.Value {
-	return _Gopurs_Abs
-}
-
-func Get_acos() gopurs_runtime.Value {
-	return _Gopurs_Acos
-}
-
-func Get_asin() gopurs_runtime.Value {
-	return _Gopurs_Asin
-}
-
-func Get_atan() gopurs_runtime.Value {
-	return _Gopurs_Atan
-}
-
-func Get_atan2() gopurs_runtime.Value {
-	return _Gopurs_Atan2
-}
-
-func Get_ceil() gopurs_runtime.Value {
-	return _Gopurs_Ceil
-}
-
-func Get_cos() gopurs_runtime.Value {
-	return _Gopurs_Cos
-}
-
-func Get_exp() gopurs_runtime.Value {
-	return _Gopurs_Exp
-}
-
-func Get_floor() gopurs_runtime.Value {
-	return _Gopurs_Floor
-}
-
-func Get_fromStringImpl() gopurs_runtime.Value {
-	return _Gopurs_FromStringImpl
-}
-
-func Get_infinity() gopurs_runtime.Value {
-	return _Gopurs_Infinity
-}
-
-func Get_isFinite() gopurs_runtime.Value {
-	return _Gopurs_IsFinite
-}
-
-func Get_isNaN() gopurs_runtime.Value {
-	return _Gopurs_IsNaN
-}
-
-func Get_log() gopurs_runtime.Value {
-	return _Gopurs_Log
-}
-
-func Get_max() gopurs_runtime.Value {
-	return _Gopurs_Max
-}
-
-func Get_min() gopurs_runtime.Value {
-	return _Gopurs_Min
-}
-
-func Get_nan() gopurs_runtime.Value {
-	return _Gopurs_Nan
-}
-
-func Get_pow() gopurs_runtime.Value {
-	return _Gopurs_Pow
-}
-
-func Get_remainder() gopurs_runtime.Value {
-	return _Gopurs_Remainder
-}
-
-func Get_round() gopurs_runtime.Value {
-	return _Gopurs_Round
-}
-
-func Get_sign() gopurs_runtime.Value {
-	return _Gopurs_Sign
-}
-
-func Get_sin() gopurs_runtime.Value {
-	return _Gopurs_Sin
-}
-
-func Get_sqrt() gopurs_runtime.Value {
-	return _Gopurs_Sqrt
-}
-
-func Get_tan() gopurs_runtime.Value {
-	return _Gopurs_Tan
-}
-
-func Get_trunc() gopurs_runtime.Value {
-	return _Gopurs_Trunc
+return (*pkg_Data_Maybe.Constructor_Just[float64])(gopurs_runtime.UncurriedApp4(Get_fromStringImpl(), gopurs_runtime.Str(str_0), Get_isFinite(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil})).UnsafePtr)
 }

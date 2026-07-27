@@ -100,7 +100,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Control_Alt_altArray
-$GLOBALS['Control_Alt_altArray'] = ["alt" => ($GLOBALS['Data_Semigroup_semigroupArray'])['append'], "Functor0" => function($_dollar__unused_0) {
+$GLOBALS['Control_Alt_altArray'] = (object)["alt" => ($GLOBALS['Data_Semigroup_semigroupArray'])->{'append'}, "Functor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Functor_functorArray'];
   goto __end;;
@@ -115,7 +115,7 @@ function majControl_majAlt_alt($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['alt'];
+  $__res = ($dict_0)->{'alt'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

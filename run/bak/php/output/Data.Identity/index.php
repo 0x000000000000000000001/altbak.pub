@@ -142,9 +142,9 @@ function majData_majIdentity_showmajIdentity($dictShow_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["show" => function($v_1) use ($dictShow_0) {
+  $__res = (object)["show" => function($v_1) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Identity ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(Identity "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_0)->{'show'})($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -212,7 +212,7 @@ function majData_majIdentity_ordmajIdentity($dictOrd_0) {
 $GLOBALS['Data_Identity_ordIdentity'] = __NAMESPACE__ . '\\majData_majIdentity_ordmajIdentity';
 
 // Data_Identity_newtypeIdentity
-$GLOBALS['Data_Identity_newtypeIdentity'] = ["Coercible0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Identity_newtypeIdentity'] = (object)["Coercible0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = null;
   goto __end;;
@@ -263,7 +263,7 @@ function majData_majIdentity_heytingmajAlgebramajIdentity($dictHeytingAlgebra_0)
 $GLOBALS['Data_Identity_heytingAlgebraIdentity'] = __NAMESPACE__ . '\\majData_majIdentity_heytingmajAlgebramajIdentity';
 
 // Data_Identity_functorIdentity
-$GLOBALS['Data_Identity_functorIdentity'] = ["map" => (function() {
+$GLOBALS['Data_Identity_functorIdentity'] = (object)["map" => (function() {
   $__fn = function($f_0, $m_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -278,13 +278,13 @@ $GLOBALS['Data_Identity_functorIdentity'] = ["map" => (function() {
 })()];
 
 // Data_Identity_invariantIdentity
-$GLOBALS['Data_Identity_invariantIdentity'] = ["imap" => (function() {
+$GLOBALS['Data_Identity_invariantIdentity'] = (object)["imap" => (function() {
   $__fn = function($f_0, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Identity_functorIdentity'])['map'])($f_0);
+  $__res = (($GLOBALS['Data_Identity_functorIdentity'])->{'map'})($f_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -293,7 +293,7 @@ $GLOBALS['Data_Identity_invariantIdentity'] = ["imap" => (function() {
 })()];
 
 // Data_Identity_extendIdentity
-$GLOBALS['Data_Identity_extendIdentity'] = ["extend" => (function() {
+$GLOBALS['Data_Identity_extendIdentity'] = (object)["extend" => (function() {
   $__fn = function($f_0, $m_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -342,18 +342,18 @@ function majData_majIdentity_eqmajIdentity($dictEq_0) {
 $GLOBALS['Data_Identity_eqIdentity'] = __NAMESPACE__ . '\\majData_majIdentity_eqmajIdentity';
 
 // Data_Identity_eq1Identity
-$GLOBALS['Data_Identity_eq1Identity'] = ["eq1" => function($dictEq_0) {
+$GLOBALS['Data_Identity_eq1Identity'] = (object)["eq1" => function($dictEq_0) {
   $__num = \func_num_args();
-  $__res = ($dictEq_0)['eq'];
+  $__res = ($dictEq_0)->{'eq'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
 
 // Data_Identity_ord1Identity
-$GLOBALS['Data_Identity_ord1Identity'] = ["compare1" => function($dictOrd_0) {
+$GLOBALS['Data_Identity_ord1Identity'] = (object)["compare1" => function($dictOrd_0) {
   $__num = \func_num_args();
-  $__res = ($dictOrd_0)['compare'];
+  $__res = ($dictOrd_0)->{'compare'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -366,7 +366,7 @@ $GLOBALS['Data_Identity_ord1Identity'] = ["compare1" => function($dictOrd_0) {
 }];
 
 // Data_Identity_comonadIdentity
-$GLOBALS['Data_Identity_comonadIdentity'] = ["extract" => function($v_0) {
+$GLOBALS['Data_Identity_comonadIdentity'] = (object)["extract" => function($v_0) {
   $__num = \func_num_args();
   $__res = $v_0;
   goto __end;;
@@ -423,7 +423,7 @@ function majData_majIdentity_booleanmajAlgebramajIdentity($dictBooleanAlgebra_0)
 $GLOBALS['Data_Identity_booleanAlgebraIdentity'] = __NAMESPACE__ . '\\majData_majIdentity_booleanmajAlgebramajIdentity';
 
 // Data_Identity_applyIdentity
-$GLOBALS['Data_Identity_applyIdentity'] = ["apply" => (function() {
+$GLOBALS['Data_Identity_applyIdentity'] = (object)["apply" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -444,7 +444,7 @@ $GLOBALS['Data_Identity_applyIdentity'] = ["apply" => (function() {
 }];
 
 // Data_Identity_bindIdentity
-$GLOBALS['Data_Identity_bindIdentity'] = ["bind" => (function() {
+$GLOBALS['Data_Identity_bindIdentity'] = (object)["bind" => (function() {
   $__fn = function($v_0, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -465,7 +465,7 @@ $GLOBALS['Data_Identity_bindIdentity'] = ["bind" => (function() {
 }];
 
 // Data_Identity_applicativeIdentity
-$GLOBALS['Data_Identity_applicativeIdentity'] = ["pure" => $GLOBALS['Data_Identity_Identity'], "Apply0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Identity_applicativeIdentity'] = (object)["pure" => $GLOBALS['Data_Identity_Identity'], "Apply0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Identity_applyIdentity'];
   goto __end;;
@@ -474,7 +474,7 @@ $GLOBALS['Data_Identity_applicativeIdentity'] = ["pure" => $GLOBALS['Data_Identi
 }];
 
 // Data_Identity_monadIdentity
-$GLOBALS['Data_Identity_monadIdentity'] = ["Applicative0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Identity_monadIdentity'] = (object)["Applicative0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Identity_applicativeIdentity'];
   goto __end;;
@@ -489,7 +489,7 @@ $GLOBALS['Data_Identity_monadIdentity'] = ["Applicative0" => function($_dollar__
 }];
 
 // Data_Identity_altIdentity
-$GLOBALS['Data_Identity_altIdentity'] = ["alt" => (function() {
+$GLOBALS['Data_Identity_altIdentity'] = (object)["alt" => (function() {
   $__fn = function($x_0, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {

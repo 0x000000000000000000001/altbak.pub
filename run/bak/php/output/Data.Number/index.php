@@ -95,31 +95,251 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 }
 
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
-$GLOBALS['Data_Number_abs'] = new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Number_acos'] = new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Number_asin'] = new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Number_atan'] = new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Number_atan2'] = new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Number_ceil'] = new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Number_cos'] = new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Number_exp'] = new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Number_floor'] = new class { public function __invoke(...$args) { return $this; } };
+function majData_majNumber_abs(float $v0): float|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majNumber_abs';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $f = new class { public function __invoke(...$args) { return $this; } };
+  return $f($v0);
+}
+$GLOBALS['Data_Number_abs'] = __NAMESPACE__ . '\\majData_majNumber_abs';
+
+function majData_majNumber_acos(float $v0): float|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majNumber_acos';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $f = new class { public function __invoke(...$args) { return $this; } };
+  return $f($v0);
+}
+$GLOBALS['Data_Number_acos'] = __NAMESPACE__ . '\\majData_majNumber_acos';
+
+function majData_majNumber_asin(float $v0): float|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majNumber_asin';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $f = new class { public function __invoke(...$args) { return $this; } };
+  return $f($v0);
+}
+$GLOBALS['Data_Number_asin'] = __NAMESPACE__ . '\\majData_majNumber_asin';
+
+function majData_majNumber_atan(float $v0): float|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majNumber_atan';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $f = new class { public function __invoke(...$args) { return $this; } };
+  return $f($v0);
+}
+$GLOBALS['Data_Number_atan'] = __NAMESPACE__ . '\\majData_majNumber_atan';
+
+function majData_majNumber_atan2(float $v0, $v1 = null): float|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majNumber_atan2';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $f = new class { public function __invoke(...$args) { return $this; } };
+  return $f($v0, $v1);
+}
+$GLOBALS['Data_Number_atan2'] = __NAMESPACE__ . '\\majData_majNumber_atan2';
+
+function majData_majNumber_ceil(float $v0): float|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majNumber_ceil';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $f = new class { public function __invoke(...$args) { return $this; } };
+  return $f($v0);
+}
+$GLOBALS['Data_Number_ceil'] = __NAMESPACE__ . '\\majData_majNumber_ceil';
+
+function majData_majNumber_cos(float $v0): float|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majNumber_cos';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $f = new class { public function __invoke(...$args) { return $this; } };
+  return $f($v0);
+}
+$GLOBALS['Data_Number_cos'] = __NAMESPACE__ . '\\majData_majNumber_cos';
+
+function majData_majNumber_exp(float $v0): float|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majNumber_exp';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $f = new class { public function __invoke(...$args) { return $this; } };
+  return $f($v0);
+}
+$GLOBALS['Data_Number_exp'] = __NAMESPACE__ . '\\majData_majNumber_exp';
+
+function majData_majNumber_floor(float $v0): float|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majNumber_floor';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $f = new class { public function __invoke(...$args) { return $this; } };
+  return $f($v0);
+}
+$GLOBALS['Data_Number_floor'] = __NAMESPACE__ . '\\majData_majNumber_floor';
+
 $GLOBALS['Data_Number_fromStringImpl'] = new class { public function __invoke(...$args) { return $this; } };
 $GLOBALS['Data_Number_infinity'] = new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Number_isFinite'] = new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Number_isNaN'] = new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Number_log'] = new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Number_max'] = new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Number_min'] = new class { public function __invoke(...$args) { return $this; } };
+function majData_majNumber_ismajFinite(float $v0): bool|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majNumber_ismajFinite';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $f = new class { public function __invoke(...$args) { return $this; } };
+  return $f($v0);
+}
+$GLOBALS['Data_Number_isFinite'] = __NAMESPACE__ . '\\majData_majNumber_ismajFinite';
+
+function majData_majNumber_ismajNamajN(float $v0): bool|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majNumber_ismajNamajN';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $f = new class { public function __invoke(...$args) { return $this; } };
+  return $f($v0);
+}
+$GLOBALS['Data_Number_isNaN'] = __NAMESPACE__ . '\\majData_majNumber_ismajNamajN';
+
+function majData_majNumber_log(float $v0): float|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majNumber_log';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $f = new class { public function __invoke(...$args) { return $this; } };
+  return $f($v0);
+}
+$GLOBALS['Data_Number_log'] = __NAMESPACE__ . '\\majData_majNumber_log';
+
+function majData_majNumber_max(float $v0, $v1 = null): float|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majNumber_max';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $f = new class { public function __invoke(...$args) { return $this; } };
+  return $f($v0, $v1);
+}
+$GLOBALS['Data_Number_max'] = __NAMESPACE__ . '\\majData_majNumber_max';
+
+function majData_majNumber_min(float $v0, $v1 = null): float|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majNumber_min';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $f = new class { public function __invoke(...$args) { return $this; } };
+  return $f($v0, $v1);
+}
+$GLOBALS['Data_Number_min'] = __NAMESPACE__ . '\\majData_majNumber_min';
+
 $GLOBALS['Data_Number_nan'] = new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Number_pow'] = new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Number_remainder'] = new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Number_round'] = new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Number_sign'] = new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Number_sin'] = new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Number_sqrt'] = new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Number_tan'] = new class { public function __invoke(...$args) { return $this; } };
-$GLOBALS['Data_Number_trunc'] = new class { public function __invoke(...$args) { return $this; } };
+function majData_majNumber_pow(float $v0, $v1 = null): float|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majNumber_pow';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $f = new class { public function __invoke(...$args) { return $this; } };
+  return $f($v0, $v1);
+}
+$GLOBALS['Data_Number_pow'] = __NAMESPACE__ . '\\majData_majNumber_pow';
+
+function majData_majNumber_remainder(float $v0, $v1 = null): float|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majNumber_remainder';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $f = new class { public function __invoke(...$args) { return $this; } };
+  return $f($v0, $v1);
+}
+$GLOBALS['Data_Number_remainder'] = __NAMESPACE__ . '\\majData_majNumber_remainder';
+
+function majData_majNumber_round(float $v0): float|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majNumber_round';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $f = new class { public function __invoke(...$args) { return $this; } };
+  return $f($v0);
+}
+$GLOBALS['Data_Number_round'] = __NAMESPACE__ . '\\majData_majNumber_round';
+
+function majData_majNumber_sign(float $v0): float|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majNumber_sign';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $f = new class { public function __invoke(...$args) { return $this; } };
+  return $f($v0);
+}
+$GLOBALS['Data_Number_sign'] = __NAMESPACE__ . '\\majData_majNumber_sign';
+
+function majData_majNumber_sin(float $v0): float|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majNumber_sin';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $f = new class { public function __invoke(...$args) { return $this; } };
+  return $f($v0);
+}
+$GLOBALS['Data_Number_sin'] = __NAMESPACE__ . '\\majData_majNumber_sin';
+
+function majData_majNumber_sqrt(float $v0): float|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majNumber_sqrt';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $f = new class { public function __invoke(...$args) { return $this; } };
+  return $f($v0);
+}
+$GLOBALS['Data_Number_sqrt'] = __NAMESPACE__ . '\\majData_majNumber_sqrt';
+
+function majData_majNumber_tan(float $v0): float|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majNumber_tan';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $f = new class { public function __invoke(...$args) { return $this; } };
+  return $f($v0);
+}
+$GLOBALS['Data_Number_tan'] = __NAMESPACE__ . '\\majData_majNumber_tan';
+
+function majData_majNumber_trunc(float $v0): float|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majData_majNumber_trunc';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $f = new class { public function __invoke(...$args) { return $this; } };
+  return $f($v0);
+}
+$GLOBALS['Data_Number_trunc'] = __NAMESPACE__ . '\\majData_majNumber_trunc';
+
 
 
 

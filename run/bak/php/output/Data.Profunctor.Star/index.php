@@ -140,13 +140,13 @@ function majData_majProfunctor_majStar_semigroupoidmajStar($dictBind_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["compose" => (function() use ($dictBind_0) {
+  $__res = (object)["compose" => (function() use ($dictBind_0) {
   $__fn = function($v_1, $v1_2 = null, $x_3 = null) use ($dictBind_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictBind_0)['bind'])(($v1_2)($x_3), $v_1);
+  $__res = ((($dictBind_0)->{'bind'})(($v1_2)($x_3)))($v_1);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -166,13 +166,13 @@ function majData_majProfunctor_majStar_profunctormajStar($dictFunctor_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["dimap" => (function() use ($dictFunctor_0) {
+  $__res = (object)["dimap" => (function() use ($dictFunctor_0) {
   $__fn = function($f_1, $g_2 = null, $v_3 = null) use ($dictFunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictFunctor_0)['map'])($g_2), $v_3), $f_1);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictFunctor_0)->{'map'})($g_2)))($v_3)))($f_1);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -192,21 +192,21 @@ function majData_majProfunctor_majStar_strongmajStar($dictFunctor_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $profunctorStar1_1_0 = ($GLOBALS['Data_Profunctor_Star_profunctorStar'])($dictFunctor_0);
-  $__res = ["first" => (function() use ($dictFunctor_0) {
+  $profunctorStar1_1_0 = \Data\Profunctor\Star\majData_majProfunctor_majStar_profunctormajStar($dictFunctor_0);
+  $__res = (object)["first" => (function() use ($dictFunctor_0) {
   $__fn = function($v_2, $v1_3 = null) use ($dictFunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__local_var_4_1 = ($v1_3)->{'value1'};
-  $__res = (($dictFunctor_0)['map'])(function($v2_5) use ($__local_var_4_1) {
+  $__res = ((($dictFunctor_0)->{'map'})(function($v2_5) use ($__local_var_4_1) {
   $__num = \func_num_args();
   $__res = new \Data\Tuple\Data_Tuple_Tuple($v2_5, $__local_var_4_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, ($v_2)(($v1_3)->{'value0'}));
+}))(($v_2)(($v1_3)->{'value0'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -218,7 +218,7 @@ function majData_majProfunctor_majStar_strongmajStar($dictFunctor_0) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictFunctor_0)['map'])(($GLOBALS['Data_Tuple_Tuple'])(($v1_3)->{'value0'}), ($v_2)(($v1_3)->{'value1'}));
+  $__res = ((($dictFunctor_0)->{'map'})(($GLOBALS['Data_Tuple_Tuple'])(($v1_3)->{'value0'})))(($v_2)(($v1_3)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -238,7 +238,7 @@ function majData_majProfunctor_majStar_strongmajStar($dictFunctor_0) {
 $GLOBALS['Data_Profunctor_Star_strongStar'] = __NAMESPACE__ . '\\majData_majProfunctor_majStar_strongmajStar';
 
 // Data_Profunctor_Star_newtypeStar
-$GLOBALS['Data_Profunctor_Star_newtypeStar'] = ["Coercible0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Profunctor_Star_newtypeStar'] = (object)["Coercible0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = null;
   goto __end;;
@@ -253,13 +253,13 @@ function majData_majProfunctor_majStar_invariantmajStar($dictInvariant_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["imap" => (function() use ($dictInvariant_0) {
+  $__res = (object)["imap" => (function() use ($dictInvariant_0) {
   $__fn = function($f_1, $g_2 = null, $v_3 = null) use ($dictInvariant_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictInvariant_0)['imap'])($f_1, $g_2), $v_3);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(((($dictInvariant_0)->{'imap'})($f_1))($g_2)))($v_3);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -279,7 +279,7 @@ function majData_majProfunctor_majStar_hoistmajStar($f_0, $v_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0, $v_1);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))($v_1);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -293,13 +293,13 @@ function majData_majProfunctor_majStar_functormajStar($dictFunctor_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["map" => (function() use ($dictFunctor_0) {
+  $__res = (object)["map" => (function() use ($dictFunctor_0) {
   $__fn = function($f_1, $v_2 = null) use ($dictFunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictFunctor_0)['map'])($f_1), $v_2);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictFunctor_0)->{'map'})($f_1)))($v_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -322,36 +322,36 @@ function majData_majProfunctor_majStar_distributivemajStar($dictDistributive_0) 
   $__tco_var_Data_Profunctor_Star_distributiveStar_dictDistributive_0 = $dictDistributive_0;
   tco_loop_Data_Profunctor_Star_distributiveStar:;
   $dictDistributive_0 = $__tco_var_Data_Profunctor_Star_distributiveStar_dictDistributive_0;
-  $__local_var_1_0 = (($dictDistributive_0)['Functor0'])(null);
-  $functorStar1_2_1 = ["map" => (function() use ($__local_var_1_0) {
+  $__local_var_1_0 = (($dictDistributive_0)->{'Functor0'})(null);
+  $functorStar1_2_1 = (object)["map" => (function() use ($__local_var_1_0) {
   $__fn = function($f_2, $v_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])((($__local_var_1_0)['map'])($f_2), $v_3);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($__local_var_1_0)->{'map'})($f_2)))($v_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = ["distribute" => function($dictFunctor_3) use ($dictDistributive_0) {
+  $__res = (object)["distribute" => function($dictFunctor_3) use ($dictDistributive_0) {
   $__num = \func_num_args();
-  $collect1_4_2 = (($dictDistributive_0)['collect'])($dictFunctor_3);
+  $collect1_4_2 = (($dictDistributive_0)->{'collect'})($dictFunctor_3);
   $__res = (function() use ($collect1_4_2) {
   $__fn = function($f_5, $a_6 = null) use ($collect1_4_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($collect1_4_2)(function($v_7) use ($a_6) {
+  $__res = (($collect1_4_2)(function($v_7) use ($a_6) {
   $__num = \func_num_args();
   $__res = ($v_7)($a_6);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, $f_5);
+}))($f_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -367,7 +367,7 @@ function majData_majProfunctor_majStar_distributivemajStar($dictDistributive_0) 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(((($GLOBALS['Data_Profunctor_Star_distributiveStar'])($dictDistributive_0))['distribute'])($dictFunctor_3), (($dictFunctor_3)['map'])($f_4));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(((\Data\Profunctor\Star\majData_majProfunctor_majStar_distributivemajStar($dictDistributive_0))->{'distribute'})($dictFunctor_3)))((($dictFunctor_3)->{'map'})($f_4));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -393,15 +393,15 @@ function majData_majProfunctor_majStar_closedmajStar($dictDistributive_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $distribute_1_0 = (($dictDistributive_0)['distribute'])($GLOBALS['Data_Functor_functorFn']);
-  $profunctorStar1_2_1 = ($GLOBALS['Data_Profunctor_Star_profunctorStar'])((($dictDistributive_0)['Functor0'])(null));
-  $__res = ["closed" => (function() use ($distribute_1_0) {
+  $distribute_1_0 = (($dictDistributive_0)->{'distribute'})($GLOBALS['Data_Functor_functorFn']);
+  $profunctorStar1_2_1 = \Data\Profunctor\Star\majData_majProfunctor_majStar_profunctormajStar((($dictDistributive_0)->{'Functor0'})(null));
+  $__res = (object)["closed" => (function() use ($distribute_1_0) {
   $__fn = function($v_3, $g_4 = null) use ($distribute_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($distribute_1_0)(($GLOBALS['Control_Semigroupoid_composeImpl'])($v_3, $g_4));
+  $__res = ($distribute_1_0)((($GLOBALS['Control_Semigroupoid_composeImpl'])($v_3))($g_4));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -427,13 +427,13 @@ function majData_majProfunctor_majStar_choicemajStar($dictApplicative_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $Functor0_1_0 = (((($dictApplicative_0)['Apply0'])(null))['Functor0'])(null);
-  $pure_2_1 = ($dictApplicative_0)['pure'];
-  $profunctorStar1_3_2 = ($GLOBALS['Data_Profunctor_Star_profunctorStar'])($Functor0_1_0);
-  $__res = ["left" => function($v_4) use ($Functor0_1_0, $pure_2_1) {
+  $Functor0_1_0 = (((($dictApplicative_0)->{'Apply0'})(null))->{'Functor0'})(null);
+  $pure_2_1 = ($dictApplicative_0)->{'pure'};
+  $profunctorStar1_3_2 = \Data\Profunctor\Star\majData_majProfunctor_majStar_profunctormajStar($Functor0_1_0);
+  $__res = (object)["left" => function($v_4) use ($Functor0_1_0, $pure_2_1) {
   $__num = \func_num_args();
-  $__local_var_5_3 = ($GLOBALS['Control_Semigroupoid_composeImpl'])((($Functor0_1_0)['map'])($GLOBALS['Data_Either_Left']), $v_4);
-  $__local_var_6_4 = ($GLOBALS['Control_Semigroupoid_composeImpl'])($pure_2_1, $GLOBALS['Data_Either_Right']);
+  $__local_var_5_3 = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($Functor0_1_0)->{'map'})($GLOBALS['Data_Either_Left'])))($v_4);
+  $__local_var_6_4 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($pure_2_1))($GLOBALS['Data_Either_Right']);
   $__res = function($v2_7) use ($__local_var_5_3, $__local_var_6_4) {
   $__num = \func_num_args();
   $__t5 = null;;
@@ -458,8 +458,8 @@ goto end_branch_5;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "right" => function($v_4) use ($Functor0_1_0, $pure_2_1) {
   $__num = \func_num_args();
-  $__local_var_5_6 = ($GLOBALS['Control_Semigroupoid_composeImpl'])($pure_2_1, $GLOBALS['Data_Either_Left']);
-  $__local_var_6_7 = ($GLOBALS['Control_Semigroupoid_composeImpl'])((($Functor0_1_0)['map'])($GLOBALS['Data_Either_Right']), $v_4);
+  $__local_var_5_6 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($pure_2_1))($GLOBALS['Data_Either_Left']);
+  $__local_var_6_7 = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($Functor0_1_0)->{'map'})($GLOBALS['Data_Either_Right'])))($v_4);
   $__res = function($v2_7) use ($__local_var_5_6, $__local_var_6_7) {
   $__num = \func_num_args();
   $__t8 = null;;
@@ -502,21 +502,21 @@ function majData_majProfunctor_majStar_categorymajStar($dictMonad_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($dictMonad_0)['Bind1'])(null);
-  $semigroupoidStar1_2_1 = ["compose" => (function() use ($__local_var_1_0) {
+  $__local_var_1_0 = (($dictMonad_0)->{'Bind1'})(null);
+  $semigroupoidStar1_2_1 = (object)["compose" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2, $v1_3 = null, $x_4 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($__local_var_1_0)['bind'])(($v1_3)($x_4), $v_2);
+  $__res = ((($__local_var_1_0)->{'bind'})(($v1_3)($x_4)))($v_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = ["identity" => ((($dictMonad_0)['Applicative0'])(null))['pure'], "Semigroupoid0" => function($_dollar__unused_3) use ($semigroupoidStar1_2_1) {
+  $__res = (object)["identity" => ((($dictMonad_0)->{'Applicative0'})(null))->{'pure'}, "Semigroupoid0" => function($_dollar__unused_3) use ($semigroupoidStar1_2_1) {
   $__num = \func_num_args();
   $__res = $semigroupoidStar1_2_1;
   goto __end;;
@@ -536,27 +536,27 @@ function majData_majProfunctor_majStar_applymajStar($dictApply_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($dictApply_0)['Functor0'])(null);
-  $functorStar1_2_1 = ["map" => (function() use ($__local_var_1_0) {
+  $__local_var_1_0 = (($dictApply_0)->{'Functor0'})(null);
+  $functorStar1_2_1 = (object)["map" => (function() use ($__local_var_1_0) {
   $__fn = function($f_2, $v_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])((($__local_var_1_0)['map'])($f_2), $v_3);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($__local_var_1_0)->{'map'})($f_2)))($v_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = ["apply" => (function() use ($dictApply_0) {
+  $__res = (object)["apply" => (function() use ($dictApply_0) {
   $__fn = function($v_3, $v1_4 = null, $a_5 = null) use ($dictApply_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictApply_0)['apply'])(($v_3)($a_5), ($v1_4)($a_5));
+  $__res = ((($dictApply_0)->{'apply'})(($v_3)($a_5)))(($v1_4)($a_5));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -582,16 +582,16 @@ function majData_majProfunctor_majStar_bindmajStar($dictBind_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $applyStar1_1_0 = ($GLOBALS['Data_Profunctor_Star_applyStar'])((($dictBind_0)['Apply0'])(null));
-  $__res = ["bind" => (function() use ($dictBind_0) {
+  $applyStar1_1_0 = \Data\Profunctor\Star\majData_majProfunctor_majStar_applymajStar((($dictBind_0)->{'Apply0'})(null));
+  $__res = (object)["bind" => (function() use ($dictBind_0) {
   $__fn = function($v_2, $f_3 = null, $x_4 = null) use ($dictBind_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictBind_0)['bind'])(($v_2)($x_4), function($a_5) use ($f_3, $x_4) {
+  $__res = ((($dictBind_0)->{'bind'})(($v_2)($x_4)))(function($a_5) use ($f_3, $x_4) {
   $__num = \func_num_args();
-  $__res = ($f_3)($a_5, $x_4);
+  $__res = (($f_3)($a_5))($x_4);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -621,14 +621,14 @@ function majData_majProfunctor_majStar_applicativemajStar($dictApplicative_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $applyStar1_1_0 = ($GLOBALS['Data_Profunctor_Star_applyStar'])((($dictApplicative_0)['Apply0'])(null));
-  $__res = ["pure" => (function() use ($dictApplicative_0) {
+  $applyStar1_1_0 = \Data\Profunctor\Star\majData_majProfunctor_majStar_applymajStar((($dictApplicative_0)->{'Apply0'})(null));
+  $__res = (object)["pure" => (function() use ($dictApplicative_0) {
   $__fn = function($a_2, $v_3 = null) use ($dictApplicative_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictApplicative_0)['pure'])($a_2);
+  $__res = (($dictApplicative_0)->{'pure'})($a_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -654,9 +654,9 @@ function majData_majProfunctor_majStar_monadmajStar($dictMonad_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $applicativeStar1_1_0 = ($GLOBALS['Data_Profunctor_Star_applicativeStar'])((($dictMonad_0)['Applicative0'])(null));
-  $bindStar1_2_1 = ($GLOBALS['Data_Profunctor_Star_bindStar'])((($dictMonad_0)['Bind1'])(null));
-  $__res = ["Applicative0" => function($_dollar__unused_3) use ($applicativeStar1_1_0) {
+  $applicativeStar1_1_0 = \Data\Profunctor\Star\majData_majProfunctor_majStar_applicativemajStar((($dictMonad_0)->{'Applicative0'})(null));
+  $bindStar1_2_1 = \Data\Profunctor\Star\majData_majProfunctor_majStar_bindmajStar((($dictMonad_0)->{'Bind1'})(null));
+  $__res = (object)["Applicative0" => function($_dollar__unused_3) use ($applicativeStar1_1_0) {
   $__num = \func_num_args();
   $__res = $applicativeStar1_1_0;
   goto __end;;
@@ -682,27 +682,27 @@ function majData_majProfunctor_majStar_altmajStar($dictAlt_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($dictAlt_0)['Functor0'])(null);
-  $functorStar1_2_1 = ["map" => (function() use ($__local_var_1_0) {
+  $__local_var_1_0 = (($dictAlt_0)->{'Functor0'})(null);
+  $functorStar1_2_1 = (object)["map" => (function() use ($__local_var_1_0) {
   $__fn = function($f_2, $v_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])((($__local_var_1_0)['map'])($f_2), $v_3);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($__local_var_1_0)->{'map'})($f_2)))($v_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = ["alt" => (function() use ($dictAlt_0) {
+  $__res = (object)["alt" => (function() use ($dictAlt_0) {
   $__fn = function($v_3, $v1_4 = null, $a_5 = null) use ($dictAlt_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictAlt_0)['alt'])(($v_3)($a_5), ($v1_4)($a_5));
+  $__res = ((($dictAlt_0)->{'alt'})(($v_3)($a_5)))(($v1_4)($a_5));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -728,9 +728,9 @@ function majData_majProfunctor_majStar_plusmajStar($dictPlus_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $empty_1_0 = ($dictPlus_0)['empty'];
-  $altStar1_2_1 = ($GLOBALS['Data_Profunctor_Star_altStar'])((($dictPlus_0)['Alt0'])(null));
-  $__res = ["empty" => function($v_3) use ($empty_1_0) {
+  $empty_1_0 = ($dictPlus_0)->{'empty'};
+  $altStar1_2_1 = \Data\Profunctor\Star\majData_majProfunctor_majStar_altmajStar((($dictPlus_0)->{'Alt0'})(null));
+  $__res = (object)["empty" => function($v_3) use ($empty_1_0) {
   $__num = \func_num_args();
   $__res = $empty_1_0;
   goto __end;;
@@ -756,9 +756,9 @@ function majData_majProfunctor_majStar_alternativemajStar($dictAlternative_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $applicativeStar1_1_0 = ($GLOBALS['Data_Profunctor_Star_applicativeStar'])((($dictAlternative_0)['Applicative0'])(null));
-  $plusStar1_2_1 = ($GLOBALS['Data_Profunctor_Star_plusStar'])((($dictAlternative_0)['Plus1'])(null));
-  $__res = ["Applicative0" => function($_dollar__unused_3) use ($applicativeStar1_1_0) {
+  $applicativeStar1_1_0 = \Data\Profunctor\Star\majData_majProfunctor_majStar_applicativemajStar((($dictAlternative_0)->{'Applicative0'})(null));
+  $plusStar1_2_1 = \Data\Profunctor\Star\majData_majProfunctor_majStar_plusmajStar((($dictAlternative_0)->{'Plus1'})(null));
+  $__res = (object)["Applicative0" => function($_dollar__unused_3) use ($applicativeStar1_1_0) {
   $__num = \func_num_args();
   $__res = $applicativeStar1_1_0;
   goto __end;;
@@ -784,9 +784,9 @@ function majData_majProfunctor_majStar_monadmajPlusmajStar($dictMonadPlus_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $monadStar1_1_0 = ($GLOBALS['Data_Profunctor_Star_monadStar'])((($dictMonadPlus_0)['Monad0'])(null));
-  $alternativeStar1_2_1 = ($GLOBALS['Data_Profunctor_Star_alternativeStar'])((($dictMonadPlus_0)['Alternative1'])(null));
-  $__res = ["Monad0" => function($_dollar__unused_3) use ($monadStar1_1_0) {
+  $monadStar1_1_0 = \Data\Profunctor\Star\majData_majProfunctor_majStar_monadmajStar((($dictMonadPlus_0)->{'Monad0'})(null));
+  $alternativeStar1_2_1 = \Data\Profunctor\Star\majData_majProfunctor_majStar_alternativemajStar((($dictMonadPlus_0)->{'Alternative1'})(null));
+  $__res = (object)["Monad0" => function($_dollar__unused_3) use ($monadStar1_1_0) {
   $__num = \func_num_args();
   $__res = $monadStar1_1_0;
   goto __end;;

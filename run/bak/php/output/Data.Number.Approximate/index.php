@@ -133,7 +133,7 @@ function majData_majNumber_majApproximate_majFraction($x_0) {
 $GLOBALS['Data_Number_Approximate_Fraction'] = __NAMESPACE__ . '\\majData_majNumber_majApproximate_majFraction';
 
 // Data_Number_Approximate_eqRelative
-function majData_majNumber_majApproximate_eqmajRelative($v_0, $v1_1 = null, $v2_2 = null): bool|\Closure {
+function majData_majNumber_majApproximate_eqmajRelative(float $v_0, $v1_1 = null, $v2_2 = null): bool|\Closure {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majNumber_majApproximate_eqmajRelative';
   if ($__num < 3) {
@@ -142,7 +142,7 @@ function majData_majNumber_majApproximate_eqmajRelative($v_0, $v1_1 = null, $v2_
   $__t0 = null;;
   switch ($v1_1) {
 case 0.0:
-$__t0 = (($GLOBALS['Data_Number_abs'])($v2_2) <= $v_0);
+$__t0 = (\Data\Number\majData_majNumber_abs($v2_2) <= $v_0);
 goto end_branch_0;;
 break;
 default:
@@ -151,14 +151,14 @@ break;
 };
   switch ($v2_2) {
 case 0.0:
-$__t0 = (($GLOBALS['Data_Number_abs'])($v1_1) <= $v_0);
+$__t0 = (\Data\Number\majData_majNumber_abs($v1_1) <= $v_0);
 goto end_branch_0;;
 break;
 default:
 ;
 break;
 };
-  $__t0 = (($GLOBALS['Data_Number_abs'])((($GLOBALS['Data_Ring_ringNumber'])['sub'])($v1_1, $v2_2)) <= (($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])['div'])((($GLOBALS['Data_Semiring_semiringNumber'])['mul'])($v_0, ($GLOBALS['Data_Number_abs'])((($GLOBALS['Data_Semiring_semiringNumber'])['add'])($v1_1, $v2_2))), 2.0));
+  $__t0 = (\Data\Number\majData_majNumber_abs(((($GLOBALS['Data_Ring_ringNumber'])->{'sub'})($v1_1))($v2_2)) <= ((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])->{'div'})(((($GLOBALS['Data_Semiring_semiringNumber'])->{'mul'})($v_0))(\Data\Number\majData_majNumber_abs(((($GLOBALS['Data_Semiring_semiringNumber'])->{'add'})($v1_1))($v2_2)))))(2.0));
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
@@ -191,7 +191,7 @@ function majData_majNumber_majApproximate_neqmajApproximate(float $x_0, $y_1 = n
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['not'])(($GLOBALS['Data_Number_Approximate_eqRelative'])(0.000001, $x_0, $y_1));
+  $__res = (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'not'})(\Data\Number\Approximate\majData_majNumber_majApproximate_eqmajRelative(0.000001, $x_0, $y_1));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -199,13 +199,13 @@ function majData_majNumber_majApproximate_neqmajApproximate(float $x_0, $y_1 = n
 $GLOBALS['Data_Number_Approximate_neqApproximate'] = __NAMESPACE__ . '\\majData_majNumber_majApproximate_neqmajApproximate';
 
 // Data_Number_Approximate_eqAbsolute
-function majData_majNumber_majApproximate_eqmajAbsolute($v_0, $x_1 = null, $y_2 = null): bool|\Closure {
+function majData_majNumber_majApproximate_eqmajAbsolute(float $v_0, $x_1 = null, $y_2 = null): bool|\Closure {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majNumber_majApproximate_eqmajAbsolute';
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($GLOBALS['Data_Number_abs'])((($GLOBALS['Data_Ring_ringNumber'])['sub'])($x_1, $y_2)) <= $v_0);
+  $__res = (\Data\Number\majData_majNumber_abs(((($GLOBALS['Data_Ring_ringNumber'])->{'sub'})($x_1))($y_2)) <= $v_0);
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;

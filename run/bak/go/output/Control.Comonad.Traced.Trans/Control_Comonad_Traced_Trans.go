@@ -21,7 +21,7 @@ var once_runTracedT sync.Once
 func Get_runTracedT() gopurs_runtime.Value {
 	once_runTracedT.Do(func() {
 		cache_runTracedT = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_runTracedT(v_0_box)
+return gopurs_runtime.Any(Call_runTracedT(gopurs_runtime.UnboxAny(v_0_box)))
 })
 	})
 	return cache_runTracedT
@@ -31,9 +31,9 @@ var cache_newtypeTracedT gopurs_runtime.Value
 var once_newtypeTracedT sync.Once
 func Get_newtypeTracedT() gopurs_runtime.Value {
 	once_newtypeTracedT.Do(func() {
-		cache_newtypeTracedT = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypeTracedT = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
-}))
+}))))
 	})
 	return cache_newtypeTracedT
 }
@@ -43,7 +43,7 @@ var once_functorTracedT sync.Once
 func Get_functorTracedT() gopurs_runtime.Value {
 	once_functorTracedT.Do(func() {
 		cache_functorTracedT = gopurs_runtime.Func(func(dictFunctor_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_functorTracedT(dictFunctor_0_box)
+return gopurs_runtime.Any(Call_functorTracedT(dictFunctor_0_box))
 })
 	})
 	return cache_functorTracedT
@@ -65,7 +65,7 @@ var once_comonadTransTracedT sync.Once
 func Get_comonadTransTracedT() gopurs_runtime.Value {
 	once_comonadTransTracedT.Do(func() {
 		cache_comonadTransTracedT = gopurs_runtime.Func(func(dictMonoid_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_comonadTransTracedT(dictMonoid_0_box)
+return gopurs_runtime.Any(Call_comonadTransTracedT(dictMonoid_0_box))
 })
 	})
 	return cache_comonadTransTracedT
@@ -88,20 +88,20 @@ _ = x_0
 return x_0
 }
 
-func Call_runTracedT(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
+func Call_runTracedT(v_0_loop interface{}) interface{} {
+var v_0 interface{} = v_0_loop
 _ = v_0
 return v_0
 }
 
-func Call_functorTracedT(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_functorTracedT(dictFunctor_0_loop gopurs_runtime.Value) interface{} {
 var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
-return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func2(func(g_3 gopurs_runtime.Value, t_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_1, gopurs_runtime.Apply(g_3, t_4))
 }), v_2)
-}))
+})))
 }
 
 func Call_extendTracedT(dictExtend_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -128,16 +128,16 @@ return gopurs_runtime.Apply(h_8, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(
 })
 }
 
-func Call_comonadTransTracedT(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_comonadTransTracedT(dictMonoid_0_loop gopurs_runtime.Value) interface{} {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
 mempty_1_0 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
 _ = mempty_1_0
-return gopurs_runtime.RecordDict1("lower", gopurs_runtime.Func2(func(dictComonad_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("lower", gopurs_runtime.Func2(func(dictComonad_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_2, "Extend0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_4, mempty_1_0)
 }), v_3)
-}))
+})))
 }
 
 func Call_comonadTracedT(dictComonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -177,5 +177,3 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictComonad_0, "extract"),
 }))
 })
 }
-
-

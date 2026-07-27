@@ -127,7 +127,7 @@ function majData_majSemigroup_majTraversable_traverse1($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['traverse1'];
+  $__res = ($dict_0)->{'traverse1'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -135,13 +135,13 @@ function majData_majSemigroup_majTraversable_traverse1($dict_0) {
 $GLOBALS['Data_Semigroup_Traversable_traverse1'] = __NAMESPACE__ . '\\majData_majSemigroup_majTraversable_traverse1';
 
 // Data_Semigroup_Traversable_traversableTuple
-$GLOBALS['Data_Semigroup_Traversable_traversableTuple'] = ["traverse1" => (function() {
+$GLOBALS['Data_Semigroup_Traversable_traversableTuple'] = (object)["traverse1" => (function() {
   $__fn = function($dictApply_0, $f_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($dictApply_0)['Functor0'])(null))['map'])(($GLOBALS['Data_Tuple_Tuple'])(($v_2)->{'value0'}), ($f_1)(($v_2)->{'value1'}));
+  $__res = ((((($dictApply_0)->{'Functor0'})(null))->{'map'})(($GLOBALS['Data_Tuple_Tuple'])(($v_2)->{'value0'})))(($f_1)(($v_2)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -153,7 +153,7 @@ $GLOBALS['Data_Semigroup_Traversable_traversableTuple'] = ["traverse1" => (funct
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictApply_0)['Functor0'])(null))['map'])(($GLOBALS['Data_Tuple_Tuple'])(($v_1)->{'value0'}), ($v_1)->{'value1'});
+  $__res = ((((($dictApply_0)->{'Functor0'})(null))->{'map'})(($GLOBALS['Data_Tuple_Tuple'])(($v_1)->{'value0'})))(($v_1)->{'value1'});
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -174,13 +174,13 @@ $GLOBALS['Data_Semigroup_Traversable_traversableTuple'] = ["traverse1" => (funct
 }];
 
 // Data_Semigroup_Traversable_traversableIdentity
-$GLOBALS['Data_Semigroup_Traversable_traversableIdentity'] = ["traverse1" => (function() {
+$GLOBALS['Data_Semigroup_Traversable_traversableIdentity'] = (object)["traverse1" => (function() {
   $__fn = function($dictApply_0, $f_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($dictApply_0)['Functor0'])(null))['map'])($GLOBALS['Data_Identity_Identity'], ($f_1)($v_2));
+  $__res = ((((($dictApply_0)->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Identity_Identity']))(($f_1)($v_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -192,7 +192,7 @@ $GLOBALS['Data_Semigroup_Traversable_traversableIdentity'] = ["traverse1" => (fu
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictApply_0)['Functor0'])(null))['map'])($GLOBALS['Data_Identity_Identity'], $v_1);
+  $__res = ((((($dictApply_0)->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Identity_Identity']))($v_1);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -219,7 +219,7 @@ function majData_majSemigroup_majTraversable_sequence1majDefault($dictTraversabl
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictTraversable1_0)['traverse1'])($dictApply_1, $GLOBALS['Data_Semigroup_Traversable_identity']);
+  $__res = ((($dictTraversable1_0)->{'traverse1'})($dictApply_1))($GLOBALS['Data_Semigroup_Traversable_identity']);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -227,13 +227,13 @@ function majData_majSemigroup_majTraversable_sequence1majDefault($dictTraversabl
 $GLOBALS['Data_Semigroup_Traversable_sequence1Default'] = __NAMESPACE__ . '\\majData_majSemigroup_majTraversable_sequence1majDefault';
 
 // Data_Semigroup_Traversable_traversableDual
-$GLOBALS['Data_Semigroup_Traversable_traversableDual'] = ["traverse1" => (function() {
+$GLOBALS['Data_Semigroup_Traversable_traversableDual'] = (object)["traverse1" => (function() {
   $__fn = function($dictApply_0, $f_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($dictApply_0)['Functor0'])(null))['map'])($GLOBALS['Data_Monoid_Dual_Dual'], ($f_1)($v_2));
+  $__res = ((((($dictApply_0)->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Monoid_Dual_Dual']))(($f_1)($v_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -241,7 +241,7 @@ $GLOBALS['Data_Semigroup_Traversable_traversableDual'] = ["traverse1" => (functi
   return $__fn;
 })(), "sequence1" => function($dictApply_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_Traversable_traversableDual'])['traverse1'])($dictApply_0, $GLOBALS['Data_Semigroup_Traversable_identity']);
+  $__res = ((($GLOBALS['Data_Semigroup_Traversable_traversableDual'])->{'traverse1'})($dictApply_0))($GLOBALS['Data_Semigroup_Traversable_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -260,13 +260,13 @@ $GLOBALS['Data_Semigroup_Traversable_traversableDual'] = ["traverse1" => (functi
 }];
 
 // Data_Semigroup_Traversable_traversableMultiplicative
-$GLOBALS['Data_Semigroup_Traversable_traversableMultiplicative'] = ["traverse1" => (function() {
+$GLOBALS['Data_Semigroup_Traversable_traversableMultiplicative'] = (object)["traverse1" => (function() {
   $__fn = function($dictApply_0, $f_1 = null, $v_2 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($dictApply_0)['Functor0'])(null))['map'])($GLOBALS['Data_Monoid_Multiplicative_Multiplicative'], ($f_1)($v_2));
+  $__res = ((((($dictApply_0)->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Monoid_Multiplicative_Multiplicative']))(($f_1)($v_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -274,7 +274,7 @@ $GLOBALS['Data_Semigroup_Traversable_traversableMultiplicative'] = ["traverse1" 
   return $__fn;
 })(), "sequence1" => function($dictApply_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_Traversable_traversableMultiplicative'])['traverse1'])($dictApply_0, $GLOBALS['Data_Semigroup_Traversable_identity']);
+  $__res = ((($GLOBALS['Data_Semigroup_Traversable_traversableMultiplicative'])->{'traverse1'})($dictApply_0))($GLOBALS['Data_Semigroup_Traversable_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -299,7 +299,7 @@ function majData_majSemigroup_majTraversable_sequence1($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['sequence1'];
+  $__res = ($dict_0)->{'sequence1'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -313,14 +313,14 @@ function majData_majSemigroup_majTraversable_traverse1majDefault($dictTraversabl
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $sequence12_2_0 = (($dictTraversable1_0)['sequence1'])($dictApply_1);
+  $sequence12_2_0 = (($dictTraversable1_0)->{'sequence1'})($dictApply_1);
   $__res = (function() use ($dictTraversable1_0, $sequence12_2_0) {
   $__fn = function($f_3, $ta_4 = null) use ($dictTraversable1_0, $sequence12_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($sequence12_2_0)((((((($dictTraversable1_0)['Traversable1'])(null))['Functor0'])(null))['map'])($f_3, $ta_4));
+  $__res = ($sequence12_2_0)(((((((($dictTraversable1_0)->{'Traversable1'})(null))->{'Functor0'})(null))->{'map'})($f_3))($ta_4));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

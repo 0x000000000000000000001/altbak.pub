@@ -137,9 +137,9 @@ function majData_majConst_showmajConst($dictShow_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["show" => function($v_1) use ($dictShow_0) {
+  $__res = (object)["show" => function($v_1) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Const ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(Const "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_0)->{'show'})($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -165,7 +165,7 @@ function majData_majConst_semiringmajConst($dictSemiring_0) {
 $GLOBALS['Data_Const_semiringConst'] = __NAMESPACE__ . '\\majData_majConst_semiringmajConst';
 
 // Data_Const_semigroupoidConst
-$GLOBALS['Data_Const_semigroupoidConst'] = ["compose" => (function() {
+$GLOBALS['Data_Const_semigroupoidConst'] = (object)["compose" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -222,7 +222,7 @@ function majData_majConst_ordmajConst($dictOrd_0) {
 $GLOBALS['Data_Const_ordConst'] = __NAMESPACE__ . '\\majData_majConst_ordmajConst';
 
 // Data_Const_newtypeConst
-$GLOBALS['Data_Const_newtypeConst'] = ["Coercible0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Const_newtypeConst'] = (object)["Coercible0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = null;
   goto __end;;
@@ -259,7 +259,7 @@ function majData_majConst_heytingmajAlgebramajConst($dictHeytingAlgebra_0) {
 $GLOBALS['Data_Const_heytingAlgebraConst'] = __NAMESPACE__ . '\\majData_majConst_heytingmajAlgebramajConst';
 
 // Data_Const_functorConst
-$GLOBALS['Data_Const_functorConst'] = ["map" => (function() {
+$GLOBALS['Data_Const_functorConst'] = (object)["map" => (function() {
   $__fn = function($f_0, $m_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -274,13 +274,13 @@ $GLOBALS['Data_Const_functorConst'] = ["map" => (function() {
 })()];
 
 // Data_Const_invariantConst
-$GLOBALS['Data_Const_invariantConst'] = ["imap" => (function() {
+$GLOBALS['Data_Const_invariantConst'] = (object)["imap" => (function() {
   $__fn = function($f_0, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Const_functorConst'])['map'])($f_0);
+  $__res = (($GLOBALS['Data_Const_functorConst'])->{'map'})($f_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -323,8 +323,8 @@ function majData_majConst_eq1majConst($dictEq_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $eq_1_0 = ($dictEq_0)['eq'];
-  $__res = ["eq1" => function($dictEq1_2) use ($eq_1_0) {
+  $eq_1_0 = ($dictEq_0)->{'eq'};
+  $__res = (object)["eq1" => function($dictEq1_2) use ($eq_1_0) {
   $__num = \func_num_args();
   $__res = $eq_1_0;
   goto __end;;
@@ -344,9 +344,9 @@ function majData_majConst_ord1majConst($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $compare_1_0 = ($dictOrd_0)['compare'];
-  $eq_2_1 = ((($dictOrd_0)['Eq0'])(null))['eq'];
-  $__res = ["compare1" => function($dictOrd1_3) use ($compare_1_0) {
+  $compare_1_0 = ($dictOrd_0)->{'compare'};
+  $eq_2_1 = ((($dictOrd_0)->{'Eq0'})(null))->{'eq'};
+  $__res = (object)["compare1" => function($dictOrd1_3) use ($compare_1_0) {
   $__num = \func_num_args();
   $__res = $compare_1_0;
   goto __end;;
@@ -354,7 +354,7 @@ function majData_majConst_ord1majConst($dictOrd_0) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Eq10" => function($_dollar__unused_3) use ($eq_2_1) {
   $__num = \func_num_args();
-  $__res = ["eq1" => function($dictEq1_4) use ($eq_2_1) {
+  $__res = (object)["eq1" => function($dictEq1_4) use ($eq_2_1) {
   $__num = \func_num_args();
   $__res = $eq_2_1;
   goto __end;;
@@ -420,13 +420,13 @@ function majData_majConst_applymajConst($dictSemigroup_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["apply" => (function() use ($dictSemigroup_0) {
+  $__res = (object)["apply" => (function() use ($dictSemigroup_0) {
   $__fn = function($v_1, $v1_2 = null) use ($dictSemigroup_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictSemigroup_0)['append'])($v_1, $v1_2);
+  $__res = ((($dictSemigroup_0)->{'append'})($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -452,15 +452,15 @@ function majData_majConst_applicativemajConst($dictMonoid_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $mempty_1_0 = ($dictMonoid_0)['mempty'];
-  $__local_var_2_1 = (($dictMonoid_0)['Semigroup0'])(null);
-  $applyConst1_3_2 = ["apply" => (function() use ($__local_var_2_1) {
+  $mempty_1_0 = ($dictMonoid_0)->{'mempty'};
+  $__local_var_2_1 = (($dictMonoid_0)->{'Semigroup0'})(null);
+  $applyConst1_3_2 = (object)["apply" => (function() use ($__local_var_2_1) {
   $__fn = function($v_3, $v1_4 = null) use ($__local_var_2_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_2_1)['append'])($v_3, $v1_4);
+  $__res = ((($__local_var_2_1)->{'append'})($v_3))($v1_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -473,7 +473,7 @@ function majData_majConst_applicativemajConst($dictMonoid_0) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["pure" => function($v_4) use ($mempty_1_0) {
+  $__res = (object)["pure" => function($v_4) use ($mempty_1_0) {
   $__num = \func_num_args();
   $__res = $mempty_1_0;
   goto __end;;

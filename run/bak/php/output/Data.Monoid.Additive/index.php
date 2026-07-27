@@ -131,9 +131,9 @@ function majData_majMonoid_majAdditive_showmajAdditive($dictShow_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["show" => function($v_1) use ($dictShow_0) {
+  $__res = (object)["show" => function($v_1) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Additive ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(Additive "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_0)->{'show'})($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -151,13 +151,13 @@ function majData_majMonoid_majAdditive_semigroupmajAdditive($dictSemiring_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["append" => (function() use ($dictSemiring_0) {
+  $__res = (object)["append" => (function() use ($dictSemiring_0) {
   $__fn = function($v_1, $v1_2 = null) use ($dictSemiring_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictSemiring_0)['add'])($v_1, $v1_2);
+  $__res = ((($dictSemiring_0)->{'add'})($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -191,20 +191,20 @@ function majData_majMonoid_majAdditive_monoidmajAdditive($dictSemiring_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $semigroupAdditive1_1_0 = ["append" => (function() use ($dictSemiring_0) {
+  $semigroupAdditive1_1_0 = (object)["append" => (function() use ($dictSemiring_0) {
   $__fn = function($v_1, $v1_2 = null) use ($dictSemiring_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictSemiring_0)['add'])($v_1, $v1_2);
+  $__res = ((($dictSemiring_0)->{'add'})($v_1))($v1_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = ["mempty" => ($dictSemiring_0)['zero'], "Semigroup0" => function($_dollar__unused_2) use ($semigroupAdditive1_1_0) {
+  $__res = (object)["mempty" => ($dictSemiring_0)->{'zero'}, "Semigroup0" => function($_dollar__unused_2) use ($semigroupAdditive1_1_0) {
   $__num = \func_num_args();
   $__res = $semigroupAdditive1_1_0;
   goto __end;;
@@ -218,7 +218,7 @@ function majData_majMonoid_majAdditive_monoidmajAdditive($dictSemiring_0) {
 $GLOBALS['Data_Monoid_Additive_monoidAdditive'] = __NAMESPACE__ . '\\majData_majMonoid_majAdditive_monoidmajAdditive';
 
 // Data_Monoid_Additive_functorAdditive
-$GLOBALS['Data_Monoid_Additive_functorAdditive'] = ["map" => (function() {
+$GLOBALS['Data_Monoid_Additive_functorAdditive'] = (object)["map" => (function() {
   $__fn = function($f_0, $m_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -247,18 +247,18 @@ function majData_majMonoid_majAdditive_eqmajAdditive($dictEq_0) {
 $GLOBALS['Data_Monoid_Additive_eqAdditive'] = __NAMESPACE__ . '\\majData_majMonoid_majAdditive_eqmajAdditive';
 
 // Data_Monoid_Additive_eq1Additive
-$GLOBALS['Data_Monoid_Additive_eq1Additive'] = ["eq1" => function($dictEq_0) {
+$GLOBALS['Data_Monoid_Additive_eq1Additive'] = (object)["eq1" => function($dictEq_0) {
   $__num = \func_num_args();
-  $__res = ($dictEq_0)['eq'];
+  $__res = ($dictEq_0)->{'eq'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
 
 // Data_Monoid_Additive_ord1Additive
-$GLOBALS['Data_Monoid_Additive_ord1Additive'] = ["compare1" => function($dictOrd_0) {
+$GLOBALS['Data_Monoid_Additive_ord1Additive'] = (object)["compare1" => function($dictOrd_0) {
   $__num = \func_num_args();
-  $__res = ($dictOrd_0)['compare'];
+  $__res = ($dictOrd_0)->{'compare'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -285,7 +285,7 @@ function majData_majMonoid_majAdditive_boundedmajAdditive($dictBounded_0) {
 $GLOBALS['Data_Monoid_Additive_boundedAdditive'] = __NAMESPACE__ . '\\majData_majMonoid_majAdditive_boundedmajAdditive';
 
 // Data_Monoid_Additive_applyAdditive
-$GLOBALS['Data_Monoid_Additive_applyAdditive'] = ["apply" => (function() {
+$GLOBALS['Data_Monoid_Additive_applyAdditive'] = (object)["apply" => (function() {
   $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -306,7 +306,7 @@ $GLOBALS['Data_Monoid_Additive_applyAdditive'] = ["apply" => (function() {
 }];
 
 // Data_Monoid_Additive_bindAdditive
-$GLOBALS['Data_Monoid_Additive_bindAdditive'] = ["bind" => (function() {
+$GLOBALS['Data_Monoid_Additive_bindAdditive'] = (object)["bind" => (function() {
   $__fn = function($v_0, $f_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -327,7 +327,7 @@ $GLOBALS['Data_Monoid_Additive_bindAdditive'] = ["bind" => (function() {
 }];
 
 // Data_Monoid_Additive_applicativeAdditive
-$GLOBALS['Data_Monoid_Additive_applicativeAdditive'] = ["pure" => $GLOBALS['Data_Monoid_Additive_Additive'], "Apply0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Monoid_Additive_applicativeAdditive'] = (object)["pure" => $GLOBALS['Data_Monoid_Additive_Additive'], "Apply0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Monoid_Additive_applyAdditive'];
   goto __end;;
@@ -336,7 +336,7 @@ $GLOBALS['Data_Monoid_Additive_applicativeAdditive'] = ["pure" => $GLOBALS['Data
 }];
 
 // Data_Monoid_Additive_monadAdditive
-$GLOBALS['Data_Monoid_Additive_monadAdditive'] = ["Applicative0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Monoid_Additive_monadAdditive'] = (object)["Applicative0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Monoid_Additive_applicativeAdditive'];
   goto __end;;

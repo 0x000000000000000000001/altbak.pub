@@ -107,7 +107,7 @@ function majControl_majMonad_majState_majClass_state($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['state'];
+  $__res = ($dict_0)->{'state'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -121,7 +121,7 @@ function majControl_majMonad_majState_majClass_put($dictMonadState_0, $s_1 = nul
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictMonadState_0)['state'])(function($v_2) use ($s_1) {
+  $__res = (($dictMonadState_0)->{'state'})(function($v_2) use ($s_1) {
   $__num = \func_num_args();
   $__res = new \Data\Tuple\Data_Tuple_Tuple($GLOBALS['Data_Unit_unit'], $s_1);
   goto __end;;
@@ -141,7 +141,7 @@ function majControl_majMonad_majState_majClass_modify_($dictMonadState_0, $f_1 =
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictMonadState_0)['state'])(function($s_2) use ($f_1) {
+  $__res = (($dictMonadState_0)->{'state'})(function($s_2) use ($f_1) {
   $__num = \func_num_args();
   $__res = new \Data\Tuple\Data_Tuple_Tuple($GLOBALS['Data_Unit_unit'], ($f_1)($s_2));
   goto __end;;
@@ -161,7 +161,7 @@ function majControl_majMonad_majState_majClass_modify($dictMonadState_0, $f_1 = 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictMonadState_0)['state'])(function($s_2) use ($f_1) {
+  $__res = (($dictMonadState_0)->{'state'})(function($s_2) use ($f_1) {
   $__num = \func_num_args();
   $s_prime_3_0 = ($f_1)($s_2);
   $__res = new \Data\Tuple\Data_Tuple_Tuple($s_prime_3_0, $s_prime_3_0);
@@ -182,7 +182,7 @@ function majControl_majMonad_majState_majClass_gets($dictMonadState_0, $f_1 = nu
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictMonadState_0)['state'])(function($s_2) use ($f_1) {
+  $__res = (($dictMonadState_0)->{'state'})(function($s_2) use ($f_1) {
   $__num = \func_num_args();
   $__res = new \Data\Tuple\Data_Tuple_Tuple(($f_1)($s_2), $s_2);
   goto __end;;
@@ -202,7 +202,7 @@ function majControl_majMonad_majState_majClass_get($dictMonadState_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($dictMonadState_0)['state'])(function($s_1) {
+  $__res = (($dictMonadState_0)->{'state'})(function($s_1) {
   $__num = \func_num_args();
   $__res = new \Data\Tuple\Data_Tuple_Tuple($s_1, $s_1);
   goto __end;;

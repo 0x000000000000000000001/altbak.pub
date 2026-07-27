@@ -101,7 +101,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Effect_Class_monadEffectEffect
-$GLOBALS['Effect_Class_monadEffectEffect'] = ["liftEffect" => function($x_0) {
+$GLOBALS['Effect_Class_monadEffectEffect'] = (object)["liftEffect" => function($x_0) {
   $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
@@ -122,7 +122,7 @@ function majEffect_majClass_liftmajEffect($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['liftEffect'];
+  $__res = ($dict_0)->{'liftEffect'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

@@ -137,9 +137,9 @@ function majData_majFunctor_majJoker_showmajJoker($dictShow_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["show" => function($v_1) use ($dictShow_0) {
+  $__res = (object)["show" => function($v_1) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Semigroup_semigroupString'])['append'])("(Joker ", (($GLOBALS['Data_Semigroup_semigroupString'])['append'])((($dictShow_0)['show'])($v_1), ")"));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(Joker "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_0)->{'show'})($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -157,13 +157,13 @@ function majData_majFunctor_majJoker_profunctormajJoker($dictFunctor_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["dimap" => (function() use ($dictFunctor_0) {
+  $__res = (object)["dimap" => (function() use ($dictFunctor_0) {
   $__fn = function($v_1, $g_2 = null, $v1_3 = null) use ($dictFunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictFunctor_0)['map'])($g_2, $v1_3);
+  $__res = ((($dictFunctor_0)->{'map'})($g_2))($v1_3);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -191,7 +191,7 @@ function majData_majFunctor_majJoker_ordmajJoker($dictOrd_0) {
 $GLOBALS['Data_Functor_Joker_ordJoker'] = __NAMESPACE__ . '\\majData_majFunctor_majJoker_ordmajJoker';
 
 // Data_Functor_Joker_newtypeJoker
-$GLOBALS['Data_Functor_Joker_newtypeJoker'] = ["Coercible0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Functor_Joker_newtypeJoker'] = (object)["Coercible0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = null;
   goto __end;;
@@ -220,13 +220,13 @@ function majData_majFunctor_majJoker_functormajJoker($dictFunctor_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["map" => (function() use ($dictFunctor_0) {
+  $__res = (object)["map" => (function() use ($dictFunctor_0) {
   $__fn = function($f_1, $v_2 = null) use ($dictFunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictFunctor_0)['map'])($f_1, $v_2);
+  $__res = ((($dictFunctor_0)->{'map'})($f_1))($v_2);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -260,28 +260,28 @@ function majData_majFunctor_majJoker_choicemajJoker($dictFunctor_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $profunctorJoker1_1_0 = ["dimap" => (function() use ($dictFunctor_0) {
+  $profunctorJoker1_1_0 = (object)["dimap" => (function() use ($dictFunctor_0) {
   $__fn = function($v_1, $g_2 = null, $v1_3 = null) use ($dictFunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictFunctor_0)['map'])($g_2, $v1_3);
+  $__res = ((($dictFunctor_0)->{'map'})($g_2))($v1_3);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = ["left" => function($v_2) use ($dictFunctor_0) {
+  $__res = (object)["left" => function($v_2) use ($dictFunctor_0) {
   $__num = \func_num_args();
-  $__res = (($dictFunctor_0)['map'])($GLOBALS['Data_Either_Left'], $v_2);
+  $__res = ((($dictFunctor_0)->{'map'})($GLOBALS['Data_Either_Left']))($v_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "right" => function($v_2) use ($dictFunctor_0) {
   $__num = \func_num_args();
-  $__res = (($dictFunctor_0)['map'])($GLOBALS['Data_Either_Right'], $v_2);
+  $__res = ((($dictFunctor_0)->{'map'})($GLOBALS['Data_Either_Right']))($v_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -305,13 +305,13 @@ function majData_majFunctor_majJoker_bifunctormajJoker($dictFunctor_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ["bimap" => (function() use ($dictFunctor_0) {
+  $__res = (object)["bimap" => (function() use ($dictFunctor_0) {
   $__fn = function($v_1, $g_2 = null, $v1_3 = null) use ($dictFunctor_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($dictFunctor_0)['map'])($g_2, $v1_3);
+  $__res = ((($dictFunctor_0)->{'map'})($g_2))($v1_3);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -331,27 +331,27 @@ function majData_majFunctor_majJoker_biapplymajJoker($dictApply_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($dictApply_0)['Functor0'])(null);
-  $bifunctorJoker1_2_1 = ["bimap" => (function() use ($__local_var_1_0) {
+  $__local_var_1_0 = (($dictApply_0)->{'Functor0'})(null);
+  $bifunctorJoker1_2_1 = (object)["bimap" => (function() use ($__local_var_1_0) {
   $__fn = function($v_2, $g_3 = null, $v1_4 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($__local_var_1_0)['map'])($g_3, $v1_4);
+  $__res = ((($__local_var_1_0)->{'map'})($g_3))($v1_4);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = ["biapply" => (function() use ($dictApply_0) {
+  $__res = (object)["biapply" => (function() use ($dictApply_0) {
   $__fn = function($v_3, $v1_4 = null) use ($dictApply_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictApply_0)['apply'])($v_3, $v1_4);
+  $__res = ((($dictApply_0)->{'apply'})($v_3))($v1_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -377,28 +377,28 @@ function majData_majFunctor_majJoker_biapplicativemajJoker($dictApplicative_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($dictApplicative_0)['Apply0'])(null);
-  $__local_var_2_1 = (($__local_var_1_0)['Functor0'])(null);
-  $bifunctorJoker1_3_2 = ["bimap" => (function() use ($__local_var_2_1) {
+  $__local_var_1_0 = (($dictApplicative_0)->{'Apply0'})(null);
+  $__local_var_2_1 = (($__local_var_1_0)->{'Functor0'})(null);
+  $bifunctorJoker1_3_2 = (object)["bimap" => (function() use ($__local_var_2_1) {
   $__fn = function($v_3, $g_4 = null, $v1_5 = null) use ($__local_var_2_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($__local_var_2_1)['map'])($g_4, $v1_5);
+  $__res = ((($__local_var_2_1)->{'map'})($g_4))($v1_5);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
 })()];
-  $biapplyJoker1_3_2 = ["biapply" => (function() use ($__local_var_1_0) {
+  $biapplyJoker1_3_2 = (object)["biapply" => (function() use ($__local_var_1_0) {
   $__fn = function($v_4, $v1_5 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_1_0)['apply'])($v_4, $v1_5);
+  $__res = ((($__local_var_1_0)->{'apply'})($v_4))($v1_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -411,13 +411,13 @@ function majData_majFunctor_majJoker_biapplicativemajJoker($dictApplicative_0) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["bipure" => (function() use ($dictApplicative_0) {
+  $__res = (object)["bipure" => (function() use ($dictApplicative_0) {
   $__fn = function($v_4, $b_5 = null) use ($dictApplicative_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictApplicative_0)['pure'])($b_5);
+  $__res = (($dictApplicative_0)->{'pure'})($b_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -443,27 +443,27 @@ function majData_majFunctor_majJoker_applymajJoker($dictApply_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($dictApply_0)['Functor0'])(null);
-  $functorJoker1_2_1 = ["map" => (function() use ($__local_var_1_0) {
+  $__local_var_1_0 = (($dictApply_0)->{'Functor0'})(null);
+  $functorJoker1_2_1 = (object)["map" => (function() use ($__local_var_1_0) {
   $__fn = function($f_2, $v_3 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_1_0)['map'])($f_2, $v_3);
+  $__res = ((($__local_var_1_0)->{'map'})($f_2))($v_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $__res = ["apply" => (function() use ($dictApply_0) {
+  $__res = (object)["apply" => (function() use ($dictApply_0) {
   $__fn = function($v_3, $v1_4 = null) use ($dictApply_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictApply_0)['apply'])($v_3, $v1_4);
+  $__res = ((($dictApply_0)->{'apply'})($v_3))($v1_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -489,28 +489,28 @@ function majData_majFunctor_majJoker_bindmajJoker($dictBind_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($dictBind_0)['Apply0'])(null);
-  $__local_var_2_1 = (($__local_var_1_0)['Functor0'])(null);
-  $functorJoker1_3_2 = ["map" => (function() use ($__local_var_2_1) {
+  $__local_var_1_0 = (($dictBind_0)->{'Apply0'})(null);
+  $__local_var_2_1 = (($__local_var_1_0)->{'Functor0'})(null);
+  $functorJoker1_3_2 = (object)["map" => (function() use ($__local_var_2_1) {
   $__fn = function($f_3, $v_4 = null) use ($__local_var_2_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_2_1)['map'])($f_3, $v_4);
+  $__res = ((($__local_var_2_1)->{'map'})($f_3))($v_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $applyJoker1_3_2 = ["apply" => (function() use ($__local_var_1_0) {
+  $applyJoker1_3_2 = (object)["apply" => (function() use ($__local_var_1_0) {
   $__fn = function($v_4, $v1_5 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_1_0)['apply'])($v_4, $v1_5);
+  $__res = ((($__local_var_1_0)->{'apply'})($v_4))($v1_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -523,13 +523,13 @@ function majData_majFunctor_majJoker_bindmajJoker($dictBind_0) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["bind" => (function() use ($dictBind_0) {
+  $__res = (object)["bind" => (function() use ($dictBind_0) {
   $__fn = function($v_4, $amb_5 = null) use ($dictBind_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($dictBind_0)['bind'])($v_4, ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'], $amb_5));
+  $__res = ((($dictBind_0)->{'bind'})($v_4))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($amb_5));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -555,28 +555,28 @@ function majData_majFunctor_majJoker_applicativemajJoker($dictApplicative_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($dictApplicative_0)['Apply0'])(null);
-  $__local_var_2_1 = (($__local_var_1_0)['Functor0'])(null);
-  $functorJoker1_3_2 = ["map" => (function() use ($__local_var_2_1) {
+  $__local_var_1_0 = (($dictApplicative_0)->{'Apply0'})(null);
+  $__local_var_2_1 = (($__local_var_1_0)->{'Functor0'})(null);
+  $functorJoker1_3_2 = (object)["map" => (function() use ($__local_var_2_1) {
   $__fn = function($f_3, $v_4 = null) use ($__local_var_2_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_2_1)['map'])($f_3, $v_4);
+  $__res = ((($__local_var_2_1)->{'map'})($f_3))($v_4);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
 })()];
-  $applyJoker1_3_2 = ["apply" => (function() use ($__local_var_1_0) {
+  $applyJoker1_3_2 = (object)["apply" => (function() use ($__local_var_1_0) {
   $__fn = function($v_4, $v1_5 = null) use ($__local_var_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($__local_var_1_0)['apply'])($v_4, $v1_5);
+  $__res = ((($__local_var_1_0)->{'apply'})($v_4))($v1_5);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -589,7 +589,7 @@ function majData_majFunctor_majJoker_applicativemajJoker($dictApplicative_0) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = ["pure" => ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Joker_Joker'], ($dictApplicative_0)['pure']), "Apply0" => function($_dollar__unused_4) use ($applyJoker1_3_2) {
+  $__res = (object)["pure" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Functor_Joker_Joker']))(($dictApplicative_0)->{'pure'}), "Apply0" => function($_dollar__unused_4) use ($applyJoker1_3_2) {
   $__num = \func_num_args();
   $__res = $applyJoker1_3_2;
   goto __end;;
@@ -609,9 +609,9 @@ function majData_majFunctor_majJoker_monadmajJoker($dictMonad_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $applicativeJoker1_1_0 = ($GLOBALS['Data_Functor_Joker_applicativeJoker'])((($dictMonad_0)['Applicative0'])(null));
-  $bindJoker1_2_1 = ($GLOBALS['Data_Functor_Joker_bindJoker'])((($dictMonad_0)['Bind1'])(null));
-  $__res = ["Applicative0" => function($_dollar__unused_3) use ($applicativeJoker1_1_0) {
+  $applicativeJoker1_1_0 = \Data\Functor\Joker\majData_majFunctor_majJoker_applicativemajJoker((($dictMonad_0)->{'Applicative0'})(null));
+  $bindJoker1_2_1 = \Data\Functor\Joker\majData_majFunctor_majJoker_bindmajJoker((($dictMonad_0)->{'Bind1'})(null));
+  $__res = (object)["Applicative0" => function($_dollar__unused_3) use ($applicativeJoker1_1_0) {
   $__num = \func_num_args();
   $__res = $applicativeJoker1_1_0;
   goto __end;;

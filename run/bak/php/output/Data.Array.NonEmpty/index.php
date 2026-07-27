@@ -126,14 +126,14 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 // Data_Array_NonEmpty_max
 $GLOBALS['Data_Array_NonEmpty_max'] = (function() use (&$__fn) {
-$__local_var_0_0 = ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT());
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
 return (function() use ($__local_var_0_0) {
   $__fn = function($x_1, $y_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $v_3_1 = ($__local_var_0_0)($x_1, $y_2);
+  $v_3_1 = (($__local_var_0_0)($x_1))($y_2);
   $__t2 = null;;
   if ($v_3_1 instanceof \Data\Ordering\Data_Ordering_LT) {
 $__t2 = $y_2;
@@ -161,14 +161,14 @@ goto end_branch_2;;
 
 // Data_Array_NonEmpty_greaterThan
 $GLOBALS['Data_Array_NonEmpty_greaterThan'] = (function() use (&$__fn) {
-$__local_var_0_0 = ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT());
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
 return (function() use ($__local_var_0_0) {
   $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($__local_var_0_0)($a1_1, $a2_2) instanceof \Data\Ordering\Data_Ordering_GT;
+  $__res = (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_GT;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -215,14 +215,14 @@ $GLOBALS['Data_Array_NonEmpty_unsafeIndex1'] = __NAMESPACE__ . '\\majData_majArr
 
 // Data_Array_NonEmpty_lessThan
 $GLOBALS['Data_Array_NonEmpty_lessThan'] = (function() use (&$__fn) {
-$__local_var_0_0 = ($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT(), new \Data\Ordering\Data_Ordering_EQ(), new \Data\Ordering\Data_Ordering_GT());
+$__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
 return (function() use ($__local_var_0_0) {
   $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($__local_var_0_0)($a1_1, $a2_2) instanceof \Data\Ordering\Data_Ordering_LT;
+  $__res = (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -232,7 +232,7 @@ return (function() use ($__local_var_0_0) {
 })();
 
 // Data_Array_NonEmpty_transpose_closure
-$GLOBALS['Data_Array_NonEmpty_transpose_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_transpose'], $GLOBALS['Unsafe_Coerce_unsafeCoerce']));
+$GLOBALS['Data_Array_NonEmpty_transpose_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_transpose']))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
 
 // Data_Array_NonEmpty_transpose
 function majData_majArray_majNonmajEmpty_transpose($v_0) {
@@ -269,7 +269,7 @@ function majData_majArray_majNonmajEmpty_unionmajBy__prime__($eq_0, $xs_1 = null
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'], ($GLOBALS['Data_Array_unionBy'])($eq_0, $xs_1));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Data_Array_unionBy'])($eq_0))($xs_1));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -283,7 +283,7 @@ function majData_majArray_majNonmajEmpty_union__prime__($dictEq_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Data_Array_NonEmpty_unionBy__prime__'])(($dictEq_0)['eq']);
+  $__res = ($GLOBALS['Data_Array_NonEmpty_unionBy__prime__'])(($dictEq_0)->{'eq'});
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -297,7 +297,7 @@ function majData_majArray_majNonmajEmpty_unionmajBy($eq_0, $xs_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'], ($GLOBALS['Data_Array_unionBy'])($eq_0, $xs_1)), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Data_Array_unionBy'])($eq_0))($xs_1))))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -311,7 +311,7 @@ function majData_majArray_majNonmajEmpty_union($dictEq_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Data_Array_NonEmpty_unionBy'])(($dictEq_0)['eq']);
+  $__res = ($GLOBALS['Data_Array_NonEmpty_unionBy'])(($dictEq_0)->{'eq'});
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -319,7 +319,7 @@ function majData_majArray_majNonmajEmpty_union($dictEq_0) {
 $GLOBALS['Data_Array_NonEmpty_union'] = __NAMESPACE__ . '\\majData_majArray_majNonmajEmpty_union';
 
 // Data_Array_NonEmpty_unzip_closure
-$GLOBALS['Data_Array_NonEmpty_unzip_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Bifunctor_bifunctorTuple'])['bimap'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'], $GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']), ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_unzip'], $GLOBALS['Data_Array_NonEmpty_toArray']));
+$GLOBALS['Data_Array_NonEmpty_unzip_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])(((($GLOBALS['Data_Bifunctor_bifunctorTuple'])->{'bimap'})($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'])))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_unzip']))($GLOBALS['Data_Array_NonEmpty_toArray']));
 
 // Data_Array_NonEmpty_unzip
 function majData_majArray_majNonmajEmpty_unzip($v_0) {
@@ -342,7 +342,7 @@ function majData_majArray_majNonmajEmpty_updatemajAt(int $i_0, $x_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_updateAt'])($i_0, $x_1), $GLOBALS['Data_Array_NonEmpty_toArray']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_updateAt'])($i_0))($x_1)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -398,7 +398,7 @@ function majData_majArray_majNonmajEmpty_splitmajAt(int $i_0, $xs_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Array_splitAt'])($i_0, $xs_1);
+  $__res = \Data\Array\majData_majArray_splitmajAt($i_0, $xs_1);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -412,7 +412,7 @@ function majData_majArray_majNonmajEmpty_some($dictAlternative_0, $dictLazy_1 = 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'], ($GLOBALS['Data_Array_some'])($dictAlternative_0, $dictLazy_1));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))((($GLOBALS['Data_Array_some'])($dictAlternative_0))($dictLazy_1));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -426,7 +426,7 @@ function majData_majArray_majNonmajEmpty_snoc__prime__($xs_0, $x_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Monad_ST_Internal_run'])(($GLOBALS['Data_Array_ST_withArray'])(($GLOBALS['Data_Array_ST_push'])($x_1), $xs_0));
+  $__res = \Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_run(\Data\Array\ST\majData_majArray_majSmajT_withmajArray(($GLOBALS['Data_Array_ST_push'])($x_1), $xs_0));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -440,7 +440,7 @@ function majData_majArray_majNonmajEmpty_snoc($xs_0, $x_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Monad_ST_Internal_run'])(($GLOBALS['Data_Array_ST_withArray'])(($GLOBALS['Data_Array_ST_push'])($x_1), $xs_0));
+  $__res = \Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_run(\Data\Array\ST\majData_majArray_majSmajT_withmajArray(($GLOBALS['Data_Array_ST_push'])($x_1), $xs_0));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -448,7 +448,7 @@ function majData_majArray_majNonmajEmpty_snoc($xs_0, $x_1 = null) {
 $GLOBALS['Data_Array_NonEmpty_snoc'] = __NAMESPACE__ . '\\majData_majArray_majNonmajEmpty_snoc';
 
 // Data_Array_NonEmpty_singleton_closure
-$GLOBALS['Data_Array_NonEmpty_singleton_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'], $GLOBALS['Data_Array_singleton']);
+$GLOBALS['Data_Array_NonEmpty_singleton_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))($GLOBALS['Data_Array_singleton']);
 
 // Data_Array_NonEmpty_singleton
 function majData_majArray_majNonmajEmpty_singleton($v_0) {
@@ -471,7 +471,7 @@ function majData_majArray_majNonmajEmpty_replicate(int $i_0, $x_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Array_replicateImpl'])(($GLOBALS['Data_Array_NonEmpty_max'])(1, $i_0), $x_1);
+  $__res = ($GLOBALS['Data_Array_replicateImpl'])((($GLOBALS['Data_Array_NonEmpty_max'])(1))($i_0), $x_1);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -499,7 +499,7 @@ function majData_majArray_majNonmajEmpty_prependmajArray($xs_0, $ys_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Semigroup_semigroupArray'])['append'])($xs_0, $ys_1);
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupArray'])->{'append'})($xs_0))($ys_1);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -513,7 +513,7 @@ function majData_majArray_majNonmajEmpty_modifymajAt(int $i_0, $f_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_modifyAt'])($i_0, $f_1), $GLOBALS['Data_Array_NonEmpty_toArray']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_modifyAt'])($i_0))($f_1)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -527,7 +527,7 @@ function majData_majArray_majNonmajEmpty_intersectmajBy__prime__($eq_0, $xs_1 = 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Array_intersectBy'])($eq_0, $xs_1);
+  $__res = (($GLOBALS['Data_Array_intersectBy'])($eq_0))($xs_1);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -541,7 +541,7 @@ function majData_majArray_majNonmajEmpty_intersectmajBy($eq_0, $xs_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_NonEmpty_intersectBy__prime__'])($eq_0, $xs_1), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_NonEmpty_intersectBy__prime__'])($eq_0))($xs_1)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -555,7 +555,7 @@ function majData_majArray_majNonmajEmpty_intersect__prime__($dictEq_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Data_Array_NonEmpty_intersectBy__prime__'])(($dictEq_0)['eq']);
+  $__res = ($GLOBALS['Data_Array_NonEmpty_intersectBy__prime__'])(($dictEq_0)->{'eq'});
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -569,7 +569,7 @@ function majData_majArray_majNonmajEmpty_intersect($dictEq_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Data_Array_NonEmpty_intersectBy'])(($dictEq_0)['eq']);
+  $__res = ($GLOBALS['Data_Array_NonEmpty_intersectBy'])(($dictEq_0)->{'eq'});
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -583,10 +583,10 @@ function majData_majArray_majNonmajEmpty_intercalate($dictSemigroup_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = ($GLOBALS['Data_Semigroup_Foldable_intercalateMap'])($GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'], $dictSemigroup_0);
+  $__local_var_1_0 = (($GLOBALS['Data_Semigroup_Foldable_intercalateMap'])($GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray']))($dictSemigroup_0);
   $__res = function($a_2) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  $__res = ($__local_var_1_0)($a_2, $GLOBALS['Data_Semigroup_Foldable_identity']);
+  $__res = (($__local_var_1_0)($a_2))($GLOBALS['Data_Semigroup_Foldable_identity']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -604,7 +604,7 @@ function majData_majArray_majNonmajEmpty_insertmajAt(int $i_0, $x_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_insertAt'])($i_0, $x_1), $GLOBALS['Data_Array_NonEmpty_toArray']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_insertAt'])($i_0))($x_1)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -618,8 +618,8 @@ function majData_majArray_majNonmajEmpty_frommajFoldable1($dictFoldable1_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = ((($dictFoldable1_0)['Foldable0'])(null))['foldr'];
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'], function($__local_var_2) use ($__local_var_1_0) {
+  $__local_var_1_0 = ((($dictFoldable1_0)->{'Foldable0'})(null))->{'foldr'};
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))(function($__local_var_2) use ($__local_var_1_0) {
   $__num = \func_num_args();
   $__res = ($GLOBALS['Data_Array_fromFoldableImpl'])($__local_var_1_0, $__local_var_2);
   goto __end;;
@@ -640,7 +640,7 @@ function majData_majArray_majNonmajEmpty_frommajArray($xs_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $__t0 = null;;
-  if (($GLOBALS['Data_Array_NonEmpty_greaterThan'])(count($xs_0), 0)) {
+  if ((($GLOBALS['Data_Array_NonEmpty_greaterThan'])(count($xs_0)))(0)) {
 $__t0 = new \Data\Maybe\Data_Maybe_Just($xs_0);
 goto end_branch_0;;
 };
@@ -660,8 +660,8 @@ function majData_majArray_majNonmajEmpty_frommajFoldable($dictFoldable_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = ($dictFoldable_0)['foldr'];
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_fromArray'], function($__local_var_2) use ($__local_var_1_0) {
+  $__local_var_1_0 = ($dictFoldable_0)->{'foldr'};
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_fromArray']))(function($__local_var_2) use ($__local_var_1_0) {
   $__num = \func_num_args();
   $__res = ($GLOBALS['Data_Array_fromFoldableImpl'])($__local_var_1_0, $__local_var_2);
   goto __end;;
@@ -675,7 +675,7 @@ function majData_majArray_majNonmajEmpty_frommajFoldable($dictFoldable_0) {
 $GLOBALS['Data_Array_NonEmpty_fromFoldable'] = __NAMESPACE__ . '\\majData_majArray_majNonmajEmpty_frommajFoldable';
 
 // Data_Array_NonEmpty_transpose'_closure
-$GLOBALS['Data_Array_NonEmpty_transpose__prime___closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_fromArray'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_transpose'], $GLOBALS['Unsafe_Coerce_unsafeCoerce']));
+$GLOBALS['Data_Array_NonEmpty_transpose__prime___closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_fromArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_transpose']))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
 
 // Data_Array_NonEmpty_transpose'
 function majData_majArray_majNonmajEmpty_transpose__prime__($v_0) {
@@ -692,7 +692,7 @@ function majData_majArray_majNonmajEmpty_transpose__prime__($v_0) {
 $GLOBALS['Data_Array_NonEmpty_transpose__prime__'] = __NAMESPACE__ . '\\majData_majArray_majNonmajEmpty_transpose__prime__';
 
 // Data_Array_NonEmpty_foldr1_closure
-$GLOBALS['Data_Array_NonEmpty_foldr1_closure'] = ($GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'])['foldr1'];
+$GLOBALS['Data_Array_NonEmpty_foldr1_closure'] = ($GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'])->{'foldr1'};
 
 // Data_Array_NonEmpty_foldr1
 function majData_majArray_majNonmajEmpty_foldr1($v_0, $v_1 = null) {
@@ -709,7 +709,7 @@ function majData_majArray_majNonmajEmpty_foldr1($v_0, $v_1 = null) {
 $GLOBALS['Data_Array_NonEmpty_foldr1'] = __NAMESPACE__ . '\\majData_majArray_majNonmajEmpty_foldr1';
 
 // Data_Array_NonEmpty_foldl1_closure
-$GLOBALS['Data_Array_NonEmpty_foldl1_closure'] = ($GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'])['foldl1'];
+$GLOBALS['Data_Array_NonEmpty_foldl1_closure'] = ($GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'])->{'foldl1'};
 
 // Data_Array_NonEmpty_foldl1
 function majData_majArray_majNonmajEmpty_foldl1($v_0, $v_1 = null) {
@@ -732,7 +732,7 @@ function majData_majArray_majNonmajEmpty_foldmajMap1($dictSemigroup_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'])['foldMap1'])($dictSemigroup_0);
+  $__res = (($GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'])->{'foldMap1'})($dictSemigroup_0);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -746,7 +746,7 @@ function majData_majArray_majNonmajEmpty_fold1($dictSemigroup_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'])['foldMap1'])($dictSemigroup_0, $GLOBALS['Data_Semigroup_Foldable_identity']);
+  $__res = ((($GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'])->{'foldMap1'})($dictSemigroup_0))($GLOBALS['Data_Semigroup_Foldable_identity']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -760,7 +760,7 @@ function majData_majArray_majNonmajEmpty_difference__prime__($dictEq_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($GLOBALS['Data_Foldable_foldableArray'])['foldr'])(($GLOBALS['Data_Array_delete'])($dictEq_0));
+  $__res = (($GLOBALS['Data_Foldable_foldableArray'])->{'foldr'})(($GLOBALS['Data_Array_delete'])($dictEq_0));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -774,7 +774,7 @@ function majData_majArray_majNonmajEmpty_cons__prime__($x_0, $xs_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Semigroup_semigroupArray'])['append'])([$x_0], $xs_1);
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupArray'])->{'append'})([$x_0]))($xs_1);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -788,7 +788,7 @@ function majData_majArray_majNonmajEmpty_frommajNonmajEmpty($v_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($GLOBALS['Data_Semigroup_semigroupArray'])['append'])([($v_0)->{'value0'}], ($v_0)->{'value1'});
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupArray'])->{'append'})([($v_0)->{'value0'}]))(($v_0)->{'value1'});
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -802,7 +802,7 @@ function majData_majArray_majNonmajEmpty_concatmajMap($b_0, $a_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Control_Bind_bindArray'])['bind'])($a_1, $b_0);
+  $__res = ((($GLOBALS['Control_Bind_bindArray'])->{'bind'})($a_1))($b_0);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -810,7 +810,7 @@ function majData_majArray_majNonmajEmpty_concatmajMap($b_0, $a_1 = null) {
 $GLOBALS['Data_Array_NonEmpty_concatMap'] = __NAMESPACE__ . '\\majData_majArray_majNonmajEmpty_concatmajMap';
 
 // Data_Array_NonEmpty_concat_closure
-$GLOBALS['Data_Array_NonEmpty_concat_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_concat'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_toArray'], (($GLOBALS['Data_Functor_functorArray'])['map'])($GLOBALS['Data_Array_NonEmpty_toArray']))));
+$GLOBALS['Data_Array_NonEmpty_concat_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_concat']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_toArray']))((($GLOBALS['Data_Functor_functorArray'])->{'map'})($GLOBALS['Data_Array_NonEmpty_toArray']))));
 
 // Data_Array_NonEmpty_concat
 function majData_majArray_majNonmajEmpty_concat($v_0) {
@@ -833,7 +833,7 @@ function majData_majArray_majNonmajEmpty_appendmajArray($xs_0, $ys_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_Semigroup_semigroupArray'])['append'])($xs_0, $ys_1);
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupArray'])->{'append'})($xs_0))($ys_1);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -847,7 +847,7 @@ function majData_majArray_majNonmajEmpty_altermajAt(int $i_0, $f_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_alterAt'])($i_0, $f_1), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_alterAt'])($i_0))($f_1)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -855,7 +855,7 @@ function majData_majArray_majNonmajEmpty_altermajAt(int $i_0, $f_1 = null) {
 $GLOBALS['Data_Array_NonEmpty_alterAt'] = __NAMESPACE__ . '\\majData_majArray_majNonmajEmpty_altermajAt';
 
 // Data_Array_NonEmpty_head_closure
-$GLOBALS['Data_Array_NonEmpty_head_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_fromJust'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_head'], $GLOBALS['Data_Array_NonEmpty_toArray']));
+$GLOBALS['Data_Array_NonEmpty_head_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_fromJust']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_head']))($GLOBALS['Data_Array_NonEmpty_toArray']));
 
 // Data_Array_NonEmpty_head
 function majData_majArray_majNonmajEmpty_head($v_0) {
@@ -872,7 +872,7 @@ function majData_majArray_majNonmajEmpty_head($v_0) {
 $GLOBALS['Data_Array_NonEmpty_head'] = __NAMESPACE__ . '\\majData_majArray_majNonmajEmpty_head';
 
 // Data_Array_NonEmpty_init_closure
-$GLOBALS['Data_Array_NonEmpty_init_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_fromJust'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_init'], $GLOBALS['Data_Array_NonEmpty_toArray']));
+$GLOBALS['Data_Array_NonEmpty_init_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_fromJust']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_init']))($GLOBALS['Data_Array_NonEmpty_toArray']));
 
 // Data_Array_NonEmpty_init
 function majData_majArray_majNonmajEmpty_init($v_0) {
@@ -889,7 +889,7 @@ function majData_majArray_majNonmajEmpty_init($v_0) {
 $GLOBALS['Data_Array_NonEmpty_init'] = __NAMESPACE__ . '\\majData_majArray_majNonmajEmpty_init';
 
 // Data_Array_NonEmpty_last_closure
-$GLOBALS['Data_Array_NonEmpty_last_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_fromJust'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_last'], $GLOBALS['Data_Array_NonEmpty_toArray']));
+$GLOBALS['Data_Array_NonEmpty_last_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_fromJust']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_last']))($GLOBALS['Data_Array_NonEmpty_toArray']));
 
 // Data_Array_NonEmpty_last
 function majData_majArray_majNonmajEmpty_last($v_0) {
@@ -906,7 +906,7 @@ function majData_majArray_majNonmajEmpty_last($v_0) {
 $GLOBALS['Data_Array_NonEmpty_last'] = __NAMESPACE__ . '\\majData_majArray_majNonmajEmpty_last';
 
 // Data_Array_NonEmpty_tail_closure
-$GLOBALS['Data_Array_NonEmpty_tail_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_fromJust'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_tail'], $GLOBALS['Data_Array_NonEmpty_toArray']));
+$GLOBALS['Data_Array_NonEmpty_tail_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_fromJust']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_tail']))($GLOBALS['Data_Array_NonEmpty_toArray']));
 
 // Data_Array_NonEmpty_tail
 function majData_majArray_majNonmajEmpty_tail($v_0) {
@@ -923,7 +923,7 @@ function majData_majArray_majNonmajEmpty_tail($v_0) {
 $GLOBALS['Data_Array_NonEmpty_tail'] = __NAMESPACE__ . '\\majData_majArray_majNonmajEmpty_tail';
 
 // Data_Array_NonEmpty_uncons_closure
-$GLOBALS['Data_Array_NonEmpty_uncons_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_fromJust'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_uncons'], $GLOBALS['Data_Array_NonEmpty_toArray']));
+$GLOBALS['Data_Array_NonEmpty_uncons_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_fromJust']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_uncons']))($GLOBALS['Data_Array_NonEmpty_toArray']));
 
 // Data_Array_NonEmpty_uncons
 function majData_majArray_majNonmajEmpty_uncons($v_0) {
@@ -940,13 +940,13 @@ function majData_majArray_majNonmajEmpty_uncons($v_0) {
 $GLOBALS['Data_Array_NonEmpty_uncons'] = __NAMESPACE__ . '\\majData_majArray_majNonmajEmpty_uncons';
 
 // Data_Array_NonEmpty_toNonEmpty_closure
-$GLOBALS['Data_Array_NonEmpty_toNonEmpty_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0) {
+$GLOBALS['Data_Array_NonEmpty_toNonEmpty_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v_0) {
   $__num = \func_num_args();
-  $__res = new \Data\NonEmpty\Data_NonEmpty_NonEmpty(($v_0)['head'], ($v_0)['tail']);
+  $__res = new \Data\NonEmpty\Data_NonEmpty_NonEmpty(($v_0)->{'head'}, ($v_0)->{'tail'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, $GLOBALS['Data_Array_NonEmpty_uncons']);
+}))($GLOBALS['Data_Array_NonEmpty_uncons']);
 
 // Data_Array_NonEmpty_toNonEmpty
 function majData_majArray_majNonmajEmpty_tomajNonmajEmpty($v_0) {
@@ -963,7 +963,7 @@ function majData_majArray_majNonmajEmpty_tomajNonmajEmpty($v_0) {
 $GLOBALS['Data_Array_NonEmpty_toNonEmpty'] = __NAMESPACE__ . '\\majData_majArray_majNonmajEmpty_tomajNonmajEmpty';
 
 // Data_Array_NonEmpty_unsnoc_closure
-$GLOBALS['Data_Array_NonEmpty_unsnoc_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_fromJust'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_unsnoc'], $GLOBALS['Data_Array_NonEmpty_toArray']));
+$GLOBALS['Data_Array_NonEmpty_unsnoc_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_fromJust']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_unsnoc']))($GLOBALS['Data_Array_NonEmpty_toArray']));
 
 // Data_Array_NonEmpty_unsnoc
 function majData_majArray_majNonmajEmpty_unsnoc($v_0) {
@@ -986,7 +986,7 @@ function majData_majArray_majNonmajEmpty_all($p_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_all'])($p_0), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_all'])($p_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1000,7 +1000,7 @@ function majData_majArray_majNonmajEmpty_any($p_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_any'])($p_0), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_any'])($p_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1008,7 +1008,7 @@ function majData_majArray_majNonmajEmpty_any($p_0) {
 $GLOBALS['Data_Array_NonEmpty_any'] = __NAMESPACE__ . '\\majData_majArray_majNonmajEmpty_any';
 
 // Data_Array_NonEmpty_catMaybes_closure
-$GLOBALS['Data_Array_NonEmpty_catMaybes_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_catMaybes'], $GLOBALS['Data_Array_NonEmpty_toArray']);
+$GLOBALS['Data_Array_NonEmpty_catMaybes_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_catMaybes']))($GLOBALS['Data_Array_NonEmpty_toArray']);
 
 // Data_Array_NonEmpty_catMaybes
 function majData_majArray_majNonmajEmpty_catmajMaybes($v_0) {
@@ -1031,7 +1031,7 @@ function majData_majArray_majNonmajEmpty_delete($dictEq_0, $x_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_delete'])($dictEq_0, $x_1), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_delete'])($dictEq_0))($x_1)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1045,7 +1045,7 @@ function majData_majArray_majNonmajEmpty_deletemajAt(int $i_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_deleteAt'])($i_0), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_deleteAt'])($i_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1059,7 +1059,7 @@ function majData_majArray_majNonmajEmpty_deletemajBy($f_0, $x_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_deleteBy'])($f_0, $x_1), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_deleteBy'])($f_0))($x_1)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1073,10 +1073,10 @@ function majData_majArray_majNonmajEmpty_difference($dictEq_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $difference_prime1_1_0 = (($GLOBALS['Data_Foldable_foldableArray'])['foldr'])(($GLOBALS['Data_Array_delete'])($dictEq_0));
+  $difference_prime1_1_0 = (($GLOBALS['Data_Foldable_foldableArray'])->{'foldr'})(($GLOBALS['Data_Array_delete'])($dictEq_0));
   $__res = function($xs_2) use ($difference_prime1_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($difference_prime1_1_0)($xs_2), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($difference_prime1_1_0)($xs_2)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1094,7 +1094,7 @@ function majData_majArray_majNonmajEmpty_drop(int $i_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_drop'])($i_0), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_drop'])($i_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1108,7 +1108,7 @@ function majData_majArray_majNonmajEmpty_dropmajEnd(int $i_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_dropEnd'])($i_0), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_dropEnd'])($i_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1122,7 +1122,7 @@ function majData_majArray_majNonmajEmpty_dropmajWhile($f_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_dropWhile'])($f_0), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_dropWhile'])($f_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1136,7 +1136,7 @@ function majData_majArray_majNonmajEmpty_elem($dictEq_0, $x_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_elem'])($dictEq_0, $x_1), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_elem'])($dictEq_0))($x_1)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1150,7 +1150,7 @@ function majData_majArray_majNonmajEmpty_elemmajIndex($dictEq_0, $x_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_elemIndex'])($dictEq_0, $x_1), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_elemIndex'])($dictEq_0))($x_1)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1164,7 +1164,7 @@ function majData_majArray_majNonmajEmpty_elemmajLastmajIndex($dictEq_0, $x_1 = n
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_elemLastIndex'])($dictEq_0, $x_1), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_elemLastIndex'])($dictEq_0))($x_1)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1178,7 +1178,7 @@ function majData_majArray_majNonmajEmpty_filter($f_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_filter'])($f_0), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_filter'])($f_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1195,7 +1195,7 @@ function majData_majArray_majNonmajEmpty_filtermajA($dictApplicative_0) {
   $filterA1_1_0 = ($GLOBALS['Data_Array_filterA'])($dictApplicative_0);
   $__res = function($f_2) use ($filterA1_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($filterA1_1_0)($f_2), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($filterA1_1_0)($f_2)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1213,7 +1213,7 @@ function majData_majArray_majNonmajEmpty_find($p_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_find'])($p_0), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_find'])($p_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1227,7 +1227,7 @@ function majData_majArray_majNonmajEmpty_findmajIndex($p_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_findIndex'])($p_0), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_findIndex'])($p_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1241,7 +1241,7 @@ function majData_majArray_majNonmajEmpty_findmajLastmajIndex($x_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_findLastIndex'])($x_0), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_findLastIndex'])($x_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1255,7 +1255,7 @@ function majData_majArray_majNonmajEmpty_findmajMap($p_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_findMap'])($p_0), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_findMap'])($p_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1269,7 +1269,7 @@ function majData_majArray_majNonmajEmpty_foldmajM($dictMonad_0, $f_1 = null, $ac
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_foldM'])($dictMonad_0, $f_1, $acc_2), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(((($GLOBALS['Data_Array_foldM'])($dictMonad_0))($f_1))($acc_2)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1290,7 +1290,7 @@ function majData_majArray_majNonmajEmpty_foldmajRecmajM($dictMonadRec_0) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($foldRecM1_1_0)($f_2, $acc_3), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($foldRecM1_1_0)($f_2))($acc_3)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1304,7 +1304,7 @@ function majData_majArray_majNonmajEmpty_foldmajRecmajM($dictMonadRec_0) {
 $GLOBALS['Data_Array_NonEmpty_foldRecM'] = __NAMESPACE__ . '\\majData_majArray_majNonmajEmpty_foldmajRecmajM';
 
 // Data_Array_NonEmpty_index_closure
-$GLOBALS['Data_Array_NonEmpty_index_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_index'], $GLOBALS['Data_Array_NonEmpty_toArray']);
+$GLOBALS['Data_Array_NonEmpty_index_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_index']))($GLOBALS['Data_Array_NonEmpty_toArray']);
 
 // Data_Array_NonEmpty_index
 function majData_majArray_majNonmajEmpty_index($v_0, $v_1 = null) {
@@ -1321,7 +1321,7 @@ function majData_majArray_majNonmajEmpty_index($v_0, $v_1 = null) {
 $GLOBALS['Data_Array_NonEmpty_index'] = __NAMESPACE__ . '\\majData_majArray_majNonmajEmpty_index';
 
 // Data_Array_NonEmpty_length_closure
-$GLOBALS['Data_Array_NonEmpty_length_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_length'], $GLOBALS['Data_Array_NonEmpty_toArray']);
+$GLOBALS['Data_Array_NonEmpty_length_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_length']))($GLOBALS['Data_Array_NonEmpty_toArray']);
 
 // Data_Array_NonEmpty_length
 function majData_majArray_majNonmajEmpty_length($v_0): int|\Closure {
@@ -1344,7 +1344,7 @@ function majData_majArray_majNonmajEmpty_mapmajMaybe($f_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_mapMaybe'])($f_0), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_mapMaybe'])($f_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1358,7 +1358,7 @@ function majData_majArray_majNonmajEmpty_notmajElem($dictEq_0, $x_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_notElem'])($dictEq_0, $x_1), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_notElem'])($dictEq_0))($x_1)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1372,7 +1372,7 @@ function majData_majArray_majNonmajEmpty_partition($f_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_partition'])($f_0), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_partition'])($f_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1386,7 +1386,7 @@ function majData_majArray_majNonmajEmpty_slice(int $start_0, $end_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_slice'])($start_0, $end_1), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_slice'])($start_0))($end_1)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1400,7 +1400,7 @@ function majData_majArray_majNonmajEmpty_span($f_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_span'])($f_0), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_span'])($f_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1414,7 +1414,7 @@ function majData_majArray_majNonmajEmpty_take(int $i_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_take'])($i_0), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_take'])($i_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1428,7 +1428,7 @@ function majData_majArray_majNonmajEmpty_takemajEnd(int $i_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_takeEnd'])($i_0), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_takeEnd'])($i_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1442,7 +1442,7 @@ function majData_majArray_majNonmajEmpty_takemajWhile($f_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_takeWhile'])($f_0), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_takeWhile'])($f_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1456,7 +1456,7 @@ function majData_majArray_majNonmajEmpty_tomajUnfoldable($dictUnfoldable_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_toUnfoldable'])($dictUnfoldable_0), $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_toUnfoldable'])($dictUnfoldable_0)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1470,7 +1470,7 @@ function majData_majArray_majNonmajEmpty_cons($x_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_cons'])($x_0), $GLOBALS['Data_Array_NonEmpty_toArray']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_cons'])($x_0)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1484,14 +1484,14 @@ function majData_majArray_majNonmajEmpty_group($dictEq_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $eq2_1_0 = ($dictEq_0)['eq'];
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(function($xs_2) use ($eq2_1_0) {
+  $eq2_1_0 = ($dictEq_0)->{'eq'};
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($xs_2) use ($eq2_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Array_groupBy'])($eq2_1_0, $xs_2);
+  $__res = \Data\Array\majData_majArray_groupmajBy($eq2_1_0, $xs_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, $GLOBALS['Data_Array_NonEmpty_toArray']));
+}))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1505,7 +1505,7 @@ function majData_majArray_majNonmajEmpty_groupmajAllmajBy($op_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_groupAllBy'])($op_0), $GLOBALS['Data_Array_NonEmpty_toArray']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_groupAllBy'])($op_0)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1519,7 +1519,7 @@ function majData_majArray_majNonmajEmpty_groupmajAll($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_groupAllBy'])(($dictOrd_0)['compare']), $GLOBALS['Data_Array_NonEmpty_toArray']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_groupAllBy'])(($dictOrd_0)->{'compare'})))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1533,7 +1533,7 @@ function majData_majArray_majNonmajEmpty_groupmajBy($op_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_groupBy'])($op_0), $GLOBALS['Data_Array_NonEmpty_toArray']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_groupBy'])($op_0)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1547,7 +1547,7 @@ function majData_majArray_majNonmajEmpty_insert($dictOrd_0, $x_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_insert'])($dictOrd_0, $x_1), $GLOBALS['Data_Array_NonEmpty_toArray']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_insert'])($dictOrd_0))($x_1)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1561,7 +1561,7 @@ function majData_majArray_majNonmajEmpty_insertmajBy($f_0, $x_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_insertBy'])($f_0, $x_1), $GLOBALS['Data_Array_NonEmpty_toArray']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_insertBy'])($f_0))($x_1)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1575,7 +1575,7 @@ function majData_majArray_majNonmajEmpty_intersperse($x_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_intersperse'])($x_0), $GLOBALS['Data_Array_NonEmpty_toArray']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_intersperse'])($x_0)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1589,7 +1589,7 @@ function majData_majArray_majNonmajEmpty_mapmajWithmajIndex($f_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'], ($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_FunctorWithIndex_functorWithIndexArray'])['mapWithIndex'])($f_0), $GLOBALS['Data_Array_NonEmpty_toArray']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_FunctorWithIndex_functorWithIndexArray'])->{'mapWithIndex'})($f_0)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1610,7 +1610,7 @@ function majData_majArray_majNonmajEmpty_modifymajAtmajIndices($dictFoldable_0) 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(($modifyAtIndices1_1_0)($is_2, $f_3), $GLOBALS['Data_Array_NonEmpty_toArray']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($modifyAtIndices1_1_0)($is_2))($f_3)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1630,7 +1630,7 @@ function majData_majArray_majNonmajEmpty_nub($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_nub'])($dictOrd_0), $GLOBALS['Data_Array_NonEmpty_toArray']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_nub'])($dictOrd_0)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1644,7 +1644,7 @@ function majData_majArray_majNonmajEmpty_nubmajBy($f_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_nubBy'])($f_0), $GLOBALS['Data_Array_NonEmpty_toArray']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_nubBy'])($f_0)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1658,7 +1658,7 @@ function majData_majArray_majNonmajEmpty_nubmajBymajEq($f_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_nubByEq'])($f_0), $GLOBALS['Data_Array_NonEmpty_toArray']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_nubByEq'])($f_0)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1672,7 +1672,7 @@ function majData_majArray_majNonmajEmpty_nubmajEq($dictEq_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_nubEq'])($dictEq_0), $GLOBALS['Data_Array_NonEmpty_toArray']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_nubEq'])($dictEq_0)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1680,7 +1680,7 @@ function majData_majArray_majNonmajEmpty_nubmajEq($dictEq_0) {
 $GLOBALS['Data_Array_NonEmpty_nubEq'] = __NAMESPACE__ . '\\majData_majArray_majNonmajEmpty_nubmajEq';
 
 // Data_Array_NonEmpty_reverse_closure
-$GLOBALS['Data_Array_NonEmpty_reverse_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'], ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_reverse'], $GLOBALS['Data_Array_NonEmpty_toArray']));
+$GLOBALS['Data_Array_NonEmpty_reverse_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_reverse']))($GLOBALS['Data_Array_NonEmpty_toArray']));
 
 // Data_Array_NonEmpty_reverse
 function majData_majArray_majNonmajEmpty_reverse($v_0) {
@@ -1703,7 +1703,7 @@ function majData_majArray_majNonmajEmpty_scanl($f_0, $x_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_scanl'])($f_0, $x_1), $GLOBALS['Data_Array_NonEmpty_toArray']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_scanl'])($f_0))($x_1)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1717,7 +1717,7 @@ function majData_majArray_majNonmajEmpty_scanr($f_0, $x_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_scanr'])($f_0, $x_1), $GLOBALS['Data_Array_NonEmpty_toArray']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_scanr'])($f_0))($x_1)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1731,14 +1731,14 @@ function majData_majArray_majNonmajEmpty_sort($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $compare_1_0 = ($dictOrd_0)['compare'];
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(function($xs_2) use ($compare_1_0) {
+  $compare_1_0 = ($dictOrd_0)->{'compare'};
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($xs_2) use ($compare_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Array_sortBy'])($compare_1_0, $xs_2);
+  $__res = \Data\Array\majData_majArray_sortmajBy($compare_1_0, $xs_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, $GLOBALS['Data_Array_NonEmpty_toArray']));
+}))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1752,7 +1752,7 @@ function majData_majArray_majNonmajEmpty_sortmajBy($f_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_sortBy'])($f_0), $GLOBALS['Data_Array_NonEmpty_toArray']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_sortBy'])($f_0)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1766,7 +1766,7 @@ function majData_majArray_majNonmajEmpty_sortmajWith($dictOrd_0, $f_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_sortWith'])($dictOrd_0, $f_1), $GLOBALS['Data_Array_NonEmpty_toArray']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Array_sortWith'])($dictOrd_0))($f_1)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1783,7 +1783,7 @@ function majData_majArray_majNonmajEmpty_updatemajAtmajIndices($dictFoldable_0) 
   $updateAtIndices1_1_0 = ($GLOBALS['Data_Array_updateAtIndices'])($dictFoldable_0);
   $__res = function($pairs_2) use ($updateAtIndices1_1_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray'], ($GLOBALS['Control_Semigroupoid_composeImpl'])(($updateAtIndices1_1_0)($pairs_2), $GLOBALS['Data_Array_NonEmpty_toArray']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])(($updateAtIndices1_1_0)($pairs_2)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1801,7 +1801,7 @@ function majData_majArray_majNonmajEmpty_unsafemajIndex($_dollar__unused_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_unsafeIndex1'], $GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_unsafeIndex1']))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1809,7 +1809,7 @@ function majData_majArray_majNonmajEmpty_unsafemajIndex($_dollar__unused_0) {
 $GLOBALS['Data_Array_NonEmpty_unsafeIndex'] = __NAMESPACE__ . '\\majData_majArray_majNonmajEmpty_unsafemajIndex';
 
 // Data_Array_NonEmpty_unsafeIndex2_closure
-$GLOBALS['Data_Array_NonEmpty_unsafeIndex2_closure'] = ($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_unsafeIndex1'], $GLOBALS['Data_Array_NonEmpty_toArray']);
+$GLOBALS['Data_Array_NonEmpty_unsafeIndex2_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_unsafeIndex1']))($GLOBALS['Data_Array_NonEmpty_toArray']);
 
 // Data_Array_NonEmpty_unsafeIndex2
 function majData_majArray_majNonmajEmpty_unsafemajIndex2($v_0, $v_1 = null) {
@@ -1832,21 +1832,21 @@ function majData_majArray_majNonmajEmpty_tomajUnfoldable1($dictUnfoldable1_0, $x
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $len_2_0 = ($GLOBALS['Data_Array_NonEmpty_length'])($xs_1);
-  $__res = (($dictUnfoldable1_0)['unfoldr1'])(function($i_3) use ($len_2_0, $xs_1) {
+  $len_2_0 = \Data\Array\NonEmpty\majData_majArray_majNonmajEmpty_length($xs_1);
+  $__res = ((($dictUnfoldable1_0)->{'unfoldr1'})(function($i_3) use ($len_2_0, $xs_1) {
   $__num = \func_num_args();
   $__t1 = null;;
-  if (($GLOBALS['Data_Array_NonEmpty_lessThan'])($i_3, ($len_2_0 - 1))) {
+  if ((($GLOBALS['Data_Array_NonEmpty_lessThan'])($i_3))(($len_2_0 - 1))) {
 $__t1 = new \Data\Maybe\Data_Maybe_Just(($i_3 + 1));
 goto end_branch_1;;
 };
   $__t1 = new \Data\Maybe\Data_Maybe_Nothing();
   end_branch_1:;
-  $__res = new \Data\Tuple\Data_Tuple_Tuple(($GLOBALS['Data_Array_NonEmpty_unsafeIndex2'])($xs_1, $i_3), $__t1);
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(\Data\Array\NonEmpty\majData_majArray_majNonmajEmpty_unsafemajIndex2($xs_1, $i_3), $__t1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, 0);
+}))(0);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

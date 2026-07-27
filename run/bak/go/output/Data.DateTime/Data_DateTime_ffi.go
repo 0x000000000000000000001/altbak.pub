@@ -1,7 +1,5 @@
 package Data_DateTime
 
-import "gopurs/output/gopurs_runtime"
-
 
 
 import (
@@ -38,34 +36,3 @@ func AdjustImpl(just func(interface{}) interface{}, nothing interface{}, offset 
 	
 	return just(resMap)
 }
-
-
-// --- Auto-generated FFI wrappers ---
-func Call_calcDiff(arg0 map[string]interface{}, arg1 map[string]interface{}) float64 {
-	return CalcDiff(arg0, arg1)
-}
-var _Gopurs_CalcDiff = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-	arg0_map := gopurs_runtime.RecordToMap(arg0)
-	go_arg0 := make(map[string]interface{})
-	for k, v := range arg0_map { go_arg0[k] = v }
-	arg1_map := gopurs_runtime.RecordToMap(arg1)
-	go_arg1 := make(map[string]interface{})
-	for k, v := range arg1_map { go_arg1[k] = v }
-	go_res := CalcDiff(go_arg0, go_arg1)
-	return gopurs_runtime.Box(go_res)
-})
-func Call_adjustImpl(arg0 func(interface{}) interface{}, arg1 interface{}, arg2 float64, arg3 map[string]interface{}) interface{} {
-	return AdjustImpl(arg0, arg1, arg2, arg3)
-}
-var _Gopurs_AdjustImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 interface{}) interface{} {
-			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
-		}
-	go_arg1 := arg1
-	go_arg2 := gopurs_runtime.Unbox[float64](arg2)
-	arg3_map := gopurs_runtime.RecordToMap(arg3)
-	go_arg3 := make(map[string]interface{})
-	for k, v := range arg3_map { go_arg3[k] = v }
-	go_res := AdjustImpl(go_arg0, go_arg1, go_arg2, go_arg3)
-	return gopurs_runtime.Box(go_res)
-})

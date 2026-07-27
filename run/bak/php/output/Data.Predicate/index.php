@@ -118,7 +118,7 @@ function majData_majPredicate_majPredicate($x_0) {
 $GLOBALS['Data_Predicate_Predicate'] = __NAMESPACE__ . '\\majData_majPredicate_majPredicate';
 
 // Data_Predicate_newtypePredicate
-$GLOBALS['Data_Predicate_newtypePredicate'] = ["Coercible0" => function($_dollar__unused_0) {
+$GLOBALS['Data_Predicate_newtypePredicate'] = (object)["Coercible0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = null;
   goto __end;;
@@ -127,15 +127,15 @@ $GLOBALS['Data_Predicate_newtypePredicate'] = ["Coercible0" => function($_dollar
 }];
 
 // Data_Predicate_heytingAlgebraPredicate
-$GLOBALS['Data_Predicate_heytingAlgebraPredicate'] = ["ff" => function($v_0) {
+$GLOBALS['Data_Predicate_heytingAlgebraPredicate'] = (object)["ff" => function($v_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['ff'];
+  $__res = ($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'ff'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "tt" => function($v_0) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['tt'];
+  $__res = ($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'tt'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -145,7 +145,7 @@ $GLOBALS['Data_Predicate_heytingAlgebraPredicate'] = ["ff" => function($v_0) {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['disj'])((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['not'])(($f_0)($a_2)), ($g_1)($a_2));
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'disj'})((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'not'})(($f_0)($a_2))))(($g_1)($a_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -157,7 +157,7 @@ $GLOBALS['Data_Predicate_heytingAlgebraPredicate'] = ["ff" => function($v_0) {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['conj'])(($f_0)($a_2), ($g_1)($a_2));
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(($f_0)($a_2)))(($g_1)($a_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -169,7 +169,7 @@ $GLOBALS['Data_Predicate_heytingAlgebraPredicate'] = ["ff" => function($v_0) {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['disj'])(($f_0)($a_2), ($g_1)($a_2));
+  $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'disj'})(($f_0)($a_2)))(($g_1)($a_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -181,7 +181,7 @@ $GLOBALS['Data_Predicate_heytingAlgebraPredicate'] = ["ff" => function($v_0) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])['not'])(($f_0)($a_1));
+  $__res = (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'not'})(($f_0)($a_1));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -190,13 +190,13 @@ $GLOBALS['Data_Predicate_heytingAlgebraPredicate'] = ["ff" => function($v_0) {
 })()];
 
 // Data_Predicate_contravariantPredicate
-$GLOBALS['Data_Predicate_contravariantPredicate'] = ["cmap" => (function() {
+$GLOBALS['Data_Predicate_contravariantPredicate'] = (object)["cmap" => (function() {
   $__fn = function($f_0, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Semigroupoid_composeImpl'])($v_1, $f_0);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($v_1))($f_0);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -205,5 +205,5 @@ $GLOBALS['Data_Predicate_contravariantPredicate'] = ["cmap" => (function() {
 })()];
 
 // Data_Predicate_booleanAlgebraPredicate
-$GLOBALS['Data_Predicate_booleanAlgebraPredicate'] = ($GLOBALS['Data_BooleanAlgebra_booleanAlgebraFn'])($GLOBALS['Data_BooleanAlgebra_booleanAlgebraBoolean']);
+$GLOBALS['Data_Predicate_booleanAlgebraPredicate'] = \Data\BooleanAlgebra\majData_majBooleanmajAlgebra_booleanmajAlgebramajFn($GLOBALS['Data_BooleanAlgebra_booleanAlgebraBoolean']);
 

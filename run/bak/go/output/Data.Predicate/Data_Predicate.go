@@ -22,9 +22,9 @@ var cache_newtypePredicate gopurs_runtime.Value
 var once_newtypePredicate sync.Once
 func Get_newtypePredicate() gopurs_runtime.Value {
 	once_newtypePredicate.Do(func() {
-		cache_newtypePredicate = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypePredicate = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
-}))
+}))))
 	})
 	return cache_newtypePredicate
 }
@@ -33,7 +33,7 @@ var cache_heytingAlgebraPredicate gopurs_runtime.Value
 var once_heytingAlgebraPredicate sync.Once
 func Get_heytingAlgebraPredicate() gopurs_runtime.Value {
 	once_heytingAlgebraPredicate.Do(func() {
-		cache_heytingAlgebraPredicate = gopurs_runtime.RecordDict([]string{"conj", "disj", "ff", "implies", "not", "tt"}, []gopurs_runtime.Value{gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, g_1 gopurs_runtime.Value, a_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_heytingAlgebraPredicate = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict([]string{"conj", "disj", "ff", "implies", "not", "tt"}, []gopurs_runtime.Value{gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, g_1 gopurs_runtime.Value, a_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Apply(f_0, a_2), gopurs_runtime.Apply(g_1, a_2))
 }), gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, g_1 gopurs_runtime.Value, a_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "disj"), gopurs_runtime.Apply(f_0, a_2), gopurs_runtime.Apply(g_1, a_2))
@@ -45,7 +45,7 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Ge
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "not"), gopurs_runtime.Apply(f_0, a_1))
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "tt")
-})})
+})})))
 	})
 	return cache_heytingAlgebraPredicate
 }
@@ -54,9 +54,9 @@ var cache_contravariantPredicate gopurs_runtime.Value
 var once_contravariantPredicate sync.Once
 func Get_contravariantPredicate() gopurs_runtime.Value {
 	once_contravariantPredicate.Do(func() {
-		cache_contravariantPredicate = gopurs_runtime.RecordDict1("cmap", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_contravariantPredicate = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("cmap", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(v_1, gopurs_runtime.Apply(f_0, x_2))
-}))
+}))))
 	})
 	return cache_contravariantPredicate
 }
@@ -65,7 +65,7 @@ var cache_booleanAlgebraPredicate gopurs_runtime.Value
 var once_booleanAlgebraPredicate sync.Once
 func Get_booleanAlgebraPredicate() gopurs_runtime.Value {
 	once_booleanAlgebraPredicate.Do(func() {
-		cache_booleanAlgebraPredicate = gopurs_runtime.Apply(pkg_Data_BooleanAlgebra.Get_booleanAlgebraFn(), pkg_Data_BooleanAlgebra.Get_booleanAlgebraBoolean())
+		cache_booleanAlgebraPredicate = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.Apply(pkg_Data_BooleanAlgebra.Get_booleanAlgebraFn(), pkg_Data_BooleanAlgebra.Get_booleanAlgebraBoolean())))
 	})
 	return cache_booleanAlgebraPredicate
 }
@@ -75,5 +75,3 @@ var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
 return x_0
 }
-
-

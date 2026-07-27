@@ -117,7 +117,7 @@ function majControl_majApplicative_pure($dict_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($dict_0)['pure'];
+  $__res = ($dict_0)->{'pure'};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -137,7 +137,7 @@ $__t0 = $v1_2;
 goto end_branch_0;;
 };
   if ($v_1) {
-$__t0 = (($dictApplicative_0)['pure'])($GLOBALS['Data_Unit_unit']);
+$__t0 = (($dictApplicative_0)->{'pure'})($GLOBALS['Data_Unit_unit']);
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -162,7 +162,7 @@ function majControl_majApplicative_when($dictApplicative_0, $v_1 = null, $v1_2 =
 $__t0 = $v1_2;
 goto end_branch_0;;
 };
-  $__t0 = (($dictApplicative_0)['pure'])($GLOBALS['Data_Unit_unit']);
+  $__t0 = (($dictApplicative_0)->{'pure'})($GLOBALS['Data_Unit_unit']);
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
@@ -178,7 +178,7 @@ function majControl_majApplicative_liftmajA1($dictApplicative_0, $f_1 = null, $a
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (((($dictApplicative_0)['Apply0'])(null))['apply'])((($dictApplicative_0)['pure'])($f_1), $a_2);
+  $__res = ((((($dictApplicative_0)->{'Apply0'})(null))->{'apply'})((($dictApplicative_0)->{'pure'})($f_1)))($a_2);
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -186,7 +186,7 @@ function majControl_majApplicative_liftmajA1($dictApplicative_0, $f_1 = null, $a
 $GLOBALS['Control_Applicative_liftA1'] = __NAMESPACE__ . '\\majControl_majApplicative_liftmajA1';
 
 // Control_Applicative_applicativeProxy
-$GLOBALS['Control_Applicative_applicativeProxy'] = ["pure" => function($v_0) {
+$GLOBALS['Control_Applicative_applicativeProxy'] = (object)["pure" => function($v_0) {
   $__num = \func_num_args();
   $__res = new \Type\Proxy\Type_Proxy_Proxy();
   goto __end;;
@@ -201,7 +201,7 @@ $GLOBALS['Control_Applicative_applicativeProxy'] = ["pure" => function($v_0) {
 }];
 
 // Control_Applicative_applicativeFn
-$GLOBALS['Control_Applicative_applicativeFn'] = ["pure" => (function() {
+$GLOBALS['Control_Applicative_applicativeFn'] = (object)["pure" => (function() {
   $__fn = function($x_0, $v_1 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -222,7 +222,7 @@ $GLOBALS['Control_Applicative_applicativeFn'] = ["pure" => (function() {
 }];
 
 // Control_Applicative_applicativeArray
-$GLOBALS['Control_Applicative_applicativeArray'] = ["pure" => function($x_0) {
+$GLOBALS['Control_Applicative_applicativeArray'] = (object)["pure" => function($x_0) {
   $__num = \func_num_args();
   $__res = [$x_0];
   goto __end;;
