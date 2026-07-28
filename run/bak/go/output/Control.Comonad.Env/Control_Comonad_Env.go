@@ -14,15 +14,7 @@ var cache_withEnv gopurs_runtime.Value
 var once_withEnv sync.Once
 func Get_withEnv() gopurs_runtime.Value {
 	once_withEnv.Do(func() {
-		cache_withEnv = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-return func(inner_arg0 func(interface{}) interface{}, inner_arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(pkg_Control_Comonad_Env_Trans.Get_withEnvT__func_func_interface____interface____gopurs_runtime_Value__gopurs_runtime_Value_1388751353(), gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(inner_arg0(gopurs_runtime.UnboxAny(arg0)))
-}), inner_arg1)
-}(func(inner_arg0 interface{}) interface{} {
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(arg0, gopurs_runtime.Any(inner_arg0)))
-}, arg1)
-})
+		cache_withEnv = pkg_Control_Comonad_Env_Trans.Get_withEnvT__gopurs_runtime_Value_1388751353()
 	})
 	return cache_withEnv
 }
@@ -43,9 +35,7 @@ var once_mapEnv sync.Once
 func Get_mapEnv() gopurs_runtime.Value {
 	once_mapEnv.Do(func() {
 		cache_mapEnv = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_mapEnv(func(inner_arg0 interface{}) interface{} {
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(f_0_box, gopurs_runtime.Any(inner_arg0)))
-}, v_1_box)
+return Call_mapEnv(f_0_box, v_1_box)
 })
 	})
 	return cache_mapEnv
@@ -56,7 +46,7 @@ var once_env sync.Once
 func Get_env() gopurs_runtime.Value {
 	once_env.Do(func() {
 		cache_env = gopurs_runtime.Func2(func(e_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_env(gopurs_runtime.UnboxAny(e_0_box), gopurs_runtime.UnboxAny(a_1_box))
+return Call_env(e_0_box, a_1_box)
 })
 	})
 	return cache_env
@@ -68,20 +58,20 @@ _ = v_0
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Tuple.Get_functorTuple(), "map"), pkg_Unsafe_Coerce.Get_unsafeCoerce(), v_0)
 }
 
-func Call_mapEnv(f_0_loop func(interface{}) interface{}, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var f_0 func(interface{}) interface{} = f_0_loop
+func Call_mapEnv(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.UnboxAny(gopurs_runtime.Any((*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V0)), gopurs_runtime.UnboxAny(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Identity.Get_functorIdentity(), "map"), gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(f_0(gopurs_runtime.UnboxAny(arg0)))
-}), gopurs_runtime.Any((*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V1)))})})
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{(*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Identity.Get_functorIdentity(), "map"), f_0, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V1)})}
 }
 
-func Call_env(e_0_loop interface{}, a_1_loop interface{}) gopurs_runtime.Value {
-var e_0 interface{} = e_0_loop
+func Call_env(e_0_loop gopurs_runtime.Value, a_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var e_0 gopurs_runtime.Value = e_0_loop
 _ = e_0
-var a_1 interface{} = a_1_loop
+var a_1 gopurs_runtime.Value = a_1_loop
 _ = a_1
-return gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{e_0, a_1})})
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{e_0, a_1})}
 }
+
+

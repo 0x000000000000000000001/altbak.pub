@@ -13,11 +13,7 @@ var cache_describe gopurs_runtime.Value
 var once_describe sync.Once
 func Get_describe() gopurs_runtime.Value {
 	once_describe.Do(func() {
-		cache_describe = gopurs_runtime.Func0(func() gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str("Ackermann (3, 4):")), nil)
-}()
-})
+		cache_describe = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str("Ackermann (3, 4):"))
 	})
 	return cache_describe
 }
@@ -37,13 +33,9 @@ var cache_act gopurs_runtime.Value
 var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
-		cache_act = gopurs_runtime.Func0(func() gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind"), gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(3)), gopurs_runtime.Func(func(dummy_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_act = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind"), gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(3)), gopurs_runtime.Func(func(dummy_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showInt(), "show"), gopurs_runtime.Int(Call_ackermann(dummy_0.IntVal, 4))))
-})), nil)
-}()
-})
+}))
 	})
 	return cache_act
 }
@@ -86,3 +78,5 @@ end_branch_0:
 return __t0.IntVal
 }
 }
+
+

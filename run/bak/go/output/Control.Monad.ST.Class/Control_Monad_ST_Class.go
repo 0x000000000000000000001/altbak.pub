@@ -12,11 +12,11 @@ var cache_monadSTST gopurs_runtime.Value
 var once_monadSTST sync.Once
 func Get_monadSTST() gopurs_runtime.Value {
 	once_monadSTST.Do(func() {
-		cache_monadSTST = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Monad0", "liftST", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadSTST = gopurs_runtime.RecordDict2("Monad0", "liftST", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Monad_ST_Internal.Get_monadST()
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_0
-}))))
+}))
 	})
 	return cache_monadSTST
 }
@@ -25,9 +25,9 @@ var cache_monadSTEffect gopurs_runtime.Value
 var once_monadSTEffect sync.Once
 func Get_monadSTEffect() gopurs_runtime.Value {
 	once_monadSTEffect.Do(func() {
-		cache_monadSTEffect = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Monad0", "liftST", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadSTEffect = gopurs_runtime.RecordDict2("Monad0", "liftST", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Effect.Get_monadEffect()
-}), pkg_Unsafe_Coerce.Get_unsafeCoerce())))
+}), pkg_Unsafe_Coerce.Get_unsafeCoerce())
 	})
 	return cache_monadSTEffect
 }
@@ -48,3 +48,5 @@ var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "liftST")
 }
+
+

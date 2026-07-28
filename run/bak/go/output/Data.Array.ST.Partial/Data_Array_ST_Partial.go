@@ -28,24 +28,6 @@ return Call_peek(_dollar__unused_0_box)
 	return cache_peek
 }
 
-var cache_peekImpl gopurs_runtime.Value
-var once_peekImpl sync.Once
-func Get_peekImpl() gopurs_runtime.Value {
-	once_peekImpl.Do(func() {
-		cache_peekImpl = PeekImpl
-	})
-	return cache_peekImpl
-}
-
-var cache_pokeImpl gopurs_runtime.Value
-var once_pokeImpl sync.Once
-func Get_pokeImpl() gopurs_runtime.Value {
-	once_pokeImpl.Do(func() {
-		cache_pokeImpl = PokeImpl
-	})
-	return cache_pokeImpl
-}
-
 func Call_poke(_dollar__unused_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
@@ -56,4 +38,12 @@ func Call_peek(_dollar__unused_0_loop gopurs_runtime.Value) gopurs_runtime.Value
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 return gopurs_runtime.Apply(pkg_Control_Monad_ST_Uncurried.Get_runSTFn2(), Get_peekImpl())
+}
+
+func Get_peekImpl() gopurs_runtime.Value {
+	return _Gopurs_PeekImpl
+}
+
+func Get_pokeImpl() gopurs_runtime.Value {
+	return _Gopurs_PokeImpl
 }

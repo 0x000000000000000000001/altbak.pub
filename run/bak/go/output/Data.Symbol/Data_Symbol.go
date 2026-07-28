@@ -10,9 +10,7 @@ var once_reifySymbol sync.Once
 func Get_reifySymbol() gopurs_runtime.Value {
 	once_reifySymbol.Do(func() {
 		cache_reifySymbol = gopurs_runtime.Func2(func(s_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_reifySymbol(s_0_box.StrVal(), func(inner_arg0 gopurs_runtime.Value, inner_arg1 gopurs_runtime.Value) interface{} {
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply2(f_1_box, inner_arg0, inner_arg1))
-}))
+return Call_reifySymbol(s_0_box.StrVal(), f_1_box)
 })
 	})
 	return cache_reifySymbol
@@ -29,33 +27,24 @@ return Call_reflectSymbol(dict_0_box)
 	return cache_reflectSymbol
 }
 
-var cache_unsafeCoerce gopurs_runtime.Value
-var once_unsafeCoerce sync.Once
-func Get_unsafeCoerce() gopurs_runtime.Value {
-	once_unsafeCoerce.Do(func() {
-		cache_unsafeCoerce = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(UnsafeCoerce(gopurs_runtime.UnboxAny(arg0)))
-})
-	})
-	return cache_unsafeCoerce
-}
-
-func Call_reifySymbol(s_0_loop string, f_1_loop func(gopurs_runtime.Value, gopurs_runtime.Value) interface{}) interface{} {
+func Call_reifySymbol(s_0_loop string, f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var s_0 string = s_0_loop
 _ = s_0
-var f_1 func(gopurs_runtime.Value, gopurs_runtime.Value) interface{} = f_1_loop
+var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply3(Get_unsafeCoerce(), gopurs_runtime.Func(func(dictIsSymbol_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(f_1(arg0, arg1))
-}), dictIsSymbol_2)
+return gopurs_runtime.Apply3(Get_unsafeCoerce(), gopurs_runtime.Func(func(dictIsSymbol_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_1, dictIsSymbol_2)
 }), gopurs_runtime.RecordDict1("reflectSymbol", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str(s_0)
-})), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil})))
+})), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil})
 }
 
 func Call_reflectSymbol(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "reflectSymbol")
+}
+
+func Get_unsafeCoerce() gopurs_runtime.Value {
+	return _Gopurs_UnsafeCoerce
 }

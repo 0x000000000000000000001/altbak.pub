@@ -24,11 +24,11 @@ var cache_biapplyTuple gopurs_runtime.Value
 var once_biapplyTuple sync.Once
 func Get_biapplyTuple() gopurs_runtime.Value {
 	once_biapplyTuple.Do(func() {
-		cache_biapplyTuple = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Bifunctor0", "biapply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_biapplyTuple = gopurs_runtime.RecordDict2("Bifunctor0", "biapply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Bifunctor.Get_bifunctorTuple()
 }), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.UnboxAny(gopurs_runtime.Apply(gopurs_runtime.Any((*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V0), gopurs_runtime.Any((*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_1.UnsafePtr).V0))), gopurs_runtime.UnboxAny(gopurs_runtime.Apply(gopurs_runtime.Any((*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V1), gopurs_runtime.Any((*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_1.UnsafePtr).V1)))})})
-}))))
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Apply((*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V0, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_1.UnsafePtr).V0), gopurs_runtime.Apply((*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V1, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_1.UnsafePtr).V1)})}
+}))
 	})
 	return cache_biapplyTuple
 }
@@ -44,15 +44,15 @@ return Call_biapply(dict_0_box)
 	return cache_biapply
 }
 
-var cache_biapply__func_gopurs_runtime_Value__interface____interface____interface___1299693896 gopurs_runtime.Value
-var once_biapply__func_gopurs_runtime_Value__interface____interface____interface___1299693896 sync.Once
-func Get_biapply__func_gopurs_runtime_Value__interface____interface____interface___1299693896() gopurs_runtime.Value {
-	once_biapply__func_gopurs_runtime_Value__interface____interface____interface___1299693896.Do(func() {
-		cache_biapply__func_gopurs_runtime_Value__interface____interface____interface___1299693896 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_biapply__func_gopurs_runtime_Value__interface____interface____interface___1299693896(dict_0_box)
+var cache_biapply__gopurs_runtime_Value_1299693896 gopurs_runtime.Value
+var once_biapply__gopurs_runtime_Value_1299693896 sync.Once
+func Get_biapply__gopurs_runtime_Value_1299693896() gopurs_runtime.Value {
+	once_biapply__gopurs_runtime_Value_1299693896.Do(func() {
+		cache_biapply__gopurs_runtime_Value_1299693896 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_biapply__gopurs_runtime_Value_1299693896(dict_0_box)
 })
 	})
-	return cache_biapply__func_gopurs_runtime_Value__interface____interface____interface___1299693896
+	return cache_biapply__gopurs_runtime_Value_1299693896
 }
 
 var cache_biapplyFirst gopurs_runtime.Value
@@ -60,7 +60,7 @@ var once_biapplyFirst sync.Once
 func Get_biapplyFirst() gopurs_runtime.Value {
 	once_biapplyFirst.Do(func() {
 		cache_biapplyFirst = gopurs_runtime.Func3(func(dictBiapply_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value, b_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_biapplyFirst(dictBiapply_0_box, gopurs_runtime.UnboxAny(a_1_box), gopurs_runtime.UnboxAny(b_2_box)))
+return Call_biapplyFirst(dictBiapply_0_box, a_1_box, b_2_box)
 })
 	})
 	return cache_biapplyFirst
@@ -71,7 +71,7 @@ var once_biapplySecond sync.Once
 func Get_biapplySecond() gopurs_runtime.Value {
 	once_biapplySecond.Do(func() {
 		cache_biapplySecond = gopurs_runtime.Func3(func(dictBiapply_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value, b_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_biapplySecond(dictBiapply_0_box, gopurs_runtime.UnboxAny(a_1_box), gopurs_runtime.UnboxAny(b_2_box)))
+return Call_biapplySecond(dictBiapply_0_box, a_1_box, b_2_box)
 })
 	})
 	return cache_biapplySecond
@@ -82,11 +82,7 @@ var once_bilift2 sync.Once
 func Get_bilift2() gopurs_runtime.Value {
 	once_bilift2.Do(func() {
 		cache_bilift2 = gopurs_runtime.Func5(func(dictBiapply_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, g_2_box gopurs_runtime.Value, a_3_box gopurs_runtime.Value, b_4_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_bilift2(dictBiapply_0_box, func(inner_arg0 interface{}, inner_arg1 interface{}) interface{} {
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply2(f_1_box, gopurs_runtime.Any(inner_arg0), gopurs_runtime.Any(inner_arg1)))
-}, func(inner_arg0 interface{}, inner_arg1 interface{}) interface{} {
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply2(g_2_box, gopurs_runtime.Any(inner_arg0), gopurs_runtime.Any(inner_arg1)))
-}, gopurs_runtime.UnboxAny(a_3_box), gopurs_runtime.UnboxAny(b_4_box)))
+return Call_bilift2(dictBiapply_0_box, f_1_box, g_2_box, a_3_box, b_4_box)
 })
 	})
 	return cache_bilift2
@@ -97,11 +93,7 @@ var once_bilift3 sync.Once
 func Get_bilift3() gopurs_runtime.Value {
 	once_bilift3.Do(func() {
 		cache_bilift3 = gopurs_runtime.Func6(func(dictBiapply_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, g_2_box gopurs_runtime.Value, a_3_box gopurs_runtime.Value, b_4_box gopurs_runtime.Value, c_5_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_bilift3(dictBiapply_0_box, func(inner_arg0 interface{}, inner_arg1 interface{}, inner_arg2 interface{}) interface{} {
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply3(f_1_box, gopurs_runtime.Any(inner_arg0), gopurs_runtime.Any(inner_arg1), gopurs_runtime.Any(inner_arg2)))
-}, func(inner_arg0 interface{}, inner_arg1 interface{}, inner_arg2 interface{}) interface{} {
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply3(g_2_box, gopurs_runtime.Any(inner_arg0), gopurs_runtime.Any(inner_arg1), gopurs_runtime.Any(inner_arg2)))
-}, gopurs_runtime.UnboxAny(a_3_box), gopurs_runtime.UnboxAny(b_4_box), gopurs_runtime.UnboxAny(c_5_box)))
+return Call_bilift3(dictBiapply_0_box, f_1_box, g_2_box, a_3_box, b_4_box, c_5_box)
 })
 	})
 	return cache_bilift3
@@ -119,70 +111,64 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "biapply")
 }
 
-func Call_biapply__func_gopurs_runtime_Value__interface____interface____interface___1299693896(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_biapply__gopurs_runtime_Value_1299693896(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "biapply")
 }
 
-func Call_biapplyFirst(dictBiapply_0_loop gopurs_runtime.Value, a_1_loop interface{}, b_2_loop interface{}) interface{} {
+func Call_biapplyFirst(dictBiapply_0_loop gopurs_runtime.Value, a_1_loop gopurs_runtime.Value, b_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictBiapply_0 gopurs_runtime.Value = dictBiapply_0_loop
 _ = dictBiapply_0
-var a_1 interface{} = a_1_loop
+var a_1 gopurs_runtime.Value = a_1_loop
 _ = a_1
-var b_2 interface{} = b_2_loop
+var b_2 gopurs_runtime.Value = b_2_loop
 _ = b_2
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBiapply_0, "biapply"), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBiapply_0, "Bifunctor0"), gopurs_runtime.Value{}), "bimap"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBiapply_0, "biapply"), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBiapply_0, "Bifunctor0"), gopurs_runtime.Value{}), "bimap"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_identity()
 }), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_identity()
-}), gopurs_runtime.Any(a_1)), gopurs_runtime.Any(b_2)))
+}), a_1), b_2)
 }
 
-func Call_biapplySecond(dictBiapply_0_loop gopurs_runtime.Value, a_1_loop interface{}, b_2_loop interface{}) interface{} {
+func Call_biapplySecond(dictBiapply_0_loop gopurs_runtime.Value, a_1_loop gopurs_runtime.Value, b_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictBiapply_0 gopurs_runtime.Value = dictBiapply_0_loop
 _ = dictBiapply_0
-var a_1 interface{} = a_1_loop
+var a_1 gopurs_runtime.Value = a_1_loop
 _ = a_1
-var b_2 interface{} = b_2_loop
+var b_2 gopurs_runtime.Value = b_2_loop
 _ = b_2
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBiapply_0, "biapply"), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBiapply_0, "Bifunctor0"), gopurs_runtime.Value{}), "bimap"), pkg_Data_Function.Get_const_(), pkg_Data_Function.Get_const_(), gopurs_runtime.Any(a_1)), gopurs_runtime.Any(b_2)))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBiapply_0, "biapply"), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBiapply_0, "Bifunctor0"), gopurs_runtime.Value{}), "bimap"), pkg_Data_Function.Get_const_(), pkg_Data_Function.Get_const_(), a_1), b_2)
 }
 
-func Call_bilift2(dictBiapply_0_loop gopurs_runtime.Value, f_1_loop func(interface{}, interface{}) interface{}, g_2_loop func(interface{}, interface{}) interface{}, a_3_loop interface{}, b_4_loop interface{}) interface{} {
+func Call_bilift2(dictBiapply_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, g_2_loop gopurs_runtime.Value, a_3_loop gopurs_runtime.Value, b_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictBiapply_0 gopurs_runtime.Value = dictBiapply_0_loop
 _ = dictBiapply_0
-var f_1 func(interface{}, interface{}) interface{} = f_1_loop
+var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-var g_2 func(interface{}, interface{}) interface{} = g_2_loop
+var g_2 gopurs_runtime.Value = g_2_loop
 _ = g_2
-var a_3 interface{} = a_3_loop
+var a_3 gopurs_runtime.Value = a_3_loop
 _ = a_3
-var b_4 interface{} = b_4_loop
+var b_4 gopurs_runtime.Value = b_4_loop
 _ = b_4
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBiapply_0, "biapply"), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBiapply_0, "Bifunctor0"), gopurs_runtime.Value{}), "bimap"), gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(f_1(gopurs_runtime.UnboxAny(arg0), gopurs_runtime.UnboxAny(arg1)))
-}), gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(g_2(gopurs_runtime.UnboxAny(arg0), gopurs_runtime.UnboxAny(arg1)))
-}), gopurs_runtime.Any(a_3)), gopurs_runtime.Any(b_4)))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBiapply_0, "biapply"), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBiapply_0, "Bifunctor0"), gopurs_runtime.Value{}), "bimap"), f_1, g_2, a_3), b_4)
 }
 
-func Call_bilift3(dictBiapply_0_loop gopurs_runtime.Value, f_1_loop func(interface{}, interface{}, interface{}) interface{}, g_2_loop func(interface{}, interface{}, interface{}) interface{}, a_3_loop interface{}, b_4_loop interface{}, c_5_loop interface{}) interface{} {
+func Call_bilift3(dictBiapply_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, g_2_loop gopurs_runtime.Value, a_3_loop gopurs_runtime.Value, b_4_loop gopurs_runtime.Value, c_5_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictBiapply_0 gopurs_runtime.Value = dictBiapply_0_loop
 _ = dictBiapply_0
-var f_1 func(interface{}, interface{}, interface{}) interface{} = f_1_loop
+var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-var g_2 func(interface{}, interface{}, interface{}) interface{} = g_2_loop
+var g_2 gopurs_runtime.Value = g_2_loop
 _ = g_2
-var a_3 interface{} = a_3_loop
+var a_3 gopurs_runtime.Value = a_3_loop
 _ = a_3
-var b_4 interface{} = b_4_loop
+var b_4 gopurs_runtime.Value = b_4_loop
 _ = b_4
-var c_5 interface{} = c_5_loop
+var c_5 gopurs_runtime.Value = c_5_loop
 _ = c_5
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBiapply_0, "biapply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBiapply_0, "biapply"), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBiapply_0, "Bifunctor0"), gopurs_runtime.Value{}), "bimap"), gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(f_1(gopurs_runtime.UnboxAny(arg0), gopurs_runtime.UnboxAny(arg1), gopurs_runtime.UnboxAny(arg2)))
-}), gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(g_2(gopurs_runtime.UnboxAny(arg0), gopurs_runtime.UnboxAny(arg1), gopurs_runtime.UnboxAny(arg2)))
-}), gopurs_runtime.Any(a_3)), gopurs_runtime.Any(b_4)), gopurs_runtime.Any(c_5)))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBiapply_0, "biapply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBiapply_0, "biapply"), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBiapply_0, "Bifunctor0"), gopurs_runtime.Value{}), "bimap"), f_1, g_2, a_3), b_4), c_5)
 }
+
+

@@ -70,18 +70,18 @@ _ = v_0
 return gopurs_runtime.Apply(pkg_Effect_Aff.Get_makeAff(), gopurs_runtime.Func(func(k_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind"), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp2(v_0, gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(k_1, gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.UnboxAny(x_2)})}))
+return gopurs_runtime.Apply(k_1, gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{x_2})})
 }), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(k_1, gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.UnboxAny(x_2)})}))
+return gopurs_runtime.Apply(k_1, gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{x_2})})
 }))
 }), gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Effect.Get_applicativeEffect(), "pure"), gopurs_runtime.Func(func(e_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(pkg_Effect_Aff.Get_makeAff(), gopurs_runtime.Func(func(k2_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(Get_discard(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp3(v1_2, e_3, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(k2_4, gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.UnboxAny(x_5)})}))
+return gopurs_runtime.Apply(k2_4, gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{x_5})})
 }), gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(k2_4, gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.UnboxAny(x_5)})}))
+return gopurs_runtime.Apply(k2_4, gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{x_5})})
 }))
 }), gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Effect.Get_applicativeEffect(), "pure"), pkg_Effect_Aff.Get_nonCanceler())
@@ -91,3 +91,5 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Effect.Get_applicativeE
 }))
 }))
 }
+
+

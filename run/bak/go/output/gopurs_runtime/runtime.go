@@ -118,6 +118,30 @@ func (v Value) PtrVal() any {
 	return *(*any)(v.UnsafePtr)
 }
 
+func (v Value) AnyVal() any {
+	switch v.Type {
+	case TypeInt: return v.IntVal
+	case TypeFloat: return math.Float64frombits(uint64(v.IntVal))
+	case TypeString: return *(*string)(v.UnsafePtr)
+	case TypeBool: return v.IntVal != 0
+	case TypeArray: return *(*[]Value)(v.UnsafePtr)
+	case TypeRecord: return *(*map[string]Value)(v.UnsafePtr)
+	case TypeAny: return v.PtrVal()
+	case TypeConstructor: return v
+	default:
+		if v.Type >= TypeRecord0 && v.Type <= TypeRecordData {
+			return RecordToMap(v)
+		}
+		if (v.Type >= TypeFunc && v.Type <= TypeFunc5) || (v.Type >= TypeFunc6 && v.Type <= TypeFunc11) {
+			return v
+		}
+		if v.UnsafePtr != nil {
+			return v
+		}
+		return nil
+	}
+}
+
 type RecordData struct {
 	Keys []string
 	Vals []Value
@@ -417,6 +441,9 @@ func ArrayLength(arr Value) int {
 }
 
 func Any(v any) Value {
+	if val, ok := v.(Value); ok {
+		return val
+	}
 	return Value{Type: TypeAny, UnsafePtr: unsafe.Pointer(&v)}
 }
 

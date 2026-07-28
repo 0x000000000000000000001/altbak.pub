@@ -15,7 +15,7 @@ var once_max sync.Once
 func Get_max() gopurs_runtime.Value {
 	once_max.Do(func() {
 		cache_max = func() gopurs_runtime.Value {
-__local_var_0_0 := gopurs_runtime.Apply3(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil}))
+__local_var_0_0 := gopurs_runtime.Apply3(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil})
 _ = __local_var_0_0
 return gopurs_runtime.Func2(func(x_1 gopurs_runtime.Value, y_2 gopurs_runtime.Value) gopurs_runtime.Value {
 v_3_1 := gopurs_runtime.Apply2(__local_var_0_0, x_1, y_2)
@@ -67,15 +67,15 @@ return Call_genString(dictMonadRec_0_box, dictMonadGen_1_box)
 	return cache_genString
 }
 
-var cache_genString__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface___134939216 gopurs_runtime.Value
-var once_genString__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface___134939216 sync.Once
-func Get_genString__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface___134939216() gopurs_runtime.Value {
-	once_genString__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface___134939216.Do(func() {
-		cache_genString__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface___134939216 = gopurs_runtime.Func2(func(dictMonadRec_0_box gopurs_runtime.Value, dictMonadGen_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genString__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface___134939216(dictMonadRec_0_box, dictMonadGen_1_box)
+var cache_genString__gopurs_runtime_Value_134939216 gopurs_runtime.Value
+var once_genString__gopurs_runtime_Value_134939216 sync.Once
+func Get_genString__gopurs_runtime_Value_134939216() gopurs_runtime.Value {
+	once_genString__gopurs_runtime_Value_134939216.Do(func() {
+		cache_genString__gopurs_runtime_Value_134939216 = gopurs_runtime.Func2(func(dictMonadRec_0_box gopurs_runtime.Value, dictMonadGen_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genString__gopurs_runtime_Value_134939216(dictMonadRec_0_box, dictMonadGen_1_box)
 })
 	})
-	return cache_genString__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface___134939216
+	return cache_genString__gopurs_runtime_Value_134939216
 }
 
 var cache_genUnicodeString gopurs_runtime.Value
@@ -83,7 +83,7 @@ var once_genUnicodeString sync.Once
 func Get_genUnicodeString() gopurs_runtime.Value {
 	once_genUnicodeString.Do(func() {
 		cache_genUnicodeString = gopurs_runtime.Func2(func(dictMonadRec_0_box gopurs_runtime.Value, dictMonadGen_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_genUnicodeString(dictMonadRec_0_box, dictMonadGen_1_box))
+return Call_genUnicodeString(dictMonadRec_0_box, dictMonadGen_1_box)
 })
 	})
 	return cache_genUnicodeString
@@ -94,7 +94,7 @@ var once_genDigitString sync.Once
 func Get_genDigitString() gopurs_runtime.Value {
 	once_genDigitString.Do(func() {
 		cache_genDigitString = gopurs_runtime.Func2(func(dictMonadRec_0_box gopurs_runtime.Value, dictMonadGen_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_genDigitString(dictMonadRec_0_box, dictMonadGen_1_box))
+return Call_genDigitString(dictMonadRec_0_box, dictMonadGen_1_box)
 })
 	})
 	return cache_genDigitString
@@ -105,7 +105,7 @@ var once_genAsciiString_prime sync.Once
 func Get_genAsciiString_prime() gopurs_runtime.Value {
 	once_genAsciiString_prime.Do(func() {
 		cache_genAsciiString_prime = gopurs_runtime.Func2(func(dictMonadRec_0_box gopurs_runtime.Value, dictMonadGen_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_genAsciiString_prime(dictMonadRec_0_box, dictMonadGen_1_box))
+return Call_genAsciiString_prime(dictMonadRec_0_box, dictMonadGen_1_box)
 })
 	})
 	return cache_genAsciiString_prime
@@ -116,7 +116,7 @@ var once_genAsciiString sync.Once
 func Get_genAsciiString() gopurs_runtime.Value {
 	once_genAsciiString.Do(func() {
 		cache_genAsciiString = gopurs_runtime.Func2(func(dictMonadRec_0_box gopurs_runtime.Value, dictMonadGen_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_genAsciiString(dictMonadRec_0_box, dictMonadGen_1_box))
+return Call_genAsciiString(dictMonadRec_0_box, dictMonadGen_1_box)
 })
 	})
 	return cache_genAsciiString
@@ -127,7 +127,7 @@ var once_genAlphaUppercaseString sync.Once
 func Get_genAlphaUppercaseString() gopurs_runtime.Value {
 	once_genAlphaUppercaseString.Do(func() {
 		cache_genAlphaUppercaseString = gopurs_runtime.Func2(func(dictMonadRec_0_box gopurs_runtime.Value, dictMonadGen_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_genAlphaUppercaseString(dictMonadRec_0_box, dictMonadGen_1_box))
+return Call_genAlphaUppercaseString(dictMonadRec_0_box, dictMonadGen_1_box)
 })
 	})
 	return cache_genAlphaUppercaseString
@@ -138,7 +138,7 @@ var once_genAlphaString sync.Once
 func Get_genAlphaString() gopurs_runtime.Value {
 	once_genAlphaString.Do(func() {
 		cache_genAlphaString = gopurs_runtime.Func2(func(dictMonadRec_0_box gopurs_runtime.Value, dictMonadGen_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_genAlphaString(dictMonadRec_0_box, dictMonadGen_1_box))
+return Call_genAlphaString(dictMonadRec_0_box, dictMonadGen_1_box)
 })
 	})
 	return cache_genAlphaString
@@ -149,7 +149,7 @@ var once_genAlphaLowercaseString sync.Once
 func Get_genAlphaLowercaseString() gopurs_runtime.Value {
 	once_genAlphaLowercaseString.Do(func() {
 		cache_genAlphaLowercaseString = gopurs_runtime.Func2(func(dictMonadRec_0_box gopurs_runtime.Value, dictMonadGen_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_genAlphaLowercaseString(dictMonadRec_0_box, dictMonadGen_1_box))
+return Call_genAlphaLowercaseString(dictMonadRec_0_box, dictMonadGen_1_box)
 })
 	})
 	return cache_genAlphaLowercaseString
@@ -175,7 +175,7 @@ return newSize_6
 })
 }
 
-func Call_genString__func_gopurs_runtime_Value__gopurs_runtime_Value__interface____interface___134939216(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_genString__gopurs_runtime_Value_134939216(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
 _ = dictMonadRec_0
 var dictMonadGen_1 gopurs_runtime.Value = dictMonadGen_1_loop
@@ -195,58 +195,60 @@ return newSize_6
 })
 }
 
-func Call_genUnicodeString(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) interface{} {
+func Call_genUnicodeString(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
 _ = dictMonadRec_0
 var dictMonadGen_1 gopurs_runtime.Value = dictMonadGen_1_loop
 _ = dictMonadGen_1
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(Call_genString(dictMonadRec_0, dictMonadGen_1), gopurs_runtime.Apply(pkg_Data_Char_Gen.Get_genUnicodeChar(), dictMonadGen_1)))
+return gopurs_runtime.Apply(Call_genString(dictMonadRec_0, dictMonadGen_1), gopurs_runtime.Apply(pkg_Data_Char_Gen.Get_genUnicodeChar(), dictMonadGen_1))
 }
 
-func Call_genDigitString(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) interface{} {
+func Call_genDigitString(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
 _ = dictMonadRec_0
 var dictMonadGen_1 gopurs_runtime.Value = dictMonadGen_1_loop
 _ = dictMonadGen_1
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(Call_genString(dictMonadRec_0, dictMonadGen_1), gopurs_runtime.Apply(pkg_Data_Char_Gen.Get_genDigitChar(), dictMonadGen_1)))
+return gopurs_runtime.Apply(Call_genString(dictMonadRec_0, dictMonadGen_1), gopurs_runtime.Apply(pkg_Data_Char_Gen.Get_genDigitChar(), dictMonadGen_1))
 }
 
-func Call_genAsciiString_prime(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) interface{} {
+func Call_genAsciiString_prime(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
 _ = dictMonadRec_0
 var dictMonadGen_1 gopurs_runtime.Value = dictMonadGen_1_loop
 _ = dictMonadGen_1
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(Call_genString(dictMonadRec_0, dictMonadGen_1), gopurs_runtime.Apply(pkg_Data_Char_Gen.Get_genAsciiChar_prime(), dictMonadGen_1)))
+return gopurs_runtime.Apply(Call_genString(dictMonadRec_0, dictMonadGen_1), gopurs_runtime.Apply(pkg_Data_Char_Gen.Get_genAsciiChar_prime(), dictMonadGen_1))
 }
 
-func Call_genAsciiString(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) interface{} {
+func Call_genAsciiString(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
 _ = dictMonadRec_0
 var dictMonadGen_1 gopurs_runtime.Value = dictMonadGen_1_loop
 _ = dictMonadGen_1
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(Call_genString(dictMonadRec_0, dictMonadGen_1), gopurs_runtime.Apply(pkg_Data_Char_Gen.Get_genAsciiChar(), dictMonadGen_1)))
+return gopurs_runtime.Apply(Call_genString(dictMonadRec_0, dictMonadGen_1), gopurs_runtime.Apply(pkg_Data_Char_Gen.Get_genAsciiChar(), dictMonadGen_1))
 }
 
-func Call_genAlphaUppercaseString(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) interface{} {
+func Call_genAlphaUppercaseString(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
 _ = dictMonadRec_0
 var dictMonadGen_1 gopurs_runtime.Value = dictMonadGen_1_loop
 _ = dictMonadGen_1
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(Call_genString(dictMonadRec_0, dictMonadGen_1), gopurs_runtime.Apply(pkg_Data_Char_Gen.Get_genAlphaUppercase(), dictMonadGen_1)))
+return gopurs_runtime.Apply(Call_genString(dictMonadRec_0, dictMonadGen_1), gopurs_runtime.Apply(pkg_Data_Char_Gen.Get_genAlphaUppercase(), dictMonadGen_1))
 }
 
-func Call_genAlphaString(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) interface{} {
+func Call_genAlphaString(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
 _ = dictMonadRec_0
 var dictMonadGen_1 gopurs_runtime.Value = dictMonadGen_1_loop
 _ = dictMonadGen_1
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(Call_genString(dictMonadRec_0, dictMonadGen_1), gopurs_runtime.Apply(pkg_Data_Char_Gen.Get_genAlpha(), dictMonadGen_1)))
+return gopurs_runtime.Apply(Call_genString(dictMonadRec_0, dictMonadGen_1), gopurs_runtime.Apply(pkg_Data_Char_Gen.Get_genAlpha(), dictMonadGen_1))
 }
 
-func Call_genAlphaLowercaseString(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) interface{} {
+func Call_genAlphaLowercaseString(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
 _ = dictMonadRec_0
 var dictMonadGen_1 gopurs_runtime.Value = dictMonadGen_1_loop
 _ = dictMonadGen_1
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(Call_genString(dictMonadRec_0, dictMonadGen_1), gopurs_runtime.Apply(pkg_Data_Char_Gen.Get_genAlphaLowercase(), dictMonadGen_1)))
+return gopurs_runtime.Apply(Call_genString(dictMonadRec_0, dictMonadGen_1), gopurs_runtime.Apply(pkg_Data_Char_Gen.Get_genAlphaLowercase(), dictMonadGen_1))
 }
+
+

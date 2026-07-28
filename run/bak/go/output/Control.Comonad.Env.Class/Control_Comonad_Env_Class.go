@@ -21,24 +21,24 @@ return Call_local(dict_0_box)
 	return cache_local
 }
 
-var cache_local__func_gopurs_runtime_Value__func_interface____interface____interface____interface___4111792346 gopurs_runtime.Value
-var once_local__func_gopurs_runtime_Value__func_interface____interface____interface____interface___4111792346 sync.Once
-func Get_local__func_gopurs_runtime_Value__func_interface____interface____interface____interface___4111792346() gopurs_runtime.Value {
-	once_local__func_gopurs_runtime_Value__func_interface____interface____interface____interface___4111792346.Do(func() {
-		cache_local__func_gopurs_runtime_Value__func_interface____interface____interface____interface___4111792346 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_local__func_gopurs_runtime_Value__func_interface____interface____interface____interface___4111792346(dict_0_box)
+var cache_local__gopurs_runtime_Value_4111792346 gopurs_runtime.Value
+var once_local__gopurs_runtime_Value_4111792346 sync.Once
+func Get_local__gopurs_runtime_Value_4111792346() gopurs_runtime.Value {
+	once_local__gopurs_runtime_Value_4111792346.Do(func() {
+		cache_local__gopurs_runtime_Value_4111792346 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_local__gopurs_runtime_Value_4111792346(dict_0_box)
 })
 	})
-	return cache_local__func_gopurs_runtime_Value__func_interface____interface____interface____interface___4111792346
+	return cache_local__gopurs_runtime_Value_4111792346
 }
 
 var cache_comonadAskTuple gopurs_runtime.Value
 var once_comonadAskTuple sync.Once
 func Get_comonadAskTuple() gopurs_runtime.Value {
 	once_comonadAskTuple.Do(func() {
-		cache_comonadAskTuple = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Comonad0", "ask", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_comonadAskTuple = gopurs_runtime.RecordDict2("Comonad0", "ask", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Tuple.Get_comonadTuple()
-}), pkg_Data_Tuple.Get_fst())))
+}), pkg_Data_Tuple.Get_fst())
 	})
 	return cache_comonadAskTuple
 }
@@ -47,11 +47,11 @@ var cache_comonadEnvTuple gopurs_runtime.Value
 var once_comonadEnvTuple sync.Once
 func Get_comonadEnvTuple() gopurs_runtime.Value {
 	once_comonadEnvTuple.Do(func() {
-		cache_comonadEnvTuple = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("ComonadAsk0", "local", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_comonadEnvTuple = gopurs_runtime.RecordDict2("ComonadAsk0", "local", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_comonadAskTuple()
 }), gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.UnboxAny(gopurs_runtime.Apply(f_0, gopurs_runtime.Any((*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V0))), gopurs_runtime.UnboxAny(gopurs_runtime.Any((*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V1))})})
-}))))
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Apply(f_0, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V0), (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V1})}
+}))
 	})
 	return cache_comonadEnvTuple
 }
@@ -61,7 +61,7 @@ var once_comonadAskEnvT sync.Once
 func Get_comonadAskEnvT() gopurs_runtime.Value {
 	once_comonadAskEnvT.Do(func() {
 		cache_comonadAskEnvT = gopurs_runtime.Func(func(dictComonad_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_comonadAskEnvT(dictComonad_0_box))
+return Call_comonadAskEnvT(dictComonad_0_box)
 })
 	})
 	return cache_comonadAskEnvT
@@ -72,7 +72,7 @@ var once_comonadEnvEnvT sync.Once
 func Get_comonadEnvEnvT() gopurs_runtime.Value {
 	once_comonadEnvEnvT.Do(func() {
 		cache_comonadEnvEnvT = gopurs_runtime.Func(func(dictComonad_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_comonadEnvEnvT(dictComonad_0_box))
+return Call_comonadEnvEnvT(dictComonad_0_box)
 })
 	})
 	return cache_comonadEnvEnvT
@@ -89,15 +89,15 @@ return Call_ask(dict_0_box)
 	return cache_ask
 }
 
-var cache_ask__func_gopurs_runtime_Value__interface____interface___461535694 gopurs_runtime.Value
-var once_ask__func_gopurs_runtime_Value__interface____interface___461535694 sync.Once
-func Get_ask__func_gopurs_runtime_Value__interface____interface___461535694() gopurs_runtime.Value {
-	once_ask__func_gopurs_runtime_Value__interface____interface___461535694.Do(func() {
-		cache_ask__func_gopurs_runtime_Value__interface____interface___461535694 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_ask__func_gopurs_runtime_Value__interface____interface___461535694(dict_0_box)
+var cache_ask__gopurs_runtime_Value_461535694 gopurs_runtime.Value
+var once_ask__gopurs_runtime_Value_461535694 sync.Once
+func Get_ask__gopurs_runtime_Value_461535694() gopurs_runtime.Value {
+	once_ask__gopurs_runtime_Value_461535694.Do(func() {
+		cache_ask__gopurs_runtime_Value_461535694 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_ask__gopurs_runtime_Value_461535694(dict_0_box)
 })
 	})
-	return cache_ask__func_gopurs_runtime_Value__interface____interface___461535694
+	return cache_ask__gopurs_runtime_Value_461535694
 }
 
 var cache_asks gopurs_runtime.Value
@@ -105,9 +105,7 @@ var once_asks sync.Once
 func Get_asks() gopurs_runtime.Value {
 	once_asks.Do(func() {
 		cache_asks = gopurs_runtime.Func3(func(dictComonadAsk_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_asks(dictComonadAsk_0_box, func(inner_arg0 interface{}) interface{} {
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(f_1_box, gopurs_runtime.Any(inner_arg0)))
-}, gopurs_runtime.UnboxAny(x_2_box)))
+return Call_asks(dictComonadAsk_0_box, f_1_box, x_2_box)
 })
 	})
 	return cache_asks
@@ -118,7 +116,7 @@ var once_comonadAskStoreT sync.Once
 func Get_comonadAskStoreT() gopurs_runtime.Value {
 	once_comonadAskStoreT.Do(func() {
 		cache_comonadAskStoreT = gopurs_runtime.Func(func(dictComonadAsk_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_comonadAskStoreT(dictComonadAsk_0_box))
+return Call_comonadAskStoreT(dictComonadAsk_0_box)
 })
 	})
 	return cache_comonadAskStoreT
@@ -129,7 +127,7 @@ var once_comonadEnvStoreT sync.Once
 func Get_comonadEnvStoreT() gopurs_runtime.Value {
 	once_comonadEnvStoreT.Do(func() {
 		cache_comonadEnvStoreT = gopurs_runtime.Func(func(dictComonadEnv_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_comonadEnvStoreT(dictComonadEnv_0_box))
+return Call_comonadEnvStoreT(dictComonadEnv_0_box)
 })
 	})
 	return cache_comonadEnvStoreT
@@ -163,38 +161,38 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "local")
 }
 
-func Call_local__func_gopurs_runtime_Value__func_interface____interface____interface____interface___4111792346(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_local__gopurs_runtime_Value_4111792346(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "local")
 }
 
-func Call_comonadAskEnvT(dictComonad_0_loop gopurs_runtime.Value) interface{} {
+func Call_comonadAskEnvT(dictComonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictComonad_0 gopurs_runtime.Value = dictComonad_0_loop
 _ = dictComonad_0
 comonadEnvT_1_0 := gopurs_runtime.Apply(pkg_Control_Comonad_Env_Trans.Get_comonadEnvT(), dictComonad_0)
 _ = comonadEnvT_1_0
-return gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Comonad0", "ask", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict2("Comonad0", "ask", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return comonadEnvT_1_0
 }), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any((*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0)
-})))
+return (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0
+}))
 }
 
-func Call_comonadEnvEnvT(dictComonad_0_loop gopurs_runtime.Value) interface{} {
+func Call_comonadEnvEnvT(dictComonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictComonad_0 gopurs_runtime.Value = dictComonad_0_loop
 _ = dictComonad_0
 comonadEnvT_1_0 := gopurs_runtime.Apply(pkg_Control_Comonad_Env_Trans.Get_comonadEnvT(), dictComonad_0)
 _ = comonadEnvT_1_0
-return gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("ComonadAsk0", "local", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict2("ComonadAsk0", "local", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict2("Comonad0", "ask", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return comonadEnvT_1_0
 }), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any((*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V0)
+return (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V0
 }))
 }), gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.UnboxAny(gopurs_runtime.Apply(f_2, gopurs_runtime.Any((*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V0))), gopurs_runtime.UnboxAny(gopurs_runtime.Any((*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V1))})})
-})))
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Apply(f_2, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V0), (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V1})}
+}))
 }
 
 func Call_ask(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -203,23 +201,23 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "ask")
 }
 
-func Call_ask__func_gopurs_runtime_Value__interface____interface___461535694(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_ask__gopurs_runtime_Value_461535694(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "ask")
 }
 
-func Call_asks(dictComonadAsk_0_loop gopurs_runtime.Value, f_1_loop func(interface{}) interface{}, x_2_loop interface{}) interface{} {
+func Call_asks(dictComonadAsk_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictComonadAsk_0 gopurs_runtime.Value = dictComonadAsk_0_loop
 _ = dictComonadAsk_0
-var f_1 func(interface{}) interface{} = f_1_loop
+var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-var x_2 interface{} = x_2_loop
+var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.UnboxAny(gopurs_runtime.Any(f_1(gopurs_runtime.UnboxAny(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadAsk_0, "ask"), gopurs_runtime.Any(x_2))))))
+return gopurs_runtime.Apply(f_1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadAsk_0, "ask"), x_2))
 }
 
-func Call_comonadAskStoreT(dictComonadAsk_0_loop gopurs_runtime.Value) interface{} {
+func Call_comonadAskStoreT(dictComonadAsk_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictComonadAsk_0 gopurs_runtime.Value = dictComonadAsk_0_loop
 _ = dictComonadAsk_0
 Comonad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadAsk_0, "Comonad0"), gopurs_runtime.Value{})
@@ -228,23 +226,23 @@ comonadStoreT_2_1 := gopurs_runtime.Apply(pkg_Control_Comonad_Store_Trans.Get_co
 _ = comonadStoreT_2_1
 __local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Control_Comonad_Store_Trans.Get_comonadTransStoreT(), "lower"), Comonad0_1_0)
 _ = __local_var_3_2
-return gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Comonad0", "ask", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict2("Comonad0", "ask", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return comonadStoreT_2_1
 }), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadAsk_0, "ask"), gopurs_runtime.Apply(__local_var_3_2, x_4))
-})))
+}))
 }
 
-func Call_comonadEnvStoreT(dictComonadEnv_0_loop gopurs_runtime.Value) interface{} {
+func Call_comonadEnvStoreT(dictComonadEnv_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictComonadEnv_0 gopurs_runtime.Value = dictComonadEnv_0_loop
 _ = dictComonadEnv_0
-comonadAskStoreT1_1_0 := gopurs_runtime.Any(Call_comonadAskStoreT(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadEnv_0, "ComonadAsk0"), gopurs_runtime.Value{})))
+comonadAskStoreT1_1_0 := Call_comonadAskStoreT(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadEnv_0, "ComonadAsk0"), gopurs_runtime.Value{}))
 _ = comonadAskStoreT1_1_0
-return gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("ComonadAsk0", "local", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict2("ComonadAsk0", "local", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return comonadAskStoreT1_1_0
 }), gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.UnboxAny(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictComonadEnv_0, "local"), f_2, gopurs_runtime.Any((*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V0))), gopurs_runtime.UnboxAny(gopurs_runtime.Any((*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V1))})})
-})))
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictComonadEnv_0, "local"), f_2, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V0), (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V1})}
+}))
 }
 
 func Call_comonadAskTracedT(dictComonadAsk_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -284,3 +282,5 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictComonadEnv_0, "local")
 }))
 })
 }
+
+

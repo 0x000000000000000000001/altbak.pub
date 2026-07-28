@@ -22,15 +22,15 @@ return Call_track(dict_0_box)
 	return cache_track
 }
 
-var cache_track__func_gopurs_runtime_Value__interface____interface____interface___2440513240 gopurs_runtime.Value
-var once_track__func_gopurs_runtime_Value__interface____interface____interface___2440513240 sync.Once
-func Get_track__func_gopurs_runtime_Value__interface____interface____interface___2440513240() gopurs_runtime.Value {
-	once_track__func_gopurs_runtime_Value__interface____interface____interface___2440513240.Do(func() {
-		cache_track__func_gopurs_runtime_Value__interface____interface____interface___2440513240 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_track__func_gopurs_runtime_Value__interface____interface____interface___2440513240(dict_0_box)
+var cache_track__gopurs_runtime_Value_2440513240 gopurs_runtime.Value
+var once_track__gopurs_runtime_Value_2440513240 sync.Once
+func Get_track__gopurs_runtime_Value_2440513240() gopurs_runtime.Value {
+	once_track__gopurs_runtime_Value_2440513240.Do(func() {
+		cache_track__gopurs_runtime_Value_2440513240 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_track__gopurs_runtime_Value_2440513240(dict_0_box)
 })
 	})
-	return cache_track__func_gopurs_runtime_Value__interface____interface____interface___2440513240
+	return cache_track__gopurs_runtime_Value_2440513240
 }
 
 var cache_tracks gopurs_runtime.Value
@@ -38,9 +38,7 @@ var once_tracks sync.Once
 func Get_tracks() gopurs_runtime.Value {
 	once_tracks.Do(func() {
 		cache_tracks = gopurs_runtime.Func3(func(dictComonadTraced_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, w_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_tracks(dictComonadTraced_0_box, func(inner_arg0 interface{}) interface{} {
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(f_1_box, gopurs_runtime.Any(inner_arg0)))
-}, gopurs_runtime.UnboxAny(w_2_box)))
+return Call_tracks(dictComonadTraced_0_box, f_1_box, w_2_box)
 })
 	})
 	return cache_tracks
@@ -84,9 +82,7 @@ var once_listens sync.Once
 func Get_listens() gopurs_runtime.Value {
 	once_listens.Do(func() {
 		cache_listens = gopurs_runtime.Func3(func(dictFunctor_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_listens(dictFunctor_0_box, func(inner_arg0 interface{}) interface{} {
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(f_1_box, gopurs_runtime.Any(inner_arg0)))
-}, gopurs_runtime.UnboxAny(v_2_box)))
+return Call_listens(dictFunctor_0_box, f_1_box, v_2_box)
 })
 	})
 	return cache_listens
@@ -97,7 +93,7 @@ var once_listen sync.Once
 func Get_listen() gopurs_runtime.Value {
 	once_listen.Do(func() {
 		cache_listen = gopurs_runtime.Func2(func(dictFunctor_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_listen(dictFunctor_0_box, gopurs_runtime.UnboxAny(v_1_box)))
+return Call_listen(dictFunctor_0_box, v_1_box)
 })
 	})
 	return cache_listen
@@ -119,7 +115,7 @@ var once_comonadTracedStoreT sync.Once
 func Get_comonadTracedStoreT() gopurs_runtime.Value {
 	once_comonadTracedStoreT.Do(func() {
 		cache_comonadTracedStoreT = gopurs_runtime.Func(func(dictComonadTraced_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_comonadTracedStoreT(dictComonadTraced_0_box))
+return Call_comonadTracedStoreT(dictComonadTraced_0_box)
 })
 	})
 	return cache_comonadTracedStoreT
@@ -130,7 +126,7 @@ var once_comonadTracedIdentityT sync.Once
 func Get_comonadTracedIdentityT() gopurs_runtime.Value {
 	once_comonadTracedIdentityT.Do(func() {
 		cache_comonadTracedIdentityT = gopurs_runtime.Func(func(dictComonadTraced_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_comonadTracedIdentityT(dictComonadTraced_0_box))
+return Call_comonadTracedIdentityT(dictComonadTraced_0_box)
 })
 	})
 	return cache_comonadTracedIdentityT
@@ -141,7 +137,7 @@ var once_comonadTracedEnvT sync.Once
 func Get_comonadTracedEnvT() gopurs_runtime.Value {
 	once_comonadTracedEnvT.Do(func() {
 		cache_comonadTracedEnvT = gopurs_runtime.Func(func(dictComonadTraced_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_comonadTracedEnvT(dictComonadTraced_0_box))
+return Call_comonadTracedEnvT(dictComonadTraced_0_box)
 })
 	})
 	return cache_comonadTracedEnvT
@@ -152,9 +148,7 @@ var once_censor sync.Once
 func Get_censor() gopurs_runtime.Value {
 	once_censor.Do(func() {
 		cache_censor = gopurs_runtime.Func3(func(dictFunctor_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_censor(dictFunctor_0_box, func(inner_arg0 interface{}) interface{} {
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(f_1_box, gopurs_runtime.Any(inner_arg0)))
-}, gopurs_runtime.UnboxAny(v_2_box)))
+return Call_censor(dictFunctor_0_box, f_1_box, v_2_box)
 })
 	})
 	return cache_censor
@@ -166,20 +160,20 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "track")
 }
 
-func Call_track__func_gopurs_runtime_Value__interface____interface____interface___2440513240(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_track__gopurs_runtime_Value_2440513240(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "track")
 }
 
-func Call_tracks(dictComonadTraced_0_loop gopurs_runtime.Value, f_1_loop func(interface{}) interface{}, w_2_loop interface{}) interface{} {
+func Call_tracks(dictComonadTraced_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, w_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictComonadTraced_0 gopurs_runtime.Value = dictComonadTraced_0_loop
 _ = dictComonadTraced_0
-var f_1 func(interface{}) interface{} = f_1_loop
+var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-var w_2 interface{} = w_2_loop
+var w_2 gopurs_runtime.Value = w_2_loop
 _ = w_2
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictComonadTraced_0, "track"), gopurs_runtime.Any(f_1(gopurs_runtime.UnboxAny(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadTraced_0, "Comonad0"), gopurs_runtime.Value{}), "extract"), gopurs_runtime.Any(w_2))))), gopurs_runtime.Any(w_2)))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictComonadTraced_0, "track"), gopurs_runtime.Apply(f_1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadTraced_0, "Comonad0"), gopurs_runtime.Value{}), "extract"), w_2)), w_2)
 }
 
 func Call_lowerTrack1(dictComonadTraced_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -224,26 +218,26 @@ return gopurs_runtime.Apply(__local_var_3_1, gopurs_runtime.Apply(lower1_1_0, x_
 })
 }
 
-func Call_listens(dictFunctor_0_loop gopurs_runtime.Value, f_1_loop func(interface{}) interface{}, v_2_loop interface{}) interface{} {
+func Call_listens(dictFunctor_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
-var f_1 func(interface{}) interface{} = f_1_loop
+var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-var v_2 interface{} = v_2_loop
+var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func2(func(g_3 gopurs_runtime.Value, t_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.UnboxAny(gopurs_runtime.Apply(g_3, t_4)), gopurs_runtime.UnboxAny(gopurs_runtime.Any(f_1(gopurs_runtime.UnboxAny(t_4))))})})
-}), gopurs_runtime.Any(v_2)))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func2(func(g_3 gopurs_runtime.Value, t_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Apply(g_3, t_4), gopurs_runtime.Apply(f_1, t_4)})}
+}), v_2)
 }
 
-func Call_listen(dictFunctor_0_loop gopurs_runtime.Value, v_1_loop interface{}) interface{} {
+func Call_listen(dictFunctor_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
-var v_1 interface{} = v_1_loop
+var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, t_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.UnboxAny(gopurs_runtime.Apply(f_2, t_3)), gopurs_runtime.UnboxAny(t_3)})})
-}), gopurs_runtime.Any(v_1)))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, t_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Apply(f_2, t_3), t_3})}
+}), v_1)
 }
 
 func Call_comonadTracedTracedT(dictComonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -262,17 +256,17 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictComonad_0, "extract"),
 })
 }
 
-func Call_comonadTracedStoreT(dictComonadTraced_0_loop gopurs_runtime.Value) interface{} {
+func Call_comonadTracedStoreT(dictComonadTraced_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictComonadTraced_0 gopurs_runtime.Value = dictComonadTraced_0_loop
 _ = dictComonadTraced_0
 comonadStoreT_1_0 := gopurs_runtime.Apply(pkg_Control_Comonad_Store_Trans.Get_comonadStoreT(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadTraced_0, "Comonad0"), gopurs_runtime.Value{}))
 _ = comonadStoreT_1_0
-return gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Comonad0", "track", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict2("Comonad0", "track", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return comonadStoreT_1_0
-}), Call_lowerTrack1(dictComonadTraced_0)))
+}), Call_lowerTrack1(dictComonadTraced_0))
 }
 
-func Call_comonadTracedIdentityT(dictComonadTraced_0_loop gopurs_runtime.Value) interface{} {
+func Call_comonadTracedIdentityT(dictComonadTraced_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictComonadTraced_0 gopurs_runtime.Value = dictComonadTraced_0_loop
 _ = dictComonadTraced_0
 __local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadTraced_0, "Comonad0"), gopurs_runtime.Value{})
@@ -295,29 +289,31 @@ return extendIdentityI1_4_4
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "extract"), x_5)
 }))
 _ = comonadIdentityT_3_2
-return gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Comonad0", "track", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict2("Comonad0", "track", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return comonadIdentityT_3_2
-}), Call_lowerTrack2(dictComonadTraced_0)))
+}), Call_lowerTrack2(dictComonadTraced_0))
 }
 
-func Call_comonadTracedEnvT(dictComonadTraced_0_loop gopurs_runtime.Value) interface{} {
+func Call_comonadTracedEnvT(dictComonadTraced_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictComonadTraced_0 gopurs_runtime.Value = dictComonadTraced_0_loop
 _ = dictComonadTraced_0
 comonadEnvT_1_0 := gopurs_runtime.Apply(pkg_Control_Comonad_Env_Trans.Get_comonadEnvT(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadTraced_0, "Comonad0"), gopurs_runtime.Value{}))
 _ = comonadEnvT_1_0
-return gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Comonad0", "track", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict2("Comonad0", "track", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return comonadEnvT_1_0
-}), Call_lowerTrack3(dictComonadTraced_0)))
+}), Call_lowerTrack3(dictComonadTraced_0))
 }
 
-func Call_censor(dictFunctor_0_loop gopurs_runtime.Value, f_1_loop func(interface{}) interface{}, v_2_loop interface{}) interface{} {
+func Call_censor(dictFunctor_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
-var f_1 func(interface{}) interface{} = f_1_loop
+var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-var v_2 interface{} = v_2_loop
+var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func2(func(v1_3 gopurs_runtime.Value, x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(v1_3, gopurs_runtime.Any(f_1(gopurs_runtime.UnboxAny(x_4))))
-}), gopurs_runtime.Any(v_2)))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func2(func(v1_3 gopurs_runtime.Value, x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v1_3, gopurs_runtime.Apply(f_1, x_4))
+}), v_2)
 }
+
+

@@ -22,7 +22,7 @@ var once_showCompose sync.Once
 func Get_showCompose() gopurs_runtime.Value {
 	once_showCompose.Do(func() {
 		cache_showCompose = gopurs_runtime.Func(func(dictShow_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_showCompose(dictShow_0_box))
+return Call_showCompose(dictShow_0_box)
 })
 	})
 	return cache_showCompose
@@ -32,9 +32,9 @@ var cache_newtypeCompose gopurs_runtime.Value
 var once_newtypeCompose sync.Once
 func Get_newtypeCompose() gopurs_runtime.Value {
 	once_newtypeCompose.Do(func() {
-		cache_newtypeCompose = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_newtypeCompose = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
-}))))
+}))
 	})
 	return cache_newtypeCompose
 }
@@ -44,7 +44,7 @@ var once_functorCompose sync.Once
 func Get_functorCompose() gopurs_runtime.Value {
 	once_functorCompose.Do(func() {
 		cache_functorCompose = gopurs_runtime.Func2(func(dictFunctor_0_box gopurs_runtime.Value, dictFunctor1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_functorCompose(dictFunctor_0_box, dictFunctor1_1_box))
+return Call_functorCompose(dictFunctor_0_box, dictFunctor1_1_box)
 })
 	})
 	return cache_functorCompose
@@ -55,7 +55,7 @@ var once_eqCompose sync.Once
 func Get_eqCompose() gopurs_runtime.Value {
 	once_eqCompose.Do(func() {
 		cache_eqCompose = gopurs_runtime.Func3(func(dictEq1_0_box gopurs_runtime.Value, dictEq11_1_box gopurs_runtime.Value, dictEq_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_eqCompose(dictEq1_0_box, dictEq11_1_box, dictEq_2_box))
+return Call_eqCompose(dictEq1_0_box, dictEq11_1_box, dictEq_2_box)
 })
 	})
 	return cache_eqCompose
@@ -77,7 +77,7 @@ var once_eq1Compose sync.Once
 func Get_eq1Compose() gopurs_runtime.Value {
 	once_eq1Compose.Do(func() {
 		cache_eq1Compose = gopurs_runtime.Func2(func(dictEq1_0_box gopurs_runtime.Value, dictEq11_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_eq1Compose(dictEq1_0_box, dictEq11_1_box))
+return Call_eq1Compose(dictEq1_0_box, dictEq11_1_box)
 })
 	})
 	return cache_eq1Compose
@@ -99,11 +99,7 @@ var once_bihoistCompose sync.Once
 func Get_bihoistCompose() gopurs_runtime.Value {
 	once_bihoistCompose.Do(func() {
 		cache_bihoistCompose = gopurs_runtime.Func4(func(dictFunctor_0_box gopurs_runtime.Value, natF_1_box gopurs_runtime.Value, natG_2_box gopurs_runtime.Value, v_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_bihoistCompose(dictFunctor_0_box, func(inner_arg0 interface{}) interface{} {
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(natF_1_box, gopurs_runtime.Any(inner_arg0)))
-}, func(inner_arg0 interface{}) interface{} {
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(natG_2_box, gopurs_runtime.Any(inner_arg0)))
-}, gopurs_runtime.UnboxAny(v_3_box)))
+return Call_bihoistCompose(dictFunctor_0_box, natF_1_box, natG_2_box, v_3_box)
 })
 	})
 	return cache_bihoistCompose
@@ -170,25 +166,25 @@ _ = x_0
 return x_0
 }
 
-func Call_showCompose(dictShow_0_loop gopurs_runtime.Value) interface{} {
+func Call_showCompose(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
 _ = dictShow_0
-return gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str("(Compose "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1), gopurs_runtime.Str(")")))
-})))
+}))
 }
 
-func Call_functorCompose(dictFunctor_0_loop gopurs_runtime.Value, dictFunctor1_1_loop gopurs_runtime.Value) interface{} {
+func Call_functorCompose(dictFunctor_0_loop gopurs_runtime.Value, dictFunctor1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
 var dictFunctor1_1 gopurs_runtime.Value = dictFunctor1_1_loop
 _ = dictFunctor1_1
-return gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor1_1, "map"), f_2), v_3)
-})))
+}))
 }
 
-func Call_eqCompose(dictEq1_0_loop gopurs_runtime.Value, dictEq11_1_loop gopurs_runtime.Value, dictEq_2_loop gopurs_runtime.Value) interface{} {
+func Call_eqCompose(dictEq1_0_loop gopurs_runtime.Value, dictEq11_1_loop gopurs_runtime.Value, dictEq_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictEq1_0 gopurs_runtime.Value = dictEq1_0_loop
 _ = dictEq1_0
 var dictEq11_1 gopurs_runtime.Value = dictEq11_1_loop
@@ -201,9 +197,9 @@ eq11_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEq1_0, "eq1"), gop
 return gopurs_runtime.Apply2(eq11_3_1, x_4, y_5)
 })))
 _ = eq11_3_0
-return gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(v_4 gopurs_runtime.Value, v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(v_4 gopurs_runtime.Value, v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(eq11_3_0, v_4, v1_5)
-})))
+}))
 }
 
 func Call_ordCompose(dictOrd1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -250,18 +246,18 @@ return gopurs_runtime.Apply2(compare11_6_3, v_9, v1_10)
 })
 }
 
-func Call_eq1Compose(dictEq1_0_loop gopurs_runtime.Value, dictEq11_1_loop gopurs_runtime.Value) interface{} {
+func Call_eq1Compose(dictEq1_0_loop gopurs_runtime.Value, dictEq11_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictEq1_0 gopurs_runtime.Value = dictEq1_0_loop
 _ = dictEq1_0
 var dictEq11_1 gopurs_runtime.Value = dictEq11_1_loop
 _ = dictEq11_1
-return gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq_2 gopurs_runtime.Value) gopurs_runtime.Value {
 eq11_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEq11_1, "eq1"), dictEq_2)
 _ = eq11_3_0
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEq1_0, "eq1"), gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_4 gopurs_runtime.Value, y_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(eq11_3_0, x_4, y_5)
 })))
-})))
+}))
 }
 
 func Call_ord1Compose(dictOrd1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -292,18 +288,16 @@ return gopurs_runtime.RecordGet(gopurs_runtime.Apply(ordCompose2_4_2, dictOrd_7)
 })
 }
 
-func Call_bihoistCompose(dictFunctor_0_loop gopurs_runtime.Value, natF_1_loop func(interface{}) interface{}, natG_2_loop func(interface{}) interface{}, v_3_loop interface{}) interface{} {
+func Call_bihoistCompose(dictFunctor_0_loop gopurs_runtime.Value, natF_1_loop gopurs_runtime.Value, natG_2_loop gopurs_runtime.Value, v_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
-var natF_1 func(interface{}) interface{} = natF_1_loop
+var natF_1 gopurs_runtime.Value = natF_1_loop
 _ = natF_1
-var natG_2 func(interface{}) interface{} = natG_2_loop
+var natG_2 gopurs_runtime.Value = natG_2_loop
 _ = natG_2
-var v_3 interface{} = v_3_loop
+var v_3 gopurs_runtime.Value = v_3_loop
 _ = v_3
-return gopurs_runtime.UnboxAny(gopurs_runtime.Any(natF_1(gopurs_runtime.UnboxAny(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(natG_2(gopurs_runtime.UnboxAny(arg0)))
-}), gopurs_runtime.Any(v_3))))))
+return gopurs_runtime.Apply(natF_1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), natG_2, v_3))
 }
 
 func Call_applyCompose(dictApply_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -445,3 +439,5 @@ return plusCompose2_7_9
 }))
 })
 }
+
+

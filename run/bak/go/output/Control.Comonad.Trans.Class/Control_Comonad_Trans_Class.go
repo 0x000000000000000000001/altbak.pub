@@ -21,9 +21,9 @@ var cache_comonadTransIdentityT gopurs_runtime.Value
 var once_comonadTransIdentityT sync.Once
 func Get_comonadTransIdentityT() gopurs_runtime.Value {
 	once_comonadTransIdentityT.Do(func() {
-		cache_comonadTransIdentityT = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict1("lower", gopurs_runtime.Func(func(dictComonad_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_comonadTransIdentityT = gopurs_runtime.RecordDict1("lower", gopurs_runtime.Func(func(dictComonad_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Monad_Identity_Trans.Get_runIdentityT()
-}))))
+}))
 	})
 	return cache_comonadTransIdentityT
 }
@@ -33,3 +33,5 @@ var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "lower")
 }
+
+

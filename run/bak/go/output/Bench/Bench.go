@@ -24,66 +24,20 @@ var once_runBench sync.Once
 func Get_runBench() gopurs_runtime.Value {
 	once_runBench.Do(func() {
 		cache_runBench = gopurs_runtime.Func2(func(describe_0_box gopurs_runtime.Value, act_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func0(func() gopurs_runtime.Value {
-return gopurs_runtime.Float(Call_runBench(func() gopurs_runtime.Value {
-return gopurs_runtime.Apply(describe_0_box, nil)
-}, func() gopurs_runtime.Value {
-return gopurs_runtime.Apply(act_1_box, nil)
-})())
-})
+return Call_runBench(describe_0_box, act_1_box)
 })
 	})
 	return cache_runBench
 }
 
-var cache_benchNow gopurs_runtime.Value
-var once_benchNow sync.Once
-func Get_benchNow() gopurs_runtime.Value {
-	once_benchNow.Do(func() {
-		cache_benchNow = gopurs_runtime.Func0(func() gopurs_runtime.Value {
-return gopurs_runtime.Float(BenchNow())
-})
-	})
-	return cache_benchNow
-}
-
-var cache_formatNumber gopurs_runtime.Value
-var once_formatNumber sync.Once
-func Get_formatNumber() gopurs_runtime.Value {
-	once_formatNumber.Do(func() {
-		cache_formatNumber = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(FormatNumber(arg0.FloatVal()))
-})
-	})
-	return cache_formatNumber
-}
-
-var cache_opaque gopurs_runtime.Value
-var once_opaque sync.Once
-func Get_opaque() gopurs_runtime.Value {
-	once_opaque.Do(func() {
-		cache_opaque = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func0(func() gopurs_runtime.Value {
-return gopurs_runtime.Any(Opaque(gopurs_runtime.UnboxAny(arg0))())
-})
-})
-	})
-	return cache_opaque
-}
-
-func Call_runBench(describe_0_loop func() gopurs_runtime.Value, act_1_loop func() gopurs_runtime.Value) func() float64 {
-var describe_0 func() gopurs_runtime.Value = describe_0_loop
+func Call_runBench(describe_0_loop gopurs_runtime.Value, act_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var describe_0 gopurs_runtime.Value = describe_0_loop
 _ = describe_0
-var act_1 func() gopurs_runtime.Value = act_1_loop
+var act_1 gopurs_runtime.Value = act_1_loop
 _ = act_1
-return func() float64 {
-return gopurs_runtime.Apply(gopurs_runtime.Apply2(Get_discard(), gopurs_runtime.Func0(func() gopurs_runtime.Value {
-return describe_0()
-}), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Get_discard(), describe_0, gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind"), Get_benchNow(), gopurs_runtime.Func(func(t1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(Get_discard(), gopurs_runtime.Func0(func() gopurs_runtime.Value {
-return act_1()
-}), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Get_discard(), act_1, gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind"), Get_benchNow(), gopurs_runtime.Func(func(t2_5 gopurs_runtime.Value) gopurs_runtime.Value {
 dt_6_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ring.Get_ringNumber(), "sub"), t2_5, t1_3)
 _ = dt_6_0
@@ -93,6 +47,17 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Effect.Get_applicativeE
 }))
 }))
 }))
-})), nil).FloatVal()
+}))
 }
+
+func Get_benchNow() gopurs_runtime.Value {
+	return _Gopurs_BenchNow
+}
+
+func Get_formatNumber() gopurs_runtime.Value {
+	return _Gopurs_FormatNumber
+}
+
+func Get_opaque() gopurs_runtime.Value {
+	return _Gopurs_Opaque
 }

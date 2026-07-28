@@ -34,11 +34,11 @@ var cache_monadProxy gopurs_runtime.Value
 var once_monadProxy sync.Once
 func Get_monadProxy() gopurs_runtime.Value {
 	once_monadProxy.Do(func() {
-		cache_monadProxy = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadProxy = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Applicative.Get_applicativeProxy()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Bind.Get_bindProxy()
-}))))
+}))
 	})
 	return cache_monadProxy
 }
@@ -47,11 +47,11 @@ var cache_monadFn gopurs_runtime.Value
 var once_monadFn sync.Once
 func Get_monadFn() gopurs_runtime.Value {
 	once_monadFn.Do(func() {
-		cache_monadFn = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadFn = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Applicative.Get_applicativeFn()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Bind.Get_bindFn()
-}))))
+}))
 	})
 	return cache_monadFn
 }
@@ -60,11 +60,11 @@ var cache_monadArray gopurs_runtime.Value
 var once_monadArray sync.Once
 func Get_monadArray() gopurs_runtime.Value {
 	once_monadArray.Do(func() {
-		cache_monadArray = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadArray = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Applicative.Get_applicativeArray()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Bind.Get_bindArray()
-}))))
+}))
 	})
 	return cache_monadArray
 }
@@ -74,25 +74,21 @@ var once_liftM1 sync.Once
 func Get_liftM1() gopurs_runtime.Value {
 	once_liftM1.Do(func() {
 		cache_liftM1 = gopurs_runtime.Func3(func(dictMonad_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_liftM1(dictMonad_0_box, func(inner_arg0 interface{}) interface{} {
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(f_1_box, gopurs_runtime.Any(inner_arg0)))
-}, gopurs_runtime.UnboxAny(a_2_box)))
+return Call_liftM1(dictMonad_0_box, f_1_box, a_2_box)
 })
 	})
 	return cache_liftM1
 }
 
-var cache_liftM1__func_gopurs_runtime_Value__func_interface____interface____interface____interface___2997383124 gopurs_runtime.Value
-var once_liftM1__func_gopurs_runtime_Value__func_interface____interface____interface____interface___2997383124 sync.Once
-func Get_liftM1__func_gopurs_runtime_Value__func_interface____interface____interface____interface___2997383124() gopurs_runtime.Value {
-	once_liftM1__func_gopurs_runtime_Value__func_interface____interface____interface____interface___2997383124.Do(func() {
-		cache_liftM1__func_gopurs_runtime_Value__func_interface____interface____interface____interface___2997383124 = gopurs_runtime.Func3(func(dictMonad_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_liftM1__func_gopurs_runtime_Value__func_interface____interface____interface____interface___2997383124(dictMonad_0_box, func(inner_arg0 interface{}) interface{} {
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(f_1_box, gopurs_runtime.Any(inner_arg0)))
-}, gopurs_runtime.UnboxAny(a_2_box)))
+var cache_liftM1__gopurs_runtime_Value_2997383124 gopurs_runtime.Value
+var once_liftM1__gopurs_runtime_Value_2997383124 sync.Once
+func Get_liftM1__gopurs_runtime_Value_2997383124() gopurs_runtime.Value {
+	once_liftM1__gopurs_runtime_Value_2997383124.Do(func() {
+		cache_liftM1__gopurs_runtime_Value_2997383124 = gopurs_runtime.Func3(func(dictMonad_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_liftM1__gopurs_runtime_Value_2997383124(dictMonad_0_box, f_1_box, a_2_box)
 })
 	})
-	return cache_liftM1__func_gopurs_runtime_Value__func_interface____interface____interface____interface___2997383124
+	return cache_liftM1__gopurs_runtime_Value_2997383124
 }
 
 var cache_ap gopurs_runtime.Value
@@ -164,28 +160,28 @@ return __t1
 })
 }
 
-func Call_liftM1(dictMonad_0_loop gopurs_runtime.Value, f_1_loop func(interface{}) interface{}, a_2_loop interface{}) interface{} {
+func Call_liftM1(dictMonad_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-var f_1 func(interface{}) interface{} = f_1_loop
+var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-var a_2 interface{} = a_2_loop
+var a_2 gopurs_runtime.Value = a_2_loop
 _ = a_2
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Any(a_2), gopurs_runtime.Func(func(a_prime_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Any(f_1(gopurs_runtime.UnboxAny(a_prime_3))))
-})))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}), "bind"), a_2, gopurs_runtime.Func(func(a_prime_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Apply(f_1, a_prime_3))
+}))
 }
 
-func Call_liftM1__func_gopurs_runtime_Value__func_interface____interface____interface____interface___2997383124(dictMonad_0_loop gopurs_runtime.Value, f_1_loop func(interface{}) interface{}, a_2_loop interface{}) interface{} {
+func Call_liftM1__gopurs_runtime_Value_2997383124(dictMonad_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
-var f_1 func(interface{}) interface{} = f_1_loop
+var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-var a_2 interface{} = a_2_loop
+var a_2 gopurs_runtime.Value = a_2_loop
 _ = a_2
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Any(a_2), gopurs_runtime.Func(func(a_prime_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Any(f_1(gopurs_runtime.UnboxAny(a_prime_3))))
-})))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}), "bind"), a_2, gopurs_runtime.Func(func(a_prime_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Apply(f_1, a_prime_3))
+}))
 }
 
 func Call_ap(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -201,3 +197,5 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs
 }))
 })
 }
+
+

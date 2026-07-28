@@ -18,15 +18,15 @@ return Call_pure(dict_0_box)
 	return cache_pure
 }
 
-var cache_pure__func_gopurs_runtime_Value__interface____interface___3816438021 gopurs_runtime.Value
-var once_pure__func_gopurs_runtime_Value__interface____interface___3816438021 sync.Once
-func Get_pure__func_gopurs_runtime_Value__interface____interface___3816438021() gopurs_runtime.Value {
-	once_pure__func_gopurs_runtime_Value__interface____interface___3816438021.Do(func() {
-		cache_pure__func_gopurs_runtime_Value__interface____interface___3816438021 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_pure__func_gopurs_runtime_Value__interface____interface___3816438021(dict_0_box)
+var cache_pure__gopurs_runtime_Value_3816438021 gopurs_runtime.Value
+var once_pure__gopurs_runtime_Value_3816438021 sync.Once
+func Get_pure__gopurs_runtime_Value_3816438021() gopurs_runtime.Value {
+	once_pure__gopurs_runtime_Value_3816438021.Do(func() {
+		cache_pure__gopurs_runtime_Value_3816438021 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_pure__gopurs_runtime_Value_3816438021(dict_0_box)
 })
 	})
-	return cache_pure__func_gopurs_runtime_Value__interface____interface___3816438021
+	return cache_pure__gopurs_runtime_Value_3816438021
 }
 
 var cache_unless gopurs_runtime.Value
@@ -34,21 +34,21 @@ var once_unless sync.Once
 func Get_unless() gopurs_runtime.Value {
 	once_unless.Do(func() {
 		cache_unless = gopurs_runtime.Func3(func(dictApplicative_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, v1_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_unless(dictApplicative_0_box, (v_1_box.IntVal) != (0), gopurs_runtime.UnboxAny(v1_2_box)))
+return Call_unless(dictApplicative_0_box, (v_1_box.IntVal) != (0), v1_2_box)
 })
 	})
 	return cache_unless
 }
 
-var cache_unless__func_gopurs_runtime_Value__bool__interface____interface___2442778873 gopurs_runtime.Value
-var once_unless__func_gopurs_runtime_Value__bool__interface____interface___2442778873 sync.Once
-func Get_unless__func_gopurs_runtime_Value__bool__interface____interface___2442778873() gopurs_runtime.Value {
-	once_unless__func_gopurs_runtime_Value__bool__interface____interface___2442778873.Do(func() {
-		cache_unless__func_gopurs_runtime_Value__bool__interface____interface___2442778873 = gopurs_runtime.Func3(func(dictApplicative_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, v1_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_unless__func_gopurs_runtime_Value__bool__interface____interface___2442778873(dictApplicative_0_box, (v_1_box.IntVal) != (0), gopurs_runtime.UnboxAny(v1_2_box)))
+var cache_unless__gopurs_runtime_Value_2442778873 gopurs_runtime.Value
+var once_unless__gopurs_runtime_Value_2442778873 sync.Once
+func Get_unless__gopurs_runtime_Value_2442778873() gopurs_runtime.Value {
+	once_unless__gopurs_runtime_Value_2442778873.Do(func() {
+		cache_unless__gopurs_runtime_Value_2442778873 = gopurs_runtime.Func3(func(dictApplicative_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, v1_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_unless__gopurs_runtime_Value_2442778873(dictApplicative_0_box, (v_1_box.IntVal) != (0), v1_2_box)
 })
 	})
-	return cache_unless__func_gopurs_runtime_Value__bool__interface____interface___2442778873
+	return cache_unless__gopurs_runtime_Value_2442778873
 }
 
 var cache_when gopurs_runtime.Value
@@ -56,21 +56,21 @@ var once_when sync.Once
 func Get_when() gopurs_runtime.Value {
 	once_when.Do(func() {
 		cache_when = gopurs_runtime.Func3(func(dictApplicative_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, v1_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_when(dictApplicative_0_box, (v_1_box.IntVal) != (0), gopurs_runtime.UnboxAny(v1_2_box)))
+return Call_when(dictApplicative_0_box, (v_1_box.IntVal) != (0), v1_2_box)
 })
 	})
 	return cache_when
 }
 
-var cache_when__func_gopurs_runtime_Value__bool__interface____interface___2442778873 gopurs_runtime.Value
-var once_when__func_gopurs_runtime_Value__bool__interface____interface___2442778873 sync.Once
-func Get_when__func_gopurs_runtime_Value__bool__interface____interface___2442778873() gopurs_runtime.Value {
-	once_when__func_gopurs_runtime_Value__bool__interface____interface___2442778873.Do(func() {
-		cache_when__func_gopurs_runtime_Value__bool__interface____interface___2442778873 = gopurs_runtime.Func3(func(dictApplicative_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, v1_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_when__func_gopurs_runtime_Value__bool__interface____interface___2442778873(dictApplicative_0_box, (v_1_box.IntVal) != (0), gopurs_runtime.UnboxAny(v1_2_box)))
+var cache_when__gopurs_runtime_Value_2442778873 gopurs_runtime.Value
+var once_when__gopurs_runtime_Value_2442778873 sync.Once
+func Get_when__gopurs_runtime_Value_2442778873() gopurs_runtime.Value {
+	once_when__gopurs_runtime_Value_2442778873.Do(func() {
+		cache_when__gopurs_runtime_Value_2442778873 = gopurs_runtime.Func3(func(dictApplicative_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, v1_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_when__gopurs_runtime_Value_2442778873(dictApplicative_0_box, (v_1_box.IntVal) != (0), v1_2_box)
 })
 	})
-	return cache_when__func_gopurs_runtime_Value__bool__interface____interface___2442778873
+	return cache_when__gopurs_runtime_Value_2442778873
 }
 
 var cache_liftA1 gopurs_runtime.Value
@@ -78,9 +78,7 @@ var once_liftA1 sync.Once
 func Get_liftA1() gopurs_runtime.Value {
 	once_liftA1.Do(func() {
 		cache_liftA1 = gopurs_runtime.Func3(func(dictApplicative_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_liftA1(dictApplicative_0_box, func(inner_arg0 interface{}) interface{} {
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(f_1_box, gopurs_runtime.Any(inner_arg0)))
-}, gopurs_runtime.UnboxAny(a_2_box)))
+return Call_liftA1(dictApplicative_0_box, f_1_box, a_2_box)
 })
 	})
 	return cache_liftA1
@@ -90,11 +88,11 @@ var cache_applicativeProxy gopurs_runtime.Value
 var once_applicativeProxy sync.Once
 func Get_applicativeProxy() gopurs_runtime.Value {
 	once_applicativeProxy.Do(func() {
-		cache_applicativeProxy = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_applicativeProxy = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Apply.Get_applyProxy()
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil})
-}))))
+return gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}
+}))
 	})
 	return cache_applicativeProxy
 }
@@ -103,11 +101,11 @@ var cache_applicativeFn gopurs_runtime.Value
 var once_applicativeFn sync.Once
 func Get_applicativeFn() gopurs_runtime.Value {
 	once_applicativeFn.Do(func() {
-		cache_applicativeFn = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_applicativeFn = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Apply.Get_applyFn()
 }), gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_0
-}))))
+}))
 	})
 	return cache_applicativeFn
 }
@@ -116,11 +114,11 @@ var cache_applicativeArray gopurs_runtime.Value
 var once_applicativeArray sync.Once
 func Get_applicativeArray() gopurs_runtime.Value {
 	once_applicativeArray.Do(func() {
-		cache_applicativeArray = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_applicativeArray = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Apply.Get_applyArray()
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Array([]gopurs_runtime.Value{x_0})
-}))))
+}))
 	})
 	return cache_applicativeArray
 }
@@ -131,23 +129,23 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "pure")
 }
 
-func Call_pure__func_gopurs_runtime_Value__interface____interface___3816438021(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_pure__gopurs_runtime_Value_3816438021(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "pure")
 }
 
-func Call_unless(dictApplicative_0_loop gopurs_runtime.Value, v_1_loop bool, v1_2_loop interface{}) interface{} {
+func Call_unless(dictApplicative_0_loop gopurs_runtime.Value, v_1_loop bool, v1_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
 _ = dictApplicative_0
 var v_1 bool = v_1_loop
 _ = v_1
-var v1_2 interface{} = v1_2_loop
+var v1_2 gopurs_runtime.Value = v1_2_loop
 _ = v1_2
 var __t0 gopurs_runtime.Value
 {
 if (v_1) != (true) {
-__t0 = gopurs_runtime.Any(v1_2)
+__t0 = v1_2
 goto end_branch_0
 } else {
 
@@ -165,20 +163,20 @@ goto end_branch_0
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
-return gopurs_runtime.UnboxAny(__t0)
+return __t0
 }
 
-func Call_unless__func_gopurs_runtime_Value__bool__interface____interface___2442778873(dictApplicative_0_loop gopurs_runtime.Value, v_1_loop bool, v1_2_loop interface{}) interface{} {
+func Call_unless__gopurs_runtime_Value_2442778873(dictApplicative_0_loop gopurs_runtime.Value, v_1_loop bool, v1_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
 _ = dictApplicative_0
 var v_1 bool = v_1_loop
 _ = v_1
-var v1_2 interface{} = v1_2_loop
+var v1_2 gopurs_runtime.Value = v1_2_loop
 _ = v1_2
 var __t0 gopurs_runtime.Value
 {
 if (v_1) != (true) {
-__t0 = gopurs_runtime.Any(v1_2)
+__t0 = v1_2
 goto end_branch_0
 } else {
 
@@ -196,20 +194,20 @@ goto end_branch_0
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
-return gopurs_runtime.UnboxAny(__t0)
+return __t0
 }
 
-func Call_when(dictApplicative_0_loop gopurs_runtime.Value, v_1_loop bool, v1_2_loop interface{}) interface{} {
+func Call_when(dictApplicative_0_loop gopurs_runtime.Value, v_1_loop bool, v1_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
 _ = dictApplicative_0
 var v_1 bool = v_1_loop
 _ = v_1
-var v1_2 interface{} = v1_2_loop
+var v1_2 gopurs_runtime.Value = v1_2_loop
 _ = v1_2
 var __t0 gopurs_runtime.Value
 {
 if v_1 {
-__t0 = gopurs_runtime.Any(v1_2)
+__t0 = v1_2
 goto end_branch_0
 } else {
 
@@ -219,20 +217,20 @@ goto end_branch_0
 __t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), pkg_Data_Unit.Get_unit())
 }
 end_branch_0:
-return gopurs_runtime.UnboxAny(__t0)
+return __t0
 }
 
-func Call_when__func_gopurs_runtime_Value__bool__interface____interface___2442778873(dictApplicative_0_loop gopurs_runtime.Value, v_1_loop bool, v1_2_loop interface{}) interface{} {
+func Call_when__gopurs_runtime_Value_2442778873(dictApplicative_0_loop gopurs_runtime.Value, v_1_loop bool, v1_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
 _ = dictApplicative_0
 var v_1 bool = v_1_loop
 _ = v_1
-var v1_2 interface{} = v1_2_loop
+var v1_2 gopurs_runtime.Value = v1_2_loop
 _ = v1_2
 var __t0 gopurs_runtime.Value
 {
 if v_1 {
-__t0 = gopurs_runtime.Any(v1_2)
+__t0 = v1_2
 goto end_branch_0
 } else {
 
@@ -242,17 +240,17 @@ goto end_branch_0
 __t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), pkg_Data_Unit.Get_unit())
 }
 end_branch_0:
-return gopurs_runtime.UnboxAny(__t0)
+return __t0
 }
 
-func Call_liftA1(dictApplicative_0_loop gopurs_runtime.Value, f_1_loop func(interface{}) interface{}, a_2_loop interface{}) interface{} {
+func Call_liftA1(dictApplicative_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
 _ = dictApplicative_0
-var f_1 func(interface{}) interface{} = f_1_loop
+var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-var a_2 interface{} = a_2_loop
+var a_2 gopurs_runtime.Value = a_2_loop
 _ = a_2
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "apply"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(f_1(gopurs_runtime.UnboxAny(arg0)))
-})), gopurs_runtime.Any(a_2)))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "apply"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), f_1), a_2)
 }
+
+

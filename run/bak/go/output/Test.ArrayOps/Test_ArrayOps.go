@@ -65,11 +65,7 @@ var cache_describe gopurs_runtime.Value
 var once_describe sync.Once
 func Get_describe() gopurs_runtime.Value {
 	once_describe.Do(func() {
-		cache_describe = gopurs_runtime.Func0(func() gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str("Array Processing (900 elements):")), nil)
-}()
-})
+		cache_describe = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str("Array Processing (900 elements):"))
 	})
 	return cache_describe
 }
@@ -78,13 +74,9 @@ var cache_act gopurs_runtime.Value
 var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
-		cache_act = gopurs_runtime.Func0(func() gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind"), gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(900)), gopurs_runtime.Func(func(dummy_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_act = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind"), gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(900)), gopurs_runtime.Func(func(dummy_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showInt(), "show"), gopurs_runtime.Int(Call_sumEvens(dummy_0.IntVal))))
-})), nil)
-}()
-})
+}))
 	})
 	return cache_act
 }
@@ -127,3 +119,5 @@ return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_fold
 return gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingInt(), "mod"), x_1, gopurs_runtime.Int(2)).IntVal) == (0))
 }), gopurs_runtime.UncurriedApp2(pkg_Data_Array.Get_rangeImpl(), gopurs_runtime.Int(1), gopurs_runtime.Int(n_0)))).IntVal
 }
+
+

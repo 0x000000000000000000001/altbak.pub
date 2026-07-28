@@ -47,11 +47,7 @@ var cache_eqApproximate gopurs_runtime.Value
 var once_eqApproximate sync.Once
 func Get_eqApproximate() gopurs_runtime.Value {
 	once_eqApproximate.Do(func() {
-		cache_eqApproximate = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(func(inner_arg0 float64, inner_arg1 float64) bool {
-return (gopurs_runtime.Apply2(gopurs_runtime.Apply(Get_eqRelative(), gopurs_runtime.Float(0.000001)), gopurs_runtime.Float(inner_arg0), gopurs_runtime.Float(inner_arg1)).IntVal) != (0)
-}(arg0.FloatVal(), arg1.FloatVal()))
-})
+		cache_eqApproximate = gopurs_runtime.Apply(Get_eqRelative(), gopurs_runtime.Float(0.000001))
 	})
 	return cache_eqApproximate
 }
@@ -138,3 +134,5 @@ var y_2 float64 = y_2_loop
 _ = y_2
 return (gopurs_runtime.Apply(pkg_Data_Number.Get_abs(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ring.Get_ringNumber(), "sub"), gopurs_runtime.Float(x_1), gopurs_runtime.Float(y_2))).FloatVal()) <= (v_0)
 }
+
+

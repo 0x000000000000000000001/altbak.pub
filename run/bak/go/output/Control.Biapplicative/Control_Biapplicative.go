@@ -18,24 +18,24 @@ return Call_bipure(dict_0_box)
 	return cache_bipure
 }
 
-var cache_bipure__func_gopurs_runtime_Value__interface____interface____interface___438865070 gopurs_runtime.Value
-var once_bipure__func_gopurs_runtime_Value__interface____interface____interface___438865070 sync.Once
-func Get_bipure__func_gopurs_runtime_Value__interface____interface____interface___438865070() gopurs_runtime.Value {
-	once_bipure__func_gopurs_runtime_Value__interface____interface____interface___438865070.Do(func() {
-		cache_bipure__func_gopurs_runtime_Value__interface____interface____interface___438865070 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_bipure__func_gopurs_runtime_Value__interface____interface____interface___438865070(dict_0_box)
+var cache_bipure__gopurs_runtime_Value_438865070 gopurs_runtime.Value
+var once_bipure__gopurs_runtime_Value_438865070 sync.Once
+func Get_bipure__gopurs_runtime_Value_438865070() gopurs_runtime.Value {
+	once_bipure__gopurs_runtime_Value_438865070.Do(func() {
+		cache_bipure__gopurs_runtime_Value_438865070 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bipure__gopurs_runtime_Value_438865070(dict_0_box)
 })
 	})
-	return cache_bipure__func_gopurs_runtime_Value__interface____interface____interface___438865070
+	return cache_bipure__gopurs_runtime_Value_438865070
 }
 
 var cache_biapplicativeTuple gopurs_runtime.Value
 var once_biapplicativeTuple sync.Once
 func Get_biapplicativeTuple() gopurs_runtime.Value {
 	once_biapplicativeTuple.Do(func() {
-		cache_biapplicativeTuple = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Biapply0", "bipure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_biapplicativeTuple = gopurs_runtime.RecordDict2("Biapply0", "bipure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Biapply.Get_biapplyTuple()
-}), pkg_Data_Tuple.Get_Tuple())))
+}), pkg_Data_Tuple.Get_Tuple())
 	})
 	return cache_biapplicativeTuple
 }
@@ -46,8 +46,10 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "bipure")
 }
 
-func Call_bipure__func_gopurs_runtime_Value__interface____interface____interface___438865070(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_bipure__gopurs_runtime_Value_438865070(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "bipure")
 }
+
+

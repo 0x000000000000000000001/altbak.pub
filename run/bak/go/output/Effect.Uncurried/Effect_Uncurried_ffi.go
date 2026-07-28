@@ -1,5 +1,7 @@
 package Effect_Uncurried
 
+import "gopurs/output/gopurs_runtime"
+
 
 func MkEffectFn1(f interface{}) func(interface{}) func() interface{} {
 	return func(a interface{}) func() interface{} {
@@ -260,3 +262,421 @@ func RunEffectFn10(f interface{}) func(interface{}) func(interface{}) func(inter
 		}
 	}
 }
+
+
+// --- Auto-generated FFI wrappers ---
+func Call_mkEffectFn1(arg0 interface{}) func(interface{}) func() interface{} {
+	return MkEffectFn1(arg0)
+}
+var _Gopurs_MkEffectFn1 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := MkEffectFn1(go_arg0)
+	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := go_res(arg)
+			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res()
+			return gopurs_runtime.Box(inner_res)
+		})
+		})
+})
+func Call_mkEffectFn2(arg0 interface{}) func(interface{}, interface{}) func() interface{} {
+	return MkEffectFn2(arg0)
+}
+var _Gopurs_MkEffectFn2 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := MkEffectFn2(go_arg0)
+	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := go_res(arg)
+			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res()
+			return gopurs_runtime.Box(inner_res)
+		})
+		})
+})
+func Call_mkEffectFn3(arg0 interface{}) func(interface{}, interface{}, interface{}) func() interface{} {
+	return MkEffectFn3(arg0)
+}
+var _Gopurs_MkEffectFn3 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := MkEffectFn3(go_arg0)
+	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := go_res(arg)
+			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res()
+			return gopurs_runtime.Box(inner_res)
+		})
+		})
+})
+func Call_mkEffectFn4(arg0 interface{}) func(interface{}, interface{}, interface{}, interface{}) func() interface{} {
+	return MkEffectFn4(arg0)
+}
+var _Gopurs_MkEffectFn4 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := MkEffectFn4(go_arg0)
+	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := go_res(arg)
+			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res()
+			return gopurs_runtime.Box(inner_res)
+		})
+		})
+})
+func Call_mkEffectFn5(arg0 interface{}) func(interface{}, interface{}, interface{}, interface{}, interface{}) func() interface{} {
+	return MkEffectFn5(arg0)
+}
+var _Gopurs_MkEffectFn5 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := MkEffectFn5(go_arg0)
+	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := go_res(arg)
+			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res()
+			return gopurs_runtime.Box(inner_res)
+		})
+		})
+})
+func Call_mkEffectFn6(arg0 interface{}) func(interface{}, interface{}, interface{}, interface{}, interface{}, interface{}) func() interface{} {
+	return MkEffectFn6(arg0)
+}
+var _Gopurs_MkEffectFn6 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := MkEffectFn6(go_arg0)
+	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := go_res(arg)
+			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res()
+			return gopurs_runtime.Box(inner_res)
+		})
+		})
+})
+func Call_mkEffectFn7(arg0 interface{}) func(interface{}, interface{}, interface{}, interface{}, interface{}, interface{}, interface{}) func() interface{} {
+	return MkEffectFn7(arg0)
+}
+var _Gopurs_MkEffectFn7 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := MkEffectFn7(go_arg0)
+	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := go_res(arg)
+			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res()
+			return gopurs_runtime.Box(inner_res)
+		})
+		})
+})
+func Call_mkEffectFn8(arg0 interface{}) func(interface{}, interface{}, interface{}, interface{}, interface{}, interface{}, interface{}, interface{}) func() interface{} {
+	return MkEffectFn8(arg0)
+}
+var _Gopurs_MkEffectFn8 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := MkEffectFn8(go_arg0)
+	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := go_res(arg)
+			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res()
+			return gopurs_runtime.Box(inner_res)
+		})
+		})
+})
+func Call_mkEffectFn9(arg0 interface{}) func(interface{}, interface{}, interface{}, interface{}, interface{}, interface{}, interface{}, interface{}, interface{}) func() interface{} {
+	return MkEffectFn9(arg0)
+}
+var _Gopurs_MkEffectFn9 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := MkEffectFn9(go_arg0)
+	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := go_res(arg)
+			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res()
+			return gopurs_runtime.Box(inner_res)
+		})
+		})
+})
+func Call_mkEffectFn10(arg0 interface{}) func(interface{}, interface{}, interface{}, interface{}, interface{}, interface{}, interface{}, interface{}, interface{}, interface{}) func() interface{} {
+	return MkEffectFn10(arg0)
+}
+var _Gopurs_MkEffectFn10 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := MkEffectFn10(go_arg0)
+	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := go_res(arg)
+			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res()
+			return gopurs_runtime.Box(inner_res)
+		})
+		})
+})
+func Call_runEffectFn1(arg0 interface{}) func(interface{}) func() interface{} {
+	return RunEffectFn1(arg0)
+}
+var _Gopurs_RunEffectFn1 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := RunEffectFn1(go_arg0)
+	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := go_res(arg)
+			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res()
+			return gopurs_runtime.Box(inner_res)
+		})
+		})
+})
+func Call_runEffectFn2(arg0 interface{}) func(interface{}) func(interface{}) func() interface{} {
+	return RunEffectFn2(arg0)
+}
+var _Gopurs_RunEffectFn2 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := RunEffectFn2(go_arg0)
+	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := go_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res()
+			return gopurs_runtime.Box(inner_res)
+		})
+		})
+		})
+})
+func Call_runEffectFn3(arg0 interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+	return RunEffectFn3(arg0)
+}
+var _Gopurs_RunEffectFn3 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := RunEffectFn3(go_arg0)
+	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := go_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res()
+			return gopurs_runtime.Box(inner_res)
+		})
+		})
+		})
+		})
+})
+func Call_runEffectFn4(arg0 interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+	return RunEffectFn4(arg0)
+}
+var _Gopurs_RunEffectFn4 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := RunEffectFn4(go_arg0)
+	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := go_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res()
+			return gopurs_runtime.Box(inner_res)
+		})
+		})
+		})
+		})
+		})
+})
+func Call_runEffectFn5(arg0 interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+	return RunEffectFn5(arg0)
+}
+var _Gopurs_RunEffectFn5 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := RunEffectFn5(go_arg0)
+	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := go_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res()
+			return gopurs_runtime.Box(inner_res)
+		})
+		})
+		})
+		})
+		})
+		})
+})
+func Call_runEffectFn6(arg0 interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+	return RunEffectFn6(arg0)
+}
+var _Gopurs_RunEffectFn6 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := RunEffectFn6(go_arg0)
+	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := go_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res()
+			return gopurs_runtime.Box(inner_res)
+		})
+		})
+		})
+		})
+		})
+		})
+		})
+})
+func Call_runEffectFn7(arg0 interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+	return RunEffectFn7(arg0)
+}
+var _Gopurs_RunEffectFn7 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := RunEffectFn7(go_arg0)
+	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := go_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res()
+			return gopurs_runtime.Box(inner_res)
+		})
+		})
+		})
+		})
+		})
+		})
+		})
+		})
+})
+func Call_runEffectFn8(arg0 interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+	return RunEffectFn8(arg0)
+}
+var _Gopurs_RunEffectFn8 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := RunEffectFn8(go_arg0)
+	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := go_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res()
+			return gopurs_runtime.Box(inner_res)
+		})
+		})
+		})
+		})
+		})
+		})
+		})
+		})
+		})
+})
+func Call_runEffectFn9(arg0 interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+	return RunEffectFn9(arg0)
+}
+var _Gopurs_RunEffectFn9 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := RunEffectFn9(go_arg0)
+	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := go_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res()
+			return gopurs_runtime.Box(inner_res)
+		})
+		})
+		})
+		})
+		})
+		})
+		})
+		})
+		})
+		})
+})
+func Call_runEffectFn10(arg0 interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func(interface{}) func() interface{} {
+	return RunEffectFn10(arg0)
+}
+var _Gopurs_RunEffectFn10 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := RunEffectFn10(go_arg0)
+	return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := go_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res(arg)
+			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			inner_res := inner_res()
+			return gopurs_runtime.Box(inner_res)
+		})
+		})
+		})
+		})
+		})
+		})
+		})
+		})
+		})
+		})
+		})
+})

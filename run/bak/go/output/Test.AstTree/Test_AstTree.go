@@ -75,11 +75,7 @@ var cache_describe gopurs_runtime.Value
 var once_describe sync.Once
 func Get_describe() gopurs_runtime.Value {
 	once_describe.Do(func() {
-		cache_describe = gopurs_runtime.Func0(func() gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str("AST Evaluation:")), nil)
-}()
-})
+		cache_describe = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str("AST Evaluation:"))
 	})
 	return cache_describe
 }
@@ -99,13 +95,9 @@ var cache_act gopurs_runtime.Value
 var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
-		cache_act = gopurs_runtime.Func0(func() gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind"), gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(3)), gopurs_runtime.Func(func(dummy_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_act = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind"), gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(3)), gopurs_runtime.Func(func(dummy_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showInt(), "show"), gopurs_runtime.Int(Call_eval(Call_buildTree(dummy_0.IntVal)))))
-})), nil)
-}()
-})
+}))
 	})
 	return cache_act
 }
@@ -189,16 +181,18 @@ _ = v_0
 var __t0 gopurs_runtime.Value
 {
 if (v_0) == (0) {
-__t0 = gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Constructor_Val{1})})
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Constructor_Val{1})}
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 2937956733, UnsafePtr: unsafe.Pointer(&Constructor_Add{gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 3406566728, UnsafePtr: unsafe.Pointer(&Constructor_Mul{gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Constructor_Val{v_0})}), Call_buildTree((v_0) - (1))})}), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 2029887576, UnsafePtr: unsafe.Pointer(&Constructor_Sub{Call_buildTree((v_0) - (1)), gopurs_runtime.Any(gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Constructor_Val{1})})})})})})
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2937956733, UnsafePtr: unsafe.Pointer(&Constructor_Add{gopurs_runtime.Value{Type: 9, IntVal: 3406566728, UnsafePtr: unsafe.Pointer(&Constructor_Mul{gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Constructor_Val{v_0})}, Call_buildTree((v_0) - (1))})}, gopurs_runtime.Value{Type: 9, IntVal: 2029887576, UnsafePtr: unsafe.Pointer(&Constructor_Sub{Call_buildTree((v_0) - (1)), gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Constructor_Val{1})}})}})}
 }
 end_branch_0:
 return __t0
 }
 }
+
+

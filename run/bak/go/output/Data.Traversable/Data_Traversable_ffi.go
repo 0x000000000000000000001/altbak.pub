@@ -1,18 +1,20 @@
 package Data_Traversable
 
+import "gopurs/output/gopurs_runtime"
 
-func TraverseArrayImpl(apply func(interface{}) func(interface{}) interface{}, mapFn func(interface{}) func(interface{}) interface{}, pure func(interface{}) interface{}, f func(interface{}) interface{}, arrayVal []interface{}) interface{} {
+
+func TraverseArrayImpl(apply func(interface{}, interface{}) interface{}, mapFn func(func(interface{}) interface{}, interface{}) interface{}, pure func(interface{}) interface{}, f func(interface{}) interface{}, arrayVal []interface{}) interface{} {
 	array1 := func(a interface{}) interface{} {
 		return []interface{}{a}
 	}
 	
-	array2 := func(a interface{}) func(interface{}) interface{} {
+	array2 := func(a interface{}) interface{} {
 		return func(b interface{}) interface{} {
 			return []interface{}{a, b}
 		}
 	}
 	
-	array3 := func(a interface{}) func(interface{}) interface{} {
+	array3 := func(a interface{}) interface{} {
 		return func(b interface{}) interface{} {
 			return func(c interface{}) interface{} {
 				return []interface{}{a, b, c}
@@ -20,7 +22,7 @@ func TraverseArrayImpl(apply func(interface{}) func(interface{}) interface{}, ma
 		}
 	}
 	
-	concat2 := func(xsVal interface{}) func(interface{}) interface{} {
+	concat2 := func(xsVal interface{}) interface{} {
 		return func(ysVal interface{}) interface{} {
 			var xs, ys []interface{}
 			if vx, ok := xsVal.(interface{}); ok {
@@ -58,16 +60,44 @@ func TraverseArrayImpl(apply func(interface{}) func(interface{}) interface{}, ma
 		case 0:
 			return pure([]interface{}{})
 		case 1:
-			return mapFn(array1)(f(arrayVal[bot]))
+			return mapFn(array1, f(arrayVal[bot]))
 		case 2:
-			return apply(mapFn(array2)(f(arrayVal[bot])))(f(arrayVal[bot+1]))
+			return apply(mapFn(array2, f(arrayVal[bot])), f(arrayVal[bot+1]))
 		case 3:
-			return apply(apply(mapFn(array3)(f(arrayVal[bot])))(f(arrayVal[bot+1])))(f(arrayVal[bot+2]))
+			return apply(apply(mapFn(array3, f(arrayVal[bot])), f(arrayVal[bot+1])), f(arrayVal[bot+2]))
 		default:
 			pivot := bot + ((top - bot) / 4) * 2
-			return apply(mapFn(concat2)(goFn(bot, pivot)))(goFn(pivot, top))
+			return apply(mapFn(concat2, goFn(bot, pivot)), goFn(pivot, top))
 		}
 	}
 	
 	return goFn(0, len(arrayVal))
 }
+
+
+// --- Auto-generated FFI wrappers ---
+func Call_traverseArrayImpl(arg0 func(interface{}, interface{}) interface{}, arg1 func(func(interface{}) interface{}, interface{}) interface{}, arg2 func(interface{}) interface{}, arg3 func(interface{}) interface{}, arg4 []interface{}) interface{} {
+	return TraverseArrayImpl(arg0, arg1, arg2, arg3, arg4)
+}
+var _Gopurs_TraverseArrayImpl = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0_0 interface{}, p0_1 interface{}) interface{} {
+			return gopurs_runtime.Apply2(arg0, gopurs_runtime.Box(p0_0), gopurs_runtime.Box(p0_1))
+		}
+	go_arg1 := func(p0_0 func(interface{}) interface{}, p0_1 interface{}) interface{} {
+			return gopurs_runtime.Apply2(arg1, gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+						inner_res := p0_0(arg)
+						return gopurs_runtime.Box(inner_res)
+					}), gopurs_runtime.Box(p0_1))
+		}
+	go_arg2 := func(p0_0 interface{}) interface{} {
+			return gopurs_runtime.Apply(arg2, gopurs_runtime.Box(p0_0))
+		}
+	go_arg3 := func(p0_0 interface{}) interface{} {
+			return gopurs_runtime.Apply(arg3, gopurs_runtime.Box(p0_0))
+		}
+	arg4_arr := *(*[]gopurs_runtime.Value)(arg4.UnsafePtr)
+	go_arg4 := make([]interface{}, len(arg4_arr))
+	for i, v := range arg4_arr { go_arg4[i] = v }
+	go_res := TraverseArrayImpl(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
+	return gopurs_runtime.Box(go_res)
+})

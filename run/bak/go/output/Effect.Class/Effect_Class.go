@@ -10,11 +10,11 @@ var cache_monadEffectEffect gopurs_runtime.Value
 var once_monadEffectEffect sync.Once
 func Get_monadEffectEffect() gopurs_runtime.Value {
 	once_monadEffectEffect.Do(func() {
-		cache_monadEffectEffect = gopurs_runtime.Any(gopurs_runtime.UnboxAny(gopurs_runtime.RecordDict2("Monad0", "liftEffect", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_monadEffectEffect = gopurs_runtime.RecordDict2("Monad0", "liftEffect", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Effect.Get_monadEffect()
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_0
-}))))
+}))
 	})
 	return cache_monadEffectEffect
 }
@@ -30,15 +30,15 @@ return Call_liftEffect(dict_0_box)
 	return cache_liftEffect
 }
 
-var cache_liftEffect__func_gopurs_runtime_Value__func___interface____interface___1222247479 gopurs_runtime.Value
-var once_liftEffect__func_gopurs_runtime_Value__func___interface____interface___1222247479 sync.Once
-func Get_liftEffect__func_gopurs_runtime_Value__func___interface____interface___1222247479() gopurs_runtime.Value {
-	once_liftEffect__func_gopurs_runtime_Value__func___interface____interface___1222247479.Do(func() {
-		cache_liftEffect__func_gopurs_runtime_Value__func___interface____interface___1222247479 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_liftEffect__func_gopurs_runtime_Value__func___interface____interface___1222247479(dict_0_box)
+var cache_liftEffect__gopurs_runtime_Value_1222247479 gopurs_runtime.Value
+var once_liftEffect__gopurs_runtime_Value_1222247479 sync.Once
+func Get_liftEffect__gopurs_runtime_Value_1222247479() gopurs_runtime.Value {
+	once_liftEffect__gopurs_runtime_Value_1222247479.Do(func() {
+		cache_liftEffect__gopurs_runtime_Value_1222247479 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_liftEffect__gopurs_runtime_Value_1222247479(dict_0_box)
 })
 	})
-	return cache_liftEffect__func_gopurs_runtime_Value__func___interface____interface___1222247479
+	return cache_liftEffect__gopurs_runtime_Value_1222247479
 }
 
 func Call_liftEffect(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -47,8 +47,10 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "liftEffect")
 }
 
-func Call_liftEffect__func_gopurs_runtime_Value__func___interface____interface___1222247479(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_liftEffect__gopurs_runtime_Value_1222247479(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "liftEffect")
 }
+
+

@@ -1,9 +1,11 @@
 package Data_Semiring
 
-func IntAdd(x int, y int) int {
+import "gopurs/output/gopurs_runtime"
+
+func IntAdd(x int64, y int64) int64 {
 	return x + y
 }
-func IntMul(x int, y int) int {
+func IntMul(x int64, y int64) int64 {
 	return x * y
 }
 func NumAdd(n1 float64, n2 float64) float64 {
@@ -12,3 +14,42 @@ func NumAdd(n1 float64, n2 float64) float64 {
 func NumMul(n1 float64, n2 float64) float64 {
 	return n1 * n2
 }
+
+
+// --- Auto-generated FFI wrappers ---
+func Call_intAdd(arg0 int64, arg1 int64) int64 {
+	return IntAdd(arg0, arg1)
+}
+var _Gopurs_IntAdd = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[int64](arg0)
+	go_arg1 := gopurs_runtime.Unbox[int64](arg1)
+	go_res := IntAdd(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_intMul(arg0 int64, arg1 int64) int64 {
+	return IntMul(arg0, arg1)
+}
+var _Gopurs_IntMul = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[int64](arg0)
+	go_arg1 := gopurs_runtime.Unbox[int64](arg1)
+	go_res := IntMul(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_numAdd(arg0 float64, arg1 float64) float64 {
+	return NumAdd(arg0, arg1)
+}
+var _Gopurs_NumAdd = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
+	go_arg1 := gopurs_runtime.Unbox[float64](arg1)
+	go_res := NumAdd(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
+})
+func Call_numMul(arg0 float64, arg1 float64) float64 {
+	return NumMul(arg0, arg1)
+}
+var _Gopurs_NumMul = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
+	go_arg1 := gopurs_runtime.Unbox[float64](arg1)
+	go_res := NumMul(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
+})

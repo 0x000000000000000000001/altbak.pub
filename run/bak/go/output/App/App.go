@@ -28,9 +28,7 @@ var cache_main gopurs_runtime.Value
 var once_main sync.Once
 func Get_main() gopurs_runtime.Value {
 	once_main.Do(func() {
-		cache_main = gopurs_runtime.Func0(func() gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind"), gopurs_runtime.Apply2(pkg_Bench.Get_runBench(), pkg_Test_AstTree.Get_describe(), pkg_Test_AstTree.Get_act()), gopurs_runtime.Func(func(t1_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_main = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind"), gopurs_runtime.Apply2(pkg_Bench.Get_runBench(), pkg_Test_AstTree.Get_describe(), pkg_Test_AstTree.Get_act()), gopurs_runtime.Func(func(t1_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind"), gopurs_runtime.Apply2(pkg_Bench.Get_runBench(), pkg_Test_Fib.Get_describe(), pkg_Test_Fib.Get_act()), gopurs_runtime.Func(func(t2_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind"), gopurs_runtime.Apply2(pkg_Bench.Get_runBench(), pkg_Test_ListOps.Get_describe(), pkg_Test_ListOps.Get_act()), gopurs_runtime.Func(func(t3_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind"), gopurs_runtime.Apply2(pkg_Bench.Get_runBench(), pkg_Test_TCO.Get_describe(), pkg_Test_TCO.Get_act()), gopurs_runtime.Func(func(t4_3 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -56,11 +54,11 @@ return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply2(
 }))
 }))
 }))
-})), nil)
-}()
-})
+}))
 	})
 	return cache_main
 }
+
+
 
 

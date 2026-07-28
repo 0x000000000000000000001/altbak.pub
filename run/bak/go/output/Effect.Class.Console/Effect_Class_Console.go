@@ -12,7 +12,7 @@ var once_warnShow sync.Once
 func Get_warnShow() gopurs_runtime.Value {
 	once_warnShow.Do(func() {
 		cache_warnShow = gopurs_runtime.Func3(func(dictMonadEffect_0_box gopurs_runtime.Value, dictShow_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_warnShow(dictMonadEffect_0_box, dictShow_1_box, gopurs_runtime.UnboxAny(x_2_box)))
+return Call_warnShow(dictMonadEffect_0_box, dictShow_1_box, x_2_box)
 })
 	})
 	return cache_warnShow
@@ -23,7 +23,7 @@ var once_warn sync.Once
 func Get_warn() gopurs_runtime.Value {
 	once_warn.Do(func() {
 		cache_warn = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_warn(dictMonadEffect_0_box, x_1_box.StrVal()))
+return Call_warn(dictMonadEffect_0_box, x_1_box.StrVal())
 })
 	})
 	return cache_warn
@@ -34,7 +34,7 @@ var once_timeLog sync.Once
 func Get_timeLog() gopurs_runtime.Value {
 	once_timeLog.Do(func() {
 		cache_timeLog = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_timeLog(dictMonadEffect_0_box, x_1_box.StrVal()))
+return Call_timeLog(dictMonadEffect_0_box, x_1_box.StrVal())
 })
 	})
 	return cache_timeLog
@@ -45,7 +45,7 @@ var once_timeEnd sync.Once
 func Get_timeEnd() gopurs_runtime.Value {
 	once_timeEnd.Do(func() {
 		cache_timeEnd = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_timeEnd(dictMonadEffect_0_box, x_1_box.StrVal()))
+return Call_timeEnd(dictMonadEffect_0_box, x_1_box.StrVal())
 })
 	})
 	return cache_timeEnd
@@ -56,7 +56,7 @@ var once_time sync.Once
 func Get_time() gopurs_runtime.Value {
 	once_time.Do(func() {
 		cache_time = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_time(dictMonadEffect_0_box, x_1_box.StrVal()))
+return Call_time(dictMonadEffect_0_box, x_1_box.StrVal())
 })
 	})
 	return cache_time
@@ -67,7 +67,7 @@ var once_logShow sync.Once
 func Get_logShow() gopurs_runtime.Value {
 	once_logShow.Do(func() {
 		cache_logShow = gopurs_runtime.Func3(func(dictMonadEffect_0_box gopurs_runtime.Value, dictShow_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_logShow(dictMonadEffect_0_box, dictShow_1_box, gopurs_runtime.UnboxAny(x_2_box)))
+return Call_logShow(dictMonadEffect_0_box, dictShow_1_box, x_2_box)
 })
 	})
 	return cache_logShow
@@ -78,7 +78,7 @@ var once_log sync.Once
 func Get_log() gopurs_runtime.Value {
 	once_log.Do(func() {
 		cache_log = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_log(dictMonadEffect_0_box, x_1_box.StrVal()))
+return Call_log(dictMonadEffect_0_box, x_1_box.StrVal())
 })
 	})
 	return cache_log
@@ -89,7 +89,7 @@ var once_infoShow sync.Once
 func Get_infoShow() gopurs_runtime.Value {
 	once_infoShow.Do(func() {
 		cache_infoShow = gopurs_runtime.Func3(func(dictMonadEffect_0_box gopurs_runtime.Value, dictShow_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_infoShow(dictMonadEffect_0_box, dictShow_1_box, gopurs_runtime.UnboxAny(x_2_box)))
+return Call_infoShow(dictMonadEffect_0_box, dictShow_1_box, x_2_box)
 })
 	})
 	return cache_infoShow
@@ -100,7 +100,7 @@ var once_info sync.Once
 func Get_info() gopurs_runtime.Value {
 	once_info.Do(func() {
 		cache_info = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_info(dictMonadEffect_0_box, x_1_box.StrVal()))
+return Call_info(dictMonadEffect_0_box, x_1_box.StrVal())
 })
 	})
 	return cache_info
@@ -111,7 +111,7 @@ var once_groupEnd sync.Once
 func Get_groupEnd() gopurs_runtime.Value {
 	once_groupEnd.Do(func() {
 		cache_groupEnd = gopurs_runtime.Func(func(dictMonadEffect_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_groupEnd(dictMonadEffect_0_box))
+return Call_groupEnd(dictMonadEffect_0_box)
 })
 	})
 	return cache_groupEnd
@@ -122,7 +122,7 @@ var once_groupCollapsed sync.Once
 func Get_groupCollapsed() gopurs_runtime.Value {
 	once_groupCollapsed.Do(func() {
 		cache_groupCollapsed = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_groupCollapsed(dictMonadEffect_0_box, x_1_box.StrVal()))
+return Call_groupCollapsed(dictMonadEffect_0_box, x_1_box.StrVal())
 })
 	})
 	return cache_groupCollapsed
@@ -133,7 +133,7 @@ var once_group sync.Once
 func Get_group() gopurs_runtime.Value {
 	once_group.Do(func() {
 		cache_group = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_group(dictMonadEffect_0_box, x_1_box.StrVal()))
+return Call_group(dictMonadEffect_0_box, x_1_box.StrVal())
 })
 	})
 	return cache_group
@@ -155,7 +155,7 @@ var once_errorShow sync.Once
 func Get_errorShow() gopurs_runtime.Value {
 	once_errorShow.Do(func() {
 		cache_errorShow = gopurs_runtime.Func3(func(dictMonadEffect_0_box gopurs_runtime.Value, dictShow_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_errorShow(dictMonadEffect_0_box, dictShow_1_box, gopurs_runtime.UnboxAny(x_2_box)))
+return Call_errorShow(dictMonadEffect_0_box, dictShow_1_box, x_2_box)
 })
 	})
 	return cache_errorShow
@@ -166,7 +166,7 @@ var once_error sync.Once
 func Get_error() gopurs_runtime.Value {
 	once_error.Do(func() {
 		cache_error = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_error(dictMonadEffect_0_box, x_1_box.StrVal()))
+return Call_error(dictMonadEffect_0_box, x_1_box.StrVal())
 })
 	})
 	return cache_error
@@ -177,7 +177,7 @@ var once_debugShow sync.Once
 func Get_debugShow() gopurs_runtime.Value {
 	once_debugShow.Do(func() {
 		cache_debugShow = gopurs_runtime.Func3(func(dictMonadEffect_0_box gopurs_runtime.Value, dictShow_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_debugShow(dictMonadEffect_0_box, dictShow_1_box, gopurs_runtime.UnboxAny(x_2_box)))
+return Call_debugShow(dictMonadEffect_0_box, dictShow_1_box, x_2_box)
 })
 	})
 	return cache_debugShow
@@ -188,7 +188,7 @@ var once_debug sync.Once
 func Get_debug() gopurs_runtime.Value {
 	once_debug.Do(func() {
 		cache_debug = gopurs_runtime.Func2(func(dictMonadEffect_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_debug(dictMonadEffect_0_box, x_1_box.StrVal()))
+return Call_debug(dictMonadEffect_0_box, x_1_box.StrVal())
 })
 	})
 	return cache_debug
@@ -199,110 +199,110 @@ var once_clear sync.Once
 func Get_clear() gopurs_runtime.Value {
 	once_clear.Do(func() {
 		cache_clear = gopurs_runtime.Func(func(dictMonadEffect_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Any(Call_clear(dictMonadEffect_0_box))
+return Call_clear(dictMonadEffect_0_box)
 })
 	})
 	return cache_clear
 }
 
-func Call_warnShow(dictMonadEffect_0_loop gopurs_runtime.Value, dictShow_1_loop gopurs_runtime.Value, x_2_loop interface{}) interface{} {
+func Call_warnShow(dictMonadEffect_0_loop gopurs_runtime.Value, dictShow_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
 var dictShow_1 gopurs_runtime.Value = dictShow_1_loop
 _ = dictShow_1
-var x_2 interface{} = x_2_loop
+var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_warn(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_1, "show"), gopurs_runtime.Any(x_2)))))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_warn(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_1, "show"), x_2)))
 }
 
-func Call_warn(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) interface{} {
+func Call_warn(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
 var x_1 string = x_1_loop
 _ = x_1
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_warn(), gopurs_runtime.Str(x_1))))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_warn(), gopurs_runtime.Str(x_1)))
 }
 
-func Call_timeLog(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) interface{} {
+func Call_timeLog(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
 var x_1 string = x_1_loop
 _ = x_1
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_timeLog(), gopurs_runtime.Str(x_1))))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_timeLog(), gopurs_runtime.Str(x_1)))
 }
 
-func Call_timeEnd(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) interface{} {
+func Call_timeEnd(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
 var x_1 string = x_1_loop
 _ = x_1
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_timeEnd(), gopurs_runtime.Str(x_1))))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_timeEnd(), gopurs_runtime.Str(x_1)))
 }
 
-func Call_time(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) interface{} {
+func Call_time(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
 var x_1 string = x_1_loop
 _ = x_1
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_time(), gopurs_runtime.Str(x_1))))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_time(), gopurs_runtime.Str(x_1)))
 }
 
-func Call_logShow(dictMonadEffect_0_loop gopurs_runtime.Value, dictShow_1_loop gopurs_runtime.Value, x_2_loop interface{}) interface{} {
+func Call_logShow(dictMonadEffect_0_loop gopurs_runtime.Value, dictShow_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
 var dictShow_1 gopurs_runtime.Value = dictShow_1_loop
 _ = dictShow_1
-var x_2 interface{} = x_2_loop
+var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_1, "show"), gopurs_runtime.Any(x_2)))))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_1, "show"), x_2)))
 }
 
-func Call_log(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) interface{} {
+func Call_log(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
 var x_1 string = x_1_loop
 _ = x_1
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str(x_1))))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str(x_1)))
 }
 
-func Call_infoShow(dictMonadEffect_0_loop gopurs_runtime.Value, dictShow_1_loop gopurs_runtime.Value, x_2_loop interface{}) interface{} {
+func Call_infoShow(dictMonadEffect_0_loop gopurs_runtime.Value, dictShow_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
 var dictShow_1 gopurs_runtime.Value = dictShow_1_loop
 _ = dictShow_1
-var x_2 interface{} = x_2_loop
+var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_info(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_1, "show"), gopurs_runtime.Any(x_2)))))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_info(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_1, "show"), x_2)))
 }
 
-func Call_info(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) interface{} {
+func Call_info(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
 var x_1 string = x_1_loop
 _ = x_1
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_info(), gopurs_runtime.Str(x_1))))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_info(), gopurs_runtime.Str(x_1)))
 }
 
-func Call_groupEnd(dictMonadEffect_0_loop gopurs_runtime.Value) interface{} {
+func Call_groupEnd(dictMonadEffect_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), pkg_Effect_Console.Get_groupEnd()))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), pkg_Effect_Console.Get_groupEnd())
 }
 
-func Call_groupCollapsed(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) interface{} {
-var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
-_ = dictMonadEffect_0
-var x_1 string = x_1_loop
-_ = x_1
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_groupCollapsed(), gopurs_runtime.Str(x_1))))
-}
-
-func Call_group(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) interface{} {
+func Call_groupCollapsed(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
 var x_1 string = x_1_loop
 _ = x_1
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_group(), gopurs_runtime.Str(x_1))))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_groupCollapsed(), gopurs_runtime.Str(x_1)))
+}
+
+func Call_group(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) gopurs_runtime.Value {
+var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
+_ = dictMonadEffect_0
+var x_1 string = x_1_loop
+_ = x_1
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_group(), gopurs_runtime.Str(x_1)))
 }
 
 func Call_grouped(dictMonadEffect_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -327,44 +327,46 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs
 })
 }
 
-func Call_errorShow(dictMonadEffect_0_loop gopurs_runtime.Value, dictShow_1_loop gopurs_runtime.Value, x_2_loop interface{}) interface{} {
+func Call_errorShow(dictMonadEffect_0_loop gopurs_runtime.Value, dictShow_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
 var dictShow_1 gopurs_runtime.Value = dictShow_1_loop
 _ = dictShow_1
-var x_2 interface{} = x_2_loop
+var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_error(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_1, "show"), gopurs_runtime.Any(x_2)))))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_error(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_1, "show"), x_2)))
 }
 
-func Call_error(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) interface{} {
+func Call_error(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
 var x_1 string = x_1_loop
 _ = x_1
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_error(), gopurs_runtime.Str(x_1))))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_error(), gopurs_runtime.Str(x_1)))
 }
 
-func Call_debugShow(dictMonadEffect_0_loop gopurs_runtime.Value, dictShow_1_loop gopurs_runtime.Value, x_2_loop interface{}) interface{} {
+func Call_debugShow(dictMonadEffect_0_loop gopurs_runtime.Value, dictShow_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
 var dictShow_1 gopurs_runtime.Value = dictShow_1_loop
 _ = dictShow_1
-var x_2 interface{} = x_2_loop
+var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_debug(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_1, "show"), gopurs_runtime.Any(x_2)))))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_debug(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_1, "show"), x_2)))
 }
 
-func Call_debug(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) interface{} {
+func Call_debug(dictMonadEffect_0_loop gopurs_runtime.Value, x_1_loop string) gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
 var x_1 string = x_1_loop
 _ = x_1
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_debug(), gopurs_runtime.Str(x_1))))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_debug(), gopurs_runtime.Str(x_1)))
 }
 
-func Call_clear(dictMonadEffect_0_loop gopurs_runtime.Value) interface{} {
+func Call_clear(dictMonadEffect_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
-return gopurs_runtime.UnboxAny(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), pkg_Effect_Console.Get_clear()))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), pkg_Effect_Console.Get_clear())
 }
+
+
