@@ -156,17 +156,17 @@ return __t0
 }
 
 type Constructor_LT struct {
-	
+	Rc uint32
 }
 
 
 type Constructor_GT struct {
-	
+	Rc uint32
 }
 
 
 type Constructor_EQ struct {
-	
+	Rc uint32
 }
 
 

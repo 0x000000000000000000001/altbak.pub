@@ -15,7 +15,7 @@ var once_Val sync.Once
 func Get_Val() gopurs_runtime.Value {
 	once_Val.Do(func() {
 		cache_Val = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Constructor_Val{value0.IntVal})}
+return gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Constructor_Val{1, value0.IntVal})}
 })
 	})
 	return cache_Val
@@ -27,7 +27,7 @@ func Get_Add() gopurs_runtime.Value {
 	once_Add.Do(func() {
 		cache_Add = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2937956733, UnsafePtr: unsafe.Pointer(&Constructor_Add{value0, value1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2937956733, UnsafePtr: unsafe.Pointer(&Constructor_Add{1, value0, value1})}
 })
 })
 	})
@@ -40,7 +40,7 @@ func Get_Mul() gopurs_runtime.Value {
 	once_Mul.Do(func() {
 		cache_Mul = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 3406566728, UnsafePtr: unsafe.Pointer(&Constructor_Mul{value0, value1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 3406566728, UnsafePtr: unsafe.Pointer(&Constructor_Mul{1, value0, value1})}
 })
 })
 	})
@@ -53,7 +53,7 @@ func Get_Sub() gopurs_runtime.Value {
 	once_Sub.Do(func() {
 		cache_Sub = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2029887576, UnsafePtr: unsafe.Pointer(&Constructor_Sub{value0, value1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2029887576, UnsafePtr: unsafe.Pointer(&Constructor_Sub{1, value0, value1})}
 })
 })
 	})
@@ -103,23 +103,27 @@ return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(g
 }
 
 type Constructor_Val struct {
+	Rc uint32
 	V0 int64
 }
 
 
 type Constructor_Add struct {
+	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
 }
 
 
 type Constructor_Mul struct {
+	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
 }
 
 
 type Constructor_Sub struct {
+	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
 }
@@ -181,14 +185,14 @@ _ = v_0
 var __t0 gopurs_runtime.Value
 {
 if (v_0) == (0) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Constructor_Val{1})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Constructor_Val{1, 1})}
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2937956733, UnsafePtr: unsafe.Pointer(&Constructor_Add{gopurs_runtime.Value{Type: 9, IntVal: 3406566728, UnsafePtr: unsafe.Pointer(&Constructor_Mul{gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Constructor_Val{v_0})}, Call_buildTree((v_0) - (1))})}, gopurs_runtime.Value{Type: 9, IntVal: 2029887576, UnsafePtr: unsafe.Pointer(&Constructor_Sub{Call_buildTree((v_0) - (1)), gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Constructor_Val{1})}})}})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2937956733, UnsafePtr: unsafe.Pointer(&Constructor_Add{1, gopurs_runtime.Value{Type: 9, IntVal: 3406566728, UnsafePtr: unsafe.Pointer(&Constructor_Mul{1, gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Constructor_Val{1, v_0})}, Call_buildTree((v_0) - (1))})}, gopurs_runtime.Value{Type: 9, IntVal: 2029887576, UnsafePtr: unsafe.Pointer(&Constructor_Sub{1, Call_buildTree((v_0) - (1)), gopurs_runtime.Value{Type: 9, IntVal: 245188743, UnsafePtr: unsafe.Pointer(&Constructor_Val{1, 1})}})}})}
 }
 end_branch_0:
 return __t0

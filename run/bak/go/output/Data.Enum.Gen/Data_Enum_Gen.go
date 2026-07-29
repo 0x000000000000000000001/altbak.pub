@@ -47,7 +47,15 @@ _ = v_5_3
 var __t4 gopurs_runtime.Value
 {
 if (v_5_3.Type == 9 && v_5_3.IntVal == 930809136 && v_5_3.UnsafePtr != nil) {
-__t4 = gopurs_runtime.Apply(elements_1_0, gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(&pkg_Data_NonEmpty.Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.RecordGet(Bounded0_4_2, "bottom"), gopurs_runtime.Apply4(pkg_Data_Enum.Get_enumFromTo(), Enum1_3_1, pkg_Data_Unfoldable1.Get_unfoldable1Array(), (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v_5_3.UnsafePtr).V0, gopurs_runtime.RecordGet(Bounded0_4_2, "top"))})})
+__t4 = gopurs_runtime.Apply(elements_1_0, func() gopurs_runtime.Value {
+if ((Bounded0_4_2.UnsafePtr) != (nil)) && (((*struct{Rc uint32})(Bounded0_4_2.UnsafePtr).Rc) == (1)) {
+(*pkg_Data_NonEmpty.Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value])(Bounded0_4_2.UnsafePtr).V0 = gopurs_runtime.RecordGet(Bounded0_4_2, "bottom")
+(*pkg_Data_NonEmpty.Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value])(Bounded0_4_2.UnsafePtr).V1 = gopurs_runtime.Apply4(pkg_Data_Enum.Get_enumFromTo(), Enum1_3_1, pkg_Data_Unfoldable1.Get_unfoldable1Array(), (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v_5_3.UnsafePtr).V0, gopurs_runtime.RecordGet(Bounded0_4_2, "top"))
+return Bounded0_4_2
+} else {
+return gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(&pkg_Data_NonEmpty.Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.RecordGet(Bounded0_4_2, "bottom"), gopurs_runtime.Apply4(pkg_Data_Enum.Get_enumFromTo(), Enum1_3_1, pkg_Data_Unfoldable1.Get_unfoldable1Array(), (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v_5_3.UnsafePtr).V0, gopurs_runtime.RecordGet(Bounded0_4_2, "top"))})}
+}
+}())
 goto end_branch_4
 } else {
 

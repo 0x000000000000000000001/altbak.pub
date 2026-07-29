@@ -112,7 +112,15 @@ _ = dictGenericMonoid_0
 genericMempty_prime1_1_0 := gopurs_runtime.RecordGet(dictGenericMonoid_0, "genericMempty'")
 _ = genericMempty_prime1_1_0
 return gopurs_runtime.Func(func(dictGenericMonoid1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("genericMempty'", gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]{genericMempty_prime1_1_0, gopurs_runtime.RecordGet(dictGenericMonoid1_2, "genericMempty'")})})
+return gopurs_runtime.RecordDict1("genericMempty'", func() gopurs_runtime.Value {
+if ((genericMempty_prime1_1_0.UnsafePtr) != (nil)) && (((*struct{Rc uint32})(genericMempty_prime1_1_0.UnsafePtr).Rc) == (1)) {
+(*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(genericMempty_prime1_1_0.UnsafePtr).V0 = genericMempty_prime1_1_0
+(*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(genericMempty_prime1_1_0.UnsafePtr).V1 = gopurs_runtime.RecordGet(dictGenericMonoid1_2, "genericMempty'")
+return genericMempty_prime1_1_0
+} else {
+return gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]{1, genericMempty_prime1_1_0, gopurs_runtime.RecordGet(dictGenericMonoid1_2, "genericMempty'")})}
+}
+}())
 })
 }
 

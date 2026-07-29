@@ -28,7 +28,7 @@ func Get_Iterator() gopurs_runtime.Value {
 	once_Iterator.Do(func() {
 		cache_Iterator = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 3127013252, UnsafePtr: unsafe.Pointer(&Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value]{value0, value1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 3127013252, UnsafePtr: unsafe.Pointer(&Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value]{1, value0, value1})}
 })
 })
 	})
@@ -117,6 +117,7 @@ return gopurs_runtime.Apply(__local_var_0_0, Call_peek(x_1))
 }
 
 type Constructor_Iterator[T_r any, T_a any] struct {
+	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
 }

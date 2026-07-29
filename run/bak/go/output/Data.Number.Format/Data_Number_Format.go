@@ -91,7 +91,7 @@ var once_Precision sync.Once
 func Get_Precision() gopurs_runtime.Value {
 	once_Precision.Do(func() {
 		cache_Precision = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1786680275, UnsafePtr: unsafe.Pointer(&Constructor_Precision{value0.IntVal})}
+return gopurs_runtime.Value{Type: 9, IntVal: 1786680275, UnsafePtr: unsafe.Pointer(&Constructor_Precision{1, value0.IntVal})}
 })
 	})
 	return cache_Precision
@@ -102,7 +102,7 @@ var once_Fixed sync.Once
 func Get_Fixed() gopurs_runtime.Value {
 	once_Fixed.Do(func() {
 		cache_Fixed = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1390206259, UnsafePtr: unsafe.Pointer(&Constructor_Fixed{value0.IntVal})}
+return gopurs_runtime.Value{Type: 9, IntVal: 1390206259, UnsafePtr: unsafe.Pointer(&Constructor_Fixed{1, value0.IntVal})}
 })
 	})
 	return cache_Fixed
@@ -113,7 +113,7 @@ var once_Exponential sync.Once
 func Get_Exponential() gopurs_runtime.Value {
 	once_Exponential.Do(func() {
 		cache_Exponential = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1734244434, UnsafePtr: unsafe.Pointer(&Constructor_Exponential{value0.IntVal})}
+return gopurs_runtime.Value{Type: 9, IntVal: 1734244434, UnsafePtr: unsafe.Pointer(&Constructor_Exponential{1, value0.IntVal})}
 })
 	})
 	return cache_Exponential
@@ -138,7 +138,14 @@ func Get_precision() gopurs_runtime.Value {
 __local_var_0_0 := gopurs_runtime.Apply2(Get_clamp(), gopurs_runtime.Int(1), gopurs_runtime.Int(21))
 _ = __local_var_0_0
 return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1786680275, UnsafePtr: unsafe.Pointer(&Constructor_Precision{gopurs_runtime.Apply(__local_var_0_0, x_1).IntVal})}
+return func() gopurs_runtime.Value {
+if ((__local_var_0_0.UnsafePtr) != (nil)) && (((*struct{Rc uint32})(__local_var_0_0.UnsafePtr).Rc) == (1)) {
+(*Constructor_Precision)(__local_var_0_0.UnsafePtr).V0 = gopurs_runtime.Apply(__local_var_0_0, x_1).IntVal
+return __local_var_0_0
+} else {
+return gopurs_runtime.Value{Type: 9, IntVal: 1786680275, UnsafePtr: unsafe.Pointer(&Constructor_Precision{1, gopurs_runtime.Apply(__local_var_0_0, x_1).IntVal})}
+}
+}()
 })
 }()
 	})
@@ -153,7 +160,14 @@ func Get_fixed() gopurs_runtime.Value {
 __local_var_0_0 := gopurs_runtime.Apply2(Get_clamp(), gopurs_runtime.Int(0), gopurs_runtime.Int(20))
 _ = __local_var_0_0
 return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1390206259, UnsafePtr: unsafe.Pointer(&Constructor_Fixed{gopurs_runtime.Apply(__local_var_0_0, x_1).IntVal})}
+return func() gopurs_runtime.Value {
+if ((__local_var_0_0.UnsafePtr) != (nil)) && (((*struct{Rc uint32})(__local_var_0_0.UnsafePtr).Rc) == (1)) {
+(*Constructor_Fixed)(__local_var_0_0.UnsafePtr).V0 = gopurs_runtime.Apply(__local_var_0_0, x_1).IntVal
+return __local_var_0_0
+} else {
+return gopurs_runtime.Value{Type: 9, IntVal: 1390206259, UnsafePtr: unsafe.Pointer(&Constructor_Fixed{1, gopurs_runtime.Apply(__local_var_0_0, x_1).IntVal})}
+}
+}()
 })
 }()
 	})
@@ -168,7 +182,14 @@ func Get_exponential() gopurs_runtime.Value {
 __local_var_0_0 := gopurs_runtime.Apply2(Get_clamp(), gopurs_runtime.Int(0), gopurs_runtime.Int(20))
 _ = __local_var_0_0
 return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1734244434, UnsafePtr: unsafe.Pointer(&Constructor_Exponential{gopurs_runtime.Apply(__local_var_0_0, x_1).IntVal})}
+return func() gopurs_runtime.Value {
+if ((__local_var_0_0.UnsafePtr) != (nil)) && (((*struct{Rc uint32})(__local_var_0_0.UnsafePtr).Rc) == (1)) {
+(*Constructor_Exponential)(__local_var_0_0.UnsafePtr).V0 = gopurs_runtime.Apply(__local_var_0_0, x_1).IntVal
+return __local_var_0_0
+} else {
+return gopurs_runtime.Value{Type: 9, IntVal: 1734244434, UnsafePtr: unsafe.Pointer(&Constructor_Exponential{1, gopurs_runtime.Apply(__local_var_0_0, x_1).IntVal})}
+}
+}()
 })
 }()
 	})
@@ -176,16 +197,19 @@ return gopurs_runtime.Value{Type: 9, IntVal: 1734244434, UnsafePtr: unsafe.Point
 }
 
 type Constructor_Precision struct {
+	Rc uint32
 	V0 int64
 }
 
 
 type Constructor_Fixed struct {
+	Rc uint32
 	V0 int64
 }
 
 
 type Constructor_Exponential struct {
+	Rc uint32
 	V0 int64
 }
 

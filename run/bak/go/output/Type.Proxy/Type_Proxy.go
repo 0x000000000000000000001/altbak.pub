@@ -15,7 +15,7 @@ func Get_Proxy() gopurs_runtime.Value {
 }
 
 type Constructor_Proxy[T_a any] struct {
-	
+	Rc uint32
 }
 
 

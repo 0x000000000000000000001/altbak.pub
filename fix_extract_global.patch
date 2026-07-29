@@ -1,0 +1,34 @@
+--- ../gopurs/src/Gopurs/CodeGen.purs
++++ ../gopurs/src/Gopurs/CodeGen.purs
+@@ -195,15 +195,20 @@
+           Nothing -> Nothing
+ 
+ extractUncurriedAbs :: TcoExpr -> Maybe { args :: Array String, body :: TcoExpr, fvs :: Set String }
+-extractUncurriedAbs tcoExpr@(TcoExpr _ syntax) = case syntax of
+-  UncurriedAbs args body ->
+-    Just { args: map (\(Tuple mbI lvl) -> localId mbI lvl) args, body, fvs: freeVars tcoExpr }
+-  Abs args body ->
+-    let
+-      thisArgs = map (\(Tuple mbI lvl) -> localId mbI lvl) (toArray args)
+-    in case extractUncurriedAbs body of
+-      Just inner -> Just { args: thisArgs <> inner.args, body: inner.body, fvs: Set.union (freeVars tcoExpr) inner.fvs }
+-      Nothing -> Just { args: thisArgs, body, fvs: freeVars tcoExpr }
+-  Typed _ inner -> extractUncurriedAbs inner
++extractUncurriedAbs tcoExpr@(TcoExpr a e) =
++  let expectedTy = getExprType tcoExpr
++      fRet = case expectedTy of
++        Func _ ret -> ret
++        _ -> Any
++      go (TcoExpr _ syntax) = case syntax of
++        UncurriedAbs args body ->
++          Just { args: map (\(Tuple mbI lvl) -> localId mbI lvl) args, body: if fRet /= Any then setTcoExprType fRet body else body, fvs: freeVars tcoExpr }
++        Abs args body ->
++          let
++            thisArgs = map (\(Tuple mbI lvl) -> localId mbI lvl) (toArray args)
++          in case go body of
++            Just inner -> Just { args: thisArgs <> inner.args, body: inner.body, fvs: Set.union (freeVars tcoExpr) inner.fvs }
++            Nothing -> Just { args: thisArgs, body: if fRet /= Any then setTcoExprType fRet body else body, fvs: freeVars tcoExpr }
++        Typed _ inner -> go inner
++  in go tcoExpr
+ 
+ getLevel :: Maybe Ident -> Int -> Int

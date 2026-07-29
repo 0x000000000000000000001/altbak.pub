@@ -1,0 +1,681 @@
+{
+  "annotation": {
+    "meta": null,
+    "sourceSpan": {
+      "end": [
+        31,
+        34
+      ],
+      "start": [
+        31,
+        1
+      ]
+    },
+    "type": null
+  },
+  "bindType": "NonRec",
+  "expression": {
+    "annotation": {
+      "meta": null,
+      "sourceSpan": {
+        "end": [
+          31,
+          34
+        ],
+        "start": [
+          31,
+          1
+        ]
+      },
+      "type": {
+        "Func": {
+          "args": [
+            {
+              "ADT": {
+                "args": [],
+                "path": [
+                  "Test",
+                  "RBTree",
+                  "Tree"
+                ]
+              }
+            }
+          ],
+          "ret": {
+            "ADT": {
+              "args": [],
+              "path": [
+                "Test",
+                "RBTree",
+                "Tree"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "argument": "v",
+    "body": {
+      "annotation": {
+        "meta": null,
+        "sourceSpan": {
+          "end": [
+            31,
+            34
+          ],
+          "start": [
+            31,
+            1
+          ]
+        },
+        "type": {
+          "ADT": {
+            "args": [],
+            "path": [
+              "Test",
+              "RBTree",
+              "Tree"
+            ]
+          }
+        }
+      },
+      "caseAlternatives": [
+        {
+          "binders": [
+            {
+              "annotation": {
+                "meta": {
+                  "constructorType": "SumType",
+                  "identifiers": [
+                    "value0",
+                    "value1",
+                    "value2",
+                    "value3"
+                  ],
+                  "metaType": "IsConstructor"
+                },
+                "sourceSpan": {
+                  "end": [
+                    31,
+                    21
+                  ],
+                  "start": [
+                    31,
+                    12
+                  ]
+                },
+                "type": null
+              },
+              "binderType": "ConstructorBinder",
+              "binders": [
+                {
+                  "annotation": {
+                    "meta": null,
+                    "sourceSpan": {
+                      "end": [
+                        31,
+                        15
+                      ],
+                      "start": [
+                        31,
+                        14
+                      ]
+                    },
+                    "type": null
+                  },
+                  "binderType": "NullBinder"
+                },
+                {
+                  "annotation": {
+                    "meta": null,
+                    "sourceSpan": {
+                      "end": [
+                        31,
+                        17
+                      ],
+                      "start": [
+                        31,
+                        16
+                      ]
+                    },
+                    "type": null
+                  },
+                  "binderType": "VarBinder",
+                  "identifier": "a"
+                },
+                {
+                  "annotation": {
+                    "meta": null,
+                    "sourceSpan": {
+                      "end": [
+                        31,
+                        19
+                      ],
+                      "start": [
+                        31,
+                        18
+                      ]
+                    },
+                    "type": null
+                  },
+                  "binderType": "VarBinder",
+                  "identifier": "y"
+                },
+                {
+                  "annotation": {
+                    "meta": null,
+                    "sourceSpan": {
+                      "end": [
+                        31,
+                        21
+                      ],
+                      "start": [
+                        31,
+                        20
+                      ]
+                    },
+                    "type": null
+                  },
+                  "binderType": "VarBinder",
+                  "identifier": "b"
+                }
+              ],
+              "constructorName": {
+                "identifier": "T",
+                "moduleName": [
+                  "Test",
+                  "RBTree"
+                ]
+              },
+              "typeName": {
+                "identifier": "Tree",
+                "moduleName": [
+                  "Test",
+                  "RBTree"
+                ]
+              }
+            }
+          ],
+          "expression": {
+            "abstraction": {
+              "abstraction": {
+                "abstraction": {
+                  "abstraction": {
+                    "annotation": {
+                      "meta": {
+                        "constructorType": "SumType",
+                        "identifiers": [
+                          "value0",
+                          "value1",
+                          "value2",
+                          "value3"
+                        ],
+                        "metaType": "IsConstructor"
+                      },
+                      "sourceSpan": {
+                        "end": [
+                          31,
+                          26
+                        ],
+                        "start": [
+                          31,
+                          25
+                        ]
+                      },
+                      "type": {
+                        "Func": {
+                          "args": [
+                            {
+                              "ADT": {
+                                "args": [],
+                                "path": [
+                                  "Test",
+                                  "RBTree",
+                                  "Color"
+                                ]
+                              }
+                            },
+                            {
+                              "ADT": {
+                                "args": [],
+                                "path": [
+                                  "Test",
+                                  "RBTree",
+                                  "Tree"
+                                ]
+                              }
+                            },
+                            "Int",
+                            {
+                              "ADT": {
+                                "args": [],
+                                "path": [
+                                  "Test",
+                                  "RBTree",
+                                  "Tree"
+                                ]
+                              }
+                            }
+                          ],
+                          "ret": {
+                            "ADT": {
+                              "args": [],
+                              "path": [
+                                "Test",
+                                "RBTree",
+                                "Tree"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "type": "Var",
+                    "value": {
+                      "identifier": "T",
+                      "moduleName": [
+                        "Test",
+                        "RBTree"
+                      ]
+                    }
+                  },
+                  "annotation": {
+                    "meta": null,
+                    "sourceSpan": {
+                      "end": [
+                        31,
+                        28
+                      ],
+                      "start": [
+                        31,
+                        25
+                      ]
+                    },
+                    "type": {
+                      "Func": {
+                        "args": [
+                          {
+                            "ADT": {
+                              "args": [],
+                              "path": [
+                                "Test",
+                                "RBTree",
+                                "Tree"
+                              ]
+                            }
+                          },
+                          "Int",
+                          {
+                            "ADT": {
+                              "args": [],
+                              "path": [
+                                "Test",
+                                "RBTree",
+                                "Tree"
+                              ]
+                            }
+                          }
+                        ],
+                        "ret": {
+                          "ADT": {
+                            "args": [],
+                            "path": [
+                              "Test",
+                              "RBTree",
+                              "Tree"
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "argument": {
+                    "annotation": {
+                      "meta": {
+                        "constructorType": "SumType",
+                        "identifiers": [],
+                        "metaType": "IsConstructor"
+                      },
+                      "sourceSpan": {
+                        "end": [
+                          31,
+                          28
+                        ],
+                        "start": [
+                          31,
+                          27
+                        ]
+                      },
+                      "type": {
+                        "ADT": {
+                          "args": [],
+                          "path": [
+                            "Test",
+                            "RBTree",
+                            "Color"
+                          ]
+                        }
+                      }
+                    },
+                    "type": "Var",
+                    "value": {
+                      "identifier": "B",
+                      "moduleName": [
+                        "Test",
+                        "RBTree"
+                      ]
+                    }
+                  },
+                  "type": "App"
+                },
+                "annotation": {
+                  "meta": null,
+                  "sourceSpan": {
+                    "end": [
+                      31,
+                      30
+                    ],
+                    "start": [
+                      31,
+                      25
+                    ]
+                  },
+                  "type": {
+                    "Func": {
+                      "args": [
+                        "Int",
+                        {
+                          "ADT": {
+                            "args": [],
+                            "path": [
+                              "Test",
+                              "RBTree",
+                              "Tree"
+                            ]
+                          }
+                        }
+                      ],
+                      "ret": {
+                        "ADT": {
+                          "args": [],
+                          "path": [
+                            "Test",
+                            "RBTree",
+                            "Tree"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "argument": {
+                  "annotation": {
+                    "meta": null,
+                    "sourceSpan": {
+                      "end": [
+                        31,
+                        30
+                      ],
+                      "start": [
+                        31,
+                        29
+                      ]
+                    },
+                    "type": {
+                      "ADT": {
+                        "args": [],
+                        "path": [
+                          "Test",
+                          "RBTree",
+                          "Tree"
+                        ]
+                      }
+                    }
+                  },
+                  "type": "Var",
+                  "value": {
+                    "identifier": "a",
+                    "sourcePos": [
+                      31,
+                      16
+                    ]
+                  }
+                },
+                "type": "App"
+              },
+              "annotation": {
+                "meta": null,
+                "sourceSpan": {
+                  "end": [
+                    31,
+                    32
+                  ],
+                  "start": [
+                    31,
+                    25
+                  ]
+                },
+                "type": {
+                  "Func": {
+                    "args": [
+                      {
+                        "ADT": {
+                          "args": [],
+                          "path": [
+                            "Test",
+                            "RBTree",
+                            "Tree"
+                          ]
+                        }
+                      }
+                    ],
+                    "ret": {
+                      "ADT": {
+                        "args": [],
+                        "path": [
+                          "Test",
+                          "RBTree",
+                          "Tree"
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              "argument": {
+                "annotation": {
+                  "meta": null,
+                  "sourceSpan": {
+                    "end": [
+                      31,
+                      32
+                    ],
+                    "start": [
+                      31,
+                      31
+                    ]
+                  },
+                  "type": "Int"
+                },
+                "type": "Var",
+                "value": {
+                  "identifier": "y",
+                  "sourcePos": [
+                    31,
+                    18
+                  ]
+                }
+              },
+              "type": "App"
+            },
+            "annotation": {
+              "meta": null,
+              "sourceSpan": {
+                "end": [
+                  31,
+                  34
+                ],
+                "start": [
+                  31,
+                  25
+                ]
+              },
+              "type": {
+                "ADT": {
+                  "args": [],
+                  "path": [
+                    "Test",
+                    "RBTree",
+                    "Tree"
+                  ]
+                }
+              }
+            },
+            "argument": {
+              "annotation": {
+                "meta": null,
+                "sourceSpan": {
+                  "end": [
+                    31,
+                    34
+                  ],
+                  "start": [
+                    31,
+                    33
+                  ]
+                },
+                "type": {
+                  "ADT": {
+                    "args": [],
+                    "path": [
+                      "Test",
+                      "RBTree",
+                      "Tree"
+                    ]
+                  }
+                }
+              },
+              "type": "Var",
+              "value": {
+                "identifier": "b",
+                "sourcePos": [
+                  31,
+                  20
+                ]
+              }
+            },
+            "type": "App"
+          },
+          "isGuarded": false
+        },
+        {
+          "binders": [
+            {
+              "annotation": {
+                "meta": {
+                  "constructorType": "SumType",
+                  "identifiers": [],
+                  "metaType": "IsConstructor"
+                },
+                "sourceSpan": {
+                  "end": [
+                    32,
+                    12
+                  ],
+                  "start": [
+                    32,
+                    11
+                  ]
+                },
+                "type": null
+              },
+              "binderType": "ConstructorBinder",
+              "binders": [],
+              "constructorName": {
+                "identifier": "E",
+                "moduleName": [
+                  "Test",
+                  "RBTree"
+                ]
+              },
+              "typeName": {
+                "identifier": "Tree",
+                "moduleName": [
+                  "Test",
+                  "RBTree"
+                ]
+              }
+            }
+          ],
+          "expression": {
+            "annotation": {
+              "meta": {
+                "constructorType": "SumType",
+                "identifiers": [],
+                "metaType": "IsConstructor"
+              },
+              "sourceSpan": {
+                "end": [
+                  32,
+                  16
+                ],
+                "start": [
+                  32,
+                  15
+                ]
+              },
+              "type": {
+                "ADT": {
+                  "args": [],
+                  "path": [
+                    "Test",
+                    "RBTree",
+                    "Tree"
+                  ]
+                }
+              }
+            },
+            "type": "Var",
+            "value": {
+              "identifier": "E",
+              "moduleName": [
+                "Test",
+                "RBTree"
+              ]
+            }
+          },
+          "isGuarded": false
+        }
+      ],
+      "caseExpressions": [
+        {
+          "annotation": {
+            "meta": null,
+            "sourceSpan": {
+              "end": [
+                31,
+                34
+              ],
+              "start": [
+                31,
+                1
+              ]
+            },
+            "type": null
+          },
+          "type": "Var",
+          "value": {
+            "identifier": "v",
+            "sourcePos": [
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "type": "Case"
+    },
+    "type": "Abs"
+  },
+  "identifier": "makeBlack"
+}

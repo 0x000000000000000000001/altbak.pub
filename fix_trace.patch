@@ -1,0 +1,13 @@
+--- ../gopurs/src/Gopurs/CodeGen.purs
++++ ../gopurs/src/Gopurs/CodeGen.purs
+@@ -292,8 +292,8 @@
+     extractUncurriedAbs :: TcoExpr -> Maybe { args :: Array String, body :: TcoExpr, fvs :: Set String }
+     extractUncurriedAbs (TcoExpr a e) =
+       let expectedTy = getExprType (TcoExpr a e)
+-      let traceMsg = case expectedTy of Func _ _ -> "Func"; ADT _ _ -> "ADT"; Any -> "Any"; _ -> "Other"
+-          _ = Debug.trace ("extractUncurriedAbs expectedTy: " <> traceMsg) (\_ -> unit)
++          traceMsg = case expectedTy of Func _ _ -> "Func"; ADT _ _ -> "ADT"; Any -> "Any"; _ -> "Other"
++      in Debug.trace ("extractUncurriedAbs expectedTy: " <> traceMsg) \_ ->
++      let
+           fRet = case expectedTy of
+             Func _ ret -> ret

@@ -198,6 +198,24 @@ func Get_pushAll() gopurs_runtime.Value {
 	return cache_pushAll
 }
 
+var cache_pushAll__gopurs_runtime_Value_212242303 gopurs_runtime.Value
+var once_pushAll__gopurs_runtime_Value_212242303 sync.Once
+func Get_pushAll__gopurs_runtime_Value_212242303() gopurs_runtime.Value {
+	once_pushAll__gopurs_runtime_Value_212242303.Do(func() {
+		cache_pushAll__gopurs_runtime_Value_212242303 = gopurs_runtime.Apply(pkg_Control_Monad_ST_Uncurried.Get_runSTFn2(), Get_pushAllImpl())
+	})
+	return cache_pushAll__gopurs_runtime_Value_212242303
+}
+
+var cache_pushAll__gopurs_runtime_Value_2602532183 gopurs_runtime.Value
+var once_pushAll__gopurs_runtime_Value_2602532183 sync.Once
+func Get_pushAll__gopurs_runtime_Value_2602532183() gopurs_runtime.Value {
+	once_pushAll__gopurs_runtime_Value_2602532183.Do(func() {
+		cache_pushAll__gopurs_runtime_Value_2602532183 = gopurs_runtime.Apply(pkg_Control_Monad_ST_Uncurried.Get_runSTFn2(), Get_pushAllImpl())
+	})
+	return cache_pushAll__gopurs_runtime_Value_2602532183
+}
+
 var cache_push gopurs_runtime.Value
 var once_push sync.Once
 func Get_push() gopurs_runtime.Value {

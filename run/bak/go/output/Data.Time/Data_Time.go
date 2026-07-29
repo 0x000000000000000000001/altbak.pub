@@ -40,7 +40,7 @@ func Get_Time() gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Constructor_Time{value0.IntVal, value1.IntVal, value2.IntVal, value3.IntVal})}
+return gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Constructor_Time{1, value0.IntVal, value1.IntVal, value2.IntVal, value3.IntVal})}
 })
 })
 })
@@ -280,7 +280,7 @@ func Get_boundedTime() gopurs_runtime.Value {
 	once_boundedTime.Do(func() {
 		cache_boundedTime = gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_ordTime()
-}), gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Constructor_Time{gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedHour(), "bottom").IntVal, gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedMinute(), "bottom").IntVal, gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedSecond(), "bottom").IntVal, gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedMillisecond(), "bottom").IntVal})}, gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Constructor_Time{gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedHour(), "top").IntVal, gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedMinute(), "top").IntVal, gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedSecond(), "top").IntVal, gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedMillisecond(), "top").IntVal})})
+}), gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Constructor_Time{1, gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedHour(), "bottom").IntVal, gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedMinute(), "bottom").IntVal, gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedSecond(), "bottom").IntVal, gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedMillisecond(), "bottom").IntVal})}, gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Constructor_Time{1, gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedHour(), "top").IntVal, gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedMinute(), "top").IntVal, gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedSecond(), "top").IntVal, gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedMillisecond(), "top").IntVal})})
 	})
 	return cache_boundedTime
 }
@@ -315,6 +315,7 @@ return Call_adjust(dictDuration_0_box, d_1_box, t_2_box)
 }
 
 type Constructor_Time struct {
+	Rc uint32
 	V0 int64
 	V1 int64
 	V2 int64
@@ -327,7 +328,7 @@ var s_0 int64 = s_0_loop
 _ = s_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Constructor_Time{gopurs_runtime.Int((*Constructor_Time)(v_1.UnsafePtr).V0).IntVal, gopurs_runtime.Int((*Constructor_Time)(v_1.UnsafePtr).V1).IntVal, s_0, gopurs_runtime.Int((*Constructor_Time)(v_1.UnsafePtr).V3).IntVal})}
+return gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Constructor_Time{1, gopurs_runtime.Int((*Constructor_Time)(v_1.UnsafePtr).V0).IntVal, gopurs_runtime.Int((*Constructor_Time)(v_1.UnsafePtr).V1).IntVal, s_0, gopurs_runtime.Int((*Constructor_Time)(v_1.UnsafePtr).V3).IntVal})}
 }
 
 func Call_setMinute(m_0_loop int64, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -335,7 +336,7 @@ var m_0 int64 = m_0_loop
 _ = m_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Constructor_Time{gopurs_runtime.Int((*Constructor_Time)(v_1.UnsafePtr).V0).IntVal, m_0, gopurs_runtime.Int((*Constructor_Time)(v_1.UnsafePtr).V2).IntVal, gopurs_runtime.Int((*Constructor_Time)(v_1.UnsafePtr).V3).IntVal})}
+return gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Constructor_Time{1, gopurs_runtime.Int((*Constructor_Time)(v_1.UnsafePtr).V0).IntVal, m_0, gopurs_runtime.Int((*Constructor_Time)(v_1.UnsafePtr).V2).IntVal, gopurs_runtime.Int((*Constructor_Time)(v_1.UnsafePtr).V3).IntVal})}
 }
 
 func Call_setMillisecond(ms_0_loop int64, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -343,7 +344,7 @@ var ms_0 int64 = ms_0_loop
 _ = ms_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Constructor_Time{gopurs_runtime.Int((*Constructor_Time)(v_1.UnsafePtr).V0).IntVal, gopurs_runtime.Int((*Constructor_Time)(v_1.UnsafePtr).V1).IntVal, gopurs_runtime.Int((*Constructor_Time)(v_1.UnsafePtr).V2).IntVal, ms_0})}
+return gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Constructor_Time{1, gopurs_runtime.Int((*Constructor_Time)(v_1.UnsafePtr).V0).IntVal, gopurs_runtime.Int((*Constructor_Time)(v_1.UnsafePtr).V1).IntVal, gopurs_runtime.Int((*Constructor_Time)(v_1.UnsafePtr).V2).IntVal, ms_0})}
 }
 
 func Call_setHour(h_0_loop int64, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -351,7 +352,7 @@ var h_0 int64 = h_0_loop
 _ = h_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Constructor_Time{h_0, gopurs_runtime.Int((*Constructor_Time)(v_1.UnsafePtr).V1).IntVal, gopurs_runtime.Int((*Constructor_Time)(v_1.UnsafePtr).V2).IntVal, gopurs_runtime.Int((*Constructor_Time)(v_1.UnsafePtr).V3).IntVal})}
+return gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Constructor_Time{1, h_0, gopurs_runtime.Int((*Constructor_Time)(v_1.UnsafePtr).V1).IntVal, gopurs_runtime.Int((*Constructor_Time)(v_1.UnsafePtr).V2).IntVal, gopurs_runtime.Int((*Constructor_Time)(v_1.UnsafePtr).V3).IntVal})}
 }
 
 func Call_second(v_0_loop gopurs_runtime.Value) int64 {
@@ -457,7 +458,15 @@ __t4 = gopurs_runtime.Float(0.0)
 end_branch_4:
 wrap_6_3 := __t4
 _ = wrap_6_3
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupDays(), "append"), wholeDays_4_1, wrap_6_3), Call_millisToTime(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupMilliseconds(), "append"), msAdjusted_5_2, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "mul"), gopurs_runtime.Float(86400000.0), gopurs_runtime.Apply(Get_negate(), wrap_6_3))).FloatVal())})}
+return func() gopurs_runtime.Value {
+if ((d_1.UnsafePtr) != (nil)) && (((*struct{Rc uint32})(d_1.UnsafePtr).Rc) == (1)) {
+(*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(d_1.UnsafePtr).V0 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupDays(), "append"), wholeDays_4_1, wrap_6_3)
+(*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(d_1.UnsafePtr).V1 = Call_millisToTime(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupMilliseconds(), "append"), msAdjusted_5_2, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "mul"), gopurs_runtime.Float(86400000.0), gopurs_runtime.Apply(Get_negate(), wrap_6_3))).FloatVal())
+return d_1
+} else {
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupDays(), "append"), wholeDays_4_1, wrap_6_3), Call_millisToTime(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupMilliseconds(), "append"), msAdjusted_5_2, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "mul"), gopurs_runtime.Float(86400000.0), gopurs_runtime.Apply(Get_negate(), wrap_6_3))).FloatVal())})}
+}
+}()
 }
 
 

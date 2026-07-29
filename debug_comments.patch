@@ -1,0 +1,18 @@
+--- ../gopurs/src/Gopurs/CodeGen.purs
++++ ../gopurs/src/Gopurs/CodeGen.purs
+@@ -1134,7 +1134,7 @@
+             typedBody = if expectedTy /= Any then setTcoExprType expectedTy body else body
+             resBody = translateExprImpl_ helpersRef (depth + 1) modNameStr recVars moduleArities newBound Nothing loopCtx isTail false resVal.nextId typedBody
+           in
+-            { stmts: resVal.stmts <> StmtLeaf (GoRaw ("var " <> ident <> " " <> goTypeToStr expectedGoTypeForVal <> " = " <> printGoExpr (coerceGoExpr resVal.expr resVal.exprType expectedGoTypeForVal))) <> StmtLeaf (GoRaw ("_ = " <> ident)) <> resBody.stmts, expr: resBody.expr, exprType: resBody.exprType, nextId: resBody.nextId }
++            { stmts: resVal.stmts <> StmtLeaf (GoRaw ("// DEBUG: Let " <> ident <> " expectedTy is " <> (if expectedTy /= Any then "NOT ANY" else "ANY"))) <> StmtLeaf (GoRaw ("var " <> ident <> " " <> goTypeToStr expectedGoTypeForVal <> " = " <> printGoExpr (coerceGoExpr resVal.expr resVal.exprType expectedGoTypeForVal))) <> StmtLeaf (GoRaw ("_ = " <> ident)) <> resBody.stmts, expr: resBody.expr, exprType: resBody.exprType, nextId: resBody.nextId }
+   
+         LetRec lvl bindings body ->
+           let
+@@ -1445,6 +1445,7 @@
+             expectedGoTypeStr = goTypeToStr expectedGoTypeForBranch
+             tmpVar = "__t" <> show resDef.nextId
+-            declTmp = StmtLeaf (GoRaw ("var " <> tmpVar <> " " <> expectedGoTypeStr))
++            declTmp = StmtLeaf (GoRaw ("// DEBUG: Branch expectedTy is " <> (if expectedTy /= Any then "NOT ANY" else "ANY"))) <> StmtLeaf (GoRaw ("var " <> tmpVar <> " " <> expectedGoTypeStr))
+             labelName = "end_branch_" <> show resDef.nextId
+   

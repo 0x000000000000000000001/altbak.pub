@@ -87,7 +87,7 @@ func Get_StartEnd() gopurs_runtime.Value {
 	once_StartEnd.Do(func() {
 		cache_StartEnd = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 237113226, UnsafePtr: unsafe.Pointer(&Constructor_StartEnd[gopurs_runtime.Value, gopurs_runtime.Value]{value0, value1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 237113226, UnsafePtr: unsafe.Pointer(&Constructor_StartEnd[gopurs_runtime.Value, gopurs_runtime.Value]{1, value0, value1})}
 })
 })
 	})
@@ -100,7 +100,7 @@ func Get_DurationEnd() gopurs_runtime.Value {
 	once_DurationEnd.Do(func() {
 		cache_DurationEnd = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1992629780, UnsafePtr: unsafe.Pointer(&Constructor_DurationEnd[gopurs_runtime.Value, gopurs_runtime.Value]{value0, value1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 1992629780, UnsafePtr: unsafe.Pointer(&Constructor_DurationEnd[gopurs_runtime.Value, gopurs_runtime.Value]{1, value0, value1})}
 })
 })
 	})
@@ -113,7 +113,7 @@ func Get_StartDuration() gopurs_runtime.Value {
 	once_StartDuration.Do(func() {
 		cache_StartDuration = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2020675835, UnsafePtr: unsafe.Pointer(&Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value]{value0, value1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2020675835, UnsafePtr: unsafe.Pointer(&Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value]{1, value0, value1})}
 })
 })
 	})
@@ -125,7 +125,7 @@ var once_DurationOnly sync.Once
 func Get_DurationOnly() gopurs_runtime.Value {
 	once_DurationOnly.Do(func() {
 		cache_DurationOnly = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2281256335, UnsafePtr: unsafe.Pointer(&Constructor_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value]{value0})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2281256335, UnsafePtr: unsafe.Pointer(&Constructor_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value]{1, value0})}
 })
 	})
 	return cache_DurationOnly
@@ -137,7 +137,7 @@ func Get_RecurringInterval() gopurs_runtime.Value {
 	once_RecurringInterval.Do(func() {
 		cache_RecurringInterval = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2355637979, UnsafePtr: unsafe.Pointer(&Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value]{(*pkg_Data_Maybe.Constructor_Just[int64])(value0.UnsafePtr), value1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2355637979, UnsafePtr: unsafe.Pointer(&Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*pkg_Data_Maybe.Constructor_Just[int64])(value0.UnsafePtr), value1})}
 })
 })
 	})
@@ -319,7 +319,7 @@ func Get_bifunctorInterval() gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (v2_2.Type == 9 && v2_2.IntVal == 237113226) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 237113226, UnsafePtr: unsafe.Pointer(&Constructor_StartEnd[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Apply(v1_1, (*Constructor_StartEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0), gopurs_runtime.Apply(v1_1, (*Constructor_StartEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V1)})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 237113226, UnsafePtr: unsafe.Pointer(&Constructor_StartEnd[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply(v1_1, (*Constructor_StartEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0), gopurs_runtime.Apply(v1_1, (*Constructor_StartEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V1)})}
 goto end_branch_0
 } else {
 
@@ -327,7 +327,7 @@ goto end_branch_0
 }
 {
 if (v2_2.Type == 9 && v2_2.IntVal == 1992629780) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 1992629780, UnsafePtr: unsafe.Pointer(&Constructor_DurationEnd[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Apply(v_0, (*Constructor_DurationEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0), gopurs_runtime.Apply(v1_1, (*Constructor_DurationEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V1)})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 1992629780, UnsafePtr: unsafe.Pointer(&Constructor_DurationEnd[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply(v_0, (*Constructor_DurationEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0), gopurs_runtime.Apply(v1_1, (*Constructor_DurationEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V1)})}
 goto end_branch_0
 } else {
 
@@ -335,7 +335,7 @@ goto end_branch_0
 }
 {
 if (v2_2.Type == 9 && v2_2.IntVal == 2020675835) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2020675835, UnsafePtr: unsafe.Pointer(&Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Apply(v1_1, (*Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0), gopurs_runtime.Apply(v_0, (*Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V1)})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2020675835, UnsafePtr: unsafe.Pointer(&Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply(v1_1, (*Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0), gopurs_runtime.Apply(v_0, (*Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V1)})}
 goto end_branch_0
 } else {
 
@@ -343,7 +343,7 @@ goto end_branch_0
 }
 {
 if (v2_2.Type == 9 && v2_2.IntVal == 2281256335) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2281256335, UnsafePtr: unsafe.Pointer(&Constructor_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Apply(v_0, (*Constructor_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0)})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2281256335, UnsafePtr: unsafe.Pointer(&Constructor_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply(v_0, (*Constructor_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0)})}
 goto end_branch_0
 } else {
 
@@ -364,7 +364,7 @@ var once_bifunctorRecurringInterval sync.Once
 func Get_bifunctorRecurringInterval() gopurs_runtime.Value {
 	once_bifunctorRecurringInterval.Do(func() {
 		cache_bifunctorRecurringInterval = gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, g_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2355637979, UnsafePtr: unsafe.Pointer(&Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value]{(*pkg_Data_Maybe.Constructor_Just[int64])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0)}.UnsafePtr), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_bifunctorInterval(), "bimap"), f_0, g_1, (*Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1)})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2355637979, UnsafePtr: unsafe.Pointer(&Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*pkg_Data_Maybe.Constructor_Just[int64])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0)}.UnsafePtr), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_bifunctorInterval(), "bimap"), f_0, g_1, (*Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1)})}
 }))
 	})
 	return cache_bifunctorRecurringInterval
@@ -391,7 +391,7 @@ return Get_functorInterval()
 var __t0 gopurs_runtime.Value
 {
 if (v1_1.Type == 9 && v1_1.IntVal == 237113226) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 237113226, UnsafePtr: unsafe.Pointer(&Constructor_StartEnd[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Apply(v_0, v1_1), gopurs_runtime.Apply(v_0, v1_1)})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 237113226, UnsafePtr: unsafe.Pointer(&Constructor_StartEnd[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply(v_0, v1_1), gopurs_runtime.Apply(v_0, v1_1)})}
 goto end_branch_0
 } else {
 
@@ -399,7 +399,7 @@ goto end_branch_0
 }
 {
 if (v1_1.Type == 9 && v1_1.IntVal == 1992629780) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 1992629780, UnsafePtr: unsafe.Pointer(&Constructor_DurationEnd[gopurs_runtime.Value, gopurs_runtime.Value]{(*Constructor_DurationEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v1_1.UnsafePtr).V0, gopurs_runtime.Apply(v_0, v1_1)})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 1992629780, UnsafePtr: unsafe.Pointer(&Constructor_DurationEnd[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*Constructor_DurationEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v1_1.UnsafePtr).V0, gopurs_runtime.Apply(v_0, v1_1)})}
 goto end_branch_0
 } else {
 
@@ -407,7 +407,7 @@ goto end_branch_0
 }
 {
 if (v1_1.Type == 9 && v1_1.IntVal == 2020675835) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2020675835, UnsafePtr: unsafe.Pointer(&Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Apply(v_0, v1_1), (*Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value])(v1_1.UnsafePtr).V1})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2020675835, UnsafePtr: unsafe.Pointer(&Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply(v_0, v1_1), (*Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value])(v1_1.UnsafePtr).V1})}
 goto end_branch_0
 } else {
 
@@ -415,7 +415,7 @@ goto end_branch_0
 }
 {
 if (v1_1.Type == 9 && v1_1.IntVal == 2281256335) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2281256335, UnsafePtr: unsafe.Pointer(&Constructor_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value]{(*Constructor_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value])(v1_1.UnsafePtr).V0})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2281256335, UnsafePtr: unsafe.Pointer(&Constructor_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*Constructor_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value])(v1_1.UnsafePtr).V0})}
 goto end_branch_0
 } else {
 
@@ -436,7 +436,7 @@ var once_functorRecurringInterval sync.Once
 func Get_functorRecurringInterval() gopurs_runtime.Value {
 	once_functorRecurringInterval.Do(func() {
 		cache_functorRecurringInterval = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2355637979, UnsafePtr: unsafe.Pointer(&Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value]{(*pkg_Data_Maybe.Constructor_Just[int64])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V0)}.UnsafePtr), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_functorInterval(), "map"), f_0, (*Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V1)})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2355637979, UnsafePtr: unsafe.Pointer(&Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*pkg_Data_Maybe.Constructor_Just[int64])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V0)}.UnsafePtr), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_functorInterval(), "map"), f_0, (*Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V1)})}
 }))
 	})
 	return cache_functorRecurringInterval
@@ -451,7 +451,7 @@ return Get_functorRecurringInterval()
 }), gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_2_0 := gopurs_runtime.Apply(f_0, v_1)
 _ = __local_var_2_0
-return gopurs_runtime.Value{Type: 9, IntVal: 2355637979, UnsafePtr: unsafe.Pointer(&Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value]{(*pkg_Data_Maybe.Constructor_Just[int64])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V0)}.UnsafePtr), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_extendInterval(), "extend"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2355637979, UnsafePtr: unsafe.Pointer(&Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*pkg_Data_Maybe.Constructor_Just[int64])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V0)}.UnsafePtr), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_extendInterval(), "extend"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return __local_var_2_0
 }), (*Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V1)})}
 }))
@@ -497,7 +497,15 @@ if (v1_4.Type == 9 && v1_4.IntVal == 2020675835) {
 __local_var_5_3 := (*Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value])(v1_4.UnsafePtr).V1
 _ = __local_var_5_3
 __t2 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Functor0_2_1, "map"), gopurs_runtime.Func(func(v2_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2020675835, UnsafePtr: unsafe.Pointer(&Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value]{v2_6, __local_var_5_3})}
+return func() gopurs_runtime.Value {
+if ((Apply0_1_0.UnsafePtr) != (nil)) && (((*struct{Rc uint32})(Apply0_1_0.UnsafePtr).Rc) == (1)) {
+(*Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value])(Apply0_1_0.UnsafePtr).V0 = v2_6
+(*Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value])(Apply0_1_0.UnsafePtr).V1 = __local_var_5_3
+return Apply0_1_0
+} else {
+return gopurs_runtime.Value{Type: 9, IntVal: 2020675835, UnsafePtr: unsafe.Pointer(&Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value]{1, v2_6, __local_var_5_3})}
+}
+}()
 }), gopurs_runtime.Apply(v_3, (*Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value])(v1_4.UnsafePtr).V0))
 goto end_branch_2
 } else {
@@ -506,7 +514,14 @@ goto end_branch_2
 }
 {
 if (v1_4.Type == 9 && v1_4.IntVal == 2281256335) {
-__t2 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.Value{Type: 9, IntVal: 2281256335, UnsafePtr: unsafe.Pointer(&Constructor_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value]{(*Constructor_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value])(v1_4.UnsafePtr).V0})})
+__t2 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), func() gopurs_runtime.Value {
+if ((Apply0_1_0.UnsafePtr) != (nil)) && (((*struct{Rc uint32})(Apply0_1_0.UnsafePtr).Rc) == (1)) {
+(*Constructor_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value])(Apply0_1_0.UnsafePtr).V0 = (*Constructor_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value])(v1_4.UnsafePtr).V0
+return Apply0_1_0
+} else {
+return gopurs_runtime.Value{Type: 9, IntVal: 2281256335, UnsafePtr: unsafe.Pointer(&Constructor_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*Constructor_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value])(v1_4.UnsafePtr).V0})}
+}
+}())
 goto end_branch_2
 } else {
 
@@ -725,29 +740,34 @@ return gopurs_runtime.Apply2(over1_1_0, gopurs_runtime.Apply2(bitraverse1_2_1, l
 }
 
 type Constructor_StartEnd[T_d any, T_a any] struct {
+	Rc uint32
 	V0 T_a
 	V1 T_a
 }
 
 
 type Constructor_DurationEnd[T_d any, T_a any] struct {
+	Rc uint32
 	V0 T_d
 	V1 T_a
 }
 
 
 type Constructor_StartDuration[T_d any, T_a any] struct {
+	Rc uint32
 	V0 T_a
 	V1 T_d
 }
 
 
 type Constructor_DurationOnly[T_d any, T_a any] struct {
+	Rc uint32
 	V0 T_d
 }
 
 
 type Constructor_RecurringInterval[T_d any, T_a any] struct {
+	Rc uint32
 	V0 *pkg_Data_Maybe.Constructor_Just[int64]
 	V1 gopurs_runtime.Value
 }

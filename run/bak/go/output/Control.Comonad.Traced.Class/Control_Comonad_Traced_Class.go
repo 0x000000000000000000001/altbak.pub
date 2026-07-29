@@ -226,7 +226,15 @@ _ = f_1
 var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func2(func(g_3 gopurs_runtime.Value, t_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Apply(g_3, t_4), gopurs_runtime.Apply(f_1, t_4)})}
+return func() gopurs_runtime.Value {
+if ((v_2.UnsafePtr) != (nil)) && (((*struct{Rc uint32})(v_2.UnsafePtr).Rc) == (1)) {
+(*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0 = gopurs_runtime.Apply(g_3, t_4)
+(*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1 = gopurs_runtime.Apply(f_1, t_4)
+return v_2
+} else {
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply(g_3, t_4), gopurs_runtime.Apply(f_1, t_4)})}
+}
+}()
 }), v_2)
 }
 
@@ -236,7 +244,15 @@ _ = dictFunctor_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, t_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{gopurs_runtime.Apply(f_2, t_3), t_3})}
+return func() gopurs_runtime.Value {
+if ((v_1.UnsafePtr) != (nil)) && (((*struct{Rc uint32})(v_1.UnsafePtr).Rc) == (1)) {
+(*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V0 = gopurs_runtime.Apply(f_2, t_3)
+(*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V1 = t_3
+return v_1
+} else {
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply(f_2, t_3), t_3})}
+}
+}()
 }), v_1)
 }
 

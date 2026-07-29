@@ -13,7 +13,7 @@ var once_Inl sync.Once
 func Get_Inl() gopurs_runtime.Value {
 	once_Inl.Do(func() {
 		cache_Inl = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 3478632216, UnsafePtr: unsafe.Pointer(&Constructor_Inl[gopurs_runtime.Value, gopurs_runtime.Value]{value0})}
+return gopurs_runtime.Value{Type: 9, IntVal: 3478632216, UnsafePtr: unsafe.Pointer(&Constructor_Inl[gopurs_runtime.Value, gopurs_runtime.Value]{1, value0})}
 })
 	})
 	return cache_Inl
@@ -24,7 +24,7 @@ var once_Inr sync.Once
 func Get_Inr() gopurs_runtime.Value {
 	once_Inr.Do(func() {
 		cache_Inr = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 492034566, UnsafePtr: unsafe.Pointer(&Constructor_Inr[gopurs_runtime.Value, gopurs_runtime.Value]{value0})}
+return gopurs_runtime.Value{Type: 9, IntVal: 492034566, UnsafePtr: unsafe.Pointer(&Constructor_Inr[gopurs_runtime.Value, gopurs_runtime.Value]{1, value0})}
 })
 	})
 	return cache_Inr
@@ -36,7 +36,7 @@ func Get_Product() gopurs_runtime.Value {
 	once_Product.Do(func() {
 		cache_Product = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]{value0, value1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]{1, value0, value1})}
 })
 })
 	})
@@ -185,23 +185,26 @@ return Call_from__gopurs_runtime_Value_4189692514(dict_0_box)
 }
 
 type Constructor_Inl[T_a any, T_b any] struct {
+	Rc uint32
 	V0 T_a
 }
 
 
 type Constructor_Inr[T_a any, T_b any] struct {
+	Rc uint32
 	V0 T_b
 }
 
 
 type Constructor_Product[T_a any, T_b any] struct {
+	Rc uint32
 	V0 T_a
 	V1 T_b
 }
 
 
 type Constructor_NoArguments struct {
-	
+	Rc uint32
 }
 
 

@@ -607,37 +607,37 @@ return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointe
 }
 
 type Constructor_Second struct {
-	
+	Rc uint32
 }
 
 
 type Constructor_Minute struct {
-	
+	Rc uint32
 }
 
 
 type Constructor_Hour struct {
-	
+	Rc uint32
 }
 
 
 type Constructor_Day struct {
-	
+	Rc uint32
 }
 
 
 type Constructor_Week struct {
-	
+	Rc uint32
 }
 
 
 type Constructor_Month struct {
-	
+	Rc uint32
 }
 
 
 type Constructor_Year struct {
-	
+	Rc uint32
 }
 
 
@@ -650,49 +650,49 @@ return x_0
 func Call_hour(v_0_loop float64) *pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, float64] {
 var v_0 float64 = v_0_loop
 _ = v_0
-return (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, float64])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]{1, 1, gopurs_runtime.Value{Type: 9, IntVal: 1292308612, UnsafePtr: nil}, gopurs_runtime.Float(v_0), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr)})}.UnsafePtr)
+return (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, float64])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]{1, 1, 1, gopurs_runtime.Value{Type: 9, IntVal: 1292308612, UnsafePtr: nil}, gopurs_runtime.Float(v_0), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr)})}.UnsafePtr)
 }
 
 func Call_millisecond(x_0_loop float64) *pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, float64] {
 var x_0 float64 = x_0_loop
 _ = x_0
-return (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, float64])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]{1, 1, gopurs_runtime.Value{Type: 9, IntVal: 3908053364, UnsafePtr: nil}, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingNumber(), "div"), gopurs_runtime.Float(x_0), gopurs_runtime.Float(1000.0)), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr)})}.UnsafePtr)
+return (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, float64])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]{1, 1, 1, gopurs_runtime.Value{Type: 9, IntVal: 3908053364, UnsafePtr: nil}, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingNumber(), "div"), gopurs_runtime.Float(x_0), gopurs_runtime.Float(1000.0)), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr)})}.UnsafePtr)
 }
 
 func Call_minute(v_0_loop float64) *pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, float64] {
 var v_0 float64 = v_0_loop
 _ = v_0
-return (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, float64])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]{1, 1, gopurs_runtime.Value{Type: 9, IntVal: 217821258, UnsafePtr: nil}, gopurs_runtime.Float(v_0), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr)})}.UnsafePtr)
+return (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, float64])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]{1, 1, 1, gopurs_runtime.Value{Type: 9, IntVal: 217821258, UnsafePtr: nil}, gopurs_runtime.Float(v_0), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr)})}.UnsafePtr)
 }
 
 func Call_month(v_0_loop float64) *pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, float64] {
 var v_0 float64 = v_0_loop
 _ = v_0
-return (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, float64])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]{1, 1, gopurs_runtime.Value{Type: 9, IntVal: 3327533908, UnsafePtr: nil}, gopurs_runtime.Float(v_0), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr)})}.UnsafePtr)
+return (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, float64])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]{1, 1, 1, gopurs_runtime.Value{Type: 9, IntVal: 3327533908, UnsafePtr: nil}, gopurs_runtime.Float(v_0), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr)})}.UnsafePtr)
 }
 
 func Call_second(v_0_loop float64) *pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, float64] {
 var v_0 float64 = v_0_loop
 _ = v_0
-return (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, float64])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]{1, 1, gopurs_runtime.Value{Type: 9, IntVal: 3908053364, UnsafePtr: nil}, gopurs_runtime.Float(v_0), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr)})}.UnsafePtr)
+return (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, float64])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]{1, 1, 1, gopurs_runtime.Value{Type: 9, IntVal: 3908053364, UnsafePtr: nil}, gopurs_runtime.Float(v_0), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr)})}.UnsafePtr)
 }
 
 func Call_week(v_0_loop float64) *pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, float64] {
 var v_0 float64 = v_0_loop
 _ = v_0
-return (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, float64])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]{1, 1, gopurs_runtime.Value{Type: 9, IntVal: 401302776, UnsafePtr: nil}, gopurs_runtime.Float(v_0), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr)})}.UnsafePtr)
+return (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, float64])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]{1, 1, 1, gopurs_runtime.Value{Type: 9, IntVal: 401302776, UnsafePtr: nil}, gopurs_runtime.Float(v_0), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr)})}.UnsafePtr)
 }
 
 func Call_year(v_0_loop float64) *pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, float64] {
 var v_0 float64 = v_0_loop
 _ = v_0
-return (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, float64])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]{1, 1, gopurs_runtime.Value{Type: 9, IntVal: 3631736139, UnsafePtr: nil}, gopurs_runtime.Float(v_0), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr)})}.UnsafePtr)
+return (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, float64])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]{1, 1, 1, gopurs_runtime.Value{Type: 9, IntVal: 3631736139, UnsafePtr: nil}, gopurs_runtime.Float(v_0), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr)})}.UnsafePtr)
 }
 
 func Call_day(v_0_loop float64) *pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, float64] {
 var v_0 float64 = v_0_loop
 _ = v_0
-return (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, float64])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]{1, 1, gopurs_runtime.Value{Type: 9, IntVal: 2311060696, UnsafePtr: nil}, gopurs_runtime.Float(v_0), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr)})}.UnsafePtr)
+return (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, float64])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(&pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]{1, 1, 1, gopurs_runtime.Value{Type: 9, IntVal: 2311060696, UnsafePtr: nil}, gopurs_runtime.Float(v_0), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr), (*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr)})}.UnsafePtr)
 }
 
 

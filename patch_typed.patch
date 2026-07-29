@@ -1,0 +1,22 @@
+--- gopurs/src/Gopurs/CodeGen.purs
++++ gopurs/src/Gopurs/CodeGen.purs
+@@ -476,6 +476,10 @@
+   LetRec _ _ body -> getExprType body
+   _ -> Any
+ 
++setTcoExprAnnType :: ExprType -> TcoExpr -> TcoExpr
++setTcoExprAnnType ty (TcoExpr ann syn) = TcoExpr (ann { type = Just ty }) syn
++
+ setTcoExprType :: ExprType -> TcoExpr -> TcoExpr
+ setTcoExprType ty (TcoExpr a (Typed _ inner)) = TcoExpr a (Typed ty inner)
+ setTcoExprType ty (TcoExpr a syn) = TcoExpr a (Typed ty (TcoExpr a syn))
+@@ -534,7 +538,8 @@
+     case expr of
+       Typed type_ a ->
+         let
+-          res = translateExprImpl_ helpersRef depth modNameStr recVars moduleArities bound tcoIdent loopCtx isTail inEffectBlock nextId a
++          aWithAnn = setTcoExprAnnType type_ a
++          res = translateExprImpl_ helpersRef depth modNameStr recVars moduleArities bound tcoIdent loopCtx isTail inEffectBlock nextId aWithAnn
+           expectedGoType = exprTypeToGoType (unsafePerformEffect (Ref.read helpersRef)).pointerAdtPaths modNameStr type_
+         in
+           { stmts: res.stmts, expr: coerceGoExpr res.expr res.exprType expectedGoType, exprType: expectedGoType, nextId: res.nextId }

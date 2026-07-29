@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -ex
 cd "$(dirname "$0")/../.."
 
 CLEAN=0
@@ -68,10 +68,10 @@ if [ "$CLEAN" == "1" ]; then
 fi
 
 echo 'Building...'
-spago build > /dev/null 2>&1
+spago build
 
 # Generate Go code
-node ../gopurs/bin/gopurs.js --main ${ENTRY_POINT}
+node ../gopurs/bin/gopurs.js --main ${ENTRY_POINT} || echo "GOPURS FAILED" || exit 1
 
 echo "=== Go ==="
 if [ -d "output/${ENTRY_POINT}" ]; then

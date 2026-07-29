@@ -1,0 +1,11 @@
+--- gopurs/src/Gopurs/CodeGen.purs	2023-01-01
++++ gopurs/src/Gopurs/CodeGen.purs	2023-01-01
+@@ -1452,6 +1452,8 @@
+       Branch branches def ->
+         let
+           expectedTy = getExprType tcoExpr
++          _ = unsafePerformEffect (Debug.trace ("DEBUG Branch expectedTy: " <> show expectedTy) \_ -> pure unit)
++
+           expectedGoType = exprTypeToGoType (unsafePerformEffect (Ref.read helpersRef)).pointerAdtPaths modNameStr expectedTy
+           typedDef = if expectedTy /= Any then setTcoExprType expectedTy def else def
+           resDef = translateExprImpl_ helpersRef (depth + 1) modNameStr recVars moduleArities bound Nothing loopCtx isTail false nextId typedDef

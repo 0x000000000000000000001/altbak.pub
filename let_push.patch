@@ -1,0 +1,56 @@
+--- gopurs/src/Gopurs/CodeGen.purs	2023-01-01
++++ gopurs/src/Gopurs/CodeGen.purs	2023-01-01
+@@ -285,7 +285,7 @@
+ 
+     setTcoExprType :: ExprType -> TcoExpr -> TcoExpr
+     setTcoExprType ty (TcoExpr a (Typed _ inner)) = TcoExpr a (Typed ty inner)
+-    setTcoExprType _ expr = expr
++    setTcoExprType ty (TcoExpr a syn) = TcoExpr a (Typed ty (TcoExpr a syn))
+ 
+     varIdentToName :: Ident -> String
+     varIdentToName (Ident name) = escapeGoVar name
+@@ -1186,7 +1186,10 @@
+ 
+       Let name val body ->
+         let
++          expectedTy = getExprType tcoExpr
++          typedBody = if expectedTy /= Any then setTcoExprType expectedTy body else body
++
+           resVal = translateExprImpl_ helpersRef (depth + 1) modNameStr recVars moduleArities bound name [] false false nextId val
+           tmpVar = "__local_var_" <> show resVal.nextId <> "_" <> show depth
+           newBound = Map.insert (fromMaybe "anon" name) { name: tmpVar, goType: resVal.exprType } bound
+-          resBody = translateExprImpl_ helpersRef (depth + 1) modNameStr recVars moduleArities newBound tcoIdent loopCtx isTail forceReturn resVal.nextId body
++          resBody = translateExprImpl_ helpersRef (depth + 1) modNameStr recVars moduleArities newBound tcoIdent loopCtx isTail forceReturn resVal.nextId typedBody
+           declTmp = case name of
+@@ -1245,6 +1248,8 @@
+ 
+       LetRec binds body ->
+         let
++          expectedTy = getExprType tcoExpr
++          typedBody = if expectedTy /= Any then setTcoExprType expectedTy body else body
+           -- Find if we are in effect block
+           isEff = isEffectNode tcoExpr
+@@ -1265,7 +1270,7 @@
+           bodyCtx =
+             if isEff then [] else loopCtxs
+ 
+-          resBody = translateExprImpl_ helpersRef (depth + 1) modNameStr recVars moduleArities newBound tcoIdent (combinedLoopCtx <> bodyCtx) isTail forceReturn nextIdAfterBinds body
++          resBody = translateExprImpl_ helpersRef (depth + 1) modNameStr recVars moduleArities newBound tcoIdent (combinedLoopCtx <> bodyCtx) isTail forceReturn nextIdAfterBinds typedBody
+         in
+           { stmts: stmts <> resBody.stmts, expr: resBody.expr, exprType: resBody.exprType, nextId: resBody.nextId }
+@@ -1462,10 +1467,11 @@
+       Branch branches def ->
+         let
+-          resDef = translateExprImpl_ helpersRef (depth + 1) modNameStr recVars moduleArities bound Nothing loopCtx isTail false nextId def
++          expectedTy = getExprType tcoExpr
++          typedDef = if expectedTy /= Any then setTcoExprType expectedTy def else def
++          resDef = translateExprImpl_ helpersRef (depth + 1) modNameStr recVars moduleArities bound Nothing loopCtx isTail false nextId typedDef
+ 
+           evaluatedBranches = foldl
+             ( \acc (Pair condExpr bodyExpr) ->
+                 let
++                  typedBodyExpr = if expectedTy /= Any then setTcoExprType expectedTy bodyExpr else bodyExpr
+                   resCond = translateExprImpl_ helpersRef (depth + 1) modNameStr recVars moduleArities bound Nothing [] false false acc.nextId condExpr
+-                  resBody = translateExprImpl_ helpersRef (depth + 1) modNameStr recVars moduleArities bound Nothing loopCtx isTail false resCond.nextId bodyExpr
++                  resBody = translateExprImpl_ helpersRef (depth + 1) modNameStr recVars moduleArities bound Nothing loopCtx isTail false resCond.nextId typedBodyExpr
+                 in

@@ -20,7 +20,7 @@ func Get_DateTime() gopurs_runtime.Value {
 	once_DateTime.Do(func() {
 		cache_DateTime = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(&Constructor_DateTime{value0, value1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(&Constructor_DateTime{1, value0, value1})}
 })
 })
 	})
@@ -179,7 +179,7 @@ func Get_boundedDateTime() gopurs_runtime.Value {
 	once_boundedDateTime.Do(func() {
 		cache_boundedDateTime = gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_ordDateTime()
-}), gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(&Constructor_DateTime{gopurs_runtime.RecordGet(pkg_Data_Date.Get_boundedDate(), "bottom"), gopurs_runtime.RecordGet(pkg_Data_Time.Get_boundedTime(), "bottom")})}, gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(&Constructor_DateTime{gopurs_runtime.RecordGet(pkg_Data_Date.Get_boundedDate(), "top"), gopurs_runtime.RecordGet(pkg_Data_Time.Get_boundedTime(), "top")})})
+}), gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(&Constructor_DateTime{1, gopurs_runtime.RecordGet(pkg_Data_Date.Get_boundedDate(), "bottom"), gopurs_runtime.RecordGet(pkg_Data_Time.Get_boundedTime(), "bottom")})}, gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(&Constructor_DateTime{1, gopurs_runtime.RecordGet(pkg_Data_Date.Get_boundedDate(), "top"), gopurs_runtime.RecordGet(pkg_Data_Time.Get_boundedTime(), "top")})})
 	})
 	return cache_boundedDateTime
 }
@@ -196,6 +196,7 @@ return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointe
 }
 
 type Constructor_DateTime struct {
+	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
 }
@@ -228,7 +229,7 @@ var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(&Constructor_DateTime{(*Constructor_DateTime)(v_1.UnsafePtr).V0, gopurs_runtime.Apply(f_0, (*Constructor_DateTime)(v_1.UnsafePtr).V1)})}
+return gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(&Constructor_DateTime{1, (*Constructor_DateTime)(v_1.UnsafePtr).V0, gopurs_runtime.Apply(f_0, (*Constructor_DateTime)(v_1.UnsafePtr).V1)})}
 }
 
 func Call_modifyDateF(dictFunctor_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -241,7 +242,15 @@ _ = v_2
 __local_var_3_0 := (*Constructor_DateTime)(v_2.UnsafePtr).V1
 _ = __local_var_3_0
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func(func(a_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(&Constructor_DateTime{a_4, __local_var_3_0})}
+return func() gopurs_runtime.Value {
+if ((__local_var_3_0.UnsafePtr) != (nil)) && (((*struct{Rc uint32})(__local_var_3_0.UnsafePtr).Rc) == (1)) {
+(*Constructor_DateTime)(__local_var_3_0.UnsafePtr).V0 = a_4
+(*Constructor_DateTime)(__local_var_3_0.UnsafePtr).V1 = __local_var_3_0
+return __local_var_3_0
+} else {
+return gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(&Constructor_DateTime{1, a_4, __local_var_3_0})}
+}
+}()
 }), gopurs_runtime.Apply(f_1, (*Constructor_DateTime)(v_2.UnsafePtr).V0))
 }
 
@@ -250,7 +259,7 @@ var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(&Constructor_DateTime{gopurs_runtime.Apply(f_0, (*Constructor_DateTime)(v_1.UnsafePtr).V0), (*Constructor_DateTime)(v_1.UnsafePtr).V1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(&Constructor_DateTime{1, gopurs_runtime.Apply(f_0, (*Constructor_DateTime)(v_1.UnsafePtr).V0), (*Constructor_DateTime)(v_1.UnsafePtr).V1})}
 }
 
 func Call_diff(dictDuration_0_loop gopurs_runtime.Value, dt1_1_loop gopurs_runtime.Value, dt2_2_loop gopurs_runtime.Value) gopurs_runtime.Value {

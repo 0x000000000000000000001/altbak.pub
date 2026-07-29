@@ -468,12 +468,12 @@ func Get_base36() gopurs_runtime.Value {
 }
 
 type Constructor_Even struct {
-	
+	Rc uint32
 }
 
 
 type Constructor_Odd struct {
-	
+	Rc uint32
 }
 
 
@@ -483,7 +483,7 @@ _ = n_0
 var __t0 gopurs_runtime.Value
 {
 if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Apply2(Get_greaterThanOrEq(), gopurs_runtime.Int(n_0), gopurs_runtime.Int(2)), gopurs_runtime.Apply2(Get_lessThanOrEq(), gopurs_runtime.Int(n_0), gopurs_runtime.Int(36))).IntVal) != (0) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{gopurs_runtime.Int(n_0)})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, gopurs_runtime.Int(n_0)})}
 goto end_branch_0
 } else {
 

@@ -145,7 +145,15 @@ return Get_applyZipList()
 var go__1_0 gopurs_runtime.Value
 _ = go__1_0
 go__1_0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_List_Lazy_Types.Get_lazyList(), "defer"), gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&pkg_Data_List_Lazy_Types.Constructor_Cons[gopurs_runtime.Value]{x_0, go__1_0})}
+return func() gopurs_runtime.Value {
+if ((go__1_0.UnsafePtr) != (nil)) && (((*struct{Rc uint32})(go__1_0.UnsafePtr).Rc) == (1)) {
+(*pkg_Data_List_Lazy_Types.Constructor_Cons[gopurs_runtime.Value])(go__1_0.UnsafePtr).V0 = x_0
+(*pkg_Data_List_Lazy_Types.Constructor_Cons[gopurs_runtime.Value])(go__1_0.UnsafePtr).V1 = go__1_0
+return go__1_0
+} else {
+return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&pkg_Data_List_Lazy_Types.Constructor_Cons[gopurs_runtime.Value]{1, x_0, go__1_0})}
+}
+}()
 }))
 return go__1_0
 }))

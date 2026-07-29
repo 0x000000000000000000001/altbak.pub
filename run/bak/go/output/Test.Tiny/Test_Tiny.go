@@ -11,7 +11,7 @@ var once_Circle sync.Once
 func Get_Circle() gopurs_runtime.Value {
 	once_Circle.Do(func() {
 		cache_Circle = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 248718980, UnsafePtr: unsafe.Pointer(&Constructor_Circle{value0.IntVal})}
+return gopurs_runtime.Value{Type: 9, IntVal: 248718980, UnsafePtr: unsafe.Pointer(&Constructor_Circle{1, value0.IntVal})}
 })
 	})
 	return cache_Circle
@@ -23,7 +23,7 @@ func Get_Rect() gopurs_runtime.Value {
 	once_Rect.Do(func() {
 		cache_Rect = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 261969494, UnsafePtr: unsafe.Pointer(&Constructor_Rect{value0.IntVal, value1.IntVal})}
+return gopurs_runtime.Value{Type: 9, IntVal: 261969494, UnsafePtr: unsafe.Pointer(&Constructor_Rect{1, value0.IntVal, value1.IntVal})}
 })
 })
 	})
@@ -42,11 +42,13 @@ return gopurs_runtime.Int(Call_area(v_0_box))
 }
 
 type Constructor_Circle struct {
+	Rc uint32
 	V0 int64
 }
 
 
 type Constructor_Rect struct {
+	Rc uint32
 	V0 int64
 	V1 int64
 }
