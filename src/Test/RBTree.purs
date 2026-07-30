@@ -1,6 +1,7 @@
 module Test.RBTree where
 
 import Prelude
+
 import Effect (Effect)
 import Effect.Console (logShow, log)
 import Bench as Bench
@@ -28,6 +29,7 @@ ins x (T color a y b) =
   if x < y then balance color (ins x a) y b
   else if x > y then balance color a y (ins x b)
   else T color a y b
+
 makeBlack (T _ a y b) = T B a y b
 makeBlack E = E
 

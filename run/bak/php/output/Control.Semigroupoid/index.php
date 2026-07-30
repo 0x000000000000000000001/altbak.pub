@@ -113,10 +113,8 @@ class PhpursCompose {
     }
 }
 
-$_composeImpl = function($f, $g) {
-    return function($a) use ($f, $g) {
-        return $f($g($a));
-    };
+$_composeImpl = function($f, $g, $a) {
+    return $f($g($a));
 };
 
 $exports['composeImpl'] = $_composeImpl;

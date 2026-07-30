@@ -148,11 +148,13 @@ $replicateImpl = function($count, $value) use (&$replicateImpl) {
 $fromFoldableImpl = function($foldr, $xs) use (&$fromFoldableImpl) {
     
     $emptyList = new \stdClass();
-    $curryCons = function($head, $tail) {
-        $obj = new \stdClass();
-        $obj->head = $head;
-        $obj->tail = $tail;
-        return $obj;
+    $curryCons = function($head) {
+        return function($tail) use ($head) {
+            $obj = new \stdClass();
+            $obj->head = $head;
+            $obj->tail = $tail;
+            return $obj;
+        };
     };
     
     $listToArray = function($list) use ($emptyList) {
