@@ -576,12 +576,7 @@ var v_0 []string = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Int(int64(gopurs_runtime.ArrayLength(func() gopurs_runtime.Value {
-					arr := v_0
-					boxed := make([]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { boxed[i] = gopurs_runtime.Str(v) }
-					return gopurs_runtime.Array(boxed)
-				}()))).IntVal) == (0) {
+if (gopurs_runtime.Int(int64(len(v_0))).IntVal) == (0) {
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
 goto end_branch_0
 } else {
@@ -605,12 +600,7 @@ var x_0 []string = x_0_loop
 _ = x_0
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Int(int64(gopurs_runtime.ArrayLength(func() gopurs_runtime.Value {
-					arr := x_0
-					boxed := make([]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { boxed[i] = gopurs_runtime.Str(v) }
-					return gopurs_runtime.Array(boxed)
-				}()))).IntVal) == (0) {
+if (gopurs_runtime.Int(int64(len(x_0))).IntVal) == (0) {
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 goto end_branch_0
 } else {
