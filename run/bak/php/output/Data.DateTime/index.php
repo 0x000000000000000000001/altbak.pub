@@ -166,12 +166,12 @@ function majData_majDatemajTime_adjustmajImpl($v0, $v1 = null, $v2 = null, $v3 =
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
   global $ffi_Data_DateTime;
-  $f = ($ffi_Data_DateTime['adjustImpl'] ?? \phpurs_ffi_fallback($ffi_Data_DateTime, 'adjustImpl'));
+  $f = ($ffi_Data_DateTime['adjustImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3);
 }
 $GLOBALS['Data_DateTime_adjustImpl'] = __NAMESPACE__ . '\\majData_majDatemajTime_adjustmajImpl';
 
-$GLOBALS['Data_DateTime_calcDiff'] = ($ffi_Data_DateTime['calcDiff'] ?? \phpurs_ffi_fallback($ffi_Data_DateTime, 'calcDiff'));
+$GLOBALS['Data_DateTime_calcDiff'] = ($ffi_Data_DateTime['calcDiff'] ?? new class { public function __invoke(...$args) { return $this; } });
 
 
 final class Data_DateTime_DateTime { public $tag = 'DateTime'; public function __construct(public  $value0, public  $value1) {} }

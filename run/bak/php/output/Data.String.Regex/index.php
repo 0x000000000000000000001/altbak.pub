@@ -217,7 +217,7 @@ function majData_majString_majRegex__match($v0, $v1 = null, $v2 = null, $v3 = nu
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
   global $ffi_Data_String_Regex;
-  $f = ($ffi_Data_String_Regex['_match'] ?? \phpurs_ffi_fallback($ffi_Data_String_Regex, '_match'));
+  $f = ($ffi_Data_String_Regex['_match'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3);
 }
 $GLOBALS['Data_String_Regex__match'] = __NAMESPACE__ . '\\majData_majString_majRegex__match';
@@ -229,7 +229,7 @@ function majData_majString_majRegex__replacemajBy($v0, $v1 = null, $v2 = null, $
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
   global $ffi_Data_String_Regex;
-  $f = ($ffi_Data_String_Regex['_replaceBy'] ?? \phpurs_ffi_fallback($ffi_Data_String_Regex, '_replaceBy'));
+  $f = ($ffi_Data_String_Regex['_replaceBy'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3, $v4);
 }
 $GLOBALS['Data_String_Regex__replaceBy'] = __NAMESPACE__ . '\\majData_majString_majRegex__replacemajBy';
@@ -241,7 +241,7 @@ function majData_majString_majRegex__search($v0, $v1 = null, $v2 = null, $v3 = n
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
   global $ffi_Data_String_Regex;
-  $f = ($ffi_Data_String_Regex['_search'] ?? \phpurs_ffi_fallback($ffi_Data_String_Regex, '_search'));
+  $f = ($ffi_Data_String_Regex['_search'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3);
 }
 $GLOBALS['Data_String_Regex__search'] = __NAMESPACE__ . '\\majData_majString_majRegex__search';
@@ -253,7 +253,7 @@ function majData_majString_majRegex_flagsmajImpl($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_String_Regex;
-  $f = ($ffi_Data_String_Regex['flagsImpl'] ?? \phpurs_ffi_fallback($ffi_Data_String_Regex, 'flagsImpl'));
+  $f = ($ffi_Data_String_Regex['flagsImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_String_Regex_flagsImpl'] = __NAMESPACE__ . '\\majData_majString_majRegex_flagsmajImpl';
@@ -265,7 +265,7 @@ function majData_majString_majRegex_regexmajImpl($v0, $v1 = null, $v2 = null, $v
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
   global $ffi_Data_String_Regex;
-  $f = ($ffi_Data_String_Regex['regexImpl'] ?? \phpurs_ffi_fallback($ffi_Data_String_Regex, 'regexImpl'));
+  $f = ($ffi_Data_String_Regex['regexImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3);
 }
 $GLOBALS['Data_String_Regex_regexImpl'] = __NAMESPACE__ . '\\majData_majString_majRegex_regexmajImpl';
@@ -277,7 +277,7 @@ function majData_majString_majRegex_replace($v0, $v1 = null, $v2 = null): string
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Data_String_Regex;
-  $f = ($ffi_Data_String_Regex['replace'] ?? \phpurs_ffi_fallback($ffi_Data_String_Regex, 'replace'));
+  $f = ($ffi_Data_String_Regex['replace'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Data_String_Regex_replace'] = __NAMESPACE__ . '\\majData_majString_majRegex_replace';
@@ -289,7 +289,7 @@ function majData_majString_majRegex_showmajRegexmajImpl($v0): string|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_String_Regex;
-  $f = ($ffi_Data_String_Regex['showRegexImpl'] ?? \phpurs_ffi_fallback($ffi_Data_String_Regex, 'showRegexImpl'));
+  $f = ($ffi_Data_String_Regex['showRegexImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_String_Regex_showRegexImpl'] = __NAMESPACE__ . '\\majData_majString_majRegex_showmajRegexmajImpl';
@@ -301,7 +301,7 @@ function majData_majString_majRegex_source($v0): string|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_String_Regex;
-  $f = ($ffi_Data_String_Regex['source'] ?? \phpurs_ffi_fallback($ffi_Data_String_Regex, 'source'));
+  $f = ($ffi_Data_String_Regex['source'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_String_Regex_source'] = __NAMESPACE__ . '\\majData_majString_majRegex_source';
@@ -313,7 +313,7 @@ function majData_majString_majRegex_split($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_String_Regex;
-  $f = ($ffi_Data_String_Regex['split'] ?? \phpurs_ffi_fallback($ffi_Data_String_Regex, 'split'));
+  $f = ($ffi_Data_String_Regex['split'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_String_Regex_split'] = __NAMESPACE__ . '\\majData_majString_majRegex_split';
@@ -325,7 +325,7 @@ function majData_majString_majRegex_test($v0, $v1 = null): bool|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_String_Regex;
-  $f = ($ffi_Data_String_Regex['test'] ?? \phpurs_ffi_fallback($ffi_Data_String_Regex, 'test'));
+  $f = ($ffi_Data_String_Regex['test'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_String_Regex_test'] = __NAMESPACE__ . '\\majData_majString_majRegex_test';

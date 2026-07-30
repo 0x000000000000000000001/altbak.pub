@@ -152,7 +152,7 @@ function majData_majOrd_ordmajArraymajImpl($v0, $v1 = null, $v2 = null): int|\Cl
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Data_Ord;
-  $f = ($ffi_Data_Ord['ordArrayImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Ord, 'ordArrayImpl'));
+  $f = ($ffi_Data_Ord['ordArrayImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Data_Ord_ordArrayImpl'] = __NAMESPACE__ . '\\majData_majOrd_ordmajArraymajImpl';
@@ -164,7 +164,7 @@ function majData_majOrd_ordmajBooleanmajImpl($v0, $v1 = null, $v2 = null, $v3 = 
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
   global $ffi_Data_Ord;
-  $f = ($ffi_Data_Ord['ordBooleanImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Ord, 'ordBooleanImpl'));
+  $f = ($ffi_Data_Ord['ordBooleanImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3, $v4);
 }
 $GLOBALS['Data_Ord_ordBooleanImpl'] = __NAMESPACE__ . '\\majData_majOrd_ordmajBooleanmajImpl';
@@ -176,7 +176,7 @@ function majData_majOrd_ordmajCharmajImpl($v0, $v1 = null, $v2 = null, $v3 = nul
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
   global $ffi_Data_Ord;
-  $f = ($ffi_Data_Ord['ordCharImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Ord, 'ordCharImpl'));
+  $f = ($ffi_Data_Ord['ordCharImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3, $v4);
 }
 $GLOBALS['Data_Ord_ordCharImpl'] = __NAMESPACE__ . '\\majData_majOrd_ordmajCharmajImpl';
@@ -188,7 +188,7 @@ function majData_majOrd_ordmajIntmajImpl($v0, $v1 = null, $v2 = null, $v3 = null
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
   global $ffi_Data_Ord;
-  $f = ($ffi_Data_Ord['ordIntImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Ord, 'ordIntImpl'));
+  $f = ($ffi_Data_Ord['ordIntImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3, $v4);
 }
 $GLOBALS['Data_Ord_ordIntImpl'] = __NAMESPACE__ . '\\majData_majOrd_ordmajIntmajImpl';
@@ -200,7 +200,7 @@ function majData_majOrd_ordmajNumbermajImpl($v0, $v1 = null, $v2 = null, $v3 = n
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
   global $ffi_Data_Ord;
-  $f = ($ffi_Data_Ord['ordNumberImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Ord, 'ordNumberImpl'));
+  $f = ($ffi_Data_Ord['ordNumberImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3, $v4);
 }
 $GLOBALS['Data_Ord_ordNumberImpl'] = __NAMESPACE__ . '\\majData_majOrd_ordmajNumbermajImpl';
@@ -212,7 +212,7 @@ function majData_majOrd_ordmajStringmajImpl($v0, $v1 = null, $v2 = null, $v3 = n
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
   global $ffi_Data_Ord;
-  $f = ($ffi_Data_Ord['ordStringImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Ord, 'ordStringImpl'));
+  $f = ($ffi_Data_Ord['ordStringImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3, $v4);
 }
 $GLOBALS['Data_Ord_ordStringImpl'] = __NAMESPACE__ . '\\majData_majOrd_ordmajStringmajImpl';

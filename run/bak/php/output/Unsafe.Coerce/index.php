@@ -108,7 +108,7 @@ function majUnsafe_majCoerce_unsafemajCoerce($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Unsafe_Coerce;
-  $f = ($ffi_Unsafe_Coerce['unsafeCoerce'] ?? \phpurs_ffi_fallback($ffi_Unsafe_Coerce, 'unsafeCoerce'));
+  $f = ($ffi_Unsafe_Coerce['unsafeCoerce'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Unsafe_Coerce_unsafeCoerce'] = __NAMESPACE__ . '\\majUnsafe_majCoerce_unsafemajCoerce';

@@ -132,7 +132,7 @@ function majData_majUnfoldable1_unfoldr1majArraymajImpl($v0, $v1 = null, $v2 = n
     return phpurs_curry_fallback($__fn, \func_get_args(), 6);
   }
   global $ffi_Data_Unfoldable1;
-  $f = ($ffi_Data_Unfoldable1['unfoldr1ArrayImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Unfoldable1, 'unfoldr1ArrayImpl'));
+  $f = ($ffi_Data_Unfoldable1['unfoldr1ArrayImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3, $v4, $v5);
 }
 $GLOBALS['Data_Unfoldable1_unfoldr1ArrayImpl'] = __NAMESPACE__ . '\\majData_majUnfoldable1_unfoldr1majArraymajImpl';

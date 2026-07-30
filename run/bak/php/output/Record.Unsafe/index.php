@@ -139,7 +139,7 @@ function majRecord_majUnsafe_unsafemajDelete(string $v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Record_Unsafe;
-  $f = ($ffi_Record_Unsafe['unsafeDelete'] ?? \phpurs_ffi_fallback($ffi_Record_Unsafe, 'unsafeDelete'));
+  $f = ($ffi_Record_Unsafe['unsafeDelete'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Record_Unsafe_unsafeDelete'] = __NAMESPACE__ . '\\majRecord_majUnsafe_unsafemajDelete';
@@ -151,7 +151,7 @@ function majRecord_majUnsafe_unsafemajGet(string $v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Record_Unsafe;
-  $f = ($ffi_Record_Unsafe['unsafeGet'] ?? \phpurs_ffi_fallback($ffi_Record_Unsafe, 'unsafeGet'));
+  $f = ($ffi_Record_Unsafe['unsafeGet'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Record_Unsafe_unsafeGet'] = __NAMESPACE__ . '\\majRecord_majUnsafe_unsafemajGet';
@@ -163,7 +163,7 @@ function majRecord_majUnsafe_unsafemajHas(string $v0, $v1 = null): bool|\Closure
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Record_Unsafe;
-  $f = ($ffi_Record_Unsafe['unsafeHas'] ?? \phpurs_ffi_fallback($ffi_Record_Unsafe, 'unsafeHas'));
+  $f = ($ffi_Record_Unsafe['unsafeHas'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Record_Unsafe_unsafeHas'] = __NAMESPACE__ . '\\majRecord_majUnsafe_unsafemajHas';
@@ -175,7 +175,7 @@ function majRecord_majUnsafe_unsafemajSet(string $v0, $v1 = null, $v2 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Record_Unsafe;
-  $f = ($ffi_Record_Unsafe['unsafeSet'] ?? \phpurs_ffi_fallback($ffi_Record_Unsafe, 'unsafeSet'));
+  $f = ($ffi_Record_Unsafe['unsafeSet'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Record_Unsafe_unsafeSet'] = __NAMESPACE__ . '\\majRecord_majUnsafe_unsafemajSet';

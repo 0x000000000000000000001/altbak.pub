@@ -340,11 +340,11 @@ $exports['unsafeIndexImpl'] = $unsafeIndexImpl;
 return $exports;
   return $exports;
 });
-$GLOBALS['Data_Array__deleteAt'] = ($ffi_Data_Array['_deleteAt'] ?? \phpurs_ffi_fallback($ffi_Data_Array, '_deleteAt'));
-$GLOBALS['Data_Array__insertAt'] = ($ffi_Data_Array['_insertAt'] ?? \phpurs_ffi_fallback($ffi_Data_Array, '_insertAt'));
-$GLOBALS['Data_Array__updateAt'] = ($ffi_Data_Array['_updateAt'] ?? \phpurs_ffi_fallback($ffi_Data_Array, '_updateAt'));
-$GLOBALS['Data_Array_allImpl'] = ($ffi_Data_Array['allImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Array, 'allImpl'));
-$GLOBALS['Data_Array_anyImpl'] = ($ffi_Data_Array['anyImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Array, 'anyImpl'));
+$GLOBALS['Data_Array__deleteAt'] = ($ffi_Data_Array['_deleteAt'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array__insertAt'] = ($ffi_Data_Array['_insertAt'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array__updateAt'] = ($ffi_Data_Array['_updateAt'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_allImpl'] = ($ffi_Data_Array['allImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_anyImpl'] = ($ffi_Data_Array['anyImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
 function majData_majArray_concat($v0) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\majData_majArray_concat';
@@ -352,17 +352,17 @@ function majData_majArray_concat($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_Array;
-  $f = ($ffi_Data_Array['concat'] ?? \phpurs_ffi_fallback($ffi_Data_Array, 'concat'));
+  $f = ($ffi_Data_Array['concat'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_Array_concat'] = __NAMESPACE__ . '\\majData_majArray_concat';
 
-$GLOBALS['Data_Array_filterImpl'] = ($ffi_Data_Array['filterImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Array, 'filterImpl'));
-$GLOBALS['Data_Array_findIndexImpl'] = ($ffi_Data_Array['findIndexImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Array, 'findIndexImpl'));
-$GLOBALS['Data_Array_findLastIndexImpl'] = ($ffi_Data_Array['findLastIndexImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Array, 'findLastIndexImpl'));
-$GLOBALS['Data_Array_findMapImpl'] = ($ffi_Data_Array['findMapImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Array, 'findMapImpl'));
-$GLOBALS['Data_Array_fromFoldableImpl'] = ($ffi_Data_Array['fromFoldableImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Array, 'fromFoldableImpl'));
-$GLOBALS['Data_Array_indexImpl'] = ($ffi_Data_Array['indexImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Array, 'indexImpl'));
+$GLOBALS['Data_Array_filterImpl'] = ($ffi_Data_Array['filterImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_findIndexImpl'] = ($ffi_Data_Array['findIndexImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_findLastIndexImpl'] = ($ffi_Data_Array['findLastIndexImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_findMapImpl'] = ($ffi_Data_Array['findMapImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_fromFoldableImpl'] = ($ffi_Data_Array['fromFoldableImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_indexImpl'] = ($ffi_Data_Array['indexImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
 function majData_majArray_length($v0): int|\Closure {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\majData_majArray_length';
@@ -370,14 +370,14 @@ function majData_majArray_length($v0): int|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_Array;
-  $f = ($ffi_Data_Array['length'] ?? \phpurs_ffi_fallback($ffi_Data_Array, 'length'));
+  $f = ($ffi_Data_Array['length'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_Array_length'] = __NAMESPACE__ . '\\majData_majArray_length';
 
-$GLOBALS['Data_Array_partitionImpl'] = ($ffi_Data_Array['partitionImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Array, 'partitionImpl'));
-$GLOBALS['Data_Array_rangeImpl'] = ($ffi_Data_Array['rangeImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Array, 'rangeImpl'));
-$GLOBALS['Data_Array_replicateImpl'] = ($ffi_Data_Array['replicateImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Array, 'replicateImpl'));
+$GLOBALS['Data_Array_partitionImpl'] = ($ffi_Data_Array['partitionImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_rangeImpl'] = ($ffi_Data_Array['rangeImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_replicateImpl'] = ($ffi_Data_Array['replicateImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
 function majData_majArray_reverse($v0) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\majData_majArray_reverse';
@@ -385,18 +385,18 @@ function majData_majArray_reverse($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_Array;
-  $f = ($ffi_Data_Array['reverse'] ?? \phpurs_ffi_fallback($ffi_Data_Array, 'reverse'));
+  $f = ($ffi_Data_Array['reverse'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_Array_reverse'] = __NAMESPACE__ . '\\majData_majArray_reverse';
 
-$GLOBALS['Data_Array_scanlImpl'] = ($ffi_Data_Array['scanlImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Array, 'scanlImpl'));
-$GLOBALS['Data_Array_scanrImpl'] = ($ffi_Data_Array['scanrImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Array, 'scanrImpl'));
-$GLOBALS['Data_Array_sliceImpl'] = ($ffi_Data_Array['sliceImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Array, 'sliceImpl'));
-$GLOBALS['Data_Array_sortByImpl'] = ($ffi_Data_Array['sortByImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Array, 'sortByImpl'));
-$GLOBALS['Data_Array_unconsImpl'] = ($ffi_Data_Array['unconsImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Array, 'unconsImpl'));
-$GLOBALS['Data_Array_unsafeIndexImpl'] = ($ffi_Data_Array['unsafeIndexImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Array, 'unsafeIndexImpl'));
-$GLOBALS['Data_Array_zipWithImpl'] = ($ffi_Data_Array['zipWithImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Array, 'zipWithImpl'));
+$GLOBALS['Data_Array_scanlImpl'] = ($ffi_Data_Array['scanlImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_scanrImpl'] = ($ffi_Data_Array['scanrImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_sliceImpl'] = ($ffi_Data_Array['sliceImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_sortByImpl'] = ($ffi_Data_Array['sortByImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_unconsImpl'] = ($ffi_Data_Array['unconsImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_unsafeIndexImpl'] = ($ffi_Data_Array['unsafeIndexImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_zipWithImpl'] = ($ffi_Data_Array['zipWithImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
 
 
 

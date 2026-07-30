@@ -182,7 +182,7 @@ goto end_branch_0;;
 $GLOBALS['Test_RBTree_makeBlack'] = __NAMESPACE__ . '\\majTest_majRmajBmajTree_makemajBlack';
 
 // Test_RBTree_describe
-$GLOBALS['Test_RBTree_describe'] = \Effect\Console\majEffect_majConsole_log("Red-Black Tree (100k Worst-Case Insertions):");
+$GLOBALS['Test_RBTree_describe'] = ($GLOBALS['Effect_Console_log'])("Red-Black Tree (100k Worst-Case Insertions):");
 
 // Test_RBTree_depth
 function majTest_majRmajBmajTree_depth($v_0): int|\Closure {
@@ -555,9 +555,9 @@ break;
 $GLOBALS['Test_RBTree_buildTree'] = __NAMESPACE__ . '\\majTest_majRmajBmajTree_buildmajTree';
 
 // Test_RBTree_act
-$GLOBALS['Test_RBTree_act'] = ((($GLOBALS['Effect_bindEffect'])->{'bind'})(\Bench\majBench_opaque(100000)))(function($dummy_0) {
+$GLOBALS['Test_RBTree_act'] = ((($GLOBALS['Effect_bindEffect'])->{'bind'})(($GLOBALS['Bench_opaque'])(100000)))(function($dummy_0) {
   $__num = \func_num_args();
-  $__res = \Effect\Console\majEffect_majConsole_log((($GLOBALS['Data_Show_showInt'])->{'show'})(\Test\RBTree\majTest_majRmajBmajTree_depth(\Test\RBTree\majTest_majRmajBmajTree_buildmajTree($dummy_0, new \Test\RBTree\Test_RBTree_E()))));
+  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])->{'show'})(\Test\RBTree\majTest_majRmajBmajTree_depth(\Test\RBTree\majTest_majRmajBmajTree_buildmajTree($dummy_0, new \Test\RBTree\Test_RBTree_E()))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

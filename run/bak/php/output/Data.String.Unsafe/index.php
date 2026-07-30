@@ -117,7 +117,7 @@ function majData_majString_majUnsafe_char(string $v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_String_Unsafe;
-  $f = ($ffi_Data_String_Unsafe['char'] ?? \phpurs_ffi_fallback($ffi_Data_String_Unsafe, 'char'));
+  $f = ($ffi_Data_String_Unsafe['char'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_String_Unsafe_char'] = __NAMESPACE__ . '\\majData_majString_majUnsafe_char';
@@ -129,7 +129,7 @@ function majData_majString_majUnsafe_charmajAt(int $v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_String_Unsafe;
-  $f = ($ffi_Data_String_Unsafe['charAt'] ?? \phpurs_ffi_fallback($ffi_Data_String_Unsafe, 'charAt'));
+  $f = ($ffi_Data_String_Unsafe['charAt'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_String_Unsafe_charAt'] = __NAMESPACE__ . '\\majData_majString_majUnsafe_charmajAt';

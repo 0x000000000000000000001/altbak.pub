@@ -175,7 +175,7 @@ function majData_majInt_frommajNumbermajImpl($v0, $v1 = null, $v2 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Data_Int;
-  $f = ($ffi_Data_Int['fromNumberImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Int, 'fromNumberImpl'));
+  $f = ($ffi_Data_Int['fromNumberImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Data_Int_fromNumberImpl'] = __NAMESPACE__ . '\\majData_majInt_frommajNumbermajImpl';
@@ -187,7 +187,7 @@ function majData_majInt_frommajStringmajAsmajImpl($v0, $v1 = null, $v2 = null, $
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
   global $ffi_Data_Int;
-  $f = ($ffi_Data_Int['fromStringAsImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Int, 'fromStringAsImpl'));
+  $f = ($ffi_Data_Int['fromStringAsImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3);
 }
 $GLOBALS['Data_Int_fromStringAsImpl'] = __NAMESPACE__ . '\\majData_majInt_frommajStringmajAsmajImpl';
@@ -199,7 +199,7 @@ function majData_majInt_pow(int $v0, $v1 = null): int|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Int;
-  $f = ($ffi_Data_Int['pow'] ?? \phpurs_ffi_fallback($ffi_Data_Int, 'pow'));
+  $f = ($ffi_Data_Int['pow'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Int_pow'] = __NAMESPACE__ . '\\majData_majInt_pow';
@@ -211,7 +211,7 @@ function majData_majInt_quot(int $v0, $v1 = null): int|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Int;
-  $f = ($ffi_Data_Int['quot'] ?? \phpurs_ffi_fallback($ffi_Data_Int, 'quot'));
+  $f = ($ffi_Data_Int['quot'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Int_quot'] = __NAMESPACE__ . '\\majData_majInt_quot';
@@ -223,7 +223,7 @@ function majData_majInt_rem(int $v0, $v1 = null): int|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Int;
-  $f = ($ffi_Data_Int['rem'] ?? \phpurs_ffi_fallback($ffi_Data_Int, 'rem'));
+  $f = ($ffi_Data_Int['rem'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Int_rem'] = __NAMESPACE__ . '\\majData_majInt_rem';
@@ -235,7 +235,7 @@ function majData_majInt_tomajNumber(int $v0): float|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_Int;
-  $f = ($ffi_Data_Int['toNumber'] ?? \phpurs_ffi_fallback($ffi_Data_Int, 'toNumber'));
+  $f = ($ffi_Data_Int['toNumber'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_Int_toNumber'] = __NAMESPACE__ . '\\majData_majInt_tomajNumber';
@@ -247,7 +247,7 @@ function majData_majInt_tomajStringmajAs(int $v0, $v1 = null): string|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Int;
-  $f = ($ffi_Data_Int['toStringAs'] ?? \phpurs_ffi_fallback($ffi_Data_Int, 'toStringAs'));
+  $f = ($ffi_Data_Int['toStringAs'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Int_toStringAs'] = __NAMESPACE__ . '\\majData_majInt_tomajStringmajAs';

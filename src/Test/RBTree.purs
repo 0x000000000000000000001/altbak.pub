@@ -1,6 +1,6 @@
 module Test.RBTree where
 
-import Prelude
+import Prelude hiding (max)
 
 import Effect (Effect)
 import Effect.Console (logShow, log)
@@ -30,6 +30,7 @@ ins x (T color a y b) =
   else if x > y then balance color a y (ins x b)
   else T color a y b
 
+makeBlack :: Tree -> Tree
 makeBlack (T _ a y b) = T B a y b
 makeBlack E = E
 

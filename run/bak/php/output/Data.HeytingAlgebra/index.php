@@ -120,7 +120,7 @@ function majData_majHeytingmajAlgebra_boolmajConj(bool $v0, $v1 = null): bool|\C
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_HeytingAlgebra;
-  $f = ($ffi_Data_HeytingAlgebra['boolConj'] ?? \phpurs_ffi_fallback($ffi_Data_HeytingAlgebra, 'boolConj'));
+  $f = ($ffi_Data_HeytingAlgebra['boolConj'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_HeytingAlgebra_boolConj'] = __NAMESPACE__ . '\\majData_majHeytingmajAlgebra_boolmajConj';
@@ -132,7 +132,7 @@ function majData_majHeytingmajAlgebra_boolmajDisj(bool $v0, $v1 = null): bool|\C
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_HeytingAlgebra;
-  $f = ($ffi_Data_HeytingAlgebra['boolDisj'] ?? \phpurs_ffi_fallback($ffi_Data_HeytingAlgebra, 'boolDisj'));
+  $f = ($ffi_Data_HeytingAlgebra['boolDisj'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_HeytingAlgebra_boolDisj'] = __NAMESPACE__ . '\\majData_majHeytingmajAlgebra_boolmajDisj';
@@ -144,7 +144,7 @@ function majData_majHeytingmajAlgebra_boolmajNot(bool $v0): bool|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_HeytingAlgebra;
-  $f = ($ffi_Data_HeytingAlgebra['boolNot'] ?? \phpurs_ffi_fallback($ffi_Data_HeytingAlgebra, 'boolNot'));
+  $f = ($ffi_Data_HeytingAlgebra['boolNot'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_HeytingAlgebra_boolNot'] = __NAMESPACE__ . '\\majData_majHeytingmajAlgebra_boolmajNot';

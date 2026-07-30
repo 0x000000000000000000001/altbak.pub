@@ -117,7 +117,7 @@ function majControl_majBind_arraymajBind($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Control_Bind;
-  $f = ($ffi_Control_Bind['arrayBind'] ?? \phpurs_ffi_fallback($ffi_Control_Bind, 'arrayBind'));
+  $f = ($ffi_Control_Bind['arrayBind'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Control_Bind_arrayBind'] = __NAMESPACE__ . '\\majControl_majBind_arraymajBind';

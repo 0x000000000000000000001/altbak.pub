@@ -527,7 +527,7 @@ function majEffect_majAff__bind($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Effect_Aff;
-  $f = ($ffi_Effect_Aff['_bind'] ?? \phpurs_ffi_fallback($ffi_Effect_Aff, '_bind'));
+  $f = ($ffi_Effect_Aff['_bind'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Effect_Aff__bind'] = __NAMESPACE__ . '\\majEffect_majAff__bind';
@@ -539,12 +539,12 @@ function majEffect_majAff__catchmajError($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Effect_Aff;
-  $f = ($ffi_Effect_Aff['_catchError'] ?? \phpurs_ffi_fallback($ffi_Effect_Aff, '_catchError'));
+  $f = ($ffi_Effect_Aff['_catchError'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Effect_Aff__catchError'] = __NAMESPACE__ . '\\majEffect_majAff__catchmajError';
 
-$GLOBALS['Effect_Aff__delay'] = ($ffi_Effect_Aff['_delay'] ?? \phpurs_ffi_fallback($ffi_Effect_Aff, '_delay'));
+$GLOBALS['Effect_Aff__delay'] = ($ffi_Effect_Aff['_delay'] ?? new class { public function __invoke(...$args) { return $this; } });
 function majEffect_majAff__fork(bool $v0, $v1 = null) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\majEffect_majAff__fork';
@@ -552,12 +552,12 @@ function majEffect_majAff__fork(bool $v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Effect_Aff;
-  $f = ($ffi_Effect_Aff['_fork'] ?? \phpurs_ffi_fallback($ffi_Effect_Aff, '_fork'));
+  $f = ($ffi_Effect_Aff['_fork'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Effect_Aff__fork'] = __NAMESPACE__ . '\\majEffect_majAff__fork';
 
-$GLOBALS['Effect_Aff__killAll'] = ($ffi_Effect_Aff['_killAll'] ?? \phpurs_ffi_fallback($ffi_Effect_Aff, '_killAll'));
+$GLOBALS['Effect_Aff__killAll'] = ($ffi_Effect_Aff['_killAll'] ?? new class { public function __invoke(...$args) { return $this; } });
 function majEffect_majAff__liftmajEffect($v0) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\majEffect_majAff__liftmajEffect';
@@ -565,14 +565,14 @@ function majEffect_majAff__liftmajEffect($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Aff;
-  $f = ($ffi_Effect_Aff['_liftEffect'] ?? \phpurs_ffi_fallback($ffi_Effect_Aff, '_liftEffect'));
+  $f = ($ffi_Effect_Aff['_liftEffect'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Effect_Aff__liftEffect'] = __NAMESPACE__ . '\\majEffect_majAff__liftmajEffect';
 
-$GLOBALS['Effect_Aff__makeAff'] = ($ffi_Effect_Aff['_makeAff'] ?? \phpurs_ffi_fallback($ffi_Effect_Aff, '_makeAff'));
-$GLOBALS['Effect_Aff__makeFiber'] = ($ffi_Effect_Aff['_makeFiber'] ?? \phpurs_ffi_fallback($ffi_Effect_Aff, '_makeFiber'));
-$GLOBALS['Effect_Aff__makeSupervisedFiber'] = ($ffi_Effect_Aff['_makeSupervisedFiber'] ?? \phpurs_ffi_fallback($ffi_Effect_Aff, '_makeSupervisedFiber'));
+$GLOBALS['Effect_Aff__makeAff'] = ($ffi_Effect_Aff['_makeAff'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Effect_Aff__makeFiber'] = ($ffi_Effect_Aff['_makeFiber'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Effect_Aff__makeSupervisedFiber'] = ($ffi_Effect_Aff['_makeSupervisedFiber'] ?? new class { public function __invoke(...$args) { return $this; } });
 function majEffect_majAff__map($v0, $v1 = null) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\majEffect_majAff__map';
@@ -580,7 +580,7 @@ function majEffect_majAff__map($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Effect_Aff;
-  $f = ($ffi_Effect_Aff['_map'] ?? \phpurs_ffi_fallback($ffi_Effect_Aff, '_map'));
+  $f = ($ffi_Effect_Aff['_map'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Effect_Aff__map'] = __NAMESPACE__ . '\\majEffect_majAff__map';
@@ -592,7 +592,7 @@ function majEffect_majAff__parmajAffmajAlt($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Effect_Aff;
-  $f = ($ffi_Effect_Aff['_parAffAlt'] ?? \phpurs_ffi_fallback($ffi_Effect_Aff, '_parAffAlt'));
+  $f = ($ffi_Effect_Aff['_parAffAlt'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Effect_Aff__parAffAlt'] = __NAMESPACE__ . '\\majEffect_majAff__parmajAffmajAlt';
@@ -604,7 +604,7 @@ function majEffect_majAff__parmajAffmajApply($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Effect_Aff;
-  $f = ($ffi_Effect_Aff['_parAffApply'] ?? \phpurs_ffi_fallback($ffi_Effect_Aff, '_parAffApply'));
+  $f = ($ffi_Effect_Aff['_parAffApply'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Effect_Aff__parAffApply'] = __NAMESPACE__ . '\\majEffect_majAff__parmajAffmajApply';
@@ -616,7 +616,7 @@ function majEffect_majAff__parmajAffmajMap($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Effect_Aff;
-  $f = ($ffi_Effect_Aff['_parAffMap'] ?? \phpurs_ffi_fallback($ffi_Effect_Aff, '_parAffMap'));
+  $f = ($ffi_Effect_Aff['_parAffMap'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Effect_Aff__parAffMap'] = __NAMESPACE__ . '\\majEffect_majAff__parmajAffmajMap';
@@ -628,12 +628,12 @@ function majEffect_majAff__pure($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Aff;
-  $f = ($ffi_Effect_Aff['_pure'] ?? \phpurs_ffi_fallback($ffi_Effect_Aff, '_pure'));
+  $f = ($ffi_Effect_Aff['_pure'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Effect_Aff__pure'] = __NAMESPACE__ . '\\majEffect_majAff__pure';
 
-$GLOBALS['Effect_Aff__sequential'] = ($ffi_Effect_Aff['_sequential'] ?? \phpurs_ffi_fallback($ffi_Effect_Aff, '_sequential'));
+$GLOBALS['Effect_Aff__sequential'] = ($ffi_Effect_Aff['_sequential'] ?? new class { public function __invoke(...$args) { return $this; } });
 function majEffect_majAff__throwmajError($v0) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\majEffect_majAff__throwmajError';
@@ -641,7 +641,7 @@ function majEffect_majAff__throwmajError($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Aff;
-  $f = ($ffi_Effect_Aff['_throwError'] ?? \phpurs_ffi_fallback($ffi_Effect_Aff, '_throwError'));
+  $f = ($ffi_Effect_Aff['_throwError'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Effect_Aff__throwError'] = __NAMESPACE__ . '\\majEffect_majAff__throwmajError';
@@ -653,7 +653,7 @@ function majEffect_majAff_generalmajBracket($v0, $v1 = null, $v2 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Effect_Aff;
-  $f = ($ffi_Effect_Aff['generalBracket'] ?? \phpurs_ffi_fallback($ffi_Effect_Aff, 'generalBracket'));
+  $f = ($ffi_Effect_Aff['generalBracket'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Effect_Aff_generalBracket'] = __NAMESPACE__ . '\\majEffect_majAff_generalmajBracket';

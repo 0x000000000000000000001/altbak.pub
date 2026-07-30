@@ -162,7 +162,7 @@ function majData_majFoldable_foldlmajArray($v0, $v1 = null, $v2 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Data_Foldable;
-  $f = ($ffi_Data_Foldable['foldlArray'] ?? \phpurs_ffi_fallback($ffi_Data_Foldable, 'foldlArray'));
+  $f = ($ffi_Data_Foldable['foldlArray'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Data_Foldable_foldlArray'] = __NAMESPACE__ . '\\majData_majFoldable_foldlmajArray';
@@ -174,7 +174,7 @@ function majData_majFoldable_foldrmajArray($v0, $v1 = null, $v2 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Data_Foldable;
-  $f = ($ffi_Data_Foldable['foldrArray'] ?? \phpurs_ffi_fallback($ffi_Data_Foldable, 'foldrArray'));
+  $f = ($ffi_Data_Foldable['foldrArray'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Data_Foldable_foldrArray'] = __NAMESPACE__ . '\\majData_majFoldable_foldrmajArray';

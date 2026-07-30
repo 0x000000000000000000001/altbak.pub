@@ -119,7 +119,7 @@ function majData_majSemigroup_concatmajArray($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Semigroup;
-  $f = ($ffi_Data_Semigroup['concatArray'] ?? \phpurs_ffi_fallback($ffi_Data_Semigroup, 'concatArray'));
+  $f = ($ffi_Data_Semigroup['concatArray'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Semigroup_concatArray'] = __NAMESPACE__ . '\\majData_majSemigroup_concatmajArray';
@@ -131,7 +131,7 @@ function majData_majSemigroup_concatmajString(string $v0, $v1 = null): string|\C
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Semigroup;
-  $f = ($ffi_Data_Semigroup['concatString'] ?? \phpurs_ffi_fallback($ffi_Data_Semigroup, 'concatString'));
+  $f = ($ffi_Data_Semigroup['concatString'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Semigroup_concatString'] = __NAMESPACE__ . '\\majData_majSemigroup_concatmajString';

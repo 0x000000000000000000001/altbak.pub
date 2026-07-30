@@ -153,7 +153,7 @@ function majControl_majMonad_majSmajT_majInternal_bind_($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Control_Monad_ST_Internal;
-  $f = ($ffi_Control_Monad_ST_Internal['bind_'] ?? \phpurs_ffi_fallback($ffi_Control_Monad_ST_Internal, 'bind_'));
+  $f = ($ffi_Control_Monad_ST_Internal['bind_'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Control_Monad_ST_Internal_bind_'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majInternal_bind_';
@@ -165,7 +165,7 @@ function majControl_majMonad_majSmajT_majInternal_for(int $v0, $v1 = null, $v2 =
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Control_Monad_ST_Internal;
-  $f = ($ffi_Control_Monad_ST_Internal['for'] ?? \phpurs_ffi_fallback($ffi_Control_Monad_ST_Internal, 'for'));
+  $f = ($ffi_Control_Monad_ST_Internal['for'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Control_Monad_ST_Internal_for'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majInternal_for';
@@ -177,7 +177,7 @@ function majControl_majMonad_majSmajT_majInternal_foreach($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Control_Monad_ST_Internal;
-  $f = ($ffi_Control_Monad_ST_Internal['foreach'] ?? \phpurs_ffi_fallback($ffi_Control_Monad_ST_Internal, 'foreach'));
+  $f = ($ffi_Control_Monad_ST_Internal['foreach'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Control_Monad_ST_Internal_foreach'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majInternal_foreach';
@@ -189,7 +189,7 @@ function majControl_majMonad_majSmajT_majInternal_map_($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Control_Monad_ST_Internal;
-  $f = ($ffi_Control_Monad_ST_Internal['map_'] ?? \phpurs_ffi_fallback($ffi_Control_Monad_ST_Internal, 'map_'));
+  $f = ($ffi_Control_Monad_ST_Internal['map_'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Control_Monad_ST_Internal_map_'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majInternal_map_';
@@ -201,7 +201,7 @@ function majControl_majMonad_majSmajT_majInternal_modifymajImpl($v0, $v1 = null)
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Control_Monad_ST_Internal;
-  $f = ($ffi_Control_Monad_ST_Internal['modifyImpl'] ?? \phpurs_ffi_fallback($ffi_Control_Monad_ST_Internal, 'modifyImpl'));
+  $f = ($ffi_Control_Monad_ST_Internal['modifyImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Control_Monad_ST_Internal_modifyImpl'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majInternal_modifymajImpl';
@@ -213,7 +213,7 @@ function majControl_majMonad_majSmajT_majInternal_new($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Control_Monad_ST_Internal;
-  $f = ($ffi_Control_Monad_ST_Internal['new'] ?? \phpurs_ffi_fallback($ffi_Control_Monad_ST_Internal, 'new'));
+  $f = ($ffi_Control_Monad_ST_Internal['new'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Control_Monad_ST_Internal_new'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majInternal_new';
@@ -225,7 +225,7 @@ function majControl_majMonad_majSmajT_majInternal_pure_($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Control_Monad_ST_Internal;
-  $f = ($ffi_Control_Monad_ST_Internal['pure_'] ?? \phpurs_ffi_fallback($ffi_Control_Monad_ST_Internal, 'pure_'));
+  $f = ($ffi_Control_Monad_ST_Internal['pure_'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Control_Monad_ST_Internal_pure_'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majInternal_pure_';
@@ -237,7 +237,7 @@ function majControl_majMonad_majSmajT_majInternal_read($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Control_Monad_ST_Internal;
-  $f = ($ffi_Control_Monad_ST_Internal['read'] ?? \phpurs_ffi_fallback($ffi_Control_Monad_ST_Internal, 'read'));
+  $f = ($ffi_Control_Monad_ST_Internal['read'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Control_Monad_ST_Internal_read'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majInternal_read';
@@ -249,7 +249,7 @@ function majControl_majMonad_majSmajT_majInternal_run($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Control_Monad_ST_Internal;
-  $f = ($ffi_Control_Monad_ST_Internal['run'] ?? \phpurs_ffi_fallback($ffi_Control_Monad_ST_Internal, 'run'));
+  $f = ($ffi_Control_Monad_ST_Internal['run'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Control_Monad_ST_Internal_run'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majInternal_run';
@@ -261,7 +261,7 @@ function majControl_majMonad_majSmajT_majInternal_while($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Control_Monad_ST_Internal;
-  $f = ($ffi_Control_Monad_ST_Internal['while'] ?? \phpurs_ffi_fallback($ffi_Control_Monad_ST_Internal, 'while'));
+  $f = ($ffi_Control_Monad_ST_Internal['while'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Control_Monad_ST_Internal_while'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majInternal_while';
@@ -273,7 +273,7 @@ function majControl_majMonad_majSmajT_majInternal_write($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Control_Monad_ST_Internal;
-  $f = ($ffi_Control_Monad_ST_Internal['write'] ?? \phpurs_ffi_fallback($ffi_Control_Monad_ST_Internal, 'write'));
+  $f = ($ffi_Control_Monad_ST_Internal['write'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Control_Monad_ST_Internal_write'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majInternal_write';

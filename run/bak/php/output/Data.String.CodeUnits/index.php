@@ -222,7 +222,7 @@ function majData_majString_majCodemajUnits__charmajAt($v0, $v1 = null, $v2 = nul
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
   global $ffi_Data_String_CodeUnits;
-  $f = ($ffi_Data_String_CodeUnits['_charAt'] ?? \phpurs_ffi_fallback($ffi_Data_String_CodeUnits, '_charAt'));
+  $f = ($ffi_Data_String_CodeUnits['_charAt'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3);
 }
 $GLOBALS['Data_String_CodeUnits__charAt'] = __NAMESPACE__ . '\\majData_majString_majCodemajUnits__charmajAt';
@@ -234,7 +234,7 @@ function majData_majString_majCodemajUnits__indexmajOf($v0, $v1 = null, $v2 = nu
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
   global $ffi_Data_String_CodeUnits;
-  $f = ($ffi_Data_String_CodeUnits['_indexOf'] ?? \phpurs_ffi_fallback($ffi_Data_String_CodeUnits, '_indexOf'));
+  $f = ($ffi_Data_String_CodeUnits['_indexOf'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3);
 }
 $GLOBALS['Data_String_CodeUnits__indexOf'] = __NAMESPACE__ . '\\majData_majString_majCodemajUnits__indexmajOf';
@@ -246,7 +246,7 @@ function majData_majString_majCodemajUnits__indexmajOfmajStartingmajAt($v0, $v1 
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
   global $ffi_Data_String_CodeUnits;
-  $f = ($ffi_Data_String_CodeUnits['_indexOfStartingAt'] ?? \phpurs_ffi_fallback($ffi_Data_String_CodeUnits, '_indexOfStartingAt'));
+  $f = ($ffi_Data_String_CodeUnits['_indexOfStartingAt'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3, $v4);
 }
 $GLOBALS['Data_String_CodeUnits__indexOfStartingAt'] = __NAMESPACE__ . '\\majData_majString_majCodemajUnits__indexmajOfmajStartingmajAt';
@@ -258,7 +258,7 @@ function majData_majString_majCodemajUnits__lastmajIndexmajOf($v0, $v1 = null, $
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
   global $ffi_Data_String_CodeUnits;
-  $f = ($ffi_Data_String_CodeUnits['_lastIndexOf'] ?? \phpurs_ffi_fallback($ffi_Data_String_CodeUnits, '_lastIndexOf'));
+  $f = ($ffi_Data_String_CodeUnits['_lastIndexOf'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3);
 }
 $GLOBALS['Data_String_CodeUnits__lastIndexOf'] = __NAMESPACE__ . '\\majData_majString_majCodemajUnits__lastmajIndexmajOf';
@@ -270,7 +270,7 @@ function majData_majString_majCodemajUnits__lastmajIndexmajOfmajStartingmajAt($v
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
   global $ffi_Data_String_CodeUnits;
-  $f = ($ffi_Data_String_CodeUnits['_lastIndexOfStartingAt'] ?? \phpurs_ffi_fallback($ffi_Data_String_CodeUnits, '_lastIndexOfStartingAt'));
+  $f = ($ffi_Data_String_CodeUnits['_lastIndexOfStartingAt'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3, $v4);
 }
 $GLOBALS['Data_String_CodeUnits__lastIndexOfStartingAt'] = __NAMESPACE__ . '\\majData_majString_majCodemajUnits__lastmajIndexmajOfmajStartingmajAt';
@@ -282,7 +282,7 @@ function majData_majString_majCodemajUnits__tomajChar($v0, $v1 = null, $v2 = nul
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Data_String_CodeUnits;
-  $f = ($ffi_Data_String_CodeUnits['_toChar'] ?? \phpurs_ffi_fallback($ffi_Data_String_CodeUnits, '_toChar'));
+  $f = ($ffi_Data_String_CodeUnits['_toChar'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Data_String_CodeUnits__toChar'] = __NAMESPACE__ . '\\majData_majString_majCodemajUnits__tomajChar';
@@ -294,7 +294,7 @@ function majData_majString_majCodemajUnits_countmajPrefix($v0, $v1 = null): int|
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_String_CodeUnits;
-  $f = ($ffi_Data_String_CodeUnits['countPrefix'] ?? \phpurs_ffi_fallback($ffi_Data_String_CodeUnits, 'countPrefix'));
+  $f = ($ffi_Data_String_CodeUnits['countPrefix'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_String_CodeUnits_countPrefix'] = __NAMESPACE__ . '\\majData_majString_majCodemajUnits_countmajPrefix';
@@ -306,7 +306,7 @@ function majData_majString_majCodemajUnits_drop(int $v0, $v1 = null): string|\Cl
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_String_CodeUnits;
-  $f = ($ffi_Data_String_CodeUnits['drop'] ?? \phpurs_ffi_fallback($ffi_Data_String_CodeUnits, 'drop'));
+  $f = ($ffi_Data_String_CodeUnits['drop'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_String_CodeUnits_drop'] = __NAMESPACE__ . '\\majData_majString_majCodemajUnits_drop';
@@ -318,7 +318,7 @@ function majData_majString_majCodemajUnits_frommajCharmajArray($v0): string|\Clo
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_String_CodeUnits;
-  $f = ($ffi_Data_String_CodeUnits['fromCharArray'] ?? \phpurs_ffi_fallback($ffi_Data_String_CodeUnits, 'fromCharArray'));
+  $f = ($ffi_Data_String_CodeUnits['fromCharArray'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_String_CodeUnits_fromCharArray'] = __NAMESPACE__ . '\\majData_majString_majCodemajUnits_frommajCharmajArray';
@@ -330,7 +330,7 @@ function majData_majString_majCodemajUnits_length(string $v0): int|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_String_CodeUnits;
-  $f = ($ffi_Data_String_CodeUnits['length'] ?? \phpurs_ffi_fallback($ffi_Data_String_CodeUnits, 'length'));
+  $f = ($ffi_Data_String_CodeUnits['length'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_String_CodeUnits_length'] = __NAMESPACE__ . '\\majData_majString_majCodemajUnits_length';
@@ -342,7 +342,7 @@ function majData_majString_majCodemajUnits_singleton($v0): string|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_String_CodeUnits;
-  $f = ($ffi_Data_String_CodeUnits['singleton'] ?? \phpurs_ffi_fallback($ffi_Data_String_CodeUnits, 'singleton'));
+  $f = ($ffi_Data_String_CodeUnits['singleton'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_String_CodeUnits_singleton'] = __NAMESPACE__ . '\\majData_majString_majCodemajUnits_singleton';
@@ -354,7 +354,7 @@ function majData_majString_majCodemajUnits_slice(int $v0, $v1 = null, $v2 = null
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Data_String_CodeUnits;
-  $f = ($ffi_Data_String_CodeUnits['slice'] ?? \phpurs_ffi_fallback($ffi_Data_String_CodeUnits, 'slice'));
+  $f = ($ffi_Data_String_CodeUnits['slice'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Data_String_CodeUnits_slice'] = __NAMESPACE__ . '\\majData_majString_majCodemajUnits_slice';
@@ -366,7 +366,7 @@ function majData_majString_majCodemajUnits_splitmajAt(int $v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_String_CodeUnits;
-  $f = ($ffi_Data_String_CodeUnits['splitAt'] ?? \phpurs_ffi_fallback($ffi_Data_String_CodeUnits, 'splitAt'));
+  $f = ($ffi_Data_String_CodeUnits['splitAt'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_String_CodeUnits_splitAt'] = __NAMESPACE__ . '\\majData_majString_majCodemajUnits_splitmajAt';
@@ -378,7 +378,7 @@ function majData_majString_majCodemajUnits_take(int $v0, $v1 = null): string|\Cl
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_String_CodeUnits;
-  $f = ($ffi_Data_String_CodeUnits['take'] ?? \phpurs_ffi_fallback($ffi_Data_String_CodeUnits, 'take'));
+  $f = ($ffi_Data_String_CodeUnits['take'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_String_CodeUnits_take'] = __NAMESPACE__ . '\\majData_majString_majCodemajUnits_take';
@@ -390,7 +390,7 @@ function majData_majString_majCodemajUnits_tomajCharmajArray(string $v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_String_CodeUnits;
-  $f = ($ffi_Data_String_CodeUnits['toCharArray'] ?? \phpurs_ffi_fallback($ffi_Data_String_CodeUnits, 'toCharArray'));
+  $f = ($ffi_Data_String_CodeUnits['toCharArray'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_String_CodeUnits_toCharArray'] = __NAMESPACE__ . '\\majData_majString_majCodemajUnits_tomajCharmajArray';

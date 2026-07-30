@@ -157,9 +157,9 @@ $exports['calcDiff'] = $calcDiff;
 return $exports;
   return $exports;
 });
-$GLOBALS['Data_Date_calcDiff'] = ($ffi_Data_Date['calcDiff'] ?? \phpurs_ffi_fallback($ffi_Data_Date, 'calcDiff'));
-$GLOBALS['Data_Date_calcWeekday'] = ($ffi_Data_Date['calcWeekday'] ?? \phpurs_ffi_fallback($ffi_Data_Date, 'calcWeekday'));
-$GLOBALS['Data_Date_canonicalDateImpl'] = ($ffi_Data_Date['canonicalDateImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Date, 'canonicalDateImpl'));
+$GLOBALS['Data_Date_calcDiff'] = ($ffi_Data_Date['calcDiff'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Date_calcWeekday'] = ($ffi_Data_Date['calcWeekday'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Date_canonicalDateImpl'] = ($ffi_Data_Date['canonicalDateImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
 
 
 final class Data_Date_Date { public $tag = 'Date'; public function __construct(public int $value0, public  $value1, public int $value2) {} }

@@ -114,7 +114,7 @@ function majControl_majApply_arraymajApply($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Control_Apply;
-  $f = ($ffi_Control_Apply['arrayApply'] ?? \phpurs_ffi_fallback($ffi_Control_Apply, 'arrayApply'));
+  $f = ($ffi_Control_Apply['arrayApply'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Control_Apply_arrayApply'] = __NAMESPACE__ . '\\majControl_majApply_arraymajApply';

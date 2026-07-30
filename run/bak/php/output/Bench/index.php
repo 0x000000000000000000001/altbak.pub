@@ -119,7 +119,7 @@ $exports['formatNumber'] = $formatNumber;
 return $exports;
   return $exports;
 });
-$GLOBALS['Bench_benchNow'] = ($ffi_Bench['benchNow'] ?? \phpurs_ffi_fallback($ffi_Bench, 'benchNow'));
+$GLOBALS['Bench_benchNow'] = ($ffi_Bench['benchNow'] ?? new class { public function __invoke(...$args) { return $this; } });
 function majBench_formatmajNumber(float $v0): string|\Closure {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\majBench_formatmajNumber';
@@ -127,7 +127,7 @@ function majBench_formatmajNumber(float $v0): string|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Bench;
-  $f = ($ffi_Bench['formatNumber'] ?? \phpurs_ffi_fallback($ffi_Bench, 'formatNumber'));
+  $f = ($ffi_Bench['formatNumber'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Bench_formatNumber'] = __NAMESPACE__ . '\\majBench_formatmajNumber';
@@ -139,7 +139,7 @@ function majBench_opaque($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Bench;
-  $f = ($ffi_Bench['opaque'] ?? \phpurs_ffi_fallback($ffi_Bench, 'opaque'));
+  $f = ($ffi_Bench['opaque'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Bench_opaque'] = __NAMESPACE__ . '\\majBench_opaque';

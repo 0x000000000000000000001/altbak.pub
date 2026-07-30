@@ -140,7 +140,7 @@ function majEffect_majException_catchmajException($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Effect_Exception;
-  $f = ($ffi_Effect_Exception['catchException'] ?? \phpurs_ffi_fallback($ffi_Effect_Exception, 'catchException'));
+  $f = ($ffi_Effect_Exception['catchException'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Effect_Exception_catchException'] = __NAMESPACE__ . '\\majEffect_majException_catchmajException';
@@ -152,7 +152,7 @@ function majEffect_majException_error(string $v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Exception;
-  $f = ($ffi_Effect_Exception['error'] ?? \phpurs_ffi_fallback($ffi_Effect_Exception, 'error'));
+  $f = ($ffi_Effect_Exception['error'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Effect_Exception_error'] = __NAMESPACE__ . '\\majEffect_majException_error';
@@ -164,7 +164,7 @@ function majEffect_majException_errormajWithmajCause(string $v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Effect_Exception;
-  $f = ($ffi_Effect_Exception['errorWithCause'] ?? \phpurs_ffi_fallback($ffi_Effect_Exception, 'errorWithCause'));
+  $f = ($ffi_Effect_Exception['errorWithCause'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Effect_Exception_errorWithCause'] = __NAMESPACE__ . '\\majEffect_majException_errormajWithmajCause';
@@ -176,7 +176,7 @@ function majEffect_majException_errormajWithmajName(string $v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Effect_Exception;
-  $f = ($ffi_Effect_Exception['errorWithName'] ?? \phpurs_ffi_fallback($ffi_Effect_Exception, 'errorWithName'));
+  $f = ($ffi_Effect_Exception['errorWithName'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Effect_Exception_errorWithName'] = __NAMESPACE__ . '\\majEffect_majException_errormajWithmajName';
@@ -188,7 +188,7 @@ function majEffect_majException_message($v0): string|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Exception;
-  $f = ($ffi_Effect_Exception['message'] ?? \phpurs_ffi_fallback($ffi_Effect_Exception, 'message'));
+  $f = ($ffi_Effect_Exception['message'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Effect_Exception_message'] = __NAMESPACE__ . '\\majEffect_majException_message';
@@ -200,7 +200,7 @@ function majEffect_majException_name($v0): string|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Exception;
-  $f = ($ffi_Effect_Exception['name'] ?? \phpurs_ffi_fallback($ffi_Effect_Exception, 'name'));
+  $f = ($ffi_Effect_Exception['name'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Effect_Exception_name'] = __NAMESPACE__ . '\\majEffect_majException_name';
@@ -212,7 +212,7 @@ function majEffect_majException_showmajErrormajImpl($v0): string|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Exception;
-  $f = ($ffi_Effect_Exception['showErrorImpl'] ?? \phpurs_ffi_fallback($ffi_Effect_Exception, 'showErrorImpl'));
+  $f = ($ffi_Effect_Exception['showErrorImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Effect_Exception_showErrorImpl'] = __NAMESPACE__ . '\\majEffect_majException_showmajErrormajImpl';
@@ -224,7 +224,7 @@ function majEffect_majException_stackmajImpl($v0, $v1 = null, $v2 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Effect_Exception;
-  $f = ($ffi_Effect_Exception['stackImpl'] ?? \phpurs_ffi_fallback($ffi_Effect_Exception, 'stackImpl'));
+  $f = ($ffi_Effect_Exception['stackImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Effect_Exception_stackImpl'] = __NAMESPACE__ . '\\majEffect_majException_stackmajImpl';
@@ -236,7 +236,7 @@ function majEffect_majException_throwmajException($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Exception;
-  $f = ($ffi_Effect_Exception['throwException'] ?? \phpurs_ffi_fallback($ffi_Effect_Exception, 'throwException'));
+  $f = ($ffi_Effect_Exception['throwException'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Effect_Exception_throwException'] = __NAMESPACE__ . '\\majEffect_majException_throwmajException';

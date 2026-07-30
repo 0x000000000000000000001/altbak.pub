@@ -210,7 +210,7 @@ function majData_majString_majCodemajPoints__codemajPointmajAt($v0, $v1 = null, 
     return phpurs_curry_fallback($__fn, \func_get_args(), 6);
   }
   global $ffi_Data_String_CodePoints;
-  $f = ($ffi_Data_String_CodePoints['_codePointAt'] ?? \phpurs_ffi_fallback($ffi_Data_String_CodePoints, '_codePointAt'));
+  $f = ($ffi_Data_String_CodePoints['_codePointAt'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3, $v4, $v5);
 }
 $GLOBALS['Data_String_CodePoints__codePointAt'] = __NAMESPACE__ . '\\majData_majString_majCodemajPoints__codemajPointmajAt';
@@ -222,7 +222,7 @@ function majData_majString_majCodemajPoints__countmajPrefix($v0, $v1 = null, $v2
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
   global $ffi_Data_String_CodePoints;
-  $f = ($ffi_Data_String_CodePoints['_countPrefix'] ?? \phpurs_ffi_fallback($ffi_Data_String_CodePoints, '_countPrefix'));
+  $f = ($ffi_Data_String_CodePoints['_countPrefix'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3);
 }
 $GLOBALS['Data_String_CodePoints__countPrefix'] = __NAMESPACE__ . '\\majData_majString_majCodemajPoints__countmajPrefix';
@@ -234,7 +234,7 @@ function majData_majString_majCodemajPoints__frommajCodemajPointmajArray($v0, $v
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_String_CodePoints;
-  $f = ($ffi_Data_String_CodePoints['_fromCodePointArray'] ?? \phpurs_ffi_fallback($ffi_Data_String_CodePoints, '_fromCodePointArray'));
+  $f = ($ffi_Data_String_CodePoints['_fromCodePointArray'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_String_CodePoints__fromCodePointArray'] = __NAMESPACE__ . '\\majData_majString_majCodemajPoints__frommajCodemajPointmajArray';
@@ -246,7 +246,7 @@ function majData_majString_majCodemajPoints__singleton($v0, $v1 = null): string|
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_String_CodePoints;
-  $f = ($ffi_Data_String_CodePoints['_singleton'] ?? \phpurs_ffi_fallback($ffi_Data_String_CodePoints, '_singleton'));
+  $f = ($ffi_Data_String_CodePoints['_singleton'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_String_CodePoints__singleton'] = __NAMESPACE__ . '\\majData_majString_majCodemajPoints__singleton';
@@ -258,7 +258,7 @@ function majData_majString_majCodemajPoints__take($v0, $v1 = null, $v2 = null): 
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Data_String_CodePoints;
-  $f = ($ffi_Data_String_CodePoints['_take'] ?? \phpurs_ffi_fallback($ffi_Data_String_CodePoints, '_take'));
+  $f = ($ffi_Data_String_CodePoints['_take'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Data_String_CodePoints__take'] = __NAMESPACE__ . '\\majData_majString_majCodemajPoints__take';
@@ -270,7 +270,7 @@ function majData_majString_majCodemajPoints__tomajCodemajPointmajArray($v0, $v1 
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Data_String_CodePoints;
-  $f = ($ffi_Data_String_CodePoints['_toCodePointArray'] ?? \phpurs_ffi_fallback($ffi_Data_String_CodePoints, '_toCodePointArray'));
+  $f = ($ffi_Data_String_CodePoints['_toCodePointArray'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Data_String_CodePoints__toCodePointArray'] = __NAMESPACE__ . '\\majData_majString_majCodemajPoints__tomajCodemajPointmajArray';
@@ -282,7 +282,7 @@ function majData_majString_majCodemajPoints__unsafemajCodemajPointmajAt0($v0, $v
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_String_CodePoints;
-  $f = ($ffi_Data_String_CodePoints['_unsafeCodePointAt0'] ?? \phpurs_ffi_fallback($ffi_Data_String_CodePoints, '_unsafeCodePointAt0'));
+  $f = ($ffi_Data_String_CodePoints['_unsafeCodePointAt0'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_String_CodePoints__unsafeCodePointAt0'] = __NAMESPACE__ . '\\majData_majString_majCodemajPoints__unsafemajCodemajPointmajAt0';

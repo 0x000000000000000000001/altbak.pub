@@ -117,7 +117,7 @@ function majData_majRing_intmajSub(int $v0, $v1 = null): int|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Ring;
-  $f = ($ffi_Data_Ring['intSub'] ?? \phpurs_ffi_fallback($ffi_Data_Ring, 'intSub'));
+  $f = ($ffi_Data_Ring['intSub'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Ring_intSub'] = __NAMESPACE__ . '\\majData_majRing_intmajSub';
@@ -129,7 +129,7 @@ function majData_majRing_nummajSub(float $v0, $v1 = null): float|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Ring;
-  $f = ($ffi_Data_Ring['numSub'] ?? \phpurs_ffi_fallback($ffi_Data_Ring, 'numSub'));
+  $f = ($ffi_Data_Ring['numSub'] ?? new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Ring_numSub'] = __NAMESPACE__ . '\\majData_majRing_nummajSub';
