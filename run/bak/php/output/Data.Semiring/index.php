@@ -122,7 +122,7 @@ function majData_majSemiring_intmajAdd(int $v0, $v1 = null): int|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Semiring;
-  $f = ($ffi_Data_Semiring['intAdd'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Data_Semiring['intAdd'] ?? \phpurs_ffi_fallback($ffi_Data_Semiring, 'intAdd'));
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Semiring_intAdd'] = __NAMESPACE__ . '\\majData_majSemiring_intmajAdd';
@@ -134,7 +134,7 @@ function majData_majSemiring_intmajMul(int $v0, $v1 = null): int|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Semiring;
-  $f = ($ffi_Data_Semiring['intMul'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Data_Semiring['intMul'] ?? \phpurs_ffi_fallback($ffi_Data_Semiring, 'intMul'));
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Semiring_intMul'] = __NAMESPACE__ . '\\majData_majSemiring_intmajMul';
@@ -146,7 +146,7 @@ function majData_majSemiring_nummajAdd(float $v0, $v1 = null): float|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Semiring;
-  $f = ($ffi_Data_Semiring['numAdd'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Data_Semiring['numAdd'] ?? \phpurs_ffi_fallback($ffi_Data_Semiring, 'numAdd'));
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Semiring_numAdd'] = __NAMESPACE__ . '\\majData_majSemiring_nummajAdd';
@@ -158,7 +158,7 @@ function majData_majSemiring_nummajMul(float $v0, $v1 = null): float|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Semiring;
-  $f = ($ffi_Data_Semiring['numMul'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Data_Semiring['numMul'] ?? \phpurs_ffi_fallback($ffi_Data_Semiring, 'numMul'));
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Semiring_numMul'] = __NAMESPACE__ . '\\majData_majSemiring_nummajMul';

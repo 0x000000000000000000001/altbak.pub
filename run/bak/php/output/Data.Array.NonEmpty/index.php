@@ -206,7 +206,7 @@ function majData_majArray_majNonmajEmpty_unsafemajIndex1($__local_var_0, $__loca
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($__local_var_0)[0];
+  $__res = ($__local_var_0)[$__local_var_1];
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

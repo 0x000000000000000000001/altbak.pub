@@ -112,7 +112,7 @@ function majData_majReflectable_unsafemajCoerce($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_Reflectable;
-  $f = ($ffi_Data_Reflectable['unsafeCoerce'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Data_Reflectable['unsafeCoerce'] ?? \phpurs_ffi_fallback($ffi_Data_Reflectable, 'unsafeCoerce'));
   return $f($v0);
 }
 $GLOBALS['Data_Reflectable_unsafeCoerce'] = __NAMESPACE__ . '\\majData_majReflectable_unsafemajCoerce';

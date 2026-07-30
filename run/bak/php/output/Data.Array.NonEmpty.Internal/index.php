@@ -193,9 +193,9 @@ $exports['traverse1Impl'] = $traverse1Impl;
 return $exports;
   return $exports;
 });
-$GLOBALS['Data_Array_NonEmpty_Internal_foldl1Impl'] = ($ffi_Data_Array_NonEmpty_Internal['foldl1Impl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_NonEmpty_Internal_foldr1Impl'] = ($ffi_Data_Array_NonEmpty_Internal['foldr1Impl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_NonEmpty_Internal_traverse1Impl'] = ($ffi_Data_Array_NonEmpty_Internal['traverse1Impl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_NonEmpty_Internal_foldl1Impl'] = ($ffi_Data_Array_NonEmpty_Internal['foldl1Impl'] ?? \phpurs_ffi_fallback($ffi_Data_Array_NonEmpty_Internal, 'foldl1Impl'));
+$GLOBALS['Data_Array_NonEmpty_Internal_foldr1Impl'] = ($ffi_Data_Array_NonEmpty_Internal['foldr1Impl'] ?? \phpurs_ffi_fallback($ffi_Data_Array_NonEmpty_Internal, 'foldr1Impl'));
+$GLOBALS['Data_Array_NonEmpty_Internal_traverse1Impl'] = ($ffi_Data_Array_NonEmpty_Internal['traverse1Impl'] ?? \phpurs_ffi_fallback($ffi_Data_Array_NonEmpty_Internal, 'traverse1Impl'));
 
 
 

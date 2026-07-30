@@ -126,7 +126,7 @@ function majData_majEuclideanmajRing_intmajDegree(int $v0): int|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_EuclideanRing;
-  $f = ($ffi_Data_EuclideanRing['intDegree'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Data_EuclideanRing['intDegree'] ?? \phpurs_ffi_fallback($ffi_Data_EuclideanRing, 'intDegree'));
   return $f($v0);
 }
 $GLOBALS['Data_EuclideanRing_intDegree'] = __NAMESPACE__ . '\\majData_majEuclideanmajRing_intmajDegree';
@@ -138,7 +138,7 @@ function majData_majEuclideanmajRing_intmajDiv(int $v0, $v1 = null): int|\Closur
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_EuclideanRing;
-  $f = ($ffi_Data_EuclideanRing['intDiv'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Data_EuclideanRing['intDiv'] ?? \phpurs_ffi_fallback($ffi_Data_EuclideanRing, 'intDiv'));
   return $f($v0, $v1);
 }
 $GLOBALS['Data_EuclideanRing_intDiv'] = __NAMESPACE__ . '\\majData_majEuclideanmajRing_intmajDiv';
@@ -150,7 +150,7 @@ function majData_majEuclideanmajRing_intmajMod(int $v0, $v1 = null): int|\Closur
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_EuclideanRing;
-  $f = ($ffi_Data_EuclideanRing['intMod'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Data_EuclideanRing['intMod'] ?? \phpurs_ffi_fallback($ffi_Data_EuclideanRing, 'intMod'));
   return $f($v0, $v1);
 }
 $GLOBALS['Data_EuclideanRing_intMod'] = __NAMESPACE__ . '\\majData_majEuclideanmajRing_intmajMod';
@@ -162,7 +162,7 @@ function majData_majEuclideanmajRing_nummajDiv(float $v0, $v1 = null): float|\Cl
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_EuclideanRing;
-  $f = ($ffi_Data_EuclideanRing['numDiv'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Data_EuclideanRing['numDiv'] ?? \phpurs_ffi_fallback($ffi_Data_EuclideanRing, 'numDiv'));
   return $f($v0, $v1);
 }
 $GLOBALS['Data_EuclideanRing_numDiv'] = __NAMESPACE__ . '\\majData_majEuclideanmajRing_nummajDiv';

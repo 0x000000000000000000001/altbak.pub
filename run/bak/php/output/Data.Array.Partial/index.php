@@ -120,7 +120,7 @@ function majData_majArray_majPartial_last($_dollar__unused_0, $xs_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($xs_1)[0];
+  $__res = ($xs_1)[(count($xs_1) - 1)];
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

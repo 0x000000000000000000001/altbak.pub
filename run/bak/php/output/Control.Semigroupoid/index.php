@@ -128,7 +128,7 @@ function majControl_majSemigroupoid_composemajImpl($v0, $v1 = null, $v2 = null) 
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Control_Semigroupoid;
-  $f = ($ffi_Control_Semigroupoid['composeImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Control_Semigroupoid['composeImpl'] ?? \phpurs_ffi_fallback($ffi_Control_Semigroupoid, 'composeImpl'));
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Control_Semigroupoid_composeImpl'] = __NAMESPACE__ . '\\majControl_majSemigroupoid_composemajImpl';

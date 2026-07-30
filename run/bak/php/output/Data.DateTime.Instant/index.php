@@ -141,7 +141,7 @@ $exports['toDateTimeImpl'] = $toDateTimeImpl;
 return $exports;
   return $exports;
 });
-$GLOBALS['Data_DateTime_Instant_fromDateTimeImpl'] = ($ffi_Data_DateTime_Instant['fromDateTimeImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_DateTime_Instant_fromDateTimeImpl'] = ($ffi_Data_DateTime_Instant['fromDateTimeImpl'] ?? \phpurs_ffi_fallback($ffi_Data_DateTime_Instant, 'fromDateTimeImpl'));
 function majData_majDatemajTime_majInstant_tomajDatemajTimemajImpl($v0, $v1 = null) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\majData_majDatemajTime_majInstant_tomajDatemajTimemajImpl';
@@ -149,7 +149,7 @@ function majData_majDatemajTime_majInstant_tomajDatemajTimemajImpl($v0, $v1 = nu
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_DateTime_Instant;
-  $f = ($ffi_Data_DateTime_Instant['toDateTimeImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Data_DateTime_Instant['toDateTimeImpl'] ?? \phpurs_ffi_fallback($ffi_Data_DateTime_Instant, 'toDateTimeImpl'));
   return $f($v0, $v1);
 }
 $GLOBALS['Data_DateTime_Instant_toDateTimeImpl'] = __NAMESPACE__ . '\\majData_majDatemajTime_majInstant_tomajDatemajTimemajImpl';

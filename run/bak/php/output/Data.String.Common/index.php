@@ -157,7 +157,7 @@ function majData_majString_majCommon__localemajCompare($v0, $v1 = null, $v2 = nu
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
   global $ffi_Data_String_Common;
-  $f = ($ffi_Data_String_Common['_localeCompare'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Data_String_Common['_localeCompare'] ?? \phpurs_ffi_fallback($ffi_Data_String_Common, '_localeCompare'));
   return $f($v0, $v1, $v2, $v3, $v4);
 }
 $GLOBALS['Data_String_Common__localeCompare'] = __NAMESPACE__ . '\\majData_majString_majCommon__localemajCompare';
@@ -169,7 +169,7 @@ function majData_majString_majCommon_joinmajWith(string $v0, $v1 = null): string
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_String_Common;
-  $f = ($ffi_Data_String_Common['joinWith'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Data_String_Common['joinWith'] ?? \phpurs_ffi_fallback($ffi_Data_String_Common, 'joinWith'));
   return $f($v0, $v1);
 }
 $GLOBALS['Data_String_Common_joinWith'] = __NAMESPACE__ . '\\majData_majString_majCommon_joinmajWith';
@@ -181,7 +181,7 @@ function majData_majString_majCommon_replace(string $v0, $v1 = null, $v2 = null)
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Data_String_Common;
-  $f = ($ffi_Data_String_Common['replace'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Data_String_Common['replace'] ?? \phpurs_ffi_fallback($ffi_Data_String_Common, 'replace'));
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Data_String_Common_replace'] = __NAMESPACE__ . '\\majData_majString_majCommon_replace';
@@ -193,7 +193,7 @@ function majData_majString_majCommon_replacemajAll(string $v0, $v1 = null, $v2 =
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Data_String_Common;
-  $f = ($ffi_Data_String_Common['replaceAll'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Data_String_Common['replaceAll'] ?? \phpurs_ffi_fallback($ffi_Data_String_Common, 'replaceAll'));
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Data_String_Common_replaceAll'] = __NAMESPACE__ . '\\majData_majString_majCommon_replacemajAll';
@@ -205,7 +205,7 @@ function majData_majString_majCommon_split(string $v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_String_Common;
-  $f = ($ffi_Data_String_Common['split'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Data_String_Common['split'] ?? \phpurs_ffi_fallback($ffi_Data_String_Common, 'split'));
   return $f($v0, $v1);
 }
 $GLOBALS['Data_String_Common_split'] = __NAMESPACE__ . '\\majData_majString_majCommon_split';
@@ -217,7 +217,7 @@ function majData_majString_majCommon_tomajLower(string $v0): string|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_String_Common;
-  $f = ($ffi_Data_String_Common['toLower'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Data_String_Common['toLower'] ?? \phpurs_ffi_fallback($ffi_Data_String_Common, 'toLower'));
   return $f($v0);
 }
 $GLOBALS['Data_String_Common_toLower'] = __NAMESPACE__ . '\\majData_majString_majCommon_tomajLower';
@@ -229,7 +229,7 @@ function majData_majString_majCommon_tomajUpper(string $v0): string|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_String_Common;
-  $f = ($ffi_Data_String_Common['toUpper'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Data_String_Common['toUpper'] ?? \phpurs_ffi_fallback($ffi_Data_String_Common, 'toUpper'));
   return $f($v0);
 }
 $GLOBALS['Data_String_Common_toUpper'] = __NAMESPACE__ . '\\majData_majString_majCommon_tomajUpper';
@@ -241,7 +241,7 @@ function majData_majString_majCommon_trim(string $v0): string|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_String_Common;
-  $f = ($ffi_Data_String_Common['trim'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Data_String_Common['trim'] ?? \phpurs_ffi_fallback($ffi_Data_String_Common, 'trim'));
   return $f($v0);
 }
 $GLOBALS['Data_String_Common_trim'] = __NAMESPACE__ . '\\majData_majString_majCommon_trim';

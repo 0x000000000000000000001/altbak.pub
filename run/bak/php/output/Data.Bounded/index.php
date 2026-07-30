@@ -117,12 +117,12 @@ $exports['bottomNumber'] = $bottomNumber;
 return $exports;
   return $exports;
 });
-$GLOBALS['Data_Bounded_bottomChar'] = ($ffi_Data_Bounded['bottomChar'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Bounded_bottomInt'] = ($ffi_Data_Bounded['bottomInt'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Bounded_bottomNumber'] = ($ffi_Data_Bounded['bottomNumber'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Bounded_topChar'] = ($ffi_Data_Bounded['topChar'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Bounded_topInt'] = ($ffi_Data_Bounded['topInt'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Bounded_topNumber'] = ($ffi_Data_Bounded['topNumber'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Bounded_bottomChar'] = ($ffi_Data_Bounded['bottomChar'] ?? \phpurs_ffi_fallback($ffi_Data_Bounded, 'bottomChar'));
+$GLOBALS['Data_Bounded_bottomInt'] = ($ffi_Data_Bounded['bottomInt'] ?? \phpurs_ffi_fallback($ffi_Data_Bounded, 'bottomInt'));
+$GLOBALS['Data_Bounded_bottomNumber'] = ($ffi_Data_Bounded['bottomNumber'] ?? \phpurs_ffi_fallback($ffi_Data_Bounded, 'bottomNumber'));
+$GLOBALS['Data_Bounded_topChar'] = ($ffi_Data_Bounded['topChar'] ?? \phpurs_ffi_fallback($ffi_Data_Bounded, 'topChar'));
+$GLOBALS['Data_Bounded_topInt'] = ($ffi_Data_Bounded['topInt'] ?? \phpurs_ffi_fallback($ffi_Data_Bounded, 'topInt'));
+$GLOBALS['Data_Bounded_topNumber'] = ($ffi_Data_Bounded['topNumber'] ?? \phpurs_ffi_fallback($ffi_Data_Bounded, 'topNumber'));
 
 
 

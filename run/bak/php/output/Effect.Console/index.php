@@ -129,7 +129,7 @@ $exports['groupEnd'] = $groupEnd;
 return $exports;
   return $exports;
 });
-$GLOBALS['Effect_Console_clear'] = ($ffi_Effect_Console['clear'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Effect_Console_clear'] = ($ffi_Effect_Console['clear'] ?? \phpurs_ffi_fallback($ffi_Effect_Console, 'clear'));
 function majEffect_majConsole_debug(string $v0) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\majEffect_majConsole_debug';
@@ -137,7 +137,7 @@ function majEffect_majConsole_debug(string $v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Console;
-  $f = ($ffi_Effect_Console['debug'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Console['debug'] ?? \phpurs_ffi_fallback($ffi_Effect_Console, 'debug'));
   return $f($v0);
 }
 $GLOBALS['Effect_Console_debug'] = __NAMESPACE__ . '\\majEffect_majConsole_debug';
@@ -149,7 +149,7 @@ function majEffect_majConsole_error(string $v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Console;
-  $f = ($ffi_Effect_Console['error'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Console['error'] ?? \phpurs_ffi_fallback($ffi_Effect_Console, 'error'));
   return $f($v0);
 }
 $GLOBALS['Effect_Console_error'] = __NAMESPACE__ . '\\majEffect_majConsole_error';
@@ -161,7 +161,7 @@ function majEffect_majConsole_group(string $v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Console;
-  $f = ($ffi_Effect_Console['group'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Console['group'] ?? \phpurs_ffi_fallback($ffi_Effect_Console, 'group'));
   return $f($v0);
 }
 $GLOBALS['Effect_Console_group'] = __NAMESPACE__ . '\\majEffect_majConsole_group';
@@ -173,12 +173,12 @@ function majEffect_majConsole_groupmajCollapsed(string $v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Console;
-  $f = ($ffi_Effect_Console['groupCollapsed'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Console['groupCollapsed'] ?? \phpurs_ffi_fallback($ffi_Effect_Console, 'groupCollapsed'));
   return $f($v0);
 }
 $GLOBALS['Effect_Console_groupCollapsed'] = __NAMESPACE__ . '\\majEffect_majConsole_groupmajCollapsed';
 
-$GLOBALS['Effect_Console_groupEnd'] = ($ffi_Effect_Console['groupEnd'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Effect_Console_groupEnd'] = ($ffi_Effect_Console['groupEnd'] ?? \phpurs_ffi_fallback($ffi_Effect_Console, 'groupEnd'));
 function majEffect_majConsole_info(string $v0) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\majEffect_majConsole_info';
@@ -186,7 +186,7 @@ function majEffect_majConsole_info(string $v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Console;
-  $f = ($ffi_Effect_Console['info'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Console['info'] ?? \phpurs_ffi_fallback($ffi_Effect_Console, 'info'));
   return $f($v0);
 }
 $GLOBALS['Effect_Console_info'] = __NAMESPACE__ . '\\majEffect_majConsole_info';
@@ -198,7 +198,7 @@ function majEffect_majConsole_log(string $v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Console;
-  $f = ($ffi_Effect_Console['log'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Console['log'] ?? \phpurs_ffi_fallback($ffi_Effect_Console, 'log'));
   return $f($v0);
 }
 $GLOBALS['Effect_Console_log'] = __NAMESPACE__ . '\\majEffect_majConsole_log';
@@ -210,7 +210,7 @@ function majEffect_majConsole_time(string $v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Console;
-  $f = ($ffi_Effect_Console['time'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Console['time'] ?? \phpurs_ffi_fallback($ffi_Effect_Console, 'time'));
   return $f($v0);
 }
 $GLOBALS['Effect_Console_time'] = __NAMESPACE__ . '\\majEffect_majConsole_time';
@@ -222,7 +222,7 @@ function majEffect_majConsole_timemajEnd(string $v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Console;
-  $f = ($ffi_Effect_Console['timeEnd'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Console['timeEnd'] ?? \phpurs_ffi_fallback($ffi_Effect_Console, 'timeEnd'));
   return $f($v0);
 }
 $GLOBALS['Effect_Console_timeEnd'] = __NAMESPACE__ . '\\majEffect_majConsole_timemajEnd';
@@ -234,7 +234,7 @@ function majEffect_majConsole_timemajLog(string $v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Console;
-  $f = ($ffi_Effect_Console['timeLog'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Console['timeLog'] ?? \phpurs_ffi_fallback($ffi_Effect_Console, 'timeLog'));
   return $f($v0);
 }
 $GLOBALS['Effect_Console_timeLog'] = __NAMESPACE__ . '\\majEffect_majConsole_timemajLog';
@@ -246,7 +246,7 @@ function majEffect_majConsole_warn(string $v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Console;
-  $f = ($ffi_Effect_Console['warn'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Console['warn'] ?? \phpurs_ffi_fallback($ffi_Effect_Console, 'warn'));
   return $f($v0);
 }
 $GLOBALS['Effect_Console_warn'] = __NAMESPACE__ . '\\majEffect_majConsole_warn';

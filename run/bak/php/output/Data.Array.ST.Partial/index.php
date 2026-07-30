@@ -113,8 +113,8 @@ $exports['pokeImpl'] = $pokeImpl;
 return $exports;
   return $exports;
 });
-$GLOBALS['Data_Array_ST_Partial_peekImpl'] = ($ffi_Data_Array_ST_Partial['peekImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_ST_Partial_pokeImpl'] = ($ffi_Data_Array_ST_Partial['pokeImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_Partial_peekImpl'] = ($ffi_Data_Array_ST_Partial['peekImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Array_ST_Partial, 'peekImpl'));
+$GLOBALS['Data_Array_ST_Partial_pokeImpl'] = ($ffi_Data_Array_ST_Partial['pokeImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Array_ST_Partial, 'pokeImpl'));
 
 
 

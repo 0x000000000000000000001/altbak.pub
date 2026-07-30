@@ -130,7 +130,7 @@ function majEffect_majRef__new($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Ref;
-  $f = ($ffi_Effect_Ref['_new'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Ref['_new'] ?? \phpurs_ffi_fallback($ffi_Effect_Ref, '_new'));
   return $f($v0);
 }
 $GLOBALS['Effect_Ref__new'] = __NAMESPACE__ . '\\majEffect_majRef__new';
@@ -142,7 +142,7 @@ function majEffect_majRef_modifymajImpl($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Effect_Ref;
-  $f = ($ffi_Effect_Ref['modifyImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Ref['modifyImpl'] ?? \phpurs_ffi_fallback($ffi_Effect_Ref, 'modifyImpl'));
   return $f($v0, $v1);
 }
 $GLOBALS['Effect_Ref_modifyImpl'] = __NAMESPACE__ . '\\majEffect_majRef_modifymajImpl';
@@ -154,7 +154,7 @@ function majEffect_majRef_newmajWithmajSelf($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Ref;
-  $f = ($ffi_Effect_Ref['newWithSelf'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Ref['newWithSelf'] ?? \phpurs_ffi_fallback($ffi_Effect_Ref, 'newWithSelf'));
   return $f($v0);
 }
 $GLOBALS['Effect_Ref_newWithSelf'] = __NAMESPACE__ . '\\majEffect_majRef_newmajWithmajSelf';
@@ -166,7 +166,7 @@ function majEffect_majRef_read($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Ref;
-  $f = ($ffi_Effect_Ref['read'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Ref['read'] ?? \phpurs_ffi_fallback($ffi_Effect_Ref, 'read'));
   return $f($v0);
 }
 $GLOBALS['Effect_Ref_read'] = __NAMESPACE__ . '\\majEffect_majRef_read';
@@ -178,7 +178,7 @@ function majEffect_majRef_write($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Effect_Ref;
-  $f = ($ffi_Effect_Ref['write'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Ref['write'] ?? \phpurs_ffi_fallback($ffi_Effect_Ref, 'write'));
   return $f($v0, $v1);
 }
 $GLOBALS['Effect_Ref_write'] = __NAMESPACE__ . '\\majEffect_majRef_write';

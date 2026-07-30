@@ -174,17 +174,6 @@ return __t2
 	return cache_ffiUtil
 }
 
-var cache_makeFiber gopurs_runtime.Value
-var once_makeFiber sync.Once
-func Get_makeFiber() gopurs_runtime.Value {
-	once_makeFiber.Do(func() {
-		cache_makeFiber = gopurs_runtime.Func(func(aff_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_makeFiber(aff_0_box)
-})
-	})
-	return cache_makeFiber
-}
-
 var cache_launchAff gopurs_runtime.Value
 var once_launchAff sync.Once
 func Get_launchAff() gopurs_runtime.Value {
@@ -211,7 +200,9 @@ var cache_launchSuspendedAff gopurs_runtime.Value
 var once_launchSuspendedAff sync.Once
 func Get_launchSuspendedAff() gopurs_runtime.Value {
 	once_launchSuspendedAff.Do(func() {
-		cache_launchSuspendedAff = Get_makeFiber__gopurs_runtime_Value_3689945502()
+		cache_launchSuspendedAff = gopurs_runtime.Func(func(aff_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_launchSuspendedAff(aff_0_box)
+})
 	})
 	return cache_launchSuspendedAff
 }
@@ -840,12 +831,6 @@ _ = x_0
 return x_0
 }
 
-func Call_makeFiber(aff_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var aff_0 gopurs_runtime.Value = aff_0_loop
-_ = aff_0
-return gopurs_runtime.UncurriedApp2(Get__makeFiber(), Get_ffiUtil(), aff_0)
-}
-
 func Call_launchAff(aff_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var aff_0 gopurs_runtime.Value = aff_0_loop
 _ = aff_0
@@ -860,6 +845,12 @@ func Call_launchAff_(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
 return gopurs_runtime.Apply(Get_void(), Call_launchAff(x_0))
+}
+
+func Call_launchSuspendedAff(aff_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var aff_0 gopurs_runtime.Value = aff_0_loop
+_ = aff_0
+return gopurs_runtime.UncurriedApp2(Get__makeFiber(), Get_ffiUtil(), aff_0)
 }
 
 func Call_delay(v_0_loop float64) gopurs_runtime.Value {
@@ -1025,7 +1016,7 @@ var __t0 gopurs_runtime.Value
 if (suspended_2.IntVal) != (0) {
 __local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Effect.Get_applicativeEffect(), "pure"), pkg_Data_Unit.Get_unit())
 _ = __local_var_3_1
-__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadEffectAff(), "liftEffect"), gopurs_runtime.Apply(Get_void(), gopurs_runtime.UncurriedApp2(gopurs_runtime.RecordGet(v_1, "kill"), e_0, gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadEffectAff(), "liftEffect"), gopurs_runtime.Apply(Get_void(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(v_1, "kill"), e_0, gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return __local_var_3_1
 }))))
 goto end_branch_0
@@ -1035,7 +1026,7 @@ goto end_branch_0
 }
 {
 __t0 = gopurs_runtime.Apply(Get_makeAff(), gopurs_runtime.Func(func(k_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_functorEffect(), "map"), Get_effectCanceler(), gopurs_runtime.UncurriedApp2(gopurs_runtime.RecordGet(v_1, "kill"), e_0, k_3))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_functorEffect(), "map"), Get_effectCanceler(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(v_1, "kill"), e_0, k_3))
 }))
 }
 end_branch_0:

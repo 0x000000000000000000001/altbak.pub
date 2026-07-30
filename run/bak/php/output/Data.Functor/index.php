@@ -114,7 +114,7 @@ function majData_majFunctor_arraymajMap($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Functor;
-  $f = ($ffi_Data_Functor['arrayMap'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Data_Functor['arrayMap'] ?? \phpurs_ffi_fallback($ffi_Data_Functor, 'arrayMap'));
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Functor_arrayMap'] = __NAMESPACE__ . '\\majData_majFunctor_arraymajMap';

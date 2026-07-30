@@ -169,7 +169,7 @@ function majData_majTraversable_traversemajArraymajImpl($v0, $v1 = null, $v2 = n
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
   global $ffi_Data_Traversable;
-  $f = ($ffi_Data_Traversable['traverseArrayImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Data_Traversable['traverseArrayImpl'] ?? \phpurs_ffi_fallback($ffi_Data_Traversable, 'traverseArrayImpl'));
   return $f($v0, $v1, $v2, $v3, $v4);
 }
 $GLOBALS['Data_Traversable_traverseArrayImpl'] = __NAMESPACE__ . '\\majData_majTraversable_traversemajArraymajImpl';

@@ -146,7 +146,7 @@ function majEffect_majUncurried_mkmajEffectmajFn1($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Uncurried;
-  $f = ($ffi_Effect_Uncurried['mkEffectFn1'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Uncurried['mkEffectFn1'] ?? \phpurs_ffi_fallback($ffi_Effect_Uncurried, 'mkEffectFn1'));
   return $f($v0);
 }
 $GLOBALS['Effect_Uncurried_mkEffectFn1'] = __NAMESPACE__ . '\\majEffect_majUncurried_mkmajEffectmajFn1';
@@ -158,7 +158,7 @@ function majEffect_majUncurried_mkmajEffectmajFn10($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Uncurried;
-  $f = ($ffi_Effect_Uncurried['mkEffectFn10'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Uncurried['mkEffectFn10'] ?? \phpurs_ffi_fallback($ffi_Effect_Uncurried, 'mkEffectFn10'));
   return $f($v0);
 }
 $GLOBALS['Effect_Uncurried_mkEffectFn10'] = __NAMESPACE__ . '\\majEffect_majUncurried_mkmajEffectmajFn10';
@@ -170,7 +170,7 @@ function majEffect_majUncurried_mkmajEffectmajFn2($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Uncurried;
-  $f = ($ffi_Effect_Uncurried['mkEffectFn2'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Uncurried['mkEffectFn2'] ?? \phpurs_ffi_fallback($ffi_Effect_Uncurried, 'mkEffectFn2'));
   return $f($v0);
 }
 $GLOBALS['Effect_Uncurried_mkEffectFn2'] = __NAMESPACE__ . '\\majEffect_majUncurried_mkmajEffectmajFn2';
@@ -182,7 +182,7 @@ function majEffect_majUncurried_mkmajEffectmajFn3($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Uncurried;
-  $f = ($ffi_Effect_Uncurried['mkEffectFn3'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Uncurried['mkEffectFn3'] ?? \phpurs_ffi_fallback($ffi_Effect_Uncurried, 'mkEffectFn3'));
   return $f($v0);
 }
 $GLOBALS['Effect_Uncurried_mkEffectFn3'] = __NAMESPACE__ . '\\majEffect_majUncurried_mkmajEffectmajFn3';
@@ -194,7 +194,7 @@ function majEffect_majUncurried_mkmajEffectmajFn4($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Uncurried;
-  $f = ($ffi_Effect_Uncurried['mkEffectFn4'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Uncurried['mkEffectFn4'] ?? \phpurs_ffi_fallback($ffi_Effect_Uncurried, 'mkEffectFn4'));
   return $f($v0);
 }
 $GLOBALS['Effect_Uncurried_mkEffectFn4'] = __NAMESPACE__ . '\\majEffect_majUncurried_mkmajEffectmajFn4';
@@ -206,7 +206,7 @@ function majEffect_majUncurried_mkmajEffectmajFn5($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Uncurried;
-  $f = ($ffi_Effect_Uncurried['mkEffectFn5'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Uncurried['mkEffectFn5'] ?? \phpurs_ffi_fallback($ffi_Effect_Uncurried, 'mkEffectFn5'));
   return $f($v0);
 }
 $GLOBALS['Effect_Uncurried_mkEffectFn5'] = __NAMESPACE__ . '\\majEffect_majUncurried_mkmajEffectmajFn5';
@@ -218,7 +218,7 @@ function majEffect_majUncurried_mkmajEffectmajFn6($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Uncurried;
-  $f = ($ffi_Effect_Uncurried['mkEffectFn6'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Uncurried['mkEffectFn6'] ?? \phpurs_ffi_fallback($ffi_Effect_Uncurried, 'mkEffectFn6'));
   return $f($v0);
 }
 $GLOBALS['Effect_Uncurried_mkEffectFn6'] = __NAMESPACE__ . '\\majEffect_majUncurried_mkmajEffectmajFn6';
@@ -230,7 +230,7 @@ function majEffect_majUncurried_mkmajEffectmajFn7($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Uncurried;
-  $f = ($ffi_Effect_Uncurried['mkEffectFn7'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Uncurried['mkEffectFn7'] ?? \phpurs_ffi_fallback($ffi_Effect_Uncurried, 'mkEffectFn7'));
   return $f($v0);
 }
 $GLOBALS['Effect_Uncurried_mkEffectFn7'] = __NAMESPACE__ . '\\majEffect_majUncurried_mkmajEffectmajFn7';
@@ -242,7 +242,7 @@ function majEffect_majUncurried_mkmajEffectmajFn8($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Uncurried;
-  $f = ($ffi_Effect_Uncurried['mkEffectFn8'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Uncurried['mkEffectFn8'] ?? \phpurs_ffi_fallback($ffi_Effect_Uncurried, 'mkEffectFn8'));
   return $f($v0);
 }
 $GLOBALS['Effect_Uncurried_mkEffectFn8'] = __NAMESPACE__ . '\\majEffect_majUncurried_mkmajEffectmajFn8';
@@ -254,7 +254,7 @@ function majEffect_majUncurried_mkmajEffectmajFn9($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Uncurried;
-  $f = ($ffi_Effect_Uncurried['mkEffectFn9'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Uncurried['mkEffectFn9'] ?? \phpurs_ffi_fallback($ffi_Effect_Uncurried, 'mkEffectFn9'));
   return $f($v0);
 }
 $GLOBALS['Effect_Uncurried_mkEffectFn9'] = __NAMESPACE__ . '\\majEffect_majUncurried_mkmajEffectmajFn9';
@@ -266,7 +266,7 @@ function majEffect_majUncurried_runmajEffectmajFn1($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Effect_Uncurried;
-  $f = ($ffi_Effect_Uncurried['runEffectFn1'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Uncurried['runEffectFn1'] ?? \phpurs_ffi_fallback($ffi_Effect_Uncurried, 'runEffectFn1'));
   return $f($v0, $v1);
 }
 $GLOBALS['Effect_Uncurried_runEffectFn1'] = __NAMESPACE__ . '\\majEffect_majUncurried_runmajEffectmajFn1';
@@ -278,7 +278,7 @@ function majEffect_majUncurried_runmajEffectmajFn10($v0, $v1 = null, $v2 = null,
     return phpurs_curry_fallback($__fn, \func_get_args(), 11);
   }
   global $ffi_Effect_Uncurried;
-  $f = ($ffi_Effect_Uncurried['runEffectFn10'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Uncurried['runEffectFn10'] ?? \phpurs_ffi_fallback($ffi_Effect_Uncurried, 'runEffectFn10'));
   return $f($v0, $v1, $v2, $v3, $v4, $v5, $v6, $v7, $v8, $v9, $v10);
 }
 $GLOBALS['Effect_Uncurried_runEffectFn10'] = __NAMESPACE__ . '\\majEffect_majUncurried_runmajEffectmajFn10';
@@ -290,7 +290,7 @@ function majEffect_majUncurried_runmajEffectmajFn2($v0, $v1 = null, $v2 = null) 
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Effect_Uncurried;
-  $f = ($ffi_Effect_Uncurried['runEffectFn2'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Uncurried['runEffectFn2'] ?? \phpurs_ffi_fallback($ffi_Effect_Uncurried, 'runEffectFn2'));
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Effect_Uncurried_runEffectFn2'] = __NAMESPACE__ . '\\majEffect_majUncurried_runmajEffectmajFn2';
@@ -302,7 +302,7 @@ function majEffect_majUncurried_runmajEffectmajFn3($v0, $v1 = null, $v2 = null, 
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
   global $ffi_Effect_Uncurried;
-  $f = ($ffi_Effect_Uncurried['runEffectFn3'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Uncurried['runEffectFn3'] ?? \phpurs_ffi_fallback($ffi_Effect_Uncurried, 'runEffectFn3'));
   return $f($v0, $v1, $v2, $v3);
 }
 $GLOBALS['Effect_Uncurried_runEffectFn3'] = __NAMESPACE__ . '\\majEffect_majUncurried_runmajEffectmajFn3';
@@ -314,7 +314,7 @@ function majEffect_majUncurried_runmajEffectmajFn4($v0, $v1 = null, $v2 = null, 
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
   global $ffi_Effect_Uncurried;
-  $f = ($ffi_Effect_Uncurried['runEffectFn4'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Uncurried['runEffectFn4'] ?? \phpurs_ffi_fallback($ffi_Effect_Uncurried, 'runEffectFn4'));
   return $f($v0, $v1, $v2, $v3, $v4);
 }
 $GLOBALS['Effect_Uncurried_runEffectFn4'] = __NAMESPACE__ . '\\majEffect_majUncurried_runmajEffectmajFn4';
@@ -326,7 +326,7 @@ function majEffect_majUncurried_runmajEffectmajFn5($v0, $v1 = null, $v2 = null, 
     return phpurs_curry_fallback($__fn, \func_get_args(), 6);
   }
   global $ffi_Effect_Uncurried;
-  $f = ($ffi_Effect_Uncurried['runEffectFn5'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Uncurried['runEffectFn5'] ?? \phpurs_ffi_fallback($ffi_Effect_Uncurried, 'runEffectFn5'));
   return $f($v0, $v1, $v2, $v3, $v4, $v5);
 }
 $GLOBALS['Effect_Uncurried_runEffectFn5'] = __NAMESPACE__ . '\\majEffect_majUncurried_runmajEffectmajFn5';
@@ -338,7 +338,7 @@ function majEffect_majUncurried_runmajEffectmajFn6($v0, $v1 = null, $v2 = null, 
     return phpurs_curry_fallback($__fn, \func_get_args(), 7);
   }
   global $ffi_Effect_Uncurried;
-  $f = ($ffi_Effect_Uncurried['runEffectFn6'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Uncurried['runEffectFn6'] ?? \phpurs_ffi_fallback($ffi_Effect_Uncurried, 'runEffectFn6'));
   return $f($v0, $v1, $v2, $v3, $v4, $v5, $v6);
 }
 $GLOBALS['Effect_Uncurried_runEffectFn6'] = __NAMESPACE__ . '\\majEffect_majUncurried_runmajEffectmajFn6';
@@ -350,7 +350,7 @@ function majEffect_majUncurried_runmajEffectmajFn7($v0, $v1 = null, $v2 = null, 
     return phpurs_curry_fallback($__fn, \func_get_args(), 8);
   }
   global $ffi_Effect_Uncurried;
-  $f = ($ffi_Effect_Uncurried['runEffectFn7'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Uncurried['runEffectFn7'] ?? \phpurs_ffi_fallback($ffi_Effect_Uncurried, 'runEffectFn7'));
   return $f($v0, $v1, $v2, $v3, $v4, $v5, $v6, $v7);
 }
 $GLOBALS['Effect_Uncurried_runEffectFn7'] = __NAMESPACE__ . '\\majEffect_majUncurried_runmajEffectmajFn7';
@@ -362,7 +362,7 @@ function majEffect_majUncurried_runmajEffectmajFn8($v0, $v1 = null, $v2 = null, 
     return phpurs_curry_fallback($__fn, \func_get_args(), 9);
   }
   global $ffi_Effect_Uncurried;
-  $f = ($ffi_Effect_Uncurried['runEffectFn8'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Uncurried['runEffectFn8'] ?? \phpurs_ffi_fallback($ffi_Effect_Uncurried, 'runEffectFn8'));
   return $f($v0, $v1, $v2, $v3, $v4, $v5, $v6, $v7, $v8);
 }
 $GLOBALS['Effect_Uncurried_runEffectFn8'] = __NAMESPACE__ . '\\majEffect_majUncurried_runmajEffectmajFn8';
@@ -374,7 +374,7 @@ function majEffect_majUncurried_runmajEffectmajFn9($v0, $v1 = null, $v2 = null, 
     return phpurs_curry_fallback($__fn, \func_get_args(), 10);
   }
   global $ffi_Effect_Uncurried;
-  $f = ($ffi_Effect_Uncurried['runEffectFn9'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Effect_Uncurried['runEffectFn9'] ?? \phpurs_ffi_fallback($ffi_Effect_Uncurried, 'runEffectFn9'));
   return $f($v0, $v1, $v2, $v3, $v4, $v5, $v6, $v7, $v8, $v9);
 }
 $GLOBALS['Effect_Uncurried_runEffectFn9'] = __NAMESPACE__ . '\\majEffect_majUncurried_runmajEffectmajFn9';

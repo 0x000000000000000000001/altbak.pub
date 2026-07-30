@@ -140,7 +140,7 @@ function majData_majFunctormajWithmajIndex_mapmajWithmajIndexmajArray($v0, $v1 =
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_FunctorWithIndex;
-  $f = ($ffi_Data_FunctorWithIndex['mapWithIndexArray'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = ($ffi_Data_FunctorWithIndex['mapWithIndexArray'] ?? \phpurs_ffi_fallback($ffi_Data_FunctorWithIndex, 'mapWithIndexArray'));
   return $f($v0, $v1);
 }
 $GLOBALS['Data_FunctorWithIndex_mapWithIndexArray'] = __NAMESPACE__ . '\\majData_majFunctormajWithmajIndex_mapmajWithmajIndexmajArray';
