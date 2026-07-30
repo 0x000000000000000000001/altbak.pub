@@ -99,24 +99,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_HeytingAlgebra = \call_user_func(function() {
   $exports = [];
-$boolConj = function($a, $b = null) use (&$boolConj) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$boolConj) {
-
-            return $boolConj(...\array_merge($__args, $more));
-        };
-    }
+$boolConj = function($a, $b) use (&$boolConj) {
     return $a && $b;
 };
-$boolDisj = function($a, $b = null) use (&$boolDisj) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$boolDisj) {
-
-            return $boolDisj(...\array_merge($__args, $more));
-        };
-    }
+$boolDisj = function($a, $b) use (&$boolDisj) {
     return $a || $b;
 };
 $boolNot = function($a) use (&$boolNot) { return !$a; };

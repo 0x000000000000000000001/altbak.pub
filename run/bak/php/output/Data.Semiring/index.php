@@ -99,24 +99,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Semiring = \call_user_func(function() {
   $exports = [];
-$intAdd = function($a, $b = null) use (&$intAdd) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$intAdd) {
-
-            return $intAdd(...\array_merge($__args, $more));
-        };
-    }
+$intAdd = function($a, $b) use (&$intAdd) {
     return $a + $b;
 };
-$intMul = function($a, $b = null) use (&$intMul) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$intMul) {
-
-            return $intMul(...\array_merge($__args, $more));
-        };
-    }
+$intMul = function($a, $b) use (&$intMul) {
     return $a * $b;
 };
 $numAdd = $intAdd;

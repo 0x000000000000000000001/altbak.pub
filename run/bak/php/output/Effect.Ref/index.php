@@ -108,24 +108,10 @@ $newWithSelf = function($f) {
     };
 };
 $read = function($ref) { return function() use($ref) { return $ref->value; }; };
-$modifyImpl = function($f, $ref = null) use (&$modifyImpl) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$modifyImpl) {
-
-            return $modifyImpl(...\array_merge($__args, $more));
-        };
-    }
+$modifyImpl = function($f, $ref) use (&$modifyImpl) {
     return function() use($f, $ref) { $t = $f($ref->value); $ref->value = $t->state; return $t->value; };
 };
-$write = function($val, $ref = null) use (&$write) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$write) {
-
-            return $write(...\array_merge($__args, $more));
-        };
-    }
+$write = function($val, $ref) use (&$write) {
     return function() use($val, $ref) { $ref->value = $val; return null; };
 };
 

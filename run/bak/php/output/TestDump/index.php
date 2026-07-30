@@ -100,5 +100,5 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // TestDump_main
-$GLOBALS['TestDump_main'] = ($GLOBALS['Effect_Console_log'])("Hello");
+$GLOBALS['TestDump_main'] = \Effect\Console\majEffect_majConsole_log("Hello");
 

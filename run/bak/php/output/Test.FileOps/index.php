@@ -210,7 +210,7 @@ function majTest_majFilemajOps_loopmajImajO(int $n_0) {
 $GLOBALS['Test_FileOps_loopIO'] = __NAMESPACE__ . '\\majTest_majFilemajOps_loopmajImajO';
 
 // Test_FileOps_describe
-$GLOBALS['Test_FileOps_describe'] = ($GLOBALS['Effect_Console_log'])("File I/O (10k writes/reads):");
+$GLOBALS['Test_FileOps_describe'] = \Effect\Console\majEffect_majConsole_log("File I/O (10k writes/reads):");
 
 // Test_FileOps_act
 $GLOBALS['Test_FileOps_act'] = \Test\FileOps\majTest_majFilemajOps_loopmajImajO(10000);

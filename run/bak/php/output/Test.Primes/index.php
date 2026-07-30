@@ -504,10 +504,10 @@ goto end_branch_0;;
 $GLOBALS['Test_Primes_sieve'] = __NAMESPACE__ . '\\majTest_majPrimes_sieve';
 
 // Test_Primes_describe
-$GLOBALS['Test_Primes_describe'] = ($GLOBALS['Effect_Console_log'])("Prime Sieve (sum primes up to 500):");
+$GLOBALS['Test_Primes_describe'] = \Effect\Console\majEffect_majConsole_log("Prime Sieve (sum primes up to 500):");
 
 // Test_Primes_act
-$GLOBALS['Test_Primes_act'] = ((($GLOBALS['Effect_bindEffect'])->{'bind'})(($GLOBALS['Bench_opaque'])(500)))(function($dummy_0) {
+$GLOBALS['Test_Primes_act'] = ((($GLOBALS['Effect_bindEffect'])->{'bind'})(\Bench\majBench_opaque(500)))(function($dummy_0) {
   $__num = \func_num_args();
   $go__1_0 = null;
   $go__1_0 = (function() use (&$go__1_0) {
@@ -545,7 +545,7 @@ goto end_branch_0;;
   };
   return $__fn;
 })();
-  $__res = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])->{'show'})((($go__1_0)(\Test\Primes\majTest_majPrimes_sieve(\Test\Primes\majTest_majPrimes_range(2, $dummy_0))))(0)));
+  $__res = \Effect\Console\majEffect_majConsole_log((($GLOBALS['Data_Show_showInt'])->{'show'})((($go__1_0)(\Test\Primes\majTest_majPrimes_sieve(\Test\Primes\majTest_majPrimes_range(2, $dummy_0))))(0)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

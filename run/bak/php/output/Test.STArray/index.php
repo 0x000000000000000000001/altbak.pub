@@ -108,11 +108,11 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Test_STArray_sumArray
-$GLOBALS['Test_STArray_sumArray'] = ($GLOBALS['Control_Monad_ST_Internal_run'])(((($GLOBALS['Control_Monad_ST_Internal_bindST'])->{'bind'})($GLOBALS['Data_Array_ST_new']))(function($arr_0) {
+$GLOBALS['Test_STArray_sumArray'] = \Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_run(((($GLOBALS['Control_Monad_ST_Internal_bindST'])->{'bind'})($GLOBALS['Data_Array_ST_new']))(function($arr_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])->{'bind'})(((($GLOBALS['Control_Monad_ST_Uncurried_runSTFn2'])($GLOBALS['Data_Array_ST_pushAllImpl']))([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))($arr_0)))(function($_dollar__unused_1) use ($arr_0) {
+  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])->{'bind'})(\Control\Monad\ST\Uncurried\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn2($GLOBALS['Data_Array_ST_pushAllImpl'], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], $arr_0)))(function($_dollar__unused_1) use ($arr_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])->{'bind'})((((($GLOBALS['Control_Monad_ST_Uncurried_runSTFn3'])($GLOBALS['Data_Array_ST_popImpl']))($GLOBALS['Data_Maybe_Just']))(new \Data\Maybe\Data_Maybe_Nothing()))($arr_0)))(function($x_2) {
+  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])->{'bind'})(\Control\Monad\ST\Uncurried\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn3($GLOBALS['Data_Array_ST_popImpl'], $GLOBALS['Data_Maybe_Just'], new \Data\Maybe\Data_Maybe_Nothing(), $arr_0)))(function($x_2) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ($x_2 instanceof \Data\Maybe\Data_Maybe_Just) {
@@ -141,8 +141,8 @@ goto end_branch_0;;
 }));
 
 // Test_STArray_describe
-$GLOBALS['Test_STArray_describe'] = ($GLOBALS['Effect_Console_log'])("STArray Operations:");
+$GLOBALS['Test_STArray_describe'] = \Effect\Console\majEffect_majConsole_log("STArray Operations:");
 
 // Test_STArray_act
-$GLOBALS['Test_STArray_act'] = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])->{'show'})($GLOBALS['Test_STArray_sumArray']));
+$GLOBALS['Test_STArray_act'] = \Effect\Console\majEffect_majConsole_log((($GLOBALS['Data_Show_showInt'])->{'show'})($GLOBALS['Test_STArray_sumArray']));
 

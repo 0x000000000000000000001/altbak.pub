@@ -102,14 +102,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Control_Bind = \call_user_func(function() {
   $exports = [];
-$arrayBind = function($xs, $f = null) use (&$arrayBind) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$arrayBind) {
-
-            return $arrayBind(...\array_merge($__args, $more));
-        };
-    }
+$arrayBind = function($xs, $f) use (&$arrayBind) {
     $r = []; foreach($xs as $x) { foreach($f($x) as $y) { $r[] = $y; } } return $r;
 };
 

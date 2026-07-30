@@ -113,14 +113,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Int = \call_user_func(function() {
   $exports = [];
-$fromNumberImpl = function($just, $nothing = null, $n = null) use (&$fromNumberImpl) {
-    if (\func_num_args() < 3) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$fromNumberImpl) {
-
-            return $fromNumberImpl(...\array_merge($__args, $more));
-        };
-    }
+$fromNumberImpl = function($just, $nothing, $n) use (&$fromNumberImpl) {
     // JS bitwise OR 0 limits to 32-bit signed integer. 
     // PHP integers are typically 64-bit, but to match JS semantics we can just cast to int.
     return (intval($n) == $n) ? $just(intval($n)) : $nothing;
@@ -130,14 +123,7 @@ $toNumber = function($n) {
     return floatval($n);
 };
 
-$fromStringAsImpl = function($just, $nothing = null, $radix = null, $s = null) use (&$fromStringAsImpl) {
-    if (\func_num_args() < 4) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$fromStringAsImpl) {
-
-            return $fromStringAsImpl(...\array_merge($__args, $more));
-        };
-    }
+$fromStringAsImpl = function($just, $nothing, $radix, $s) use (&$fromStringAsImpl) {
     
     if ($radix < 11) {
         $digits = "[0-" . ($radix - 1) . "]";
@@ -156,47 +142,19 @@ $fromStringAsImpl = function($just, $nothing = null, $radix = null, $s = null) u
     }
 };
 
-$toStringAs = function($radix, $i = null) use (&$toStringAs) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$toStringAs) {
-
-            return $toStringAs(...\array_merge($__args, $more));
-        };
-    }
+$toStringAs = function($radix, $i) use (&$toStringAs) {
     return base_convert($i, 10, $radix);
 };
 
-$quot = function($x, $y = null) use (&$quot) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$quot) {
-
-            return $quot(...\array_merge($__args, $more));
-        };
-    }
+$quot = function($x, $y) use (&$quot) {
     return intdiv($x, $y);
 };
 
-$rem = function($x, $y = null) use (&$rem) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$rem) {
-
-            return $rem(...\array_merge($__args, $more));
-        };
-    }
+$rem = function($x, $y) use (&$rem) {
     return $x % $y;
 };
 
-$pow = function($x, $y = null) use (&$pow) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$pow) {
-
-            return $pow(...\array_merge($__args, $more));
-        };
-    }
+$pow = function($x, $y) use (&$pow) {
     return intval(pow($x, $y));
 };
 

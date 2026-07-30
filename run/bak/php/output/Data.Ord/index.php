@@ -104,14 +104,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Ord = \call_user_func(function() {
   $exports = [];
-$ordIntImpl = function($lt, $eq = null, $gt = null, $x = null, $y = null) use (&$ordIntImpl) {
-    if (\func_num_args() < 5) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$ordIntImpl) {
-
-            return $ordIntImpl(...\array_merge($__args, $more));
-        };
-    }
+$ordIntImpl = function($lt, $eq, $gt, $x, $y) use (&$ordIntImpl) {
     return $x < $y ? $lt : ($x === $y ? $eq : $gt);
 };
 $ordStringImpl = $ordIntImpl;
@@ -125,13 +118,7 @@ $exports['ordNumberImpl'] = $ordNumberImpl;
 $exports['ordCharImpl'] = $ordCharImpl;
 $exports['ordBooleanImpl'] = $ordBooleanImpl;
 
-$ordArrayImpl = function($f, $xs = null, $ys = null) use (&$ordArrayImpl) {
-    if (\func_num_args() < 3) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$ordArrayImpl) {
-            return $ordArrayImpl(...\array_merge($__args, $more));
-        };
-    }
+$ordArrayImpl = function($f, $xs, $ys) use (&$ordArrayImpl) {
     
     $i = 0;
     $xlen = \count($xs);

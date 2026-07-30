@@ -130,13 +130,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Foldable = \call_user_func(function() {
   $exports = [];
-$foldrArray = function($f, $init = null, $xs = null) use (&$foldrArray) {
-    if (\func_num_args() < 3) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$foldrArray) {
-            return $foldrArray(...\array_merge($__args, $more));
-        };
-    }
+$foldrArray = function($f, $init, $xs) use (&$foldrArray) {
     
     $acc = $init;
     for ($i = \count($xs) - 1; $i >= 0; $i--) {
@@ -147,13 +141,7 @@ $foldrArray = function($f, $init = null, $xs = null) use (&$foldrArray) {
 };
 $exports['foldrArray'] = $foldrArray;
 
-$foldlArray = function($f, $init = null, $xs = null) use (&$foldlArray) {
-    if (\func_num_args() < 3) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$foldlArray) {
-            return $foldlArray(...\array_merge($__args, $more));
-        };
-    }
+$foldlArray = function($f, $init, $xs) use (&$foldlArray) {
     
     $acc = $init;
     for ($i = 0, $len = \count($xs); $i < $len; $i++) {

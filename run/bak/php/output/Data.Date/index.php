@@ -127,14 +127,7 @@ $createDate = function($y, $m, $d) {
     return $dt;
 };
 
-$canonicalDateImpl = function($ctor, $y = null, $m = null, $d = null) use (&$canonicalDateImpl, $createDate) {
-    if (\func_num_args() < 4) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$canonicalDateImpl) {
-
-            return $canonicalDateImpl(...\array_merge($__args, $more));
-        };
-    }
+$canonicalDateImpl = function($ctor, $y, $m, $d) use (&$canonicalDateImpl, $createDate) {
 
     $date = $createDate($y, $m - 1, $d);
     return $ctor
@@ -143,27 +136,13 @@ $canonicalDateImpl = function($ctor, $y = null, $m = null, $d = null) use (&$can
         ((int)$date->format('j'));
 };
 
-$calcWeekday = function($y, $m = null, $d = null) use (&$calcWeekday, $createDate) {
-    if (\func_num_args() < 3) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$calcWeekday) {
-
-            return $calcWeekday(...\array_merge($__args, $more));
-        };
-    }
+$calcWeekday = function($y, $m, $d) use (&$calcWeekday, $createDate) {
 
     $date = $createDate($y, $m - 1, $d);
     return (int)$date->format('w'); // 0 (for Sunday) through 6 (for Saturday)
 };
 
-$calcDiff = function($y1, $m1 = null, $d1 = null, $y2 = null, $m2 = null, $d2 = null) use (&$calcDiff, $createDate) {
-    if (\func_num_args() < 6) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$calcDiff) {
-
-            return $calcDiff(...\array_merge($__args, $more));
-        };
-    }
+$calcDiff = function($y1, $m1, $d1, $y2, $m2, $d2) use (&$calcDiff, $createDate) {
 
     $dt1 = $createDate($y1, $m1 - 1, $d1);
     $dt2 = $createDate($y2, $m2 - 1, $d2);

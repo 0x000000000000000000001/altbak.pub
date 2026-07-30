@@ -106,13 +106,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Unfoldable1 = \call_user_func(function() {
   $exports = [];
-$unfoldr1ArrayImpl = function($isNothing, $fromJust = null, $fst = null, $snd = null, $f = null, $b = null) use (&$unfoldr1ArrayImpl) {
-    if (\func_num_args() < 6) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$unfoldr1ArrayImpl) {
-            return $unfoldr1ArrayImpl(...\array_merge($__args, $more));
-        };
-    }
+$unfoldr1ArrayImpl = function($isNothing, $fromJust, $fst, $snd, $f, $b) use (&$unfoldr1ArrayImpl) {
     
     $result = [];
     $value = $b;

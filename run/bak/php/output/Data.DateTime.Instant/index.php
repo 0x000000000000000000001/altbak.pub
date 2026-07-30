@@ -114,28 +114,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_DateTime_Instant = \call_user_func(function() {
   $exports = [];
-$fromDateTimeImpl = function($y, $mo = null, $d = null, $h = null, $mi = null, $s = null, $ms = null) use (&$fromDateTimeImpl) {
-    if (\func_num_args() < 7) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$fromDateTimeImpl) {
-
-            return $fromDateTimeImpl(...\array_merge($__args, $more));
-        };
-    }
+$fromDateTimeImpl = function($y, $mo, $d, $h, $mi, $s, $ms) use (&$fromDateTimeImpl) {
     $dt = new \DateTime('now', new \DateTimeZone('UTC'));
     $dt->setDate($y, $mo, $d);
     $dt->setTime($h, $mi, $s, $ms * 1000);
     return (float)$dt->getTimestamp() * 1000 + (int)$dt->format('v');
 };
 
-$toDateTimeImpl = function($ctor, $instant = null) use (&$toDateTimeImpl) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$toDateTimeImpl) {
-
-            return $toDateTimeImpl(...\array_merge($__args, $more));
-        };
-    }
+$toDateTimeImpl = function($ctor, $instant) use (&$toDateTimeImpl) {
     $seconds = floor($instant / 1000);
     $ms = $instant - ($seconds * 1000);
     $dt = new \DateTime("@" . $seconds, new \DateTimeZone('UTC'));

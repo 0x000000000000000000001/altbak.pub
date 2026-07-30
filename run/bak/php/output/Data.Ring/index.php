@@ -100,14 +100,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Ring = \call_user_func(function() {
   $exports = [];
-$intSub = function($a, $b = null) use (&$intSub) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$intSub) {
-
-            return $intSub(...\array_merge($__args, $more));
-        };
-    }
+$intSub = function($a, $b) use (&$intSub) {
     return $a - $b;
 };
 $numSub = $intSub;
