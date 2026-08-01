@@ -125,15 +125,7 @@ _ = f_1
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0, "state"), gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
 s_prime_3_0 := gopurs_runtime.Apply(f_1, s_2)
 _ = s_prime_3_0
-return func() gopurs_runtime.Value {
-if ((f_1.UnsafePtr) != (nil)) && (((*struct{Rc uint32})(f_1.UnsafePtr).Rc) == (1)) {
-(*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(f_1.UnsafePtr).V0 = s_prime_3_0
-(*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(f_1.UnsafePtr).V1 = s_prime_3_0
-return f_1
-} else {
 return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, s_prime_3_0, s_prime_3_0})}
-}
-}()
 }))
 }
 

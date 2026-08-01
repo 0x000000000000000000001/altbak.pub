@@ -89,12 +89,12 @@ var dictLazy_0 gopurs_runtime.Value = dictLazy_0_loop
 _ = dictLazy_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-var go__go_2_0 gopurs_runtime.Value
-_ = go__go_2_0
-go__go_2_0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictLazy_0, "defer"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_1, go__go_2_0)
+var go__go_2_0_0 gopurs_runtime.Value
+_ = go__go_2_0_0
+go__go_2_0_0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictLazy_0, "defer"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_1, go__go_2_0_0)
 }))
-return go__go_2_0
+return go__go_2_0_0
 }
 
 func Call_fix__gopurs_runtime_Value_239029807(dictLazy_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -102,12 +102,12 @@ var dictLazy_0 gopurs_runtime.Value = dictLazy_0_loop
 _ = dictLazy_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-var go__go_2_0 gopurs_runtime.Value
-_ = go__go_2_0
-go__go_2_0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictLazy_0, "defer"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_1, go__go_2_0)
+var go__go_2_0_1 gopurs_runtime.Value
+_ = go__go_2_0_1
+go__go_2_0_1 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictLazy_0, "defer"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_1, go__go_2_0_1)
 }))
-return go__go_2_0
+return go__go_2_0_1
 }
 
 

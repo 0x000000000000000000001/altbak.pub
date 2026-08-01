@@ -53,14 +53,7 @@ func Call_try(action_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var action_0 gopurs_runtime.Value = action_0_loop
 _ = action_0
 return gopurs_runtime.Apply2(Get_catchException(), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Effect.Get_applicativeEffect(), "pure"), func() gopurs_runtime.Value {
-if ((action_0.UnsafePtr) != (nil)) && (((*struct{Rc uint32})(action_0.UnsafePtr).Rc) == (1)) {
-(*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(action_0.UnsafePtr).V0 = x_1
-return action_0
-} else {
-return gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{1, x_1})}
-}
-}())
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Effect.Get_applicativeEffect(), "pure"), gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{1, x_1})})
 }), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_functorEffect(), "map"), pkg_Data_Either.Get_Right(), action_0))
 }
 

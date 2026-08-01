@@ -71,17 +71,17 @@ func Get_act() gopurs_runtime.Value {
 func Call_runStringOps(n_0_loop int64) int64 {
 var n_0 int64 = n_0_loop
 _ = n_0
-var loop_1_0 gopurs_runtime.Value
-loop_1_0 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+var loop_1_0_0 gopurs_runtime.Value
+loop_1_0_0 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v2_4_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_2_loop gopurs_runtime.Value = v_2_loop_val
 var v1_3_loop gopurs_runtime.Value = v1_3_loop_val
 var v2_4_loop gopurs_runtime.Value = v2_4_loop_val
-loop_1_0:
+loop_1_0_0:
 for {
-if false { continue loop_1_0 }
+if false { continue loop_1_0_0 }
 var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
 var v1_3 gopurs_runtime.Value = v1_3_loop
@@ -103,7 +103,7 @@ _ = concatted_5_1
 v_2_loop = gopurs_runtime.Int((v_2.IntVal) - (1))
 v1_3_loop = gopurs_runtime.Apply2(pkg_Data_String_CodePoints.Get_take(), gopurs_runtime.Int(10), concatted_5_1)
 v2_4_loop = gopurs_runtime.Int((v2_4.IntVal) + (gopurs_runtime.Int(int64(gopurs_runtime.ArrayLength(gopurs_runtime.Apply2(pkg_Data_String_Common.Get_split(), gopurs_runtime.Str("e"), gopurs_runtime.Apply3(pkg_Data_String_Regex.Get_replace(), Get_regexPattern(), gopurs_runtime.Str("matched"), concatted_5_1))))).IntVal))
-continue loop_1_0
+continue loop_1_0_0
 __t2 = gopurs_runtime.Value{}
 }
 end_branch_2:
@@ -113,7 +113,7 @@ return __t2
 })
 })
 })
-return gopurs_runtime.Apply3(loop_1_0, gopurs_runtime.Int(n_0), gopurs_runtime.Str("hello"), gopurs_runtime.Int(0)).IntVal
+return gopurs_runtime.Apply3(loop_1_0_0, gopurs_runtime.Int(n_0), gopurs_runtime.Str("hello"), gopurs_runtime.Int(0)).IntVal
 }
 
 

@@ -85,148 +85,148 @@ return Call_absurd__gopurs_runtime_Value_1769020947(a_0_box)
 func Call_absurd(a_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var a_0 gopurs_runtime.Value = a_0_loop
 _ = a_0
-var spin_1_0 gopurs_runtime.Value
-spin_1_0 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+var spin_1_0_0 gopurs_runtime.Value
+spin_1_0_0 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_2_loop gopurs_runtime.Value = v_2_loop_val
-spin_1_0:
+spin_1_0_0:
 for {
-if false { continue spin_1_0 }
+if false { continue spin_1_0_0 }
 var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
 v_2_loop = v_2
-continue spin_1_0
+continue spin_1_0_0
 return gopurs_runtime.Value{}
 }
 }()
 })
-return gopurs_runtime.Apply(spin_1_0, a_0)
+return gopurs_runtime.Apply(spin_1_0_0, a_0)
 }
 
 func Call_absurd__gopurs_runtime_Value_1771830288(a_0_loop gopurs_runtime.Value) string {
 var a_0 gopurs_runtime.Value = a_0_loop
 _ = a_0
-var spin_1_0 gopurs_runtime.Value
-spin_1_0 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+var spin_1_0_1 gopurs_runtime.Value
+spin_1_0_1 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_2_loop gopurs_runtime.Value = v_2_loop_val
-spin_1_0:
+spin_1_0_1:
 for {
-if false { continue spin_1_0 }
+if false { continue spin_1_0_1 }
 var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
 v_2_loop = v_2
-continue spin_1_0
+continue spin_1_0_1
 return gopurs_runtime.Value{}
 }
 }()
 })
-return gopurs_runtime.Apply(spin_1_0, a_0).StrVal()
+return gopurs_runtime.Apply(spin_1_0_1, a_0).StrVal()
 }
 
 func Call_absurd__gopurs_runtime_Value_2182866177(a_0_loop gopurs_runtime.Value) bool {
 var a_0 gopurs_runtime.Value = a_0_loop
 _ = a_0
-var spin_1_0 gopurs_runtime.Value
-spin_1_0 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+var spin_1_0_2 gopurs_runtime.Value
+spin_1_0_2 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_2_loop gopurs_runtime.Value = v_2_loop_val
-spin_1_0:
+spin_1_0_2:
 for {
-if false { continue spin_1_0 }
+if false { continue spin_1_0_2 }
 var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
 v_2_loop = v_2
-continue spin_1_0
+continue spin_1_0_2
 return gopurs_runtime.Value{}
 }
 }()
 })
-return (gopurs_runtime.Apply(spin_1_0, a_0).IntVal) != (0)
+return (gopurs_runtime.Apply(spin_1_0_2, a_0).IntVal) != (0)
 }
 
 func Call_absurd__gopurs_runtime_Value_1499175369(a_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var a_0 gopurs_runtime.Value = a_0_loop
 _ = a_0
-var spin_1_0 gopurs_runtime.Value
-spin_1_0 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+var spin_1_0_3 gopurs_runtime.Value
+spin_1_0_3 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_2_loop gopurs_runtime.Value = v_2_loop_val
-spin_1_0:
+spin_1_0_3:
 for {
-if false { continue spin_1_0 }
+if false { continue spin_1_0_3 }
 var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
 v_2_loop = v_2
-continue spin_1_0
+continue spin_1_0_3
 return gopurs_runtime.Value{}
 }
 }()
 })
-return gopurs_runtime.Apply(spin_1_0, a_0)
+return gopurs_runtime.Apply(spin_1_0_3, a_0)
 }
 
 func Call_absurd__gopurs_runtime_Value_1133204955(a_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var a_0 gopurs_runtime.Value = a_0_loop
 _ = a_0
-var spin_1_0 gopurs_runtime.Value
-spin_1_0 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+var spin_1_0_4 gopurs_runtime.Value
+spin_1_0_4 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_2_loop gopurs_runtime.Value = v_2_loop_val
-spin_1_0:
+spin_1_0_4:
 for {
-if false { continue spin_1_0 }
+if false { continue spin_1_0_4 }
 var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
 v_2_loop = v_2
-continue spin_1_0
+continue spin_1_0_4
 return gopurs_runtime.Value{}
 }
 }()
 })
-return gopurs_runtime.Apply(spin_1_0, a_0)
+return gopurs_runtime.Apply(spin_1_0_4, a_0)
 }
 
 func Call_absurd__gopurs_runtime_Value_331654555(a_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var a_0 gopurs_runtime.Value = a_0_loop
 _ = a_0
-var spin_1_0 gopurs_runtime.Value
-spin_1_0 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+var spin_1_0_5 gopurs_runtime.Value
+spin_1_0_5 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_2_loop gopurs_runtime.Value = v_2_loop_val
-spin_1_0:
+spin_1_0_5:
 for {
-if false { continue spin_1_0 }
+if false { continue spin_1_0_5 }
 var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
 v_2_loop = v_2
-continue spin_1_0
+continue spin_1_0_5
 return gopurs_runtime.Value{}
 }
 }()
 })
-return gopurs_runtime.Apply(spin_1_0, a_0)
+return gopurs_runtime.Apply(spin_1_0_5, a_0)
 }
 
 func Call_absurd__gopurs_runtime_Value_1769020947(a_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var a_0 gopurs_runtime.Value = a_0_loop
 _ = a_0
-var spin_1_0 gopurs_runtime.Value
-spin_1_0 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+var spin_1_0_6 gopurs_runtime.Value
+spin_1_0_6 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_2_loop gopurs_runtime.Value = v_2_loop_val
-spin_1_0:
+spin_1_0_6:
 for {
-if false { continue spin_1_0 }
+if false { continue spin_1_0_6 }
 var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
 v_2_loop = v_2
-continue spin_1_0
+continue spin_1_0_6
 return gopurs_runtime.Value{}
 }
 }()
 })
-return gopurs_runtime.Apply(spin_1_0, a_0)
+return gopurs_runtime.Apply(spin_1_0_6, a_0)
 }
 
 

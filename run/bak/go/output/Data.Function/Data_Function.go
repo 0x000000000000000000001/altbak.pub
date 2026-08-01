@@ -850,15 +850,15 @@ return a_0
 func Call_applyN(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-var go__go_1_0 gopurs_runtime.Value
-go__go_1_0 = gopurs_runtime.Func(func(n_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+var go__go_1_0_0 gopurs_runtime.Value
+go__go_1_0_0 = gopurs_runtime.Func(func(n_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(acc_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var n_2_loop gopurs_runtime.Value = n_2_loop_val
 var acc_3_loop gopurs_runtime.Value = acc_3_loop_val
-go__go_1_0:
+go__go_1_0_0:
 for {
-if false { continue go__go_1_0 }
+if false { continue go__go_1_0_0 }
 var n_2 gopurs_runtime.Value = n_2_loop
 _ = n_2
 var acc_3 gopurs_runtime.Value = acc_3_loop
@@ -875,7 +875,7 @@ goto end_branch_1
 {
 n_2_loop = gopurs_runtime.Int((n_2.IntVal) - (1))
 acc_3_loop = gopurs_runtime.Apply(f_0, acc_3)
-continue go__go_1_0
+continue go__go_1_0_0
 __t1 = gopurs_runtime.Value{}
 }
 end_branch_1:
@@ -884,7 +884,7 @@ return __t1
 }()
 })
 })
-return go__go_1_0
+return go__go_1_0_0
 }
 
 func Call_applyFlipped(x_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

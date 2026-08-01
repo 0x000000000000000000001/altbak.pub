@@ -155,15 +155,7 @@ lcmap_2_0 := gopurs_runtime.Apply(pkg_Data_Profunctor.Get_lcmap(), gopurs_runtim
 _ = lcmap_2_0
 return gopurs_runtime.Func2(func(l_3 gopurs_runtime.Value, r_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(lcmap_2_0, gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-if ((lcmap_2_0.UnsafePtr) != (nil)) && (((*struct{Rc uint32})(lcmap_2_0.UnsafePtr).Rc) == (1)) {
-(*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(lcmap_2_0.UnsafePtr).V0 = a_5
-(*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(lcmap_2_0.UnsafePtr).V1 = a_5
-return lcmap_2_0
-} else {
 return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, a_5, a_5})}
-}
-}()
 }), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroupoid_0, "compose"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictStrong_1, "second"), r_4), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictStrong_1, "first"), l_3)))
 })
 }

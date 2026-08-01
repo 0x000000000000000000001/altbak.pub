@@ -551,14 +551,7 @@ return gopurs_runtime.Apply3(alter_1_0, gopurs_runtime.Func(func(v2_4 gopurs_run
 var __t1 gopurs_runtime.Value
 {
 if (v2_4.Type == 9 && v2_4.IntVal == 930809136 && v2_4.UnsafePtr == nil) {
-__t1 = func() gopurs_runtime.Value {
-if ((alter_1_0.UnsafePtr) != (nil)) && (((*struct{Rc uint32})(alter_1_0.UnsafePtr).Rc) == (1)) {
-(*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(alter_1_0.UnsafePtr).V0 = pkg_Data_Unit.Get_unit()
-return alter_1_0
-} else {
-return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, pkg_Data_Unit.Get_unit()})}
-}
-}()
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, pkg_Data_Unit.Get_unit()})}
 goto end_branch_1
 } else {
 
@@ -642,13 +635,13 @@ var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
 var k_1 gopurs_runtime.Value = k_1_loop
 _ = k_1
-var go__go_2_0 gopurs_runtime.Value
-go__go_2_0 = gopurs_runtime.Func(func(v_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+var go__go_2_0_0 gopurs_runtime.Value
+go__go_2_0_0 = gopurs_runtime.Func(func(v_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_3_loop gopurs_runtime.Value = v_3_loop_val
-go__go_2_0:
+go__go_2_0_0:
 for {
-if false { continue go__go_2_0 }
+if false { continue go__go_2_0_0 }
 var v_3 gopurs_runtime.Value = v_3_loop
 _ = v_3
 var __t1 gopurs_runtime.Value
@@ -668,7 +661,7 @@ var __t3 gopurs_runtime.Value
 {
 if (v1_4_2.Type == 9 && v1_4_2.IntVal == 1527465420) {
 v_3_loop = gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer((*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V4)}
-continue go__go_2_0
+continue go__go_2_0_0
 __t3 = gopurs_runtime.Value{}
 goto end_branch_3
 } else {
@@ -678,7 +671,7 @@ goto end_branch_3
 {
 if (v1_4_2.Type == 9 && v1_4_2.IntVal == 380165415) {
 v_3_loop = gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer((*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V5)}
-continue go__go_2_0
+continue go__go_2_0_0
 __t3 = gopurs_runtime.Value{}
 goto end_branch_3
 } else {
@@ -711,7 +704,7 @@ return __t1
 }
 }()
 })
-return go__go_2_0
+return go__go_2_0_0
 }
 
 func Call_intersection(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {

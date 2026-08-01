@@ -497,15 +497,7 @@ if (v1_4.Type == 9 && v1_4.IntVal == 2020675835) {
 __local_var_5_3 := (*Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value])(v1_4.UnsafePtr).V1
 _ = __local_var_5_3
 __t2 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Functor0_2_1, "map"), gopurs_runtime.Func(func(v2_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-if ((Apply0_1_0.UnsafePtr) != (nil)) && (((*struct{Rc uint32})(Apply0_1_0.UnsafePtr).Rc) == (1)) {
-(*Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value])(Apply0_1_0.UnsafePtr).V0 = v2_6
-(*Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value])(Apply0_1_0.UnsafePtr).V1 = __local_var_5_3
-return Apply0_1_0
-} else {
 return gopurs_runtime.Value{Type: 9, IntVal: 2020675835, UnsafePtr: unsafe.Pointer(&Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value]{1, v2_6, __local_var_5_3})}
-}
-}()
 }), gopurs_runtime.Apply(v_3, (*Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value])(v1_4.UnsafePtr).V0))
 goto end_branch_2
 } else {
@@ -514,14 +506,7 @@ goto end_branch_2
 }
 {
 if (v1_4.Type == 9 && v1_4.IntVal == 2281256335) {
-__t2 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), func() gopurs_runtime.Value {
-if ((Apply0_1_0.UnsafePtr) != (nil)) && (((*struct{Rc uint32})(Apply0_1_0.UnsafePtr).Rc) == (1)) {
-(*Constructor_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value])(Apply0_1_0.UnsafePtr).V0 = (*Constructor_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value])(v1_4.UnsafePtr).V0
-return Apply0_1_0
-} else {
-return gopurs_runtime.Value{Type: 9, IntVal: 2281256335, UnsafePtr: unsafe.Pointer(&Constructor_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*Constructor_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value])(v1_4.UnsafePtr).V0})}
-}
-}())
+__t2 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.Value{Type: 9, IntVal: 2281256335, UnsafePtr: unsafe.Pointer(&Constructor_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*Constructor_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value])(v1_4.UnsafePtr).V0})})
 goto end_branch_2
 } else {
 

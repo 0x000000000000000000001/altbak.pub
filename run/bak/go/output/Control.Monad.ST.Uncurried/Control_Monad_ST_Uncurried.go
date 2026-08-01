@@ -12,10 +12,6 @@ func Get_mkSTFn1() gopurs_runtime.Value {
 	return _Gopurs_MkSTFn1
 }
 
-func Get_mkSTFn10() gopurs_runtime.Value {
-	return _Gopurs_MkSTFn10
-}
-
 func Get_mkSTFn2() gopurs_runtime.Value {
 	return _Gopurs_MkSTFn2
 }
@@ -50,10 +46,6 @@ func Get_mkSTFn9() gopurs_runtime.Value {
 
 func Get_runSTFn1() gopurs_runtime.Value {
 	return _Gopurs_RunSTFn1
-}
-
-func Get_runSTFn10() gopurs_runtime.Value {
-	return _Gopurs_RunSTFn10
 }
 
 func Get_runSTFn2() gopurs_runtime.Value {

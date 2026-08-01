@@ -131,9 +131,9 @@ _ = f_0
 var s_1 gopurs_runtime.Value = s_1_loop
 _ = s_1
 return gopurs_runtime.Apply(Get_void(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_2_0 := *(s_1.PtrVal().(*gopurs_runtime.Value))
+__local_var_2_0 := (*(s_1.PtrVal().(*interface{}))).(gopurs_runtime.Value)
 _ = __local_var_2_0
-*(s_1.PtrVal().(*gopurs_runtime.Value)) = gopurs_runtime.Apply(f_0, __local_var_2_0)
+*(s_1.PtrVal().(*interface{})) = gopurs_runtime.Apply(f_0, __local_var_2_0)
 return gopurs_runtime.Apply(f_0, __local_var_2_0)
 }))
 }

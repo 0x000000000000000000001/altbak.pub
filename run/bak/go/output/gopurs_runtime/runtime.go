@@ -373,7 +373,9 @@ func Func10(f func(Value, Value, Value, Value, Value, Value, Value, Value, Value
 func Func11(f func(Value, Value, Value, Value, Value, Value, Value, Value, Value, Value, Value) Value) Value { return Value{Type: TypeFunc11, UnsafePtr: *(*unsafe.Pointer)(unsafe.Pointer(&f))} }
 
 func FuncAny(f any) Value {
-	return Value{Type: TypeFunc, UnsafePtr: unsafe.Pointer(&f)}
+	ptr := new(any)
+	*ptr = f
+	return Value{Type: TypeFunc, UnsafePtr: unsafe.Pointer(ptr)}
 }
 
 
@@ -393,6 +395,24 @@ func Apply(f Value, arg Value) Value {
 	case TypeFunc5:
 		fn := *(*func(Value, Value, Value, Value, Value) Value)(unsafe.Pointer(&f.UnsafePtr))
 		return Func4(func(a, b, c, d Value) Value { return fn(arg, a, b, c, d) })
+	case TypeFunc6:
+		fn := *(*func(Value, Value, Value, Value, Value, Value) Value)(unsafe.Pointer(&f.UnsafePtr))
+		return Func5(func(a, b, c, d, e Value) Value { return fn(arg, a, b, c, d, e) })
+	case TypeFunc7:
+		fn := *(*func(Value, Value, Value, Value, Value, Value, Value) Value)(unsafe.Pointer(&f.UnsafePtr))
+		return Func6(func(a, b, c, d, e, f Value) Value { return fn(arg, a, b, c, d, e, f) })
+	case TypeFunc8:
+		fn := *(*func(Value, Value, Value, Value, Value, Value, Value, Value) Value)(unsafe.Pointer(&f.UnsafePtr))
+		return Func7(func(a, b, c, d, e, f, g Value) Value { return fn(arg, a, b, c, d, e, f, g) })
+	case TypeFunc9:
+		fn := *(*func(Value, Value, Value, Value, Value, Value, Value, Value, Value) Value)(unsafe.Pointer(&f.UnsafePtr))
+		return Func8(func(a, b, c, d, e, f, g, h Value) Value { return fn(arg, a, b, c, d, e, f, g, h) })
+	case TypeFunc10:
+		fn := *(*func(Value, Value, Value, Value, Value, Value, Value, Value, Value, Value) Value)(unsafe.Pointer(&f.UnsafePtr))
+		return Func9(func(a, b, c, d, e, f, g, h, i Value) Value { return fn(arg, a, b, c, d, e, f, g, h, i) })
+	case TypeFunc11:
+		fn := *(*func(Value, Value, Value, Value, Value, Value, Value, Value, Value, Value, Value) Value)(unsafe.Pointer(&f.UnsafePtr))
+		return Func10(func(a, b, c, d, e, f, g, h, i, j Value) Value { return fn(arg, a, b, c, d, e, f, g, h, i, j) })
 	default:
 		panic("Attempted to apply a non-function")
 	}
@@ -536,10 +556,49 @@ func Unbox[T any](v any) T {
 	
 	var t any = *new(T)
 	switch t.(type) {
-	case int64: return any(val.IntVal).(T)
-	case int: return any(int(val.IntVal)).(T)
+	case int64: 
+		if val.Type == TypeFloat {
+			return any(int64(math.Float64frombits(uint64(val.IntVal)))).(T)
+		}
+		if val.Type == TypeAny {
+			if ptr := val.UnsafePtr; ptr != nil {
+				v := *(*any)(ptr)
+				if f, ok := v.(float64); ok { return any(int64(f)).(T) }
+				if i, ok := v.(int); ok { return any(int64(i)).(T) }
+				if i, ok := v.(int64); ok { return any(i).(T) }
+			}
+			return any(int64(0)).(T)
+		}
+		return any(val.IntVal).(T)
+	case int: 
+		if val.Type == TypeFloat {
+			return any(int(math.Float64frombits(uint64(val.IntVal)))).(T)
+		}
+		if val.Type == TypeAny {
+			if ptr := val.UnsafePtr; ptr != nil {
+				v := *(*any)(ptr)
+				if f, ok := v.(float64); ok { return any(int(f)).(T) }
+				if i, ok := v.(int); ok { return any(i).(T) }
+				if i, ok := v.(int64); ok { return any(int(i)).(T) }
+			}
+			return any(0).(T)
+		}
+		return any(int(val.IntVal)).(T)
 	case string: return any(*(*string)(val.UnsafePtr)).(T)
-	case float64: return any(math.Float64frombits(uint64(val.IntVal))).(T)
+	case float64:
+		if val.Type == TypeInt {
+			return any(float64(val.IntVal)).(T)
+		}
+		if val.Type == TypeAny {
+			if ptr := val.UnsafePtr; ptr != nil {
+				v := *(*any)(ptr)
+				if f, ok := v.(float64); ok { return any(f).(T) }
+				if i, ok := v.(int); ok { return any(float64(i)).(T) }
+				if i, ok := v.(int64); ok { return any(float64(i)).(T) }
+			}
+			return any(float64(0)).(T)
+		}
+		return any(math.Float64frombits(uint64(val.IntVal))).(T)
 	case bool: return any(val.IntVal == 1).(T)
 	case Value: return any(val).(T)
 	case map[string]any:
@@ -555,7 +614,11 @@ func Unbox[T any](v any) T {
 	case func(any) any:
 		res := func(arg any) any { return Apply(val, Box(arg)) }
 		return any(res).(T)
-	default: return *(*T)(val.UnsafePtr)
+	default:
+		if val.Type == TypeAny {
+			return (*(*any)(val.UnsafePtr)).(T)
+		}
+		return *(*T)(val.UnsafePtr)
 	}
 }
 

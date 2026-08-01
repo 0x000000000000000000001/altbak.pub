@@ -24,29 +24,8 @@ func TraverseArrayImpl(apply func(interface{}, interface{}) interface{}, mapFn f
 	
 	concat2 := func(xsVal interface{}) interface{} {
 		return func(ysVal interface{}) interface{} {
-			var xs, ys []interface{}
-			if vx, ok := xsVal.(interface{}); ok {
-				if arr, ok := vx.([]interface{}); ok {
-					xs = make([]interface{}, len(arr))
-					for i, x := range arr { xs[i] = x }
-				}
-			} else if arr, ok := xsVal.([]interface{}); ok {
-				xs = arr
-			} else {
-				xs = xsVal.([]interface{})
-			}
-
-			if vy, ok := ysVal.(interface{}); ok {
-				if arr, ok := vy.([]interface{}); ok {
-					ys = make([]interface{}, len(arr))
-					for i, y := range arr { ys[i] = y }
-				}
-			} else if arr, ok := ysVal.([]interface{}); ok {
-				ys = arr
-			} else {
-				ys = ysVal.([]interface{})
-			}
-
+			xs := gopurs_runtime.Unbox[[]interface{}](xsVal)
+			ys := gopurs_runtime.Unbox[[]interface{}](ysVal)
 			res := make([]interface{}, 0, len(xs)+len(ys))
 			res = append(res, xs...)
 			res = append(res, ys...)

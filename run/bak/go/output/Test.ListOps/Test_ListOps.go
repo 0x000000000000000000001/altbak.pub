@@ -154,15 +154,15 @@ var start_0 int64 = start_0_loop
 _ = start_0
 var end_1 int64 = end_1_loop
 _ = end_1
-var go__go_2_0 gopurs_runtime.Value
-go__go_2_0 = gopurs_runtime.Func(func(curr_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+var go__go_2_0_0 gopurs_runtime.Value
+go__go_2_0_0 = gopurs_runtime.Func(func(curr_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(acc_4_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var curr_3_loop gopurs_runtime.Value = curr_3_loop_val
 var acc_4_loop gopurs_runtime.Value = acc_4_loop_val
-go__go_2_0:
+go__go_2_0_0:
 for {
-if false { continue go__go_2_0 }
+if false { continue go__go_2_0_0 }
 var curr_3 gopurs_runtime.Value = curr_3_loop
 _ = curr_3
 var acc_4 gopurs_runtime.Value = acc_4_loop
@@ -178,16 +178,8 @@ goto end_branch_1
 }
 {
 curr_3_loop = gopurs_runtime.Int((curr_3.IntVal) - (1))
-acc_4_loop = func() gopurs_runtime.Value {
-if ((go__go_2_0.UnsafePtr) != (nil)) && (((*struct{Rc uint32})(go__go_2_0.UnsafePtr).Rc) == (1)) {
-(*Constructor_Cons[gopurs_runtime.Value])(go__go_2_0.UnsafePtr).V0 = curr_3
-(*Constructor_Cons[gopurs_runtime.Value])(go__go_2_0.UnsafePtr).V1 = (*Constructor_Cons[gopurs_runtime.Value])(acc_4.UnsafePtr)
-return go__go_2_0
-} else {
-return gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(&Constructor_Cons[gopurs_runtime.Value]{1, curr_3, (*Constructor_Cons[gopurs_runtime.Value])(acc_4.UnsafePtr)})}
-}
-}()
-continue go__go_2_0
+acc_4_loop = gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(&Constructor_Cons[gopurs_runtime.Value]{1, curr_3, (*Constructor_Cons[gopurs_runtime.Value])(acc_4.UnsafePtr)})}
+continue go__go_2_0_0
 __t1 = gopurs_runtime.Value{}
 }
 end_branch_1:
@@ -196,7 +188,7 @@ return __t1
 }()
 })
 })
-return (*Constructor_Cons[int64])(gopurs_runtime.Apply2(go__go_2_0, gopurs_runtime.Int(end_1), gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: nil}).UnsafePtr)
+return (*Constructor_Cons[int64])(gopurs_runtime.Apply2(go__go_2_0_0, gopurs_runtime.Int(end_1), gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: nil}).UnsafePtr)
 }
 
 func Call_foldl(v_0_loop gopurs_runtime.Value, v1_1_loop gopurs_runtime.Value, v2_2_loop *Constructor_Cons[gopurs_runtime.Value]) gopurs_runtime.Value {
@@ -295,15 +287,15 @@ return __t0
 func Call_filterEvens(lst_0_loop *Constructor_Cons[int64]) *Constructor_Cons[int64] {
 var lst_0 *Constructor_Cons[int64] = lst_0_loop
 _ = lst_0
-var go__go_1_0 gopurs_runtime.Value
-go__go_1_0 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+var go__go_1_0_1 gopurs_runtime.Value
+go__go_1_0_1 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_2_loop gopurs_runtime.Value = v_2_loop_val
 var v1_3_loop gopurs_runtime.Value = v1_3_loop_val
-go__go_1_0:
+go__go_1_0_1:
 for {
-if false { continue go__go_1_0 }
+if false { continue go__go_1_0_1 }
 var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
 var v1_3 gopurs_runtime.Value = v1_3_loop
@@ -323,16 +315,8 @@ var __t2 gopurs_runtime.Value
 {
 if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingInt(), "mod"), (*Constructor_Cons[gopurs_runtime.Value])(v_2.UnsafePtr).V0, gopurs_runtime.Int(2)).IntVal) == (0) {
 v_2_loop = gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer((*Constructor_Cons[gopurs_runtime.Value])(v_2.UnsafePtr).V1)}
-v1_3_loop = func() gopurs_runtime.Value {
-if ((go__go_1_0.UnsafePtr) != (nil)) && (((*struct{Rc uint32})(go__go_1_0.UnsafePtr).Rc) == (1)) {
-(*Constructor_Cons[gopurs_runtime.Value])(go__go_1_0.UnsafePtr).V0 = (*Constructor_Cons[gopurs_runtime.Value])(v_2.UnsafePtr).V0
-(*Constructor_Cons[gopurs_runtime.Value])(go__go_1_0.UnsafePtr).V1 = (*Constructor_Cons[gopurs_runtime.Value])(v1_3.UnsafePtr)
-return go__go_1_0
-} else {
-return gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(&Constructor_Cons[gopurs_runtime.Value]{1, (*Constructor_Cons[gopurs_runtime.Value])(v_2.UnsafePtr).V0, (*Constructor_Cons[gopurs_runtime.Value])(v1_3.UnsafePtr)})}
-}
-}()
-continue go__go_1_0
+v1_3_loop = gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(&Constructor_Cons[gopurs_runtime.Value]{1, (*Constructor_Cons[gopurs_runtime.Value])(v_2.UnsafePtr).V0, (*Constructor_Cons[gopurs_runtime.Value])(v1_3.UnsafePtr)})}
+continue go__go_1_0_1
 __t2 = gopurs_runtime.Value{}
 goto end_branch_2
 } else {
@@ -342,7 +326,7 @@ goto end_branch_2
 {
 v_2_loop = gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer((*Constructor_Cons[gopurs_runtime.Value])(v_2.UnsafePtr).V1)}
 v1_3_loop = v1_3
-continue go__go_1_0
+continue go__go_1_0_1
 __t2 = gopurs_runtime.Value{}
 }
 end_branch_2:
@@ -361,7 +345,7 @@ return __t1
 }()
 })
 })
-return (*Constructor_Cons[int64])(gopurs_runtime.Apply2(go__go_1_0, gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(lst_0)}, gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: nil}).UnsafePtr)
+return (*Constructor_Cons[int64])(gopurs_runtime.Apply2(go__go_1_0_1, gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(lst_0)}, gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: nil}).UnsafePtr)
 }
 
 func Call_sumEvens(n_0_loop int64) int64 {

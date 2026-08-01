@@ -138,14 +138,7 @@ func Get_precision() gopurs_runtime.Value {
 __local_var_0_0 := gopurs_runtime.Apply2(Get_clamp(), gopurs_runtime.Int(1), gopurs_runtime.Int(21))
 _ = __local_var_0_0
 return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-if ((__local_var_0_0.UnsafePtr) != (nil)) && (((*struct{Rc uint32})(__local_var_0_0.UnsafePtr).Rc) == (1)) {
-(*Constructor_Precision)(__local_var_0_0.UnsafePtr).V0 = gopurs_runtime.Apply(__local_var_0_0, x_1).IntVal
-return __local_var_0_0
-} else {
 return gopurs_runtime.Value{Type: 9, IntVal: 1786680275, UnsafePtr: unsafe.Pointer(&Constructor_Precision{1, gopurs_runtime.Apply(__local_var_0_0, x_1).IntVal})}
-}
-}()
 })
 }()
 	})
@@ -160,14 +153,7 @@ func Get_fixed() gopurs_runtime.Value {
 __local_var_0_0 := gopurs_runtime.Apply2(Get_clamp(), gopurs_runtime.Int(0), gopurs_runtime.Int(20))
 _ = __local_var_0_0
 return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-if ((__local_var_0_0.UnsafePtr) != (nil)) && (((*struct{Rc uint32})(__local_var_0_0.UnsafePtr).Rc) == (1)) {
-(*Constructor_Fixed)(__local_var_0_0.UnsafePtr).V0 = gopurs_runtime.Apply(__local_var_0_0, x_1).IntVal
-return __local_var_0_0
-} else {
 return gopurs_runtime.Value{Type: 9, IntVal: 1390206259, UnsafePtr: unsafe.Pointer(&Constructor_Fixed{1, gopurs_runtime.Apply(__local_var_0_0, x_1).IntVal})}
-}
-}()
 })
 }()
 	})
@@ -182,14 +168,7 @@ func Get_exponential() gopurs_runtime.Value {
 __local_var_0_0 := gopurs_runtime.Apply2(Get_clamp(), gopurs_runtime.Int(0), gopurs_runtime.Int(20))
 _ = __local_var_0_0
 return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-if ((__local_var_0_0.UnsafePtr) != (nil)) && (((*struct{Rc uint32})(__local_var_0_0.UnsafePtr).Rc) == (1)) {
-(*Constructor_Exponential)(__local_var_0_0.UnsafePtr).V0 = gopurs_runtime.Apply(__local_var_0_0, x_1).IntVal
-return __local_var_0_0
-} else {
 return gopurs_runtime.Value{Type: 9, IntVal: 1734244434, UnsafePtr: unsafe.Pointer(&Constructor_Exponential{1, gopurs_runtime.Apply(__local_var_0_0, x_1).IntVal})}
-}
-}()
 })
 }()
 	})

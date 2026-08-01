@@ -6,40 +6,32 @@ import (
 	"time"
 )
 
-func Now() func() float64 {
-	return func() float64 {
-		return float64(time.Now().UnixNano()) / 1e6
-	}
+func Now(_ interface{}) float64 {
+	return float64(time.Now().UnixNano()) / 1e6
 }
 
-func GetTimezoneOffset() func() float64 {
-	return func() float64 {
-		_, offset := time.Now().Zone()
-		// In JavaScript, getTimezoneOffset() returns the difference in minutes
-		// between UTC and local time (e.g. UTC+1 is -60)
-		return float64(-offset / 60)
-	}
+func GetTimezoneOffset(_ interface{}) float64 {
+	_, offset := time.Now().Zone()
+	// In JavaScript, getTimezoneOffset() returns the difference in minutes
+	// between UTC and local time (e.g. UTC+1 is -60)
+	return float64(-offset / 60)
 }
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_now() func() float64 {
-	return Now()
+func Call_now(arg0 interface{}) float64 {
+	return Now(arg0)
 }
-var _Gopurs_Now = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-	go_res := Now()
-	return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-			inner_res := go_res()
-			return gopurs_runtime.Box(inner_res)
-		})
+var _Gopurs_Now = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := Now(go_arg0)
+	return gopurs_runtime.Box(go_res)
 })
-func Call_getTimezoneOffset() func() float64 {
-	return GetTimezoneOffset()
+func Call_getTimezoneOffset(arg0 interface{}) float64 {
+	return GetTimezoneOffset(arg0)
 }
-var _Gopurs_GetTimezoneOffset = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-	go_res := GetTimezoneOffset()
-	return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-			inner_res := go_res()
-			return gopurs_runtime.Box(inner_res)
-		})
+var _Gopurs_GetTimezoneOffset = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := GetTimezoneOffset(go_arg0)
+	return gopurs_runtime.Box(go_res)
 })

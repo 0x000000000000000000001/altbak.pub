@@ -207,19 +207,9 @@ func Get_foldRight1Semigroup() gopurs_runtime.Value {
 		cache_foldRight1Semigroup = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_2_0 := (*Constructor_FoldRight1[gopurs_runtime.Value])(v_0.UnsafePtr).V1
 _ = __local_var_2_0
-return func() gopurs_runtime.Value {
-if ((__local_var_2_0.UnsafePtr) != (nil)) && (((*struct{Rc uint32})(__local_var_2_0.UnsafePtr).Rc) == (1)) {
-(*Constructor_FoldRight1[gopurs_runtime.Value])(__local_var_2_0.UnsafePtr).V0 = gopurs_runtime.Func2(func(a_3 gopurs_runtime.Value, f_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2((*Constructor_FoldRight1[gopurs_runtime.Value])(v_0.UnsafePtr).V0, gopurs_runtime.Apply2(f_4, __local_var_2_0, gopurs_runtime.Apply2((*Constructor_FoldRight1[gopurs_runtime.Value])(v1_1.UnsafePtr).V0, a_3, f_4)), f_4)
-})
-(*Constructor_FoldRight1[gopurs_runtime.Value])(__local_var_2_0.UnsafePtr).V1 = (*Constructor_FoldRight1[gopurs_runtime.Value])(v1_1.UnsafePtr).V1
-return __local_var_2_0
-} else {
 return gopurs_runtime.Value{Type: 9, IntVal: 3805997843, UnsafePtr: unsafe.Pointer(&Constructor_FoldRight1[gopurs_runtime.Value]{1, gopurs_runtime.Func2(func(a_3 gopurs_runtime.Value, f_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2((*Constructor_FoldRight1[gopurs_runtime.Value])(v_0.UnsafePtr).V0, gopurs_runtime.Apply2(f_4, __local_var_2_0, gopurs_runtime.Apply2((*Constructor_FoldRight1[gopurs_runtime.Value])(v1_1.UnsafePtr).V0, a_3, f_4)), f_4)
 }), (*Constructor_FoldRight1[gopurs_runtime.Value])(v1_1.UnsafePtr).V1})}
-}
-}()
 }))
 	})
 	return cache_foldRight1Semigroup

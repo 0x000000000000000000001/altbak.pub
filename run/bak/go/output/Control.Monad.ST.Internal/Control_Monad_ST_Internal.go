@@ -231,16 +231,16 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_bindST(), "bind"), gop
 return gopurs_runtime.Apply2(Get_discard(), gopurs_runtime.Apply2(Get_while(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_functorST(), "map"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool((v_3.Type == 9 && v_3.IntVal == 525585346))
 }), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return *(r_2.PtrVal().(*gopurs_runtime.Value))
+return (*(r_2.PtrVal().(*interface{}))).(gopurs_runtime.Value)
 })), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_bindST(), "bind"), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return *(r_2.PtrVal().(*gopurs_runtime.Value))
+return (*(r_2.PtrVal().(*interface{}))).(gopurs_runtime.Value)
 }), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (v_3.Type == 9 && v_3.IntVal == 525585346) {
 __t0 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_bindST(), "bind"), gopurs_runtime.Apply(f_0, (*pkg_Control_Monad_Rec_Class.Constructor_Loop[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V0), gopurs_runtime.Func(func(e_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(Get_void(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-*(r_2.PtrVal().(*gopurs_runtime.Value)) = e_4
+*(r_2.PtrVal().(*interface{})) = e_4
 return e_4
 }))
 }))
@@ -279,7 +279,7 @@ __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 end_branch_1:
 return __t1
 }), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return *(r_2.PtrVal().(*gopurs_runtime.Value))
+return (*(r_2.PtrVal().(*interface{}))).(gopurs_runtime.Value)
 }))
 }))
 }))

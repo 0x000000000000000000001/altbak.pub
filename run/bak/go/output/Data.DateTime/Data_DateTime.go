@@ -242,15 +242,7 @@ _ = v_2
 __local_var_3_0 := (*Constructor_DateTime)(v_2.UnsafePtr).V1
 _ = __local_var_3_0
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func(func(a_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return func() gopurs_runtime.Value {
-if ((__local_var_3_0.UnsafePtr) != (nil)) && (((*struct{Rc uint32})(__local_var_3_0.UnsafePtr).Rc) == (1)) {
-(*Constructor_DateTime)(__local_var_3_0.UnsafePtr).V0 = a_4
-(*Constructor_DateTime)(__local_var_3_0.UnsafePtr).V1 = __local_var_3_0
-return __local_var_3_0
-} else {
 return gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(&Constructor_DateTime{1, a_4, __local_var_3_0})}
-}
-}()
 }), gopurs_runtime.Apply(f_1, (*Constructor_DateTime)(v_2.UnsafePtr).V0))
 }
 

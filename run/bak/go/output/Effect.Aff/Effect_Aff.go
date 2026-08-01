@@ -654,9 +654,9 @@ func Get_monadRecAff() gopurs_runtime.Value {
 		cache_monadRecAff = gopurs_runtime.RecordDict2("Monad0", "tailRecM", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_monadAff()
 }), gopurs_runtime.Func(func(k_0 gopurs_runtime.Value) gopurs_runtime.Value {
-var go__go_1_0 gopurs_runtime.Value
-_ = go__go_1_0
-go__go_1_0 = gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
+var go__go_1_0_0 gopurs_runtime.Value
+_ = go__go_1_0_0
+go__go_1_0_0 = gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_bindAff(), "bind"), gopurs_runtime.Apply(k_0, a_2), gopurs_runtime.Func(func(res_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
@@ -669,7 +669,7 @@ goto end_branch_1
 }
 {
 if (res_3.Type == 9 && res_3.IntVal == 525585346) {
-__t1 = gopurs_runtime.Apply(go__go_1_0, (*pkg_Control_Monad_Rec_Class.Constructor_Loop[gopurs_runtime.Value, gopurs_runtime.Value])(res_3.UnsafePtr).V0)
+__t1 = gopurs_runtime.Apply(go__go_1_0_0, (*pkg_Control_Monad_Rec_Class.Constructor_Loop[gopurs_runtime.Value, gopurs_runtime.Value])(res_3.UnsafePtr).V0)
 goto end_branch_1
 } else {
 
@@ -682,7 +682,7 @@ end_branch_1:
 return __t1
 }))
 })
-return go__go_1_0
+return go__go_1_0_0
 }))
 	})
 	return cache_monadRecAff
