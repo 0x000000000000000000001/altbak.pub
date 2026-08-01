@@ -41,7 +41,10 @@ if [ "$MODE" == "test" ]; then
   ./bin/php/run $CLEAN --test "$TEST_NAME" || echo "=== PHP failed ==="
   
   echo ""
-  ./bin/go/run $CLEAN --test "$TEST_NAME" || echo "=== Go failed ==="
+  ./bin/go/run $CLEAN --test "$TEST_NAME" || echo "=== Go (gopurs) failed ==="
+  
+  echo ""
+  ./bin/gnomon/run $CLEAN --test "$TEST_NAME" || echo "=== Go (Gnomon) failed ==="
   
   echo ""
   ./bin/cs/run $CLEAN --test "$TEST_NAME" || echo "=== C# failed ==="
@@ -66,7 +69,7 @@ elif [ "$MODE" == "x" ]; then
   ./bin/php/run $CLEAN --x || echo "=== PHP failed ==="
   
   echo ""
-  ./bin/go/run $CLEAN --x || echo "=== Go failed ==="
+  ./bin/go/run $CLEAN --x || echo "=== Go (gopurs) failed ==="
   
   echo ""
   ./bin/cs/run $CLEAN --x || echo "=== C# failed ==="
@@ -90,7 +93,10 @@ else
   ./bin/php/run $CLEAN || echo "=== PHP failed ==="
   
   echo ""
-  ./bin/go/run $CLEAN || echo "=== Go failed ==="
+  ./bin/go/run $CLEAN || echo "=== Go (gopurs) failed ==="
+  
+  echo ""
+  ./bin/gnomon/run $CLEAN || echo "=== Go (Gnomon) failed ==="
   
   echo ""
   ./bin/cs/run $CLEAN || echo "=== C# failed ==="

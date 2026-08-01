@@ -13,6 +13,10 @@
 -define(MEMOIZE, memoize).
 memoize(X) -> X.
 -endif.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/AppX.purs", 8).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/AppX.purs", 6).
 -spec main() -> fun(() -> any()).
-main() -> (data_functor@ps:void((effect@ps:functorEffect()), (bench@ps:runBench((test_tCO@ps:describe()), (test_tCO@ps:act()))))).
+main() -> fun
+  __do() -> 
+  ((test_fib@ps:describe())()),
+  ((test_fib@ps:act())())
+end.
