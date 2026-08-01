@@ -13,16 +13,16 @@
 -define(MEMOIZE, memoize).
 memoize(X) -> X.
 -endif.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 12).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 13).
 -spec 'R'() -> any().
 'R'() -> { r }.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 12).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 13).
 -spec 'B'() -> any().
 'B'() -> { b }.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 13).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 14).
 -spec 'E'() -> any().
 'E'() -> { e }.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 13).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 14).
 -spec 'T'() -> any().
 'T'() -> fun (Value0) ->
   fun (Value1) ->
@@ -33,45 +33,45 @@ memoize(X) -> X.
     end
   end
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 44).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 47).
 -spec max(integer(),integer()) -> integer().
 max(_@18,_@19) -> case _@18 > _@19 of
   (true) -> _@18;
   (_) -> _@19
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 44).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 47).
 -spec max() -> fun((integer()) -> fun((integer()) -> integer())).
 max() -> fun (_@20) ->
   fun (_@21) ->
     (max(_@20, _@21))
   end
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 31).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 33).
 -spec makeBlack(any()) -> any().
 makeBlack(_@25) -> case _@25 of
   ({ t, _, _@26, _@27, _@28 }) -> { t, { b }, _@26, _@27, _@28 };
   ({ e }) -> { e }
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 31).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 33).
 -spec makeBlack() -> fun((any()) -> any()).
 makeBlack() -> fun (_@29) ->
   (makeBlack(_@29))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 47).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 50).
 -spec describe() -> fun(() -> any()).
 describe() -> (effect_console@ps:log(<<"Red-Black Tree (100k Worst-Case Insertions):"/utf8>>)).
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 40).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 43).
 -spec depth(any()) -> integer().
 depth(_@32) -> case _@32 of
   ({ e }) -> 0;
   ({ t, _, _@33, _, _@34 }) -> 1 + (max((depth(_@33)), (depth(_@34))))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 40).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 43).
 -spec depth() -> fun((any()) -> integer()).
 depth() -> fun (_@35) ->
   (depth(_@35))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 15).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 16).
 -spec balance(any(),any(),integer(),any()) -> any().
 balance(_@68,_@69,_@70,_@71) -> case { _@68, _@69, _@70, _@71 } of
   ({ { b }, { t, { r }, { t, { r }, _@72, _@73, _@74 }, _@75, _@76 }, _@77, _@78 }) -> { t, { r }, { t, { b }, _@72, _@73, _@74 }, _@75, { t, { b }, _@76, _@77, _@78 } };
@@ -80,7 +80,7 @@ balance(_@68,_@69,_@70,_@71) -> case { _@68, _@69, _@70, _@71 } of
   ({ { b }, _@93, _@94, { t, { r }, _@95, _@96, { t, { r }, _@97, _@98, _@99 } } }) -> { t, { r }, { t, { b }, _@93, _@94, _@95 }, _@96, { t, { b }, _@97, _@98, _@99 } };
   ({ _@100, _@101, _@102, _@103 }) -> { t, _@100, _@101, _@102, _@103 }
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 15).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 16).
 -spec balance() -> fun((any()) -> fun((any()) -> fun((integer()) -> fun((any()) -> any())))).
 balance() -> fun (_@104) ->
   fun (_@105) ->
@@ -91,7 +91,7 @@ balance() -> fun (_@104) ->
     end
   end
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 25).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 26).
 -spec ins(integer(),any()) -> any().
 ins(_@114,_@115) -> case { _@114, _@115 } of
   ({ _@116, { e } }) -> { t, { r }, { e }, _@116, { e } };
@@ -103,37 +103,37 @@ ins(_@114,_@115) -> case { _@114, _@115 } of
     end
   end
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 25).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 26).
 -spec ins() -> fun((integer()) -> fun((any()) -> any())).
 ins() -> fun (_@122) ->
   fun (_@123) ->
     (ins(_@122, _@123))
   end
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 22).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 23).
 -spec insert(integer(),any()) -> any().
 insert(_@124,_@125) -> (makeBlack((ins(_@124, _@125)))).
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 22).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 23).
 -spec insert() -> fun((integer()) -> fun((any()) -> any())).
 insert() -> fun (_@126) ->
   fun (_@127) ->
     (insert(_@126, _@127))
   end
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 35).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 38).
 -spec buildTree(integer(),any()) -> any().
 buildTree(_@131,_@132) -> case { _@131, _@132 } of
   ({ 0, _@133 }) -> _@133;
   ({ _@134, _@135 }) -> (buildTree(_@134 - 1, (insert(_@134, _@135))))
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 35).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 38).
 -spec buildTree() -> fun((integer()) -> fun((any()) -> any())).
 buildTree() -> fun (_@136) ->
   fun (_@137) ->
     (buildTree(_@136, _@137))
   end
 end.
-%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 50).
+%-file("/Users/0x1/Documents/htdocs/altbak.pub/src/Test/RBTree.purs", 53).
 -spec act() -> fun(() -> any()).
 act() -> fun
   __do() -> 

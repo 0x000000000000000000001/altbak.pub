@@ -101,9 +101,9 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Main_main
-$GLOBALS['Main_main'] = (((($GLOBALS['Control_Bind_discardUnit'])->{'discard'})($GLOBALS['Effect_bindEffect']))(\Effect\Console\majEffect_majConsole_log("Hello")))(function($_dollar__unused_0) {
+$GLOBALS['Main_main'] = (((($GLOBALS['Control_Bind_discardUnit'])->{'discard'})($GLOBALS['Effect_bindEffect']))(($GLOBALS['Effect_Console_log'])("Hello")))(function($_dollar__unused_0) {
   $__num = \func_num_args();
-  $__res = \Effect\Console\majEffect_majConsole_log("World");
+  $__res = ($GLOBALS['Effect_Console_log'])("World");
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

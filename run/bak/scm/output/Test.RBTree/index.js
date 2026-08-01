@@ -58,7 +58,7 @@ var makeBlack = function (v) {
     if (v instanceof E) {
         return E.value;
     };
-    throw new Error("Failed pattern match at Test.RBTree (line 31, column 1 - line 31, column 34): " + [ v.constructor.name ]);
+    throw new Error("Failed pattern match at Test.RBTree (line 33, column 1 - line 33, column 26): " + [ v.constructor.name ]);
 };
 var describe = /* #__PURE__ */ Effect_Console.log("Red-Black Tree (100k Worst-Case Insertions):");
 var depth = function (v) {
@@ -68,7 +68,7 @@ var depth = function (v) {
     if (v instanceof T) {
         return 1 + max(depth(v.value1))(depth(v.value3)) | 0;
     };
-    throw new Error("Failed pattern match at Test.RBTree (line 40, column 1 - line 40, column 21): " + [ v.constructor.name ]);
+    throw new Error("Failed pattern match at Test.RBTree (line 43, column 1 - line 43, column 21): " + [ v.constructor.name ]);
 };
 var balance = function (v) {
     return function (v1) {
@@ -107,7 +107,7 @@ var ins = function (v) {
             };
             return new T(v1.value0, v1.value1, v1.value2, v1.value3);
         };
-        throw new Error("Failed pattern match at Test.RBTree (line 25, column 1 - line 25, column 27): " + [ v.constructor.name, v1.constructor.name ]);
+        throw new Error("Failed pattern match at Test.RBTree (line 26, column 1 - line 26, column 27): " + [ v.constructor.name, v1.constructor.name ]);
     };
 };
 var insert = function (x) {

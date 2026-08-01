@@ -63,8 +63,8 @@ elif [ "$MODE" == "x" ]; then
 fi
 
 echo 'Building...'
-spago build &>/dev/null
-PATH="$(pwd)/bin/scm:$PATH" purescm build &>/dev/null
+spago build >/dev/null
+PATH="$(pwd)/bin/scm:$PATH" purescm build >/dev/null
 PATH="$(pwd)/bin/scm:$PATH" purescm bundle-app --main ${ENTRY_POINT} 
 
 echo "=== Scheme ==="
