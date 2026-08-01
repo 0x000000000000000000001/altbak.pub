@@ -229,26 +229,15 @@ return Call_bracket(acquire_0_box, completed_1_box)
 	return cache_bracket
 }
 
-var cache_bracket__gopurs_runtime_Value_1682322782 gopurs_runtime.Value
-var once_bracket__gopurs_runtime_Value_1682322782 sync.Once
-func Get_bracket__gopurs_runtime_Value_1682322782() gopurs_runtime.Value {
-	once_bracket__gopurs_runtime_Value_1682322782.Do(func() {
-		cache_bracket__gopurs_runtime_Value_1682322782 = gopurs_runtime.Func2(func(acquire_0_box gopurs_runtime.Value, completed_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_bracket__gopurs_runtime_Value_1682322782(acquire_0_box, completed_1_box)
+var cache_bracket__gopurs_runtime_Value_3112645395 gopurs_runtime.Value
+var once_bracket__gopurs_runtime_Value_3112645395 sync.Once
+func Get_bracket__gopurs_runtime_Value_3112645395() gopurs_runtime.Value {
+	once_bracket__gopurs_runtime_Value_3112645395.Do(func() {
+		cache_bracket__gopurs_runtime_Value_3112645395 = gopurs_runtime.Func2(func(acquire_0_box gopurs_runtime.Value, completed_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bracket__gopurs_runtime_Value_3112645395(acquire_0_box, completed_1_box)
 })
 	})
-	return cache_bracket__gopurs_runtime_Value_1682322782
-}
-
-var cache_bracket__gopurs_runtime_Value_3237117886 gopurs_runtime.Value
-var once_bracket__gopurs_runtime_Value_3237117886 sync.Once
-func Get_bracket__gopurs_runtime_Value_3237117886() gopurs_runtime.Value {
-	once_bracket__gopurs_runtime_Value_3237117886.Do(func() {
-		cache_bracket__gopurs_runtime_Value_3237117886 = gopurs_runtime.Func2(func(acquire_0_box gopurs_runtime.Value, completed_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_bracket__gopurs_runtime_Value_3237117886(acquire_0_box, completed_1_box)
-})
-	})
-	return cache_bracket__gopurs_runtime_Value_3237117886
+	return cache_bracket__gopurs_runtime_Value_3112645395
 }
 
 var cache_applyParAff gopurs_runtime.Value
@@ -665,9 +654,9 @@ func Get_monadRecAff() gopurs_runtime.Value {
 		cache_monadRecAff = gopurs_runtime.RecordDict2("Monad0", "tailRecM", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_monadAff()
 }), gopurs_runtime.Func(func(k_0 gopurs_runtime.Value) gopurs_runtime.Value {
-var go__1_0 gopurs_runtime.Value
-_ = go__1_0
-go__1_0 = gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
+var go__go_1_0 gopurs_runtime.Value
+_ = go__go_1_0
+go__go_1_0 = gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_bindAff(), "bind"), gopurs_runtime.Apply(k_0, a_2), gopurs_runtime.Func(func(res_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
@@ -680,7 +669,7 @@ goto end_branch_1
 }
 {
 if (res_3.Type == 9 && res_3.IntVal == 525585346) {
-__t1 = gopurs_runtime.Apply(go__1_0, (*pkg_Control_Monad_Rec_Class.Constructor_Loop[gopurs_runtime.Value, gopurs_runtime.Value])(res_3.UnsafePtr).V0)
+__t1 = gopurs_runtime.Apply(go__go_1_0, (*pkg_Control_Monad_Rec_Class.Constructor_Loop[gopurs_runtime.Value, gopurs_runtime.Value])(res_3.UnsafePtr).V0)
 goto end_branch_1
 } else {
 
@@ -693,7 +682,7 @@ end_branch_1:
 return __t1
 }))
 })
-return go__1_0
+return go__go_1_0
 }))
 	})
 	return cache_monadRecAff
@@ -873,21 +862,7 @@ return completed_1
 })))
 }
 
-func Call_bracket__gopurs_runtime_Value_1682322782(acquire_0_loop gopurs_runtime.Value, completed_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var acquire_0 gopurs_runtime.Value = acquire_0_loop
-_ = acquire_0
-var completed_1 gopurs_runtime.Value = completed_1_loop
-_ = completed_1
-return gopurs_runtime.Apply2(Get_generalBracket(), acquire_0, gopurs_runtime.RecordDict3("completed", "failed", "killed", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return completed_1
-}), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return completed_1
-}), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return completed_1
-})))
-}
-
-func Call_bracket__gopurs_runtime_Value_3237117886(acquire_0_loop gopurs_runtime.Value, completed_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_bracket__gopurs_runtime_Value_3112645395(acquire_0_loop gopurs_runtime.Value, completed_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var acquire_0 gopurs_runtime.Value = acquire_0_loop
 _ = acquire_0
 var completed_1 gopurs_runtime.Value = completed_1_loop

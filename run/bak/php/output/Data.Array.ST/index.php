@@ -109,11 +109,25 @@ $new = function() use (&$new) {
     return (object)["value" => []];
 };
 
-$peekImpl = function($just, $nothing, $i, $xs) use (&$peekImpl) {
+$peekImpl = function($just, $nothing = null, $i = null, $xs = null) use (&$peekImpl) {
+    if (\func_num_args() < 4) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$peekImpl) {
+
+            return $peekImpl(...\array_merge($__args, $more));
+        };
+    }
     return ($i >= 0 && $i < \count($xs->value)) ? $just($xs->value[$i]) : $nothing;
 };
 
-$pokeImpl = function($i, $a, $xs) use (&$pokeImpl) {
+$pokeImpl = function($i, $a = null, $xs = null) use (&$pokeImpl) {
+    if (\func_num_args() < 3) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$pokeImpl) {
+
+            return $pokeImpl(...\array_merge($__args, $more));
+        };
+    }
     if ($i >= 0 && $i < \count($xs->value)) {
         $xs->value[$i] = $a;
         return true;
@@ -125,27 +139,62 @@ $lengthImpl = function($xs) use (&$lengthImpl) {
     return \count($xs->value);
 };
 
-$popImpl = function($just, $nothing, $xs) use (&$popImpl) {
+$popImpl = function($just, $nothing = null, $xs = null) use (&$popImpl) {
+    if (\func_num_args() < 3) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$popImpl) {
+
+            return $popImpl(...\array_merge($__args, $more));
+        };
+    }
     return \count($xs->value) > 0 ? $just(array_pop($xs->value)) : $nothing;
 };
 
-$pushAllImpl = function($as, $xs) use (&$pushAllImpl) {
+$pushAllImpl = function($as, $xs = null) use (&$pushAllImpl) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$pushAllImpl) {
+
+            return $pushAllImpl(...\array_merge($__args, $more));
+        };
+    }
     foreach ($as as $a) {
         $xs->value[] = $a;
     }
     return \count($xs->value);
 };
 
-$shiftImpl = function($just, $nothing, $xs) use (&$shiftImpl) {
+$shiftImpl = function($just, $nothing = null, $xs = null) use (&$shiftImpl) {
+    if (\func_num_args() < 3) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$shiftImpl) {
+
+            return $shiftImpl(...\array_merge($__args, $more));
+        };
+    }
     return \count($xs->value) > 0 ? $just(array_shift($xs->value)) : $nothing;
 };
 
-$unshiftAllImpl = function($as, $xs) use (&$unshiftAllImpl) {
+$unshiftAllImpl = function($as, $xs = null) use (&$unshiftAllImpl) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$unshiftAllImpl) {
+
+            return $unshiftAllImpl(...\array_merge($__args, $more));
+        };
+    }
     array_unshift($xs->value, ...$as);
     return \count($xs->value);
 };
 
-$spliceImpl = function($i, $howMany, $bs, $xs) use (&$spliceImpl) {
+$spliceImpl = function($i, $howMany = null, $bs = null, $xs = null) use (&$spliceImpl) {
+    if (\func_num_args() < 4) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$spliceImpl) {
+
+            return $spliceImpl(...\array_merge($__args, $more));
+        };
+    }
     return array_splice($xs->value, $i, $howMany, $bs);
 };
 
@@ -169,7 +218,14 @@ $cloneImpl = function($xs) use (&$cloneImpl) {
     return (object)["value" => $xs->value];
 };
 
-$sortByImpl = function($compare, $fromOrdering, $xs) use (&$sortByImpl) {
+$sortByImpl = function($compare, $fromOrdering = null, $xs = null) use (&$sortByImpl) {
+    if (\func_num_args() < 3) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$sortByImpl) {
+
+            return $sortByImpl(...\array_merge($__args, $more));
+        };
+    }
     \usort($xs->value, function($a, $b) use ($compare, $fromOrdering) {
         return $fromOrdering($compare($a)($b));
     });
@@ -185,7 +241,14 @@ $toAssocArrayImpl = function($xs) use (&$toAssocArrayImpl) {
     return $as;
 };
 
-$pushImpl = function($a, $xs) use (&$pushImpl) {
+$pushImpl = function($a, $xs = null) use (&$pushImpl) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$pushImpl) {
+
+            return $pushImpl(...\array_merge($__args, $more));
+        };
+    }
     $xs->value[] = $a;
     return \count($xs->value);
 };
@@ -210,23 +273,23 @@ $exports['pushImpl'] = $pushImpl;
 return $exports;
   return $exports;
 });
-$GLOBALS['Data_Array_ST_cloneImpl'] = ($ffi_Data_Array_ST['cloneImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_ST_freezeImpl'] = ($ffi_Data_Array_ST['freezeImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_ST_lengthImpl'] = ($ffi_Data_Array_ST['lengthImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_ST_new'] = ($ffi_Data_Array_ST['new'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_ST_peekImpl'] = ($ffi_Data_Array_ST['peekImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_ST_pokeImpl'] = ($ffi_Data_Array_ST['pokeImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_ST_popImpl'] = ($ffi_Data_Array_ST['popImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_ST_pushAllImpl'] = ($ffi_Data_Array_ST['pushAllImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_ST_pushImpl'] = ($ffi_Data_Array_ST['pushImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_ST_shiftImpl'] = ($ffi_Data_Array_ST['shiftImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_ST_sortByImpl'] = ($ffi_Data_Array_ST['sortByImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_ST_spliceImpl'] = ($ffi_Data_Array_ST['spliceImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_ST_thawImpl'] = ($ffi_Data_Array_ST['thawImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_ST_toAssocArrayImpl'] = ($ffi_Data_Array_ST['toAssocArrayImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_ST_unsafeFreezeImpl'] = ($ffi_Data_Array_ST['unsafeFreezeImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_ST_unsafeThawImpl'] = ($ffi_Data_Array_ST['unsafeThawImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_ST_unshiftAllImpl'] = ($ffi_Data_Array_ST['unshiftAllImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_cloneImpl'] = (\array_key_exists('cloneImpl', $ffi_Data_Array_ST) ? $ffi_Data_Array_ST['cloneImpl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_freezeImpl'] = (\array_key_exists('freezeImpl', $ffi_Data_Array_ST) ? $ffi_Data_Array_ST['freezeImpl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_lengthImpl'] = (\array_key_exists('lengthImpl', $ffi_Data_Array_ST) ? $ffi_Data_Array_ST['lengthImpl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_new'] = (\array_key_exists('new', $ffi_Data_Array_ST) ? $ffi_Data_Array_ST['new'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_peekImpl'] = (\array_key_exists('peekImpl', $ffi_Data_Array_ST) ? $ffi_Data_Array_ST['peekImpl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_pokeImpl'] = (\array_key_exists('pokeImpl', $ffi_Data_Array_ST) ? $ffi_Data_Array_ST['pokeImpl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_popImpl'] = (\array_key_exists('popImpl', $ffi_Data_Array_ST) ? $ffi_Data_Array_ST['popImpl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_pushAllImpl'] = (\array_key_exists('pushAllImpl', $ffi_Data_Array_ST) ? $ffi_Data_Array_ST['pushAllImpl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_pushImpl'] = (\array_key_exists('pushImpl', $ffi_Data_Array_ST) ? $ffi_Data_Array_ST['pushImpl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_shiftImpl'] = (\array_key_exists('shiftImpl', $ffi_Data_Array_ST) ? $ffi_Data_Array_ST['shiftImpl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_sortByImpl'] = (\array_key_exists('sortByImpl', $ffi_Data_Array_ST) ? $ffi_Data_Array_ST['sortByImpl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_spliceImpl'] = (\array_key_exists('spliceImpl', $ffi_Data_Array_ST) ? $ffi_Data_Array_ST['spliceImpl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_thawImpl'] = (\array_key_exists('thawImpl', $ffi_Data_Array_ST) ? $ffi_Data_Array_ST['thawImpl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_toAssocArrayImpl'] = (\array_key_exists('toAssocArrayImpl', $ffi_Data_Array_ST) ? $ffi_Data_Array_ST['toAssocArrayImpl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_unsafeFreezeImpl'] = (\array_key_exists('unsafeFreezeImpl', $ffi_Data_Array_ST) ? $ffi_Data_Array_ST['unsafeFreezeImpl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_unsafeThawImpl'] = (\array_key_exists('unsafeThawImpl', $ffi_Data_Array_ST) ? $ffi_Data_Array_ST['unsafeThawImpl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_unshiftAllImpl'] = (\array_key_exists('unshiftAllImpl', $ffi_Data_Array_ST) ? $ffi_Data_Array_ST['unshiftAllImpl'] : new class { public function __invoke(...$args) { return $this; } });
 
 
 

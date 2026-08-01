@@ -148,7 +148,7 @@ function majData_majEnum_frommajCharmajCode(int $v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_Enum;
-  $f = ($ffi_Data_Enum['fromCharCode'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('fromCharCode', $ffi_Data_Enum) ? $ffi_Data_Enum['fromCharCode'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_Enum_fromCharCode'] = __NAMESPACE__ . '\\majData_majEnum_frommajCharmajCode';
@@ -160,7 +160,7 @@ function majData_majEnum_tomajCharmajCode($v0): int|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_Enum;
-  $f = ($ffi_Data_Enum['toCharCode'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('toCharCode', $ffi_Data_Enum) ? $ffi_Data_Enum['toCharCode'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_Enum_toCharCode'] = __NAMESPACE__ . '\\majData_majEnum_tomajCharmajCode';
@@ -1122,18 +1122,18 @@ function majData_majEnum_defaultmajTomajEnum($dictBounded_0) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go__4_1 = null;
-  $go__4_1 = (function() use ($dictEnum_2, &$go__4_1) {
-  $__fn = function($i_5, $x_6 = null) use ($dictEnum_2, &$go__4_1, &$__fn) {
+  $go__go_4_1 = null;
+  $go__go_4_1 = (function() use ($dictEnum_2, &$go__go_4_1) {
+  $__fn = function($i_5, $x_6 = null) use ($dictEnum_2, &$go__go_4_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_go__4_1_1_i_5 = $i_5;
-  $__tco_var_go__4_1_1_x_6 = $x_6;
-  tco_loop_go__4_1_1:;
-  $i_5 = $__tco_var_go__4_1_1_i_5;
-  $x_6 = $__tco_var_go__4_1_1_x_6;
+  $__tco_var_go__go_4_1_1_i_5 = $i_5;
+  $__tco_var_go__go_4_1_1_x_6 = $x_6;
+  tco_loop_go__go_4_1_1:;
+  $i_5 = $__tco_var_go__go_4_1_1_i_5;
+  $x_6 = $__tco_var_go__go_4_1_1_x_6;
   $__t5 = null;;
   switch ($i_5) {
 case 0:
@@ -1149,9 +1149,9 @@ break;
   if ($v_7_1 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__tco_3 = ($i_5 - 1);
 $__tco_4 = ($v_7_1)->{'value0'};
-$__tco_var_go__4_1_1_i_5 = $__tco_3;
-$__tco_var_go__4_1_1_x_6 = $__tco_4;
-goto tco_loop_go__4_1_1;;
+$__tco_var_go__go_4_1_1_i_5 = $__tco_3;
+$__tco_var_go__go_4_1_1_x_6 = $__tco_4;
+goto tco_loop_go__go_4_1_1;;
 $__t2 = null;
 goto end_branch_2;;
 };
@@ -1176,7 +1176,7 @@ goto end_branch_2;;
 $__t2 = new \Data\Maybe\Data_Maybe_Nothing();
 goto end_branch_2;;
 };
-  $__t2 = (($go__4_1)($i_prime_3))($bottom2_1_0);
+  $__t2 = (($go__go_4_1)($i_prime_3))($bottom2_1_0);
   end_branch_2:;
   $__res = $__t2;
   goto __end;;
@@ -1226,26 +1226,26 @@ function majData_majEnum_defaultmajFrommajEnum($dictEnum_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $go__1_0 = null;
-  $go__1_0 = (function() use ($dictEnum_0, &$go__1_0) {
-  $__fn = function($i_2, $x_3 = null) use ($dictEnum_0, &$go__1_0, &$__fn) {
+  $go__go_1_0 = null;
+  $go__go_1_0 = (function() use ($dictEnum_0, &$go__go_1_0) {
+  $__fn = function($i_2, $x_3 = null) use ($dictEnum_0, &$go__go_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_go__1_0_0_i_2 = $i_2;
-  $__tco_var_go__1_0_0_x_3 = $x_3;
-  tco_loop_go__1_0_0:;
-  $i_2 = $__tco_var_go__1_0_0_i_2;
-  $x_3 = $__tco_var_go__1_0_0_x_3;
+  $__tco_var_go__go_1_0_0_i_2 = $i_2;
+  $__tco_var_go__go_1_0_0_x_3 = $x_3;
+  tco_loop_go__go_1_0_0:;
+  $i_2 = $__tco_var_go__go_1_0_0_i_2;
+  $x_3 = $__tco_var_go__go_1_0_0_x_3;
   $v_4_0 = (($dictEnum_0)->{'pred'})($x_3);
   $__t1 = null;;
   if ($v_4_0 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__tco_2 = ($i_2 + 1);
 $__tco_3 = ($v_4_0)->{'value0'};
-$__tco_var_go__1_0_0_i_2 = $__tco_2;
-$__tco_var_go__1_0_0_x_3 = $__tco_3;
-goto tco_loop_go__1_0_0;;
+$__tco_var_go__go_1_0_0_i_2 = $__tco_2;
+$__tco_var_go__go_1_0_0_x_3 = $__tco_3;
+goto tco_loop_go__go_1_0_0;;
 $__t1 = null;
 goto end_branch_1;;
 };
@@ -1263,7 +1263,7 @@ goto end_branch_1;;
   };
   return $__fn;
 })();
-  $__res = ($go__1_0)(0);
+  $__res = ($go__go_1_0)(0);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1280,26 +1280,26 @@ function majData_majEnum_defaultmajCardinality($dictBounded_0) {
   $bottom2_1_0 = ($dictBounded_0)->{'bottom'};
   $__res = function($dictEnum_2) use ($bottom2_1_0) {
   $__num = \func_num_args();
-  $go__3_1 = null;
-  $go__3_1 = (function() use ($dictEnum_2, &$go__3_1) {
-  $__fn = function($i_4, $x_5 = null) use ($dictEnum_2, &$go__3_1, &$__fn) {
+  $go__go_3_1 = null;
+  $go__go_3_1 = (function() use ($dictEnum_2, &$go__go_3_1) {
+  $__fn = function($i_4, $x_5 = null) use ($dictEnum_2, &$go__go_3_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_go__3_1_1_i_4 = $i_4;
-  $__tco_var_go__3_1_1_x_5 = $x_5;
-  tco_loop_go__3_1_1:;
-  $i_4 = $__tco_var_go__3_1_1_i_4;
-  $x_5 = $__tco_var_go__3_1_1_x_5;
+  $__tco_var_go__go_3_1_1_i_4 = $i_4;
+  $__tco_var_go__go_3_1_1_x_5 = $x_5;
+  tco_loop_go__go_3_1_1:;
+  $i_4 = $__tco_var_go__go_3_1_1_i_4;
+  $x_5 = $__tco_var_go__go_3_1_1_x_5;
   $v_6_1 = (($dictEnum_2)->{'succ'})($x_5);
   $__t2 = null;;
   if ($v_6_1 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__tco_3 = ($i_4 + 1);
 $__tco_4 = ($v_6_1)->{'value0'};
-$__tco_var_go__3_1_1_i_4 = $__tco_3;
-$__tco_var_go__3_1_1_x_5 = $__tco_4;
-goto tco_loop_go__3_1_1;;
+$__tco_var_go__go_3_1_1_i_4 = $__tco_3;
+$__tco_var_go__go_3_1_1_x_5 = $__tco_4;
+goto tco_loop_go__go_3_1_1;;
 $__t2 = null;
 goto end_branch_2;;
 };
@@ -1317,7 +1317,7 @@ goto end_branch_2;;
   };
   return $__fn;
 })();
-  $__res = (($go__3_1)(1))($bottom2_1_0);
+  $__res = (($go__go_3_1)(1))($bottom2_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

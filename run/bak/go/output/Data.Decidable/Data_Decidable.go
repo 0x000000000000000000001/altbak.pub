@@ -29,15 +29,15 @@ return Call_lose(dict_0_box)
 	return cache_lose
 }
 
-var cache_lose__gopurs_runtime_Value_1539196098 gopurs_runtime.Value
-var once_lose__gopurs_runtime_Value_1539196098 sync.Once
-func Get_lose__gopurs_runtime_Value_1539196098() gopurs_runtime.Value {
-	once_lose__gopurs_runtime_Value_1539196098.Do(func() {
-		cache_lose__gopurs_runtime_Value_1539196098 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_lose__gopurs_runtime_Value_1539196098(dict_0_box)
+var cache_lose__gopurs_runtime_Value_2428473858 gopurs_runtime.Value
+var once_lose__gopurs_runtime_Value_2428473858 sync.Once
+func Get_lose__gopurs_runtime_Value_2428473858() gopurs_runtime.Value {
+	once_lose__gopurs_runtime_Value_2428473858.Do(func() {
+		cache_lose__gopurs_runtime_Value_2428473858 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_lose__gopurs_runtime_Value_2428473858(dict_0_box)
 })
 	})
-	return cache_lose__gopurs_runtime_Value_1539196098
+	return cache_lose__gopurs_runtime_Value_2428473858
 }
 
 var cache_lost gopurs_runtime.Value
@@ -164,7 +164,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "lose")
 }
 
-func Call_lose__gopurs_runtime_Value_1539196098(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_lose__gopurs_runtime_Value_2428473858(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "lose")

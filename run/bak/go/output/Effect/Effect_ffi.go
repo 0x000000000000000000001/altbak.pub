@@ -2,6 +2,8 @@ package Effect
 
 import "gopurs/output/gopurs_runtime"
 
+
+
 func PureE(a any) func() any {
 	return func() any {
 		return a

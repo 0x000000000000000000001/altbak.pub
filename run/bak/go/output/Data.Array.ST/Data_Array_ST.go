@@ -37,6 +37,15 @@ func Get_unsafeThaw() gopurs_runtime.Value {
 	return cache_unsafeThaw
 }
 
+var cache_unsafeThaw__gopurs_runtime_Value_1529848091 gopurs_runtime.Value
+var once_unsafeThaw__gopurs_runtime_Value_1529848091 sync.Once
+func Get_unsafeThaw__gopurs_runtime_Value_1529848091() gopurs_runtime.Value {
+	once_unsafeThaw__gopurs_runtime_Value_1529848091.Do(func() {
+		cache_unsafeThaw__gopurs_runtime_Value_1529848091 = gopurs_runtime.Apply(pkg_Control_Monad_ST_Uncurried.Get_runSTFn1(), Get_unsafeThawImpl())
+	})
+	return cache_unsafeThaw__gopurs_runtime_Value_1529848091
+}
+
 var cache_unsafeFreeze gopurs_runtime.Value
 var once_unsafeFreeze sync.Once
 func Get_unsafeFreeze() gopurs_runtime.Value {
@@ -64,13 +73,13 @@ func Get_thaw() gopurs_runtime.Value {
 	return cache_thaw
 }
 
-var cache_thaw__gopurs_runtime_Value_4258121115 gopurs_runtime.Value
-var once_thaw__gopurs_runtime_Value_4258121115 sync.Once
-func Get_thaw__gopurs_runtime_Value_4258121115() gopurs_runtime.Value {
-	once_thaw__gopurs_runtime_Value_4258121115.Do(func() {
-		cache_thaw__gopurs_runtime_Value_4258121115 = gopurs_runtime.Apply(pkg_Control_Monad_ST_Uncurried.Get_runSTFn1(), Get_thawImpl())
+var cache_thaw__gopurs_runtime_Value_1245479547 gopurs_runtime.Value
+var once_thaw__gopurs_runtime_Value_1245479547 sync.Once
+func Get_thaw__gopurs_runtime_Value_1245479547() gopurs_runtime.Value {
+	once_thaw__gopurs_runtime_Value_1245479547.Do(func() {
+		cache_thaw__gopurs_runtime_Value_1245479547 = gopurs_runtime.Apply(pkg_Control_Monad_ST_Uncurried.Get_runSTFn1(), Get_thawImpl())
 	})
-	return cache_thaw__gopurs_runtime_Value_4258121115
+	return cache_thaw__gopurs_runtime_Value_1245479547
 }
 
 var cache_withArray gopurs_runtime.Value
@@ -89,12 +98,12 @@ return Call_withArray(f_0_box, func() []gopurs_runtime.Value {
 	return cache_withArray
 }
 
-var cache_withArray__gopurs_runtime_Value_2856329898 gopurs_runtime.Value
-var once_withArray__gopurs_runtime_Value_2856329898 sync.Once
-func Get_withArray__gopurs_runtime_Value_2856329898() gopurs_runtime.Value {
-	once_withArray__gopurs_runtime_Value_2856329898.Do(func() {
-		cache_withArray__gopurs_runtime_Value_2856329898 = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, xs_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_withArray__gopurs_runtime_Value_2856329898(f_0_box, func() []gopurs_runtime.Value {
+var cache_withArray__gopurs_runtime_Value_2510843373 gopurs_runtime.Value
+var once_withArray__gopurs_runtime_Value_2510843373 sync.Once
+func Get_withArray__gopurs_runtime_Value_2510843373() gopurs_runtime.Value {
+	once_withArray__gopurs_runtime_Value_2510843373.Do(func() {
+		cache_withArray__gopurs_runtime_Value_2510843373 = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, xs_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_withArray__gopurs_runtime_Value_2510843373(f_0_box, func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(xs_1_box.UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
@@ -102,7 +111,7 @@ return Call_withArray__gopurs_runtime_Value_2856329898(f_0_box, func() []gopurs_
 				}())
 })
 	})
-	return cache_withArray__gopurs_runtime_Value_2856329898
+	return cache_withArray__gopurs_runtime_Value_2510843373
 }
 
 var cache_splice gopurs_runtime.Value
@@ -125,15 +134,15 @@ return Call_sortBy(comp_0_box)
 	return cache_sortBy
 }
 
-var cache_sortBy__gopurs_runtime_Value_2740821710 gopurs_runtime.Value
-var once_sortBy__gopurs_runtime_Value_2740821710 sync.Once
-func Get_sortBy__gopurs_runtime_Value_2740821710() gopurs_runtime.Value {
-	once_sortBy__gopurs_runtime_Value_2740821710.Do(func() {
-		cache_sortBy__gopurs_runtime_Value_2740821710 = gopurs_runtime.Func(func(comp_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_sortBy__gopurs_runtime_Value_2740821710(comp_0_box)
+var cache_sortBy__gopurs_runtime_Value_1404141898 gopurs_runtime.Value
+var once_sortBy__gopurs_runtime_Value_1404141898 sync.Once
+func Get_sortBy__gopurs_runtime_Value_1404141898() gopurs_runtime.Value {
+	once_sortBy__gopurs_runtime_Value_1404141898.Do(func() {
+		cache_sortBy__gopurs_runtime_Value_1404141898 = gopurs_runtime.Func(func(comp_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_sortBy__gopurs_runtime_Value_1404141898(comp_0_box)
 })
 	})
-	return cache_sortBy__gopurs_runtime_Value_2740821710
+	return cache_sortBy__gopurs_runtime_Value_1404141898
 }
 
 var cache_sortWith gopurs_runtime.Value
@@ -178,15 +187,15 @@ return gopurs_runtime.Array(Call_run(st_0_box))
 	return cache_run
 }
 
-var cache_run__gopurs_runtime_Value_1582179099 gopurs_runtime.Value
-var once_run__gopurs_runtime_Value_1582179099 sync.Once
-func Get_run__gopurs_runtime_Value_1582179099() gopurs_runtime.Value {
-	once_run__gopurs_runtime_Value_1582179099.Do(func() {
-		cache_run__gopurs_runtime_Value_1582179099 = gopurs_runtime.Func(func(st_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Array(Call_run__gopurs_runtime_Value_1582179099(st_0_box))
+var cache_run__gopurs_runtime_Value_3308047835 gopurs_runtime.Value
+var once_run__gopurs_runtime_Value_3308047835 sync.Once
+func Get_run__gopurs_runtime_Value_3308047835() gopurs_runtime.Value {
+	once_run__gopurs_runtime_Value_3308047835.Do(func() {
+		cache_run__gopurs_runtime_Value_3308047835 = gopurs_runtime.Func(func(st_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Array(Call_run__gopurs_runtime_Value_3308047835(st_0_box))
 })
 	})
-	return cache_run__gopurs_runtime_Value_1582179099
+	return cache_run__gopurs_runtime_Value_3308047835
 }
 
 var cache_pushAll gopurs_runtime.Value
@@ -198,22 +207,22 @@ func Get_pushAll() gopurs_runtime.Value {
 	return cache_pushAll
 }
 
-var cache_pushAll__gopurs_runtime_Value_212242303 gopurs_runtime.Value
-var once_pushAll__gopurs_runtime_Value_212242303 sync.Once
-func Get_pushAll__gopurs_runtime_Value_212242303() gopurs_runtime.Value {
-	once_pushAll__gopurs_runtime_Value_212242303.Do(func() {
-		cache_pushAll__gopurs_runtime_Value_212242303 = gopurs_runtime.Apply(pkg_Control_Monad_ST_Uncurried.Get_runSTFn2(), Get_pushAllImpl())
+var cache_pushAll__gopurs_runtime_Value_3234744178 gopurs_runtime.Value
+var once_pushAll__gopurs_runtime_Value_3234744178 sync.Once
+func Get_pushAll__gopurs_runtime_Value_3234744178() gopurs_runtime.Value {
+	once_pushAll__gopurs_runtime_Value_3234744178.Do(func() {
+		cache_pushAll__gopurs_runtime_Value_3234744178 = gopurs_runtime.Apply(pkg_Control_Monad_ST_Uncurried.Get_runSTFn2(), Get_pushAllImpl())
 	})
-	return cache_pushAll__gopurs_runtime_Value_212242303
+	return cache_pushAll__gopurs_runtime_Value_3234744178
 }
 
-var cache_pushAll__gopurs_runtime_Value_2602532183 gopurs_runtime.Value
-var once_pushAll__gopurs_runtime_Value_2602532183 sync.Once
-func Get_pushAll__gopurs_runtime_Value_2602532183() gopurs_runtime.Value {
-	once_pushAll__gopurs_runtime_Value_2602532183.Do(func() {
-		cache_pushAll__gopurs_runtime_Value_2602532183 = gopurs_runtime.Apply(pkg_Control_Monad_ST_Uncurried.Get_runSTFn2(), Get_pushAllImpl())
+var cache_pushAll__gopurs_runtime_Value_1554520023 gopurs_runtime.Value
+var once_pushAll__gopurs_runtime_Value_1554520023 sync.Once
+func Get_pushAll__gopurs_runtime_Value_1554520023() gopurs_runtime.Value {
+	once_pushAll__gopurs_runtime_Value_1554520023.Do(func() {
+		cache_pushAll__gopurs_runtime_Value_1554520023 = gopurs_runtime.Apply(pkg_Control_Monad_ST_Uncurried.Get_runSTFn2(), Get_pushAllImpl())
 	})
-	return cache_pushAll__gopurs_runtime_Value_2602532183
+	return cache_pushAll__gopurs_runtime_Value_1554520023
 }
 
 var cache_push gopurs_runtime.Value
@@ -225,31 +234,31 @@ func Get_push() gopurs_runtime.Value {
 	return cache_push
 }
 
-var cache_push__gopurs_runtime_Value_2602532183 gopurs_runtime.Value
-var once_push__gopurs_runtime_Value_2602532183 sync.Once
-func Get_push__gopurs_runtime_Value_2602532183() gopurs_runtime.Value {
-	once_push__gopurs_runtime_Value_2602532183.Do(func() {
-		cache_push__gopurs_runtime_Value_2602532183 = gopurs_runtime.Apply(pkg_Control_Monad_ST_Uncurried.Get_runSTFn2(), Get_pushImpl())
+var cache_push__gopurs_runtime_Value_1554520023 gopurs_runtime.Value
+var once_push__gopurs_runtime_Value_1554520023 sync.Once
+func Get_push__gopurs_runtime_Value_1554520023() gopurs_runtime.Value {
+	once_push__gopurs_runtime_Value_1554520023.Do(func() {
+		cache_push__gopurs_runtime_Value_1554520023 = gopurs_runtime.Apply(pkg_Control_Monad_ST_Uncurried.Get_runSTFn2(), Get_pushImpl())
 	})
-	return cache_push__gopurs_runtime_Value_2602532183
+	return cache_push__gopurs_runtime_Value_1554520023
 }
 
-var cache_push__gopurs_runtime_Value_236408145 gopurs_runtime.Value
-var once_push__gopurs_runtime_Value_236408145 sync.Once
-func Get_push__gopurs_runtime_Value_236408145() gopurs_runtime.Value {
-	once_push__gopurs_runtime_Value_236408145.Do(func() {
-		cache_push__gopurs_runtime_Value_236408145 = gopurs_runtime.Apply(pkg_Control_Monad_ST_Uncurried.Get_runSTFn2(), Get_pushImpl())
+var cache_push__gopurs_runtime_Value_3312833052 gopurs_runtime.Value
+var once_push__gopurs_runtime_Value_3312833052 sync.Once
+func Get_push__gopurs_runtime_Value_3312833052() gopurs_runtime.Value {
+	once_push__gopurs_runtime_Value_3312833052.Do(func() {
+		cache_push__gopurs_runtime_Value_3312833052 = gopurs_runtime.Apply(pkg_Control_Monad_ST_Uncurried.Get_runSTFn2(), Get_pushImpl())
 	})
-	return cache_push__gopurs_runtime_Value_236408145
+	return cache_push__gopurs_runtime_Value_3312833052
 }
 
-var cache_push__gopurs_runtime_Value_2223234226 gopurs_runtime.Value
-var once_push__gopurs_runtime_Value_2223234226 sync.Once
-func Get_push__gopurs_runtime_Value_2223234226() gopurs_runtime.Value {
-	once_push__gopurs_runtime_Value_2223234226.Do(func() {
-		cache_push__gopurs_runtime_Value_2223234226 = gopurs_runtime.Apply(pkg_Control_Monad_ST_Uncurried.Get_runSTFn2(), Get_pushImpl())
+var cache_push__gopurs_runtime_Value_1172178897 gopurs_runtime.Value
+var once_push__gopurs_runtime_Value_1172178897 sync.Once
+func Get_push__gopurs_runtime_Value_1172178897() gopurs_runtime.Value {
+	once_push__gopurs_runtime_Value_1172178897.Do(func() {
+		cache_push__gopurs_runtime_Value_1172178897 = gopurs_runtime.Apply(pkg_Control_Monad_ST_Uncurried.Get_runSTFn2(), Get_pushImpl())
 	})
-	return cache_push__gopurs_runtime_Value_2223234226
+	return cache_push__gopurs_runtime_Value_1172178897
 }
 
 var cache_pop gopurs_runtime.Value
@@ -270,13 +279,13 @@ func Get_poke() gopurs_runtime.Value {
 	return cache_poke
 }
 
-var cache_poke__gopurs_runtime_Value_2144247274 gopurs_runtime.Value
-var once_poke__gopurs_runtime_Value_2144247274 sync.Once
-func Get_poke__gopurs_runtime_Value_2144247274() gopurs_runtime.Value {
-	once_poke__gopurs_runtime_Value_2144247274.Do(func() {
-		cache_poke__gopurs_runtime_Value_2144247274 = gopurs_runtime.Apply(pkg_Control_Monad_ST_Uncurried.Get_runSTFn3(), Get_pokeImpl())
+var cache_poke__gopurs_runtime_Value_456863914 gopurs_runtime.Value
+var once_poke__gopurs_runtime_Value_456863914 sync.Once
+func Get_poke__gopurs_runtime_Value_456863914() gopurs_runtime.Value {
+	once_poke__gopurs_runtime_Value_456863914.Do(func() {
+		cache_poke__gopurs_runtime_Value_456863914 = gopurs_runtime.Apply(pkg_Control_Monad_ST_Uncurried.Get_runSTFn3(), Get_pokeImpl())
 	})
-	return cache_poke__gopurs_runtime_Value_2144247274
+	return cache_poke__gopurs_runtime_Value_456863914
 }
 
 var cache_peek gopurs_runtime.Value
@@ -286,6 +295,15 @@ func Get_peek() gopurs_runtime.Value {
 		cache_peek = gopurs_runtime.Apply3(pkg_Control_Monad_ST_Uncurried.Get_runSTFn4(), Get_peekImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil})
 	})
 	return cache_peek
+}
+
+var cache_new gopurs_runtime.Value
+var once_new sync.Once
+func Get_new() gopurs_runtime.Value {
+	once_new.Do(func() {
+		cache_new = Get_newImpl()
+	})
+	return cache_new
 }
 
 var cache_modify gopurs_runtime.Value
@@ -299,15 +317,15 @@ return Call_modify(i_0_box.IntVal, f_1_box, xs_2_box)
 	return cache_modify
 }
 
-var cache_modify__gopurs_runtime_Value_3704614031 gopurs_runtime.Value
-var once_modify__gopurs_runtime_Value_3704614031 sync.Once
-func Get_modify__gopurs_runtime_Value_3704614031() gopurs_runtime.Value {
-	once_modify__gopurs_runtime_Value_3704614031.Do(func() {
-		cache_modify__gopurs_runtime_Value_3704614031 = gopurs_runtime.Func3(func(i_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, xs_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_modify__gopurs_runtime_Value_3704614031(i_0_box.IntVal, f_1_box, xs_2_box)
+var cache_modify__gopurs_runtime_Value_1232800738 gopurs_runtime.Value
+var once_modify__gopurs_runtime_Value_1232800738 sync.Once
+func Get_modify__gopurs_runtime_Value_1232800738() gopurs_runtime.Value {
+	once_modify__gopurs_runtime_Value_1232800738.Do(func() {
+		cache_modify__gopurs_runtime_Value_1232800738 = gopurs_runtime.Func3(func(i_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, xs_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_modify__gopurs_runtime_Value_1232800738(i_0_box.IntVal, f_1_box, xs_2_box)
 })
 	})
-	return cache_modify__gopurs_runtime_Value_3704614031
+	return cache_modify__gopurs_runtime_Value_1232800738
 }
 
 var cache_length gopurs_runtime.Value
@@ -359,7 +377,7 @@ return gopurs_runtime.UncurriedApp(Get_unsafeFreezeImpl(), result_2)
 }))
 }
 
-func Call_withArray__gopurs_runtime_Value_2856329898(f_0_loop gopurs_runtime.Value, xs_1_loop []gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_withArray__gopurs_runtime_Value_2510843373(f_0_loop gopurs_runtime.Value, xs_1_loop []gopurs_runtime.Value) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var xs_1 []gopurs_runtime.Value = xs_1_loop
@@ -412,7 +430,7 @@ return __t0
 }))
 }
 
-func Call_sortBy__gopurs_runtime_Value_2740821710(comp_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_sortBy__gopurs_runtime_Value_1404141898(comp_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var comp_0 gopurs_runtime.Value = comp_0_loop
 _ = comp_0
 return gopurs_runtime.Apply3(pkg_Control_Monad_ST_Uncurried.Get_runSTFn3(), Get_sortByImpl(), comp_0, gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -476,7 +494,7 @@ return func() []gopurs_runtime.Value {
 				}()
 }
 
-func Call_run__gopurs_runtime_Value_1582179099(st_0_loop gopurs_runtime.Value) []gopurs_runtime.Value {
+func Call_run__gopurs_runtime_Value_3308047835(st_0_loop gopurs_runtime.Value) []gopurs_runtime.Value {
 var st_0 gopurs_runtime.Value = st_0_loop
 _ = st_0
 return func() []gopurs_runtime.Value {
@@ -526,7 +544,7 @@ return __t0
 }))
 }
 
-func Call_modify__gopurs_runtime_Value_3704614031(i_0_loop int64, f_1_loop gopurs_runtime.Value, xs_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_modify__gopurs_runtime_Value_1232800738(i_0_loop int64, f_1_loop gopurs_runtime.Value, xs_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var i_0 int64 = i_0_loop
 _ = i_0
 var f_1 gopurs_runtime.Value = f_1_loop
@@ -577,8 +595,8 @@ func Get_lengthImpl() gopurs_runtime.Value {
 	return _Gopurs_LengthImpl
 }
 
-func Get_new_() gopurs_runtime.Value {
-	return _Gopurs_New_
+func Get_newImpl() gopurs_runtime.Value {
+	return _Gopurs_NewImpl
 }
 
 func Get_peekImpl() gopurs_runtime.Value {

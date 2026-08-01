@@ -95,7 +95,10 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Unsafe_Coerce = \call_user_func(function() {
   $exports = [];
-$unsafeCoerce = function($x) { return $x; };
+$unsafeCoerce = function($x) use (&$unsafeCoerce) {
+  $__num = \func_num_args();
+  return 1 < $__num ? $x(...\array_slice(\func_get_args(), 1)) : $x;
+};
 
 $exports['unsafeCoerce'] = $unsafeCoerce;
 return $exports;
@@ -108,7 +111,7 @@ function majUnsafe_majCoerce_unsafemajCoerce($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Unsafe_Coerce;
-  $f = ($ffi_Unsafe_Coerce['unsafeCoerce'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('unsafeCoerce', $ffi_Unsafe_Coerce) ? $ffi_Unsafe_Coerce['unsafeCoerce'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Unsafe_Coerce_unsafeCoerce'] = __NAMESPACE__ . '\\majUnsafe_majCoerce_unsafemajCoerce';

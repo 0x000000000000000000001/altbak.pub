@@ -401,12 +401,12 @@ function majData_majMap_majInternal_stepmajWith($f_0, $next_1 = null, $done_2 = 
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $go__3_0 = null;
-  $go__3_0 = function($v_4) use ($done_2, $f_0, &$go__3_0, $next_1) {
+  $go__go_3_0 = null;
+  $go__go_3_0 = function($v_4) use ($done_2, $f_0, &$go__go_3_0, $next_1) {
   $__num = \func_num_args();
-  $__tco_var_go__3_0_0_v_4 = $v_4;
-  tco_loop_go__3_0_0:;
-  $v_4 = $__tco_var_go__3_0_0_v_4;
+  $__tco_var_go__go_3_0_0_v_4 = $v_4;
+  tco_loop_go__go_3_0_0:;
+  $v_4 = $__tco_var_go__go_3_0_0_v_4;
   $__t0 = null;;
   if ($v_4 instanceof \Data\Map\Internal\Data_Map_Internal_IterLeaf) {
 $__t0 = ($done_2)($GLOBALS['Data_Unit_unit']);
@@ -418,8 +418,8 @@ goto end_branch_0;;
 };
   if ($v_4 instanceof \Data\Map\Internal\Data_Map_Internal_IterNode) {
 $__tco_1 = (($f_0)(($v_4)->{'value1'}))(($v_4)->{'value0'});
-$__tco_var_go__3_0_0_v_4 = $__tco_1;
-goto tco_loop_go__3_0_0;;
+$__tco_var_go__go_3_0_0_v_4 = $__tco_1;
+goto tco_loop_go__go_3_0_0;;
 $__t0 = null;
 goto end_branch_0;;
 };
@@ -431,7 +431,7 @@ goto end_branch_0;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go__3_0;
+  $__res = $go__go_3_0;
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -943,8 +943,8 @@ function majData_majMap_majInternal_update($dictOrd_0, $f_1 = null, $k_2 = null)
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $go__3_0 = null;
-  $go__3_0 = function($v_4) use ($dictOrd_0, $f_1, &$go__3_0, $k_2) {
+  $go__go_3_0 = null;
+  $go__go_3_0 = function($v_4) use ($dictOrd_0, $f_1, &$go__go_3_0, $k_2) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ($v_4 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
@@ -955,11 +955,11 @@ goto end_branch_1;;
 $v1_5_2 = ((($dictOrd_0)->{'compare'})($k_2))(($v_4)->{'value2'});
 $__t3 = null;;
 if ($v1_5_2 instanceof \Data\Ordering\Data_Ordering_LT) {
-$__t3 = ($GLOBALS['Data_Map_Internal_unsafeBalancedNode'])(($v_4)->{'value2'}, ($v_4)->{'value3'}, ($go__3_0)(($v_4)->{'value4'}), ($v_4)->{'value5'});
+$__t3 = ($GLOBALS['Data_Map_Internal_unsafeBalancedNode'])(($v_4)->{'value2'}, ($v_4)->{'value3'}, ($go__go_3_0)(($v_4)->{'value4'}), ($v_4)->{'value5'});
 goto end_branch_3;;
 };
 if ($v1_5_2 instanceof \Data\Ordering\Data_Ordering_GT) {
-$__t3 = ($GLOBALS['Data_Map_Internal_unsafeBalancedNode'])(($v_4)->{'value2'}, ($v_4)->{'value3'}, ($v_4)->{'value4'}, ($go__3_0)(($v_4)->{'value5'}));
+$__t3 = ($GLOBALS['Data_Map_Internal_unsafeBalancedNode'])(($v_4)->{'value2'}, ($v_4)->{'value3'}, ($v_4)->{'value4'}, ($go__go_3_0)(($v_4)->{'value5'}));
 goto end_branch_3;;
 };
 if ($v1_5_2 instanceof \Data\Ordering\Data_Ordering_EQ) {
@@ -993,7 +993,7 @@ goto end_branch_1;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go__3_0;
+  $__res = $go__go_3_0;
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1007,9 +1007,9 @@ function majData_majMap_majInternal_showmajTree($dictShow_0, $dictShow1_1 = null
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go__2_0 = null;
-  $go__2_0 = (function() use ($dictShow1_1, $dictShow_0, &$go__2_0) {
-  $__fn = function($ind_3, $v_4 = null) use ($dictShow1_1, $dictShow_0, &$go__2_0, &$__fn) {
+  $go__go_2_0 = null;
+  $go__go_2_0 = (function() use ($dictShow1_1, $dictShow_0, &$go__go_2_0) {
+  $__fn = function($ind_3, $v_4 = null) use ($dictShow1_1, $dictShow_0, &$go__go_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
@@ -1021,8 +1021,8 @@ goto end_branch_1;;
 };
   if ($v_4 instanceof \Data\Map\Internal\Data_Map_Internal_Node) {
 $__t1 = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})($ind_3))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("["))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($GLOBALS['Data_Show_showInt'])->{'show'})(($v_4)->{'value0'})))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("] "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_0)->{'show'})(($v_4)->{'value2'})))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(" => "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow1_1)->{'show'})(($v_4)->{'value3'})))("
-")))))))))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($go__2_0)(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})($ind_3))("    ")))(($v_4)->{'value4'})))("
-")))((($go__2_0)(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})($ind_3))("    ")))(($v_4)->{'value5'})));
+")))))))))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($go__go_2_0)(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})($ind_3))("    ")))(($v_4)->{'value4'})))("
+")))((($go__go_2_0)(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})($ind_3))("    ")))(($v_4)->{'value5'})));
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -1035,7 +1035,7 @@ goto end_branch_1;;
   };
   return $__fn;
 })();
-  $__res = ($go__2_0)("");
+  $__res = ($go__go_2_0)("");
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1119,12 +1119,12 @@ function majData_majMap_majInternal_member($dictOrd_0, $k_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go__2_0 = null;
-  $go__2_0 = function($v_3) use ($dictOrd_0, &$go__2_0, $k_1) {
+  $go__go_2_0 = null;
+  $go__go_2_0 = function($v_3) use ($dictOrd_0, &$go__go_2_0, $k_1) {
   $__num = \func_num_args();
-  $__tco_var_go__2_0_0_v_3 = $v_3;
-  tco_loop_go__2_0_0:;
-  $v_3 = $__tco_var_go__2_0_0_v_3;
+  $__tco_var_go__go_2_0_0_v_3 = $v_3;
+  tco_loop_go__go_2_0_0:;
+  $v_3 = $__tco_var_go__go_2_0_0_v_3;
   $__t0 = null;;
   if ($v_3 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
 $__t0 = false;
@@ -1135,15 +1135,15 @@ $v1_4_1 = ((($dictOrd_0)->{'compare'})($k_1))(($v_3)->{'value2'});
 $__t2 = null;;
 if ($v1_4_1 instanceof \Data\Ordering\Data_Ordering_LT) {
 $__tco_3 = ($v_3)->{'value4'};
-$__tco_var_go__2_0_0_v_3 = $__tco_3;
-goto tco_loop_go__2_0_0;;
+$__tco_var_go__go_2_0_0_v_3 = $__tco_3;
+goto tco_loop_go__go_2_0_0;;
 $__t2 = null;
 goto end_branch_2;;
 };
 if ($v1_4_1 instanceof \Data\Ordering\Data_Ordering_GT) {
 $__tco_4 = ($v_3)->{'value5'};
-$__tco_var_go__2_0_0_v_3 = $__tco_4;
-goto tco_loop_go__2_0_0;;
+$__tco_var_go__go_2_0_0_v_3 = $__tco_4;
+goto tco_loop_go__go_2_0_0;;
 $__t2 = null;
 goto end_branch_2;;
 };
@@ -1165,7 +1165,7 @@ goto end_branch_0;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go__2_0;
+  $__res = $go__go_2_0;
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1179,8 +1179,8 @@ function majData_majMap_majInternal_mapmajMaybemajWithmajKey($dictOrd_0, $f_1 = 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go__2_0 = null;
-  $go__2_0 = function($v_3) use ($f_1, &$go__2_0) {
+  $go__go_2_0 = null;
+  $go__go_2_0 = function($v_3) use ($f_1, &$go__go_2_0) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ($v_3 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
@@ -1191,11 +1191,11 @@ goto end_branch_1;;
 $v2_4_2 = (($f_1)(($v_3)->{'value2'}))(($v_3)->{'value3'});
 $__t3 = null;;
 if ($v2_4_2 instanceof \Data\Maybe\Data_Maybe_Just) {
-$__t3 = ($GLOBALS['Data_Map_Internal_unsafeBalancedNode'])(($v_3)->{'value2'}, ($v2_4_2)->{'value0'}, ($go__2_0)(($v_3)->{'value4'}), ($go__2_0)(($v_3)->{'value5'}));
+$__t3 = ($GLOBALS['Data_Map_Internal_unsafeBalancedNode'])(($v_3)->{'value2'}, ($v2_4_2)->{'value0'}, ($go__go_2_0)(($v_3)->{'value4'}), ($go__go_2_0)(($v_3)->{'value5'}));
 goto end_branch_3;;
 };
 if ($v2_4_2 instanceof \Data\Maybe\Data_Maybe_Nothing) {
-$__t3 = ($GLOBALS['Data_Map_Internal_unsafeJoinNodes'])(($go__2_0)(($v_3)->{'value4'}), ($go__2_0)(($v_3)->{'value5'}));
+$__t3 = ($GLOBALS['Data_Map_Internal_unsafeJoinNodes'])(($go__go_2_0)(($v_3)->{'value4'}), ($go__go_2_0)(($v_3)->{'value5'}));
 goto end_branch_3;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -1212,7 +1212,7 @@ goto end_branch_1;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go__2_0;
+  $__res = $go__go_2_0;
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1240,8 +1240,8 @@ function majData_majMap_majInternal_lookupmajLmajE($dictOrd_0, $k_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go__2_0 = null;
-  $go__2_0 = function($v_3) use ($dictOrd_0, &$go__2_0, $k_1) {
+  $go__go_2_0 = null;
+  $go__go_2_0 = function($v_3) use ($dictOrd_0, &$go__go_2_0, $k_1) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ($v_3 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
@@ -1252,11 +1252,11 @@ goto end_branch_1;;
 $v1_4_2 = ((($dictOrd_0)->{'compare'})($k_1))(($v_3)->{'value2'});
 $__t3 = null;;
 if ($v1_4_2 instanceof \Data\Ordering\Data_Ordering_LT) {
-$__t3 = ($go__2_0)(($v_3)->{'value4'});
+$__t3 = ($go__go_2_0)(($v_3)->{'value4'});
 goto end_branch_3;;
 };
 if ($v1_4_2 instanceof \Data\Ordering\Data_Ordering_GT) {
-$v2_5_4 = ($go__2_0)(($v_3)->{'value5'});
+$v2_5_4 = ($go__go_2_0)(($v_3)->{'value5'});
 $__t5 = null;;
 if ($v2_5_4 instanceof \Data\Maybe\Data_Maybe_Nothing) {
 $__t5 = new \Data\Maybe\Data_Maybe_Just((object)["key" => ($v_3)->{'value2'}, "value" => ($v_3)->{'value3'}]);
@@ -1285,7 +1285,7 @@ goto end_branch_1;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go__2_0;
+  $__res = $go__go_2_0;
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1299,8 +1299,8 @@ function majData_majMap_majInternal_lookupmajGmajE($dictOrd_0, $k_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go__2_0 = null;
-  $go__2_0 = function($v_3) use ($dictOrd_0, &$go__2_0, $k_1) {
+  $go__go_2_0 = null;
+  $go__go_2_0 = function($v_3) use ($dictOrd_0, &$go__go_2_0, $k_1) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ($v_3 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
@@ -1311,7 +1311,7 @@ goto end_branch_1;;
 $v1_4_2 = ((($dictOrd_0)->{'compare'})($k_1))(($v_3)->{'value2'});
 $__t3 = null;;
 if ($v1_4_2 instanceof \Data\Ordering\Data_Ordering_LT) {
-$v2_5_4 = ($go__2_0)(($v_3)->{'value4'});
+$v2_5_4 = ($go__go_2_0)(($v_3)->{'value4'});
 $__t5 = null;;
 if ($v2_5_4 instanceof \Data\Maybe\Data_Maybe_Nothing) {
 $__t5 = new \Data\Maybe\Data_Maybe_Just((object)["key" => ($v_3)->{'value2'}, "value" => ($v_3)->{'value3'}]);
@@ -1323,7 +1323,7 @@ $__t3 = $__t5;
 goto end_branch_3;;
 };
 if ($v1_4_2 instanceof \Data\Ordering\Data_Ordering_GT) {
-$__t3 = ($go__2_0)(($v_3)->{'value5'});
+$__t3 = ($go__go_2_0)(($v_3)->{'value5'});
 goto end_branch_3;;
 };
 if ($v1_4_2 instanceof \Data\Ordering\Data_Ordering_EQ) {
@@ -1344,7 +1344,7 @@ goto end_branch_1;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go__2_0;
+  $__res = $go__go_2_0;
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1358,12 +1358,12 @@ function majData_majMap_majInternal_lookup($dictOrd_0, $k_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go__2_0 = null;
-  $go__2_0 = function($v_3) use ($dictOrd_0, &$go__2_0, $k_1) {
+  $go__go_2_0 = null;
+  $go__go_2_0 = function($v_3) use ($dictOrd_0, &$go__go_2_0, $k_1) {
   $__num = \func_num_args();
-  $__tco_var_go__2_0_0_v_3 = $v_3;
-  tco_loop_go__2_0_0:;
-  $v_3 = $__tco_var_go__2_0_0_v_3;
+  $__tco_var_go__go_2_0_0_v_3 = $v_3;
+  tco_loop_go__go_2_0_0:;
+  $v_3 = $__tco_var_go__go_2_0_0_v_3;
   $__t0 = null;;
   if ($v_3 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
 $__t0 = new \Data\Maybe\Data_Maybe_Nothing();
@@ -1374,15 +1374,15 @@ $v1_4_1 = ((($dictOrd_0)->{'compare'})($k_1))(($v_3)->{'value2'});
 $__t2 = null;;
 if ($v1_4_1 instanceof \Data\Ordering\Data_Ordering_LT) {
 $__tco_3 = ($v_3)->{'value4'};
-$__tco_var_go__2_0_0_v_3 = $__tco_3;
-goto tco_loop_go__2_0_0;;
+$__tco_var_go__go_2_0_0_v_3 = $__tco_3;
+goto tco_loop_go__go_2_0_0;;
 $__t2 = null;
 goto end_branch_2;;
 };
 if ($v1_4_1 instanceof \Data\Ordering\Data_Ordering_GT) {
 $__tco_4 = ($v_3)->{'value5'};
-$__tco_var_go__2_0_0_v_3 = $__tco_4;
-goto tco_loop_go__2_0_0;;
+$__tco_var_go__go_2_0_0_v_3 = $__tco_4;
+goto tco_loop_go__go_2_0_0;;
 $__t2 = null;
 goto end_branch_2;;
 };
@@ -1404,7 +1404,7 @@ goto end_branch_0;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go__2_0;
+  $__res = $go__go_2_0;
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1558,18 +1558,18 @@ $GLOBALS['Data_Map_Internal_stepUnordered'] = __NAMESPACE__ . '\\majData_majMap_
 
 // Data_Map_Internal_iterMapR_closure
 $GLOBALS['Data_Map_Internal_iterMapR_closure'] = (function() use (&$__fn) {
-$go__0_0 = null;
-$go__0_0 = (function() use (&$go__0_0) {
-  $__fn = function($iter_1, $v_2 = null) use (&$go__0_0, &$__fn) {
+$go__go_0_0 = null;
+$go__go_0_0 = (function() use (&$go__go_0_0) {
+  $__fn = function($iter_1, $v_2 = null) use (&$go__go_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_go__0_0_0_iter_1 = $iter_1;
-  $__tco_var_go__0_0_0_v_2 = $v_2;
-  tco_loop_go__0_0_0:;
-  $iter_1 = $__tco_var_go__0_0_0_iter_1;
-  $v_2 = $__tco_var_go__0_0_0_v_2;
+  $__tco_var_go__go_0_0_0_iter_1 = $iter_1;
+  $__tco_var_go__go_0_0_0_v_2 = $v_2;
+  tco_loop_go__go_0_0_0:;
+  $iter_1 = $__tco_var_go__go_0_0_0_iter_1;
+  $v_2 = $__tco_var_go__go_0_0_0_v_2;
   $__t0 = null;;
   if ($v_2 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
 $__t0 = $iter_1;
@@ -1580,17 +1580,17 @@ $__t3 = null;;
 if (($v_2)->{'value5'} instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
 $__tco_4 = new \Data\Map\Internal\Data_Map_Internal_IterEmit(($v_2)->{'value2'}, ($v_2)->{'value3'}, $iter_1);
 $__tco_5 = ($v_2)->{'value4'};
-$__tco_var_go__0_0_0_iter_1 = $__tco_4;
-$__tco_var_go__0_0_0_v_2 = $__tco_5;
-goto tco_loop_go__0_0_0;;
+$__tco_var_go__go_0_0_0_iter_1 = $__tco_4;
+$__tco_var_go__go_0_0_0_v_2 = $__tco_5;
+goto tco_loop_go__go_0_0_0;;
 $__t3 = null;
 goto end_branch_3;;
 };
 $__tco_1 = new \Data\Map\Internal\Data_Map_Internal_IterEmit(($v_2)->{'value2'}, ($v_2)->{'value3'}, new \Data\Map\Internal\Data_Map_Internal_IterNode(($v_2)->{'value4'}, $iter_1));
 $__tco_2 = ($v_2)->{'value5'};
-$__tco_var_go__0_0_0_iter_1 = $__tco_1;
-$__tco_var_go__0_0_0_v_2 = $__tco_2;
-goto tco_loop_go__0_0_0;;
+$__tco_var_go__go_0_0_0_iter_1 = $__tco_1;
+$__tco_var_go__go_0_0_0_v_2 = $__tco_2;
+goto tco_loop_go__go_0_0_0;;
 $__t3 = null;
 end_branch_3:;
 $__t0 = $__t3;
@@ -1606,7 +1606,7 @@ goto end_branch_0;;
   };
   return $__fn;
 })();
-return $go__0_0;
+return $go__go_0_0;
 })();
 
 // Data_Map_Internal_iterMapR
@@ -1677,18 +1677,18 @@ $GLOBALS['Data_Map_Internal_stepDesc'] = __NAMESPACE__ . '\\majData_majMap_majIn
 
 // Data_Map_Internal_iterMapL_closure
 $GLOBALS['Data_Map_Internal_iterMapL_closure'] = (function() use (&$__fn) {
-$go__0_0 = null;
-$go__0_0 = (function() use (&$go__0_0) {
-  $__fn = function($iter_1, $v_2 = null) use (&$go__0_0, &$__fn) {
+$go__go_0_0 = null;
+$go__go_0_0 = (function() use (&$go__go_0_0) {
+  $__fn = function($iter_1, $v_2 = null) use (&$go__go_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_go__0_0_0_iter_1 = $iter_1;
-  $__tco_var_go__0_0_0_v_2 = $v_2;
-  tco_loop_go__0_0_0:;
-  $iter_1 = $__tco_var_go__0_0_0_iter_1;
-  $v_2 = $__tco_var_go__0_0_0_v_2;
+  $__tco_var_go__go_0_0_0_iter_1 = $iter_1;
+  $__tco_var_go__go_0_0_0_v_2 = $v_2;
+  tco_loop_go__go_0_0_0:;
+  $iter_1 = $__tco_var_go__go_0_0_0_iter_1;
+  $v_2 = $__tco_var_go__go_0_0_0_v_2;
   $__t0 = null;;
   if ($v_2 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
 $__t0 = $iter_1;
@@ -1699,17 +1699,17 @@ $__t3 = null;;
 if (($v_2)->{'value5'} instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
 $__tco_4 = new \Data\Map\Internal\Data_Map_Internal_IterEmit(($v_2)->{'value2'}, ($v_2)->{'value3'}, $iter_1);
 $__tco_5 = ($v_2)->{'value4'};
-$__tco_var_go__0_0_0_iter_1 = $__tco_4;
-$__tco_var_go__0_0_0_v_2 = $__tco_5;
-goto tco_loop_go__0_0_0;;
+$__tco_var_go__go_0_0_0_iter_1 = $__tco_4;
+$__tco_var_go__go_0_0_0_v_2 = $__tco_5;
+goto tco_loop_go__go_0_0_0;;
 $__t3 = null;
 goto end_branch_3;;
 };
 $__tco_1 = new \Data\Map\Internal\Data_Map_Internal_IterEmit(($v_2)->{'value2'}, ($v_2)->{'value3'}, new \Data\Map\Internal\Data_Map_Internal_IterNode(($v_2)->{'value5'}, $iter_1));
 $__tco_2 = ($v_2)->{'value4'};
-$__tco_var_go__0_0_0_iter_1 = $__tco_1;
-$__tco_var_go__0_0_0_v_2 = $__tco_2;
-goto tco_loop_go__0_0_0;;
+$__tco_var_go__go_0_0_0_iter_1 = $__tco_1;
+$__tco_var_go__go_0_0_0_v_2 = $__tco_2;
+goto tco_loop_go__go_0_0_0;;
 $__t3 = null;
 end_branch_3:;
 $__t0 = $__t3;
@@ -1725,7 +1725,7 @@ goto end_branch_0;;
   };
   return $__fn;
 })();
-return $go__0_0;
+return $go__go_0_0;
 })();
 
 // Data_Map_Internal_iterMapL
@@ -1801,9 +1801,9 @@ function majData_majMap_majInternal_eqmajMapmajIter($dictEq_0, $dictEq1_1 = null
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go__2_0 = null;
-  $go__2_0 = (function() use ($dictEq1_1, $dictEq_0, &$go__2_0) {
-  $__fn = function($a_3, $b_4 = null) use ($dictEq1_1, $dictEq_0, &$go__2_0, &$__fn) {
+  $go__go_2_0 = null;
+  $go__go_2_0 = (function() use ($dictEq1_1, $dictEq_0, &$go__go_2_0) {
+  $__fn = function($a_3, $b_4 = null) use ($dictEq1_1, $dictEq_0, &$go__go_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
@@ -1812,7 +1812,7 @@ function majData_majMap_majInternal_eqmajMapmajIter($dictEq_0, $dictEq1_1 = null
   $__t2 = null;;
   if ($v_5_1 instanceof \Data\Map\Internal\Data_Map_Internal_IterNext) {
 $v2_6_3 = \Data\Map\Internal\majData_majMap_majInternal_stepmajAsc($b_4);
-$__t2 = ($v2_6_3 instanceof \Data\Map\Internal\Data_Map_Internal_IterNext && (((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($dictEq_0)->{'eq'})(($v_5_1)->{'value0'}))(($v2_6_3)->{'value0'})))(((($dictEq1_1)->{'eq'})(($v_5_1)->{'value1'}))(($v2_6_3)->{'value1'})) && (($go__2_0)(($v_5_1)->{'value2'}))(($v2_6_3)->{'value2'})));
+$__t2 = ($v2_6_3 instanceof \Data\Map\Internal\Data_Map_Internal_IterNext && (((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($dictEq_0)->{'eq'})(($v_5_1)->{'value0'}))(($v2_6_3)->{'value0'})))(((($dictEq1_1)->{'eq'})(($v_5_1)->{'value1'}))(($v2_6_3)->{'value1'})) && (($go__go_2_0)(($v_5_1)->{'value2'}))(($v2_6_3)->{'value2'})));
 goto end_branch_2;;
 };
   if ($v_5_1 instanceof \Data\Map\Internal\Data_Map_Internal_IterDone) {
@@ -1829,7 +1829,7 @@ goto end_branch_2;;
   };
   return $__fn;
 })();
-  $__res = (object)["eq" => $go__2_0];
+  $__res = (object)["eq" => $go__go_2_0];
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1847,18 +1847,18 @@ function majData_majMap_majInternal_ordmajMapmajIter($dictOrd_0) {
   $__res = function($dictOrd1_2) use ($dictOrd_0, $eqMapIter1_1_0) {
   $__num = \func_num_args();
   $eqMapIter2_3_1 = ($eqMapIter1_1_0)((($dictOrd1_2)->{'Eq0'})(null));
-  $go__4_2 = null;
-  $go__4_2 = (function() use ($dictOrd1_2, $dictOrd_0, &$go__4_2) {
-  $__fn = function($a_5, $b_6 = null) use ($dictOrd1_2, $dictOrd_0, &$go__4_2, &$__fn) {
+  $go__go_4_2 = null;
+  $go__go_4_2 = (function() use ($dictOrd1_2, $dictOrd_0, &$go__go_4_2) {
+  $__fn = function($a_5, $b_6 = null) use ($dictOrd1_2, $dictOrd_0, &$go__go_4_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_go__4_2_2_a_5 = $a_5;
-  $__tco_var_go__4_2_2_b_6 = $b_6;
-  tco_loop_go__4_2_2:;
-  $a_5 = $__tco_var_go__4_2_2_a_5;
-  $b_6 = $__tco_var_go__4_2_2_b_6;
+  $__tco_var_go__go_4_2_2_a_5 = $a_5;
+  $__tco_var_go__go_4_2_2_b_6 = $b_6;
+  tco_loop_go__go_4_2_2:;
+  $a_5 = $__tco_var_go__go_4_2_2_a_5;
+  $b_6 = $__tco_var_go__go_4_2_2_b_6;
   $v_7_2 = \Data\Map\Internal\majData_majMap_majInternal_stepmajAsc($b_6);
   $v1_8_3 = \Data\Map\Internal\majData_majMap_majInternal_stepmajAsc($a_5);
   $__t4 = null;;
@@ -1873,9 +1873,9 @@ $__t9 = null;;
 if ($v4_10_8 instanceof \Data\Ordering\Data_Ordering_EQ) {
 $__tco_10 = ($v1_8_3)->{'value2'};
 $__tco_11 = ($v_7_2)->{'value2'};
-$__tco_var_go__4_2_2_a_5 = $__tco_10;
-$__tco_var_go__4_2_2_b_6 = $__tco_11;
-goto tco_loop_go__4_2_2;;
+$__tco_var_go__go_4_2_2_a_5 = $__tco_10;
+$__tco_var_go__go_4_2_2_b_6 = $__tco_11;
+goto tco_loop_go__go_4_2_2;;
 $__t9 = null;
 goto end_branch_9;;
 };
@@ -1924,7 +1924,7 @@ goto end_branch_4;;
   };
   return $__fn;
 })();
-  $__res = (object)["compare" => $go__4_2, "Eq0" => function($_dollar__unused_4) use ($eqMapIter2_3_1) {
+  $__res = (object)["compare" => $go__go_4_2, "Eq0" => function($_dollar__unused_4) use ($eqMapIter2_3_1) {
   $__num = \func_num_args();
   $__res = $eqMapIter2_3_1;
   goto __end;;
@@ -2021,9 +2021,9 @@ function majData_majMap_majInternal_ismajSubmap($dictOrd_0, $dictEq_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go__2_0 = null;
-  $go__2_0 = (function() use ($dictEq_1, $dictOrd_0, &$go__2_0) {
-  $__fn = function($m1_3, $m2_4 = null) use ($dictEq_1, $dictOrd_0, &$go__2_0, &$__fn) {
+  $go__go_2_0 = null;
+  $go__go_2_0 = (function() use ($dictEq_1, $dictOrd_0, &$go__go_2_0) {
+  $__fn = function($m1_3, $m2_4 = null) use ($dictEq_1, $dictOrd_0, &$go__go_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
@@ -2035,12 +2035,12 @@ goto end_branch_1;;
 };
   if ($m1_3 instanceof \Data\Map\Internal\Data_Map_Internal_Node) {
 $__local_var_5_2 = ($m1_3)->{'value2'};
-$go__6_3 = null;
-$go__6_3 = function($v_7) use ($__local_var_5_2, $dictOrd_0, &$go__6_3) {
+$go__go_6_3 = null;
+$go__go_6_3 = function($v_7) use ($__local_var_5_2, $dictOrd_0, &$go__go_6_3) {
   $__num = \func_num_args();
-  $__tco_var_go__6_3_3_v_7 = $v_7;
-  tco_loop_go__6_3_3:;
-  $v_7 = $__tco_var_go__6_3_3_v_7;
+  $__tco_var_go__go_6_3_3_v_7 = $v_7;
+  tco_loop_go__go_6_3_3:;
+  $v_7 = $__tco_var_go__go_6_3_3_v_7;
   $__t3 = null;;
   if ($v_7 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
 $__t3 = new \Data\Maybe\Data_Maybe_Nothing();
@@ -2051,15 +2051,15 @@ $v1_8_4 = ((($dictOrd_0)->{'compare'})($__local_var_5_2))(($v_7)->{'value2'});
 $__t5 = null;;
 if ($v1_8_4 instanceof \Data\Ordering\Data_Ordering_LT) {
 $__tco_6 = ($v_7)->{'value4'};
-$__tco_var_go__6_3_3_v_7 = $__tco_6;
-goto tco_loop_go__6_3_3;;
+$__tco_var_go__go_6_3_3_v_7 = $__tco_6;
+goto tco_loop_go__go_6_3_3;;
 $__t5 = null;
 goto end_branch_5;;
 };
 if ($v1_8_4 instanceof \Data\Ordering\Data_Ordering_GT) {
 $__tco_7 = ($v_7)->{'value5'};
-$__tco_var_go__6_3_3_v_7 = $__tco_7;
-goto tco_loop_go__6_3_3;;
+$__tco_var_go__go_6_3_3_v_7 = $__tco_7;
+goto tco_loop_go__go_6_3_3;;
 $__t5 = null;
 goto end_branch_5;;
 };
@@ -2081,14 +2081,14 @@ goto end_branch_3;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-$v1_7_4 = ($go__6_3)($m2_4);
+$v1_7_4 = ($go__go_6_3)($m2_4);
 $__t5 = null;;
 if ($v1_7_4 instanceof \Data\Maybe\Data_Maybe_Nothing) {
 $__t5 = false;
 goto end_branch_5;;
 };
 if ($v1_7_4 instanceof \Data\Maybe\Data_Maybe_Just) {
-$__t5 = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($dictEq_1)->{'eq'})(($m1_3)->{'value3'}))(($v1_7_4)->{'value0'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})((($go__2_0)(($m1_3)->{'value4'}))($m2_4)))((($go__2_0)(($m1_3)->{'value5'}))($m2_4)));
+$__t5 = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($dictEq_1)->{'eq'})(($m1_3)->{'value3'}))(($v1_7_4)->{'value0'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})((($go__go_2_0)(($m1_3)->{'value4'}))($m2_4)))((($go__go_2_0)(($m1_3)->{'value5'}))($m2_4)));
 goto end_branch_5;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -2107,7 +2107,7 @@ goto end_branch_1;;
   };
   return $__fn;
 })();
-  $__res = $go__2_0;
+  $__res = $go__go_2_0;
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -2189,8 +2189,8 @@ function majData_majMap_majInternal_insertmajWith($dictOrd_0, $app_1 = null, $k_
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $go__4_0 = null;
-  $go__4_0 = function($v1_5) use ($app_1, $dictOrd_0, &$go__4_0, $k_2, $v_3) {
+  $go__go_4_0 = null;
+  $go__go_4_0 = function($v1_5) use ($app_1, $dictOrd_0, &$go__go_4_0, $k_2, $v_3) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ($v1_5 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
@@ -2201,11 +2201,11 @@ goto end_branch_1;;
 $v2_6_2 = ((($dictOrd_0)->{'compare'})($k_2))(($v1_5)->{'value2'});
 $__t3 = null;;
 if ($v2_6_2 instanceof \Data\Ordering\Data_Ordering_LT) {
-$__t3 = ($GLOBALS['Data_Map_Internal_unsafeBalancedNode'])(($v1_5)->{'value2'}, ($v1_5)->{'value3'}, ($go__4_0)(($v1_5)->{'value4'}), ($v1_5)->{'value5'});
+$__t3 = ($GLOBALS['Data_Map_Internal_unsafeBalancedNode'])(($v1_5)->{'value2'}, ($v1_5)->{'value3'}, ($go__go_4_0)(($v1_5)->{'value4'}), ($v1_5)->{'value5'});
 goto end_branch_3;;
 };
 if ($v2_6_2 instanceof \Data\Ordering\Data_Ordering_GT) {
-$__t3 = ($GLOBALS['Data_Map_Internal_unsafeBalancedNode'])(($v1_5)->{'value2'}, ($v1_5)->{'value3'}, ($v1_5)->{'value4'}, ($go__4_0)(($v1_5)->{'value5'}));
+$__t3 = ($GLOBALS['Data_Map_Internal_unsafeBalancedNode'])(($v1_5)->{'value2'}, ($v1_5)->{'value3'}, ($v1_5)->{'value4'}, ($go__go_4_0)(($v1_5)->{'value5'}));
 goto end_branch_3;;
 };
 if ($v2_6_2 instanceof \Data\Ordering\Data_Ordering_EQ) {
@@ -2226,7 +2226,7 @@ goto end_branch_1;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go__4_0;
+  $__res = $go__go_4_0;
   goto __end;;
   __end:
   return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -2240,8 +2240,8 @@ function majData_majMap_majInternal_insert($dictOrd_0, $k_1 = null, $v_2 = null)
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $go__3_0 = null;
-  $go__3_0 = function($v1_4) use ($dictOrd_0, &$go__3_0, $k_1, $v_2) {
+  $go__go_3_0 = null;
+  $go__go_3_0 = function($v1_4) use ($dictOrd_0, &$go__go_3_0, $k_1, $v_2) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ($v1_4 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
@@ -2252,11 +2252,11 @@ goto end_branch_1;;
 $v2_5_2 = ((($dictOrd_0)->{'compare'})($k_1))(($v1_4)->{'value2'});
 $__t3 = null;;
 if ($v2_5_2 instanceof \Data\Ordering\Data_Ordering_LT) {
-$__t3 = ($GLOBALS['Data_Map_Internal_unsafeBalancedNode'])(($v1_4)->{'value2'}, ($v1_4)->{'value3'}, ($go__3_0)(($v1_4)->{'value4'}), ($v1_4)->{'value5'});
+$__t3 = ($GLOBALS['Data_Map_Internal_unsafeBalancedNode'])(($v1_4)->{'value2'}, ($v1_4)->{'value3'}, ($go__go_3_0)(($v1_4)->{'value4'}), ($v1_4)->{'value5'});
 goto end_branch_3;;
 };
 if ($v2_5_2 instanceof \Data\Ordering\Data_Ordering_GT) {
-$__t3 = ($GLOBALS['Data_Map_Internal_unsafeBalancedNode'])(($v1_4)->{'value2'}, ($v1_4)->{'value3'}, ($v1_4)->{'value4'}, ($go__3_0)(($v1_4)->{'value5'}));
+$__t3 = ($GLOBALS['Data_Map_Internal_unsafeBalancedNode'])(($v1_4)->{'value2'}, ($v1_4)->{'value3'}, ($v1_4)->{'value4'}, ($go__go_3_0)(($v1_4)->{'value5'}));
 goto end_branch_3;;
 };
 if ($v2_5_2 instanceof \Data\Ordering\Data_Ordering_EQ) {
@@ -2277,7 +2277,7 @@ goto end_branch_1;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go__3_0;
+  $__res = $go__go_3_0;
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -2287,8 +2287,8 @@ $GLOBALS['Data_Map_Internal_insert'] = __NAMESPACE__ . '\\majData_majMap_majInte
 // Data_Map_Internal_functorMap
 $GLOBALS['Data_Map_Internal_functorMap'] = (object)["map" => function($f_0) {
   $__num = \func_num_args();
-  $go__1_0 = null;
-  $go__1_0 = function($v_2) use ($f_0, &$go__1_0) {
+  $go__go_1_0 = null;
+  $go__go_1_0 = function($v_2) use ($f_0, &$go__go_1_0) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ($v_2 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
@@ -2296,7 +2296,7 @@ $__t1 = new \Data\Map\Internal\Data_Map_Internal_Leaf();
 goto end_branch_1;;
 };
   if ($v_2 instanceof \Data\Map\Internal\Data_Map_Internal_Node) {
-$__t1 = new \Data\Map\Internal\Data_Map_Internal_Node(($v_2)->{'value0'}, ($v_2)->{'value1'}, ($v_2)->{'value2'}, ($f_0)(($v_2)->{'value3'}), ($go__1_0)(($v_2)->{'value4'}), ($go__1_0)(($v_2)->{'value5'}));
+$__t1 = new \Data\Map\Internal\Data_Map_Internal_Node(($v_2)->{'value0'}, ($v_2)->{'value1'}, ($v_2)->{'value2'}, ($f_0)(($v_2)->{'value3'}), ($go__go_1_0)(($v_2)->{'value4'}), ($go__go_1_0)(($v_2)->{'value5'}));
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -2307,7 +2307,7 @@ goto end_branch_1;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go__1_0;
+  $__res = $go__go_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2316,8 +2316,8 @@ goto end_branch_1;;
 // Data_Map_Internal_functorWithIndexMap
 $GLOBALS['Data_Map_Internal_functorWithIndexMap'] = (object)["mapWithIndex" => function($f_0) {
   $__num = \func_num_args();
-  $go__1_0 = null;
-  $go__1_0 = function($v_2) use ($f_0, &$go__1_0) {
+  $go__go_1_0 = null;
+  $go__go_1_0 = function($v_2) use ($f_0, &$go__go_1_0) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ($v_2 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
@@ -2325,7 +2325,7 @@ $__t1 = new \Data\Map\Internal\Data_Map_Internal_Leaf();
 goto end_branch_1;;
 };
   if ($v_2 instanceof \Data\Map\Internal\Data_Map_Internal_Node) {
-$__t1 = new \Data\Map\Internal\Data_Map_Internal_Node(($v_2)->{'value0'}, ($v_2)->{'value1'}, ($v_2)->{'value2'}, (($f_0)(($v_2)->{'value2'}))(($v_2)->{'value3'}), ($go__1_0)(($v_2)->{'value4'}), ($go__1_0)(($v_2)->{'value5'}));
+$__t1 = new \Data\Map\Internal\Data_Map_Internal_Node(($v_2)->{'value0'}, ($v_2)->{'value1'}, ($v_2)->{'value2'}, (($f_0)(($v_2)->{'value2'}))(($v_2)->{'value3'}), ($go__go_1_0)(($v_2)->{'value4'}), ($go__go_1_0)(($v_2)->{'value5'}));
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -2336,7 +2336,7 @@ goto end_branch_1;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go__1_0;
+  $__res = $go__go_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2355,9 +2355,9 @@ $GLOBALS['Data_Map_Internal_foldableMap'] = (object)["foldr" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go__2_0 = null;
-  $go__2_0 = (function() use ($f_0, &$go__2_0) {
-  $__fn = function($m_prime_3, $z_prime_4 = null) use ($f_0, &$go__2_0, &$__fn) {
+  $go__go_2_0 = null;
+  $go__go_2_0 = (function() use ($f_0, &$go__go_2_0) {
+  $__fn = function($m_prime_3, $z_prime_4 = null) use ($f_0, &$go__go_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
@@ -2368,7 +2368,7 @@ $__t1 = $z_prime_4;
 goto end_branch_1;;
 };
   if ($m_prime_3 instanceof \Data\Map\Internal\Data_Map_Internal_Node) {
-$__t1 = ($go__2_0)(($m_prime_3)->{'value4'}, (($f_0)(($m_prime_3)->{'value3'}))(($go__2_0)(($m_prime_3)->{'value5'}, $z_prime_4)));
+$__t1 = ($go__go_2_0)(($m_prime_3)->{'value4'}, (($f_0)(($m_prime_3)->{'value3'}))(($go__go_2_0)(($m_prime_3)->{'value5'}, $z_prime_4)));
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -2381,9 +2381,9 @@ goto end_branch_1;;
   };
   return $__fn;
 })();
-  $__res = function($m_3) use (&$go__2_0, $z_1) {
+  $__res = function($m_3) use (&$go__go_2_0, $z_1) {
   $__num = \func_num_args();
-  $__res = ($go__2_0)($m_3, $z_1);
+  $__res = ($go__go_2_0)($m_3, $z_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2399,9 +2399,9 @@ goto end_branch_1;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go__2_2 = null;
-  $go__2_2 = (function() use ($f_0, &$go__2_2) {
-  $__fn = function($z_prime_3, $m_prime_4 = null) use ($f_0, &$go__2_2, &$__fn) {
+  $go__go_2_2 = null;
+  $go__go_2_2 = (function() use ($f_0, &$go__go_2_2) {
+  $__fn = function($z_prime_3, $m_prime_4 = null) use ($f_0, &$go__go_2_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
@@ -2412,7 +2412,7 @@ $__t3 = $z_prime_3;
 goto end_branch_3;;
 };
   if ($m_prime_4 instanceof \Data\Map\Internal\Data_Map_Internal_Node) {
-$__t3 = ($go__2_2)((($f_0)(($go__2_2)($z_prime_3, ($m_prime_4)->{'value4'})))(($m_prime_4)->{'value3'}), ($m_prime_4)->{'value5'});
+$__t3 = ($go__go_2_2)((($f_0)(($go__go_2_2)($z_prime_3, ($m_prime_4)->{'value4'})))(($m_prime_4)->{'value3'}), ($m_prime_4)->{'value5'});
 goto end_branch_3;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -2425,9 +2425,9 @@ goto end_branch_3;;
   };
   return $__fn;
 })();
-  $__res = function($m_3) use (&$go__2_2, $z_1) {
+  $__res = function($m_3) use (&$go__go_2_2, $z_1) {
   $__num = \func_num_args();
-  $__res = ($go__2_2)($z_1, $m_3);
+  $__res = ($go__go_2_2)($z_1, $m_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2443,8 +2443,8 @@ goto end_branch_3;;
   $__local_var_2_5 = (($dictMonoid_0)->{'Semigroup0'})(null);
   $__res = function($f_3) use ($__local_var_2_5, $mempty_1_4) {
   $__num = \func_num_args();
-  $go__4_6 = null;
-  $go__4_6 = function($v_5) use ($__local_var_2_5, $f_3, &$go__4_6, $mempty_1_4) {
+  $go__go_4_6 = null;
+  $go__go_4_6 = function($v_5) use ($__local_var_2_5, $f_3, &$go__go_4_6, $mempty_1_4) {
   $__num = \func_num_args();
   $__t7 = null;;
   if ($v_5 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
@@ -2452,7 +2452,7 @@ $__t7 = $mempty_1_4;
 goto end_branch_7;;
 };
   if ($v_5 instanceof \Data\Map\Internal\Data_Map_Internal_Node) {
-$__t7 = ((($__local_var_2_5)->{'append'})(($go__4_6)(($v_5)->{'value4'})))(((($__local_var_2_5)->{'append'})(($f_3)(($v_5)->{'value3'})))(($go__4_6)(($v_5)->{'value5'})));
+$__t7 = ((($__local_var_2_5)->{'append'})(($go__go_4_6)(($v_5)->{'value4'})))(((($__local_var_2_5)->{'append'})(($f_3)(($v_5)->{'value3'})))(($go__go_4_6)(($v_5)->{'value5'})));
 goto end_branch_7;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -2463,7 +2463,7 @@ goto end_branch_7;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go__4_6;
+  $__res = $go__go_4_6;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2480,9 +2480,9 @@ $GLOBALS['Data_Map_Internal_foldableWithIndexMap'] = (object)["foldrWithIndex" =
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go__2_0 = null;
-  $go__2_0 = (function() use ($f_0, &$go__2_0) {
-  $__fn = function($m_prime_3, $z_prime_4 = null) use ($f_0, &$go__2_0, &$__fn) {
+  $go__go_2_0 = null;
+  $go__go_2_0 = (function() use ($f_0, &$go__go_2_0) {
+  $__fn = function($m_prime_3, $z_prime_4 = null) use ($f_0, &$go__go_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
@@ -2493,7 +2493,7 @@ $__t1 = $z_prime_4;
 goto end_branch_1;;
 };
   if ($m_prime_3 instanceof \Data\Map\Internal\Data_Map_Internal_Node) {
-$__t1 = ($go__2_0)(($m_prime_3)->{'value4'}, ((($f_0)(($m_prime_3)->{'value2'}))(($m_prime_3)->{'value3'}))(($go__2_0)(($m_prime_3)->{'value5'}, $z_prime_4)));
+$__t1 = ($go__go_2_0)(($m_prime_3)->{'value4'}, ((($f_0)(($m_prime_3)->{'value2'}))(($m_prime_3)->{'value3'}))(($go__go_2_0)(($m_prime_3)->{'value5'}, $z_prime_4)));
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -2506,9 +2506,9 @@ goto end_branch_1;;
   };
   return $__fn;
 })();
-  $__res = function($m_3) use (&$go__2_0, $z_1) {
+  $__res = function($m_3) use (&$go__go_2_0, $z_1) {
   $__num = \func_num_args();
-  $__res = ($go__2_0)($m_3, $z_1);
+  $__res = ($go__go_2_0)($m_3, $z_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2524,9 +2524,9 @@ goto end_branch_1;;
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go__2_2 = null;
-  $go__2_2 = (function() use ($f_0, &$go__2_2) {
-  $__fn = function($z_prime_3, $m_prime_4 = null) use ($f_0, &$go__2_2, &$__fn) {
+  $go__go_2_2 = null;
+  $go__go_2_2 = (function() use ($f_0, &$go__go_2_2) {
+  $__fn = function($z_prime_3, $m_prime_4 = null) use ($f_0, &$go__go_2_2, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
@@ -2537,7 +2537,7 @@ $__t3 = $z_prime_3;
 goto end_branch_3;;
 };
   if ($m_prime_4 instanceof \Data\Map\Internal\Data_Map_Internal_Node) {
-$__t3 = ($go__2_2)(((($f_0)(($m_prime_4)->{'value2'}))(($go__2_2)($z_prime_3, ($m_prime_4)->{'value4'})))(($m_prime_4)->{'value3'}), ($m_prime_4)->{'value5'});
+$__t3 = ($go__go_2_2)(((($f_0)(($m_prime_4)->{'value2'}))(($go__go_2_2)($z_prime_3, ($m_prime_4)->{'value4'})))(($m_prime_4)->{'value3'}), ($m_prime_4)->{'value5'});
 goto end_branch_3;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -2550,9 +2550,9 @@ goto end_branch_3;;
   };
   return $__fn;
 })();
-  $__res = function($m_3) use (&$go__2_2, $z_1) {
+  $__res = function($m_3) use (&$go__go_2_2, $z_1) {
   $__num = \func_num_args();
-  $__res = ($go__2_2)($z_1, $m_3);
+  $__res = ($go__go_2_2)($z_1, $m_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2568,8 +2568,8 @@ goto end_branch_3;;
   $__local_var_2_5 = (($dictMonoid_0)->{'Semigroup0'})(null);
   $__res = function($f_3) use ($__local_var_2_5, $mempty_1_4) {
   $__num = \func_num_args();
-  $go__4_6 = null;
-  $go__4_6 = function($v_5) use ($__local_var_2_5, $f_3, &$go__4_6, $mempty_1_4) {
+  $go__go_4_6 = null;
+  $go__go_4_6 = function($v_5) use ($__local_var_2_5, $f_3, &$go__go_4_6, $mempty_1_4) {
   $__num = \func_num_args();
   $__t7 = null;;
   if ($v_5 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
@@ -2577,7 +2577,7 @@ $__t7 = $mempty_1_4;
 goto end_branch_7;;
 };
   if ($v_5 instanceof \Data\Map\Internal\Data_Map_Internal_Node) {
-$__t7 = ((($__local_var_2_5)->{'append'})(($go__4_6)(($v_5)->{'value4'})))(((($__local_var_2_5)->{'append'})((($f_3)(($v_5)->{'value2'}))(($v_5)->{'value3'})))(($go__4_6)(($v_5)->{'value5'})));
+$__t7 = ((($__local_var_2_5)->{'append'})(($go__go_4_6)(($v_5)->{'value4'})))(((($__local_var_2_5)->{'append'})((($f_3)(($v_5)->{'value2'}))(($v_5)->{'value3'})))(($go__go_4_6)(($v_5)->{'value5'})));
 goto end_branch_7;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -2588,7 +2588,7 @@ goto end_branch_7;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go__4_6;
+  $__res = $go__go_4_6;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2639,8 +2639,8 @@ $GLOBALS['Data_Map_Internal_traversableMap'] = (object)["traverse" => function($
   $Apply0_1_0 = (($dictApplicative_0)->{'Apply0'})(null);
   $__res = function($f_2) use ($Apply0_1_0, $dictApplicative_0) {
   $__num = \func_num_args();
-  $go__3_1 = null;
-  $go__3_1 = function($v_4) use ($Apply0_1_0, $dictApplicative_0, $f_2, &$go__3_1) {
+  $go__go_3_1 = null;
+  $go__go_3_1 = function($v_4) use ($Apply0_1_0, $dictApplicative_0, $f_2, &$go__go_3_1) {
   $__num = \func_num_args();
   $__t2 = null;;
   if ($v_4 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
@@ -2663,7 +2663,7 @@ $__t2 = ((($Apply0_1_0)->{'apply'})(((($Apply0_1_0)->{'apply'})(((((($Apply0_1_0
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()))(($go__3_1)(($v_4)->{'value4'}))))(($f_2)(($v_4)->{'value3'}))))(($go__3_1)(($v_4)->{'value5'}));
+})()))(($go__go_3_1)(($v_4)->{'value4'}))))(($f_2)(($v_4)->{'value3'}))))(($go__go_3_1)(($v_4)->{'value5'}));
 goto end_branch_2;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -2674,7 +2674,7 @@ goto end_branch_2;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go__3_1;
+  $__res = $go__go_3_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2708,8 +2708,8 @@ $GLOBALS['Data_Map_Internal_traversableWithIndexMap'] = (object)["traverseWithIn
   $Apply0_1_0 = (($dictApplicative_0)->{'Apply0'})(null);
   $__res = function($f_2) use ($Apply0_1_0, $dictApplicative_0) {
   $__num = \func_num_args();
-  $go__3_1 = null;
-  $go__3_1 = function($v_4) use ($Apply0_1_0, $dictApplicative_0, $f_2, &$go__3_1) {
+  $go__go_3_1 = null;
+  $go__go_3_1 = function($v_4) use ($Apply0_1_0, $dictApplicative_0, $f_2, &$go__go_3_1) {
   $__num = \func_num_args();
   $__t2 = null;;
   if ($v_4 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
@@ -2732,7 +2732,7 @@ $__t2 = ((($Apply0_1_0)->{'apply'})(((($Apply0_1_0)->{'apply'})(((((($Apply0_1_0
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
   };
   return $__fn;
-})()))(($go__3_1)(($v_4)->{'value4'}))))((($f_2)($__local_var_6_4))(($v_4)->{'value3'}))))(($go__3_1)(($v_4)->{'value5'}));
+})()))(($go__go_3_1)(($v_4)->{'value4'}))))((($f_2)($__local_var_6_4))(($v_4)->{'value3'}))))(($go__go_3_1)(($v_4)->{'value5'}));
 goto end_branch_2;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -2743,7 +2743,7 @@ goto end_branch_2;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go__3_1;
+  $__res = $go__go_3_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2912,8 +2912,8 @@ goto end_branch_6;;
   $__t6 = null;
   end_branch_6:;
   $inBounds_8_6 = $__t6;
-  $go__9_14 = null;
-  $go__9_14 = function($v_10) use ($appendFn_1, $f_5, &$go__9_14, $inBounds_8_6, $memptyValue_2, $tooLarge_7_3, $tooSmall_6_0) {
+  $go__go_9_14 = null;
+  $go__go_9_14 = function($v_10) use ($appendFn_1, $f_5, &$go__go_9_14, $inBounds_8_6, $memptyValue_2, $tooLarge_7_3, $tooSmall_6_0) {
   $__num = \func_num_args();
   $__t15 = null;;
   if ($v_10 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
@@ -2926,7 +2926,7 @@ if (($tooSmall_6_0)(($v_10)->{'value2'})) {
 $__t16 = $memptyValue_2;
 goto end_branch_16;;
 };
-$__t16 = ($go__9_14)(($v_10)->{'value4'});
+$__t16 = ($go__go_9_14)(($v_10)->{'value4'});
 end_branch_16:;
 $__t17 = null;;
 if (($inBounds_8_6)(($v_10)->{'value2'})) {
@@ -2940,7 +2940,7 @@ if (($tooLarge_7_3)(($v_10)->{'value2'})) {
 $__t18 = $memptyValue_2;
 goto end_branch_18;;
 };
-$__t18 = ($go__9_14)(($v_10)->{'value5'});
+$__t18 = ($go__go_9_14)(($v_10)->{'value5'});
 end_branch_18:;
 $__t15 = (($appendFn_1)((($appendFn_1)($__t16))($__t17)))($__t18);
 goto end_branch_15;;
@@ -2953,7 +2953,7 @@ goto end_branch_15;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go__9_14;
+  $__res = $go__go_9_14;
   goto __end;;
   __end:
   return 6 < $__num ? $__res(...\array_slice(\func_get_args(), 6)) : $__res;
@@ -3020,8 +3020,8 @@ function majData_majMap_majInternal_lookupmajGmajT($dictOrd_0, $k_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go__2_0 = null;
-  $go__2_0 = function($v_3) use ($dictOrd_0, &$go__2_0, $k_1) {
+  $go__go_2_0 = null;
+  $go__go_2_0 = function($v_3) use ($dictOrd_0, &$go__go_2_0, $k_1) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ($v_3 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
@@ -3032,7 +3032,7 @@ goto end_branch_1;;
 $v1_4_2 = ((($dictOrd_0)->{'compare'})($k_1))(($v_3)->{'value2'});
 $__t3 = null;;
 if ($v1_4_2 instanceof \Data\Ordering\Data_Ordering_LT) {
-$v2_5_4 = ($go__2_0)(($v_3)->{'value4'});
+$v2_5_4 = ($go__go_2_0)(($v_3)->{'value4'});
 $__t5 = null;;
 if ($v2_5_4 instanceof \Data\Maybe\Data_Maybe_Nothing) {
 $__t5 = new \Data\Maybe\Data_Maybe_Just((object)["key" => ($v_3)->{'value2'}, "value" => ($v_3)->{'value3'}]);
@@ -3044,7 +3044,7 @@ $__t3 = $__t5;
 goto end_branch_3;;
 };
 if ($v1_4_2 instanceof \Data\Ordering\Data_Ordering_GT) {
-$__t3 = ($go__2_0)(($v_3)->{'value5'});
+$__t3 = ($go__go_2_0)(($v_3)->{'value5'});
 goto end_branch_3;;
 };
 if ($v1_4_2 instanceof \Data\Ordering\Data_Ordering_EQ) {
@@ -3065,7 +3065,7 @@ goto end_branch_1;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go__2_0;
+  $__res = $go__go_2_0;
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -3118,8 +3118,8 @@ function majData_majMap_majInternal_lookupmajLmajT($dictOrd_0, $k_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go__2_0 = null;
-  $go__2_0 = function($v_3) use ($dictOrd_0, &$go__2_0, $k_1) {
+  $go__go_2_0 = null;
+  $go__go_2_0 = function($v_3) use ($dictOrd_0, &$go__go_2_0, $k_1) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ($v_3 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
@@ -3130,11 +3130,11 @@ goto end_branch_1;;
 $v1_4_2 = ((($dictOrd_0)->{'compare'})($k_1))(($v_3)->{'value2'});
 $__t3 = null;;
 if ($v1_4_2 instanceof \Data\Ordering\Data_Ordering_LT) {
-$__t3 = ($go__2_0)(($v_3)->{'value4'});
+$__t3 = ($go__go_2_0)(($v_3)->{'value4'});
 goto end_branch_3;;
 };
 if ($v1_4_2 instanceof \Data\Ordering\Data_Ordering_GT) {
-$v2_5_4 = ($go__2_0)(($v_3)->{'value5'});
+$v2_5_4 = ($go__go_2_0)(($v_3)->{'value5'});
 $__t5 = null;;
 if ($v2_5_4 instanceof \Data\Maybe\Data_Maybe_Nothing) {
 $__t5 = new \Data\Maybe\Data_Maybe_Just((object)["key" => ($v_3)->{'value2'}, "value" => ($v_3)->{'value3'}]);
@@ -3163,7 +3163,7 @@ goto end_branch_1;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go__2_0;
+  $__res = $go__go_2_0;
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -3177,8 +3177,8 @@ function majData_majMap_majInternal_filtermajWithmajKey($dictOrd_0, $f_1 = null)
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go__2_0 = null;
-  $go__2_0 = function($v_3) use ($f_1, &$go__2_0) {
+  $go__go_2_0 = null;
+  $go__go_2_0 = function($v_3) use ($f_1, &$go__go_2_0) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ($v_3 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
@@ -3188,10 +3188,10 @@ goto end_branch_1;;
   if ($v_3 instanceof \Data\Map\Internal\Data_Map_Internal_Node) {
 $__t2 = null;;
 if ((($f_1)(($v_3)->{'value2'}))(($v_3)->{'value3'})) {
-$__t2 = ($GLOBALS['Data_Map_Internal_unsafeBalancedNode'])(($v_3)->{'value2'}, ($v_3)->{'value3'}, ($go__2_0)(($v_3)->{'value4'}), ($go__2_0)(($v_3)->{'value5'}));
+$__t2 = ($GLOBALS['Data_Map_Internal_unsafeBalancedNode'])(($v_3)->{'value2'}, ($v_3)->{'value3'}, ($go__go_2_0)(($v_3)->{'value4'}), ($go__go_2_0)(($v_3)->{'value5'}));
 goto end_branch_2;;
 };
-$__t2 = ($GLOBALS['Data_Map_Internal_unsafeJoinNodes'])(($go__2_0)(($v_3)->{'value4'}), ($go__2_0)(($v_3)->{'value5'}));
+$__t2 = ($GLOBALS['Data_Map_Internal_unsafeJoinNodes'])(($go__go_2_0)(($v_3)->{'value4'}), ($go__go_2_0)(($v_3)->{'value5'}));
 end_branch_2:;
 $__t1 = $__t2;
 goto end_branch_1;;
@@ -3204,7 +3204,7 @@ goto end_branch_1;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go__2_0;
+  $__res = $go__go_2_0;
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -3218,8 +3218,8 @@ function majData_majMap_majInternal_filtermajKeys($dictOrd_0, $f_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go__2_0 = null;
-  $go__2_0 = function($v_3) use ($f_1, &$go__2_0) {
+  $go__go_2_0 = null;
+  $go__go_2_0 = function($v_3) use ($f_1, &$go__go_2_0) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ($v_3 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
@@ -3229,10 +3229,10 @@ goto end_branch_1;;
   if ($v_3 instanceof \Data\Map\Internal\Data_Map_Internal_Node) {
 $__t2 = null;;
 if (($f_1)(($v_3)->{'value2'})) {
-$__t2 = ($GLOBALS['Data_Map_Internal_unsafeBalancedNode'])(($v_3)->{'value2'}, ($v_3)->{'value3'}, ($go__2_0)(($v_3)->{'value4'}), ($go__2_0)(($v_3)->{'value5'}));
+$__t2 = ($GLOBALS['Data_Map_Internal_unsafeBalancedNode'])(($v_3)->{'value2'}, ($v_3)->{'value3'}, ($go__go_2_0)(($v_3)->{'value4'}), ($go__go_2_0)(($v_3)->{'value5'}));
 goto end_branch_2;;
 };
-$__t2 = ($GLOBALS['Data_Map_Internal_unsafeJoinNodes'])(($go__2_0)(($v_3)->{'value4'}), ($go__2_0)(($v_3)->{'value5'}));
+$__t2 = ($GLOBALS['Data_Map_Internal_unsafeJoinNodes'])(($go__go_2_0)(($v_3)->{'value4'}), ($go__go_2_0)(($v_3)->{'value5'}));
 end_branch_2:;
 $__t1 = $__t2;
 goto end_branch_1;;
@@ -3245,7 +3245,7 @@ goto end_branch_1;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go__2_0;
+  $__res = $go__go_2_0;
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -3646,8 +3646,8 @@ function majData_majMap_majInternal_delete($dictOrd_0, $k_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go__2_0 = null;
-  $go__2_0 = function($v_3) use ($dictOrd_0, &$go__2_0, $k_1) {
+  $go__go_2_0 = null;
+  $go__go_2_0 = function($v_3) use ($dictOrd_0, &$go__go_2_0, $k_1) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ($v_3 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
@@ -3658,11 +3658,11 @@ goto end_branch_1;;
 $v1_4_2 = ((($dictOrd_0)->{'compare'})($k_1))(($v_3)->{'value2'});
 $__t3 = null;;
 if ($v1_4_2 instanceof \Data\Ordering\Data_Ordering_LT) {
-$__t3 = ($GLOBALS['Data_Map_Internal_unsafeBalancedNode'])(($v_3)->{'value2'}, ($v_3)->{'value3'}, ($go__2_0)(($v_3)->{'value4'}), ($v_3)->{'value5'});
+$__t3 = ($GLOBALS['Data_Map_Internal_unsafeBalancedNode'])(($v_3)->{'value2'}, ($v_3)->{'value3'}, ($go__go_2_0)(($v_3)->{'value4'}), ($v_3)->{'value5'});
 goto end_branch_3;;
 };
 if ($v1_4_2 instanceof \Data\Ordering\Data_Ordering_GT) {
-$__t3 = ($GLOBALS['Data_Map_Internal_unsafeBalancedNode'])(($v_3)->{'value2'}, ($v_3)->{'value3'}, ($v_3)->{'value4'}, ($go__2_0)(($v_3)->{'value5'}));
+$__t3 = ($GLOBALS['Data_Map_Internal_unsafeBalancedNode'])(($v_3)->{'value2'}, ($v_3)->{'value3'}, ($v_3)->{'value4'}, ($go__go_2_0)(($v_3)->{'value5'}));
 goto end_branch_3;;
 };
 if ($v1_4_2 instanceof \Data\Ordering\Data_Ordering_EQ) {
@@ -3683,7 +3683,7 @@ goto end_branch_1;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go__2_0;
+  $__res = $go__go_2_0;
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -3697,8 +3697,8 @@ function majData_majMap_majInternal_checkmajValid($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $go__1_0 = null;
-  $go__1_0 = function($v_2) use ($dictOrd_0, &$go__1_0) {
+  $go__go_1_0 = null;
+  $go__go_1_0 = function($v_2) use ($dictOrd_0, &$go__go_1_0) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ($v_2 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
@@ -3714,7 +3714,7 @@ $__t3 = true;
 goto end_branch_3;;
 };
 if (($v_2)->{'value5'} instanceof \Data\Map\Internal\Data_Map_Internal_Node) {
-$__t3 = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})((($v_2)->{'value0'} === 2)))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($v_2)->{'value5'})->{'value0'} === 1)))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})((($GLOBALS['Data_Map_Internal_greaterThan'])(($v_2)->{'value1'}))((($v_2)->{'value5'})->{'value1'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($dictOrd_0)->{'compare'})((($v_2)->{'value5'})->{'value2'}))(($v_2)->{'value2'}) instanceof \Data\Ordering\Data_Ordering_GT))(($go__1_0)(($v_2)->{'value5'})))));
+$__t3 = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})((($v_2)->{'value0'} === 2)))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($v_2)->{'value5'})->{'value0'} === 1)))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})((($GLOBALS['Data_Map_Internal_greaterThan'])(($v_2)->{'value1'}))((($v_2)->{'value5'})->{'value1'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($dictOrd_0)->{'compare'})((($v_2)->{'value5'})->{'value2'}))(($v_2)->{'value2'}) instanceof \Data\Ordering\Data_Ordering_GT))(($go__go_1_0)(($v_2)->{'value5'})))));
 goto end_branch_3;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -3726,11 +3726,11 @@ goto end_branch_2;;
 if (($v_2)->{'value4'} instanceof \Data\Map\Internal\Data_Map_Internal_Node) {
 $__t4 = null;;
 if (($v_2)->{'value5'} instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
-$__t4 = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})((($v_2)->{'value0'} === 2)))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($v_2)->{'value4'})->{'value0'} === 1)))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})((($GLOBALS['Data_Map_Internal_greaterThan'])(($v_2)->{'value1'}))((($v_2)->{'value4'})->{'value1'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($dictOrd_0)->{'compare'})((($v_2)->{'value4'})->{'value2'}))(($v_2)->{'value2'}) instanceof \Data\Ordering\Data_Ordering_LT))(($go__1_0)(($v_2)->{'value4'})))));
+$__t4 = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})((($v_2)->{'value0'} === 2)))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($v_2)->{'value4'})->{'value0'} === 1)))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})((($GLOBALS['Data_Map_Internal_greaterThan'])(($v_2)->{'value1'}))((($v_2)->{'value4'})->{'value1'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($dictOrd_0)->{'compare'})((($v_2)->{'value4'})->{'value2'}))(($v_2)->{'value2'}) instanceof \Data\Ordering\Data_Ordering_LT))(($go__go_1_0)(($v_2)->{'value4'})))));
 goto end_branch_4;;
 };
 if (($v_2)->{'value5'} instanceof \Data\Map\Internal\Data_Map_Internal_Node) {
-$__t4 = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})((($GLOBALS['Data_Map_Internal_greaterThan'])(($v_2)->{'value0'}))((($v_2)->{'value5'})->{'value0'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($dictOrd_0)->{'compare'})((($v_2)->{'value5'})->{'value2'}))(($v_2)->{'value2'}) instanceof \Data\Ordering\Data_Ordering_GT))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})((($GLOBALS['Data_Map_Internal_greaterThan'])(($v_2)->{'value0'}))((($v_2)->{'value4'})->{'value0'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($dictOrd_0)->{'compare'})((($v_2)->{'value4'})->{'value2'}))(($v_2)->{'value2'}) instanceof \Data\Ordering\Data_Ordering_LT))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})((($GLOBALS['Data_Map_Internal_lessThan'])(($GLOBALS['Data_Map_Internal_abs'])(((($v_2)->{'value5'})->{'value0'} - (($v_2)->{'value4'})->{'value0'}))))(2)))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((((($v_2)->{'value5'})->{'value1'} + (($v_2)->{'value4'})->{'value1'}) + 1) === ($v_2)->{'value1'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(($go__1_0)(($v_2)->{'value4'})))(($go__1_0)(($v_2)->{'value5'}))))))));
+$__t4 = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})((($GLOBALS['Data_Map_Internal_greaterThan'])(($v_2)->{'value0'}))((($v_2)->{'value5'})->{'value0'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($dictOrd_0)->{'compare'})((($v_2)->{'value5'})->{'value2'}))(($v_2)->{'value2'}) instanceof \Data\Ordering\Data_Ordering_GT))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})((($GLOBALS['Data_Map_Internal_greaterThan'])(($v_2)->{'value0'}))((($v_2)->{'value4'})->{'value0'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($dictOrd_0)->{'compare'})((($v_2)->{'value4'})->{'value2'}))(($v_2)->{'value2'}) instanceof \Data\Ordering\Data_Ordering_LT))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})((($GLOBALS['Data_Map_Internal_lessThan'])(($GLOBALS['Data_Map_Internal_abs'])(((($v_2)->{'value5'})->{'value0'} - (($v_2)->{'value4'})->{'value0'}))))(2)))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((((($v_2)->{'value5'})->{'value1'} + (($v_2)->{'value4'})->{'value1'}) + 1) === ($v_2)->{'value1'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(($go__go_1_0)(($v_2)->{'value4'})))(($go__go_1_0)(($v_2)->{'value5'}))))))));
 goto end_branch_4;;
 };
 throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -3753,7 +3753,7 @@ goto end_branch_1;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go__1_0;
+  $__res = $go__go_1_0;
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -3842,12 +3842,12 @@ function majData_majMap_majInternal_bindmajMap($dictOrd_0) {
   }
   $__res = \Data\Map\Internal\majData_majMap_majInternal_mapmajMaybemajWithmajKey($dictOrd_0, function($k_4) use ($dictOrd_0, $f_3) {
   $__num = \func_num_args();
-  $go__5_2 = null;
-  $go__5_2 = function($v_6) use ($dictOrd_0, &$go__5_2, $k_4) {
+  $go__go_5_2 = null;
+  $go__go_5_2 = function($v_6) use ($dictOrd_0, &$go__go_5_2, $k_4) {
   $__num = \func_num_args();
-  $__tco_var_go__5_2_2_v_6 = $v_6;
-  tco_loop_go__5_2_2:;
-  $v_6 = $__tco_var_go__5_2_2_v_6;
+  $__tco_var_go__go_5_2_2_v_6 = $v_6;
+  tco_loop_go__go_5_2_2:;
+  $v_6 = $__tco_var_go__go_5_2_2_v_6;
   $__t2 = null;;
   if ($v_6 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
 $__t2 = new \Data\Maybe\Data_Maybe_Nothing();
@@ -3858,15 +3858,15 @@ $v1_7_3 = ((($dictOrd_0)->{'compare'})($k_4))(($v_6)->{'value2'});
 $__t4 = null;;
 if ($v1_7_3 instanceof \Data\Ordering\Data_Ordering_LT) {
 $__tco_5 = ($v_6)->{'value4'};
-$__tco_var_go__5_2_2_v_6 = $__tco_5;
-goto tco_loop_go__5_2_2;;
+$__tco_var_go__go_5_2_2_v_6 = $__tco_5;
+goto tco_loop_go__go_5_2_2;;
 $__t4 = null;
 goto end_branch_4;;
 };
 if ($v1_7_3 instanceof \Data\Ordering\Data_Ordering_GT) {
 $__tco_6 = ($v_6)->{'value5'};
-$__tco_var_go__5_2_2_v_6 = $__tco_6;
-goto tco_loop_go__5_2_2;;
+$__tco_var_go__go_5_2_2_v_6 = $__tco_6;
+goto tco_loop_go__go_5_2_2;;
 $__t4 = null;
 goto end_branch_4;;
 };
@@ -3888,7 +3888,7 @@ goto end_branch_2;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($go__5_2))($f_3);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($go__go_5_2))($f_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -3918,8 +3918,8 @@ function majData_majMap_majInternal_anymajWithmajKey($predicate_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $go__1_0 = null;
-  $go__1_0 = function($v_2) use (&$go__1_0, $predicate_0) {
+  $go__go_1_0 = null;
+  $go__go_1_0 = function($v_2) use (&$go__go_1_0, $predicate_0) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ($v_2 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
@@ -3927,7 +3927,7 @@ $__t1 = false;
 goto end_branch_1;;
 };
   if ($v_2 instanceof \Data\Map\Internal\Data_Map_Internal_Node) {
-$__t1 = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'disj'})((($predicate_0)(($v_2)->{'value2'}))(($v_2)->{'value3'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'disj'})(($go__1_0)(($v_2)->{'value4'})))(($go__1_0)(($v_2)->{'value5'})));
+$__t1 = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'disj'})((($predicate_0)(($v_2)->{'value2'}))(($v_2)->{'value3'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'disj'})(($go__go_1_0)(($v_2)->{'value4'})))(($go__go_1_0)(($v_2)->{'value5'})));
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -3938,7 +3938,7 @@ goto end_branch_1;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go__1_0;
+  $__res = $go__go_1_0;
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -3952,8 +3952,8 @@ function majData_majMap_majInternal_any($predicate_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $go__1_0 = null;
-  $go__1_0 = function($v_2) use (&$go__1_0, $predicate_0) {
+  $go__go_1_0 = null;
+  $go__go_1_0 = function($v_2) use (&$go__go_1_0, $predicate_0) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ($v_2 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
@@ -3961,7 +3961,7 @@ $__t1 = false;
 goto end_branch_1;;
 };
   if ($v_2 instanceof \Data\Map\Internal\Data_Map_Internal_Node) {
-$__t1 = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'disj'})(($predicate_0)(($v_2)->{'value3'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'disj'})(($go__1_0)(($v_2)->{'value4'})))(($go__1_0)(($v_2)->{'value5'})));
+$__t1 = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'disj'})(($predicate_0)(($v_2)->{'value3'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'disj'})(($go__go_1_0)(($v_2)->{'value4'})))(($go__go_1_0)(($v_2)->{'value5'})));
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -3972,7 +3972,7 @@ goto end_branch_1;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go__1_0;
+  $__res = $go__go_1_0;
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

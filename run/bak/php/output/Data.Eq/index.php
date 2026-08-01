@@ -101,7 +101,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Eq = \call_user_func(function() {
   $exports = [];
-$eqIntImpl = function($a, $b) use (&$eqIntImpl) {
+$eqIntImpl = function($a, $b = null) use (&$eqIntImpl) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$eqIntImpl) {
+
+            return $eqIntImpl(...\array_merge($__args, $more));
+        };
+    }
     return $a === $b;
 };
 $eqStringImpl = $eqIntImpl;
@@ -109,7 +116,13 @@ $eqNumberImpl = $eqIntImpl;
 $eqCharImpl = $eqIntImpl;
 $eqBooleanImpl = $eqIntImpl;
 
-$eqArrayImpl = function($f, $xs, $ys) use (&$eqArrayImpl) {
+$eqArrayImpl = function($f, $xs = null, $ys = null) use (&$eqArrayImpl) {
+    if (\func_num_args() < 3) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$eqArrayImpl) {
+            return $eqArrayImpl(...\array_merge($__args, $more));
+        };
+    }
     if (\count($xs) !== \count($ys)) return false;
     for ($i = 0; $i < \count($xs); $i++) {
         if (!$f($xs[$i], $ys[$i])) return false;
@@ -133,7 +146,7 @@ function majData_majEq_eqmajArraymajImpl($v0, $v1 = null, $v2 = null): bool|\Clo
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Data_Eq;
-  $f = ($ffi_Data_Eq['eqArrayImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('eqArrayImpl', $ffi_Data_Eq) ? $ffi_Data_Eq['eqArrayImpl'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Data_Eq_eqArrayImpl'] = __NAMESPACE__ . '\\majData_majEq_eqmajArraymajImpl';
@@ -145,7 +158,7 @@ function majData_majEq_eqmajBooleanmajImpl(bool $v0, $v1 = null): bool|\Closure 
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Eq;
-  $f = ($ffi_Data_Eq['eqBooleanImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('eqBooleanImpl', $ffi_Data_Eq) ? $ffi_Data_Eq['eqBooleanImpl'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Eq_eqBooleanImpl'] = __NAMESPACE__ . '\\majData_majEq_eqmajBooleanmajImpl';
@@ -157,7 +170,7 @@ function majData_majEq_eqmajCharmajImpl($v0, $v1 = null): bool|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Eq;
-  $f = ($ffi_Data_Eq['eqCharImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('eqCharImpl', $ffi_Data_Eq) ? $ffi_Data_Eq['eqCharImpl'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Eq_eqCharImpl'] = __NAMESPACE__ . '\\majData_majEq_eqmajCharmajImpl';
@@ -169,7 +182,7 @@ function majData_majEq_eqmajIntmajImpl(int $v0, $v1 = null): bool|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Eq;
-  $f = ($ffi_Data_Eq['eqIntImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('eqIntImpl', $ffi_Data_Eq) ? $ffi_Data_Eq['eqIntImpl'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Eq_eqIntImpl'] = __NAMESPACE__ . '\\majData_majEq_eqmajIntmajImpl';
@@ -181,7 +194,7 @@ function majData_majEq_eqmajNumbermajImpl(float $v0, $v1 = null): bool|\Closure 
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Eq;
-  $f = ($ffi_Data_Eq['eqNumberImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('eqNumberImpl', $ffi_Data_Eq) ? $ffi_Data_Eq['eqNumberImpl'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Eq_eqNumberImpl'] = __NAMESPACE__ . '\\majData_majEq_eqmajNumbermajImpl';
@@ -193,7 +206,7 @@ function majData_majEq_eqmajStringmajImpl(string $v0, $v1 = null): bool|\Closure
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Eq;
-  $f = ($ffi_Data_Eq['eqStringImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('eqStringImpl', $ffi_Data_Eq) ? $ffi_Data_Eq['eqStringImpl'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Eq_eqStringImpl'] = __NAMESPACE__ . '\\majData_majEq_eqmajStringmajImpl';

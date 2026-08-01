@@ -102,13 +102,34 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_EuclideanRing = \call_user_func(function() {
   $exports = [];
 $intDegree = function($x) use (&$intDegree) { return abs($x); };
-$intDiv = function($x, $y) use (&$intDiv) {
+$intDiv = function($x, $y = null) use (&$intDiv) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$intDiv) {
+
+            return $intDiv(...\array_merge($__args, $more));
+        };
+    }
     return (int)($x / $y);
 };
-$intMod = function($x, $y) use (&$intMod) {
+$intMod = function($x, $y = null) use (&$intMod) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$intMod) {
+
+            return $intMod(...\array_merge($__args, $more));
+        };
+    }
     return $x % $y;
 };
-$numDiv = function($x, $y) use (&$numDiv) {
+$numDiv = function($x, $y = null) use (&$numDiv) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$numDiv) {
+
+            return $numDiv(...\array_merge($__args, $more));
+        };
+    }
     return $x / $y;
 };
 
@@ -126,7 +147,7 @@ function majData_majEuclideanmajRing_intmajDegree(int $v0): int|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_EuclideanRing;
-  $f = ($ffi_Data_EuclideanRing['intDegree'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('intDegree', $ffi_Data_EuclideanRing) ? $ffi_Data_EuclideanRing['intDegree'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_EuclideanRing_intDegree'] = __NAMESPACE__ . '\\majData_majEuclideanmajRing_intmajDegree';
@@ -138,7 +159,7 @@ function majData_majEuclideanmajRing_intmajDiv(int $v0, $v1 = null): int|\Closur
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_EuclideanRing;
-  $f = ($ffi_Data_EuclideanRing['intDiv'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('intDiv', $ffi_Data_EuclideanRing) ? $ffi_Data_EuclideanRing['intDiv'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_EuclideanRing_intDiv'] = __NAMESPACE__ . '\\majData_majEuclideanmajRing_intmajDiv';
@@ -150,7 +171,7 @@ function majData_majEuclideanmajRing_intmajMod(int $v0, $v1 = null): int|\Closur
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_EuclideanRing;
-  $f = ($ffi_Data_EuclideanRing['intMod'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('intMod', $ffi_Data_EuclideanRing) ? $ffi_Data_EuclideanRing['intMod'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_EuclideanRing_intMod'] = __NAMESPACE__ . '\\majData_majEuclideanmajRing_intmajMod';
@@ -162,7 +183,7 @@ function majData_majEuclideanmajRing_nummajDiv(float $v0, $v1 = null): float|\Cl
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_EuclideanRing;
-  $f = ($ffi_Data_EuclideanRing['numDiv'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('numDiv', $ffi_Data_EuclideanRing) ? $ffi_Data_EuclideanRing['numDiv'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_EuclideanRing_numDiv'] = __NAMESPACE__ . '\\majData_majEuclideanmajRing_nummajDiv';

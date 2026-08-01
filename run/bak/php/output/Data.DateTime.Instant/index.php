@@ -114,14 +114,28 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_DateTime_Instant = \call_user_func(function() {
   $exports = [];
-$fromDateTimeImpl = function($y, $mo, $d, $h, $mi, $s, $ms) use (&$fromDateTimeImpl) {
+$fromDateTimeImpl = function($y, $mo = null, $d = null, $h = null, $mi = null, $s = null, $ms = null) use (&$fromDateTimeImpl) {
+    if (\func_num_args() < 7) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$fromDateTimeImpl) {
+
+            return $fromDateTimeImpl(...\array_merge($__args, $more));
+        };
+    }
     $dt = new \DateTime('now', new \DateTimeZone('UTC'));
     $dt->setDate($y, $mo, $d);
     $dt->setTime($h, $mi, $s, $ms * 1000);
     return (float)$dt->getTimestamp() * 1000 + (int)$dt->format('v');
 };
 
-$toDateTimeImpl = function($ctor, $instant) use (&$toDateTimeImpl) {
+$toDateTimeImpl = function($ctor, $instant = null) use (&$toDateTimeImpl) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$toDateTimeImpl) {
+
+            return $toDateTimeImpl(...\array_merge($__args, $more));
+        };
+    }
     $seconds = floor($instant / 1000);
     $ms = $instant - ($seconds * 1000);
     $dt = new \DateTime("@" . $seconds, new \DateTimeZone('UTC'));
@@ -141,7 +155,7 @@ $exports['toDateTimeImpl'] = $toDateTimeImpl;
 return $exports;
   return $exports;
 });
-$GLOBALS['Data_DateTime_Instant_fromDateTimeImpl'] = ($ffi_Data_DateTime_Instant['fromDateTimeImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_DateTime_Instant_fromDateTimeImpl'] = (\array_key_exists('fromDateTimeImpl', $ffi_Data_DateTime_Instant) ? $ffi_Data_DateTime_Instant['fromDateTimeImpl'] : new class { public function __invoke(...$args) { return $this; } });
 function majData_majDatemajTime_majInstant_tomajDatemajTimemajImpl($v0, $v1 = null) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\majData_majDatemajTime_majInstant_tomajDatemajTimemajImpl';
@@ -149,7 +163,7 @@ function majData_majDatemajTime_majInstant_tomajDatemajTimemajImpl($v0, $v1 = nu
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_DateTime_Instant;
-  $f = ($ffi_Data_DateTime_Instant['toDateTimeImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('toDateTimeImpl', $ffi_Data_DateTime_Instant) ? $ffi_Data_DateTime_Instant['toDateTimeImpl'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_DateTime_Instant_toDateTimeImpl'] = __NAMESPACE__ . '\\majData_majDatemajTime_majInstant_tomajDatemajTimemajImpl';

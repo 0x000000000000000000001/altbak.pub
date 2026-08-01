@@ -16,15 +16,15 @@ return Call_crashWith(_dollar__unused_0_box)
 	return cache_crashWith
 }
 
-var cache_crashWith__gopurs_runtime_Value_3537417528 gopurs_runtime.Value
-var once_crashWith__gopurs_runtime_Value_3537417528 sync.Once
-func Get_crashWith__gopurs_runtime_Value_3537417528() gopurs_runtime.Value {
-	once_crashWith__gopurs_runtime_Value_3537417528.Do(func() {
-		cache_crashWith__gopurs_runtime_Value_3537417528 = gopurs_runtime.Func(func(_dollar__unused_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_crashWith__gopurs_runtime_Value_3537417528(_dollar__unused_0_box)
+var cache_crashWith__gopurs_runtime_Value_178387093 gopurs_runtime.Value
+var once_crashWith__gopurs_runtime_Value_178387093 sync.Once
+func Get_crashWith__gopurs_runtime_Value_178387093() gopurs_runtime.Value {
+	once_crashWith__gopurs_runtime_Value_178387093.Do(func() {
+		cache_crashWith__gopurs_runtime_Value_178387093 = gopurs_runtime.Func(func(_dollar__unused_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_crashWith__gopurs_runtime_Value_178387093(_dollar__unused_0_box)
 })
 	})
-	return cache_crashWith__gopurs_runtime_Value_3537417528
+	return cache_crashWith__gopurs_runtime_Value_178387093
 }
 
 var cache_crash gopurs_runtime.Value
@@ -44,7 +44,7 @@ _ = _dollar__unused_0
 return Get__crashWith()
 }
 
-func Call_crashWith__gopurs_runtime_Value_3537417528(_dollar__unused_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_crashWith__gopurs_runtime_Value_178387093(_dollar__unused_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 return Get__crashWith()

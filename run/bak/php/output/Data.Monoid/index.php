@@ -333,8 +333,8 @@ function majData_majMonoid_power($dictMonoid_0) {
   $__local_var_2_1 = (($dictMonoid_0)->{'Semigroup0'})(null);
   $__res = function($x_3) use ($__local_var_2_1, $mempty1_1_0) {
   $__num = \func_num_args();
-  $go__4_2 = null;
-  $go__4_2 = function($p_5) use ($__local_var_2_1, &$go__4_2, $mempty1_1_0, $x_3) {
+  $go__go_4_2 = null;
+  $go__go_4_2 = function($p_5) use ($__local_var_2_1, &$go__go_4_2, $mempty1_1_0, $x_3) {
   $__num = \func_num_args();
   $__t4 = null;;
   if ((($GLOBALS['Data_Monoid_lessThanOrEq'])($p_5))(0)) {
@@ -352,7 +352,7 @@ break;
 };
   switch (((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])->{'mod'})($p_5))(2)) {
 case 0:
-$x_prime_6_5 = ($go__4_2)(((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])->{'div'})($p_5))(2));
+$x_prime_6_5 = ($go__go_4_2)(((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])->{'div'})($p_5))(2));
 $__t4 = ((($__local_var_2_1)->{'append'})($x_prime_6_5))($x_prime_6_5);
 goto end_branch_4;;
 break;
@@ -360,7 +360,7 @@ default:
 ;
 break;
 };
-  $x_prime_6_3 = ($go__4_2)(((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])->{'div'})($p_5))(2));
+  $x_prime_6_3 = ($go__go_4_2)(((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])->{'div'})($p_5))(2));
   $__t4 = ((($__local_var_2_1)->{'append'})($x_prime_6_3))(((($__local_var_2_1)->{'append'})($x_prime_6_3))($x_3));
   end_branch_4:;
   $__res = $__t4;
@@ -368,7 +368,7 @@ break;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go__4_2;
+  $__res = $go__go_4_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

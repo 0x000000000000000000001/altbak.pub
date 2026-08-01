@@ -50,15 +50,15 @@ return Call_genericCompare_prime(dict_0_box)
 	return cache_genericCompare_prime
 }
 
-var cache_genericCompare_prime__gopurs_runtime_Value_4287173190 gopurs_runtime.Value
-var once_genericCompare_prime__gopurs_runtime_Value_4287173190 sync.Once
-func Get_genericCompare_prime__gopurs_runtime_Value_4287173190() gopurs_runtime.Value {
-	once_genericCompare_prime__gopurs_runtime_Value_4287173190.Do(func() {
-		cache_genericCompare_prime__gopurs_runtime_Value_4287173190 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericCompare_prime__gopurs_runtime_Value_4287173190(dict_0_box)
+var cache_genericCompare_prime__gopurs_runtime_Value_309063238 gopurs_runtime.Value
+var once_genericCompare_prime__gopurs_runtime_Value_309063238 sync.Once
+func Get_genericCompare_prime__gopurs_runtime_Value_309063238() gopurs_runtime.Value {
+	once_genericCompare_prime__gopurs_runtime_Value_309063238.Do(func() {
+		cache_genericCompare_prime__gopurs_runtime_Value_309063238 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genericCompare_prime__gopurs_runtime_Value_309063238(dict_0_box)
 })
 	})
-	return cache_genericCompare_prime__gopurs_runtime_Value_4287173190
+	return cache_genericCompare_prime__gopurs_runtime_Value_309063238
 }
 
 var cache_genericOrdConstructor gopurs_runtime.Value
@@ -119,7 +119,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "genericCompare'")
 }
 
-func Call_genericCompare_prime__gopurs_runtime_Value_4287173190(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_genericCompare_prime__gopurs_runtime_Value_309063238(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "genericCompare'")

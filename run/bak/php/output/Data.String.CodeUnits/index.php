@@ -116,11 +116,25 @@ $singleton = function($c) use (&$singleton) {
     return $c;
 };
 
-$_charAt = function($just, $nothing, $i, $s) use (&$_charAt) {
+$_charAt = function($just, $nothing = null, $i = null, $s = null) use (&$_charAt) {
+    if (\func_num_args() < 4) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$_charAt) {
+
+            return $_charAt(...\array_merge($__args, $more));
+        };
+    }
     return ($i >= 0 && $i < strlen($s)) ? $just($s[$i]) : $nothing;
 };
 
-$_toChar = function($just, $nothing, $s) use (&$_toChar) {
+$_toChar = function($just, $nothing = null, $s = null) use (&$_toChar) {
+    if (\func_num_args() < 3) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$_toChar) {
+
+            return $_toChar(...\array_merge($__args, $more));
+        };
+    }
     return strlen($s) === 1 ? $just($s) : $nothing;
 };
 
@@ -128,7 +142,14 @@ $length = function($s) use (&$length) {
     return strlen($s);
 };
 
-$countPrefix = function($p, $s) use (&$countPrefix) {
+$countPrefix = function($p, $s = null) use (&$countPrefix) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$countPrefix) {
+
+            return $countPrefix(...\array_merge($__args, $more));
+        };
+    }
     $i = 0;
     $len = strlen($s);
     while ($i < $len && $p($s[$i])) {
@@ -137,18 +158,39 @@ $countPrefix = function($p, $s) use (&$countPrefix) {
     return $i;
 };
 
-$_indexOf = function($just, $nothing, $x, $s) use (&$_indexOf) {
+$_indexOf = function($just, $nothing = null, $x = null, $s = null) use (&$_indexOf) {
+    if (\func_num_args() < 4) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$_indexOf) {
+
+            return $_indexOf(...\array_merge($__args, $more));
+        };
+    }
     $i = strpos($s, $x);
     return $i === false ? $nothing : $just($i);
 };
 
-$_indexOfStartingAt = function($just, $nothing, $x, $startAt, $s) use (&$_indexOfStartingAt) {
+$_indexOfStartingAt = function($just, $nothing = null, $x = null, $startAt = null, $s = null) use (&$_indexOfStartingAt) {
+    if (\func_num_args() < 5) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$_indexOfStartingAt) {
+
+            return $_indexOfStartingAt(...\array_merge($__args, $more));
+        };
+    }
     if ($startAt < 0 || $startAt > strlen($s)) return $nothing;
     $i = strpos($s, $x, $startAt);
     return $i === false ? $nothing : $just($i);
 };
 
-$_lastIndexOf = function($just, $nothing, $x, $s) use (&$_lastIndexOf) {
+$_lastIndexOf = function($just, $nothing = null, $x = null, $s = null) use (&$_lastIndexOf) {
+    if (\func_num_args() < 4) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$_lastIndexOf) {
+
+            return $_lastIndexOf(...\array_merge($__args, $more));
+        };
+    }
     if ($x === "") {
         return $just(strlen($s));
     }
@@ -156,7 +198,14 @@ $_lastIndexOf = function($just, $nothing, $x, $s) use (&$_lastIndexOf) {
     return $i === false ? $nothing : $just($i);
 };
 
-$_lastIndexOfStartingAt = function($just, $nothing, $x, $startAt, $s) use (&$_lastIndexOfStartingAt) {
+$_lastIndexOfStartingAt = function($just, $nothing = null, $x = null, $startAt = null, $s = null) use (&$_lastIndexOfStartingAt) {
+    if (\func_num_args() < 5) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$_lastIndexOfStartingAt) {
+
+            return $_lastIndexOfStartingAt(...\array_merge($__args, $more));
+        };
+    }
     if ($x === "") return $just(\min($startAt, strlen($s)));
     if ($startAt < 0) return $nothing;
     if ($startAt > strlen($s)) $startAt = strlen($s);
@@ -171,15 +220,36 @@ $_lastIndexOfStartingAt = function($just, $nothing, $x, $startAt, $s) use (&$_la
     return $nothing;
 };
 
-$take = function($n, $s) use (&$take) {
+$take = function($n, $s = null) use (&$take) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$take) {
+
+            return $take(...\array_merge($__args, $more));
+        };
+    }
     return substr($s, 0, $n);
 };
 
-$drop = function($n, $s) use (&$drop) {
+$drop = function($n, $s = null) use (&$drop) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$drop) {
+
+            return $drop(...\array_merge($__args, $more));
+        };
+    }
     return substr($s, $n);
 };
 
-$slice = function($b, $e, $s) use (&$slice) {
+$slice = function($b, $e = null, $s = null) use (&$slice) {
+    if (\func_num_args() < 3) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$slice) {
+
+            return $slice(...\array_merge($__args, $more));
+        };
+    }
     // JS slice with negative indices
     $len = strlen($s);
     if ($b < 0) $b = \max($len + $b, 0);
@@ -190,7 +260,14 @@ $slice = function($b, $e, $s) use (&$slice) {
     return substr($s, $b, $e - $b);
 };
 
-$splitAt = function($i, $s) use (&$splitAt) {
+$splitAt = function($i, $s = null) use (&$splitAt) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$splitAt) {
+
+            return $splitAt(...\array_merge($__args, $more));
+        };
+    }
     return (object)[
         "before" => substr($s, 0, $i),
         "after" => substr($s, $i)
@@ -222,7 +299,7 @@ function majData_majString_majCodemajUnits__charmajAt($v0, $v1 = null, $v2 = nul
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
   global $ffi_Data_String_CodeUnits;
-  $f = ($ffi_Data_String_CodeUnits['_charAt'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('_charAt', $ffi_Data_String_CodeUnits) ? $ffi_Data_String_CodeUnits['_charAt'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3);
 }
 $GLOBALS['Data_String_CodeUnits__charAt'] = __NAMESPACE__ . '\\majData_majString_majCodemajUnits__charmajAt';
@@ -234,7 +311,7 @@ function majData_majString_majCodemajUnits__indexmajOf($v0, $v1 = null, $v2 = nu
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
   global $ffi_Data_String_CodeUnits;
-  $f = ($ffi_Data_String_CodeUnits['_indexOf'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('_indexOf', $ffi_Data_String_CodeUnits) ? $ffi_Data_String_CodeUnits['_indexOf'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3);
 }
 $GLOBALS['Data_String_CodeUnits__indexOf'] = __NAMESPACE__ . '\\majData_majString_majCodemajUnits__indexmajOf';
@@ -246,7 +323,7 @@ function majData_majString_majCodemajUnits__indexmajOfmajStartingmajAt($v0, $v1 
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
   global $ffi_Data_String_CodeUnits;
-  $f = ($ffi_Data_String_CodeUnits['_indexOfStartingAt'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('_indexOfStartingAt', $ffi_Data_String_CodeUnits) ? $ffi_Data_String_CodeUnits['_indexOfStartingAt'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3, $v4);
 }
 $GLOBALS['Data_String_CodeUnits__indexOfStartingAt'] = __NAMESPACE__ . '\\majData_majString_majCodemajUnits__indexmajOfmajStartingmajAt';
@@ -258,7 +335,7 @@ function majData_majString_majCodemajUnits__lastmajIndexmajOf($v0, $v1 = null, $
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
   global $ffi_Data_String_CodeUnits;
-  $f = ($ffi_Data_String_CodeUnits['_lastIndexOf'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('_lastIndexOf', $ffi_Data_String_CodeUnits) ? $ffi_Data_String_CodeUnits['_lastIndexOf'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3);
 }
 $GLOBALS['Data_String_CodeUnits__lastIndexOf'] = __NAMESPACE__ . '\\majData_majString_majCodemajUnits__lastmajIndexmajOf';
@@ -270,7 +347,7 @@ function majData_majString_majCodemajUnits__lastmajIndexmajOfmajStartingmajAt($v
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
   global $ffi_Data_String_CodeUnits;
-  $f = ($ffi_Data_String_CodeUnits['_lastIndexOfStartingAt'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('_lastIndexOfStartingAt', $ffi_Data_String_CodeUnits) ? $ffi_Data_String_CodeUnits['_lastIndexOfStartingAt'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3, $v4);
 }
 $GLOBALS['Data_String_CodeUnits__lastIndexOfStartingAt'] = __NAMESPACE__ . '\\majData_majString_majCodemajUnits__lastmajIndexmajOfmajStartingmajAt';
@@ -282,7 +359,7 @@ function majData_majString_majCodemajUnits__tomajChar($v0, $v1 = null, $v2 = nul
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Data_String_CodeUnits;
-  $f = ($ffi_Data_String_CodeUnits['_toChar'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('_toChar', $ffi_Data_String_CodeUnits) ? $ffi_Data_String_CodeUnits['_toChar'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Data_String_CodeUnits__toChar'] = __NAMESPACE__ . '\\majData_majString_majCodemajUnits__tomajChar';
@@ -294,7 +371,7 @@ function majData_majString_majCodemajUnits_countmajPrefix($v0, $v1 = null): int|
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_String_CodeUnits;
-  $f = ($ffi_Data_String_CodeUnits['countPrefix'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('countPrefix', $ffi_Data_String_CodeUnits) ? $ffi_Data_String_CodeUnits['countPrefix'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_String_CodeUnits_countPrefix'] = __NAMESPACE__ . '\\majData_majString_majCodemajUnits_countmajPrefix';
@@ -306,7 +383,7 @@ function majData_majString_majCodemajUnits_drop(int $v0, $v1 = null): string|\Cl
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_String_CodeUnits;
-  $f = ($ffi_Data_String_CodeUnits['drop'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('drop', $ffi_Data_String_CodeUnits) ? $ffi_Data_String_CodeUnits['drop'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_String_CodeUnits_drop'] = __NAMESPACE__ . '\\majData_majString_majCodemajUnits_drop';
@@ -318,7 +395,7 @@ function majData_majString_majCodemajUnits_frommajCharmajArray($v0): string|\Clo
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_String_CodeUnits;
-  $f = ($ffi_Data_String_CodeUnits['fromCharArray'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('fromCharArray', $ffi_Data_String_CodeUnits) ? $ffi_Data_String_CodeUnits['fromCharArray'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_String_CodeUnits_fromCharArray'] = __NAMESPACE__ . '\\majData_majString_majCodemajUnits_frommajCharmajArray';
@@ -330,7 +407,7 @@ function majData_majString_majCodemajUnits_length(string $v0): int|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_String_CodeUnits;
-  $f = ($ffi_Data_String_CodeUnits['length'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('length', $ffi_Data_String_CodeUnits) ? $ffi_Data_String_CodeUnits['length'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_String_CodeUnits_length'] = __NAMESPACE__ . '\\majData_majString_majCodemajUnits_length';
@@ -342,7 +419,7 @@ function majData_majString_majCodemajUnits_singleton($v0): string|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_String_CodeUnits;
-  $f = ($ffi_Data_String_CodeUnits['singleton'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('singleton', $ffi_Data_String_CodeUnits) ? $ffi_Data_String_CodeUnits['singleton'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_String_CodeUnits_singleton'] = __NAMESPACE__ . '\\majData_majString_majCodemajUnits_singleton';
@@ -354,7 +431,7 @@ function majData_majString_majCodemajUnits_slice(int $v0, $v1 = null, $v2 = null
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Data_String_CodeUnits;
-  $f = ($ffi_Data_String_CodeUnits['slice'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('slice', $ffi_Data_String_CodeUnits) ? $ffi_Data_String_CodeUnits['slice'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Data_String_CodeUnits_slice'] = __NAMESPACE__ . '\\majData_majString_majCodemajUnits_slice';
@@ -366,7 +443,7 @@ function majData_majString_majCodemajUnits_splitmajAt(int $v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_String_CodeUnits;
-  $f = ($ffi_Data_String_CodeUnits['splitAt'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('splitAt', $ffi_Data_String_CodeUnits) ? $ffi_Data_String_CodeUnits['splitAt'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_String_CodeUnits_splitAt'] = __NAMESPACE__ . '\\majData_majString_majCodemajUnits_splitmajAt';
@@ -378,7 +455,7 @@ function majData_majString_majCodemajUnits_take(int $v0, $v1 = null): string|\Cl
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_String_CodeUnits;
-  $f = ($ffi_Data_String_CodeUnits['take'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('take', $ffi_Data_String_CodeUnits) ? $ffi_Data_String_CodeUnits['take'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_String_CodeUnits_take'] = __NAMESPACE__ . '\\majData_majString_majCodemajUnits_take';
@@ -390,7 +467,7 @@ function majData_majString_majCodemajUnits_tomajCharmajArray(string $v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_String_CodeUnits;
-  $f = ($ffi_Data_String_CodeUnits['toCharArray'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('toCharArray', $ffi_Data_String_CodeUnits) ? $ffi_Data_String_CodeUnits['toCharArray'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_String_CodeUnits_toCharArray'] = __NAMESPACE__ . '\\majData_majString_majCodemajUnits_tomajCharmajArray';

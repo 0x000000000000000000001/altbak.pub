@@ -111,7 +111,7 @@ var cache_in1 gopurs_runtime.Value
 var once_in1 sync.Once
 func Get_in1() gopurs_runtime.Value {
 	once_in1.Do(func() {
-		cache_in1 = pkg_Data_Functor_Coproduct.Get_left__gopurs_runtime_Value_4159005023()
+		cache_in1 = pkg_Data_Functor_Coproduct.Get_left()
 	})
 	return cache_in1
 }

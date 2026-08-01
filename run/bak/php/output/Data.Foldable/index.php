@@ -130,7 +130,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Foldable = \call_user_func(function() {
   $exports = [];
-$foldrArray = function($f, $init, $xs) use (&$foldrArray) {
+$foldrArray = function($f, $init = null, $xs = null) use (&$foldrArray) {
+    if (\func_num_args() < 3) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$foldrArray) {
+            return $foldrArray(...\array_merge($__args, $more));
+        };
+    }
     
     $acc = $init;
     for ($i = \count($xs) - 1; $i >= 0; $i--) {
@@ -141,7 +147,13 @@ $foldrArray = function($f, $init, $xs) use (&$foldrArray) {
 };
 $exports['foldrArray'] = $foldrArray;
 
-$foldlArray = function($f, $init, $xs) use (&$foldlArray) {
+$foldlArray = function($f, $init = null, $xs = null) use (&$foldlArray) {
+    if (\func_num_args() < 3) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$foldlArray) {
+            return $foldlArray(...\array_merge($__args, $more));
+        };
+    }
     
     $acc = $init;
     for ($i = 0, $len = \count($xs); $i < $len; $i++) {
@@ -162,7 +174,7 @@ function majData_majFoldable_foldlmajArray($v0, $v1 = null, $v2 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Data_Foldable;
-  $f = ($ffi_Data_Foldable['foldlArray'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('foldlArray', $ffi_Data_Foldable) ? $ffi_Data_Foldable['foldlArray'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Data_Foldable_foldlArray'] = __NAMESPACE__ . '\\majData_majFoldable_foldlmajArray';
@@ -174,7 +186,7 @@ function majData_majFoldable_foldrmajArray($v0, $v1 = null, $v2 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Data_Foldable;
-  $f = ($ffi_Data_Foldable['foldrArray'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('foldrArray', $ffi_Data_Foldable) ? $ffi_Data_Foldable['foldrArray'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Data_Foldable_foldrArray'] = __NAMESPACE__ . '\\majData_majFoldable_foldrmajArray';
@@ -1326,29 +1338,29 @@ $GLOBALS['Data_Foldable_foldableArray'] = (object)["foldr" => $GLOBALS['Data_Fol
 // Data_Foldable_foldableFreeMonoidTree
 $GLOBALS['Data_Foldable_foldableFreeMonoidTree'] = (object)["foldl" => function($fn_0) {
   $__num = \func_num_args();
-  $go__1_0 = null;
-  $go__1_0 = (function() use ($fn_0, &$go__1_0) {
-  $__fn = function($acc_2, $lhs_3 = null, $rhs_4 = null) use ($fn_0, &$go__1_0, &$__fn) {
+  $go__go_1_0 = null;
+  $go__go_1_0 = (function() use ($fn_0, &$go__go_1_0) {
+  $__fn = function($acc_2, $lhs_3 = null, $rhs_4 = null) use ($fn_0, &$go__go_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__tco_var_go__1_0_0_acc_2 = $acc_2;
-  $__tco_var_go__1_0_0_lhs_3 = $lhs_3;
-  $__tco_var_go__1_0_0_rhs_4 = $rhs_4;
-  tco_loop_go__1_0_0:;
-  $acc_2 = $__tco_var_go__1_0_0_acc_2;
-  $lhs_3 = $__tco_var_go__1_0_0_lhs_3;
-  $rhs_4 = $__tco_var_go__1_0_0_rhs_4;
+  $__tco_var_go__go_1_0_0_acc_2 = $acc_2;
+  $__tco_var_go__go_1_0_0_lhs_3 = $lhs_3;
+  $__tco_var_go__go_1_0_0_rhs_4 = $rhs_4;
+  tco_loop_go__go_1_0_0:;
+  $acc_2 = $__tco_var_go__go_1_0_0_acc_2;
+  $lhs_3 = $__tco_var_go__go_1_0_0_lhs_3;
+  $rhs_4 = $__tco_var_go__go_1_0_0_rhs_4;
   $__t0 = null;;
   if ($lhs_3 instanceof \Data\Foldable\Data_Foldable_Node) {
 $__tco_1 = (($fn_0)($acc_2))(($lhs_3)->{'value0'});
 $__tco_2 = $rhs_4;
 $__tco_3 = new \Data\Foldable\Data_Foldable_Empty();
-$__tco_var_go__1_0_0_acc_2 = $__tco_1;
-$__tco_var_go__1_0_0_lhs_3 = $__tco_2;
-$__tco_var_go__1_0_0_rhs_4 = $__tco_3;
-goto tco_loop_go__1_0_0;;
+$__tco_var_go__go_1_0_0_acc_2 = $__tco_1;
+$__tco_var_go__go_1_0_0_lhs_3 = $__tco_2;
+$__tco_var_go__go_1_0_0_rhs_4 = $__tco_3;
+goto tco_loop_go__go_1_0_0;;
 $__t0 = null;
 goto end_branch_0;;
 };
@@ -1358,10 +1370,10 @@ if (($lhs_3)->{'value1'} instanceof \Data\Foldable\Data_Foldable_Empty) {
 $__tco_8 = $acc_2;
 $__tco_9 = ($lhs_3)->{'value0'};
 $__tco_10 = $rhs_4;
-$__tco_var_go__1_0_0_acc_2 = $__tco_8;
-$__tco_var_go__1_0_0_lhs_3 = $__tco_9;
-$__tco_var_go__1_0_0_rhs_4 = $__tco_10;
-goto tco_loop_go__1_0_0;;
+$__tco_var_go__go_1_0_0_acc_2 = $__tco_8;
+$__tco_var_go__go_1_0_0_lhs_3 = $__tco_9;
+$__tco_var_go__go_1_0_0_rhs_4 = $__tco_10;
+goto tco_loop_go__go_1_0_0;;
 $__t7 = null;
 goto end_branch_7;;
 };
@@ -1369,20 +1381,20 @@ if ($rhs_4 instanceof \Data\Foldable\Data_Foldable_Empty) {
 $__tco_11 = $acc_2;
 $__tco_12 = ($lhs_3)->{'value0'};
 $__tco_13 = ($lhs_3)->{'value1'};
-$__tco_var_go__1_0_0_acc_2 = $__tco_11;
-$__tco_var_go__1_0_0_lhs_3 = $__tco_12;
-$__tco_var_go__1_0_0_rhs_4 = $__tco_13;
-goto tco_loop_go__1_0_0;;
+$__tco_var_go__go_1_0_0_acc_2 = $__tco_11;
+$__tco_var_go__go_1_0_0_lhs_3 = $__tco_12;
+$__tco_var_go__go_1_0_0_rhs_4 = $__tco_13;
+goto tco_loop_go__go_1_0_0;;
 $__t7 = null;
 goto end_branch_7;;
 };
 $__tco_4 = $acc_2;
 $__tco_5 = ($lhs_3)->{'value0'};
 $__tco_6 = new \Data\Foldable\Data_Foldable_Append(($lhs_3)->{'value1'}, $rhs_4);
-$__tco_var_go__1_0_0_acc_2 = $__tco_4;
-$__tco_var_go__1_0_0_lhs_3 = $__tco_5;
-$__tco_var_go__1_0_0_rhs_4 = $__tco_6;
-goto tco_loop_go__1_0_0;;
+$__tco_var_go__go_1_0_0_acc_2 = $__tco_4;
+$__tco_var_go__go_1_0_0_lhs_3 = $__tco_5;
+$__tco_var_go__go_1_0_0_rhs_4 = $__tco_6;
+goto tco_loop_go__go_1_0_0;;
 $__t7 = null;
 end_branch_7:;
 $__t0 = $__t7;
@@ -1397,10 +1409,10 @@ goto end_branch_17;;
 $__tco_14 = $acc_2;
 $__tco_15 = $rhs_4;
 $__tco_16 = new \Data\Foldable\Data_Foldable_Empty();
-$__tco_var_go__1_0_0_acc_2 = $__tco_14;
-$__tco_var_go__1_0_0_lhs_3 = $__tco_15;
-$__tco_var_go__1_0_0_rhs_4 = $__tco_16;
-goto tco_loop_go__1_0_0;;
+$__tco_var_go__go_1_0_0_acc_2 = $__tco_14;
+$__tco_var_go__go_1_0_0_lhs_3 = $__tco_15;
+$__tco_var_go__go_1_0_0_rhs_4 = $__tco_16;
+goto tco_loop_go__go_1_0_0;;
 $__t17 = null;
 end_branch_17:;
 $__t0 = $__t17;
@@ -1416,13 +1428,13 @@ goto end_branch_0;;
   };
   return $__fn;
 })();
-  $__res = (function() use (&$go__1_0) {
-  $__fn = function($a_2, $b_3 = null) use (&$go__1_0, &$__fn) {
+  $__res = (function() use (&$go__go_1_0) {
+  $__fn = function($a_2, $b_3 = null) use (&$go__go_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($go__1_0)($a_2))($b_3))(new \Data\Foldable\Data_Foldable_Empty());
+  $__res = ((($go__go_1_0)($a_2))($b_3))(new \Data\Foldable\Data_Foldable_Empty());
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1434,29 +1446,29 @@ goto end_branch_0;;
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "foldr" => function($fn_0) {
   $__num = \func_num_args();
-  $go__1_1 = null;
-  $go__1_1 = (function() use ($fn_0, &$go__1_1) {
-  $__fn = function($acc_2, $lhs_3 = null, $rhs_4 = null) use ($fn_0, &$go__1_1, &$__fn) {
+  $go__go_1_1 = null;
+  $go__go_1_1 = (function() use ($fn_0, &$go__go_1_1) {
+  $__fn = function($acc_2, $lhs_3 = null, $rhs_4 = null) use ($fn_0, &$go__go_1_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__tco_var_go__1_1_1_acc_2 = $acc_2;
-  $__tco_var_go__1_1_1_lhs_3 = $lhs_3;
-  $__tco_var_go__1_1_1_rhs_4 = $rhs_4;
-  tco_loop_go__1_1_1:;
-  $acc_2 = $__tco_var_go__1_1_1_acc_2;
-  $lhs_3 = $__tco_var_go__1_1_1_lhs_3;
-  $rhs_4 = $__tco_var_go__1_1_1_rhs_4;
+  $__tco_var_go__go_1_1_1_acc_2 = $acc_2;
+  $__tco_var_go__go_1_1_1_lhs_3 = $lhs_3;
+  $__tco_var_go__go_1_1_1_rhs_4 = $rhs_4;
+  tco_loop_go__go_1_1_1:;
+  $acc_2 = $__tco_var_go__go_1_1_1_acc_2;
+  $lhs_3 = $__tco_var_go__go_1_1_1_lhs_3;
+  $rhs_4 = $__tco_var_go__go_1_1_1_rhs_4;
   $__t1 = null;;
   if ($rhs_4 instanceof \Data\Foldable\Data_Foldable_Node) {
 $__tco_2 = (($fn_0)(($rhs_4)->{'value0'}))($acc_2);
 $__tco_3 = new \Data\Foldable\Data_Foldable_Empty();
 $__tco_4 = $lhs_3;
-$__tco_var_go__1_1_1_acc_2 = $__tco_2;
-$__tco_var_go__1_1_1_lhs_3 = $__tco_3;
-$__tco_var_go__1_1_1_rhs_4 = $__tco_4;
-goto tco_loop_go__1_1_1;;
+$__tco_var_go__go_1_1_1_acc_2 = $__tco_2;
+$__tco_var_go__go_1_1_1_lhs_3 = $__tco_3;
+$__tco_var_go__go_1_1_1_rhs_4 = $__tco_4;
+goto tco_loop_go__go_1_1_1;;
 $__t1 = null;
 goto end_branch_1;;
 };
@@ -1466,10 +1478,10 @@ if (($rhs_4)->{'value0'} instanceof \Data\Foldable\Data_Foldable_Empty) {
 $__tco_9 = $acc_2;
 $__tco_10 = $lhs_3;
 $__tco_11 = ($rhs_4)->{'value1'};
-$__tco_var_go__1_1_1_acc_2 = $__tco_9;
-$__tco_var_go__1_1_1_lhs_3 = $__tco_10;
-$__tco_var_go__1_1_1_rhs_4 = $__tco_11;
-goto tco_loop_go__1_1_1;;
+$__tco_var_go__go_1_1_1_acc_2 = $__tco_9;
+$__tco_var_go__go_1_1_1_lhs_3 = $__tco_10;
+$__tco_var_go__go_1_1_1_rhs_4 = $__tco_11;
+goto tco_loop_go__go_1_1_1;;
 $__t8 = null;
 goto end_branch_8;;
 };
@@ -1477,20 +1489,20 @@ if ($lhs_3 instanceof \Data\Foldable\Data_Foldable_Empty) {
 $__tco_12 = $acc_2;
 $__tco_13 = ($rhs_4)->{'value0'};
 $__tco_14 = ($rhs_4)->{'value1'};
-$__tco_var_go__1_1_1_acc_2 = $__tco_12;
-$__tco_var_go__1_1_1_lhs_3 = $__tco_13;
-$__tco_var_go__1_1_1_rhs_4 = $__tco_14;
-goto tco_loop_go__1_1_1;;
+$__tco_var_go__go_1_1_1_acc_2 = $__tco_12;
+$__tco_var_go__go_1_1_1_lhs_3 = $__tco_13;
+$__tco_var_go__go_1_1_1_rhs_4 = $__tco_14;
+goto tco_loop_go__go_1_1_1;;
 $__t8 = null;
 goto end_branch_8;;
 };
 $__tco_5 = $acc_2;
 $__tco_6 = new \Data\Foldable\Data_Foldable_Append($lhs_3, ($rhs_4)->{'value0'});
 $__tco_7 = ($rhs_4)->{'value1'};
-$__tco_var_go__1_1_1_acc_2 = $__tco_5;
-$__tco_var_go__1_1_1_lhs_3 = $__tco_6;
-$__tco_var_go__1_1_1_rhs_4 = $__tco_7;
-goto tco_loop_go__1_1_1;;
+$__tco_var_go__go_1_1_1_acc_2 = $__tco_5;
+$__tco_var_go__go_1_1_1_lhs_3 = $__tco_6;
+$__tco_var_go__go_1_1_1_rhs_4 = $__tco_7;
+goto tco_loop_go__go_1_1_1;;
 $__t8 = null;
 end_branch_8:;
 $__t1 = $__t8;
@@ -1505,10 +1517,10 @@ goto end_branch_18;;
 $__tco_15 = $acc_2;
 $__tco_16 = new \Data\Foldable\Data_Foldable_Empty();
 $__tco_17 = $lhs_3;
-$__tco_var_go__1_1_1_acc_2 = $__tco_15;
-$__tco_var_go__1_1_1_lhs_3 = $__tco_16;
-$__tco_var_go__1_1_1_rhs_4 = $__tco_17;
-goto tco_loop_go__1_1_1;;
+$__tco_var_go__go_1_1_1_acc_2 = $__tco_15;
+$__tco_var_go__go_1_1_1_lhs_3 = $__tco_16;
+$__tco_var_go__go_1_1_1_rhs_4 = $__tco_17;
+goto tco_loop_go__go_1_1_1;;
 $__t18 = null;
 end_branch_18:;
 $__t1 = $__t18;
@@ -1524,13 +1536,13 @@ goto end_branch_1;;
   };
   return $__fn;
 })();
-  $__res = (function() use (&$go__1_1) {
-  $__fn = function($a_2, $b_3 = null) use (&$go__1_1, &$__fn) {
+  $__res = (function() use (&$go__go_1_1) {
+  $__fn = function($a_2, $b_3 = null) use (&$go__go_1_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($go__1_1)($a_2))(new \Data\Foldable\Data_Foldable_Empty()))($b_3);
+  $__res = ((($go__go_1_1)($a_2))(new \Data\Foldable\Data_Foldable_Empty()))($b_3);
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

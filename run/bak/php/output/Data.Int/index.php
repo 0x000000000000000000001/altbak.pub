@@ -113,7 +113,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Int = \call_user_func(function() {
   $exports = [];
-$fromNumberImpl = function($just, $nothing, $n) use (&$fromNumberImpl) {
+$fromNumberImpl = function($just, $nothing = null, $n = null) use (&$fromNumberImpl) {
+    if (\func_num_args() < 3) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$fromNumberImpl) {
+
+            return $fromNumberImpl(...\array_merge($__args, $more));
+        };
+    }
     // JS bitwise OR 0 limits to 32-bit signed integer. 
     // PHP integers are typically 64-bit, but to match JS semantics we can just cast to int.
     return (intval($n) == $n) ? $just(intval($n)) : $nothing;
@@ -123,7 +130,14 @@ $toNumber = function($n) {
     return floatval($n);
 };
 
-$fromStringAsImpl = function($just, $nothing, $radix, $s) use (&$fromStringAsImpl) {
+$fromStringAsImpl = function($just, $nothing = null, $radix = null, $s = null) use (&$fromStringAsImpl) {
+    if (\func_num_args() < 4) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$fromStringAsImpl) {
+
+            return $fromStringAsImpl(...\array_merge($__args, $more));
+        };
+    }
     
     if ($radix < 11) {
         $digits = "[0-" . ($radix - 1) . "]";
@@ -142,19 +156,47 @@ $fromStringAsImpl = function($just, $nothing, $radix, $s) use (&$fromStringAsImp
     }
 };
 
-$toStringAs = function($radix, $i) use (&$toStringAs) {
+$toStringAs = function($radix, $i = null) use (&$toStringAs) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$toStringAs) {
+
+            return $toStringAs(...\array_merge($__args, $more));
+        };
+    }
     return base_convert($i, 10, $radix);
 };
 
-$quot = function($x, $y) use (&$quot) {
+$quot = function($x, $y = null) use (&$quot) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$quot) {
+
+            return $quot(...\array_merge($__args, $more));
+        };
+    }
     return intdiv($x, $y);
 };
 
-$rem = function($x, $y) use (&$rem) {
+$rem = function($x, $y = null) use (&$rem) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$rem) {
+
+            return $rem(...\array_merge($__args, $more));
+        };
+    }
     return $x % $y;
 };
 
-$pow = function($x, $y) use (&$pow) {
+$pow = function($x, $y = null) use (&$pow) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$pow) {
+
+            return $pow(...\array_merge($__args, $more));
+        };
+    }
     return intval(pow($x, $y));
 };
 
@@ -175,7 +217,7 @@ function majData_majInt_frommajNumbermajImpl($v0, $v1 = null, $v2 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Data_Int;
-  $f = ($ffi_Data_Int['fromNumberImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('fromNumberImpl', $ffi_Data_Int) ? $ffi_Data_Int['fromNumberImpl'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Data_Int_fromNumberImpl'] = __NAMESPACE__ . '\\majData_majInt_frommajNumbermajImpl';
@@ -187,7 +229,7 @@ function majData_majInt_frommajStringmajAsmajImpl($v0, $v1 = null, $v2 = null, $
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
   global $ffi_Data_Int;
-  $f = ($ffi_Data_Int['fromStringAsImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('fromStringAsImpl', $ffi_Data_Int) ? $ffi_Data_Int['fromStringAsImpl'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3);
 }
 $GLOBALS['Data_Int_fromStringAsImpl'] = __NAMESPACE__ . '\\majData_majInt_frommajStringmajAsmajImpl';
@@ -199,7 +241,7 @@ function majData_majInt_pow(int $v0, $v1 = null): int|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Int;
-  $f = ($ffi_Data_Int['pow'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('pow', $ffi_Data_Int) ? $ffi_Data_Int['pow'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Int_pow'] = __NAMESPACE__ . '\\majData_majInt_pow';
@@ -211,7 +253,7 @@ function majData_majInt_quot(int $v0, $v1 = null): int|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Int;
-  $f = ($ffi_Data_Int['quot'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('quot', $ffi_Data_Int) ? $ffi_Data_Int['quot'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Int_quot'] = __NAMESPACE__ . '\\majData_majInt_quot';
@@ -223,7 +265,7 @@ function majData_majInt_rem(int $v0, $v1 = null): int|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Int;
-  $f = ($ffi_Data_Int['rem'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('rem', $ffi_Data_Int) ? $ffi_Data_Int['rem'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Int_rem'] = __NAMESPACE__ . '\\majData_majInt_rem';
@@ -235,7 +277,7 @@ function majData_majInt_tomajNumber(int $v0): float|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_Int;
-  $f = ($ffi_Data_Int['toNumber'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('toNumber', $ffi_Data_Int) ? $ffi_Data_Int['toNumber'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_Int_toNumber'] = __NAMESPACE__ . '\\majData_majInt_tomajNumber';
@@ -247,7 +289,7 @@ function majData_majInt_tomajStringmajAs(int $v0, $v1 = null): string|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Int;
-  $f = ($ffi_Data_Int['toStringAs'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('toStringAs', $ffi_Data_Int) ? $ffi_Data_Int['toStringAs'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Int_toStringAs'] = __NAMESPACE__ . '\\majData_majInt_tomajStringmajAs';

@@ -2,7 +2,7 @@ package Data_Array_ST
 
 import "gopurs/output/gopurs_runtime"
 
-func New_() func() interface{} {
+func NewImpl() func() interface{} {
 	return func() interface{} {
 		arr := make([]interface{}, 0)
 		return &arr
@@ -160,11 +160,11 @@ func ToAssocArrayImpl(arr interface{}) func() interface{} {
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_new_() func() interface{} {
-	return New_()
+func Call_newImpl() func() interface{} {
+	return NewImpl()
 }
-var _Gopurs_New_ = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-	go_res := New_()
+var _Gopurs_NewImpl = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+	go_res := NewImpl()
 	return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 			inner_res := go_res()
 			return gopurs_runtime.Box(inner_res)

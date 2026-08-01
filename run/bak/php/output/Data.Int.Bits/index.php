@@ -95,27 +95,69 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Int_Bits = \call_user_func(function() {
   $exports = [];
-$and = function($n1, $n2) use (&$and) {
+$and = function($n1, $n2 = null) use (&$and) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$and) {
+
+            return $and(...\array_merge($__args, $more));
+        };
+    }
     return $n1 & $n2;
 };
 
-$or = function($n1, $n2) use (&$or) {
+$or = function($n1, $n2 = null) use (&$or) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$or) {
+
+            return $or(...\array_merge($__args, $more));
+        };
+    }
     return $n1 | $n2;
 };
 
-$xor = function($n1, $n2) use (&$xor) {
+$xor = function($n1, $n2 = null) use (&$xor) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$xor) {
+
+            return $xor(...\array_merge($__args, $more));
+        };
+    }
     return $n1 ^ $n2;
 };
 
-$shl = function($n1, $n2) use (&$shl) {
+$shl = function($n1, $n2 = null) use (&$shl) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$shl) {
+
+            return $shl(...\array_merge($__args, $more));
+        };
+    }
     return $n1 << $n2;
 };
 
-$shr = function($n1, $n2) use (&$shr) {
+$shr = function($n1, $n2 = null) use (&$shr) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$shr) {
+
+            return $shr(...\array_merge($__args, $more));
+        };
+    }
     return $n1 >> $n2;
 };
 
-$zshr = function($n1, $n2) use (&$zshr) {
+$zshr = function($n1, $n2 = null) use (&$zshr) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$zshr) {
+
+            return $zshr(...\array_merge($__args, $more));
+        };
+    }
     // PHP doesn't have >>> operator. Emulate 32-bit zero-fill right shift.
     return ($n1 >> $n2) & (0x7fffffff >> ($n2 - 1));
 };
@@ -141,7 +183,7 @@ function majData_majInt_majBits_and(int $v0, $v1 = null): int|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Int_Bits;
-  $f = ($ffi_Data_Int_Bits['and'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('and', $ffi_Data_Int_Bits) ? $ffi_Data_Int_Bits['and'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Int_Bits_and'] = __NAMESPACE__ . '\\majData_majInt_majBits_and';
@@ -153,7 +195,7 @@ function majData_majInt_majBits_complement(int $v0): int|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_Int_Bits;
-  $f = ($ffi_Data_Int_Bits['complement'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('complement', $ffi_Data_Int_Bits) ? $ffi_Data_Int_Bits['complement'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_Int_Bits_complement'] = __NAMESPACE__ . '\\majData_majInt_majBits_complement';
@@ -165,7 +207,7 @@ function majData_majInt_majBits_or(int $v0, $v1 = null): int|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Int_Bits;
-  $f = ($ffi_Data_Int_Bits['or'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('or', $ffi_Data_Int_Bits) ? $ffi_Data_Int_Bits['or'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Int_Bits_or'] = __NAMESPACE__ . '\\majData_majInt_majBits_or';
@@ -177,7 +219,7 @@ function majData_majInt_majBits_shl(int $v0, $v1 = null): int|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Int_Bits;
-  $f = ($ffi_Data_Int_Bits['shl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('shl', $ffi_Data_Int_Bits) ? $ffi_Data_Int_Bits['shl'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Int_Bits_shl'] = __NAMESPACE__ . '\\majData_majInt_majBits_shl';
@@ -189,7 +231,7 @@ function majData_majInt_majBits_shr(int $v0, $v1 = null): int|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Int_Bits;
-  $f = ($ffi_Data_Int_Bits['shr'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('shr', $ffi_Data_Int_Bits) ? $ffi_Data_Int_Bits['shr'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Int_Bits_shr'] = __NAMESPACE__ . '\\majData_majInt_majBits_shr';
@@ -201,7 +243,7 @@ function majData_majInt_majBits_xor(int $v0, $v1 = null): int|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Int_Bits;
-  $f = ($ffi_Data_Int_Bits['xor'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('xor', $ffi_Data_Int_Bits) ? $ffi_Data_Int_Bits['xor'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Int_Bits_xor'] = __NAMESPACE__ . '\\majData_majInt_majBits_xor';
@@ -213,7 +255,7 @@ function majData_majInt_majBits_zshr(int $v0, $v1 = null): int|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Int_Bits;
-  $f = ($ffi_Data_Int_Bits['zshr'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('zshr', $ffi_Data_Int_Bits) ? $ffi_Data_Int_Bits['zshr'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Int_Bits_zshr'] = __NAMESPACE__ . '\\majData_majInt_majBits_zshr';

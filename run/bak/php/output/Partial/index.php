@@ -109,7 +109,7 @@ function majPartial__crashmajWith(string $v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Partial;
-  $f = ($ffi_Partial['_crashWith'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('_crashWith', $ffi_Partial) ? $ffi_Partial['_crashWith'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Partial__crashWith'] = __NAMESPACE__ . '\\majPartial__crashmajWith';

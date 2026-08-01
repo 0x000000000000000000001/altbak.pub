@@ -95,7 +95,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_String_Unsafe = \call_user_func(function() {
   $exports = [];
-$charAt = function($i, $s) use (&$charAt) {
+$charAt = function($i, $s = null) use (&$charAt) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$charAt) {
+
+            return $charAt(...\array_merge($__args, $more));
+        };
+    }
     if ($i >= 0 && $i < strlen($s)) return $s[$i];
     throw new \Exception("Data.String.Unsafe.charAt: Invalid index.");
 };
@@ -117,7 +124,7 @@ function majData_majString_majUnsafe_char(string $v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_String_Unsafe;
-  $f = ($ffi_Data_String_Unsafe['char'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('char', $ffi_Data_String_Unsafe) ? $ffi_Data_String_Unsafe['char'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_String_Unsafe_char'] = __NAMESPACE__ . '\\majData_majString_majUnsafe_char';
@@ -129,7 +136,7 @@ function majData_majString_majUnsafe_charmajAt(int $v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_String_Unsafe;
-  $f = ($ffi_Data_String_Unsafe['charAt'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('charAt', $ffi_Data_String_Unsafe) ? $ffi_Data_String_Unsafe['charAt'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_String_Unsafe_charAt'] = __NAMESPACE__ . '\\majData_majString_majUnsafe_charmajAt';

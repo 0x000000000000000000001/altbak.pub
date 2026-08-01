@@ -104,7 +104,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Ord = \call_user_func(function() {
   $exports = [];
-$ordIntImpl = function($lt, $eq, $gt, $x, $y) use (&$ordIntImpl) {
+$ordIntImpl = function($lt, $eq = null, $gt = null, $x = null, $y = null) use (&$ordIntImpl) {
+    if (\func_num_args() < 5) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$ordIntImpl) {
+
+            return $ordIntImpl(...\array_merge($__args, $more));
+        };
+    }
     return $x < $y ? $lt : ($x === $y ? $eq : $gt);
 };
 $ordStringImpl = $ordIntImpl;
@@ -118,7 +125,13 @@ $exports['ordNumberImpl'] = $ordNumberImpl;
 $exports['ordCharImpl'] = $ordCharImpl;
 $exports['ordBooleanImpl'] = $ordBooleanImpl;
 
-$ordArrayImpl = function($f, $xs, $ys) use (&$ordArrayImpl) {
+$ordArrayImpl = function($f, $xs = null, $ys = null) use (&$ordArrayImpl) {
+    if (\func_num_args() < 3) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$ordArrayImpl) {
+            return $ordArrayImpl(...\array_merge($__args, $more));
+        };
+    }
     
     $i = 0;
     $xlen = \count($xs);
@@ -152,7 +165,7 @@ function majData_majOrd_ordmajArraymajImpl($v0, $v1 = null, $v2 = null): int|\Cl
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Data_Ord;
-  $f = ($ffi_Data_Ord['ordArrayImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('ordArrayImpl', $ffi_Data_Ord) ? $ffi_Data_Ord['ordArrayImpl'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Data_Ord_ordArrayImpl'] = __NAMESPACE__ . '\\majData_majOrd_ordmajArraymajImpl';
@@ -164,7 +177,7 @@ function majData_majOrd_ordmajBooleanmajImpl($v0, $v1 = null, $v2 = null, $v3 = 
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
   global $ffi_Data_Ord;
-  $f = ($ffi_Data_Ord['ordBooleanImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('ordBooleanImpl', $ffi_Data_Ord) ? $ffi_Data_Ord['ordBooleanImpl'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3, $v4);
 }
 $GLOBALS['Data_Ord_ordBooleanImpl'] = __NAMESPACE__ . '\\majData_majOrd_ordmajBooleanmajImpl';
@@ -176,7 +189,7 @@ function majData_majOrd_ordmajCharmajImpl($v0, $v1 = null, $v2 = null, $v3 = nul
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
   global $ffi_Data_Ord;
-  $f = ($ffi_Data_Ord['ordCharImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('ordCharImpl', $ffi_Data_Ord) ? $ffi_Data_Ord['ordCharImpl'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3, $v4);
 }
 $GLOBALS['Data_Ord_ordCharImpl'] = __NAMESPACE__ . '\\majData_majOrd_ordmajCharmajImpl';
@@ -188,7 +201,7 @@ function majData_majOrd_ordmajIntmajImpl($v0, $v1 = null, $v2 = null, $v3 = null
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
   global $ffi_Data_Ord;
-  $f = ($ffi_Data_Ord['ordIntImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('ordIntImpl', $ffi_Data_Ord) ? $ffi_Data_Ord['ordIntImpl'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3, $v4);
 }
 $GLOBALS['Data_Ord_ordIntImpl'] = __NAMESPACE__ . '\\majData_majOrd_ordmajIntmajImpl';
@@ -200,7 +213,7 @@ function majData_majOrd_ordmajNumbermajImpl($v0, $v1 = null, $v2 = null, $v3 = n
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
   global $ffi_Data_Ord;
-  $f = ($ffi_Data_Ord['ordNumberImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('ordNumberImpl', $ffi_Data_Ord) ? $ffi_Data_Ord['ordNumberImpl'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3, $v4);
 }
 $GLOBALS['Data_Ord_ordNumberImpl'] = __NAMESPACE__ . '\\majData_majOrd_ordmajNumbermajImpl';
@@ -212,7 +225,7 @@ function majData_majOrd_ordmajStringmajImpl($v0, $v1 = null, $v2 = null, $v3 = n
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
   global $ffi_Data_Ord;
-  $f = ($ffi_Data_Ord['ordStringImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('ordStringImpl', $ffi_Data_Ord) ? $ffi_Data_Ord['ordStringImpl'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3, $v4);
 }
 $GLOBALS['Data_Ord_ordStringImpl'] = __NAMESPACE__ . '\\majData_majOrd_ordmajStringmajImpl';

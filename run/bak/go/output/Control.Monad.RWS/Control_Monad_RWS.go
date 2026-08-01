@@ -35,7 +35,7 @@ var cache_withRWS gopurs_runtime.Value
 var once_withRWS sync.Once
 func Get_withRWS() gopurs_runtime.Value {
 	once_withRWS.Do(func() {
-		cache_withRWS = pkg_Control_Monad_RWS_Trans.Get_withRWST__gopurs_runtime_Value_1084601210()
+		cache_withRWS = pkg_Control_Monad_RWS_Trans.Get_withRWST()
 	})
 	return cache_withRWS
 }

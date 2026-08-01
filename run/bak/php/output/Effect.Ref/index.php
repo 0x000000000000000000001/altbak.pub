@@ -108,10 +108,24 @@ $newWithSelf = function($f) {
     };
 };
 $read = function($ref) { return function() use($ref) { return $ref->value; }; };
-$modifyImpl = function($f, $ref) use (&$modifyImpl) {
+$modifyImpl = function($f, $ref = null) use (&$modifyImpl) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$modifyImpl) {
+
+            return $modifyImpl(...\array_merge($__args, $more));
+        };
+    }
     return function() use($f, $ref) { $t = $f($ref->value); $ref->value = $t->state; return $t->value; };
 };
-$write = function($val, $ref) use (&$write) {
+$write = function($val, $ref = null) use (&$write) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$write) {
+
+            return $write(...\array_merge($__args, $more));
+        };
+    }
     return function() use($val, $ref) { $ref->value = $val; return null; };
 };
 
@@ -130,7 +144,7 @@ function majEffect_majRef__new($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Ref;
-  $f = ($ffi_Effect_Ref['_new'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('_new', $ffi_Effect_Ref) ? $ffi_Effect_Ref['_new'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Effect_Ref__new'] = __NAMESPACE__ . '\\majEffect_majRef__new';
@@ -142,7 +156,7 @@ function majEffect_majRef_modifymajImpl($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Effect_Ref;
-  $f = ($ffi_Effect_Ref['modifyImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('modifyImpl', $ffi_Effect_Ref) ? $ffi_Effect_Ref['modifyImpl'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Effect_Ref_modifyImpl'] = __NAMESPACE__ . '\\majEffect_majRef_modifymajImpl';
@@ -154,7 +168,7 @@ function majEffect_majRef_newmajWithmajSelf($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Ref;
-  $f = ($ffi_Effect_Ref['newWithSelf'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('newWithSelf', $ffi_Effect_Ref) ? $ffi_Effect_Ref['newWithSelf'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Effect_Ref_newWithSelf'] = __NAMESPACE__ . '\\majEffect_majRef_newmajWithmajSelf';
@@ -166,7 +180,7 @@ function majEffect_majRef_read($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Ref;
-  $f = ($ffi_Effect_Ref['read'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('read', $ffi_Effect_Ref) ? $ffi_Effect_Ref['read'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Effect_Ref_read'] = __NAMESPACE__ . '\\majEffect_majRef_read';
@@ -178,7 +192,7 @@ function majEffect_majRef_write($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Effect_Ref;
-  $f = ($ffi_Effect_Ref['write'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('write', $ffi_Effect_Ref) ? $ffi_Effect_Ref['write'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Effect_Ref_write'] = __NAMESPACE__ . '\\majEffect_majRef_write';

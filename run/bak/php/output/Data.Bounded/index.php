@@ -117,12 +117,12 @@ $exports['bottomNumber'] = $bottomNumber;
 return $exports;
   return $exports;
 });
-$GLOBALS['Data_Bounded_bottomChar'] = ($ffi_Data_Bounded['bottomChar'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Bounded_bottomInt'] = ($ffi_Data_Bounded['bottomInt'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Bounded_bottomNumber'] = ($ffi_Data_Bounded['bottomNumber'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Bounded_topChar'] = ($ffi_Data_Bounded['topChar'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Bounded_topInt'] = ($ffi_Data_Bounded['topInt'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Bounded_topNumber'] = ($ffi_Data_Bounded['topNumber'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Bounded_bottomChar'] = (\array_key_exists('bottomChar', $ffi_Data_Bounded) ? $ffi_Data_Bounded['bottomChar'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Bounded_bottomInt'] = (\array_key_exists('bottomInt', $ffi_Data_Bounded) ? $ffi_Data_Bounded['bottomInt'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Bounded_bottomNumber'] = (\array_key_exists('bottomNumber', $ffi_Data_Bounded) ? $ffi_Data_Bounded['bottomNumber'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Bounded_topChar'] = (\array_key_exists('topChar', $ffi_Data_Bounded) ? $ffi_Data_Bounded['topChar'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Bounded_topInt'] = (\array_key_exists('topInt', $ffi_Data_Bounded) ? $ffi_Data_Bounded['topInt'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Bounded_topNumber'] = (\array_key_exists('topNumber', $ffi_Data_Bounded) ? $ffi_Data_Bounded['topNumber'] : new class { public function __invoke(...$args) { return $this; } });
 
 
 

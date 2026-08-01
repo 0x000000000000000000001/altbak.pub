@@ -106,7 +106,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Unfoldable1 = \call_user_func(function() {
   $exports = [];
-$unfoldr1ArrayImpl = function($isNothing, $fromJust, $fst, $snd, $f, $b) use (&$unfoldr1ArrayImpl) {
+$unfoldr1ArrayImpl = function($isNothing, $fromJust = null, $fst = null, $snd = null, $f = null, $b = null) use (&$unfoldr1ArrayImpl) {
+    if (\func_num_args() < 6) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$unfoldr1ArrayImpl) {
+            return $unfoldr1ArrayImpl(...\array_merge($__args, $more));
+        };
+    }
     
     $result = [];
     $value = $b;
@@ -132,7 +138,7 @@ function majData_majUnfoldable1_unfoldr1majArraymajImpl($v0, $v1 = null, $v2 = n
     return phpurs_curry_fallback($__fn, \func_get_args(), 6);
   }
   global $ffi_Data_Unfoldable1;
-  $f = ($ffi_Data_Unfoldable1['unfoldr1ArrayImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('unfoldr1ArrayImpl', $ffi_Data_Unfoldable1) ? $ffi_Data_Unfoldable1['unfoldr1ArrayImpl'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3, $v4, $v5);
 }
 $GLOBALS['Data_Unfoldable1_unfoldr1ArrayImpl'] = __NAMESPACE__ . '\\majData_majUnfoldable1_unfoldr1majArraymajImpl';

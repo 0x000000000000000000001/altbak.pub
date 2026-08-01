@@ -128,7 +128,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Array = \call_user_func(function() {
   $exports = [];
-$rangeImpl = function($start, $end) use (&$rangeImpl) {
+$rangeImpl = function($start, $end = null) use (&$rangeImpl) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$rangeImpl) {
+
+            return $rangeImpl(...\array_merge($__args, $more));
+        };
+    }
     $step = $start > $end ? -1 : 1;
     $result = [];
     $i = $start;
@@ -140,21 +147,41 @@ $rangeImpl = function($start, $end) use (&$rangeImpl) {
     return $result;
 };
 
-$replicateImpl = function($count, $value) use (&$replicateImpl) {
+$replicateImpl = function($count, $value = null) use (&$replicateImpl) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$replicateImpl) {
+
+            return $replicateImpl(...\array_merge($__args, $more));
+        };
+    }
     if ($count < 1) return [];
     return array_fill(0, $count, $value);
 };
 
-$fromFoldableImpl = function($foldr, $xs) use (&$fromFoldableImpl) {
+$fromFoldableImpl = function($foldr, $xs = null) use (&$fromFoldableImpl) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$fromFoldableImpl) {
+
+            return $fromFoldableImpl(...\array_merge($__args, $more));
+        };
+    }
     
     $emptyList = new \stdClass();
-    $curryCons = function($head) {
-        return function($tail) use ($head) {
-            $obj = new \stdClass();
-            $obj->head = $head;
-            $obj->tail = $tail;
-            return $obj;
-        };
+    $curryCons = function($head, $tail = null) {
+        if (\func_num_args() < 2) {
+            return function($tail) use ($head) {
+                $obj = new \stdClass();
+                $obj->head = $head;
+                $obj->tail = $tail;
+                return $obj;
+            };
+        }
+        $obj = new \stdClass();
+        $obj->head = $head;
+        $obj->tail = $tail;
+        return $obj;
     };
     
     $listToArray = function($list) use ($emptyList) {
@@ -174,16 +201,37 @@ $length = function($xs) use (&$length) {
     return \count($xs);
 };
 
-$unconsImpl = function($empty, $next, $xs) use (&$unconsImpl) {
+$unconsImpl = function($empty, $next = null, $xs = null) use (&$unconsImpl) {
+    if (\func_num_args() < 3) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$unconsImpl) {
+
+            return $unconsImpl(...\array_merge($__args, $more));
+        };
+    }
     if (\count($xs) === 0) return $empty((object)[]);
     return $next($xs[0])(\array_slice($xs, 1));
 };
 
-$indexImpl = function($just, $nothing, $xs, $i) use (&$indexImpl) {
+$indexImpl = function($just, $nothing = null, $xs = null, $i = null) use (&$indexImpl) {
+    if (\func_num_args() < 4) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$indexImpl) {
+
+            return $indexImpl(...\array_merge($__args, $more));
+        };
+    }
     return ($i < 0 || $i >= \count($xs)) ? $nothing : $just($xs[$i]);
 };
 
-$findMapImpl = function($nothing, $isJust, $f, $xs) use (&$findMapImpl) {
+$findMapImpl = function($nothing, $isJust = null, $f = null, $xs = null) use (&$findMapImpl) {
+    if (\func_num_args() < 4) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$findMapImpl) {
+
+            return $findMapImpl(...\array_merge($__args, $more));
+        };
+    }
     foreach ($xs as $x) {
         $result = $f($x);
         if ($isJust($result)) return $result;
@@ -191,35 +239,70 @@ $findMapImpl = function($nothing, $isJust, $f, $xs) use (&$findMapImpl) {
     return $nothing;
 };
 
-$findIndexImpl = function($just, $nothing, $f, $xs) use (&$findIndexImpl) {
+$findIndexImpl = function($just, $nothing = null, $f = null, $xs = null) use (&$findIndexImpl) {
+    if (\func_num_args() < 4) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$findIndexImpl) {
+
+            return $findIndexImpl(...\array_merge($__args, $more));
+        };
+    }
     foreach ($xs as $i => $x) {
         if ($f($x)) return $just($i);
     }
     return $nothing;
 };
 
-$findLastIndexImpl = function($just, $nothing, $f, $xs) use (&$findLastIndexImpl) {
+$findLastIndexImpl = function($just, $nothing = null, $f = null, $xs = null) use (&$findLastIndexImpl) {
+    if (\func_num_args() < 4) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$findLastIndexImpl) {
+
+            return $findLastIndexImpl(...\array_merge($__args, $more));
+        };
+    }
     for ($i = \count($xs) - 1; $i >= 0; $i--) {
         if ($f($xs[$i])) return $just($i);
     }
     return $nothing;
 };
 
-$_insertAt = function($just, $nothing, $i, $a, $l) use (&$_insertAt) {
+$_insertAt = function($just, $nothing = null, $i = null, $a = null, $l = null) use (&$_insertAt) {
+    if (\func_num_args() < 5) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$_insertAt) {
+
+            return $_insertAt(...\array_merge($__args, $more));
+        };
+    }
     if ($i < 0 || $i > \count($l)) return $nothing;
     $l1 = $l;
     array_splice($l1, $i, 0, [$a]);
     return $just($l1);
 };
 
-$_deleteAt = function($just, $nothing, $i, $l) use (&$_deleteAt) {
+$_deleteAt = function($just, $nothing = null, $i = null, $l = null) use (&$_deleteAt) {
+    if (\func_num_args() < 4) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$_deleteAt) {
+
+            return $_deleteAt(...\array_merge($__args, $more));
+        };
+    }
     if ($i < 0 || $i >= \count($l)) return $nothing;
     $l1 = $l;
     array_splice($l1, $i, 1);
     return $just($l1);
 };
 
-$_updateAt = function($just, $nothing, $i, $a, $l) use (&$_updateAt) {
+$_updateAt = function($just, $nothing = null, $i = null, $a = null, $l = null) use (&$_updateAt) {
+    if (\func_num_args() < 5) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$_updateAt) {
+
+            return $_updateAt(...\array_merge($__args, $more));
+        };
+    }
     if ($i < 0 || $i >= \count($l)) return $nothing;
     $l1 = $l;
     $l1[$i] = $a;
@@ -235,7 +318,14 @@ $concat = function($xss) use (&$concat) {
     return \array_merge(...$xss);
 };
 
-$filterImpl = function($f, $xs) use (&$filterImpl) {
+$filterImpl = function($f, $xs = null) use (&$filterImpl) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$filterImpl) {
+
+            return $filterImpl(...\array_merge($__args, $more));
+        };
+    }
     $res = [];
     foreach ($xs as $x) {
         if ($f($x)) $res[] = $x;
@@ -243,7 +333,14 @@ $filterImpl = function($f, $xs) use (&$filterImpl) {
     return $res;
 };
 
-$partitionImpl = function($f, $xs) use (&$partitionImpl) {
+$partitionImpl = function($f, $xs = null) use (&$partitionImpl) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$partitionImpl) {
+
+            return $partitionImpl(...\array_merge($__args, $more));
+        };
+    }
     $yes = [];
     $no = [];
     foreach ($xs as $x) {
@@ -253,7 +350,14 @@ $partitionImpl = function($f, $xs) use (&$partitionImpl) {
     return (object)["yes" => $yes, "no" => $no];
 };
 
-$scanlImpl = function($f, $b, $xs) use (&$scanlImpl) {
+$scanlImpl = function($f, $b = null, $xs = null) use (&$scanlImpl) {
+    if (\func_num_args() < 3) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$scanlImpl) {
+
+            return $scanlImpl(...\array_merge($__args, $more));
+        };
+    }
     $acc = $b;
     $out = [];
     foreach ($xs as $x) {
@@ -263,7 +367,14 @@ $scanlImpl = function($f, $b, $xs) use (&$scanlImpl) {
     return $out;
 };
 
-$scanrImpl = function($f, $b, $xs) use (&$scanrImpl) {
+$scanrImpl = function($f, $b = null, $xs = null) use (&$scanrImpl) {
+    if (\func_num_args() < 3) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$scanrImpl) {
+
+            return $scanrImpl(...\array_merge($__args, $more));
+        };
+    }
     $len = \count($xs);
     $acc = $b;
     $out = array_fill(0, $len, null);
@@ -274,7 +385,14 @@ $scanrImpl = function($f, $b, $xs) use (&$scanrImpl) {
     return $out;
 };
 
-$sortByImpl = function($compare, $fromOrdering, $xs) use (&$sortByImpl) {
+$sortByImpl = function($compare, $fromOrdering = null, $xs = null) use (&$sortByImpl) {
+    if (\func_num_args() < 3) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$sortByImpl) {
+
+            return $sortByImpl(...\array_merge($__args, $more));
+        };
+    }
     $out = $xs;
     \usort($out, function($a, $b) use ($compare, $fromOrdering) {
         return $fromOrdering($compare($a)($b));
@@ -282,11 +400,25 @@ $sortByImpl = function($compare, $fromOrdering, $xs) use (&$sortByImpl) {
     return $out;
 };
 
-$sliceImpl = function($s, $e, $l) use (&$sliceImpl) {
+$sliceImpl = function($s, $e = null, $l = null) use (&$sliceImpl) {
+    if (\func_num_args() < 3) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$sliceImpl) {
+
+            return $sliceImpl(...\array_merge($__args, $more));
+        };
+    }
     return \array_slice($l, $s, $e - $s);
 };
 
-$zipWithImpl = function($f, $xs, $ys) use (&$zipWithImpl) {
+$zipWithImpl = function($f, $xs = null, $ys = null) use (&$zipWithImpl) {
+    if (\func_num_args() < 3) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$zipWithImpl) {
+
+            return $zipWithImpl(...\array_merge($__args, $more));
+        };
+    }
     $l = \min(\count($xs), \count($ys));
     $result = [];
     for ($i = 0; $i < $l; $i++) {
@@ -295,21 +427,42 @@ $zipWithImpl = function($f, $xs, $ys) use (&$zipWithImpl) {
     return $result;
 };
 
-$anyImpl = function($p, $xs) use (&$anyImpl) {
+$anyImpl = function($p, $xs = null) use (&$anyImpl) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$anyImpl) {
+
+            return $anyImpl(...\array_merge($__args, $more));
+        };
+    }
     foreach ($xs as $x) {
         if ($p($x)) return true;
     }
     return false;
 };
 
-$allImpl = function($p, $xs) use (&$allImpl) {
+$allImpl = function($p, $xs = null) use (&$allImpl) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$allImpl) {
+
+            return $allImpl(...\array_merge($__args, $more));
+        };
+    }
     foreach ($xs as $x) {
         if (!$p($x)) return false;
     }
     return true;
 };
 
-$unsafeIndexImpl = function($xs, $n) use (&$unsafeIndexImpl) {
+$unsafeIndexImpl = function($xs, $n = null) use (&$unsafeIndexImpl) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$unsafeIndexImpl) {
+
+            return $unsafeIndexImpl(...\array_merge($__args, $more));
+        };
+    }
     return $xs[$n];
 };
 
@@ -340,11 +493,11 @@ $exports['unsafeIndexImpl'] = $unsafeIndexImpl;
 return $exports;
   return $exports;
 });
-$GLOBALS['Data_Array__deleteAt'] = ($ffi_Data_Array['_deleteAt'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array__insertAt'] = ($ffi_Data_Array['_insertAt'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array__updateAt'] = ($ffi_Data_Array['_updateAt'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_allImpl'] = ($ffi_Data_Array['allImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_anyImpl'] = ($ffi_Data_Array['anyImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array__deleteAt'] = (\array_key_exists('_deleteAt', $ffi_Data_Array) ? $ffi_Data_Array['_deleteAt'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array__insertAt'] = (\array_key_exists('_insertAt', $ffi_Data_Array) ? $ffi_Data_Array['_insertAt'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array__updateAt'] = (\array_key_exists('_updateAt', $ffi_Data_Array) ? $ffi_Data_Array['_updateAt'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_allImpl'] = (\array_key_exists('allImpl', $ffi_Data_Array) ? $ffi_Data_Array['allImpl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_anyImpl'] = (\array_key_exists('anyImpl', $ffi_Data_Array) ? $ffi_Data_Array['anyImpl'] : new class { public function __invoke(...$args) { return $this; } });
 function majData_majArray_concat($v0) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\majData_majArray_concat';
@@ -352,17 +505,17 @@ function majData_majArray_concat($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_Array;
-  $f = ($ffi_Data_Array['concat'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('concat', $ffi_Data_Array) ? $ffi_Data_Array['concat'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_Array_concat'] = __NAMESPACE__ . '\\majData_majArray_concat';
 
-$GLOBALS['Data_Array_filterImpl'] = ($ffi_Data_Array['filterImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_findIndexImpl'] = ($ffi_Data_Array['findIndexImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_findLastIndexImpl'] = ($ffi_Data_Array['findLastIndexImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_findMapImpl'] = ($ffi_Data_Array['findMapImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_fromFoldableImpl'] = ($ffi_Data_Array['fromFoldableImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_indexImpl'] = ($ffi_Data_Array['indexImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_filterImpl'] = (\array_key_exists('filterImpl', $ffi_Data_Array) ? $ffi_Data_Array['filterImpl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_findIndexImpl'] = (\array_key_exists('findIndexImpl', $ffi_Data_Array) ? $ffi_Data_Array['findIndexImpl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_findLastIndexImpl'] = (\array_key_exists('findLastIndexImpl', $ffi_Data_Array) ? $ffi_Data_Array['findLastIndexImpl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_findMapImpl'] = (\array_key_exists('findMapImpl', $ffi_Data_Array) ? $ffi_Data_Array['findMapImpl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_fromFoldableImpl'] = (\array_key_exists('fromFoldableImpl', $ffi_Data_Array) ? $ffi_Data_Array['fromFoldableImpl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_indexImpl'] = (\array_key_exists('indexImpl', $ffi_Data_Array) ? $ffi_Data_Array['indexImpl'] : new class { public function __invoke(...$args) { return $this; } });
 function majData_majArray_length($v0): int|\Closure {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\majData_majArray_length';
@@ -370,14 +523,14 @@ function majData_majArray_length($v0): int|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_Array;
-  $f = ($ffi_Data_Array['length'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('length', $ffi_Data_Array) ? $ffi_Data_Array['length'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_Array_length'] = __NAMESPACE__ . '\\majData_majArray_length';
 
-$GLOBALS['Data_Array_partitionImpl'] = ($ffi_Data_Array['partitionImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_rangeImpl'] = ($ffi_Data_Array['rangeImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_replicateImpl'] = ($ffi_Data_Array['replicateImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_partitionImpl'] = (\array_key_exists('partitionImpl', $ffi_Data_Array) ? $ffi_Data_Array['partitionImpl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_rangeImpl'] = (\array_key_exists('rangeImpl', $ffi_Data_Array) ? $ffi_Data_Array['rangeImpl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_replicateImpl'] = (\array_key_exists('replicateImpl', $ffi_Data_Array) ? $ffi_Data_Array['replicateImpl'] : new class { public function __invoke(...$args) { return $this; } });
 function majData_majArray_reverse($v0) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\majData_majArray_reverse';
@@ -385,18 +538,18 @@ function majData_majArray_reverse($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_Array;
-  $f = ($ffi_Data_Array['reverse'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('reverse', $ffi_Data_Array) ? $ffi_Data_Array['reverse'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_Array_reverse'] = __NAMESPACE__ . '\\majData_majArray_reverse';
 
-$GLOBALS['Data_Array_scanlImpl'] = ($ffi_Data_Array['scanlImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_scanrImpl'] = ($ffi_Data_Array['scanrImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_sliceImpl'] = ($ffi_Data_Array['sliceImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_sortByImpl'] = ($ffi_Data_Array['sortByImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_unconsImpl'] = ($ffi_Data_Array['unconsImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_unsafeIndexImpl'] = ($ffi_Data_Array['unsafeIndexImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_zipWithImpl'] = ($ffi_Data_Array['zipWithImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_scanlImpl'] = (\array_key_exists('scanlImpl', $ffi_Data_Array) ? $ffi_Data_Array['scanlImpl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_scanrImpl'] = (\array_key_exists('scanrImpl', $ffi_Data_Array) ? $ffi_Data_Array['scanrImpl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_sliceImpl'] = (\array_key_exists('sliceImpl', $ffi_Data_Array) ? $ffi_Data_Array['sliceImpl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_sortByImpl'] = (\array_key_exists('sortByImpl', $ffi_Data_Array) ? $ffi_Data_Array['sortByImpl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_unconsImpl'] = (\array_key_exists('unconsImpl', $ffi_Data_Array) ? $ffi_Data_Array['unconsImpl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_unsafeIndexImpl'] = (\array_key_exists('unsafeIndexImpl', $ffi_Data_Array) ? $ffi_Data_Array['unsafeIndexImpl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_zipWithImpl'] = (\array_key_exists('zipWithImpl', $ffi_Data_Array) ? $ffi_Data_Array['zipWithImpl'] : new class { public function __invoke(...$args) { return $this; } });
 
 
 
@@ -1245,20 +1398,20 @@ function majData_majArray_span($p_0, $arr_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go__2_0 = null;
-  $go__2_0 = function($i_3) use ($arr_1, &$go__2_0, $p_0) {
+  $go__go_2_0 = null;
+  $go__go_2_0 = function($i_3) use ($arr_1, &$go__go_2_0, $p_0) {
   $__num = \func_num_args();
-  $__tco_var_go__2_0_0_i_3 = $i_3;
-  tco_loop_go__2_0_0:;
-  $i_3 = $__tco_var_go__2_0_0_i_3;
+  $__tco_var_go__go_2_0_0_i_3 = $i_3;
+  tco_loop_go__go_2_0_0:;
+  $i_3 = $__tco_var_go__go_2_0_0_i_3;
   $v_4_0 = ($GLOBALS['Data_Array_indexImpl'])($GLOBALS['Data_Maybe_Just'], new \Data\Maybe\Data_Maybe_Nothing(), $arr_1, $i_3);
   $__t1 = null;;
   if ($v_4_0 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__t2 = null;;
 if (($p_0)(($v_4_0)->{'value0'})) {
 $__tco_3 = ($i_3 + 1);
-$__tco_var_go__2_0_0_i_3 = $__tco_3;
-goto tco_loop_go__2_0_0;;
+$__tco_var_go__go_2_0_0_i_3 = $__tco_3;
+goto tco_loop_go__go_2_0_0;;
 $__t2 = null;
 goto end_branch_2;;
 };
@@ -1279,7 +1432,7 @@ goto end_branch_1;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $breakIndex_3_1 = ($go__2_0)(0);
+  $breakIndex_3_1 = ($go__go_2_0)(0);
   $__t2 = null;;
   if ($breakIndex_3_1 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__t2 = match (($breakIndex_3_1)->{'value0'}) { 0 => (object)["init" => [], "rest" => $arr_1], default => (object)["init" => ($GLOBALS['Data_Array_sliceImpl'])(0, ($breakIndex_3_1)->{'value0'}, $arr_1), "rest" => ($GLOBALS['Data_Array_sliceImpl'])(($breakIndex_3_1)->{'value0'}, count($arr_1), $arr_1)] };
@@ -1680,18 +1833,18 @@ function majData_majArray_transpose($xs_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $go__1_0 = null;
-  $go__1_0 = (function() use (&$go__1_0, $xs_0) {
-  $__fn = function($idx_2, $allArrays_3 = null) use (&$go__1_0, $xs_0, &$__fn) {
+  $go__go_1_0 = null;
+  $go__go_1_0 = (function() use (&$go__go_1_0, $xs_0) {
+  $__fn = function($idx_2, $allArrays_3 = null) use (&$go__go_1_0, $xs_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_go__1_0_0_idx_2 = $idx_2;
-  $__tco_var_go__1_0_0_allArrays_3 = $allArrays_3;
-  tco_loop_go__1_0_0:;
-  $idx_2 = $__tco_var_go__1_0_0_idx_2;
-  $allArrays_3 = $__tco_var_go__1_0_0_allArrays_3;
+  $__tco_var_go__go_1_0_0_idx_2 = $idx_2;
+  $__tco_var_go__go_1_0_0_allArrays_3 = $allArrays_3;
+  tco_loop_go__go_1_0_0:;
+  $idx_2 = $__tco_var_go__go_1_0_0_idx_2;
+  $allArrays_3 = $__tco_var_go__go_1_0_0_allArrays_3;
   $v_4_0 = (((($GLOBALS['Data_Foldable_foldableArray'])->{'foldl'})((function() use ($idx_2) {
   $__fn = function($acc_4, $nextArr_5 = null) use ($idx_2, &$__fn) {
   $__num = \func_num_args();
@@ -1738,9 +1891,9 @@ goto end_branch_4;;
   if ($v_4_0 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__tco_5 = ($idx_2 + 1);
 $__tco_6 = \Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_run(\Data\Array\ST\majData_majArray_majSmajT_withmajArray(($GLOBALS['Data_Array_ST_push'])(($v_4_0)->{'value0'}), $allArrays_3));
-$__tco_var_go__1_0_0_idx_2 = $__tco_5;
-$__tco_var_go__1_0_0_allArrays_3 = $__tco_6;
-goto tco_loop_go__1_0_0;;
+$__tco_var_go__go_1_0_0_idx_2 = $__tco_5;
+$__tco_var_go__go_1_0_0_allArrays_3 = $__tco_6;
+goto tco_loop_go__go_1_0_0;;
 $__t4 = null;
 goto end_branch_4;;
 };
@@ -1754,7 +1907,7 @@ goto end_branch_4;;
   };
   return $__fn;
 })();
-  $__res = (($go__1_0)(0))([]);
+  $__res = (($go__go_1_0)(0))([]);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

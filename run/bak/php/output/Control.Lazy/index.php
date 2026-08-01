@@ -143,15 +143,15 @@ function majControl_majLazy_fix($dictLazy_0, $f_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go__2_0 = null;
-  $go__2_0 = (($dictLazy_0)->{'defer'})(function($v_3) use ($f_1, &$go__2_0) {
+  $go__go_2_0 = null;
+  $go__go_2_0 = (($dictLazy_0)->{'defer'})(function($v_3) use ($f_1, &$go__go_2_0) {
   $__num = \func_num_args();
-  $__res = ($f_1)($go__2_0);
+  $__res = ($f_1)($go__go_2_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
-  $__res = $go__2_0;
+  $__res = $go__go_2_0;
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

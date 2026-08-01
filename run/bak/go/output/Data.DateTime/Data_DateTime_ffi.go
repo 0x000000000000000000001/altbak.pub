@@ -5,7 +5,6 @@ import "gopurs/output/gopurs_runtime"
 
 
 import (
-	"math"
 	"time"
 )
 

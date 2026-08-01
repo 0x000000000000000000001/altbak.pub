@@ -18,15 +18,15 @@ return Call_recip(dict_0_box)
 	return cache_recip
 }
 
-var cache_recip__gopurs_runtime_Value_130170554 gopurs_runtime.Value
-var once_recip__gopurs_runtime_Value_130170554 sync.Once
-func Get_recip__gopurs_runtime_Value_130170554() gopurs_runtime.Value {
-	once_recip__gopurs_runtime_Value_130170554.Do(func() {
-		cache_recip__gopurs_runtime_Value_130170554 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_recip__gopurs_runtime_Value_130170554(dict_0_box)
+var cache_recip__gopurs_runtime_Value_3654627386 gopurs_runtime.Value
+var once_recip__gopurs_runtime_Value_3654627386 sync.Once
+func Get_recip__gopurs_runtime_Value_3654627386() gopurs_runtime.Value {
+	once_recip__gopurs_runtime_Value_3654627386.Do(func() {
+		cache_recip__gopurs_runtime_Value_3654627386 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_recip__gopurs_runtime_Value_3654627386(dict_0_box)
 })
 	})
-	return cache_recip__gopurs_runtime_Value_130170554
+	return cache_recip__gopurs_runtime_Value_3654627386
 }
 
 var cache_rightDiv gopurs_runtime.Value
@@ -70,7 +70,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "recip")
 }
 
-func Call_recip__gopurs_runtime_Value_130170554(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_recip__gopurs_runtime_Value_3654627386(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "recip")

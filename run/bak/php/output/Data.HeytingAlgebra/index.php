@@ -99,10 +99,24 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_HeytingAlgebra = \call_user_func(function() {
   $exports = [];
-$boolConj = function($a, $b) use (&$boolConj) {
+$boolConj = function($a, $b = null) use (&$boolConj) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$boolConj) {
+
+            return $boolConj(...\array_merge($__args, $more));
+        };
+    }
     return $a && $b;
 };
-$boolDisj = function($a, $b) use (&$boolDisj) {
+$boolDisj = function($a, $b = null) use (&$boolDisj) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$boolDisj) {
+
+            return $boolDisj(...\array_merge($__args, $more));
+        };
+    }
     return $a || $b;
 };
 $boolNot = function($a) use (&$boolNot) { return !$a; };
@@ -120,7 +134,7 @@ function majData_majHeytingmajAlgebra_boolmajConj(bool $v0, $v1 = null): bool|\C
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_HeytingAlgebra;
-  $f = ($ffi_Data_HeytingAlgebra['boolConj'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('boolConj', $ffi_Data_HeytingAlgebra) ? $ffi_Data_HeytingAlgebra['boolConj'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_HeytingAlgebra_boolConj'] = __NAMESPACE__ . '\\majData_majHeytingmajAlgebra_boolmajConj';
@@ -132,7 +146,7 @@ function majData_majHeytingmajAlgebra_boolmajDisj(bool $v0, $v1 = null): bool|\C
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_HeytingAlgebra;
-  $f = ($ffi_Data_HeytingAlgebra['boolDisj'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('boolDisj', $ffi_Data_HeytingAlgebra) ? $ffi_Data_HeytingAlgebra['boolDisj'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_HeytingAlgebra_boolDisj'] = __NAMESPACE__ . '\\majData_majHeytingmajAlgebra_boolmajDisj';
@@ -144,7 +158,7 @@ function majData_majHeytingmajAlgebra_boolmajNot(bool $v0): bool|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_HeytingAlgebra;
-  $f = ($ffi_Data_HeytingAlgebra['boolNot'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('boolNot', $ffi_Data_HeytingAlgebra) ? $ffi_Data_HeytingAlgebra['boolNot'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_HeytingAlgebra_boolNot'] = __NAMESPACE__ . '\\majData_majHeytingmajAlgebra_boolmajNot';

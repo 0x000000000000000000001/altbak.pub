@@ -121,7 +121,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Traversable = \call_user_func(function() {
   $exports = [];
-$traverseArrayImpl = function($apply, $map, $pure, $f, $array) use (&$traverseArrayImpl) {
+$traverseArrayImpl = function($apply, $map = null, $pure = null, $f = null, $array = null) use (&$traverseArrayImpl) {
+    if (\func_num_args() < 5) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$traverseArrayImpl) {
+            return $traverseArrayImpl(...\array_merge($__args, $more));
+        };
+    }
 
     $array1 = function ($a) { return [$a]; };
     $array2 = function ($a) { return function ($b) use ($a) { return [$a, $b]; }; };
@@ -134,25 +140,29 @@ $traverseArrayImpl = function($apply, $map, $pure, $f, $array) use (&$traverseAr
                 return $pure([]);
             case 1:
                 $f1 = $f($array[$bot]);
-                return $map($array1, $f1);
+                $map1 = $map($array1);
+                return $map1($f1);
             case 2:
                 $f1 = $f($array[$bot]);
                 $f2 = $f($array[$bot + 1]);
-                $map2 = $map($array2, $f1);
-                return $apply($map2, $f2);
+                $map1 = $map($array2);
+                $map2 = $map1($f1);
+                return $apply($map2)($f2);
             case 3:
                 $f1 = $f($array[$bot]);
                 $f2 = $f($array[$bot + 1]);
                 $f3 = $f($array[$bot + 2]);
-                $map2 = $map($array3, $f1);
-                $app1 = $apply($map2, $f2);
-                return $apply($app1, $f3);
+                $map1 = $map($array3);
+                $map2 = $map1($f1);
+                $app1 = $apply($map2)($f2);
+                return $apply($app1)($f3);
             default:
                 $pivot = $bot + floor(($top - $bot) / 4) * 2;
                 $go1 = $go($bot, $pivot);
                 $go2 = $go($pivot, $top);
-                $map2 = $map($concat2, $go1);
-                return $apply($map2, $go2);
+                $map1 = $map($concat2);
+                $map2 = $map1($go1);
+                return $apply($map2)($go2);
         }
     };
     return $go(0, \count($array));
@@ -169,7 +179,7 @@ function majData_majTraversable_traversemajArraymajImpl($v0, $v1 = null, $v2 = n
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
   global $ffi_Data_Traversable;
-  $f = ($ffi_Data_Traversable['traverseArrayImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('traverseArrayImpl', $ffi_Data_Traversable) ? $ffi_Data_Traversable['traverseArrayImpl'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3, $v4);
 }
 $GLOBALS['Data_Traversable_traverseArrayImpl'] = __NAMESPACE__ . '\\majData_majTraversable_traversemajArraymajImpl';

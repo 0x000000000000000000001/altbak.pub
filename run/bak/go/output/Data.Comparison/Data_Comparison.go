@@ -6,15 +6,15 @@ import (
 	pkg_Data_Ordering "gopurs/output/Data.Ordering"
 )
 
-var cache_append_ gopurs_runtime.Value
-var once_append_ sync.Once
-func Get_append_() gopurs_runtime.Value {
-	once_append_.Do(func() {
-		cache_append_ = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, g_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_append_(f_0_box, g_1_box, x_2_box)
+var cache_append gopurs_runtime.Value
+var once_append sync.Once
+func Get_append() gopurs_runtime.Value {
+	once_append.Do(func() {
+		cache_append = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, g_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_append(f_0_box, g_1_box, x_2_box)
 })
 	})
-	return cache_append_
+	return cache_append
 }
 
 var cache_Comparison gopurs_runtime.Value
@@ -33,7 +33,7 @@ var once_semigroupComparison sync.Once
 func Get_semigroupComparison() gopurs_runtime.Value {
 	once_semigroupComparison.Do(func() {
 		cache_semigroupComparison = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(Get_append_(), v_0, v1_1)
+return gopurs_runtime.Apply2(Get_append(), v_0, v1_1)
 }))
 	})
 	return cache_semigroupComparison
@@ -85,7 +85,7 @@ return gopurs_runtime.Apply2(v_1, gopurs_runtime.Apply(f_0, x_2), gopurs_runtime
 	return cache_contravariantComparison
 }
 
-func Call_append_(f_0_loop gopurs_runtime.Value, g_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_append(f_0_loop gopurs_runtime.Value, g_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var g_1 gopurs_runtime.Value = g_1_loop

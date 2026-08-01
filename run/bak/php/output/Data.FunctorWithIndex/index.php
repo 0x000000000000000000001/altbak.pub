@@ -117,7 +117,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_FunctorWithIndex = \call_user_func(function() {
   $exports = [];
-$mapWithIndexArray = function($f, $xs) use (&$mapWithIndexArray) {
+$mapWithIndexArray = function($f, $xs = null) use (&$mapWithIndexArray) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$mapWithIndexArray) {
+            return $mapWithIndexArray(...\array_merge($__args, $more));
+        };
+    }
     
     $len = \count($xs);
     $result = array_fill(0, $len, null);
@@ -140,7 +146,7 @@ function majData_majFunctormajWithmajIndex_mapmajWithmajIndexmajArray($v0, $v1 =
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_FunctorWithIndex;
-  $f = ($ffi_Data_FunctorWithIndex['mapWithIndexArray'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('mapWithIndexArray', $ffi_Data_FunctorWithIndex) ? $ffi_Data_FunctorWithIndex['mapWithIndexArray'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_FunctorWithIndex_mapWithIndexArray'] = __NAMESPACE__ . '\\majData_majFunctormajWithmajIndex_mapmajWithmajIndexmajArray';

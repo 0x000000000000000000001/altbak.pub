@@ -111,7 +111,13 @@ $showRegexImpl = function($r) use (&$showRegexImpl) {
     return $r->pattern;
 };
 
-$regexImpl = function($left, $right, $s1, $s2) use (&$regexImpl) {
+$regexImpl = function($left, $right = null, $s1 = null, $s2 = null) use (&$regexImpl) {
+    if (\func_num_args() < 4) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$regexImpl) {
+            return $regexImpl(...\array_merge($__args, $more));
+        };
+    }
     $pattern = '/' . $s1 . '/' . $s2;
     // Strip modifiers that PHP doesn't support
     $php_flags = str_replace(['g', 'y'], '', $s2);
@@ -138,11 +144,23 @@ $flagsImpl = function($r) use (&$flagsImpl) {
     ];
 };
 
-$test = function($r, $s) use (&$test) {
+$test = function($r, $s = null) use (&$test) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$test) {
+            return $test(...\array_merge($__args, $more));
+        };
+    }
     return preg_match($r->pcre, $s) === 1;
 };
 
-$_match = function($just, $nothing, $r, $s) use (&$_match) {
+$_match = function($just, $nothing = null, $r = null, $s = null) use (&$_match) {
+    if (\func_num_args() < 4) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$_match) {
+            return $_match(...\array_merge($__args, $more));
+        };
+    }
     if (strpos($r->flags, 'g') !== false) {
         $matched = preg_match_all($r->pcre, $s, $matches);
         if ($matched) {
@@ -165,14 +183,26 @@ $_match = function($just, $nothing, $r, $s) use (&$_match) {
     return $nothing;
 };
 
-$replace = function($r, $s1, $s2) use (&$replace) {
+$replace = function($r, $s1 = null, $s2 = null) use (&$replace) {
+    if (\func_num_args() < 3) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$replace) {
+            return $replace(...\array_merge($__args, $more));
+        };
+    }
     $limit = strpos($r->flags, 'g') !== false ? -1 : 1;
     // $s1 in PCRE uses $1 for groups whereas JS uses $1 or \1. We assume s1 is compatible.
     // However, JS replace uses $1, PCRE preg_replace also uses $1.
     return preg_replace($r->pcre, $s1, $s2, $limit);
 };
 
-$_replaceBy = function($just, $nothing, $r, $f, $s) use (&$_replaceBy) {
+$_replaceBy = function($just, $nothing = null, $r = null, $f = null, $s = null) use (&$_replaceBy) {
+    if (\func_num_args() < 5) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$_replaceBy) {
+            return $_replaceBy(...\array_merge($__args, $more));
+        };
+    }
     $limit = strpos($r->flags, 'g') !== false ? -1 : 1;
     return preg_replace_callback($r->pcre, function($matches) use ($f, $just, $nothing) {
         $match = $matches[0];
@@ -185,14 +215,26 @@ $_replaceBy = function($just, $nothing, $r, $f, $s) use (&$_replaceBy) {
     }, $s, $limit);
 };
 
-$_search = function($just, $nothing, $r, $s) use (&$_search) {
+$_search = function($just, $nothing = null, $r = null, $s = null) use (&$_search) {
+    if (\func_num_args() < 4) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$_search) {
+            return $_search(...\array_merge($__args, $more));
+        };
+    }
     if (preg_match($r->pcre, $s, $matches, PREG_OFFSET_CAPTURE)) {
         return $just($matches[0][1]);
     }
     return $nothing;
 };
 
-$split = function($r, $s) use (&$split) {
+$split = function($r, $s = null) use (&$split) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$split) {
+            return $split(...\array_merge($__args, $more));
+        };
+    }
     $limit = strpos($r->flags, 'g') !== false ? -1 : 2;
     return preg_split($r->pcre, $s, $limit);
 };
@@ -217,7 +259,7 @@ function majData_majString_majRegex__match($v0, $v1 = null, $v2 = null, $v3 = nu
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
   global $ffi_Data_String_Regex;
-  $f = ($ffi_Data_String_Regex['_match'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('_match', $ffi_Data_String_Regex) ? $ffi_Data_String_Regex['_match'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3);
 }
 $GLOBALS['Data_String_Regex__match'] = __NAMESPACE__ . '\\majData_majString_majRegex__match';
@@ -229,7 +271,7 @@ function majData_majString_majRegex__replacemajBy($v0, $v1 = null, $v2 = null, $
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
   global $ffi_Data_String_Regex;
-  $f = ($ffi_Data_String_Regex['_replaceBy'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('_replaceBy', $ffi_Data_String_Regex) ? $ffi_Data_String_Regex['_replaceBy'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3, $v4);
 }
 $GLOBALS['Data_String_Regex__replaceBy'] = __NAMESPACE__ . '\\majData_majString_majRegex__replacemajBy';
@@ -241,7 +283,7 @@ function majData_majString_majRegex__search($v0, $v1 = null, $v2 = null, $v3 = n
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
   global $ffi_Data_String_Regex;
-  $f = ($ffi_Data_String_Regex['_search'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('_search', $ffi_Data_String_Regex) ? $ffi_Data_String_Regex['_search'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3);
 }
 $GLOBALS['Data_String_Regex__search'] = __NAMESPACE__ . '\\majData_majString_majRegex__search';
@@ -253,7 +295,7 @@ function majData_majString_majRegex_flagsmajImpl($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_String_Regex;
-  $f = ($ffi_Data_String_Regex['flagsImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('flagsImpl', $ffi_Data_String_Regex) ? $ffi_Data_String_Regex['flagsImpl'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_String_Regex_flagsImpl'] = __NAMESPACE__ . '\\majData_majString_majRegex_flagsmajImpl';
@@ -265,7 +307,7 @@ function majData_majString_majRegex_regexmajImpl($v0, $v1 = null, $v2 = null, $v
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
   global $ffi_Data_String_Regex;
-  $f = ($ffi_Data_String_Regex['regexImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('regexImpl', $ffi_Data_String_Regex) ? $ffi_Data_String_Regex['regexImpl'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3);
 }
 $GLOBALS['Data_String_Regex_regexImpl'] = __NAMESPACE__ . '\\majData_majString_majRegex_regexmajImpl';
@@ -277,7 +319,7 @@ function majData_majString_majRegex_replace($v0, $v1 = null, $v2 = null): string
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Data_String_Regex;
-  $f = ($ffi_Data_String_Regex['replace'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('replace', $ffi_Data_String_Regex) ? $ffi_Data_String_Regex['replace'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Data_String_Regex_replace'] = __NAMESPACE__ . '\\majData_majString_majRegex_replace';
@@ -289,7 +331,7 @@ function majData_majString_majRegex_showmajRegexmajImpl($v0): string|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_String_Regex;
-  $f = ($ffi_Data_String_Regex['showRegexImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('showRegexImpl', $ffi_Data_String_Regex) ? $ffi_Data_String_Regex['showRegexImpl'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_String_Regex_showRegexImpl'] = __NAMESPACE__ . '\\majData_majString_majRegex_showmajRegexmajImpl';
@@ -301,7 +343,7 @@ function majData_majString_majRegex_source($v0): string|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_String_Regex;
-  $f = ($ffi_Data_String_Regex['source'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('source', $ffi_Data_String_Regex) ? $ffi_Data_String_Regex['source'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_String_Regex_source'] = __NAMESPACE__ . '\\majData_majString_majRegex_source';
@@ -313,7 +355,7 @@ function majData_majString_majRegex_split($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_String_Regex;
-  $f = ($ffi_Data_String_Regex['split'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('split', $ffi_Data_String_Regex) ? $ffi_Data_String_Regex['split'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_String_Regex_split'] = __NAMESPACE__ . '\\majData_majString_majRegex_split';
@@ -325,7 +367,7 @@ function majData_majString_majRegex_test($v0, $v1 = null): bool|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_String_Regex;
-  $f = ($ffi_Data_String_Regex['test'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('test', $ffi_Data_String_Regex) ? $ffi_Data_String_Regex['test'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_String_Regex_test'] = __NAMESPACE__ . '\\majData_majString_majRegex_test';

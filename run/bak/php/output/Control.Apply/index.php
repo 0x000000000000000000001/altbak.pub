@@ -99,7 +99,14 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Control_Apply = \call_user_func(function() {
   $exports = [];
-$arrayApply = function($fs, $xs) use (&$arrayApply) {
+$arrayApply = function($fs, $xs = null) use (&$arrayApply) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$arrayApply) {
+
+            return $arrayApply(...\array_merge($__args, $more));
+        };
+    }
     $r = []; foreach($fs as $f) { foreach($xs as $x) { $r[] = $f($x); } } return $r;
 };
 
@@ -114,7 +121,7 @@ function majControl_majApply_arraymajApply($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Control_Apply;
-  $f = ($ffi_Control_Apply['arrayApply'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('arrayApply', $ffi_Control_Apply) ? $ffi_Control_Apply['arrayApply'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Control_Apply_arrayApply'] = __NAMESPACE__ . '\\majControl_majApply_arraymajApply';

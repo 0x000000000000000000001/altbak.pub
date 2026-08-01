@@ -111,7 +111,7 @@ function majData_majSymbol_unsafemajCoerce($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_Symbol;
-  $f = ($ffi_Data_Symbol['unsafeCoerce'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('unsafeCoerce', $ffi_Data_Symbol) ? $ffi_Data_Symbol['unsafeCoerce'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_Symbol_unsafeCoerce'] = __NAMESPACE__ . '\\majData_majSymbol_unsafemajCoerce';

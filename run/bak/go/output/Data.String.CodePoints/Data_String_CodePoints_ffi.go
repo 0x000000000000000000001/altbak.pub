@@ -2,89 +2,89 @@ package Data_String_CodePoints
 
 import "gopurs/output/gopurs_runtime"
 
-func X_unsafeCodePointAt0(_ interface{}) interface{} {
+func _UnsafeCodePointAt0(_ interface{}) interface{} {
 	panic("Not implemented: X_unsafeCodePointAt0")
 }
 
-func X_codePointAt(_ interface{}) interface{} {
+func _CodePointAt(_ interface{}) interface{} {
 	panic("Not implemented: X_codePointAt")
 }
 
-func X_countPrefix(_ interface{}) interface{} {
+func _CountPrefix(_ interface{}) interface{} {
 	panic("Not implemented: X_countPrefix")
 }
 
-func X_fromCodePointArray(_ interface{}) interface{} {
+func _FromCodePointArray(_ interface{}) interface{} {
 	panic("Not implemented: X_fromCodePointArray")
 }
 
-func X_singleton(_ interface{}) interface{} {
+func _Singleton(_ interface{}) interface{} {
 	panic("Not implemented: X_singleton")
 }
 
-func X_take(_ interface{}) interface{} {
+func _Take(_ interface{}) interface{} {
 	panic("Not implemented: X_take")
 }
 
-func X_toCodePointArray(_ interface{}) interface{} {
+func _ToCodePointArray(_ interface{}) interface{} {
 	panic("Not implemented: X_toCodePointArray")
 }
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_x_unsafeCodePointAt0(arg0 interface{}) interface{} {
-	return X_unsafeCodePointAt0(arg0)
+func Call__UnsafeCodePointAt0(arg0 interface{}) interface{} {
+	return _UnsafeCodePointAt0(arg0)
 }
-var _Gopurs_X_unsafeCodePointAt0 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs__UnsafeCodePointAt0 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
-	go_res := X_unsafeCodePointAt0(go_arg0)
+	go_res := _UnsafeCodePointAt0(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_x_codePointAt(arg0 interface{}) interface{} {
-	return X_codePointAt(arg0)
+func Call__CodePointAt(arg0 interface{}) interface{} {
+	return _CodePointAt(arg0)
 }
-var _Gopurs_X_codePointAt = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs__CodePointAt = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
-	go_res := X_codePointAt(go_arg0)
+	go_res := _CodePointAt(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_x_countPrefix(arg0 interface{}) interface{} {
-	return X_countPrefix(arg0)
+func Call__CountPrefix(arg0 interface{}) interface{} {
+	return _CountPrefix(arg0)
 }
-var _Gopurs_X_countPrefix = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs__CountPrefix = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
-	go_res := X_countPrefix(go_arg0)
+	go_res := _CountPrefix(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_x_fromCodePointArray(arg0 interface{}) interface{} {
-	return X_fromCodePointArray(arg0)
+func Call__FromCodePointArray(arg0 interface{}) interface{} {
+	return _FromCodePointArray(arg0)
 }
-var _Gopurs_X_fromCodePointArray = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs__FromCodePointArray = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
-	go_res := X_fromCodePointArray(go_arg0)
+	go_res := _FromCodePointArray(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_x_singleton(arg0 interface{}) interface{} {
-	return X_singleton(arg0)
+func Call__Singleton(arg0 interface{}) interface{} {
+	return _Singleton(arg0)
 }
-var _Gopurs_X_singleton = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs__Singleton = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
-	go_res := X_singleton(go_arg0)
+	go_res := _Singleton(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_x_take(arg0 interface{}) interface{} {
-	return X_take(arg0)
+func Call__Take(arg0 interface{}) interface{} {
+	return _Take(arg0)
 }
-var _Gopurs_X_take = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs__Take = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
-	go_res := X_take(go_arg0)
+	go_res := _Take(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_x_toCodePointArray(arg0 interface{}) interface{} {
-	return X_toCodePointArray(arg0)
+func Call__ToCodePointArray(arg0 interface{}) interface{} {
+	return _ToCodePointArray(arg0)
 }
-var _Gopurs_X_toCodePointArray = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs__ToCodePointArray = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
-	go_res := X_toCodePointArray(go_arg0)
+	go_res := _ToCodePointArray(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })

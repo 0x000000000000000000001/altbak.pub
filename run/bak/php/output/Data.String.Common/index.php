@@ -99,12 +99,26 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_String_Common = \call_user_func(function() {
   $exports = [];
-$_localeCompare = function($lt, $eq, $gt, $s1, $s2) use (&$_localeCompare) {
+$_localeCompare = function($lt, $eq = null, $gt = null, $s1 = null, $s2 = null) use (&$_localeCompare) {
+    if (\func_num_args() < 5) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$_localeCompare) {
+
+            return $_localeCompare(...\array_merge($__args, $more));
+        };
+    }
     $result = strcmp($s1, $s2);
     return $result < 0 ? $lt : ($result > 0 ? $gt : $eq);
 };
 
-$replace = function($s1, $s2, $s3) use (&$replace) {
+$replace = function($s1, $s2 = null, $s3 = null) use (&$replace) {
+    if (\func_num_args() < 3) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$replace) {
+
+            return $replace(...\array_merge($__args, $more));
+        };
+    }
     $pos = strpos($s3, $s1);
     if ($pos !== false) {
         return substr_replace($s3, $s2, $pos, strlen($s1));
@@ -112,11 +126,25 @@ $replace = function($s1, $s2, $s3) use (&$replace) {
     return $s3;
 };
 
-$replaceAll = function($s1, $s2, $s3) use (&$replaceAll) {
+$replaceAll = function($s1, $s2 = null, $s3 = null) use (&$replaceAll) {
+    if (\func_num_args() < 3) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$replaceAll) {
+
+            return $replaceAll(...\array_merge($__args, $more));
+        };
+    }
     return str_replace($s1, $s2, $s3);
 };
 
-$split = function($sep, $s) use (&$split) {
+$split = function($sep, $s = null) use (&$split) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$split) {
+
+            return $split(...\array_merge($__args, $more));
+        };
+    }
     if ($sep === "") {
         return str_split($s);
     }
@@ -135,7 +163,14 @@ $trim = function($s) use (&$trim) {
     return trim($s);
 };
 
-$joinWith = function($s, $xs) use (&$joinWith) {
+$joinWith = function($s, $xs = null) use (&$joinWith) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$joinWith) {
+
+            return $joinWith(...\array_merge($__args, $more));
+        };
+    }
     return implode($s, $xs);
 };
 
@@ -157,7 +192,7 @@ function majData_majString_majCommon__localemajCompare($v0, $v1 = null, $v2 = nu
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
   global $ffi_Data_String_Common;
-  $f = ($ffi_Data_String_Common['_localeCompare'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('_localeCompare', $ffi_Data_String_Common) ? $ffi_Data_String_Common['_localeCompare'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3, $v4);
 }
 $GLOBALS['Data_String_Common__localeCompare'] = __NAMESPACE__ . '\\majData_majString_majCommon__localemajCompare';
@@ -169,7 +204,7 @@ function majData_majString_majCommon_joinmajWith(string $v0, $v1 = null): string
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_String_Common;
-  $f = ($ffi_Data_String_Common['joinWith'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('joinWith', $ffi_Data_String_Common) ? $ffi_Data_String_Common['joinWith'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_String_Common_joinWith'] = __NAMESPACE__ . '\\majData_majString_majCommon_joinmajWith';
@@ -181,7 +216,7 @@ function majData_majString_majCommon_replace(string $v0, $v1 = null, $v2 = null)
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Data_String_Common;
-  $f = ($ffi_Data_String_Common['replace'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('replace', $ffi_Data_String_Common) ? $ffi_Data_String_Common['replace'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Data_String_Common_replace'] = __NAMESPACE__ . '\\majData_majString_majCommon_replace';
@@ -193,7 +228,7 @@ function majData_majString_majCommon_replacemajAll(string $v0, $v1 = null, $v2 =
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Data_String_Common;
-  $f = ($ffi_Data_String_Common['replaceAll'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('replaceAll', $ffi_Data_String_Common) ? $ffi_Data_String_Common['replaceAll'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Data_String_Common_replaceAll'] = __NAMESPACE__ . '\\majData_majString_majCommon_replacemajAll';
@@ -205,7 +240,7 @@ function majData_majString_majCommon_split(string $v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_String_Common;
-  $f = ($ffi_Data_String_Common['split'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('split', $ffi_Data_String_Common) ? $ffi_Data_String_Common['split'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_String_Common_split'] = __NAMESPACE__ . '\\majData_majString_majCommon_split';
@@ -217,7 +252,7 @@ function majData_majString_majCommon_tomajLower(string $v0): string|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_String_Common;
-  $f = ($ffi_Data_String_Common['toLower'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('toLower', $ffi_Data_String_Common) ? $ffi_Data_String_Common['toLower'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_String_Common_toLower'] = __NAMESPACE__ . '\\majData_majString_majCommon_tomajLower';
@@ -229,7 +264,7 @@ function majData_majString_majCommon_tomajUpper(string $v0): string|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_String_Common;
-  $f = ($ffi_Data_String_Common['toUpper'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('toUpper', $ffi_Data_String_Common) ? $ffi_Data_String_Common['toUpper'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_String_Common_toUpper'] = __NAMESPACE__ . '\\majData_majString_majCommon_tomajUpper';
@@ -241,7 +276,7 @@ function majData_majString_majCommon_trim(string $v0): string|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_String_Common;
-  $f = ($ffi_Data_String_Common['trim'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('trim', $ffi_Data_String_Common) ? $ffi_Data_String_Common['trim'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_String_Common_trim'] = __NAMESPACE__ . '\\majData_majString_majCommon_trim';

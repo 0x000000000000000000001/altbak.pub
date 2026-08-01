@@ -31,37 +31,26 @@ return Call_bimap(dict_0_box)
 	return cache_bimap
 }
 
-var cache_bimap__gopurs_runtime_Value_3454882080 gopurs_runtime.Value
-var once_bimap__gopurs_runtime_Value_3454882080 sync.Once
-func Get_bimap__gopurs_runtime_Value_3454882080() gopurs_runtime.Value {
-	once_bimap__gopurs_runtime_Value_3454882080.Do(func() {
-		cache_bimap__gopurs_runtime_Value_3454882080 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_bimap__gopurs_runtime_Value_3454882080(dict_0_box)
+var cache_bimap__gopurs_runtime_Value_1334265888 gopurs_runtime.Value
+var once_bimap__gopurs_runtime_Value_1334265888 sync.Once
+func Get_bimap__gopurs_runtime_Value_1334265888() gopurs_runtime.Value {
+	once_bimap__gopurs_runtime_Value_1334265888.Do(func() {
+		cache_bimap__gopurs_runtime_Value_1334265888 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bimap__gopurs_runtime_Value_1334265888(dict_0_box)
 })
 	})
-	return cache_bimap__gopurs_runtime_Value_3454882080
+	return cache_bimap__gopurs_runtime_Value_1334265888
 }
 
-var cache_bimap__gopurs_runtime_Value_3783085216 gopurs_runtime.Value
-var once_bimap__gopurs_runtime_Value_3783085216 sync.Once
-func Get_bimap__gopurs_runtime_Value_3783085216() gopurs_runtime.Value {
-	once_bimap__gopurs_runtime_Value_3783085216.Do(func() {
-		cache_bimap__gopurs_runtime_Value_3783085216 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_bimap__gopurs_runtime_Value_3783085216(dict_0_box)
+var cache_bimap__gopurs_runtime_Value_478637536 gopurs_runtime.Value
+var once_bimap__gopurs_runtime_Value_478637536 sync.Once
+func Get_bimap__gopurs_runtime_Value_478637536() gopurs_runtime.Value {
+	once_bimap__gopurs_runtime_Value_478637536.Do(func() {
+		cache_bimap__gopurs_runtime_Value_478637536 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bimap__gopurs_runtime_Value_478637536(dict_0_box)
 })
 	})
-	return cache_bimap__gopurs_runtime_Value_3783085216
-}
-
-var cache_bimap__gopurs_runtime_Value_939779616 gopurs_runtime.Value
-var once_bimap__gopurs_runtime_Value_939779616 sync.Once
-func Get_bimap__gopurs_runtime_Value_939779616() gopurs_runtime.Value {
-	once_bimap__gopurs_runtime_Value_939779616.Do(func() {
-		cache_bimap__gopurs_runtime_Value_939779616 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_bimap__gopurs_runtime_Value_939779616(dict_0_box)
-})
-	})
-	return cache_bimap__gopurs_runtime_Value_939779616
+	return cache_bimap__gopurs_runtime_Value_478637536
 }
 
 var cache_bivoid gopurs_runtime.Value
@@ -86,15 +75,15 @@ return Call_lmap(dictBifunctor_0_box, f_1_box)
 	return cache_lmap
 }
 
-var cache_lmap__gopurs_runtime_Value_2573196326 gopurs_runtime.Value
-var once_lmap__gopurs_runtime_Value_2573196326 sync.Once
-func Get_lmap__gopurs_runtime_Value_2573196326() gopurs_runtime.Value {
-	once_lmap__gopurs_runtime_Value_2573196326.Do(func() {
-		cache_lmap__gopurs_runtime_Value_2573196326 = gopurs_runtime.Func2(func(dictBifunctor_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_lmap__gopurs_runtime_Value_2573196326(dictBifunctor_0_box, f_1_box)
+var cache_lmap__gopurs_runtime_Value_94500993 gopurs_runtime.Value
+var once_lmap__gopurs_runtime_Value_94500993 sync.Once
+func Get_lmap__gopurs_runtime_Value_94500993() gopurs_runtime.Value {
+	once_lmap__gopurs_runtime_Value_94500993.Do(func() {
+		cache_lmap__gopurs_runtime_Value_94500993 = gopurs_runtime.Func2(func(dictBifunctor_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_lmap__gopurs_runtime_Value_94500993(dictBifunctor_0_box, f_1_box)
 })
 	})
-	return cache_lmap__gopurs_runtime_Value_2573196326
+	return cache_lmap__gopurs_runtime_Value_94500993
 }
 
 var cache_rmap gopurs_runtime.Value
@@ -174,19 +163,13 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "bimap")
 }
 
-func Call_bimap__gopurs_runtime_Value_3454882080(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_bimap__gopurs_runtime_Value_1334265888(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "bimap")
 }
 
-func Call_bimap__gopurs_runtime_Value_3783085216(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
-_ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "bimap")
-}
-
-func Call_bimap__gopurs_runtime_Value_939779616(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_bimap__gopurs_runtime_Value_478637536(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "bimap")
@@ -210,7 +193,7 @@ _ = f_1
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBifunctor_0, "bimap"), f_1, Get_identity())
 }
 
-func Call_lmap__gopurs_runtime_Value_2573196326(dictBifunctor_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_lmap__gopurs_runtime_Value_94500993(dictBifunctor_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictBifunctor_0 gopurs_runtime.Value = dictBifunctor_0_loop
 _ = dictBifunctor_0
 var f_1 gopurs_runtime.Value = f_1_loop

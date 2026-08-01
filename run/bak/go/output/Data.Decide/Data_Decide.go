@@ -240,15 +240,15 @@ return Call_choose(dict_0_box)
 	return cache_choose
 }
 
-var cache_choose__gopurs_runtime_Value_3341411850 gopurs_runtime.Value
-var once_choose__gopurs_runtime_Value_3341411850 sync.Once
-func Get_choose__gopurs_runtime_Value_3341411850() gopurs_runtime.Value {
-	once_choose__gopurs_runtime_Value_3341411850.Do(func() {
-		cache_choose__gopurs_runtime_Value_3341411850 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_choose__gopurs_runtime_Value_3341411850(dict_0_box)
+var cache_choose__gopurs_runtime_Value_1032977354 gopurs_runtime.Value
+var once_choose__gopurs_runtime_Value_1032977354 sync.Once
+func Get_choose__gopurs_runtime_Value_1032977354() gopurs_runtime.Value {
+	once_choose__gopurs_runtime_Value_1032977354.Do(func() {
+		cache_choose__gopurs_runtime_Value_1032977354 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_choose__gopurs_runtime_Value_1032977354(dict_0_box)
 })
 	})
-	return cache_choose__gopurs_runtime_Value_3341411850
+	return cache_choose__gopurs_runtime_Value_1032977354
 }
 
 var cache_chosen gopurs_runtime.Value
@@ -309,7 +309,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "choose")
 }
 
-func Call_choose__gopurs_runtime_Value_3341411850(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_choose__gopurs_runtime_Value_1032977354(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "choose")

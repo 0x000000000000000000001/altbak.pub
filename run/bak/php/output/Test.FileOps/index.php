@@ -147,7 +147,7 @@ function majTest_majFilemajOps_loopmajE(int $v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Test_FileOps;
-  $f = ($ffi_Test_FileOps['loopE'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('loopE', $ffi_Test_FileOps) ? $ffi_Test_FileOps['loopE'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Test_FileOps_loopE'] = __NAMESPACE__ . '\\majTest_majFilemajOps_loopmajE';
@@ -159,7 +159,7 @@ function majTest_majFilemajOps_readmajFilemajSync(string $v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Test_FileOps;
-  $f = ($ffi_Test_FileOps['readFileSync'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('readFileSync', $ffi_Test_FileOps) ? $ffi_Test_FileOps['readFileSync'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Test_FileOps_readFileSync'] = __NAMESPACE__ . '\\majTest_majFilemajOps_readmajFilemajSync';
@@ -171,7 +171,7 @@ function majTest_majFilemajOps_writemajFilemajSync(string $v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Test_FileOps;
-  $f = ($ffi_Test_FileOps['writeFileSync'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('writeFileSync', $ffi_Test_FileOps) ? $ffi_Test_FileOps['writeFileSync'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Test_FileOps_writeFileSync'] = __NAMESPACE__ . '\\majTest_majFilemajOps_writemajFilemajSync';

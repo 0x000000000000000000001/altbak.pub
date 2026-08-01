@@ -79,7 +79,7 @@ if [ -d "output/${ENTRY_POINT}" ]; then
     rm -f go.mod
     go mod init gopurs/output > /dev/null 2>&1
     go mod tidy > /dev/null 2>&1
-    go build -o go_app .
+    go build -o go_app ./${ENTRY_POINT}/main
     cd ..
     
     GOGC=1000 ./output/go_app

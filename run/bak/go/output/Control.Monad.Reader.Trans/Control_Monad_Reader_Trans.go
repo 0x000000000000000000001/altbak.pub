@@ -27,26 +27,15 @@ return Call_withReaderT(f_0_box, v_1_box, x_2_box)
 	return cache_withReaderT
 }
 
-var cache_withReaderT__gopurs_runtime_Value_653128795 gopurs_runtime.Value
-var once_withReaderT__gopurs_runtime_Value_653128795 sync.Once
-func Get_withReaderT__gopurs_runtime_Value_653128795() gopurs_runtime.Value {
-	once_withReaderT__gopurs_runtime_Value_653128795.Do(func() {
-		cache_withReaderT__gopurs_runtime_Value_653128795 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_withReaderT__gopurs_runtime_Value_653128795(f_0_box, v_1_box, x_2_box)
+var cache_withReaderT__gopurs_runtime_Value_3011255643 gopurs_runtime.Value
+var once_withReaderT__gopurs_runtime_Value_3011255643 sync.Once
+func Get_withReaderT__gopurs_runtime_Value_3011255643() gopurs_runtime.Value {
+	once_withReaderT__gopurs_runtime_Value_3011255643.Do(func() {
+		cache_withReaderT__gopurs_runtime_Value_3011255643 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_withReaderT__gopurs_runtime_Value_3011255643(f_0_box, v_1_box, x_2_box)
 })
 	})
-	return cache_withReaderT__gopurs_runtime_Value_653128795
-}
-
-var cache_withReaderT__gopurs_runtime_Value_3586686264 gopurs_runtime.Value
-var once_withReaderT__gopurs_runtime_Value_3586686264 sync.Once
-func Get_withReaderT__gopurs_runtime_Value_3586686264() gopurs_runtime.Value {
-	once_withReaderT__gopurs_runtime_Value_3586686264.Do(func() {
-		cache_withReaderT__gopurs_runtime_Value_3586686264 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_withReaderT__gopurs_runtime_Value_3586686264(f_0_box, v_1_box, x_2_box)
-})
-	})
-	return cache_withReaderT__gopurs_runtime_Value_3586686264
+	return cache_withReaderT__gopurs_runtime_Value_3011255643
 }
 
 var cache_runReaderT gopurs_runtime.Value
@@ -93,37 +82,15 @@ return Call_mapReaderT(f_0_box, v_1_box, x_2_box)
 	return cache_mapReaderT
 }
 
-var cache_mapReaderT__gopurs_runtime_Value_3135604056 gopurs_runtime.Value
-var once_mapReaderT__gopurs_runtime_Value_3135604056 sync.Once
-func Get_mapReaderT__gopurs_runtime_Value_3135604056() gopurs_runtime.Value {
-	once_mapReaderT__gopurs_runtime_Value_3135604056.Do(func() {
-		cache_mapReaderT__gopurs_runtime_Value_3135604056 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_mapReaderT__gopurs_runtime_Value_3135604056(f_0_box, v_1_box, x_2_box)
+var cache_mapReaderT__gopurs_runtime_Value_3011255643 gopurs_runtime.Value
+var once_mapReaderT__gopurs_runtime_Value_3011255643 sync.Once
+func Get_mapReaderT__gopurs_runtime_Value_3011255643() gopurs_runtime.Value {
+	once_mapReaderT__gopurs_runtime_Value_3011255643.Do(func() {
+		cache_mapReaderT__gopurs_runtime_Value_3011255643 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mapReaderT__gopurs_runtime_Value_3011255643(f_0_box, v_1_box, x_2_box)
 })
 	})
-	return cache_mapReaderT__gopurs_runtime_Value_3135604056
-}
-
-var cache_mapReaderT__gopurs_runtime_Value_1648383003 gopurs_runtime.Value
-var once_mapReaderT__gopurs_runtime_Value_1648383003 sync.Once
-func Get_mapReaderT__gopurs_runtime_Value_1648383003() gopurs_runtime.Value {
-	once_mapReaderT__gopurs_runtime_Value_1648383003.Do(func() {
-		cache_mapReaderT__gopurs_runtime_Value_1648383003 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_mapReaderT__gopurs_runtime_Value_1648383003(f_0_box, v_1_box, x_2_box)
-})
-	})
-	return cache_mapReaderT__gopurs_runtime_Value_1648383003
-}
-
-var cache_mapReaderT__gopurs_runtime_Value_80508088 gopurs_runtime.Value
-var once_mapReaderT__gopurs_runtime_Value_80508088 sync.Once
-func Get_mapReaderT__gopurs_runtime_Value_80508088() gopurs_runtime.Value {
-	once_mapReaderT__gopurs_runtime_Value_80508088.Do(func() {
-		cache_mapReaderT__gopurs_runtime_Value_80508088 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_mapReaderT__gopurs_runtime_Value_80508088(f_0_box, v_1_box, x_2_box)
-})
-	})
-	return cache_mapReaderT__gopurs_runtime_Value_80508088
+	return cache_mapReaderT__gopurs_runtime_Value_3011255643
 }
 
 var cache_functorReaderT gopurs_runtime.Value
@@ -395,17 +362,7 @@ _ = x_2
 return gopurs_runtime.Apply(v_1, gopurs_runtime.Apply(f_0, x_2))
 }
 
-func Call_withReaderT__gopurs_runtime_Value_653128795(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var f_0 gopurs_runtime.Value = f_0_loop
-_ = f_0
-var v_1 gopurs_runtime.Value = v_1_loop
-_ = v_1
-var x_2 gopurs_runtime.Value = x_2_loop
-_ = x_2
-return gopurs_runtime.Apply(v_1, gopurs_runtime.Apply(f_0, x_2))
-}
-
-func Call_withReaderT__gopurs_runtime_Value_3586686264(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_withReaderT__gopurs_runtime_Value_3011255643(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var v_1 gopurs_runtime.Value = v_1_loop
@@ -431,27 +388,7 @@ _ = x_2
 return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(v_1, x_2))
 }
 
-func Call_mapReaderT__gopurs_runtime_Value_3135604056(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var f_0 gopurs_runtime.Value = f_0_loop
-_ = f_0
-var v_1 gopurs_runtime.Value = v_1_loop
-_ = v_1
-var x_2 gopurs_runtime.Value = x_2_loop
-_ = x_2
-return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(v_1, x_2))
-}
-
-func Call_mapReaderT__gopurs_runtime_Value_1648383003(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var f_0 gopurs_runtime.Value = f_0_loop
-_ = f_0
-var v_1 gopurs_runtime.Value = v_1_loop
-_ = v_1
-var x_2 gopurs_runtime.Value = x_2_loop
-_ = x_2
-return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(v_1, x_2))
-}
-
-func Call_mapReaderT__gopurs_runtime_Value_80508088(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_mapReaderT__gopurs_runtime_Value_3011255643(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var v_1 gopurs_runtime.Value = v_1_loop

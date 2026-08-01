@@ -115,8 +115,8 @@ $exports['getTimezoneOffset'] = $getTimezoneOffset;
 return $exports;
   return $exports;
 });
-$GLOBALS['Effect_Now_getTimezoneOffset'] = ($ffi_Effect_Now['getTimezoneOffset'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Effect_Now_now'] = ($ffi_Effect_Now['now'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Effect_Now_getTimezoneOffset'] = (\array_key_exists('getTimezoneOffset', $ffi_Effect_Now) ? $ffi_Effect_Now['getTimezoneOffset'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Effect_Now_now'] = (\array_key_exists('now', $ffi_Effect_Now) ? $ffi_Effect_Now['now'] : new class { public function __invoke(...$args) { return $this; } });
 
 
 

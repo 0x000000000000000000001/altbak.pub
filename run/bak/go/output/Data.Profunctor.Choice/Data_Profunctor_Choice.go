@@ -19,15 +19,15 @@ return Call_right(dict_0_box)
 	return cache_right
 }
 
-var cache_right__gopurs_runtime_Value_3049334194 gopurs_runtime.Value
-var once_right__gopurs_runtime_Value_3049334194 sync.Once
-func Get_right__gopurs_runtime_Value_3049334194() gopurs_runtime.Value {
-	once_right__gopurs_runtime_Value_3049334194.Do(func() {
-		cache_right__gopurs_runtime_Value_3049334194 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_right__gopurs_runtime_Value_3049334194(dict_0_box)
+var cache_right__gopurs_runtime_Value_605110066 gopurs_runtime.Value
+var once_right__gopurs_runtime_Value_605110066 sync.Once
+func Get_right__gopurs_runtime_Value_605110066() gopurs_runtime.Value {
+	once_right__gopurs_runtime_Value_605110066.Do(func() {
+		cache_right__gopurs_runtime_Value_605110066 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_right__gopurs_runtime_Value_605110066(dict_0_box)
 })
 	})
-	return cache_right__gopurs_runtime_Value_3049334194
+	return cache_right__gopurs_runtime_Value_605110066
 }
 
 var cache_left gopurs_runtime.Value
@@ -41,15 +41,15 @@ return Call_left(dict_0_box)
 	return cache_left
 }
 
-var cache_left__gopurs_runtime_Value_3049334194 gopurs_runtime.Value
-var once_left__gopurs_runtime_Value_3049334194 sync.Once
-func Get_left__gopurs_runtime_Value_3049334194() gopurs_runtime.Value {
-	once_left__gopurs_runtime_Value_3049334194.Do(func() {
-		cache_left__gopurs_runtime_Value_3049334194 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_left__gopurs_runtime_Value_3049334194(dict_0_box)
+var cache_left__gopurs_runtime_Value_605110066 gopurs_runtime.Value
+var once_left__gopurs_runtime_Value_605110066 sync.Once
+func Get_left__gopurs_runtime_Value_605110066() gopurs_runtime.Value {
+	once_left__gopurs_runtime_Value_605110066.Do(func() {
+		cache_left__gopurs_runtime_Value_605110066 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_left__gopurs_runtime_Value_605110066(dict_0_box)
 })
 	})
-	return cache_left__gopurs_runtime_Value_3049334194
+	return cache_left__gopurs_runtime_Value_605110066
 }
 
 var cache_splitChoice gopurs_runtime.Value
@@ -63,15 +63,15 @@ return Call_splitChoice(dictSemigroupoid_0_box, dictChoice_1_box, l_2_box, r_3_b
 	return cache_splitChoice
 }
 
-var cache_splitChoice__gopurs_runtime_Value_3816834567 gopurs_runtime.Value
-var once_splitChoice__gopurs_runtime_Value_3816834567 sync.Once
-func Get_splitChoice__gopurs_runtime_Value_3816834567() gopurs_runtime.Value {
-	once_splitChoice__gopurs_runtime_Value_3816834567.Do(func() {
-		cache_splitChoice__gopurs_runtime_Value_3816834567 = gopurs_runtime.Func4(func(dictSemigroupoid_0_box gopurs_runtime.Value, dictChoice_1_box gopurs_runtime.Value, l_2_box gopurs_runtime.Value, r_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_splitChoice__gopurs_runtime_Value_3816834567(dictSemigroupoid_0_box, dictChoice_1_box, l_2_box, r_3_box)
+var cache_splitChoice__gopurs_runtime_Value_4113920438 gopurs_runtime.Value
+var once_splitChoice__gopurs_runtime_Value_4113920438 sync.Once
+func Get_splitChoice__gopurs_runtime_Value_4113920438() gopurs_runtime.Value {
+	once_splitChoice__gopurs_runtime_Value_4113920438.Do(func() {
+		cache_splitChoice__gopurs_runtime_Value_4113920438 = gopurs_runtime.Func4(func(dictSemigroupoid_0_box gopurs_runtime.Value, dictChoice_1_box gopurs_runtime.Value, l_2_box gopurs_runtime.Value, r_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_splitChoice__gopurs_runtime_Value_4113920438(dictSemigroupoid_0_box, dictChoice_1_box, l_2_box, r_3_box)
 })
 	})
-	return cache_splitChoice__gopurs_runtime_Value_3816834567
+	return cache_splitChoice__gopurs_runtime_Value_4113920438
 }
 
 var cache_fanin gopurs_runtime.Value
@@ -125,7 +125,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "right")
 }
 
-func Call_right__gopurs_runtime_Value_3049334194(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_right__gopurs_runtime_Value_605110066(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "right")
@@ -137,7 +137,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "left")
 }
 
-func Call_left__gopurs_runtime_Value_3049334194(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_left__gopurs_runtime_Value_605110066(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "left")
@@ -155,7 +155,7 @@ _ = r_3
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroupoid_0, "compose"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictChoice_1, "right"), r_3), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictChoice_1, "left"), l_2))
 }
 
-func Call_splitChoice__gopurs_runtime_Value_3816834567(dictSemigroupoid_0_loop gopurs_runtime.Value, dictChoice_1_loop gopurs_runtime.Value, l_2_loop gopurs_runtime.Value, r_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_splitChoice__gopurs_runtime_Value_4113920438(dictSemigroupoid_0_loop gopurs_runtime.Value, dictChoice_1_loop gopurs_runtime.Value, l_2_loop gopurs_runtime.Value, r_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictSemigroupoid_0 gopurs_runtime.Value = dictSemigroupoid_0_loop
 _ = dictSemigroupoid_0
 var dictChoice_1 gopurs_runtime.Value = dictChoice_1_loop

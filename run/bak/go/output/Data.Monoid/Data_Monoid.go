@@ -117,15 +117,26 @@ return Call_mempty(dict_0_box)
 	return cache_mempty
 }
 
-var cache_mempty__gopurs_runtime_Value_850932430 gopurs_runtime.Value
-var once_mempty__gopurs_runtime_Value_850932430 sync.Once
-func Get_mempty__gopurs_runtime_Value_850932430() gopurs_runtime.Value {
-	once_mempty__gopurs_runtime_Value_850932430.Do(func() {
-		cache_mempty__gopurs_runtime_Value_850932430 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_mempty__gopurs_runtime_Value_850932430(dict_0_box)
+var cache_mempty__gopurs_runtime_Value_2352415438 gopurs_runtime.Value
+var once_mempty__gopurs_runtime_Value_2352415438 sync.Once
+func Get_mempty__gopurs_runtime_Value_2352415438() gopurs_runtime.Value {
+	once_mempty__gopurs_runtime_Value_2352415438.Do(func() {
+		cache_mempty__gopurs_runtime_Value_2352415438 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mempty__gopurs_runtime_Value_2352415438(dict_0_box)
 })
 	})
-	return cache_mempty__gopurs_runtime_Value_850932430
+	return cache_mempty__gopurs_runtime_Value_2352415438
+}
+
+var cache_mempty__gopurs_runtime_Value_1531080078 gopurs_runtime.Value
+var once_mempty__gopurs_runtime_Value_1531080078 sync.Once
+func Get_mempty__gopurs_runtime_Value_1531080078() gopurs_runtime.Value {
+	once_mempty__gopurs_runtime_Value_1531080078.Do(func() {
+		cache_mempty__gopurs_runtime_Value_1531080078 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mempty__gopurs_runtime_Value_1531080078(dict_0_box)
+})
+	})
+	return cache_mempty__gopurs_runtime_Value_1531080078
 }
 
 var cache_monoidFn gopurs_runtime.Value
@@ -196,7 +207,13 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "mempty")
 }
 
-func Call_mempty__gopurs_runtime_Value_850932430(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_mempty__gopurs_runtime_Value_2352415438(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "mempty")
+}
+
+func Call_mempty__gopurs_runtime_Value_1531080078(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "mempty")
@@ -256,9 +273,9 @@ _ = mempty1_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
 return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-var go__4_2 gopurs_runtime.Value
-_ = go__4_2
-go__4_2 = gopurs_runtime.Func(func(p_5 gopurs_runtime.Value) gopurs_runtime.Value {
+var go__go_4_2 gopurs_runtime.Value
+_ = go__go_4_2
+go__go_4_2 = gopurs_runtime.Func(func(p_5 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t4 gopurs_runtime.Value
 {
 if (gopurs_runtime.Apply2(Get_lessThanOrEq(), p_5, gopurs_runtime.Int(0)).IntVal) != (0) {
@@ -278,7 +295,7 @@ goto end_branch_4
 }
 {
 if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingInt(), "mod"), p_5, gopurs_runtime.Int(2)).IntVal) == (0) {
-x_prime_6_5 := gopurs_runtime.Apply(go__4_2, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingInt(), "div"), p_5, gopurs_runtime.Int(2)))
+x_prime_6_5 := gopurs_runtime.Apply(go__go_4_2, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingInt(), "div"), p_5, gopurs_runtime.Int(2)))
 _ = x_prime_6_5
 __t4 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "append"), x_prime_6_5, x_prime_6_5)
 goto end_branch_4
@@ -287,14 +304,14 @@ goto end_branch_4
 }
 }
 {
-x_prime_6_3 := gopurs_runtime.Apply(go__4_2, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingInt(), "div"), p_5, gopurs_runtime.Int(2)))
+x_prime_6_3 := gopurs_runtime.Apply(go__go_4_2, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingInt(), "div"), p_5, gopurs_runtime.Int(2)))
 _ = x_prime_6_3
 __t4 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "append"), x_prime_6_3, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "append"), x_prime_6_3, x_3))
 }
 end_branch_4:
 return __t4
 })
-return go__4_2
+return go__go_4_2
 })
 }
 

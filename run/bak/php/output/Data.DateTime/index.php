@@ -122,14 +122,28 @@ $createUTC = function($y, $mo, $d, $h, $m, $s, $ms) {
     return (float)$dt->getTimestamp() * 1000 + (int)$dt->format('v');
 };
 
-$calcDiff = function($rec1, $rec2) use (&$calcDiff) {
+$calcDiff = function($rec1, $rec2 = null) use (&$calcDiff) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$calcDiff) {
+
+            return $calcDiff(...\array_merge($__args, $more));
+        };
+    }
 
     $msUTC1 = $createUTC($rec1->year, $rec1->month - 1, $rec1->day, $rec1->hour, $rec1->minute, $rec1->second, $rec1->millisecond);
     $msUTC2 = $createUTC($rec2->year, $rec2->month - 1, $rec2->day, $rec2->hour, $rec2->minute, $rec2->second, $rec2->millisecond);
     return $msUTC1 - $msUTC2;
 };
 
-$adjustImpl = function($just, $nothing, $offset, $rec) use (&$adjustImpl) {
+$adjustImpl = function($just, $nothing = null, $offset = null, $rec = null) use (&$adjustImpl) {
+    if (\func_num_args() < 4) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$adjustImpl) {
+
+            return $adjustImpl(...\array_merge($__args, $more));
+        };
+    }
 
     $msUTC = $createUTC($rec->year, $rec->month - 1, $rec->day, $rec->hour, $rec->minute, $rec->second, $rec->millisecond);
     $targetMs = $msUTC + $offset;
@@ -166,12 +180,12 @@ function majData_majDatemajTime_adjustmajImpl($v0, $v1 = null, $v2 = null, $v3 =
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
   global $ffi_Data_DateTime;
-  $f = ($ffi_Data_DateTime['adjustImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('adjustImpl', $ffi_Data_DateTime) ? $ffi_Data_DateTime['adjustImpl'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3);
 }
 $GLOBALS['Data_DateTime_adjustImpl'] = __NAMESPACE__ . '\\majData_majDatemajTime_adjustmajImpl';
 
-$GLOBALS['Data_DateTime_calcDiff'] = ($ffi_Data_DateTime['calcDiff'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_DateTime_calcDiff'] = (\array_key_exists('calcDiff', $ffi_Data_DateTime) ? $ffi_Data_DateTime['calcDiff'] : new class { public function __invoke(...$args) { return $this; } });
 
 
 final class Data_DateTime_DateTime { public $tag = 'DateTime'; public function __construct(public  $value0, public  $value1) {} }

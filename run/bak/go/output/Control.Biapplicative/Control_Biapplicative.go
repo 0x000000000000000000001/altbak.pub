@@ -18,15 +18,15 @@ return Call_bipure(dict_0_box)
 	return cache_bipure
 }
 
-var cache_bipure__gopurs_runtime_Value_438865070 gopurs_runtime.Value
-var once_bipure__gopurs_runtime_Value_438865070 sync.Once
-func Get_bipure__gopurs_runtime_Value_438865070() gopurs_runtime.Value {
-	once_bipure__gopurs_runtime_Value_438865070.Do(func() {
-		cache_bipure__gopurs_runtime_Value_438865070 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_bipure__gopurs_runtime_Value_438865070(dict_0_box)
+var cache_bipure__gopurs_runtime_Value_1122506798 gopurs_runtime.Value
+var once_bipure__gopurs_runtime_Value_1122506798 sync.Once
+func Get_bipure__gopurs_runtime_Value_1122506798() gopurs_runtime.Value {
+	once_bipure__gopurs_runtime_Value_1122506798.Do(func() {
+		cache_bipure__gopurs_runtime_Value_1122506798 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bipure__gopurs_runtime_Value_1122506798(dict_0_box)
 })
 	})
-	return cache_bipure__gopurs_runtime_Value_438865070
+	return cache_bipure__gopurs_runtime_Value_1122506798
 }
 
 var cache_biapplicativeTuple gopurs_runtime.Value
@@ -46,7 +46,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "bipure")
 }
 
-func Call_bipure__gopurs_runtime_Value_438865070(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_bipure__gopurs_runtime_Value_1122506798(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "bipure")

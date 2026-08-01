@@ -100,10 +100,24 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Semigroup = \call_user_func(function() {
   $exports = [];
-$concatString = function($x, $y) use (&$concatString) {
+$concatString = function($x, $y = null) use (&$concatString) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$concatString) {
+
+            return $concatString(...\array_merge($__args, $more));
+        };
+    }
     return $x . $y;
 };
-$concatArray = function($x, $y) use (&$concatArray) {
+$concatArray = function($x, $y = null) use (&$concatArray) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$concatArray) {
+
+            return $concatArray(...\array_merge($__args, $more));
+        };
+    }
     return \array_merge($x, $y);
 };
 
@@ -119,7 +133,7 @@ function majData_majSemigroup_concatmajArray($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Semigroup;
-  $f = ($ffi_Data_Semigroup['concatArray'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('concatArray', $ffi_Data_Semigroup) ? $ffi_Data_Semigroup['concatArray'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Semigroup_concatArray'] = __NAMESPACE__ . '\\majData_majSemigroup_concatmajArray';
@@ -131,7 +145,7 @@ function majData_majSemigroup_concatmajString(string $v0, $v1 = null): string|\C
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Semigroup;
-  $f = ($ffi_Data_Semigroup['concatString'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('concatString', $ffi_Data_Semigroup) ? $ffi_Data_Semigroup['concatString'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Semigroup_concatString'] = __NAMESPACE__ . '\\majData_majSemigroup_concatmajString';

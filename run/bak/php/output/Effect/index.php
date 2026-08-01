@@ -104,7 +104,13 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Effect = \call_user_func(function() {
   $exports = [];
 $pureE = function($x) { return function() use($x) { return $x; }; };
-$bindE = function($a, $f) use (&$bindE) {
+$bindE = function($a, $f = null) use (&$bindE) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$bindE) {
+            return $bindE(...\array_merge($__args, $more));
+        };
+    }
     return function() use($a, $f) {
         $a_res = $a();
         $res = $f($a_res);
@@ -118,7 +124,13 @@ $untilE = function($f) {
     };
 };
 
-$whileE = function($f, $a) use (&$whileE) {
+$whileE = function($f, $a = null) use (&$whileE) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$whileE) {
+            return $whileE(...\array_merge($__args, $more));
+        };
+    }
     return function() use ($f, $a) {
         while ($f()) {
             $a();
@@ -126,7 +138,13 @@ $whileE = function($f, $a) use (&$whileE) {
     };
 };
 
-$forE = function($lo, $hi, $f) use (&$forE) {
+$forE = function($lo, $hi = null, $f = null) use (&$forE) {
+    if (\func_num_args() < 3) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$forE) {
+            return $forE(...\array_merge($__args, $more));
+        };
+    }
     return function() use ($lo, $hi, $f) {
         for ($i = $lo; $i < $hi; $i++) {
             $f($i)();
@@ -134,7 +152,13 @@ $forE = function($lo, $hi, $f) use (&$forE) {
     };
 };
 
-$foreachE = function($as, $f) use (&$foreachE) {
+$foreachE = function($as, $f = null) use (&$foreachE) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$foreachE) {
+            return $foreachE(...\array_merge($__args, $more));
+        };
+    }
     return function() use ($as, $f) {
         foreach ($as as $a) {
             $f($a)();
@@ -159,7 +183,7 @@ function majEffect_bindmajE($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Effect;
-  $f = ($ffi_Effect['bindE'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('bindE', $ffi_Effect) ? $ffi_Effect['bindE'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Effect_bindE'] = __NAMESPACE__ . '\\majEffect_bindmajE';
@@ -171,7 +195,7 @@ function majEffect_formajE(int $v0, $v1 = null, $v2 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Effect;
-  $f = ($ffi_Effect['forE'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('forE', $ffi_Effect) ? $ffi_Effect['forE'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Effect_forE'] = __NAMESPACE__ . '\\majEffect_formajE';
@@ -183,7 +207,7 @@ function majEffect_foreachmajE($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Effect;
-  $f = ($ffi_Effect['foreachE'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('foreachE', $ffi_Effect) ? $ffi_Effect['foreachE'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Effect_foreachE'] = __NAMESPACE__ . '\\majEffect_foreachmajE';
@@ -195,7 +219,7 @@ function majEffect_puremajE($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect;
-  $f = ($ffi_Effect['pureE'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('pureE', $ffi_Effect) ? $ffi_Effect['pureE'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Effect_pureE'] = __NAMESPACE__ . '\\majEffect_puremajE';
@@ -207,7 +231,7 @@ function majEffect_untilmajE($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect;
-  $f = ($ffi_Effect['untilE'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('untilE', $ffi_Effect) ? $ffi_Effect['untilE'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Effect_untilE'] = __NAMESPACE__ . '\\majEffect_untilmajE';
@@ -219,7 +243,7 @@ function majEffect_whilemajE($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Effect;
-  $f = ($ffi_Effect['whileE'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('whileE', $ffi_Effect) ? $ffi_Effect['whileE'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Effect_whileE'] = __NAMESPACE__ . '\\majEffect_whilemajE';

@@ -106,15 +106,49 @@ class PhpursCompose {
         $this->g = $g;
     }
     
-    public function __invoke($a) {
+    public function __invoke($a = null) {
+        $__num = \func_num_args();
         $g = $this->g;
         $f = $this->f;
-        return $f($g($a));
+        
+        $res = $f($g($a));
+        
+        if ($__num > 1) {
+            return $res(...\array_slice(\func_get_args(), 1));
+        }
+        
+        return $res;
     }
 }
 
-$_composeImpl = function($f, $g, $a) {
-    return $f($g($a));
+$_composeImpl = function($f, $g = null) {
+    $num = \func_num_args();
+    if ($num === 1) {
+        return function($g) use ($f) {
+            return function($a = null) use ($f, $g) {
+                $__num = \func_num_args();
+                $res = $f($g($a));
+                if ($__num > 1) {
+                    return $res(...\array_slice(\func_get_args(), 1));
+                }
+                return $res;
+            };
+        };
+    }
+    
+    $res = function($a = null) use ($f, $g) {
+        $__num = \func_num_args();
+        $res2 = $f($g($a));
+        if ($__num > 1) {
+            return $res2(...\array_slice(\func_get_args(), 1));
+        }
+        return $res2;
+    };
+
+    if ($num > 2) {
+        return $res(...\array_slice(\func_get_args(), 2));
+    }
+    return $res;
 };
 
 $exports['composeImpl'] = $_composeImpl;
@@ -128,7 +162,7 @@ function majControl_majSemigroupoid_composemajImpl($v0, $v1 = null, $v2 = null) 
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Control_Semigroupoid;
-  $f = ($ffi_Control_Semigroupoid['composeImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('composeImpl', $ffi_Control_Semigroupoid) ? $ffi_Control_Semigroupoid['composeImpl'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Control_Semigroupoid_composeImpl'] = __NAMESPACE__ . '\\majControl_majSemigroupoid_composemajImpl';

@@ -47,15 +47,15 @@ return Call_traverse(dict_0_box)
 	return cache_traverse
 }
 
-var cache_traverse__gopurs_runtime_Value_2428629862 gopurs_runtime.Value
-var once_traverse__gopurs_runtime_Value_2428629862 sync.Once
-func Get_traverse__gopurs_runtime_Value_2428629862() gopurs_runtime.Value {
-	once_traverse__gopurs_runtime_Value_2428629862.Do(func() {
-		cache_traverse__gopurs_runtime_Value_2428629862 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_traverse__gopurs_runtime_Value_2428629862(dict_0_box)
+var cache_traverse__gopurs_runtime_Value_2265355576 gopurs_runtime.Value
+var once_traverse__gopurs_runtime_Value_2265355576 sync.Once
+func Get_traverse__gopurs_runtime_Value_2265355576() gopurs_runtime.Value {
+	once_traverse__gopurs_runtime_Value_2265355576.Do(func() {
+		cache_traverse__gopurs_runtime_Value_2265355576 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_traverse__gopurs_runtime_Value_2265355576(dict_0_box)
 })
 	})
-	return cache_traverse__gopurs_runtime_Value_2428629862
+	return cache_traverse__gopurs_runtime_Value_2265355576
 }
 
 var cache_traversableTuple gopurs_runtime.Value
@@ -364,15 +364,15 @@ return Call_sequence(dict_0_box)
 	return cache_sequence
 }
 
-var cache_sequence__gopurs_runtime_Value_2383248171 gopurs_runtime.Value
-var once_sequence__gopurs_runtime_Value_2383248171 sync.Once
-func Get_sequence__gopurs_runtime_Value_2383248171() gopurs_runtime.Value {
-	once_sequence__gopurs_runtime_Value_2383248171.Do(func() {
-		cache_sequence__gopurs_runtime_Value_2383248171 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_sequence__gopurs_runtime_Value_2383248171(dict_0_box)
+var cache_sequence__gopurs_runtime_Value_1188743833 gopurs_runtime.Value
+var once_sequence__gopurs_runtime_Value_1188743833 sync.Once
+func Get_sequence__gopurs_runtime_Value_1188743833() gopurs_runtime.Value {
+	once_sequence__gopurs_runtime_Value_1188743833.Do(func() {
+		cache_sequence__gopurs_runtime_Value_1188743833 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_sequence__gopurs_runtime_Value_1188743833(dict_0_box)
 })
 	})
-	return cache_sequence__gopurs_runtime_Value_2383248171
+	return cache_sequence__gopurs_runtime_Value_1188743833
 }
 
 var cache_traversableApp gopurs_runtime.Value
@@ -480,15 +480,15 @@ return Call_mapAccumR(dictTraversable_0_box)
 	return cache_mapAccumR
 }
 
-var cache_mapAccumR__gopurs_runtime_Value_3643040205 gopurs_runtime.Value
-var once_mapAccumR__gopurs_runtime_Value_3643040205 sync.Once
-func Get_mapAccumR__gopurs_runtime_Value_3643040205() gopurs_runtime.Value {
-	once_mapAccumR__gopurs_runtime_Value_3643040205.Do(func() {
-		cache_mapAccumR__gopurs_runtime_Value_3643040205 = gopurs_runtime.Func(func(dictTraversable_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_mapAccumR__gopurs_runtime_Value_3643040205(dictTraversable_0_box)
+var cache_mapAccumR__gopurs_runtime_Value_2780270502 gopurs_runtime.Value
+var once_mapAccumR__gopurs_runtime_Value_2780270502 sync.Once
+func Get_mapAccumR__gopurs_runtime_Value_2780270502() gopurs_runtime.Value {
+	once_mapAccumR__gopurs_runtime_Value_2780270502.Do(func() {
+		cache_mapAccumR__gopurs_runtime_Value_2780270502 = gopurs_runtime.Func(func(dictTraversable_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mapAccumR__gopurs_runtime_Value_2780270502(dictTraversable_0_box)
 })
 	})
-	return cache_mapAccumR__gopurs_runtime_Value_3643040205
+	return cache_mapAccumR__gopurs_runtime_Value_2780270502
 }
 
 var cache_scanr gopurs_runtime.Value
@@ -513,15 +513,15 @@ return Call_mapAccumL(dictTraversable_0_box)
 	return cache_mapAccumL
 }
 
-var cache_mapAccumL__gopurs_runtime_Value_3643040205 gopurs_runtime.Value
-var once_mapAccumL__gopurs_runtime_Value_3643040205 sync.Once
-func Get_mapAccumL__gopurs_runtime_Value_3643040205() gopurs_runtime.Value {
-	once_mapAccumL__gopurs_runtime_Value_3643040205.Do(func() {
-		cache_mapAccumL__gopurs_runtime_Value_3643040205 = gopurs_runtime.Func(func(dictTraversable_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_mapAccumL__gopurs_runtime_Value_3643040205(dictTraversable_0_box)
+var cache_mapAccumL__gopurs_runtime_Value_2780270502 gopurs_runtime.Value
+var once_mapAccumL__gopurs_runtime_Value_2780270502 sync.Once
+func Get_mapAccumL__gopurs_runtime_Value_2780270502() gopurs_runtime.Value {
+	once_mapAccumL__gopurs_runtime_Value_2780270502.Do(func() {
+		cache_mapAccumL__gopurs_runtime_Value_2780270502 = gopurs_runtime.Func(func(dictTraversable_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mapAccumL__gopurs_runtime_Value_2780270502(dictTraversable_0_box)
 })
 	})
-	return cache_mapAccumL__gopurs_runtime_Value_3643040205
+	return cache_mapAccumL__gopurs_runtime_Value_2780270502
 }
 
 var cache_scanl gopurs_runtime.Value
@@ -535,15 +535,15 @@ return Call_scanl(dictTraversable_0_box)
 	return cache_scanl
 }
 
-var cache_for_ gopurs_runtime.Value
-var once_for_ sync.Once
-func Get_for_() gopurs_runtime.Value {
-	once_for_.Do(func() {
-		cache_for_ = gopurs_runtime.Func2(func(dictApplicative_0_box gopurs_runtime.Value, dictTraversable_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_for_(dictApplicative_0_box, dictTraversable_1_box)
+var cache_go__for gopurs_runtime.Value
+var once_go__for sync.Once
+func Get_go__for() gopurs_runtime.Value {
+	once_go__for.Do(func() {
+		cache_go__for = gopurs_runtime.Func2(func(dictApplicative_0_box gopurs_runtime.Value, dictTraversable_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_go__for(dictApplicative_0_box, dictTraversable_1_box)
 })
 	})
-	return cache_for_
+	return cache_go__for
 }
 
 func Call_identity(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -558,7 +558,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "traverse")
 }
 
-func Call_traverse__gopurs_runtime_Value_2428629862(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_traverse__gopurs_runtime_Value_2265355576(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "traverse")
@@ -634,7 +634,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "sequence")
 }
 
-func Call_sequence__gopurs_runtime_Value_2383248171(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_sequence__gopurs_runtime_Value_1188743833(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "sequence")
@@ -870,7 +870,7 @@ return gopurs_runtime.Apply2(f_2, s_6, a_5)
 })
 }
 
-func Call_mapAccumR__gopurs_runtime_Value_3643040205(dictTraversable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_mapAccumR__gopurs_runtime_Value_2780270502(dictTraversable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictTraversable_0 gopurs_runtime.Value = dictTraversable_0_loop
 _ = dictTraversable_0
 traverse2_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable_0, "traverse"), pkg_Data_Traversable_Accum_Internal.Get_applicativeStateR())
@@ -908,7 +908,7 @@ return gopurs_runtime.Apply2(f_2, s_6, a_5)
 })
 }
 
-func Call_mapAccumL__gopurs_runtime_Value_3643040205(dictTraversable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_mapAccumL__gopurs_runtime_Value_2780270502(dictTraversable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictTraversable_0 gopurs_runtime.Value = dictTraversable_0_loop
 _ = dictTraversable_0
 traverse2_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable_0, "traverse"), pkg_Data_Traversable_Accum_Internal.Get_applicativeStateL())
@@ -934,7 +934,7 @@ return gopurs_runtime.RecordDict2("accum", "value", b_prime_7_1, b_prime_7_1)
 })
 }
 
-func Call_for_(dictApplicative_0_loop gopurs_runtime.Value, dictTraversable_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_go__for(dictApplicative_0_loop gopurs_runtime.Value, dictTraversable_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
 _ = dictApplicative_0
 var dictTraversable_1 gopurs_runtime.Value = dictTraversable_1_loop

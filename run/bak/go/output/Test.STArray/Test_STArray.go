@@ -14,7 +14,7 @@ var cache_sumArray gopurs_runtime.Value
 var once_sumArray sync.Once
 func Get_sumArray() gopurs_runtime.Value {
 	once_sumArray.Do(func() {
-		cache_sumArray = gopurs_runtime.Int(gopurs_runtime.Apply(pkg_Control_Monad_ST_Internal.Get_run(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Control_Monad_ST_Internal.Get_bindST(), "bind"), pkg_Data_Array_ST.Get_new_(), gopurs_runtime.Func(func(arr_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_sumArray = gopurs_runtime.Int(gopurs_runtime.Apply(pkg_Control_Monad_ST_Internal.Get_run(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Control_Monad_ST_Internal.Get_bindST(), "bind"), pkg_Data_Array_ST.Get_newImpl(), gopurs_runtime.Func(func(arr_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Control_Monad_ST_Internal.Get_bindST(), "bind"), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp2(pkg_Data_Array_ST.Get_pushAllImpl(), func() gopurs_runtime.Value {
 					arr := []int64{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}

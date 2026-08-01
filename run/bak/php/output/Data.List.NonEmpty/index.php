@@ -141,20 +141,20 @@ function majData_majList_majNonmajEmpty_zipmajWith($f_0, $v_1 = null, $v1_2 = nu
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $go__3_0 = null;
-  $go__3_0 = (function() use ($f_0, &$go__3_0) {
-  $__fn = function($v_4, $v1_5 = null, $v2_6 = null) use ($f_0, &$go__3_0, &$__fn) {
+  $go__go_3_0 = null;
+  $go__go_3_0 = (function() use ($f_0, &$go__go_3_0) {
+  $__fn = function($v_4, $v1_5 = null, $v2_6 = null) use ($f_0, &$go__go_3_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__tco_var_go__3_0_0_v_4 = $v_4;
-  $__tco_var_go__3_0_0_v1_5 = $v1_5;
-  $__tco_var_go__3_0_0_v2_6 = $v2_6;
-  tco_loop_go__3_0_0:;
-  $v_4 = $__tco_var_go__3_0_0_v_4;
-  $v1_5 = $__tco_var_go__3_0_0_v1_5;
-  $v2_6 = $__tco_var_go__3_0_0_v2_6;
+  $__tco_var_go__go_3_0_0_v_4 = $v_4;
+  $__tco_var_go__go_3_0_0_v1_5 = $v1_5;
+  $__tco_var_go__go_3_0_0_v2_6 = $v2_6;
+  tco_loop_go__go_3_0_0:;
+  $v_4 = $__tco_var_go__go_3_0_0_v_4;
+  $v1_5 = $__tco_var_go__go_3_0_0_v1_5;
+  $v2_6 = $__tco_var_go__go_3_0_0_v2_6;
   $__t0 = null;;
   if ($v_4 instanceof \Data\List\Types\Data_List_Types_Nil) {
 $__t0 = $v2_6;
@@ -168,10 +168,10 @@ goto end_branch_0;;
 $__tco_1 = ($v_4)->{'value1'};
 $__tco_2 = ($v1_5)->{'value1'};
 $__tco_3 = new \Data\List\Types\Data_List_Types_Cons((($f_0)(($v_4)->{'value0'}))(($v1_5)->{'value0'}), $v2_6);
-$__tco_var_go__3_0_0_v_4 = $__tco_1;
-$__tco_var_go__3_0_0_v1_5 = $__tco_2;
-$__tco_var_go__3_0_0_v2_6 = $__tco_3;
-goto tco_loop_go__3_0_0;;
+$__tco_var_go__go_3_0_0_v_4 = $__tco_1;
+$__tco_var_go__go_3_0_0_v1_5 = $__tco_2;
+$__tco_var_go__go_3_0_0_v2_6 = $__tco_3;
+goto tco_loop_go__go_3_0_0;;
 $__t0 = null;
 goto end_branch_0;;
 };
@@ -185,18 +185,18 @@ goto end_branch_0;;
   };
   return $__fn;
 })();
-  $go__4_1 = null;
-  $go__4_1 = (function() use (&$go__4_1) {
-  $__fn = function($v_5, $v1_6 = null) use (&$go__4_1, &$__fn) {
+  $go__go_4_1 = null;
+  $go__go_4_1 = (function() use (&$go__go_4_1) {
+  $__fn = function($v_5, $v1_6 = null) use (&$go__go_4_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_go__4_1_1_v_5 = $v_5;
-  $__tco_var_go__4_1_1_v1_6 = $v1_6;
-  tco_loop_go__4_1_1:;
-  $v_5 = $__tco_var_go__4_1_1_v_5;
-  $v1_6 = $__tco_var_go__4_1_1_v1_6;
+  $__tco_var_go__go_4_1_1_v_5 = $v_5;
+  $__tco_var_go__go_4_1_1_v1_6 = $v1_6;
+  tco_loop_go__go_4_1_1:;
+  $v_5 = $__tco_var_go__go_4_1_1_v_5;
+  $v1_6 = $__tco_var_go__go_4_1_1_v1_6;
   $__t1 = null;;
   if ($v1_6 instanceof \Data\List\Types\Data_List_Types_Nil) {
 $__t1 = $v_5;
@@ -205,9 +205,9 @@ goto end_branch_1;;
   if ($v1_6 instanceof \Data\List\Types\Data_List_Types_Cons) {
 $__tco_2 = new \Data\List\Types\Data_List_Types_Cons(($v1_6)->{'value0'}, $v_5);
 $__tco_3 = ($v1_6)->{'value1'};
-$__tco_var_go__4_1_1_v_5 = $__tco_2;
-$__tco_var_go__4_1_1_v1_6 = $__tco_3;
-goto tco_loop_go__4_1_1;;
+$__tco_var_go__go_4_1_1_v_5 = $__tco_2;
+$__tco_var_go__go_4_1_1_v1_6 = $__tco_3;
+goto tco_loop_go__go_4_1_1;;
 $__t1 = null;
 goto end_branch_1;;
 };
@@ -221,7 +221,7 @@ goto end_branch_1;;
   };
   return $__fn;
 })();
-  $__res = new \Data\NonEmpty\Data_NonEmpty_NonEmpty((($f_0)(($v_1)->{'value0'}))(($v1_2)->{'value0'}), (($go__4_1)(new \Data\List\Types\Data_List_Types_Nil()))(((($go__3_0)(($v_1)->{'value1'}))(($v1_2)->{'value1'}))(new \Data\List\Types\Data_List_Types_Nil())));
+  $__res = new \Data\NonEmpty\Data_NonEmpty_NonEmpty((($f_0)(($v_1)->{'value0'}))(($v1_2)->{'value0'}), (($go__go_4_1)(new \Data\List\Types\Data_List_Types_Nil()))(((($go__go_3_0)(($v_1)->{'value1'}))(($v1_2)->{'value1'}))(new \Data\List\Types\Data_List_Types_Nil())));
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1168,18 +1168,18 @@ function majData_majList_majNonmajEmpty_findmajIndex($f_0, $v_1 = null) {
 $__t1 = new \Data\Maybe\Data_Maybe_Just(0);
 goto end_branch_1;;
 };
-  $go__2_0 = null;
-  $go__2_0 = (function() use ($f_0, &$go__2_0) {
-  $__fn = function($v_3, $v1_4 = null) use ($f_0, &$go__2_0, &$__fn) {
+  $go__go_2_0 = null;
+  $go__go_2_0 = (function() use ($f_0, &$go__go_2_0) {
+  $__fn = function($v_3, $v1_4 = null) use ($f_0, &$go__go_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_go__2_0_0_v_3 = $v_3;
-  $__tco_var_go__2_0_0_v1_4 = $v1_4;
-  tco_loop_go__2_0_0:;
-  $v_3 = $__tco_var_go__2_0_0_v_3;
-  $v1_4 = $__tco_var_go__2_0_0_v1_4;
+  $__tco_var_go__go_2_0_0_v_3 = $v_3;
+  $__tco_var_go__go_2_0_0_v1_4 = $v1_4;
+  tco_loop_go__go_2_0_0:;
+  $v_3 = $__tco_var_go__go_2_0_0_v_3;
+  $v1_4 = $__tco_var_go__go_2_0_0_v1_4;
   $__t0 = null;;
   if ($v1_4 instanceof \Data\List\Types\Data_List_Types_Cons) {
 $__t3 = null;;
@@ -1189,9 +1189,9 @@ goto end_branch_3;;
 };
 $__tco_1 = ($v_3 + 1);
 $__tco_2 = ($v1_4)->{'value1'};
-$__tco_var_go__2_0_0_v_3 = $__tco_1;
-$__tco_var_go__2_0_0_v1_4 = $__tco_2;
-goto tco_loop_go__2_0_0;;
+$__tco_var_go__go_2_0_0_v_3 = $__tco_1;
+$__tco_var_go__go_2_0_0_v1_4 = $__tco_2;
+goto tco_loop_go__go_2_0_0;;
 $__t3 = null;
 end_branch_3:;
 $__t0 = $__t3;
@@ -1217,7 +1217,7 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))((($go__2_0)(0))(($v_1)->{'value1'}));
+}))((($go__go_2_0)(0))(($v_1)->{'value1'}));
   end_branch_1:;
   $__res = $__t1;
   goto __end;;
@@ -1394,32 +1394,32 @@ function majData_majList_majNonmajEmpty_catmajMaybes($v_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $go__1_0 = null;
-  $go__1_0 = (function() use (&$go__1_0) {
-  $__fn = function($v_2, $v1_3 = null) use (&$go__1_0, &$__fn) {
+  $go__go_1_0 = null;
+  $go__go_1_0 = (function() use (&$go__go_1_0) {
+  $__fn = function($v_2, $v1_3 = null) use (&$go__go_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_go__1_0_0_v_2 = $v_2;
-  $__tco_var_go__1_0_0_v1_3 = $v1_3;
-  tco_loop_go__1_0_0:;
-  $v_2 = $__tco_var_go__1_0_0_v_2;
-  $v1_3 = $__tco_var_go__1_0_0_v1_3;
+  $__tco_var_go__go_1_0_0_v_2 = $v_2;
+  $__tco_var_go__go_1_0_0_v1_3 = $v1_3;
+  tco_loop_go__go_1_0_0:;
+  $v_2 = $__tco_var_go__go_1_0_0_v_2;
+  $v1_3 = $__tco_var_go__go_1_0_0_v1_3;
   $__t0 = null;;
   if ($v1_3 instanceof \Data\List\Types\Data_List_Types_Nil) {
-$go__4_1 = null;
-$go__4_1 = (function() use (&$__tco_var_go__1_0_0_v_2, &$__tco_var_go__1_0_0_v1_3, &$go__4_1) {
-  $__fn = function($v_5, $v1_6 = null) use (&$__tco_var_go__1_0_0_v_2, &$__tco_var_go__1_0_0_v1_3, &$go__4_1, &$__fn) {
+$go__go_4_1 = null;
+$go__go_4_1 = (function() use (&$__tco_var_go__go_1_0_0_v_2, &$__tco_var_go__go_1_0_0_v1_3, &$go__go_4_1) {
+  $__fn = function($v_5, $v1_6 = null) use (&$__tco_var_go__go_1_0_0_v_2, &$__tco_var_go__go_1_0_0_v1_3, &$go__go_4_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_go__4_1_1_v_5 = $v_5;
-  $__tco_var_go__4_1_1_v1_6 = $v1_6;
-  tco_loop_go__4_1_1:;
-  $v_5 = $__tco_var_go__4_1_1_v_5;
-  $v1_6 = $__tco_var_go__4_1_1_v1_6;
+  $__tco_var_go__go_4_1_1_v_5 = $v_5;
+  $__tco_var_go__go_4_1_1_v1_6 = $v1_6;
+  tco_loop_go__go_4_1_1:;
+  $v_5 = $__tco_var_go__go_4_1_1_v_5;
+  $v1_6 = $__tco_var_go__go_4_1_1_v1_6;
   $__t1 = null;;
   if ($v1_6 instanceof \Data\List\Types\Data_List_Types_Nil) {
 $__t1 = $v_5;
@@ -1428,9 +1428,9 @@ goto end_branch_1;;
   if ($v1_6 instanceof \Data\List\Types\Data_List_Types_Cons) {
 $__tco_2 = new \Data\List\Types\Data_List_Types_Cons(($v1_6)->{'value0'}, $v_5);
 $__tco_3 = ($v1_6)->{'value1'};
-$__tco_var_go__4_1_1_v_5 = $__tco_2;
-$__tco_var_go__4_1_1_v1_6 = $__tco_3;
-goto tco_loop_go__4_1_1;;
+$__tco_var_go__go_4_1_1_v_5 = $__tco_2;
+$__tco_var_go__go_4_1_1_v1_6 = $__tco_3;
+goto tco_loop_go__go_4_1_1;;
 $__t1 = null;
 goto end_branch_1;;
 };
@@ -1444,7 +1444,7 @@ goto end_branch_1;;
   };
   return $__fn;
 })();
-$__t0 = (($go__4_1)(new \Data\List\Types\Data_List_Types_Nil()))($v_2);
+$__t0 = (($go__go_4_1)(new \Data\List\Types\Data_List_Types_Nil()))($v_2);
 goto end_branch_0;;
 };
   if ($v1_3 instanceof \Data\List\Types\Data_List_Types_Cons) {
@@ -1452,18 +1452,18 @@ $__t2 = null;;
 if (($v1_3)->{'value0'} instanceof \Data\Maybe\Data_Maybe_Nothing) {
 $__tco_3 = $v_2;
 $__tco_4 = ($v1_3)->{'value1'};
-$__tco_var_go__1_0_0_v_2 = $__tco_3;
-$__tco_var_go__1_0_0_v1_3 = $__tco_4;
-goto tco_loop_go__1_0_0;;
+$__tco_var_go__go_1_0_0_v_2 = $__tco_3;
+$__tco_var_go__go_1_0_0_v1_3 = $__tco_4;
+goto tco_loop_go__go_1_0_0;;
 $__t2 = null;
 goto end_branch_2;;
 };
 if (($v1_3)->{'value0'} instanceof \Data\Maybe\Data_Maybe_Just) {
 $__tco_5 = new \Data\List\Types\Data_List_Types_Cons((($v1_3)->{'value0'})->{'value0'}, $v_2);
 $__tco_6 = ($v1_3)->{'value1'};
-$__tco_var_go__1_0_0_v_2 = $__tco_5;
-$__tco_var_go__1_0_0_v1_3 = $__tco_6;
-goto tco_loop_go__1_0_0;;
+$__tco_var_go__go_1_0_0_v_2 = $__tco_5;
+$__tco_var_go__go_1_0_0_v1_3 = $__tco_6;
+goto tco_loop_go__go_1_0_0;;
 $__t2 = null;
 goto end_branch_2;;
 };
@@ -1483,7 +1483,7 @@ goto end_branch_0;;
   };
   return $__fn;
 })();
-  $__res = (($go__1_0)(new \Data\List\Types\Data_List_Types_Nil()))(new \Data\List\Types\Data_List_Types_Cons(($v_0)->{'value0'}, ($v_0)->{'value1'}));
+  $__res = (($go__go_1_0)(new \Data\List\Types\Data_List_Types_Nil()))(new \Data\List\Types\Data_List_Types_Cons(($v_0)->{'value0'}, ($v_0)->{'value1'}));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

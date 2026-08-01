@@ -153,18 +153,18 @@ function majTest_majListmajOps_range(int $start_0, $end_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go__2_0 = null;
-  $go__2_0 = (function() use (&$go__2_0, $start_0) {
-  $__fn = function($curr_3, $acc_4 = null) use (&$go__2_0, $start_0, &$__fn) {
+  $go__go_2_0 = null;
+  $go__go_2_0 = (function() use (&$go__go_2_0, $start_0) {
+  $__fn = function($curr_3, $acc_4 = null) use (&$go__go_2_0, $start_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_go__2_0_0_curr_3 = $curr_3;
-  $__tco_var_go__2_0_0_acc_4 = $acc_4;
-  tco_loop_go__2_0_0:;
-  $curr_3 = $__tco_var_go__2_0_0_curr_3;
-  $acc_4 = $__tco_var_go__2_0_0_acc_4;
+  $__tco_var_go__go_2_0_0_curr_3 = $curr_3;
+  $__tco_var_go__go_2_0_0_acc_4 = $acc_4;
+  tco_loop_go__go_2_0_0:;
+  $curr_3 = $__tco_var_go__go_2_0_0_curr_3;
+  $acc_4 = $__tco_var_go__go_2_0_0_acc_4;
   $__t2 = null;;
   if ((($GLOBALS['Test_ListOps_lessThan'])($curr_3))($start_0)) {
 $__t2 = $acc_4;
@@ -172,9 +172,9 @@ goto end_branch_2;;
 };
   $__tco_0 = ($curr_3 - 1);
   $__tco_1 = new \Test\ListOps\Test_ListOps_Cons($curr_3, $acc_4);
-  $__tco_var_go__2_0_0_curr_3 = $__tco_0;
-  $__tco_var_go__2_0_0_acc_4 = $__tco_1;
-  goto tco_loop_go__2_0_0;;
+  $__tco_var_go__go_2_0_0_curr_3 = $__tco_0;
+  $__tco_var_go__go_2_0_0_acc_4 = $__tco_1;
+  goto tco_loop_go__go_2_0_0;;
   $__t2 = null;
   end_branch_2:;
   $__res = $__t2;
@@ -184,7 +184,7 @@ goto end_branch_2;;
   };
   return $__fn;
 })();
-  $__res = (($go__2_0)($end_1))(new \Test\ListOps\Test_ListOps_Nil());
+  $__res = (($go__go_2_0)($end_1))(new \Test\ListOps\Test_ListOps_Nil());
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -238,18 +238,18 @@ function majTest_majListmajOps_filtermajEvens($lst_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $go__1_0 = null;
-  $go__1_0 = (function() use (&$go__1_0) {
-  $__fn = function($v_2, $v1_3 = null) use (&$go__1_0, &$__fn) {
+  $go__go_1_0 = null;
+  $go__go_1_0 = (function() use (&$go__go_1_0) {
+  $__fn = function($v_2, $v1_3 = null) use (&$go__go_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_go__1_0_0_v_2 = $v_2;
-  $__tco_var_go__1_0_0_v1_3 = $v1_3;
-  tco_loop_go__1_0_0:;
-  $v_2 = $__tco_var_go__1_0_0_v_2;
-  $v1_3 = $__tco_var_go__1_0_0_v1_3;
+  $__tco_var_go__go_1_0_0_v_2 = $v_2;
+  $__tco_var_go__go_1_0_0_v1_3 = $v1_3;
+  tco_loop_go__go_1_0_0:;
+  $v_2 = $__tco_var_go__go_1_0_0_v_2;
+  $v1_3 = $__tco_var_go__go_1_0_0_v1_3;
   $__t0 = null;;
   if ($v_2 instanceof \Test\ListOps\Test_ListOps_Nil) {
 $__t0 = $v1_3;
@@ -261,9 +261,9 @@ switch (((($GLOBALS['Data_EuclideanRing_euclideanRingInt'])->{'mod'})(($v_2)->{'
 case 0:
 $__tco_4 = ($v_2)->{'value1'};
 $__tco_5 = new \Test\ListOps\Test_ListOps_Cons(($v_2)->{'value0'}, $v1_3);
-$__tco_var_go__1_0_0_v_2 = $__tco_4;
-$__tco_var_go__1_0_0_v1_3 = $__tco_5;
-goto tco_loop_go__1_0_0;;
+$__tco_var_go__go_1_0_0_v_2 = $__tco_4;
+$__tco_var_go__go_1_0_0_v1_3 = $__tco_5;
+goto tco_loop_go__go_1_0_0;;
 $__t3 = null;
 goto end_branch_3;;
 break;
@@ -273,9 +273,9 @@ break;
 };
 $__tco_1 = ($v_2)->{'value1'};
 $__tco_2 = $v1_3;
-$__tco_var_go__1_0_0_v_2 = $__tco_1;
-$__tco_var_go__1_0_0_v1_3 = $__tco_2;
-goto tco_loop_go__1_0_0;;
+$__tco_var_go__go_1_0_0_v_2 = $__tco_1;
+$__tco_var_go__go_1_0_0_v1_3 = $__tco_2;
+goto tco_loop_go__go_1_0_0;;
 $__t3 = null;
 end_branch_3:;
 $__t0 = $__t3;
@@ -291,7 +291,7 @@ goto end_branch_0;;
   };
   return $__fn;
 })();
-  $__res = (($go__1_0)($lst_0))(new \Test\ListOps\Test_ListOps_Nil());
+  $__res = (($go__go_1_0)($lst_0))(new \Test\ListOps\Test_ListOps_Nil());
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

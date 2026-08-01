@@ -133,12 +133,12 @@ function majData_majInterval_majDuration_majIso_lookup($k_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $go__1_0 = null;
-  $go__1_0 = function($v_2) use (&$go__1_0, $k_0) {
+  $go__go_1_0 = null;
+  $go__go_1_0 = function($v_2) use (&$go__go_1_0, $k_0) {
   $__num = \func_num_args();
-  $__tco_var_go__1_0_0_v_2 = $v_2;
-  tco_loop_go__1_0_0:;
-  $v_2 = $__tco_var_go__1_0_0_v_2;
+  $__tco_var_go__go_1_0_0_v_2 = $v_2;
+  tco_loop_go__go_1_0_0:;
+  $v_2 = $__tco_var_go__go_1_0_0_v_2;
   $__t0 = null;;
   if ($v_2 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
 $__t0 = new \Data\Maybe\Data_Maybe_Nothing();
@@ -149,15 +149,15 @@ $v1_3_1 = ((($GLOBALS['Data_Interval_Duration_ordDurationComponent'])->{'compare
 $__t2 = null;;
 if ($v1_3_1 instanceof \Data\Ordering\Data_Ordering_LT) {
 $__tco_3 = ($v_2)->{'value4'};
-$__tco_var_go__1_0_0_v_2 = $__tco_3;
-goto tco_loop_go__1_0_0;;
+$__tco_var_go__go_1_0_0_v_2 = $__tco_3;
+goto tco_loop_go__go_1_0_0;;
 $__t2 = null;
 goto end_branch_2;;
 };
 if ($v1_3_1 instanceof \Data\Ordering\Data_Ordering_GT) {
 $__tco_4 = ($v_2)->{'value5'};
-$__tco_var_go__1_0_0_v_2 = $__tco_4;
-goto tco_loop_go__1_0_0;;
+$__tco_var_go__go_1_0_0_v_2 = $__tco_4;
+goto tco_loop_go__go_1_0_0;;
 $__t2 = null;
 goto end_branch_2;;
 };
@@ -179,7 +179,7 @@ goto end_branch_0;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go__1_0;
+  $__res = $go__go_1_0;
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -660,18 +660,18 @@ function majData_majInterval_majDuration_majIso_checkmajValidmajIsomajDuration($
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $go__1_0 = null;
-  $go__1_0 = (function() use (&$go__1_0) {
-  $__fn = function($v_2, $v1_3 = null) use (&$go__1_0, &$__fn) {
+  $go__go_1_0 = null;
+  $go__go_1_0 = (function() use (&$go__go_1_0) {
+  $__fn = function($v_2, $v1_3 = null) use (&$go__go_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_go__1_0_0_v_2 = $v_2;
-  $__tco_var_go__1_0_0_v1_3 = $v1_3;
-  tco_loop_go__1_0_0:;
-  $v_2 = $__tco_var_go__1_0_0_v_2;
-  $v1_3 = $__tco_var_go__1_0_0_v1_3;
+  $__tco_var_go__go_1_0_0_v_2 = $v_2;
+  $__tco_var_go__go_1_0_0_v1_3 = $v1_3;
+  tco_loop_go__go_1_0_0:;
+  $v_2 = $__tco_var_go__go_1_0_0_v_2;
+  $v1_3 = $__tco_var_go__go_1_0_0_v1_3;
   $__t0 = null;;
   if ($v1_3 instanceof \Data\List\Types\Data_List_Types_Nil) {
 $__t0 = $v_2;
@@ -680,9 +680,9 @@ goto end_branch_0;;
   if ($v1_3 instanceof \Data\List\Types\Data_List_Types_Cons) {
 $__tco_1 = new \Data\List\Types\Data_List_Types_Cons(($v1_3)->{'value0'}, $v_2);
 $__tco_2 = ($v1_3)->{'value1'};
-$__tco_var_go__1_0_0_v_2 = $__tco_1;
-$__tco_var_go__1_0_0_v1_3 = $__tco_2;
-goto tco_loop_go__1_0_0;;
+$__tco_var_go__go_1_0_0_v_2 = $__tco_1;
+$__tco_var_go__go_1_0_0_v1_3 = $__tco_2;
+goto tco_loop_go__go_1_0_0;;
 $__t0 = null;
 goto end_branch_0;;
 };
@@ -696,7 +696,7 @@ goto end_branch_0;;
   };
   return $__fn;
 })();
-  $__res = (($GLOBALS['Data_Interval_Duration_Iso_fold'])([$GLOBALS['Data_Interval_Duration_Iso_checkWeekUsage'], $GLOBALS['Data_Interval_Duration_Iso_checkEmptiness'], $GLOBALS['Data_Interval_Duration_Iso_checkFractionalUse'], $GLOBALS['Data_Interval_Duration_Iso_checkNegativeValues']]))((object)["asList" => (($go__1_0)(new \Data\List\Types\Data_List_Types_Nil()))(($GLOBALS['Data_Interval_Duration_Iso_toUnfoldable'])($v_0)), "asMap" => $v_0]);
+  $__res = (($GLOBALS['Data_Interval_Duration_Iso_fold'])([$GLOBALS['Data_Interval_Duration_Iso_checkWeekUsage'], $GLOBALS['Data_Interval_Duration_Iso_checkEmptiness'], $GLOBALS['Data_Interval_Duration_Iso_checkFractionalUse'], $GLOBALS['Data_Interval_Duration_Iso_checkNegativeValues']]))((object)["asList" => (($go__go_1_0)(new \Data\List\Types\Data_List_Types_Nil()))(($GLOBALS['Data_Interval_Duration_Iso_toUnfoldable'])($v_0)), "asMap" => $v_0]);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

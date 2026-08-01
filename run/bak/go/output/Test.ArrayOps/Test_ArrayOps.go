@@ -13,20 +13,20 @@ import (
 	pkg_Data_Semiring "gopurs/output/Data.Semiring"
 )
 
-var cache_range_ gopurs_runtime.Value
-var once_range_ sync.Once
-func Get_range_() gopurs_runtime.Value {
-	once_range_.Do(func() {
-		cache_range_ = gopurs_runtime.Func2(func(start_0_box gopurs_runtime.Value, end_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+var cache_go__range gopurs_runtime.Value
+var once_go__range sync.Once
+func Get_go__range() gopurs_runtime.Value {
+	once_go__range.Do(func() {
+		cache_go__range = gopurs_runtime.Func2(func(start_0_box gopurs_runtime.Value, end_1_box gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
-					arr := Call_range_(start_0_box.IntVal, end_1_box.IntVal)
+					arr := Call_go__range(start_0_box.IntVal, end_1_box.IntVal)
 					boxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { boxed[i] = gopurs_runtime.Int(v) }
 					return gopurs_runtime.Array(boxed)
 				}()
 })
 	})
-	return cache_range_
+	return cache_go__range
 }
 
 var cache_filterEvens gopurs_runtime.Value
@@ -81,7 +81,7 @@ return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(g
 	return cache_act
 }
 
-func Call_range_(start_0_loop int64, end_1_loop int64) []int64 {
+func Call_go__range(start_0_loop int64, end_1_loop int64) []int64 {
 var start_0 int64 = start_0_loop
 _ = start_0
 var end_1 int64 = end_1_loop

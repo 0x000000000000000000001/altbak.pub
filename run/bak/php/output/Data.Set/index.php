@@ -346,12 +346,12 @@ function majData_majSet_member($dictOrd_0, $k_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go__2_0 = null;
-  $go__2_0 = function($v_3) use ($dictOrd_0, &$go__2_0, $k_1) {
+  $go__go_2_0 = null;
+  $go__go_2_0 = function($v_3) use ($dictOrd_0, &$go__go_2_0, $k_1) {
   $__num = \func_num_args();
-  $__tco_var_go__2_0_0_v_3 = $v_3;
-  tco_loop_go__2_0_0:;
-  $v_3 = $__tco_var_go__2_0_0_v_3;
+  $__tco_var_go__go_2_0_0_v_3 = $v_3;
+  tco_loop_go__go_2_0_0:;
+  $v_3 = $__tco_var_go__go_2_0_0_v_3;
   $__t0 = null;;
   if ($v_3 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
 $__t0 = false;
@@ -362,15 +362,15 @@ $v1_4_1 = ((($dictOrd_0)->{'compare'})($k_1))(($v_3)->{'value2'});
 $__t2 = null;;
 if ($v1_4_1 instanceof \Data\Ordering\Data_Ordering_LT) {
 $__tco_3 = ($v_3)->{'value4'};
-$__tco_var_go__2_0_0_v_3 = $__tco_3;
-goto tco_loop_go__2_0_0;;
+$__tco_var_go__go_2_0_0_v_3 = $__tco_3;
+goto tco_loop_go__go_2_0_0;;
 $__t2 = null;
 goto end_branch_2;;
 };
 if ($v1_4_1 instanceof \Data\Ordering\Data_Ordering_GT) {
 $__tco_4 = ($v_3)->{'value5'};
-$__tco_var_go__2_0_0_v_3 = $__tco_4;
-goto tco_loop_go__2_0_0;;
+$__tco_var_go__go_2_0_0_v_3 = $__tco_4;
+goto tco_loop_go__go_2_0_0;;
 $__t2 = null;
 goto end_branch_2;;
 };
@@ -392,7 +392,7 @@ goto end_branch_0;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go__2_0;
+  $__res = $go__go_2_0;
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

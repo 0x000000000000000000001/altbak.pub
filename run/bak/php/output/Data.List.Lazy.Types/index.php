@@ -358,9 +358,9 @@ $GLOBALS['Data_List_Lazy_Types_eq1List'] = (object)["eq1" => (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $go__3_0 = null;
-  $go__3_0 = (function() use ($dictEq_0, &$go__3_0) {
-  $__fn = function($v_4, $v1_5 = null) use ($dictEq_0, &$go__3_0, &$__fn) {
+  $go__go_3_0 = null;
+  $go__go_3_0 = (function() use ($dictEq_0, &$go__go_3_0) {
+  $__fn = function($v_4, $v1_5 = null) use ($dictEq_0, &$go__go_3_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
@@ -370,7 +370,7 @@ $GLOBALS['Data_List_Lazy_Types_eq1List'] = (object)["eq1" => (function() {
 $__t1 = $v1_5 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil;
 goto end_branch_1;;
 };
-  $__t1 = ($v_4 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons && ($v1_5 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons && (((($dictEq_0)->{'eq'})(($v_4)->{'value0'}))(($v1_5)->{'value0'}) && (($go__3_0)(\Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step(($v_4)->{'value1'})))(\Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step(($v1_5)->{'value1'})))));
+  $__t1 = ($v_4 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons && ($v1_5 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons && (((($dictEq_0)->{'eq'})(($v_4)->{'value0'}))(($v1_5)->{'value0'}) && (($go__go_3_0)(\Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step(($v_4)->{'value1'})))(\Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step(($v1_5)->{'value1'})))));
   end_branch_1:;
   $__res = $__t1;
   goto __end;;
@@ -379,7 +379,7 @@ goto end_branch_1;;
   };
   return $__fn;
 })();
-  $__res = (($go__3_0)(\Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step($xs_1)))(\Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step($ys_2));
+  $__res = (($go__go_3_0)(\Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step($xs_1)))(\Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step($ys_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -444,18 +444,18 @@ $GLOBALS['Data_List_Lazy_Types_ord1List'] = (object)["compare1" => (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $go__3_0 = null;
-  $go__3_0 = (function() use ($dictOrd_0, &$go__3_0) {
-  $__fn = function($v_4, $v1_5 = null) use ($dictOrd_0, &$go__3_0, &$__fn) {
+  $go__go_3_0 = null;
+  $go__go_3_0 = (function() use ($dictOrd_0, &$go__go_3_0) {
+  $__fn = function($v_4, $v1_5 = null) use ($dictOrd_0, &$go__go_3_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_go__3_0_0_v_4 = $v_4;
-  $__tco_var_go__3_0_0_v1_5 = $v1_5;
-  tco_loop_go__3_0_0:;
-  $v_4 = $__tco_var_go__3_0_0_v_4;
-  $v1_5 = $__tco_var_go__3_0_0_v1_5;
+  $__tco_var_go__go_3_0_0_v_4 = $v_4;
+  $__tco_var_go__go_3_0_0_v1_5 = $v1_5;
+  tco_loop_go__go_3_0_0:;
+  $v_4 = $__tco_var_go__go_3_0_0_v_4;
+  $v1_5 = $__tco_var_go__go_3_0_0_v1_5;
   $__t0 = null;;
   if ($v_4 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil) {
 $__t1 = null;;
@@ -478,9 +478,9 @@ $__t3 = null;;
 if ($v2_6_2 instanceof \Data\Ordering\Data_Ordering_EQ) {
 $__tco_4 = \Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step(($v_4)->{'value1'});
 $__tco_5 = \Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step(($v1_5)->{'value1'});
-$__tco_var_go__3_0_0_v_4 = $__tco_4;
-$__tco_var_go__3_0_0_v1_5 = $__tco_5;
-goto tco_loop_go__3_0_0;;
+$__tco_var_go__go_3_0_0_v_4 = $__tco_4;
+$__tco_var_go__go_3_0_0_v1_5 = $__tco_5;
+goto tco_loop_go__go_3_0_0;;
 $__t3 = null;
 goto end_branch_3;;
 };
@@ -499,7 +499,7 @@ goto end_branch_0;;
   };
   return $__fn;
 })();
-  $__res = (($go__3_0)(\Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step($xs_1)))(\Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step($ys_2));
+  $__res = (($go__go_3_0)(\Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step($xs_1)))(\Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step($ys_2));
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -631,18 +631,18 @@ $GLOBALS['Data_List_Lazy_Types_foldableList'] = (object)["foldr" => (function() 
   return $__fn;
 })(), "foldl" => function($op_0) {
   $__num = \func_num_args();
-  $go__1_0 = null;
-  $go__1_0 = (function() use (&$go__1_0, $op_0) {
-  $__fn = function($b_2, $xs_3 = null) use (&$go__1_0, $op_0, &$__fn) {
+  $go__go_1_0 = null;
+  $go__go_1_0 = (function() use (&$go__go_1_0, $op_0) {
+  $__fn = function($b_2, $xs_3 = null) use (&$go__go_1_0, $op_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_go__1_0_0_b_2 = $b_2;
-  $__tco_var_go__1_0_0_xs_3 = $xs_3;
-  tco_loop_go__1_0_0:;
-  $b_2 = $__tco_var_go__1_0_0_b_2;
-  $xs_3 = $__tco_var_go__1_0_0_xs_3;
+  $__tco_var_go__go_1_0_0_b_2 = $b_2;
+  $__tco_var_go__go_1_0_0_xs_3 = $xs_3;
+  tco_loop_go__go_1_0_0:;
+  $b_2 = $__tco_var_go__go_1_0_0_b_2;
+  $xs_3 = $__tco_var_go__go_1_0_0_xs_3;
   $v_4_0 = \Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step($xs_3);
   $__t1 = null;;
   if ($v_4_0 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil) {
@@ -652,9 +652,9 @@ goto end_branch_1;;
   if ($v_4_0 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons) {
 $__tco_2 = (($op_0)($b_2))(($v_4_0)->{'value0'});
 $__tco_3 = ($v_4_0)->{'value1'};
-$__tco_var_go__1_0_0_b_2 = $__tco_2;
-$__tco_var_go__1_0_0_xs_3 = $__tco_3;
-goto tco_loop_go__1_0_0;;
+$__tco_var_go__go_1_0_0_b_2 = $__tco_2;
+$__tco_var_go__go_1_0_0_xs_3 = $__tco_3;
+goto tco_loop_go__go_1_0_0;;
 $__t1 = null;
 goto end_branch_1;;
 };
@@ -668,7 +668,7 @@ goto end_branch_1;;
   };
   return $__fn;
 })();
-  $__res = $go__1_0;
+  $__res = $go__go_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1613,20 +1613,20 @@ goto end_branch_1;;
 
 // Data_List_Lazy_Types_unfoldable1List
 $GLOBALS['Data_List_Lazy_Types_unfoldable1List'] = (function() use (&$__fn) {
-$go__0_0 = null;
-$go__0_0 = (function() use (&$go__0_0) {
-  $__fn = function($f_1, $b_2 = null) use (&$go__0_0, &$__fn) {
+$go__go_0_0 = null;
+$go__go_0_0 = (function() use (&$go__go_0_0) {
+  $__fn = function($f_1, $b_2 = null) use (&$go__go_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_List_Lazy_Types_lazyList'])->{'defer'})(function($v_3) use ($b_2, $f_1, &$go__0_0) {
+  $__res = (($GLOBALS['Data_List_Lazy_Types_lazyList'])->{'defer'})(function($v_3) use ($b_2, $f_1, &$go__go_0_0) {
   $__num = \func_num_args();
   $v1_4_1 = ($f_1)($b_2);
   $__t2 = null;;
   if (($v1_4_1)->{'value1'} instanceof \Data\Maybe\Data_Maybe_Just) {
 $__local_var_5_3 = ($v1_4_1)->{'value0'};
-$__local_var_6_4 = (($go__0_0)($f_1))((($v1_4_1)->{'value1'})->{'value0'});
+$__local_var_6_4 = (($go__go_0_0)($f_1))((($v1_4_1)->{'value1'})->{'value0'});
 $__t2 = \Data\Lazy\majData_majLazy_defer(function($v_7) use ($__local_var_5_3, $__local_var_6_4) {
   $__num = \func_num_args();
   $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($__local_var_5_3, $__local_var_6_4);
@@ -1661,19 +1661,19 @@ goto end_branch_2;;
   };
   return $__fn;
 })();
-return (object)["unfoldr1" => $go__0_0];
+return (object)["unfoldr1" => $go__go_0_0];
 })();
 
 // Data_List_Lazy_Types_unfoldableList
 $GLOBALS['Data_List_Lazy_Types_unfoldableList'] = (function() use (&$__fn) {
-$go__0_0 = null;
-$go__0_0 = (function() use (&$go__0_0) {
-  $__fn = function($f_1, $b_2 = null) use (&$go__0_0, &$__fn) {
+$go__go_0_0 = null;
+$go__go_0_0 = (function() use (&$go__go_0_0) {
+  $__fn = function($f_1, $b_2 = null) use (&$go__go_0_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Data_List_Lazy_Types_lazyList'])->{'defer'})(function($v_3) use ($b_2, $f_1, &$go__0_0) {
+  $__res = (($GLOBALS['Data_List_Lazy_Types_lazyList'])->{'defer'})(function($v_3) use ($b_2, $f_1, &$go__go_0_0) {
   $__num = \func_num_args();
   $v1_4_1 = ($f_1)($b_2);
   $__t2 = null;;
@@ -1683,7 +1683,7 @@ goto end_branch_2;;
 };
   if ($v1_4_1 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__local_var_5_3 = (($v1_4_1)->{'value0'})->{'value0'};
-$__local_var_6_4 = (($go__0_0)($f_1))((($v1_4_1)->{'value0'})->{'value1'});
+$__local_var_6_4 = (($go__go_0_0)($f_1))((($v1_4_1)->{'value0'})->{'value1'});
 $__t2 = \Data\Lazy\majData_majLazy_defer(function($v_7) use ($__local_var_5_3, $__local_var_6_4) {
   $__num = \func_num_args();
   $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($__local_var_5_3, $__local_var_6_4);
@@ -1707,7 +1707,7 @@ goto end_branch_2;;
   };
   return $__fn;
 })();
-return (object)["unfoldr" => $go__0_0, "Unfoldable10" => function($_dollar__unused_0) {
+return (object)["unfoldr" => $go__go_0_0, "Unfoldable10" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_List_Lazy_Types_unfoldable1List'];
   goto __end;;

@@ -43,15 +43,15 @@ return Call_local(dict_0_box)
 	return cache_local
 }
 
-var cache_local__gopurs_runtime_Value_2762410074 gopurs_runtime.Value
-var once_local__gopurs_runtime_Value_2762410074 sync.Once
-func Get_local__gopurs_runtime_Value_2762410074() gopurs_runtime.Value {
-	once_local__gopurs_runtime_Value_2762410074.Do(func() {
-		cache_local__gopurs_runtime_Value_2762410074 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_local__gopurs_runtime_Value_2762410074(dict_0_box)
+var cache_local__gopurs_runtime_Value_1862408154 gopurs_runtime.Value
+var once_local__gopurs_runtime_Value_1862408154 sync.Once
+func Get_local__gopurs_runtime_Value_1862408154() gopurs_runtime.Value {
+	once_local__gopurs_runtime_Value_1862408154.Do(func() {
+		cache_local__gopurs_runtime_Value_1862408154 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_local__gopurs_runtime_Value_1862408154(dict_0_box)
 })
 	})
-	return cache_local__gopurs_runtime_Value_2762410074
+	return cache_local__gopurs_runtime_Value_1862408154
 }
 
 var cache_ask gopurs_runtime.Value
@@ -82,7 +82,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "local")
 }
 
-func Call_local__gopurs_runtime_Value_2762410074(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_local__gopurs_runtime_Value_1862408154(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "local")

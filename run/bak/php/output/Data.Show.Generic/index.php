@@ -101,7 +101,13 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Show_Generic = \call_user_func(function() {
   $exports = [];
-$intercalate = function ($separator, $xs) use (&$intercalate) {
+$intercalate = function ($separator, $xs = null) use (&$intercalate) {
+    if (func_num_args() < 2) {
+        $__args = func_get_args();
+        return function (...$more) use ($__args, &$intercalate) {
+            return $intercalate(...array_merge($__args, $more));
+        };
+    }
     return implode($separator, $xs);
 };
 
@@ -116,7 +122,7 @@ function majData_majShow_majGeneric_intercalate(string $v0, $v1 = null): string|
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Show_Generic;
-  $f = ($ffi_Data_Show_Generic['intercalate'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('intercalate', $ffi_Data_Show_Generic) ? $ffi_Data_Show_Generic['intercalate'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Show_Generic_intercalate'] = __NAMESPACE__ . '\\majData_majShow_majGeneric_intercalate';

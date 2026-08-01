@@ -23,15 +23,26 @@ return Call_throwError(dict_0_box)
 	return cache_throwError
 }
 
-var cache_throwError__gopurs_runtime_Value_4217979769 gopurs_runtime.Value
-var once_throwError__gopurs_runtime_Value_4217979769 sync.Once
-func Get_throwError__gopurs_runtime_Value_4217979769() gopurs_runtime.Value {
-	once_throwError__gopurs_runtime_Value_4217979769.Do(func() {
-		cache_throwError__gopurs_runtime_Value_4217979769 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_throwError__gopurs_runtime_Value_4217979769(dict_0_box)
+var cache_throwError__gopurs_runtime_Value_1999964473 gopurs_runtime.Value
+var once_throwError__gopurs_runtime_Value_1999964473 sync.Once
+func Get_throwError__gopurs_runtime_Value_1999964473() gopurs_runtime.Value {
+	once_throwError__gopurs_runtime_Value_1999964473.Do(func() {
+		cache_throwError__gopurs_runtime_Value_1999964473 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_throwError__gopurs_runtime_Value_1999964473(dict_0_box)
 })
 	})
-	return cache_throwError__gopurs_runtime_Value_4217979769
+	return cache_throwError__gopurs_runtime_Value_1999964473
+}
+
+var cache_throwError__gopurs_runtime_Value_2428176121 gopurs_runtime.Value
+var once_throwError__gopurs_runtime_Value_2428176121 sync.Once
+func Get_throwError__gopurs_runtime_Value_2428176121() gopurs_runtime.Value {
+	once_throwError__gopurs_runtime_Value_2428176121.Do(func() {
+		cache_throwError__gopurs_runtime_Value_2428176121 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_throwError__gopurs_runtime_Value_2428176121(dict_0_box)
+})
+	})
+	return cache_throwError__gopurs_runtime_Value_2428176121
 }
 
 var cache_monadThrowMaybe gopurs_runtime.Value
@@ -183,15 +194,15 @@ return Call_catchError(dict_0_box)
 	return cache_catchError
 }
 
-var cache_catchError__gopurs_runtime_Value_1778055282 gopurs_runtime.Value
-var once_catchError__gopurs_runtime_Value_1778055282 sync.Once
-func Get_catchError__gopurs_runtime_Value_1778055282() gopurs_runtime.Value {
-	once_catchError__gopurs_runtime_Value_1778055282.Do(func() {
-		cache_catchError__gopurs_runtime_Value_1778055282 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_catchError__gopurs_runtime_Value_1778055282(dict_0_box)
+var cache_catchError__gopurs_runtime_Value_127977714 gopurs_runtime.Value
+var once_catchError__gopurs_runtime_Value_127977714 sync.Once
+func Get_catchError__gopurs_runtime_Value_127977714() gopurs_runtime.Value {
+	once_catchError__gopurs_runtime_Value_127977714.Do(func() {
+		cache_catchError__gopurs_runtime_Value_127977714 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_catchError__gopurs_runtime_Value_127977714(dict_0_box)
 })
 	})
-	return cache_catchError__gopurs_runtime_Value_1778055282
+	return cache_catchError__gopurs_runtime_Value_127977714
 }
 
 var cache_catchJust gopurs_runtime.Value
@@ -233,7 +244,13 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "throwError")
 }
 
-func Call_throwError__gopurs_runtime_Value_4217979769(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_throwError__gopurs_runtime_Value_1999964473(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "throwError")
+}
+
+func Call_throwError__gopurs_runtime_Value_2428176121(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "throwError")
@@ -311,7 +328,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "catchError")
 }
 
-func Call_catchError__gopurs_runtime_Value_1778055282(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_catchError__gopurs_runtime_Value_127977714(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "catchError")

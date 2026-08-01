@@ -99,10 +99,24 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Semiring = \call_user_func(function() {
   $exports = [];
-$intAdd = function($a, $b) use (&$intAdd) {
+$intAdd = function($a, $b = null) use (&$intAdd) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$intAdd) {
+
+            return $intAdd(...\array_merge($__args, $more));
+        };
+    }
     return $a + $b;
 };
-$intMul = function($a, $b) use (&$intMul) {
+$intMul = function($a, $b = null) use (&$intMul) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$intMul) {
+
+            return $intMul(...\array_merge($__args, $more));
+        };
+    }
     return $a * $b;
 };
 $numAdd = $intAdd;
@@ -122,7 +136,7 @@ function majData_majSemiring_intmajAdd(int $v0, $v1 = null): int|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Semiring;
-  $f = ($ffi_Data_Semiring['intAdd'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('intAdd', $ffi_Data_Semiring) ? $ffi_Data_Semiring['intAdd'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Semiring_intAdd'] = __NAMESPACE__ . '\\majData_majSemiring_intmajAdd';
@@ -134,7 +148,7 @@ function majData_majSemiring_intmajMul(int $v0, $v1 = null): int|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Semiring;
-  $f = ($ffi_Data_Semiring['intMul'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('intMul', $ffi_Data_Semiring) ? $ffi_Data_Semiring['intMul'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Semiring_intMul'] = __NAMESPACE__ . '\\majData_majSemiring_intmajMul';
@@ -146,7 +160,7 @@ function majData_majSemiring_nummajAdd(float $v0, $v1 = null): float|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Semiring;
-  $f = ($ffi_Data_Semiring['numAdd'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('numAdd', $ffi_Data_Semiring) ? $ffi_Data_Semiring['numAdd'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Semiring_numAdd'] = __NAMESPACE__ . '\\majData_majSemiring_nummajAdd';
@@ -158,7 +172,7 @@ function majData_majSemiring_nummajMul(float $v0, $v1 = null): float|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Semiring;
-  $f = ($ffi_Data_Semiring['numMul'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('numMul', $ffi_Data_Semiring) ? $ffi_Data_Semiring['numMul'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Semiring_numMul'] = __NAMESPACE__ . '\\majData_majSemiring_nummajMul';

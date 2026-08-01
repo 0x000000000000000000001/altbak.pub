@@ -884,12 +884,12 @@ function majData_majList_majLazy_repeat($x_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $go__1_0 = null;
-  $go__1_0 = (($GLOBALS['Data_List_Lazy_Types_lazyList'])->{'defer'})(function($v_2) use (&$go__1_0, $x_0) {
+  $go__go_1_0 = null;
+  $go__go_1_0 = (($GLOBALS['Data_List_Lazy_Types_lazyList'])->{'defer'})(function($v_2) use (&$go__go_1_0, $x_0) {
   $__num = \func_num_args();
-  $__res = \Data\Lazy\majData_majLazy_defer(function($v_3) use (&$go__1_0, $x_0) {
+  $__res = \Data\Lazy\majData_majLazy_defer(function($v_3) use (&$go__go_1_0, $x_0) {
   $__num = \func_num_args();
-  $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($x_0, $go__1_0);
+  $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($x_0, $go__go_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -898,7 +898,7 @@ function majData_majList_majLazy_repeat($x_0) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
-  $__res = $go__1_0;
+  $__res = $go__go_1_0;
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -912,12 +912,12 @@ function majData_majList_majLazy_replicate(int $i_0, $xs_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go__2_0 = null;
-  $go__2_0 = (($GLOBALS['Data_List_Lazy_Types_lazyList'])->{'defer'})(function($v_3) use (&$go__2_0, $xs_1) {
+  $go__go_2_0 = null;
+  $go__go_2_0 = (($GLOBALS['Data_List_Lazy_Types_lazyList'])->{'defer'})(function($v_3) use (&$go__go_2_0, $xs_1) {
   $__num = \func_num_args();
-  $__res = \Data\Lazy\majData_majLazy_defer(function($v_4) use (&$go__2_0, $xs_1) {
+  $__res = \Data\Lazy\majData_majLazy_defer(function($v_4) use (&$go__go_2_0, $xs_1) {
   $__num = \func_num_args();
-  $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($xs_1, $go__2_0);
+  $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($xs_1, $go__go_2_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -926,7 +926,7 @@ function majData_majList_majLazy_replicate(int $i_0, $xs_1 = null) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
-  $__res = \Data\List\Lazy\majData_majList_majLazy_take($i_0, $go__2_0);
+  $__res = \Data\List\Lazy\majData_majList_majLazy_take($i_0, $go__go_2_0);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1050,9 +1050,9 @@ function majData_majList_majLazy_nubmajBy($p_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $goStep_1_0 = null;
-  $go__1_0 = null;
-  $goStep_1_0 = (function() use (&$go__1_0, $p_0) {
-  $__fn = function($v_2, $v1_3 = null) use (&$go__1_0, $p_0, &$__fn) {
+  $go__go_1_0 = null;
+  $goStep_1_0 = (function() use (&$go__go_1_0, $p_0) {
+  $__fn = function($v_2, $v1_3 = null) use (&$go__go_1_0, $p_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
@@ -1066,10 +1066,10 @@ goto end_branch_1;;
 $v2_4_2 = \Data\List\Internal\majData_majList_majInternal_insertmajAndmajLookupmajBy($p_0, ($v1_3)->{'value0'}, $v_2);
 $__t3 = null;;
 if (($v2_4_2)->{'found'}) {
-$__t3 = \Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step((($go__1_0)(($v2_4_2)->{'result'}))(($v1_3)->{'value1'}));
+$__t3 = \Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step((($go__go_1_0)(($v2_4_2)->{'result'}))(($v1_3)->{'value1'}));
 goto end_branch_3;;
 };
-$__t3 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons(($v1_3)->{'value0'}, (($go__1_0)(($v2_4_2)->{'result'}))(($v1_3)->{'value1'}));
+$__t3 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons(($v1_3)->{'value0'}, (($go__go_1_0)(($v2_4_2)->{'result'}))(($v1_3)->{'value1'}));
 end_branch_3:;
 $__t1 = $__t3;
 goto end_branch_1;;
@@ -1084,7 +1084,7 @@ goto end_branch_1;;
   };
   return $__fn;
 })();
-  $go__1_0 = (function() use (&$goStep_1_0) {
+  $go__go_1_0 = (function() use (&$goStep_1_0) {
   $__fn = function($s_2, $v_3 = null) use (&$goStep_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
@@ -1097,7 +1097,7 @@ goto end_branch_1;;
   };
   return $__fn;
 })();
-  $__res = ($go__1_0)(new \Data\List\Internal\Data_List_Internal_Leaf());
+  $__res = ($go__go_1_0)(new \Data\List\Internal\Data_List_Internal_Leaf());
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1137,12 +1137,12 @@ function majData_majList_majLazy_mapmajMaybe($f_0) {
   $__tco_var_Data_List_Lazy_mapMaybe_f_0 = $f_0;
   tco_loop_Data_List_Lazy_mapMaybe:;
   $f_0 = $__tco_var_Data_List_Lazy_mapMaybe_f_0;
-  $go__1_0 = null;
-  $go__1_0 = function($v_2) use (&$__tco_var_Data_List_Lazy_mapMaybe_f_0, $f_0, &$go__1_0) {
+  $go__go_1_0 = null;
+  $go__go_1_0 = function($v_2) use (&$__tco_var_Data_List_Lazy_mapMaybe_f_0, $f_0, &$go__go_1_0) {
   $__num = \func_num_args();
-  $__tco_var_go__1_0_0_v_2 = $v_2;
-  tco_loop_go__1_0_0:;
-  $v_2 = $__tco_var_go__1_0_0_v_2;
+  $__tco_var_go__go_1_0_0_v_2 = $v_2;
+  tco_loop_go__go_1_0_0:;
+  $v_2 = $__tco_var_go__go_1_0_0_v_2;
   $__t0 = null;;
   if ($v_2 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil) {
 $__t0 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil();
@@ -1153,8 +1153,8 @@ $v1_3_1 = ($f_0)(($v_2)->{'value0'});
 $__t2 = null;;
 if ($v1_3_1 instanceof \Data\Maybe\Data_Maybe_Nothing) {
 $__tco_3 = \Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step(($v_2)->{'value1'});
-$__tco_var_go__1_0_0_v_2 = $__tco_3;
-goto tco_loop_go__1_0_0;;
+$__tco_var_go__go_1_0_0_v_2 = $__tco_3;
+goto tco_loop_go__go_1_0_0;;
 $__t2 = null;
 goto end_branch_2;;
 };
@@ -1176,7 +1176,7 @@ goto end_branch_0;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_List']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Lazy_functorLazy'])->{'map'})($go__1_0)))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_List']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Lazy_functorLazy'])->{'map'})($go__go_1_0)))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1248,12 +1248,12 @@ $GLOBALS['Data_List_Lazy_length'] = __NAMESPACE__ . '\\majData_majList_majLazy_l
 
 // Data_List_Lazy_last_closure
 $GLOBALS['Data_List_Lazy_last_closure'] = (function() use (&$__fn) {
-$go__0_0 = null;
-$go__0_0 = function($v_1) use (&$go__0_0) {
+$go__go_0_0 = null;
+$go__go_0_0 = function($v_1) use (&$go__go_0_0) {
   $__num = \func_num_args();
-  $__tco_var_go__0_0_0_v_1 = $v_1;
-  tco_loop_go__0_0_0:;
-  $v_1 = $__tco_var_go__0_0_0_v_1;
+  $__tco_var_go__go_0_0_0_v_1 = $v_1;
+  tco_loop_go__go_0_0_0:;
+  $v_1 = $__tco_var_go__go_0_0_0_v_1;
   $__t0 = null;;
   if ($v_1 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons) {
 $__t2 = null;;
@@ -1262,8 +1262,8 @@ $__t2 = new \Data\Maybe\Data_Maybe_Just(($v_1)->{'value0'});
 goto end_branch_2;;
 };
 $__tco_1 = \Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step(($v_1)->{'value1'});
-$__tco_var_go__0_0_0_v_1 = $__tco_1;
-goto tco_loop_go__0_0_0;;
+$__tco_var_go__go_0_0_0_v_1 = $__tco_1;
+goto tco_loop_go__go_0_0_0;;
 $__t2 = null;
 end_branch_2:;
 $__t0 = $__t2;
@@ -1276,7 +1276,7 @@ goto end_branch_0;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-return (($GLOBALS['Control_Semigroupoid_composeImpl'])($go__0_0))($GLOBALS['Data_List_Lazy_Types_step']);
+return (($GLOBALS['Control_Semigroupoid_composeImpl'])($go__go_0_0))($GLOBALS['Data_List_Lazy_Types_step']);
 })();
 
 // Data_List_Lazy_last
@@ -1300,10 +1300,10 @@ function majData_majList_majLazy_iterate($f_0, $x_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go__2_0 = null;
-  $go__2_0 = (($GLOBALS['Data_List_Lazy_Types_lazyList'])->{'defer'})(function($v_3) use ($f_0, &$go__2_0, $x_1) {
+  $go__go_2_0 = null;
+  $go__go_2_0 = (($GLOBALS['Data_List_Lazy_Types_lazyList'])->{'defer'})(function($v_3) use ($f_0, &$go__go_2_0, $x_1) {
   $__num = \func_num_args();
-  $__local_var_4_1 = ((($GLOBALS['Data_List_Lazy_Types_functorList'])->{'map'})($f_0))($go__2_0);
+  $__local_var_4_1 = ((($GLOBALS['Data_List_Lazy_Types_functorList'])->{'map'})($f_0))($go__go_2_0);
   $__res = \Data\Lazy\majData_majLazy_defer(function($v_5) use ($__local_var_4_1, $x_1) {
   $__num = \func_num_args();
   $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($x_1, $__local_var_4_1);
@@ -1315,7 +1315,7 @@ function majData_majList_majLazy_iterate($f_0, $x_1 = null) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
-  $__res = $go__2_0;
+  $__res = $go__go_2_0;
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1369,8 +1369,8 @@ $GLOBALS['Data_List_Lazy_insertAt'] = __NAMESPACE__ . '\\majData_majList_majLazy
 
 // Data_List_Lazy_init_closure
 $GLOBALS['Data_List_Lazy_init_closure'] = (function() use (&$__fn) {
-$go__0_0 = null;
-$go__0_0 = function($v_1) use (&$go__0_0) {
+$go__go_0_0 = null;
+$go__go_0_0 = function($v_1) use (&$go__go_0_0) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ($v_1 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons) {
@@ -1379,7 +1379,7 @@ if (\Data\List\Lazy\majData_majList_majLazy_null(($v_1)->{'value1'})) {
 $__t2 = new \Data\Maybe\Data_Maybe_Just($GLOBALS['Data_List_Lazy_Types_nil']);
 goto end_branch_2;;
 };
-$__t2 = ((($GLOBALS['Data_Maybe_functorMaybe'])->{'map'})(($GLOBALS['Data_List_Lazy_Types_cons'])(($v_1)->{'value0'})))(($go__0_0)(\Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step(($v_1)->{'value1'})));
+$__t2 = ((($GLOBALS['Data_Maybe_functorMaybe'])->{'map'})(($GLOBALS['Data_List_Lazy_Types_cons'])(($v_1)->{'value0'})))(($go__go_0_0)(\Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step(($v_1)->{'value1'})));
 end_branch_2:;
 $__t1 = $__t2;
 goto end_branch_1;;
@@ -1391,7 +1391,7 @@ goto end_branch_1;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-return (($GLOBALS['Control_Semigroupoid_composeImpl'])($go__0_0))($GLOBALS['Data_List_Lazy_Types_step']);
+return (($GLOBALS['Control_Semigroupoid_composeImpl'])($go__go_0_0))($GLOBALS['Data_List_Lazy_Types_step']);
 })();
 
 // Data_List_Lazy_init
@@ -1415,18 +1415,18 @@ function majData_majList_majLazy_index($xs_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $go__1_0 = null;
-  $go__1_0 = (function() use (&$go__1_0) {
-  $__fn = function($v_2, $v1_3 = null) use (&$go__1_0, &$__fn) {
+  $go__go_1_0 = null;
+  $go__go_1_0 = (function() use (&$go__go_1_0) {
+  $__fn = function($v_2, $v1_3 = null) use (&$go__go_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_go__1_0_0_v_2 = $v_2;
-  $__tco_var_go__1_0_0_v1_3 = $v1_3;
-  tco_loop_go__1_0_0:;
-  $v_2 = $__tco_var_go__1_0_0_v_2;
-  $v1_3 = $__tco_var_go__1_0_0_v1_3;
+  $__tco_var_go__go_1_0_0_v_2 = $v_2;
+  $__tco_var_go__go_1_0_0_v1_3 = $v1_3;
+  tco_loop_go__go_1_0_0:;
+  $v_2 = $__tco_var_go__go_1_0_0_v_2;
+  $v1_3 = $__tco_var_go__go_1_0_0_v1_3;
   $__t0 = null;;
   if ($v_2 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil) {
 $__t0 = new \Data\Maybe\Data_Maybe_Nothing();
@@ -1445,9 +1445,9 @@ break;
 };
 $__tco_1 = \Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step(($v_2)->{'value1'});
 $__tco_2 = ($v1_3 - 1);
-$__tco_var_go__1_0_0_v_2 = $__tco_1;
-$__tco_var_go__1_0_0_v1_3 = $__tco_2;
-goto tco_loop_go__1_0_0;;
+$__tco_var_go__go_1_0_0_v_2 = $__tco_1;
+$__tco_var_go__go_1_0_0_v1_3 = $__tco_2;
+goto tco_loop_go__go_1_0_0;;
 $__t3 = null;
 end_branch_3:;
 $__t0 = $__t3;
@@ -1463,7 +1463,7 @@ goto end_branch_0;;
   };
   return $__fn;
 })();
-  $__res = ($go__1_0)(\Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step($xs_0));
+  $__res = ($go__go_1_0)(\Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step($xs_0));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1716,17 +1716,17 @@ function majData_majList_majLazy_foldrmajLazy($dictLazy_0, $op_1 = null, $z_2 = 
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $go__3_0 = null;
-  $go__3_0 = function($xs_4) use ($dictLazy_0, &$go__3_0, $op_1, $z_2) {
+  $go__go_3_0 = null;
+  $go__go_3_0 = function($xs_4) use ($dictLazy_0, &$go__go_3_0, $op_1, $z_2) {
   $__num = \func_num_args();
   $v_5_1 = \Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step($xs_4);
   $__t2 = null;;
   if ($v_5_1 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons) {
 $__local_var_6_3 = ($v_5_1)->{'value0'};
 $__local_var_7_4 = ($v_5_1)->{'value1'};
-$__t2 = (($dictLazy_0)->{'defer'})(function($v1_8) use ($__local_var_6_3, $__local_var_7_4, &$go__3_0, $op_1) {
+$__t2 = (($dictLazy_0)->{'defer'})(function($v1_8) use ($__local_var_6_3, $__local_var_7_4, &$go__go_3_0, $op_1) {
   $__num = \func_num_args();
-  $__res = (($op_1)($__local_var_6_3))(($go__3_0)($__local_var_7_4));
+  $__res = (($op_1)($__local_var_6_3))(($go__go_3_0)($__local_var_7_4));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1745,7 +1745,7 @@ goto end_branch_2;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go__3_0;
+  $__res = $go__go_3_0;
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1802,21 +1802,21 @@ function majData_majList_majLazy_findmajIndex($fn_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $go__1_0 = null;
-  $go__1_0 = (function() use ($fn_0, &$go__1_0) {
-  $__fn = function($n_2, $list_3 = null) use ($fn_0, &$go__1_0, &$__fn) {
+  $go__go_1_0 = null;
+  $go__go_1_0 = (function() use ($fn_0, &$go__go_1_0) {
+  $__fn = function($n_2, $list_3 = null) use ($fn_0, &$go__go_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Data_Maybe_bindMaybe'])->{'bind'})(\Data\List\Lazy\majData_majList_majLazy_uncons($list_3)))(function($o_4) use ($fn_0, &$go__1_0, $n_2) {
+  $__res = ((($GLOBALS['Data_Maybe_bindMaybe'])->{'bind'})(\Data\List\Lazy\majData_majList_majLazy_uncons($list_3)))(function($o_4) use ($fn_0, &$go__go_1_0, $n_2) {
   $__num = \func_num_args();
   $__t1 = null;;
   if (($fn_0)(($o_4)->{'head'})) {
 $__t1 = (($GLOBALS['Data_Maybe_applicativeMaybe'])->{'pure'})($n_2);
 goto end_branch_1;;
 };
-  $__t1 = (($go__1_0)(($n_2 + 1)))(($o_4)->{'tail'});
+  $__t1 = (($go__go_1_0)(($n_2 + 1)))(($o_4)->{'tail'});
   end_branch_1:;
   $__res = $__t1;
   goto __end;;
@@ -1829,7 +1829,7 @@ goto end_branch_1;;
   };
   return $__fn;
 })();
-  $__res = ($go__1_0)(0);
+  $__res = ($go__go_1_0)(0);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1937,12 +1937,12 @@ function majData_majList_majLazy_filter($p_0) {
   $__tco_var_Data_List_Lazy_filter_p_0 = $p_0;
   tco_loop_Data_List_Lazy_filter:;
   $p_0 = $__tco_var_Data_List_Lazy_filter_p_0;
-  $go__1_0 = null;
-  $go__1_0 = function($v_2) use (&$__tco_var_Data_List_Lazy_filter_p_0, &$go__1_0, $p_0) {
+  $go__go_1_0 = null;
+  $go__go_1_0 = function($v_2) use (&$__tco_var_Data_List_Lazy_filter_p_0, &$go__go_1_0, $p_0) {
   $__num = \func_num_args();
-  $__tco_var_go__1_0_0_v_2 = $v_2;
-  tco_loop_go__1_0_0:;
-  $v_2 = $__tco_var_go__1_0_0_v_2;
+  $__tco_var_go__go_1_0_0_v_2 = $v_2;
+  tco_loop_go__go_1_0_0:;
+  $v_2 = $__tco_var_go__go_1_0_0_v_2;
   $__t0 = null;;
   if ($v_2 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil) {
 $__t0 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil();
@@ -1955,8 +1955,8 @@ $__t2 = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons(($v_2)->{'value0'}, 
 goto end_branch_2;;
 };
 $__tco_1 = \Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step(($v_2)->{'value1'});
-$__tco_var_go__1_0_0_v_2 = $__tco_1;
-goto tco_loop_go__1_0_0;;
+$__tco_var_go__go_1_0_0_v_2 = $__tco_1;
+goto tco_loop_go__go_1_0_0;;
 $__t2 = null;
 end_branch_2:;
 $__t0 = $__t2;
@@ -1970,7 +1970,7 @@ goto end_branch_0;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_List']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Lazy_functorLazy'])->{'map'})($go__1_0)))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_List']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Lazy_functorLazy'])->{'map'})($go__go_1_0)))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2186,17 +2186,17 @@ function majData_majList_majLazy_dropmajWhile($p_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $go__1_0 = null;
-  $go__1_0 = function($v_2) use (&$go__1_0, $p_0) {
+  $go__go_1_0 = null;
+  $go__go_1_0 = function($v_2) use (&$go__go_1_0, $p_0) {
   $__num = \func_num_args();
-  $__tco_var_go__1_0_0_v_2 = $v_2;
-  tco_loop_go__1_0_0:;
-  $v_2 = $__tco_var_go__1_0_0_v_2;
+  $__tco_var_go__go_1_0_0_v_2 = $v_2;
+  tco_loop_go__go_1_0_0:;
+  $v_2 = $__tco_var_go__go_1_0_0_v_2;
   $__t0 = null;;
   if (($v_2 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons && ($p_0)(($v_2)->{'value0'}))) {
 $__tco_1 = \Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step(($v_2)->{'value1'});
-$__tco_var_go__1_0_0_v_2 = $__tco_1;
-goto tco_loop_go__1_0_0;;
+$__tco_var_go__go_1_0_0_v_2 = $__tco_1;
+goto tco_loop_go__go_1_0_0;;
 $__t0 = null;
 goto end_branch_0;;
 };
@@ -2207,7 +2207,7 @@ goto end_branch_0;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($go__1_0))($GLOBALS['Data_List_Lazy_Types_step']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($go__go_1_0))($GLOBALS['Data_List_Lazy_Types_step']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2221,18 +2221,18 @@ function majData_majList_majLazy_drop(int $n_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $go__1_0 = null;
-  $go__1_0 = (function() use (&$go__1_0) {
-  $__fn = function($v_2, $v1_3 = null) use (&$go__1_0, &$__fn) {
+  $go__go_1_0 = null;
+  $go__go_1_0 = (function() use (&$go__go_1_0) {
+  $__fn = function($v_2, $v1_3 = null) use (&$go__go_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_go__1_0_0_v_2 = $v_2;
-  $__tco_var_go__1_0_0_v1_3 = $v1_3;
-  tco_loop_go__1_0_0:;
-  $v_2 = $__tco_var_go__1_0_0_v_2;
-  $v1_3 = $__tco_var_go__1_0_0_v1_3;
+  $__tco_var_go__go_1_0_0_v_2 = $v_2;
+  $__tco_var_go__go_1_0_0_v1_3 = $v1_3;
+  tco_loop_go__go_1_0_0:;
+  $v_2 = $__tco_var_go__go_1_0_0_v_2;
+  $v1_3 = $__tco_var_go__go_1_0_0_v1_3;
   $__t0 = null;;
   switch ($v_2) {
 case 0:
@@ -2250,9 +2250,9 @@ goto end_branch_0;;
   if ($v1_3 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons) {
 $__tco_1 = ($v_2 - 1);
 $__tco_2 = \Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step(($v1_3)->{'value1'});
-$__tco_var_go__1_0_0_v_2 = $__tco_1;
-$__tco_var_go__1_0_0_v1_3 = $__tco_2;
-goto tco_loop_go__1_0_0;;
+$__tco_var_go__go_1_0_0_v_2 = $__tco_1;
+$__tco_var_go__go_1_0_0_v1_3 = $__tco_2;
+goto tco_loop_go__go_1_0_0;;
 $__t0 = null;
 goto end_branch_0;;
 };
@@ -2266,7 +2266,7 @@ goto end_branch_0;;
   };
   return $__fn;
 })();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_List']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Lazy_functorLazy'])->{'map'})(($go__1_0)($n_0))))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_List_Lazy_Types_List']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Lazy_functorLazy'])->{'map'})(($go__go_1_0)($n_0))))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2457,15 +2457,15 @@ function majData_majList_majLazy_cycle($xs_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $go__1_0 = null;
-  $go__1_0 = (($GLOBALS['Data_List_Lazy_Types_lazyList'])->{'defer'})(function($v_2) use (&$go__1_0, $xs_0) {
+  $go__go_1_0 = null;
+  $go__go_1_0 = (($GLOBALS['Data_List_Lazy_Types_lazyList'])->{'defer'})(function($v_2) use (&$go__go_1_0, $xs_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_List_Lazy_Types_semigroupList'])->{'append'})($xs_0))($go__1_0);
+  $__res = ((($GLOBALS['Data_List_Lazy_Types_semigroupList'])->{'append'})($xs_0))($go__go_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
-  $__res = $go__1_0;
+  $__res = $go__go_1_0;
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

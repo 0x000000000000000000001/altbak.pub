@@ -77,26 +77,15 @@ return Call_mapMaybeT(f_0_box, v_1_box)
 	return cache_mapMaybeT
 }
 
-var cache_mapMaybeT__gopurs_runtime_Value_1035271418 gopurs_runtime.Value
-var once_mapMaybeT__gopurs_runtime_Value_1035271418 sync.Once
-func Get_mapMaybeT__gopurs_runtime_Value_1035271418() gopurs_runtime.Value {
-	once_mapMaybeT__gopurs_runtime_Value_1035271418.Do(func() {
-		cache_mapMaybeT__gopurs_runtime_Value_1035271418 = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_mapMaybeT__gopurs_runtime_Value_1035271418(f_0_box, v_1_box)
+var cache_mapMaybeT__gopurs_runtime_Value_458711162 gopurs_runtime.Value
+var once_mapMaybeT__gopurs_runtime_Value_458711162 sync.Once
+func Get_mapMaybeT__gopurs_runtime_Value_458711162() gopurs_runtime.Value {
+	once_mapMaybeT__gopurs_runtime_Value_458711162.Do(func() {
+		cache_mapMaybeT__gopurs_runtime_Value_458711162 = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mapMaybeT__gopurs_runtime_Value_458711162(f_0_box, v_1_box)
 })
 	})
-	return cache_mapMaybeT__gopurs_runtime_Value_1035271418
-}
-
-var cache_mapMaybeT__gopurs_runtime_Value_2439405242 gopurs_runtime.Value
-var once_mapMaybeT__gopurs_runtime_Value_2439405242 sync.Once
-func Get_mapMaybeT__gopurs_runtime_Value_2439405242() gopurs_runtime.Value {
-	once_mapMaybeT__gopurs_runtime_Value_2439405242.Do(func() {
-		cache_mapMaybeT__gopurs_runtime_Value_2439405242 = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_mapMaybeT__gopurs_runtime_Value_2439405242(f_0_box, v_1_box)
-})
-	})
-	return cache_mapMaybeT__gopurs_runtime_Value_2439405242
+	return cache_mapMaybeT__gopurs_runtime_Value_458711162
 }
 
 var cache_functorMaybeT gopurs_runtime.Value
@@ -367,15 +356,7 @@ _ = v_1
 return gopurs_runtime.Apply(f_0, v_1)
 }
 
-func Call_mapMaybeT__gopurs_runtime_Value_1035271418(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var f_0 gopurs_runtime.Value = f_0_loop
-_ = f_0
-var v_1 gopurs_runtime.Value = v_1_loop
-_ = v_1
-return gopurs_runtime.Apply(f_0, v_1)
-}
-
-func Call_mapMaybeT__gopurs_runtime_Value_2439405242(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_mapMaybeT__gopurs_runtime_Value_458711162(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var v_1 gopurs_runtime.Value = v_1_loop

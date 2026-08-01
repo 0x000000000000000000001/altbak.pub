@@ -241,21 +241,45 @@ function phpursRunAffTrampoline($aff) {
 }
 
 $_pure = function($x) use (&$_pure) { return function() use($x) { return $x; }; };
-$_map = function($f, $aff) use (&$_map) {
+$_map = function($f, $aff = null) use (&$_map) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$_map) {
+            return $_map(...\array_merge($__args, $more));
+        };
+    }
     return function() use($f, $aff) { return new PhpursAffMap($f, $aff); };
 };
-$_bind = function($aff, $f) use (&$_bind) {
+$_bind = function($aff, $f = null) use (&$_bind) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$_bind) {
+            return $_bind(...\array_merge($__args, $more));
+        };
+    }
     return function() use($aff, $f) { return new PhpursAffBind($aff, $f); };
 };
 $_liftEffect = function($eff) use (&$_liftEffect) { return $eff; };
-$_makeFiber = function($isLeft, $unsafeFromLeft, $unsafeFromRight, $Left, $Right, $aff) use (&$_makeFiber) {
+$_makeFiber = function($isLeft, $unsafeFromLeft, $unsafeFromRight, $Left, $Right, $aff = null) use (&$_makeFiber) { 
+    if (\func_num_args() < 6) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$_makeFiber) {
+            return $_makeFiber(...\array_merge($__args, $more));
+        };
+    }
     return function() use($aff) { 
         $fiber = new \Fiber(function() use ($aff) { phpursRunAffTrampoline($aff); }); 
         $fiber->start(); 
         return (object)['run' => function() {}, 'join' => function($k) { return function() { return function(){}; }; }]; 
     }; 
 };
-$_fork = function($immediate, $aff) use (&$_fork) {
+$_fork = function($immediate, $aff = null) use (&$_fork) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$_fork) {
+            return $_fork(...\array_merge($__args, $more));
+        };
+    }
     return function() use($aff) { 
         $fiber = new \Fiber(function() use ($aff) { phpursRunAffTrampoline($aff); }); 
         \Revolt\EventLoop::queue(function() use($fiber) { $fiber->start(); }); 
@@ -300,12 +324,18 @@ $_delay = function($right, $ms) use (&$_delay) {
 $_makeSupervisedFiber = $_makeFiber;
 $_killAll = function($err, $sup, $cb) use (&$_killAll) { return function() { return function(){}; }; };
 
-$_makeAff = function($isLeft, $unsafeFromLeft, $unsafeFromRight, $Left, $Right, $k) use (&$_makeAff) {
+$_makeAff = function($isLeft, $unsafeFromLeft, $unsafeFromRight, $Left, $Right, $k = null) use (&$_makeAff) { 
+    if (\func_num_args() < 6) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$_makeAff) {
+            return $_makeAff(...\array_merge($__args, $more));
+        };
+    }
     return function() use($k) { 
         $fiber = \Fiber::getCurrent(); 
         $isDone = false;
-        $result;
-        $exception;
+        $result = null;
+        $exception = null;
 
         $canceler = $k(function($res) use($fiber, &$isDone, &$result, &$exception) { 
             return function() use($fiber, &$isDone, &$result, &$exception, $res) { 
@@ -344,22 +374,40 @@ $_makeAff = function($isLeft, $unsafeFromLeft, $unsafeFromRight, $Left, $Right, 
 };
 
 $_throwError = function($err) use (&$_throwError) { return function() use($err) { throw $err; }; };
-$_catchError = function($aff, $f) use (&$_catchError) {
+$_catchError = function($aff, $f = null) use (&$_catchError) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$_catchError) {
+            return $_catchError(...\array_merge($__args, $more));
+        };
+    }
     return function() use($aff, $f) { return new PhpursAffCatch($aff, $f); };
 };
-$generalBracket = function($acq, $cond, $use) use (&$generalBracket) {
+$generalBracket = function($acq, $cond = null, $use = null) use (&$generalBracket) {
+    if (\func_num_args() < 3) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$generalBracket) {
+            return $generalBracket(...\array_merge($__args, $more));
+        };
+    }
     return function() use($acq, $use) { return new PhpursAffBracket($acq, $use); }; 
 };
 $_parAffMap = $_map;
 
-$_parAffApply = function($aff1, $aff2) use (&$_parAffApply) {
+$_parAffApply = function($aff1, $aff2 = null) use (&$_parAffApply) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$_parAffApply) {
+            return $_parAffApply(...\array_merge($__args, $more));
+        };
+    }
     return function() use($aff1, $aff2) { 
         $parent = \Fiber::getCurrent();
         $isDone = false; 
         $completed = 0;
-        $res1;
-        $res2;
-        $error;
+        $res1 = null;
+        $res2 = null;
+        $error = null;
 
         $f1 = new \Fiber(function() use($aff1, &$isDone, &$completed, &$res1, &$error, $parent) {
             try {
@@ -429,13 +477,19 @@ $_parAffApply = function($aff1, $aff2) use (&$_parAffApply) {
 
 $_sequential = function($aff) use (&$_sequential) { return $aff; };
 
-$_parAffAlt = function($aff1, $aff2) use (&$_parAffAlt) {
+$_parAffAlt = function($aff1, $aff2 = null) use (&$_parAffAlt) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$_parAffAlt) {
+            return $_parAffAlt(...\array_merge($__args, $more));
+        };
+    }
     return function() use($aff1, $aff2) { 
         $parent = \Fiber::getCurrent();
         $isDone = false;
-        $result;
+        $result = null;
         $doneCount = 0;
-        $error2;
+        $error2 = null;
 
         $f1 = new \Fiber(function() use($aff1, &$isDone, &$result, &$doneCount, &$error2, $parent) {
             try {
@@ -527,7 +581,7 @@ function majEffect_majAff__bind($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Effect_Aff;
-  $f = ($ffi_Effect_Aff['_bind'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('_bind', $ffi_Effect_Aff) ? $ffi_Effect_Aff['_bind'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Effect_Aff__bind'] = __NAMESPACE__ . '\\majEffect_majAff__bind';
@@ -539,12 +593,12 @@ function majEffect_majAff__catchmajError($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Effect_Aff;
-  $f = ($ffi_Effect_Aff['_catchError'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('_catchError', $ffi_Effect_Aff) ? $ffi_Effect_Aff['_catchError'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Effect_Aff__catchError'] = __NAMESPACE__ . '\\majEffect_majAff__catchmajError';
 
-$GLOBALS['Effect_Aff__delay'] = ($ffi_Effect_Aff['_delay'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Effect_Aff__delay'] = (\array_key_exists('_delay', $ffi_Effect_Aff) ? $ffi_Effect_Aff['_delay'] : new class { public function __invoke(...$args) { return $this; } });
 function majEffect_majAff__fork(bool $v0, $v1 = null) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\majEffect_majAff__fork';
@@ -552,12 +606,12 @@ function majEffect_majAff__fork(bool $v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Effect_Aff;
-  $f = ($ffi_Effect_Aff['_fork'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('_fork', $ffi_Effect_Aff) ? $ffi_Effect_Aff['_fork'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Effect_Aff__fork'] = __NAMESPACE__ . '\\majEffect_majAff__fork';
 
-$GLOBALS['Effect_Aff__killAll'] = ($ffi_Effect_Aff['_killAll'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Effect_Aff__killAll'] = (\array_key_exists('_killAll', $ffi_Effect_Aff) ? $ffi_Effect_Aff['_killAll'] : new class { public function __invoke(...$args) { return $this; } });
 function majEffect_majAff__liftmajEffect($v0) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\majEffect_majAff__liftmajEffect';
@@ -565,14 +619,14 @@ function majEffect_majAff__liftmajEffect($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Aff;
-  $f = ($ffi_Effect_Aff['_liftEffect'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('_liftEffect', $ffi_Effect_Aff) ? $ffi_Effect_Aff['_liftEffect'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Effect_Aff__liftEffect'] = __NAMESPACE__ . '\\majEffect_majAff__liftmajEffect';
 
-$GLOBALS['Effect_Aff__makeAff'] = ($ffi_Effect_Aff['_makeAff'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Effect_Aff__makeFiber'] = ($ffi_Effect_Aff['_makeFiber'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Effect_Aff__makeSupervisedFiber'] = ($ffi_Effect_Aff['_makeSupervisedFiber'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Effect_Aff__makeAff'] = (\array_key_exists('_makeAff', $ffi_Effect_Aff) ? $ffi_Effect_Aff['_makeAff'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Effect_Aff__makeFiber'] = (\array_key_exists('_makeFiber', $ffi_Effect_Aff) ? $ffi_Effect_Aff['_makeFiber'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Effect_Aff__makeSupervisedFiber'] = (\array_key_exists('_makeSupervisedFiber', $ffi_Effect_Aff) ? $ffi_Effect_Aff['_makeSupervisedFiber'] : new class { public function __invoke(...$args) { return $this; } });
 function majEffect_majAff__map($v0, $v1 = null) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\majEffect_majAff__map';
@@ -580,7 +634,7 @@ function majEffect_majAff__map($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Effect_Aff;
-  $f = ($ffi_Effect_Aff['_map'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('_map', $ffi_Effect_Aff) ? $ffi_Effect_Aff['_map'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Effect_Aff__map'] = __NAMESPACE__ . '\\majEffect_majAff__map';
@@ -592,7 +646,7 @@ function majEffect_majAff__parmajAffmajAlt($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Effect_Aff;
-  $f = ($ffi_Effect_Aff['_parAffAlt'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('_parAffAlt', $ffi_Effect_Aff) ? $ffi_Effect_Aff['_parAffAlt'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Effect_Aff__parAffAlt'] = __NAMESPACE__ . '\\majEffect_majAff__parmajAffmajAlt';
@@ -604,7 +658,7 @@ function majEffect_majAff__parmajAffmajApply($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Effect_Aff;
-  $f = ($ffi_Effect_Aff['_parAffApply'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('_parAffApply', $ffi_Effect_Aff) ? $ffi_Effect_Aff['_parAffApply'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Effect_Aff__parAffApply'] = __NAMESPACE__ . '\\majEffect_majAff__parmajAffmajApply';
@@ -616,7 +670,7 @@ function majEffect_majAff__parmajAffmajMap($v0, $v1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Effect_Aff;
-  $f = ($ffi_Effect_Aff['_parAffMap'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('_parAffMap', $ffi_Effect_Aff) ? $ffi_Effect_Aff['_parAffMap'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Effect_Aff__parAffMap'] = __NAMESPACE__ . '\\majEffect_majAff__parmajAffmajMap';
@@ -628,12 +682,12 @@ function majEffect_majAff__pure($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Aff;
-  $f = ($ffi_Effect_Aff['_pure'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('_pure', $ffi_Effect_Aff) ? $ffi_Effect_Aff['_pure'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Effect_Aff__pure'] = __NAMESPACE__ . '\\majEffect_majAff__pure';
 
-$GLOBALS['Effect_Aff__sequential'] = ($ffi_Effect_Aff['_sequential'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Effect_Aff__sequential'] = (\array_key_exists('_sequential', $ffi_Effect_Aff) ? $ffi_Effect_Aff['_sequential'] : new class { public function __invoke(...$args) { return $this; } });
 function majEffect_majAff__throwmajError($v0) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\majEffect_majAff__throwmajError';
@@ -641,7 +695,7 @@ function majEffect_majAff__throwmajError($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Effect_Aff;
-  $f = ($ffi_Effect_Aff['_throwError'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('_throwError', $ffi_Effect_Aff) ? $ffi_Effect_Aff['_throwError'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Effect_Aff__throwError'] = __NAMESPACE__ . '\\majEffect_majAff__throwmajError';
@@ -653,7 +707,7 @@ function majEffect_majAff_generalmajBracket($v0, $v1 = null, $v2 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Effect_Aff;
-  $f = ($ffi_Effect_Aff['generalBracket'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('generalBracket', $ffi_Effect_Aff) ? $ffi_Effect_Aff['generalBracket'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Effect_Aff_generalBracket'] = __NAMESPACE__ . '\\majEffect_majAff_generalmajBracket';
@@ -1664,10 +1718,10 @@ $GLOBALS['Effect_Aff_runSuspendedAff'] = __NAMESPACE__ . '\\majEffect_majAff_run
 // Effect_Aff_monadRecAff
 $GLOBALS['Effect_Aff_monadRecAff'] = (object)["tailRecM" => function($k_0) {
   $__num = \func_num_args();
-  $go__1_0 = null;
-  $go__1_0 = function($a_2) use (&$go__1_0, $k_0) {
+  $go__go_1_0 = null;
+  $go__go_1_0 = function($a_2) use (&$go__go_1_0, $k_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Effect_Aff_bindAff'])->{'bind'})(($k_0)($a_2)))(function($res_3) use (&$go__1_0) {
+  $__res = ((($GLOBALS['Effect_Aff_bindAff'])->{'bind'})(($k_0)($a_2)))(function($res_3) use (&$go__go_1_0) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ($res_3 instanceof \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Done) {
@@ -1675,7 +1729,7 @@ $__t1 = (($GLOBALS['Effect_Aff_applicativeAff'])->{'pure'})(($res_3)->{'value0'}
 goto end_branch_1;;
 };
   if ($res_3 instanceof \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Loop) {
-$__t1 = ($go__1_0)(($res_3)->{'value0'});
+$__t1 = ($go__go_1_0)(($res_3)->{'value0'});
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -1690,7 +1744,7 @@ goto end_branch_1;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = $go__1_0;
+  $__res = $go__go_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

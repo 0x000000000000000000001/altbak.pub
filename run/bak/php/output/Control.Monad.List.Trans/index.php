@@ -1349,8 +1349,8 @@ function majControl_majMonad_majList_majTrans_unfoldable1majListmajT($dictMonad_
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go__5_2 = null;
-  $go__5_2 = function($v_6) use ($Applicative0_1_0, $f_3, &$go__5_2, $singleton1_2_1) {
+  $go__go_5_2 = null;
+  $go__go_5_2 = function($v_6) use ($Applicative0_1_0, $f_3, &$go__go_5_2, $singleton1_2_1) {
   $__num = \func_num_args();
   $__t3 = null;;
   if (($v_6)->{'value1'} instanceof \Data\Maybe\Data_Maybe_Nothing) {
@@ -1359,9 +1359,9 @@ goto end_branch_3;;
 };
   if (($v_6)->{'value1'} instanceof \Data\Maybe\Data_Maybe_Just) {
 $__local_var_7_4 = (($v_6)->{'value1'})->{'value0'};
-$__t3 = (($Applicative0_1_0)->{'pure'})(new \Control\Monad\List\Trans\Control_Monad_List_Trans_Yield(\Data\Lazy\majData_majLazy_force((($GLOBALS['Data_Lazy_applicativeLazy'])->{'pure'})(($v_6)->{'value0'})), \Data\Lazy\majData_majLazy_defer(function($v1_8) use ($__local_var_7_4, $f_3, &$go__5_2) {
+$__t3 = (($Applicative0_1_0)->{'pure'})(new \Control\Monad\List\Trans\Control_Monad_List_Trans_Yield(\Data\Lazy\majData_majLazy_force((($GLOBALS['Data_Lazy_applicativeLazy'])->{'pure'})(($v_6)->{'value0'})), \Data\Lazy\majData_majLazy_defer(function($v1_8) use ($__local_var_7_4, $f_3, &$go__go_5_2) {
   $__num = \func_num_args();
-  $__res = ($go__5_2)(($f_3)($__local_var_7_4));
+  $__res = ($go__go_5_2)(($f_3)($__local_var_7_4));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1376,7 +1376,7 @@ goto end_branch_3;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = ($go__5_2)(($f_3)($b_4));
+  $__res = ($go__go_5_2)(($f_3)($b_4));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1405,8 +1405,8 @@ function majControl_majMonad_majList_majTrans_unfoldablemajListmajT($dictMonad_0
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go__6_3 = null;
-  $go__6_3 = function($v_7) use ($Applicative0_1_0, $f_4, &$go__6_3, $nil1_2_1) {
+  $go__go_6_3 = null;
+  $go__go_6_3 = function($v_7) use ($Applicative0_1_0, $f_4, &$go__go_6_3, $nil1_2_1) {
   $__num = \func_num_args();
   $__t4 = null;;
   if ($v_7 instanceof \Data\Maybe\Data_Maybe_Nothing) {
@@ -1415,9 +1415,9 @@ goto end_branch_4;;
 };
   if ($v_7 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__local_var_8_5 = (($v_7)->{'value0'})->{'value1'};
-$__t4 = (($Applicative0_1_0)->{'pure'})(new \Control\Monad\List\Trans\Control_Monad_List_Trans_Yield(\Data\Lazy\majData_majLazy_force((($GLOBALS['Data_Lazy_applicativeLazy'])->{'pure'})((($v_7)->{'value0'})->{'value0'})), \Data\Lazy\majData_majLazy_defer(function($v1_9) use ($__local_var_8_5, $f_4, &$go__6_3) {
+$__t4 = (($Applicative0_1_0)->{'pure'})(new \Control\Monad\List\Trans\Control_Monad_List_Trans_Yield(\Data\Lazy\majData_majLazy_force((($GLOBALS['Data_Lazy_applicativeLazy'])->{'pure'})((($v_7)->{'value0'})->{'value0'})), \Data\Lazy\majData_majLazy_defer(function($v1_9) use ($__local_var_8_5, $f_4, &$go__go_6_3) {
   $__num = \func_num_args();
-  $__res = ($go__6_3)(($f_4)($__local_var_8_5));
+  $__res = ($go__go_6_3)(($f_4)($__local_var_8_5));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1432,7 +1432,7 @@ goto end_branch_4;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = ($go__6_3)(($f_4)($b_5));
+  $__res = ($go__go_6_3)(($f_4)($b_5));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

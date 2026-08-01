@@ -99,61 +99,131 @@ $mkSTFn1 = function($fn) use (&$mkSTFn1) {
     return function($x) use ($fn) { return $fn($x)(); };
 };
 $mkSTFn2 = function($fn) use (&$mkSTFn2) {
-    return function($a, $b) use ($fn) { return $fn($a, $b)(); };
+    return function($a, $b) use ($fn) { return $fn($a)($b)(); };
 };
 $mkSTFn3 = function($fn) use (&$mkSTFn3) {
-    return function($a, $b, $c) use ($fn) { return $fn($a, $b, $c)(); };
+    return function($a, $b, $c) use ($fn) { return $fn($a)($b)($c)(); };
 };
 $mkSTFn4 = function($fn) use (&$mkSTFn4) {
-    return function($a, $b, $c, $d) use ($fn) { return $fn($a, $b, $c, $d)(); };
+    return function($a, $b, $c, $d) use ($fn) { return $fn($a)($b)($c)($d)(); };
 };
 $mkSTFn5 = function($fn) use (&$mkSTFn5) {
-    return function($a, $b, $c, $d, $e) use ($fn) { return $fn($a, $b, $c, $d, $e)(); };
+    return function($a, $b, $c, $d, $e) use ($fn) { return $fn($a)($b)($c)($d)($e)(); };
 };
 $mkSTFn6 = function($fn) use (&$mkSTFn6) {
-    return function($a, $b, $c, $d, $e, $f) use ($fn) { return $fn($a, $b, $c, $d, $e, $f)(); };
+    return function($a, $b, $c, $d, $e, $f) use ($fn) { return $fn($a)($b)($c)($d)($e)($f)(); };
 };
 $mkSTFn7 = function($fn) use (&$mkSTFn7) {
-    return function($a, $b, $c, $d, $e, $f, $g) use ($fn) { return $fn($a, $b, $c, $d, $e, $f, $g)(); };
+    return function($a, $b, $c, $d, $e, $f, $g) use ($fn) { return $fn($a)($b)($c)($d)($e)($f)($g)(); };
 };
 $mkSTFn8 = function($fn) use (&$mkSTFn8) {
-    return function($a, $b, $c, $d, $e, $f, $g, $h) use ($fn) { return $fn($a, $b, $c, $d, $e, $f, $g, $h)(); };
+    return function($a, $b, $c, $d, $e, $f, $g, $h) use ($fn) { return $fn($a)($b)($c)($d)($e)($f)($g)($h)(); };
 };
 $mkSTFn9 = function($fn) use (&$mkSTFn9) {
-    return function($a, $b, $c, $d, $e, $f, $g, $h, $i) use ($fn) { return $fn($a, $b, $c, $d, $e, $f, $g, $h, $i)(); };
+    return function($a, $b, $c, $d, $e, $f, $g, $h, $i) use ($fn) { return $fn($a)($b)($c)($d)($e)($f)($g)($h)($i)(); };
 };
 $mkSTFn10 = function($fn) use (&$mkSTFn10) {
-    return function($a, $b, $c, $d, $e, $f, $g, $h, $i, $j) use ($fn) { return $fn($a, $b, $c, $d, $e, $f, $g, $h, $i, $j)(); };
+    return function($a, $b, $c, $d, $e, $f, $g, $h, $i, $j) use ($fn) { return $fn($a)($b)($c)($d)($e)($f)($g)($h)($i)($j)(); };
 };
 
-$runSTFn1 = function($fn, $a) use (&$runSTFn1) {
+$runSTFn1 = function($fn, $a = null) use (&$runSTFn1) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$runSTFn1) {
+
+            return $runSTFn1(...\array_merge($__args, $more));
+        };
+    }
     return function() use ($fn, $a) { return $fn($a); };
 };
-$runSTFn2 = function($fn, $a, $b) use (&$runSTFn2) {
+$runSTFn2 = function($fn, $a = null, $b = null) use (&$runSTFn2) {
+    if (\func_num_args() < 3) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$runSTFn2) {
+
+            return $runSTFn2(...\array_merge($__args, $more));
+        };
+    }
     return function() use ($fn, $a, $b) { return $fn($a, $b); };
 };
-$runSTFn3 = function($fn, $a, $b, $c) use (&$runSTFn3) {
+$runSTFn3 = function($fn, $a = null, $b = null, $c = null) use (&$runSTFn3) {
+    if (\func_num_args() < 4) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$runSTFn3) {
+
+            return $runSTFn3(...\array_merge($__args, $more));
+        };
+    }
     return function() use ($fn, $a, $b, $c) { return $fn($a, $b, $c); };
 };
-$runSTFn4 = function($fn, $a, $b, $c, $d) use (&$runSTFn4) {
+$runSTFn4 = function($fn, $a = null, $b = null, $c = null, $d = null) use (&$runSTFn4) {
+    if (\func_num_args() < 5) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$runSTFn4) {
+
+            return $runSTFn4(...\array_merge($__args, $more));
+        };
+    }
     return function() use ($fn, $a, $b, $c, $d) { return $fn($a, $b, $c, $d); };
 };
-$runSTFn5 = function($fn, $a, $b, $c, $d, $e) use (&$runSTFn5) {
+$runSTFn5 = function($fn, $a = null, $b = null, $c = null, $d = null, $e = null) use (&$runSTFn5) {
+    if (\func_num_args() < 6) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$runSTFn5) {
+
+            return $runSTFn5(...\array_merge($__args, $more));
+        };
+    }
     return function() use ($fn, $a, $b, $c, $d, $e) { return $fn($a, $b, $c, $d, $e); };
 };
-$runSTFn6 = function($fn, $a, $b, $c, $d, $e, $f) use (&$runSTFn6) {
+$runSTFn6 = function($fn, $a = null, $b = null, $c = null, $d = null, $e = null, $f = null) use (&$runSTFn6) {
+    if (\func_num_args() < 7) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$runSTFn6) {
+
+            return $runSTFn6(...\array_merge($__args, $more));
+        };
+    }
     return function() use ($fn, $a, $b, $c, $d, $e, $f) { return $fn($a, $b, $c, $d, $e, $f); };
 };
-$runSTFn7 = function($fn, $a, $b, $c, $d, $e, $f, $g) use (&$runSTFn7) {
+$runSTFn7 = function($fn, $a = null, $b = null, $c = null, $d = null, $e = null, $f = null, $g = null) use (&$runSTFn7) {
+    if (\func_num_args() < 8) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$runSTFn7) {
+
+            return $runSTFn7(...\array_merge($__args, $more));
+        };
+    }
     return function() use ($fn, $a, $b, $c, $d, $e, $f, $g) { return $fn($a, $b, $c, $d, $e, $f, $g); };
 };
-$runSTFn8 = function($fn, $a, $b, $c, $d, $e, $f, $g, $h) use (&$runSTFn8) {
+$runSTFn8 = function($fn, $a = null, $b = null, $c = null, $d = null, $e = null, $f = null, $g = null, $h = null) use (&$runSTFn8) {
+    if (\func_num_args() < 9) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$runSTFn8) {
+
+            return $runSTFn8(...\array_merge($__args, $more));
+        };
+    }
     return function() use ($fn, $a, $b, $c, $d, $e, $f, $g, $h) { return $fn($a, $b, $c, $d, $e, $f, $g, $h); };
 };
-$runSTFn9 = function($fn, $a, $b, $c, $d, $e, $f, $g, $h, $i) use (&$runSTFn9) {
+$runSTFn9 = function($fn, $a = null, $b = null, $c = null, $d = null, $e = null, $f = null, $g = null, $h = null, $i = null) use (&$runSTFn9) {
+    if (\func_num_args() < 10) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$runSTFn9) {
+
+            return $runSTFn9(...\array_merge($__args, $more));
+        };
+    }
     return function() use ($fn, $a, $b, $c, $d, $e, $f, $g, $h, $i) { return $fn($a, $b, $c, $d, $e, $f, $g, $h, $i); };
 };
-$runSTFn10 = function($fn, $a, $b, $c, $d, $e, $f, $g, $h, $i, $j) use (&$runSTFn10) {
+$runSTFn10 = function($fn, $a = null, $b = null, $c = null, $d = null, $e = null, $f = null, $g = null, $h = null, $i = null, $j = null) use (&$runSTFn10) {
+    if (\func_num_args() < 11) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$runSTFn10) {
+
+            return $runSTFn10(...\array_merge($__args, $more));
+        };
+    }
     return function() use ($fn, $a, $b, $c, $d, $e, $f, $g, $h, $i, $j) { return $fn($a, $b, $c, $d, $e, $f, $g, $h, $i, $j); };
 };
 
@@ -187,7 +257,7 @@ function majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn1($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Control_Monad_ST_Uncurried;
-  $f = ($ffi_Control_Monad_ST_Uncurried['mkSTFn1'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('mkSTFn1', $ffi_Control_Monad_ST_Uncurried) ? $ffi_Control_Monad_ST_Uncurried['mkSTFn1'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Control_Monad_ST_Uncurried_mkSTFn1'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn1';
@@ -199,7 +269,7 @@ function majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn10($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Control_Monad_ST_Uncurried;
-  $f = ($ffi_Control_Monad_ST_Uncurried['mkSTFn10'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('mkSTFn10', $ffi_Control_Monad_ST_Uncurried) ? $ffi_Control_Monad_ST_Uncurried['mkSTFn10'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Control_Monad_ST_Uncurried_mkSTFn10'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn10';
@@ -211,7 +281,7 @@ function majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn2($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Control_Monad_ST_Uncurried;
-  $f = ($ffi_Control_Monad_ST_Uncurried['mkSTFn2'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('mkSTFn2', $ffi_Control_Monad_ST_Uncurried) ? $ffi_Control_Monad_ST_Uncurried['mkSTFn2'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Control_Monad_ST_Uncurried_mkSTFn2'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn2';
@@ -223,7 +293,7 @@ function majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn3($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Control_Monad_ST_Uncurried;
-  $f = ($ffi_Control_Monad_ST_Uncurried['mkSTFn3'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('mkSTFn3', $ffi_Control_Monad_ST_Uncurried) ? $ffi_Control_Monad_ST_Uncurried['mkSTFn3'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Control_Monad_ST_Uncurried_mkSTFn3'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn3';
@@ -235,7 +305,7 @@ function majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn4($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Control_Monad_ST_Uncurried;
-  $f = ($ffi_Control_Monad_ST_Uncurried['mkSTFn4'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('mkSTFn4', $ffi_Control_Monad_ST_Uncurried) ? $ffi_Control_Monad_ST_Uncurried['mkSTFn4'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Control_Monad_ST_Uncurried_mkSTFn4'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn4';
@@ -247,7 +317,7 @@ function majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn5($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Control_Monad_ST_Uncurried;
-  $f = ($ffi_Control_Monad_ST_Uncurried['mkSTFn5'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('mkSTFn5', $ffi_Control_Monad_ST_Uncurried) ? $ffi_Control_Monad_ST_Uncurried['mkSTFn5'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Control_Monad_ST_Uncurried_mkSTFn5'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn5';
@@ -259,7 +329,7 @@ function majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn6($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Control_Monad_ST_Uncurried;
-  $f = ($ffi_Control_Monad_ST_Uncurried['mkSTFn6'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('mkSTFn6', $ffi_Control_Monad_ST_Uncurried) ? $ffi_Control_Monad_ST_Uncurried['mkSTFn6'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Control_Monad_ST_Uncurried_mkSTFn6'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn6';
@@ -271,7 +341,7 @@ function majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn7($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Control_Monad_ST_Uncurried;
-  $f = ($ffi_Control_Monad_ST_Uncurried['mkSTFn7'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('mkSTFn7', $ffi_Control_Monad_ST_Uncurried) ? $ffi_Control_Monad_ST_Uncurried['mkSTFn7'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Control_Monad_ST_Uncurried_mkSTFn7'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn7';
@@ -283,7 +353,7 @@ function majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn8($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Control_Monad_ST_Uncurried;
-  $f = ($ffi_Control_Monad_ST_Uncurried['mkSTFn8'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('mkSTFn8', $ffi_Control_Monad_ST_Uncurried) ? $ffi_Control_Monad_ST_Uncurried['mkSTFn8'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Control_Monad_ST_Uncurried_mkSTFn8'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn8';
@@ -295,7 +365,7 @@ function majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn9($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Control_Monad_ST_Uncurried;
-  $f = ($ffi_Control_Monad_ST_Uncurried['mkSTFn9'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('mkSTFn9', $ffi_Control_Monad_ST_Uncurried) ? $ffi_Control_Monad_ST_Uncurried['mkSTFn9'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Control_Monad_ST_Uncurried_mkSTFn9'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_mkmajSmajTmajFn9';
@@ -307,7 +377,7 @@ function majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn1($v0, $v1 = 
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Control_Monad_ST_Uncurried;
-  $f = ($ffi_Control_Monad_ST_Uncurried['runSTFn1'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('runSTFn1', $ffi_Control_Monad_ST_Uncurried) ? $ffi_Control_Monad_ST_Uncurried['runSTFn1'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Control_Monad_ST_Uncurried_runSTFn1'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn1';
@@ -319,7 +389,7 @@ function majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn10($v0, $v1 =
     return phpurs_curry_fallback($__fn, \func_get_args(), 11);
   }
   global $ffi_Control_Monad_ST_Uncurried;
-  $f = ($ffi_Control_Monad_ST_Uncurried['runSTFn10'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('runSTFn10', $ffi_Control_Monad_ST_Uncurried) ? $ffi_Control_Monad_ST_Uncurried['runSTFn10'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3, $v4, $v5, $v6, $v7, $v8, $v9, $v10);
 }
 $GLOBALS['Control_Monad_ST_Uncurried_runSTFn10'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn10';
@@ -331,7 +401,7 @@ function majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn2($v0, $v1 = 
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   global $ffi_Control_Monad_ST_Uncurried;
-  $f = ($ffi_Control_Monad_ST_Uncurried['runSTFn2'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('runSTFn2', $ffi_Control_Monad_ST_Uncurried) ? $ffi_Control_Monad_ST_Uncurried['runSTFn2'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2);
 }
 $GLOBALS['Control_Monad_ST_Uncurried_runSTFn2'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn2';
@@ -343,7 +413,7 @@ function majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn3($v0, $v1 = 
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
   global $ffi_Control_Monad_ST_Uncurried;
-  $f = ($ffi_Control_Monad_ST_Uncurried['runSTFn3'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('runSTFn3', $ffi_Control_Monad_ST_Uncurried) ? $ffi_Control_Monad_ST_Uncurried['runSTFn3'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3);
 }
 $GLOBALS['Control_Monad_ST_Uncurried_runSTFn3'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn3';
@@ -355,7 +425,7 @@ function majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn4($v0, $v1 = 
     return phpurs_curry_fallback($__fn, \func_get_args(), 5);
   }
   global $ffi_Control_Monad_ST_Uncurried;
-  $f = ($ffi_Control_Monad_ST_Uncurried['runSTFn4'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('runSTFn4', $ffi_Control_Monad_ST_Uncurried) ? $ffi_Control_Monad_ST_Uncurried['runSTFn4'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3, $v4);
 }
 $GLOBALS['Control_Monad_ST_Uncurried_runSTFn4'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn4';
@@ -367,7 +437,7 @@ function majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn5($v0, $v1 = 
     return phpurs_curry_fallback($__fn, \func_get_args(), 6);
   }
   global $ffi_Control_Monad_ST_Uncurried;
-  $f = ($ffi_Control_Monad_ST_Uncurried['runSTFn5'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('runSTFn5', $ffi_Control_Monad_ST_Uncurried) ? $ffi_Control_Monad_ST_Uncurried['runSTFn5'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3, $v4, $v5);
 }
 $GLOBALS['Control_Monad_ST_Uncurried_runSTFn5'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn5';
@@ -379,7 +449,7 @@ function majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn6($v0, $v1 = 
     return phpurs_curry_fallback($__fn, \func_get_args(), 7);
   }
   global $ffi_Control_Monad_ST_Uncurried;
-  $f = ($ffi_Control_Monad_ST_Uncurried['runSTFn6'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('runSTFn6', $ffi_Control_Monad_ST_Uncurried) ? $ffi_Control_Monad_ST_Uncurried['runSTFn6'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3, $v4, $v5, $v6);
 }
 $GLOBALS['Control_Monad_ST_Uncurried_runSTFn6'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn6';
@@ -391,7 +461,7 @@ function majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn7($v0, $v1 = 
     return phpurs_curry_fallback($__fn, \func_get_args(), 8);
   }
   global $ffi_Control_Monad_ST_Uncurried;
-  $f = ($ffi_Control_Monad_ST_Uncurried['runSTFn7'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('runSTFn7', $ffi_Control_Monad_ST_Uncurried) ? $ffi_Control_Monad_ST_Uncurried['runSTFn7'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3, $v4, $v5, $v6, $v7);
 }
 $GLOBALS['Control_Monad_ST_Uncurried_runSTFn7'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn7';
@@ -403,7 +473,7 @@ function majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn8($v0, $v1 = 
     return phpurs_curry_fallback($__fn, \func_get_args(), 9);
   }
   global $ffi_Control_Monad_ST_Uncurried;
-  $f = ($ffi_Control_Monad_ST_Uncurried['runSTFn8'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('runSTFn8', $ffi_Control_Monad_ST_Uncurried) ? $ffi_Control_Monad_ST_Uncurried['runSTFn8'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3, $v4, $v5, $v6, $v7, $v8);
 }
 $GLOBALS['Control_Monad_ST_Uncurried_runSTFn8'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn8';
@@ -415,7 +485,7 @@ function majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn9($v0, $v1 = 
     return phpurs_curry_fallback($__fn, \func_get_args(), 10);
   }
   global $ffi_Control_Monad_ST_Uncurried;
-  $f = ($ffi_Control_Monad_ST_Uncurried['runSTFn9'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('runSTFn9', $ffi_Control_Monad_ST_Uncurried) ? $ffi_Control_Monad_ST_Uncurried['runSTFn9'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1, $v2, $v3, $v4, $v5, $v6, $v7, $v8, $v9);
 }
 $GLOBALS['Control_Monad_ST_Uncurried_runSTFn9'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn9';

@@ -67,15 +67,15 @@ return Call_genString(dictMonadRec_0_box, dictMonadGen_1_box)
 	return cache_genString
 }
 
-var cache_genString__gopurs_runtime_Value_134939216 gopurs_runtime.Value
-var once_genString__gopurs_runtime_Value_134939216 sync.Once
-func Get_genString__gopurs_runtime_Value_134939216() gopurs_runtime.Value {
-	once_genString__gopurs_runtime_Value_134939216.Do(func() {
-		cache_genString__gopurs_runtime_Value_134939216 = gopurs_runtime.Func2(func(dictMonadRec_0_box gopurs_runtime.Value, dictMonadGen_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genString__gopurs_runtime_Value_134939216(dictMonadRec_0_box, dictMonadGen_1_box)
+var cache_genString__gopurs_runtime_Value_2499516017 gopurs_runtime.Value
+var once_genString__gopurs_runtime_Value_2499516017 sync.Once
+func Get_genString__gopurs_runtime_Value_2499516017() gopurs_runtime.Value {
+	once_genString__gopurs_runtime_Value_2499516017.Do(func() {
+		cache_genString__gopurs_runtime_Value_2499516017 = gopurs_runtime.Func2(func(dictMonadRec_0_box gopurs_runtime.Value, dictMonadGen_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genString__gopurs_runtime_Value_2499516017(dictMonadRec_0_box, dictMonadGen_1_box)
 })
 	})
-	return cache_genString__gopurs_runtime_Value_134939216
+	return cache_genString__gopurs_runtime_Value_2499516017
 }
 
 var cache_genUnicodeString gopurs_runtime.Value
@@ -175,7 +175,7 @@ return newSize_6
 })
 }
 
-func Call_genString__gopurs_runtime_Value_134939216(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_genString__gopurs_runtime_Value_2499516017(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
 _ = dictMonadRec_0
 var dictMonadGen_1 gopurs_runtime.Value = dictMonadGen_1_loop

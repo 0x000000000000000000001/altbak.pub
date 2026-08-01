@@ -209,9 +209,9 @@ function majData_majArray_majSmajT_majIterator_pushmajWhile($p_0, $iter_1 = null
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])->{'bind'})(\Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_new(false)))(function($break__3) use ($array_2, $iter_1, $p_0) {
+  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])->{'bind'})(\Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_new(false)))(function($go__break_3) use ($array_2, $iter_1, $p_0) {
   $__num = \func_num_args();
-  $__res = \Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_while(((($GLOBALS['Control_Monad_ST_Internal_functorST'])->{'map'})(($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'not'}))(\Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_read($break__3)), ((($GLOBALS['Control_Monad_ST_Internal_bindST'])->{'bind'})(\Data\Array\ST\Iterator\majData_majArray_majSmajT_majIterator_peek($iter_1)))(function($mx_4) use ($array_2, $break__3, $iter_1, $p_0) {
+  $__res = \Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_while(((($GLOBALS['Control_Monad_ST_Internal_functorST'])->{'map'})(($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'not'}))(\Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_read($go__break_3)), ((($GLOBALS['Control_Monad_ST_Internal_bindST'])->{'bind'})(\Data\Array\ST\Iterator\majData_majArray_majSmajT_majIterator_peek($iter_1)))(function($mx_4) use ($array_2, $go__break_3, $iter_1, $p_0) {
   $__num = \func_num_args();
   $__t0 = null;;
   if (($mx_4 instanceof \Data\Maybe\Data_Maybe_Just && ($p_0)(($mx_4)->{'value0'}))) {
@@ -224,7 +224,7 @@ $__t0 = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])->{'bind'})(\Control\Mon
 });
 goto end_branch_0;;
 };
-  $__t0 = \Data\Array\ST\Iterator\majData_majArray_majSmajT_majIterator_void(\Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_write(true, $break__3));
+  $__t0 = \Data\Array\ST\Iterator\majData_majArray_majSmajT_majIterator_void(\Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_write(true, $go__break_3));
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
@@ -285,9 +285,9 @@ function majData_majArray_majSmajT_majIterator_iterate($iter_0, $f_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])->{'bind'})(\Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_new(false)))(function($break__2) use ($f_1, $iter_0) {
+  $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])->{'bind'})(\Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_new(false)))(function($go__break_2) use ($f_1, $iter_0) {
   $__num = \func_num_args();
-  $__res = \Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_while(((($GLOBALS['Control_Monad_ST_Internal_functorST'])->{'map'})(($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'not'}))(\Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_read($break__2)), ((($GLOBALS['Control_Monad_ST_Internal_bindST'])->{'bind'})(\Data\Array\ST\Iterator\majData_majArray_majSmajT_majIterator_next($iter_0)))(function($mx_3) use ($break__2, $f_1) {
+  $__res = \Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_while(((($GLOBALS['Control_Monad_ST_Internal_functorST'])->{'map'})(($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'not'}))(\Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_read($go__break_2)), ((($GLOBALS['Control_Monad_ST_Internal_bindST'])->{'bind'})(\Data\Array\ST\Iterator\majData_majArray_majSmajT_majIterator_next($iter_0)))(function($mx_3) use ($f_1, $go__break_2) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ($mx_3 instanceof \Data\Maybe\Data_Maybe_Just) {
@@ -295,7 +295,7 @@ $__t0 = ($f_1)(($mx_3)->{'value0'});
 goto end_branch_0;;
 };
   if ($mx_3 instanceof \Data\Maybe\Data_Maybe_Nothing) {
-$__t0 = \Data\Array\ST\Iterator\majData_majArray_majSmajT_majIterator_void(\Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_write(true, $break__2));
+$__t0 = \Data\Array\ST\Iterator\majData_majArray_majSmajT_majIterator_void(\Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_write(true, $go__break_2));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);

@@ -33,7 +33,7 @@ func While(f func() bool, a func() interface{}) func() interface{} {
 	}
 }
 
-func For_(lo int64, hi int64, f func(int64) func() interface{}) func() interface{} {
+func ForImpl(lo int64, hi int64, f func(int64) func() interface{}) func() interface{} {
 	return func() interface{} {
 		for i := lo; i < hi; i++ {
 			f(i)()
@@ -51,7 +51,7 @@ func Foreach(as []interface{}, f func(interface{}) func() interface{}) func() in
 	}
 }
 
-func New_(val interface{}) func() interface{} {
+func NewImpl(val interface{}) func() interface{} {
 	return func() interface{} {
 		v := val
 		return &v
@@ -159,10 +159,10 @@ var _Gopurs_While = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 go
 			return gopurs_runtime.Box(inner_res)
 		})
 })
-func Call_for_(arg0 int64, arg1 int64, arg2 func(int64) func() interface{}) func() interface{} {
-	return For_(arg0, arg1, arg2)
+func Call_forImpl(arg0 int64, arg1 int64, arg2 func(int64) func() interface{}) func() interface{} {
+	return ForImpl(arg0, arg1, arg2)
 }
-var _Gopurs_For_ = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_ForImpl = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int64](arg0)
 	go_arg1 := gopurs_runtime.Unbox[int64](arg1)
 	go_arg2 := func(p0_0 int64) func() interface{} {
@@ -171,7 +171,7 @@ var _Gopurs_For_ = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gop
 			return gopurs_runtime.Apply(inner_res0, gopurs_runtime.Value{})
 		}
 		}
-	go_res := For_(go_arg0, go_arg1, go_arg2)
+	go_res := ForImpl(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 			inner_res := go_res()
 			return gopurs_runtime.Box(inner_res)
@@ -196,12 +196,12 @@ var _Gopurs_Foreach = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 
 			return gopurs_runtime.Box(inner_res)
 		})
 })
-func Call_new_(arg0 interface{}) func() interface{} {
-	return New_(arg0)
+func Call_newImpl(arg0 interface{}) func() interface{} {
+	return NewImpl(arg0)
 }
-var _Gopurs_New_ = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_NewImpl = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
-	go_res := New_(go_arg0)
+	go_res := NewImpl(go_arg0)
 	return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 			inner_res := go_res()
 			return gopurs_runtime.Box(inner_res)

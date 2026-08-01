@@ -113,7 +113,14 @@ $showNumberImpl = function($n) use (&$showNumberImpl) {
 $showCharImpl = function($c) use (&$showCharImpl) {
     return "'" . $c . "'";
 };
-$showArrayImpl = function($f, $xs) use (&$showArrayImpl) {
+$showArrayImpl = function($f, $xs = null) use (&$showArrayImpl) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$showArrayImpl) {
+
+            return $showArrayImpl(...\array_merge($__args, $more));
+        };
+    }
     return "[" . implode(",", array_map($f, $xs)) . "]";
 };
 
@@ -132,7 +139,7 @@ function majData_majShow_showmajArraymajImpl($v0, $v1 = null): string|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   global $ffi_Data_Show;
-  $f = ($ffi_Data_Show['showArrayImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('showArrayImpl', $ffi_Data_Show) ? $ffi_Data_Show['showArrayImpl'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0, $v1);
 }
 $GLOBALS['Data_Show_showArrayImpl'] = __NAMESPACE__ . '\\majData_majShow_showmajArraymajImpl';
@@ -144,7 +151,7 @@ function majData_majShow_showmajCharmajImpl($v0): string|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_Show;
-  $f = ($ffi_Data_Show['showCharImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('showCharImpl', $ffi_Data_Show) ? $ffi_Data_Show['showCharImpl'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_Show_showCharImpl'] = __NAMESPACE__ . '\\majData_majShow_showmajCharmajImpl';
@@ -156,7 +163,7 @@ function majData_majShow_showmajIntmajImpl(int $v0): string|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_Show;
-  $f = ($ffi_Data_Show['showIntImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('showIntImpl', $ffi_Data_Show) ? $ffi_Data_Show['showIntImpl'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_Show_showIntImpl'] = __NAMESPACE__ . '\\majData_majShow_showmajIntmajImpl';
@@ -168,7 +175,7 @@ function majData_majShow_showmajNumbermajImpl(float $v0): string|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_Show;
-  $f = ($ffi_Data_Show['showNumberImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('showNumberImpl', $ffi_Data_Show) ? $ffi_Data_Show['showNumberImpl'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_Show_showNumberImpl'] = __NAMESPACE__ . '\\majData_majShow_showmajNumbermajImpl';
@@ -180,7 +187,7 @@ function majData_majShow_showmajStringmajImpl(string $v0): string|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Data_Show;
-  $f = ($ffi_Data_Show['showStringImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('showStringImpl', $ffi_Data_Show) ? $ffi_Data_Show['showStringImpl'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Data_Show_showStringImpl'] = __NAMESPACE__ . '\\majData_majShow_showmajStringmajImpl';

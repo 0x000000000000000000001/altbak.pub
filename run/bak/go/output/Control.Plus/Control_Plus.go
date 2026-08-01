@@ -28,15 +28,15 @@ return Call_empty(dict_0_box)
 	return cache_empty
 }
 
-var cache_empty__gopurs_runtime_Value_134048739 gopurs_runtime.Value
-var once_empty__gopurs_runtime_Value_134048739 sync.Once
-func Get_empty__gopurs_runtime_Value_134048739() gopurs_runtime.Value {
-	once_empty__gopurs_runtime_Value_134048739.Do(func() {
-		cache_empty__gopurs_runtime_Value_134048739 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_empty__gopurs_runtime_Value_134048739(dict_0_box)
+var cache_empty__gopurs_runtime_Value_787715427 gopurs_runtime.Value
+var once_empty__gopurs_runtime_Value_787715427 sync.Once
+func Get_empty__gopurs_runtime_Value_787715427() gopurs_runtime.Value {
+	once_empty__gopurs_runtime_Value_787715427.Do(func() {
+		cache_empty__gopurs_runtime_Value_787715427 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_empty__gopurs_runtime_Value_787715427(dict_0_box)
 })
 	})
-	return cache_empty__gopurs_runtime_Value_134048739
+	return cache_empty__gopurs_runtime_Value_787715427
 }
 
 func Call_empty(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -45,7 +45,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "empty")
 }
 
-func Call_empty__gopurs_runtime_Value_134048739(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_empty__gopurs_runtime_Value_787715427(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "empty")

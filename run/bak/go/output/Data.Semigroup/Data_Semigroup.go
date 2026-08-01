@@ -92,37 +92,26 @@ return Call_semigroupRecord(_dollar__unused_0_box, dictSemigroupRecord_1_box)
 	return cache_semigroupRecord
 }
 
-var cache_append_ gopurs_runtime.Value
-var once_append_ sync.Once
-func Get_append_() gopurs_runtime.Value {
-	once_append_.Do(func() {
-		cache_append_ = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_append_(dict_0_box)
+var cache_append gopurs_runtime.Value
+var once_append sync.Once
+func Get_append() gopurs_runtime.Value {
+	once_append.Do(func() {
+		cache_append = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_append(dict_0_box)
 })
 	})
-	return cache_append_
+	return cache_append
 }
 
-var cache_append__gopurs_runtime_Value_434005625 gopurs_runtime.Value
-var once_append__gopurs_runtime_Value_434005625 sync.Once
-func Get_append__gopurs_runtime_Value_434005625() gopurs_runtime.Value {
-	once_append__gopurs_runtime_Value_434005625.Do(func() {
-		cache_append__gopurs_runtime_Value_434005625 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_append__gopurs_runtime_Value_434005625(dict_0_box)
+var cache_append__gopurs_runtime_Value_3158123833 gopurs_runtime.Value
+var once_append__gopurs_runtime_Value_3158123833 sync.Once
+func Get_append__gopurs_runtime_Value_3158123833() gopurs_runtime.Value {
+	once_append__gopurs_runtime_Value_3158123833.Do(func() {
+		cache_append__gopurs_runtime_Value_3158123833 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_append__gopurs_runtime_Value_3158123833(dict_0_box)
 })
 	})
-	return cache_append__gopurs_runtime_Value_434005625
-}
-
-var cache_append__gopurs_runtime_Value_2280335289 gopurs_runtime.Value
-var once_append__gopurs_runtime_Value_2280335289 sync.Once
-func Get_append__gopurs_runtime_Value_2280335289() gopurs_runtime.Value {
-	once_append__gopurs_runtime_Value_2280335289.Do(func() {
-		cache_append__gopurs_runtime_Value_2280335289 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_append__gopurs_runtime_Value_2280335289(dict_0_box)
-})
-	})
-	return cache_append__gopurs_runtime_Value_2280335289
+	return cache_append__gopurs_runtime_Value_3158123833
 }
 
 var cache_semigroupFn gopurs_runtime.Value
@@ -161,19 +150,13 @@ _ = dictSemigroupRecord_1
 return gopurs_runtime.RecordDict1("append", gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictSemigroupRecord_1, "appendRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}))
 }
 
-func Call_append_(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_append(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "append")
 }
 
-func Call_append__gopurs_runtime_Value_434005625(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
-_ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "append")
-}
-
-func Call_append__gopurs_runtime_Value_2280335289(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_append__gopurs_runtime_Value_3158123833(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "append")

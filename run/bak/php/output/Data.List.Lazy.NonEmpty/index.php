@@ -217,12 +217,12 @@ function majData_majList_majLazy_majNonmajEmpty_repeat($x_0) {
   }
   $__res = \Data\Lazy\majData_majLazy_defer(function($v_1) use ($x_0) {
   $__num = \func_num_args();
-  $go__2_0 = null;
-  $go__2_0 = (($GLOBALS['Data_List_Lazy_Types_lazyList'])->{'defer'})(function($v_3) use (&$go__2_0, $x_0) {
+  $go__go_2_0 = null;
+  $go__go_2_0 = (($GLOBALS['Data_List_Lazy_Types_lazyList'])->{'defer'})(function($v_3) use (&$go__go_2_0, $x_0) {
   $__num = \func_num_args();
-  $__res = \Data\Lazy\majData_majLazy_defer(function($v_4) use (&$go__2_0, $x_0) {
+  $__res = \Data\Lazy\majData_majLazy_defer(function($v_4) use (&$go__go_2_0, $x_0) {
   $__num = \func_num_args();
-  $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($x_0, $go__2_0);
+  $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($x_0, $go__go_2_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -231,7 +231,7 @@ function majData_majList_majLazy_majNonmajEmpty_repeat($x_0) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
-  $__res = new \Data\NonEmpty\Data_NonEmpty_NonEmpty($x_0, $go__2_0);
+  $__res = new \Data\NonEmpty\Data_NonEmpty_NonEmpty($x_0, $go__go_2_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

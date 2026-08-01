@@ -285,18 +285,18 @@ function majControl_majMonad_majGen_frommajIndex($dictFoldable1_0) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go__4_1 = null;
-  $go__4_1 = (function() use ($foldMap1_1_0, &$go__4_1, $xs_3) {
-  $__fn = function($v_5, $v1_6 = null) use ($foldMap1_1_0, &$go__4_1, $xs_3, &$__fn) {
+  $go__go_4_1 = null;
+  $go__go_4_1 = (function() use ($foldMap1_1_0, &$go__go_4_1, $xs_3) {
+  $__fn = function($v_5, $v1_6 = null) use ($foldMap1_1_0, &$go__go_4_1, $xs_3, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_go__4_1_1_v_5 = $v_5;
-  $__tco_var_go__4_1_1_v1_6 = $v1_6;
-  tco_loop_go__4_1_1:;
-  $v_5 = $__tco_var_go__4_1_1_v_5;
-  $v1_6 = $__tco_var_go__4_1_1_v1_6;
+  $__tco_var_go__go_4_1_1_v_5 = $v_5;
+  $__tco_var_go__go_4_1_1_v1_6 = $v1_6;
+  tco_loop_go__go_4_1_1:;
+  $v_5 = $__tco_var_go__go_4_1_1_v_5;
+  $v1_6 = $__tco_var_go__go_4_1_1_v1_6;
   $__t1 = null;;
   if ($v1_6 instanceof \Control\Monad\Gen\Control_Monad_Gen_Cons) {
 $__t4 = null;;
@@ -310,9 +310,9 @@ goto end_branch_4;;
 };
 $__tco_2 = ($v_5 - 1);
 $__tco_3 = ($v1_6)->{'value1'};
-$__tco_var_go__4_1_1_v_5 = $__tco_2;
-$__tco_var_go__4_1_1_v1_6 = $__tco_3;
-goto tco_loop_go__4_1_1;;
+$__tco_var_go__go_4_1_1_v_5 = $__tco_2;
+$__tco_var_go__go_4_1_1_v1_6 = $__tco_3;
+goto tco_loop_go__go_4_1_1;;
 $__t4 = null;
 end_branch_4:;
 $__t1 = $__t4;
@@ -332,7 +332,7 @@ goto end_branch_1;;
   };
   return $__fn;
 })();
-  $__res = (($go__4_1)($i_2))((((((($dictFoldable1_0)->{'Foldable0'})(null))->{'foldr'})($GLOBALS['Control_Monad_Gen_Cons']))(new \Control\Monad\Gen\Control_Monad_Gen_Nil()))($xs_3));
+  $__res = (($go__go_4_1)($i_2))((((((($dictFoldable1_0)->{'Foldable0'})(null))->{'foldr'})($GLOBALS['Control_Monad_Gen_Cons']))(new \Control\Monad\Gen\Control_Monad_Gen_Nil()))($xs_3));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

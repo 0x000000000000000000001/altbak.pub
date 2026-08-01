@@ -38,12 +38,12 @@ return Call_last(_dollar__unused_0_box, func() []gopurs_runtime.Value {
 	return cache_last
 }
 
-var cache_init_ gopurs_runtime.Value
-var once_init_ sync.Once
-func Get_init_() gopurs_runtime.Value {
-	once_init_.Do(func() {
-		cache_init_ = gopurs_runtime.Func2(func(_dollar__unused_0_box gopurs_runtime.Value, xs_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Array(Call_init_(_dollar__unused_0_box, func() []gopurs_runtime.Value {
+var cache_init gopurs_runtime.Value
+var once_init sync.Once
+func Get_init() gopurs_runtime.Value {
+	once_init.Do(func() {
+		cache_init = gopurs_runtime.Func2(func(_dollar__unused_0_box gopurs_runtime.Value, xs_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Array(Call_init(_dollar__unused_0_box, func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(xs_1_box.UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
@@ -51,7 +51,7 @@ return gopurs_runtime.Array(Call_init_(_dollar__unused_0_box, func() []gopurs_ru
 				}()))
 })
 	})
-	return cache_init_
+	return cache_init
 }
 
 var cache_head gopurs_runtime.Value
@@ -91,7 +91,7 @@ _ = xs_1
 return xs_1[(gopurs_runtime.Int(int64(len(xs_1))).IntVal) - (1)]
 }
 
-func Call_init_(_dollar__unused_0_loop gopurs_runtime.Value, xs_1_loop []gopurs_runtime.Value) []gopurs_runtime.Value {
+func Call_init(_dollar__unused_0_loop gopurs_runtime.Value, xs_1_loop []gopurs_runtime.Value) []gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var xs_1 []gopurs_runtime.Value = xs_1_loop

@@ -109,7 +109,7 @@ function majPartial_majUnsafe__unsafemajPartial($v0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   global $ffi_Partial_Unsafe;
-  $f = ($ffi_Partial_Unsafe['_unsafePartial'] ?? new class { public function __invoke(...$args) { return $this; } });
+  $f = (\array_key_exists('_unsafePartial', $ffi_Partial_Unsafe) ? $ffi_Partial_Unsafe['_unsafePartial'] : new class { public function __invoke(...$args) { return $this; } });
   return $f($v0);
 }
 $GLOBALS['Partial_Unsafe__unsafePartial'] = __NAMESPACE__ . '\\majPartial_majUnsafe__unsafemajPartial';

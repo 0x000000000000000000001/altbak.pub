@@ -185,10 +185,10 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_traversable1NonEmptyAr
 }), gopurs_runtime.Func(func(dictApply_0 gopurs_runtime.Value) gopurs_runtime.Value {
 apply_1_0 := gopurs_runtime.RecordGet(dictApply_0, "apply")
 _ = apply_1_0
-map__2_1 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_0, "Functor0"), gopurs_runtime.Value{}), "map")
-_ = map__2_1
+go__map_2_1 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_0, "Functor0"), gopurs_runtime.Value{}), "map")
+_ = go__map_2_1
 return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp3(Get_traverse1Impl(), apply_1_0, map__2_1, f_3)
+return gopurs_runtime.UncurriedApp3(Get_traverse1Impl(), apply_1_0, go__map_2_1, f_3)
 })
 }))
 	})

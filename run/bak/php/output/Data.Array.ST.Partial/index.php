@@ -99,11 +99,25 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Array_ST_Partial = \call_user_func(function() {
   $exports = [];
-$peekImpl = function($i, $xs) use (&$peekImpl) {
+$peekImpl = function($i, $xs = null) use (&$peekImpl) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$peekImpl) {
+
+            return $peekImpl(...\array_merge($__args, $more));
+        };
+    }
     return $xs->value[$i];
 };
 
-$pokeImpl = function($i, $a, $xs) use (&$pokeImpl) {
+$pokeImpl = function($i, $a = null, $xs = null) use (&$pokeImpl) {
+    if (\func_num_args() < 3) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$pokeImpl) {
+
+            return $pokeImpl(...\array_merge($__args, $more));
+        };
+    }
     $xs->value[$i] = $a;
     return null; // pure purescript FFI typically returns undefined/Unit here if not STFn, wait, pokeImpl here is an STFn! STFn3 doesn't return anything useful?
 };
@@ -113,8 +127,8 @@ $exports['pokeImpl'] = $pokeImpl;
 return $exports;
   return $exports;
 });
-$GLOBALS['Data_Array_ST_Partial_peekImpl'] = ($ffi_Data_Array_ST_Partial['peekImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_ST_Partial_pokeImpl'] = ($ffi_Data_Array_ST_Partial['pokeImpl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_Partial_peekImpl'] = (\array_key_exists('peekImpl', $ffi_Data_Array_ST_Partial) ? $ffi_Data_Array_ST_Partial['peekImpl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_ST_Partial_pokeImpl'] = (\array_key_exists('pokeImpl', $ffi_Data_Array_ST_Partial) ? $ffi_Data_Array_ST_Partial['pokeImpl'] : new class { public function __invoke(...$args) { return $this; } });
 
 
 

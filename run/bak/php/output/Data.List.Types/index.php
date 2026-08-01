@@ -344,18 +344,18 @@ $GLOBALS['Data_List_Types_foldableList'] = (object)["foldr" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go__2_0 = null;
-  $go__2_0 = (function() use (&$go__2_0) {
-  $__fn = function($v_3, $v1_4 = null) use (&$go__2_0, &$__fn) {
+  $go__go_2_0 = null;
+  $go__go_2_0 = (function() use (&$go__go_2_0) {
+  $__fn = function($v_3, $v1_4 = null) use (&$go__go_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_go__2_0_0_v_3 = $v_3;
-  $__tco_var_go__2_0_0_v1_4 = $v1_4;
-  tco_loop_go__2_0_0:;
-  $v_3 = $__tco_var_go__2_0_0_v_3;
-  $v1_4 = $__tco_var_go__2_0_0_v1_4;
+  $__tco_var_go__go_2_0_0_v_3 = $v_3;
+  $__tco_var_go__go_2_0_0_v1_4 = $v1_4;
+  tco_loop_go__go_2_0_0:;
+  $v_3 = $__tco_var_go__go_2_0_0_v_3;
+  $v1_4 = $__tco_var_go__go_2_0_0_v1_4;
   $__t0 = null;;
   if ($v1_4 instanceof \Data\List\Types\Data_List_Types_Nil) {
 $__t0 = $v_3;
@@ -364,9 +364,9 @@ goto end_branch_0;;
   if ($v1_4 instanceof \Data\List\Types\Data_List_Types_Cons) {
 $__tco_1 = new \Data\List\Types\Data_List_Types_Cons(($v1_4)->{'value0'}, $v_3);
 $__tco_2 = ($v1_4)->{'value1'};
-$__tco_var_go__2_0_0_v_3 = $__tco_1;
-$__tco_var_go__2_0_0_v1_4 = $__tco_2;
-goto tco_loop_go__2_0_0;;
+$__tco_var_go__go_2_0_0_v_3 = $__tco_1;
+$__tco_var_go__go_2_0_0_v1_4 = $__tco_2;
+goto tco_loop_go__go_2_0_0;;
 $__t0 = null;
 goto end_branch_0;;
 };
@@ -392,7 +392,7 @@ goto end_branch_0;;
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
   };
   return $__fn;
-})()))($b_1)))(($go__2_0)(new \Data\List\Types\Data_List_Types_Nil()));
+})()))($b_1)))(($go__go_2_0)(new \Data\List\Types\Data_List_Types_Nil()));
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -400,18 +400,18 @@ goto end_branch_0;;
   return $__fn;
 })(), "foldl" => function($f_0) {
   $__num = \func_num_args();
-  $go__1_1 = null;
-  $go__1_1 = (function() use ($f_0, &$go__1_1) {
-  $__fn = function($b_2, $v_3 = null) use ($f_0, &$go__1_1, &$__fn) {
+  $go__go_1_1 = null;
+  $go__go_1_1 = (function() use ($f_0, &$go__go_1_1) {
+  $__fn = function($b_2, $v_3 = null) use ($f_0, &$go__go_1_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_go__1_1_1_b_2 = $b_2;
-  $__tco_var_go__1_1_1_v_3 = $v_3;
-  tco_loop_go__1_1_1:;
-  $b_2 = $__tco_var_go__1_1_1_b_2;
-  $v_3 = $__tco_var_go__1_1_1_v_3;
+  $__tco_var_go__go_1_1_1_b_2 = $b_2;
+  $__tco_var_go__go_1_1_1_v_3 = $v_3;
+  tco_loop_go__go_1_1_1:;
+  $b_2 = $__tco_var_go__go_1_1_1_b_2;
+  $v_3 = $__tco_var_go__go_1_1_1_v_3;
   $__t1 = null;;
   if ($v_3 instanceof \Data\List\Types\Data_List_Types_Nil) {
 $__t1 = $b_2;
@@ -420,9 +420,9 @@ goto end_branch_1;;
   if ($v_3 instanceof \Data\List\Types\Data_List_Types_Cons) {
 $__tco_2 = (($f_0)($b_2))(($v_3)->{'value0'});
 $__tco_3 = ($v_3)->{'value1'};
-$__tco_var_go__1_1_1_b_2 = $__tco_2;
-$__tco_var_go__1_1_1_v_3 = $__tco_3;
-goto tco_loop_go__1_1_1;;
+$__tco_var_go__go_1_1_1_b_2 = $__tco_2;
+$__tco_var_go__go_1_1_1_v_3 = $__tco_3;
+goto tco_loop_go__go_1_1_1;;
 $__t1 = null;
 goto end_branch_1;;
 };
@@ -436,7 +436,7 @@ goto end_branch_1;;
   };
   return $__fn;
 })();
-  $__res = $go__1_1;
+  $__res = $go__go_1_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1127,26 +1127,26 @@ $GLOBALS['Data_List_Types_unfoldable1List'] = (object)["unfoldr1" => (function()
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go__2_0 = null;
-  $go__2_0 = (function() use ($f_0, &$go__2_0) {
-  $__fn = function($source_3, $memo_4 = null) use ($f_0, &$go__2_0, &$__fn) {
+  $go__go_2_0 = null;
+  $go__go_2_0 = (function() use ($f_0, &$go__go_2_0) {
+  $__fn = function($source_3, $memo_4 = null) use ($f_0, &$go__go_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_go__2_0_0_source_3 = $source_3;
-  $__tco_var_go__2_0_0_memo_4 = $memo_4;
-  tco_loop_go__2_0_0:;
-  $source_3 = $__tco_var_go__2_0_0_source_3;
-  $memo_4 = $__tco_var_go__2_0_0_memo_4;
+  $__tco_var_go__go_2_0_0_source_3 = $source_3;
+  $__tco_var_go__go_2_0_0_memo_4 = $memo_4;
+  tco_loop_go__go_2_0_0:;
+  $source_3 = $__tco_var_go__go_2_0_0_source_3;
+  $memo_4 = $__tco_var_go__go_2_0_0_memo_4;
   $v_5_0 = ($f_0)($source_3);
   $__t1 = null;;
   if (($v_5_0)->{'value1'} instanceof \Data\Maybe\Data_Maybe_Just) {
 $__tco_2 = (($v_5_0)->{'value1'})->{'value0'};
 $__tco_3 = new \Data\List\Types\Data_List_Types_Cons(($v_5_0)->{'value0'}, $memo_4);
-$__tco_var_go__2_0_0_source_3 = $__tco_2;
-$__tco_var_go__2_0_0_memo_4 = $__tco_3;
-goto tco_loop_go__2_0_0;;
+$__tco_var_go__go_2_0_0_source_3 = $__tco_2;
+$__tco_var_go__go_2_0_0_memo_4 = $__tco_3;
+goto tco_loop_go__go_2_0_0;;
 $__t1 = null;
 goto end_branch_1;;
 };
@@ -1176,7 +1176,7 @@ goto end_branch_1;;
   };
   return $__fn;
 })();
-  $__res = (($go__2_0)($b_1))(new \Data\List\Types\Data_List_Types_Nil());
+  $__res = (($go__go_2_0)($b_1))(new \Data\List\Types\Data_List_Types_Nil());
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1191,18 +1191,18 @@ $GLOBALS['Data_List_Types_unfoldableList'] = (object)["unfoldr" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $go__2_0 = null;
-  $go__2_0 = (function() use ($f_0, &$go__2_0) {
-  $__fn = function($source_3, $memo_4 = null) use ($f_0, &$go__2_0, &$__fn) {
+  $go__go_2_0 = null;
+  $go__go_2_0 = (function() use ($f_0, &$go__go_2_0) {
+  $__fn = function($source_3, $memo_4 = null) use ($f_0, &$go__go_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_go__2_0_0_source_3 = $source_3;
-  $__tco_var_go__2_0_0_memo_4 = $memo_4;
-  tco_loop_go__2_0_0:;
-  $source_3 = $__tco_var_go__2_0_0_source_3;
-  $memo_4 = $__tco_var_go__2_0_0_memo_4;
+  $__tco_var_go__go_2_0_0_source_3 = $source_3;
+  $__tco_var_go__go_2_0_0_memo_4 = $memo_4;
+  tco_loop_go__go_2_0_0:;
+  $source_3 = $__tco_var_go__go_2_0_0_source_3;
+  $memo_4 = $__tco_var_go__go_2_0_0_memo_4;
   $v_5_0 = ($f_0)($source_3);
   $__t1 = null;;
   if ($v_5_0 instanceof \Data\Maybe\Data_Maybe_Nothing) {
@@ -1224,9 +1224,9 @@ goto end_branch_1;;
   if ($v_5_0 instanceof \Data\Maybe\Data_Maybe_Just) {
 $__tco_2 = (($v_5_0)->{'value0'})->{'value1'};
 $__tco_3 = new \Data\List\Types\Data_List_Types_Cons((($v_5_0)->{'value0'})->{'value0'}, $memo_4);
-$__tco_var_go__2_0_0_source_3 = $__tco_2;
-$__tco_var_go__2_0_0_memo_4 = $__tco_3;
-goto tco_loop_go__2_0_0;;
+$__tco_var_go__go_2_0_0_source_3 = $__tco_2;
+$__tco_var_go__go_2_0_0_memo_4 = $__tco_3;
+goto tco_loop_go__go_2_0_0;;
 $__t1 = null;
 goto end_branch_1;;
 };
@@ -1240,7 +1240,7 @@ goto end_branch_1;;
   };
   return $__fn;
 })();
-  $__res = (($go__2_0)($b_1))(new \Data\List\Types\Data_List_Types_Nil());
+  $__res = (($go__go_2_0)($b_1))(new \Data\List\Types\Data_List_Types_Nil());
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1345,9 +1345,9 @@ $GLOBALS['Data_List_Types_eq1List'] = (object)["eq1" => (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $go__3_0 = null;
-  $go__3_0 = (function() use ($dictEq_0, &$go__3_0) {
-  $__fn = function($v_4, $v1_5 = null, $v2_6 = null) use ($dictEq_0, &$go__3_0, &$__fn) {
+  $go__go_3_0 = null;
+  $go__go_3_0 = (function() use ($dictEq_0, &$go__go_3_0) {
+  $__fn = function($v_4, $v1_5 = null, $v2_6 = null) use ($dictEq_0, &$go__go_3_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
@@ -1361,7 +1361,7 @@ goto end_branch_1;;
 $__t1 = ($v1_5 instanceof \Data\List\Types\Data_List_Types_Nil && $v2_6);
 goto end_branch_1;;
 };
-  $__t1 = ($v_4 instanceof \Data\List\Types\Data_List_Types_Cons && ($v1_5 instanceof \Data\List\Types\Data_List_Types_Cons && ((($go__3_0)(($v_4)->{'value1'}))(($v1_5)->{'value1'}))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})($v2_6))(((($dictEq_0)->{'eq'})(($v1_5)->{'value0'}))(($v_4)->{'value0'})))));
+  $__t1 = ($v_4 instanceof \Data\List\Types\Data_List_Types_Cons && ($v1_5 instanceof \Data\List\Types\Data_List_Types_Cons && ((($go__go_3_0)(($v_4)->{'value1'}))(($v1_5)->{'value1'}))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})($v2_6))(((($dictEq_0)->{'eq'})(($v1_5)->{'value0'}))(($v_4)->{'value0'})))));
   end_branch_1:;
   $__res = $__t1;
   goto __end;;
@@ -1370,7 +1370,7 @@ goto end_branch_1;;
   };
   return $__fn;
 })();
-  $__res = ((($go__3_0)($xs_1))($ys_2))(true);
+  $__res = ((($go__go_3_0)($xs_1))($ys_2))(true);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1422,18 +1422,18 @@ $GLOBALS['Data_List_Types_ord1List'] = (object)["compare1" => (function() {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $go__3_0 = null;
-  $go__3_0 = (function() use ($dictOrd_0, &$go__3_0) {
-  $__fn = function($v_4, $v1_5 = null) use ($dictOrd_0, &$go__3_0, &$__fn) {
+  $go__go_3_0 = null;
+  $go__go_3_0 = (function() use ($dictOrd_0, &$go__go_3_0) {
+  $__fn = function($v_4, $v1_5 = null) use ($dictOrd_0, &$go__go_3_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__tco_var_go__3_0_0_v_4 = $v_4;
-  $__tco_var_go__3_0_0_v1_5 = $v1_5;
-  tco_loop_go__3_0_0:;
-  $v_4 = $__tco_var_go__3_0_0_v_4;
-  $v1_5 = $__tco_var_go__3_0_0_v1_5;
+  $__tco_var_go__go_3_0_0_v_4 = $v_4;
+  $__tco_var_go__go_3_0_0_v1_5 = $v1_5;
+  tco_loop_go__go_3_0_0:;
+  $v_4 = $__tco_var_go__go_3_0_0_v_4;
+  $v1_5 = $__tco_var_go__go_3_0_0_v1_5;
   $__t0 = null;;
   if ($v_4 instanceof \Data\List\Types\Data_List_Types_Nil) {
 $__t1 = null;;
@@ -1456,9 +1456,9 @@ $__t3 = null;;
 if ($v2_6_2 instanceof \Data\Ordering\Data_Ordering_EQ) {
 $__tco_4 = ($v_4)->{'value1'};
 $__tco_5 = ($v1_5)->{'value1'};
-$__tco_var_go__3_0_0_v_4 = $__tco_4;
-$__tco_var_go__3_0_0_v1_5 = $__tco_5;
-goto tco_loop_go__3_0_0;;
+$__tco_var_go__go_3_0_0_v_4 = $__tco_4;
+$__tco_var_go__go_3_0_0_v1_5 = $__tco_5;
+goto tco_loop_go__go_3_0_0;;
 $__t3 = null;
 goto end_branch_3;;
 };
@@ -1477,7 +1477,7 @@ goto end_branch_0;;
   };
   return $__fn;
 })();
-  $__res = (($go__3_0)($xs_1))($ys_2);
+  $__res = (($go__go_3_0)($xs_1))($ys_2);
   goto __end;;
   __end:
   return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;

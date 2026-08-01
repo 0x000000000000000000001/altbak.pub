@@ -294,17 +294,17 @@ function majControl_majMonad_majRec_majClass_tailmajRec($f_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $go__1_0 = null;
-  $go__1_0 = function($v_2) use ($f_0, &$go__1_0) {
+  $go__go_1_0 = null;
+  $go__go_1_0 = function($v_2) use ($f_0, &$go__go_1_0) {
   $__num = \func_num_args();
-  $__tco_var_go__1_0_0_v_2 = $v_2;
-  tco_loop_go__1_0_0:;
-  $v_2 = $__tco_var_go__1_0_0_v_2;
+  $__tco_var_go__go_1_0_0_v_2 = $v_2;
+  tco_loop_go__go_1_0_0:;
+  $v_2 = $__tco_var_go__go_1_0_0_v_2;
   $__t0 = null;;
   if ($v_2 instanceof \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Loop) {
 $__tco_1 = ($f_0)(($v_2)->{'value0'});
-$__tco_var_go__1_0_0_v_2 = $__tco_1;
-goto tco_loop_go__1_0_0;;
+$__tco_var_go__go_1_0_0_v_2 = $__tco_1;
+goto tco_loop_go__go_1_0_0;;
 $__t0 = null;
 goto end_branch_0;;
 };
@@ -320,7 +320,7 @@ goto end_branch_0;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($go__1_0))($f_0);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($go__go_1_0))($f_0);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

@@ -2,33 +2,55 @@ package Effect_Ref
 
 import "gopurs/output/gopurs_runtime"
 
+import "sync"
+
+type ThreadSafeRef struct {
+	mu    sync.Mutex
+	value interface{}
+}
+
 func _New(val interface{}) func() interface{} {
 	return func() interface{} {
-		return map[string]interface{}{"value": val}
+		return &ThreadSafeRef{value: val}
 	}
 }
+
 func NewWithSelf(f func(interface{}) interface{}) func() interface{} {
 	return func() interface{} {
-		ref := map[string]interface{}{}
-		ref["value"] = f(ref)
-		return ref
+		r := &ThreadSafeRef{}
+		r.value = f(r)
+		return r
 	}
 }
+
 func Read(ref interface{}) func() interface{} {
 	return func() interface{} {
-		return ref.(map[string]interface{})["value"]
+		r := ref.(*ThreadSafeRef)
+		r.mu.Lock()
+		defer r.mu.Unlock()
+		return r.value
 	}
 }
+
 func ModifyImpl(f func(interface{}) interface{}, ref interface{}) func() interface{} {
 	return func() interface{} {
-		t := f(ref.(map[string]interface{})["value"]).(map[string]interface{})
-		ref.(map[string]interface{})["value"] = t["state"]
+		r := ref.(*ThreadSafeRef)
+		r.mu.Lock()
+		defer r.mu.Unlock()
+		
+		t := f(r.value).(map[string]interface{})
+		r.value = t["state"]
 		return t["value"]
 	}
 }
+
 func Write(val interface{}, ref interface{}) func() interface{} {
 	return func() interface{} {
-		ref.(map[string]interface{})["value"] = val
+		r := ref.(*ThreadSafeRef)
+		r.mu.Lock()
+		defer r.mu.Unlock()
+		
+		r.value = val
 		return nil
 	}
 }

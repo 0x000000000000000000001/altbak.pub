@@ -116,15 +116,15 @@ return Call_imap(dict_0_box)
 	return cache_imap
 }
 
-var cache_imap__gopurs_runtime_Value_67407778 gopurs_runtime.Value
-var once_imap__gopurs_runtime_Value_67407778 sync.Once
-func Get_imap__gopurs_runtime_Value_67407778() gopurs_runtime.Value {
-	once_imap__gopurs_runtime_Value_67407778.Do(func() {
-		cache_imap__gopurs_runtime_Value_67407778 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_imap__gopurs_runtime_Value_67407778(dict_0_box)
+var cache_imap__gopurs_runtime_Value_2106327266 gopurs_runtime.Value
+var once_imap__gopurs_runtime_Value_2106327266 sync.Once
+func Get_imap__gopurs_runtime_Value_2106327266() gopurs_runtime.Value {
+	once_imap__gopurs_runtime_Value_2106327266.Do(func() {
+		cache_imap__gopurs_runtime_Value_2106327266 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_imap__gopurs_runtime_Value_2106327266(dict_0_box)
 })
 	})
-	return cache_imap__gopurs_runtime_Value_67407778
+	return cache_imap__gopurs_runtime_Value_2106327266
 }
 
 var cache_invariantAlternate gopurs_runtime.Value
@@ -154,7 +154,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "imap")
 }
 
-func Call_imap__gopurs_runtime_Value_67407778(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_imap__gopurs_runtime_Value_2106327266(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "imap")

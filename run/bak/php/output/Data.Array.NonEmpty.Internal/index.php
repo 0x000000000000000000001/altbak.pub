@@ -115,32 +115,55 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Array_NonEmpty_Internal = \call_user_func(function() {
   $exports = [];
-$foldr1Impl = function($f, $xs) use (&$foldr1Impl) {
+$foldr1Impl = function($f, $xs = null) use (&$foldr1Impl) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$foldr1Impl) {
+
+            return $foldr1Impl(...\array_merge($__args, $more));
+        };
+    }
     $acc = $xs[\count($xs) - 1];
     for ($i = \count($xs) - 2; $i >= 0; $i--) {
-        $acc = $f($xs[$i], $acc);
+        $acc = $f($xs[$i])($acc);
     }
     return $acc;
 };
 
-$foldl1Impl = function($f, $xs) use (&$foldl1Impl) {
+$foldl1Impl = function($f, $xs = null) use (&$foldl1Impl) {
+    if (\func_num_args() < 2) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$foldl1Impl) {
+
+            return $foldl1Impl(...\array_merge($__args, $more));
+        };
+    }
     $acc = $xs[0];
     $len = \count($xs);
     for ($i = 1; $i < $len; $i++) {
-        $acc = $f($acc, $xs[$i]);
+        $acc = $f($acc)($xs[$i]);
     }
     return $acc;
 };
 
-$traverse1Impl = function($apply, $map, $f, $array) use (&$traverse1Impl) {
+$traverse1Impl = function($apply, $map = null, $f = null) use (&$traverse1Impl) {
+    if (\func_num_args() < 3) {
+        $__args = \func_get_args();
+        return function(...$more) use ($__args, &$traverse1Impl) {
+
+            return $traverse1Impl(...\array_merge($__args, $more));
+        };
+    }
 
     $emptyList = new \stdClass();
 
-    $consList = function($x, $xs) {
-        $obj = new \stdClass();
-        $obj->head = $x;
-        $obj->tail = $xs;
-        return $obj;
+    $consList = function($x) {
+        return function($xs) use ($x) {
+            $obj = new \stdClass();
+            $obj->head = $x;
+            $obj->tail = $xs;
+            return $obj;
+        };
     };
 
     $finalCell = function($head) use ($emptyList) {
@@ -161,7 +184,7 @@ $traverse1Impl = function($apply, $map, $f, $array) use (&$traverse1Impl) {
     };
 
     $buildFrom = function($x, $ys) use ($apply, $map, $f, $consList) {
-        return $apply($map($consList, $f($x)), $ys);
+        return $apply($map($consList)($f($x)))($ys);
     };
 
     $go = function($acc, $currentLen, $xs) use (&$go, $buildFrom) {
@@ -178,13 +201,15 @@ $traverse1Impl = function($apply, $map, $f, $array) use (&$traverse1Impl) {
         }
     };
 
-    $acc = $map($finalCell, $f($array[\count($array) - 1]));
-    $result = $go($acc, \count($array) - 1, $array);
-    while (isset($result->_isCont) && $result->_isCont) {
-        $fn = $result->fn;
-        $result = $fn();
-    }
-    return $map($listToArray, $result);
+    return function($array) use ($map, $finalCell, $f, $go, $listToArray) {
+        $acc = $map($finalCell)($f($array[\count($array) - 1]));
+        $result = $go($acc, \count($array) - 1, $array);
+        while (isset($result->_isCont) && $result->_isCont) {
+            $fn = $result->fn;
+            $result = $fn();
+        }
+        return $map($listToArray)($result);
+    };
 };
 
 $exports['foldr1Impl'] = $foldr1Impl;
@@ -193,9 +218,9 @@ $exports['traverse1Impl'] = $traverse1Impl;
 return $exports;
   return $exports;
 });
-$GLOBALS['Data_Array_NonEmpty_Internal_foldl1Impl'] = ($ffi_Data_Array_NonEmpty_Internal['foldl1Impl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_NonEmpty_Internal_foldr1Impl'] = ($ffi_Data_Array_NonEmpty_Internal['foldr1Impl'] ?? new class { public function __invoke(...$args) { return $this; } });
-$GLOBALS['Data_Array_NonEmpty_Internal_traverse1Impl'] = ($ffi_Data_Array_NonEmpty_Internal['traverse1Impl'] ?? new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_NonEmpty_Internal_foldl1Impl'] = (\array_key_exists('foldl1Impl', $ffi_Data_Array_NonEmpty_Internal) ? $ffi_Data_Array_NonEmpty_Internal['foldl1Impl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_NonEmpty_Internal_foldr1Impl'] = (\array_key_exists('foldr1Impl', $ffi_Data_Array_NonEmpty_Internal) ? $ffi_Data_Array_NonEmpty_Internal['foldr1Impl'] : new class { public function __invoke(...$args) { return $this; } });
+$GLOBALS['Data_Array_NonEmpty_Internal_traverse1Impl'] = (\array_key_exists('traverse1Impl', $ffi_Data_Array_NonEmpty_Internal) ? $ffi_Data_Array_NonEmpty_Internal['traverse1Impl'] : new class { public function __invoke(...$args) { return $this; } });
 
 
 
@@ -321,10 +346,10 @@ $GLOBALS['Data_Array_NonEmpty_Internal_foldable1NonEmptyArray'] = (object)["fold
 $GLOBALS['Data_Array_NonEmpty_Internal_traversable1NonEmptyArray'] = (object)["traverse1" => function($dictApply_0) {
   $__num = \func_num_args();
   $apply_1_0 = ($dictApply_0)->{'apply'};
-  $map__2_1 = ((($dictApply_0)->{'Functor0'})(null))->{'map'};
-  $__res = function($f_3) use ($apply_1_0, $map__2_1) {
+  $go__map_2_1 = ((($dictApply_0)->{'Functor0'})(null))->{'map'};
+  $__res = function($f_3) use ($apply_1_0, $go__map_2_1) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Array_NonEmpty_Internal_traverse1Impl'])($apply_1_0, $map__2_1, $f_3);
+  $__res = ($GLOBALS['Data_Array_NonEmpty_Internal_traverse1Impl'])($apply_1_0, $go__map_2_1, $f_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
