@@ -53,7 +53,7 @@ Total Execution Time    | ~ 125.77 ms   | ~ 81.21 ms     | ~ 67.56 ms| ~ 46.87 m
 
 > [!WARNING]
 > **About the PHP results**
-> Please note that the `phpurs` backend is a brand new, completely experimental, and homemade compiler built entirely from scratch for this repository. Its execution time is not yet representative of PHP's actual performance limit. The currently displayed time (~1.5s) is actively undergoing optimization and debugging!
+> Please note that the `phpurs` backend is a brand new, completely experimental, and homemade compiler built entirely from scratch for this repository. Its execution time is not yet representative of PHP's actual performance limit. The currently displayed time is actively undergoing optimization and debugging!
 
 ### Extended benchmark results (I/O, mutability, async)
 Command: `./bin/run --x` (Skips runtimes lacking necessary FFI bindings like Scheme and Erlang)
