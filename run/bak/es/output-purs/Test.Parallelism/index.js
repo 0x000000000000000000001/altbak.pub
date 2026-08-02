@@ -30,10 +30,10 @@ var heavyTask = function (n) {
         return pure(fib(n));
     });
 };
-var describe = /* #__PURE__ */ Effect_Console.log("Parallelism (4 x Fib 42)");
+var describe = /* #__PURE__ */ Effect_Console.log("Parallelism (10 x Fib 42)");
 var act = /* #__PURE__ */ bind(/* #__PURE__ */ traverse(function (v) {
     return Effect_Aff.forkAff(heavyTask(42));
-})(/* #__PURE__ */ Data_Array.replicate(4)(Data_Unit.unit)))(function (fibers) {
+})(/* #__PURE__ */ Data_Array.replicate(10)(Data_Unit.unit)))(function (fibers) {
     return bind(traverse(Effect_Aff.joinFiber)(fibers))(function (results) {
         return liftEffect(Effect_Console.log("Sum of results: " + show(sum(results))));
     });

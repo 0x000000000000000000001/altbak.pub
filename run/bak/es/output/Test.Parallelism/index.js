@@ -14,6 +14,6 @@ const fib = v => {
   return fib(v - 1 | 0) + fib(v - 2 | 0) | 0;
 };
 const heavyTask = n => Effect$dAff._bind(Effect$dAff._delay(Data$dEither.Right, 0.0))(() => Effect$dAff._pure(fib(n)));
-const describe = /* #__PURE__ */ Effect$dConsole.log("Parallelism (4 x Fib 42)");
-const act = /* #__PURE__ */ Effect$dAff._bind(/* #__PURE__ */ traverse(v => Effect$dAff.forkAff(heavyTask(42)))(/* #__PURE__ */ Data$dArray.replicateImpl(4, undefined)))(fibers => Effect$dAff._bind(traverse(Effect$dAff.joinFiber)(fibers))(results => Effect$dAff._liftEffect(Effect$dConsole.log("Sum of results: " + Data$dShow.showIntImpl(sum(results))))));
+const describe = /* #__PURE__ */ Effect$dConsole.log("Parallelism (10 x Fib 42)");
+const act = /* #__PURE__ */ Effect$dAff._bind(/* #__PURE__ */ traverse(v => Effect$dAff.forkAff(heavyTask(42)))(/* #__PURE__ */ Data$dArray.replicateImpl(10, undefined)))(fibers => Effect$dAff._bind(traverse(Effect$dAff.joinFiber)(fibers))(results => Effect$dAff._liftEffect(Effect$dConsole.log("Sum of results: " + Data$dShow.showIntImpl(sum(results))))));
 export {act, describe, fib, heavyTask, sum, traverse};

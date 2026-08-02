@@ -51,6 +51,14 @@ Total Execution Time    | ~ 125.77 ms   | ~ 81.21 ms     | ~ 67.56 ms| ~ 46.87 m
 > **Single-Threaded Benchmark**
 > All benchmarks presented here are strictly **single-threaded**. They measure raw sequential execution speed and do not take into account the powerful multi-threading capabilities inherent to languages like Go or Erlang (BEAM).
 
+> [!WARNING]
+> **About the PHP results**
+> Please note that the `phpurs` backend is a brand new, completely experimental, and homemade compiler built entirely from scratch for this repository. Its execution time is not yet representative of PHP's actual performance limit. The currently displayed time (~1.5s) is actively undergoing optimization and debugging!
+
+> [!NOTE]
+> **A 40 year old dinosaur steals the show!**
+> One of the biggest surprises here is how incredibly performant **Chez Scheme** proves to be. It completely crushes the execution times of modern, highly optimized engines. It is quite a shock to see this "40 year old dinosaur" (first released in 1984!) comfortably outpace standard Node.js, the Arista backend, and Erlang BEAM across a wide array of functional workloads.
+
 ### Extended benchmark results (I/O, mutability, async)
 Command: `./bin/run --x` (Skips runtimes lacking necessary FFI bindings like Scheme and Erlang)
 
@@ -60,36 +68,31 @@ EXTENDED BENCHMARK RESULTS (file I/O, regex, STArray, asynchronous Aff)
 ========================================================================================
 Benchmark               | JS            | Arista ES      | Go        
 ----------------------- | ------------- | -------------- | --------- 
-AST Evaluation          | ~ 73 μs       | ~ 59 μs        | ~ 18 μs   
-Fibonacci               | ~ 51 μs       | ~ 36 μs        | ~ 2 μs    
-List Processing         | ~ 359 μs      | ~ 359 μs       | ~ 174 μs  
-Tail Call Optimization  | ~ 1219 μs     | ~ 1545 μs      | ~ 1785 μs 
-Deep Record Updates     | ~ 381 μs      | ~ 539 μs       | ~ 1608 μs 
-Ackermann               | ~ 214 μs      | ~ 197 μs       | ~ 29 μs   
-Church Numerals         | ~ 1792 μs     | ~ 1557 μs      | ~ 687 μs  
-Prime Sieve             | ~ 590 μs      | ~ 508 μs       | ~ 433 μs  
-Red-Black Tree          | ~ 99130 μs    | ~ 53782 μs     | ~ 46462 μs
-Polymorphism            | ~ 8445 μs     | ~ 7757 μs      | ~ 2555 μs 
-State Monad             | ~ 380 μs      | ~ 684 μs       | ~ 31 μs   
-Lazy Evaluation         | ~ 14146 μs    | ~ 11909 μs     | ~ 22095 μs
-Array Processing        | ~ 210 μs      | ~ 190 μs       | ~ 79 μs   
-File I/O                | ~ 401998 μs   | ~ 442611 μs    | ~ 421869 μs
-STArray Operations      | ~ 5 μs        | ~ 6 μs         | ~ 1 μs    
-String Operations       | ~ 5 μs        | ~ 6 μs         | ~ 0 μs    
-Aff Operations          | ~ 11372 μs    | ~ 10329 μs     | ~ 11035 μs
-Parallelism             | ~ 5863003 μs  | ~ 6028174 μs   | ~ 1181936 μs
+AST Evaluation          | ~ 96 μs       | ~ 68 μs        | ~ 44 μs   
+Fibonacci               | ~ 49 μs       | ~ 38 μs        | ~ 2 μs    
+List Processing         | ~ 409 μs      | ~ 374 μs       | ~ 222 μs  
+Tail Call Optimization  | ~ 1195 μs     | ~ 1572 μs      | ~ 1837 μs 
+Deep Record Updates     | ~ 414 μs      | ~ 597 μs       | ~ 1780 μs 
+Ackermann               | ~ 218 μs      | ~ 224 μs       | ~ 32 μs   
+Church Numerals         | ~ 1812 μs     | ~ 1654 μs      | ~ 698 μs  
+Prime Sieve             | ~ 693 μs      | ~ 656 μs       | ~ 434 μs  
+Red-Black Tree          | ~ 99135 μs    | ~ 58721 μs     | ~ 49991 μs
+Polymorphism            | ~ 8466 μs     | ~ 8930 μs      | ~ 2509 μs 
+State Monad             | ~ 491 μs      | ~ 765 μs       | ~ 33 μs   
+Lazy Evaluation         | ~ 14911 μs    | ~ 13361 μs     | ~ 22896 μs
+Array Processing        | ~ 223 μs      | ~ 189 μs       | ~ 67 μs   
+File I/O                | ~ 429223 μs   | ~ 479362 μs    | ~ 476440 μs
+STArray Operations      | ~ 3 μs        | ~ 3 μs         | ~ 0 μs    
+String Operations       | ~ 2 μs        | ~ 2 μs         | ~ 1 μs    
+Aff Operations          | ~ 11482 μs    | ~ 11378 μs     | ~ 11030 μs
+Parallelism             | ~ 15113637 μs | ~ 14690018 μs  | ~ 1255501 μs
 ----------------------- | ------------- | -------------- | --------- 
-Total Execution Time    | ~ 6403.37 ms  | ~ 6560.25 ms   | ~ 1690.80 ms
+Total Execution Time    | ~ 15682.46 ms | ~ 15267.91 ms  | ~ 1823.52 ms
 ```
 
-> [!WARNING]
-> **About the PHP results**
-> Please note that the `phpurs` backend is a brand new, completely experimental, and homemade compiler built entirely from scratch for this repository. Its execution time is not yet representative of PHP's actual performance limit. The currently displayed time (~1.5s) is actively undergoing optimization and debugging!
-
-
 > [!NOTE]
-> **A 40 year old dinosaur steals the show!**
-> One of the biggest surprises here is how incredibly performant **Chez Scheme** proves to be. It completely crushes the execution times of modern, highly optimized engines. It is quite a shock to see this "40 year old dinosaur" (first released in 1984!) comfortably outpace standard Node.js, the Arista backend, and Erlang BEAM across a wide array of functional workloads.
+> **Hardware Context**
+> To accurately measure multi-core scaling, these extended benchmarks (specifically the 10 concurrent tasks in the *Parallelism* test) were executed on a machine equipped with **10 performance cores** (Apple M4 Pro).
 
 ## Repository structure and output files
 
