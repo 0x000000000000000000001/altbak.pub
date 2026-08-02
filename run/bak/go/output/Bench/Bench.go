@@ -99,10 +99,6 @@ func Get_formatNumber() gopurs_runtime.Value {
 	return _Gopurs_FormatNumber
 }
 
-func Get_keepAlive() gopurs_runtime.Value {
-	return _Gopurs_KeepAlive
-}
-
 func Get_opaque() gopurs_runtime.Value {
 	return _Gopurs_Opaque
 }

@@ -1,11 +1,11 @@
 package Effect_Aff
 
-import "gopurs/output/gopurs_runtime"
 
 import (
 	"context"
 	"fmt"
 	"time"
+	"gopurs/output/gopurs_runtime"
 )
 
 type AffFn = func(context.Context) (any, error)
@@ -143,7 +143,9 @@ func _MakeFiberNative(aff AffFn) any {
 		
 		fiberId := time.Now().UnixNano()
 
+		gopurs_runtime.Retain()
 		go func() {
+			defer gopurs_runtime.Release()
 			val, err := runAffSync(aff, ctx)
 			if err != nil {
 				resultChan <- struct {

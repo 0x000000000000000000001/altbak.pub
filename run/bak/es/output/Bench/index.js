@@ -1,6 +1,6 @@
 import * as Effect$dAff from "../Effect.Aff/index.js";
 import * as Effect$dConsole from "../Effect.Console/index.js";
-import {benchNow, formatNumber, keepAlive, opaque} from "./foreign.js";
+import {benchNow, formatNumber, opaque} from "./foreign.js";
 const runBenchAff = describe => act => Effect$dAff._bind(Effect$dAff._liftEffect(describe))(() => Effect$dAff._bind(Effect$dAff._liftEffect(benchNow))(t1 => Effect$dAff._bind(act)(() => Effect$dAff._bind(Effect$dAff._liftEffect(benchNow))(t2 => {
   const dt = t2 - t1;
   return Effect$dAff._bind(Effect$dAff._liftEffect(Effect$dConsole.log("\nExecution time: " + formatNumber(dt) + " μs\n")))(() => Effect$dAff._pure(dt));

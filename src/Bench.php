@@ -13,8 +13,5 @@ $formatNumber = function($n) {
 $exports['benchNow'] = $benchNow;
 $exports['opaque'] = $opaque;
 $exports['formatNumber'] = $formatNumber;
-$exports["keepAlive"] = function() {
-    return null;
-};
 
 return $exports;

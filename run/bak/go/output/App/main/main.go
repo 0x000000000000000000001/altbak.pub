@@ -17,6 +17,8 @@ func main() {
 
 	gopurs_runtime.Apply(App.Get_main(), gopurs_runtime.Value{})
 
+	gopurs_runtime.EventLoopWait()
+
 	if os.Getenv("PPROF") == "1" {
 		mf, err := os.Create("mem.prof")
 		if err != nil { panic(err) }

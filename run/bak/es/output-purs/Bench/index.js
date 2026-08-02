@@ -42,8 +42,7 @@ var runBench = function (describe) {
 export {
     benchNow,
     opaque,
-    formatNumber,
-    keepAlive
+    formatNumber
 } from "./foreign.js";
 export {
     runBench,
