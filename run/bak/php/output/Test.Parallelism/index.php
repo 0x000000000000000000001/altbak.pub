@@ -1,17 +1,27 @@
 <?php
 
-namespace Test\AffOperations;
+namespace Test\Parallelism;
 
-// ALL IMPORTS: Control.Bind, Data.Function, Data.Time.Duration, Effect, Effect.Aff, Effect.Class, Effect.Console, Prelude, Prim
-// TO REQUIRE: Control.Bind, Data.Function, Data.Time.Duration, Effect, Effect.Aff, Effect.Class, Effect.Console, Prelude
+// ALL IMPORTS: Control.Applicative, Control.Bind, Data.Array, Data.Foldable, Data.Function, Data.Ring, Data.Semigroup, Data.Semiring, Data.Show, Data.Time.Duration, Data.Traversable, Data.Unit, Effect, Effect.Aff, Effect.Class, Effect.Console, Prelude, Prim, Test.Parallelism
+// TO REQUIRE: Control.Applicative, Control.Bind, Data.Array, Data.Foldable, Data.Function, Data.Ring, Data.Semigroup, Data.Semiring, Data.Show, Data.Time.Duration, Data.Traversable, Data.Unit, Effect, Effect.Aff, Effect.Class, Effect.Console, Prelude, Test.Parallelism
+require_once __DIR__ . '/../Control.Applicative/index.php';
 require_once __DIR__ . '/../Control.Bind/index.php';
+require_once __DIR__ . '/../Data.Array/index.php';
+require_once __DIR__ . '/../Data.Foldable/index.php';
 require_once __DIR__ . '/../Data.Function/index.php';
+require_once __DIR__ . '/../Data.Ring/index.php';
+require_once __DIR__ . '/../Data.Semigroup/index.php';
+require_once __DIR__ . '/../Data.Semiring/index.php';
+require_once __DIR__ . '/../Data.Show/index.php';
 require_once __DIR__ . '/../Data.Time.Duration/index.php';
+require_once __DIR__ . '/../Data.Traversable/index.php';
+require_once __DIR__ . '/../Data.Unit/index.php';
 require_once __DIR__ . '/../Effect/index.php';
 require_once __DIR__ . '/../Effect.Aff/index.php';
 require_once __DIR__ . '/../Effect.Class/index.php';
 require_once __DIR__ . '/../Effect.Console/index.php';
 require_once __DIR__ . '/../Prelude/index.php';
+require_once __DIR__ . '/../Test.Parallelism/index.php';
 
 if (!class_exists(__NAMESPACE__ . '\\Phpurs_Data0')) {
   class Phpurs_Data0 { public $tag; public function __construct($t) { $this->tag = $t; } }
@@ -104,13 +114,68 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 
-// Test_AffOperations_describe
-$GLOBALS['Test_AffOperations_describe'] = \Effect\Console\majEffect_majConsole_log("Aff Operations (Asynchronous Delays):");
+// Test_Parallelism_traverse
+$GLOBALS['Test_Parallelism_traverse'] = (($GLOBALS['Data_Traversable_traversableArray'])->{'traverse'})($GLOBALS['Effect_Aff_applicativeAff']);
 
-// Test_AffOperations_act
-$GLOBALS['Test_AffOperations_act'] = ((($GLOBALS['Effect_Aff_bindAff'])->{'bind'})(($GLOBALS['Effect_Aff__delay'])($GLOBALS['Data_Either_Right'], 10.0)))(function($_dollar__unused_0) {
+// Test_Parallelism_sum
+$GLOBALS['Test_Parallelism_sum'] = ((($GLOBALS['Data_Foldable_foldableArray'])->{'foldl'})($GLOBALS['Data_Semiring_intAdd']))(0);
+
+// Test_Parallelism_fib
+function majTest_majParallelism_fib(int $v_0): int|\Closure {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Aff_monadEffectAff'])->{'liftEffect'})(\Effect\Console\majEffect_majConsole_log("10"));
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majParallelism_fib';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__tco_var_Test_Parallelism_fib_v_0 = $v_0;
+  tco_loop_Test_Parallelism_fib:;
+  $v_0 = $__tco_var_Test_Parallelism_fib_v_0;
+  $__res = match ($v_0) { 0 => 0, 1 => 1, default => (\Test\Parallelism\majTest_majParallelism_fib(($v_0 - 1)) + \Test\Parallelism\majTest_majParallelism_fib(($v_0 - 2))) };
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Test_Parallelism_fib'] = __NAMESPACE__ . '\\majTest_majParallelism_fib';
+
+// Test_Parallelism_heavyTask
+function majTest_majParallelism_heavymajTask(int $n_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majTest_majParallelism_heavymajTask';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ((($GLOBALS['Effect_Aff_bindAff'])->{'bind'})(($GLOBALS['Effect_Aff__delay'])($GLOBALS['Data_Either_Right'], 0.0)))(function($_dollar__unused_1) use ($n_0) {
+  $__num = \func_num_args();
+  $__res = (($GLOBALS['Effect_Aff_applicativeAff'])->{'pure'})(\Test\Parallelism\majTest_majParallelism_fib($n_0));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Test_Parallelism_heavyTask'] = __NAMESPACE__ . '\\majTest_majParallelism_heavymajTask';
+
+// Test_Parallelism_describe
+$GLOBALS['Test_Parallelism_describe'] = \Effect\Console\majEffect_majConsole_log("Parallelism (4 x Fib 42):");
+
+// Test_Parallelism_act
+$GLOBALS['Test_Parallelism_act'] = ((($GLOBALS['Effect_Aff_bindAff'])->{'bind'})((($GLOBALS['Test_Parallelism_traverse'])(function($v_0) {
+  $__num = \func_num_args();
+  $__res = \Effect\Aff\majEffect_majAff_forkmajAff(\Test\Parallelism\majTest_majParallelism_heavymajTask(42));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))(($GLOBALS['Data_Array_replicateImpl'])(4, $GLOBALS['Data_Unit_unit']))))(function($fibers_0) {
+  $__num = \func_num_args();
+  $__res = ((($GLOBALS['Effect_Aff_bindAff'])->{'bind'})((($GLOBALS['Test_Parallelism_traverse'])($GLOBALS['Effect_Aff_joinFiber']))($fibers_0)))(function($results_1) {
+  $__num = \func_num_args();
+  $__res = (($GLOBALS['Effect_Aff_monadEffectAff'])->{'liftEffect'})(\Effect\Console\majEffect_majConsole_log(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("Sum of results: "))((($GLOBALS['Data_Show_showInt'])->{'show'})(($GLOBALS['Test_Parallelism_sum'])($results_1)))));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

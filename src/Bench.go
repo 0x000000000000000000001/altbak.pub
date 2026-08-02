@@ -3,6 +3,9 @@ package Bench
 import (
 	"time"
 	"fmt"
+	"os"
+	"os/signal"
+	"syscall"
 )
 
 func BenchNow() float64 {
@@ -20,6 +23,8 @@ func FormatNumber(n float64) string {
 }
 
 func KeepAlive() any {
-	select {}
+	sigs := make(chan os.Signal, 1)
+	signal.Notify(sigs, syscall.SIGINT, syscall.SIGTERM)
+	<-sigs
 	return nil
 }

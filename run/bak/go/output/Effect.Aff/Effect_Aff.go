@@ -49,15 +49,6 @@ return Call_Canceler(x_0_box)
 	return cache_Canceler
 }
 
-var cache_suspendAff gopurs_runtime.Value
-var once_suspendAff sync.Once
-func Get_suspendAff() gopurs_runtime.Value {
-	once_suspendAff.Do(func() {
-		cache_suspendAff = gopurs_runtime.Apply(Get__fork(), gopurs_runtime.Bool(false))
-	})
-	return cache_suspendAff
-}
-
 var cache_newtypeCanceler gopurs_runtime.Value
 var once_newtypeCanceler sync.Once
 func Get_newtypeCanceler() gopurs_runtime.Value {
@@ -67,6 +58,17 @@ return gopurs_runtime.Value{}
 }))
 	})
 	return cache_newtypeCanceler
+}
+
+var cache_makeFiber gopurs_runtime.Value
+var once_makeFiber sync.Once
+func Get_makeFiber() gopurs_runtime.Value {
+	once_makeFiber.Do(func() {
+		cache_makeFiber = gopurs_runtime.Func(func(aff_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_makeFiber(aff_0_box)
+})
+	})
+	return cache_makeFiber
 }
 
 var cache_makeAff gopurs_runtime.Value
@@ -129,15 +131,6 @@ func Get_functorAff() gopurs_runtime.Value {
 		cache_functorAff = gopurs_runtime.RecordDict1("map", Get__map())
 	})
 	return cache_functorAff
-}
-
-var cache_forkAff gopurs_runtime.Value
-var once_forkAff sync.Once
-func Get_forkAff() gopurs_runtime.Value {
-	once_forkAff.Do(func() {
-		cache_forkAff = gopurs_runtime.Apply(Get__fork(), gopurs_runtime.Bool(true))
-	})
-	return cache_forkAff
 }
 
 var cache_delay gopurs_runtime.Value
@@ -423,7 +416,7 @@ var once_functorFiber sync.Once
 func Get_functorFiber() gopurs_runtime.Value {
 	once_functorFiber.Do(func() {
 		cache_functorFiber = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, t_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(pkg_Effect_Unsafe.Get_unsafePerformEffect(), gopurs_runtime.Apply(Get__makeFiber(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_functorAff(), "map"), f_0, Call_joinFiber(t_1))))
+return gopurs_runtime.Apply(pkg_Effect_Unsafe.Get_unsafePerformEffect(), Call_makeFiber(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_functorAff(), "map"), f_0, Call_joinFiber(t_1))))
 }))
 	})
 	return cache_functorFiber
@@ -436,7 +429,7 @@ func Get_applyFiber() gopurs_runtime.Value {
 		cache_applyFiber = gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_functorFiber()
 }), gopurs_runtime.Func2(func(t1_0 gopurs_runtime.Value, t2_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(pkg_Effect_Unsafe.Get_unsafePerformEffect(), gopurs_runtime.Apply(Get__makeFiber(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_applyAff(), "apply"), Call_joinFiber(t1_0), Call_joinFiber(t2_1))))
+return gopurs_runtime.Apply(pkg_Effect_Unsafe.Get_unsafePerformEffect(), Call_makeFiber(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_applyAff(), "apply"), Call_joinFiber(t1_0), Call_joinFiber(t2_1))))
 }))
 	})
 	return cache_applyFiber
@@ -449,10 +442,21 @@ func Get_applicativeFiber() gopurs_runtime.Value {
 		cache_applicativeFiber = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_applyFiber()
 }), gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(pkg_Effect_Unsafe.Get_unsafePerformEffect(), gopurs_runtime.Apply(Get__makeFiber(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_applicativeAff(), "pure"), a_0)))
+return gopurs_runtime.Apply(pkg_Effect_Unsafe.Get_unsafePerformEffect(), Call_makeFiber(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_applicativeAff(), "pure"), a_0)))
 }))
 	})
 	return cache_applicativeFiber
+}
+
+var cache_forkAff gopurs_runtime.Value
+var once_forkAff sync.Once
+func Get_forkAff() gopurs_runtime.Value {
+	once_forkAff.Do(func() {
+		cache_forkAff = gopurs_runtime.Func(func(aff_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_forkAff(aff_0_box)
+})
+	})
+	return cache_forkAff
 }
 
 var cache_killFiber gopurs_runtime.Value
@@ -486,6 +490,17 @@ return Call_supervise(aff_0_box)
 })
 	})
 	return cache_supervise
+}
+
+var cache_suspendAff gopurs_runtime.Value
+var once_suspendAff sync.Once
+func Get_suspendAff() gopurs_runtime.Value {
+	once_suspendAff.Do(func() {
+		cache_suspendAff = gopurs_runtime.Func(func(aff_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_suspendAff(aff_0_box)
+})
+	})
+	return cache_suspendAff
 }
 
 var cache_monadSTAff gopurs_runtime.Value
@@ -747,6 +762,14 @@ _ = x_0
 return x_0
 }
 
+func Call_makeFiber(aff_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var aff_0 gopurs_runtime.Value = aff_0_loop
+_ = aff_0
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind"), gopurs_runtime.Apply(Get__makeFiberNative(), aff_0), gopurs_runtime.Func(func(nf_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Effect.Get_applicativeEffect(), "pure"), gopurs_runtime.RecordDict5("isSuspended", "join", "kill", "onComplete", "run", gopurs_runtime.Apply(Get__isSuspendedFiber(), nf_1), gopurs_runtime.Apply(Get__joinFiber(), nf_1), gopurs_runtime.Apply(Get__killFiber(), nf_1), gopurs_runtime.Apply(Get__onCompleteFiber(), nf_1), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Effect.Get_applicativeEffect(), "pure"), pkg_Data_Unit.Get_unit())))
+}))
+}
+
 func Call_makeAff(build_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var build_0 gopurs_runtime.Value = build_0_loop
 _ = build_0
@@ -781,13 +804,13 @@ return __t0
 func Call_launchSuspendedAff(aff_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var aff_0 gopurs_runtime.Value = aff_0_loop
 _ = aff_0
-return gopurs_runtime.Apply(Get__makeFiber(), aff_0)
+return Call_makeFiber(aff_0)
 }
 
 func Call_launchAff(aff_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var aff_0 gopurs_runtime.Value = aff_0_loop
 _ = aff_0
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind"), gopurs_runtime.Apply(Get__makeFiber(), aff_0), gopurs_runtime.Func(func(fiber_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind"), Call_makeFiber(aff_0), gopurs_runtime.Func(func(fiber_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(Get_discard(), gopurs_runtime.RecordGet(fiber_1, "run"), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Effect.Get_applicativeEffect(), "pure"), fiber_1)
 }))
@@ -942,6 +965,12 @@ return gopurs_runtime.Apply(k_1, gopurs_runtime.Value{Type: 9, IntVal: 246597359
 }))
 }
 
+func Call_forkAff(aff_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var aff_0 gopurs_runtime.Value = aff_0_loop
+_ = aff_0
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadEffectAff(), "liftEffect"), Call_makeFiber(aff_0))
+}
+
 func Call_killFiber(e_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var e_0 gopurs_runtime.Value = e_0_loop
 _ = e_0
@@ -1013,6 +1042,12 @@ return Call_joinFiber(gopurs_runtime.RecordGet(x_2, "fiber"))
 }))
 }
 
+func Call_suspendAff(aff_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var aff_0 gopurs_runtime.Value = aff_0_loop
+_ = aff_0
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadEffectAff(), "liftEffect"), Call_makeFiber(aff_0))
+}
+
 func Call_runAff(k_0_loop gopurs_runtime.Value, aff_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var k_0 gopurs_runtime.Value = k_0_loop
 _ = k_0
@@ -1036,7 +1071,7 @@ var k_0 gopurs_runtime.Value = k_0_loop
 _ = k_0
 var aff_1 gopurs_runtime.Value = aff_1_loop
 _ = aff_1
-return gopurs_runtime.Apply(Get__makeFiber(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_bindAff(), "bind"), gopurs_runtime.Apply(Get_try(), aff_1), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_makeFiber(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_bindAff(), "bind"), gopurs_runtime.Apply(Get_try(), aff_1), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadEffectAff(), "liftEffect"), gopurs_runtime.Apply(k_0, x_2))
 })))
 }
@@ -1061,12 +1096,20 @@ func Get__delay() gopurs_runtime.Value {
 	return _Gopurs__Delay
 }
 
-func Get__fork() gopurs_runtime.Value {
-	return _Gopurs__Fork
+func Get__isSuspendedFiber() gopurs_runtime.Value {
+	return _Gopurs__IsSuspendedFiber
+}
+
+func Get__joinFiber() gopurs_runtime.Value {
+	return _Gopurs__JoinFiber
 }
 
 func Get__killAll() gopurs_runtime.Value {
 	return _Gopurs__KillAll
+}
+
+func Get__killFiber() gopurs_runtime.Value {
+	return _Gopurs__KillFiber
 }
 
 func Get__liftEffect() gopurs_runtime.Value {
@@ -1077,8 +1120,8 @@ func Get__makeAffImpl() gopurs_runtime.Value {
 	return _Gopurs__MakeAffImpl
 }
 
-func Get__makeFiber() gopurs_runtime.Value {
-	return _Gopurs__MakeFiber
+func Get__makeFiberNative() gopurs_runtime.Value {
+	return _Gopurs__MakeFiberNative
 }
 
 func Get__makeSupervisedFiber() gopurs_runtime.Value {
@@ -1087,6 +1130,10 @@ func Get__makeSupervisedFiber() gopurs_runtime.Value {
 
 func Get__map() gopurs_runtime.Value {
 	return _Gopurs__Map
+}
+
+func Get__onCompleteFiber() gopurs_runtime.Value {
+	return _Gopurs__OnCompleteFiber
 }
 
 func Get__parAffAlt() gopurs_runtime.Value {

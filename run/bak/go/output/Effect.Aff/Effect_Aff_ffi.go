@@ -1,12 +1,11 @@
 package Effect_Aff
 
+import "gopurs/output/gopurs_runtime"
 
 import (
 	"context"
 	"fmt"
 	"time"
-
-	"gopurs/output/gopurs_runtime"
 )
 
 type AffFn = func(context.Context) (any, error)
@@ -125,81 +124,96 @@ func _MakeAffImpl(build func(func(error) func(any) any) func(func(any) func(any)
 	}
 }
 
-func makeFiberNative(aff AffFn) map[string]any {
-	ctx, cancel := context.WithCancel(context.Background())
-	resultChan := make(chan struct {
+type NativeFiber struct {
+	ResultChan chan struct {
 		val any
 		err error
-	}, 1)
+	}
+	Cancel context.CancelFunc
+	Id     int64
+}
 
-	go func() {
-		val, err := runAffSync(aff, ctx)
-		resultChan <- struct {
+func _MakeFiberNative(aff AffFn) any {
+	return func(_ any) any {
+		ctx, cancel := context.WithCancel(context.Background())
+		resultChan := make(chan struct {
 			val any
 			err error
-		}{val, err}
-	}()
+		}, 1)
+		
+		fiberId := time.Now().UnixNano()
 
-	fiber := map[string]any{
-		"run": func(_ any) any { return nil },
-		"kill": func(errAny any) any {
-			return func(onErrorAny any) any {
-				return func(onSuccessAny any) any {
-					return func(_ any) any {
-						cancel()
-						return func(_ any) any {
-							res := <-resultChan
-							onError := onErrorAny.(gopurs_runtime.Value)
-							onSuccess := onSuccessAny.(gopurs_runtime.Value)
-							if res.err != nil {
-								eff := gopurs_runtime.Apply(onError, gopurs_runtime.Box(res.err))
-								return gopurs_runtime.Apply(eff, gopurs_runtime.Value{})
-							}
-							eff := gopurs_runtime.Apply(onSuccess, gopurs_runtime.Box(res.val))
-							return gopurs_runtime.Apply(eff, gopurs_runtime.Value{})
-						}
-					}
-				}
+		go func() {
+			val, err := runAffSync(aff, ctx)
+			if err != nil {
+				resultChan <- struct {
+					val any
+					err error
+				}{nil, err}
+			} else {
+				resultChan <- struct {
+					val any
+					err error
+				}{val, nil}
 			}
-		},
-		"join": func(onErrorAny any) any {
-			return func(onSuccessAny any) any {
-				return func(_ any) any {
-					res := <-resultChan
-					onError := onErrorAny.(gopurs_runtime.Value)
-					onSuccess := onSuccessAny.(gopurs_runtime.Value)
-					if res.err != nil {
-						eff := gopurs_runtime.Apply(onError, gopurs_runtime.Box(res.err))
-						return gopurs_runtime.Apply(eff, gopurs_runtime.Value{})
-					}
-					eff := gopurs_runtime.Apply(onSuccess, gopurs_runtime.Box(res.val))
-					return gopurs_runtime.Apply(eff, gopurs_runtime.Value{})
-				}
-			}
-		},
-		"onComplete": func(onCompleteAny any) any {
-			return func(_ any) any {
-				return func(_ any) any {
-					return nil
-				}
-			}
-		},
-		"isSuspended": func(_ any) bool { return false },
+		}()
+
+		return &NativeFiber{
+			ResultChan: resultChan,
+			Cancel:     cancel,
+			Id:         fiberId,
+		}
 	}
-	return fiber
 }
 
-func _MakeFiber(aff AffFn) any {
+func _KillFiber(nf *NativeFiber, errAny error, onError func(any) func(any) any, onSuccess func(any) func(any) any) any {
 	return func(_ any) any {
-		return makeFiberNative(aff)
+		nf.Cancel()
+		go func() {
+			res := <-nf.ResultChan
+			nf.ResultChan <- res
+			
+			if res.err != nil {
+				onError(res.err)(nil)
+			} else {
+				onSuccess(res.val)(nil)
+			}
+		}()
+		return func(_ any) any {
+			return nil
+		}
 	}
 }
 
-func _Fork(isSuspended any, aff AffFn) any {
-    return func(ctx context.Context) (any, error) {
-        fiber := makeFiberNative(aff)
-        return fiber, nil
-    }
+func _JoinFiber(nf *NativeFiber, onError func(any) func(any) any, onSuccess func(any) func(any) any) any {
+	return func(_ any) any {
+		go func() {
+			res := <-nf.ResultChan
+			nf.ResultChan <- res
+			
+			if res.err != nil {
+				onError(res.err)(nil)
+			} else {
+				onSuccess(res.val)(nil)
+			}
+		}()
+		return func(_ any) any {
+			return nil
+		}
+	}
+}
+
+
+func _OnCompleteFiber(nf *NativeFiber, onCompleteAny any) any {
+	return func(_ any) any {
+		return func(_ any) any {
+			return nil
+		}
+	}
+}
+
+func _IsSuspendedFiber(nf *NativeFiber) bool {
+	return false
 }
 
 func _ThrowError(err error) any {
@@ -310,11 +324,28 @@ gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) 
 	go_res := _Delay(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs__Fork = // TAST: (Func [Boolean, (ADT ["Effect","Aff","Aff"] [(TypeVar a)])] (ADT ["Effect","Aff","Aff"] [Any]))
-gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := arg0
-	go_arg1 := gopurs_runtime.Unbox[AffFn](arg1)
-	go_res := _Fork(go_arg0, go_arg1)
+var _Gopurs__IsSuspendedFiber = // TAST: (Func [(ADT ["Effect","Aff","NativeFiber"] [(TypeVar a)])] (ADT ["Effect","Effect"] [Boolean]))
+gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[*NativeFiber](arg0)
+	go_res := _IsSuspendedFiber(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs__JoinFiber = // TAST: (Func [(ADT ["Effect","Aff","NativeFiber"] [(TypeVar a)]), (Func [(ADT ["Effect","Exception","Error"] [])] (ADT ["Effect","Effect"] [(ADT ["Data","Unit","Unit"] [])])), (Func [(TypeVar a)] (ADT ["Effect","Effect"] [(ADT ["Data","Unit","Unit"] [])]))] (ADT ["Effect","Effect"] [(ADT ["Effect","Effect"] [(ADT ["Data","Unit","Unit"] [])])]))
+gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[*NativeFiber](arg0)
+	go_arg1 := func(p0_0 any) func(any) any {
+			inner_res0 := gopurs_runtime.Apply(arg1, gopurs_runtime.Box(p0_0))
+			return func(p1_0 any) any {
+			return gopurs_runtime.Apply(inner_res0, gopurs_runtime.Box(p1_0))
+		}
+		}
+	go_arg2 := func(p0_0 any) func(any) any {
+			inner_res0 := gopurs_runtime.Apply(arg2, gopurs_runtime.Box(p0_0))
+			return func(p1_0 any) any {
+			return gopurs_runtime.Apply(inner_res0, gopurs_runtime.Box(p1_0))
+		}
+		}
+	go_res := _JoinFiber(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
 })
 var _Gopurs__KillAll = // TAST: (ADT ["Data","Function","Uncurried","Fn3"] [(ADT ["Effect","Exception","Error"] []), (ADT ["Effect","Aff","Supervisor"] []), (ADT ["Effect","Effect"] [(ADT ["Data","Unit","Unit"] [])]), (ADT ["Effect","Effect"] [(Func [(ADT ["Effect","Exception","Error"] [])] (ADT ["Effect","Aff","Aff"] [(ADT ["Data","Unit","Unit"] [])]))])])
@@ -323,6 +354,25 @@ gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_arg1 := arg1
 	go_arg2 := arg2
 	go_res := _KillAll(go_arg0, go_arg1, go_arg2)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs__KillFiber = // TAST: (Func [(ADT ["Effect","Aff","NativeFiber"] [(TypeVar a)]), (ADT ["Effect","Exception","Error"] []), (Func [(ADT ["Effect","Exception","Error"] [])] (ADT ["Effect","Effect"] [(ADT ["Data","Unit","Unit"] [])])), (Func [(ADT ["Data","Unit","Unit"] [])] (ADT ["Effect","Effect"] [(ADT ["Data","Unit","Unit"] [])]))] (ADT ["Effect","Effect"] [(ADT ["Effect","Effect"] [(ADT ["Data","Unit","Unit"] [])])]))
+gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[*NativeFiber](arg0)
+	go_arg1 := gopurs_runtime.Unbox[error](arg1)
+	go_arg2 := func(p0_0 any) func(any) any {
+			inner_res0 := gopurs_runtime.Apply(arg2, gopurs_runtime.Box(p0_0))
+			return func(p1_0 any) any {
+			return gopurs_runtime.Apply(inner_res0, gopurs_runtime.Box(p1_0))
+		}
+		}
+	go_arg3 := func(p0_0 any) func(any) any {
+			inner_res0 := gopurs_runtime.Apply(arg3, gopurs_runtime.Box(p0_0))
+			return func(p1_0 any) any {
+			return gopurs_runtime.Apply(inner_res0, gopurs_runtime.Box(p1_0))
+		}
+		}
+	go_res := _KillFiber(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
 })
 var _Gopurs__LiftEffect = // TAST: (Func [(ADT ["Effect","Effect"] [(TypeVar a)])] (ADT ["Effect","Aff","Aff"] [(TypeVar a)]))
@@ -363,10 +413,10 @@ gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_res := _MakeAffImpl(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs__MakeFiber = // TAST: (Func [(ADT ["Effect","Aff","Aff"] [(TypeVar a)])] (ADT ["Effect","Effect"] [Any]))
+var _Gopurs__MakeFiberNative = // TAST: (Func [(ADT ["Effect","Aff","Aff"] [(TypeVar a)])] (ADT ["Effect","Effect"] [(ADT ["Effect","Aff","NativeFiber"] [(TypeVar a)])]))
 gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[AffFn](arg0)
-	go_res := _MakeFiber(go_arg0)
+	go_res := _MakeFiberNative(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
 var _Gopurs__MakeSupervisedFiber = // TAST: (Func [(ADT ["Effect","Aff","Aff"] [(TypeVar a)])] (ADT ["Effect","Effect"] [Any]))
@@ -382,6 +432,13 @@ gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) 
 		}
 	go_arg1 := gopurs_runtime.Unbox[AffFn](arg1)
 	go_res := _Map(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs__OnCompleteFiber = // TAST: (Func [(ADT ["Effect","Aff","NativeFiber"] [(TypeVar a)]), Any] (ADT ["Effect","Effect"] [(ADT ["Effect","Effect"] [(ADT ["Data","Unit","Unit"] [])])]))
+gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[*NativeFiber](arg0)
+	go_arg1 := arg1
+	go_res := _OnCompleteFiber(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
 var _Gopurs__ParAffAlt = // TAST: (Func [(ADT ["Effect","Aff","ParAff"] [(TypeVar a)]), (ADT ["Effect","Aff","ParAff"] [(TypeVar a)])] (ADT ["Effect","Aff","ParAff"] [(TypeVar a)]))

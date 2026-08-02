@@ -69,7 +69,7 @@ var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
 		cache_act = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect_Aff.Get_bindAff(), "bind"), gopurs_runtime.Apply2(Get_traverse(), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(pkg_Effect_Aff.Get_forkAff(), Call_heavyTask(42))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Effect_Aff.Get_monadEffectAff(), "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Aff.Get_makeFiber(), Call_heavyTask(42)))
 }), gopurs_runtime.UncurriedApp2(pkg_Data_Array.Get_replicateImpl(), gopurs_runtime.Int(4), pkg_Data_Unit.Get_unit())), gopurs_runtime.Func(func(fibers_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect_Aff.Get_bindAff(), "bind"), gopurs_runtime.Apply2(Get_traverse(), pkg_Effect_Aff.Get_joinFiber(), fibers_0), gopurs_runtime.Func(func(results_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Effect_Aff.Get_monadEffectAff(), "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str("Sum of results: "), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showInt(), "show"), gopurs_runtime.Apply(Get_sum(), results_1)))))
