@@ -52,6 +52,11 @@ main :: Effect Unit
 main = void $ runBench $TEST_NAME.describe $TEST_NAME.act
 EOF
   trap "rm -f src/AppX.purs" EXIT
+elif [ "$MODE" == "x" ]; then
+  ENTRY_POINT="AppX"
+  cp -r srx/Test/* src/Test/
+  cp srx/AppX.purs src/
+  trap "rm -rf src/Test/STArray.purs src/Test/AffOperations.purs src/Test/StringOps.purs src/Test/FileOps src/Test/Parallelism.purs src/AppX.purs" EXIT
 fi
 
 echo 'Building...'

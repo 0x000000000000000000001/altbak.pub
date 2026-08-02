@@ -5,7 +5,6 @@
     "test": "spago test --no-install"
   },
   "devDependencies": {
-    "eslint": "^7.6.0",
-    "purescript": "github:0x000000000000000000001/purescript-npm"
+    "eslint": "^7.6.0"
   }
 }

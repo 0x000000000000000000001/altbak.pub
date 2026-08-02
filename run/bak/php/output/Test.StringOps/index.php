@@ -116,7 +116,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 // Test_StringOps_regexPattern
 $GLOBALS['Test_StringOps_regexPattern'] = (function() use (&$__fn) {
-$__local_var_0_0 = (((($GLOBALS['Data_String_Regex_regexImpl'])($GLOBALS['Data_Either_Left']))($GLOBALS['Data_Either_Right']))("(hello|world)[0-9]+"))(($GLOBALS['Data_String_Regex_renderFlags'])($GLOBALS['Data_String_Regex_Flags_noFlags']));
+$__local_var_0_0 = \Data\String\Regex\majData_majString_majRegex_regexmajImpl($GLOBALS['Data_Either_Left'], $GLOBALS['Data_Either_Right'], "(hello|world)[0-9]+", \Data\String\Regex\majData_majString_majRegex_rendermajFlags($GLOBALS['Data_String_Regex_Flags_noFlags']));
 $__t1 = null;;
 if ($__local_var_0_0 instanceof \Data\Either\Data_Either_Right) {
 $__t1 = ($__local_var_0_0)->{'value0'};
@@ -161,8 +161,8 @@ break;
 };
   $concatted_5_0 = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})($v1_3))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($GLOBALS['Data_Show_showInt'])->{'show'})($v_2)))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("world"))((($GLOBALS['Data_Show_showInt'])->{'show'})(($v_2 + 1)))));
   $__tco_1 = ($v_2 - 1);
-  $__tco_2 = (($GLOBALS['Data_String_CodePoints_take'])(10))($concatted_5_0);
-  $__tco_3 = ($v2_4 + count((($GLOBALS['Data_String_Common_split'])("e"))(((($GLOBALS['Data_String_Regex_replace'])($GLOBALS['Test_StringOps_regexPattern']))("matched"))($concatted_5_0))));
+  $__tco_2 = \Data\String\CodePoints\majData_majString_majCodemajPoints_take(10, $concatted_5_0);
+  $__tco_3 = ($v2_4 + count(\Data\String\Common\majData_majString_majCommon_split("e", \Data\String\Regex\majData_majString_majRegex_replace($GLOBALS['Test_StringOps_regexPattern'], "matched", $concatted_5_0))));
   $__tco_var_loop_1_0_0_v_2 = $__tco_1;
   $__tco_var_loop_1_0_0_v1_3 = $__tco_2;
   $__tco_var_loop_1_0_0_v2_4 = $__tco_3;
@@ -184,8 +184,8 @@ break;
 $GLOBALS['Test_StringOps_runStringOps'] = __NAMESPACE__ . '\\majTest_majStringmajOps_runmajStringmajOps';
 
 // Test_StringOps_describe
-$GLOBALS['Test_StringOps_describe'] = ($GLOBALS['Effect_Console_log'])("String Operations (1k Regex/Split):");
+$GLOBALS['Test_StringOps_describe'] = \Effect\Console\majEffect_majConsole_log("String Operations (1k Regex/Split):");
 
 // Test_StringOps_act
-$GLOBALS['Test_StringOps_act'] = ($GLOBALS['Effect_Console_log'])((($GLOBALS['Data_Show_showInt'])->{'show'})(\Test\StringOps\majTest_majStringmajOps_runmajStringmajOps(1000)));
+$GLOBALS['Test_StringOps_act'] = \Effect\Console\majEffect_majConsole_log((($GLOBALS['Data_Show_showInt'])->{'show'})(\Test\StringOps\majTest_majStringmajOps_runmajStringmajOps(1000)));
 

@@ -24,6 +24,7 @@ import Test.AffOperations as AffOperations
 import Test.FileOps as FileOps
 import Test.STArray as STArray
 import Test.StringOps as StringOps
+import Test.Parallelism as Parallelism
 
 main :: Effect Unit
 main = do
@@ -45,6 +46,7 @@ main = do
   t15 <- runBench STArray.describe STArray.act
   t16 <- runBench StringOps.describe StringOps.act
   t17 <- runBench AffOperations.describe AffOperations.act
+  t18 <- runBench Parallelism.describe Parallelism.act
 
-  let totalMs = (t1 / 1000.0) + (t2 / 1000.0) + (t3 / 1000.0) + (t4 / 1000.0) + (t5 / 1000.0) + (t6 / 1000.0) + (t7 / 1000.0) + (t8 / 1000.0) + (t9 / 1000.0) + (t10 / 1000.0) + (t11 / 1000.0) + (t12 / 1000.0) + (t13 / 1000.0) + (t14 / 1000.0) + (t15 / 1000.0) + (t16 / 1000.0) + (t17 / 1000.0)
+  let totalMs = (t1 / 1000.0) + (t2 / 1000.0) + (t3 / 1000.0) + (t4 / 1000.0) + (t5 / 1000.0) + (t6 / 1000.0) + (t7 / 1000.0) + (t8 / 1000.0) + (t9 / 1000.0) + (t10 / 1000.0) + (t11 / 1000.0) + (t12 / 1000.0) + (t13 / 1000.0) + (t14 / 1000.0) + (t15 / 1000.0) + (t16 / 1000.0) + (t17 / 1000.0) + (t18 / 1000.0)
   log $ "Total exec time: " <> formatNumber totalMs <> " ms\n"

@@ -58,7 +58,7 @@ elif [ "$MODE" == "x" ]; then
   # Temporarily inject extended tests
   cp -r srx/Test/* src/Test/
   cp srx/AppX.purs src/
-  trap "rm -rf src/Test/STArray.purs src/Test/AffOperations.purs src/Test/StringOps.purs src/Test/FileOps src/AppX.purs" EXIT
+  trap "rm -rf src/Test/STArray.purs src/Test/AffOperations.purs src/Test/StringOps.purs src/Test/FileOps src/Test/Parallelism.purs src/AppX.purs" EXIT
 fi
 
 export PATH="$PWD/run/bak/js/node_modules/.bin:$PATH"

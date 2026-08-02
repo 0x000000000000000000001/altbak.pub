@@ -105,12 +105,12 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Test_AffOperations_describe
-$GLOBALS['Test_AffOperations_describe'] = ($GLOBALS['Effect_Console_log'])("Aff Operations (Asynchronous Delays):");
+$GLOBALS['Test_AffOperations_describe'] = \Effect\Console\majEffect_majConsole_log("Aff Operations (Asynchronous Delays):");
 
 // Test_AffOperations_act
-$GLOBALS['Test_AffOperations_act'] = ($GLOBALS['Effect_Aff_launchAff_'])(((($GLOBALS['Effect_Aff_bindAff'])->{'bind'})(($GLOBALS['Effect_Aff__delay'])($GLOBALS['Data_Either_Right'], 10.0)))(function($_dollar__unused_0) {
+$GLOBALS['Test_AffOperations_act'] = \Effect\Aff\majEffect_majAff_launchmajAff_(((($GLOBALS['Effect_Aff_bindAff'])->{'bind'})(($GLOBALS['Effect_Aff__delay'])($GLOBALS['Data_Either_Right'], 10.0)))(function($_dollar__unused_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Aff_monadEffectAff'])->{'liftEffect'})(($GLOBALS['Effect_Console_log'])("10"));
+  $__res = (($GLOBALS['Effect_Aff_monadEffectAff'])->{'liftEffect'})(\Effect\Console\majEffect_majConsole_log("10"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
