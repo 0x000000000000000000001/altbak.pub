@@ -6,4 +6,5 @@ var Unit interface{} = nil
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs_Unit = gopurs_runtime.Box(Unit)
+var _Gopurs_Unit = // TAST: (ADT ["Data","Unit","Unit"] [])
+gopurs_runtime.Box(Unit)

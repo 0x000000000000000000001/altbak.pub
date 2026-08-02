@@ -31,31 +31,8 @@ func CalcDiff(y1 int, m1 int, d1 int, y2 int, m2 int, d2 int) float64 {
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_canonicalDateImpl(arg0 interface{}, arg1 int, arg2 int, arg3 int) interface{} {
-	return CanonicalDateImpl(arg0, arg1, arg2, arg3)
-}
-var _Gopurs_CanonicalDateImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := arg0
-	go_arg1 := gopurs_runtime.Unbox[int](arg1)
-	go_arg2 := gopurs_runtime.Unbox[int](arg2)
-	go_arg3 := gopurs_runtime.Unbox[int](arg3)
-	go_res := CanonicalDateImpl(go_arg0, go_arg1, go_arg2, go_arg3)
-	return gopurs_runtime.Box(go_res)
-})
-func Call_calcWeekday(arg0 int, arg1 int, arg2 int) int {
-	return CalcWeekday(arg0, arg1, arg2)
-}
-var _Gopurs_CalcWeekday = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := gopurs_runtime.Unbox[int](arg0)
-	go_arg1 := gopurs_runtime.Unbox[int](arg1)
-	go_arg2 := gopurs_runtime.Unbox[int](arg2)
-	go_res := CalcWeekday(go_arg0, go_arg1, go_arg2)
-	return gopurs_runtime.Box(go_res)
-})
-func Call_calcDiff(arg0 int, arg1 int, arg2 int, arg3 int, arg4 int, arg5 int) float64 {
-	return CalcDiff(arg0, arg1, arg2, arg3, arg4, arg5)
-}
-var _Gopurs_CalcDiff = gopurs_runtime.Func6(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value, arg5 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_CalcDiff = // TAST: (ADT ["Data","Function","Uncurried","Fn6"] [Int, Int, Int, Int, Int, Int, Number])
+gopurs_runtime.Func6(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value, arg5 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int](arg0)
 	go_arg1 := gopurs_runtime.Unbox[int](arg1)
 	go_arg2 := gopurs_runtime.Unbox[int](arg2)
@@ -63,5 +40,22 @@ var _Gopurs_CalcDiff = gopurs_runtime.Func6(func(arg0 gopurs_runtime.Value, arg1
 	go_arg4 := gopurs_runtime.Unbox[int](arg4)
 	go_arg5 := gopurs_runtime.Unbox[int](arg5)
 	go_res := CalcDiff(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4, go_arg5)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_CalcWeekday = // TAST: (ADT ["Data","Function","Uncurried","Fn3"] [Int, Int, Int, Int])
+gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[int](arg0)
+	go_arg1 := gopurs_runtime.Unbox[int](arg1)
+	go_arg2 := gopurs_runtime.Unbox[int](arg2)
+	go_res := CalcWeekday(go_arg0, go_arg1, go_arg2)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_CanonicalDateImpl = // TAST: (ADT ["Data","Function","Uncurried","Fn4"] [(Func [Int, Int, Int] (ADT ["Data","Date","Date"] [])), Int, Int, Int, (ADT ["Data","Date","Date"] [])])
+gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_arg1 := gopurs_runtime.Unbox[int](arg1)
+	go_arg2 := gopurs_runtime.Unbox[int](arg2)
+	go_arg3 := gopurs_runtime.Unbox[int](arg3)
+	go_res := CanonicalDateImpl(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
 })

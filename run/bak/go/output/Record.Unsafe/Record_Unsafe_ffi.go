@@ -1,5 +1,7 @@
 package Record_Unsafe
 
+
+
 import "gopurs/output/gopurs_runtime"
 
 func UnsafeHas(label string, recVal interface{}) bool {
@@ -34,40 +36,32 @@ func UnsafeDelete(label string, recVal interface{}) interface{} {
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_unsafeHas(arg0 string, arg1 interface{}) bool {
-	return UnsafeHas(arg0, arg1)
-}
-var _Gopurs_UnsafeHas = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_UnsafeDelete = // TAST: (Func [String, Any] Any)
+gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
 	go_arg1 := arg1
-	go_res := UnsafeHas(go_arg0, go_arg1)
+	go_res := UnsafeDelete(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_unsafeGet(arg0 string, arg1 interface{}) interface{} {
-	return UnsafeGet(arg0, arg1)
-}
-var _Gopurs_UnsafeGet = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_UnsafeGet = // TAST: (Func [String, Any] (TypeVar a))
+gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
 	go_arg1 := arg1
 	go_res := UnsafeGet(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_unsafeSet(arg0 string, arg1 interface{}, arg2 interface{}) interface{} {
-	return UnsafeSet(arg0, arg1, arg2)
-}
-var _Gopurs_UnsafeSet = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_UnsafeHas = // TAST: (Func [String, Any] Boolean)
+gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[string](arg0)
+	go_arg1 := arg1
+	go_res := UnsafeHas(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_UnsafeSet = // TAST: (Func [String, (TypeVar a), Any] Any)
+gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
 	go_arg1 := arg1
 	go_arg2 := arg2
 	go_res := UnsafeSet(go_arg0, go_arg1, go_arg2)
-	return gopurs_runtime.Box(go_res)
-})
-func Call_unsafeDelete(arg0 string, arg1 interface{}) interface{} {
-	return UnsafeDelete(arg0, arg1)
-}
-var _Gopurs_UnsafeDelete = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := gopurs_runtime.Unbox[string](arg0)
-	go_arg1 := arg1
-	go_res := UnsafeDelete(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })

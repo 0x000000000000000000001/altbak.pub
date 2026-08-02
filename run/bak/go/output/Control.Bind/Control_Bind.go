@@ -28,17 +28,6 @@ return Call_discard(dict_0_box)
 	return cache_discard
 }
 
-var cache_discard__gopurs_runtime_Value_3182948605 gopurs_runtime.Value
-var once_discard__gopurs_runtime_Value_3182948605 sync.Once
-func Get_discard__gopurs_runtime_Value_3182948605() gopurs_runtime.Value {
-	once_discard__gopurs_runtime_Value_3182948605.Do(func() {
-		cache_discard__gopurs_runtime_Value_3182948605 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_discard__gopurs_runtime_Value_3182948605(dict_0_box)
-})
-	})
-	return cache_discard__gopurs_runtime_Value_3182948605
-}
-
 var cache_discard__gopurs_runtime_Value_1429772317 gopurs_runtime.Value
 var once_discard__gopurs_runtime_Value_1429772317 sync.Once
 func Get_discard__gopurs_runtime_Value_1429772317() gopurs_runtime.Value {
@@ -96,17 +85,6 @@ return Call_bind(dict_0_box)
 })
 	})
 	return cache_bind
-}
-
-var cache_bind__gopurs_runtime_Value_1318927190 gopurs_runtime.Value
-var once_bind__gopurs_runtime_Value_1318927190 sync.Once
-func Get_bind__gopurs_runtime_Value_1318927190() gopurs_runtime.Value {
-	once_bind__gopurs_runtime_Value_1318927190.Do(func() {
-		cache_bind__gopurs_runtime_Value_1318927190 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_bind__gopurs_runtime_Value_1318927190(dict_0_box)
-})
-	})
-	return cache_bind__gopurs_runtime_Value_1318927190
 }
 
 var cache_bind__gopurs_runtime_Value_152598582 gopurs_runtime.Value
@@ -253,12 +231,6 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "discard")
 }
 
-func Call_discard__gopurs_runtime_Value_3182948605(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
-_ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "discard")
-}
-
 func Call_discard__gopurs_runtime_Value_1429772317(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -266,12 +238,6 @@ return gopurs_runtime.RecordGet(dict_0, "discard")
 }
 
 func Call_bind(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
-_ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "bind")
-}
-
-func Call_bind__gopurs_runtime_Value_1318927190(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "bind")

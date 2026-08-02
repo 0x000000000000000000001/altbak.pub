@@ -20,29 +20,25 @@ func ConcatArray(xs []interface{}, ys []interface{}) []interface{} {
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_concatString(arg0 string, arg1 string) string {
-	return ConcatString(arg0, arg1)
-}
-var _Gopurs_ConcatString = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_ConcatArray = // TAST: (Func [(Array (TypeVar a)), (Array (TypeVar a))] (Array (TypeVar a)))
+gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	arg0_arr := *(*[]gopurs_runtime.Value)(arg0.UnsafePtr)
+	go_arg0 := make([]any, len(arg0_arr))
+	for i, v := range arg0_arr { go_arg0[i] = v }
+	arg1_arr := *(*[]gopurs_runtime.Value)(arg1.UnsafePtr)
+	go_arg1 := make([]any, len(arg1_arr))
+	for i, v := range arg1_arr { go_arg1[i] = v }
+	go_res := ConcatArray(go_arg0, go_arg1)
+	return func() gopurs_runtime.Value {
+				res_arr := make([]gopurs_runtime.Value, len(go_res))
+				for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
+				return gopurs_runtime.Array(res_arr)
+			}()
+})
+var _Gopurs_ConcatString = // TAST: (Func [String, String] String)
+gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
 	go_arg1 := gopurs_runtime.Unbox[string](arg1)
 	go_res := ConcatString(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
-})
-func Call_concatArray(arg0 []interface{}, arg1 []interface{}) []interface{} {
-	return ConcatArray(arg0, arg1)
-}
-var _Gopurs_ConcatArray = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-	arg0_arr := *(*[]gopurs_runtime.Value)(arg0.UnsafePtr)
-	go_arg0 := make([]interface{}, len(arg0_arr))
-	for i, v := range arg0_arr { go_arg0[i] = v }
-	arg1_arr := *(*[]gopurs_runtime.Value)(arg1.UnsafePtr)
-	go_arg1 := make([]interface{}, len(arg1_arr))
-	for i, v := range arg1_arr { go_arg1[i] = v }
-	go_res := ConcatArray(go_arg0, go_arg1)
-	return func() gopurs_runtime.Value {
-			res_arr := make([]gopurs_runtime.Value, len(go_res))
-			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
-			return gopurs_runtime.Array(res_arr)
-		}()
 })

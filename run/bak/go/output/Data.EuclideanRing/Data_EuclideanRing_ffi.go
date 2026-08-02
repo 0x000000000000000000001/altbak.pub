@@ -36,36 +36,28 @@ func NumDiv(n1 float64, n2 float64) float64 {
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_intDegree(arg0 int64) int64 {
-	return IntDegree(arg0)
-}
-var _Gopurs_IntDegree = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_IntDegree = // TAST: (Func [Int] Int)
+gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int64](arg0)
 	go_res := IntDegree(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_intDiv(arg0 int64, arg1 int64) int64 {
-	return IntDiv(arg0, arg1)
-}
-var _Gopurs_IntDiv = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_IntDiv = // TAST: (Func [Int, Int] Int)
+gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int64](arg0)
 	go_arg1 := gopurs_runtime.Unbox[int64](arg1)
 	go_res := IntDiv(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_intMod(arg0 int64, arg1 int64) int64 {
-	return IntMod(arg0, arg1)
-}
-var _Gopurs_IntMod = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_IntMod = // TAST: (Func [Int, Int] Int)
+gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int64](arg0)
 	go_arg1 := gopurs_runtime.Unbox[int64](arg1)
 	go_res := IntMod(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_numDiv(arg0 float64, arg1 float64) float64 {
-	return NumDiv(arg0, arg1)
-}
-var _Gopurs_NumDiv = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_NumDiv = // TAST: (Func [Number, Number] Number)
+gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
 	go_arg1 := gopurs_runtime.Unbox[float64](arg1)
 	go_res := NumDiv(go_arg0, go_arg1)

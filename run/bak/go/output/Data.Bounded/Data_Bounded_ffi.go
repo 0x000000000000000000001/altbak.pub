@@ -12,9 +12,15 @@ var BottomNumber = math.Inf(-1)
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs_TopInt = gopurs_runtime.Box(TopInt)
-var _Gopurs_BottomInt = gopurs_runtime.Box(BottomInt)
-var _Gopurs_TopChar = gopurs_runtime.Box(TopChar)
-var _Gopurs_BottomChar = gopurs_runtime.Box(BottomChar)
-var _Gopurs_TopNumber = gopurs_runtime.Box(TopNumber)
-var _Gopurs_BottomNumber = gopurs_runtime.Box(BottomNumber)
+var _Gopurs_BottomChar = // TAST: Char
+gopurs_runtime.Box(BottomChar)
+var _Gopurs_BottomInt = // TAST: Int
+gopurs_runtime.Box(BottomInt)
+var _Gopurs_BottomNumber = // TAST: Number
+gopurs_runtime.Box(BottomNumber)
+var _Gopurs_TopChar = // TAST: Char
+gopurs_runtime.Box(TopChar)
+var _Gopurs_TopInt = // TAST: Int
+gopurs_runtime.Box(TopInt)
+var _Gopurs_TopNumber = // TAST: Number
+gopurs_runtime.Box(TopNumber)

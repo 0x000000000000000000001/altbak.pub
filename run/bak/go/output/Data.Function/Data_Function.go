@@ -389,15 +389,26 @@ return Call_const__gopurs_runtime_Value_752911026(a_0_box, v_1_box)
 	return cache_const__gopurs_runtime_Value_752911026
 }
 
-var cache_const__gopurs_runtime_Value_1381299410 gopurs_runtime.Value
-var once_const__gopurs_runtime_Value_1381299410 sync.Once
-func Get_const__gopurs_runtime_Value_1381299410() gopurs_runtime.Value {
-	once_const__gopurs_runtime_Value_1381299410.Do(func() {
-		cache_const__gopurs_runtime_Value_1381299410 = gopurs_runtime.Func2(func(a_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_const__gopurs_runtime_Value_1381299410(a_0_box, v_1_box)
+var cache_const__gopurs_runtime_Value_131698394 gopurs_runtime.Value
+var once_const__gopurs_runtime_Value_131698394 sync.Once
+func Get_const__gopurs_runtime_Value_131698394() gopurs_runtime.Value {
+	once_const__gopurs_runtime_Value_131698394.Do(func() {
+		cache_const__gopurs_runtime_Value_131698394 = gopurs_runtime.Func2(func(a_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_const__gopurs_runtime_Value_131698394(a_0_box, v_1_box)
 })
 	})
-	return cache_const__gopurs_runtime_Value_1381299410
+	return cache_const__gopurs_runtime_Value_131698394
+}
+
+var cache_const__gopurs_runtime_Value_2608703442 gopurs_runtime.Value
+var once_const__gopurs_runtime_Value_2608703442 sync.Once
+func Get_const__gopurs_runtime_Value_2608703442() gopurs_runtime.Value {
+	once_const__gopurs_runtime_Value_2608703442.Do(func() {
+		cache_const__gopurs_runtime_Value_2608703442 = gopurs_runtime.Func2(func(a_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_const__gopurs_runtime_Value_2608703442(a_0_box, v_1_box)
+})
+	})
+	return cache_const__gopurs_runtime_Value_2608703442
 }
 
 var cache_const__gopurs_runtime_Value_1832354163 gopurs_runtime.Value
@@ -807,7 +818,15 @@ _ = v_1
 return a_0
 }
 
-func Call_const__gopurs_runtime_Value_1381299410(a_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_const__gopurs_runtime_Value_131698394(a_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var a_0 gopurs_runtime.Value = a_0_loop
+_ = a_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+return a_0
+}
+
+func Call_const__gopurs_runtime_Value_2608703442(a_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var a_0 gopurs_runtime.Value = a_0_loop
 _ = a_0
 var v_1 gopurs_runtime.Value = v_1_loop

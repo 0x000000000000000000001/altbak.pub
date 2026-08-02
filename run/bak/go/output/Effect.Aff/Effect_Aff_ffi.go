@@ -8,22 +8,16 @@ import (
 	"time"
 )
 
-func unboxAff(aff interface{}) func(context.Context) (interface{}, error) {
-	if fn, ok := aff.(func(context.Context) (interface{}, error)); ok {
-		return fn
-	}
-	val := aff.(gopurs_runtime.Value)
-	return (*(*interface{})(val.UnsafePtr)).(func(context.Context) (interface{}, error))
-}
+type AffFn = func(context.Context) (any, error)
 
 type BindNode struct {
-	Aff interface{}
-	K   func(interface{}) interface{}
+	Aff any
+	K   func(any) AffFn
 }
 
-func runAffSync(aff func(context.Context) (interface{}, error), ctx context.Context) (interface{}, error) {
+func runAffSync(aff AffFn, ctx context.Context) (any, error) {
 	var current = aff
-	var stack []func(interface{}) interface{}
+	var stack []func(any) AffFn
 
 	for {
 		val, err := current(ctx)
@@ -33,12 +27,12 @@ func runAffSync(aff func(context.Context) (interface{}, error), ctx context.Cont
 
 		if node, ok := val.(BindNode); ok {
 			stack = append(stack, node.K)
-			current = unboxAff(node.Aff)
+			current = node.Aff.(AffFn)
 		} else {
 			if len(stack) > 0 {
 				k := stack[len(stack)-1]
 				stack = stack[:len(stack)-1]
-				current = unboxAff(k(val))
+				current = k(val)
 			} else {
 				return val, nil
 			}
@@ -46,10 +40,8 @@ func runAffSync(aff func(context.Context) (interface{}, error), ctx context.Cont
 	}
 }
 
-type Aff func(ctx context.Context) (interface{}, error)
-
-func _Pure(val interface{}) interface{} {
-	return func(ctx context.Context) (interface{}, error) {
+func _Pure(val any) any {
+	return func(ctx context.Context) (any, error) {
 		select {
 		case <-ctx.Done():
 			return nil, ctx.Err()
@@ -59,29 +51,29 @@ func _Pure(val interface{}) interface{} {
 	}
 }
 
-func _Bind(aff interface{}, k func(interface{}) interface{}) interface{} {
-	return func(ctx context.Context) (interface{}, error) {
+func _Bind(aff AffFn, k func(any) AffFn) any {
+	return func(ctx context.Context) (any, error) {
 		return BindNode{Aff: aff, K: k}, nil
 	}
 }
 
-func _Delay(right interface{}, ms float64) interface{} {
-	return func(ctx context.Context) (interface{}, error) {
+func _Delay(right any, ms float64) any {
+	return func(ctx context.Context) (any, error) {
 		duration := time.Duration(ms) * time.Millisecond
 		timer := time.NewTimer(duration)
 		defer timer.Stop()
 
 		select {
 		case <-timer.C:
-			return nil, nil // PureScript Unit is usually represented as nil
+			return nil, nil
 		case <-ctx.Done():
 			return nil, ctx.Err()
 		}
 	}
 }
 
-func _LiftEffect(eff func(interface{}) interface{}) interface{} {
-	return func(ctx context.Context) (interface{}, error) {
+func _LiftEffect(eff func(any) any) any {
+	return func(ctx context.Context) (any, error) {
 		select {
 		case <-ctx.Done():
 			return nil, ctx.Err()
@@ -91,134 +83,131 @@ func _LiftEffect(eff func(interface{}) interface{}) interface{} {
 	}
 }
 
-func MakeAff(build interface{}) interface{} {
-	return func(ctx context.Context) (interface{}, error) {
+func _MakeAffImpl(build func(func(error) func(any) any) func(func(any) func(any) any) func(any) func(any) AffFn) any {
+	return func(ctx context.Context) (any, error) {
 		resultChan := make(chan struct {
-			val interface{}
+			val any
 			err error
 		}, 1)
 
-		callback := gopurs_runtime.Func(func(either gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-				if either.IntVal == 3711209382 { // Left
-					errVal := (*struct{Rc uint32; Value0 gopurs_runtime.Value})(either.UnsafePtr).Value0
-					resultChan <- struct{val interface{}; err error}{nil, fmt.Errorf("Aff Error: %+v", errVal)}
-				} else { // Right
-					val := (*struct{Rc uint32; Value0 gopurs_runtime.Value})(either.UnsafePtr).Value0
-					resultChan <- struct{val interface{}; err error}{val, nil}
+		onError := func(err error) func(any) any {
+			return func(_ any) any {
+				select {
+				case resultChan <- struct{val any; err error}{nil, err}:
+				default:
 				}
-				return gopurs_runtime.Value{}
-			})
-		})
+				return nil
+			}
+		}
 
-		buildVal := build.(gopurs_runtime.Value)
-		cancelerEffectVal := gopurs_runtime.Apply(buildVal, callback)
-		cancelerVal := gopurs_runtime.Apply(cancelerEffectVal, gopurs_runtime.Value{})
+		onSuccess := func(val any) func(any) any {
+			return func(_ any) any {
+				select {
+				case resultChan <- struct{val any; err error}{val, nil}:
+				default:
+				}
+				return nil
+			}
+		}
+
+		cancelerEffect := build(onError)(onSuccess)
+		canceler := cancelerEffect(nil)
 
 		select {
 		case res := <-resultChan:
 			return res.val, res.err
 		case <-ctx.Done():
-			cancelFn := gopurs_runtime.Apply(cancelerVal, gopurs_runtime.Box(fmt.Errorf("context canceled")))
-			gopurs_runtime.Apply(cancelFn, gopurs_runtime.Value{})
+			cancelFnAff := canceler(fmt.Errorf("context canceled"))
+			go runAffSync(cancelFnAff, context.Background())
 			return nil, ctx.Err()
 		}
 	}
 }
 
-func _MakeFiber(ffiUtil interface{}, aff interface{}, _ interface{}) interface{} {
+func makeFiberNative(aff AffFn) map[string]any {
 	ctx, cancel := context.WithCancel(context.Background())
 	resultChan := make(chan struct {
-		val interface{}
+		val any
 		err error
 	}, 1)
 
 	go func() {
-		val, err := runAffSync(unboxAff(aff), ctx)
+		val, err := runAffSync(aff, ctx)
 		resultChan <- struct {
-			val interface{}
+			val any
 			err error
 		}{val, err}
 	}()
 
-	// Return the Fiber record as expected by PureScript
-	fiber := map[string]interface{}{
-		"run": func(_ interface{}) interface{} {
-			return nil
-		},
-		"kill": func(err interface{}) interface{} {
-			return func(k interface{}) interface{} {
-				return func(_ interface{}) interface{} {
-					cancel()
-					return func(_ interface{}) interface{} {
-						res := <-resultChan
-						return k.(func(interface{}) interface{})(res.val).(func(interface{}) interface{})(nil)
-					}
-				}
-			}
-		},
-		"join": func(k interface{}) interface{} {
-			return func(_ interface{}) interface{} {
-				return func(_ interface{}) interface{} {
+	fiber := map[string]any{
+		"run": func(_ any) any { return nil },
+		"kill": func(errAny any, onError func(any) any, onSuccess func(any) any) any {
+			return func(_ any) any {
+				cancel()
+				return func(_ any) any {
 					res := <-resultChan
-					return k.(func(interface{}) interface{})(res.val).(func(interface{}) interface{})(nil)
+					if res.err != nil {
+						return onError(res.err)
+					}
+					return onSuccess(res.val)
 				}
 			}
 		},
-		"onComplete": func(onComplete interface{}) interface{} {
-			return func(_ interface{}) interface{} {
-				return func(_ interface{}) interface{} {
+		"join": func(onError func(any) any, onSuccess func(any) any) any {
+			return func(_ any) any {
+				return func(_ any) any {
+					res := <-resultChan
+					if res.err != nil {
+						return onError(res.err)
+					}
+					return onSuccess(res.val)
+				}
+			}
+		},
+		"onComplete": func(onComplete func(any) any) any {
+			return func(_ any) any {
+				return func(_ any) any {
 					return nil
 				}
 			}
 		},
-		"isSuspended": func(_ interface{}) interface{} {
-			return false
-		},
+		"isSuspended": func(_ any) bool { return false },
 	}
 	return fiber
 }
 
-func _Fork(isSuspended interface{}, aff interface{}) interface{} {
-    // forkAff :: forall a. Aff a -> Aff (Fiber a)
-    // _fork uses _MakeFiber internally in purescript, but the FFI signature for _fork is:
-    // foreign import _fork :: forall a. Boolean -> Aff a -> Aff (Fiber a)
-    return func(ctx context.Context) (interface{}, error) {
-        // Just call _MakeFiber with nil ffiUtil
-        fiber := _MakeFiber(nil, aff, nil)
+func _MakeFiber(aff AffFn) any {
+	return func(_ any) any {
+		return makeFiberNative(aff)
+	}
+}
+
+func _Fork(isSuspended any, aff AffFn) any {
+    return func(ctx context.Context) (any, error) {
+        fiber := makeFiberNative(aff)
         return fiber, nil
     }
 }
 
-func _ThrowError(err interface{}) interface{} {
-	return func(ctx context.Context) (interface{}, error) {
-		if val, ok := err.(gopurs_runtime.Value); ok {
-			if val.Type == 13 {
-				if e, ok := (*(*interface{})(val.UnsafePtr)).(error); ok {
-					return nil, e
-				}
-			}
-		}
-		if e, ok := err.(error); ok {
-			return nil, e
-		}
-		return nil, fmt.Errorf("%v", err)
+func _ThrowError(err error) any {
+	return func(ctx context.Context) (any, error) {
+		return nil, err
 	}
 }
 
-func _CatchError(aff interface{}, handler func(interface{}) interface{}) interface{} {
-	return func(ctx context.Context) (interface{}, error) {
-		val, err := runAffSync(unboxAff(aff), ctx)
+func _CatchError(aff AffFn, handler func(any) AffFn) any {
+	return func(ctx context.Context) (any, error) {
+		val, err := runAffSync(aff, ctx)
 		if err != nil {
-			return runAffSync(unboxAff(handler(err)), ctx)
+			return runAffSync(handler(err), ctx)
 		}
 		return val, nil
 	}
 }
 
-func _Map(f func(interface{}) interface{}, aff interface{}) interface{} {
-	return func(ctx context.Context) (interface{}, error) {
-		val, err := runAffSync(unboxAff(aff), ctx)
+func _Map(f func(any) any, aff AffFn) any {
+	return func(ctx context.Context) (any, error) {
+		val, err := runAffSync(aff, ctx)
 		if err != nil {
 			return nil, err
 		}
@@ -226,18 +215,18 @@ func _Map(f func(interface{}) interface{}, aff interface{}) interface{} {
 	}
 }
 
-func _ParAffMap(_ interface{}, _ interface{}) interface{} { panic("Not implemented: _parAffMap") }
-func _ParAffApply(_ interface{}, _ interface{}) interface{} { panic("Not implemented: _parAffApply") }
-func _ParAffAlt(aff1 interface{}, aff2 interface{}) interface{} {
-	return func(ctx context.Context) (interface{}, error) {
-		fn1 := unboxAff(aff1)
-		fn2 := unboxAff(aff2)
+func _ParAffMap(_ any, _ any) any { panic("Not implemented") }
+func _ParAffApply(_ any, _ any) any { panic("Not implemented") }
+func _ParAffAlt(aff1 AffFn, aff2 AffFn) any {
+	return func(ctx context.Context) (any, error) {
+		fn1 := aff1
+		fn2 := aff2
 
 		ctx, cancel := context.WithCancel(ctx)
 		defer cancel()
 
 		type Result struct {
-			val interface{}
+			val any
 			err error
 		}
 		resCh := make(chan Result, 2)
@@ -270,166 +259,159 @@ func _ParAffAlt(aff1 interface{}, aff2 interface{}) interface{} {
 		return nil, firstErr
 	}
 }
-func _MakeSupervisedFiber(_ interface{}, _ interface{}) interface{} { panic("Not implemented: _makeSupervisedFiber") }
-func _KillAll(_ interface{}, _ interface{}, _ interface{}) interface{} { panic("Not implemented: _killAll") }
-func _Sequential(aff interface{}) interface{} { return aff }
-func GeneralBracket(_ interface{}, _ interface{}, _ interface{}) interface{} { panic("Not implemented: generalBracket") }
+func _MakeSupervisedFiber(aff AffFn) any {
+	return func(_ any) any {
+		panic("Not implemented")
+	}
+}
+func _KillAll(_ any, _ any, _ any) any { panic("Not implemented") }
+func _Sequential(aff AffFn) any { return aff }
+func GeneralBracket(_ any, _ any, _ any) any { panic("Not implemented") }
 
 
 // --- Auto-generated FFI wrappers ---
-func Call__Pure(arg0 interface{}) interface{} {
-	return _Pure(arg0)
-}
-var _Gopurs__Pure = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := arg0
-	go_res := _Pure(go_arg0)
-	return gopurs_runtime.Box(go_res)
-})
-func Call__Bind(arg0 interface{}, arg1 func(interface{}) interface{}) interface{} {
-	return _Bind(arg0, arg1)
-}
-var _Gopurs__Bind = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := arg0
-	go_arg1 := func(p0_0 interface{}) interface{} {
-			return gopurs_runtime.Apply(arg1, gopurs_runtime.Box(p0_0))
+var _Gopurs__Bind = // TAST: (Func [(ADT ["Effect","Aff","Aff"] [(TypeVar a)]), (Func [(TypeVar a)] (ADT ["Effect","Aff","Aff"] [(TypeVar b)]))] (ADT ["Effect","Aff","Aff"] [(TypeVar b)]))
+gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[AffFn](arg0)
+	go_arg1 := func(p0_0 any) AffFn {
+			inner_res0 := gopurs_runtime.Apply(arg1, gopurs_runtime.Box(p0_0))
+			return gopurs_runtime.Unbox[AffFn](inner_res0)
 		}
 	go_res := _Bind(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
-func Call__Delay(arg0 interface{}, arg1 float64) interface{} {
-	return _Delay(arg0, arg1)
-}
-var _Gopurs__Delay = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs__CatchError = // TAST: (Func [(ADT ["Effect","Aff","Aff"] [(TypeVar a)]), (Func [(ADT ["Effect","Exception","Error"] [])] (ADT ["Effect","Aff","Aff"] [(TypeVar a)]))] (ADT ["Effect","Aff","Aff"] [(TypeVar a)]))
+gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[AffFn](arg0)
+	go_arg1 := func(p0_0 any) AffFn {
+			inner_res0 := gopurs_runtime.Apply(arg1, gopurs_runtime.Box(p0_0))
+			return gopurs_runtime.Unbox[AffFn](inner_res0)
+		}
+	go_res := _CatchError(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs__Delay = // TAST: (ADT ["Data","Function","Uncurried","Fn2"] [(Func [(ADT ["Data","Unit","Unit"] [])] (ADT ["Data","Either","Either"] [(TypeVar a), (ADT ["Data","Unit","Unit"] [])])), Number, (ADT ["Effect","Aff","Aff"] [(ADT ["Data","Unit","Unit"] [])])])
+gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := gopurs_runtime.Unbox[float64](arg1)
 	go_res := _Delay(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
-func Call__LiftEffect(arg0 func(interface{}) interface{}) interface{} {
-	return _LiftEffect(arg0)
-}
-var _Gopurs__LiftEffect = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 interface{}) interface{} {
-			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
-		}
-	go_res := _LiftEffect(go_arg0)
-	return gopurs_runtime.Box(go_res)
-})
-func Call_makeAff(arg0 interface{}) interface{} {
-	return MakeAff(arg0)
-}
-var _Gopurs_MakeAff = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs__Fork = // TAST: (Func [Boolean, (ADT ["Effect","Aff","Aff"] [(TypeVar a)])] (ADT ["Effect","Aff","Aff"] [Any]))
+gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
-	go_res := MakeAff(go_arg0)
-	return gopurs_runtime.Box(go_res)
-})
-func Call__MakeFiber(arg0 interface{}, arg1 interface{}, arg2 interface{}) interface{} {
-	return _MakeFiber(arg0, arg1, arg2)
-}
-var _Gopurs__MakeFiber = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := arg0
-	go_arg1 := arg1
-	go_arg2 := arg2
-	go_res := _MakeFiber(go_arg0, go_arg1, go_arg2)
-	return gopurs_runtime.Box(go_res)
-})
-func Call__Fork(arg0 interface{}, arg1 interface{}) interface{} {
-	return _Fork(arg0, arg1)
-}
-var _Gopurs__Fork = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := arg0
-	go_arg1 := arg1
+	go_arg1 := gopurs_runtime.Unbox[AffFn](arg1)
 	go_res := _Fork(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
-func Call__ThrowError(arg0 interface{}) interface{} {
-	return _ThrowError(arg0)
-}
-var _Gopurs__ThrowError = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := arg0
-	go_res := _ThrowError(go_arg0)
-	return gopurs_runtime.Box(go_res)
-})
-func Call__CatchError(arg0 interface{}, arg1 func(interface{}) interface{}) interface{} {
-	return _CatchError(arg0, arg1)
-}
-var _Gopurs__CatchError = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := arg0
-	go_arg1 := func(p0_0 interface{}) interface{} {
-			return gopurs_runtime.Apply(arg1, gopurs_runtime.Box(p0_0))
-		}
-	go_res := _CatchError(go_arg0, go_arg1)
-	return gopurs_runtime.Box(go_res)
-})
-func Call__Map(arg0 func(interface{}) interface{}, arg1 interface{}) interface{} {
-	return _Map(arg0, arg1)
-}
-var _Gopurs__Map = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 interface{}) interface{} {
-			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
-		}
-	go_arg1 := arg1
-	go_res := _Map(go_arg0, go_arg1)
-	return gopurs_runtime.Box(go_res)
-})
-func Call__ParAffMap(arg0 interface{}, arg1 interface{}) interface{} {
-	return _ParAffMap(arg0, arg1)
-}
-var _Gopurs__ParAffMap = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := arg0
-	go_arg1 := arg1
-	go_res := _ParAffMap(go_arg0, go_arg1)
-	return gopurs_runtime.Box(go_res)
-})
-func Call__ParAffApply(arg0 interface{}, arg1 interface{}) interface{} {
-	return _ParAffApply(arg0, arg1)
-}
-var _Gopurs__ParAffApply = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := arg0
-	go_arg1 := arg1
-	go_res := _ParAffApply(go_arg0, go_arg1)
-	return gopurs_runtime.Box(go_res)
-})
-func Call__ParAffAlt(arg0 interface{}, arg1 interface{}) interface{} {
-	return _ParAffAlt(arg0, arg1)
-}
-var _Gopurs__ParAffAlt = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := arg0
-	go_arg1 := arg1
-	go_res := _ParAffAlt(go_arg0, go_arg1)
-	return gopurs_runtime.Box(go_res)
-})
-func Call__MakeSupervisedFiber(arg0 interface{}, arg1 interface{}) interface{} {
-	return _MakeSupervisedFiber(arg0, arg1)
-}
-var _Gopurs__MakeSupervisedFiber = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := arg0
-	go_arg1 := arg1
-	go_res := _MakeSupervisedFiber(go_arg0, go_arg1)
-	return gopurs_runtime.Box(go_res)
-})
-func Call__KillAll(arg0 interface{}, arg1 interface{}, arg2 interface{}) interface{} {
-	return _KillAll(arg0, arg1, arg2)
-}
-var _Gopurs__KillAll = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs__KillAll = // TAST: (ADT ["Data","Function","Uncurried","Fn3"] [(ADT ["Effect","Exception","Error"] []), (ADT ["Effect","Aff","Supervisor"] []), (ADT ["Effect","Effect"] [(ADT ["Data","Unit","Unit"] [])]), (ADT ["Effect","Effect"] [(Func [(ADT ["Effect","Exception","Error"] [])] (ADT ["Effect","Aff","Aff"] [(ADT ["Data","Unit","Unit"] [])]))])])
+gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_arg2 := arg2
 	go_res := _KillAll(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
 })
-func Call__Sequential(arg0 interface{}) interface{} {
-	return _Sequential(arg0)
-}
-var _Gopurs__Sequential = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs__LiftEffect = // TAST: (Func [(ADT ["Effect","Effect"] [(TypeVar a)])] (ADT ["Effect","Aff","Aff"] [(TypeVar a)]))
+gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0_0 any) any {
+			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
+		}
+	go_res := _LiftEffect(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs__MakeAffImpl = // TAST: (Func [(Func [(Func [(ADT ["Effect","Exception","Error"] [])] (ADT ["Effect","Effect"] [(ADT ["Data","Unit","Unit"] [])])), (Func [(TypeVar a)] (ADT ["Effect","Effect"] [(ADT ["Data","Unit","Unit"] [])]))] (ADT ["Effect","Effect"] [(Func [(ADT ["Effect","Exception","Error"] [])] (ADT ["Effect","Aff","Aff"] [(ADT ["Data","Unit","Unit"] [])]))]))] (ADT ["Effect","Aff","Aff"] [(TypeVar a)]))
+gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0_0 func(error) func(any) any) func(func(any) func(any) any) func(any) func(any) AffFn {
+			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+						inner_res := p0_0(gopurs_runtime.Unbox[error](arg))
+						return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+						inner_res := inner_res(arg)
+						return gopurs_runtime.Box(inner_res)
+					})
+					}))
+			return func(p1_0 func(any) func(any) any) func(any) func(any) AffFn {
+			inner_res1 := gopurs_runtime.Apply(inner_res0, gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+						inner_res := p1_0(arg)
+						return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+						inner_res := inner_res(arg)
+						return gopurs_runtime.Box(inner_res)
+					})
+					}))
+			return func(p2_0 any) func(any) AffFn {
+			inner_res2 := gopurs_runtime.Apply(inner_res1, gopurs_runtime.Box(p2_0))
+			return func(p3_0 any) AffFn {
+			inner_res3 := gopurs_runtime.Apply(inner_res2, gopurs_runtime.Box(p3_0))
+			return gopurs_runtime.Unbox[AffFn](inner_res3)
+		}
+		}
+		}
+		}
+	go_res := _MakeAffImpl(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs__MakeFiber = // TAST: (Func [(ADT ["Effect","Aff","Aff"] [(TypeVar a)])] (ADT ["Effect","Effect"] [Any]))
+gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[AffFn](arg0)
+	go_res := _MakeFiber(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs__MakeSupervisedFiber = // TAST: (Func [(ADT ["Effect","Aff","Aff"] [(TypeVar a)])] (ADT ["Effect","Effect"] [Any]))
+gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[AffFn](arg0)
+	go_res := _MakeSupervisedFiber(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs__Map = // TAST: (Func [(Func [(TypeVar a)] (TypeVar b)), (ADT ["Effect","Aff","Aff"] [(TypeVar a)])] (ADT ["Effect","Aff","Aff"] [(TypeVar b)]))
+gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0_0 any) any {
+			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
+		}
+	go_arg1 := gopurs_runtime.Unbox[AffFn](arg1)
+	go_res := _Map(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs__ParAffAlt = // TAST: (Func [(ADT ["Effect","Aff","ParAff"] [(TypeVar a)]), (ADT ["Effect","Aff","ParAff"] [(TypeVar a)])] (ADT ["Effect","Aff","ParAff"] [(TypeVar a)]))
+gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[AffFn](arg0)
+	go_arg1 := gopurs_runtime.Unbox[AffFn](arg1)
+	go_res := _ParAffAlt(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs__ParAffApply = // TAST: (Func [(ADT ["Effect","Aff","ParAff"] [(Func [(TypeVar a)] (TypeVar b))]), (ADT ["Effect","Aff","ParAff"] [(TypeVar a)])] (ADT ["Effect","Aff","ParAff"] [(TypeVar b)]))
+gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
+	go_arg1 := arg1
+	go_res := _ParAffApply(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs__ParAffMap = // TAST: (Func [(Func [(TypeVar a)] (TypeVar b)), (ADT ["Effect","Aff","ParAff"] [(TypeVar a)])] (ADT ["Effect","Aff","ParAff"] [(TypeVar b)]))
+gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_arg1 := arg1
+	go_res := _ParAffMap(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs__Pure = // TAST: (Func [(TypeVar a)] (ADT ["Effect","Aff","Aff"] [(TypeVar a)]))
+gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := _Pure(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs__Sequential = // TAST: Any
+gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[AffFn](arg0)
 	go_res := _Sequential(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_generalBracket(arg0 interface{}, arg1 interface{}, arg2 interface{}) interface{} {
-	return GeneralBracket(arg0, arg1, arg2)
-}
-var _Gopurs_GeneralBracket = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs__ThrowError = // TAST: (Func [(ADT ["Effect","Exception","Error"] [])] (ADT ["Effect","Aff","Aff"] [(TypeVar a)]))
+gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[error](arg0)
+	go_res := _ThrowError(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_GeneralBracket = // TAST: (Func [(ADT ["Effect","Aff","Aff"] [(TypeVar a)]), Any, (Func [(TypeVar a)] (ADT ["Effect","Aff","Aff"] [(TypeVar b)]))] (ADT ["Effect","Aff","Aff"] [(TypeVar b)]))
+gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_arg2 := arg2

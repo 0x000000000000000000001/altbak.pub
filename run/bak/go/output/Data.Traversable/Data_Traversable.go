@@ -15,6 +15,7 @@ import (
 	pkg_Data_Monoid_Conj "gopurs/output/Data.Monoid.Conj"
 	pkg_Data_Monoid_Additive "gopurs/output/Data.Monoid.Additive"
 	pkg_Data_Functor "gopurs/output/Data.Functor"
+	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Maybe_First "gopurs/output/Data.Maybe.First"
 	pkg_Data_Maybe_Last "gopurs/output/Data.Maybe.Last"
 	pkg_Data_Functor_Compose "gopurs/output/Data.Functor.Compose"
@@ -347,7 +348,7 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_traversableArray(), "t
 }), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
 Apply0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{})
 _ = Apply0_1_0
-return gopurs_runtime.Apply3(Get_traverseArrayImpl(), gopurs_runtime.RecordGet(Apply0_1_0, "apply"), gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Apply0_1_0, "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.RecordGet(dictApplicative_0, "pure"))
+return gopurs_runtime.Apply4(Get_traverseArrayImpl(), gopurs_runtime.RecordGet(Apply0_1_0, "apply"), gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Apply0_1_0, "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupArray(), "append"))
 }))
 	})
 	return cache_traversableArray

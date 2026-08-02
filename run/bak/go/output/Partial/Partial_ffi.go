@@ -8,10 +8,8 @@ func _CrashWith(msg string) interface{} {
 
 
 // --- Auto-generated FFI wrappers ---
-func Call__CrashWith(arg0 string) interface{} {
-	return _CrashWith(arg0)
-}
-var _Gopurs__CrashWith = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs__CrashWith = // TAST: (Func [String] (TypeVar a))
+gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
 	go_res := _CrashWith(go_arg0)
 	return gopurs_runtime.Box(go_res)

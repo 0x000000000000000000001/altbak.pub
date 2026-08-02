@@ -23,19 +23,15 @@ func Char(s interface{}) interface{} {
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_charAt(arg0 interface{}) interface{} {
-	return CharAt(arg0)
-}
-var _Gopurs_CharAt = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := arg0
-	go_res := CharAt(go_arg0)
-	return gopurs_runtime.Box(go_res)
-})
-func Call_char(arg0 interface{}) interface{} {
-	return Char(arg0)
-}
-var _Gopurs_Char = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Char = // TAST: (Func [String] Char)
+gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := Char(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_CharAt = // TAST: (Func [Int, String] Char)
+gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := CharAt(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })

@@ -20,31 +20,27 @@ func FoldlArray(f func(interface{}, interface{}) interface{}, init interface{}, 
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_foldrArray(arg0 func(interface{}, interface{}) interface{}, arg1 interface{}, arg2 []interface{}) interface{} {
-	return FoldrArray(arg0, arg1, arg2)
-}
-var _Gopurs_FoldrArray = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 interface{}, p0_1 interface{}) interface{} {
+var _Gopurs_FoldlArray = // TAST: (Func [(Func [(TypeVar b), (TypeVar a)] (TypeVar b)), (TypeVar b), (Array (TypeVar a))] (TypeVar b))
+gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0_0 any, p0_1 any) any {
 			return gopurs_runtime.Apply2(arg0, gopurs_runtime.Box(p0_0), gopurs_runtime.Box(p0_1))
 		}
 	go_arg1 := arg1
 	arg2_arr := *(*[]gopurs_runtime.Value)(arg2.UnsafePtr)
-	go_arg2 := make([]interface{}, len(arg2_arr))
-	for i, v := range arg2_arr { go_arg2[i] = v }
-	go_res := FoldrArray(go_arg0, go_arg1, go_arg2)
-	return gopurs_runtime.Box(go_res)
-})
-func Call_foldlArray(arg0 func(interface{}, interface{}) interface{}, arg1 interface{}, arg2 []interface{}) interface{} {
-	return FoldlArray(arg0, arg1, arg2)
-}
-var _Gopurs_FoldlArray = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 interface{}, p0_1 interface{}) interface{} {
-			return gopurs_runtime.Apply2(arg0, gopurs_runtime.Box(p0_0), gopurs_runtime.Box(p0_1))
-		}
-	go_arg1 := arg1
-	arg2_arr := *(*[]gopurs_runtime.Value)(arg2.UnsafePtr)
-	go_arg2 := make([]interface{}, len(arg2_arr))
+	go_arg2 := make([]any, len(arg2_arr))
 	for i, v := range arg2_arr { go_arg2[i] = v }
 	go_res := FoldlArray(go_arg0, go_arg1, go_arg2)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_FoldrArray = // TAST: (Func [(Func [(TypeVar a), (TypeVar b)] (TypeVar b)), (TypeVar b), (Array (TypeVar a))] (TypeVar b))
+gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0_0 any, p0_1 any) any {
+			return gopurs_runtime.Apply2(arg0, gopurs_runtime.Box(p0_0), gopurs_runtime.Box(p0_1))
+		}
+	go_arg1 := arg1
+	arg2_arr := *(*[]gopurs_runtime.Value)(arg2.UnsafePtr)
+	go_arg2 := make([]any, len(arg2_arr))
+	for i, v := range arg2_arr { go_arg2[i] = v }
+	go_res := FoldrArray(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
 })

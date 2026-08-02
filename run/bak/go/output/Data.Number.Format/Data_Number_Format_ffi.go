@@ -10,37 +10,29 @@ func ToString(n float64) string { return fmt.Sprintf("%v", n) }
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_toExponentialNative(arg0 int, arg1 float64) string {
-	return ToExponentialNative(arg0, arg1)
-}
-var _Gopurs_ToExponentialNative = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_ToExponentialNative = // TAST: (Func [Int, Number] String)
+gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int](arg0)
 	go_arg1 := gopurs_runtime.Unbox[float64](arg1)
 	go_res := ToExponentialNative(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_toFixedNative(arg0 int, arg1 float64) string {
-	return ToFixedNative(arg0, arg1)
-}
-var _Gopurs_ToFixedNative = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_ToFixedNative = // TAST: (Func [Int, Number] String)
+gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int](arg0)
 	go_arg1 := gopurs_runtime.Unbox[float64](arg1)
 	go_res := ToFixedNative(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_toPrecisionNative(arg0 int, arg1 float64) string {
-	return ToPrecisionNative(arg0, arg1)
-}
-var _Gopurs_ToPrecisionNative = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_ToPrecisionNative = // TAST: (Func [Int, Number] String)
+gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int](arg0)
 	go_arg1 := gopurs_runtime.Unbox[float64](arg1)
 	go_res := ToPrecisionNative(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_toString(arg0 float64) string {
-	return ToString(arg0)
-}
-var _Gopurs_ToString = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_ToString = // TAST: (Func [Number] String)
+gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
 	go_res := ToString(go_arg0)
 	return gopurs_runtime.Box(go_res)

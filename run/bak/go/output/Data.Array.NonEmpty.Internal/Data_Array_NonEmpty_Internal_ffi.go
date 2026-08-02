@@ -2,6 +2,7 @@ package Data_Array_NonEmpty_Internal
 
 import "gopurs/output/gopurs_runtime"
 
+
 func Foldr1Impl(f func(interface{}) func(interface{}) interface{}, xs []interface{}) interface{} {
 	acc := xs[len(xs)-1]
 	for i := len(xs) - 2; i >= 0; i-- {
@@ -84,59 +85,53 @@ func Traverse1Impl(apply func(interface{}) func(interface{}) interface{}, mapFn 
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_foldr1Impl(arg0 func(interface{}) func(interface{}) interface{}, arg1 []interface{}) interface{} {
-	return Foldr1Impl(arg0, arg1)
-}
-var _Gopurs_Foldr1Impl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 interface{}) func(interface{}) interface{} {
+var _Gopurs_Foldl1Impl = // TAST: (ADT ["Data","Function","Uncurried","Fn2"] [(Func [(TypeVar a), (TypeVar a)] (TypeVar a)), (Array (TypeVar a)), (TypeVar a)])
+gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0_0 any) func(any) any {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
-			return func(p1_0 interface{}) interface{} {
+			return func(p1_0 any) any {
 			return gopurs_runtime.Apply(inner_res0, gopurs_runtime.Box(p1_0))
 		}
 		}
 	arg1_arr := *(*[]gopurs_runtime.Value)(arg1.UnsafePtr)
-	go_arg1 := make([]interface{}, len(arg1_arr))
-	for i, v := range arg1_arr { go_arg1[i] = v }
-	go_res := Foldr1Impl(go_arg0, go_arg1)
-	return gopurs_runtime.Box(go_res)
-})
-func Call_foldl1Impl(arg0 func(interface{}) func(interface{}) interface{}, arg1 []interface{}) interface{} {
-	return Foldl1Impl(arg0, arg1)
-}
-var _Gopurs_Foldl1Impl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 interface{}) func(interface{}) interface{} {
-			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
-			return func(p1_0 interface{}) interface{} {
-			return gopurs_runtime.Apply(inner_res0, gopurs_runtime.Box(p1_0))
-		}
-		}
-	arg1_arr := *(*[]gopurs_runtime.Value)(arg1.UnsafePtr)
-	go_arg1 := make([]interface{}, len(arg1_arr))
+	go_arg1 := make([]any, len(arg1_arr))
 	for i, v := range arg1_arr { go_arg1[i] = v }
 	go_res := Foldl1Impl(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_traverse1Impl(arg0 func(interface{}) func(interface{}) interface{}, arg1 func(interface{}) func(interface{}) interface{}, arg2 func(interface{}) interface{}, arg3 []interface{}) interface{} {
-	return Traverse1Impl(arg0, arg1, arg2, arg3)
-}
-var _Gopurs_Traverse1Impl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 interface{}) func(interface{}) interface{} {
+var _Gopurs_Foldr1Impl = // TAST: (ADT ["Data","Function","Uncurried","Fn2"] [(Func [(TypeVar a), (TypeVar a)] (TypeVar a)), (Array (TypeVar a)), (TypeVar a)])
+gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0_0 any) func(any) any {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
-			return func(p1_0 interface{}) interface{} {
+			return func(p1_0 any) any {
 			return gopurs_runtime.Apply(inner_res0, gopurs_runtime.Box(p1_0))
 		}
 		}
-	go_arg1 := func(p0_0 interface{}) func(interface{}) interface{} {
+	arg1_arr := *(*[]gopurs_runtime.Value)(arg1.UnsafePtr)
+	go_arg1 := make([]any, len(arg1_arr))
+	for i, v := range arg1_arr { go_arg1[i] = v }
+	go_res := Foldr1Impl(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_Traverse1Impl = // TAST: (ADT ["Data","Function","Uncurried","Fn3"] [(Func [(TypeVar m), (TypeVar m)] (TypeVar m)), (Func [(Func [(TypeVar a')] (TypeVar b')), (TypeVar m)] (TypeVar m)), (Func [(TypeVar a)] (TypeVar m)), (Func [(Array (TypeVar a))] (TypeVar m))])
+gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0_0 any) func(any) any {
+			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
+			return func(p1_0 any) any {
+			return gopurs_runtime.Apply(inner_res0, gopurs_runtime.Box(p1_0))
+		}
+		}
+	go_arg1 := func(p0_0 any) func(any) any {
 			inner_res0 := gopurs_runtime.Apply(arg1, gopurs_runtime.Box(p0_0))
-			return func(p1_0 interface{}) interface{} {
+			return func(p1_0 any) any {
 			return gopurs_runtime.Apply(inner_res0, gopurs_runtime.Box(p1_0))
 		}
 		}
-	go_arg2 := func(p0_0 interface{}) interface{} {
+	go_arg2 := func(p0_0 any) any {
 			return gopurs_runtime.Apply(arg2, gopurs_runtime.Box(p0_0))
 		}
 	arg3_arr := *(*[]gopurs_runtime.Value)(arg3.UnsafePtr)
-	go_arg3 := make([]interface{}, len(arg3_arr))
+	go_arg3 := make([]any, len(arg3_arr))
 	for i, v := range arg3_arr { go_arg3[i] = v }
 	go_res := Traverse1Impl(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)

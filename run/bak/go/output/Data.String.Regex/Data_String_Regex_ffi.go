@@ -2,6 +2,7 @@ package Data_String_Regex
 
 import "gopurs/output/gopurs_runtime"
 
+
 import (
 	"regexp"
 	"strings"
@@ -153,56 +154,9 @@ func Test(r *GoRegex, s string) bool {
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_regexImpl(arg0 func(string) interface{}, arg1 func(interface{}) interface{}, arg2 string, arg3 string) interface{} {
-	return RegexImpl(arg0, arg1, arg2, arg3)
-}
-var _Gopurs_RegexImpl = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 string) interface{} {
-			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
-		}
-	go_arg1 := func(p0_0 interface{}) interface{} {
-			return gopurs_runtime.Apply(arg1, gopurs_runtime.Box(p0_0))
-		}
-	go_arg2 := gopurs_runtime.Unbox[string](arg2)
-	go_arg3 := gopurs_runtime.Unbox[string](arg3)
-	go_res := RegexImpl(go_arg0, go_arg1, go_arg2, go_arg3)
-	return gopurs_runtime.Box(go_res)
-})
-func Call__ReplaceBy(arg0 func(interface{}) interface{}, arg1 interface{}, arg2 *GoRegex, arg3 func(string) func([]interface{}) string, arg4 string) string {
-	return _ReplaceBy(arg0, arg1, arg2, arg3, arg4)
-}
-var _Gopurs__ReplaceBy = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 interface{}) interface{} {
-			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
-		}
-	go_arg1 := arg1
-	go_arg2 := gopurs_runtime.Unbox[*GoRegex](arg2)
-	go_arg3 := func(p0_0 string) func([]interface{}) string {
-			inner_res0 := gopurs_runtime.Apply(arg3, gopurs_runtime.Box(p0_0))
-			return func(p1_0 []interface{}) string {
-			inner_res1 := gopurs_runtime.Apply(inner_res0, gopurs_runtime.Box(p1_0))
-			return gopurs_runtime.Unbox[string](inner_res1)
-		}
-		}
-	go_arg4 := gopurs_runtime.Unbox[string](arg4)
-	go_res := _ReplaceBy(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
-	return gopurs_runtime.Box(go_res)
-})
-func Call_replace(arg0 *GoRegex, arg1 string, arg2 string) string {
-	return Replace(arg0, arg1, arg2)
-}
-var _Gopurs_Replace = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := gopurs_runtime.Unbox[*GoRegex](arg0)
-	go_arg1 := gopurs_runtime.Unbox[string](arg1)
-	go_arg2 := gopurs_runtime.Unbox[string](arg2)
-	go_res := Replace(go_arg0, go_arg1, go_arg2)
-	return gopurs_runtime.Box(go_res)
-})
-func Call__Match(arg0 func(interface{}) interface{}, arg1 interface{}, arg2 *GoRegex, arg3 string) interface{} {
-	return _Match(arg0, arg1, arg2, arg3)
-}
-var _Gopurs__Match = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 interface{}) interface{} {
+var _Gopurs__Match = // TAST: (Func [(Func [(TypeVar r)] (ADT ["Data","Maybe","Maybe"] [(TypeVar r)])), (ADT ["Data","Maybe","Maybe"] [(TypeVar r)]), (ADT ["Data","String","Regex","Regex"] []), String] (ADT ["Data","Maybe","Maybe"] [(Array (ADT ["Data","Maybe","Maybe"] [String]))]))
+gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0_0 any) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
 	go_arg1 := arg1
@@ -211,11 +165,27 @@ var _Gopurs__Match = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 g
 	go_res := _Match(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
 })
-func Call__Search(arg0 func(interface{}) interface{}, arg1 interface{}, arg2 *GoRegex, arg3 string) interface{} {
-	return _Search(arg0, arg1, arg2, arg3)
-}
-var _Gopurs__Search = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 interface{}) interface{} {
+var _Gopurs__ReplaceBy = // TAST: (Func [(Func [(TypeVar r)] (ADT ["Data","Maybe","Maybe"] [(TypeVar r)])), (ADT ["Data","Maybe","Maybe"] [(TypeVar r)]), (ADT ["Data","String","Regex","Regex"] []), (Func [String, (Array (ADT ["Data","Maybe","Maybe"] [String]))] String), String] String)
+gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0_0 any) any {
+			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
+		}
+	go_arg1 := arg1
+	go_arg2 := gopurs_runtime.Unbox[*GoRegex](arg2)
+	go_arg3 := func(p0_0 string) func([]any) string {
+			inner_res0 := gopurs_runtime.Apply(arg3, gopurs_runtime.Box(p0_0))
+			return func(p1_0 []any) string {
+			inner_res1 := gopurs_runtime.Apply(inner_res0, gopurs_runtime.Box(p1_0))
+			return gopurs_runtime.Unbox[string](inner_res1)
+		}
+		}
+	go_arg4 := gopurs_runtime.Unbox[string](arg4)
+	go_res := _ReplaceBy(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs__Search = // TAST: (Func [(Func [(TypeVar r)] (ADT ["Data","Maybe","Maybe"] [(TypeVar r)])), (ADT ["Data","Maybe","Maybe"] [(TypeVar r)]), (ADT ["Data","String","Regex","Regex"] []), String] (ADT ["Data","Maybe","Maybe"] [Int]))
+gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0_0 any) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
 	go_arg1 := arg1
@@ -224,51 +194,62 @@ var _Gopurs__Search = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 
 	go_res := _Search(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_flagsImpl(arg0 *GoRegex) map[string]interface{} {
-	return FlagsImpl(arg0)
-}
-var _Gopurs_FlagsImpl = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_FlagsImpl = // TAST: (Func [(ADT ["Data","String","Regex","Regex"] [])] Any)
+gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[*GoRegex](arg0)
 	go_res := FlagsImpl(go_arg0)
 	return func() gopurs_runtime.Value {
-			res_map := make(map[string]gopurs_runtime.Value)
-			for k, v := range go_res { res_map[k] = gopurs_runtime.Box(v) }
-			return gopurs_runtime.Record(res_map)
-		}()
+				res_map := make(map[string]gopurs_runtime.Value)
+				for k, v := range go_res { res_map[k] = gopurs_runtime.Box(v) }
+				return gopurs_runtime.Record(res_map)
+			}()
 })
-func Call_showRegexImpl(arg0 *GoRegex) string {
-	return ShowRegexImpl(arg0)
-}
-var _Gopurs_ShowRegexImpl = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_RegexImpl = // TAST: (Func [(Func [String] (ADT ["Data","Either","Either"] [String, (ADT ["Data","String","Regex","Regex"] [])])), (Func [(ADT ["Data","String","Regex","Regex"] [])] (ADT ["Data","Either","Either"] [String, (ADT ["Data","String","Regex","Regex"] [])])), String, String] (ADT ["Data","Either","Either"] [String, (ADT ["Data","String","Regex","Regex"] [])]))
+gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0_0 string) any {
+			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
+		}
+	go_arg1 := func(p0_0 any) any {
+			return gopurs_runtime.Apply(arg1, gopurs_runtime.Box(p0_0))
+		}
+	go_arg2 := gopurs_runtime.Unbox[string](arg2)
+	go_arg3 := gopurs_runtime.Unbox[string](arg3)
+	go_res := RegexImpl(go_arg0, go_arg1, go_arg2, go_arg3)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_Replace = // TAST: (Func [(ADT ["Data","String","Regex","Regex"] []), String, String] String)
+gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := gopurs_runtime.Unbox[*GoRegex](arg0)
+	go_arg1 := gopurs_runtime.Unbox[string](arg1)
+	go_arg2 := gopurs_runtime.Unbox[string](arg2)
+	go_res := Replace(go_arg0, go_arg1, go_arg2)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_ShowRegexImpl = // TAST: (Func [(ADT ["Data","String","Regex","Regex"] [])] String)
+gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[*GoRegex](arg0)
 	go_res := ShowRegexImpl(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_source(arg0 *GoRegex) string {
-	return Source(arg0)
-}
-var _Gopurs_Source = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Source = // TAST: (Func [(ADT ["Data","String","Regex","Regex"] [])] String)
+gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[*GoRegex](arg0)
 	go_res := Source(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_split(arg0 *GoRegex, arg1 string) []string {
-	return Split(arg0, arg1)
-}
-var _Gopurs_Split = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Split = // TAST: (Func [(ADT ["Data","String","Regex","Regex"] []), String] (Array String))
+gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[*GoRegex](arg0)
 	go_arg1 := gopurs_runtime.Unbox[string](arg1)
 	go_res := Split(go_arg0, go_arg1)
 	return func() gopurs_runtime.Value {
-			res_arr := make([]gopurs_runtime.Value, len(go_res))
-			for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
-			return gopurs_runtime.Array(res_arr)
-		}()
+				res_arr := make([]gopurs_runtime.Value, len(go_res))
+				for i, v := range go_res { res_arr[i] = gopurs_runtime.Box(v) }
+				return gopurs_runtime.Array(res_arr)
+			}()
 })
-func Call_test(arg0 *GoRegex, arg1 string) bool {
-	return Test(arg0, arg1)
-}
-var _Gopurs_Test = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Test = // TAST: (Func [(ADT ["Data","String","Regex","Regex"] []), String] Boolean)
+gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[*GoRegex](arg0)
 	go_arg1 := gopurs_runtime.Unbox[string](arg1)
 	go_res := Test(go_arg0, go_arg1)

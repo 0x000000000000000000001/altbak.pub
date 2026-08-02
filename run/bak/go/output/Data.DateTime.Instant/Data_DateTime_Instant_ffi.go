@@ -25,10 +25,8 @@ func ToDateTimeImpl(ctor func(int) func(int) func(int) func(int) func(int) func(
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_fromDateTimeImpl(arg0 int, arg1 int, arg2 int, arg3 int, arg4 int, arg5 int, arg6 int) float64 {
-	return FromDateTimeImpl(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
-}
-var _Gopurs_FromDateTimeImpl = gopurs_runtime.Func7(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value, arg5 gopurs_runtime.Value, arg6 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_FromDateTimeImpl = // TAST: (ADT ["Data","Function","Uncurried","Fn7"] [Int, Int, Int, Int, Int, Int, Int, Number])
+gopurs_runtime.Func7(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value, arg5 gopurs_runtime.Value, arg6 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int](arg0)
 	go_arg1 := gopurs_runtime.Unbox[int](arg1)
 	go_arg2 := gopurs_runtime.Unbox[int](arg2)
@@ -39,23 +37,21 @@ var _Gopurs_FromDateTimeImpl = gopurs_runtime.Func7(func(arg0 gopurs_runtime.Val
 	go_res := FromDateTimeImpl(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4, go_arg5, go_arg6)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_toDateTimeImpl(arg0 func(int) func(int) func(int) func(int) func(int) func(int) func(int) interface{}, arg1 float64) interface{} {
-	return ToDateTimeImpl(arg0, arg1)
-}
-var _Gopurs_ToDateTimeImpl = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := func(p0_0 int) func(int) func(int) func(int) func(int) func(int) func(int) interface{} {
+var _Gopurs_ToDateTimeImpl = // TAST: (Func [(Func [Int, Int, Int, Int, Int, Int, Int] (ADT ["Data","DateTime","DateTime"] [])), Number] (ADT ["Data","DateTime","DateTime"] []))
+gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := func(p0_0 int) func(int) func(int) func(int) func(int) func(int) func(int) any {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
-			return func(p1_0 int) func(int) func(int) func(int) func(int) func(int) interface{} {
+			return func(p1_0 int) func(int) func(int) func(int) func(int) func(int) any {
 			inner_res1 := gopurs_runtime.Apply(inner_res0, gopurs_runtime.Box(p1_0))
-			return func(p2_0 int) func(int) func(int) func(int) func(int) interface{} {
+			return func(p2_0 int) func(int) func(int) func(int) func(int) any {
 			inner_res2 := gopurs_runtime.Apply(inner_res1, gopurs_runtime.Box(p2_0))
-			return func(p3_0 int) func(int) func(int) func(int) interface{} {
+			return func(p3_0 int) func(int) func(int) func(int) any {
 			inner_res3 := gopurs_runtime.Apply(inner_res2, gopurs_runtime.Box(p3_0))
-			return func(p4_0 int) func(int) func(int) interface{} {
+			return func(p4_0 int) func(int) func(int) any {
 			inner_res4 := gopurs_runtime.Apply(inner_res3, gopurs_runtime.Box(p4_0))
-			return func(p5_0 int) func(int) interface{} {
+			return func(p5_0 int) func(int) any {
 			inner_res5 := gopurs_runtime.Apply(inner_res4, gopurs_runtime.Box(p5_0))
-			return func(p6_0 int) interface{} {
+			return func(p6_0 int) any {
 			return gopurs_runtime.Apply(inner_res5, gopurs_runtime.Box(p6_0))
 		}
 		}

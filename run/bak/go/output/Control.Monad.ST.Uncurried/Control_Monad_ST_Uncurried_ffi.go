@@ -2,6 +2,7 @@ package Control_Monad_ST_Uncurried
 
 import "gopurs/output/gopurs_runtime"
 
+
 func MkSTFn1(fn func(any) any) any {
 	return func(a any) any { return fn(a) }
 }
@@ -45,20 +46,16 @@ func RunSTFn9(fn any, a any, b any, c any, d any, e any, f any, g any, h any, i 
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_mkSTFn1(arg0 func(any) any) any {
-	return MkSTFn1(arg0)
-}
-var _Gopurs_MkSTFn1 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_MkSTFn1 = // TAST: (Func [(Func [(TypeVar a)] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar t), (TypeVar r)]))] (ADT ["Control","Monad","ST","Uncurried","STFn1"] [(TypeVar a), (TypeVar t), (TypeVar r)]))
+gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 		}
 	go_res := MkSTFn1(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_mkSTFn2(arg0 func(any) func(any) any) any {
-	return MkSTFn2(arg0)
-}
-var _Gopurs_MkSTFn2 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_MkSTFn2 = // TAST: (Func [(Func [(TypeVar a), (TypeVar b)] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar t), (TypeVar r)]))] (ADT ["Control","Monad","ST","Uncurried","STFn2"] [(TypeVar a), (TypeVar b), (TypeVar t), (TypeVar r)]))
+gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) func(any) any {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 			return func(p1_0 any) any {
@@ -68,10 +65,8 @@ var _Gopurs_MkSTFn2 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs
 	go_res := MkSTFn2(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_mkSTFn3(arg0 func(any) func(any) func(any) any) any {
-	return MkSTFn3(arg0)
-}
-var _Gopurs_MkSTFn3 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_MkSTFn3 = // TAST: (Func [(Func [(TypeVar a), (TypeVar b), (TypeVar c)] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar t), (TypeVar r)]))] (ADT ["Control","Monad","ST","Uncurried","STFn3"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar t), (TypeVar r)]))
+gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) func(any) func(any) any {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 			return func(p1_0 any) func(any) any {
@@ -84,10 +79,8 @@ var _Gopurs_MkSTFn3 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs
 	go_res := MkSTFn3(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_mkSTFn4(arg0 func(any) func(any) func(any) func(any) any) any {
-	return MkSTFn4(arg0)
-}
-var _Gopurs_MkSTFn4 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_MkSTFn4 = // TAST: (Func [(Func [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d)] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar t), (TypeVar r)]))] (ADT ["Control","Monad","ST","Uncurried","STFn4"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar t), (TypeVar r)]))
+gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) func(any) func(any) func(any) any {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 			return func(p1_0 any) func(any) func(any) any {
@@ -103,10 +96,8 @@ var _Gopurs_MkSTFn4 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs
 	go_res := MkSTFn4(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_mkSTFn5(arg0 func(any) func(any) func(any) func(any) func(any) any) any {
-	return MkSTFn5(arg0)
-}
-var _Gopurs_MkSTFn5 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_MkSTFn5 = // TAST: (Func [(Func [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e)] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar t), (TypeVar r)]))] (ADT ["Control","Monad","ST","Uncurried","STFn5"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar t), (TypeVar r)]))
+gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) func(any) func(any) func(any) func(any) any {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 			return func(p1_0 any) func(any) func(any) func(any) any {
@@ -125,10 +116,8 @@ var _Gopurs_MkSTFn5 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs
 	go_res := MkSTFn5(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_mkSTFn6(arg0 func(any) func(any) func(any) func(any) func(any) func(any) any) any {
-	return MkSTFn6(arg0)
-}
-var _Gopurs_MkSTFn6 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_MkSTFn6 = // TAST: (Func [(Func [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f)] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar t), (TypeVar r)]))] (ADT ["Control","Monad","ST","Uncurried","STFn6"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar t), (TypeVar r)]))
+gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) func(any) func(any) func(any) func(any) func(any) any {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 			return func(p1_0 any) func(any) func(any) func(any) func(any) any {
@@ -150,10 +139,8 @@ var _Gopurs_MkSTFn6 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs
 	go_res := MkSTFn6(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_mkSTFn7(arg0 func(any) func(any) func(any) func(any) func(any) func(any) func(any) any) any {
-	return MkSTFn7(arg0)
-}
-var _Gopurs_MkSTFn7 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_MkSTFn7 = // TAST: (Func [(Func [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g)] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar t), (TypeVar r)]))] (ADT ["Control","Monad","ST","Uncurried","STFn7"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar t), (TypeVar r)]))
+gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) func(any) func(any) func(any) func(any) func(any) func(any) any {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 			return func(p1_0 any) func(any) func(any) func(any) func(any) func(any) any {
@@ -178,10 +165,8 @@ var _Gopurs_MkSTFn7 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs
 	go_res := MkSTFn7(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_mkSTFn8(arg0 func(any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) any) any {
-	return MkSTFn8(arg0)
-}
-var _Gopurs_MkSTFn8 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_MkSTFn8 = // TAST: (Func [(Func [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h)] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar t), (TypeVar r)]))] (ADT ["Control","Monad","ST","Uncurried","STFn8"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h), (TypeVar t), (TypeVar r)]))
+gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) any {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 			return func(p1_0 any) func(any) func(any) func(any) func(any) func(any) func(any) any {
@@ -209,10 +194,8 @@ var _Gopurs_MkSTFn8 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs
 	go_res := MkSTFn8(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_mkSTFn9(arg0 func(any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) any) any {
-	return MkSTFn9(arg0)
-}
-var _Gopurs_MkSTFn9 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_MkSTFn9 = // TAST: (Func [(Func [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h), (TypeVar i)] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar t), (TypeVar r)]))] (ADT ["Control","Monad","ST","Uncurried","STFn9"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h), (TypeVar i), (TypeVar t), (TypeVar r)]))
+gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) any {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
 			return func(p1_0 any) func(any) func(any) func(any) func(any) func(any) func(any) func(any) any {
@@ -243,20 +226,16 @@ var _Gopurs_MkSTFn9 = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs
 	go_res := MkSTFn9(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_runSTFn1(arg0 any, arg1 any, arg2 interface{}) any {
-	return RunSTFn1(arg0, arg1, arg2)
-}
-var _Gopurs_RunSTFn1 = gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_RunSTFn1 = // TAST: (Func [(ADT ["Control","Monad","ST","Uncurried","STFn1"] [(TypeVar a), (TypeVar t), (TypeVar r)]), (TypeVar a)] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar t), (TypeVar r)]))
+gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_arg2 := arg2
 	go_res := RunSTFn1(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_runSTFn2(arg0 any, arg1 any, arg2 any, arg3 interface{}) any {
-	return RunSTFn2(arg0, arg1, arg2, arg3)
-}
-var _Gopurs_RunSTFn2 = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_RunSTFn2 = // TAST: (Func [(ADT ["Control","Monad","ST","Uncurried","STFn2"] [(TypeVar a), (TypeVar b), (TypeVar t), (TypeVar r)]), (TypeVar a), (TypeVar b)] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar t), (TypeVar r)]))
+gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_arg2 := arg2
@@ -264,10 +243,8 @@ var _Gopurs_RunSTFn2 = gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1
 	go_res := RunSTFn2(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_runSTFn3(arg0 any, arg1 any, arg2 any, arg3 any, arg4 interface{}) any {
-	return RunSTFn3(arg0, arg1, arg2, arg3, arg4)
-}
-var _Gopurs_RunSTFn3 = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_RunSTFn3 = // TAST: (Func [(ADT ["Control","Monad","ST","Uncurried","STFn3"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar t), (TypeVar r)]), (TypeVar a), (TypeVar b), (TypeVar c)] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar t), (TypeVar r)]))
+gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_arg2 := arg2
@@ -276,10 +253,8 @@ var _Gopurs_RunSTFn3 = gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1
 	go_res := RunSTFn3(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_runSTFn4(arg0 any, arg1 any, arg2 any, arg3 any, arg4 any, arg5 interface{}) any {
-	return RunSTFn4(arg0, arg1, arg2, arg3, arg4, arg5)
-}
-var _Gopurs_RunSTFn4 = gopurs_runtime.Func6(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value, arg5 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_RunSTFn4 = // TAST: (Func [(ADT ["Control","Monad","ST","Uncurried","STFn4"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar t), (TypeVar r)]), (TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d)] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar t), (TypeVar r)]))
+gopurs_runtime.Func6(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value, arg5 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_arg2 := arg2
@@ -289,10 +264,8 @@ var _Gopurs_RunSTFn4 = gopurs_runtime.Func6(func(arg0 gopurs_runtime.Value, arg1
 	go_res := RunSTFn4(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4, go_arg5)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_runSTFn5(arg0 any, arg1 any, arg2 any, arg3 any, arg4 any, arg5 any, arg6 interface{}) any {
-	return RunSTFn5(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
-}
-var _Gopurs_RunSTFn5 = gopurs_runtime.Func7(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value, arg5 gopurs_runtime.Value, arg6 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_RunSTFn5 = // TAST: (Func [(ADT ["Control","Monad","ST","Uncurried","STFn5"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar t), (TypeVar r)]), (TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e)] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar t), (TypeVar r)]))
+gopurs_runtime.Func7(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value, arg5 gopurs_runtime.Value, arg6 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_arg2 := arg2
@@ -303,10 +276,8 @@ var _Gopurs_RunSTFn5 = gopurs_runtime.Func7(func(arg0 gopurs_runtime.Value, arg1
 	go_res := RunSTFn5(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4, go_arg5, go_arg6)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_runSTFn6(arg0 any, arg1 any, arg2 any, arg3 any, arg4 any, arg5 any, arg6 any, arg7 interface{}) any {
-	return RunSTFn6(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
-}
-var _Gopurs_RunSTFn6 = gopurs_runtime.Func8(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value, arg5 gopurs_runtime.Value, arg6 gopurs_runtime.Value, arg7 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_RunSTFn6 = // TAST: (Func [(ADT ["Control","Monad","ST","Uncurried","STFn6"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar t), (TypeVar r)]), (TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f)] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar t), (TypeVar r)]))
+gopurs_runtime.Func8(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value, arg5 gopurs_runtime.Value, arg6 gopurs_runtime.Value, arg7 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_arg2 := arg2
@@ -318,10 +289,8 @@ var _Gopurs_RunSTFn6 = gopurs_runtime.Func8(func(arg0 gopurs_runtime.Value, arg1
 	go_res := RunSTFn6(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4, go_arg5, go_arg6, go_arg7)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_runSTFn7(arg0 any, arg1 any, arg2 any, arg3 any, arg4 any, arg5 any, arg6 any, arg7 any, arg8 interface{}) any {
-	return RunSTFn7(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
-}
-var _Gopurs_RunSTFn7 = gopurs_runtime.Func9(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value, arg5 gopurs_runtime.Value, arg6 gopurs_runtime.Value, arg7 gopurs_runtime.Value, arg8 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_RunSTFn7 = // TAST: (Func [(ADT ["Control","Monad","ST","Uncurried","STFn7"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar t), (TypeVar r)]), (TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g)] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar t), (TypeVar r)]))
+gopurs_runtime.Func9(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value, arg5 gopurs_runtime.Value, arg6 gopurs_runtime.Value, arg7 gopurs_runtime.Value, arg8 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_arg2 := arg2
@@ -334,10 +303,8 @@ var _Gopurs_RunSTFn7 = gopurs_runtime.Func9(func(arg0 gopurs_runtime.Value, arg1
 	go_res := RunSTFn7(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4, go_arg5, go_arg6, go_arg7, go_arg8)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_runSTFn8(arg0 any, arg1 any, arg2 any, arg3 any, arg4 any, arg5 any, arg6 any, arg7 any, arg8 any, arg9 interface{}) any {
-	return RunSTFn8(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
-}
-var _Gopurs_RunSTFn8 = gopurs_runtime.Func10(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value, arg5 gopurs_runtime.Value, arg6 gopurs_runtime.Value, arg7 gopurs_runtime.Value, arg8 gopurs_runtime.Value, arg9 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_RunSTFn8 = // TAST: (Func [(ADT ["Control","Monad","ST","Uncurried","STFn8"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h), (TypeVar t), (TypeVar r)]), (TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h)] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar t), (TypeVar r)]))
+gopurs_runtime.Func10(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value, arg5 gopurs_runtime.Value, arg6 gopurs_runtime.Value, arg7 gopurs_runtime.Value, arg8 gopurs_runtime.Value, arg9 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_arg2 := arg2
@@ -351,10 +318,8 @@ var _Gopurs_RunSTFn8 = gopurs_runtime.Func10(func(arg0 gopurs_runtime.Value, arg
 	go_res := RunSTFn8(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4, go_arg5, go_arg6, go_arg7, go_arg8, go_arg9)
 	return gopurs_runtime.Box(go_res)
 })
-func Call_runSTFn9(arg0 any, arg1 any, arg2 any, arg3 any, arg4 any, arg5 any, arg6 any, arg7 any, arg8 any, arg9 any, arg10 interface{}) any {
-	return RunSTFn9(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)
-}
-var _Gopurs_RunSTFn9 = gopurs_runtime.Func11(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value, arg5 gopurs_runtime.Value, arg6 gopurs_runtime.Value, arg7 gopurs_runtime.Value, arg8 gopurs_runtime.Value, arg9 gopurs_runtime.Value, arg10 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_RunSTFn9 = // TAST: (Func [(ADT ["Control","Monad","ST","Uncurried","STFn9"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h), (TypeVar i), (TypeVar t), (TypeVar r)]), (TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h), (TypeVar i)] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar t), (TypeVar r)]))
+gopurs_runtime.Func11(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value, arg5 gopurs_runtime.Value, arg6 gopurs_runtime.Value, arg7 gopurs_runtime.Value, arg8 gopurs_runtime.Value, arg9 gopurs_runtime.Value, arg10 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_arg2 := arg2

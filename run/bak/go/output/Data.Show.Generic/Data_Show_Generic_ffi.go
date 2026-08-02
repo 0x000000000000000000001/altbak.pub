@@ -9,10 +9,8 @@ func Intercalate(separator string, arr []string) string {
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_intercalate(arg0 string, arg1 []string) string {
-	return Intercalate(arg0, arg1)
-}
-var _Gopurs_Intercalate = gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_Intercalate = // TAST: (Func [String, (Array String)] String)
+gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
 	arg1_arr := *(*[]gopurs_runtime.Value)(arg1.UnsafePtr)
 	go_arg1 := make([]string, len(arg1_arr))

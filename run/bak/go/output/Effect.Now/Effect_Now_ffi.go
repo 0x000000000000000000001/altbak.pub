@@ -19,19 +19,15 @@ func GetTimezoneOffset(_ interface{}) float64 {
 
 
 // --- Auto-generated FFI wrappers ---
-func Call_now(arg0 interface{}) float64 {
-	return Now(arg0)
-}
-var _Gopurs_Now = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := arg0
-	go_res := Now(go_arg0)
-	return gopurs_runtime.Box(go_res)
-})
-func Call_getTimezoneOffset(arg0 interface{}) float64 {
-	return GetTimezoneOffset(arg0)
-}
-var _Gopurs_GetTimezoneOffset = gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+var _Gopurs_GetTimezoneOffset = // TAST: (ADT ["Effect","Effect"] [Number])
+gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := GetTimezoneOffset(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_Now = // TAST: (ADT ["Effect","Effect"] [Number])
+gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_res := Now(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
