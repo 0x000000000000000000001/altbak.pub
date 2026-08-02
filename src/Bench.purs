@@ -12,6 +12,7 @@ foreign import formatNumber :: Number -> String
 
 runBench :: Effect Unit -> Effect Unit -> Effect Number
 runBench describe act = do
+  log "--------------------------------------------------"
   describe
   t1 <- benchNow
   act
@@ -22,6 +23,7 @@ runBench describe act = do
 
 runBenchAff :: Effect Unit -> Aff Unit -> Aff Number
 runBenchAff describe act = do
+  liftEffect $ log "--------------------------------------------------"
   liftEffect describe
   t1 <- liftEffect benchNow
   act
