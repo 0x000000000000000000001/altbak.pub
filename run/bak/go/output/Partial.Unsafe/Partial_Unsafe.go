@@ -105,6 +105,15 @@ func Get_unsafePartial__gopurs_runtime_Value_2740565527() gopurs_runtime.Value {
 	return cache_unsafePartial__gopurs_runtime_Value_2740565527
 }
 
+var cache_unsafePartial__gopurs_runtime_Value_3582426999 gopurs_runtime.Value
+var once_unsafePartial__gopurs_runtime_Value_3582426999 sync.Once
+func Get_unsafePartial__gopurs_runtime_Value_3582426999() gopurs_runtime.Value {
+	once_unsafePartial__gopurs_runtime_Value_3582426999.Do(func() {
+		cache_unsafePartial__gopurs_runtime_Value_3582426999 = Get__unsafePartial()
+	})
+	return cache_unsafePartial__gopurs_runtime_Value_3582426999
+}
+
 var cache_unsafePartial__gopurs_runtime_Value_434451159 gopurs_runtime.Value
 var once_unsafePartial__gopurs_runtime_Value_434451159 sync.Once
 func Get_unsafePartial__gopurs_runtime_Value_434451159() gopurs_runtime.Value {
