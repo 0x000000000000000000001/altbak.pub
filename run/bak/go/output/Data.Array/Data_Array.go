@@ -728,17 +728,6 @@ return gopurs_runtime.Array(Call_replicate(__local_var_0_box.IntVal, __local_var
 	return cache_replicate
 }
 
-var cache_replicate__gopurs_runtime_Value_1853425137 gopurs_runtime.Value
-var once_replicate__gopurs_runtime_Value_1853425137 sync.Once
-func Get_replicate__gopurs_runtime_Value_1853425137() gopurs_runtime.Value {
-	once_replicate__gopurs_runtime_Value_1853425137.Do(func() {
-		cache_replicate__gopurs_runtime_Value_1853425137 = gopurs_runtime.Func2(func(__local_var_0_box gopurs_runtime.Value, __local_var_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Array(Call_replicate__gopurs_runtime_Value_1853425137(__local_var_0_box.IntVal, __local_var_1_box))
-})
-	})
-	return cache_replicate__gopurs_runtime_Value_1853425137
-}
-
 var cache_replicate__gopurs_runtime_Value_200880977 gopurs_runtime.Value
 var once_replicate__gopurs_runtime_Value_200880977 sync.Once
 func Get_replicate__gopurs_runtime_Value_200880977() gopurs_runtime.Value {
@@ -3315,19 +3304,6 @@ return func() []gopurs_runtime.Value {
 }
 
 func Call_replicate(__local_var_0_loop int64, __local_var_1_loop gopurs_runtime.Value) []gopurs_runtime.Value {
-var __local_var_0 int64 = __local_var_0_loop
-_ = __local_var_0
-var __local_var_1 gopurs_runtime.Value = __local_var_1_loop
-_ = __local_var_1
-return func() []gopurs_runtime.Value {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.UncurriedApp2(Get_replicateImpl(), gopurs_runtime.Int(__local_var_0), __local_var_1).UnsafePtr)
-					unboxed := make([]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { unboxed[i] = v }
-					return unboxed
-				}()
-}
-
-func Call_replicate__gopurs_runtime_Value_1853425137(__local_var_0_loop int64, __local_var_1_loop gopurs_runtime.Value) []gopurs_runtime.Value {
 var __local_var_0 int64 = __local_var_0_loop
 _ = __local_var_0
 var __local_var_1 gopurs_runtime.Value = __local_var_1_loop
