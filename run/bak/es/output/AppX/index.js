@@ -40,7 +40,7 @@ const main = /* #__PURE__ */ (() => {
     const t16 = Bench.runBench(Test$dStringOps.describe)(Test$dStringOps.act)();
     const fiber = Effect$dAff._makeFiber(
       Effect$dAff.ffiUtil,
-      Effect$dAff._bind(Bench.runBenchAff(Test$dAffOperations.describe)(Test$dAffOperations.act))(t17 => Effect$dAff._bind(Bench.runBenchAff(Test$dParallelism.describe)(Test$dParallelism.act))(t18 => Effect$dAff._liftEffect(Effect$dConsole.log("\nTotal exec time: " + Bench.formatNumber(t1 / 1000.0 + t2 / 1000.0 + t3 / 1000.0 + t4 / 1000.0 + t5 / 1000.0 + t6 / 1000.0 + t7 / 1000.0 + t8 / 1000.0 + t9 / 1000.0 + t10 / 1000.0 + t11 / 1000.0 + t12 / 1000.0 + t13 / 1000.0 + t14 / 1000.0 + t15 / 1000.0 + t16 / 1000.0 + t17 / 1000.0 + t18 / 1000.0) + " ms\n"))))
+      Effect$dAff._bind(Bench.runBenchAff(Test$dAffOperations.describe)(Test$dAffOperations.act))(t17 => Effect$dAff._bind(Bench.runBenchAff(Test$dParallelism.describe)(Test$dParallelism.act))(t18 => Effect$dAff._liftEffect(Effect$dConsole.log("\n==================================================\n\nTotal exec time: " + Bench.formatNumber(t1 / 1000.0 + t2 / 1000.0 + t3 / 1000.0 + t4 / 1000.0 + t5 / 1000.0 + t6 / 1000.0 + t7 / 1000.0 + t8 / 1000.0 + t9 / 1000.0 + t10 / 1000.0 + t11 / 1000.0 + t12 / 1000.0 + t13 / 1000.0 + t14 / 1000.0 + t15 / 1000.0 + t16 / 1000.0 + t17 / 1000.0 + t18 / 1000.0) + " ms\n"))))
     )();
     fiber.run();
   };

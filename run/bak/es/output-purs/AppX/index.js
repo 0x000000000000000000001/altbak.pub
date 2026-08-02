@@ -44,7 +44,7 @@ var main = function __do() {
     return Effect_Aff.launchAff_(bind1(Bench.runBenchAff(Test_AffOperations.describe)(Test_AffOperations.act))(function (t17) {
         return bind1(Bench.runBenchAff(Test_Parallelism.describe)(Test_Parallelism.act))(function (t18) {
             var totalMs = t1 / 1000.0 + t2 / 1000.0 + t3 / 1000.0 + t4 / 1000.0 + t5 / 1000.0 + t6 / 1000.0 + t7 / 1000.0 + t8 / 1000.0 + t9 / 1000.0 + t10 / 1000.0 + t11 / 1000.0 + t12 / 1000.0 + t13 / 1000.0 + t14 / 1000.0 + t15 / 1000.0 + t16 / 1000.0 + t17 / 1000.0 + t18 / 1000.0;
-            return liftEffect(Effect_Console.log("\x0aTotal exec time: " + (Bench.formatNumber(totalMs) + " ms\x0a")));
+            return liftEffect(Effect_Console.log("\x0a==================================================\x0a\x0aTotal exec time: " + (Bench.formatNumber(totalMs) + " ms\x0a")));
         });
     }))();
 };

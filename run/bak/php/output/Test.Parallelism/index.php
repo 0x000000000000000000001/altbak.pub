@@ -158,12 +158,12 @@ function majTest_majParallelism_heavymajTask(int $n_0) {
 $GLOBALS['Test_Parallelism_heavyTask'] = __NAMESPACE__ . '\\majTest_majParallelism_heavymajTask';
 
 // Test_Parallelism_describe
-$GLOBALS['Test_Parallelism_describe'] = \Effect\Console\majEffect_majConsole_log("Parallelism (4 x Fib 42):");
+$GLOBALS['Test_Parallelism_describe'] = ($GLOBALS['Effect_Console_log'])("Parallelism (4 x Fib 42)");
 
 // Test_Parallelism_act
 $GLOBALS['Test_Parallelism_act'] = ((($GLOBALS['Effect_Aff_bindAff'])->{'bind'})((($GLOBALS['Test_Parallelism_traverse'])(function($v_0) {
   $__num = \func_num_args();
-  $__res = \Effect\Aff\majEffect_majAff_forkmajAff(\Test\Parallelism\majTest_majParallelism_heavymajTask(42));
+  $__res = ($GLOBALS['Effect_Aff_forkAff'])(\Test\Parallelism\majTest_majParallelism_heavymajTask(42));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -171,7 +171,7 @@ $GLOBALS['Test_Parallelism_act'] = ((($GLOBALS['Effect_Aff_bindAff'])->{'bind'})
   $__num = \func_num_args();
   $__res = ((($GLOBALS['Effect_Aff_bindAff'])->{'bind'})((($GLOBALS['Test_Parallelism_traverse'])($GLOBALS['Effect_Aff_joinFiber']))($fibers_0)))(function($results_1) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Effect_Aff_monadEffectAff'])->{'liftEffect'})(\Effect\Console\majEffect_majConsole_log(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("Sum of results: "))((($GLOBALS['Data_Show_showInt'])->{'show'})(($GLOBALS['Test_Parallelism_sum'])($results_1)))));
+  $__res = (($GLOBALS['Effect_Aff_monadEffectAff'])->{'liftEffect'})(($GLOBALS['Effect_Console_log'])(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("Sum of results: "))((($GLOBALS['Data_Show_showInt'])->{'show'})(($GLOBALS['Test_Parallelism_sum'])($results_1)))));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

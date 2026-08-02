@@ -29,7 +29,7 @@ var main = function __do() {
     var t12 = Bench.runBench(Test_LazyEvaluation.describe)(Test_LazyEvaluation.act)();
     var t13 = Bench.runBench(Test_ArrayOps.describe)(Test_ArrayOps.act)();
     var totalMs = t1 / 1000.0 + t2 / 1000.0 + t3 / 1000.0 + t4 / 1000.0 + t5 / 1000.0 + t6 / 1000.0 + t7 / 1000.0 + t8 / 1000.0 + t9 / 1000.0 + t10 / 1000.0 + t11 / 1000.0 + t12 / 1000.0 + t13 / 1000.0;
-    return Effect_Console.log("Total exec time: " + (Bench.formatNumber(totalMs) + " ms\x0a"))();
+    return Effect_Console.log("\x0a==================================================\x0a\x0aTotal exec time: " + (Bench.formatNumber(totalMs) + " ms\x0a"))();
 };
 export {
     main

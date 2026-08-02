@@ -11,7 +11,7 @@ import Data.Array (replicate)
 import Data.Foldable (sum)
 
 describe :: Effect Unit
-describe = log "Parallelism (4 x Fib 42):"
+describe = log "Parallelism (4 x Fib 42)"
 
 fib :: Int -> Int
 fib 0 = 0

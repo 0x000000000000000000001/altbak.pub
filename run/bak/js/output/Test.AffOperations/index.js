@@ -4,10 +4,10 @@ import * as Effect_Aff from "../Effect.Aff/index.js";
 import * as Effect_Class from "../Effect.Class/index.js";
 import * as Effect_Console from "../Effect.Console/index.js";
 var liftEffect = /* #__PURE__ */ Effect_Class.liftEffect(Effect_Aff.monadEffectAff);
-var describe = /* #__PURE__ */ Effect_Console.log("Aff Operations (Asynchronous Delays):");
-var act = /* #__PURE__ */ Effect_Aff.launchAff_(/* #__PURE__ */ Control_Bind.bind(Effect_Aff.bindAff)(/* #__PURE__ */ Effect_Aff.delay(10.0))(function () {
+var describe = /* #__PURE__ */ Effect_Console.log("Aff Operations (Asynchronous Delays)");
+var act = /* #__PURE__ */ Control_Bind.bind(Effect_Aff.bindAff)(/* #__PURE__ */ Effect_Aff.delay(10.0))(function () {
     return liftEffect(Effect_Console.log("10"));
-}));
+});
 export {
     describe,
     act

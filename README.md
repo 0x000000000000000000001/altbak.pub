@@ -58,7 +58,28 @@ Command: `./bin/run --x` (Skips runtimes lacking necessary FFI bindings like Sch
 ========================================================================================
 EXTENDED BENCHMARK RESULTS (file I/O, regex, STArray, asynchronous Aff)                                                                      
 ========================================================================================
-WIP. Usually +20% everywhere, when this is supported (e.g. JS or Go, but not Scheme)
+Benchmark               | JS            | Arista ES      | Go        
+----------------------- | ------------- | -------------- | --------- 
+AST Evaluation          | ~ 73 μs       | ~ 59 μs        | ~ 18 μs   
+Fibonacci               | ~ 51 μs       | ~ 36 μs        | ~ 2 μs    
+List Processing         | ~ 359 μs      | ~ 359 μs       | ~ 174 μs  
+Tail Call Optimization  | ~ 1219 μs     | ~ 1545 μs      | ~ 1785 μs 
+Deep Record Updates     | ~ 381 μs      | ~ 539 μs       | ~ 1608 μs 
+Ackermann               | ~ 214 μs      | ~ 197 μs       | ~ 29 μs   
+Church Numerals         | ~ 1792 μs     | ~ 1557 μs      | ~ 687 μs  
+Prime Sieve             | ~ 590 μs      | ~ 508 μs       | ~ 433 μs  
+Red-Black Tree          | ~ 99130 μs    | ~ 53782 μs     | ~ 46462 μs
+Polymorphism            | ~ 8445 μs     | ~ 7757 μs      | ~ 2555 μs 
+State Monad             | ~ 380 μs      | ~ 684 μs       | ~ 31 μs   
+Lazy Evaluation         | ~ 14146 μs    | ~ 11909 μs     | ~ 22095 μs
+Array Processing        | ~ 210 μs      | ~ 190 μs       | ~ 79 μs   
+File I/O                | ~ 401998 μs   | ~ 442611 μs    | ~ 421869 μs
+STArray Operations      | ~ 5 μs        | ~ 6 μs         | ~ 1 μs    
+String Operations       | ~ 5 μs        | ~ 6 μs         | ~ 0 μs    
+Aff Operations          | ~ 11372 μs    | ~ 10329 μs     | ~ 11035 μs
+Parallelism             | ~ 5863003 μs  | ~ 6028174 μs   | ~ 1181936 μs
+----------------------- | ------------- | -------------- | --------- 
+Total Execution Time    | ~ 6403.37 ms  | ~ 6560.25 ms   | ~ 1690.80 ms
 ```
 
 > [!WARNING]
