@@ -22,6 +22,11 @@ func FormatNumber(n float64) string {
 	return fmt.Sprintf("%.2f", n)
 }
 
+func KeepAlive() any {
+	select {}
+	return nil
+}
+
 
 // --- Auto-generated FFI wrappers ---
 var _Gopurs_BenchNow = // TAST: (ADT ["Effect","Effect"] [Number])
@@ -34,6 +39,12 @@ var _Gopurs_FormatNumber = // TAST: (Func [Number] String)
 gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[float64](arg0)
 	go_res := FormatNumber(go_arg0)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_KeepAlive = // TAST: (ADT ["Effect","Effect"] [(ADT ["Data","Unit","Unit"] [])])
+gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+
+	go_res := KeepAlive()
 	return gopurs_runtime.Box(go_res)
 })
 var _Gopurs_Opaque = // TAST: (Func [(TypeVar a)] (ADT ["Effect","Effect"] [(TypeVar a)]))

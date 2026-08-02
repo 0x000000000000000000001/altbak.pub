@@ -5,10 +5,14 @@ import (
 	sync "sync"
 	pkg_Data_Traversable "gopurs/output/Data.Traversable"
 	pkg_Effect_Aff "gopurs/output/Effect.Aff"
+	pkg_Data_Foldable "gopurs/output/Data.Foldable"
+	pkg_Data_Semiring "gopurs/output/Data.Semiring"
 	pkg_Effect_Console "gopurs/output/Effect.Console"
-	pkg_Data_Either "gopurs/output/Data.Either"
-	pkg_Data_Unit "gopurs/output/Data.Unit"
 	pkg_Data_Array "gopurs/output/Data.Array"
+	pkg_Data_Unit "gopurs/output/Data.Unit"
+	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
+	pkg_Data_Show "gopurs/output/Data.Show"
+	pkg_Data_Either "gopurs/output/Data.Either"
 )
 
 var cache_traverse gopurs_runtime.Value
@@ -18,6 +22,15 @@ func Get_traverse() gopurs_runtime.Value {
 		cache_traverse = gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Traversable.Get_traversableArray(), "traverse"), pkg_Effect_Aff.Get_applicativeAff())
 	})
 	return cache_traverse
+}
+
+var cache_sum gopurs_runtime.Value
+var once_sum sync.Once
+func Get_sum() gopurs_runtime.Value {
+	once_sum.Do(func() {
+		cache_sum = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableArray(), "foldl"), pkg_Data_Semiring.Get_intAdd(), gopurs_runtime.Int(0))
+	})
+	return cache_sum
 }
 
 var cache_fib gopurs_runtime.Value
@@ -46,7 +59,7 @@ var cache_describe gopurs_runtime.Value
 var once_describe sync.Once
 func Get_describe() gopurs_runtime.Value {
 	once_describe.Do(func() {
-		cache_describe = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str("Parallelism (40 x Fib 35):"))
+		cache_describe = gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str("Parallelism (4 x Fib 42):"))
 	})
 	return cache_describe
 }
@@ -55,15 +68,13 @@ var cache_act gopurs_runtime.Value
 var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
-		cache_act = gopurs_runtime.Apply(pkg_Effect_Aff.Get_void(), gopurs_runtime.Apply(pkg_Effect_Aff.Get_launchAff(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect_Aff.Get_bindAff(), "bind"), gopurs_runtime.Apply2(Get_traverse(), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(pkg_Effect_Aff.Get_forkAff(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect_Aff.Get_bindAff(), "bind"), gopurs_runtime.UncurriedApp2(pkg_Effect_Aff.Get__delay(), pkg_Data_Either.Get_Right(), gopurs_runtime.Float(0.0)), gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Effect_Aff.Get_applicativeAff(), "pure"), pkg_Data_Unit.Get_unit())
-})))
-}), gopurs_runtime.UncurriedApp2(pkg_Data_Array.Get_replicateImpl(), gopurs_runtime.Int(200), pkg_Data_Unit.Get_unit())), gopurs_runtime.Func(func(fibers_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect_Aff.Get_bindAff(), "bind"), gopurs_runtime.Apply2(Get_traverse(), pkg_Effect_Aff.Get_joinFiber(), fibers_0), gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Effect_Aff.Get_applicativeAff(), "pure"), pkg_Data_Unit.Get_unit())
+		cache_act = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect_Aff.Get_bindAff(), "bind"), gopurs_runtime.Apply2(Get_traverse(), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(pkg_Effect_Aff.Get_forkAff(), Call_heavyTask(42))
+}), gopurs_runtime.UncurriedApp2(pkg_Data_Array.Get_replicateImpl(), gopurs_runtime.Int(4), pkg_Data_Unit.Get_unit())), gopurs_runtime.Func(func(fibers_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect_Aff.Get_bindAff(), "bind"), gopurs_runtime.Apply2(Get_traverse(), pkg_Effect_Aff.Get_joinFiber(), fibers_0), gopurs_runtime.Func(func(results_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Effect_Aff.Get_monadEffectAff(), "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str("Sum of results: "), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showInt(), "show"), gopurs_runtime.Apply(Get_sum(), results_1)))))
 }))
-}))))
+}))
 	})
 	return cache_act
 }
@@ -103,7 +114,7 @@ func Call_heavyTask(n_0_loop int64) gopurs_runtime.Value {
 var n_0 int64 = n_0_loop
 _ = n_0
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect_Aff.Get_bindAff(), "bind"), gopurs_runtime.UncurriedApp2(pkg_Effect_Aff.Get__delay(), pkg_Data_Either.Get_Right(), gopurs_runtime.Float(0.0)), gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Effect_Aff.Get_applicativeAff(), "pure"), pkg_Data_Unit.Get_unit())
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Effect_Aff.Get_applicativeAff(), "pure"), gopurs_runtime.Int(Call_fib(n_0)))
 }))
 }
 

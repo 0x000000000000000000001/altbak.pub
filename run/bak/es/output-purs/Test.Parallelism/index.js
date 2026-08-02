@@ -2,13 +2,20 @@
 import * as Control_Applicative from "../Control.Applicative/index.js";
 import * as Control_Bind from "../Control.Bind/index.js";
 import * as Data_Array from "../Data.Array/index.js";
+import * as Data_Foldable from "../Data.Foldable/index.js";
+import * as Data_Semiring from "../Data.Semiring/index.js";
+import * as Data_Show from "../Data.Show/index.js";
 import * as Data_Traversable from "../Data.Traversable/index.js";
 import * as Data_Unit from "../Data.Unit/index.js";
 import * as Effect_Aff from "../Effect.Aff/index.js";
+import * as Effect_Class from "../Effect.Class/index.js";
 import * as Effect_Console from "../Effect.Console/index.js";
 var bind = /* #__PURE__ */ Control_Bind.bind(Effect_Aff.bindAff);
 var pure = /* #__PURE__ */ Control_Applicative.pure(Effect_Aff.applicativeAff);
 var traverse = /* #__PURE__ */ Data_Traversable.traverse(Data_Traversable.traversableArray)(Effect_Aff.applicativeAff);
+var liftEffect = /* #__PURE__ */ Effect_Class.liftEffect(Effect_Aff.monadEffectAff);
+var show = /* #__PURE__ */ Data_Show.show(Data_Show.showInt);
+var sum = /* #__PURE__ */ Data_Foldable.sum(Data_Foldable.foldableArray)(Data_Semiring.semiringInt);
 var fib = function (v) {
     if (v === 0) {
         return 0;
@@ -20,18 +27,17 @@ var fib = function (v) {
 };
 var heavyTask = function (n) {
     return bind(Effect_Aff.delay(0.0))(function () {
-        var _res = fib(n);
-        return pure(Data_Unit.unit);
+        return pure(fib(n));
     });
 };
-var describe = /* #__PURE__ */ Effect_Console.log("Parallelism (40 x Fib 35):");
-var act = /* #__PURE__ */ Effect_Aff.launchAff_(/* #__PURE__ */ bind(/* #__PURE__ */ traverse(function (v) {
-    return Effect_Aff.forkAff(heavyTask(35));
-})(/* #__PURE__ */ Data_Array.replicate(200)(Data_Unit.unit)))(function (fibers) {
-    return bind(traverse(Effect_Aff.joinFiber)(fibers))(function () {
-        return pure(Data_Unit.unit);
+var describe = /* #__PURE__ */ Effect_Console.log("Parallelism (4 x Fib 42):");
+var act = /* #__PURE__ */ bind(/* #__PURE__ */ traverse(function (v) {
+    return Effect_Aff.forkAff(heavyTask(42));
+})(/* #__PURE__ */ Data_Array.replicate(4)(Data_Unit.unit)))(function (fibers) {
+    return bind(traverse(Effect_Aff.joinFiber)(fibers))(function (results) {
+        return liftEffect(Effect_Console.log("Sum of results: " + show(sum(results))));
     });
-}));
+});
 export {
     describe,
     fib,

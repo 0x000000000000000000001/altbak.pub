@@ -4,7 +4,9 @@ import Prelude
 
 import Effect (Effect)
 import Effect.Console (log)
-import Bench (runBench, formatNumber)
+import Effect.Class (liftEffect)
+import Effect.Aff (launchAff_)
+import Bench (runBench, runBenchAff, formatNumber, keepAlive)
 
 import Test.Fib as Fib
 import Test.AstTree as AstTree
@@ -42,11 +44,18 @@ main = do
   t12 <- runBench LazyEvaluation.describe LazyEvaluation.act
   t13 <- runBench ArrayOps.describe ArrayOps.act
 
+  -- extended tests
+  ---- sync
   t14 <- runBench FileOps.describe FileOps.act
   t15 <- runBench STArray.describe STArray.act
   t16 <- runBench StringOps.describe StringOps.act
-  t17 <- runBench AffOperations.describe AffOperations.act
-  t18 <- runBench Parallelism.describe Parallelism.act
 
-  let totalMs = (t1 / 1000.0) + (t2 / 1000.0) + (t3 / 1000.0) + (t4 / 1000.0) + (t5 / 1000.0) + (t6 / 1000.0) + (t7 / 1000.0) + (t8 / 1000.0) + (t9 / 1000.0) + (t10 / 1000.0) + (t11 / 1000.0) + (t12 / 1000.0) + (t13 / 1000.0) + (t14 / 1000.0) + (t15 / 1000.0) + (t16 / 1000.0) + (t17 / 1000.0) + (t18 / 1000.0)
-  log $ "Total exec time: " <> formatNumber totalMs <> " ms\n"
+  ---- async
+  launchAff_ do
+    t17 <- runBenchAff AffOperations.describe AffOperations.act
+    t18 <- runBenchAff Parallelism.describe Parallelism.act
+
+    let totalMs = (t1 / 1000.0) + (t2 / 1000.0) + (t3 / 1000.0) + (t4 / 1000.0) + (t5 / 1000.0) + (t6 / 1000.0) + (t7 / 1000.0) + (t8 / 1000.0) + (t9 / 1000.0) + (t10 / 1000.0) + (t11 / 1000.0) + (t12 / 1000.0) + (t13 / 1000.0) + (t14 / 1000.0) + (t15 / 1000.0) + (t16 / 1000.0) + (t17 / 1000.0) + (t18 / 1000.0)
+    liftEffect $ log $ "\nTotal exec time: " <> formatNumber totalMs <> " ms\n"
+
+  keepAlive

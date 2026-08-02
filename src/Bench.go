@@ -18,3 +18,8 @@ func Opaque(a any) func() any {
 func FormatNumber(n float64) string {
 	return fmt.Sprintf("%.2f", n)
 }
+
+func KeepAlive() any {
+	select {}
+	return nil
+}

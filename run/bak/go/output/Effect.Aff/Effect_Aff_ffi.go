@@ -1,11 +1,12 @@
 package Effect_Aff
 
-import "gopurs/output/gopurs_runtime"
 
 import (
 	"context"
 	"fmt"
 	"time"
+
+	"gopurs/output/gopurs_runtime"
 )
 
 type AffFn = func(context.Context) (any, error)
@@ -141,30 +142,42 @@ func makeFiberNative(aff AffFn) map[string]any {
 
 	fiber := map[string]any{
 		"run": func(_ any) any { return nil },
-		"kill": func(errAny any, onError func(any) any, onSuccess func(any) any) any {
-			return func(_ any) any {
-				cancel()
-				return func(_ any) any {
-					res := <-resultChan
-					if res.err != nil {
-						return onError(res.err)
+		"kill": func(errAny any) any {
+			return func(onErrorAny any) any {
+				return func(onSuccessAny any) any {
+					return func(_ any) any {
+						cancel()
+						return func(_ any) any {
+							res := <-resultChan
+							onError := onErrorAny.(gopurs_runtime.Value)
+							onSuccess := onSuccessAny.(gopurs_runtime.Value)
+							if res.err != nil {
+								eff := gopurs_runtime.Apply(onError, gopurs_runtime.Box(res.err))
+								return gopurs_runtime.Apply(eff, gopurs_runtime.Value{})
+							}
+							eff := gopurs_runtime.Apply(onSuccess, gopurs_runtime.Box(res.val))
+							return gopurs_runtime.Apply(eff, gopurs_runtime.Value{})
+						}
 					}
-					return onSuccess(res.val)
 				}
 			}
 		},
-		"join": func(onError func(any) any, onSuccess func(any) any) any {
-			return func(_ any) any {
+		"join": func(onErrorAny any) any {
+			return func(onSuccessAny any) any {
 				return func(_ any) any {
 					res := <-resultChan
+					onError := onErrorAny.(gopurs_runtime.Value)
+					onSuccess := onSuccessAny.(gopurs_runtime.Value)
 					if res.err != nil {
-						return onError(res.err)
+						eff := gopurs_runtime.Apply(onError, gopurs_runtime.Box(res.err))
+						return gopurs_runtime.Apply(eff, gopurs_runtime.Value{})
 					}
-					return onSuccess(res.val)
+					eff := gopurs_runtime.Apply(onSuccess, gopurs_runtime.Box(res.val))
+					return gopurs_runtime.Apply(eff, gopurs_runtime.Value{})
 				}
 			}
 		},
-		"onComplete": func(onComplete func(any) any) any {
+		"onComplete": func(onCompleteAny any) any {
 			return func(_ any) any {
 				return func(_ any) any {
 					return nil

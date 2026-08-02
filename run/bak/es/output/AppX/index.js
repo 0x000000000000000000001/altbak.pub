@@ -1,4 +1,5 @@
 import * as Bench from "../Bench/index.js";
+import * as Effect$dAff from "../Effect.Aff/index.js";
 import * as Effect$dConsole from "../Effect.Console/index.js";
 import * as Test$dAckermann from "../Test.Ackermann/index.js";
 import * as Test$dAffOperations from "../Test.AffOperations/index.js";
@@ -37,9 +38,12 @@ const main = /* #__PURE__ */ (() => {
     const t14 = Bench.runBench(Test$dFileOps.describe)(Test$dFileOps.act)();
     const t15 = Bench.runBench(Test$dSTArray.describe)(Test$dSTArray.act)();
     const t16 = Bench.runBench(Test$dStringOps.describe)(Test$dStringOps.act)();
-    const t17 = Bench.runBench(Test$dAffOperations.describe)(Test$dAffOperations.act)();
-    const t18 = Bench.runBench(Test$dParallelism.describe)(Test$dParallelism.act)();
-    return Effect$dConsole.log("Total exec time: " + Bench.formatNumber(t1 / 1000.0 + t2 / 1000.0 + t3 / 1000.0 + t4 / 1000.0 + t5 / 1000.0 + t6 / 1000.0 + t7 / 1000.0 + t8 / 1000.0 + t9 / 1000.0 + t10 / 1000.0 + t11 / 1000.0 + t12 / 1000.0 + t13 / 1000.0 + t14 / 1000.0 + t15 / 1000.0 + t16 / 1000.0 + t17 / 1000.0 + t18 / 1000.0) + " ms\n")();
+    const fiber = Effect$dAff._makeFiber(
+      Effect$dAff.ffiUtil,
+      Effect$dAff._bind(Bench.runBenchAff(Test$dAffOperations.describe)(Test$dAffOperations.act))(t17 => Effect$dAff._bind(Bench.runBenchAff(Test$dParallelism.describe)(Test$dParallelism.act))(t18 => Effect$dAff._liftEffect(Effect$dConsole.log("\nTotal exec time: " + Bench.formatNumber(t1 / 1000.0 + t2 / 1000.0 + t3 / 1000.0 + t4 / 1000.0 + t5 / 1000.0 + t6 / 1000.0 + t7 / 1000.0 + t8 / 1000.0 + t9 / 1000.0 + t10 / 1000.0 + t11 / 1000.0 + t12 / 1000.0 + t13 / 1000.0 + t14 / 1000.0 + t15 / 1000.0 + t16 / 1000.0 + t17 / 1000.0 + t18 / 1000.0) + " ms\n"))))
+    )();
+    fiber.run();
+    return Bench.keepAlive();
   };
 })();
 export {main};

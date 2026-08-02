@@ -397,6 +397,17 @@ return Call_sum(dictFoldable_0_box, dictSemiring_1_box)
 	return cache_sum
 }
 
+var cache_sum__gopurs_runtime_Value_2374138440 gopurs_runtime.Value
+var once_sum__gopurs_runtime_Value_2374138440 sync.Once
+func Get_sum__gopurs_runtime_Value_2374138440() gopurs_runtime.Value {
+	once_sum__gopurs_runtime_Value_2374138440.Do(func() {
+		cache_sum__gopurs_runtime_Value_2374138440 = gopurs_runtime.Func2(func(dictFoldable_0_box gopurs_runtime.Value, dictSemiring_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_sum__gopurs_runtime_Value_2374138440(dictFoldable_0_box, dictSemiring_1_box)
+})
+	})
+	return cache_sum__gopurs_runtime_Value_2374138440
+}
+
 var cache_foldableTuple gopurs_runtime.Value
 var once_foldableTuple sync.Once
 func Get_foldableTuple() gopurs_runtime.Value {
@@ -1818,6 +1829,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFoldable_0, "foldl"), 
 }
 
 func Call_sum(dictFoldable_0_loop gopurs_runtime.Value, dictSemiring_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictFoldable_0 gopurs_runtime.Value = dictFoldable_0_loop
+_ = dictFoldable_0
+var dictSemiring_1 gopurs_runtime.Value = dictSemiring_1_loop
+_ = dictSemiring_1
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFoldable_0, "foldl"), gopurs_runtime.RecordGet(dictSemiring_1, "add"), gopurs_runtime.RecordGet(dictSemiring_1, "zero"))
+}
+
+func Call_sum__gopurs_runtime_Value_2374138440(dictFoldable_0_loop gopurs_runtime.Value, dictSemiring_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictFoldable_0 gopurs_runtime.Value = dictFoldable_0_loop
 _ = dictFoldable_0
 var dictSemiring_1 gopurs_runtime.Value = dictSemiring_1_loop
