@@ -55,10 +55,6 @@ Total Execution Time    | ~ 125.77 ms   | ~ 81.21 ms     | ~ 67.56 ms| ~ 46.87 m
 > **About the PHP results**
 > Please note that the `phpurs` backend is a brand new, completely experimental, and homemade compiler built entirely from scratch for this repository. Its execution time is not yet representative of PHP's actual performance limit. The currently displayed time (~1.5s) is actively undergoing optimization and debugging!
 
-> [!NOTE]
-> **A 40 year old dinosaur steals the show!**
-> One of the biggest surprises here is how incredibly performant **Chez Scheme** proves to be. It completely crushes the execution times of modern, highly optimized engines. It is quite a shock to see this "40 year old dinosaur" (first released in 1984!) comfortably outpace standard Node.js, the Arista backend, and Erlang BEAM across a wide array of functional workloads.
-
 ### Extended benchmark results (I/O, mutability, async)
 Command: `./bin/run --x` (Skips runtimes lacking necessary FFI bindings like Scheme and Erlang)
 
