@@ -27,12 +27,22 @@ func Get_distributiveIdentity() gopurs_runtime.Value {
 	once_distributiveIdentity.Do(func() {
 		cache_distributiveIdentity = gopurs_runtime.RecordDict3("Functor0", "collect", "distribute", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Identity.Get_functorIdentity()
-}), gopurs_runtime.Func2(func(dictFunctor_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(dictFunctor_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_1, x_2)
 }))
+_ = __local_var_2_0
+return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_2_0, x_3)
+})
+})
 }), gopurs_runtime.Func(func(dictFunctor_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_0, "map"), pkg_Unsafe_Coerce.Get_unsafeCoerce())
+__local_var_1_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_0, "map"), pkg_Unsafe_Coerce.Get_unsafeCoerce())
+_ = __local_var_1_1
+return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_1_1, x_2)
+})
 }))
 	})
 	return cache_distributiveIdentity
@@ -66,7 +76,8 @@ func Get_distributiveFunction() gopurs_runtime.Value {
 	once_distributiveFunction.Do(func() {
 		cache_distributiveFunction = gopurs_runtime.RecordDict3("Functor0", "collect", "distribute", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Functor.Get_functorFn()
-}), gopurs_runtime.Func2(func(dictFunctor_0 gopurs_runtime.Value, f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(dictFunctor_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_distributiveFunction(), "distribute"), dictFunctor_0)
 _ = __local_var_2_0
 __local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_0, "map"), f_1)
@@ -74,10 +85,15 @@ _ = __local_var_3_1
 return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(__local_var_3_1, x_4))
 })
-}), gopurs_runtime.Func3(func(dictFunctor_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value, e_2 gopurs_runtime.Value) gopurs_runtime.Value {
+})
+}), gopurs_runtime.Func(func(dictFunctor_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(e_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(v_3, e_2)
 }), a_1)
+})
+})
 }))
 	})
 	return cache_distributiveFunction

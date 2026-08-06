@@ -107,7 +107,8 @@ var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
 __local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
-return gopurs_runtime.Func2(func(mb_2 gopurs_runtime.Value, m_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(mb_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(m_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}), "bind"), mb_2, gopurs_runtime.Func(func(b_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
@@ -125,6 +126,7 @@ end_branch_1:
 return __t1
 }))
 })
+})
 }
 
 func Call_unlessM(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -132,7 +134,8 @@ var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
 __local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
-return gopurs_runtime.Func2(func(mb_2 gopurs_runtime.Value, m_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(mb_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(m_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}), "bind"), mb_2, gopurs_runtime.Func(func(b_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
@@ -157,6 +160,7 @@ __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 end_branch_1:
 return __t1
 }))
+})
 })
 }
 
@@ -189,12 +193,14 @@ var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
 __local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{})
 _ = __local_var_1_0
-return gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, a_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "bind"), f_2, gopurs_runtime.Func(func(f_prime_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "bind"), a_3, gopurs_runtime.Func(func(a_prime_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Apply(f_prime_4, a_prime_5))
 }))
 }))
+})
 })
 }
 

@@ -25,8 +25,12 @@ func Get_monadReaderFun() gopurs_runtime.Value {
 	once_monadReaderFun.Do(func() {
 		cache_monadReaderFun = gopurs_runtime.RecordDict2("MonadAsk0", "local", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_monadAskFun()
-}), gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, g_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(g_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(g_1, gopurs_runtime.Apply(f_0, x_2))
+})
+})
 }))
 	})
 	return cache_monadReaderFun

@@ -121,12 +121,18 @@ var cache_heytingAlgebraUnit gopurs_runtime.Value
 var once_heytingAlgebraUnit sync.Once
 func Get_heytingAlgebraUnit() gopurs_runtime.Value {
 	once_heytingAlgebraUnit.Do(func() {
-		cache_heytingAlgebraUnit = gopurs_runtime.RecordDict([]string{"conj", "disj", "ff", "implies", "not", "tt"}, []gopurs_runtime.Value{gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_heytingAlgebraUnit = gopurs_runtime.RecordDict([]string{"conj", "disj", "ff", "implies", "not", "tt"}, []gopurs_runtime.Value{gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Unit.Get_unit()
-}), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+})
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Unit.Get_unit()
-}), pkg_Data_Unit.Get_unit(), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+})
+}), pkg_Data_Unit.Get_unit(), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Unit.Get_unit()
+})
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Unit.Get_unit()
 }), pkg_Data_Unit.Get_unit()})
@@ -138,18 +144,36 @@ var cache_heytingAlgebraRecordNil gopurs_runtime.Value
 var once_heytingAlgebraRecordNil sync.Once
 func Get_heytingAlgebraRecordNil() gopurs_runtime.Value {
 	once_heytingAlgebraRecordNil.Do(func() {
-		cache_heytingAlgebraRecordNil = gopurs_runtime.RecordDict([]string{"conjRecord", "disjRecord", "ffRecord", "impliesRecord", "notRecord", "ttRecord"}, []gopurs_runtime.Value{gopurs_runtime.Func3(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value, v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_heytingAlgebraRecordNil = gopurs_runtime.RecordDict([]string{"conjRecord", "disjRecord", "ffRecord", "impliesRecord", "notRecord", "ttRecord"}, []gopurs_runtime.Value{gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict0()
-}), gopurs_runtime.Func3(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value, v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+})
+})
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict0()
-}), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+})
+})
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict0()
-}), gopurs_runtime.Func3(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value, v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+})
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict0()
-}), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+})
+})
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict0()
-}), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+})
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict0()
+})
 })})
 	})
 	return cache_heytingAlgebraRecordNil
@@ -159,12 +183,18 @@ var cache_heytingAlgebraProxy gopurs_runtime.Value
 var once_heytingAlgebraProxy sync.Once
 func Get_heytingAlgebraProxy() gopurs_runtime.Value {
 	once_heytingAlgebraProxy.Do(func() {
-		cache_heytingAlgebraProxy = gopurs_runtime.RecordDict([]string{"conj", "disj", "ff", "implies", "not", "tt"}, []gopurs_runtime.Value{gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_heytingAlgebraProxy = gopurs_runtime.RecordDict([]string{"conj", "disj", "ff", "implies", "not", "tt"}, []gopurs_runtime.Value{gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}
-}), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+})
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}
-}), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}, gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+})
+}), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}
+})
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}
 }), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}})
@@ -253,8 +283,10 @@ var cache_heytingAlgebraBoolean gopurs_runtime.Value
 var once_heytingAlgebraBoolean sync.Once
 func Get_heytingAlgebraBoolean() gopurs_runtime.Value {
 	once_heytingAlgebraBoolean.Do(func() {
-		cache_heytingAlgebraBoolean = gopurs_runtime.RecordDict([]string{"conj", "disj", "ff", "implies", "not", "tt"}, []gopurs_runtime.Value{Get_boolConj(), Get_boolDisj(), gopurs_runtime.Bool(false), gopurs_runtime.Func2(func(a_0 gopurs_runtime.Value, b_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_heytingAlgebraBoolean(), "disj"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_heytingAlgebraBoolean(), "not"), a_0), b_1)
+		cache_heytingAlgebraBoolean = gopurs_runtime.RecordDict([]string{"conj", "disj", "ff", "implies", "not", "tt"}, []gopurs_runtime.Value{Get_boolConj(), Get_boolDisj(), gopurs_runtime.Bool(false), gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_heytingAlgebraBoolean(), "disj"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_heytingAlgebraBoolean(), "not"), a_0), b_1).IntVal) != (0))
+})
 }), Get_boolNot(), gopurs_runtime.Bool(true)})
 	})
 	return cache_heytingAlgebraBoolean
@@ -461,16 +493,30 @@ ff1_1_0 := gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "ff")
 _ = ff1_1_0
 tt1_2_1 := gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "tt")
 _ = tt1_2_1
-return gopurs_runtime.RecordDict([]string{"conj", "disj", "ff", "implies", "not", "tt"}, []gopurs_runtime.Value{gopurs_runtime.Func3(func(f_3 gopurs_runtime.Value, g_4 gopurs_runtime.Value, a_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict([]string{"conj", "disj", "ff", "implies", "not", "tt"}, []gopurs_runtime.Value{gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(g_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "conj"), gopurs_runtime.Apply(f_3, a_5), gopurs_runtime.Apply(g_4, a_5))
-}), gopurs_runtime.Func3(func(f_3 gopurs_runtime.Value, g_4 gopurs_runtime.Value, a_5 gopurs_runtime.Value) gopurs_runtime.Value {
+})
+})
+}), gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(g_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "disj"), gopurs_runtime.Apply(f_3, a_5), gopurs_runtime.Apply(g_4, a_5))
+})
+})
 }), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return ff1_1_0
-}), gopurs_runtime.Func3(func(f_3 gopurs_runtime.Value, g_4 gopurs_runtime.Value, a_5 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(g_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "implies"), gopurs_runtime.Apply(f_3, a_5), gopurs_runtime.Apply(g_4, a_5))
-}), gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, a_4 gopurs_runtime.Value) gopurs_runtime.Value {
+})
+})
+}), gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "not"), gopurs_runtime.Apply(f_3, a_4))
+})
 }), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return tt1_2_1
 })})
@@ -489,32 +535,50 @@ ff1_4_0 := gopurs_runtime.RecordGet(dictHeytingAlgebra_3, "ff")
 _ = ff1_4_0
 tt1_5_1 := gopurs_runtime.RecordGet(dictHeytingAlgebra_3, "tt")
 _ = tt1_5_1
-return gopurs_runtime.RecordDict([]string{"conjRecord", "disjRecord", "ffRecord", "impliesRecord", "notRecord", "ttRecord"}, []gopurs_runtime.Value{gopurs_runtime.Func3(func(v_6 gopurs_runtime.Value, ra_7 gopurs_runtime.Value, rb_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict([]string{"conjRecord", "disjRecord", "ffRecord", "impliesRecord", "notRecord", "ttRecord"}, []gopurs_runtime.Value{gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(ra_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(rb_8 gopurs_runtime.Value) gopurs_runtime.Value {
 key_9_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil})
 _ = key_9_2
 get_10_3 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), key_9_2)
 _ = get_10_3
 return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), key_9_2, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra_3, "conj"), gopurs_runtime.Apply(get_10_3, ra_7), gopurs_runtime.Apply(get_10_3, rb_8)), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictHeytingAlgebraRecord_2, "conjRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}, ra_7, rb_8))
-}), gopurs_runtime.Func3(func(v_6 gopurs_runtime.Value, ra_7 gopurs_runtime.Value, rb_8 gopurs_runtime.Value) gopurs_runtime.Value {
+})
+})
+}), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(ra_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(rb_8 gopurs_runtime.Value) gopurs_runtime.Value {
 key_9_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil})
 _ = key_9_4
 get_10_5 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), key_9_4)
 _ = get_10_5
 return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), key_9_4, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra_3, "disj"), gopurs_runtime.Apply(get_10_5, ra_7), gopurs_runtime.Apply(get_10_5, rb_8)), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictHeytingAlgebraRecord_2, "disjRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}, ra_7, rb_8))
-}), gopurs_runtime.Func2(func(v_6 gopurs_runtime.Value, row_7 gopurs_runtime.Value) gopurs_runtime.Value {
+})
+})
+}), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(row_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}), ff1_4_0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebraRecord_2, "ffRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}, row_7))
-}), gopurs_runtime.Func3(func(v_6 gopurs_runtime.Value, ra_7 gopurs_runtime.Value, rb_8 gopurs_runtime.Value) gopurs_runtime.Value {
+})
+}), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(ra_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(rb_8 gopurs_runtime.Value) gopurs_runtime.Value {
 key_9_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil})
 _ = key_9_6
 get_10_7 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), key_9_6)
 _ = get_10_7
 return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), key_9_6, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra_3, "implies"), gopurs_runtime.Apply(get_10_7, ra_7), gopurs_runtime.Apply(get_10_7, rb_8)), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictHeytingAlgebraRecord_2, "impliesRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}, ra_7, rb_8))
-}), gopurs_runtime.Func2(func(v_6 gopurs_runtime.Value, row_7 gopurs_runtime.Value) gopurs_runtime.Value {
+})
+})
+}), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(row_7 gopurs_runtime.Value) gopurs_runtime.Value {
 key_8_8 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil})
 _ = key_8_8
 return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), key_8_8, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictHeytingAlgebra_3, "not"), gopurs_runtime.Apply2(pkg_Record_Unsafe.Get_unsafeGet(), key_8_8, row_7)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebraRecord_2, "notRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}, row_7))
-}), gopurs_runtime.Func2(func(v_6 gopurs_runtime.Value, row_7 gopurs_runtime.Value) gopurs_runtime.Value {
+})
+}), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(row_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}), tt1_5_1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebraRecord_2, "ttRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}, row_7))
+})
 })})
 }
 

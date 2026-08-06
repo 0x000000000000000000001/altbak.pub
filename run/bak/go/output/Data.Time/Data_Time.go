@@ -54,7 +54,7 @@ var once_showTime sync.Once
 func Get_showTime() gopurs_runtime.Value {
 	once_showTime.Do(func() {
 		cache_showTime = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str("(Time "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_showHour(), "show"), gopurs_runtime.Int((*Constructor_Time)(v_0.UnsafePtr).V0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str(" "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_showMinute(), "show"), gopurs_runtime.Int((*Constructor_Time)(v_0.UnsafePtr).V1)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str(" "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_showSecond(), "show"), gopurs_runtime.Int((*Constructor_Time)(v_0.UnsafePtr).V2)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str(" "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_showMillisecond(), "show"), gopurs_runtime.Int((*Constructor_Time)(v_0.UnsafePtr).V3)), gopurs_runtime.Str(")")))))))))
+return gopurs_runtime.Str(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str("(Time "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_showHour(), "show"), gopurs_runtime.Int((*Constructor_Time)(v_0.UnsafePtr).V0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str(" "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_showMinute(), "show"), gopurs_runtime.Int((*Constructor_Time)(v_0.UnsafePtr).V1)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str(" "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_showSecond(), "show"), gopurs_runtime.Int((*Constructor_Time)(v_0.UnsafePtr).V2)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str(" "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_showMillisecond(), "show"), gopurs_runtime.Int((*Constructor_Time)(v_0.UnsafePtr).V3)), gopurs_runtime.Str(")"))))))))).StrVal())
 }))
 	})
 	return cache_showTime
@@ -174,8 +174,10 @@ var cache_eqTime gopurs_runtime.Value
 var once_eqTime sync.Once
 func Get_eqTime() gopurs_runtime.Value {
 	once_eqTime.Do(func() {
-		cache_eqTime = gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, y_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_eqHour(), "eq"), gopurs_runtime.Int((*Constructor_Time)(x_0.UnsafePtr).V0), gopurs_runtime.Int((*Constructor_Time)(y_1.UnsafePtr).V0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_eqMinute(), "eq"), gopurs_runtime.Int((*Constructor_Time)(x_0.UnsafePtr).V1), gopurs_runtime.Int((*Constructor_Time)(y_1.UnsafePtr).V1))), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_eqSecond(), "eq"), gopurs_runtime.Int((*Constructor_Time)(x_0.UnsafePtr).V2), gopurs_runtime.Int((*Constructor_Time)(y_1.UnsafePtr).V2))), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_eqMillisecond(), "eq"), gopurs_runtime.Int((*Constructor_Time)(x_0.UnsafePtr).V3), gopurs_runtime.Int((*Constructor_Time)(y_1.UnsafePtr).V3)))
+		cache_eqTime = gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_eqHour(), "eq"), gopurs_runtime.Int((*Constructor_Time)(x_0.UnsafePtr).V0), gopurs_runtime.Int((*Constructor_Time)(y_1.UnsafePtr).V0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_eqMinute(), "eq"), gopurs_runtime.Int((*Constructor_Time)(x_0.UnsafePtr).V1), gopurs_runtime.Int((*Constructor_Time)(y_1.UnsafePtr).V1))), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_eqSecond(), "eq"), gopurs_runtime.Int((*Constructor_Time)(x_0.UnsafePtr).V2), gopurs_runtime.Int((*Constructor_Time)(y_1.UnsafePtr).V2))), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_eqMillisecond(), "eq"), gopurs_runtime.Int((*Constructor_Time)(x_0.UnsafePtr).V3), gopurs_runtime.Int((*Constructor_Time)(y_1.UnsafePtr).V3))).IntVal) != (0))
+})
 }))
 	})
 	return cache_eqTime
@@ -187,7 +189,8 @@ func Get_ordTime() gopurs_runtime.Value {
 	once_ordTime.Do(func() {
 		cache_ordTime = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_eqTime()
-}), gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, y_1 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_1 gopurs_runtime.Value) gopurs_runtime.Value {
 v_2_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_ordHour(), "compare"), gopurs_runtime.Int((*Constructor_Time)(x_0.UnsafePtr).V0), gopurs_runtime.Int((*Constructor_Time)(y_1.UnsafePtr).V0))
 _ = v_2_0
 var __t5 gopurs_runtime.Value
@@ -258,6 +261,7 @@ __t5 = __t4
 }
 end_branch_5:
 return __t5
+})
 }))
 	})
 	return cache_ordTime
@@ -431,22 +435,50 @@ var t_2 gopurs_runtime.Value = t_2_loop
 _ = t_2
 d_prime_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "fromDuration"), d_1)
 _ = d_prime_3_0
-wholeDays_4_1 := gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingNumber(), "div"), d_prime_3_0, gopurs_runtime.Float(86400000.0)))
+wholeDays_4_1 := gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingNumber(), "div"), d_prime_3_0, gopurs_runtime.Float(86400000.0))).FloatVal()
 _ = wholeDays_4_1
-msAdjusted_5_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupMilliseconds(), "append"), gopurs_runtime.Float(Call_timeToMillis(t_2)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupMilliseconds(), "append"), d_prime_3_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationMilliseconds(), "toDuration"), gopurs_runtime.Apply(pkg_Data_Time_Duration.Get_negate(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationMilliseconds(), "fromDuration"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationDays(), "fromDuration"), wholeDays_4_1))))))
+msAdjusted_5_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupMilliseconds(), "append"), gopurs_runtime.Float(Call_timeToMillis(t_2)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupMilliseconds(), "append"), d_prime_3_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationMilliseconds(), "toDuration"), gopurs_runtime.Apply(pkg_Data_Time_Duration.Get_negate(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationMilliseconds(), "fromDuration"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationDays(), "fromDuration"), gopurs_runtime.Float(wholeDays_4_1)))))))
 _ = msAdjusted_5_2
-var __t4 gopurs_runtime.Value
+var __t6 gopurs_runtime.Value
+{
+var __t7 gopurs_runtime.Value
 {
 if (msAdjusted_5_2.FloatVal()) > (Get_maxTime().FloatVal()) {
-__t4 = gopurs_runtime.Float(1.0)
-goto end_branch_4
+__t7 = gopurs_runtime.Bool(true)
+goto end_branch_7
 } else {
 
 }
 }
 {
+__t7 = gopurs_runtime.Bool(false)
+}
+end_branch_7:
+if (__t7.IntVal) != (0) {
+__t6 = gopurs_runtime.Float(1.0)
+goto end_branch_6
+} else {
+
+}
+}
+{
+var __t4 gopurs_runtime.Value
+{
+var __t5 gopurs_runtime.Value
+{
 if (msAdjusted_5_2.FloatVal()) < (Get_minTime().FloatVal()) {
-__t4 = gopurs_runtime.Apply(Get_negate(), gopurs_runtime.Float(1.0))
+__t5 = gopurs_runtime.Bool(true)
+goto end_branch_5
+} else {
+
+}
+}
+{
+__t5 = gopurs_runtime.Bool(false)
+}
+end_branch_5:
+if (__t5.IntVal) != (0) {
+__t4 = gopurs_runtime.Float(gopurs_runtime.Apply(Get_negate(), gopurs_runtime.Float(1.0)).FloatVal())
 goto end_branch_4
 } else {
 
@@ -456,9 +488,12 @@ goto end_branch_4
 __t4 = gopurs_runtime.Float(0.0)
 }
 end_branch_4:
-wrap_6_3 := __t4
+__t6 = gopurs_runtime.Float(__t4.FloatVal())
+}
+end_branch_6:
+wrap_6_3 := __t6
 _ = wrap_6_3
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupDays(), "append"), wholeDays_4_1, wrap_6_3), Call_millisToTime(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupMilliseconds(), "append"), msAdjusted_5_2, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "mul"), gopurs_runtime.Float(86400000.0), gopurs_runtime.Apply(Get_negate(), wrap_6_3))).FloatVal())})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupDays(), "append"), gopurs_runtime.Float(wholeDays_4_1), wrap_6_3), Call_millisToTime(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupMilliseconds(), "append"), msAdjusted_5_2, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "mul"), gopurs_runtime.Float(86400000.0), gopurs_runtime.Apply(Get_negate(), wrap_6_3))).FloatVal())})}
 }
 
 

@@ -21,8 +21,10 @@ var cache_lazyFn gopurs_runtime.Value
 var once_lazyFn sync.Once
 func Get_lazyFn() gopurs_runtime.Value {
 	once_lazyFn.Do(func() {
-		cache_lazyFn = gopurs_runtime.RecordDict1("defer", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_lazyFn = gopurs_runtime.RecordDict1("defer", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(f_0, pkg_Data_Unit.Get_unit(), x_1)
+})
 }))
 	})
 	return cache_lazyFn

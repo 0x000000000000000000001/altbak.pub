@@ -62,7 +62,7 @@ goto end_branch_0
 v_0_loop = (v_0) - (1)
 v1_1_loop = (v1_1) + (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingInt(), "mod"), gopurs_runtime.Int(v_0), gopurs_runtime.Int(3)).IntVal)
 continue deepTailRec
-__t0 = gopurs_runtime.Value{}
+__t0 = gopurs_runtime.Int(gopurs_runtime.Value{}.IntVal)
 }
 end_branch_0:
 return __t0.IntVal

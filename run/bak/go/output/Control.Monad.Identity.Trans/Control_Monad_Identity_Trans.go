@@ -510,14 +510,16 @@ return dictFoldable_0
 func Call_extendIdentityI(dictExtend_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictExtend_0 gopurs_runtime.Value = dictExtend_0_loop
 _ = dictExtend_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictExtend_0, "Functor0"), gopurs_runtime.Value{})
-_ = __local_var_1_0
+functorIdentityT1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictExtend_0, "Functor0"), gopurs_runtime.Value{})
+_ = functorIdentityT1_1_0
 return gopurs_runtime.RecordDict2("Functor0", "extend", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return __local_var_1_0
-}), gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorIdentityT1_1_0
+}), gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictExtend_0, "extend"), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_2, x_4)
 }), v_3)
+})
 }))
 }
 
@@ -528,8 +530,10 @@ var dictEq_1 gopurs_runtime.Value = dictEq_1_loop
 _ = dictEq_1
 eq11_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEq1_0, "eq1"), dictEq_1)
 _ = eq11_2_0
-return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_3 gopurs_runtime.Value, y_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(eq11_2_0, x_3, y_4)
+return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool((gopurs_runtime.Apply2(eq11_2_0, x_3, y_4).IntVal) != (0))
+})
 }))
 }
 
@@ -541,16 +545,20 @@ _ = __local_var_1_0
 return gopurs_runtime.Func(func(dictOrd_2 gopurs_runtime.Value) gopurs_runtime.Value {
 compare11_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_0, "compare1"), dictOrd_2)
 _ = compare11_3_1
-eq11_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "eq1"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_2, "Eq0"), gopurs_runtime.Value{}))
-_ = eq11_4_2
-eqIdentityT2_5_3 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_5 gopurs_runtime.Value, y_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(eq11_4_2, x_5, y_6)
+eq11_4_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "eq1"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_2, "Eq0"), gopurs_runtime.Value{}))
+_ = eq11_4_3
+eqIdentityT2_4_2 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool((gopurs_runtime.Apply2(eq11_4_3, x_5, y_6).IntVal) != (0))
+})
 }))
-_ = eqIdentityT2_5_3
-return gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return eqIdentityT2_5_3
-}), gopurs_runtime.Func2(func(x_6 gopurs_runtime.Value, y_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(compare11_3_1, x_6, y_7)
+_ = eqIdentityT2_4_2
+return gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return eqIdentityT2_4_2
+}), gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(compare11_3_1, x_5, y_6)
+})
 }))
 })
 }
@@ -559,59 +567,65 @@ func Call_eq1IdentityT(dictEq1_0_loop gopurs_runtime.Value) gopurs_runtime.Value
 var dictEq1_0 gopurs_runtime.Value = dictEq1_0_loop
 _ = dictEq1_0
 return gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEq1_0, "eq1"), dictEq_1)
+eq11_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEq1_0, "eq1"), dictEq_1)
+_ = eq11_2_0
+return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool((gopurs_runtime.Apply2(eq11_2_0, x_3, y_4).IntVal) != (0))
+})
+})
 }))
 }
 
 func Call_ord1IdentityT(dictOrd1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd1_0 gopurs_runtime.Value = dictOrd1_0_loop
 _ = dictOrd1_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_0, "Eq10"), gopurs_runtime.Value{})
-_ = __local_var_1_0
-__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_0, "Eq10"), gopurs_runtime.Value{})
-_ = __local_var_2_1
-eq1IdentityT1_3_2 := gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_1, "eq1"), dictEq_3)
+__local_var_1_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_0, "Eq10"), gopurs_runtime.Value{})
+_ = __local_var_1_1
+eq1IdentityT1_1_0 := gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq_2 gopurs_runtime.Value) gopurs_runtime.Value {
+eq11_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_1, "eq1"), dictEq_2)
+_ = eq11_3_2
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool((gopurs_runtime.Apply2(eq11_3_2, x_4, y_5).IntVal) != (0))
+})
+})
 }))
-_ = eq1IdentityT1_3_2
-return gopurs_runtime.RecordDict2("Eq10", "compare1", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return eq1IdentityT1_3_2
-}), gopurs_runtime.Func(func(dictOrd_4 gopurs_runtime.Value) gopurs_runtime.Value {
-compare11_5_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_0, "compare1"), dictOrd_4)
-_ = compare11_5_3
-eq11_6_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "eq1"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_4, "Eq0"), gopurs_runtime.Value{}))
-_ = eq11_6_4
-eqIdentityT2_7_5 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func2(func(x_7 gopurs_runtime.Value, y_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(eq11_6_4, x_7, y_8)
-}))
-_ = eqIdentityT2_7_5
-return gopurs_runtime.RecordGet(gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return eqIdentityT2_7_5
-}), gopurs_runtime.Func2(func(x_8 gopurs_runtime.Value, y_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(compare11_5_3, x_8, y_9)
-})), "compare")
+_ = eq1IdentityT1_1_0
+return gopurs_runtime.RecordDict2("Eq10", "compare1", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return eq1IdentityT1_1_0
+}), gopurs_runtime.Func(func(dictOrd_2 gopurs_runtime.Value) gopurs_runtime.Value {
+compare11_3_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_0, "compare1"), dictOrd_2)
+_ = compare11_3_3
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(compare11_3_3, x_4, y_5)
+})
+})
 }))
 }
 
 func Call_comonadIdentityT(dictComonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictComonad_0 gopurs_runtime.Value = dictComonad_0_loop
 _ = dictComonad_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_0, "Extend0"), gopurs_runtime.Value{})
-_ = __local_var_1_0
-__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "Functor0"), gopurs_runtime.Value{})
-_ = __local_var_2_1
-extendIdentityI1_3_2 := gopurs_runtime.RecordDict2("Functor0", "extend", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return __local_var_2_1
-}), gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "extend"), gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_1_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_0, "Extend0"), gopurs_runtime.Value{})
+_ = __local_var_1_1
+functorIdentityT1_2_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_1, "Functor0"), gopurs_runtime.Value{})
+_ = functorIdentityT1_2_2
+extendIdentityI1_1_0 := gopurs_runtime.RecordDict2("Functor0", "extend", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorIdentityT1_2_2
+}), gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_1, "extend"), gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_3, x_5)
 }), v_4)
+})
 }))
-_ = extendIdentityI1_3_2
-return gopurs_runtime.RecordDict2("Extend0", "extract", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return extendIdentityI1_3_2
-}), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_0, "extract"), x_4)
+_ = extendIdentityI1_1_0
+return gopurs_runtime.RecordDict2("Extend0", "extract", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return extendIdentityI1_1_0
+}), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_0, "extract"), x_2)
 }))
 }
 

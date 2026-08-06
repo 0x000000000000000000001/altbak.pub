@@ -335,7 +335,8 @@ discard1_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Control_Bind.G
 _ = discard1_3_2
 groupEnd1_4_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), pkg_Effect_Console.Get_groupEnd())
 _ = groupEnd1_4_3
-return gopurs_runtime.Func2(func(name_5 gopurs_runtime.Value, inner_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(name_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(inner_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(discard1_3_2, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(pkg_Effect_Console.Get_group(), name_5)), gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Bind1_2_1, "bind"), inner_6, gopurs_runtime.Func(func(result_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(discard1_3_2, groupEnd1_4_3, gopurs_runtime.Func(func(_dollar__unused_9 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -343,6 +344,7 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs
 }))
 }))
 }))
+})
 })
 }
 

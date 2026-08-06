@@ -58,7 +58,7 @@ func Get_divisionringNumber() gopurs_runtime.Value {
 		cache_divisionringNumber = gopurs_runtime.RecordDict2("Ring0", "recip", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Ring.Get_ringNumber()
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingNumber(), "div"), gopurs_runtime.Float(1.0), x_0)
+return gopurs_runtime.Float(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingNumber(), "div"), gopurs_runtime.Float(1.0), x_0).FloatVal())
 }))
 	})
 	return cache_divisionringNumber

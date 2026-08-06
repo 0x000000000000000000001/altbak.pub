@@ -132,8 +132,10 @@ var cache_functorProxy gopurs_runtime.Value
 var once_functorProxy sync.Once
 func Get_functorProxy() gopurs_runtime.Value {
 	once_functorProxy.Do(func() {
-		cache_functorProxy = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_functorProxy = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}
+})
 }))
 	})
 	return cache_functorProxy

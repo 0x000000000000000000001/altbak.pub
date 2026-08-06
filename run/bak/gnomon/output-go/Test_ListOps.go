@@ -14,7 +14,10 @@ var v0 any = (((_force(Data_Ord_ordIntImpl)).(func(any) any)(V{Tag: "LT", Fields
 _ = v0
 return func(v1_a1 any) any {
 return func(v2_a2 any) any {
-return _isTag(((v0).(func(any) any)(v1_a1)).(func(any) any)(v2_a2), "LT")
+return func() any {
+if _truthy(_isTag(((v0).(func(any) any)(v1_a1)).(func(any) any)(v2_a2), "LT")) { return true }
+return false
+}()
 }
 }
 }() })
@@ -22,22 +25,14 @@ Test_ListOps_range_ = _lazy(func() any { return func(v0_start any) any {
 return func(v1_end any) any {
 return func() any {
 var v2_go any
-v2_go = func(_c3_0 any) any { return func(_c3_1 any) any {
-_r3_0 := _c3_0
-_r3_1 := _c3_1
-for {
-var v3_curr any = _r3_0
-_ = v3_curr
-var v4_acc any = _r3_1
-_ = v4_acc
-if _truthy(((_force(Test_ListOps_lessThan)).(func(any) any)(v3_curr)).(func(any) any)(v0_start)) {
-return v4_acc
+v2_go = func(v3_curr any) any {
+return func(v4_acc any) any {
+return func() any {
+if _truthy(((_force(Test_ListOps_lessThan)).(func(any) any)(v3_curr)).(func(any) any)(v0_start)) { return v4_acc }
+return ((v2_go).(func(any) any)(_intSub(v3_curr, 1))).(func(any) any)(V{Tag: "Cons", Fields: []any{v3_curr, v4_acc}})
+}()
 }
-_r3_0 = _intSub(v3_curr, 1)
-_r3_1 = V{Tag: "Cons", Fields: []any{v3_curr, v4_acc}}
-continue
 }
-} }
 _ = v2_go
 return ((v2_go).(func(any) any)(v1_end)).(func(any) any)(V{Tag: "Nil", Fields: []any{}})
 }()
@@ -57,30 +52,18 @@ return _fail("Failed pattern match")
 Test_ListOps_filterEvens = _lazy(func() any { return func(v0_lst any) any {
 return func() any {
 var v1_go any
-v1_go = func(_c2_0 any) any { return func(_c2_1 any) any {
-_r2_0 := _c2_0
-_r2_1 := _c2_1
-for {
-var v2_v any = _r2_0
-_ = v2_v
-var v3_v1 any = _r2_1
-_ = v3_v1
-if _truthy(_isTag(v2_v, "Nil")) {
-return v3_v1
-}
-if _truthy(_isTag(v2_v, "Cons")) {
-if _truthy(_intEq((((_force(Data_EuclideanRing_euclideanRingInt)).(map[string]any)["mod"]).(func(any) any)((v2_v).(V).Fields[0])).(func(any) any)(2), 0)) {
-_r2_0 = (v2_v).(V).Fields[1]
-_r2_1 = V{Tag: "Cons", Fields: []any{(v2_v).(V).Fields[0], v3_v1}}
-continue
-}
-_r2_0 = (v2_v).(V).Fields[1]
-_r2_1 = v3_v1
-continue
-}
+v1_go = func(v2_v any) any {
+return func(v3_v1 any) any {
+return func() any {
+if _truthy(_isTag(v2_v, "Nil")) { return v3_v1 }
+if _truthy(_isTag(v2_v, "Cons")) { return func() any {
+if _truthy(_intEq((((_force(Data_EuclideanRing_euclideanRingInt)).(map[string]any)["mod"]).(func(any) any)((v2_v).(V).Fields[0])).(func(any) any)(2), 0)) { return ((v1_go).(func(any) any)((v2_v).(V).Fields[1])).(func(any) any)(V{Tag: "Cons", Fields: []any{(v2_v).(V).Fields[0], v3_v1}}) }
+return ((v1_go).(func(any) any)((v2_v).(V).Fields[1])).(func(any) any)(v3_v1)
+}() }
 return _fail("Failed pattern match")
+}()
 }
-} }
+}
 _ = v1_go
 return ((v1_go).(func(any) any)(v0_lst)).(func(any) any)(V{Tag: "Nil", Fields: []any{}})
 }()

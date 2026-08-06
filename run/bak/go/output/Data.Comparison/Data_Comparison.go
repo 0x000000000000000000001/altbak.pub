@@ -32,8 +32,10 @@ var cache_semigroupComparison gopurs_runtime.Value
 var once_semigroupComparison sync.Once
 func Get_semigroupComparison() gopurs_runtime.Value {
 	once_semigroupComparison.Do(func() {
-		cache_semigroupComparison = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semigroupComparison = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(Get_append(), v_0, v1_1)
+})
 }))
 	})
 	return cache_semigroupComparison
@@ -56,8 +58,10 @@ func Get_monoidComparison() gopurs_runtime.Value {
 	once_monoidComparison.Do(func() {
 		cache_monoidComparison = gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_semigroupComparison()
-}), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}
+})
 }))
 	})
 	return cache_monoidComparison
@@ -78,8 +82,14 @@ var cache_contravariantComparison gopurs_runtime.Value
 var once_contravariantComparison sync.Once
 func Get_contravariantComparison() gopurs_runtime.Value {
 	once_contravariantComparison.Do(func() {
-		cache_contravariantComparison = gopurs_runtime.RecordDict1("cmap", gopurs_runtime.Func4(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value, y_3 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_contravariantComparison = gopurs_runtime.RecordDict1("cmap", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(v_1, gopurs_runtime.Apply(f_0, x_2), gopurs_runtime.Apply(f_0, y_3))
+})
+})
+})
 }))
 	})
 	return cache_contravariantComparison

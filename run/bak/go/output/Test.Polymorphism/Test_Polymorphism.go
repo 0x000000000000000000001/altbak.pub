@@ -79,8 +79,10 @@ var cache_intMonoidish gopurs_runtime.Value
 var once_intMonoidish sync.Once
 func Get_intMonoidish() gopurs_runtime.Value {
 	once_intMonoidish.Do(func() {
-		cache_intMonoidish = gopurs_runtime.RecordDict2("mappend_", "mempty_", gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, y_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_intMonoidish = gopurs_runtime.RecordDict2("mappend_", "mempty_", gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Int((x_0.IntVal) + (y_1.IntVal))
+})
 }), gopurs_runtime.Int(1))
 	})
 	return cache_intMonoidish
@@ -169,7 +171,8 @@ var dictMonoidish_0 gopurs_runtime.Value = dictMonoidish_0_loop
 _ = dictMonoidish_0
 mempty_1_1_0 := gopurs_runtime.RecordGet(dictMonoidish_0, "mempty_")
 _ = mempty_1_1_0
-return gopurs_runtime.Func2(func(n_init_2 gopurs_runtime.Value, acc_init_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(n_init_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(acc_init_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__go_4_1_0 gopurs_runtime.Value
 go__go_4_1_0 = gopurs_runtime.Func(func(v_5_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_6_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
@@ -206,6 +209,7 @@ return __t2
 })
 return gopurs_runtime.Apply2(go__go_4_1_0, n_init_2, acc_init_3)
 })
+})
 }
 
 func Call_polyLoop__gopurs_runtime_Value_394168575(dictMonoidish_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -213,7 +217,8 @@ var dictMonoidish_0 gopurs_runtime.Value = dictMonoidish_0_loop
 _ = dictMonoidish_0
 mempty_1_1_0 := gopurs_runtime.RecordGet(dictMonoidish_0, "mempty_")
 _ = mempty_1_1_0
-return gopurs_runtime.Func2(func(n_init_2 gopurs_runtime.Value, acc_init_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(n_init_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(acc_init_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__go_4_1_1 gopurs_runtime.Value
 go__go_4_1_1 = gopurs_runtime.Func(func(v_5_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_6_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
@@ -249,6 +254,7 @@ return __t2
 })
 })
 return gopurs_runtime.Apply2(go__go_4_1_1, n_init_2, acc_init_3)
+})
 })
 }
 

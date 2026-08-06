@@ -2,6 +2,7 @@
 package gopurs_runtime
 
 import (
+	"fmt"
 	"math"
 	"sync"
 	"unsafe"
@@ -77,7 +78,9 @@ func (v Value) FloatVal() float64 {
 }
 
 func Str(v string) Value {
-	return Value{Type: TypeString, UnsafePtr: unsafe.Pointer(&v)}
+	ptr := new(string)
+	*ptr = v
+	return Value{Type: TypeString, UnsafePtr: unsafe.Pointer(ptr)}
 }
 
 func (v Value) StrVal() string {
@@ -138,7 +141,9 @@ func BitXor(a Value, b Value) Value {
 }
 
 func Array(v []Value) Value {
-	return Value{Type: TypeArray, UnsafePtr: unsafe.Pointer(&v)}
+	ptr := new([]Value)
+	*ptr = v
+	return Value{Type: TypeArray, UnsafePtr: unsafe.Pointer(ptr)}
 }
 
 func (v Value) PtrVal() any {
@@ -201,12 +206,36 @@ func RecordDict4(k0, k1, k2, k3 string, v0, v1, v2, v3 Value) Value { return Val
 type RecordData5 struct { K0, K1, K2, K3, K4 string; V0, V1, V2, V3, V4 Value }
 func RecordDict5(k0, k1, k2, k3, k4 string, v0, v1, v2, v3, v4 Value) Value { return Value{Type: TypeRecord5, UnsafePtr: unsafe.Pointer(&RecordData5{k0, k1, k2, k3, k4, v0, v1, v2, v3, v4})} }
 
+func UnboxObject(v Value) map[string]any {
+	if v.Type == TypeAny {
+		val := v.PtrVal()
+		if m, ok := val.(map[string]any); ok {
+			return m
+		}
+	}
+	m := RecordToMap(v)
+	res := make(map[string]any, len(m))
+	for k, v2 := range m { res[k] = v2 }
+	return res
+}
+
 func RecordToMap(obj Value) map[string]Value {
 	if obj.Type == TypeRecord {
 		m := *(*map[string]Value)(obj.UnsafePtr)
 		res := make(map[string]Value, len(m))
 		for k, v := range m { res[k] = v }
 		return res
+	}
+	if obj.Type == TypeAny {
+		v := obj.PtrVal()
+		if m, ok := v.(map[string]any); ok {
+			res := make(map[string]Value, len(m))
+			for k, v2 := range m { res[k] = Box(v2) }
+			return res
+		}
+		if m, ok := v.(map[string]Value); ok {
+			return m
+		}
 	}
 	res := make(map[string]Value)
 	switch obj.Type {
@@ -229,12 +258,23 @@ func RecordToMap(obj Value) map[string]Value {
 }
 
 func Record(m map[string]Value) Value {
-	return Value{Type: TypeRecord, UnsafePtr: unsafe.Pointer(&m)}
+	ptr := new(map[string]Value)
+	*ptr = m
+	return Value{Type: TypeRecord, UnsafePtr: unsafe.Pointer(ptr)}
 }
 
 func RecordGet(obj Value, key string) Value {
 	if obj.Type == 0 {
 		panic("Attempt to read property '" + key + "' on uninitialized value")
+	}
+	if obj.Type == TypeAny {
+		v := obj.PtrVal()
+		if m, ok := v.(map[string]any); ok {
+			return Box(m[key])
+		}
+		if m, ok := v.(map[string]Value); ok {
+			return m[key]
+		}
 	}
     switch obj.Type {
     case TypeRecord: return (*(*map[string]Value)(obj.UnsafePtr))[key]
@@ -269,6 +309,11 @@ func RecordGet(obj Value, key string) Value {
 			if k == key { return r.Vals[i] }
 		}
 	}
+	strVal := ""
+	if obj.Type == TypeString && obj.UnsafePtr != nil {
+		strVal = *(*string)(obj.UnsafePtr)
+	}
+	panic(fmt.Sprintf("Key '%s' not found in record. Object type: %d, String value: '%s', Object: %+v\n", key, obj.Type, strVal, obj))
 	panic("Key not found in record: " + key)
 }
 
@@ -495,7 +540,9 @@ func Any(v any) Value {
 	if val, ok := v.(Value); ok {
 		return val
 	}
-	return Value{Type: TypeAny, UnsafePtr: unsafe.Pointer(&v)}
+	ptr := new(any)
+	*ptr = v
+	return Value{Type: TypeAny, UnsafePtr: unsafe.Pointer(ptr)}
 }
 
 func UncurriedApp2(fn Value, a, b Value) Value {
@@ -675,14 +722,8 @@ func Box[T any](val T) Value {
 		arr := make([]Value, len(v))
 		for i, val := range v { arr[i] = Box(val) }
 		return Array(arr)
-	case []Value:
-		return Array(v)
-	case map[string]any:
-		m := make(map[string]Value)
-		for k, val := range v { m[k] = Box(val) }
-		return Record(m)
-	case map[string]Value:
-		return Record(v)
+	case []Value: return Array(v)
+
 	case Value: return v
 	default: return Any(v)
 	}
@@ -744,5 +785,86 @@ func Apply10(fn Value, arg1 Value, arg2 Value, arg3 Value, arg4 Value, arg5 Valu
 	return Apply(Apply(Apply(Apply(Apply(Apply(Apply(Apply(Apply(Apply(fn, arg1), arg2), arg3), arg4), arg5), arg6), arg7), arg8), arg9), arg10)
 }
 
+
+
+
+
+func ExtractVariant(variant interface{}) (string, interface{}, bool) {
+	if val, ok := variant.(Value); ok {
+		if val.Type == TypeRecord {
+			m := *(*map[string]Value)(val.UnsafePtr)
+			if typVal, ok := m["type"]; ok {
+				if typVal.Type == TypeString {
+					str := *(*string)(typVal.UnsafePtr)
+					valVal, hasVal := m["value"]
+					if hasVal {
+						return str, valVal, true
+					}
+					return str, nil, true
+				}
+			}
+		} else if val.Type == TypeRecord2 {
+            rec := (*RecordData2)(val.UnsafePtr)
+            var str string
+            var valVal interface{}
+            hasVal := false
+            if rec.K0 == "type" && rec.V0.Type == TypeString {
+                str = *(*string)(rec.V0.UnsafePtr)
+            } else if rec.K1 == "type" && rec.V1.Type == TypeString {
+                str = *(*string)(rec.V1.UnsafePtr)
+            } else {
+                return "", nil, false
+            }
+
+            if rec.K0 == "value" {
+                valVal = rec.V0
+                hasVal = true
+            } else if rec.K1 == "value" {
+                valVal = rec.V1
+                hasVal = true
+            }
+
+            if hasVal {
+                return str, valVal, true
+            }
+            return str, nil, true
+        } else if val.Type == TypeRecord3 {
+            rec := (*RecordData3)(val.UnsafePtr)
+            var str string
+            var valVal interface{}
+            hasVal := false
+            
+            if rec.K0 == "type" && rec.V0.Type == TypeString {
+                str = *(*string)(rec.V0.UnsafePtr)
+            } else if rec.K1 == "type" && rec.V1.Type == TypeString {
+                str = *(*string)(rec.V1.UnsafePtr)
+            } else if rec.K2 == "type" && rec.V2.Type == TypeString {
+                str = *(*string)(rec.V2.UnsafePtr)
+            } else {
+                return "", nil, false
+            }
+
+            if rec.K0 == "value" {
+                valVal = rec.V0
+                hasVal = true
+            } else if rec.K1 == "value" {
+                valVal = rec.V1
+                hasVal = true
+            } else if rec.K2 == "value" {
+                valVal = rec.V2
+                hasVal = true
+            }
+
+            if hasVal {
+                return str, valVal, true
+            }
+            return str, nil, true
+        } else if val.Type == TypeString {
+			str := *(*string)(val.UnsafePtr)
+			return str, nil, true
+		}
+	}
+	return "", nil, false
+}
 
 

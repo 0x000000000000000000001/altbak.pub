@@ -12,7 +12,12 @@ func Get_plusArray() gopurs_runtime.Value {
 	once_plusArray.Do(func() {
 		cache_plusArray = gopurs_runtime.RecordDict2("Alt0", "empty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Alt.Get_altArray()
-}), gopurs_runtime.Array([]gopurs_runtime.Value{}))
+}), gopurs_runtime.Array(func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array([]gopurs_runtime.Value{}).UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}()))
 	})
 	return cache_plusArray
 }

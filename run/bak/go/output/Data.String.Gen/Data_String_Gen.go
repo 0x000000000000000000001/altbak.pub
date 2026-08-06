@@ -17,7 +17,8 @@ func Get_max() gopurs_runtime.Value {
 		cache_max = func() gopurs_runtime.Value {
 __local_var_0_0 := gopurs_runtime.Apply3(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil})
 _ = __local_var_0_0
-return gopurs_runtime.Func2(func(x_1 gopurs_runtime.Value, y_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_2 gopurs_runtime.Value) gopurs_runtime.Value {
 v_3_1 := gopurs_runtime.Apply2(__local_var_0_0, x_1, y_2)
 _ = v_3_1
 var __t2 gopurs_runtime.Value
@@ -50,6 +51,7 @@ __t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_2:
 return __t2
+})
 })
 }()
 	})

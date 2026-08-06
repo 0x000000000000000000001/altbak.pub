@@ -9,15 +9,26 @@ import (
 	unsafe "unsafe"
 )
 
-var cache_identity gopurs_runtime.Value
-var once_identity sync.Once
-func Get_identity() gopurs_runtime.Value {
-	once_identity.Do(func() {
-		cache_identity = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_identity(x_0_box)
+var cache_identity1 gopurs_runtime.Value
+var once_identity1 sync.Once
+func Get_identity1() gopurs_runtime.Value {
+	once_identity1.Do(func() {
+		cache_identity1 = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_identity1(x_0_box)
 })
 	})
-	return cache_identity
+	return cache_identity1
+}
+
+var cache_identity2 gopurs_runtime.Value
+var once_identity2 sync.Once
+func Get_identity2() gopurs_runtime.Value {
+	once_identity2.Do(func() {
+		cache_identity2 = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_identity2(x_0_box)
+})
+	})
+	return cache_identity2
 }
 
 var cache_biapplyTuple gopurs_runtime.Value
@@ -26,8 +37,10 @@ func Get_biapplyTuple() gopurs_runtime.Value {
 	once_biapplyTuple.Do(func() {
 		cache_biapplyTuple = gopurs_runtime.RecordDict2("Bifunctor0", "biapply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Bifunctor.Get_bifunctorTuple()
-}), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply((*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V0, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_1.UnsafePtr).V0), gopurs_runtime.Apply((*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V1, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_1.UnsafePtr).V1)})}
+})
 }))
 	})
 	return cache_biapplyTuple
@@ -99,7 +112,13 @@ return Call_bilift3(dictBiapply_0_box, f_1_box, g_2_box, a_3_box, b_4_box, c_5_b
 	return cache_bilift3
 }
 
-func Call_identity(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_identity1(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0
+}
+
+func Call_identity2(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
 return x_0
@@ -125,9 +144,9 @@ _ = a_1
 var b_2 gopurs_runtime.Value = b_2_loop
 _ = b_2
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBiapply_0, "biapply"), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBiapply_0, "Bifunctor0"), gopurs_runtime.Value{}), "bimap"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_identity()
+return Get_identity1()
 }), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_identity()
+return Get_identity2()
 }), a_1), b_2)
 }
 

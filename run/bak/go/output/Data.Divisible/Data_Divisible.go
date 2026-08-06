@@ -36,8 +36,10 @@ func Get_divisibleEquivalence() gopurs_runtime.Value {
 	once_divisibleEquivalence.Do(func() {
 		cache_divisibleEquivalence = gopurs_runtime.RecordDict2("Divide0", "conquer", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Divide.Get_divideEquivalence()
-}), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(true)
+})
 }))
 	})
 	return cache_divisibleEquivalence
@@ -49,8 +51,10 @@ func Get_divisibleComparison() gopurs_runtime.Value {
 	once_divisibleComparison.Do(func() {
 		cache_divisibleComparison = gopurs_runtime.RecordDict2("Divide0", "conquer", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Divide.Get_divideComparison()
-}), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}
+})
 }))
 	})
 	return cache_divisibleComparison

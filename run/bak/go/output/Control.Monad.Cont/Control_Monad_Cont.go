@@ -59,8 +59,10 @@ __local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Control_Sem
 _ = __local_var_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Control_Semigroupoid.Get_semigroupoidFn(), "compose"), pkg_Unsafe_Coerce.Get_unsafeCoerce())
 _ = __local_var_2_1
-return gopurs_runtime.Func2(func(v_3 gopurs_runtime.Value, k_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(k_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(v_3, gopurs_runtime.Apply(__local_var_1_0, gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(__local_var_2_1, k_4))))
+})
 })
 }
 

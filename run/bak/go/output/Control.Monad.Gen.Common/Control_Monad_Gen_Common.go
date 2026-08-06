@@ -19,7 +19,8 @@ func Get_max() gopurs_runtime.Value {
 		cache_max = func() gopurs_runtime.Value {
 __local_var_0_0 := gopurs_runtime.Apply3(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil})
 _ = __local_var_0_0
-return gopurs_runtime.Func2(func(x_1 gopurs_runtime.Value, y_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_2 gopurs_runtime.Value) gopurs_runtime.Value {
 v_3_1 := gopurs_runtime.Apply2(__local_var_0_0, x_1, y_2)
 _ = v_3_1
 var __t2 gopurs_runtime.Value
@@ -52,6 +53,7 @@ __t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_2:
 return __t2
+})
 })
 }()
 	})
@@ -196,11 +198,25 @@ Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Mon
 _ = Monad0_1_0
 Bind1_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bind1"), gopurs_runtime.Value{})
 _ = Bind1_2_1
-return gopurs_runtime.Func2(func(bias_3 gopurs_runtime.Value, gen_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(bias_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(gen_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Bind1_2_1, "bind"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0, "chooseFloat"), gopurs_runtime.Float(0.0), gopurs_runtime.Float(1.0)), gopurs_runtime.Func(func(n_5 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value
 {
+var __t3 gopurs_runtime.Value
+{
 if (n_5.FloatVal()) < (bias_3.FloatVal()) {
+__t3 = gopurs_runtime.Bool(true)
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = gopurs_runtime.Bool(false)
+}
+end_branch_3:
+if (__t3.IntVal) != (0) {
 __t2 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Bind1_2_1, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Maybe.Get_Just(), gen_4)
 goto end_branch_2
 } else {
@@ -214,6 +230,7 @@ end_branch_2:
 return __t2
 }))
 })
+})
 }
 
 func Call_genMaybe_prime__gopurs_runtime_Value_478316041(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -223,11 +240,25 @@ Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Mon
 _ = Monad0_1_0
 Bind1_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bind1"), gopurs_runtime.Value{})
 _ = Bind1_2_1
-return gopurs_runtime.Func2(func(bias_3 gopurs_runtime.Value, gen_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(bias_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(gen_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Bind1_2_1, "bind"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0, "chooseFloat"), gopurs_runtime.Float(0.0), gopurs_runtime.Float(1.0)), gopurs_runtime.Func(func(n_5 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value
 {
+var __t3 gopurs_runtime.Value
+{
 if (n_5.FloatVal()) < (bias_3.FloatVal()) {
+__t3 = gopurs_runtime.Bool(true)
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = gopurs_runtime.Bool(false)
+}
+end_branch_3:
+if (__t3.IntVal) != (0) {
 __t2 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Bind1_2_1, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Maybe.Get_Just(), gen_4)
 goto end_branch_2
 } else {
@@ -240,6 +271,7 @@ __t2 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs
 end_branch_2:
 return __t2
 }))
+})
 })
 }
 
@@ -262,11 +294,26 @@ Bind1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(
 _ = Bind1_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Bind1_1_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
-return gopurs_runtime.Func3(func(bias_3 gopurs_runtime.Value, genA_4 gopurs_runtime.Value, genB_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(bias_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(genA_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(genB_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Bind1_1_0, "bind"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0, "chooseFloat"), gopurs_runtime.Float(0.0), gopurs_runtime.Float(1.0)), gopurs_runtime.Func(func(n_6 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value
 {
+var __t3 gopurs_runtime.Value
+{
 if (n_6.FloatVal()) < (bias_3.FloatVal()) {
+__t3 = gopurs_runtime.Bool(true)
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = gopurs_runtime.Bool(false)
+}
+end_branch_3:
+if (__t3.IntVal) != (0) {
 __t2 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "map"), pkg_Data_Either.Get_Left(), genA_4)
 goto end_branch_2
 } else {
@@ -280,6 +327,8 @@ end_branch_2:
 return __t2
 }))
 })
+})
+})
 }
 
 func Call_genEither_prime__gopurs_runtime_Value_3177235456(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -289,11 +338,26 @@ Bind1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(
 _ = Bind1_1_0
 __local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Bind1_1_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
-return gopurs_runtime.Func3(func(bias_3 gopurs_runtime.Value, genA_4 gopurs_runtime.Value, genB_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(bias_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(genA_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(genB_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Bind1_1_0, "bind"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0, "chooseFloat"), gopurs_runtime.Float(0.0), gopurs_runtime.Float(1.0)), gopurs_runtime.Func(func(n_6 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 gopurs_runtime.Value
 {
+var __t3 gopurs_runtime.Value
+{
 if (n_6.FloatVal()) < (bias_3.FloatVal()) {
+__t3 = gopurs_runtime.Bool(true)
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = gopurs_runtime.Bool(false)
+}
+end_branch_3:
+if (__t3.IntVal) != (0) {
 __t2 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "map"), pkg_Data_Either.Get_Left(), genA_4)
 goto end_branch_2
 } else {
@@ -306,6 +370,8 @@ __t2 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "map"), p
 end_branch_2:
 return __t2
 }))
+})
+})
 })
 }
 

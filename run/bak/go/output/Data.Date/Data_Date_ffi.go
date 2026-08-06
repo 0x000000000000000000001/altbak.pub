@@ -15,7 +15,15 @@ func createDate(y, m, d int) time.Time {
 
 func CanonicalDateImpl(ctor interface{}, y int, m int, d int) interface{} {
 	date := createDate(y, m-1, d)
-	return ctor.(func(interface{}) interface{})(date.Year()).(func(interface{}) interface{})(int(date.Month())).(func(interface{}) interface{})(date.Day())
+	
+	// ctor is a gopurs_runtime.Value (passed as interface{}) representing a curried function Date -> Int -> Int -> Date
+	valCtor := ctor.(gopurs_runtime.Value)
+	
+	res1 := gopurs_runtime.Apply(valCtor, gopurs_runtime.Int(int64(date.Year())))
+	res2 := gopurs_runtime.Apply(res1, gopurs_runtime.Int(int64(date.Month())))
+	res3 := gopurs_runtime.Apply(res2, gopurs_runtime.Int(int64(date.Day())))
+	
+	return res3
 }
 
 func CalcWeekday(y int, m int, d int) int {

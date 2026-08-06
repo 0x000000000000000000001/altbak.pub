@@ -93,28 +93,67 @@ var v1_1 float64 = v1_1_loop
 _ = v1_1
 var v2_2 float64 = v2_2_loop
 _ = v2_2
-var __t0 gopurs_runtime.Value
+var __t1 gopurs_runtime.Value
 {
 if (v1_1) == (0.0) {
-__t0 = gopurs_runtime.Bool((gopurs_runtime.Apply(pkg_Data_Number.Get_abs(), gopurs_runtime.Float(v2_2)).FloatVal()) <= (v_0))
-goto end_branch_0
+var __t2 gopurs_runtime.Value
+{
+if (gopurs_runtime.Apply(pkg_Data_Number.Get_abs(), gopurs_runtime.Float(v2_2)).FloatVal()) > (v_0) {
+__t2 = gopurs_runtime.Bool(false)
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = gopurs_runtime.Bool(true)
+}
+end_branch_2:
+__t1 = gopurs_runtime.Bool((__t2.IntVal) != (0))
+goto end_branch_1
 } else {
 
 }
 }
 {
 if (v2_2) == (0.0) {
-__t0 = gopurs_runtime.Bool((gopurs_runtime.Apply(pkg_Data_Number.Get_abs(), gopurs_runtime.Float(v1_1)).FloatVal()) <= (v_0))
+var __t3 gopurs_runtime.Value
+{
+if (gopurs_runtime.Apply(pkg_Data_Number.Get_abs(), gopurs_runtime.Float(v1_1)).FloatVal()) > (v_0) {
+__t3 = gopurs_runtime.Bool(false)
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = gopurs_runtime.Bool(true)
+}
+end_branch_3:
+__t1 = gopurs_runtime.Bool((__t3.IntVal) != (0))
+goto end_branch_1
+} else {
+
+}
+}
+{
+var __t0 gopurs_runtime.Value
+{
+if (gopurs_runtime.Apply(pkg_Data_Number.Get_abs(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ring.Get_ringNumber(), "sub"), gopurs_runtime.Float(v1_1), gopurs_runtime.Float(v2_2))).FloatVal()) > (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingNumber(), "div"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "mul"), gopurs_runtime.Float(v_0), gopurs_runtime.Apply(pkg_Data_Number.Get_abs(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "add"), gopurs_runtime.Float(v1_1), gopurs_runtime.Float(v2_2)))), gopurs_runtime.Float(2.0)).FloatVal()) {
+__t0 = gopurs_runtime.Bool(false)
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Bool((gopurs_runtime.Apply(pkg_Data_Number.Get_abs(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ring.Get_ringNumber(), "sub"), gopurs_runtime.Float(v1_1), gopurs_runtime.Float(v2_2))).FloatVal()) <= (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingNumber(), "div"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "mul"), gopurs_runtime.Float(v_0), gopurs_runtime.Apply(pkg_Data_Number.Get_abs(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "add"), gopurs_runtime.Float(v1_1), gopurs_runtime.Float(v2_2)))), gopurs_runtime.Float(2.0)).FloatVal()))
+__t0 = gopurs_runtime.Bool(true)
 }
 end_branch_0:
-return (__t0.IntVal) != (0)
+__t1 = gopurs_runtime.Bool((__t0.IntVal) != (0))
+}
+end_branch_1:
+return (__t1.IntVal) != (0)
 }
 
 func Call_neqApproximate(x_0_loop float64, y_1_loop float64) bool {
@@ -132,7 +171,20 @@ var x_1 float64 = x_1_loop
 _ = x_1
 var y_2 float64 = y_2_loop
 _ = y_2
-return (gopurs_runtime.Apply(pkg_Data_Number.Get_abs(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ring.Get_ringNumber(), "sub"), gopurs_runtime.Float(x_1), gopurs_runtime.Float(y_2))).FloatVal()) <= (v_0)
+var __t0 gopurs_runtime.Value
+{
+if (gopurs_runtime.Apply(pkg_Data_Number.Get_abs(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ring.Get_ringNumber(), "sub"), gopurs_runtime.Float(x_1), gopurs_runtime.Float(y_2))).FloatVal()) > (v_0) {
+__t0 = gopurs_runtime.Bool(false)
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = gopurs_runtime.Bool(true)
+}
+end_branch_0:
+return (__t0.IntVal) != (0)
 }
 
 

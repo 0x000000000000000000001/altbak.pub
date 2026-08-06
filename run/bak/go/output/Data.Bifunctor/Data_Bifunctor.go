@@ -20,6 +20,17 @@ return Call_identity(x_0_box)
 	return cache_identity
 }
 
+var cache_identity1 gopurs_runtime.Value
+var once_identity1 sync.Once
+func Get_identity1() gopurs_runtime.Value {
+	once_identity1.Do(func() {
+		cache_identity1 = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_identity1(x_0_box)
+})
+	})
+	return cache_identity1
+}
+
 var cache_bimap gopurs_runtime.Value
 var once_bimap sync.Once
 func Get_bimap() gopurs_runtime.Value {
@@ -101,8 +112,12 @@ var cache_bifunctorTuple gopurs_runtime.Value
 var once_bifunctorTuple sync.Once
 func Get_bifunctorTuple() gopurs_runtime.Value {
 	once_bifunctorTuple.Do(func() {
-		cache_bifunctorTuple = gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, g_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bifunctorTuple = gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(g_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply(f_0, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0), gopurs_runtime.Apply(g_1, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1)})}
+})
+})
 }))
 	})
 	return cache_bifunctorTuple
@@ -112,7 +127,9 @@ var cache_bifunctorEither gopurs_runtime.Value
 var once_bifunctorEither sync.Once
 func Get_bifunctorEither() gopurs_runtime.Value {
 	once_bifunctorEither.Do(func() {
-		cache_bifunctorEither = gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func3(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value, v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bifunctorEither = gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (v2_2.Type == 9 && v2_2.IntVal == 3711209382) {
@@ -135,6 +152,8 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
 return __t0
+})
+})
 }))
 	})
 	return cache_bifunctorEither
@@ -144,14 +163,24 @@ var cache_bifunctorConst gopurs_runtime.Value
 var once_bifunctorConst sync.Once
 func Get_bifunctorConst() gopurs_runtime.Value {
 	once_bifunctorConst.Do(func() {
-		cache_bifunctorConst = gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bifunctorConst = gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_0, v1_2)
+})
+})
 }))
 	})
 	return cache_bifunctorConst
 }
 
 func Call_identity(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0
+}
+
+func Call_identity1(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
 return x_0
@@ -204,7 +233,7 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBifunctor_0, "bimap"),
 func Call_rmap(dictBifunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictBifunctor_0 gopurs_runtime.Value = dictBifunctor_0_loop
 _ = dictBifunctor_0
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBifunctor_0, "bimap"), Get_identity())
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBifunctor_0, "bimap"), Get_identity1())
 }
 
 

@@ -29,6 +29,17 @@ return Call_runWriter(x_0_box)
 	return cache_runWriter
 }
 
+var cache_runWriter__gopurs_runtime_Value_4273258459 gopurs_runtime.Value
+var once_runWriter__gopurs_runtime_Value_4273258459 sync.Once
+func Get_runWriter__gopurs_runtime_Value_4273258459() gopurs_runtime.Value {
+	once_runWriter__gopurs_runtime_Value_4273258459.Do(func() {
+		cache_runWriter__gopurs_runtime_Value_4273258459 = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_runWriter__gopurs_runtime_Value_4273258459(x_0_box)
+})
+	})
+	return cache_runWriter__gopurs_runtime_Value_4273258459
+}
+
 var cache_mapWriter gopurs_runtime.Value
 var once_mapWriter sync.Once
 func Get_mapWriter() gopurs_runtime.Value {
@@ -58,6 +69,12 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Identity.Get_appli
 }
 
 func Call_runWriter(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0
+}
+
+func Call_runWriter__gopurs_runtime_Value_4273258459(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
 return x_0

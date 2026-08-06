@@ -194,7 +194,8 @@ func Get_monadRecMaybe() gopurs_runtime.Value {
 	once_monadRecMaybe.Do(func() {
 		cache_monadRecMaybe = gopurs_runtime.RecordDict2("Monad0", "tailRecM", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Maybe.Get_monadMaybe()
-}), gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, a0_1 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a0_1 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_2_0 := gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
@@ -279,7 +280,8 @@ return __t6
 }
 }()
 })
-return gopurs_runtime.Apply(go__go_3_5_6, gopurs_runtime.UncurriedApp(__local_var_2_0, gopurs_runtime.Apply(f_0, a0_1)))
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(gopurs_runtime.Apply(go__go_3_5_6, gopurs_runtime.UncurriedApp(__local_var_2_0, gopurs_runtime.Apply(f_0, a0_1))).UnsafePtr))}
+})
 }))
 	})
 	return cache_monadRecMaybe
@@ -342,7 +344,9 @@ func Get_monadRecFunction() gopurs_runtime.Value {
 	once_monadRecFunction.Do(func() {
 		cache_monadRecFunction = gopurs_runtime.RecordDict2("Monad0", "tailRecM", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Monad.Get_monadFn()
-}), gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, a0_1 gopurs_runtime.Value, e_2 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a0_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(e_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__go_3_0_8 gopurs_runtime.Value
 go__go_3_0_8 = gopurs_runtime.Func(func(v_4_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
@@ -380,6 +384,8 @@ return __t1
 }()
 })
 return gopurs_runtime.Apply(go__go_3_0_8, gopurs_runtime.Apply2(f_0, a0_1, e_2))
+})
+})
 }))
 	})
 	return cache_monadRecFunction
@@ -391,7 +397,8 @@ func Get_monadRecEither() gopurs_runtime.Value {
 	once_monadRecEither.Do(func() {
 		cache_monadRecEither = gopurs_runtime.RecordDict2("Monad0", "tailRecM", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Either.Get_monadEither()
-}), gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, a0_1 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a0_1 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_2_0 := gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
@@ -477,6 +484,7 @@ return __t6
 }()
 })
 return gopurs_runtime.Apply(go__go_3_5_9, gopurs_runtime.UncurriedApp(__local_var_2_0, gopurs_runtime.Apply(f_0, a0_1)))
+})
 }))
 	})
 	return cache_monadRecEither
@@ -488,7 +496,8 @@ func Get_monadRecEffect() gopurs_runtime.Value {
 	once_monadRecEffect.Do(func() {
 		cache_monadRecEffect = gopurs_runtime.RecordDict2("Monad0", "tailRecM", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Effect.Get_monadEffect()
-}), gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind"), gopurs_runtime.Apply(f_0, a_1), pkg_Effect_Ref.Get__new()), gopurs_runtime.Func(func(r_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(Get_discard(), gopurs_runtime.Apply(pkg_Effect.Get_untilE(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind"), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return (*(r_2.PtrVal().(*interface{}))).(gopurs_runtime.Value)
@@ -543,6 +552,7 @@ return (*(r_2.PtrVal().(*interface{}))).(gopurs_runtime.Value)
 }))
 }))
 }))
+})
 }))
 	})
 	return cache_monadRecEffect
@@ -574,7 +584,8 @@ var cache_functorStep gopurs_runtime.Value
 var once_functorStep sync.Once
 func Get_functorStep() gopurs_runtime.Value {
 	once_functorStep.Do(func() {
-		cache_functorStep = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, m_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_functorStep = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(m_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (m_1.Type == 9 && m_1.IntVal == 525585346) {
@@ -597,6 +608,7 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
 return __t0
+})
 }))
 	})
 	return cache_functorStep
@@ -617,7 +629,9 @@ var cache_bifunctorStep gopurs_runtime.Value
 var once_bifunctorStep sync.Once
 func Get_bifunctorStep() gopurs_runtime.Value {
 	once_bifunctorStep.Do(func() {
-		cache_bifunctorStep = gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func3(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value, v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_bifunctorStep = gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (v2_2.Type == 9 && v2_2.IntVal == 525585346) {
@@ -640,6 +654,8 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
 return __t0
+})
+})
 }))
 	})
 	return cache_bifunctorStep
@@ -892,7 +908,7 @@ var __t1 gopurs_runtime.Value
 if (v_2.Type == 9 && v_2.IntVal == 525585346) {
 v_2_loop = gopurs_runtime.Apply(f_0, (*Constructor_Loop[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0)
 continue go__go_1_0_2
-__t1 = gopurs_runtime.Value{}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(gopurs_runtime.Value{}.UnsafePtr))}
 goto end_branch_1
 } else {
 
@@ -900,7 +916,7 @@ goto end_branch_1
 }
 {
 if (v_2.Type == 9 && v_2.IntVal == 60402430) {
-__t1 = (*Constructor_Done[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])((*Constructor_Done[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0.UnsafePtr))}
 goto end_branch_1
 } else {
 
@@ -910,7 +926,7 @@ goto end_branch_1
 __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
-return __t1
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(__t1.UnsafePtr))}
 }
 }()
 })

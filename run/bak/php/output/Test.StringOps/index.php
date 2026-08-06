@@ -136,46 +136,38 @@ function majTest_majStringmajOps_runmajStringmajOps(int $n_0): int|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $loop_1_0 = null;
-  $loop_1_0 = (function() use (&$loop_1_0) {
-  $__fn = function($v_2, $v1_3 = null, $v2_4 = null) use (&$loop_1_0, &$__fn) {
+  $loop_1_0 = function($v_2) use (&$loop_1_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  $__tco_var_loop_1_0_0_v_2 = $v_2;
-  $__tco_var_loop_1_0_0_v1_3 = $v1_3;
-  $__tco_var_loop_1_0_0_v2_4 = $v2_4;
-  tco_loop_loop_1_0_0:;
-  $v_2 = $__tco_var_loop_1_0_0_v_2;
-  $v1_3 = $__tco_var_loop_1_0_0_v1_3;
-  $v2_4 = $__tco_var_loop_1_0_0_v2_4;
-  $__t4 = null;;
+  $__res = function($v1_3) use (&$loop_1_0, $v_2) {
+  $__num = \func_num_args();
+  $__res = function($v2_4) use (&$loop_1_0, $v1_3, $v_2) {
+  $__num = \func_num_args();
+  $__t2 = null;;
   switch ($v_2) {
 case 0:
-$__t4 = $v2_4;
-goto end_branch_4;;
+$__t2 = $v2_4;
+goto end_branch_2;;
 break;
 default:
 ;
 break;
 };
-  $concatted_5_0 = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})($v1_3))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($GLOBALS['Data_Show_showInt'])->{'show'})($v_2)))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("world"))((($GLOBALS['Data_Show_showInt'])->{'show'})(($v_2 + 1)))));
-  $__tco_1 = ($v_2 - 1);
-  $__tco_2 = (($GLOBALS['Data_String_CodePoints_take'])(10))($concatted_5_0);
-  $__tco_3 = ($v2_4 + count((($GLOBALS['Data_String_Common_split'])("e"))(((($GLOBALS['Data_String_Regex_replace'])($GLOBALS['Test_StringOps_regexPattern']))("matched"))($concatted_5_0))));
-  $__tco_var_loop_1_0_0_v_2 = $__tco_1;
-  $__tco_var_loop_1_0_0_v1_3 = $__tco_2;
-  $__tco_var_loop_1_0_0_v2_4 = $__tco_3;
-  goto tco_loop_loop_1_0_0;;
-  $__t4 = null;
-  end_branch_4:;
-  $__res = $__t4;
+  $concatted_5_1 = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})($v1_3))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($GLOBALS['Data_Show_showInt'])->{'show'})($v_2)))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("world"))((($GLOBALS['Data_Show_showInt'])->{'show'})(($v_2 + 1)))));
+  $__t2 = ((($loop_1_0)(($v_2 - 1)))((($GLOBALS['Data_String_CodePoints_take'])(10))($concatted_5_1)))(($v2_4 + count((($GLOBALS['Data_String_Common_split'])("e"))(((($GLOBALS['Data_String_Regex_replace'])($GLOBALS['Test_StringOps_regexPattern']))("matched"))($concatted_5_1)))));
+  end_branch_2:;
+  $__res = $__t2;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   $__res = ((($loop_1_0)($n_0))("hello"))(0);
   goto __end;;
   __end:

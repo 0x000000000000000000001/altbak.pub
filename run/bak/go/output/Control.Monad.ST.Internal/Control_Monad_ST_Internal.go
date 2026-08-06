@@ -133,6 +133,15 @@ func Get_go__for() gopurs_runtime.Value {
 	return cache_go__for
 }
 
+var cache_for__gopurs_runtime_Value_1487786846 gopurs_runtime.Value
+var once_for__gopurs_runtime_Value_1487786846 sync.Once
+func Get_for__gopurs_runtime_Value_1487786846() gopurs_runtime.Value {
+	once_for__gopurs_runtime_Value_1487786846.Do(func() {
+		cache_for__gopurs_runtime_Value_1487786846 = Get_forImpl()
+	})
+	return cache_for__gopurs_runtime_Value_1487786846
+}
+
 var cache_monadST gopurs_runtime.Value
 var once_monadST sync.Once
 func Get_monadST() gopurs_runtime.Value {
@@ -166,12 +175,14 @@ __local_var_0_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadST(), 
 _ = __local_var_0_0
 return gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_functorST()
-}), gopurs_runtime.Func2(func(f_1 gopurs_runtime.Value, a_2 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_0_0, "bind"), f_1, gopurs_runtime.Func(func(f_prime_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_0_0, "bind"), a_2, gopurs_runtime.Func(func(a_prime_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadST(), "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Apply(f_prime_3, a_prime_4))
 }))
 }))
+})
 }))
 }()
 	})
@@ -226,48 +237,46 @@ func Get_monadRecST() gopurs_runtime.Value {
 	once_monadRecST.Do(func() {
 		cache_monadRecST = gopurs_runtime.RecordDict2("Monad0", "tailRecM", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_monadST()
-}), gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_bindST(), "bind"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_bindST(), "bind"), gopurs_runtime.Apply(f_0, a_1), Get_newImpl()), gopurs_runtime.Func(func(r_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(Get_discard(), gopurs_runtime.Apply2(Get_while(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_functorST(), "map"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool((v_3.Type == 9 && v_3.IntVal == 525585346))
+var __t0 gopurs_runtime.Value
+{
+if (v_3.Type == 9 && v_3.IntVal == 525585346) {
+__t0 = gopurs_runtime.Bool(true)
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = gopurs_runtime.Bool(false)
+}
+end_branch_0:
+return gopurs_runtime.Bool((__t0.IntVal) != (0))
 }), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return (*(r_2.PtrVal().(*interface{}))).(gopurs_runtime.Value)
 })), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_bindST(), "bind"), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return (*(r_2.PtrVal().(*interface{}))).(gopurs_runtime.Value)
 }), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
+var __t1 gopurs_runtime.Value
 {
 if (v_3.Type == 9 && v_3.IntVal == 525585346) {
-__t0 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_bindST(), "bind"), gopurs_runtime.Apply(f_0, (*pkg_Control_Monad_Rec_Class.Constructor_Loop[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V0), gopurs_runtime.Func(func(e_4 gopurs_runtime.Value) gopurs_runtime.Value {
+__t1 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_bindST(), "bind"), gopurs_runtime.Apply(f_0, (*pkg_Control_Monad_Rec_Class.Constructor_Loop[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V0), gopurs_runtime.Func(func(e_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(Get_void(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 *(r_2.PtrVal().(*interface{})) = e_4
 return e_4
 }))
 }))
-goto end_branch_0
+goto end_branch_1
 } else {
 
 }
 }
 {
 if (v_3.Type == 9 && v_3.IntVal == 60402430) {
-__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_applicativeST(), "pure"), pkg_Data_Unit.Get_unit())
-goto end_branch_0
-} else {
-
-}
-}
-{
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_0:
-return __t0
-}))), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_functorST(), "map"), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t1 gopurs_runtime.Value
-{
-if (v_4.Type == 9 && v_4.IntVal == 60402430) {
-__t1 = (*pkg_Control_Monad_Rec_Class.Constructor_Done[gopurs_runtime.Value, gopurs_runtime.Value])(v_4.UnsafePtr).V0
+__t1 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_applicativeST(), "pure"), pkg_Data_Unit.Get_unit())
 goto end_branch_1
 } else {
 
@@ -278,11 +287,28 @@ __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
 return __t1
+}))), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_functorST(), "map"), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t2 gopurs_runtime.Value
+{
+if (v_4.Type == 9 && v_4.IntVal == 60402430) {
+__t2 = (*pkg_Control_Monad_Rec_Class.Constructor_Done[gopurs_runtime.Value, gopurs_runtime.Value])(v_4.UnsafePtr).V0
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_2:
+return __t2
 }), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return (*(r_2.PtrVal().(*interface{}))).(gopurs_runtime.Value)
 }))
 }))
 }))
+})
 }))
 	})
 	return cache_monadRecST
@@ -315,7 +341,7 @@ _ = f_0
 return gopurs_runtime.Apply(Get_modifyImpl(), gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
 s_prime_2_0 := gopurs_runtime.Apply(f_0, s_1)
 _ = s_prime_2_0
-return gopurs_runtime.RecordDict2("state", "value", s_prime_2_0, s_prime_2_0)
+return gopurs_runtime.RecordDict2("state", "value", gopurs_runtime.Int(s_prime_2_0.IntVal), gopurs_runtime.Int(s_prime_2_0.IntVal))
 }))
 }
 
@@ -348,8 +374,10 @@ return gopurs_runtime.RecordDict1("append", gopurs_runtime.Apply(Get_lift2(), go
 func Call_monoidST(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
-return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("append", gopurs_runtime.Apply(Get_lift2(), gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}), "append")))
+semigroupST1_1_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Apply(Get_lift2(), gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}), "append")))
+_ = semigroupST1_1_0
+return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return semigroupST1_1_0
 }), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_applicativeST(), "pure"), gopurs_runtime.RecordGet(dictMonoid_0, "mempty")))
 }
 

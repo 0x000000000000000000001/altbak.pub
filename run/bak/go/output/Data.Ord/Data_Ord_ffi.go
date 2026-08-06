@@ -42,9 +42,9 @@ func OrdArrayImpl(f func(interface{}, interface{}) int64, xs []interface{}, ys [
 	if xlen == ylen {
 		return 0
 	} else if xlen > ylen {
-		return 1
-	} else {
 		return -1
+	} else {
+		return 1
 	}
 }
 

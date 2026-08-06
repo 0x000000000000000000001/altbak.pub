@@ -36,7 +36,8 @@ _ = unfoldable1_5_3
 return gopurs_runtime.Func(func(dictOrd_6 gopurs_runtime.Value) gopurs_runtime.Value {
 fromFoldable_7_4 := gopurs_runtime.Apply2(pkg_Data_Map_Internal.Get_fromFoldable(), dictOrd_6, pkg_Data_List_Types.Get_foldableList())
 _ = fromFoldable_7_4
-return gopurs_runtime.Func2(func(genKey_8 gopurs_runtime.Value, genValue_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(genKey_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(genValue_9 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_1, "sized"), gopurs_runtime.Func(func(size_10 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Bind1_2_0, "bind"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_1, "chooseInt"), gopurs_runtime.Int(0), size_10), gopurs_runtime.Func(func(newSize_11 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_1, "resize"), gopurs_runtime.Func(func(v_12 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -44,6 +45,7 @@ return newSize_11
 }), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_2, "map"), fromFoldable_7_4, gopurs_runtime.Apply(unfoldable1_5_3, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Apply0_3_1, "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_2, "map"), pkg_Data_Tuple.Get_Tuple(), genKey_8), genValue_9))))
 }))
 }))
+})
 })
 })
 }

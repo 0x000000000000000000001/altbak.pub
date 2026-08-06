@@ -10,8 +10,10 @@ var cache_genericOrdNoConstructors gopurs_runtime.Value
 var once_genericOrdNoConstructors sync.Once
 func Get_genericOrdNoConstructors() gopurs_runtime.Value {
 	once_genericOrdNoConstructors.Do(func() {
-		cache_genericOrdNoConstructors = gopurs_runtime.RecordDict1("genericCompare'", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genericOrdNoConstructors = gopurs_runtime.RecordDict1("genericCompare'", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}
+})
 }))
 	})
 	return cache_genericOrdNoConstructors
@@ -21,8 +23,10 @@ var cache_genericOrdNoArguments gopurs_runtime.Value
 var once_genericOrdNoArguments sync.Once
 func Get_genericOrdNoArguments() gopurs_runtime.Value {
 	once_genericOrdNoArguments.Do(func() {
-		cache_genericOrdNoArguments = gopurs_runtime.RecordDict1("genericCompare'", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_genericOrdNoArguments = gopurs_runtime.RecordDict1("genericCompare'", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}
+})
 }))
 	})
 	return cache_genericOrdNoArguments
@@ -108,8 +112,10 @@ return Call_genericCompare(dictGeneric_0_box, dictGenericOrd_1_box, x_2_box, y_3
 func Call_genericOrdArgument(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-return gopurs_runtime.RecordDict1("genericCompare'", gopurs_runtime.Func2(func(v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict1("genericCompare'", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), v_1, v1_2)
+})
 }))
 }
 
@@ -128,8 +134,10 @@ return gopurs_runtime.RecordGet(dict_0, "genericCompare'")
 func Call_genericOrdConstructor(dictGenericOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictGenericOrd_0 gopurs_runtime.Value = dictGenericOrd_0_loop
 _ = dictGenericOrd_0
-return gopurs_runtime.RecordDict1("genericCompare'", gopurs_runtime.Func2(func(v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict1("genericCompare'", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericOrd_0, "genericCompare'"), v_1, v1_2)
+})
 }))
 }
 
@@ -138,7 +146,8 @@ var dictGenericOrd_0 gopurs_runtime.Value = dictGenericOrd_0_loop
 _ = dictGenericOrd_0
 var dictGenericOrd1_1 gopurs_runtime.Value = dictGenericOrd1_1_loop
 _ = dictGenericOrd1_1
-return gopurs_runtime.RecordDict1("genericCompare'", gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict1("genericCompare'", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 v2_4_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericOrd_0, "genericCompare'"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0, (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V0)
 _ = v2_4_0
 var __t1 gopurs_runtime.Value
@@ -155,6 +164,7 @@ __t1 = v2_4_0
 }
 end_branch_1:
 return __t1
+})
 }))
 }
 
@@ -163,7 +173,8 @@ var dictGenericOrd_0 gopurs_runtime.Value = dictGenericOrd_0_loop
 _ = dictGenericOrd_0
 var dictGenericOrd1_1 gopurs_runtime.Value = dictGenericOrd1_1_loop
 _ = dictGenericOrd1_1
-return gopurs_runtime.RecordDict1("genericCompare'", gopurs_runtime.Func2(func(v_2 gopurs_runtime.Value, v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict1("genericCompare'", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (v_2.Type == 9 && v_2.IntVal == 3478632216) {
@@ -228,6 +239,7 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
 return __t0
+})
 }))
 }
 

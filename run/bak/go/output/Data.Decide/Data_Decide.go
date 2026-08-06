@@ -24,7 +24,10 @@ func Get_choosePredicate() gopurs_runtime.Value {
 	once_choosePredicate.Do(func() {
 		cache_choosePredicate = gopurs_runtime.RecordDict2("Divide0", "choose", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Divide.Get_dividePredicate()
-}), gopurs_runtime.Func4(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value, x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_4_0 := gopurs_runtime.Apply(f_0, x_3)
 _ = __local_var_4_0
 var __t1 gopurs_runtime.Value
@@ -49,6 +52,9 @@ __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
 return __t1
+})
+})
+})
 }))
 	})
 	return cache_choosePredicate
@@ -71,7 +77,11 @@ func Get_chooseEquivalence() gopurs_runtime.Value {
 	once_chooseEquivalence.Do(func() {
 		cache_chooseEquivalence = gopurs_runtime.RecordDict2("Divide0", "choose", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Divide.Get_divideEquivalence()
-}), gopurs_runtime.Func5(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value, a_3 gopurs_runtime.Value, b_4 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_4 gopurs_runtime.Value) gopurs_runtime.Value {
 v2_5_0 := gopurs_runtime.Apply(f_0, a_3)
 _ = v2_5_0
 var __t1 gopurs_runtime.Value
@@ -82,7 +92,7 @@ _ = v3_6_2
 var __t3 gopurs_runtime.Value
 {
 if (v3_6_2.Type == 9 && v3_6_2.IntVal == 3711209382) {
-__t3 = gopurs_runtime.Apply2(v_1, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5_0.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v3_6_2.UnsafePtr).V0)
+__t3 = gopurs_runtime.Bool((gopurs_runtime.Apply2(v_1, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5_0.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v3_6_2.UnsafePtr).V0).IntVal) != (0))
 goto end_branch_3
 } else {
 
@@ -100,7 +110,7 @@ goto end_branch_3
 __t3 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_3:
-__t1 = __t3
+__t1 = gopurs_runtime.Bool((__t3.IntVal) != (0))
 goto end_branch_1
 } else {
 
@@ -121,7 +131,7 @@ goto end_branch_5
 }
 {
 if (v3_6_4.Type == 9 && v3_6_4.IntVal == 2465973597) {
-__t5 = gopurs_runtime.Apply2(v1_2, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5_0.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v3_6_4.UnsafePtr).V0)
+__t5 = gopurs_runtime.Bool((gopurs_runtime.Apply2(v1_2, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5_0.UnsafePtr).V0, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v3_6_4.UnsafePtr).V0).IntVal) != (0))
 goto end_branch_5
 } else {
 
@@ -131,7 +141,7 @@ goto end_branch_5
 __t5 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_5:
-__t1 = __t5
+__t1 = gopurs_runtime.Bool((__t5.IntVal) != (0))
 goto end_branch_1
 } else {
 
@@ -141,7 +151,11 @@ goto end_branch_1
 __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
-return __t1
+return gopurs_runtime.Bool((__t1.IntVal) != (0))
+})
+})
+})
+})
 }))
 	})
 	return cache_chooseEquivalence
@@ -153,7 +167,11 @@ func Get_chooseComparison() gopurs_runtime.Value {
 	once_chooseComparison.Do(func() {
 		cache_chooseComparison = gopurs_runtime.RecordDict2("Divide0", "choose", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Divide.Get_divideComparison()
-}), gopurs_runtime.Func5(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value, a_3 gopurs_runtime.Value, b_4 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_4 gopurs_runtime.Value) gopurs_runtime.Value {
 v2_5_0 := gopurs_runtime.Apply(f_0, a_3)
 _ = v2_5_0
 var __t1 gopurs_runtime.Value
@@ -224,6 +242,10 @@ __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
 return __t1
+})
+})
+})
+})
 }))
 	})
 	return cache_chooseComparison
@@ -275,7 +297,10 @@ divideOp_1_0 := gopurs_runtime.Apply(pkg_Data_Divide.Get_divideOp(), dictSemigro
 _ = divideOp_1_0
 return gopurs_runtime.RecordDict2("Divide0", "choose", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return divideOp_1_0
-}), gopurs_runtime.Func4(func(f_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value, v1_4 gopurs_runtime.Value, x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_6_1 := gopurs_runtime.Apply(f_2, x_5)
 _ = __local_var_6_1
 var __t2 gopurs_runtime.Value
@@ -300,6 +325,9 @@ __t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_2:
 return __t2
+})
+})
+})
 }))
 }
 

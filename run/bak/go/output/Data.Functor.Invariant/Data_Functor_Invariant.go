@@ -10,8 +10,12 @@ var cache_invariantMultiplicative gopurs_runtime.Value
 var once_invariantMultiplicative sync.Once
 func Get_invariantMultiplicative() gopurs_runtime.Value {
 	once_invariantMultiplicative.Do(func() {
-		cache_invariantMultiplicative = gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_invariantMultiplicative = gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_0, v1_2)
+})
+})
 }))
 	})
 	return cache_invariantMultiplicative
@@ -21,8 +25,14 @@ var cache_invariantEndo gopurs_runtime.Value
 var once_invariantEndo sync.Once
 func Get_invariantEndo() gopurs_runtime.Value {
 	once_invariantEndo.Do(func() {
-		cache_invariantEndo = gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func4(func(ab_0 gopurs_runtime.Value, ba_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value, x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_invariantEndo = gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func(func(ab_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(ba_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(ab_0, gopurs_runtime.Apply(v_2, gopurs_runtime.Apply(ba_1, x_3)))
+})
+})
+})
 }))
 	})
 	return cache_invariantEndo
@@ -32,8 +42,12 @@ var cache_invariantDual gopurs_runtime.Value
 var once_invariantDual sync.Once
 func Get_invariantDual() gopurs_runtime.Value {
 	once_invariantDual.Do(func() {
-		cache_invariantDual = gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_invariantDual = gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_0, v1_2)
+})
+})
 }))
 	})
 	return cache_invariantDual
@@ -43,8 +57,12 @@ var cache_invariantDisj gopurs_runtime.Value
 var once_invariantDisj sync.Once
 func Get_invariantDisj() gopurs_runtime.Value {
 	once_invariantDisj.Do(func() {
-		cache_invariantDisj = gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_invariantDisj = gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_0, v1_2)
+})
+})
 }))
 	})
 	return cache_invariantDisj
@@ -54,8 +72,12 @@ var cache_invariantConj gopurs_runtime.Value
 var once_invariantConj sync.Once
 func Get_invariantConj() gopurs_runtime.Value {
 	once_invariantConj.Do(func() {
-		cache_invariantConj = gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_invariantConj = gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_0, v1_2)
+})
+})
 }))
 	})
 	return cache_invariantConj
@@ -65,8 +87,12 @@ var cache_invariantAdditive gopurs_runtime.Value
 var once_invariantAdditive sync.Once
 func Get_invariantAdditive() gopurs_runtime.Value {
 	once_invariantAdditive.Do(func() {
-		cache_invariantAdditive = gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_invariantAdditive = gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_0, v1_2)
+})
+})
 }))
 	})
 	return cache_invariantAdditive
@@ -87,8 +113,10 @@ var cache_invariantArray gopurs_runtime.Value
 var once_invariantArray sync.Once
 func Get_invariantArray() gopurs_runtime.Value {
 	once_invariantArray.Do(func() {
-		cache_invariantArray = gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_invariantArray = gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Functor.Get_functorArray(), "map"), f_0)
+})
 }))
 	})
 	return cache_invariantArray
@@ -98,8 +126,10 @@ var cache_invariantFn gopurs_runtime.Value
 var once_invariantFn sync.Once
 func Get_invariantFn() gopurs_runtime.Value {
 	once_invariantFn.Do(func() {
-		cache_invariantFn = gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_invariantFn = gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Functor.Get_functorFn(), "map"), f_0)
+})
 }))
 	})
 	return cache_invariantFn
@@ -163,8 +193,12 @@ return gopurs_runtime.RecordGet(dict_0, "imap")
 func Call_invariantAlternate(dictInvariant_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictInvariant_0 gopurs_runtime.Value = dictInvariant_0_loop
 _ = dictInvariant_0
-return gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func3(func(f_1 gopurs_runtime.Value, g_2 gopurs_runtime.Value, v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(g_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictInvariant_0, "imap"), f_1, g_2, v_3)
+})
+})
 }))
 }
 

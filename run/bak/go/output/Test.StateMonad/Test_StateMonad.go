@@ -370,7 +370,7 @@ var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var s_1 int64 = s_1_loop
 _ = s_1
-return gopurs_runtime.RecordDict2("state", "val", gopurs_runtime.Apply(f_0, gopurs_runtime.Int(s_1)), pkg_Data_Unit.Get_unit())
+return gopurs_runtime.RecordDict2("state", "val", gopurs_runtime.Int(gopurs_runtime.Apply(f_0, gopurs_runtime.Int(s_1)).IntVal), pkg_Data_Unit.Get_unit())
 }
 
 func Call_modify__gopurs_runtime_Value_458711162(f_0_loop gopurs_runtime.Value, s_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -387,24 +387,28 @@ for {
 if false { continue chainModifications }
 var v_0 int64 = v_0_loop
 _ = v_0
-var __t0 gopurs_runtime.Value
+var __t1 gopurs_runtime.Value
 {
 if (v_0) == (0) {
-__t0 = gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
+__t1 = gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict2("state", "val", s_1, pkg_Data_Unit.Get_unit())
 })
-goto end_branch_0
+goto end_branch_1
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Call_chainModifications((v_0) - (1)), gopurs_runtime.Int((s_1.IntVal) + (1)))
+__local_var_1_0 := gopurs_runtime.Apply(Get_modify(), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Int((x_1.IntVal) + (1))
+}))
+_ = __local_var_1_0
+__t1 = gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Call_chainModifications((v_0) - (1)), gopurs_runtime.RecordGet(gopurs_runtime.Apply(__local_var_1_0, s_2), "state"))
 })
 }
-end_branch_0:
-return __t0
+end_branch_1:
+return __t1
 }
 }
 
@@ -429,7 +433,7 @@ goto end_branch_0
 v_0_loop = (v_0) - (1)
 v1_1_loop = (v1_1) + (gopurs_runtime.RecordGet(gopurs_runtime.Apply(Call_chainModifications(60), gopurs_runtime.Int(0)), "state").IntVal)
 continue runManyTimes
-__t0 = gopurs_runtime.Value{}
+__t0 = gopurs_runtime.Int(gopurs_runtime.Value{}.IntVal)
 }
 end_branch_0:
 return __t0.IntVal

@@ -117,7 +117,7 @@ var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
 v_2_loop = v_2
 continue spin_1_0_1
-return gopurs_runtime.Value{}
+return gopurs_runtime.Str(gopurs_runtime.Value{}.StrVal())
 }
 }()
 })
@@ -138,7 +138,7 @@ var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
 v_2_loop = v_2
 continue spin_1_0_2
-return gopurs_runtime.Value{}
+return gopurs_runtime.Bool((gopurs_runtime.Value{}.IntVal) != (0))
 }
 }()
 })

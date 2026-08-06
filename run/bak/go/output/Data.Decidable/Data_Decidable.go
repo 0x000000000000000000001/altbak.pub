@@ -59,7 +59,8 @@ func Get_decidablePredicate() gopurs_runtime.Value {
 return pkg_Data_Decide.Get_choosePredicate()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Divisible.Get_divisiblePredicate()
-}), gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var spin_2_0_0 gopurs_runtime.Value
 spin_2_0_0 = gopurs_runtime.Func(func(v_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
@@ -75,7 +76,8 @@ return gopurs_runtime.Value{}
 }
 }()
 })
-return gopurs_runtime.Apply(spin_2_0_0, gopurs_runtime.Apply(f_0, a_1))
+return gopurs_runtime.Bool((gopurs_runtime.Apply(spin_2_0_0, gopurs_runtime.Apply(f_0, a_1)).IntVal) != (0))
+})
 }))
 	})
 	return cache_decidablePredicate
@@ -100,7 +102,8 @@ func Get_decidableEquivalence() gopurs_runtime.Value {
 return pkg_Data_Decide.Get_chooseEquivalence()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Divisible.Get_divisibleEquivalence()
-}), gopurs_runtime.Func2(func(f_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var spin_2_0_2 gopurs_runtime.Value
 spin_2_0_2 = gopurs_runtime.Func(func(v_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
@@ -117,6 +120,7 @@ return gopurs_runtime.Value{}
 }()
 })
 return gopurs_runtime.Apply(spin_2_0_2, gopurs_runtime.Apply(f_0, a_1))
+})
 }))
 	})
 	return cache_decidableEquivalence
@@ -130,7 +134,9 @@ func Get_decidableComparison() gopurs_runtime.Value {
 return pkg_Data_Decide.Get_chooseComparison()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Divisible.Get_divisibleComparison()
-}), gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, a_1 gopurs_runtime.Value, v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var spin_3_0_3 gopurs_runtime.Value
 spin_3_0_3 = gopurs_runtime.Func(func(v_4_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
@@ -147,6 +153,8 @@ return gopurs_runtime.Value{}
 }()
 })
 return gopurs_runtime.Apply(spin_3_0_3, gopurs_runtime.Apply(f_0, a_1))
+})
+})
 }))
 	})
 	return cache_decidableComparison
@@ -187,7 +195,8 @@ return gopurs_runtime.RecordDict3("Decide0", "Divisible1", "lose", gopurs_runtim
 return chooseOp_1_0
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return divisibleOp_2_1
-}), gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, a_4 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_4 gopurs_runtime.Value) gopurs_runtime.Value {
 var spin_5_2_1 gopurs_runtime.Value
 spin_5_2_1 = gopurs_runtime.Func(func(v_6_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
@@ -204,6 +213,7 @@ return gopurs_runtime.Value{}
 }()
 })
 return gopurs_runtime.Apply(spin_5_2_1, gopurs_runtime.Apply(f_3, a_4))
+})
 }))
 }
 

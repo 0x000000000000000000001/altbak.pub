@@ -1,1 +1,1 @@
-{"file":"index.js","mappings":";;;AASA,eAAA;WAAA;eAEE;YAAA;;YAEA;;YAEI,SAAK,KAAK;+BACT,gDAAqC,MAAM;mBAC3C","names":[],"sources":["../../src/Bench.purs"],"version":3}
+{"file":"index.js","mappings":";;;;;;;;;;;;;AAwBA,kBAAA;WAAA;sDAEmB,0EAAjB;wCACW,WAAX;8DACiB,sBAAjB;gEACA;wCACA,KAAA;wEACA;gCACI,SAAK,KAAK;8EACI,wDAAyC,MAAM,mBAAjE;gDACK;;;;;;;;;;AAtBP,eAAA;WAAA;eAEE;+BAAI;YACJ;+BACI;;YAEJ;;YAEI,SAAK,KAAK;+BACT,wDAAyC,MAAM;mBAC/C","names":[],"sources":["../../src/Bench.purs"],"version":3}

@@ -138,7 +138,7 @@ _ = v_0
 var __t0 gopurs_runtime.Value
 {
 if (v_0.Type == 9 && v_0.IntVal == 245188743) {
-__t0 = gopurs_runtime.Int((*Constructor_Val)(v_0.UnsafePtr).V0)
+__t0 = gopurs_runtime.Int(gopurs_runtime.Int((*Constructor_Val)(v_0.UnsafePtr).V0).IntVal)
 goto end_branch_0
 } else {
 

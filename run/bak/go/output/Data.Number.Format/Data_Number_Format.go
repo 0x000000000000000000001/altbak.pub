@@ -14,7 +14,9 @@ func Get_clamp() gopurs_runtime.Value {
 		cache_clamp = func() gopurs_runtime.Value {
 __local_var_0_0 := gopurs_runtime.Apply3(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil})
 _ = __local_var_0_0
-return gopurs_runtime.Func3(func(low_1 gopurs_runtime.Value, hi_2 gopurs_runtime.Value, x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(low_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(hi_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 v_4_1 := gopurs_runtime.Apply2(__local_var_0_0, low_1, x_3)
 _ = v_4_1
 var __t3 gopurs_runtime.Value
@@ -80,6 +82,8 @@ __t5 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_5:
 return __t5
+})
+})
 })
 }()
 	})

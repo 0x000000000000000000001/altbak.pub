@@ -47,20 +47,14 @@ gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 		}
 	go_arg1 := arg1
 	go_arg2 := gopurs_runtime.Unbox[float64](arg2)
-	arg3_map := gopurs_runtime.RecordToMap(arg3)
-	go_arg3 := make(map[string]any)
-	for k, v := range arg3_map { go_arg3[k] = v }
+	go_arg3 := gopurs_runtime.UnboxObject(arg3)
 	go_res := AdjustImpl(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
 })
 var _Gopurs_CalcDiff = // TAST: (ADT ["Data","Function","Uncurried","Fn2"] [Any, Any, Number])
 gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-	arg0_map := gopurs_runtime.RecordToMap(arg0)
-	go_arg0 := make(map[string]any)
-	for k, v := range arg0_map { go_arg0[k] = v }
-	arg1_map := gopurs_runtime.RecordToMap(arg1)
-	go_arg1 := make(map[string]any)
-	for k, v := range arg1_map { go_arg1[k] = v }
+	go_arg0 := gopurs_runtime.UnboxObject(arg0)
+	go_arg1 := gopurs_runtime.UnboxObject(arg1)
 	go_res := CalcDiff(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })

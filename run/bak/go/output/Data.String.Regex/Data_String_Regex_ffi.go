@@ -198,11 +198,7 @@ var _Gopurs_FlagsImpl = // TAST: (Func [(ADT ["Data","String","Regex","Regex"] [
 gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[*GoRegex](arg0)
 	go_res := FlagsImpl(go_arg0)
-	return func() gopurs_runtime.Value {
-				res_map := make(map[string]gopurs_runtime.Value)
-				for k, v := range go_res { res_map[k] = gopurs_runtime.Box(v) }
-				return gopurs_runtime.Record(res_map)
-			}()
+	return gopurs_runtime.Any(go_res)
 })
 var _Gopurs_RegexImpl = // TAST: (Func [(Func [String] (ADT ["Data","Either","Either"] [String, (ADT ["Data","String","Regex","Regex"] [])])), (Func [(ADT ["Data","String","Regex","Regex"] [])] (ADT ["Data","Either","Either"] [String, (ADT ["Data","String","Regex","Regex"] [])])), String, String] (ADT ["Data","Either","Either"] [String, (ADT ["Data","String","Regex","Regex"] [])]))
 gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {

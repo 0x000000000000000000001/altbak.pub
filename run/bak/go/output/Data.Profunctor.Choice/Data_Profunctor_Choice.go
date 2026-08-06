@@ -91,7 +91,8 @@ func Get_choiceFn() gopurs_runtime.Value {
 	once_choiceFn.Do(func() {
 		cache_choiceFn = gopurs_runtime.RecordDict3("Profunctor0", "left", "right", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Profunctor.Get_profunctorFn()
-}), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
 if (v1_1.Type == 9 && v1_1.IntVal == 3711209382) {
@@ -114,6 +115,7 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
 return __t0
+})
 }), gopurs_runtime.RecordGet(pkg_Data_Either.Get_functorEither(), "map"))
 	})
 	return cache_choiceFn
@@ -174,7 +176,8 @@ var dictChoice_1 gopurs_runtime.Value = dictChoice_1_loop
 _ = dictChoice_1
 rmap_2_0 := gopurs_runtime.Apply(pkg_Data_Profunctor.Get_rmap(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictChoice_1, "Profunctor0"), gopurs_runtime.Value{}))
 _ = rmap_2_0
-return gopurs_runtime.Func2(func(l_3 gopurs_runtime.Value, r_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(l_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(rmap_2_0, gopurs_runtime.Func(func(v2_5 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
@@ -199,6 +202,7 @@ __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 end_branch_1:
 return __t1
 }), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroupoid_0, "compose"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictChoice_1, "right"), r_4), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictChoice_1, "left"), l_3)))
+})
 })
 }
 

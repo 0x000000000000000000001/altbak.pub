@@ -18,6 +18,17 @@ return Call_pure(dict_0_box)
 	return cache_pure
 }
 
+var cache_pure__gopurs_runtime_Value_2075172933 gopurs_runtime.Value
+var once_pure__gopurs_runtime_Value_2075172933 sync.Once
+func Get_pure__gopurs_runtime_Value_2075172933() gopurs_runtime.Value {
+	once_pure__gopurs_runtime_Value_2075172933.Do(func() {
+		cache_pure__gopurs_runtime_Value_2075172933 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_pure__gopurs_runtime_Value_2075172933(dict_0_box)
+})
+	})
+	return cache_pure__gopurs_runtime_Value_2075172933
+}
+
 var cache_pure__gopurs_runtime_Value_2742325253 gopurs_runtime.Value
 var once_pure__gopurs_runtime_Value_2742325253 sync.Once
 func Get_pure__gopurs_runtime_Value_2742325253() gopurs_runtime.Value {
@@ -103,8 +114,10 @@ func Get_applicativeFn() gopurs_runtime.Value {
 	once_applicativeFn.Do(func() {
 		cache_applicativeFn = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Apply.Get_applyFn()
-}), gopurs_runtime.Func2(func(x_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_0
+})
 }))
 	})
 	return cache_applicativeFn
@@ -117,13 +130,24 @@ func Get_applicativeArray() gopurs_runtime.Value {
 		cache_applicativeArray = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Control_Apply.Get_applyArray()
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Array([]gopurs_runtime.Value{x_0})
+return gopurs_runtime.Array(func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array([]gopurs_runtime.Value{x_0}).UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}())
 }))
 	})
 	return cache_applicativeArray
 }
 
 func Call_pure(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "pure")
+}
+
+func Call_pure__gopurs_runtime_Value_2075172933(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "pure")

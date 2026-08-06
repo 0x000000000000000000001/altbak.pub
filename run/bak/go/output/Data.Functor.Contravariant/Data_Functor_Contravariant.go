@@ -10,8 +10,10 @@ var cache_contravariantConst gopurs_runtime.Value
 var once_contravariantConst sync.Once
 func Get_contravariantConst() gopurs_runtime.Value {
 	once_contravariantConst.Do(func() {
-		cache_contravariantConst = gopurs_runtime.RecordDict1("cmap", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_contravariantConst = gopurs_runtime.RecordDict1("cmap", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return v1_1
+})
 }))
 	})
 	return cache_contravariantConst

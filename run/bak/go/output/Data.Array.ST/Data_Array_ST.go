@@ -55,6 +55,15 @@ func Get_unsafeFreeze() gopurs_runtime.Value {
 	return cache_unsafeFreeze
 }
 
+var cache_unsafeFreeze__gopurs_runtime_Value_2265612059 gopurs_runtime.Value
+var once_unsafeFreeze__gopurs_runtime_Value_2265612059 sync.Once
+func Get_unsafeFreeze__gopurs_runtime_Value_2265612059() gopurs_runtime.Value {
+	once_unsafeFreeze__gopurs_runtime_Value_2265612059.Do(func() {
+		cache_unsafeFreeze__gopurs_runtime_Value_2265612059 = gopurs_runtime.Apply(pkg_Control_Monad_ST_Uncurried.Get_runSTFn1(), Get_unsafeFreezeImpl())
+	})
+	return cache_unsafeFreeze__gopurs_runtime_Value_2265612059
+}
+
 var cache_toAssocArray gopurs_runtime.Value
 var once_toAssocArray sync.Once
 func Get_toAssocArray() gopurs_runtime.Value {
@@ -279,6 +288,15 @@ func Get_peek() gopurs_runtime.Value {
 	return cache_peek
 }
 
+var cache_peek__gopurs_runtime_Value_3896570768 gopurs_runtime.Value
+var once_peek__gopurs_runtime_Value_3896570768 sync.Once
+func Get_peek__gopurs_runtime_Value_3896570768() gopurs_runtime.Value {
+	once_peek__gopurs_runtime_Value_3896570768.Do(func() {
+		cache_peek__gopurs_runtime_Value_3896570768 = gopurs_runtime.Apply3(pkg_Control_Monad_ST_Uncurried.Get_runSTFn4(), Get_peekImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil})
+	})
+	return cache_peek__gopurs_runtime_Value_3896570768
+}
+
 var cache_new gopurs_runtime.Value
 var once_new sync.Once
 func Get_new() gopurs_runtime.Value {
@@ -286,6 +304,24 @@ func Get_new() gopurs_runtime.Value {
 		cache_new = Get_newImpl()
 	})
 	return cache_new
+}
+
+var cache_new__gopurs_runtime_Value_108694771 gopurs_runtime.Value
+var once_new__gopurs_runtime_Value_108694771 sync.Once
+func Get_new__gopurs_runtime_Value_108694771() gopurs_runtime.Value {
+	once_new__gopurs_runtime_Value_108694771.Do(func() {
+		cache_new__gopurs_runtime_Value_108694771 = Get_newImpl()
+	})
+	return cache_new__gopurs_runtime_Value_108694771
+}
+
+var cache_new__gopurs_runtime_Value_361268277 gopurs_runtime.Value
+var once_new__gopurs_runtime_Value_361268277 sync.Once
+func Get_new__gopurs_runtime_Value_361268277() gopurs_runtime.Value {
+	once_new__gopurs_runtime_Value_361268277.Do(func() {
+		cache_new__gopurs_runtime_Value_361268277 = Get_newImpl()
+	})
+	return cache_new__gopurs_runtime_Value_361268277
 }
 
 var cache_modify gopurs_runtime.Value
@@ -398,7 +434,7 @@ goto end_branch_0
 }
 {
 if (v_1.Type == 9 && v_1.IntVal == 1527465420) {
-__t0 = gopurs_runtime.Int(-1)
+__t0 = gopurs_runtime.Int((gopurs_runtime.Int(0).IntVal) - (1))
 goto end_branch_0
 } else {
 
@@ -408,7 +444,7 @@ goto end_branch_0
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
-return __t0
+return gopurs_runtime.Int(__t0.IntVal)
 }))
 }
 
@@ -435,7 +471,7 @@ goto end_branch_0
 }
 {
 if (v_1.Type == 9 && v_1.IntVal == 1527465420) {
-__t0 = gopurs_runtime.Int(-1)
+__t0 = gopurs_runtime.Int((gopurs_runtime.Int(0).IntVal) - (1))
 goto end_branch_0
 } else {
 
@@ -445,7 +481,7 @@ goto end_branch_0
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
-return __t0
+return gopurs_runtime.Int(__t0.IntVal)
 }))
 }
 
@@ -454,8 +490,10 @@ var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-return Call_sortBy(gopurs_runtime.Func2(func(x_2 gopurs_runtime.Value, y_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_sortBy(gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.Apply(f_1, x_2), gopurs_runtime.Apply(f_1, y_3))
+})
 }))
 }
 

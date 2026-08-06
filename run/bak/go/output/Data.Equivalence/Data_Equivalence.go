@@ -22,8 +22,14 @@ var cache_semigroupEquivalence gopurs_runtime.Value
 var once_semigroupEquivalence sync.Once
 func Get_semigroupEquivalence() gopurs_runtime.Value {
 	once_semigroupEquivalence.Do(func() {
-		cache_semigroupEquivalence = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func4(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value, a_2 gopurs_runtime.Value, b_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Apply2(v_0, a_2, b_3), gopurs_runtime.Apply2(v1_1, a_2, b_3))
+		cache_semigroupEquivalence = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Apply2(v_0, a_2, b_3), gopurs_runtime.Apply2(v1_1, a_2, b_3)).IntVal) != (0))
+})
+})
+})
 }))
 	})
 	return cache_semigroupEquivalence
@@ -46,8 +52,10 @@ func Get_monoidEquivalence() gopurs_runtime.Value {
 	once_monoidEquivalence.Do(func() {
 		cache_monoidEquivalence = gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_semigroupEquivalence()
-}), gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(true)
+})
 }))
 	})
 	return cache_monoidEquivalence
@@ -68,8 +76,14 @@ var cache_contravariantEquivalence gopurs_runtime.Value
 var once_contravariantEquivalence sync.Once
 func Get_contravariantEquivalence() gopurs_runtime.Value {
 	once_contravariantEquivalence.Do(func() {
-		cache_contravariantEquivalence = gopurs_runtime.RecordDict1("cmap", gopurs_runtime.Func4(func(f_0 gopurs_runtime.Value, v_1 gopurs_runtime.Value, x_2 gopurs_runtime.Value, y_3 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_contravariantEquivalence = gopurs_runtime.RecordDict1("cmap", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(v_1, gopurs_runtime.Apply(f_0, x_2), gopurs_runtime.Apply(f_0, y_3))
+})
+})
+})
 }))
 	})
 	return cache_contravariantEquivalence

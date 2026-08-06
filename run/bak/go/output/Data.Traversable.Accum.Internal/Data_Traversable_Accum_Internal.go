@@ -75,10 +75,14 @@ var cache_functorStateR gopurs_runtime.Value
 var once_functorStateR sync.Once
 func Get_functorStateR() gopurs_runtime.Value {
 	once_functorStateR.Do(func() {
-		cache_functorStateR = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, k_1 gopurs_runtime.Value, s_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_functorStateR = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(k_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
 v_3_0 := gopurs_runtime.Apply(k_1, s_2)
 _ = v_3_0
 return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v_3_0, "accum"), gopurs_runtime.Apply(f_0, gopurs_runtime.RecordGet(v_3_0, "value")))
+})
+})
 }))
 	})
 	return cache_functorStateR
@@ -88,10 +92,14 @@ var cache_functorStateL gopurs_runtime.Value
 var once_functorStateL sync.Once
 func Get_functorStateL() gopurs_runtime.Value {
 	once_functorStateL.Do(func() {
-		cache_functorStateL = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, k_1 gopurs_runtime.Value, s_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_functorStateL = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(k_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
 v_3_0 := gopurs_runtime.Apply(k_1, s_2)
 _ = v_3_0
 return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v_3_0, "accum"), gopurs_runtime.Apply(f_0, gopurs_runtime.RecordGet(v_3_0, "value")))
+})
+})
 }))
 	})
 	return cache_functorStateL
@@ -103,12 +111,16 @@ func Get_applyStateR() gopurs_runtime.Value {
 	once_applyStateR.Do(func() {
 		cache_applyStateR = gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_functorStateR()
-}), gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, x_1 gopurs_runtime.Value, s_2 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
 v_3_0 := gopurs_runtime.Apply(x_1, s_2)
 _ = v_3_0
 v1_4_1 := gopurs_runtime.Apply(f_0, gopurs_runtime.RecordGet(v_3_0, "accum"))
 _ = v1_4_1
 return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v1_4_1, "accum"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(v1_4_1, "value"), gopurs_runtime.RecordGet(v_3_0, "value")))
+})
+})
 }))
 	})
 	return cache_applyStateR
@@ -120,12 +132,16 @@ func Get_applyStateL() gopurs_runtime.Value {
 	once_applyStateL.Do(func() {
 		cache_applyStateL = gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_functorStateL()
-}), gopurs_runtime.Func3(func(f_0 gopurs_runtime.Value, x_1 gopurs_runtime.Value, s_2 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
 v_3_0 := gopurs_runtime.Apply(f_0, s_2)
 _ = v_3_0
 v1_4_1 := gopurs_runtime.Apply(x_1, gopurs_runtime.RecordGet(v_3_0, "accum"))
 _ = v1_4_1
 return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v1_4_1, "accum"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(v_3_0, "value"), gopurs_runtime.RecordGet(v1_4_1, "value")))
+})
+})
 }))
 	})
 	return cache_applyStateL
@@ -137,8 +153,10 @@ func Get_applicativeStateR() gopurs_runtime.Value {
 	once_applicativeStateR.Do(func() {
 		cache_applicativeStateR = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_applyStateR()
-}), gopurs_runtime.Func2(func(a_0 gopurs_runtime.Value, s_1 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict2("accum", "value", s_1, a_0)
+})
 }))
 	})
 	return cache_applicativeStateR
@@ -150,8 +168,10 @@ func Get_applicativeStateL() gopurs_runtime.Value {
 	once_applicativeStateL.Do(func() {
 		cache_applicativeStateL = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_applyStateL()
-}), gopurs_runtime.Func2(func(a_0 gopurs_runtime.Value, s_1 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict2("accum", "value", s_1, a_0)
+})
 }))
 	})
 	return cache_applicativeStateL

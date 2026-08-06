@@ -13,7 +13,7 @@ var once_semigroupVoid sync.Once
 func Get_semigroupVoid() gopurs_runtime.Value {
 	once_semigroupVoid.Do(func() {
 		cache_semigroupVoid = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return pkg_Data_Void.Get_absurd()
+return pkg_Data_Void.Get_absurd__gopurs_runtime_Value_331654555()
 }))
 	})
 	return cache_semigroupVoid
@@ -23,8 +23,10 @@ var cache_semigroupUnit gopurs_runtime.Value
 var once_semigroupUnit sync.Once
 func Get_semigroupUnit() gopurs_runtime.Value {
 	once_semigroupUnit.Do(func() {
-		cache_semigroupUnit = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semigroupUnit = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Unit.Get_unit()
+})
 }))
 	})
 	return cache_semigroupUnit
@@ -43,8 +45,12 @@ var cache_semigroupRecordNil gopurs_runtime.Value
 var once_semigroupRecordNil sync.Once
 func Get_semigroupRecordNil() gopurs_runtime.Value {
 	once_semigroupRecordNil.Do(func() {
-		cache_semigroupRecordNil = gopurs_runtime.RecordDict1("appendRecord", gopurs_runtime.Func3(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value, v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semigroupRecordNil = gopurs_runtime.RecordDict1("appendRecord", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict0()
+})
+})
 }))
 	})
 	return cache_semigroupRecordNil
@@ -54,8 +60,10 @@ var cache_semigroupProxy gopurs_runtime.Value
 var once_semigroupProxy sync.Once
 func Get_semigroupProxy() gopurs_runtime.Value {
 	once_semigroupProxy.Do(func() {
-		cache_semigroupProxy = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func2(func(v_0 gopurs_runtime.Value, v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semigroupProxy = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}
+})
 }))
 	})
 	return cache_semigroupProxy
@@ -165,8 +173,12 @@ return gopurs_runtime.RecordGet(dict_0, "append")
 func Call_semigroupFn(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
 _ = dictSemigroup_0
-return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func3(func(f_1 gopurs_runtime.Value, g_2 gopurs_runtime.Value, x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(g_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append"), gopurs_runtime.Apply(f_1, x_3), gopurs_runtime.Apply(g_2, x_3))
+})
+})
 }))
 }
 
@@ -179,12 +191,16 @@ var dictSemigroupRecord_2 gopurs_runtime.Value = dictSemigroupRecord_2_loop
 _ = dictSemigroupRecord_2
 var dictSemigroup_3 gopurs_runtime.Value = dictSemigroup_3_loop
 _ = dictSemigroup_3
-return gopurs_runtime.RecordDict1("appendRecord", gopurs_runtime.Func3(func(v_4 gopurs_runtime.Value, ra_5 gopurs_runtime.Value, rb_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict1("appendRecord", gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(ra_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(rb_6 gopurs_runtime.Value) gopurs_runtime.Value {
 key_7_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil})
 _ = key_7_0
 get_8_1 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), key_7_0)
 _ = get_8_1
 return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), key_7_0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_3, "append"), gopurs_runtime.Apply(get_8_1, ra_5), gopurs_runtime.Apply(get_8_1, rb_6)), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictSemigroupRecord_2, "appendRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil}, ra_5, rb_6))
+})
+})
 }))
 }
 

@@ -199,8 +199,46 @@ func PartitionImpl(f func(interface{}) bool, xs []interface{}) map[string]interf
 	}
 }
 
-func FromFoldableImpl(foldr interface{}, xsVal interface{}) []interface{} {
-	panic("Not implemented: FromFoldableImpl (complex callback)")
+type consList struct {
+	head interface{}
+	tail interface{}
+}
+
+func FromFoldableImpl(foldr func(func(interface{}) func(interface{}) interface{}, interface{}, interface{}) interface{}, xsVal interface{}) []interface{} {
+	var emptyList interface{} = nil
+
+	curryCons := func(head interface{}) func(interface{}) interface{} {
+		return func(tail interface{}) interface{} {
+			return &consList{head: head, tail: tail}
+		}
+	}
+
+	list := foldr(curryCons, emptyList, xsVal)
+
+	var unboxAny func(interface{}) interface{}
+	unboxAny = func(v interface{}) interface{} {
+		if val, ok := v.(gopurs_runtime.Value); ok && val.Type == gopurs_runtime.TypeAny {
+			if val.UnsafePtr != nil {
+				return unboxAny(*(*any)(val.UnsafePtr))
+			}
+			return nil
+		}
+		return v
+	}
+
+	list = unboxAny(list)
+
+	var result []interface{}
+	curr, ok := list.(*consList)
+	for ok && curr != nil {
+		result = append(result, curr.head)
+		curr, ok = unboxAny(curr.tail).(*consList)
+	}
+	
+	if result == nil {
+		return make([]interface{}, 0)
+	}
+	return result
 }
 
 func FindMapImpl(nothing interface{}, isJust func(interface{}) bool, f func(interface{}) interface{}, xs []interface{}) interface{} {
@@ -394,7 +432,15 @@ gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 })
 var _Gopurs_FromFoldableImpl = // TAST: (ADT ["Data","Function","Uncurried","Fn2"] [(Func [(Func [(TypeVar a), (TypeVar b)] (TypeVar b)), (TypeVar b), (TypeVar f)] (TypeVar b)), (TypeVar f), (Array (TypeVar a))])
 gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
-	go_arg0 := arg0
+	go_arg0 := func(p0_0 func(any) func(any) any, p0_1 any, p0_2 any) any {
+			return gopurs_runtime.Apply3(arg0, gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+						inner_res := p0_0(arg)
+						return gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
+						inner_res := inner_res(arg)
+						return gopurs_runtime.Box(inner_res)
+					})
+					}), gopurs_runtime.Box(p0_1), gopurs_runtime.Box(p0_2))
+		}
 	go_arg1 := arg1
 	go_res := FromFoldableImpl(go_arg0, go_arg1)
 	return func() gopurs_runtime.Value {
@@ -434,11 +480,7 @@ gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) 
 	go_arg1 := make([]any, len(arg1_arr))
 	for i, v := range arg1_arr { go_arg1[i] = v }
 	go_res := PartitionImpl(go_arg0, go_arg1)
-	return func() gopurs_runtime.Value {
-				res_map := make(map[string]gopurs_runtime.Value)
-				for k, v := range go_res { res_map[k] = gopurs_runtime.Box(v) }
-				return gopurs_runtime.Record(res_map)
-			}()
+	return gopurs_runtime.Any(go_res)
 })
 var _Gopurs_RangeImpl = // TAST: (ADT ["Data","Function","Uncurried","Fn2"] [Int, Int, (Array Int)])
 gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {

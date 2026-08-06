@@ -295,7 +295,7 @@ _ = v_0
 var __t1 gopurs_runtime.Value
 {
 if (v_0) == (0) {
-__t1 = Get_zeroC()
+__t1 = Get_zeroC__gopurs_runtime_Value_4066693242()
 goto end_branch_1
 } else {
 
@@ -304,8 +304,10 @@ goto end_branch_1
 {
 __local_var_1_0 := Call_fromInt((v_0) - (1))
 _ = __local_var_1_0
-__t1 = gopurs_runtime.Func2(func(f_2 gopurs_runtime.Value, x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+__t1 = gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_2, gopurs_runtime.Apply2(__local_var_1_0, f_2, x_3))
+})
 })
 }
 end_branch_1:
@@ -326,8 +328,10 @@ __local_var_1_0 := Call_fromInt(n_0)
 _ = __local_var_1_0
 __local_var_2_1 := Call_fromInt(n_0)
 _ = __local_var_2_1
-return gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(__local_var_1_0, gopurs_runtime.Apply(__local_var_2_1, f_3), x_4)
+})
 })
 }
 
@@ -338,8 +342,10 @@ __local_var_1_0 := Call_c100(n_0)
 _ = __local_var_1_0
 __local_var_2_1 := Call_c100(n_0)
 _ = __local_var_2_1
-return gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(__local_var_1_0, gopurs_runtime.Apply(__local_var_2_1, f_3), x_4)
+})
 })
 }
 
@@ -350,8 +356,10 @@ __local_var_1_0 := Call_c10k(n_0)
 _ = __local_var_1_0
 __local_var_2_1 := Call_fromInt(n_0)
 _ = __local_var_2_1
-return gopurs_runtime.Func2(func(f_3 gopurs_runtime.Value, x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(__local_var_1_0, gopurs_runtime.Apply(__local_var_2_1, f_3), x_4)
+})
 })
 }
 

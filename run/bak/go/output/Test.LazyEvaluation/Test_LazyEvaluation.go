@@ -200,7 +200,7 @@ v1_1_loop = (v1_1) + (gopurs_runtime.Apply(Call_buildThunks(1000, gopurs_runtime
 return gopurs_runtime.Int(0)
 })), pkg_Data_Unit.Get_unit()).IntVal)
 continue runManyTimes
-__t0 = gopurs_runtime.Value{}
+__t0 = gopurs_runtime.Int(gopurs_runtime.Value{}.IntVal)
 }
 end_branch_0:
 return __t0.IntVal

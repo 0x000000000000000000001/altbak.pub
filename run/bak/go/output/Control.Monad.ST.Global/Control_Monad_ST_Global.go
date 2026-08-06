@@ -15,6 +15,15 @@ func Get_toEffect() gopurs_runtime.Value {
 	return cache_toEffect
 }
 
+var cache_toEffect__gopurs_runtime_Value_4169273813 gopurs_runtime.Value
+var once_toEffect__gopurs_runtime_Value_4169273813 sync.Once
+func Get_toEffect__gopurs_runtime_Value_4169273813() gopurs_runtime.Value {
+	once_toEffect__gopurs_runtime_Value_4169273813.Do(func() {
+		cache_toEffect__gopurs_runtime_Value_4169273813 = pkg_Unsafe_Coerce.Get_unsafeCoerce()
+	})
+	return cache_toEffect__gopurs_runtime_Value_4169273813
+}
+
 
 
 

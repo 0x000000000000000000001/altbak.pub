@@ -17,12 +17,29 @@ return Call_identity(x_0_box)
 	return cache_identity
 }
 
+var cache_identity1 gopurs_runtime.Value
+var once_identity1 sync.Once
+func Get_identity1() gopurs_runtime.Value {
+	once_identity1.Do(func() {
+		cache_identity1 = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_identity1(x_0_box)
+})
+	})
+	return cache_identity1
+}
+
 var cache_profunctorFn gopurs_runtime.Value
 var once_profunctorFn sync.Once
 func Get_profunctorFn() gopurs_runtime.Value {
 	once_profunctorFn.Do(func() {
-		cache_profunctorFn = gopurs_runtime.RecordDict1("dimap", gopurs_runtime.Func4(func(a2b_0 gopurs_runtime.Value, c2d_1 gopurs_runtime.Value, b2c_2 gopurs_runtime.Value, x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_profunctorFn = gopurs_runtime.RecordDict1("dimap", gopurs_runtime.Func(func(a2b_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(c2d_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b2c_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(c2d_1, gopurs_runtime.Apply(b2c_2, gopurs_runtime.Apply(a2b_0, x_3)))
+})
+})
+})
 }))
 	})
 	return cache_profunctorFn
@@ -133,6 +150,12 @@ _ = x_0
 return x_0
 }
 
+func Call_identity1(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0
+}
+
 func Call_dimap(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
@@ -166,7 +189,7 @@ var dictProfunctor_0 gopurs_runtime.Value = dictProfunctor_0_loop
 _ = dictProfunctor_0
 var b2c_1 gopurs_runtime.Value = b2c_1_loop
 _ = b2c_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictProfunctor_0, "dimap"), Get_identity(), b2c_1)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictProfunctor_0, "dimap"), Get_identity1(), b2c_1)
 }
 
 func Call_rmap__gopurs_runtime_Value_1904986375(dictProfunctor_0_loop gopurs_runtime.Value, b2c_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -174,7 +197,7 @@ var dictProfunctor_0 gopurs_runtime.Value = dictProfunctor_0_loop
 _ = dictProfunctor_0
 var b2c_1 gopurs_runtime.Value = b2c_1_loop
 _ = b2c_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictProfunctor_0, "dimap"), Get_identity(), b2c_1)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictProfunctor_0, "dimap"), Get_identity1(), b2c_1)
 }
 
 func Call_unwrapIso(dictProfunctor_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -198,10 +221,12 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictProfunctor_0, "dimap")
 func Call_arr(dictCategory_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictCategory_0 gopurs_runtime.Value = dictCategory_0_loop
 _ = dictCategory_0
-identity1_1_0 := gopurs_runtime.RecordGet(dictCategory_0, "identity")
-_ = identity1_1_0
-return gopurs_runtime.Func2(func(dictProfunctor_2 gopurs_runtime.Value, f_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictProfunctor_2, "dimap"), Get_identity(), f_3, identity1_1_0)
+identity2_1_0 := gopurs_runtime.RecordGet(dictCategory_0, "identity")
+_ = identity2_1_0
+return gopurs_runtime.Func(func(dictProfunctor_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictProfunctor_2, "dimap"), Get_identity1(), f_3, identity2_1_0)
+})
 })
 }
 

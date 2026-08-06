@@ -9,22 +9,14 @@ Test_Polymorphism_describe = _lazy(func() any { return (_force(Effect_Console_lo
 Test_Polymorphism_act = _lazy(func() any { return (((_force(Effect_bindEffect)).(map[string]any)["bind"]).(func(any) any)((_force(Bench_opaque)).(func(any) any)(10000000))).(func(any) any)(func(v0_dummy any) any {
 return func() any {
 var v1_go any
-v1_go = func(_c2_0 any) any { return func(_c2_1 any) any {
-_r2_0 := _c2_0.(int)
-_r2_1 := _c2_1.(int)
-for {
-var v2_v int = _r2_0
-_ = v2_v
-var v3_v1 int = _r2_1
-_ = v3_v1
-if (v2_v == 0) {
-return any(v3_v1)
+v1_go = func(v2_v any) any {
+return func(v3_v1 any) any {
+return func() any {
+if _truthy(_intEq(v2_v, 0)) { return v3_v1 }
+return ((v1_go).(func(any) any)(_intSub(v2_v, 1))).(func(any) any)(_intAdd(v3_v1, 1))
+}()
 }
-_r2_0 = (v2_v - 1)
-_r2_1 = (v3_v1 + 1)
-continue
 }
-} }
 _ = v1_go
 return (_force(Effect_Console_log)).(func(any) any)(((_force(Data_Show_showInt)).(map[string]any)["show"]).(func(any) any)(((v1_go).(func(any) any)(v0_dummy)).(func(any) any)(0)))
 }()

@@ -265,15 +265,19 @@ _ = dictAlternative_1
 Plus1_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictAlternative_1, "Plus1"), gopurs_runtime.Value{})
 _ = Plus1_2_0
 return gopurs_runtime.Func(func(dictFoldable_3 gopurs_runtime.Value) gopurs_runtime.Value {
-empty_4_1 := gopurs_runtime.RecordGet(Plus1_2_0, "empty")
-_ = empty_4_1
-return gopurs_runtime.Func2(func(dictFunctor_5 gopurs_runtime.Value, f_6 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_7_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFoldable_3, "foldr"), gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Plus1_2_0, "Alt0"), gopurs_runtime.Value{}), "alt"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictParallel_0, "parallel"), gopurs_runtime.Apply(f_6, x_7)))
-}), empty_4_1)
-_ = __local_var_7_2
-return gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictParallel_0, "sequential"), gopurs_runtime.Apply(__local_var_7_2, x_8))
+alt_4_1 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Plus1_2_0, "Alt0"), gopurs_runtime.Value{}), "alt")
+_ = alt_4_1
+empty_5_2 := gopurs_runtime.RecordGet(Plus1_2_0, "empty")
+_ = empty_5_2
+return gopurs_runtime.Func(func(dictFunctor_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f_7 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_8_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFoldable_3, "foldr"), gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(alt_4_1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictParallel_0, "parallel"), gopurs_runtime.Apply(f_7, x_8)))
+}), empty_5_2)
+_ = __local_var_8_3
+return gopurs_runtime.Func(func(x_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictParallel_0, "sequential"), gopurs_runtime.Apply(__local_var_8_3, x_9))
+})
 })
 })
 })
@@ -287,15 +291,17 @@ _ = dictAlternative_1
 Plus1_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictAlternative_1, "Plus1"), gopurs_runtime.Value{})
 _ = Plus1_2_0
 return gopurs_runtime.Func(func(dictFoldable_3 gopurs_runtime.Value) gopurs_runtime.Value {
-empty_4_1 := gopurs_runtime.RecordGet(Plus1_2_0, "empty")
-_ = empty_4_1
-return gopurs_runtime.Func(func(dictFunctor_5 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_6_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFoldable_3, "foldr"), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Plus1_2_0, "Alt0"), gopurs_runtime.Value{}), "alt"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictParallel_0, "parallel"), x_6))
-}), empty_4_1)
-_ = __local_var_6_2
-return gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictParallel_0, "sequential"), gopurs_runtime.Apply(__local_var_6_2, x_7))
+alt_4_1 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Plus1_2_0, "Alt0"), gopurs_runtime.Value{}), "alt")
+_ = alt_4_1
+empty_5_2 := gopurs_runtime.RecordGet(Plus1_2_0, "empty")
+_ = empty_5_2
+return gopurs_runtime.Func(func(dictFunctor_6 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_7_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFoldable_3, "foldr"), gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(alt_4_1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictParallel_0, "parallel"), x_7))
+}), empty_5_2)
+_ = __local_var_7_3
+return gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictParallel_0, "sequential"), gopurs_runtime.Apply(__local_var_7_3, x_8))
 })
 })
 })
