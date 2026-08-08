@@ -7,39 +7,6 @@ import (
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 )
 
-var cache_Lazy gopurs_runtime.Value
-var once_Lazy sync.Once
-func Get_Lazy() gopurs_runtime.Value {
-	once_Lazy.Do(func() {
-		cache_Lazy = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Lazy(x_0_box)
-})
-	})
-	return cache_Lazy
-}
-
-var cache_force gopurs_runtime.Value
-var once_force sync.Once
-func Get_force() gopurs_runtime.Value {
-	once_force.Do(func() {
-		cache_force = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_force(v_0_box)
-})
-	})
-	return cache_force
-}
-
-var cache_force__gopurs_runtime_Value_1612086811 gopurs_runtime.Value
-var once_force__gopurs_runtime_Value_1612086811 sync.Once
-func Get_force__gopurs_runtime_Value_1612086811() gopurs_runtime.Value {
-	once_force__gopurs_runtime_Value_1612086811.Do(func() {
-		cache_force__gopurs_runtime_Value_1612086811 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_force__gopurs_runtime_Value_1612086811(v_0_box)
-})
-	})
-	return cache_force__gopurs_runtime_Value_1612086811
-}
-
 var cache_showLazy gopurs_runtime.Value
 var once_showLazy sync.Once
 func Get_showLazy() gopurs_runtime.Value {
@@ -51,6 +18,104 @@ return Call_showLazy(dictShow_0_box)
 	return cache_showLazy
 }
 
+var cache_semiringLazy gopurs_runtime.Value
+var once_semiringLazy sync.Once
+func Get_semiringLazy() gopurs_runtime.Value {
+	once_semiringLazy.Do(func() {
+		cache_semiringLazy = gopurs_runtime.Func(func(dictSemiring_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_semiringLazy(dictSemiring_0_box)
+})
+	})
+	return cache_semiringLazy
+}
+
+var cache_semigroupLazy gopurs_runtime.Value
+var once_semigroupLazy sync.Once
+func Get_semigroupLazy() gopurs_runtime.Value {
+	once_semigroupLazy.Do(func() {
+		cache_semigroupLazy = gopurs_runtime.Func(func(dictSemigroup_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_semigroupLazy(dictSemigroup_0_box)
+})
+	})
+	return cache_semigroupLazy
+}
+
+var cache_ringLazy gopurs_runtime.Value
+var once_ringLazy sync.Once
+func Get_ringLazy() gopurs_runtime.Value {
+	once_ringLazy.Do(func() {
+		cache_ringLazy = gopurs_runtime.Func(func(dictRing_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_ringLazy(dictRing_0_box)
+})
+	})
+	return cache_ringLazy
+}
+
+var cache_monoidLazy gopurs_runtime.Value
+var once_monoidLazy sync.Once
+func Get_monoidLazy() gopurs_runtime.Value {
+	once_monoidLazy.Do(func() {
+		cache_monoidLazy = gopurs_runtime.Func(func(dictMonoid_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_monoidLazy(dictMonoid_0_box)
+})
+	})
+	return cache_monoidLazy
+}
+
+var cache_lazyLazy gopurs_runtime.Value
+var once_lazyLazy sync.Once
+func Get_lazyLazy() gopurs_runtime.Value {
+	once_lazyLazy.Do(func() {
+		cache_lazyLazy = gopurs_runtime.RecordDict1("defer", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_force(), gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit()))
+}))
+}))
+	})
+	return cache_lazyLazy
+}
+
+var cache_functorLazy gopurs_runtime.Value
+var once_functorLazy sync.Once
+func Get_functorLazy() gopurs_runtime.Value {
+	once_functorLazy.Do(func() {
+		cache_functorLazy = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(l_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(Get_force(), l_1))
+}))
+})
+}))
+	})
+	return cache_functorLazy
+}
+
+var cache_functorWithIndexLazy gopurs_runtime.Value
+var once_functorWithIndexLazy sync.Once
+func Get_functorWithIndexLazy() gopurs_runtime.Value {
+	once_functorWithIndexLazy.Do(func() {
+		cache_functorWithIndexLazy = gopurs_runtime.RecordDict2("Functor0", "mapWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_functorLazy()
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_functorLazy(), "map"), gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit()))
+}))
+	})
+	return cache_functorWithIndexLazy
+}
+
+var cache_invariantLazy gopurs_runtime.Value
+var once_invariantLazy sync.Once
+func Get_invariantLazy() gopurs_runtime.Value {
+	once_invariantLazy.Do(func() {
+		cache_invariantLazy = gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_functorLazy(), "map"), f_0)
+})
+}))
+	})
+	return cache_invariantLazy
+}
+
 var cache_foldableLazy gopurs_runtime.Value
 var once_foldableLazy sync.Once
 func Get_foldableLazy() gopurs_runtime.Value {
@@ -58,19 +123,19 @@ func Get_foldableLazy() gopurs_runtime.Value {
 		cache_foldableLazy = gopurs_runtime.RecordDict3("foldMap", "foldl", "foldr", gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(l_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_1, gopurs_runtime.Apply(l_2, pkg_Data_Unit.Get_unit()))
+return gopurs_runtime.Apply(f_1, gopurs_runtime.Apply(Get_force(), l_2))
 })
 })
 }), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(z_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(l_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(f_0, z_1, gopurs_runtime.Apply(l_2, pkg_Data_Unit.Get_unit()))
+return gopurs_runtime.Apply2(f_0, z_1, gopurs_runtime.Apply(Get_force(), l_2))
 })
 })
 }), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(z_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(l_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(f_0, gopurs_runtime.Apply(l_2, pkg_Data_Unit.Get_unit()), z_1)
+return gopurs_runtime.Apply2(f_0, gopurs_runtime.Apply(Get_force(), l_2), z_1)
 })
 })
 }))
@@ -99,6 +164,58 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_foldableLazy(), "foldr"
 	return cache_foldableWithIndexLazy
 }
 
+var cache_traversableLazy gopurs_runtime.Value
+var once_traversableLazy sync.Once
+func Get_traversableLazy() gopurs_runtime.Value {
+	once_traversableLazy.Do(func() {
+		cache_traversableLazy = gopurs_runtime.RecordDict4("Foldable1", "Functor0", "sequence", "traverse", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_foldableLazy()
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_functorLazy()
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(l_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+}))
+}), gopurs_runtime.Apply(Get_force(), l_1))
+})
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(l_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_3
+}))
+}), gopurs_runtime.Apply(f_1, gopurs_runtime.Apply(Get_force(), l_2)))
+})
+})
+}))
+	})
+	return cache_traversableLazy
+}
+
+var cache_traversableWithIndexLazy gopurs_runtime.Value
+var once_traversableWithIndexLazy sync.Once
+func Get_traversableWithIndexLazy() gopurs_runtime.Value {
+	once_traversableWithIndexLazy.Do(func() {
+		cache_traversableWithIndexLazy = gopurs_runtime.RecordDict4("FoldableWithIndex1", "FunctorWithIndex0", "Traversable2", "traverseWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_foldableWithIndexLazy()
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_functorWithIndexLazy()
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_traversableLazy()
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+traverse1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_traversableLazy(), "traverse"), dictApplicative_0)
+_ = traverse1_1_0
+return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(traverse1_1_0, gopurs_runtime.Apply(f_2, pkg_Data_Unit.Get_unit()))
+})
+}))
+	})
+	return cache_traversableWithIndexLazy
+}
+
 var cache_foldable1Lazy gopurs_runtime.Value
 var once_foldable1Lazy sync.Once
 func Get_foldable1Lazy() gopurs_runtime.Value {
@@ -108,20 +225,68 @@ return Get_foldableLazy()
 }), gopurs_runtime.Func(func(dictSemigroup_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(l_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_1, gopurs_runtime.Apply(l_2, pkg_Data_Unit.Get_unit()))
+return gopurs_runtime.Apply(f_1, gopurs_runtime.Apply(Get_force(), l_2))
 })
 })
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(l_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(l_1, pkg_Data_Unit.Get_unit())
+return gopurs_runtime.Apply(Get_force(), l_1)
 })
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(l_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(l_1, pkg_Data_Unit.Get_unit())
+return gopurs_runtime.Apply(Get_force(), l_1)
 })
 }))
 	})
 	return cache_foldable1Lazy
+}
+
+var cache_traversable1Lazy gopurs_runtime.Value
+var once_traversable1Lazy sync.Once
+func Get_traversable1Lazy() gopurs_runtime.Value {
+	once_traversable1Lazy.Do(func() {
+		cache_traversable1Lazy = gopurs_runtime.RecordDict4("Foldable10", "Traversable1", "sequence1", "traverse1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_foldable1Lazy()
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_traversableLazy()
+}), gopurs_runtime.Func(func(dictApply_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(l_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_0, "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+}))
+}), gopurs_runtime.Apply(Get_force(), l_1))
+})
+}), gopurs_runtime.Func(func(dictApply_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(l_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_0, "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_3
+}))
+}), gopurs_runtime.Apply(f_1, gopurs_runtime.Apply(Get_force(), l_2)))
+})
+})
+}))
+	})
+	return cache_traversable1Lazy
+}
+
+var cache_extendLazy gopurs_runtime.Value
+var once_extendLazy sync.Once
+func Get_extendLazy() gopurs_runtime.Value {
+	once_extendLazy.Do(func() {
+		cache_extendLazy = gopurs_runtime.RecordDict2("Functor0", "extend", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_functorLazy()
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_0, x_1)
+}))
+})
+}))
+	})
+	return cache_extendLazy
 }
 
 var cache_eqLazy gopurs_runtime.Value
@@ -168,226 +333,6 @@ return gopurs_runtime.RecordGet(Call_ordLazy(dictOrd_0), "compare")
 }))
 	})
 	return cache_ord1Lazy
-}
-
-var cache_go__defer gopurs_runtime.Value
-var once_go__defer sync.Once
-func Get_go__defer() gopurs_runtime.Value {
-	once_go__defer.Do(func() {
-		cache_go__defer = gopurs_runtime.Func(func(f_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_go__defer(f_0_box)
-})
-	})
-	return cache_go__defer
-}
-
-var cache_defer__gopurs_runtime_Value_3386315898 gopurs_runtime.Value
-var once_defer__gopurs_runtime_Value_3386315898 sync.Once
-func Get_defer__gopurs_runtime_Value_3386315898() gopurs_runtime.Value {
-	once_defer__gopurs_runtime_Value_3386315898.Do(func() {
-		cache_defer__gopurs_runtime_Value_3386315898 = gopurs_runtime.Func(func(f_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_defer__gopurs_runtime_Value_3386315898(f_0_box)
-})
-	})
-	return cache_defer__gopurs_runtime_Value_3386315898
-}
-
-var cache_functorLazy gopurs_runtime.Value
-var once_functorLazy sync.Once
-func Get_functorLazy() gopurs_runtime.Value {
-	once_functorLazy.Do(func() {
-		cache_functorLazy = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(l_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(l_1, pkg_Data_Unit.Get_unit()))
-})
-})
-}))
-	})
-	return cache_functorLazy
-}
-
-var cache_extendLazy gopurs_runtime.Value
-var once_extendLazy sync.Once
-func Get_extendLazy() gopurs_runtime.Value {
-	once_extendLazy.Do(func() {
-		cache_extendLazy = gopurs_runtime.RecordDict2("Functor0", "extend", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_functorLazy()
-}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_0, x_1)
-})
-})
-}))
-	})
-	return cache_extendLazy
-}
-
-var cache_functorWithIndexLazy gopurs_runtime.Value
-var once_functorWithIndexLazy sync.Once
-func Get_functorWithIndexLazy() gopurs_runtime.Value {
-	once_functorWithIndexLazy.Do(func() {
-		cache_functorWithIndexLazy = gopurs_runtime.RecordDict2("Functor0", "mapWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_functorLazy()
-}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_functorLazy(), "map"), gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit()))
-}))
-	})
-	return cache_functorWithIndexLazy
-}
-
-var cache_invariantLazy gopurs_runtime.Value
-var once_invariantLazy sync.Once
-func Get_invariantLazy() gopurs_runtime.Value {
-	once_invariantLazy.Do(func() {
-		cache_invariantLazy = gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_functorLazy(), "map"), f_0)
-})
-}))
-	})
-	return cache_invariantLazy
-}
-
-var cache_lazyLazy gopurs_runtime.Value
-var once_lazyLazy sync.Once
-func Get_lazyLazy() gopurs_runtime.Value {
-	once_lazyLazy.Do(func() {
-		cache_lazyLazy = gopurs_runtime.RecordDict1("defer", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(f_0, pkg_Data_Unit.Get_unit(), pkg_Data_Unit.Get_unit())
-})
-}))
-	})
-	return cache_lazyLazy
-}
-
-var cache_semigroupLazy gopurs_runtime.Value
-var once_semigroupLazy sync.Once
-func Get_semigroupLazy() gopurs_runtime.Value {
-	once_semigroupLazy.Do(func() {
-		cache_semigroupLazy = gopurs_runtime.Func(func(dictSemigroup_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_semigroupLazy(dictSemigroup_0_box)
-})
-	})
-	return cache_semigroupLazy
-}
-
-var cache_monoidLazy gopurs_runtime.Value
-var once_monoidLazy sync.Once
-func Get_monoidLazy() gopurs_runtime.Value {
-	once_monoidLazy.Do(func() {
-		cache_monoidLazy = gopurs_runtime.Func(func(dictMonoid_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_monoidLazy(dictMonoid_0_box)
-})
-	})
-	return cache_monoidLazy
-}
-
-var cache_semiringLazy gopurs_runtime.Value
-var once_semiringLazy sync.Once
-func Get_semiringLazy() gopurs_runtime.Value {
-	once_semiringLazy.Do(func() {
-		cache_semiringLazy = gopurs_runtime.Func(func(dictSemiring_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_semiringLazy(dictSemiring_0_box)
-})
-	})
-	return cache_semiringLazy
-}
-
-var cache_ringLazy gopurs_runtime.Value
-var once_ringLazy sync.Once
-func Get_ringLazy() gopurs_runtime.Value {
-	once_ringLazy.Do(func() {
-		cache_ringLazy = gopurs_runtime.Func(func(dictRing_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_ringLazy(dictRing_0_box)
-})
-	})
-	return cache_ringLazy
-}
-
-var cache_traversableLazy gopurs_runtime.Value
-var once_traversableLazy sync.Once
-func Get_traversableLazy() gopurs_runtime.Value {
-	once_traversableLazy.Do(func() {
-		cache_traversableLazy = gopurs_runtime.RecordDict4("Foldable1", "Functor0", "sequence", "traverse", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_foldableLazy()
-}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_functorLazy()
-}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(l_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_2
-})
-}), gopurs_runtime.Apply(l_1, pkg_Data_Unit.Get_unit()))
-})
-}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(l_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_3
-})
-}), gopurs_runtime.Apply(f_1, gopurs_runtime.Apply(l_2, pkg_Data_Unit.Get_unit())))
-})
-})
-}))
-	})
-	return cache_traversableLazy
-}
-
-var cache_traversable1Lazy gopurs_runtime.Value
-var once_traversable1Lazy sync.Once
-func Get_traversable1Lazy() gopurs_runtime.Value {
-	once_traversable1Lazy.Do(func() {
-		cache_traversable1Lazy = gopurs_runtime.RecordDict4("Foldable10", "Traversable1", "sequence1", "traverse1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_foldable1Lazy()
-}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_traversableLazy()
-}), gopurs_runtime.Func(func(dictApply_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(l_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_0, "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_2
-})
-}), gopurs_runtime.Apply(l_1, pkg_Data_Unit.Get_unit()))
-})
-}), gopurs_runtime.Func(func(dictApply_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(l_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_0, "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_3
-})
-}), gopurs_runtime.Apply(f_1, gopurs_runtime.Apply(l_2, pkg_Data_Unit.Get_unit())))
-})
-})
-}))
-	})
-	return cache_traversable1Lazy
-}
-
-var cache_traversableWithIndexLazy gopurs_runtime.Value
-var once_traversableWithIndexLazy sync.Once
-func Get_traversableWithIndexLazy() gopurs_runtime.Value {
-	once_traversableWithIndexLazy.Do(func() {
-		cache_traversableWithIndexLazy = gopurs_runtime.RecordDict4("FoldableWithIndex1", "FunctorWithIndex0", "Traversable2", "traverseWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_foldableWithIndexLazy()
-}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_functorWithIndexLazy()
-}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_traversableLazy()
-}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
-traverse1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_traversableLazy(), "traverse"), dictApplicative_0)
-_ = traverse1_1_0
-return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(traverse1_1_0, gopurs_runtime.Apply(f_2, pkg_Data_Unit.Get_unit()))
-})
-}))
-	})
-	return cache_traversableWithIndexLazy
 }
 
 var cache_comonadLazy gopurs_runtime.Value
@@ -442,9 +387,9 @@ func Get_applyLazy() gopurs_runtime.Value {
 return Get_functorLazy()
 }), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(f_0, pkg_Data_Unit.Get_unit(), gopurs_runtime.Apply(x_1, pkg_Data_Unit.Get_unit()))
-})
+return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Get_force(), f_0, gopurs_runtime.Apply(Get_force(), x_1))
+}))
 })
 }))
 	})
@@ -459,9 +404,9 @@ func Get_bindLazy() gopurs_runtime.Value {
 return Get_applyLazy()
 }), gopurs_runtime.Func(func(l_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(f_1, gopurs_runtime.Apply(l_0, pkg_Data_Unit.Get_unit()), pkg_Data_Unit.Get_unit())
-})
+return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_force(), gopurs_runtime.Apply(f_1, gopurs_runtime.Apply(Get_force(), l_0)))
+}))
 })
 }))
 	})
@@ -497,9 +442,9 @@ func Get_applicativeLazy() gopurs_runtime.Value {
 		cache_applicativeLazy = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_applyLazy()
 }), gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return a_0
-})
+}))
 }))
 	})
 	return cache_applicativeLazy
@@ -518,66 +463,38 @@ return Get_bindLazy()
 	return cache_monadLazy
 }
 
-func Call_Lazy(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var x_0 gopurs_runtime.Value = x_0_loop
-_ = x_0
-return x_0
-}
-
-func Call_force(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
-_ = v_0
-return gopurs_runtime.Apply(v_0, pkg_Data_Unit.Get_unit())
-}
-
-func Call_force__gopurs_runtime_Value_1612086811(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
-_ = v_0
-return gopurs_runtime.Apply(v_0, pkg_Data_Unit.Get_unit())
-}
-
 func Call_showLazy(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
 _ = dictShow_0
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str("(defer \\_ -> "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), gopurs_runtime.Apply(x_1, pkg_Data_Unit.Get_unit())), gopurs_runtime.Str(")"))).StrVal())
+return gopurs_runtime.Str(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str("(defer \\_ -> "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), gopurs_runtime.Apply(Get_force(), x_1)), gopurs_runtime.Str(")"))).StrVal())
 }))
 }
 
-func Call_eqLazy(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
-_ = dictEq_0
-return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(y_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), gopurs_runtime.Apply(x_1, pkg_Data_Unit.Get_unit()), gopurs_runtime.Apply(y_2, pkg_Data_Unit.Get_unit())).IntVal) != (0))
+func Call_semiringLazy(dictSemiring_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictSemiring_0 gopurs_runtime.Value = dictSemiring_0_loop
+_ = dictSemiring_0
+zero_1_0 := gopurs_runtime.RecordGet(dictSemiring_0, "zero")
+_ = zero_1_0
+one_2_1 := gopurs_runtime.RecordGet(dictSemiring_0, "one")
+_ = one_2_1
+return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring_0, "add"), gopurs_runtime.Apply(Get_force(), a_3), gopurs_runtime.Apply(Get_force(), b_4))
+}))
 })
+}), gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring_0, "mul"), gopurs_runtime.Apply(Get_force(), a_3), gopurs_runtime.Apply(Get_force(), b_4))
 }))
-}
-
-func Call_ordLazy(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
-_ = dictOrd_0
-eqLazy1_1_0 := Call_eqLazy(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0, "Eq0"), gopurs_runtime.Value{}))
-_ = eqLazy1_1_0
-return gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return eqLazy1_1_0
-}), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.Apply(x_2, pkg_Data_Unit.Get_unit()), gopurs_runtime.Apply(y_3, pkg_Data_Unit.Get_unit()))
 })
-}))
-}
-
-func Call_go__defer(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var f_0 gopurs_runtime.Value = f_0_loop
-_ = f_0
-return f_0
-}
-
-func Call_defer__gopurs_runtime_Value_3386315898(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var f_0 gopurs_runtime.Value = f_0_loop
-_ = f_0
-return f_0
+}), gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return one_2_1
+})), gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return zero_1_0
+})))
 }
 
 func Call_semigroupLazy(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -585,9 +502,25 @@ var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
 _ = dictSemigroup_0
 return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(b_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append"), gopurs_runtime.Apply(a_1, pkg_Data_Unit.Get_unit()), gopurs_runtime.Apply(b_2, pkg_Data_Unit.Get_unit()))
+return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append"), gopurs_runtime.Apply(Get_force(), a_1), gopurs_runtime.Apply(Get_force(), b_2))
+}))
 })
+}))
+}
+
+func Call_ringLazy(dictRing_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictRing_0 gopurs_runtime.Value = dictRing_0_loop
+_ = dictRing_0
+semiringLazy1_1_0 := Call_semiringLazy(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictRing_0, "Semiring0"), gopurs_runtime.Value{}))
+_ = semiringLazy1_1_0
+return gopurs_runtime.RecordDict2("Semiring0", "sub", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return semiringLazy1_1_0
+}), gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictRing_0, "sub"), gopurs_runtime.Apply(Get_force(), a_2), gopurs_runtime.Apply(Get_force(), b_3))
+}))
 })
 }))
 }
@@ -601,49 +534,31 @@ semigroupLazy1_2_1 := Call_semigroupLazy(gopurs_runtime.Apply(gopurs_runtime.Rec
 _ = semigroupLazy1_2_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupLazy1_2_1
-}), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return mempty_1_0
+})))
+}
+
+func Call_eqLazy(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+_ = dictEq_0
+return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), gopurs_runtime.Apply(Get_force(), x_1), gopurs_runtime.Apply(Get_force(), y_2)).IntVal) != (0))
+})
 }))
 }
 
-func Call_semiringLazy(dictSemiring_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictSemiring_0 gopurs_runtime.Value = dictSemiring_0_loop
-_ = dictSemiring_0
-zero_1_0 := gopurs_runtime.RecordGet(dictSemiring_0, "zero")
-_ = zero_1_0
-one_2_1 := gopurs_runtime.RecordGet(dictSemiring_0, "one")
-_ = one_2_1
-return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring_0, "add"), gopurs_runtime.Apply(a_3, pkg_Data_Unit.Get_unit()), gopurs_runtime.Apply(b_4, pkg_Data_Unit.Get_unit()))
-})
-})
-}), gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring_0, "mul"), gopurs_runtime.Apply(a_3, pkg_Data_Unit.Get_unit()), gopurs_runtime.Apply(b_4, pkg_Data_Unit.Get_unit()))
-})
-})
-}), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return one_2_1
-}), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return zero_1_0
-}))
-}
-
-func Call_ringLazy(dictRing_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictRing_0 gopurs_runtime.Value = dictRing_0_loop
-_ = dictRing_0
-semiringLazy1_1_0 := Call_semiringLazy(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictRing_0, "Semiring0"), gopurs_runtime.Value{}))
-_ = semiringLazy1_1_0
-return gopurs_runtime.RecordDict2("Semiring0", "sub", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return semiringLazy1_1_0
-}), gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictRing_0, "sub"), gopurs_runtime.Apply(a_2, pkg_Data_Unit.Get_unit()), gopurs_runtime.Apply(b_3, pkg_Data_Unit.Get_unit()))
-})
+func Call_ordLazy(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
+_ = dictOrd_0
+eqLazy1_1_0 := Call_eqLazy(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0, "Eq0"), gopurs_runtime.Value{}))
+_ = eqLazy1_1_0
+return gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return eqLazy1_1_0
+}), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), gopurs_runtime.Apply(Get_force(), x_2), gopurs_runtime.Apply(Get_force(), y_3))
 })
 }))
 }
@@ -670,18 +585,18 @@ _ = commutativeRingLazy1_1_0
 return gopurs_runtime.RecordDict4("CommutativeRing0", "degree", "div", "mod", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return commutativeRingLazy1_1_0
 }), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEuclideanRing_0, "degree"), gopurs_runtime.Apply(x_2, pkg_Data_Unit.Get_unit()))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEuclideanRing_0, "degree"), gopurs_runtime.Apply(Get_force(), x_2))
 }), gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(b_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEuclideanRing_0, "div"), gopurs_runtime.Apply(a_2, pkg_Data_Unit.Get_unit()), gopurs_runtime.Apply(b_3, pkg_Data_Unit.Get_unit()))
-})
+return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEuclideanRing_0, "div"), gopurs_runtime.Apply(Get_force(), a_2), gopurs_runtime.Apply(Get_force(), b_3))
+}))
 })
 }), gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(b_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEuclideanRing_0, "mod"), gopurs_runtime.Apply(a_2, pkg_Data_Unit.Get_unit()), gopurs_runtime.Apply(b_3, pkg_Data_Unit.Get_unit()))
-})
+return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEuclideanRing_0, "mod"), gopurs_runtime.Apply(Get_force(), a_2), gopurs_runtime.Apply(Get_force(), b_3))
+}))
 })
 }))
 }
@@ -697,11 +612,11 @@ ordLazy1_3_2 := Call_ordLazy(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictB
 _ = ordLazy1_3_2
 return gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return ordLazy1_3_2
-}), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return bottom_2_1
-}), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+})), gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return top_1_0
-}))
+})))
 }
 
 func Call_heytingAlgebraLazy(dictHeytingAlgebra_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -727,17 +642,17 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_applyLazy(), "apply"),
 return gopurs_runtime.Func(func(b_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_applyLazy(), "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_functorLazy(), "map"), disj_5_4, a_7), b_8)
 })
-}), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return ff_1_0
-}), gopurs_runtime.Func(func(a_7 gopurs_runtime.Value) gopurs_runtime.Value {
+})), gopurs_runtime.Func(func(a_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(b_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_applyLazy(), "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_functorLazy(), "map"), implies_3_2, a_7), b_8)
 })
 }), gopurs_runtime.Func(func(a_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_functorLazy(), "map"), not_6_5, a_7)
-}), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return tt_2_1
-})})
+}))})
 }
 
 func Call_booleanAlgebraLazy(dictBooleanAlgebra_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -750,4 +665,10 @@ return heytingAlgebraLazy1_1_0
 }))
 }
 
+func Get_go__defer() gopurs_runtime.Value {
+	return _Gopurs_Go__defer
+}
 
+func Get_force() gopurs_runtime.Value {
+	return _Gopurs_Force
+}

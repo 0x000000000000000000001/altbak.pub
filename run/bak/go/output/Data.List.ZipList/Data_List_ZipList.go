@@ -6,6 +6,7 @@ import (
 	pkg_Data_List_Lazy_Types "gopurs/output/Data.List.Lazy.Types"
 	pkg_Data_List_Lazy "gopurs/output/Data.List.Lazy"
 	pkg_Data_Function "gopurs/output/Data.Function"
+	pkg_Data_Lazy "gopurs/output/Data.Lazy"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Partial "gopurs/output/Partial"
 	unsafe "unsafe"
@@ -147,9 +148,9 @@ return Get_applyZipList()
 var go__go_1_0_0 gopurs_runtime.Value
 _ = go__go_1_0_0
 go__go_1_0_0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_List_Lazy_Types.Get_lazyList(), "defer"), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(pkg_Data_Lazy.Get_go__defer(), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer((*pkg_Data_List_Lazy_Types.Constructor_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&pkg_Data_List_Lazy_Types.Constructor_Cons[gopurs_runtime.Value]{1, x_0, go__go_1_0_0})}.UnsafePtr))}
-})
+}))
 }))
 return go__go_1_0_0
 }))

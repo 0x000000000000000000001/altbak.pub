@@ -10,9 +10,16 @@ func BindE(a func(interface{}) any, f func(any) func(interface{}) any, _ interfa
 	resA := a(nil)
 	return f(resA)(nil)
 }
+func getBool(v any) bool {
+	if b, ok := v.(bool); ok {
+		return b
+	}
+	return v.(gopurs_runtime.Value).BoolVal()
+}
+
 func UntilE(f func(interface{}) any, _ interface{}) any {
 	for {
-		if f(nil).(bool) {
+		if getBool(f(nil)) {
 			break
 		}
 	}
@@ -20,7 +27,7 @@ func UntilE(f func(interface{}) any, _ interface{}) any {
 }
 func WhileE(f func(interface{}) any, a func(interface{}) any, _ interface{}) any {
 	for {
-		if !f(nil).(bool) {
+		if !getBool(f(nil)) {
 			break
 		}
 		a(nil)

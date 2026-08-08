@@ -1,8 +1,8 @@
 package Data_Array_NonEmpty_Internal
 
+
+
 import "gopurs/output/gopurs_runtime"
-
-
 func Foldr1Impl(f func(interface{}) func(interface{}) interface{}, xs []interface{}) interface{} {
 	acc := xs[len(xs)-1]
 	for i := len(xs) - 2; i >= 0; i-- {
@@ -31,7 +31,8 @@ func Traverse1Impl(apply func(interface{}) func(interface{}) interface{}, mapFn 
 
 	consList := func(x interface{}) func(interface{}) interface{} {
 		return func(xs interface{}) interface{} {
-			return &listNode{head: x, tail: xs}
+			xsNode := gopurs_runtime.Unbox[*listNode](xs.(gopurs_runtime.Value))
+			return &listNode{head: x, tail: xsNode}
 		}
 	}
 
@@ -41,7 +42,7 @@ func Traverse1Impl(apply func(interface{}) func(interface{}) interface{}, mapFn 
 
 	listToArray := func(list interface{}) interface{} {
 		var arr []interface{}
-		xs := list.(*listNode)
+		xs := gopurs_runtime.Unbox[*listNode](list.(gopurs_runtime.Value))
 		for xs != emptyList {
 			arr = append(arr, xs.head)
 			xs = xs.tail.(*listNode)

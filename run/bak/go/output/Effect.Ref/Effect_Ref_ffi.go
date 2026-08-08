@@ -49,6 +49,17 @@ func ModifyImpl(f gopurs_runtime.Value, ref gopurs_runtime.Value) gopurs_runtime
 	})
 }
 
+func Modify_(f gopurs_runtime.Value, ref gopurs_runtime.Value) gopurs_runtime.Value {
+	return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+		state := ref.AnyVal().(*RefState)
+		state.mu.Lock()
+		defer state.mu.Unlock()
+		
+		state.val = gopurs_runtime.Apply(f, state.val)
+		return gopurs_runtime.Any(nil)
+	})
+}
+
 func Write(val gopurs_runtime.Value, ref gopurs_runtime.Value) gopurs_runtime.Value {
 	return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 		state := ref.AnyVal().(*RefState)
@@ -72,6 +83,13 @@ gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) 
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_res := ModifyImpl(go_arg0, go_arg1)
+	return gopurs_runtime.Box(go_res)
+})
+var _Gopurs_Modify_ = // TAST: (Func [(Func [(TypeVar s)] (TypeVar s)), (ADT ["Effect","Ref","Ref"] [(TypeVar s)])] (ADT ["Effect","Effect"] [(ADT ["Data","Unit","Unit"] [])]))
+gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
+	go_arg0 := arg0
+	go_arg1 := arg1
+	go_res := Modify_(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
 var _Gopurs_NewWithSelf = // TAST: (Func [(Func [(ADT ["Effect","Ref","Ref"] [(TypeVar s)])] (TypeVar s))] (ADT ["Effect","Effect"] [(ADT ["Effect","Ref","Ref"] [(TypeVar s)])]))

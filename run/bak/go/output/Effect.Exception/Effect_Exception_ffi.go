@@ -3,8 +3,10 @@ package Effect_Exception
 import "gopurs/output/gopurs_runtime"
 
 
-import "errors"
-
+import (
+	"errors"
+	"fmt"
+)
 func Error(msg string) error { return errors.New(msg) }
 func Message(e error) string { return e.Error() }
 func Name(e error) string { return "Error" }
@@ -21,7 +23,7 @@ func CatchException(c func(error) func(interface{}) interface{}, t func(interfac
 			if err, ok := r.(error); ok {
 				res = c(err)(nil)
 			} else {
-				res = c(errors.New("panic"))(nil)
+				res = c(fmt.Errorf("%v", r))(nil)
 			}
 		}
 	}()

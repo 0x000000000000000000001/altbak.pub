@@ -13,7 +13,18 @@ func createUTC(y, mo, d, h, m, s, ms int) time.Time {
 }
 
 func getInt(m map[string]interface{}, key string) int {
-	return int(m[key].(int64))
+	v := m[key]
+	if val, ok := v.(int64); ok {
+		return int(val)
+	}
+	if val, ok := v.(int); ok {
+		return val
+	}
+	if val, ok := v.(float64); ok {
+		return int(val)
+	}
+	// Fallback for gopurs_runtime.Value
+	return int(v.(gopurs_runtime.Value).IntVal)
 }
 
 func CalcDiff(rec1 map[string]interface{}, rec2 map[string]interface{}) float64 {
@@ -24,7 +35,8 @@ func CalcDiff(rec1 map[string]interface{}, rec2 map[string]interface{}) float64 
 
 func AdjustImpl(just func(interface{}) interface{}, nothing interface{}, offset float64, rec map[string]interface{}) interface{} {
 	t := createUTC(getInt(rec, "year"), getInt(rec, "month")-1, getInt(rec, "day"), getInt(rec, "hour"), getInt(rec, "minute"), getInt(rec, "second"), getInt(rec, "millisecond"))
-	dt := t.Add(time.Duration(offset) * time.Millisecond)
+	ms := t.UnixMilli() + int64(offset)
+	dt := time.UnixMilli(ms).UTC()
 	
 	resMap := make(map[string]interface{})
 	resMap["year"] = dt.Year()

@@ -5,30 +5,43 @@ import "gopurs/output/gopurs_runtime"
 
 import (
 	"fmt"
+	"strings"
+	"sync/atomic"
 )
 
+var indentation int32 = 0
+
+func getIndent() string {
+	ind := atomic.LoadInt32(&indentation)
+	if ind < 0 {
+		ind = 0
+	}
+	return strings.Repeat("  ", int(ind))
+}
+
 func Log(s string, _ interface{}) interface{} {
-	fmt.Println(s)
+	fmt.Printf("%s%s\n", getIndent(), s)
 	return nil
 }
 
 func Warn(s string, _ interface{}) interface{} {
-	fmt.Println("[WARN]", s)
+	fmt.Printf("%s%s\n", getIndent(), s)
 	return nil
 }
 
 func Error(s string, _ interface{}) interface{} {
-	fmt.Println("[ERROR]", s)
+	fmt.Printf("%s%s\n", getIndent(), s)
 	return nil
 }
 
 func Info(s string, _ interface{}) interface{} {
-	fmt.Println("[INFO]", s)
+	fmt.Printf("%s%s\n", getIndent(), s)
 	return nil
 }
 
 func Debug(s string, _ interface{}) interface{} {
-	return Log(s, nil)
+	fmt.Printf("%s%s\n", getIndent(), s)
+	return nil
 }
 
 func Time(s string, _ interface{}) interface{} {
@@ -48,14 +61,22 @@ func Clear(_ interface{}) interface{} {
 }
 
 func Group(s string, _ interface{}) interface{} {
-	return Log(s, nil)
+	Log(s, nil)
+	atomic.AddInt32(&indentation, 1)
+	return nil
 }
 
 func GroupCollapsed(s string, _ interface{}) interface{} {
-	return Log(s, nil)
+	Log(s, nil)
+	atomic.AddInt32(&indentation, 1)
+	return nil
 }
 
 func GroupEnd(_ interface{}) interface{} {
+	ind := atomic.LoadInt32(&indentation)
+	if ind > 0 {
+		atomic.AddInt32(&indentation, -1)
+	}
 	return nil
 }
 
