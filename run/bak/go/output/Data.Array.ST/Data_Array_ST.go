@@ -434,7 +434,7 @@ goto end_branch_0
 }
 {
 if (v_1.Type == 9 && v_1.IntVal == 1527465420) {
-__t0 = gopurs_runtime.Int((gopurs_runtime.Int(0).IntVal) - (1))
+__t0 = gopurs_runtime.Int(-1)
 goto end_branch_0
 } else {
 
@@ -471,7 +471,7 @@ goto end_branch_0
 }
 {
 if (v_1.Type == 9 && v_1.IntVal == 1527465420) {
-__t0 = gopurs_runtime.Int((gopurs_runtime.Int(0).IntVal) - (1))
+__t0 = gopurs_runtime.Int(-1)
 goto end_branch_0
 } else {
 

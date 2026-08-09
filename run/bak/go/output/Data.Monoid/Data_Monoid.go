@@ -306,48 +306,40 @@ return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__go_4_2_0 gopurs_runtime.Value
 _ = go__go_4_2_0
 go__go_4_2_0 = gopurs_runtime.Func(func(p_5 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t3 gopurs_runtime.Value
+var __t4 gopurs_runtime.Value
 {
 if (gopurs_runtime.Apply2(Get_lessThanOrEq(), p_5, gopurs_runtime.Int(0)).IntVal) != (0) {
-__t3 = mempty1_1_0
-goto end_branch_3
+__t4 = mempty1_1_0
+goto end_branch_4
 } else {
 
 }
 }
 {
 if (p_5.IntVal) == (1) {
-__t3 = x_3
-goto end_branch_3
+__t4 = x_3
+goto end_branch_4
 } else {
 
 }
 }
 {
 if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingInt(), "mod"), p_5, gopurs_runtime.Int(2)).IntVal) == (0) {
-x_prime_6_4 := gopurs_runtime.Apply(go__go_4_2_0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingInt(), "div"), p_5, gopurs_runtime.Int(2)))
-_ = x_prime_6_4
-__t3 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "append"), x_prime_6_4, x_prime_6_4)
-goto end_branch_3
-} else {
-
-}
-}
-{
-if true {
 x_prime_6_5 := gopurs_runtime.Apply(go__go_4_2_0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingInt(), "div"), p_5, gopurs_runtime.Int(2)))
 _ = x_prime_6_5
-__t3 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "append"), x_prime_6_5, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "append"), x_prime_6_5, x_3))
-goto end_branch_3
+__t4 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "append"), x_prime_6_5, x_prime_6_5)
+goto end_branch_4
 } else {
 
 }
 }
 {
-__t3 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+x_prime_6_3 := gopurs_runtime.Apply(go__go_4_2_0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingInt(), "div"), p_5, gopurs_runtime.Int(2)))
+_ = x_prime_6_3
+__t4 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "append"), x_prime_6_3, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "append"), x_prime_6_3, x_3))
 }
-end_branch_3:
-return __t3
+end_branch_4:
+return __t4
 })
 return go__go_4_2_0
 })

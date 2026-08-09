@@ -1082,7 +1082,7 @@ goto end_branch_2
 }
 {
 if (v_6_1.Type == 9 && v_6_1.IntVal == 380165415) {
-__t2 = gopurs_runtime.Int((gopurs_runtime.Int(0).IntVal) - (1))
+__t2 = gopurs_runtime.Int(-1)
 goto end_branch_2
 } else {
 
@@ -1349,15 +1349,7 @@ goto end_branch_0
 }
 }
 {
-if true {
 __t0 = gopurs_runtime.Bool(true)
-goto end_branch_0
-} else {
-
-}
-}
-{
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
 return (__t0.IntVal) != (0)

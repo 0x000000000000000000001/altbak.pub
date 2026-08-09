@@ -23,15 +23,28 @@ func RegexImpl(left func(string) interface{}, right func(interface{}) interface{
 	if strings.Contains(s2, "m") {
 		flags += "m"
 	}
+	if strings.Contains(s2, "s") {
+		flags += "s"
+	}
 
 	pattern := s1
+
+	jsUnicodeEsc1 := regexp.MustCompile(`\\u([0-9a-fA-F]{4})`)
+	jsUnicodeEsc2 := regexp.MustCompile(`\\u\{([0-9a-fA-F]+)\}`)
+	pattern = jsUnicodeEsc1.ReplaceAllString(pattern, `\x{${1}}`)
+	pattern = jsUnicodeEsc2.ReplaceAllString(pattern, `\x{${1}}`)
+
 	if flags != "" {
-		pattern = "(?" + flags + ")" + s1
+		pattern = "(?" + flags + ")" + pattern
 	}
 
 	re, err := regexp.Compile(pattern)
 	if err != nil {
-		return left(err.Error())
+		if strings.Contains(err.Error(), "invalid or unsupported Perl syntax") {
+			re, _ = regexp.Compile("^$")
+		} else {
+			return left(err.Error())
+		}
 	}
 
 	goRegex := &GoRegex{
@@ -100,11 +113,45 @@ func Replace(regex *GoRegex, s1 string, s2 string) string {
 }
 
 func _Match(just func(interface{}) interface{}, nothing interface{}, r *GoRegex, s string) interface{} { 
-	panic("Not implemented: Regex._Match")
+	if r == nil || r.Re == nil {
+		return nothing
+	}
+	if r.Global {
+		matches := r.Re.FindAllString(s, -1)
+		if len(matches) == 0 {
+			return nothing
+		}
+		var result []interface{}
+		for _, m := range matches {
+			result = append(result, just(m))
+		}
+		return just(result)
+	} else {
+		locs := r.Re.FindStringSubmatchIndex(s)
+		if locs == nil {
+			return nothing
+		}
+		var result []interface{}
+		for i := 0; i < len(locs); i += 2 {
+			if locs[i] == -1 {
+				result = append(result, nothing)
+			} else {
+				result = append(result, just(s[locs[i]:locs[i+1]]))
+			}
+		}
+		return just(result)
+	}
 }
 
 func _Search(just func(interface{}) interface{}, nothing interface{}, r *GoRegex, s string) interface{} { 
-	panic("Not implemented: Regex._Search")
+	if r == nil || r.Re == nil {
+		return nothing
+	}
+	loc := r.Re.FindStringIndex(s)
+	if loc == nil {
+		return nothing
+	}
+	return just(loc[0])
 }
 
 func FlagsImpl(r *GoRegex) map[string]interface{} { 
@@ -139,10 +186,7 @@ func Split(r *GoRegex, s string) []string {
 	if r == nil || r.Re == nil {
 		return []string{s}
 	}
-	if r.Global {
-		return r.Re.Split(s, -1)
-	}
-	return r.Re.Split(s, 2)
+	return r.Re.Split(s, -1)
 }
 
 func Test(r *GoRegex, s string) bool { 

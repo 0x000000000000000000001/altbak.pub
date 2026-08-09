@@ -115,7 +115,7 @@ var once_ringNumber sync.Once
 func Get_ringNumber() gopurs_runtime.Value {
 	once_ringNumber.Do(func() {
 		cache_ringNumber = gopurs_runtime.RecordDict2("Semiring0", "sub", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return pkg_Data_Semiring.Get_semiringNumber()
+return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", pkg_Data_Semiring.Get_numAdd(), pkg_Data_Semiring.Get_numMul(), gopurs_runtime.Float(1.0), gopurs_runtime.Float(0.0))
 }), Get_numSub())
 	})
 	return cache_ringNumber

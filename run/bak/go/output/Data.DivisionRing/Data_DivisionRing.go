@@ -3,6 +3,7 @@ package Data_DivisionRing
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	pkg_Data_Semiring "gopurs/output/Data.Semiring"
 	pkg_Data_Ring "gopurs/output/Data.Ring"
 	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
 )
@@ -56,7 +57,9 @@ var once_divisionringNumber sync.Once
 func Get_divisionringNumber() gopurs_runtime.Value {
 	once_divisionringNumber.Do(func() {
 		cache_divisionringNumber = gopurs_runtime.RecordDict2("Ring0", "recip", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return pkg_Data_Ring.Get_ringNumber()
+return gopurs_runtime.RecordDict2("Semiring0", "sub", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", pkg_Data_Semiring.Get_numAdd(), pkg_Data_Semiring.Get_numMul(), gopurs_runtime.Float(1.0), gopurs_runtime.Float(0.0))
+}), pkg_Data_Ring.Get_numSub())
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Float(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingNumber(), "div"), gopurs_runtime.Float(1.0), x_0).FloatVal())
 }))

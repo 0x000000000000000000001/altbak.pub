@@ -3,29 +3,12 @@ package Data_Time_Duration
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Ring "gopurs/output/Data.Ring"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Show "gopurs/output/Data.Show"
-	pkg_Data_Semiring "gopurs/output/Data.Semiring"
 	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Data_Eq "gopurs/output/Data.Eq"
 	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
 )
-
-var cache_negate gopurs_runtime.Value
-var once_negate sync.Once
-func Get_negate() gopurs_runtime.Value {
-	once_negate.Do(func() {
-		cache_negate = func() gopurs_runtime.Value {
-zero_0_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Ring.Get_ringNumber(), "Semiring0"), gopurs_runtime.Value{}), "zero")
-_ = zero_0_0
-return gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ring.Get_ringNumber(), "sub"), zero_0_0, a_1)
-})
-}()
-	})
-	return cache_negate
-}
 
 var cache_identity gopurs_runtime.Value
 var once_identity sync.Once
@@ -176,7 +159,7 @@ func Get_semigroupSeconds() gopurs_runtime.Value {
 	once_semigroupSeconds.Do(func() {
 		cache_semigroupSeconds = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "add"), v_0, v1_1).FloatVal())
+return gopurs_runtime.Float((v_0.FloatVal()) + (v1_1.FloatVal()))
 })
 }))
 	})
@@ -189,7 +172,7 @@ func Get_semigroupMinutes() gopurs_runtime.Value {
 	once_semigroupMinutes.Do(func() {
 		cache_semigroupMinutes = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "add"), v_0, v1_1).FloatVal())
+return gopurs_runtime.Float((v_0.FloatVal()) + (v1_1.FloatVal()))
 })
 }))
 	})
@@ -202,7 +185,7 @@ func Get_semigroupMilliseconds() gopurs_runtime.Value {
 	once_semigroupMilliseconds.Do(func() {
 		cache_semigroupMilliseconds = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "add"), v_0, v1_1).FloatVal())
+return gopurs_runtime.Float((v_0.FloatVal()) + (v1_1.FloatVal()))
 })
 }))
 	})
@@ -215,7 +198,7 @@ func Get_semigroupHours() gopurs_runtime.Value {
 	once_semigroupHours.Do(func() {
 		cache_semigroupHours = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "add"), v_0, v1_1).FloatVal())
+return gopurs_runtime.Float((v_0.FloatVal()) + (v1_1.FloatVal()))
 })
 }))
 	})
@@ -228,7 +211,7 @@ func Get_semigroupDays() gopurs_runtime.Value {
 	once_semigroupDays.Do(func() {
 		cache_semigroupDays = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "add"), v_0, v1_1).FloatVal())
+return gopurs_runtime.Float((v_0.FloatVal()) + (v1_1.FloatVal()))
 })
 }))
 	})
@@ -484,7 +467,7 @@ var once_durationSeconds sync.Once
 func Get_durationSeconds() gopurs_runtime.Value {
 	once_durationSeconds.Do(func() {
 		cache_durationSeconds = gopurs_runtime.RecordDict2("fromDuration", "toDuration", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "mul"), v_0, gopurs_runtime.Float(1000.0)).FloatVal())
+return gopurs_runtime.Float((v_0.FloatVal()) * (1000.0))
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Float(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingNumber(), "div"), v_0, gopurs_runtime.Float(1000.0)).FloatVal())
 }))
@@ -497,7 +480,7 @@ var once_durationMinutes sync.Once
 func Get_durationMinutes() gopurs_runtime.Value {
 	once_durationMinutes.Do(func() {
 		cache_durationMinutes = gopurs_runtime.RecordDict2("fromDuration", "toDuration", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "mul"), v_0, gopurs_runtime.Float(60000.0)).FloatVal())
+return gopurs_runtime.Float((v_0.FloatVal()) * (60000.0))
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Float(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingNumber(), "div"), v_0, gopurs_runtime.Float(60000.0)).FloatVal())
 }))
@@ -519,7 +502,7 @@ var once_durationHours sync.Once
 func Get_durationHours() gopurs_runtime.Value {
 	once_durationHours.Do(func() {
 		cache_durationHours = gopurs_runtime.RecordDict2("fromDuration", "toDuration", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "mul"), v_0, gopurs_runtime.Float(3600000.0)).FloatVal())
+return gopurs_runtime.Float((v_0.FloatVal()) * (3600000.0))
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Float(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingNumber(), "div"), v_0, gopurs_runtime.Float(3600000.0)).FloatVal())
 }))
@@ -532,7 +515,7 @@ var once_durationDays sync.Once
 func Get_durationDays() gopurs_runtime.Value {
 	once_durationDays.Do(func() {
 		cache_durationDays = gopurs_runtime.RecordDict2("fromDuration", "toDuration", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "mul"), v_0, gopurs_runtime.Float(86400000.0)).FloatVal())
+return gopurs_runtime.Float((v_0.FloatVal()) * (86400000.0))
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Float(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingNumber(), "div"), v_0, gopurs_runtime.Float(86400000.0)).FloatVal())
 }))
@@ -616,7 +599,7 @@ var dictDuration_0 gopurs_runtime.Value = dictDuration_0_loop
 _ = dictDuration_0
 var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "toDuration"), gopurs_runtime.Apply(Get_negate(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "fromDuration"), x_1)))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "toDuration"), gopurs_runtime.Float(-(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "fromDuration"), x_1).FloatVal())))
 }
 
 func Call_negateDuration__gopurs_runtime_Value_1892904996(dictDuration_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -624,7 +607,7 @@ var dictDuration_0 gopurs_runtime.Value = dictDuration_0_loop
 _ = dictDuration_0
 var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "toDuration"), gopurs_runtime.Apply(Get_negate(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "fromDuration"), x_1)))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "toDuration"), gopurs_runtime.Float(-(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "fromDuration"), x_1).FloatVal())))
 }
 
 func Call_convertDuration(dictDuration_0_loop gopurs_runtime.Value, dictDuration1_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {

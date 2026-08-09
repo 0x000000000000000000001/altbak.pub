@@ -84,10 +84,16 @@ func _LastIndexOf(just func(int) interface{}, nothing interface{}, x string, s s
 }
 
 func _LastIndexOfStartingAt(just func(int) interface{}, nothing interface{}, x string, startIdx int, str string) interface{} {
-	if startIdx < 0 || startIdx >= len(str) {
-		return nothing
+	if startIdx < 0 {
+		startIdx = 0
+	} else if startIdx > len(str) {
+		startIdx = len(str)
 	}
-	idx := strings.LastIndex(str[:startIdx+len(x)], x)
+	end := startIdx + len(x)
+	if end > len(str) {
+		end = len(str)
+	}
+	idx := strings.LastIndex(str[:end], x)
 	if idx == -1 {
 		return nothing
 	}

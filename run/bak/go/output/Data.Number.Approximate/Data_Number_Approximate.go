@@ -4,9 +4,7 @@ import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	pkg_Data_Number "gopurs/output/Data.Number"
-	pkg_Data_Ring "gopurs/output/Data.Ring"
 	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
-	pkg_Data_Semiring "gopurs/output/Data.Semiring"
 	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
 )
 
@@ -139,7 +137,7 @@ goto end_branch_1
 {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply(pkg_Data_Number.Get_abs(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ring.Get_ringNumber(), "sub"), gopurs_runtime.Float(v1_1), gopurs_runtime.Float(v2_2))).FloatVal()) > (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingNumber(), "div"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "mul"), gopurs_runtime.Float(v_0), gopurs_runtime.Apply(pkg_Data_Number.Get_abs(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semiring.Get_semiringNumber(), "add"), gopurs_runtime.Float(v1_1), gopurs_runtime.Float(v2_2)))), gopurs_runtime.Float(2.0)).FloatVal()) {
+if (gopurs_runtime.Apply(pkg_Data_Number.Get_abs(), gopurs_runtime.Float((v1_1) - (v2_2))).FloatVal()) > (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingNumber(), "div"), gopurs_runtime.Float((v_0) * (gopurs_runtime.Apply(pkg_Data_Number.Get_abs(), gopurs_runtime.Float((v1_1) + (v2_2))).FloatVal())), gopurs_runtime.Float(2.0)).FloatVal()) {
 __t0 = gopurs_runtime.Bool(false)
 goto end_branch_0
 } else {
@@ -173,7 +171,7 @@ var y_2 float64 = y_2_loop
 _ = y_2
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply(pkg_Data_Number.Get_abs(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ring.Get_ringNumber(), "sub"), gopurs_runtime.Float(x_1), gopurs_runtime.Float(y_2))).FloatVal()) > (v_0) {
+if (gopurs_runtime.Apply(pkg_Data_Number.Get_abs(), gopurs_runtime.Float((x_1) - (y_2))).FloatVal()) > (v_0) {
 __t0 = gopurs_runtime.Bool(false)
 goto end_branch_0
 } else {

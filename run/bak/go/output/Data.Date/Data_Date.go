@@ -857,33 +857,10 @@ goto end_branch_0
 }
 {
 if (m_1.Type == 9 && m_1.IntVal == 2455627378) {
-var __t3 gopurs_runtime.Value
-{
-if (gopurs_runtime.Bool(Call_isLeapYear(y_0)).IntVal) != (0) {
-__local_var_2_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Date_Component.Get_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(29))
-_ = __local_var_2_4
 var __t5 gopurs_runtime.Value
 {
-if (__local_var_2_4.Type == 9 && __local_var_2_4.IntVal == 930809136 && __local_var_2_4.UnsafePtr != nil) {
-__t5 = (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(__local_var_2_4.UnsafePtr).V0
-goto end_branch_5
-} else {
-
-}
-}
-{
-__t5 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_5:
-__t3 = gopurs_runtime.Int(__t5.IntVal)
-goto end_branch_3
-} else {
-
-}
-}
-{
-if true {
-__local_var_2_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Date_Component.Get_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(28))
+if (gopurs_runtime.Bool(Call_isLeapYear(y_0)).IntVal) != (0) {
+__local_var_2_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Date_Component.Get_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(29))
 _ = __local_var_2_6
 var __t7 gopurs_runtime.Value
 {
@@ -898,17 +875,32 @@ goto end_branch_7
 __t7 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_7:
-__t3 = gopurs_runtime.Int(__t7.IntVal)
-goto end_branch_3
+__t5 = gopurs_runtime.Int(__t7.IntVal)
+goto end_branch_5
 } else {
 
 }
 }
 {
-__t3 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__local_var_2_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Date_Component.Get_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(28))
+_ = __local_var_2_3
+var __t4 gopurs_runtime.Value
+{
+if (__local_var_2_3.Type == 9 && __local_var_2_3.IntVal == 930809136 && __local_var_2_3.UnsafePtr != nil) {
+__t4 = (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(__local_var_2_3.UnsafePtr).V0
+goto end_branch_4
+} else {
+
 }
-end_branch_3:
-__t0 = __t3
+}
+{
+__t4 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_4:
+__t5 = gopurs_runtime.Int(__t4.IntVal)
+}
+end_branch_5:
+__t0 = __t5
 goto end_branch_0
 } else {
 
@@ -1302,15 +1294,7 @@ goto end_branch_8
 }
 }
 {
-if true {
 __t8 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_functorMaybe(), "map"), gopurs_runtime.Apply2(Get_Date(), gopurs_runtime.Int((*Constructor_Date)(v2_4.UnsafePtr).V0), (*Constructor_Date)(v2_4.UnsafePtr).V1), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Date_Component.Get_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(j_5_1))).UnsafePtr))}
-goto end_branch_8
-} else {
-
-}
-}
-{
-__t8 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_8:
 var __t9 gopurs_runtime.Value
@@ -1331,15 +1315,7 @@ goto end_branch_9
 }
 }
 {
-if true {
 __t9 = gopurs_runtime.Int(0)
-goto end_branch_9
-} else {
-
-}
-}
-{
-__t9 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_9:
 __t10 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_bindMaybe(), "bind"), __t8, gopurs_runtime.Apply(adj_2_0_0, __t9)).UnsafePtr))}

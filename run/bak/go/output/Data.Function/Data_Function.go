@@ -886,18 +886,10 @@ goto end_branch_1
 }
 }
 {
-if true {
 n_2_loop = gopurs_runtime.Int((n_2.IntVal) - (1))
 acc_3_loop = gopurs_runtime.Apply(f_0, acc_3)
 continue go__go_1_0_0
 __t1 = gopurs_runtime.Value{}
-goto end_branch_1
-} else {
-
-}
-}
-{
-__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
 return __t1

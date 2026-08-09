@@ -67,7 +67,9 @@ var once_commutativeRingNumber sync.Once
 func Get_commutativeRingNumber() gopurs_runtime.Value {
 	once_commutativeRingNumber.Do(func() {
 		cache_commutativeRingNumber = gopurs_runtime.RecordDict1("Ring0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return pkg_Data_Ring.Get_ringNumber()
+return gopurs_runtime.RecordDict2("Semiring0", "sub", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", pkg_Data_Semiring.Get_numAdd(), pkg_Data_Semiring.Get_numMul(), gopurs_runtime.Float(1.0), gopurs_runtime.Float(0.0))
+}), pkg_Data_Ring.Get_numSub())
 }))
 	})
 	return cache_commutativeRingNumber

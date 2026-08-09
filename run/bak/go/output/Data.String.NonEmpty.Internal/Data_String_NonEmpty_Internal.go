@@ -748,37 +748,14 @@ _ = x_1
 var __t0 gopurs_runtime.Value
 {
 if (x_1) == ("") {
-var __t1 gopurs_runtime.Value
-{
-var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[string])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}.UnsafePtr))}
-if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 930809136 && __t_tag_2.UnsafePtr != nil) {
-__t1 = (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}.UnsafePtr).V0
-goto end_branch_1
-} else {
-
-}
-}
-{
-__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_1:
-__t0 = __t1
-goto end_branch_0
-} else {
-
-}
-}
-{
-var __t_tag_3 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[string])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, gopurs_runtime.Str(x_1)})}.UnsafePtr))}
-if (__t_tag_3.Type == 9 && __t_tag_3.IntVal == 930809136 && __t_tag_3.UnsafePtr != nil) {
-__t0 = gopurs_runtime.Str(x_1)
-goto end_branch_0
-} else {
-
-}
-}
-{
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = gopurs_runtime.Str(x_1)
 }
 end_branch_0:
 return __t0.StrVal()

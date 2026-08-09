@@ -3,7 +3,6 @@ package Data_DateTime_Instant
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Ring "gopurs/output/Data.Ring"
 	pkg_Data_Date_Component "gopurs/output/Data.Date.Component"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	pkg_Data_DateTime "gopurs/output/Data.DateTime"
@@ -17,21 +16,6 @@ import (
 	pkg_Data_Time_Component "gopurs/output/Data.Time.Component"
 	unsafe "unsafe"
 )
-
-var cache_negate gopurs_runtime.Value
-var once_negate sync.Once
-func Get_negate() gopurs_runtime.Value {
-	once_negate.Do(func() {
-		cache_negate = func() gopurs_runtime.Value {
-zero_0_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Ring.Get_ringNumber(), "Semiring0"), gopurs_runtime.Value{}), "zero")
-_ = zero_0_0
-return gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ring.Get_ringNumber(), "sub"), zero_0_0, a_1)
-})
-}()
-	})
-	return cache_negate
-}
 
 var cache_unInstant gopurs_runtime.Value
 var once_unInstant sync.Once
@@ -161,7 +145,7 @@ func Get_boundedInstant() gopurs_runtime.Value {
 	once_boundedInstant.Do(func() {
 		cache_boundedInstant = gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Ord.Get_ordNumber()
-}), gopurs_runtime.Float(gopurs_runtime.Apply(Get_negate(), gopurs_runtime.Float(8639977881600000.0)).FloatVal()), gopurs_runtime.Float(8639977881599999.0))
+}), gopurs_runtime.Float(-8639977881600000.0), gopurs_runtime.Float(8639977881599999.0))
 	})
 	return cache_boundedInstant
 }
@@ -179,7 +163,7 @@ var __t0 gopurs_runtime.Value
 {
 var __t1 gopurs_runtime.Value
 {
-if (v_0) < (gopurs_runtime.Apply(Get_negate(), gopurs_runtime.Float(8639977881600000.0)).FloatVal()) {
+if (v_0) < (-8639977881600000.0) {
 __t1 = gopurs_runtime.Bool(false)
 goto end_branch_1
 } else {
@@ -211,15 +195,7 @@ goto end_branch_0
 }
 }
 {
-if true {
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[float64])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}.UnsafePtr))}
-goto end_branch_0
-} else {
-
-}
-}
-{
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
 return (*pkg_Data_Maybe.Constructor_Just[float64])(__t0.UnsafePtr)
@@ -244,7 +220,7 @@ var dt1_1 float64 = dt1_1_loop
 _ = dt1_1
 var dt2_2 float64 = dt2_2_loop
 _ = dt2_2
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "toDuration"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupMilliseconds(), "append"), gopurs_runtime.Float(dt1_1), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationMilliseconds(), "toDuration"), gopurs_runtime.Apply(pkg_Data_Time_Duration.Get_negate(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationMilliseconds(), "fromDuration"), gopurs_runtime.Float(dt2_2))))))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "toDuration"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupMilliseconds(), "append"), gopurs_runtime.Float(dt1_1), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationMilliseconds(), "toDuration"), gopurs_runtime.Float(-(gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationMilliseconds(), "fromDuration"), gopurs_runtime.Float(dt2_2)).FloatVal())))))
 }
 
 func Get_fromDateTimeImpl() gopurs_runtime.Value {

@@ -2089,22 +2089,7 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gop
 var __t0 gopurs_runtime.Value
 {
 if (v_3.Type == 9 && v_3.IntVal == 1320412129) {
-s_prime_4_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Lazy.Get_functorLazy(), "map"), func() gopurs_runtime.Value {
-arr_val_filter5 := f_1
-_ = arr_val_filter5
-arr_go_filter5 := (*[]gopurs_runtime.Value)(arr_val_filter5.UnsafePtr)
-_ = arr_go_filter5
-res_go_filter5 := make([]gopurs_runtime.Value, 0)
-_ = res_go_filter5
-for _, v_filter5 := range *arr_go_filter5 {
-if gopurs_runtime.Apply(dictFunctor_0, v_filter5).BoolVal() {
-res_go_filter5 = append(res_go_filter5, v_filter5)
-} else {
-
-}
-}
-return gopurs_runtime.Array(res_go_filter5)
-}(), (*Constructor_Yield[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V1)
+s_prime_4_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Lazy.Get_functorLazy(), "map"), gopurs_runtime.Apply2(Get_filter(), dictFunctor_0, f_1), (*Constructor_Yield[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V1)
 _ = s_prime_4_1
 var __t2 gopurs_runtime.Value
 {
@@ -2127,22 +2112,7 @@ goto end_branch_0
 }
 {
 if (v_3.Type == 9 && v_3.IntVal == 813447293) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 813447293, UnsafePtr: unsafe.Pointer(&Constructor_Skip[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Lazy.Get_functorLazy(), "map"), func() gopurs_runtime.Value {
-arr_val_filter5 := f_1
-_ = arr_val_filter5
-arr_go_filter5 := (*[]gopurs_runtime.Value)(arr_val_filter5.UnsafePtr)
-_ = arr_go_filter5
-res_go_filter5 := make([]gopurs_runtime.Value, 0)
-_ = res_go_filter5
-for _, v_filter5 := range *arr_go_filter5 {
-if gopurs_runtime.Apply(dictFunctor_0, v_filter5).BoolVal() {
-res_go_filter5 = append(res_go_filter5, v_filter5)
-} else {
-
-}
-}
-return gopurs_runtime.Array(res_go_filter5)
-}(), (*Constructor_Skip[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V0)})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 813447293, UnsafePtr: unsafe.Pointer(&Constructor_Skip[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Lazy.Get_functorLazy(), "map"), gopurs_runtime.Apply2(Get_filter(), dictFunctor_0, f_1), (*Constructor_Skip[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V0)})}
 goto end_branch_0
 } else {
 
@@ -2175,22 +2145,7 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gop
 var __t0 gopurs_runtime.Value
 {
 if (v_3.Type == 9 && v_3.IntVal == 1320412129) {
-s_prime_4_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Lazy.Get_functorLazy(), "map"), func() gopurs_runtime.Value {
-arr_val_filter5 := f_1
-_ = arr_val_filter5
-arr_go_filter5 := (*[]gopurs_runtime.Value)(arr_val_filter5.UnsafePtr)
-_ = arr_go_filter5
-res_go_filter5 := make([]gopurs_runtime.Value, 0)
-_ = res_go_filter5
-for _, v_filter5 := range *arr_go_filter5 {
-if gopurs_runtime.Apply(dictFunctor_0, v_filter5).BoolVal() {
-res_go_filter5 = append(res_go_filter5, v_filter5)
-} else {
-
-}
-}
-return gopurs_runtime.Array(res_go_filter5)
-}(), (*Constructor_Yield[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V1)
+s_prime_4_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Lazy.Get_functorLazy(), "map"), gopurs_runtime.Apply2(Get_filter(), dictFunctor_0, f_1), (*Constructor_Yield[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V1)
 _ = s_prime_4_1
 var __t2 gopurs_runtime.Value
 {
@@ -2213,22 +2168,7 @@ goto end_branch_0
 }
 {
 if (v_3.Type == 9 && v_3.IntVal == 813447293) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 813447293, UnsafePtr: unsafe.Pointer(&Constructor_Skip[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Lazy.Get_functorLazy(), "map"), func() gopurs_runtime.Value {
-arr_val_filter5 := f_1
-_ = arr_val_filter5
-arr_go_filter5 := (*[]gopurs_runtime.Value)(arr_val_filter5.UnsafePtr)
-_ = arr_go_filter5
-res_go_filter5 := make([]gopurs_runtime.Value, 0)
-_ = res_go_filter5
-for _, v_filter5 := range *arr_go_filter5 {
-if gopurs_runtime.Apply(dictFunctor_0, v_filter5).BoolVal() {
-res_go_filter5 = append(res_go_filter5, v_filter5)
-} else {
-
-}
-}
-return gopurs_runtime.Array(res_go_filter5)
-}(), (*Constructor_Skip[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V0)})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 813447293, UnsafePtr: unsafe.Pointer(&Constructor_Skip[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Lazy.Get_functorLazy(), "map"), gopurs_runtime.Apply2(Get_filter(), dictFunctor_0, f_1), (*Constructor_Skip[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V0)})}
 goto end_branch_0
 } else {
 
