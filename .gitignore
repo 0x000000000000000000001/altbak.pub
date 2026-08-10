@@ -14,3 +14,4 @@ composer.lock
 composer.json
 .composer-spago.json
 cachegrind.out*
+.psc-ide-port
