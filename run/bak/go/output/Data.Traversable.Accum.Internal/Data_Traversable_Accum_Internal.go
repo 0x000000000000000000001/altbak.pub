@@ -38,15 +38,15 @@ return Call_stateR(v_0_box)
 	return cache_stateR
 }
 
-var cache_stateR__gopurs_runtime_Value_458711162 gopurs_runtime.Value
-var once_stateR__gopurs_runtime_Value_458711162 sync.Once
-func Get_stateR__gopurs_runtime_Value_458711162() gopurs_runtime.Value {
-	once_stateR__gopurs_runtime_Value_458711162.Do(func() {
-		cache_stateR__gopurs_runtime_Value_458711162 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_stateR__gopurs_runtime_Value_458711162(v_0_box)
+var cache_stateR__gopurs_runtime_Value_1334064830 gopurs_runtime.Value
+var once_stateR__gopurs_runtime_Value_1334064830 sync.Once
+func Get_stateR__gopurs_runtime_Value_1334064830() gopurs_runtime.Value {
+	once_stateR__gopurs_runtime_Value_1334064830.Do(func() {
+		cache_stateR__gopurs_runtime_Value_1334064830 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_stateR__gopurs_runtime_Value_1334064830(v_0_box)
 })
 	})
-	return cache_stateR__gopurs_runtime_Value_458711162
+	return cache_stateR__gopurs_runtime_Value_1334064830
 }
 
 var cache_stateL gopurs_runtime.Value
@@ -60,15 +60,15 @@ return Call_stateL(v_0_box)
 	return cache_stateL
 }
 
-var cache_stateL__gopurs_runtime_Value_458711162 gopurs_runtime.Value
-var once_stateL__gopurs_runtime_Value_458711162 sync.Once
-func Get_stateL__gopurs_runtime_Value_458711162() gopurs_runtime.Value {
-	once_stateL__gopurs_runtime_Value_458711162.Do(func() {
-		cache_stateL__gopurs_runtime_Value_458711162 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_stateL__gopurs_runtime_Value_458711162(v_0_box)
+var cache_stateL__gopurs_runtime_Value_1334064830 gopurs_runtime.Value
+var once_stateL__gopurs_runtime_Value_1334064830 sync.Once
+func Get_stateL__gopurs_runtime_Value_1334064830() gopurs_runtime.Value {
+	once_stateL__gopurs_runtime_Value_1334064830.Do(func() {
+		cache_stateL__gopurs_runtime_Value_1334064830 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_stateL__gopurs_runtime_Value_1334064830(v_0_box)
 })
 	})
-	return cache_stateL__gopurs_runtime_Value_458711162
+	return cache_stateL__gopurs_runtime_Value_1334064830
 }
 
 var cache_functorStateR gopurs_runtime.Value
@@ -88,6 +88,23 @@ return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v_3
 	return cache_functorStateR
 }
 
+var cache_functorStateR__gopurs_runtime_Value_830241200 gopurs_runtime.Value
+var once_functorStateR__gopurs_runtime_Value_830241200 sync.Once
+func Get_functorStateR__gopurs_runtime_Value_830241200() gopurs_runtime.Value {
+	once_functorStateR__gopurs_runtime_Value_830241200.Do(func() {
+		cache_functorStateR__gopurs_runtime_Value_830241200 = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(k_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
+v_3_0 := gopurs_runtime.Apply(k_1, s_2)
+_ = v_3_0
+return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v_3_0, "accum"), gopurs_runtime.Apply(f_0, gopurs_runtime.RecordGet(v_3_0, "value")))
+})
+})
+}))
+	})
+	return cache_functorStateR__gopurs_runtime_Value_830241200
+}
+
 var cache_functorStateL gopurs_runtime.Value
 var once_functorStateL sync.Once
 func Get_functorStateL() gopurs_runtime.Value {
@@ -103,6 +120,23 @@ return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v_3
 }))
 	})
 	return cache_functorStateL
+}
+
+var cache_functorStateL__gopurs_runtime_Value_830241200 gopurs_runtime.Value
+var once_functorStateL__gopurs_runtime_Value_830241200 sync.Once
+func Get_functorStateL__gopurs_runtime_Value_830241200() gopurs_runtime.Value {
+	once_functorStateL__gopurs_runtime_Value_830241200.Do(func() {
+		cache_functorStateL__gopurs_runtime_Value_830241200 = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(k_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
+v_3_0 := gopurs_runtime.Apply(k_1, s_2)
+_ = v_3_0
+return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v_3_0, "accum"), gopurs_runtime.Apply(f_0, gopurs_runtime.RecordGet(v_3_0, "value")))
+})
+})
+}))
+	})
+	return cache_functorStateL__gopurs_runtime_Value_830241200
 }
 
 var cache_applyStateR gopurs_runtime.Value
@@ -126,6 +160,27 @@ return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v1_
 	return cache_applyStateR
 }
 
+var cache_applyStateR__gopurs_runtime_Value_1243455060 gopurs_runtime.Value
+var once_applyStateR__gopurs_runtime_Value_1243455060 sync.Once
+func Get_applyStateR__gopurs_runtime_Value_1243455060() gopurs_runtime.Value {
+	once_applyStateR__gopurs_runtime_Value_1243455060.Do(func() {
+		cache_applyStateR__gopurs_runtime_Value_1243455060 = gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_functorStateR__gopurs_runtime_Value_830241200()
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
+v_3_0 := gopurs_runtime.Apply(x_1, s_2)
+_ = v_3_0
+v1_4_1 := gopurs_runtime.Apply(f_0, gopurs_runtime.RecordGet(v_3_0, "accum"))
+_ = v1_4_1
+return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v1_4_1, "accum"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(v1_4_1, "value"), gopurs_runtime.RecordGet(v_3_0, "value")))
+})
+})
+}))
+	})
+	return cache_applyStateR__gopurs_runtime_Value_1243455060
+}
+
 var cache_applyStateL gopurs_runtime.Value
 var once_applyStateL sync.Once
 func Get_applyStateL() gopurs_runtime.Value {
@@ -145,6 +200,27 @@ return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v1_
 }))
 	})
 	return cache_applyStateL
+}
+
+var cache_applyStateL__gopurs_runtime_Value_1243455060 gopurs_runtime.Value
+var once_applyStateL__gopurs_runtime_Value_1243455060 sync.Once
+func Get_applyStateL__gopurs_runtime_Value_1243455060() gopurs_runtime.Value {
+	once_applyStateL__gopurs_runtime_Value_1243455060.Do(func() {
+		cache_applyStateL__gopurs_runtime_Value_1243455060 = gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_functorStateL__gopurs_runtime_Value_830241200()
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
+v_3_0 := gopurs_runtime.Apply(f_0, s_2)
+_ = v_3_0
+v1_4_1 := gopurs_runtime.Apply(x_1, gopurs_runtime.RecordGet(v_3_0, "accum"))
+_ = v1_4_1
+return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v1_4_1, "accum"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(v_3_0, "value"), gopurs_runtime.RecordGet(v1_4_1, "value")))
+})
+})
+}))
+	})
+	return cache_applyStateL__gopurs_runtime_Value_1243455060
 }
 
 var cache_applicativeStateR gopurs_runtime.Value
@@ -195,7 +271,7 @@ _ = v_0
 return v_0
 }
 
-func Call_stateR__gopurs_runtime_Value_458711162(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_stateR__gopurs_runtime_Value_1334064830(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 return v_0
@@ -207,7 +283,7 @@ _ = v_0
 return v_0
 }
 
-func Call_stateL__gopurs_runtime_Value_458711162(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_stateL__gopurs_runtime_Value_1334064830(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 return v_0

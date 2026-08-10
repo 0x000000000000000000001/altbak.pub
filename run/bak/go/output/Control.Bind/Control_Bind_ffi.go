@@ -12,7 +12,7 @@ func ArrayBind(arr []interface{}, f func(interface{}) []interface{}) []interface
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs_ArrayBind = // TAST: (Func [(Array (TypeVar a)), (Func [(TypeVar a)] (Array (TypeVar b)))] (Array (TypeVar b)))
+var _Gopurs_ArrayBind = // TAST: (ForAll [a, b] (Func [(Array (TypeVar a)), (Func [(TypeVar a)] (Array (TypeVar b)))] (Array (TypeVar b))))
 gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	arg0_arr := *(*[]gopurs_runtime.Value)(arg0.UnsafePtr)
 	go_arg0 := make([]any, len(arg0_arr))

@@ -66,7 +66,7 @@ func Pow(x int, y int) int {
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs_FromNumberImpl = // TAST: (Func [(Func [(TypeVar a)] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)])), (ADT ["Data","Maybe","Maybe"] [(TypeVar a)]), Number] (ADT ["Data","Maybe","Maybe"] [Int]))
+var _Gopurs_FromNumberImpl = // TAST: (Func [(ForAll [a] (Func [(TypeVar a)] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)]))), (ForAll [a] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)])), Number] (ADT ["Data","Maybe","Maybe"] [Int]))
 gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 int) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
@@ -76,7 +76,7 @@ gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := FromNumberImpl(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_FromStringAsImpl = // TAST: (Func [(Func [(TypeVar a)] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)])), (ADT ["Data","Maybe","Maybe"] [(TypeVar a)]), Int, String] (ADT ["Data","Maybe","Maybe"] [Int]))
+var _Gopurs_FromStringAsImpl = // TAST: (Func [(ForAll [a] (Func [(TypeVar a)] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)]))), (ForAll [a] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)])), Int, String] (ADT ["Data","Maybe","Maybe"] [Int]))
 gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 int) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))

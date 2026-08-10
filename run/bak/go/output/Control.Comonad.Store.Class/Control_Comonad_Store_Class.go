@@ -21,15 +21,15 @@ return Call_pos(dict_0_box)
 	return cache_pos
 }
 
-var cache_pos__gopurs_runtime_Value_3016502839 gopurs_runtime.Value
-var once_pos__gopurs_runtime_Value_3016502839 sync.Once
-func Get_pos__gopurs_runtime_Value_3016502839() gopurs_runtime.Value {
-	once_pos__gopurs_runtime_Value_3016502839.Do(func() {
-		cache_pos__gopurs_runtime_Value_3016502839 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_pos__gopurs_runtime_Value_3016502839(dict_0_box)
+var cache_pos__gopurs_runtime_Value_639385354 gopurs_runtime.Value
+var once_pos__gopurs_runtime_Value_639385354 sync.Once
+func Get_pos__gopurs_runtime_Value_639385354() gopurs_runtime.Value {
+	once_pos__gopurs_runtime_Value_639385354.Do(func() {
+		cache_pos__gopurs_runtime_Value_639385354 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_pos__gopurs_runtime_Value_639385354(dict_0_box)
 })
 	})
-	return cache_pos__gopurs_runtime_Value_3016502839
+	return cache_pos__gopurs_runtime_Value_639385354
 }
 
 var cache_peek gopurs_runtime.Value
@@ -43,15 +43,15 @@ return Call_peek(dict_0_box)
 	return cache_peek
 }
 
-var cache_peek__gopurs_runtime_Value_4021100926 gopurs_runtime.Value
-var once_peek__gopurs_runtime_Value_4021100926 sync.Once
-func Get_peek__gopurs_runtime_Value_4021100926() gopurs_runtime.Value {
-	once_peek__gopurs_runtime_Value_4021100926.Do(func() {
-		cache_peek__gopurs_runtime_Value_4021100926 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_peek__gopurs_runtime_Value_4021100926(dict_0_box)
+var cache_peek__gopurs_runtime_Value_413153475 gopurs_runtime.Value
+var once_peek__gopurs_runtime_Value_413153475 sync.Once
+func Get_peek__gopurs_runtime_Value_413153475() gopurs_runtime.Value {
+	once_peek__gopurs_runtime_Value_413153475.Do(func() {
+		cache_peek__gopurs_runtime_Value_413153475 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_peek__gopurs_runtime_Value_413153475(dict_0_box)
 })
 	})
-	return cache_peek__gopurs_runtime_Value_4021100926
+	return cache_peek__gopurs_runtime_Value_413153475
 }
 
 var cache_peeks gopurs_runtime.Value
@@ -65,15 +65,15 @@ return Call_peeks(dictComonadStore_0_box, f_1_box, x_2_box)
 	return cache_peeks
 }
 
-var cache_peeks__gopurs_runtime_Value_3628926966 gopurs_runtime.Value
-var once_peeks__gopurs_runtime_Value_3628926966 sync.Once
-func Get_peeks__gopurs_runtime_Value_3628926966() gopurs_runtime.Value {
-	once_peeks__gopurs_runtime_Value_3628926966.Do(func() {
-		cache_peeks__gopurs_runtime_Value_3628926966 = gopurs_runtime.Func3(func(dictComonadStore_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_peeks__gopurs_runtime_Value_3628926966(dictComonadStore_0_box, f_1_box, x_2_box)
+var cache_peeks__gopurs_runtime_Value_2913274603 gopurs_runtime.Value
+var once_peeks__gopurs_runtime_Value_2913274603 sync.Once
+func Get_peeks__gopurs_runtime_Value_2913274603() gopurs_runtime.Value {
+	once_peeks__gopurs_runtime_Value_2913274603.Do(func() {
+		cache_peeks__gopurs_runtime_Value_2913274603 = gopurs_runtime.Func3(func(dictComonadStore_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_peeks__gopurs_runtime_Value_2913274603(dictComonadStore_0_box, f_1_box, x_2_box)
 })
 	})
-	return cache_peeks__gopurs_runtime_Value_3628926966
+	return cache_peeks__gopurs_runtime_Value_2913274603
 }
 
 var cache_seeks gopurs_runtime.Value
@@ -148,7 +148,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "pos")
 }
 
-func Call_pos__gopurs_runtime_Value_3016502839(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_pos__gopurs_runtime_Value_639385354(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "pos")
@@ -160,7 +160,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "peek")
 }
 
-func Call_peek__gopurs_runtime_Value_4021100926(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_peek__gopurs_runtime_Value_413153475(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "peek")
@@ -176,7 +176,7 @@ _ = x_2
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictComonadStore_0, "peek"), gopurs_runtime.Apply(f_1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadStore_0, "pos"), x_2)), x_2)
 }
 
-func Call_peeks__gopurs_runtime_Value_3628926966(dictComonadStore_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_peeks__gopurs_runtime_Value_2913274603(dictComonadStore_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictComonadStore_0 gopurs_runtime.Value = dictComonadStore_0_loop
 _ = dictComonadStore_0
 var f_1 gopurs_runtime.Value = f_1_loop

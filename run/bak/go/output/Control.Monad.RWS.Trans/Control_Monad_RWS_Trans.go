@@ -101,26 +101,15 @@ return Call_mapRWST(f_0_box, v_1_box, r_2_box, s_3_box)
 	return cache_mapRWST
 }
 
-var cache_mapRWST__gopurs_runtime_Value_945757723 gopurs_runtime.Value
-var once_mapRWST__gopurs_runtime_Value_945757723 sync.Once
-func Get_mapRWST__gopurs_runtime_Value_945757723() gopurs_runtime.Value {
-	once_mapRWST__gopurs_runtime_Value_945757723.Do(func() {
-		cache_mapRWST__gopurs_runtime_Value_945757723 = gopurs_runtime.Func4(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, r_2_box gopurs_runtime.Value, s_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_mapRWST__gopurs_runtime_Value_945757723(f_0_box, v_1_box, r_2_box, s_3_box)
+var cache_mapRWST__gopurs_runtime_Value_1363965404 gopurs_runtime.Value
+var once_mapRWST__gopurs_runtime_Value_1363965404 sync.Once
+func Get_mapRWST__gopurs_runtime_Value_1363965404() gopurs_runtime.Value {
+	once_mapRWST__gopurs_runtime_Value_1363965404.Do(func() {
+		cache_mapRWST__gopurs_runtime_Value_1363965404 = gopurs_runtime.Func4(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, r_2_box gopurs_runtime.Value, s_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mapRWST__gopurs_runtime_Value_1363965404(f_0_box, v_1_box, r_2_box, s_3_box)
 })
 	})
-	return cache_mapRWST__gopurs_runtime_Value_945757723
-}
-
-var cache_mapRWST__gopurs_runtime_Value_1683171611 gopurs_runtime.Value
-var once_mapRWST__gopurs_runtime_Value_1683171611 sync.Once
-func Get_mapRWST__gopurs_runtime_Value_1683171611() gopurs_runtime.Value {
-	once_mapRWST__gopurs_runtime_Value_1683171611.Do(func() {
-		cache_mapRWST__gopurs_runtime_Value_1683171611 = gopurs_runtime.Func4(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, r_2_box gopurs_runtime.Value, s_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_mapRWST__gopurs_runtime_Value_1683171611(f_0_box, v_1_box, r_2_box, s_3_box)
-})
-	})
-	return cache_mapRWST__gopurs_runtime_Value_1683171611
+	return cache_mapRWST__gopurs_runtime_Value_1363965404
 }
 
 var cache_lazyRWST gopurs_runtime.Value
@@ -160,15 +149,15 @@ return Call_execRWST(dictMonad_0_box, v_1_box, r_2_box, s_3_box)
 	return cache_execRWST
 }
 
-var cache_execRWST__gopurs_runtime_Value_117037783 gopurs_runtime.Value
-var once_execRWST__gopurs_runtime_Value_117037783 sync.Once
-func Get_execRWST__gopurs_runtime_Value_117037783() gopurs_runtime.Value {
-	once_execRWST__gopurs_runtime_Value_117037783.Do(func() {
-		cache_execRWST__gopurs_runtime_Value_117037783 = gopurs_runtime.Func4(func(dictMonad_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, r_2_box gopurs_runtime.Value, s_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_execRWST__gopurs_runtime_Value_117037783(dictMonad_0_box, v_1_box, r_2_box, s_3_box)
+var cache_execRWST__gopurs_runtime_Value_2982438712 gopurs_runtime.Value
+var once_execRWST__gopurs_runtime_Value_2982438712 sync.Once
+func Get_execRWST__gopurs_runtime_Value_2982438712() gopurs_runtime.Value {
+	once_execRWST__gopurs_runtime_Value_2982438712.Do(func() {
+		cache_execRWST__gopurs_runtime_Value_2982438712 = gopurs_runtime.Func4(func(dictMonad_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, r_2_box gopurs_runtime.Value, s_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_execRWST__gopurs_runtime_Value_2982438712(dictMonad_0_box, v_1_box, r_2_box, s_3_box)
 })
 	})
-	return cache_execRWST__gopurs_runtime_Value_117037783
+	return cache_execRWST__gopurs_runtime_Value_2982438712
 }
 
 var cache_evalRWST gopurs_runtime.Value
@@ -182,15 +171,15 @@ return Call_evalRWST(dictMonad_0_box, v_1_box, r_2_box, s_3_box)
 	return cache_evalRWST
 }
 
-var cache_evalRWST__gopurs_runtime_Value_117037783 gopurs_runtime.Value
-var once_evalRWST__gopurs_runtime_Value_117037783 sync.Once
-func Get_evalRWST__gopurs_runtime_Value_117037783() gopurs_runtime.Value {
-	once_evalRWST__gopurs_runtime_Value_117037783.Do(func() {
-		cache_evalRWST__gopurs_runtime_Value_117037783 = gopurs_runtime.Func4(func(dictMonad_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, r_2_box gopurs_runtime.Value, s_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_evalRWST__gopurs_runtime_Value_117037783(dictMonad_0_box, v_1_box, r_2_box, s_3_box)
+var cache_evalRWST__gopurs_runtime_Value_2982438712 gopurs_runtime.Value
+var once_evalRWST__gopurs_runtime_Value_2982438712 sync.Once
+func Get_evalRWST__gopurs_runtime_Value_2982438712() gopurs_runtime.Value {
+	once_evalRWST__gopurs_runtime_Value_2982438712.Do(func() {
+		cache_evalRWST__gopurs_runtime_Value_2982438712 = gopurs_runtime.Func4(func(dictMonad_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, r_2_box gopurs_runtime.Value, s_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_evalRWST__gopurs_runtime_Value_2982438712(dictMonad_0_box, v_1_box, r_2_box, s_3_box)
 })
 	})
-	return cache_evalRWST__gopurs_runtime_Value_117037783
+	return cache_evalRWST__gopurs_runtime_Value_2982438712
 }
 
 var cache_applyRWST gopurs_runtime.Value
@@ -482,19 +471,7 @@ _ = s_3
 return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply2(v_1, r_2, s_3))
 }
 
-func Call_mapRWST__gopurs_runtime_Value_945757723(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, r_2_loop gopurs_runtime.Value, s_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var f_0 gopurs_runtime.Value = f_0_loop
-_ = f_0
-var v_1 gopurs_runtime.Value = v_1_loop
-_ = v_1
-var r_2 gopurs_runtime.Value = r_2_loop
-_ = r_2
-var s_3 gopurs_runtime.Value = s_3_loop
-_ = s_3
-return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply2(v_1, r_2, s_3))
-}
-
-func Call_mapRWST__gopurs_runtime_Value_1683171611(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, r_2_loop gopurs_runtime.Value, s_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_mapRWST__gopurs_runtime_Value_1363965404(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, r_2_loop gopurs_runtime.Value, s_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var v_1 gopurs_runtime.Value = v_1_loop
@@ -536,7 +513,7 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs
 }))
 }
 
-func Call_execRWST__gopurs_runtime_Value_117037783(dictMonad_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, r_2_loop gopurs_runtime.Value, s_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_execRWST__gopurs_runtime_Value_2982438712(dictMonad_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, r_2_loop gopurs_runtime.Value, s_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
 var v_1 gopurs_runtime.Value = v_1_loop
@@ -564,7 +541,7 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs
 }))
 }
 
-func Call_evalRWST__gopurs_runtime_Value_117037783(dictMonad_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, r_2_loop gopurs_runtime.Value, s_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_evalRWST__gopurs_runtime_Value_2982438712(dictMonad_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, r_2_loop gopurs_runtime.Value, s_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
 var v_1 gopurs_runtime.Value = v_1_loop

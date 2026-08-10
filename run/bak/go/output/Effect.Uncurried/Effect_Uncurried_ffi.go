@@ -127,74 +127,74 @@ func RunEffectFn10(f gopurs_runtime.Value, a1 gopurs_runtime.Value, a2 gopurs_ru
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs_MkEffectFn1 = // TAST: (Func [(Func [(TypeVar a)] (ADT ["Effect","Effect"] [(TypeVar r)]))] (ADT ["Effect","Uncurried","EffectFn1"] [(TypeVar a), (TypeVar r)]))
+var _Gopurs_MkEffectFn1 = // TAST: (ForAll [a, r] (Func [(Func [(TypeVar a)] (ADT ["Effect","Effect"] [(TypeVar r)]))] (ADT ["Effect","Uncurried","EffectFn1"] [(TypeVar a), (TypeVar r)])))
 gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := MkEffectFn1(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_MkEffectFn10 = // TAST: (Func [(Func [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h), (TypeVar i), (TypeVar j)] (ADT ["Effect","Effect"] [(TypeVar r)]))] (ADT ["Effect","Uncurried","EffectFn10"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h), (TypeVar i), (TypeVar j), (TypeVar r)]))
+var _Gopurs_MkEffectFn10 = // TAST: (ForAll [a, b, c, d, e, f, g, h, i, j, r] (Func [(Func [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h), (TypeVar i), (TypeVar j)] (ADT ["Effect","Effect"] [(TypeVar r)]))] (ADT ["Effect","Uncurried","EffectFn10"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h), (TypeVar i), (TypeVar j), (TypeVar r)])))
 gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := MkEffectFn10(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_MkEffectFn2 = // TAST: (Func [(Func [(TypeVar a), (TypeVar b)] (ADT ["Effect","Effect"] [(TypeVar r)]))] (ADT ["Effect","Uncurried","EffectFn2"] [(TypeVar a), (TypeVar b), (TypeVar r)]))
+var _Gopurs_MkEffectFn2 = // TAST: (ForAll [a, b, r] (Func [(Func [(TypeVar a), (TypeVar b)] (ADT ["Effect","Effect"] [(TypeVar r)]))] (ADT ["Effect","Uncurried","EffectFn2"] [(TypeVar a), (TypeVar b), (TypeVar r)])))
 gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := MkEffectFn2(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_MkEffectFn3 = // TAST: (Func [(Func [(TypeVar a), (TypeVar b), (TypeVar c)] (ADT ["Effect","Effect"] [(TypeVar r)]))] (ADT ["Effect","Uncurried","EffectFn3"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar r)]))
+var _Gopurs_MkEffectFn3 = // TAST: (ForAll [a, b, c, r] (Func [(Func [(TypeVar a), (TypeVar b), (TypeVar c)] (ADT ["Effect","Effect"] [(TypeVar r)]))] (ADT ["Effect","Uncurried","EffectFn3"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar r)])))
 gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := MkEffectFn3(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_MkEffectFn4 = // TAST: (Func [(Func [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d)] (ADT ["Effect","Effect"] [(TypeVar r)]))] (ADT ["Effect","Uncurried","EffectFn4"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar r)]))
+var _Gopurs_MkEffectFn4 = // TAST: (ForAll [a, b, c, d, r] (Func [(Func [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d)] (ADT ["Effect","Effect"] [(TypeVar r)]))] (ADT ["Effect","Uncurried","EffectFn4"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar r)])))
 gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := MkEffectFn4(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_MkEffectFn5 = // TAST: (Func [(Func [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e)] (ADT ["Effect","Effect"] [(TypeVar r)]))] (ADT ["Effect","Uncurried","EffectFn5"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar r)]))
+var _Gopurs_MkEffectFn5 = // TAST: (ForAll [a, b, c, d, e, r] (Func [(Func [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e)] (ADT ["Effect","Effect"] [(TypeVar r)]))] (ADT ["Effect","Uncurried","EffectFn5"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar r)])))
 gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := MkEffectFn5(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_MkEffectFn6 = // TAST: (Func [(Func [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f)] (ADT ["Effect","Effect"] [(TypeVar r)]))] (ADT ["Effect","Uncurried","EffectFn6"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar r)]))
+var _Gopurs_MkEffectFn6 = // TAST: (ForAll [a, b, c, d, e, f, r] (Func [(Func [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f)] (ADT ["Effect","Effect"] [(TypeVar r)]))] (ADT ["Effect","Uncurried","EffectFn6"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar r)])))
 gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := MkEffectFn6(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_MkEffectFn7 = // TAST: (Func [(Func [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g)] (ADT ["Effect","Effect"] [(TypeVar r)]))] (ADT ["Effect","Uncurried","EffectFn7"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar r)]))
+var _Gopurs_MkEffectFn7 = // TAST: (ForAll [a, b, c, d, e, f, g, r] (Func [(Func [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g)] (ADT ["Effect","Effect"] [(TypeVar r)]))] (ADT ["Effect","Uncurried","EffectFn7"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar r)])))
 gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := MkEffectFn7(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_MkEffectFn8 = // TAST: (Func [(Func [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h)] (ADT ["Effect","Effect"] [(TypeVar r)]))] (ADT ["Effect","Uncurried","EffectFn8"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h), (TypeVar r)]))
+var _Gopurs_MkEffectFn8 = // TAST: (ForAll [a, b, c, d, e, f, g, h, r] (Func [(Func [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h)] (ADT ["Effect","Effect"] [(TypeVar r)]))] (ADT ["Effect","Uncurried","EffectFn8"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h), (TypeVar r)])))
 gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := MkEffectFn8(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_MkEffectFn9 = // TAST: (Func [(Func [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h), (TypeVar i)] (ADT ["Effect","Effect"] [(TypeVar r)]))] (ADT ["Effect","Uncurried","EffectFn9"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h), (TypeVar i), (TypeVar r)]))
+var _Gopurs_MkEffectFn9 = // TAST: (ForAll [a, b, c, d, e, f, g, h, i, r] (Func [(Func [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h), (TypeVar i)] (ADT ["Effect","Effect"] [(TypeVar r)]))] (ADT ["Effect","Uncurried","EffectFn9"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h), (TypeVar i), (TypeVar r)])))
 gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := MkEffectFn9(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_RunEffectFn1 = // TAST: (Func [(ADT ["Effect","Uncurried","EffectFn1"] [(TypeVar a), (TypeVar r)]), (TypeVar a)] (ADT ["Effect","Effect"] [(TypeVar r)]))
+var _Gopurs_RunEffectFn1 = // TAST: (ForAll [a, r] (Func [(ADT ["Effect","Uncurried","EffectFn1"] [(TypeVar a), (TypeVar r)]), (TypeVar a)] (ADT ["Effect","Effect"] [(TypeVar r)])))
 gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_res := RunEffectFn1(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_RunEffectFn10 = // TAST: (Func [(ADT ["Effect","Uncurried","EffectFn10"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h), (TypeVar i), (TypeVar j), (TypeVar r)]), (TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h), (TypeVar i), (TypeVar j)] (ADT ["Effect","Effect"] [(TypeVar r)]))
+var _Gopurs_RunEffectFn10 = // TAST: (ForAll [a, b, c, d, e, f, g, h, i, j, r] (Func [(ADT ["Effect","Uncurried","EffectFn10"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h), (TypeVar i), (TypeVar j), (TypeVar r)]), (TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h), (TypeVar i), (TypeVar j)] (ADT ["Effect","Effect"] [(TypeVar r)])))
 gopurs_runtime.Func11(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value, arg5 gopurs_runtime.Value, arg6 gopurs_runtime.Value, arg7 gopurs_runtime.Value, arg8 gopurs_runtime.Value, arg9 gopurs_runtime.Value, arg10 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
@@ -210,7 +210,7 @@ gopurs_runtime.Func11(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value,
 	go_res := RunEffectFn10(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4, go_arg5, go_arg6, go_arg7, go_arg8, go_arg9, go_arg10)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_RunEffectFn2 = // TAST: (Func [(ADT ["Effect","Uncurried","EffectFn2"] [(TypeVar a), (TypeVar b), (TypeVar r)]), (TypeVar a), (TypeVar b)] (ADT ["Effect","Effect"] [(TypeVar r)]))
+var _Gopurs_RunEffectFn2 = // TAST: (ForAll [a, b, r] (Func [(ADT ["Effect","Uncurried","EffectFn2"] [(TypeVar a), (TypeVar b), (TypeVar r)]), (TypeVar a), (TypeVar b)] (ADT ["Effect","Effect"] [(TypeVar r)])))
 gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
@@ -218,7 +218,7 @@ gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := RunEffectFn2(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_RunEffectFn3 = // TAST: (Func [(ADT ["Effect","Uncurried","EffectFn3"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar r)]), (TypeVar a), (TypeVar b), (TypeVar c)] (ADT ["Effect","Effect"] [(TypeVar r)]))
+var _Gopurs_RunEffectFn3 = // TAST: (ForAll [a, b, c, r] (Func [(ADT ["Effect","Uncurried","EffectFn3"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar r)]), (TypeVar a), (TypeVar b), (TypeVar c)] (ADT ["Effect","Effect"] [(TypeVar r)])))
 gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
@@ -227,7 +227,7 @@ gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := RunEffectFn3(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_RunEffectFn4 = // TAST: (Func [(ADT ["Effect","Uncurried","EffectFn4"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar r)]), (TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d)] (ADT ["Effect","Effect"] [(TypeVar r)]))
+var _Gopurs_RunEffectFn4 = // TAST: (ForAll [a, b, c, d, r] (Func [(ADT ["Effect","Uncurried","EffectFn4"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar r)]), (TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d)] (ADT ["Effect","Effect"] [(TypeVar r)])))
 gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
@@ -237,7 +237,7 @@ gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := RunEffectFn4(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_RunEffectFn5 = // TAST: (Func [(ADT ["Effect","Uncurried","EffectFn5"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar r)]), (TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e)] (ADT ["Effect","Effect"] [(TypeVar r)]))
+var _Gopurs_RunEffectFn5 = // TAST: (ForAll [a, b, c, d, e, r] (Func [(ADT ["Effect","Uncurried","EffectFn5"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar r)]), (TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e)] (ADT ["Effect","Effect"] [(TypeVar r)])))
 gopurs_runtime.Func6(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value, arg5 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
@@ -248,7 +248,7 @@ gopurs_runtime.Func6(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := RunEffectFn5(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4, go_arg5)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_RunEffectFn6 = // TAST: (Func [(ADT ["Effect","Uncurried","EffectFn6"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar r)]), (TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f)] (ADT ["Effect","Effect"] [(TypeVar r)]))
+var _Gopurs_RunEffectFn6 = // TAST: (ForAll [a, b, c, d, e, f, r] (Func [(ADT ["Effect","Uncurried","EffectFn6"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar r)]), (TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f)] (ADT ["Effect","Effect"] [(TypeVar r)])))
 gopurs_runtime.Func7(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value, arg5 gopurs_runtime.Value, arg6 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
@@ -260,7 +260,7 @@ gopurs_runtime.Func7(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := RunEffectFn6(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4, go_arg5, go_arg6)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_RunEffectFn7 = // TAST: (Func [(ADT ["Effect","Uncurried","EffectFn7"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar r)]), (TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g)] (ADT ["Effect","Effect"] [(TypeVar r)]))
+var _Gopurs_RunEffectFn7 = // TAST: (ForAll [a, b, c, d, e, f, g, r] (Func [(ADT ["Effect","Uncurried","EffectFn7"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar r)]), (TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g)] (ADT ["Effect","Effect"] [(TypeVar r)])))
 gopurs_runtime.Func8(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value, arg5 gopurs_runtime.Value, arg6 gopurs_runtime.Value, arg7 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
@@ -273,7 +273,7 @@ gopurs_runtime.Func8(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := RunEffectFn7(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4, go_arg5, go_arg6, go_arg7)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_RunEffectFn8 = // TAST: (Func [(ADT ["Effect","Uncurried","EffectFn8"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h), (TypeVar r)]), (TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h)] (ADT ["Effect","Effect"] [(TypeVar r)]))
+var _Gopurs_RunEffectFn8 = // TAST: (ForAll [a, b, c, d, e, f, g, h, r] (Func [(ADT ["Effect","Uncurried","EffectFn8"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h), (TypeVar r)]), (TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h)] (ADT ["Effect","Effect"] [(TypeVar r)])))
 gopurs_runtime.Func9(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value, arg5 gopurs_runtime.Value, arg6 gopurs_runtime.Value, arg7 gopurs_runtime.Value, arg8 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
@@ -287,7 +287,7 @@ gopurs_runtime.Func9(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := RunEffectFn8(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4, go_arg5, go_arg6, go_arg7, go_arg8)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_RunEffectFn9 = // TAST: (Func [(ADT ["Effect","Uncurried","EffectFn9"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h), (TypeVar i), (TypeVar r)]), (TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h), (TypeVar i)] (ADT ["Effect","Effect"] [(TypeVar r)]))
+var _Gopurs_RunEffectFn9 = // TAST: (ForAll [a, b, c, d, e, f, g, h, i, r] (Func [(ADT ["Effect","Uncurried","EffectFn9"] [(TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h), (TypeVar i), (TypeVar r)]), (TypeVar a), (TypeVar b), (TypeVar c), (TypeVar d), (TypeVar e), (TypeVar f), (TypeVar g), (TypeVar h), (TypeVar i)] (ADT ["Effect","Effect"] [(TypeVar r)])))
 gopurs_runtime.Func10(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value, arg5 gopurs_runtime.Value, arg6 gopurs_runtime.Value, arg7 gopurs_runtime.Value, arg8 gopurs_runtime.Value, arg9 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1

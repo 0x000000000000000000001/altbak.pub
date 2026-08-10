@@ -92,6 +92,15 @@ func Get_functorZipList() gopurs_runtime.Value {
 	return cache_functorZipList
 }
 
+var cache_functorZipList__gopurs_runtime_Value_3996674161 gopurs_runtime.Value
+var once_functorZipList__gopurs_runtime_Value_3996674161 sync.Once
+func Get_functorZipList__gopurs_runtime_Value_3996674161() gopurs_runtime.Value {
+	once_functorZipList__gopurs_runtime_Value_3996674161.Do(func() {
+		cache_functorZipList__gopurs_runtime_Value_3996674161 = pkg_Data_List_Lazy_Types.Get_functorList()
+	})
+	return cache_functorZipList__gopurs_runtime_Value_3996674161
+}
+
 var cache_foldableZipList gopurs_runtime.Value
 var once_foldableZipList sync.Once
 func Get_foldableZipList() gopurs_runtime.Value {
@@ -127,6 +136,21 @@ return gopurs_runtime.Apply3(pkg_Data_List_Lazy.Get_zipWith(), pkg_Data_Function
 	return cache_applyZipList
 }
 
+var cache_applyZipList__gopurs_runtime_Value_1358886895 gopurs_runtime.Value
+var once_applyZipList__gopurs_runtime_Value_1358886895 sync.Once
+func Get_applyZipList__gopurs_runtime_Value_1358886895() gopurs_runtime.Value {
+	once_applyZipList__gopurs_runtime_Value_1358886895.Do(func() {
+		cache_applyZipList__gopurs_runtime_Value_1358886895 = gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_List_Lazy_Types.Get_functorList()
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(pkg_Data_List_Lazy.Get_zipWith(), pkg_Data_Function.Get_apply(), v_0, v1_1)
+})
+}))
+	})
+	return cache_applyZipList__gopurs_runtime_Value_1358886895
+}
+
 var cache_zipListIsNotBind gopurs_runtime.Value
 var once_zipListIsNotBind sync.Once
 func Get_zipListIsNotBind() gopurs_runtime.Value {
@@ -158,6 +182,26 @@ return go__go_1_0_0
 	return cache_applicativeZipList
 }
 
+var cache_applicativeZipList__gopurs_runtime_Value_37190504 gopurs_runtime.Value
+var once_applicativeZipList__gopurs_runtime_Value_37190504 sync.Once
+func Get_applicativeZipList__gopurs_runtime_Value_37190504() gopurs_runtime.Value {
+	once_applicativeZipList__gopurs_runtime_Value_37190504.Do(func() {
+		cache_applicativeZipList__gopurs_runtime_Value_37190504 = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_applyZipList()
+}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+var go__go_1_0_1 gopurs_runtime.Value
+_ = go__go_1_0_1
+go__go_1_0_1 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_List_Lazy_Types.Get_lazyList(), "defer"), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(pkg_Data_Lazy.Get_go__defer(), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer((*pkg_Data_List_Lazy_Types.Constructor_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&pkg_Data_List_Lazy_Types.Constructor_Cons[gopurs_runtime.Value]{1, x_0, go__go_1_0_1})}.UnsafePtr))}
+}))
+}))
+return go__go_1_0_1
+}))
+	})
+	return cache_applicativeZipList__gopurs_runtime_Value_37190504
+}
+
 var cache_altZipList gopurs_runtime.Value
 var once_altZipList sync.Once
 func Get_altZipList() gopurs_runtime.Value {
@@ -173,6 +217,21 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_List_Lazy_Types.G
 	return cache_altZipList
 }
 
+var cache_altZipList__gopurs_runtime_Value_3296309911 gopurs_runtime.Value
+var once_altZipList__gopurs_runtime_Value_3296309911 sync.Once
+func Get_altZipList__gopurs_runtime_Value_3296309911() gopurs_runtime.Value {
+	once_altZipList__gopurs_runtime_Value_3296309911.Do(func() {
+		cache_altZipList__gopurs_runtime_Value_3296309911 = gopurs_runtime.RecordDict2("Functor0", "alt", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_List_Lazy_Types.Get_functorList()
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_List_Lazy_Types.Get_semigroupList(), "append"), v_0, gopurs_runtime.Apply2(pkg_Data_List_Lazy.Get_drop(), gopurs_runtime.Apply(pkg_Data_List_Lazy.Get_length(), v_0), v1_1))
+})
+}))
+	})
+	return cache_altZipList__gopurs_runtime_Value_3296309911
+}
+
 var cache_plusZipList gopurs_runtime.Value
 var once_plusZipList sync.Once
 func Get_plusZipList() gopurs_runtime.Value {
@@ -182,6 +241,17 @@ return Get_altZipList()
 }), gopurs_runtime.RecordGet(pkg_Data_List_Lazy_Types.Get_monoidList(), "mempty"))
 	})
 	return cache_plusZipList
+}
+
+var cache_plusZipList__gopurs_runtime_Value_3460472018 gopurs_runtime.Value
+var once_plusZipList__gopurs_runtime_Value_3460472018 sync.Once
+func Get_plusZipList__gopurs_runtime_Value_3460472018() gopurs_runtime.Value {
+	once_plusZipList__gopurs_runtime_Value_3460472018.Do(func() {
+		cache_plusZipList__gopurs_runtime_Value_3460472018 = gopurs_runtime.RecordDict2("Alt0", "empty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_altZipList()
+}), gopurs_runtime.RecordGet(pkg_Data_List_Lazy_Types.Get_monoidList(), "mempty"))
+	})
+	return cache_plusZipList__gopurs_runtime_Value_3460472018
 }
 
 var cache_alternativeZipList gopurs_runtime.Value

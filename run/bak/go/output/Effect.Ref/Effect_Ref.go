@@ -14,15 +14,6 @@ func Get_new() gopurs_runtime.Value {
 	return cache_new
 }
 
-var cache_new__gopurs_runtime_Value_1826200385 gopurs_runtime.Value
-var once_new__gopurs_runtime_Value_1826200385 sync.Once
-func Get_new__gopurs_runtime_Value_1826200385() gopurs_runtime.Value {
-	once_new__gopurs_runtime_Value_1826200385.Do(func() {
-		cache_new__gopurs_runtime_Value_1826200385 = Get__new()
-	})
-	return cache_new__gopurs_runtime_Value_1826200385
-}
-
 var cache_new__gopurs_runtime_Value_2045356851 gopurs_runtime.Value
 var once_new__gopurs_runtime_Value_2045356851 sync.Once
 func Get_new__gopurs_runtime_Value_2045356851() gopurs_runtime.Value {
@@ -32,13 +23,13 @@ func Get_new__gopurs_runtime_Value_2045356851() gopurs_runtime.Value {
 	return cache_new__gopurs_runtime_Value_2045356851
 }
 
-var cache_new__gopurs_runtime_Value_1592582163 gopurs_runtime.Value
-var once_new__gopurs_runtime_Value_1592582163 sync.Once
-func Get_new__gopurs_runtime_Value_1592582163() gopurs_runtime.Value {
-	once_new__gopurs_runtime_Value_1592582163.Do(func() {
-		cache_new__gopurs_runtime_Value_1592582163 = Get__new()
+var cache_new__gopurs_runtime_Value_1693026106 gopurs_runtime.Value
+var once_new__gopurs_runtime_Value_1693026106 sync.Once
+func Get_new__gopurs_runtime_Value_1693026106() gopurs_runtime.Value {
+	once_new__gopurs_runtime_Value_1693026106.Do(func() {
+		cache_new__gopurs_runtime_Value_1693026106 = Get__new()
 	})
-	return cache_new__gopurs_runtime_Value_1592582163
+	return cache_new__gopurs_runtime_Value_1693026106
 }
 
 var cache_modify_prime gopurs_runtime.Value
@@ -50,13 +41,13 @@ func Get_modify_prime() gopurs_runtime.Value {
 	return cache_modify_prime
 }
 
-var cache_modify_prime__gopurs_runtime_Value_3515874290 gopurs_runtime.Value
-var once_modify_prime__gopurs_runtime_Value_3515874290 sync.Once
-func Get_modify_prime__gopurs_runtime_Value_3515874290() gopurs_runtime.Value {
-	once_modify_prime__gopurs_runtime_Value_3515874290.Do(func() {
-		cache_modify_prime__gopurs_runtime_Value_3515874290 = Get_modifyImpl()
+var cache_modify_prime__gopurs_runtime_Value_3296699741 gopurs_runtime.Value
+var once_modify_prime__gopurs_runtime_Value_3296699741 sync.Once
+func Get_modify_prime__gopurs_runtime_Value_3296699741() gopurs_runtime.Value {
+	once_modify_prime__gopurs_runtime_Value_3296699741.Do(func() {
+		cache_modify_prime__gopurs_runtime_Value_3296699741 = Get_modifyImpl()
 	})
-	return cache_modify_prime__gopurs_runtime_Value_3515874290
+	return cache_modify_prime__gopurs_runtime_Value_3296699741
 }
 
 var cache_modify gopurs_runtime.Value

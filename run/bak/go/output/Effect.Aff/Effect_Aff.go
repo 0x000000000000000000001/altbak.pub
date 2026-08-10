@@ -82,15 +82,15 @@ return Call_makeFiber(aff_0_box)
 	return cache_makeFiber
 }
 
-var cache_makeFiber__gopurs_runtime_Value_2708976243 gopurs_runtime.Value
-var once_makeFiber__gopurs_runtime_Value_2708976243 sync.Once
-func Get_makeFiber__gopurs_runtime_Value_2708976243() gopurs_runtime.Value {
-	once_makeFiber__gopurs_runtime_Value_2708976243.Do(func() {
-		cache_makeFiber__gopurs_runtime_Value_2708976243 = gopurs_runtime.Func(func(aff_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_makeFiber__gopurs_runtime_Value_2708976243(aff_0_box)
+var cache_makeFiber__gopurs_runtime_Value_4185835653 gopurs_runtime.Value
+var once_makeFiber__gopurs_runtime_Value_4185835653 sync.Once
+func Get_makeFiber__gopurs_runtime_Value_4185835653() gopurs_runtime.Value {
+	once_makeFiber__gopurs_runtime_Value_4185835653.Do(func() {
+		cache_makeFiber__gopurs_runtime_Value_4185835653 = gopurs_runtime.Func(func(aff_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_makeFiber__gopurs_runtime_Value_4185835653(aff_0_box)
 })
 	})
-	return cache_makeFiber__gopurs_runtime_Value_2708976243
+	return cache_makeFiber__gopurs_runtime_Value_4185835653
 }
 
 var cache_makeAff gopurs_runtime.Value
@@ -104,15 +104,15 @@ return Call_makeAff(build_0_box)
 	return cache_makeAff
 }
 
-var cache_makeAff__gopurs_runtime_Value_890568315 gopurs_runtime.Value
-var once_makeAff__gopurs_runtime_Value_890568315 sync.Once
-func Get_makeAff__gopurs_runtime_Value_890568315() gopurs_runtime.Value {
-	once_makeAff__gopurs_runtime_Value_890568315.Do(func() {
-		cache_makeAff__gopurs_runtime_Value_890568315 = gopurs_runtime.Func(func(build_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_makeAff__gopurs_runtime_Value_890568315(build_0_box)
+var cache_makeAff__gopurs_runtime_Value_3958971776 gopurs_runtime.Value
+var once_makeAff__gopurs_runtime_Value_3958971776 sync.Once
+func Get_makeAff__gopurs_runtime_Value_3958971776() gopurs_runtime.Value {
+	once_makeAff__gopurs_runtime_Value_3958971776.Do(func() {
+		cache_makeAff__gopurs_runtime_Value_3958971776 = gopurs_runtime.Func(func(build_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_makeAff__gopurs_runtime_Value_3958971776(build_0_box)
 })
 	})
-	return cache_makeAff__gopurs_runtime_Value_890568315
+	return cache_makeAff__gopurs_runtime_Value_3958971776
 }
 
 var cache_launchSuspendedAff gopurs_runtime.Value
@@ -126,15 +126,15 @@ return Call_launchSuspendedAff(aff_0_box)
 	return cache_launchSuspendedAff
 }
 
-var cache_launchSuspendedAff__gopurs_runtime_Value_596265243 gopurs_runtime.Value
-var once_launchSuspendedAff__gopurs_runtime_Value_596265243 sync.Once
-func Get_launchSuspendedAff__gopurs_runtime_Value_596265243() gopurs_runtime.Value {
-	once_launchSuspendedAff__gopurs_runtime_Value_596265243.Do(func() {
-		cache_launchSuspendedAff__gopurs_runtime_Value_596265243 = gopurs_runtime.Func(func(aff_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_launchSuspendedAff__gopurs_runtime_Value_596265243(aff_0_box)
+var cache_launchSuspendedAff__gopurs_runtime_Value_227652174 gopurs_runtime.Value
+var once_launchSuspendedAff__gopurs_runtime_Value_227652174 sync.Once
+func Get_launchSuspendedAff__gopurs_runtime_Value_227652174() gopurs_runtime.Value {
+	once_launchSuspendedAff__gopurs_runtime_Value_227652174.Do(func() {
+		cache_launchSuspendedAff__gopurs_runtime_Value_227652174 = gopurs_runtime.Func(func(aff_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_launchSuspendedAff__gopurs_runtime_Value_227652174(aff_0_box)
 })
 	})
-	return cache_launchSuspendedAff__gopurs_runtime_Value_596265243
+	return cache_launchSuspendedAff__gopurs_runtime_Value_227652174
 }
 
 var cache_launchAff gopurs_runtime.Value
@@ -148,15 +148,15 @@ return Call_launchAff(aff_0_box)
 	return cache_launchAff
 }
 
-var cache_launchAff__gopurs_runtime_Value_596265243 gopurs_runtime.Value
-var once_launchAff__gopurs_runtime_Value_596265243 sync.Once
-func Get_launchAff__gopurs_runtime_Value_596265243() gopurs_runtime.Value {
-	once_launchAff__gopurs_runtime_Value_596265243.Do(func() {
-		cache_launchAff__gopurs_runtime_Value_596265243 = gopurs_runtime.Func(func(aff_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_launchAff__gopurs_runtime_Value_596265243(aff_0_box)
+var cache_launchAff__gopurs_runtime_Value_227652174 gopurs_runtime.Value
+var once_launchAff__gopurs_runtime_Value_227652174 sync.Once
+func Get_launchAff__gopurs_runtime_Value_227652174() gopurs_runtime.Value {
+	once_launchAff__gopurs_runtime_Value_227652174.Do(func() {
+		cache_launchAff__gopurs_runtime_Value_227652174 = gopurs_runtime.Func(func(aff_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_launchAff__gopurs_runtime_Value_227652174(aff_0_box)
 })
 	})
-	return cache_launchAff__gopurs_runtime_Value_596265243
+	return cache_launchAff__gopurs_runtime_Value_227652174
 }
 
 var cache_launchAff_ gopurs_runtime.Value
@@ -179,6 +179,15 @@ func Get_functorParAff() gopurs_runtime.Value {
 	return cache_functorParAff
 }
 
+var cache_functorParAff__gopurs_runtime_Value_4103318257 gopurs_runtime.Value
+var once_functorParAff__gopurs_runtime_Value_4103318257 sync.Once
+func Get_functorParAff__gopurs_runtime_Value_4103318257() gopurs_runtime.Value {
+	once_functorParAff__gopurs_runtime_Value_4103318257.Do(func() {
+		cache_functorParAff__gopurs_runtime_Value_4103318257 = gopurs_runtime.RecordDict1("map", Get__parAffMap())
+	})
+	return cache_functorParAff__gopurs_runtime_Value_4103318257
+}
+
 var cache_functorAff gopurs_runtime.Value
 var once_functorAff sync.Once
 func Get_functorAff() gopurs_runtime.Value {
@@ -186,6 +195,15 @@ func Get_functorAff() gopurs_runtime.Value {
 		cache_functorAff = gopurs_runtime.RecordDict1("map", Get__map())
 	})
 	return cache_functorAff
+}
+
+var cache_functorAff__gopurs_runtime_Value_2378915857 gopurs_runtime.Value
+var once_functorAff__gopurs_runtime_Value_2378915857 sync.Once
+func Get_functorAff__gopurs_runtime_Value_2378915857() gopurs_runtime.Value {
+	once_functorAff__gopurs_runtime_Value_2378915857.Do(func() {
+		cache_functorAff__gopurs_runtime_Value_2378915857 = gopurs_runtime.RecordDict1("map", Get__map())
+	})
+	return cache_functorAff__gopurs_runtime_Value_2378915857
 }
 
 var cache_delay gopurs_runtime.Value
@@ -210,15 +228,15 @@ return Call_bracket(acquire_0_box, completed_1_box)
 	return cache_bracket
 }
 
-var cache_bracket__gopurs_runtime_Value_3112645395 gopurs_runtime.Value
-var once_bracket__gopurs_runtime_Value_3112645395 sync.Once
-func Get_bracket__gopurs_runtime_Value_3112645395() gopurs_runtime.Value {
-	once_bracket__gopurs_runtime_Value_3112645395.Do(func() {
-		cache_bracket__gopurs_runtime_Value_3112645395 = gopurs_runtime.Func2(func(acquire_0_box gopurs_runtime.Value, completed_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_bracket__gopurs_runtime_Value_3112645395(acquire_0_box, completed_1_box)
+var cache_bracket__gopurs_runtime_Value_967388557 gopurs_runtime.Value
+var once_bracket__gopurs_runtime_Value_967388557 sync.Once
+func Get_bracket__gopurs_runtime_Value_967388557() gopurs_runtime.Value {
+	once_bracket__gopurs_runtime_Value_967388557.Do(func() {
+		cache_bracket__gopurs_runtime_Value_967388557 = gopurs_runtime.Func2(func(acquire_0_box gopurs_runtime.Value, completed_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bracket__gopurs_runtime_Value_967388557(acquire_0_box, completed_1_box)
 })
 	})
-	return cache_bracket__gopurs_runtime_Value_3112645395
+	return cache_bracket__gopurs_runtime_Value_967388557
 }
 
 var cache_applyParAff gopurs_runtime.Value
@@ -230,6 +248,17 @@ return Get_functorParAff()
 }), Get__parAffApply())
 	})
 	return cache_applyParAff
+}
+
+var cache_applyParAff__gopurs_runtime_Value_3038657279 gopurs_runtime.Value
+var once_applyParAff__gopurs_runtime_Value_3038657279 sync.Once
+func Get_applyParAff__gopurs_runtime_Value_3038657279() gopurs_runtime.Value {
+	once_applyParAff__gopurs_runtime_Value_3038657279.Do(func() {
+		cache_applyParAff__gopurs_runtime_Value_3038657279 = gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_functorParAff()
+}), Get__parAffApply())
+	})
+	return cache_applyParAff__gopurs_runtime_Value_3038657279
 }
 
 var cache_lift2 gopurs_runtime.Value
@@ -267,6 +296,19 @@ return Get_bindAff()
 	return cache_monadAff
 }
 
+var cache_monadAff__gopurs_runtime_Value_2914113427 gopurs_runtime.Value
+var once_monadAff__gopurs_runtime_Value_2914113427 sync.Once
+func Get_monadAff__gopurs_runtime_Value_2914113427() gopurs_runtime.Value {
+	once_monadAff__gopurs_runtime_Value_2914113427.Do(func() {
+		cache_monadAff__gopurs_runtime_Value_2914113427 = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_applicativeAff()
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_bindAff()
+}))
+	})
+	return cache_monadAff__gopurs_runtime_Value_2914113427
+}
+
 var cache_bindAff gopurs_runtime.Value
 var once_bindAff sync.Once
 func Get_bindAff() gopurs_runtime.Value {
@@ -276,6 +318,17 @@ return Get_applyAff()
 }), Get__bind())
 	})
 	return cache_bindAff
+}
+
+var cache_bindAff__gopurs_runtime_Value_1025486311 gopurs_runtime.Value
+var once_bindAff__gopurs_runtime_Value_1025486311 sync.Once
+func Get_bindAff__gopurs_runtime_Value_1025486311() gopurs_runtime.Value {
+	once_bindAff__gopurs_runtime_Value_1025486311.Do(func() {
+		cache_bindAff__gopurs_runtime_Value_1025486311 = gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_applyAff()
+}), Get__bind())
+	})
+	return cache_bindAff__gopurs_runtime_Value_1025486311
 }
 
 var cache_applyAff gopurs_runtime.Value
@@ -301,6 +354,29 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs
 	return cache_applyAff
 }
 
+var cache_applyAff__gopurs_runtime_Value_2964533948 gopurs_runtime.Value
+var once_applyAff__gopurs_runtime_Value_2964533948 sync.Once
+func Get_applyAff__gopurs_runtime_Value_2964533948() gopurs_runtime.Value {
+	once_applyAff__gopurs_runtime_Value_2964533948.Do(func() {
+		cache_applyAff__gopurs_runtime_Value_2964533948 = func() gopurs_runtime.Value {
+__local_var_0_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadAff(), "Bind1"), gopurs_runtime.Value{})
+_ = __local_var_0_0
+return gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_functorAff()
+}), gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_0_0, "bind"), f_1, gopurs_runtime.Func(func(f_prime_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_0_0, "bind"), a_2, gopurs_runtime.Func(func(a_prime_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadAff(), "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Apply(f_prime_3, a_prime_4))
+}))
+}))
+})
+}))
+}()
+	})
+	return cache_applyAff__gopurs_runtime_Value_2964533948
+}
+
 var cache_applicativeAff gopurs_runtime.Value
 var once_applicativeAff sync.Once
 func Get_applicativeAff() gopurs_runtime.Value {
@@ -310,6 +386,17 @@ return Get_applyAff()
 }), Get__pure())
 	})
 	return cache_applicativeAff
+}
+
+var cache_applicativeAff__gopurs_runtime_Value_156155496 gopurs_runtime.Value
+var once_applicativeAff__gopurs_runtime_Value_156155496 sync.Once
+func Get_applicativeAff__gopurs_runtime_Value_156155496() gopurs_runtime.Value {
+	once_applicativeAff__gopurs_runtime_Value_156155496.Do(func() {
+		cache_applicativeAff__gopurs_runtime_Value_156155496 = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_applyAff()
+}), Get__pure())
+	})
+	return cache_applicativeAff__gopurs_runtime_Value_156155496
 }
 
 var cache_lift21 gopurs_runtime.Value
@@ -402,6 +489,19 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_parallelAff(), "paralle
 	return cache_applicativeParAff
 }
 
+var cache_applicativeParAff__gopurs_runtime_Value_2496133224 gopurs_runtime.Value
+var once_applicativeParAff__gopurs_runtime_Value_2496133224 sync.Once
+func Get_applicativeParAff__gopurs_runtime_Value_2496133224() gopurs_runtime.Value {
+	once_applicativeParAff__gopurs_runtime_Value_2496133224.Do(func() {
+		cache_applicativeParAff__gopurs_runtime_Value_2496133224 = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_applyParAff()
+}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_parallelAff(), "parallel"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_applicativeAff(), "pure"), x_0))
+}))
+	})
+	return cache_applicativeParAff__gopurs_runtime_Value_2496133224
+}
+
 var cache_parSequence_ gopurs_runtime.Value
 var once_parSequence_ sync.Once
 func Get_parSequence_() gopurs_runtime.Value {
@@ -459,6 +559,17 @@ return Get_monadAff()
 	return cache_monadEffectAff
 }
 
+var cache_monadEffectAff__gopurs_runtime_Value_1856968838 gopurs_runtime.Value
+var once_monadEffectAff__gopurs_runtime_Value_1856968838 sync.Once
+func Get_monadEffectAff__gopurs_runtime_Value_1856968838() gopurs_runtime.Value {
+	once_monadEffectAff__gopurs_runtime_Value_1856968838.Do(func() {
+		cache_monadEffectAff__gopurs_runtime_Value_1856968838 = gopurs_runtime.RecordDict2("Monad0", "liftEffect", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_monadAff()
+}), Get__liftEffect())
+	})
+	return cache_monadEffectAff__gopurs_runtime_Value_1856968838
+}
+
 var cache_effectCanceler gopurs_runtime.Value
 var once_effectCanceler sync.Once
 func Get_effectCanceler() gopurs_runtime.Value {
@@ -481,15 +592,26 @@ return Call_joinFiber(v_0_box)
 	return cache_joinFiber
 }
 
-var cache_joinFiber__gopurs_runtime_Value_792888957 gopurs_runtime.Value
-var once_joinFiber__gopurs_runtime_Value_792888957 sync.Once
-func Get_joinFiber__gopurs_runtime_Value_792888957() gopurs_runtime.Value {
-	once_joinFiber__gopurs_runtime_Value_792888957.Do(func() {
-		cache_joinFiber__gopurs_runtime_Value_792888957 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_joinFiber__gopurs_runtime_Value_792888957(v_0_box)
+var cache_joinFiber__gopurs_runtime_Value_1248077776 gopurs_runtime.Value
+var once_joinFiber__gopurs_runtime_Value_1248077776 sync.Once
+func Get_joinFiber__gopurs_runtime_Value_1248077776() gopurs_runtime.Value {
+	once_joinFiber__gopurs_runtime_Value_1248077776.Do(func() {
+		cache_joinFiber__gopurs_runtime_Value_1248077776 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_joinFiber__gopurs_runtime_Value_1248077776(v_0_box)
 })
 	})
-	return cache_joinFiber__gopurs_runtime_Value_792888957
+	return cache_joinFiber__gopurs_runtime_Value_1248077776
+}
+
+var cache_joinFiber__gopurs_runtime_Value_244086667 gopurs_runtime.Value
+var once_joinFiber__gopurs_runtime_Value_244086667 sync.Once
+func Get_joinFiber__gopurs_runtime_Value_244086667() gopurs_runtime.Value {
+	once_joinFiber__gopurs_runtime_Value_244086667.Do(func() {
+		cache_joinFiber__gopurs_runtime_Value_244086667 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_joinFiber__gopurs_runtime_Value_244086667(v_0_box)
+})
+	})
+	return cache_joinFiber__gopurs_runtime_Value_244086667
 }
 
 var cache_functorFiber gopurs_runtime.Value
@@ -505,6 +627,19 @@ return gopurs_runtime.Apply(pkg_Effect_Unsafe.Get_unsafePerformEffect(), Call_ma
 	return cache_functorFiber
 }
 
+var cache_functorFiber__gopurs_runtime_Value_1732109553 gopurs_runtime.Value
+var once_functorFiber__gopurs_runtime_Value_1732109553 sync.Once
+func Get_functorFiber__gopurs_runtime_Value_1732109553() gopurs_runtime.Value {
+	once_functorFiber__gopurs_runtime_Value_1732109553.Do(func() {
+		cache_functorFiber__gopurs_runtime_Value_1732109553 = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(t_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(pkg_Effect_Unsafe.Get_unsafePerformEffect(), Call_makeFiber(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_functorAff(), "map"), f_0, Call_joinFiber(t_1))))
+})
+}))
+	})
+	return cache_functorFiber__gopurs_runtime_Value_1732109553
+}
+
 var cache_applyFiber gopurs_runtime.Value
 var once_applyFiber sync.Once
 func Get_applyFiber() gopurs_runtime.Value {
@@ -518,6 +653,21 @@ return gopurs_runtime.Apply(pkg_Effect_Unsafe.Get_unsafePerformEffect(), Call_ma
 }))
 	})
 	return cache_applyFiber
+}
+
+var cache_applyFiber__gopurs_runtime_Value_166674623 gopurs_runtime.Value
+var once_applyFiber__gopurs_runtime_Value_166674623 sync.Once
+func Get_applyFiber__gopurs_runtime_Value_166674623() gopurs_runtime.Value {
+	once_applyFiber__gopurs_runtime_Value_166674623.Do(func() {
+		cache_applyFiber__gopurs_runtime_Value_166674623 = gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_functorFiber__gopurs_runtime_Value_1732109553()
+}), gopurs_runtime.Func(func(t1_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(t2_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(pkg_Effect_Unsafe.Get_unsafePerformEffect(), Call_makeFiber(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_applyAff(), "apply"), Call_joinFiber(t1_0), Call_joinFiber(t2_1))))
+})
+}))
+	})
+	return cache_applyFiber__gopurs_runtime_Value_166674623
 }
 
 var cache_applicativeFiber gopurs_runtime.Value
@@ -553,6 +703,28 @@ return Call_killFiber(e_0_box, v_1_box)
 })
 	})
 	return cache_killFiber
+}
+
+var cache_killFiber__gopurs_runtime_Value_2435668841 gopurs_runtime.Value
+var once_killFiber__gopurs_runtime_Value_2435668841 sync.Once
+func Get_killFiber__gopurs_runtime_Value_2435668841() gopurs_runtime.Value {
+	once_killFiber__gopurs_runtime_Value_2435668841.Do(func() {
+		cache_killFiber__gopurs_runtime_Value_2435668841 = gopurs_runtime.Func2(func(e_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_killFiber__gopurs_runtime_Value_2435668841(e_0_box, v_1_box)
+})
+	})
+	return cache_killFiber__gopurs_runtime_Value_2435668841
+}
+
+var cache_killFiber__gopurs_runtime_Value_991707090 gopurs_runtime.Value
+var once_killFiber__gopurs_runtime_Value_991707090 sync.Once
+func Get_killFiber__gopurs_runtime_Value_991707090() gopurs_runtime.Value {
+	once_killFiber__gopurs_runtime_Value_991707090.Do(func() {
+		cache_killFiber__gopurs_runtime_Value_991707090 = gopurs_runtime.Func2(func(e_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_killFiber__gopurs_runtime_Value_991707090(e_0_box, v_1_box)
+})
+	})
+	return cache_killFiber__gopurs_runtime_Value_991707090
 }
 
 var cache_fiberCanceler gopurs_runtime.Value
@@ -612,6 +784,17 @@ return Get_monadAff()
 	return cache_monadThrowAff
 }
 
+var cache_monadThrowAff__gopurs_runtime_Value_799187270 gopurs_runtime.Value
+var once_monadThrowAff__gopurs_runtime_Value_799187270 sync.Once
+func Get_monadThrowAff__gopurs_runtime_Value_799187270() gopurs_runtime.Value {
+	once_monadThrowAff__gopurs_runtime_Value_799187270.Do(func() {
+		cache_monadThrowAff__gopurs_runtime_Value_799187270 = gopurs_runtime.RecordDict2("Monad0", "throwError", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_monadAff()
+}), Get__throwError())
+	})
+	return cache_monadThrowAff__gopurs_runtime_Value_799187270
+}
+
 var cache_monadErrorAff gopurs_runtime.Value
 var once_monadErrorAff sync.Once
 func Get_monadErrorAff() gopurs_runtime.Value {
@@ -661,15 +844,15 @@ return Call_runAff(k_0_box, aff_1_box)
 	return cache_runAff
 }
 
-var cache_runAff__gopurs_runtime_Value_1599081116 gopurs_runtime.Value
-var once_runAff__gopurs_runtime_Value_1599081116 sync.Once
-func Get_runAff__gopurs_runtime_Value_1599081116() gopurs_runtime.Value {
-	once_runAff__gopurs_runtime_Value_1599081116.Do(func() {
-		cache_runAff__gopurs_runtime_Value_1599081116 = gopurs_runtime.Func2(func(k_0_box gopurs_runtime.Value, aff_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_runAff__gopurs_runtime_Value_1599081116(k_0_box, aff_1_box)
+var cache_runAff__gopurs_runtime_Value_2713492946 gopurs_runtime.Value
+var once_runAff__gopurs_runtime_Value_2713492946 sync.Once
+func Get_runAff__gopurs_runtime_Value_2713492946() gopurs_runtime.Value {
+	once_runAff__gopurs_runtime_Value_2713492946.Do(func() {
+		cache_runAff__gopurs_runtime_Value_2713492946 = gopurs_runtime.Func2(func(k_0_box gopurs_runtime.Value, aff_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_runAff__gopurs_runtime_Value_2713492946(k_0_box, aff_1_box)
 })
 	})
-	return cache_runAff__gopurs_runtime_Value_1599081116
+	return cache_runAff__gopurs_runtime_Value_2713492946
 }
 
 var cache_runAff_ gopurs_runtime.Value
@@ -811,6 +994,17 @@ return Get_functorParAff()
 	return cache_altParAff
 }
 
+var cache_altParAff__gopurs_runtime_Value_2031255559 gopurs_runtime.Value
+var once_altParAff__gopurs_runtime_Value_2031255559 sync.Once
+func Get_altParAff__gopurs_runtime_Value_2031255559() gopurs_runtime.Value {
+	once_altParAff__gopurs_runtime_Value_2031255559.Do(func() {
+		cache_altParAff__gopurs_runtime_Value_2031255559 = gopurs_runtime.RecordDict2("Functor0", "alt", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_functorParAff()
+}), Get__parAffAlt())
+	})
+	return cache_altParAff__gopurs_runtime_Value_2031255559
+}
+
 var cache_altAff gopurs_runtime.Value
 var once_altAff sync.Once
 func Get_altAff() gopurs_runtime.Value {
@@ -826,6 +1020,23 @@ return a2_1
 }))
 	})
 	return cache_altAff
+}
+
+var cache_altAff__gopurs_runtime_Value_154760964 gopurs_runtime.Value
+var once_altAff__gopurs_runtime_Value_154760964 sync.Once
+func Get_altAff__gopurs_runtime_Value_154760964() gopurs_runtime.Value {
+	once_altAff__gopurs_runtime_Value_154760964.Do(func() {
+		cache_altAff__gopurs_runtime_Value_154760964 = gopurs_runtime.RecordDict2("Functor0", "alt", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_functorAff()
+}), gopurs_runtime.Func(func(a1_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a2_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_monadErrorAff(), "catchError"), a1_0, gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return a2_1
+}))
+})
+}))
+	})
+	return cache_altAff__gopurs_runtime_Value_154760964
 }
 
 var cache_plusAff gopurs_runtime.Value
@@ -848,6 +1059,17 @@ return Get_altParAff()
 }), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_parallelAff(), "parallel"), gopurs_runtime.RecordGet(Get_plusAff(), "empty")))
 	})
 	return cache_plusParAff
+}
+
+var cache_plusParAff__gopurs_runtime_Value_4391090 gopurs_runtime.Value
+var once_plusParAff__gopurs_runtime_Value_4391090 sync.Once
+func Get_plusParAff__gopurs_runtime_Value_4391090() gopurs_runtime.Value {
+	once_plusParAff__gopurs_runtime_Value_4391090.Do(func() {
+		cache_plusParAff__gopurs_runtime_Value_4391090 = gopurs_runtime.RecordDict2("Alt0", "empty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_altParAff()
+}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_parallelAff(), "parallel"), gopurs_runtime.RecordGet(Get_plusAff(), "empty")))
+	})
+	return cache_plusParAff__gopurs_runtime_Value_4391090
 }
 
 var cache_alternativeParAff gopurs_runtime.Value
@@ -877,7 +1099,7 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Effect.Get_applicativeE
 }))
 }
 
-func Call_makeFiber__gopurs_runtime_Value_2708976243(aff_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_makeFiber__gopurs_runtime_Value_4185835653(aff_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var aff_0 gopurs_runtime.Value = aff_0_loop
 _ = aff_0
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind"), gopurs_runtime.Apply(Get__makeFiberNative(), aff_0), gopurs_runtime.Func(func(nf_1 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -918,7 +1140,7 @@ return __t0
 }))
 }
 
-func Call_makeAff__gopurs_runtime_Value_890568315(build_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_makeAff__gopurs_runtime_Value_3958971776(build_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var build_0 gopurs_runtime.Value = build_0_loop
 _ = build_0
 return gopurs_runtime.Apply(Get__makeAffImpl(), gopurs_runtime.Func(func(onError_1 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -957,7 +1179,7 @@ _ = aff_0
 return Call_makeFiber(aff_0)
 }
 
-func Call_launchSuspendedAff__gopurs_runtime_Value_596265243(aff_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_launchSuspendedAff__gopurs_runtime_Value_227652174(aff_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var aff_0 gopurs_runtime.Value = aff_0_loop
 _ = aff_0
 return Call_makeFiber(aff_0)
@@ -973,7 +1195,7 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Effect.Get_applicativeE
 }))
 }
 
-func Call_launchAff__gopurs_runtime_Value_596265243(aff_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_launchAff__gopurs_runtime_Value_227652174(aff_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var aff_0 gopurs_runtime.Value = aff_0_loop
 _ = aff_0
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind"), Call_makeFiber(aff_0), gopurs_runtime.Func(func(fiber_1 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1009,7 +1231,7 @@ return completed_1
 })))
 }
 
-func Call_bracket__gopurs_runtime_Value_3112645395(acquire_0_loop gopurs_runtime.Value, completed_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_bracket__gopurs_runtime_Value_967388557(acquire_0_loop gopurs_runtime.Value, completed_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var acquire_0 gopurs_runtime.Value = acquire_0_loop
 _ = acquire_0
 var completed_1 gopurs_runtime.Value = completed_1_loop
@@ -1147,7 +1369,19 @@ return gopurs_runtime.Apply(k_1, gopurs_runtime.Value{Type: 9, IntVal: 246597359
 }))
 }
 
-func Call_joinFiber__gopurs_runtime_Value_792888957(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_joinFiber__gopurs_runtime_Value_1248077776(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+return Call_makeAff(gopurs_runtime.Func(func(k_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_functorEffect(), "map"), Get_effectCanceler(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(v_0, "join"), gopurs_runtime.Func(func(err_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(k_1, gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{1, err_2})})
+}), gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(k_1, gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{1, a_2})})
+})))
+}))
+}
+
+func Call_joinFiber__gopurs_runtime_Value_244086667(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 return Call_makeAff(gopurs_runtime.Func(func(k_1 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1172,6 +1406,80 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_applicativeAff(), "pure
 }
 
 func Call_killFiber(e_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var e_0 gopurs_runtime.Value = e_0_loop
+_ = e_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_bindAff(), "bind"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadEffectAff(), "liftEffect"), gopurs_runtime.RecordGet(v_1, "isSuspended")), gopurs_runtime.Func(func(suspended_2 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t0 gopurs_runtime.Value
+{
+if (suspended_2.IntVal) != (0) {
+__local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Effect.Get_applicativeEffect(), "pure"), pkg_Data_Unit.Get_unit())
+_ = __local_var_3_1
+__local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Effect.Get_applicativeEffect(), "pure"), pkg_Data_Unit.Get_unit())
+_ = __local_var_3_2
+__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadEffectAff(), "liftEffect"), gopurs_runtime.Apply(Get_void1(), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(v_1, "kill"), e_0, gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return __local_var_3_1
+}), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return __local_var_3_2
+}))))
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = Call_makeAff(gopurs_runtime.Func(func(k_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_functorEffect(), "map"), Get_effectCanceler(), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(v_1, "kill"), e_0, gopurs_runtime.Func(func(err_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(k_3, gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{1, err_4})})
+}), gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(k_3, gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{1, pkg_Data_Unit.Get_unit()})})
+})))
+}))
+}
+end_branch_0:
+return __t0
+}))
+}
+
+func Call_killFiber__gopurs_runtime_Value_2435668841(e_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var e_0 gopurs_runtime.Value = e_0_loop
+_ = e_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_bindAff(), "bind"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadEffectAff(), "liftEffect"), gopurs_runtime.RecordGet(v_1, "isSuspended")), gopurs_runtime.Func(func(suspended_2 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t0 gopurs_runtime.Value
+{
+if (suspended_2.IntVal) != (0) {
+__local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Effect.Get_applicativeEffect(), "pure"), pkg_Data_Unit.Get_unit())
+_ = __local_var_3_1
+__local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Effect.Get_applicativeEffect(), "pure"), pkg_Data_Unit.Get_unit())
+_ = __local_var_3_2
+__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadEffectAff(), "liftEffect"), gopurs_runtime.Apply(Get_void1(), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(v_1, "kill"), e_0, gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return __local_var_3_1
+}), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return __local_var_3_2
+}))))
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = Call_makeAff(gopurs_runtime.Func(func(k_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_functorEffect(), "map"), Get_effectCanceler(), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(v_1, "kill"), e_0, gopurs_runtime.Func(func(err_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(k_3, gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{1, err_4})})
+}), gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(k_3, gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{1, pkg_Data_Unit.Get_unit()})})
+})))
+}))
+}
+end_branch_0:
+return __t0
+}))
+}
+
+func Call_killFiber__gopurs_runtime_Value_991707090(e_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var e_0 gopurs_runtime.Value = e_0_loop
 _ = e_0
 var v_1 gopurs_runtime.Value = v_1_loop
@@ -1266,7 +1574,7 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadEffectAff(), "lift
 })))
 }
 
-func Call_runAff__gopurs_runtime_Value_1599081116(k_0_loop gopurs_runtime.Value, aff_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_runAff__gopurs_runtime_Value_2713492946(k_0_loop gopurs_runtime.Value, aff_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var k_0 gopurs_runtime.Value = k_0_loop
 _ = k_0
 var aff_1 gopurs_runtime.Value = aff_1_loop

@@ -54,7 +54,7 @@ func ShowArrayImpl(f func(interface{}) string, arr []interface{}) string {
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs_ShowArrayImpl = // TAST: (Func [(Func [(TypeVar a)] String), (Array (TypeVar a))] String)
+var _Gopurs_ShowArrayImpl = // TAST: (ForAll [a] (Func [(Func [(TypeVar a)] String), (Array (TypeVar a))] String))
 gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) string {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))

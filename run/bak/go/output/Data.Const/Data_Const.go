@@ -131,6 +131,19 @@ return m_1
 	return cache_functorConst
 }
 
+var cache_functorConst__gopurs_runtime_Value_1992455793 gopurs_runtime.Value
+var once_functorConst__gopurs_runtime_Value_1992455793 sync.Once
+func Get_functorConst__gopurs_runtime_Value_1992455793() gopurs_runtime.Value {
+	once_functorConst__gopurs_runtime_Value_1992455793.Do(func() {
+		cache_functorConst__gopurs_runtime_Value_1992455793 = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(m_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return m_1
+})
+}))
+	})
+	return cache_functorConst__gopurs_runtime_Value_1992455793
+}
+
 var cache_invariantConst gopurs_runtime.Value
 var once_invariantConst sync.Once
 func Get_invariantConst() gopurs_runtime.Value {

@@ -19,15 +19,15 @@ return Call_state(dict_0_box)
 	return cache_state
 }
 
-var cache_state__gopurs_runtime_Value_677310368 gopurs_runtime.Value
-var once_state__gopurs_runtime_Value_677310368 sync.Once
-func Get_state__gopurs_runtime_Value_677310368() gopurs_runtime.Value {
-	once_state__gopurs_runtime_Value_677310368.Do(func() {
-		cache_state__gopurs_runtime_Value_677310368 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_state__gopurs_runtime_Value_677310368(dict_0_box)
+var cache_state__gopurs_runtime_Value_3572857840 gopurs_runtime.Value
+var once_state__gopurs_runtime_Value_3572857840 sync.Once
+func Get_state__gopurs_runtime_Value_3572857840() gopurs_runtime.Value {
+	once_state__gopurs_runtime_Value_3572857840.Do(func() {
+		cache_state__gopurs_runtime_Value_3572857840 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_state__gopurs_runtime_Value_3572857840(dict_0_box)
 })
 	})
-	return cache_state__gopurs_runtime_Value_677310368
+	return cache_state__gopurs_runtime_Value_3572857840
 }
 
 var cache_put gopurs_runtime.Value
@@ -91,7 +91,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "state")
 }
 
-func Call_state__gopurs_runtime_Value_677310368(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_state__gopurs_runtime_Value_3572857840(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "state")

@@ -89,6 +89,21 @@ return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(v_1, x_2))
 	return cache_functorCostar
 }
 
+var cache_functorCostar__gopurs_runtime_Value_735509168 gopurs_runtime.Value
+var once_functorCostar__gopurs_runtime_Value_735509168 sync.Once
+func Get_functorCostar__gopurs_runtime_Value_735509168() gopurs_runtime.Value {
+	once_functorCostar__gopurs_runtime_Value_735509168.Do(func() {
+		cache_functorCostar__gopurs_runtime_Value_735509168 = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(v_1, x_2))
+})
+})
+}))
+	})
+	return cache_functorCostar__gopurs_runtime_Value_735509168
+}
+
 var cache_invariantCostar gopurs_runtime.Value
 var once_invariantCostar sync.Once
 func Get_invariantCostar() gopurs_runtime.Value {
@@ -181,6 +196,23 @@ return gopurs_runtime.Apply2(v_0, a_2, gopurs_runtime.Apply(v1_1, a_2))
 	return cache_applyCostar
 }
 
+var cache_applyCostar__gopurs_runtime_Value_1509714460 gopurs_runtime.Value
+var once_applyCostar__gopurs_runtime_Value_1509714460 sync.Once
+func Get_applyCostar__gopurs_runtime_Value_1509714460() gopurs_runtime.Value {
+	once_applyCostar__gopurs_runtime_Value_1509714460.Do(func() {
+		cache_applyCostar__gopurs_runtime_Value_1509714460 = gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_functorCostar__gopurs_runtime_Value_735509168()
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(v_0, a_2, gopurs_runtime.Apply(v1_1, a_2))
+})
+})
+}))
+	})
+	return cache_applyCostar__gopurs_runtime_Value_1509714460
+}
+
 var cache_bindCostar gopurs_runtime.Value
 var once_bindCostar sync.Once
 func Get_bindCostar() gopurs_runtime.Value {
@@ -198,6 +230,23 @@ return gopurs_runtime.Apply2(f_1, gopurs_runtime.Apply(v_0, x_2), x_2)
 	return cache_bindCostar
 }
 
+var cache_bindCostar__gopurs_runtime_Value_1019009222 gopurs_runtime.Value
+var once_bindCostar__gopurs_runtime_Value_1019009222 sync.Once
+func Get_bindCostar__gopurs_runtime_Value_1019009222() gopurs_runtime.Value {
+	once_bindCostar__gopurs_runtime_Value_1019009222.Do(func() {
+		cache_bindCostar__gopurs_runtime_Value_1019009222 = gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_applyCostar__gopurs_runtime_Value_1509714460()
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(f_1, gopurs_runtime.Apply(v_0, x_2), x_2)
+})
+})
+}))
+	})
+	return cache_bindCostar__gopurs_runtime_Value_1019009222
+}
+
 var cache_applicativeCostar gopurs_runtime.Value
 var once_applicativeCostar sync.Once
 func Get_applicativeCostar() gopurs_runtime.Value {
@@ -211,6 +260,21 @@ return a_0
 }))
 	})
 	return cache_applicativeCostar
+}
+
+var cache_applicativeCostar__gopurs_runtime_Value_2238599400 gopurs_runtime.Value
+var once_applicativeCostar__gopurs_runtime_Value_2238599400 sync.Once
+func Get_applicativeCostar__gopurs_runtime_Value_2238599400() gopurs_runtime.Value {
+	once_applicativeCostar__gopurs_runtime_Value_2238599400.Do(func() {
+		cache_applicativeCostar__gopurs_runtime_Value_2238599400 = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_applyCostar__gopurs_runtime_Value_1509714460()
+}), gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return a_0
+})
+}))
+	})
+	return cache_applicativeCostar__gopurs_runtime_Value_2238599400
 }
 
 var cache_monadCostar gopurs_runtime.Value

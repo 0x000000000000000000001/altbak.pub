@@ -17,26 +17,15 @@ return Call_identity(dict_0_box)
 	return cache_identity
 }
 
-var cache_identity__gopurs_runtime_Value_3761626784 gopurs_runtime.Value
-var once_identity__gopurs_runtime_Value_3761626784 sync.Once
-func Get_identity__gopurs_runtime_Value_3761626784() gopurs_runtime.Value {
-	once_identity__gopurs_runtime_Value_3761626784.Do(func() {
-		cache_identity__gopurs_runtime_Value_3761626784 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_identity__gopurs_runtime_Value_3761626784(dict_0_box)
+var cache_identity__gopurs_runtime_Value_2527656589 gopurs_runtime.Value
+var once_identity__gopurs_runtime_Value_2527656589 sync.Once
+func Get_identity__gopurs_runtime_Value_2527656589() gopurs_runtime.Value {
+	once_identity__gopurs_runtime_Value_2527656589.Do(func() {
+		cache_identity__gopurs_runtime_Value_2527656589 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_identity__gopurs_runtime_Value_2527656589(dict_0_box)
 })
 	})
-	return cache_identity__gopurs_runtime_Value_3761626784
-}
-
-var cache_identity__gopurs_runtime_Value_4066472704 gopurs_runtime.Value
-var once_identity__gopurs_runtime_Value_4066472704 sync.Once
-func Get_identity__gopurs_runtime_Value_4066472704() gopurs_runtime.Value {
-	once_identity__gopurs_runtime_Value_4066472704.Do(func() {
-		cache_identity__gopurs_runtime_Value_4066472704 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_identity__gopurs_runtime_Value_4066472704(dict_0_box)
-})
-	})
-	return cache_identity__gopurs_runtime_Value_4066472704
+	return cache_identity__gopurs_runtime_Value_2527656589
 }
 
 var cache_categoryFn gopurs_runtime.Value
@@ -58,13 +47,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "identity")
 }
 
-func Call_identity__gopurs_runtime_Value_3761626784(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
-_ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "identity")
-}
-
-func Call_identity__gopurs_runtime_Value_4066472704(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_identity__gopurs_runtime_Value_2527656589(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "identity")

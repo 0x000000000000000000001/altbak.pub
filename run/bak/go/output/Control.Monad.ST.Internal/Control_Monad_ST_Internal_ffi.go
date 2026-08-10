@@ -1,8 +1,8 @@
 package Control_Monad_ST_Internal
 
+
+
 import "gopurs/output/gopurs_runtime"
-
-
 func Map_(f func(interface{}) interface{}, a func(interface{}) interface{}, _ interface{}) interface{} {
 	return f(a(nil))
 }
@@ -46,28 +46,51 @@ func NewImpl(val interface{}, _ interface{}) interface{} {
 }
 
 func Read(ref interface{}, _ interface{}) interface{} {
-	ptr := ref.(*interface{})
+	var ptr *interface{}
+	if val, ok := ref.(gopurs_runtime.Value); ok {
+		ptr = val.PtrVal().(*interface{})
+	} else {
+		ptr = ref.(*interface{})
+	}
 	return *ptr
 }
 
 func ModifyImpl(f func(interface{}) interface{}, ref interface{}, _ interface{}) interface{} {
-	ptr := ref.(*interface{})
+	var ptr *interface{}
+	if val, ok := ref.(gopurs_runtime.Value); ok {
+		ptr = val.PtrVal().(*interface{})
+	} else {
+		ptr = ref.(*interface{})
+	}
+	
 	t := f(*ptr)
 
-	dict := t.(map[string]interface{})
-	*ptr = dict["state"]
-	return dict["value"]
+	switch val := t.(type) {
+	case map[string]interface{}:
+		*ptr = val["state"]
+		return val["value"]
+	case gopurs_runtime.Value:
+		*ptr = gopurs_runtime.RecordGet(val, "state")
+		return gopurs_runtime.RecordGet(val, "value")
+	default:
+		panic("ModifyImpl: expected map[string]interface{} or gopurs_runtime.Value")
+	}
 }
 
 func Write(a interface{}, ref interface{}, _ interface{}) interface{} {
-	ptr := ref.(*interface{})
+	var ptr *interface{}
+	if val, ok := ref.(gopurs_runtime.Value); ok {
+		ptr = val.PtrVal().(*interface{})
+	} else {
+		ptr = ref.(*interface{})
+	}
 	*ptr = a
 	return a
 }
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs_Bind_ = // TAST: (Func [(ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), (TypeVar a)]), (Func [(TypeVar a)] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), (TypeVar b)]))] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), (TypeVar b)]))
+var _Gopurs_Bind_ = // TAST: (ForAll [r, a, b] (Func [(ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), (TypeVar a)]), (Func [(TypeVar a)] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), (TypeVar b)]))] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), (TypeVar b)])))
 gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
@@ -82,7 +105,7 @@ gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := Bind_(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_ForImpl = // TAST: (Func [Int, Int, (Func [Int] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), (TypeVar a)]))] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), (ADT ["Data","Unit","Unit"] [])]))
+var _Gopurs_ForImpl = // TAST: (ForAll [r, a] (Func [Int, Int, (Func [Int] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), (TypeVar a)]))] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), Unit])))
 gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int64](arg0)
 	go_arg1 := gopurs_runtime.Unbox[int64](arg1)
@@ -96,7 +119,7 @@ gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := ForImpl(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_Foreach = // TAST: (Func [(Array (TypeVar a)), (Func [(TypeVar a)] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), (ADT ["Data","Unit","Unit"] [])]))] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), (ADT ["Data","Unit","Unit"] [])]))
+var _Gopurs_Foreach = // TAST: (ForAll [r, a] (Func [(Array (TypeVar a)), (Func [(TypeVar a)] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), Unit]))] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), Unit])))
 gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	arg0_arr := *(*[]gopurs_runtime.Value)(arg0.UnsafePtr)
 	go_arg0 := make([]any, len(arg0_arr))
@@ -111,7 +134,7 @@ gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := Foreach(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_Map_ = // TAST: (Func [(Func [(TypeVar a)] (TypeVar b)), (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), (TypeVar a)])] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), (TypeVar b)]))
+var _Gopurs_Map_ = // TAST: (ForAll [r, a, b] (Func [(Func [(TypeVar a)] (TypeVar b)), (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), (TypeVar a)])] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), (TypeVar b)])))
 gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
@@ -123,7 +146,7 @@ gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := Map_(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_ModifyImpl = // TAST: (Func [(Func [(TypeVar a)] (Record [state: (TypeVar a), value: (TypeVar b)])), (ADT ["Control","Monad","ST","Internal","STRef"] [(TypeVar r), (TypeVar a)])] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), (TypeVar b)]))
+var _Gopurs_ModifyImpl = // TAST: (ForAll [r, a, b] (Func [(Func [(TypeVar a)] (Record (Row [state: (TypeVar a), value: (TypeVar b)] Empty))), (ADT ["Control","Monad","ST","Internal","STRef"] [(TypeVar r), (TypeVar a)])] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), (TypeVar b)])))
 gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
@@ -133,28 +156,28 @@ gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := ModifyImpl(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_NewImpl = // TAST: (Func [(TypeVar a)] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), (ADT ["Control","Monad","ST","Internal","STRef"] [(TypeVar r), (TypeVar a)])]))
+var _Gopurs_NewImpl = // TAST: (ForAll [a, r] (Func [(TypeVar a)] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), (ADT ["Control","Monad","ST","Internal","STRef"] [(TypeVar r), (TypeVar a)])])))
 gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_res := NewImpl(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_Pure_ = // TAST: (Func [(TypeVar a)] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), (TypeVar a)]))
+var _Gopurs_Pure_ = // TAST: (ForAll [r, a] (Func [(TypeVar a)] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), (TypeVar a)])))
 gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_res := Pure_(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_Read = // TAST: (Func [(ADT ["Control","Monad","ST","Internal","STRef"] [(TypeVar r), (TypeVar a)])] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), (TypeVar a)]))
+var _Gopurs_Read = // TAST: (ForAll [a, r] (Func [(ADT ["Control","Monad","ST","Internal","STRef"] [(TypeVar r), (TypeVar a)])] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), (TypeVar a)])))
 gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_res := Read(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_Run = // TAST: (Func [(ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), (TypeVar a)])] (TypeVar a))
+var _Gopurs_Run = // TAST: (ForAll [a] (Func [(ForAll [r] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), (TypeVar a)]))] (TypeVar a)))
 gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
@@ -162,7 +185,7 @@ gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_res := Run(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_While = // TAST: (Func [(ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), Boolean]), (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), (TypeVar a)])] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), (ADT ["Data","Unit","Unit"] [])]))
+var _Gopurs_While = // TAST: (ForAll [r, a] (Func [(ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), Boolean]), (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), (TypeVar a)])] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), Unit])))
 gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func() bool {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Value{})
@@ -175,7 +198,7 @@ gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := While(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_Write = // TAST: (Func [(TypeVar a), (ADT ["Control","Monad","ST","Internal","STRef"] [(TypeVar r), (TypeVar a)])] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), (TypeVar a)]))
+var _Gopurs_Write = // TAST: (ForAll [a, r] (Func [(TypeVar a), (ADT ["Control","Monad","ST","Internal","STRef"] [(TypeVar r), (TypeVar a)])] (ADT ["Control","Monad","ST","Internal","ST"] [(TypeVar r), (TypeVar a)])))
 gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1

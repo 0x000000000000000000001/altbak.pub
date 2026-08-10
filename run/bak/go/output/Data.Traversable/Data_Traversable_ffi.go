@@ -53,7 +53,7 @@ func TraverseArrayImpl(
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs_TraverseArrayImpl = // TAST: (Func [(Func [(TypeVar m), (TypeVar m)] (TypeVar m)), (Func [(Func [(TypeVar x)] (TypeVar y)), (TypeVar m)] (TypeVar m)), (Func [(TypeVar x)] (TypeVar m)), (Func [(Array (TypeVar b)), (Array (TypeVar b))] (Array (TypeVar b))), (Func [(TypeVar a)] (TypeVar m)), (Array (TypeVar a))] (TypeVar m))
+var _Gopurs_TraverseArrayImpl = // TAST: (ForAll [m, a, b] (Func [(ForAll [x, y] (Func [(TypeApp (TypeVar m) [(Func [(TypeVar x)] (TypeVar y))]), (TypeApp (TypeVar m) [(TypeVar x)])] (TypeApp (TypeVar m) [(TypeVar y)]))), (ForAll [x, y] (Func [(Func [(TypeVar x)] (TypeVar y)), (TypeApp (TypeVar m) [(TypeVar x)])] (TypeApp (TypeVar m) [(TypeVar y)]))), (ForAll [x] (Func [(TypeVar x)] (TypeApp (TypeVar m) [(TypeVar x)]))), (Func [(Array (TypeVar b)), (Array (TypeVar b))] (Array (TypeVar b))), (Func [(TypeVar a)] (TypeApp (TypeVar m) [(TypeVar b)])), (Array (TypeVar a))] (TypeApp (TypeVar m) [(Array (TypeVar b))])))
 gopurs_runtime.Func6(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value, arg5 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any, p0_1 any) any {
 			return gopurs_runtime.Apply2(arg0, gopurs_runtime.Box(p0_0), gopurs_runtime.Box(p0_1))

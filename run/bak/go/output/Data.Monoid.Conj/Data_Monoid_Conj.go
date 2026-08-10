@@ -85,6 +85,19 @@ return gopurs_runtime.Apply(f_0, m_1)
 	return cache_functorConj
 }
 
+var cache_functorConj__gopurs_runtime_Value_943655089 gopurs_runtime.Value
+var once_functorConj__gopurs_runtime_Value_943655089 sync.Once
+func Get_functorConj__gopurs_runtime_Value_943655089() gopurs_runtime.Value {
+	once_functorConj__gopurs_runtime_Value_943655089.Do(func() {
+		cache_functorConj__gopurs_runtime_Value_943655089 = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(m_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_0, m_1)
+})
+}))
+	})
+	return cache_functorConj__gopurs_runtime_Value_943655089
+}
+
 var cache_eqConj gopurs_runtime.Value
 var once_eqConj sync.Once
 func Get_eqConj() gopurs_runtime.Value {
@@ -105,6 +118,17 @@ return gopurs_runtime.RecordGet(dictEq_0, "eq")
 }))
 	})
 	return cache_eq1Conj
+}
+
+var cache_eq1Conj__gopurs_runtime_Value_1905950174 gopurs_runtime.Value
+var once_eq1Conj__gopurs_runtime_Value_1905950174 sync.Once
+func Get_eq1Conj__gopurs_runtime_Value_1905950174() gopurs_runtime.Value {
+	once_eq1Conj__gopurs_runtime_Value_1905950174.Do(func() {
+		cache_eq1Conj__gopurs_runtime_Value_1905950174 = gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordGet(dictEq_0, "eq")
+}))
+	})
+	return cache_eq1Conj__gopurs_runtime_Value_1905950174
 }
 
 var cache_ord1Conj gopurs_runtime.Value
@@ -146,6 +170,21 @@ return gopurs_runtime.Apply(v_0, v1_1)
 	return cache_applyConj
 }
 
+var cache_applyConj__gopurs_runtime_Value_3199351098 gopurs_runtime.Value
+var once_applyConj__gopurs_runtime_Value_3199351098 sync.Once
+func Get_applyConj__gopurs_runtime_Value_3199351098() gopurs_runtime.Value {
+	once_applyConj__gopurs_runtime_Value_3199351098.Do(func() {
+		cache_applyConj__gopurs_runtime_Value_3199351098 = gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_functorConj__gopurs_runtime_Value_943655089()
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v_0, v1_1)
+})
+}))
+	})
+	return cache_applyConj__gopurs_runtime_Value_3199351098
+}
+
 var cache_bindConj gopurs_runtime.Value
 var once_bindConj sync.Once
 func Get_bindConj() gopurs_runtime.Value {
@@ -161,6 +200,21 @@ return gopurs_runtime.Apply(f_1, v_0)
 	return cache_bindConj
 }
 
+var cache_bindConj__gopurs_runtime_Value_329376103 gopurs_runtime.Value
+var once_bindConj__gopurs_runtime_Value_329376103 sync.Once
+func Get_bindConj__gopurs_runtime_Value_329376103() gopurs_runtime.Value {
+	once_bindConj__gopurs_runtime_Value_329376103.Do(func() {
+		cache_bindConj__gopurs_runtime_Value_329376103 = gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_applyConj__gopurs_runtime_Value_3199351098()
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_1, v_0)
+})
+}))
+	})
+	return cache_bindConj__gopurs_runtime_Value_329376103
+}
+
 var cache_applicativeConj gopurs_runtime.Value
 var once_applicativeConj sync.Once
 func Get_applicativeConj() gopurs_runtime.Value {
@@ -170,6 +224,17 @@ return Get_applyConj()
 }), Get_Conj())
 	})
 	return cache_applicativeConj
+}
+
+var cache_applicativeConj__gopurs_runtime_Value_4045440648 gopurs_runtime.Value
+var once_applicativeConj__gopurs_runtime_Value_4045440648 sync.Once
+func Get_applicativeConj__gopurs_runtime_Value_4045440648() gopurs_runtime.Value {
+	once_applicativeConj__gopurs_runtime_Value_4045440648.Do(func() {
+		cache_applicativeConj__gopurs_runtime_Value_4045440648 = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_applyConj__gopurs_runtime_Value_3199351098()
+}), Get_Conj())
+	})
+	return cache_applicativeConj__gopurs_runtime_Value_4045440648
 }
 
 var cache_monadConj gopurs_runtime.Value

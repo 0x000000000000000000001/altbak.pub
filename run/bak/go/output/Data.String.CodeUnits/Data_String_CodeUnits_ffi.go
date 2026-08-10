@@ -160,7 +160,7 @@ func SplitAt(idx int, str string) map[string]interface{} {
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs__CharAt = // TAST: (Func [(Func [(TypeVar a)] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)])), (ADT ["Data","Maybe","Maybe"] [(TypeVar a)]), Int, String] (ADT ["Data","Maybe","Maybe"] [Char]))
+var _Gopurs__CharAt = // TAST: (Func [(ForAll [a] (Func [(TypeVar a)] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)]))), (ForAll [a] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)])), Int, String] (ADT ["Data","Maybe","Maybe"] [Char]))
 gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 string) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
@@ -171,7 +171,7 @@ gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := _CharAt(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs__IndexOf = // TAST: (Func [(Func [(TypeVar a)] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)])), (ADT ["Data","Maybe","Maybe"] [(TypeVar a)]), String, String] (ADT ["Data","Maybe","Maybe"] [Int]))
+var _Gopurs__IndexOf = // TAST: (Func [(ForAll [a] (Func [(TypeVar a)] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)]))), (ForAll [a] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)])), String, String] (ADT ["Data","Maybe","Maybe"] [Int]))
 gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 int) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
@@ -182,7 +182,7 @@ gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := _IndexOf(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs__IndexOfStartingAt = // TAST: (Func [(Func [(TypeVar a)] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)])), (ADT ["Data","Maybe","Maybe"] [(TypeVar a)]), String, Int, String] (ADT ["Data","Maybe","Maybe"] [Int]))
+var _Gopurs__IndexOfStartingAt = // TAST: (Func [(ForAll [a] (Func [(TypeVar a)] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)]))), (ForAll [a] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)])), String, Int, String] (ADT ["Data","Maybe","Maybe"] [Int]))
 gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 int) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
@@ -194,7 +194,7 @@ gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := _IndexOfStartingAt(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs__LastIndexOf = // TAST: (Func [(Func [(TypeVar a)] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)])), (ADT ["Data","Maybe","Maybe"] [(TypeVar a)]), String, String] (ADT ["Data","Maybe","Maybe"] [Int]))
+var _Gopurs__LastIndexOf = // TAST: (Func [(ForAll [a] (Func [(TypeVar a)] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)]))), (ForAll [a] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)])), String, String] (ADT ["Data","Maybe","Maybe"] [Int]))
 gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 int) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
@@ -205,7 +205,7 @@ gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := _LastIndexOf(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs__LastIndexOfStartingAt = // TAST: (Func [(Func [(TypeVar a)] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)])), (ADT ["Data","Maybe","Maybe"] [(TypeVar a)]), String, Int, String] (ADT ["Data","Maybe","Maybe"] [Int]))
+var _Gopurs__LastIndexOfStartingAt = // TAST: (Func [(ForAll [a] (Func [(TypeVar a)] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)]))), (ForAll [a] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)])), String, Int, String] (ADT ["Data","Maybe","Maybe"] [Int]))
 gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 int) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
@@ -217,7 +217,7 @@ gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := _LastIndexOfStartingAt(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs__ToChar = // TAST: (Func [(Func [(TypeVar a)] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)])), (ADT ["Data","Maybe","Maybe"] [(TypeVar a)]), String] (ADT ["Data","Maybe","Maybe"] [Char]))
+var _Gopurs__ToChar = // TAST: (Func [(ForAll [a] (Func [(TypeVar a)] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)]))), (ForAll [a] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)])), String] (ADT ["Data","Maybe","Maybe"] [Char]))
 gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 string) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
@@ -272,7 +272,7 @@ gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := Slice(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_SplitAt = // TAST: (Func [Int, String] (Record [after: String, before: String]))
+var _Gopurs_SplitAt = // TAST: (Func [Int, String] (Record (Row [before: String, after: String] Empty)))
 gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int](arg0)
 	go_arg1 := gopurs_runtime.Unbox[string](arg1)
@@ -280,8 +280,8 @@ gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) 
 	return func() gopurs_runtime.Value {
 				_raw := go_res
 				res_map := make(map[string]gopurs_runtime.Value)
-					res_map["after"] = gopurs_runtime.Box(_raw["after"])
 					res_map["before"] = gopurs_runtime.Box(_raw["before"])
+					res_map["after"] = gopurs_runtime.Box(_raw["after"])
 				return gopurs_runtime.Record(res_map)
 			}()
 })

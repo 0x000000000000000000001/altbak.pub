@@ -41,6 +41,19 @@ return gopurs_runtime.Apply2(Get_append(), v_0, v1_1)
 	return cache_semigroupComparison
 }
 
+var cache_semigroupComparison__gopurs_runtime_Value_1133613061 gopurs_runtime.Value
+var once_semigroupComparison__gopurs_runtime_Value_1133613061 sync.Once
+func Get_semigroupComparison__gopurs_runtime_Value_1133613061() gopurs_runtime.Value {
+	once_semigroupComparison__gopurs_runtime_Value_1133613061.Do(func() {
+		cache_semigroupComparison__gopurs_runtime_Value_1133613061 = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Get_append(), v_0, v1_1)
+})
+}))
+	})
+	return cache_semigroupComparison__gopurs_runtime_Value_1133613061
+}
+
 var cache_newtypeComparison gopurs_runtime.Value
 var once_newtypeComparison sync.Once
 func Get_newtypeComparison() gopurs_runtime.Value {
@@ -93,6 +106,23 @@ return gopurs_runtime.Apply2(v_1, gopurs_runtime.Apply(f_0, x_2), gopurs_runtime
 }))
 	})
 	return cache_contravariantComparison
+}
+
+var cache_contravariantComparison__gopurs_runtime_Value_1065380147 gopurs_runtime.Value
+var once_contravariantComparison__gopurs_runtime_Value_1065380147 sync.Once
+func Get_contravariantComparison__gopurs_runtime_Value_1065380147() gopurs_runtime.Value {
+	once_contravariantComparison__gopurs_runtime_Value_1065380147.Do(func() {
+		cache_contravariantComparison__gopurs_runtime_Value_1065380147 = gopurs_runtime.RecordDict1("cmap", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(v_1, gopurs_runtime.Apply(f_0, x_2), gopurs_runtime.Apply(f_0, y_3))
+})
+})
+})
+}))
+	})
+	return cache_contravariantComparison__gopurs_runtime_Value_1065380147
 }
 
 func Call_append(f_0_loop gopurs_runtime.Value, g_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {

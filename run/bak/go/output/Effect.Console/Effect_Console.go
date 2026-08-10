@@ -38,15 +38,15 @@ return Call_logShow(dictShow_0_box, a_1_box)
 	return cache_logShow
 }
 
-var cache_logShow__gopurs_runtime_Value_3442281361 gopurs_runtime.Value
-var once_logShow__gopurs_runtime_Value_3442281361 sync.Once
-func Get_logShow__gopurs_runtime_Value_3442281361() gopurs_runtime.Value {
-	once_logShow__gopurs_runtime_Value_3442281361.Do(func() {
-		cache_logShow__gopurs_runtime_Value_3442281361 = gopurs_runtime.Func2(func(dictShow_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_logShow__gopurs_runtime_Value_3442281361(dictShow_0_box, a_1_box)
+var cache_logShow__gopurs_runtime_Value_339054415 gopurs_runtime.Value
+var once_logShow__gopurs_runtime_Value_339054415 sync.Once
+func Get_logShow__gopurs_runtime_Value_339054415() gopurs_runtime.Value {
+	once_logShow__gopurs_runtime_Value_339054415.Do(func() {
+		cache_logShow__gopurs_runtime_Value_339054415 = gopurs_runtime.Func2(func(dictShow_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_logShow__gopurs_runtime_Value_339054415(dictShow_0_box, a_1_box)
 })
 	})
-	return cache_logShow__gopurs_runtime_Value_3442281361
+	return cache_logShow__gopurs_runtime_Value_339054415
 }
 
 var cache_infoShow gopurs_runtime.Value
@@ -109,7 +109,7 @@ _ = a_1
 return gopurs_runtime.Apply(Get_log(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), a_1))
 }
 
-func Call_logShow__gopurs_runtime_Value_3442281361(dictShow_0_loop gopurs_runtime.Value, a_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_logShow__gopurs_runtime_Value_339054415(dictShow_0_loop gopurs_runtime.Value, a_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
 _ = dictShow_0
 var a_1 gopurs_runtime.Value = a_1_loop

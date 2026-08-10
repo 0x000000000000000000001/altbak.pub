@@ -88,26 +88,15 @@ return Call_foldl(v_0_box, v1_1_box, (*Constructor_Cons[gopurs_runtime.Value])(v
 	return cache_foldl
 }
 
-var cache_foldl__gopurs_runtime_Value_469417201 gopurs_runtime.Value
-var once_foldl__gopurs_runtime_Value_469417201 sync.Once
-func Get_foldl__gopurs_runtime_Value_469417201() gopurs_runtime.Value {
-	once_foldl__gopurs_runtime_Value_469417201.Do(func() {
-		cache_foldl__gopurs_runtime_Value_469417201 = gopurs_runtime.Func3(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value, v2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Int(Call_foldl__gopurs_runtime_Value_469417201(v_0_box, v1_1_box.IntVal, (*Constructor_Cons[gopurs_runtime.Value])(v2_2_box.UnsafePtr)))
+var cache_foldl__gopurs_runtime_Value_1255354935 gopurs_runtime.Value
+var once_foldl__gopurs_runtime_Value_1255354935 sync.Once
+func Get_foldl__gopurs_runtime_Value_1255354935() gopurs_runtime.Value {
+	once_foldl__gopurs_runtime_Value_1255354935.Do(func() {
+		cache_foldl__gopurs_runtime_Value_1255354935 = gopurs_runtime.Func3(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value, v2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_foldl__gopurs_runtime_Value_1255354935(v_0_box, v1_1_box, (*Constructor_Cons[gopurs_runtime.Value])(v2_2_box.UnsafePtr))
 })
 	})
-	return cache_foldl__gopurs_runtime_Value_469417201
-}
-
-var cache_foldl__gopurs_runtime_Value_2606687793 gopurs_runtime.Value
-var once_foldl__gopurs_runtime_Value_2606687793 sync.Once
-func Get_foldl__gopurs_runtime_Value_2606687793() gopurs_runtime.Value {
-	once_foldl__gopurs_runtime_Value_2606687793.Do(func() {
-		cache_foldl__gopurs_runtime_Value_2606687793 = gopurs_runtime.Func3(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value, v2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_foldl__gopurs_runtime_Value_2606687793(v_0_box, v1_1_box, (*Constructor_Cons[gopurs_runtime.Value])(v2_2_box.UnsafePtr))
-})
-	})
-	return cache_foldl__gopurs_runtime_Value_2606687793
+	return cache_foldl__gopurs_runtime_Value_1255354935
 }
 
 var cache_filterEvens gopurs_runtime.Value
@@ -237,38 +226,7 @@ end_branch_0:
 return __t0
 }
 
-func Call_foldl__gopurs_runtime_Value_469417201(v_0_loop gopurs_runtime.Value, v1_1_loop int64, v2_2_loop *Constructor_Cons[gopurs_runtime.Value]) int64 {
-var v_0 gopurs_runtime.Value = v_0_loop
-_ = v_0
-var v1_1 int64 = v1_1_loop
-_ = v1_1
-var v2_2 *Constructor_Cons[gopurs_runtime.Value] = v2_2_loop
-_ = v2_2
-var __t0 gopurs_runtime.Value
-{
-if (gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.Type == 9 && gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.IntVal == 1127792131 && gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.UnsafePtr == nil) {
-__t0 = gopurs_runtime.Int(v1_1)
-goto end_branch_0
-} else {
-
-}
-}
-{
-if (gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.Type == 9 && gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.IntVal == 1127792131 && gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.UnsafePtr != nil) {
-__t0 = gopurs_runtime.Int(Call_foldl(v_0, gopurs_runtime.Apply2(v_0, gopurs_runtime.Int(v1_1), (*Constructor_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.UnsafePtr).V0), (*Constructor_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer((*Constructor_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v2_2)}.UnsafePtr).V1)}.UnsafePtr)).IntVal)
-goto end_branch_0
-} else {
-
-}
-}
-{
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_0:
-return __t0.IntVal
-}
-
-func Call_foldl__gopurs_runtime_Value_2606687793(v_0_loop gopurs_runtime.Value, v1_1_loop gopurs_runtime.Value, v2_2_loop *Constructor_Cons[gopurs_runtime.Value]) gopurs_runtime.Value {
+func Call_foldl__gopurs_runtime_Value_1255354935(v_0_loop gopurs_runtime.Value, v1_1_loop gopurs_runtime.Value, v2_2_loop *Constructor_Cons[gopurs_runtime.Value]) gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var v1_1 gopurs_runtime.Value = v1_1_loop

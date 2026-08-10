@@ -237,26 +237,15 @@ return gopurs_runtime.Bool(Call_liftS__gopurs_runtime_Value_895676186(f_0_box, v
 	return cache_liftS__gopurs_runtime_Value_895676186
 }
 
-var cache_liftS__gopurs_runtime_Value_4000603354 gopurs_runtime.Value
-var once_liftS__gopurs_runtime_Value_4000603354 sync.Once
-func Get_liftS__gopurs_runtime_Value_4000603354() gopurs_runtime.Value {
-	once_liftS__gopurs_runtime_Value_4000603354.Do(func() {
-		cache_liftS__gopurs_runtime_Value_4000603354 = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_liftS__gopurs_runtime_Value_4000603354(f_0_box, v_1_box.StrVal()))}
+var cache_liftS__gopurs_runtime_Value_3230749042 gopurs_runtime.Value
+var once_liftS__gopurs_runtime_Value_3230749042 sync.Once
+func Get_liftS__gopurs_runtime_Value_3230749042() gopurs_runtime.Value {
+	once_liftS__gopurs_runtime_Value_3230749042.Do(func() {
+		cache_liftS__gopurs_runtime_Value_3230749042 = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_liftS__gopurs_runtime_Value_3230749042(f_0_box, v_1_box.StrVal())
 })
 	})
-	return cache_liftS__gopurs_runtime_Value_4000603354
-}
-
-var cache_liftS__gopurs_runtime_Value_3197146330 gopurs_runtime.Value
-var once_liftS__gopurs_runtime_Value_3197146330 sync.Once
-func Get_liftS__gopurs_runtime_Value_3197146330() gopurs_runtime.Value {
-	once_liftS__gopurs_runtime_Value_3197146330.Do(func() {
-		cache_liftS__gopurs_runtime_Value_3197146330 = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_liftS__gopurs_runtime_Value_3197146330(f_0_box, v_1_box.StrVal())
-})
-	})
-	return cache_liftS__gopurs_runtime_Value_3197146330
+	return cache_liftS__gopurs_runtime_Value_3230749042
 }
 
 var cache_startsWith gopurs_runtime.Value
@@ -292,15 +281,15 @@ return Call_joinWith(dictFoldable_0_box)
 	return cache_joinWith
 }
 
-var cache_joinWith__gopurs_runtime_Value_3583909088 gopurs_runtime.Value
-var once_joinWith__gopurs_runtime_Value_3583909088 sync.Once
-func Get_joinWith__gopurs_runtime_Value_3583909088() gopurs_runtime.Value {
-	once_joinWith__gopurs_runtime_Value_3583909088.Do(func() {
-		cache_joinWith__gopurs_runtime_Value_3583909088 = gopurs_runtime.Func(func(dictFoldable_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_joinWith__gopurs_runtime_Value_3583909088(dictFoldable_0_box)
+var cache_joinWith__gopurs_runtime_Value_632268499 gopurs_runtime.Value
+var once_joinWith__gopurs_runtime_Value_632268499 sync.Once
+func Get_joinWith__gopurs_runtime_Value_632268499() gopurs_runtime.Value {
+	once_joinWith__gopurs_runtime_Value_632268499.Do(func() {
+		cache_joinWith__gopurs_runtime_Value_632268499 = gopurs_runtime.Func(func(dictFoldable_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_joinWith__gopurs_runtime_Value_632268499(dictFoldable_0_box)
 })
 	})
-	return cache_joinWith__gopurs_runtime_Value_3583909088
+	return cache_joinWith__gopurs_runtime_Value_632268499
 }
 
 var cache_join1With gopurs_runtime.Value
@@ -363,7 +352,7 @@ var once_unsafeFromString sync.Once
 func Get_unsafeFromString() gopurs_runtime.Value {
 	once_unsafeFromString.Do(func() {
 		cache_unsafeFromString = gopurs_runtime.Func2(func(_dollar__unused_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(Call_unsafeFromString(_dollar__unused_0_box, x_1_box.StrVal()))
+return Call_unsafeFromString(_dollar__unused_0_box, x_1_box)
 })
 	})
 	return cache_unsafeFromString
@@ -534,15 +523,7 @@ _ = v_1
 return (gopurs_runtime.Apply(f_0, gopurs_runtime.Str(v_1)).IntVal) != (0)
 }
 
-func Call_liftS__gopurs_runtime_Value_4000603354(f_0_loop gopurs_runtime.Value, v_1_loop string) *pkg_Data_Maybe.Constructor_Just[string] {
-var f_0 gopurs_runtime.Value = f_0_loop
-_ = f_0
-var v_1 string = v_1_loop
-_ = v_1
-return (*pkg_Data_Maybe.Constructor_Just[string])(gopurs_runtime.Apply(f_0, gopurs_runtime.Str(v_1)).UnsafePtr)
-}
-
-func Call_liftS__gopurs_runtime_Value_3197146330(f_0_loop gopurs_runtime.Value, v_1_loop string) gopurs_runtime.Value {
+func Call_liftS__gopurs_runtime_Value_3230749042(f_0_loop gopurs_runtime.Value, v_1_loop string) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var v_1 string = v_1_loop
@@ -641,7 +622,7 @@ return __t1
 })
 }
 
-func Call_joinWith__gopurs_runtime_Value_3583909088(dictFoldable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_joinWith__gopurs_runtime_Value_632268499(dictFoldable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictFoldable_0 gopurs_runtime.Value = dictFoldable_0_loop
 _ = dictFoldable_0
 __local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Monoid.Get_monoidString(), "Semigroup0"), gopurs_runtime.Value{})
@@ -740,14 +721,14 @@ end_branch_1:
 return (*pkg_Data_Maybe.Constructor_Just[string])(__t1.UnsafePtr)
 }
 
-func Call_unsafeFromString(_dollar__unused_0_loop gopurs_runtime.Value, x_1_loop string) string {
+func Call_unsafeFromString(_dollar__unused_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
-var x_1 string = x_1_loop
+var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
 var __t0 gopurs_runtime.Value
 {
-if (x_1) == ("") {
+if (x_1.StrVal()) == ("") {
 __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 goto end_branch_0
 } else {
@@ -755,10 +736,10 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.Str(x_1)
+__t0 = x_1
 }
 end_branch_0:
-return __t0.StrVal()
+return __t0
 }
 
 func Call_endsWith(x_0_loop string, v_1_loop string) bool {

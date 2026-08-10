@@ -172,7 +172,7 @@ gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_res := Floor(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_FromStringImpl = // TAST: (ADT ["Data","Function","Uncurried","Fn4"] [String, (Func [Number] Boolean), (Func [(TypeVar a)] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)])), (ADT ["Data","Maybe","Maybe"] [(TypeVar a)]), (ADT ["Data","Maybe","Maybe"] [Number])])
+var _Gopurs_FromStringImpl = // TAST: (ADT ["Data","Function","Uncurried","Fn4"] [String, (Func [Number] Boolean), (ForAll [a] (Func [(TypeVar a)] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)]))), (ForAll [a] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)])), (ADT ["Data","Maybe","Maybe"] [Number])])
 gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[string](arg0)
 	go_arg1 := func(p0_0 float64) bool {

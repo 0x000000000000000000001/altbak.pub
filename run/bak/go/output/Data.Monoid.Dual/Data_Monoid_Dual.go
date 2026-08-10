@@ -74,6 +74,19 @@ return gopurs_runtime.Apply(f_0, m_1)
 	return cache_functorDual
 }
 
+var cache_functorDual__gopurs_runtime_Value_943655089 gopurs_runtime.Value
+var once_functorDual__gopurs_runtime_Value_943655089 sync.Once
+func Get_functorDual__gopurs_runtime_Value_943655089() gopurs_runtime.Value {
+	once_functorDual__gopurs_runtime_Value_943655089.Do(func() {
+		cache_functorDual__gopurs_runtime_Value_943655089 = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(m_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_0, m_1)
+})
+}))
+	})
+	return cache_functorDual__gopurs_runtime_Value_943655089
+}
+
 var cache_eqDual gopurs_runtime.Value
 var once_eqDual sync.Once
 func Get_eqDual() gopurs_runtime.Value {
@@ -94,6 +107,17 @@ return gopurs_runtime.RecordGet(dictEq_0, "eq")
 }))
 	})
 	return cache_eq1Dual
+}
+
+var cache_eq1Dual__gopurs_runtime_Value_1905950174 gopurs_runtime.Value
+var once_eq1Dual__gopurs_runtime_Value_1905950174 sync.Once
+func Get_eq1Dual__gopurs_runtime_Value_1905950174() gopurs_runtime.Value {
+	once_eq1Dual__gopurs_runtime_Value_1905950174.Do(func() {
+		cache_eq1Dual__gopurs_runtime_Value_1905950174 = gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordGet(dictEq_0, "eq")
+}))
+	})
+	return cache_eq1Dual__gopurs_runtime_Value_1905950174
 }
 
 var cache_ord1Dual gopurs_runtime.Value
@@ -135,6 +159,21 @@ return gopurs_runtime.Apply(v_0, v1_1)
 	return cache_applyDual
 }
 
+var cache_applyDual__gopurs_runtime_Value_3199351098 gopurs_runtime.Value
+var once_applyDual__gopurs_runtime_Value_3199351098 sync.Once
+func Get_applyDual__gopurs_runtime_Value_3199351098() gopurs_runtime.Value {
+	once_applyDual__gopurs_runtime_Value_3199351098.Do(func() {
+		cache_applyDual__gopurs_runtime_Value_3199351098 = gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_functorDual__gopurs_runtime_Value_943655089()
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v_0, v1_1)
+})
+}))
+	})
+	return cache_applyDual__gopurs_runtime_Value_3199351098
+}
+
 var cache_bindDual gopurs_runtime.Value
 var once_bindDual sync.Once
 func Get_bindDual() gopurs_runtime.Value {
@@ -150,6 +189,21 @@ return gopurs_runtime.Apply(f_1, v_0)
 	return cache_bindDual
 }
 
+var cache_bindDual__gopurs_runtime_Value_329376103 gopurs_runtime.Value
+var once_bindDual__gopurs_runtime_Value_329376103 sync.Once
+func Get_bindDual__gopurs_runtime_Value_329376103() gopurs_runtime.Value {
+	once_bindDual__gopurs_runtime_Value_329376103.Do(func() {
+		cache_bindDual__gopurs_runtime_Value_329376103 = gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_applyDual__gopurs_runtime_Value_3199351098()
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_1, v_0)
+})
+}))
+	})
+	return cache_bindDual__gopurs_runtime_Value_329376103
+}
+
 var cache_applicativeDual gopurs_runtime.Value
 var once_applicativeDual sync.Once
 func Get_applicativeDual() gopurs_runtime.Value {
@@ -159,6 +213,17 @@ return Get_applyDual()
 }), Get_Dual())
 	})
 	return cache_applicativeDual
+}
+
+var cache_applicativeDual__gopurs_runtime_Value_4045440648 gopurs_runtime.Value
+var once_applicativeDual__gopurs_runtime_Value_4045440648 sync.Once
+func Get_applicativeDual__gopurs_runtime_Value_4045440648() gopurs_runtime.Value {
+	once_applicativeDual__gopurs_runtime_Value_4045440648.Do(func() {
+		cache_applicativeDual__gopurs_runtime_Value_4045440648 = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_applyDual__gopurs_runtime_Value_3199351098()
+}), Get_Dual())
+	})
+	return cache_applicativeDual__gopurs_runtime_Value_4045440648
 }
 
 var cache_monadDual gopurs_runtime.Value

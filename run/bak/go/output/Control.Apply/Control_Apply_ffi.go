@@ -14,7 +14,7 @@ func ArrayApply(fs []func(interface{}) interface{}, xs []interface{}) []interfac
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs_ArrayApply = // TAST: (Func [(Array (Func [(TypeVar a)] (TypeVar b))), (Array (TypeVar a))] (Array (TypeVar b)))
+var _Gopurs_ArrayApply = // TAST: (ForAll [a, b] (Func [(Array (Func [(TypeVar a)] (TypeVar b))), (Array (TypeVar a))] (Array (TypeVar b))))
 gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	arg0_arr := *(*[]gopurs_runtime.Value)(arg0.UnsafePtr)
 	go_arg0 := make([]func(any) any, len(arg0_arr))

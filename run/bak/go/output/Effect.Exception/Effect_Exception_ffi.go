@@ -35,7 +35,7 @@ func ErrorWithName(name string, msg string) error { return errors.New(msg) }
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs_CatchException = // TAST: (Func [(Func [(ADT ["Effect","Exception","Error"] [])] (ADT ["Effect","Effect"] [(TypeVar a)])), (ADT ["Effect","Effect"] [(TypeVar a)])] (ADT ["Effect","Effect"] [(TypeVar a)]))
+var _Gopurs_CatchException = // TAST: (ForAll [a] (Func [(Func [(ADT ["Effect","Exception","Error"] [])] (ADT ["Effect","Effect"] [(TypeVar a)])), (ADT ["Effect","Effect"] [(TypeVar a)])] (ADT ["Effect","Effect"] [(TypeVar a)])))
 gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 error) func(any) any {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
@@ -88,7 +88,7 @@ gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_res := ShowErrorImpl(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_StackImpl = // TAST: (Func [(Func [(TypeVar a)] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)])), (ADT ["Data","Maybe","Maybe"] [(TypeVar a)]), (ADT ["Effect","Exception","Error"] [])] (ADT ["Data","Maybe","Maybe"] [String]))
+var _Gopurs_StackImpl = // TAST: (Func [(ForAll [a] (Func [(TypeVar a)] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)]))), (ForAll [a] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)])), (ADT ["Effect","Exception","Error"] [])] (ADT ["Data","Maybe","Maybe"] [String]))
 gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 string) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
@@ -98,7 +98,7 @@ gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := StackImpl(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_ThrowException = // TAST: (Func [(ADT ["Effect","Exception","Error"] [])] (ADT ["Effect","Effect"] [(TypeVar a)]))
+var _Gopurs_ThrowException = // TAST: (ForAll [a] (Func [(ADT ["Effect","Exception","Error"] [])] (ADT ["Effect","Effect"] [(TypeVar a)])))
 gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[error](arg0)
 	go_arg1 := arg1

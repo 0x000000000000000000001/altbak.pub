@@ -86,7 +86,7 @@ func Traverse1Impl(apply func(interface{}) func(interface{}) interface{}, mapFn 
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs_Foldl1Impl = // TAST: (ADT ["Data","Function","Uncurried","Fn2"] [(Func [(TypeVar a), (TypeVar a)] (TypeVar a)), (Array (TypeVar a)), (TypeVar a)])
+var _Gopurs_Foldl1Impl = // TAST: (ForAll [a] (ADT ["Data","Function","Uncurried","Fn2"] [(Func [(TypeVar a), (TypeVar a)] (TypeVar a)), (Array (TypeVar a)), (TypeVar a)]))
 gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) func(any) any {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
@@ -100,7 +100,7 @@ gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) 
 	go_res := Foldl1Impl(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_Foldr1Impl = // TAST: (ADT ["Data","Function","Uncurried","Fn2"] [(Func [(TypeVar a), (TypeVar a)] (TypeVar a)), (Array (TypeVar a)), (TypeVar a)])
+var _Gopurs_Foldr1Impl = // TAST: (ForAll [a] (ADT ["Data","Function","Uncurried","Fn2"] [(Func [(TypeVar a), (TypeVar a)] (TypeVar a)), (Array (TypeVar a)), (TypeVar a)]))
 gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) func(any) any {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
@@ -114,7 +114,7 @@ gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) 
 	go_res := Foldr1Impl(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_Traverse1Impl = // TAST: (ADT ["Data","Function","Uncurried","Fn3"] [(Func [(TypeVar m), (TypeVar m)] (TypeVar m)), (Func [(Func [(TypeVar a')] (TypeVar b')), (TypeVar m)] (TypeVar m)), (Func [(TypeVar a)] (TypeVar m)), (Func [(Array (TypeVar a))] (TypeVar m))])
+var _Gopurs_Traverse1Impl = // TAST: (ForAll [m, a, b] (ADT ["Data","Function","Uncurried","Fn3"] [(ForAll [a', b'] (Func [(TypeApp (TypeVar m) [(Func [(TypeVar a')] (TypeVar b'))]), (TypeApp (TypeVar m) [(TypeVar a')])] (TypeApp (TypeVar m) [(TypeVar b')]))), (ForAll [a', b'] (Func [(Func [(TypeVar a')] (TypeVar b')), (TypeApp (TypeVar m) [(TypeVar a')])] (TypeApp (TypeVar m) [(TypeVar b')]))), (Func [(TypeVar a)] (TypeApp (TypeVar m) [(TypeVar b)])), (Func [(Array (TypeVar a))] (TypeApp (TypeVar m) [(Array (TypeVar b))]))]))
 gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) func(any) any {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))

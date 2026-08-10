@@ -87,15 +87,15 @@ return Call_toDuration(dict_0_box)
 	return cache_toDuration
 }
 
-var cache_toDuration__gopurs_runtime_Value_3978851889 gopurs_runtime.Value
-var once_toDuration__gopurs_runtime_Value_3978851889 sync.Once
-func Get_toDuration__gopurs_runtime_Value_3978851889() gopurs_runtime.Value {
-	once_toDuration__gopurs_runtime_Value_3978851889.Do(func() {
-		cache_toDuration__gopurs_runtime_Value_3978851889 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_toDuration__gopurs_runtime_Value_3978851889(dict_0_box)
+var cache_toDuration__gopurs_runtime_Value_2440169646 gopurs_runtime.Value
+var once_toDuration__gopurs_runtime_Value_2440169646 sync.Once
+func Get_toDuration__gopurs_runtime_Value_2440169646() gopurs_runtime.Value {
+	once_toDuration__gopurs_runtime_Value_2440169646.Do(func() {
+		cache_toDuration__gopurs_runtime_Value_2440169646 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_toDuration__gopurs_runtime_Value_2440169646(dict_0_box)
 })
 	})
-	return cache_toDuration__gopurs_runtime_Value_3978851889
+	return cache_toDuration__gopurs_runtime_Value_2440169646
 }
 
 var cache_showSeconds gopurs_runtime.Value
@@ -384,15 +384,15 @@ return Call_fromDuration(dict_0_box)
 	return cache_fromDuration
 }
 
-var cache_fromDuration__gopurs_runtime_Value_577259473 gopurs_runtime.Value
-var once_fromDuration__gopurs_runtime_Value_577259473 sync.Once
-func Get_fromDuration__gopurs_runtime_Value_577259473() gopurs_runtime.Value {
-	once_fromDuration__gopurs_runtime_Value_577259473.Do(func() {
-		cache_fromDuration__gopurs_runtime_Value_577259473 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_fromDuration__gopurs_runtime_Value_577259473(dict_0_box)
+var cache_fromDuration__gopurs_runtime_Value_1721614606 gopurs_runtime.Value
+var once_fromDuration__gopurs_runtime_Value_1721614606 sync.Once
+func Get_fromDuration__gopurs_runtime_Value_1721614606() gopurs_runtime.Value {
+	once_fromDuration__gopurs_runtime_Value_1721614606.Do(func() {
+		cache_fromDuration__gopurs_runtime_Value_1721614606 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_fromDuration__gopurs_runtime_Value_1721614606(dict_0_box)
 })
 	})
-	return cache_fromDuration__gopurs_runtime_Value_577259473
+	return cache_fromDuration__gopurs_runtime_Value_1721614606
 }
 
 var cache_negateDuration gopurs_runtime.Value
@@ -406,15 +406,15 @@ return Call_negateDuration(dictDuration_0_box, x_1_box)
 	return cache_negateDuration
 }
 
-var cache_negateDuration__gopurs_runtime_Value_1892904996 gopurs_runtime.Value
-var once_negateDuration__gopurs_runtime_Value_1892904996 sync.Once
-func Get_negateDuration__gopurs_runtime_Value_1892904996() gopurs_runtime.Value {
-	once_negateDuration__gopurs_runtime_Value_1892904996.Do(func() {
-		cache_negateDuration__gopurs_runtime_Value_1892904996 = gopurs_runtime.Func2(func(dictDuration_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_negateDuration__gopurs_runtime_Value_1892904996(dictDuration_0_box, x_1_box)
+var cache_negateDuration__gopurs_runtime_Value_3870190523 gopurs_runtime.Value
+var once_negateDuration__gopurs_runtime_Value_3870190523 sync.Once
+func Get_negateDuration__gopurs_runtime_Value_3870190523() gopurs_runtime.Value {
+	once_negateDuration__gopurs_runtime_Value_3870190523.Do(func() {
+		cache_negateDuration__gopurs_runtime_Value_3870190523 = gopurs_runtime.Func2(func(dictDuration_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_negateDuration__gopurs_runtime_Value_3870190523(dictDuration_0_box, x_1_box)
 })
 	})
-	return cache_negateDuration__gopurs_runtime_Value_1892904996
+	return cache_negateDuration__gopurs_runtime_Value_3870190523
 }
 
 var cache_eqSeconds gopurs_runtime.Value
@@ -576,7 +576,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "toDuration")
 }
 
-func Call_toDuration__gopurs_runtime_Value_3978851889(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_toDuration__gopurs_runtime_Value_2440169646(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "toDuration")
@@ -588,7 +588,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "fromDuration")
 }
 
-func Call_fromDuration__gopurs_runtime_Value_577259473(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_fromDuration__gopurs_runtime_Value_1721614606(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "fromDuration")
@@ -602,7 +602,7 @@ _ = x_1
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "toDuration"), gopurs_runtime.Float(-(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "fromDuration"), x_1).FloatVal())))
 }
 
-func Call_negateDuration__gopurs_runtime_Value_1892904996(dictDuration_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_negateDuration__gopurs_runtime_Value_3870190523(dictDuration_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictDuration_0 gopurs_runtime.Value = dictDuration_0_loop
 _ = dictDuration_0
 var x_1 gopurs_runtime.Value = x_1_loop

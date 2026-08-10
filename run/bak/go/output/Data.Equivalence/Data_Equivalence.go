@@ -35,6 +35,23 @@ return gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_D
 	return cache_semigroupEquivalence
 }
 
+var cache_semigroupEquivalence__gopurs_runtime_Value_2325462015 gopurs_runtime.Value
+var once_semigroupEquivalence__gopurs_runtime_Value_2325462015 sync.Once
+func Get_semigroupEquivalence__gopurs_runtime_Value_2325462015() gopurs_runtime.Value {
+	once_semigroupEquivalence__gopurs_runtime_Value_2325462015.Do(func() {
+		cache_semigroupEquivalence__gopurs_runtime_Value_2325462015 = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Apply2(v_0, a_2, b_3), gopurs_runtime.Apply2(v1_1, a_2, b_3)).IntVal) != (0))
+})
+})
+})
+}))
+	})
+	return cache_semigroupEquivalence__gopurs_runtime_Value_2325462015
+}
+
 var cache_newtypeEquivalence gopurs_runtime.Value
 var once_newtypeEquivalence sync.Once
 func Get_newtypeEquivalence() gopurs_runtime.Value {
@@ -87,6 +104,23 @@ return gopurs_runtime.Apply2(v_1, gopurs_runtime.Apply(f_0, x_2), gopurs_runtime
 }))
 	})
 	return cache_contravariantEquivalence
+}
+
+var cache_contravariantEquivalence__gopurs_runtime_Value_506233683 gopurs_runtime.Value
+var once_contravariantEquivalence__gopurs_runtime_Value_506233683 sync.Once
+func Get_contravariantEquivalence__gopurs_runtime_Value_506233683() gopurs_runtime.Value {
+	once_contravariantEquivalence__gopurs_runtime_Value_506233683.Do(func() {
+		cache_contravariantEquivalence__gopurs_runtime_Value_506233683 = gopurs_runtime.RecordDict1("cmap", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(v_1, gopurs_runtime.Apply(f_0, x_2), gopurs_runtime.Apply(f_0, y_3))
+})
+})
+})
+}))
+	})
+	return cache_contravariantEquivalence__gopurs_runtime_Value_506233683
 }
 
 var cache_comparisonEquivalence gopurs_runtime.Value

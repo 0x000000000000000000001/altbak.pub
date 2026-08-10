@@ -106,7 +106,7 @@ func _ToCodePointArray(fallback interface{}, unsafeCodePointAt0 interface{}, str
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs__CodePointAt = // TAST: (Func [(Func [Int, String] (ADT ["Data","Maybe","Maybe"] [Int])), (Func [(TypeVar a)] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)])), (ADT ["Data","Maybe","Maybe"] [(TypeVar a)]), (Func [String] Int), Int, String] (ADT ["Data","Maybe","Maybe"] [Int]))
+var _Gopurs__CodePointAt = // TAST: (Func [(Func [Int, String] (ADT ["Data","Maybe","Maybe"] [Int])), (ForAll [a] (Func [(TypeVar a)] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)]))), (ForAll [a] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)])), (Func [String] Int), Int, String] (ADT ["Data","Maybe","Maybe"] [Int]))
 gopurs_runtime.Func6(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value, arg5 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := func(p0_0 any) any {

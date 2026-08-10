@@ -69,15 +69,15 @@ return Call_foldrWithIndex(dict_0_box)
 	return cache_foldrWithIndex
 }
 
-var cache_foldrWithIndex__gopurs_runtime_Value_1743660276 gopurs_runtime.Value
-var once_foldrWithIndex__gopurs_runtime_Value_1743660276 sync.Once
-func Get_foldrWithIndex__gopurs_runtime_Value_1743660276() gopurs_runtime.Value {
-	once_foldrWithIndex__gopurs_runtime_Value_1743660276.Do(func() {
-		cache_foldrWithIndex__gopurs_runtime_Value_1743660276 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_foldrWithIndex__gopurs_runtime_Value_1743660276(dict_0_box)
+var cache_foldrWithIndex__gopurs_runtime_Value_2986161357 gopurs_runtime.Value
+var once_foldrWithIndex__gopurs_runtime_Value_2986161357 sync.Once
+func Get_foldrWithIndex__gopurs_runtime_Value_2986161357() gopurs_runtime.Value {
+	once_foldrWithIndex__gopurs_runtime_Value_2986161357.Do(func() {
+		cache_foldrWithIndex__gopurs_runtime_Value_2986161357 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_foldrWithIndex__gopurs_runtime_Value_2986161357(dict_0_box)
 })
 	})
-	return cache_foldrWithIndex__gopurs_runtime_Value_1743660276
+	return cache_foldrWithIndex__gopurs_runtime_Value_2986161357
 }
 
 var cache_traverseWithIndex_ gopurs_runtime.Value
@@ -124,15 +124,15 @@ return Call_foldlWithIndex(dict_0_box)
 	return cache_foldlWithIndex
 }
 
-var cache_foldlWithIndex__gopurs_runtime_Value_1743660276 gopurs_runtime.Value
-var once_foldlWithIndex__gopurs_runtime_Value_1743660276 sync.Once
-func Get_foldlWithIndex__gopurs_runtime_Value_1743660276() gopurs_runtime.Value {
-	once_foldlWithIndex__gopurs_runtime_Value_1743660276.Do(func() {
-		cache_foldlWithIndex__gopurs_runtime_Value_1743660276 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_foldlWithIndex__gopurs_runtime_Value_1743660276(dict_0_box)
+var cache_foldlWithIndex__gopurs_runtime_Value_2986161357 gopurs_runtime.Value
+var once_foldlWithIndex__gopurs_runtime_Value_2986161357 sync.Once
+func Get_foldlWithIndex__gopurs_runtime_Value_2986161357() gopurs_runtime.Value {
+	once_foldlWithIndex__gopurs_runtime_Value_2986161357.Do(func() {
+		cache_foldlWithIndex__gopurs_runtime_Value_2986161357 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_foldlWithIndex__gopurs_runtime_Value_2986161357(dict_0_box)
 })
 	})
-	return cache_foldlWithIndex__gopurs_runtime_Value_1743660276
+	return cache_foldlWithIndex__gopurs_runtime_Value_2986161357
 }
 
 var cache_foldlDefault gopurs_runtime.Value
@@ -175,6 +175,35 @@ return gopurs_runtime.Apply3(f_0, pkg_Data_Unit.Get_unit(), (*pkg_Data_Tuple.Con
 	return cache_foldableWithIndexTuple
 }
 
+var cache_foldableWithIndexTuple__gopurs_runtime_Value_4170851755 gopurs_runtime.Value
+var once_foldableWithIndexTuple__gopurs_runtime_Value_4170851755 sync.Once
+func Get_foldableWithIndexTuple__gopurs_runtime_Value_4170851755() gopurs_runtime.Value {
+	once_foldableWithIndexTuple__gopurs_runtime_Value_4170851755.Do(func() {
+		cache_foldableWithIndexTuple__gopurs_runtime_Value_4170851755 = gopurs_runtime.RecordDict4("Foldable0", "foldMapWithIndex", "foldlWithIndex", "foldrWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Foldable.Get_foldableTuple()
+}), gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(f_1, pkg_Data_Unit.Get_unit(), (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1)
+})
+})
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(z_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(f_0, pkg_Data_Unit.Get_unit(), z_1, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1)
+})
+})
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(z_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(f_0, pkg_Data_Unit.Get_unit(), (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1, z_1)
+})
+})
+}))
+	})
+	return cache_foldableWithIndexTuple__gopurs_runtime_Value_4170851755
+}
+
 var cache_foldableWithIndexMultiplicative gopurs_runtime.Value
 var once_foldableWithIndexMultiplicative sync.Once
 func Get_foldableWithIndexMultiplicative() gopurs_runtime.Value {
@@ -194,6 +223,27 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_folda
 }))
 	})
 	return cache_foldableWithIndexMultiplicative
+}
+
+var cache_foldableWithIndexMultiplicative__gopurs_runtime_Value_3548846699 gopurs_runtime.Value
+var once_foldableWithIndexMultiplicative__gopurs_runtime_Value_3548846699 sync.Once
+func Get_foldableWithIndexMultiplicative__gopurs_runtime_Value_3548846699() gopurs_runtime.Value {
+	once_foldableWithIndexMultiplicative__gopurs_runtime_Value_3548846699.Do(func() {
+		cache_foldableWithIndexMultiplicative__gopurs_runtime_Value_3548846699 = gopurs_runtime.RecordDict4("Foldable0", "foldMapWithIndex", "foldlWithIndex", "foldrWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Foldable.Get_foldableMultiplicative__gopurs_runtime_Value_1841171440()
+}), gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
+foldMap8_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableMultiplicative(), "foldMap"), dictMonoid_0)
+_ = foldMap8_1_0
+return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(foldMap8_1_0, gopurs_runtime.Apply(f_2, pkg_Data_Unit.Get_unit()))
+})
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableMultiplicative(), "foldl"), gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit()))
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableMultiplicative(), "foldr"), gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit()))
+}))
+	})
+	return cache_foldableWithIndexMultiplicative__gopurs_runtime_Value_3548846699
 }
 
 var cache_foldableWithIndexMaybe gopurs_runtime.Value
@@ -217,6 +267,27 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_folda
 	return cache_foldableWithIndexMaybe
 }
 
+var cache_foldableWithIndexMaybe__gopurs_runtime_Value_1642852683 gopurs_runtime.Value
+var once_foldableWithIndexMaybe__gopurs_runtime_Value_1642852683 sync.Once
+func Get_foldableWithIndexMaybe__gopurs_runtime_Value_1642852683() gopurs_runtime.Value {
+	once_foldableWithIndexMaybe__gopurs_runtime_Value_1642852683.Do(func() {
+		cache_foldableWithIndexMaybe__gopurs_runtime_Value_1642852683 = gopurs_runtime.RecordDict4("Foldable0", "foldMapWithIndex", "foldlWithIndex", "foldrWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Foldable.Get_foldableMaybe()
+}), gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
+foldMap8_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableMaybe(), "foldMap"), dictMonoid_0)
+_ = foldMap8_1_0
+return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(foldMap8_1_0, gopurs_runtime.Apply(f_2, pkg_Data_Unit.Get_unit()))
+})
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableMaybe(), "foldl"), gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit()))
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableMaybe(), "foldr"), gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit()))
+}))
+	})
+	return cache_foldableWithIndexMaybe__gopurs_runtime_Value_1642852683
+}
+
 var cache_foldableWithIndexLast gopurs_runtime.Value
 var once_foldableWithIndexLast sync.Once
 func Get_foldableWithIndexLast() gopurs_runtime.Value {
@@ -236,6 +307,27 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_folda
 }))
 	})
 	return cache_foldableWithIndexLast
+}
+
+var cache_foldableWithIndexLast__gopurs_runtime_Value_1642852683 gopurs_runtime.Value
+var once_foldableWithIndexLast__gopurs_runtime_Value_1642852683 sync.Once
+func Get_foldableWithIndexLast__gopurs_runtime_Value_1642852683() gopurs_runtime.Value {
+	once_foldableWithIndexLast__gopurs_runtime_Value_1642852683.Do(func() {
+		cache_foldableWithIndexLast__gopurs_runtime_Value_1642852683 = gopurs_runtime.RecordDict4("Foldable0", "foldMapWithIndex", "foldlWithIndex", "foldrWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Foldable.Get_foldableLast()
+}), gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
+foldMap8_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableLast(), "foldMap"), dictMonoid_0)
+_ = foldMap8_1_0
+return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(foldMap8_1_0, gopurs_runtime.Apply(f_2, pkg_Data_Unit.Get_unit()))
+})
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableLast(), "foldl"), gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit()))
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableLast(), "foldr"), gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit()))
+}))
+	})
+	return cache_foldableWithIndexLast__gopurs_runtime_Value_1642852683
 }
 
 var cache_foldableWithIndexIdentity gopurs_runtime.Value
@@ -267,6 +359,35 @@ return gopurs_runtime.Apply3(f_0, pkg_Data_Unit.Get_unit(), v_2, z_1)
 	return cache_foldableWithIndexIdentity
 }
 
+var cache_foldableWithIndexIdentity__gopurs_runtime_Value_3548846699 gopurs_runtime.Value
+var once_foldableWithIndexIdentity__gopurs_runtime_Value_3548846699 sync.Once
+func Get_foldableWithIndexIdentity__gopurs_runtime_Value_3548846699() gopurs_runtime.Value {
+	once_foldableWithIndexIdentity__gopurs_runtime_Value_3548846699.Do(func() {
+		cache_foldableWithIndexIdentity__gopurs_runtime_Value_3548846699 = gopurs_runtime.RecordDict4("Foldable0", "foldMapWithIndex", "foldlWithIndex", "foldrWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Foldable.Get_foldableIdentity__gopurs_runtime_Value_1841171440()
+}), gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(f_1, pkg_Data_Unit.Get_unit(), v_2)
+})
+})
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(z_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(f_0, pkg_Data_Unit.Get_unit(), z_1, v_2)
+})
+})
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(z_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(f_0, pkg_Data_Unit.Get_unit(), v_2, z_1)
+})
+})
+}))
+	})
+	return cache_foldableWithIndexIdentity__gopurs_runtime_Value_3548846699
+}
+
 var cache_foldableWithIndexFirst gopurs_runtime.Value
 var once_foldableWithIndexFirst sync.Once
 func Get_foldableWithIndexFirst() gopurs_runtime.Value {
@@ -286,6 +407,27 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_folda
 }))
 	})
 	return cache_foldableWithIndexFirst
+}
+
+var cache_foldableWithIndexFirst__gopurs_runtime_Value_1642852683 gopurs_runtime.Value
+var once_foldableWithIndexFirst__gopurs_runtime_Value_1642852683 sync.Once
+func Get_foldableWithIndexFirst__gopurs_runtime_Value_1642852683() gopurs_runtime.Value {
+	once_foldableWithIndexFirst__gopurs_runtime_Value_1642852683.Do(func() {
+		cache_foldableWithIndexFirst__gopurs_runtime_Value_1642852683 = gopurs_runtime.RecordDict4("Foldable0", "foldMapWithIndex", "foldlWithIndex", "foldrWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Foldable.Get_foldableFirst()
+}), gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
+foldMap8_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableFirst(), "foldMap"), dictMonoid_0)
+_ = foldMap8_1_0
+return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(foldMap8_1_0, gopurs_runtime.Apply(f_2, pkg_Data_Unit.Get_unit()))
+})
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableFirst(), "foldl"), gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit()))
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableFirst(), "foldr"), gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit()))
+}))
+	})
+	return cache_foldableWithIndexFirst__gopurs_runtime_Value_1642852683
 }
 
 var cache_foldableWithIndexEither gopurs_runtime.Value
@@ -382,6 +524,100 @@ return __t3
 	return cache_foldableWithIndexEither
 }
 
+var cache_foldableWithIndexEither__gopurs_runtime_Value_162584107 gopurs_runtime.Value
+var once_foldableWithIndexEither__gopurs_runtime_Value_162584107 sync.Once
+func Get_foldableWithIndexEither__gopurs_runtime_Value_162584107() gopurs_runtime.Value {
+	once_foldableWithIndexEither__gopurs_runtime_Value_162584107.Do(func() {
+		cache_foldableWithIndexEither__gopurs_runtime_Value_162584107 = gopurs_runtime.RecordDict4("Foldable0", "foldMapWithIndex", "foldlWithIndex", "foldrWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Foldable.Get_foldableEither()
+}), gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
+mempty_1_0 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
+_ = mempty_1_0
+return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t1 gopurs_runtime.Value
+{
+if (v1_3.Type == 9 && v1_3.IntVal == 3711209382) {
+__t1 = mempty_1_0
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (v1_3.Type == 9 && v1_3.IntVal == 2465973597) {
+__t1 = gopurs_runtime.Apply2(v_2, pkg_Data_Unit.Get_unit(), (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V0)
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_1:
+return __t1
+})
+})
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t2 gopurs_runtime.Value
+{
+if (v2_2.Type == 9 && v2_2.IntVal == 3711209382) {
+__t2 = v1_1
+goto end_branch_2
+} else {
+
+}
+}
+{
+if (v2_2.Type == 9 && v2_2.IntVal == 2465973597) {
+__t2 = gopurs_runtime.Apply3(v_0, pkg_Data_Unit.Get_unit(), v1_1, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0)
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_2:
+return __t2
+})
+})
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t3 gopurs_runtime.Value
+{
+if (v2_2.Type == 9 && v2_2.IntVal == 3711209382) {
+__t3 = v1_1
+goto end_branch_3
+} else {
+
+}
+}
+{
+if (v2_2.Type == 9 && v2_2.IntVal == 2465973597) {
+__t3 = gopurs_runtime.Apply3(v_0, pkg_Data_Unit.Get_unit(), (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0, v1_1)
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_3:
+return __t3
+})
+})
+}))
+	})
+	return cache_foldableWithIndexEither__gopurs_runtime_Value_162584107
+}
+
 var cache_foldableWithIndexDual gopurs_runtime.Value
 var once_foldableWithIndexDual sync.Once
 func Get_foldableWithIndexDual() gopurs_runtime.Value {
@@ -403,6 +639,27 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_folda
 	return cache_foldableWithIndexDual
 }
 
+var cache_foldableWithIndexDual__gopurs_runtime_Value_3548846699 gopurs_runtime.Value
+var once_foldableWithIndexDual__gopurs_runtime_Value_3548846699 sync.Once
+func Get_foldableWithIndexDual__gopurs_runtime_Value_3548846699() gopurs_runtime.Value {
+	once_foldableWithIndexDual__gopurs_runtime_Value_3548846699.Do(func() {
+		cache_foldableWithIndexDual__gopurs_runtime_Value_3548846699 = gopurs_runtime.RecordDict4("Foldable0", "foldMapWithIndex", "foldlWithIndex", "foldrWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Foldable.Get_foldableDual__gopurs_runtime_Value_1841171440()
+}), gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
+foldMap8_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableDual(), "foldMap"), dictMonoid_0)
+_ = foldMap8_1_0
+return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(foldMap8_1_0, gopurs_runtime.Apply(f_2, pkg_Data_Unit.Get_unit()))
+})
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableDual(), "foldl"), gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit()))
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableDual(), "foldr"), gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit()))
+}))
+	})
+	return cache_foldableWithIndexDual__gopurs_runtime_Value_3548846699
+}
+
 var cache_foldableWithIndexDisj gopurs_runtime.Value
 var once_foldableWithIndexDisj sync.Once
 func Get_foldableWithIndexDisj() gopurs_runtime.Value {
@@ -422,6 +679,27 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_folda
 }))
 	})
 	return cache_foldableWithIndexDisj
+}
+
+var cache_foldableWithIndexDisj__gopurs_runtime_Value_3548846699 gopurs_runtime.Value
+var once_foldableWithIndexDisj__gopurs_runtime_Value_3548846699 sync.Once
+func Get_foldableWithIndexDisj__gopurs_runtime_Value_3548846699() gopurs_runtime.Value {
+	once_foldableWithIndexDisj__gopurs_runtime_Value_3548846699.Do(func() {
+		cache_foldableWithIndexDisj__gopurs_runtime_Value_3548846699 = gopurs_runtime.RecordDict4("Foldable0", "foldMapWithIndex", "foldlWithIndex", "foldrWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Foldable.Get_foldableDisj__gopurs_runtime_Value_1841171440()
+}), gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
+foldMap8_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableDisj(), "foldMap"), dictMonoid_0)
+_ = foldMap8_1_0
+return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(foldMap8_1_0, gopurs_runtime.Apply(f_2, pkg_Data_Unit.Get_unit()))
+})
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableDisj(), "foldl"), gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit()))
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableDisj(), "foldr"), gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit()))
+}))
+	})
+	return cache_foldableWithIndexDisj__gopurs_runtime_Value_3548846699
 }
 
 var cache_foldableWithIndexConst gopurs_runtime.Value
@@ -455,6 +733,37 @@ return z_1
 	return cache_foldableWithIndexConst
 }
 
+var cache_foldableWithIndexConst__gopurs_runtime_Value_1906290739 gopurs_runtime.Value
+var once_foldableWithIndexConst__gopurs_runtime_Value_1906290739 sync.Once
+func Get_foldableWithIndexConst__gopurs_runtime_Value_1906290739() gopurs_runtime.Value {
+	once_foldableWithIndexConst__gopurs_runtime_Value_1906290739.Do(func() {
+		cache_foldableWithIndexConst__gopurs_runtime_Value_1906290739 = gopurs_runtime.RecordDict4("Foldable0", "foldMapWithIndex", "foldlWithIndex", "foldrWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Foldable.Get_foldableConst__gopurs_runtime_Value_943899702()
+}), gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
+mempty_1_0 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
+_ = mempty_1_0
+return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return mempty_1_0
+})
+})
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(z_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return z_1
+})
+})
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(z_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return z_1
+})
+})
+}))
+	})
+	return cache_foldableWithIndexConst__gopurs_runtime_Value_1906290739
+}
+
 var cache_foldableWithIndexConj gopurs_runtime.Value
 var once_foldableWithIndexConj sync.Once
 func Get_foldableWithIndexConj() gopurs_runtime.Value {
@@ -476,6 +785,27 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_folda
 	return cache_foldableWithIndexConj
 }
 
+var cache_foldableWithIndexConj__gopurs_runtime_Value_3548846699 gopurs_runtime.Value
+var once_foldableWithIndexConj__gopurs_runtime_Value_3548846699 sync.Once
+func Get_foldableWithIndexConj__gopurs_runtime_Value_3548846699() gopurs_runtime.Value {
+	once_foldableWithIndexConj__gopurs_runtime_Value_3548846699.Do(func() {
+		cache_foldableWithIndexConj__gopurs_runtime_Value_3548846699 = gopurs_runtime.RecordDict4("Foldable0", "foldMapWithIndex", "foldlWithIndex", "foldrWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Foldable.Get_foldableConj__gopurs_runtime_Value_1841171440()
+}), gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
+foldMap8_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableConj(), "foldMap"), dictMonoid_0)
+_ = foldMap8_1_0
+return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(foldMap8_1_0, gopurs_runtime.Apply(f_2, pkg_Data_Unit.Get_unit()))
+})
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableConj(), "foldl"), gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit()))
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableConj(), "foldr"), gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit()))
+}))
+	})
+	return cache_foldableWithIndexConj__gopurs_runtime_Value_3548846699
+}
+
 var cache_foldableWithIndexAdditive gopurs_runtime.Value
 var once_foldableWithIndexAdditive sync.Once
 func Get_foldableWithIndexAdditive() gopurs_runtime.Value {
@@ -495,6 +825,27 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_folda
 }))
 	})
 	return cache_foldableWithIndexAdditive
+}
+
+var cache_foldableWithIndexAdditive__gopurs_runtime_Value_3548846699 gopurs_runtime.Value
+var once_foldableWithIndexAdditive__gopurs_runtime_Value_3548846699 sync.Once
+func Get_foldableWithIndexAdditive__gopurs_runtime_Value_3548846699() gopurs_runtime.Value {
+	once_foldableWithIndexAdditive__gopurs_runtime_Value_3548846699.Do(func() {
+		cache_foldableWithIndexAdditive__gopurs_runtime_Value_3548846699 = gopurs_runtime.RecordDict4("Foldable0", "foldMapWithIndex", "foldlWithIndex", "foldrWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Foldable.Get_foldableAdditive__gopurs_runtime_Value_1841171440()
+}), gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
+foldMap8_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableAdditive(), "foldMap"), dictMonoid_0)
+_ = foldMap8_1_0
+return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(foldMap8_1_0, gopurs_runtime.Apply(f_2, pkg_Data_Unit.Get_unit()))
+})
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableAdditive(), "foldl"), gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit()))
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableAdditive(), "foldr"), gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit()))
+}))
+	})
+	return cache_foldableWithIndexAdditive__gopurs_runtime_Value_3548846699
 }
 
 var cache_foldWithIndexM gopurs_runtime.Value
@@ -574,6 +925,61 @@ return gopurs_runtime.Apply(__local_var_2_3, gopurs_runtime.Apply(__local_var_3_
 	return cache_foldableWithIndexArray
 }
 
+var cache_foldableWithIndexArray__gopurs_runtime_Value_740253118 gopurs_runtime.Value
+var once_foldableWithIndexArray__gopurs_runtime_Value_740253118 sync.Once
+func Get_foldableWithIndexArray__gopurs_runtime_Value_740253118() gopurs_runtime.Value {
+	once_foldableWithIndexArray__gopurs_runtime_Value_740253118.Do(func() {
+		cache_foldableWithIndexArray__gopurs_runtime_Value_740253118 = gopurs_runtime.RecordDict4("Foldable0", "foldMapWithIndex", "foldlWithIndex", "foldrWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Foldable.Get_foldableArray__gopurs_runtime_Value_3859409398()
+}), gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
+mempty_1_0 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
+_ = mempty_1_0
+return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_foldableWithIndexArray(), "foldrWithIndex"), gopurs_runtime.Func(func(i_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(acc_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}), "append"), gopurs_runtime.Apply2(f_2, i_3, x_4), acc_5)
+})
+})
+}), mempty_1_0)
+})
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(z_1 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_2_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableArray(), "foldl"), gopurs_runtime.Func(func(y_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(f_0, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V0, y_2, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V1)
+})
+}), z_1)
+_ = __local_var_2_1
+__local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_FunctorWithIndex.Get_functorWithIndexArray(), "mapWithIndex"), pkg_Data_Tuple.Get_Tuple())
+_ = __local_var_3_2
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_2_1, gopurs_runtime.Apply(__local_var_3_2, x_4))
+})
+})
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(z_1 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_2_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableArray(), "foldr"), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_3_4 := (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0
+_ = __local_var_3_4
+__local_var_4_5 := (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1
+_ = __local_var_4_5
+return gopurs_runtime.Func(func(y_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(f_0, __local_var_3_4, __local_var_4_5, y_5)
+})
+}), z_1)
+_ = __local_var_2_3
+__local_var_3_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_FunctorWithIndex.Get_functorWithIndexArray(), "mapWithIndex"), pkg_Data_Tuple.Get_Tuple())
+_ = __local_var_3_6
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_2_3, gopurs_runtime.Apply(__local_var_3_6, x_4))
+})
+})
+}))
+	})
+	return cache_foldableWithIndexArray__gopurs_runtime_Value_740253118
+}
+
 var cache_foldMapWithIndexDefaultL gopurs_runtime.Value
 var once_foldMapWithIndexDefaultL sync.Once
 func Get_foldMapWithIndexDefaultL() gopurs_runtime.Value {
@@ -596,15 +1002,15 @@ return Call_foldMapWithIndex(dict_0_box)
 	return cache_foldMapWithIndex
 }
 
-var cache_foldMapWithIndex__gopurs_runtime_Value_1856540872 gopurs_runtime.Value
-var once_foldMapWithIndex__gopurs_runtime_Value_1856540872 sync.Once
-func Get_foldMapWithIndex__gopurs_runtime_Value_1856540872() gopurs_runtime.Value {
-	once_foldMapWithIndex__gopurs_runtime_Value_1856540872.Do(func() {
-		cache_foldMapWithIndex__gopurs_runtime_Value_1856540872 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_foldMapWithIndex__gopurs_runtime_Value_1856540872(dict_0_box)
+var cache_foldMapWithIndex__gopurs_runtime_Value_2292551140 gopurs_runtime.Value
+var once_foldMapWithIndex__gopurs_runtime_Value_2292551140 sync.Once
+func Get_foldMapWithIndex__gopurs_runtime_Value_2292551140() gopurs_runtime.Value {
+	once_foldMapWithIndex__gopurs_runtime_Value_2292551140.Do(func() {
+		cache_foldMapWithIndex__gopurs_runtime_Value_2292551140 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_foldMapWithIndex__gopurs_runtime_Value_2292551140(dict_0_box)
 })
 	})
-	return cache_foldMapWithIndex__gopurs_runtime_Value_1856540872
+	return cache_foldMapWithIndex__gopurs_runtime_Value_2292551140
 }
 
 var cache_foldableWithIndexApp gopurs_runtime.Value
@@ -745,7 +1151,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "foldrWithIndex")
 }
 
-func Call_foldrWithIndex__gopurs_runtime_Value_1743660276(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_foldrWithIndex__gopurs_runtime_Value_2986161357(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "foldrWithIndex")
@@ -809,7 +1215,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "foldlWithIndex")
 }
 
-func Call_foldlWithIndex__gopurs_runtime_Value_1743660276(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_foldlWithIndex__gopurs_runtime_Value_2986161357(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "foldlWithIndex")
@@ -889,7 +1295,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "foldMapWithIndex")
 }
 
-func Call_foldMapWithIndex__gopurs_runtime_Value_1856540872(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_foldMapWithIndex__gopurs_runtime_Value_2292551140(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "foldMapWithIndex")

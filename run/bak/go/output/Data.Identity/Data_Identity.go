@@ -129,6 +129,19 @@ return gopurs_runtime.Apply(f_0, m_1)
 	return cache_functorIdentity
 }
 
+var cache_functorIdentity__gopurs_runtime_Value_943655089 gopurs_runtime.Value
+var once_functorIdentity__gopurs_runtime_Value_943655089 sync.Once
+func Get_functorIdentity__gopurs_runtime_Value_943655089() gopurs_runtime.Value {
+	once_functorIdentity__gopurs_runtime_Value_943655089.Do(func() {
+		cache_functorIdentity__gopurs_runtime_Value_943655089 = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(m_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_0, m_1)
+})
+}))
+	})
+	return cache_functorIdentity__gopurs_runtime_Value_943655089
+}
+
 var cache_invariantIdentity gopurs_runtime.Value
 var once_invariantIdentity sync.Once
 func Get_invariantIdentity() gopurs_runtime.Value {
@@ -155,6 +168,21 @@ return gopurs_runtime.Apply(f_0, m_1)
 }))
 	})
 	return cache_extendIdentity
+}
+
+var cache_extendIdentity__gopurs_runtime_Value_2317691272 gopurs_runtime.Value
+var once_extendIdentity__gopurs_runtime_Value_2317691272 sync.Once
+func Get_extendIdentity__gopurs_runtime_Value_2317691272() gopurs_runtime.Value {
+	once_extendIdentity__gopurs_runtime_Value_2317691272.Do(func() {
+		cache_extendIdentity__gopurs_runtime_Value_2317691272 = gopurs_runtime.RecordDict2("Functor0", "extend", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_functorIdentity__gopurs_runtime_Value_943655089()
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(m_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_0, m_1)
+})
+}))
+	})
+	return cache_extendIdentity__gopurs_runtime_Value_2317691272
 }
 
 var cache_euclideanRingIdentity gopurs_runtime.Value
@@ -188,6 +216,17 @@ return gopurs_runtime.RecordGet(dictEq_0, "eq")
 }))
 	})
 	return cache_eq1Identity
+}
+
+var cache_eq1Identity__gopurs_runtime_Value_1905950174 gopurs_runtime.Value
+var once_eq1Identity__gopurs_runtime_Value_1905950174 sync.Once
+func Get_eq1Identity__gopurs_runtime_Value_1905950174() gopurs_runtime.Value {
+	once_eq1Identity__gopurs_runtime_Value_1905950174.Do(func() {
+		cache_eq1Identity__gopurs_runtime_Value_1905950174 = gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordGet(dictEq_0, "eq")
+}))
+	})
+	return cache_eq1Identity__gopurs_runtime_Value_1905950174
 }
 
 var cache_ord1Identity gopurs_runtime.Value
@@ -264,6 +303,21 @@ return gopurs_runtime.Apply(v_0, v1_1)
 	return cache_applyIdentity
 }
 
+var cache_applyIdentity__gopurs_runtime_Value_3199351098 gopurs_runtime.Value
+var once_applyIdentity__gopurs_runtime_Value_3199351098 sync.Once
+func Get_applyIdentity__gopurs_runtime_Value_3199351098() gopurs_runtime.Value {
+	once_applyIdentity__gopurs_runtime_Value_3199351098.Do(func() {
+		cache_applyIdentity__gopurs_runtime_Value_3199351098 = gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_functorIdentity__gopurs_runtime_Value_943655089()
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v_0, v1_1)
+})
+}))
+	})
+	return cache_applyIdentity__gopurs_runtime_Value_3199351098
+}
+
 var cache_bindIdentity gopurs_runtime.Value
 var once_bindIdentity sync.Once
 func Get_bindIdentity() gopurs_runtime.Value {
@@ -279,6 +333,21 @@ return gopurs_runtime.Apply(f_1, v_0)
 	return cache_bindIdentity
 }
 
+var cache_bindIdentity__gopurs_runtime_Value_329376103 gopurs_runtime.Value
+var once_bindIdentity__gopurs_runtime_Value_329376103 sync.Once
+func Get_bindIdentity__gopurs_runtime_Value_329376103() gopurs_runtime.Value {
+	once_bindIdentity__gopurs_runtime_Value_329376103.Do(func() {
+		cache_bindIdentity__gopurs_runtime_Value_329376103 = gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_applyIdentity__gopurs_runtime_Value_3199351098()
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_1, v_0)
+})
+}))
+	})
+	return cache_bindIdentity__gopurs_runtime_Value_329376103
+}
+
 var cache_applicativeIdentity gopurs_runtime.Value
 var once_applicativeIdentity sync.Once
 func Get_applicativeIdentity() gopurs_runtime.Value {
@@ -288,6 +357,17 @@ return Get_applyIdentity()
 }), Get_Identity())
 	})
 	return cache_applicativeIdentity
+}
+
+var cache_applicativeIdentity__gopurs_runtime_Value_4045440648 gopurs_runtime.Value
+var once_applicativeIdentity__gopurs_runtime_Value_4045440648 sync.Once
+func Get_applicativeIdentity__gopurs_runtime_Value_4045440648() gopurs_runtime.Value {
+	once_applicativeIdentity__gopurs_runtime_Value_4045440648.Do(func() {
+		cache_applicativeIdentity__gopurs_runtime_Value_4045440648 = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_applyIdentity__gopurs_runtime_Value_3199351098()
+}), Get_Identity())
+	})
+	return cache_applicativeIdentity__gopurs_runtime_Value_4045440648
 }
 
 var cache_monadIdentity gopurs_runtime.Value
@@ -301,6 +381,19 @@ return Get_bindIdentity()
 }))
 	})
 	return cache_monadIdentity
+}
+
+var cache_monadIdentity__gopurs_runtime_Value_1104192371 gopurs_runtime.Value
+var once_monadIdentity__gopurs_runtime_Value_1104192371 sync.Once
+func Get_monadIdentity__gopurs_runtime_Value_1104192371() gopurs_runtime.Value {
+	once_monadIdentity__gopurs_runtime_Value_1104192371.Do(func() {
+		cache_monadIdentity__gopurs_runtime_Value_1104192371 = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_applicativeIdentity__gopurs_runtime_Value_4045440648()
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_bindIdentity__gopurs_runtime_Value_329376103()
+}))
+	})
+	return cache_monadIdentity__gopurs_runtime_Value_1104192371
 }
 
 var cache_altIdentity gopurs_runtime.Value

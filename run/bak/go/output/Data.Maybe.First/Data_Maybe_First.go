@@ -56,6 +56,32 @@ return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointe
 	return cache_semigroupFirst
 }
 
+var cache_semigroupFirst__gopurs_runtime_Value_3179391308 gopurs_runtime.Value
+var once_semigroupFirst__gopurs_runtime_Value_3179391308 sync.Once
+func Get_semigroupFirst__gopurs_runtime_Value_3179391308() gopurs_runtime.Value {
+	once_semigroupFirst__gopurs_runtime_Value_3179391308.Do(func() {
+		cache_semigroupFirst__gopurs_runtime_Value_3179391308 = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t0 gopurs_runtime.Value
+{
+if (v_0.Type == 9 && v_0.IntVal == 930809136 && v_0.UnsafePtr != nil) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v_0.UnsafePtr))}
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v1_1.UnsafePtr))}
+}
+end_branch_0:
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(__t0.UnsafePtr))}
+})
+}))
+	})
+	return cache_semigroupFirst__gopurs_runtime_Value_3179391308
+}
+
 var cache_ordFirst gopurs_runtime.Value
 var once_ordFirst sync.Once
 func Get_ordFirst() gopurs_runtime.Value {
@@ -125,6 +151,15 @@ func Get_functorFirst() gopurs_runtime.Value {
 	return cache_functorFirst
 }
 
+var cache_functorFirst__gopurs_runtime_Value_2097654001 gopurs_runtime.Value
+var once_functorFirst__gopurs_runtime_Value_2097654001 sync.Once
+func Get_functorFirst__gopurs_runtime_Value_2097654001() gopurs_runtime.Value {
+	once_functorFirst__gopurs_runtime_Value_2097654001.Do(func() {
+		cache_functorFirst__gopurs_runtime_Value_2097654001 = pkg_Data_Maybe.Get_functorMaybe()
+	})
+	return cache_functorFirst__gopurs_runtime_Value_2097654001
+}
+
 var cache_extendFirst gopurs_runtime.Value
 var once_extendFirst sync.Once
 func Get_extendFirst() gopurs_runtime.Value {
@@ -192,6 +227,15 @@ func Get_applicativeFirst() gopurs_runtime.Value {
 	return cache_applicativeFirst
 }
 
+var cache_applicativeFirst__gopurs_runtime_Value_500933224 gopurs_runtime.Value
+var once_applicativeFirst__gopurs_runtime_Value_500933224 sync.Once
+func Get_applicativeFirst__gopurs_runtime_Value_500933224() gopurs_runtime.Value {
+	once_applicativeFirst__gopurs_runtime_Value_500933224.Do(func() {
+		cache_applicativeFirst__gopurs_runtime_Value_500933224 = pkg_Data_Maybe.Get_applicativeMaybe()
+	})
+	return cache_applicativeFirst__gopurs_runtime_Value_500933224
+}
+
 var cache_altFirst gopurs_runtime.Value
 var once_altFirst sync.Once
 func Get_altFirst() gopurs_runtime.Value {
@@ -203,6 +247,17 @@ return pkg_Data_Maybe.Get_functorMaybe()
 	return cache_altFirst
 }
 
+var cache_altFirst__gopurs_runtime_Value_4201091523 gopurs_runtime.Value
+var once_altFirst__gopurs_runtime_Value_4201091523 sync.Once
+func Get_altFirst__gopurs_runtime_Value_4201091523() gopurs_runtime.Value {
+	once_altFirst__gopurs_runtime_Value_4201091523.Do(func() {
+		cache_altFirst__gopurs_runtime_Value_4201091523 = gopurs_runtime.RecordDict2("Functor0", "alt", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Maybe.Get_functorMaybe()
+}), gopurs_runtime.RecordGet(Get_semigroupFirst(), "append"))
+	})
+	return cache_altFirst__gopurs_runtime_Value_4201091523
+}
+
 var cache_plusFirst gopurs_runtime.Value
 var once_plusFirst sync.Once
 func Get_plusFirst() gopurs_runtime.Value {
@@ -212,6 +267,17 @@ return Get_altFirst()
 }), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(gopurs_runtime.RecordGet(Get_monoidFirst(), "mempty").UnsafePtr))})
 	})
 	return cache_plusFirst
+}
+
+var cache_plusFirst__gopurs_runtime_Value_400696082 gopurs_runtime.Value
+var once_plusFirst__gopurs_runtime_Value_400696082 sync.Once
+func Get_plusFirst__gopurs_runtime_Value_400696082() gopurs_runtime.Value {
+	once_plusFirst__gopurs_runtime_Value_400696082.Do(func() {
+		cache_plusFirst__gopurs_runtime_Value_400696082 = gopurs_runtime.RecordDict2("Alt0", "empty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_altFirst()
+}), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(gopurs_runtime.RecordGet(Get_monoidFirst(), "mempty").UnsafePtr))})
+	})
+	return cache_plusFirst__gopurs_runtime_Value_400696082
 }
 
 var cache_alternativeFirst gopurs_runtime.Value

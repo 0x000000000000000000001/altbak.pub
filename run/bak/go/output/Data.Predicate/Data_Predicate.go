@@ -79,6 +79,21 @@ return gopurs_runtime.Apply(v_1, gopurs_runtime.Apply(f_0, x_2))
 	return cache_contravariantPredicate
 }
 
+var cache_contravariantPredicate__gopurs_runtime_Value_2354513683 gopurs_runtime.Value
+var once_contravariantPredicate__gopurs_runtime_Value_2354513683 sync.Once
+func Get_contravariantPredicate__gopurs_runtime_Value_2354513683() gopurs_runtime.Value {
+	once_contravariantPredicate__gopurs_runtime_Value_2354513683.Do(func() {
+		cache_contravariantPredicate__gopurs_runtime_Value_2354513683 = gopurs_runtime.RecordDict1("cmap", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v_1, gopurs_runtime.Apply(f_0, x_2))
+})
+})
+}))
+	})
+	return cache_contravariantPredicate__gopurs_runtime_Value_2354513683
+}
+
 var cache_booleanAlgebraPredicate gopurs_runtime.Value
 var once_booleanAlgebraPredicate sync.Once
 func Get_booleanAlgebraPredicate() gopurs_runtime.Value {

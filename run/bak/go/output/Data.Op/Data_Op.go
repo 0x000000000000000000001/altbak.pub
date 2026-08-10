@@ -31,6 +31,21 @@ return gopurs_runtime.Apply(v1_1, gopurs_runtime.Apply(v_0, x_2))
 	return cache_semigroupoidOp
 }
 
+var cache_semigroupoidOp__gopurs_runtime_Value_3459988149 gopurs_runtime.Value
+var once_semigroupoidOp__gopurs_runtime_Value_3459988149 sync.Once
+func Get_semigroupoidOp__gopurs_runtime_Value_3459988149() gopurs_runtime.Value {
+	once_semigroupoidOp__gopurs_runtime_Value_3459988149.Do(func() {
+		cache_semigroupoidOp__gopurs_runtime_Value_3459988149 = gopurs_runtime.RecordDict1("compose", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v1_1, gopurs_runtime.Apply(v_0, x_2))
+})
+})
+}))
+	})
+	return cache_semigroupoidOp__gopurs_runtime_Value_3459988149
+}
+
 var cache_semigroupOp gopurs_runtime.Value
 var once_semigroupOp sync.Once
 func Get_semigroupOp() gopurs_runtime.Value {
@@ -77,6 +92,21 @@ return gopurs_runtime.Apply(v_1, gopurs_runtime.Apply(f_0, x_2))
 }))
 	})
 	return cache_contravariantOp
+}
+
+var cache_contravariantOp__gopurs_runtime_Value_1861723411 gopurs_runtime.Value
+var once_contravariantOp__gopurs_runtime_Value_1861723411 sync.Once
+func Get_contravariantOp__gopurs_runtime_Value_1861723411() gopurs_runtime.Value {
+	once_contravariantOp__gopurs_runtime_Value_1861723411.Do(func() {
+		cache_contravariantOp__gopurs_runtime_Value_1861723411 = gopurs_runtime.RecordDict1("cmap", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v_1, gopurs_runtime.Apply(f_0, x_2))
+})
+})
+}))
+	})
+	return cache_contravariantOp__gopurs_runtime_Value_1861723411
 }
 
 var cache_categoryOp gopurs_runtime.Value

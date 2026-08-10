@@ -48,15 +48,15 @@ return Call_traverse(dict_0_box)
 	return cache_traverse
 }
 
-var cache_traverse__gopurs_runtime_Value_2265355576 gopurs_runtime.Value
-var once_traverse__gopurs_runtime_Value_2265355576 sync.Once
-func Get_traverse__gopurs_runtime_Value_2265355576() gopurs_runtime.Value {
-	once_traverse__gopurs_runtime_Value_2265355576.Do(func() {
-		cache_traverse__gopurs_runtime_Value_2265355576 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_traverse__gopurs_runtime_Value_2265355576(dict_0_box)
+var cache_traverse__gopurs_runtime_Value_314957093 gopurs_runtime.Value
+var once_traverse__gopurs_runtime_Value_314957093 sync.Once
+func Get_traverse__gopurs_runtime_Value_314957093() gopurs_runtime.Value {
+	once_traverse__gopurs_runtime_Value_314957093.Do(func() {
+		cache_traverse__gopurs_runtime_Value_314957093 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_traverse__gopurs_runtime_Value_314957093(dict_0_box)
 })
 	})
-	return cache_traverse__gopurs_runtime_Value_2265355576
+	return cache_traverse__gopurs_runtime_Value_314957093
 }
 
 var cache_traversableTuple gopurs_runtime.Value
@@ -82,6 +82,29 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopur
 	return cache_traversableTuple
 }
 
+var cache_traversableTuple__gopurs_runtime_Value_3228991731 gopurs_runtime.Value
+var once_traversableTuple__gopurs_runtime_Value_3228991731 sync.Once
+func Get_traversableTuple__gopurs_runtime_Value_3228991731() gopurs_runtime.Value {
+	once_traversableTuple__gopurs_runtime_Value_3228991731.Do(func() {
+		cache_traversableTuple__gopurs_runtime_Value_3228991731 = gopurs_runtime.RecordDict4("Foldable1", "Functor0", "sequence", "traverse", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Foldable.Get_foldableTuple()
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Tuple.Get_functorTuple()
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Apply(pkg_Data_Tuple.Get_Tuple(), (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V0), (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V1)
+})
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Apply(pkg_Data_Tuple.Get_Tuple(), (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0), gopurs_runtime.Apply(f_1, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1))
+})
+})
+}))
+	})
+	return cache_traversableTuple__gopurs_runtime_Value_3228991731
+}
+
 var cache_traversableMultiplicative gopurs_runtime.Value
 var once_traversableMultiplicative sync.Once
 func Get_traversableMultiplicative() gopurs_runtime.Value {
@@ -103,6 +126,29 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopur
 }))
 	})
 	return cache_traversableMultiplicative
+}
+
+var cache_traversableMultiplicative__gopurs_runtime_Value_3840848827 gopurs_runtime.Value
+var once_traversableMultiplicative__gopurs_runtime_Value_3840848827 sync.Once
+func Get_traversableMultiplicative__gopurs_runtime_Value_3840848827() gopurs_runtime.Value {
+	once_traversableMultiplicative__gopurs_runtime_Value_3840848827.Do(func() {
+		cache_traversableMultiplicative__gopurs_runtime_Value_3840848827 = gopurs_runtime.RecordDict4("Foldable1", "Functor0", "sequence", "traverse", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Foldable.Get_foldableMultiplicative__gopurs_runtime_Value_1841171440()
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Monoid_Multiplicative.Get_functorMultiplicative__gopurs_runtime_Value_943655089()
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Monoid_Multiplicative.Get_Multiplicative(), v_1)
+})
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Monoid_Multiplicative.Get_Multiplicative(), gopurs_runtime.Apply(f_1, v_2))
+})
+})
+}))
+	})
+	return cache_traversableMultiplicative__gopurs_runtime_Value_3840848827
 }
 
 var cache_traversableMaybe gopurs_runtime.Value
@@ -170,6 +216,71 @@ return __t1
 	return cache_traversableMaybe
 }
 
+var cache_traversableMaybe__gopurs_runtime_Value_822285914 gopurs_runtime.Value
+var once_traversableMaybe__gopurs_runtime_Value_822285914 sync.Once
+func Get_traversableMaybe__gopurs_runtime_Value_822285914() gopurs_runtime.Value {
+	once_traversableMaybe__gopurs_runtime_Value_822285914.Do(func() {
+		cache_traversableMaybe__gopurs_runtime_Value_822285914 = gopurs_runtime.RecordDict4("Foldable1", "Functor0", "sequence", "traverse", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Foldable.Get_foldableMaybe()
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Maybe.Get_functorMaybe()
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t0 gopurs_runtime.Value
+{
+if (v_1.Type == 9 && v_1.IntVal == 930809136 && v_1.UnsafePtr == nil) {
+__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil})
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (v_1.Type == 9 && v_1.IntVal == 930809136 && v_1.UnsafePtr != nil) {
+__t0 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Maybe.Get_Just(), (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v_1.UnsafePtr).V0)
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_0:
+return __t0
+})
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t1 gopurs_runtime.Value
+{
+if (v1_2.Type == 9 && v1_2.IntVal == 930809136 && v1_2.UnsafePtr == nil) {
+__t1 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil})
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (v1_2.Type == 9 && v1_2.IntVal == 930809136 && v1_2.UnsafePtr != nil) {
+__t1 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Apply(v_1, (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v1_2.UnsafePtr).V0))
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_1:
+return __t1
+})
+})
+}))
+	})
+	return cache_traversableMaybe__gopurs_runtime_Value_822285914
+}
+
 var cache_traversableIdentity gopurs_runtime.Value
 var once_traversableIdentity sync.Once
 func Get_traversableIdentity() gopurs_runtime.Value {
@@ -191,6 +302,29 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopur
 }))
 	})
 	return cache_traversableIdentity
+}
+
+var cache_traversableIdentity__gopurs_runtime_Value_3840848827 gopurs_runtime.Value
+var once_traversableIdentity__gopurs_runtime_Value_3840848827 sync.Once
+func Get_traversableIdentity__gopurs_runtime_Value_3840848827() gopurs_runtime.Value {
+	once_traversableIdentity__gopurs_runtime_Value_3840848827.Do(func() {
+		cache_traversableIdentity__gopurs_runtime_Value_3840848827 = gopurs_runtime.RecordDict4("Foldable1", "Functor0", "sequence", "traverse", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Foldable.Get_foldableIdentity__gopurs_runtime_Value_1841171440()
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Identity.Get_functorIdentity__gopurs_runtime_Value_943655089()
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Identity.Get_Identity(), v_1)
+})
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Identity.Get_Identity(), gopurs_runtime.Apply(f_1, v_2))
+})
+})
+}))
+	})
+	return cache_traversableIdentity__gopurs_runtime_Value_3840848827
 }
 
 var cache_traversableEither gopurs_runtime.Value
@@ -258,6 +392,71 @@ return __t1
 	return cache_traversableEither
 }
 
+var cache_traversableEither__gopurs_runtime_Value_4232556979 gopurs_runtime.Value
+var once_traversableEither__gopurs_runtime_Value_4232556979 sync.Once
+func Get_traversableEither__gopurs_runtime_Value_4232556979() gopurs_runtime.Value {
+	once_traversableEither__gopurs_runtime_Value_4232556979.Do(func() {
+		cache_traversableEither__gopurs_runtime_Value_4232556979 = gopurs_runtime.RecordDict4("Foldable1", "Functor0", "sequence", "traverse", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Foldable.Get_foldableEither()
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Either.Get_functorEither()
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t0 gopurs_runtime.Value
+{
+if (v_1.Type == 9 && v_1.IntVal == 3711209382) {
+__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V0})})
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (v_1.Type == 9 && v_1.IntVal == 2465973597) {
+__t0 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Either.Get_Right(), (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V0)
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_0:
+return __t0
+})
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t1 gopurs_runtime.Value
+{
+if (v1_2.Type == 9 && v1_2.IntVal == 3711209382) {
+__t1 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v1_2.UnsafePtr).V0})})
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (v1_2.Type == 9 && v1_2.IntVal == 2465973597) {
+__t1 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Either.Get_Right(), gopurs_runtime.Apply(v_1, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v1_2.UnsafePtr).V0))
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_1:
+return __t1
+})
+})
+}))
+	})
+	return cache_traversableEither__gopurs_runtime_Value_4232556979
+}
+
 var cache_traversableDual gopurs_runtime.Value
 var once_traversableDual sync.Once
 func Get_traversableDual() gopurs_runtime.Value {
@@ -279,6 +478,29 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopur
 }))
 	})
 	return cache_traversableDual
+}
+
+var cache_traversableDual__gopurs_runtime_Value_3840848827 gopurs_runtime.Value
+var once_traversableDual__gopurs_runtime_Value_3840848827 sync.Once
+func Get_traversableDual__gopurs_runtime_Value_3840848827() gopurs_runtime.Value {
+	once_traversableDual__gopurs_runtime_Value_3840848827.Do(func() {
+		cache_traversableDual__gopurs_runtime_Value_3840848827 = gopurs_runtime.RecordDict4("Foldable1", "Functor0", "sequence", "traverse", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Foldable.Get_foldableDual__gopurs_runtime_Value_1841171440()
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Monoid_Dual.Get_functorDual__gopurs_runtime_Value_943655089()
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Monoid_Dual.Get_Dual(), v_1)
+})
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Monoid_Dual.Get_Dual(), gopurs_runtime.Apply(f_1, v_2))
+})
+})
+}))
+	})
+	return cache_traversableDual__gopurs_runtime_Value_3840848827
 }
 
 var cache_traversableDisj gopurs_runtime.Value
@@ -304,6 +526,29 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopur
 	return cache_traversableDisj
 }
 
+var cache_traversableDisj__gopurs_runtime_Value_3840848827 gopurs_runtime.Value
+var once_traversableDisj__gopurs_runtime_Value_3840848827 sync.Once
+func Get_traversableDisj__gopurs_runtime_Value_3840848827() gopurs_runtime.Value {
+	once_traversableDisj__gopurs_runtime_Value_3840848827.Do(func() {
+		cache_traversableDisj__gopurs_runtime_Value_3840848827 = gopurs_runtime.RecordDict4("Foldable1", "Functor0", "sequence", "traverse", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Foldable.Get_foldableDisj__gopurs_runtime_Value_1841171440()
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Monoid_Disj.Get_functorDisj__gopurs_runtime_Value_943655089()
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Monoid_Disj.Get_Disj(), v_1)
+})
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Monoid_Disj.Get_Disj(), gopurs_runtime.Apply(f_1, v_2))
+})
+})
+}))
+	})
+	return cache_traversableDisj__gopurs_runtime_Value_3840848827
+}
+
 var cache_traversableConst gopurs_runtime.Value
 var once_traversableConst sync.Once
 func Get_traversableConst() gopurs_runtime.Value {
@@ -327,6 +572,29 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"),
 	return cache_traversableConst
 }
 
+var cache_traversableConst__gopurs_runtime_Value_3861086397 gopurs_runtime.Value
+var once_traversableConst__gopurs_runtime_Value_3861086397 sync.Once
+func Get_traversableConst__gopurs_runtime_Value_3861086397() gopurs_runtime.Value {
+	once_traversableConst__gopurs_runtime_Value_3861086397.Do(func() {
+		cache_traversableConst__gopurs_runtime_Value_3861086397 = gopurs_runtime.RecordDict4("Foldable1", "Functor0", "sequence", "traverse", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Foldable.Get_foldableConst__gopurs_runtime_Value_943899702()
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Const.Get_functorConst__gopurs_runtime_Value_1992455793()
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), v_1)
+})
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), v1_2)
+})
+})
+}))
+	})
+	return cache_traversableConst__gopurs_runtime_Value_3861086397
+}
+
 var cache_traversableConj gopurs_runtime.Value
 var once_traversableConj sync.Once
 func Get_traversableConj() gopurs_runtime.Value {
@@ -348,6 +616,29 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopur
 }))
 	})
 	return cache_traversableConj
+}
+
+var cache_traversableConj__gopurs_runtime_Value_3840848827 gopurs_runtime.Value
+var once_traversableConj__gopurs_runtime_Value_3840848827 sync.Once
+func Get_traversableConj__gopurs_runtime_Value_3840848827() gopurs_runtime.Value {
+	once_traversableConj__gopurs_runtime_Value_3840848827.Do(func() {
+		cache_traversableConj__gopurs_runtime_Value_3840848827 = gopurs_runtime.RecordDict4("Foldable1", "Functor0", "sequence", "traverse", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Foldable.Get_foldableConj__gopurs_runtime_Value_1841171440()
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Monoid_Conj.Get_functorConj__gopurs_runtime_Value_943655089()
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Monoid_Conj.Get_Conj(), v_1)
+})
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Monoid_Conj.Get_Conj(), gopurs_runtime.Apply(f_1, v_2))
+})
+})
+}))
+	})
+	return cache_traversableConj__gopurs_runtime_Value_3840848827
 }
 
 var cache_traversableCompose gopurs_runtime.Value
@@ -384,6 +675,29 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopur
 	return cache_traversableAdditive
 }
 
+var cache_traversableAdditive__gopurs_runtime_Value_3840848827 gopurs_runtime.Value
+var once_traversableAdditive__gopurs_runtime_Value_3840848827 sync.Once
+func Get_traversableAdditive__gopurs_runtime_Value_3840848827() gopurs_runtime.Value {
+	once_traversableAdditive__gopurs_runtime_Value_3840848827.Do(func() {
+		cache_traversableAdditive__gopurs_runtime_Value_3840848827 = gopurs_runtime.RecordDict4("Foldable1", "Functor0", "sequence", "traverse", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Foldable.Get_foldableAdditive__gopurs_runtime_Value_1841171440()
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Monoid_Additive.Get_functorAdditive__gopurs_runtime_Value_943655089()
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Monoid_Additive.Get_Additive(), v_1)
+})
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Monoid_Additive.Get_Additive(), gopurs_runtime.Apply(f_1, v_2))
+})
+})
+}))
+	})
+	return cache_traversableAdditive__gopurs_runtime_Value_3840848827
+}
+
 var cache_sequenceDefault gopurs_runtime.Value
 var once_sequenceDefault sync.Once
 func Get_sequenceDefault() gopurs_runtime.Value {
@@ -414,6 +728,25 @@ return gopurs_runtime.Apply4(Get_traverseArrayImpl(), gopurs_runtime.RecordGet(A
 	return cache_traversableArray
 }
 
+var cache_traversableArray__gopurs_runtime_Value_2643873085 gopurs_runtime.Value
+var once_traversableArray__gopurs_runtime_Value_2643873085 sync.Once
+func Get_traversableArray__gopurs_runtime_Value_2643873085() gopurs_runtime.Value {
+	once_traversableArray__gopurs_runtime_Value_2643873085.Do(func() {
+		cache_traversableArray__gopurs_runtime_Value_2643873085 = gopurs_runtime.RecordDict4("Foldable1", "Functor0", "sequence", "traverse", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Foldable.Get_foldableArray__gopurs_runtime_Value_3859409398()
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Functor.Get_functorArray__gopurs_runtime_Value_361387505()
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_traversableArray(), "traverse"), dictApplicative_0, Get_identity())
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+Apply0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{})
+_ = Apply0_1_0
+return gopurs_runtime.Apply4(Get_traverseArrayImpl(), gopurs_runtime.RecordGet(Apply0_1_0, "apply"), gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Apply0_1_0, "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupArray(), "append"))
+}))
+	})
+	return cache_traversableArray__gopurs_runtime_Value_2643873085
+}
+
 var cache_sequence gopurs_runtime.Value
 var once_sequence sync.Once
 func Get_sequence() gopurs_runtime.Value {
@@ -425,15 +758,15 @@ return Call_sequence(dict_0_box)
 	return cache_sequence
 }
 
-var cache_sequence__gopurs_runtime_Value_1188743833 gopurs_runtime.Value
-var once_sequence__gopurs_runtime_Value_1188743833 sync.Once
-func Get_sequence__gopurs_runtime_Value_1188743833() gopurs_runtime.Value {
-	once_sequence__gopurs_runtime_Value_1188743833.Do(func() {
-		cache_sequence__gopurs_runtime_Value_1188743833 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_sequence__gopurs_runtime_Value_1188743833(dict_0_box)
+var cache_sequence__gopurs_runtime_Value_1886310617 gopurs_runtime.Value
+var once_sequence__gopurs_runtime_Value_1886310617 sync.Once
+func Get_sequence__gopurs_runtime_Value_1886310617() gopurs_runtime.Value {
+	once_sequence__gopurs_runtime_Value_1886310617.Do(func() {
+		cache_sequence__gopurs_runtime_Value_1886310617 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_sequence__gopurs_runtime_Value_1886310617(dict_0_box)
 })
 	})
-	return cache_sequence__gopurs_runtime_Value_1188743833
+	return cache_sequence__gopurs_runtime_Value_1886310617
 }
 
 var cache_traversableApp gopurs_runtime.Value
@@ -485,6 +818,33 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopur
 	return cache_traversableFirst
 }
 
+var cache_traversableFirst__gopurs_runtime_Value_822285914 gopurs_runtime.Value
+var once_traversableFirst__gopurs_runtime_Value_822285914 sync.Once
+func Get_traversableFirst__gopurs_runtime_Value_822285914() gopurs_runtime.Value {
+	once_traversableFirst__gopurs_runtime_Value_822285914.Do(func() {
+		cache_traversableFirst__gopurs_runtime_Value_822285914 = gopurs_runtime.RecordDict4("Foldable1", "Functor0", "sequence", "traverse", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Foldable.Get_foldableFirst()
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Maybe.Get_functorMaybe()
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+sequence2_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_traversableMaybe(), "sequence"), dictApplicative_0)
+_ = sequence2_1_0
+return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Maybe_First.Get_First(), gopurs_runtime.Apply(sequence2_1_0, v_2))
+})
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+traverse2_1_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_traversableMaybe(), "traverse"), dictApplicative_0)
+_ = traverse2_1_1
+return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Maybe_First.Get_First(), gopurs_runtime.Apply2(traverse2_1_1, f_2, v_3))
+})
+})
+}))
+	})
+	return cache_traversableFirst__gopurs_runtime_Value_822285914
+}
+
 var cache_traversableLast gopurs_runtime.Value
 var once_traversableLast sync.Once
 func Get_traversableLast() gopurs_runtime.Value {
@@ -510,6 +870,33 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopur
 }))
 	})
 	return cache_traversableLast
+}
+
+var cache_traversableLast__gopurs_runtime_Value_822285914 gopurs_runtime.Value
+var once_traversableLast__gopurs_runtime_Value_822285914 sync.Once
+func Get_traversableLast__gopurs_runtime_Value_822285914() gopurs_runtime.Value {
+	once_traversableLast__gopurs_runtime_Value_822285914.Do(func() {
+		cache_traversableLast__gopurs_runtime_Value_822285914 = gopurs_runtime.RecordDict4("Foldable1", "Functor0", "sequence", "traverse", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Foldable.Get_foldableLast()
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Maybe.Get_functorMaybe()
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+sequence2_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_traversableMaybe(), "sequence"), dictApplicative_0)
+_ = sequence2_1_0
+return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Maybe_Last.Get_Last(), gopurs_runtime.Apply(sequence2_1_0, v_2))
+})
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+traverse2_1_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_traversableMaybe(), "traverse"), dictApplicative_0)
+_ = traverse2_1_1
+return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), pkg_Data_Maybe_Last.Get_Last(), gopurs_runtime.Apply2(traverse2_1_1, f_2, v_3))
+})
+})
+}))
+	})
+	return cache_traversableLast__gopurs_runtime_Value_822285914
 }
 
 var cache_traversableProduct gopurs_runtime.Value
@@ -545,15 +932,15 @@ return Call_mapAccumR(dictTraversable_0_box)
 	return cache_mapAccumR
 }
 
-var cache_mapAccumR__gopurs_runtime_Value_2780270502 gopurs_runtime.Value
-var once_mapAccumR__gopurs_runtime_Value_2780270502 sync.Once
-func Get_mapAccumR__gopurs_runtime_Value_2780270502() gopurs_runtime.Value {
-	once_mapAccumR__gopurs_runtime_Value_2780270502.Do(func() {
-		cache_mapAccumR__gopurs_runtime_Value_2780270502 = gopurs_runtime.Func(func(dictTraversable_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_mapAccumR__gopurs_runtime_Value_2780270502(dictTraversable_0_box)
+var cache_mapAccumR__gopurs_runtime_Value_2528537048 gopurs_runtime.Value
+var once_mapAccumR__gopurs_runtime_Value_2528537048 sync.Once
+func Get_mapAccumR__gopurs_runtime_Value_2528537048() gopurs_runtime.Value {
+	once_mapAccumR__gopurs_runtime_Value_2528537048.Do(func() {
+		cache_mapAccumR__gopurs_runtime_Value_2528537048 = gopurs_runtime.Func(func(dictTraversable_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mapAccumR__gopurs_runtime_Value_2528537048(dictTraversable_0_box)
 })
 	})
-	return cache_mapAccumR__gopurs_runtime_Value_2780270502
+	return cache_mapAccumR__gopurs_runtime_Value_2528537048
 }
 
 var cache_scanr gopurs_runtime.Value
@@ -578,15 +965,15 @@ return Call_mapAccumL(dictTraversable_0_box)
 	return cache_mapAccumL
 }
 
-var cache_mapAccumL__gopurs_runtime_Value_2780270502 gopurs_runtime.Value
-var once_mapAccumL__gopurs_runtime_Value_2780270502 sync.Once
-func Get_mapAccumL__gopurs_runtime_Value_2780270502() gopurs_runtime.Value {
-	once_mapAccumL__gopurs_runtime_Value_2780270502.Do(func() {
-		cache_mapAccumL__gopurs_runtime_Value_2780270502 = gopurs_runtime.Func(func(dictTraversable_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_mapAccumL__gopurs_runtime_Value_2780270502(dictTraversable_0_box)
+var cache_mapAccumL__gopurs_runtime_Value_2528537048 gopurs_runtime.Value
+var once_mapAccumL__gopurs_runtime_Value_2528537048 sync.Once
+func Get_mapAccumL__gopurs_runtime_Value_2528537048() gopurs_runtime.Value {
+	once_mapAccumL__gopurs_runtime_Value_2528537048.Do(func() {
+		cache_mapAccumL__gopurs_runtime_Value_2528537048 = gopurs_runtime.Func(func(dictTraversable_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mapAccumL__gopurs_runtime_Value_2528537048(dictTraversable_0_box)
 })
 	})
-	return cache_mapAccumL__gopurs_runtime_Value_2780270502
+	return cache_mapAccumL__gopurs_runtime_Value_2528537048
 }
 
 var cache_scanl gopurs_runtime.Value
@@ -623,7 +1010,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "traverse")
 }
 
-func Call_traverse__gopurs_runtime_Value_2265355576(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_traverse__gopurs_runtime_Value_314957093(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "traverse")
@@ -715,7 +1102,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "sequence")
 }
 
-func Call_sequence__gopurs_runtime_Value_1188743833(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_sequence__gopurs_runtime_Value_1886310617(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "sequence")
@@ -949,7 +1336,7 @@ return gopurs_runtime.Apply2(f_2, s_6, a_5)
 })
 }
 
-func Call_mapAccumR__gopurs_runtime_Value_2780270502(dictTraversable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_mapAccumR__gopurs_runtime_Value_2528537048(dictTraversable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictTraversable_0 gopurs_runtime.Value = dictTraversable_0_loop
 _ = dictTraversable_0
 traverse2_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable_0, "traverse"), pkg_Data_Traversable_Accum_Internal.Get_applicativeStateR())
@@ -1005,7 +1392,7 @@ return gopurs_runtime.Apply2(f_2, s_6, a_5)
 })
 }
 
-func Call_mapAccumL__gopurs_runtime_Value_2780270502(dictTraversable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_mapAccumL__gopurs_runtime_Value_2528537048(dictTraversable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictTraversable_0 gopurs_runtime.Value = dictTraversable_0_loop
 _ = dictTraversable_0
 traverse2_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTraversable_0, "traverse"), pkg_Data_Traversable_Accum_Internal.Get_applicativeStateL())

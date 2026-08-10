@@ -18,15 +18,15 @@ return Call_genericZero_prime(dict_0_box)
 	return cache_genericZero_prime
 }
 
-var cache_genericZero_prime__gopurs_runtime_Value_2762771955 gopurs_runtime.Value
-var once_genericZero_prime__gopurs_runtime_Value_2762771955 sync.Once
-func Get_genericZero_prime__gopurs_runtime_Value_2762771955() gopurs_runtime.Value {
-	once_genericZero_prime__gopurs_runtime_Value_2762771955.Do(func() {
-		cache_genericZero_prime__gopurs_runtime_Value_2762771955 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericZero_prime__gopurs_runtime_Value_2762771955(dict_0_box)
+var cache_genericZero_prime__gopurs_runtime_Value_3878335718 gopurs_runtime.Value
+var once_genericZero_prime__gopurs_runtime_Value_3878335718 sync.Once
+func Get_genericZero_prime__gopurs_runtime_Value_3878335718() gopurs_runtime.Value {
+	once_genericZero_prime__gopurs_runtime_Value_3878335718.Do(func() {
+		cache_genericZero_prime__gopurs_runtime_Value_3878335718 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genericZero_prime__gopurs_runtime_Value_3878335718(dict_0_box)
 })
 	})
-	return cache_genericZero_prime__gopurs_runtime_Value_2762771955
+	return cache_genericZero_prime__gopurs_runtime_Value_3878335718
 }
 
 var cache_genericZero gopurs_runtime.Value
@@ -79,15 +79,15 @@ return Call_genericOne_prime(dict_0_box)
 	return cache_genericOne_prime
 }
 
-var cache_genericOne_prime__gopurs_runtime_Value_2762771955 gopurs_runtime.Value
-var once_genericOne_prime__gopurs_runtime_Value_2762771955 sync.Once
-func Get_genericOne_prime__gopurs_runtime_Value_2762771955() gopurs_runtime.Value {
-	once_genericOne_prime__gopurs_runtime_Value_2762771955.Do(func() {
-		cache_genericOne_prime__gopurs_runtime_Value_2762771955 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericOne_prime__gopurs_runtime_Value_2762771955(dict_0_box)
+var cache_genericOne_prime__gopurs_runtime_Value_3878335718 gopurs_runtime.Value
+var once_genericOne_prime__gopurs_runtime_Value_3878335718 sync.Once
+func Get_genericOne_prime__gopurs_runtime_Value_3878335718() gopurs_runtime.Value {
+	once_genericOne_prime__gopurs_runtime_Value_3878335718.Do(func() {
+		cache_genericOne_prime__gopurs_runtime_Value_3878335718 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genericOne_prime__gopurs_runtime_Value_3878335718(dict_0_box)
 })
 	})
-	return cache_genericOne_prime__gopurs_runtime_Value_2762771955
+	return cache_genericOne_prime__gopurs_runtime_Value_3878335718
 }
 
 var cache_genericOne gopurs_runtime.Value
@@ -112,15 +112,15 @@ return Call_genericMul_prime(dict_0_box)
 	return cache_genericMul_prime
 }
 
-var cache_genericMul_prime__gopurs_runtime_Value_1288993203 gopurs_runtime.Value
-var once_genericMul_prime__gopurs_runtime_Value_1288993203 sync.Once
-func Get_genericMul_prime__gopurs_runtime_Value_1288993203() gopurs_runtime.Value {
-	once_genericMul_prime__gopurs_runtime_Value_1288993203.Do(func() {
-		cache_genericMul_prime__gopurs_runtime_Value_1288993203 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericMul_prime__gopurs_runtime_Value_1288993203(dict_0_box)
+var cache_genericMul_prime__gopurs_runtime_Value_1201800327 gopurs_runtime.Value
+var once_genericMul_prime__gopurs_runtime_Value_1201800327 sync.Once
+func Get_genericMul_prime__gopurs_runtime_Value_1201800327() gopurs_runtime.Value {
+	once_genericMul_prime__gopurs_runtime_Value_1201800327.Do(func() {
+		cache_genericMul_prime__gopurs_runtime_Value_1201800327 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genericMul_prime__gopurs_runtime_Value_1201800327(dict_0_box)
 })
 	})
-	return cache_genericMul_prime__gopurs_runtime_Value_1288993203
+	return cache_genericMul_prime__gopurs_runtime_Value_1201800327
 }
 
 var cache_genericMul gopurs_runtime.Value
@@ -145,15 +145,15 @@ return Call_genericAdd_prime(dict_0_box)
 	return cache_genericAdd_prime
 }
 
-var cache_genericAdd_prime__gopurs_runtime_Value_1288993203 gopurs_runtime.Value
-var once_genericAdd_prime__gopurs_runtime_Value_1288993203 sync.Once
-func Get_genericAdd_prime__gopurs_runtime_Value_1288993203() gopurs_runtime.Value {
-	once_genericAdd_prime__gopurs_runtime_Value_1288993203.Do(func() {
-		cache_genericAdd_prime__gopurs_runtime_Value_1288993203 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericAdd_prime__gopurs_runtime_Value_1288993203(dict_0_box)
+var cache_genericAdd_prime__gopurs_runtime_Value_1201800327 gopurs_runtime.Value
+var once_genericAdd_prime__gopurs_runtime_Value_1201800327 sync.Once
+func Get_genericAdd_prime__gopurs_runtime_Value_1201800327() gopurs_runtime.Value {
+	once_genericAdd_prime__gopurs_runtime_Value_1201800327.Do(func() {
+		cache_genericAdd_prime__gopurs_runtime_Value_1201800327 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genericAdd_prime__gopurs_runtime_Value_1201800327(dict_0_box)
 })
 	})
-	return cache_genericAdd_prime__gopurs_runtime_Value_1288993203
+	return cache_genericAdd_prime__gopurs_runtime_Value_1201800327
 }
 
 var cache_genericSemiringConstructor gopurs_runtime.Value
@@ -195,7 +195,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "genericZero'")
 }
 
-func Call_genericZero_prime__gopurs_runtime_Value_2762771955(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_genericZero_prime__gopurs_runtime_Value_3878335718(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "genericZero'")
@@ -229,7 +229,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "genericOne'")
 }
 
-func Call_genericOne_prime__gopurs_runtime_Value_2762771955(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_genericOne_prime__gopurs_runtime_Value_3878335718(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "genericOne'")
@@ -249,7 +249,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "genericMul'")
 }
 
-func Call_genericMul_prime__gopurs_runtime_Value_1288993203(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_genericMul_prime__gopurs_runtime_Value_1201800327(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "genericMul'")
@@ -273,7 +273,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "genericAdd'")
 }
 
-func Call_genericAdd_prime__gopurs_runtime_Value_1288993203(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_genericAdd_prime__gopurs_runtime_Value_1201800327(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "genericAdd'")

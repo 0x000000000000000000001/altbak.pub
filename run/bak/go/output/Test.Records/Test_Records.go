@@ -8,6 +8,7 @@ import (
 	pkg_Bench "gopurs/output/Bench"
 	pkg_Data_Show "gopurs/output/Data.Show"
 	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
+	unsafe "unsafe"
 )
 
 var cache_updateRec gopurs_runtime.Value
@@ -69,7 +70,12 @@ goto end_branch_0
 }
 {
 v_0_loop = (v_0) - (1)
-v1_1_loop = gopurs_runtime.RecordUpdate2(v1_1, "a", gopurs_runtime.Int((gopurs_runtime.RecordGet(v1_1, "a").IntVal) + (1)), "b", gopurs_runtime.RecordUpdate2(gopurs_runtime.RecordGet(v1_1, "b"), "c", gopurs_runtime.Int((gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "c").IntVal) + (2)), "d", gopurs_runtime.RecordUpdate2(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "e", gopurs_runtime.Int((gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "e").IntVal) + (3)), "f", gopurs_runtime.Int((gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "f").IntVal) + (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingInt(), "mod"), gopurs_runtime.Int(v_0), gopurs_runtime.Int(5)).IntVal)))))
+v1_1_loop = func() gopurs_runtime.Value {
+clone := *((*gopurs_runtime.RecordData2)(v1_1.UnsafePtr))
+clone.V0 = gopurs_runtime.Int((gopurs_runtime.RecordGet(v1_1, "a").IntVal) + (1))
+clone.V1 = gopurs_runtime.RecordUpdate2(gopurs_runtime.RecordGet(v1_1, "b"), "c", gopurs_runtime.Int((gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "c").IntVal) + (2)), "d", gopurs_runtime.RecordUpdate2(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "e", gopurs_runtime.Int((gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "e").IntVal) + (3)), "f", gopurs_runtime.Int((gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "f").IntVal) + (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingInt(), "mod"), gopurs_runtime.Int(v_0), gopurs_runtime.Int(5)).IntVal))))
+return gopurs_runtime.Value{Type: gopurs_runtime.TypeRecord2, UnsafePtr: unsafe.Pointer(&clone)}
+}()
 continue updateRec
 __t0 = gopurs_runtime.Value{}
 }

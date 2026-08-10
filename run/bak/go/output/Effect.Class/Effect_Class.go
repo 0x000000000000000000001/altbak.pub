@@ -30,15 +30,15 @@ return Call_liftEffect(dict_0_box)
 	return cache_liftEffect
 }
 
-var cache_liftEffect__gopurs_runtime_Value_2673072055 gopurs_runtime.Value
-var once_liftEffect__gopurs_runtime_Value_2673072055 sync.Once
-func Get_liftEffect__gopurs_runtime_Value_2673072055() gopurs_runtime.Value {
-	once_liftEffect__gopurs_runtime_Value_2673072055.Do(func() {
-		cache_liftEffect__gopurs_runtime_Value_2673072055 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_liftEffect__gopurs_runtime_Value_2673072055(dict_0_box)
+var cache_liftEffect__gopurs_runtime_Value_1892566677 gopurs_runtime.Value
+var once_liftEffect__gopurs_runtime_Value_1892566677 sync.Once
+func Get_liftEffect__gopurs_runtime_Value_1892566677() gopurs_runtime.Value {
+	once_liftEffect__gopurs_runtime_Value_1892566677.Do(func() {
+		cache_liftEffect__gopurs_runtime_Value_1892566677 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_liftEffect__gopurs_runtime_Value_1892566677(dict_0_box)
 })
 	})
-	return cache_liftEffect__gopurs_runtime_Value_2673072055
+	return cache_liftEffect__gopurs_runtime_Value_1892566677
 }
 
 func Call_liftEffect(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -47,7 +47,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "liftEffect")
 }
 
-func Call_liftEffect__gopurs_runtime_Value_2673072055(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_liftEffect__gopurs_runtime_Value_1892566677(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "liftEffect")

@@ -85,15 +85,15 @@ return Call_to(dict_0_box)
 	return cache_to
 }
 
-var cache_to__gopurs_runtime_Value_516947908 gopurs_runtime.Value
-var once_to__gopurs_runtime_Value_516947908 sync.Once
-func Get_to__gopurs_runtime_Value_516947908() gopurs_runtime.Value {
-	once_to__gopurs_runtime_Value_516947908.Do(func() {
-		cache_to__gopurs_runtime_Value_516947908 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_to__gopurs_runtime_Value_516947908(dict_0_box)
+var cache_to__gopurs_runtime_Value_1498760952 gopurs_runtime.Value
+var once_to__gopurs_runtime_Value_1498760952 sync.Once
+func Get_to__gopurs_runtime_Value_1498760952() gopurs_runtime.Value {
+	once_to__gopurs_runtime_Value_1498760952.Do(func() {
+		cache_to__gopurs_runtime_Value_1498760952 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_to__gopurs_runtime_Value_1498760952(dict_0_box)
 })
 	})
-	return cache_to__gopurs_runtime_Value_516947908
+	return cache_to__gopurs_runtime_Value_1498760952
 }
 
 var cache_showSum gopurs_runtime.Value
@@ -173,15 +173,15 @@ return Call_from(dict_0_box)
 	return cache_from
 }
 
-var cache_from__gopurs_runtime_Value_516947908 gopurs_runtime.Value
-var once_from__gopurs_runtime_Value_516947908 sync.Once
-func Get_from__gopurs_runtime_Value_516947908() gopurs_runtime.Value {
-	once_from__gopurs_runtime_Value_516947908.Do(func() {
-		cache_from__gopurs_runtime_Value_516947908 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_from__gopurs_runtime_Value_516947908(dict_0_box)
+var cache_from__gopurs_runtime_Value_1498760952 gopurs_runtime.Value
+var once_from__gopurs_runtime_Value_1498760952 sync.Once
+func Get_from__gopurs_runtime_Value_1498760952() gopurs_runtime.Value {
+	once_from__gopurs_runtime_Value_1498760952.Do(func() {
+		cache_from__gopurs_runtime_Value_1498760952 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_from__gopurs_runtime_Value_1498760952(dict_0_box)
 })
 	})
-	return cache_from__gopurs_runtime_Value_516947908
+	return cache_from__gopurs_runtime_Value_1498760952
 }
 
 type Constructor_Inl[T_a any, T_b any] struct {
@@ -226,7 +226,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "to")
 }
 
-func Call_to__gopurs_runtime_Value_516947908(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_to__gopurs_runtime_Value_1498760952(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "to")
@@ -305,7 +305,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "from")
 }
 
-func Call_from__gopurs_runtime_Value_516947908(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_from__gopurs_runtime_Value_1498760952(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "from")

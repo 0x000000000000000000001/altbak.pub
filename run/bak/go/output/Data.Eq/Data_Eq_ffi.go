@@ -34,7 +34,7 @@ func EqArrayImpl(f func(interface{}, interface{}) bool, xs []interface{}, ys []i
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs_EqArrayImpl = // TAST: (Func [(Func [(TypeVar a), (TypeVar a)] Boolean), (Array (TypeVar a)), (Array (TypeVar a))] Boolean)
+var _Gopurs_EqArrayImpl = // TAST: (ForAll [a] (Func [(Func [(TypeVar a), (TypeVar a)] Boolean), (Array (TypeVar a)), (Array (TypeVar a))] Boolean))
 gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any, p0_1 any) bool {
 			inner_res0 := gopurs_runtime.Apply2(arg0, gopurs_runtime.Box(p0_0), gopurs_runtime.Box(p0_1))

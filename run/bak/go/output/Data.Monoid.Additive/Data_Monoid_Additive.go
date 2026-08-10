@@ -74,6 +74,19 @@ return gopurs_runtime.Apply(f_0, m_1)
 	return cache_functorAdditive
 }
 
+var cache_functorAdditive__gopurs_runtime_Value_943655089 gopurs_runtime.Value
+var once_functorAdditive__gopurs_runtime_Value_943655089 sync.Once
+func Get_functorAdditive__gopurs_runtime_Value_943655089() gopurs_runtime.Value {
+	once_functorAdditive__gopurs_runtime_Value_943655089.Do(func() {
+		cache_functorAdditive__gopurs_runtime_Value_943655089 = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(m_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_0, m_1)
+})
+}))
+	})
+	return cache_functorAdditive__gopurs_runtime_Value_943655089
+}
+
 var cache_eqAdditive gopurs_runtime.Value
 var once_eqAdditive sync.Once
 func Get_eqAdditive() gopurs_runtime.Value {
@@ -94,6 +107,17 @@ return gopurs_runtime.RecordGet(dictEq_0, "eq")
 }))
 	})
 	return cache_eq1Additive
+}
+
+var cache_eq1Additive__gopurs_runtime_Value_1905950174 gopurs_runtime.Value
+var once_eq1Additive__gopurs_runtime_Value_1905950174 sync.Once
+func Get_eq1Additive__gopurs_runtime_Value_1905950174() gopurs_runtime.Value {
+	once_eq1Additive__gopurs_runtime_Value_1905950174.Do(func() {
+		cache_eq1Additive__gopurs_runtime_Value_1905950174 = gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordGet(dictEq_0, "eq")
+}))
+	})
+	return cache_eq1Additive__gopurs_runtime_Value_1905950174
 }
 
 var cache_ord1Additive gopurs_runtime.Value
@@ -135,6 +159,21 @@ return gopurs_runtime.Apply(v_0, v1_1)
 	return cache_applyAdditive
 }
 
+var cache_applyAdditive__gopurs_runtime_Value_3199351098 gopurs_runtime.Value
+var once_applyAdditive__gopurs_runtime_Value_3199351098 sync.Once
+func Get_applyAdditive__gopurs_runtime_Value_3199351098() gopurs_runtime.Value {
+	once_applyAdditive__gopurs_runtime_Value_3199351098.Do(func() {
+		cache_applyAdditive__gopurs_runtime_Value_3199351098 = gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_functorAdditive__gopurs_runtime_Value_943655089()
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v_0, v1_1)
+})
+}))
+	})
+	return cache_applyAdditive__gopurs_runtime_Value_3199351098
+}
+
 var cache_bindAdditive gopurs_runtime.Value
 var once_bindAdditive sync.Once
 func Get_bindAdditive() gopurs_runtime.Value {
@@ -150,6 +189,21 @@ return gopurs_runtime.Apply(f_1, v_0)
 	return cache_bindAdditive
 }
 
+var cache_bindAdditive__gopurs_runtime_Value_329376103 gopurs_runtime.Value
+var once_bindAdditive__gopurs_runtime_Value_329376103 sync.Once
+func Get_bindAdditive__gopurs_runtime_Value_329376103() gopurs_runtime.Value {
+	once_bindAdditive__gopurs_runtime_Value_329376103.Do(func() {
+		cache_bindAdditive__gopurs_runtime_Value_329376103 = gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_applyAdditive__gopurs_runtime_Value_3199351098()
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_1, v_0)
+})
+}))
+	})
+	return cache_bindAdditive__gopurs_runtime_Value_329376103
+}
+
 var cache_applicativeAdditive gopurs_runtime.Value
 var once_applicativeAdditive sync.Once
 func Get_applicativeAdditive() gopurs_runtime.Value {
@@ -159,6 +213,17 @@ return Get_applyAdditive()
 }), Get_Additive())
 	})
 	return cache_applicativeAdditive
+}
+
+var cache_applicativeAdditive__gopurs_runtime_Value_4045440648 gopurs_runtime.Value
+var once_applicativeAdditive__gopurs_runtime_Value_4045440648 sync.Once
+func Get_applicativeAdditive__gopurs_runtime_Value_4045440648() gopurs_runtime.Value {
+	once_applicativeAdditive__gopurs_runtime_Value_4045440648.Do(func() {
+		cache_applicativeAdditive__gopurs_runtime_Value_4045440648 = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_applyAdditive__gopurs_runtime_Value_3199351098()
+}), Get_Additive())
+	})
+	return cache_applicativeAdditive__gopurs_runtime_Value_4045440648
 }
 
 var cache_monadAdditive gopurs_runtime.Value

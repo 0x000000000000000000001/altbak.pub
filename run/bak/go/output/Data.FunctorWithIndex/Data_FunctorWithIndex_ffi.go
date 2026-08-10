@@ -12,7 +12,7 @@ func MapWithIndexArray(f func(int64, interface{}) interface{}, xs []interface{})
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs_MapWithIndexArray = // TAST: (Func [(Func [Int, (TypeVar a)] (TypeVar b)), (Array (TypeVar a))] (Array (TypeVar b)))
+var _Gopurs_MapWithIndexArray = // TAST: (ForAll [a, b] (Func [(Func [Int, (TypeVar a)] (TypeVar b)), (Array (TypeVar a))] (Array (TypeVar b))))
 gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 int64, p0_1 any) any {
 			return gopurs_runtime.Apply2(arg0, gopurs_runtime.Box(p0_0), gopurs_runtime.Box(p0_1))

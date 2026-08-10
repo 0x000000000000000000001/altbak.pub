@@ -20,7 +20,7 @@ func ConcatArray(xs []interface{}, ys []interface{}) []interface{} {
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs_ConcatArray = // TAST: (Func [(Array (TypeVar a)), (Array (TypeVar a))] (Array (TypeVar a)))
+var _Gopurs_ConcatArray = // TAST: (ForAll [a] (Func [(Array (TypeVar a)), (Array (TypeVar a))] (Array (TypeVar a))))
 gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	arg0_arr := *(*[]gopurs_runtime.Value)(arg0.UnsafePtr)
 	go_arg0 := make([]any, len(arg0_arr))

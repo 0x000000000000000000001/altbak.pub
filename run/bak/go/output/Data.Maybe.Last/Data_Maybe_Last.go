@@ -64,6 +64,40 @@ return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointe
 	return cache_semigroupLast
 }
 
+var cache_semigroupLast__gopurs_runtime_Value_3179391308 gopurs_runtime.Value
+var once_semigroupLast__gopurs_runtime_Value_3179391308 sync.Once
+func Get_semigroupLast__gopurs_runtime_Value_3179391308() gopurs_runtime.Value {
+	once_semigroupLast__gopurs_runtime_Value_3179391308.Do(func() {
+		cache_semigroupLast__gopurs_runtime_Value_3179391308 = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t0 gopurs_runtime.Value
+{
+if (v1_1.Type == 9 && v1_1.IntVal == 930809136 && v1_1.UnsafePtr != nil) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v1_1.UnsafePtr))}
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (v1_1.Type == 9 && v1_1.IntVal == 930809136 && v1_1.UnsafePtr == nil) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v_0.UnsafePtr))}
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_0:
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(__t0.UnsafePtr))}
+})
+}))
+	})
+	return cache_semigroupLast__gopurs_runtime_Value_3179391308
+}
+
 var cache_ordLast gopurs_runtime.Value
 var once_ordLast sync.Once
 func Get_ordLast() gopurs_runtime.Value {
@@ -133,6 +167,15 @@ func Get_functorLast() gopurs_runtime.Value {
 	return cache_functorLast
 }
 
+var cache_functorLast__gopurs_runtime_Value_2097654001 gopurs_runtime.Value
+var once_functorLast__gopurs_runtime_Value_2097654001 sync.Once
+func Get_functorLast__gopurs_runtime_Value_2097654001() gopurs_runtime.Value {
+	once_functorLast__gopurs_runtime_Value_2097654001.Do(func() {
+		cache_functorLast__gopurs_runtime_Value_2097654001 = pkg_Data_Maybe.Get_functorMaybe()
+	})
+	return cache_functorLast__gopurs_runtime_Value_2097654001
+}
+
 var cache_extendLast gopurs_runtime.Value
 var once_extendLast sync.Once
 func Get_extendLast() gopurs_runtime.Value {
@@ -200,6 +243,15 @@ func Get_applicativeLast() gopurs_runtime.Value {
 	return cache_applicativeLast
 }
 
+var cache_applicativeLast__gopurs_runtime_Value_500933224 gopurs_runtime.Value
+var once_applicativeLast__gopurs_runtime_Value_500933224 sync.Once
+func Get_applicativeLast__gopurs_runtime_Value_500933224() gopurs_runtime.Value {
+	once_applicativeLast__gopurs_runtime_Value_500933224.Do(func() {
+		cache_applicativeLast__gopurs_runtime_Value_500933224 = pkg_Data_Maybe.Get_applicativeMaybe()
+	})
+	return cache_applicativeLast__gopurs_runtime_Value_500933224
+}
+
 var cache_altLast gopurs_runtime.Value
 var once_altLast sync.Once
 func Get_altLast() gopurs_runtime.Value {
@@ -211,6 +263,17 @@ return pkg_Data_Maybe.Get_functorMaybe()
 	return cache_altLast
 }
 
+var cache_altLast__gopurs_runtime_Value_4201091523 gopurs_runtime.Value
+var once_altLast__gopurs_runtime_Value_4201091523 sync.Once
+func Get_altLast__gopurs_runtime_Value_4201091523() gopurs_runtime.Value {
+	once_altLast__gopurs_runtime_Value_4201091523.Do(func() {
+		cache_altLast__gopurs_runtime_Value_4201091523 = gopurs_runtime.RecordDict2("Functor0", "alt", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Maybe.Get_functorMaybe()
+}), gopurs_runtime.RecordGet(Get_semigroupLast(), "append"))
+	})
+	return cache_altLast__gopurs_runtime_Value_4201091523
+}
+
 var cache_plusLast gopurs_runtime.Value
 var once_plusLast sync.Once
 func Get_plusLast() gopurs_runtime.Value {
@@ -220,6 +283,17 @@ return Get_altLast()
 }), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(gopurs_runtime.RecordGet(Get_monoidLast(), "mempty").UnsafePtr))})
 	})
 	return cache_plusLast
+}
+
+var cache_plusLast__gopurs_runtime_Value_400696082 gopurs_runtime.Value
+var once_plusLast__gopurs_runtime_Value_400696082 sync.Once
+func Get_plusLast__gopurs_runtime_Value_400696082() gopurs_runtime.Value {
+	once_plusLast__gopurs_runtime_Value_400696082.Do(func() {
+		cache_plusLast__gopurs_runtime_Value_400696082 = gopurs_runtime.RecordDict2("Alt0", "empty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_altLast()
+}), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(gopurs_runtime.RecordGet(Get_monoidLast(), "mempty").UnsafePtr))})
+	})
+	return cache_plusLast__gopurs_runtime_Value_400696082
 }
 
 var cache_alternativeLast gopurs_runtime.Value

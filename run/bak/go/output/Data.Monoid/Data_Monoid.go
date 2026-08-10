@@ -115,6 +115,17 @@ return Call_memptyRecord(dict_0_box)
 	return cache_memptyRecord
 }
 
+var cache_memptyRecord__gopurs_runtime_Value_4056812038 gopurs_runtime.Value
+var once_memptyRecord__gopurs_runtime_Value_4056812038 sync.Once
+func Get_memptyRecord__gopurs_runtime_Value_4056812038() gopurs_runtime.Value {
+	once_memptyRecord__gopurs_runtime_Value_4056812038.Do(func() {
+		cache_memptyRecord__gopurs_runtime_Value_4056812038 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_memptyRecord__gopurs_runtime_Value_4056812038(dict_0_box)
+})
+	})
+	return cache_memptyRecord__gopurs_runtime_Value_4056812038
+}
+
 var cache_monoidRecord gopurs_runtime.Value
 var once_monoidRecord sync.Once
 func Get_monoidRecord() gopurs_runtime.Value {
@@ -137,26 +148,15 @@ return Call_mempty(dict_0_box)
 	return cache_mempty
 }
 
-var cache_mempty__gopurs_runtime_Value_2352415438 gopurs_runtime.Value
-var once_mempty__gopurs_runtime_Value_2352415438 sync.Once
-func Get_mempty__gopurs_runtime_Value_2352415438() gopurs_runtime.Value {
-	once_mempty__gopurs_runtime_Value_2352415438.Do(func() {
-		cache_mempty__gopurs_runtime_Value_2352415438 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_mempty__gopurs_runtime_Value_2352415438(dict_0_box)
+var cache_mempty__gopurs_runtime_Value_2312420373 gopurs_runtime.Value
+var once_mempty__gopurs_runtime_Value_2312420373 sync.Once
+func Get_mempty__gopurs_runtime_Value_2312420373() gopurs_runtime.Value {
+	once_mempty__gopurs_runtime_Value_2312420373.Do(func() {
+		cache_mempty__gopurs_runtime_Value_2312420373 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mempty__gopurs_runtime_Value_2312420373(dict_0_box)
 })
 	})
-	return cache_mempty__gopurs_runtime_Value_2352415438
-}
-
-var cache_mempty__gopurs_runtime_Value_1531080078 gopurs_runtime.Value
-var once_mempty__gopurs_runtime_Value_1531080078 sync.Once
-func Get_mempty__gopurs_runtime_Value_1531080078() gopurs_runtime.Value {
-	once_mempty__gopurs_runtime_Value_1531080078.Do(func() {
-		cache_mempty__gopurs_runtime_Value_1531080078 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_mempty__gopurs_runtime_Value_1531080078(dict_0_box)
-})
-	})
-	return cache_mempty__gopurs_runtime_Value_1531080078
+	return cache_mempty__gopurs_runtime_Value_2312420373
 }
 
 var cache_monoidFn gopurs_runtime.Value
@@ -209,6 +209,12 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "memptyRecord")
 }
 
+func Call_memptyRecord__gopurs_runtime_Value_4056812038(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "memptyRecord")
+}
+
 func Call_monoidRecord(_dollar__unused_0_loop gopurs_runtime.Value, dictMonoidRecord_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
@@ -227,13 +233,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "mempty")
 }
 
-func Call_mempty__gopurs_runtime_Value_2352415438(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
-_ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "mempty")
-}
-
-func Call_mempty__gopurs_runtime_Value_1531080078(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_mempty__gopurs_runtime_Value_2312420373(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "mempty")

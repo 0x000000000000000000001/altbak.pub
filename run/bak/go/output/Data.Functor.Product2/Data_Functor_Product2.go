@@ -111,8 +111,8 @@ return Call_biapplicativeProduct2(dictBiapplicative_0_box)
 
 type Constructor_Product2[T_f any, T_g any, T_a any, T_b any] struct {
 	Rc uint32
-	V0 T_f
-	V1 T_g
+	V0 gopurs_runtime.Value
+	V1 gopurs_runtime.Value
 }
 
 

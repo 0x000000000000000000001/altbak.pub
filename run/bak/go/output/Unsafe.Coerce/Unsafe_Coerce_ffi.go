@@ -8,7 +8,7 @@ func UnsafeCoerce(x interface{}) interface{} {
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs_UnsafeCoerce = // TAST: (Func [(TypeVar a)] (TypeVar b))
+var _Gopurs_UnsafeCoerce = // TAST: (ForAll [a, b] (Func [(TypeVar a)] (TypeVar b)))
 gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := UnsafeCoerce(go_arg0)

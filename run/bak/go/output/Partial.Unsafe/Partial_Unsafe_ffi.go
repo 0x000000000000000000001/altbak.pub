@@ -8,7 +8,7 @@ func _UnsafePartial(f func(interface{}) interface{}) interface{} {
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs__UnsafePartial = // TAST: (Func [(TypeVar a)] (TypeVar b))
+var _Gopurs__UnsafePartial = // TAST: (ForAll [a, b] (Func [(TypeVar a)] (TypeVar b)))
 gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))

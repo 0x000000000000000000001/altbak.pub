@@ -44,6 +44,27 @@ return gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_D
 	return cache_dividePredicate
 }
 
+var cache_dividePredicate__gopurs_runtime_Value_3306073532 gopurs_runtime.Value
+var once_dividePredicate__gopurs_runtime_Value_3306073532 sync.Once
+func Get_dividePredicate__gopurs_runtime_Value_3306073532() gopurs_runtime.Value {
+	once_dividePredicate__gopurs_runtime_Value_3306073532.Do(func() {
+		cache_dividePredicate__gopurs_runtime_Value_3306073532 = gopurs_runtime.RecordDict2("Contravariant0", "divide", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Predicate.Get_contravariantPredicate__gopurs_runtime_Value_2354513683()
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
+v2_4_0 := gopurs_runtime.Apply(f_0, a_3)
+_ = v2_4_0
+return gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Apply(v_1, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v2_4_0.UnsafePtr).V0), gopurs_runtime.Apply(v1_2, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v2_4_0.UnsafePtr).V1)).IntVal) != (0))
+})
+})
+})
+}))
+	})
+	return cache_dividePredicate__gopurs_runtime_Value_3306073532
+}
+
 var cache_divideOp gopurs_runtime.Value
 var once_divideOp sync.Once
 func Get_divideOp() gopurs_runtime.Value {
@@ -80,6 +101,31 @@ return gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_D
 	return cache_divideEquivalence
 }
 
+var cache_divideEquivalence__gopurs_runtime_Value_2464526773 gopurs_runtime.Value
+var once_divideEquivalence__gopurs_runtime_Value_2464526773 sync.Once
+func Get_divideEquivalence__gopurs_runtime_Value_2464526773() gopurs_runtime.Value {
+	once_divideEquivalence__gopurs_runtime_Value_2464526773.Do(func() {
+		cache_divideEquivalence__gopurs_runtime_Value_2464526773 = gopurs_runtime.RecordDict2("Contravariant0", "divide", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Equivalence.Get_contravariantEquivalence__gopurs_runtime_Value_506233683()
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_4 gopurs_runtime.Value) gopurs_runtime.Value {
+v2_5_0 := gopurs_runtime.Apply(f_0, a_3)
+_ = v2_5_0
+v3_6_1 := gopurs_runtime.Apply(f_0, b_4)
+_ = v3_6_1
+return gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Apply2(v_1, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5_0.UnsafePtr).V0, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v3_6_1.UnsafePtr).V0), gopurs_runtime.Apply2(v1_2, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5_0.UnsafePtr).V1, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v3_6_1.UnsafePtr).V1)).IntVal) != (0))
+})
+})
+})
+})
+}))
+	})
+	return cache_divideEquivalence__gopurs_runtime_Value_2464526773
+}
+
 var cache_divideComparison gopurs_runtime.Value
 var once_divideComparison sync.Once
 func Get_divideComparison() gopurs_runtime.Value {
@@ -105,6 +151,31 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ordering.Get_semi
 	return cache_divideComparison
 }
 
+var cache_divideComparison__gopurs_runtime_Value_295028591 gopurs_runtime.Value
+var once_divideComparison__gopurs_runtime_Value_295028591 sync.Once
+func Get_divideComparison__gopurs_runtime_Value_295028591() gopurs_runtime.Value {
+	once_divideComparison__gopurs_runtime_Value_295028591.Do(func() {
+		cache_divideComparison__gopurs_runtime_Value_295028591 = gopurs_runtime.RecordDict2("Contravariant0", "divide", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Comparison.Get_contravariantComparison__gopurs_runtime_Value_1065380147()
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_4 gopurs_runtime.Value) gopurs_runtime.Value {
+v2_5_0 := gopurs_runtime.Apply(f_0, a_3)
+_ = v2_5_0
+v3_6_1 := gopurs_runtime.Apply(f_0, b_4)
+_ = v3_6_1
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ordering.Get_semigroupOrdering(), "append"), gopurs_runtime.Apply2(v_1, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5_0.UnsafePtr).V0, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v3_6_1.UnsafePtr).V0), gopurs_runtime.Apply2(v1_2, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5_0.UnsafePtr).V1, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v3_6_1.UnsafePtr).V1))
+})
+})
+})
+})
+}))
+	})
+	return cache_divideComparison__gopurs_runtime_Value_295028591
+}
+
 var cache_divide gopurs_runtime.Value
 var once_divide sync.Once
 func Get_divide() gopurs_runtime.Value {
@@ -116,15 +187,15 @@ return Call_divide(dict_0_box)
 	return cache_divide
 }
 
-var cache_divide__gopurs_runtime_Value_220145316 gopurs_runtime.Value
-var once_divide__gopurs_runtime_Value_220145316 sync.Once
-func Get_divide__gopurs_runtime_Value_220145316() gopurs_runtime.Value {
-	once_divide__gopurs_runtime_Value_220145316.Do(func() {
-		cache_divide__gopurs_runtime_Value_220145316 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_divide__gopurs_runtime_Value_220145316(dict_0_box)
+var cache_divide__gopurs_runtime_Value_1446725958 gopurs_runtime.Value
+var once_divide__gopurs_runtime_Value_1446725958 sync.Once
+func Get_divide__gopurs_runtime_Value_1446725958() gopurs_runtime.Value {
+	once_divide__gopurs_runtime_Value_1446725958.Do(func() {
+		cache_divide__gopurs_runtime_Value_1446725958 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_divide__gopurs_runtime_Value_1446725958(dict_0_box)
 })
 	})
-	return cache_divide__gopurs_runtime_Value_220145316
+	return cache_divide__gopurs_runtime_Value_1446725958
 }
 
 var cache_divided gopurs_runtime.Value
@@ -168,7 +239,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "divide")
 }
 
-func Call_divide__gopurs_runtime_Value_220145316(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_divide__gopurs_runtime_Value_1446725958(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "divide")

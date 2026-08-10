@@ -133,7 +133,7 @@ var once_diff sync.Once
 func Get_diff() gopurs_runtime.Value {
 	once_diff.Do(func() {
 		cache_diff = gopurs_runtime.Func3(func(dictDuration_0_box gopurs_runtime.Value, dt1_1_box gopurs_runtime.Value, dt2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_diff(dictDuration_0_box, dt1_1_box.FloatVal(), dt2_2_box.FloatVal())
+return Call_diff(dictDuration_0_box, dt1_1_box, dt2_2_box)
 })
 	})
 	return cache_diff
@@ -213,14 +213,14 @@ _ = d_0
 return gopurs_runtime.UncurriedApp7(Get_fromDateTimeImpl(), gopurs_runtime.Int((*pkg_Data_Date.Constructor_Date)(d_0.UnsafePtr).V0), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Date_Component.Get_boundedEnumMonth(), "fromEnum"), (*pkg_Data_Date.Constructor_Date)(d_0.UnsafePtr).V1), gopurs_runtime.Int((*pkg_Data_Date.Constructor_Date)(d_0.UnsafePtr).V2), gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedHour(), "bottom"), gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedMinute(), "bottom"), gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedSecond(), "bottom"), gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_boundedMillisecond(), "bottom")).FloatVal()
 }
 
-func Call_diff(dictDuration_0_loop gopurs_runtime.Value, dt1_1_loop float64, dt2_2_loop float64) gopurs_runtime.Value {
+func Call_diff(dictDuration_0_loop gopurs_runtime.Value, dt1_1_loop gopurs_runtime.Value, dt2_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictDuration_0 gopurs_runtime.Value = dictDuration_0_loop
 _ = dictDuration_0
-var dt1_1 float64 = dt1_1_loop
+var dt1_1 gopurs_runtime.Value = dt1_1_loop
 _ = dt1_1
-var dt2_2 float64 = dt2_2_loop
+var dt2_2 gopurs_runtime.Value = dt2_2_loop
 _ = dt2_2
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "toDuration"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupMilliseconds(), "append"), gopurs_runtime.Float(dt1_1), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationMilliseconds(), "toDuration"), gopurs_runtime.Float(-(gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationMilliseconds(), "fromDuration"), gopurs_runtime.Float(dt2_2)).FloatVal())))))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDuration_0, "toDuration"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupMilliseconds(), "append"), dt1_1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationMilliseconds(), "toDuration"), gopurs_runtime.Float(-(gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationMilliseconds(), "fromDuration"), dt2_2).FloatVal())))))
 }
 
 func Get_fromDateTimeImpl() gopurs_runtime.Value {

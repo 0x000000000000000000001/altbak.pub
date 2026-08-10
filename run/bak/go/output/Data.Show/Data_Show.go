@@ -61,6 +61,17 @@ return Call_showRecordFields(dict_0_box)
 	return cache_showRecordFields
 }
 
+var cache_showRecordFields__gopurs_runtime_Value_2713688005 gopurs_runtime.Value
+var once_showRecordFields__gopurs_runtime_Value_2713688005 sync.Once
+func Get_showRecordFields__gopurs_runtime_Value_2713688005() gopurs_runtime.Value {
+	once_showRecordFields__gopurs_runtime_Value_2713688005.Do(func() {
+		cache_showRecordFields__gopurs_runtime_Value_2713688005 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_showRecordFields__gopurs_runtime_Value_2713688005(dict_0_box)
+})
+	})
+	return cache_showRecordFields__gopurs_runtime_Value_2713688005
+}
+
 var cache_showRecord gopurs_runtime.Value
 var once_showRecord sync.Once
 func Get_showRecord() gopurs_runtime.Value {
@@ -145,15 +156,15 @@ return Call_show(dict_0_box)
 	return cache_show
 }
 
-var cache_show__gopurs_runtime_Value_2007224724 gopurs_runtime.Value
-var once_show__gopurs_runtime_Value_2007224724 sync.Once
-func Get_show__gopurs_runtime_Value_2007224724() gopurs_runtime.Value {
-	once_show__gopurs_runtime_Value_2007224724.Do(func() {
-		cache_show__gopurs_runtime_Value_2007224724 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_show__gopurs_runtime_Value_2007224724(dict_0_box)
+var cache_show__gopurs_runtime_Value_2742601362 gopurs_runtime.Value
+var once_show__gopurs_runtime_Value_2742601362 sync.Once
+func Get_show__gopurs_runtime_Value_2742601362() gopurs_runtime.Value {
+	once_show__gopurs_runtime_Value_2742601362.Do(func() {
+		cache_show__gopurs_runtime_Value_2742601362 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_show__gopurs_runtime_Value_2742601362(dict_0_box)
 })
 	})
-	return cache_show__gopurs_runtime_Value_2007224724
+	return cache_show__gopurs_runtime_Value_2742601362
 }
 
 var cache_showArray gopurs_runtime.Value
@@ -195,6 +206,12 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "showRecordFields")
 }
 
+func Call_showRecordFields__gopurs_runtime_Value_2713688005(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "showRecordFields")
+}
+
 func Call_showRecord(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, dictShowRecordFields_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
@@ -213,7 +230,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "show")
 }
 
-func Call_show__gopurs_runtime_Value_2007224724(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_show__gopurs_runtime_Value_2742601362(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "show")

@@ -60,6 +60,15 @@ func Get_traversableNonEmptyArray() gopurs_runtime.Value {
 	return cache_traversableNonEmptyArray
 }
 
+var cache_traversableNonEmptyArray__gopurs_runtime_Value_2643873085 gopurs_runtime.Value
+var once_traversableNonEmptyArray__gopurs_runtime_Value_2643873085 sync.Once
+func Get_traversableNonEmptyArray__gopurs_runtime_Value_2643873085() gopurs_runtime.Value {
+	once_traversableNonEmptyArray__gopurs_runtime_Value_2643873085.Do(func() {
+		cache_traversableNonEmptyArray__gopurs_runtime_Value_2643873085 = pkg_Data_Traversable.Get_traversableArray__gopurs_runtime_Value_2643873085()
+	})
+	return cache_traversableNonEmptyArray__gopurs_runtime_Value_2643873085
+}
+
 var cache_showNonEmptyArray gopurs_runtime.Value
 var once_showNonEmptyArray sync.Once
 func Get_showNonEmptyArray() gopurs_runtime.Value {
@@ -145,6 +154,15 @@ func Get_foldableNonEmptyArray() gopurs_runtime.Value {
 	return cache_foldableNonEmptyArray
 }
 
+var cache_foldableNonEmptyArray__gopurs_runtime_Value_3859409398 gopurs_runtime.Value
+var once_foldableNonEmptyArray__gopurs_runtime_Value_3859409398 sync.Once
+func Get_foldableNonEmptyArray__gopurs_runtime_Value_3859409398() gopurs_runtime.Value {
+	once_foldableNonEmptyArray__gopurs_runtime_Value_3859409398.Do(func() {
+		cache_foldableNonEmptyArray__gopurs_runtime_Value_3859409398 = pkg_Data_Foldable.Get_foldableArray__gopurs_runtime_Value_3859409398()
+	})
+	return cache_foldableNonEmptyArray__gopurs_runtime_Value_3859409398
+}
+
 var cache_foldable1NonEmptyArray gopurs_runtime.Value
 var once_foldable1NonEmptyArray sync.Once
 func Get_foldable1NonEmptyArray() gopurs_runtime.Value {
@@ -170,6 +188,33 @@ return gopurs_runtime.UncurriedApp2(Get_foldr1Impl(), __local_var_0, __local_var
 }))
 	})
 	return cache_foldable1NonEmptyArray
+}
+
+var cache_foldable1NonEmptyArray__gopurs_runtime_Value_4102232191 gopurs_runtime.Value
+var once_foldable1NonEmptyArray__gopurs_runtime_Value_4102232191 sync.Once
+func Get_foldable1NonEmptyArray__gopurs_runtime_Value_4102232191() gopurs_runtime.Value {
+	once_foldable1NonEmptyArray__gopurs_runtime_Value_4102232191.Do(func() {
+		cache_foldable1NonEmptyArray__gopurs_runtime_Value_4102232191 = gopurs_runtime.RecordDict4("Foldable0", "foldMap1", "foldl1", "foldr1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Foldable.Get_foldableArray__gopurs_runtime_Value_3859409398()
+}), gopurs_runtime.Func(func(dictSemigroup_0 gopurs_runtime.Value) gopurs_runtime.Value {
+append_1_0 := gopurs_runtime.RecordGet(dictSemigroup_0, "append")
+_ = append_1_0
+return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Functor.Get_functorArray(), "map"), f_2)
+_ = __local_var_3_1
+__local_var_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_foldable1NonEmptyArray(), "foldl1"), append_1_0)
+_ = __local_var_4_2
+return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_4_2, gopurs_runtime.Apply(__local_var_3_1, x_5))
+})
+})
+}), gopurs_runtime.Func2(func(__local_var_0 gopurs_runtime.Value, __local_var_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UncurriedApp2(Get_foldl1Impl(), __local_var_0, __local_var_1)
+}), gopurs_runtime.Func2(func(__local_var_0 gopurs_runtime.Value, __local_var_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UncurriedApp2(Get_foldr1Impl(), __local_var_0, __local_var_1)
+}))
+	})
+	return cache_foldable1NonEmptyArray__gopurs_runtime_Value_4102232191
 }
 
 var cache_traversable1NonEmptyArray gopurs_runtime.Value

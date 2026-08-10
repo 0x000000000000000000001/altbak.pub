@@ -22,6 +22,17 @@ return Call_identity(x_0_box)
 	return cache_identity
 }
 
+var cache_identity1 gopurs_runtime.Value
+var once_identity1 sync.Once
+func Get_identity1() gopurs_runtime.Value {
+	once_identity1.Do(func() {
+		cache_identity1 = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_identity1(x_0_box)
+})
+	})
+	return cache_identity1
+}
+
 var cache_monoidEndo gopurs_runtime.Value
 var once_monoidEndo sync.Once
 func Get_monoidEndo() gopurs_runtime.Value {
@@ -66,15 +77,15 @@ return semigroupDual1_0_0
 	return cache_monoidDual
 }
 
-var cache_identity1 gopurs_runtime.Value
-var once_identity1 sync.Once
-func Get_identity1() gopurs_runtime.Value {
-	once_identity1.Do(func() {
-		cache_identity1 = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_identity1(x_0_box)
+var cache_identity2 gopurs_runtime.Value
+var once_identity2 sync.Once
+func Get_identity2() gopurs_runtime.Value {
+	once_identity2.Do(func() {
+		cache_identity2 = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_identity2(x_0_box)
 })
 	})
-	return cache_identity1
+	return cache_identity2
 }
 
 var cache_bifoldr gopurs_runtime.Value
@@ -88,15 +99,15 @@ return Call_bifoldr(dict_0_box)
 	return cache_bifoldr
 }
 
-var cache_bifoldr__gopurs_runtime_Value_1357093194 gopurs_runtime.Value
-var once_bifoldr__gopurs_runtime_Value_1357093194 sync.Once
-func Get_bifoldr__gopurs_runtime_Value_1357093194() gopurs_runtime.Value {
-	once_bifoldr__gopurs_runtime_Value_1357093194.Do(func() {
-		cache_bifoldr__gopurs_runtime_Value_1357093194 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_bifoldr__gopurs_runtime_Value_1357093194(dict_0_box)
+var cache_bifoldr__gopurs_runtime_Value_2116322576 gopurs_runtime.Value
+var once_bifoldr__gopurs_runtime_Value_2116322576 sync.Once
+func Get_bifoldr__gopurs_runtime_Value_2116322576() gopurs_runtime.Value {
+	once_bifoldr__gopurs_runtime_Value_2116322576.Do(func() {
+		cache_bifoldr__gopurs_runtime_Value_2116322576 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bifoldr__gopurs_runtime_Value_2116322576(dict_0_box)
 })
 	})
-	return cache_bifoldr__gopurs_runtime_Value_1357093194
+	return cache_bifoldr__gopurs_runtime_Value_2116322576
 }
 
 var cache_bitraverse_ gopurs_runtime.Value
@@ -110,15 +121,15 @@ return Call_bitraverse_(dictBifoldable_0_box, dictApplicative_1_box)
 	return cache_bitraverse_
 }
 
-var cache_bitraverse___gopurs_runtime_Value_346924893 gopurs_runtime.Value
-var once_bitraverse___gopurs_runtime_Value_346924893 sync.Once
-func Get_bitraverse___gopurs_runtime_Value_346924893() gopurs_runtime.Value {
-	once_bitraverse___gopurs_runtime_Value_346924893.Do(func() {
-		cache_bitraverse___gopurs_runtime_Value_346924893 = gopurs_runtime.Func2(func(dictBifoldable_0_box gopurs_runtime.Value, dictApplicative_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_bitraverse___gopurs_runtime_Value_346924893(dictBifoldable_0_box, dictApplicative_1_box)
+var cache_bitraverse___gopurs_runtime_Value_1288679761 gopurs_runtime.Value
+var once_bitraverse___gopurs_runtime_Value_1288679761 sync.Once
+func Get_bitraverse___gopurs_runtime_Value_1288679761() gopurs_runtime.Value {
+	once_bitraverse___gopurs_runtime_Value_1288679761.Do(func() {
+		cache_bitraverse___gopurs_runtime_Value_1288679761 = gopurs_runtime.Func2(func(dictBifoldable_0_box gopurs_runtime.Value, dictApplicative_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bitraverse___gopurs_runtime_Value_1288679761(dictBifoldable_0_box, dictApplicative_1_box)
 })
 	})
-	return cache_bitraverse___gopurs_runtime_Value_346924893
+	return cache_bitraverse___gopurs_runtime_Value_1288679761
 }
 
 var cache_bifor_ gopurs_runtime.Value
@@ -154,15 +165,15 @@ return Call_bifoldl(dict_0_box)
 	return cache_bifoldl
 }
 
-var cache_bifoldl__gopurs_runtime_Value_1357093194 gopurs_runtime.Value
-var once_bifoldl__gopurs_runtime_Value_1357093194 sync.Once
-func Get_bifoldl__gopurs_runtime_Value_1357093194() gopurs_runtime.Value {
-	once_bifoldl__gopurs_runtime_Value_1357093194.Do(func() {
-		cache_bifoldl__gopurs_runtime_Value_1357093194 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_bifoldl__gopurs_runtime_Value_1357093194(dict_0_box)
+var cache_bifoldl__gopurs_runtime_Value_2116322576 gopurs_runtime.Value
+var once_bifoldl__gopurs_runtime_Value_2116322576 sync.Once
+func Get_bifoldl__gopurs_runtime_Value_2116322576() gopurs_runtime.Value {
+	once_bifoldl__gopurs_runtime_Value_2116322576.Do(func() {
+		cache_bifoldl__gopurs_runtime_Value_2116322576 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bifoldl__gopurs_runtime_Value_2116322576(dict_0_box)
 })
 	})
-	return cache_bifoldl__gopurs_runtime_Value_1357093194
+	return cache_bifoldl__gopurs_runtime_Value_2116322576
 }
 
 var cache_bifoldableTuple gopurs_runtime.Value
@@ -196,6 +207,39 @@ return gopurs_runtime.Apply2(f_0, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runt
 }))
 	})
 	return cache_bifoldableTuple
+}
+
+var cache_bifoldableTuple__gopurs_runtime_Value_2848462991 gopurs_runtime.Value
+var once_bifoldableTuple__gopurs_runtime_Value_2848462991 sync.Once
+func Get_bifoldableTuple__gopurs_runtime_Value_2848462991() gopurs_runtime.Value {
+	once_bifoldableTuple__gopurs_runtime_Value_2848462991.Do(func() {
+		cache_bifoldableTuple__gopurs_runtime_Value_2848462991 = gopurs_runtime.RecordDict3("bifoldMap", "bifoldl", "bifoldr", gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(g_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}), "append"), gopurs_runtime.Apply(f_1, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V0), gopurs_runtime.Apply(g_2, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V1))
+})
+})
+})
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(g_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(z_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(g_1, gopurs_runtime.Apply2(f_0, z_2, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V0), (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V1)
+})
+})
+})
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(g_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(z_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(f_0, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V0, gopurs_runtime.Apply2(g_1, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V1, z_2))
+})
+})
+})
+}))
+	})
+	return cache_bifoldableTuple__gopurs_runtime_Value_2848462991
 }
 
 var cache_bifoldableJoker gopurs_runtime.Value
@@ -305,6 +349,102 @@ return __t2
 	return cache_bifoldableEither
 }
 
+var cache_bifoldableEither__gopurs_runtime_Value_3757003471 gopurs_runtime.Value
+var once_bifoldableEither__gopurs_runtime_Value_3757003471 sync.Once
+func Get_bifoldableEither__gopurs_runtime_Value_3757003471() gopurs_runtime.Value {
+	once_bifoldableEither__gopurs_runtime_Value_3757003471.Do(func() {
+		cache_bifoldableEither__gopurs_runtime_Value_3757003471 = gopurs_runtime.RecordDict3("bifoldMap", "bifoldl", "bifoldr", gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v2_3 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t0 gopurs_runtime.Value
+{
+if (v2_3.Type == 9 && v2_3.IntVal == 3711209382) {
+__t0 = gopurs_runtime.Apply(v_1, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v2_3.UnsafePtr).V0)
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (v2_3.Type == 9 && v2_3.IntVal == 2465973597) {
+__t0 = gopurs_runtime.Apply(v1_2, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v2_3.UnsafePtr).V0)
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_0:
+return __t0
+})
+})
+})
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v3_3 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t1 gopurs_runtime.Value
+{
+if (v3_3.Type == 9 && v3_3.IntVal == 3711209382) {
+__t1 = gopurs_runtime.Apply2(v_0, v2_2, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v3_3.UnsafePtr).V0)
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (v3_3.Type == 9 && v3_3.IntVal == 2465973597) {
+__t1 = gopurs_runtime.Apply2(v1_1, v2_2, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v3_3.UnsafePtr).V0)
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_1:
+return __t1
+})
+})
+})
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v3_3 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t2 gopurs_runtime.Value
+{
+if (v3_3.Type == 9 && v3_3.IntVal == 3711209382) {
+__t2 = gopurs_runtime.Apply2(v_0, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v3_3.UnsafePtr).V0, v2_2)
+goto end_branch_2
+} else {
+
+}
+}
+{
+if (v3_3.Type == 9 && v3_3.IntVal == 2465973597) {
+__t2 = gopurs_runtime.Apply2(v1_1, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v3_3.UnsafePtr).V0, v2_2)
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_2:
+return __t2
+})
+})
+})
+}))
+	})
+	return cache_bifoldableEither__gopurs_runtime_Value_3757003471
+}
+
 var cache_bifoldableConst gopurs_runtime.Value
 var once_bifoldableConst sync.Once
 func Get_bifoldableConst() gopurs_runtime.Value {
@@ -336,6 +476,39 @@ return gopurs_runtime.Apply2(f_0, v1_3, z_2)
 }))
 	})
 	return cache_bifoldableConst
+}
+
+var cache_bifoldableConst__gopurs_runtime_Value_1660068993 gopurs_runtime.Value
+var once_bifoldableConst__gopurs_runtime_Value_1660068993 sync.Once
+func Get_bifoldableConst__gopurs_runtime_Value_1660068993() gopurs_runtime.Value {
+	once_bifoldableConst__gopurs_runtime_Value_1660068993.Do(func() {
+		cache_bifoldableConst__gopurs_runtime_Value_1660068993 = gopurs_runtime.RecordDict3("bifoldMap", "bifoldl", "bifoldr", gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_1, v1_3)
+})
+})
+})
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(z_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(f_0, z_2, v1_3)
+})
+})
+})
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(z_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(f_0, v1_3, z_2)
+})
+})
+})
+}))
+	})
+	return cache_bifoldableConst__gopurs_runtime_Value_1660068993
 }
 
 var cache_bifoldableClown gopurs_runtime.Value
@@ -382,15 +555,15 @@ return Call_bifoldMap(dict_0_box)
 	return cache_bifoldMap
 }
 
-var cache_bifoldMap__gopurs_runtime_Value_3262735199 gopurs_runtime.Value
-var once_bifoldMap__gopurs_runtime_Value_3262735199 sync.Once
-func Get_bifoldMap__gopurs_runtime_Value_3262735199() gopurs_runtime.Value {
-	once_bifoldMap__gopurs_runtime_Value_3262735199.Do(func() {
-		cache_bifoldMap__gopurs_runtime_Value_3262735199 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_bifoldMap__gopurs_runtime_Value_3262735199(dict_0_box)
+var cache_bifoldMap__gopurs_runtime_Value_4006734481 gopurs_runtime.Value
+var once_bifoldMap__gopurs_runtime_Value_4006734481 sync.Once
+func Get_bifoldMap__gopurs_runtime_Value_4006734481() gopurs_runtime.Value {
+	once_bifoldMap__gopurs_runtime_Value_4006734481.Do(func() {
+		cache_bifoldMap__gopurs_runtime_Value_4006734481 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bifoldMap__gopurs_runtime_Value_4006734481(dict_0_box)
 })
 	})
-	return cache_bifoldMap__gopurs_runtime_Value_3262735199
+	return cache_bifoldMap__gopurs_runtime_Value_4006734481
 }
 
 var cache_bifoldableFlip gopurs_runtime.Value
@@ -415,15 +588,15 @@ return Call_bifoldlDefault(dictBifoldable_0_box)
 	return cache_bifoldlDefault
 }
 
-var cache_bifoldlDefault__gopurs_runtime_Value_1357093194 gopurs_runtime.Value
-var once_bifoldlDefault__gopurs_runtime_Value_1357093194 sync.Once
-func Get_bifoldlDefault__gopurs_runtime_Value_1357093194() gopurs_runtime.Value {
-	once_bifoldlDefault__gopurs_runtime_Value_1357093194.Do(func() {
-		cache_bifoldlDefault__gopurs_runtime_Value_1357093194 = gopurs_runtime.Func(func(dictBifoldable_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_bifoldlDefault__gopurs_runtime_Value_1357093194(dictBifoldable_0_box)
+var cache_bifoldlDefault__gopurs_runtime_Value_2116322576 gopurs_runtime.Value
+var once_bifoldlDefault__gopurs_runtime_Value_2116322576 sync.Once
+func Get_bifoldlDefault__gopurs_runtime_Value_2116322576() gopurs_runtime.Value {
+	once_bifoldlDefault__gopurs_runtime_Value_2116322576.Do(func() {
+		cache_bifoldlDefault__gopurs_runtime_Value_2116322576 = gopurs_runtime.Func(func(dictBifoldable_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bifoldlDefault__gopurs_runtime_Value_2116322576(dictBifoldable_0_box)
 })
 	})
-	return cache_bifoldlDefault__gopurs_runtime_Value_1357093194
+	return cache_bifoldlDefault__gopurs_runtime_Value_2116322576
 }
 
 var cache_bifoldrDefault gopurs_runtime.Value
@@ -437,26 +610,15 @@ return Call_bifoldrDefault(dictBifoldable_0_box)
 	return cache_bifoldrDefault
 }
 
-var cache_bifoldrDefault__gopurs_runtime_Value_1581761802 gopurs_runtime.Value
-var once_bifoldrDefault__gopurs_runtime_Value_1581761802 sync.Once
-func Get_bifoldrDefault__gopurs_runtime_Value_1581761802() gopurs_runtime.Value {
-	once_bifoldrDefault__gopurs_runtime_Value_1581761802.Do(func() {
-		cache_bifoldrDefault__gopurs_runtime_Value_1581761802 = gopurs_runtime.Func(func(dictBifoldable_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_bifoldrDefault__gopurs_runtime_Value_1581761802(dictBifoldable_0_box)
+var cache_bifoldrDefault__gopurs_runtime_Value_2116322576 gopurs_runtime.Value
+var once_bifoldrDefault__gopurs_runtime_Value_2116322576 sync.Once
+func Get_bifoldrDefault__gopurs_runtime_Value_2116322576() gopurs_runtime.Value {
+	once_bifoldrDefault__gopurs_runtime_Value_2116322576.Do(func() {
+		cache_bifoldrDefault__gopurs_runtime_Value_2116322576 = gopurs_runtime.Func(func(dictBifoldable_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bifoldrDefault__gopurs_runtime_Value_2116322576(dictBifoldable_0_box)
 })
 	})
-	return cache_bifoldrDefault__gopurs_runtime_Value_1581761802
-}
-
-var cache_bifoldrDefault__gopurs_runtime_Value_1357093194 gopurs_runtime.Value
-var once_bifoldrDefault__gopurs_runtime_Value_1357093194 sync.Once
-func Get_bifoldrDefault__gopurs_runtime_Value_1357093194() gopurs_runtime.Value {
-	once_bifoldrDefault__gopurs_runtime_Value_1357093194.Do(func() {
-		cache_bifoldrDefault__gopurs_runtime_Value_1357093194 = gopurs_runtime.Func(func(dictBifoldable_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_bifoldrDefault__gopurs_runtime_Value_1357093194(dictBifoldable_0_box)
-})
-	})
-	return cache_bifoldrDefault__gopurs_runtime_Value_1357093194
+	return cache_bifoldrDefault__gopurs_runtime_Value_2116322576
 }
 
 var cache_bifoldableProduct2 gopurs_runtime.Value
@@ -515,13 +677,19 @@ _ = x_0
 return x_0
 }
 
+func Call_identity2(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0
+}
+
 func Call_bifoldr(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "bifoldr")
 }
 
-func Call_bifoldr__gopurs_runtime_Value_1357093194(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_bifoldr__gopurs_runtime_Value_2116322576(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "bifoldr")
@@ -532,48 +700,56 @@ var dictBifoldable_0 gopurs_runtime.Value = dictBifoldable_0_loop
 _ = dictBifoldable_0
 var dictApplicative_1 gopurs_runtime.Value = dictApplicative_1_loop
 _ = dictApplicative_1
-__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_1, "Apply0"), gopurs_runtime.Value{})
-_ = __local_var_2_1
-applySecond_2_0 := gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_1, "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return pkg_Control_Apply.Get_identity()
-}), a_3), b_4)
-})
-})
-_ = applySecond_2_0
+Apply0_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_1, "Apply0"), gopurs_runtime.Value{})
+_ = Apply0_2_0
 return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(g_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictBifoldable_0, "bifoldr"), gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(applySecond_2_0, gopurs_runtime.Apply(f_3, x_5))
+__local_var_6_1 := gopurs_runtime.Apply(f_3, x_5)
+_ = __local_var_6_1
+return gopurs_runtime.Func(func(b_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Apply0_2_0, "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Apply0_2_0, "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Control_Apply.Get_identity()
+}), __local_var_6_1), b_7)
+})
 }), gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(applySecond_2_0, gopurs_runtime.Apply(g_4, x_5))
+__local_var_6_2 := gopurs_runtime.Apply(g_4, x_5)
+_ = __local_var_6_2
+return gopurs_runtime.Func(func(b_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Apply0_2_0, "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Apply0_2_0, "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Control_Apply.Get_identity()
+}), __local_var_6_2), b_7)
+})
 }), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_1, "pure"), pkg_Data_Unit.Get_unit()))
 })
 })
 }
 
-func Call_bitraverse___gopurs_runtime_Value_346924893(dictBifoldable_0_loop gopurs_runtime.Value, dictApplicative_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_bitraverse___gopurs_runtime_Value_1288679761(dictBifoldable_0_loop gopurs_runtime.Value, dictApplicative_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictBifoldable_0 gopurs_runtime.Value = dictBifoldable_0_loop
 _ = dictBifoldable_0
 var dictApplicative_1 gopurs_runtime.Value = dictApplicative_1_loop
 _ = dictApplicative_1
-__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_1, "Apply0"), gopurs_runtime.Value{})
-_ = __local_var_2_1
-applySecond_2_0 := gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_1, "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return pkg_Control_Apply.Get_identity()
-}), a_3), b_4)
-})
-})
-_ = applySecond_2_0
+Apply0_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_1, "Apply0"), gopurs_runtime.Value{})
+_ = Apply0_2_0
 return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(g_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictBifoldable_0, "bifoldr"), gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(applySecond_2_0, gopurs_runtime.Apply(f_3, x_5))
+__local_var_6_1 := gopurs_runtime.Apply(f_3, x_5)
+_ = __local_var_6_1
+return gopurs_runtime.Func(func(b_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Apply0_2_0, "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Apply0_2_0, "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Control_Apply.Get_identity()
+}), __local_var_6_1), b_7)
+})
 }), gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(applySecond_2_0, gopurs_runtime.Apply(g_4, x_5))
+__local_var_6_2 := gopurs_runtime.Apply(g_4, x_5)
+_ = __local_var_6_2
+return gopurs_runtime.Func(func(b_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Apply0_2_0, "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Apply0_2_0, "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Control_Apply.Get_identity()
+}), __local_var_6_2), b_7)
+})
 }), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_1, "pure"), pkg_Data_Unit.Get_unit()))
 })
 })
@@ -600,7 +776,7 @@ var dictBifoldable_0 gopurs_runtime.Value = dictBifoldable_0_loop
 _ = dictBifoldable_0
 var dictApplicative_1 gopurs_runtime.Value = dictApplicative_1_loop
 _ = dictApplicative_1
-return gopurs_runtime.Apply2(Call_bitraverse_(dictBifoldable_0, dictApplicative_1), Get_identity(), Get_identity())
+return gopurs_runtime.Apply2(Call_bitraverse_(dictBifoldable_0, dictApplicative_1), Get_identity(), Get_identity1())
 }
 
 func Call_bifoldl(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -609,7 +785,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "bifoldl")
 }
 
-func Call_bifoldl__gopurs_runtime_Value_1357093194(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_bifoldl__gopurs_runtime_Value_2116322576(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "bifoldl")
@@ -729,7 +905,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "bifoldMap")
 }
 
-func Call_bifoldMap__gopurs_runtime_Value_3262735199(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_bifoldMap__gopurs_runtime_Value_4006734481(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "bifoldMap")
@@ -791,7 +967,7 @@ return gopurs_runtime.Apply2(g_3, a_7, x_6)
 })
 }
 
-func Call_bifoldlDefault__gopurs_runtime_Value_1357093194(dictBifoldable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_bifoldlDefault__gopurs_runtime_Value_2116322576(dictBifoldable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictBifoldable_0 gopurs_runtime.Value = dictBifoldable_0_loop
 _ = dictBifoldable_0
 bifoldMap1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBifoldable_0, "bifoldMap"), Get_monoidDual())
@@ -835,27 +1011,7 @@ return gopurs_runtime.Apply(g_3, x_6)
 })
 }
 
-func Call_bifoldrDefault__gopurs_runtime_Value_1581761802(dictBifoldable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictBifoldable_0 gopurs_runtime.Value = dictBifoldable_0_loop
-_ = dictBifoldable_0
-bifoldMap1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBifoldable_0, "bifoldMap"), Get_monoidEndo())
-_ = bifoldMap1_1_0
-return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(g_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(z_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(p_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply4(bifoldMap1_1_0, gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_2, x_6)
-}), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(g_3, x_6)
-}), p_5, z_4)
-})
-})
-})
-})
-}
-
-func Call_bifoldrDefault__gopurs_runtime_Value_1357093194(dictBifoldable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_bifoldrDefault__gopurs_runtime_Value_2116322576(dictBifoldable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictBifoldable_0 gopurs_runtime.Value = dictBifoldable_0_loop
 _ = dictBifoldable_0
 bifoldMap1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBifoldable_0, "bifoldMap"), Get_monoidEndo())
@@ -920,7 +1076,7 @@ var dictBifoldable_0 gopurs_runtime.Value = dictBifoldable_0_loop
 _ = dictBifoldable_0
 var dictMonoid_1 gopurs_runtime.Value = dictMonoid_1_loop
 _ = dictMonoid_1
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictBifoldable_0, "bifoldMap"), dictMonoid_1, Get_identity1(), Get_identity1())
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictBifoldable_0, "bifoldMap"), dictMonoid_1, Get_identity2(), Get_identity2())
 }
 
 func Call_biany(dictBifoldable_0_loop gopurs_runtime.Value, dictBooleanAlgebra_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

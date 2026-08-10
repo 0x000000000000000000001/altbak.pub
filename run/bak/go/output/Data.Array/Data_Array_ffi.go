@@ -289,7 +289,7 @@ func AllImpl(p func(interface{}) bool, xs []interface{}) bool {
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs__DeleteAt = // TAST: (ADT ["Data","Function","Uncurried","Fn4"] [(Func [(TypeVar b)] (ADT ["Data","Maybe","Maybe"] [(TypeVar b)])), (ADT ["Data","Maybe","Maybe"] [(TypeVar b)]), Int, (Array (TypeVar a)), (ADT ["Data","Maybe","Maybe"] [(Array (TypeVar a))])])
+var _Gopurs__DeleteAt = // TAST: (ForAll [a] (ADT ["Data","Function","Uncurried","Fn4"] [(ForAll [b] (Func [(TypeVar b)] (ADT ["Data","Maybe","Maybe"] [(TypeVar b)]))), (ForAll [b] (ADT ["Data","Maybe","Maybe"] [(TypeVar b)])), Int, (Array (TypeVar a)), (ADT ["Data","Maybe","Maybe"] [(Array (TypeVar a))])]))
 gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 []any) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
@@ -302,7 +302,7 @@ gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := _DeleteAt(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs__InsertAt = // TAST: (ADT ["Data","Function","Uncurried","Fn5"] [(Func [(TypeVar b)] (ADT ["Data","Maybe","Maybe"] [(TypeVar b)])), (ADT ["Data","Maybe","Maybe"] [(TypeVar b)]), Int, (TypeVar a), (Array (TypeVar a)), (ADT ["Data","Maybe","Maybe"] [(Array (TypeVar a))])])
+var _Gopurs__InsertAt = // TAST: (ForAll [a] (ADT ["Data","Function","Uncurried","Fn5"] [(ForAll [b] (Func [(TypeVar b)] (ADT ["Data","Maybe","Maybe"] [(TypeVar b)]))), (ForAll [b] (ADT ["Data","Maybe","Maybe"] [(TypeVar b)])), Int, (TypeVar a), (Array (TypeVar a)), (ADT ["Data","Maybe","Maybe"] [(Array (TypeVar a))])]))
 gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 []any) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
@@ -316,7 +316,7 @@ gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := _InsertAt(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs__UpdateAt = // TAST: (ADT ["Data","Function","Uncurried","Fn5"] [(Func [(TypeVar b)] (ADT ["Data","Maybe","Maybe"] [(TypeVar b)])), (ADT ["Data","Maybe","Maybe"] [(TypeVar b)]), Int, (TypeVar a), (Array (TypeVar a)), (ADT ["Data","Maybe","Maybe"] [(Array (TypeVar a))])])
+var _Gopurs__UpdateAt = // TAST: (ForAll [a] (ADT ["Data","Function","Uncurried","Fn5"] [(ForAll [b] (Func [(TypeVar b)] (ADT ["Data","Maybe","Maybe"] [(TypeVar b)]))), (ForAll [b] (ADT ["Data","Maybe","Maybe"] [(TypeVar b)])), Int, (TypeVar a), (Array (TypeVar a)), (ADT ["Data","Maybe","Maybe"] [(Array (TypeVar a))])]))
 gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 []any) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
@@ -330,7 +330,7 @@ gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := _UpdateAt(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_AllImpl = // TAST: (ADT ["Data","Function","Uncurried","Fn2"] [(Func [(TypeVar a)] Boolean), (Array (TypeVar a)), Boolean])
+var _Gopurs_AllImpl = // TAST: (ForAll [a] (ADT ["Data","Function","Uncurried","Fn2"] [(Func [(TypeVar a)] Boolean), (Array (TypeVar a)), Boolean]))
 gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) bool {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
@@ -342,7 +342,7 @@ gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) 
 	go_res := AllImpl(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_AnyImpl = // TAST: (ADT ["Data","Function","Uncurried","Fn2"] [(Func [(TypeVar a)] Boolean), (Array (TypeVar a)), Boolean])
+var _Gopurs_AnyImpl = // TAST: (ForAll [a] (ADT ["Data","Function","Uncurried","Fn2"] [(Func [(TypeVar a)] Boolean), (Array (TypeVar a)), Boolean]))
 gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) bool {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
@@ -354,7 +354,7 @@ gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) 
 	go_res := AnyImpl(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_Concat = // TAST: (Func [(Array (Array (TypeVar a)))] (Array (TypeVar a)))
+var _Gopurs_Concat = // TAST: (ForAll [a] (Func [(Array (Array (TypeVar a)))] (Array (TypeVar a))))
 gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	arg0_arr := *(*[]gopurs_runtime.Value)(arg0.UnsafePtr)
 	go_arg0 := make([][]any, len(arg0_arr))
@@ -366,7 +366,7 @@ gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 				return gopurs_runtime.Array(res_arr)
 			}()
 })
-var _Gopurs_FilterImpl = // TAST: (ADT ["Data","Function","Uncurried","Fn2"] [(Func [(TypeVar a)] Boolean), (Array (TypeVar a)), (Array (TypeVar a))])
+var _Gopurs_FilterImpl = // TAST: (ForAll [a] (ADT ["Data","Function","Uncurried","Fn2"] [(Func [(TypeVar a)] Boolean), (Array (TypeVar a)), (Array (TypeVar a))]))
 gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) bool {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
@@ -382,7 +382,7 @@ gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) 
 				return gopurs_runtime.Array(res_arr)
 			}()
 })
-var _Gopurs_FindIndexImpl = // TAST: (ADT ["Data","Function","Uncurried","Fn4"] [(Func [(TypeVar b)] (ADT ["Data","Maybe","Maybe"] [(TypeVar b)])), (ADT ["Data","Maybe","Maybe"] [(TypeVar b)]), (Func [(TypeVar a)] Boolean), (Array (TypeVar a)), (ADT ["Data","Maybe","Maybe"] [Int])])
+var _Gopurs_FindIndexImpl = // TAST: (ForAll [a] (ADT ["Data","Function","Uncurried","Fn4"] [(ForAll [b] (Func [(TypeVar b)] (ADT ["Data","Maybe","Maybe"] [(TypeVar b)]))), (ForAll [b] (ADT ["Data","Maybe","Maybe"] [(TypeVar b)])), (Func [(TypeVar a)] Boolean), (Array (TypeVar a)), (ADT ["Data","Maybe","Maybe"] [Int])]))
 gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 int64) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
@@ -398,7 +398,7 @@ gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := FindIndexImpl(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_FindLastIndexImpl = // TAST: (ADT ["Data","Function","Uncurried","Fn4"] [(Func [(TypeVar b)] (ADT ["Data","Maybe","Maybe"] [(TypeVar b)])), (ADT ["Data","Maybe","Maybe"] [(TypeVar b)]), (Func [(TypeVar a)] Boolean), (Array (TypeVar a)), (ADT ["Data","Maybe","Maybe"] [Int])])
+var _Gopurs_FindLastIndexImpl = // TAST: (ForAll [a] (ADT ["Data","Function","Uncurried","Fn4"] [(ForAll [b] (Func [(TypeVar b)] (ADT ["Data","Maybe","Maybe"] [(TypeVar b)]))), (ForAll [b] (ADT ["Data","Maybe","Maybe"] [(TypeVar b)])), (Func [(TypeVar a)] Boolean), (Array (TypeVar a)), (ADT ["Data","Maybe","Maybe"] [Int])]))
 gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 int64) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
@@ -414,7 +414,7 @@ gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := FindLastIndexImpl(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_FindMapImpl = // TAST: (ADT ["Data","Function","Uncurried","Fn4"] [(ADT ["Data","Maybe","Maybe"] [(TypeVar c)]), (Func [(ADT ["Data","Maybe","Maybe"] [(TypeVar c)])] Boolean), (Func [(TypeVar a)] (ADT ["Data","Maybe","Maybe"] [(TypeVar b)])), (Array (TypeVar a)), (ADT ["Data","Maybe","Maybe"] [(TypeVar b)])])
+var _Gopurs_FindMapImpl = // TAST: (ForAll [a, b] (ADT ["Data","Function","Uncurried","Fn4"] [(ForAll [c] (ADT ["Data","Maybe","Maybe"] [(TypeVar c)])), (ForAll [c] (Func [(ADT ["Data","Maybe","Maybe"] [(TypeVar c)])] Boolean)), (Func [(TypeVar a)] (ADT ["Data","Maybe","Maybe"] [(TypeVar b)])), (Array (TypeVar a)), (ADT ["Data","Maybe","Maybe"] [(TypeVar b)])]))
 gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := func(p0_0 any) bool {
@@ -430,7 +430,7 @@ gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := FindMapImpl(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_FromFoldableImpl = // TAST: (ADT ["Data","Function","Uncurried","Fn2"] [(Func [(Func [(TypeVar a), (TypeVar b)] (TypeVar b)), (TypeVar b), (TypeVar f)] (TypeVar b)), (TypeVar f), (Array (TypeVar a))])
+var _Gopurs_FromFoldableImpl = // TAST: (ForAll [f, a] (ADT ["Data","Function","Uncurried","Fn2"] [(ForAll [b] (Func [(Func [(TypeVar a), (TypeVar b)] (TypeVar b)), (TypeVar b), (TypeApp (TypeVar f) [(TypeVar a)])] (TypeVar b))), (TypeApp (TypeVar f) [(TypeVar a)]), (Array (TypeVar a))]))
 gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 func(any) func(any) any, p0_1 any, p0_2 any) any {
 			return gopurs_runtime.Apply3(arg0, gopurs_runtime.Func(func(arg gopurs_runtime.Value) gopurs_runtime.Value {
@@ -449,7 +449,7 @@ gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) 
 				return gopurs_runtime.Array(res_arr)
 			}()
 })
-var _Gopurs_IndexImpl = // TAST: (ADT ["Data","Function","Uncurried","Fn4"] [(Func [(TypeVar r)] (ADT ["Data","Maybe","Maybe"] [(TypeVar r)])), (ADT ["Data","Maybe","Maybe"] [(TypeVar r)]), (Array (TypeVar a)), Int, (ADT ["Data","Maybe","Maybe"] [(TypeVar a)])])
+var _Gopurs_IndexImpl = // TAST: (ForAll [a] (ADT ["Data","Function","Uncurried","Fn4"] [(ForAll [r] (Func [(TypeVar r)] (ADT ["Data","Maybe","Maybe"] [(TypeVar r)]))), (ForAll [r] (ADT ["Data","Maybe","Maybe"] [(TypeVar r)])), (Array (TypeVar a)), Int, (ADT ["Data","Maybe","Maybe"] [(TypeVar a)])]))
 gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
@@ -462,7 +462,7 @@ gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := IndexImpl(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_Length = // TAST: (Func [(Array (TypeVar a))] Int)
+var _Gopurs_Length = // TAST: (ForAll [a] (Func [(Array (TypeVar a))] Int))
 gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	arg0_arr := *(*[]gopurs_runtime.Value)(arg0.UnsafePtr)
 	go_arg0 := make([]any, len(arg0_arr))
@@ -470,7 +470,7 @@ gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_res := Length(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_PartitionImpl = // TAST: (ADT ["Data","Function","Uncurried","Fn2"] [(Func [(TypeVar a)] Boolean), (Array (TypeVar a)), (Record [no: (Array (TypeVar a)), yes: (Array (TypeVar a))])])
+var _Gopurs_PartitionImpl = // TAST: (ForAll [a] (ADT ["Data","Function","Uncurried","Fn2"] [(Func [(TypeVar a)] Boolean), (Array (TypeVar a)), (Record (Row [yes: (Array (TypeVar a)), no: (Array (TypeVar a))] Empty))]))
 gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) bool {
 			inner_res0 := gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
@@ -493,7 +493,7 @@ gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) 
 				return gopurs_runtime.Array(res_arr)
 			}()
 })
-var _Gopurs_ReplicateImpl = // TAST: (ADT ["Data","Function","Uncurried","Fn2"] [Int, (TypeVar a), (Array (TypeVar a))])
+var _Gopurs_ReplicateImpl = // TAST: (ForAll [a] (ADT ["Data","Function","Uncurried","Fn2"] [Int, (TypeVar a), (Array (TypeVar a))]))
 gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int64](arg0)
 	go_arg1 := arg1
@@ -504,7 +504,7 @@ gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) 
 				return gopurs_runtime.Array(res_arr)
 			}()
 })
-var _Gopurs_Reverse = // TAST: (Func [(Array (TypeVar a))] (Array (TypeVar a)))
+var _Gopurs_Reverse = // TAST: (ForAll [a] (Func [(Array (TypeVar a))] (Array (TypeVar a))))
 gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	arg0_arr := *(*[]gopurs_runtime.Value)(arg0.UnsafePtr)
 	go_arg0 := make([]any, len(arg0_arr))
@@ -516,7 +516,7 @@ gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 				return gopurs_runtime.Array(res_arr)
 			}()
 })
-var _Gopurs_ScanlImpl = // TAST: (ADT ["Data","Function","Uncurried","Fn3"] [(Func [(TypeVar b), (TypeVar a)] (TypeVar b)), (TypeVar b), (Array (TypeVar a)), (Array (TypeVar b))])
+var _Gopurs_ScanlImpl = // TAST: (ForAll [a, b] (ADT ["Data","Function","Uncurried","Fn3"] [(Func [(TypeVar b), (TypeVar a)] (TypeVar b)), (TypeVar b), (Array (TypeVar a)), (Array (TypeVar b))]))
 gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any, p0_1 any) any {
 			return gopurs_runtime.Apply2(arg0, gopurs_runtime.Box(p0_0), gopurs_runtime.Box(p0_1))
@@ -532,7 +532,7 @@ gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 				return gopurs_runtime.Array(res_arr)
 			}()
 })
-var _Gopurs_ScanrImpl = // TAST: (ADT ["Data","Function","Uncurried","Fn3"] [(Func [(TypeVar a), (TypeVar b)] (TypeVar b)), (TypeVar b), (Array (TypeVar a)), (Array (TypeVar b))])
+var _Gopurs_ScanrImpl = // TAST: (ForAll [a, b] (ADT ["Data","Function","Uncurried","Fn3"] [(Func [(TypeVar a), (TypeVar b)] (TypeVar b)), (TypeVar b), (Array (TypeVar a)), (Array (TypeVar b))]))
 gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any, p0_1 any) any {
 			return gopurs_runtime.Apply2(arg0, gopurs_runtime.Box(p0_0), gopurs_runtime.Box(p0_1))
@@ -548,7 +548,7 @@ gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 				return gopurs_runtime.Array(res_arr)
 			}()
 })
-var _Gopurs_SliceImpl = // TAST: (ADT ["Data","Function","Uncurried","Fn3"] [Int, Int, (Array (TypeVar a)), (Array (TypeVar a))])
+var _Gopurs_SliceImpl = // TAST: (ForAll [a] (ADT ["Data","Function","Uncurried","Fn3"] [Int, Int, (Array (TypeVar a)), (Array (TypeVar a))]))
 gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int64](arg0)
 	go_arg1 := gopurs_runtime.Unbox[int64](arg1)
@@ -562,7 +562,7 @@ gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 				return gopurs_runtime.Array(res_arr)
 			}()
 })
-var _Gopurs_SortByImpl = // TAST: (ADT ["Data","Function","Uncurried","Fn3"] [(Func [(TypeVar a), (TypeVar a)] (ADT ["Data","Ordering","Ordering"] [])), (Func [(ADT ["Data","Ordering","Ordering"] [])] Int), (Array (TypeVar a)), (Array (TypeVar a))])
+var _Gopurs_SortByImpl = // TAST: (ForAll [a] (ADT ["Data","Function","Uncurried","Fn3"] [(Func [(TypeVar a), (TypeVar a)] (ADT ["Data","Ordering","Ordering"] [])), (Func [(ADT ["Data","Ordering","Ordering"] [])] Int), (Array (TypeVar a)), (Array (TypeVar a))]))
 gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any, p0_1 any) any {
 			return gopurs_runtime.Apply2(arg0, gopurs_runtime.Box(p0_0), gopurs_runtime.Box(p0_1))
@@ -581,7 +581,7 @@ gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 				return gopurs_runtime.Array(res_arr)
 			}()
 })
-var _Gopurs_UnconsImpl = // TAST: (ADT ["Data","Function","Uncurried","Fn3"] [(Func [(ADT ["Data","Unit","Unit"] [])] (TypeVar b)), (Func [(TypeVar a), (Array (TypeVar a))] (TypeVar b)), (Array (TypeVar a)), (TypeVar b)])
+var _Gopurs_UnconsImpl = // TAST: (ForAll [a, b] (ADT ["Data","Function","Uncurried","Fn3"] [(Func [Unit] (TypeVar b)), (Func [(TypeVar a), (Array (TypeVar a))] (TypeVar b)), (Array (TypeVar a)), (TypeVar b)]))
 gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
@@ -595,7 +595,7 @@ gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := UnconsImpl(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_UnsafeIndexImpl = // TAST: (ADT ["Data","Function","Uncurried","Fn2"] [(Array (TypeVar a)), Int, (TypeVar a)])
+var _Gopurs_UnsafeIndexImpl = // TAST: (ForAll [a] (ADT ["Data","Function","Uncurried","Fn2"] [(Array (TypeVar a)), Int, (TypeVar a)]))
 gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	arg0_arr := *(*[]gopurs_runtime.Value)(arg0.UnsafePtr)
 	go_arg0 := make([]any, len(arg0_arr))
@@ -604,7 +604,7 @@ gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) 
 	go_res := UnsafeIndexImpl(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_ZipWithImpl = // TAST: (ADT ["Data","Function","Uncurried","Fn3"] [(Func [(TypeVar a), (TypeVar b)] (TypeVar c)), (Array (TypeVar a)), (Array (TypeVar b)), (Array (TypeVar c))])
+var _Gopurs_ZipWithImpl = // TAST: (ForAll [a, b, c] (ADT ["Data","Function","Uncurried","Fn3"] [(Func [(TypeVar a), (TypeVar b)] (TypeVar c)), (Array (TypeVar a)), (Array (TypeVar b)), (Array (TypeVar c))]))
 gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any, p0_1 any) any {
 			return gopurs_runtime.Apply2(arg0, gopurs_runtime.Box(p0_0), gopurs_runtime.Box(p0_1))

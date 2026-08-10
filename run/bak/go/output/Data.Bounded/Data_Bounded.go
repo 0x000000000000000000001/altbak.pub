@@ -22,6 +22,17 @@ return Call_topRecord(dict_0_box)
 	return cache_topRecord
 }
 
+var cache_topRecord__gopurs_runtime_Value_2610646464 gopurs_runtime.Value
+var once_topRecord__gopurs_runtime_Value_2610646464 sync.Once
+func Get_topRecord__gopurs_runtime_Value_2610646464() gopurs_runtime.Value {
+	once_topRecord__gopurs_runtime_Value_2610646464.Do(func() {
+		cache_topRecord__gopurs_runtime_Value_2610646464 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_topRecord__gopurs_runtime_Value_2610646464(dict_0_box)
+})
+	})
+	return cache_topRecord__gopurs_runtime_Value_2610646464
+}
+
 var cache_top gopurs_runtime.Value
 var once_top sync.Once
 func Get_top() gopurs_runtime.Value {
@@ -33,37 +44,15 @@ return Call_top(dict_0_box)
 	return cache_top
 }
 
-var cache_top__gopurs_runtime_Value_2446100609 gopurs_runtime.Value
-var once_top__gopurs_runtime_Value_2446100609 sync.Once
-func Get_top__gopurs_runtime_Value_2446100609() gopurs_runtime.Value {
-	once_top__gopurs_runtime_Value_2446100609.Do(func() {
-		cache_top__gopurs_runtime_Value_2446100609 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Int(Call_top__gopurs_runtime_Value_2446100609(dict_0_box))
+var cache_top__gopurs_runtime_Value_338427193 gopurs_runtime.Value
+var once_top__gopurs_runtime_Value_338427193 sync.Once
+func Get_top__gopurs_runtime_Value_338427193() gopurs_runtime.Value {
+	once_top__gopurs_runtime_Value_338427193.Do(func() {
+		cache_top__gopurs_runtime_Value_338427193 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_top__gopurs_runtime_Value_338427193(dict_0_box)
 })
 	})
-	return cache_top__gopurs_runtime_Value_2446100609
-}
-
-var cache_top__gopurs_runtime_Value_2054669770 gopurs_runtime.Value
-var once_top__gopurs_runtime_Value_2054669770 sync.Once
-func Get_top__gopurs_runtime_Value_2054669770() gopurs_runtime.Value {
-	once_top__gopurs_runtime_Value_2054669770.Do(func() {
-		cache_top__gopurs_runtime_Value_2054669770 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(Call_top__gopurs_runtime_Value_2054669770(dict_0_box))
-})
-	})
-	return cache_top__gopurs_runtime_Value_2054669770
-}
-
-var cache_top__gopurs_runtime_Value_4128397732 gopurs_runtime.Value
-var once_top__gopurs_runtime_Value_4128397732 sync.Once
-func Get_top__gopurs_runtime_Value_4128397732() gopurs_runtime.Value {
-	once_top__gopurs_runtime_Value_4128397732.Do(func() {
-		cache_top__gopurs_runtime_Value_4128397732 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_top__gopurs_runtime_Value_4128397732(dict_0_box)
-})
-	})
-	return cache_top__gopurs_runtime_Value_4128397732
+	return cache_top__gopurs_runtime_Value_338427193
 }
 
 var cache_boundedUnit gopurs_runtime.Value
@@ -175,6 +164,17 @@ return Call_bottomRecord(dict_0_box)
 	return cache_bottomRecord
 }
 
+var cache_bottomRecord__gopurs_runtime_Value_2610646464 gopurs_runtime.Value
+var once_bottomRecord__gopurs_runtime_Value_2610646464 sync.Once
+func Get_bottomRecord__gopurs_runtime_Value_2610646464() gopurs_runtime.Value {
+	once_bottomRecord__gopurs_runtime_Value_2610646464.Do(func() {
+		cache_bottomRecord__gopurs_runtime_Value_2610646464 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bottomRecord__gopurs_runtime_Value_2610646464(dict_0_box)
+})
+	})
+	return cache_bottomRecord__gopurs_runtime_Value_2610646464
+}
+
 var cache_boundedRecord gopurs_runtime.Value
 var once_boundedRecord sync.Once
 func Get_boundedRecord() gopurs_runtime.Value {
@@ -197,26 +197,15 @@ return Call_bottom(dict_0_box)
 	return cache_bottom
 }
 
-var cache_bottom__gopurs_runtime_Value_2054669770 gopurs_runtime.Value
-var once_bottom__gopurs_runtime_Value_2054669770 sync.Once
-func Get_bottom__gopurs_runtime_Value_2054669770() gopurs_runtime.Value {
-	once_bottom__gopurs_runtime_Value_2054669770.Do(func() {
-		cache_bottom__gopurs_runtime_Value_2054669770 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(Call_bottom__gopurs_runtime_Value_2054669770(dict_0_box))
+var cache_bottom__gopurs_runtime_Value_338427193 gopurs_runtime.Value
+var once_bottom__gopurs_runtime_Value_338427193 sync.Once
+func Get_bottom__gopurs_runtime_Value_338427193() gopurs_runtime.Value {
+	once_bottom__gopurs_runtime_Value_338427193.Do(func() {
+		cache_bottom__gopurs_runtime_Value_338427193 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bottom__gopurs_runtime_Value_338427193(dict_0_box)
 })
 	})
-	return cache_bottom__gopurs_runtime_Value_2054669770
-}
-
-var cache_bottom__gopurs_runtime_Value_4128397732 gopurs_runtime.Value
-var once_bottom__gopurs_runtime_Value_4128397732 sync.Once
-func Get_bottom__gopurs_runtime_Value_4128397732() gopurs_runtime.Value {
-	once_bottom__gopurs_runtime_Value_4128397732.Do(func() {
-		cache_bottom__gopurs_runtime_Value_4128397732 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_bottom__gopurs_runtime_Value_4128397732(dict_0_box)
-})
-	})
-	return cache_bottom__gopurs_runtime_Value_4128397732
+	return cache_bottom__gopurs_runtime_Value_338427193
 }
 
 var cache_boundedRecordCons gopurs_runtime.Value
@@ -236,31 +225,31 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "topRecord")
 }
 
+func Call_topRecord__gopurs_runtime_Value_2610646464(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "topRecord")
+}
+
 func Call_top(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "top")
 }
 
-func Call_top__gopurs_runtime_Value_2446100609(dict_0_loop gopurs_runtime.Value) int64 {
-var dict_0 gopurs_runtime.Value = dict_0_loop
-_ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "top").IntVal
-}
-
-func Call_top__gopurs_runtime_Value_2054669770(dict_0_loop gopurs_runtime.Value) string {
-var dict_0 gopurs_runtime.Value = dict_0_loop
-_ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "top").StrVal()
-}
-
-func Call_top__gopurs_runtime_Value_4128397732(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_top__gopurs_runtime_Value_338427193(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "top")
 }
 
 func Call_bottomRecord(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "bottomRecord")
+}
+
+func Call_bottomRecord__gopurs_runtime_Value_2610646464(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "bottomRecord")
@@ -290,13 +279,7 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "bottom")
 }
 
-func Call_bottom__gopurs_runtime_Value_2054669770(dict_0_loop gopurs_runtime.Value) string {
-var dict_0 gopurs_runtime.Value = dict_0_loop
-_ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "bottom").StrVal()
-}
-
-func Call_bottom__gopurs_runtime_Value_4128397732(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_bottom__gopurs_runtime_Value_338427193(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "bottom")

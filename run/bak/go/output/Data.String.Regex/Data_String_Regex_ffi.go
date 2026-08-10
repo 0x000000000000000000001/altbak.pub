@@ -198,7 +198,7 @@ func Test(r *GoRegex, s string) bool {
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs__Match = // TAST: (Func [(Func [(TypeVar r)] (ADT ["Data","Maybe","Maybe"] [(TypeVar r)])), (ADT ["Data","Maybe","Maybe"] [(TypeVar r)]), (ADT ["Data","String","Regex","Regex"] []), String] (ADT ["Data","Maybe","Maybe"] [(Array (ADT ["Data","Maybe","Maybe"] [String]))]))
+var _Gopurs__Match = // TAST: (Func [(ForAll [r] (Func [(TypeVar r)] (ADT ["Data","Maybe","Maybe"] [(TypeVar r)]))), (ForAll [r] (ADT ["Data","Maybe","Maybe"] [(TypeVar r)])), (ADT ["Data","String","Regex","Regex"] []), String] (ADT ["Data","Maybe","Maybe"] [(Array (ADT ["Data","Maybe","Maybe"] [String]))]))
 gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
@@ -209,7 +209,7 @@ gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := _Match(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs__ReplaceBy = // TAST: (Func [(Func [(TypeVar r)] (ADT ["Data","Maybe","Maybe"] [(TypeVar r)])), (ADT ["Data","Maybe","Maybe"] [(TypeVar r)]), (ADT ["Data","String","Regex","Regex"] []), (Func [String, (Array (ADT ["Data","Maybe","Maybe"] [String]))] String), String] String)
+var _Gopurs__ReplaceBy = // TAST: (Func [(ForAll [r] (Func [(TypeVar r)] (ADT ["Data","Maybe","Maybe"] [(TypeVar r)]))), (ForAll [r] (ADT ["Data","Maybe","Maybe"] [(TypeVar r)])), (ADT ["Data","String","Regex","Regex"] []), (Func [String, (Array (ADT ["Data","Maybe","Maybe"] [String]))] String), String] String)
 gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value, arg4 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
@@ -227,7 +227,7 @@ gopurs_runtime.Func5(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := _ReplaceBy(go_arg0, go_arg1, go_arg2, go_arg3, go_arg4)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs__Search = // TAST: (Func [(Func [(TypeVar r)] (ADT ["Data","Maybe","Maybe"] [(TypeVar r)])), (ADT ["Data","Maybe","Maybe"] [(TypeVar r)]), (ADT ["Data","String","Regex","Regex"] []), String] (ADT ["Data","Maybe","Maybe"] [Int]))
+var _Gopurs__Search = // TAST: (Func [(ForAll [r] (Func [(TypeVar r)] (ADT ["Data","Maybe","Maybe"] [(TypeVar r)]))), (ForAll [r] (ADT ["Data","Maybe","Maybe"] [(TypeVar r)])), (ADT ["Data","String","Regex","Regex"] []), String] (ADT ["Data","Maybe","Maybe"] [Int]))
 gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))

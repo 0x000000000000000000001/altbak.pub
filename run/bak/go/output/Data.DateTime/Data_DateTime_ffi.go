@@ -52,7 +52,7 @@ func AdjustImpl(just func(interface{}) interface{}, nothing interface{}, offset 
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs_AdjustImpl = // TAST: (Func [(Func [(TypeVar a)] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)])), (ADT ["Data","Maybe","Maybe"] [(TypeVar a)]), Number, Any] (ADT ["Data","Maybe","Maybe"] [Any]))
+var _Gopurs_AdjustImpl = // TAST: (Func [(ForAll [a] (Func [(TypeVar a)] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)]))), (ForAll [a] (ADT ["Data","Maybe","Maybe"] [(TypeVar a)])), Number, Any] (ADT ["Data","Maybe","Maybe"] [Any]))
 gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))

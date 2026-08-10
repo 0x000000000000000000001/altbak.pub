@@ -95,15 +95,15 @@ return Call_unfoldable(dictMonadRec_0_box, dictMonadGen_1_box)
 	return cache_unfoldable
 }
 
-var cache_unfoldable__gopurs_runtime_Value_2274011613 gopurs_runtime.Value
-var once_unfoldable__gopurs_runtime_Value_2274011613 sync.Once
-func Get_unfoldable__gopurs_runtime_Value_2274011613() gopurs_runtime.Value {
-	once_unfoldable__gopurs_runtime_Value_2274011613.Do(func() {
-		cache_unfoldable__gopurs_runtime_Value_2274011613 = gopurs_runtime.Func2(func(dictMonadRec_0_box gopurs_runtime.Value, dictMonadGen_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_unfoldable__gopurs_runtime_Value_2274011613(dictMonadRec_0_box, dictMonadGen_1_box)
+var cache_unfoldable__gopurs_runtime_Value_542018773 gopurs_runtime.Value
+var once_unfoldable__gopurs_runtime_Value_542018773 sync.Once
+func Get_unfoldable__gopurs_runtime_Value_542018773() gopurs_runtime.Value {
+	once_unfoldable__gopurs_runtime_Value_542018773.Do(func() {
+		cache_unfoldable__gopurs_runtime_Value_542018773 = gopurs_runtime.Func2(func(dictMonadRec_0_box gopurs_runtime.Value, dictMonadGen_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_unfoldable__gopurs_runtime_Value_542018773(dictMonadRec_0_box, dictMonadGen_1_box)
 })
 	})
-	return cache_unfoldable__gopurs_runtime_Value_2274011613
+	return cache_unfoldable__gopurs_runtime_Value_542018773
 }
 
 var cache_semigroupFreqSemigroup gopurs_runtime.Value
@@ -148,15 +148,15 @@ return Call_fromIndex(dictFoldable1_0_box)
 	return cache_fromIndex
 }
 
-var cache_fromIndex__gopurs_runtime_Value_2855387427 gopurs_runtime.Value
-var once_fromIndex__gopurs_runtime_Value_2855387427 sync.Once
-func Get_fromIndex__gopurs_runtime_Value_2855387427() gopurs_runtime.Value {
-	once_fromIndex__gopurs_runtime_Value_2855387427.Do(func() {
-		cache_fromIndex__gopurs_runtime_Value_2855387427 = gopurs_runtime.Func(func(dictFoldable1_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_fromIndex__gopurs_runtime_Value_2855387427(dictFoldable1_0_box)
+var cache_fromIndex__gopurs_runtime_Value_3111933544 gopurs_runtime.Value
+var once_fromIndex__gopurs_runtime_Value_3111933544 sync.Once
+func Get_fromIndex__gopurs_runtime_Value_3111933544() gopurs_runtime.Value {
+	once_fromIndex__gopurs_runtime_Value_3111933544.Do(func() {
+		cache_fromIndex__gopurs_runtime_Value_3111933544 = gopurs_runtime.Func(func(dictFoldable1_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_fromIndex__gopurs_runtime_Value_3111933544(dictFoldable1_0_box)
 })
 	})
-	return cache_fromIndex__gopurs_runtime_Value_2855387427
+	return cache_fromIndex__gopurs_runtime_Value_3111933544
 }
 
 var cache_oneOf gopurs_runtime.Value
@@ -170,15 +170,15 @@ return Call_oneOf(dictMonadGen_0_box, dictFoldable1_1_box)
 	return cache_oneOf
 }
 
-var cache_oneOf__gopurs_runtime_Value_259855841 gopurs_runtime.Value
-var once_oneOf__gopurs_runtime_Value_259855841 sync.Once
-func Get_oneOf__gopurs_runtime_Value_259855841() gopurs_runtime.Value {
-	once_oneOf__gopurs_runtime_Value_259855841.Do(func() {
-		cache_oneOf__gopurs_runtime_Value_259855841 = gopurs_runtime.Func2(func(dictMonadGen_0_box gopurs_runtime.Value, dictFoldable1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_oneOf__gopurs_runtime_Value_259855841(dictMonadGen_0_box, dictFoldable1_1_box)
+var cache_oneOf__gopurs_runtime_Value_2265861353 gopurs_runtime.Value
+var once_oneOf__gopurs_runtime_Value_2265861353 sync.Once
+func Get_oneOf__gopurs_runtime_Value_2265861353() gopurs_runtime.Value {
+	once_oneOf__gopurs_runtime_Value_2265861353.Do(func() {
+		cache_oneOf__gopurs_runtime_Value_2265861353 = gopurs_runtime.Func2(func(dictMonadGen_0_box gopurs_runtime.Value, dictFoldable1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_oneOf__gopurs_runtime_Value_2265861353(dictMonadGen_0_box, dictFoldable1_1_box)
 })
 	})
-	return cache_oneOf__gopurs_runtime_Value_259855841
+	return cache_oneOf__gopurs_runtime_Value_2265861353
 }
 
 var cache_freqSemigroup gopurs_runtime.Value
@@ -192,15 +192,15 @@ return Call_freqSemigroup(v_0_box)
 	return cache_freqSemigroup
 }
 
-var cache_freqSemigroup__gopurs_runtime_Value_1341585702 gopurs_runtime.Value
-var once_freqSemigroup__gopurs_runtime_Value_1341585702 sync.Once
-func Get_freqSemigroup__gopurs_runtime_Value_1341585702() gopurs_runtime.Value {
-	once_freqSemigroup__gopurs_runtime_Value_1341585702.Do(func() {
-		cache_freqSemigroup__gopurs_runtime_Value_1341585702 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_freqSemigroup__gopurs_runtime_Value_1341585702(v_0_box)
+var cache_freqSemigroup__gopurs_runtime_Value_772548326 gopurs_runtime.Value
+var once_freqSemigroup__gopurs_runtime_Value_772548326 sync.Once
+func Get_freqSemigroup__gopurs_runtime_Value_772548326() gopurs_runtime.Value {
+	once_freqSemigroup__gopurs_runtime_Value_772548326.Do(func() {
+		cache_freqSemigroup__gopurs_runtime_Value_772548326 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_freqSemigroup__gopurs_runtime_Value_772548326(v_0_box)
 })
 	})
-	return cache_freqSemigroup__gopurs_runtime_Value_1341585702
+	return cache_freqSemigroup__gopurs_runtime_Value_772548326
 }
 
 var cache_frequency gopurs_runtime.Value
@@ -247,15 +247,15 @@ return Call_elements(dictMonadGen_0_box)
 	return cache_elements
 }
 
-var cache_elements__gopurs_runtime_Value_259855841 gopurs_runtime.Value
-var once_elements__gopurs_runtime_Value_259855841 sync.Once
-func Get_elements__gopurs_runtime_Value_259855841() gopurs_runtime.Value {
-	once_elements__gopurs_runtime_Value_259855841.Do(func() {
-		cache_elements__gopurs_runtime_Value_259855841 = gopurs_runtime.Func(func(dictMonadGen_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_elements__gopurs_runtime_Value_259855841(dictMonadGen_0_box)
+var cache_elements__gopurs_runtime_Value_1644372582 gopurs_runtime.Value
+var once_elements__gopurs_runtime_Value_1644372582 sync.Once
+func Get_elements__gopurs_runtime_Value_1644372582() gopurs_runtime.Value {
+	once_elements__gopurs_runtime_Value_1644372582.Do(func() {
+		cache_elements__gopurs_runtime_Value_1644372582 = gopurs_runtime.Func(func(dictMonadGen_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_elements__gopurs_runtime_Value_1644372582(dictMonadGen_0_box)
 })
 	})
-	return cache_elements__gopurs_runtime_Value_259855841
+	return cache_elements__gopurs_runtime_Value_1644372582
 }
 
 var cache_choose gopurs_runtime.Value
@@ -349,7 +349,7 @@ return gopurs_runtime.Apply(__local_var_7_4, gopurs_runtime.Apply(__local_var_8_
 })
 }
 
-func Call_unfoldable__gopurs_runtime_Value_2274011613(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_unfoldable__gopurs_runtime_Value_542018773(dictMonadRec_0_loop gopurs_runtime.Value, dictMonadGen_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
 _ = dictMonadRec_0
 var dictMonadGen_1 gopurs_runtime.Value = dictMonadGen_1_loop
@@ -493,7 +493,7 @@ return gopurs_runtime.Apply2(go__go_4_1_0, i_2, gopurs_runtime.Apply3(gopurs_run
 })
 }
 
-func Call_fromIndex__gopurs_runtime_Value_2855387427(dictFoldable1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_fromIndex__gopurs_runtime_Value_3111933544(dictFoldable1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictFoldable1_0 gopurs_runtime.Value = dictFoldable1_0_loop
 _ = dictFoldable1_0
 foldMap1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_0, "foldMap1"), pkg_Data_Semigroup_Last.Get_semigroupLast())
@@ -589,7 +589,7 @@ return gopurs_runtime.Apply2(fromIndex1_3_1, n_5, xs_4)
 })
 }
 
-func Call_oneOf__gopurs_runtime_Value_259855841(dictMonadGen_0_loop gopurs_runtime.Value, dictFoldable1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_oneOf__gopurs_runtime_Value_2265861353(dictMonadGen_0_loop gopurs_runtime.Value, dictFoldable1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
 var dictFoldable1_1 gopurs_runtime.Value = dictFoldable1_1_loop
@@ -647,7 +647,7 @@ return __t2
 })
 }
 
-func Call_freqSemigroup__gopurs_runtime_Value_1341585702(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_freqSemigroup__gopurs_runtime_Value_772548326(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 __local_var_1_0 := (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V0
@@ -762,7 +762,7 @@ goto end_branch_2
 }
 }
 {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}.UnsafePtr))}
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
 }
 end_branch_2:
 return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(__t2.UnsafePtr))}
@@ -795,7 +795,7 @@ return gopurs_runtime.Apply(pure_2_1, gopurs_runtime.Apply2(fromIndex1_5_3, n_7,
 })
 }
 
-func Call_elements__gopurs_runtime_Value_259855841(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_elements__gopurs_runtime_Value_1644372582(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
 Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Monad0"), gopurs_runtime.Value{})

@@ -18,6 +18,19 @@ return Get_bindEffect()
 	return cache_monadEffect
 }
 
+var cache_monadEffect__gopurs_runtime_Value_3527935219 gopurs_runtime.Value
+var once_monadEffect__gopurs_runtime_Value_3527935219 sync.Once
+func Get_monadEffect__gopurs_runtime_Value_3527935219() gopurs_runtime.Value {
+	once_monadEffect__gopurs_runtime_Value_3527935219.Do(func() {
+		cache_monadEffect__gopurs_runtime_Value_3527935219 = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_applicativeEffect()
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_bindEffect()
+}))
+	})
+	return cache_monadEffect__gopurs_runtime_Value_3527935219
+}
+
 var cache_bindEffect gopurs_runtime.Value
 var once_bindEffect sync.Once
 func Get_bindEffect() gopurs_runtime.Value {
@@ -27,6 +40,17 @@ return Get_applyEffect()
 }), Get_bindE())
 	})
 	return cache_bindEffect
+}
+
+var cache_bindEffect__gopurs_runtime_Value_3856311079 gopurs_runtime.Value
+var once_bindEffect__gopurs_runtime_Value_3856311079 sync.Once
+func Get_bindEffect__gopurs_runtime_Value_3856311079() gopurs_runtime.Value {
+	once_bindEffect__gopurs_runtime_Value_3856311079.Do(func() {
+		cache_bindEffect__gopurs_runtime_Value_3856311079 = gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_applyEffect()
+}), Get_bindE())
+	})
+	return cache_bindEffect__gopurs_runtime_Value_3856311079
 }
 
 var cache_applyEffect gopurs_runtime.Value
@@ -52,6 +76,29 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs
 	return cache_applyEffect
 }
 
+var cache_applyEffect__gopurs_runtime_Value_2014400020 gopurs_runtime.Value
+var once_applyEffect__gopurs_runtime_Value_2014400020 sync.Once
+func Get_applyEffect__gopurs_runtime_Value_2014400020() gopurs_runtime.Value {
+	once_applyEffect__gopurs_runtime_Value_2014400020.Do(func() {
+		cache_applyEffect__gopurs_runtime_Value_2014400020 = func() gopurs_runtime.Value {
+__local_var_0_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadEffect(), "Bind1"), gopurs_runtime.Value{})
+_ = __local_var_0_0
+return gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_functorEffect()
+}), gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_0_0, "bind"), f_1, gopurs_runtime.Func(func(f_prime_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_0_0, "bind"), a_2, gopurs_runtime.Func(func(a_prime_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_monadEffect(), "Applicative0"), gopurs_runtime.Value{}), "pure"), gopurs_runtime.Apply(f_prime_3, a_prime_4))
+}))
+}))
+})
+}))
+}()
+	})
+	return cache_applyEffect__gopurs_runtime_Value_2014400020
+}
+
 var cache_applicativeEffect gopurs_runtime.Value
 var once_applicativeEffect sync.Once
 func Get_applicativeEffect() gopurs_runtime.Value {
@@ -61,6 +108,17 @@ return Get_applyEffect()
 }), Get_pureE())
 	})
 	return cache_applicativeEffect
+}
+
+var cache_applicativeEffect__gopurs_runtime_Value_1969567048 gopurs_runtime.Value
+var once_applicativeEffect__gopurs_runtime_Value_1969567048 sync.Once
+func Get_applicativeEffect__gopurs_runtime_Value_1969567048() gopurs_runtime.Value {
+	once_applicativeEffect__gopurs_runtime_Value_1969567048.Do(func() {
+		cache_applicativeEffect__gopurs_runtime_Value_1969567048 = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_applyEffect()
+}), Get_pureE())
+	})
+	return cache_applicativeEffect__gopurs_runtime_Value_1969567048
 }
 
 var cache_functorEffect gopurs_runtime.Value
@@ -74,6 +132,19 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopur
 }))
 	})
 	return cache_functorEffect
+}
+
+var cache_functorEffect__gopurs_runtime_Value_3107547953 gopurs_runtime.Value
+var once_functorEffect__gopurs_runtime_Value_3107547953 sync.Once
+func Get_functorEffect__gopurs_runtime_Value_3107547953() gopurs_runtime.Value {
+	once_functorEffect__gopurs_runtime_Value_3107547953.Do(func() {
+		cache_functorEffect__gopurs_runtime_Value_3107547953 = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_applicativeEffect(), "Apply0"), gopurs_runtime.Value{}), "apply"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_applicativeEffect(), "pure"), f_0), a_1)
+})
+}))
+	})
+	return cache_functorEffect__gopurs_runtime_Value_3107547953
 }
 
 var cache_lift2 gopurs_runtime.Value

@@ -29,15 +29,15 @@ return Call_runWriter(x_0_box)
 	return cache_runWriter
 }
 
-var cache_runWriter__gopurs_runtime_Value_4273258459 gopurs_runtime.Value
-var once_runWriter__gopurs_runtime_Value_4273258459 sync.Once
-func Get_runWriter__gopurs_runtime_Value_4273258459() gopurs_runtime.Value {
-	once_runWriter__gopurs_runtime_Value_4273258459.Do(func() {
-		cache_runWriter__gopurs_runtime_Value_4273258459 = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_runWriter__gopurs_runtime_Value_4273258459(x_0_box)
+var cache_runWriter__gopurs_runtime_Value_3864461800 gopurs_runtime.Value
+var once_runWriter__gopurs_runtime_Value_3864461800 sync.Once
+func Get_runWriter__gopurs_runtime_Value_3864461800() gopurs_runtime.Value {
+	once_runWriter__gopurs_runtime_Value_3864461800.Do(func() {
+		cache_runWriter__gopurs_runtime_Value_3864461800 = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_runWriter__gopurs_runtime_Value_3864461800(x_0_box)
 })
 	})
-	return cache_runWriter__gopurs_runtime_Value_4273258459
+	return cache_runWriter__gopurs_runtime_Value_3864461800
 }
 
 var cache_mapWriter gopurs_runtime.Value
@@ -74,7 +74,7 @@ _ = x_0
 return x_0
 }
 
-func Call_runWriter__gopurs_runtime_Value_4273258459(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_runWriter__gopurs_runtime_Value_3864461800(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
 return x_0

@@ -27,6 +27,17 @@ return Call_reflectSymbol(dict_0_box)
 	return cache_reflectSymbol
 }
 
+var cache_reflectSymbol__gopurs_runtime_Value_1166932993 gopurs_runtime.Value
+var once_reflectSymbol__gopurs_runtime_Value_1166932993 sync.Once
+func Get_reflectSymbol__gopurs_runtime_Value_1166932993() gopurs_runtime.Value {
+	once_reflectSymbol__gopurs_runtime_Value_1166932993.Do(func() {
+		cache_reflectSymbol__gopurs_runtime_Value_1166932993 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_reflectSymbol__gopurs_runtime_Value_1166932993(dict_0_box)
+})
+	})
+	return cache_reflectSymbol__gopurs_runtime_Value_1166932993
+}
+
 func Call_reifySymbol(s_0_loop string, f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var s_0 string = s_0_loop
 _ = s_0
@@ -40,6 +51,12 @@ return gopurs_runtime.Str(s_0)
 }
 
 func Call_reflectSymbol(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "reflectSymbol")
+}
+
+func Call_reflectSymbol__gopurs_runtime_Value_1166932993(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "reflectSymbol")

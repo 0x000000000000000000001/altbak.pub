@@ -50,7 +50,7 @@ func OrdArrayImpl(f func(interface{}, interface{}) int64, xs []interface{}, ys [
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs_OrdArrayImpl = // TAST: (Func [(Func [(TypeVar a), (TypeVar a)] Int), (Array (TypeVar a)), (Array (TypeVar a))] Int)
+var _Gopurs_OrdArrayImpl = // TAST: (ForAll [a] (Func [(Func [(TypeVar a), (TypeVar a)] Int), (Array (TypeVar a)), (Array (TypeVar a))] Int))
 gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any, p0_1 any) int64 {
 			inner_res0 := gopurs_runtime.Apply2(arg0, gopurs_runtime.Box(p0_0), gopurs_runtime.Box(p0_1))

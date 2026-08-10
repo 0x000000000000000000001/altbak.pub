@@ -179,15 +179,15 @@ return Call_over(dictFunctor_0_box, f_1_box, v_2_box)
 	return cache_over
 }
 
-var cache_over__gopurs_runtime_Value_196548810 gopurs_runtime.Value
-var once_over__gopurs_runtime_Value_196548810 sync.Once
-func Get_over__gopurs_runtime_Value_196548810() gopurs_runtime.Value {
-	once_over__gopurs_runtime_Value_196548810.Do(func() {
-		cache_over__gopurs_runtime_Value_196548810 = gopurs_runtime.Func3(func(dictFunctor_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_over__gopurs_runtime_Value_196548810(dictFunctor_0_box, f_1_box, v_2_box)
+var cache_over__gopurs_runtime_Value_3140749367 gopurs_runtime.Value
+var once_over__gopurs_runtime_Value_3140749367 sync.Once
+func Get_over__gopurs_runtime_Value_3140749367() gopurs_runtime.Value {
+	once_over__gopurs_runtime_Value_3140749367.Do(func() {
+		cache_over__gopurs_runtime_Value_3140749367 = gopurs_runtime.Func3(func(dictFunctor_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_over__gopurs_runtime_Value_3140749367(dictFunctor_0_box, f_1_box, v_2_box)
 })
 	})
-	return cache_over__gopurs_runtime_Value_196548810
+	return cache_over__gopurs_runtime_Value_3140749367
 }
 
 var cache_foldableInterval gopurs_runtime.Value
@@ -246,6 +246,62 @@ return gopurs_runtime.Apply2(pkg_Data_Foldable.Get_foldrDefault(), Get_foldableI
 	return cache_foldableInterval
 }
 
+var cache_foldableInterval__gopurs_runtime_Value_526261656 gopurs_runtime.Value
+var once_foldableInterval__gopurs_runtime_Value_526261656 sync.Once
+func Get_foldableInterval__gopurs_runtime_Value_526261656() gopurs_runtime.Value {
+	once_foldableInterval__gopurs_runtime_Value_526261656.Do(func() {
+		cache_foldableInterval__gopurs_runtime_Value_526261656 = gopurs_runtime.RecordDict3("foldMap", "foldl", "foldr", gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
+mempty_1_0 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
+_ = mempty_1_0
+return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_foldableInterval(), "foldl"), gopurs_runtime.Func(func(acc_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}), "append"), acc_3, gopurs_runtime.Apply(f_2, x_4))
+})
+}), mempty_1_0)
+})
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t1 gopurs_runtime.Value
+{
+if (v2_2.Type == 9 && v2_2.IntVal == 237113226) {
+__t1 = gopurs_runtime.Apply2(v_0, gopurs_runtime.Apply2(v_0, v1_1, (*Constructor_StartEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0), (*Constructor_StartEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V1)
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (v2_2.Type == 9 && v2_2.IntVal == 1992629780) {
+__t1 = gopurs_runtime.Apply2(v_0, v1_1, (*Constructor_DurationEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V1)
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (v2_2.Type == 9 && v2_2.IntVal == 2020675835) {
+__t1 = gopurs_runtime.Apply2(v_0, v1_1, (*Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0)
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = v1_1
+}
+end_branch_1:
+return __t1
+})
+})
+}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(pkg_Data_Foldable.Get_foldrDefault(), Get_foldableInterval(), x_0)
+}))
+	})
+	return cache_foldableInterval__gopurs_runtime_Value_526261656
+}
+
 var cache_foldableRecurringInterval gopurs_runtime.Value
 var once_foldableRecurringInterval sync.Once
 func Get_foldableRecurringInterval() gopurs_runtime.Value {
@@ -279,6 +335,41 @@ return gopurs_runtime.Apply(__local_var_2_2, (*Constructor_RecurringInterval[gop
 }))
 	})
 	return cache_foldableRecurringInterval
+}
+
+var cache_foldableRecurringInterval__gopurs_runtime_Value_598519513 gopurs_runtime.Value
+var once_foldableRecurringInterval__gopurs_runtime_Value_598519513 sync.Once
+func Get_foldableRecurringInterval__gopurs_runtime_Value_598519513() gopurs_runtime.Value {
+	once_foldableRecurringInterval__gopurs_runtime_Value_598519513.Do(func() {
+		cache_foldableRecurringInterval__gopurs_runtime_Value_598519513 = gopurs_runtime.RecordDict3("foldMap", "foldl", "foldr", gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
+mempty_1_0 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
+_ = mempty_1_0
+return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_foldableRecurringInterval(), "foldl"), gopurs_runtime.Func(func(acc_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}), "append"), acc_3, gopurs_runtime.Apply(f_2, x_4))
+})
+}), mempty_1_0)
+})
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(i_1 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_2_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_foldableInterval(), "foldl"), f_0, i_1)
+_ = __local_var_2_1
+return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_2_1, (*Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value])(x_3.UnsafePtr).V1)
+})
+})
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(i_1 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_2_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_foldableInterval(), "foldr"), f_0, i_1)
+_ = __local_var_2_2
+return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_2_2, (*Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value])(x_3.UnsafePtr).V1)
+})
+})
+}))
+	})
+	return cache_foldableRecurringInterval__gopurs_runtime_Value_598519513
 }
 
 var cache_eqInterval gopurs_runtime.Value
@@ -377,6 +468,58 @@ return __t0
 	return cache_bifunctorInterval
 }
 
+var cache_bifunctorInterval__gopurs_runtime_Value_3665086044 gopurs_runtime.Value
+var once_bifunctorInterval__gopurs_runtime_Value_3665086044 sync.Once
+func Get_bifunctorInterval__gopurs_runtime_Value_3665086044() gopurs_runtime.Value {
+	once_bifunctorInterval__gopurs_runtime_Value_3665086044.Do(func() {
+		cache_bifunctorInterval__gopurs_runtime_Value_3665086044 = gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t0 gopurs_runtime.Value
+{
+if (v2_2.Type == 9 && v2_2.IntVal == 237113226) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 237113226, UnsafePtr: unsafe.Pointer(&Constructor_StartEnd[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply(v1_1, (*Constructor_StartEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0), gopurs_runtime.Apply(v1_1, (*Constructor_StartEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V1)})}
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (v2_2.Type == 9 && v2_2.IntVal == 1992629780) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 1992629780, UnsafePtr: unsafe.Pointer(&Constructor_DurationEnd[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply(v_0, (*Constructor_DurationEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0), gopurs_runtime.Apply(v1_1, (*Constructor_DurationEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V1)})}
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (v2_2.Type == 9 && v2_2.IntVal == 2020675835) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2020675835, UnsafePtr: unsafe.Pointer(&Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply(v1_1, (*Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0), gopurs_runtime.Apply(v_0, (*Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V1)})}
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (v2_2.Type == 9 && v2_2.IntVal == 2281256335) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2281256335, UnsafePtr: unsafe.Pointer(&Constructor_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply(v_0, (*Constructor_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0)})}
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_0:
+return __t0
+})
+})
+}))
+	})
+	return cache_bifunctorInterval__gopurs_runtime_Value_3665086044
+}
+
 var cache_bifunctorRecurringInterval gopurs_runtime.Value
 var once_bifunctorRecurringInterval sync.Once
 func Get_bifunctorRecurringInterval() gopurs_runtime.Value {
@@ -392,6 +535,21 @@ return gopurs_runtime.Value{Type: 9, IntVal: 2355637979, UnsafePtr: unsafe.Point
 	return cache_bifunctorRecurringInterval
 }
 
+var cache_bifunctorRecurringInterval__gopurs_runtime_Value_261139004 gopurs_runtime.Value
+var once_bifunctorRecurringInterval__gopurs_runtime_Value_261139004 sync.Once
+func Get_bifunctorRecurringInterval__gopurs_runtime_Value_261139004() gopurs_runtime.Value {
+	once_bifunctorRecurringInterval__gopurs_runtime_Value_261139004.Do(func() {
+		cache_bifunctorRecurringInterval__gopurs_runtime_Value_261139004 = gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(g_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2355637979, UnsafePtr: unsafe.Pointer(&Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*pkg_Data_Maybe.Constructor_Just[int64])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0)}.UnsafePtr), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_bifunctorInterval(), "bimap"), f_0, g_1, (*Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1)})}
+})
+})
+}))
+	})
+	return cache_bifunctorRecurringInterval__gopurs_runtime_Value_261139004
+}
+
 var cache_functorInterval gopurs_runtime.Value
 var once_functorInterval sync.Once
 func Get_functorInterval() gopurs_runtime.Value {
@@ -401,6 +559,17 @@ return x_0
 })))
 	})
 	return cache_functorInterval
+}
+
+var cache_functorInterval__gopurs_runtime_Value_3172181073 gopurs_runtime.Value
+var once_functorInterval__gopurs_runtime_Value_3172181073 sync.Once
+func Get_functorInterval__gopurs_runtime_Value_3172181073() gopurs_runtime.Value {
+	once_functorInterval__gopurs_runtime_Value_3172181073.Do(func() {
+		cache_functorInterval__gopurs_runtime_Value_3172181073 = gopurs_runtime.RecordDict1("map", gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_bifunctorInterval(), "bimap"), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_0
+})))
+	})
+	return cache_functorInterval__gopurs_runtime_Value_3172181073
 }
 
 var cache_extendInterval gopurs_runtime.Value
@@ -466,6 +635,19 @@ return gopurs_runtime.Value{Type: 9, IntVal: 2355637979, UnsafePtr: unsafe.Point
 }))
 	})
 	return cache_functorRecurringInterval
+}
+
+var cache_functorRecurringInterval__gopurs_runtime_Value_1167854705 gopurs_runtime.Value
+var once_functorRecurringInterval__gopurs_runtime_Value_1167854705 sync.Once
+func Get_functorRecurringInterval__gopurs_runtime_Value_1167854705() gopurs_runtime.Value {
+	once_functorRecurringInterval__gopurs_runtime_Value_1167854705.Do(func() {
+		cache_functorRecurringInterval__gopurs_runtime_Value_1167854705 = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2355637979, UnsafePtr: unsafe.Pointer(&Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*pkg_Data_Maybe.Constructor_Just[int64])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V0)}.UnsafePtr), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_functorInterval(), "map"), f_0, (*Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V1)})}
+})
+}))
+	})
+	return cache_functorRecurringInterval__gopurs_runtime_Value_1167854705
 }
 
 var cache_extendRecurringInterval gopurs_runtime.Value
@@ -652,6 +834,80 @@ return gopurs_runtime.Apply2(pkg_Data_Bifoldable.Get_bifoldrDefault(), Get_bifol
 	return cache_bifoldableInterval
 }
 
+var cache_bifoldableInterval__gopurs_runtime_Value_740659151 gopurs_runtime.Value
+var once_bifoldableInterval__gopurs_runtime_Value_740659151 sync.Once
+func Get_bifoldableInterval__gopurs_runtime_Value_740659151() gopurs_runtime.Value {
+	once_bifoldableInterval__gopurs_runtime_Value_740659151.Do(func() {
+		cache_bifoldableInterval__gopurs_runtime_Value_740659151 = gopurs_runtime.RecordDict3("bifoldMap", "bifoldl", "bifoldr", gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{})
+_ = __local_var_1_0
+mempty_2_1 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
+_ = mempty_2_1
+return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(g_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_bifoldableInterval(), "bifoldl"), gopurs_runtime.Func(func(m_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "append"), m_5, gopurs_runtime.Apply(f_3, a_6))
+})
+}), gopurs_runtime.Func(func(m_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "append"), m_5, gopurs_runtime.Apply(g_4, b_6))
+})
+}), mempty_2_1)
+})
+})
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v3_3 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t2 gopurs_runtime.Value
+{
+if (v3_3.Type == 9 && v3_3.IntVal == 237113226) {
+__t2 = gopurs_runtime.Apply2(v1_1, gopurs_runtime.Apply2(v1_1, v2_2, (*Constructor_StartEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v3_3.UnsafePtr).V0), (*Constructor_StartEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v3_3.UnsafePtr).V1)
+goto end_branch_2
+} else {
+
+}
+}
+{
+if (v3_3.Type == 9 && v3_3.IntVal == 1992629780) {
+__t2 = gopurs_runtime.Apply2(v1_1, gopurs_runtime.Apply2(v_0, v2_2, (*Constructor_DurationEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v3_3.UnsafePtr).V0), (*Constructor_DurationEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v3_3.UnsafePtr).V1)
+goto end_branch_2
+} else {
+
+}
+}
+{
+if (v3_3.Type == 9 && v3_3.IntVal == 2020675835) {
+__t2 = gopurs_runtime.Apply2(v1_1, gopurs_runtime.Apply2(v_0, v2_2, (*Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value])(v3_3.UnsafePtr).V1), (*Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value])(v3_3.UnsafePtr).V0)
+goto end_branch_2
+} else {
+
+}
+}
+{
+if (v3_3.Type == 9 && v3_3.IntVal == 2281256335) {
+__t2 = gopurs_runtime.Apply2(v_0, v2_2, (*Constructor_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value])(v3_3.UnsafePtr).V0)
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_2:
+return __t2
+})
+})
+})
+}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(pkg_Data_Bifoldable.Get_bifoldrDefault(), Get_bifoldableInterval(), x_0)
+}))
+	})
+	return cache_bifoldableInterval__gopurs_runtime_Value_740659151
+}
+
 var cache_bifoldableRecurringInterval gopurs_runtime.Value
 var once_bifoldableRecurringInterval sync.Once
 func Get_bifoldableRecurringInterval() gopurs_runtime.Value {
@@ -699,6 +955,53 @@ return gopurs_runtime.Apply(__local_var_3_3, (*Constructor_RecurringInterval[gop
 	return cache_bifoldableRecurringInterval
 }
 
+var cache_bifoldableRecurringInterval__gopurs_runtime_Value_4077340974 gopurs_runtime.Value
+var once_bifoldableRecurringInterval__gopurs_runtime_Value_4077340974 sync.Once
+func Get_bifoldableRecurringInterval__gopurs_runtime_Value_4077340974() gopurs_runtime.Value {
+	once_bifoldableRecurringInterval__gopurs_runtime_Value_4077340974.Do(func() {
+		cache_bifoldableRecurringInterval__gopurs_runtime_Value_4077340974 = gopurs_runtime.RecordDict3("bifoldMap", "bifoldl", "bifoldr", gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{})
+_ = __local_var_1_0
+mempty_2_1 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
+_ = mempty_2_1
+return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(g_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_bifoldableRecurringInterval(), "bifoldl"), gopurs_runtime.Func(func(m_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "append"), m_5, gopurs_runtime.Apply(f_3, a_6))
+})
+}), gopurs_runtime.Func(func(m_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "append"), m_5, gopurs_runtime.Apply(g_4, b_6))
+})
+}), mempty_2_1)
+})
+})
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(g_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(i_2 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_3_2 := gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_bifoldableInterval(), "bifoldl"), f_0, g_1, i_2)
+_ = __local_var_3_2
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_3_2, (*Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value])(x_4.UnsafePtr).V1)
+})
+})
+})
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(g_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(i_2 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_3_3 := gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_bifoldableInterval(), "bifoldr"), f_0, g_1, i_2)
+_ = __local_var_3_3
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_3_3, (*Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value])(x_4.UnsafePtr).V1)
+})
+})
+})
+}))
+	})
+	return cache_bifoldableRecurringInterval__gopurs_runtime_Value_4077340974
+}
+
 var cache_bitraversableInterval gopurs_runtime.Value
 var once_bitraversableInterval sync.Once
 func Get_bitraversableInterval() gopurs_runtime.Value {
@@ -708,7 +1011,7 @@ return Get_bifoldableInterval()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_bifunctorInterval()
 }), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_bitraversableInterval(), "bitraverse"), dictApplicative_0, pkg_Data_Bitraversable.Get_identity(), pkg_Data_Bitraversable.Get_identity())
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_bitraversableInterval(), "bitraverse"), dictApplicative_0, pkg_Data_Bitraversable.Get_identity(), pkg_Data_Bitraversable.Get_identity1())
 }), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
 Apply0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{})
 _ = Apply0_1_0
@@ -772,7 +1075,7 @@ return Get_bifoldableRecurringInterval()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_bifunctorRecurringInterval()
 }), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_bitraversableRecurringInterval(), "bitraverse"), dictApplicative_0, pkg_Data_Bitraversable.Get_identity(), pkg_Data_Bitraversable.Get_identity())
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_bitraversableRecurringInterval(), "bitraverse"), dictApplicative_0, pkg_Data_Bitraversable.Get_identity(), pkg_Data_Bitraversable.Get_identity1())
 }), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
 over1_1_0 := gopurs_runtime.Apply(Get_over(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
 _ = over1_1_0
@@ -891,7 +1194,7 @@ _ = v_2
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Apply(Get_RecurringInterval(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0)}), gopurs_runtime.Apply(f_1, (*Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1))
 }
 
-func Call_over__gopurs_runtime_Value_196548810(dictFunctor_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_over__gopurs_runtime_Value_3140749367(dictFunctor_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
 var f_1 gopurs_runtime.Value = f_1_loop

@@ -56,15 +56,15 @@ return Call_singleton(dictPlus_0_box)
 	return cache_singleton
 }
 
-var cache_singleton__gopurs_runtime_Value_892851522 gopurs_runtime.Value
-var once_singleton__gopurs_runtime_Value_892851522 sync.Once
-func Get_singleton__gopurs_runtime_Value_892851522() gopurs_runtime.Value {
-	once_singleton__gopurs_runtime_Value_892851522.Do(func() {
-		cache_singleton__gopurs_runtime_Value_892851522 = gopurs_runtime.Func(func(dictPlus_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_singleton__gopurs_runtime_Value_892851522(dictPlus_0_box)
+var cache_singleton__gopurs_runtime_Value_3741573463 gopurs_runtime.Value
+var once_singleton__gopurs_runtime_Value_3741573463 sync.Once
+func Get_singleton__gopurs_runtime_Value_3741573463() gopurs_runtime.Value {
+	once_singleton__gopurs_runtime_Value_3741573463.Do(func() {
+		cache_singleton__gopurs_runtime_Value_3741573463 = gopurs_runtime.Func(func(dictPlus_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_singleton__gopurs_runtime_Value_3741573463(dictPlus_0_box)
 })
 	})
-	return cache_singleton__gopurs_runtime_Value_892851522
+	return cache_singleton__gopurs_runtime_Value_3741573463
 }
 
 var cache_showNonEmpty gopurs_runtime.Value
@@ -257,7 +257,7 @@ return Call_ord1NonEmpty(dictOrd1_0_box)
 type Constructor_NonEmpty[T_f any, T_a any] struct {
 	Rc uint32
 	V0 T_a
-	V1 T_f
+	V1 gopurs_runtime.Value
 }
 
 
@@ -289,7 +289,7 @@ return gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Point
 })
 }
 
-func Call_singleton__gopurs_runtime_Value_892851522(dictPlus_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_singleton__gopurs_runtime_Value_3741573463(dictPlus_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictPlus_0 gopurs_runtime.Value = dictPlus_0_loop
 _ = dictPlus_0
 empty_1_0 := gopurs_runtime.RecordGet(dictPlus_0, "empty")

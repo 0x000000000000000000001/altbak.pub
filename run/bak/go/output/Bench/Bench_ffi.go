@@ -36,7 +36,7 @@ gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_res := FormatNumber(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_Opaque = // TAST: (Func [(TypeVar a)] (ADT ["Effect","Effect"] [(TypeVar a)]))
+var _Gopurs_Opaque = // TAST: (ForAll [a] (Func [(TypeVar a)] (ADT ["Effect","Effect"] [(TypeVar a)])))
 gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := Opaque(go_arg0)

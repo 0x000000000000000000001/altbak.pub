@@ -49,7 +49,7 @@ func ForeachE(as []any, f func(any) func(interface{}) any, _ interface{}) any {
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs_BindE = // TAST: (Func [(ADT ["Effect","Effect"] [(TypeVar a)]), (Func [(TypeVar a)] (ADT ["Effect","Effect"] [(TypeVar b)]))] (ADT ["Effect","Effect"] [(TypeVar b)]))
+var _Gopurs_BindE = // TAST: (ForAll [a, b] (Func [(ADT ["Effect","Effect"] [(TypeVar a)]), (Func [(TypeVar a)] (ADT ["Effect","Effect"] [(TypeVar b)]))] (ADT ["Effect","Effect"] [(TypeVar b)])))
 gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
@@ -64,7 +64,7 @@ gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := BindE(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_ForE = // TAST: (Func [Int, Int, (Func [Int] (ADT ["Effect","Effect"] [(ADT ["Data","Unit","Unit"] [])]))] (ADT ["Effect","Effect"] [(ADT ["Data","Unit","Unit"] [])]))
+var _Gopurs_ForE = // TAST: (Func [Int, Int, (Func [Int] (ADT ["Effect","Effect"] [Unit]))] (ADT ["Effect","Effect"] [Unit]))
 gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value, arg3 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := gopurs_runtime.Unbox[int64](arg0)
 	go_arg1 := gopurs_runtime.Unbox[int64](arg1)
@@ -78,7 +78,7 @@ gopurs_runtime.Func4(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := ForE(go_arg0, go_arg1, go_arg2, go_arg3)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_ForeachE = // TAST: (Func [(Array (TypeVar a)), (Func [(TypeVar a)] (ADT ["Effect","Effect"] [(ADT ["Data","Unit","Unit"] [])]))] (ADT ["Effect","Effect"] [(ADT ["Data","Unit","Unit"] [])]))
+var _Gopurs_ForeachE = // TAST: (ForAll [a] (Func [(Array (TypeVar a)), (Func [(TypeVar a)] (ADT ["Effect","Effect"] [Unit]))] (ADT ["Effect","Effect"] [Unit])))
 gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	arg0_arr := *(*[]gopurs_runtime.Value)(arg0.UnsafePtr)
 	go_arg0 := make([]any, len(arg0_arr))
@@ -93,14 +93,14 @@ gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, 
 	go_res := ForeachE(go_arg0, go_arg1, go_arg2)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_PureE = // TAST: (Func [(TypeVar a)] (ADT ["Effect","Effect"] [(TypeVar a)]))
+var _Gopurs_PureE = // TAST: (ForAll [a] (Func [(TypeVar a)] (ADT ["Effect","Effect"] [(TypeVar a)])))
 gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_res := PureE(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_UntilE = // TAST: (Func [(ADT ["Effect","Effect"] [Boolean])] (ADT ["Effect","Effect"] [(ADT ["Data","Unit","Unit"] [])]))
+var _Gopurs_UntilE = // TAST: (Func [(ADT ["Effect","Effect"] [Boolean])] (ADT ["Effect","Effect"] [Unit]))
 gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))
@@ -109,7 +109,7 @@ gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) 
 	go_res := UntilE(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_WhileE = // TAST: (Func [(ADT ["Effect","Effect"] [Boolean]), (ADT ["Effect","Effect"] [(TypeVar a)])] (ADT ["Effect","Effect"] [(ADT ["Data","Unit","Unit"] [])]))
+var _Gopurs_WhileE = // TAST: (ForAll [a] (Func [(ADT ["Effect","Effect"] [Boolean]), (ADT ["Effect","Effect"] [(TypeVar a)])] (ADT ["Effect","Effect"] [Unit])))
 gopurs_runtime.Func3(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value, arg2 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := func(p0_0 any) any {
 			return gopurs_runtime.Apply(arg0, gopurs_runtime.Box(p0_0))

@@ -85,6 +85,19 @@ return gopurs_runtime.Apply(f_0, m_1)
 	return cache_functorDisj
 }
 
+var cache_functorDisj__gopurs_runtime_Value_943655089 gopurs_runtime.Value
+var once_functorDisj__gopurs_runtime_Value_943655089 sync.Once
+func Get_functorDisj__gopurs_runtime_Value_943655089() gopurs_runtime.Value {
+	once_functorDisj__gopurs_runtime_Value_943655089.Do(func() {
+		cache_functorDisj__gopurs_runtime_Value_943655089 = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(m_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_0, m_1)
+})
+}))
+	})
+	return cache_functorDisj__gopurs_runtime_Value_943655089
+}
+
 var cache_eqDisj gopurs_runtime.Value
 var once_eqDisj sync.Once
 func Get_eqDisj() gopurs_runtime.Value {
@@ -105,6 +118,17 @@ return gopurs_runtime.RecordGet(dictEq_0, "eq")
 }))
 	})
 	return cache_eq1Disj
+}
+
+var cache_eq1Disj__gopurs_runtime_Value_1905950174 gopurs_runtime.Value
+var once_eq1Disj__gopurs_runtime_Value_1905950174 sync.Once
+func Get_eq1Disj__gopurs_runtime_Value_1905950174() gopurs_runtime.Value {
+	once_eq1Disj__gopurs_runtime_Value_1905950174.Do(func() {
+		cache_eq1Disj__gopurs_runtime_Value_1905950174 = gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordGet(dictEq_0, "eq")
+}))
+	})
+	return cache_eq1Disj__gopurs_runtime_Value_1905950174
 }
 
 var cache_ord1Disj gopurs_runtime.Value
@@ -146,6 +170,21 @@ return gopurs_runtime.Apply(v_0, v1_1)
 	return cache_applyDisj
 }
 
+var cache_applyDisj__gopurs_runtime_Value_3199351098 gopurs_runtime.Value
+var once_applyDisj__gopurs_runtime_Value_3199351098 sync.Once
+func Get_applyDisj__gopurs_runtime_Value_3199351098() gopurs_runtime.Value {
+	once_applyDisj__gopurs_runtime_Value_3199351098.Do(func() {
+		cache_applyDisj__gopurs_runtime_Value_3199351098 = gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_functorDisj__gopurs_runtime_Value_943655089()
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v_0, v1_1)
+})
+}))
+	})
+	return cache_applyDisj__gopurs_runtime_Value_3199351098
+}
+
 var cache_bindDisj gopurs_runtime.Value
 var once_bindDisj sync.Once
 func Get_bindDisj() gopurs_runtime.Value {
@@ -161,6 +200,21 @@ return gopurs_runtime.Apply(f_1, v_0)
 	return cache_bindDisj
 }
 
+var cache_bindDisj__gopurs_runtime_Value_329376103 gopurs_runtime.Value
+var once_bindDisj__gopurs_runtime_Value_329376103 sync.Once
+func Get_bindDisj__gopurs_runtime_Value_329376103() gopurs_runtime.Value {
+	once_bindDisj__gopurs_runtime_Value_329376103.Do(func() {
+		cache_bindDisj__gopurs_runtime_Value_329376103 = gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_applyDisj__gopurs_runtime_Value_3199351098()
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_1, v_0)
+})
+}))
+	})
+	return cache_bindDisj__gopurs_runtime_Value_329376103
+}
+
 var cache_applicativeDisj gopurs_runtime.Value
 var once_applicativeDisj sync.Once
 func Get_applicativeDisj() gopurs_runtime.Value {
@@ -170,6 +224,17 @@ return Get_applyDisj()
 }), Get_Disj())
 	})
 	return cache_applicativeDisj
+}
+
+var cache_applicativeDisj__gopurs_runtime_Value_4045440648 gopurs_runtime.Value
+var once_applicativeDisj__gopurs_runtime_Value_4045440648 sync.Once
+func Get_applicativeDisj__gopurs_runtime_Value_4045440648() gopurs_runtime.Value {
+	once_applicativeDisj__gopurs_runtime_Value_4045440648.Do(func() {
+		cache_applicativeDisj__gopurs_runtime_Value_4045440648 = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_applyDisj__gopurs_runtime_Value_3199351098()
+}), Get_Disj())
+	})
+	return cache_applicativeDisj__gopurs_runtime_Value_4045440648
 }
 
 var cache_monadDisj gopurs_runtime.Value

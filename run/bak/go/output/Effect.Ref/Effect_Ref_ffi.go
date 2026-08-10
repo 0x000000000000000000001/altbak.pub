@@ -72,39 +72,39 @@ func Write(val gopurs_runtime.Value, ref gopurs_runtime.Value) gopurs_runtime.Va
 
 
 // --- Auto-generated FFI wrappers ---
-var _Gopurs__New = // TAST: (Func [(TypeVar s)] (ADT ["Effect","Effect"] [(ADT ["Effect","Ref","Ref"] [(TypeVar s)])]))
+var _Gopurs__New = // TAST: (ForAll [s] (Func [(TypeVar s)] (ADT ["Effect","Effect"] [(ADT ["Effect","Ref","Ref"] [(TypeVar s)])])))
 gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := _New(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_ModifyImpl = // TAST: (Func [(Func [(TypeVar s)] (Record [state: (TypeVar s), value: (TypeVar b)])), (ADT ["Effect","Ref","Ref"] [(TypeVar s)])] (ADT ["Effect","Effect"] [(TypeVar b)]))
+var _Gopurs_ModifyImpl = // TAST: (ForAll [s, b] (Func [(Func [(TypeVar s)] (Record (Row [state: (TypeVar s), value: (TypeVar b)] Empty))), (ADT ["Effect","Ref","Ref"] [(TypeVar s)])] (ADT ["Effect","Effect"] [(TypeVar b)])))
 gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_res := ModifyImpl(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_Modify_ = // TAST: (Func [(Func [(TypeVar s)] (TypeVar s)), (ADT ["Effect","Ref","Ref"] [(TypeVar s)])] (ADT ["Effect","Effect"] [(ADT ["Data","Unit","Unit"] [])]))
+var _Gopurs_Modify_ = // TAST: (ForAll [s] (Func [(Func [(TypeVar s)] (TypeVar s)), (ADT ["Effect","Ref","Ref"] [(TypeVar s)])] (ADT ["Effect","Effect"] [Unit])))
 gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
 	go_res := Modify_(go_arg0, go_arg1)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_NewWithSelf = // TAST: (Func [(Func [(ADT ["Effect","Ref","Ref"] [(TypeVar s)])] (TypeVar s))] (ADT ["Effect","Effect"] [(ADT ["Effect","Ref","Ref"] [(TypeVar s)])]))
+var _Gopurs_NewWithSelf = // TAST: (ForAll [s] (Func [(Func [(ADT ["Effect","Ref","Ref"] [(TypeVar s)])] (TypeVar s))] (ADT ["Effect","Effect"] [(ADT ["Effect","Ref","Ref"] [(TypeVar s)])])))
 gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := NewWithSelf(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_Read = // TAST: (Func [(ADT ["Effect","Ref","Ref"] [(TypeVar s)])] (ADT ["Effect","Effect"] [(TypeVar s)]))
+var _Gopurs_Read = // TAST: (ForAll [s] (Func [(ADT ["Effect","Ref","Ref"] [(TypeVar s)])] (ADT ["Effect","Effect"] [(TypeVar s)])))
 gopurs_runtime.Func(func(arg0 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_res := Read(go_arg0)
 	return gopurs_runtime.Box(go_res)
 })
-var _Gopurs_Write = // TAST: (Func [(TypeVar s), (ADT ["Effect","Ref","Ref"] [(TypeVar s)])] (ADT ["Effect","Effect"] [(ADT ["Data","Unit","Unit"] [])]))
+var _Gopurs_Write = // TAST: (ForAll [s] (Func [(TypeVar s), (ADT ["Effect","Ref","Ref"] [(TypeVar s)])] (ADT ["Effect","Effect"] [Unit])))
 gopurs_runtime.Func2(func(arg0 gopurs_runtime.Value, arg1 gopurs_runtime.Value) gopurs_runtime.Value {
 	go_arg0 := arg0
 	go_arg1 := arg1
