@@ -1,11 +1,11 @@
 package Control_Alternative
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
 	pkg_Control_Applicative "gopurs/output/Control.Applicative"
 	pkg_Control_Plus "gopurs/output/Control.Plus"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_guard gopurs_runtime.Value

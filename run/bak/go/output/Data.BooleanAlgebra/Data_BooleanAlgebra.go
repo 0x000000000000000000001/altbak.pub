@@ -1,9 +1,9 @@
 package Data_BooleanAlgebra
 
 import (
+	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
 )
 
 var cache_booleanAlgebraUnit gopurs_runtime.Value

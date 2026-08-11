@@ -1,9 +1,9 @@
 package Control_Parallel
 
 import (
+	pkg_Data_Foldable "gopurs/output/Data.Foldable"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Foldable "gopurs/output/Data.Foldable"
 )
 
 var cache_identity gopurs_runtime.Value

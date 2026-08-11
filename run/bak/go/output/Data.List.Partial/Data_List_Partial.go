@@ -1,9 +1,9 @@
 package Data_List_Partial
 
 import (
+	pkg_Data_List_Types "gopurs/output/Data.List.Types"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_List_Types "gopurs/output/Data.List.Types"
 	unsafe "unsafe"
 )
 

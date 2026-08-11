@@ -1,15 +1,15 @@
 package Control_Monad_Gen_Common
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
+	pkg_Control_Monad_Gen "gopurs/output/Control.Monad.Gen"
+	pkg_Data_Either "gopurs/output/Data.Either"
+	pkg_Data_Identity "gopurs/output/Data.Identity"
+	pkg_Data_Maybe "gopurs/output/Data.Maybe"
+	pkg_Data_NonEmpty "gopurs/output/Data.NonEmpty"
 	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
-	pkg_Control_Monad_Gen "gopurs/output/Control.Monad.Gen"
-	pkg_Data_NonEmpty "gopurs/output/Data.NonEmpty"
-	pkg_Data_Maybe "gopurs/output/Data.Maybe"
-	pkg_Data_Identity "gopurs/output/Data.Identity"
-	pkg_Data_Either "gopurs/output/Data.Either"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_max gopurs_runtime.Value

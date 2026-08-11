@@ -1,10 +1,10 @@
 package Data_Maybe_Last
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

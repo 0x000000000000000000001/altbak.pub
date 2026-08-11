@@ -1,10 +1,10 @@
 package Control_Apply
 
 import (
+	pkg_Data_Function "gopurs/output/Data.Function"
+	pkg_Data_Functor "gopurs/output/Data.Functor"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Functor "gopurs/output/Data.Functor"
-	pkg_Data_Function "gopurs/output/Data.Function"
 )
 
 var cache_identity gopurs_runtime.Value

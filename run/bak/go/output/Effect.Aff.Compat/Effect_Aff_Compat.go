@@ -1,12 +1,12 @@
 package Effect_Aff_Compat
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
 	pkg_Control_Bind "gopurs/output/Control.Bind"
+	pkg_Data_Either "gopurs/output/Data.Either"
 	pkg_Effect "gopurs/output/Effect"
 	pkg_Effect_Aff "gopurs/output/Effect.Aff"
-	pkg_Data_Either "gopurs/output/Data.Either"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

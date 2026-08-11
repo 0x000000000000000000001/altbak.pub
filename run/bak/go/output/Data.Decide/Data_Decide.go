@@ -1,10 +1,10 @@
 package Data_Decide
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
 	pkg_Data_Divide "gopurs/output/Data.Divide"
 	pkg_Data_Either "gopurs/output/Data.Either"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_identity gopurs_runtime.Value

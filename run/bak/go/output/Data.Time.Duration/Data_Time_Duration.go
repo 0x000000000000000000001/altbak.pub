@@ -1,13 +1,13 @@
 package Data_Time_Duration
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
-	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
-	pkg_Data_Show "gopurs/output/Data.Show"
-	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Data_Eq "gopurs/output/Data.Eq"
 	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
+	pkg_Data_Ord "gopurs/output/Data.Ord"
+	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
+	pkg_Data_Show "gopurs/output/Data.Show"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_identity gopurs_runtime.Value

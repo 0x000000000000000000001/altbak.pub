@@ -1,11 +1,11 @@
 package Data_Time_Gen
 
 import (
+	pkg_Data_Enum_Gen "gopurs/output/Data.Enum.Gen"
+	pkg_Data_Time "gopurs/output/Data.Time"
+	pkg_Data_Time_Component "gopurs/output/Data.Time.Component"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Time "gopurs/output/Data.Time"
-	pkg_Data_Enum_Gen "gopurs/output/Data.Enum.Gen"
-	pkg_Data_Time_Component "gopurs/output/Data.Time.Component"
 )
 
 var cache_genTime gopurs_runtime.Value

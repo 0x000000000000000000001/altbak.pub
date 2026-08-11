@@ -1,9 +1,9 @@
 package Control_Comonad_Trans_Class
 
 import (
+	pkg_Control_Monad_Identity_Trans "gopurs/output/Control.Monad.Identity.Trans"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Control_Monad_Identity_Trans "gopurs/output/Control.Monad.Identity.Trans"
 )
 
 var cache_lower gopurs_runtime.Value

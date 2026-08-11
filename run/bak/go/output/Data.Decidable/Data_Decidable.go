@@ -1,10 +1,10 @@
 package Data_Decidable
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
 	pkg_Data_Decide "gopurs/output/Data.Decide"
 	pkg_Data_Divisible "gopurs/output/Data.Divisible"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_identity gopurs_runtime.Value

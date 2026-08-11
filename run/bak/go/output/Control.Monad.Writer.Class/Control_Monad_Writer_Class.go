@@ -1,9 +1,9 @@
 package Control_Monad_Writer_Class
 
 import (
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	unsafe "unsafe"
 )
 

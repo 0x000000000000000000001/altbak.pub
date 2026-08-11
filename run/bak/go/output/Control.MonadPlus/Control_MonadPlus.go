@@ -1,10 +1,10 @@
 package Control_MonadPlus
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
 	pkg_Control_Alternative "gopurs/output/Control.Alternative"
 	pkg_Control_Monad "gopurs/output/Control.Monad"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_monadPlusArray gopurs_runtime.Value

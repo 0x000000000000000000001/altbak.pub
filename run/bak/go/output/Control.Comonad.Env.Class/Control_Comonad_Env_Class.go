@@ -1,12 +1,12 @@
 package Control_Comonad_Env_Class
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
-	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	pkg_Control_Comonad_Env_Trans "gopurs/output/Control.Comonad.Env.Trans"
 	pkg_Control_Comonad_Store_Trans "gopurs/output/Control.Comonad.Store.Trans"
 	pkg_Control_Comonad_Traced_Trans "gopurs/output/Control.Comonad.Traced.Trans"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

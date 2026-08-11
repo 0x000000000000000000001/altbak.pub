@@ -1,13 +1,13 @@
 package Test_Records
 
 import (
+	pkg_Bench "gopurs/output/Bench"
+	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
+	pkg_Data_Show "gopurs/output/Data.Show"
+	pkg_Effect "gopurs/output/Effect"
+	pkg_Effect_Console "gopurs/output/Effect.Console"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Effect_Console "gopurs/output/Effect.Console"
-	pkg_Effect "gopurs/output/Effect"
-	pkg_Bench "gopurs/output/Bench"
-	pkg_Data_Show "gopurs/output/Data.Show"
-	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
 	unsafe "unsafe"
 )
 
@@ -71,7 +71,11 @@ goto end_branch_0
 {
 v_0_loop = (v_0) - (1)
 v1_1_loop = func() gopurs_runtime.Value {
-clone := *((*gopurs_runtime.RecordData2)(v1_1.UnsafePtr))
+origVal := v1_1
+if origVal.Type != gopurs_runtime.TypeRecord2 {
+return gopurs_runtime.RecordUpdateDict(origVal, []string{"a", "b"}, []gopurs_runtime.Value{gopurs_runtime.Int((gopurs_runtime.RecordGet(v1_1, "a").IntVal) + (1)), gopurs_runtime.RecordUpdate2(gopurs_runtime.RecordGet(v1_1, "b"), "c", gopurs_runtime.Int((gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "c").IntVal) + (2)), "d", gopurs_runtime.RecordUpdate2(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "e", gopurs_runtime.Int((gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "e").IntVal) + (3)), "f", gopurs_runtime.Int((gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "f").IntVal) + (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingInt(), "mod"), gopurs_runtime.Int(v_0), gopurs_runtime.Int(5)).IntVal))))})
+}
+clone := *((*gopurs_runtime.RecordData2)(origVal.UnsafePtr))
 clone.V0 = gopurs_runtime.Int((gopurs_runtime.RecordGet(v1_1, "a").IntVal) + (1))
 clone.V1 = gopurs_runtime.RecordUpdate2(gopurs_runtime.RecordGet(v1_1, "b"), "c", gopurs_runtime.Int((gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "c").IntVal) + (2)), "d", gopurs_runtime.RecordUpdate2(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "e", gopurs_runtime.Int((gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "e").IntVal) + (3)), "f", gopurs_runtime.Int((gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "f").IntVal) + (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingInt(), "mod"), gopurs_runtime.Int(v_0), gopurs_runtime.Int(5)).IntVal))))
 return gopurs_runtime.Value{Type: gopurs_runtime.TypeRecord2, UnsafePtr: unsafe.Pointer(&clone)}

@@ -1,10 +1,10 @@
 package Data_Profunctor_Choice
 
 import (
+	pkg_Data_Either "gopurs/output/Data.Either"
+	pkg_Data_Profunctor "gopurs/output/Data.Profunctor"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Profunctor "gopurs/output/Data.Profunctor"
-	pkg_Data_Either "gopurs/output/Data.Either"
 	unsafe "unsafe"
 )
 

@@ -1,10 +1,10 @@
 package Control_Comonad_Store
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	pkg_Unsafe_Coerce "gopurs/output/Unsafe.Coerce"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

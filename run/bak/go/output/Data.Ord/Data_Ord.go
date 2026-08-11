@@ -1,11 +1,11 @@
 package Data_Ord
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
 	pkg_Data_Eq "gopurs/output/Data.Eq"
 	pkg_Data_Ordering "gopurs/output/Data.Ordering"
 	pkg_Record_Unsafe "gopurs/output/Record.Unsafe"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_ordVoid gopurs_runtime.Value

@@ -1,17 +1,17 @@
 package Control_Parallel_Class
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
-	pkg_Data_Tuple "gopurs/output/Data.Tuple"
-	pkg_Data_Maybe "gopurs/output/Data.Maybe"
+	pkg_Control_Bind "gopurs/output/Control.Bind"
+	pkg_Control_Monad_Except_Trans "gopurs/output/Control.Monad.Except.Trans"
 	pkg_Control_Monad_Maybe_Trans "gopurs/output/Control.Monad.Maybe.Trans"
 	pkg_Data_Either "gopurs/output/Data.Either"
-	pkg_Control_Monad_Except_Trans "gopurs/output/Control.Monad.Except.Trans"
 	pkg_Data_Functor_Costar "gopurs/output/Data.Functor.Costar"
-	pkg_Control_Bind "gopurs/output/Control.Bind"
-	pkg_Effect_Ref "gopurs/output/Effect.Ref"
+	pkg_Data_Maybe "gopurs/output/Data.Maybe"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
+	pkg_Effect_Ref "gopurs/output/Effect.Ref"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

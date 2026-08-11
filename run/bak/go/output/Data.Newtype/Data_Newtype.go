@@ -1,9 +1,9 @@
 package Data_Newtype
 
 import (
+	pkg_Unsafe_Coerce "gopurs/output/Unsafe.Coerce"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Unsafe_Coerce "gopurs/output/Unsafe.Coerce"
 )
 
 var cache_wrap gopurs_runtime.Value

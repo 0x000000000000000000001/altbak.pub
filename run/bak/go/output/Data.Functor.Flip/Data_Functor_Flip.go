@@ -1,11 +1,11 @@
 package Data_Functor_Flip
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
-	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Bifunctor "gopurs/output/Data.Bifunctor"
 	pkg_Data_Profunctor "gopurs/output/Data.Profunctor"
+	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_Flip gopurs_runtime.Value

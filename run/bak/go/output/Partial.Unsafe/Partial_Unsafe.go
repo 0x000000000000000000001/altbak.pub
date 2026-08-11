@@ -1,9 +1,9 @@
 package Partial_Unsafe
 
 import (
+	pkg_Partial "gopurs/output/Partial"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Partial "gopurs/output/Partial"
 )
 
 var cache_unsafePartial gopurs_runtime.Value

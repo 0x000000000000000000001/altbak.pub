@@ -1,20 +1,20 @@
 package Effect_Aff
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
 	pkg_Control_Bind "gopurs/output/Control.Bind"
-	pkg_Effect "gopurs/output/Effect"
-	pkg_Data_Unit "gopurs/output/Data.Unit"
-	pkg_Unsafe_Coerce "gopurs/output/Unsafe.Coerce"
-	pkg_Control_Parallel "gopurs/output/Control.Parallel"
-	pkg_Data_Foldable "gopurs/output/Data.Foldable"
-	pkg_Effect_Unsafe "gopurs/output/Effect.Unsafe"
-	pkg_Control_Monad_ST_Class "gopurs/output/Control.Monad.ST.Class"
 	pkg_Control_Monad_Error_Class "gopurs/output/Control.Monad.Error.Class"
 	pkg_Control_Monad_Rec_Class "gopurs/output/Control.Monad.Rec.Class"
-	pkg_Effect_Exception "gopurs/output/Effect.Exception"
+	pkg_Control_Monad_ST_Class "gopurs/output/Control.Monad.ST.Class"
+	pkg_Control_Parallel "gopurs/output/Control.Parallel"
 	pkg_Data_Either "gopurs/output/Data.Either"
+	pkg_Data_Foldable "gopurs/output/Data.Foldable"
+	pkg_Data_Unit "gopurs/output/Data.Unit"
+	pkg_Effect "gopurs/output/Effect"
+	pkg_Effect_Exception "gopurs/output/Effect.Exception"
+	pkg_Effect_Unsafe "gopurs/output/Effect.Unsafe"
+	pkg_Unsafe_Coerce "gopurs/output/Unsafe.Coerce"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

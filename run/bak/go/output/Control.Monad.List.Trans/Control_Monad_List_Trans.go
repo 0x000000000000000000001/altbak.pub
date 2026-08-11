@@ -1,13 +1,13 @@
 package Control_Monad_List_Trans
 
 import (
+	pkg_Control_Monad_Rec_Class "gopurs/output/Control.Monad.Rec.Class"
+	pkg_Data_Lazy "gopurs/output/Data.Lazy"
+	pkg_Data_Maybe "gopurs/output/Data.Maybe"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
+	pkg_Data_Unit "gopurs/output/Data.Unit"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Maybe "gopurs/output/Data.Maybe"
-	pkg_Data_Lazy "gopurs/output/Data.Lazy"
-	pkg_Data_Tuple "gopurs/output/Data.Tuple"
-	pkg_Control_Monad_Rec_Class "gopurs/output/Control.Monad.Rec.Class"
-	pkg_Data_Unit "gopurs/output/Data.Unit"
 	unsafe "unsafe"
 )
 

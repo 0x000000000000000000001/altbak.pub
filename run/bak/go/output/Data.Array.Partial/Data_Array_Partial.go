@@ -1,9 +1,9 @@
 package Data_Array_Partial
 
 import (
+	pkg_Data_Array "gopurs/output/Data.Array"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Array "gopurs/output/Data.Array"
 )
 
 var cache_tail gopurs_runtime.Value

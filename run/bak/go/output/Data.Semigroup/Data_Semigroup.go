@@ -1,11 +1,11 @@
 package Data_Semigroup
 
 import (
+	pkg_Data_Unit "gopurs/output/Data.Unit"
+	pkg_Data_Void "gopurs/output/Data.Void"
+	pkg_Record_Unsafe "gopurs/output/Record.Unsafe"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Void "gopurs/output/Data.Void"
-	pkg_Data_Unit "gopurs/output/Data.Unit"
-	pkg_Record_Unsafe "gopurs/output/Record.Unsafe"
 )
 
 var cache_semigroupVoid gopurs_runtime.Value

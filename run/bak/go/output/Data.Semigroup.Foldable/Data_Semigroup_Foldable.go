@@ -1,15 +1,15 @@
 package Data_Semigroup_Foldable
 
 import (
+	pkg_Control_Apply "gopurs/output/Control.Apply"
+	pkg_Data_Foldable "gopurs/output/Data.Foldable"
+	pkg_Data_Function "gopurs/output/Data.Function"
+	pkg_Data_Ordering "gopurs/output/Data.Ordering"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
+	pkg_Data_Unit "gopurs/output/Data.Unit"
+	pkg_Unsafe_Coerce "gopurs/output/Unsafe.Coerce"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Function "gopurs/output/Data.Function"
-	pkg_Data_Foldable "gopurs/output/Data.Foldable"
-	pkg_Data_Tuple "gopurs/output/Data.Tuple"
-	pkg_Control_Apply "gopurs/output/Control.Apply"
-	pkg_Data_Ordering "gopurs/output/Data.Ordering"
-	pkg_Unsafe_Coerce "gopurs/output/Unsafe.Coerce"
-	pkg_Data_Unit "gopurs/output/Data.Unit"
 	unsafe "unsafe"
 )
 

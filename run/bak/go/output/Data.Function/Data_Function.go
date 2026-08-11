@@ -1,9 +1,9 @@
 package Data_Function
 
 import (
+	pkg_Data_Ord "gopurs/output/Data.Ord"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Ord "gopurs/output/Data.Ord"
 )
 
 var cache_lessThanOrEq gopurs_runtime.Value

@@ -1,9 +1,6 @@
 package Effect_Aff_Class
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
-	pkg_Effect_Aff "gopurs/output/Effect.Aff"
 	pkg_Control_Monad_Cont_Trans "gopurs/output/Control.Monad.Cont.Trans"
 	pkg_Control_Monad_Except_Trans "gopurs/output/Control.Monad.Except.Trans"
 	pkg_Control_Monad_List_Trans "gopurs/output/Control.Monad.List.Trans"
@@ -13,6 +10,9 @@ import (
 	pkg_Control_Monad_State_Trans "gopurs/output/Control.Monad.State.Trans"
 	pkg_Control_Monad_Writer_Trans "gopurs/output/Control.Monad.Writer.Trans"
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
+	pkg_Effect_Aff "gopurs/output/Effect.Aff"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

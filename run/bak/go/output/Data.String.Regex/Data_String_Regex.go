@@ -1,12 +1,12 @@
 package Data_String_Regex
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
+	pkg_Data_Either "gopurs/output/Data.Either"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
-	pkg_Data_Either "gopurs/output/Data.Either"
 	pkg_Data_String_CodeUnits "gopurs/output/Data.String.CodeUnits"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_showRegex gopurs_runtime.Value

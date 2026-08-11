@@ -1,9 +1,9 @@
 package Data_Functor_Contravariant
 
 import (
+	pkg_Data_Void "gopurs/output/Data.Void"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Void "gopurs/output/Data.Void"
 )
 
 var cache_contravariantConst gopurs_runtime.Value

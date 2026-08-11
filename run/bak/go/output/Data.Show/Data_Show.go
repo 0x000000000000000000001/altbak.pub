@@ -1,11 +1,11 @@
 package Data_Show
 
 import (
+	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
+	pkg_Data_Void "gopurs/output/Data.Void"
+	pkg_Record_Unsafe "gopurs/output/Record.Unsafe"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Void "gopurs/output/Data.Void"
-	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
-	pkg_Record_Unsafe "gopurs/output/Record.Unsafe"
 )
 
 var cache_showVoid gopurs_runtime.Value

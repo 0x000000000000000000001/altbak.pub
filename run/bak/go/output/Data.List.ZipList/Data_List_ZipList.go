@@ -1,14 +1,14 @@
 package Data_List_ZipList
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
-	pkg_Data_List_Lazy_Types "gopurs/output/Data.List.Lazy.Types"
-	pkg_Data_List_Lazy "gopurs/output/Data.List.Lazy"
 	pkg_Data_Function "gopurs/output/Data.Function"
 	pkg_Data_Lazy "gopurs/output/Data.Lazy"
+	pkg_Data_List_Lazy "gopurs/output/Data.List.Lazy"
+	pkg_Data_List_Lazy_Types "gopurs/output/Data.List.Lazy.Types"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Partial "gopurs/output/Partial"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

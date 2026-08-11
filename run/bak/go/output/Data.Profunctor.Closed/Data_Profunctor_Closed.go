@@ -1,10 +1,10 @@
 package Data_Profunctor_Closed
 
 import (
+	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
+	pkg_Data_Profunctor "gopurs/output/Data.Profunctor"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Profunctor "gopurs/output/Data.Profunctor"
-	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 )
 
 var cache_closedFunction gopurs_runtime.Value

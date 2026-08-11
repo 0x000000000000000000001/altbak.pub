@@ -1,11 +1,11 @@
 package Control_Monad_Cont
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
 	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	pkg_Data_Identity "gopurs/output/Data.Identity"
 	pkg_Unsafe_Coerce "gopurs/output/Unsafe.Coerce"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_withCont gopurs_runtime.Value

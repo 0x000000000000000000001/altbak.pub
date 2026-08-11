@@ -1,10 +1,10 @@
 package Data_Functor_Product2
 
 import (
+	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
+	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
-	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
 	unsafe "unsafe"
 )
 

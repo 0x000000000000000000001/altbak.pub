@@ -1,12 +1,12 @@
 package Data_Functor_Product
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
-	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
-	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	pkg_Data_Bifunctor "gopurs/output/Data.Bifunctor"
 	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
+	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

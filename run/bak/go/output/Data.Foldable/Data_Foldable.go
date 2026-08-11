@@ -1,17 +1,17 @@
 package Data_Foldable
 
 import (
+	pkg_Control_Apply "gopurs/output/Control.Apply"
+	pkg_Control_Category "gopurs/output/Control.Category"
+	pkg_Data_Either "gopurs/output/Data.Either"
+	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
+	pkg_Data_Maybe "gopurs/output/Data.Maybe"
+	pkg_Data_Maybe_First "gopurs/output/Data.Maybe.First"
+	pkg_Data_Ordering "gopurs/output/Data.Ordering"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
+	pkg_Data_Unit "gopurs/output/Data.Unit"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Control_Category "gopurs/output/Control.Category"
-	pkg_Data_Tuple "gopurs/output/Data.Tuple"
-	pkg_Data_Maybe "gopurs/output/Data.Maybe"
-	pkg_Data_Either "gopurs/output/Data.Either"
-	pkg_Control_Apply "gopurs/output/Control.Apply"
-	pkg_Data_Unit "gopurs/output/Data.Unit"
-	pkg_Data_Ordering "gopurs/output/Data.Ordering"
-	pkg_Data_Maybe_First "gopurs/output/Data.Maybe.First"
-	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
 	unsafe "unsafe"
 )
 

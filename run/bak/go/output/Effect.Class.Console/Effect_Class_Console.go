@@ -1,10 +1,10 @@
 package Effect_Class_Console
 
 import (
+	pkg_Control_Bind "gopurs/output/Control.Bind"
+	pkg_Effect_Console "gopurs/output/Effect.Console"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Effect_Console "gopurs/output/Effect.Console"
-	pkg_Control_Bind "gopurs/output/Control.Bind"
 )
 
 var cache_warnShow gopurs_runtime.Value

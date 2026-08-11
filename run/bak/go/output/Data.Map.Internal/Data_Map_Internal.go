@@ -1,18 +1,18 @@
 package Data_Map_Internal
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
-	pkg_Data_Ord "gopurs/output/Data.Ord"
-	pkg_Data_Maybe "gopurs/output/Data.Maybe"
-	pkg_Data_Tuple "gopurs/output/Data.Tuple"
-	pkg_Data_Unfoldable "gopurs/output/Data.Unfoldable"
-	pkg_Data_List_Types "gopurs/output/Data.List.Types"
-	pkg_Data_Unit "gopurs/output/Data.Unit"
 	pkg_Data_Function "gopurs/output/Data.Function"
+	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
+	pkg_Data_List_Types "gopurs/output/Data.List.Types"
+	pkg_Data_Maybe "gopurs/output/Data.Maybe"
+	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Show "gopurs/output/Data.Show"
-	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
+	pkg_Data_Unfoldable "gopurs/output/Data.Unfoldable"
+	pkg_Data_Unit "gopurs/output/Data.Unit"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

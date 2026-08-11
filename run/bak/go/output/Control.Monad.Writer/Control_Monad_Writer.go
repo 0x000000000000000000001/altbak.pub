@@ -1,10 +1,10 @@
 package Control_Monad_Writer
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
 	pkg_Data_Identity "gopurs/output/Data.Identity"
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_writer gopurs_runtime.Value

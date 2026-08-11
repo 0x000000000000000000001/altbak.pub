@@ -1,19 +1,19 @@
 package Data_TraversableWithIndex
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
+	pkg_Data_Either "gopurs/output/Data.Either"
 	pkg_Data_FoldableWithIndex "gopurs/output/Data.FoldableWithIndex"
+	pkg_Data_Functor_App "gopurs/output/Data.Functor.App"
+	pkg_Data_Functor_Compose "gopurs/output/Data.Functor.Compose"
+	pkg_Data_Functor_Product "gopurs/output/Data.Functor.Product"
 	pkg_Data_FunctorWithIndex "gopurs/output/Data.FunctorWithIndex"
+	pkg_Data_Identity "gopurs/output/Data.Identity"
 	pkg_Data_Traversable "gopurs/output/Data.Traversable"
+	pkg_Data_Traversable_Accum_Internal "gopurs/output/Data.Traversable.Accum.Internal"
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
-	pkg_Data_Identity "gopurs/output/Data.Identity"
-	pkg_Data_Either "gopurs/output/Data.Either"
-	pkg_Data_Functor_Product "gopurs/output/Data.Functor.Product"
-	pkg_Data_Functor_Compose "gopurs/output/Data.Functor.Compose"
-	pkg_Data_Functor_App "gopurs/output/Data.Functor.App"
-	pkg_Data_Traversable_Accum_Internal "gopurs/output/Data.Traversable.Accum.Internal"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

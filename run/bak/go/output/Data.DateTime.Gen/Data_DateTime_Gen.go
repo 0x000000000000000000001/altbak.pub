@@ -1,11 +1,11 @@
 package Data_DateTime_Gen
 
 import (
+	pkg_Data_Date_Gen "gopurs/output/Data.Date.Gen"
+	pkg_Data_DateTime "gopurs/output/Data.DateTime"
+	pkg_Data_Time_Gen "gopurs/output/Data.Time.Gen"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_DateTime "gopurs/output/Data.DateTime"
-	pkg_Data_Date_Gen "gopurs/output/Data.Date.Gen"
-	pkg_Data_Time_Gen "gopurs/output/Data.Time.Gen"
 )
 
 var cache_genDateTime gopurs_runtime.Value

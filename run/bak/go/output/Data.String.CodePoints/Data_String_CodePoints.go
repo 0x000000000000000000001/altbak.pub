@@ -1,21 +1,21 @@
 package Data_String_CodePoints
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
+	pkg_Data_Bounded "gopurs/output/Data.Bounded"
+	pkg_Data_Enum "gopurs/output/Data.Enum"
+	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
+	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
+	pkg_Data_Int "gopurs/output/Data.Int"
+	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
-	pkg_Data_String_Common "gopurs/output/Data.String.Common"
-	pkg_Data_Int "gopurs/output/Data.Int"
-	pkg_Data_Enum "gopurs/output/Data.Enum"
-	pkg_Data_Bounded "gopurs/output/Data.Bounded"
 	pkg_Data_String_CodeUnits "gopurs/output/Data.String.CodeUnits"
-	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
-	pkg_Data_Maybe "gopurs/output/Data.Maybe"
+	pkg_Data_String_Common "gopurs/output/Data.String.Common"
 	pkg_Data_String_Unsafe "gopurs/output/Data.String.Unsafe"
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	pkg_Data_Unfoldable "gopurs/output/Data.Unfoldable"
-	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

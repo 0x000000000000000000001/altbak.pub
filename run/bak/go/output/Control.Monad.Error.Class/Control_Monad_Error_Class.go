@@ -1,14 +1,14 @@
 package Control_Monad_Error_Class
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
-	pkg_Data_Maybe "gopurs/output/Data.Maybe"
+	pkg_Control_Bind "gopurs/output/Control.Bind"
 	pkg_Data_Either "gopurs/output/Data.Either"
+	pkg_Data_Maybe "gopurs/output/Data.Maybe"
+	pkg_Data_Unit "gopurs/output/Data.Unit"
 	pkg_Effect "gopurs/output/Effect"
 	pkg_Effect_Exception "gopurs/output/Effect.Exception"
-	pkg_Data_Unit "gopurs/output/Data.Unit"
-	pkg_Control_Bind "gopurs/output/Control.Bind"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

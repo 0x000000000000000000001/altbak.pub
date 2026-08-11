@@ -1,9 +1,9 @@
 package Data_String_Common
 
 import (
+	pkg_Data_Eq "gopurs/output/Data.Eq"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Eq "gopurs/output/Data.Eq"
 )
 
 var cache_null gopurs_runtime.Value

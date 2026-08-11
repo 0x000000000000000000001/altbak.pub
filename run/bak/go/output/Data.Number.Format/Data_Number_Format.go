@@ -1,9 +1,9 @@
 package Data_Number_Format
 
 import (
+	pkg_Data_Ord "gopurs/output/Data.Ord"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Ord "gopurs/output/Data.Ord"
 	unsafe "unsafe"
 )
 

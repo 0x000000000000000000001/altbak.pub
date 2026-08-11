@@ -1,11 +1,11 @@
 package Data_String_Regex_Unsafe
 
 import (
+	pkg_Data_Either "gopurs/output/Data.Either"
+	pkg_Data_String_Regex "gopurs/output/Data.String.Regex"
+	pkg_Partial "gopurs/output/Partial"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_String_Regex "gopurs/output/Data.String.Regex"
-	pkg_Data_Either "gopurs/output/Data.Either"
-	pkg_Partial "gopurs/output/Partial"
 )
 
 var cache_unsafeRegex gopurs_runtime.Value

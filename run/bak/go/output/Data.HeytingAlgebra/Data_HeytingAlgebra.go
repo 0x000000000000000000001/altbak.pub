@@ -1,10 +1,10 @@
 package Data_HeytingAlgebra
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
 	pkg_Record_Unsafe "gopurs/output/Record.Unsafe"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_ttRecord gopurs_runtime.Value

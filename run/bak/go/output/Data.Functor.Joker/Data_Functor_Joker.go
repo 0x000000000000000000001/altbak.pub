@@ -1,10 +1,10 @@
 package Data_Functor_Joker
 
 import (
+	pkg_Data_Either "gopurs/output/Data.Either"
+	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
-	pkg_Data_Either "gopurs/output/Data.Either"
 )
 
 var cache_Joker gopurs_runtime.Value

@@ -1,14 +1,14 @@
 package Data_Semigroup_Traversable
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
-	pkg_Data_Semigroup_Foldable "gopurs/output/Data.Semigroup.Foldable"
-	pkg_Data_Traversable "gopurs/output/Data.Traversable"
-	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	pkg_Data_Identity "gopurs/output/Data.Identity"
 	pkg_Data_Monoid_Dual "gopurs/output/Data.Monoid.Dual"
 	pkg_Data_Monoid_Multiplicative "gopurs/output/Data.Monoid.Multiplicative"
+	pkg_Data_Semigroup_Foldable "gopurs/output/Data.Semigroup.Foldable"
+	pkg_Data_Traversable "gopurs/output/Data.Traversable"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_identity gopurs_runtime.Value

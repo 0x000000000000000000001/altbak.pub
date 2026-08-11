@@ -1,12 +1,12 @@
 package Data_NonEmpty
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
-	pkg_Data_Tuple "gopurs/output/Data.Tuple"
+	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
-	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

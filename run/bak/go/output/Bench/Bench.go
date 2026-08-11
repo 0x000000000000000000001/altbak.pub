@@ -1,13 +1,13 @@
 package Bench
 
 import (
+	pkg_Control_Bind "gopurs/output/Control.Bind"
+	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
+	pkg_Effect "gopurs/output/Effect"
+	pkg_Effect_Aff "gopurs/output/Effect.Aff"
+	pkg_Effect_Console "gopurs/output/Effect.Console"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Control_Bind "gopurs/output/Control.Bind"
-	pkg_Effect_Aff "gopurs/output/Effect.Aff"
-	pkg_Effect "gopurs/output/Effect"
-	pkg_Effect_Console "gopurs/output/Effect.Console"
-	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 )
 
 var cache_discard1 gopurs_runtime.Value

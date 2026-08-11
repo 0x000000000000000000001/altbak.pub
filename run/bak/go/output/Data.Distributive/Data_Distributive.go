@@ -1,13 +1,13 @@
 package Data_Distributive
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
-	pkg_Data_Identity "gopurs/output/Data.Identity"
-	pkg_Unsafe_Coerce "gopurs/output/Unsafe.Coerce"
 	pkg_Data_Functor "gopurs/output/Data.Functor"
+	pkg_Data_Identity "gopurs/output/Data.Identity"
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
+	pkg_Unsafe_Coerce "gopurs/output/Unsafe.Coerce"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_identity gopurs_runtime.Value

@@ -1,10 +1,10 @@
 package Data_Semiring
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
 	pkg_Record_Unsafe "gopurs/output/Record.Unsafe"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_zeroRecord gopurs_runtime.Value

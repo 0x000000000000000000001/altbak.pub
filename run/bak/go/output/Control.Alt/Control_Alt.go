@@ -1,10 +1,10 @@
 package Control_Alt
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
 	pkg_Data_Functor "gopurs/output/Data.Functor"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_altArray gopurs_runtime.Value

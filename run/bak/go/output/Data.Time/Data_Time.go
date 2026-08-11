@@ -1,17 +1,17 @@
 package Data_Time
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
+	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
+	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
+	pkg_Data_Int "gopurs/output/Data.Int"
+	pkg_Data_Maybe "gopurs/output/Data.Maybe"
+	pkg_Data_Number "gopurs/output/Data.Number"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Time_Component "gopurs/output/Data.Time.Component"
-	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
-	pkg_Data_Number "gopurs/output/Data.Number"
-	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
-	pkg_Data_Maybe "gopurs/output/Data.Maybe"
-	pkg_Data_Int "gopurs/output/Data.Int"
 	pkg_Data_Time_Duration "gopurs/output/Data.Time.Duration"
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

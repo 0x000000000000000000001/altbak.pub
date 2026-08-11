@@ -1,17 +1,17 @@
 package Data_Bitraversable
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
 	pkg_Data_Bifoldable "gopurs/output/Data.Bifoldable"
 	pkg_Data_Bifunctor "gopurs/output/Data.Bifunctor"
-	pkg_Data_Tuple "gopurs/output/Data.Tuple"
-	pkg_Data_Either "gopurs/output/Data.Either"
 	pkg_Data_Const "gopurs/output/Data.Const"
-	pkg_Data_Functor_Joker "gopurs/output/Data.Functor.Joker"
+	pkg_Data_Either "gopurs/output/Data.Either"
 	pkg_Data_Functor_Clown "gopurs/output/Data.Functor.Clown"
 	pkg_Data_Functor_Flip "gopurs/output/Data.Functor.Flip"
+	pkg_Data_Functor_Joker "gopurs/output/Data.Functor.Joker"
 	pkg_Data_Functor_Product2 "gopurs/output/Data.Functor.Product2"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

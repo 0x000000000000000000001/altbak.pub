@@ -1,11 +1,11 @@
 package Effect_Exception
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
+	pkg_Data_Either "gopurs/output/Data.Either"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	pkg_Effect "gopurs/output/Effect"
-	pkg_Data_Either "gopurs/output/Data.Either"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

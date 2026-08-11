@@ -1,13 +1,13 @@
 package Data_Date_Gen
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
-	pkg_Data_Date_Component_Gen "gopurs/output/Data.Date.Component.Gen"
 	pkg_Data_Date "gopurs/output/Data.Date"
+	pkg_Data_Date_Component "gopurs/output/Data.Date.Component"
+	pkg_Data_Date_Component_Gen "gopurs/output/Data.Date.Component.Gen"
 	pkg_Data_Int "gopurs/output/Data.Int"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
-	pkg_Data_Date_Component "gopurs/output/Data.Date.Component"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

@@ -1,9 +1,9 @@
 package Control_Monad_Reader
 
 import (
+	pkg_Control_Monad_Reader_Trans "gopurs/output/Control.Monad.Reader.Trans"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Control_Monad_Reader_Trans "gopurs/output/Control.Monad.Reader.Trans"
 )
 
 var cache_withReader gopurs_runtime.Value

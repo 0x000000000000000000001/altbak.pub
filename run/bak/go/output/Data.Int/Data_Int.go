@@ -1,14 +1,14 @@
 package Data_Int
 
 import (
+	pkg_Data_Bounded "gopurs/output/Data.Bounded"
+	pkg_Data_Eq "gopurs/output/Data.Eq"
+	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
+	pkg_Data_Maybe "gopurs/output/Data.Maybe"
+	pkg_Data_Number "gopurs/output/Data.Number"
+	pkg_Data_Ord "gopurs/output/Data.Ord"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Ord "gopurs/output/Data.Ord"
-	pkg_Data_Maybe "gopurs/output/Data.Maybe"
-	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
-	pkg_Data_Eq "gopurs/output/Data.Eq"
-	pkg_Data_Number "gopurs/output/Data.Number"
-	pkg_Data_Bounded "gopurs/output/Data.Bounded"
 	unsafe "unsafe"
 )
 

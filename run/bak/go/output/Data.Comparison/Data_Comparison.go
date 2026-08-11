@@ -1,9 +1,9 @@
 package Data_Comparison
 
 import (
+	pkg_Data_Ordering "gopurs/output/Data.Ordering"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Ordering "gopurs/output/Data.Ordering"
 )
 
 var cache_append gopurs_runtime.Value

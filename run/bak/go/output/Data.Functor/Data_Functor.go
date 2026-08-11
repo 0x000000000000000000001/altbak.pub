@@ -1,10 +1,10 @@
 package Data_Functor
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
 	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_go__map gopurs_runtime.Value

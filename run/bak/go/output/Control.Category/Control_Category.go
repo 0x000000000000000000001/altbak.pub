@@ -1,9 +1,9 @@
 package Control_Category
 
 import (
+	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 )
 
 var cache_identity gopurs_runtime.Value

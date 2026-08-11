@@ -1,11 +1,11 @@
 package Data_Unfoldable1
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

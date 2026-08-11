@@ -1,20 +1,20 @@
 package Data_Enum
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
-	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Control_Alternative "gopurs/output/Control.Alternative"
+	pkg_Data_Bounded "gopurs/output/Data.Bounded"
+	pkg_Data_Either "gopurs/output/Data.Either"
+	pkg_Data_Eq "gopurs/output/Data.Eq"
+	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
+	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Show "gopurs/output/Data.Show"
-	pkg_Data_Eq "gopurs/output/Data.Eq"
-	pkg_Data_Bounded "gopurs/output/Data.Bounded"
-	pkg_Data_Unit "gopurs/output/Data.Unit"
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	pkg_Data_Unfoldable1 "gopurs/output/Data.Unfoldable1"
-	pkg_Data_Either "gopurs/output/Data.Either"
-	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
+	pkg_Data_Unit "gopurs/output/Data.Unit"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

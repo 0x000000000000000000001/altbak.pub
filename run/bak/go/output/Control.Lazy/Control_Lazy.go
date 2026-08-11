@@ -1,9 +1,9 @@
 package Control_Lazy
 
 import (
+	pkg_Data_Unit "gopurs/output/Data.Unit"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Unit "gopurs/output/Data.Unit"
 )
 
 var cache_lazyUnit gopurs_runtime.Value

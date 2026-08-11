@@ -1,9 +1,9 @@
 package Data_Number
 
 import (
+	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	unsafe "unsafe"
 )
 

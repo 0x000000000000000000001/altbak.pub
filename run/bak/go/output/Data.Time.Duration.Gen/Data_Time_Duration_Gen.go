@@ -1,9 +1,9 @@
 package Data_Time_Duration_Gen
 
 import (
+	pkg_Data_Time_Duration "gopurs/output/Data.Time.Duration"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Time_Duration "gopurs/output/Data.Time.Duration"
 )
 
 var cache_genSeconds gopurs_runtime.Value

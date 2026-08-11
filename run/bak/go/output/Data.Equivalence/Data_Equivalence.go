@@ -1,10 +1,10 @@
 package Data_Equivalence
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
 	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
 	pkg_Data_Ordering "gopurs/output/Data.Ordering"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_Equivalence gopurs_runtime.Value

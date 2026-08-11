@@ -1,10 +1,10 @@
 package Data_Either_Inject
 
 import (
+	pkg_Data_Either "gopurs/output/Data.Either"
+	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Maybe "gopurs/output/Data.Maybe"
-	pkg_Data_Either "gopurs/output/Data.Either"
 	unsafe "unsafe"
 )
 

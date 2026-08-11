@@ -1,10 +1,10 @@
 package Control_Monad_State
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
 	pkg_Control_Monad_State_Trans "gopurs/output/Control.Monad.State.Trans"
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_withState gopurs_runtime.Value

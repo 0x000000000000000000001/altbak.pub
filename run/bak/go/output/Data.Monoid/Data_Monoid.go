@@ -1,14 +1,14 @@
 package Data_Monoid
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
+	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
 	pkg_Data_Ord "gopurs/output/Data.Ord"
+	pkg_Data_Ordering "gopurs/output/Data.Ordering"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
-	pkg_Data_Ordering "gopurs/output/Data.Ordering"
 	pkg_Record_Unsafe "gopurs/output/Record.Unsafe"
-	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_lessThanOrEq gopurs_runtime.Value

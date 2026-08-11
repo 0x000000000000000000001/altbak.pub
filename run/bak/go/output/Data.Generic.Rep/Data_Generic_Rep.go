@@ -1,10 +1,10 @@
 package Data_Generic_Rep
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Show "gopurs/output/Data.Show"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

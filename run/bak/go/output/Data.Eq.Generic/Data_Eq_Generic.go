@@ -1,10 +1,10 @@
 package Data_Eq_Generic
 
 import (
+	pkg_Data_Generic_Rep "gopurs/output/Data.Generic.Rep"
+	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
-	pkg_Data_Generic_Rep "gopurs/output/Data.Generic.Rep"
 )
 
 var cache_genericEqNoConstructors gopurs_runtime.Value

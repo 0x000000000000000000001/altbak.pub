@@ -1,14 +1,14 @@
 package Data_List_Types
 
 import (
+	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
+	pkg_Data_Maybe "gopurs/output/Data.Maybe"
+	pkg_Data_Monoid "gopurs/output/Data.Monoid"
+	pkg_Data_NonEmpty "gopurs/output/Data.NonEmpty"
+	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_NonEmpty "gopurs/output/Data.NonEmpty"
-	pkg_Data_Monoid "gopurs/output/Data.Monoid"
-	pkg_Data_Tuple "gopurs/output/Data.Tuple"
-	pkg_Data_Maybe "gopurs/output/Data.Maybe"
-	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
-	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	unsafe "unsafe"
 )
 

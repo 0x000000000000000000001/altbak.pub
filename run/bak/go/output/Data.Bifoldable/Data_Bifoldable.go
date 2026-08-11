@@ -1,14 +1,14 @@
 package Data_Bifoldable
 
 import (
+	pkg_Control_Apply "gopurs/output/Control.Apply"
+	pkg_Control_Category "gopurs/output/Control.Category"
+	pkg_Data_Either "gopurs/output/Data.Either"
+	pkg_Data_Functor_Product2 "gopurs/output/Data.Functor.Product2"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
+	pkg_Data_Unit "gopurs/output/Data.Unit"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Control_Category "gopurs/output/Control.Category"
-	pkg_Data_Tuple "gopurs/output/Data.Tuple"
-	pkg_Data_Either "gopurs/output/Data.Either"
-	pkg_Control_Apply "gopurs/output/Control.Apply"
-	pkg_Data_Unit "gopurs/output/Data.Unit"
-	pkg_Data_Functor_Product2 "gopurs/output/Data.Functor.Product2"
 )
 
 var cache_identity gopurs_runtime.Value

@@ -1,10 +1,10 @@
 package Data_EuclideanRing
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
 	pkg_Data_CommutativeRing "gopurs/output/Data.CommutativeRing"
 	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_mod gopurs_runtime.Value

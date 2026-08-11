@@ -1,9 +1,9 @@
 package Data_Divisible
 
 import (
+	pkg_Data_Divide "gopurs/output/Data.Divide"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Divide "gopurs/output/Data.Divide"
 )
 
 var cache_divisiblePredicate gopurs_runtime.Value

@@ -1,9 +1,9 @@
 package Control_Plus
 
 import (
+	pkg_Control_Alt "gopurs/output/Control.Alt"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Control_Alt "gopurs/output/Control.Alt"
 )
 
 var cache_plusArray gopurs_runtime.Value

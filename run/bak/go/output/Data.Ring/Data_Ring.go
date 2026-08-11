@@ -1,11 +1,11 @@
 package Data_Ring
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
 	pkg_Data_Semiring "gopurs/output/Data.Semiring"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
 	pkg_Record_Unsafe "gopurs/output/Record.Unsafe"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_subRecord gopurs_runtime.Value

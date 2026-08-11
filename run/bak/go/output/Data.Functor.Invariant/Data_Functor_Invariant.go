@@ -1,9 +1,9 @@
 package Data_Functor_Invariant
 
 import (
+	pkg_Data_Functor "gopurs/output/Data.Functor"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Functor "gopurs/output/Data.Functor"
 )
 
 var cache_invariantMultiplicative gopurs_runtime.Value

@@ -1,14 +1,14 @@
 package Data_Enum_Gen
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
-	pkg_Data_NonEmpty "gopurs/output/Data.NonEmpty"
-	pkg_Data_Foldable "gopurs/output/Data.Foldable"
 	pkg_Control_Monad_Gen "gopurs/output/Control.Monad.Gen"
 	pkg_Data_Enum "gopurs/output/Data.Enum"
-	pkg_Data_Unfoldable1 "gopurs/output/Data.Unfoldable1"
+	pkg_Data_Foldable "gopurs/output/Data.Foldable"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
+	pkg_Data_NonEmpty "gopurs/output/Data.NonEmpty"
+	pkg_Data_Unfoldable1 "gopurs/output/Data.Unfoldable1"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

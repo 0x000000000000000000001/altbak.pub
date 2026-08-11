@@ -1,14 +1,14 @@
 package Data_Bounded
 
 import (
+	pkg_Data_Eq "gopurs/output/Data.Eq"
+	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
+	pkg_Data_Ord "gopurs/output/Data.Ord"
+	pkg_Data_Ordering "gopurs/output/Data.Ordering"
+	pkg_Data_Unit "gopurs/output/Data.Unit"
+	pkg_Record_Unsafe "gopurs/output/Record.Unsafe"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Ord "gopurs/output/Data.Ord"
-	pkg_Data_Unit "gopurs/output/Data.Unit"
-	pkg_Data_Eq "gopurs/output/Data.Eq"
-	pkg_Record_Unsafe "gopurs/output/Record.Unsafe"
-	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
-	pkg_Data_Ordering "gopurs/output/Data.Ordering"
 )
 
 var cache_topRecord gopurs_runtime.Value

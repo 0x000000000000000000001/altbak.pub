@@ -1,11 +1,11 @@
 package Control_Monad_Maybe_Trans
 
 import (
+	pkg_Control_Monad_Rec_Class "gopurs/output/Control.Monad.Rec.Class"
+	pkg_Data_Maybe "gopurs/output/Data.Maybe"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Maybe "gopurs/output/Data.Maybe"
-	pkg_Control_Monad_Rec_Class "gopurs/output/Control.Monad.Rec.Class"
-	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	unsafe "unsafe"
 )
 

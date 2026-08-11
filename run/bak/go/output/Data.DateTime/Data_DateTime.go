@@ -1,16 +1,16 @@
 package Data_DateTime
 
 import (
+	pkg_Control_Bind "gopurs/output/Control.Bind"
+	pkg_Data_Date "gopurs/output/Data.Date"
+	pkg_Data_Date_Component "gopurs/output/Data.Date.Component"
+	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
+	pkg_Data_Maybe "gopurs/output/Data.Maybe"
+	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
+	pkg_Data_Time "gopurs/output/Data.Time"
+	pkg_Data_Time_Component "gopurs/output/Data.Time.Component"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
-	pkg_Data_Date "gopurs/output/Data.Date"
-	pkg_Data_Time "gopurs/output/Data.Time"
-	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
-	pkg_Data_Date_Component "gopurs/output/Data.Date.Component"
-	pkg_Data_Time_Component "gopurs/output/Data.Time.Component"
-	pkg_Data_Maybe "gopurs/output/Data.Maybe"
-	pkg_Control_Bind "gopurs/output/Control.Bind"
 	unsafe "unsafe"
 )
 

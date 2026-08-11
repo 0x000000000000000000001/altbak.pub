@@ -1,13 +1,13 @@
 package Test_TCO
 
 import (
+	pkg_Bench "gopurs/output/Bench"
+	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
+	pkg_Data_Show "gopurs/output/Data.Show"
+	pkg_Effect "gopurs/output/Effect"
+	pkg_Effect_Console "gopurs/output/Effect.Console"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Effect_Console "gopurs/output/Effect.Console"
-	pkg_Effect "gopurs/output/Effect"
-	pkg_Bench "gopurs/output/Bench"
-	pkg_Data_Show "gopurs/output/Data.Show"
-	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
 )
 
 var cache_describe gopurs_runtime.Value

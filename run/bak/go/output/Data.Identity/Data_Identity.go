@@ -1,9 +1,9 @@
 package Data_Identity
 
 import (
+	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 )
 
 var cache_Identity gopurs_runtime.Value

@@ -1,9 +1,9 @@
 package Effect_Uncurried
 
 import (
+	pkg_Effect "gopurs/output/Effect"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Effect "gopurs/output/Effect"
 )
 
 var cache_semigroupEffectFn9 gopurs_runtime.Value

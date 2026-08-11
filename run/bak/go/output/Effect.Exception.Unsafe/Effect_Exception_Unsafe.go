@@ -1,10 +1,10 @@
 package Effect_Exception_Unsafe
 
 import (
+	pkg_Effect_Exception "gopurs/output/Effect.Exception"
+	pkg_Effect_Unsafe "gopurs/output/Effect.Unsafe"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Effect_Unsafe "gopurs/output/Effect.Unsafe"
-	pkg_Effect_Exception "gopurs/output/Effect.Exception"
 )
 
 var cache_unsafeThrowException gopurs_runtime.Value

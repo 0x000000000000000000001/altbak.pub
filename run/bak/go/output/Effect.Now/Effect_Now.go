@@ -1,11 +1,11 @@
 package Effect_Now
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
-	pkg_Effect "gopurs/output/Effect"
 	pkg_Data_DateTime "gopurs/output/Data.DateTime"
 	pkg_Data_DateTime_Instant "gopurs/output/Data.DateTime.Instant"
+	pkg_Effect "gopurs/output/Effect"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_nowTime gopurs_runtime.Value

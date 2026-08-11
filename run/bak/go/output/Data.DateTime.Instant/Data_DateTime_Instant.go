@@ -1,19 +1,19 @@
 package Data_DateTime_Instant
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
-	pkg_Data_Date_Component "gopurs/output/Data.Date.Component"
-	pkg_Data_Maybe "gopurs/output/Data.Maybe"
-	pkg_Data_DateTime "gopurs/output/Data.DateTime"
 	pkg_Data_Date "gopurs/output/Data.Date"
-	pkg_Data_Time "gopurs/output/Data.Time"
-	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
-	pkg_Data_Time_Duration "gopurs/output/Data.Time.Duration"
-	pkg_Data_Ord "gopurs/output/Data.Ord"
+	pkg_Data_Date_Component "gopurs/output/Data.Date.Component"
+	pkg_Data_DateTime "gopurs/output/Data.DateTime"
 	pkg_Data_Eq "gopurs/output/Data.Eq"
 	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
+	pkg_Data_Maybe "gopurs/output/Data.Maybe"
+	pkg_Data_Ord "gopurs/output/Data.Ord"
+	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
+	pkg_Data_Time "gopurs/output/Data.Time"
 	pkg_Data_Time_Component "gopurs/output/Data.Time.Component"
+	pkg_Data_Time_Duration "gopurs/output/Data.Time.Duration"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

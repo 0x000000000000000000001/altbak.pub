@@ -1,11 +1,11 @@
 package Data_Maybe
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
 	pkg_Data_Generic_Rep "gopurs/output/Data.Generic.Rep"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

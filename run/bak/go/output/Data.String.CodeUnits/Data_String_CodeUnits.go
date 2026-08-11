@@ -1,11 +1,11 @@
 package Data_String_CodeUnits
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
+	pkg_Data_Eq "gopurs/output/Data.Eq"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	pkg_Data_String_Unsafe "gopurs/output/Data.String.Unsafe"
-	pkg_Data_Eq "gopurs/output/Data.Eq"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

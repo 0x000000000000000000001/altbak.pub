@@ -1,10 +1,10 @@
 package Data_Functor_App
 
 import (
+	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
+	pkg_Unsafe_Coerce "gopurs/output/Unsafe.Coerce"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Unsafe_Coerce "gopurs/output/Unsafe.Coerce"
-	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 )
 
 var cache_App gopurs_runtime.Value

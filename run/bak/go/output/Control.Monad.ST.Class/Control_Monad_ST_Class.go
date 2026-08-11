@@ -1,11 +1,11 @@
 package Control_Monad_ST_Class
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
 	pkg_Control_Monad_ST_Internal "gopurs/output/Control.Monad.ST.Internal"
 	pkg_Effect "gopurs/output/Effect"
 	pkg_Unsafe_Coerce "gopurs/output/Unsafe.Coerce"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_monadSTST gopurs_runtime.Value

@@ -1,15 +1,15 @@
 package Data_Divide
 
 import (
+	pkg_Data_Comparison "gopurs/output/Data.Comparison"
+	pkg_Data_Equivalence "gopurs/output/Data.Equivalence"
+	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
+	pkg_Data_Op "gopurs/output/Data.Op"
+	pkg_Data_Ordering "gopurs/output/Data.Ordering"
+	pkg_Data_Predicate "gopurs/output/Data.Predicate"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Predicate "gopurs/output/Data.Predicate"
-	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
-	pkg_Data_Tuple "gopurs/output/Data.Tuple"
-	pkg_Data_Equivalence "gopurs/output/Data.Equivalence"
-	pkg_Data_Comparison "gopurs/output/Data.Comparison"
-	pkg_Data_Ordering "gopurs/output/Data.Ordering"
-	pkg_Data_Op "gopurs/output/Data.Op"
 )
 
 var cache_identity gopurs_runtime.Value

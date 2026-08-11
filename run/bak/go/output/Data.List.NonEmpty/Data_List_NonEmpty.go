@@ -1,15 +1,15 @@
 package Data_List_NonEmpty
 
 import (
+	pkg_Data_List "gopurs/output/Data.List"
+	pkg_Data_List_Types "gopurs/output/Data.List.Types"
+	pkg_Data_Maybe "gopurs/output/Data.Maybe"
+	pkg_Data_NonEmpty "gopurs/output/Data.NonEmpty"
+	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
+	pkg_Partial "gopurs/output/Partial"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Tuple "gopurs/output/Data.Tuple"
-	pkg_Data_List_Types "gopurs/output/Data.List.Types"
-	pkg_Data_List "gopurs/output/Data.List"
-	pkg_Data_NonEmpty "gopurs/output/Data.NonEmpty"
-	pkg_Partial "gopurs/output/Partial"
-	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
-	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	unsafe "unsafe"
 )
 

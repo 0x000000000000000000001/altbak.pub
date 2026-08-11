@@ -1,11 +1,11 @@
 package Data_Array_ST
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
+	pkg_Control_Monad_ST_Internal "gopurs/output/Control.Monad.ST.Internal"
 	pkg_Control_Monad_ST_Uncurried "gopurs/output/Control.Monad.ST.Uncurried"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
-	pkg_Control_Monad_ST_Internal "gopurs/output/Control.Monad.ST.Internal"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_unshiftAll gopurs_runtime.Value

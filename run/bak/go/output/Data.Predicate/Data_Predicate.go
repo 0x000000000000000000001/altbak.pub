@@ -1,10 +1,10 @@
 package Data_Predicate
 
 import (
+	pkg_Data_BooleanAlgebra "gopurs/output/Data.BooleanAlgebra"
+	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
-	pkg_Data_BooleanAlgebra "gopurs/output/Data.BooleanAlgebra"
 )
 
 var cache_Predicate gopurs_runtime.Value

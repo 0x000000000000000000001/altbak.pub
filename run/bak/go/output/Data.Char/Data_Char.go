@@ -1,9 +1,9 @@
 package Data_Char
 
 import (
+	pkg_Data_Enum "gopurs/output/Data.Enum"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Enum "gopurs/output/Data.Enum"
 )
 
 var cache_toCharCode gopurs_runtime.Value

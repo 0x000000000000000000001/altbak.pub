@@ -1,20 +1,20 @@
 package Data_Set_NonEmpty
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
-	pkg_Data_Unfoldable1 "gopurs/output/Data.Unfoldable1"
-	pkg_Data_List_Types "gopurs/output/Data.List.Types"
-	pkg_Data_Map_Internal "gopurs/output/Data.Map.Internal"
-	pkg_Data_Set "gopurs/output/Data.Set"
-	pkg_Data_Function "gopurs/output/Data.Function"
-	pkg_Data_Maybe "gopurs/output/Data.Maybe"
-	pkg_Data_Tuple "gopurs/output/Data.Tuple"
-	pkg_Partial "gopurs/output/Partial"
-	pkg_Data_List "gopurs/output/Data.List"
-	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Array_NonEmpty_Internal "gopurs/output/Data.Array.NonEmpty.Internal"
 	pkg_Data_Eq "gopurs/output/Data.Eq"
+	pkg_Data_Function "gopurs/output/Data.Function"
+	pkg_Data_List "gopurs/output/Data.List"
+	pkg_Data_List_Types "gopurs/output/Data.List.Types"
+	pkg_Data_Map_Internal "gopurs/output/Data.Map.Internal"
+	pkg_Data_Maybe "gopurs/output/Data.Maybe"
+	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
+	pkg_Data_Set "gopurs/output/Data.Set"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
+	pkg_Data_Unfoldable1 "gopurs/output/Data.Unfoldable1"
+	pkg_Partial "gopurs/output/Partial"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

@@ -1,20 +1,20 @@
 package Data_List
 
 import (
+	pkg_Control_Monad_Rec_Class "gopurs/output/Control.Monad.Rec.Class"
+	pkg_Data_Eq "gopurs/output/Data.Eq"
+	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
+	pkg_Data_List_Internal "gopurs/output/Data.List.Internal"
+	pkg_Data_List_Types "gopurs/output/Data.List.Types"
+	pkg_Data_Maybe "gopurs/output/Data.Maybe"
+	pkg_Data_NonEmpty "gopurs/output/Data.NonEmpty"
+	pkg_Data_Ord "gopurs/output/Data.Ord"
+	pkg_Data_Ordering "gopurs/output/Data.Ordering"
+	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
+	pkg_Data_Unit "gopurs/output/Data.Unit"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Ord "gopurs/output/Data.Ord"
-	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
-	pkg_Data_List_Types "gopurs/output/Data.List.Types"
-	pkg_Data_Tuple "gopurs/output/Data.Tuple"
-	pkg_Data_Maybe "gopurs/output/Data.Maybe"
-	pkg_Control_Monad_Rec_Class "gopurs/output/Control.Monad.Rec.Class"
-	pkg_Data_Ordering "gopurs/output/Data.Ordering"
-	pkg_Data_Eq "gopurs/output/Data.Eq"
-	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
-	pkg_Data_List_Internal "gopurs/output/Data.List.Internal"
-	pkg_Data_Unit "gopurs/output/Data.Unit"
-	pkg_Data_NonEmpty "gopurs/output/Data.NonEmpty"
 	unsafe "unsafe"
 )
 

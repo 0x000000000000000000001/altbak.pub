@@ -1,16 +1,16 @@
 package Test_ArrayOps
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
-	pkg_Effect_Console "gopurs/output/Effect.Console"
-	pkg_Effect "gopurs/output/Effect"
 	pkg_Bench "gopurs/output/Bench"
-	pkg_Data_Show "gopurs/output/Data.Show"
 	pkg_Data_Array "gopurs/output/Data.Array"
 	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
 	pkg_Data_Foldable "gopurs/output/Data.Foldable"
 	pkg_Data_Semiring "gopurs/output/Data.Semiring"
+	pkg_Data_Show "gopurs/output/Data.Show"
+	pkg_Effect "gopurs/output/Effect"
+	pkg_Effect_Console "gopurs/output/Effect.Console"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_go__range gopurs_runtime.Value

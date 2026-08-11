@@ -1,14 +1,14 @@
 package Data_String_NonEmpty_CodePoints
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
+	pkg_Data_Array_NonEmpty "gopurs/output/Data.Array.NonEmpty"
+	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_String_CodePoints "gopurs/output/Data.String.CodePoints"
-	pkg_Data_Maybe "gopurs/output/Data.Maybe"
-	pkg_Data_Array_NonEmpty "gopurs/output/Data.Array.NonEmpty"
 	pkg_Data_String_CodeUnits "gopurs/output/Data.String.CodeUnits"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

@@ -1,13 +1,13 @@
 package Data_Char_Gen
 
 import (
+	pkg_Control_Monad_Gen "gopurs/output/Control.Monad.Gen"
+	pkg_Data_Bounded "gopurs/output/Data.Bounded"
+	pkg_Data_Enum "gopurs/output/Data.Enum"
+	pkg_Data_Foldable "gopurs/output/Data.Foldable"
+	pkg_Data_NonEmpty "gopurs/output/Data.NonEmpty"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Enum "gopurs/output/Data.Enum"
-	pkg_Data_NonEmpty "gopurs/output/Data.NonEmpty"
-	pkg_Data_Foldable "gopurs/output/Data.Foldable"
-	pkg_Data_Bounded "gopurs/output/Data.Bounded"
-	pkg_Control_Monad_Gen "gopurs/output/Control.Monad.Gen"
 	unsafe "unsafe"
 )
 

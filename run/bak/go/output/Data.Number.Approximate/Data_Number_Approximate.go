@@ -1,11 +1,11 @@
 package Data_Number_Approximate
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
-	pkg_Data_Number "gopurs/output/Data.Number"
 	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
 	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
+	pkg_Data_Number "gopurs/output/Data.Number"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_Tolerance gopurs_runtime.Value

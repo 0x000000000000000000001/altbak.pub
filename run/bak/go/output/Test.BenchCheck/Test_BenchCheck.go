@@ -1,13 +1,13 @@
 package Test_BenchCheck
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
-	pkg_Effect "gopurs/output/Effect"
 	pkg_Bench "gopurs/output/Bench"
-	pkg_Effect_Console "gopurs/output/Effect.Console"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Show "gopurs/output/Data.Show"
+	pkg_Effect "gopurs/output/Effect"
+	pkg_Effect_Console "gopurs/output/Effect.Console"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_act gopurs_runtime.Value

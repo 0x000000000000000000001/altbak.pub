@@ -1,11 +1,11 @@
 package Data_Date_Component_Gen
 
 import (
+	pkg_Data_Date_Component "gopurs/output/Data.Date.Component"
+	pkg_Data_Enum_Gen "gopurs/output/Data.Enum.Gen"
+	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Date_Component "gopurs/output/Data.Date.Component"
-	pkg_Data_Maybe "gopurs/output/Data.Maybe"
-	pkg_Data_Enum_Gen "gopurs/output/Data.Enum.Gen"
 )
 
 var cache_genYear gopurs_runtime.Value

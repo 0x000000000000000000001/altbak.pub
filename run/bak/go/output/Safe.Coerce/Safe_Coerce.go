@@ -1,9 +1,9 @@
 package Safe_Coerce
 
 import (
+	pkg_Unsafe_Coerce "gopurs/output/Unsafe.Coerce"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Unsafe_Coerce "gopurs/output/Unsafe.Coerce"
 )
 
 var cache_coerce gopurs_runtime.Value

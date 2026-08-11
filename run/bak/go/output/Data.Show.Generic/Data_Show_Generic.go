@@ -1,10 +1,10 @@
 package Data_Show_Generic
 
 import (
+	pkg_Data_Generic_Rep "gopurs/output/Data.Generic.Rep"
+	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
-	pkg_Data_Generic_Rep "gopurs/output/Data.Generic.Rep"
 )
 
 var cache_genericShowArgsNoArguments gopurs_runtime.Value

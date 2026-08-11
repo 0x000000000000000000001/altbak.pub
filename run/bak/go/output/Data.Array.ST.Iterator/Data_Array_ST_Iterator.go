@@ -1,13 +1,13 @@
 package Data_Array_ST_Iterator
 
 import (
+	pkg_Control_Monad_ST_Internal "gopurs/output/Control.Monad.ST.Internal"
+	pkg_Data_Array_ST "gopurs/output/Data.Array.ST"
+	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
+	pkg_Data_Maybe "gopurs/output/Data.Maybe"
+	pkg_Data_Unit "gopurs/output/Data.Unit"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Control_Monad_ST_Internal "gopurs/output/Control.Monad.ST.Internal"
-	pkg_Data_Unit "gopurs/output/Data.Unit"
-	pkg_Data_Maybe "gopurs/output/Data.Maybe"
-	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
-	pkg_Data_Array_ST "gopurs/output/Data.Array.ST"
 	unsafe "unsafe"
 )
 

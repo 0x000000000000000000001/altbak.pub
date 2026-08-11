@@ -1,11 +1,11 @@
 package Control_Monad_Except_Trans
 
 import (
+	pkg_Control_Monad_Rec_Class "gopurs/output/Control.Monad.Rec.Class"
+	pkg_Data_Either "gopurs/output/Data.Either"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Either "gopurs/output/Data.Either"
-	pkg_Control_Monad_Rec_Class "gopurs/output/Control.Monad.Rec.Class"
-	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	unsafe "unsafe"
 )
 

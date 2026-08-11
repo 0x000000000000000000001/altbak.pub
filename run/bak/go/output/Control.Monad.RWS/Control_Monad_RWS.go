@@ -1,11 +1,11 @@
 package Control_Monad_RWS
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
 	pkg_Control_Monad_RWS_Trans "gopurs/output/Control.Monad.RWS.Trans"
 	pkg_Data_Identity "gopurs/output/Data.Identity"
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

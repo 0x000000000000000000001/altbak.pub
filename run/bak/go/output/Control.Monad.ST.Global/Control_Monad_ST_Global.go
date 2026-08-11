@@ -1,9 +1,9 @@
 package Control_Monad_ST_Global
 
 import (
+	pkg_Unsafe_Coerce "gopurs/output/Unsafe.Coerce"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Unsafe_Coerce "gopurs/output/Unsafe.Coerce"
 )
 
 var cache_toEffect gopurs_runtime.Value

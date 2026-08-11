@@ -1,11 +1,11 @@
 package Data_Map
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
+	pkg_Data_Function "gopurs/output/Data.Function"
 	pkg_Data_Map_Internal "gopurs/output/Data.Map.Internal"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
-	pkg_Data_Function "gopurs/output/Data.Function"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

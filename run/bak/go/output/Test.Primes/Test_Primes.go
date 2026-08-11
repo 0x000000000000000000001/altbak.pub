@@ -1,15 +1,15 @@
 package Test_Primes
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
-	pkg_Data_Ord "gopurs/output/Data.Ord"
-	pkg_Effect_Console "gopurs/output/Effect.Console"
-	pkg_Effect "gopurs/output/Effect"
 	pkg_Bench "gopurs/output/Bench"
-	pkg_Data_Show "gopurs/output/Data.Show"
 	pkg_Data_Eq "gopurs/output/Data.Eq"
 	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
+	pkg_Data_Ord "gopurs/output/Data.Ord"
+	pkg_Data_Show "gopurs/output/Data.Show"
+	pkg_Effect "gopurs/output/Effect"
+	pkg_Effect_Console "gopurs/output/Effect.Console"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

@@ -1,10 +1,10 @@
 package Control_Monad_Except
 
 import (
+	pkg_Data_Either "gopurs/output/Data.Either"
+	pkg_Data_Identity "gopurs/output/Data.Identity"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Identity "gopurs/output/Data.Identity"
-	pkg_Data_Either "gopurs/output/Data.Either"
 	unsafe "unsafe"
 )
 

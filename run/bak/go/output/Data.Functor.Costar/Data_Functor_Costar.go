@@ -1,10 +1,10 @@
 package Data_Functor_Costar
 
 import (
+	pkg_Data_Profunctor "gopurs/output/Data.Profunctor"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Tuple "gopurs/output/Data.Tuple"
-	pkg_Data_Profunctor "gopurs/output/Data.Profunctor"
 	unsafe "unsafe"
 )
 

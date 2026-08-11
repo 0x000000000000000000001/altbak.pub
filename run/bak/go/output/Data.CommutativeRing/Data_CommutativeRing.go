@@ -1,10 +1,10 @@
 package Data_CommutativeRing
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
 	pkg_Data_Ring "gopurs/output/Data.Ring"
 	pkg_Data_Semiring "gopurs/output/Data.Semiring"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_commutativeRingUnit gopurs_runtime.Value

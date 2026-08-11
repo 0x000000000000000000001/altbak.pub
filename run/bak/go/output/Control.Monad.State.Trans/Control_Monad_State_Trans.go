@@ -1,11 +1,11 @@
 package Control_Monad_State_Trans
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
+	pkg_Control_Monad_Rec_Class "gopurs/output/Control.Monad.Rec.Class"
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
-	pkg_Control_Monad_Rec_Class "gopurs/output/Control.Monad.Rec.Class"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

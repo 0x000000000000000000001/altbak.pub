@@ -1,11 +1,11 @@
 package Control_Monad_ST_Internal
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
-	pkg_Data_Unit "gopurs/output/Data.Unit"
 	pkg_Control_Bind "gopurs/output/Control.Bind"
 	pkg_Control_Monad_Rec_Class "gopurs/output/Control.Monad.Rec.Class"
+	pkg_Data_Unit "gopurs/output/Data.Unit"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_new gopurs_runtime.Value

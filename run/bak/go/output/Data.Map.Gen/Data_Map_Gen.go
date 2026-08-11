@@ -1,12 +1,12 @@
 package Data_Map_Gen
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
 	pkg_Control_Monad_Gen "gopurs/output/Control.Monad.Gen"
 	pkg_Data_List_Types "gopurs/output/Data.List.Types"
 	pkg_Data_Map_Internal "gopurs/output/Data.Map.Internal"
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 )
 
 var cache_genMap gopurs_runtime.Value

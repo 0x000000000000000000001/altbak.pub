@@ -1,14 +1,14 @@
 package Control_Monad_Gen
 
 import (
+	pkg_Control_Monad_Rec_Class "gopurs/output/Control.Monad.Rec.Class"
+	pkg_Data_Maybe "gopurs/output/Data.Maybe"
+	pkg_Data_Ord "gopurs/output/Data.Ord"
+	pkg_Data_Semigroup_Last "gopurs/output/Data.Semigroup.Last"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
+	pkg_Data_Unit "gopurs/output/Data.Unit"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Ord "gopurs/output/Data.Ord"
-	pkg_Data_Tuple "gopurs/output/Data.Tuple"
-	pkg_Data_Maybe "gopurs/output/Data.Maybe"
-	pkg_Control_Monad_Rec_Class "gopurs/output/Control.Monad.Rec.Class"
-	pkg_Data_Semigroup_Last "gopurs/output/Data.Semigroup.Last"
-	pkg_Data_Unit "gopurs/output/Data.Unit"
 	unsafe "unsafe"
 )
 

@@ -1,11 +1,11 @@
 package Data_DivisionRing
 
 import (
+	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
+	pkg_Data_Ring "gopurs/output/Data.Ring"
+	pkg_Data_Semiring "gopurs/output/Data.Semiring"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Semiring "gopurs/output/Data.Semiring"
-	pkg_Data_Ring "gopurs/output/Data.Ring"
-	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
 )
 
 var cache_recip gopurs_runtime.Value

@@ -1,10 +1,10 @@
 package Data_Eq
 
 import (
+	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
+	pkg_Record_Unsafe "gopurs/output/Record.Unsafe"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Record_Unsafe "gopurs/output/Record.Unsafe"
-	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
 )
 
 var cache_eqVoid gopurs_runtime.Value

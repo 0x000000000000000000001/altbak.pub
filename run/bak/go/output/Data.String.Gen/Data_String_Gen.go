@@ -1,13 +1,13 @@
 package Data_String_Gen
 
 import (
+	pkg_Control_Monad_Gen "gopurs/output/Control.Monad.Gen"
+	pkg_Data_Char_Gen "gopurs/output/Data.Char.Gen"
+	pkg_Data_Ord "gopurs/output/Data.Ord"
+	pkg_Data_String_CodeUnits "gopurs/output/Data.String.CodeUnits"
+	pkg_Data_Unfoldable "gopurs/output/Data.Unfoldable"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Ord "gopurs/output/Data.Ord"
-	pkg_Control_Monad_Gen "gopurs/output/Control.Monad.Gen"
-	pkg_Data_Unfoldable "gopurs/output/Data.Unfoldable"
-	pkg_Data_String_CodeUnits "gopurs/output/Data.String.CodeUnits"
-	pkg_Data_Char_Gen "gopurs/output/Data.Char.Gen"
 )
 
 var cache_max gopurs_runtime.Value

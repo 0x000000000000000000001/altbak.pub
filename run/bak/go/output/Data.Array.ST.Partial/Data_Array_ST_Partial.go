@@ -1,9 +1,9 @@
 package Data_Array_ST_Partial
 
 import (
+	pkg_Control_Monad_ST_Uncurried "gopurs/output/Control.Monad.ST.Uncurried"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Control_Monad_ST_Uncurried "gopurs/output/Control.Monad.ST.Uncurried"
 )
 
 var cache_poke gopurs_runtime.Value

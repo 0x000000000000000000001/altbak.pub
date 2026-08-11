@@ -1,9 +1,9 @@
 package Effect_Class
 
 import (
+	pkg_Effect "gopurs/output/Effect"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Effect "gopurs/output/Effect"
 )
 
 var cache_monadEffectEffect gopurs_runtime.Value

@@ -1,14 +1,14 @@
 package Data_List_Lazy_NonEmpty
 
 import (
+	pkg_Data_Lazy "gopurs/output/Data.Lazy"
+	pkg_Data_List_Lazy "gopurs/output/Data.List.Lazy"
+	pkg_Data_List_Lazy_Types "gopurs/output/Data.List.Lazy.Types"
+	pkg_Data_Maybe "gopurs/output/Data.Maybe"
+	pkg_Data_NonEmpty "gopurs/output/Data.NonEmpty"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_List_Lazy_Types "gopurs/output/Data.List.Lazy.Types"
-	pkg_Data_Lazy "gopurs/output/Data.Lazy"
-	pkg_Data_NonEmpty "gopurs/output/Data.NonEmpty"
-	pkg_Data_Maybe "gopurs/output/Data.Maybe"
-	pkg_Data_Tuple "gopurs/output/Data.Tuple"
-	pkg_Data_List_Lazy "gopurs/output/Data.List.Lazy"
 	unsafe "unsafe"
 )
 

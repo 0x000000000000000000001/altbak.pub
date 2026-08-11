@@ -1,13 +1,13 @@
 package Data_String_NonEmpty_CaseInsensitive
 
 import (
+	pkg_Data_Eq "gopurs/output/Data.Eq"
+	pkg_Data_Ord "gopurs/output/Data.Ord"
+	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
+	pkg_Data_String_Common "gopurs/output/Data.String.Common"
+	pkg_Data_String_NonEmpty_Internal "gopurs/output/Data.String.NonEmpty.Internal"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
-	pkg_Data_String_NonEmpty_Internal "gopurs/output/Data.String.NonEmpty.Internal"
-	pkg_Data_Eq "gopurs/output/Data.Eq"
-	pkg_Data_String_Common "gopurs/output/Data.String.Common"
-	pkg_Data_Ord "gopurs/output/Data.Ord"
 )
 
 var cache_CaseInsensitiveNonEmptyString gopurs_runtime.Value

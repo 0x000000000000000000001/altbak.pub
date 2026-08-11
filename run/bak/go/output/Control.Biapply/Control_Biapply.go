@@ -1,11 +1,11 @@
 package Control_Biapply
 
 import (
+	pkg_Data_Bifunctor "gopurs/output/Data.Bifunctor"
+	pkg_Data_Function "gopurs/output/Data.Function"
+	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Data_Bifunctor "gopurs/output/Data.Bifunctor"
-	pkg_Data_Tuple "gopurs/output/Data.Tuple"
-	pkg_Data_Function "gopurs/output/Data.Function"
 	unsafe "unsafe"
 )
 

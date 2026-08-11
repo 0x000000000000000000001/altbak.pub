@@ -1,17 +1,17 @@
 package Data_Interval
 
 import (
-	gopurs_runtime "gopurs/output/gopurs_runtime"
-	sync "sync"
-	pkg_Data_Maybe "gopurs/output/Data.Maybe"
-	pkg_Data_Show "gopurs/output/Data.Show"
-	pkg_Data_Ord "gopurs/output/Data.Ord"
-	pkg_Data_Foldable "gopurs/output/Data.Foldable"
-	pkg_Data_Traversable "gopurs/output/Data.Traversable"
 	pkg_Data_Bifoldable "gopurs/output/Data.Bifoldable"
 	pkg_Data_Bitraversable "gopurs/output/Data.Bitraversable"
-	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
+	pkg_Data_Foldable "gopurs/output/Data.Foldable"
 	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
+	pkg_Data_Maybe "gopurs/output/Data.Maybe"
+	pkg_Data_Ord "gopurs/output/Data.Ord"
+	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
+	pkg_Data_Show "gopurs/output/Data.Show"
+	pkg_Data_Traversable "gopurs/output/Data.Traversable"
+	gopurs_runtime "gopurs/output/gopurs_runtime"
+	sync "sync"
 	unsafe "unsafe"
 )
 

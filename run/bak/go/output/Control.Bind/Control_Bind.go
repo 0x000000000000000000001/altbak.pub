@@ -1,9 +1,9 @@
 package Control_Bind
 
 import (
+	pkg_Control_Apply "gopurs/output/Control.Apply"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	pkg_Control_Apply "gopurs/output/Control.Apply"
 )
 
 var cache_identity gopurs_runtime.Value
