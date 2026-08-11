@@ -65,7 +65,7 @@ export PATH="$PWD/run/bak/js/node_modules/.bin:$PATH"
 
 if [ "$CLEAN" == "1" ]; then
   echo "=== Rebuilding phpurs backend ==="
-  (cd ../phpurs && npm run build)
+  (cd ../phpurs/phpurs && npm run build)
 fi
 
 echo 'Building...'

@@ -27,51 +27,51 @@ workspace:
     registry: 77.7.0
   extraPackages:
     prelude:
-      path: "../gopurs-prelude"
+      path: "../gopurs/gopurs-prelude"
     effect:
-      path: "../gopurs-effect"
+      path: "../gopurs/gopurs-effect"
     console:
-      path: "../gopurs-console"
+      path: "../gopurs/gopurs-console"
     datetime:
-      path: "../gopurs-datetime"
+      path: "../gopurs/gopurs-datetime"
     strings:
-      path: "../gopurs-strings"
+      path: "../gopurs/gopurs-strings"
     arrays:
-      path: "../gopurs-arrays"
+      path: "../gopurs/gopurs-arrays"
     partial:
-      path: "../gopurs-partial"
+      path: "../gopurs/gopurs-partial"
     st:
-      path: "../gopurs-st"
+      path: "../gopurs/gopurs-st"
     maybe:
-      path: "../gopurs-maybe"
+      path: "../gopurs/gopurs-maybe"
     either:
-      path: "../gopurs-either"
+      path: "../gopurs/gopurs-either"
     now:
-      path: "../gopurs-now"
+      path: "../gopurs/gopurs-now"
     lazy:
-      path: "../gopurs-lazy"
+      path: "../gopurs/gopurs-lazy"
     exceptions:
-      path: "../gopurs-exceptions"
+      path: "../gopurs/gopurs-exceptions"
     foldable-traversable:
-      path: "../gopurs-foldable-traversable"
+      path: "../gopurs/gopurs-foldable-traversable"
     refs:
-      path: "../gopurs-refs"
+      path: "../gopurs/gopurs-refs"
     unsafe-coerce:
-      path: "../gopurs-unsafe-coerce"
+      path: "../gopurs/gopurs-unsafe-coerce"
     functions:
-      path: "../gopurs-functions"
+      path: "../gopurs/gopurs-functions"
     integers:
-      path: "../gopurs-integers"
+      path: "../gopurs/gopurs-integers"
     enums:
-      path: "../gopurs-enums"
+      path: "../gopurs/gopurs-enums"
     foreign-object:
-      path: "../gopurs-foreign-object"
+      path: "../gopurs/gopurs-foreign-object"
     numbers:
-      path: "../gopurs-numbers"
+      path: "../gopurs/gopurs-numbers"
     record:
-      path: "../gopurs-record"
+      path: "../gopurs/gopurs-record"
     assert:
-      path: "../gopurs-assert"
+      path: "../gopurs/gopurs-assert"
 EOF
     fi
     MODE="test"

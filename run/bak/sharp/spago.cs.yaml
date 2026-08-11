@@ -19,48 +19,48 @@ workspace:
     registry: 77.7.0
   extraPackages:
     prelude:
-      path: "../sharpurs-prelude"
+      path: "../sharpurs/sharpurs-prelude"
     effect:
-      path: "../sharpurs-effect"
+      path: "../sharpurs/sharpurs-effect"
     console:
-      path: "../sharpurs-console"
+      path: "../sharpurs/sharpurs-console"
     aff:
-      path: "../sharpurs-aff"
+      path: "../sharpurs/sharpurs-aff"
     now:
-      path: "../sharpurs-now"
+      path: "../sharpurs/sharpurs-now"
     datetime:
-      path: "../sharpurs-datetime"
+      path: "../sharpurs/sharpurs-datetime"
     exceptions:
-      path: "../sharpurs-exceptions"
+      path: "../sharpurs/sharpurs-exceptions"
     foldable-traversable:
-      path: "../sharpurs-foldable-traversable"
+      path: "../sharpurs/sharpurs-foldable-traversable"
     st:
-      path: "../sharpurs-st"
+      path: "../sharpurs/sharpurs-st"
     refs:
-      path: "../sharpurs-refs"
+      path: "../sharpurs/sharpurs-refs"
     unsafe-coerce:
-      path: "../sharpurs-unsafe-coerce"
+      path: "../sharpurs/sharpurs-unsafe-coerce"
     functions:
-      path: "../sharpurs-functions"
+      path: "../sharpurs/sharpurs-functions"
     partial:
-      path: "../sharpurs-partial"
+      path: "../sharpurs/sharpurs-partial"
     arrays:
-      path: "../sharpurs-arrays"
+      path: "../sharpurs/sharpurs-arrays"
     strings:
-      path: "../sharpurs-strings"
+      path: "../sharpurs/sharpurs-strings"
     integers:
-      path: "../sharpurs-integers"
+      path: "../sharpurs/sharpurs-integers"
     enums:
-      path: "../sharpurs-enums"
+      path: "../sharpurs/sharpurs-enums"
     foreign-object:
-      path: "../sharpurs-foreign-object"
+      path: "../sharpurs/sharpurs-foreign-object"
     numbers:
-      path: "../sharpurs-numbers"
+      path: "../sharpurs/sharpurs-numbers"
     record:
-      path: "../sharpurs-record"
+      path: "../sharpurs/sharpurs-record"
     assert:
-      path: "../sharpurs-assert"
+      path: "../sharpurs/sharpurs-assert"
     lazy:
-      path: "../sharpurs-lazy"
+      path: "../sharpurs/sharpurs-lazy"
   backend:
     cmd: "../csharpurs/bin/csharpurs"

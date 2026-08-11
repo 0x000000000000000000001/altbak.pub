@@ -64,14 +64,14 @@ export PATH="$PWD/run/bak/js/node_modules/.bin:$PATH"
 
 if [ "$CLEAN" == "1" ]; then
   echo "=== Rebuilding gopurs backend ==="
-  (cd ../gopurs && npm run build --silent)
+  (cd ../gopurs/gopurs && npm run build --silent)
 fi
 
 echo 'Building...'
 spago build
 
 # Generate Go code
-node ../gopurs/bin/gopurs.js --main ${ENTRY_POINT} || echo "GOPURS FAILED" || exit 1
+node ../gopurs/gopurs/bin/gopurs.js --main ${ENTRY_POINT} || echo "GOPURS FAILED" || exit 1
 
 echo "=== Go ==="
 if [ -d "output/${ENTRY_POINT}" ]; then
