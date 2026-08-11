@@ -128,14 +128,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Array = \call_user_func(function() {
   $exports = [];
-$rangeImpl = function($start, $end = null) use (&$rangeImpl) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$rangeImpl) {
-
-            return $rangeImpl(...\array_merge($__args, $more));
-        };
-    }
+$rangeImpl = function($start, $end) use (&$rangeImpl) {
     $step = $start > $end ? -1 : 1;
     $result = [];
     $i = $start;
@@ -147,91 +140,36 @@ $rangeImpl = function($start, $end = null) use (&$rangeImpl) {
     return $result;
 };
 
-$replicateImpl = function($count, $value = null) use (&$replicateImpl) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$replicateImpl) {
-
-            return $replicateImpl(...\array_merge($__args, $more));
-        };
-    }
+$replicateImpl = function($count, $value) use (&$replicateImpl) {
     if ($count < 1) return [];
     return array_fill(0, $count, $value);
 };
 
-$fromFoldableImpl = function($foldr, $xs = null) use (&$fromFoldableImpl) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$fromFoldableImpl) {
-
-            return $fromFoldableImpl(...\array_merge($__args, $more));
+$fromFoldableImpl = function($foldr, $xs) use (&$fromFoldableImpl) {
+    $step = function($x) {
+        return function($acc) use ($x) {
+            $acc[] = $x;
+            return $acc;
         };
-    }
-    
-    $emptyList = new \stdClass();
-    $curryCons = function($head, $tail = null) {
-        if (\func_num_args() < 2) {
-            return function($tail) use ($head) {
-                $obj = new \stdClass();
-                $obj->head = $head;
-                $obj->tail = $tail;
-                return $obj;
-            };
-        }
-        $obj = new \stdClass();
-        $obj->head = $head;
-        $obj->tail = $tail;
-        return $obj;
     };
-    
-    $listToArray = function($list) use ($emptyList) {
-        $result = [];
-        $xs = $list;
-        while ($xs !== $emptyList && $xs !== null) {
-            $result[] = $xs->head;
-            $xs = $xs->tail;
-        }
-        return $result;
-    };
-    
-    return $listToArray($foldr($curryCons)($emptyList)($xs));
+    $arr = $foldr($step)([])($xs);
+    return array_reverse($arr);
 };
 
 $length = function($xs) use (&$length) {
     return \count($xs);
 };
 
-$unconsImpl = function($empty, $next = null, $xs = null) use (&$unconsImpl) {
-    if (\func_num_args() < 3) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$unconsImpl) {
-
-            return $unconsImpl(...\array_merge($__args, $more));
-        };
-    }
+$unconsImpl = function($empty, $next, $xs) use (&$unconsImpl) {
     if (\count($xs) === 0) return $empty((object)[]);
     return $next($xs[0])(\array_slice($xs, 1));
 };
 
-$indexImpl = function($just, $nothing = null, $xs = null, $i = null) use (&$indexImpl) {
-    if (\func_num_args() < 4) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$indexImpl) {
-
-            return $indexImpl(...\array_merge($__args, $more));
-        };
-    }
+$indexImpl = function($just, $nothing, $xs, $i) use (&$indexImpl) {
     return ($i < 0 || $i >= \count($xs)) ? $nothing : $just($xs[$i]);
 };
 
-$findMapImpl = function($nothing, $isJust = null, $f = null, $xs = null) use (&$findMapImpl) {
-    if (\func_num_args() < 4) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$findMapImpl) {
-
-            return $findMapImpl(...\array_merge($__args, $more));
-        };
-    }
+$findMapImpl = function($nothing, $isJust, $f, $xs) use (&$findMapImpl) {
     foreach ($xs as $x) {
         $result = $f($x);
         if ($isJust($result)) return $result;
@@ -239,70 +177,35 @@ $findMapImpl = function($nothing, $isJust = null, $f = null, $xs = null) use (&$
     return $nothing;
 };
 
-$findIndexImpl = function($just, $nothing = null, $f = null, $xs = null) use (&$findIndexImpl) {
-    if (\func_num_args() < 4) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$findIndexImpl) {
-
-            return $findIndexImpl(...\array_merge($__args, $more));
-        };
-    }
+$findIndexImpl = function($just, $nothing, $f, $xs) use (&$findIndexImpl) {
     foreach ($xs as $i => $x) {
         if ($f($x)) return $just($i);
     }
     return $nothing;
 };
 
-$findLastIndexImpl = function($just, $nothing = null, $f = null, $xs = null) use (&$findLastIndexImpl) {
-    if (\func_num_args() < 4) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$findLastIndexImpl) {
-
-            return $findLastIndexImpl(...\array_merge($__args, $more));
-        };
-    }
+$findLastIndexImpl = function($just, $nothing, $f, $xs) use (&$findLastIndexImpl) {
     for ($i = \count($xs) - 1; $i >= 0; $i--) {
         if ($f($xs[$i])) return $just($i);
     }
     return $nothing;
 };
 
-$_insertAt = function($just, $nothing = null, $i = null, $a = null, $l = null) use (&$_insertAt) {
-    if (\func_num_args() < 5) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$_insertAt) {
-
-            return $_insertAt(...\array_merge($__args, $more));
-        };
-    }
+$_insertAt = function($just, $nothing, $i, $a, $l) use (&$_insertAt) {
     if ($i < 0 || $i > \count($l)) return $nothing;
     $l1 = $l;
     array_splice($l1, $i, 0, [$a]);
     return $just($l1);
 };
 
-$_deleteAt = function($just, $nothing = null, $i = null, $l = null) use (&$_deleteAt) {
-    if (\func_num_args() < 4) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$_deleteAt) {
-
-            return $_deleteAt(...\array_merge($__args, $more));
-        };
-    }
+$_deleteAt = function($just, $nothing, $i, $l) use (&$_deleteAt) {
     if ($i < 0 || $i >= \count($l)) return $nothing;
     $l1 = $l;
     array_splice($l1, $i, 1);
     return $just($l1);
 };
 
-$_updateAt = function($just, $nothing = null, $i = null, $a = null, $l = null) use (&$_updateAt) {
-    if (\func_num_args() < 5) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$_updateAt) {
-
-            return $_updateAt(...\array_merge($__args, $more));
-        };
-    }
+$_updateAt = function($just, $nothing, $i, $a, $l) use (&$_updateAt) {
     if ($i < 0 || $i >= \count($l)) return $nothing;
     $l1 = $l;
     $l1[$i] = $a;
@@ -318,14 +221,7 @@ $concat = function($xss) use (&$concat) {
     return \array_merge(...$xss);
 };
 
-$filterImpl = function($f, $xs = null) use (&$filterImpl) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$filterImpl) {
-
-            return $filterImpl(...\array_merge($__args, $more));
-        };
-    }
+$filterImpl = function($f, $xs) use (&$filterImpl) {
     $res = [];
     foreach ($xs as $x) {
         if ($f($x)) $res[] = $x;
@@ -333,14 +229,7 @@ $filterImpl = function($f, $xs = null) use (&$filterImpl) {
     return $res;
 };
 
-$partitionImpl = function($f, $xs = null) use (&$partitionImpl) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$partitionImpl) {
-
-            return $partitionImpl(...\array_merge($__args, $more));
-        };
-    }
+$partitionImpl = function($f, $xs) use (&$partitionImpl) {
     $yes = [];
     $no = [];
     foreach ($xs as $x) {
@@ -350,14 +239,7 @@ $partitionImpl = function($f, $xs = null) use (&$partitionImpl) {
     return (object)["yes" => $yes, "no" => $no];
 };
 
-$scanlImpl = function($f, $b = null, $xs = null) use (&$scanlImpl) {
-    if (\func_num_args() < 3) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$scanlImpl) {
-
-            return $scanlImpl(...\array_merge($__args, $more));
-        };
-    }
+$scanlImpl = function($f, $b, $xs) use (&$scanlImpl) {
     $acc = $b;
     $out = [];
     foreach ($xs as $x) {
@@ -367,14 +249,7 @@ $scanlImpl = function($f, $b = null, $xs = null) use (&$scanlImpl) {
     return $out;
 };
 
-$scanrImpl = function($f, $b = null, $xs = null) use (&$scanrImpl) {
-    if (\func_num_args() < 3) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$scanrImpl) {
-
-            return $scanrImpl(...\array_merge($__args, $more));
-        };
-    }
+$scanrImpl = function($f, $b, $xs) use (&$scanrImpl) {
     $len = \count($xs);
     $acc = $b;
     $out = array_fill(0, $len, null);
@@ -385,14 +260,7 @@ $scanrImpl = function($f, $b = null, $xs = null) use (&$scanrImpl) {
     return $out;
 };
 
-$sortByImpl = function($compare, $fromOrdering = null, $xs = null) use (&$sortByImpl) {
-    if (\func_num_args() < 3) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$sortByImpl) {
-
-            return $sortByImpl(...\array_merge($__args, $more));
-        };
-    }
+$sortByImpl = function($compare, $fromOrdering, $xs) use (&$sortByImpl) {
     $out = $xs;
     \usort($out, function($a, $b) use ($compare, $fromOrdering) {
         return $fromOrdering($compare($a)($b));
@@ -400,25 +268,11 @@ $sortByImpl = function($compare, $fromOrdering = null, $xs = null) use (&$sortBy
     return $out;
 };
 
-$sliceImpl = function($s, $e = null, $l = null) use (&$sliceImpl) {
-    if (\func_num_args() < 3) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$sliceImpl) {
-
-            return $sliceImpl(...\array_merge($__args, $more));
-        };
-    }
+$sliceImpl = function($s, $e, $l) use (&$sliceImpl) {
     return \array_slice($l, $s, $e - $s);
 };
 
-$zipWithImpl = function($f, $xs = null, $ys = null) use (&$zipWithImpl) {
-    if (\func_num_args() < 3) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$zipWithImpl) {
-
-            return $zipWithImpl(...\array_merge($__args, $more));
-        };
-    }
+$zipWithImpl = function($f, $xs, $ys) use (&$zipWithImpl) {
     $l = \min(\count($xs), \count($ys));
     $result = [];
     for ($i = 0; $i < $l; $i++) {
@@ -427,42 +281,21 @@ $zipWithImpl = function($f, $xs = null, $ys = null) use (&$zipWithImpl) {
     return $result;
 };
 
-$anyImpl = function($p, $xs = null) use (&$anyImpl) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$anyImpl) {
-
-            return $anyImpl(...\array_merge($__args, $more));
-        };
-    }
+$anyImpl = function($p, $xs) use (&$anyImpl) {
     foreach ($xs as $x) {
         if ($p($x)) return true;
     }
     return false;
 };
 
-$allImpl = function($p, $xs = null) use (&$allImpl) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$allImpl) {
-
-            return $allImpl(...\array_merge($__args, $more));
-        };
-    }
+$allImpl = function($p, $xs) use (&$allImpl) {
     foreach ($xs as $x) {
         if (!$p($x)) return false;
     }
     return true;
 };
 
-$unsafeIndexImpl = function($xs, $n = null) use (&$unsafeIndexImpl) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$unsafeIndexImpl) {
-
-            return $unsafeIndexImpl(...\array_merge($__args, $more));
-        };
-    }
+$unsafeIndexImpl = function($xs, $n) use (&$unsafeIndexImpl) {
     return $xs[$n];
 };
 
@@ -560,37 +393,51 @@ $GLOBALS['Data_Array_traverse_'] = ($GLOBALS['Data_Foldable_traverse_'])($GLOBAL
 // Data_Array_lessThan
 $GLOBALS['Data_Array_lessThan'] = (function() use (&$__fn) {
 $__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
-return (function() use ($__local_var_0_0) {
-  $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+return function($a1_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT;
+  $__res = function($a2_2) use ($__local_var_0_0, $a1_1) {
+  $__num = \func_num_args();
+  $__t1 = null;;
+  if ((($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT) {
+$__t1 = true;
+goto end_branch_1;;
+};
+  $__t1 = false;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 })();
 
 // Data_Array_lessThanOrEq
 $GLOBALS['Data_Array_lessThanOrEq'] = (function() use (&$__fn) {
 $__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
-return (function() use ($__local_var_0_0) {
-  $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+return function($a1_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ( ! (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_GT);
+  $__res = function($a2_2) use ($__local_var_0_0, $a1_1) {
+  $__num = \func_num_args();
+  $__t1 = null;;
+  if ((($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_GT) {
+$__t1 = false;
+goto end_branch_1;;
+};
+  $__t1 = true;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 })();
 
 // Data_Array_discard
@@ -614,18 +461,14 @@ function majData_majArray_intercalate1($dictMonoid_0) {
   }
   $__local_var_1_0 = (($dictMonoid_0)->{'Semigroup0'})(null);
   $mempty_2_1 = ($dictMonoid_0)->{'mempty'};
-  $__res = (function() use ($__local_var_1_0, $mempty_2_1) {
-  $__fn = function($sep_3, $xs_4 = null) use ($__local_var_1_0, $mempty_2_1, &$__fn) {
+  $__res = function($sep_3) use ($__local_var_1_0, $mempty_2_1) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((((($GLOBALS['Data_Foldable_foldableArray'])->{'foldl'})((function() use ($__local_var_1_0, $sep_3) {
-  $__fn = function($v_5, $v1_6 = null) use ($__local_var_1_0, $sep_3, &$__fn) {
+  $__res = function($xs_4) use ($__local_var_1_0, $mempty_2_1, $sep_3) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = ((((($GLOBALS['Data_Foldable_foldableArray'])->{'foldl'})(function($v_5) use ($__local_var_1_0, $sep_3) {
+  $__num = \func_num_args();
+  $__res = function($v1_6) use ($__local_var_1_0, $sep_3, $v_5) {
+  $__num = \func_num_args();
   $__t2 = null;;
   if (($v_5)->{'init'}) {
 $__t2 = (object)["init" => false, "acc" => $v1_6];
@@ -636,21 +479,48 @@ goto end_branch_2;;
   $__res = $__t2;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()))((object)["init" => true, "acc" => $mempty_2_1]))($xs_4))->{'acc'};
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))((object)["init" => true, "acc" => $mempty_2_1]))($xs_4))->{'acc'};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }
 $GLOBALS['Data_Array_intercalate1'] = __NAMESPACE__ . '\\majData_majArray_intercalate1';
+
+// Data_Array_void1_closure
+$GLOBALS['Data_Array_void1_closure'] = (($GLOBALS['Control_Monad_ST_Internal_functorST'])->{'map'})(function($v_0) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Data_Unit_unit'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+
+// Data_Array_void1
+function majData_majArray_void1($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majArray_void1';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Data_Array_void1_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Array_void1'] = __NAMESPACE__ . '\\majData_majArray_void1';
 
 // Data_Array_fromJust
 function majData_majArray_frommajJust($v_0) {
@@ -677,19 +547,26 @@ $GLOBALS['Data_Array_fromJust'] = __NAMESPACE__ . '\\majData_majArray_frommajJus
 // Data_Array_greaterThanOrEq
 $GLOBALS['Data_Array_greaterThanOrEq'] = (function() use (&$__fn) {
 $__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
-return (function() use ($__local_var_0_0) {
-  $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+return function($a1_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ( ! (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT);
+  $__res = function($a2_2) use ($__local_var_0_0, $a1_1) {
+  $__num = \func_num_args();
+  $__t1 = null;;
+  if ((($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT) {
+$__t1 = false;
+goto end_branch_1;;
+};
+  $__t1 = true;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 })();
 
 // Data_Array_zipWith
@@ -714,19 +591,25 @@ function majData_majArray_zipmajWithmajA($dictApplicative_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $sequence1_1_0 = (($GLOBALS['Data_Traversable_traversableArray'])->{'sequence'})($dictApplicative_0);
-  $__res = (function() use ($sequence1_1_0) {
-  $__fn = function($f_2, $xs_3 = null, $ys_4 = null) use ($sequence1_1_0, &$__fn) {
+  $__res = function($f_2) use ($sequence1_1_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($xs_3) use ($f_2, $sequence1_1_0) {
+  $__num = \func_num_args();
+  $__res = function($ys_4) use ($f_2, $sequence1_1_0, $xs_3) {
+  $__num = \func_num_args();
   $__res = ($sequence1_1_0)(($GLOBALS['Data_Array_zipWithImpl'])($f_2, $xs_3, $ys_4));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -758,12 +641,10 @@ function majData_majArray_updatemajAtmajIndices($dictFoldable_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $traverse_1_1_0 = ($GLOBALS['Data_Array_traverse_'])($dictFoldable_0);
-  $__res = (function() use ($traverse_1_1_0) {
-  $__fn = function($us_2, $xs_3 = null) use ($traverse_1_1_0, &$__fn) {
+  $__res = function($us_2) use ($traverse_1_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($xs_3) use ($traverse_1_1_0, $us_2) {
+  $__num = \func_num_args();
   $__res = \Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_run(\Data\Array\ST\majData_majArray_majSmajT_withmajArray(function($res_4) use ($traverse_1_1_0, $us_2) {
   $__num = \func_num_args();
   $__res = (($traverse_1_1_0)(function($v_5) use ($res_4) {
@@ -779,10 +660,12 @@ function majData_majArray_updatemajAtmajIndices($dictFoldable_0) {
 }, $xs_3));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -830,19 +713,19 @@ function majData_majArray_uncons($__local_var_0) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, (function() {
-  $__fn = function($x_1, $xs_2 = null) use (&$__fn) {
+}, function($x_1) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($xs_2) use ($x_1) {
+  $__num = \func_num_args();
   $__res = new \Data\Maybe\Data_Maybe_Just((object)["head" => $x_1, "tail" => $xs_2]);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), $__local_var_0);
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, $__local_var_0);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -890,19 +773,19 @@ function majData_majArray_tail($__local_var_0) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, (function() {
-  $__fn = function($v_1, $xs_2 = null) use (&$__fn) {
+}, function($v_1) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($xs_2) {
+  $__num = \func_num_args();
   $__res = new \Data\Maybe\Data_Maybe_Just($xs_2);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), $__local_var_0);
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, $__local_var_0);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -952,19 +835,19 @@ function majData_majArray_sortmajWith($dictOrd_0, $f_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Array_sortBy'])((function() use ($dictOrd_0, $f_1) {
-  $__fn = function($x_2, $y_3 = null) use ($dictOrd_0, $f_1, &$__fn) {
+  $__res = ($GLOBALS['Data_Array_sortBy'])(function($x_2) use ($dictOrd_0, $f_1) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_3) use ($dictOrd_0, $f_1, $x_2) {
+  $__num = \func_num_args();
   $__res = ((($dictOrd_0)->{'compare'})(($f_1)($x_2)))(($f_1)($y_3));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})());
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -1168,12 +1051,12 @@ function majData_majArray_modifymajAtmajIndices($dictFoldable_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $traverse_1_1_0 = ($GLOBALS['Data_Array_traverse_'])($dictFoldable_0);
-  $__res = (function() use ($traverse_1_1_0) {
-  $__fn = function($is_2, $f_3 = null, $xs_4 = null) use ($traverse_1_1_0, &$__fn) {
+  $__res = function($is_2) use ($traverse_1_1_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($f_3) use ($is_2, $traverse_1_1_0) {
+  $__num = \func_num_args();
+  $__res = function($xs_4) use ($f_3, $is_2, $traverse_1_1_0) {
+  $__num = \func_num_args();
   $__res = \Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_run(\Data\Array\ST\majData_majArray_majSmajT_withmajArray(function($res_5) use ($f_3, $is_2, $traverse_1_1_0) {
   $__num = \func_num_args();
   $__res = (($traverse_1_1_0)(function($i_6) use ($f_3, $res_5) {
@@ -1189,10 +1072,16 @@ function majData_majArray_modifymajAtmajIndices($dictFoldable_0) {
 }, $xs_4));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1345,19 +1234,19 @@ function majData_majArray_unsnoc($xs_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ((($GLOBALS['Data_Maybe_applyMaybe'])->{'apply'})(((($GLOBALS['Data_Maybe_functorMaybe'])->{'map'})((function() {
-  $__fn = function($v_1, $v1_2 = null) use (&$__fn) {
+  $__res = ((($GLOBALS['Data_Maybe_applyMaybe'])->{'apply'})(((($GLOBALS['Data_Maybe_functorMaybe'])->{'map'})(function($v_1) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_2) use ($v_1) {
+  $__num = \func_num_args();
   $__res = (object)["init" => $v_1, "last" => $v1_2];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()))(match (count($xs_0)) { 0 => new \Data\Maybe\Data_Maybe_Nothing(), default => new \Data\Maybe\Data_Maybe_Just(($GLOBALS['Data_Array_sliceImpl'])(0, (count($xs_0) - 1), $xs_0)) })))(($GLOBALS['Data_Array_indexImpl'])($GLOBALS['Data_Maybe_Just'], new \Data\Maybe\Data_Maybe_Nothing(), $xs_0, (count($xs_0) - 1)));
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))(match (count($xs_0)) { 0 => new \Data\Maybe\Data_Maybe_Nothing(), default => new \Data\Maybe\Data_Maybe_Just(($GLOBALS['Data_Array_sliceImpl'])(0, (count($xs_0) - 1), $xs_0)) })))(($GLOBALS['Data_Array_indexImpl'])($GLOBALS['Data_Maybe_Just'], new \Data\Maybe\Data_Maybe_Nothing(), $xs_0, (count($xs_0) - 1)));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1399,7 +1288,7 @@ function majData_majArray_span($p_0, $arr_1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $go__go_2_0 = null;
-  $go__go_2_0 = function($i_3) use ($arr_1, &$go__go_2_0, $p_0) {
+  $go__go_2_0 = function(int $i_3) use ($arr_1, &$go__go_2_0, $p_0) {
   $__num = \func_num_args();
   $__tco_var_go__go_2_0_0_i_3 = $i_3;
   tco_loop_go__go_2_0_0:;
@@ -1488,9 +1377,9 @@ function majData_majArray_unzip($xs_0) {
   $__res = (($GLOBALS['Data_Array_discard'])(\Data\Array\ST\Iterator\majData_majArray_majSmajT_majIterator_iterate($iter_3, function($v_4) use ($fsts_1, $snds_2) {
   $__num = \func_num_args();
   $__local_var_5_0 = ($v_4)->{'value1'};
-  $__res = (($GLOBALS['Data_Array_discard'])(($GLOBALS['Data_Array_void'])(\Control\Monad\ST\Uncurried\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn2($GLOBALS['Data_Array_ST_pushImpl'], ($v_4)->{'value0'}, $fsts_1))))(function($_dollar__unused_6) use ($__local_var_5_0, $snds_2) {
+  $__res = (($GLOBALS['Data_Array_discard'])(\Data\Array\majData_majArray_void1(\Control\Monad\ST\Uncurried\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn2($GLOBALS['Data_Array_ST_pushImpl'], ($v_4)->{'value0'}, $fsts_1))))(function($_dollar__unused_6) use ($__local_var_5_0, $snds_2) {
   $__num = \func_num_args();
-  $__res = ($GLOBALS['Data_Array_void'])(\Control\Monad\ST\Uncurried\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn2($GLOBALS['Data_Array_ST_pushImpl'], $__local_var_5_0, $snds_2));
+  $__res = \Data\Array\majData_majArray_void1(\Control\Monad\ST\Uncurried\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn2($GLOBALS['Data_Array_ST_pushImpl'], $__local_var_5_0, $snds_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1556,19 +1445,19 @@ function majData_majArray_nubmajBy($comp_0, $xs_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $indexedAndSorted_2_0 = \Data\Array\majData_majArray_sortmajBy((function() use ($comp_0) {
-  $__fn = function($x_2, $y_3 = null) use ($comp_0, &$__fn) {
+  $indexedAndSorted_2_0 = \Data\Array\majData_majArray_sortmajBy(function($x_2) use ($comp_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_3) use ($comp_0, $x_2) {
+  $__num = \func_num_args();
   $__res = (($comp_0)(($x_2)->{'value1'}))(($y_3)->{'value1'});
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), ((($GLOBALS['Data_FunctorWithIndex_functorWithIndexArray'])->{'mapWithIndex'})($GLOBALS['Data_Tuple_Tuple']))($xs_1));
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, ((($GLOBALS['Data_FunctorWithIndex_functorWithIndexArray'])->{'mapWithIndex'})($GLOBALS['Data_Tuple_Tuple']))($xs_1));
   $v_3_1 = ($GLOBALS['Data_Array_indexImpl'])($GLOBALS['Data_Maybe_Just'], new \Data\Maybe\Data_Maybe_Nothing(), $indexedAndSorted_2_0, 0);
   $__t2 = null;;
   if ($v_3_1 instanceof \Data\Maybe\Data_Maybe_Nothing) {
@@ -1576,20 +1465,20 @@ $__t2 = [];
 goto end_branch_2;;
 };
   if ($v_3_1 instanceof \Data\Maybe\Data_Maybe_Just) {
-$__t2 = ((($GLOBALS['Data_Functor_functorArray'])->{'map'})($GLOBALS['Data_Tuple_snd']))(\Data\Array\majData_majArray_sortmajWith((object)["compare" => ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT()), "Eq0" => function($_dollar__unused_4) {
+$__t2 = ((($GLOBALS['Data_Functor_functorArray'])->{'map'})($GLOBALS['Data_Tuple_snd']))(((($GLOBALS['Data_Array_sortWith'])((object)["compare" => ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT()), "Eq0" => function($_dollar__unused_4) {
   $__num = \func_num_args();
   $__res = (object)["eq" => $GLOBALS['Data_Eq_eqIntImpl']];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}], $GLOBALS['Data_Tuple_fst'], \Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_run(((($GLOBALS['Control_Monad_ST_Internal_bindST'])->{'bind'})(\Control\Monad\ST\Uncurried\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn1($GLOBALS['Data_Array_ST_unsafeThawImpl'], [($v_3_1)->{'value0'}])))(function($result_4) use ($comp_0, $indexedAndSorted_2_0) {
+}]))($GLOBALS['Data_Tuple_fst']))(\Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_run(((($GLOBALS['Control_Monad_ST_Internal_bindST'])->{'bind'})(\Control\Monad\ST\Uncurried\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn1($GLOBALS['Data_Array_ST_unsafeThawImpl'], [($v_3_1)->{'value0'}])))(function($result_4) use ($comp_0, $indexedAndSorted_2_0) {
   $__num = \func_num_args();
   $__res = (($GLOBALS['Data_Array_discard'])(\Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_foreach($indexedAndSorted_2_0, function($v1_5) use ($comp_0, $result_4) {
   $__num = \func_num_args();
   $__local_var_6_3 = ($v1_5)->{'value1'};
   $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])->{'bind'})(((($GLOBALS['Control_Monad_ST_Internal_functorST'])->{'map'})((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Tuple_snd']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_fromJust']))($GLOBALS['Data_Array_last']))))(\Control\Monad\ST\Uncurried\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn1($GLOBALS['Data_Array_ST_unsafeFreezeImpl'], $result_4))))(function($lst_7) use ($__local_var_6_3, $comp_0, $result_4, $v1_5) {
   $__num = \func_num_args();
-  $__local_var_8_4 = ($GLOBALS['Data_Array_void'])(\Control\Monad\ST\Uncurried\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn2($GLOBALS['Data_Array_ST_pushImpl'], $v1_5, $result_4));
+  $__local_var_8_4 = \Data\Array\majData_majArray_void1(\Control\Monad\ST\Uncurried\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn2($GLOBALS['Data_Array_ST_pushImpl'], $v1_5, $result_4));
   $__t5 = null;;
   if (((($GLOBALS['Data_Eq_eqBoolean'])->{'eq'})(((($GLOBALS['Data_Ordering_eqOrdering'])->{'eq'})((($comp_0)($lst_7))($__local_var_6_3)))(new \Data\Ordering\Data_Ordering_EQ())))(false)) {
 $__t5 = $__local_var_8_4;
@@ -1717,19 +1606,19 @@ function majData_majArray_groupmajAllmajBy($cmp_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_groupBy'])((function() use ($cmp_0) {
-  $__fn = function($x_1, $y_2 = null) use ($cmp_0, &$__fn) {
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Array_groupBy'])(function($x_1) use ($cmp_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_2) use ($cmp_0, $x_1) {
+  $__num = \func_num_args();
   $__res = ((($GLOBALS['Data_Ordering_eqOrdering'])->{'eq'})((($cmp_0)($x_1))($y_2)))(new \Data\Ordering\Data_Ordering_EQ());
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})())))(($GLOBALS['Data_Array_sortBy'])($cmp_0));
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+})))(($GLOBALS['Data_Array_sortBy'])($cmp_0));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1835,7 +1724,7 @@ function majData_majArray_transpose($xs_0) {
   }
   $go__go_1_0 = null;
   $go__go_1_0 = (function() use (&$go__go_1_0, $xs_0) {
-  $__fn = function($idx_2, $allArrays_3 = null) use (&$go__go_1_0, $xs_0, &$__fn) {
+  $__fn = function(int $idx_2, $allArrays_3 = null) use (&$go__go_1_0, $xs_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
@@ -1845,12 +1734,10 @@ function majData_majArray_transpose($xs_0) {
   tco_loop_go__go_1_0_0:;
   $idx_2 = $__tco_var_go__go_1_0_0_idx_2;
   $allArrays_3 = $__tco_var_go__go_1_0_0_allArrays_3;
-  $v_4_0 = (((($GLOBALS['Data_Foldable_foldableArray'])->{'foldl'})((function() use ($idx_2) {
-  $__fn = function($acc_4, $nextArr_5 = null) use ($idx_2, &$__fn) {
+  $v_4_0 = (((($GLOBALS['Data_Foldable_foldableArray'])->{'foldl'})(function($acc_4) use ($idx_2) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($nextArr_5) use ($acc_4, $idx_2) {
+  $__num = \func_num_args();
   $__local_var_6_0 = ($GLOBALS['Data_Array_indexImpl'])($GLOBALS['Data_Maybe_Just'], new \Data\Maybe\Data_Maybe_Nothing(), $nextArr_5, $idx_2);
   $__t1 = null;;
   if ($__local_var_6_0 instanceof \Data\Maybe\Data_Maybe_Nothing) {
@@ -1879,10 +1766,12 @@ goto end_branch_1;;
   $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()))(new \Data\Maybe\Data_Maybe_Nothing()))($xs_0);
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))(new \Data\Maybe\Data_Maybe_Nothing()))($xs_0);
   $__t4 = null;;
   if ($v_4_0 instanceof \Data\Maybe\Data_Maybe_Nothing) {
 $__t4 = $allArrays_3;
@@ -1923,12 +1812,12 @@ function majData_majArray_foldmajRecmajM($dictMonadRec_0) {
   }
   $Monad0_1_0 = (($dictMonadRec_0)->{'Monad0'})(null);
   $__local_var_2_1 = (($Monad0_1_0)->{'Applicative0'})(null);
-  $__res = (function() use ($Monad0_1_0, $__local_var_2_1, $dictMonadRec_0) {
-  $__fn = function($f_3, $b_4 = null, $array_5 = null) use ($Monad0_1_0, $__local_var_2_1, $dictMonadRec_0, &$__fn) {
+  $__res = function($f_3) use ($Monad0_1_0, $__local_var_2_1, $dictMonadRec_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($b_4) use ($Monad0_1_0, $__local_var_2_1, $dictMonadRec_0, $f_3) {
+  $__num = \func_num_args();
+  $__res = function($array_5) use ($Monad0_1_0, $__local_var_2_1, $b_4, $dictMonadRec_0, $f_3) {
+  $__num = \func_num_args();
   $__res = ((($dictMonadRec_0)->{'tailRecM'})(function($o_6) use ($Monad0_1_0, $__local_var_2_1, $array_5, $f_3) {
   $__num = \func_num_args();
   $__t2 = null;;
@@ -1951,10 +1840,16 @@ goto end_branch_2;;
 }))((object)["a" => $b_4, "b" => 0]);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1997,25 +1892,25 @@ function majData_majArray_foldmajM($dictMonad_0, $f_1 = null, $b_2 = null, $__lo
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, (function() use ($b_2, $dictMonad_0, $f_1) {
-  $__fn = function($a_4, $as_5 = null) use ($b_2, $dictMonad_0, $f_1, &$__fn) {
+}, function($a_4) use ($b_2, $dictMonad_0, $f_1) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($as_5) use ($a_4, $b_2, $dictMonad_0, $f_1) {
+  $__num = \func_num_args();
   $__res = ((((($dictMonad_0)->{'Bind1'})(null))->{'bind'})((($f_1)($b_2))($a_4)))(function($b_prime_6) use ($as_5, $dictMonad_0, $f_1) {
   $__num = \func_num_args();
-  $__res = \Data\Array\majData_majArray_foldmajM($dictMonad_0, $f_1, $b_prime_6, $as_5);
+  $__res = (((($GLOBALS['Data_Array_foldM'])($dictMonad_0))($f_1))($b_prime_6))($as_5);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), $__local_var_3);
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, $__local_var_3);
   goto __end;;
   __end:
   return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -2029,7 +1924,7 @@ function majData_majArray_fold($dictMonoid_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ((($GLOBALS['Data_Foldable_foldableArray'])->{'foldMap'})($dictMonoid_0))($GLOBALS['Data_Foldable_identity']);
+  $__res = ((($GLOBALS['Data_Foldable_foldableArray'])->{'foldMap'})($dictMonoid_0))($GLOBALS['Data_Foldable_identity1']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2256,7 +2151,7 @@ function majData_majArray_elemmajIndex($dictEq_0, $x_1 = null) {
 $GLOBALS['Data_Array_elemIndex'] = __NAMESPACE__ . '\\majData_majArray_elemmajIndex';
 
 // Data_Array_notElem
-function majData_majArray_notmajElem($dictEq_0, $a_1 = null, $arr_2 = null): bool|\Closure {
+function majData_majArray_notmajElem($dictEq_0, $a_1 = null, $arr_2 = null) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majArray_notmajElem';
   if ($__num < 3) {
@@ -2289,7 +2184,7 @@ goto end_branch_1;;
 $GLOBALS['Data_Array_notElem'] = __NAMESPACE__ . '\\majData_majArray_notmajElem';
 
 // Data_Array_elem
-function majData_majArray_elem($dictEq_0, $a_1 = null, $arr_2 = null): bool|\Closure {
+function majData_majArray_elem($dictEq_0, $a_1 = null, $arr_2 = null) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majArray_elem';
   if ($__num < 3) {
@@ -2513,7 +2408,7 @@ function majData_majArray_some($dictAlternative_0, $dictLazy_1 = null, $v_2 = nu
   }
   $__res = ((((((($dictAlternative_0)->{'Applicative0'})(null))->{'Apply0'})(null))->{'apply'})(((((((((($dictAlternative_0)->{'Plus1'})(null))->{'Alt0'})(null))->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Array_cons']))($v_2)))((($dictLazy_1)->{'defer'})(function($v1_3) use ($dictAlternative_0, $dictLazy_1, $v_2) {
   $__num = \func_num_args();
-  $__res = \Data\Array\majData_majArray_many($dictAlternative_0, $dictLazy_1, $v_2);
+  $__res = ((($GLOBALS['Data_Array_many'])($dictAlternative_0))($dictLazy_1))($v_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -2531,7 +2426,7 @@ function majData_majArray_many($dictAlternative_0, $dictLazy_1 = null, $v_2 = nu
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((((((($dictAlternative_0)->{'Plus1'})(null))->{'Alt0'})(null))->{'alt'})(\Data\Array\majData_majArray_some($dictAlternative_0, $dictLazy_1, $v_2)))((((($dictAlternative_0)->{'Applicative0'})(null))->{'pure'})([]));
+  $__res = ((((((($dictAlternative_0)->{'Plus1'})(null))->{'Alt0'})(null))->{'alt'})(((($GLOBALS['Data_Array_some'])($dictAlternative_0))($dictLazy_1))($v_2)))((((($dictAlternative_0)->{'Applicative0'})(null))->{'pure'})([]));
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -2681,7 +2576,7 @@ function majData_majArray_nubmajBymajEq($eq2_0, $xs_1 = null) {
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }))))(\Control\Monad\ST\Uncurried\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn1($GLOBALS['Data_Array_ST_unsafeFreezeImpl'], $arr_2))))(function($e_4) use ($arr_2, $x_3) {
   $__num = \func_num_args();
-  $__local_var_5_0 = ($GLOBALS['Data_Array_void'])(\Control\Monad\ST\Uncurried\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn2($GLOBALS['Data_Array_ST_pushImpl'], $x_3, $arr_2));
+  $__local_var_5_0 = \Data\Array\majData_majArray_void1(\Control\Monad\ST\Uncurried\majControl_majMonad_majSmajT_majUncurried_runmajSmajTmajFn2($GLOBALS['Data_Array_ST_pushImpl'], $x_3, $arr_2));
   $__t1 = null;;
   if ($e_4) {
 $__t1 = $__local_var_5_0;
@@ -2735,19 +2630,19 @@ function majData_majArray_unionmajBy($eq2_0, $xs_1 = null, $ys_2 = null) {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupArray'])->{'append'})($xs_1))((((($GLOBALS['Data_Foldable_foldableArray'])->{'foldl'})((function() use ($eq2_0) {
-  $__fn = function($b_3, $a_4 = null) use ($eq2_0, &$__fn) {
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupArray'])->{'append'})($xs_1))((((($GLOBALS['Data_Foldable_foldableArray'])->{'foldl'})(function($b_3) use ($eq2_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($a_4) use ($b_3, $eq2_0) {
+  $__num = \func_num_args();
   $__res = \Data\Array\majData_majArray_deletemajBy($eq2_0, $a_4, $b_3);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()))(\Data\Array\majData_majArray_nubmajBymajEq($eq2_0, $ys_2)))($xs_1));
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))(\Data\Array\majData_majArray_nubmajBymajEq($eq2_0, $ys_2)))($xs_1));
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;

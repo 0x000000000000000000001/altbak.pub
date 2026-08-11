@@ -122,28 +122,14 @@ $createUTC = function($y, $mo, $d, $h, $m, $s, $ms) {
     return (float)$dt->getTimestamp() * 1000 + (int)$dt->format('v');
 };
 
-$calcDiff = function($rec1, $rec2 = null) use (&$calcDiff) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$calcDiff) {
-
-            return $calcDiff(...\array_merge($__args, $more));
-        };
-    }
+$calcDiff = function($rec1, $rec2) use (&$calcDiff, &$createUTC) {
 
     $msUTC1 = $createUTC($rec1->year, $rec1->month - 1, $rec1->day, $rec1->hour, $rec1->minute, $rec1->second, $rec1->millisecond);
     $msUTC2 = $createUTC($rec2->year, $rec2->month - 1, $rec2->day, $rec2->hour, $rec2->minute, $rec2->second, $rec2->millisecond);
     return $msUTC1 - $msUTC2;
 };
 
-$adjustImpl = function($just, $nothing = null, $offset = null, $rec = null) use (&$adjustImpl) {
-    if (\func_num_args() < 4) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$adjustImpl) {
-
-            return $adjustImpl(...\array_merge($__args, $more));
-        };
-    }
+$adjustImpl = function($just, $nothing, $offset, $rec) use (&$adjustImpl, &$createUTC) {
 
     $msUTC = $createUTC($rec->year, $rec->month - 1, $rec->day, $rec->hour, $rec->minute, $rec->second, $rec->millisecond);
     $targetMs = $msUTC + $offset;
@@ -306,27 +292,25 @@ function majData_majDatemajTime_modifymajDate($f_0, $v_1 = null) {
 $GLOBALS['Data_DateTime_modifyDate'] = __NAMESPACE__ . '\\majData_majDatemajTime_modifymajDate';
 
 // Data_DateTime_eqDateTime
-$GLOBALS['Data_DateTime_eqDateTime'] = (object)["eq" => (function() {
-  $__fn = function($x_0, $y_1 = null) use (&$__fn) {
+$GLOBALS['Data_DateTime_eqDateTime'] = (object)["eq" => function($x_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_1) use ($x_0) {
+  $__num = \func_num_args();
   $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($GLOBALS['Data_Date_eqDate'])->{'eq'})(($x_0)->{'value0'}))(($y_1)->{'value0'})))(((($GLOBALS['Data_Time_eqTime'])->{'eq'})(($x_0)->{'value1'}))(($y_1)->{'value1'}));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_DateTime_ordDateTime
-$GLOBALS['Data_DateTime_ordDateTime'] = (object)["compare" => (function() {
-  $__fn = function($x_0, $y_1 = null) use (&$__fn) {
+$GLOBALS['Data_DateTime_ordDateTime'] = (object)["compare" => function($x_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_1) use ($x_0) {
+  $__num = \func_num_args();
   $v_2_0 = ((($GLOBALS['Data_Date_ordDate'])->{'compare'})(($x_0)->{'value0'}))(($y_1)->{'value0'});
   $__t1 = null;;
   if ($v_2_0 instanceof \Data\Ordering\Data_Ordering_LT) {
@@ -342,10 +326,12 @@ goto end_branch_1;;
   $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Eq0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Eq0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_DateTime_eqDateTime'];
   goto __end;;

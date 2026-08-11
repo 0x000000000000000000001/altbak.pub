@@ -147,19 +147,19 @@ function majData_majMonoid_majEndo_semigroupmajEndo($dictSemigroupoid_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["append" => (function() use ($dictSemigroupoid_0) {
-  $__fn = function($v_1, $v1_2 = null) use ($dictSemigroupoid_0, &$__fn) {
+  $__res = (object)["append" => function($v_1) use ($dictSemigroupoid_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_2) use ($dictSemigroupoid_0, $v_1) {
+  $__num = \func_num_args();
   $__res = ((($dictSemigroupoid_0)->{'compose'})($v_1))($v1_2);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -188,22 +188,22 @@ function majData_majMonoid_majEndo_monoidmajEndo($dictCategory_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $__local_var_1_0 = (($dictCategory_0)->{'Semigroupoid0'})(null);
-  $semigroupEndo1_2_1 = (object)["append" => (function() use ($__local_var_1_0) {
-  $__fn = function($v_2, $v1_3 = null) use ($__local_var_1_0, &$__fn) {
+  $semigroupEndo1_1_0 = (object)["append" => function($v_2) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_3) use ($__local_var_1_0, $v_2) {
+  $__num = \func_num_args();
   $__res = ((($__local_var_1_0)->{'compose'})($v_2))($v1_3);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
-  $__res = (object)["mempty" => ($dictCategory_0)->{'identity'}, "Semigroup0" => function($_dollar__unused_3) use ($semigroupEndo1_2_1) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = (object)["mempty" => ($dictCategory_0)->{'identity'}, "Semigroup0" => function($_dollar__unused_2) use ($semigroupEndo1_1_0) {
   $__num = \func_num_args();
-  $__res = $semigroupEndo1_2_1;
+  $__res = $semigroupEndo1_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

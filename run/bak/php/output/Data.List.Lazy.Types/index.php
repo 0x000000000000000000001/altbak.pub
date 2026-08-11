@@ -239,12 +239,10 @@ function majData_majList_majLazy_majTypes_step($v_0) {
 $GLOBALS['Data_List_Lazy_Types_step'] = __NAMESPACE__ . '\\majData_majList_majLazy_majTypes_step';
 
 // Data_List_Lazy_Types_semigroupList
-$GLOBALS['Data_List_Lazy_Types_semigroupList'] = (object)["append" => (function() {
-  $__fn = function($xs_0, $ys_1 = null) use (&$__fn) {
+$GLOBALS['Data_List_Lazy_Types_semigroupList'] = (object)["append" => function($xs_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($ys_1) use ($xs_0) {
+  $__num = \func_num_args();
   $__res = ((($GLOBALS['Data_Lazy_functorLazy'])->{'map'})(function($v_2) use ($ys_1) {
   $__num = \func_num_args();
   $__t0 = null;;
@@ -266,10 +264,12 @@ goto end_branch_0;;
 }))($xs_0);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_List_Lazy_Types_monoidList
 $GLOBALS['Data_List_Lazy_Types_monoidList'] = (object)["mempty" => $GLOBALS['Data_List_Lazy_Types_nil'], "Semigroup0" => function($_dollar__unused_0) {
@@ -290,12 +290,10 @@ $GLOBALS['Data_List_Lazy_Types_lazyList'] = (object)["defer" => function($f_0) {
 }];
 
 // Data_List_Lazy_Types_functorList
-$GLOBALS['Data_List_Lazy_Types_functorList'] = (object)["map" => (function() {
-  $__fn = function($f_0, $xs_1 = null) use (&$__fn) {
+$GLOBALS['Data_List_Lazy_Types_functorList'] = (object)["map" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($xs_1) use ($f_0) {
+  $__num = \func_num_args();
   $__res = ((($GLOBALS['Data_Lazy_functorLazy'])->{'map'})(function($v_2) use ($f_0) {
   $__num = \func_num_args();
   $__t0 = null;;
@@ -317,10 +315,12 @@ goto end_branch_0;;
 }))($xs_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_List_Lazy_Types_map1
 function majData_majList_majLazy_majTypes_map1($f_0, $m_1 = null) {
@@ -337,27 +337,27 @@ function majData_majList_majLazy_majTypes_map1($f_0, $m_1 = null) {
 $GLOBALS['Data_List_Lazy_Types_map1'] = __NAMESPACE__ . '\\majData_majList_majLazy_majTypes_map1';
 
 // Data_List_Lazy_Types_functorNonEmptyList
-$GLOBALS['Data_List_Lazy_Types_functorNonEmptyList'] = (object)["map" => (function() {
-  $__fn = function($f_0, $v_1 = null) use (&$__fn) {
+$GLOBALS['Data_List_Lazy_Types_functorNonEmptyList'] = (object)["map" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_1) use ($f_0) {
+  $__num = \func_num_args();
   $__res = ((($GLOBALS['Data_Lazy_functorLazy'])->{'map'})(($GLOBALS['Data_List_Lazy_Types_map1'])($f_0)))($v_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_List_Lazy_Types_eq1List
-$GLOBALS['Data_List_Lazy_Types_eq1List'] = (object)["eq1" => (function() {
-  $__fn = function($dictEq_0, $xs_1 = null, $ys_2 = null) use (&$__fn) {
+$GLOBALS['Data_List_Lazy_Types_eq1List'] = (object)["eq1" => function($dictEq_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($xs_1) use ($dictEq_0) {
+  $__num = \func_num_args();
+  $__res = function($ys_2) use ($dictEq_0, $xs_1) {
+  $__num = \func_num_args();
   $go__go_3_0 = null;
   $go__go_3_0 = (function() use ($dictEq_0, &$go__go_3_0) {
   $__fn = function($v_4, $v1_5 = null) use ($dictEq_0, &$go__go_3_0, &$__fn) {
@@ -365,14 +365,35 @@ $GLOBALS['Data_List_Lazy_Types_eq1List'] = (object)["eq1" => (function() {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__t1 = null;;
+  $__tco_var_go__go_3_0_0_v_4 = $v_4;
+  $__tco_var_go__go_3_0_0_v1_5 = $v1_5;
+  tco_loop_go__go_3_0_0:;
+  $v_4 = $__tco_var_go__go_3_0_0_v_4;
+  $v1_5 = $__tco_var_go__go_3_0_0_v1_5;
+  $__t0 = null;;
   if ($v_4 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil) {
-$__t1 = $v1_5 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil;
+$__t1 = null;;
+if ($v1_5 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil) {
+$__t1 = true;
 goto end_branch_1;;
 };
-  $__t1 = ($v_4 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons && ($v1_5 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons && (((($dictEq_0)->{'eq'})(($v_4)->{'value0'}))(($v1_5)->{'value0'}) && (($go__go_3_0)(\Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step(($v_4)->{'value1'})))(\Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step(($v1_5)->{'value1'})))));
-  end_branch_1:;
-  $__res = $__t1;
+$__t1 = false;
+end_branch_1:;
+$__t0 = $__t1;
+goto end_branch_0;;
+};
+  if (($v_4 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons && ($v1_5 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons && ((($dictEq_0)->{'eq'})(($v_4)->{'value0'}))(($v1_5)->{'value0'})))) {
+$__tco_2 = \Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step(($v_4)->{'value1'});
+$__tco_3 = \Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step(($v1_5)->{'value1'});
+$__tco_var_go__go_3_0_0_v_4 = $__tco_2;
+$__tco_var_go__go_3_0_0_v1_5 = $__tco_3;
+goto tco_loop_go__go_3_0_0;;
+$__t0 = null;
+goto end_branch_0;;
+};
+  $__t0 = false;
+  end_branch_0:;
+  $__res = $__t0;
   goto __end;;
   __end:
   return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -382,15 +403,34 @@ goto end_branch_1;;
   $__res = (($go__go_3_0)(\Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step($xs_1)))(\Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step($ys_2));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_List_Lazy_Types_eq1NonEmptyList
 $GLOBALS['Data_List_Lazy_Types_eq1NonEmptyList'] = (object)["eq1" => function($dictEq_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Lazy_eq1Lazy'])->{'eq1'})(\Data\NonEmpty\majData_majNonmajEmpty_eqmajNonmajEmpty($GLOBALS['Data_List_Lazy_Types_eq1List'], $dictEq_0));
+  $eq12_1_0 = (($GLOBALS['Data_Lazy_eq1Lazy'])->{'eq1'})((($GLOBALS['Data_NonEmpty_eqNonEmpty'])($GLOBALS['Data_List_Lazy_Types_eq1List']))($dictEq_0));
+  $__res = function($v_2) use ($eq12_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v1_3) use ($eq12_1_0, $v_2) {
+  $__num = \func_num_args();
+  $__res = (($eq12_1_0)($v_2))($v1_3);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -417,20 +457,7 @@ function majData_majList_majLazy_majTypes_eqmajNonmajEmptymajList($dictEq_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = \Data\NonEmpty\majData_majNonmajEmpty_eqmajNonmajEmpty($GLOBALS['Data_List_Lazy_Types_eq1List'], $dictEq_0);
-  $__res = (object)["eq" => (function() use ($__local_var_1_0) {
-  $__fn = function($x_2, $y_3 = null) use ($__local_var_1_0, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($__local_var_1_0)->{'eq'})(\Data\Lazy\majData_majLazy_force($x_2)))(\Data\Lazy\majData_majLazy_force($y_3));
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  $__res = ($GLOBALS['Data_Lazy_eqLazy'])((($GLOBALS['Data_NonEmpty_eqNonEmpty'])($GLOBALS['Data_List_Lazy_Types_eq1List']))($dictEq_0));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -438,12 +465,12 @@ function majData_majList_majLazy_majTypes_eqmajNonmajEmptymajList($dictEq_0) {
 $GLOBALS['Data_List_Lazy_Types_eqNonEmptyList'] = __NAMESPACE__ . '\\majData_majList_majLazy_majTypes_eqmajNonmajEmptymajList';
 
 // Data_List_Lazy_Types_ord1List
-$GLOBALS['Data_List_Lazy_Types_ord1List'] = (object)["compare1" => (function() {
-  $__fn = function($dictOrd_0, $xs_1 = null, $ys_2 = null) use (&$__fn) {
+$GLOBALS['Data_List_Lazy_Types_ord1List'] = (object)["compare1" => function($dictOrd_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($xs_1) use ($dictOrd_0) {
+  $__num = \func_num_args();
+  $__res = function($ys_2) use ($dictOrd_0, $xs_1) {
+  $__num = \func_num_args();
   $go__go_3_0 = null;
   $go__go_3_0 = (function() use ($dictOrd_0, &$go__go_3_0) {
   $__fn = function($v_4, $v1_5 = null) use ($dictOrd_0, &$go__go_3_0, &$__fn) {
@@ -502,10 +529,16 @@ goto end_branch_0;;
   $__res = (($go__go_3_0)(\Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step($xs_1)))(\Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step($ys_2));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(), "Eq10" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Eq10" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_List_Lazy_Types_eq1List'];
   goto __end;;
@@ -519,7 +552,20 @@ $GLOBALS['Data_List_Lazy_Types_ordNonEmpty'] = ($GLOBALS['Data_NonEmpty_ordNonEm
 // Data_List_Lazy_Types_ord1NonEmptyList
 $GLOBALS['Data_List_Lazy_Types_ord1NonEmptyList'] = (object)["compare1" => function($dictOrd_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Lazy_ord1Lazy'])->{'compare1'})(($GLOBALS['Data_List_Lazy_Types_ordNonEmpty'])($dictOrd_0));
+  $compare12_1_0 = (($GLOBALS['Data_Lazy_ord1Lazy'])->{'compare1'})(($GLOBALS['Data_List_Lazy_Types_ordNonEmpty'])($dictOrd_0));
+  $__res = function($v_2) use ($compare12_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v1_3) use ($compare12_1_0, $v_2) {
+  $__num = \func_num_args();
+  $__res = (($compare12_1_0)($v_2))($v1_3);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -559,7 +605,7 @@ function majData_majList_majLazy_majTypes_ordmajNonmajEmptymajList($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = \Data\Lazy\majData_majLazy_ordmajLazy(($GLOBALS['Data_List_Lazy_Types_ordNonEmpty'])($dictOrd_0));
+  $__res = ($GLOBALS['Data_Lazy_ordLazy'])(($GLOBALS['Data_List_Lazy_Types_ordNonEmpty'])($dictOrd_0));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -587,30 +633,28 @@ function majData_majList_majLazy_majTypes_cons($x_0, $xs_1 = null) {
 $GLOBALS['Data_List_Lazy_Types_cons'] = __NAMESPACE__ . '\\majData_majList_majLazy_majTypes_cons';
 
 // Data_List_Lazy_Types_foldableList
-$GLOBALS['Data_List_Lazy_Types_foldableList'] = (object)["foldr" => (function() {
-  $__fn = function($op_0, $z_1 = null, $xs_2 = null) use (&$__fn) {
+$GLOBALS['Data_List_Lazy_Types_foldableList'] = (object)["foldr" => function($op_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  $__res = (((($GLOBALS['Data_List_Lazy_Types_foldableList'])->{'foldl'})((function() use ($op_0) {
-  $__fn = function($b_3, $a_4 = null) use ($op_0, &$__fn) {
+  $__res = function($z_1) use ($op_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($xs_2) use ($op_0, $z_1) {
+  $__num = \func_num_args();
+  $__res = (((($GLOBALS['Data_List_Lazy_Types_foldableList'])->{'foldl'})(function($b_3) use ($op_0) {
+  $__num = \func_num_args();
+  $__res = function($a_4) use ($b_3, $op_0) {
+  $__num = \func_num_args();
   $__res = (($op_0)($a_4))($b_3);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()))($z_1))((((($GLOBALS['Data_List_Lazy_Types_foldableList'])->{'foldl'})((function() {
-  $__fn = function($b_3, $a_4 = null) use (&$__fn) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))($z_1))((((($GLOBALS['Data_List_Lazy_Types_foldableList'])->{'foldl'})(function($b_3) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($a_4) use ($b_3) {
+  $__num = \func_num_args();
   $__res = \Data\Lazy\majData_majLazy_defer(function($v_5) use ($a_4, $b_3) {
   $__num = \func_num_args();
   $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($a_4, $b_3);
@@ -620,16 +664,24 @@ $GLOBALS['Data_List_Lazy_Types_foldableList'] = (object)["foldr" => (function() 
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()))($GLOBALS['Data_List_Lazy_Types_nil']))($xs_2));
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(), "foldl" => function($op_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))($GLOBALS['Data_List_Lazy_Types_nil']))($xs_2));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "foldl" => function($op_0) {
   $__num = \func_num_args();
   $go__go_1_0 = null;
   $go__go_1_0 = (function() use (&$go__go_1_0, $op_0) {
@@ -677,19 +729,19 @@ goto end_branch_1;;
   $mempty_1_1 = ($dictMonoid_0)->{'mempty'};
   $__res = function($f_2) use ($dictMonoid_0, $mempty_1_1) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_List_Lazy_Types_foldableList'])->{'foldl'})((function() use ($dictMonoid_0, $f_2) {
-  $__fn = function($b_3, $a_4 = null) use ($dictMonoid_0, $f_2, &$__fn) {
+  $__res = ((($GLOBALS['Data_List_Lazy_Types_foldableList'])->{'foldl'})(function($b_3) use ($dictMonoid_0, $f_2) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($a_4) use ($b_3, $dictMonoid_0, $f_2) {
+  $__num = \func_num_args();
   $__res = ((((($dictMonoid_0)->{'Semigroup0'})(null))->{'append'})($b_3))(($f_2)($a_4));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()))($mempty_1_1);
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))($mempty_1_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -703,55 +755,65 @@ goto end_branch_1;;
 $GLOBALS['Data_List_Lazy_Types_foldableNonEmpty'] = (object)["foldMap" => function($dictMonoid_0) {
   $__num = \func_num_args();
   $foldMap1_1_0 = (($GLOBALS['Data_List_Lazy_Types_foldableList'])->{'foldMap'})($dictMonoid_0);
-  $__res = (function() use ($dictMonoid_0, $foldMap1_1_0) {
-  $__fn = function($f_2, $v_3 = null) use ($dictMonoid_0, $foldMap1_1_0, &$__fn) {
+  $__res = function($f_2) use ($dictMonoid_0, $foldMap1_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_3) use ($dictMonoid_0, $f_2, $foldMap1_1_0) {
+  $__num = \func_num_args();
   $__res = ((((($dictMonoid_0)->{'Semigroup0'})(null))->{'append'})(($f_2)(($v_3)->{'value0'})))((($foldMap1_1_0)($f_2))(($v_3)->{'value1'}));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "foldl" => (function() {
-  $__fn = function($f_0, $b_1 = null, $v_2 = null) use (&$__fn) {
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "foldl" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($b_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($v_2) use ($b_1, $f_0) {
+  $__num = \func_num_args();
   $__res = (((($GLOBALS['Data_List_Lazy_Types_foldableList'])->{'foldl'})($f_0))((($f_0)($b_1))(($v_2)->{'value0'})))(($v_2)->{'value1'});
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(), "foldr" => (function() {
-  $__fn = function($f_0, $b_1 = null, $v_2 = null) use (&$__fn) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "foldr" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($b_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($v_2) use ($b_1, $f_0) {
+  $__num = \func_num_args();
   $__res = (($f_0)(($v_2)->{'value0'}))((((($GLOBALS['Data_List_Lazy_Types_foldableList'])->{'foldr'})($f_0))($b_1))(($v_2)->{'value1'}));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_List_Lazy_Types_extendList
-$GLOBALS['Data_List_Lazy_Types_extendList'] = (object)["extend" => (function() {
-  $__fn = function($f_0, $l_1 = null) use (&$__fn) {
+$GLOBALS['Data_List_Lazy_Types_extendList'] = (object)["extend" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($l_1) use ($f_0) {
+  $__num = \func_num_args();
   $v_2_0 = \Data\List\Lazy\Types\majData_majList_majLazy_majTypes_step($l_1);
   $__t1 = null;;
   if ($v_2_0 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Nil) {
@@ -760,12 +822,10 @@ goto end_branch_1;;
 };
   if ($v_2_0 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons) {
 $__local_var_3_2 = ($f_0)($l_1);
-$__local_var_4_3 = ((((($GLOBALS['Data_List_Lazy_Types_foldableList'])->{'foldr'})((function() use ($f_0) {
-  $__fn = function($a_4, $v_5 = null) use ($f_0, &$__fn) {
+$__local_var_4_3 = ((((($GLOBALS['Data_List_Lazy_Types_foldableList'])->{'foldr'})(function($a_4) use ($f_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_5) use ($a_4, $f_0) {
+  $__num = \func_num_args();
   $__local_var_6_3 = ($v_5)->{'acc'};
   $__local_var_7_4 = ($v_5)->{'val'};
   $acc_prime_8_5 = \Data\Lazy\majData_majLazy_defer(function($v_8) use ($__local_var_6_3, $a_4) {
@@ -785,10 +845,12 @@ $__local_var_4_3 = ((((($GLOBALS['Data_List_Lazy_Types_foldableList'])->{'foldr'
 }), "acc" => $acc_prime_8_5];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()))((object)["val" => $GLOBALS['Data_List_Lazy_Types_nil'], "acc" => $GLOBALS['Data_List_Lazy_Types_nil']]))(($v_2_0)->{'value1'}))->{'val'};
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))((object)["val" => $GLOBALS['Data_List_Lazy_Types_nil'], "acc" => $GLOBALS['Data_List_Lazy_Types_nil']]))(($v_2_0)->{'value1'}))->{'val'};
 $__t1 = \Data\Lazy\majData_majLazy_defer(function($v_5) use ($__local_var_3_2, $__local_var_4_3) {
   $__num = \func_num_args();
   $__res = new \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons($__local_var_3_2, $__local_var_4_3);
@@ -804,10 +866,12 @@ goto end_branch_1;;
   $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_List_Lazy_Types_functorList'];
   goto __end;;
@@ -816,21 +880,17 @@ goto end_branch_1;;
 }];
 
 // Data_List_Lazy_Types_extendNonEmptyList
-$GLOBALS['Data_List_Lazy_Types_extendNonEmptyList'] = (object)["extend" => (function() {
-  $__fn = function($f_0, $v_1 = null) use (&$__fn) {
+$GLOBALS['Data_List_Lazy_Types_extendNonEmptyList'] = (object)["extend" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_1) use ($f_0) {
+  $__num = \func_num_args();
   $__local_var_2_0 = (\Data\Lazy\majData_majLazy_force($v_1))->{'value1'};
   $__res = \Data\Lazy\majData_majLazy_defer(function($v2_3) use ($__local_var_2_0, $f_0, $v_1) {
   $__num = \func_num_args();
-  $__res = new \Data\NonEmpty\Data_NonEmpty_NonEmpty(($f_0)($v_1), ((((($GLOBALS['Data_List_Lazy_Types_foldableList'])->{'foldr'})((function() use ($f_0) {
-  $__fn = function($a_4, $v1_5 = null) use ($f_0, &$__fn) {
+  $__res = new \Data\NonEmpty\Data_NonEmpty_NonEmpty(($f_0)($v_1), ((((($GLOBALS['Data_List_Lazy_Types_foldableList'])->{'foldr'})(function($a_4) use ($f_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_5) use ($a_4, $f_0) {
+  $__num = \func_num_args();
   $__local_var_6_1 = ($v1_5)->{'acc'};
   $__local_var_7_2 = ($v1_5)->{'val'};
   $__local_var_8_3 = ($f_0)(\Data\Lazy\majData_majLazy_defer(function($v2_8) use ($__local_var_6_1, $a_4) {
@@ -855,20 +915,24 @@ $GLOBALS['Data_List_Lazy_Types_extendNonEmptyList'] = (object)["extend" => (func
 })];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()))((object)["val" => $GLOBALS['Data_List_Lazy_Types_nil'], "acc" => $GLOBALS['Data_List_Lazy_Types_nil']]))($__local_var_2_0))->{'val'});
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))((object)["val" => $GLOBALS['Data_List_Lazy_Types_nil'], "acc" => $GLOBALS['Data_List_Lazy_Types_nil']]))($__local_var_2_0))->{'val'});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_List_Lazy_Types_functorNonEmptyList'];
   goto __end;;
@@ -877,48 +941,58 @@ $GLOBALS['Data_List_Lazy_Types_extendNonEmptyList'] = (object)["extend" => (func
 }];
 
 // Data_List_Lazy_Types_foldableNonEmptyList
-$GLOBALS['Data_List_Lazy_Types_foldableNonEmptyList'] = (object)["foldr" => (function() {
-  $__fn = function($f_0, $b_1 = null, $v_2 = null) use (&$__fn) {
+$GLOBALS['Data_List_Lazy_Types_foldableNonEmptyList'] = (object)["foldr" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  $__local_var_3_0 = \Data\Lazy\majData_majLazy_force($v_2);
-  $__res = (($f_0)(($__local_var_3_0)->{'value0'}))((((($GLOBALS['Data_List_Lazy_Types_foldableList'])->{'foldr'})($f_0))($b_1))(($__local_var_3_0)->{'value1'}));
+  $__res = function($b_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($v_2) use ($b_1, $f_0) {
+  $__num = \func_num_args();
+  $__res = (((($GLOBALS['Data_List_Lazy_Types_foldableNonEmpty'])->{'foldr'})($f_0))($b_1))(\Data\Lazy\majData_majLazy_force($v_2));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(), "foldl" => (function() {
-  $__fn = function($f_0, $b_1 = null, $v_2 = null) use (&$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  $__local_var_3_1 = \Data\Lazy\majData_majLazy_force($v_2);
-  $__res = (((($GLOBALS['Data_List_Lazy_Types_foldableList'])->{'foldl'})($f_0))((($f_0)($b_1))(($__local_var_3_1)->{'value0'})))(($__local_var_3_1)->{'value1'});
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(), "foldMap" => function($dictMonoid_0) {
-  $__num = \func_num_args();
-  $foldMap1_1_2 = (($GLOBALS['Data_List_Lazy_Types_foldableNonEmpty'])->{'foldMap'})($dictMonoid_0);
-  $__res = (function() use ($foldMap1_1_2) {
-  $__fn = function($f_2, $v_3 = null) use ($foldMap1_1_2, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (($foldMap1_1_2)($f_2))(\Data\Lazy\majData_majLazy_force($v_3));
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "foldl" => function($f_0) {
+  $__num = \func_num_args();
+  $__res = function($b_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($v_2) use ($b_1, $f_0) {
+  $__num = \func_num_args();
+  $__res = (((($GLOBALS['Data_List_Lazy_Types_foldableNonEmpty'])->{'foldl'})($f_0))($b_1))(\Data\Lazy\majData_majLazy_force($v_2));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "foldMap" => function($dictMonoid_0) {
+  $__num = \func_num_args();
+  $foldMap1_1_0 = (($GLOBALS['Data_List_Lazy_Types_foldableNonEmpty'])->{'foldMap'})($dictMonoid_0);
+  $__res = function($f_2) use ($foldMap1_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v_3) use ($f_2, $foldMap1_1_0) {
+  $__num = \func_num_args();
+  $__res = (($foldMap1_1_0)($f_2))(\Data\Lazy\majData_majLazy_force($v_3));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -940,19 +1014,19 @@ $__t1 = "";
 goto end_branch_1;;
 };
   if ($v_2_0 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons) {
-$__t1 = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_0)->{'show'})(($v_2_0)->{'value0'})))((((($GLOBALS['Data_List_Lazy_Types_foldableList'])->{'foldl'})((function() use ($dictShow_0) {
-  $__fn = function($shown_3, $x_prime_4 = null) use ($dictShow_0, &$__fn) {
+$__t1 = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_0)->{'show'})(($v_2_0)->{'value0'})))((((($GLOBALS['Data_List_Lazy_Types_foldableList'])->{'foldl'})(function($shown_3) use ($dictShow_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($x_prime_4) use ($dictShow_0, $shown_3) {
+  $__num = \func_num_args();
   $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})($shown_3))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(","))((($dictShow_0)->{'show'})($x_prime_4)));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()))(""))(($v_2_0)->{'value1'}));
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))(""))(($v_2_0)->{'value1'}));
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -978,7 +1052,7 @@ function majData_majList_majLazy_majTypes_showmajNonmajEmptymajList($dictShow_0)
   }
   $__res = (object)["show" => function($v_1) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(NonEmptyList "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(((\Data\Lazy\majData_majLazy_showmajLazy(\Data\NonEmpty\majData_majNonmajEmpty_showmajNonmajEmpty($dictShow_0, \Data\List\Lazy\Types\majData_majList_majLazy_majTypes_showmajList($dictShow_0))))->{'show'})($v_1)))(")"));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(NonEmptyList "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(((($GLOBALS['Data_Lazy_showLazy'])((($GLOBALS['Data_NonEmpty_showNonEmpty'])($dictShow_0))(($GLOBALS['Data_List_Lazy_Types_showList'])($dictShow_0))))->{'show'})($v_1)))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1004,7 +1078,7 @@ $__t0 = "Nil";
 goto end_branch_0;;
 };
   if ($v_1 instanceof \Data\List\Lazy\Types\Data_List_Lazy_Types_Cons) {
-$__t0 = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("("))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_0)->{'show'})(($v_1)->{'value0'})))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(" : "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(((\Data\List\Lazy\Types\majData_majList_majLazy_majTypes_showmajList($dictShow_0))->{'show'})(($v_1)->{'value1'})))(")"))));
+$__t0 = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("("))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_0)->{'show'})(($v_1)->{'value0'})))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(" : "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(((($GLOBALS['Data_List_Lazy_Types_showList'])($dictShow_0))->{'show'})(($v_1)->{'value1'})))(")"))));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -1022,12 +1096,12 @@ goto end_branch_0;;
 $GLOBALS['Data_List_Lazy_Types_showStep'] = __NAMESPACE__ . '\\majData_majList_majLazy_majTypes_showmajStep';
 
 // Data_List_Lazy_Types_foldableWithIndexList
-$GLOBALS['Data_List_Lazy_Types_foldableWithIndexList'] = (object)["foldrWithIndex" => (function() {
-  $__fn = function($f_0, $b_1 = null, $xs_2 = null) use (&$__fn) {
+$GLOBALS['Data_List_Lazy_Types_foldableWithIndexList'] = (object)["foldrWithIndex" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($b_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($xs_2) use ($b_1, $f_0) {
+  $__num = \func_num_args();
   $v_3_0 = (((($GLOBALS['Data_List_Lazy_Types_foldableList'])->{'foldl'})(function($v1_3) {
   $__num = \func_num_args();
   $__local_var_4_0 = ($v1_3)->{'value1'};
@@ -1066,15 +1140,19 @@ $GLOBALS['Data_List_Lazy_Types_foldableWithIndexList'] = (object)["foldrWithInde
 }))(new \Data\Tuple\Data_Tuple_Tuple(($v_3_0)->{'value0'}, $b_1)))(($v_3_0)->{'value1'}))->{'value1'};
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(), "foldlWithIndex" => (function() {
-  $__fn = function($f_0, $acc_1 = null) use (&$__fn) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "foldlWithIndex" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($acc_1) use ($f_0) {
+  $__num = \func_num_args();
   $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Tuple_snd']))(((($GLOBALS['Data_List_Lazy_Types_foldableList'])->{'foldl'})(function($v_2) use ($f_0) {
   $__num = \func_num_args();
   $__local_var_3_5 = ($v_2)->{'value1'};
@@ -1092,27 +1170,29 @@ $GLOBALS['Data_List_Lazy_Types_foldableWithIndexList'] = (object)["foldrWithInde
 }))(new \Data\Tuple\Data_Tuple_Tuple(0, $acc_1)));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "foldMapWithIndex" => function($dictMonoid_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "foldMapWithIndex" => function($dictMonoid_0) {
   $__num = \func_num_args();
   $mempty_1_7 = ($dictMonoid_0)->{'mempty'};
   $__res = function($f_2) use ($dictMonoid_0, $mempty_1_7) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_List_Lazy_Types_foldableWithIndexList'])->{'foldlWithIndex'})((function() use ($dictMonoid_0, $f_2) {
-  $__fn = function($i_3, $acc_4 = null) use ($dictMonoid_0, $f_2, &$__fn) {
+  $__res = ((($GLOBALS['Data_List_Lazy_Types_foldableWithIndexList'])->{'foldlWithIndex'})(function($i_3) use ($dictMonoid_0, $f_2) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($acc_4) use ($dictMonoid_0, $f_2, $i_3) {
+  $__num = \func_num_args();
   $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((((($dictMonoid_0)->{'Semigroup0'})(null))->{'append'})($acc_4)))(($f_2)($i_3));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()))($mempty_1_7);
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))($mempty_1_7);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1129,18 +1209,16 @@ $GLOBALS['Data_List_Lazy_Types_foldableWithIndexList'] = (object)["foldrWithInde
 }];
 
 // Data_List_Lazy_Types_foldableWithIndexNonEmpty
-$GLOBALS['Data_List_Lazy_Types_foldableWithIndexNonEmpty'] = \Data\NonEmpty\majData_majNonmajEmpty_foldablemajWithmajIndexmajNonmajEmpty($GLOBALS['Data_List_Lazy_Types_foldableWithIndexList']);
+$GLOBALS['Data_List_Lazy_Types_foldableWithIndexNonEmpty'] = ($GLOBALS['Data_NonEmpty_foldableWithIndexNonEmpty'])($GLOBALS['Data_List_Lazy_Types_foldableWithIndexList']);
 
 // Data_List_Lazy_Types_foldableWithIndexNonEmptyList
 $GLOBALS['Data_List_Lazy_Types_foldableWithIndexNonEmptyList'] = (object)["foldMapWithIndex" => function($dictMonoid_0) {
   $__num = \func_num_args();
   $foldMapWithIndex1_1_0 = (($GLOBALS['Data_List_Lazy_Types_foldableWithIndexNonEmpty'])->{'foldMapWithIndex'})($dictMonoid_0);
-  $__res = (function() use ($foldMapWithIndex1_1_0) {
-  $__fn = function($f_2, $v_3 = null) use ($foldMapWithIndex1_1_0, &$__fn) {
+  $__res = function($f_2) use ($foldMapWithIndex1_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_3) use ($f_2, $foldMapWithIndex1_1_0) {
+  $__num = \func_num_args();
   $__res = (($foldMapWithIndex1_1_0)((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_2))(function($v2_4) {
   $__num = \func_num_args();
   $__t1 = null;;
@@ -1162,19 +1240,21 @@ goto end_branch_1;;
 })))(\Data\Lazy\majData_majLazy_force($v_3));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "foldlWithIndex" => (function() {
-  $__fn = function($f_0, $b_1 = null, $v_2 = null) use (&$__fn) {
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "foldlWithIndex" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($b_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($v_2) use ($b_1, $f_0) {
+  $__num = \func_num_args();
   $__res = (((($GLOBALS['Data_List_Lazy_Types_foldableWithIndexNonEmpty'])->{'foldlWithIndex'})((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))(function($v2_3) {
   $__num = \func_num_args();
   $__t2 = null;;
@@ -1196,15 +1276,21 @@ goto end_branch_2;;
 })))($b_1))(\Data\Lazy\majData_majLazy_force($v_2));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(), "foldrWithIndex" => (function() {
-  $__fn = function($f_0, $b_1 = null, $v_2 = null) use (&$__fn) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "foldrWithIndex" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($b_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($v_2) use ($b_1, $f_0) {
+  $__num = \func_num_args();
   $__res = (((($GLOBALS['Data_List_Lazy_Types_foldableWithIndexNonEmpty'])->{'foldrWithIndex'})((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))(function($v2_3) {
   $__num = \func_num_args();
   $__t3 = null;;
@@ -1226,10 +1312,16 @@ goto end_branch_3;;
 })))($b_1))(\Data\Lazy\majData_majLazy_force($v_2));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(), "Foldable0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Foldable0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_List_Lazy_Types_foldableNonEmptyList'];
   goto __end;;
@@ -1240,12 +1332,12 @@ goto end_branch_3;;
 // Data_List_Lazy_Types_functorWithIndexList
 $GLOBALS['Data_List_Lazy_Types_functorWithIndexList'] = (object)["mapWithIndex" => function($f_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_List_Lazy_Types_foldableWithIndexList'])->{'foldrWithIndex'})((function() use ($f_0) {
-  $__fn = function($i_1, $x_2 = null, $acc_3 = null) use ($f_0, &$__fn) {
+  $__res = ((($GLOBALS['Data_List_Lazy_Types_foldableWithIndexList'])->{'foldrWithIndex'})(function($i_1) use ($f_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($x_2) use ($f_0, $i_1) {
+  $__num = \func_num_args();
+  $__res = function($acc_3) use ($f_0, $i_1, $x_2) {
+  $__num = \func_num_args();
   $__local_var_4_0 = (($f_0)($i_1))($x_2);
   $__res = \Data\Lazy\majData_majLazy_defer(function($v_5) use ($__local_var_4_0, $acc_3) {
   $__num = \func_num_args();
@@ -1256,10 +1348,16 @@ $GLOBALS['Data_List_Lazy_Types_functorWithIndexList'] = (object)["mapWithIndex" 
 });
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()))($GLOBALS['Data_List_Lazy_Types_nil']);
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))($GLOBALS['Data_List_Lazy_Types_nil']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1272,15 +1370,13 @@ $GLOBALS['Data_List_Lazy_Types_functorWithIndexList'] = (object)["mapWithIndex" 
 }];
 
 // Data_List_Lazy_Types_mapWithIndex
-$GLOBALS['Data_List_Lazy_Types_mapWithIndex'] = (\Data\NonEmpty\majData_majNonmajEmpty_functormajWithmajIndex($GLOBALS['Data_List_Lazy_Types_functorWithIndexList']))->{'mapWithIndex'};
+$GLOBALS['Data_List_Lazy_Types_mapWithIndex'] = (($GLOBALS['Data_NonEmpty_functorWithIndex'])($GLOBALS['Data_List_Lazy_Types_functorWithIndexList']))->{'mapWithIndex'};
 
 // Data_List_Lazy_Types_functorWithIndexNonEmptyList
-$GLOBALS['Data_List_Lazy_Types_functorWithIndexNonEmptyList'] = (object)["mapWithIndex" => (function() {
-  $__fn = function($f_0, $v_1 = null) use (&$__fn) {
+$GLOBALS['Data_List_Lazy_Types_functorWithIndexNonEmptyList'] = (object)["mapWithIndex" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_1) use ($f_0) {
+  $__num = \func_num_args();
   $__res = \Data\Lazy\majData_majLazy_defer(function($v1_2) use ($f_0, $v_1) {
   $__num = \func_num_args();
   $__res = (($GLOBALS['Data_List_Lazy_Types_mapWithIndex'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))(function($v2_3) {
@@ -1308,10 +1404,12 @@ goto end_branch_0;;
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_List_Lazy_Types_functorNonEmptyList'];
   goto __end;;
@@ -1349,12 +1447,10 @@ function majData_majList_majLazy_majTypes_tomajList($v_0) {
 $GLOBALS['Data_List_Lazy_Types_toList'] = __NAMESPACE__ . '\\majData_majList_majLazy_majTypes_tomajList';
 
 // Data_List_Lazy_Types_semigroupNonEmptyList
-$GLOBALS['Data_List_Lazy_Types_semigroupNonEmptyList'] = (object)["append" => (function() {
-  $__fn = function($v_0, $as_prime_1 = null) use (&$__fn) {
+$GLOBALS['Data_List_Lazy_Types_semigroupNonEmptyList'] = (object)["append" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($as_prime_1) use ($v_0) {
+  $__num = \func_num_args();
   $v1_2_0 = \Data\Lazy\majData_majLazy_force($v_0);
   $__local_var_3_1 = ($v1_2_0)->{'value0'};
   $__local_var_4_2 = ($v1_2_0)->{'value1'};
@@ -1367,10 +1463,12 @@ $GLOBALS['Data_List_Lazy_Types_semigroupNonEmptyList'] = (object)["append" => (f
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_List_Lazy_Types_traversableList
 $GLOBALS['Data_List_Lazy_Types_traversableList'] = (object)["traverse" => function($dictApplicative_0) {
@@ -1378,19 +1476,19 @@ $GLOBALS['Data_List_Lazy_Types_traversableList'] = (object)["traverse" => functi
   $Apply0_1_0 = (($dictApplicative_0)->{'Apply0'})(null);
   $__res = function($f_2) use ($Apply0_1_0, $dictApplicative_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_List_Lazy_Types_foldableList'])->{'foldr'})((function() use ($Apply0_1_0, $f_2) {
-  $__fn = function($a_3, $b_4 = null) use ($Apply0_1_0, $f_2, &$__fn) {
+  $__res = ((($GLOBALS['Data_List_Lazy_Types_foldableList'])->{'foldr'})(function($a_3) use ($Apply0_1_0, $f_2) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($b_4) use ($Apply0_1_0, $a_3, $f_2) {
+  $__num = \func_num_args();
   $__res = ((($Apply0_1_0)->{'apply'})(((((($Apply0_1_0)->{'Functor0'})(null))->{'map'})($GLOBALS['Data_List_Lazy_Types_cons']))(($f_2)($a_3))))($b_4);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()))((($dictApplicative_0)->{'pure'})($GLOBALS['Data_List_Lazy_Types_nil']));
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))((($dictApplicative_0)->{'pure'})($GLOBALS['Data_List_Lazy_Types_nil']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1419,18 +1517,16 @@ $GLOBALS['Data_List_Lazy_Types_traversableList'] = (object)["traverse" => functi
 }];
 
 // Data_List_Lazy_Types_traversableNonEmpty
-$GLOBALS['Data_List_Lazy_Types_traversableNonEmpty'] = \Data\NonEmpty\majData_majNonmajEmpty_traversablemajNonmajEmpty($GLOBALS['Data_List_Lazy_Types_traversableList']);
+$GLOBALS['Data_List_Lazy_Types_traversableNonEmpty'] = ($GLOBALS['Data_NonEmpty_traversableNonEmpty'])($GLOBALS['Data_List_Lazy_Types_traversableList']);
 
 // Data_List_Lazy_Types_traversableNonEmptyList
 $GLOBALS['Data_List_Lazy_Types_traversableNonEmptyList'] = (object)["traverse" => function($dictApplicative_0) {
   $__num = \func_num_args();
   $traverse1_1_0 = (($GLOBALS['Data_List_Lazy_Types_traversableNonEmpty'])->{'traverse'})($dictApplicative_0);
-  $__res = (function() use ($dictApplicative_0, $traverse1_1_0) {
-  $__fn = function($f_2, $v_3 = null) use ($dictApplicative_0, $traverse1_1_0, &$__fn) {
+  $__res = function($f_2) use ($dictApplicative_0, $traverse1_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_3) use ($dictApplicative_0, $f_2, $traverse1_1_0) {
+  $__num = \func_num_args();
   $__res = ((((((($dictApplicative_0)->{'Apply0'})(null))->{'Functor0'})(null))->{'map'})(function($xxs_4) {
   $__num = \func_num_args();
   $__res = \Data\Lazy\majData_majLazy_defer(function($v1_5) use ($xxs_4) {
@@ -1446,10 +1542,12 @@ $GLOBALS['Data_List_Lazy_Types_traversableNonEmptyList'] = (object)["traverse" =
 }))((($traverse1_1_0)($f_2))(\Data\Lazy\majData_majLazy_force($v_3)));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1498,19 +1596,25 @@ $GLOBALS['Data_List_Lazy_Types_traversableWithIndexList'] = (object)["traverseWi
   $Apply0_1_0 = (($dictApplicative_0)->{'Apply0'})(null);
   $__res = function($f_2) use ($Apply0_1_0, $dictApplicative_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_List_Lazy_Types_foldableWithIndexList'])->{'foldrWithIndex'})((function() use ($Apply0_1_0, $f_2) {
-  $__fn = function($i_3, $a_4 = null, $b_5 = null) use ($Apply0_1_0, $f_2, &$__fn) {
+  $__res = ((($GLOBALS['Data_List_Lazy_Types_foldableWithIndexList'])->{'foldrWithIndex'})(function($i_3) use ($Apply0_1_0, $f_2) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($a_4) use ($Apply0_1_0, $f_2, $i_3) {
+  $__num = \func_num_args();
+  $__res = function($b_5) use ($Apply0_1_0, $a_4, $f_2, $i_3) {
+  $__num = \func_num_args();
   $__res = ((($Apply0_1_0)->{'apply'})(((((($Apply0_1_0)->{'Functor0'})(null))->{'map'})($GLOBALS['Data_List_Lazy_Types_cons']))((($f_2)($i_3))($a_4))))($b_5);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()))((($dictApplicative_0)->{'pure'})($GLOBALS['Data_List_Lazy_Types_nil']));
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))((($dictApplicative_0)->{'pure'})($GLOBALS['Data_List_Lazy_Types_nil']));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1539,18 +1643,16 @@ $GLOBALS['Data_List_Lazy_Types_traversableWithIndexList'] = (object)["traverseWi
 }];
 
 // Data_List_Lazy_Types_traverseWithIndex
-$GLOBALS['Data_List_Lazy_Types_traverseWithIndex'] = (\Data\NonEmpty\majData_majNonmajEmpty_traversablemajWithmajIndexmajNonmajEmpty($GLOBALS['Data_List_Lazy_Types_traversableWithIndexList']))->{'traverseWithIndex'};
+$GLOBALS['Data_List_Lazy_Types_traverseWithIndex'] = (($GLOBALS['Data_NonEmpty_traversableWithIndexNonEmpty'])($GLOBALS['Data_List_Lazy_Types_traversableWithIndexList']))->{'traverseWithIndex'};
 
 // Data_List_Lazy_Types_traversableWithIndexNonEmptyList
 $GLOBALS['Data_List_Lazy_Types_traversableWithIndexNonEmptyList'] = (object)["traverseWithIndex" => function($dictApplicative_0) {
   $__num = \func_num_args();
   $traverseWithIndex1_1_0 = ($GLOBALS['Data_List_Lazy_Types_traverseWithIndex'])($dictApplicative_0);
-  $__res = (function() use ($dictApplicative_0, $traverseWithIndex1_1_0) {
-  $__fn = function($f_2, $v_3 = null) use ($dictApplicative_0, $traverseWithIndex1_1_0, &$__fn) {
+  $__res = function($f_2) use ($dictApplicative_0, $traverseWithIndex1_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_3) use ($dictApplicative_0, $f_2, $traverseWithIndex1_1_0) {
+  $__num = \func_num_args();
   $__res = ((((((($dictApplicative_0)->{'Apply0'})(null))->{'Functor0'})(null))->{'map'})(function($xxs_4) {
   $__num = \func_num_args();
   $__res = \Data\Lazy\majData_majLazy_defer(function($v1_5) use ($xxs_4) {
@@ -1584,10 +1686,12 @@ goto end_branch_1;;
 })))(\Data\Lazy\majData_majLazy_force($v_3)));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1614,12 +1718,10 @@ goto end_branch_1;;
 // Data_List_Lazy_Types_unfoldable1List
 $GLOBALS['Data_List_Lazy_Types_unfoldable1List'] = (function() use (&$__fn) {
 $go__go_0_0 = null;
-$go__go_0_0 = (function() use (&$go__go_0_0) {
-  $__fn = function($f_1, $b_2 = null) use (&$go__go_0_0, &$__fn) {
+$go__go_0_0 = function($f_1) use (&$go__go_0_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($b_2) use ($f_1, &$go__go_0_0) {
+  $__num = \func_num_args();
   $__res = (($GLOBALS['Data_List_Lazy_Types_lazyList'])->{'defer'})(function($v_3) use ($b_2, $f_1, &$go__go_0_0) {
   $__num = \func_num_args();
   $v1_4_1 = ($f_1)($b_2);
@@ -1657,22 +1759,22 @@ goto end_branch_2;;
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 return (object)["unfoldr1" => $go__go_0_0];
 })();
 
 // Data_List_Lazy_Types_unfoldableList
 $GLOBALS['Data_List_Lazy_Types_unfoldableList'] = (function() use (&$__fn) {
 $go__go_0_0 = null;
-$go__go_0_0 = (function() use (&$go__go_0_0) {
-  $__fn = function($f_1, $b_2 = null) use (&$go__go_0_0, &$__fn) {
+$go__go_0_0 = function($f_1) use (&$go__go_0_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($b_2) use ($f_1, &$go__go_0_0) {
+  $__num = \func_num_args();
   $__res = (($GLOBALS['Data_List_Lazy_Types_lazyList'])->{'defer'})(function($v_3) use ($b_2, $f_1, &$go__go_0_0) {
   $__num = \func_num_args();
   $v1_4_1 = ($f_1)($b_2);
@@ -1703,10 +1805,12 @@ goto end_branch_2;;
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 return (object)["unfoldr" => $go__go_0_0, "Unfoldable10" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_List_Lazy_Types_unfoldable1List'];
@@ -1717,15 +1821,13 @@ return (object)["unfoldr" => $go__go_0_0, "Unfoldable10" => function($_dollar__u
 })();
 
 // Data_List_Lazy_Types_unfoldr1
-$GLOBALS['Data_List_Lazy_Types_unfoldr1'] = (\Data\NonEmpty\majData_majNonmajEmpty_unfoldable1majNonmajEmpty($GLOBALS['Data_List_Lazy_Types_unfoldableList']))->{'unfoldr1'};
+$GLOBALS['Data_List_Lazy_Types_unfoldr1'] = (($GLOBALS['Data_NonEmpty_unfoldable1NonEmpty'])($GLOBALS['Data_List_Lazy_Types_unfoldableList']))->{'unfoldr1'};
 
 // Data_List_Lazy_Types_unfoldable1NonEmptyList
-$GLOBALS['Data_List_Lazy_Types_unfoldable1NonEmptyList'] = (object)["unfoldr1" => (function() {
-  $__fn = function($f_0, $b_1 = null) use (&$__fn) {
+$GLOBALS['Data_List_Lazy_Types_unfoldable1NonEmptyList'] = (object)["unfoldr1" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($b_1) use ($f_0) {
+  $__num = \func_num_args();
   $__res = \Data\Lazy\majData_majLazy_defer(function($v_2) use ($b_1, $f_0) {
   $__num = \func_num_args();
   $__res = (($GLOBALS['Data_List_Lazy_Types_unfoldr1'])($f_0))($b_1);
@@ -1735,10 +1837,12 @@ $GLOBALS['Data_List_Lazy_Types_unfoldable1NonEmptyList'] = (object)["unfoldr1" =
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_List_Lazy_Types_comonadNonEmptyList
 $GLOBALS['Data_List_Lazy_Types_comonadNonEmptyList'] = (object)["extract" => function($v_0) {
@@ -1771,12 +1875,10 @@ $GLOBALS['Data_List_Lazy_Types_monadList'] = (object)["Applicative0" => function
 }];
 
 // Data_List_Lazy_Types_bindList
-$GLOBALS['Data_List_Lazy_Types_bindList'] = (object)["bind" => (function() {
-  $__fn = function($xs_0, $f_1 = null) use (&$__fn) {
+$GLOBALS['Data_List_Lazy_Types_bindList'] = (object)["bind" => function($xs_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($f_1) use ($xs_0) {
+  $__num = \func_num_args();
   $__res = ((($GLOBALS['Data_Lazy_functorLazy'])->{'map'})(function($v_2) use ($f_1) {
   $__num = \func_num_args();
   $__t0 = null;;
@@ -1798,10 +1900,12 @@ goto end_branch_0;;
 }))($xs_0);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Apply0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Apply0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_List_Lazy_Types_applyList'];
   goto __end;;
@@ -1812,12 +1916,10 @@ goto end_branch_0;;
 // Data_List_Lazy_Types_applyList
 $GLOBALS['Data_List_Lazy_Types_applyList'] = (function() use (&$__fn) {
 $__local_var_0_0 = (($GLOBALS['Data_List_Lazy_Types_monadList'])->{'Bind1'})(null);
-return (object)["apply" => (function() use ($__local_var_0_0) {
-  $__fn = function($f_1, $a_2 = null) use ($__local_var_0_0, &$__fn) {
+return (object)["apply" => function($f_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($a_2) use ($__local_var_0_0, $f_1) {
+  $__num = \func_num_args();
   $__res = ((($__local_var_0_0)->{'bind'})($f_1))(function($f_prime_3) use ($__local_var_0_0, $a_2) {
   $__num = \func_num_args();
   $__res = ((($__local_var_0_0)->{'bind'})($a_2))(function($a_prime_4) use ($f_prime_3) {
@@ -1833,10 +1935,12 @@ return (object)["apply" => (function() use ($__local_var_0_0) {
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_List_Lazy_Types_functorList'];
   goto __end;;
@@ -1867,12 +1971,10 @@ $GLOBALS['Data_List_Lazy_Types_applicativeList'] = (object)["pure" => function($
 }];
 
 // Data_List_Lazy_Types_applyNonEmptyList
-$GLOBALS['Data_List_Lazy_Types_applyNonEmptyList'] = (object)["apply" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_List_Lazy_Types_applyNonEmptyList'] = (object)["apply" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) use ($v_0) {
+  $__num = \func_num_args();
   $v2_2_0 = \Data\Lazy\majData_majLazy_force($v1_1);
   $v3_3_1 = \Data\Lazy\majData_majLazy_force($v_0);
   $__local_var_4_2 = ($v2_2_0)->{'value0'};
@@ -1900,10 +2002,12 @@ $GLOBALS['Data_List_Lazy_Types_applyNonEmptyList'] = (object)["apply" => (functi
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_List_Lazy_Types_functorNonEmptyList'];
   goto __end;;
@@ -1912,12 +2016,10 @@ $GLOBALS['Data_List_Lazy_Types_applyNonEmptyList'] = (object)["apply" => (functi
 }];
 
 // Data_List_Lazy_Types_bindNonEmptyList
-$GLOBALS['Data_List_Lazy_Types_bindNonEmptyList'] = (object)["bind" => (function() {
-  $__fn = function($v_0, $f_1 = null) use (&$__fn) {
+$GLOBALS['Data_List_Lazy_Types_bindNonEmptyList'] = (object)["bind" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($f_1) use ($v_0) {
+  $__num = \func_num_args();
   $v1_2_0 = \Data\Lazy\majData_majLazy_force($v_0);
   $__local_var_3_1 = ($v1_2_0)->{'value1'};
   $v2_4_2 = \Data\Lazy\majData_majLazy_force(($f_1)(($v1_2_0)->{'value0'}));
@@ -1932,10 +2034,12 @@ $GLOBALS['Data_List_Lazy_Types_bindNonEmptyList'] = (object)["bind" => (function
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Apply0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Apply0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_List_Lazy_Types_applyNonEmptyList'];
   goto __end;;

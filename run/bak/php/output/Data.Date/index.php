@@ -127,14 +127,7 @@ $createDate = function($y, $m, $d) {
     return $dt;
 };
 
-$canonicalDateImpl = function($ctor, $y = null, $m = null, $d = null) use (&$canonicalDateImpl, $createDate) {
-    if (\func_num_args() < 4) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$canonicalDateImpl) {
-
-            return $canonicalDateImpl(...\array_merge($__args, $more));
-        };
-    }
+$canonicalDateImpl = function($ctor, $y, $m, $d) use (&$canonicalDateImpl, $createDate) {
 
     $date = $createDate($y, $m - 1, $d);
     return $ctor
@@ -143,27 +136,13 @@ $canonicalDateImpl = function($ctor, $y = null, $m = null, $d = null) use (&$can
         ((int)$date->format('j'));
 };
 
-$calcWeekday = function($y, $m = null, $d = null) use (&$calcWeekday, $createDate) {
-    if (\func_num_args() < 3) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$calcWeekday) {
-
-            return $calcWeekday(...\array_merge($__args, $more));
-        };
-    }
+$calcWeekday = function($y, $m, $d) use (&$calcWeekday, $createDate) {
 
     $date = $createDate($y, $m - 1, $d);
     return (int)$date->format('w'); // 0 (for Sunday) through 6 (for Saturday)
 };
 
-$calcDiff = function($y1, $m1 = null, $d1 = null, $y2 = null, $m2 = null, $d2 = null) use (&$calcDiff, $createDate) {
-    if (\func_num_args() < 6) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$calcDiff) {
-
-            return $calcDiff(...\array_merge($__args, $more));
-        };
-    }
+$calcDiff = function($y1, $m1, $d1, $y2, $m2, $d2) use (&$calcDiff, $createDate) {
 
     $dt1 = $createDate($y1, $m1 - 1, $d1);
     $dt2 = $createDate($y2, $m2 - 1, $d2);
@@ -185,10 +164,10 @@ $GLOBALS['Data_Date_canonicalDateImpl'] = (\array_key_exists('canonicalDateImpl'
 
 final class Data_Date_Date { public $tag = 'Date'; public function __construct(public int $value0, public  $value1, public int $value2) {} }
 
-// Data_Date_fromJust
-function majData_majDate_frommajJust($v_0) {
+// Data_Date_fromJust1
+function majData_majDate_frommajJust1($v_0): int|\Closure {
   $__num = \func_num_args();
-  $__fn = __NAMESPACE__ . '\\' . 'majData_majDate_frommajJust';
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majDate_frommajJust1';
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
@@ -205,72 +184,154 @@ goto end_branch_0;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }
-$GLOBALS['Data_Date_fromJust'] = __NAMESPACE__ . '\\majData_majDate_frommajJust';
+$GLOBALS['Data_Date_fromJust1'] = __NAMESPACE__ . '\\majData_majDate_frommajJust1';
 
 // Data_Date_greaterThan
-function majData_majDate_greatermajThan($a1_0, $a2_1 = null) {
+$GLOBALS['Data_Date_greaterThan'] = (function() use (&$__fn) {
+$__local_var_0_0 = (($GLOBALS['Data_Date_Component_ordDay'])->{'Eq0'})(null);
+$eqMaybe1_0_0 = (object)["eq" => function($x_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  $__fn = __NAMESPACE__ . '\\' . 'majData_majDate_greatermajThan';
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__t0 = null;;
-  if ($a1_0 instanceof \Data\Maybe\Data_Maybe_Nothing) {
-$__t0 = false;
-goto end_branch_0;;
+  $__res = function($y_2) use ($__local_var_0_0, $x_1) {
+  $__num = \func_num_args();
+  $__t1 = null;;
+  if ($x_1 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t2 = null;;
+if ($y_2 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t2 = true;
+goto end_branch_2;;
 };
-  if ($a2_1 instanceof \Data\Maybe\Data_Maybe_Nothing) {
-$__t0 = true;
-goto end_branch_0;;
+$__t2 = false;
+end_branch_2:;
+$__t1 = $__t2;
+goto end_branch_1;;
 };
-  if (($a1_0 instanceof \Data\Maybe\Data_Maybe_Just && $a2_1 instanceof \Data\Maybe\Data_Maybe_Just)) {
-$__t0 = ((($GLOBALS['Data_Date_Component_ordDay'])->{'compare'})(($a1_0)->{'value0'}))(($a2_1)->{'value0'}) instanceof \Data\Ordering\Data_Ordering_GT;
-goto end_branch_0;;
+  if (($x_1 instanceof \Data\Maybe\Data_Maybe_Just && $y_2 instanceof \Data\Maybe\Data_Maybe_Just)) {
+$__t1 = ((($__local_var_0_0)->{'eq'})(($x_1)->{'value0'}))(($y_2)->{'value0'});
+goto end_branch_1;;
 };
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t0 = null;
-  end_branch_0:;
-  $__res = $__t0;
+  $__t1 = false;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
-  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-}
-$GLOBALS['Data_Date_greaterThan'] = __NAMESPACE__ . '\\majData_majDate_greatermajThan';
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+$__local_var_1_4 = (object)["compare" => function($x_1) {
+  $__num = \func_num_args();
+  $__res = function($y_2) use ($x_1) {
+  $__num = \func_num_args();
+  $__t4 = null;;
+  if ($x_1 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t5 = null;;
+if ($y_2 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t5 = new \Data\Ordering\Data_Ordering_EQ();
+goto end_branch_5;;
+};
+$__t5 = new \Data\Ordering\Data_Ordering_LT();
+end_branch_5:;
+$__t4 = $__t5;
+goto end_branch_4;;
+};
+  if ($y_2 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t4 = new \Data\Ordering\Data_Ordering_GT();
+goto end_branch_4;;
+};
+  if (($x_1 instanceof \Data\Maybe\Data_Maybe_Just && $y_2 instanceof \Data\Maybe\Data_Maybe_Just)) {
+$__t4 = ((($GLOBALS['Data_Date_Component_ordDay'])->{'compare'})(($x_1)->{'value0'}))(($y_2)->{'value0'});
+goto end_branch_4;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t4 = null;
+  end_branch_4:;
+  $__res = $__t4;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Eq0" => function($_dollar__unused_1) use ($eqMaybe1_0_0) {
+  $__num = \func_num_args();
+  $__res = $eqMaybe1_0_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+return function($a1_2) use ($__local_var_1_4) {
+  $__num = \func_num_args();
+  $__res = function($a2_3) use ($__local_var_1_4, $a1_2) {
+  $__num = \func_num_args();
+  $__t7 = null;;
+  if (((($__local_var_1_4)->{'compare'})($a1_2))($a2_3) instanceof \Data\Ordering\Data_Ordering_GT) {
+$__t7 = true;
+goto end_branch_7;;
+};
+  $__t7 = false;
+  end_branch_7:;
+  $__res = $__t7;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+})();
 
 // Data_Date_lessThan
 $GLOBALS['Data_Date_lessThan'] = (function() use (&$__fn) {
 $__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
-return (function() use ($__local_var_0_0) {
-  $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+return function($a1_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT;
+  $__res = function($a2_2) use ($__local_var_0_0, $a1_1) {
+  $__num = \func_num_args();
+  $__t1 = null;;
+  if ((($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT) {
+$__t1 = true;
+goto end_branch_1;;
+};
+  $__t1 = false;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 })();
 
 // Data_Date_greaterThan1
 $GLOBALS['Data_Date_greaterThan1'] = (function() use (&$__fn) {
 $__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
-return (function() use ($__local_var_0_0) {
-  $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+return function($a1_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_GT;
+  $__res = function($a2_2) use ($__local_var_0_0, $a1_1) {
+  $__num = \func_num_args();
+  $__t1 = null;;
+  if ((($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_GT) {
+$__t1 = true;
+goto end_branch_1;;
+};
+  $__t1 = false;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 })();
 
 // Data_Date_Date
@@ -392,7 +453,7 @@ function majData_majDate_lastmajDaymajOfmajMonth(int $y_0, $m_1 = null): int|\Cl
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $unsafeDay_2_0 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Date_fromJust']))(($GLOBALS['Data_Date_Component_boundedEnumDay'])->{'toEnum'});
+  $unsafeDay_2_0 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Date_fromJust1']))(($GLOBALS['Data_Date_Component_boundedEnumDay'])->{'toEnum'});
   $__t1 = null;;
   if ($m_1 instanceof \Data\Date\Component\Data_Date_Component_January) {
 $__t1 = ($unsafeDay_2_0)(31);
@@ -460,27 +521,25 @@ goto end_branch_1;;
 $GLOBALS['Data_Date_lastDayOfMonth'] = __NAMESPACE__ . '\\majData_majDate_lastmajDaymajOfmajMonth';
 
 // Data_Date_eqDate
-$GLOBALS['Data_Date_eqDate'] = (object)["eq" => (function() {
-  $__fn = function($x_0, $y_1 = null) use (&$__fn) {
+$GLOBALS['Data_Date_eqDate'] = (object)["eq" => function($x_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_1) use ($x_0) {
+  $__num = \func_num_args();
   $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($GLOBALS['Data_Date_Component_eqYear'])->{'eq'})(($x_0)->{'value0'}))(($y_1)->{'value0'})))(((($GLOBALS['Data_Date_Component_eqMonth'])->{'eq'})(($x_0)->{'value1'}))(($y_1)->{'value1'}))))(((($GLOBALS['Data_Date_Component_eqDay'])->{'eq'})(($x_0)->{'value2'}))(($y_1)->{'value2'}));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Date_ordDate
-$GLOBALS['Data_Date_ordDate'] = (object)["compare" => (function() {
-  $__fn = function($x_0, $y_1 = null) use (&$__fn) {
+$GLOBALS['Data_Date_ordDate'] = (object)["compare" => function($x_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_1) use ($x_0) {
+  $__num = \func_num_args();
   $v_2_0 = ((($GLOBALS['Data_Date_Component_ordYear'])->{'compare'})(($x_0)->{'value0'}))(($y_1)->{'value0'});
   $__t3 = null;;
   if ($v_2_0 instanceof \Data\Ordering\Data_Ordering_LT) {
@@ -508,10 +567,12 @@ goto end_branch_2;;
   $__res = $__t3;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Eq0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Eq0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Date_eqDate'];
   goto __end;;
@@ -763,12 +824,12 @@ function majData_majDate_canonicalmajDate(int $y_0, $m_1 = null, $d_2 = null) {
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ($GLOBALS['Data_Date_canonicalDateImpl'])((function() {
-  $__fn = function($y_prime_3, $m_prime_4 = null, $d_prime_5 = null) use (&$__fn) {
+  $__res = ($GLOBALS['Data_Date_canonicalDateImpl'])(function($y_prime_3) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($m_prime_4) use ($y_prime_3) {
+  $__num = \func_num_args();
+  $__res = function($d_prime_5) use ($m_prime_4, $y_prime_3) {
+  $__num = \func_num_args();
   $__local_var_6_0 = (($GLOBALS['Data_Date_Component_boundedEnumMonth'])->{'toEnum'})($m_prime_4);
   $__t1 = null;;
   if ($__local_var_6_0 instanceof \Data\Maybe\Data_Maybe_Just) {
@@ -781,10 +842,16 @@ goto end_branch_1;;
   $__res = new \Data\Date\Data_Date_Date($y_prime_3, $__t1, $d_prime_5);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(), $y_0, (($GLOBALS['Data_Date_Component_boundedEnumMonth'])->{'fromEnum'})($m_1), $d_2);
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, $y_0, (($GLOBALS['Data_Date_Component_boundedEnumMonth'])->{'fromEnum'})($m_1), $d_2);
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -829,12 +896,10 @@ function majData_majDate_adjust(float $v_0, $date_1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $adj_2_0 = null;
-  $adj_2_0 = (function() use (&$adj_2_0) {
-  $__fn = function($v1_3, $v2_4 = null) use (&$adj_2_0, &$__fn) {
+  $adj_2_0 = function($v1_3) use (&$adj_2_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v2_4) use (&$adj_2_0, $v1_3) {
+  $__num = \func_num_args();
   $__t10 = null;;
   switch ($v1_3) {
 case 0:
@@ -896,10 +961,12 @@ goto end_branch_9;;
   $__res = $__t10;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   $__res = ((($GLOBALS['Data_Maybe_bindMaybe'])->{'bind'})(\Data\Int\majData_majInt_frommajNumber($v_0)))(function($a_3) use (&$adj_2_0, $date_1) {
   $__num = \func_num_args();
   $__res = (($adj_2_0)($a_3))($date_1);

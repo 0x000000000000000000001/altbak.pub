@@ -117,13 +117,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_FunctorWithIndex = \call_user_func(function() {
   $exports = [];
-$mapWithIndexArray = function($f, $xs = null) use (&$mapWithIndexArray) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$mapWithIndexArray) {
-            return $mapWithIndexArray(...\array_merge($__args, $more));
-        };
-    }
+$mapWithIndexArray = function($f, $xs) use (&$mapWithIndexArray) {
     
     $len = \count($xs);
     $result = array_fill(0, $len, null);
@@ -215,19 +209,19 @@ function majData_majFunctormajWithmajIndex_functormajWithmajIndexmajProduct($dic
   $__res = function($dictFunctorWithIndex1_2) use ($dictFunctorWithIndex_0, $functorProduct_1_0) {
   $__num = \func_num_args();
   $functorProduct1_3_1 = ($functorProduct_1_0)((($dictFunctorWithIndex1_2)->{'Functor0'})(null));
-  $__res = (object)["mapWithIndex" => (function() use ($dictFunctorWithIndex1_2, $dictFunctorWithIndex_0) {
-  $__fn = function($f_4, $v_5 = null) use ($dictFunctorWithIndex1_2, $dictFunctorWithIndex_0, &$__fn) {
+  $__res = (object)["mapWithIndex" => function($f_4) use ($dictFunctorWithIndex1_2, $dictFunctorWithIndex_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_5) use ($dictFunctorWithIndex1_2, $dictFunctorWithIndex_0, $f_4) {
+  $__num = \func_num_args();
   $__res = (((($GLOBALS['Data_Bifunctor_bifunctorTuple'])->{'bimap'})((($dictFunctorWithIndex_0)->{'mapWithIndex'})((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_4))($GLOBALS['Data_Either_Left']))))((($dictFunctorWithIndex1_2)->{'mapWithIndex'})((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_4))($GLOBALS['Data_Either_Right']))))($v_5);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_4) use ($functorProduct1_3_1) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_4) use ($functorProduct1_3_1) {
   $__num = \func_num_args();
   $__res = $functorProduct1_3_1;
   goto __end;;
@@ -290,19 +284,19 @@ $GLOBALS['Data_FunctorWithIndex_functorWithIndexLast'] = (object)["mapWithIndex"
 }];
 
 // Data_FunctorWithIndex_functorWithIndexIdentity
-$GLOBALS['Data_FunctorWithIndex_functorWithIndexIdentity'] = (object)["mapWithIndex" => (function() {
-  $__fn = function($f_0, $v_1 = null) use (&$__fn) {
+$GLOBALS['Data_FunctorWithIndex_functorWithIndexIdentity'] = (object)["mapWithIndex" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_1) use ($f_0) {
+  $__num = \func_num_args();
   $__res = (($f_0)($GLOBALS['Data_Unit_unit']))($v_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Identity_functorIdentity'];
   goto __end;;
@@ -381,19 +375,19 @@ function majData_majFunctormajWithmajIndex_functormajWithmajIndexmajCoproduct($d
   $__res = function($dictFunctorWithIndex1_2) use ($dictFunctorWithIndex_0, $functorCoproduct_1_0) {
   $__num = \func_num_args();
   $functorCoproduct1_3_1 = ($functorCoproduct_1_0)((($dictFunctorWithIndex1_2)->{'Functor0'})(null));
-  $__res = (object)["mapWithIndex" => (function() use ($dictFunctorWithIndex1_2, $dictFunctorWithIndex_0) {
-  $__fn = function($f_4, $v_5 = null) use ($dictFunctorWithIndex1_2, $dictFunctorWithIndex_0, &$__fn) {
+  $__res = (object)["mapWithIndex" => function($f_4) use ($dictFunctorWithIndex1_2, $dictFunctorWithIndex_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_5) use ($dictFunctorWithIndex1_2, $dictFunctorWithIndex_0, $f_4) {
+  $__num = \func_num_args();
   $__res = (((($GLOBALS['Data_Bifunctor_bifunctorEither'])->{'bimap'})((($dictFunctorWithIndex_0)->{'mapWithIndex'})((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_4))($GLOBALS['Data_Either_Left']))))((($dictFunctorWithIndex1_2)->{'mapWithIndex'})((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_4))($GLOBALS['Data_Either_Right']))))($v_5);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_4) use ($functorCoproduct1_3_1) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_4) use ($functorCoproduct1_3_1) {
   $__num = \func_num_args();
   $__res = $functorCoproduct1_3_1;
   goto __end;;
@@ -411,19 +405,19 @@ function majData_majFunctormajWithmajIndex_functormajWithmajIndexmajCoproduct($d
 $GLOBALS['Data_FunctorWithIndex_functorWithIndexCoproduct'] = __NAMESPACE__ . '\\majData_majFunctormajWithmajIndex_functormajWithmajIndexmajCoproduct';
 
 // Data_FunctorWithIndex_functorWithIndexConst
-$GLOBALS['Data_FunctorWithIndex_functorWithIndexConst'] = (object)["mapWithIndex" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_FunctorWithIndex_functorWithIndexConst'] = (object)["mapWithIndex" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) {
+  $__num = \func_num_args();
   $__res = $v1_1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Const_functorConst'];
   goto __end;;
@@ -458,46 +452,46 @@ function majData_majFunctormajWithmajIndex_functormajWithmajIndexmajCompose($dic
   $__num = \func_num_args();
   $mapWithIndex2_3_1 = ($dictFunctorWithIndex1_2)->{'mapWithIndex'};
   $__local_var_4_2 = (($dictFunctorWithIndex1_2)->{'Functor0'})(null);
-  $functorCompose1_5_3 = (object)["map" => (function() use ($__local_var_1_0, $__local_var_4_2) {
-  $__fn = function($f_5, $v_6 = null) use ($__local_var_1_0, $__local_var_4_2, &$__fn) {
+  $functorCompose1_4_2 = (object)["map" => function($f_5) use ($__local_var_1_0, $__local_var_4_2) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_6) use ($__local_var_1_0, $__local_var_4_2, $f_5) {
+  $__num = \func_num_args();
   $__res = ((($__local_var_1_0)->{'map'})((($__local_var_4_2)->{'map'})($f_5)))($v_6);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
-  $__res = (object)["mapWithIndex" => (function() use ($dictFunctorWithIndex_0, $mapWithIndex2_3_1) {
-  $__fn = function($f_6, $v_7 = null) use ($dictFunctorWithIndex_0, $mapWithIndex2_3_1, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($dictFunctorWithIndex_0)->{'mapWithIndex'})((($GLOBALS['Control_Semigroupoid_composeImpl'])($mapWithIndex2_3_1))((function() use ($f_6) {
-  $__fn = function($a_8, $b_9 = null) use ($f_6, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ($f_6)(new \Data\Tuple\Data_Tuple_Tuple($a_8, $b_9));
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})())))($v_7);
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = (object)["mapWithIndex" => function($f_5) use ($dictFunctorWithIndex_0, $mapWithIndex2_3_1) {
+  $__num = \func_num_args();
+  $__res = function($v_6) use ($dictFunctorWithIndex_0, $f_5, $mapWithIndex2_3_1) {
+  $__num = \func_num_args();
+  $__res = ((($dictFunctorWithIndex_0)->{'mapWithIndex'})((($GLOBALS['Control_Semigroupoid_composeImpl'])($mapWithIndex2_3_1))(function($a_7) use ($f_5) {
+  $__num = \func_num_args();
+  $__res = function($b_8) use ($a_7, $f_5) {
+  $__num = \func_num_args();
+  $__res = ($f_5)(new \Data\Tuple\Data_Tuple_Tuple($a_7, $b_8));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_6) use ($functorCompose1_5_3) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+})))($v_6);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_5) use ($functorCompose1_4_2) {
   $__num = \func_num_args();
-  $__res = $functorCompose1_5_3;
+  $__res = $functorCompose1_4_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -528,22 +522,22 @@ function majData_majFunctormajWithmajIndex_functormajWithmajIndexmajApp($dictFun
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = (($dictFunctorWithIndex_0)->{'Functor0'})(null);
-  $__res = (object)["mapWithIndex" => (function() use ($dictFunctorWithIndex_0) {
-  $__fn = function($f_2, $v_3 = null) use ($dictFunctorWithIndex_0, &$__fn) {
+  $functorApp_1_0 = (($dictFunctorWithIndex_0)->{'Functor0'})(null);
+  $__res = (object)["mapWithIndex" => function($f_2) use ($dictFunctorWithIndex_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_3) use ($dictFunctorWithIndex_0, $f_2) {
+  $__num = \func_num_args();
   $__res = ((($dictFunctorWithIndex_0)->{'mapWithIndex'})($f_2))($v_3);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_2) use ($__local_var_1_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_2) use ($functorApp_1_0) {
   $__num = \func_num_args();
-  $__res = $__local_var_1_0;
+  $__res = $functorApp_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

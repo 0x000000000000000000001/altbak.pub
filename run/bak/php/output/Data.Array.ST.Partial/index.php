@@ -99,25 +99,11 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Array_ST_Partial = \call_user_func(function() {
   $exports = [];
-$peekImpl = function($i, $xs = null) use (&$peekImpl) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$peekImpl) {
-
-            return $peekImpl(...\array_merge($__args, $more));
-        };
-    }
+$peekImpl = function($i, $xs) use (&$peekImpl) {
     return $xs->value[$i];
 };
 
-$pokeImpl = function($i, $a = null, $xs = null) use (&$pokeImpl) {
-    if (\func_num_args() < 3) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$pokeImpl) {
-
-            return $pokeImpl(...\array_merge($__args, $more));
-        };
-    }
+$pokeImpl = function($i, $a, $xs) use (&$pokeImpl) {
     $xs->value[$i] = $a;
     return null; // pure purescript FFI typically returns undefined/Unit here if not STFn, wait, pokeImpl here is an STFn! STFn3 doesn't return anything useful?
 };

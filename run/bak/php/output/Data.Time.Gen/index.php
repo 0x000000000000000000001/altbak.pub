@@ -110,7 +110,7 @@ function majData_majTime_majGen_genmajTime($dictMonadGen_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $Apply0_1_0 = (((((($dictMonadGen_0)->{'Monad0'})(null))->{'Bind1'})(null))->{'Apply0'})(null);
-  $__res = ((($Apply0_1_0)->{'apply'})(((($Apply0_1_0)->{'apply'})(((($Apply0_1_0)->{'apply'})(((((($Apply0_1_0)->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Time_Time']))(\Data\Enum\Gen\majData_majEnum_majGen_genmajBoundedmajEnum($dictMonadGen_0, $GLOBALS['Data_Time_Component_boundedEnumHour']))))(\Data\Enum\Gen\majData_majEnum_majGen_genmajBoundedmajEnum($dictMonadGen_0, $GLOBALS['Data_Time_Component_boundedEnumMinute']))))(\Data\Enum\Gen\majData_majEnum_majGen_genmajBoundedmajEnum($dictMonadGen_0, $GLOBALS['Data_Time_Component_boundedEnumSecond']))))(\Data\Enum\Gen\majData_majEnum_majGen_genmajBoundedmajEnum($dictMonadGen_0, $GLOBALS['Data_Time_Component_boundedEnumMillisecond']));
+  $__res = ((($Apply0_1_0)->{'apply'})(((($Apply0_1_0)->{'apply'})(((($Apply0_1_0)->{'apply'})(((((($Apply0_1_0)->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Time_Time']))((($GLOBALS['Data_Enum_Gen_genBoundedEnum'])($dictMonadGen_0))($GLOBALS['Data_Time_Component_boundedEnumHour']))))((($GLOBALS['Data_Enum_Gen_genBoundedEnum'])($dictMonadGen_0))($GLOBALS['Data_Time_Component_boundedEnumMinute']))))((($GLOBALS['Data_Enum_Gen_genBoundedEnum'])($dictMonadGen_0))($GLOBALS['Data_Time_Component_boundedEnumSecond']))))((($GLOBALS['Data_Enum_Gen_genBoundedEnum'])($dictMonadGen_0))($GLOBALS['Data_Time_Component_boundedEnumMillisecond']));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

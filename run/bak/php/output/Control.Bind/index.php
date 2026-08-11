@@ -102,14 +102,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Control_Bind = \call_user_func(function() {
   $exports = [];
-$arrayBind = function($xs, $f = null) use (&$arrayBind) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$arrayBind) {
-
-            return $arrayBind(...\array_merge($__args, $more));
-        };
-    }
+$arrayBind = function($xs, $f) use (&$arrayBind) {
     $r = []; foreach($xs as $x) { foreach($f($x) as $y) { $r[] = $y; } } return $r;
 };
 
@@ -162,19 +155,19 @@ function majControl_majBind_discard($dict_0) {
 $GLOBALS['Control_Bind_discard'] = __NAMESPACE__ . '\\majControl_majBind_discard';
 
 // Control_Bind_bindProxy
-$GLOBALS['Control_Bind_bindProxy'] = (object)["bind" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Control_Bind_bindProxy'] = (object)["bind" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) {
+  $__num = \func_num_args();
   $__res = new \Type\Proxy\Type_Proxy_Proxy();
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Apply0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Apply0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Apply_applyProxy'];
   goto __end;;
@@ -183,19 +176,25 @@ $GLOBALS['Control_Bind_bindProxy'] = (object)["bind" => (function() {
 }];
 
 // Control_Bind_bindFn
-$GLOBALS['Control_Bind_bindFn'] = (object)["bind" => (function() {
-  $__fn = function($m_0, $f_1 = null, $x_2 = null) use (&$__fn) {
+$GLOBALS['Control_Bind_bindFn'] = (object)["bind" => function($m_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($f_1) use ($m_0) {
+  $__num = \func_num_args();
+  $__res = function($x_2) use ($f_1, $m_0) {
+  $__num = \func_num_args();
   $__res = (($f_1)(($m_0)($x_2)))($x_2);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(), "Apply0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Apply0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Apply_applyFn'];
   goto __end;;

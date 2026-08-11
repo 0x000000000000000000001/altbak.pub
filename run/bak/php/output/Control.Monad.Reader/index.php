@@ -107,16 +107,16 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $GLOBALS['Control_Monad_Reader_withReader_closure'] = $GLOBALS['Control_Monad_Reader_Trans_withReaderT'];
 
 // Control_Monad_Reader_withReader
-function majControl_majMonad_majReader_withmajReader($v_0, $v_1 = null, $v_2 = null) {
+function majControl_majMonad_majReader_withmajReader($v_0, $v_1 = null) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majReader_withmajReader';
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Control_Monad_Reader_withReader_closure'])($v_0, $v_1, $v_2);
+  $__res = ($GLOBALS['Control_Monad_Reader_withReader_closure'])($v_0, $v_1);
   goto __end;;
   __end:
-  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
 }
 $GLOBALS['Control_Monad_Reader_withReader'] = __NAMESPACE__ . '\\majControl_majMonad_majReader_withmajReader';
 

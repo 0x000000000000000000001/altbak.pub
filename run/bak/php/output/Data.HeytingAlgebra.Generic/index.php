@@ -186,43 +186,43 @@ function majData_majHeytingmajAlgebra_majGeneric_genericmajImplies($dictGeneric_
 $GLOBALS['Data_HeytingAlgebra_Generic_genericImplies'] = __NAMESPACE__ . '\\majData_majHeytingmajAlgebra_majGeneric_genericmajImplies';
 
 // Data_HeytingAlgebra_Generic_genericHeytingAlgebraNoArguments
-$GLOBALS['Data_HeytingAlgebra_Generic_genericHeytingAlgebraNoArguments'] = (object)["genericFF__prime__" => new \Data\Generic\Rep\Data_Generic_Rep_NoArguments(), "genericTT__prime__" => new \Data\Generic\Rep\Data_Generic_Rep_NoArguments(), "genericImplies__prime__" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_HeytingAlgebra_Generic_genericHeytingAlgebraNoArguments'] = (object)["genericFF__prime__" => new \Data\Generic\Rep\Data_Generic_Rep_NoArguments(), "genericTT__prime__" => new \Data\Generic\Rep\Data_Generic_Rep_NoArguments(), "genericImplies__prime__" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) {
+  $__num = \func_num_args();
   $__res = new \Data\Generic\Rep\Data_Generic_Rep_NoArguments();
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "genericConj__prime__" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "genericConj__prime__" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) {
+  $__num = \func_num_args();
   $__res = new \Data\Generic\Rep\Data_Generic_Rep_NoArguments();
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "genericDisj__prime__" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "genericDisj__prime__" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) {
+  $__num = \func_num_args();
   $__res = new \Data\Generic\Rep\Data_Generic_Rep_NoArguments();
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "genericNot__prime__" => function($v_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "genericNot__prime__" => function($v_0) {
   $__num = \func_num_args();
   $__res = new \Data\Generic\Rep\Data_Generic_Rep_NoArguments();
   goto __end;;
@@ -237,43 +237,43 @@ function majData_majHeytingmajAlgebra_majGeneric_genericmajHeytingmajAlgebramajA
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["genericFF__prime__" => ($dictHeytingAlgebra_0)->{'ff'}, "genericTT__prime__" => ($dictHeytingAlgebra_0)->{'tt'}, "genericImplies__prime__" => (function() use ($dictHeytingAlgebra_0) {
-  $__fn = function($v_1, $v1_2 = null) use ($dictHeytingAlgebra_0, &$__fn) {
+  $__res = (object)["genericFF__prime__" => ($dictHeytingAlgebra_0)->{'ff'}, "genericTT__prime__" => ($dictHeytingAlgebra_0)->{'tt'}, "genericImplies__prime__" => function($v_1) use ($dictHeytingAlgebra_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_2) use ($dictHeytingAlgebra_0, $v_1) {
+  $__num = \func_num_args();
   $__res = ((($dictHeytingAlgebra_0)->{'implies'})($v_1))($v1_2);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "genericConj__prime__" => (function() use ($dictHeytingAlgebra_0) {
-  $__fn = function($v_1, $v1_2 = null) use ($dictHeytingAlgebra_0, &$__fn) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "genericConj__prime__" => function($v_1) use ($dictHeytingAlgebra_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_2) use ($dictHeytingAlgebra_0, $v_1) {
+  $__num = \func_num_args();
   $__res = ((($dictHeytingAlgebra_0)->{'conj'})($v_1))($v1_2);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "genericDisj__prime__" => (function() use ($dictHeytingAlgebra_0) {
-  $__fn = function($v_1, $v1_2 = null) use ($dictHeytingAlgebra_0, &$__fn) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "genericDisj__prime__" => function($v_1) use ($dictHeytingAlgebra_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_2) use ($dictHeytingAlgebra_0, $v_1) {
+  $__num = \func_num_args();
   $__res = ((($dictHeytingAlgebra_0)->{'disj'})($v_1))($v1_2);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "genericNot__prime__" => function($v_1) use ($dictHeytingAlgebra_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "genericNot__prime__" => function($v_1) use ($dictHeytingAlgebra_0) {
   $__num = \func_num_args();
   $__res = (($dictHeytingAlgebra_0)->{'not'})($v_1);
   goto __end;;
@@ -363,43 +363,43 @@ function majData_majHeytingmajAlgebra_majGeneric_genericmajHeytingmajAlgebramajC
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["genericFF__prime__" => ($dictGenericHeytingAlgebra_0)->{'genericFF__prime__'}, "genericTT__prime__" => ($dictGenericHeytingAlgebra_0)->{'genericTT__prime__'}, "genericImplies__prime__" => (function() use ($dictGenericHeytingAlgebra_0) {
-  $__fn = function($v_1, $v1_2 = null) use ($dictGenericHeytingAlgebra_0, &$__fn) {
+  $__res = (object)["genericFF__prime__" => ($dictGenericHeytingAlgebra_0)->{'genericFF__prime__'}, "genericTT__prime__" => ($dictGenericHeytingAlgebra_0)->{'genericTT__prime__'}, "genericImplies__prime__" => function($v_1) use ($dictGenericHeytingAlgebra_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_2) use ($dictGenericHeytingAlgebra_0, $v_1) {
+  $__num = \func_num_args();
   $__res = ((($dictGenericHeytingAlgebra_0)->{'genericImplies__prime__'})($v_1))($v1_2);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "genericConj__prime__" => (function() use ($dictGenericHeytingAlgebra_0) {
-  $__fn = function($v_1, $v1_2 = null) use ($dictGenericHeytingAlgebra_0, &$__fn) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "genericConj__prime__" => function($v_1) use ($dictGenericHeytingAlgebra_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_2) use ($dictGenericHeytingAlgebra_0, $v_1) {
+  $__num = \func_num_args();
   $__res = ((($dictGenericHeytingAlgebra_0)->{'genericConj__prime__'})($v_1))($v1_2);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "genericDisj__prime__" => (function() use ($dictGenericHeytingAlgebra_0) {
-  $__fn = function($v_1, $v1_2 = null) use ($dictGenericHeytingAlgebra_0, &$__fn) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "genericDisj__prime__" => function($v_1) use ($dictGenericHeytingAlgebra_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_2) use ($dictGenericHeytingAlgebra_0, $v_1) {
+  $__num = \func_num_args();
   $__res = ((($dictGenericHeytingAlgebra_0)->{'genericDisj__prime__'})($v_1))($v1_2);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "genericNot__prime__" => function($v_1) use ($dictGenericHeytingAlgebra_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "genericNot__prime__" => function($v_1) use ($dictGenericHeytingAlgebra_0) {
   $__num = \func_num_args();
   $__res = (($dictGenericHeytingAlgebra_0)->{'genericNot__prime__'})($v_1);
   goto __end;;
@@ -423,43 +423,43 @@ function majData_majHeytingmajAlgebra_majGeneric_genericmajHeytingmajAlgebramajP
   $genericTT_prime1_2_1 = ($dictGenericHeytingAlgebra_0)->{'genericTT__prime__'};
   $__res = function($dictGenericHeytingAlgebra1_3) use ($dictGenericHeytingAlgebra_0, $genericFF_prime1_1_0, $genericTT_prime1_2_1) {
   $__num = \func_num_args();
-  $__res = (object)["genericFF__prime__" => new \Data\Generic\Rep\Data_Generic_Rep_Product($genericFF_prime1_1_0, ($dictGenericHeytingAlgebra1_3)->{'genericFF__prime__'}), "genericTT__prime__" => new \Data\Generic\Rep\Data_Generic_Rep_Product($genericTT_prime1_2_1, ($dictGenericHeytingAlgebra1_3)->{'genericTT__prime__'}), "genericImplies__prime__" => (function() use ($dictGenericHeytingAlgebra1_3, $dictGenericHeytingAlgebra_0) {
-  $__fn = function($v_4, $v1_5 = null) use ($dictGenericHeytingAlgebra1_3, $dictGenericHeytingAlgebra_0, &$__fn) {
+  $__res = (object)["genericFF__prime__" => new \Data\Generic\Rep\Data_Generic_Rep_Product($genericFF_prime1_1_0, ($dictGenericHeytingAlgebra1_3)->{'genericFF__prime__'}), "genericTT__prime__" => new \Data\Generic\Rep\Data_Generic_Rep_Product($genericTT_prime1_2_1, ($dictGenericHeytingAlgebra1_3)->{'genericTT__prime__'}), "genericImplies__prime__" => function($v_4) use ($dictGenericHeytingAlgebra1_3, $dictGenericHeytingAlgebra_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_5) use ($dictGenericHeytingAlgebra1_3, $dictGenericHeytingAlgebra_0, $v_4) {
+  $__num = \func_num_args();
   $__res = new \Data\Generic\Rep\Data_Generic_Rep_Product(((($dictGenericHeytingAlgebra_0)->{'genericImplies__prime__'})(($v_4)->{'value0'}))(($v1_5)->{'value0'}), ((($dictGenericHeytingAlgebra1_3)->{'genericImplies__prime__'})(($v_4)->{'value1'}))(($v1_5)->{'value1'}));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "genericConj__prime__" => (function() use ($dictGenericHeytingAlgebra1_3, $dictGenericHeytingAlgebra_0) {
-  $__fn = function($v_4, $v1_5 = null) use ($dictGenericHeytingAlgebra1_3, $dictGenericHeytingAlgebra_0, &$__fn) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "genericConj__prime__" => function($v_4) use ($dictGenericHeytingAlgebra1_3, $dictGenericHeytingAlgebra_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_5) use ($dictGenericHeytingAlgebra1_3, $dictGenericHeytingAlgebra_0, $v_4) {
+  $__num = \func_num_args();
   $__res = new \Data\Generic\Rep\Data_Generic_Rep_Product(((($dictGenericHeytingAlgebra_0)->{'genericConj__prime__'})(($v_4)->{'value0'}))(($v1_5)->{'value0'}), ((($dictGenericHeytingAlgebra1_3)->{'genericConj__prime__'})(($v_4)->{'value1'}))(($v1_5)->{'value1'}));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "genericDisj__prime__" => (function() use ($dictGenericHeytingAlgebra1_3, $dictGenericHeytingAlgebra_0) {
-  $__fn = function($v_4, $v1_5 = null) use ($dictGenericHeytingAlgebra1_3, $dictGenericHeytingAlgebra_0, &$__fn) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "genericDisj__prime__" => function($v_4) use ($dictGenericHeytingAlgebra1_3, $dictGenericHeytingAlgebra_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_5) use ($dictGenericHeytingAlgebra1_3, $dictGenericHeytingAlgebra_0, $v_4) {
+  $__num = \func_num_args();
   $__res = new \Data\Generic\Rep\Data_Generic_Rep_Product(((($dictGenericHeytingAlgebra_0)->{'genericDisj__prime__'})(($v_4)->{'value0'}))(($v1_5)->{'value0'}), ((($dictGenericHeytingAlgebra1_3)->{'genericDisj__prime__'})(($v_4)->{'value1'}))(($v1_5)->{'value1'}));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "genericNot__prime__" => function($v_4) use ($dictGenericHeytingAlgebra1_3, $dictGenericHeytingAlgebra_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "genericNot__prime__" => function($v_4) use ($dictGenericHeytingAlgebra1_3, $dictGenericHeytingAlgebra_0) {
   $__num = \func_num_args();
   $__res = new \Data\Generic\Rep\Data_Generic_Rep_Product((($dictGenericHeytingAlgebra_0)->{'genericNot__prime__'})(($v_4)->{'value0'}), (($dictGenericHeytingAlgebra1_3)->{'genericNot__prime__'})(($v_4)->{'value1'}));
   goto __end;;

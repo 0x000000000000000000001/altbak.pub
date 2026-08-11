@@ -95,10 +95,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Unsafe_Coerce = \call_user_func(function() {
   $exports = [];
-$unsafeCoerce = function($x) use (&$unsafeCoerce) {
-  $__num = \func_num_args();
-  return 1 < $__num ? $x(...\array_slice(\func_get_args(), 1)) : $x;
-};
+$unsafeCoerce = function($x) { return $x; };
 
 $exports['unsafeCoerce'] = $unsafeCoerce;
 return $exports;

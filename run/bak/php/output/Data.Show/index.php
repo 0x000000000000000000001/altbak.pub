@@ -113,14 +113,7 @@ $showNumberImpl = function($n) use (&$showNumberImpl) {
 $showCharImpl = function($c) use (&$showCharImpl) {
     return "'" . $c . "'";
 };
-$showArrayImpl = function($f, $xs = null) use (&$showArrayImpl) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$showArrayImpl) {
-
-            return $showArrayImpl(...\array_merge($__args, $more));
-        };
-    }
+$showArrayImpl = function($f, $xs) use (&$showArrayImpl) {
     return "[" . implode(",", array_map($f, $xs)) . "]";
 };
 
@@ -212,19 +205,19 @@ $GLOBALS['Data_Show_showUnit'] = (object)["show" => function($v_0) {
 $GLOBALS['Data_Show_showString'] = (object)["show" => $GLOBALS['Data_Show_showStringImpl']];
 
 // Data_Show_showRecordFieldsNil
-$GLOBALS['Data_Show_showRecordFieldsNil'] = (object)["showRecordFields" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_Show_showRecordFieldsNil'] = (object)["showRecordFields" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) {
+  $__num = \func_num_args();
   $__res = "";
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Show_showRecordFields
 function majData_majShow_showmajRecordmajFields($dict_0) {
@@ -329,20 +322,20 @@ function majData_majShow_showmajRecordmajFieldsmajCons($dictIsSymbol_0, $dictSho
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (object)["showRecordFields" => (function() use ($dictIsSymbol_0, $dictShowRecordFields_1, $dictShow_2) {
-  $__fn = function($v_3, $record_4 = null) use ($dictIsSymbol_0, $dictShowRecordFields_1, $dictShow_2, &$__fn) {
+  $__res = (object)["showRecordFields" => function($v_3) use ($dictIsSymbol_0, $dictShowRecordFields_1, $dictShow_2) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($record_4) use ($dictIsSymbol_0, $dictShowRecordFields_1, $dictShow_2) {
+  $__num = \func_num_args();
   $key_5_0 = (($dictIsSymbol_0)->{'reflectSymbol'})(new \Type\Proxy\Type_Proxy_Proxy());
   $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(" "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})($key_5_0))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(": "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_2)->{'show'})(\Record\Unsafe\majRecord_majUnsafe_unsafemajGet($key_5_0, $record_4))))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(","))(((($dictShowRecordFields_1)->{'showRecordFields'})(new \Type\Proxy\Type_Proxy_Proxy()))($record_4))))));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -356,20 +349,20 @@ function majData_majShow_showmajRecordmajFieldsmajConsmajNil($dictIsSymbol_0, $d
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (object)["showRecordFields" => (function() use ($dictIsSymbol_0, $dictShow_1) {
-  $__fn = function($v_2, $record_3 = null) use ($dictIsSymbol_0, $dictShow_1, &$__fn) {
+  $__res = (object)["showRecordFields" => function($v_2) use ($dictIsSymbol_0, $dictShow_1) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($record_3) use ($dictIsSymbol_0, $dictShow_1) {
+  $__num = \func_num_args();
   $key_4_0 = (($dictIsSymbol_0)->{'reflectSymbol'})(new \Type\Proxy\Type_Proxy_Proxy());
   $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(" "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})($key_4_0))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(": "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})((($dictShow_1)->{'show'})(\Record\Unsafe\majRecord_majUnsafe_unsafemajGet($key_4_0, $record_3))))(" "))));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

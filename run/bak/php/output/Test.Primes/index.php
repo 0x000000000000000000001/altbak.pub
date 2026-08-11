@@ -113,19 +113,26 @@ final class Test_Primes_Cons { public $tag = 'Cons'; public function __construct
 // Test_Primes_lessThan
 $GLOBALS['Test_Primes_lessThan'] = (function() use (&$__fn) {
 $__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
-return (function() use ($__local_var_0_0) {
-  $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+return function($a1_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT;
+  $__res = function($a2_2) use ($__local_var_0_0, $a1_1) {
+  $__num = \func_num_args();
+  $__t1 = null;;
+  if ((($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT) {
+$__t1 = true;
+goto end_branch_1;;
+};
+  $__t1 = false;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 })();
 
 // Test_Primes_Nil
@@ -255,7 +262,7 @@ function majTest_majPrimes_range(int $start_0, $end_1 = null) {
   }
   $go__go_2_0 = null;
   $go__go_2_0 = (function() use (&$go__go_2_0, $start_0) {
-  $__fn = function($curr_3, $acc_4 = null) use (&$go__go_2_0, $start_0, &$__fn) {
+  $__fn = function(int $curr_3, $acc_4 = null) use (&$go__go_2_0, $start_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);

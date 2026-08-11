@@ -142,15 +142,13 @@ function majTest_majPolymorphism_polymajLoop($dictMonoidish_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $mempty_1_1_0 = ($dictMonoidish_0)->{'mempty_'};
-  $__res = (function() use ($dictMonoidish_0, $mempty_1_1_0) {
-  $__fn = function($n_init_2, $acc_init_3 = null) use ($dictMonoidish_0, $mempty_1_1_0, &$__fn) {
+  $__res = function($n_init_2) use ($dictMonoidish_0, $mempty_1_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($acc_init_3) use ($dictMonoidish_0, $mempty_1_1_0, $n_init_2) {
+  $__num = \func_num_args();
   $go__go_4_1 = null;
   $go__go_4_1 = (function() use ($dictMonoidish_0, &$go__go_4_1, $mempty_1_1_0) {
-  $__fn = function($v_5, $v1_6 = null) use ($dictMonoidish_0, &$go__go_4_1, $mempty_1_1_0, &$__fn) {
+  $__fn = function(int $v_5, $v1_6 = null) use ($dictMonoidish_0, &$go__go_4_1, $mempty_1_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
@@ -187,10 +185,12 @@ break;
   $__res = (($go__go_4_1)($n_init_2))($acc_init_3);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -198,19 +198,19 @@ break;
 $GLOBALS['Test_Polymorphism_polyLoop'] = __NAMESPACE__ . '\\majTest_majPolymorphism_polymajLoop';
 
 // Test_Polymorphism_intMonoidish
-$GLOBALS['Test_Polymorphism_intMonoidish'] = (object)["mempty_" => 1, "mappend_" => (function() {
-  $__fn = function($x_0, $y_1 = null) use (&$__fn) {
+$GLOBALS['Test_Polymorphism_intMonoidish'] = (object)["mempty_" => 1, "mappend_" => function($x_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_1) use ($x_0) {
+  $__num = \func_num_args();
   $__res = ($x_0 + $y_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Test_Polymorphism_describe
 $GLOBALS['Test_Polymorphism_describe'] = \Effect\Console\majEffect_majConsole_log("Polymorphism (10M Type Class Dict Lookups):");
@@ -220,7 +220,7 @@ $GLOBALS['Test_Polymorphism_act'] = ((($GLOBALS['Effect_bindEffect'])->{'bind'})
   $__num = \func_num_args();
   $go__go_1_0 = null;
   $go__go_1_0 = (function() use (&$go__go_1_0) {
-  $__fn = function($v_2, $v1_3 = null) use (&$go__go_1_0, &$__fn) {
+  $__fn = function(int $v_2, $v1_3 = null) use (&$go__go_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);

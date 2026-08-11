@@ -126,6 +126,20 @@ function majData_majBitraversable_identity($x_0) {
 }
 $GLOBALS['Data_Bitraversable_identity'] = __NAMESPACE__ . '\\majData_majBitraversable_identity';
 
+// Data_Bitraversable_identity1
+function majData_majBitraversable_identity1($x_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBitraversable_identity1';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Bitraversable_identity1'] = __NAMESPACE__ . '\\majData_majBitraversable_identity1';
+
 // Data_Bitraversable_bitraverse
 function majData_majBitraversable_bitraverse($dict_0) {
   $__num = \func_num_args();
@@ -149,19 +163,19 @@ function majData_majBitraversable_lfor($dictBitraversable_0, $dictApplicative_1 
   }
   $bitraverse2_2_0 = (($dictBitraversable_0)->{'bitraverse'})($dictApplicative_1);
   $pure_3_1 = ($dictApplicative_1)->{'pure'};
-  $__res = (function() use ($bitraverse2_2_0, $pure_3_1) {
-  $__fn = function($t_4, $f_5 = null) use ($bitraverse2_2_0, $pure_3_1, &$__fn) {
+  $__res = function($t_4) use ($bitraverse2_2_0, $pure_3_1) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($f_5) use ($bitraverse2_2_0, $pure_3_1, $t_4) {
+  $__num = \func_num_args();
   $__res = ((($bitraverse2_2_0)($f_5))($pure_3_1))($t_4);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -199,19 +213,19 @@ function majData_majBitraversable_rfor($dictBitraversable_0, $dictApplicative_1 
   }
   $bitraverse2_2_0 = (($dictBitraversable_0)->{'bitraverse'})($dictApplicative_1);
   $pure_3_1 = ($dictApplicative_1)->{'pure'};
-  $__res = (function() use ($bitraverse2_2_0, $pure_3_1) {
-  $__fn = function($t_4, $f_5 = null) use ($bitraverse2_2_0, $pure_3_1, &$__fn) {
+  $__res = function($t_4) use ($bitraverse2_2_0, $pure_3_1) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($f_5) use ($bitraverse2_2_0, $pure_3_1, $t_4) {
+  $__num = \func_num_args();
   $__res = ((($bitraverse2_2_0)($pure_3_1))($f_5))($t_4);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -236,19 +250,25 @@ $GLOBALS['Data_Bitraversable_rtraverse'] = __NAMESPACE__ . '\\majData_majBitrave
 $GLOBALS['Data_Bitraversable_bitraversableTuple'] = (object)["bitraverse" => function($dictApplicative_0) {
   $__num = \func_num_args();
   $Apply0_1_0 = (($dictApplicative_0)->{'Apply0'})(null);
-  $__res = (function() use ($Apply0_1_0) {
-  $__fn = function($f_2, $g_3 = null, $v_4 = null) use ($Apply0_1_0, &$__fn) {
+  $__res = function($f_2) use ($Apply0_1_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($g_3) use ($Apply0_1_0, $f_2) {
+  $__num = \func_num_args();
+  $__res = function($v_4) use ($Apply0_1_0, $f_2, $g_3) {
+  $__num = \func_num_args();
   $__res = ((($Apply0_1_0)->{'apply'})(((((($Apply0_1_0)->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Tuple_Tuple']))(($f_2)(($v_4)->{'value0'}))))(($g_3)(($v_4)->{'value1'}));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -287,89 +307,13 @@ function majData_majBitraversable_bitraversablemajJoker($dictTraversable_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $__local_var_1_0 = (($dictTraversable_0)->{'Functor0'})(null);
-  $bifunctorJoker_2_1 = (object)["bimap" => (function() use ($__local_var_1_0) {
-  $__fn = function($v_2, $g_3 = null, $v1_4 = null) use ($__local_var_1_0, &$__fn) {
+  $bifunctorJoker_1_0 = (object)["bimap" => function($v_2) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($g_3) use ($__local_var_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v1_4) use ($__local_var_1_0, $g_3) {
+  $__num = \func_num_args();
   $__res = ((($__local_var_1_0)->{'map'})($g_3))($v1_4);
-  goto __end;;
-  __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
-  $__local_var_3_2 = (($dictTraversable_0)->{'Foldable1'})(null);
-  $bifoldableJoker_4_3 = (object)["bifoldr" => (function() use ($__local_var_3_2) {
-  $__fn = function($v_4, $r_5 = null, $u_6 = null, $v1_7 = null) use ($__local_var_3_2, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 4) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 4);
-  }
-  $__res = (((($__local_var_3_2)->{'foldr'})($r_5))($u_6))($v1_7);
-  goto __end;;
-  __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})(), "bifoldl" => (function() use ($__local_var_3_2) {
-  $__fn = function($v_4, $r_5 = null, $u_6 = null, $v1_7 = null) use ($__local_var_3_2, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 4) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 4);
-  }
-  $__res = (((($__local_var_3_2)->{'foldl'})($r_5))($u_6))($v1_7);
-  goto __end;;
-  __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})(), "bifoldMap" => function($dictMonoid_4) use ($__local_var_3_2) {
-  $__num = \func_num_args();
-  $foldMap1_5_3 = (($__local_var_3_2)->{'foldMap'})($dictMonoid_4);
-  $__res = (function() use ($foldMap1_5_3) {
-  $__fn = function($v_6, $r_7 = null, $v1_8 = null) use ($foldMap1_5_3, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  $__res = (($foldMap1_5_3)($r_7))($v1_8);
-  goto __end;;
-  __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}];
-  $__res = (object)["bitraverse" => function($dictApplicative_5) use ($dictTraversable_0) {
-  $__num = \func_num_args();
-  $traverse1_6_5 = (($dictTraversable_0)->{'traverse'})($dictApplicative_5);
-  $__res = (function() use ($dictApplicative_5, $traverse1_6_5) {
-  $__fn = function($v_7, $r_8 = null, $v1_9 = null) use ($dictApplicative_5, $traverse1_6_5, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  $__res = ((((((($dictApplicative_5)->{'Apply0'})(null))->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Functor_Joker_Joker']))((($traverse1_6_5)($r_8))($v1_9));
-  goto __end;;
-  __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "bisequence" => function($dictApplicative_5) use ($dictTraversable_0) {
-  $__num = \func_num_args();
-  $sequence1_6_6 = (($dictTraversable_0)->{'sequence'})($dictApplicative_5);
-  $__res = function($v_7) use ($dictApplicative_5, $sequence1_6_6) {
-  $__num = \func_num_args();
-  $__res = ((((((($dictApplicative_5)->{'Apply0'})(null))->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Functor_Joker_Joker']))(($sequence1_6_6)($v_7));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -377,15 +321,133 @@ function majData_majBitraversable_bitraversablemajJoker($dictTraversable_0) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bifunctor0" => function($_dollar__unused_5) use ($bifunctorJoker_2_1) {
-  $__num = \func_num_args();
-  $__res = $bifunctorJoker_2_1;
+};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bifoldable1" => function($_dollar__unused_5) use ($bifoldableJoker_4_3) {
+}];
+  $__local_var_2_2 = (($dictTraversable_0)->{'Foldable1'})(null);
+  $bifoldableJoker_2_2 = (object)["bifoldr" => function($v_3) use ($__local_var_2_2) {
   $__num = \func_num_args();
-  $__res = $bifoldableJoker_4_3;
+  $__res = function($r_4) use ($__local_var_2_2) {
+  $__num = \func_num_args();
+  $__res = function($u_5) use ($__local_var_2_2, $r_4) {
+  $__num = \func_num_args();
+  $__res = function($v1_6) use ($__local_var_2_2, $r_4, $u_5) {
+  $__num = \func_num_args();
+  $__res = (((($__local_var_2_2)->{'foldr'})($r_4))($u_5))($v1_6);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "bifoldl" => function($v_3) use ($__local_var_2_2) {
+  $__num = \func_num_args();
+  $__res = function($r_4) use ($__local_var_2_2) {
+  $__num = \func_num_args();
+  $__res = function($u_5) use ($__local_var_2_2, $r_4) {
+  $__num = \func_num_args();
+  $__res = function($v1_6) use ($__local_var_2_2, $r_4, $u_5) {
+  $__num = \func_num_args();
+  $__res = (((($__local_var_2_2)->{'foldl'})($r_4))($u_5))($v1_6);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "bifoldMap" => function($dictMonoid_3) use ($__local_var_2_2) {
+  $__num = \func_num_args();
+  $foldMap1_4_3 = (($__local_var_2_2)->{'foldMap'})($dictMonoid_3);
+  $__res = function($v_5) use ($foldMap1_4_3) {
+  $__num = \func_num_args();
+  $__res = function($r_6) use ($foldMap1_4_3) {
+  $__num = \func_num_args();
+  $__res = function($v1_7) use ($foldMap1_4_3, $r_6) {
+  $__num = \func_num_args();
+  $__res = (($foldMap1_4_3)($r_6))($v1_7);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = (object)["bitraverse" => function($dictApplicative_3) use ($dictTraversable_0) {
+  $__num = \func_num_args();
+  $traverse1_4_5 = (($dictTraversable_0)->{'traverse'})($dictApplicative_3);
+  $__res = function($v_5) use ($dictApplicative_3, $traverse1_4_5) {
+  $__num = \func_num_args();
+  $__res = function($r_6) use ($dictApplicative_3, $traverse1_4_5) {
+  $__num = \func_num_args();
+  $__res = function($v1_7) use ($dictApplicative_3, $r_6, $traverse1_4_5) {
+  $__num = \func_num_args();
+  $__res = ((((((($dictApplicative_3)->{'Apply0'})(null))->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Functor_Joker_Joker']))((($traverse1_4_5)($r_6))($v1_7));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "bisequence" => function($dictApplicative_3) use ($dictTraversable_0) {
+  $__num = \func_num_args();
+  $sequence1_4_6 = (($dictTraversable_0)->{'sequence'})($dictApplicative_3);
+  $__res = function($v_5) use ($dictApplicative_3, $sequence1_4_6) {
+  $__num = \func_num_args();
+  $__res = ((((((($dictApplicative_3)->{'Apply0'})(null))->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Functor_Joker_Joker']))(($sequence1_4_6)($v_5));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Bifunctor0" => function($_dollar__unused_3) use ($bifunctorJoker_1_0) {
+  $__num = \func_num_args();
+  $__res = $bifunctorJoker_1_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Bifoldable1" => function($_dollar__unused_3) use ($bifoldableJoker_2_2) {
+  $__num = \func_num_args();
+  $__res = $bifoldableJoker_2_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -400,12 +462,12 @@ $GLOBALS['Data_Bitraversable_bitraversableJoker'] = __NAMESPACE__ . '\\majData_m
 $GLOBALS['Data_Bitraversable_bitraversableEither'] = (object)["bitraverse" => function($dictApplicative_0) {
   $__num = \func_num_args();
   $__local_var_1_0 = (((($dictApplicative_0)->{'Apply0'})(null))->{'Functor0'})(null);
-  $__res = (function() use ($__local_var_1_0) {
-  $__fn = function($v_2, $v1_3 = null, $v2_4 = null) use ($__local_var_1_0, &$__fn) {
+  $__res = function($v_2) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($v1_3) use ($__local_var_1_0, $v_2) {
+  $__num = \func_num_args();
+  $__res = function($v2_4) use ($__local_var_1_0, $v1_3, $v_2) {
+  $__num = \func_num_args();
   $__t1 = null;;
   if ($v2_4 instanceof \Data\Either\Data_Either_Left) {
 $__t1 = ((($__local_var_1_0)->{'map'})($GLOBALS['Data_Either_Left']))(($v_2)(($v2_4)->{'value0'}));
@@ -421,10 +483,16 @@ goto end_branch_1;;
   $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -468,31 +536,43 @@ goto end_branch_3;;
 }];
 
 // Data_Bitraversable_bitraversableConst
-$GLOBALS['Data_Bitraversable_bitraversableConst'] = (object)["bitraverse" => (function() {
-  $__fn = function($dictApplicative_0, $f_1 = null, $v_2 = null, $v1_3 = null) use (&$__fn) {
+$GLOBALS['Data_Bitraversable_bitraversableConst'] = (object)["bitraverse" => function($dictApplicative_0) {
   $__num = \func_num_args();
-  if ($__num < 4) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 4);
-  }
+  $__res = function($f_1) use ($dictApplicative_0) {
+  $__num = \func_num_args();
+  $__res = function($v_2) use ($dictApplicative_0, $f_1) {
+  $__num = \func_num_args();
+  $__res = function($v1_3) use ($dictApplicative_0, $f_1) {
+  $__num = \func_num_args();
   $__res = ((((((($dictApplicative_0)->{'Apply0'})(null))->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Const_Const']))(($f_1)($v1_3));
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})(), "bisequence" => (function() {
-  $__fn = function($dictApplicative_0, $v_1 = null) use (&$__fn) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "bisequence" => function($dictApplicative_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_1) use ($dictApplicative_0) {
+  $__num = \func_num_args();
   $__res = ((((((($dictApplicative_0)->{'Apply0'})(null))->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Const_Const']))($v_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Bifunctor0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Bifunctor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Bifunctor_bifunctorConst'];
   goto __end;;
@@ -514,89 +594,13 @@ function majData_majBitraversable_bitraversablemajClown($dictTraversable_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $__local_var_1_0 = (($dictTraversable_0)->{'Functor0'})(null);
-  $bifunctorClown_2_1 = (object)["bimap" => (function() use ($__local_var_1_0) {
-  $__fn = function($f_2, $v_3 = null, $v1_4 = null) use ($__local_var_1_0, &$__fn) {
+  $bifunctorClown_1_0 = (object)["bimap" => function($f_2) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($v_3) use ($__local_var_1_0, $f_2) {
+  $__num = \func_num_args();
+  $__res = function($v1_4) use ($__local_var_1_0, $f_2) {
+  $__num = \func_num_args();
   $__res = ((($__local_var_1_0)->{'map'})($f_2))($v1_4);
-  goto __end;;
-  __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
-  $__local_var_3_2 = (($dictTraversable_0)->{'Foldable1'})(null);
-  $bifoldableClown_4_3 = (object)["bifoldr" => (function() use ($__local_var_3_2) {
-  $__fn = function($l_4, $v_5 = null, $u_6 = null, $v1_7 = null) use ($__local_var_3_2, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 4) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 4);
-  }
-  $__res = (((($__local_var_3_2)->{'foldr'})($l_4))($u_6))($v1_7);
-  goto __end;;
-  __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})(), "bifoldl" => (function() use ($__local_var_3_2) {
-  $__fn = function($l_4, $v_5 = null, $u_6 = null, $v1_7 = null) use ($__local_var_3_2, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 4) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 4);
-  }
-  $__res = (((($__local_var_3_2)->{'foldl'})($l_4))($u_6))($v1_7);
-  goto __end;;
-  __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})(), "bifoldMap" => function($dictMonoid_4) use ($__local_var_3_2) {
-  $__num = \func_num_args();
-  $foldMap1_5_3 = (($__local_var_3_2)->{'foldMap'})($dictMonoid_4);
-  $__res = (function() use ($foldMap1_5_3) {
-  $__fn = function($l_6, $v_7 = null, $v1_8 = null) use ($foldMap1_5_3, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  $__res = (($foldMap1_5_3)($l_6))($v1_8);
-  goto __end;;
-  __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}];
-  $__res = (object)["bitraverse" => function($dictApplicative_5) use ($dictTraversable_0) {
-  $__num = \func_num_args();
-  $traverse1_6_5 = (($dictTraversable_0)->{'traverse'})($dictApplicative_5);
-  $__res = (function() use ($dictApplicative_5, $traverse1_6_5) {
-  $__fn = function($l_7, $v_8 = null, $v1_9 = null) use ($dictApplicative_5, $traverse1_6_5, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  $__res = ((((((($dictApplicative_5)->{'Apply0'})(null))->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Functor_Clown_Clown']))((($traverse1_6_5)($l_7))($v1_9));
-  goto __end;;
-  __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "bisequence" => function($dictApplicative_5) use ($dictTraversable_0) {
-  $__num = \func_num_args();
-  $sequence1_6_6 = (($dictTraversable_0)->{'sequence'})($dictApplicative_5);
-  $__res = function($v_7) use ($dictApplicative_5, $sequence1_6_6) {
-  $__num = \func_num_args();
-  $__res = ((((((($dictApplicative_5)->{'Apply0'})(null))->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Functor_Clown_Clown']))(($sequence1_6_6)($v_7));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -604,15 +608,133 @@ function majData_majBitraversable_bitraversablemajClown($dictTraversable_0) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bifunctor0" => function($_dollar__unused_5) use ($bifunctorClown_2_1) {
-  $__num = \func_num_args();
-  $__res = $bifunctorClown_2_1;
+};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bifoldable1" => function($_dollar__unused_5) use ($bifoldableClown_4_3) {
+}];
+  $__local_var_2_2 = (($dictTraversable_0)->{'Foldable1'})(null);
+  $bifoldableClown_2_2 = (object)["bifoldr" => function($l_3) use ($__local_var_2_2) {
   $__num = \func_num_args();
-  $__res = $bifoldableClown_4_3;
+  $__res = function($v_4) use ($__local_var_2_2, $l_3) {
+  $__num = \func_num_args();
+  $__res = function($u_5) use ($__local_var_2_2, $l_3) {
+  $__num = \func_num_args();
+  $__res = function($v1_6) use ($__local_var_2_2, $l_3, $u_5) {
+  $__num = \func_num_args();
+  $__res = (((($__local_var_2_2)->{'foldr'})($l_3))($u_5))($v1_6);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "bifoldl" => function($l_3) use ($__local_var_2_2) {
+  $__num = \func_num_args();
+  $__res = function($v_4) use ($__local_var_2_2, $l_3) {
+  $__num = \func_num_args();
+  $__res = function($u_5) use ($__local_var_2_2, $l_3) {
+  $__num = \func_num_args();
+  $__res = function($v1_6) use ($__local_var_2_2, $l_3, $u_5) {
+  $__num = \func_num_args();
+  $__res = (((($__local_var_2_2)->{'foldl'})($l_3))($u_5))($v1_6);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "bifoldMap" => function($dictMonoid_3) use ($__local_var_2_2) {
+  $__num = \func_num_args();
+  $foldMap1_4_3 = (($__local_var_2_2)->{'foldMap'})($dictMonoid_3);
+  $__res = function($l_5) use ($foldMap1_4_3) {
+  $__num = \func_num_args();
+  $__res = function($v_6) use ($foldMap1_4_3, $l_5) {
+  $__num = \func_num_args();
+  $__res = function($v1_7) use ($foldMap1_4_3, $l_5) {
+  $__num = \func_num_args();
+  $__res = (($foldMap1_4_3)($l_5))($v1_7);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = (object)["bitraverse" => function($dictApplicative_3) use ($dictTraversable_0) {
+  $__num = \func_num_args();
+  $traverse1_4_5 = (($dictTraversable_0)->{'traverse'})($dictApplicative_3);
+  $__res = function($l_5) use ($dictApplicative_3, $traverse1_4_5) {
+  $__num = \func_num_args();
+  $__res = function($v_6) use ($dictApplicative_3, $l_5, $traverse1_4_5) {
+  $__num = \func_num_args();
+  $__res = function($v1_7) use ($dictApplicative_3, $l_5, $traverse1_4_5) {
+  $__num = \func_num_args();
+  $__res = ((((((($dictApplicative_3)->{'Apply0'})(null))->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Functor_Clown_Clown']))((($traverse1_4_5)($l_5))($v1_7));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "bisequence" => function($dictApplicative_3) use ($dictTraversable_0) {
+  $__num = \func_num_args();
+  $sequence1_4_6 = (($dictTraversable_0)->{'sequence'})($dictApplicative_3);
+  $__res = function($v_5) use ($dictApplicative_3, $sequence1_4_6) {
+  $__num = \func_num_args();
+  $__res = ((((((($dictApplicative_3)->{'Apply0'})(null))->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Functor_Clown_Clown']))(($sequence1_4_6)($v_5));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Bifunctor0" => function($_dollar__unused_3) use ($bifunctorClown_1_0) {
+  $__num = \func_num_args();
+  $__res = $bifunctorClown_1_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Bifoldable1" => function($_dollar__unused_3) use ($bifoldableClown_2_2) {
+  $__num = \func_num_args();
+  $__res = $bifoldableClown_2_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -630,7 +752,7 @@ function majData_majBitraversable_bisequencemajDefault($dictBitraversable_0, $di
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (((($dictBitraversable_0)->{'bitraverse'})($dictApplicative_1))($GLOBALS['Data_Bitraversable_identity']))($GLOBALS['Data_Bitraversable_identity']);
+  $__res = (((($dictBitraversable_0)->{'bitraverse'})($dictApplicative_1))($GLOBALS['Data_Bitraversable_identity']))($GLOBALS['Data_Bitraversable_identity1']);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -659,89 +781,13 @@ function majData_majBitraversable_bitraversablemajFlip($dictBitraversable_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $__local_var_1_0 = (($dictBitraversable_0)->{'Bifunctor0'})(null);
-  $bifunctorFlip_2_1 = (object)["bimap" => (function() use ($__local_var_1_0) {
-  $__fn = function($f_2, $g_3 = null, $v_4 = null) use ($__local_var_1_0, &$__fn) {
+  $bifunctorFlip_1_0 = (object)["bimap" => function($f_2) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($g_3) use ($__local_var_1_0, $f_2) {
+  $__num = \func_num_args();
+  $__res = function($v_4) use ($__local_var_1_0, $f_2, $g_3) {
+  $__num = \func_num_args();
   $__res = (((($__local_var_1_0)->{'bimap'})($g_3))($f_2))($v_4);
-  goto __end;;
-  __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
-  $__local_var_3_2 = (($dictBitraversable_0)->{'Bifoldable1'})(null);
-  $bifoldableFlip_4_3 = (object)["bifoldr" => (function() use ($__local_var_3_2) {
-  $__fn = function($r_4, $l_5 = null, $u_6 = null, $v_7 = null) use ($__local_var_3_2, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 4) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 4);
-  }
-  $__res = ((((($__local_var_3_2)->{'bifoldr'})($l_5))($r_4))($u_6))($v_7);
-  goto __end;;
-  __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})(), "bifoldl" => (function() use ($__local_var_3_2) {
-  $__fn = function($r_4, $l_5 = null, $u_6 = null, $v_7 = null) use ($__local_var_3_2, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 4) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 4);
-  }
-  $__res = ((((($__local_var_3_2)->{'bifoldl'})($l_5))($r_4))($u_6))($v_7);
-  goto __end;;
-  __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})(), "bifoldMap" => function($dictMonoid_4) use ($__local_var_3_2) {
-  $__num = \func_num_args();
-  $bifoldMap2_5_3 = (($__local_var_3_2)->{'bifoldMap'})($dictMonoid_4);
-  $__res = (function() use ($bifoldMap2_5_3) {
-  $__fn = function($r_6, $l_7 = null, $v_8 = null) use ($bifoldMap2_5_3, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  $__res = ((($bifoldMap2_5_3)($l_7))($r_6))($v_8);
-  goto __end;;
-  __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}];
-  $__res = (object)["bitraverse" => function($dictApplicative_5) use ($dictBitraversable_0) {
-  $__num = \func_num_args();
-  $bitraverse2_6_5 = (($dictBitraversable_0)->{'bitraverse'})($dictApplicative_5);
-  $__res = (function() use ($bitraverse2_6_5, $dictApplicative_5) {
-  $__fn = function($r_7, $l_8 = null, $v_9 = null) use ($bitraverse2_6_5, $dictApplicative_5, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  $__res = ((((((($dictApplicative_5)->{'Apply0'})(null))->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Functor_Flip_Flip']))(((($bitraverse2_6_5)($l_8))($r_7))($v_9));
-  goto __end;;
-  __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "bisequence" => function($dictApplicative_5) use ($dictBitraversable_0) {
-  $__num = \func_num_args();
-  $bisequence2_6_6 = (($dictBitraversable_0)->{'bisequence'})($dictApplicative_5);
-  $__res = function($v_7) use ($bisequence2_6_6, $dictApplicative_5) {
-  $__num = \func_num_args();
-  $__res = ((((((($dictApplicative_5)->{'Apply0'})(null))->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Functor_Flip_Flip']))(($bisequence2_6_6)($v_7));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -749,15 +795,133 @@ function majData_majBitraversable_bitraversablemajFlip($dictBitraversable_0) {
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bifunctor0" => function($_dollar__unused_5) use ($bifunctorFlip_2_1) {
-  $__num = \func_num_args();
-  $__res = $bifunctorFlip_2_1;
+};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bifoldable1" => function($_dollar__unused_5) use ($bifoldableFlip_4_3) {
+}];
+  $__local_var_2_2 = (($dictBitraversable_0)->{'Bifoldable1'})(null);
+  $bifoldableFlip_2_2 = (object)["bifoldr" => function($r_3) use ($__local_var_2_2) {
   $__num = \func_num_args();
-  $__res = $bifoldableFlip_4_3;
+  $__res = function($l_4) use ($__local_var_2_2, $r_3) {
+  $__num = \func_num_args();
+  $__res = function($u_5) use ($__local_var_2_2, $l_4, $r_3) {
+  $__num = \func_num_args();
+  $__res = function($v_6) use ($__local_var_2_2, $l_4, $r_3, $u_5) {
+  $__num = \func_num_args();
+  $__res = ((((($__local_var_2_2)->{'bifoldr'})($l_4))($r_3))($u_5))($v_6);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "bifoldl" => function($r_3) use ($__local_var_2_2) {
+  $__num = \func_num_args();
+  $__res = function($l_4) use ($__local_var_2_2, $r_3) {
+  $__num = \func_num_args();
+  $__res = function($u_5) use ($__local_var_2_2, $l_4, $r_3) {
+  $__num = \func_num_args();
+  $__res = function($v_6) use ($__local_var_2_2, $l_4, $r_3, $u_5) {
+  $__num = \func_num_args();
+  $__res = ((((($__local_var_2_2)->{'bifoldl'})($l_4))($r_3))($u_5))($v_6);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "bifoldMap" => function($dictMonoid_3) use ($__local_var_2_2) {
+  $__num = \func_num_args();
+  $bifoldMap2_4_3 = (($__local_var_2_2)->{'bifoldMap'})($dictMonoid_3);
+  $__res = function($r_5) use ($bifoldMap2_4_3) {
+  $__num = \func_num_args();
+  $__res = function($l_6) use ($bifoldMap2_4_3, $r_5) {
+  $__num = \func_num_args();
+  $__res = function($v_7) use ($bifoldMap2_4_3, $l_6, $r_5) {
+  $__num = \func_num_args();
+  $__res = ((($bifoldMap2_4_3)($l_6))($r_5))($v_7);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = (object)["bitraverse" => function($dictApplicative_3) use ($dictBitraversable_0) {
+  $__num = \func_num_args();
+  $bitraverse2_4_5 = (($dictBitraversable_0)->{'bitraverse'})($dictApplicative_3);
+  $__res = function($r_5) use ($bitraverse2_4_5, $dictApplicative_3) {
+  $__num = \func_num_args();
+  $__res = function($l_6) use ($bitraverse2_4_5, $dictApplicative_3, $r_5) {
+  $__num = \func_num_args();
+  $__res = function($v_7) use ($bitraverse2_4_5, $dictApplicative_3, $l_6, $r_5) {
+  $__num = \func_num_args();
+  $__res = ((((((($dictApplicative_3)->{'Apply0'})(null))->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Functor_Flip_Flip']))(((($bitraverse2_4_5)($l_6))($r_5))($v_7));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "bisequence" => function($dictApplicative_3) use ($dictBitraversable_0) {
+  $__num = \func_num_args();
+  $bisequence2_4_6 = (($dictBitraversable_0)->{'bisequence'})($dictApplicative_3);
+  $__res = function($v_5) use ($bisequence2_4_6, $dictApplicative_3) {
+  $__num = \func_num_args();
+  $__res = ((((((($dictApplicative_3)->{'Apply0'})(null))->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Functor_Flip_Flip']))(($bisequence2_4_6)($v_5));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Bifunctor0" => function($_dollar__unused_3) use ($bifunctorFlip_1_0) {
+  $__num = \func_num_args();
+  $__res = $bifunctorFlip_1_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Bifoldable1" => function($_dollar__unused_3) use ($bifoldableFlip_2_2) {
+  $__num = \func_num_args();
+  $__res = $bifoldableFlip_2_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -780,49 +944,13 @@ function majData_majBitraversable_bitraversablemajProduct2($dictBitraversable_0)
   $__res = function($dictBitraversable1_3) use ($__local_var_1_0, $bifoldableProduct2_2_1, $dictBitraversable_0) {
   $__num = \func_num_args();
   $__local_var_4_2 = (($dictBitraversable1_3)->{'Bifunctor0'})(null);
-  $bifunctorProduct21_5_3 = (object)["bimap" => (function() use ($__local_var_1_0, $__local_var_4_2) {
-  $__fn = function($f_5, $g_6 = null, $v_7 = null) use ($__local_var_1_0, $__local_var_4_2, &$__fn) {
+  $bifunctorProduct21_4_2 = (object)["bimap" => function($f_5) use ($__local_var_1_0, $__local_var_4_2) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($g_6) use ($__local_var_1_0, $__local_var_4_2, $f_5) {
+  $__num = \func_num_args();
+  $__res = function($v_7) use ($__local_var_1_0, $__local_var_4_2, $f_5, $g_6) {
+  $__num = \func_num_args();
   $__res = new \Data\Functor\Product2\Data_Functor_Product2_Product2((((($__local_var_1_0)->{'bimap'})($f_5))($g_6))(($v_7)->{'value0'}), (((($__local_var_4_2)->{'bimap'})($f_5))($g_6))(($v_7)->{'value1'}));
-  goto __end;;
-  __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
-  $bifoldableProduct21_6_4 = ($bifoldableProduct2_2_1)((($dictBitraversable1_3)->{'Bifoldable1'})(null));
-  $__res = (object)["bitraverse" => function($dictApplicative_7) use ($dictBitraversable1_3, $dictBitraversable_0) {
-  $__num = \func_num_args();
-  $Apply0_8_5 = (($dictApplicative_7)->{'Apply0'})(null);
-  $bitraverse3_9_6 = (($dictBitraversable_0)->{'bitraverse'})($dictApplicative_7);
-  $bitraverse4_10_7 = (($dictBitraversable1_3)->{'bitraverse'})($dictApplicative_7);
-  $__res = (function() use ($Apply0_8_5, $bitraverse3_9_6, $bitraverse4_10_7) {
-  $__fn = function($l_11, $r_12 = null, $v_13 = null) use ($Apply0_8_5, $bitraverse3_9_6, $bitraverse4_10_7, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  $__res = ((($Apply0_8_5)->{'apply'})(((((($Apply0_8_5)->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Functor_Product2_Product2']))(((($bitraverse3_9_6)($l_11))($r_12))(($v_13)->{'value0'}))))(((($bitraverse4_10_7)($l_11))($r_12))(($v_13)->{'value1'}));
-  goto __end;;
-  __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "bisequence" => function($dictApplicative_7) use ($dictBitraversable1_3, $dictBitraversable_0) {
-  $__num = \func_num_args();
-  $Apply0_8_8 = (($dictApplicative_7)->{'Apply0'})(null);
-  $bisequence3_9_9 = (($dictBitraversable_0)->{'bisequence'})($dictApplicative_7);
-  $bisequence4_10_10 = (($dictBitraversable1_3)->{'bisequence'})($dictApplicative_7);
-  $__res = function($v_11) use ($Apply0_8_8, $bisequence3_9_9, $bisequence4_10_10) {
-  $__num = \func_num_args();
-  $__res = ((($Apply0_8_8)->{'apply'})(((((($Apply0_8_8)->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Functor_Product2_Product2']))(($bisequence3_9_9)(($v_11)->{'value0'}))))(($bisequence4_10_10)(($v_11)->{'value1'}));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -830,15 +958,63 @@ function majData_majBitraversable_bitraversablemajProduct2($dictBitraversable_0)
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bifunctor0" => function($_dollar__unused_7) use ($bifunctorProduct21_5_3) {
-  $__num = \func_num_args();
-  $__res = $bifunctorProduct21_5_3;
+};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Bifoldable1" => function($_dollar__unused_7) use ($bifoldableProduct21_6_4) {
+}];
+  $bifoldableProduct21_5_4 = ($bifoldableProduct2_2_1)((($dictBitraversable1_3)->{'Bifoldable1'})(null));
+  $__res = (object)["bitraverse" => function($dictApplicative_6) use ($dictBitraversable1_3, $dictBitraversable_0) {
   $__num = \func_num_args();
-  $__res = $bifoldableProduct21_6_4;
+  $Apply0_7_5 = (($dictApplicative_6)->{'Apply0'})(null);
+  $bitraverse3_8_6 = (($dictBitraversable_0)->{'bitraverse'})($dictApplicative_6);
+  $bitraverse4_9_7 = (($dictBitraversable1_3)->{'bitraverse'})($dictApplicative_6);
+  $__res = function($l_10) use ($Apply0_7_5, $bitraverse3_8_6, $bitraverse4_9_7) {
+  $__num = \func_num_args();
+  $__res = function($r_11) use ($Apply0_7_5, $bitraverse3_8_6, $bitraverse4_9_7, $l_10) {
+  $__num = \func_num_args();
+  $__res = function($v_12) use ($Apply0_7_5, $bitraverse3_8_6, $bitraverse4_9_7, $l_10, $r_11) {
+  $__num = \func_num_args();
+  $__res = ((($Apply0_7_5)->{'apply'})(((((($Apply0_7_5)->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Functor_Product2_Product2']))(((($bitraverse3_8_6)($l_10))($r_11))(($v_12)->{'value0'}))))(((($bitraverse4_9_7)($l_10))($r_11))(($v_12)->{'value1'}));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "bisequence" => function($dictApplicative_6) use ($dictBitraversable1_3, $dictBitraversable_0) {
+  $__num = \func_num_args();
+  $Apply0_7_8 = (($dictApplicative_6)->{'Apply0'})(null);
+  $bisequence3_8_9 = (($dictBitraversable_0)->{'bisequence'})($dictApplicative_6);
+  $bisequence4_9_10 = (($dictBitraversable1_3)->{'bisequence'})($dictApplicative_6);
+  $__res = function($v_10) use ($Apply0_7_8, $bisequence3_8_9, $bisequence4_9_10) {
+  $__num = \func_num_args();
+  $__res = ((($Apply0_7_8)->{'apply'})(((((($Apply0_7_8)->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Functor_Product2_Product2']))(($bisequence3_8_9)(($v_10)->{'value0'}))))(($bisequence4_9_10)(($v_10)->{'value1'}));
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Bifunctor0" => function($_dollar__unused_6) use ($bifunctorProduct21_4_2) {
+  $__num = \func_num_args();
+  $__res = $bifunctorProduct21_4_2;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Bifoldable1" => function($_dollar__unused_6) use ($bifoldableProduct21_5_4) {
+  $__num = \func_num_args();
+  $__res = $bifoldableProduct21_5_4;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -861,19 +1037,25 @@ function majData_majBitraversable_bitraversemajDefault($dictBitraversable_0, $di
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $bisequence2_2_0 = (($dictBitraversable_0)->{'bisequence'})($dictApplicative_1);
-  $__res = (function() use ($bisequence2_2_0, $dictBitraversable_0) {
-  $__fn = function($f_3, $g_4 = null, $t_5 = null) use ($bisequence2_2_0, $dictBitraversable_0, &$__fn) {
+  $__res = function($f_3) use ($bisequence2_2_0, $dictBitraversable_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($g_4) use ($bisequence2_2_0, $dictBitraversable_0, $f_3) {
+  $__num = \func_num_args();
+  $__res = function($t_5) use ($bisequence2_2_0, $dictBitraversable_0, $f_3, $g_4) {
+  $__num = \func_num_args();
   $__res = ($bisequence2_2_0)((((((($dictBitraversable_0)->{'Bifunctor0'})(null))->{'bimap'})($f_3))($g_4))($t_5));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -888,19 +1070,25 @@ function majData_majBitraversable_bifor($dictBitraversable_0, $dictApplicative_1
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $bitraverse2_2_0 = (($dictBitraversable_0)->{'bitraverse'})($dictApplicative_1);
-  $__res = (function() use ($bitraverse2_2_0) {
-  $__fn = function($t_3, $f_4 = null, $g_5 = null) use ($bitraverse2_2_0, &$__fn) {
+  $__res = function($t_3) use ($bitraverse2_2_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($f_4) use ($bitraverse2_2_0, $t_3) {
+  $__num = \func_num_args();
+  $__res = function($g_5) use ($bitraverse2_2_0, $f_4, $t_3) {
+  $__num = \func_num_args();
   $__res = ((($bitraverse2_2_0)($f_4))($g_5))($t_3);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

@@ -117,6 +117,20 @@ function majData_majBifunctor_identity($x_0) {
 }
 $GLOBALS['Data_Bifunctor_identity'] = __NAMESPACE__ . '\\majData_majBifunctor_identity';
 
+// Data_Bifunctor_identity1
+function majData_majBifunctor_identity1($x_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majBifunctor_identity1';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Bifunctor_identity1'] = __NAMESPACE__ . '\\majData_majBifunctor_identity1';
+
 // Data_Bifunctor_bimap
 function majData_majBifunctor_bimap($dict_0) {
   $__num = \func_num_args();
@@ -178,7 +192,7 @@ function majData_majBifunctor_rmap($dictBifunctor_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($dictBifunctor_0)->{'bimap'})($GLOBALS['Data_Bifunctor_identity']);
+  $__res = (($dictBifunctor_0)->{'bimap'})($GLOBALS['Data_Bifunctor_identity1']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -186,27 +200,33 @@ function majData_majBifunctor_rmap($dictBifunctor_0) {
 $GLOBALS['Data_Bifunctor_rmap'] = __NAMESPACE__ . '\\majData_majBifunctor_rmap';
 
 // Data_Bifunctor_bifunctorTuple
-$GLOBALS['Data_Bifunctor_bifunctorTuple'] = (object)["bimap" => (function() {
-  $__fn = function($f_0, $g_1 = null, $v_2 = null) use (&$__fn) {
+$GLOBALS['Data_Bifunctor_bifunctorTuple'] = (object)["bimap" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($g_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($v_2) use ($f_0, $g_1) {
+  $__num = \func_num_args();
   $__res = new \Data\Tuple\Data_Tuple_Tuple(($f_0)(($v_2)->{'value0'}), ($g_1)(($v_2)->{'value1'}));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Bifunctor_bifunctorEither
-$GLOBALS['Data_Bifunctor_bifunctorEither'] = (object)["bimap" => (function() {
-  $__fn = function($v_0, $v1_1 = null, $v2_2 = null) use (&$__fn) {
+$GLOBALS['Data_Bifunctor_bifunctorEither'] = (object)["bimap" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($v1_1) use ($v_0) {
+  $__num = \func_num_args();
+  $__res = function($v2_2) use ($v1_1, $v_0) {
+  $__num = \func_num_args();
   $__t0 = null;;
   if ($v2_2 instanceof \Data\Either\Data_Either_Left) {
 $__t0 = new \Data\Either\Data_Either_Left(($v_0)(($v2_2)->{'value0'}));
@@ -222,23 +242,35 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Bifunctor_bifunctorConst
-$GLOBALS['Data_Bifunctor_bifunctorConst'] = (object)["bimap" => (function() {
-  $__fn = function($f_0, $v_1 = null, $v1_2 = null) use (&$__fn) {
+$GLOBALS['Data_Bifunctor_bifunctorConst'] = (object)["bimap" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($v_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($v1_2) use ($f_0) {
+  $__num = \func_num_args();
   $__res = ($f_0)($v1_2);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 

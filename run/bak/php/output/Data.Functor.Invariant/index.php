@@ -107,94 +107,130 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Data_Functor_Invariant_invariantMultiplicative
-$GLOBALS['Data_Functor_Invariant_invariantMultiplicative'] = (object)["imap" => (function() {
-  $__fn = function($f_0, $v_1 = null, $v1_2 = null) use (&$__fn) {
+$GLOBALS['Data_Functor_Invariant_invariantMultiplicative'] = (object)["imap" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($v_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($v1_2) use ($f_0) {
+  $__num = \func_num_args();
   $__res = ($f_0)($v1_2);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Functor_Invariant_invariantEndo
-$GLOBALS['Data_Functor_Invariant_invariantEndo'] = (object)["imap" => (function() {
-  $__fn = function($ab_0, $ba_1 = null, $v_2 = null) use (&$__fn) {
+$GLOBALS['Data_Functor_Invariant_invariantEndo'] = (object)["imap" => function($ab_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($ba_1) use ($ab_0) {
+  $__num = \func_num_args();
+  $__res = function($v_2) use ($ab_0, $ba_1) {
+  $__num = \func_num_args();
   $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($ab_0))((($GLOBALS['Control_Semigroupoid_composeImpl'])($v_2))($ba_1));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Functor_Invariant_invariantDual
-$GLOBALS['Data_Functor_Invariant_invariantDual'] = (object)["imap" => (function() {
-  $__fn = function($f_0, $v_1 = null, $v1_2 = null) use (&$__fn) {
+$GLOBALS['Data_Functor_Invariant_invariantDual'] = (object)["imap" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($v_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($v1_2) use ($f_0) {
+  $__num = \func_num_args();
   $__res = ($f_0)($v1_2);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Functor_Invariant_invariantDisj
-$GLOBALS['Data_Functor_Invariant_invariantDisj'] = (object)["imap" => (function() {
-  $__fn = function($f_0, $v_1 = null, $v1_2 = null) use (&$__fn) {
+$GLOBALS['Data_Functor_Invariant_invariantDisj'] = (object)["imap" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($v_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($v1_2) use ($f_0) {
+  $__num = \func_num_args();
   $__res = ($f_0)($v1_2);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Functor_Invariant_invariantConj
-$GLOBALS['Data_Functor_Invariant_invariantConj'] = (object)["imap" => (function() {
-  $__fn = function($f_0, $v_1 = null, $v1_2 = null) use (&$__fn) {
+$GLOBALS['Data_Functor_Invariant_invariantConj'] = (object)["imap" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($v_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($v1_2) use ($f_0) {
+  $__num = \func_num_args();
   $__res = ($f_0)($v1_2);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Functor_Invariant_invariantAdditive
-$GLOBALS['Data_Functor_Invariant_invariantAdditive'] = (object)["imap" => (function() {
-  $__fn = function($f_0, $v_1 = null, $v1_2 = null) use (&$__fn) {
+$GLOBALS['Data_Functor_Invariant_invariantAdditive'] = (object)["imap" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($v_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($v1_2) use ($f_0) {
+  $__num = \func_num_args();
   $__res = ($f_0)($v1_2);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Functor_Invariant_imapF
 function majData_majFunctor_majInvariant_imapmajF($dictFunctor_0, $f_1 = null, $v_2 = null) {
@@ -211,34 +247,34 @@ function majData_majFunctor_majInvariant_imapmajF($dictFunctor_0, $f_1 = null, $
 $GLOBALS['Data_Functor_Invariant_imapF'] = __NAMESPACE__ . '\\majData_majFunctor_majInvariant_imapmajF';
 
 // Data_Functor_Invariant_invariantArray
-$GLOBALS['Data_Functor_Invariant_invariantArray'] = (object)["imap" => (function() {
-  $__fn = function($f_0, $v_1 = null) use (&$__fn) {
+$GLOBALS['Data_Functor_Invariant_invariantArray'] = (object)["imap" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_1) use ($f_0) {
+  $__num = \func_num_args();
   $__res = (($GLOBALS['Data_Functor_functorArray'])->{'map'})($f_0);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Functor_Invariant_invariantFn
-$GLOBALS['Data_Functor_Invariant_invariantFn'] = (object)["imap" => (function() {
-  $__fn = function($f_0, $v_1 = null) use (&$__fn) {
+$GLOBALS['Data_Functor_Invariant_invariantFn'] = (object)["imap" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_1) use ($f_0) {
+  $__num = \func_num_args();
   $__res = (($GLOBALS['Data_Functor_functorFn'])->{'map'})($f_0);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Functor_Invariant_imap
 function majData_majFunctor_majInvariant_imap($dict_0) {
@@ -261,19 +297,25 @@ function majData_majFunctor_majInvariant_invariantmajAlternate($dictInvariant_0)
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["imap" => (function() use ($dictInvariant_0) {
-  $__fn = function($f_1, $g_2 = null, $v_3 = null) use ($dictInvariant_0, &$__fn) {
+  $__res = (object)["imap" => function($f_1) use ($dictInvariant_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($g_2) use ($dictInvariant_0, $f_1) {
+  $__num = \func_num_args();
+  $__res = function($v_3) use ($dictInvariant_0, $f_1, $g_2) {
+  $__num = \func_num_args();
   $__res = (((($dictInvariant_0)->{'imap'})($f_1))($g_2))($v_3);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

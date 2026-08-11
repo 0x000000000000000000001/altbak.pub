@@ -106,13 +106,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Unfoldable = \call_user_func(function() {
   $exports = [];
-$unfoldrArrayImpl = function($isNothing, $fromJust = null, $fst = null, $snd = null, $f = null, $b = null) use (&$unfoldrArrayImpl) {
-    if (\func_num_args() < 6) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$unfoldrArrayImpl) {
-            return $unfoldrArrayImpl(...\array_merge($__args, $more));
-        };
-    }
+$unfoldrArrayImpl = function($isNothing, $fromJust, $fst, $snd, $f, $b) use (&$unfoldrArrayImpl) {
     
     $result = [];
     $value = $b;
@@ -172,19 +166,26 @@ $GLOBALS['Data_Unfoldable_fromJust'] = __NAMESPACE__ . '\\majData_majUnfoldable_
 // Data_Unfoldable_lessThanOrEq
 $GLOBALS['Data_Unfoldable_lessThanOrEq'] = (function() use (&$__fn) {
 $__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
-return (function() use ($__local_var_0_0) {
-  $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+return function($a1_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ( ! (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_GT);
+  $__res = function($a2_2) use ($__local_var_0_0, $a1_1) {
+  $__num = \func_num_args();
+  $__t1 = null;;
+  if ((($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_GT) {
+$__t1 = false;
+goto end_branch_1;;
+};
+  $__t1 = true;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 })();
 
 // Data_Unfoldable_unfoldr
@@ -202,19 +203,19 @@ function majData_majUnfoldable_unfoldr($dict_0) {
 $GLOBALS['Data_Unfoldable_unfoldr'] = __NAMESPACE__ . '\\majData_majUnfoldable_unfoldr';
 
 // Data_Unfoldable_unfoldableMaybe
-$GLOBALS['Data_Unfoldable_unfoldableMaybe'] = (object)["unfoldr" => (function() {
-  $__fn = function($f_0, $b_1 = null) use (&$__fn) {
+$GLOBALS['Data_Unfoldable_unfoldableMaybe'] = (object)["unfoldr" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($b_1) use ($f_0) {
+  $__num = \func_num_args();
   $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])->{'map'})($GLOBALS['Data_Tuple_fst']))(($f_0)($b_1));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Unfoldable10" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Unfoldable10" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Unfoldable1_unfoldable1Maybe'];
   goto __end;;
@@ -266,19 +267,19 @@ function majData_majUnfoldable_replicatemajA($dictApplicative_0, $dictUnfoldable
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $sequence_3_0 = (($dictTraversable_2)->{'sequence'})($dictApplicative_0);
-  $__res = (function() use ($dictUnfoldable_1, $sequence_3_0) {
-  $__fn = function($n_4, $m_5 = null) use ($dictUnfoldable_1, $sequence_3_0, &$__fn) {
+  $__res = function($n_4) use ($dictUnfoldable_1, $sequence_3_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ($sequence_3_0)(\Data\Unfoldable\majData_majUnfoldable_replicate($dictUnfoldable_1, $n_4, $m_5));
+  $__res = function($m_5) use ($dictUnfoldable_1, $n_4, $sequence_3_0) {
+  $__num = \func_num_args();
+  $__res = ($sequence_3_0)(((($GLOBALS['Data_Unfoldable_replicate'])($dictUnfoldable_1))($n_4))($m_5));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;

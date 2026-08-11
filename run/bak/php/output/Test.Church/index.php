@@ -189,19 +189,19 @@ default:
 break;
 };
   $__local_var_1_0 = ($GLOBALS['Test_Church_fromInt'])(($v_0 - 1));
-  $__t1 = (function() use ($__local_var_1_0) {
-  $__fn = function($f_2, $x_3 = null) use ($__local_var_1_0, &$__fn) {
+  $__t1 = function($f_2) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($x_3) use ($__local_var_1_0, $f_2) {
+  $__num = \func_num_args();
   $__res = ($f_2)((($__local_var_1_0)($f_2))($x_3));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   end_branch_1:;
   $__res = $__t1;
   goto __end;;
@@ -236,19 +236,19 @@ function majTest_majChurch_c100(int $n_0) {
   }
   $__local_var_1_0 = ($GLOBALS['Test_Church_fromInt'])($n_0);
   $__local_var_2_1 = ($GLOBALS['Test_Church_fromInt'])($n_0);
-  $__res = (function() use ($__local_var_1_0, $__local_var_2_1) {
-  $__fn = function($f_3, $x_4 = null) use ($__local_var_1_0, $__local_var_2_1, &$__fn) {
+  $__res = function($f_3) use ($__local_var_1_0, $__local_var_2_1) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($x_4) use ($__local_var_1_0, $__local_var_2_1, $f_3) {
+  $__num = \func_num_args();
   $__res = (($__local_var_1_0)(($__local_var_2_1)($f_3)))($x_4);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -264,19 +264,19 @@ function majTest_majChurch_c10k(int $n_0) {
   }
   $__local_var_1_0 = ($GLOBALS['Test_Church_c100'])($n_0);
   $__local_var_2_1 = ($GLOBALS['Test_Church_c100'])($n_0);
-  $__res = (function() use ($__local_var_1_0, $__local_var_2_1) {
-  $__fn = function($f_3, $x_4 = null) use ($__local_var_1_0, $__local_var_2_1, &$__fn) {
+  $__res = function($f_3) use ($__local_var_1_0, $__local_var_2_1) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($x_4) use ($__local_var_1_0, $__local_var_2_1, $f_3) {
+  $__num = \func_num_args();
   $__res = (($__local_var_1_0)(($__local_var_2_1)($f_3)))($x_4);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -292,19 +292,19 @@ function majTest_majChurch_c100k(int $n_0) {
   }
   $__local_var_1_0 = ($GLOBALS['Test_Church_c10k'])($n_0);
   $__local_var_2_1 = ($GLOBALS['Test_Church_fromInt'])($n_0);
-  $__res = (function() use ($__local_var_1_0, $__local_var_2_1) {
-  $__fn = function($f_3, $x_4 = null) use ($__local_var_1_0, $__local_var_2_1, &$__fn) {
+  $__res = function($f_3) use ($__local_var_1_0, $__local_var_2_1) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($x_4) use ($__local_var_1_0, $__local_var_2_1, $f_3) {
+  $__num = \func_num_args();
   $__res = (($__local_var_1_0)(($__local_var_2_1)($f_3)))($x_4);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

@@ -122,19 +122,31 @@ function majData_majEquivalence_majEquivalence($x_0) {
 $GLOBALS['Data_Equivalence_Equivalence'] = __NAMESPACE__ . '\\majData_majEquivalence_majEquivalence';
 
 // Data_Equivalence_semigroupEquivalence
-$GLOBALS['Data_Equivalence_semigroupEquivalence'] = (object)["append" => (function() {
-  $__fn = function($v_0, $v1_1 = null, $a_2 = null, $b_3 = null) use (&$__fn) {
+$GLOBALS['Data_Equivalence_semigroupEquivalence'] = (object)["append" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 4) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 4);
-  }
+  $__res = function($v1_1) use ($v_0) {
+  $__num = \func_num_args();
+  $__res = function($a_2) use ($v1_1, $v_0) {
+  $__num = \func_num_args();
+  $__res = function($b_3) use ($a_2, $v1_1, $v_0) {
+  $__num = \func_num_args();
   $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})((($v_0)($a_2))($b_3)))((($v1_1)($a_2))($b_3));
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Equivalence_newtypeEquivalence
 $GLOBALS['Data_Equivalence_newtypeEquivalence'] = (object)["Coercible0" => function($_dollar__unused_0) {
@@ -146,19 +158,19 @@ $GLOBALS['Data_Equivalence_newtypeEquivalence'] = (object)["Coercible0" => funct
 }];
 
 // Data_Equivalence_monoidEquivalence
-$GLOBALS['Data_Equivalence_monoidEquivalence'] = (object)["mempty" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_Equivalence_monoidEquivalence'] = (object)["mempty" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) {
+  $__num = \func_num_args();
   $__res = true;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Semigroup0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Semigroup0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Equivalence_semigroupEquivalence'];
   goto __end;;
@@ -181,19 +193,31 @@ function majData_majEquivalence_defaultmajEquivalence($dictEq_0) {
 $GLOBALS['Data_Equivalence_defaultEquivalence'] = __NAMESPACE__ . '\\majData_majEquivalence_defaultmajEquivalence';
 
 // Data_Equivalence_contravariantEquivalence
-$GLOBALS['Data_Equivalence_contravariantEquivalence'] = (object)["cmap" => (function() {
-  $__fn = function($f_0, $v_1 = null, $x_2 = null, $y_3 = null) use (&$__fn) {
+$GLOBALS['Data_Equivalence_contravariantEquivalence'] = (object)["cmap" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 4) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 4);
-  }
+  $__res = function($v_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($x_2) use ($f_0, $v_1) {
+  $__num = \func_num_args();
+  $__res = function($y_3) use ($f_0, $v_1, $x_2) {
+  $__num = \func_num_args();
   $__res = (($v_1)(($f_0)($x_2)))(($f_0)($y_3));
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Equivalence_comparisonEquivalence
 function majData_majEquivalence_comparisonmajEquivalence($v_0, $a_1 = null, $b_2 = null): bool|\Closure {

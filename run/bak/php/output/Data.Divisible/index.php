@@ -128,7 +128,7 @@ function majData_majDivisible_divisiblemajOp($dictMonoid_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $divideOp_1_0 = \Data\Divide\majData_majDivide_dividemajOp((($dictMonoid_0)->{'Semigroup0'})(null));
+  $divideOp_1_0 = ($GLOBALS['Data_Divide_divideOp'])((($dictMonoid_0)->{'Semigroup0'})(null));
   $__local_var_2_1 = ($dictMonoid_0)->{'mempty'};
   $__res = (object)["conquer" => function($v_3) use ($__local_var_2_1) {
   $__num = \func_num_args();
@@ -150,19 +150,19 @@ function majData_majDivisible_divisiblemajOp($dictMonoid_0) {
 $GLOBALS['Data_Divisible_divisibleOp'] = __NAMESPACE__ . '\\majData_majDivisible_divisiblemajOp';
 
 // Data_Divisible_divisibleEquivalence
-$GLOBALS['Data_Divisible_divisibleEquivalence'] = (object)["conquer" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_Divisible_divisibleEquivalence'] = (object)["conquer" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) {
+  $__num = \func_num_args();
   $__res = true;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Divide0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Divide0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Divide_divideEquivalence'];
   goto __end;;
@@ -171,19 +171,19 @@ $GLOBALS['Data_Divisible_divisibleEquivalence'] = (object)["conquer" => (functio
 }];
 
 // Data_Divisible_divisibleComparison
-$GLOBALS['Data_Divisible_divisibleComparison'] = (object)["conquer" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_Divisible_divisibleComparison'] = (object)["conquer" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) {
+  $__num = \func_num_args();
   $__res = new \Data\Ordering\Data_Ordering_EQ();
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Divide0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Divide0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Divide_divideComparison'];
   goto __end;;

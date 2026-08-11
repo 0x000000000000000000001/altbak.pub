@@ -164,12 +164,10 @@ function majControl_majParallel_parmajTraverse($dictParallel_0) {
   }
   $sequential_1_0 = ($dictParallel_0)->{'sequential'};
   $parallel_2_1 = ($dictParallel_0)->{'parallel'};
-  $__res = (function() use ($parallel_2_1, $sequential_1_0) {
-  $__fn = function($dictApplicative_3, $dictTraversable_4 = null) use ($parallel_2_1, $sequential_1_0, &$__fn) {
+  $__res = function($dictApplicative_3) use ($parallel_2_1, $sequential_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($dictTraversable_4) use ($dictApplicative_3, $parallel_2_1, $sequential_1_0) {
+  $__num = \func_num_args();
   $traverse_5_2 = (($dictTraversable_4)->{'traverse'})($dictApplicative_3);
   $__res = function($f_6) use ($parallel_2_1, $sequential_1_0, $traverse_5_2) {
   $__num = \func_num_args();
@@ -180,10 +178,12 @@ function majControl_majParallel_parmajTraverse($dictParallel_0) {
 };
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -261,19 +261,19 @@ function majControl_majParallel_parmajOnemajOfmajMap($dictParallel_0) {
   $__res = function($dictFoldable_5) use ($Plus1_4_2, $parallel_2_1, $sequential_1_0) {
   $__num = \func_num_args();
   $oneOfMap_6_3 = (($GLOBALS['Data_Foldable_oneOfMap'])($dictFoldable_5))($Plus1_4_2);
-  $__res = (function() use ($oneOfMap_6_3, $parallel_2_1, $sequential_1_0) {
-  $__fn = function($dictFunctor_7, $f_8 = null) use ($oneOfMap_6_3, $parallel_2_1, $sequential_1_0, &$__fn) {
+  $__res = function($dictFunctor_7) use ($oneOfMap_6_3, $parallel_2_1, $sequential_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($f_8) use ($oneOfMap_6_3, $parallel_2_1, $sequential_1_0) {
+  $__num = \func_num_args();
   $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($sequential_1_0))(($oneOfMap_6_3)((($GLOBALS['Control_Semigroupoid_composeImpl'])($parallel_2_1))($f_8)));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

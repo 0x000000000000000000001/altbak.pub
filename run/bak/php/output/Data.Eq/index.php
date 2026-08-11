@@ -101,28 +101,17 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Eq = \call_user_func(function() {
   $exports = [];
-$eqIntImpl = function($a, $b = null) use (&$eqIntImpl) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$eqIntImpl) {
-
-            return $eqIntImpl(...\array_merge($__args, $more));
-        };
-    }
+$eqIntImpl = function($a, $b) use (&$eqIntImpl) {
     return $a === $b;
 };
 $eqStringImpl = $eqIntImpl;
-$eqNumberImpl = $eqIntImpl;
+$eqNumberImpl = function($a, $b) use (&$eqNumberImpl) {
+    return (float)$a === (float)$b;
+};
 $eqCharImpl = $eqIntImpl;
 $eqBooleanImpl = $eqIntImpl;
 
-$eqArrayImpl = function($f, $xs = null, $ys = null) use (&$eqArrayImpl) {
-    if (\func_num_args() < 3) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$eqArrayImpl) {
-            return $eqArrayImpl(...\array_merge($__args, $more));
-        };
-    }
+$eqArrayImpl = function($f, $xs, $ys) use (&$eqArrayImpl) {
     if (\count($xs) !== \count($ys)) return false;
     for ($i = 0; $i < \count($xs); $i++) {
         if (!$f($xs[$i], $ys[$i])) return false;
@@ -216,52 +205,58 @@ $GLOBALS['Data_Eq_eqStringImpl'] = __NAMESPACE__ . '\\majData_majEq_eqmajStringm
 
 
 // Data_Eq_eqVoid
-$GLOBALS['Data_Eq_eqVoid'] = (object)["eq" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_Eq_eqVoid'] = (object)["eq" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) {
+  $__num = \func_num_args();
   $__res = true;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Eq_eqUnit
-$GLOBALS['Data_Eq_eqUnit'] = (object)["eq" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_Eq_eqUnit'] = (object)["eq" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) {
+  $__num = \func_num_args();
   $__res = true;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Eq_eqString
 $GLOBALS['Data_Eq_eqString'] = (object)["eq" => $GLOBALS['Data_Eq_eqStringImpl']];
 
 // Data_Eq_eqRowNil
-$GLOBALS['Data_Eq_eqRowNil'] = (object)["eqRecord" => (function() {
-  $__fn = function($v_0, $v1_1 = null, $v2_2 = null) use (&$__fn) {
+$GLOBALS['Data_Eq_eqRowNil'] = (object)["eqRecord" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($v1_1) {
+  $__num = \func_num_args();
+  $__res = function($v2_2) {
+  $__num = \func_num_args();
   $__res = true;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Eq_eqRecord
 function majData_majEq_eqmajRecord($dict_0) {
@@ -292,19 +287,19 @@ function majData_majEq_eqmajRec($_dollar__unused_0, $dictEqRecord_1 = null) {
 $GLOBALS['Data_Eq_eqRec'] = __NAMESPACE__ . '\\majData_majEq_eqmajRec';
 
 // Data_Eq_eqProxy
-$GLOBALS['Data_Eq_eqProxy'] = (object)["eq" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_Eq_eqProxy'] = (object)["eq" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) {
+  $__num = \func_num_args();
   $__res = true;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Eq_eqNumber
 $GLOBALS['Data_Eq_eqNumber'] = (object)["eq" => $GLOBALS['Data_Eq_eqNumberImpl']];
@@ -376,20 +371,26 @@ function majData_majEq_eqmajRowmajCons($dictEqRecord_0, $_dollar__unused_1 = nul
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = (object)["eqRecord" => (function() use ($dictEqRecord_0, $dictEq_3, $dictIsSymbol_2) {
-  $__fn = function($v_4, $ra_5 = null, $rb_6 = null) use ($dictEqRecord_0, $dictEq_3, $dictIsSymbol_2, &$__fn) {
+  $__res = (object)["eqRecord" => function($v_4) use ($dictEqRecord_0, $dictEq_3, $dictIsSymbol_2) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($ra_5) use ($dictEqRecord_0, $dictEq_3, $dictIsSymbol_2) {
+  $__num = \func_num_args();
+  $__res = function($rb_6) use ($dictEqRecord_0, $dictEq_3, $dictIsSymbol_2, $ra_5) {
+  $__num = \func_num_args();
   $get_7_0 = ($GLOBALS['Record_Unsafe_unsafeGet'])((($dictIsSymbol_2)->{'reflectSymbol'})(new \Type\Proxy\Type_Proxy_Proxy()));
   $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($dictEq_3)->{'eq'})(($get_7_0)($ra_5)))(($get_7_0)($rb_6))))((((($dictEqRecord_0)->{'eqRecord'})(new \Type\Proxy\Type_Proxy_Proxy()))($ra_5))($rb_6));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -397,7 +398,7 @@ function majData_majEq_eqmajRowmajCons($dictEqRecord_0, $_dollar__unused_1 = nul
 $GLOBALS['Data_Eq_eqRowCons'] = __NAMESPACE__ . '\\majData_majEq_eqmajRowmajCons';
 
 // Data_Eq_notEq
-function majData_majEq_notmajEq($dictEq_0, $x_1 = null, $y_2 = null): bool|\Closure {
+function majData_majEq_notmajEq($dictEq_0, $x_1 = null, $y_2 = null) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majEq_notmajEq';
   if ($__num < 3) {
@@ -418,19 +419,19 @@ function majData_majEq_notmajEq1($dictEq1_0, $dictEq_1 = null) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $eq12_2_0 = (($dictEq1_0)->{'eq1'})($dictEq_1);
-  $__res = (function() use ($eq12_2_0) {
-  $__fn = function($x_3, $y_4 = null) use ($eq12_2_0, &$__fn) {
+  $__res = function($x_3) use ($eq12_2_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_4) use ($eq12_2_0, $x_3) {
+  $__num = \func_num_args();
   $__res = ((($GLOBALS['Data_Eq_eqBoolean'])->{'eq'})((($eq12_2_0)($x_3))($y_4)))(false);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

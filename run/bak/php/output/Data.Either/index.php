@@ -248,12 +248,10 @@ goto end_branch_1;;
 }];
 
 // Data_Either_functorEither
-$GLOBALS['Data_Either_functorEither'] = (object)["map" => (function() {
-  $__fn = function($f_0, $m_1 = null) use (&$__fn) {
+$GLOBALS['Data_Either_functorEither'] = (object)["map" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($m_1) use ($f_0) {
+  $__num = \func_num_args();
   $__t0 = null;;
   if ($m_1 instanceof \Data\Either\Data_Either_Left) {
 $__t0 = new \Data\Either\Data_Either_Left(($m_1)->{'value0'});
@@ -269,25 +267,27 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Either_invariantEither
-$GLOBALS['Data_Either_invariantEither'] = (object)["imap" => (function() {
-  $__fn = function($f_0, $v_1 = null) use (&$__fn) {
+$GLOBALS['Data_Either_invariantEither'] = (object)["imap" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_1) use ($f_0) {
+  $__num = \func_num_args();
   $__res = (($GLOBALS['Data_Either_functorEither'])->{'map'})($f_0);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Either_fromRight'
 function majData_majEither_frommajRight__prime__($v_0, $v1_1 = null) {
@@ -374,12 +374,10 @@ goto end_branch_0;;
 $GLOBALS['Data_Either_fromLeft'] = __NAMESPACE__ . '\\majData_majEither_frommajLeft';
 
 // Data_Either_extendEither
-$GLOBALS['Data_Either_extendEither'] = (object)["extend" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_Either_extendEither'] = (object)["extend" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) use ($v_0) {
+  $__num = \func_num_args();
   $__t0 = null;;
   if ($v1_1 instanceof \Data\Either\Data_Either_Left) {
 $__t0 = new \Data\Either\Data_Either_Left(($v1_1)->{'value0'});
@@ -390,10 +388,12 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Either_functorEither'];
   goto __end;;
@@ -408,26 +408,37 @@ function majData_majEither_eqmajEither($dictEq_0, $dictEq1_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (object)["eq" => (function() use ($dictEq1_1, $dictEq_0) {
-  $__fn = function($x_2, $y_3 = null) use ($dictEq1_1, $dictEq_0, &$__fn) {
+  $__res = (object)["eq" => function($x_2) use ($dictEq1_1, $dictEq_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_3) use ($dictEq1_1, $dictEq_0, $x_2) {
+  $__num = \func_num_args();
   $__t0 = null;;
   if ($x_2 instanceof \Data\Either\Data_Either_Left) {
-$__t0 = ($y_3 instanceof \Data\Either\Data_Either_Left && ((($dictEq_0)->{'eq'})(($x_2)->{'value0'}))(($y_3)->{'value0'}));
+$__t1 = null;;
+if ($y_3 instanceof \Data\Either\Data_Either_Left) {
+$__t1 = ((($dictEq_0)->{'eq'})(($x_2)->{'value0'}))(($y_3)->{'value0'});
+goto end_branch_1;;
+};
+$__t1 = false;
+end_branch_1:;
+$__t0 = $__t1;
 goto end_branch_0;;
 };
-  $__t0 = ($x_2 instanceof \Data\Either\Data_Either_Right && ($y_3 instanceof \Data\Either\Data_Either_Right && ((($dictEq1_1)->{'eq'})(($x_2)->{'value0'}))(($y_3)->{'value0'})));
+  if (($x_2 instanceof \Data\Either\Data_Either_Right && $y_3 instanceof \Data\Either\Data_Either_Right)) {
+$__t0 = ((($dictEq1_1)->{'eq'})(($x_2)->{'value0'}))(($y_3)->{'value0'});
+goto end_branch_0;;
+};
+  $__t0 = false;
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -445,64 +456,75 @@ function majData_majEither_ordmajEither($dictOrd_0) {
   $__res = function($dictOrd1_2) use ($__local_var_1_0, $dictOrd_0) {
   $__num = \func_num_args();
   $__local_var_3_1 = (($dictOrd1_2)->{'Eq0'})(null);
-  $eqEither2_4_2 = (object)["eq" => (function() use ($__local_var_1_0, $__local_var_3_1) {
-  $__fn = function($x_4, $y_5 = null) use ($__local_var_1_0, $__local_var_3_1, &$__fn) {
+  $eqEither2_3_1 = (object)["eq" => function($x_4) use ($__local_var_1_0, $__local_var_3_1) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_5) use ($__local_var_1_0, $__local_var_3_1, $x_4) {
+  $__num = \func_num_args();
   $__t2 = null;;
   if ($x_4 instanceof \Data\Either\Data_Either_Left) {
-$__t2 = ($y_5 instanceof \Data\Either\Data_Either_Left && ((($__local_var_1_0)->{'eq'})(($x_4)->{'value0'}))(($y_5)->{'value0'}));
+$__t3 = null;;
+if ($y_5 instanceof \Data\Either\Data_Either_Left) {
+$__t3 = ((($__local_var_1_0)->{'eq'})(($x_4)->{'value0'}))(($y_5)->{'value0'});
+goto end_branch_3;;
+};
+$__t3 = false;
+end_branch_3:;
+$__t2 = $__t3;
 goto end_branch_2;;
 };
-  $__t2 = ($x_4 instanceof \Data\Either\Data_Either_Right && ($y_5 instanceof \Data\Either\Data_Either_Right && ((($__local_var_3_1)->{'eq'})(($x_4)->{'value0'}))(($y_5)->{'value0'})));
+  if (($x_4 instanceof \Data\Either\Data_Either_Right && $y_5 instanceof \Data\Either\Data_Either_Right)) {
+$__t2 = ((($__local_var_3_1)->{'eq'})(($x_4)->{'value0'}))(($y_5)->{'value0'});
+goto end_branch_2;;
+};
+  $__t2 = false;
   end_branch_2:;
   $__res = $__t2;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
-  $__res = (object)["compare" => (function() use ($dictOrd1_2, $dictOrd_0) {
-  $__fn = function($x_5, $y_6 = null) use ($dictOrd1_2, $dictOrd_0, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__t4 = null;;
-  if ($x_5 instanceof \Data\Either\Data_Either_Left) {
-$__t5 = null;;
-if ($y_6 instanceof \Data\Either\Data_Either_Left) {
-$__t5 = ((($dictOrd_0)->{'compare'})(($x_5)->{'value0'}))(($y_6)->{'value0'});
-goto end_branch_5;;
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-$__t5 = new \Data\Ordering\Data_Ordering_LT();
-end_branch_5:;
-$__t4 = $__t5;
-goto end_branch_4;;
-};
-  if ($y_6 instanceof \Data\Either\Data_Either_Left) {
-$__t4 = new \Data\Ordering\Data_Ordering_GT();
-goto end_branch_4;;
-};
-  if (($x_5 instanceof \Data\Either\Data_Either_Right && $y_6 instanceof \Data\Either\Data_Either_Right)) {
-$__t4 = ((($dictOrd1_2)->{'compare'})(($x_5)->{'value0'}))(($y_6)->{'value0'});
-goto end_branch_4;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t4 = null;
-  end_branch_4:;
-  $__res = $__t4;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Eq0" => function($_dollar__unused_5) use ($eqEither2_4_2) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = (object)["compare" => function($x_4) use ($dictOrd1_2, $dictOrd_0) {
   $__num = \func_num_args();
-  $__res = $eqEither2_4_2;
+  $__res = function($y_5) use ($dictOrd1_2, $dictOrd_0, $x_4) {
+  $__num = \func_num_args();
+  $__t5 = null;;
+  if ($x_4 instanceof \Data\Either\Data_Either_Left) {
+$__t6 = null;;
+if ($y_5 instanceof \Data\Either\Data_Either_Left) {
+$__t6 = ((($dictOrd_0)->{'compare'})(($x_4)->{'value0'}))(($y_5)->{'value0'});
+goto end_branch_6;;
+};
+$__t6 = new \Data\Ordering\Data_Ordering_LT();
+end_branch_6:;
+$__t5 = $__t6;
+goto end_branch_5;;
+};
+  if ($y_5 instanceof \Data\Either\Data_Either_Left) {
+$__t5 = new \Data\Ordering\Data_Ordering_GT();
+goto end_branch_5;;
+};
+  if (($x_4 instanceof \Data\Either\Data_Either_Right && $y_5 instanceof \Data\Either\Data_Either_Right)) {
+$__t5 = ((($dictOrd1_2)->{'compare'})(($x_4)->{'value0'}))(($y_5)->{'value0'});
+goto end_branch_5;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t5 = null;
+  end_branch_5:;
+  $__res = $__t5;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Eq0" => function($_dollar__unused_4) use ($eqEither2_3_1) {
+  $__num = \func_num_args();
+  $__res = $eqEither2_3_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -524,26 +546,43 @@ function majData_majEither_eq1majEither($dictEq_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["eq1" => (function() use ($dictEq_0) {
-  $__fn = function($dictEq1_1, $x_2 = null, $y_3 = null) use ($dictEq_0, &$__fn) {
+  $__res = (object)["eq1" => function($dictEq1_1) use ($dictEq_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($x_2) use ($dictEq1_1, $dictEq_0) {
+  $__num = \func_num_args();
+  $__res = function($y_3) use ($dictEq1_1, $dictEq_0, $x_2) {
+  $__num = \func_num_args();
   $__t0 = null;;
   if ($x_2 instanceof \Data\Either\Data_Either_Left) {
-$__t0 = ($y_3 instanceof \Data\Either\Data_Either_Left && ((($dictEq_0)->{'eq'})(($x_2)->{'value0'}))(($y_3)->{'value0'}));
+$__t1 = null;;
+if ($y_3 instanceof \Data\Either\Data_Either_Left) {
+$__t1 = ((($dictEq_0)->{'eq'})(($x_2)->{'value0'}))(($y_3)->{'value0'});
+goto end_branch_1;;
+};
+$__t1 = false;
+end_branch_1:;
+$__t0 = $__t1;
 goto end_branch_0;;
 };
-  $__t0 = ($x_2 instanceof \Data\Either\Data_Either_Right && ($y_3 instanceof \Data\Either\Data_Either_Right && ((($dictEq1_1)->{'eq'})(($x_2)->{'value0'}))(($y_3)->{'value0'})));
+  if (($x_2 instanceof \Data\Either\Data_Either_Right && $y_3 instanceof \Data\Either\Data_Either_Right)) {
+$__t0 = ((($dictEq1_1)->{'eq'})(($x_2)->{'value0'}))(($y_3)->{'value0'});
+goto end_branch_0;;
+};
+  $__t0 = false;
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -559,35 +598,52 @@ function majData_majEither_ord1majEither($dictOrd_0) {
   }
   $ordEither1_1_0 = ($GLOBALS['Data_Either_ordEither'])($dictOrd_0);
   $__local_var_2_1 = (($dictOrd_0)->{'Eq0'})(null);
-  $eq1Either1_3_2 = (object)["eq1" => (function() use ($__local_var_2_1) {
-  $__fn = function($dictEq1_3, $x_4 = null, $y_5 = null) use ($__local_var_2_1, &$__fn) {
+  $eq1Either1_2_1 = (object)["eq1" => function($dictEq1_3) use ($__local_var_2_1) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($x_4) use ($__local_var_2_1, $dictEq1_3) {
+  $__num = \func_num_args();
+  $__res = function($y_5) use ($__local_var_2_1, $dictEq1_3, $x_4) {
+  $__num = \func_num_args();
   $__t2 = null;;
   if ($x_4 instanceof \Data\Either\Data_Either_Left) {
-$__t2 = ($y_5 instanceof \Data\Either\Data_Either_Left && ((($__local_var_2_1)->{'eq'})(($x_4)->{'value0'}))(($y_5)->{'value0'}));
+$__t3 = null;;
+if ($y_5 instanceof \Data\Either\Data_Either_Left) {
+$__t3 = ((($__local_var_2_1)->{'eq'})(($x_4)->{'value0'}))(($y_5)->{'value0'});
+goto end_branch_3;;
+};
+$__t3 = false;
+end_branch_3:;
+$__t2 = $__t3;
 goto end_branch_2;;
 };
-  $__t2 = ($x_4 instanceof \Data\Either\Data_Either_Right && ($y_5 instanceof \Data\Either\Data_Either_Right && ((($dictEq1_3)->{'eq'})(($x_4)->{'value0'}))(($y_5)->{'value0'})));
+  if (($x_4 instanceof \Data\Either\Data_Either_Right && $y_5 instanceof \Data\Either\Data_Either_Right)) {
+$__t2 = ((($dictEq1_3)->{'eq'})(($x_4)->{'value0'}))(($y_5)->{'value0'});
+goto end_branch_2;;
+};
+  $__t2 = false;
   end_branch_2:;
   $__res = $__t2;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
-  $__res = (object)["compare1" => function($dictOrd1_4) use ($ordEither1_1_0) {
-  $__num = \func_num_args();
-  $__res = (($ordEither1_1_0)($dictOrd1_4))->{'compare'};
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Eq10" => function($_dollar__unused_4) use ($eq1Either1_3_2) {
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = (object)["compare1" => function($dictOrd1_3) use ($ordEither1_1_0) {
   $__num = \func_num_args();
-  $__res = $eq1Either1_3_2;
+  $__res = (($ordEither1_1_0)($dictOrd1_3))->{'compare'};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Eq10" => function($_dollar__unused_3) use ($eq1Either1_2_1) {
+  $__num = \func_num_args();
+  $__res = $eq1Either1_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -710,19 +766,19 @@ function majData_majEither_choose($dictAlt_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $__local_var_1_0 = (($dictAlt_0)->{'Functor0'})(null);
-  $__res = (function() use ($__local_var_1_0, $dictAlt_0) {
-  $__fn = function($a_2, $b_3 = null) use ($__local_var_1_0, $dictAlt_0, &$__fn) {
+  $__res = function($a_2) use ($__local_var_1_0, $dictAlt_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($b_3) use ($__local_var_1_0, $a_2, $dictAlt_0) {
+  $__num = \func_num_args();
   $__res = ((($dictAlt_0)->{'alt'})(((($__local_var_1_0)->{'map'})($GLOBALS['Data_Either_Left']))($a_2)))(((($__local_var_1_0)->{'map'})($GLOBALS['Data_Either_Right']))($b_3));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -785,12 +841,10 @@ goto end_branch_0;;
 $GLOBALS['Data_Either_blush'] = __NAMESPACE__ . '\\majData_majEither_blush';
 
 // Data_Either_applyEither
-$GLOBALS['Data_Either_applyEither'] = (object)["apply" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_Either_applyEither'] = (object)["apply" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) use ($v_0) {
+  $__num = \func_num_args();
   $__t0 = null;;
   if ($v_0 instanceof \Data\Either\Data_Either_Left) {
 $__t0 = new \Data\Either\Data_Either_Left(($v_0)->{'value0'});
@@ -806,10 +860,12 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Either_functorEither'];
   goto __end;;
@@ -866,19 +922,19 @@ function majData_majEither_semigroupmajEither($dictSemigroup_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $append1_1_0 = ($dictSemigroup_0)->{'append'};
-  $__res = (object)["append" => (function() use ($append1_1_0) {
-  $__fn = function($x_2, $y_3 = null) use ($append1_1_0, &$__fn) {
+  $__res = (object)["append" => function($x_2) use ($append1_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_3) use ($append1_1_0, $x_2) {
+  $__num = \func_num_args();
   $__res = ((($GLOBALS['Data_Either_applyEither'])->{'apply'})(((($GLOBALS['Data_Either_functorEither'])->{'map'})($append1_1_0))($x_2)))($y_3);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -910,12 +966,10 @@ $GLOBALS['Data_Either_monadEither'] = (object)["Applicative0" => function($_doll
 }];
 
 // Data_Either_altEither
-$GLOBALS['Data_Either_altEither'] = (object)["alt" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_Either_altEither'] = (object)["alt" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) use ($v_0) {
+  $__num = \func_num_args();
   $__t0 = null;;
   if ($v_0 instanceof \Data\Either\Data_Either_Left) {
 $__t0 = $v1_1;
@@ -926,10 +980,12 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Either_functorEither'];
   goto __end;;

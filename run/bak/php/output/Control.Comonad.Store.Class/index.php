@@ -231,7 +231,7 @@ function majControl_majComonad_majStore_majClass_comonadmajStoremajTracedmajT($d
   $__res = function($dictMonoid_4) use ($Comonad0_2_1, $comonadTracedT_3_2, $dictComonadStore_0, $pos1_1_0) {
   $__num = \func_num_args();
   $mempty_5_3 = ($dictMonoid_4)->{'mempty'};
-  $lower1_6_4 = function($v_6) use ($Comonad0_2_1, $mempty_5_3) {
+  $lower1_5_3 = function($v_6) use ($Comonad0_2_1, $mempty_5_3) {
   $__num = \func_num_args();
   $__res = ((((((($Comonad0_2_1)->{'Extend0'})(null))->{'Functor0'})(null))->{'map'})(function($f_7) use ($mempty_5_3) {
   $__num = \func_num_args();
@@ -244,16 +244,16 @@ function majControl_majComonad_majStore_majClass_comonadmajStoremajTracedmajT($d
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-  $comonadTracedT1_7_5 = ($comonadTracedT_3_2)($dictMonoid_4);
-  $__res = (object)["pos" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($pos1_1_0))($lower1_6_4), "peek" => function($s_8) use ($dictComonadStore_0, $lower1_6_4) {
+  $comonadTracedT1_6_5 = ($comonadTracedT_3_2)($dictMonoid_4);
+  $__res = (object)["pos" => (($GLOBALS['Control_Semigroupoid_composeImpl'])($pos1_1_0))($lower1_5_3), "peek" => function($s_7) use ($dictComonadStore_0, $lower1_5_3) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictComonadStore_0)->{'peek'})($s_8)))($lower1_6_4);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictComonadStore_0)->{'peek'})($s_7)))($lower1_5_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Comonad0" => function($_dollar__unused_8) use ($comonadTracedT1_7_5) {
+}, "Comonad0" => function($_dollar__unused_7) use ($comonadTracedT1_6_5) {
   $__num = \func_num_args();
-  $__res = $comonadTracedT1_7_5;
+  $__res = $comonadTracedT1_6_5;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -275,26 +275,26 @@ function majControl_majComonad_majStore_majClass_comonadmajStoremajStoremajT($di
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $comonadStoreT_1_0 = \Control\Comonad\Store\Trans\majControl_majComonad_majStore_majTrans_comonadmajStoremajT($dictComonad_0);
+  $comonadStoreT_1_0 = ($GLOBALS['Control_Comonad_Store_Trans_comonadStoreT'])($dictComonad_0);
   $__res = (object)["pos" => function($v_2) {
   $__num = \func_num_args();
   $__res = ($v_2)->{'value1'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "peek" => (function() use ($dictComonad_0) {
-  $__fn = function($s_2, $v_3 = null) use ($dictComonad_0, &$__fn) {
+}, "peek" => function($s_2) use ($dictComonad_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_3) use ($dictComonad_0, $s_2) {
+  $__num = \func_num_args();
   $__res = ((($dictComonad_0)->{'extract'})(($v_3)->{'value0'}))($s_2);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Comonad0" => function($_dollar__unused_2) use ($comonadStoreT_1_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Comonad0" => function($_dollar__unused_2) use ($comonadStoreT_1_0) {
   $__num = \func_num_args();
   $__res = $comonadStoreT_1_0;
   goto __end;;
@@ -316,7 +316,7 @@ function majControl_majComonad_majStore_majClass_comonadmajStoremajEnvmajT($dict
   }
   $Comonad0_1_0 = (($dictComonadStore_0)->{'Comonad0'})(null);
   $lower1_2_1 = (($GLOBALS['Control_Comonad_Env_Trans_comonadTransEnvT'])->{'lower'})($Comonad0_1_0);
-  $comonadEnvT_3_2 = \Control\Comonad\Env\Trans\majControl_majComonad_majEnv_majTrans_comonadmajEnvmajT($Comonad0_1_0);
+  $comonadEnvT_3_2 = ($GLOBALS['Control_Comonad_Env_Trans_comonadEnvT'])($Comonad0_1_0);
   $__res = (object)["pos" => (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictComonadStore_0)->{'pos'}))($lower1_2_1), "peek" => function($s_4) use ($dictComonadStore_0, $lower1_2_1) {
   $__num = \func_num_args();
   $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($dictComonadStore_0)->{'peek'})($s_4)))($lower1_2_1);

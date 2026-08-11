@@ -165,14 +165,14 @@ function majBench_runmajBenchmajAff($describe_0, $act_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Bench_discard1'])((($GLOBALS['Effect_Aff_monadEffectAff'])->{'liftEffect'})(($GLOBALS['Effect_Console_log'])("--------------------------------------------------
+  $__res = (($GLOBALS['Bench_discard1'])((($GLOBALS['Effect_Aff_monadEffectAff'])->{'liftEffect'})(\Effect\Console\majEffect_majConsole_log("--------------------------------------------------
 
 (Test)
 "))))(function($_dollar__unused_2) use ($act_1, $describe_0) {
   $__num = \func_num_args();
   $__res = (($GLOBALS['Bench_discard1'])((($GLOBALS['Effect_Aff_monadEffectAff'])->{'liftEffect'})($describe_0)))(function($_dollar__unused_3) use ($act_1) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Bench_discard1'])((($GLOBALS['Effect_Aff_monadEffectAff'])->{'liftEffect'})(($GLOBALS['Effect_Console_log'])("
+  $__res = (($GLOBALS['Bench_discard1'])((($GLOBALS['Effect_Aff_monadEffectAff'])->{'liftEffect'})(\Effect\Console\majEffect_majConsole_log("
 (Output)
 "))))(function($_dollar__unused_4) use ($act_1) {
   $__num = \func_num_args();
@@ -182,8 +182,8 @@ function majBench_runmajBenchmajAff($describe_0, $act_1 = null) {
   $__num = \func_num_args();
   $__res = ((($GLOBALS['Effect_Aff_bindAff'])->{'bind'})((($GLOBALS['Effect_Aff_monadEffectAff'])->{'liftEffect'})($GLOBALS['Bench_benchNow'])))(function($t2_7) use ($t1_5) {
   $__num = \func_num_args();
-  $dt_8_0 = ((($GLOBALS['Data_Ring_ringNumber'])->{'sub'})($t2_7))($t1_5);
-  $__res = (($GLOBALS['Bench_discard1'])((($GLOBALS['Effect_Aff_monadEffectAff'])->{'liftEffect'})(($GLOBALS['Effect_Console_log'])(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("
+  $dt_8_0 = ($t2_7 - $t1_5);
+  $__res = (($GLOBALS['Bench_discard1'])((($GLOBALS['Effect_Aff_monadEffectAff'])->{'liftEffect'})(\Effect\Console\majEffect_majConsole_log(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("
 (Execution time)
 
 "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(\Bench\majBench_formatmajNumber($dt_8_0)))(" μs
@@ -231,14 +231,14 @@ function majBench_runmajBench($describe_0, $act_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Bench_discard2'])(($GLOBALS['Effect_Console_log'])("--------------------------------------------------
+  $__res = (($GLOBALS['Bench_discard2'])(\Effect\Console\majEffect_majConsole_log("--------------------------------------------------
 
 (Test)
 ")))(function($_dollar__unused_2) use ($act_1, $describe_0) {
   $__num = \func_num_args();
   $__res = (($GLOBALS['Bench_discard2'])($describe_0))(function($_dollar__unused_3) use ($act_1) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Bench_discard2'])(($GLOBALS['Effect_Console_log'])("
+  $__res = (($GLOBALS['Bench_discard2'])(\Effect\Console\majEffect_majConsole_log("
 (Output)
 ")))(function($_dollar__unused_4) use ($act_1) {
   $__num = \func_num_args();
@@ -248,8 +248,8 @@ function majBench_runmajBench($describe_0, $act_1 = null) {
   $__num = \func_num_args();
   $__res = ((($GLOBALS['Effect_bindEffect'])->{'bind'})($GLOBALS['Bench_benchNow']))(function($t2_7) use ($t1_5) {
   $__num = \func_num_args();
-  $dt_8_0 = ((($GLOBALS['Data_Ring_ringNumber'])->{'sub'})($t2_7))($t1_5);
-  $__res = (($GLOBALS['Bench_discard2'])(($GLOBALS['Effect_Console_log'])(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("
+  $dt_8_0 = ($t2_7 - $t1_5);
+  $__res = (($GLOBALS['Bench_discard2'])(\Effect\Console\majEffect_majConsole_log(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("
 (Execution time)
 
 "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(\Bench\majBench_formatmajNumber($dt_8_0)))(" μs

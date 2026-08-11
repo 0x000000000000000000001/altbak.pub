@@ -132,37 +132,51 @@ final class Data_Date_Component_December { public $tag = 'December'; public func
 // Data_Date_Component_greaterThanOrEq
 $GLOBALS['Data_Date_Component_greaterThanOrEq'] = (function() use (&$__fn) {
 $__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
-return (function() use ($__local_var_0_0) {
-  $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+return function($a1_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ( ! (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT);
+  $__res = function($a2_2) use ($__local_var_0_0, $a1_1) {
+  $__num = \func_num_args();
+  $__t1 = null;;
+  if ((($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT) {
+$__t1 = false;
+goto end_branch_1;;
+};
+  $__t1 = true;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 })();
 
 // Data_Date_Component_lessThanOrEq
 $GLOBALS['Data_Date_Component_lessThanOrEq'] = (function() use (&$__fn) {
 $__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
-return (function() use ($__local_var_0_0) {
-  $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+return function($a1_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ( ! (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_GT);
+  $__res = function($a2_2) use ($__local_var_0_0, $a1_1) {
+  $__num = \func_num_args();
+  $__t1 = null;;
+  if ((($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_GT) {
+$__t1 = false;
+goto end_branch_1;;
+};
+  $__t1 = true;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 })();
 
 // Data_Date_Component_Monday
@@ -364,54 +378,98 @@ $GLOBALS['Data_Date_Component_ordDay'] = (object)["compare" => ((($GLOBALS['Data
 $GLOBALS['Data_Date_Component_eqYear'] = (object)["eq" => $GLOBALS['Data_Eq_eqIntImpl']];
 
 // Data_Date_Component_eqWeekday
-$GLOBALS['Data_Date_Component_eqWeekday'] = (object)["eq" => (function() {
-  $__fn = function($x_0, $y_1 = null) use (&$__fn) {
+$GLOBALS['Data_Date_Component_eqWeekday'] = (object)["eq" => function($x_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_1) use ($x_0) {
+  $__num = \func_num_args();
   $__t0 = null;;
   if ($x_0 instanceof \Data\Date\Component\Data_Date_Component_Monday) {
-$__t0 = $y_1 instanceof \Data\Date\Component\Data_Date_Component_Monday;
+$__t1 = null;;
+if ($y_1 instanceof \Data\Date\Component\Data_Date_Component_Monday) {
+$__t1 = true;
+goto end_branch_1;;
+};
+$__t1 = false;
+end_branch_1:;
+$__t0 = $__t1;
 goto end_branch_0;;
 };
   if ($x_0 instanceof \Data\Date\Component\Data_Date_Component_Tuesday) {
-$__t0 = $y_1 instanceof \Data\Date\Component\Data_Date_Component_Tuesday;
+$__t2 = null;;
+if ($y_1 instanceof \Data\Date\Component\Data_Date_Component_Tuesday) {
+$__t2 = true;
+goto end_branch_2;;
+};
+$__t2 = false;
+end_branch_2:;
+$__t0 = $__t2;
 goto end_branch_0;;
 };
   if ($x_0 instanceof \Data\Date\Component\Data_Date_Component_Wednesday) {
-$__t0 = $y_1 instanceof \Data\Date\Component\Data_Date_Component_Wednesday;
+$__t3 = null;;
+if ($y_1 instanceof \Data\Date\Component\Data_Date_Component_Wednesday) {
+$__t3 = true;
+goto end_branch_3;;
+};
+$__t3 = false;
+end_branch_3:;
+$__t0 = $__t3;
 goto end_branch_0;;
 };
   if ($x_0 instanceof \Data\Date\Component\Data_Date_Component_Thursday) {
-$__t0 = $y_1 instanceof \Data\Date\Component\Data_Date_Component_Thursday;
+$__t4 = null;;
+if ($y_1 instanceof \Data\Date\Component\Data_Date_Component_Thursday) {
+$__t4 = true;
+goto end_branch_4;;
+};
+$__t4 = false;
+end_branch_4:;
+$__t0 = $__t4;
 goto end_branch_0;;
 };
   if ($x_0 instanceof \Data\Date\Component\Data_Date_Component_Friday) {
-$__t0 = $y_1 instanceof \Data\Date\Component\Data_Date_Component_Friday;
+$__t5 = null;;
+if ($y_1 instanceof \Data\Date\Component\Data_Date_Component_Friday) {
+$__t5 = true;
+goto end_branch_5;;
+};
+$__t5 = false;
+end_branch_5:;
+$__t0 = $__t5;
 goto end_branch_0;;
 };
   if ($x_0 instanceof \Data\Date\Component\Data_Date_Component_Saturday) {
-$__t0 = $y_1 instanceof \Data\Date\Component\Data_Date_Component_Saturday;
+$__t6 = null;;
+if ($y_1 instanceof \Data\Date\Component\Data_Date_Component_Saturday) {
+$__t6 = true;
+goto end_branch_6;;
+};
+$__t6 = false;
+end_branch_6:;
+$__t0 = $__t6;
 goto end_branch_0;;
 };
-  $__t0 = ($x_0 instanceof \Data\Date\Component\Data_Date_Component_Sunday && $y_1 instanceof \Data\Date\Component\Data_Date_Component_Sunday);
+  if (($x_0 instanceof \Data\Date\Component\Data_Date_Component_Sunday && $y_1 instanceof \Data\Date\Component\Data_Date_Component_Sunday)) {
+$__t0 = true;
+goto end_branch_0;;
+};
+  $__t0 = false;
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Date_Component_ordWeekday
-$GLOBALS['Data_Date_Component_ordWeekday'] = (object)["compare" => (function() {
-  $__fn = function($x_0, $y_1 = null) use (&$__fn) {
+$GLOBALS['Data_Date_Component_ordWeekday'] = (object)["compare" => function($x_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_1) use ($x_0) {
+  $__num = \func_num_args();
   $__t0 = null;;
   if ($x_0 instanceof \Data\Date\Component\Data_Date_Component_Monday) {
 $__t1 = null;;
@@ -513,10 +571,12 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Eq0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Eq0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Date_Component_eqWeekday'];
   goto __end;;
@@ -525,74 +585,153 @@ goto end_branch_0;;
 }];
 
 // Data_Date_Component_eqMonth
-$GLOBALS['Data_Date_Component_eqMonth'] = (object)["eq" => (function() {
-  $__fn = function($x_0, $y_1 = null) use (&$__fn) {
+$GLOBALS['Data_Date_Component_eqMonth'] = (object)["eq" => function($x_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_1) use ($x_0) {
+  $__num = \func_num_args();
   $__t0 = null;;
   if ($x_0 instanceof \Data\Date\Component\Data_Date_Component_January) {
-$__t0 = $y_1 instanceof \Data\Date\Component\Data_Date_Component_January;
+$__t1 = null;;
+if ($y_1 instanceof \Data\Date\Component\Data_Date_Component_January) {
+$__t1 = true;
+goto end_branch_1;;
+};
+$__t1 = false;
+end_branch_1:;
+$__t0 = $__t1;
 goto end_branch_0;;
 };
   if ($x_0 instanceof \Data\Date\Component\Data_Date_Component_February) {
-$__t0 = $y_1 instanceof \Data\Date\Component\Data_Date_Component_February;
+$__t2 = null;;
+if ($y_1 instanceof \Data\Date\Component\Data_Date_Component_February) {
+$__t2 = true;
+goto end_branch_2;;
+};
+$__t2 = false;
+end_branch_2:;
+$__t0 = $__t2;
 goto end_branch_0;;
 };
   if ($x_0 instanceof \Data\Date\Component\Data_Date_Component_March) {
-$__t0 = $y_1 instanceof \Data\Date\Component\Data_Date_Component_March;
+$__t3 = null;;
+if ($y_1 instanceof \Data\Date\Component\Data_Date_Component_March) {
+$__t3 = true;
+goto end_branch_3;;
+};
+$__t3 = false;
+end_branch_3:;
+$__t0 = $__t3;
 goto end_branch_0;;
 };
   if ($x_0 instanceof \Data\Date\Component\Data_Date_Component_April) {
-$__t0 = $y_1 instanceof \Data\Date\Component\Data_Date_Component_April;
+$__t4 = null;;
+if ($y_1 instanceof \Data\Date\Component\Data_Date_Component_April) {
+$__t4 = true;
+goto end_branch_4;;
+};
+$__t4 = false;
+end_branch_4:;
+$__t0 = $__t4;
 goto end_branch_0;;
 };
   if ($x_0 instanceof \Data\Date\Component\Data_Date_Component_May) {
-$__t0 = $y_1 instanceof \Data\Date\Component\Data_Date_Component_May;
+$__t5 = null;;
+if ($y_1 instanceof \Data\Date\Component\Data_Date_Component_May) {
+$__t5 = true;
+goto end_branch_5;;
+};
+$__t5 = false;
+end_branch_5:;
+$__t0 = $__t5;
 goto end_branch_0;;
 };
   if ($x_0 instanceof \Data\Date\Component\Data_Date_Component_June) {
-$__t0 = $y_1 instanceof \Data\Date\Component\Data_Date_Component_June;
+$__t6 = null;;
+if ($y_1 instanceof \Data\Date\Component\Data_Date_Component_June) {
+$__t6 = true;
+goto end_branch_6;;
+};
+$__t6 = false;
+end_branch_6:;
+$__t0 = $__t6;
 goto end_branch_0;;
 };
   if ($x_0 instanceof \Data\Date\Component\Data_Date_Component_July) {
-$__t0 = $y_1 instanceof \Data\Date\Component\Data_Date_Component_July;
+$__t7 = null;;
+if ($y_1 instanceof \Data\Date\Component\Data_Date_Component_July) {
+$__t7 = true;
+goto end_branch_7;;
+};
+$__t7 = false;
+end_branch_7:;
+$__t0 = $__t7;
 goto end_branch_0;;
 };
   if ($x_0 instanceof \Data\Date\Component\Data_Date_Component_August) {
-$__t0 = $y_1 instanceof \Data\Date\Component\Data_Date_Component_August;
+$__t8 = null;;
+if ($y_1 instanceof \Data\Date\Component\Data_Date_Component_August) {
+$__t8 = true;
+goto end_branch_8;;
+};
+$__t8 = false;
+end_branch_8:;
+$__t0 = $__t8;
 goto end_branch_0;;
 };
   if ($x_0 instanceof \Data\Date\Component\Data_Date_Component_September) {
-$__t0 = $y_1 instanceof \Data\Date\Component\Data_Date_Component_September;
+$__t9 = null;;
+if ($y_1 instanceof \Data\Date\Component\Data_Date_Component_September) {
+$__t9 = true;
+goto end_branch_9;;
+};
+$__t9 = false;
+end_branch_9:;
+$__t0 = $__t9;
 goto end_branch_0;;
 };
   if ($x_0 instanceof \Data\Date\Component\Data_Date_Component_October) {
-$__t0 = $y_1 instanceof \Data\Date\Component\Data_Date_Component_October;
+$__t10 = null;;
+if ($y_1 instanceof \Data\Date\Component\Data_Date_Component_October) {
+$__t10 = true;
+goto end_branch_10;;
+};
+$__t10 = false;
+end_branch_10:;
+$__t0 = $__t10;
 goto end_branch_0;;
 };
   if ($x_0 instanceof \Data\Date\Component\Data_Date_Component_November) {
-$__t0 = $y_1 instanceof \Data\Date\Component\Data_Date_Component_November;
+$__t11 = null;;
+if ($y_1 instanceof \Data\Date\Component\Data_Date_Component_November) {
+$__t11 = true;
+goto end_branch_11;;
+};
+$__t11 = false;
+end_branch_11:;
+$__t0 = $__t11;
 goto end_branch_0;;
 };
-  $__t0 = ($x_0 instanceof \Data\Date\Component\Data_Date_Component_December && $y_1 instanceof \Data\Date\Component\Data_Date_Component_December);
+  if (($x_0 instanceof \Data\Date\Component\Data_Date_Component_December && $y_1 instanceof \Data\Date\Component\Data_Date_Component_December)) {
+$__t0 = true;
+goto end_branch_0;;
+};
+  $__t0 = false;
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Date_Component_ordMonth
-$GLOBALS['Data_Date_Component_ordMonth'] = (object)["compare" => (function() {
-  $__fn = function($x_0, $y_1 = null) use (&$__fn) {
+$GLOBALS['Data_Date_Component_ordMonth'] = (object)["compare" => function($x_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_1) use ($x_0) {
+  $__num = \func_num_args();
   $__t0 = null;;
   if ($x_0 instanceof \Data\Date\Component\Data_Date_Component_January) {
 $__t1 = null;;
@@ -769,10 +908,12 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Eq0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Eq0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Date_Component_eqMonth'];
   goto __end;;

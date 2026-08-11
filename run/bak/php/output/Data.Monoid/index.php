@@ -110,19 +110,26 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 // Data_Monoid_lessThanOrEq
 $GLOBALS['Data_Monoid_lessThanOrEq'] = (function() use (&$__fn) {
 $__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
-return (function() use ($__local_var_0_0) {
-  $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+return function($a1_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ( ! (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_GT);
+  $__res = function($a2_2) use ($__local_var_0_0, $a1_1) {
+  $__num = \func_num_args();
+  $__t1 = null;;
+  if ((($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_GT) {
+$__t1 = false;
+goto end_branch_1;;
+};
+  $__t1 = true;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 })();
 
 // Data_Monoid_monoidUnit
@@ -234,28 +241,34 @@ function majData_majMonoid_monoidmajFn($dictMonoid_0) {
   }
   $mempty1_1_0 = ($dictMonoid_0)->{'mempty'};
   $__local_var_2_1 = (($dictMonoid_0)->{'Semigroup0'})(null);
-  $semigroupFn_3_2 = (object)["append" => (function() use ($__local_var_2_1) {
-  $__fn = function($f_3, $g_4 = null, $x_5 = null) use ($__local_var_2_1, &$__fn) {
+  $semigroupFn_2_1 = (object)["append" => function($f_3) use ($__local_var_2_1) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($g_4) use ($__local_var_2_1, $f_3) {
+  $__num = \func_num_args();
+  $__res = function($x_5) use ($__local_var_2_1, $f_3, $g_4) {
+  $__num = \func_num_args();
   $__res = ((($__local_var_2_1)->{'append'})(($f_3)($x_5)))(($g_4)($x_5));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
-  $__res = (object)["mempty" => function($v_4) use ($mempty1_1_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = (object)["mempty" => function($v_3) use ($mempty1_1_0) {
   $__num = \func_num_args();
   $__res = $mempty1_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Semigroup0" => function($_dollar__unused_4) use ($semigroupFn_3_2) {
+}, "Semigroup0" => function($_dollar__unused_3) use ($semigroupFn_2_1) {
   $__num = \func_num_args();
-  $__res = $semigroupFn_3_2;
+  $__res = $semigroupFn_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -275,47 +288,53 @@ function majData_majMonoid_monoidmajRecordmajCons($dictIsSymbol_0, $dictMonoid_1
   }
   $mempty1_2_0 = ($dictMonoid_1)->{'mempty'};
   $Semigroup0_3_1 = (($dictMonoid_1)->{'Semigroup0'})(null);
-  $__res = (function() use ($Semigroup0_3_1, $dictIsSymbol_0, $mempty1_2_0) {
-  $__fn = function($_dollar__unused_4, $dictMonoidRecord_5 = null) use ($Semigroup0_3_1, $dictIsSymbol_0, $mempty1_2_0, &$__fn) {
+  $__res = function($_dollar__unused_4) use ($Semigroup0_3_1, $dictIsSymbol_0, $mempty1_2_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($dictMonoidRecord_5) use ($Semigroup0_3_1, $dictIsSymbol_0, $mempty1_2_0) {
+  $__num = \func_num_args();
   $__local_var_6_2 = (($dictMonoidRecord_5)->{'SemigroupRecord0'})(null);
-  $semigroupRecordCons1_7_3 = (object)["appendRecord" => (function() use ($Semigroup0_3_1, $__local_var_6_2, $dictIsSymbol_0) {
-  $__fn = function($v_7, $ra_8 = null, $rb_9 = null) use ($Semigroup0_3_1, $__local_var_6_2, $dictIsSymbol_0, &$__fn) {
+  $semigroupRecordCons1_6_2 = (object)["appendRecord" => function($v_7) use ($Semigroup0_3_1, $__local_var_6_2, $dictIsSymbol_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($ra_8) use ($Semigroup0_3_1, $__local_var_6_2, $dictIsSymbol_0) {
+  $__num = \func_num_args();
+  $__res = function($rb_9) use ($Semigroup0_3_1, $__local_var_6_2, $dictIsSymbol_0, $ra_8) {
+  $__num = \func_num_args();
   $key_10_3 = (($dictIsSymbol_0)->{'reflectSymbol'})(new \Type\Proxy\Type_Proxy_Proxy());
   $get_11_4 = ($GLOBALS['Record_Unsafe_unsafeGet'])($key_10_3);
   $__res = \Record\Unsafe\majRecord_majUnsafe_unsafemajSet($key_10_3, ((($Semigroup0_3_1)->{'append'})(($get_11_4)($ra_8)))(($get_11_4)($rb_9)), (((($__local_var_6_2)->{'appendRecord'})(new \Type\Proxy\Type_Proxy_Proxy()))($ra_8))($rb_9));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
-  $__res = (object)["memptyRecord" => function($v_8) use ($dictIsSymbol_0, $dictMonoidRecord_5, $mempty1_2_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = (object)["memptyRecord" => function($v_7) use ($dictIsSymbol_0, $dictMonoidRecord_5, $mempty1_2_0) {
   $__num = \func_num_args();
   $__res = \Record\Unsafe\majRecord_majUnsafe_unsafemajSet((($dictIsSymbol_0)->{'reflectSymbol'})(new \Type\Proxy\Type_Proxy_Proxy()), $mempty1_2_0, (($dictMonoidRecord_5)->{'memptyRecord'})(new \Type\Proxy\Type_Proxy_Proxy()));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "SemigroupRecord0" => function($_dollar__unused_8) use ($semigroupRecordCons1_7_3) {
+}, "SemigroupRecord0" => function($_dollar__unused_7) use ($semigroupRecordCons1_6_2) {
   $__num = \func_num_args();
-  $__res = $semigroupRecordCons1_7_3;
+  $__res = $semigroupRecordCons1_6_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -387,12 +406,10 @@ function majData_majMonoid_guard($dictMonoid_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $mempty1_1_0 = ($dictMonoid_0)->{'mempty'};
-  $__res = (function() use ($mempty1_1_0) {
-  $__fn = function($v_2, $v1_3 = null) use ($mempty1_1_0, &$__fn) {
+  $__res = function($v_2) use ($mempty1_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_3) use ($mempty1_1_0, $v_2) {
+  $__num = \func_num_args();
   $__t1 = null;;
   if ($v_2) {
 $__t1 = $v1_3;
@@ -403,10 +420,12 @@ goto end_branch_1;;
   $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

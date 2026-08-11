@@ -156,19 +156,19 @@ function majData_majMonoid_majAlternate_semigroupmajAlternate($dictAlt_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["append" => (function() use ($dictAlt_0) {
-  $__fn = function($v_1, $v1_2 = null) use ($dictAlt_0, &$__fn) {
+  $__res = (object)["append" => function($v_1) use ($dictAlt_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_2) use ($dictAlt_0, $v_1) {
+  $__num = \func_num_args();
   $__res = ((($dictAlt_0)->{'alt'})($v_1))($v1_2);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -234,22 +234,22 @@ function majData_majMonoid_majAlternate_monoidmajAlternate($dictPlus_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $__local_var_1_0 = (($dictPlus_0)->{'Alt0'})(null);
-  $semigroupAlternate1_2_1 = (object)["append" => (function() use ($__local_var_1_0) {
-  $__fn = function($v_2, $v1_3 = null) use ($__local_var_1_0, &$__fn) {
+  $semigroupAlternate1_1_0 = (object)["append" => function($v_2) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_3) use ($__local_var_1_0, $v_2) {
+  $__num = \func_num_args();
   $__res = ((($__local_var_1_0)->{'alt'})($v_2))($v1_3);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
-  $__res = (object)["mempty" => ($dictPlus_0)->{'empty'}, "Semigroup0" => function($_dollar__unused_3) use ($semigroupAlternate1_2_1) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = (object)["mempty" => ($dictPlus_0)->{'empty'}, "Semigroup0" => function($_dollar__unused_2) use ($semigroupAlternate1_1_0) {
   $__num = \func_num_args();
-  $__res = $semigroupAlternate1_2_1;
+  $__res = $semigroupAlternate1_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

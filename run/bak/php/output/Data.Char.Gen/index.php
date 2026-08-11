@@ -109,7 +109,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $GLOBALS['Data_Char_Gen_toEnumWithDefaults'] = ($GLOBALS['Data_Enum_toEnumWithDefaults'])($GLOBALS['Data_Enum_boundedEnumChar']);
 
 // Data_Char_Gen_foldable1NonEmpty
-$GLOBALS['Data_Char_Gen_foldable1NonEmpty'] = \Data\NonEmpty\majData_majNonmajEmpty_foldable1majNonmajEmpty($GLOBALS['Data_Foldable_foldableArray']);
+$GLOBALS['Data_Char_Gen_foldable1NonEmpty'] = ($GLOBALS['Data_NonEmpty_foldable1NonEmpty'])($GLOBALS['Data_Foldable_foldableArray']);
 
 // Data_Char_Gen_genUnicodeChar
 function majData_majChar_majGen_genmajUnicodemajChar($dictMonadGen_0) {
@@ -202,7 +202,7 @@ function majData_majChar_majGen_genmajAlpha($dictMonadGen_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = \Control\Monad\Gen\majControl_majMonad_majGen_onemajOf($dictMonadGen_0, $GLOBALS['Data_Char_Gen_foldable1NonEmpty'], new \Data\NonEmpty\Data_NonEmpty_NonEmpty(\Data\Char\Gen\majData_majChar_majGen_genmajAlphamajLowercase($dictMonadGen_0), [\Data\Char\Gen\majData_majChar_majGen_genmajAlphamajUppercase($dictMonadGen_0)]));
+  $__res = ((($GLOBALS['Control_Monad_Gen_oneOf'])($dictMonadGen_0))($GLOBALS['Data_Char_Gen_foldable1NonEmpty']))(new \Data\NonEmpty\Data_NonEmpty_NonEmpty(($GLOBALS['Data_Char_Gen_genAlphaLowercase'])($dictMonadGen_0), [($GLOBALS['Data_Char_Gen_genAlphaUppercase'])($dictMonadGen_0)]));
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

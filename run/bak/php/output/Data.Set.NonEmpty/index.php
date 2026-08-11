@@ -127,19 +127,19 @@ function majData_majSet_majNonmajEmpty_unionmajSet($dictOrd_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $compare_1_0 = ($dictOrd_0)->{'compare'};
-  $__res = (function() use ($compare_1_0) {
-  $__fn = function($m1_2, $m2_3 = null) use ($compare_1_0, &$__fn) {
+  $__res = function($m1_2) use ($compare_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($m2_3) use ($compare_1_0, $m1_2) {
+  $__num = \func_num_args();
   $__res = ($GLOBALS['Data_Map_Internal_unsafeUnionWith'])($compare_1_0, $GLOBALS['Data_Function_const'], $m1_2, $m2_3);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -154,7 +154,7 @@ function majData_majSet_majNonmajEmpty_tomajUnfoldable1($dictUnfoldable1_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $stepNext_1_0 = ((($GLOBALS['Data_Map_Internal_stepWith'])($GLOBALS['Data_Map_Internal_iterMapL']))((function() {
-  $__fn = function($k_1, $v_2 = null, $next_3 = null) use (&$__fn) {
+  $__fn = function($k_1, $__local_var_2 = null, $next_3 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
@@ -179,7 +179,7 @@ function majData_majSet_majNonmajEmpty_tomajUnfoldable1($dictUnfoldable1_0) {
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 })))((($GLOBALS['Control_Semigroupoid_composeImpl'])(((($GLOBALS['Data_Map_Internal_stepWith'])($GLOBALS['Data_Map_Internal_iterMapL']))((function() {
-  $__fn = function($k_2, $v_3 = null, $next_4 = null) use (&$__fn) {
+  $__fn = function($k_2, $__local_var_3 = null, $next_4 = null) use (&$__fn) {
   $__num = \func_num_args();
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
@@ -259,19 +259,26 @@ function majData_majSet_majNonmajEmpty_subset($dictOrd_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $compare_1_0 = ($dictOrd_0)->{'compare'};
-  $__res = (function() use ($compare_1_0) {
-  $__fn = function($s1_2, $s2_3 = null) use ($compare_1_0, &$__fn) {
+  $__res = function($s1_2) use ($compare_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ($GLOBALS['Data_Map_Internal_unsafeDifference'])($compare_1_0, $s1_2, $s2_3) instanceof \Data\Map\Internal\Data_Map_Internal_Leaf;
+  $__res = function($s2_3) use ($compare_1_0, $s1_2) {
+  $__num = \func_num_args();
+  $__t1 = null;;
+  if (($GLOBALS['Data_Map_Internal_unsafeDifference'])($compare_1_0, $s1_2, $s2_3) instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
+$__t1 = true;
+goto end_branch_1;;
+};
+  $__t1 = false;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -321,7 +328,7 @@ function majData_majSet_majNonmajEmpty_showmajNonmajEmptymajSet($dictShow_0) {
   }
   $__res = (object)["show" => function($s_1) use ($dictShow_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(fromFoldable1 "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(((\Data\Array\NonEmpty\Internal\majData_majArray_majNonmajEmpty_majInternal_showmajNonmajEmptymajArray($dictShow_0))->{'show'})(($GLOBALS['Data_Set_NonEmpty_toUnfoldable11'])($s_1))))(")"));
+  $__res = ((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})("(fromFoldable1 "))(((($GLOBALS['Data_Semigroup_semigroupString'])->{'append'})(((($GLOBALS['Data_Array_NonEmpty_Internal_showNonEmptyArray'])($dictShow_0))->{'show'})(($GLOBALS['Data_Set_NonEmpty_toUnfoldable11'])($s_1))))(")"));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -340,19 +347,19 @@ function majData_majSet_majNonmajEmpty_semigroupmajNonmajEmptymajSet($dictOrd_0)
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $compare_1_0 = ($dictOrd_0)->{'compare'};
-  $__res = (object)["append" => (function() use ($compare_1_0) {
-  $__fn = function($m1_2, $m2_3 = null) use ($compare_1_0, &$__fn) {
+  $__res = (object)["append" => function($m1_2) use ($compare_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($m2_3) use ($compare_1_0, $m1_2) {
+  $__num = \func_num_args();
   $__res = ($GLOBALS['Data_Map_Internal_unsafeUnionWith'])($compare_1_0, $GLOBALS['Data_Function_const'], $m1_2, $m2_3);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -380,7 +387,7 @@ function majData_majSet_majNonmajEmpty_ordmajNonmajEmptymajSet($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = \Data\Set\majData_majSet_ordmajSet($dictOrd_0);
+  $__res = ($GLOBALS['Data_Set_ordSet'])($dictOrd_0);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -558,7 +565,16 @@ function majData_majSet_majNonmajEmpty_frommajSet($s_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $__t0 = null;;
-  if ($s_0 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
+  if ((function() use ($s_0, &$__fn) {
+$__t1 = null;;
+if ($s_0 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
+$__t1 = true;
+goto end_branch_1;;
+};
+$__t1 = false;
+end_branch_1:;
+return $__t1;
+})()) {
 $__t0 = new \Data\Maybe\Data_Maybe_Nothing();
 goto end_branch_0;;
 };
@@ -579,15 +595,22 @@ function majData_majSet_majNonmajEmpty_intersection($dictOrd_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $compare_1_0 = ($dictOrd_0)->{'compare'};
-  $__res = (function() use ($compare_1_0) {
-  $__fn = function($v_2, $v1_3 = null) use ($compare_1_0, &$__fn) {
+  $__res = function($v_2) use ($compare_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_3) use ($compare_1_0, $v_2) {
+  $__num = \func_num_args();
   $__local_var_4_1 = ($GLOBALS['Data_Map_Internal_unsafeIntersectionWith'])($compare_1_0, $GLOBALS['Data_Function_const'], $v_2, $v1_3);
   $__t2 = null;;
-  if ($__local_var_4_1 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
+  if ((function() use ($__local_var_4_1, &$__fn) {
+$__t3 = null;;
+if ($__local_var_4_1 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
+$__t3 = true;
+goto end_branch_3;;
+};
+$__t3 = false;
+end_branch_3:;
+return $__t3;
+})()) {
 $__t2 = new \Data\Maybe\Data_Maybe_Nothing();
 goto end_branch_2;;
 };
@@ -596,10 +619,12 @@ goto end_branch_2;;
   $__res = $__t2;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -614,19 +639,19 @@ function majData_majSet_majNonmajEmpty_frommajFoldable1($dictFoldable1_0, $dictO
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $compare_2_0 = ($dictOrd_1)->{'compare'};
-  $__res = ((($dictFoldable1_0)->{'foldMap1'})((object)["append" => (function() use ($compare_2_0) {
-  $__fn = function($m1_3, $m2_4 = null) use ($compare_2_0, &$__fn) {
+  $__res = ((($dictFoldable1_0)->{'foldMap1'})((object)["append" => function($m1_3) use ($compare_2_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($m2_4) use ($compare_2_0, $m1_3) {
+  $__num = \func_num_args();
   $__res = ($GLOBALS['Data_Map_Internal_unsafeUnionWith'])($compare_2_0, $GLOBALS['Data_Function_const'], $m1_3, $m2_4);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()]))($GLOBALS['Data_Set_singleton']);
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}]))($GLOBALS['Data_Set_singleton']);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -640,19 +665,7 @@ function majData_majSet_majNonmajEmpty_frommajFoldable($dictFoldable_0, $dictOrd
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Set_NonEmpty_fromSet']))(((($dictFoldable_0)->{'foldl'})((function() use ($dictOrd_1) {
-  $__fn = function($m_2, $a_3 = null) use ($dictOrd_1, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = \Data\Map\Internal\majData_majMap_majInternal_insert($dictOrd_1, $a_3, $GLOBALS['Data_Unit_unit'], $m_2);
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()))(new \Data\Map\Internal\Data_Map_Internal_Leaf()));
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Set_NonEmpty_fromSet']))((($GLOBALS['Data_Set_fromFoldable'])($dictFoldable_0))($dictOrd_1));
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -717,19 +730,19 @@ function majData_majSet_majNonmajEmpty_eqmajNonmajEmptymajSet($dictEq_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["eq" => (function() use ($dictEq_0) {
-  $__fn = function($v_1, $v1_2 = null) use ($dictEq_0, &$__fn) {
+  $__res = (object)["eq" => function($v_1) use ($dictEq_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (((\Data\Map\Internal\majData_majMap_majInternal_eqmajMap($dictEq_0, $GLOBALS['Data_Eq_eqUnit']))->{'eq'})($v_1))($v1_2);
+  $__res = function($v1_2) use ($dictEq_0, $v_1) {
+  $__num = \func_num_args();
+  $__res = ((((($GLOBALS['Data_Map_Internal_eqMap'])($dictEq_0))($GLOBALS['Data_Eq_eqUnit']))->{'eq'})($v_1))($v1_2);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -747,15 +760,22 @@ function majData_majSet_majNonmajEmpty_difference($dictOrd_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $compare_1_0 = ($dictOrd_0)->{'compare'};
-  $__res = (function() use ($compare_1_0) {
-  $__fn = function($v_2, $v1_3 = null) use ($compare_1_0, &$__fn) {
+  $__res = function($v_2) use ($compare_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_3) use ($compare_1_0, $v_2) {
+  $__num = \func_num_args();
   $__local_var_4_1 = ($GLOBALS['Data_Map_Internal_unsafeDifference'])($compare_1_0, $v_2, $v1_3);
   $__t2 = null;;
-  if ($__local_var_4_1 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
+  if ((function() use ($__local_var_4_1, &$__fn) {
+$__t3 = null;;
+if ($__local_var_4_1 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
+$__t3 = true;
+goto end_branch_3;;
+};
+$__t3 = false;
+end_branch_3:;
+return $__t3;
+})()) {
 $__t2 = new \Data\Maybe\Data_Maybe_Nothing();
 goto end_branch_2;;
 };
@@ -764,10 +784,12 @@ goto end_branch_2;;
   $__res = $__t2;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -781,9 +803,18 @@ function majData_majSet_majNonmajEmpty_delete($dictOrd_0, $a_1 = null, $v_2 = nu
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__local_var_3_0 = \Data\Map\Internal\majData_majMap_majInternal_delete($dictOrd_0, $a_1, $v_2);
+  $__local_var_3_0 = ((($GLOBALS['Data_Map_Internal_delete'])($dictOrd_0))($a_1))($v_2);
   $__t1 = null;;
-  if ($__local_var_3_0 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
+  if ((function() use ($__local_var_3_0, &$__fn) {
+$__t2 = null;;
+if ($__local_var_3_0 instanceof \Data\Map\Internal\Data_Map_Internal_Leaf) {
+$__t2 = true;
+goto end_branch_2;;
+};
+$__t2 = false;
+end_branch_2:;
+return $__t2;
+})()) {
 $__t1 = new \Data\Maybe\Data_Maybe_Nothing();
 goto end_branch_1;;
 };

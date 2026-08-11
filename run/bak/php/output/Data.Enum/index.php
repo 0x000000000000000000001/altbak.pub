@@ -172,37 +172,51 @@ $GLOBALS['Data_Enum_toCharCode'] = __NAMESPACE__ . '\\majData_majEnum_tomajCharm
 // Data_Enum_lessThan
 $GLOBALS['Data_Enum_lessThan'] = (function() use (&$__fn) {
 $__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
-return (function() use ($__local_var_0_0) {
-  $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+return function($a1_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT;
+  $__res = function($a2_2) use ($__local_var_0_0, $a1_1) {
+  $__num = \func_num_args();
+  $__t1 = null;;
+  if ((($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT) {
+$__t1 = true;
+goto end_branch_1;;
+};
+  $__t1 = false;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 })();
 
 // Data_Enum_greaterThan
 $GLOBALS['Data_Enum_greaterThan'] = (function() use (&$__fn) {
 $__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
-return (function() use ($__local_var_0_0) {
-  $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+return function($a1_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_GT;
+  $__res = function($a2_2) use ($__local_var_0_0, $a1_1) {
+  $__num = \func_num_args();
+  $__t1 = null;;
+  if ((($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_GT) {
+$__t1 = true;
+goto end_branch_1;;
+};
+  $__t1 = false;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 })();
 
 // Data_Enum_guard
@@ -211,19 +225,26 @@ $GLOBALS['Data_Enum_guard'] = ($GLOBALS['Control_Alternative_guard'])($GLOBALS['
 // Data_Enum_lessThanOrEq
 $GLOBALS['Data_Enum_lessThanOrEq'] = (function() use (&$__fn) {
 $__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
-return (function() use ($__local_var_0_0) {
-  $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+return function($a1_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ( ! (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_GT);
+  $__res = function($a2_2) use ($__local_var_0_0, $a1_1) {
+  $__num = \func_num_args();
+  $__t1 = null;;
+  if ((($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_GT) {
+$__t1 = false;
+goto end_branch_1;;
+};
+  $__t1 = true;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 })();
 
 // Data_Enum_fromJust
@@ -251,19 +272,26 @@ $GLOBALS['Data_Enum_fromJust'] = __NAMESPACE__ . '\\majData_majEnum_frommajJust'
 // Data_Enum_greaterThanOrEq
 $GLOBALS['Data_Enum_greaterThanOrEq'] = (function() use (&$__fn) {
 $__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
-return (function() use ($__local_var_0_0) {
-  $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+return function($a1_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ( ! (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT);
+  $__res = function($a2_2) use ($__local_var_0_0, $a1_1) {
+  $__num = \func_num_args();
+  $__t1 = null;;
+  if ((($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT) {
+$__t1 = false;
+goto end_branch_1;;
+};
+  $__t1 = true;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 })();
 
 // Data_Enum_Cardinality
@@ -391,12 +419,12 @@ function majData_majEnum_tomajEnummajWithmajDefaults($dictBoundedEnum_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $bottom2_1_0 = ((($dictBoundedEnum_0)->{'Bounded0'})(null))->{'bottom'};
-  $__res = (function() use ($bottom2_1_0, $dictBoundedEnum_0) {
-  $__fn = function($low_2, $high_3 = null, $x_4 = null) use ($bottom2_1_0, $dictBoundedEnum_0, &$__fn) {
+  $__res = function($low_2) use ($bottom2_1_0, $dictBoundedEnum_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($high_3) use ($bottom2_1_0, $dictBoundedEnum_0, $low_2) {
+  $__num = \func_num_args();
+  $__res = function($x_4) use ($bottom2_1_0, $dictBoundedEnum_0, $high_3, $low_2) {
+  $__num = \func_num_args();
   $v_5_1 = (($dictBoundedEnum_0)->{'toEnum'})($x_4);
   $__t2 = null;;
   if ($v_5_1 instanceof \Data\Maybe\Data_Maybe_Just) {
@@ -420,10 +448,16 @@ goto end_branch_2;;
   $__res = $__t2;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -604,95 +638,88 @@ function majData_majEnum_enummajMaybe($dictBoundedEnum_0) {
   $Enum1_2_1 = (($dictBoundedEnum_0)->{'Enum1'})(null);
   $__local_var_3_2 = (($Enum1_2_1)->{'Ord0'})(null);
   $__local_var_4_3 = (($__local_var_3_2)->{'Eq0'})(null);
-  $eqMaybe1_5_4 = (object)["eq" => (function() use ($__local_var_4_3) {
-  $__fn = function($x_5, $y_6 = null) use ($__local_var_4_3, &$__fn) {
+  $eqMaybe1_4_3 = (object)["eq" => function($x_5) use ($__local_var_4_3) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_6) use ($__local_var_4_3, $x_5) {
+  $__num = \func_num_args();
   $__t4 = null;;
   if ($x_5 instanceof \Data\Maybe\Data_Maybe_Nothing) {
-$__t4 = $y_6 instanceof \Data\Maybe\Data_Maybe_Nothing;
+$__t5 = null;;
+if ($y_6 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t5 = true;
+goto end_branch_5;;
+};
+$__t5 = false;
+end_branch_5:;
+$__t4 = $__t5;
 goto end_branch_4;;
 };
-  $__t4 = ($x_5 instanceof \Data\Maybe\Data_Maybe_Just && ($y_6 instanceof \Data\Maybe\Data_Maybe_Just && ((($__local_var_4_3)->{'eq'})(($x_5)->{'value0'}))(($y_6)->{'value0'})));
+  if (($x_5 instanceof \Data\Maybe\Data_Maybe_Just && $y_6 instanceof \Data\Maybe\Data_Maybe_Just)) {
+$__t4 = ((($__local_var_4_3)->{'eq'})(($x_5)->{'value0'}))(($y_6)->{'value0'});
+goto end_branch_4;;
+};
+  $__t4 = false;
   end_branch_4:;
   $__res = $__t4;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
-  $ordMaybe_5_4 = (object)["compare" => (function() use ($__local_var_3_2) {
-  $__fn = function($x_6, $y_7 = null) use ($__local_var_3_2, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__t6 = null;;
-  if ($x_6 instanceof \Data\Maybe\Data_Maybe_Nothing) {
-$__t7 = null;;
-if ($y_7 instanceof \Data\Maybe\Data_Maybe_Nothing) {
-$__t7 = new \Data\Ordering\Data_Ordering_EQ();
-goto end_branch_7;;
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 };
-$__t7 = new \Data\Ordering\Data_Ordering_LT();
-end_branch_7:;
-$__t6 = $__t7;
-goto end_branch_6;;
-};
-  if ($y_7 instanceof \Data\Maybe\Data_Maybe_Nothing) {
-$__t6 = new \Data\Ordering\Data_Ordering_GT();
-goto end_branch_6;;
-};
-  if (($x_6 instanceof \Data\Maybe\Data_Maybe_Just && $y_7 instanceof \Data\Maybe\Data_Maybe_Just)) {
-$__t6 = ((($__local_var_3_2)->{'compare'})(($x_6)->{'value0'}))(($y_7)->{'value0'});
-goto end_branch_6;;
-};
-  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t6 = null;
-  end_branch_6:;
-  $__res = $__t6;
-  goto __end;;
-  __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Eq0" => function($_dollar__unused_6) use ($eqMaybe1_5_4) {
-  $__num = \func_num_args();
-  $__res = $eqMaybe1_5_4;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = (object)["succ" => function($v_6) use ($Enum1_2_1, $bottom2_1_0) {
+  $ordMaybe_3_2 = (object)["compare" => function($x_5) use ($__local_var_3_2) {
   $__num = \func_num_args();
-  $__t9 = null;;
-  if ($v_6 instanceof \Data\Maybe\Data_Maybe_Nothing) {
-$__t9 = new \Data\Maybe\Data_Maybe_Just(new \Data\Maybe\Data_Maybe_Just($bottom2_1_0));
-goto end_branch_9;;
+  $__res = function($y_6) use ($__local_var_3_2, $x_5) {
+  $__num = \func_num_args();
+  $__t7 = null;;
+  if ($x_5 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t8 = null;;
+if ($y_6 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t8 = new \Data\Ordering\Data_Ordering_EQ();
+goto end_branch_8;;
 };
-  if ($v_6 instanceof \Data\Maybe\Data_Maybe_Just) {
-$__t9 = ((($GLOBALS['Data_Maybe_functorMaybe'])->{'map'})($GLOBALS['Data_Maybe_Just']))((($Enum1_2_1)->{'succ'})(($v_6)->{'value0'}));
-goto end_branch_9;;
+$__t8 = new \Data\Ordering\Data_Ordering_LT();
+end_branch_8:;
+$__t7 = $__t8;
+goto end_branch_7;;
+};
+  if ($y_6 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t7 = new \Data\Ordering\Data_Ordering_GT();
+goto end_branch_7;;
+};
+  if (($x_5 instanceof \Data\Maybe\Data_Maybe_Just && $y_6 instanceof \Data\Maybe\Data_Maybe_Just)) {
+$__t7 = ((($__local_var_3_2)->{'compare'})(($x_5)->{'value0'}))(($y_6)->{'value0'});
+goto end_branch_7;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t9 = null;
-  end_branch_9:;
-  $__res = $__t9;
+  $__t7 = null;
+  end_branch_7:;
+  $__res = $__t7;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "pred" => function($v_6) use ($Enum1_2_1) {
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Eq0" => function($_dollar__unused_5) use ($eqMaybe1_4_3) {
+  $__num = \func_num_args();
+  $__res = $eqMaybe1_4_3;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = (object)["succ" => function($v_4) use ($Enum1_2_1, $bottom2_1_0) {
   $__num = \func_num_args();
   $__t10 = null;;
-  if ($v_6 instanceof \Data\Maybe\Data_Maybe_Nothing) {
-$__t10 = new \Data\Maybe\Data_Maybe_Nothing();
+  if ($v_4 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t10 = new \Data\Maybe\Data_Maybe_Just(new \Data\Maybe\Data_Maybe_Just($bottom2_1_0));
 goto end_branch_10;;
 };
-  if ($v_6 instanceof \Data\Maybe\Data_Maybe_Just) {
-$__t10 = new \Data\Maybe\Data_Maybe_Just((($Enum1_2_1)->{'pred'})(($v_6)->{'value0'}));
+  if ($v_4 instanceof \Data\Maybe\Data_Maybe_Just) {
+$__t10 = ((($GLOBALS['Data_Maybe_functorMaybe'])->{'map'})($GLOBALS['Data_Maybe_Just']))((($Enum1_2_1)->{'succ'})(($v_4)->{'value0'}));
 goto end_branch_10;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -702,9 +729,27 @@ goto end_branch_10;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Ord0" => function($_dollar__unused_6) use ($ordMaybe_5_4) {
+}, "pred" => function($v_4) use ($Enum1_2_1) {
   $__num = \func_num_args();
-  $__res = $ordMaybe_5_4;
+  $__t11 = null;;
+  if ($v_4 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t11 = new \Data\Maybe\Data_Maybe_Nothing();
+goto end_branch_11;;
+};
+  if ($v_4 instanceof \Data\Maybe\Data_Maybe_Just) {
+$__t11 = new \Data\Maybe\Data_Maybe_Just((($Enum1_2_1)->{'pred'})(($v_4)->{'value0'}));
+goto end_branch_11;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t11 = null;
+  end_branch_11:;
+  $__res = $__t11;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Ord0" => function($_dollar__unused_4) use ($ordMaybe_3_2) {
+  $__num = \func_num_args();
+  $__res = $ordMaybe_3_2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -764,29 +809,45 @@ function majData_majEnum_enummajFrommajTo($dictEnum_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $Ord0_1_0 = (($dictEnum_0)->{'Ord0'})(null);
-  $__res = (function() use ($Ord0_1_0, $dictEnum_0) {
-  $__fn = function($dictUnfoldable1_2, $v_3 = null, $v1_4 = null) use ($Ord0_1_0, $dictEnum_0, &$__fn) {
+  $__res = function($dictUnfoldable1_2) use ($Ord0_1_0, $dictEnum_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  $__t1 = null;;
+  $__res = function($v_3) use ($Ord0_1_0, $dictEnum_0, $dictUnfoldable1_2) {
+  $__num = \func_num_args();
+  $__res = function($v1_4) use ($Ord0_1_0, $dictEnum_0, $dictUnfoldable1_2, $v_3) {
+  $__num = \func_num_args();
+  $__t2 = null;;
   if (((((($Ord0_1_0)->{'Eq0'})(null))->{'eq'})($v_3))($v1_4)) {
-$__t1 = \Data\Unfoldable1\majData_majUnfoldable1_replicate1($dictUnfoldable1_2, 1, $v_3);
-goto end_branch_1;;
+$__t2 = ((($GLOBALS['Data_Unfoldable1_replicate1'])($dictUnfoldable1_2))(1))($v_3);
+goto end_branch_2;;
 };
-  if (((($Ord0_1_0)->{'compare'})($v_3))($v1_4) instanceof \Data\Ordering\Data_Ordering_LT) {
-$__t1 = ((($dictUnfoldable1_2)->{'unfoldr1'})(function($a_5) use ($Ord0_1_0, $dictEnum_0, $v1_4) {
+  if ((function() use ($Ord0_1_0, $v1_4, $v_3, &$__fn) {
+$__t3 = null;;
+if (((($Ord0_1_0)->{'compare'})($v_3))($v1_4) instanceof \Data\Ordering\Data_Ordering_LT) {
+$__t3 = true;
+goto end_branch_3;;
+};
+$__t3 = false;
+end_branch_3:;
+return $__t3;
+})()) {
+$__t2 = ((($dictUnfoldable1_2)->{'unfoldr1'})(function($a_5) use ($Ord0_1_0, $dictEnum_0, $v1_4) {
   $__num = \func_num_args();
   $__res = new \Data\Tuple\Data_Tuple_Tuple($a_5, ((($GLOBALS['Data_Maybe_bindMaybe'])->{'bind'})((($dictEnum_0)->{'succ'})($a_5)))(function($a_prime_6) use ($Ord0_1_0, $v1_4) {
   $__num = \func_num_args();
+  $__t4 = null;;
+  if (((($Ord0_1_0)->{'compare'})($a_prime_6))($v1_4) instanceof \Data\Ordering\Data_Ordering_GT) {
+$__t4 = false;
+goto end_branch_4;;
+};
+  $__t4 = true;
+  end_branch_4:;
   $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])->{'map'})(function($v_7) use ($a_prime_6) {
   $__num = \func_num_args();
   $__res = $a_prime_6;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_Enum_guard'])(( ! ((($Ord0_1_0)->{'compare'})($a_prime_6))($v1_4) instanceof \Data\Ordering\Data_Ordering_GT)));
+}))(($GLOBALS['Data_Enum_guard'])($__t4));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -795,19 +856,26 @@ $__t1 = ((($dictUnfoldable1_2)->{'unfoldr1'})(function($a_5) use ($Ord0_1_0, $di
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }))($v_3);
-goto end_branch_1;;
+goto end_branch_2;;
 };
-  $__t1 = ((($dictUnfoldable1_2)->{'unfoldr1'})(function($a_5) use ($Ord0_1_0, $dictEnum_0, $v1_4) {
+  $__t2 = ((($dictUnfoldable1_2)->{'unfoldr1'})(function($a_5) use ($Ord0_1_0, $dictEnum_0, $v1_4) {
   $__num = \func_num_args();
   $__res = new \Data\Tuple\Data_Tuple_Tuple($a_5, ((($GLOBALS['Data_Maybe_bindMaybe'])->{'bind'})((($dictEnum_0)->{'pred'})($a_5)))(function($a_prime_6) use ($Ord0_1_0, $v1_4) {
   $__num = \func_num_args();
+  $__t1 = null;;
+  if (((($Ord0_1_0)->{'compare'})($a_prime_6))($v1_4) instanceof \Data\Ordering\Data_Ordering_LT) {
+$__t1 = false;
+goto end_branch_1;;
+};
+  $__t1 = true;
+  end_branch_1:;
   $__res = ((($GLOBALS['Data_Maybe_functorMaybe'])->{'map'})(function($v_7) use ($a_prime_6) {
   $__num = \func_num_args();
   $__res = $a_prime_6;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))(($GLOBALS['Data_Enum_guard'])(( ! ((($Ord0_1_0)->{'compare'})($a_prime_6))($v1_4) instanceof \Data\Ordering\Data_Ordering_LT)));
+}))(($GLOBALS['Data_Enum_guard'])($__t1));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -816,14 +884,20 @@ goto end_branch_1;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }))($v_3);
-  end_branch_1:;
-  $__res = $__t1;
+  end_branch_2:;
+  $__res = $__t2;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -838,12 +912,12 @@ function majData_majEnum_enummajFrommajThenmajTo($dictUnfoldable_0, $dictFunctor
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
   $toEnum1_3_0 = ($dictBoundedEnum_2)->{'toEnum'};
-  $__res = (function() use ($dictBoundedEnum_2, $dictFunctor_1, $dictUnfoldable_0, $toEnum1_3_0) {
-  $__fn = function($a_4, $b_5 = null, $c_6 = null) use ($dictBoundedEnum_2, $dictFunctor_1, $dictUnfoldable_0, $toEnum1_3_0, &$__fn) {
+  $__res = function($a_4) use ($dictBoundedEnum_2, $dictFunctor_1, $dictUnfoldable_0, $toEnum1_3_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($b_5) use ($a_4, $dictBoundedEnum_2, $dictFunctor_1, $dictUnfoldable_0, $toEnum1_3_0) {
+  $__num = \func_num_args();
+  $__res = function($c_6) use ($a_4, $b_5, $dictBoundedEnum_2, $dictFunctor_1, $dictUnfoldable_0, $toEnum1_3_0) {
+  $__num = \func_num_args();
   $a_prime_7_1 = (($dictBoundedEnum_2)->{'fromEnum'})($a_4);
   $__local_var_8_2 = ((($dictBoundedEnum_2)->{'fromEnum'})($b_5) - $a_prime_7_1);
   $__local_var_9_3 = (($dictBoundedEnum_2)->{'fromEnum'})($c_6);
@@ -863,10 +937,16 @@ goto end_branch_4;;
 }))($a_prime_7_1));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -1116,15 +1196,13 @@ function majData_majEnum_defaultmajTomajEnum($dictBounded_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $bottom2_1_0 = ($dictBounded_0)->{'bottom'};
-  $__res = (function() use ($bottom2_1_0) {
-  $__fn = function($dictEnum_2, $i_prime_3 = null) use ($bottom2_1_0, &$__fn) {
+  $__res = function($dictEnum_2) use ($bottom2_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($i_prime_3) use ($bottom2_1_0, $dictEnum_2) {
+  $__num = \func_num_args();
   $go__go_4_1 = null;
   $go__go_4_1 = (function() use ($dictEnum_2, &$go__go_4_1) {
-  $__fn = function($i_5, $x_6 = null) use ($dictEnum_2, &$go__go_4_1, &$__fn) {
+  $__fn = function(int $i_5, $x_6 = null) use ($dictEnum_2, &$go__go_4_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
@@ -1181,10 +1259,12 @@ goto end_branch_2;;
   $__res = $__t2;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1228,7 +1308,7 @@ function majData_majEnum_defaultmajFrommajEnum($dictEnum_0) {
   }
   $go__go_1_0 = null;
   $go__go_1_0 = (function() use ($dictEnum_0, &$go__go_1_0) {
-  $__fn = function($i_2, $x_3 = null) use ($dictEnum_0, &$go__go_1_0, &$__fn) {
+  $__fn = function(int $i_2, $x_3 = null) use ($dictEnum_0, &$go__go_1_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
@@ -1282,7 +1362,7 @@ function majData_majEnum_defaultmajCardinality($dictBounded_0) {
   $__num = \func_num_args();
   $go__go_3_1 = null;
   $go__go_3_1 = (function() use ($dictEnum_2, &$go__go_3_1) {
-  $__fn = function($i_4, $x_5 = null) use ($dictEnum_2, &$go__go_3_1, &$__fn) {
+  $__fn = function(int $i_4, $x_5 = null) use ($dictEnum_2, &$go__go_3_1, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
@@ -1371,7 +1451,7 @@ $GLOBALS['Data_Enum_enumChar'] = (object)["succ" => function($a_0) {
 }];
 
 // Data_Enum_cardinality
-function majData_majEnum_cardinality($dict_0): int|\Closure {
+function majData_majEnum_cardinality($dict_0) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majEnum_cardinality';
   if ($__num < 1) {

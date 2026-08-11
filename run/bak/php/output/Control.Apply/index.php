@@ -99,14 +99,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Control_Apply = \call_user_func(function() {
   $exports = [];
-$arrayApply = function($fs, $xs = null) use (&$arrayApply) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$arrayApply) {
-
-            return $arrayApply(...\array_merge($__args, $more));
-        };
-    }
+$arrayApply = function($fs, $xs) use (&$arrayApply) {
     $r = []; foreach($fs as $f) { foreach($xs as $x) { $r[] = $f($x); } } return $r;
 };
 
@@ -145,19 +138,19 @@ function majControl_majApply_identity($x_0) {
 $GLOBALS['Control_Apply_identity'] = __NAMESPACE__ . '\\majControl_majApply_identity';
 
 // Control_Apply_applyProxy
-$GLOBALS['Control_Apply_applyProxy'] = (object)["apply" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Control_Apply_applyProxy'] = (object)["apply" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) {
+  $__num = \func_num_args();
   $__res = new \Type\Proxy\Type_Proxy_Proxy();
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Functor_functorProxy'];
   goto __end;;
@@ -166,19 +159,25 @@ $GLOBALS['Control_Apply_applyProxy'] = (object)["apply" => (function() {
 }];
 
 // Control_Apply_applyFn
-$GLOBALS['Control_Apply_applyFn'] = (object)["apply" => (function() {
-  $__fn = function($f_0, $g_1 = null, $x_2 = null) use (&$__fn) {
+$GLOBALS['Control_Apply_applyFn'] = (object)["apply" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($g_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($x_2) use ($f_0, $g_1) {
+  $__num = \func_num_args();
   $__res = (($f_0)($x_2))(($g_1)($x_2));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Functor_functorFn'];
   goto __end;;

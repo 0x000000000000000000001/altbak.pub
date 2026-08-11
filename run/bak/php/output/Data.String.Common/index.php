@@ -99,26 +99,12 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_String_Common = \call_user_func(function() {
   $exports = [];
-$_localeCompare = function($lt, $eq = null, $gt = null, $s1 = null, $s2 = null) use (&$_localeCompare) {
-    if (\func_num_args() < 5) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$_localeCompare) {
-
-            return $_localeCompare(...\array_merge($__args, $more));
-        };
-    }
+$_localeCompare = function($lt, $eq, $gt, $s1, $s2) use (&$_localeCompare) {
     $result = strcmp($s1, $s2);
     return $result < 0 ? $lt : ($result > 0 ? $gt : $eq);
 };
 
-$replace = function($s1, $s2 = null, $s3 = null) use (&$replace) {
-    if (\func_num_args() < 3) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$replace) {
-
-            return $replace(...\array_merge($__args, $more));
-        };
-    }
+$replace = function($s1, $s2, $s3) use (&$replace) {
     $pos = strpos($s3, $s1);
     if ($pos !== false) {
         return substr_replace($s3, $s2, $pos, strlen($s1));
@@ -126,25 +112,11 @@ $replace = function($s1, $s2 = null, $s3 = null) use (&$replace) {
     return $s3;
 };
 
-$replaceAll = function($s1, $s2 = null, $s3 = null) use (&$replaceAll) {
-    if (\func_num_args() < 3) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$replaceAll) {
-
-            return $replaceAll(...\array_merge($__args, $more));
-        };
-    }
+$replaceAll = function($s1, $s2, $s3) use (&$replaceAll) {
     return str_replace($s1, $s2, $s3);
 };
 
-$split = function($sep, $s = null) use (&$split) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$split) {
-
-            return $split(...\array_merge($__args, $more));
-        };
-    }
+$split = function($sep, $s) use (&$split) {
     if ($sep === "") {
         return str_split($s);
     }
@@ -163,14 +135,7 @@ $trim = function($s) use (&$trim) {
     return trim($s);
 };
 
-$joinWith = function($s, $xs = null) use (&$joinWith) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$joinWith) {
-
-            return $joinWith(...\array_merge($__args, $more));
-        };
-    }
+$joinWith = function($s, $xs) use (&$joinWith) {
     return implode($s, $xs);
 };
 

@@ -159,53 +159,71 @@ function majData_majTraversable_majAccum_majInternal_statemajL($v_0) {
 $GLOBALS['Data_Traversable_Accum_Internal_stateL'] = __NAMESPACE__ . '\\majData_majTraversable_majAccum_majInternal_statemajL';
 
 // Data_Traversable_Accum_Internal_functorStateR
-$GLOBALS['Data_Traversable_Accum_Internal_functorStateR'] = (object)["map" => (function() {
-  $__fn = function($f_0, $k_1 = null, $s_2 = null) use (&$__fn) {
+$GLOBALS['Data_Traversable_Accum_Internal_functorStateR'] = (object)["map" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($k_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($s_2) use ($f_0, $k_1) {
+  $__num = \func_num_args();
   $v_3_0 = ($k_1)($s_2);
   $__res = (object)["accum" => ($v_3_0)->{'accum'}, "value" => ($f_0)(($v_3_0)->{'value'})];
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Traversable_Accum_Internal_functorStateL
-$GLOBALS['Data_Traversable_Accum_Internal_functorStateL'] = (object)["map" => (function() {
-  $__fn = function($f_0, $k_1 = null, $s_2 = null) use (&$__fn) {
+$GLOBALS['Data_Traversable_Accum_Internal_functorStateL'] = (object)["map" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($k_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($s_2) use ($f_0, $k_1) {
+  $__num = \func_num_args();
   $v_3_0 = ($k_1)($s_2);
   $__res = (object)["accum" => ($v_3_0)->{'accum'}, "value" => ($f_0)(($v_3_0)->{'value'})];
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Traversable_Accum_Internal_applyStateR
-$GLOBALS['Data_Traversable_Accum_Internal_applyStateR'] = (object)["apply" => (function() {
-  $__fn = function($f_0, $x_1 = null, $s_2 = null) use (&$__fn) {
+$GLOBALS['Data_Traversable_Accum_Internal_applyStateR'] = (object)["apply" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($x_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($s_2) use ($f_0, $x_1) {
+  $__num = \func_num_args();
   $v_3_0 = ($x_1)($s_2);
   $v1_4_1 = ($f_0)(($v_3_0)->{'accum'});
   $__res = (object)["accum" => ($v1_4_1)->{'accum'}, "value" => (($v1_4_1)->{'value'})(($v_3_0)->{'value'})];
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Traversable_Accum_Internal_functorStateR'];
   goto __end;;
@@ -214,21 +232,27 @@ $GLOBALS['Data_Traversable_Accum_Internal_applyStateR'] = (object)["apply" => (f
 }];
 
 // Data_Traversable_Accum_Internal_applyStateL
-$GLOBALS['Data_Traversable_Accum_Internal_applyStateL'] = (object)["apply" => (function() {
-  $__fn = function($f_0, $x_1 = null, $s_2 = null) use (&$__fn) {
+$GLOBALS['Data_Traversable_Accum_Internal_applyStateL'] = (object)["apply" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($x_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($s_2) use ($f_0, $x_1) {
+  $__num = \func_num_args();
   $v_3_0 = ($f_0)($s_2);
   $v1_4_1 = ($x_1)(($v_3_0)->{'accum'});
   $__res = (object)["accum" => ($v1_4_1)->{'accum'}, "value" => (($v_3_0)->{'value'})(($v1_4_1)->{'value'})];
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Traversable_Accum_Internal_functorStateL'];
   goto __end;;
@@ -237,19 +261,19 @@ $GLOBALS['Data_Traversable_Accum_Internal_applyStateL'] = (object)["apply" => (f
 }];
 
 // Data_Traversable_Accum_Internal_applicativeStateR
-$GLOBALS['Data_Traversable_Accum_Internal_applicativeStateR'] = (object)["pure" => (function() {
-  $__fn = function($a_0, $s_1 = null) use (&$__fn) {
+$GLOBALS['Data_Traversable_Accum_Internal_applicativeStateR'] = (object)["pure" => function($a_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($s_1) use ($a_0) {
+  $__num = \func_num_args();
   $__res = (object)["accum" => $s_1, "value" => $a_0];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Apply0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Apply0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Traversable_Accum_Internal_applyStateR'];
   goto __end;;
@@ -258,19 +282,19 @@ $GLOBALS['Data_Traversable_Accum_Internal_applicativeStateR'] = (object)["pure" 
 }];
 
 // Data_Traversable_Accum_Internal_applicativeStateL
-$GLOBALS['Data_Traversable_Accum_Internal_applicativeStateL'] = (object)["pure" => (function() {
-  $__fn = function($a_0, $s_1 = null) use (&$__fn) {
+$GLOBALS['Data_Traversable_Accum_Internal_applicativeStateL'] = (object)["pure" => function($a_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($s_1) use ($a_0) {
+  $__num = \func_num_args();
   $__res = (object)["accum" => $s_1, "value" => $a_0];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Apply0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Apply0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Traversable_Accum_Internal_applyStateL'];
   goto __end;;

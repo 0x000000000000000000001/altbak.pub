@@ -117,12 +117,10 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 // Control_Monad_Gen_Common_max
 $GLOBALS['Control_Monad_Gen_Common_max'] = (function() use (&$__fn) {
 $__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
-return (function() use ($__local_var_0_0) {
-  $__fn = function($x_1, $y_2 = null) use ($__local_var_0_0, &$__fn) {
+return function($x_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_2) use ($__local_var_0_0, $x_1) {
+  $__num = \func_num_args();
   $v_3_1 = (($__local_var_0_0)($x_1))($y_2);
   $__t2 = null;;
   if ($v_3_1 instanceof \Data\Ordering\Data_Ordering_LT) {
@@ -143,10 +141,12 @@ goto end_branch_2;;
   $__res = $__t2;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 })();
 
 // Control_Monad_Gen_Common_genTuple
@@ -207,16 +207,23 @@ function majControl_majMonad_majGen_majCommon_genmajMaybe__prime__($dictMonadGen
   }
   $Monad0_1_0 = (($dictMonadGen_0)->{'Monad0'})(null);
   $Bind1_2_1 = (($Monad0_1_0)->{'Bind1'})(null);
-  $__res = (function() use ($Bind1_2_1, $Monad0_1_0, $dictMonadGen_0) {
-  $__fn = function($bias_3, $gen_4 = null) use ($Bind1_2_1, $Monad0_1_0, $dictMonadGen_0, &$__fn) {
+  $__res = function($bias_3) use ($Bind1_2_1, $Monad0_1_0, $dictMonadGen_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($gen_4) use ($Bind1_2_1, $Monad0_1_0, $bias_3, $dictMonadGen_0) {
+  $__num = \func_num_args();
   $__res = ((($Bind1_2_1)->{'bind'})(((($dictMonadGen_0)->{'chooseFloat'})(0.0))(1.0)))(function($n_5) use ($Bind1_2_1, $Monad0_1_0, $bias_3, $gen_4) {
   $__num = \func_num_args();
   $__t2 = null;;
-  if (($n_5 < $bias_3)) {
+  if ((function() use ($bias_3, $n_5, &$__fn) {
+$__t3 = null;;
+if (($n_5 < $bias_3)) {
+$__t3 = true;
+goto end_branch_3;;
+};
+$__t3 = false;
+end_branch_3:;
+return $__t3;
+})()) {
 $__t2 = ((((((($Bind1_2_1)->{'Apply0'})(null))->{'Functor0'})(null))->{'map'})($GLOBALS['Data_Maybe_Just']))($gen_4);
 goto end_branch_2;;
 };
@@ -229,10 +236,12 @@ goto end_branch_2;;
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -276,16 +285,25 @@ function majControl_majMonad_majGen_majCommon_genmajEither__prime__($dictMonadGe
   }
   $Bind1_1_0 = (((($dictMonadGen_0)->{'Monad0'})(null))->{'Bind1'})(null);
   $__local_var_2_1 = (((($Bind1_1_0)->{'Apply0'})(null))->{'Functor0'})(null);
-  $__res = (function() use ($Bind1_1_0, $__local_var_2_1, $dictMonadGen_0) {
-  $__fn = function($bias_3, $genA_4 = null, $genB_5 = null) use ($Bind1_1_0, $__local_var_2_1, $dictMonadGen_0, &$__fn) {
+  $__res = function($bias_3) use ($Bind1_1_0, $__local_var_2_1, $dictMonadGen_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($genA_4) use ($Bind1_1_0, $__local_var_2_1, $bias_3, $dictMonadGen_0) {
+  $__num = \func_num_args();
+  $__res = function($genB_5) use ($Bind1_1_0, $__local_var_2_1, $bias_3, $dictMonadGen_0, $genA_4) {
+  $__num = \func_num_args();
   $__res = ((($Bind1_1_0)->{'bind'})(((($dictMonadGen_0)->{'chooseFloat'})(0.0))(1.0)))(function($n_6) use ($__local_var_2_1, $bias_3, $genA_4, $genB_5) {
   $__num = \func_num_args();
   $__t2 = null;;
-  if (($n_6 < $bias_3)) {
+  if ((function() use ($bias_3, $n_6, &$__fn) {
+$__t3 = null;;
+if (($n_6 < $bias_3)) {
+$__t3 = true;
+goto end_branch_3;;
+};
+$__t3 = false;
+end_branch_3:;
+return $__t3;
+})()) {
 $__t2 = ((($__local_var_2_1)->{'map'})($GLOBALS['Data_Either_Left']))($genA_4);
 goto end_branch_2;;
 };
@@ -298,10 +316,16 @@ goto end_branch_2;;
 });
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

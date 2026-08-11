@@ -127,12 +127,10 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 // Data_Array_NonEmpty_max
 $GLOBALS['Data_Array_NonEmpty_max'] = (function() use (&$__fn) {
 $__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
-return (function() use ($__local_var_0_0) {
-  $__fn = function($x_1, $y_2 = null) use ($__local_var_0_0, &$__fn) {
+return function($x_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_2) use ($__local_var_0_0, $x_1) {
+  $__num = \func_num_args();
   $v_3_1 = (($__local_var_0_0)($x_1))($y_2);
   $__t2 = null;;
   if ($v_3_1 instanceof \Data\Ordering\Data_Ordering_LT) {
@@ -153,28 +151,37 @@ goto end_branch_2;;
   $__res = $__t2;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 })();
 
 // Data_Array_NonEmpty_greaterThan
 $GLOBALS['Data_Array_NonEmpty_greaterThan'] = (function() use (&$__fn) {
 $__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
-return (function() use ($__local_var_0_0) {
-  $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+return function($a1_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_GT;
+  $__res = function($a2_2) use ($__local_var_0_0, $a1_1) {
+  $__num = \func_num_args();
+  $__t1 = null;;
+  if ((($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_GT) {
+$__t1 = true;
+goto end_branch_1;;
+};
+  $__t1 = false;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 })();
 
 // Data_Array_NonEmpty_fromJust
@@ -216,19 +223,26 @@ $GLOBALS['Data_Array_NonEmpty_unsafeIndex1'] = __NAMESPACE__ . '\\majData_majArr
 // Data_Array_NonEmpty_lessThan
 $GLOBALS['Data_Array_NonEmpty_lessThan'] = (function() use (&$__fn) {
 $__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
-return (function() use ($__local_var_0_0) {
-  $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+return function($a1_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT;
+  $__res = function($a2_2) use ($__local_var_0_0, $a1_1) {
+  $__num = \func_num_args();
+  $__t1 = null;;
+  if ((($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT) {
+$__t1 = true;
+goto end_branch_1;;
+};
+  $__t1 = false;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 })();
 
 // Data_Array_NonEmpty_transpose_closure
@@ -384,7 +398,26 @@ function majData_majArray_majNonmajEmpty_zipmajWithmajA($dictApplicative_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Data_Array_zipWithA'])($dictApplicative_0);
+  $zipWithA1_1_0 = ($GLOBALS['Data_Array_zipWithA'])($dictApplicative_0);
+  $__res = function($f_2) use ($zipWithA1_1_0) {
+  $__num = \func_num_args();
+  $__res = function($xs_3) use ($f_2, $zipWithA1_1_0) {
+  $__num = \func_num_args();
+  $__res = function($ys_4) use ($f_2, $xs_3, $zipWithA1_1_0) {
+  $__num = \func_num_args();
+  $__res = ((($zipWithA1_1_0)($f_2))($xs_3))($ys_4);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -760,7 +793,14 @@ function majData_majArray_majNonmajEmpty_difference__prime__($dictEq_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($GLOBALS['Data_Foldable_foldableArray'])->{'foldr'})(($GLOBALS['Data_Array_delete'])($dictEq_0));
+  $difference1_1_0 = (($GLOBALS['Data_Foldable_foldableArray'])->{'foldr'})(($GLOBALS['Data_Array_delete'])($dictEq_0));
+  $__res = function($xs_2) use ($difference1_1_0) {
+  $__num = \func_num_args();
+  $__res = ($difference1_1_0)($xs_2);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1073,10 +1113,10 @@ function majData_majArray_majNonmajEmpty_difference($dictEq_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $difference_prime1_1_0 = (($GLOBALS['Data_Foldable_foldableArray'])->{'foldr'})(($GLOBALS['Data_Array_delete'])($dictEq_0));
-  $__res = function($xs_2) use ($difference_prime1_1_0) {
+  $difference1_1_0 = (($GLOBALS['Data_Foldable_foldableArray'])->{'foldr'})(($GLOBALS['Data_Array_delete'])($dictEq_0));
+  $__res = function($xs_2) use ($difference1_1_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($difference_prime1_1_0)($xs_2)))($GLOBALS['Data_Array_NonEmpty_toArray']);
+  $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($difference1_1_0)($xs_2)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1284,19 +1324,19 @@ function majData_majArray_majNonmajEmpty_foldmajRecmajM($dictMonadRec_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $foldRecM1_1_0 = ($GLOBALS['Data_Array_foldRecM'])($dictMonadRec_0);
-  $__res = (function() use ($foldRecM1_1_0) {
-  $__fn = function($f_2, $acc_3 = null) use ($foldRecM1_1_0, &$__fn) {
+  $__res = function($f_2) use ($foldRecM1_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($acc_3) use ($f_2, $foldRecM1_1_0) {
+  $__num = \func_num_args();
   $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($foldRecM1_1_0)($f_2))($acc_3)))($GLOBALS['Data_Array_NonEmpty_toArray']);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1604,19 +1644,19 @@ function majData_majArray_majNonmajEmpty_modifymajAtmajIndices($dictFoldable_0) 
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $modifyAtIndices1_1_0 = ($GLOBALS['Data_Array_modifyAtIndices'])($dictFoldable_0);
-  $__res = (function() use ($modifyAtIndices1_1_0) {
-  $__fn = function($is_2, $f_3 = null) use ($modifyAtIndices1_1_0, &$__fn) {
+  $__res = function($is_2) use ($modifyAtIndices1_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($f_3) use ($is_2, $modifyAtIndices1_1_0) {
+  $__num = \func_num_args();
   $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Array_NonEmpty_Internal_NonEmptyArray']))((($GLOBALS['Control_Semigroupoid_composeImpl'])((($modifyAtIndices1_1_0)($is_2))($f_3)))($GLOBALS['Data_Array_NonEmpty_toArray']));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

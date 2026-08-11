@@ -142,7 +142,16 @@ function majTest_majRmajBmajTree_max(int $x_0, $y_1 = null): int|\Closure {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__t0 = null;;
-  if (($x_0 > $y_1)) {
+  if ((function() use ($x_0, $y_1, &$__fn) {
+$__t1 = null;;
+if (($x_0 > $y_1)) {
+$__t1 = true;
+goto end_branch_1;;
+};
+$__t1 = false;
+end_branch_1:;
+return $__t1;
+})()) {
 $__t0 = $x_0;
 goto end_branch_0;;
 };
@@ -203,7 +212,16 @@ goto end_branch_0;;
 $__local_var_1_1 = \Test\RBTree\majTest_majRmajBmajTree_depth(($v_0)->{'value1'});
 $__local_var_2_2 = \Test\RBTree\majTest_majRmajBmajTree_depth(($v_0)->{'value3'});
 $__t3 = null;;
+if ((function() use ($__local_var_1_1, $__local_var_2_2, &$__fn) {
+$__t4 = null;;
 if (($__local_var_1_1 > $__local_var_2_2)) {
+$__t4 = true;
+goto end_branch_4;;
+};
+$__t4 = false;
+end_branch_4:;
+return $__t4;
+})()) {
 $__t3 = (1 + $__local_var_1_1);
 goto end_branch_3;;
 };
@@ -467,18 +485,39 @@ $__t0 = new \Test\RBTree\Test_RBTree_T(new \Test\RBTree\Test_RBTree_R(), new \Te
 goto end_branch_0;;
 };
   if ($v1_1 instanceof \Test\RBTree\Test_RBTree_T) {
-$__t1 = null;;
+$__t3 = null;;
+if ((function() use ($v1_1, $v_0, &$__fn) {
+$__t4 = null;;
 if (($v_0 < ($v1_1)->{'value2'})) {
-$__t1 = \Test\RBTree\majTest_majRmajBmajTree_balance(($v1_1)->{'value0'}, \Test\RBTree\majTest_majRmajBmajTree_ins($v_0, ($v1_1)->{'value1'}), ($v1_1)->{'value2'}, ($v1_1)->{'value3'});
-goto end_branch_1;;
+$__t4 = true;
+goto end_branch_4;;
 };
+$__t4 = false;
+end_branch_4:;
+return $__t4;
+})()) {
+$__t3 = \Test\RBTree\majTest_majRmajBmajTree_balance(($v1_1)->{'value0'}, \Test\RBTree\majTest_majRmajBmajTree_ins($v_0, ($v1_1)->{'value1'}), ($v1_1)->{'value2'}, ($v1_1)->{'value3'});
+goto end_branch_3;;
+};
+$__t1 = null;;
+if ((function() use ($v1_1, $v_0, &$__fn) {
+$__t2 = null;;
 if (($v_0 > ($v1_1)->{'value2'})) {
+$__t2 = true;
+goto end_branch_2;;
+};
+$__t2 = false;
+end_branch_2:;
+return $__t2;
+})()) {
 $__t1 = \Test\RBTree\majTest_majRmajBmajTree_balance(($v1_1)->{'value0'}, ($v1_1)->{'value1'}, ($v1_1)->{'value2'}, \Test\RBTree\majTest_majRmajBmajTree_ins($v_0, ($v1_1)->{'value3'}));
 goto end_branch_1;;
 };
 $__t1 = new \Test\RBTree\Test_RBTree_T(($v1_1)->{'value0'}, ($v1_1)->{'value1'}, ($v1_1)->{'value2'}, ($v1_1)->{'value3'});
 end_branch_1:;
-$__t0 = $__t1;
+$__t3 = $__t1;
+end_branch_3:;
+$__t0 = $__t3;
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);

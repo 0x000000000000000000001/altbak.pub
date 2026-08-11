@@ -117,37 +117,51 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 // Data_Enum_Generic_greaterThanOrEq
 $GLOBALS['Data_Enum_Generic_greaterThanOrEq'] = (function() use (&$__fn) {
 $__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
-return (function() use ($__local_var_0_0) {
-  $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+return function($a1_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ( ! (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT);
+  $__res = function($a2_2) use ($__local_var_0_0, $a1_1) {
+  $__num = \func_num_args();
+  $__t1 = null;;
+  if ((($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT) {
+$__t1 = false;
+goto end_branch_1;;
+};
+  $__t1 = true;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 })();
 
 // Data_Enum_Generic_lessThan
 $GLOBALS['Data_Enum_Generic_lessThan'] = (function() use (&$__fn) {
 $__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
-return (function() use ($__local_var_0_0) {
-  $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+return function($a1_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT;
+  $__res = function($a2_2) use ($__local_var_0_0, $a1_1) {
+  $__num = \func_num_args();
+  $__t1 = null;;
+  if ((($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT) {
+$__t1 = true;
+goto end_branch_1;;
+};
+  $__t1 = false;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 })();
 
 // Data_Enum_Generic_genericToEnum'
@@ -300,12 +314,10 @@ function majData_majEnum_majGeneric_genericmajEnummajSum($dictGenericEnum_0, $di
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $genericTop_prime_2_0 = ($dictGenericTop_1)->{'genericTop__prime__'};
-  $__res = (function() use ($dictGenericEnum_0, $genericTop_prime_2_0) {
-  $__fn = function($dictGenericEnum1_3, $dictGenericBottom_4 = null) use ($dictGenericEnum_0, $genericTop_prime_2_0, &$__fn) {
+  $__res = function($dictGenericEnum1_3) use ($dictGenericEnum_0, $genericTop_prime_2_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($dictGenericBottom_4) use ($dictGenericEnum1_3, $dictGenericEnum_0, $genericTop_prime_2_0) {
+  $__num = \func_num_args();
   $genericBottom_prime_5_1 = ($dictGenericBottom_4)->{'genericBottom__prime__'};
   $__res = (object)["genericPred__prime__" => function($v_6) use ($dictGenericEnum1_3, $dictGenericEnum_0, $genericTop_prime_2_0) {
   $__num = \func_num_args();
@@ -372,10 +384,12 @@ goto end_branch_5;;
 }];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -522,7 +536,7 @@ function majData_majEnum_majGeneric_genericmajEnummajArgument($dictEnum_0) {
 $GLOBALS['Data_Enum_Generic_genericEnumArgument'] = __NAMESPACE__ . '\\majData_majEnum_majGeneric_genericmajEnummajArgument';
 
 // Data_Enum_Generic_genericCardinality'
-function majData_majEnum_majGeneric_genericmajCardinality__prime__($dict_0): int|\Closure {
+function majData_majEnum_majGeneric_genericmajCardinality__prime__($dict_0) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majEnum_majGeneric_genericmajCardinality__prime__';
   if ($__num < 1) {
@@ -536,7 +550,7 @@ function majData_majEnum_majGeneric_genericmajCardinality__prime__($dict_0): int
 $GLOBALS['Data_Enum_Generic_genericCardinality__prime__'] = __NAMESPACE__ . '\\majData_majEnum_majGeneric_genericmajCardinality__prime__';
 
 // Data_Enum_Generic_genericCardinality
-function majData_majEnum_majGeneric_genericmajCardinality($dictGeneric_0, $dictGenericBoundedEnum_1 = null): int|\Closure {
+function majData_majEnum_majGeneric_genericmajCardinality($dictGeneric_0, $dictGenericBoundedEnum_1 = null) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majEnum_majGeneric_genericmajCardinality';
   if ($__num < 2) {

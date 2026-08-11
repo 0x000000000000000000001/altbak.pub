@@ -189,54 +189,61 @@ $GLOBALS['Data_Interval_Duration_Iso_lookup'] = __NAMESPACE__ . '\\majData_majIn
 // Data_Interval_Duration_Iso_greaterThan
 $GLOBALS['Data_Interval_Duration_Iso_greaterThan'] = (function() use (&$__fn) {
 $__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
-return (function() use ($__local_var_0_0) {
-  $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+return function($a1_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_GT;
+  $__res = function($a2_2) use ($__local_var_0_0, $a1_1) {
+  $__num = \func_num_args();
+  $__t1 = null;;
+  if ((($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_GT) {
+$__t1 = true;
+goto end_branch_1;;
+};
+  $__t1 = false;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 })();
 
-// Data_Interval_Duration_Iso_foldMap1_closure
-$GLOBALS['Data_Interval_Duration_Iso_foldMap1_closure'] = (($GLOBALS['Data_List_Types_foldableList'])->{'foldMap'})($GLOBALS['Data_List_Types_monoidList']);
+// Data_Interval_Duration_Iso_foldMap_closure
+$GLOBALS['Data_Interval_Duration_Iso_foldMap_closure'] = (($GLOBALS['Data_List_Types_foldableList'])->{'foldMap'})($GLOBALS['Data_List_Types_monoidList']);
 
-// Data_Interval_Duration_Iso_foldMap1
-function majData_majInterval_majDuration_majIso_foldmajMap1($v_0, $v_1 = null) {
+// Data_Interval_Duration_Iso_foldMap
+function majData_majInterval_majDuration_majIso_foldmajMap($v_0, $v_1 = null) {
   $__num = \func_num_args();
-  $__fn = __NAMESPACE__ . '\\' . 'majData_majInterval_majDuration_majIso_foldmajMap1';
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majInterval_majDuration_majIso_foldmajMap';
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Interval_Duration_Iso_foldMap1_closure'])($v_0, $v_1);
+  $__res = ($GLOBALS['Data_Interval_Duration_Iso_foldMap_closure'])($v_0, $v_1);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
 }
-$GLOBALS['Data_Interval_Duration_Iso_foldMap1'] = __NAMESPACE__ . '\\majData_majInterval_majDuration_majIso_foldmajMap1';
+$GLOBALS['Data_Interval_Duration_Iso_foldMap'] = __NAMESPACE__ . '\\majData_majInterval_majDuration_majIso_foldmajMap';
 
-// Data_Interval_Duration_Iso_foldMap2
-$GLOBALS['Data_Interval_Duration_Iso_foldMap2'] = (function() use (&$__fn) {
-$semigroupAdditive1_0_0 = (object)["append" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+// Data_Interval_Duration_Iso_foldMap1
+$GLOBALS['Data_Interval_Duration_Iso_foldMap1'] = (function() use (&$__fn) {
+$semigroupAdditive1_0_0 = (object)["append" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($GLOBALS['Data_Semiring_semiringNumber'])->{'add'})($v_0))($v1_1);
+  $__res = function($v1_1) use ($v_0) {
+  $__num = \func_num_args();
+  $__res = ($v_0 + $v1_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
-return (($GLOBALS['Data_List_Types_foldableList'])->{'foldMap'})((object)["mempty" => ($GLOBALS['Data_Semiring_semiringNumber'])->{'zero'}, "Semigroup0" => function($_dollar__unused_1) use ($semigroupAdditive1_0_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+return (($GLOBALS['Data_List_Types_foldableList'])->{'foldMap'})((object)["mempty" => 0.0, "Semigroup0" => function($_dollar__unused_1) use ($semigroupAdditive1_0_0) {
   $__num = \func_num_args();
   $__res = $semigroupAdditive1_0_0;
   goto __end;;
@@ -245,35 +252,55 @@ return (($GLOBALS['Data_List_Types_foldableList'])->{'foldMap'})((object)["mempt
 }]);
 })();
 
+// Data_Interval_Duration_Iso_not
+function majData_majInterval_majDuration_majIso_not($f_0, $a_1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majInterval_majDuration_majIso_not';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'not'})(($f_0)($a_1));
+  goto __end;;
+  __end:
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_Interval_Duration_Iso_not'] = __NAMESPACE__ . '\\majData_majInterval_majDuration_majIso_not';
+
 // Data_Interval_Duration_Iso_fold
 $GLOBALS['Data_Interval_Duration_Iso_fold'] = (function() use (&$__fn) {
 $__local_var_0_0 = (($GLOBALS['Data_List_Types_monoidList'])->{'Semigroup0'})(null);
-$semigroupFn_1_1 = (object)["append" => (function() use ($__local_var_0_0) {
-  $__fn = function($f_1, $g_2 = null, $x_3 = null) use ($__local_var_0_0, &$__fn) {
+$semigroupFn_0_0 = (object)["append" => function($f_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($g_2) use ($__local_var_0_0, $f_1) {
+  $__num = \func_num_args();
+  $__res = function($x_3) use ($__local_var_0_0, $f_1, $g_2) {
+  $__num = \func_num_args();
   $__res = ((($__local_var_0_0)->{'append'})(($f_1)($x_3)))(($g_2)($x_3));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
-return ((($GLOBALS['Data_Foldable_foldableArray'])->{'foldMap'})((object)["mempty" => function($v_2) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+return ((($GLOBALS['Data_Foldable_foldableArray'])->{'foldMap'})((object)["mempty" => function($v_1) {
   $__num = \func_num_args();
   $__res = ($GLOBALS['Data_List_Types_monoidList'])->{'mempty'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Semigroup0" => function($_dollar__unused_2) use ($semigroupFn_1_1) {
+}, "Semigroup0" => function($_dollar__unused_1) use ($semigroupFn_0_0) {
   $__num = \func_num_args();
-  $__res = $semigroupFn_1_1;
+  $__res = $semigroupFn_0_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}]))($GLOBALS['Data_Foldable_identity']);
+}]))($GLOBALS['Data_Foldable_identity1']);
 })();
 
 // Data_Interval_Duration_Iso_toUnfoldable
@@ -390,34 +417,34 @@ goto end_branch_0;;
 $GLOBALS['Data_Interval_Duration_Iso_prettyError'] = __NAMESPACE__ . '\\majData_majInterval_majDuration_majIso_prettymajError';
 
 // Data_Interval_Duration_Iso_eqIsoDuration
-$GLOBALS['Data_Interval_Duration_Iso_eqIsoDuration'] = (object)["eq" => (function() {
-  $__fn = function($x_0, $y_1 = null) use (&$__fn) {
+$GLOBALS['Data_Interval_Duration_Iso_eqIsoDuration'] = (object)["eq" => function($x_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_1) use ($x_0) {
+  $__num = \func_num_args();
   $__res = ((($GLOBALS['Data_Interval_Duration_eqDuration'])->{'eq'})($x_0))($y_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Interval_Duration_Iso_ordIsoDuration
-$GLOBALS['Data_Interval_Duration_Iso_ordIsoDuration'] = (object)["compare" => (function() {
-  $__fn = function($x_0, $y_1 = null) use (&$__fn) {
+$GLOBALS['Data_Interval_Duration_Iso_ordIsoDuration'] = (object)["compare" => function($x_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_1) use ($x_0) {
+  $__num = \func_num_args();
   $__res = ((($GLOBALS['Data_Interval_Duration_ordDuration'])->{'compare'})($x_0))($y_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Eq0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Eq0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Interval_Duration_Iso_eqIsoDuration'];
   goto __end;;
@@ -426,42 +453,65 @@ $GLOBALS['Data_Interval_Duration_Iso_ordIsoDuration'] = (object)["compare" => (f
 }];
 
 // Data_Interval_Duration_Iso_eqError
-$GLOBALS['Data_Interval_Duration_Iso_eqError'] = (object)["eq" => (function() {
-  $__fn = function($x_0, $y_1 = null) use (&$__fn) {
+$GLOBALS['Data_Interval_Duration_Iso_eqError'] = (object)["eq" => function($x_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_1) use ($x_0) {
+  $__num = \func_num_args();
   $__t0 = null;;
   if ($x_0 instanceof \Data\Interval\Duration\Iso\Data_Interval_Duration_Iso_IsEmpty) {
-$__t0 = $y_1 instanceof \Data\Interval\Duration\Iso\Data_Interval_Duration_Iso_IsEmpty;
+$__t1 = null;;
+if ($y_1 instanceof \Data\Interval\Duration\Iso\Data_Interval_Duration_Iso_IsEmpty) {
+$__t1 = true;
+goto end_branch_1;;
+};
+$__t1 = false;
+end_branch_1:;
+$__t0 = $__t1;
 goto end_branch_0;;
 };
   if ($x_0 instanceof \Data\Interval\Duration\Iso\Data_Interval_Duration_Iso_InvalidWeekComponentUsage) {
-$__t0 = $y_1 instanceof \Data\Interval\Duration\Iso\Data_Interval_Duration_Iso_InvalidWeekComponentUsage;
+$__t2 = null;;
+if ($y_1 instanceof \Data\Interval\Duration\Iso\Data_Interval_Duration_Iso_InvalidWeekComponentUsage) {
+$__t2 = true;
+goto end_branch_2;;
+};
+$__t2 = false;
+end_branch_2:;
+$__t0 = $__t2;
 goto end_branch_0;;
 };
   if ($x_0 instanceof \Data\Interval\Duration\Iso\Data_Interval_Duration_Iso_ContainsNegativeValue) {
-$__t0 = ($y_1 instanceof \Data\Interval\Duration\Iso\Data_Interval_Duration_Iso_ContainsNegativeValue && ((($GLOBALS['Data_Interval_Duration_eqDurationComponent'])->{'eq'})(($x_0)->{'value0'}))(($y_1)->{'value0'}));
+$__t3 = null;;
+if ($y_1 instanceof \Data\Interval\Duration\Iso\Data_Interval_Duration_Iso_ContainsNegativeValue) {
+$__t3 = ((($GLOBALS['Data_Interval_Duration_eqDurationComponent'])->{'eq'})(($x_0)->{'value0'}))(($y_1)->{'value0'});
+goto end_branch_3;;
+};
+$__t3 = false;
+end_branch_3:;
+$__t0 = $__t3;
 goto end_branch_0;;
 };
-  $__t0 = ($x_0 instanceof \Data\Interval\Duration\Iso\Data_Interval_Duration_Iso_InvalidFractionalUse && ($y_1 instanceof \Data\Interval\Duration\Iso\Data_Interval_Duration_Iso_InvalidFractionalUse && ((($GLOBALS['Data_Interval_Duration_eqDurationComponent'])->{'eq'})(($x_0)->{'value0'}))(($y_1)->{'value0'})));
+  if (($x_0 instanceof \Data\Interval\Duration\Iso\Data_Interval_Duration_Iso_InvalidFractionalUse && $y_1 instanceof \Data\Interval\Duration\Iso\Data_Interval_Duration_Iso_InvalidFractionalUse)) {
+$__t0 = ((($GLOBALS['Data_Interval_Duration_eqDurationComponent'])->{'eq'})(($x_0)->{'value0'}))(($y_1)->{'value0'});
+goto end_branch_0;;
+};
+  $__t0 = false;
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Interval_Duration_Iso_ordError
-$GLOBALS['Data_Interval_Duration_Iso_ordError'] = (object)["compare" => (function() {
-  $__fn = function($x_0, $y_1 = null) use (&$__fn) {
+$GLOBALS['Data_Interval_Duration_Iso_ordError'] = (object)["compare" => function($x_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_1) use ($x_0) {
+  $__num = \func_num_args();
   $__t0 = null;;
   if ($x_0 instanceof \Data\Interval\Duration\Iso\Data_Interval_Duration_Iso_IsEmpty) {
 $__t1 = null;;
@@ -518,10 +568,12 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Eq0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Eq0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Interval_Duration_Iso_eqError'];
   goto __end;;
@@ -584,10 +636,19 @@ function majData_majInterval_majDuration_majIso_checkmajNegativemajValues($v_0) 
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = \Data\Interval\Duration\Iso\majData_majInterval_majDuration_majIso_foldmajMap1(function($v1_1) {
+  $__res = \Data\Interval\Duration\Iso\majData_majInterval_majDuration_majIso_foldmajMap(function($v1_1) {
   $__num = \func_num_args();
   $__t0 = null;;
-  if ((($v1_1)->{'value1'} >= 0.0)) {
+  if ((function() use ($v1_1, &$__fn) {
+$__t1 = null;;
+if ((($v1_1)->{'value1'} < 0.0)) {
+$__t1 = false;
+goto end_branch_1;;
+};
+$__t1 = true;
+end_branch_1:;
+return $__t1;
+})()) {
 $__t0 = ($GLOBALS['Data_List_Types_plusList'])->{'empty'};
 goto end_branch_0;;
 };
@@ -611,16 +672,32 @@ function majData_majInterval_majDuration_majIso_checkmajFractionalmajUse($v_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__local_var_1_0 = \Data\List\majData_majList_span((($GLOBALS['Control_Semigroupoid_composeImpl'])(function($a_1) {
+  $__local_var_1_0 = \Data\List\majData_majList_span((($GLOBALS['Control_Semigroupoid_composeImpl'])(($GLOBALS['Data_Interval_Duration_Iso_not'])(function($a_1) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'not'})(((($GLOBALS['Data_Eq_eqBoolean'])->{'eq'})(((($GLOBALS['Data_Eq_eqNumber'])->{'eq'})(\Data\Number\majData_majNumber_floor($a_1)))($a_1)))(false));
+  $__res = ((($GLOBALS['Data_Eq_eqBoolean'])->{'eq'})(((($GLOBALS['Data_Eq_eqNumber'])->{'eq'})(\Data\Number\majData_majNumber_floor($a_1)))($a_1)))(false);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}))($GLOBALS['Data_Tuple_snd']), ($v_0)->{'asList'});
+})))($GLOBALS['Data_Tuple_snd']), ($v_0)->{'asList'});
   $__t1 = null;;
-  if ((($__local_var_1_0)->{'rest'} instanceof \Data\List\Types\Data_List_Types_Cons && ((($GLOBALS['Data_Interval_Duration_Iso_foldMap2'])((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Additive_Additive']))($GLOBALS['Data_Number_abs'])))($GLOBALS['Data_Tuple_snd'])))((($__local_var_1_0)->{'rest'})->{'value1'}) > 0.0))) {
-$__t1 = (($GLOBALS['Data_List_Types_applicativeList'])->{'pure'})(new \Data\Interval\Duration\Iso\Data_Interval_Duration_Iso_InvalidFractionalUse(((($__local_var_1_0)->{'rest'})->{'value0'})->{'value0'}));
+  if (($__local_var_1_0)->{'rest'} instanceof \Data\List\Types\Data_List_Types_Cons) {
+$__t2 = null;;
+if ((function() use ($__local_var_1_0, &$__fn) {
+$__t3 = null;;
+if (((($GLOBALS['Data_Interval_Duration_Iso_foldMap1'])((($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Monoid_Additive_Additive']))($GLOBALS['Data_Number_abs'])))($GLOBALS['Data_Tuple_snd'])))((($__local_var_1_0)->{'rest'})->{'value1'}) > 0.0)) {
+$__t3 = true;
+goto end_branch_3;;
+};
+$__t3 = false;
+end_branch_3:;
+return $__t3;
+})()) {
+$__t2 = (($GLOBALS['Data_List_Types_applicativeList'])->{'pure'})(new \Data\Interval\Duration\Iso\Data_Interval_Duration_Iso_InvalidFractionalUse(((($__local_var_1_0)->{'rest'})->{'value0'})->{'value0'}));
+goto end_branch_2;;
+};
+$__t2 = ($GLOBALS['Data_List_Types_plusList'])->{'empty'};
+end_branch_2:;
+$__t1 = $__t2;
 goto end_branch_1;;
 };
   $__t1 = ($GLOBALS['Data_List_Types_plusList'])->{'empty'};
@@ -640,7 +717,16 @@ function majData_majInterval_majDuration_majIso_checkmajEmptiness($v_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $__t0 = null;;
-  if (($v_0)->{'asList'} instanceof \Data\List\Types\Data_List_Types_Nil) {
+  if ((function() use ($v_0, &$__fn) {
+$__t1 = null;;
+if (($v_0)->{'asList'} instanceof \Data\List\Types\Data_List_Types_Nil) {
+$__t1 = true;
+goto end_branch_1;;
+};
+$__t1 = false;
+end_branch_1:;
+return $__t1;
+})()) {
 $__t0 = (($GLOBALS['Data_List_Types_applicativeList'])->{'pure'})(new \Data\Interval\Duration\Iso\Data_Interval_Duration_Iso_IsEmpty());
 goto end_branch_0;;
 };

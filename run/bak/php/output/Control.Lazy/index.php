@@ -108,19 +108,19 @@ $GLOBALS['Control_Lazy_lazyUnit'] = (object)["defer" => function($v_0) {
 }];
 
 // Control_Lazy_lazyFn
-$GLOBALS['Control_Lazy_lazyFn'] = (object)["defer" => (function() {
-  $__fn = function($f_0, $x_1 = null) use (&$__fn) {
+$GLOBALS['Control_Lazy_lazyFn'] = (object)["defer" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($x_1) use ($f_0) {
+  $__num = \func_num_args();
   $__res = (($f_0)($GLOBALS['Data_Unit_unit']))($x_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Control_Lazy_defer
 function majControl_majLazy_defer($dict_0) {

@@ -149,12 +149,12 @@ final class Data_Number_Format_Exponential { public $tag = 'Exponential'; public
 // Data_Number_Format_clamp
 $GLOBALS['Data_Number_Format_clamp'] = (function() use (&$__fn) {
 $__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
-return (function() use ($__local_var_0_0) {
-  $__fn = function($low_1, $hi_2 = null, $x_3 = null) use ($__local_var_0_0, &$__fn) {
+return function($low_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($hi_2) use ($__local_var_0_0, $low_1) {
+  $__num = \func_num_args();
+  $__res = function($x_3) use ($__local_var_0_0, $hi_2, $low_1) {
+  $__num = \func_num_args();
   $v_4_1 = (($__local_var_0_0)($low_1))($x_3);
   $__t2 = null;;
   if ($v_4_1 instanceof \Data\Ordering\Data_Ordering_LT) {
@@ -193,10 +193,16 @@ goto end_branch_5;;
   $__res = $__t5;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 })();
 
 // Data_Number_Format_Precision

@@ -101,10 +101,10 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 
-// Control_Biapply_identity
-function majControl_majBiapply_identity($x_0) {
+// Control_Biapply_identity1
+function majControl_majBiapply_identity1($x_0) {
   $__num = \func_num_args();
-  $__fn = __NAMESPACE__ . '\\' . 'majControl_majBiapply_identity';
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majBiapply_identity1';
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
@@ -113,22 +113,36 @@ function majControl_majBiapply_identity($x_0) {
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }
-$GLOBALS['Control_Biapply_identity'] = __NAMESPACE__ . '\\majControl_majBiapply_identity';
+$GLOBALS['Control_Biapply_identity1'] = __NAMESPACE__ . '\\majControl_majBiapply_identity1';
+
+// Control_Biapply_identity2
+function majControl_majBiapply_identity2($x_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majBiapply_identity2';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Biapply_identity2'] = __NAMESPACE__ . '\\majControl_majBiapply_identity2';
 
 // Control_Biapply_biapplyTuple
-$GLOBALS['Control_Biapply_biapplyTuple'] = (object)["biapply" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Control_Biapply_biapplyTuple'] = (object)["biapply" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) use ($v_0) {
+  $__num = \func_num_args();
   $__res = new \Data\Tuple\Data_Tuple_Tuple((($v_0)->{'value0'})(($v1_1)->{'value0'}), (($v_0)->{'value1'})(($v1_1)->{'value1'}));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Bifunctor0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Bifunctor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Bifunctor_bifunctorTuple'];
   goto __end;;
@@ -159,13 +173,13 @@ function majControl_majBiapply_biapplymajFirst($dictBiapply_0, $a_1 = null, $b_2
   }
   $__res = ((($dictBiapply_0)->{'biapply'})((((((($dictBiapply_0)->{'Bifunctor0'})(null))->{'bimap'})(function($v_3) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Control_Biapply_identity'];
+  $__res = $GLOBALS['Control_Biapply_identity1'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }))(function($v_3) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Control_Biapply_identity'];
+  $__res = $GLOBALS['Control_Biapply_identity2'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

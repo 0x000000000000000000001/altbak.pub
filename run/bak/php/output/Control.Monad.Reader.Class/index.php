@@ -118,19 +118,19 @@ $GLOBALS['Control_Monad_Reader_Class_monadAskFun'] = (object)["ask" => function(
 }];
 
 // Control_Monad_Reader_Class_monadReaderFun
-$GLOBALS['Control_Monad_Reader_Class_monadReaderFun'] = (object)["local" => (function() {
-  $__fn = function($f_0, $g_1 = null) use (&$__fn) {
+$GLOBALS['Control_Monad_Reader_Class_monadReaderFun'] = (object)["local" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($g_1) use ($f_0) {
+  $__num = \func_num_args();
   $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($g_1))($f_0);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "MonadAsk0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "MonadAsk0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Monad_Reader_Class_monadAskFun'];
   goto __end;;

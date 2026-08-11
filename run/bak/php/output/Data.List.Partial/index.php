@@ -179,7 +179,7 @@ if (($v_1)->{'value1'} instanceof \Data\List\Types\Data_List_Types_Nil) {
 $__t1 = new \Data\List\Types\Data_List_Types_Nil();
 goto end_branch_1;;
 };
-$__t1 = new \Data\List\Types\Data_List_Types_Cons(($v_1)->{'value0'}, \Data\List\Partial\majData_majList_majPartial_init(null, ($v_1)->{'value1'}));
+$__t1 = new \Data\List\Types\Data_List_Types_Cons(($v_1)->{'value0'}, (($GLOBALS['Data_List_Partial_init'])(null))(($v_1)->{'value1'}));
 end_branch_1:;
 $__t0 = $__t1;
 goto end_branch_0;;

@@ -109,26 +109,14 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 
-// Data_Time_Duration_negate_closure
-$GLOBALS['Data_Time_Duration_negate_closure'] = (function() use (&$__fn) {
-$zero_0_0 = ((($GLOBALS['Data_Ring_ringNumber'])->{'Semiring0'})(null))->{'zero'};
-return function($a_1) use ($zero_0_0) {
-  $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Ring_ringNumber'])->{'sub'})($zero_0_0))($a_1);
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-};
-})();
-
 // Data_Time_Duration_negate
-function majData_majTime_majDuration_negate(float $v_0): float|\Closure {
+function majData_majTime_majDuration_negate(float $a_0): float|\Closure {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majTime_majDuration_negate';
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Data_Time_Duration_negate_closure'])($v_0);
+  $__res = ( - $a_0);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -279,79 +267,79 @@ $GLOBALS['Data_Time_Duration_showDays'] = (object)["show" => function($v_0) {
 }];
 
 // Data_Time_Duration_semigroupSeconds
-$GLOBALS['Data_Time_Duration_semigroupSeconds'] = (object)["append" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_Time_Duration_semigroupSeconds'] = (object)["append" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($GLOBALS['Data_Semiring_semiringNumber'])->{'add'})($v_0))($v1_1);
+  $__res = function($v1_1) use ($v_0) {
+  $__num = \func_num_args();
+  $__res = ($v_0 + $v1_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Time_Duration_semigroupMinutes
-$GLOBALS['Data_Time_Duration_semigroupMinutes'] = (object)["append" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_Time_Duration_semigroupMinutes'] = (object)["append" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($GLOBALS['Data_Semiring_semiringNumber'])->{'add'})($v_0))($v1_1);
+  $__res = function($v1_1) use ($v_0) {
+  $__num = \func_num_args();
+  $__res = ($v_0 + $v1_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Time_Duration_semigroupMilliseconds
-$GLOBALS['Data_Time_Duration_semigroupMilliseconds'] = (object)["append" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_Time_Duration_semigroupMilliseconds'] = (object)["append" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($GLOBALS['Data_Semiring_semiringNumber'])->{'add'})($v_0))($v1_1);
+  $__res = function($v1_1) use ($v_0) {
+  $__num = \func_num_args();
+  $__res = ($v_0 + $v1_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Time_Duration_semigroupHours
-$GLOBALS['Data_Time_Duration_semigroupHours'] = (object)["append" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_Time_Duration_semigroupHours'] = (object)["append" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($GLOBALS['Data_Semiring_semiringNumber'])->{'add'})($v_0))($v1_1);
+  $__res = function($v1_1) use ($v_0) {
+  $__num = \func_num_args();
+  $__res = ($v_0 + $v1_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Time_Duration_semigroupDays
-$GLOBALS['Data_Time_Duration_semigroupDays'] = (object)["append" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_Time_Duration_semigroupDays'] = (object)["append" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($GLOBALS['Data_Semiring_semiringNumber'])->{'add'})($v_0))($v1_1);
+  $__res = function($v1_1) use ($v_0) {
+  $__num = \func_num_args();
+  $__res = ($v_0 + $v1_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Time_Duration_ordSeconds
 $GLOBALS['Data_Time_Duration_ordSeconds'] = $GLOBALS['Data_Ord_ordNumber'];
@@ -504,7 +492,7 @@ $GLOBALS['Data_Time_Duration_eqDays'] = $GLOBALS['Data_Eq_eqNumber'];
 // Data_Time_Duration_durationSeconds
 $GLOBALS['Data_Time_Duration_durationSeconds'] = (object)["fromDuration" => function($v_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semiring_semiringNumber'])->{'mul'})($v_0))(1000.0);
+  $__res = ($v_0 * 1000.0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -519,7 +507,7 @@ $GLOBALS['Data_Time_Duration_durationSeconds'] = (object)["fromDuration" => func
 // Data_Time_Duration_durationMinutes
 $GLOBALS['Data_Time_Duration_durationMinutes'] = (object)["fromDuration" => function($v_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semiring_semiringNumber'])->{'mul'})($v_0))(60000.0);
+  $__res = ($v_0 * 60000.0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -537,7 +525,7 @@ $GLOBALS['Data_Time_Duration_durationMilliseconds'] = (object)["fromDuration" =>
 // Data_Time_Duration_durationHours
 $GLOBALS['Data_Time_Duration_durationHours'] = (object)["fromDuration" => function($v_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semiring_semiringNumber'])->{'mul'})($v_0))(3600000.0);
+  $__res = ($v_0 * 3600000.0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -552,7 +540,7 @@ $GLOBALS['Data_Time_Duration_durationHours'] = (object)["fromDuration" => functi
 // Data_Time_Duration_durationDays
 $GLOBALS['Data_Time_Duration_durationDays'] = (object)["fromDuration" => function($v_0) {
   $__num = \func_num_args();
-  $__res = ((($GLOBALS['Data_Semiring_semiringNumber'])->{'mul'})($v_0))(86400000.0);
+  $__res = ($v_0 * 86400000.0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

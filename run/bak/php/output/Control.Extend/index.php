@@ -132,12 +132,12 @@ function majControl_majExtend_extendmajFn($dictSemigroup_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["extend" => (function() use ($dictSemigroup_0) {
-  $__fn = function($f_1, $g_2 = null, $w_3 = null) use ($dictSemigroup_0, &$__fn) {
+  $__res = (object)["extend" => function($f_1) use ($dictSemigroup_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($g_2) use ($dictSemigroup_0, $f_1) {
+  $__num = \func_num_args();
+  $__res = function($w_3) use ($dictSemigroup_0, $f_1, $g_2) {
+  $__num = \func_num_args();
   $__res = ($f_1)(function($w_prime_4) use ($dictSemigroup_0, $g_2, $w_3) {
   $__num = \func_num_args();
   $__res = ($g_2)(((($dictSemigroup_0)->{'append'})($w_3))($w_prime_4));
@@ -147,10 +147,16 @@ function majControl_majExtend_extendmajFn($dictSemigroup_0) {
 });
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_1) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_1) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Functor_functorFn'];
   goto __end;;

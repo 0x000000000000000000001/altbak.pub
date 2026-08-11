@@ -165,19 +165,19 @@ function majData_majConst_semiringmajConst($dictSemiring_0) {
 $GLOBALS['Data_Const_semiringConst'] = __NAMESPACE__ . '\\majData_majConst_semiringmajConst';
 
 // Data_Const_semigroupoidConst
-$GLOBALS['Data_Const_semigroupoidConst'] = (object)["compose" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_Const_semigroupoidConst'] = (object)["compose" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) {
+  $__num = \func_num_args();
   $__res = $v1_1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Const_semigroupConst
 function majData_majConst_semigroupmajConst($dictSemigroup_0) {
@@ -259,34 +259,34 @@ function majData_majConst_heytingmajAlgebramajConst($dictHeytingAlgebra_0) {
 $GLOBALS['Data_Const_heytingAlgebraConst'] = __NAMESPACE__ . '\\majData_majConst_heytingmajAlgebramajConst';
 
 // Data_Const_functorConst
-$GLOBALS['Data_Const_functorConst'] = (object)["map" => (function() {
-  $__fn = function($f_0, $m_1 = null) use (&$__fn) {
+$GLOBALS['Data_Const_functorConst'] = (object)["map" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($m_1) {
+  $__num = \func_num_args();
   $__res = $m_1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Const_invariantConst
-$GLOBALS['Data_Const_invariantConst'] = (object)["imap" => (function() {
-  $__fn = function($f_0, $v_1 = null) use (&$__fn) {
+$GLOBALS['Data_Const_invariantConst'] = (object)["imap" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_1) use ($f_0) {
+  $__num = \func_num_args();
   $__res = (($GLOBALS['Data_Const_functorConst'])->{'map'})($f_0);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Const_euclideanRingConst
 function majData_majConst_euclideanmajRingmajConst($dictEuclideanRing_0) {
@@ -346,21 +346,22 @@ function majData_majConst_ord1majConst($dictOrd_0) {
   }
   $compare_1_0 = ($dictOrd_0)->{'compare'};
   $eq_2_1 = ((($dictOrd_0)->{'Eq0'})(null))->{'eq'};
-  $__res = (object)["compare1" => function($dictOrd1_3) use ($compare_1_0) {
-  $__num = \func_num_args();
-  $__res = $compare_1_0;
-  goto __end;;
-  __end:
-  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Eq10" => function($_dollar__unused_3) use ($eq_2_1) {
-  $__num = \func_num_args();
-  $__res = (object)["eq1" => function($dictEq1_4) use ($eq_2_1) {
+  $eq1Const1_2_1 = (object)["eq1" => function($dictEq1_3) use ($eq_2_1) {
   $__num = \func_num_args();
   $__res = $eq_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
+  $__res = (object)["compare1" => function($dictOrd1_3) use ($compare_1_0) {
+  $__num = \func_num_args();
+  $__res = $compare_1_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Eq10" => function($_dollar__unused_3) use ($eq1Const1_2_1) {
+  $__num = \func_num_args();
+  $__res = $eq1Const1_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -420,19 +421,19 @@ function majData_majConst_applymajConst($dictSemigroup_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["apply" => (function() use ($dictSemigroup_0) {
-  $__fn = function($v_1, $v1_2 = null) use ($dictSemigroup_0, &$__fn) {
+  $__res = (object)["apply" => function($v_1) use ($dictSemigroup_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_2) use ($dictSemigroup_0, $v_1) {
+  $__num = \func_num_args();
   $__res = ((($dictSemigroup_0)->{'append'})($v_1))($v1_2);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_1) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_1) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Const_functorConst'];
   goto __end;;
@@ -454,34 +455,34 @@ function majData_majConst_applicativemajConst($dictMonoid_0) {
   }
   $mempty_1_0 = ($dictMonoid_0)->{'mempty'};
   $__local_var_2_1 = (($dictMonoid_0)->{'Semigroup0'})(null);
-  $applyConst1_3_2 = (object)["apply" => (function() use ($__local_var_2_1) {
-  $__fn = function($v_3, $v1_4 = null) use ($__local_var_2_1, &$__fn) {
+  $applyConst1_2_1 = (object)["apply" => function($v_3) use ($__local_var_2_1) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_4) use ($__local_var_2_1, $v_3) {
+  $__num = \func_num_args();
   $__res = ((($__local_var_2_1)->{'append'})($v_3))($v1_4);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_3) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_3) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Const_functorConst'];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = (object)["pure" => function($v_4) use ($mempty_1_0) {
+  $__res = (object)["pure" => function($v_3) use ($mempty_1_0) {
   $__num = \func_num_args();
   $__res = $mempty_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "Apply0" => function($_dollar__unused_4) use ($applyConst1_3_2) {
+}, "Apply0" => function($_dollar__unused_3) use ($applyConst1_2_1) {
   $__num = \func_num_args();
-  $__res = $applyConst1_3_2;
+  $__res = $applyConst1_2_1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

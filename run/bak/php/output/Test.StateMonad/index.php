@@ -219,19 +219,38 @@ function majTest_majStatemajMonad_chainmajModifications(int $v_0) {
   $__tco_var_Test_StateMonad_chainModifications_v_0 = $v_0;
   tco_loop_Test_StateMonad_chainModifications:;
   $v_0 = $__tco_var_Test_StateMonad_chainModifications_v_0;
-  $__res = match ($v_0) { 0 => function($s_1) {
+  $__t1 = null;;
+  switch ($v_0) {
+case 0:
+$__t1 = function($s_1) {
   $__num = \func_num_args();
   $__res = (object)["val" => $GLOBALS['Data_Unit_unit'], "state" => $s_1];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, default => function($s_1) use ($v_0) {
+};
+goto end_branch_1;;
+break;
+default:
+;
+break;
+};
+  $__local_var_1_0 = ($GLOBALS['Test_StateMonad_modify'])(function($x_1) {
   $__num = \func_num_args();
-  $__res = \Test\StateMonad\majTest_majStatemajMonad_chainmajModifications(($v_0 - 1), ($s_1 + 1));
+  $__res = ($x_1 + 1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-} };
+});
+  $__t1 = function($s_2) use ($__local_var_1_0, $v_0) {
+  $__num = \func_num_args();
+  $__res = \Test\StateMonad\majTest_majStatemajMonad_chainmajModifications(($v_0 - 1), (($__local_var_1_0)($s_2))->{'state'});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

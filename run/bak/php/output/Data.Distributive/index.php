@@ -128,19 +128,19 @@ $GLOBALS['Data_Distributive_distributiveIdentity'] = (object)["distribute" => fu
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "collect" => (function() {
-  $__fn = function($dictFunctor_0, $f_1 = null) use (&$__fn) {
+}, "collect" => function($dictFunctor_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($f_1) use ($dictFunctor_0) {
+  $__num = \func_num_args();
   $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity']))((($dictFunctor_0)->{'map'})((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Unsafe_Coerce_unsafeCoerce']))($f_1)));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Identity_functorIdentity'];
   goto __end;;
@@ -163,12 +163,12 @@ function majData_majDistributive_distribute($dict_0) {
 $GLOBALS['Data_Distributive_distribute'] = __NAMESPACE__ . '\\majData_majDistributive_distribute';
 
 // Data_Distributive_distributiveFunction
-$GLOBALS['Data_Distributive_distributiveFunction'] = (object)["distribute" => (function() {
-  $__fn = function($dictFunctor_0, $a_1 = null, $e_2 = null) use (&$__fn) {
+$GLOBALS['Data_Distributive_distributiveFunction'] = (object)["distribute" => function($dictFunctor_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($a_1) use ($dictFunctor_0) {
+  $__num = \func_num_args();
+  $__res = function($e_2) use ($a_1, $dictFunctor_0) {
+  $__num = \func_num_args();
   $__res = ((($dictFunctor_0)->{'map'})(function($v_3) use ($e_2) {
   $__num = \func_num_args();
   $__res = ($v_3)($e_2);
@@ -178,22 +178,28 @@ $GLOBALS['Data_Distributive_distributiveFunction'] = (object)["distribute" => (f
 }))($a_1);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(), "collect" => (function() {
-  $__fn = function($dictFunctor_0, $f_1 = null) use (&$__fn) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "collect" => function($dictFunctor_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($f_1) use ($dictFunctor_0) {
+  $__num = \func_num_args();
   $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Distributive_distributiveFunction'])->{'distribute'})($dictFunctor_0)))((($dictFunctor_0)->{'map'})($f_1));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Functor_functorFn'];
   goto __end;;
@@ -262,7 +268,7 @@ function majData_majDistributive_distributivemajTuple($dictTypeEquals_0) {
 });
   $__res = (object)["collect" => function($dictFunctor_2) use ($dictTypeEquals_0) {
   $__num = \func_num_args();
-  $__res = (($GLOBALS['Data_Distributive_collectDefault'])(\Data\Distributive\majData_majDistributive_distributivemajTuple($dictTypeEquals_0)))($dictFunctor_2);
+  $__res = (($GLOBALS['Data_Distributive_collectDefault'])(($GLOBALS['Data_Distributive_distributiveTuple'])($dictTypeEquals_0)))($dictFunctor_2);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

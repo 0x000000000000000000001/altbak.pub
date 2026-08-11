@@ -106,7 +106,7 @@ function majData_majTime_majComponent_majGen_genmajSecond($dictMonadGen_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = \Data\Enum\Gen\majData_majEnum_majGen_genmajBoundedmajEnum($dictMonadGen_0, $GLOBALS['Data_Time_Component_boundedEnumSecond']);
+  $__res = (($GLOBALS['Data_Enum_Gen_genBoundedEnum'])($dictMonadGen_0))($GLOBALS['Data_Time_Component_boundedEnumSecond']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -120,7 +120,7 @@ function majData_majTime_majComponent_majGen_genmajMinute($dictMonadGen_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = \Data\Enum\Gen\majData_majEnum_majGen_genmajBoundedmajEnum($dictMonadGen_0, $GLOBALS['Data_Time_Component_boundedEnumMinute']);
+  $__res = (($GLOBALS['Data_Enum_Gen_genBoundedEnum'])($dictMonadGen_0))($GLOBALS['Data_Time_Component_boundedEnumMinute']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -134,7 +134,7 @@ function majData_majTime_majComponent_majGen_genmajMillisecond($dictMonadGen_0) 
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = \Data\Enum\Gen\majData_majEnum_majGen_genmajBoundedmajEnum($dictMonadGen_0, $GLOBALS['Data_Time_Component_boundedEnumMillisecond']);
+  $__res = (($GLOBALS['Data_Enum_Gen_genBoundedEnum'])($dictMonadGen_0))($GLOBALS['Data_Time_Component_boundedEnumMillisecond']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -148,7 +148,7 @@ function majData_majTime_majComponent_majGen_genmajHour($dictMonadGen_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = \Data\Enum\Gen\majData_majEnum_majGen_genmajBoundedmajEnum($dictMonadGen_0, $GLOBALS['Data_Time_Component_boundedEnumHour']);
+  $__res = (($GLOBALS['Data_Enum_Gen_genBoundedEnum'])($dictMonadGen_0))($GLOBALS['Data_Time_Component_boundedEnumHour']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

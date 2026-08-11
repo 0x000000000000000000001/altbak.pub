@@ -390,31 +390,73 @@ function majEffect_majUncurried_semigroupmajEffectmajFn9($dictSemigroup_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["append" => (function() use ($dictSemigroup_0) {
-  $__fn = function($f1_1, $f2_2 = null) use ($dictSemigroup_0, &$__fn) {
+  $__res = (object)["append" => function($f1_1) use ($dictSemigroup_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn9((function() use ($dictSemigroup_0, $f1_1, $f2_2) {
-  $__fn = function($a_3, $b_4 = null, $c_5 = null, $d_6 = null, $e_7 = null, $f_8 = null, $g_9 = null, $h_10 = null, $i_11 = null) use ($dictSemigroup_0, $f1_1, $f2_2, &$__fn) {
+  $__res = function($f2_2) use ($dictSemigroup_0, $f1_1) {
   $__num = \func_num_args();
-  if ($__num < 9) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 9);
-  }
+  $__res = \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn9(function($a_3) use ($dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($b_4) use ($a_3, $dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($c_5) use ($a_3, $b_4, $dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($d_6) use ($a_3, $b_4, $c_5, $dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($e_7) use ($a_3, $b_4, $c_5, $d_6, $dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($f_8) use ($a_3, $b_4, $c_5, $d_6, $dictSemigroup_0, $e_7, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($g_9) use ($a_3, $b_4, $c_5, $d_6, $dictSemigroup_0, $e_7, $f1_1, $f2_2, $f_8) {
+  $__num = \func_num_args();
+  $__res = function($h_10) use ($a_3, $b_4, $c_5, $d_6, $dictSemigroup_0, $e_7, $f1_1, $f2_2, $f_8, $g_9) {
+  $__num = \func_num_args();
+  $__res = function($i_11) use ($a_3, $b_4, $c_5, $d_6, $dictSemigroup_0, $e_7, $f1_1, $f2_2, $f_8, $g_9, $h_10) {
+  $__num = \func_num_args();
   $__res = ((($GLOBALS['Effect_lift2'])(($dictSemigroup_0)->{'append'}))(\Effect\Uncurried\majEffect_majUncurried_runmajEffectmajFn9($f1_1, $a_3, $b_4, $c_5, $d_6, $e_7, $f_8, $g_9, $h_10, $i_11)))(\Effect\Uncurried\majEffect_majUncurried_runmajEffectmajFn9($f2_2, $a_3, $b_4, $c_5, $d_6, $e_7, $f_8, $g_9, $h_10, $i_11));
   goto __end;;
   __end:
-  return $__num > 9 ? $__res(...\array_slice(\func_get_args(), 9)) : $__res;
-  };
-  return $__fn;
-})());
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -428,31 +470,67 @@ function majEffect_majUncurried_semigroupmajEffectmajFn8($dictSemigroup_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["append" => (function() use ($dictSemigroup_0) {
-  $__fn = function($f1_1, $f2_2 = null) use ($dictSemigroup_0, &$__fn) {
+  $__res = (object)["append" => function($f1_1) use ($dictSemigroup_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn8((function() use ($dictSemigroup_0, $f1_1, $f2_2) {
-  $__fn = function($a_3, $b_4 = null, $c_5 = null, $d_6 = null, $e_7 = null, $f_8 = null, $g_9 = null, $h_10 = null) use ($dictSemigroup_0, $f1_1, $f2_2, &$__fn) {
+  $__res = function($f2_2) use ($dictSemigroup_0, $f1_1) {
   $__num = \func_num_args();
-  if ($__num < 8) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 8);
-  }
+  $__res = \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn8(function($a_3) use ($dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($b_4) use ($a_3, $dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($c_5) use ($a_3, $b_4, $dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($d_6) use ($a_3, $b_4, $c_5, $dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($e_7) use ($a_3, $b_4, $c_5, $d_6, $dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($f_8) use ($a_3, $b_4, $c_5, $d_6, $dictSemigroup_0, $e_7, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($g_9) use ($a_3, $b_4, $c_5, $d_6, $dictSemigroup_0, $e_7, $f1_1, $f2_2, $f_8) {
+  $__num = \func_num_args();
+  $__res = function($h_10) use ($a_3, $b_4, $c_5, $d_6, $dictSemigroup_0, $e_7, $f1_1, $f2_2, $f_8, $g_9) {
+  $__num = \func_num_args();
   $__res = ((($GLOBALS['Effect_lift2'])(($dictSemigroup_0)->{'append'}))(\Effect\Uncurried\majEffect_majUncurried_runmajEffectmajFn8($f1_1, $a_3, $b_4, $c_5, $d_6, $e_7, $f_8, $g_9, $h_10)))(\Effect\Uncurried\majEffect_majUncurried_runmajEffectmajFn8($f2_2, $a_3, $b_4, $c_5, $d_6, $e_7, $f_8, $g_9, $h_10));
   goto __end;;
   __end:
-  return $__num > 8 ? $__res(...\array_slice(\func_get_args(), 8)) : $__res;
-  };
-  return $__fn;
-})());
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -466,31 +544,61 @@ function majEffect_majUncurried_semigroupmajEffectmajFn7($dictSemigroup_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["append" => (function() use ($dictSemigroup_0) {
-  $__fn = function($f1_1, $f2_2 = null) use ($dictSemigroup_0, &$__fn) {
+  $__res = (object)["append" => function($f1_1) use ($dictSemigroup_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn7((function() use ($dictSemigroup_0, $f1_1, $f2_2) {
-  $__fn = function($a_3, $b_4 = null, $c_5 = null, $d_6 = null, $e_7 = null, $f_8 = null, $g_9 = null) use ($dictSemigroup_0, $f1_1, $f2_2, &$__fn) {
+  $__res = function($f2_2) use ($dictSemigroup_0, $f1_1) {
   $__num = \func_num_args();
-  if ($__num < 7) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 7);
-  }
+  $__res = \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn7(function($a_3) use ($dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($b_4) use ($a_3, $dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($c_5) use ($a_3, $b_4, $dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($d_6) use ($a_3, $b_4, $c_5, $dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($e_7) use ($a_3, $b_4, $c_5, $d_6, $dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($f_8) use ($a_3, $b_4, $c_5, $d_6, $dictSemigroup_0, $e_7, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($g_9) use ($a_3, $b_4, $c_5, $d_6, $dictSemigroup_0, $e_7, $f1_1, $f2_2, $f_8) {
+  $__num = \func_num_args();
   $__res = ((($GLOBALS['Effect_lift2'])(($dictSemigroup_0)->{'append'}))(\Effect\Uncurried\majEffect_majUncurried_runmajEffectmajFn7($f1_1, $a_3, $b_4, $c_5, $d_6, $e_7, $f_8, $g_9)))(\Effect\Uncurried\majEffect_majUncurried_runmajEffectmajFn7($f2_2, $a_3, $b_4, $c_5, $d_6, $e_7, $f_8, $g_9));
   goto __end;;
   __end:
-  return $__num > 7 ? $__res(...\array_slice(\func_get_args(), 7)) : $__res;
-  };
-  return $__fn;
-})());
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -504,31 +612,55 @@ function majEffect_majUncurried_semigroupmajEffectmajFn6($dictSemigroup_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["append" => (function() use ($dictSemigroup_0) {
-  $__fn = function($f1_1, $f2_2 = null) use ($dictSemigroup_0, &$__fn) {
+  $__res = (object)["append" => function($f1_1) use ($dictSemigroup_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn6((function() use ($dictSemigroup_0, $f1_1, $f2_2) {
-  $__fn = function($a_3, $b_4 = null, $c_5 = null, $d_6 = null, $e_7 = null, $f_8 = null) use ($dictSemigroup_0, $f1_1, $f2_2, &$__fn) {
+  $__res = function($f2_2) use ($dictSemigroup_0, $f1_1) {
   $__num = \func_num_args();
-  if ($__num < 6) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 6);
-  }
+  $__res = \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn6(function($a_3) use ($dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($b_4) use ($a_3, $dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($c_5) use ($a_3, $b_4, $dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($d_6) use ($a_3, $b_4, $c_5, $dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($e_7) use ($a_3, $b_4, $c_5, $d_6, $dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($f_8) use ($a_3, $b_4, $c_5, $d_6, $dictSemigroup_0, $e_7, $f1_1, $f2_2) {
+  $__num = \func_num_args();
   $__res = ((($GLOBALS['Effect_lift2'])(($dictSemigroup_0)->{'append'}))(\Effect\Uncurried\majEffect_majUncurried_runmajEffectmajFn6($f1_1, $a_3, $b_4, $c_5, $d_6, $e_7, $f_8)))(\Effect\Uncurried\majEffect_majUncurried_runmajEffectmajFn6($f2_2, $a_3, $b_4, $c_5, $d_6, $e_7, $f_8));
   goto __end;;
   __end:
-  return $__num > 6 ? $__res(...\array_slice(\func_get_args(), 6)) : $__res;
-  };
-  return $__fn;
-})());
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -542,31 +674,49 @@ function majEffect_majUncurried_semigroupmajEffectmajFn5($dictSemigroup_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["append" => (function() use ($dictSemigroup_0) {
-  $__fn = function($f1_1, $f2_2 = null) use ($dictSemigroup_0, &$__fn) {
+  $__res = (object)["append" => function($f1_1) use ($dictSemigroup_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn5((function() use ($dictSemigroup_0, $f1_1, $f2_2) {
-  $__fn = function($a_3, $b_4 = null, $c_5 = null, $d_6 = null, $e_7 = null) use ($dictSemigroup_0, $f1_1, $f2_2, &$__fn) {
+  $__res = function($f2_2) use ($dictSemigroup_0, $f1_1) {
   $__num = \func_num_args();
-  if ($__num < 5) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 5);
-  }
+  $__res = \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn5(function($a_3) use ($dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($b_4) use ($a_3, $dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($c_5) use ($a_3, $b_4, $dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($d_6) use ($a_3, $b_4, $c_5, $dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($e_7) use ($a_3, $b_4, $c_5, $d_6, $dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
   $__res = ((($GLOBALS['Effect_lift2'])(($dictSemigroup_0)->{'append'}))(\Effect\Uncurried\majEffect_majUncurried_runmajEffectmajFn5($f1_1, $a_3, $b_4, $c_5, $d_6, $e_7)))(\Effect\Uncurried\majEffect_majUncurried_runmajEffectmajFn5($f2_2, $a_3, $b_4, $c_5, $d_6, $e_7));
   goto __end;;
   __end:
-  return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
-  };
-  return $__fn;
-})());
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -580,31 +730,43 @@ function majEffect_majUncurried_semigroupmajEffectmajFn4($dictSemigroup_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["append" => (function() use ($dictSemigroup_0) {
-  $__fn = function($f1_1, $f2_2 = null) use ($dictSemigroup_0, &$__fn) {
+  $__res = (object)["append" => function($f1_1) use ($dictSemigroup_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn4((function() use ($dictSemigroup_0, $f1_1, $f2_2) {
-  $__fn = function($a_3, $b_4 = null, $c_5 = null, $d_6 = null) use ($dictSemigroup_0, $f1_1, $f2_2, &$__fn) {
+  $__res = function($f2_2) use ($dictSemigroup_0, $f1_1) {
   $__num = \func_num_args();
-  if ($__num < 4) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 4);
-  }
+  $__res = \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn4(function($a_3) use ($dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($b_4) use ($a_3, $dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($c_5) use ($a_3, $b_4, $dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($d_6) use ($a_3, $b_4, $c_5, $dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
   $__res = ((($GLOBALS['Effect_lift2'])(($dictSemigroup_0)->{'append'}))(\Effect\Uncurried\majEffect_majUncurried_runmajEffectmajFn4($f1_1, $a_3, $b_4, $c_5, $d_6)))(\Effect\Uncurried\majEffect_majUncurried_runmajEffectmajFn4($f2_2, $a_3, $b_4, $c_5, $d_6));
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})());
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -618,31 +780,37 @@ function majEffect_majUncurried_semigroupmajEffectmajFn3($dictSemigroup_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["append" => (function() use ($dictSemigroup_0) {
-  $__fn = function($f1_1, $f2_2 = null) use ($dictSemigroup_0, &$__fn) {
+  $__res = (object)["append" => function($f1_1) use ($dictSemigroup_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn3((function() use ($dictSemigroup_0, $f1_1, $f2_2) {
-  $__fn = function($a_3, $b_4 = null, $c_5 = null) use ($dictSemigroup_0, $f1_1, $f2_2, &$__fn) {
+  $__res = function($f2_2) use ($dictSemigroup_0, $f1_1) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn3(function($a_3) use ($dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($b_4) use ($a_3, $dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($c_5) use ($a_3, $b_4, $dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
   $__res = ((($GLOBALS['Effect_lift2'])(($dictSemigroup_0)->{'append'}))(\Effect\Uncurried\majEffect_majUncurried_runmajEffectmajFn3($f1_1, $a_3, $b_4, $c_5)))(\Effect\Uncurried\majEffect_majUncurried_runmajEffectmajFn3($f2_2, $a_3, $b_4, $c_5));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})());
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -656,31 +824,31 @@ function majEffect_majUncurried_semigroupmajEffectmajFn2($dictSemigroup_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["append" => (function() use ($dictSemigroup_0) {
-  $__fn = function($f1_1, $f2_2 = null) use ($dictSemigroup_0, &$__fn) {
+  $__res = (object)["append" => function($f1_1) use ($dictSemigroup_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn2((function() use ($dictSemigroup_0, $f1_1, $f2_2) {
-  $__fn = function($a_3, $b_4 = null) use ($dictSemigroup_0, $f1_1, $f2_2, &$__fn) {
+  $__res = function($f2_2) use ($dictSemigroup_0, $f1_1) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn2(function($a_3) use ($dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($b_4) use ($a_3, $dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
   $__res = ((($GLOBALS['Effect_lift2'])(($dictSemigroup_0)->{'append'}))(\Effect\Uncurried\majEffect_majUncurried_runmajEffectmajFn2($f1_1, $a_3, $b_4)))(\Effect\Uncurried\majEffect_majUncurried_runmajEffectmajFn2($f2_2, $a_3, $b_4));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})());
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -694,31 +862,79 @@ function majEffect_majUncurried_semigroupmajEffectmajFn10($dictSemigroup_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["append" => (function() use ($dictSemigroup_0) {
-  $__fn = function($f1_1, $f2_2 = null) use ($dictSemigroup_0, &$__fn) {
+  $__res = (object)["append" => function($f1_1) use ($dictSemigroup_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn10((function() use ($dictSemigroup_0, $f1_1, $f2_2) {
-  $__fn = function($a_3, $b_4 = null, $c_5 = null, $d_6 = null, $e_7 = null, $f_8 = null, $g_9 = null, $h_10 = null, $i_11 = null, $j_12 = null) use ($dictSemigroup_0, $f1_1, $f2_2, &$__fn) {
+  $__res = function($f2_2) use ($dictSemigroup_0, $f1_1) {
   $__num = \func_num_args();
-  if ($__num < 10) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 10);
-  }
+  $__res = \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn10(function($a_3) use ($dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($b_4) use ($a_3, $dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($c_5) use ($a_3, $b_4, $dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($d_6) use ($a_3, $b_4, $c_5, $dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($e_7) use ($a_3, $b_4, $c_5, $d_6, $dictSemigroup_0, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($f_8) use ($a_3, $b_4, $c_5, $d_6, $dictSemigroup_0, $e_7, $f1_1, $f2_2) {
+  $__num = \func_num_args();
+  $__res = function($g_9) use ($a_3, $b_4, $c_5, $d_6, $dictSemigroup_0, $e_7, $f1_1, $f2_2, $f_8) {
+  $__num = \func_num_args();
+  $__res = function($h_10) use ($a_3, $b_4, $c_5, $d_6, $dictSemigroup_0, $e_7, $f1_1, $f2_2, $f_8, $g_9) {
+  $__num = \func_num_args();
+  $__res = function($i_11) use ($a_3, $b_4, $c_5, $d_6, $dictSemigroup_0, $e_7, $f1_1, $f2_2, $f_8, $g_9, $h_10) {
+  $__num = \func_num_args();
+  $__res = function($j_12) use ($a_3, $b_4, $c_5, $d_6, $dictSemigroup_0, $e_7, $f1_1, $f2_2, $f_8, $g_9, $h_10, $i_11) {
+  $__num = \func_num_args();
   $__res = ((($GLOBALS['Effect_lift2'])(($dictSemigroup_0)->{'append'}))(\Effect\Uncurried\majEffect_majUncurried_runmajEffectmajFn10($f1_1, $a_3, $b_4, $c_5, $d_6, $e_7, $f_8, $g_9, $h_10, $i_11, $j_12)))(\Effect\Uncurried\majEffect_majUncurried_runmajEffectmajFn10($f2_2, $a_3, $b_4, $c_5, $d_6, $e_7, $f_8, $g_9, $h_10, $i_11, $j_12));
   goto __end;;
   __end:
-  return $__num > 10 ? $__res(...\array_slice(\func_get_args(), 10)) : $__res;
-  };
-  return $__fn;
-})());
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -732,12 +948,10 @@ function majEffect_majUncurried_semigroupmajEffectmajFn1($dictSemigroup_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["append" => (function() use ($dictSemigroup_0) {
-  $__fn = function($f1_1, $f2_2 = null) use ($dictSemigroup_0, &$__fn) {
+  $__res = (object)["append" => function($f1_1) use ($dictSemigroup_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($f2_2) use ($dictSemigroup_0, $f1_1) {
+  $__num = \func_num_args();
   $__res = \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn1(function($a_3) use ($dictSemigroup_0, $f1_1, $f2_2) {
   $__num = \func_num_args();
   $__res = ((($GLOBALS['Effect_lift2'])(($dictSemigroup_0)->{'append'}))(\Effect\Uncurried\majEffect_majUncurried_runmajEffectmajFn1($f1_1, $a_3)))(\Effect\Uncurried\majEffect_majUncurried_runmajEffectmajFn1($f2_2, $a_3));
@@ -747,10 +961,12 @@ function majEffect_majUncurried_semigroupmajEffectmajFn1($dictSemigroup_0) {
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -764,21 +980,63 @@ function majEffect_majUncurried_monoidmajEffectmajFn9($dictMonoid_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $mempty_1_0 = (\Effect\majEffect_monoidmajEffect($dictMonoid_0))->{'mempty'};
-  $semigroupEffectFn91_2_1 = \Effect\Uncurried\majEffect_majUncurried_semigroupmajEffectmajFn9((($dictMonoid_0)->{'Semigroup0'})(null));
-  $__res = (object)["mempty" => \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn9((function() use ($mempty_1_0) {
-  $__fn = function($v_3, $v1_4 = null, $v2_5 = null, $v3_6 = null, $v4_7 = null, $v5_8 = null, $v6_9 = null, $v7_10 = null, $v8_11 = null) use ($mempty_1_0, &$__fn) {
+  $mempty_1_0 = (($GLOBALS['Effect_monoidEffect'])($dictMonoid_0))->{'mempty'};
+  $semigroupEffectFn91_2_1 = ($GLOBALS['Effect_Uncurried_semigroupEffectFn9'])((($dictMonoid_0)->{'Semigroup0'})(null));
+  $__res = (object)["mempty" => \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn9(function($v_3) use ($mempty_1_0) {
   $__num = \func_num_args();
-  if ($__num < 9) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 9);
-  }
+  $__res = function($v1_4) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v2_5) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v3_6) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v4_7) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v5_8) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v6_9) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v7_10) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v8_11) use ($mempty_1_0) {
+  $__num = \func_num_args();
   $__res = $mempty_1_0;
   goto __end;;
   __end:
-  return $__num > 9 ? $__res(...\array_slice(\func_get_args(), 9)) : $__res;
-  };
-  return $__fn;
-})()), "Semigroup0" => function($_dollar__unused_3) use ($semigroupEffectFn91_2_1) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}), "Semigroup0" => function($_dollar__unused_3) use ($semigroupEffectFn91_2_1) {
   $__num = \func_num_args();
   $__res = $semigroupEffectFn91_2_1;
   goto __end;;
@@ -798,21 +1056,57 @@ function majEffect_majUncurried_monoidmajEffectmajFn8($dictMonoid_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $mempty_1_0 = (\Effect\majEffect_monoidmajEffect($dictMonoid_0))->{'mempty'};
-  $semigroupEffectFn81_2_1 = \Effect\Uncurried\majEffect_majUncurried_semigroupmajEffectmajFn8((($dictMonoid_0)->{'Semigroup0'})(null));
-  $__res = (object)["mempty" => \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn8((function() use ($mempty_1_0) {
-  $__fn = function($v_3, $v1_4 = null, $v2_5 = null, $v3_6 = null, $v4_7 = null, $v5_8 = null, $v6_9 = null, $v7_10 = null) use ($mempty_1_0, &$__fn) {
+  $mempty_1_0 = (($GLOBALS['Effect_monoidEffect'])($dictMonoid_0))->{'mempty'};
+  $semigroupEffectFn81_2_1 = ($GLOBALS['Effect_Uncurried_semigroupEffectFn8'])((($dictMonoid_0)->{'Semigroup0'})(null));
+  $__res = (object)["mempty" => \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn8(function($v_3) use ($mempty_1_0) {
   $__num = \func_num_args();
-  if ($__num < 8) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 8);
-  }
+  $__res = function($v1_4) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v2_5) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v3_6) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v4_7) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v5_8) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v6_9) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v7_10) use ($mempty_1_0) {
+  $__num = \func_num_args();
   $__res = $mempty_1_0;
   goto __end;;
   __end:
-  return $__num > 8 ? $__res(...\array_slice(\func_get_args(), 8)) : $__res;
-  };
-  return $__fn;
-})()), "Semigroup0" => function($_dollar__unused_3) use ($semigroupEffectFn81_2_1) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}), "Semigroup0" => function($_dollar__unused_3) use ($semigroupEffectFn81_2_1) {
   $__num = \func_num_args();
   $__res = $semigroupEffectFn81_2_1;
   goto __end;;
@@ -832,21 +1126,51 @@ function majEffect_majUncurried_monoidmajEffectmajFn7($dictMonoid_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $mempty_1_0 = (\Effect\majEffect_monoidmajEffect($dictMonoid_0))->{'mempty'};
-  $semigroupEffectFn71_2_1 = \Effect\Uncurried\majEffect_majUncurried_semigroupmajEffectmajFn7((($dictMonoid_0)->{'Semigroup0'})(null));
-  $__res = (object)["mempty" => \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn7((function() use ($mempty_1_0) {
-  $__fn = function($v_3, $v1_4 = null, $v2_5 = null, $v3_6 = null, $v4_7 = null, $v5_8 = null, $v6_9 = null) use ($mempty_1_0, &$__fn) {
+  $mempty_1_0 = (($GLOBALS['Effect_monoidEffect'])($dictMonoid_0))->{'mempty'};
+  $semigroupEffectFn71_2_1 = ($GLOBALS['Effect_Uncurried_semigroupEffectFn7'])((($dictMonoid_0)->{'Semigroup0'})(null));
+  $__res = (object)["mempty" => \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn7(function($v_3) use ($mempty_1_0) {
   $__num = \func_num_args();
-  if ($__num < 7) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 7);
-  }
+  $__res = function($v1_4) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v2_5) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v3_6) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v4_7) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v5_8) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v6_9) use ($mempty_1_0) {
+  $__num = \func_num_args();
   $__res = $mempty_1_0;
   goto __end;;
   __end:
-  return $__num > 7 ? $__res(...\array_slice(\func_get_args(), 7)) : $__res;
-  };
-  return $__fn;
-})()), "Semigroup0" => function($_dollar__unused_3) use ($semigroupEffectFn71_2_1) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}), "Semigroup0" => function($_dollar__unused_3) use ($semigroupEffectFn71_2_1) {
   $__num = \func_num_args();
   $__res = $semigroupEffectFn71_2_1;
   goto __end;;
@@ -866,21 +1190,45 @@ function majEffect_majUncurried_monoidmajEffectmajFn6($dictMonoid_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $mempty_1_0 = (\Effect\majEffect_monoidmajEffect($dictMonoid_0))->{'mempty'};
-  $semigroupEffectFn61_2_1 = \Effect\Uncurried\majEffect_majUncurried_semigroupmajEffectmajFn6((($dictMonoid_0)->{'Semigroup0'})(null));
-  $__res = (object)["mempty" => \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn6((function() use ($mempty_1_0) {
-  $__fn = function($v_3, $v1_4 = null, $v2_5 = null, $v3_6 = null, $v4_7 = null, $v5_8 = null) use ($mempty_1_0, &$__fn) {
+  $mempty_1_0 = (($GLOBALS['Effect_monoidEffect'])($dictMonoid_0))->{'mempty'};
+  $semigroupEffectFn61_2_1 = ($GLOBALS['Effect_Uncurried_semigroupEffectFn6'])((($dictMonoid_0)->{'Semigroup0'})(null));
+  $__res = (object)["mempty" => \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn6(function($v_3) use ($mempty_1_0) {
   $__num = \func_num_args();
-  if ($__num < 6) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 6);
-  }
+  $__res = function($v1_4) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v2_5) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v3_6) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v4_7) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v5_8) use ($mempty_1_0) {
+  $__num = \func_num_args();
   $__res = $mempty_1_0;
   goto __end;;
   __end:
-  return $__num > 6 ? $__res(...\array_slice(\func_get_args(), 6)) : $__res;
-  };
-  return $__fn;
-})()), "Semigroup0" => function($_dollar__unused_3) use ($semigroupEffectFn61_2_1) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}), "Semigroup0" => function($_dollar__unused_3) use ($semigroupEffectFn61_2_1) {
   $__num = \func_num_args();
   $__res = $semigroupEffectFn61_2_1;
   goto __end;;
@@ -900,21 +1248,39 @@ function majEffect_majUncurried_monoidmajEffectmajFn5($dictMonoid_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $mempty_1_0 = (\Effect\majEffect_monoidmajEffect($dictMonoid_0))->{'mempty'};
-  $semigroupEffectFn51_2_1 = \Effect\Uncurried\majEffect_majUncurried_semigroupmajEffectmajFn5((($dictMonoid_0)->{'Semigroup0'})(null));
-  $__res = (object)["mempty" => \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn5((function() use ($mempty_1_0) {
-  $__fn = function($v_3, $v1_4 = null, $v2_5 = null, $v3_6 = null, $v4_7 = null) use ($mempty_1_0, &$__fn) {
+  $mempty_1_0 = (($GLOBALS['Effect_monoidEffect'])($dictMonoid_0))->{'mempty'};
+  $semigroupEffectFn51_2_1 = ($GLOBALS['Effect_Uncurried_semigroupEffectFn5'])((($dictMonoid_0)->{'Semigroup0'})(null));
+  $__res = (object)["mempty" => \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn5(function($v_3) use ($mempty_1_0) {
   $__num = \func_num_args();
-  if ($__num < 5) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 5);
-  }
+  $__res = function($v1_4) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v2_5) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v3_6) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v4_7) use ($mempty_1_0) {
+  $__num = \func_num_args();
   $__res = $mempty_1_0;
   goto __end;;
   __end:
-  return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
-  };
-  return $__fn;
-})()), "Semigroup0" => function($_dollar__unused_3) use ($semigroupEffectFn51_2_1) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}), "Semigroup0" => function($_dollar__unused_3) use ($semigroupEffectFn51_2_1) {
   $__num = \func_num_args();
   $__res = $semigroupEffectFn51_2_1;
   goto __end;;
@@ -934,21 +1300,33 @@ function majEffect_majUncurried_monoidmajEffectmajFn4($dictMonoid_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $mempty_1_0 = (\Effect\majEffect_monoidmajEffect($dictMonoid_0))->{'mempty'};
-  $semigroupEffectFn41_2_1 = \Effect\Uncurried\majEffect_majUncurried_semigroupmajEffectmajFn4((($dictMonoid_0)->{'Semigroup0'})(null));
-  $__res = (object)["mempty" => \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn4((function() use ($mempty_1_0) {
-  $__fn = function($v_3, $v1_4 = null, $v2_5 = null, $v3_6 = null) use ($mempty_1_0, &$__fn) {
+  $mempty_1_0 = (($GLOBALS['Effect_monoidEffect'])($dictMonoid_0))->{'mempty'};
+  $semigroupEffectFn41_2_1 = ($GLOBALS['Effect_Uncurried_semigroupEffectFn4'])((($dictMonoid_0)->{'Semigroup0'})(null));
+  $__res = (object)["mempty" => \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn4(function($v_3) use ($mempty_1_0) {
   $__num = \func_num_args();
-  if ($__num < 4) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 4);
-  }
+  $__res = function($v1_4) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v2_5) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v3_6) use ($mempty_1_0) {
+  $__num = \func_num_args();
   $__res = $mempty_1_0;
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})()), "Semigroup0" => function($_dollar__unused_3) use ($semigroupEffectFn41_2_1) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}), "Semigroup0" => function($_dollar__unused_3) use ($semigroupEffectFn41_2_1) {
   $__num = \func_num_args();
   $__res = $semigroupEffectFn41_2_1;
   goto __end;;
@@ -968,21 +1346,27 @@ function majEffect_majUncurried_monoidmajEffectmajFn3($dictMonoid_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $mempty_1_0 = (\Effect\majEffect_monoidmajEffect($dictMonoid_0))->{'mempty'};
-  $semigroupEffectFn31_2_1 = \Effect\Uncurried\majEffect_majUncurried_semigroupmajEffectmajFn3((($dictMonoid_0)->{'Semigroup0'})(null));
-  $__res = (object)["mempty" => \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn3((function() use ($mempty_1_0) {
-  $__fn = function($v_3, $v1_4 = null, $v2_5 = null) use ($mempty_1_0, &$__fn) {
+  $mempty_1_0 = (($GLOBALS['Effect_monoidEffect'])($dictMonoid_0))->{'mempty'};
+  $semigroupEffectFn31_2_1 = ($GLOBALS['Effect_Uncurried_semigroupEffectFn3'])((($dictMonoid_0)->{'Semigroup0'})(null));
+  $__res = (object)["mempty" => \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn3(function($v_3) use ($mempty_1_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($v1_4) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v2_5) use ($mempty_1_0) {
+  $__num = \func_num_args();
   $__res = $mempty_1_0;
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()), "Semigroup0" => function($_dollar__unused_3) use ($semigroupEffectFn31_2_1) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}), "Semigroup0" => function($_dollar__unused_3) use ($semigroupEffectFn31_2_1) {
   $__num = \func_num_args();
   $__res = $semigroupEffectFn31_2_1;
   goto __end;;
@@ -1002,21 +1386,21 @@ function majEffect_majUncurried_monoidmajEffectmajFn2($dictMonoid_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $mempty_1_0 = (\Effect\majEffect_monoidmajEffect($dictMonoid_0))->{'mempty'};
-  $semigroupEffectFn21_2_1 = \Effect\Uncurried\majEffect_majUncurried_semigroupmajEffectmajFn2((($dictMonoid_0)->{'Semigroup0'})(null));
-  $__res = (object)["mempty" => \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn2((function() use ($mempty_1_0) {
-  $__fn = function($v_3, $v1_4 = null) use ($mempty_1_0, &$__fn) {
+  $mempty_1_0 = (($GLOBALS['Effect_monoidEffect'])($dictMonoid_0))->{'mempty'};
+  $semigroupEffectFn21_2_1 = ($GLOBALS['Effect_Uncurried_semigroupEffectFn2'])((($dictMonoid_0)->{'Semigroup0'})(null));
+  $__res = (object)["mempty" => \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn2(function($v_3) use ($mempty_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_4) use ($mempty_1_0) {
+  $__num = \func_num_args();
   $__res = $mempty_1_0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()), "Semigroup0" => function($_dollar__unused_3) use ($semigroupEffectFn21_2_1) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}), "Semigroup0" => function($_dollar__unused_3) use ($semigroupEffectFn21_2_1) {
   $__num = \func_num_args();
   $__res = $semigroupEffectFn21_2_1;
   goto __end;;
@@ -1036,21 +1420,69 @@ function majEffect_majUncurried_monoidmajEffectmajFn10($dictMonoid_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $mempty_1_0 = (\Effect\majEffect_monoidmajEffect($dictMonoid_0))->{'mempty'};
-  $semigroupEffectFn101_2_1 = \Effect\Uncurried\majEffect_majUncurried_semigroupmajEffectmajFn10((($dictMonoid_0)->{'Semigroup0'})(null));
-  $__res = (object)["mempty" => \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn10((function() use ($mempty_1_0) {
-  $__fn = function($v_3, $v1_4 = null, $v2_5 = null, $v3_6 = null, $v4_7 = null, $v5_8 = null, $v6_9 = null, $v7_10 = null, $v8_11 = null, $v9_12 = null) use ($mempty_1_0, &$__fn) {
+  $mempty_1_0 = (($GLOBALS['Effect_monoidEffect'])($dictMonoid_0))->{'mempty'};
+  $semigroupEffectFn101_2_1 = ($GLOBALS['Effect_Uncurried_semigroupEffectFn10'])((($dictMonoid_0)->{'Semigroup0'})(null));
+  $__res = (object)["mempty" => \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn10(function($v_3) use ($mempty_1_0) {
   $__num = \func_num_args();
-  if ($__num < 10) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 10);
-  }
+  $__res = function($v1_4) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v2_5) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v3_6) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v4_7) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v5_8) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v6_9) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v7_10) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v8_11) use ($mempty_1_0) {
+  $__num = \func_num_args();
+  $__res = function($v9_12) use ($mempty_1_0) {
+  $__num = \func_num_args();
   $__res = $mempty_1_0;
   goto __end;;
   __end:
-  return $__num > 10 ? $__res(...\array_slice(\func_get_args(), 10)) : $__res;
-  };
-  return $__fn;
-})()), "Semigroup0" => function($_dollar__unused_3) use ($semigroupEffectFn101_2_1) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}), "Semigroup0" => function($_dollar__unused_3) use ($semigroupEffectFn101_2_1) {
   $__num = \func_num_args();
   $__res = $semigroupEffectFn101_2_1;
   goto __end;;
@@ -1070,8 +1502,8 @@ function majEffect_majUncurried_monoidmajEffectmajFn1($dictMonoid_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $mempty_1_0 = (\Effect\majEffect_monoidmajEffect($dictMonoid_0))->{'mempty'};
-  $semigroupEffectFn11_2_1 = \Effect\Uncurried\majEffect_majUncurried_semigroupmajEffectmajFn1((($dictMonoid_0)->{'Semigroup0'})(null));
+  $mempty_1_0 = (($GLOBALS['Effect_monoidEffect'])($dictMonoid_0))->{'mempty'};
+  $semigroupEffectFn11_2_1 = ($GLOBALS['Effect_Uncurried_semigroupEffectFn1'])((($dictMonoid_0)->{'Semigroup0'})(null));
   $__res = (object)["mempty" => \Effect\Uncurried\majEffect_majUncurried_mkmajEffectmajFn1(function($v_3) use ($mempty_1_0) {
   $__num = \func_num_args();
   $__res = $mempty_1_0;

@@ -144,7 +144,7 @@ function majData_majMap_showmajSemigroupmajMap($dictShow_0, $dictShow1_1 = null)
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = \Data\Map\Internal\majData_majMap_majInternal_showmajMap($dictShow_0, $dictShow1_1);
+  $__res = (($GLOBALS['Data_Map_Internal_showMap'])($dictShow_0))($dictShow1_1);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -162,19 +162,19 @@ function majData_majMap_semigroupmajSemigroupmajMap($dictOrd_0) {
   $__res = function($dictSemigroup_2) use ($compare_1_0) {
   $__num = \func_num_args();
   $append_3_1 = ($dictSemigroup_2)->{'append'};
-  $__res = (object)["append" => (function() use ($append_3_1, $compare_1_0) {
-  $__fn = function($v_4, $v1_5 = null) use ($append_3_1, $compare_1_0, &$__fn) {
+  $__res = (object)["append" => function($v_4) use ($append_3_1, $compare_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_5) use ($append_3_1, $compare_1_0, $v_4) {
+  $__num = \func_num_args();
   $__res = ($GLOBALS['Data_Map_Internal_unsafeUnionWith'])($compare_1_0, $append_3_1, $v_4, $v1_5);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -192,7 +192,7 @@ function majData_majMap_plusmajSemigroupmajMap($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = \Data\Map\Internal\majData_majMap_majInternal_plusmajMap($dictOrd_0);
+  $__res = ($GLOBALS['Data_Map_Internal_plusMap'])($dictOrd_0);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -206,7 +206,14 @@ function majData_majMap_ordmajSemigroupmajMap($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ($GLOBALS['Data_Map_Internal_ordMap'])($dictOrd_0);
+  $ordMap_1_0 = ($GLOBALS['Data_Map_Internal_ordMap'])($dictOrd_0);
+  $__res = function($dictOrd1_2) use ($ordMap_1_0) {
+  $__num = \func_num_args();
+  $__res = ($ordMap_1_0)($dictOrd1_2);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -220,7 +227,7 @@ function majData_majMap_ord1majSemigroupmajMap($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = \Data\Map\Internal\majData_majMap_majInternal_ord1majMap($dictOrd_0);
+  $__res = ($GLOBALS['Data_Map_Internal_ord1Map'])($dictOrd_0);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -306,7 +313,7 @@ function majData_majMap_eqmajSemigroupmajMap($dictEq_0, $dictEq1_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = \Data\Map\Internal\majData_majMap_majInternal_eqmajMap($dictEq_0, $dictEq1_1);
+  $__res = (($GLOBALS['Data_Map_Internal_eqMap'])($dictEq_0))($dictEq1_1);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -322,7 +329,7 @@ function majData_majMap_eq1majSemigroupmajMap($dictEq_0) {
   }
   $__res = (object)["eq1" => function($dictEq1_1) use ($dictEq_0) {
   $__num = \func_num_args();
-  $__res = (\Data\Map\Internal\majData_majMap_majInternal_eqmajMap($dictEq_0, $dictEq1_1))->{'eq'};
+  $__res = ((($GLOBALS['Data_Map_Internal_eqMap'])($dictEq_0))($dictEq1_1))->{'eq'};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -340,7 +347,7 @@ function majData_majMap_bindmajSemigroupmajMap($dictOrd_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = \Data\Map\Internal\majData_majMap_majInternal_bindmajMap($dictOrd_0);
+  $__res = ($GLOBALS['Data_Map_Internal_bindMap'])($dictOrd_0);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -355,19 +362,19 @@ function majData_majMap_applymajSemigroupmajMap($dictOrd_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $compare_1_0 = ($dictOrd_0)->{'compare'};
-  $__res = (object)["apply" => (function() use ($compare_1_0) {
-  $__fn = function($m1_2, $m2_3 = null) use ($compare_1_0, &$__fn) {
+  $__res = (object)["apply" => function($m1_2) use ($compare_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ($GLOBALS['Data_Map_Internal_unsafeIntersectionWith'])($compare_1_0, $GLOBALS['Data_Map_Internal_identity'], $m1_2, $m2_3);
+  $__res = function($m2_3) use ($compare_1_0, $m1_2) {
+  $__num = \func_num_args();
+  $__res = ($GLOBALS['Data_Map_Internal_unsafeIntersectionWith'])($compare_1_0, $GLOBALS['Data_Map_Internal_identity2'], $m1_2, $m2_3);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_1) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_1) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Map_Internal_functorMap'];
   goto __end;;
@@ -388,19 +395,19 @@ function majData_majMap_altmajSemigroupmajMap($dictOrd_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $compare_1_0 = ($dictOrd_0)->{'compare'};
-  $__res = (object)["alt" => (function() use ($compare_1_0) {
-  $__fn = function($m1_2, $m2_3 = null) use ($compare_1_0, &$__fn) {
+  $__res = (object)["alt" => function($m1_2) use ($compare_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($m2_3) use ($compare_1_0, $m1_2) {
+  $__num = \func_num_args();
   $__res = ($GLOBALS['Data_Map_Internal_unsafeUnionWith'])($compare_1_0, $GLOBALS['Data_Function_const'], $m1_2, $m2_3);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_1) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_1) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Map_Internal_functorMap'];
   goto __end;;

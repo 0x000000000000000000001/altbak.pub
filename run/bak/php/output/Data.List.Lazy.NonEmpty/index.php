@@ -453,12 +453,10 @@ function majData_majList_majLazy_majNonmajEmpty_appendmajFoldable($dictFoldable_
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $fromFoldable1_1_0 = ((($dictFoldable_0)->{'foldr'})($GLOBALS['Data_List_Lazy_Types_cons']))($GLOBALS['Data_List_Lazy_Types_nil']);
-  $__res = (function() use ($fromFoldable1_1_0) {
-  $__fn = function($nel_2, $ys_3 = null) use ($fromFoldable1_1_0, &$__fn) {
+  $__res = function($nel_2) use ($fromFoldable1_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($ys_3) use ($fromFoldable1_1_0, $nel_2) {
+  $__num = \func_num_args();
   $__res = \Data\Lazy\majData_majLazy_defer(function($v_4) use ($fromFoldable1_1_0, $nel_2, $ys_3) {
   $__num = \func_num_args();
   $__res = new \Data\NonEmpty\Data_NonEmpty_NonEmpty((\Data\Lazy\majData_majLazy_force($nel_2))->{'value0'}, ((($GLOBALS['Data_List_Lazy_Types_semigroupList'])->{'append'})((\Data\Lazy\majData_majLazy_force($nel_2))->{'value1'}))(($fromFoldable1_1_0)($ys_3)));
@@ -468,10 +466,12 @@ function majData_majList_majLazy_majNonmajEmpty_appendmajFoldable($dictFoldable_
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

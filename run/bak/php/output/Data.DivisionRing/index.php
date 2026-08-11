@@ -151,7 +151,13 @@ $GLOBALS['Data_DivisionRing_divisionringNumber'] = (object)["recip" => function(
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Ring0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
-  $__res = $GLOBALS['Data_Ring_ringNumber'];
+  $__res = (object)["sub" => $GLOBALS['Data_Ring_numSub'], "Semiring0" => function($_dollar__unused_1) {
+  $__num = \func_num_args();
+  $__res = (object)["add" => $GLOBALS['Data_Semiring_numAdd'], "zero" => 0.0, "mul" => $GLOBALS['Data_Semiring_numMul'], "one" => 1.0];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

@@ -155,10 +155,10 @@ function majData_majBooleanmajAlgebra_booleanmajAlgebramajRecord($_dollar__unuse
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
   $__local_var_2_0 = (($dictBooleanAlgebraRecord_1)->{'HeytingAlgebraRecord0'})(null);
-  $heytingAlgebraRecord1_3_1 = (object)["ff" => ((($__local_var_2_0)->{'ffRecord'})(new \Type\Proxy\Type_Proxy_Proxy()))(new \Type\Proxy\Type_Proxy_Proxy()), "tt" => ((($__local_var_2_0)->{'ttRecord'})(new \Type\Proxy\Type_Proxy_Proxy()))(new \Type\Proxy\Type_Proxy_Proxy()), "conj" => (($__local_var_2_0)->{'conjRecord'})(new \Type\Proxy\Type_Proxy_Proxy()), "disj" => (($__local_var_2_0)->{'disjRecord'})(new \Type\Proxy\Type_Proxy_Proxy()), "implies" => (($__local_var_2_0)->{'impliesRecord'})(new \Type\Proxy\Type_Proxy_Proxy()), "not" => (($__local_var_2_0)->{'notRecord'})(new \Type\Proxy\Type_Proxy_Proxy())];
-  $__res = (object)["HeytingAlgebra0" => function($_dollar__unused_4) use ($heytingAlgebraRecord1_3_1) {
+  $heytingAlgebraRecord1_2_0 = (object)["ff" => ((($__local_var_2_0)->{'ffRecord'})(new \Type\Proxy\Type_Proxy_Proxy()))(new \Type\Proxy\Type_Proxy_Proxy()), "tt" => ((($__local_var_2_0)->{'ttRecord'})(new \Type\Proxy\Type_Proxy_Proxy()))(new \Type\Proxy\Type_Proxy_Proxy()), "conj" => (($__local_var_2_0)->{'conjRecord'})(new \Type\Proxy\Type_Proxy_Proxy()), "disj" => (($__local_var_2_0)->{'disjRecord'})(new \Type\Proxy\Type_Proxy_Proxy()), "implies" => (($__local_var_2_0)->{'impliesRecord'})(new \Type\Proxy\Type_Proxy_Proxy()), "not" => (($__local_var_2_0)->{'notRecord'})(new \Type\Proxy\Type_Proxy_Proxy())];
+  $__res = (object)["HeytingAlgebra0" => function($_dollar__unused_3) use ($heytingAlgebraRecord1_2_0) {
   $__num = \func_num_args();
-  $__res = $heytingAlgebraRecord1_3_1;
+  $__res = $heytingAlgebraRecord1_2_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -188,7 +188,7 @@ function majData_majBooleanmajAlgebra_booleanmajAlgebramajFn($dictBooleanAlgebra
   $__local_var_1_0 = (($dictBooleanAlgebra_0)->{'HeytingAlgebra0'})(null);
   $ff1_2_1 = ($__local_var_1_0)->{'ff'};
   $tt1_3_2 = ($__local_var_1_0)->{'tt'};
-  $heytingAlgebraFunction_3_2 = (object)["ff" => function($v_4) use ($ff1_2_1) {
+  $heytingAlgebraFunction_1_0 = (object)["ff" => function($v_4) use ($ff1_2_1) {
   $__num = \func_num_args();
   $__res = $ff1_2_1;
   goto __end;;
@@ -200,58 +200,76 @@ function majData_majBooleanmajAlgebra_booleanmajAlgebramajFn($dictBooleanAlgebra
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "implies" => (function() use ($__local_var_1_0) {
-  $__fn = function($f_4, $g_5 = null, $a_6 = null) use ($__local_var_1_0, &$__fn) {
+}, "implies" => function($f_4) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($g_5) use ($__local_var_1_0, $f_4) {
+  $__num = \func_num_args();
+  $__res = function($a_6) use ($__local_var_1_0, $f_4, $g_5) {
+  $__num = \func_num_args();
   $__res = ((($__local_var_1_0)->{'implies'})(($f_4)($a_6)))(($g_5)($a_6));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(), "conj" => (function() use ($__local_var_1_0) {
-  $__fn = function($f_4, $g_5 = null, $a_6 = null) use ($__local_var_1_0, &$__fn) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "conj" => function($f_4) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($g_5) use ($__local_var_1_0, $f_4) {
+  $__num = \func_num_args();
+  $__res = function($a_6) use ($__local_var_1_0, $f_4, $g_5) {
+  $__num = \func_num_args();
   $__res = ((($__local_var_1_0)->{'conj'})(($f_4)($a_6)))(($g_5)($a_6));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(), "disj" => (function() use ($__local_var_1_0) {
-  $__fn = function($f_4, $g_5 = null, $a_6 = null) use ($__local_var_1_0, &$__fn) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "disj" => function($f_4) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($g_5) use ($__local_var_1_0, $f_4) {
+  $__num = \func_num_args();
+  $__res = function($a_6) use ($__local_var_1_0, $f_4, $g_5) {
+  $__num = \func_num_args();
   $__res = ((($__local_var_1_0)->{'disj'})(($f_4)($a_6)))(($g_5)($a_6));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(), "not" => (function() use ($__local_var_1_0) {
-  $__fn = function($f_4, $a_5 = null) use ($__local_var_1_0, &$__fn) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "not" => function($f_4) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($a_5) use ($__local_var_1_0, $f_4) {
+  $__num = \func_num_args();
   $__res = (($__local_var_1_0)->{'not'})(($f_4)($a_5));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
-  $__res = (object)["HeytingAlgebra0" => function($_dollar__unused_4) use ($heytingAlgebraFunction_3_2) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = (object)["HeytingAlgebra0" => function($_dollar__unused_2) use ($heytingAlgebraFunction_1_0) {
   $__num = \func_num_args();
-  $__res = $heytingAlgebraFunction_3_2;
+  $__res = $heytingAlgebraFunction_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

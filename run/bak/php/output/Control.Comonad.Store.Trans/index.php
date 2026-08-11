@@ -150,12 +150,10 @@ function majControl_majComonad_majStore_majTrans_functormajStoremajT($dictFuncto
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["map" => (function() use ($dictFunctor_0) {
-  $__fn = function($f_1, $v_2 = null) use ($dictFunctor_0, &$__fn) {
+  $__res = (object)["map" => function($f_1) use ($dictFunctor_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_2) use ($dictFunctor_0, $f_1) {
+  $__num = \func_num_args();
   $__res = new \Data\Tuple\Data_Tuple_Tuple(((($dictFunctor_0)->{'map'})(function($h_3) use ($f_1) {
   $__num = \func_num_args();
   $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($f_1))($h_3);
@@ -165,10 +163,12 @@ function majControl_majComonad_majStore_majTrans_functormajStoremajT($dictFuncto
 }))(($v_2)->{'value0'}), ($v_2)->{'value1'});
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -182,32 +182,32 @@ function majControl_majComonad_majStore_majTrans_extendmajStoremajT($dictExtend_
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $functorStoreT1_1_0 = \Control\Comonad\Store\Trans\majControl_majComonad_majStore_majTrans_functormajStoremajT((($dictExtend_0)->{'Functor0'})(null));
-  $__res = (object)["extend" => (function() use ($dictExtend_0) {
-  $__fn = function($f_2, $v_3 = null) use ($dictExtend_0, &$__fn) {
+  $functorStoreT1_1_0 = ($GLOBALS['Control_Comonad_Store_Trans_functorStoreT'])((($dictExtend_0)->{'Functor0'})(null));
+  $__res = (object)["extend" => function($f_2) use ($dictExtend_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = new \Data\Tuple\Data_Tuple_Tuple(((($dictExtend_0)->{'extend'})((function() use ($f_2) {
-  $__fn = function($w_prime_4, $s_prime_5 = null) use ($f_2, &$__fn) {
+  $__res = function($v_3) use ($dictExtend_0, $f_2) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = new \Data\Tuple\Data_Tuple_Tuple(((($dictExtend_0)->{'extend'})(function($w_prime_4) use ($f_2) {
+  $__num = \func_num_args();
+  $__res = function($s_prime_5) use ($f_2, $w_prime_4) {
+  $__num = \func_num_args();
   $__res = ($f_2)(new \Data\Tuple\Data_Tuple_Tuple($w_prime_4, $s_prime_5));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()))(($v_3)->{'value0'}), ($v_3)->{'value1'});
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_2) use ($functorStoreT1_1_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))(($v_3)->{'value0'}), ($v_3)->{'value1'});
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_2) use ($functorStoreT1_1_0) {
   $__num = \func_num_args();
   $__res = $functorStoreT1_1_0;
   goto __end;;
@@ -221,12 +221,10 @@ function majControl_majComonad_majStore_majTrans_extendmajStoremajT($dictExtend_
 $GLOBALS['Control_Comonad_Store_Trans_extendStoreT'] = __NAMESPACE__ . '\\majControl_majComonad_majStore_majTrans_extendmajStoremajT';
 
 // Control_Comonad_Store_Trans_comonadTransStoreT
-$GLOBALS['Control_Comonad_Store_Trans_comonadTransStoreT'] = (object)["lower" => (function() {
-  $__fn = function($dictComonad_0, $v_1 = null) use (&$__fn) {
+$GLOBALS['Control_Comonad_Store_Trans_comonadTransStoreT'] = (object)["lower" => function($dictComonad_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_1) use ($dictComonad_0) {
+  $__num = \func_num_args();
   $__local_var_2_0 = ($v_1)->{'value1'};
   $__res = ((((((($dictComonad_0)->{'Extend0'})(null))->{'Functor0'})(null))->{'map'})(function($v1_3) use ($__local_var_2_0) {
   $__num = \func_num_args();
@@ -237,10 +235,12 @@ $GLOBALS['Control_Comonad_Store_Trans_comonadTransStoreT'] = (object)["lower" =>
 }))(($v_1)->{'value0'});
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Control_Comonad_Store_Trans_comonadStoreT
 function majControl_majComonad_majStore_majTrans_comonadmajStoremajT($dictComonad_0) {
@@ -249,7 +249,7 @@ function majControl_majComonad_majStore_majTrans_comonadmajStoremajT($dictComona
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $extendStoreT1_1_0 = \Control\Comonad\Store\Trans\majControl_majComonad_majStore_majTrans_extendmajStoremajT((($dictComonad_0)->{'Extend0'})(null));
+  $extendStoreT1_1_0 = ($GLOBALS['Control_Comonad_Store_Trans_extendStoreT'])((($dictComonad_0)->{'Extend0'})(null));
   $__res = (object)["extract" => function($v_2) use ($dictComonad_0) {
   $__num = \func_num_args();
   $__res = ((($dictComonad_0)->{'extract'})(($v_2)->{'value0'}))(($v_2)->{'value1'});

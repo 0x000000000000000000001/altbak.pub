@@ -166,19 +166,19 @@ function majControl_majComonad_majTraced_majClass_listens($dictFunctor_0, $f_1 =
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = ((($dictFunctor_0)->{'map'})((function() use ($f_1) {
-  $__fn = function($g_3, $t_4 = null) use ($f_1, &$__fn) {
+  $__res = ((($dictFunctor_0)->{'map'})(function($g_3) use ($f_1) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($t_4) use ($f_1, $g_3) {
+  $__num = \func_num_args();
   $__res = new \Data\Tuple\Data_Tuple_Tuple(($g_3)($t_4), ($f_1)($t_4));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()))($v_2);
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))($v_2);
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -192,19 +192,19 @@ function majControl_majComonad_majTraced_majClass_listen($dictFunctor_0, $v_1 = 
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ((($dictFunctor_0)->{'map'})((function() {
-  $__fn = function($f_2, $t_3 = null) use (&$__fn) {
+  $__res = ((($dictFunctor_0)->{'map'})(function($f_2) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($t_3) use ($f_2) {
+  $__num = \func_num_args();
   $__res = new \Data\Tuple\Data_Tuple_Tuple(($f_2)($t_3), $t_3);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()))($v_1);
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))($v_1);
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -222,19 +222,19 @@ function majControl_majComonad_majTraced_majClass_comonadmajTracedmajTracedmajT(
   $__res = function($dictMonoid_2) use ($comonadTracedT_1_0, $dictComonad_0) {
   $__num = \func_num_args();
   $comonadTracedT1_3_1 = ($comonadTracedT_1_0)($dictMonoid_2);
-  $__res = (object)["track" => (function() use ($dictComonad_0) {
-  $__fn = function($t_4, $v_5 = null) use ($dictComonad_0, &$__fn) {
+  $__res = (object)["track" => function($t_4) use ($dictComonad_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_5) use ($dictComonad_0, $t_4) {
+  $__num = \func_num_args();
   $__res = ((($dictComonad_0)->{'extract'})($v_5))($t_4);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Comonad0" => function($_dollar__unused_4) use ($comonadTracedT1_3_1) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Comonad0" => function($_dollar__unused_4) use ($comonadTracedT1_3_1) {
   $__num = \func_num_args();
   $__res = $comonadTracedT1_3_1;
   goto __end;;
@@ -258,7 +258,7 @@ function majControl_majComonad_majTraced_majClass_comonadmajTracedmajStoremajT($
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $comonadStoreT_1_0 = \Control\Comonad\Store\Trans\majControl_majComonad_majStore_majTrans_comonadmajStoremajT((($dictComonadTraced_0)->{'Comonad0'})(null));
+  $comonadStoreT_1_0 = ($GLOBALS['Control_Comonad_Store_Trans_comonadStoreT'])((($dictComonadTraced_0)->{'Comonad0'})(null));
   $__res = (object)["track" => (($GLOBALS['Control_Comonad_Traced_Class_lowerTrack'])($GLOBALS['Control_Comonad_Store_Trans_comonadTransStoreT']))($dictComonadTraced_0), "Comonad0" => function($_dollar__unused_2) use ($comonadStoreT_1_0) {
   $__num = \func_num_args();
   $__res = $comonadStoreT_1_0;
@@ -279,7 +279,7 @@ function majControl_majComonad_majTraced_majClass_comonadmajTracedmajIdentitymaj
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $comonadIdentityT_1_0 = \Control\Monad\Identity\Trans\majControl_majMonad_majIdentity_majTrans_comonadmajIdentitymajT((($dictComonadTraced_0)->{'Comonad0'})(null));
+  $comonadIdentityT_1_0 = ($GLOBALS['Control_Monad_Identity_Trans_comonadIdentityT'])((($dictComonadTraced_0)->{'Comonad0'})(null));
   $__res = (object)["track" => (($GLOBALS['Control_Comonad_Traced_Class_lowerTrack'])($GLOBALS['Control_Comonad_Trans_Class_comonadTransIdentityT']))($dictComonadTraced_0), "Comonad0" => function($_dollar__unused_2) use ($comonadIdentityT_1_0) {
   $__num = \func_num_args();
   $__res = $comonadIdentityT_1_0;
@@ -300,7 +300,7 @@ function majControl_majComonad_majTraced_majClass_comonadmajTracedmajEnvmajT($di
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $comonadEnvT_1_0 = \Control\Comonad\Env\Trans\majControl_majComonad_majEnv_majTrans_comonadmajEnvmajT((($dictComonadTraced_0)->{'Comonad0'})(null));
+  $comonadEnvT_1_0 = ($GLOBALS['Control_Comonad_Env_Trans_comonadEnvT'])((($dictComonadTraced_0)->{'Comonad0'})(null));
   $__res = (object)["track" => (($GLOBALS['Control_Comonad_Traced_Class_lowerTrack'])($GLOBALS['Control_Comonad_Env_Trans_comonadTransEnvT']))($dictComonadTraced_0), "Comonad0" => function($_dollar__unused_2) use ($comonadEnvT_1_0) {
   $__num = \func_num_args();
   $__res = $comonadEnvT_1_0;

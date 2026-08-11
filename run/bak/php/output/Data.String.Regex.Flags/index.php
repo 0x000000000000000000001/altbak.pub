@@ -113,8 +113,22 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 // Data_String_Regex_Flags_guard
 $GLOBALS['Data_String_Regex_Flags_guard'] = ($GLOBALS['Control_Alternative_guard'])($GLOBALS['Control_Alternative_alternativeArray']);
 
+// Data_String_Regex_Flags_eq_closure
+$GLOBALS['Data_String_Regex_Flags_eq_closure'] = ($GLOBALS['Data_Eq_eqArrayImpl'])(($GLOBALS['Data_Eq_eqString'])->{'eq'});
+
 // Data_String_Regex_Flags_eq
-$GLOBALS['Data_String_Regex_Flags_eq'] = ($GLOBALS['Data_Eq_eqArrayImpl'])(($GLOBALS['Data_Eq_eqString'])->{'eq'});
+function majData_majString_majRegex_majFlags_eq($v_0, $v_1 = null): bool|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majRegex_majFlags_eq';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  $__res = ($GLOBALS['Data_String_Regex_Flags_eq_closure'])($v_0, $v_1);
+  goto __end;;
+  __end:
+  return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
+}
+$GLOBALS['Data_String_Regex_Flags_eq'] = __NAMESPACE__ . '\\majData_majString_majRegex_majFlags_eq';
 
 // Data_String_Regex_Flags_RegexFlags
 function majData_majString_majRegex_majFlags_majRegexmajFlags($x_0) {
@@ -177,7 +191,7 @@ $GLOBALS['Data_String_Regex_Flags_showRegexFlags'] = (object)["show" => function
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }))(($GLOBALS['Data_String_Regex_Flags_guard'])(($v_0)->{'unicode'}))))))));
   $__t1 = null;;
-  if ((($GLOBALS['Data_String_Regex_Flags_eq'])($usedFlags_1_0))([])) {
+  if (\Data\String\Regex\Flags\majData_majString_majRegex_majFlags_eq($usedFlags_1_0, [])) {
 $__t1 = "noFlags";
 goto end_branch_1;;
 };
@@ -190,19 +204,19 @@ goto end_branch_1;;
 }];
 
 // Data_String_Regex_Flags_semigroupRegexFlags
-$GLOBALS['Data_String_Regex_Flags_semigroupRegexFlags'] = (object)["append" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_String_Regex_Flags_semigroupRegexFlags'] = (object)["append" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) use ($v_0) {
+  $__num = \func_num_args();
   $__res = (object)["global" => ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'disj'})(($v_0)->{'global'}))(($v1_1)->{'global'}), "ignoreCase" => ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'disj'})(($v_0)->{'ignoreCase'}))(($v1_1)->{'ignoreCase'}), "multiline" => ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'disj'})(($v_0)->{'multiline'}))(($v1_1)->{'multiline'}), "dotAll" => ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'disj'})(($v_0)->{'dotAll'}))(($v1_1)->{'dotAll'}), "sticky" => ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'disj'})(($v_0)->{'sticky'}))(($v1_1)->{'sticky'}), "unicode" => ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'disj'})(($v_0)->{'unicode'}))(($v1_1)->{'unicode'})];
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_String_Regex_Flags_noFlags
 $GLOBALS['Data_String_Regex_Flags_noFlags'] = (object)["global" => false, "ignoreCase" => false, "multiline" => false, "dotAll" => false, "sticky" => false, "unicode" => false];
@@ -235,19 +249,19 @@ $GLOBALS['Data_String_Regex_Flags_ignoreCase'] = (object)["global" => false, "ig
 $GLOBALS['Data_String_Regex_Flags_global'] = (object)["global" => true, "ignoreCase" => false, "multiline" => false, "dotAll" => false, "sticky" => false, "unicode" => false];
 
 // Data_String_Regex_Flags_eqRegexFlags
-$GLOBALS['Data_String_Regex_Flags_eqRegexFlags'] = (object)["eq" => (function() {
-  $__fn = function($ra_0, $rb_1 = null) use (&$__fn) {
+$GLOBALS['Data_String_Regex_Flags_eqRegexFlags'] = (object)["eq" => function($ra_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($rb_1) use ($ra_0) {
+  $__num = \func_num_args();
   $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($GLOBALS['Data_Eq_eqBoolean'])->{'eq'})(($ra_0)->{'dotAll'}))(($rb_1)->{'dotAll'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($GLOBALS['Data_Eq_eqBoolean'])->{'eq'})(($ra_0)->{'global'}))(($rb_1)->{'global'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($GLOBALS['Data_Eq_eqBoolean'])->{'eq'})(($ra_0)->{'ignoreCase'}))(($rb_1)->{'ignoreCase'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($GLOBALS['Data_Eq_eqBoolean'])->{'eq'})(($ra_0)->{'multiline'}))(($rb_1)->{'multiline'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($GLOBALS['Data_Eq_eqBoolean'])->{'eq'})(($ra_0)->{'sticky'}))(($rb_1)->{'sticky'})))(((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($GLOBALS['Data_Eq_eqBoolean'])->{'eq'})(($ra_0)->{'unicode'}))(($rb_1)->{'unicode'})))((((($GLOBALS['Data_Eq_eqRowNil'])->{'eqRecord'})(new \Type\Proxy\Type_Proxy_Proxy()))($ra_0))($rb_1)))))));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_String_Regex_Flags_dotAll
 $GLOBALS['Data_String_Regex_Flags_dotAll'] = (object)["global" => false, "ignoreCase" => false, "multiline" => false, "dotAll" => true, "sticky" => false, "unicode" => false];

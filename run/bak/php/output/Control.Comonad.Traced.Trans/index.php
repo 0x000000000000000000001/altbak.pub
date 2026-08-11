@@ -150,31 +150,31 @@ function majControl_majComonad_majTraced_majTrans_functormajTracedmajT($dictFunc
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["map" => (function() use ($dictFunctor_0) {
-  $__fn = function($f_1, $v_2 = null) use ($dictFunctor_0, &$__fn) {
+  $__res = (object)["map" => function($f_1) use ($dictFunctor_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($dictFunctor_0)->{'map'})((function() use ($f_1) {
-  $__fn = function($g_3, $t_4 = null) use ($f_1, &$__fn) {
+  $__res = function($v_2) use ($dictFunctor_0, $f_1) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = ((($dictFunctor_0)->{'map'})(function($g_3) use ($f_1) {
+  $__num = \func_num_args();
+  $__res = function($t_4) use ($f_1, $g_3) {
+  $__num = \func_num_args();
   $__res = ($f_1)(($g_3)($t_4));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()))($v_2);
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))($v_2);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -189,70 +189,70 @@ function majControl_majComonad_majTraced_majTrans_extendmajTracedmajT($dictExten
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $Functor0_1_0 = (($dictExtend_0)->{'Functor0'})(null);
-  $functorTracedT1_2_1 = (object)["map" => (function() use ($Functor0_1_0) {
-  $__fn = function($f_2, $v_3 = null) use ($Functor0_1_0, &$__fn) {
+  $functorTracedT1_2_1 = (object)["map" => function($f_2) use ($Functor0_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($Functor0_1_0)->{'map'})((function() use ($f_2) {
-  $__fn = function($g_4, $t_5 = null) use ($f_2, &$__fn) {
+  $__res = function($v_3) use ($Functor0_1_0, $f_2) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = ((($Functor0_1_0)->{'map'})(function($g_4) use ($f_2) {
+  $__num = \func_num_args();
+  $__res = function($t_5) use ($f_2, $g_4) {
+  $__num = \func_num_args();
   $__res = ($f_2)(($g_4)($t_5));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()))($v_3);
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))($v_3);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   $__res = function($dictSemigroup_3) use ($Functor0_1_0, $dictExtend_0, $functorTracedT1_2_1) {
   $__num = \func_num_args();
-  $__res = (object)["extend" => (function() use ($Functor0_1_0, $dictExtend_0, $dictSemigroup_3) {
-  $__fn = function($f_4, $v_5 = null) use ($Functor0_1_0, $dictExtend_0, $dictSemigroup_3, &$__fn) {
+  $__res = (object)["extend" => function($f_4) use ($Functor0_1_0, $dictExtend_0, $dictSemigroup_3) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($dictExtend_0)->{'extend'})((function() use ($Functor0_1_0, $dictSemigroup_3, $f_4) {
-  $__fn = function($w_prime_6, $t_7 = null) use ($Functor0_1_0, $dictSemigroup_3, $f_4, &$__fn) {
+  $__res = function($v_5) use ($Functor0_1_0, $dictExtend_0, $dictSemigroup_3, $f_4) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ($f_4)(((($Functor0_1_0)->{'map'})((function() use ($dictSemigroup_3, $t_7) {
-  $__fn = function($h_8, $t_prime_9 = null) use ($dictSemigroup_3, $t_7, &$__fn) {
+  $__res = ((($dictExtend_0)->{'extend'})(function($w_prime_6) use ($Functor0_1_0, $dictSemigroup_3, $f_4) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($t_7) use ($Functor0_1_0, $dictSemigroup_3, $f_4, $w_prime_6) {
+  $__num = \func_num_args();
+  $__res = ($f_4)(((($Functor0_1_0)->{'map'})(function($h_8) use ($dictSemigroup_3, $t_7) {
+  $__num = \func_num_args();
+  $__res = function($t_prime_9) use ($dictSemigroup_3, $h_8, $t_7) {
+  $__num = \func_num_args();
   $__res = ($h_8)(((($dictSemigroup_3)->{'append'})($t_7))($t_prime_9));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()))($w_prime_6));
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()))($v_5);
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))($w_prime_6));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_4) use ($functorTracedT1_2_1) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))($v_5);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_4) use ($functorTracedT1_2_1) {
   $__num = \func_num_args();
   $__res = $functorTracedT1_2_1;
   goto __end;;
@@ -277,12 +277,10 @@ function majControl_majComonad_majTraced_majTrans_comonadmajTransmajTracedmajT($
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $mempty_1_0 = ($dictMonoid_0)->{'mempty'};
-  $__res = (object)["lower" => (function() use ($mempty_1_0) {
-  $__fn = function($dictComonad_2, $v_3 = null) use ($mempty_1_0, &$__fn) {
+  $__res = (object)["lower" => function($dictComonad_2) use ($mempty_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_3) use ($dictComonad_2, $mempty_1_0) {
+  $__num = \func_num_args();
   $__res = ((((((($dictComonad_2)->{'Extend0'})(null))->{'Functor0'})(null))->{'map'})(function($f_4) use ($mempty_1_0) {
   $__num = \func_num_args();
   $__res = ($f_4)($mempty_1_0);
@@ -292,10 +290,12 @@ function majControl_majComonad_majTraced_majTrans_comonadmajTransmajTracedmajT($
 }))($v_3);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -311,70 +311,70 @@ function majControl_majComonad_majTraced_majTrans_comonadmajTracedmajT($dictComo
   }
   $__local_var_1_0 = (($dictComonad_0)->{'Extend0'})(null);
   $Functor0_2_1 = (($__local_var_1_0)->{'Functor0'})(null);
-  $functorTracedT1_3_2 = (object)["map" => (function() use ($Functor0_2_1) {
-  $__fn = function($f_3, $v_4 = null) use ($Functor0_2_1, &$__fn) {
+  $functorTracedT1_3_2 = (object)["map" => function($f_3) use ($Functor0_2_1) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($Functor0_2_1)->{'map'})((function() use ($f_3) {
-  $__fn = function($g_5, $t_6 = null) use ($f_3, &$__fn) {
+  $__res = function($v_4) use ($Functor0_2_1, $f_3) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = ((($Functor0_2_1)->{'map'})(function($g_5) use ($f_3) {
+  $__num = \func_num_args();
+  $__res = function($t_6) use ($f_3, $g_5) {
+  $__num = \func_num_args();
   $__res = ($f_3)(($g_5)($t_6));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()))($v_4);
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))($v_4);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   $extendTracedT1_3_2 = function($dictSemigroup_4) use ($Functor0_2_1, $__local_var_1_0, $functorTracedT1_3_2) {
   $__num = \func_num_args();
-  $__res = (object)["extend" => (function() use ($Functor0_2_1, $__local_var_1_0, $dictSemigroup_4) {
-  $__fn = function($f_5, $v_6 = null) use ($Functor0_2_1, $__local_var_1_0, $dictSemigroup_4, &$__fn) {
+  $__res = (object)["extend" => function($f_5) use ($Functor0_2_1, $__local_var_1_0, $dictSemigroup_4) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($__local_var_1_0)->{'extend'})((function() use ($Functor0_2_1, $dictSemigroup_4, $f_5) {
-  $__fn = function($w_prime_7, $t_8 = null) use ($Functor0_2_1, $dictSemigroup_4, $f_5, &$__fn) {
+  $__res = function($v_6) use ($Functor0_2_1, $__local_var_1_0, $dictSemigroup_4, $f_5) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ($f_5)(((($Functor0_2_1)->{'map'})((function() use ($dictSemigroup_4, $t_8) {
-  $__fn = function($h_9, $t_prime_10 = null) use ($dictSemigroup_4, $t_8, &$__fn) {
+  $__res = ((($__local_var_1_0)->{'extend'})(function($w_prime_7) use ($Functor0_2_1, $dictSemigroup_4, $f_5) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($t_8) use ($Functor0_2_1, $dictSemigroup_4, $f_5, $w_prime_7) {
+  $__num = \func_num_args();
+  $__res = ($f_5)(((($Functor0_2_1)->{'map'})(function($h_9) use ($dictSemigroup_4, $t_8) {
+  $__num = \func_num_args();
+  $__res = function($t_prime_10) use ($dictSemigroup_4, $h_9, $t_8) {
+  $__num = \func_num_args();
   $__res = ($h_9)(((($dictSemigroup_4)->{'append'})($t_8))($t_prime_10));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()))($w_prime_7));
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()))($v_6);
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))($w_prime_7));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_5) use ($functorTracedT1_3_2) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))($v_6);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_5) use ($functorTracedT1_3_2) {
   $__num = \func_num_args();
   $__res = $functorTracedT1_3_2;
   goto __end;;

@@ -236,19 +236,25 @@ function majData_majList_majNonmajEmpty_zipmajWithmajA($dictApplicative_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $sequence11_1_0 = (($GLOBALS['Data_List_Types_traversable1NonEmptyList'])->{'sequence1'})((($dictApplicative_0)->{'Apply0'})(null));
-  $__res = (function() use ($sequence11_1_0) {
-  $__fn = function($f_2, $xs_3 = null, $ys_4 = null) use ($sequence11_1_0, &$__fn) {
+  $__res = function($f_2) use ($sequence11_1_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($xs_3) use ($f_2, $sequence11_1_0) {
+  $__num = \func_num_args();
+  $__res = function($ys_4) use ($f_2, $sequence11_1_0, $xs_3) {
+  $__num = \func_num_args();
   $__res = ($sequence11_1_0)(\Data\List\NonEmpty\majData_majList_majNonmajEmpty_zipmajWith($f_2, $xs_3, $ys_4));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1111,7 +1117,7 @@ function majData_majList_majNonmajEmpty_foldmajM($dictMonad_0, $f_1 = null, $b_2
   $__local_var_4_0 = ($v_3)->{'value1'};
   $__res = ((((($dictMonad_0)->{'Bind1'})(null))->{'bind'})((($f_1)($b_2))(($v_3)->{'value0'})))(function($b_prime_5) use ($__local_var_4_0, $dictMonad_0, $f_1) {
   $__num = \func_num_args();
-  $__res = \Data\List\majData_majList_foldmajM($dictMonad_0, $f_1, $b_prime_5, $__local_var_4_0);
+  $__res = (((($GLOBALS['Data_List_foldM'])($dictMonad_0))($f_1))($b_prime_5))($__local_var_4_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1170,7 +1176,7 @@ goto end_branch_1;;
 };
   $go__go_2_0 = null;
   $go__go_2_0 = (function() use ($f_0, &$go__go_2_0) {
-  $__fn = function($v_3, $v1_4 = null) use ($f_0, &$go__go_2_0, &$__fn) {
+  $__fn = function(int $v_3, $v1_4 = null) use ($f_0, &$go__go_2_0, &$__fn) {
   $__num = \func_num_args();
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
@@ -1498,19 +1504,19 @@ function majData_majList_majNonmajEmpty_appendmajFoldable($dictFoldable_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $fromFoldable1_1_0 = ((($dictFoldable_0)->{'foldr'})($GLOBALS['Data_List_Types_Cons']))(new \Data\List\Types\Data_List_Types_Nil());
-  $__res = (function() use ($fromFoldable1_1_0) {
-  $__fn = function($v_2, $ys_3 = null) use ($fromFoldable1_1_0, &$__fn) {
+  $__res = function($v_2) use ($fromFoldable1_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($ys_3) use ($fromFoldable1_1_0, $v_2) {
+  $__num = \func_num_args();
   $__res = new \Data\NonEmpty\Data_NonEmpty_NonEmpty(($v_2)->{'value0'}, ((($GLOBALS['Data_List_Types_semigroupList'])->{'append'})(($v_2)->{'value1'}))(($fromFoldable1_1_0)($ys_3)));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

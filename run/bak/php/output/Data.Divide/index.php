@@ -123,20 +123,32 @@ function majData_majDivide_identity($x_0) {
 $GLOBALS['Data_Divide_identity'] = __NAMESPACE__ . '\\majData_majDivide_identity';
 
 // Data_Divide_dividePredicate
-$GLOBALS['Data_Divide_dividePredicate'] = (object)["divide" => (function() {
-  $__fn = function($f_0, $v_1 = null, $v1_2 = null, $a_3 = null) use (&$__fn) {
+$GLOBALS['Data_Divide_dividePredicate'] = (object)["divide" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 4) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 4);
-  }
+  $__res = function($v_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($v1_2) use ($f_0, $v_1) {
+  $__num = \func_num_args();
+  $__res = function($a_3) use ($f_0, $v1_2, $v_1) {
+  $__num = \func_num_args();
   $v2_4_0 = ($f_0)($a_3);
   $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(($v_1)(($v2_4_0)->{'value0'})))(($v1_2)(($v2_4_0)->{'value1'}));
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})(), "Contravariant0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Contravariant0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Predicate_contravariantPredicate'];
   goto __end;;
@@ -151,20 +163,32 @@ function majData_majDivide_dividemajOp($dictSemigroup_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["divide" => (function() use ($dictSemigroup_0) {
-  $__fn = function($f_1, $v_2 = null, $v1_3 = null, $a_4 = null) use ($dictSemigroup_0, &$__fn) {
+  $__res = (object)["divide" => function($f_1) use ($dictSemigroup_0) {
   $__num = \func_num_args();
-  if ($__num < 4) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 4);
-  }
+  $__res = function($v_2) use ($dictSemigroup_0, $f_1) {
+  $__num = \func_num_args();
+  $__res = function($v1_3) use ($dictSemigroup_0, $f_1, $v_2) {
+  $__num = \func_num_args();
+  $__res = function($a_4) use ($dictSemigroup_0, $f_1, $v1_3, $v_2) {
+  $__num = \func_num_args();
   $v2_5_0 = ($f_1)($a_4);
   $__res = ((($dictSemigroup_0)->{'append'})(($v_2)(($v2_5_0)->{'value0'})))(($v1_3)(($v2_5_0)->{'value1'}));
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})(), "Contravariant0" => function($_dollar__unused_1) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Contravariant0" => function($_dollar__unused_1) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Op_contravariantOp'];
   goto __end;;
@@ -178,21 +202,39 @@ function majData_majDivide_dividemajOp($dictSemigroup_0) {
 $GLOBALS['Data_Divide_divideOp'] = __NAMESPACE__ . '\\majData_majDivide_dividemajOp';
 
 // Data_Divide_divideEquivalence
-$GLOBALS['Data_Divide_divideEquivalence'] = (object)["divide" => (function() {
-  $__fn = function($f_0, $v_1 = null, $v1_2 = null, $a_3 = null, $b_4 = null) use (&$__fn) {
+$GLOBALS['Data_Divide_divideEquivalence'] = (object)["divide" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 5) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 5);
-  }
+  $__res = function($v_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($v1_2) use ($f_0, $v_1) {
+  $__num = \func_num_args();
+  $__res = function($a_3) use ($f_0, $v1_2, $v_1) {
+  $__num = \func_num_args();
+  $__res = function($b_4) use ($a_3, $f_0, $v1_2, $v_1) {
+  $__num = \func_num_args();
   $v2_5_0 = ($f_0)($a_3);
   $v3_6_1 = ($f_0)($b_4);
   $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})((($v_1)(($v2_5_0)->{'value0'}))(($v3_6_1)->{'value0'})))((($v1_2)(($v2_5_0)->{'value1'}))(($v3_6_1)->{'value1'}));
   goto __end;;
   __end:
-  return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
-  };
-  return $__fn;
-})(), "Contravariant0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Contravariant0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Equivalence_contravariantEquivalence'];
   goto __end;;
@@ -201,21 +243,39 @@ $GLOBALS['Data_Divide_divideEquivalence'] = (object)["divide" => (function() {
 }];
 
 // Data_Divide_divideComparison
-$GLOBALS['Data_Divide_divideComparison'] = (object)["divide" => (function() {
-  $__fn = function($f_0, $v_1 = null, $v1_2 = null, $a_3 = null, $b_4 = null) use (&$__fn) {
+$GLOBALS['Data_Divide_divideComparison'] = (object)["divide" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 5) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 5);
-  }
+  $__res = function($v_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($v1_2) use ($f_0, $v_1) {
+  $__num = \func_num_args();
+  $__res = function($a_3) use ($f_0, $v1_2, $v_1) {
+  $__num = \func_num_args();
+  $__res = function($b_4) use ($a_3, $f_0, $v1_2, $v_1) {
+  $__num = \func_num_args();
   $v2_5_0 = ($f_0)($a_3);
   $v3_6_1 = ($f_0)($b_4);
   $__res = ((($GLOBALS['Data_Ordering_semigroupOrdering'])->{'append'})((($v_1)(($v2_5_0)->{'value0'}))(($v3_6_1)->{'value0'})))((($v1_2)(($v2_5_0)->{'value1'}))(($v3_6_1)->{'value1'}));
   goto __end;;
   __end:
-  return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
-  };
-  return $__fn;
-})(), "Contravariant0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Contravariant0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Comparison_contravariantComparison'];
   goto __end;;

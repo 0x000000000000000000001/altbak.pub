@@ -102,34 +102,13 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_EuclideanRing = \call_user_func(function() {
   $exports = [];
 $intDegree = function($x) use (&$intDegree) { return abs($x); };
-$intDiv = function($x, $y = null) use (&$intDiv) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$intDiv) {
-
-            return $intDiv(...\array_merge($__args, $more));
-        };
-    }
+$intDiv = function($x, $y) use (&$intDiv) {
     return (int)($x / $y);
 };
-$intMod = function($x, $y = null) use (&$intMod) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$intMod) {
-
-            return $intMod(...\array_merge($__args, $more));
-        };
-    }
+$intMod = function($x, $y) use (&$intMod) {
     return $x % $y;
 };
-$numDiv = function($x, $y = null) use (&$numDiv) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$numDiv) {
-
-            return $numDiv(...\array_merge($__args, $more));
-        };
-    }
+$numDiv = function($x, $y) use (&$numDiv) {
     return $x / $y;
 };
 
@@ -219,26 +198,26 @@ function majData_majEuclideanmajRing_gcd($dictEq_0, $dictEuclideanRing_1 = null)
   $dictEq_0 = $__tco_var_Data_EuclideanRing_gcd_dictEq_0;
   $dictEuclideanRing_1 = $__tco_var_Data_EuclideanRing_gcd_dictEuclideanRing_1;
   $zero_2_0 = ((((((($dictEuclideanRing_1)->{'CommutativeRing0'})(null))->{'Ring0'})(null))->{'Semiring0'})(null))->{'zero'};
-  $__res = (function() use ($dictEq_0, $dictEuclideanRing_1, $zero_2_0) {
-  $__fn = function($a_3, $b_4 = null) use ($dictEq_0, $dictEuclideanRing_1, $zero_2_0, &$__fn) {
+  $__res = function($a_3) use ($dictEq_0, $dictEuclideanRing_1, $zero_2_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($b_4) use ($a_3, $dictEq_0, $dictEuclideanRing_1, $zero_2_0) {
+  $__num = \func_num_args();
   $__t1 = null;;
   if (((($dictEq_0)->{'eq'})($b_4))($zero_2_0)) {
 $__t1 = $a_3;
 goto end_branch_1;;
 };
-  $__t1 = \Data\EuclideanRing\majData_majEuclideanmajRing_gcd($dictEq_0, $dictEuclideanRing_1, $b_4, ((($dictEuclideanRing_1)->{'mod'})($a_3))($b_4));
+  $__t1 = (((($GLOBALS['Data_EuclideanRing_gcd'])($dictEq_0))($dictEuclideanRing_1))($b_4))(((($dictEuclideanRing_1)->{'mod'})($a_3))($b_4));
   end_branch_1:;
   $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -252,19 +231,19 @@ $GLOBALS['Data_EuclideanRing_euclideanRingNumber'] = (object)["degree" => functi
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "div" => $GLOBALS['Data_EuclideanRing_numDiv'], "mod" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+}, "div" => $GLOBALS['Data_EuclideanRing_numDiv'], "mod" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) {
+  $__num = \func_num_args();
   $__res = 0.0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "CommutativeRing0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "CommutativeRing0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_CommutativeRing_commutativeRingNumber'];
   goto __end;;
@@ -305,12 +284,10 @@ function majData_majEuclideanmajRing_lcm($dictEq_0, $dictEuclideanRing_1 = null)
   $Semiring0_2_0 = (((((($dictEuclideanRing_1)->{'CommutativeRing0'})(null))->{'Ring0'})(null))->{'Semiring0'})(null);
   $zero_3_1 = ($Semiring0_2_0)->{'zero'};
   $gcd2_4_2 = (($GLOBALS['Data_EuclideanRing_gcd'])($dictEq_0))($dictEuclideanRing_1);
-  $__res = (function() use ($Semiring0_2_0, $dictEq_0, $dictEuclideanRing_1, $gcd2_4_2, $zero_3_1) {
-  $__fn = function($a_5, $b_6 = null) use ($Semiring0_2_0, $dictEq_0, $dictEuclideanRing_1, $gcd2_4_2, $zero_3_1, &$__fn) {
+  $__res = function($a_5) use ($Semiring0_2_0, $dictEq_0, $dictEuclideanRing_1, $gcd2_4_2, $zero_3_1) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($b_6) use ($Semiring0_2_0, $a_5, $dictEq_0, $dictEuclideanRing_1, $gcd2_4_2, $zero_3_1) {
+  $__num = \func_num_args();
   $__t3 = null;;
   if (((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'disj'})(((($dictEq_0)->{'eq'})($a_5))($zero_3_1)))(((($dictEq_0)->{'eq'})($b_6))($zero_3_1))) {
 $__t3 = $zero_3_1;
@@ -321,10 +298,12 @@ goto end_branch_3;;
   $__res = $__t3;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

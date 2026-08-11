@@ -149,12 +149,10 @@ function majData_majDecidable_lost($dictDecidable_0) {
 $GLOBALS['Data_Decidable_lost'] = __NAMESPACE__ . '\\majData_majDecidable_lost';
 
 // Data_Decidable_decidablePredicate
-$GLOBALS['Data_Decidable_decidablePredicate'] = (object)["lose" => (function() {
-  $__fn = function($f_0, $a_1 = null) use (&$__fn) {
+$GLOBALS['Data_Decidable_decidablePredicate'] = (object)["lose" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($a_1) use ($f_0) {
+  $__num = \func_num_args();
   $spin_2_0 = null;
   $spin_2_0 = function($v_3) use (&$spin_2_0) {
   $__num = \func_num_args();
@@ -172,10 +170,12 @@ $GLOBALS['Data_Decidable_decidablePredicate'] = (object)["lose" => (function() {
   $__res = ($spin_2_0)(($f_0)($a_1));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Decide0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Decide0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Decide_choosePredicate'];
   goto __end;;
@@ -196,14 +196,12 @@ function majData_majDecidable_decidablemajOp($dictMonoid_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $chooseOp_1_0 = \Data\Decide\majData_majDecide_choosemajOp((($dictMonoid_0)->{'Semigroup0'})(null));
-  $divisibleOp_2_1 = \Data\Divisible\majData_majDivisible_divisiblemajOp($dictMonoid_0);
-  $__res = (object)["lose" => (function() {
-  $__fn = function($f_3, $a_4 = null) use (&$__fn) {
+  $chooseOp_1_0 = ($GLOBALS['Data_Decide_chooseOp'])((($dictMonoid_0)->{'Semigroup0'})(null));
+  $divisibleOp_2_1 = ($GLOBALS['Data_Divisible_divisibleOp'])($dictMonoid_0);
+  $__res = (object)["lose" => function($f_3) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($a_4) use ($f_3) {
+  $__num = \func_num_args();
   $spin_5_2 = null;
   $spin_5_2 = function($v_6) use (&$spin_5_2) {
   $__num = \func_num_args();
@@ -221,10 +219,12 @@ function majData_majDecidable_decidablemajOp($dictMonoid_0) {
   $__res = ($spin_5_2)(($f_3)($a_4));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Decide0" => function($_dollar__unused_3) use ($chooseOp_1_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Decide0" => function($_dollar__unused_3) use ($chooseOp_1_0) {
   $__num = \func_num_args();
   $__res = $chooseOp_1_0;
   goto __end;;
@@ -244,12 +244,10 @@ function majData_majDecidable_decidablemajOp($dictMonoid_0) {
 $GLOBALS['Data_Decidable_decidableOp'] = __NAMESPACE__ . '\\majData_majDecidable_decidablemajOp';
 
 // Data_Decidable_decidableEquivalence
-$GLOBALS['Data_Decidable_decidableEquivalence'] = (object)["lose" => (function() {
-  $__fn = function($f_0, $a_1 = null) use (&$__fn) {
+$GLOBALS['Data_Decidable_decidableEquivalence'] = (object)["lose" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($a_1) use ($f_0) {
+  $__num = \func_num_args();
   $spin_2_0 = null;
   $spin_2_0 = function($v_3) use (&$spin_2_0) {
   $__num = \func_num_args();
@@ -267,10 +265,12 @@ $GLOBALS['Data_Decidable_decidableEquivalence'] = (object)["lose" => (function()
   $__res = ($spin_2_0)(($f_0)($a_1));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Decide0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Decide0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Decide_chooseEquivalence'];
   goto __end;;
@@ -285,12 +285,12 @@ $GLOBALS['Data_Decidable_decidableEquivalence'] = (object)["lose" => (function()
 }];
 
 // Data_Decidable_decidableComparison
-$GLOBALS['Data_Decidable_decidableComparison'] = (object)["lose" => (function() {
-  $__fn = function($f_0, $a_1 = null, $v_2 = null) use (&$__fn) {
+$GLOBALS['Data_Decidable_decidableComparison'] = (object)["lose" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($a_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($v_2) use ($a_1, $f_0) {
+  $__num = \func_num_args();
   $spin_3_0 = null;
   $spin_3_0 = function($v_4) use (&$spin_3_0) {
   $__num = \func_num_args();
@@ -308,10 +308,16 @@ $GLOBALS['Data_Decidable_decidableComparison'] = (object)["lose" => (function() 
   $__res = ($spin_3_0)(($f_0)($a_1));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(), "Decide0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Decide0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Decide_chooseComparison'];
   goto __end;;

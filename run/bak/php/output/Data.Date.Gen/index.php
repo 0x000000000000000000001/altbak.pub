@@ -121,33 +121,34 @@ function majData_majDate_majGen_genmajDate($dictMonadGen_0) {
   }
   $Monad0_1_0 = (($dictMonadGen_0)->{'Monad0'})(null);
   $Bind1_2_1 = (($Monad0_1_0)->{'Bind1'})(null);
-  $__res = ((($Bind1_2_1)->{'bind'})(\Data\Date\Component\Gen\majData_majDate_majComponent_majGen_genmajYear($dictMonadGen_0)))(function($year_3) use ($Bind1_2_1, $Monad0_1_0, $dictMonadGen_0) {
+  $pure_3_2 = ((($Monad0_1_0)->{'Applicative0'})(null))->{'pure'};
+  $__res = ((($Bind1_2_1)->{'bind'})(($GLOBALS['Data_Date_Component_Gen_genYear'])($dictMonadGen_0)))(function($year_4) use ($Bind1_2_1, $dictMonadGen_0, $pure_3_2) {
   $__num = \func_num_args();
-  $__t2 = null;;
-  if (\Data\Date\majData_majDate_ismajLeapmajYear($year_3)) {
-$__t2 = 365;
-goto end_branch_2;;
+  $__t3 = null;;
+  if (\Data\Date\majData_majDate_ismajLeapmajYear($year_4)) {
+$__t3 = 365;
+goto end_branch_3;;
 };
-  $__t2 = 364;
-  end_branch_2:;
-  $__res = ((($Bind1_2_1)->{'bind'})(((((((($Bind1_2_1)->{'Apply0'})(null))->{'Functor0'})(null))->{'map'})((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Time_Duration_Days']))($GLOBALS['Data_Int_toNumber'])))(((($dictMonadGen_0)->{'chooseInt'})(0))($__t2))))(function($days_4) use ($Monad0_1_0, $year_3) {
+  $__t3 = 364;
+  end_branch_3:;
+  $__res = ((($Bind1_2_1)->{'bind'})(((((((($Bind1_2_1)->{'Apply0'})(null))->{'Functor0'})(null))->{'map'})((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Time_Duration_Days']))($GLOBALS['Data_Int_toNumber'])))(((($dictMonadGen_0)->{'chooseInt'})(0))($__t3))))(function($days_5) use ($pure_3_2, $year_4) {
   $__num = \func_num_args();
-  $__local_var_5_3 = ((($GLOBALS['Data_Maybe_bindMaybe'])->{'bind'})(\Data\Date\majData_majDate_exactmajDate($year_3, ($GLOBALS['Data_Date_Component_boundedMonth'])->{'bottom'}, ($GLOBALS['Data_Date_Component_boundedDay'])->{'bottom'})))(function($janFirst_5) use ($days_4) {
+  $__local_var_6_4 = ((($GLOBALS['Data_Maybe_bindMaybe'])->{'bind'})(\Data\Date\majData_majDate_exactmajDate($year_4, ($GLOBALS['Data_Date_Component_boundedMonth'])->{'bottom'}, ($GLOBALS['Data_Date_Component_boundedDay'])->{'bottom'})))(function($janFirst_6) use ($days_5) {
   $__num = \func_num_args();
-  $__res = \Data\Date\majData_majDate_adjust($days_4, $janFirst_5);
+  $__res = \Data\Date\majData_majDate_adjust($days_5, $janFirst_6);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
-  $__t4 = null;;
-  if ($__local_var_5_3 instanceof \Data\Maybe\Data_Maybe_Just) {
-$__t4 = ($__local_var_5_3)->{'value0'};
-goto end_branch_4;;
+  $__t5 = null;;
+  if ($__local_var_6_4 instanceof \Data\Maybe\Data_Maybe_Just) {
+$__t5 = ($__local_var_6_4)->{'value0'};
+goto end_branch_5;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t4 = null;
-  end_branch_4:;
-  $__res = (((($Monad0_1_0)->{'Applicative0'})(null))->{'pure'})($__t4);
+  $__t5 = null;
+  end_branch_5:;
+  $__res = ($pure_3_2)($__t5);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

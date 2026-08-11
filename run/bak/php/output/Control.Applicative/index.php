@@ -201,19 +201,19 @@ $GLOBALS['Control_Applicative_applicativeProxy'] = (object)["pure" => function($
 }];
 
 // Control_Applicative_applicativeFn
-$GLOBALS['Control_Applicative_applicativeFn'] = (object)["pure" => (function() {
-  $__fn = function($x_0, $v_1 = null) use (&$__fn) {
+$GLOBALS['Control_Applicative_applicativeFn'] = (object)["pure" => function($x_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_1) use ($x_0) {
+  $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Apply0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Apply0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Apply_applyFn'];
   goto __end;;

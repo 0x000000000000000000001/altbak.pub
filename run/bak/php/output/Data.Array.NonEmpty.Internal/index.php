@@ -115,14 +115,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Array_NonEmpty_Internal = \call_user_func(function() {
   $exports = [];
-$foldr1Impl = function($f, $xs = null) use (&$foldr1Impl) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$foldr1Impl) {
-
-            return $foldr1Impl(...\array_merge($__args, $more));
-        };
-    }
+$foldr1Impl = function($f, $xs) use (&$foldr1Impl) {
     $acc = $xs[\count($xs) - 1];
     for ($i = \count($xs) - 2; $i >= 0; $i--) {
         $acc = $f($xs[$i])($acc);
@@ -130,14 +123,7 @@ $foldr1Impl = function($f, $xs = null) use (&$foldr1Impl) {
     return $acc;
 };
 
-$foldl1Impl = function($f, $xs = null) use (&$foldl1Impl) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$foldl1Impl) {
-
-            return $foldl1Impl(...\array_merge($__args, $more));
-        };
-    }
+$foldl1Impl = function($f, $xs) use (&$foldl1Impl) {
     $acc = $xs[0];
     $len = \count($xs);
     for ($i = 1; $i < $len; $i++) {
@@ -146,69 +132,61 @@ $foldl1Impl = function($f, $xs = null) use (&$foldl1Impl) {
     return $acc;
 };
 
-$traverse1Impl = function($apply, $map = null, $f = null) use (&$traverse1Impl) {
-    if (\func_num_args() < 3) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$traverse1Impl) {
+$traverse1Impl = function($apply, $map, $f) use (&$traverse1Impl) {
+    return function($array) use ($apply, $map, $f, &$traverse1Impl) {
+        $emptyList = new \stdClass();
 
-            return $traverse1Impl(...\array_merge($__args, $more));
+        $consList = function($x) {
+            return function($xs) use ($x) {
+                $obj = new \stdClass();
+                $obj->head = $x;
+                $obj->tail = $xs;
+                return $obj;
+            };
         };
-    }
 
-    $emptyList = new \stdClass();
-
-    $consList = function($x) {
-        return function($xs) use ($x) {
+        $finalCell = function($head) use ($emptyList) {
             $obj = new \stdClass();
-            $obj->head = $x;
-            $obj->tail = $xs;
+            $obj->head = $head;
+            $obj->tail = $emptyList;
             return $obj;
         };
-    };
 
-    $finalCell = function($head) use ($emptyList) {
-        $obj = new \stdClass();
-        $obj->head = $head;
-        $obj->tail = $emptyList;
-        return $obj;
-    };
+        $listToArray = function($list) use ($emptyList) {
+            $arr = [];
+            $xs = $list;
+            while ($xs !== $emptyList) {
+                $arr[] = $xs->head;
+                $xs = $xs->tail;
+            }
+            return $arr;
+        };
 
-    $listToArray = function($list) use ($emptyList) {
-        $arr = [];
-        $xs = $list;
-        while ($xs !== $emptyList) {
-            $arr[] = $xs->head;
-            $xs = $xs->tail;
-        }
-        return $arr;
-    };
+        $buildFrom = function($x, $ys) use ($apply, $map, $f, $consList) {
+            return $apply($map($consList, $f($x)), $ys);
+        };
 
-    $buildFrom = function($x, $ys) use ($apply, $map, $f, $consList) {
-        return $apply($map($consList)($f($x)))($ys);
-    };
+        $go = function($acc, $currentLen, $xs) use (&$go, $buildFrom) {
+            if ($currentLen === 0) {
+                return $acc;
+            } else {
+                $last = $xs[$currentLen - 1];
+                $cont = new \stdClass();
+                $cont->_isCont = true;
+                $cont->fn = function() use (&$go, $buildFrom, $last, $acc, $currentLen, $xs) {
+                    return $go($buildFrom($last, $acc), $currentLen - 1, $xs);
+                };
+                return $cont;
+            }
+        };
 
-    $go = function($acc, $currentLen, $xs) use (&$go, $buildFrom) {
-        if ($currentLen === 0) {
-            return $acc;
-        } else {
-            $last = $xs[$currentLen - 1];
-            $cont = new \stdClass();
-            $cont->_isCont = true;
-            $cont->fn = function() use (&$go, $buildFrom, $last, $acc, $currentLen, $xs) {
-                return $go($buildFrom($last, $acc), $currentLen - 1, $xs);
-            };
-            return $cont;
-        }
-    };
-
-    return function($array) use ($map, $finalCell, $f, $go, $listToArray) {
-        $acc = $map($finalCell)($f($array[\count($array) - 1]));
+        $acc = $map($finalCell, $f($array[\count($array) - 1]));
         $result = $go($acc, \count($array) - 1, $array);
         while (isset($result->_isCont) && $result->_isCont) {
             $fn = $result->fn;
             $result = $fn();
         }
-        return $map($listToArray)($result);
+        return $map($listToArray, $result);
     };
 };
 
@@ -278,7 +256,7 @@ function majData_majArray_majNonmajEmpty_majInternal_ordmajNonmajEmptymajArray($
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = \Data\Ord\majData_majOrd_ordmajArray($dictOrd_0);
+  $__res = ($GLOBALS['Data_Ord_ordArray'])($dictOrd_0);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

@@ -152,25 +152,26 @@ function majControl_majMonad_majWriter_majClass_listens($dictMonadWriter_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $Monad1_1_0 = (((($dictMonadWriter_0)->{'MonadTell1'})(null))->{'Monad1'})(null);
-  $__res = (function() use ($Monad1_1_0, $dictMonadWriter_0) {
-  $__fn = function($f_2, $m_3 = null) use ($Monad1_1_0, $dictMonadWriter_0, &$__fn) {
+  $pure_2_1 = ((($Monad1_1_0)->{'Applicative0'})(null))->{'pure'};
+  $__res = function($f_3) use ($Monad1_1_0, $dictMonadWriter_0, $pure_2_1) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((((($Monad1_1_0)->{'Bind1'})(null))->{'bind'})((($dictMonadWriter_0)->{'listen'})($m_3)))(function($v_4) use ($Monad1_1_0, $f_2) {
+  $__res = function($m_4) use ($Monad1_1_0, $dictMonadWriter_0, $f_3, $pure_2_1) {
   $__num = \func_num_args();
-  $__res = (((($Monad1_1_0)->{'Applicative0'})(null))->{'pure'})(new \Data\Tuple\Data_Tuple_Tuple(($v_4)->{'value0'}, ($f_2)(($v_4)->{'value1'})));
+  $__res = ((((($Monad1_1_0)->{'Bind1'})(null))->{'bind'})((($dictMonadWriter_0)->{'listen'})($m_4)))(function($v_5) use ($f_3, $pure_2_1) {
+  $__num = \func_num_args();
+  $__res = ($pure_2_1)(new \Data\Tuple\Data_Tuple_Tuple(($v_5)->{'value0'}, ($f_3)(($v_5)->{'value1'})));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -185,25 +186,26 @@ function majControl_majMonad_majWriter_majClass_censor($dictMonadWriter_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $Monad1_1_0 = (((($dictMonadWriter_0)->{'MonadTell1'})(null))->{'Monad1'})(null);
-  $__res = (function() use ($Monad1_1_0, $dictMonadWriter_0) {
-  $__fn = function($f_2, $m_3 = null) use ($Monad1_1_0, $dictMonadWriter_0, &$__fn) {
+  $pure_2_1 = ((($Monad1_1_0)->{'Applicative0'})(null))->{'pure'};
+  $__res = function($f_3) use ($Monad1_1_0, $dictMonadWriter_0, $pure_2_1) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (($dictMonadWriter_0)->{'pass'})(((((($Monad1_1_0)->{'Bind1'})(null))->{'bind'})($m_3))(function($a_4) use ($Monad1_1_0, $f_2) {
+  $__res = function($m_4) use ($Monad1_1_0, $dictMonadWriter_0, $f_3, $pure_2_1) {
   $__num = \func_num_args();
-  $__res = (((($Monad1_1_0)->{'Applicative0'})(null))->{'pure'})(new \Data\Tuple\Data_Tuple_Tuple($a_4, $f_2));
+  $__res = (($dictMonadWriter_0)->{'pass'})(((((($Monad1_1_0)->{'Bind1'})(null))->{'bind'})($m_4))(function($a_5) use ($f_3, $pure_2_1) {
+  $__num = \func_num_args();
+  $__res = ($pure_2_1)(new \Data\Tuple\Data_Tuple_Tuple($a_5, $f_3));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

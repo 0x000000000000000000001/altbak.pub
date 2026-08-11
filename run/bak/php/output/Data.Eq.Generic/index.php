@@ -102,34 +102,34 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 
 
 // Data_Eq_Generic_genericEqNoConstructors
-$GLOBALS['Data_Eq_Generic_genericEqNoConstructors'] = (object)["genericEq__prime__" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_Eq_Generic_genericEqNoConstructors'] = (object)["genericEq__prime__" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) {
+  $__num = \func_num_args();
   $__res = true;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Eq_Generic_genericEqNoArguments
-$GLOBALS['Data_Eq_Generic_genericEqNoArguments'] = (object)["genericEq__prime__" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_Eq_Generic_genericEqNoArguments'] = (object)["genericEq__prime__" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) {
+  $__num = \func_num_args();
   $__res = true;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Eq_Generic_genericEqArgument
 function majData_majEq_majGeneric_genericmajEqmajArgument($dictEq_0) {
@@ -138,19 +138,19 @@ function majData_majEq_majGeneric_genericmajEqmajArgument($dictEq_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["genericEq__prime__" => (function() use ($dictEq_0) {
-  $__fn = function($v_1, $v1_2 = null) use ($dictEq_0, &$__fn) {
+  $__res = (object)["genericEq__prime__" => function($v_1) use ($dictEq_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_2) use ($dictEq_0, $v_1) {
+  $__num = \func_num_args();
   $__res = ((($dictEq_0)->{'eq'})($v_1))($v1_2);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -178,19 +178,19 @@ function majData_majEq_majGeneric_genericmajEqmajConstructor($dictGenericEq_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["genericEq__prime__" => (function() use ($dictGenericEq_0) {
-  $__fn = function($v_1, $v1_2 = null) use ($dictGenericEq_0, &$__fn) {
+  $__res = (object)["genericEq__prime__" => function($v_1) use ($dictGenericEq_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_2) use ($dictGenericEq_0, $v_1) {
+  $__num = \func_num_args();
   $__res = ((($dictGenericEq_0)->{'genericEq__prime__'})($v_1))($v1_2);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -204,19 +204,19 @@ function majData_majEq_majGeneric_genericmajEqmajProduct($dictGenericEq_0, $dict
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (object)["genericEq__prime__" => (function() use ($dictGenericEq1_1, $dictGenericEq_0) {
-  $__fn = function($v_2, $v1_3 = null) use ($dictGenericEq1_1, $dictGenericEq_0, &$__fn) {
+  $__res = (object)["genericEq__prime__" => function($v_2) use ($dictGenericEq1_1, $dictGenericEq_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_3) use ($dictGenericEq1_1, $dictGenericEq_0, $v_2) {
+  $__num = \func_num_args();
   $__res = ((($GLOBALS['Data_HeytingAlgebra_heytingAlgebraBoolean'])->{'conj'})(((($dictGenericEq_0)->{'genericEq__prime__'})(($v_2)->{'value0'}))(($v1_3)->{'value0'})))(((($dictGenericEq1_1)->{'genericEq__prime__'})(($v_2)->{'value1'}))(($v1_3)->{'value1'}));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -230,26 +230,37 @@ function majData_majEq_majGeneric_genericmajEqmajSum($dictGenericEq_0, $dictGene
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = (object)["genericEq__prime__" => (function() use ($dictGenericEq1_1, $dictGenericEq_0) {
-  $__fn = function($v_2, $v1_3 = null) use ($dictGenericEq1_1, $dictGenericEq_0, &$__fn) {
+  $__res = (object)["genericEq__prime__" => function($v_2) use ($dictGenericEq1_1, $dictGenericEq_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_3) use ($dictGenericEq1_1, $dictGenericEq_0, $v_2) {
+  $__num = \func_num_args();
   $__t0 = null;;
   if ($v_2 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inl) {
-$__t0 = ($v1_3 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inl && ((($dictGenericEq_0)->{'genericEq__prime__'})(($v_2)->{'value0'}))(($v1_3)->{'value0'}));
+$__t1 = null;;
+if ($v1_3 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inl) {
+$__t1 = ((($dictGenericEq_0)->{'genericEq__prime__'})(($v_2)->{'value0'}))(($v1_3)->{'value0'});
+goto end_branch_1;;
+};
+$__t1 = false;
+end_branch_1:;
+$__t0 = $__t1;
 goto end_branch_0;;
 };
-  $__t0 = ($v_2 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inr && ($v1_3 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inr && ((($dictGenericEq1_1)->{'genericEq__prime__'})(($v_2)->{'value0'}))(($v1_3)->{'value0'})));
+  if (($v_2 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inr && $v1_3 instanceof \Data\Generic\Rep\Data_Generic_Rep_Inr)) {
+$__t0 = ((($dictGenericEq1_1)->{'genericEq__prime__'})(($v_2)->{'value0'}))(($v1_3)->{'value0'});
+goto end_branch_0;;
+};
+  $__t0 = false;
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
@@ -257,7 +268,7 @@ goto end_branch_0;;
 $GLOBALS['Data_Eq_Generic_genericEqSum'] = __NAMESPACE__ . '\\majData_majEq_majGeneric_genericmajEqmajSum';
 
 // Data_Eq_Generic_genericEq
-function majData_majEq_majGeneric_genericmajEq($dictGeneric_0, $dictGenericEq_1 = null, $x_2 = null, $y_3 = null): bool|\Closure {
+function majData_majEq_majGeneric_genericmajEq($dictGeneric_0, $dictGenericEq_1 = null, $x_2 = null, $y_3 = null) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majEq_majGeneric_genericmajEq';
   if ($__num < 4) {

@@ -139,11 +139,18 @@ function majData_majNumber_majApproximate_eqmajRelative(float $v_0, $v1_1 = null
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__t0 = null;;
+  $__t1 = null;;
   switch ($v1_1) {
 case 0.0:
-$__t0 = (\Data\Number\majData_majNumber_abs($v2_2) <= $v_0);
-goto end_branch_0;;
+$__t2 = null;;
+if ((\Data\Number\majData_majNumber_abs($v2_2) > $v_0)) {
+$__t2 = false;
+goto end_branch_2;;
+};
+$__t2 = true;
+end_branch_2:;
+$__t1 = $__t2;
+goto end_branch_1;;
 break;
 default:
 ;
@@ -151,16 +158,30 @@ break;
 };
   switch ($v2_2) {
 case 0.0:
-$__t0 = (\Data\Number\majData_majNumber_abs($v1_1) <= $v_0);
-goto end_branch_0;;
+$__t3 = null;;
+if ((\Data\Number\majData_majNumber_abs($v1_1) > $v_0)) {
+$__t3 = false;
+goto end_branch_3;;
+};
+$__t3 = true;
+end_branch_3:;
+$__t1 = $__t3;
+goto end_branch_1;;
 break;
 default:
 ;
 break;
 };
-  $__t0 = (\Data\Number\majData_majNumber_abs(((($GLOBALS['Data_Ring_ringNumber'])->{'sub'})($v1_1))($v2_2)) <= ((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])->{'div'})(((($GLOBALS['Data_Semiring_semiringNumber'])->{'mul'})($v_0))(\Data\Number\majData_majNumber_abs(((($GLOBALS['Data_Semiring_semiringNumber'])->{'add'})($v1_1))($v2_2)))))(2.0));
+  $__t0 = null;;
+  if ((\Data\Number\majData_majNumber_abs(($v1_1 - $v2_2)) > ((($GLOBALS['Data_EuclideanRing_euclideanRingNumber'])->{'div'})(($v_0 * \Data\Number\majData_majNumber_abs(($v1_1 + $v2_2)))))(2.0))) {
+$__t0 = false;
+goto end_branch_0;;
+};
+  $__t0 = true;
   end_branch_0:;
-  $__res = $__t0;
+  $__t1 = $__t0;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
@@ -205,7 +226,14 @@ function majData_majNumber_majApproximate_eqmajAbsolute(float $v_0, $x_1 = null,
   if ($__num < 3) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 3);
   }
-  $__res = (\Data\Number\majData_majNumber_abs(((($GLOBALS['Data_Ring_ringNumber'])->{'sub'})($x_1))($y_2)) <= $v_0);
+  $__t0 = null;;
+  if ((\Data\Number\majData_majNumber_abs(($x_1 - $y_2)) > $v_0)) {
+$__t0 = false;
+goto end_branch_0;;
+};
+  $__t0 = true;
+  end_branch_0:;
+  $__res = $__t0;
   goto __end;;
   __end:
   return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;

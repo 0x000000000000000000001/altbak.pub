@@ -123,12 +123,10 @@ function majData_majMap_majGen_genmajMap($dictMonadRec_0, $dictMonadGen_1 = null
   $__res = function($dictOrd_6) use ($Apply0_3_1, $Bind1_2_0, $__local_var_4_2, $dictMonadGen_1, $unfoldable1_5_3) {
   $__num = \func_num_args();
   $fromFoldable_7_4 = (($GLOBALS['Data_Map_Internal_fromFoldable'])($dictOrd_6))($GLOBALS['Data_List_Types_foldableList']);
-  $__res = (function() use ($Apply0_3_1, $Bind1_2_0, $__local_var_4_2, $dictMonadGen_1, $fromFoldable_7_4, $unfoldable1_5_3) {
-  $__fn = function($genKey_8, $genValue_9 = null) use ($Apply0_3_1, $Bind1_2_0, $__local_var_4_2, $dictMonadGen_1, $fromFoldable_7_4, $unfoldable1_5_3, &$__fn) {
+  $__res = function($genKey_8) use ($Apply0_3_1, $Bind1_2_0, $__local_var_4_2, $dictMonadGen_1, $fromFoldable_7_4, $unfoldable1_5_3) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($genValue_9) use ($Apply0_3_1, $Bind1_2_0, $__local_var_4_2, $dictMonadGen_1, $fromFoldable_7_4, $genKey_8, $unfoldable1_5_3) {
+  $__num = \func_num_args();
   $__res = (($dictMonadGen_1)->{'sized'})(function($size_10) use ($Apply0_3_1, $Bind1_2_0, $__local_var_4_2, $dictMonadGen_1, $fromFoldable_7_4, $genKey_8, $genValue_9, $unfoldable1_5_3) {
   $__num = \func_num_args();
   $__res = ((($Bind1_2_0)->{'bind'})(((($dictMonadGen_1)->{'chooseInt'})(0))($size_10)))(function($newSize_11) use ($Apply0_3_1, $__local_var_4_2, $dictMonadGen_1, $fromFoldable_7_4, $genKey_8, $genValue_9, $unfoldable1_5_3) {
@@ -150,10 +148,12 @@ function majData_majMap_majGen_genmajMap($dictMonadRec_0, $dictMonadGen_1 = null
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

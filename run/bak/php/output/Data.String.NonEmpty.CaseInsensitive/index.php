@@ -138,34 +138,34 @@ $GLOBALS['Data_String_NonEmpty_CaseInsensitive_newtypeCaseInsensitiveNonEmptyStr
 }];
 
 // Data_String_NonEmpty_CaseInsensitive_eqCaseInsensitiveNonEmptyString
-$GLOBALS['Data_String_NonEmpty_CaseInsensitive_eqCaseInsensitiveNonEmptyString'] = (object)["eq" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_String_NonEmpty_CaseInsensitive_eqCaseInsensitiveNonEmptyString'] = (object)["eq" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) use ($v_0) {
+  $__num = \func_num_args();
   $__res = ((($GLOBALS['Data_Eq_eqString'])->{'eq'})(\Data\String\Common\majData_majString_majCommon_tomajLower($v_0)))(\Data\String\Common\majData_majString_majCommon_tomajLower($v1_1));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_String_NonEmpty_CaseInsensitive_ordCaseInsensitiveNonEmptyString
-$GLOBALS['Data_String_NonEmpty_CaseInsensitive_ordCaseInsensitiveNonEmptyString'] = (object)["compare" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_String_NonEmpty_CaseInsensitive_ordCaseInsensitiveNonEmptyString'] = (object)["compare" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) use ($v_0) {
+  $__num = \func_num_args();
   $__res = ((($GLOBALS['Data_Ord_ordString'])->{'compare'})(\Data\String\Common\majData_majString_majCommon_tomajLower($v_0)))(\Data\String\Common\majData_majString_majCommon_tomajLower($v1_1));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Eq0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Eq0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_String_NonEmpty_CaseInsensitive_eqCaseInsensitiveNonEmptyString'];
   goto __end;;

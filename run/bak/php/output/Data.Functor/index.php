@@ -99,14 +99,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Functor = \call_user_func(function() {
   $exports = [];
-$arrayMap = function($f, $arr = null) use (&$arrayMap) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$arrayMap) {
-
-            return $arrayMap(...\array_merge($__args, $more));
-        };
-    }
+$arrayMap = function($f, $arr) use (&$arrayMap) {
     return array_map($f, $arr);
 };
 
@@ -219,19 +212,19 @@ function majData_majFunctor_voidmajRight($dictFunctor_0, $x_1 = null) {
 $GLOBALS['Data_Functor_voidRight'] = __NAMESPACE__ . '\\majData_majFunctor_voidmajRight';
 
 // Data_Functor_functorProxy
-$GLOBALS['Data_Functor_functorProxy'] = (object)["map" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_Functor_functorProxy'] = (object)["map" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) {
+  $__num = \func_num_args();
   $__res = new \Type\Proxy\Type_Proxy_Proxy();
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Functor_functorFn
 $GLOBALS['Data_Functor_functorFn'] = (object)["map" => ($GLOBALS['Control_Semigroupoid_semigroupoidFn'])->{'compose'}];

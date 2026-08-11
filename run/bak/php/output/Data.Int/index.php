@@ -113,14 +113,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Int = \call_user_func(function() {
   $exports = [];
-$fromNumberImpl = function($just, $nothing = null, $n = null) use (&$fromNumberImpl) {
-    if (\func_num_args() < 3) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$fromNumberImpl) {
-
-            return $fromNumberImpl(...\array_merge($__args, $more));
-        };
-    }
+$fromNumberImpl = function($just, $nothing, $n) use (&$fromNumberImpl) {
     // JS bitwise OR 0 limits to 32-bit signed integer. 
     // PHP integers are typically 64-bit, but to match JS semantics we can just cast to int.
     return (intval($n) == $n) ? $just(intval($n)) : $nothing;
@@ -130,14 +123,7 @@ $toNumber = function($n) {
     return floatval($n);
 };
 
-$fromStringAsImpl = function($just, $nothing = null, $radix = null, $s = null) use (&$fromStringAsImpl) {
-    if (\func_num_args() < 4) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$fromStringAsImpl) {
-
-            return $fromStringAsImpl(...\array_merge($__args, $more));
-        };
-    }
+$fromStringAsImpl = function($just, $nothing, $radix, $s) use (&$fromStringAsImpl) {
     
     if ($radix < 11) {
         $digits = "[0-" . ($radix - 1) . "]";
@@ -146,57 +132,43 @@ $fromStringAsImpl = function($just, $nothing = null, $radix = null, $s = null) u
     } else {
         $digits = "[0-9a-" . chr(86 + $radix) . "]";
     }
-    $pattern = "/^[\+\-]?" . $digits . "+$/i";
-
-    if (preg_match($pattern, $s)) {
-        $i = intval(base_convert($s, $radix, 10));
-        return $just($i);
+    $pattern = "/^([\+\-]?)(" . $digits . "+)$/i";
+    
+    if (preg_match($pattern, $s, $matches)) {
+        $sign = $matches[1];
+        $unsignedS = $matches[2];
+        
+        // Use floatval here because base_convert can return values larger than PHP's int max
+        // on 32-bit systems, and we want to correctly reject them.
+        $i = floatval(base_convert($unsignedS, $radix, 10));
+        if ($sign === '-') {
+            $i = -$i;
+        }
+        if ($i < -2147483648 || $i > 2147483647) {
+            return $nothing;
+        }
+        return $just((int)$i);
     } else {
         return $nothing;
     }
 };
 
-$toStringAs = function($radix, $i = null) use (&$toStringAs) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$toStringAs) {
-
-            return $toStringAs(...\array_merge($__args, $more));
-        };
+$toStringAs = function($radix, $i) use (&$toStringAs) {
+    if ($i < 0) {
+        return "-" . base_convert(-$i, 10, $radix);
     }
     return base_convert($i, 10, $radix);
 };
 
-$quot = function($x, $y = null) use (&$quot) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$quot) {
-
-            return $quot(...\array_merge($__args, $more));
-        };
-    }
+$quot = function($x, $y) use (&$quot) {
     return intdiv($x, $y);
 };
 
-$rem = function($x, $y = null) use (&$rem) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$rem) {
-
-            return $rem(...\array_merge($__args, $more));
-        };
-    }
+$rem = function($x, $y) use (&$rem) {
     return $x % $y;
 };
 
-$pow = function($x, $y = null) use (&$pow) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$pow) {
-
-            return $pow(...\array_merge($__args, $more));
-        };
-    }
+$pow = function($x, $y) use (&$pow) {
     return intval(pow($x, $y));
 };
 
@@ -302,37 +274,51 @@ final class Data_Int_Odd { public $tag = 'Odd'; public function __construct() {}
 // Data_Int_greaterThanOrEq
 $GLOBALS['Data_Int_greaterThanOrEq'] = (function() use (&$__fn) {
 $__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
-return (function() use ($__local_var_0_0) {
-  $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+return function($a1_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ( ! (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT);
+  $__res = function($a2_2) use ($__local_var_0_0, $a1_1) {
+  $__num = \func_num_args();
+  $__t1 = null;;
+  if ((($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT) {
+$__t1 = false;
+goto end_branch_1;;
+};
+  $__t1 = true;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 })();
 
 // Data_Int_lessThanOrEq
 $GLOBALS['Data_Int_lessThanOrEq'] = (function() use (&$__fn) {
 $__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
-return (function() use ($__local_var_0_0) {
-  $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+return function($a1_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ( ! (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_GT);
+  $__res = function($a2_2) use ($__local_var_0_0, $a1_1) {
+  $__num = \func_num_args();
+  $__t1 = null;;
+  if ((($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_GT) {
+$__t1 = false;
+goto end_branch_1;;
+};
+  $__t1 = true;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 })();
 
 // Data_Int_Even
@@ -466,11 +452,29 @@ function majData_majInt_unsafemajClamp(float $x_0): int|\Closure {
 $__t2 = 0;
 goto end_branch_2;;
 };
-  if (($x_0 >= \Data\Int\majData_majInt_tomajNumber(($GLOBALS['Data_Bounded_boundedInt'])->{'top'}))) {
+  if ((function() use ($x_0, &$__fn) {
+$__t3 = null;;
+if (($x_0 < \Data\Int\majData_majInt_tomajNumber(($GLOBALS['Data_Bounded_boundedInt'])->{'top'}))) {
+$__t3 = false;
+goto end_branch_3;;
+};
+$__t3 = true;
+end_branch_3:;
+return $__t3;
+})()) {
 $__t2 = ($GLOBALS['Data_Bounded_boundedInt'])->{'top'};
 goto end_branch_2;;
 };
-  if (($x_0 <= \Data\Int\majData_majInt_tomajNumber(($GLOBALS['Data_Bounded_boundedInt'])->{'bottom'}))) {
+  if ((function() use ($x_0, &$__fn) {
+$__t4 = null;;
+if (($x_0 > \Data\Int\majData_majInt_tomajNumber(($GLOBALS['Data_Bounded_boundedInt'])->{'bottom'}))) {
+$__t4 = false;
+goto end_branch_4;;
+};
+$__t4 = true;
+end_branch_4:;
+return $__t4;
+})()) {
 $__t2 = ($GLOBALS['Data_Bounded_boundedInt'])->{'bottom'};
 goto end_branch_2;;
 };
@@ -576,34 +580,43 @@ function majData_majInt_parity(int $n_0) {
 $GLOBALS['Data_Int_parity'] = __NAMESPACE__ . '\\majData_majInt_parity';
 
 // Data_Int_eqParity
-$GLOBALS['Data_Int_eqParity'] = (object)["eq" => (function() {
-  $__fn = function($x_0, $y_1 = null) use (&$__fn) {
+$GLOBALS['Data_Int_eqParity'] = (object)["eq" => function($x_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_1) use ($x_0) {
+  $__num = \func_num_args();
   $__t0 = null;;
   if ($x_0 instanceof \Data\Int\Data_Int_Even) {
-$__t0 = $y_1 instanceof \Data\Int\Data_Int_Even;
+$__t1 = null;;
+if ($y_1 instanceof \Data\Int\Data_Int_Even) {
+$__t1 = true;
+goto end_branch_1;;
+};
+$__t1 = false;
+end_branch_1:;
+$__t0 = $__t1;
 goto end_branch_0;;
 };
-  $__t0 = ($x_0 instanceof \Data\Int\Data_Int_Odd && $y_1 instanceof \Data\Int\Data_Int_Odd);
+  if (($x_0 instanceof \Data\Int\Data_Int_Odd && $y_1 instanceof \Data\Int\Data_Int_Odd)) {
+$__t0 = true;
+goto end_branch_0;;
+};
+  $__t0 = false;
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Int_ordParity
-$GLOBALS['Data_Int_ordParity'] = (object)["compare" => (function() {
-  $__fn = function($x_0, $y_1 = null) use (&$__fn) {
+$GLOBALS['Data_Int_ordParity'] = (object)["compare" => function($x_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_1) use ($x_0) {
+  $__num = \func_num_args();
   $__t0 = null;;
   if ($x_0 instanceof \Data\Int\Data_Int_Even) {
 $__t1 = null;;
@@ -630,10 +643,12 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Eq0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Eq0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Int_eqParity'];
   goto __end;;
@@ -642,12 +657,10 @@ goto end_branch_0;;
 }];
 
 // Data_Int_semiringParity
-$GLOBALS['Data_Int_semiringParity'] = (object)["zero" => new \Data\Int\Data_Int_Even(), "add" => (function() {
-  $__fn = function($x_0, $y_1 = null) use (&$__fn) {
+$GLOBALS['Data_Int_semiringParity'] = (object)["zero" => new \Data\Int\Data_Int_Even(), "add" => function($x_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_1) use ($x_0) {
+  $__num = \func_num_args();
   $__t0 = null;;
   if (((($GLOBALS['Data_Int_eqParity'])->{'eq'})($x_0))($y_1)) {
 $__t0 = new \Data\Int\Data_Int_Even();
@@ -658,15 +671,15 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "one" => new \Data\Int\Data_Int_Odd(), "mul" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "one" => new \Data\Int\Data_Int_Odd(), "mul" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) use ($v_0) {
+  $__num = \func_num_args();
   $__t1 = null;;
   if (($v_0 instanceof \Data\Int\Data_Int_Odd && $v1_1 instanceof \Data\Int\Data_Int_Odd)) {
 $__t1 = new \Data\Int\Data_Int_Odd();
@@ -677,10 +690,12 @@ goto end_branch_1;;
   $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Int_ringParity
 $GLOBALS['Data_Int_ringParity'] = (object)["sub" => ($GLOBALS['Data_Int_semiringParity'])->{'add'}, "Semiring0" => function($_dollar__unused_0) {
@@ -737,31 +752,31 @@ goto end_branch_0;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, "div" => (function() {
-  $__fn = function($x_0, $v_1 = null) use (&$__fn) {
+}, "div" => function($x_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_1) use ($x_0) {
+  $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "mod" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "mod" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) {
+  $__num = \func_num_args();
   $__res = new \Data\Int\Data_Int_Even();
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "CommutativeRing0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "CommutativeRing0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Int_commutativeRingParity'];
   goto __end;;

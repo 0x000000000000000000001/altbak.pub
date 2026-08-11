@@ -122,12 +122,12 @@ function majData_majDecide_identity($x_0) {
 $GLOBALS['Data_Decide_identity'] = __NAMESPACE__ . '\\majData_majDecide_identity';
 
 // Data_Decide_choosePredicate
-$GLOBALS['Data_Decide_choosePredicate'] = (object)["choose" => (function() {
-  $__fn = function($f_0, $v_1 = null, $v1_2 = null) use (&$__fn) {
+$GLOBALS['Data_Decide_choosePredicate'] = (object)["choose" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($v_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($v1_2) use ($f_0, $v_1) {
+  $__num = \func_num_args();
   $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v2_3) use ($v1_2, $v_1) {
   $__num = \func_num_args();
   $__t0 = null;;
@@ -149,10 +149,16 @@ goto end_branch_0;;
 }))($f_0);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(), "Divide0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Divide0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Divide_dividePredicate'];
   goto __end;;
@@ -167,13 +173,13 @@ function majData_majDecide_choosemajOp($dictSemigroup_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $divideOp_1_0 = \Data\Divide\majData_majDivide_dividemajOp($dictSemigroup_0);
-  $__res = (object)["choose" => (function() {
-  $__fn = function($f_2, $v_3 = null, $v1_4 = null) use (&$__fn) {
+  $divideOp_1_0 = ($GLOBALS['Data_Divide_divideOp'])($dictSemigroup_0);
+  $__res = (object)["choose" => function($f_2) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($v_3) use ($f_2) {
+  $__num = \func_num_args();
+  $__res = function($v1_4) use ($f_2, $v_3) {
+  $__num = \func_num_args();
   $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])(function($v2_5) use ($v1_4, $v_3) {
   $__num = \func_num_args();
   $__t1 = null;;
@@ -195,10 +201,16 @@ goto end_branch_1;;
 }))($f_2);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(), "Divide0" => function($_dollar__unused_2) use ($divideOp_1_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Divide0" => function($_dollar__unused_2) use ($divideOp_1_0) {
   $__num = \func_num_args();
   $__res = $divideOp_1_0;
   goto __end;;
@@ -212,12 +224,16 @@ goto end_branch_1;;
 $GLOBALS['Data_Decide_chooseOp'] = __NAMESPACE__ . '\\majData_majDecide_choosemajOp';
 
 // Data_Decide_chooseEquivalence
-$GLOBALS['Data_Decide_chooseEquivalence'] = (object)["choose" => (function() {
-  $__fn = function($f_0, $v_1 = null, $v1_2 = null, $a_3 = null, $b_4 = null) use (&$__fn) {
+$GLOBALS['Data_Decide_chooseEquivalence'] = (object)["choose" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 5) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 5);
-  }
+  $__res = function($v_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($v1_2) use ($f_0, $v_1) {
+  $__num = \func_num_args();
+  $__res = function($a_3) use ($f_0, $v1_2, $v_1) {
+  $__num = \func_num_args();
+  $__res = function($b_4) use ($a_3, $f_0, $v1_2, $v_1) {
+  $__num = \func_num_args();
   $v2_5_0 = ($f_0)($a_3);
   $__t1 = null;;
   if ($v2_5_0 instanceof \Data\Either\Data_Either_Left) {
@@ -260,10 +276,24 @@ goto end_branch_1;;
   $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
-  };
-  return $__fn;
-})(), "Divide0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Divide0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Divide_divideEquivalence'];
   goto __end;;
@@ -272,12 +302,16 @@ goto end_branch_1;;
 }];
 
 // Data_Decide_chooseComparison
-$GLOBALS['Data_Decide_chooseComparison'] = (object)["choose" => (function() {
-  $__fn = function($f_0, $v_1 = null, $v1_2 = null, $a_3 = null, $b_4 = null) use (&$__fn) {
+$GLOBALS['Data_Decide_chooseComparison'] = (object)["choose" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 5) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 5);
-  }
+  $__res = function($v_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($v1_2) use ($f_0, $v_1) {
+  $__num = \func_num_args();
+  $__res = function($a_3) use ($f_0, $v1_2, $v_1) {
+  $__num = \func_num_args();
+  $__res = function($b_4) use ($a_3, $f_0, $v1_2, $v_1) {
+  $__num = \func_num_args();
   $v2_5_0 = ($f_0)($a_3);
   $__t1 = null;;
   if ($v2_5_0 instanceof \Data\Either\Data_Either_Left) {
@@ -320,10 +354,24 @@ goto end_branch_1;;
   $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 5 ? $__res(...\array_slice(\func_get_args(), 5)) : $__res;
-  };
-  return $__fn;
-})(), "Divide0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Divide0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Divide_divideComparison'];
   goto __end;;

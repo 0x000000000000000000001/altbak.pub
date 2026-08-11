@@ -111,13 +111,7 @@ $showRegexImpl = function($r) use (&$showRegexImpl) {
     return $r->pattern;
 };
 
-$regexImpl = function($left, $right = null, $s1 = null, $s2 = null) use (&$regexImpl) {
-    if (\func_num_args() < 4) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$regexImpl) {
-            return $regexImpl(...\array_merge($__args, $more));
-        };
-    }
+$regexImpl = function($left, $right, $s1, $s2) use (&$regexImpl) {
     $pattern = '/' . $s1 . '/' . $s2;
     // Strip modifiers that PHP doesn't support
     $php_flags = str_replace(['g', 'y'], '', $s2);
@@ -144,38 +138,28 @@ $flagsImpl = function($r) use (&$flagsImpl) {
     ];
 };
 
-$test = function($r, $s = null) use (&$test) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$test) {
-            return $test(...\array_merge($__args, $more));
-        };
-    }
+$test = function($r, $s) use (&$test) {
     return preg_match($r->pcre, $s) === 1;
 };
 
-$_match = function($just, $nothing = null, $r = null, $s = null) use (&$_match) {
-    if (\func_num_args() < 4) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$_match) {
-            return $_match(...\array_merge($__args, $more));
-        };
-    }
+$_match = function($just, $nothing, $r, $s) use (&$_match) {
     if (strpos($r->flags, 'g') !== false) {
-        $matched = preg_match_all($r->pcre, $s, $matches);
+        $matched = preg_match_all($r->pcre, $s, $matches, PREG_UNMATCHED_AS_NULL);
         if ($matched) {
             $res = [];
             foreach ($matches[0] as $m) {
-                $res[] = $m === "" ? $nothing : $just($m);
+                $res[] = $m === null ? $nothing : $just($m);
             }
             return $just($res);
         }
     } else {
-        $matched = preg_match($r->pcre, $s, $matches);
+        $matched = preg_match($r->pcre, $s, $matches, PREG_UNMATCHED_AS_NULL);
         if ($matched) {
             $res = [];
-            foreach ($matches as $m) {
-                $res[] = $m === "" ? $nothing : $just($m);
+            $i = 0;
+            while (\array_key_exists($i, $matches)) {
+                $res[] = $matches[$i] === null ? $nothing : $just($matches[$i]);
+                $i++;
             }
             return $just($res);
         }
@@ -183,60 +167,40 @@ $_match = function($just, $nothing = null, $r = null, $s = null) use (&$_match) 
     return $nothing;
 };
 
-$replace = function($r, $s1 = null, $s2 = null) use (&$replace) {
-    if (\func_num_args() < 3) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$replace) {
-            return $replace(...\array_merge($__args, $more));
-        };
-    }
+$replace = function($r, $s1, $s2) use (&$replace) {
     $limit = strpos($r->flags, 'g') !== false ? -1 : 1;
     // $s1 in PCRE uses $1 for groups whereas JS uses $1 or \1. We assume s1 is compatible.
     // However, JS replace uses $1, PCRE preg_replace also uses $1.
     return preg_replace($r->pcre, $s1, $s2, $limit);
 };
 
-$_replaceBy = function($just, $nothing = null, $r = null, $f = null, $s = null) use (&$_replaceBy) {
-    if (\func_num_args() < 5) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$_replaceBy) {
-            return $_replaceBy(...\array_merge($__args, $more));
-        };
-    }
+$_replaceBy = function($just, $nothing, $r, $f, $s) use (&$_replaceBy) {
     $limit = strpos($r->flags, 'g') !== false ? -1 : 1;
     return preg_replace_callback($r->pcre, function($matches) use ($f, $just, $nothing) {
         $match = $matches[0];
         $groups = [];
-        for ($i = 1; $i < \count($matches); $i++) {
-            $groups[] = (!isset($matches[$i]) || $matches[$i] === "") ? $nothing : $just($matches[$i]);
+        $i = 1;
+        while (\array_key_exists($i, $matches)) {
+            $groups[] = $matches[$i] === null ? $nothing : $just($matches[$i]);
+            $i++;
         }
         $fn = $f($match);
         return $fn($groups);
-    }, $s, $limit);
+    }, $s, $limit, $count, PREG_UNMATCHED_AS_NULL);
 };
 
-$_search = function($just, $nothing = null, $r = null, $s = null) use (&$_search) {
-    if (\func_num_args() < 4) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$_search) {
-            return $_search(...\array_merge($__args, $more));
-        };
-    }
+$_search = function($just, $nothing, $r, $s) use (&$_search) {
     if (preg_match($r->pcre, $s, $matches, PREG_OFFSET_CAPTURE)) {
         return $just($matches[0][1]);
     }
     return $nothing;
 };
 
-$split = function($r, $s = null) use (&$split) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$split) {
-            return $split(...\array_merge($__args, $more));
-        };
+$split = function($r, $s) use (&$split) {
+    if ($r->source === "") {
+        return preg_split($r->pcre, $s, -1, PREG_SPLIT_NO_EMPTY);
     }
-    $limit = strpos($r->flags, 'g') !== false ? -1 : 2;
-    return preg_split($r->pcre, $s, $limit);
+    return preg_split($r->pcre, $s);
 };
 
 $exports['showRegexImpl'] = $showRegexImpl;

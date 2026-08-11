@@ -201,19 +201,25 @@ function majControl_majMonad_majRmajWmajS_mapmajRmajWmajS($f_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $__local_var_1_0 = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity']))($f_0)))($GLOBALS['Unsafe_Coerce_unsafeCoerce']);
-  $__res = (function() use ($__local_var_1_0) {
-  $__fn = function($v_2, $r_3 = null, $s_4 = null) use ($__local_var_1_0, &$__fn) {
+  $__res = function($v_2) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($r_3) use ($__local_var_1_0, $v_2) {
+  $__num = \func_num_args();
+  $__res = function($s_4) use ($__local_var_1_0, $r_3, $v_2) {
+  $__num = \func_num_args();
   $__res = ($__local_var_1_0)((($v_2)($r_3))($s_4));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

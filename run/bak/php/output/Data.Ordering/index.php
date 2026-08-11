@@ -137,12 +137,10 @@ goto end_branch_0;;
 }];
 
 // Data_Ordering_semigroupOrdering
-$GLOBALS['Data_Ordering_semigroupOrdering'] = (object)["append" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_Ordering_semigroupOrdering'] = (object)["append" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) use ($v_0) {
+  $__num = \func_num_args();
   $__t0 = null;;
   if ($v_0 instanceof \Data\Ordering\Data_Ordering_LT) {
 $__t0 = new \Data\Ordering\Data_Ordering_LT();
@@ -162,10 +160,12 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Ordering_invert
 function majData_majOrdering_invert($v_0) {
@@ -198,28 +198,46 @@ goto end_branch_0;;
 $GLOBALS['Data_Ordering_invert'] = __NAMESPACE__ . '\\majData_majOrdering_invert';
 
 // Data_Ordering_eqOrdering
-$GLOBALS['Data_Ordering_eqOrdering'] = (object)["eq" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_Ordering_eqOrdering'] = (object)["eq" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) use ($v_0) {
+  $__num = \func_num_args();
   $__t0 = null;;
   if ($v_0 instanceof \Data\Ordering\Data_Ordering_LT) {
-$__t0 = $v1_1 instanceof \Data\Ordering\Data_Ordering_LT;
+$__t1 = null;;
+if ($v1_1 instanceof \Data\Ordering\Data_Ordering_LT) {
+$__t1 = true;
+goto end_branch_1;;
+};
+$__t1 = false;
+end_branch_1:;
+$__t0 = $__t1;
 goto end_branch_0;;
 };
   if ($v_0 instanceof \Data\Ordering\Data_Ordering_GT) {
-$__t0 = $v1_1 instanceof \Data\Ordering\Data_Ordering_GT;
+$__t2 = null;;
+if ($v1_1 instanceof \Data\Ordering\Data_Ordering_GT) {
+$__t2 = true;
+goto end_branch_2;;
+};
+$__t2 = false;
+end_branch_2:;
+$__t0 = $__t2;
 goto end_branch_0;;
 };
-  $__t0 = ($v_0 instanceof \Data\Ordering\Data_Ordering_EQ && $v1_1 instanceof \Data\Ordering\Data_Ordering_EQ);
+  if (($v_0 instanceof \Data\Ordering\Data_Ordering_EQ && $v1_1 instanceof \Data\Ordering\Data_Ordering_EQ)) {
+$__t0 = true;
+goto end_branch_0;;
+};
+  $__t0 = false;
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 

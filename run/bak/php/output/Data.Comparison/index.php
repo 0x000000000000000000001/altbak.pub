@@ -142,19 +142,19 @@ function majData_majComparison_majComparison($x_0) {
 $GLOBALS['Data_Comparison_Comparison'] = __NAMESPACE__ . '\\majData_majComparison_majComparison';
 
 // Data_Comparison_semigroupComparison
-$GLOBALS['Data_Comparison_semigroupComparison'] = (object)["append" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_Comparison_semigroupComparison'] = (object)["append" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) use ($v_0) {
+  $__num = \func_num_args();
   $__res = (($GLOBALS['Data_Comparison_append'])($v_0))($v1_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Comparison_newtypeComparison
 $GLOBALS['Data_Comparison_newtypeComparison'] = (object)["Coercible0" => function($_dollar__unused_0) {
@@ -166,19 +166,19 @@ $GLOBALS['Data_Comparison_newtypeComparison'] = (object)["Coercible0" => functio
 }];
 
 // Data_Comparison_monoidComparison
-$GLOBALS['Data_Comparison_monoidComparison'] = (object)["mempty" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_Comparison_monoidComparison'] = (object)["mempty" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) {
+  $__num = \func_num_args();
   $__res = new \Data\Ordering\Data_Ordering_EQ();
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Semigroup0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Semigroup0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Comparison_semigroupComparison'];
   goto __end;;
@@ -201,17 +201,29 @@ function majData_majComparison_defaultmajComparison($dictOrd_0) {
 $GLOBALS['Data_Comparison_defaultComparison'] = __NAMESPACE__ . '\\majData_majComparison_defaultmajComparison';
 
 // Data_Comparison_contravariantComparison
-$GLOBALS['Data_Comparison_contravariantComparison'] = (object)["cmap" => (function() {
-  $__fn = function($f_0, $v_1 = null, $x_2 = null, $y_3 = null) use (&$__fn) {
+$GLOBALS['Data_Comparison_contravariantComparison'] = (object)["cmap" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 4) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 4);
-  }
+  $__res = function($v_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($x_2) use ($f_0, $v_1) {
+  $__num = \func_num_args();
+  $__res = function($y_3) use ($f_0, $v_1, $x_2) {
+  $__num = \func_num_args();
   $__res = (($v_1)(($f_0)($x_2)))(($f_0)($y_3));
   goto __end;;
   __end:
-  return $__num > 4 ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 

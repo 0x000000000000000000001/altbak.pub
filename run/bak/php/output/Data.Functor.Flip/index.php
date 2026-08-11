@@ -153,19 +153,19 @@ function majData_majFunctor_majFlip_semigroupoidmajFlip($dictSemigroupoid_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["compose" => (function() use ($dictSemigroupoid_0) {
-  $__fn = function($v_1, $v1_2 = null) use ($dictSemigroupoid_0, &$__fn) {
+  $__res = (object)["compose" => function($v_1) use ($dictSemigroupoid_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_2) use ($dictSemigroupoid_0, $v_1) {
+  $__num = \func_num_args();
   $__res = ((($dictSemigroupoid_0)->{'compose'})($v1_2))($v_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -202,19 +202,19 @@ function majData_majFunctor_majFlip_functormajFlip($dictBifunctor_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["map" => (function() use ($dictBifunctor_0) {
-  $__fn = function($f_1, $v_2 = null) use ($dictBifunctor_0, &$__fn) {
+  $__res = (object)["map" => function($f_1) use ($dictBifunctor_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_2) use ($dictBifunctor_0, $f_1) {
+  $__num = \func_num_args();
   $__res = (((($dictBifunctor_0)->{'bimap'})($f_1))($GLOBALS['Data_Bifunctor_identity']))($v_2);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -242,19 +242,19 @@ function majData_majFunctor_majFlip_contravariantmajFlip($dictProfunctor_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["cmap" => (function() use ($dictProfunctor_0) {
-  $__fn = function($f_1, $v_2 = null) use ($dictProfunctor_0, &$__fn) {
+  $__res = (object)["cmap" => function($f_1) use ($dictProfunctor_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_2) use ($dictProfunctor_0, $f_1) {
+  $__num = \func_num_args();
   $__res = (((($dictProfunctor_0)->{'dimap'})($f_1))($GLOBALS['Data_Profunctor_identity']))($v_2);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -269,22 +269,22 @@ function majData_majFunctor_majFlip_categorymajFlip($dictCategory_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $__local_var_1_0 = (($dictCategory_0)->{'Semigroupoid0'})(null);
-  $semigroupoidFlip1_2_1 = (object)["compose" => (function() use ($__local_var_1_0) {
-  $__fn = function($v_2, $v1_3 = null) use ($__local_var_1_0, &$__fn) {
+  $semigroupoidFlip1_1_0 = (object)["compose" => function($v_2) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_3) use ($__local_var_1_0, $v_2) {
+  $__num = \func_num_args();
   $__res = ((($__local_var_1_0)->{'compose'})($v1_3))($v_2);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
-  $__res = (object)["identity" => ($dictCategory_0)->{'identity'}, "Semigroupoid0" => function($_dollar__unused_3) use ($semigroupoidFlip1_2_1) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = (object)["identity" => ($dictCategory_0)->{'identity'}, "Semigroupoid0" => function($_dollar__unused_2) use ($semigroupoidFlip1_1_0) {
   $__num = \func_num_args();
-  $__res = $semigroupoidFlip1_2_1;
+  $__res = $semigroupoidFlip1_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -302,19 +302,25 @@ function majData_majFunctor_majFlip_bifunctormajFlip($dictBifunctor_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["bimap" => (function() use ($dictBifunctor_0) {
-  $__fn = function($f_1, $g_2 = null, $v_3 = null) use ($dictBifunctor_0, &$__fn) {
+  $__res = (object)["bimap" => function($f_1) use ($dictBifunctor_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($g_2) use ($dictBifunctor_0, $f_1) {
+  $__num = \func_num_args();
+  $__res = function($v_3) use ($dictBifunctor_0, $f_1, $g_2) {
+  $__num = \func_num_args();
   $__res = (((($dictBifunctor_0)->{'bimap'})($g_2))($f_1))($v_3);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -329,34 +335,40 @@ function majData_majFunctor_majFlip_biapplymajFlip($dictBiapply_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $__local_var_1_0 = (($dictBiapply_0)->{'Bifunctor0'})(null);
-  $bifunctorFlip1_2_1 = (object)["bimap" => (function() use ($__local_var_1_0) {
-  $__fn = function($f_2, $g_3 = null, $v_4 = null) use ($__local_var_1_0, &$__fn) {
+  $bifunctorFlip1_1_0 = (object)["bimap" => function($f_2) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($g_3) use ($__local_var_1_0, $f_2) {
+  $__num = \func_num_args();
+  $__res = function($v_4) use ($__local_var_1_0, $f_2, $g_3) {
+  $__num = \func_num_args();
   $__res = (((($__local_var_1_0)->{'bimap'})($g_3))($f_2))($v_4);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
-  $__res = (object)["biapply" => (function() use ($dictBiapply_0) {
-  $__fn = function($v_3, $v1_4 = null) use ($dictBiapply_0, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($dictBiapply_0)->{'biapply'})($v_3))($v1_4);
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Bifunctor0" => function($_dollar__unused_3) use ($bifunctorFlip1_2_1) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = (object)["biapply" => function($v_2) use ($dictBiapply_0) {
   $__num = \func_num_args();
-  $__res = $bifunctorFlip1_2_1;
+  $__res = function($v1_3) use ($dictBiapply_0, $v_2) {
+  $__num = \func_num_args();
+  $__res = ((($dictBiapply_0)->{'biapply'})($v_2))($v1_3);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Bifunctor0" => function($_dollar__unused_2) use ($bifunctorFlip1_1_0) {
+  $__num = \func_num_args();
+  $__res = $bifunctorFlip1_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -376,53 +388,59 @@ function majData_majFunctor_majFlip_biapplicativemajFlip($dictBiapplicative_0) {
   }
   $__local_var_1_0 = (($dictBiapplicative_0)->{'Biapply0'})(null);
   $__local_var_2_1 = (($__local_var_1_0)->{'Bifunctor0'})(null);
-  $bifunctorFlip1_3_2 = (object)["bimap" => (function() use ($__local_var_2_1) {
-  $__fn = function($f_3, $g_4 = null, $v_5 = null) use ($__local_var_2_1, &$__fn) {
+  $bifunctorFlip1_2_1 = (object)["bimap" => function($f_3) use ($__local_var_2_1) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($g_4) use ($__local_var_2_1, $f_3) {
+  $__num = \func_num_args();
+  $__res = function($v_5) use ($__local_var_2_1, $f_3, $g_4) {
+  $__num = \func_num_args();
   $__res = (((($__local_var_2_1)->{'bimap'})($g_4))($f_3))($v_5);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
-  $biapplyFlip1_3_2 = (object)["biapply" => (function() use ($__local_var_1_0) {
-  $__fn = function($v_4, $v1_5 = null) use ($__local_var_1_0, &$__fn) {
-  $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($__local_var_1_0)->{'biapply'})($v_4))($v1_5);
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Bifunctor0" => function($_dollar__unused_4) use ($bifunctorFlip1_3_2) {
-  $__num = \func_num_args();
-  $__res = $bifunctorFlip1_3_2;
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $__res = (object)["bipure" => (function() use ($dictBiapplicative_0) {
-  $__fn = function($a_4, $b_5 = null) use ($dictBiapplicative_0, &$__fn) {
+  $biapplyFlip1_1_0 = (object)["biapply" => function($v_3) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ((($dictBiapplicative_0)->{'bipure'})($b_5))($a_4);
+  $__res = function($v1_4) use ($__local_var_1_0, $v_3) {
+  $__num = \func_num_args();
+  $__res = ((($__local_var_1_0)->{'biapply'})($v_3))($v1_4);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Biapply0" => function($_dollar__unused_4) use ($biapplyFlip1_3_2) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Bifunctor0" => function($_dollar__unused_3) use ($bifunctorFlip1_2_1) {
   $__num = \func_num_args();
-  $__res = $biapplyFlip1_3_2;
+  $__res = $bifunctorFlip1_2_1;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = (object)["bipure" => function($a_2) use ($dictBiapplicative_0) {
+  $__num = \func_num_args();
+  $__res = function($b_3) use ($a_2, $dictBiapplicative_0) {
+  $__num = \func_num_args();
+  $__res = ((($dictBiapplicative_0)->{'bipure'})($b_3))($a_2);
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Biapply0" => function($_dollar__unused_2) use ($biapplyFlip1_1_0) {
+  $__num = \func_num_args();
+  $__res = $biapplyFlip1_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

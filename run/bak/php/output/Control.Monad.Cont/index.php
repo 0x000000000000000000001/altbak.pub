@@ -110,19 +110,19 @@ function majControl_majMonad_majCont_withmajCont($f_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $__local_var_1_0 = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])->{'compose'})($GLOBALS['Data_Identity_Identity'])))((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))((($GLOBALS['Control_Semigroupoid_semigroupoidFn'])->{'compose'})($GLOBALS['Unsafe_Coerce_unsafeCoerce'])));
-  $__res = (function() use ($__local_var_1_0) {
-  $__fn = function($v_2, $k_3 = null) use ($__local_var_1_0, &$__fn) {
+  $__res = function($v_2) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($k_3) use ($__local_var_1_0, $v_2) {
+  $__num = \func_num_args();
   $__res = ($v_2)(($__local_var_1_0)($k_3));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -151,19 +151,19 @@ function majControl_majMonad_majCont_mapmajCont($f_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $__local_var_1_0 = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Identity_Identity']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))($GLOBALS['Unsafe_Coerce_unsafeCoerce']));
-  $__res = (function() use ($__local_var_1_0) {
-  $__fn = function($v_2, $k_3 = null) use ($__local_var_1_0, &$__fn) {
+  $__res = function($v_2) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($k_3) use ($__local_var_1_0, $v_2) {
+  $__num = \func_num_args();
   $__res = ($__local_var_1_0)(($v_2)($k_3));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

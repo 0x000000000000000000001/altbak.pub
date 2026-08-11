@@ -138,19 +138,25 @@ function majData_majFunctor_majCostar_semigroupoidmajCostar($dictExtend_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["compose" => (function() use ($dictExtend_0) {
-  $__fn = function($v_1, $v1_2 = null, $w_3 = null) use ($dictExtend_0, &$__fn) {
+  $__res = (object)["compose" => function($v_1) use ($dictExtend_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($v1_2) use ($dictExtend_0, $v_1) {
+  $__num = \func_num_args();
+  $__res = function($w_3) use ($dictExtend_0, $v1_2, $v_1) {
+  $__num = \func_num_args();
   $__res = ($v_1)(((($dictExtend_0)->{'extend'})($v1_2))($w_3));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -164,19 +170,25 @@ function majData_majFunctor_majCostar_profunctormajCostar($dictFunctor_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["dimap" => (function() use ($dictFunctor_0) {
-  $__fn = function($f_1, $g_2 = null, $v_3 = null) use ($dictFunctor_0, &$__fn) {
+  $__res = (object)["dimap" => function($f_1) use ($dictFunctor_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($g_2) use ($dictFunctor_0, $f_1) {
+  $__num = \func_num_args();
+  $__res = function($v_3) use ($dictFunctor_0, $f_1, $g_2) {
+  $__num = \func_num_args();
   $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($g_2))($v_3)))((($dictFunctor_0)->{'map'})($f_1));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -191,32 +203,32 @@ function majData_majFunctor_majCostar_strongmajCostar($dictComonad_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $Functor0_1_0 = (((($dictComonad_0)->{'Extend0'})(null))->{'Functor0'})(null);
-  $profunctorCostar1_2_1 = \Data\Functor\Costar\majData_majFunctor_majCostar_profunctormajCostar($Functor0_1_0);
-  $__res = (object)["first" => (function() use ($Functor0_1_0, $dictComonad_0) {
-  $__fn = function($v_3, $x_4 = null) use ($Functor0_1_0, $dictComonad_0, &$__fn) {
+  $profunctorCostar1_2_1 = ($GLOBALS['Data_Functor_Costar_profunctorCostar'])($Functor0_1_0);
+  $__res = (object)["first" => function($v_3) use ($Functor0_1_0, $dictComonad_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($x_4) use ($Functor0_1_0, $dictComonad_0, $v_3) {
+  $__num = \func_num_args();
   $__res = new \Data\Tuple\Data_Tuple_Tuple(($v_3)(((($Functor0_1_0)->{'map'})($GLOBALS['Data_Tuple_fst']))($x_4)), ((($dictComonad_0)->{'extract'})($x_4))->{'value1'});
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "second" => (function() use ($Functor0_1_0, $dictComonad_0) {
-  $__fn = function($v_3, $x_4 = null) use ($Functor0_1_0, $dictComonad_0, &$__fn) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "second" => function($v_3) use ($Functor0_1_0, $dictComonad_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($x_4) use ($Functor0_1_0, $dictComonad_0, $v_3) {
+  $__num = \func_num_args();
   $__res = new \Data\Tuple\Data_Tuple_Tuple(((($dictComonad_0)->{'extract'})($x_4))->{'value0'}, ($v_3)(((($Functor0_1_0)->{'map'})($GLOBALS['Data_Tuple_snd']))($x_4)));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Profunctor0" => function($_dollar__unused_3) use ($profunctorCostar1_2_1) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Profunctor0" => function($_dollar__unused_3) use ($profunctorCostar1_2_1) {
   $__num = \func_num_args();
   $__res = $profunctorCostar1_2_1;
   goto __end;;
@@ -253,42 +265,42 @@ function majData_majFunctor_majCostar_hoistmajCostar($f_0, $v_1 = null) {
 $GLOBALS['Data_Functor_Costar_hoistCostar'] = __NAMESPACE__ . '\\majData_majFunctor_majCostar_hoistmajCostar';
 
 // Data_Functor_Costar_functorCostar
-$GLOBALS['Data_Functor_Costar_functorCostar'] = (object)["map" => (function() {
-  $__fn = function($f_0, $v_1 = null) use (&$__fn) {
+$GLOBALS['Data_Functor_Costar_functorCostar'] = (object)["map" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_1) use ($f_0) {
+  $__num = \func_num_args();
   $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])($f_0))($v_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Functor_Costar_invariantCostar
-$GLOBALS['Data_Functor_Costar_invariantCostar'] = (object)["imap" => (function() {
-  $__fn = function($f_0, $v_1 = null) use (&$__fn) {
+$GLOBALS['Data_Functor_Costar_invariantCostar'] = (object)["imap" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_1) use ($f_0) {
+  $__num = \func_num_args();
   $__res = (($GLOBALS['Data_Functor_Costar_functorCostar'])->{'map'})($f_0);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Functor_Costar_distributiveCostar
-$GLOBALS['Data_Functor_Costar_distributiveCostar'] = (object)["distribute" => (function() {
-  $__fn = function($dictFunctor_0, $f_1 = null, $a_2 = null) use (&$__fn) {
+$GLOBALS['Data_Functor_Costar_distributiveCostar'] = (object)["distribute" => function($dictFunctor_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($f_1) use ($dictFunctor_0) {
+  $__num = \func_num_args();
+  $__res = function($a_2) use ($dictFunctor_0, $f_1) {
+  $__num = \func_num_args();
   $__res = ((($dictFunctor_0)->{'map'})(function($v_3) use ($a_2) {
   $__num = \func_num_args();
   $__res = ($v_3)($a_2);
@@ -298,22 +310,28 @@ $GLOBALS['Data_Functor_Costar_distributiveCostar'] = (object)["distribute" => (f
 }))($f_1);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(), "collect" => (function() {
-  $__fn = function($dictFunctor_0, $f_1 = null) use (&$__fn) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "collect" => function($dictFunctor_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($f_1) use ($dictFunctor_0) {
+  $__num = \func_num_args();
   $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Data_Functor_Costar_distributiveCostar'])->{'distribute'})($dictFunctor_0)))((($dictFunctor_0)->{'map'})($f_1));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Functor_Costar_functorCostar'];
   goto __end;;
@@ -328,13 +346,13 @@ function majData_majFunctor_majCostar_closedmajCostar($dictFunctor_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $profunctorCostar1_1_0 = \Data\Functor\Costar\majData_majFunctor_majCostar_profunctormajCostar($dictFunctor_0);
-  $__res = (object)["closed" => (function() use ($dictFunctor_0) {
-  $__fn = function($v_2, $g_3 = null, $x_4 = null) use ($dictFunctor_0, &$__fn) {
+  $profunctorCostar1_1_0 = ($GLOBALS['Data_Functor_Costar_profunctorCostar'])($dictFunctor_0);
+  $__res = (object)["closed" => function($v_2) use ($dictFunctor_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($g_3) use ($dictFunctor_0, $v_2) {
+  $__num = \func_num_args();
+  $__res = function($x_4) use ($dictFunctor_0, $g_3, $v_2) {
+  $__num = \func_num_args();
   $__res = ($v_2)(((($dictFunctor_0)->{'map'})(function($v1_5) use ($x_4) {
   $__num = \func_num_args();
   $__res = ($v1_5)($x_4);
@@ -344,10 +362,16 @@ function majData_majFunctor_majCostar_closedmajCostar($dictFunctor_0) {
 }))($g_3));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(), "Profunctor0" => function($_dollar__unused_2) use ($profunctorCostar1_1_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Profunctor0" => function($_dollar__unused_2) use ($profunctorCostar1_1_0) {
   $__num = \func_num_args();
   $__res = $profunctorCostar1_1_0;
   goto __end;;
@@ -368,22 +392,28 @@ function majData_majFunctor_majCostar_categorymajCostar($dictComonad_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $__local_var_1_0 = (($dictComonad_0)->{'Extend0'})(null);
-  $semigroupoidCostar1_2_1 = (object)["compose" => (function() use ($__local_var_1_0) {
-  $__fn = function($v_2, $v1_3 = null, $w_4 = null) use ($__local_var_1_0, &$__fn) {
+  $semigroupoidCostar1_1_0 = (object)["compose" => function($v_2) use ($__local_var_1_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($v1_3) use ($__local_var_1_0, $v_2) {
+  $__num = \func_num_args();
+  $__res = function($w_4) use ($__local_var_1_0, $v1_3, $v_2) {
+  $__num = \func_num_args();
   $__res = ($v_2)(((($__local_var_1_0)->{'extend'})($v1_3))($w_4));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
-  $__res = (object)["identity" => ($dictComonad_0)->{'extract'}, "Semigroupoid0" => function($_dollar__unused_3) use ($semigroupoidCostar1_2_1) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = (object)["identity" => ($dictComonad_0)->{'extract'}, "Semigroupoid0" => function($_dollar__unused_2) use ($semigroupoidCostar1_1_0) {
   $__num = \func_num_args();
-  $__res = $semigroupoidCostar1_2_1;
+  $__res = $semigroupoidCostar1_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -401,19 +431,25 @@ function majData_majFunctor_majCostar_bifunctormajCostar($dictContravariant_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["bimap" => (function() use ($dictContravariant_0) {
-  $__fn = function($f_1, $g_2 = null, $v_3 = null) use ($dictContravariant_0, &$__fn) {
+  $__res = (object)["bimap" => function($f_1) use ($dictContravariant_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($g_2) use ($dictContravariant_0, $f_1) {
+  $__num = \func_num_args();
+  $__res = function($v_3) use ($dictContravariant_0, $f_1, $g_2) {
+  $__num = \func_num_args();
   $__res = (($GLOBALS['Control_Semigroupoid_composeImpl'])((($GLOBALS['Control_Semigroupoid_composeImpl'])($g_2))($v_3)))((($dictContravariant_0)->{'cmap'})($f_1));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -421,19 +457,25 @@ function majData_majFunctor_majCostar_bifunctormajCostar($dictContravariant_0) {
 $GLOBALS['Data_Functor_Costar_bifunctorCostar'] = __NAMESPACE__ . '\\majData_majFunctor_majCostar_bifunctormajCostar';
 
 // Data_Functor_Costar_applyCostar
-$GLOBALS['Data_Functor_Costar_applyCostar'] = (object)["apply" => (function() {
-  $__fn = function($v_0, $v1_1 = null, $a_2 = null) use (&$__fn) {
+$GLOBALS['Data_Functor_Costar_applyCostar'] = (object)["apply" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($v1_1) use ($v_0) {
+  $__num = \func_num_args();
+  $__res = function($a_2) use ($v1_1, $v_0) {
+  $__num = \func_num_args();
   $__res = (($v_0)($a_2))(($v1_1)($a_2));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Functor_Costar_functorCostar'];
   goto __end;;
@@ -442,19 +484,25 @@ $GLOBALS['Data_Functor_Costar_applyCostar'] = (object)["apply" => (function() {
 }];
 
 // Data_Functor_Costar_bindCostar
-$GLOBALS['Data_Functor_Costar_bindCostar'] = (object)["bind" => (function() {
-  $__fn = function($v_0, $f_1 = null, $x_2 = null) use (&$__fn) {
+$GLOBALS['Data_Functor_Costar_bindCostar'] = (object)["bind" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($f_1) use ($v_0) {
+  $__num = \func_num_args();
+  $__res = function($x_2) use ($f_1, $v_0) {
+  $__num = \func_num_args();
   $__res = (($f_1)(($v_0)($x_2)))($x_2);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})(), "Apply0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Apply0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Functor_Costar_applyCostar'];
   goto __end;;
@@ -463,19 +511,19 @@ $GLOBALS['Data_Functor_Costar_bindCostar'] = (object)["bind" => (function() {
 }];
 
 // Data_Functor_Costar_applicativeCostar
-$GLOBALS['Data_Functor_Costar_applicativeCostar'] = (object)["pure" => (function() {
-  $__fn = function($a_0, $v_1 = null) use (&$__fn) {
+$GLOBALS['Data_Functor_Costar_applicativeCostar'] = (object)["pure" => function($a_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_1) use ($a_0) {
+  $__num = \func_num_args();
   $__res = $a_0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Apply0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Apply0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Functor_Costar_applyCostar'];
   goto __end;;

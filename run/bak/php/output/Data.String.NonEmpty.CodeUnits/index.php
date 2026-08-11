@@ -112,19 +112,26 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 // Data_String_NonEmpty_CodeUnits_lessThan
 $GLOBALS['Data_String_NonEmpty_CodeUnits_lessThan'] = (function() use (&$__fn) {
 $__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
-return (function() use ($__local_var_0_0) {
-  $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+return function($a1_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT;
+  $__res = function($a2_2) use ($__local_var_0_0, $a1_1) {
+  $__num = \func_num_args();
+  $__t1 = null;;
+  if ((($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT) {
+$__t1 = true;
+goto end_branch_1;;
+};
+  $__t1 = false;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 })();
 
 // Data_String_NonEmpty_CodeUnits_fromJust
@@ -149,22 +156,51 @@ goto end_branch_0;;
 }
 $GLOBALS['Data_String_NonEmpty_CodeUnits_fromJust'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majCodemajUnits_frommajJust';
 
+// Data_String_NonEmpty_CodeUnits_fromJust1
+function majData_majString_majNonmajEmpty_majCodemajUnits_frommajJust1($v_0): string|\Closure {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majString_majNonmajEmpty_majCodemajUnits_frommajJust1';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__t0 = null;;
+  if ($v_0 instanceof \Data\Maybe\Data_Maybe_Just) {
+$__t0 = ($v_0)->{'value0'};
+goto end_branch_0;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t0 = null;
+  end_branch_0:;
+  $__res = $__t0;
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_String_NonEmpty_CodeUnits_fromJust1'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majCodemajUnits_frommajJust1';
+
 // Data_String_NonEmpty_CodeUnits_greaterThanOrEq
 $GLOBALS['Data_String_NonEmpty_CodeUnits_greaterThanOrEq'] = (function() use (&$__fn) {
 $__local_var_0_0 = ((($GLOBALS['Data_Ord_ordIntImpl'])(new \Data\Ordering\Data_Ordering_LT()))(new \Data\Ordering\Data_Ordering_EQ()))(new \Data\Ordering\Data_Ordering_GT());
-return (function() use ($__local_var_0_0) {
-  $__fn = function($a1_1, $a2_2 = null) use ($__local_var_0_0, &$__fn) {
+return function($a1_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ( ! (($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT);
+  $__res = function($a2_2) use ($__local_var_0_0, $a1_1) {
+  $__num = \func_num_args();
+  $__t1 = null;;
+  if ((($__local_var_0_0)($a1_1))($a2_2) instanceof \Data\Ordering\Data_Ordering_LT) {
+$__t1 = false;
+goto end_branch_1;;
+};
+  $__t1 = true;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
 })();
 
 // Data_String_NonEmpty_CodeUnits_snoc
@@ -477,7 +513,7 @@ function majData_majString_majNonmajEmpty_majCodemajUnits_frommajCharmajArray($v
 $GLOBALS['Data_String_NonEmpty_CodeUnits_fromCharArray'] = __NAMESPACE__ . '\\majData_majString_majNonmajEmpty_majCodemajUnits_frommajCharmajArray';
 
 // Data_String_NonEmpty_CodeUnits_fromNonEmptyCharArray_closure
-$GLOBALS['Data_String_NonEmpty_CodeUnits_fromNonEmptyCharArray_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodeUnits_fromJust']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodeUnits_fromCharArray']))($GLOBALS['Data_Array_NonEmpty_toArray']));
+$GLOBALS['Data_String_NonEmpty_CodeUnits_fromNonEmptyCharArray_closure'] = (($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodeUnits_fromJust1']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_String_NonEmpty_CodeUnits_fromCharArray']))($GLOBALS['Data_Array_NonEmpty_toArray']));
 
 // Data_String_NonEmpty_CodeUnits_fromNonEmptyCharArray
 function majData_majString_majNonmajEmpty_majCodemajUnits_frommajNonmajEmptymajCharmajArray($v_0): string|\Closure {

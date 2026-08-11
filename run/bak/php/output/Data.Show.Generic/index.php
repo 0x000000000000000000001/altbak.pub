@@ -101,13 +101,7 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Data_Show_Generic = \call_user_func(function() {
   $exports = [];
-$intercalate = function ($separator, $xs = null) use (&$intercalate) {
-    if (func_num_args() < 2) {
-        $__args = func_get_args();
-        return function (...$more) use ($__args, &$intercalate) {
-            return $intercalate(...array_merge($__args, $more));
-        };
-    }
+$intercalate = function ($separator, $xs) use (&$intercalate) {
     return implode($separator, $xs);
 };
 
@@ -272,7 +266,7 @@ goto end_branch_0;;
 $GLOBALS['Data_Show_Generic_genericShowSum'] = __NAMESPACE__ . '\\majData_majShow_majGeneric_genericmajShowmajSum';
 
 // Data_Show_Generic_genericShow
-function majData_majShow_majGeneric_genericmajShow($dictGeneric_0, $dictGenericShow_1 = null, $x_2 = null): string|\Closure {
+function majData_majShow_majGeneric_genericmajShow($dictGeneric_0, $dictGenericShow_1 = null, $x_2 = null) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majData_majShow_majGeneric_genericmajShow';
   if ($__num < 3) {

@@ -193,7 +193,7 @@ goto end_branch_0;;
 }];
 
 // Data_Interval_Duration_show
-$GLOBALS['Data_Interval_Duration_show'] = (\Data\Map\Internal\majData_majMap_majInternal_showmajMap($GLOBALS['Data_Interval_Duration_showDurationComponent'], $GLOBALS['Data_Show_showNumber']))->{'show'};
+$GLOBALS['Data_Interval_Duration_show'] = ((($GLOBALS['Data_Map_Internal_showMap'])($GLOBALS['Data_Interval_Duration_showDurationComponent']))($GLOBALS['Data_Show_showNumber']))->{'show'};
 
 // Data_Interval_Duration_showDuration
 $GLOBALS['Data_Interval_Duration_showDuration'] = (object)["show" => function($v_0) {
@@ -214,57 +214,101 @@ $GLOBALS['Data_Interval_Duration_newtypeDuration'] = (object)["Coercible0" => fu
 }];
 
 // Data_Interval_Duration_eqDurationComponent
-$GLOBALS['Data_Interval_Duration_eqDurationComponent'] = (object)["eq" => (function() {
-  $__fn = function($x_0, $y_1 = null) use (&$__fn) {
+$GLOBALS['Data_Interval_Duration_eqDurationComponent'] = (object)["eq" => function($x_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_1) use ($x_0) {
+  $__num = \func_num_args();
   $__t0 = null;;
   if ($x_0 instanceof \Data\Interval\Duration\Data_Interval_Duration_Second) {
-$__t0 = $y_1 instanceof \Data\Interval\Duration\Data_Interval_Duration_Second;
+$__t1 = null;;
+if ($y_1 instanceof \Data\Interval\Duration\Data_Interval_Duration_Second) {
+$__t1 = true;
+goto end_branch_1;;
+};
+$__t1 = false;
+end_branch_1:;
+$__t0 = $__t1;
 goto end_branch_0;;
 };
   if ($x_0 instanceof \Data\Interval\Duration\Data_Interval_Duration_Minute) {
-$__t0 = $y_1 instanceof \Data\Interval\Duration\Data_Interval_Duration_Minute;
+$__t2 = null;;
+if ($y_1 instanceof \Data\Interval\Duration\Data_Interval_Duration_Minute) {
+$__t2 = true;
+goto end_branch_2;;
+};
+$__t2 = false;
+end_branch_2:;
+$__t0 = $__t2;
 goto end_branch_0;;
 };
   if ($x_0 instanceof \Data\Interval\Duration\Data_Interval_Duration_Hour) {
-$__t0 = $y_1 instanceof \Data\Interval\Duration\Data_Interval_Duration_Hour;
+$__t3 = null;;
+if ($y_1 instanceof \Data\Interval\Duration\Data_Interval_Duration_Hour) {
+$__t3 = true;
+goto end_branch_3;;
+};
+$__t3 = false;
+end_branch_3:;
+$__t0 = $__t3;
 goto end_branch_0;;
 };
   if ($x_0 instanceof \Data\Interval\Duration\Data_Interval_Duration_Day) {
-$__t0 = $y_1 instanceof \Data\Interval\Duration\Data_Interval_Duration_Day;
+$__t4 = null;;
+if ($y_1 instanceof \Data\Interval\Duration\Data_Interval_Duration_Day) {
+$__t4 = true;
+goto end_branch_4;;
+};
+$__t4 = false;
+end_branch_4:;
+$__t0 = $__t4;
 goto end_branch_0;;
 };
   if ($x_0 instanceof \Data\Interval\Duration\Data_Interval_Duration_Week) {
-$__t0 = $y_1 instanceof \Data\Interval\Duration\Data_Interval_Duration_Week;
+$__t5 = null;;
+if ($y_1 instanceof \Data\Interval\Duration\Data_Interval_Duration_Week) {
+$__t5 = true;
+goto end_branch_5;;
+};
+$__t5 = false;
+end_branch_5:;
+$__t0 = $__t5;
 goto end_branch_0;;
 };
   if ($x_0 instanceof \Data\Interval\Duration\Data_Interval_Duration_Month) {
-$__t0 = $y_1 instanceof \Data\Interval\Duration\Data_Interval_Duration_Month;
+$__t6 = null;;
+if ($y_1 instanceof \Data\Interval\Duration\Data_Interval_Duration_Month) {
+$__t6 = true;
+goto end_branch_6;;
+};
+$__t6 = false;
+end_branch_6:;
+$__t0 = $__t6;
 goto end_branch_0;;
 };
-  $__t0 = ($x_0 instanceof \Data\Interval\Duration\Data_Interval_Duration_Year && $y_1 instanceof \Data\Interval\Duration\Data_Interval_Duration_Year);
+  if (($x_0 instanceof \Data\Interval\Duration\Data_Interval_Duration_Year && $y_1 instanceof \Data\Interval\Duration\Data_Interval_Duration_Year)) {
+$__t0 = true;
+goto end_branch_0;;
+};
+  $__t0 = false;
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Interval_Duration_eq
-$GLOBALS['Data_Interval_Duration_eq'] = (\Data\Map\Internal\majData_majMap_majInternal_eqmajMap($GLOBALS['Data_Interval_Duration_eqDurationComponent'], $GLOBALS['Data_Eq_eqNumber']))->{'eq'};
+$GLOBALS['Data_Interval_Duration_eq'] = ((($GLOBALS['Data_Map_Internal_eqMap'])($GLOBALS['Data_Interval_Duration_eqDurationComponent']))($GLOBALS['Data_Eq_eqNumber']))->{'eq'};
 
 // Data_Interval_Duration_ordDurationComponent
-$GLOBALS['Data_Interval_Duration_ordDurationComponent'] = (object)["compare" => (function() {
-  $__fn = function($x_0, $y_1 = null) use (&$__fn) {
+$GLOBALS['Data_Interval_Duration_ordDurationComponent'] = (object)["compare" => function($x_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_1) use ($x_0) {
+  $__num = \func_num_args();
   $__t0 = null;;
   if ($x_0 instanceof \Data\Interval\Duration\Data_Interval_Duration_Second) {
 $__t1 = null;;
@@ -366,10 +410,12 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Eq0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Eq0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Interval_Duration_eqDurationComponent'];
   goto __end;;
@@ -378,22 +424,22 @@ goto end_branch_0;;
 }];
 
 // Data_Interval_Duration_compare
-$GLOBALS['Data_Interval_Duration_compare'] = (\Data\Map\Internal\majData_majMap_majInternal_ordmajMap($GLOBALS['Data_Interval_Duration_ordDurationComponent'], $GLOBALS['Data_Ord_ordNumber']))->{'compare'};
+$GLOBALS['Data_Interval_Duration_compare'] = ((($GLOBALS['Data_Map_Internal_ordMap'])($GLOBALS['Data_Interval_Duration_ordDurationComponent']))($GLOBALS['Data_Ord_ordNumber']))->{'compare'};
 
 // Data_Interval_Duration_semigroupDuration
-$GLOBALS['Data_Interval_Duration_semigroupDuration'] = (object)["append" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_Interval_Duration_semigroupDuration'] = (object)["append" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = ($GLOBALS['Data_Map_Internal_unsafeUnionWith'])(($GLOBALS['Data_Interval_Duration_ordDurationComponent'])->{'compare'}, ($GLOBALS['Data_Semiring_semiringNumber'])->{'add'}, $v_0, $v1_1);
+  $__res = function($v1_1) use ($v_0) {
+  $__num = \func_num_args();
+  $__res = ($GLOBALS['Data_Map_Internal_unsafeUnionWith'])(($GLOBALS['Data_Interval_Duration_ordDurationComponent'])->{'compare'}, $GLOBALS['Data_Semiring_numAdd'], $v_0, $v1_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Interval_Duration_monoidDuration
 $GLOBALS['Data_Interval_Duration_monoidDuration'] = (object)["mempty" => new \Data\Map\Internal\Data_Map_Internal_Leaf(), "Semigroup0" => function($_dollar__unused_0) {
@@ -405,34 +451,34 @@ $GLOBALS['Data_Interval_Duration_monoidDuration'] = (object)["mempty" => new \Da
 }];
 
 // Data_Interval_Duration_eqDuration
-$GLOBALS['Data_Interval_Duration_eqDuration'] = (object)["eq" => (function() {
-  $__fn = function($x_0, $y_1 = null) use (&$__fn) {
+$GLOBALS['Data_Interval_Duration_eqDuration'] = (object)["eq" => function($x_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_1) use ($x_0) {
+  $__num = \func_num_args();
   $__res = (($GLOBALS['Data_Interval_Duration_eq'])($x_0))($y_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Interval_Duration_ordDuration
-$GLOBALS['Data_Interval_Duration_ordDuration'] = (object)["compare" => (function() {
-  $__fn = function($x_0, $y_1 = null) use (&$__fn) {
+$GLOBALS['Data_Interval_Duration_ordDuration'] = (object)["compare" => function($x_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_1) use ($x_0) {
+  $__num = \func_num_args();
   $__res = (($GLOBALS['Data_Interval_Duration_compare'])($x_0))($y_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Eq0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Eq0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Interval_Duration_eqDuration'];
   goto __end;;

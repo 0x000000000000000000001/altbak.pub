@@ -109,25 +109,11 @@ $new = function() use (&$new) {
     return (object)["value" => []];
 };
 
-$peekImpl = function($just, $nothing = null, $i = null, $xs = null) use (&$peekImpl) {
-    if (\func_num_args() < 4) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$peekImpl) {
-
-            return $peekImpl(...\array_merge($__args, $more));
-        };
-    }
+$peekImpl = function($just, $nothing, $i, $xs) use (&$peekImpl) {
     return ($i >= 0 && $i < \count($xs->value)) ? $just($xs->value[$i]) : $nothing;
 };
 
-$pokeImpl = function($i, $a = null, $xs = null) use (&$pokeImpl) {
-    if (\func_num_args() < 3) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$pokeImpl) {
-
-            return $pokeImpl(...\array_merge($__args, $more));
-        };
-    }
+$pokeImpl = function($i, $a, $xs) use (&$pokeImpl) {
     if ($i >= 0 && $i < \count($xs->value)) {
         $xs->value[$i] = $a;
         return true;
@@ -139,62 +125,27 @@ $lengthImpl = function($xs) use (&$lengthImpl) {
     return \count($xs->value);
 };
 
-$popImpl = function($just, $nothing = null, $xs = null) use (&$popImpl) {
-    if (\func_num_args() < 3) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$popImpl) {
-
-            return $popImpl(...\array_merge($__args, $more));
-        };
-    }
+$popImpl = function($just, $nothing, $xs) use (&$popImpl) {
     return \count($xs->value) > 0 ? $just(array_pop($xs->value)) : $nothing;
 };
 
-$pushAllImpl = function($as, $xs = null) use (&$pushAllImpl) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$pushAllImpl) {
-
-            return $pushAllImpl(...\array_merge($__args, $more));
-        };
-    }
+$pushAllImpl = function($as, $xs) use (&$pushAllImpl) {
     foreach ($as as $a) {
         $xs->value[] = $a;
     }
     return \count($xs->value);
 };
 
-$shiftImpl = function($just, $nothing = null, $xs = null) use (&$shiftImpl) {
-    if (\func_num_args() < 3) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$shiftImpl) {
-
-            return $shiftImpl(...\array_merge($__args, $more));
-        };
-    }
+$shiftImpl = function($just, $nothing, $xs) use (&$shiftImpl) {
     return \count($xs->value) > 0 ? $just(array_shift($xs->value)) : $nothing;
 };
 
-$unshiftAllImpl = function($as, $xs = null) use (&$unshiftAllImpl) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$unshiftAllImpl) {
-
-            return $unshiftAllImpl(...\array_merge($__args, $more));
-        };
-    }
+$unshiftAllImpl = function($as, $xs) use (&$unshiftAllImpl) {
     array_unshift($xs->value, ...$as);
     return \count($xs->value);
 };
 
-$spliceImpl = function($i, $howMany = null, $bs = null, $xs = null) use (&$spliceImpl) {
-    if (\func_num_args() < 4) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$spliceImpl) {
-
-            return $spliceImpl(...\array_merge($__args, $more));
-        };
-    }
+$spliceImpl = function($i, $howMany, $bs, $xs) use (&$spliceImpl) {
     return array_splice($xs->value, $i, $howMany, $bs);
 };
 
@@ -218,14 +169,7 @@ $cloneImpl = function($xs) use (&$cloneImpl) {
     return (object)["value" => $xs->value];
 };
 
-$sortByImpl = function($compare, $fromOrdering = null, $xs = null) use (&$sortByImpl) {
-    if (\func_num_args() < 3) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$sortByImpl) {
-
-            return $sortByImpl(...\array_merge($__args, $more));
-        };
-    }
+$sortByImpl = function($compare, $fromOrdering, $xs) use (&$sortByImpl) {
     \usort($xs->value, function($a, $b) use ($compare, $fromOrdering) {
         return $fromOrdering($compare($a)($b));
     });
@@ -241,14 +185,7 @@ $toAssocArrayImpl = function($xs) use (&$toAssocArrayImpl) {
     return $as;
 };
 
-$pushImpl = function($a, $xs = null) use (&$pushImpl) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$pushImpl) {
-
-            return $pushImpl(...\array_merge($__args, $more));
-        };
-    }
+$pushImpl = function($a, $xs) use (&$pushImpl) {
     $xs->value[] = $a;
     return \count($xs->value);
 };
@@ -479,19 +416,19 @@ function majData_majArray_majSmajT_sortmajWith($dictOrd_0, $f_1 = null) {
   if ($__num < 2) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 2);
   }
-  $__res = ($GLOBALS['Data_Array_ST_sortBy'])((function() use ($dictOrd_0, $f_1) {
-  $__fn = function($x_2, $y_3 = null) use ($dictOrd_0, $f_1, &$__fn) {
+  $__res = ($GLOBALS['Data_Array_ST_sortBy'])(function($x_2) use ($dictOrd_0, $f_1) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_3) use ($dictOrd_0, $f_1, $x_2) {
+  $__num = \func_num_args();
   $__res = ((($dictOrd_0)->{'compare'})(($f_1)($x_2)))(($f_1)($y_3));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})());
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
   goto __end;;
   __end:
   return 2 < $__num ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;

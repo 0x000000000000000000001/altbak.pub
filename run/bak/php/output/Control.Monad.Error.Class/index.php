@@ -156,12 +156,10 @@ $GLOBALS['Control_Monad_Error_Class_monadThrowEffect'] = (object)["throwError" =
 }];
 
 // Control_Monad_Error_Class_monadErrorMaybe
-$GLOBALS['Control_Monad_Error_Class_monadErrorMaybe'] = (object)["catchError" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Control_Monad_Error_Class_monadErrorMaybe'] = (object)["catchError" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) use ($v_0) {
+  $__num = \func_num_args();
   $__t0 = null;;
   if ($v_0 instanceof \Data\Maybe\Data_Maybe_Nothing) {
 $__t0 = ($v1_1)($GLOBALS['Data_Unit_unit']);
@@ -177,10 +175,12 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "MonadThrow0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "MonadThrow0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Monad_Error_Class_monadThrowMaybe'];
   goto __end;;
@@ -189,12 +189,10 @@ goto end_branch_0;;
 }];
 
 // Control_Monad_Error_Class_monadErrorEither
-$GLOBALS['Control_Monad_Error_Class_monadErrorEither'] = (object)["catchError" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Control_Monad_Error_Class_monadErrorEither'] = (object)["catchError" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) use ($v_0) {
+  $__num = \func_num_args();
   $__t0 = null;;
   if ($v_0 instanceof \Data\Either\Data_Either_Left) {
 $__t0 = ($v1_1)(($v_0)->{'value0'});
@@ -210,10 +208,12 @@ goto end_branch_0;;
   $__res = $__t0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "MonadThrow0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "MonadThrow0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Monad_Error_Class_monadThrowEither'];
   goto __end;;
@@ -222,19 +222,19 @@ goto end_branch_0;;
 }];
 
 // Control_Monad_Error_Class_monadErrorEffect
-$GLOBALS['Control_Monad_Error_Class_monadErrorEffect'] = (object)["catchError" => (function() {
-  $__fn = function($b_0, $a_1 = null) use (&$__fn) {
+$GLOBALS['Control_Monad_Error_Class_monadErrorEffect'] = (object)["catchError" => function($b_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($a_1) use ($b_0) {
+  $__num = \func_num_args();
   $__res = \Effect\Exception\majEffect_majException_catchmajException($a_1, $b_0);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "MonadThrow0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "MonadThrow0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Monad_Error_Class_monadThrowEffect'];
   goto __end;;
@@ -396,31 +396,32 @@ function majControl_majMonad_majError_majClass_withmajResource($dictMonadError_0
   $Bind1_3_2 = (($Monad0_2_1)->{'Bind1'})(null);
   $try1_4_3 = ($GLOBALS['Control_Monad_Error_Class_try'])($dictMonadError_0);
   $discard1_5_4 = (($GLOBALS['Control_Bind_discardUnit'])->{'discard'})($Bind1_3_2);
-  $__res = (function() use ($Bind1_3_2, $Monad0_2_1, $MonadThrow0_1_0, $discard1_5_4, $try1_4_3) {
-  $__fn = function($acquire_6, $release_7 = null, $kleisli_8 = null) use ($Bind1_3_2, $Monad0_2_1, $MonadThrow0_1_0, $discard1_5_4, $try1_4_3, &$__fn) {
+  $pure_6_5 = ((($Monad0_2_1)->{'Applicative0'})(null))->{'pure'};
+  $__res = function($acquire_7) use ($Bind1_3_2, $MonadThrow0_1_0, $discard1_5_4, $pure_6_5, $try1_4_3) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  $__res = ((($Bind1_3_2)->{'bind'})($acquire_6))(function($resource_9) use ($Bind1_3_2, $Monad0_2_1, $MonadThrow0_1_0, $discard1_5_4, $kleisli_8, $release_7, $try1_4_3) {
+  $__res = function($release_8) use ($Bind1_3_2, $MonadThrow0_1_0, $acquire_7, $discard1_5_4, $pure_6_5, $try1_4_3) {
   $__num = \func_num_args();
-  $__res = ((($Bind1_3_2)->{'bind'})(($try1_4_3)(($kleisli_8)($resource_9))))(function($result_10) use ($Monad0_2_1, $MonadThrow0_1_0, $discard1_5_4, $release_7, $resource_9) {
+  $__res = function($kleisli_9) use ($Bind1_3_2, $MonadThrow0_1_0, $acquire_7, $discard1_5_4, $pure_6_5, $release_8, $try1_4_3) {
   $__num = \func_num_args();
-  $__res = (($discard1_5_4)(($release_7)($resource_9)))(function($_dollar__unused_11) use ($Monad0_2_1, $MonadThrow0_1_0, $result_10) {
+  $__res = ((($Bind1_3_2)->{'bind'})($acquire_7))(function($resource_10) use ($Bind1_3_2, $MonadThrow0_1_0, $discard1_5_4, $kleisli_9, $pure_6_5, $release_8, $try1_4_3) {
   $__num = \func_num_args();
-  $__t5 = null;;
-  if ($result_10 instanceof \Data\Either\Data_Either_Left) {
-$__t5 = (($MonadThrow0_1_0)->{'throwError'})(($result_10)->{'value0'});
-goto end_branch_5;;
+  $__res = ((($Bind1_3_2)->{'bind'})(($try1_4_3)(($kleisli_9)($resource_10))))(function($result_11) use ($MonadThrow0_1_0, $discard1_5_4, $pure_6_5, $release_8, $resource_10) {
+  $__num = \func_num_args();
+  $__res = (($discard1_5_4)(($release_8)($resource_10)))(function($_dollar__unused_12) use ($MonadThrow0_1_0, $pure_6_5, $result_11) {
+  $__num = \func_num_args();
+  $__t6 = null;;
+  if ($result_11 instanceof \Data\Either\Data_Either_Left) {
+$__t6 = (($MonadThrow0_1_0)->{'throwError'})(($result_11)->{'value0'});
+goto end_branch_6;;
 };
-  if ($result_10 instanceof \Data\Either\Data_Either_Right) {
-$__t5 = (((($Monad0_2_1)->{'Applicative0'})(null))->{'pure'})(($result_10)->{'value0'});
-goto end_branch_5;;
+  if ($result_11 instanceof \Data\Either\Data_Either_Right) {
+$__t6 = ($pure_6_5)(($result_11)->{'value0'});
+goto end_branch_6;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t5 = null;
-  end_branch_5:;
-  $__res = $__t5;
+  $__t6 = null;
+  end_branch_6:;
+  $__res = $__t6;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -435,10 +436,16 @@ goto end_branch_5;;
 });
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

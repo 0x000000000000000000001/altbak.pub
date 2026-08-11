@@ -104,13 +104,7 @@ $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Effect = \call_user_func(function() {
   $exports = [];
 $pureE = function($x) { return function() use($x) { return $x; }; };
-$bindE = function($a, $f = null) use (&$bindE) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$bindE) {
-            return $bindE(...\array_merge($__args, $more));
-        };
-    }
+$bindE = function($a, $f) use (&$bindE) {
     return function() use($a, $f) {
         $a_res = $a();
         $res = $f($a_res);
@@ -124,13 +118,7 @@ $untilE = function($f) {
     };
 };
 
-$whileE = function($f, $a = null) use (&$whileE) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$whileE) {
-            return $whileE(...\array_merge($__args, $more));
-        };
-    }
+$whileE = function($f, $a) use (&$whileE) {
     return function() use ($f, $a) {
         while ($f()) {
             $a();
@@ -138,13 +126,7 @@ $whileE = function($f, $a = null) use (&$whileE) {
     };
 };
 
-$forE = function($lo, $hi = null, $f = null) use (&$forE) {
-    if (\func_num_args() < 3) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$forE) {
-            return $forE(...\array_merge($__args, $more));
-        };
-    }
+$forE = function($lo, $hi, $f) use (&$forE) {
     return function() use ($lo, $hi, $f) {
         for ($i = $lo; $i < $hi; $i++) {
             $f($i)();
@@ -152,13 +134,7 @@ $forE = function($lo, $hi = null, $f = null) use (&$forE) {
     };
 };
 
-$foreachE = function($as, $f = null) use (&$foreachE) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$foreachE) {
-            return $foreachE(...\array_merge($__args, $more));
-        };
-    }
+$foreachE = function($as, $f) use (&$foreachE) {
     return function() use ($as, $f) {
         foreach ($as as $a) {
             $f($a)();
@@ -279,12 +255,10 @@ $GLOBALS['Effect_bindEffect'] = (object)["bind" => $GLOBALS['Effect_bindE'], "Ap
 // Effect_applyEffect
 $GLOBALS['Effect_applyEffect'] = (function() use (&$__fn) {
 $__local_var_0_0 = (($GLOBALS['Effect_monadEffect'])->{'Bind1'})(null);
-return (object)["apply" => (function() use ($__local_var_0_0) {
-  $__fn = function($f_1, $a_2 = null) use ($__local_var_0_0, &$__fn) {
+return (object)["apply" => function($f_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($a_2) use ($__local_var_0_0, $f_1) {
+  $__num = \func_num_args();
   $__res = ((($__local_var_0_0)->{'bind'})($f_1))(function($f_prime_3) use ($__local_var_0_0, $a_2) {
   $__num = \func_num_args();
   $__res = ((($__local_var_0_0)->{'bind'})($a_2))(function($a_prime_4) use ($f_prime_3) {
@@ -300,10 +274,12 @@ return (object)["apply" => (function() use ($__local_var_0_0) {
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Effect_functorEffect'];
   goto __end;;
@@ -322,19 +298,19 @@ $GLOBALS['Effect_applicativeEffect'] = (object)["pure" => $GLOBALS['Effect_pureE
 }];
 
 // Effect_functorEffect
-$GLOBALS['Effect_functorEffect'] = (object)["map" => (function() {
-  $__fn = function($f_0, $a_1 = null) use (&$__fn) {
+$GLOBALS['Effect_functorEffect'] = (object)["map" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($a_1) use ($f_0) {
+  $__num = \func_num_args();
   $__res = ((((($GLOBALS['Effect_applicativeEffect'])->{'Apply0'})(null))->{'apply'})((($GLOBALS['Effect_applicativeEffect'])->{'pure'})($f_0)))($a_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Effect_lift2
 function majEffect_lift2($f_0, $a_1 = null, $b_2 = null) {
@@ -384,9 +360,10 @@ function majEffect_monoidmajEffect($dictMonoid_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["mempty" => \Effect\majEffect_puremajE(($dictMonoid_0)->{'mempty'}), "Semigroup0" => function($_dollar__unused_1) use ($dictMonoid_0) {
+  $semigroupEffect1_1_0 = (object)["append" => ($GLOBALS['Effect_lift2'])(((($dictMonoid_0)->{'Semigroup0'})(null))->{'append'})];
+  $__res = (object)["mempty" => \Effect\majEffect_puremajE(($dictMonoid_0)->{'mempty'}), "Semigroup0" => function($_dollar__unused_2) use ($semigroupEffect1_1_0) {
   $__num = \func_num_args();
-  $__res = (object)["append" => ($GLOBALS['Effect_lift2'])(((($dictMonoid_0)->{'Semigroup0'})(null))->{'append'})];
+  $__res = $semigroupEffect1_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

@@ -106,78 +106,29 @@ if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
 $GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
 $ffi_Control_Monad_ST_Internal = \call_user_func(function() {
   $exports = [];
-$map_ = function($f, $a = null) use (&$map_) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$map_) {
-
-            return $map_(...\array_merge($__args, $more));
-        };
-    }
+$map_ = function($f, $a) use (&$map_) {
     return function() use($f, $a) { return $f($a()); };
 };
-$bind_ = function($a, $f = null) use (&$bind_) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$bind_) {
-
-            return $bind_(...\array_merge($__args, $more));
-        };
-    }
+$bind_ = function($a, $f) use (&$bind_) {
     return function() use($a, $f) { return $f($a())(); };
 };
 $pure_ = function($a) { return function() use($a) { return $a; }; };
 $new = function($val) { return function() use($val) { return (object)['value' => $val]; }; };
 $read = function($ref) { return function() use($ref) { return $ref->value; }; };
-$modifyImpl = function($f, $ref = null) use (&$modifyImpl) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$modifyImpl) {
-
-            return $modifyImpl(...\array_merge($__args, $more));
-        };
-    }
+$modifyImpl = function($f, $ref) use (&$modifyImpl) {
     return function() use($f, $ref) { $t = $f($ref->value); $ref->value = $t->state; return $t->value; };
 };
-$write = function($val, $ref = null) use (&$write) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$write) {
-
-            return $write(...\array_merge($__args, $more));
-        };
-    }
+$write = function($val, $ref) use (&$write) {
     return function() use($val, $ref) { $ref->value = $val; return $val; };
 };
 $run = function($f) { return $f(); };
-$while = function($f, $a = null) use (&$while) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$while) {
-
-            return $while(...\array_merge($__args, $more));
-        };
-    }
+$while = function($f, $a) use (&$while) {
     return function() use($f, $a) { while ($f()) { $a(); } return null; };
 };
-$for = function($lo, $hi = null, $f = null) use (&$for) {
-    if (\func_num_args() < 3) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$for) {
-
-            return $for(...\array_merge($__args, $more));
-        };
-    }
+$for = function($lo, $hi, $f) use (&$for) {
     return function() use($lo, $hi, $f) { for ($i = $lo; $i < $hi; $i++) { $f($i)(); } return null; };
 };
-$foreach = function($as, $f = null) use (&$foreach) {
-    if (\func_num_args() < 2) {
-        $__args = \func_get_args();
-        return function(...$more) use ($__args, &$foreach) {
-
-            return $foreach(...\array_merge($__args, $more));
-        };
-    }
+$foreach = function($as, $f) use (&$foreach) {
     return function() use($as, $f) { foreach ($as as $a) { $f($a)(); } return null; };
 };
 
@@ -408,12 +359,10 @@ $GLOBALS['Control_Monad_ST_Internal_bindST'] = (object)["bind" => $GLOBALS['Cont
 // Control_Monad_ST_Internal_applyST
 $GLOBALS['Control_Monad_ST_Internal_applyST'] = (function() use (&$__fn) {
 $__local_var_0_0 = (($GLOBALS['Control_Monad_ST_Internal_monadST'])->{'Bind1'})(null);
-return (object)["apply" => (function() use ($__local_var_0_0) {
-  $__fn = function($f_1, $a_2 = null) use ($__local_var_0_0, &$__fn) {
+return (object)["apply" => function($f_1) use ($__local_var_0_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($a_2) use ($__local_var_0_0, $f_1) {
+  $__num = \func_num_args();
   $__res = ((($__local_var_0_0)->{'bind'})($f_1))(function($f_prime_3) use ($__local_var_0_0, $a_2) {
   $__num = \func_num_args();
   $__res = ((($__local_var_0_0)->{'bind'})($a_2))(function($a_prime_4) use ($f_prime_3) {
@@ -429,10 +378,12 @@ return (object)["apply" => (function() use ($__local_var_0_0) {
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Monad_ST_Internal_functorST'];
   goto __end;;
@@ -482,41 +433,46 @@ function majControl_majMonad_majSmajT_majInternal_semigroupmajSmajT($dictSemigro
 $GLOBALS['Control_Monad_ST_Internal_semigroupST'] = __NAMESPACE__ . '\\majControl_majMonad_majSmajT_majInternal_semigroupmajSmajT';
 
 // Control_Monad_ST_Internal_monadRecST
-$GLOBALS['Control_Monad_ST_Internal_monadRecST'] = (object)["tailRecM" => (function() {
-  $__fn = function($f_0, $a_1 = null) use (&$__fn) {
+$GLOBALS['Control_Monad_ST_Internal_monadRecST'] = (object)["tailRecM" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($a_1) use ($f_0) {
+  $__num = \func_num_args();
   $__res = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])->{'bind'})(((($GLOBALS['Control_Monad_ST_Internal_bindST'])->{'bind'})(($f_0)($a_1)))($GLOBALS['Control_Monad_ST_Internal_new'])))(function($r_2) use ($f_0) {
   $__num = \func_num_args();
   $__res = (($GLOBALS['Control_Monad_ST_Internal_discard'])(\Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_while(((($GLOBALS['Control_Monad_ST_Internal_functorST'])->{'map'})(function($v_3) {
   $__num = \func_num_args();
-  $__res = $v_3 instanceof \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Loop;
+  $__t0 = null;;
+  if ($v_3 instanceof \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Loop) {
+$__t0 = true;
+goto end_branch_0;;
+};
+  $__t0 = false;
+  end_branch_0:;
+  $__res = $__t0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }))(\Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_read($r_2)), ((($GLOBALS['Control_Monad_ST_Internal_bindST'])->{'bind'})(\Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_read($r_2)))(function($v_3) use ($f_0, $r_2) {
   $__num = \func_num_args();
-  $__t0 = null;;
+  $__t1 = null;;
   if ($v_3 instanceof \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Loop) {
-$__t0 = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])->{'bind'})(($f_0)(($v_3)->{'value0'})))(function($e_4) use ($r_2) {
+$__t1 = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])->{'bind'})(($f_0)(($v_3)->{'value0'})))(function($e_4) use ($r_2) {
   $__num = \func_num_args();
   $__res = ($GLOBALS['Control_Monad_ST_Internal_void'])(\Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_write($e_4, $r_2));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 });
-goto end_branch_0;;
+goto end_branch_1;;
 };
   if ($v_3 instanceof \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Done) {
-$__t0 = (($GLOBALS['Control_Monad_ST_Internal_applicativeST'])->{'pure'})($GLOBALS['Data_Unit_unit']);
-goto end_branch_0;;
+$__t1 = (($GLOBALS['Control_Monad_ST_Internal_applicativeST'])->{'pure'})($GLOBALS['Data_Unit_unit']);
+goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t0 = null;
-  end_branch_0:;
-  $__res = $__t0;
+  $__t1 = null;
+  end_branch_1:;
+  $__res = $__t1;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -524,15 +480,15 @@ goto end_branch_0;;
   $__num = \func_num_args();
   $__res = ((($GLOBALS['Control_Monad_ST_Internal_functorST'])->{'map'})(function($v_4) {
   $__num = \func_num_args();
-  $__t1 = null;;
+  $__t2 = null;;
   if ($v_4 instanceof \Control\Monad\Rec\Class\Control_Monad_Rec_Class_Done) {
-$__t1 = ($v_4)->{'value0'};
-goto end_branch_1;;
+$__t2 = ($v_4)->{'value0'};
+goto end_branch_2;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
-  $__t1 = null;
-  end_branch_1:;
-  $__res = $__t1;
+  $__t2 = null;
+  end_branch_2:;
+  $__res = $__t2;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -547,10 +503,12 @@ goto end_branch_1;;
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Monad0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Monad0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Control_Monad_ST_Internal_monadST'];
   goto __end;;
@@ -565,9 +523,10 @@ function majControl_majMonad_majSmajT_majInternal_monoidmajSmajT($dictMonoid_0) 
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (object)["mempty" => (($GLOBALS['Control_Monad_ST_Internal_applicativeST'])->{'pure'})(($dictMonoid_0)->{'mempty'}), "Semigroup0" => function($_dollar__unused_1) use ($dictMonoid_0) {
+  $semigroupST1_1_0 = (object)["append" => ($GLOBALS['Control_Monad_ST_Internal_lift2'])(((($dictMonoid_0)->{'Semigroup0'})(null))->{'append'})];
+  $__res = (object)["mempty" => (($GLOBALS['Control_Monad_ST_Internal_applicativeST'])->{'pure'})(($dictMonoid_0)->{'mempty'}), "Semigroup0" => function($_dollar__unused_2) use ($semigroupST1_1_0) {
   $__num = \func_num_args();
-  $__res = (object)["append" => ($GLOBALS['Control_Monad_ST_Internal_lift2'])(((($dictMonoid_0)->{'Semigroup0'})(null))->{'append'})];
+  $__res = $semigroupST1_1_0;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

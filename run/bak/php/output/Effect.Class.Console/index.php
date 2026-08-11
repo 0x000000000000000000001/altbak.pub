@@ -306,12 +306,10 @@ function majEffect_majClass_majConsole_grouped($dictMonadEffect_0) {
   $discard1_3_2 = (($GLOBALS['Control_Bind_discardUnit'])->{'discard'})($Bind1_2_1);
   $group1_4_3 = (($GLOBALS['Control_Semigroupoid_composeImpl'])(($dictMonadEffect_0)->{'liftEffect'}))($GLOBALS['Effect_Console_group']);
   $groupEnd1_5_4 = (($dictMonadEffect_0)->{'liftEffect'})($GLOBALS['Effect_Console_groupEnd']);
-  $__res = (function() use ($Bind1_2_1, $Monad0_1_0, $discard1_3_2, $group1_4_3, $groupEnd1_5_4) {
-  $__fn = function($name_6, $inner_7 = null) use ($Bind1_2_1, $Monad0_1_0, $discard1_3_2, $group1_4_3, $groupEnd1_5_4, &$__fn) {
+  $__res = function($name_6) use ($Bind1_2_1, $Monad0_1_0, $discard1_3_2, $group1_4_3, $groupEnd1_5_4) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($inner_7) use ($Bind1_2_1, $Monad0_1_0, $discard1_3_2, $group1_4_3, $groupEnd1_5_4, $name_6) {
+  $__num = \func_num_args();
   $__res = (($discard1_3_2)(($group1_4_3)($name_6)))(function($_dollar__unused_8) use ($Bind1_2_1, $Monad0_1_0, $discard1_3_2, $groupEnd1_5_4, $inner_7) {
   $__num = \func_num_args();
   $__res = ((($Bind1_2_1)->{'bind'})($inner_7))(function($result_9) use ($Monad0_1_0, $discard1_3_2, $groupEnd1_5_4) {
@@ -333,10 +331,12 @@ function majEffect_majClass_majConsole_grouped($dictMonadEffect_0) {
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;

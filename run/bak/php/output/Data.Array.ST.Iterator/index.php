@@ -133,6 +133,29 @@ function majData_majArray_majSmajT_majIterator_void($v_0) {
 }
 $GLOBALS['Data_Array_ST_Iterator_void'] = __NAMESPACE__ . '\\majData_majArray_majSmajT_majIterator_void';
 
+// Data_Array_ST_Iterator_void1_closure
+$GLOBALS['Data_Array_ST_Iterator_void1_closure'] = (($GLOBALS['Control_Monad_ST_Internal_functorST'])->{'map'})(function($v_0) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Data_Unit_unit'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
+
+// Data_Array_ST_Iterator_void1
+function majData_majArray_majSmajT_majIterator_void1($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majArray_majSmajT_majIterator_void1';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = ($GLOBALS['Data_Array_ST_Iterator_void1_closure'])($v_0);
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Array_ST_Iterator_void1'] = __NAMESPACE__ . '\\majData_majArray_majSmajT_majIterator_void1';
+
 // Data_Array_ST_Iterator_Iterator
 $GLOBALS['Data_Array_ST_Iterator_Iterator'] = (function() {
   $__fn = function($value0, $value1 = null) use (&$__fn) {
@@ -224,7 +247,7 @@ $__t0 = ((($GLOBALS['Control_Monad_ST_Internal_bindST'])->{'bind'})(\Control\Mon
 });
 goto end_branch_0;;
 };
-  $__t0 = \Data\Array\ST\Iterator\majData_majArray_majSmajT_majIterator_void(\Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_write(true, $go__break_3));
+  $__t0 = \Data\Array\ST\Iterator\majData_majArray_majSmajT_majIterator_void1(\Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_write(true, $go__break_3));
   end_branch_0:;
   $__res = $__t0;
   goto __end;;
@@ -295,7 +318,7 @@ $__t0 = ($f_1)(($mx_3)->{'value0'});
 goto end_branch_0;;
 };
   if ($mx_3 instanceof \Data\Maybe\Data_Maybe_Nothing) {
-$__t0 = \Data\Array\ST\Iterator\majData_majArray_majSmajT_majIterator_void(\Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_write(true, $go__break_2));
+$__t0 = \Data\Array\ST\Iterator\majData_majArray_majSmajT_majIterator_void1(\Control\Monad\ST\Internal\majControl_majMonad_majSmajT_majInternal_write(true, $go__break_2));
 goto end_branch_0;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);

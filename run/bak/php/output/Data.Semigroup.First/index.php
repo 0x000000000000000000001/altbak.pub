@@ -143,19 +143,19 @@ function majData_majSemigroup_majFirst_showmajFirst($dictShow_0) {
 $GLOBALS['Data_Semigroup_First_showFirst'] = __NAMESPACE__ . '\\majData_majSemigroup_majFirst_showmajFirst';
 
 // Data_Semigroup_First_semigroupFirst
-$GLOBALS['Data_Semigroup_First_semigroupFirst'] = (object)["append" => (function() {
-  $__fn = function($x_0, $v_1 = null) use (&$__fn) {
+$GLOBALS['Data_Semigroup_First_semigroupFirst'] = (object)["append" => function($x_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_1) use ($x_0) {
+  $__num = \func_num_args();
   $__res = $x_0;
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Semigroup_First_ordFirst
 function majData_majSemigroup_majFirst_ordmajFirst($dictOrd_0) {
@@ -172,19 +172,19 @@ function majData_majSemigroup_majFirst_ordmajFirst($dictOrd_0) {
 $GLOBALS['Data_Semigroup_First_ordFirst'] = __NAMESPACE__ . '\\majData_majSemigroup_majFirst_ordmajFirst';
 
 // Data_Semigroup_First_functorFirst
-$GLOBALS['Data_Semigroup_First_functorFirst'] = (object)["map" => (function() {
-  $__fn = function($f_0, $m_1 = null) use (&$__fn) {
+$GLOBALS['Data_Semigroup_First_functorFirst'] = (object)["map" => function($f_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($m_1) use ($f_0) {
+  $__num = \func_num_args();
   $__res = ($f_0)($m_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
 
 // Data_Semigroup_First_eqFirst
 function majData_majSemigroup_majFirst_eqmajFirst($dictEq_0) {
@@ -239,19 +239,19 @@ function majData_majSemigroup_majFirst_boundedmajFirst($dictBounded_0) {
 $GLOBALS['Data_Semigroup_First_boundedFirst'] = __NAMESPACE__ . '\\majData_majSemigroup_majFirst_boundedmajFirst';
 
 // Data_Semigroup_First_applyFirst
-$GLOBALS['Data_Semigroup_First_applyFirst'] = (object)["apply" => (function() {
-  $__fn = function($v_0, $v1_1 = null) use (&$__fn) {
+$GLOBALS['Data_Semigroup_First_applyFirst'] = (object)["apply" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_1) use ($v_0) {
+  $__num = \func_num_args();
   $__res = ($v_0)($v1_1);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Semigroup_First_functorFirst'];
   goto __end;;
@@ -260,19 +260,19 @@ $GLOBALS['Data_Semigroup_First_applyFirst'] = (object)["apply" => (function() {
 }];
 
 // Data_Semigroup_First_bindFirst
-$GLOBALS['Data_Semigroup_First_bindFirst'] = (object)["bind" => (function() {
-  $__fn = function($v_0, $f_1 = null) use (&$__fn) {
+$GLOBALS['Data_Semigroup_First_bindFirst'] = (object)["bind" => function($v_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($f_1) use ($v_0) {
+  $__num = \func_num_args();
   $__res = ($f_1)($v_0);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Apply0" => function($_dollar__unused_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Apply0" => function($_dollar__unused_0) {
   $__num = \func_num_args();
   $__res = $GLOBALS['Data_Semigroup_First_applyFirst'];
   goto __end;;

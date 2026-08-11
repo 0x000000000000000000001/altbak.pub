@@ -140,6 +140,20 @@ function majControl_majMonad_majList_majTrans_identity($x_0) {
 }
 $GLOBALS['Control_Monad_List_Trans_identity'] = __NAMESPACE__ . '\\majControl_majMonad_majList_majTrans_identity';
 
+// Control_Monad_List_Trans_identity1
+function majControl_majMonad_majList_majTrans_identity1($x_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majList_majTrans_identity1';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Control_Monad_List_Trans_identity1'] = __NAMESPACE__ . '\\majControl_majMonad_majList_majTrans_identity1';
+
 // Control_Monad_List_Trans_Yield
 $GLOBALS['Control_Monad_List_Trans_Yield'] = (function() {
   $__fn = function($value0, $value1 = null) use (&$__fn) {
@@ -230,7 +244,7 @@ function majControl_majMonad_majList_majTrans_unfold($dictMonad_0, $f_1 = null, 
 $__local_var_4_1 = (($v_3)->{'value0'})->{'value0'};
 $__t0 = new \Control\Monad\List\Trans\Control_Monad_List_Trans_Yield((($v_3)->{'value0'})->{'value1'}, \Data\Lazy\majData_majLazy_defer(function($v1_5) use ($__local_var_4_1, $dictMonad_0, $f_1) {
   $__num = \func_num_args();
-  $__res = \Control\Monad\List\Trans\majControl_majMonad_majList_majTrans_unfold($dictMonad_0, $f_1, $__local_var_4_1);
+  $__res = ((($GLOBALS['Control_Monad_List_Trans_unfold'])($dictMonad_0))($f_1))($__local_var_4_1);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -265,22 +279,22 @@ function majControl_majMonad_majList_majTrans_uncons($dictMonad_0) {
   $__tco_var_Control_Monad_List_Trans_uncons_dictMonad_0 = $dictMonad_0;
   tco_loop_Control_Monad_List_Trans_uncons:;
   $dictMonad_0 = $__tco_var_Control_Monad_List_Trans_uncons_dictMonad_0;
-  $__local_var_1_0 = (($dictMonad_0)->{'Applicative0'})(null);
-  $__res = function($v_2) use ($__local_var_1_0, $dictMonad_0) {
+  $Applicative0_1_0 = (($dictMonad_0)->{'Applicative0'})(null);
+  $__res = function($v_2) use ($Applicative0_1_0, $dictMonad_0) {
   $__num = \func_num_args();
-  $__res = ((((($dictMonad_0)->{'Bind1'})(null))->{'bind'})($v_2))(function($v1_3) use ($__local_var_1_0, $dictMonad_0) {
+  $__res = ((((($dictMonad_0)->{'Bind1'})(null))->{'bind'})($v_2))(function($v1_3) use ($Applicative0_1_0, $dictMonad_0) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ($v1_3 instanceof \Control\Monad\List\Trans\Control_Monad_List_Trans_Yield) {
-$__t1 = (($__local_var_1_0)->{'pure'})(new \Data\Maybe\Data_Maybe_Just(new \Data\Tuple\Data_Tuple_Tuple(($v1_3)->{'value0'}, \Data\Lazy\majData_majLazy_force(($v1_3)->{'value1'}))));
+$__t1 = (($Applicative0_1_0)->{'pure'})(new \Data\Maybe\Data_Maybe_Just(new \Data\Tuple\Data_Tuple_Tuple(($v1_3)->{'value0'}, \Data\Lazy\majData_majLazy_force(($v1_3)->{'value1'}))));
 goto end_branch_1;;
 };
   if ($v1_3 instanceof \Control\Monad\List\Trans\Control_Monad_List_Trans_Skip) {
-$__t1 = \Control\Monad\List\Trans\majControl_majMonad_majList_majTrans_uncons($dictMonad_0, \Data\Lazy\majData_majLazy_force(($v1_3)->{'value0'}));
+$__t1 = (($GLOBALS['Control_Monad_List_Trans_uncons'])($dictMonad_0))(\Data\Lazy\majData_majLazy_force(($v1_3)->{'value0'}));
 goto end_branch_1;;
 };
   if ($v1_3 instanceof \Control\Monad\List\Trans\Control_Monad_List_Trans_Done) {
-$__t1 = (($__local_var_1_0)->{'pure'})(new \Data\Maybe\Data_Maybe_Nothing());
+$__t1 = (($Applicative0_1_0)->{'pure'})(new \Data\Maybe\Data_Maybe_Nothing());
 goto end_branch_1;;
 };
   throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
@@ -333,12 +347,10 @@ function majControl_majMonad_majList_majTrans_takemajWhile($dictApplicative_0) {
   tco_loop_Control_Monad_List_Trans_takeWhile:;
   $dictApplicative_0 = $__tco_var_Control_Monad_List_Trans_takeWhile_dictApplicative_0;
   $__local_var_1_0 = (((($dictApplicative_0)->{'Apply0'})(null))->{'Functor0'})(null);
-  $__res = (function() use ($__local_var_1_0, $dictApplicative_0) {
-  $__fn = function($f_2, $v_3 = null) use ($__local_var_1_0, $dictApplicative_0, &$__fn) {
+  $__res = function($f_2) use ($__local_var_1_0, $dictApplicative_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_3) use ($__local_var_1_0, $dictApplicative_0, $f_2) {
+  $__num = \func_num_args();
   $__res = ((($__local_var_1_0)->{'map'})(function($v_4) use ($dictApplicative_0, $f_2) {
   $__num = \func_num_args();
   $__t1 = null;;
@@ -371,10 +383,12 @@ goto end_branch_1;;
 }))($v_3);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -388,7 +402,7 @@ function majControl_majMonad_majList_majTrans_scanl($dictMonad_0, $f_1 = null, $
   if ($__num < 4) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 4);
   }
-  $__res = \Control\Monad\List\Trans\majControl_majMonad_majList_majTrans_unfold($dictMonad_0, function($v_4) use ($dictMonad_0, $f_1) {
+  $__res = ((($GLOBALS['Control_Monad_List_Trans_unfold'])($dictMonad_0))(function($v_4) use ($dictMonad_0, $f_1) {
   $__num = \func_num_args();
   $__local_var_5_0 = ($v_4)->{'value0'};
   $__res = ((((((((($dictMonad_0)->{'Bind1'})(null))->{'Apply0'})(null))->{'Functor0'})(null))->{'map'})(function($v1_6) use ($__local_var_5_0, $f_1) {
@@ -417,7 +431,7 @@ goto end_branch_1;;
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, new \Data\Tuple\Data_Tuple_Tuple($b_2, $l_3));
+}))(new \Data\Tuple\Data_Tuple_Tuple($b_2, $l_3));
   goto __end;;
   __end:
   return 4 < $__num ? $__res(...\array_slice(\func_get_args(), 4)) : $__res;
@@ -511,12 +525,10 @@ function majControl_majMonad_majList_majTrans_take($dictApplicative_0) {
   $dictApplicative_0 = $__tco_var_Control_Monad_List_Trans_take_dictApplicative_0;
   $nil1_1_0 = (($dictApplicative_0)->{'pure'})(new \Control\Monad\List\Trans\Control_Monad_List_Trans_Done());
   $__local_var_2_1 = (((($dictApplicative_0)->{'Apply0'})(null))->{'Functor0'})(null);
-  $__res = (function() use ($__local_var_2_1, $dictApplicative_0, $nil1_1_0) {
-  $__fn = function($v_3, $v1_4 = null) use ($__local_var_2_1, $dictApplicative_0, $nil1_1_0, &$__fn) {
+  $__res = function($v_3) use ($__local_var_2_1, $dictApplicative_0, $nil1_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_4) use ($__local_var_2_1, $dictApplicative_0, $nil1_1_0, $v_3) {
+  $__num = \func_num_args();
   $__res = match ($v_3) { 0 => $nil1_1_0, default => ((($__local_var_2_1)->{'map'})(function($v2_5) use ($dictApplicative_0, $v_3) {
   $__num = \func_num_args();
   $__t2 = null;;
@@ -542,10 +554,12 @@ goto end_branch_2;;
 }))($v1_4) };
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -567,13 +581,13 @@ function majControl_majMonad_majList_majTrans_zipmajWith__prime__($dictMonad_0) 
   $Bind1_3_2 = (($dictMonad_0)->{'Bind1'})(null);
   $Functor0_4_3 = (((($Bind1_3_2)->{'Apply0'})(null))->{'Functor0'})(null);
   $uncons1_5_4 = ($GLOBALS['Control_Monad_List_Trans_uncons'])($dictMonad_0);
-  $__res = (function() use ($Applicative0_1_0, $Bind1_3_2, $Functor0_4_3, $dictMonad_0, $nil1_2_1, $uncons1_5_4) {
-  $__fn = function($f_6, $fa_7 = null, $fb_8 = null) use ($Applicative0_1_0, $Bind1_3_2, $Functor0_4_3, $dictMonad_0, $nil1_2_1, $uncons1_5_4, &$__fn) {
+  $__res = function($f_6) use ($Applicative0_1_0, $Bind1_3_2, $Functor0_4_3, $dictMonad_0, $nil1_2_1, $uncons1_5_4) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
-  $__res = ((($Functor0_4_3)->{'map'})((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Control_Monad_List_Trans_Skip']))((($GLOBALS['Control_Semigroupoid_composeImpl'])($GLOBALS['Data_Lazy_defer']))($GLOBALS['Data_Function_const']))))(((($Bind1_3_2)->{'bind'})(($uncons1_5_4)($fa_7)))(function($ua_9) use ($Applicative0_1_0, $Bind1_3_2, $Functor0_4_3, $dictMonad_0, $f_6, $fb_8, $nil1_2_1, $uncons1_5_4) {
+  $__res = function($fa_7) use ($Applicative0_1_0, $Bind1_3_2, $Functor0_4_3, $dictMonad_0, $f_6, $nil1_2_1, $uncons1_5_4) {
+  $__num = \func_num_args();
+  $__res = function($fb_8) use ($Applicative0_1_0, $Bind1_3_2, $Functor0_4_3, $dictMonad_0, $f_6, $fa_7, $nil1_2_1, $uncons1_5_4) {
+  $__num = \func_num_args();
+  $__res = (($GLOBALS['Control_Monad_List_Trans_wrapEffect'])($Functor0_4_3))(((($Bind1_3_2)->{'bind'})(($uncons1_5_4)($fa_7)))(function($ua_9) use ($Applicative0_1_0, $Bind1_3_2, $Functor0_4_3, $dictMonad_0, $f_6, $fb_8, $nil1_2_1, $uncons1_5_4) {
   $__num = \func_num_args();
   $__res = ((($Bind1_3_2)->{'bind'})(($uncons1_5_4)($fb_8)))(function($ub_10) use ($Applicative0_1_0, $Functor0_4_3, $dictMonad_0, $f_6, $nil1_2_1, $ua_9) {
   $__num = \func_num_args();
@@ -619,10 +633,16 @@ goto end_branch_5;;
 }));
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -636,22 +656,23 @@ function majControl_majMonad_majList_majTrans_zipmajWith($dictMonad_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $zipWith_prime1_1_0 = ($GLOBALS['Control_Monad_List_Trans_zipWith__prime__'])($dictMonad_0);
-  $__res = function($f_2) use ($dictMonad_0, $zipWith_prime1_1_0) {
+  $pure1_1_0 = ((($dictMonad_0)->{'Applicative0'})(null))->{'pure'};
+  $zipWith_prime1_2_1 = ($GLOBALS['Control_Monad_List_Trans_zipWith__prime__'])($dictMonad_0);
+  $__res = function($f_3) use ($pure1_1_0, $zipWith_prime1_2_1) {
   $__num = \func_num_args();
-  $__res = ($zipWith_prime1_1_0)((function() use ($dictMonad_0, $f_2) {
-  $__fn = function($a_3, $b_4 = null) use ($dictMonad_0, $f_2, &$__fn) {
+  $__res = ($zipWith_prime1_2_1)(function($a_4) use ($f_3, $pure1_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
-  $__res = (((($dictMonad_0)->{'Applicative0'})(null))->{'pure'})((($f_2)($a_3))($b_4));
+  $__res = function($b_5) use ($a_4, $f_3, $pure1_1_0) {
+  $__num = \func_num_args();
+  $__res = ($pure1_1_0)((($f_3)($a_4))($b_5));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})());
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+});
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -728,22 +749,35 @@ goto end_branch_0;;
 $GLOBALS['Control_Monad_List_Trans_mapMaybe'] = __NAMESPACE__ . '\\majControl_majMonad_majList_majTrans_mapmajMaybe';
 
 // Control_Monad_List_Trans_iterate
-function majControl_majMonad_majList_majTrans_iterate($dictMonad_0, $f_1 = null, $a_2 = null) {
+function majControl_majMonad_majList_majTrans_iterate($dictMonad_0) {
   $__num = \func_num_args();
   $__fn = __NAMESPACE__ . '\\' . 'majControl_majMonad_majList_majTrans_iterate';
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = \Control\Monad\List\Trans\majControl_majMonad_majList_majTrans_unfold($dictMonad_0, function($x_3) use ($dictMonad_0, $f_1) {
+  $pure1_1_0 = ((($dictMonad_0)->{'Applicative0'})(null))->{'pure'};
+  $__res = function($f_2) use ($dictMonad_0, $pure1_1_0) {
   $__num = \func_num_args();
-  $__res = (((($dictMonad_0)->{'Applicative0'})(null))->{'pure'})(new \Data\Maybe\Data_Maybe_Just(new \Data\Tuple\Data_Tuple_Tuple(($f_1)($x_3), $x_3)));
+  $__res = function($a_3) use ($dictMonad_0, $f_2, $pure1_1_0) {
+  $__num = \func_num_args();
+  $__res = ((($GLOBALS['Control_Monad_List_Trans_unfold'])($dictMonad_0))(function($x_4) use ($f_2, $pure1_1_0) {
+  $__num = \func_num_args();
+  $__res = ($pure1_1_0)(new \Data\Maybe\Data_Maybe_Just(new \Data\Tuple\Data_Tuple_Tuple(($f_2)($x_4), $x_4)));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
-}, $a_2);
+}))($a_3);
   goto __end;;
   __end:
-  return 3 < $__num ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }
 $GLOBALS['Control_Monad_List_Trans_iterate'] = __NAMESPACE__ . '\\majControl_majMonad_majList_majTrans_iterate';
 
@@ -792,21 +826,19 @@ function majControl_majMonad_majList_majTrans_functormajListmajT($dictFunctor_0)
   $__tco_var_Control_Monad_List_Trans_functorListT_dictFunctor_0 = $dictFunctor_0;
   tco_loop_Control_Monad_List_Trans_functorListT:;
   $dictFunctor_0 = $__tco_var_Control_Monad_List_Trans_functorListT_dictFunctor_0;
-  $__res = (object)["map" => (function() use ($dictFunctor_0) {
-  $__fn = function($f_1, $v_2 = null) use ($dictFunctor_0, &$__fn) {
+  $__res = (object)["map" => function($f_1) use ($dictFunctor_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_2) use ($dictFunctor_0, $f_1) {
+  $__num = \func_num_args();
   $__res = ((($dictFunctor_0)->{'map'})(function($v_3) use ($dictFunctor_0, $f_1) {
   $__num = \func_num_args();
   $__t0 = null;;
   if ($v_3 instanceof \Control\Monad\List\Trans\Control_Monad_List_Trans_Yield) {
-$__t0 = new \Control\Monad\List\Trans\Control_Monad_List_Trans_Yield(($f_1)(($v_3)->{'value0'}), ((($GLOBALS['Data_Lazy_functorLazy'])->{'map'})(((\Control\Monad\List\Trans\majControl_majMonad_majList_majTrans_functormajListmajT($dictFunctor_0))->{'map'})($f_1)))(($v_3)->{'value1'}));
+$__t0 = new \Control\Monad\List\Trans\Control_Monad_List_Trans_Yield(($f_1)(($v_3)->{'value0'}), ((($GLOBALS['Data_Lazy_functorLazy'])->{'map'})(((($GLOBALS['Control_Monad_List_Trans_functorListT'])($dictFunctor_0))->{'map'})($f_1)))(($v_3)->{'value1'}));
 goto end_branch_0;;
 };
   if ($v_3 instanceof \Control\Monad\List\Trans\Control_Monad_List_Trans_Skip) {
-$__t0 = new \Control\Monad\List\Trans\Control_Monad_List_Trans_Skip(((($GLOBALS['Data_Lazy_functorLazy'])->{'map'})(((\Control\Monad\List\Trans\majControl_majMonad_majList_majTrans_functormajListmajT($dictFunctor_0))->{'map'})($f_1)))(($v_3)->{'value0'}));
+$__t0 = new \Control\Monad\List\Trans\Control_Monad_List_Trans_Skip(((($GLOBALS['Data_Lazy_functorLazy'])->{'map'})(((($GLOBALS['Control_Monad_List_Trans_functorListT'])($dictFunctor_0))->{'map'})($f_1)))(($v_3)->{'value0'}));
 goto end_branch_0;;
 };
   if ($v_3 instanceof \Control\Monad\List\Trans\Control_Monad_List_Trans_Done) {
@@ -823,10 +855,12 @@ goto end_branch_0;;
 }))($v_2);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -887,12 +921,12 @@ function majControl_majMonad_majList_majTrans_foldlmajRec__prime__($dictMonadRec
   $__local_var_2_1 = (($Monad0_1_0)->{'Applicative0'})(null);
   $__local_var_3_2 = (($Monad0_1_0)->{'Bind1'})(null);
   $uncons1_4_3 = ($GLOBALS['Control_Monad_List_Trans_uncons'])($Monad0_1_0);
-  $__res = (function() use ($__local_var_2_1, $__local_var_3_2, $dictMonadRec_0, $uncons1_4_3) {
-  $__fn = function($f_5, $a_6 = null, $b_7 = null) use ($__local_var_2_1, $__local_var_3_2, $dictMonadRec_0, $uncons1_4_3, &$__fn) {
+  $__res = function($f_5) use ($__local_var_2_1, $__local_var_3_2, $dictMonadRec_0, $uncons1_4_3) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($a_6) use ($__local_var_2_1, $__local_var_3_2, $dictMonadRec_0, $f_5, $uncons1_4_3) {
+  $__num = \func_num_args();
+  $__res = function($b_7) use ($__local_var_2_1, $__local_var_3_2, $a_6, $dictMonadRec_0, $f_5, $uncons1_4_3) {
+  $__num = \func_num_args();
   $__res = ((($dictMonadRec_0)->{'tailRecM'})(function($o_8) use ($__local_var_2_1, $__local_var_3_2, $f_5, $uncons1_4_3) {
   $__num = \func_num_args();
   $__local_var_9_4 = ($o_8)->{'a'};
@@ -928,10 +962,16 @@ goto end_branch_5;;
 }))((object)["a" => $a_6, "b" => $b_7]);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -945,19 +985,19 @@ function majControl_majMonad_majList_majTrans_runmajListmajTmajRec($dictMonadRec
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ((($GLOBALS['Control_Monad_List_Trans_foldlRec__prime__'])($dictMonadRec_0))((function() use ($dictMonadRec_0) {
-  $__fn = function($v_1, $v1_2 = null) use ($dictMonadRec_0, &$__fn) {
+  $__res = ((($GLOBALS['Control_Monad_List_Trans_foldlRec__prime__'])($dictMonadRec_0))(function($v_1) use ($dictMonadRec_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_2) use ($dictMonadRec_0) {
+  $__num = \func_num_args();
   $__res = (((((($dictMonadRec_0)->{'Monad0'})(null))->{'Applicative0'})(null))->{'pure'})($GLOBALS['Data_Unit_unit']);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()))($GLOBALS['Data_Unit_unit']);
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))($GLOBALS['Data_Unit_unit']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -974,12 +1014,12 @@ function majControl_majMonad_majList_majTrans_foldlmajRec($dictMonadRec_0) {
   $Monad0_1_0 = (($dictMonadRec_0)->{'Monad0'})(null);
   $__local_var_2_1 = (($Monad0_1_0)->{'Applicative0'})(null);
   $uncons1_3_2 = ($GLOBALS['Control_Monad_List_Trans_uncons'])($Monad0_1_0);
-  $__res = (function() use ($Monad0_1_0, $__local_var_2_1, $dictMonadRec_0, $uncons1_3_2) {
-  $__fn = function($f_4, $a_5 = null, $b_6 = null) use ($Monad0_1_0, $__local_var_2_1, $dictMonadRec_0, $uncons1_3_2, &$__fn) {
+  $__res = function($f_4) use ($Monad0_1_0, $__local_var_2_1, $dictMonadRec_0, $uncons1_3_2) {
   $__num = \func_num_args();
-  if ($__num < 3) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
-  }
+  $__res = function($a_5) use ($Monad0_1_0, $__local_var_2_1, $dictMonadRec_0, $f_4, $uncons1_3_2) {
+  $__num = \func_num_args();
+  $__res = function($b_6) use ($Monad0_1_0, $__local_var_2_1, $a_5, $dictMonadRec_0, $f_4, $uncons1_3_2) {
+  $__num = \func_num_args();
   $__res = ((($dictMonadRec_0)->{'tailRecM'})(function($o_7) use ($Monad0_1_0, $__local_var_2_1, $f_4, $uncons1_3_2) {
   $__num = \func_num_args();
   $__local_var_8_3 = ($o_7)->{'a'};
@@ -1008,10 +1048,16 @@ goto end_branch_4;;
 }))((object)["a" => $a_5, "b" => $b_6]);
   goto __end;;
   __end:
-  return $__num > 3 ? $__res(...\array_slice(\func_get_args(), 3)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1030,12 +1076,10 @@ function majControl_majMonad_majList_majTrans_foldl__prime__($dictMonad_0) {
   $__res = function($f_3) use ($__local_var_1_0, $dictMonad_0, $uncons1_2_1) {
   $__num = \func_num_args();
   $loop_4_2 = null;
-  $loop_4_2 = (function() use ($__local_var_1_0, $dictMonad_0, $f_3, &$loop_4_2, $uncons1_2_1) {
-  $__fn = function($b_5, $l_6 = null) use ($__local_var_1_0, $dictMonad_0, $f_3, &$loop_4_2, $uncons1_2_1, &$__fn) {
+  $loop_4_2 = function($b_5) use ($__local_var_1_0, $dictMonad_0, $f_3, &$loop_4_2, $uncons1_2_1) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($l_6) use ($__local_var_1_0, $b_5, $dictMonad_0, $f_3, &$loop_4_2, $uncons1_2_1) {
+  $__num = \func_num_args();
   $__res = ((($__local_var_1_0)->{'bind'})(($uncons1_2_1)($l_6)))(function($v_7) use ($__local_var_1_0, $b_5, $dictMonad_0, $f_3, &$loop_4_2) {
   $__num = \func_num_args();
   $__t3 = null;;
@@ -1064,10 +1108,12 @@ goto end_branch_3;;
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   $__res = $loop_4_2;
   goto __end;;
   __end:
@@ -1086,19 +1132,19 @@ function majControl_majMonad_majList_majTrans_runmajListmajT($dictMonad_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = ((($GLOBALS['Control_Monad_List_Trans_foldl__prime__'])($dictMonad_0))((function() use ($dictMonad_0) {
-  $__fn = function($v_1, $v1_2 = null) use ($dictMonad_0, &$__fn) {
+  $__res = ((($GLOBALS['Control_Monad_List_Trans_foldl__prime__'])($dictMonad_0))(function($v_1) use ($dictMonad_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_2) use ($dictMonad_0) {
+  $__num = \func_num_args();
   $__res = (((($dictMonad_0)->{'Applicative0'})(null))->{'pure'})($GLOBALS['Data_Unit_unit']);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()))($GLOBALS['Data_Unit_unit']);
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}))($GLOBALS['Data_Unit_unit']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1116,12 +1162,10 @@ function majControl_majMonad_majList_majTrans_foldl($dictMonad_0) {
   $__res = function($f_2) use ($dictMonad_0, $uncons1_1_0) {
   $__num = \func_num_args();
   $loop_3_1 = null;
-  $loop_3_1 = (function() use ($dictMonad_0, $f_2, &$loop_3_1, $uncons1_1_0) {
-  $__fn = function($b_4, $l_5 = null) use ($dictMonad_0, $f_2, &$loop_3_1, $uncons1_1_0, &$__fn) {
+  $loop_3_1 = function($b_4) use ($dictMonad_0, $f_2, &$loop_3_1, $uncons1_1_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($l_5) use ($b_4, $dictMonad_0, $f_2, &$loop_3_1, $uncons1_1_0) {
+  $__num = \func_num_args();
   $__res = ((((($dictMonad_0)->{'Bind1'})(null))->{'bind'})(($uncons1_1_0)($l_5)))(function($v_6) use ($b_4, $dictMonad_0, $f_2, &$loop_3_1) {
   $__num = \func_num_args();
   $__t2 = null;;
@@ -1143,10 +1187,12 @@ goto end_branch_2;;
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   $__res = $loop_3_1;
   goto __end;;
   __end:
@@ -1220,12 +1266,10 @@ function majControl_majMonad_majList_majTrans_dropmajWhile($dictApplicative_0) {
   tco_loop_Control_Monad_List_Trans_dropWhile:;
   $dictApplicative_0 = $__tco_var_Control_Monad_List_Trans_dropWhile_dictApplicative_0;
   $__local_var_1_0 = (((($dictApplicative_0)->{'Apply0'})(null))->{'Functor0'})(null);
-  $__res = (function() use ($__local_var_1_0, $dictApplicative_0) {
-  $__fn = function($f_2, $v_3 = null) use ($__local_var_1_0, $dictApplicative_0, &$__fn) {
+  $__res = function($f_2) use ($__local_var_1_0, $dictApplicative_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v_3) use ($__local_var_1_0, $dictApplicative_0, $f_2) {
+  $__num = \func_num_args();
   $__res = ((($__local_var_1_0)->{'map'})(function($v_4) use ($dictApplicative_0, $f_2) {
   $__num = \func_num_args();
   $__t1 = null;;
@@ -1258,10 +1302,12 @@ goto end_branch_1;;
 }))($v_3);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1279,12 +1325,10 @@ function majControl_majMonad_majList_majTrans_drop($dictApplicative_0) {
   tco_loop_Control_Monad_List_Trans_drop:;
   $dictApplicative_0 = $__tco_var_Control_Monad_List_Trans_drop_dictApplicative_0;
   $__local_var_1_0 = (((($dictApplicative_0)->{'Apply0'})(null))->{'Functor0'})(null);
-  $__res = (function() use ($__local_var_1_0, $dictApplicative_0) {
-  $__fn = function($v_2, $v1_3 = null) use ($__local_var_1_0, $dictApplicative_0, &$__fn) {
+  $__res = function($v_2) use ($__local_var_1_0, $dictApplicative_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($v1_3) use ($__local_var_1_0, $dictApplicative_0, $v_2) {
+  $__num = \func_num_args();
   $__res = match ($v_2) { 0 => $v1_3, default => ((($__local_var_1_0)->{'map'})(function($v2_4) use ($dictApplicative_0, $v_2) {
   $__num = \func_num_args();
   $__t1 = null;;
@@ -1310,10 +1354,12 @@ goto end_branch_1;;
 }))($v1_3) };
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1343,12 +1389,10 @@ function majControl_majMonad_majList_majTrans_unfoldable1majListmajT($dictMonad_
   }
   $Applicative0_1_0 = (($dictMonad_0)->{'Applicative0'})(null);
   $singleton1_2_1 = ($GLOBALS['Control_Monad_List_Trans_singleton'])($Applicative0_1_0);
-  $__res = (object)["unfoldr1" => (function() use ($Applicative0_1_0, $singleton1_2_1) {
-  $__fn = function($f_3, $b_4 = null) use ($Applicative0_1_0, $singleton1_2_1, &$__fn) {
+  $__res = (object)["unfoldr1" => function($f_3) use ($Applicative0_1_0, $singleton1_2_1) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($b_4) use ($Applicative0_1_0, $f_3, $singleton1_2_1) {
+  $__num = \func_num_args();
   $go__go_5_2 = null;
   $go__go_5_2 = function($v_6) use ($Applicative0_1_0, $f_3, &$go__go_5_2, $singleton1_2_1) {
   $__num = \func_num_args();
@@ -1379,10 +1423,12 @@ goto end_branch_3;;
   $__res = ($go__go_5_2)(($f_3)($b_4));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})()];
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1398,13 +1444,11 @@ function majControl_majMonad_majList_majTrans_unfoldablemajListmajT($dictMonad_0
   }
   $Applicative0_1_0 = (($dictMonad_0)->{'Applicative0'})(null);
   $nil1_2_1 = (($Applicative0_1_0)->{'pure'})(new \Control\Monad\List\Trans\Control_Monad_List_Trans_Done());
-  $unfoldable1ListT1_3_2 = \Control\Monad\List\Trans\majControl_majMonad_majList_majTrans_unfoldable1majListmajT($dictMonad_0);
-  $__res = (object)["unfoldr" => (function() use ($Applicative0_1_0, $nil1_2_1) {
-  $__fn = function($f_4, $b_5 = null) use ($Applicative0_1_0, $nil1_2_1, &$__fn) {
+  $unfoldable1ListT1_3_2 = ($GLOBALS['Control_Monad_List_Trans_unfoldable1ListT'])($dictMonad_0);
+  $__res = (object)["unfoldr" => function($f_4) use ($Applicative0_1_0, $nil1_2_1) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($b_5) use ($Applicative0_1_0, $f_4, $nil1_2_1) {
+  $__num = \func_num_args();
   $go__go_6_3 = null;
   $go__go_6_3 = function($v_7) use ($Applicative0_1_0, $f_4, &$go__go_6_3, $nil1_2_1) {
   $__num = \func_num_args();
@@ -1435,10 +1479,12 @@ goto end_branch_4;;
   $__res = ($go__go_6_3)(($f_4)($b_5));
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Unfoldable10" => function($_dollar__unused_4) use ($unfoldable1ListT1_3_2) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Unfoldable10" => function($_dollar__unused_4) use ($unfoldable1ListT1_3_2) {
   $__num = \func_num_args();
   $__res = $unfoldable1ListT1_3_2;
   goto __end;;
@@ -1473,19 +1519,17 @@ function majControl_majMonad_majList_majTrans_concat($dictApplicative_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $__local_var_1_0 = (((($dictApplicative_0)->{'Apply0'})(null))->{'Functor0'})(null);
-  $__res = (function() use ($__local_var_1_0, $dictApplicative_0) {
-  $__fn = function($x_2, $y_3 = null) use ($__local_var_1_0, $dictApplicative_0, &$__fn) {
+  $__res = function($x_2) use ($__local_var_1_0, $dictApplicative_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($y_3) use ($__local_var_1_0, $dictApplicative_0, $x_2) {
+  $__num = \func_num_args();
   $__res = ((($__local_var_1_0)->{'map'})(function($v_4) use ($dictApplicative_0, $y_3) {
   $__num = \func_num_args();
   $__t1 = null;;
   if ($v_4 instanceof \Control\Monad\List\Trans\Control_Monad_List_Trans_Yield) {
 $__t1 = new \Control\Monad\List\Trans\Control_Monad_List_Trans_Yield(($v_4)->{'value0'}, ((($GLOBALS['Data_Lazy_functorLazy'])->{'map'})(function($v1_5) use ($dictApplicative_0, $y_3) {
   $__num = \func_num_args();
-  $__res = \Control\Monad\List\Trans\majControl_majMonad_majList_majTrans_concat($dictApplicative_0, $v1_5, $y_3);
+  $__res = ((($GLOBALS['Control_Monad_List_Trans_concat'])($dictApplicative_0))($v1_5))($y_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1495,7 +1539,7 @@ goto end_branch_1;;
   if ($v_4 instanceof \Control\Monad\List\Trans\Control_Monad_List_Trans_Skip) {
 $__t1 = new \Control\Monad\List\Trans\Control_Monad_List_Trans_Skip(((($GLOBALS['Data_Lazy_functorLazy'])->{'map'})(function($v1_5) use ($dictApplicative_0, $y_3) {
   $__num = \func_num_args();
-  $__res = \Control\Monad\List\Trans\majControl_majMonad_majList_majTrans_concat($dictApplicative_0, $v1_5, $y_3);
+  $__res = ((($GLOBALS['Control_Monad_List_Trans_concat'])($dictApplicative_0))($v1_5))($y_3);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1522,10 +1566,12 @@ goto end_branch_1;;
 }))($x_2);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1560,7 +1606,7 @@ function majControl_majMonad_majList_majTrans_catmajMaybes($dictFunctor_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $__res = (($GLOBALS['Control_Monad_List_Trans_mapMaybe'])($dictFunctor_0))($GLOBALS['Control_Monad_List_Trans_identity']);
+  $__res = (($GLOBALS['Control_Monad_List_Trans_mapMaybe'])($dictFunctor_0))($GLOBALS['Control_Monad_List_Trans_identity1']);
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1576,13 +1622,13 @@ function majControl_majMonad_majList_majTrans_monadmajListmajT($dictMonad_0) {
   }
   $__res = (object)["Applicative0" => function($_dollar__unused_1) use ($dictMonad_0) {
   $__num = \func_num_args();
-  $__res = \Control\Monad\List\Trans\majControl_majMonad_majList_majTrans_applicativemajListmajT($dictMonad_0);
+  $__res = ($GLOBALS['Control_Monad_List_Trans_applicativeListT'])($dictMonad_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($_dollar__unused_1) use ($dictMonad_0) {
   $__num = \func_num_args();
-  $__res = \Control\Monad\List\Trans\majControl_majMonad_majList_majTrans_bindmajListmajT($dictMonad_0);
+  $__res = ($GLOBALS['Control_Monad_List_Trans_bindListT'])($dictMonad_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1602,12 +1648,10 @@ function majControl_majMonad_majList_majTrans_bindmajListmajT($dictMonad_0) {
   }
   $append_1_0 = ($GLOBALS['Control_Monad_List_Trans_concat'])((($dictMonad_0)->{'Applicative0'})(null));
   $__local_var_2_1 = (((((($dictMonad_0)->{'Bind1'})(null))->{'Apply0'})(null))->{'Functor0'})(null);
-  $__res = (object)["bind" => (function() use ($__local_var_2_1, $append_1_0, $dictMonad_0) {
-  $__fn = function($fa_3, $f_4 = null) use ($__local_var_2_1, $append_1_0, $dictMonad_0, &$__fn) {
+  $__res = (object)["bind" => function($fa_3) use ($__local_var_2_1, $append_1_0, $dictMonad_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($f_4) use ($__local_var_2_1, $append_1_0, $dictMonad_0, $fa_3) {
+  $__num = \func_num_args();
   $__res = ((($__local_var_2_1)->{'map'})(function($v_5) use ($append_1_0, $dictMonad_0, $f_4) {
   $__num = \func_num_args();
   $__t2 = null;;
@@ -1615,7 +1659,7 @@ function majControl_majMonad_majList_majTrans_bindmajListmajT($dictMonad_0) {
 $__local_var_6_3 = ($v_5)->{'value0'};
 $__t2 = new \Control\Monad\List\Trans\Control_Monad_List_Trans_Skip(((($GLOBALS['Data_Lazy_functorLazy'])->{'map'})(function($s_prime_7) use ($__local_var_6_3, $append_1_0, $dictMonad_0, $f_4) {
   $__num = \func_num_args();
-  $__res = (($append_1_0)(($f_4)($__local_var_6_3)))((((\Control\Monad\List\Trans\majControl_majMonad_majList_majTrans_bindmajListmajT($dictMonad_0))->{'bind'})($s_prime_7))($f_4));
+  $__res = (($append_1_0)(($f_4)($__local_var_6_3)))((((($GLOBALS['Control_Monad_List_Trans_bindListT'])($dictMonad_0))->{'bind'})($s_prime_7))($f_4));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1625,7 +1669,7 @@ goto end_branch_2;;
   if ($v_5 instanceof \Control\Monad\List\Trans\Control_Monad_List_Trans_Skip) {
 $__t2 = new \Control\Monad\List\Trans\Control_Monad_List_Trans_Skip(((($GLOBALS['Data_Lazy_functorLazy'])->{'map'})(function($v1_6) use ($dictMonad_0, $f_4) {
   $__num = \func_num_args();
-  $__res = (((\Control\Monad\List\Trans\majControl_majMonad_majList_majTrans_bindmajListmajT($dictMonad_0))->{'bind'})($v1_6))($f_4);
+  $__res = (((($GLOBALS['Control_Monad_List_Trans_bindListT'])($dictMonad_0))->{'bind'})($v1_6))($f_4);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1646,12 +1690,14 @@ goto end_branch_2;;
 }))($fa_3);
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Apply0" => function($_dollar__unused_3) use ($dictMonad_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Apply0" => function($_dollar__unused_3) use ($dictMonad_0) {
   $__num = \func_num_args();
-  $__res = \Control\Monad\List\Trans\majControl_majMonad_majList_majTrans_applymajListmajT($dictMonad_0);
+  $__res = ($GLOBALS['Control_Monad_List_Trans_applyListT'])($dictMonad_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1669,19 +1715,17 @@ function majControl_majMonad_majList_majTrans_applymajListmajT($dictMonad_0) {
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $functorListT1_1_0 = \Control\Monad\List\Trans\majControl_majMonad_majList_majTrans_functormajListmajT((((((($dictMonad_0)->{'Bind1'})(null))->{'Apply0'})(null))->{'Functor0'})(null));
-  $__local_var_2_1 = \Control\Monad\List\Trans\majControl_majMonad_majList_majTrans_bindmajListmajT($dictMonad_0);
-  $__res = (object)["apply" => (function() use ($__local_var_2_1, $dictMonad_0) {
-  $__fn = function($f_3, $a_4 = null) use ($__local_var_2_1, $dictMonad_0, &$__fn) {
+  $functorListT1_1_0 = ($GLOBALS['Control_Monad_List_Trans_functorListT'])((((((($dictMonad_0)->{'Bind1'})(null))->{'Apply0'})(null))->{'Functor0'})(null));
+  $__local_var_2_1 = ($GLOBALS['Control_Monad_List_Trans_bindListT'])($dictMonad_0);
+  $__res = (object)["apply" => function($f_3) use ($__local_var_2_1, $dictMonad_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($a_4) use ($__local_var_2_1, $dictMonad_0, $f_3) {
+  $__num = \func_num_args();
   $__res = ((($__local_var_2_1)->{'bind'})($f_3))(function($f_prime_5) use ($__local_var_2_1, $a_4, $dictMonad_0) {
   $__num = \func_num_args();
   $__res = ((($__local_var_2_1)->{'bind'})($a_4))(function($a_prime_6) use ($dictMonad_0, $f_prime_5) {
   $__num = \func_num_args();
-  $__res = ((\Control\Monad\List\Trans\majControl_majMonad_majList_majTrans_applicativemajListmajT($dictMonad_0))->{'pure'})(($f_prime_5)($a_prime_6));
+  $__res = ((($GLOBALS['Control_Monad_List_Trans_applicativeListT'])($dictMonad_0))->{'pure'})(($f_prime_5)($a_prime_6));
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1692,10 +1736,12 @@ function majControl_majMonad_majList_majTrans_applymajListmajT($dictMonad_0) {
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})(), "Functor0" => function($_dollar__unused_2) use ($functorListT1_1_0) {
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar__unused_2) use ($functorListT1_1_0) {
   $__num = \func_num_args();
   $__res = $functorListT1_1_0;
   goto __end;;
@@ -1717,7 +1763,7 @@ function majControl_majMonad_majList_majTrans_applicativemajListmajT($dictMonad_
   }
   $__res = (object)["pure" => ($GLOBALS['Control_Monad_List_Trans_singleton'])((($dictMonad_0)->{'Applicative0'})(null)), "Apply0" => function($_dollar__unused_1) use ($dictMonad_0) {
   $__num = \func_num_args();
-  $__res = \Control\Monad\List\Trans\majControl_majMonad_majList_majTrans_applymajListmajT($dictMonad_0);
+  $__res = ($GLOBALS['Control_Monad_List_Trans_applyListT'])($dictMonad_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1740,7 +1786,7 @@ function majControl_majMonad_majList_majTrans_monadmajEffectmajListmajT($dictMon
   $__num = \func_num_args();
   $__res = (object)["pure" => ($GLOBALS['Control_Monad_List_Trans_singleton'])((($Monad0_1_0)->{'Applicative0'})(null)), "Apply0" => function($_dollar__unused_3) use ($Monad0_1_0) {
   $__num = \func_num_args();
-  $__res = \Control\Monad\List\Trans\majControl_majMonad_majList_majTrans_applymajListmajT($Monad0_1_0);
+  $__res = ($GLOBALS['Control_Monad_List_Trans_applyListT'])($Monad0_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1750,7 +1796,7 @@ function majControl_majMonad_majList_majTrans_monadmajEffectmajListmajT($dictMon
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($_dollar__unused_2) use ($Monad0_1_0) {
   $__num = \func_num_args();
-  $__res = \Control\Monad\List\Trans\majControl_majMonad_majList_majTrans_bindmajListmajT($Monad0_1_0);
+  $__res = ($GLOBALS['Control_Monad_List_Trans_bindListT'])($Monad0_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1780,7 +1826,7 @@ function majControl_majMonad_majList_majTrans_monadmajSmajTmajListmajT($dictMona
   $__num = \func_num_args();
   $__res = (object)["pure" => ($GLOBALS['Control_Monad_List_Trans_singleton'])((($Monad0_1_0)->{'Applicative0'})(null)), "Apply0" => function($_dollar__unused_3) use ($Monad0_1_0) {
   $__num = \func_num_args();
-  $__res = \Control\Monad\List\Trans\majControl_majMonad_majList_majTrans_applymajListmajT($Monad0_1_0);
+  $__res = ($GLOBALS['Control_Monad_List_Trans_applyListT'])($Monad0_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1790,7 +1836,7 @@ function majControl_majMonad_majList_majTrans_monadmajSmajTmajListmajT($dictMona
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($_dollar__unused_2) use ($Monad0_1_0) {
   $__num = \func_num_args();
-  $__res = \Control\Monad\List\Trans\majControl_majMonad_majList_majTrans_bindmajListmajT($Monad0_1_0);
+  $__res = ($GLOBALS['Control_Monad_List_Trans_bindListT'])($Monad0_1_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1815,7 +1861,7 @@ function majControl_majMonad_majList_majTrans_altmajListmajT($dictApplicative_0)
   if ($__num < 1) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
-  $functorListT1_1_0 = \Control\Monad\List\Trans\majControl_majMonad_majList_majTrans_functormajListmajT((((($dictApplicative_0)->{'Apply0'})(null))->{'Functor0'})(null));
+  $functorListT1_1_0 = ($GLOBALS['Control_Monad_List_Trans_functorListT'])((((($dictApplicative_0)->{'Apply0'})(null))->{'Functor0'})(null));
   $__res = (object)["alt" => ($GLOBALS['Control_Monad_List_Trans_concat'])($dictApplicative_0), "Functor0" => function($_dollar__unused_2) use ($functorListT1_1_0) {
   $__num = \func_num_args();
   $__res = $functorListT1_1_0;
@@ -1837,7 +1883,7 @@ function majControl_majMonad_majList_majTrans_plusmajListmajT($dictMonad_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $Applicative0_1_0 = (($dictMonad_0)->{'Applicative0'})(null);
-  $altListT1_2_1 = \Control\Monad\List\Trans\majControl_majMonad_majList_majTrans_altmajListmajT($Applicative0_1_0);
+  $altListT1_2_1 = ($GLOBALS['Control_Monad_List_Trans_altListT'])($Applicative0_1_0);
   $__res = (object)["empty" => (($Applicative0_1_0)->{'pure'})(new \Control\Monad\List\Trans\Control_Monad_List_Trans_Done()), "Alt0" => function($_dollar__unused_3) use ($altListT1_2_1) {
   $__num = \func_num_args();
   $__res = $altListT1_2_1;
@@ -1860,12 +1906,12 @@ function majControl_majMonad_majList_majTrans_alternativemajListmajT($dictMonad_
   }
   $applicativeListT1_1_0 = (object)["pure" => ($GLOBALS['Control_Monad_List_Trans_singleton'])((($dictMonad_0)->{'Applicative0'})(null)), "Apply0" => function($_dollar__unused_1) use ($dictMonad_0) {
   $__num = \func_num_args();
-  $__res = \Control\Monad\List\Trans\majControl_majMonad_majList_majTrans_applymajListmajT($dictMonad_0);
+  $__res = ($GLOBALS['Control_Monad_List_Trans_applyListT'])($dictMonad_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $plusListT1_2_1 = \Control\Monad\List\Trans\majControl_majMonad_majList_majTrans_plusmajListmajT($dictMonad_0);
+  $plusListT1_2_1 = ($GLOBALS['Control_Monad_List_Trans_plusListT'])($dictMonad_0);
   $__res = (object)["Applicative0" => function($_dollar__unused_3) use ($applicativeListT1_1_0) {
   $__num = \func_num_args();
   $__res = $applicativeListT1_1_0;
@@ -1896,7 +1942,7 @@ function majControl_majMonad_majList_majTrans_monadmajPlusmajListmajT($dictMonad
   $__num = \func_num_args();
   $__res = (object)["pure" => ($GLOBALS['Control_Monad_List_Trans_singleton'])((($dictMonad_0)->{'Applicative0'})(null)), "Apply0" => function($_dollar__unused_2) use ($dictMonad_0) {
   $__num = \func_num_args();
-  $__res = \Control\Monad\List\Trans\majControl_majMonad_majList_majTrans_applymajListmajT($dictMonad_0);
+  $__res = ($GLOBALS['Control_Monad_List_Trans_applyListT'])($dictMonad_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -1906,12 +1952,12 @@ function majControl_majMonad_majList_majTrans_monadmajPlusmajListmajT($dictMonad
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }, "Bind1" => function($_dollar__unused_1) use ($dictMonad_0) {
   $__num = \func_num_args();
-  $__res = \Control\Monad\List\Trans\majControl_majMonad_majList_majTrans_bindmajListmajT($dictMonad_0);
+  $__res = ($GLOBALS['Control_Monad_List_Trans_bindListT'])($dictMonad_0);
   goto __end;;
   __end:
   return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
 }];
-  $alternativeListT1_2_1 = \Control\Monad\List\Trans\majControl_majMonad_majList_majTrans_alternativemajListmajT($dictMonad_0);
+  $alternativeListT1_2_1 = ($GLOBALS['Control_Monad_List_Trans_alternativeListT'])($dictMonad_0);
   $__res = (object)["Monad0" => function($_dollar__unused_3) use ($monadListT1_1_0) {
   $__num = \func_num_args();
   $__res = $monadListT1_1_0;

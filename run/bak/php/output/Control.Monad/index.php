@@ -111,12 +111,10 @@ function majControl_majMonad_whenmajM($dictMonad_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $__local_var_1_0 = (($dictMonad_0)->{'Applicative0'})(null);
-  $__res = (function() use ($__local_var_1_0, $dictMonad_0) {
-  $__fn = function($mb_2, $m_3 = null) use ($__local_var_1_0, $dictMonad_0, &$__fn) {
+  $__res = function($mb_2) use ($__local_var_1_0, $dictMonad_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($m_3) use ($__local_var_1_0, $dictMonad_0, $mb_2) {
+  $__num = \func_num_args();
   $__res = ((((($dictMonad_0)->{'Bind1'})(null))->{'bind'})($mb_2))(function($b_4) use ($__local_var_1_0, $m_3) {
   $__num = \func_num_args();
   $__t1 = null;;
@@ -133,10 +131,12 @@ goto end_branch_1;;
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -151,12 +151,10 @@ function majControl_majMonad_unlessmajM($dictMonad_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $__local_var_1_0 = (($dictMonad_0)->{'Applicative0'})(null);
-  $__res = (function() use ($__local_var_1_0, $dictMonad_0) {
-  $__fn = function($mb_2, $m_3 = null) use ($__local_var_1_0, $dictMonad_0, &$__fn) {
+  $__res = function($mb_2) use ($__local_var_1_0, $dictMonad_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($m_3) use ($__local_var_1_0, $dictMonad_0, $mb_2) {
+  $__num = \func_num_args();
   $__res = ((((($dictMonad_0)->{'Bind1'})(null))->{'bind'})($mb_2))(function($b_4) use ($__local_var_1_0, $m_3) {
   $__num = \func_num_args();
   $__t1 = null;;
@@ -178,10 +176,12 @@ goto end_branch_1;;
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
@@ -261,12 +261,10 @@ function majControl_majMonad_ap($dictMonad_0) {
     return phpurs_curry_fallback($__fn, \func_get_args(), 1);
   }
   $__local_var_1_0 = (($dictMonad_0)->{'Bind1'})(null);
-  $__res = (function() use ($__local_var_1_0, $dictMonad_0) {
-  $__fn = function($f_2, $a_3 = null) use ($__local_var_1_0, $dictMonad_0, &$__fn) {
+  $__res = function($f_2) use ($__local_var_1_0, $dictMonad_0) {
   $__num = \func_num_args();
-  if ($__num < 2) {
-    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
-  }
+  $__res = function($a_3) use ($__local_var_1_0, $dictMonad_0, $f_2) {
+  $__num = \func_num_args();
   $__res = ((($__local_var_1_0)->{'bind'})($f_2))(function($f_prime_4) use ($__local_var_1_0, $a_3, $dictMonad_0) {
   $__num = \func_num_args();
   $__res = ((($__local_var_1_0)->{'bind'})($a_3))(function($a_prime_5) use ($dictMonad_0, $f_prime_4) {
@@ -282,10 +280,12 @@ function majControl_majMonad_ap($dictMonad_0) {
 });
   goto __end;;
   __end:
-  return $__num > 2 ? $__res(...\array_slice(\func_get_args(), 2)) : $__res;
-  };
-  return $__fn;
-})();
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
   goto __end;;
   __end:
   return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
