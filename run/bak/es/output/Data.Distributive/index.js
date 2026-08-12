@@ -18,11 +18,14 @@ const distributiveFunction = {
   },
   Functor0: () => Data$dFunctor.functorFn
 };
-const cotraverse = dictDistributive => dictFunctor => {
-  const distribute2 = dictDistributive.distribute(dictFunctor);
-  return f => {
-    const $0 = dictDistributive.Functor0().map(f);
-    return x => $0(distribute2(x));
+const cotraverse = dictDistributive => {
+  const Functor0 = dictDistributive.Functor0();
+  return dictFunctor => {
+    const distribute2 = dictDistributive.distribute(dictFunctor);
+    return f => {
+      const $0 = Functor0.map(f);
+      return x => $0(distribute2(x));
+    };
   };
 };
 const collectDefault = dictDistributive => dictFunctor => {
@@ -32,9 +35,8 @@ const collectDefault = dictDistributive => dictFunctor => {
     return x => distribute2($0(x));
   };
 };
-const distributiveTuple = dictTypeEquals => {
-  const from = dictTypeEquals.proof(a => a);
-  return {
+const distributiveTuple = dictTypeEquals => (
+  {
     collect: dictFunctor => {
       const distribute2 = distributiveTuple(dictTypeEquals).distribute(dictFunctor);
       return f => {
@@ -43,13 +45,13 @@ const distributiveTuple = dictTypeEquals => {
       };
     },
     distribute: dictFunctor => {
-      const $0 = Data$dTuple.Tuple(from());
+      const $0 = Data$dTuple.Tuple(dictTypeEquals.proof(a => a)());
       const $1 = dictFunctor.map(Data$dTuple.snd);
       return x => $0($1(x));
     },
     Functor0: () => Data$dTuple.functorTuple
-  };
-};
+  }
+);
 const collect = dict => dict.collect;
 const distributeDefault = dictDistributive => dictFunctor => dictDistributive.collect(dictFunctor)(identity);
 export {collect, collectDefault, cotraverse, distribute, distributeDefault, distributiveFunction, distributiveIdentity, distributiveTuple, identity};

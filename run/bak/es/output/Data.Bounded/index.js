@@ -44,7 +44,7 @@ const boundedRecordCons = dictIsSymbol => dictBounded => {
         compareRecord: v => ra => rb => {
           const key = dictIsSymbol.reflectSymbol(Type$dProxy.Proxy);
           const left = Ord0.compare(Record$dUnsafe.unsafeGet(key)(ra))(Record$dUnsafe.unsafeGet(key)(rb));
-          if (left === "LT" || left === "GT" || left !== "EQ") { return left; }
+          if (left !== "EQ") { return left; }
           return $0.compareRecord(Type$dProxy.Proxy)(ra)(rb);
         },
         EqRecord0: () => eqRowCons2

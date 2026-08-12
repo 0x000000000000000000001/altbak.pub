@@ -28,7 +28,11 @@ const showNonEmpty = dictShow => dictShow1 => ({show: v => "(NonEmpty " + dictSh
 const semigroupNonEmpty = dictApplicative => dictSemigroup => (
   {append: v => v1 => $NonEmpty(v._1, dictSemigroup.append(v._2)(dictSemigroup.append(dictApplicative.pure(v1._1))(v1._2)))}
 );
-const oneOf = dictAlternative => v => dictAlternative.Plus1().Alt0().alt(dictAlternative.Applicative0().pure(v._1))(v._2);
+const oneOf = dictAlternative => {
+  const Alt0 = dictAlternative.Plus1().Alt0();
+  const Applicative0 = dictAlternative.Applicative0();
+  return v => Alt0.alt(Applicative0.pure(v._1))(v._2);
+};
 const head = v => v._1;
 const functorNonEmpty = dictFunctor => ({map: f => m => $NonEmpty(f(m._1), dictFunctor.map(f)(m._2))});
 const functorWithIndex = dictFunctorWithIndex => {
@@ -43,8 +47,8 @@ const fromNonEmpty = f => v => f(v._1)(v._2);
 const foldableNonEmpty = dictFoldable => (
   {
     foldMap: dictMonoid => {
-      const foldMap1 = dictFoldable.foldMap(dictMonoid);
-      return f => v => dictMonoid.Semigroup0().append(f(v._1))(foldMap1(f)(v._2));
+      const Semigroup0 = dictMonoid.Semigroup0();
+      return f => v => Semigroup0.append(f(v._1))(dictFoldable.foldMap(dictMonoid)(f)(v._2));
     },
     foldl: f => b => v => dictFoldable.foldl(f)(f(b)(v._1))(v._2),
     foldr: f => b => v => f(v._1)(dictFoldable.foldr(f)(b)(v._2))
@@ -54,16 +58,16 @@ const foldableWithIndexNonEmpty = dictFoldableWithIndex => {
   const $0 = dictFoldableWithIndex.Foldable0();
   const foldableNonEmpty1 = {
     foldMap: dictMonoid => {
-      const foldMap1 = $0.foldMap(dictMonoid);
-      return f => v => dictMonoid.Semigroup0().append(f(v._1))(foldMap1(f)(v._2));
+      const Semigroup0 = dictMonoid.Semigroup0();
+      return f => v => Semigroup0.append(f(v._1))($0.foldMap(dictMonoid)(f)(v._2));
     },
     foldl: f => b => v => $0.foldl(f)(f(b)(v._1))(v._2),
     foldr: f => b => v => f(v._1)($0.foldr(f)(b)(v._2))
   };
   return {
     foldMapWithIndex: dictMonoid => {
-      const foldMapWithIndex1 = dictFoldableWithIndex.foldMapWithIndex(dictMonoid);
-      return f => v => dictMonoid.Semigroup0().append(f(Data$dMaybe.Nothing)(v._1))(foldMapWithIndex1(x => f(Data$dMaybe.$Maybe("Just", x)))(v._2));
+      const Semigroup0 = dictMonoid.Semigroup0();
+      return f => v => Semigroup0.append(f(Data$dMaybe.Nothing)(v._1))(dictFoldableWithIndex.foldMapWithIndex(dictMonoid)(x => f(Data$dMaybe.$Maybe("Just", x)))(v._2));
     },
     foldlWithIndex: f => b => v => dictFoldableWithIndex.foldlWithIndex(x => f(Data$dMaybe.$Maybe("Just", x)))(f(Data$dMaybe.Nothing)(b)(v._1))(v._2),
     foldrWithIndex: f => b => v => f(Data$dMaybe.Nothing)(v._1)(dictFoldableWithIndex.foldrWithIndex(x => f(Data$dMaybe.$Maybe("Just", x)))(b)(v._2)),
@@ -76,8 +80,8 @@ const traversableNonEmpty = dictTraversable => {
   const $1 = dictTraversable.Foldable1();
   const foldableNonEmpty1 = {
     foldMap: dictMonoid => {
-      const foldMap1 = $1.foldMap(dictMonoid);
-      return f => v => dictMonoid.Semigroup0().append(f(v._1))(foldMap1(f)(v._2));
+      const Semigroup0 = dictMonoid.Semigroup0();
+      return f => v => Semigroup0.append(f(v._1))($1.foldMap(dictMonoid)(f)(v._2));
     },
     foldl: f => b => v => $1.foldl(f)(f(b)(v._1))(v._2),
     foldr: f => b => v => f(v._1)($1.foldr(f)(b)(v._2))
@@ -85,13 +89,13 @@ const traversableNonEmpty = dictTraversable => {
   return {
     sequence: dictApplicative => {
       const Apply0 = dictApplicative.Apply0();
-      const sequence1 = dictTraversable.sequence(dictApplicative);
-      return v => Apply0.apply(Apply0.Functor0().map(NonEmpty)(v._1))(sequence1(v._2));
+      const Functor0 = dictApplicative.Apply0().Functor0();
+      return v => Apply0.apply(Functor0.map(NonEmpty)(v._1))(dictTraversable.sequence(dictApplicative)(v._2));
     },
     traverse: dictApplicative => {
       const Apply0 = dictApplicative.Apply0();
-      const traverse1 = dictTraversable.traverse(dictApplicative);
-      return f => v => Apply0.apply(Apply0.Functor0().map(NonEmpty)(f(v._1)))(traverse1(f)(v._2));
+      const Functor0 = dictApplicative.Apply0().Functor0();
+      return f => v => Apply0.apply(Functor0.map(NonEmpty)(f(v._1)))(dictTraversable.traverse(dictApplicative)(f)(v._2));
     },
     Functor0: () => functorNonEmpty1,
     Foldable1: () => foldableNonEmpty1
@@ -109,8 +113,11 @@ const traversableWithIndexNonEmpty = dictTraversableWithIndex => {
   return {
     traverseWithIndex: dictApplicative => {
       const Apply0 = dictApplicative.Apply0();
-      const traverseWithIndex1 = dictTraversableWithIndex.traverseWithIndex(dictApplicative);
-      return f => v => Apply0.apply(Apply0.Functor0().map(NonEmpty)(f(Data$dMaybe.Nothing)(v._1)))(traverseWithIndex1(x => f(Data$dMaybe.$Maybe("Just", x)))(v._2));
+      const Functor0 = dictApplicative.Apply0().Functor0();
+      return f => v => Apply0.apply(Functor0.map(NonEmpty)(f(Data$dMaybe.Nothing)(v._1)))(dictTraversableWithIndex.traverseWithIndex(dictApplicative)(x => f(Data$dMaybe.$Maybe(
+        "Just",
+        x
+      )))(v._2));
     },
     FunctorWithIndex0: () => functorWithIndex1,
     FoldableWithIndex1: () => foldableWithIndexNonEmpty1,
@@ -120,8 +127,8 @@ const traversableWithIndexNonEmpty = dictTraversableWithIndex => {
 const foldable1NonEmpty = dictFoldable => {
   const foldableNonEmpty1 = {
     foldMap: dictMonoid => {
-      const foldMap1 = dictFoldable.foldMap(dictMonoid);
-      return f => v => dictMonoid.Semigroup0().append(f(v._1))(foldMap1(f)(v._2));
+      const Semigroup0 = dictMonoid.Semigroup0();
+      return f => v => Semigroup0.append(f(v._1))(dictFoldable.foldMap(dictMonoid)(f)(v._2));
     },
     foldl: f => b => v => dictFoldable.foldl(f)(f(b)(v._1))(v._2),
     foldr: f => b => v => f(v._1)(dictFoldable.foldr(f)(b)(v._2))
@@ -150,46 +157,36 @@ const foldable1NonEmpty = dictFoldable => {
   };
 };
 const foldl1 = dictFoldable => foldable1NonEmpty(dictFoldable).foldl1;
-const eqNonEmpty = dictEq1 => dictEq => {
-  const eq11 = dictEq1.eq1(dictEq);
-  return {eq: x => y => dictEq.eq(x._1)(y._1) && eq11(x._2)(y._2)};
-};
+const eqNonEmpty = dictEq1 => dictEq => ({eq: x => y => dictEq.eq(x._1)(y._1) && dictEq1.eq1(dictEq)(x._2)(y._2)});
 const ordNonEmpty = dictOrd1 => {
   const $0 = dictOrd1.Eq10();
   return dictOrd => {
-    const compare11 = dictOrd1.compare1(dictOrd);
     const $1 = dictOrd.Eq0();
-    const eq11 = $0.eq1($1);
-    const eqNonEmpty2 = {eq: x => y => $1.eq(x._1)(y._1) && eq11(x._2)(y._2)};
+    const eqNonEmpty2 = {eq: x => y => $1.eq(x._1)(y._1) && $0.eq1($1)(x._2)(y._2)};
     return {
       compare: x => y => {
         const v = dictOrd.compare(x._1)(y._1);
         if (v === "LT") { return Data$dOrdering.LT; }
         if (v === "GT") { return Data$dOrdering.GT; }
-        return compare11(x._2)(y._2);
+        return dictOrd1.compare1(dictOrd)(x._2)(y._2);
       },
       Eq0: () => eqNonEmpty2
     };
   };
 };
-const eq1NonEmpty = dictEq1 => (
-  {
-    eq1: dictEq => {
-      const eq11 = dictEq1.eq1(dictEq);
-      return x => y => dictEq.eq(x._1)(y._1) && eq11(x._2)(y._2);
-    }
-  }
-);
+const eq1NonEmpty = dictEq1 => ({eq1: dictEq => x => y => dictEq.eq(x._1)(y._1) && dictEq1.eq1(dictEq)(x._2)(y._2)});
 const ord1NonEmpty = dictOrd1 => {
-  const ordNonEmpty1 = ordNonEmpty(dictOrd1);
   const $0 = dictOrd1.Eq10();
-  const eq1NonEmpty1 = {
-    eq1: dictEq => {
-      const eq11 = $0.eq1(dictEq);
-      return x => y => dictEq.eq(x._1)(y._1) && eq11(x._2)(y._2);
-    }
+  const eq1NonEmpty1 = {eq1: dictEq => x => y => dictEq.eq(x._1)(y._1) && $0.eq1(dictEq)(x._2)(y._2)};
+  return {
+    compare1: dictOrd => x => y => {
+      const v = dictOrd.compare(x._1)(y._1);
+      if (v === "LT") { return Data$dOrdering.LT; }
+      if (v === "GT") { return Data$dOrdering.GT; }
+      return dictOrd1.compare1(dictOrd)(x._2)(y._2);
+    },
+    Eq10: () => eq1NonEmpty1
   };
-  return {compare1: dictOrd => ordNonEmpty1(dictOrd).compare, Eq10: () => eq1NonEmpty1};
 };
 export {
   $NonEmpty,

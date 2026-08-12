@@ -5,6 +5,7 @@ import * as Data_Function from "../Data.Function/index.js";
 import * as Data_Tuple from "../Data.Tuple/index.js";
 import * as Data_Unit from "../Data.Unit/index.js";
 var identity = /* #__PURE__ */ Control_Category.identity(Control_Category.categoryFn);
+var identity1 = /* #__PURE__ */ Control_Category.identity(Control_Category.categoryFn);
 var bimap = function (dict) {
     return dict.bimap;
 };
@@ -12,13 +13,12 @@ var bivoid = function (dictBifunctor) {
     return bimap(dictBifunctor)(Data_Function["const"](Data_Unit.unit))(Data_Function["const"](Data_Unit.unit));
 };
 var lmap = function (dictBifunctor) {
-    var bimap1 = bimap(dictBifunctor);
     return function (f) {
-        return bimap1(f)(identity);
+        return bimap(dictBifunctor)(f)(identity);
     };
 };
 var rmap = function (dictBifunctor) {
-    return bimap(dictBifunctor)(identity);
+    return bimap(dictBifunctor)(identity1);
 };
 var bifunctorTuple = {
     bimap: function (f) {

@@ -22,10 +22,7 @@ const distributiveReaderT = dictDistributive => {
     }
   };
   return {
-    distribute: dictFunctor => {
-      const collect1 = dictDistributive.collect(dictFunctor);
-      return a => e => collect1(r => r(e))(a);
-    },
+    distribute: dictFunctor => a => e => dictDistributive.collect(dictFunctor)(r => r(e))(a),
     collect: dictFunctor => f => {
       const $1 = distributiveReaderT(dictDistributive).distribute(dictFunctor);
       const $2 = dictFunctor.map(f);
@@ -144,10 +141,10 @@ const monadEffectReader = dictMonadEffect => {
 };
 const monadRecReaderT = dictMonadRec => {
   const Monad0 = dictMonadRec.Monad0();
-  const $0 = Monad0.Bind1();
+  const Bind1 = Monad0.Bind1();
   const pure = Monad0.Applicative0().pure;
   const monadReaderT1 = monadReaderT(Monad0);
-  return {tailRecM: k => a => r => dictMonadRec.tailRecM(a$p => $0.bind(k(a$p)(r))(pure))(a), Monad0: () => monadReaderT1};
+  return {tailRecM: k => a => r => dictMonadRec.tailRecM(a$p => Bind1.bind(k(a$p)(r))(pure))(a), Monad0: () => monadReaderT1};
 };
 const monadStateReaderT = dictMonadState => {
   const monadReaderT1 = monadReaderT(dictMonadState.Monad0());

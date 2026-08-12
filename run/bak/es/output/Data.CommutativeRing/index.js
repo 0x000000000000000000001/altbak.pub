@@ -30,9 +30,7 @@ const commutativeRingFn = dictCommutativeRing => {
   const $0 = dictCommutativeRing.Ring0();
   const $1 = $0.Semiring0();
   const ringFn = (() => {
-    const zero1 = $1.zero;
-    const one1 = $1.one;
-    const semiringFn = {add: f => g => x => $1.add(f(x))(g(x)), zero: v => zero1, mul: f => g => x => $1.mul(f(x))(g(x)), one: v => one1};
+    const semiringFn = {add: f => g => x => $1.add(f(x))(g(x)), zero: v => $1.zero, mul: f => g => x => $1.mul(f(x))(g(x)), one: v => $1.one};
     return {sub: f => g => x => $0.sub(f(x))(g(x)), Semiring0: () => semiringFn};
   })();
   return {Ring0: () => ringFn};

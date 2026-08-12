@@ -400,7 +400,7 @@ _ = comp_0
 return gopurs_runtime.Apply3(pkg_Control_Monad_ST_Uncurried.Get_runSTFn3(), Get_sortByImpl(), comp_0, gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (v_1.Type == 9 && v_1.IntVal == 380165415) {
+if (uint32(v_1.IntVal) == 380165415) {
 __t0 = gopurs_runtime.Int(1)
 goto end_branch_0
 } else {
@@ -408,7 +408,7 @@ goto end_branch_0
 }
 }
 {
-if (v_1.Type == 9 && v_1.IntVal == 902936544) {
+if (uint32(v_1.IntVal) == 902936544) {
 __t0 = gopurs_runtime.Int(0)
 goto end_branch_0
 } else {
@@ -416,7 +416,7 @@ goto end_branch_0
 }
 }
 {
-if (v_1.Type == 9 && v_1.IntVal == 1527465420) {
+if (uint32(v_1.IntVal) == 1527465420) {
 __t0 = gopurs_runtime.Int(-1)
 goto end_branch_0
 } else {
@@ -437,7 +437,7 @@ _ = comp_0
 return gopurs_runtime.Apply3(pkg_Control_Monad_ST_Uncurried.Get_runSTFn3(), Get_sortByImpl(), comp_0, gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (v_1.Type == 9 && v_1.IntVal == 380165415) {
+if (uint32(v_1.IntVal) == 380165415) {
 __t0 = gopurs_runtime.Int(1)
 goto end_branch_0
 } else {
@@ -445,7 +445,7 @@ goto end_branch_0
 }
 }
 {
-if (v_1.Type == 9 && v_1.IntVal == 902936544) {
+if (uint32(v_1.IntVal) == 902936544) {
 __t0 = gopurs_runtime.Int(0)
 goto end_branch_0
 } else {
@@ -453,7 +453,7 @@ goto end_branch_0
 }
 }
 {
-if (v_1.Type == 9 && v_1.IntVal == 1527465420) {
+if (uint32(v_1.IntVal) == 1527465420) {
 __t0 = gopurs_runtime.Int(-1)
 goto end_branch_0
 } else {
@@ -475,7 +475,7 @@ var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 return Call_sortBy(gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(dictOrd_0.V1, gopurs_runtime.Apply(f_1, x_2), gopurs_runtime.Apply(f_1, y_3))
+return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(dictOrd_0.V1, gopurs_runtime.Apply(f_1, x_2), gopurs_runtime.Apply(f_1, y_3)).IntVal)), UnsafePtr: nil}
 })
 }))
 }

@@ -44,8 +44,8 @@ var T = /* #__PURE__ */ (function () {
 })();
 var max = function (x) {
     return function (y) {
-        var $16 = x > y;
-        if ($16) {
+        var $11 = x > y;
+        if ($11) {
             return x;
         };
         return y;
@@ -97,12 +97,12 @@ var ins = function (v) {
             return new T(R.value, E.value, v, E.value);
         };
         if (v1 instanceof T) {
-            var $65 = v < v1.value2;
-            if ($65) {
+            var $60 = v < v1.value2;
+            if ($60) {
                 return balance(v1.value0)(ins(v)(v1.value1))(v1.value2)(v1.value3);
             };
-            var $66 = v > v1.value2;
-            if ($66) {
+            var $61 = v > v1.value2;
+            if ($61) {
                 return balance(v1.value0)(v1.value1)(v1.value2)(ins(v)(v1.value3));
             };
             return new T(v1.value0, v1.value1, v1.value2, v1.value3);

@@ -2,10 +2,11 @@ import * as $runtime from "../runtime.js";
 import * as Data$dEither from "../Data.Either/index.js";
 import * as Data$dTuple from "../Data.Tuple/index.js";
 const identity = x => x;
+const identity1 = x => x;
 const bimap = dict => dict.bimap;
 const bivoid = dictBifunctor => dictBifunctor.bimap(v => {})(v => {});
 const lmap = dictBifunctor => f => dictBifunctor.bimap(f)(identity);
-const rmap = dictBifunctor => dictBifunctor.bimap(identity);
+const rmap = dictBifunctor => dictBifunctor.bimap(identity1);
 const bifunctorTuple = {bimap: f => g => v => Data$dTuple.$Tuple(f(v._1), g(v._2))};
 const bifunctorEither = {
   bimap: v => v1 => v2 => {
@@ -15,4 +16,4 @@ const bifunctorEither = {
   }
 };
 const bifunctorConst = {bimap: f => v => v1 => f(v1)};
-export {bifunctorConst, bifunctorEither, bifunctorTuple, bimap, bivoid, identity, lmap, rmap};
+export {bifunctorConst, bifunctorEither, bifunctorTuple, bimap, bivoid, identity, identity1, lmap, rmap};

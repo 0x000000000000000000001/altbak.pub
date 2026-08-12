@@ -12,12 +12,15 @@ var writer = /* #__PURE__ */ (function () {
         return Control_Monad_Writer_Trans.WriterT($3($4));
     };
 })();
-var runWriter = function ($5) {
-    return unwrap(Control_Monad_Writer_Trans.runWriterT($5));
-};
+var runWriter = /* #__PURE__ */ (function () {
+    var $5 = Data_Newtype.unwrap();
+    return function ($6) {
+        return $5(Control_Monad_Writer_Trans.runWriterT($6));
+    };
+})();
 var mapWriter = function (f) {
-    return Control_Monad_Writer_Trans.mapWriterT(function ($6) {
-        return Data_Identity.Identity(f(unwrap($6)));
+    return Control_Monad_Writer_Trans.mapWriterT(function ($7) {
+        return Data_Identity.Identity(f(unwrap($7)));
     });
 };
 var execWriter = function (m) {

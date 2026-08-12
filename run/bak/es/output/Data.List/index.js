@@ -13,10 +13,6 @@ import * as Data$dList$dTypes from "../Data.List.Types/index.js";
 import * as Data$dMaybe from "../Data.Maybe/index.js";
 import * as Data$dNonEmpty from "../Data.NonEmpty/index.js";
 import * as Data$dTuple from "../Data.Tuple/index.js";
-const any = /* #__PURE__ */ (() => Data$dList$dTypes.foldableList.foldMap((() => {
-  const semigroupDisj1 = {append: v => v1 => v || v1};
-  return {mempty: false, Semigroup0: () => semigroupDisj1};
-})()))();
 const identity = x => x;
 const Pattern = x => x;
 const updateAt = v => v1 => v2 => {
@@ -167,12 +163,7 @@ const sortBy = cmp => {
       }
       if ($sequedesceascen$b === 2) {
         const v = $sequedesceascen$a0, v1 = $sequedesceascen$a1, v2 = $sequedesceascen$a2;
-        if (
-          v2.tag === "Cons" && (() => {
-            const $0 = cmp(v)(v2._1);
-            return $0 === "LT" || $0 !== "GT";
-          })()
-        ) {
+        if (v2.tag === "Cons" && cmp(v)(v2._1) !== "GT") {
           $sequedesceascen$b = 2;
           $sequedesceascen$a0 = v2._1;
           $sequedesceascen$a1 = ys => v1(Data$dList$dTypes.$List("Cons", v, ys));
@@ -194,7 +185,10 @@ const sort = dictOrd => {
   const compare = dictOrd.compare;
   return xs => sortBy(compare)(xs);
 };
-const showPattern = dictShow => ({show: v => "(Pattern " + Data$dList$dTypes.showList(dictShow).show(v) + ")"});
+const showPattern = dictShow => {
+  const showList = Data$dList$dTypes.showList(dictShow);
+  return {show: v => "(Pattern " + showList.show(v) + ")"};
+};
 const reverse = /* #__PURE__ */ (() => {
   const go = go$a0$copy => go$a1$copy => {
     let go$a0 = go$a0$copy, go$a1 = go$a1$copy, go$c = true, go$r;
@@ -460,54 +454,51 @@ const zip = xs => ys => {
   };
   return go$1(Data$dList$dTypes.Nil)(go(xs)(ys)(Data$dList$dTypes.Nil));
 };
-const zipWithA = dictApplicative => {
-  const sequence1 = Data$dList$dTypes.traversableList.traverse(dictApplicative)(Data$dList$dTypes.identity);
-  return f => xs => ys => sequence1((() => {
-    const go = go$a0$copy => go$a1$copy => go$a2$copy => {
-      let go$a0 = go$a0$copy, go$a1 = go$a1$copy, go$a2 = go$a2$copy, go$c = true, go$r;
-      while (go$c) {
-        const v = go$a0, v1 = go$a1, v2 = go$a2;
-        if (v.tag === "Nil") {
-          go$c = false;
-          go$r = v2;
-          continue;
-        }
-        if (v1.tag === "Nil") {
-          go$c = false;
-          go$r = v2;
-          continue;
-        }
-        if (v.tag === "Cons" && v1.tag === "Cons") {
-          go$a0 = v._2;
-          go$a1 = v1._2;
-          go$a2 = Data$dList$dTypes.$List("Cons", f(v._1)(v1._1), v2);
-          continue;
-        }
-        $runtime.fail();
+const zipWithA = dictApplicative => f => xs => ys => Data$dList$dTypes.traversableList.traverse(dictApplicative)(Data$dList$dTypes.identity)((() => {
+  const go = go$a0$copy => go$a1$copy => go$a2$copy => {
+    let go$a0 = go$a0$copy, go$a1 = go$a1$copy, go$a2 = go$a2$copy, go$c = true, go$r;
+    while (go$c) {
+      const v = go$a0, v1 = go$a1, v2 = go$a2;
+      if (v.tag === "Nil") {
+        go$c = false;
+        go$r = v2;
+        continue;
       }
-      return go$r;
-    };
-    const go$1 = go$1$a0$copy => go$1$a1$copy => {
-      let go$1$a0 = go$1$a0$copy, go$1$a1 = go$1$a1$copy, go$1$c = true, go$1$r;
-      while (go$1$c) {
-        const v = go$1$a0, v1 = go$1$a1;
-        if (v1.tag === "Nil") {
-          go$1$c = false;
-          go$1$r = v;
-          continue;
-        }
-        if (v1.tag === "Cons") {
-          go$1$a0 = Data$dList$dTypes.$List("Cons", v1._1, v);
-          go$1$a1 = v1._2;
-          continue;
-        }
-        $runtime.fail();
+      if (v1.tag === "Nil") {
+        go$c = false;
+        go$r = v2;
+        continue;
       }
-      return go$1$r;
-    };
-    return go$1(Data$dList$dTypes.Nil)(go(xs)(ys)(Data$dList$dTypes.Nil));
-  })());
-};
+      if (v.tag === "Cons" && v1.tag === "Cons") {
+        go$a0 = v._2;
+        go$a1 = v1._2;
+        go$a2 = Data$dList$dTypes.$List("Cons", f(v._1)(v1._1), v2);
+        continue;
+      }
+      $runtime.fail();
+    }
+    return go$r;
+  };
+  const go$1 = go$1$a0$copy => go$1$a1$copy => {
+    let go$1$a0 = go$1$a0$copy, go$1$a1 = go$1$a1$copy, go$1$c = true, go$1$r;
+    while (go$1$c) {
+      const v = go$1$a0, v1 = go$1$a1;
+      if (v1.tag === "Nil") {
+        go$1$c = false;
+        go$1$r = v;
+        continue;
+      }
+      if (v1.tag === "Cons") {
+        go$1$a0 = Data$dList$dTypes.$List("Cons", v1._1, v);
+        go$1$a1 = v1._2;
+        continue;
+      }
+      $runtime.fail();
+    }
+    return go$1$r;
+  };
+  return go$1(Data$dList$dTypes.Nil)(go(xs)(ys)(Data$dList$dTypes.Nil));
+})());
 const range = start => end => {
   if (start === end) { return Data$dList$dTypes.$List("Cons", start, Data$dList$dTypes.Nil); }
   const go = go$a0$copy => go$a1$copy => go$a2$copy => go$a3$copy => {
@@ -632,49 +623,63 @@ const mapMaybe = f => {
   };
   return go(Data$dList$dTypes.Nil);
 };
-const manyRec = dictMonadRec => dictAlternative => {
-  const Alt0 = dictAlternative.Plus1().Alt0();
-  const $0 = dictAlternative.Applicative0();
-  return p => dictMonadRec.tailRecM(acc => dictMonadRec.Monad0().Bind1().bind(Alt0.alt(Alt0.Functor0().map(Control$dMonad$dRec$dClass.Loop)(p))($0.pure(Control$dMonad$dRec$dClass.$Step(
-    "Done",
-    undefined
-  ))))(aa => $0.pure((() => {
-    if (aa.tag === "Loop") { return Control$dMonad$dRec$dClass.$Step("Loop", Data$dList$dTypes.$List("Cons", aa._1, acc)); }
-    if (aa.tag === "Done") {
-      return Control$dMonad$dRec$dClass.$Step(
-        "Done",
-        (() => {
-          const go = go$a0$copy => go$a1$copy => {
-            let go$a0 = go$a0$copy, go$a1 = go$a1$copy, go$c = true, go$r;
-            while (go$c) {
-              const v = go$a0, v1 = go$a1;
-              if (v1.tag === "Nil") {
-                go$c = false;
-                go$r = v;
-                continue;
+const manyRec = dictMonadRec => {
+  const Bind1 = dictMonadRec.Monad0().Bind1();
+  return dictAlternative => {
+    const Plus1 = dictAlternative.Plus1();
+    const Alt0 = Plus1.Alt0();
+    const Functor0 = Plus1.Alt0().Functor0();
+    const Applicative0 = dictAlternative.Applicative0();
+    return p => dictMonadRec.tailRecM(acc => Bind1.bind(Alt0.alt(Functor0.map(Control$dMonad$dRec$dClass.Loop)(p))(Applicative0.pure(Control$dMonad$dRec$dClass.$Step(
+      "Done",
+      undefined
+    ))))(aa => dictAlternative.Applicative0().pure((() => {
+      if (aa.tag === "Loop") { return Control$dMonad$dRec$dClass.$Step("Loop", Data$dList$dTypes.$List("Cons", aa._1, acc)); }
+      if (aa.tag === "Done") {
+        return Control$dMonad$dRec$dClass.$Step(
+          "Done",
+          (() => {
+            const go = go$a0$copy => go$a1$copy => {
+              let go$a0 = go$a0$copy, go$a1 = go$a1$copy, go$c = true, go$r;
+              while (go$c) {
+                const v = go$a0, v1 = go$a1;
+                if (v1.tag === "Nil") {
+                  go$c = false;
+                  go$r = v;
+                  continue;
+                }
+                if (v1.tag === "Cons") {
+                  go$a0 = Data$dList$dTypes.$List("Cons", v1._1, v);
+                  go$a1 = v1._2;
+                  continue;
+                }
+                $runtime.fail();
               }
-              if (v1.tag === "Cons") {
-                go$a0 = Data$dList$dTypes.$List("Cons", v1._1, v);
-                go$a1 = v1._2;
-                continue;
-              }
-              $runtime.fail();
-            }
-            return go$r;
-          };
-          return go(Data$dList$dTypes.Nil)(acc);
-        })()
-      );
-    }
-    $runtime.fail();
-  })())))(Data$dList$dTypes.Nil);
+              return go$r;
+            };
+            return go(Data$dList$dTypes.Nil)(acc);
+          })()
+        );
+      }
+      $runtime.fail();
+    })())))(Data$dList$dTypes.Nil);
+  };
 };
 const someRec = dictMonadRec => dictAlternative => {
-  const manyRec2 = manyRec(dictMonadRec)(dictAlternative);
-  return v => dictAlternative.Applicative0().Apply0().apply(dictAlternative.Plus1().Alt0().Functor0().map(Data$dList$dTypes.Cons)(v))(manyRec2(v));
+  const Apply0 = dictAlternative.Applicative0().Apply0();
+  const Functor0 = dictAlternative.Plus1().Alt0().Functor0();
+  return v => Apply0.apply(Functor0.map(Data$dList$dTypes.Cons)(v))(manyRec(dictMonadRec)(dictAlternative)(v));
 };
-const some = dictAlternative => dictLazy => v => dictAlternative.Applicative0().Apply0().apply(dictAlternative.Plus1().Alt0().Functor0().map(Data$dList$dTypes.Cons)(v))(dictLazy.defer(v1 => many(dictAlternative)(dictLazy)(v)));
-const many = dictAlternative => dictLazy => v => dictAlternative.Plus1().Alt0().alt(some(dictAlternative)(dictLazy)(v))(dictAlternative.Applicative0().pure(Data$dList$dTypes.Nil));
+const some = dictAlternative => {
+  const Apply0 = dictAlternative.Applicative0().Apply0();
+  const Functor0 = dictAlternative.Plus1().Alt0().Functor0();
+  return dictLazy => v => Apply0.apply(Functor0.map(Data$dList$dTypes.Cons)(v))(dictLazy.defer(v1 => many(dictAlternative)(dictLazy)(v)));
+};
+const many = dictAlternative => {
+  const Alt0 = dictAlternative.Plus1().Alt0();
+  const Applicative0 = dictAlternative.Applicative0();
+  return dictLazy => v => Alt0.alt(some(dictAlternative)(dictLazy)(v))(Applicative0.pure(Data$dList$dTypes.Nil));
+};
 const length = /* #__PURE__ */ (() => {
   const go = go$a0$copy => go$a1$copy => {
     let go$a0 = go$a0$copy, go$a1 = go$a1$copy, go$c = true, go$r;
@@ -896,13 +901,17 @@ const groupAll = dictOrd => {
   return x => $0(sortBy(compare)(x));
 };
 const fromFoldable = dictFoldable => dictFoldable.foldr(Data$dList$dTypes.Cons)(Data$dList$dTypes.Nil);
-const foldM = dictMonad => v => v1 => v2 => {
-  if (v2.tag === "Nil") { return dictMonad.Applicative0().pure(v1); }
-  if (v2.tag === "Cons") {
-    const $0 = v2._2;
-    return dictMonad.Bind1().bind(v(v1)(v2._1))(b$p => foldM(dictMonad)(v)(b$p)($0));
-  }
-  $runtime.fail();
+const foldM = dictMonad => {
+  const Applicative0 = dictMonad.Applicative0();
+  const Bind1 = dictMonad.Bind1();
+  return v => v1 => v2 => {
+    if (v2.tag === "Nil") { return Applicative0.pure(v1); }
+    if (v2.tag === "Cons") {
+      const $0 = v2._2;
+      return Bind1.bind(v(v1)(v2._1))(b$p => foldM(dictMonad)(v)(b$p)($0));
+    }
+    $runtime.fail();
+  };
 };
 const findIndex = fn => {
   const go = go$a0$copy => go$a1$copy => {
@@ -1004,14 +1013,14 @@ const findLastIndex = fn => xs => {
   return Data$dMaybe.Nothing;
 };
 const filterM = dictMonad => {
-  const $0 = dictMonad.Applicative0();
-  const $1 = dictMonad.Bind1();
+  const Applicative0 = dictMonad.Applicative0();
+  const Bind1 = dictMonad.Bind1();
   return v => v1 => {
-    if (v1.tag === "Nil") { return $0.pure(Data$dList$dTypes.Nil); }
+    if (v1.tag === "Nil") { return Applicative0.pure(Data$dList$dTypes.Nil); }
     if (v1.tag === "Cons") {
-      const $2 = v1._1;
-      const $3 = v1._2;
-      return $1.bind(v($2))(b => $1.bind(filterM(dictMonad)(v)($3))(xs$p => $0.pure(b ? Data$dList$dTypes.$List("Cons", $2, xs$p) : xs$p)));
+      const $0 = v1._1;
+      const $1 = v1._2;
+      return Bind1.bind(v($0))(b => Bind1.bind(filterM(dictMonad)(v)($1))(xs$p => Applicative0.pure(b ? Data$dList$dTypes.$List("Cons", $0, xs$p) : xs$p)));
     }
     $runtime.fail();
   };
@@ -1091,7 +1100,12 @@ const intersectBy = v => v1 => v2 => {
         continue;
       }
       if (v1$1.tag === "Cons") {
-        if (any(v(v1$1._1))(v2)) {
+        if (
+          Data$dList$dTypes.foldableList.foldMap((() => {
+            const semigroupDisj1 = {append: v$2 => v1$2 => v$2 || v1$2};
+            return {mempty: false, Semigroup0: () => semigroupDisj1};
+          })())(v(v1$1._1))(v2)
+        ) {
           go$a0 = Data$dList$dTypes.$List("Cons", v1$1._1, v$1);
           go$a1 = v1$1._2;
           continue;
@@ -1176,6 +1190,7 @@ const eqPattern = dictEq => (
   }
 );
 const ordPattern = dictOrd => {
+  const ordList = Data$dList$dTypes.ordList(dictOrd);
   const $0 = dictOrd.Eq0();
   const eqPattern1 = {
     eq: x => y => {
@@ -1187,7 +1202,7 @@ const ordPattern = dictOrd => {
       return go(x)(y)(true);
     }
   };
-  return {compare: x => y => Data$dList$dTypes.ordList(dictOrd).compare(x)(y), Eq0: () => eqPattern1};
+  return {compare: x => y => ordList.compare(x)(y), Eq0: () => eqPattern1};
 };
 const elemLastIndex = dictEq => x => findLastIndex(v => dictEq.eq(v)(x));
 const elemIndex = dictEq => x => {
@@ -1306,7 +1321,7 @@ const deleteBy = v => v1 => v2 => {
   }
   $runtime.fail();
 };
-const unionBy = eq2 => xs => ys => {
+const unionBy = eq => xs => ys => {
   const go = go$a0$copy => go$a1$copy => {
     let go$a0 = go$a0$copy, go$a1 = go$a1$copy, go$c = true, go$r;
     while (go$c) {
@@ -1317,7 +1332,7 @@ const unionBy = eq2 => xs => ys => {
         continue;
       }
       if (v.tag === "Cons") {
-        go$a0 = deleteBy(eq2)(v._1)(b);
+        go$a0 = deleteBy(eq)(v._1)(b);
         go$a1 = v._2;
         continue;
       }
@@ -1325,7 +1340,7 @@ const unionBy = eq2 => xs => ys => {
     }
     return go$r;
   };
-  return Data$dList$dTypes.foldableList.foldr(Data$dList$dTypes.Cons)(go(nubByEq(eq2)(ys))(xs))(xs);
+  return Data$dList$dTypes.foldableList.foldr(Data$dList$dTypes.Cons)(go(nubByEq(eq)(ys))(xs))(xs);
 };
 const union = dictEq => unionBy(dictEq.eq);
 const deleteAt = v => v1 => {
@@ -1428,7 +1443,6 @@ const modifyAt = n => f => alterAt(n)(x => Data$dMaybe.$Maybe("Just", f(x)));
 export {
   Pattern,
   alterAt,
-  any,
   catMaybes,
   concat,
   concatMap,

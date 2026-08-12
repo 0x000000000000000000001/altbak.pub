@@ -10,162 +10,21 @@ import * as Data$dNonEmpty from "../Data.NonEmpty/index.js";
 import * as Data$dNumber from "../Data.Number/index.js";
 import * as Data$dOrdering from "../Data.Ordering/index.js";
 const $$$Error = (tag, _1) => ({tag, _1});
-const lookup = k => {
-  const go = go$a0$copy => {
-    let go$a0 = go$a0$copy, go$c = true, go$r;
-    while (go$c) {
-      const v = go$a0;
-      if (v.tag === "Leaf") {
-        go$c = false;
-        go$r = Data$dMaybe.Nothing;
-        continue;
-      }
-      if (v.tag === "Node") {
-        if (k === "Second") {
-          if (v._3 === "Second") {
-            go$c = false;
-            go$r = Data$dMaybe.$Maybe("Just", v._4);
-            continue;
-          }
-          go$a0 = v._5;
-          continue;
-        }
-        if (v._3 === "Second") {
-          go$a0 = v._6;
-          continue;
-        }
-        if (k === "Minute") {
-          if (v._3 === "Minute") {
-            go$c = false;
-            go$r = Data$dMaybe.$Maybe("Just", v._4);
-            continue;
-          }
-          go$a0 = v._5;
-          continue;
-        }
-        if (v._3 === "Minute") {
-          go$a0 = v._6;
-          continue;
-        }
-        if (k === "Hour") {
-          if (v._3 === "Hour") {
-            go$c = false;
-            go$r = Data$dMaybe.$Maybe("Just", v._4);
-            continue;
-          }
-          go$a0 = v._5;
-          continue;
-        }
-        if (v._3 === "Hour") {
-          go$a0 = v._6;
-          continue;
-        }
-        if (k === "Day") {
-          if (v._3 === "Day") {
-            go$c = false;
-            go$r = Data$dMaybe.$Maybe("Just", v._4);
-            continue;
-          }
-          go$a0 = v._5;
-          continue;
-        }
-        if (v._3 === "Day") {
-          go$a0 = v._6;
-          continue;
-        }
-        if (k === "Week") {
-          if (v._3 === "Week") {
-            go$c = false;
-            go$r = Data$dMaybe.$Maybe("Just", v._4);
-            continue;
-          }
-          go$a0 = v._5;
-          continue;
-        }
-        if (v._3 === "Week") {
-          go$a0 = v._6;
-          continue;
-        }
-        if (k === "Month") {
-          if (v._3 === "Month") {
-            go$c = false;
-            go$r = Data$dMaybe.$Maybe("Just", v._4);
-            continue;
-          }
-          go$a0 = v._5;
-          continue;
-        }
-        if (v._3 === "Month") {
-          go$a0 = v._6;
-          continue;
-        }
-        if (k === "Year" && v._3 === "Year") {
-          go$c = false;
-          go$r = Data$dMaybe.$Maybe("Just", v._4);
-          continue;
-        }
-      }
-      $runtime.fail();
-    }
-    return go$r;
-  };
-  return go;
-};
-const foldMap1 = /* #__PURE__ */ (() => Data$dList$dTypes.foldableList.foldMap(Data$dList$dTypes.monoidList))();
-const foldMap2 = /* #__PURE__ */ (() => Data$dList$dTypes.foldableList.foldMap((() => {
+const foldMap = /* #__PURE__ */ (() => Data$dList$dTypes.foldableList.foldMap(Data$dList$dTypes.monoidList))();
+const monoidAdditive = /* #__PURE__ */ (() => {
   const semigroupAdditive1 = {append: v => v1 => v + v1};
   return {mempty: 0.0, Semigroup0: () => semigroupAdditive1};
-})()))();
-const fold = /* #__PURE__ */ (() => {
-  const semigroupFn = {append: f => g => x => Data$dList$dTypes.foldableList.foldr(Data$dList$dTypes.Cons)(g(x))(f(x))};
-  return Data$dFoldable.foldableArray.foldMap({mempty: v => Data$dList$dTypes.Nil, Semigroup0: () => semigroupFn})(Data$dFoldable.identity);
 })();
-const toUnfoldable = x => {
-  const go = go$a0$copy => go$a1$copy => {
-    let go$a0 = go$a0$copy, go$a1 = go$a1$copy, go$c = true, go$r;
-    while (go$c) {
-      const source = go$a0, memo = go$a1;
-      const v = Data$dMap$dInternal.stepUnfoldr(source);
-      if (v.tag === "Nothing") {
-        const go$1 = go$1$a0$copy => go$1$a1$copy => {
-          let go$1$a0 = go$1$a0$copy, go$1$a1 = go$1$a1$copy, go$1$c = true, go$1$r;
-          while (go$1$c) {
-            const b = go$1$a0, v$1 = go$1$a1;
-            if (v$1.tag === "Nil") {
-              go$1$c = false;
-              go$1$r = b;
-              continue;
-            }
-            if (v$1.tag === "Cons") {
-              go$1$a0 = Data$dList$dTypes.$List("Cons", v$1._1, b);
-              go$1$a1 = v$1._2;
-              continue;
-            }
-            $runtime.fail();
-          }
-          return go$1$r;
-        };
-        go$c = false;
-        go$r = go$1(Data$dList$dTypes.Nil)(memo);
-        continue;
-      }
-      if (v.tag === "Just") {
-        go$a0 = v._1._2;
-        go$a1 = Data$dList$dTypes.$List("Cons", v._1._1, memo);
-        continue;
-      }
-      $runtime.fail();
-    }
-    return go$r;
-  };
-  return go(Data$dMap$dInternal.$MapIter("IterNode", x, Data$dMap$dInternal.IterLeaf))(Data$dList$dTypes.Nil);
-};
+const monoidFn = /* #__PURE__ */ (() => {
+  const semigroupFn = {append: f => g => x => Data$dList$dTypes.foldableList.foldr(Data$dList$dTypes.Cons)(g(x))(f(x))};
+  return {mempty: v => Data$dList$dTypes.Nil, Semigroup0: () => semigroupFn};
+})();
 const IsEmpty = /* #__PURE__ */ $$$Error("IsEmpty");
 const InvalidWeekComponentUsage = /* #__PURE__ */ $$$Error("InvalidWeekComponentUsage");
 const ContainsNegativeValue = value0 => $$$Error("ContainsNegativeValue", value0);
 const InvalidFractionalUse = value0 => $$$Error("InvalidFractionalUse", value0);
 const unIsoDuration = v => v;
-const showIsoDuration = {show: v => "(IsoDuration (Duration " + Data$dInterval$dDuration.show(v) + "))"};
+const showIsoDuration = {show: v => "(IsoDuration (Duration " + Data$dInterval$dDuration.showMap.show(v) + "))"};
 const showError = {
   show: v => {
     if (v.tag === "IsEmpty") { return "(IsEmpty)"; }
@@ -216,8 +75,8 @@ const prettyError = v => {
   }
   $runtime.fail();
 };
-const eqIsoDuration = {eq: x => y => Data$dInterval$dDuration.eq(x)(y)};
-const ordIsoDuration = {compare: x => y => Data$dInterval$dDuration.compare(x)(y), Eq0: () => eqIsoDuration};
+const eqIsoDuration = {eq: x => y => Data$dInterval$dDuration.eqMap.eq(x)(y)};
+const ordIsoDuration = {compare: x => y => Data$dInterval$dDuration.ordMap.compare(x)(y), Eq0: () => eqIsoDuration};
 const eqError = {
   eq: x => y => {
     if (x.tag === "IsEmpty") { return y.tag === "IsEmpty"; }
@@ -334,7 +193,45 @@ const ordError = {
 const checkWeekUsage = v => {
   if (
     (() => {
-      const $0 = lookup(Data$dInterval$dDuration.Week)(v.asMap);
+      const go = go$a0$copy => {
+        let go$a0 = go$a0$copy, go$c = true, go$r;
+        while (go$c) {
+          const v$1 = go$a0;
+          if (v$1.tag === "Leaf") {
+            go$c = false;
+            go$r = Data$dMaybe.Nothing;
+            continue;
+          }
+          if (v$1.tag === "Node") {
+            if (v$1._3 === "Second") {
+              go$a0 = v$1._6;
+              continue;
+            }
+            if (v$1._3 === "Minute") {
+              go$a0 = v$1._6;
+              continue;
+            }
+            if (v$1._3 === "Hour") {
+              go$a0 = v$1._6;
+              continue;
+            }
+            if (v$1._3 === "Day") {
+              go$a0 = v$1._6;
+              continue;
+            }
+            if (v$1._3 === "Week") {
+              go$c = false;
+              go$r = Data$dMaybe.$Maybe("Just", v$1._4);
+              continue;
+            }
+            go$a0 = v$1._5;
+            continue;
+          }
+          $runtime.fail();
+        }
+        return go$r;
+      };
+      const $0 = go(v.asMap);
       return (() => {
         if ($0.tag === "Nothing") { return false; }
         if ($0.tag === "Just") { return true; }
@@ -350,13 +247,13 @@ const checkWeekUsage = v => {
   }
   return Data$dList$dTypes.Nil;
 };
-const checkNegativeValues = v => foldMap1(v1 => {
+const checkNegativeValues = v => foldMap(v1 => {
   if (v1._2 >= 0.0) { return Data$dList$dTypes.Nil; }
   return Data$dList$dTypes.$List("Cons", $$$Error("ContainsNegativeValue", v1._1), Data$dList$dTypes.Nil);
 })(v.asList);
 const checkFractionalUse = v => {
   const $0 = Data$dList.span(x => Data$dNumber.floor(x._2) === x._2)(v.asList);
-  if ($0.rest.tag === "Cons" && foldMap2(x => Data$dNumber.abs(x._2))($0.rest._2) > 0.0) {
+  if ($0.rest.tag === "Cons" && Data$dList$dTypes.foldableList.foldMap(monoidAdditive)(x => Data$dNumber.abs(x._2))($0.rest._2) > 0.0) {
     return Data$dList$dTypes.$List("Cons", $$$Error("InvalidFractionalUse", $0.rest._1._1), Data$dList$dTypes.Nil);
   }
   return Data$dList$dTypes.Nil;
@@ -365,7 +262,12 @@ const checkEmptiness = v => {
   if (v.asList.tag === "Nil") { return Data$dList$dTypes.$List("Cons", IsEmpty, Data$dList$dTypes.Nil); }
   return Data$dList$dTypes.Nil;
 };
-const checkValidIsoDuration = v => fold([checkWeekUsage, checkEmptiness, checkFractionalUse, checkNegativeValues])({
+const checkValidIsoDuration = v => Data$dFoldable.foldableArray.foldMap(monoidFn)(Data$dFoldable.identity1)([
+  checkWeekUsage,
+  checkEmptiness,
+  checkFractionalUse,
+  checkNegativeValues
+])({
   asList: (() => {
     const go = go$a0$copy => go$a1$copy => {
       let go$a0 = go$a0$copy, go$a1 = go$a1$copy, go$c = true, go$r;
@@ -385,7 +287,46 @@ const checkValidIsoDuration = v => fold([checkWeekUsage, checkEmptiness, checkFr
       }
       return go$r;
     };
-    return go(Data$dList$dTypes.Nil)(toUnfoldable(v));
+    return go(Data$dList$dTypes.Nil)((() => {
+      const go$1 = go$1$a0$copy => go$1$a1$copy => {
+        let go$1$a0 = go$1$a0$copy, go$1$a1 = go$1$a1$copy, go$1$c = true, go$1$r;
+        while (go$1$c) {
+          const source = go$1$a0, memo = go$1$a1;
+          const v$1 = Data$dMap$dInternal.stepUnfoldr(source);
+          if (v$1.tag === "Nothing") {
+            const go$2 = go$2$a0$copy => go$2$a1$copy => {
+              let go$2$a0 = go$2$a0$copy, go$2$a1 = go$2$a1$copy, go$2$c = true, go$2$r;
+              while (go$2$c) {
+                const b = go$2$a0, v$2 = go$2$a1;
+                if (v$2.tag === "Nil") {
+                  go$2$c = false;
+                  go$2$r = b;
+                  continue;
+                }
+                if (v$2.tag === "Cons") {
+                  go$2$a0 = Data$dList$dTypes.$List("Cons", v$2._1, b);
+                  go$2$a1 = v$2._2;
+                  continue;
+                }
+                $runtime.fail();
+              }
+              return go$2$r;
+            };
+            go$1$c = false;
+            go$1$r = go$2(Data$dList$dTypes.Nil)(memo);
+            continue;
+          }
+          if (v$1.tag === "Just") {
+            go$1$a0 = v$1._1._2;
+            go$1$a1 = Data$dList$dTypes.$List("Cons", v$1._1._1, memo);
+            continue;
+          }
+          $runtime.fail();
+        }
+        return go$1$r;
+      };
+      return go$1(Data$dMap$dInternal.$MapIter("IterNode", v, Data$dMap$dInternal.IterLeaf))(Data$dList$dTypes.Nil);
+    })());
   })(),
   asMap: v
 });
@@ -408,16 +349,14 @@ export {
   checkWeekUsage,
   eqError,
   eqIsoDuration,
-  fold,
-  foldMap1,
-  foldMap2,
-  lookup,
+  foldMap,
   mkIsoDuration,
+  monoidAdditive,
+  monoidFn,
   ordError,
   ordIsoDuration,
   prettyError,
   showError,
   showIsoDuration,
-  toUnfoldable,
   unIsoDuration
 };

@@ -15,6 +15,8 @@ const $MapIterStep = (tag, _1, _2, _3) => ({tag, _1, _2, _3});
 const $Split = (_1, _2, _3) => ({tag: "Split", _1, _2, _3});
 const $SplitLast = (_1, _2, _3) => ({tag: "SplitLast", _1, _2, _3});
 const identity = x => x;
+const identity1 = x => x;
+const identity2 = x => x;
 const Leaf = /* #__PURE__ */ $$$Map("Leaf");
 const Node = value0 => value1 => value2 => value3 => value4 => value5 => $$$Map("Node", value0, value1, value2, value3, value4, value5);
 const IterLeaf = /* #__PURE__ */ $MapIter("IterLeaf");
@@ -204,17 +206,15 @@ const showTree = dictShow => dictShow1 => {
   };
   return go("");
 };
-const semigroupMap = () => dictOrd => {
-  const compare = dictOrd.compare;
-  return dictSemigroup => (
-    {
-      append: (() => {
-        const $0 = dictSemigroup.append;
-        return m1 => m2 => unsafeUnionWith(compare, $0, m1, m2);
-      })()
-    }
-  );
-};
+const semigroupMap = () => dictOrd => dictSemigroup => (
+  {
+    append: (() => {
+      const compare = dictOrd.compare;
+      const $0 = dictSemigroup.append;
+      return m1 => m2 => unsafeUnionWith(compare, $0, m1, m2);
+    })()
+  }
+);
 const pop = dictOrd => {
   const compare = dictOrd.compare;
   return k => m => {
@@ -561,13 +561,9 @@ const toUnfoldable = dictUnfoldable => {
   const $0 = dictUnfoldable.unfoldr(stepUnfoldr);
   return x => $0($MapIter("IterNode", x, IterLeaf));
 };
-const toUnfoldable1 = /* #__PURE__ */ (() => {
-  const $0 = Data$dUnfoldable.unfoldableArray.unfoldr(stepUnfoldr);
-  return x => $0($MapIter("IterNode", x, IterLeaf));
-})();
 const showMap = dictShow => dictShow1 => {
-  const show1 = Data$dShow.showArrayImpl(v => "(Tuple " + dictShow.show(v._1) + " " + dictShow1.show(v._2) + ")");
-  return {show: as => "(fromFoldable " + show1(toUnfoldable1(as)) + ")"};
+  const $0 = Data$dShow.showArrayImpl(v => "(Tuple " + dictShow.show(v._1) + " " + dictShow1.show(v._2) + ")");
+  return {show: as => "(fromFoldable " + $0(Data$dUnfoldable.unfoldableArray.unfoldr(stepUnfoldr)($MapIter("IterNode", as, IterLeaf))) + ")"};
 };
 const isSubmap = dictOrd => dictEq => {
   const go = m1 => m2 => {
@@ -685,12 +681,11 @@ const foldableMap = {
     return m => go(z, m);
   },
   foldMap: dictMonoid => {
-    const mempty = dictMonoid.mempty;
-    const $0 = dictMonoid.Semigroup0();
+    const Semigroup0 = dictMonoid.Semigroup0();
     return f => {
       const go = v => {
-        if (v.tag === "Leaf") { return mempty; }
-        if (v.tag === "Node") { return $0.append(go(v._5))($0.append(f(v._4))(go(v._6))); }
+        if (v.tag === "Leaf") { return dictMonoid.mempty; }
+        if (v.tag === "Node") { return Semigroup0.append(go(v._5))(Semigroup0.append(f(v._4))(go(v._6))); }
         $runtime.fail();
       };
       return go;
@@ -715,12 +710,11 @@ const foldableWithIndexMap = {
     return m => go(z, m);
   },
   foldMapWithIndex: dictMonoid => {
-    const mempty = dictMonoid.mempty;
-    const $0 = dictMonoid.Semigroup0();
+    const Semigroup0 = dictMonoid.Semigroup0();
     return f => {
       const go = v => {
-        if (v.tag === "Leaf") { return mempty; }
-        if (v.tag === "Node") { return $0.append(go(v._5))($0.append(f(v._3)(v._4))(go(v._6))); }
+        if (v.tag === "Leaf") { return dictMonoid.mempty; }
+        if (v.tag === "Node") { return Semigroup0.append(go(v._5))(Semigroup0.append(f(v._3)(v._4))(go(v._6))); }
         $runtime.fail();
       };
       return go;
@@ -739,6 +733,7 @@ const keys = /* #__PURE__ */ (() => {
 const traversableMap = {
   traverse: dictApplicative => {
     const Apply0 = dictApplicative.Apply0();
+    const Functor0 = dictApplicative.Apply0().Functor0();
     return f => {
       const go = v => {
         if (v.tag === "Leaf") { return dictApplicative.pure(Leaf); }
@@ -746,7 +741,7 @@ const traversableMap = {
           const $0 = v._1;
           const $1 = v._3;
           const $2 = v._2;
-          return Apply0.apply(Apply0.apply(Apply0.Functor0().map(l$p => v$p => r$p => $$$Map("Node", $0, $2, $1, v$p, l$p, r$p))(go(v._5)))(f(v._4)))(go(v._6));
+          return Apply0.apply(Apply0.apply(Functor0.map(l$p => v$p => r$p => $$$Map("Node", $0, $2, $1, v$p, l$p, r$p))(go(v._5)))(f(v._4)))(go(v._6));
         }
         $runtime.fail();
       };
@@ -760,6 +755,7 @@ const traversableMap = {
 const traversableWithIndexMap = {
   traverseWithIndex: dictApplicative => {
     const Apply0 = dictApplicative.Apply0();
+    const Functor0 = dictApplicative.Apply0().Functor0();
     return f => {
       const go = v => {
         if (v.tag === "Leaf") { return dictApplicative.pure(Leaf); }
@@ -767,7 +763,7 @@ const traversableWithIndexMap = {
           const $0 = v._1;
           const $1 = v._3;
           const $2 = v._2;
-          return Apply0.apply(Apply0.apply(Apply0.Functor0().map(l$p => v$p => r$p => $$$Map("Node", $0, $2, $1, v$p, l$p, r$p))(go(v._5)))(f($1)(v._4)))(go(v._6));
+          return Apply0.apply(Apply0.apply(Functor0.map(l$p => v$p => r$p => $$$Map("Node", $0, $2, $1, v$p, l$p, r$p))(go(v._5)))(f($1)(v._4)))(go(v._6));
         }
         $runtime.fail();
       };
@@ -936,21 +932,21 @@ const filterKeys = dictOrd => f => {
   return go;
 };
 const filter = dictOrd => x => filterWithKey(dictOrd)(v => x);
-const eqMap = dictEq => dictEq1 => (
-  {
+const eqMap = dictEq => dictEq1 => {
+  const eqMapIter2 = eqMapIter(dictEq)(dictEq1);
+  return {
     eq: xs => ys => {
       if (xs.tag === "Leaf") { return ys.tag === "Leaf"; }
-      if (xs.tag === "Node") {
-        return ys.tag === "Node" && xs._2 === ys._2 && eqMapIter(dictEq)(dictEq1).eq($MapIter("IterNode", xs, IterLeaf))($MapIter("IterNode", ys, IterLeaf));
-      }
+      if (xs.tag === "Node") { return ys.tag === "Node" && xs._2 === ys._2 && eqMapIter2.eq($MapIter("IterNode", xs, IterLeaf))($MapIter("IterNode", ys, IterLeaf)); }
       $runtime.fail();
     }
-  }
-);
+  };
+};
 const ordMap = dictOrd => {
   const ordMapIter1 = ordMapIter(dictOrd);
   const eqMap1 = eqMap(dictOrd.Eq0());
   return dictOrd1 => {
+    const ordMapIter2 = ordMapIter1(dictOrd1);
     const eqMap2 = eqMap1(dictOrd1.Eq0());
     return {
       compare: xs => ys => {
@@ -959,7 +955,7 @@ const ordMap = dictOrd => {
           return Data$dOrdering.LT;
         }
         if (ys.tag === "Leaf") { return Data$dOrdering.GT; }
-        return ordMapIter1(dictOrd1).compare($MapIter("IterNode", xs, IterLeaf))($MapIter("IterNode", ys, IterLeaf));
+        return ordMapIter2.compare($MapIter("IterNode", xs, IterLeaf))($MapIter("IterNode", ys, IterLeaf));
       },
       Eq0: () => eqMap2
     };
@@ -974,17 +970,17 @@ const ord1Map = dictOrd => {
 };
 const empty = Leaf;
 const fromFoldable = dictOrd => dictFoldable => dictFoldable.foldl(m => v => insert(dictOrd)(v._1)(v._2)(m))(Leaf);
-const fromFoldableWith = dictOrd => dictFoldable => f => {
-  const f$p = insertWith(dictOrd)(b => a => f(a)(b));
-  return dictFoldable.foldl(m => v => f$p(v._1)(v._2)(m))(Leaf);
-};
+const fromFoldableWith = dictOrd => dictFoldable => f => dictFoldable.foldl(m => v => insertWith(dictOrd)(b => a => f(a)(b))(v._1)(v._2)(m))(Leaf);
 const fromFoldableWithIndex = dictOrd => dictFoldableWithIndex => dictFoldableWithIndex.foldlWithIndex(k => m => v => insert(dictOrd)(k)(v)(m))(Leaf);
-const monoidSemigroupMap = () => dictOrd => {
-  const semigroupMap2 = semigroupMap()(dictOrd);
-  return dictSemigroup => {
-    const semigroupMap3 = semigroupMap2(dictSemigroup);
-    return {mempty: Leaf, Semigroup0: () => semigroupMap3};
+const monoidSemigroupMap = () => dictOrd => dictSemigroup => {
+  const semigroupMap3 = {
+    append: (() => {
+      const compare = dictOrd.compare;
+      const $0 = dictSemigroup.append;
+      return m1 => m2 => unsafeUnionWith(compare, $0, m1, m2);
+    })()
   };
+  return {mempty: Leaf, Semigroup0: () => semigroupMap3};
 };
 const submap = dictOrd => {
   const compare = dictOrd.compare;
@@ -1034,12 +1030,12 @@ const checkValid = dictOrd => {
   };
   return go;
 };
-const catMaybes = dictOrd => mapMaybeWithKey(dictOrd)(v => identity);
+const catMaybes = dictOrd => mapMaybeWithKey(dictOrd)(v => identity1);
 const applyMap = dictOrd => (
   {
     apply: (() => {
       const compare = dictOrd.compare;
-      return m1 => m2 => unsafeIntersectionWith(compare, identity, m1, m2);
+      return m1 => m2 => unsafeIntersectionWith(compare, identity2, m1, m2);
     })(),
     Functor0: () => functorMap
   }
@@ -1048,7 +1044,7 @@ const bindMap = dictOrd => {
   const applyMap1 = {
     apply: (() => {
       const compare = dictOrd.compare;
-      return m1 => m2 => unsafeIntersectionWith(compare, identity, m1, m2);
+      return m1 => m2 => unsafeIntersectionWith(compare, identity2, m1, m2);
     })(),
     Functor0: () => functorMap
   };
@@ -1177,6 +1173,8 @@ export {
   functorMap,
   functorWithIndexMap,
   identity,
+  identity1,
+  identity2,
   insert,
   insertWith,
   intersection,
@@ -1214,7 +1212,6 @@ export {
   submap,
   toMapIter,
   toUnfoldable,
-  toUnfoldable1,
   toUnfoldableUnordered,
   traversableMap,
   traversableWithIndexMap,

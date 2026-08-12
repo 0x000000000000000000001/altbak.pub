@@ -2614,14 +2614,14 @@ if (v_4.Type == 9 && v_4.IntVal == 1358893437 && v_4.UnsafePtr == nil) {
 var __t2 gopurs_runtime.Value
 {
 if (v1_5.Type == 9 && v1_5.IntVal == 1358893437 && v1_5.UnsafePtr == nil) {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}.IntVal)), UnsafePtr: nil}
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}.IntVal)), UnsafePtr: nil}
 }
 end_branch_2:
 __t1 = __t2
@@ -2632,7 +2632,7 @@ goto end_branch_1
 }
 {
 if (v1_5.Type == 9 && v1_5.IntVal == 1358893437 && v1_5.UnsafePtr == nil) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}.IntVal)), UnsafePtr: nil}
 goto end_branch_1
 } else {
 
@@ -2644,21 +2644,21 @@ v2_6_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), 
 _ = v2_6_3
 var __t4 gopurs_runtime.Value
 {
-if (v2_6_3.Type == 9 && v2_6_3.IntVal == 902936544) {
+if (uint32(v2_6_3.IntVal) == 902936544) {
 v_4_loop = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer((*Constructor_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V1)}
 v1_5_loop = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer((*Constructor_Cons[gopurs_runtime.Value])(v1_5.UnsafePtr).V1)}
 continue go__go_3_0_20
-__t4 = gopurs_runtime.Value{}
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Value{}.IntVal)), UnsafePtr: nil}
 goto end_branch_4
 } else {
 
 }
 }
 {
-__t4 = v2_6_3
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(v2_6_3.IntVal)), UnsafePtr: nil}
 }
 end_branch_4:
-__t1 = __t4
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(__t4.IntVal)), UnsafePtr: nil}
 goto end_branch_1
 } else {
 
@@ -2668,12 +2668,12 @@ goto end_branch_1
 __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
-return __t1
+return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(__t1.IntVal)), UnsafePtr: nil}
 }
 }()
 })
 })
-return gopurs_runtime.Apply2(go__go_3_0_20, xs_1, ys_2)
+return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(go__go_3_0_20, xs_1, ys_2).IntVal)), UnsafePtr: nil}
 })
 })
 }))

@@ -6,12 +6,11 @@ import * as Data$dMaybe from "../Data.Maybe/index.js";
 const genDate = dictMonadGen => {
   const Monad0 = dictMonadGen.Monad0();
   const Bind1 = Monad0.Bind1();
+  const Functor0 = Monad0.Bind1().Apply0().Functor0();
   return Bind1.bind(dictMonadGen.Monad0().Bind1().Apply0().Functor0().map(x => {
     if (x >= -271820 && x <= 275759) { return x; }
     $runtime.fail();
-  })(dictMonadGen.chooseInt(1900)(2100)))(year => Bind1.bind(Bind1.Apply0().Functor0().map(x => Data$dInt.toNumber(x))(dictMonadGen.chooseInt(0)(Data$dDate.isLeapYear(year)
-    ? 365
-    : 364)))(days => Monad0.Applicative0().pure((() => {
+  })(dictMonadGen.chooseInt(1900)(2100)))(year => Bind1.bind(Functor0.map(x => Data$dInt.toNumber(x))(dictMonadGen.chooseInt(0)(Data$dDate.isLeapYear(year) ? 365 : 364)))(days => Monad0.Applicative0().pure((() => {
     const $0 = Data$dDate.exactDate(year)(Data$dDate$dComponent.January)(1);
     const $1 = (() => {
       if ($0.tag === "Just") { return Data$dDate.adjust(days)($0._1); }

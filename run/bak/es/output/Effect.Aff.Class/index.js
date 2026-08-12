@@ -17,8 +17,11 @@ const monadAffContT = dictMonadAff => {
   const monadEffectContT = Control$dMonad$dCont$dTrans.monadEffectContT(MonadEffect0);
   return {
     liftAff: (() => {
-      const $0 = MonadEffect0.Monad0().Bind1().bind;
-      return x => $0(dictMonadAff.liftAff(x));
+      const Bind1 = MonadEffect0.Monad0().Bind1();
+      return x => {
+        const $0 = dictMonadAff.liftAff(x);
+        return k => Bind1.bind($0)(k);
+      };
     })(),
     MonadEffect0: () => monadEffectContT
   };
@@ -29,7 +32,8 @@ const monadAffExceptT = dictMonadAff => {
   return {
     liftAff: (() => {
       const $0 = MonadEffect0.Monad0();
-      return x => $0.Bind1().bind(dictMonadAff.liftAff(x))(a => $0.Applicative0().pure(Data$dEither.$Either("Right", a)));
+      const Bind1 = $0.Bind1();
+      return x => Bind1.bind(dictMonadAff.liftAff(x))(a => $0.Applicative0().pure(Data$dEither.$Either("Right", a)));
     })(),
     MonadEffect0: () => monadEffectExceptT
   };
@@ -51,7 +55,9 @@ const monadAffMaybe = dictMonadAff => {
   return {
     liftAff: (() => {
       const $0 = MonadEffect0.Monad0();
-      return x => $0.Bind1().bind(dictMonadAff.liftAff(x))(a$p => $0.Applicative0().pure(Data$dMaybe.$Maybe("Just", a$p)));
+      const Bind1 = $0.Bind1();
+      const Applicative0 = $0.Applicative0();
+      return x => Bind1.bind(dictMonadAff.liftAff(x))(a$p => Applicative0.pure(Data$dMaybe.$Maybe("Just", a$p)));
     })(),
     MonadEffect0: () => monadEffectMaybe
   };
@@ -63,10 +69,10 @@ const monadAffRWS = dictMonadAff => {
     const monadEffectRWS = Control$dMonad$dRWS$dTrans.monadEffectRWS(dictMonoid)(MonadEffect0);
     return {
       liftAff: (() => {
-        const mempty = dictMonoid.mempty;
+        const Bind1 = Monad0.Bind1();
         return x => {
           const $0 = dictMonadAff.liftAff(x);
-          return v => s => Monad0.Bind1().bind($0)(a => Monad0.Applicative0().pure(Control$dMonad$dRWS$dTrans.$RWSResult(s, a, mempty)));
+          return v => s => Bind1.bind($0)(a => Monad0.Applicative0().pure(Control$dMonad$dRWS$dTrans.$RWSResult(s, a, dictMonoid.mempty)));
         };
       })(),
       MonadEffect0: () => monadEffectRWS
@@ -89,9 +95,10 @@ const monadAffState = dictMonadAff => {
   return {
     liftAff: (() => {
       const $0 = MonadEffect0.Monad0();
+      const Bind1 = $0.Bind1();
       return x => {
         const $1 = dictMonadAff.liftAff(x);
-        return s => $0.Bind1().bind($1)(x$1 => $0.Applicative0().pure(Data$dTuple.$Tuple(x$1, s)));
+        return s => Bind1.bind($1)(x$1 => $0.Applicative0().pure(Data$dTuple.$Tuple(x$1, s)));
       };
     })(),
     MonadEffect0: () => monadEffectState
@@ -104,8 +111,8 @@ const monadAffWriter = dictMonadAff => {
     const monadEffectWriter = Control$dMonad$dWriter$dTrans.monadEffectWriter(dictMonoid)(MonadEffect0);
     return {
       liftAff: (() => {
-        const mempty = dictMonoid.mempty;
-        return x => Monad0.Bind1().bind(dictMonadAff.liftAff(x))(a => Monad0.Applicative0().pure(Data$dTuple.$Tuple(a, mempty)));
+        const Bind1 = Monad0.Bind1();
+        return x => Bind1.bind(dictMonadAff.liftAff(x))(a => Monad0.Applicative0().pure(Data$dTuple.$Tuple(a, dictMonoid.mempty)));
       })(),
       MonadEffect0: () => monadEffectWriter
     };

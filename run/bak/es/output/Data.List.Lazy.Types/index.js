@@ -48,7 +48,12 @@ const eq1List = {
   }
 };
 const eqNonEmpty = dictEq => ({eq: x => y => dictEq.eq(x._1)(y._1) && eq1List.eq1(dictEq)(x._2)(y._2)});
-const eq1NonEmptyList = {eq1: dictEq => Data$dLazy.eq1Lazy.eq1(eqNonEmpty(dictEq))};
+const eq1NonEmptyList = {
+  eq1: dictEq => {
+    const eqNonEmpty1 = eqNonEmpty(dictEq);
+    return v => v1 => eqNonEmpty1.eq(Data$dLazy.force(v))(Data$dLazy.force(v1));
+  }
+};
 const eqList = dictEq => ({eq: eq1List.eq1(dictEq)});
 const eqNonEmptyList = dictEq => {
   const $0 = eqNonEmpty(dictEq);
@@ -94,8 +99,26 @@ const ord1List = {
   },
   Eq10: () => eq1List
 };
-const ordNonEmpty = /* #__PURE__ */ Data$dNonEmpty.ordNonEmpty(ord1List);
-const ord1NonEmptyList = {compare1: dictOrd => Data$dLazy.ordLazy(ordNonEmpty(dictOrd)).compare, Eq10: () => eq1NonEmptyList};
+const ordNonEmpty = dictOrd => {
+  const $0 = dictOrd.Eq0();
+  const eqNonEmpty2 = {eq: x => y => $0.eq(x._1)(y._1) && eq1List.eq1($0)(x._2)(y._2)};
+  return {
+    compare: x => y => {
+      const v = dictOrd.compare(x._1)(y._1);
+      if (v === "LT") { return Data$dOrdering.LT; }
+      if (v === "GT") { return Data$dOrdering.GT; }
+      return ord1List.compare1(dictOrd)(x._2)(y._2);
+    },
+    Eq0: () => eqNonEmpty2
+  };
+};
+const ord1NonEmptyList = {
+  compare1: dictOrd => {
+    const ordNonEmpty1 = ordNonEmpty(dictOrd);
+    return v => v1 => Data$dLazy.ordLazy(ordNonEmpty1).compare(v)(v1);
+  },
+  Eq10: () => eq1NonEmptyList
+};
 const ordList = dictOrd => ({compare: ord1List.compare1(dictOrd), Eq0: () => ({eq: eq1List.eq1(dictOrd.Eq0())})});
 const ordNonEmptyList = dictOrd => Data$dLazy.ordLazy(ordNonEmpty(dictOrd));
 const cons = x => xs => Data$dLazy.defer(v => $Step("Cons", x, xs));
@@ -124,14 +147,15 @@ const foldableList = {
     return go;
   },
   foldMap: dictMonoid => {
+    const Semigroup0 = dictMonoid.Semigroup0();
     const mempty = dictMonoid.mempty;
-    return f => foldableList.foldl(b => a => dictMonoid.Semigroup0().append(b)(f(a)))(mempty);
+    return f => foldableList.foldl(b => a => Semigroup0.append(b)(f(a)))(mempty);
   }
 };
 const foldableNonEmpty = {
   foldMap: dictMonoid => {
-    const foldMap1 = foldableList.foldMap(dictMonoid);
-    return f => v => dictMonoid.Semigroup0().append(f(v._1))(foldMap1(f)(v._2));
+    const Semigroup0 = dictMonoid.Semigroup0();
+    return f => v => Semigroup0.append(f(v._1))(foldableList.foldMap(dictMonoid)(f)(v._2));
   },
   foldl: f => b => v => foldableList.foldl(f)(f(b)(v._1))(v._2),
   foldr: f => b => v => f(v._1)(foldableList.foldr(f)(b)(v._2))
@@ -189,10 +213,7 @@ const foldableNonEmptyList = {
     const $0 = Data$dLazy.force(v);
     return foldableList.foldl(f)(f(b)($0._1))($0._2);
   },
-  foldMap: dictMonoid => {
-    const foldMap1 = foldableNonEmpty.foldMap(dictMonoid);
-    return f => v => foldMap1(f)(Data$dLazy.force(v));
-  }
+  foldMap: dictMonoid => f => v => foldableNonEmpty.foldMap(dictMonoid)(f)(Data$dLazy.force(v))
 };
 const showList = dictShow => (
   {
@@ -213,15 +234,16 @@ const showNonEmptyList = dictShow => {
     }
   };
 };
-const showStep = dictShow => (
-  {
+const showStep = dictShow => {
+  const showList1 = showList(dictShow);
+  return {
     show: v => {
       if (v.tag === "Nil") { return "Nil"; }
-      if (v.tag === "Cons") { return "(" + dictShow.show(v._1) + " : " + showList(dictShow).show(v._2) + ")"; }
+      if (v.tag === "Cons") { return "(" + dictShow.show(v._1) + " : " + showList1.show(v._2) + ")"; }
       $runtime.fail();
     }
-  }
-);
+  };
+};
 const foldableWithIndexList = {
   foldrWithIndex: f => b => xs => {
     const v = foldableList.foldl(v1 => {
@@ -244,9 +266,10 @@ const foldableWithIndexList = {
     return x => $0(x)._2;
   },
   foldMapWithIndex: dictMonoid => {
+    const Semigroup0 = dictMonoid.Semigroup0();
     const mempty = dictMonoid.mempty;
     return f => foldableWithIndexList.foldlWithIndex(i => acc => {
-      const $0 = dictMonoid.Semigroup0().append(acc);
+      const $0 = Semigroup0.append(acc);
       const $1 = f(i);
       return x => $0($1(x));
     })(mempty);
@@ -255,14 +278,11 @@ const foldableWithIndexList = {
 };
 const foldableWithIndexNonEmpty = /* #__PURE__ */ Data$dNonEmpty.foldableWithIndexNonEmpty(foldableWithIndexList);
 const foldableWithIndexNonEmptyList = {
-  foldMapWithIndex: dictMonoid => {
-    const foldMapWithIndex1 = foldableWithIndexNonEmpty.foldMapWithIndex(dictMonoid);
-    return f => v => foldMapWithIndex1(x => f((() => {
-      if (x.tag === "Nothing") { return 0; }
-      if (x.tag === "Just") { return 1 + x._1 | 0; }
-      $runtime.fail();
-    })()))(Data$dLazy.force(v));
-  },
+  foldMapWithIndex: dictMonoid => f => v => foldableWithIndexNonEmpty.foldMapWithIndex(dictMonoid)(x => f((() => {
+    if (x.tag === "Nothing") { return 0; }
+    if (x.tag === "Just") { return 1 + x._1 | 0; }
+    $runtime.fail();
+  })()))(Data$dLazy.force(v)),
   foldlWithIndex: f => b => v => foldableWithIndexNonEmpty.foldlWithIndex(x => f((() => {
     if (x.tag === "Nothing") { return 0; }
     if (x.tag === "Just") { return 1 + x._1 | 0; }
@@ -282,9 +302,15 @@ const functorWithIndexList = {
   })(nil),
   Functor0: () => functorList
 };
-const mapWithIndex = f => v => Data$dNonEmpty.$NonEmpty(f(Data$dMaybe.Nothing)(v._1), functorWithIndexList.mapWithIndex(x => f(Data$dMaybe.$Maybe("Just", x)))(v._2));
+const functorWithIndex = /* #__PURE__ */ (() => {
+  const functorNonEmpty1 = {map: f => m => Data$dNonEmpty.$NonEmpty(f(m._1), functorList.map(f)(m._2))};
+  return {
+    mapWithIndex: f => v => Data$dNonEmpty.$NonEmpty(f(Data$dMaybe.Nothing)(v._1), functorWithIndexList.mapWithIndex(x => f(Data$dMaybe.$Maybe("Just", x)))(v._2)),
+    Functor0: () => functorNonEmpty1
+  };
+})();
 const functorWithIndexNonEmptyList = {
-  mapWithIndex: f => v => Data$dLazy.defer(v1 => mapWithIndex(x => f((() => {
+  mapWithIndex: f => v => Data$dLazy.defer(v1 => functorWithIndex.mapWithIndex(x => f((() => {
     if (x.tag === "Nothing") { return 0; }
     if (x.tag === "Just") { return 1 + x._1 | 0; }
     $runtime.fail();
@@ -308,7 +334,8 @@ const semigroupNonEmptyList = {
 const traversableList = {
   traverse: dictApplicative => {
     const Apply0 = dictApplicative.Apply0();
-    return f => foldableList.foldr(a => b => Apply0.apply(Apply0.Functor0().map(cons)(f(a)))(b))(dictApplicative.pure(nil));
+    const Functor0 = dictApplicative.Apply0().Functor0();
+    return f => foldableList.foldr(a => b => Apply0.apply(Functor0.map(cons)(f(a)))(b))(dictApplicative.pure(nil));
   },
   sequence: dictApplicative => traversableList.traverse(dictApplicative)(identity),
   Functor0: () => functorList,
@@ -317,12 +344,12 @@ const traversableList = {
 const traversableNonEmpty = /* #__PURE__ */ Data$dNonEmpty.traversableNonEmpty(traversableList);
 const traversableNonEmptyList = {
   traverse: dictApplicative => {
-    const traverse1 = traversableNonEmpty.traverse(dictApplicative);
-    return f => v => dictApplicative.Apply0().Functor0().map(xxs => Data$dLazy.defer(v1 => xxs))(traverse1(f)(Data$dLazy.force(v)));
+    const Functor0 = dictApplicative.Apply0().Functor0();
+    return f => v => Functor0.map(xxs => Data$dLazy.defer(v1 => xxs))(traversableNonEmpty.traverse(dictApplicative)(f)(Data$dLazy.force(v)));
   },
   sequence: dictApplicative => {
-    const sequence1 = traversableNonEmpty.sequence(dictApplicative);
-    return v => dictApplicative.Apply0().Functor0().map(xxs => Data$dLazy.defer(v1 => xxs))(sequence1(Data$dLazy.force(v)));
+    const Functor0 = dictApplicative.Apply0().Functor0();
+    return v => Functor0.map(xxs => Data$dLazy.defer(v1 => xxs))(traversableNonEmpty.sequence(dictApplicative)(Data$dLazy.force(v)));
   },
   Functor0: () => functorNonEmptyList,
   Foldable1: () => foldableNonEmptyList
@@ -330,17 +357,18 @@ const traversableNonEmptyList = {
 const traversableWithIndexList = {
   traverseWithIndex: dictApplicative => {
     const Apply0 = dictApplicative.Apply0();
-    return f => foldableWithIndexList.foldrWithIndex(i => a => b => Apply0.apply(Apply0.Functor0().map(cons)(f(i)(a)))(b))(dictApplicative.pure(nil));
+    const Functor0 = dictApplicative.Apply0().Functor0();
+    return f => foldableWithIndexList.foldrWithIndex(i => a => b => Apply0.apply(Functor0.map(cons)(f(i)(a)))(b))(dictApplicative.pure(nil));
   },
   FunctorWithIndex0: () => functorWithIndexList,
   FoldableWithIndex1: () => foldableWithIndexList,
   Traversable2: () => traversableList
 };
-const traverseWithIndex = /* #__PURE__ */ (() => Data$dNonEmpty.traversableWithIndexNonEmpty(traversableWithIndexList).traverseWithIndex)();
+const traversableWithIndexNonEmpty = /* #__PURE__ */ Data$dNonEmpty.traversableWithIndexNonEmpty(traversableWithIndexList);
 const traversableWithIndexNonEmptyList = {
   traverseWithIndex: dictApplicative => {
-    const traverseWithIndex1 = traverseWithIndex(dictApplicative);
-    return f => v => dictApplicative.Apply0().Functor0().map(xxs => Data$dLazy.defer(v1 => xxs))(traverseWithIndex1(x => f((() => {
+    const Functor0 = dictApplicative.Apply0().Functor0();
+    return f => v => Functor0.map(xxs => Data$dLazy.defer(v1 => xxs))(traversableWithIndexNonEmpty.traverseWithIndex(dictApplicative)(x => f((() => {
       if (x.tag === "Nothing") { return 0; }
       if (x.tag === "Just") { return 1 + x._1 | 0; }
       $runtime.fail();
@@ -384,17 +412,19 @@ const unfoldableList = {
   })(),
   Unfoldable10: () => unfoldable1List
 };
-const unfoldr1 = f => b => {
-  const $0 = f(b);
-  return Data$dNonEmpty.$NonEmpty(
-    $0._1,
-    unfoldableList.unfoldr(v1 => {
-      if (v1.tag === "Just") { return Data$dMaybe.$Maybe("Just", f(v1._1)); }
-      return Data$dMaybe.Nothing;
-    })($0._2)
-  );
+const unfoldable1NonEmpty = {
+  unfoldr1: f => b => {
+    const $0 = f(b);
+    return Data$dNonEmpty.$NonEmpty(
+      $0._1,
+      unfoldableList.unfoldr(v1 => {
+        if (v1.tag === "Just") { return Data$dMaybe.$Maybe("Just", f(v1._1)); }
+        return Data$dMaybe.Nothing;
+      })($0._2)
+    );
+  }
 };
-const unfoldable1NonEmptyList = {unfoldr1: f => b => Data$dLazy.defer(v => unfoldr1(f)(b))};
+const unfoldable1NonEmptyList = {unfoldr1: f => b => Data$dLazy.defer(v => unfoldable1NonEmpty.unfoldr1(f)(b))};
 const comonadNonEmptyList = {extract: v => Data$dLazy.force(v)._1, Extend0: () => extendNonEmptyList};
 const monadList = {Applicative0: () => applicativeList, Bind1: () => bindList};
 const bindList = {
@@ -473,11 +503,11 @@ export {
   foldableWithIndexNonEmptyList,
   functorList,
   functorNonEmptyList,
+  functorWithIndex,
   functorWithIndexList,
   functorWithIndexNonEmptyList,
   identity,
   lazyList,
-  mapWithIndex,
   monadList,
   monadNonEmptyList,
   monadPlusList,
@@ -502,10 +532,10 @@ export {
   traversableNonEmpty,
   traversableNonEmptyList,
   traversableWithIndexList,
+  traversableWithIndexNonEmpty,
   traversableWithIndexNonEmptyList,
-  traverseWithIndex,
   unfoldable1List,
+  unfoldable1NonEmpty,
   unfoldable1NonEmptyList,
-  unfoldableList,
-  unfoldr1
+  unfoldableList
 };

@@ -9,31 +9,31 @@ import * as Data$dFunctor$dJoker from "../Data.Functor.Joker/index.js";
 import * as Data$dFunctor$dProduct2 from "../Data.Functor.Product2/index.js";
 import * as Data$dTuple from "../Data.Tuple/index.js";
 const identity = x => x;
+const identity1 = x => x;
 const bitraverse = dict => dict.bitraverse;
 const lfor = dictBitraversable => dictApplicative => {
-  const bitraverse2 = dictBitraversable.bitraverse(dictApplicative);
   const pure = dictApplicative.pure;
-  return t => f => bitraverse2(f)(pure)(t);
+  return t => f => dictBitraversable.bitraverse(dictApplicative)(f)(pure)(t);
 };
 const ltraverse = dictBitraversable => dictApplicative => {
-  const bitraverse2 = dictBitraversable.bitraverse(dictApplicative);
   const pure = dictApplicative.pure;
-  return f => bitraverse2(f)(pure);
+  return f => dictBitraversable.bitraverse(dictApplicative)(f)(pure);
 };
 const rfor = dictBitraversable => dictApplicative => {
-  const bitraverse2 = dictBitraversable.bitraverse(dictApplicative);
   const pure = dictApplicative.pure;
-  return t => f => bitraverse2(pure)(f)(t);
+  return t => f => dictBitraversable.bitraverse(dictApplicative)(pure)(f)(t);
 };
 const rtraverse = dictBitraversable => dictApplicative => dictBitraversable.bitraverse(dictApplicative)(dictApplicative.pure);
 const bitraversableTuple = {
   bitraverse: dictApplicative => {
     const Apply0 = dictApplicative.Apply0();
-    return f => g => v => Apply0.apply(Apply0.Functor0().map(Data$dTuple.Tuple)(f(v._1)))(g(v._2));
+    const Functor0 = dictApplicative.Apply0().Functor0();
+    return f => g => v => Apply0.apply(Functor0.map(Data$dTuple.Tuple)(f(v._1)))(g(v._2));
   },
   bisequence: dictApplicative => {
     const Apply0 = dictApplicative.Apply0();
-    return v => Apply0.apply(Apply0.Functor0().map(Data$dTuple.Tuple)(v._1))(v._2);
+    const Functor0 = dictApplicative.Apply0().Functor0();
+    return v => Apply0.apply(Functor0.map(Data$dTuple.Tuple)(v._1))(v._2);
   },
   Bifunctor0: () => Data$dBifunctor.bifunctorTuple,
   Bifoldable1: () => Data$dBifoldable.bifoldableTuple
@@ -45,19 +45,16 @@ const bitraversableJoker = dictTraversable => {
   const bifoldableJoker = {
     bifoldr: v => r => u => v1 => $1.foldr(r)(u)(v1),
     bifoldl: v => r => u => v1 => $1.foldl(r)(u)(v1),
-    bifoldMap: dictMonoid => {
-      const foldMap1 = $1.foldMap(dictMonoid);
-      return v => r => v1 => foldMap1(r)(v1);
-    }
+    bifoldMap: dictMonoid => v => r => v1 => $1.foldMap(dictMonoid)(r)(v1)
   };
   return {
     bitraverse: dictApplicative => {
-      const traverse1 = dictTraversable.traverse(dictApplicative);
-      return v => r => v1 => dictApplicative.Apply0().Functor0().map(Data$dFunctor$dJoker.Joker)(traverse1(r)(v1));
+      const Functor0 = dictApplicative.Apply0().Functor0();
+      return v => r => v1 => Functor0.map(Data$dFunctor$dJoker.Joker)(dictTraversable.traverse(dictApplicative)(r)(v1));
     },
     bisequence: dictApplicative => {
-      const sequence1 = dictTraversable.sequence(dictApplicative);
-      return v => dictApplicative.Apply0().Functor0().map(Data$dFunctor$dJoker.Joker)(sequence1(v));
+      const Functor0 = dictApplicative.Apply0().Functor0();
+      return v => Functor0.map(Data$dFunctor$dJoker.Joker)(dictTraversable.sequence(dictApplicative)(v));
     },
     Bifunctor0: () => bifunctorJoker,
     Bifoldable1: () => bifoldableJoker
@@ -65,18 +62,18 @@ const bitraversableJoker = dictTraversable => {
 };
 const bitraversableEither = {
   bitraverse: dictApplicative => {
-    const $0 = dictApplicative.Apply0().Functor0();
+    const Functor0 = dictApplicative.Apply0().Functor0();
     return v => v1 => v2 => {
-      if (v2.tag === "Left") { return $0.map(Data$dEither.Left)(v(v2._1)); }
-      if (v2.tag === "Right") { return $0.map(Data$dEither.Right)(v1(v2._1)); }
+      if (v2.tag === "Left") { return Functor0.map(Data$dEither.Left)(v(v2._1)); }
+      if (v2.tag === "Right") { return Functor0.map(Data$dEither.Right)(v1(v2._1)); }
       $runtime.fail();
     };
   },
   bisequence: dictApplicative => {
-    const $0 = dictApplicative.Apply0().Functor0();
+    const Functor0 = dictApplicative.Apply0().Functor0();
     return v => {
-      if (v.tag === "Left") { return $0.map(Data$dEither.Left)(v._1); }
-      if (v.tag === "Right") { return $0.map(Data$dEither.Right)(v._1); }
+      if (v.tag === "Left") { return Functor0.map(Data$dEither.Left)(v._1); }
+      if (v.tag === "Right") { return Functor0.map(Data$dEither.Right)(v._1); }
       $runtime.fail();
     };
   },
@@ -84,8 +81,14 @@ const bitraversableEither = {
   Bifoldable1: () => Data$dBifoldable.bifoldableEither
 };
 const bitraversableConst = {
-  bitraverse: dictApplicative => f => v => v1 => dictApplicative.Apply0().Functor0().map(Data$dConst.Const)(f(v1)),
-  bisequence: dictApplicative => v => dictApplicative.Apply0().Functor0().map(Data$dConst.Const)(v),
+  bitraverse: dictApplicative => {
+    const Functor0 = dictApplicative.Apply0().Functor0();
+    return f => v => v1 => Functor0.map(Data$dConst.Const)(f(v1));
+  },
+  bisequence: dictApplicative => {
+    const Functor0 = dictApplicative.Apply0().Functor0();
+    return v => Functor0.map(Data$dConst.Const)(v);
+  },
   Bifunctor0: () => Data$dBifunctor.bifunctorConst,
   Bifoldable1: () => Data$dBifoldable.bifoldableConst
 };
@@ -96,25 +99,22 @@ const bitraversableClown = dictTraversable => {
   const bifoldableClown = {
     bifoldr: l => v => u => v1 => $1.foldr(l)(u)(v1),
     bifoldl: l => v => u => v1 => $1.foldl(l)(u)(v1),
-    bifoldMap: dictMonoid => {
-      const foldMap1 = $1.foldMap(dictMonoid);
-      return l => v => v1 => foldMap1(l)(v1);
-    }
+    bifoldMap: dictMonoid => l => v => v1 => $1.foldMap(dictMonoid)(l)(v1)
   };
   return {
     bitraverse: dictApplicative => {
-      const traverse1 = dictTraversable.traverse(dictApplicative);
-      return l => v => v1 => dictApplicative.Apply0().Functor0().map(Data$dFunctor$dClown.Clown)(traverse1(l)(v1));
+      const Functor0 = dictApplicative.Apply0().Functor0();
+      return l => v => v1 => Functor0.map(Data$dFunctor$dClown.Clown)(dictTraversable.traverse(dictApplicative)(l)(v1));
     },
     bisequence: dictApplicative => {
-      const sequence1 = dictTraversable.sequence(dictApplicative);
-      return v => dictApplicative.Apply0().Functor0().map(Data$dFunctor$dClown.Clown)(sequence1(v));
+      const Functor0 = dictApplicative.Apply0().Functor0();
+      return v => Functor0.map(Data$dFunctor$dClown.Clown)(dictTraversable.sequence(dictApplicative)(v));
     },
     Bifunctor0: () => bifunctorClown,
     Bifoldable1: () => bifoldableClown
   };
 };
-const bisequenceDefault = dictBitraversable => dictApplicative => dictBitraversable.bitraverse(dictApplicative)(identity)(identity);
+const bisequenceDefault = dictBitraversable => dictApplicative => dictBitraversable.bitraverse(dictApplicative)(identity)(identity1);
 const bisequence = dict => dict.bisequence;
 const bitraversableFlip = dictBitraversable => {
   const $0 = dictBitraversable.Bifunctor0();
@@ -123,19 +123,16 @@ const bitraversableFlip = dictBitraversable => {
   const bifoldableFlip = {
     bifoldr: r => l => u => v => $1.bifoldr(l)(r)(u)(v),
     bifoldl: r => l => u => v => $1.bifoldl(l)(r)(u)(v),
-    bifoldMap: dictMonoid => {
-      const bifoldMap2 = $1.bifoldMap(dictMonoid);
-      return r => l => v => bifoldMap2(l)(r)(v);
-    }
+    bifoldMap: dictMonoid => r => l => v => $1.bifoldMap(dictMonoid)(l)(r)(v)
   };
   return {
     bitraverse: dictApplicative => {
-      const bitraverse2 = dictBitraversable.bitraverse(dictApplicative);
-      return r => l => v => dictApplicative.Apply0().Functor0().map(Data$dFunctor$dFlip.Flip)(bitraverse2(l)(r)(v));
+      const Functor0 = dictApplicative.Apply0().Functor0();
+      return r => l => v => Functor0.map(Data$dFunctor$dFlip.Flip)(dictBitraversable.bitraverse(dictApplicative)(l)(r)(v));
     },
     bisequence: dictApplicative => {
-      const bisequence2 = dictBitraversable.bisequence(dictApplicative);
-      return v => dictApplicative.Apply0().Functor0().map(Data$dFunctor$dFlip.Flip)(bisequence2(v));
+      const Functor0 = dictApplicative.Apply0().Functor0();
+      return v => Functor0.map(Data$dFunctor$dFlip.Flip)(dictBitraversable.bisequence(dictApplicative)(v));
     },
     Bifunctor0: () => bifunctorFlip,
     Bifoldable1: () => bifoldableFlip
@@ -151,29 +148,24 @@ const bitraversableProduct2 = dictBitraversable => {
     return {
       bitraverse: dictApplicative => {
         const Apply0 = dictApplicative.Apply0();
-        const bitraverse3 = dictBitraversable.bitraverse(dictApplicative);
-        const bitraverse4 = dictBitraversable1.bitraverse(dictApplicative);
-        return l => r => v => Apply0.apply(Apply0.Functor0().map(Data$dFunctor$dProduct2.Product2)(bitraverse3(l)(r)(v._1)))(bitraverse4(l)(r)(v._2));
+        const Functor0 = dictApplicative.Apply0().Functor0();
+        return l => r => v => Apply0.apply(Functor0.map(Data$dFunctor$dProduct2.Product2)(dictBitraversable.bitraverse(dictApplicative)(l)(r)(v._1)))(dictBitraversable1.bitraverse(dictApplicative)(l)(r)(v._2));
       },
       bisequence: dictApplicative => {
         const Apply0 = dictApplicative.Apply0();
-        const bisequence3 = dictBitraversable.bisequence(dictApplicative);
-        const bisequence4 = dictBitraversable1.bisequence(dictApplicative);
-        return v => Apply0.apply(Apply0.Functor0().map(Data$dFunctor$dProduct2.Product2)(bisequence3(v._1)))(bisequence4(v._2));
+        const Functor0 = dictApplicative.Apply0().Functor0();
+        return v => Apply0.apply(Functor0.map(Data$dFunctor$dProduct2.Product2)(dictBitraversable.bisequence(dictApplicative)(v._1)))(dictBitraversable1.bisequence(dictApplicative)(v._2));
       },
       Bifunctor0: () => bifunctorProduct21,
       Bifoldable1: () => bifoldableProduct21
     };
   };
 };
-const bitraverseDefault = dictBitraversable => dictApplicative => {
-  const bisequence2 = dictBitraversable.bisequence(dictApplicative);
-  return f => g => t => bisequence2(dictBitraversable.Bifunctor0().bimap(f)(g)(t));
+const bitraverseDefault = dictBitraversable => {
+  const Bifunctor0 = dictBitraversable.Bifunctor0();
+  return dictApplicative => f => g => t => dictBitraversable.bisequence(dictApplicative)(Bifunctor0.bimap(f)(g)(t));
 };
-const bifor = dictBitraversable => dictApplicative => {
-  const bitraverse2 = dictBitraversable.bitraverse(dictApplicative);
-  return t => f => g => bitraverse2(f)(g)(t);
-};
+const bifor = dictBitraversable => dictApplicative => t => f => g => dictBitraversable.bitraverse(dictApplicative)(f)(g)(t);
 export {
   bifor,
   bisequence,
@@ -188,6 +180,7 @@ export {
   bitraverse,
   bitraverseDefault,
   identity,
+  identity1,
   lfor,
   ltraverse,
   rfor,

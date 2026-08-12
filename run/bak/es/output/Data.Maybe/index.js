@@ -23,7 +23,10 @@ const semigroupMaybe = dictSemigroup => (
     }
   }
 );
-const optional = dictAlt => dictApplicative => a => dictAlt.alt(dictAlt.Functor0().map(Just)(a))(dictApplicative.pure(Nothing));
+const optional = dictAlt => {
+  const Functor0 = dictAlt.Functor0();
+  return dictApplicative => a => dictAlt.alt(Functor0.map(Just)(a))(dictApplicative.pure(Nothing));
+};
 const monoidMaybe = dictSemigroup => {
   const semigroupMaybe1 = {
     append: v => v1 => {

@@ -24,35 +24,20 @@ const extendIdentityI = dictExtend => {
   const $0 = dictExtend.Functor0();
   return {extend: f => v => dictExtend.extend(x => f(x))(v), Functor0: () => $0};
 };
-const eqIdentityT = dictEq1 => dictEq => {
-  const eq11 = dictEq1.eq1(dictEq);
-  return {eq: x => y => eq11(x)(y)};
-};
+const eqIdentityT = dictEq1 => dictEq => ({eq: x => y => dictEq1.eq1(dictEq)(x)(y)});
 const ordIdentityT = dictOrd1 => {
   const $0 = dictOrd1.Eq10();
   return dictOrd => {
-    const compare11 = dictOrd1.compare1(dictOrd);
-    const eq11 = $0.eq1(dictOrd.Eq0());
-    const eqIdentityT2 = {eq: x => y => eq11(x)(y)};
-    return {compare: x => y => compare11(x)(y), Eq0: () => eqIdentityT2};
+    const $1 = dictOrd.Eq0();
+    const eqIdentityT2 = {eq: x => y => $0.eq1($1)(x)(y)};
+    return {compare: x => y => dictOrd1.compare1(dictOrd)(x)(y), Eq0: () => eqIdentityT2};
   };
 };
-const eq1IdentityT = dictEq1 => ({eq1: dictEq => dictEq1.eq1(dictEq)});
+const eq1IdentityT = dictEq1 => ({eq1: dictEq => x => y => dictEq1.eq1(dictEq)(x)(y)});
 const ord1IdentityT = dictOrd1 => {
   const $0 = dictOrd1.Eq10();
-  const $1 = dictOrd1.Eq10();
-  const eq1IdentityT1 = {eq1: dictEq => $1.eq1(dictEq)};
-  return {
-    compare1: dictOrd => {
-      const compare11 = dictOrd1.compare1(dictOrd);
-      const eq11 = $0.eq1(dictOrd.Eq0());
-      return (() => {
-        const eqIdentityT2 = {eq: x => y => eq11(x)(y)};
-        return {compare: x => y => compare11(x)(y), Eq0: () => eqIdentityT2};
-      })().compare;
-    },
-    Eq10: () => eq1IdentityT1
-  };
+  const eq1IdentityT1 = {eq1: dictEq => x => y => $0.eq1(dictEq)(x)(y)};
+  return {compare1: dictOrd => x => y => dictOrd1.compare1(dictOrd)(x)(y), Eq10: () => eq1IdentityT1};
 };
 const comonadIdentityT = dictComonad => {
   const $0 = dictComonad.Extend0();

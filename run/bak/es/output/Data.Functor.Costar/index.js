@@ -10,11 +10,13 @@ const profunctorCostar = dictFunctor => (
   }
 );
 const strongCostar = dictComonad => {
-  const Functor0 = dictComonad.Extend0().Functor0();
+  const Extend0 = dictComonad.Extend0();
+  const Functor0 = Extend0.Functor0();
+  const $0 = Extend0.Functor0();
   const profunctorCostar1 = {
     dimap: f => g => v => {
-      const $0 = Functor0.map(f);
-      return x => g(v($0(x)));
+      const $1 = $0.map(f);
+      return x => g(v($1(x)));
     }
   };
   return {

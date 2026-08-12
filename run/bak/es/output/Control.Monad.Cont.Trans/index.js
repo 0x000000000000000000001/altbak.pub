@@ -3,7 +3,12 @@ const ContT = x => x;
 const withContT = f => v => k => v(f(k));
 const runContT = v => k => v(k);
 const newtypeContT = {Coercible0: () => {}};
-const monadTransContT = {lift: dictMonad => dictMonad.Bind1().bind};
+const monadTransContT = {
+  lift: dictMonad => {
+    const Bind1 = dictMonad.Bind1();
+    return m => k => Bind1.bind(m)(k);
+  }
+};
 const mapContT = f => v => k => f(v(k));
 const functorContT = dictFunctor => ({map: f => v => k => v(a => k(f(a)))});
 const applyContT = dictApply => {
@@ -42,16 +47,23 @@ const monadContT = dictMonad => {
   return {Applicative0: () => applicativeContT1, Bind1: () => bindContT1};
 };
 const monadAskContT = dictMonadAsk => {
-  const Monad0 = dictMonadAsk.Monad0();
-  const monadContT1 = monadContT(Monad0);
-  return {ask: Monad0.Bind1().bind(dictMonadAsk.ask), Monad0: () => monadContT1};
+  const monadContT1 = monadContT(dictMonadAsk.Monad0());
+  return {
+    ask: (() => {
+      const Bind1 = dictMonadAsk.Monad0().Bind1();
+      const $0 = dictMonadAsk.ask;
+      return k => Bind1.bind($0)(k);
+    })(),
+    Monad0: () => monadContT1
+  };
 };
 const monadReaderContT = dictMonadReader => {
   const MonadAsk0 = dictMonadReader.MonadAsk0();
+  const Bind1 = MonadAsk0.Monad0().Bind1();
   const ask = MonadAsk0.ask;
   const monadAskContT1 = monadAskContT(MonadAsk0);
   return {
-    local: f => v => k => MonadAsk0.Monad0().Bind1().bind(ask)(r => dictMonadReader.local(f)(v((() => {
+    local: f => v => k => Bind1.bind(ask)(r => dictMonadReader.local(f)(v((() => {
       const $0 = dictMonadReader.local(v$1 => r);
       return x => $0(k(x));
     })()))),
@@ -67,8 +79,11 @@ const monadEffectContT = dictMonadEffect => {
   const monadContT1 = monadContT(Monad0);
   return {
     liftEffect: (() => {
-      const $0 = Monad0.Bind1().bind;
-      return x => $0(dictMonadEffect.liftEffect(x));
+      const Bind1 = Monad0.Bind1();
+      return x => {
+        const $0 = dictMonadEffect.liftEffect(x);
+        return k => Bind1.bind($0)(k);
+      };
     })(),
     Monad0: () => monadContT1
   };
@@ -78,8 +93,11 @@ const monadStateContT = dictMonadState => {
   const monadContT1 = monadContT(Monad0);
   return {
     state: (() => {
-      const $0 = Monad0.Bind1().bind;
-      return x => $0(dictMonadState.state(x));
+      const Bind1 = Monad0.Bind1();
+      return x => {
+        const $0 = dictMonadState.state(x);
+        return k => Bind1.bind($0)(k);
+      };
     })(),
     Monad0: () => monadContT1
   };
@@ -89,8 +107,11 @@ const monadSTContT = dictMonadST => {
   const monadContT1 = monadContT(Monad0);
   return {
     liftST: (() => {
-      const $0 = Monad0.Bind1().bind;
-      return x => $0(dictMonadST.liftST(x));
+      const Bind1 = Monad0.Bind1();
+      return x => {
+        const $0 = dictMonadST.liftST(x);
+        return k => Bind1.bind($0)(k);
+      };
     })(),
     Monad0: () => monadContT1
   };

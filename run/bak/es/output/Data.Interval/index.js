@@ -8,20 +8,33 @@ import * as Data$dShow from "../Data.Show/index.js";
 import * as Data$dTraversable from "../Data.Traversable/index.js";
 const $Interval = (tag, _1, _2) => ({tag, _1, _2});
 const $RecurringInterval = (_1, _2) => ({tag: "RecurringInterval", _1, _2});
-const show = v => {
-  if (v.tag === "Just") { return "(Just " + Data$dShow.showIntImpl(v._1) + ")"; }
-  if (v.tag === "Nothing") { return "Nothing"; }
-  $runtime.fail();
-};
-const compare = x => y => {
-  if (x.tag === "Nothing") {
-    if (y.tag === "Nothing") { return Data$dOrdering.EQ; }
-    return Data$dOrdering.LT;
+const showMaybe = {
+  show: v => {
+    if (v.tag === "Just") { return "(Just " + Data$dShow.showIntImpl(v._1) + ")"; }
+    if (v.tag === "Nothing") { return "Nothing"; }
+    $runtime.fail();
   }
-  if (y.tag === "Nothing") { return Data$dOrdering.GT; }
-  if (x.tag === "Just" && y.tag === "Just") { return Data$dOrd.ordInt.compare(x._1)(y._1); }
-  $runtime.fail();
 };
+const ordMaybe = /* #__PURE__ */ (() => {
+  const eqMaybe1 = {
+    eq: x => y => {
+      if (x.tag === "Nothing") { return y.tag === "Nothing"; }
+      return x.tag === "Just" && y.tag === "Just" && x._1 === y._1;
+    }
+  };
+  return {
+    compare: x => y => {
+      if (x.tag === "Nothing") {
+        if (y.tag === "Nothing") { return Data$dOrdering.EQ; }
+        return Data$dOrdering.LT;
+      }
+      if (y.tag === "Nothing") { return Data$dOrdering.GT; }
+      if (x.tag === "Just" && y.tag === "Just") { return Data$dOrd.ordInt.compare(x._1)(y._1); }
+      $runtime.fail();
+    },
+    Eq0: () => eqMaybe1
+  };
+})();
 const StartEnd = value0 => value1 => $Interval("StartEnd", value0, value1);
 const DurationEnd = value0 => value1 => $Interval("DurationEnd", value0, value1);
 const StartDuration = value0 => value1 => $Interval("StartDuration", value0, value1);
@@ -38,8 +51,10 @@ const showInterval = dictShow => dictShow1 => (
     }
   }
 );
-const showRecurringInterval = dictShow => dictShow1 => ({show: v => "(RecurringInterval " + show(v._1) + " " + showInterval(dictShow)(dictShow1).show(v._2) + ")"});
-const over = dictFunctor => f => v => dictFunctor.map(RecurringInterval(v._1))(f(v._2));
+const showRecurringInterval = dictShow => dictShow1 => {
+  const showInterval2 = showInterval(dictShow)(dictShow1);
+  return {show: v => "(RecurringInterval " + showMaybe.show(v._1) + " " + showInterval2.show(v._2) + ")"};
+};
 const foldableInterval = {
   foldl: v => v1 => v2 => {
     if (v2.tag === "StartEnd") { return v(v(v1)(v2._1))(v2._2); }
@@ -49,8 +64,9 @@ const foldableInterval = {
   },
   foldr: x => Data$dFoldable.foldrDefault(foldableInterval)(x),
   foldMap: dictMonoid => {
+    const Semigroup0 = dictMonoid.Semigroup0();
     const mempty = dictMonoid.mempty;
-    return f => foldableInterval.foldl(acc => x => dictMonoid.Semigroup0().append(acc)(f(x)))(mempty);
+    return f => foldableInterval.foldl(acc => x => Semigroup0.append(acc)(f(x)))(mempty);
   }
 };
 const foldableRecurringInterval = {
@@ -60,13 +76,11 @@ const foldableRecurringInterval = {
     if (x._2.tag === "StartDuration") { return f(i)(x._2._1); }
     return i;
   },
-  foldr: f => i => {
-    const $0 = Data$dFoldable.foldrDefault(foldableInterval)(f)(i);
-    return x => $0(x._2);
-  },
+  foldr: f => i => x => foldableInterval.foldMap(Data$dFoldable.monoidEndo)(x$1 => f(x$1))(x._2)(i),
   foldMap: dictMonoid => {
+    const Semigroup0 = dictMonoid.Semigroup0();
     const mempty = dictMonoid.mempty;
-    return f => foldableRecurringInterval.foldl(acc => x => dictMonoid.Semigroup0().append(acc)(f(x)))(mempty);
+    return f => foldableRecurringInterval.foldl(acc => x => Semigroup0.append(acc)(f(x)))(mempty);
   }
 };
 const eqInterval = dictEq => dictEq1 => (
@@ -79,11 +93,10 @@ const eqInterval = dictEq => dictEq1 => (
     }
   }
 );
-const eqRecurringInterval = dictEq => dictEq1 => (
-  {
-    eq: x => y => (x._1.tag === "Nothing" ? y._1.tag === "Nothing" : x._1.tag === "Just" && y._1.tag === "Just" && x._1._1 === y._1._1) && eqInterval(dictEq)(dictEq1).eq(x._2)(y._2)
-  }
-);
+const eqRecurringInterval = dictEq => dictEq1 => {
+  const eqInterval2 = eqInterval(dictEq)(dictEq1);
+  return {eq: x => y => (x._1.tag === "Nothing" ? y._1.tag === "Nothing" : x._1.tag === "Just" && y._1.tag === "Just" && x._1._1 === y._1._1) && eqInterval2.eq(x._2)(y._2)};
+};
 const ordInterval = dictOrd => {
   const eqInterval1 = eqInterval(dictOrd.Eq0());
   return dictOrd1 => {
@@ -131,13 +144,14 @@ const ordRecurringInterval = dictOrd => {
   const ordInterval1 = ordInterval(dictOrd);
   const eqRecurringInterval1 = eqRecurringInterval(dictOrd.Eq0());
   return dictOrd1 => {
+    const ordInterval2 = ordInterval1(dictOrd1);
     const eqRecurringInterval2 = eqRecurringInterval1(dictOrd1.Eq0());
     return {
       compare: x => y => {
-        const v = compare(x._1)(y._1);
+        const v = ordMaybe.compare(x._1)(y._1);
         if (v === "LT") { return Data$dOrdering.LT; }
         if (v === "GT") { return Data$dOrdering.GT; }
-        return ordInterval1(dictOrd1).compare(x._2)(y._2);
+        return ordInterval2.compare(x._2)(y._2);
       },
       Eq0: () => eqRecurringInterval2
     };
@@ -212,7 +226,7 @@ const extendRecurringInterval = {
 const traversableInterval = {
   traverse: dictApplicative => {
     const Apply0 = dictApplicative.Apply0();
-    const Functor0 = Apply0.Functor0();
+    const Functor0 = dictApplicative.Apply0().Functor0();
     return v => v1 => {
       if (v1.tag === "StartEnd") { return Apply0.apply(Functor0.map(StartEnd)(v(v1._1)))(v(v1._2)); }
       if (v1.tag === "DurationEnd") { return Functor0.map(DurationEnd(v1._1))(v(v1._2)); }
@@ -230,9 +244,8 @@ const traversableInterval = {
 };
 const traversableRecurringInterval = {
   traverse: dictApplicative => {
-    const over1 = over(dictApplicative.Apply0().Functor0());
-    const traverse1 = traversableInterval.traverse(dictApplicative);
-    return f => i => over1(traverse1(f))(i);
+    const Functor0 = dictApplicative.Apply0().Functor0();
+    return f => i => Functor0.map(RecurringInterval(i._1))(traversableInterval.traverse(dictApplicative)(f)(i._2));
   },
   sequence: dictApplicative => traversableRecurringInterval.traverse(dictApplicative)(Data$dTraversable.identity),
   Functor0: () => functorRecurringInterval,
@@ -248,9 +261,9 @@ const bifoldableInterval = {
   },
   bifoldr: x => Data$dBifoldable.bifoldrDefault(bifoldableInterval)(x),
   bifoldMap: dictMonoid => {
-    const $0 = dictMonoid.Semigroup0();
+    const Semigroup0 = dictMonoid.Semigroup0();
     const mempty = dictMonoid.mempty;
-    return f => g => bifoldableInterval.bifoldl(m => a => $0.append(m)(f(a)))(m => b => $0.append(m)(g(b)))(mempty);
+    return f => g => bifoldableInterval.bifoldl(m => a => Semigroup0.append(m)(f(a)))(m => b => Semigroup0.append(m)(g(b)))(mempty);
   }
 };
 const bifoldableRecurringInterval = {
@@ -261,39 +274,35 @@ const bifoldableRecurringInterval = {
     if (x._2.tag === "DurationOnly") { return f(i)(x._2._1); }
     $runtime.fail();
   },
-  bifoldr: f => g => i => {
-    const $0 = Data$dBifoldable.bifoldrDefault(bifoldableInterval)(f)(g)(i);
-    return x => $0(x._2);
-  },
+  bifoldr: f => g => i => x => Data$dBifoldable.bifoldrDefault(bifoldableInterval)(f)(g)(i)(x._2),
   bifoldMap: dictMonoid => {
-    const $0 = dictMonoid.Semigroup0();
+    const Semigroup0 = dictMonoid.Semigroup0();
     const mempty = dictMonoid.mempty;
-    return f => g => bifoldableRecurringInterval.bifoldl(m => a => $0.append(m)(f(a)))(m => b => $0.append(m)(g(b)))(mempty);
+    return f => g => bifoldableRecurringInterval.bifoldl(m => a => Semigroup0.append(m)(f(a)))(m => b => Semigroup0.append(m)(g(b)))(mempty);
   }
 };
 const bitraversableInterval = {
   bitraverse: dictApplicative => {
     const Apply0 = dictApplicative.Apply0();
-    const $0 = Apply0.Functor0();
+    const Functor0 = dictApplicative.Apply0().Functor0();
     return v => v1 => v2 => {
-      if (v2.tag === "StartEnd") { return Apply0.apply($0.map(StartEnd)(v1(v2._1)))(v1(v2._2)); }
-      if (v2.tag === "DurationEnd") { return Apply0.apply($0.map(DurationEnd)(v(v2._1)))(v1(v2._2)); }
-      if (v2.tag === "StartDuration") { return Apply0.apply($0.map(StartDuration)(v1(v2._1)))(v(v2._2)); }
-      if (v2.tag === "DurationOnly") { return $0.map(DurationOnly)(v(v2._1)); }
+      if (v2.tag === "StartEnd") { return Apply0.apply(Functor0.map(StartEnd)(v1(v2._1)))(v1(v2._2)); }
+      if (v2.tag === "DurationEnd") { return Apply0.apply(Functor0.map(DurationEnd)(v(v2._1)))(v1(v2._2)); }
+      if (v2.tag === "StartDuration") { return Apply0.apply(Functor0.map(StartDuration)(v1(v2._1)))(v(v2._2)); }
+      if (v2.tag === "DurationOnly") { return Functor0.map(DurationOnly)(v(v2._1)); }
       $runtime.fail();
     };
   },
-  bisequence: dictApplicative => bitraversableInterval.bitraverse(dictApplicative)(Data$dBitraversable.identity)(Data$dBitraversable.identity),
+  bisequence: dictApplicative => bitraversableInterval.bitraverse(dictApplicative)(Data$dBitraversable.identity)(Data$dBitraversable.identity1),
   Bifunctor0: () => bifunctorInterval,
   Bifoldable1: () => bifoldableInterval
 };
 const bitraversableRecurringInterval = {
   bitraverse: dictApplicative => {
-    const over1 = over(dictApplicative.Apply0().Functor0());
-    const bitraverse1 = bitraversableInterval.bitraverse(dictApplicative);
-    return l => r => i => over1(bitraverse1(l)(r))(i);
+    const Functor0 = dictApplicative.Apply0().Functor0();
+    return l => r => i => Functor0.map(RecurringInterval(i._1))(bitraversableInterval.bitraverse(dictApplicative)(l)(r)(i._2));
   },
-  bisequence: dictApplicative => bitraversableRecurringInterval.bitraverse(dictApplicative)(Data$dBitraversable.identity)(Data$dBitraversable.identity),
+  bisequence: dictApplicative => bitraversableRecurringInterval.bitraverse(dictApplicative)(Data$dBitraversable.identity)(Data$dBitraversable.identity1),
   Bifunctor0: () => bifunctorRecurringInterval,
   Bifoldable1: () => bifoldableRecurringInterval
 };
@@ -311,7 +320,6 @@ export {
   bifunctorRecurringInterval,
   bitraversableInterval,
   bitraversableRecurringInterval,
-  compare,
   eqInterval,
   eqRecurringInterval,
   extendInterval,
@@ -321,10 +329,10 @@ export {
   functorInterval,
   functorRecurringInterval,
   ordInterval,
+  ordMaybe,
   ordRecurringInterval,
-  over,
-  show,
   showInterval,
+  showMaybe,
   showRecurringInterval,
   traversableInterval,
   traversableRecurringInterval

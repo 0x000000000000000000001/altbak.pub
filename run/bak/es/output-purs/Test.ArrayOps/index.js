@@ -5,7 +5,6 @@ import * as Data_EuclideanRing from "../Data.EuclideanRing/index.js";
 import * as Data_Semiring from "../Data.Semiring/index.js";
 import * as Data_Show from "../Data.Show/index.js";
 import * as Effect_Console from "../Effect.Console/index.js";
-var mod = /* #__PURE__ */ Data_EuclideanRing.mod(Data_EuclideanRing.euclideanRingInt);
 var add = /* #__PURE__ */ Data_Semiring.add(Data_Semiring.semiringInt);
 var logShow = /* #__PURE__ */ Effect_Console.logShow(Data_Show.showInt);
 var range = function (start) {
@@ -15,7 +14,7 @@ var range = function (start) {
 };
 var filterEvens = function (arr) {
     return Data_Array.filter(function (x) {
-        return mod(x)(2) === 0;
+        return Data_EuclideanRing.mod(Data_EuclideanRing.euclideanRingInt)(x)(2) === 0;
     })(arr);
 };
 var sumEvens = function (n) {

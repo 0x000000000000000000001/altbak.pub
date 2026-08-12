@@ -47,7 +47,7 @@ var once_reifyType sync.Once
 func Get_reifyType() gopurs_runtime.Value {
 	once_reifyType.Do(func() {
 		cache_reifyType = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value, f_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_reifyType(_dollar__unused_0_box, s_1_box, f_2_box)
+return Call_reifyType(uint32(_dollar__unused_0_box.IntVal), s_1_box, f_2_box)
 })
 	})
 	return cache_reifyType
@@ -97,8 +97,8 @@ func init() {
 }
 
 
-func Call_reifyType(_dollar__unused_0_loop gopurs_runtime.Value, s_1_loop gopurs_runtime.Value, f_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
+func Call_reifyType(_dollar__unused_0_loop uint32, s_1_loop gopurs_runtime.Value, f_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var _dollar__unused_0 uint32 = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var s_1 gopurs_runtime.Value = s_1_loop
 _ = s_1
@@ -108,7 +108,7 @@ return gopurs_runtime.Apply3(Get_unsafeCoerce(), gopurs_runtime.Func(func(dictRe
 return gopurs_runtime.Apply(f_2, dictReflectable_3)
 }), gopurs_runtime.RecordDict1("reflectType", gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return s_1
-})), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(nil)})
+})), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil})
 }
 
 func Call_reflectType(dict_0_loop *Constructor_Reflectable[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {

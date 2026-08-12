@@ -128,7 +128,7 @@ var once_snd__gopurs_runtime_Value_2019004820 sync.Once
 func Get_snd__gopurs_runtime_Value_2019004820() gopurs_runtime.Value {
 	once_snd__gopurs_runtime_Value_2019004820.Do(func() {
 		cache_snd__gopurs_runtime_Value_2019004820 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(Call_snd__gopurs_runtime_Value_2019004820(gopurs_runtime.CoerceToStruct[Constructor_Tuple[gopurs_runtime.Value, float64]](v_0_box)))
+return gopurs_runtime.Float(Call_snd__gopurs_runtime_Value_2019004820(gopurs_runtime.CoerceToStruct[Constructor_Tuple[uint32, float64]](v_0_box)))
 })
 	})
 	return cache_snd__gopurs_runtime_Value_2019004820
@@ -637,8 +637,8 @@ _ = v_0
 return (*Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1
 }
 
-func Call_snd__gopurs_runtime_Value_2019004820(v_0_loop *Constructor_Tuple[gopurs_runtime.Value, float64]) float64 {
-var v_0 *Constructor_Tuple[gopurs_runtime.Value, float64] = v_0_loop
+func Call_snd__gopurs_runtime_Value_2019004820(v_0_loop *Constructor_Tuple[uint32, float64]) float64 {
+var v_0 *Constructor_Tuple[uint32, float64] = v_0_loop
 _ = v_0
 return (*Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1.FloatVal()
 }
@@ -841,26 +841,26 @@ v_6_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), (
 _ = v_6_2
 var __t3 gopurs_runtime.Value
 {
-if (v_6_2.Type == 9 && v_6_2.IntVal == 1527465420) {
-__t3 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}
+if (uint32(v_6_2.IntVal) == 1527465420) {
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}.IntVal)), UnsafePtr: nil}
 goto end_branch_3
 } else {
 
 }
 }
 {
-if (v_6_2.Type == 9 && v_6_2.IntVal == 380165415) {
-__t3 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}
+if (uint32(v_6_2.IntVal) == 380165415) {
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}.IntVal)), UnsafePtr: nil}
 goto end_branch_3
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd1_2, "compare"), (*Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(x_4.UnsafePtr).V1, (*Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(y_5.UnsafePtr).V1)
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd1_2, "compare"), (*Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(x_4.UnsafePtr).V1, (*Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(y_5.UnsafePtr).V1).IntVal)), UnsafePtr: nil}
 }
 end_branch_3:
-return __t3
+return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(__t3.IntVal)), UnsafePtr: nil}
 })
 }))
 })

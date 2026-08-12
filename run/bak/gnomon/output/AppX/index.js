@@ -2,8 +2,8 @@
 import * as Bench from "../Bench/index.js";
 import * as Data_Functor from "../Data.Functor/index.js";
 import * as Effect from "../Effect/index.js";
-import * as Test_Fib from "../Test.Fib/index.js";
-var main = /* #__PURE__ */ Data_Functor["void"](Effect.functorEffect)(/* #__PURE__ */ Bench.runBench(Test_Fib.describe)(Test_Fib.act));
+import * as Test_RBTree from "../Test.RBTree/index.js";
+var main = /* #__PURE__ */ Data_Functor["void"](Effect.functorEffect)(/* #__PURE__ */ Bench.runBench(Test_RBTree.describe)(Test_RBTree.act));
 export {
     main
 };

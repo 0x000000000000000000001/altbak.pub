@@ -2,11 +2,10 @@
 import * as Bench from "../Bench/index.js";
 import * as Data_Show from "../Data.Show/index.js";
 import * as Effect_Console from "../Effect.Console/index.js";
-var show = /* #__PURE__ */ Data_Show.show(Data_Show.showNumber);
 var act = function __do() {
     var t1 = Bench.benchNow();
     var t2 = Bench.benchNow();
-    return Effect_Console.log("Delta: " + show(t2 - t1))();
+    return Effect_Console.log("Delta: " + Data_Show.show(Data_Show.showNumber)(t2 - t1))();
 };
 export {
     act

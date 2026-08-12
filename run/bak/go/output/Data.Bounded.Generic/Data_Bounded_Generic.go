@@ -11,7 +11,7 @@ var cache_genericTopNoArguments gopurs_runtime.Value
 var once_genericTopNoArguments sync.Once
 func Get_genericTopNoArguments() gopurs_runtime.Value {
 	once_genericTopNoArguments.Do(func() {
-		cache_genericTopNoArguments = gopurs_runtime.RecordDict1("genericTop'", gopurs_runtime.Value{Type: 9, IntVal: 1454898258, UnsafePtr: unsafe.Pointer(nil)})
+		cache_genericTopNoArguments = gopurs_runtime.RecordDict1("genericTop'", gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Value{Type: 9, IntVal: int64(1454898258), UnsafePtr: nil}.IntVal)), UnsafePtr: nil})
 	})
 	return cache_genericTopNoArguments
 }
@@ -97,7 +97,7 @@ var cache_genericBottomNoArguments gopurs_runtime.Value
 var once_genericBottomNoArguments sync.Once
 func Get_genericBottomNoArguments() gopurs_runtime.Value {
 	once_genericBottomNoArguments.Do(func() {
-		cache_genericBottomNoArguments = gopurs_runtime.RecordDict1("genericBottom'", gopurs_runtime.Value{Type: 9, IntVal: 1454898258, UnsafePtr: unsafe.Pointer(nil)})
+		cache_genericBottomNoArguments = gopurs_runtime.RecordDict1("genericBottom'", gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Value{Type: 9, IntVal: int64(1454898258), UnsafePtr: nil}.IntVal)), UnsafePtr: nil})
 	})
 	return cache_genericBottomNoArguments
 }

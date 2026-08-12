@@ -5,23 +5,18 @@ import * as Control_Bind from "../Control.Bind/index.js";
 import * as Effect_Aff from "../Effect.Aff/index.js";
 import * as Effect_Class from "../Effect.Class/index.js";
 import * as Effect_Console from "../Effect.Console/index.js";
-var discard = /* #__PURE__ */ Control_Bind.discard(Control_Bind.discardUnit);
-var discard1 = /* #__PURE__ */ discard(Effect_Aff.bindAff);
 var liftEffect = /* #__PURE__ */ Effect_Class.liftEffect(Effect_Aff.monadEffectAff);
-var liftEffect1 = /* #__PURE__ */ Effect_Class.liftEffect(Effect_Aff.monadEffectAff);
-var bind = /* #__PURE__ */ Control_Bind.bind(Effect_Aff.bindAff);
-var pure = /* #__PURE__ */ Control_Applicative.pure(Effect_Aff.applicativeAff);
 var runBenchAff = function (describe) {
     return function (act) {
-        return discard1(liftEffect(Effect_Console.log("--------------------------------------------------\x0a\x0a(Test)\x0a")))(function () {
-            return discard1(liftEffect1(describe))(function () {
-                return discard1(liftEffect(Effect_Console.log("\x0a(Output)\x0a")))(function () {
-                    return bind(liftEffect1($foreign.benchNow))(function (t1) {
-                        return discard1(act)(function () {
-                            return bind(liftEffect1($foreign.benchNow))(function (t2) {
+        return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(liftEffect(Effect_Console.log("--------------------------------------------------\x0a\x0a(Test)\x0a")))(function () {
+            return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)(describe))(function () {
+                return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(liftEffect(Effect_Console.log("\x0a(Output)\x0a")))(function () {
+                    return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)($foreign.benchNow))(function (t1) {
+                        return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(act)(function () {
+                            return Control_Bind.bind(Effect_Aff.bindAff)(Effect_Class.liftEffect(Effect_Aff.monadEffectAff)($foreign.benchNow))(function (t2) {
                                 var dt = t2 - t1;
-                                return discard1(liftEffect(Effect_Console.log("\x0a(Execution time)\x0a\x0a" + ($foreign.formatNumber(dt) + " \u03bcs\x0a"))))(function () {
-                                    return pure(dt);
+                                return Control_Bind.discard(Control_Bind.discardUnit)(Effect_Aff.bindAff)(liftEffect(Effect_Console.log("\x0a(Execution time)\x0a\x0a" + ($foreign.formatNumber(dt) + " \u03bcs\x0a"))))(function () {
+                                    return Control_Applicative.pure(Effect_Aff.applicativeAff)(dt);
                                 });
                             });
                         });

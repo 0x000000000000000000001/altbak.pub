@@ -47,7 +47,7 @@ var cache_NoArguments gopurs_runtime.Value
 var once_NoArguments sync.Once
 func Get_NoArguments() gopurs_runtime.Value {
 	once_NoArguments.Do(func() {
-		cache_NoArguments = gopurs_runtime.Value{Type: 9, IntVal: 1454898258, UnsafePtr: unsafe.Pointer(nil)}
+		cache_NoArguments = gopurs_runtime.Value{Type: 9, IntVal: int64(1454898258), UnsafePtr: nil}
 	})
 	return cache_NoArguments
 }
@@ -156,7 +156,7 @@ var once_repOf sync.Once
 func Get_repOf() gopurs_runtime.Value {
 	once_repOf.Do(func() {
 		cache_repOf = gopurs_runtime.Func2(func(dictGeneric_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_repOf(gopurs_runtime.CoerceToStruct[Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value]](dictGeneric_0_box), v_1_box)
+return gopurs_runtime.Value{Type: 9, IntVal: int64(Call_repOf(gopurs_runtime.CoerceToStruct[Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value]](dictGeneric_0_box), uint32(v_1_box.IntVal))), UnsafePtr: nil}
 })
 	})
 	return cache_repOf
@@ -298,7 +298,7 @@ _ = dictIsSymbol_0
 var dictShow_1 gopurs_runtime.Value = dictShow_1_loop
 _ = dictShow_1
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str("(Constructor @"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showString(), "show"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(nil)})), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str(" "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_1, "show"), v_2), gopurs_runtime.Str(")"))))).StrVal())
+return gopurs_runtime.Str(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str("(Constructor @"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showString(), "show"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil})), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str(" "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_1, "show"), v_2), gopurs_runtime.Str(")"))))).StrVal())
 }))
 }
 
@@ -310,12 +310,12 @@ return gopurs_runtime.Str(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Dat
 }))
 }
 
-func Call_repOf(dictGeneric_0_loop *Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value], v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_repOf(dictGeneric_0_loop *Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value], v_1_loop uint32) uint32 {
 var dictGeneric_0 *Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value] = dictGeneric_0_loop
 _ = dictGeneric_0
-var v_1 gopurs_runtime.Value = v_1_loop
+var v_1 uint32 = v_1_loop
 _ = v_1
-return gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(nil)}
+return uint32(gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}.IntVal)
 }
 
 func Call_from(dict_0_loop *Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {

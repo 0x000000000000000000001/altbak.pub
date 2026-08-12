@@ -20,10 +20,13 @@ const comonadAskStoreT = dictComonadAsk => {
   const Comonad0 = dictComonadAsk.Comonad0();
   const comonadStoreT = Control$dComonad$dStore$dTrans.comonadStoreT(Comonad0);
   return {
-    ask: x => dictComonadAsk.ask((() => {
-      const $0 = x._2;
-      return Comonad0.Extend0().Functor0().map(v1 => v1($0))(x._1);
-    })()),
+    ask: (() => {
+      const Functor0 = Comonad0.Extend0().Functor0();
+      return x => dictComonadAsk.ask((() => {
+        const $0 = x._2;
+        return Functor0.map(v1 => v1($0))(x._1);
+      })());
+    })(),
     Comonad0: () => comonadStoreT
   };
 };
@@ -38,8 +41,8 @@ const comonadAskTracedT = dictComonadAsk => {
     const comonadTracedT1 = comonadTracedT(dictMonoid);
     return {
       ask: (() => {
-        const mempty = dictMonoid.mempty;
-        return x => dictComonadAsk.ask(Comonad0.Extend0().Functor0().map(f => f(mempty))(x));
+        const Functor0 = Comonad0.Extend0().Functor0();
+        return x => dictComonadAsk.ask(Functor0.map(f => f(dictMonoid.mempty))(x));
       })(),
       Comonad0: () => comonadTracedT1
     };

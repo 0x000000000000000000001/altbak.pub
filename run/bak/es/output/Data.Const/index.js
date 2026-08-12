@@ -26,10 +26,9 @@ const boundedConst = dictBounded => dictBounded;
 const booleanAlgebraConst = dictBooleanAlgebra => dictBooleanAlgebra;
 const applyConst = dictSemigroup => ({apply: v => v1 => dictSemigroup.append(v)(v1), Functor0: () => functorConst});
 const applicativeConst = dictMonoid => {
-  const mempty = dictMonoid.mempty;
   const $0 = dictMonoid.Semigroup0();
   const applyConst1 = {apply: v => v1 => $0.append(v)(v1), Functor0: () => functorConst};
-  return {pure: v => mempty, Apply0: () => applyConst1};
+  return {pure: v => dictMonoid.mempty, Apply0: () => applyConst1};
 };
 export {
   Const,

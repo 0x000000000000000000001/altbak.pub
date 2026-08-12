@@ -6,7 +6,10 @@ import * as Data$dList$dLazy$dTypes from "../Data.List.Lazy.Types/index.js";
 import * as Partial from "../Partial/index.js";
 const ZipList = x => x;
 const traversableZipList = Data$dList$dLazy$dTypes.traversableList;
-const showZipList = dictShow => ({show: v => "(ZipList " + Data$dList$dLazy$dTypes.showList(dictShow).show(v) + ")"});
+const showZipList = dictShow => {
+  const showList = Data$dList$dLazy$dTypes.showList(dictShow);
+  return {show: v => "(ZipList " + showList.show(v) + ")"};
+};
 const semigroupZipList = Data$dList$dLazy$dTypes.semigroupList;
 const ordZipList = dictOrd => Data$dList$dLazy$dTypes.ordList(dictOrd);
 const newtypeZipList = {Coercible0: () => {}};

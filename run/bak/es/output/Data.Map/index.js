@@ -5,23 +5,18 @@ const SemigroupMap = x => x;
 const traversableWithIndexSemigroupMap = Data$dMap$dInternal.traversableWithIndexMap;
 const traversableSemigroupMap = Data$dMap$dInternal.traversableMap;
 const showSemigroupMap = dictShow => dictShow1 => Data$dMap$dInternal.showMap(dictShow)(dictShow1);
-const semigroupSemigroupMap = dictOrd => {
-  const compare = dictOrd.compare;
-  return dictSemigroup => {
-    const append = dictSemigroup.append;
-    return {append: v => v1 => Data$dMap$dInternal.unsafeUnionWith(compare, append, v, v1)};
-  };
+const semigroupSemigroupMap = dictOrd => dictSemigroup => {
+  const append = dictSemigroup.append;
+  return {append: v => v1 => Data$dMap$dInternal.unsafeUnionWith(dictOrd.compare, append, v, v1)};
 };
 const plusSemigroupMap = dictOrd => Data$dMap$dInternal.plusMap(dictOrd);
 const ordSemigroupMap = dictOrd => Data$dMap$dInternal.ordMap(dictOrd);
 const ord1SemigroupMap = dictOrd => Data$dMap$dInternal.ord1Map(dictOrd);
 const newtypeSemigroupMap = {Coercible0: () => {}};
-const monoidSemigroupMap = dictOrd => {
-  const semigroupSemigroupMap1 = semigroupSemigroupMap(dictOrd);
-  return dictSemigroup => {
-    const semigroupSemigroupMap2 = semigroupSemigroupMap1(dictSemigroup);
-    return {mempty: Data$dMap$dInternal.Leaf, Semigroup0: () => semigroupSemigroupMap2};
-  };
+const monoidSemigroupMap = dictOrd => dictSemigroup => {
+  const append = dictSemigroup.append;
+  const semigroupSemigroupMap2 = {append: v => v1 => Data$dMap$dInternal.unsafeUnionWith(dictOrd.compare, append, v, v1)};
+  return {mempty: Data$dMap$dInternal.Leaf, Semigroup0: () => semigroupSemigroupMap2};
 };
 const keys = /* #__PURE__ */ (() => {
   const go = v => {
@@ -42,7 +37,7 @@ const applySemigroupMap = dictOrd => (
   {
     apply: (() => {
       const compare = dictOrd.compare;
-      return m1 => m2 => Data$dMap$dInternal.unsafeIntersectionWith(compare, Data$dMap$dInternal.identity, m1, m2);
+      return m1 => m2 => Data$dMap$dInternal.unsafeIntersectionWith(compare, Data$dMap$dInternal.identity2, m1, m2);
     })(),
     Functor0: () => Data$dMap$dInternal.functorMap
   }

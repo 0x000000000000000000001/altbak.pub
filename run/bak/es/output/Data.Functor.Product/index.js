@@ -4,64 +4,38 @@ const showProduct = dictShow => dictShow1 => ({show: v => "(product " + dictShow
 const product = fa => ga => Data$dTuple.$Tuple(fa, ga);
 const newtypeProduct = {Coercible0: () => {}};
 const functorProduct = dictFunctor => dictFunctor1 => ({map: f => v => Data$dTuple.$Tuple(dictFunctor.map(f)(v._1), dictFunctor1.map(f)(v._2))});
-const eq1Product = dictEq1 => dictEq11 => (
-  {
-    eq1: dictEq => {
-      const eq12 = dictEq1.eq1(dictEq);
-      const eq13 = dictEq11.eq1(dictEq);
-      return v => v1 => eq12(v._1)(v1._1) && eq13(v._2)(v1._2);
-    }
-  }
-);
-const eqProduct = dictEq1 => dictEq11 => dictEq => (
-  {
-    eq: (() => {
-      const eq12 = dictEq1.eq1(dictEq);
-      const eq13 = dictEq11.eq1(dictEq);
-      return v => v1 => eq12(v._1)(v1._1) && eq13(v._2)(v1._2);
-    })()
-  }
-);
+const eq1Product = dictEq1 => dictEq11 => ({eq1: dictEq => v => v1 => dictEq1.eq1(dictEq)(v._1)(v1._1) && dictEq11.eq1(dictEq)(v._2)(v1._2)});
+const eqProduct = dictEq1 => dictEq11 => dictEq => ({eq: v => v1 => dictEq1.eq1(dictEq)(v._1)(v1._1) && dictEq11.eq1(dictEq)(v._2)(v1._2)});
 const ord1Product = dictOrd1 => {
   const $0 = dictOrd1.Eq10();
   return dictOrd11 => {
     const $1 = dictOrd11.Eq10();
-    const eq1Product2 = {
-      eq1: dictEq => {
-        const eq12 = $0.eq1(dictEq);
-        const eq13 = $1.eq1(dictEq);
-        return v => v1 => eq12(v._1)(v1._1) && eq13(v._2)(v1._2);
-      }
-    };
+    const eq1Product2 = {eq1: dictEq => v => v1 => $0.eq1(dictEq)(v._1)(v1._1) && $1.eq1(dictEq)(v._2)(v1._2)};
     return {
-      compare1: dictOrd => {
-        const compare12 = dictOrd1.compare1(dictOrd);
-        const compare13 = dictOrd11.compare1(dictOrd);
-        return v => v1 => {
-          const v2 = compare12(v._1)(v1._1);
-          if (v2 === "EQ") { return compare13(v._2)(v1._2); }
-          return v2;
-        };
+      compare1: dictOrd => v => v1 => {
+        const v2 = dictOrd1.compare1(dictOrd)(v._1)(v1._1);
+        if (v2 === "EQ") { return dictOrd11.compare1(dictOrd)(v._2)(v1._2); }
+        return v2;
       },
       Eq10: () => eq1Product2
     };
   };
 };
 const ordProduct = dictOrd1 => {
-  const ord1Product1 = ord1Product(dictOrd1);
   const $0 = dictOrd1.Eq10();
   return dictOrd11 => {
     const $1 = dictOrd11.Eq10();
     return dictOrd => {
       const $2 = dictOrd.Eq0();
-      const eqProduct3 = {
-        eq: (() => {
-          const eq12 = $0.eq1($2);
-          const eq13 = $1.eq1($2);
-          return v => v1 => eq12(v._1)(v1._1) && eq13(v._2)(v1._2);
-        })()
+      const eqProduct3 = {eq: v => v1 => $0.eq1($2)(v._1)(v1._1) && $1.eq1($2)(v._2)(v1._2)};
+      return {
+        compare: v => v1 => {
+          const v2 = dictOrd1.compare1(dictOrd)(v._1)(v1._1);
+          if (v2 === "EQ") { return dictOrd11.compare1(dictOrd)(v._2)(v1._2); }
+          return v2;
+        },
+        Eq0: () => eqProduct3
       };
-      return {compare: ord1Product1(dictOrd11).compare1(dictOrd), Eq0: () => eqProduct3};
     };
   };
 };

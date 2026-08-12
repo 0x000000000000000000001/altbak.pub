@@ -233,7 +233,7 @@ ordApp1_6_3 := gopurs_runtime.CoerceToStruct[pkg_Data_Ord.Constructor_Ord[gopurs
 return eqApp2_6_4
 }), gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictOrd11_2, "compare1"), dictOrd_5, x_7, y_8)
+return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictOrd11_2, "compare1"), dictOrd_5, x_7, y_8).IntVal)), UnsafePtr: nil}
 })
 })))
 _ = ordApp1_6_3
@@ -255,7 +255,7 @@ return gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_do
 return eqCompose3_7_6
 }), gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictOrd1_0, "compare1"), gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(ordApp1_6_3)}, v_8, v1_9)
+return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictOrd1_0, "compare1"), gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(ordApp1_6_3)}, v_8, v1_9).IntVal)), UnsafePtr: nil}
 })
 }))
 })

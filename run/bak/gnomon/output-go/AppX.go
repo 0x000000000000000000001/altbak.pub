@@ -6,5 +6,5 @@ var AppX_main any
 func init() {
 AppX_main = _lazy(func() any { return (((_force(Effect_functorEffect)).(map[string]any)["map"]).(func(any) any)(func(v0_v any) any {
 return _force(Data_Unit_unit)
-})).(func(any) any)(((_force(Bench_runBench)).(func(any) any)(_force(Test_Fib_describe))).(func(any) any)(_force(Test_Fib_act))) })
+})).(func(any) any)(((_force(Bench_runBench)).(func(any) any)(_force(Test_RBTree_describe))).(func(any) any)(_force(Test_RBTree_act))) })
 }

@@ -5,7 +5,10 @@ import * as Control$dComonad$dTraced$dTrans from "../Control.Comonad.Traced.Tran
 import * as Control$dComonad$dTrans$dClass from "../Control.Comonad.Trans.Class/index.js";
 import * as Data$dTuple from "../Data.Tuple/index.js";
 const track = dict => dict.track;
-const tracks = dictComonadTraced => f => w => dictComonadTraced.track(f(dictComonadTraced.Comonad0().extract(w)))(w);
+const tracks = dictComonadTraced => {
+  const Comonad0 = dictComonadTraced.Comonad0();
+  return f => w => dictComonadTraced.track(f(Comonad0.extract(w)))(w);
+};
 const lowerTrack2 = dictComonadTraced => {
   const lower1 = Control$dComonad$dTrans$dClass.comonadTransIdentityT.lower(dictComonadTraced.Comonad0());
   return m => {
@@ -26,12 +29,12 @@ const comonadTracedStoreT = dictComonadTraced => {
   const comonadStoreT = Control$dComonad$dStore$dTrans.comonadStoreT(dictComonadTraced.Comonad0());
   return {
     track: (() => {
-      const $0 = dictComonadTraced.Comonad0();
+      const Functor0 = dictComonadTraced.Comonad0().Extend0().Functor0();
       return m => {
-        const $1 = dictComonadTraced.track(m);
-        return x => $1((() => {
-          const $2 = x._2;
-          return $0.Extend0().Functor0().map(v1 => v1($2))(x._1);
+        const $0 = dictComonadTraced.track(m);
+        return x => $0((() => {
+          const $1 = x._2;
+          return Functor0.map(v1 => v1($1))(x._1);
         })());
       };
     })(),

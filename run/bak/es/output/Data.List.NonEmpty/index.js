@@ -55,8 +55,8 @@ const zipWith = f => v => v1 => Data$dNonEmpty.$NonEmpty(
   })()
 );
 const zipWithA = dictApplicative => {
-  const sequence11 = Data$dList$dTypes.traversable1NonEmptyList.traverse1(dictApplicative.Apply0())(Data$dList$dTypes.identity);
-  return f => xs => ys => sequence11(zipWith(f)(xs)(ys));
+  const Apply0 = dictApplicative.Apply0();
+  return f => xs => ys => Data$dList$dTypes.traversable1NonEmptyList.traverse1(Apply0)(Data$dList$dTypes.identity1)(zipWith(f)(xs)(ys));
 };
 const zip = /* #__PURE__ */ zipWith(Data$dTuple.Tuple);
 const wrappedOperation2 = name => f => v => v1 => {
@@ -281,9 +281,12 @@ const fromFoldable = dictFoldable => {
     $runtime.fail();
   };
 };
-const foldM = dictMonad => f => b => v => {
-  const $0 = v._2;
-  return dictMonad.Bind1().bind(f(b)(v._1))(b$p => Data$dList.foldM(dictMonad)(f)(b$p)($0));
+const foldM = dictMonad => {
+  const Bind1 = dictMonad.Bind1();
+  return f => b => v => {
+    const $0 = v._2;
+    return Bind1.bind(f(b)(v._1))(b$p => Data$dList.foldM(dictMonad)(f)(b$p)($0));
+  };
 };
 const findLastIndex = f => v => {
   const v1 = Data$dList.findLastIndex(f)(v._2);
@@ -472,10 +475,10 @@ const catMaybes = v => {
   };
   return go(Data$dList$dTypes.Nil)(Data$dList$dTypes.$List("Cons", v._1, v._2));
 };
-const appendFoldable = dictFoldable => {
-  const fromFoldable1 = dictFoldable.foldr(Data$dList$dTypes.Cons)(Data$dList$dTypes.Nil);
-  return v => ys => Data$dNonEmpty.$NonEmpty(v._1, Data$dList$dTypes.foldableList.foldr(Data$dList$dTypes.Cons)(fromFoldable1(ys))(v._2));
-};
+const appendFoldable = dictFoldable => v => ys => Data$dNonEmpty.$NonEmpty(
+  v._1,
+  Data$dList$dTypes.foldableList.foldr(Data$dList$dTypes.Cons)(dictFoldable.foldr(Data$dList$dTypes.Cons)(Data$dList$dTypes.Nil)(ys))(v._2)
+);
 export {
   appendFoldable,
   catMaybes,

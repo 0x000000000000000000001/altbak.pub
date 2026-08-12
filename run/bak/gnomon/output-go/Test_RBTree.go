@@ -22,7 +22,7 @@ var v2 any = (_force(Test_RBTree_depth)).(func(any) any)((v0_v).(V).Fields[3])
 _ = v2
 return func() any {
 if _truthy(func() any {
-if _truthy(_intGt(v1, v2)) { return true }
+if _truthy(_isTag((((((_force(Data_Ord_ordIntImpl)).(func(any) any)(V{Tag: "LT", Fields: []any{}})).(func(any) any)(V{Tag: "EQ", Fields: []any{}})).(func(any) any)(V{Tag: "GT", Fields: []any{}})).(func(any) any)(v1)).(func(any) any)(v2), "GT")) { return true }
 return false
 }()) { return _intAdd(1, v1) }
 return _intAdd(1, v2)
@@ -124,12 +124,12 @@ return func() any {
 if _truthy(_isTag(v1_v1, "E")) { return V{Tag: "T", Fields: []any{V{Tag: "R", Fields: []any{}}, V{Tag: "E", Fields: []any{}}, v0_v, V{Tag: "E", Fields: []any{}}}} }
 if _truthy(_isTag(v1_v1, "T")) { return func() any {
 if _truthy(func() any {
-if _truthy(_intLt(v0_v, (v1_v1).(V).Fields[2])) { return true }
+if _truthy(_isTag((((((_force(Data_Ord_ordIntImpl)).(func(any) any)(V{Tag: "LT", Fields: []any{}})).(func(any) any)(V{Tag: "EQ", Fields: []any{}})).(func(any) any)(V{Tag: "GT", Fields: []any{}})).(func(any) any)(v0_v)).(func(any) any)((v1_v1).(V).Fields[2]), "LT")) { return true }
 return false
 }()) { return ((((_force(Test_RBTree_balance)).(func(any) any)((v1_v1).(V).Fields[0])).(func(any) any)(((_force(Test_RBTree_ins)).(func(any) any)(v0_v)).(func(any) any)((v1_v1).(V).Fields[1]))).(func(any) any)((v1_v1).(V).Fields[2])).(func(any) any)((v1_v1).(V).Fields[3]) }
 return func() any {
 if _truthy(func() any {
-if _truthy(_intGt(v0_v, (v1_v1).(V).Fields[2])) { return true }
+if _truthy(_isTag((((((_force(Data_Ord_ordIntImpl)).(func(any) any)(V{Tag: "LT", Fields: []any{}})).(func(any) any)(V{Tag: "EQ", Fields: []any{}})).(func(any) any)(V{Tag: "GT", Fields: []any{}})).(func(any) any)(v0_v)).(func(any) any)((v1_v1).(V).Fields[2]), "GT")) { return true }
 return false
 }()) { return ((((_force(Test_RBTree_balance)).(func(any) any)((v1_v1).(V).Fields[0])).(func(any) any)((v1_v1).(V).Fields[1])).(func(any) any)((v1_v1).(V).Fields[2])).(func(any) any)(((_force(Test_RBTree_ins)).(func(any) any)(v0_v)).(func(any) any)((v1_v1).(V).Fields[3])) }
 return V{Tag: "T", Fields: []any{(v1_v1).(V).Fields[0], (v1_v1).(V).Fields[1], (v1_v1).(V).Fields[2], (v1_v1).(V).Fields[3]}}

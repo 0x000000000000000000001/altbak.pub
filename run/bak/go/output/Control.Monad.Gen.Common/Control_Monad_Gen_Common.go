@@ -143,7 +143,7 @@ Functor0_4_2 := gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Funct
 _ = Functor0_4_2
 return gopurs_runtime.Func(func(dictUnfoldable_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(gen_6 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_7_3 := gopurs_runtime.Apply3(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)})
+__local_var_7_3 := gopurs_runtime.Apply3(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil})
 _ = __local_var_7_3
 return gopurs_runtime.Apply2(Apply0_3_1.V1, gopurs_runtime.Apply2(Functor0_4_2.V0, pkg_Data_NonEmpty.Get_NonEmpty(), gen_6), gopurs_runtime.Apply2(dictMonadGen_1.V4, gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_9_4 := (x_8.IntVal) - (1)
@@ -152,7 +152,7 @@ v_10_5 := gopurs_runtime.Apply2(__local_var_7_3, gopurs_runtime.Int(0), gopurs_r
 _ = v_10_5
 var __t6 gopurs_runtime.Value
 {
-if (v_10_5.Type == 9 && v_10_5.IntVal == 1527465420) {
+if (uint32(v_10_5.IntVal) == 1527465420) {
 __t6 = gopurs_runtime.Int(__local_var_9_4)
 goto end_branch_6
 } else {
@@ -160,7 +160,7 @@ goto end_branch_6
 }
 }
 {
-if (v_10_5.Type == 9 && v_10_5.IntVal == 902936544) {
+if (uint32(v_10_5.IntVal) == 902936544) {
 __t6 = gopurs_runtime.Int(0)
 goto end_branch_6
 } else {
@@ -168,7 +168,7 @@ goto end_branch_6
 }
 }
 {
-if (v_10_5.Type == 9 && v_10_5.IntVal == 380165415) {
+if (uint32(v_10_5.IntVal) == 380165415) {
 __t6 = gopurs_runtime.Int(0)
 goto end_branch_6
 } else {

@@ -6,44 +6,56 @@ const StateT = x => x;
 const withStateT = f => v => x => v(f(x));
 const runStateT = v => v;
 const newtypeStateT = {Coercible0: () => {}};
-const monadTransStateT = {lift: dictMonad => m => s => dictMonad.Bind1().bind(m)(x => dictMonad.Applicative0().pure(Data$dTuple.$Tuple(x, s)))};
+const monadTransStateT = {
+  lift: dictMonad => {
+    const Bind1 = dictMonad.Bind1();
+    return m => s => Bind1.bind(m)(x => dictMonad.Applicative0().pure(Data$dTuple.$Tuple(x, s)));
+  }
+};
 const mapStateT = f => v => x => f(v(x));
 const lazyStateT = {defer: f => s => f()(s)};
 const functorStateT = dictFunctor => ({map: f => v => s => dictFunctor.map(v1 => Data$dTuple.$Tuple(f(v1._1), v1._2))(v(s))});
 const execStateT = dictFunctor => v => s => dictFunctor.map(Data$dTuple.snd)(v(s));
 const evalStateT = dictFunctor => v => s => dictFunctor.map(Data$dTuple.fst)(v(s));
 const monadStateT = dictMonad => ({Applicative0: () => applicativeStateT(dictMonad), Bind1: () => bindStateT(dictMonad)});
-const bindStateT = dictMonad => ({bind: v => f => s => dictMonad.Bind1().bind(v(s))(v1 => f(v1._1)(v1._2)), Apply0: () => applyStateT(dictMonad)});
+const bindStateT = dictMonad => {
+  const Bind1 = dictMonad.Bind1();
+  return {bind: v => f => s => Bind1.bind(v(s))(v1 => f(v1._1)(v1._2)), Apply0: () => applyStateT(dictMonad)};
+};
 const applyStateT = dictMonad => {
   const $0 = dictMonad.Bind1().Apply0().Functor0();
   const functorStateT1 = {map: f => v => s => $0.map(v1 => Data$dTuple.$Tuple(f(v1._1), v1._2))(v(s))};
   return {
     apply: (() => {
-      const $1 = bindStateT(dictMonad);
-      return f => a => $1.bind(f)(f$p => $1.bind(a)(a$p => applicativeStateT(dictMonad).pure(f$p(a$p))));
+      const Bind1 = bindStateT(dictMonad);
+      const Applicative0 = applicativeStateT(dictMonad);
+      return f => a => Bind1.bind(f)(f$p => Bind1.bind(a)(a$p => Applicative0.pure(f$p(a$p))));
     })(),
     Functor0: () => functorStateT1
   };
 };
 const applicativeStateT = dictMonad => ({pure: a => s => dictMonad.Applicative0().pure(Data$dTuple.$Tuple(a, s)), Apply0: () => applyStateT(dictMonad)});
 const semigroupStateT = dictMonad => {
-  const $0 = applyStateT(dictMonad);
+  const applyStateT1 = applyStateT(dictMonad);
   return dictSemigroup => (
     {
       append: (() => {
-        const $1 = dictSemigroup.append;
-        return a => b => $0.apply($0.Functor0().map($1)(a))(b);
+        const Functor0 = applyStateT1.Functor0();
+        const $0 = dictSemigroup.append;
+        return a => b => applyStateT1.apply(Functor0.map($0)(a))(b);
       })()
     }
   );
 };
 const monadAskStateT = dictMonadAsk => {
-  const Monad0 = dictMonadAsk.Monad0();
-  const monadStateT1 = {Applicative0: () => applicativeStateT(Monad0), Bind1: () => bindStateT(Monad0)};
+  const $0 = dictMonadAsk.Monad0();
+  const monadStateT1 = {Applicative0: () => applicativeStateT($0), Bind1: () => bindStateT($0)};
   return {
     ask: (() => {
-      const $0 = dictMonadAsk.ask;
-      return s => Monad0.Bind1().bind($0)(x => Monad0.Applicative0().pure(Data$dTuple.$Tuple(x, s)));
+      const $1 = dictMonadAsk.Monad0();
+      const Bind1 = $1.Bind1();
+      const $2 = dictMonadAsk.ask;
+      return s => Bind1.bind($2)(x => $1.Applicative0().pure(Data$dTuple.$Tuple(x, s)));
     })(),
     Monad0: () => monadStateT1
   };
@@ -67,18 +79,23 @@ const monadEffectState = dictMonadEffect => {
   const Monad0 = dictMonadEffect.Monad0();
   const monadStateT1 = {Applicative0: () => applicativeStateT(Monad0), Bind1: () => bindStateT(Monad0)};
   return {
-    liftEffect: x => {
-      const $0 = dictMonadEffect.liftEffect(x);
-      return s => Monad0.Bind1().bind($0)(x$1 => Monad0.Applicative0().pure(Data$dTuple.$Tuple(x$1, s)));
-    },
+    liftEffect: (() => {
+      const Bind1 = Monad0.Bind1();
+      return x => {
+        const $0 = dictMonadEffect.liftEffect(x);
+        return s => Bind1.bind($0)(x$1 => Monad0.Applicative0().pure(Data$dTuple.$Tuple(x$1, s)));
+      };
+    })(),
     Monad0: () => monadStateT1
   };
 };
 const monadRecStateT = dictMonadRec => {
   const Monad0 = dictMonadRec.Monad0();
+  const Bind1 = Monad0.Bind1();
+  const Applicative0 = Monad0.Applicative0();
   const monadStateT1 = {Applicative0: () => applicativeStateT(Monad0), Bind1: () => bindStateT(Monad0)};
   return {
-    tailRecM: f => a => s => dictMonadRec.tailRecM(v => Monad0.Bind1().bind(f(v._1)(v._2))(v2 => Monad0.Applicative0().pure((() => {
+    tailRecM: f => a => s => dictMonadRec.tailRecM(v => Bind1.bind(f(v._1)(v._2))(v2 => Applicative0.pure((() => {
       if (v2._1.tag === "Loop") { return Control$dMonad$dRec$dClass.$Step("Loop", Data$dTuple.$Tuple(v2._1._1, v2._2)); }
       if (v2._1.tag === "Done") { return Control$dMonad$dRec$dClass.$Step("Done", Data$dTuple.$Tuple(v2._1._1, v2._2)); }
       $runtime.fail();
@@ -95,10 +112,13 @@ const monadTellStateT = dictMonadTell => {
   const Semigroup0 = dictMonadTell.Semigroup0();
   const monadStateT1 = {Applicative0: () => applicativeStateT(Monad1), Bind1: () => bindStateT(Monad1)};
   return {
-    tell: x => {
-      const $0 = dictMonadTell.tell(x);
-      return s => Monad1.Bind1().bind($0)(x$1 => Monad1.Applicative0().pure(Data$dTuple.$Tuple(x$1, s)));
-    },
+    tell: (() => {
+      const Bind1 = Monad1.Bind1();
+      return x => {
+        const $0 = dictMonadTell.tell(x);
+        return s => Bind1.bind($0)(x$1 => Monad1.Applicative0().pure(Data$dTuple.$Tuple(x$1, s)));
+      };
+    })(),
     Semigroup0: () => Semigroup0,
     Monad1: () => monadStateT1
   };
@@ -106,24 +126,26 @@ const monadTellStateT = dictMonadTell => {
 const monadWriterStateT = dictMonadWriter => {
   const MonadTell1 = dictMonadWriter.MonadTell1();
   const Monad1 = MonadTell1.Monad1();
-  const $0 = Monad1.Bind1();
-  const $1 = Monad1.Applicative0();
+  const Bind1 = Monad1.Bind1();
+  const Applicative0 = Monad1.Applicative0();
   const Monoid0 = dictMonadWriter.Monoid0();
   const monadTellStateT1 = monadTellStateT(MonadTell1);
   return {
-    listen: m => s => $0.bind(dictMonadWriter.listen(m(s)))(v => $1.pure(Data$dTuple.$Tuple(Data$dTuple.$Tuple(v._1._1, v._2), v._1._2))),
-    pass: m => s => dictMonadWriter.pass($0.bind(m(s))(v => $1.pure(Data$dTuple.$Tuple(Data$dTuple.$Tuple(v._1._1, v._2), v._1._2)))),
+    listen: m => s => Bind1.bind(dictMonadWriter.listen(m(s)))(v => Applicative0.pure(Data$dTuple.$Tuple(Data$dTuple.$Tuple(v._1._1, v._2), v._1._2))),
+    pass: m => s => dictMonadWriter.pass(Bind1.bind(m(s))(v => Applicative0.pure(Data$dTuple.$Tuple(Data$dTuple.$Tuple(v._1._1, v._2), v._1._2)))),
     Monoid0: () => Monoid0,
     MonadTell1: () => monadTellStateT1
   };
 };
 const monadThrowStateT = dictMonadThrow => {
   const Monad0 = dictMonadThrow.Monad0();
-  const monadStateT1 = {Applicative0: () => applicativeStateT(Monad0), Bind1: () => bindStateT(Monad0)};
+  const $0 = dictMonadThrow.Monad0();
+  const monadStateT1 = {Applicative0: () => applicativeStateT($0), Bind1: () => bindStateT($0)};
   return {
     throwError: e => {
-      const $0 = dictMonadThrow.throwError(e);
-      return s => Monad0.Bind1().bind($0)(x => Monad0.Applicative0().pure(Data$dTuple.$Tuple(x, s)));
+      const Bind1 = Monad0.Bind1();
+      const $1 = dictMonadThrow.throwError(e);
+      return s => Bind1.bind($1)(x => Monad0.Applicative0().pure(Data$dTuple.$Tuple(x, s)));
     },
     Monad0: () => monadStateT1
   };
@@ -136,18 +158,22 @@ const monadSTStateT = dictMonadST => {
   const Monad0 = dictMonadST.Monad0();
   const monadStateT1 = {Applicative0: () => applicativeStateT(Monad0), Bind1: () => bindStateT(Monad0)};
   return {
-    liftST: x => {
-      const $0 = dictMonadST.liftST(x);
-      return s => Monad0.Bind1().bind($0)(x$1 => Monad0.Applicative0().pure(Data$dTuple.$Tuple(x$1, s)));
-    },
+    liftST: (() => {
+      const Bind1 = Monad0.Bind1();
+      return x => {
+        const $0 = dictMonadST.liftST(x);
+        return s => Bind1.bind($0)(x$1 => Monad0.Applicative0().pure(Data$dTuple.$Tuple(x$1, s)));
+      };
+    })(),
     Monad0: () => monadStateT1
   };
 };
 const monoidStateT = dictMonad => {
+  const applicativeStateT1 = applicativeStateT(dictMonad);
   const semigroupStateT1 = semigroupStateT(dictMonad);
   return dictMonoid => {
     const semigroupStateT2 = semigroupStateT1(dictMonoid.Semigroup0());
-    return {mempty: applicativeStateT(dictMonad).pure(dictMonoid.mempty), Semigroup0: () => semigroupStateT2};
+    return {mempty: applicativeStateT1.pure(dictMonoid.mempty), Semigroup0: () => semigroupStateT2};
   };
 };
 const altStateT = dictMonad => dictAlt => {

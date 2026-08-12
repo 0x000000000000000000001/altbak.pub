@@ -47,10 +47,10 @@ const lessThan = dictOrd => a1 => a2 => dictOrd.compare(a1)(a2) === "LT";
 const signum = dictOrd => dictRing => {
   const Semiring0 = dictRing.Semiring0();
   const zero = Semiring0.zero;
-  const zero$1 = dictRing.Semiring0().zero;
+  const Semiring01 = dictRing.Semiring0();
   const one = Semiring0.one;
   return x => {
-    if (dictOrd.compare(x)(zero) === "LT") { return dictRing.sub(zero$1)(one); }
+    if (dictOrd.compare(x)(zero) === "LT") { return dictRing.sub(dictRing.Semiring0().zero)(Semiring01.one); }
     if (dictOrd.compare(x)(zero) === "GT") { return one; }
     return x;
   };
@@ -94,7 +94,7 @@ const ordRecordCons = dictOrdRecord => {
         compareRecord: v => ra => rb => {
           const key = dictIsSymbol.reflectSymbol(Type$dProxy.Proxy);
           const left = dictOrd.compare(Record$dUnsafe.unsafeGet(key)(ra))(Record$dUnsafe.unsafeGet(key)(rb));
-          if (left === "LT" || left === "GT" || left !== "EQ") { return left; }
+          if (left !== "EQ") { return left; }
           return dictOrdRecord.compareRecord(Type$dProxy.Proxy)(ra)(rb);
         },
         EqRecord0: () => eqRowCons2
@@ -122,10 +122,9 @@ const between = dictOrd => low => hi => x => {
 };
 const abs = dictOrd => dictRing => {
   const zero = dictRing.Semiring0().zero;
-  const zero$1 = dictRing.Semiring0().zero;
   return x => {
     if (dictOrd.compare(x)(zero) !== "LT") { return x; }
-    return dictRing.sub(zero$1)(x);
+    return dictRing.sub(dictRing.Semiring0().zero)(x);
   };
 };
 export {

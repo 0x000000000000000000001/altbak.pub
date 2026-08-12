@@ -5,7 +5,8 @@ const monadReaderFun = {local: f => g => x => g(f(x)), MonadAsk0: () => monadAsk
 const local = dict => dict.local;
 const ask = dict => dict.ask;
 const asks = dictMonadAsk => {
+  const Functor0 = dictMonadAsk.Monad0().Bind1().Apply0().Functor0();
   const ask1 = dictMonadAsk.ask;
-  return f => dictMonadAsk.Monad0().Bind1().Apply0().Functor0().map(f)(ask1);
+  return f => Functor0.map(f)(ask1);
 };
 export {ask, asks, local, monadAskFun, monadReaderFun};

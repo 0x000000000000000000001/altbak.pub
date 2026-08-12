@@ -5,56 +5,74 @@ import * as Data$dTuple from "../Data.Tuple/index.js";
 const WriterT = x => x;
 const runWriterT = v => v;
 const newtypeWriterT = {Coercible0: () => {}};
-const monadTransWriterT = dictMonoid => {
-  const mempty = dictMonoid.mempty;
-  return {lift: dictMonad => m => dictMonad.Bind1().bind(m)(a => dictMonad.Applicative0().pure(Data$dTuple.$Tuple(a, mempty)))};
-};
+const monadTransWriterT = dictMonoid => (
+  {
+    lift: dictMonad => {
+      const Bind1 = dictMonad.Bind1();
+      return m => Bind1.bind(m)(a => dictMonad.Applicative0().pure(Data$dTuple.$Tuple(a, dictMonoid.mempty)));
+    }
+  }
+);
 const mapWriterT = f => v => f(v);
 const functorWriterT = dictFunctor => ({map: f => dictFunctor.map(v => Data$dTuple.$Tuple(f(v._1), v._2))});
 const execWriterT = dictFunctor => v => dictFunctor.map(Data$dTuple.snd)(v);
 const applyWriterT = dictSemigroup => dictApply => {
   const Functor0 = dictApply.Functor0();
-  const functorWriterT1 = {map: f => Functor0.map(v => Data$dTuple.$Tuple(f(v._1), v._2))};
+  const $0 = dictApply.Functor0();
+  const functorWriterT1 = {map: f => $0.map(v => Data$dTuple.$Tuple(f(v._1), v._2))};
   return {apply: v => v1 => dictApply.apply(Functor0.map(v3 => v4 => Data$dTuple.$Tuple(v3._1(v4._1), dictSemigroup.append(v3._2)(v4._2)))(v))(v1), Functor0: () => functorWriterT1};
 };
 const bindWriterT = dictSemigroup => dictBind => {
   const Apply0 = dictBind.Apply0();
   const Functor0 = Apply0.Functor0();
-  const functorWriterT1 = {map: f => Functor0.map(v => Data$dTuple.$Tuple(f(v._1), v._2))};
-  const applyWriterT2 = {
-    apply: v => v1 => Apply0.apply(Functor0.map(v3 => v4 => Data$dTuple.$Tuple(v3._1(v4._1), dictSemigroup.append(v3._2)(v4._2)))(v))(v1),
-    Functor0: () => functorWriterT1
-  };
+  const Functor0$1 = Apply0.Functor0();
+  const $0 = Apply0.Functor0();
+  const applyWriterT2 = (() => {
+    const functorWriterT1 = {map: f => $0.map(v => Data$dTuple.$Tuple(f(v._1), v._2))};
+    return {
+      apply: v => v1 => Apply0.apply(Functor0$1.map(v3 => v4 => Data$dTuple.$Tuple(v3._1(v4._1), dictSemigroup.append(v3._2)(v4._2)))(v))(v1),
+      Functor0: () => functorWriterT1
+    };
+  })();
   return {
     bind: v => k => dictBind.bind(v)(v1 => {
-      const $0 = v1._2;
-      return Apply0.Functor0().map(v3 => Data$dTuple.$Tuple(v3._1, dictSemigroup.append($0)(v3._2)))(k(v1._1));
+      const $1 = v1._2;
+      return Functor0.map(v3 => Data$dTuple.$Tuple(v3._1, dictSemigroup.append($1)(v3._2)))(k(v1._1));
     }),
     Apply0: () => applyWriterT2
   };
 };
 const semigroupWriterT = dictApply => dictSemigroup => {
   const Functor0 = dictApply.Functor0();
+  const $0 = dictApply.Functor0();
+  const applyWriterT1 = (() => {
+    const functorWriterT1 = {map: f => $0.map(v => Data$dTuple.$Tuple(f(v._1), v._2))};
+    return {
+      apply: v => v1 => dictApply.apply(Functor0.map(v3 => v4 => Data$dTuple.$Tuple(v3._1(v4._1), dictSemigroup.append(v3._2)(v4._2)))(v))(v1),
+      Functor0: () => functorWriterT1
+    };
+  })();
   return dictSemigroup1 => (
     {
-      append: a => b => dictApply.apply(Functor0.map(v3 => v4 => Data$dTuple.$Tuple(v3._1(v4._1), dictSemigroup.append(v3._2)(v4._2)))(Functor0.map(v => Data$dTuple.$Tuple(
-        dictSemigroup1.append(v._1),
-        v._2
-      ))(a)))(b)
+      append: (() => {
+        const Functor0$1 = applyWriterT1.Functor0();
+        const $1 = dictSemigroup1.append;
+        return a => b => applyWriterT1.apply(Functor0$1.map($1)(a))(b);
+      })()
     }
   );
 };
 const applicativeWriterT = dictMonoid => {
-  const mempty = dictMonoid.mempty;
   const $0 = dictMonoid.Semigroup0();
   return dictApplicative => {
     const $1 = dictApplicative.Apply0();
     const Functor0 = $1.Functor0();
     const applyWriterT2 = (() => {
-      const functorWriterT1 = {map: f => Functor0.map(v => Data$dTuple.$Tuple(f(v._1), v._2))};
+      const $2 = $1.Functor0();
+      const functorWriterT1 = {map: f => $2.map(v => Data$dTuple.$Tuple(f(v._1), v._2))};
       return {apply: v => v1 => $1.apply(Functor0.map(v3 => v4 => Data$dTuple.$Tuple(v3._1(v4._1), $0.append(v3._2)(v4._2)))(v))(v1), Functor0: () => functorWriterT1};
     })();
-    return {pure: a => dictApplicative.pure(Data$dTuple.$Tuple(a, mempty)), Apply0: () => applyWriterT2};
+    return {pure: a => dictApplicative.pure(Data$dTuple.$Tuple(a, dictMonoid.mempty)), Apply0: () => applyWriterT2};
   };
 };
 const monadWriterT = dictMonoid => {
@@ -67,12 +85,16 @@ const monadWriterT = dictMonoid => {
   };
 };
 const monadAskWriterT = dictMonoid => {
-  const mempty = dictMonoid.mempty;
   const monadWriterT1 = monadWriterT(dictMonoid);
   return dictMonadAsk => {
-    const Monad0 = dictMonadAsk.Monad0();
-    const monadWriterT2 = monadWriterT1(Monad0);
-    return {ask: Monad0.Bind1().bind(dictMonadAsk.ask)(a => Monad0.Applicative0().pure(Data$dTuple.$Tuple(a, mempty))), Monad0: () => monadWriterT2};
+    const monadWriterT2 = monadWriterT1(dictMonadAsk.Monad0());
+    return {
+      ask: (() => {
+        const $0 = dictMonadAsk.Monad0();
+        return $0.Bind1().bind(dictMonadAsk.ask)(a => $0.Applicative0().pure(Data$dTuple.$Tuple(a, dictMonoid.mempty)));
+      })(),
+      Monad0: () => monadWriterT2
+    };
   };
 };
 const monadReaderWriterT = dictMonoid => {
@@ -83,49 +105,53 @@ const monadReaderWriterT = dictMonoid => {
   };
 };
 const monadContWriterT = dictMonoid => {
-  const mempty = dictMonoid.mempty;
   const monadWriterT1 = monadWriterT(dictMonoid);
   return dictMonadCont => {
     const monadWriterT2 = monadWriterT1(dictMonadCont.Monad0());
-    return {callCC: f => dictMonadCont.callCC(c => f(a => c(Data$dTuple.$Tuple(a, mempty)))), Monad0: () => monadWriterT2};
+    return {callCC: f => dictMonadCont.callCC(c => f(a => c(Data$dTuple.$Tuple(a, dictMonoid.mempty)))), Monad0: () => monadWriterT2};
   };
 };
 const monadEffectWriter = dictMonoid => {
-  const mempty = dictMonoid.mempty;
   const monadWriterT1 = monadWriterT(dictMonoid);
   return dictMonadEffect => {
     const Monad0 = dictMonadEffect.Monad0();
     const monadWriterT2 = monadWriterT1(Monad0);
-    return {liftEffect: x => Monad0.Bind1().bind(dictMonadEffect.liftEffect(x))(a => Monad0.Applicative0().pure(Data$dTuple.$Tuple(a, mempty))), Monad0: () => monadWriterT2};
+    return {
+      liftEffect: (() => {
+        const Bind1 = Monad0.Bind1();
+        return x => Bind1.bind(dictMonadEffect.liftEffect(x))(a => Monad0.Applicative0().pure(Data$dTuple.$Tuple(a, dictMonoid.mempty)));
+      })(),
+      Monad0: () => monadWriterT2
+    };
   };
 };
 const monadRecWriterT = dictMonoid => {
-  const $0 = dictMonoid.Semigroup0();
-  const mempty = dictMonoid.mempty;
+  const Semigroup0 = dictMonoid.Semigroup0();
   const monadWriterT1 = monadWriterT(dictMonoid);
   return dictMonadRec => {
     const Monad0 = dictMonadRec.Monad0();
+    const Bind1 = Monad0.Bind1();
+    const Applicative0 = Monad0.Applicative0();
     const monadWriterT2 = monadWriterT1(Monad0);
     return {
       tailRecM: f => a => dictMonadRec.tailRecM(v => {
-        const $1 = v._2;
-        return Monad0.Bind1().bind(f(v._1))(v2 => Monad0.Applicative0().pure((() => {
-          if (v2._1.tag === "Loop") { return Control$dMonad$dRec$dClass.$Step("Loop", Data$dTuple.$Tuple(v2._1._1, $0.append($1)(v2._2))); }
-          if (v2._1.tag === "Done") { return Control$dMonad$dRec$dClass.$Step("Done", Data$dTuple.$Tuple(v2._1._1, $0.append($1)(v2._2))); }
+        const $0 = v._2;
+        return Bind1.bind(f(v._1))(v2 => Applicative0.pure((() => {
+          if (v2._1.tag === "Loop") { return Control$dMonad$dRec$dClass.$Step("Loop", Data$dTuple.$Tuple(v2._1._1, Semigroup0.append($0)(v2._2))); }
+          if (v2._1.tag === "Done") { return Control$dMonad$dRec$dClass.$Step("Done", Data$dTuple.$Tuple(v2._1._1, Semigroup0.append($0)(v2._2))); }
           $runtime.fail();
         })()));
-      })(Data$dTuple.$Tuple(a, mempty)),
+      })(Data$dTuple.$Tuple(a, dictMonoid.mempty)),
       Monad0: () => monadWriterT2
     };
   };
 };
 const monadStateWriterT = dictMonoid => {
-  const mempty = dictMonoid.mempty;
   const monadWriterT1 = monadWriterT(dictMonoid);
   return dictMonadState => {
     const Monad0 = dictMonadState.Monad0();
-    const monadWriterT2 = monadWriterT1(Monad0);
-    return {state: f => Monad0.Bind1().bind(dictMonadState.state(f))(a => Monad0.Applicative0().pure(Data$dTuple.$Tuple(a, mempty))), Monad0: () => monadWriterT2};
+    const monadWriterT2 = monadWriterT1(dictMonadState.Monad0());
+    return {state: f => Monad0.Bind1().bind(dictMonadState.state(f))(a => Monad0.Applicative0().pure(Data$dTuple.$Tuple(a, dictMonoid.mempty))), Monad0: () => monadWriterT2};
   };
 };
 const monadTellWriterT = dictMonoid => {
@@ -146,24 +172,26 @@ const monadTellWriterT = dictMonoid => {
 const monadWriterWriterT = dictMonoid => {
   const monadTellWriterT1 = monadTellWriterT(dictMonoid);
   return dictMonad => {
-    const $0 = dictMonad.Bind1();
-    const $1 = dictMonad.Applicative0();
+    const Bind1 = dictMonad.Bind1();
+    const Applicative0 = dictMonad.Applicative0();
     const monadTellWriterT2 = monadTellWriterT1(dictMonad);
     return {
-      listen: v => $0.bind(v)(v1 => $1.pure(Data$dTuple.$Tuple(Data$dTuple.$Tuple(v1._1, v1._2), v1._2))),
-      pass: v => $0.bind(v)(v1 => $1.pure(Data$dTuple.$Tuple(v1._1._1, v1._1._2(v1._2)))),
+      listen: v => Bind1.bind(v)(v1 => Applicative0.pure(Data$dTuple.$Tuple(Data$dTuple.$Tuple(v1._1, v1._2), v1._2))),
+      pass: v => Bind1.bind(v)(v1 => Applicative0.pure(Data$dTuple.$Tuple(v1._1._1, v1._1._2(v1._2)))),
       Monoid0: () => dictMonoid,
       MonadTell1: () => monadTellWriterT2
     };
   };
 };
 const monadThrowWriterT = dictMonoid => {
-  const mempty = dictMonoid.mempty;
   const monadWriterT1 = monadWriterT(dictMonoid);
   return dictMonadThrow => {
     const Monad0 = dictMonadThrow.Monad0();
-    const monadWriterT2 = monadWriterT1(Monad0);
-    return {throwError: e => Monad0.Bind1().bind(dictMonadThrow.throwError(e))(a => Monad0.Applicative0().pure(Data$dTuple.$Tuple(a, mempty))), Monad0: () => monadWriterT2};
+    const monadWriterT2 = monadWriterT1(dictMonadThrow.Monad0());
+    return {
+      throwError: e => Monad0.Bind1().bind(dictMonadThrow.throwError(e))(a => Monad0.Applicative0().pure(Data$dTuple.$Tuple(a, dictMonoid.mempty))),
+      Monad0: () => monadWriterT2
+    };
   };
 };
 const monadErrorWriterT = dictMonoid => {
@@ -174,25 +202,27 @@ const monadErrorWriterT = dictMonoid => {
   };
 };
 const monadSTWriterT = dictMonoid => {
-  const mempty = dictMonoid.mempty;
   const monadWriterT1 = monadWriterT(dictMonoid);
   return dictMonadST => {
     const Monad0 = dictMonadST.Monad0();
     const monadWriterT2 = monadWriterT1(Monad0);
-    return {liftST: x => Monad0.Bind1().bind(dictMonadST.liftST(x))(a => Monad0.Applicative0().pure(Data$dTuple.$Tuple(a, mempty))), Monad0: () => monadWriterT2};
+    return {
+      liftST: (() => {
+        const Bind1 = Monad0.Bind1();
+        return x => Bind1.bind(dictMonadST.liftST(x))(a => Monad0.Applicative0().pure(Data$dTuple.$Tuple(a, dictMonoid.mempty)));
+      })(),
+      Monad0: () => monadWriterT2
+    };
   };
 };
 const monoidWriterT = dictApplicative => {
-  const $0 = dictApplicative.Apply0();
+  const semigroupWriterT1 = semigroupWriterT(dictApplicative.Apply0());
   return dictMonoid => {
-    const $1 = dictMonoid.Semigroup0();
-    const Functor0 = $0.Functor0();
+    const applicativeWriterT1 = applicativeWriterT(dictMonoid)(dictApplicative);
+    const semigroupWriterT2 = semigroupWriterT1(dictMonoid.Semigroup0());
     return dictMonoid1 => {
-      const $2 = dictMonoid1.Semigroup0();
-      const semigroupWriterT3 = {
-        append: a => b => $0.apply(Functor0.map(v3 => v4 => Data$dTuple.$Tuple(v3._1(v4._1), $1.append(v3._2)(v4._2)))(Functor0.map(v => Data$dTuple.$Tuple($2.append(v._1), v._2))(a)))(b)
-      };
-      return {mempty: applicativeWriterT(dictMonoid)(dictApplicative).pure(dictMonoid1.mempty), Semigroup0: () => semigroupWriterT3};
+      const semigroupWriterT3 = semigroupWriterT2(dictMonoid1.Semigroup0());
+      return {mempty: applicativeWriterT1.pure(dictMonoid1.mempty), Semigroup0: () => semigroupWriterT3};
     };
   };
 };

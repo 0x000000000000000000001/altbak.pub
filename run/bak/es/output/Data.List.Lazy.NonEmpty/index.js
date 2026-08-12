@@ -67,11 +67,8 @@ const cons = y => v => Data$dLazy.defer(v1 => {
   return Data$dNonEmpty.$NonEmpty(y, Data$dLazy.defer(v$1 => Data$dList$dLazy$dTypes.$Step("Cons", $0, $1)));
 });
 const concatMap = b => a => Data$dList$dLazy$dTypes.bindNonEmptyList.bind(a)(b);
-const appendFoldable = dictFoldable => {
-  const fromFoldable1 = dictFoldable.foldr(Data$dList$dLazy$dTypes.cons)(Data$dList$dLazy$dTypes.nil);
-  return nel => ys => Data$dLazy.defer(v => Data$dNonEmpty.$NonEmpty(
-    Data$dLazy.force(nel)._1,
-    Data$dList$dLazy$dTypes.semigroupList.append(Data$dLazy.force(nel)._2)(fromFoldable1(ys))
-  ));
-};
+const appendFoldable = dictFoldable => nel => ys => Data$dLazy.defer(v => Data$dNonEmpty.$NonEmpty(
+  Data$dLazy.force(nel)._1,
+  Data$dList$dLazy$dTypes.semigroupList.append(Data$dLazy.force(nel)._2)(dictFoldable.foldr(Data$dList$dLazy$dTypes.cons)(Data$dList$dLazy$dTypes.nil)(ys))
+));
 export {appendFoldable, concatMap, cons, fromFoldable, fromList, head, init, iterate, last, length, repeat, singleton, tail, toList, toUnfoldable, uncons};

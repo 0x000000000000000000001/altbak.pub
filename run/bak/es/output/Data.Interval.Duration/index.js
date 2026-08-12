@@ -26,8 +26,8 @@ const showDurationComponent = {
     $runtime.fail();
   }
 };
-const show = /* #__PURE__ */ (() => Data$dMap$dInternal.showMap(showDurationComponent)(Data$dShow.showNumber).show)();
-const showDuration = {show: v => "(Duration " + show(v) + ")"};
+const showMap = /* #__PURE__ */ Data$dMap$dInternal.showMap(showDurationComponent)(Data$dShow.showNumber);
+const showDuration = {show: v => "(Duration " + showMap.show(v) + ")"};
 const newtypeDuration = {Coercible0: () => {}};
 const eqDurationComponent = {
   eq: x => y => {
@@ -40,7 +40,7 @@ const eqDurationComponent = {
     return x === "Year" && y === "Year";
   }
 };
-const eq = /* #__PURE__ */ (() => Data$dMap$dInternal.eqMap(eqDurationComponent)(Data$dEq.eqNumber).eq)();
+const eqMap = /* #__PURE__ */ Data$dMap$dInternal.eqMap(eqDurationComponent)(Data$dEq.eqNumber);
 const ordDurationComponent = {
   compare: x => y => {
     if (x === "Second") {
@@ -78,11 +78,11 @@ const ordDurationComponent = {
   },
   Eq0: () => eqDurationComponent
 };
-const compare = /* #__PURE__ */ (() => Data$dMap$dInternal.ordMap(ordDurationComponent)(Data$dOrd.ordNumber).compare)();
+const ordMap = /* #__PURE__ */ Data$dMap$dInternal.ordMap(ordDurationComponent)(Data$dOrd.ordNumber);
 const semigroupDuration = {append: v => v1 => Data$dMap$dInternal.unsafeUnionWith(ordDurationComponent.compare, Data$dSemiring.numAdd, v, v1)};
 const monoidDuration = {mempty: Data$dMap$dInternal.Leaf, Semigroup0: () => semigroupDuration};
-const eqDuration = {eq: x => y => eq(x)(y)};
-const ordDuration = {compare: x => y => compare(x)(y), Eq0: () => eqDuration};
+const eqDuration = {eq: x => y => eqMap.eq(x)(y)};
+const ordDuration = {compare: x => y => ordMap.compare(x)(y), Eq0: () => eqDuration};
 const hour = v => Data$dMap$dInternal.$$$Map("Node", 1, 1, Hour, v, Data$dMap$dInternal.Leaf, Data$dMap$dInternal.Leaf);
 const millisecond = x => Data$dMap$dInternal.$$$Map("Node", 1, 1, Second, x / 1000.0, Data$dMap$dInternal.Leaf, Data$dMap$dInternal.Leaf);
 const minute = v => Data$dMap$dInternal.$$$Map("Node", 1, 1, Minute, v, Data$dMap$dInternal.Leaf, Data$dMap$dInternal.Leaf);
@@ -101,11 +101,10 @@ export {
   Second,
   Week,
   Year,
-  compare,
   day,
-  eq,
   eqDuration,
   eqDurationComponent,
+  eqMap,
   hour,
   millisecond,
   minute,
@@ -114,11 +113,12 @@ export {
   newtypeDuration,
   ordDuration,
   ordDurationComponent,
+  ordMap,
   second,
   semigroupDuration,
-  show,
   showDuration,
   showDurationComponent,
+  showMap,
   week,
   year
 };

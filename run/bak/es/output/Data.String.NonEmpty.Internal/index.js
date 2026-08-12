@@ -32,22 +32,22 @@ const makeNonEmptyBad = () => ({nes: v => ""});
 const localeCompare = v => v1 => Data$dString$dCommon.localeCompare(v)(v1);
 const liftS = f => v => f(v);
 const joinWith1 = dictFoldable1 => {
-  const $0 = dictFoldable1.Foldable0();
-  return sep => xs => $0.foldl(v => v1 => {
-    if (v.init) { return {init: false, acc: v1}; }
-    return {init: false, acc: v.acc + sep + v1};
-  })({init: true, acc: ""})(xs).acc;
+  const Foldable0 = dictFoldable1.Foldable0();
+  return v => x => Foldable0.foldl(v$1 => v1 => {
+    if (v$1.init) { return {init: false, acc: v1}; }
+    return {init: false, acc: v$1.acc + v + v1};
+  })({init: true, acc: ""})(x).acc;
 };
-const joinWith = dictFoldable => splice => xs => dictFoldable.foldl(v => v1 => {
+const joinWith = dictFoldable => splice => x => dictFoldable.foldl(v => v1 => {
   if (v.init) { return {init: false, acc: v1}; }
   return {init: false, acc: v.acc + splice + v1};
-})({init: true, acc: ""})(xs).acc;
+})({init: true, acc: ""})(x).acc;
 const join1With = dictFoldable1 => {
-  const $0 = dictFoldable1.Foldable0();
-  return splice => xs => $0.foldl(v => v1 => {
+  const Foldable0 = dictFoldable1.Foldable0();
+  return splice => x => Foldable0.foldl(v => v1 => {
     if (v.init) { return {init: false, acc: v1}; }
     return {init: false, acc: v.acc + splice + v1};
-  })({init: true, acc: ""})(xs).acc;
+  })({init: true, acc: ""})(x).acc;
 };
 const fromString = v => {
   if (v === "") { return Data$dMaybe.Nothing; }

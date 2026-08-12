@@ -12,12 +12,14 @@ const euclideanRingNumber = {degree: v => 1, div: numDiv, mod: v => v1 => 0.0, C
 const euclideanRingInt = {degree: intDegree, div: intDiv, mod: intMod, CommutativeRing0: () => Data$dCommutativeRing.commutativeRingInt};
 const div = dict => dict.div;
 const lcm = dictEq => dictEuclideanRing => {
-  const Semiring0 = dictEuclideanRing.CommutativeRing0().Ring0().Semiring0();
-  const zero = Semiring0.zero;
-  const gcd2 = gcd(dictEq)(dictEuclideanRing);
+  const Ring0 = dictEuclideanRing.CommutativeRing0().Ring0();
+  const zero = Ring0.Semiring0().zero;
+  const Semiring0 = Ring0.Semiring0();
   return a => b => {
     if (dictEq.eq(a)(zero) || dictEq.eq(b)(zero)) { return zero; }
-    return dictEuclideanRing.div(Semiring0.mul(a)(b))(gcd2(a)(b));
+    return dictEuclideanRing.div(Semiring0.mul(a)(b))(dictEq.eq(b)(dictEuclideanRing.CommutativeRing0().Ring0().Semiring0().zero)
+      ? a
+      : gcd(dictEq)(dictEuclideanRing)(b)(dictEuclideanRing.mod(a)(b)));
   };
 };
 const degree = dict => dict.degree;

@@ -5,6 +5,7 @@ import * as Data$dOrdering from "../Data.Ordering/index.js";
 import * as Data$dTuple from "../Data.Tuple/index.js";
 const $List = (tag, _1, _2) => ({tag, _1, _2});
 const identity = x => x;
+const identity1 = x => x;
 const Nil = /* #__PURE__ */ $List("Nil");
 const Cons = value0 => value1 => $List("Cons", value0, value1);
 const NonEmptyList = x => x;
@@ -99,17 +100,18 @@ const foldableList = {
     return go;
   },
   foldMap: dictMonoid => {
+    const Semigroup0 = dictMonoid.Semigroup0();
     const mempty = dictMonoid.mempty;
     return f => foldableList.foldl(acc => {
-      const $0 = dictMonoid.Semigroup0().append(acc);
+      const $0 = Semigroup0.append(acc);
       return x => $0(f(x));
     })(mempty);
   }
 };
 const foldableNonEmptyList = {
   foldMap: dictMonoid => {
-    const foldMap1 = foldableList.foldMap(dictMonoid);
-    return f => v => dictMonoid.Semigroup0().append(f(v._1))(foldMap1(f)(v._2));
+    const Semigroup0 = dictMonoid.Semigroup0();
+    return f => v => Semigroup0.append(f(v._1))(foldableList.foldMap(dictMonoid)(f)(v._2));
   },
   foldl: f => b => v => {
     const go = go$a0$copy => go$a1$copy => {
@@ -198,9 +200,10 @@ const foldableWithIndexList = {
     return x => $0(x)._2;
   },
   foldMapWithIndex: dictMonoid => {
+    const Semigroup0 = dictMonoid.Semigroup0();
     const mempty = dictMonoid.mempty;
     return f => foldableWithIndexList.foldlWithIndex(i => acc => {
-      const $0 = dictMonoid.Semigroup0().append(acc);
+      const $0 = Semigroup0.append(acc);
       const $1 = f(i);
       return x => $0($1(x));
     })(mempty);
@@ -209,14 +212,11 @@ const foldableWithIndexList = {
 };
 const foldableWithIndexNonEmpty = /* #__PURE__ */ Data$dNonEmpty.foldableWithIndexNonEmpty(foldableWithIndexList);
 const foldableWithIndexNonEmptyList = {
-  foldMapWithIndex: dictMonoid => {
-    const foldMapWithIndex1 = foldableWithIndexNonEmpty.foldMapWithIndex(dictMonoid);
-    return f => v => foldMapWithIndex1(x => f((() => {
-      if (x.tag === "Nothing") { return 0; }
-      if (x.tag === "Just") { return 1 + x._1 | 0; }
-      $runtime.fail();
-    })()))(v);
-  },
+  foldMapWithIndex: dictMonoid => f => v => foldableWithIndexNonEmpty.foldMapWithIndex(dictMonoid)(x => f((() => {
+    if (x.tag === "Nothing") { return 0; }
+    if (x.tag === "Just") { return 1 + x._1 | 0; }
+    $runtime.fail();
+  })()))(v),
   foldlWithIndex: f => b => v => foldableWithIndexNonEmpty.foldlWithIndex(x => f((() => {
     if (x.tag === "Nothing") { return 0; }
     if (x.tag === "Just") { return 1 + x._1 | 0; }
@@ -230,12 +230,18 @@ const foldableWithIndexNonEmptyList = {
   Foldable0: () => foldableNonEmptyList
 };
 const functorWithIndexList = {mapWithIndex: f => foldableWithIndexList.foldrWithIndex(i => x => acc => $List("Cons", f(i)(x), acc))(Nil), Functor0: () => functorList};
-const mapWithIndex = f => v => Data$dNonEmpty.$NonEmpty(
-  f(Data$dMaybe.Nothing)(v._1),
-  foldableWithIndexList.foldrWithIndex(i => x => acc => $List("Cons", f(Data$dMaybe.$Maybe("Just", i))(x), acc))(Nil)(v._2)
-);
+const functorWithIndex = /* #__PURE__ */ (() => {
+  const functorNonEmpty1 = {map: f => m => Data$dNonEmpty.$NonEmpty(f(m._1), listMap(f)(m._2))};
+  return {
+    mapWithIndex: f => v => Data$dNonEmpty.$NonEmpty(
+      f(Data$dMaybe.Nothing)(v._1),
+      foldableWithIndexList.foldrWithIndex(i => x => acc => $List("Cons", f(Data$dMaybe.$Maybe("Just", i))(x), acc))(Nil)(v._2)
+    ),
+    Functor0: () => functorNonEmpty1
+  };
+})();
 const functorWithIndexNonEmptyList = {
-  mapWithIndex: fn => v => mapWithIndex(x => fn((() => {
+  mapWithIndex: fn => v => functorWithIndex.mapWithIndex(x => fn((() => {
     if (x.tag === "Nothing") { return 0; }
     if (x.tag === "Just") { return 1 + x._1 | 0; }
     $runtime.fail();
@@ -278,9 +284,10 @@ const showNonEmptyList = dictShow => {
 };
 const traversableList = {
   traverse: dictApplicative => {
+    const Functor0 = dictApplicative.Apply0().Functor0();
     const Apply0 = dictApplicative.Apply0();
     return f => {
-      const $0 = Apply0.Functor0().map((() => {
+      const $0 = Functor0.map((() => {
         const go = go$a0$copy => go$a1$copy => {
           let go$a0 = go$a0$copy, go$a1 = go$a1$copy, go$c = true, go$r;
           while (go$c) {
@@ -330,9 +337,10 @@ const traversableList = {
 const traversableNonEmptyList = /* #__PURE__ */ Data$dNonEmpty.traversableNonEmpty(traversableList);
 const traversableWithIndexList = {
   traverseWithIndex: dictApplicative => {
+    const Functor0 = dictApplicative.Apply0().Functor0();
     const Apply0 = dictApplicative.Apply0();
     return f => {
-      const $0 = Apply0.Functor0().map((() => {
+      const $0 = Functor0.map((() => {
         const go = go$a0$copy => go$a1$copy => {
           let go$a0 = go$a0$copy, go$a1 = go$a1$copy, go$c = true, go$r;
           while (go$c) {
@@ -379,11 +387,11 @@ const traversableWithIndexList = {
   FoldableWithIndex1: () => foldableWithIndexList,
   Traversable2: () => traversableList
 };
-const traverseWithIndex = /* #__PURE__ */ (() => Data$dNonEmpty.traversableWithIndexNonEmpty(traversableWithIndexList).traverseWithIndex)();
+const traversableWithIndexNonEmpty = /* #__PURE__ */ Data$dNonEmpty.traversableWithIndexNonEmpty(traversableWithIndexList);
 const traversableWithIndexNonEmptyList = {
   traverseWithIndex: dictApplicative => {
-    const traverseWithIndex1 = traverseWithIndex(dictApplicative);
-    return f => v => dictApplicative.Apply0().Functor0().map(NonEmptyList)(traverseWithIndex1(x => f((() => {
+    const Functor0 = dictApplicative.Apply0().Functor0();
+    return f => v => Functor0.map(NonEmptyList)(traversableWithIndexNonEmpty.traverseWithIndex(dictApplicative)(x => f((() => {
       if (x.tag === "Nothing") { return 0; }
       if (x.tag === "Just") { return 1 + x._1 | 0; }
       $runtime.fail();
@@ -627,8 +635,117 @@ const ord1List = {
   },
   Eq10: () => eq1List
 };
-const ordNonEmpty = /* #__PURE__ */ Data$dNonEmpty.ordNonEmpty(ord1List);
-const ord1NonEmptyList = /* #__PURE__ */ Data$dNonEmpty.ord1NonEmpty(ord1List);
+const ordNonEmpty = dictOrd => {
+  const $0 = dictOrd.Eq0();
+  const eqNonEmpty2 = {
+    eq: x => y => $0.eq(x._1)(y._1) && (() => {
+      const go = v => v1 => v2 => {
+        if (!v2) { return false; }
+        if (v.tag === "Nil") { return v1.tag === "Nil" && v2; }
+        return v.tag === "Cons" && v1.tag === "Cons" && go(v._2)(v1._2)(v2 && $0.eq(v1._1)(v._1));
+      };
+      return go(x._2)(y._2)(true);
+    })()
+  };
+  return {
+    compare: x => y => {
+      const v = dictOrd.compare(x._1)(y._1);
+      if (v === "LT") { return Data$dOrdering.LT; }
+      if (v === "GT") { return Data$dOrdering.GT; }
+      const go = go$a0$copy => go$a1$copy => {
+        let go$a0 = go$a0$copy, go$a1 = go$a1$copy, go$c = true, go$r;
+        while (go$c) {
+          const v$1 = go$a0, v1 = go$a1;
+          if (v$1.tag === "Nil") {
+            if (v1.tag === "Nil") {
+              go$c = false;
+              go$r = Data$dOrdering.EQ;
+              continue;
+            }
+            go$c = false;
+            go$r = Data$dOrdering.LT;
+            continue;
+          }
+          if (v1.tag === "Nil") {
+            go$c = false;
+            go$r = Data$dOrdering.GT;
+            continue;
+          }
+          if (v$1.tag === "Cons" && v1.tag === "Cons") {
+            const v2 = dictOrd.compare(v$1._1)(v1._1);
+            if (v2 === "EQ") {
+              go$a0 = v$1._2;
+              go$a1 = v1._2;
+              continue;
+            }
+            go$c = false;
+            go$r = v2;
+            continue;
+          }
+          $runtime.fail();
+        }
+        return go$r;
+      };
+      return go(x._2)(y._2);
+    },
+    Eq0: () => eqNonEmpty2
+  };
+};
+const ord1NonEmptyList = /* #__PURE__ */ (() => {
+  const eq1NonEmpty1 = {
+    eq1: dictEq => x => y => dictEq.eq(x._1)(y._1) && (() => {
+      const go = v => v1 => v2 => {
+        if (!v2) { return false; }
+        if (v.tag === "Nil") { return v1.tag === "Nil" && v2; }
+        return v.tag === "Cons" && v1.tag === "Cons" && go(v._2)(v1._2)(v2 && dictEq.eq(v1._1)(v._1));
+      };
+      return go(x._2)(y._2)(true);
+    })()
+  };
+  return {
+    compare1: dictOrd => x => y => {
+      const v = dictOrd.compare(x._1)(y._1);
+      if (v === "LT") { return Data$dOrdering.LT; }
+      if (v === "GT") { return Data$dOrdering.GT; }
+      const go = go$a0$copy => go$a1$copy => {
+        let go$a0 = go$a0$copy, go$a1 = go$a1$copy, go$c = true, go$r;
+        while (go$c) {
+          const v$1 = go$a0, v1 = go$a1;
+          if (v$1.tag === "Nil") {
+            if (v1.tag === "Nil") {
+              go$c = false;
+              go$r = Data$dOrdering.EQ;
+              continue;
+            }
+            go$c = false;
+            go$r = Data$dOrdering.LT;
+            continue;
+          }
+          if (v1.tag === "Nil") {
+            go$c = false;
+            go$r = Data$dOrdering.GT;
+            continue;
+          }
+          if (v$1.tag === "Cons" && v1.tag === "Cons") {
+            const v2 = dictOrd.compare(v$1._1)(v1._1);
+            if (v2 === "EQ") {
+              go$a0 = v$1._2;
+              go$a1 = v1._2;
+              continue;
+            }
+            go$c = false;
+            go$r = v2;
+            continue;
+          }
+          $runtime.fail();
+        }
+        return go$r;
+      };
+      return go(x._2)(y._2);
+    },
+    Eq10: () => eq1NonEmpty1
+  };
+})();
 const ordList = dictOrd => {
   const $0 = dictOrd.Eq0();
   const eqList1 = {
@@ -774,7 +891,7 @@ const traversable1NonEmptyList = {
       return go(Functor0.map(applicativeNonEmptyList.pure)(f(v._1)))(v._2);
     })());
   },
-  sequence1: dictApply => traversable1NonEmptyList.traverse1(dictApply)(identity),
+  sequence1: dictApply => traversable1NonEmptyList.traverse1(dictApply)(identity1),
   Foldable10: () => foldable1NonEmptyList,
   Traversable1: () => traversableNonEmptyList
 };
@@ -807,11 +924,12 @@ export {
   foldableWithIndexNonEmptyList,
   functorList,
   functorNonEmptyList,
+  functorWithIndex,
   functorWithIndexList,
   functorWithIndexNonEmptyList,
   identity,
+  identity1,
   listMap,
-  mapWithIndex,
   monadList,
   monadNonEmptyList,
   monadPlusList,
@@ -833,8 +951,8 @@ export {
   traversableList,
   traversableNonEmptyList,
   traversableWithIndexList,
+  traversableWithIndexNonEmpty,
   traversableWithIndexNonEmptyList,
-  traverseWithIndex,
   unfoldable1List,
   unfoldable1NonEmptyList,
   unfoldableList

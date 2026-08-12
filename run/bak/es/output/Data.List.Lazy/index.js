@@ -14,10 +14,6 @@ import * as Data$dList$dLazy$dTypes from "../Data.List.Lazy.Types/index.js";
 import * as Data$dMaybe from "../Data.Maybe/index.js";
 import * as Data$dNonEmpty from "../Data.NonEmpty/index.js";
 import * as Data$dTuple from "../Data.Tuple/index.js";
-const any = /* #__PURE__ */ (() => Data$dList$dLazy$dTypes.foldableList.foldMap((() => {
-  const semigroupDisj1 = {append: v => v1 => v || v1};
-  return {mempty: false, Semigroup0: () => semigroupDisj1};
-})()))();
 const identity = x => x;
 const Pattern = x => x;
 const zipWith = f => xs => ys => {
@@ -32,10 +28,7 @@ const zipWith = f => xs => ys => {
   });
   return Data$dLazy.defer(v => Data$dLazy.force($0)(Data$dLazy.force(ys)));
 };
-const zipWithA = dictApplicative => {
-  const sequence1 = Data$dList$dLazy$dTypes.traversableList.traverse(dictApplicative)(Data$dList$dLazy$dTypes.identity);
-  return f => xs => ys => sequence1(zipWith(f)(xs)(ys));
-};
+const zipWithA = dictApplicative => f => xs => ys => Data$dList$dLazy$dTypes.traversableList.traverse(dictApplicative)(Data$dList$dLazy$dTypes.identity)(zipWith(f)(xs)(ys));
 const zip = /* #__PURE__ */ zipWith(Data$dTuple.Tuple);
 const updateAt = n => x => xs => Data$dLazy.defer(v => {
   const $0 = Data$dLazy.force(xs);
@@ -137,7 +130,10 @@ const snoc = xs => x => Data$dList$dLazy$dTypes.foldableList.foldr(Data$dList$dL
   Data$dList$dLazy$dTypes.nil
 )))(xs);
 const singleton = a => Data$dLazy.defer(v => Data$dList$dLazy$dTypes.$Step("Cons", a, Data$dList$dLazy$dTypes.nil));
-const showPattern = dictShow => ({show: v => "(Pattern " + Data$dList$dLazy$dTypes.showList(dictShow).show(v) + ")"});
+const showPattern = dictShow => {
+  const showList = Data$dList$dLazy$dTypes.showList(dictShow);
+  return {show: v => "(Pattern " + showList.show(v) + ")"};
+};
 const scanlLazy = f => acc => xs => Data$dLazy.defer(v => {
   const $0 = Data$dLazy.force(xs);
   if ($0.tag === "Nil") { return Data$dList$dLazy$dTypes.Nil; }
@@ -149,11 +145,11 @@ const scanlLazy = f => acc => xs => Data$dLazy.defer(v => {
 });
 const reverse = xs => Data$dLazy.defer(x => Data$dLazy.force(Data$dList$dLazy$dTypes.foldableList.foldl(b => a => Data$dLazy.defer(v => Data$dList$dLazy$dTypes.$Step("Cons", a, b)))(Data$dList$dLazy$dTypes.nil)(xs)));
 const replicateM = dictMonad => {
-  const $0 = dictMonad.Applicative0();
-  const $1 = dictMonad.Bind1();
+  const Applicative0 = dictMonad.Applicative0();
+  const Bind1 = dictMonad.Bind1();
   return n => m => {
-    if (n < 1) { return $0.pure(Data$dList$dLazy$dTypes.nil); }
-    return $1.bind(m)(a => $1.bind(replicateM(dictMonad)(n - 1 | 0)(m))(as => $0.pure(Data$dLazy.defer(v => Data$dList$dLazy$dTypes.$Step("Cons", a, as)))));
+    if (n < 1) { return Applicative0.pure(Data$dList$dLazy$dTypes.nil); }
+    return Bind1.bind(m)(a => Bind1.bind(replicateM(dictMonad)(n - 1 | 0)(m))(as => Applicative0.pure(Data$dLazy.defer(v => Data$dList$dLazy$dTypes.$Step("Cons", a, as)))));
   };
 };
 const repeat = x => {
@@ -230,8 +226,16 @@ const mapMaybe = f => {
   };
   return x => Data$dLazy.defer(v => go(Data$dLazy.force(x)));
 };
-const some = dictAlternative => dictLazy => v => dictAlternative.Applicative0().Apply0().apply(dictAlternative.Plus1().Alt0().Functor0().map(Data$dList$dLazy$dTypes.cons)(v))(dictLazy.defer(v1 => many(dictAlternative)(dictLazy)(v)));
-const many = dictAlternative => dictLazy => v => dictAlternative.Plus1().Alt0().alt(some(dictAlternative)(dictLazy)(v))(dictAlternative.Applicative0().pure(Data$dList$dLazy$dTypes.nil));
+const some = dictAlternative => {
+  const Apply0 = dictAlternative.Applicative0().Apply0();
+  const Functor0 = dictAlternative.Plus1().Alt0().Functor0();
+  return dictLazy => v => Apply0.apply(Functor0.map(Data$dList$dLazy$dTypes.cons)(v))(dictLazy.defer(v1 => many(dictAlternative)(dictLazy)(v)));
+};
+const many = dictAlternative => {
+  const Alt0 = dictAlternative.Plus1().Alt0();
+  const Applicative0 = dictAlternative.Applicative0();
+  return dictLazy => v => Alt0.alt(some(dictAlternative)(dictLazy)(v))(Applicative0.pure(Data$dList$dLazy$dTypes.nil));
+};
 const length = /* #__PURE__ */ (() => Data$dList$dLazy$dTypes.foldableList.foldl(l => v => l + 1 | 0)(0))();
 const last = /* #__PURE__ */ (() => {
   const go = go$a0$copy => {
@@ -393,14 +397,18 @@ const foldrLazy = dictLazy => op => z => {
   };
   return go;
 };
-const foldM = dictMonad => f => b => xs => {
-  const v = uncons(xs);
-  if (v.tag === "Nothing") { return dictMonad.Applicative0().pure(b); }
-  if (v.tag === "Just") {
-    const $0 = v._1.tail;
-    return dictMonad.Bind1().bind(f(b)(v._1.head))(b$p => foldM(dictMonad)(f)(b$p)($0));
-  }
-  $runtime.fail();
+const foldM = dictMonad => {
+  const Applicative0 = dictMonad.Applicative0();
+  const Bind1 = dictMonad.Bind1();
+  return f => b => xs => {
+    const v = uncons(xs);
+    if (v.tag === "Nothing") { return Applicative0.pure(b); }
+    if (v.tag === "Just") {
+      const $0 = v._1.tail;
+      return Bind1.bind(f(b)(v._1.head))(b$p => foldM(dictMonad)(f)(b$p)($0));
+    }
+    $runtime.fail();
+  };
 };
 const findIndex = fn => {
   const go = go$a0$copy => go$a1$copy => {
@@ -435,15 +443,17 @@ const findLastIndex = fn => xs => {
   return Data$dMaybe.Nothing;
 };
 const filterM = dictMonad => {
-  const $0 = dictMonad.Applicative0();
-  const $1 = dictMonad.Bind1();
+  const Applicative0 = dictMonad.Applicative0();
+  const Bind1 = dictMonad.Bind1();
   return p => list => {
     const v = uncons(list);
-    if (v.tag === "Nothing") { return $0.pure(Data$dList$dLazy$dTypes.nil); }
+    if (v.tag === "Nothing") { return Applicative0.pure(Data$dList$dLazy$dTypes.nil); }
     if (v.tag === "Just") {
-      const $2 = v._1.head;
-      const $3 = v._1.tail;
-      return $1.bind(p($2))(b => $1.bind(filterM(dictMonad)(p)($3))(xs$p => $0.pure(b ? Data$dLazy.defer(v$1 => Data$dList$dLazy$dTypes.$Step("Cons", $2, xs$p)) : xs$p)));
+      const $0 = v._1.head;
+      const $1 = v._1.tail;
+      return Bind1.bind(p($0))(b => Bind1.bind(filterM(dictMonad)(p)($1))(xs$p => Applicative0.pure(b
+        ? Data$dLazy.defer(v$1 => Data$dList$dLazy$dTypes.$Step("Cons", $0, xs$p))
+        : xs$p)));
     }
     $runtime.fail();
   };
@@ -473,7 +483,10 @@ const filter = p => {
   };
   return x => Data$dLazy.defer(v => go(Data$dLazy.force(x)));
 };
-const intersectBy = eq => xs => ys => filter(x => any(eq(x))(ys))(xs);
+const intersectBy = eq => xs => ys => filter(x => Data$dList$dLazy$dTypes.foldableList.foldMap((() => {
+  const semigroupDisj1 = {append: v => v1 => v || v1};
+  return {mempty: false, Semigroup0: () => semigroupDisj1};
+})())(eq(x))(ys))(xs);
 const intersect = dictEq => intersectBy(dictEq.eq);
 const nubByEq = eq => Data$dLazy.functorLazy.map(v => {
   if (v.tag === "Nil") { return Data$dList$dLazy$dTypes.Nil; }
@@ -486,9 +499,10 @@ const nubByEq = eq => Data$dLazy.functorLazy.map(v => {
 const nubEq = dictEq => nubByEq(dictEq.eq);
 const eqPattern = dictEq => ({eq: x => y => Data$dList$dLazy$dTypes.eq1List.eq1(dictEq)(x)(y)});
 const ordPattern = dictOrd => {
+  const ordList = Data$dList$dLazy$dTypes.ordList(dictOrd);
   const $0 = dictOrd.Eq0();
   const eqPattern1 = {eq: x => y => Data$dList$dLazy$dTypes.eq1List.eq1($0)(x)(y)};
-  return {compare: x => y => Data$dList$dLazy$dTypes.ordList(dictOrd).compare(x)(y), Eq0: () => eqPattern1};
+  return {compare: x => y => ordList.compare(x)(y), Eq0: () => eqPattern1};
 };
 const elemLastIndex = dictEq => x => findLastIndex(v => dictEq.eq(v)(x));
 const elemIndex = dictEq => x => findIndex(v => dictEq.eq(v)(x));
@@ -564,7 +578,7 @@ const cycle = xs => {
 };
 const concatMap = b => a => Data$dList$dLazy$dTypes.bindList.bind(a)(b);
 const concat = v => Data$dList$dLazy$dTypes.bindList.bind(v)(identity);
-const catMaybes = /* #__PURE__ */ mapMaybe(identity);
+const catMaybes = /* #__PURE__ */ mapMaybe(x => x);
 const alterAt = n => f => xs => Data$dLazy.defer(v => {
   const $0 = Data$dLazy.force(xs);
   if ($0.tag === "Nil") { return Data$dList$dLazy$dTypes.Nil; }
@@ -583,7 +597,6 @@ const modifyAt = n => f => alterAt(n)(x => Data$dMaybe.$Maybe("Just", f(x)));
 export {
   Pattern,
   alterAt,
-  any,
   catMaybes,
   concat,
   concatMap,

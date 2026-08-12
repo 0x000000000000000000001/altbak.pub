@@ -25,14 +25,13 @@ const comonadStoreTracedT = dictComonadStore => {
   const Comonad0 = dictComonadStore.Comonad0();
   const comonadTracedT = Control$dComonad$dTraced$dTrans.comonadTracedT(Comonad0);
   return dictMonoid => {
-    const mempty = dictMonoid.mempty;
-    const lower1 = v => Comonad0.Extend0().Functor0().map(f => f(mempty))(v);
+    const Functor0 = Comonad0.Extend0().Functor0();
     const comonadTracedT1 = comonadTracedT(dictMonoid);
     return {
-      pos: x => dictComonadStore.pos(lower1(x)),
+      pos: x => dictComonadStore.pos(Functor0.map(f => f(dictMonoid.mempty))(x)),
       peek: s => {
         const $0 = dictComonadStore.peek(s);
-        return x => $0(lower1(x));
+        return x => $0(Functor0.map(f => f(dictMonoid.mempty))(x));
       },
       Comonad0: () => comonadTracedT1
     };

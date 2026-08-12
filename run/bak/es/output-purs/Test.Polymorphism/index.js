@@ -10,8 +10,6 @@ var mappend_ = function (dict) {
     return dict.mappend_;
 };
 var polyLoop = function (dictMonoidish) {
-    var mappend_1 = mappend_(dictMonoidish);
-    var mempty_1 = mempty_(dictMonoidish);
     return function (n_init) {
         return function (acc_init) {
             var go = function ($copy_v) {
@@ -25,7 +23,7 @@ var polyLoop = function (dictMonoidish) {
                             return v1;
                         };
                         $tco_var_v = v - 1 | 0;
-                        $copy_v1 = mappend_1(v1)(mempty_1);
+                        $copy_v1 = mappend_(dictMonoidish)(v1)(mempty_(dictMonoidish));
                         return;
                     };
                     while (!$tco_done) {
@@ -46,11 +44,10 @@ var intMonoidish = {
         };
     }
 };
-var polyLoop1 = /* #__PURE__ */ polyLoop(intMonoidish);
 var describe = /* #__PURE__ */ Effect_Console.log("Polymorphism (10M Type Class Dict Lookups):");
 var act = function __do() {
     var dummy = Bench.opaque(10000000)();
-    return logShow(polyLoop1(dummy)(0))();
+    return logShow(polyLoop(intMonoidish)(dummy)(0))();
 };
 export {
     mappend_,

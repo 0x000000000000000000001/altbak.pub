@@ -45,15 +45,19 @@ const liftEither = dictMonadThrow => {
   };
 };
 const catchError = dict => dict.catchError;
-const catchJust = dictMonadError => p => act => handler => dictMonadError.catchError(act)(e => {
-  const v = p(e);
-  if (v.tag === "Nothing") { return dictMonadError.MonadThrow0().throwError(e); }
-  if (v.tag === "Just") { return handler(v._1); }
-  $runtime.fail();
-});
+const catchJust = dictMonadError => {
+  const MonadThrow0 = dictMonadError.MonadThrow0();
+  return p => act => handler => dictMonadError.catchError(act)(e => {
+    const v = p(e);
+    if (v.tag === "Nothing") { return MonadThrow0.throwError(e); }
+    if (v.tag === "Just") { return handler(v._1); }
+    $runtime.fail();
+  });
+};
 const $$try = dictMonadError => {
   const Monad0 = dictMonadError.MonadThrow0().Monad0();
-  return a => dictMonadError.catchError(Monad0.Bind1().Apply0().Functor0().map(Data$dEither.Right)(a))(x => Monad0.Applicative0().pure(Data$dEither.$Either("Left", x)));
+  const Functor0 = Monad0.Bind1().Apply0().Functor0();
+  return a => dictMonadError.catchError(Functor0.map(Data$dEither.Right)(a))(x => Monad0.Applicative0().pure(Data$dEither.$Either("Left", x)));
 };
 const withResource = dictMonadError => {
   const MonadThrow0 = dictMonadError.MonadThrow0();

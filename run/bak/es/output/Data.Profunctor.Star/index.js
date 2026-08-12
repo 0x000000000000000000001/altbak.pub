@@ -55,10 +55,7 @@ const distributiveStar = dictDistributive => {
     }
   };
   return {
-    distribute: dictFunctor => {
-      const collect1 = dictDistributive.collect(dictFunctor);
-      return f => a => collect1(v => v(a))(f);
-    },
+    distribute: dictFunctor => f => a => dictDistributive.collect(dictFunctor)(v => v(a))(f),
     collect: dictFunctor => f => {
       const $1 = distributiveStar(dictDistributive).distribute(dictFunctor);
       const $2 = dictFunctor.map(f);
@@ -68,7 +65,6 @@ const distributiveStar = dictDistributive => {
   };
 };
 const closedStar = dictDistributive => {
-  const distribute = dictDistributive.distribute(Data$dFunctor.functorFn);
   const $0 = dictDistributive.Functor0();
   const profunctorStar1 = {
     dimap: f => g => v => {
@@ -76,30 +72,32 @@ const closedStar = dictDistributive => {
       return x => $1(v(f(x)));
     }
   };
-  return {closed: v => g => distribute(x => v(g(x))), Profunctor0: () => profunctorStar1};
+  return {closed: v => g => dictDistributive.distribute(Data$dFunctor.functorFn)(x => v(g(x))), Profunctor0: () => profunctorStar1};
 };
 const choiceStar = dictApplicative => {
-  const Functor0 = dictApplicative.Apply0().Functor0();
+  const Apply0 = dictApplicative.Apply0();
+  const Functor0 = Apply0.Functor0();
+  const $0 = Apply0.Functor0();
   const profunctorStar1 = {
     dimap: f => g => v => {
-      const $0 = Functor0.map(g);
-      return x => $0(v(f(x)));
+      const $1 = $0.map(g);
+      return x => $1(v(f(x)));
     }
   };
   return {
     left: v => {
-      const $0 = Functor0.map(Data$dEither.Left);
+      const $1 = Functor0.map(Data$dEither.Left);
       return v2 => {
-        if (v2.tag === "Left") { return $0(v(v2._1)); }
+        if (v2.tag === "Left") { return $1(v(v2._1)); }
         if (v2.tag === "Right") { return dictApplicative.pure(Data$dEither.$Either("Right", v2._1)); }
         $runtime.fail();
       };
     },
     right: v => {
-      const $0 = Functor0.map(Data$dEither.Right);
+      const $1 = Functor0.map(Data$dEither.Right);
       return v2 => {
         if (v2.tag === "Left") { return dictApplicative.pure(Data$dEither.$Either("Left", v2._1)); }
-        if (v2.tag === "Right") { return $0(v(v2._1)); }
+        if (v2.tag === "Right") { return $1(v(v2._1)); }
         $runtime.fail();
       };
     },

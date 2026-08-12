@@ -4,7 +4,6 @@ import (
 	pkg_Data_Eq "gopurs/output/Data.Eq"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	unsafe "unsafe"
 )
 
 var cache_null gopurs_runtime.Value
@@ -22,7 +21,7 @@ var cache_localeCompare gopurs_runtime.Value
 var once_localeCompare sync.Once
 func Get_localeCompare() gopurs_runtime.Value {
 	once_localeCompare.Do(func() {
-		cache_localeCompare = gopurs_runtime.Apply3(Get__localeCompare(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)})
+		cache_localeCompare = gopurs_runtime.Apply3(Get__localeCompare(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil})
 	})
 	return cache_localeCompare
 }

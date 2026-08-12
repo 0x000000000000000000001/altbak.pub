@@ -41,18 +41,16 @@ const heytingAlgebraRecord = () => dictHeytingAlgebraRecord => (
   }
 );
 const conj = dict => dict.conj;
-const heytingAlgebraFunction = dictHeytingAlgebra => {
-  const ff1 = dictHeytingAlgebra.ff;
-  const tt1 = dictHeytingAlgebra.tt;
-  return {
-    ff: v => ff1,
-    tt: v => tt1,
+const heytingAlgebraFunction = dictHeytingAlgebra => (
+  {
+    ff: v => dictHeytingAlgebra.ff,
+    tt: v => dictHeytingAlgebra.tt,
     implies: f => g => a => dictHeytingAlgebra.implies(f(a))(g(a)),
     conj: f => g => a => dictHeytingAlgebra.conj(f(a))(g(a)),
     disj: f => g => a => dictHeytingAlgebra.disj(f(a))(g(a)),
     not: f => a => dictHeytingAlgebra.not(f(a))
-  };
-};
+  }
+);
 const heytingAlgebraRecordCons = dictIsSymbol => () => dictHeytingAlgebraRecord => dictHeytingAlgebra => {
   const ff1 = dictHeytingAlgebra.ff;
   const tt1 = dictHeytingAlgebra.tt;

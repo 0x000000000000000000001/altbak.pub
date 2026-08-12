@@ -846,7 +846,7 @@ v1_4_2 := gopurs_runtime.Apply2(dictOrd_0.V1, k_1, (*pkg_Data_Map_Internal.Const
 _ = v1_4_2
 var __t3 gopurs_runtime.Value
 {
-if (v1_4_2.Type == 9 && v1_4_2.IntVal == 1527465420) {
+if (uint32(v1_4_2.IntVal) == 1527465420) {
 v_3_loop = gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer((*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V4)}
 continue go__go_2_0_0
 __t3 = gopurs_runtime.Bool((gopurs_runtime.Value{}.IntVal) != (0))
@@ -856,7 +856,7 @@ goto end_branch_3
 }
 }
 {
-if (v1_4_2.Type == 9 && v1_4_2.IntVal == 380165415) {
+if (uint32(v1_4_2.IntVal) == 380165415) {
 v_3_loop = gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer((*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V5)}
 continue go__go_2_0_0
 __t3 = gopurs_runtime.Bool((gopurs_runtime.Value{}.IntVal) != (0))
@@ -866,7 +866,7 @@ goto end_branch_3
 }
 }
 {
-if (v1_4_2.Type == 9 && v1_4_2.IntVal == 902936544) {
+if (uint32(v1_4_2.IntVal) == 902936544) {
 __t3 = gopurs_runtime.Bool(true)
 goto end_branch_3
 } else {
@@ -999,7 +999,7 @@ return gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_do
 return eqSet1_2_1
 }), gopurs_runtime.Func(func(s1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(s2_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(ordList_1_0.V1, gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_keys(), s1_3), gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_keys(), s2_4))
+return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(ordList_1_0.V1, gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_keys(), s1_3), gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_keys(), s2_4)).IntVal)), UnsafePtr: nil}
 })
 }))
 }

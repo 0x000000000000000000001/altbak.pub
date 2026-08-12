@@ -1,6 +1,5 @@
 import * as $runtime from "../runtime.js";
 import * as Control$dBind from "../Control.Bind/index.js";
-import * as Control$dMonad$dRec$dClass from "../Control.Monad.Rec.Class/index.js";
 import * as Data$dArray from "../Data.Array/index.js";
 import * as Data$dArray$dNonEmpty$dInternal from "../Data.Array.NonEmpty.Internal/index.js";
 import * as Data$dFoldable from "../Data.Foldable/index.js";
@@ -10,17 +9,11 @@ import * as Data$dMaybe from "../Data.Maybe/index.js";
 import * as Data$dNonEmpty from "../Data.NonEmpty/index.js";
 import * as Data$dOrd from "../Data.Ord/index.js";
 import * as Data$dSemigroup$dFoldable from "../Data.Semigroup.Foldable/index.js";
+import * as Data$dTraversable from "../Data.Traversable/index.js";
 import * as Data$dTuple from "../Data.Tuple/index.js";
-const max = x => y => {
-  const v = Data$dOrd.ordInt.compare(x)(y);
-  if (v === "LT") { return y; }
-  if (v === "EQ") { return x; }
-  if (v === "GT") { return x; }
-  $runtime.fail();
-};
 const intercalate1 = dictSemigroup => {
-  const foldMap12 = Data$dArray$dNonEmpty$dInternal.foldable1NonEmptyArray.foldMap1({append: v => v1 => j => dictSemigroup.append(v(j))(dictSemigroup.append(j)(v1(j)))});
-  return a => foldable => foldMap12(x => v => x)(foldable)(a);
+  const semigroupJoinWith1 = {append: v => v1 => j => dictSemigroup.append(v(j))(dictSemigroup.append(j)(v1(j)))};
+  return a => foldable => Data$dArray$dNonEmpty$dInternal.foldable1NonEmptyArray.foldMap1(semigroupJoinWith1)(x => v => x)(foldable)(a);
 };
 const transpose = x => Data$dArray.transpose(x);
 const toArray = v => v;
@@ -35,13 +28,24 @@ const unzip = x => {
 const updateAt = i => x => x$1 => Data$dArray._updateAt(Data$dMaybe.Just, Data$dMaybe.Nothing, i, x, x$1);
 const zip = xs => ys => Data$dArray.zipWithImpl(Data$dTuple.Tuple, xs, ys);
 const zipWith = f => xs => ys => Data$dArray.zipWithImpl(f, xs, ys);
-const zipWithA = dictApplicative => Data$dArray.zipWithA(dictApplicative);
+const zipWithA = dictApplicative => f => xs => ys => Data$dTraversable.traversableArray.traverse(dictApplicative)(Data$dTraversable.identity)(Data$dArray.zipWithImpl(f, xs, ys));
 const splitAt = i => xs => Data$dArray.splitAt(i)(xs);
-const some = dictAlternative => dictLazy => x => Data$dArray.some(dictAlternative)(dictLazy)(x);
+const some = dictAlternative => Data$dArray.some(dictAlternative);
 const snoc$p = xs => x => Data$dArray.snoc(xs)(x);
 const snoc = xs => x => Data$dArray.snoc(xs)(x);
 const singleton = x => [x];
-const replicate = i => x => Data$dArray.replicateImpl(max(1)(i), x);
+const replicate = i => x => {
+  const v = Data$dOrd.ordInt.compare(1)(i);
+  return Data$dArray.replicateImpl(
+    (() => {
+      if (v === "LT") { return i; }
+      if (v === "EQ") { return 1; }
+      if (v === "GT") { return 1; }
+      $runtime.fail();
+    })(),
+    x
+  );
+};
 const range = x => y => Data$dArray.rangeImpl(x, y);
 const prependArray = xs => ys => [...xs, ...ys];
 const modifyAt = i => f => x => Data$dArray.modifyAt(i)(f)(x);
@@ -124,7 +128,7 @@ const catMaybes = x => Data$dArray.mapMaybe(x$1 => x$1)(x);
 const $$delete = dictEq => x => x$1 => Data$dArray.deleteBy(dictEq.eq)(x)(x$1);
 const deleteAt = i => x => Data$dArray._deleteAt(Data$dMaybe.Just, Data$dMaybe.Nothing, i, x);
 const deleteBy = f => x => x$1 => Data$dArray.deleteBy(f)(x)(x$1);
-const difference = dictEq => Data$dFoldable.foldrArray(Data$dArray.delete(dictEq));
+const difference = dictEq => xs => Data$dFoldable.foldrArray(Data$dArray.delete(dictEq))(xs);
 const drop = i => x => {
   if (i < 1) { return x; }
   return Data$dArray.sliceImpl(i, x.length, x);
@@ -139,20 +143,13 @@ const elem = dictEq => x => x$1 => Data$dArray.elem(dictEq)(x)(x$1);
 const elemIndex = dictEq => x => x$1 => Data$dArray.findIndexImpl(Data$dMaybe.Just, Data$dMaybe.Nothing, v => dictEq.eq(v)(x), x$1);
 const elemLastIndex = dictEq => x => x$1 => Data$dArray.findLastIndexImpl(Data$dMaybe.Just, Data$dMaybe.Nothing, v => dictEq.eq(v)(x), x$1);
 const filter = f => x => Data$dArray.filterImpl(f, x);
-const filterA = dictApplicative => Data$dArray.filterA(dictApplicative);
+const filterA = dictApplicative => f => Data$dArray.filterA(dictApplicative)(f);
 const find = p => x => Data$dArray.find(p)(x);
 const findIndex = p => x => Data$dArray.findIndexImpl(Data$dMaybe.Just, Data$dMaybe.Nothing, p, x);
 const findLastIndex = x => x$1 => Data$dArray.findLastIndexImpl(Data$dMaybe.Just, Data$dMaybe.Nothing, x, x$1);
 const findMap = p => x => Data$dArray.findMapImpl(Data$dMaybe.Nothing, Data$dMaybe.isJust, p, x);
-const foldM = dictMonad => f => acc => x => Data$dArray.foldM(dictMonad)(f)(acc)(x);
-const foldRecM = dictMonadRec => {
-  const Monad0 = dictMonadRec.Monad0();
-  const $0 = Monad0.Applicative0();
-  return f => acc => array => dictMonadRec.tailRecM(o => {
-    if (o.b >= array.length) { return $0.pure(Control$dMonad$dRec$dClass.$Step("Done", o.a)); }
-    return Monad0.Bind1().bind(f(o.a)(array[o.b]))(res$p => $0.pure(Control$dMonad$dRec$dClass.$Step("Loop", {a: res$p, b: o.b + 1 | 0})));
-  })({a: acc, b: 0});
-};
+const foldM = dictMonad => f => acc => Data$dArray.foldM(dictMonad)(f)(acc);
+const foldRecM = dictMonadRec => f => acc => Data$dArray.foldRecM(dictMonadRec)(f)(acc);
 const index = x => $0 => {
   if ($0 >= 0 && $0 < x.length) { return Data$dMaybe.$Maybe("Just", x[$0]); }
   return Data$dMaybe.Nothing;
@@ -178,8 +175,8 @@ const toUnfoldable = dictUnfoldable => x => {
 };
 const cons = x => x$1 => [x, ...x$1];
 const group = dictEq => {
-  const eq2 = dictEq.eq;
-  return x => Data$dArray.groupBy(eq2)(x);
+  const eq = dictEq.eq;
+  return x => Data$dArray.groupBy(eq)(x);
 };
 const groupAllBy = op => Data$dArray.groupAllBy(op);
 const groupAll = dictOrd => Data$dArray.groupAllBy(dictOrd.compare);
@@ -188,7 +185,7 @@ const insert = dictOrd => x => x$1 => Data$dArray.insertBy(dictOrd.compare)(x)(x
 const insertBy = f => x => x$1 => Data$dArray.insertBy(f)(x)(x$1);
 const intersperse = x => x$1 => Data$dArray.intersperse(x)(x$1);
 const mapWithIndex = f => Data$dFunctorWithIndex.mapWithIndexArray(f);
-const modifyAtIndices = dictFoldable => Data$dArray.modifyAtIndices(dictFoldable);
+const modifyAtIndices = dictFoldable => is => f => x => Data$dArray.modifyAtIndices(dictFoldable)(is)(f)(x);
 const nub = dictOrd => x => Data$dArray.nubBy(dictOrd.compare)(x);
 const nubBy = f => x => Data$dArray.nubBy(f)(x);
 const nubByEq = f => x => Data$dArray.nubByEq(f)(x);
@@ -202,7 +199,7 @@ const sort = dictOrd => {
 };
 const sortBy = f => x => Data$dArray.sortBy(f)(x);
 const sortWith = dictOrd => f => x => Data$dArray.sortWith(dictOrd)(f)(x);
-const updateAtIndices = dictFoldable => Data$dArray.updateAtIndices(dictFoldable);
+const updateAtIndices = dictFoldable => pairs => x => Data$dArray.updateAtIndices(dictFoldable)(pairs)(x);
 const unsafeIndex = () => x => $0 => x[$0];
 const toUnfoldable1 = dictUnfoldable1 => xs => {
   const len = xs.length;
@@ -266,7 +263,6 @@ export {
   length,
   mapMaybe,
   mapWithIndex,
-  max,
   modifyAt,
   modifyAtIndices,
   notElem,

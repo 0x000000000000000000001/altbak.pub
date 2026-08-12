@@ -7,62 +7,47 @@ const uncurry = f => v => f(v._1)(v._2);
 const swap = v => $Tuple(v._2, v._1);
 const snd = v => v._2;
 const showTuple = dictShow => dictShow1 => ({show: v => "(Tuple " + dictShow.show(v._1) + " " + dictShow1.show(v._2) + ")"});
-const semiringTuple = dictSemiring => {
-  const one = dictSemiring.one;
-  const zero = dictSemiring.zero;
-  return dictSemiring1 => (
-    {
-      add: v => v1 => $Tuple(dictSemiring.add(v._1)(v1._1), dictSemiring1.add(v._2)(v1._2)),
-      one: $Tuple(one, dictSemiring1.one),
-      mul: v => v1 => $Tuple(dictSemiring.mul(v._1)(v1._1), dictSemiring1.mul(v._2)(v1._2)),
-      zero: $Tuple(zero, dictSemiring1.zero)
-    }
-  );
-};
+const semiringTuple = dictSemiring => dictSemiring1 => (
+  {
+    add: v => v1 => $Tuple(dictSemiring.add(v._1)(v1._1), dictSemiring1.add(v._2)(v1._2)),
+    one: $Tuple(dictSemiring.one, dictSemiring1.one),
+    mul: v => v1 => $Tuple(dictSemiring.mul(v._1)(v1._1), dictSemiring1.mul(v._2)(v1._2)),
+    zero: $Tuple(dictSemiring.zero, dictSemiring1.zero)
+  }
+);
 const semigroupoidTuple = {compose: v => v1 => $Tuple(v1._1, v._2)};
 const semigroupTuple = dictSemigroup => dictSemigroup1 => ({append: v => v1 => $Tuple(dictSemigroup.append(v._1)(v1._1), dictSemigroup1.append(v._2)(v1._2))});
 const ringTuple = dictRing => {
   const $0 = dictRing.Semiring0();
-  const one = $0.one;
-  const semiringTuple1 = (() => {
-    const zero = $0.zero;
-    return dictSemiring1 => (
-      {
-        add: v => v1 => $Tuple($0.add(v._1)(v1._1), dictSemiring1.add(v._2)(v1._2)),
-        one: $Tuple(one, dictSemiring1.one),
-        mul: v => v1 => $Tuple($0.mul(v._1)(v1._1), dictSemiring1.mul(v._2)(v1._2)),
-        zero: $Tuple(zero, dictSemiring1.zero)
-      }
-    );
-  })();
   return dictRing1 => {
-    const semiringTuple2 = semiringTuple1(dictRing1.Semiring0());
+    const $1 = dictRing1.Semiring0();
+    const semiringTuple2 = {
+      add: v => v1 => $Tuple($0.add(v._1)(v1._1), $1.add(v._2)(v1._2)),
+      one: $Tuple($0.one, $1.one),
+      mul: v => v1 => $Tuple($0.mul(v._1)(v1._1), $1.mul(v._2)(v1._2)),
+      zero: $Tuple($0.zero, $1.zero)
+    };
     return {sub: v => v1 => $Tuple(dictRing.sub(v._1)(v1._1), dictRing1.sub(v._2)(v1._2)), Semiring0: () => semiringTuple2};
   };
 };
 const monoidTuple = dictMonoid => {
-  const mempty = dictMonoid.mempty;
   const $0 = dictMonoid.Semigroup0();
   return dictMonoid1 => {
     const $1 = dictMonoid1.Semigroup0();
     const semigroupTuple2 = {append: v => v1 => $Tuple($0.append(v._1)(v1._1), $1.append(v._2)(v1._2))};
-    return {mempty: $Tuple(mempty, dictMonoid1.mempty), Semigroup0: () => semigroupTuple2};
+    return {mempty: $Tuple(dictMonoid.mempty, dictMonoid1.mempty), Semigroup0: () => semigroupTuple2};
   };
 };
-const heytingAlgebraTuple = dictHeytingAlgebra => {
-  const tt = dictHeytingAlgebra.tt;
-  const ff = dictHeytingAlgebra.ff;
-  return dictHeytingAlgebra1 => (
-    {
-      tt: $Tuple(tt, dictHeytingAlgebra1.tt),
-      ff: $Tuple(ff, dictHeytingAlgebra1.ff),
-      implies: v => v1 => $Tuple(dictHeytingAlgebra.implies(v._1)(v1._1), dictHeytingAlgebra1.implies(v._2)(v1._2)),
-      conj: v => v1 => $Tuple(dictHeytingAlgebra.conj(v._1)(v1._1), dictHeytingAlgebra1.conj(v._2)(v1._2)),
-      disj: v => v1 => $Tuple(dictHeytingAlgebra.disj(v._1)(v1._1), dictHeytingAlgebra1.disj(v._2)(v1._2)),
-      not: v => $Tuple(dictHeytingAlgebra.not(v._1), dictHeytingAlgebra1.not(v._2))
-    }
-  );
-};
+const heytingAlgebraTuple = dictHeytingAlgebra => dictHeytingAlgebra1 => (
+  {
+    tt: $Tuple(dictHeytingAlgebra.tt, dictHeytingAlgebra1.tt),
+    ff: $Tuple(dictHeytingAlgebra.ff, dictHeytingAlgebra1.ff),
+    implies: v => v1 => $Tuple(dictHeytingAlgebra.implies(v._1)(v1._1), dictHeytingAlgebra1.implies(v._2)(v1._2)),
+    conj: v => v1 => $Tuple(dictHeytingAlgebra.conj(v._1)(v1._1), dictHeytingAlgebra1.conj(v._2)(v1._2)),
+    disj: v => v1 => $Tuple(dictHeytingAlgebra.disj(v._1)(v1._1), dictHeytingAlgebra1.disj(v._2)(v1._2)),
+    not: v => $Tuple(dictHeytingAlgebra.not(v._1), dictHeytingAlgebra1.not(v._2))
+  }
+);
 const genericTuple = {to: x => $Tuple(x._1, x._2), from: x => Data$dGeneric$dRep.$Product(x._1, x._2)};
 const functorTuple = {map: f => m => $Tuple(m._1, f(m._2))};
 const invariantTuple = {imap: f => v => m => $Tuple(m._1, f(m._2))};
@@ -110,8 +95,6 @@ const commutativeRingTuple = dictCommutativeRing => {
   };
 };
 const boundedTuple = dictBounded => {
-  const top = dictBounded.top;
-  const bottom = dictBounded.bottom;
   const $0 = dictBounded.Ord0();
   const $1 = $0.Eq0();
   return dictBounded1 => {
@@ -129,7 +112,7 @@ const boundedTuple = dictBounded => {
         Eq0: () => eqTuple2
       };
     })();
-    return {top: $Tuple(top, dictBounded1.top), bottom: $Tuple(bottom, dictBounded1.bottom), Ord0: () => ordTuple2};
+    return {top: $Tuple(dictBounded.top, dictBounded1.top), bottom: $Tuple(dictBounded.bottom, dictBounded1.bottom), Ord0: () => ordTuple2};
   };
 };
 const booleanAlgebraTuple = dictBooleanAlgebra => {

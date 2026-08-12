@@ -3,7 +3,6 @@ import * as Bench from "../Bench/index.js";
 import * as Data_EuclideanRing from "../Data.EuclideanRing/index.js";
 import * as Data_Show from "../Data.Show/index.js";
 import * as Effect_Console from "../Effect.Console/index.js";
-var mod = /* #__PURE__ */ Data_EuclideanRing.mod(Data_EuclideanRing.euclideanRingInt);
 var logShow = /* #__PURE__ */ Effect_Console.logShow(Data_Show.showInt);
 var Nil = /* #__PURE__ */ (function () {
     function Nil() {
@@ -84,8 +83,8 @@ var range = function (start) {
                 var $tco_done = false;
                 var $tco_result;
                 function $tco_loop(curr, acc) {
-                    var $22 = curr < start;
-                    if ($22) {
+                    var $16 = curr < start;
+                    if ($16) {
                         $tco_done = true;
                         return acc;
                     };
@@ -115,8 +114,8 @@ var filter = function (p) {
                         return reverse(v1);
                     };
                     if (v instanceof Cons) {
-                        var $25 = p(v.value0);
-                        if ($25) {
+                        var $19 = p(v.value0);
+                        if ($19) {
                             $tco_var_v = v.value1;
                             $copy_v1 = new Cons(v.value0, v1);
                             return;
@@ -142,7 +141,7 @@ var sieve = function (v) {
     };
     if (v instanceof Cons) {
         return new Cons(v.value0, sieve(filter(function (x) {
-            return mod(x)(v.value0) !== 0;
+            return Data_EuclideanRing.mod(Data_EuclideanRing.euclideanRingInt)(x)(v.value0) !== 0;
         })(v.value1)));
     };
     throw new Error("Failed pattern match at Test.Primes (line 40, column 1 - line 40, column 30): " + [ v.constructor.name ]);

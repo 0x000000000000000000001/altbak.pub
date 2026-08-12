@@ -13,7 +13,8 @@ const monadParWriterT = dictMonoid => {
   const $0 = dictMonoid.Semigroup0();
   const applyWriterT = dictApply => {
     const Functor0 = dictApply.Functor0();
-    const functorWriterT1 = {map: f => Functor0.map(v => Data$dTuple.$Tuple(f(v._1), v._2))};
+    const $1 = dictApply.Functor0();
+    const functorWriterT1 = {map: f => $1.map(v => Data$dTuple.$Tuple(f(v._1), v._2))};
     return {apply: v => v1 => dictApply.apply(Functor0.map(v3 => v4 => Data$dTuple.$Tuple(v3._1(v4._1), $0.append(v3._2)(v4._2)))(v))(v1), Functor0: () => functorWriterT1};
   };
   return dictParallel => {
@@ -75,8 +76,9 @@ const monadParReaderT = dictParallel => {
 const monadParMaybeT = dictParallel => {
   const $0 = dictParallel.Apply1();
   const Functor0 = $0.Functor0();
+  const $1 = $0.Functor0();
   const functorCompose2 = {
-    map: f => v => Functor0.map(v1 => {
+    map: f => v => $1.map(v1 => {
       if (v1.tag === "Just") { return Data$dMaybe.$Maybe("Just", f(v1._1)); }
       return Data$dMaybe.Nothing;
     })(v)
@@ -90,8 +92,9 @@ const monadParMaybeT = dictParallel => {
 const monadParExceptT = dictParallel => {
   const $0 = dictParallel.Apply1();
   const Functor0 = $0.Functor0();
+  const $1 = $0.Functor0();
   const functorCompose2 = {
-    map: f => v => Functor0.map(m => {
+    map: f => v => $1.map(m => {
       if (m.tag === "Left") { return Data$dEither.$Either("Left", m._1); }
       if (m.tag === "Right") { return Data$dEither.$Either("Right", f(m._1)); }
       $runtime.fail();
@@ -148,22 +151,23 @@ const applicativeParCont = dictMonadEffect => {
 const altParCont = dictMonadEffect => {
   const Monad0 = dictMonadEffect.Monad0();
   const Bind1 = Monad0.Bind1();
-  const $0 = Monad0.Applicative0();
+  const Applicative0 = Monad0.Applicative0();
   const functorParCont1 = functorParCont(dictMonadEffect);
   return {
     alt: v => v1 => k => Bind1.bind(dictMonadEffect.liftEffect(() => ({value: false})))(done => Bind1.bind(v(a => Bind1.bind(dictMonadEffect.liftEffect(() => done.value))(b => {
-      if (b) { return $0.pure(); }
+      if (b) { return Applicative0.pure(); }
       return Bind1.bind(dictMonadEffect.liftEffect(() => done.value = true))(() => k(a));
     })))(() => v1(a => Bind1.bind(dictMonadEffect.liftEffect(() => done.value))(b => {
-      if (b) { return $0.pure(); }
+      if (b) { return Applicative0.pure(); }
       return Bind1.bind(dictMonadEffect.liftEffect(() => done.value = true))(() => k(a));
     })))),
     Functor0: () => functorParCont1
   };
 };
 const plusParCont = dictMonadEffect => {
+  const Applicative0 = dictMonadEffect.Monad0().Applicative0();
   const altParCont1 = altParCont(dictMonadEffect);
-  return {empty: v => dictMonadEffect.Monad0().Applicative0().pure(), Alt0: () => altParCont1};
+  return {empty: v => Applicative0.pure(), Alt0: () => altParCont1};
 };
 const alternativeParCont = dictMonadEffect => {
   const applicativeParCont1 = applicativeParCont(dictMonadEffect);

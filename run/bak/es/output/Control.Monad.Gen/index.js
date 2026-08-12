@@ -14,7 +14,8 @@ const unfoldable = dictMonadRec => dictMonadGen => {
   const Monad0 = dictMonadGen.Monad0();
   const $0 = Monad0.Applicative0();
   const Bind1 = Monad0.Bind1();
-  return dictUnfoldable => gen => Bind1.Apply0().Functor0().map(dictUnfoldable.unfoldr(v => {
+  const Functor0 = Monad0.Bind1().Apply0().Functor0();
+  return dictUnfoldable => gen => Functor0.map(dictUnfoldable.unfoldr(v => {
     if (v.tag === "Nil") { return Data$dMaybe.Nothing; }
     if (v.tag === "Cons") { return Data$dMaybe.$Maybe("Just", Data$dTuple.$Tuple(v._1, v._2)); }
     $runtime.fail();
@@ -37,7 +38,7 @@ const semigroupFreqSemigroup = {
   }
 };
 const fromIndex = dictFoldable1 => {
-  const foldMap1 = dictFoldable1.foldMap1(Data$dSemigroup$dLast.semigroupLast);
+  const Foldable0 = dictFoldable1.Foldable0();
   return i => xs => {
     const go = go$a0$copy => go$a1$copy => {
       let go$a0 = go$a0$copy, go$a1 = go$a1$copy, go$c = true, go$r;
@@ -60,20 +61,22 @@ const fromIndex = dictFoldable1 => {
         }
         if (v1.tag === "Nil") {
           go$c = false;
-          go$r = foldMap1(Data$dSemigroup$dLast.Last)(xs);
+          go$r = dictFoldable1.foldMap1(Data$dSemigroup$dLast.semigroupLast)(Data$dSemigroup$dLast.Last)(xs);
           continue;
         }
         $runtime.fail();
       }
       return go$r;
     };
-    return go(i)(dictFoldable1.Foldable0().foldr(Cons)(Nil)(xs));
+    return go(i)(Foldable0.foldr(Cons)(Nil)(xs));
   };
 };
-const oneOf = dictMonadGen => dictFoldable1 => {
-  const length = dictFoldable1.Foldable0().foldl(c => v => 1 + c | 0)(0);
-  const fromIndex1 = fromIndex(dictFoldable1);
-  return xs => dictMonadGen.Monad0().Bind1().bind(dictMonadGen.chooseInt(0)(length(xs) - 1 | 0))(n => fromIndex1(n)(xs));
+const oneOf = dictMonadGen => {
+  const Bind1 = dictMonadGen.Monad0().Bind1();
+  return dictFoldable1 => {
+    const Foldable0 = dictFoldable1.Foldable0();
+    return xs => Bind1.bind(dictMonadGen.chooseInt(0)(Foldable0.foldl(c => v => 1 + c | 0)(0)(xs) - 1 | 0))(n => fromIndex(dictFoldable1)(n)(xs));
+  };
 };
 const freqSemigroup = v => {
   const $0 = v._1;
@@ -83,48 +86,51 @@ const freqSemigroup = v => {
     return Data$dTuple.$Tuple(Data$dMaybe.Nothing, $1);
   };
 };
-const frequency = dictMonadGen => dictFoldable1 => {
-  const foldMap = dictFoldable1.Foldable0().foldMap(monoidAdditive);
-  const foldMap1 = dictFoldable1.foldMap1(semigroupFreqSemigroup);
-  return xs => dictMonadGen.Monad0().Bind1().bind(dictMonadGen.chooseFloat(0.0)(foldMap(Data$dTuple.fst)(xs)))((() => {
-    const $0 = foldMap1(freqSemigroup)(xs);
-    return x => $0(x)._2;
-  })());
+const frequency = dictMonadGen => {
+  const Bind1 = dictMonadGen.Monad0().Bind1();
+  return dictFoldable1 => {
+    const foldMap = dictFoldable1.Foldable0().foldMap(monoidAdditive);
+    return xs => Bind1.bind(dictMonadGen.chooseFloat(0.0)(foldMap(Data$dTuple.fst)(xs)))((() => {
+      const $0 = dictFoldable1.foldMap1(semigroupFreqSemigroup)(freqSemigroup)(xs);
+      return x => $0(x)._2;
+    })());
+  };
 };
 const filtered = dictMonadRec => dictMonadGen => {
-  const $0 = dictMonadGen.Monad0().Bind1().Apply0().Functor0();
-  return gen => dictMonadRec.tailRecM(v => $0.map(a => {
+  const Functor0 = dictMonadGen.Monad0().Bind1().Apply0().Functor0();
+  return gen => dictMonadRec.tailRecM(v => Functor0.map(a => {
     if (a.tag === "Nothing") { return Control$dMonad$dRec$dClass.$Step("Loop", undefined); }
     if (a.tag === "Just") { return Control$dMonad$dRec$dClass.$Step("Done", a._1); }
     $runtime.fail();
   })(gen))();
 };
 const suchThat = dictMonadRec => dictMonadGen => {
-  const $0 = dictMonadGen.Monad0().Bind1().Apply0().Functor0();
-  const $1 = dictMonadGen.Monad0().Bind1().Apply0().Functor0();
+  const Functor0 = dictMonadGen.Monad0().Bind1().Apply0().Functor0();
+  const Functor0$1 = dictMonadGen.Monad0().Bind1().Apply0().Functor0();
   return gen => pred => {
-    const $2 = $1.map(a => {
+    const $0 = Functor0$1.map(a => {
       if (pred(a)) { return Data$dMaybe.$Maybe("Just", a); }
       return Data$dMaybe.Nothing;
     })(gen);
-    return dictMonadRec.tailRecM(v => $0.map(a => {
+    return dictMonadRec.tailRecM(v => Functor0.map(a => {
       if (a.tag === "Nothing") { return Control$dMonad$dRec$dClass.$Step("Loop", undefined); }
       if (a.tag === "Just") { return Control$dMonad$dRec$dClass.$Step("Done", a._1); }
       $runtime.fail();
-    })($2))();
+    })($0))();
   };
 };
 const elements = dictMonadGen => {
   const Monad0 = dictMonadGen.Monad0();
+  const Bind1 = Monad0.Bind1();
   return dictFoldable1 => {
-    const length = dictFoldable1.Foldable0().foldl(c => v => 1 + c | 0)(0);
-    const fromIndex1 = fromIndex(dictFoldable1);
-    return xs => Monad0.Bind1().bind(dictMonadGen.chooseInt(0)(length(xs) - 1 | 0))(n => Monad0.Applicative0().pure(fromIndex1(n)(xs)));
+    const Foldable0 = dictFoldable1.Foldable0();
+    return xs => Bind1.bind(dictMonadGen.chooseInt(0)(Foldable0.foldl(c => v => 1 + c | 0)(0)(xs) - 1 | 0))(n => Monad0.Applicative0().pure(fromIndex(dictFoldable1)(n)(xs)));
   };
 };
 const choose = dictMonadGen => {
+  const Bind1 = dictMonadGen.Monad0().Bind1();
   const chooseBool = dictMonadGen.chooseBool;
-  return genA => genB => dictMonadGen.Monad0().Bind1().bind(chooseBool)(v => {
+  return genA => genB => Bind1.bind(chooseBool)(v => {
     if (v) { return genA; }
     return genB;
   });

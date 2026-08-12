@@ -106,7 +106,7 @@ v_3_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), v
 _ = v_3_0
 var __t1 gopurs_runtime.Value
 {
-if (v_3_0.Type == 9 && v_3_0.IntVal == 1527465420) {
+if (uint32(v_3_0.IntVal) == 1527465420) {
 __t1 = v1_2
 goto end_branch_1
 } else {
@@ -114,7 +114,7 @@ goto end_branch_1
 }
 }
 {
-if (v_3_0.Type == 9 && v_3_0.IntVal == 902936544) {
+if (uint32(v_3_0.IntVal) == 902936544) {
 __t1 = v_1
 goto end_branch_1
 } else {
@@ -122,7 +122,7 @@ goto end_branch_1
 }
 }
 {
-if (v_3_0.Type == 9 && v_3_0.IntVal == 380165415) {
+if (uint32(v_3_0.IntVal) == 380165415) {
 __t1 = v_1
 goto end_branch_1
 } else {
@@ -149,7 +149,7 @@ v_4_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_1, "compar
 _ = v_4_2
 var __t3 gopurs_runtime.Value
 {
-if (v_4_2.Type == 9 && v_4_2.IntVal == 1527465420) {
+if (uint32(v_4_2.IntVal) == 1527465420) {
 __t3 = v1_3
 goto end_branch_3
 } else {
@@ -157,7 +157,7 @@ goto end_branch_3
 }
 }
 {
-if (v_4_2.Type == 9 && v_4_2.IntVal == 902936544) {
+if (uint32(v_4_2.IntVal) == 902936544) {
 __t3 = v_2
 goto end_branch_3
 } else {
@@ -165,7 +165,7 @@ goto end_branch_3
 }
 }
 {
-if (v_4_2.Type == 9 && v_4_2.IntVal == 380165415) {
+if (uint32(v_4_2.IntVal) == 380165415) {
 __t3 = v_2
 goto end_branch_3
 } else {
@@ -200,7 +200,7 @@ return gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_do
 return eqMax1_1_0
 }), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), v_2, v1_3)
+return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), v_2, v1_3).IntVal)), UnsafePtr: nil}
 })
 }))
 }

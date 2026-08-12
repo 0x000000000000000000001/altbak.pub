@@ -1,0 +1,185 @@
+================================
+  Running test RBTree...  
+================================
+
+Building...
+=== JS V8 ===
+--------------------------------------------------
+
+(Test)
+
+Red-Black Tree (100k Worst-Case Insertions):
+
+(Output)
+
+22
+
+(Execution time)
+
+98616.67 μs
+
+
+Building...
+=== Arista ES V8 ===
+--------------------------------------------------
+
+(Test)
+
+Red-Black Tree (100k Worst-Case Insertions):
+
+(Output)
+
+22
+
+(Execution time)
+
+54806.58 μs
+
+
+Building...
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: ps-php-test
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Compiling with backend "../phpurs/phpurs/bin/phpurs"
+Writing main.mod.php for AppX
+
+✓ Backend build succeeded.
+
+=== PHP ===
+Loading composer repositories with package information
+Updating dependencies
+Nothing to modify in lock file
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Nothing to install, update or remove
+Generating autoload files
+No security vulnerability advisories found.
+--------------------------------------------------
+
+(Test)
+
+Red-Black Tree (100k Worst-Case Insertions):
+
+(Output)
+
+22
+
+(Execution time)
+
+456117.00 μs
+
+
+Building...
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: ps-go-test
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Compiling with backend "../gopurs/gopurs/bin/gopurs"
+ENUM ADTS: ["Data.Date.Component.Month","Data.Date.Component.Weekday","Data.Generic.Rep.NoArguments","Data.Int.Parity","Data.Interval.Duration.DurationComponent","Data.Ordering.Ordering","Data.Reflectable.Reifiable","Test.RBTree.Color","Type.Proxy.Proxy"]
+
+✓ Backend build succeeded.
+
+ENUM ADTS: ["Data.Date.Component.Month","Data.Date.Component.Weekday","Data.Generic.Rep.NoArguments","Data.Int.Parity","Data.Interval.Duration.DurationComponent","Data.Ordering.Ordering","Data.Reflectable.Reifiable","Test.RBTree.Color","Type.Proxy.Proxy"]
+=== Go ===
+# gopurs/output/Data.Ord
+Data.Ord/Data_Ord.go:745:5: declared and not used: __t_tag_1
+Data.Ord/Data_Ord.go:769:5: declared and not used: __t_tag_1
+Data.Ord/Data_Ord.go:793:5: declared and not used: __t_tag_1
+Data.Ord/Data_Ord.go:817:5: declared and not used: __t_tag_1
+Data.Ord/Data_Ord.go:841:5: declared and not used: __t_tag_1
+Data.Ord/Data_Ord.go:865:5: declared and not used: __t_tag_1
+Data.Ord/Data_Ord.go:898:5: declared and not used: __t_tag_9
+Data.Ord/Data_Ord.go:922:5: declared and not used: __t_tag_6
+Data.Ord/Data_Ord.go:961:5: declared and not used: __t_tag_1
+Data.Ord/Data_Ord.go:985:5: declared and not used: __t_tag_1
+Data.Ord/Data_Ord.go:985:5: too many errors
+=== Go (gopurs) failed ===
+
+Building CoreFn for Gnomon...
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: ps-gnomon-test
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Generating Go via Gnomon...
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: backend-go
+
+Adding dependency ranges to the config in "spago.yaml"
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+=== Gnomon Go ===
+--------------------------------------------------
+
+(Test)
+
+Red-Black Tree (100k Worst-Case Insertions):
+
+(Output)
+
+22
+
+(Execution time)
+
+585017.00 μs
+
+
+Building...
+=== C# failed ===
+
+Building...
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: ps-scheme-test
+
+Downloading dependencies...
+Building...
+[ERROR 1/1 ModuleNotFound] src/Bench.purs:5:1
+
+  5  import Effect.Aff (Aff)
+     ^^^^^^^^^^^^^^^^^^^^^^^
+
+  Module Effect.Aff was not found.
+  Make sure the source file exists, and that it has been provided as an input to the compiler.
+
+           Src   Lib   All
+Warnings     0     0     0
+Errors       1     0     1
+
+✘ Failed to build.
+
+=== Scheme failed ===
+
+Building...
+=== Erlang failed ===

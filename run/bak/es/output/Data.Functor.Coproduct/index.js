@@ -27,26 +27,18 @@ const functorCoproduct = dictFunctor => dictFunctor1 => (
 );
 const eq1Coproduct = dictEq1 => dictEq11 => (
   {
-    eq1: dictEq => {
-      const eq12 = dictEq1.eq1(dictEq);
-      const eq13 = dictEq11.eq1(dictEq);
-      return v => v1 => {
-        if (v.tag === "Left") { return v1.tag === "Left" && eq12(v._1)(v1._1); }
-        return v.tag === "Right" && v1.tag === "Right" && eq13(v._1)(v1._1);
-      };
+    eq1: dictEq => v => v1 => {
+      if (v.tag === "Left") { return v1.tag === "Left" && dictEq1.eq1(dictEq)(v._1)(v1._1); }
+      return v.tag === "Right" && v1.tag === "Right" && dictEq11.eq1(dictEq)(v._1)(v1._1);
     }
   }
 );
 const eqCoproduct = dictEq1 => dictEq11 => dictEq => (
   {
-    eq: (() => {
-      const eq12 = dictEq1.eq1(dictEq);
-      const eq13 = dictEq11.eq1(dictEq);
-      return v => v1 => {
-        if (v.tag === "Left") { return v1.tag === "Left" && eq12(v._1)(v1._1); }
-        return v.tag === "Right" && v1.tag === "Right" && eq13(v._1)(v1._1);
-      };
-    })()
+    eq: v => v1 => {
+      if (v.tag === "Left") { return v1.tag === "Left" && dictEq1.eq1(dictEq)(v._1)(v1._1); }
+      return v.tag === "Right" && v1.tag === "Right" && dictEq11.eq1(dictEq)(v._1)(v1._1);
+    }
   }
 );
 const ord1Coproduct = dictOrd1 => {
@@ -54,28 +46,20 @@ const ord1Coproduct = dictOrd1 => {
   return dictOrd11 => {
     const $1 = dictOrd11.Eq10();
     const eq1Coproduct2 = {
-      eq1: dictEq => {
-        const eq12 = $0.eq1(dictEq);
-        const eq13 = $1.eq1(dictEq);
-        return v => v1 => {
-          if (v.tag === "Left") { return v1.tag === "Left" && eq12(v._1)(v1._1); }
-          return v.tag === "Right" && v1.tag === "Right" && eq13(v._1)(v1._1);
-        };
+      eq1: dictEq => v => v1 => {
+        if (v.tag === "Left") { return v1.tag === "Left" && $0.eq1(dictEq)(v._1)(v1._1); }
+        return v.tag === "Right" && v1.tag === "Right" && $1.eq1(dictEq)(v._1)(v1._1);
       }
     };
     return {
-      compare1: dictOrd => {
-        const compare12 = dictOrd1.compare1(dictOrd);
-        const compare13 = dictOrd11.compare1(dictOrd);
-        return v => v1 => {
-          if (v.tag === "Left") {
-            if (v1.tag === "Left") { return compare12(v._1)(v1._1); }
-            return Data$dOrdering.LT;
-          }
-          if (v1.tag === "Left") { return Data$dOrdering.GT; }
-          if (v.tag === "Right" && v1.tag === "Right") { return compare13(v._1)(v1._1); }
-          $runtime.fail();
-        };
+      compare1: dictOrd => v => v1 => {
+        if (v.tag === "Left") {
+          if (v1.tag === "Left") { return dictOrd1.compare1(dictOrd)(v._1)(v1._1); }
+          return Data$dOrdering.LT;
+        }
+        if (v1.tag === "Left") { return Data$dOrdering.GT; }
+        if (v.tag === "Right" && v1.tag === "Right") { return dictOrd11.compare1(dictOrd)(v._1)(v1._1); }
+        $runtime.fail();
       },
       Eq10: () => eq1Coproduct2
     };
@@ -89,14 +73,10 @@ const ordCoproduct = dictOrd1 => {
     return dictOrd => {
       const $2 = dictOrd.Eq0();
       const eqCoproduct3 = {
-        eq: (() => {
-          const eq12 = $0.eq1($2);
-          const eq13 = $1.eq1($2);
-          return v => v1 => {
-            if (v.tag === "Left") { return v1.tag === "Left" && eq12(v._1)(v1._1); }
-            return v.tag === "Right" && v1.tag === "Right" && eq13(v._1)(v1._1);
-          };
-        })()
+        eq: v => v1 => {
+          if (v.tag === "Left") { return v1.tag === "Left" && $0.eq1($2)(v._1)(v1._1); }
+          return v.tag === "Right" && v1.tag === "Right" && $1.eq1($2)(v._1)(v1._1);
+        }
       };
       return {compare: ord1Coproduct1(dictOrd11).compare1(dictOrd), Eq0: () => eqCoproduct3};
     };

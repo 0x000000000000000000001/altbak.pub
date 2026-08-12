@@ -22,69 +22,61 @@ const genericPred = dictGeneric => dictGenericEnum => x => {
 };
 const genericFromEnum$p = dict => dict["genericFromEnum'"];
 const genericFromEnum = dictGeneric => dictGenericBoundedEnum => x => dictGenericBoundedEnum["genericFromEnum'"](dictGeneric.from(x));
-const genericEnumSum = dictGenericEnum => dictGenericTop => {
-  const genericTop$p = dictGenericTop["genericTop'"];
-  return dictGenericEnum1 => dictGenericBottom => {
-    const genericBottom$p = dictGenericBottom["genericBottom'"];
-    return {
-      "genericPred'": v => {
-        if (v.tag === "Inl") {
-          const $0 = dictGenericEnum["genericPred'"](v._1);
-          if ($0.tag === "Just") { return Data$dMaybe.$Maybe("Just", Data$dGeneric$dRep.$Sum("Inl", $0._1)); }
-          return Data$dMaybe.Nothing;
-        }
-        if (v.tag === "Inr") {
-          const v1 = dictGenericEnum1["genericPred'"](v._1);
-          if (v1.tag === "Nothing") { return Data$dMaybe.$Maybe("Just", Data$dGeneric$dRep.$Sum("Inl", genericTop$p)); }
-          if (v1.tag === "Just") { return Data$dMaybe.$Maybe("Just", Data$dGeneric$dRep.$Sum("Inr", v1._1)); }
-        }
-        $runtime.fail();
-      },
-      "genericSucc'": v => {
-        if (v.tag === "Inl") {
-          const v1 = dictGenericEnum["genericSucc'"](v._1);
-          if (v1.tag === "Nothing") { return Data$dMaybe.$Maybe("Just", Data$dGeneric$dRep.$Sum("Inr", genericBottom$p)); }
-          if (v1.tag === "Just") { return Data$dMaybe.$Maybe("Just", Data$dGeneric$dRep.$Sum("Inl", v1._1)); }
-          $runtime.fail();
-        }
-        if (v.tag === "Inr") {
-          const $0 = dictGenericEnum1["genericSucc'"](v._1);
-          if ($0.tag === "Just") { return Data$dMaybe.$Maybe("Just", Data$dGeneric$dRep.$Sum("Inr", $0._1)); }
-          return Data$dMaybe.Nothing;
-        }
+const genericEnumSum = dictGenericEnum => dictGenericTop => dictGenericEnum1 => dictGenericBottom => (
+  {
+    "genericPred'": v => {
+      if (v.tag === "Inl") {
+        const $0 = dictGenericEnum["genericPred'"](v._1);
+        if ($0.tag === "Just") { return Data$dMaybe.$Maybe("Just", Data$dGeneric$dRep.$Sum("Inl", $0._1)); }
+        return Data$dMaybe.Nothing;
+      }
+      if (v.tag === "Inr") {
+        const v1 = dictGenericEnum1["genericPred'"](v._1);
+        if (v1.tag === "Nothing") { return Data$dMaybe.$Maybe("Just", Data$dGeneric$dRep.$Sum("Inl", dictGenericTop["genericTop'"])); }
+        if (v1.tag === "Just") { return Data$dMaybe.$Maybe("Just", Data$dGeneric$dRep.$Sum("Inr", v1._1)); }
+      }
+      $runtime.fail();
+    },
+    "genericSucc'": v => {
+      if (v.tag === "Inl") {
+        const v1 = dictGenericEnum["genericSucc'"](v._1);
+        if (v1.tag === "Nothing") { return Data$dMaybe.$Maybe("Just", Data$dGeneric$dRep.$Sum("Inr", dictGenericBottom["genericBottom'"])); }
+        if (v1.tag === "Just") { return Data$dMaybe.$Maybe("Just", Data$dGeneric$dRep.$Sum("Inl", v1._1)); }
         $runtime.fail();
       }
-    };
-  };
-};
-const genericEnumProduct = dictGenericEnum => dictGenericTop => dictGenericBottom => dictGenericEnum1 => dictGenericTop1 => {
-  const genericTop$p = dictGenericTop1["genericTop'"];
-  return dictGenericBottom1 => {
-    const genericBottom$p = dictGenericBottom1["genericBottom'"];
-    return {
-      "genericPred'": v => {
-        const v1 = dictGenericEnum1["genericPred'"](v._2);
-        if (v1.tag === "Just") { return Data$dMaybe.$Maybe("Just", Data$dGeneric$dRep.$Product(v._1, v1._1)); }
-        if (v1.tag === "Nothing") {
-          const $0 = dictGenericEnum["genericPred'"](v._1);
-          if ($0.tag === "Just") { return Data$dMaybe.$Maybe("Just", Data$dGeneric$dRep.$Product($0._1, genericTop$p)); }
-          return Data$dMaybe.Nothing;
-        }
-        $runtime.fail();
-      },
-      "genericSucc'": v => {
-        const v1 = dictGenericEnum1["genericSucc'"](v._2);
-        if (v1.tag === "Just") { return Data$dMaybe.$Maybe("Just", Data$dGeneric$dRep.$Product(v._1, v1._1)); }
-        if (v1.tag === "Nothing") {
-          const $0 = dictGenericEnum["genericSucc'"](v._1);
-          if ($0.tag === "Just") { return Data$dMaybe.$Maybe("Just", Data$dGeneric$dRep.$Product($0._1, genericBottom$p)); }
-          return Data$dMaybe.Nothing;
-        }
-        $runtime.fail();
+      if (v.tag === "Inr") {
+        const $0 = dictGenericEnum1["genericSucc'"](v._1);
+        if ($0.tag === "Just") { return Data$dMaybe.$Maybe("Just", Data$dGeneric$dRep.$Sum("Inr", $0._1)); }
+        return Data$dMaybe.Nothing;
       }
-    };
-  };
-};
+      $runtime.fail();
+    }
+  }
+);
+const genericEnumProduct = dictGenericEnum => dictGenericTop => dictGenericBottom => dictGenericEnum1 => dictGenericTop1 => dictGenericBottom1 => (
+  {
+    "genericPred'": v => {
+      const v1 = dictGenericEnum1["genericPred'"](v._2);
+      if (v1.tag === "Just") { return Data$dMaybe.$Maybe("Just", Data$dGeneric$dRep.$Product(v._1, v1._1)); }
+      if (v1.tag === "Nothing") {
+        const $0 = dictGenericEnum["genericPred'"](v._1);
+        if ($0.tag === "Just") { return Data$dMaybe.$Maybe("Just", Data$dGeneric$dRep.$Product($0._1, dictGenericTop1["genericTop'"])); }
+        return Data$dMaybe.Nothing;
+      }
+      $runtime.fail();
+    },
+    "genericSucc'": v => {
+      const v1 = dictGenericEnum1["genericSucc'"](v._2);
+      if (v1.tag === "Just") { return Data$dMaybe.$Maybe("Just", Data$dGeneric$dRep.$Product(v._1, v1._1)); }
+      if (v1.tag === "Nothing") {
+        const $0 = dictGenericEnum["genericSucc'"](v._1);
+        if ($0.tag === "Just") { return Data$dMaybe.$Maybe("Just", Data$dGeneric$dRep.$Product($0._1, dictGenericBottom1["genericBottom'"])); }
+        return Data$dMaybe.Nothing;
+      }
+      $runtime.fail();
+    }
+  }
+);
 const genericEnumNoArguments = {"genericPred'": v => Data$dMaybe.Nothing, "genericSucc'": v => Data$dMaybe.Nothing};
 const genericEnumConstructor = dictGenericEnum => (
   {

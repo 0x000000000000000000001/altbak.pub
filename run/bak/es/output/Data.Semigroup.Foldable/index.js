@@ -1,12 +1,10 @@
 import * as $runtime from "../runtime.js";
-import * as Control$dApply from "../Control.Apply/index.js";
 import * as Data$dFoldable from "../Data.Foldable/index.js";
 import * as Data$dFunction from "../Data.Function/index.js";
 import * as Unsafe$dCoerce from "../Unsafe.Coerce/index.js";
 const $FoldRight1 = (_1, _2) => ({tag: "FoldRight1", _1, _2});
 const identity = x => x;
 const FoldRight1 = value0 => value1 => $FoldRight1(value0, value1);
-const semigroupAct = dictApply => ({append: v => v1 => dictApply.apply(dictApply.Functor0().map(v$1 => Control$dApply.identity)(v))(v1)});
 const mkFoldRight1 = /* #__PURE__ */ FoldRight1(Data$dFunction.const);
 const foldr1 = dict => dict.foldr1;
 const foldl1 = dict => dict.foldl1;
@@ -66,15 +64,15 @@ const foldr1Default = dictFoldable1 => {
   };
 };
 const intercalateMap = dictFoldable1 => dictSemigroup => {
-  const foldMap12 = dictFoldable1.foldMap1({append: v => v1 => j => dictSemigroup.append(v(j))(dictSemigroup.append(j)(v1(j)))});
-  return j => f => foldable => foldMap12(x => {
+  const semigroupJoinWith1 = {append: v => v1 => j => dictSemigroup.append(v(j))(dictSemigroup.append(j)(v1(j)))};
+  return j => f => foldable => dictFoldable1.foldMap1(semigroupJoinWith1)(x => {
     const $0 = f(x);
     return v => $0;
   })(foldable)(j);
 };
 const intercalate = dictFoldable1 => dictSemigroup => {
-  const foldMap12 = dictFoldable1.foldMap1({append: v => v1 => j => dictSemigroup.append(v(j))(dictSemigroup.append(j)(v1(j)))});
-  return a => foldable => foldMap12(x => v => x)(foldable)(a);
+  const semigroupJoinWith1 = {append: v => v1 => j => dictSemigroup.append(v(j))(dictSemigroup.append(j)(v1(j)))};
+  return a => foldable => dictFoldable1.foldMap1(semigroupJoinWith1)(x => v => x)(foldable)(a);
 };
 const maximum = dictOrd => {
   const semigroupMax = {
@@ -101,15 +99,20 @@ const minimum = dictOrd => {
   return dictFoldable1 => dictFoldable1.foldMap1(semigroupMin)(Unsafe$dCoerce.unsafeCoerce);
 };
 const traverse1_ = dictFoldable1 => dictApply => {
-  const $0 = dictApply.Functor0();
-  const foldMap12 = dictFoldable1.foldMap1(semigroupAct(dictApply));
-  return f => t => $0.map(v => {})(foldMap12(x => f(x))(t));
+  const Functor0 = dictApply.Functor0();
+  const semigroupAct1 = {append: v => v1 => dictApply.apply(dictApply.Functor0().map(v$1 => x => x)(v))(v1)};
+  return f => t => Functor0.map(v => {})(dictFoldable1.foldMap1(semigroupAct1)(x => f(x))(t));
 };
 const for1_ = dictFoldable1 => dictApply => {
-  const $0 = traverse1_(dictFoldable1)(dictApply);
-  return b => a => $0(a)(b);
+  const Functor0 = dictApply.Functor0();
+  const semigroupAct1 = {append: v => v1 => dictApply.apply(dictApply.Functor0().map(v$1 => x => x)(v))(v1)};
+  return b => a => Functor0.map(v => {})(dictFoldable1.foldMap1(semigroupAct1)(x => a(x))(b));
 };
-const sequence1_ = dictFoldable1 => dictApply => traverse1_(dictFoldable1)(dictApply)(identity);
+const sequence1_ = dictFoldable1 => dictApply => {
+  const Functor0 = dictApply.Functor0();
+  const semigroupAct1 = {append: v => v1 => dictApply.apply(dictApply.Functor0().map(v$1 => x => x)(v))(v1)};
+  return t => Functor0.map(v => {})(dictFoldable1.foldMap1(semigroupAct1)(x => x)(t));
+};
 const fold1 = dictFoldable1 => dictSemigroup => dictFoldable1.foldMap1(dictSemigroup)(identity);
 export {
   $FoldRight1,
@@ -136,7 +139,6 @@ export {
   minimum,
   minimumBy,
   mkFoldRight1,
-  semigroupAct,
   semigroupDual,
   sequence1_,
   traverse1_

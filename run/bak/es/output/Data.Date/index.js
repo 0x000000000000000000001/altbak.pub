@@ -8,6 +8,26 @@ import * as Data$dOrdering from "../Data.Ordering/index.js";
 import * as Data$dShow from "../Data.Show/index.js";
 import {calcDiff, calcWeekday, canonicalDateImpl} from "./foreign.js";
 const $$$Date = (_1, _2, _3) => ({tag: "Date", _1, _2, _3});
+const ordMaybe = /* #__PURE__ */ (() => {
+  const eqMaybe1 = {
+    eq: x => y => {
+      if (x.tag === "Nothing") { return y.tag === "Nothing"; }
+      return x.tag === "Just" && y.tag === "Just" && x._1 === y._1;
+    }
+  };
+  return {
+    compare: x => y => {
+      if (x.tag === "Nothing") {
+        if (y.tag === "Nothing") { return Data$dOrdering.EQ; }
+        return Data$dOrdering.LT;
+      }
+      if (y.tag === "Nothing") { return Data$dOrdering.GT; }
+      if (x.tag === "Just" && y.tag === "Just") { return Data$dOrd.ordInt.compare(x._1)(y._1); }
+      $runtime.fail();
+    },
+    Eq0: () => eqMaybe1
+  };
+})();
 const $$Date = value0 => value1 => value2 => $$$Date(value0, value1, value2);
 const year = v => v._1;
 const weekday = v => {
@@ -110,14 +130,7 @@ const enumDate = {
     const sm = Data$dDate$dComponent.enumMonth.succ(v._2);
     const $0 = v._3 + 1 | 0;
     const v1 = $0 >= 1 && $0 <= 31 ? Data$dMaybe.$Maybe("Just", $0) : Data$dMaybe.Nothing;
-    if (
-      (() => {
-        const $1 = lastDayOfMonth(v._1)(v._2);
-        if (v1.tag === "Nothing") { return false; }
-        if (v1.tag === "Just") { return v1._1 > $1; }
-        $runtime.fail();
-      })()
-    ) {
+    if (ordMaybe.compare(v1)(Data$dMaybe.$Maybe("Just", lastDayOfMonth(v._1)(v._2))) === "GT") {
       if (
         (() => {
           if (sm.tag === "Nothing") { return true; }
@@ -366,5 +379,24 @@ const adjust = v => date => {
   if ($0.tag === "Nothing") { return Data$dMaybe.Nothing; }
   $runtime.fail();
 };
-export {$$$Date, $$Date as Date, adjust, boundedDate, canonicalDate, day, diff, enumDate, eqDate, exactDate, isLeapYear, lastDayOfMonth, month, ordDate, showDate, weekday, year};
+export {
+  $$$Date,
+  $$Date as Date,
+  adjust,
+  boundedDate,
+  canonicalDate,
+  day,
+  diff,
+  enumDate,
+  eqDate,
+  exactDate,
+  isLeapYear,
+  lastDayOfMonth,
+  month,
+  ordDate,
+  ordMaybe,
+  showDate,
+  weekday,
+  year
+};
 export * from "./foreign.js";

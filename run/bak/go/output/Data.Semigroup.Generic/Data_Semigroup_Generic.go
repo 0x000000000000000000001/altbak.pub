@@ -26,7 +26,7 @@ func Get_genericSemigroupNoArguments() gopurs_runtime.Value {
 	once_genericSemigroupNoArguments.Do(func() {
 		cache_genericSemigroupNoArguments = gopurs_runtime.RecordDict1("genericAppend'", gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return a_0
+return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(a_0.IntVal)), UnsafePtr: nil}
 })
 }))
 	})

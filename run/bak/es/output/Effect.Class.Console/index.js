@@ -15,7 +15,8 @@ const grouped = dictMonadEffect => {
   const Monad0 = dictMonadEffect.Monad0();
   const Bind1 = Monad0.Bind1();
   const groupEnd1 = dictMonadEffect.liftEffect(Effect$dConsole.groupEnd);
-  return name => inner => Bind1.bind(dictMonadEffect.liftEffect(Effect$dConsole.group(name)))(() => Bind1.bind(inner)(result => Bind1.bind(groupEnd1)(() => Monad0.Applicative0().pure(result))));
+  const Applicative0 = Monad0.Applicative0();
+  return name => inner => Bind1.bind(dictMonadEffect.liftEffect(Effect$dConsole.group(name)))(() => Bind1.bind(inner)(result => Bind1.bind(groupEnd1)(() => Applicative0.pure(result))));
 };
 const errorShow = dictMonadEffect => dictShow => x => dictMonadEffect.liftEffect(Effect$dConsole.error(dictShow.show(x)));
 const error = dictMonadEffect => x => dictMonadEffect.liftEffect(Effect$dConsole.error(x));

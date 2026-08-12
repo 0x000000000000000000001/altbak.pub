@@ -25,9 +25,6 @@ const eqRowCons = dictEqRecord => () => dictIsSymbol => dictEq => (
   }
 );
 const notEq = dictEq => x => y => !dictEq.eq(x)(y);
-const notEq1 = dictEq1 => dictEq => {
-  const eq12 = dictEq1.eq1(dictEq);
-  return x => y => !eq12(x)(y);
-};
+const notEq1 = dictEq1 => dictEq => x => y => !dictEq1.eq1(dictEq)(x)(y);
 export {eq, eq1, eq1Array, eqArray, eqBoolean, eqChar, eqInt, eqNumber, eqProxy, eqRec, eqRecord, eqRowCons, eqRowNil, eqString, eqUnit, eqVoid, notEq, notEq1};
 export * from "./foreign.js";

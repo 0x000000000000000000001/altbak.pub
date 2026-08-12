@@ -1,9 +1,10 @@
 import * as Control$dApplicative from "../Control.Applicative/index.js";
 import * as Control$dPlus from "../Control.Plus/index.js";
 const guard = dictAlternative => {
+  const Applicative0 = dictAlternative.Applicative0();
   const empty = dictAlternative.Plus1().empty;
   return v => {
-    if (v) { return dictAlternative.Applicative0().pure(); }
+    if (v) { return Applicative0.pure(); }
     return empty;
   };
 };

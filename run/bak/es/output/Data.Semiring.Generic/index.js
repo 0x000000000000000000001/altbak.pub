@@ -23,18 +23,14 @@ const genericSemiringConstructor = dictGenericSemiring => (
     "genericOne'": dictGenericSemiring["genericOne'"]
   }
 );
-const genericSemiringProduct = dictGenericSemiring => {
-  const genericZero$p1 = dictGenericSemiring["genericZero'"];
-  const genericOne$p1 = dictGenericSemiring["genericOne'"];
-  return dictGenericSemiring1 => (
-    {
-      "genericAdd'": v => v1 => Data$dGeneric$dRep.$Product(dictGenericSemiring["genericAdd'"](v._1)(v1._1), dictGenericSemiring1["genericAdd'"](v._2)(v1._2)),
-      "genericZero'": Data$dGeneric$dRep.$Product(genericZero$p1, dictGenericSemiring1["genericZero'"]),
-      "genericMul'": v => v1 => Data$dGeneric$dRep.$Product(dictGenericSemiring["genericMul'"](v._1)(v1._1), dictGenericSemiring1["genericMul'"](v._2)(v1._2)),
-      "genericOne'": Data$dGeneric$dRep.$Product(genericOne$p1, dictGenericSemiring1["genericOne'"])
-    }
-  );
-};
+const genericSemiringProduct = dictGenericSemiring => dictGenericSemiring1 => (
+  {
+    "genericAdd'": v => v1 => Data$dGeneric$dRep.$Product(dictGenericSemiring["genericAdd'"](v._1)(v1._1), dictGenericSemiring1["genericAdd'"](v._2)(v1._2)),
+    "genericZero'": Data$dGeneric$dRep.$Product(dictGenericSemiring["genericZero'"], dictGenericSemiring1["genericZero'"]),
+    "genericMul'": v => v1 => Data$dGeneric$dRep.$Product(dictGenericSemiring["genericMul'"](v._1)(v1._1), dictGenericSemiring1["genericMul'"](v._2)(v1._2)),
+    "genericOne'": Data$dGeneric$dRep.$Product(dictGenericSemiring["genericOne'"], dictGenericSemiring1["genericOne'"])
+  }
+);
 const genericAdd = dictGeneric => dictGenericSemiring => x => y => dictGeneric.to(dictGenericSemiring["genericAdd'"](dictGeneric.from(x))(dictGeneric.from(y)));
 export {
   genericAdd,

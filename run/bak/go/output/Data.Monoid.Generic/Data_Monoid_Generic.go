@@ -11,7 +11,7 @@ var cache_genericMonoidNoArguments gopurs_runtime.Value
 var once_genericMonoidNoArguments sync.Once
 func Get_genericMonoidNoArguments() gopurs_runtime.Value {
 	once_genericMonoidNoArguments.Do(func() {
-		cache_genericMonoidNoArguments = gopurs_runtime.RecordDict1("genericMempty'", gopurs_runtime.Value{Type: 9, IntVal: 1454898258, UnsafePtr: unsafe.Pointer(nil)})
+		cache_genericMonoidNoArguments = gopurs_runtime.RecordDict1("genericMempty'", gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Value{Type: 9, IntVal: int64(1454898258), UnsafePtr: nil}.IntVal)), UnsafePtr: nil})
 	})
 	return cache_genericMonoidNoArguments
 }

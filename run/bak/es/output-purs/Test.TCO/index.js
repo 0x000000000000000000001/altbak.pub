@@ -3,7 +3,6 @@ import * as Bench from "../Bench/index.js";
 import * as Data_EuclideanRing from "../Data.EuclideanRing/index.js";
 import * as Data_Show from "../Data.Show/index.js";
 import * as Effect_Console from "../Effect.Console/index.js";
-var mod = /* #__PURE__ */ Data_EuclideanRing.mod(Data_EuclideanRing.euclideanRingInt);
 var logShow = /* #__PURE__ */ Effect_Console.logShow(Data_Show.showInt);
 var describe = /* #__PURE__ */ Effect_Console.log("Tail Call Optimization (100k calls):");
 var deepTailRec = function ($copy_v) {
@@ -17,7 +16,7 @@ var deepTailRec = function ($copy_v) {
                 return v1;
             };
             $tco_var_v = v - 1 | 0;
-            $copy_v1 = v1 + mod(v)(3) | 0;
+            $copy_v1 = v1 + Data_EuclideanRing.mod(Data_EuclideanRing.euclideanRingInt)(v)(3) | 0;
             return;
         };
         while (!$tco_done) {

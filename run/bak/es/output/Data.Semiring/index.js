@@ -22,11 +22,9 @@ const semiringRecord = () => dictSemiringRecord => (
   }
 );
 const add = dict => dict.add;
-const semiringFn = dictSemiring => {
-  const zero1 = dictSemiring.zero;
-  const one1 = dictSemiring.one;
-  return {add: f => g => x => dictSemiring.add(f(x))(g(x)), zero: v => zero1, mul: f => g => x => dictSemiring.mul(f(x))(g(x)), one: v => one1};
-};
+const semiringFn = dictSemiring => (
+  {add: f => g => x => dictSemiring.add(f(x))(g(x)), zero: v => dictSemiring.zero, mul: f => g => x => dictSemiring.mul(f(x))(g(x)), one: v => dictSemiring.one}
+);
 const semiringRecordCons = dictIsSymbol => () => dictSemiringRecord => dictSemiring => {
   const one1 = dictSemiring.one;
   const zero1 = dictSemiring.zero;

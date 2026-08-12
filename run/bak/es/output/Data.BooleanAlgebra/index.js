@@ -24,18 +24,14 @@ const booleanAlgebraRecord = () => dictBooleanAlgebraRecord => {
 const booleanAlgebraProxy = {HeytingAlgebra0: () => Data$dHeytingAlgebra.heytingAlgebraProxy};
 const booleanAlgebraFn = dictBooleanAlgebra => {
   const $0 = dictBooleanAlgebra.HeytingAlgebra0();
-  const ff1 = $0.ff;
-  const heytingAlgebraFunction = (() => {
-    const tt1 = $0.tt;
-    return {
-      ff: v => ff1,
-      tt: v => tt1,
-      implies: f => g => a => $0.implies(f(a))(g(a)),
-      conj: f => g => a => $0.conj(f(a))(g(a)),
-      disj: f => g => a => $0.disj(f(a))(g(a)),
-      not: f => a => $0.not(f(a))
-    };
-  })();
+  const heytingAlgebraFunction = {
+    ff: v => $0.ff,
+    tt: v => $0.tt,
+    implies: f => g => a => $0.implies(f(a))(g(a)),
+    conj: f => g => a => $0.conj(f(a))(g(a)),
+    disj: f => g => a => $0.disj(f(a))(g(a)),
+    not: f => a => $0.not(f(a))
+  };
   return {HeytingAlgebra0: () => heytingAlgebraFunction};
 };
 const booleanAlgebraBoolean = {HeytingAlgebra0: () => Data$dHeytingAlgebra.heytingAlgebraBoolean};

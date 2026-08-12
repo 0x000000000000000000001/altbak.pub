@@ -178,16 +178,16 @@ v_2_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Component.
 _ = v_2_0
 var __t5 gopurs_runtime.Value
 {
-if (v_2_0.Type == 9 && v_2_0.IntVal == 1527465420) {
-__t5 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}
+if (uint32(v_2_0.IntVal) == 1527465420) {
+__t5 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}.IntVal)), UnsafePtr: nil}
 goto end_branch_5
 } else {
 
 }
 }
 {
-if (v_2_0.Type == 9 && v_2_0.IntVal == 380165415) {
-__t5 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}
+if (uint32(v_2_0.IntVal) == 380165415) {
+__t5 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}.IntVal)), UnsafePtr: nil}
 goto end_branch_5
 } else {
 
@@ -198,16 +198,16 @@ v1_3_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Component
 _ = v1_3_1
 var __t4 gopurs_runtime.Value
 {
-if (v1_3_1.Type == 9 && v1_3_1.IntVal == 1527465420) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}
+if (uint32(v1_3_1.IntVal) == 1527465420) {
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}.IntVal)), UnsafePtr: nil}
 goto end_branch_4
 } else {
 
 }
 }
 {
-if (v1_3_1.Type == 9 && v1_3_1.IntVal == 380165415) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}
+if (uint32(v1_3_1.IntVal) == 380165415) {
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}.IntVal)), UnsafePtr: nil}
 goto end_branch_4
 } else {
 
@@ -218,32 +218,32 @@ v2_4_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Component
 _ = v2_4_2
 var __t3 gopurs_runtime.Value
 {
-if (v2_4_2.Type == 9 && v2_4_2.IntVal == 1527465420) {
-__t3 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}
+if (uint32(v2_4_2.IntVal) == 1527465420) {
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}.IntVal)), UnsafePtr: nil}
 goto end_branch_3
 } else {
 
 }
 }
 {
-if (v2_4_2.Type == 9 && v2_4_2.IntVal == 380165415) {
-__t3 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}
+if (uint32(v2_4_2.IntVal) == 380165415) {
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}.IntVal)), UnsafePtr: nil}
 goto end_branch_3
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_ordMillisecond(), "compare"), gopurs_runtime.Int((*Constructor_Time)(x_0.UnsafePtr).V3), gopurs_runtime.Int((*Constructor_Time)(y_1.UnsafePtr).V3))
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Component.Get_ordMillisecond(), "compare"), gopurs_runtime.Int((*Constructor_Time)(x_0.UnsafePtr).V3), gopurs_runtime.Int((*Constructor_Time)(y_1.UnsafePtr).V3)).IntVal)), UnsafePtr: nil}
 }
 end_branch_3:
-__t4 = __t3
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(__t3.IntVal)), UnsafePtr: nil}
 }
 end_branch_4:
-__t5 = __t4
+__t5 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(__t4.IntVal)), UnsafePtr: nil}
 }
 end_branch_5:
-return __t5
+return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(__t5.IntVal)), UnsafePtr: nil}
 })
 }))
 	})

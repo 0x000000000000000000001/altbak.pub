@@ -1,29 +1,36 @@
 import * as $runtime from "../runtime.js";
-import * as Control$dApply from "../Control.Apply/index.js";
 const identity = x => x;
+const identity1 = x => x;
+const monoidDual = /* #__PURE__ */ (() => {
+  const semigroupDual1 = {append: v => v1 => x => v1(v(x))};
+  return {mempty: x => x, Semigroup0: () => semigroupDual1};
+})();
 const monoidEndo = /* #__PURE__ */ (() => {
   const semigroupEndo1 = {append: v => v1 => x => v(v1(x))};
   return {mempty: x => x, Semigroup0: () => semigroupEndo1};
 })();
-const monoidDual = /* #__PURE__ */ (() => {
-  const $0 = monoidEndo.Semigroup0();
-  const semigroupDual1 = {append: v => v1 => $0.append(v1)(v)};
-  return {mempty: monoidEndo.mempty, Semigroup0: () => semigroupDual1};
-})();
+const identity2 = x => x;
 const bifoldr = dict => dict.bifoldr;
 const bitraverse_ = dictBifoldable => dictApplicative => {
-  const $0 = dictApplicative.Apply0();
-  const applySecond = a => b => $0.apply($0.Functor0().map(v => Control$dApply.identity)(a))(b);
-  return f => g => dictBifoldable.bifoldr(x => applySecond(f(x)))(x => applySecond(g(x)))(dictApplicative.pure());
+  const Apply0 = dictApplicative.Apply0();
+  const Functor0 = Apply0.Functor0();
+  const Functor0$1 = Apply0.Functor0();
+  return f => g => dictBifoldable.bifoldr(x => {
+    const $0 = f(x);
+    return b => Apply0.apply(Functor0.map(v => x$1 => x$1)($0))(b);
+  })(x => {
+    const $0 = g(x);
+    return b => Apply0.apply(Functor0$1.map(v => x$1 => x$1)($0))(b);
+  })(dictApplicative.pure());
 };
-const bifor_ = dictBifoldable => dictApplicative => {
-  const bitraverse_2 = bitraverse_(dictBifoldable)(dictApplicative);
-  return t => f => g => bitraverse_2(f)(g)(t);
-};
-const bisequence_ = dictBifoldable => dictApplicative => bitraverse_(dictBifoldable)(dictApplicative)(identity)(identity);
+const bifor_ = dictBifoldable => dictApplicative => t => f => g => bitraverse_(dictBifoldable)(dictApplicative)(f)(g)(t);
+const bisequence_ = dictBifoldable => dictApplicative => bitraverse_(dictBifoldable)(dictApplicative)(identity)(identity1);
 const bifoldl = dict => dict.bifoldl;
 const bifoldableTuple = {
-  bifoldMap: dictMonoid => f => g => v => dictMonoid.Semigroup0().append(f(v._1))(g(v._2)),
+  bifoldMap: dictMonoid => {
+    const Semigroup0 = dictMonoid.Semigroup0();
+    return f => g => v => Semigroup0.append(f(v._1))(g(v._2));
+  },
   bifoldr: f => g => z => v => f(v._1)(g(v._2)(z)),
   bifoldl: f => g => z => v => g(f(z)(v._1))(v._2)
 };
@@ -31,10 +38,7 @@ const bifoldableJoker = dictFoldable => (
   {
     bifoldr: v => r => u => v1 => dictFoldable.foldr(r)(u)(v1),
     bifoldl: v => r => u => v1 => dictFoldable.foldl(r)(u)(v1),
-    bifoldMap: dictMonoid => {
-      const foldMap1 = dictFoldable.foldMap(dictMonoid);
-      return v => r => v1 => foldMap1(r)(v1);
-    }
+    bifoldMap: dictMonoid => v => r => v1 => dictFoldable.foldMap(dictMonoid)(r)(v1)
   }
 );
 const bifoldableEither = {
@@ -59,10 +63,7 @@ const bifoldableClown = dictFoldable => (
   {
     bifoldr: l => v => u => v1 => dictFoldable.foldr(l)(u)(v1),
     bifoldl: l => v => u => v1 => dictFoldable.foldl(l)(u)(v1),
-    bifoldMap: dictMonoid => {
-      const foldMap1 = dictFoldable.foldMap(dictMonoid);
-      return l => v => v1 => foldMap1(l)(v1);
-    }
+    bifoldMap: dictMonoid => l => v => v1 => dictFoldable.foldMap(dictMonoid)(l)(v1)
   }
 );
 const bifoldMapDefaultR = dictBifoldable => dictMonoid => {
@@ -71,56 +72,40 @@ const bifoldMapDefaultR = dictBifoldable => dictMonoid => {
   return f => g => dictBifoldable.bifoldr(x => $0.append(f(x)))(x => $0.append(g(x)))(mempty);
 };
 const bifoldMapDefaultL = dictBifoldable => dictMonoid => {
-  const $0 = dictMonoid.Semigroup0();
+  const Semigroup0 = dictMonoid.Semigroup0();
   const mempty = dictMonoid.mempty;
-  return f => g => dictBifoldable.bifoldl(m => a => $0.append(m)(f(a)))(m => b => $0.append(m)(g(b)))(mempty);
+  return f => g => dictBifoldable.bifoldl(m => a => Semigroup0.append(m)(f(a)))(m => b => Semigroup0.append(m)(g(b)))(mempty);
 };
 const bifoldMap = dict => dict.bifoldMap;
 const bifoldableFlip = dictBifoldable => (
   {
     bifoldr: r => l => u => v => dictBifoldable.bifoldr(l)(r)(u)(v),
     bifoldl: r => l => u => v => dictBifoldable.bifoldl(l)(r)(u)(v),
-    bifoldMap: dictMonoid => {
-      const bifoldMap2 = dictBifoldable.bifoldMap(dictMonoid);
-      return r => l => v => bifoldMap2(l)(r)(v);
-    }
+    bifoldMap: dictMonoid => r => l => v => dictBifoldable.bifoldMap(dictMonoid)(l)(r)(v)
   }
 );
-const bifoldlDefault = dictBifoldable => {
-  const bifoldMap1 = dictBifoldable.bifoldMap(monoidDual);
-  return f => g => z => p => bifoldMap1(x => a => f(a)(x))(x => a => g(a)(x))(p)(z);
-};
-const bifoldrDefault = dictBifoldable => {
-  const bifoldMap1 = dictBifoldable.bifoldMap(monoidEndo);
-  return f => g => z => p => bifoldMap1(x => f(x))(x => g(x))(p)(z);
-};
+const bifoldlDefault = dictBifoldable => f => g => z => p => dictBifoldable.bifoldMap(monoidDual)(x => a => f(a)(x))(x => a => g(a)(x))(p)(z);
+const bifoldrDefault = dictBifoldable => f => g => z => p => dictBifoldable.bifoldMap(monoidEndo)(x => f(x))(x => g(x))(p)(z);
 const bifoldableProduct2 = dictBifoldable => dictBifoldable1 => (
   {
     bifoldr: l => r => u => m => bifoldrDefault(bifoldableProduct2(dictBifoldable)(dictBifoldable1))(l)(r)(u)(m),
     bifoldl: l => r => u => m => bifoldlDefault(bifoldableProduct2(dictBifoldable)(dictBifoldable1))(l)(r)(u)(m),
     bifoldMap: dictMonoid => {
-      const bifoldMap3 = dictBifoldable.bifoldMap(dictMonoid);
-      const bifoldMap4 = dictBifoldable1.bifoldMap(dictMonoid);
-      return l => r => v => dictMonoid.Semigroup0().append(bifoldMap3(l)(r)(v._1))(bifoldMap4(l)(r)(v._2));
+      const Semigroup0 = dictMonoid.Semigroup0();
+      return l => r => v => Semigroup0.append(dictBifoldable.bifoldMap(dictMonoid)(l)(r)(v._1))(dictBifoldable1.bifoldMap(dictMonoid)(l)(r)(v._2));
     }
   }
 );
-const bifold = dictBifoldable => dictMonoid => dictBifoldable.bifoldMap(dictMonoid)(identity)(identity);
+const bifold = dictBifoldable => dictMonoid => dictBifoldable.bifoldMap(dictMonoid)(identity2)(identity2);
 const biany = dictBifoldable => dictBooleanAlgebra => {
-  const bifoldMap2 = dictBifoldable.bifoldMap((() => {
-    const $0 = dictBooleanAlgebra.HeytingAlgebra0();
-    const semigroupDisj1 = {append: v => v1 => $0.disj(v)(v1)};
-    return {mempty: $0.ff, Semigroup0: () => semigroupDisj1};
-  })());
-  return p => q => bifoldMap2(x => p(x))(x => q(x));
+  const $0 = dictBooleanAlgebra.HeytingAlgebra0();
+  const semigroupDisj1 = {append: v => v1 => $0.disj(v)(v1)};
+  return p => q => dictBifoldable.bifoldMap({mempty: $0.ff, Semigroup0: () => semigroupDisj1})(x => p(x))(x => q(x));
 };
 const biall = dictBifoldable => dictBooleanAlgebra => {
-  const bifoldMap2 = dictBifoldable.bifoldMap((() => {
-    const $0 = dictBooleanAlgebra.HeytingAlgebra0();
-    const semigroupConj1 = {append: v => v1 => $0.conj(v)(v1)};
-    return {mempty: $0.tt, Semigroup0: () => semigroupConj1};
-  })());
-  return p => q => bifoldMap2(x => p(x))(x => q(x));
+  const $0 = dictBooleanAlgebra.HeytingAlgebra0();
+  const semigroupConj1 = {append: v => v1 => $0.conj(v)(v1)};
+  return p => q => dictBifoldable.bifoldMap({mempty: $0.tt, Semigroup0: () => semigroupConj1})(x => p(x))(x => q(x));
 };
 export {
   biall,
@@ -144,6 +129,8 @@ export {
   bisequence_,
   bitraverse_,
   identity,
+  identity1,
+  identity2,
   monoidDual,
   monoidEndo
 };

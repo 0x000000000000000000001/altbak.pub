@@ -127,11 +127,11 @@ Functor0_4_2 := gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Funct
 _ = Functor0_4_2
 return gopurs_runtime.Func(func(genChar_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(dictMonadGen_1.V5, gopurs_runtime.Func(func(size_6 gopurs_runtime.Value) gopurs_runtime.Value {
-v_7_3 := gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Int(1), size_6)
+v_7_3 := gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Int(1), size_6)
 _ = v_7_3
 var __t4 gopurs_runtime.Value
 {
-if (v_7_3.Type == 9 && v_7_3.IntVal == 1527465420) {
+if (uint32(v_7_3.IntVal) == 1527465420) {
 __t4 = size_6
 goto end_branch_4
 } else {
@@ -139,7 +139,7 @@ goto end_branch_4
 }
 }
 {
-if (v_7_3.Type == 9 && v_7_3.IntVal == 902936544) {
+if (uint32(v_7_3.IntVal) == 902936544) {
 __t4 = gopurs_runtime.Int(1)
 goto end_branch_4
 } else {
@@ -147,7 +147,7 @@ goto end_branch_4
 }
 }
 {
-if (v_7_3.Type == 9 && v_7_3.IntVal == 380165415) {
+if (uint32(v_7_3.IntVal) == 380165415) {
 __t4 = gopurs_runtime.Int(1)
 goto end_branch_4
 } else {
@@ -180,11 +180,11 @@ Functor0_4_2 := gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Funct
 _ = Functor0_4_2
 return gopurs_runtime.Func(func(genChar_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(dictMonadGen_1.V5, gopurs_runtime.Func(func(size_6 gopurs_runtime.Value) gopurs_runtime.Value {
-v_7_3 := gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Int(1), size_6)
+v_7_3 := gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Int(1), size_6)
 _ = v_7_3
 var __t4 gopurs_runtime.Value
 {
-if (v_7_3.Type == 9 && v_7_3.IntVal == 1527465420) {
+if (uint32(v_7_3.IntVal) == 1527465420) {
 __t4 = size_6
 goto end_branch_4
 } else {
@@ -192,7 +192,7 @@ goto end_branch_4
 }
 }
 {
-if (v_7_3.Type == 9 && v_7_3.IntVal == 902936544) {
+if (uint32(v_7_3.IntVal) == 902936544) {
 __t4 = gopurs_runtime.Int(1)
 goto end_branch_4
 } else {
@@ -200,7 +200,7 @@ goto end_branch_4
 }
 }
 {
-if (v_7_3.Type == 9 && v_7_3.IntVal == 380165415) {
+if (uint32(v_7_3.IntVal) == 380165415) {
 __t4 = gopurs_runtime.Int(1)
 goto end_branch_4
 } else {

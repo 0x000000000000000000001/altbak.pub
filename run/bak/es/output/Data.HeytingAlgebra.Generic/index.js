@@ -38,23 +38,16 @@ const genericHeytingAlgebraConstructor = dictGenericHeytingAlgebra => (
     "genericNot'": v => dictGenericHeytingAlgebra["genericNot'"](v)
   }
 );
-const genericHeytingAlgebraProduct = dictGenericHeytingAlgebra => {
-  const genericFF$p1 = dictGenericHeytingAlgebra["genericFF'"];
-  const genericTT$p1 = dictGenericHeytingAlgebra["genericTT'"];
-  return dictGenericHeytingAlgebra1 => (
-    {
-      "genericFF'": Data$dGeneric$dRep.$Product(genericFF$p1, dictGenericHeytingAlgebra1["genericFF'"]),
-      "genericTT'": Data$dGeneric$dRep.$Product(genericTT$p1, dictGenericHeytingAlgebra1["genericTT'"]),
-      "genericImplies'": v => v1 => Data$dGeneric$dRep.$Product(
-        dictGenericHeytingAlgebra["genericImplies'"](v._1)(v1._1),
-        dictGenericHeytingAlgebra1["genericImplies'"](v._2)(v1._2)
-      ),
-      "genericConj'": v => v1 => Data$dGeneric$dRep.$Product(dictGenericHeytingAlgebra["genericConj'"](v._1)(v1._1), dictGenericHeytingAlgebra1["genericConj'"](v._2)(v1._2)),
-      "genericDisj'": v => v1 => Data$dGeneric$dRep.$Product(dictGenericHeytingAlgebra["genericDisj'"](v._1)(v1._1), dictGenericHeytingAlgebra1["genericDisj'"](v._2)(v1._2)),
-      "genericNot'": v => Data$dGeneric$dRep.$Product(dictGenericHeytingAlgebra["genericNot'"](v._1), dictGenericHeytingAlgebra1["genericNot'"](v._2))
-    }
-  );
-};
+const genericHeytingAlgebraProduct = dictGenericHeytingAlgebra => dictGenericHeytingAlgebra1 => (
+  {
+    "genericFF'": Data$dGeneric$dRep.$Product(dictGenericHeytingAlgebra["genericFF'"], dictGenericHeytingAlgebra1["genericFF'"]),
+    "genericTT'": Data$dGeneric$dRep.$Product(dictGenericHeytingAlgebra["genericTT'"], dictGenericHeytingAlgebra1["genericTT'"]),
+    "genericImplies'": v => v1 => Data$dGeneric$dRep.$Product(dictGenericHeytingAlgebra["genericImplies'"](v._1)(v1._1), dictGenericHeytingAlgebra1["genericImplies'"](v._2)(v1._2)),
+    "genericConj'": v => v1 => Data$dGeneric$dRep.$Product(dictGenericHeytingAlgebra["genericConj'"](v._1)(v1._1), dictGenericHeytingAlgebra1["genericConj'"](v._2)(v1._2)),
+    "genericDisj'": v => v1 => Data$dGeneric$dRep.$Product(dictGenericHeytingAlgebra["genericDisj'"](v._1)(v1._1), dictGenericHeytingAlgebra1["genericDisj'"](v._2)(v1._2)),
+    "genericNot'": v => Data$dGeneric$dRep.$Product(dictGenericHeytingAlgebra["genericNot'"](v._1), dictGenericHeytingAlgebra1["genericNot'"](v._2))
+  }
+);
 const genericConj = dictGeneric => dictGenericHeytingAlgebra => x => y => dictGeneric.to(dictGenericHeytingAlgebra["genericConj'"](dictGeneric.from(x))(dictGeneric.from(y)));
 export {
   genericConj,

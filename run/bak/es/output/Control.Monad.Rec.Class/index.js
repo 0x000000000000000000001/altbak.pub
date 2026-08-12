@@ -11,22 +11,22 @@ const tailRecM = dict => dict.tailRecM;
 const tailRecM2 = dictMonadRec => f => a => b => dictMonadRec.tailRecM(o => f(o.a)(o.b))({a, b});
 const tailRecM3 = dictMonadRec => f => a => b => c => dictMonadRec.tailRecM(o => f(o.a)(o.b)(o.c))({a, b, c});
 const untilJust = dictMonadRec => {
-  const $0 = dictMonadRec.Monad0().Bind1().Apply0().Functor0();
-  return m => dictMonadRec.tailRecM(v => $0.map(v1 => {
+  const Functor0 = dictMonadRec.Monad0().Bind1().Apply0().Functor0();
+  return m => dictMonadRec.tailRecM(v => Functor0.map(v1 => {
     if (v1.tag === "Nothing") { return $Step("Loop", undefined); }
     if (v1.tag === "Just") { return $Step("Done", v1._1); }
     $runtime.fail();
   })(m))();
 };
 const whileJust = dictMonoid => {
-  const mempty = dictMonoid.mempty;
+  const Semigroup0 = dictMonoid.Semigroup0();
   return dictMonadRec => {
-    const $0 = dictMonadRec.Monad0().Bind1().Apply0().Functor0();
-    return m => dictMonadRec.tailRecM(v => $0.map(v1 => {
+    const Functor0 = dictMonadRec.Monad0().Bind1().Apply0().Functor0();
+    return m => dictMonadRec.tailRecM(v => Functor0.map(v1 => {
       if (v1.tag === "Nothing") { return $Step("Done", v); }
-      if (v1.tag === "Just") { return $Step("Loop", dictMonoid.Semigroup0().append(v)(v1._1)); }
+      if (v1.tag === "Just") { return $Step("Loop", Semigroup0.append(v)(v1._1)); }
       $runtime.fail();
-    })(m))(mempty);
+    })(m))(dictMonoid.mempty);
   };
 };
 const tailRec = f => {
@@ -230,8 +230,8 @@ const functorStep = {
   }
 };
 const forever = dictMonadRec => {
-  const $0 = dictMonadRec.Monad0().Bind1().Apply0().Functor0();
-  return ma => dictMonadRec.tailRecM(u => $0.map(v => $Step("Loop", u))(ma))();
+  const Functor0 = dictMonadRec.Monad0().Bind1().Apply0().Functor0();
+  return ma => dictMonadRec.tailRecM(u => Functor0.map(v => $Step("Loop", u))(ma))();
 };
 const bifunctorStep = {
   bimap: v => v1 => v2 => {

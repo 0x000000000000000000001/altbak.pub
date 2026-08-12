@@ -7,7 +7,7 @@ const second = dict => dict.second;
 const first = dict => dict.first;
 const splitStrong = dictSemigroupoid => dictStrong => l => r => dictSemigroupoid.compose(dictStrong.second(r))(dictStrong.first(l));
 const fanout = dictSemigroupoid => dictStrong => {
-  const lcmap = Data$dProfunctor.lcmap(dictStrong.Profunctor0());
-  return l => r => lcmap(a => Data$dTuple.$Tuple(a, a))(dictSemigroupoid.compose(dictStrong.second(r))(dictStrong.first(l)));
+  const Profunctor0 = dictStrong.Profunctor0();
+  return l => r => Profunctor0.dimap(a => Data$dTuple.$Tuple(a, a))(Data$dProfunctor.identity)(dictSemigroupoid.compose(dictStrong.second(r))(dictStrong.first(l)));
 };
 export {fanout, first, second, splitStrong, strongFn};

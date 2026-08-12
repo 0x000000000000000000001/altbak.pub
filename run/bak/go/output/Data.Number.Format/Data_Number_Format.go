@@ -56,14 +56,14 @@ var once_precision sync.Once
 func Get_precision() gopurs_runtime.Value {
 	once_precision.Do(func() {
 		cache_precision = func() gopurs_runtime.Value {
-__local_var_0_0 := gopurs_runtime.Apply3(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)})
+__local_var_0_0 := gopurs_runtime.Apply3(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil})
 _ = __local_var_0_0
 return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
 v_2_1 := gopurs_runtime.Apply2(__local_var_0_0, gopurs_runtime.Int(1), x_1)
 _ = v_2_1
 var __t3 gopurs_runtime.Value
 {
-if (v_2_1.Type == 9 && v_2_1.IntVal == 1527465420) {
+if (uint32(v_2_1.IntVal) == 1527465420) {
 __t3 = x_1
 goto end_branch_3
 } else {
@@ -71,7 +71,7 @@ goto end_branch_3
 }
 }
 {
-if (v_2_1.Type == 9 && v_2_1.IntVal == 902936544) {
+if (uint32(v_2_1.IntVal) == 902936544) {
 __t3 = gopurs_runtime.Int(1)
 goto end_branch_3
 } else {
@@ -79,7 +79,7 @@ goto end_branch_3
 }
 }
 {
-if (v_2_1.Type == 9 && v_2_1.IntVal == 380165415) {
+if (uint32(v_2_1.IntVal) == 380165415) {
 __t3 = gopurs_runtime.Int(1)
 goto end_branch_3
 } else {
@@ -96,7 +96,7 @@ v_4_4 := gopurs_runtime.Apply2(__local_var_0_0, gopurs_runtime.Int(21), __local_
 _ = v_4_4
 var __t5 gopurs_runtime.Value
 {
-if (v_4_4.Type == 9 && v_4_4.IntVal == 1527465420) {
+if (uint32(v_4_4.IntVal) == 1527465420) {
 __t5 = gopurs_runtime.Int(21)
 goto end_branch_5
 } else {
@@ -104,7 +104,7 @@ goto end_branch_5
 }
 }
 {
-if (v_4_4.Type == 9 && v_4_4.IntVal == 902936544) {
+if (uint32(v_4_4.IntVal) == 902936544) {
 __t5 = gopurs_runtime.Int(21)
 goto end_branch_5
 } else {
@@ -112,7 +112,7 @@ goto end_branch_5
 }
 }
 {
-if (v_4_4.Type == 9 && v_4_4.IntVal == 380165415) {
+if (uint32(v_4_4.IntVal) == 380165415) {
 __t5 = __local_var_3_2
 goto end_branch_5
 } else {
@@ -135,14 +135,14 @@ var once_fixed sync.Once
 func Get_fixed() gopurs_runtime.Value {
 	once_fixed.Do(func() {
 		cache_fixed = func() gopurs_runtime.Value {
-__local_var_0_0 := gopurs_runtime.Apply3(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)})
+__local_var_0_0 := gopurs_runtime.Apply3(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil})
 _ = __local_var_0_0
 return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
 v_2_1 := gopurs_runtime.Apply2(__local_var_0_0, gopurs_runtime.Int(0), x_1)
 _ = v_2_1
 var __t3 gopurs_runtime.Value
 {
-if (v_2_1.Type == 9 && v_2_1.IntVal == 1527465420) {
+if (uint32(v_2_1.IntVal) == 1527465420) {
 __t3 = x_1
 goto end_branch_3
 } else {
@@ -150,7 +150,7 @@ goto end_branch_3
 }
 }
 {
-if (v_2_1.Type == 9 && v_2_1.IntVal == 902936544) {
+if (uint32(v_2_1.IntVal) == 902936544) {
 __t3 = gopurs_runtime.Int(0)
 goto end_branch_3
 } else {
@@ -158,7 +158,7 @@ goto end_branch_3
 }
 }
 {
-if (v_2_1.Type == 9 && v_2_1.IntVal == 380165415) {
+if (uint32(v_2_1.IntVal) == 380165415) {
 __t3 = gopurs_runtime.Int(0)
 goto end_branch_3
 } else {
@@ -175,7 +175,7 @@ v_4_4 := gopurs_runtime.Apply2(__local_var_0_0, gopurs_runtime.Int(20), __local_
 _ = v_4_4
 var __t5 gopurs_runtime.Value
 {
-if (v_4_4.Type == 9 && v_4_4.IntVal == 1527465420) {
+if (uint32(v_4_4.IntVal) == 1527465420) {
 __t5 = gopurs_runtime.Int(20)
 goto end_branch_5
 } else {
@@ -183,7 +183,7 @@ goto end_branch_5
 }
 }
 {
-if (v_4_4.Type == 9 && v_4_4.IntVal == 902936544) {
+if (uint32(v_4_4.IntVal) == 902936544) {
 __t5 = gopurs_runtime.Int(20)
 goto end_branch_5
 } else {
@@ -191,7 +191,7 @@ goto end_branch_5
 }
 }
 {
-if (v_4_4.Type == 9 && v_4_4.IntVal == 380165415) {
+if (uint32(v_4_4.IntVal) == 380165415) {
 __t5 = __local_var_3_2
 goto end_branch_5
 } else {
@@ -214,14 +214,14 @@ var once_exponential sync.Once
 func Get_exponential() gopurs_runtime.Value {
 	once_exponential.Do(func() {
 		cache_exponential = func() gopurs_runtime.Value {
-__local_var_0_0 := gopurs_runtime.Apply3(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)})
+__local_var_0_0 := gopurs_runtime.Apply3(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil})
 _ = __local_var_0_0
 return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
 v_2_1 := gopurs_runtime.Apply2(__local_var_0_0, gopurs_runtime.Int(0), x_1)
 _ = v_2_1
 var __t3 gopurs_runtime.Value
 {
-if (v_2_1.Type == 9 && v_2_1.IntVal == 1527465420) {
+if (uint32(v_2_1.IntVal) == 1527465420) {
 __t3 = x_1
 goto end_branch_3
 } else {
@@ -229,7 +229,7 @@ goto end_branch_3
 }
 }
 {
-if (v_2_1.Type == 9 && v_2_1.IntVal == 902936544) {
+if (uint32(v_2_1.IntVal) == 902936544) {
 __t3 = gopurs_runtime.Int(0)
 goto end_branch_3
 } else {
@@ -237,7 +237,7 @@ goto end_branch_3
 }
 }
 {
-if (v_2_1.Type == 9 && v_2_1.IntVal == 380165415) {
+if (uint32(v_2_1.IntVal) == 380165415) {
 __t3 = gopurs_runtime.Int(0)
 goto end_branch_3
 } else {
@@ -254,7 +254,7 @@ v_4_4 := gopurs_runtime.Apply2(__local_var_0_0, gopurs_runtime.Int(20), __local_
 _ = v_4_4
 var __t5 gopurs_runtime.Value
 {
-if (v_4_4.Type == 9 && v_4_4.IntVal == 1527465420) {
+if (uint32(v_4_4.IntVal) == 1527465420) {
 __t5 = gopurs_runtime.Int(20)
 goto end_branch_5
 } else {
@@ -262,7 +262,7 @@ goto end_branch_5
 }
 }
 {
-if (v_4_4.Type == 9 && v_4_4.IntVal == 902936544) {
+if (uint32(v_4_4.IntVal) == 902936544) {
 __t5 = gopurs_runtime.Int(20)
 goto end_branch_5
 } else {
@@ -270,7 +270,7 @@ goto end_branch_5
 }
 }
 {
-if (v_4_4.Type == 9 && v_4_4.IntVal == 380165415) {
+if (uint32(v_4_4.IntVal) == 380165415) {
 __t5 = __local_var_3_2
 goto end_branch_5
 } else {

@@ -17,26 +17,34 @@ Effect_bindEffect = _lazy(func() any { return map[string]any{"bind": _force(Effe
 return _force(Effect_applyEffect)
 }} })
 Effect_applyEffect = _lazy(func() any { return map[string]any{"apply": func() any {
-var v0 any = ((_force(Effect_monadEffect)).(map[string]any)["Bind1"]).(func(any) any)(nil)
-_ = v0
-return func(v1_f any) any {
-return func(v2_a any) any {
-return (((v0).(map[string]any)["bind"]).(func(any) any)(v1_f)).(func(any) any)(func(v3_f any) any {
-return (((v0).(map[string]any)["bind"]).(func(any) any)(v2_a)).(func(any) any)(func(v4_a any) any {
-return ((((_force(Effect_monadEffect)).(map[string]any)["Applicative0"]).(func(any) any)(nil)).(map[string]any)["pure"]).(func(any) any)((v3_f).(func(any) any)(v4_a))
+var v0_Bind1 any = ((_force(Effect_monadEffect)).(map[string]any)["Bind1"]).(func(any) any)(nil)
+_ = v0_Bind1
+return func() any {
+var v1_Applicative0 any = ((_force(Effect_monadEffect)).(map[string]any)["Applicative0"]).(func(any) any)(nil)
+_ = v1_Applicative0
+return func(v2_f any) any {
+return func(v3_a any) any {
+return (((v0_Bind1).(map[string]any)["bind"]).(func(any) any)(v2_f)).(func(any) any)(func(v4_f any) any {
+return (((v0_Bind1).(map[string]any)["bind"]).(func(any) any)(v3_a)).(func(any) any)(func(v5_a any) any {
+return ((v1_Applicative0).(map[string]any)["pure"]).(func(any) any)((v4_f).(func(any) any)(v5_a))
 })
 })
 }
 }
+}()
 }(), "Functor0": func(v0_unused any) any {
 return _force(Effect_functorEffect)
 }} })
 Effect_applicativeEffect = _lazy(func() any { return map[string]any{"pure": _force(Effect_pureE), "Apply0": func(v0_unused any) any {
 return _force(Effect_applyEffect)
 }} })
-Effect_functorEffect = _lazy(func() any { return map[string]any{"map": func(v0_f any) any {
-return func(v1_a any) any {
-return (((((_force(Effect_applicativeEffect)).(map[string]any)["Apply0"]).(func(any) any)(nil)).(map[string]any)["apply"]).(func(any) any)(((_force(Effect_applicativeEffect)).(map[string]any)["pure"]).(func(any) any)(v0_f))).(func(any) any)(v1_a)
+Effect_functorEffect = _lazy(func() any { return map[string]any{"map": func() any {
+var v0_Apply0 any = ((_force(Effect_applicativeEffect)).(map[string]any)["Apply0"]).(func(any) any)(nil)
+_ = v0_Apply0
+return func(v1_f any) any {
+return func(v2_a any) any {
+return (((v0_Apply0).(map[string]any)["apply"]).(func(any) any)(((_force(Effect_applicativeEffect)).(map[string]any)["pure"]).(func(any) any)(v1_f))).(func(any) any)(v2_a)
 }
-}} })
+}
+}()} })
 }

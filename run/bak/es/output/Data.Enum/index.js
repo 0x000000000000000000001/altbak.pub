@@ -36,10 +36,8 @@ const enumTuple = dictEnum => {
   const $1 = $0.Eq0();
   return dictBoundedEnum => {
     const Bounded0 = dictBoundedEnum.Bounded0();
-    const bottom2 = Bounded0.bottom;
     const Enum1 = dictBoundedEnum.Enum1();
-    const top2 = Bounded0.top;
-    const $2 = Enum1.Ord0();
+    const $2 = dictBoundedEnum.Enum1().Ord0();
     const $3 = $2.Eq0();
     const ordTuple1 = (() => {
       const eqTuple2 = {eq: x => y => $1.eq(x._1)(y._1) && $3.eq(x._2)(y._2)};
@@ -56,7 +54,7 @@ const enumTuple = dictEnum => {
     return {
       succ: v => {
         const $4 = dictEnum.succ(v._1);
-        const $5 = $4.tag === "Just" ? Data$dMaybe.$Maybe("Just", Data$dTuple.$Tuple($4._1, bottom2)) : Data$dMaybe.Nothing;
+        const $5 = $4.tag === "Just" ? Data$dMaybe.$Maybe("Just", Data$dTuple.$Tuple($4._1, Bounded0.bottom)) : Data$dMaybe.Nothing;
         const $6 = Data$dTuple.Tuple(v._1);
         const $7 = Enum1.succ(v._2);
         if ($7.tag === "Nothing") { return $5; }
@@ -65,7 +63,7 @@ const enumTuple = dictEnum => {
       },
       pred: v => {
         const $4 = dictEnum.pred(v._1);
-        const $5 = $4.tag === "Just" ? Data$dMaybe.$Maybe("Just", Data$dTuple.$Tuple($4._1, top2)) : Data$dMaybe.Nothing;
+        const $5 = $4.tag === "Just" ? Data$dMaybe.$Maybe("Just", Data$dTuple.$Tuple($4._1, Bounded0.top)) : Data$dMaybe.Nothing;
         const $6 = Data$dTuple.Tuple(v._1);
         const $7 = Enum1.pred(v._2);
         if ($7.tag === "Nothing") { return $5; }
@@ -92,9 +90,9 @@ const enumOrdering = {
   Ord0: () => Data$dOrd.ordOrdering
 };
 const enumMaybe = dictBoundedEnum => {
-  const bottom2 = dictBoundedEnum.Bounded0().bottom;
+  const Bounded0 = dictBoundedEnum.Bounded0();
   const Enum1 = dictBoundedEnum.Enum1();
-  const $0 = Enum1.Ord0();
+  const $0 = dictBoundedEnum.Enum1().Ord0();
   const $1 = $0.Eq0();
   const ordMaybe = (() => {
     const eqMaybe1 = {
@@ -118,7 +116,7 @@ const enumMaybe = dictBoundedEnum => {
   })();
   return {
     succ: v => {
-      if (v.tag === "Nothing") { return Data$dMaybe.$Maybe("Just", Data$dMaybe.$Maybe("Just", bottom2)); }
+      if (v.tag === "Nothing") { return Data$dMaybe.$Maybe("Just", Data$dMaybe.$Maybe("Just", Bounded0.bottom)); }
       if (v.tag === "Just") {
         const $2 = Enum1.succ(v._1);
         if ($2.tag === "Just") { return Data$dMaybe.$Maybe("Just", Data$dMaybe.$Maybe("Just", $2._1)); }
@@ -147,14 +145,16 @@ const enumInt = {
 };
 const enumFromTo = dictEnum => {
   const Ord0 = dictEnum.Ord0();
+  const Eq0 = Ord0.Eq0();
+  const Ord01 = dictEnum.Ord0();
   return dictUnfoldable1 => v => v1 => {
-    if (Ord0.Eq0().eq(v)(v1)) {
+    if (Eq0.eq(v)(v1)) {
       return dictUnfoldable1.unfoldr1(i => {
         if (i <= 0) { return Data$dTuple.$Tuple(v, Data$dMaybe.Nothing); }
         return Data$dTuple.$Tuple(v, Data$dMaybe.$Maybe("Just", i - 1 | 0));
       })(0);
     }
-    if (Ord0.compare(v)(v1) === "LT") {
+    if (Ord01.compare(v)(v1) === "LT") {
       return dictUnfoldable1.unfoldr1(a => Data$dTuple.$Tuple(
         a,
         (() => {
@@ -199,17 +199,17 @@ const enumFromThenTo = dictUnfoldable => dictFunctor => dictBoundedEnum => a => 
 };
 const enumEither = dictBoundedEnum => {
   const Enum1 = dictBoundedEnum.Enum1();
-  const top2 = dictBoundedEnum.Bounded0().top;
-  const ordEither = Data$dEither.ordEither(Enum1.Ord0());
+  const Bounded0 = dictBoundedEnum.Bounded0();
+  const ordEither = Data$dEither.ordEither(dictBoundedEnum.Enum1().Ord0());
   return dictBoundedEnum1 => {
-    const bottom2 = dictBoundedEnum1.Bounded0().bottom;
+    const Bounded01 = dictBoundedEnum1.Bounded0();
     const Enum11 = dictBoundedEnum1.Enum1();
-    const ordEither1 = ordEither(Enum11.Ord0());
+    const ordEither1 = ordEither(dictBoundedEnum1.Enum1().Ord0());
     return {
       succ: v => {
         if (v.tag === "Left") {
           const $0 = Enum1.succ(v._1);
-          if ($0.tag === "Nothing") { return Data$dMaybe.$Maybe("Just", Data$dEither.$Either("Right", bottom2)); }
+          if ($0.tag === "Nothing") { return Data$dMaybe.$Maybe("Just", Data$dEither.$Either("Right", Bounded01.bottom)); }
           if ($0.tag === "Just") { return Data$dMaybe.$Maybe("Just", Data$dEither.$Either("Left", $0._1)); }
           $runtime.fail();
         }
@@ -229,7 +229,7 @@ const enumEither = dictBoundedEnum => {
         }
         if (v.tag === "Right") {
           const $0 = Enum11.pred(v._1);
-          if ($0.tag === "Nothing") { return Data$dMaybe.$Maybe("Just", Data$dEither.$Either("Left", top2)); }
+          if ($0.tag === "Nothing") { return Data$dMaybe.$Maybe("Just", Data$dEither.$Either("Left", Bounded0.top)); }
           if ($0.tag === "Just") { return Data$dMaybe.$Maybe("Just", Data$dEither.$Either("Right", $0._1)); }
         }
         $runtime.fail();
@@ -260,36 +260,33 @@ const upFrom = dictEnum => dictUnfoldable => dictUnfoldable.unfoldr(x => {
   if ($0.tag === "Just") { return Data$dMaybe.$Maybe("Just", Data$dTuple.$Tuple($0._1, $0._1)); }
   return Data$dMaybe.Nothing;
 });
-const defaultToEnum = dictBounded => {
-  const bottom2 = dictBounded.bottom;
-  return dictEnum => i$p => {
-    const go = go$a0$copy => go$a1$copy => {
-      let go$a0 = go$a0$copy, go$a1 = go$a1$copy, go$c = true, go$r;
-      while (go$c) {
-        const i = go$a0, x = go$a1;
-        if (i === 0) {
-          go$c = false;
-          go$r = Data$dMaybe.$Maybe("Just", x);
-          continue;
-        }
-        const v = dictEnum.succ(x);
-        if (v.tag === "Just") {
-          go$a0 = i - 1 | 0;
-          go$a1 = v._1;
-          continue;
-        }
-        if (v.tag === "Nothing") {
-          go$c = false;
-          go$r = Data$dMaybe.Nothing;
-          continue;
-        }
-        $runtime.fail();
+const defaultToEnum = dictBounded => dictEnum => i$p => {
+  const go = go$a0$copy => go$a1$copy => {
+    let go$a0 = go$a0$copy, go$a1 = go$a1$copy, go$c = true, go$r;
+    while (go$c) {
+      const i = go$a0, x = go$a1;
+      if (i === 0) {
+        go$c = false;
+        go$r = Data$dMaybe.$Maybe("Just", x);
+        continue;
       }
-      return go$r;
-    };
-    if (i$p < 0) { return Data$dMaybe.Nothing; }
-    return go(i$p)(bottom2);
+      const v = dictEnum.succ(x);
+      if (v.tag === "Just") {
+        go$a0 = i - 1 | 0;
+        go$a1 = v._1;
+        continue;
+      }
+      if (v.tag === "Nothing") {
+        go$c = false;
+        go$r = Data$dMaybe.Nothing;
+        continue;
+      }
+      $runtime.fail();
+    }
+    return go$r;
   };
+  if (i$p < 0) { return Data$dMaybe.Nothing; }
+  return go(i$p)(dictBounded.bottom);
 };
 const defaultSucc = toEnum$p => fromEnum$p => a => toEnum$p(fromEnum$p(a) + 1 | 0);
 const defaultPred = toEnum$p => fromEnum$p => a => toEnum$p(fromEnum$p(a) - 1 | 0);

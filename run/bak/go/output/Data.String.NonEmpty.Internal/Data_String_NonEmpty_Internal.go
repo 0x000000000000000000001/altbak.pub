@@ -200,7 +200,7 @@ var once_localeCompare sync.Once
 func Get_localeCompare() gopurs_runtime.Value {
 	once_localeCompare.Do(func() {
 		cache_localeCompare = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_localeCompare(v_0_box.StrVal(), v1_1_box.StrVal())
+return gopurs_runtime.Value{Type: 9, IntVal: int64(Call_localeCompare(v_0_box.StrVal(), v1_1_box.StrVal())), UnsafePtr: nil}
 })
 	})
 	return cache_localeCompare
@@ -497,12 +497,12 @@ return gopurs_runtime.Str("")
 }))
 }
 
-func Call_localeCompare(v_0_loop string, v1_1_loop string) gopurs_runtime.Value {
+func Call_localeCompare(v_0_loop string, v1_1_loop string) uint32 {
 var v_0 string = v_0_loop
 _ = v_0
 var v1_1 string = v1_1_loop
 _ = v1_1
-return gopurs_runtime.Apply2(pkg_Data_String_Common.Get_localeCompare(), gopurs_runtime.Str(v_0), gopurs_runtime.Str(v1_1))
+return uint32(gopurs_runtime.Apply2(pkg_Data_String_Common.Get_localeCompare(), gopurs_runtime.Str(v_0), gopurs_runtime.Str(v1_1)).IntVal)
 }
 
 func Call_liftS(f_0_loop gopurs_runtime.Value, v_1_loop string) gopurs_runtime.Value {

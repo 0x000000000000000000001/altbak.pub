@@ -26,7 +26,10 @@ const NonEmptyArray = x => x;
 const unfoldable1NonEmptyArray = Data$dUnfoldable1.unfoldable1Array;
 const traversableWithIndexNonEmptyArray = Data$dTraversableWithIndex.traversableWithIndexArray;
 const traversableNonEmptyArray = Data$dTraversable.traversableArray;
-const showNonEmptyArray = dictShow => ({show: v => "(NonEmptyArray " + Data$dShow.showArrayImpl(dictShow.show)(v) + ")"});
+const showNonEmptyArray = dictShow => {
+  const $0 = Data$dShow.showArrayImpl(dictShow.show);
+  return {show: v => "(NonEmptyArray " + $0(v) + ")"};
+};
 const semigroupNonEmptyArray = Data$dSemigroup.semigroupArray;
 const ordNonEmptyArray = dictOrd => Data$dOrd.ordArray(dictOrd);
 const ord1NonEmptyArray = Data$dOrd.ord1Array;

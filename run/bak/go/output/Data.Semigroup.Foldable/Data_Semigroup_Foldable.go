@@ -626,7 +626,7 @@ return gopurs_runtime.Apply(dictFoldable1_0.V2, gopurs_runtime.Func(func(x_2 gop
 return gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ordering.Get_eqOrdering(), "eq"), gopurs_runtime.Apply2(cmp_1, x_2, y_3), gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}).IntVal) != (0) {
+if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ordering.Get_eqOrdering(), "eq"), gopurs_runtime.Apply2(cmp_1, x_2, y_3), gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}).IntVal) != (0) {
 __t0 = x_2
 goto end_branch_0
 } else {
@@ -651,7 +651,7 @@ return gopurs_runtime.Apply(dictFoldable1_0.V2, gopurs_runtime.Func(func(x_2 gop
 return gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ordering.Get_eqOrdering(), "eq"), gopurs_runtime.Apply2(cmp_1, x_2, y_3), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}).IntVal) != (0) {
+if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ordering.Get_eqOrdering(), "eq"), gopurs_runtime.Apply2(cmp_1, x_2, y_3), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}).IntVal) != (0) {
 __t0 = x_2
 goto end_branch_0
 } else {
@@ -812,7 +812,7 @@ v_3_1 := gopurs_runtime.Apply2(dictOrd_0.V1, v_1, v1_2)
 _ = v_3_1
 var __t2 gopurs_runtime.Value
 {
-if (v_3_1.Type == 9 && v_3_1.IntVal == 1527465420) {
+if (uint32(v_3_1.IntVal) == 1527465420) {
 __t2 = v1_2
 goto end_branch_2
 } else {
@@ -820,7 +820,7 @@ goto end_branch_2
 }
 }
 {
-if (v_3_1.Type == 9 && v_3_1.IntVal == 902936544) {
+if (uint32(v_3_1.IntVal) == 902936544) {
 __t2 = v_1
 goto end_branch_2
 } else {
@@ -828,7 +828,7 @@ goto end_branch_2
 }
 }
 {
-if (v_3_1.Type == 9 && v_3_1.IntVal == 380165415) {
+if (uint32(v_3_1.IntVal) == 380165415) {
 __t2 = v_1
 goto end_branch_2
 } else {
@@ -857,7 +857,7 @@ v_3_1 := gopurs_runtime.Apply2(dictOrd_0.V1, v_1, v1_2)
 _ = v_3_1
 var __t2 gopurs_runtime.Value
 {
-if (v_3_1.Type == 9 && v_3_1.IntVal == 1527465420) {
+if (uint32(v_3_1.IntVal) == 1527465420) {
 __t2 = v_1
 goto end_branch_2
 } else {
@@ -865,7 +865,7 @@ goto end_branch_2
 }
 }
 {
-if (v_3_1.Type == 9 && v_3_1.IntVal == 902936544) {
+if (uint32(v_3_1.IntVal) == 902936544) {
 __t2 = v_1
 goto end_branch_2
 } else {
@@ -873,7 +873,7 @@ goto end_branch_2
 }
 }
 {
-if (v_3_1.Type == 9 && v_3_1.IntVal == 380165415) {
+if (uint32(v_3_1.IntVal) == 380165415) {
 __t2 = v1_2
 goto end_branch_2
 } else {

@@ -11,37 +11,53 @@ const withRWST = f => m => r => s => {
 };
 const runRWST = v => v;
 const newtypeRWST = {Coercible0: () => {}};
-const monadTransRWST = dictMonoid => {
-  const mempty = dictMonoid.mempty;
-  return {lift: dictMonad => m => v => s => dictMonad.Bind1().bind(m)(a => dictMonad.Applicative0().pure($RWSResult(s, a, mempty)))};
-};
+const monadTransRWST = dictMonoid => (
+  {
+    lift: dictMonad => {
+      const Bind1 = dictMonad.Bind1();
+      return m => v => s => Bind1.bind(m)(a => dictMonad.Applicative0().pure($RWSResult(s, a, dictMonoid.mempty)));
+    }
+  }
+);
 const mapRWST = f => v => r => s => f(v(r)(s));
 const lazyRWST = {defer: f => r => s => f()(r)(s)};
 const functorRWST = dictFunctor => ({map: f => v => r => s => dictFunctor.map(v1 => $RWSResult(v1._1, f(v1._2), v1._3))(v(r)(s))});
-const execRWST = dictMonad => v => r => s => dictMonad.Bind1().bind(v(r)(s))(v1 => dictMonad.Applicative0().pure(Data$dTuple.$Tuple(v1._1, v1._3)));
-const evalRWST = dictMonad => v => r => s => dictMonad.Bind1().bind(v(r)(s))(v1 => dictMonad.Applicative0().pure(Data$dTuple.$Tuple(v1._2, v1._3)));
+const execRWST = dictMonad => {
+  const Bind1 = dictMonad.Bind1();
+  const Applicative0 = dictMonad.Applicative0();
+  return v => r => s => Bind1.bind(v(r)(s))(v1 => Applicative0.pure(Data$dTuple.$Tuple(v1._1, v1._3)));
+};
+const evalRWST = dictMonad => {
+  const Bind1 = dictMonad.Bind1();
+  const Applicative0 = dictMonad.Applicative0();
+  return v => r => s => Bind1.bind(v(r)(s))(v1 => Applicative0.pure(Data$dTuple.$Tuple(v1._2, v1._3)));
+};
 const applyRWST = dictBind => {
-  const Functor0 = dictBind.Apply0().Functor0();
-  const functorRWST1 = {map: f => v => r => s => Functor0.map(v1 => $RWSResult(v1._1, f(v1._2), v1._3))(v(r)(s))};
-  return dictMonoid => (
-    {
+  const Apply0 = dictBind.Apply0();
+  const Functor0 = Apply0.Functor0();
+  const $0 = Apply0.Functor0();
+  const functorRWST1 = {map: f => v => r => s => $0.map(v1 => $RWSResult(v1._1, f(v1._2), v1._3))(v(r)(s))};
+  return dictMonoid => {
+    const Semigroup0 = dictMonoid.Semigroup0();
+    return {
       apply: v => v1 => r => s => dictBind.bind(v(r)(s))(v2 => {
-        const $0 = v2._3;
-        return Functor0.map(v3 => $RWSResult(v3._1, v2._2(v3._2), dictMonoid.Semigroup0().append($0)(v3._3)))(v1(r)(v2._1));
+        const $1 = v2._3;
+        return Functor0.map(v3 => $RWSResult(v3._1, v2._2(v3._2), Semigroup0.append($1)(v3._3)))(v1(r)(v2._1));
       }),
       Functor0: () => functorRWST1
-    }
-  );
+    };
+  };
 };
 const bindRWST = dictBind => {
-  const $0 = dictBind.Apply0().Functor0();
+  const Functor0 = dictBind.Apply0().Functor0();
   const applyRWST1 = applyRWST(dictBind);
   return dictMonoid => {
+    const Semigroup0 = dictMonoid.Semigroup0();
     const applyRWST2 = applyRWST1(dictMonoid);
     return {
       bind: v => f => r => s => dictBind.bind(v(r)(s))(v1 => {
-        const $1 = v1._3;
-        return $0.map(v3 => $RWSResult(v3._1, v3._2, dictMonoid.Semigroup0().append($1)(v3._3)))(f(v1._2)(r)(v1._1));
+        const $0 = v1._3;
+        return Functor0.map(v3 => $RWSResult(v3._1, v3._2, Semigroup0.append($0)(v3._3)))(f(v1._2)(r)(v1._1));
       }),
       Apply0: () => applyRWST2
     };
@@ -50,12 +66,13 @@ const bindRWST = dictBind => {
 const semigroupRWST = dictBind => {
   const applyRWST1 = applyRWST(dictBind);
   return dictMonoid => {
-    const $0 = applyRWST1(dictMonoid);
+    const applyRWST2 = applyRWST1(dictMonoid);
     return dictSemigroup => (
       {
         append: (() => {
-          const $1 = dictSemigroup.append;
-          return a => b => $0.apply($0.Functor0().map($1)(a))(b);
+          const Functor0 = applyRWST2.Functor0();
+          const $0 = dictSemigroup.append;
+          return a => b => applyRWST2.apply(Functor0.map($0)(a))(b);
         })()
       }
     );
@@ -64,9 +81,8 @@ const semigroupRWST = dictBind => {
 const applicativeRWST = dictMonad => {
   const applyRWST1 = applyRWST(dictMonad.Bind1());
   return dictMonoid => {
-    const mempty = dictMonoid.mempty;
     const applyRWST2 = applyRWST1(dictMonoid);
-    return {pure: a => v => s => dictMonad.Applicative0().pure($RWSResult(s, a, mempty)), Apply0: () => applyRWST2};
+    return {pure: a => v => s => dictMonad.Applicative0().pure($RWSResult(s, a, dictMonoid.mempty)), Apply0: () => applyRWST2};
   };
 };
 const monadRWST = dictMonad => {
@@ -81,9 +97,8 @@ const monadRWST = dictMonad => {
 const monadAskRWST = dictMonad => {
   const monadRWST1 = monadRWST(dictMonad);
   return dictMonoid => {
-    const mempty = dictMonoid.mempty;
     const monadRWST2 = monadRWST1(dictMonoid);
-    return {ask: r => s => dictMonad.Applicative0().pure($RWSResult(s, r, mempty)), Monad0: () => monadRWST2};
+    return {ask: r => s => dictMonad.Applicative0().pure($RWSResult(s, r, dictMonoid.mempty)), Monad0: () => monadRWST2};
   };
 };
 const monadReaderRWST = dictMonad => {
@@ -93,36 +108,37 @@ const monadReaderRWST = dictMonad => {
     return {local: f => m => r => s => m(f(r))(s), MonadAsk0: () => monadAskRWST2};
   };
 };
-const monadEffectRWS = dictMonoid => {
-  const mempty = dictMonoid.mempty;
-  return dictMonadEffect => {
-    const Monad0 = dictMonadEffect.Monad0();
-    const monadRWST1 = monadRWST(Monad0)(dictMonoid);
-    return {
-      liftEffect: x => {
+const monadEffectRWS = dictMonoid => dictMonadEffect => {
+  const Monad0 = dictMonadEffect.Monad0();
+  const monadRWST1 = monadRWST(Monad0)(dictMonoid);
+  return {
+    liftEffect: (() => {
+      const Bind1 = Monad0.Bind1();
+      return x => {
         const $0 = dictMonadEffect.liftEffect(x);
-        return v => s => Monad0.Bind1().bind($0)(a => Monad0.Applicative0().pure($RWSResult(s, a, mempty)));
-      },
-      Monad0: () => monadRWST1
-    };
+        return v => s => Bind1.bind($0)(a => Monad0.Applicative0().pure($RWSResult(s, a, dictMonoid.mempty)));
+      };
+    })(),
+    Monad0: () => monadRWST1
   };
 };
 const monadRecRWST = dictMonadRec => {
   const Monad0 = dictMonadRec.Monad0();
+  const Bind1 = Monad0.Bind1();
+  const Applicative0 = Monad0.Applicative0();
   const monadRWST1 = monadRWST(Monad0);
   return dictMonoid => {
-    const $0 = dictMonoid.Semigroup0();
-    const mempty = dictMonoid.mempty;
+    const Semigroup0 = dictMonoid.Semigroup0();
     const monadRWST2 = monadRWST1(dictMonoid);
     return {
       tailRecM: k => a => r => s => dictMonadRec.tailRecM(v => {
-        const $1 = v._3;
-        return Monad0.Bind1().bind(k(v._2)(r)(v._1))(v2 => Monad0.Applicative0().pure((() => {
-          if (v2._2.tag === "Loop") { return Control$dMonad$dRec$dClass.$Step("Loop", $RWSResult(v2._1, v2._2._1, $0.append($1)(v2._3))); }
-          if (v2._2.tag === "Done") { return Control$dMonad$dRec$dClass.$Step("Done", $RWSResult(v2._1, v2._2._1, $0.append($1)(v2._3))); }
+        const $0 = v._3;
+        return Bind1.bind(k(v._2)(r)(v._1))(v2 => Applicative0.pure((() => {
+          if (v2._2.tag === "Loop") { return Control$dMonad$dRec$dClass.$Step("Loop", $RWSResult(v2._1, v2._2._1, Semigroup0.append($0)(v2._3))); }
+          if (v2._2.tag === "Done") { return Control$dMonad$dRec$dClass.$Step("Done", $RWSResult(v2._1, v2._2._1, Semigroup0.append($0)(v2._3))); }
           $runtime.fail();
         })()));
-      })($RWSResult(s, a, mempty)),
+      })($RWSResult(s, a, dictMonoid.mempty)),
       Monad0: () => monadRWST2
     };
   };
@@ -130,12 +146,11 @@ const monadRecRWST = dictMonadRec => {
 const monadStateRWST = dictMonad => {
   const monadRWST1 = monadRWST(dictMonad);
   return dictMonoid => {
-    const mempty = dictMonoid.mempty;
     const monadRWST2 = monadRWST1(dictMonoid);
     return {
       state: f => v => s => {
         const v1 = f(s);
-        return dictMonad.Applicative0().pure($RWSResult(v1._2, v1._1, mempty));
+        return dictMonad.Applicative0().pure($RWSResult(v1._2, v1._1, dictMonoid.mempty));
       },
       Monad0: () => monadRWST2
     };
@@ -150,14 +165,14 @@ const monadTellRWST = dictMonad => {
   };
 };
 const monadWriterRWST = dictMonad => {
-  const $0 = dictMonad.Bind1();
-  const $1 = dictMonad.Applicative0();
+  const Bind1 = dictMonad.Bind1();
+  const Applicative0 = dictMonad.Applicative0();
   const monadTellRWST1 = monadTellRWST(dictMonad);
   return dictMonoid => {
     const monadTellRWST2 = monadTellRWST1(dictMonoid);
     return {
-      listen: m => r => s => $0.bind(m(r)(s))(v => $1.pure($RWSResult(v._1, Data$dTuple.$Tuple(v._2, v._3), v._3))),
-      pass: m => r => s => $0.bind(m(r)(s))(v => $1.pure($RWSResult(v._1, v._2._1, v._2._2(v._3)))),
+      listen: m => r => s => Bind1.bind(m(r)(s))(v => Applicative0.pure($RWSResult(v._1, Data$dTuple.$Tuple(v._2, v._3), v._3))),
+      pass: m => r => s => Bind1.bind(m(r)(s))(v => Applicative0.pure($RWSResult(v._1, v._2._1, v._2._2(v._3)))),
       Monoid0: () => dictMonoid,
       MonadTell1: () => monadTellRWST2
     };
@@ -165,14 +180,14 @@ const monadWriterRWST = dictMonad => {
 };
 const monadThrowRWST = dictMonadThrow => {
   const Monad0 = dictMonadThrow.Monad0();
-  const monadRWST1 = monadRWST(Monad0);
+  const monadRWST1 = monadRWST(dictMonadThrow.Monad0());
   return dictMonoid => {
-    const mempty = dictMonoid.mempty;
     const monadRWST2 = monadRWST1(dictMonoid);
     return {
       throwError: e => {
+        const Bind1 = Monad0.Bind1();
         const $0 = dictMonadThrow.throwError(e);
-        return v => s => Monad0.Bind1().bind($0)(a => Monad0.Applicative0().pure($RWSResult(s, a, mempty)));
+        return v => s => Bind1.bind($0)(a => Monad0.Applicative0().pure($RWSResult(s, a, dictMonoid.mempty)));
       },
       Monad0: () => monadRWST2
     };
@@ -185,28 +200,29 @@ const monadErrorRWST = dictMonadError => {
     return {catchError: m => h => r => s => dictMonadError.catchError(m(r)(s))(e => h(e)(r)(s)), MonadThrow0: () => monadThrowRWST2};
   };
 };
-const monadSTRWST = dictMonoid => {
-  const mempty = dictMonoid.mempty;
-  return dictMonadST => {
-    const Monad0 = dictMonadST.Monad0();
-    const monadRWST1 = monadRWST(Monad0)(dictMonoid);
-    return {
-      liftST: x => {
+const monadSTRWST = dictMonoid => dictMonadST => {
+  const Monad0 = dictMonadST.Monad0();
+  const monadRWST1 = monadRWST(Monad0)(dictMonoid);
+  return {
+    liftST: (() => {
+      const Bind1 = Monad0.Bind1();
+      return x => {
         const $0 = dictMonadST.liftST(x);
-        return v => s => Monad0.Bind1().bind($0)(a => Monad0.Applicative0().pure($RWSResult(s, a, mempty)));
-      },
-      Monad0: () => monadRWST1
-    };
+        return v => s => Bind1.bind($0)(a => Monad0.Applicative0().pure($RWSResult(s, a, dictMonoid.mempty)));
+      };
+    })(),
+    Monad0: () => monadRWST1
   };
 };
 const monoidRWST = dictMonad => {
   const applicativeRWST1 = applicativeRWST(dictMonad);
   const semigroupRWST1 = semigroupRWST(dictMonad.Bind1());
   return dictMonoid => {
+    const applicativeRWST2 = applicativeRWST1(dictMonoid);
     const semigroupRWST2 = semigroupRWST1(dictMonoid);
     return dictMonoid1 => {
       const semigroupRWST3 = semigroupRWST2(dictMonoid1.Semigroup0());
-      return {mempty: applicativeRWST1(dictMonoid).pure(dictMonoid1.mempty), Semigroup0: () => semigroupRWST3};
+      return {mempty: applicativeRWST2.pure(dictMonoid1.mempty), Semigroup0: () => semigroupRWST3};
     };
   };
 };

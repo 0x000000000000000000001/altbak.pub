@@ -153,7 +153,7 @@ return gopurs_runtime.Value{}
 }
 }()
 })
-return gopurs_runtime.Apply(spin_3_0_3, gopurs_runtime.Apply(f_0, a_1))
+return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply(spin_3_0_3, gopurs_runtime.Apply(f_0, a_1)).IntVal)), UnsafePtr: nil}
 })
 })
 }))

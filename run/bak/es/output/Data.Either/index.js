@@ -145,15 +145,14 @@ const isRight = v2 => {
   $runtime.fail();
 };
 const choose = dictAlt => {
-  const $0 = dictAlt.Functor0();
-  return a => b => dictAlt.alt($0.map(Left)(a))($0.map(Right)(b));
+  const Functor0 = dictAlt.Functor0();
+  return a => b => dictAlt.alt(Functor0.map(Left)(a))(Functor0.map(Right)(b));
 };
 const boundedEither = dictBounded => {
-  const bottom = dictBounded.bottom;
   const ordEither1 = ordEither(dictBounded.Ord0());
   return dictBounded1 => {
     const ordEither2 = ordEither1(dictBounded1.Ord0());
-    return {top: $Either("Right", dictBounded1.top), bottom: $Either("Left", bottom), Ord0: () => ordEither2};
+    return {top: $Either("Right", dictBounded1.top), bottom: $Either("Left", dictBounded.bottom), Ord0: () => ordEither2};
   };
 };
 const blush = v2 => {

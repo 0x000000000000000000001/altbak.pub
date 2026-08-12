@@ -8,10 +8,6 @@ import * as Data$dMaybe from "../Data.Maybe/index.js";
 import * as Data$dTuple from "../Data.Tuple/index.js";
 import * as Data$dUnfoldable1 from "../Data.Unfoldable1/index.js";
 import {unfoldrArrayImpl} from "./foreign.js";
-const fromJust = v => {
-  if (v.tag === "Just") { return v._1; }
-  $runtime.fail();
-};
 const unfoldr = dict => dict.unfoldr;
 const unfoldableMaybe = {
   unfoldr: f => b => {
@@ -22,24 +18,24 @@ const unfoldableMaybe = {
   Unfoldable10: () => Data$dUnfoldable1.unfoldable1Maybe
 };
 const unfoldableArray = {
-  unfoldr: /* #__PURE__ */ unfoldrArrayImpl(Data$dMaybe.isNothing)(fromJust)(Data$dTuple.fst)(Data$dTuple.snd),
+  unfoldr: /* #__PURE__ */ unfoldrArrayImpl(Data$dMaybe.isNothing)(v => {
+    if (v.tag === "Just") { return v._1; }
+    $runtime.fail();
+  })(Data$dTuple.fst)(Data$dTuple.snd),
   Unfoldable10: () => Data$dUnfoldable1.unfoldable1Array
 };
 const replicate = dictUnfoldable => n => v => dictUnfoldable.unfoldr(i => {
   if (i <= 0) { return Data$dMaybe.Nothing; }
   return Data$dMaybe.$Maybe("Just", Data$dTuple.$Tuple(v, i - 1 | 0));
 })(n);
-const replicateA = dictApplicative => dictUnfoldable => dictTraversable => {
-  const sequence = dictTraversable.sequence(dictApplicative);
-  return n => m => sequence(dictUnfoldable.unfoldr(i => {
-    if (i <= 0) { return Data$dMaybe.Nothing; }
-    return Data$dMaybe.$Maybe("Just", Data$dTuple.$Tuple(m, i - 1 | 0));
-  })(n));
-};
+const replicateA = dictApplicative => dictUnfoldable => dictTraversable => n => m => dictTraversable.sequence(dictApplicative)(dictUnfoldable.unfoldr(i => {
+  if (i <= 0) { return Data$dMaybe.Nothing; }
+  return Data$dMaybe.$Maybe("Just", Data$dTuple.$Tuple(m, i - 1 | 0));
+})(n));
 const none = dictUnfoldable => dictUnfoldable.unfoldr(v => Data$dMaybe.Nothing)();
 const fromMaybe = dictUnfoldable => dictUnfoldable.unfoldr(b => {
   if (b.tag === "Just") { return Data$dMaybe.$Maybe("Just", Data$dTuple.$Tuple(b._1, Data$dMaybe.Nothing)); }
   return Data$dMaybe.Nothing;
 });
-export {fromJust, fromMaybe, none, replicate, replicateA, unfoldableArray, unfoldableMaybe, unfoldr};
+export {fromMaybe, none, replicate, replicateA, unfoldableArray, unfoldableMaybe, unfoldr};
 export * from "./foreign.js";

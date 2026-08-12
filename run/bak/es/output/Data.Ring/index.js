@@ -35,16 +35,12 @@ const ringNumber = {sub: numSub, Semiring0: () => Data$dSemiring.semiringNumber}
 const ringInt = {sub: intSub, Semiring0: () => Data$dSemiring.semiringInt};
 const ringFn = dictRing => {
   const $0 = dictRing.Semiring0();
-  const zero1 = $0.zero;
-  const semiringFn = (() => {
-    const one1 = $0.one;
-    return {add: f => g => x => $0.add(f(x))(g(x)), zero: v => zero1, mul: f => g => x => $0.mul(f(x))(g(x)), one: v => one1};
-  })();
+  const semiringFn = {add: f => g => x => $0.add(f(x))(g(x)), zero: v => $0.zero, mul: f => g => x => $0.mul(f(x))(g(x)), one: v => $0.one};
   return {sub: f => g => x => dictRing.sub(f(x))(g(x)), Semiring0: () => semiringFn};
 };
 const negate = dictRing => {
-  const zero = dictRing.Semiring0().zero;
-  return a => dictRing.sub(zero)(a);
+  const Semiring0 = dictRing.Semiring0();
+  return a => dictRing.sub(Semiring0.zero)(a);
 };
 export {negate, ringFn, ringInt, ringNumber, ringProxy, ringRecord, ringRecordCons, ringRecordNil, ringUnit, sub, subRecord};
 export * from "./foreign.js";

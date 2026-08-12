@@ -1,6 +1,5 @@
 import * as $runtime from "../runtime.js";
 import * as Control$dMonad$dError$dClass from "../Control.Monad.Error.Class/index.js";
-import * as Control$dParallel from "../Control.Parallel/index.js";
 import * as Data$dEither from "../Data.Either/index.js";
 import * as Data$dFoldable from "../Data.Foldable/index.js";
 import * as Effect$dException from "../Effect.Exception/index.js";
@@ -91,7 +90,6 @@ const invincible = a => {
 const lazyAff = {defer: f => _bind(_pure())(f)};
 const parallelAff = {parallel: Unsafe$dCoerce.unsafeCoerce, sequential: _sequential, Apply0: () => applyAff, Apply1: () => applyParAff};
 const applicativeParAff = {pure: x => _pure(x), Apply0: () => applyParAff};
-const parSequence_ = /* #__PURE__ */ Control$dParallel.parTraverse_(parallelAff)(applicativeParAff)(Data$dFoldable.foldableArray)(Control$dParallel.identity);
 const monoidParAff = dictMonoid => {
   const semigroupParAff1 = {
     append: (() => {
@@ -101,7 +99,9 @@ const monoidParAff = dictMonoid => {
   };
   return {mempty: _pure(dictMonoid.mempty), Semigroup0: () => semigroupParAff1};
 };
-const semigroupCanceler = {append: v => v1 => err => parSequence_([v(err), v1(err)])};
+const semigroupCanceler = {
+  append: v => v1 => err => _sequential(Data$dFoldable.foldrArray(x => b => _parAffApply(_parAffMap(v$1 => x$1 => x$1)(x))(b))(_pure())([v(err), v1(err)]))
+};
 const semigroupAff = dictSemigroup => (
   {
     append: (() => {
@@ -153,7 +153,10 @@ const supervise = aff => {
       return sup;
     };
   })()))({
-    killed: err => sup => parSequence_([killFiber(err)(sup.fiber), makeAff(k => _killAll(err, sup.supervisor, k(Data$dEither.$Either("Right", undefined))))]),
+    killed: err => sup => _sequential(Data$dFoldable.foldrArray(x => b => _parAffApply(_parAffMap(v => x$1 => x$1)(x))(b))(_pure())([
+      killFiber(err)(sup.fiber),
+      makeAff(k => _killAll(err, sup.supervisor, k(Data$dEither.$Either("Right", undefined))))
+    ])),
     failed: v => sup => makeAff(k => _killAll(killError, sup.supervisor, k(Data$dEither.$Either("Right", undefined)))),
     completed: v => sup => makeAff(k => _killAll(killError, sup.supervisor, k(Data$dEither.$Either("Right", undefined))))
   })(x => joinFiber(x.fiber));
@@ -161,10 +164,9 @@ const supervise = aff => {
 const monadSTAff = {liftST: x => _liftEffect(x), Monad0: () => monadAff};
 const monadThrowAff = {throwError: _throwError, Monad0: () => monadAff};
 const monadErrorAff = {catchError: _catchError, MonadThrow0: () => monadThrowAff};
-const $$try = /* #__PURE__ */ Control$dMonad$dError$dClass.try(monadErrorAff);
-const attempt = $$try;
+const attempt = /* #__PURE__ */ Control$dMonad$dError$dClass.try(monadErrorAff);
 const runAff = k => aff => {
-  const $0 = _makeFiber(ffiUtil, _bind($$try(aff))(x => _liftEffect(k(x))));
+  const $0 = _makeFiber(ffiUtil, _bind(Control$dMonad$dError$dClass.try(monadErrorAff)(aff))(x => _liftEffect(k(x))));
   return () => {
     const fiber = $0();
     fiber.run();
@@ -175,7 +177,7 @@ const runAff_ = k => aff => {
   const $0 = runAff(k)(aff);
   return () => {$0();};
 };
-const runSuspendedAff = k => aff => _makeFiber(ffiUtil, _bind($$try(aff))(x => _liftEffect(k(x))));
+const runSuspendedAff = k => aff => _makeFiber(ffiUtil, _bind(Control$dMonad$dError$dClass.try(monadErrorAff)(aff))(x => _liftEffect(k(x))));
 const monadRecAff = {
   tailRecM: k => {
     const go = a => _bind(k(a))(res => {
@@ -199,7 +201,7 @@ const monoidCanceler = {mempty: nonCanceler, Semigroup0: () => semigroupCanceler
 const never = /* #__PURE__ */ makeAff(v => () => nonCanceler);
 const apathize = /* #__PURE__ */ (() => {
   const $0 = _map(v => {});
-  return x => $0($$try(x));
+  return x => $0(attempt(x));
 })();
 const altParAff = {alt: _parAffAlt, Functor0: () => functorParAff};
 const altAff = {alt: a1 => a2 => _catchError(a1)(v => a2), Functor0: () => functorAff};
@@ -251,7 +253,6 @@ export {
   never,
   newtypeCanceler,
   nonCanceler,
-  parSequence_,
   parallelAff,
   plusAff,
   plusParAff,
@@ -262,7 +263,6 @@ export {
   semigroupCanceler,
   semigroupParAff,
   supervise,
-  suspendAff,
-  $$try as try
+  suspendAff
 };
 export * from "./foreign.js";

@@ -1,7 +1,7 @@
 import * as Data$dEq from "../Data.Eq/index.js";
 import * as Data$dFunctor from "../Data.Functor/index.js";
 import * as Data$dString$dCommon from "../Data.String.Common/index.js";
-const eq = /* #__PURE__ */ Data$dEq.eqArrayImpl(Data$dEq.eqStringImpl);
+const eqArray = {eq: /* #__PURE__ */ Data$dEq.eqArrayImpl(Data$dEq.eqStringImpl)};
 const RegexFlags = x => x;
 const unicode = {global: false, ignoreCase: false, multiline: false, dotAll: false, sticky: false, unicode: true};
 const sticky = {global: false, ignoreCase: false, multiline: false, dotAll: false, sticky: true, unicode: false};
@@ -15,7 +15,7 @@ const showRegexFlags = {
       ...Data$dFunctor.arrayMap(v$1 => "sticky")(v.sticky ? [undefined] : []),
       ...Data$dFunctor.arrayMap(v$1 => "unicode")(v.unicode ? [undefined] : [])
     ];
-    if (eq(usedFlags)([])) { return "noFlags"; }
+    if (eqArray.eq(usedFlags)([])) { return "noFlags"; }
     return "(" + Data$dString$dCommon.joinWith(" <> ")(usedFlags) + ")";
   }
 };
@@ -41,4 +41,19 @@ const eqRegexFlags = {
   eq: ra => rb => ra.dotAll === rb.dotAll && ra.global === rb.global && ra.ignoreCase === rb.ignoreCase && ra.multiline === rb.multiline && ra.sticky === rb.sticky && ra.unicode === rb.unicode
 };
 const dotAll = {global: false, ignoreCase: false, multiline: false, dotAll: true, sticky: false, unicode: false};
-export {RegexFlags, dotAll, eq, eqRegexFlags, global, ignoreCase, monoidRegexFlags, multiline, newtypeRegexFlags, noFlags, semigroupRegexFlags, showRegexFlags, sticky, unicode};
+export {
+  RegexFlags,
+  dotAll,
+  eqArray,
+  eqRegexFlags,
+  global,
+  ignoreCase,
+  monoidRegexFlags,
+  multiline,
+  newtypeRegexFlags,
+  noFlags,
+  semigroupRegexFlags,
+  showRegexFlags,
+  sticky,
+  unicode
+};
