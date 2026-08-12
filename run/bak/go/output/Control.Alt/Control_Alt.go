@@ -19,17 +19,6 @@ return pkg_Data_Functor.Get_functorArray()
 	return cache_altArray
 }
 
-var cache_altArray__gopurs_runtime_Value_2010533188 gopurs_runtime.Value
-var once_altArray__gopurs_runtime_Value_2010533188 sync.Once
-func Get_altArray__gopurs_runtime_Value_2010533188() gopurs_runtime.Value {
-	once_altArray__gopurs_runtime_Value_2010533188.Do(func() {
-		cache_altArray__gopurs_runtime_Value_2010533188 = gopurs_runtime.RecordDict2("Functor0", "alt", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return pkg_Data_Functor.Get_functorArray__gopurs_runtime_Value_361387505()
-}), gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupArray(), "append"))
-	})
-	return cache_altArray__gopurs_runtime_Value_2010533188
-}
-
 var cache_alt gopurs_runtime.Value
 var once_alt sync.Once
 func Get_alt() gopurs_runtime.Value {
@@ -41,15 +30,13 @@ return Call_alt(gopurs_runtime.CoerceToStruct[Constructor_Alt[gopurs_runtime.Val
 	return cache_alt
 }
 
-var cache_alt__gopurs_runtime_Value_267341625 gopurs_runtime.Value
-var once_alt__gopurs_runtime_Value_267341625 sync.Once
-func Get_alt__gopurs_runtime_Value_267341625() gopurs_runtime.Value {
-	once_alt__gopurs_runtime_Value_267341625.Do(func() {
-		cache_alt__gopurs_runtime_Value_267341625 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_alt__gopurs_runtime_Value_267341625(gopurs_runtime.CoerceToStruct[Constructor_Alt[gopurs_runtime.Value]](dict_0_box))
-})
+var cache_functorArray__361387505 gopurs_runtime.Value
+var once_functorArray__361387505 sync.Once
+func Get_functorArray__361387505() gopurs_runtime.Value {
+	once_functorArray__361387505.Do(func() {
+		cache_functorArray__361387505 = gopurs_runtime.RecordDict1("map", pkg_Data_Functor.Get_arrayMap())
 	})
-	return cache_alt__gopurs_runtime_Value_267341625
+	return cache_functorArray__361387505
 }
 
 type Constructor_Alt[T_f any] struct {
@@ -72,12 +59,6 @@ func init() {
 
 
 func Call_alt(dict_0_loop *Constructor_Alt[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Alt[gopurs_runtime.Value] = dict_0_loop
-_ = dict_0
-return dict_0.V1
-}
-
-func Call_alt__gopurs_runtime_Value_267341625(dict_0_loop *Constructor_Alt[gopurs_runtime.Value]) gopurs_runtime.Value {
 var dict_0 *Constructor_Alt[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V1

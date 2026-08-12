@@ -26,10 +26,36 @@ func Get_localeCompare() gopurs_runtime.Value {
 	return cache_localeCompare
 }
 
+var cache_eq__472317769 gopurs_runtime.Value
+var once_eq__472317769 sync.Once
+func Get_eq__472317769() gopurs_runtime.Value {
+	once_eq__472317769.Do(func() {
+		cache_eq__472317769 = gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqString(), "eq")
+	})
+	return cache_eq__472317769
+}
+
+var cache_eq__2384498378 gopurs_runtime.Value
+var once_eq__2384498378 sync.Once
+func Get_eq__2384498378() gopurs_runtime.Value {
+	once_eq__2384498378.Do(func() {
+		cache_eq__2384498378 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_eq__2384498378(gopurs_runtime.CoerceToStruct[pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_eq__2384498378
+}
+
 func Call_null(s_0_loop string) bool {
 var s_0 string = s_0_loop
 _ = s_0
-return (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqString(), "eq"), gopurs_runtime.Str(s_0), gopurs_runtime.Str("")).IntVal) != (0)
+return (gopurs_runtime.Apply2(Get_eq__472317769(), gopurs_runtime.Str(s_0), gopurs_runtime.Str("")).IntVal) != (0)
+}
+
+func Call_eq__2384498378(dict_0_loop *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
 }
 
 func Get__localeCompare() gopurs_runtime.Value {

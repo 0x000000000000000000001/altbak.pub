@@ -32,17 +32,6 @@ return Call_cmap(gopurs_runtime.CoerceToStruct[Constructor_Contravariant[gopurs_
 	return cache_cmap
 }
 
-var cache_cmap__gopurs_runtime_Value_326373820 gopurs_runtime.Value
-var once_cmap__gopurs_runtime_Value_326373820 sync.Once
-func Get_cmap__gopurs_runtime_Value_326373820() gopurs_runtime.Value {
-	once_cmap__gopurs_runtime_Value_326373820.Do(func() {
-		cache_cmap__gopurs_runtime_Value_326373820 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_cmap__gopurs_runtime_Value_326373820(gopurs_runtime.CoerceToStruct[Constructor_Contravariant[gopurs_runtime.Value]](dict_0_box))
-})
-	})
-	return cache_cmap__gopurs_runtime_Value_326373820
-}
-
 var cache_cmapFlipped gopurs_runtime.Value
 var once_cmapFlipped sync.Once
 func Get_cmapFlipped() gopurs_runtime.Value {
@@ -76,6 +65,61 @@ return Call_imapC(gopurs_runtime.CoerceToStruct[Constructor_Contravariant[gopurs
 	return cache_imapC
 }
 
+var cache_cmap__326373820 gopurs_runtime.Value
+var once_cmap__326373820 sync.Once
+func Get_cmap__326373820() gopurs_runtime.Value {
+	once_cmap__326373820.Do(func() {
+		cache_cmap__326373820 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_cmap__326373820(gopurs_runtime.CoerceToStruct[Constructor_Contravariant[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_cmap__326373820
+}
+
+var cache_cmap__1884541340 gopurs_runtime.Value
+var once_cmap__1884541340 sync.Once
+func Get_cmap__1884541340() gopurs_runtime.Value {
+	once_cmap__1884541340.Do(func() {
+		cache_cmap__1884541340 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_cmap__1884541340(gopurs_runtime.CoerceToStruct[Constructor_Contravariant[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_cmap__1884541340
+}
+
+var cache_map__2199395572 gopurs_runtime.Value
+var once_map__2199395572 sync.Once
+func Get_map__2199395572() gopurs_runtime.Value {
+	once_map__2199395572.Do(func() {
+		cache_map__2199395572 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_map__2199395572(gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_map__2199395572
+}
+
+var cache_map__2870097428 gopurs_runtime.Value
+var once_map__2870097428 sync.Once
+func Get_map__2870097428() gopurs_runtime.Value {
+	once_map__2870097428.Do(func() {
+		cache_map__2870097428 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_map__2870097428(gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_map__2870097428
+}
+
+var cache_absurd__1769020947 gopurs_runtime.Value
+var once_absurd__1769020947 sync.Once
+func Get_absurd__1769020947() gopurs_runtime.Value {
+	once_absurd__1769020947.Do(func() {
+		cache_absurd__1769020947 = gopurs_runtime.Func(func(a_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_absurd__1769020947(a_0_box)
+})
+	})
+	return cache_absurd__1769020947
+}
+
 type Constructor_Contravariant[T_f any] struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
@@ -94,12 +138,6 @@ func init() {
 
 
 func Call_cmap(dict_0_loop *Constructor_Contravariant[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Contravariant[gopurs_runtime.Value] = dict_0_loop
-_ = dict_0
-return dict_0.V0
-}
-
-func Call_cmap__gopurs_runtime_Value_326373820(dict_0_loop *Constructor_Contravariant[gopurs_runtime.Value]) gopurs_runtime.Value {
 var dict_0 *Constructor_Contravariant[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V0
@@ -133,6 +171,51 @@ _ = v_1
 var f_2 gopurs_runtime.Value = f_2_loop
 _ = f_2
 return gopurs_runtime.Apply(dictContravariant_0.V0, f_2)
+}
+
+func Call_cmap__326373820(dict_0_loop *Constructor_Contravariant[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_Contravariant[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_cmap__1884541340(dict_0_loop *Constructor_Contravariant[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_Contravariant[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_map__2199395572(dict_0_loop *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_map__2870097428(dict_0_loop *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_absurd__1769020947(a_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var a_0 gopurs_runtime.Value = a_0_loop
+_ = a_0
+var spin_1_0_0 gopurs_runtime.Value
+spin_1_0_0 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var v_2_loop gopurs_runtime.Value = v_2_loop_val
+spin_1_0_0:
+for {
+if false { continue spin_1_0_0 }
+var v_2 gopurs_runtime.Value = v_2_loop
+_ = v_2
+v_2_loop = v_2
+continue spin_1_0_0
+return gopurs_runtime.Value{}
+}
+}()
+})
+return gopurs_runtime.Apply(spin_1_0_0, a_0)
 }
 
 

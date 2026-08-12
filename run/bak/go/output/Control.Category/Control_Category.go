@@ -18,17 +18,6 @@ return Call_identity(dict_0_box)
 	return cache_identity
 }
 
-var cache_identity__gopurs_runtime_Value_2527656589 gopurs_runtime.Value
-var once_identity__gopurs_runtime_Value_2527656589 sync.Once
-func Get_identity__gopurs_runtime_Value_2527656589() gopurs_runtime.Value {
-	once_identity__gopurs_runtime_Value_2527656589.Do(func() {
-		cache_identity__gopurs_runtime_Value_2527656589 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_identity__gopurs_runtime_Value_2527656589(dict_0_box)
-})
-	})
-	return cache_identity__gopurs_runtime_Value_2527656589
-}
-
 var cache_categoryFn gopurs_runtime.Value
 var once_categoryFn sync.Once
 func Get_categoryFn() gopurs_runtime.Value {
@@ -42,17 +31,19 @@ return x_0
 	return cache_categoryFn
 }
 
-var cache_categoryFn__ptrConstructor_Category_gopurs_runtime_Value__3492036198 gopurs_runtime.Value
-var once_categoryFn__ptrConstructor_Category_gopurs_runtime_Value__3492036198 sync.Once
-func Get_categoryFn__ptrConstructor_Category_gopurs_runtime_Value__3492036198() gopurs_runtime.Value {
-	once_categoryFn__ptrConstructor_Category_gopurs_runtime_Value__3492036198.Do(func() {
-		cache_categoryFn__ptrConstructor_Category_gopurs_runtime_Value__3492036198 = gopurs_runtime.Value{Type: 9, IntVal: 784524589, UnsafePtr: unsafe.Pointer(&Constructor_Category[gopurs_runtime.Value]{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return pkg_Control_Semigroupoid.Get_semigroupoidFn()
-}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_0
-})})}
+var cache_semigroupoidFn__3002128382 gopurs_runtime.Value
+var once_semigroupoidFn__3002128382 sync.Once
+func Get_semigroupoidFn__3002128382() gopurs_runtime.Value {
+	once_semigroupoidFn__3002128382.Do(func() {
+		cache_semigroupoidFn__3002128382 = gopurs_runtime.RecordDict1("compose", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(g_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(g_1, x_2))
+})
+})
+}))
 	})
-	return cache_categoryFn__ptrConstructor_Category_gopurs_runtime_Value__3492036198
+	return cache_semigroupoidFn__3002128382
 }
 
 type Constructor_Category[T_a any] struct {
@@ -75,12 +66,6 @@ func init() {
 
 
 func Call_identity(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
-_ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "identity")
-}
-
-func Call_identity__gopurs_runtime_Value_2527656589(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "identity")

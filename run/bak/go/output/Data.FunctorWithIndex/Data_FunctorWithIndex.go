@@ -1,6 +1,7 @@
 package Data_FunctorWithIndex
 
 import (
+	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	pkg_Data_Bifunctor "gopurs/output/Data.Bifunctor"
 	pkg_Data_Const "gopurs/output/Data.Const"
 	pkg_Data_Either "gopurs/output/Data.Either"
@@ -32,17 +33,6 @@ return Call_mapWithIndex(gopurs_runtime.CoerceToStruct[Constructor_FunctorWithIn
 	return cache_mapWithIndex
 }
 
-var cache_mapWithIndex__gopurs_runtime_Value_55256674 gopurs_runtime.Value
-var once_mapWithIndex__gopurs_runtime_Value_55256674 sync.Once
-func Get_mapWithIndex__gopurs_runtime_Value_55256674() gopurs_runtime.Value {
-	once_mapWithIndex__gopurs_runtime_Value_55256674.Do(func() {
-		cache_mapWithIndex__gopurs_runtime_Value_55256674 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_mapWithIndex__gopurs_runtime_Value_55256674(gopurs_runtime.CoerceToStruct[Constructor_FunctorWithIndex[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
-})
-	})
-	return cache_mapWithIndex__gopurs_runtime_Value_55256674
-}
-
 var cache_mapDefault gopurs_runtime.Value
 var once_mapDefault sync.Once
 func Get_mapDefault() gopurs_runtime.Value {
@@ -65,19 +55,6 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Tuple.Get_functorT
 }))
 	})
 	return cache_functorWithIndexTuple
-}
-
-var cache_functorWithIndexTuple__gopurs_runtime_Value_1273126103 gopurs_runtime.Value
-var once_functorWithIndexTuple__gopurs_runtime_Value_1273126103 sync.Once
-func Get_functorWithIndexTuple__gopurs_runtime_Value_1273126103() gopurs_runtime.Value {
-	once_functorWithIndexTuple__gopurs_runtime_Value_1273126103.Do(func() {
-		cache_functorWithIndexTuple__gopurs_runtime_Value_1273126103 = gopurs_runtime.RecordDict2("Functor0", "mapWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return pkg_Data_Tuple.Get_functorTuple()
-}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Tuple.Get_functorTuple(), "map"), gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit()))
-}))
-	})
-	return cache_functorWithIndexTuple__gopurs_runtime_Value_1273126103
 }
 
 var cache_functorWithIndexProduct gopurs_runtime.Value
@@ -104,19 +81,6 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Monoid_Multiplicat
 	return cache_functorWithIndexMultiplicative
 }
 
-var cache_functorWithIndexMultiplicative__gopurs_runtime_Value_339744599 gopurs_runtime.Value
-var once_functorWithIndexMultiplicative__gopurs_runtime_Value_339744599 sync.Once
-func Get_functorWithIndexMultiplicative__gopurs_runtime_Value_339744599() gopurs_runtime.Value {
-	once_functorWithIndexMultiplicative__gopurs_runtime_Value_339744599.Do(func() {
-		cache_functorWithIndexMultiplicative__gopurs_runtime_Value_339744599 = gopurs_runtime.RecordDict2("Functor0", "mapWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return pkg_Data_Monoid_Multiplicative.Get_functorMultiplicative__gopurs_runtime_Value_943655089()
-}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Monoid_Multiplicative.Get_functorMultiplicative(), "map"), gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit()))
-}))
-	})
-	return cache_functorWithIndexMultiplicative__gopurs_runtime_Value_339744599
-}
-
 var cache_functorWithIndexMaybe gopurs_runtime.Value
 var once_functorWithIndexMaybe sync.Once
 func Get_functorWithIndexMaybe() gopurs_runtime.Value {
@@ -130,19 +94,6 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_functorM
 	return cache_functorWithIndexMaybe
 }
 
-var cache_functorWithIndexMaybe__gopurs_runtime_Value_2982254679 gopurs_runtime.Value
-var once_functorWithIndexMaybe__gopurs_runtime_Value_2982254679 sync.Once
-func Get_functorWithIndexMaybe__gopurs_runtime_Value_2982254679() gopurs_runtime.Value {
-	once_functorWithIndexMaybe__gopurs_runtime_Value_2982254679.Do(func() {
-		cache_functorWithIndexMaybe__gopurs_runtime_Value_2982254679 = gopurs_runtime.RecordDict2("Functor0", "mapWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return pkg_Data_Maybe.Get_functorMaybe()
-}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_functorMaybe(), "map"), gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit()))
-}))
-	})
-	return cache_functorWithIndexMaybe__gopurs_runtime_Value_2982254679
-}
-
 var cache_functorWithIndexLast gopurs_runtime.Value
 var once_functorWithIndexLast sync.Once
 func Get_functorWithIndexLast() gopurs_runtime.Value {
@@ -154,19 +105,6 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_functorM
 }))
 	})
 	return cache_functorWithIndexLast
-}
-
-var cache_functorWithIndexLast__gopurs_runtime_Value_2982254679 gopurs_runtime.Value
-var once_functorWithIndexLast__gopurs_runtime_Value_2982254679 sync.Once
-func Get_functorWithIndexLast__gopurs_runtime_Value_2982254679() gopurs_runtime.Value {
-	once_functorWithIndexLast__gopurs_runtime_Value_2982254679.Do(func() {
-		cache_functorWithIndexLast__gopurs_runtime_Value_2982254679 = gopurs_runtime.RecordDict2("Functor0", "mapWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return pkg_Data_Maybe.Get_functorMaybe()
-}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_functorMaybe(), "map"), gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit()))
-}))
-	})
-	return cache_functorWithIndexLast__gopurs_runtime_Value_2982254679
 }
 
 var cache_functorWithIndexIdentity gopurs_runtime.Value
@@ -184,21 +122,6 @@ return gopurs_runtime.Apply2(f_0, pkg_Data_Unit.Get_unit(), v_1)
 	return cache_functorWithIndexIdentity
 }
 
-var cache_functorWithIndexIdentity__gopurs_runtime_Value_339744599 gopurs_runtime.Value
-var once_functorWithIndexIdentity__gopurs_runtime_Value_339744599 sync.Once
-func Get_functorWithIndexIdentity__gopurs_runtime_Value_339744599() gopurs_runtime.Value {
-	once_functorWithIndexIdentity__gopurs_runtime_Value_339744599.Do(func() {
-		cache_functorWithIndexIdentity__gopurs_runtime_Value_339744599 = gopurs_runtime.RecordDict2("Functor0", "mapWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return pkg_Data_Identity.Get_functorIdentity__gopurs_runtime_Value_943655089()
-}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(f_0, pkg_Data_Unit.Get_unit(), v_1)
-})
-}))
-	})
-	return cache_functorWithIndexIdentity__gopurs_runtime_Value_339744599
-}
-
 var cache_functorWithIndexFirst gopurs_runtime.Value
 var once_functorWithIndexFirst sync.Once
 func Get_functorWithIndexFirst() gopurs_runtime.Value {
@@ -210,19 +133,6 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_functorM
 }))
 	})
 	return cache_functorWithIndexFirst
-}
-
-var cache_functorWithIndexFirst__gopurs_runtime_Value_2982254679 gopurs_runtime.Value
-var once_functorWithIndexFirst__gopurs_runtime_Value_2982254679 sync.Once
-func Get_functorWithIndexFirst__gopurs_runtime_Value_2982254679() gopurs_runtime.Value {
-	once_functorWithIndexFirst__gopurs_runtime_Value_2982254679.Do(func() {
-		cache_functorWithIndexFirst__gopurs_runtime_Value_2982254679 = gopurs_runtime.RecordDict2("Functor0", "mapWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return pkg_Data_Maybe.Get_functorMaybe()
-}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_functorMaybe(), "map"), gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit()))
-}))
-	})
-	return cache_functorWithIndexFirst__gopurs_runtime_Value_2982254679
 }
 
 var cache_functorWithIndexEither gopurs_runtime.Value
@@ -238,19 +148,6 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Either.Get_functor
 	return cache_functorWithIndexEither
 }
 
-var cache_functorWithIndexEither__gopurs_runtime_Value_1698960599 gopurs_runtime.Value
-var once_functorWithIndexEither__gopurs_runtime_Value_1698960599 sync.Once
-func Get_functorWithIndexEither__gopurs_runtime_Value_1698960599() gopurs_runtime.Value {
-	once_functorWithIndexEither__gopurs_runtime_Value_1698960599.Do(func() {
-		cache_functorWithIndexEither__gopurs_runtime_Value_1698960599 = gopurs_runtime.RecordDict2("Functor0", "mapWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return pkg_Data_Either.Get_functorEither()
-}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Either.Get_functorEither(), "map"), gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit()))
-}))
-	})
-	return cache_functorWithIndexEither__gopurs_runtime_Value_1698960599
-}
-
 var cache_functorWithIndexDual gopurs_runtime.Value
 var once_functorWithIndexDual sync.Once
 func Get_functorWithIndexDual() gopurs_runtime.Value {
@@ -264,19 +161,6 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Monoid_Dual.Get_fu
 	return cache_functorWithIndexDual
 }
 
-var cache_functorWithIndexDual__gopurs_runtime_Value_339744599 gopurs_runtime.Value
-var once_functorWithIndexDual__gopurs_runtime_Value_339744599 sync.Once
-func Get_functorWithIndexDual__gopurs_runtime_Value_339744599() gopurs_runtime.Value {
-	once_functorWithIndexDual__gopurs_runtime_Value_339744599.Do(func() {
-		cache_functorWithIndexDual__gopurs_runtime_Value_339744599 = gopurs_runtime.RecordDict2("Functor0", "mapWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return pkg_Data_Monoid_Dual.Get_functorDual__gopurs_runtime_Value_943655089()
-}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Monoid_Dual.Get_functorDual(), "map"), gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit()))
-}))
-	})
-	return cache_functorWithIndexDual__gopurs_runtime_Value_339744599
-}
-
 var cache_functorWithIndexDisj gopurs_runtime.Value
 var once_functorWithIndexDisj sync.Once
 func Get_functorWithIndexDisj() gopurs_runtime.Value {
@@ -288,19 +172,6 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Monoid_Disj.Get_fu
 }))
 	})
 	return cache_functorWithIndexDisj
-}
-
-var cache_functorWithIndexDisj__gopurs_runtime_Value_339744599 gopurs_runtime.Value
-var once_functorWithIndexDisj__gopurs_runtime_Value_339744599 sync.Once
-func Get_functorWithIndexDisj__gopurs_runtime_Value_339744599() gopurs_runtime.Value {
-	once_functorWithIndexDisj__gopurs_runtime_Value_339744599.Do(func() {
-		cache_functorWithIndexDisj__gopurs_runtime_Value_339744599 = gopurs_runtime.RecordDict2("Functor0", "mapWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return pkg_Data_Monoid_Disj.Get_functorDisj__gopurs_runtime_Value_943655089()
-}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Monoid_Disj.Get_functorDisj(), "map"), gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit()))
-}))
-	})
-	return cache_functorWithIndexDisj__gopurs_runtime_Value_339744599
 }
 
 var cache_functorWithIndexCoproduct gopurs_runtime.Value
@@ -329,21 +200,6 @@ return v1_1
 	return cache_functorWithIndexConst
 }
 
-var cache_functorWithIndexConst__gopurs_runtime_Value_3232336655 gopurs_runtime.Value
-var once_functorWithIndexConst__gopurs_runtime_Value_3232336655 sync.Once
-func Get_functorWithIndexConst__gopurs_runtime_Value_3232336655() gopurs_runtime.Value {
-	once_functorWithIndexConst__gopurs_runtime_Value_3232336655.Do(func() {
-		cache_functorWithIndexConst__gopurs_runtime_Value_3232336655 = gopurs_runtime.RecordDict2("Functor0", "mapWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return pkg_Data_Const.Get_functorConst__gopurs_runtime_Value_1992455793()
-}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return v1_1
-})
-}))
-	})
-	return cache_functorWithIndexConst__gopurs_runtime_Value_3232336655
-}
-
 var cache_functorWithIndexConj gopurs_runtime.Value
 var once_functorWithIndexConj sync.Once
 func Get_functorWithIndexConj() gopurs_runtime.Value {
@@ -355,19 +211,6 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Monoid_Conj.Get_fu
 }))
 	})
 	return cache_functorWithIndexConj
-}
-
-var cache_functorWithIndexConj__gopurs_runtime_Value_339744599 gopurs_runtime.Value
-var once_functorWithIndexConj__gopurs_runtime_Value_339744599 sync.Once
-func Get_functorWithIndexConj__gopurs_runtime_Value_339744599() gopurs_runtime.Value {
-	once_functorWithIndexConj__gopurs_runtime_Value_339744599.Do(func() {
-		cache_functorWithIndexConj__gopurs_runtime_Value_339744599 = gopurs_runtime.RecordDict2("Functor0", "mapWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return pkg_Data_Monoid_Conj.Get_functorConj__gopurs_runtime_Value_943655089()
-}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Monoid_Conj.Get_functorConj(), "map"), gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit()))
-}))
-	})
-	return cache_functorWithIndexConj__gopurs_runtime_Value_339744599
 }
 
 var cache_functorWithIndexCompose gopurs_runtime.Value
@@ -390,28 +233,6 @@ return pkg_Data_Functor.Get_functorArray()
 }), Get_mapWithIndexArray())
 	})
 	return cache_functorWithIndexArray
-}
-
-var cache_functorWithIndexArray__ptrConstructor_FunctorWithIndex_int64__gopurs_runtime_Value__3811533158 gopurs_runtime.Value
-var once_functorWithIndexArray__ptrConstructor_FunctorWithIndex_int64__gopurs_runtime_Value__3811533158 sync.Once
-func Get_functorWithIndexArray__ptrConstructor_FunctorWithIndex_int64__gopurs_runtime_Value__3811533158() gopurs_runtime.Value {
-	once_functorWithIndexArray__ptrConstructor_FunctorWithIndex_int64__gopurs_runtime_Value__3811533158.Do(func() {
-		cache_functorWithIndexArray__ptrConstructor_FunctorWithIndex_int64__gopurs_runtime_Value__3811533158 = gopurs_runtime.Value{Type: 9, IntVal: 4077743418, UnsafePtr: unsafe.Pointer(&Constructor_FunctorWithIndex[int64, gopurs_runtime.Value]{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return pkg_Data_Functor.Get_functorArray()
-}), Get_mapWithIndexArray()})}
-	})
-	return cache_functorWithIndexArray__ptrConstructor_FunctorWithIndex_int64__gopurs_runtime_Value__3811533158
-}
-
-var cache_functorWithIndexArray__gopurs_runtime_Value_490015842 gopurs_runtime.Value
-var once_functorWithIndexArray__gopurs_runtime_Value_490015842 sync.Once
-func Get_functorWithIndexArray__gopurs_runtime_Value_490015842() gopurs_runtime.Value {
-	once_functorWithIndexArray__gopurs_runtime_Value_490015842.Do(func() {
-		cache_functorWithIndexArray__gopurs_runtime_Value_490015842 = gopurs_runtime.RecordDict2("Functor0", "mapWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return pkg_Data_Functor.Get_functorArray__gopurs_runtime_Value_361387505()
-}), Get_mapWithIndexArray())
-	})
-	return cache_functorWithIndexArray__gopurs_runtime_Value_490015842
 }
 
 var cache_functorWithIndexApp gopurs_runtime.Value
@@ -438,17 +259,345 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Monoid_Additive.Ge
 	return cache_functorWithIndexAdditive
 }
 
-var cache_functorWithIndexAdditive__gopurs_runtime_Value_339744599 gopurs_runtime.Value
-var once_functorWithIndexAdditive__gopurs_runtime_Value_339744599 sync.Once
-func Get_functorWithIndexAdditive__gopurs_runtime_Value_339744599() gopurs_runtime.Value {
-	once_functorWithIndexAdditive__gopurs_runtime_Value_339744599.Do(func() {
-		cache_functorWithIndexAdditive__gopurs_runtime_Value_339744599 = gopurs_runtime.RecordDict2("Functor0", "mapWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return pkg_Data_Monoid_Additive.Get_functorAdditive__gopurs_runtime_Value_943655089()
-}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Monoid_Additive.Get_functorAdditive(), "map"), gopurs_runtime.Apply(f_0, pkg_Data_Unit.Get_unit()))
+var cache_compose__858342840 gopurs_runtime.Value
+var once_compose__858342840 sync.Once
+func Get_compose__858342840() gopurs_runtime.Value {
+	once_compose__858342840.Do(func() {
+		cache_compose__858342840 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_compose__858342840(gopurs_runtime.CoerceToStruct[pkg_Control_Semigroupoid.Constructor_Semigroupoid[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_compose__858342840
+}
+
+var cache_semigroupoidFn__2387483462 gopurs_runtime.Value
+var once_semigroupoidFn__2387483462 sync.Once
+func Get_semigroupoidFn__2387483462() gopurs_runtime.Value {
+	once_semigroupoidFn__2387483462.Do(func() {
+		cache_semigroupoidFn__2387483462 = gopurs_runtime.RecordDict1("compose", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(g_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(g_1, x_2))
+})
+})
 }))
 	})
-	return cache_functorWithIndexAdditive__gopurs_runtime_Value_339744599
+	return cache_semigroupoidFn__2387483462
+}
+
+var cache_bifunctorEither__3558063994 gopurs_runtime.Value
+var once_bifunctorEither__3558063994 sync.Once
+func Get_bifunctorEither__3558063994() gopurs_runtime.Value {
+	once_bifunctorEither__3558063994.Do(func() {
+		cache_bifunctorEither__3558063994 = gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t0 gopurs_runtime.Value
+{
+if (v2_2.Type == 9 && v2_2.IntVal == 3711209382) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply(v_0, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0)})}
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (v2_2.Type == 9 && v2_2.IntVal == 2465973597) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply(v1_1, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0)})}
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_0:
+return __t0
+})
+})
+}))
+	})
+	return cache_bifunctorEither__3558063994
+}
+
+var cache_bifunctorTuple__3421321530 gopurs_runtime.Value
+var once_bifunctorTuple__3421321530 sync.Once
+func Get_bifunctorTuple__3421321530() gopurs_runtime.Value {
+	once_bifunctorTuple__3421321530.Do(func() {
+		cache_bifunctorTuple__3421321530 = gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(g_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply(f_0, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0), gopurs_runtime.Apply(g_1, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1)})}
+})
+})
+}))
+	})
+	return cache_bifunctorTuple__3421321530
+}
+
+var cache_bimap__132457202 gopurs_runtime.Value
+var once_bimap__132457202 sync.Once
+func Get_bimap__132457202() gopurs_runtime.Value {
+	once_bimap__132457202.Do(func() {
+		cache_bimap__132457202 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bimap__132457202(gopurs_runtime.CoerceToStruct[pkg_Data_Bifunctor.Constructor_Bifunctor[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_bimap__132457202
+}
+
+var cache_bimap__1783967194 gopurs_runtime.Value
+var once_bimap__1783967194 sync.Once
+func Get_bimap__1783967194() gopurs_runtime.Value {
+	once_bimap__1783967194.Do(func() {
+		cache_bimap__1783967194 = gopurs_runtime.RecordGet(pkg_Data_Bifunctor.Get_bifunctorEither(), "bimap")
+	})
+	return cache_bimap__1783967194
+}
+
+var cache_bimap__298925978 gopurs_runtime.Value
+var once_bimap__298925978 sync.Once
+func Get_bimap__298925978() gopurs_runtime.Value {
+	once_bimap__298925978.Do(func() {
+		cache_bimap__298925978 = gopurs_runtime.RecordGet(pkg_Data_Bifunctor.Get_bifunctorTuple(), "bimap")
+	})
+	return cache_bimap__298925978
+}
+
+var cache_functorConst__1992455793 gopurs_runtime.Value
+var once_functorConst__1992455793 sync.Once
+func Get_functorConst__1992455793() gopurs_runtime.Value {
+	once_functorConst__1992455793.Do(func() {
+		cache_functorConst__1992455793 = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(m_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return m_1
+})
+}))
+	})
+	return cache_functorConst__1992455793
+}
+
+var cache_functorEither__1771778897 gopurs_runtime.Value
+var once_functorEither__1771778897 sync.Once
+func Get_functorEither__1771778897() gopurs_runtime.Value {
+	once_functorEither__1771778897.Do(func() {
+		cache_functorEither__1771778897 = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(m_1 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t0 gopurs_runtime.Value
+{
+if (m_1.Type == 9 && m_1.IntVal == 3711209382) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(m_1.UnsafePtr).V0})}
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (m_1.Type == 9 && m_1.IntVal == 2465973597) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply(f_0, (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(m_1.UnsafePtr).V0)})}
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_0:
+return __t0
+})
+}))
+	})
+	return cache_functorEither__1771778897
+}
+
+var cache_const__641934996 gopurs_runtime.Value
+var once_const__641934996 sync.Once
+func Get_const__641934996() gopurs_runtime.Value {
+	once_const__641934996.Do(func() {
+		cache_const__641934996 = gopurs_runtime.Func2(func(a_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_const__641934996(a_0_box, v_1_box)
+})
+	})
+	return cache_const__641934996
+}
+
+var cache_functorArray__361387505 gopurs_runtime.Value
+var once_functorArray__361387505 sync.Once
+func Get_functorArray__361387505() gopurs_runtime.Value {
+	once_functorArray__361387505.Do(func() {
+		cache_functorArray__361387505 = gopurs_runtime.RecordDict1("map", pkg_Data_Functor.Get_arrayMap())
+	})
+	return cache_functorArray__361387505
+}
+
+var cache_mapWithIndex__55256674 gopurs_runtime.Value
+var once_mapWithIndex__55256674 sync.Once
+func Get_mapWithIndex__55256674() gopurs_runtime.Value {
+	once_mapWithIndex__55256674.Do(func() {
+		cache_mapWithIndex__55256674 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mapWithIndex__55256674(gopurs_runtime.CoerceToStruct[Constructor_FunctorWithIndex[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_mapWithIndex__55256674
+}
+
+var cache_mapWithIndex__3104159586 gopurs_runtime.Value
+var once_mapWithIndex__3104159586 sync.Once
+func Get_mapWithIndex__3104159586() gopurs_runtime.Value {
+	once_mapWithIndex__3104159586.Do(func() {
+		cache_mapWithIndex__3104159586 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mapWithIndex__3104159586(gopurs_runtime.CoerceToStruct[Constructor_FunctorWithIndex[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_mapWithIndex__3104159586
+}
+
+var cache_functorIdentity__943655089 gopurs_runtime.Value
+var once_functorIdentity__943655089 sync.Once
+func Get_functorIdentity__943655089() gopurs_runtime.Value {
+	once_functorIdentity__943655089.Do(func() {
+		cache_functorIdentity__943655089 = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(m_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_0, m_1)
+})
+}))
+	})
+	return cache_functorIdentity__943655089
+}
+
+var cache_functorFirst__2097654001 gopurs_runtime.Value
+var once_functorFirst__2097654001 sync.Once
+func Get_functorFirst__2097654001() gopurs_runtime.Value {
+	once_functorFirst__2097654001.Do(func() {
+		cache_functorFirst__2097654001 = pkg_Data_Maybe.Get_functorMaybe()
+	})
+	return cache_functorFirst__2097654001
+}
+
+var cache_functorLast__2097654001 gopurs_runtime.Value
+var once_functorLast__2097654001 sync.Once
+func Get_functorLast__2097654001() gopurs_runtime.Value {
+	once_functorLast__2097654001.Do(func() {
+		cache_functorLast__2097654001 = pkg_Data_Maybe.Get_functorMaybe()
+	})
+	return cache_functorLast__2097654001
+}
+
+var cache_functorMaybe__2097654001 gopurs_runtime.Value
+var once_functorMaybe__2097654001 sync.Once
+func Get_functorMaybe__2097654001() gopurs_runtime.Value {
+	once_functorMaybe__2097654001.Do(func() {
+		cache_functorMaybe__2097654001 = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t0 gopurs_runtime.Value
+{
+if (v1_1.Type == 9 && v1_1.IntVal == 930809136 && v1_1.UnsafePtr != nil) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, gopurs_runtime.Apply(v_0, (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v1_1.UnsafePtr).V0)})}
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(nil))}
+}
+end_branch_0:
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]](__t0))}
+})
+}))
+	})
+	return cache_functorMaybe__2097654001
+}
+
+var cache_functorAdditive__943655089 gopurs_runtime.Value
+var once_functorAdditive__943655089 sync.Once
+func Get_functorAdditive__943655089() gopurs_runtime.Value {
+	once_functorAdditive__943655089.Do(func() {
+		cache_functorAdditive__943655089 = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(m_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_0, m_1)
+})
+}))
+	})
+	return cache_functorAdditive__943655089
+}
+
+var cache_functorConj__943655089 gopurs_runtime.Value
+var once_functorConj__943655089 sync.Once
+func Get_functorConj__943655089() gopurs_runtime.Value {
+	once_functorConj__943655089.Do(func() {
+		cache_functorConj__943655089 = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(m_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_0, m_1)
+})
+}))
+	})
+	return cache_functorConj__943655089
+}
+
+var cache_functorDisj__943655089 gopurs_runtime.Value
+var once_functorDisj__943655089 sync.Once
+func Get_functorDisj__943655089() gopurs_runtime.Value {
+	once_functorDisj__943655089.Do(func() {
+		cache_functorDisj__943655089 = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(m_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_0, m_1)
+})
+}))
+	})
+	return cache_functorDisj__943655089
+}
+
+var cache_functorDual__943655089 gopurs_runtime.Value
+var once_functorDual__943655089 sync.Once
+func Get_functorDual__943655089() gopurs_runtime.Value {
+	once_functorDual__943655089.Do(func() {
+		cache_functorDual__943655089 = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(m_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_0, m_1)
+})
+}))
+	})
+	return cache_functorDual__943655089
+}
+
+var cache_functorMultiplicative__943655089 gopurs_runtime.Value
+var once_functorMultiplicative__943655089 sync.Once
+func Get_functorMultiplicative__943655089() gopurs_runtime.Value {
+	once_functorMultiplicative__943655089.Do(func() {
+		cache_functorMultiplicative__943655089 = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(m_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_0, m_1)
+})
+}))
+	})
+	return cache_functorMultiplicative__943655089
+}
+
+var cache_curry__2567276513 gopurs_runtime.Value
+var once_curry__2567276513 sync.Once
+func Get_curry__2567276513() gopurs_runtime.Value {
+	once_curry__2567276513.Do(func() {
+		cache_curry__2567276513 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value, b_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_curry__2567276513(f_0_box, a_1_box, b_2_box)
+})
+	})
+	return cache_curry__2567276513
+}
+
+var cache_functorTuple__2249620049 gopurs_runtime.Value
+var once_functorTuple__2249620049 sync.Once
+func Get_functorTuple__2249620049() gopurs_runtime.Value {
+	once_functorTuple__2249620049.Do(func() {
+		cache_functorTuple__2249620049 = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(m_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(m_1.UnsafePtr).V0, gopurs_runtime.Apply(f_0, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(m_1.UnsafePtr).V1)})}
+})
+}))
+	})
+	return cache_functorTuple__2249620049
 }
 
 type Constructor_FunctorWithIndex[T_i any, T_f any] struct {
@@ -471,12 +620,6 @@ func init() {
 
 
 func Call_mapWithIndex(dict_0_loop *Constructor_FunctorWithIndex[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_FunctorWithIndex[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
-_ = dict_0
-return dict_0.V1
-}
-
-func Call_mapWithIndex__gopurs_runtime_Value_55256674(dict_0_loop *Constructor_FunctorWithIndex[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
 var dict_0 *Constructor_FunctorWithIndex[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V1
@@ -576,6 +719,48 @@ return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctorWithIndex_0, "mapWithIndex"), f_2, v_3)
 })
 }))
+}
+
+func Call_compose__858342840(dict_0_loop *pkg_Control_Semigroupoid.Constructor_Semigroupoid[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Control_Semigroupoid.Constructor_Semigroupoid[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_bimap__132457202(dict_0_loop *pkg_Data_Bifunctor.Constructor_Bifunctor[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Bifunctor.Constructor_Bifunctor[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_const__641934996(a_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var a_0 gopurs_runtime.Value = a_0_loop
+_ = a_0
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+return a_0
+}
+
+func Call_mapWithIndex__55256674(dict_0_loop *Constructor_FunctorWithIndex[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_FunctorWithIndex[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V1
+}
+
+func Call_mapWithIndex__3104159586(dict_0_loop *Constructor_FunctorWithIndex[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_FunctorWithIndex[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V1
+}
+
+func Call_curry__2567276513(f_0_loop gopurs_runtime.Value, a_1_loop gopurs_runtime.Value, b_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var a_1 gopurs_runtime.Value = a_1_loop
+_ = a_1
+var b_2 gopurs_runtime.Value = b_2_loop
+_ = b_2
+return gopurs_runtime.Apply(f_0, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, a_1, b_2})})
 }
 
 func Get_mapWithIndexArray() gopurs_runtime.Value {

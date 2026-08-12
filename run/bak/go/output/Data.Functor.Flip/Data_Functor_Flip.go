@@ -1,9 +1,13 @@
 package Data_Functor_Flip
 
 import (
+	pkg_Control_Biapplicative "gopurs/output/Control.Biapplicative"
+	pkg_Control_Biapply "gopurs/output/Control.Biapply"
+	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	pkg_Data_Bifunctor "gopurs/output/Data.Bifunctor"
 	pkg_Data_Profunctor "gopurs/output/Data.Profunctor"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
+	pkg_Data_Show "gopurs/output/Data.Show"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 )
@@ -140,6 +144,125 @@ return Call_biapplicativeFlip(dictBiapplicative_0_box)
 	return cache_biapplicativeFlip
 }
 
+var cache_bipure__1449949980 gopurs_runtime.Value
+var once_bipure__1449949980 sync.Once
+func Get_bipure__1449949980() gopurs_runtime.Value {
+	once_bipure__1449949980.Do(func() {
+		cache_bipure__1449949980 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bipure__1449949980(gopurs_runtime.CoerceToStruct[pkg_Control_Biapplicative.Constructor_Biapplicative[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_bipure__1449949980
+}
+
+var cache_biapply__3394381979 gopurs_runtime.Value
+var once_biapply__3394381979 sync.Once
+func Get_biapply__3394381979() gopurs_runtime.Value {
+	once_biapply__3394381979.Do(func() {
+		cache_biapply__3394381979 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_biapply__3394381979(gopurs_runtime.CoerceToStruct[pkg_Control_Biapply.Constructor_Biapply[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_biapply__3394381979
+}
+
+var cache_compose__858342840 gopurs_runtime.Value
+var once_compose__858342840 sync.Once
+func Get_compose__858342840() gopurs_runtime.Value {
+	once_compose__858342840.Do(func() {
+		cache_compose__858342840 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_compose__858342840(gopurs_runtime.CoerceToStruct[pkg_Control_Semigroupoid.Constructor_Semigroupoid[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_compose__858342840
+}
+
+var cache_bimap__132457202 gopurs_runtime.Value
+var once_bimap__132457202 sync.Once
+func Get_bimap__132457202() gopurs_runtime.Value {
+	once_bimap__132457202.Do(func() {
+		cache_bimap__132457202 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bimap__132457202(gopurs_runtime.CoerceToStruct[pkg_Data_Bifunctor.Constructor_Bifunctor[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_bimap__132457202
+}
+
+var cache_lmap__2196160232 gopurs_runtime.Value
+var once_lmap__2196160232 sync.Once
+func Get_lmap__2196160232() gopurs_runtime.Value {
+	once_lmap__2196160232.Do(func() {
+		cache_lmap__2196160232 = gopurs_runtime.Func2(func(dictBifunctor_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_lmap__2196160232(gopurs_runtime.CoerceToStruct[pkg_Data_Bifunctor.Constructor_Bifunctor[gopurs_runtime.Value]](dictBifunctor_0_box), f_1_box)
+})
+	})
+	return cache_lmap__2196160232
+}
+
+var cache_dimap__1466332548 gopurs_runtime.Value
+var once_dimap__1466332548 sync.Once
+func Get_dimap__1466332548() gopurs_runtime.Value {
+	once_dimap__1466332548.Do(func() {
+		cache_dimap__1466332548 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_dimap__1466332548(gopurs_runtime.CoerceToStruct[pkg_Data_Profunctor.Constructor_Profunctor[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_dimap__1466332548
+}
+
+var cache_lcmap__1762133278 gopurs_runtime.Value
+var once_lcmap__1762133278 sync.Once
+func Get_lcmap__1762133278() gopurs_runtime.Value {
+	once_lcmap__1762133278.Do(func() {
+		cache_lcmap__1762133278 = gopurs_runtime.Func2(func(dictProfunctor_0_box gopurs_runtime.Value, a2b_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_lcmap__1762133278(gopurs_runtime.CoerceToStruct[pkg_Data_Profunctor.Constructor_Profunctor[gopurs_runtime.Value]](dictProfunctor_0_box), a2b_1_box)
+})
+	})
+	return cache_lcmap__1762133278
+}
+
+var cache_append__493084344 gopurs_runtime.Value
+var once_append__493084344 sync.Once
+func Get_append__493084344() gopurs_runtime.Value {
+	once_append__493084344.Do(func() {
+		cache_append__493084344 = gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append")
+	})
+	return cache_append__493084344
+}
+
+var cache_append__1230318264 gopurs_runtime.Value
+var once_append__1230318264 sync.Once
+func Get_append__1230318264() gopurs_runtime.Value {
+	once_append__1230318264.Do(func() {
+		cache_append__1230318264 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_append__1230318264(gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_append__1230318264
+}
+
+var cache_show__2742601362 gopurs_runtime.Value
+var once_show__2742601362 sync.Once
+func Get_show__2742601362() gopurs_runtime.Value {
+	once_show__2742601362.Do(func() {
+		cache_show__2742601362 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_show__2742601362(gopurs_runtime.CoerceToStruct[pkg_Data_Show.Constructor_Show[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_show__2742601362
+}
+
+var cache_show__255526802 gopurs_runtime.Value
+var once_show__255526802 sync.Once
+func Get_show__255526802() gopurs_runtime.Value {
+	once_show__255526802.Do(func() {
+		cache_show__255526802 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_show__255526802(gopurs_runtime.CoerceToStruct[pkg_Data_Show.Constructor_Show[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_show__255526802
+}
+
 func Call_Flip(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -150,7 +273,7 @@ func Call_showFlip(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
 _ = dictShow_0
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str("(Flip "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1), gopurs_runtime.Str(")"))).StrVal())
+return gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("(Flip "), gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1), gopurs_runtime.Str(")"))).StrVal())
 }))
 }
 
@@ -276,6 +399,70 @@ return gopurs_runtime.Func(func(b_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBiapplicative_0, "bipure"), b_3, a_2)
 })
 }))
+}
+
+func Call_bipure__1449949980(dict_0_loop *pkg_Control_Biapplicative.Constructor_Biapplicative[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Control_Biapplicative.Constructor_Biapplicative[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V1
+}
+
+func Call_biapply__3394381979(dict_0_loop *pkg_Control_Biapply.Constructor_Biapply[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Control_Biapply.Constructor_Biapply[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V1
+}
+
+func Call_compose__858342840(dict_0_loop *pkg_Control_Semigroupoid.Constructor_Semigroupoid[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Control_Semigroupoid.Constructor_Semigroupoid[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_bimap__132457202(dict_0_loop *pkg_Data_Bifunctor.Constructor_Bifunctor[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Bifunctor.Constructor_Bifunctor[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_lmap__2196160232(dictBifunctor_0_loop *pkg_Data_Bifunctor.Constructor_Bifunctor[gopurs_runtime.Value], f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictBifunctor_0 *pkg_Data_Bifunctor.Constructor_Bifunctor[gopurs_runtime.Value] = dictBifunctor_0_loop
+_ = dictBifunctor_0
+var f_1 gopurs_runtime.Value = f_1_loop
+_ = f_1
+return gopurs_runtime.Apply2(dictBifunctor_0.V0, f_1, pkg_Data_Bifunctor.Get_identity())
+}
+
+func Call_dimap__1466332548(dict_0_loop *pkg_Data_Profunctor.Constructor_Profunctor[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Profunctor.Constructor_Profunctor[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_lcmap__1762133278(dictProfunctor_0_loop *pkg_Data_Profunctor.Constructor_Profunctor[gopurs_runtime.Value], a2b_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictProfunctor_0 *pkg_Data_Profunctor.Constructor_Profunctor[gopurs_runtime.Value] = dictProfunctor_0_loop
+_ = dictProfunctor_0
+var a2b_1 gopurs_runtime.Value = a2b_1_loop
+_ = a2b_1
+return gopurs_runtime.Apply2(dictProfunctor_0.V0, a2b_1, pkg_Data_Profunctor.Get_identity())
+}
+
+func Call_append__1230318264(dict_0_loop *pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_show__2742601362(dict_0_loop *pkg_Data_Show.Constructor_Show[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Show.Constructor_Show[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_show__255526802(dict_0_loop *pkg_Data_Show.Constructor_Show[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Show.Constructor_Show[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
 }
 
 

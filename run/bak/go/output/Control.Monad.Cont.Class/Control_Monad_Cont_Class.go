@@ -17,17 +17,6 @@ return Call_callCC(gopurs_runtime.CoerceToStruct[Constructor_MonadCont[gopurs_ru
 	return cache_callCC
 }
 
-var cache_callCC__gopurs_runtime_Value_1888484333 gopurs_runtime.Value
-var once_callCC__gopurs_runtime_Value_1888484333 sync.Once
-func Get_callCC__gopurs_runtime_Value_1888484333() gopurs_runtime.Value {
-	once_callCC__gopurs_runtime_Value_1888484333.Do(func() {
-		cache_callCC__gopurs_runtime_Value_1888484333 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_callCC__gopurs_runtime_Value_1888484333(gopurs_runtime.CoerceToStruct[Constructor_MonadCont[gopurs_runtime.Value]](dict_0_box))
-})
-	})
-	return cache_callCC__gopurs_runtime_Value_1888484333
-}
-
 type Constructor_MonadCont[T_m any] struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
@@ -48,12 +37,6 @@ func init() {
 
 
 func Call_callCC(dict_0_loop *Constructor_MonadCont[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_MonadCont[gopurs_runtime.Value] = dict_0_loop
-_ = dict_0
-return dict_0.V1
-}
-
-func Call_callCC__gopurs_runtime_Value_1888484333(dict_0_loop *Constructor_MonadCont[gopurs_runtime.Value]) gopurs_runtime.Value {
 var dict_0 *Constructor_MonadCont[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V1

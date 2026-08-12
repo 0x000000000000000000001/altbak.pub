@@ -29,6 +29,17 @@ return pkg_Control_Monad_Identity_Trans.Get_runIdentityT()
 	return cache_comonadTransIdentityT
 }
 
+var cache_runIdentityT__3018751933 gopurs_runtime.Value
+var once_runIdentityT__3018751933 sync.Once
+func Get_runIdentityT__3018751933() gopurs_runtime.Value {
+	once_runIdentityT__3018751933.Do(func() {
+		cache_runIdentityT__3018751933 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_runIdentityT__3018751933(v_0_box)
+})
+	})
+	return cache_runIdentityT__3018751933
+}
+
 type Constructor_ComonadTrans[T_f any] struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
@@ -50,6 +61,12 @@ func Call_lower(dict_0_loop *Constructor_ComonadTrans[gopurs_runtime.Value]) gop
 var dict_0 *Constructor_ComonadTrans[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V0
+}
+
+func Call_runIdentityT__3018751933(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+return v_0
 }
 
 

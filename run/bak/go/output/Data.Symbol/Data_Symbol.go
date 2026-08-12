@@ -28,17 +28,6 @@ return Call_reflectSymbol(gopurs_runtime.CoerceToStruct[Constructor_IsSymbol[gop
 	return cache_reflectSymbol
 }
 
-var cache_reflectSymbol__gopurs_runtime_Value_1166932993 gopurs_runtime.Value
-var once_reflectSymbol__gopurs_runtime_Value_1166932993 sync.Once
-func Get_reflectSymbol__gopurs_runtime_Value_1166932993() gopurs_runtime.Value {
-	once_reflectSymbol__gopurs_runtime_Value_1166932993.Do(func() {
-		cache_reflectSymbol__gopurs_runtime_Value_1166932993 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_reflectSymbol__gopurs_runtime_Value_1166932993(gopurs_runtime.CoerceToStruct[Constructor_IsSymbol[gopurs_runtime.Value]](dict_0_box))
-})
-	})
-	return cache_reflectSymbol__gopurs_runtime_Value_1166932993
-}
-
 type Constructor_IsSymbol[T_sym any] struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
@@ -69,12 +58,6 @@ return gopurs_runtime.Str(s_0)
 }
 
 func Call_reflectSymbol(dict_0_loop *Constructor_IsSymbol[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_IsSymbol[gopurs_runtime.Value] = dict_0_loop
-_ = dict_0
-return dict_0.V0
-}
-
-func Call_reflectSymbol__gopurs_runtime_Value_1166932993(dict_0_loop *Constructor_IsSymbol[gopurs_runtime.Value]) gopurs_runtime.Value {
 var dict_0 *Constructor_IsSymbol[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V0

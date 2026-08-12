@@ -30,17 +30,6 @@ return Call_proof(gopurs_runtime.CoerceToStruct[Constructor_TypeEquals[gopurs_ru
 	return cache_proof
 }
 
-var cache_proof__gopurs_runtime_Value_3363032129 gopurs_runtime.Value
-var once_proof__gopurs_runtime_Value_3363032129 sync.Once
-func Get_proof__gopurs_runtime_Value_3363032129() gopurs_runtime.Value {
-	once_proof__gopurs_runtime_Value_3363032129.Do(func() {
-		cache_proof__gopurs_runtime_Value_3363032129 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_proof__gopurs_runtime_Value_3363032129(gopurs_runtime.CoerceToStruct[Constructor_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
-})
-	})
-	return cache_proof__gopurs_runtime_Value_3363032129
-}
-
 var cache_to gopurs_runtime.Value
 var once_to sync.Once
 func Get_to() gopurs_runtime.Value {
@@ -63,15 +52,15 @@ return Call_from(gopurs_runtime.CoerceToStruct[Constructor_TypeEquals[gopurs_run
 	return cache_from
 }
 
-var cache_from__gopurs_runtime_Value_2366809570 gopurs_runtime.Value
-var once_from__gopurs_runtime_Value_2366809570 sync.Once
-func Get_from__gopurs_runtime_Value_2366809570() gopurs_runtime.Value {
-	once_from__gopurs_runtime_Value_2366809570.Do(func() {
-		cache_from__gopurs_runtime_Value_2366809570 = gopurs_runtime.Func(func(dictTypeEquals_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_from__gopurs_runtime_Value_2366809570(gopurs_runtime.CoerceToStruct[Constructor_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value]](dictTypeEquals_0_box))
+var cache_proof__3363032129 gopurs_runtime.Value
+var once_proof__3363032129 sync.Once
+func Get_proof__3363032129() gopurs_runtime.Value {
+	once_proof__3363032129.Do(func() {
+		cache_proof__3363032129 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_proof__3363032129(gopurs_runtime.CoerceToStruct[Constructor_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
 })
 	})
-	return cache_from__gopurs_runtime_Value_2366809570
+	return cache_proof__3363032129
 }
 
 type Constructor_TypeEquals[T_a any, T_b any] struct {
@@ -99,12 +88,6 @@ _ = dict_0
 return dict_0.V1
 }
 
-func Call_proof__gopurs_runtime_Value_3363032129(dict_0_loop *Constructor_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
-_ = dict_0
-return dict_0.V1
-}
-
 func Call_to(dictTypeEquals_0_loop *Constructor_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
 var dictTypeEquals_0 *Constructor_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value] = dictTypeEquals_0_loop
 _ = dictTypeEquals_0
@@ -121,12 +104,10 @@ return a_1
 }))
 }
 
-func Call_from__gopurs_runtime_Value_2366809570(dictTypeEquals_0_loop *Constructor_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictTypeEquals_0 *Constructor_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value] = dictTypeEquals_0_loop
-_ = dictTypeEquals_0
-return gopurs_runtime.Apply(dictTypeEquals_0.V1, gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return a_1
-}))
+func Call_proof__3363032129(dict_0_loop *Constructor_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V1
 }
 
 

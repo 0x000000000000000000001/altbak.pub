@@ -100,6 +100,84 @@ return Call_commutativeRingFn(dictCommutativeRing_0_box)
 	return cache_commutativeRingFn
 }
 
+var cache_ringProxy__3154238922 gopurs_runtime.Value
+var once_ringProxy__3154238922 sync.Once
+func Get_ringProxy__3154238922() gopurs_runtime.Value {
+	once_ringProxy__3154238922.Do(func() {
+		cache_ringProxy__3154238922 = gopurs_runtime.RecordDict2("Semiring0", "sub", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Semiring.Get_semiringProxy()
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}
+})
+}))
+	})
+	return cache_ringProxy__3154238922
+}
+
+var cache_ringRecordNil__3706727823 gopurs_runtime.Value
+var once_ringRecordNil__3706727823 sync.Once
+func Get_ringRecordNil__3706727823() gopurs_runtime.Value {
+	once_ringRecordNil__3706727823.Do(func() {
+		cache_ringRecordNil__3706727823 = gopurs_runtime.RecordDict2("SemiringRecord0", "subRecord", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Data_Semiring.Get_semiringRecordNil()
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict0()
+})
+})
+}))
+	})
+	return cache_ringRecordNil__3706727823
+}
+
+var cache_semiringProxy__3507564775 gopurs_runtime.Value
+var once_semiringProxy__3507564775 sync.Once
+func Get_semiringProxy__3507564775() gopurs_runtime.Value {
+	once_semiringProxy__3507564775.Do(func() {
+		cache_semiringProxy__3507564775 = gopurs_runtime.RecordDict4("add", "mul", "one", "zero", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}
+})
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}
+})
+}), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil})
+	})
+	return cache_semiringProxy__3507564775
+}
+
+var cache_semiringRecordNil__1274248348 gopurs_runtime.Value
+var once_semiringRecordNil__1274248348 sync.Once
+func Get_semiringRecordNil__1274248348() gopurs_runtime.Value {
+	once_semiringRecordNil__1274248348.Do(func() {
+		cache_semiringRecordNil__1274248348 = gopurs_runtime.RecordDict4("addRecord", "mulRecord", "oneRecord", "zeroRecord", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict0()
+})
+})
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict0()
+})
+})
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict0()
+})
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict0()
+})
+}))
+	})
+	return cache_semiringRecordNil__1274248348
+}
+
 type Constructor_CommutativeRingRecord[T_rowlist any, T_row any, T_subrow any] struct {
 	Rc uint32
 	V0 gopurs_runtime.Value

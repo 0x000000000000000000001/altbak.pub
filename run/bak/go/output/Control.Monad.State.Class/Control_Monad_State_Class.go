@@ -19,17 +19,6 @@ return Call_state(gopurs_runtime.CoerceToStruct[Constructor_MonadState[gopurs_ru
 	return cache_state
 }
 
-var cache_state__gopurs_runtime_Value_3572857840 gopurs_runtime.Value
-var once_state__gopurs_runtime_Value_3572857840 sync.Once
-func Get_state__gopurs_runtime_Value_3572857840() gopurs_runtime.Value {
-	once_state__gopurs_runtime_Value_3572857840.Do(func() {
-		cache_state__gopurs_runtime_Value_3572857840 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_state__gopurs_runtime_Value_3572857840(gopurs_runtime.CoerceToStruct[Constructor_MonadState[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
-})
-	})
-	return cache_state__gopurs_runtime_Value_3572857840
-}
-
 var cache_put gopurs_runtime.Value
 var once_put sync.Once
 func Get_put() gopurs_runtime.Value {
@@ -85,6 +74,28 @@ return Call_get(dictMonadState_0_box)
 	return cache_get
 }
 
+var cache_state__1155042704 gopurs_runtime.Value
+var once_state__1155042704 sync.Once
+func Get_state__1155042704() gopurs_runtime.Value {
+	once_state__1155042704.Do(func() {
+		cache_state__1155042704 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_state__1155042704(gopurs_runtime.CoerceToStruct[Constructor_MonadState[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_state__1155042704
+}
+
+var cache_state__3572857840 gopurs_runtime.Value
+var once_state__3572857840 sync.Once
+func Get_state__3572857840() gopurs_runtime.Value {
+	once_state__3572857840.Do(func() {
+		cache_state__3572857840 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_state__3572857840(gopurs_runtime.CoerceToStruct[Constructor_MonadState[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_state__3572857840
+}
+
 type Constructor_MonadState[T_s any, T_m any] struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
@@ -110,19 +121,13 @@ _ = dict_0
 return dict_0.V1
 }
 
-func Call_state__gopurs_runtime_Value_3572857840(dict_0_loop *Constructor_MonadState[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_MonadState[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
-_ = dict_0
-return dict_0.V1
-}
-
 func Call_put(dictMonadState_0_loop *Constructor_MonadState[gopurs_runtime.Value, gopurs_runtime.Value], s_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadState_0 *Constructor_MonadState[gopurs_runtime.Value, gopurs_runtime.Value] = dictMonadState_0_loop
 _ = dictMonadState_0
 var s_1 gopurs_runtime.Value = s_1_loop
 _ = s_1
 return gopurs_runtime.Apply(dictMonadState_0.V1, gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, pkg_Data_Unit.Get_unit(), s_1})}))}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, pkg_Data_Unit.Get_unit(), s_1})}
 }))
 }
 
@@ -132,7 +137,7 @@ _ = dictMonadState_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 return gopurs_runtime.Apply(dictMonadState_0.V1, gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, pkg_Data_Unit.Get_unit(), gopurs_runtime.Apply(f_1, s_2)})}))}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, pkg_Data_Unit.Get_unit(), gopurs_runtime.Apply(f_1, s_2)})}
 }))
 }
 
@@ -144,7 +149,7 @@ _ = f_1
 return gopurs_runtime.Apply(dictMonadState_0.V1, gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
 s_prime_3_0 := gopurs_runtime.Apply(f_1, s_2)
 _ = s_prime_3_0
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, s_prime_3_0, s_prime_3_0})}))}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, s_prime_3_0, s_prime_3_0})}
 }))
 }
 
@@ -154,7 +159,7 @@ _ = dictMonadState_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 return gopurs_runtime.Apply(dictMonadState_0.V1, gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply(f_1, s_2), s_2})}))}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply(f_1, s_2), s_2})}
 }))
 }
 
@@ -162,8 +167,20 @@ func Call_get(dictMonadState_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadState_0 gopurs_runtime.Value = dictMonadState_0_loop
 _ = dictMonadState_0
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0, "state"), gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, s_1, s_1})}))}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, s_1, s_1})}
 }))
+}
+
+func Call_state__1155042704(dict_0_loop *Constructor_MonadState[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_MonadState[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V1
+}
+
+func Call_state__3572857840(dict_0_loop *Constructor_MonadState[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_MonadState[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V1
 }
 
 

@@ -2,6 +2,7 @@ package Data_Semigroup_Generic
 
 import (
 	pkg_Data_Generic_Rep "gopurs/output/Data.Generic.Rep"
+	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	unsafe "unsafe"
@@ -55,17 +56,6 @@ return Call_genericAppend_prime(gopurs_runtime.CoerceToStruct[Constructor_Generi
 	return cache_genericAppend_prime
 }
 
-var cache_genericAppend_prime__gopurs_runtime_Value_1736829671 gopurs_runtime.Value
-var once_genericAppend_prime__gopurs_runtime_Value_1736829671 sync.Once
-func Get_genericAppend_prime__gopurs_runtime_Value_1736829671() gopurs_runtime.Value {
-	once_genericAppend_prime__gopurs_runtime_Value_1736829671.Do(func() {
-		cache_genericAppend_prime__gopurs_runtime_Value_1736829671 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericAppend_prime__gopurs_runtime_Value_1736829671(gopurs_runtime.CoerceToStruct[Constructor_GenericSemigroup[gopurs_runtime.Value]](dict_0_box))
-})
-	})
-	return cache_genericAppend_prime__gopurs_runtime_Value_1736829671
-}
-
 var cache_genericSemigroupConstructor gopurs_runtime.Value
 var once_genericSemigroupConstructor sync.Once
 func Get_genericSemigroupConstructor() gopurs_runtime.Value {
@@ -97,6 +87,50 @@ return Call_genericAppend(gopurs_runtime.CoerceToStruct[pkg_Data_Generic_Rep.Con
 })
 	})
 	return cache_genericAppend
+}
+
+var cache_from__1498760952 gopurs_runtime.Value
+var once_from__1498760952 sync.Once
+func Get_from__1498760952() gopurs_runtime.Value {
+	once_from__1498760952.Do(func() {
+		cache_from__1498760952 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_from__1498760952(gopurs_runtime.CoerceToStruct[pkg_Data_Generic_Rep.Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_from__1498760952
+}
+
+var cache_to__1498760952 gopurs_runtime.Value
+var once_to__1498760952 sync.Once
+func Get_to__1498760952() gopurs_runtime.Value {
+	once_to__1498760952.Do(func() {
+		cache_to__1498760952 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_to__1498760952(gopurs_runtime.CoerceToStruct[pkg_Data_Generic_Rep.Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_to__1498760952
+}
+
+var cache_genericAppend_prime__1736829671 gopurs_runtime.Value
+var once_genericAppend_prime__1736829671 sync.Once
+func Get_genericAppend_prime__1736829671() gopurs_runtime.Value {
+	once_genericAppend_prime__1736829671.Do(func() {
+		cache_genericAppend_prime__1736829671 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genericAppend_prime__1736829671(gopurs_runtime.CoerceToStruct[Constructor_GenericSemigroup[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_genericAppend_prime__1736829671
+}
+
+var cache_append__1230318264 gopurs_runtime.Value
+var once_append__1230318264 sync.Once
+func Get_append__1230318264() gopurs_runtime.Value {
+	once_append__1230318264.Do(func() {
+		cache_append__1230318264 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_append__1230318264(gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_append__1230318264
 }
 
 type Constructor_GenericSemigroup[T_a any] struct {
@@ -132,12 +166,6 @@ _ = dict_0
 return dict_0.V0
 }
 
-func Call_genericAppend_prime__gopurs_runtime_Value_1736829671(dict_0_loop *Constructor_GenericSemigroup[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_GenericSemigroup[gopurs_runtime.Value] = dict_0_loop
-_ = dict_0
-return dict_0.V0
-}
-
 func Call_genericSemigroupConstructor(dictGenericSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictGenericSemigroup_0 gopurs_runtime.Value = dictGenericSemigroup_0_loop
 _ = dictGenericSemigroup_0
@@ -155,7 +183,7 @@ var dictGenericSemigroup1_1 gopurs_runtime.Value = dictGenericSemigroup1_1_loop
 _ = dictGenericSemigroup1_1
 return gopurs_runtime.RecordDict1("genericAppend'", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericSemigroup_0, "genericAppend'"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0, (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericSemigroup1_1, "genericAppend'"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1, (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V1)})}))}
+return gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericSemigroup_0, "genericAppend'"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0, (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericSemigroup1_1, "genericAppend'"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1, (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V1)})}
 })
 }))
 }
@@ -169,7 +197,31 @@ var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
 var y_3 gopurs_runtime.Value = y_3_loop
 _ = y_3
-return gopurs_runtime.Apply(dictGeneric_0.V1, gopurs_runtime.Apply2(dictGenericSemigroup_1.V0, gopurs_runtime.Apply(dictGeneric_0.V0, x_2), gopurs_runtime.Apply(dictGeneric_0.V0, y_3)))
+return gopurs_runtime.Apply(dictGeneric_0.V1, gopurs_runtime.Apply3(Get_genericAppend_prime__1736829671(), gopurs_runtime.Value{Type: 9, IntVal: 1022671493, UnsafePtr: unsafe.Pointer(dictGenericSemigroup_1)}, gopurs_runtime.Apply(dictGeneric_0.V0, x_2), gopurs_runtime.Apply(dictGeneric_0.V0, y_3)))
+}
+
+func Call_from__1498760952(dict_0_loop *pkg_Data_Generic_Rep.Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Generic_Rep.Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_to__1498760952(dict_0_loop *pkg_Data_Generic_Rep.Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Generic_Rep.Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V1
+}
+
+func Call_genericAppend_prime__1736829671(dict_0_loop *Constructor_GenericSemigroup[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_GenericSemigroup[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_append__1230318264(dict_0_loop *pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
 }
 
 

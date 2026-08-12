@@ -1,10 +1,12 @@
 package Control_Comonad_Store_Class
 
 import (
+	pkg_Control_Comonad "gopurs/output/Control.Comonad"
 	pkg_Control_Comonad_Env_Trans "gopurs/output/Control.Comonad.Env.Trans"
 	pkg_Control_Comonad_Store_Trans "gopurs/output/Control.Comonad.Store.Trans"
 	pkg_Control_Comonad_Traced_Trans "gopurs/output/Control.Comonad.Traced.Trans"
 	pkg_Control_Extend "gopurs/output/Control.Extend"
+	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	pkg_Data_Functor "gopurs/output/Data.Functor"
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
@@ -23,17 +25,6 @@ return Call_pos(gopurs_runtime.CoerceToStruct[Constructor_ComonadStore[gopurs_ru
 	return cache_pos
 }
 
-var cache_pos__gopurs_runtime_Value_639385354 gopurs_runtime.Value
-var once_pos__gopurs_runtime_Value_639385354 sync.Once
-func Get_pos__gopurs_runtime_Value_639385354() gopurs_runtime.Value {
-	once_pos__gopurs_runtime_Value_639385354.Do(func() {
-		cache_pos__gopurs_runtime_Value_639385354 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_pos__gopurs_runtime_Value_639385354(gopurs_runtime.CoerceToStruct[Constructor_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
-})
-	})
-	return cache_pos__gopurs_runtime_Value_639385354
-}
-
 var cache_peek gopurs_runtime.Value
 var once_peek sync.Once
 func Get_peek() gopurs_runtime.Value {
@@ -45,17 +36,6 @@ return Call_peek(gopurs_runtime.CoerceToStruct[Constructor_ComonadStore[gopurs_r
 	return cache_peek
 }
 
-var cache_peek__gopurs_runtime_Value_413153475 gopurs_runtime.Value
-var once_peek__gopurs_runtime_Value_413153475 sync.Once
-func Get_peek__gopurs_runtime_Value_413153475() gopurs_runtime.Value {
-	once_peek__gopurs_runtime_Value_413153475.Do(func() {
-		cache_peek__gopurs_runtime_Value_413153475 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_peek__gopurs_runtime_Value_413153475(gopurs_runtime.CoerceToStruct[Constructor_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
-})
-	})
-	return cache_peek__gopurs_runtime_Value_413153475
-}
-
 var cache_peeks gopurs_runtime.Value
 var once_peeks sync.Once
 func Get_peeks() gopurs_runtime.Value {
@@ -65,17 +45,6 @@ return Call_peeks(gopurs_runtime.CoerceToStruct[Constructor_ComonadStore[gopurs_
 })
 	})
 	return cache_peeks
-}
-
-var cache_peeks__gopurs_runtime_Value_2913274603 gopurs_runtime.Value
-var once_peeks__gopurs_runtime_Value_2913274603 sync.Once
-func Get_peeks__gopurs_runtime_Value_2913274603() gopurs_runtime.Value {
-	once_peeks__gopurs_runtime_Value_2913274603.Do(func() {
-		cache_peeks__gopurs_runtime_Value_2913274603 = gopurs_runtime.Func3(func(dictComonadStore_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_peeks__gopurs_runtime_Value_2913274603(gopurs_runtime.CoerceToStruct[Constructor_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]](dictComonadStore_0_box), f_1_box, x_2_box)
-})
-	})
-	return cache_peeks__gopurs_runtime_Value_2913274603
 }
 
 var cache_seeks gopurs_runtime.Value
@@ -144,6 +113,120 @@ return Call_comonadStoreEnvT(dictComonadStore_0_box)
 	return cache_comonadStoreEnvT
 }
 
+var cache_peek__413153475 gopurs_runtime.Value
+var once_peek__413153475 sync.Once
+func Get_peek__413153475() gopurs_runtime.Value {
+	once_peek__413153475.Do(func() {
+		cache_peek__413153475 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_peek__413153475(gopurs_runtime.CoerceToStruct[Constructor_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_peek__413153475
+}
+
+var cache_peek__3957251203 gopurs_runtime.Value
+var once_peek__3957251203 sync.Once
+func Get_peek__3957251203() gopurs_runtime.Value {
+	once_peek__3957251203.Do(func() {
+		cache_peek__3957251203 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_peek__3957251203(gopurs_runtime.CoerceToStruct[Constructor_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_peek__3957251203
+}
+
+var cache_peeks__2913274603 gopurs_runtime.Value
+var once_peeks__2913274603 sync.Once
+func Get_peeks__2913274603() gopurs_runtime.Value {
+	once_peeks__2913274603.Do(func() {
+		cache_peeks__2913274603 = gopurs_runtime.Func3(func(dictComonadStore_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_peeks__2913274603(gopurs_runtime.CoerceToStruct[Constructor_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]](dictComonadStore_0_box), f_1_box, x_2_box)
+})
+	})
+	return cache_peeks__2913274603
+}
+
+var cache_peeks__110217771 gopurs_runtime.Value
+var once_peeks__110217771 sync.Once
+func Get_peeks__110217771() gopurs_runtime.Value {
+	once_peeks__110217771.Do(func() {
+		cache_peeks__110217771 = gopurs_runtime.Func3(func(dictComonadStore_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_peeks__110217771(gopurs_runtime.CoerceToStruct[Constructor_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]](dictComonadStore_0_box), f_1_box, x_2_box)
+})
+	})
+	return cache_peeks__110217771
+}
+
+var cache_pos__639385354 gopurs_runtime.Value
+var once_pos__639385354 sync.Once
+func Get_pos__639385354() gopurs_runtime.Value {
+	once_pos__639385354.Do(func() {
+		cache_pos__639385354 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_pos__639385354(gopurs_runtime.CoerceToStruct[Constructor_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_pos__639385354
+}
+
+var cache_extract__1031647521 gopurs_runtime.Value
+var once_extract__1031647521 sync.Once
+func Get_extract__1031647521() gopurs_runtime.Value {
+	once_extract__1031647521.Do(func() {
+		cache_extract__1031647521 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_extract__1031647521(gopurs_runtime.CoerceToStruct[pkg_Control_Comonad.Constructor_Comonad[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_extract__1031647521
+}
+
+var cache_compose__858342840 gopurs_runtime.Value
+var once_compose__858342840 sync.Once
+func Get_compose__858342840() gopurs_runtime.Value {
+	once_compose__858342840.Do(func() {
+		cache_compose__858342840 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_compose__858342840(gopurs_runtime.CoerceToStruct[pkg_Control_Semigroupoid.Constructor_Semigroupoid[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_compose__858342840
+}
+
+var cache_semigroupoidFn__2387483462 gopurs_runtime.Value
+var once_semigroupoidFn__2387483462 sync.Once
+func Get_semigroupoidFn__2387483462() gopurs_runtime.Value {
+	once_semigroupoidFn__2387483462.Do(func() {
+		cache_semigroupoidFn__2387483462 = gopurs_runtime.RecordDict1("compose", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(g_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(g_1, x_2))
+})
+})
+}))
+	})
+	return cache_semigroupoidFn__2387483462
+}
+
+var cache_flip__3525081280 gopurs_runtime.Value
+var once_flip__3525081280 sync.Once
+func Get_flip__3525081280() gopurs_runtime.Value {
+	once_flip__3525081280.Do(func() {
+		cache_flip__3525081280 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_flip__3525081280(f_0_box, b_1_box, a_2_box)
+})
+	})
+	return cache_flip__3525081280
+}
+
+var cache_map__2199395572 gopurs_runtime.Value
+var once_map__2199395572 sync.Once
+func Get_map__2199395572() gopurs_runtime.Value {
+	once_map__2199395572.Do(func() {
+		cache_map__2199395572 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_map__2199395572(gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_map__2199395572
+}
+
 type Constructor_ComonadStore[T_s any, T_w any] struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
@@ -171,35 +254,13 @@ _ = dict_0
 return dict_0.V2
 }
 
-func Call_pos__gopurs_runtime_Value_639385354(dict_0_loop *Constructor_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
-_ = dict_0
-return dict_0.V2
-}
-
 func Call_peek(dict_0_loop *Constructor_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
 var dict_0 *Constructor_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V1
 }
 
-func Call_peek__gopurs_runtime_Value_413153475(dict_0_loop *Constructor_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
-_ = dict_0
-return dict_0.V1
-}
-
 func Call_peeks(dictComonadStore_0_loop *Constructor_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value], f_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictComonadStore_0 *Constructor_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value] = dictComonadStore_0_loop
-_ = dictComonadStore_0
-var f_1 gopurs_runtime.Value = f_1_loop
-_ = f_1
-var x_2 gopurs_runtime.Value = x_2_loop
-_ = x_2
-return gopurs_runtime.Apply2(dictComonadStore_0.V1, gopurs_runtime.Apply(f_1, gopurs_runtime.Apply(dictComonadStore_0.V2, x_2)), x_2)
-}
-
-func Call_peeks__gopurs_runtime_Value_2913274603(dictComonadStore_0_loop *Constructor_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value], f_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictComonadStore_0 *Constructor_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value] = dictComonadStore_0_loop
 _ = dictComonadStore_0
 var f_1 gopurs_runtime.Value = f_1_loop
@@ -319,6 +380,72 @@ return gopurs_runtime.Apply(__local_var_5_3, gopurs_runtime.Apply(lower1_2_1, x_
 }), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadStore_0, "pos"), gopurs_runtime.Apply(lower1_2_1, x_4))
 }))
+}
+
+func Call_peek__413153475(dict_0_loop *Constructor_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V1
+}
+
+func Call_peek__3957251203(dict_0_loop *Constructor_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V1
+}
+
+func Call_peeks__2913274603(dictComonadStore_0_loop *Constructor_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value], f_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictComonadStore_0 *Constructor_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value] = dictComonadStore_0_loop
+_ = dictComonadStore_0
+var f_1 gopurs_runtime.Value = f_1_loop
+_ = f_1
+var x_2 gopurs_runtime.Value = x_2_loop
+_ = x_2
+return gopurs_runtime.Apply2(dictComonadStore_0.V1, gopurs_runtime.Apply(f_1, gopurs_runtime.Apply(dictComonadStore_0.V2, x_2)), x_2)
+}
+
+func Call_peeks__110217771(dictComonadStore_0_loop *Constructor_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value], f_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictComonadStore_0 *Constructor_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value] = dictComonadStore_0_loop
+_ = dictComonadStore_0
+var f_1 gopurs_runtime.Value = f_1_loop
+_ = f_1
+var x_2 gopurs_runtime.Value = x_2_loop
+_ = x_2
+return gopurs_runtime.Apply2(dictComonadStore_0.V1, gopurs_runtime.Apply(f_1, gopurs_runtime.Apply(dictComonadStore_0.V2, x_2)), x_2)
+}
+
+func Call_pos__639385354(dict_0_loop *Constructor_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V2
+}
+
+func Call_extract__1031647521(dict_0_loop *pkg_Control_Comonad.Constructor_Comonad[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Control_Comonad.Constructor_Comonad[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V1
+}
+
+func Call_compose__858342840(dict_0_loop *pkg_Control_Semigroupoid.Constructor_Semigroupoid[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Control_Semigroupoid.Constructor_Semigroupoid[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_flip__3525081280(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var b_1 gopurs_runtime.Value = b_1_loop
+_ = b_1
+var a_2 gopurs_runtime.Value = a_2_loop
+_ = a_2
+return gopurs_runtime.Apply2(f_0, a_2, b_1)
+}
+
+func Call_map__2199395572(dict_0_loop *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
 }
 
 

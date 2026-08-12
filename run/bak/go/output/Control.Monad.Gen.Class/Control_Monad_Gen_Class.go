@@ -17,17 +17,6 @@ return Call_sized(gopurs_runtime.CoerceToStruct[Constructor_MonadGen[gopurs_runt
 	return cache_sized
 }
 
-var cache_sized__gopurs_runtime_Value_3147117623 gopurs_runtime.Value
-var once_sized__gopurs_runtime_Value_3147117623 sync.Once
-func Get_sized__gopurs_runtime_Value_3147117623() gopurs_runtime.Value {
-	once_sized__gopurs_runtime_Value_3147117623.Do(func() {
-		cache_sized__gopurs_runtime_Value_3147117623 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_sized__gopurs_runtime_Value_3147117623(gopurs_runtime.CoerceToStruct[Constructor_MonadGen[gopurs_runtime.Value]](dict_0_box))
-})
-	})
-	return cache_sized__gopurs_runtime_Value_3147117623
-}
-
 var cache_resize gopurs_runtime.Value
 var once_resize sync.Once
 func Get_resize() gopurs_runtime.Value {
@@ -37,17 +26,6 @@ return Call_resize(gopurs_runtime.CoerceToStruct[Constructor_MonadGen[gopurs_run
 })
 	})
 	return cache_resize
-}
-
-var cache_resize__gopurs_runtime_Value_1050945947 gopurs_runtime.Value
-var once_resize__gopurs_runtime_Value_1050945947 sync.Once
-func Get_resize__gopurs_runtime_Value_1050945947() gopurs_runtime.Value {
-	once_resize__gopurs_runtime_Value_1050945947.Do(func() {
-		cache_resize__gopurs_runtime_Value_1050945947 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_resize__gopurs_runtime_Value_1050945947(gopurs_runtime.CoerceToStruct[Constructor_MonadGen[gopurs_runtime.Value]](dict_0_box))
-})
-	})
-	return cache_resize__gopurs_runtime_Value_1050945947
 }
 
 var cache_chooseInt gopurs_runtime.Value
@@ -61,17 +39,6 @@ return Call_chooseInt(gopurs_runtime.CoerceToStruct[Constructor_MonadGen[gopurs_
 	return cache_chooseInt
 }
 
-var cache_chooseInt__gopurs_runtime_Value_1063828903 gopurs_runtime.Value
-var once_chooseInt__gopurs_runtime_Value_1063828903 sync.Once
-func Get_chooseInt__gopurs_runtime_Value_1063828903() gopurs_runtime.Value {
-	once_chooseInt__gopurs_runtime_Value_1063828903.Do(func() {
-		cache_chooseInt__gopurs_runtime_Value_1063828903 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_chooseInt__gopurs_runtime_Value_1063828903(gopurs_runtime.CoerceToStruct[Constructor_MonadGen[gopurs_runtime.Value]](dict_0_box))
-})
-	})
-	return cache_chooseInt__gopurs_runtime_Value_1063828903
-}
-
 var cache_chooseFloat gopurs_runtime.Value
 var once_chooseFloat sync.Once
 func Get_chooseFloat() gopurs_runtime.Value {
@@ -81,17 +48,6 @@ return Call_chooseFloat(gopurs_runtime.CoerceToStruct[Constructor_MonadGen[gopur
 })
 	})
 	return cache_chooseFloat
-}
-
-var cache_chooseFloat__gopurs_runtime_Value_1964853975 gopurs_runtime.Value
-var once_chooseFloat__gopurs_runtime_Value_1964853975 sync.Once
-func Get_chooseFloat__gopurs_runtime_Value_1964853975() gopurs_runtime.Value {
-	once_chooseFloat__gopurs_runtime_Value_1964853975.Do(func() {
-		cache_chooseFloat__gopurs_runtime_Value_1964853975 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_chooseFloat__gopurs_runtime_Value_1964853975(gopurs_runtime.CoerceToStruct[Constructor_MonadGen[gopurs_runtime.Value]](dict_0_box))
-})
-	})
-	return cache_chooseFloat__gopurs_runtime_Value_1964853975
 }
 
 var cache_chooseBool gopurs_runtime.Value
@@ -138,19 +94,7 @@ _ = dict_0
 return dict_0.V5
 }
 
-func Call_sized__gopurs_runtime_Value_3147117623(dict_0_loop *Constructor_MonadGen[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_MonadGen[gopurs_runtime.Value] = dict_0_loop
-_ = dict_0
-return dict_0.V5
-}
-
 func Call_resize(dict_0_loop *Constructor_MonadGen[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_MonadGen[gopurs_runtime.Value] = dict_0_loop
-_ = dict_0
-return dict_0.V4
-}
-
-func Call_resize__gopurs_runtime_Value_1050945947(dict_0_loop *Constructor_MonadGen[gopurs_runtime.Value]) gopurs_runtime.Value {
 var dict_0 *Constructor_MonadGen[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V4
@@ -162,19 +106,7 @@ _ = dict_0
 return dict_0.V3
 }
 
-func Call_chooseInt__gopurs_runtime_Value_1063828903(dict_0_loop *Constructor_MonadGen[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_MonadGen[gopurs_runtime.Value] = dict_0_loop
-_ = dict_0
-return dict_0.V3
-}
-
 func Call_chooseFloat(dict_0_loop *Constructor_MonadGen[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_MonadGen[gopurs_runtime.Value] = dict_0_loop
-_ = dict_0
-return dict_0.V2
-}
-
-func Call_chooseFloat__gopurs_runtime_Value_1964853975(dict_0_loop *Constructor_MonadGen[gopurs_runtime.Value]) gopurs_runtime.Value {
 var dict_0 *Constructor_MonadGen[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V2

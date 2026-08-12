@@ -3,6 +3,8 @@ package Data_Show_Generic
 import (
 	pkg_Data_Generic_Rep "gopurs/output/Data.Generic.Rep"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
+	pkg_Data_Show "gopurs/output/Data.Show"
+	pkg_Data_Symbol "gopurs/output/Data.Symbol"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	unsafe "unsafe"
@@ -51,17 +53,6 @@ return Call_genericShowArgs(gopurs_runtime.CoerceToStruct[Constructor_GenericSho
 	return cache_genericShowArgs
 }
 
-var cache_genericShowArgs__gopurs_runtime_Value_157062380 gopurs_runtime.Value
-var once_genericShowArgs__gopurs_runtime_Value_157062380 sync.Once
-func Get_genericShowArgs__gopurs_runtime_Value_157062380() gopurs_runtime.Value {
-	once_genericShowArgs__gopurs_runtime_Value_157062380.Do(func() {
-		cache_genericShowArgs__gopurs_runtime_Value_157062380 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericShowArgs__gopurs_runtime_Value_157062380(gopurs_runtime.CoerceToStruct[Constructor_GenericShowArgs[gopurs_runtime.Value]](dict_0_box))
-})
-	})
-	return cache_genericShowArgs__gopurs_runtime_Value_157062380
-}
-
 var cache_genericShowArgsProduct gopurs_runtime.Value
 var once_genericShowArgsProduct sync.Once
 func Get_genericShowArgsProduct() gopurs_runtime.Value {
@@ -95,23 +86,12 @@ return Call_genericShow_prime(gopurs_runtime.CoerceToStruct[Constructor_GenericS
 	return cache_genericShow_prime
 }
 
-var cache_genericShow_prime__gopurs_runtime_Value_2423230701 gopurs_runtime.Value
-var once_genericShow_prime__gopurs_runtime_Value_2423230701 sync.Once
-func Get_genericShow_prime__gopurs_runtime_Value_2423230701() gopurs_runtime.Value {
-	once_genericShow_prime__gopurs_runtime_Value_2423230701.Do(func() {
-		cache_genericShow_prime__gopurs_runtime_Value_2423230701 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericShow_prime__gopurs_runtime_Value_2423230701(gopurs_runtime.CoerceToStruct[Constructor_GenericShow[gopurs_runtime.Value]](dict_0_box))
-})
-	})
-	return cache_genericShow_prime__gopurs_runtime_Value_2423230701
-}
-
 var cache_genericShowNoConstructors gopurs_runtime.Value
 var once_genericShowNoConstructors sync.Once
 func Get_genericShowNoConstructors() gopurs_runtime.Value {
 	once_genericShowNoConstructors.Do(func() {
 		cache_genericShowNoConstructors = gopurs_runtime.RecordDict1("genericShow'", gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_genericShowNoConstructors(), "genericShow'"), a_0).StrVal())
+return gopurs_runtime.Str(gopurs_runtime.Apply(Get_genericShow_prime__1538939821(), a_0).StrVal())
 }))
 	})
 	return cache_genericShowNoConstructors
@@ -137,6 +117,119 @@ return gopurs_runtime.Str(Call_genericShow(gopurs_runtime.CoerceToStruct[pkg_Dat
 })
 	})
 	return cache_genericShow
+}
+
+var cache_from__1498760952 gopurs_runtime.Value
+var once_from__1498760952 sync.Once
+func Get_from__1498760952() gopurs_runtime.Value {
+	once_from__1498760952.Do(func() {
+		cache_from__1498760952 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_from__1498760952(gopurs_runtime.CoerceToStruct[pkg_Data_Generic_Rep.Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_from__1498760952
+}
+
+var cache_append__493084344 gopurs_runtime.Value
+var once_append__493084344 sync.Once
+func Get_append__493084344() gopurs_runtime.Value {
+	once_append__493084344.Do(func() {
+		cache_append__493084344 = gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append")
+	})
+	return cache_append__493084344
+}
+
+var cache_append__1230318264 gopurs_runtime.Value
+var once_append__1230318264 sync.Once
+func Get_append__1230318264() gopurs_runtime.Value {
+	once_append__1230318264.Do(func() {
+		cache_append__1230318264 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_append__1230318264(gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_append__1230318264
+}
+
+var cache_append__2285093048 gopurs_runtime.Value
+var once_append__2285093048 sync.Once
+func Get_append__2285093048() gopurs_runtime.Value {
+	once_append__2285093048.Do(func() {
+		cache_append__2285093048 = gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupArray(), "append")
+	})
+	return cache_append__2285093048
+}
+
+var cache_semigroupArray__4207347319 gopurs_runtime.Value
+var once_semigroupArray__4207347319 sync.Once
+func Get_semigroupArray__4207347319() gopurs_runtime.Value {
+	once_semigroupArray__4207347319.Do(func() {
+		cache_semigroupArray__4207347319 = gopurs_runtime.RecordDict1("append", pkg_Data_Semigroup.Get_concatArray())
+	})
+	return cache_semigroupArray__4207347319
+}
+
+var cache_genericShow_prime__2423230701 gopurs_runtime.Value
+var once_genericShow_prime__2423230701 sync.Once
+func Get_genericShow_prime__2423230701() gopurs_runtime.Value {
+	once_genericShow_prime__2423230701.Do(func() {
+		cache_genericShow_prime__2423230701 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genericShow_prime__2423230701(gopurs_runtime.CoerceToStruct[Constructor_GenericShow[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_genericShow_prime__2423230701
+}
+
+var cache_genericShow_prime__1538939821 gopurs_runtime.Value
+var once_genericShow_prime__1538939821 sync.Once
+func Get_genericShow_prime__1538939821() gopurs_runtime.Value {
+	once_genericShow_prime__1538939821.Do(func() {
+		cache_genericShow_prime__1538939821 = gopurs_runtime.RecordGet(Get_genericShowNoConstructors(), "genericShow'")
+	})
+	return cache_genericShow_prime__1538939821
+}
+
+var cache_genericShowArgs__157062380 gopurs_runtime.Value
+var once_genericShowArgs__157062380 sync.Once
+func Get_genericShowArgs__157062380() gopurs_runtime.Value {
+	once_genericShowArgs__157062380.Do(func() {
+		cache_genericShowArgs__157062380 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genericShowArgs__157062380(gopurs_runtime.CoerceToStruct[Constructor_GenericShowArgs[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_genericShowArgs__157062380
+}
+
+var cache_show__2742601362 gopurs_runtime.Value
+var once_show__2742601362 sync.Once
+func Get_show__2742601362() gopurs_runtime.Value {
+	once_show__2742601362.Do(func() {
+		cache_show__2742601362 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_show__2742601362(gopurs_runtime.CoerceToStruct[pkg_Data_Show.Constructor_Show[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_show__2742601362
+}
+
+var cache_reflectSymbol__3416619207 gopurs_runtime.Value
+var once_reflectSymbol__3416619207 sync.Once
+func Get_reflectSymbol__3416619207() gopurs_runtime.Value {
+	once_reflectSymbol__3416619207.Do(func() {
+		cache_reflectSymbol__3416619207 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_reflectSymbol__3416619207(gopurs_runtime.CoerceToStruct[pkg_Data_Symbol.Constructor_IsSymbol[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_reflectSymbol__3416619207
+}
+
+var cache_reflectSymbol__1166932993 gopurs_runtime.Value
+var once_reflectSymbol__1166932993 sync.Once
+func Get_reflectSymbol__1166932993() gopurs_runtime.Value {
+	once_reflectSymbol__1166932993.Do(func() {
+		cache_reflectSymbol__1166932993 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_reflectSymbol__1166932993(gopurs_runtime.CoerceToStruct[pkg_Data_Symbol.Constructor_IsSymbol[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_reflectSymbol__1166932993
 }
 
 type Constructor_GenericShowArgs[T_a any] struct {
@@ -192,12 +285,6 @@ _ = dict_0
 return dict_0.V0
 }
 
-func Call_genericShowArgs__gopurs_runtime_Value_157062380(dict_0_loop *Constructor_GenericShowArgs[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_GenericShowArgs[gopurs_runtime.Value] = dict_0_loop
-_ = dict_0
-return dict_0.V0
-}
-
 func Call_genericShowArgsProduct(dictGenericShowArgs_0_loop gopurs_runtime.Value, dictGenericShowArgs1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictGenericShowArgs_0 gopurs_runtime.Value = dictGenericShowArgs_0_loop
 _ = dictGenericShowArgs_0
@@ -206,7 +293,7 @@ _ = dictGenericShowArgs1_1
 return gopurs_runtime.RecordDict1("genericShowArgs", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 					arr := func() []string {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupArray(), "append"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShowArgs_0, "genericShowArgs"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShowArgs1_1, "genericShowArgs"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1)).UnsafePtr)
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(Get_append__2285093048(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShowArgs_0, "genericShowArgs"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShowArgs1_1, "genericShowArgs"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1)).UnsafePtr)
 					unboxed := make([]string, len(arr))
 					for i, v := range arr { unboxed[i] = v.StrVal() }
 					return unboxed
@@ -228,35 +315,29 @@ ctor_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_1, "refle
 _ = ctor_3_0
 v1_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShowArgs_0, "genericShowArgs"), v_2)
 _ = v1_4_1
-var __t2 gopurs_runtime.Value
+var __t2 string
 {
 if (gopurs_runtime.Int(int64(gopurs_runtime.ArrayLength(v1_4_1))).IntVal) == (0) {
-__t2 = gopurs_runtime.Str(ctor_3_0)
+__t2 = ctor_3_0
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = gopurs_runtime.Str(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str("("), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply2(Get_intercalate(), gopurs_runtime.Str(" "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupArray(), "append"), func() gopurs_runtime.Value {
+__t2 = gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("("), gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Apply2(Get_intercalate(), gopurs_runtime.Str(" "), gopurs_runtime.Apply2(Get_append__2285093048(), func() gopurs_runtime.Value {
 					arr := []string{ctor_3_0}
 					boxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { boxed[i] = gopurs_runtime.Str(v) }
 					return gopurs_runtime.Array(boxed)
-				}(), v1_4_1)), gopurs_runtime.Str(")"))).StrVal())
+				}(), v1_4_1)), gopurs_runtime.Str(")"))).StrVal()
 }
 end_branch_2:
-return gopurs_runtime.Str(__t2.StrVal())
+return gopurs_runtime.Str(__t2)
 }))
 }
 
 func Call_genericShow_prime(dict_0_loop *Constructor_GenericShow[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_GenericShow[gopurs_runtime.Value] = dict_0_loop
-_ = dict_0
-return dict_0.V0
-}
-
-func Call_genericShow_prime__gopurs_runtime_Value_2423230701(dict_0_loop *Constructor_GenericShow[gopurs_runtime.Value]) gopurs_runtime.Value {
 var dict_0 *Constructor_GenericShow[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V0
@@ -300,7 +381,49 @@ var dictGenericShow_1 *Constructor_GenericShow[gopurs_runtime.Value] = dictGener
 _ = dictGenericShow_1
 var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.Apply(dictGenericShow_1.V0, gopurs_runtime.Apply(dictGeneric_0.V0, x_2)).StrVal()
+return gopurs_runtime.Apply2(Get_genericShow_prime__2423230701(), gopurs_runtime.Value{Type: 9, IntVal: 2730968613, UnsafePtr: unsafe.Pointer(dictGenericShow_1)}, gopurs_runtime.Apply(dictGeneric_0.V0, x_2)).StrVal()
+}
+
+func Call_from__1498760952(dict_0_loop *pkg_Data_Generic_Rep.Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Generic_Rep.Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_append__1230318264(dict_0_loop *pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_genericShow_prime__2423230701(dict_0_loop *Constructor_GenericShow[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_GenericShow[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_genericShowArgs__157062380(dict_0_loop *Constructor_GenericShowArgs[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_GenericShowArgs[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_show__2742601362(dict_0_loop *pkg_Data_Show.Constructor_Show[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Show.Constructor_Show[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_reflectSymbol__3416619207(dict_0_loop *pkg_Data_Symbol.Constructor_IsSymbol[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Symbol.Constructor_IsSymbol[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_reflectSymbol__1166932993(dict_0_loop *pkg_Data_Symbol.Constructor_IsSymbol[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Symbol.Constructor_IsSymbol[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
 }
 
 func Get_intercalate() gopurs_runtime.Value {

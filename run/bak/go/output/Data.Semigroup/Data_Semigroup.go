@@ -1,6 +1,7 @@
 package Data_Semigroup
 
 import (
+	pkg_Data_Symbol "gopurs/output/Data.Symbol"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
 	pkg_Data_Void "gopurs/output/Data.Void"
 	pkg_Record_Unsafe "gopurs/output/Record.Unsafe"
@@ -14,7 +15,7 @@ var once_semigroupVoid sync.Once
 func Get_semigroupVoid() gopurs_runtime.Value {
 	once_semigroupVoid.Do(func() {
 		cache_semigroupVoid = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return pkg_Data_Void.Get_absurd__gopurs_runtime_Value_331654555()
+return pkg_Data_Void.Get_absurd()
 }))
 	})
 	return cache_semigroupVoid
@@ -57,21 +58,6 @@ return gopurs_runtime.RecordDict0()
 	return cache_semigroupRecordNil
 }
 
-var cache_semigroupRecordNil__gopurs_runtime_Value_2406047365 gopurs_runtime.Value
-var once_semigroupRecordNil__gopurs_runtime_Value_2406047365 sync.Once
-func Get_semigroupRecordNil__gopurs_runtime_Value_2406047365() gopurs_runtime.Value {
-	once_semigroupRecordNil__gopurs_runtime_Value_2406047365.Do(func() {
-		cache_semigroupRecordNil__gopurs_runtime_Value_2406047365 = gopurs_runtime.RecordDict1("appendRecord", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict0()
-})
-})
-}))
-	})
-	return cache_semigroupRecordNil__gopurs_runtime_Value_2406047365
-}
-
 var cache_semigroupProxy gopurs_runtime.Value
 var once_semigroupProxy sync.Once
 func Get_semigroupProxy() gopurs_runtime.Value {
@@ -94,33 +80,6 @@ func Get_semigroupArray() gopurs_runtime.Value {
 	return cache_semigroupArray
 }
 
-var cache_semigroupArray__ptrConstructor_Semigroup_arrstring__4207347319 gopurs_runtime.Value
-var once_semigroupArray__ptrConstructor_Semigroup_arrstring__4207347319 sync.Once
-func Get_semigroupArray__ptrConstructor_Semigroup_arrstring__4207347319() gopurs_runtime.Value {
-	once_semigroupArray__ptrConstructor_Semigroup_arrstring__4207347319.Do(func() {
-		cache_semigroupArray__ptrConstructor_Semigroup_arrstring__4207347319 = gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(&Constructor_Semigroup[[]string]{1, Get_concatArray()})}
-	})
-	return cache_semigroupArray__ptrConstructor_Semigroup_arrstring__4207347319
-}
-
-var cache_semigroupArray__ptrConstructor_Semigroup_arrgopurs_runtime_Value__777842900 gopurs_runtime.Value
-var once_semigroupArray__ptrConstructor_Semigroup_arrgopurs_runtime_Value__777842900 sync.Once
-func Get_semigroupArray__ptrConstructor_Semigroup_arrgopurs_runtime_Value__777842900() gopurs_runtime.Value {
-	once_semigroupArray__ptrConstructor_Semigroup_arrgopurs_runtime_Value__777842900.Do(func() {
-		cache_semigroupArray__ptrConstructor_Semigroup_arrgopurs_runtime_Value__777842900 = gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(&Constructor_Semigroup[[]gopurs_runtime.Value]{1, Get_concatArray()})}
-	})
-	return cache_semigroupArray__ptrConstructor_Semigroup_arrgopurs_runtime_Value__777842900
-}
-
-var cache_semigroupArray__gopurs_runtime_Value_1728406699 gopurs_runtime.Value
-var once_semigroupArray__gopurs_runtime_Value_1728406699 sync.Once
-func Get_semigroupArray__gopurs_runtime_Value_1728406699() gopurs_runtime.Value {
-	once_semigroupArray__gopurs_runtime_Value_1728406699.Do(func() {
-		cache_semigroupArray__gopurs_runtime_Value_1728406699 = gopurs_runtime.RecordDict1("append", Get_concatArray())
-	})
-	return cache_semigroupArray__gopurs_runtime_Value_1728406699
-}
-
 var cache_appendRecord gopurs_runtime.Value
 var once_appendRecord sync.Once
 func Get_appendRecord() gopurs_runtime.Value {
@@ -130,17 +89,6 @@ return Call_appendRecord(gopurs_runtime.CoerceToStruct[Constructor_SemigroupReco
 })
 	})
 	return cache_appendRecord
-}
-
-var cache_appendRecord__gopurs_runtime_Value_1546996774 gopurs_runtime.Value
-var once_appendRecord__gopurs_runtime_Value_1546996774 sync.Once
-func Get_appendRecord__gopurs_runtime_Value_1546996774() gopurs_runtime.Value {
-	once_appendRecord__gopurs_runtime_Value_1546996774.Do(func() {
-		cache_appendRecord__gopurs_runtime_Value_1546996774 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_appendRecord__gopurs_runtime_Value_1546996774(gopurs_runtime.CoerceToStruct[Constructor_SemigroupRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
-})
-	})
-	return cache_appendRecord__gopurs_runtime_Value_1546996774
 }
 
 var cache_semigroupRecord gopurs_runtime.Value
@@ -165,17 +113,6 @@ return Call_append(gopurs_runtime.CoerceToStruct[Constructor_Semigroup[gopurs_ru
 	return cache_append
 }
 
-var cache_append__gopurs_runtime_Value_1230318264 gopurs_runtime.Value
-var once_append__gopurs_runtime_Value_1230318264 sync.Once
-func Get_append__gopurs_runtime_Value_1230318264() gopurs_runtime.Value {
-	once_append__gopurs_runtime_Value_1230318264.Do(func() {
-		cache_append__gopurs_runtime_Value_1230318264 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_append__gopurs_runtime_Value_1230318264(gopurs_runtime.CoerceToStruct[Constructor_Semigroup[gopurs_runtime.Value]](dict_0_box))
-})
-	})
-	return cache_append__gopurs_runtime_Value_1230318264
-}
-
 var cache_semigroupFn gopurs_runtime.Value
 var once_semigroupFn sync.Once
 func Get_semigroupFn() gopurs_runtime.Value {
@@ -196,6 +133,72 @@ return Call_semigroupRecordCons(dictIsSymbol_0_box, _dollar__unused_1_box, dictS
 })
 	})
 	return cache_semigroupRecordCons
+}
+
+var cache_append__1230318264 gopurs_runtime.Value
+var once_append__1230318264 sync.Once
+func Get_append__1230318264() gopurs_runtime.Value {
+	once_append__1230318264.Do(func() {
+		cache_append__1230318264 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_append__1230318264(gopurs_runtime.CoerceToStruct[Constructor_Semigroup[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_append__1230318264
+}
+
+var cache_appendRecord__2378130976 gopurs_runtime.Value
+var once_appendRecord__2378130976 sync.Once
+func Get_appendRecord__2378130976() gopurs_runtime.Value {
+	once_appendRecord__2378130976.Do(func() {
+		cache_appendRecord__2378130976 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_appendRecord__2378130976(gopurs_runtime.CoerceToStruct[Constructor_SemigroupRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_appendRecord__2378130976
+}
+
+var cache_appendRecord__1546996774 gopurs_runtime.Value
+var once_appendRecord__1546996774 sync.Once
+func Get_appendRecord__1546996774() gopurs_runtime.Value {
+	once_appendRecord__1546996774.Do(func() {
+		cache_appendRecord__1546996774 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_appendRecord__1546996774(gopurs_runtime.CoerceToStruct[Constructor_SemigroupRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_appendRecord__1546996774
+}
+
+var cache_reflectSymbol__3416619207 gopurs_runtime.Value
+var once_reflectSymbol__3416619207 sync.Once
+func Get_reflectSymbol__3416619207() gopurs_runtime.Value {
+	once_reflectSymbol__3416619207.Do(func() {
+		cache_reflectSymbol__3416619207 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_reflectSymbol__3416619207(gopurs_runtime.CoerceToStruct[pkg_Data_Symbol.Constructor_IsSymbol[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_reflectSymbol__3416619207
+}
+
+var cache_reflectSymbol__1166932993 gopurs_runtime.Value
+var once_reflectSymbol__1166932993 sync.Once
+func Get_reflectSymbol__1166932993() gopurs_runtime.Value {
+	once_reflectSymbol__1166932993.Do(func() {
+		cache_reflectSymbol__1166932993 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_reflectSymbol__1166932993(gopurs_runtime.CoerceToStruct[pkg_Data_Symbol.Constructor_IsSymbol[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_reflectSymbol__1166932993
+}
+
+var cache_absurd__331654555 gopurs_runtime.Value
+var once_absurd__331654555 sync.Once
+func Get_absurd__331654555() gopurs_runtime.Value {
+	once_absurd__331654555.Do(func() {
+		cache_absurd__331654555 = gopurs_runtime.Func(func(a_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_absurd__331654555(a_0_box)
+})
+	})
+	return cache_absurd__331654555
 }
 
 type Constructor_SemigroupRecord[T_rowlist any, T_row any, T_subrow any] struct {
@@ -238,12 +241,6 @@ _ = dict_0
 return dict_0.V0
 }
 
-func Call_appendRecord__gopurs_runtime_Value_1546996774(dict_0_loop *Constructor_SemigroupRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_SemigroupRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
-_ = dict_0
-return dict_0.V0
-}
-
 func Call_semigroupRecord(_dollar__unused_0_loop gopurs_runtime.Value, dictSemigroupRecord_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
@@ -253,12 +250,6 @@ return gopurs_runtime.RecordDict1("append", gopurs_runtime.Apply(gopurs_runtime.
 }
 
 func Call_append(dict_0_loop *Constructor_Semigroup[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Semigroup[gopurs_runtime.Value] = dict_0_loop
-_ = dict_0
-return dict_0.V0
-}
-
-func Call_append__gopurs_runtime_Value_1230318264(dict_0_loop *Constructor_Semigroup[gopurs_runtime.Value]) gopurs_runtime.Value {
 var dict_0 *Constructor_Semigroup[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V0
@@ -296,6 +287,57 @@ return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), key_7_0, gopurs_
 })
 })
 }))
+}
+
+func Call_append__1230318264(dict_0_loop *Constructor_Semigroup[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_Semigroup[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_appendRecord__2378130976(dict_0_loop *Constructor_SemigroupRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_SemigroupRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_appendRecord__1546996774(dict_0_loop *Constructor_SemigroupRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_SemigroupRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_reflectSymbol__3416619207(dict_0_loop *pkg_Data_Symbol.Constructor_IsSymbol[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Symbol.Constructor_IsSymbol[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_reflectSymbol__1166932993(dict_0_loop *pkg_Data_Symbol.Constructor_IsSymbol[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Symbol.Constructor_IsSymbol[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_absurd__331654555(a_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var a_0 gopurs_runtime.Value = a_0_loop
+_ = a_0
+var spin_1_0_0 gopurs_runtime.Value
+spin_1_0_0 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var v_2_loop gopurs_runtime.Value = v_2_loop_val
+spin_1_0_0:
+for {
+if false { continue spin_1_0_0 }
+var v_2 gopurs_runtime.Value = v_2_loop
+_ = v_2
+v_2_loop = v_2
+continue spin_1_0_0
+return gopurs_runtime.Value{}
+}
+}()
+})
+return gopurs_runtime.Apply(spin_1_0_0, a_0)
 }
 
 func Get_concatArray() gopurs_runtime.Value {

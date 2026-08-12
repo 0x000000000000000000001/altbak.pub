@@ -11,7 +11,7 @@ var cache_genericTopNoArguments gopurs_runtime.Value
 var once_genericTopNoArguments sync.Once
 func Get_genericTopNoArguments() gopurs_runtime.Value {
 	once_genericTopNoArguments.Do(func() {
-		cache_genericTopNoArguments = gopurs_runtime.RecordDict1("genericTop'", gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Value{Type: 9, IntVal: int64(1454898258), UnsafePtr: nil}.IntVal)), UnsafePtr: nil})
+		cache_genericTopNoArguments = gopurs_runtime.RecordDict1("genericTop'", gopurs_runtime.Value{Type: 9, IntVal: int64(1454898258), UnsafePtr: nil})
 	})
 	return cache_genericTopNoArguments
 }
@@ -36,17 +36,6 @@ return Call_genericTop_prime(dict_0_box)
 })
 	})
 	return cache_genericTop_prime
-}
-
-var cache_genericTop_prime__gopurs_runtime_Value_1114003774 gopurs_runtime.Value
-var once_genericTop_prime__gopurs_runtime_Value_1114003774 sync.Once
-func Get_genericTop_prime__gopurs_runtime_Value_1114003774() gopurs_runtime.Value {
-	once_genericTop_prime__gopurs_runtime_Value_1114003774.Do(func() {
-		cache_genericTop_prime__gopurs_runtime_Value_1114003774 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericTop_prime__gopurs_runtime_Value_1114003774(dict_0_box)
-})
-	})
-	return cache_genericTop_prime__gopurs_runtime_Value_1114003774
 }
 
 var cache_genericTopConstructor gopurs_runtime.Value
@@ -97,7 +86,7 @@ var cache_genericBottomNoArguments gopurs_runtime.Value
 var once_genericBottomNoArguments sync.Once
 func Get_genericBottomNoArguments() gopurs_runtime.Value {
 	once_genericBottomNoArguments.Do(func() {
-		cache_genericBottomNoArguments = gopurs_runtime.RecordDict1("genericBottom'", gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Value{Type: 9, IntVal: int64(1454898258), UnsafePtr: nil}.IntVal)), UnsafePtr: nil})
+		cache_genericBottomNoArguments = gopurs_runtime.RecordDict1("genericBottom'", gopurs_runtime.Value{Type: 9, IntVal: int64(1454898258), UnsafePtr: nil})
 	})
 	return cache_genericBottomNoArguments
 }
@@ -122,17 +111,6 @@ return Call_genericBottom_prime(dict_0_box)
 })
 	})
 	return cache_genericBottom_prime
-}
-
-var cache_genericBottom_prime__gopurs_runtime_Value_2482077850 gopurs_runtime.Value
-var once_genericBottom_prime__gopurs_runtime_Value_2482077850 sync.Once
-func Get_genericBottom_prime__gopurs_runtime_Value_2482077850() gopurs_runtime.Value {
-	once_genericBottom_prime__gopurs_runtime_Value_2482077850.Do(func() {
-		cache_genericBottom_prime__gopurs_runtime_Value_2482077850 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericBottom_prime__gopurs_runtime_Value_2482077850(dict_0_box)
-})
-	})
-	return cache_genericBottom_prime__gopurs_runtime_Value_2482077850
 }
 
 var cache_genericBottomConstructor gopurs_runtime.Value
@@ -177,6 +155,61 @@ return Call_genericBottom(dictGeneric_0_box, dictGenericBottom_1_box)
 })
 	})
 	return cache_genericBottom
+}
+
+var cache_genericBottom_prime__2482077850 gopurs_runtime.Value
+var once_genericBottom_prime__2482077850 sync.Once
+func Get_genericBottom_prime__2482077850() gopurs_runtime.Value {
+	once_genericBottom_prime__2482077850.Do(func() {
+		cache_genericBottom_prime__2482077850 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genericBottom_prime__2482077850(dict_0_box)
+})
+	})
+	return cache_genericBottom_prime__2482077850
+}
+
+var cache_genericTop_prime__1114003774 gopurs_runtime.Value
+var once_genericTop_prime__1114003774 sync.Once
+func Get_genericTop_prime__1114003774() gopurs_runtime.Value {
+	once_genericTop_prime__1114003774.Do(func() {
+		cache_genericTop_prime__1114003774 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genericTop_prime__1114003774(dict_0_box)
+})
+	})
+	return cache_genericTop_prime__1114003774
+}
+
+var cache_bottom__338427193 gopurs_runtime.Value
+var once_bottom__338427193 sync.Once
+func Get_bottom__338427193() gopurs_runtime.Value {
+	once_bottom__338427193.Do(func() {
+		cache_bottom__338427193 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bottom__338427193(dict_0_box)
+})
+	})
+	return cache_bottom__338427193
+}
+
+var cache_top__338427193 gopurs_runtime.Value
+var once_top__338427193 sync.Once
+func Get_top__338427193() gopurs_runtime.Value {
+	once_top__338427193.Do(func() {
+		cache_top__338427193 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_top__338427193(dict_0_box)
+})
+	})
+	return cache_top__338427193
+}
+
+var cache_to__1498760952 gopurs_runtime.Value
+var once_to__1498760952 sync.Once
+func Get_to__1498760952() gopurs_runtime.Value {
+	once_to__1498760952.Do(func() {
+		cache_to__1498760952 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_to__1498760952(gopurs_runtime.CoerceToStruct[pkg_Data_Generic_Rep.Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_to__1498760952
 }
 
 type Constructor_GenericTop[T_a any] struct {
@@ -225,12 +258,6 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "genericTop'")
 }
 
-func Call_genericTop_prime__gopurs_runtime_Value_1114003774(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
-_ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "genericTop'")
-}
-
 func Call_genericTopConstructor(dictGenericTop_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictGenericTop_0 gopurs_runtime.Value = dictGenericTop_0_loop
 _ = dictGenericTop_0
@@ -242,7 +269,7 @@ var dictGenericTop_0 gopurs_runtime.Value = dictGenericTop_0_loop
 _ = dictGenericTop_0
 var dictGenericTop1_1 gopurs_runtime.Value = dictGenericTop1_1_loop
 _ = dictGenericTop1_1
-return gopurs_runtime.RecordDict1("genericTop'", gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.RecordGet(dictGenericTop_0, "genericTop'"), gopurs_runtime.RecordGet(dictGenericTop1_1, "genericTop'")})}))})
+return gopurs_runtime.RecordDict1("genericTop'", gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.RecordGet(dictGenericTop_0, "genericTop'"), gopurs_runtime.RecordGet(dictGenericTop1_1, "genericTop'")})})
 }
 
 func Call_genericTopSum(dictGenericTop_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -271,12 +298,6 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "genericBottom'")
 }
 
-func Call_genericBottom_prime__gopurs_runtime_Value_2482077850(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
-_ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "genericBottom'")
-}
-
 func Call_genericBottomConstructor(dictGenericBottom_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictGenericBottom_0 gopurs_runtime.Value = dictGenericBottom_0_loop
 _ = dictGenericBottom_0
@@ -288,7 +309,7 @@ var dictGenericBottom_0 gopurs_runtime.Value = dictGenericBottom_0_loop
 _ = dictGenericBottom_0
 var dictGenericBottom1_1 gopurs_runtime.Value = dictGenericBottom1_1_loop
 _ = dictGenericBottom1_1
-return gopurs_runtime.RecordDict1("genericBottom'", gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.RecordGet(dictGenericBottom_0, "genericBottom'"), gopurs_runtime.RecordGet(dictGenericBottom1_1, "genericBottom'")})}))})
+return gopurs_runtime.RecordDict1("genericBottom'", gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.RecordGet(dictGenericBottom_0, "genericBottom'"), gopurs_runtime.RecordGet(dictGenericBottom1_1, "genericBottom'")})})
 }
 
 func Call_genericBottomSum(dictGenericBottom_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -303,6 +324,36 @@ _ = dictGeneric_0
 var dictGenericBottom_1 gopurs_runtime.Value = dictGenericBottom_1_loop
 _ = dictGenericBottom_1
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "to"), gopurs_runtime.RecordGet(dictGenericBottom_1, "genericBottom'"))
+}
+
+func Call_genericBottom_prime__2482077850(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "genericBottom'")
+}
+
+func Call_genericTop_prime__1114003774(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "genericTop'")
+}
+
+func Call_bottom__338427193(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "bottom")
+}
+
+func Call_top__338427193(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "top")
+}
+
+func Call_to__1498760952(dict_0_loop *pkg_Data_Generic_Rep.Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Generic_Rep.Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V1
 }
 
 

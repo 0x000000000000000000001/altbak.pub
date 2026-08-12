@@ -30,17 +30,6 @@ return Call_pass(gopurs_runtime.CoerceToStruct[Constructor_MonadWriter[gopurs_ru
 	return cache_pass
 }
 
-var cache_pass__gopurs_runtime_Value_1553691451 gopurs_runtime.Value
-var once_pass__gopurs_runtime_Value_1553691451 sync.Once
-func Get_pass__gopurs_runtime_Value_1553691451() gopurs_runtime.Value {
-	once_pass__gopurs_runtime_Value_1553691451.Do(func() {
-		cache_pass__gopurs_runtime_Value_1553691451 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_pass__gopurs_runtime_Value_1553691451(gopurs_runtime.CoerceToStruct[Constructor_MonadWriter[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
-})
-	})
-	return cache_pass__gopurs_runtime_Value_1553691451
-}
-
 var cache_listen gopurs_runtime.Value
 var once_listen sync.Once
 func Get_listen() gopurs_runtime.Value {
@@ -50,17 +39,6 @@ return Call_listen(gopurs_runtime.CoerceToStruct[Constructor_MonadWriter[gopurs_
 })
 	})
 	return cache_listen
-}
-
-var cache_listen__gopurs_runtime_Value_1604579315 gopurs_runtime.Value
-var once_listen__gopurs_runtime_Value_1604579315 sync.Once
-func Get_listen__gopurs_runtime_Value_1604579315() gopurs_runtime.Value {
-	once_listen__gopurs_runtime_Value_1604579315.Do(func() {
-		cache_listen__gopurs_runtime_Value_1604579315 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_listen__gopurs_runtime_Value_1604579315(gopurs_runtime.CoerceToStruct[Constructor_MonadWriter[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
-})
-	})
-	return cache_listen__gopurs_runtime_Value_1604579315
 }
 
 var cache_listens gopurs_runtime.Value
@@ -83,6 +61,61 @@ return Call_censor(gopurs_runtime.CoerceToStruct[Constructor_MonadWriter[gopurs_
 })
 	})
 	return cache_censor
+}
+
+var cache_bind__2601835655 gopurs_runtime.Value
+var once_bind__2601835655 sync.Once
+func Get_bind__2601835655() gopurs_runtime.Value {
+	once_bind__2601835655.Do(func() {
+		cache_bind__2601835655 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bind__2601835655(gopurs_runtime.CoerceToStruct[pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_bind__2601835655
+}
+
+var cache_bind__3652419335 gopurs_runtime.Value
+var once_bind__3652419335 sync.Once
+func Get_bind__3652419335() gopurs_runtime.Value {
+	once_bind__3652419335.Do(func() {
+		cache_bind__3652419335 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bind__3652419335(gopurs_runtime.CoerceToStruct[pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_bind__3652419335
+}
+
+var cache_bind__2669704711 gopurs_runtime.Value
+var once_bind__2669704711 sync.Once
+func Get_bind__2669704711() gopurs_runtime.Value {
+	once_bind__2669704711.Do(func() {
+		cache_bind__2669704711 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bind__2669704711(gopurs_runtime.CoerceToStruct[pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_bind__2669704711
+}
+
+var cache_listen__1604579315 gopurs_runtime.Value
+var once_listen__1604579315 sync.Once
+func Get_listen__1604579315() gopurs_runtime.Value {
+	once_listen__1604579315.Do(func() {
+		cache_listen__1604579315 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_listen__1604579315(gopurs_runtime.CoerceToStruct[Constructor_MonadWriter[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_listen__1604579315
+}
+
+var cache_pass__1553691451 gopurs_runtime.Value
+var once_pass__1553691451 sync.Once
+func Get_pass__1553691451() gopurs_runtime.Value {
+	once_pass__1553691451.Do(func() {
+		cache_pass__1553691451 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_pass__1553691451(gopurs_runtime.CoerceToStruct[Constructor_MonadWriter[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_pass__1553691451
 }
 
 type Constructor_MonadTell[T_w any, T_m any] struct {
@@ -141,19 +174,7 @@ _ = dict_0
 return dict_0.V3
 }
 
-func Call_pass__gopurs_runtime_Value_1553691451(dict_0_loop *Constructor_MonadWriter[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_MonadWriter[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
-_ = dict_0
-return dict_0.V3
-}
-
 func Call_listen(dict_0_loop *Constructor_MonadWriter[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_MonadWriter[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
-_ = dict_0
-return dict_0.V2
-}
-
-func Call_listen__gopurs_runtime_Value_1604579315(dict_0_loop *Constructor_MonadWriter[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
 var dict_0 *Constructor_MonadWriter[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V2
@@ -193,6 +214,36 @@ return gopurs_runtime.Apply(pure_3_2, gopurs_runtime.Value{Type: 9, IntVal: 2339
 })))
 })
 })
+}
+
+func Call_bind__2601835655(dict_0_loop *pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V1
+}
+
+func Call_bind__3652419335(dict_0_loop *pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V1
+}
+
+func Call_bind__2669704711(dict_0_loop *pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V1
+}
+
+func Call_listen__1604579315(dict_0_loop *Constructor_MonadWriter[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_MonadWriter[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V2
+}
+
+func Call_pass__1553691451(dict_0_loop *Constructor_MonadWriter[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_MonadWriter[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V3
 }
 
 

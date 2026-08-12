@@ -1,7 +1,9 @@
 package Control_Extend
 
 import (
+	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	pkg_Data_Functor "gopurs/output/Data.Functor"
+	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	unsafe "unsafe"
@@ -51,17 +53,6 @@ return Call_extend(gopurs_runtime.CoerceToStruct[Constructor_Extend[gopurs_runti
 	return cache_extend
 }
 
-var cache_extend__gopurs_runtime_Value_1264481661 gopurs_runtime.Value
-var once_extend__gopurs_runtime_Value_1264481661 sync.Once
-func Get_extend__gopurs_runtime_Value_1264481661() gopurs_runtime.Value {
-	once_extend__gopurs_runtime_Value_1264481661.Do(func() {
-		cache_extend__gopurs_runtime_Value_1264481661 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_extend__gopurs_runtime_Value_1264481661(gopurs_runtime.CoerceToStruct[Constructor_Extend[gopurs_runtime.Value]](dict_0_box))
-})
-	})
-	return cache_extend__gopurs_runtime_Value_1264481661
-}
-
 var cache_extendFlipped gopurs_runtime.Value
 var once_extendFlipped sync.Once
 func Get_extendFlipped() gopurs_runtime.Value {
@@ -95,17 +86,6 @@ return Call_composeCoKleisliFlipped(gopurs_runtime.CoerceToStruct[Constructor_Ex
 	return cache_composeCoKleisliFlipped
 }
 
-var cache_composeCoKleisliFlipped__gopurs_runtime_Value_1582554720 gopurs_runtime.Value
-var once_composeCoKleisliFlipped__gopurs_runtime_Value_1582554720 sync.Once
-func Get_composeCoKleisliFlipped__gopurs_runtime_Value_1582554720() gopurs_runtime.Value {
-	once_composeCoKleisliFlipped__gopurs_runtime_Value_1582554720.Do(func() {
-		cache_composeCoKleisliFlipped__gopurs_runtime_Value_1582554720 = gopurs_runtime.Func4(func(dictExtend_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, g_2_box gopurs_runtime.Value, w_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_composeCoKleisliFlipped__gopurs_runtime_Value_1582554720(gopurs_runtime.CoerceToStruct[Constructor_Extend[gopurs_runtime.Value]](dictExtend_0_box), f_1_box, g_2_box, w_3_box)
-})
-	})
-	return cache_composeCoKleisliFlipped__gopurs_runtime_Value_1582554720
-}
-
 var cache_composeCoKleisli gopurs_runtime.Value
 var once_composeCoKleisli sync.Once
 func Get_composeCoKleisli() gopurs_runtime.Value {
@@ -115,6 +95,57 @@ return Call_composeCoKleisli(gopurs_runtime.CoerceToStruct[Constructor_Extend[go
 })
 	})
 	return cache_composeCoKleisli
+}
+
+var cache_extend__1264481661 gopurs_runtime.Value
+var once_extend__1264481661 sync.Once
+func Get_extend__1264481661() gopurs_runtime.Value {
+	once_extend__1264481661.Do(func() {
+		cache_extend__1264481661 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_extend__1264481661(gopurs_runtime.CoerceToStruct[Constructor_Extend[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_extend__1264481661
+}
+
+var cache_extend__3641500541 gopurs_runtime.Value
+var once_extend__3641500541 sync.Once
+func Get_extend__3641500541() gopurs_runtime.Value {
+	once_extend__3641500541.Do(func() {
+		cache_extend__3641500541 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_extend__3641500541(gopurs_runtime.CoerceToStruct[Constructor_Extend[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_extend__3641500541
+}
+
+var cache_functorArray__361387505 gopurs_runtime.Value
+var once_functorArray__361387505 sync.Once
+func Get_functorArray__361387505() gopurs_runtime.Value {
+	once_functorArray__361387505.Do(func() {
+		cache_functorArray__361387505 = gopurs_runtime.RecordDict1("map", pkg_Data_Functor.Get_arrayMap())
+	})
+	return cache_functorArray__361387505
+}
+
+var cache_functorFn__20325936 gopurs_runtime.Value
+var once_functorFn__20325936 sync.Once
+func Get_functorFn__20325936() gopurs_runtime.Value {
+	once_functorFn__20325936.Do(func() {
+		cache_functorFn__20325936 = gopurs_runtime.RecordDict1("map", gopurs_runtime.RecordGet(pkg_Control_Semigroupoid.Get_semigroupoidFn(), "compose"))
+	})
+	return cache_functorFn__20325936
+}
+
+var cache_append__1230318264 gopurs_runtime.Value
+var once_append__1230318264 sync.Once
+func Get_append__1230318264() gopurs_runtime.Value {
+	once_append__1230318264.Do(func() {
+		cache_append__1230318264 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_append__1230318264(gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_append__1230318264
 }
 
 type Constructor_Extend[T_w any] struct {
@@ -164,12 +195,6 @@ _ = dict_0
 return dict_0.V1
 }
 
-func Call_extend__gopurs_runtime_Value_1264481661(dict_0_loop *Constructor_Extend[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Extend[gopurs_runtime.Value] = dict_0_loop
-_ = dict_0
-return dict_0.V1
-}
-
 func Call_extendFlipped(dictExtend_0_loop *Constructor_Extend[gopurs_runtime.Value], w_1_loop gopurs_runtime.Value, f_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictExtend_0 *Constructor_Extend[gopurs_runtime.Value] = dictExtend_0_loop
 _ = dictExtend_0
@@ -198,18 +223,6 @@ _ = w_3
 return gopurs_runtime.Apply(f_1, gopurs_runtime.Apply2(dictExtend_0.V1, g_2, w_3))
 }
 
-func Call_composeCoKleisliFlipped__gopurs_runtime_Value_1582554720(dictExtend_0_loop *Constructor_Extend[gopurs_runtime.Value], f_1_loop gopurs_runtime.Value, g_2_loop gopurs_runtime.Value, w_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictExtend_0 *Constructor_Extend[gopurs_runtime.Value] = dictExtend_0_loop
-_ = dictExtend_0
-var f_1 gopurs_runtime.Value = f_1_loop
-_ = f_1
-var g_2 gopurs_runtime.Value = g_2_loop
-_ = g_2
-var w_3 gopurs_runtime.Value = w_3_loop
-_ = w_3
-return gopurs_runtime.Apply(f_1, gopurs_runtime.Apply2(dictExtend_0.V1, g_2, w_3))
-}
-
 func Call_composeCoKleisli(dictExtend_0_loop *Constructor_Extend[gopurs_runtime.Value], f_1_loop gopurs_runtime.Value, g_2_loop gopurs_runtime.Value, w_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictExtend_0 *Constructor_Extend[gopurs_runtime.Value] = dictExtend_0_loop
 _ = dictExtend_0
@@ -220,6 +233,24 @@ _ = g_2
 var w_3 gopurs_runtime.Value = w_3_loop
 _ = w_3
 return gopurs_runtime.Apply(g_2, gopurs_runtime.Apply2(dictExtend_0.V1, f_1, w_3))
+}
+
+func Call_extend__1264481661(dict_0_loop *Constructor_Extend[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_Extend[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V1
+}
+
+func Call_extend__3641500541(dict_0_loop *Constructor_Extend[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_Extend[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V1
+}
+
+func Call_append__1230318264(dict_0_loop *pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
 }
 
 func Get_arrayExtend() gopurs_runtime.Value {

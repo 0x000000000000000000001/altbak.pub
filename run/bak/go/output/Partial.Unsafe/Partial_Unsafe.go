@@ -15,33 +15,6 @@ func Get_unsafePartial() gopurs_runtime.Value {
 	return cache_unsafePartial
 }
 
-var cache_unsafePartial__gopurs_runtime_Value_3178441094 gopurs_runtime.Value
-var once_unsafePartial__gopurs_runtime_Value_3178441094 sync.Once
-func Get_unsafePartial__gopurs_runtime_Value_3178441094() gopurs_runtime.Value {
-	once_unsafePartial__gopurs_runtime_Value_3178441094.Do(func() {
-		cache_unsafePartial__gopurs_runtime_Value_3178441094 = Get__unsafePartial()
-	})
-	return cache_unsafePartial__gopurs_runtime_Value_3178441094
-}
-
-var cache_unsafePartial__gopurs_runtime_Value_3574557895 gopurs_runtime.Value
-var once_unsafePartial__gopurs_runtime_Value_3574557895 sync.Once
-func Get_unsafePartial__gopurs_runtime_Value_3574557895() gopurs_runtime.Value {
-	once_unsafePartial__gopurs_runtime_Value_3574557895.Do(func() {
-		cache_unsafePartial__gopurs_runtime_Value_3574557895 = Get__unsafePartial()
-	})
-	return cache_unsafePartial__gopurs_runtime_Value_3574557895
-}
-
-var cache_unsafePartial__gopurs_runtime_Value_1306634845 gopurs_runtime.Value
-var once_unsafePartial__gopurs_runtime_Value_1306634845 sync.Once
-func Get_unsafePartial__gopurs_runtime_Value_1306634845() gopurs_runtime.Value {
-	once_unsafePartial__gopurs_runtime_Value_1306634845.Do(func() {
-		cache_unsafePartial__gopurs_runtime_Value_1306634845 = Get__unsafePartial()
-	})
-	return cache_unsafePartial__gopurs_runtime_Value_1306634845
-}
-
 var cache_unsafeCrashWith gopurs_runtime.Value
 var once_unsafeCrashWith sync.Once
 func Get_unsafeCrashWith() gopurs_runtime.Value {
@@ -53,26 +26,24 @@ return Call_unsafeCrashWith(msg_0_box.StrVal())
 	return cache_unsafeCrashWith
 }
 
-var cache_unsafeCrashWith__gopurs_runtime_Value_3091512314 gopurs_runtime.Value
-var once_unsafeCrashWith__gopurs_runtime_Value_3091512314 sync.Once
-func Get_unsafeCrashWith__gopurs_runtime_Value_3091512314() gopurs_runtime.Value {
-	once_unsafeCrashWith__gopurs_runtime_Value_3091512314.Do(func() {
-		cache_unsafeCrashWith__gopurs_runtime_Value_3091512314 = gopurs_runtime.Func(func(msg_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_unsafeCrashWith__gopurs_runtime_Value_3091512314(msg_0_box.StrVal())
-})
+var cache_unsafePartial__1306634845 gopurs_runtime.Value
+var once_unsafePartial__1306634845 sync.Once
+func Get_unsafePartial__1306634845() gopurs_runtime.Value {
+	once_unsafePartial__1306634845.Do(func() {
+		cache_unsafePartial__1306634845 = Get__unsafePartial()
 	})
-	return cache_unsafeCrashWith__gopurs_runtime_Value_3091512314
+	return cache_unsafePartial__1306634845
 }
 
-var cache_unsafeCrashWith__gopurs_runtime_Value_69763299 gopurs_runtime.Value
-var once_unsafeCrashWith__gopurs_runtime_Value_69763299 sync.Once
-func Get_unsafeCrashWith__gopurs_runtime_Value_69763299() gopurs_runtime.Value {
-	once_unsafeCrashWith__gopurs_runtime_Value_69763299.Do(func() {
-		cache_unsafeCrashWith__gopurs_runtime_Value_69763299 = gopurs_runtime.Func(func(msg_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_unsafeCrashWith__gopurs_runtime_Value_69763299(msg_0_box.StrVal())
+var cache_crashWith__1894115486 gopurs_runtime.Value
+var once_crashWith__1894115486 sync.Once
+func Get_crashWith__1894115486() gopurs_runtime.Value {
+	once_crashWith__1894115486.Do(func() {
+		cache_crashWith__1894115486 = gopurs_runtime.Func(func(_dollar__unused_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_crashWith__1894115486(_dollar__unused_0_box)
 })
 	})
-	return cache_unsafeCrashWith__gopurs_runtime_Value_69763299
+	return cache_crashWith__1894115486
 }
 
 func Call_unsafeCrashWith(msg_0_loop string) gopurs_runtime.Value {
@@ -81,16 +52,10 @@ _ = msg_0
 return gopurs_runtime.Apply(pkg_Partial.Get__crashWith(), gopurs_runtime.Str(msg_0))
 }
 
-func Call_unsafeCrashWith__gopurs_runtime_Value_3091512314(msg_0_loop string) gopurs_runtime.Value {
-var msg_0 string = msg_0_loop
-_ = msg_0
-return gopurs_runtime.Apply(pkg_Partial.Get__crashWith(), gopurs_runtime.Str(msg_0))
-}
-
-func Call_unsafeCrashWith__gopurs_runtime_Value_69763299(msg_0_loop string) gopurs_runtime.Value {
-var msg_0 string = msg_0_loop
-_ = msg_0
-return gopurs_runtime.Apply(pkg_Partial.Get__crashWith(), gopurs_runtime.Str(msg_0))
+func Call_crashWith__1894115486(_dollar__unused_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
+_ = _dollar__unused_0
+return pkg_Partial.Get__crashWith()
 }
 
 func Get__unsafePartial() gopurs_runtime.Value {

@@ -2,6 +2,7 @@ package Data_Show
 
 import (
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
+	pkg_Data_Symbol "gopurs/output/Data.Symbol"
 	pkg_Data_Void "gopurs/output/Data.Void"
 	pkg_Record_Unsafe "gopurs/output/Record.Unsafe"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
@@ -13,7 +14,7 @@ var cache_showVoid gopurs_runtime.Value
 var once_showVoid sync.Once
 func Get_showVoid() gopurs_runtime.Value {
 	once_showVoid.Do(func() {
-		cache_showVoid = gopurs_runtime.RecordDict1("show", pkg_Data_Void.Get_absurd__gopurs_runtime_Value_1771830288())
+		cache_showVoid = gopurs_runtime.RecordDict1("show", pkg_Data_Void.Get_absurd())
 	})
 	return cache_showVoid
 }
@@ -60,17 +61,6 @@ return Call_showRecordFields(gopurs_runtime.CoerceToStruct[Constructor_ShowRecor
 })
 	})
 	return cache_showRecordFields
-}
-
-var cache_showRecordFields__gopurs_runtime_Value_2713688005 gopurs_runtime.Value
-var once_showRecordFields__gopurs_runtime_Value_2713688005 sync.Once
-func Get_showRecordFields__gopurs_runtime_Value_2713688005() gopurs_runtime.Value {
-	once_showRecordFields__gopurs_runtime_Value_2713688005.Do(func() {
-		cache_showRecordFields__gopurs_runtime_Value_2713688005 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_showRecordFields__gopurs_runtime_Value_2713688005(gopurs_runtime.CoerceToStruct[Constructor_ShowRecordFields[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
-})
-	})
-	return cache_showRecordFields__gopurs_runtime_Value_2713688005
 }
 
 var cache_showRecord gopurs_runtime.Value
@@ -127,20 +117,20 @@ var once_showBoolean sync.Once
 func Get_showBoolean() gopurs_runtime.Value {
 	once_showBoolean.Do(func() {
 		cache_showBoolean = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
+var __t0 string
 {
 if (v_0.IntVal) != (0) {
-__t0 = gopurs_runtime.Str("true")
+__t0 = "true"
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Str("false")
+__t0 = "false"
 }
 end_branch_0:
-return gopurs_runtime.Str(__t0.StrVal())
+return gopurs_runtime.Str(__t0)
 }))
 	})
 	return cache_showBoolean
@@ -155,17 +145,6 @@ return Call_show(gopurs_runtime.CoerceToStruct[Constructor_Show[gopurs_runtime.V
 })
 	})
 	return cache_show
-}
-
-var cache_show__gopurs_runtime_Value_2742601362 gopurs_runtime.Value
-var once_show__gopurs_runtime_Value_2742601362 sync.Once
-func Get_show__gopurs_runtime_Value_2742601362() gopurs_runtime.Value {
-	once_show__gopurs_runtime_Value_2742601362.Do(func() {
-		cache_show__gopurs_runtime_Value_2742601362 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_show__gopurs_runtime_Value_2742601362(gopurs_runtime.CoerceToStruct[Constructor_Show[gopurs_runtime.Value]](dict_0_box))
-})
-	})
-	return cache_show__gopurs_runtime_Value_2742601362
 }
 
 var cache_showArray gopurs_runtime.Value
@@ -199,6 +178,92 @@ return Call_showRecordFieldsConsNil(dictIsSymbol_0_box, dictShow_1_box)
 })
 	})
 	return cache_showRecordFieldsConsNil
+}
+
+var cache_append__493084344 gopurs_runtime.Value
+var once_append__493084344 sync.Once
+func Get_append__493084344() gopurs_runtime.Value {
+	once_append__493084344.Do(func() {
+		cache_append__493084344 = gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append")
+	})
+	return cache_append__493084344
+}
+
+var cache_append__1230318264 gopurs_runtime.Value
+var once_append__1230318264 sync.Once
+func Get_append__1230318264() gopurs_runtime.Value {
+	once_append__1230318264.Do(func() {
+		cache_append__1230318264 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_append__1230318264(gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_append__1230318264
+}
+
+var cache_show__2742601362 gopurs_runtime.Value
+var once_show__2742601362 sync.Once
+func Get_show__2742601362() gopurs_runtime.Value {
+	once_show__2742601362.Do(func() {
+		cache_show__2742601362 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_show__2742601362(gopurs_runtime.CoerceToStruct[Constructor_Show[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_show__2742601362
+}
+
+var cache_showRecordFields__3450865987 gopurs_runtime.Value
+var once_showRecordFields__3450865987 sync.Once
+func Get_showRecordFields__3450865987() gopurs_runtime.Value {
+	once_showRecordFields__3450865987.Do(func() {
+		cache_showRecordFields__3450865987 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_showRecordFields__3450865987(gopurs_runtime.CoerceToStruct[Constructor_ShowRecordFields[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_showRecordFields__3450865987
+}
+
+var cache_showRecordFields__2713688005 gopurs_runtime.Value
+var once_showRecordFields__2713688005 sync.Once
+func Get_showRecordFields__2713688005() gopurs_runtime.Value {
+	once_showRecordFields__2713688005.Do(func() {
+		cache_showRecordFields__2713688005 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_showRecordFields__2713688005(gopurs_runtime.CoerceToStruct[Constructor_ShowRecordFields[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_showRecordFields__2713688005
+}
+
+var cache_reflectSymbol__3416619207 gopurs_runtime.Value
+var once_reflectSymbol__3416619207 sync.Once
+func Get_reflectSymbol__3416619207() gopurs_runtime.Value {
+	once_reflectSymbol__3416619207.Do(func() {
+		cache_reflectSymbol__3416619207 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_reflectSymbol__3416619207(gopurs_runtime.CoerceToStruct[pkg_Data_Symbol.Constructor_IsSymbol[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_reflectSymbol__3416619207
+}
+
+var cache_reflectSymbol__1166932993 gopurs_runtime.Value
+var once_reflectSymbol__1166932993 sync.Once
+func Get_reflectSymbol__1166932993() gopurs_runtime.Value {
+	once_reflectSymbol__1166932993.Do(func() {
+		cache_reflectSymbol__1166932993 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_reflectSymbol__1166932993(gopurs_runtime.CoerceToStruct[pkg_Data_Symbol.Constructor_IsSymbol[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_reflectSymbol__1166932993
+}
+
+var cache_absurd__1771830288 gopurs_runtime.Value
+var once_absurd__1771830288 sync.Once
+func Get_absurd__1771830288() gopurs_runtime.Value {
+	once_absurd__1771830288.Do(func() {
+		cache_absurd__1771830288 = gopurs_runtime.Func(func(a_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str(Call_absurd__1771830288(a_0_box))
+})
+	})
+	return cache_absurd__1771830288
 }
 
 type Constructor_ShowRecordFields[T_rowlist any, T_row any] struct {
@@ -241,12 +306,6 @@ _ = dict_0
 return dict_0.V0
 }
 
-func Call_showRecordFields__gopurs_runtime_Value_2713688005(dict_0_loop *Constructor_ShowRecordFields[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_ShowRecordFields[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
-_ = dict_0
-return dict_0.V0
-}
-
 func Call_showRecord(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, dictShowRecordFields_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
@@ -255,17 +314,11 @@ _ = _dollar__unused_1
 var dictShowRecordFields_2 gopurs_runtime.Value = dictShowRecordFields_2_loop
 _ = dictShowRecordFields_2
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(record_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str("{"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictShowRecordFields_2, "showRecordFields"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, record_3), gopurs_runtime.Str("}"))).StrVal())
+return gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("{"), gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictShowRecordFields_2, "showRecordFields"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, record_3), gopurs_runtime.Str("}"))).StrVal())
 }))
 }
 
 func Call_show(dict_0_loop *Constructor_Show[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Show[gopurs_runtime.Value] = dict_0_loop
-_ = dict_0
-return dict_0.V0
-}
-
-func Call_show__gopurs_runtime_Value_2742601362(dict_0_loop *Constructor_Show[gopurs_runtime.Value]) gopurs_runtime.Value {
 var dict_0 *Constructor_Show[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V0
@@ -288,7 +341,7 @@ return gopurs_runtime.RecordDict1("showRecordFields", gopurs_runtime.Func(func(v
 return gopurs_runtime.Func(func(record_4 gopurs_runtime.Value) gopurs_runtime.Value {
 key_5_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil})
 _ = key_5_0
-return gopurs_runtime.Str(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str(" "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), key_5_0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str(": "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_2, "show"), gopurs_runtime.Apply2(pkg_Record_Unsafe.Get_unsafeGet(), key_5_0, record_4)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str(","), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictShowRecordFields_1, "showRecordFields"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, record_4)))))).StrVal())
+return gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(" "), gopurs_runtime.Apply2(Get_append__493084344(), key_5_0, gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(": "), gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_2, "show"), gopurs_runtime.Apply2(pkg_Record_Unsafe.Get_unsafeGet(), key_5_0, record_4)), gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(","), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictShowRecordFields_1, "showRecordFields"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, record_4)))))).StrVal())
 })
 }))
 }
@@ -302,9 +355,66 @@ return gopurs_runtime.RecordDict1("showRecordFields", gopurs_runtime.Func(func(v
 return gopurs_runtime.Func(func(record_3 gopurs_runtime.Value) gopurs_runtime.Value {
 key_4_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil})
 _ = key_4_0
-return gopurs_runtime.Str(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str(" "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), key_4_0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str(": "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_1, "show"), gopurs_runtime.Apply2(pkg_Record_Unsafe.Get_unsafeGet(), key_4_0, record_3)), gopurs_runtime.Str(" "))))).StrVal())
+return gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(" "), gopurs_runtime.Apply2(Get_append__493084344(), key_4_0, gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(": "), gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_1, "show"), gopurs_runtime.Apply2(pkg_Record_Unsafe.Get_unsafeGet(), key_4_0, record_3)), gopurs_runtime.Str(" "))))).StrVal())
 })
 }))
+}
+
+func Call_append__1230318264(dict_0_loop *pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_show__2742601362(dict_0_loop *Constructor_Show[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_Show[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_showRecordFields__3450865987(dict_0_loop *Constructor_ShowRecordFields[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_ShowRecordFields[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_showRecordFields__2713688005(dict_0_loop *Constructor_ShowRecordFields[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_ShowRecordFields[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_reflectSymbol__3416619207(dict_0_loop *pkg_Data_Symbol.Constructor_IsSymbol[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Symbol.Constructor_IsSymbol[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_reflectSymbol__1166932993(dict_0_loop *pkg_Data_Symbol.Constructor_IsSymbol[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Symbol.Constructor_IsSymbol[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_absurd__1771830288(a_0_loop gopurs_runtime.Value) string {
+var a_0 gopurs_runtime.Value = a_0_loop
+_ = a_0
+var spin_1_0_0 gopurs_runtime.Value
+spin_1_0_0 = gopurs_runtime.Func(func(v_2_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var v_2_loop gopurs_runtime.Value = v_2_loop_val
+spin_1_0_0:
+for {
+if false { continue spin_1_0_0 }
+var v_2 gopurs_runtime.Value = v_2_loop
+_ = v_2
+v_2_loop = v_2
+continue spin_1_0_0
+return gopurs_runtime.Str(gopurs_runtime.Value{}.StrVal())
+}
+}()
+})
+return gopurs_runtime.Apply(spin_1_0_0, a_0).StrVal()
 }
 
 func Get_showArrayImpl() gopurs_runtime.Value {

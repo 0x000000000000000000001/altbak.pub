@@ -1,6 +1,7 @@
 package Data_Functor_Invariant
 
 import (
+	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	pkg_Data_Functor "gopurs/output/Data.Functor"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
@@ -147,17 +148,6 @@ return Call_imap(gopurs_runtime.CoerceToStruct[Constructor_Invariant[gopurs_runt
 	return cache_imap
 }
 
-var cache_imap__gopurs_runtime_Value_2950557085 gopurs_runtime.Value
-var once_imap__gopurs_runtime_Value_2950557085 sync.Once
-func Get_imap__gopurs_runtime_Value_2950557085() gopurs_runtime.Value {
-	once_imap__gopurs_runtime_Value_2950557085.Do(func() {
-		cache_imap__gopurs_runtime_Value_2950557085 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_imap__gopurs_runtime_Value_2950557085(gopurs_runtime.CoerceToStruct[Constructor_Invariant[gopurs_runtime.Value]](dict_0_box))
-})
-	})
-	return cache_imap__gopurs_runtime_Value_2950557085
-}
-
 var cache_invariantAlternate gopurs_runtime.Value
 var once_invariantAlternate sync.Once
 func Get_invariantAlternate() gopurs_runtime.Value {
@@ -167,6 +157,54 @@ return Call_invariantAlternate(dictInvariant_0_box)
 })
 	})
 	return cache_invariantAlternate
+}
+
+var cache_compose__858342840 gopurs_runtime.Value
+var once_compose__858342840 sync.Once
+func Get_compose__858342840() gopurs_runtime.Value {
+	once_compose__858342840.Do(func() {
+		cache_compose__858342840 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_compose__858342840(gopurs_runtime.CoerceToStruct[pkg_Control_Semigroupoid.Constructor_Semigroupoid[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_compose__858342840
+}
+
+var cache_semigroupoidFn__2387483462 gopurs_runtime.Value
+var once_semigroupoidFn__2387483462 sync.Once
+func Get_semigroupoidFn__2387483462() gopurs_runtime.Value {
+	once_semigroupoidFn__2387483462.Do(func() {
+		cache_semigroupoidFn__2387483462 = gopurs_runtime.RecordDict1("compose", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(g_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(g_1, x_2))
+})
+})
+}))
+	})
+	return cache_semigroupoidFn__2387483462
+}
+
+var cache_imap__2950557085 gopurs_runtime.Value
+var once_imap__2950557085 sync.Once
+func Get_imap__2950557085() gopurs_runtime.Value {
+	once_imap__2950557085.Do(func() {
+		cache_imap__2950557085 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_imap__2950557085(gopurs_runtime.CoerceToStruct[Constructor_Invariant[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_imap__2950557085
+}
+
+var cache_map__2199395572 gopurs_runtime.Value
+var once_map__2199395572 sync.Once
+func Get_map__2199395572() gopurs_runtime.Value {
+	once_map__2199395572.Do(func() {
+		cache_map__2199395572 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_map__2199395572(gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_map__2199395572
 }
 
 type Constructor_Invariant[T_f any] struct {
@@ -202,12 +240,6 @@ _ = dict_0
 return dict_0.V0
 }
 
-func Call_imap__gopurs_runtime_Value_2950557085(dict_0_loop *Constructor_Invariant[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Invariant[gopurs_runtime.Value] = dict_0_loop
-_ = dict_0
-return dict_0.V0
-}
-
 func Call_invariantAlternate(dictInvariant_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictInvariant_0 gopurs_runtime.Value = dictInvariant_0_loop
 _ = dictInvariant_0
@@ -218,6 +250,24 @@ return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictInvariant_0, "imap"), 
 })
 })
 }))
+}
+
+func Call_compose__858342840(dict_0_loop *pkg_Control_Semigroupoid.Constructor_Semigroupoid[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Control_Semigroupoid.Constructor_Semigroupoid[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_imap__2950557085(dict_0_loop *Constructor_Invariant[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_Invariant[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_map__2199395572(dict_0_loop *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
 }
 
 

@@ -1,6 +1,10 @@
 package Control_Monad_Identity_Trans
 
 import (
+	pkg_Control_Extend "gopurs/output/Control.Extend"
+	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
+	pkg_Data_Eq "gopurs/output/Data.Eq"
+	pkg_Data_Ord "gopurs/output/Data.Ord"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 )
@@ -47,17 +51,6 @@ return Call_runIdentityT(v_0_box)
 })
 	})
 	return cache_runIdentityT
-}
-
-var cache_runIdentityT__gopurs_runtime_Value_3018751933 gopurs_runtime.Value
-var once_runIdentityT__gopurs_runtime_Value_3018751933 sync.Once
-func Get_runIdentityT__gopurs_runtime_Value_3018751933() gopurs_runtime.Value {
-	once_runIdentityT__gopurs_runtime_Value_3018751933.Do(func() {
-		cache_runIdentityT__gopurs_runtime_Value_3018751933 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_runIdentityT__gopurs_runtime_Value_3018751933(v_0_box)
-})
-	})
-	return cache_runIdentityT__gopurs_runtime_Value_3018751933
 }
 
 var cache_plusIdentityT gopurs_runtime.Value
@@ -379,6 +372,76 @@ return Call_altIdentityT(dictAlt_0_box)
 	return cache_altIdentityT
 }
 
+var cache_extend__1264481661 gopurs_runtime.Value
+var once_extend__1264481661 sync.Once
+func Get_extend__1264481661() gopurs_runtime.Value {
+	once_extend__1264481661.Do(func() {
+		cache_extend__1264481661 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_extend__1264481661(gopurs_runtime.CoerceToStruct[pkg_Control_Extend.Constructor_Extend[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_extend__1264481661
+}
+
+var cache_runIdentityT__3018751933 gopurs_runtime.Value
+var once_runIdentityT__3018751933 sync.Once
+func Get_runIdentityT__3018751933() gopurs_runtime.Value {
+	once_runIdentityT__3018751933.Do(func() {
+		cache_runIdentityT__3018751933 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_runIdentityT__3018751933(v_0_box)
+})
+	})
+	return cache_runIdentityT__3018751933
+}
+
+var cache_compose__858342840 gopurs_runtime.Value
+var once_compose__858342840 sync.Once
+func Get_compose__858342840() gopurs_runtime.Value {
+	once_compose__858342840.Do(func() {
+		cache_compose__858342840 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_compose__858342840(gopurs_runtime.CoerceToStruct[pkg_Control_Semigroupoid.Constructor_Semigroupoid[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_compose__858342840
+}
+
+var cache_semigroupoidFn__2387483462 gopurs_runtime.Value
+var once_semigroupoidFn__2387483462 sync.Once
+func Get_semigroupoidFn__2387483462() gopurs_runtime.Value {
+	once_semigroupoidFn__2387483462.Do(func() {
+		cache_semigroupoidFn__2387483462 = gopurs_runtime.RecordDict1("compose", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(g_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(g_1, x_2))
+})
+})
+}))
+	})
+	return cache_semigroupoidFn__2387483462
+}
+
+var cache_eq1__1773593252 gopurs_runtime.Value
+var once_eq1__1773593252 sync.Once
+func Get_eq1__1773593252() gopurs_runtime.Value {
+	once_eq1__1773593252.Do(func() {
+		cache_eq1__1773593252 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_eq1__1773593252(gopurs_runtime.CoerceToStruct[pkg_Data_Eq.Constructor_Eq1[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_eq1__1773593252
+}
+
+var cache_compare1__650153534 gopurs_runtime.Value
+var once_compare1__650153534 sync.Once
+func Get_compare1__650153534() gopurs_runtime.Value {
+	once_compare1__650153534.Do(func() {
+		cache_compare1__650153534 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_compare1__650153534(gopurs_runtime.CoerceToStruct[pkg_Data_Ord.Constructor_Ord1[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_compare1__650153534
+}
+
 func Call_IdentityT(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
@@ -398,12 +461,6 @@ return dictTraversable_0
 }
 
 func Call_runIdentityT(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
-_ = v_0
-return v_0
-}
-
-func Call_runIdentityT__gopurs_runtime_Value_3018751933(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 return v_0
@@ -647,6 +704,36 @@ func Call_altIdentityT(dictAlt_0_loop gopurs_runtime.Value) gopurs_runtime.Value
 var dictAlt_0 gopurs_runtime.Value = dictAlt_0_loop
 _ = dictAlt_0
 return dictAlt_0
+}
+
+func Call_extend__1264481661(dict_0_loop *pkg_Control_Extend.Constructor_Extend[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Control_Extend.Constructor_Extend[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V1
+}
+
+func Call_runIdentityT__3018751933(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 gopurs_runtime.Value = v_0_loop
+_ = v_0
+return v_0
+}
+
+func Call_compose__858342840(dict_0_loop *pkg_Control_Semigroupoid.Constructor_Semigroupoid[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Control_Semigroupoid.Constructor_Semigroupoid[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_eq1__1773593252(dict_0_loop *pkg_Data_Eq.Constructor_Eq1[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Eq.Constructor_Eq1[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_compare1__650153534(dict_0_loop *pkg_Data_Ord.Constructor_Ord1[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Ord.Constructor_Ord1[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V1
 }
 
 

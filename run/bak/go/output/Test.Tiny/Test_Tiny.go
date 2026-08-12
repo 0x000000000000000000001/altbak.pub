@@ -1,6 +1,7 @@
 package Test_Tiny
 
 import (
+	pkg_Data_Semiring "gopurs/output/Data.Semiring"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	unsafe "unsafe"
@@ -41,6 +42,26 @@ return gopurs_runtime.Int(Call_area(v_0_box))
 	return cache_area
 }
 
+var cache_mul__560788792 gopurs_runtime.Value
+var once_mul__560788792 sync.Once
+func Get_mul__560788792() gopurs_runtime.Value {
+	once_mul__560788792.Do(func() {
+		cache_mul__560788792 = pkg_Data_Semiring.Get_intMul()
+	})
+	return cache_mul__560788792
+}
+
+var cache_mul__1614463960 gopurs_runtime.Value
+var once_mul__1614463960 sync.Once
+func Get_mul__1614463960() gopurs_runtime.Value {
+	once_mul__1614463960.Do(func() {
+		cache_mul__1614463960 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mul__1614463960(gopurs_runtime.CoerceToStruct[pkg_Data_Semiring.Constructor_Semiring[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_mul__1614463960
+}
+
 type Constructor_Circle struct {
 	Rc uint32
 	V0 int64
@@ -60,7 +81,7 @@ _ = v_0
 var __t0 gopurs_runtime.Value
 {
 if (v_0.Type == 9 && v_0.IntVal == 248718980) {
-__t0 = gopurs_runtime.Int((gopurs_runtime.Int((*Constructor_Circle)(v_0.UnsafePtr).V0).IntVal) * (gopurs_runtime.Int((*Constructor_Circle)(v_0.UnsafePtr).V0).IntVal))
+__t0 = gopurs_runtime.Int(gopurs_runtime.Apply2(Get_mul__560788792(), gopurs_runtime.Int((*Constructor_Circle)(v_0.UnsafePtr).V0), gopurs_runtime.Int((*Constructor_Circle)(v_0.UnsafePtr).V0)).IntVal)
 goto end_branch_0
 } else {
 
@@ -68,7 +89,7 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 261969494) {
-__t0 = gopurs_runtime.Int((gopurs_runtime.Int((*Constructor_Rect)(v_0.UnsafePtr).V0).IntVal) * (gopurs_runtime.Int((*Constructor_Rect)(v_0.UnsafePtr).V1).IntVal))
+__t0 = gopurs_runtime.Int(gopurs_runtime.Apply2(Get_mul__560788792(), gopurs_runtime.Int((*Constructor_Rect)(v_0.UnsafePtr).V0), gopurs_runtime.Int((*Constructor_Rect)(v_0.UnsafePtr).V1)).IntVal)
 goto end_branch_0
 } else {
 
@@ -79,6 +100,12 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
 return __t0.IntVal
+}
+
+func Call_mul__1614463960(dict_0_loop *pkg_Data_Semiring.Constructor_Semiring[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Semiring.Constructor_Semiring[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V1
 }
 
 

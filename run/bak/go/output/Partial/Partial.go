@@ -16,17 +16,6 @@ return Call_crashWith(_dollar__unused_0_box)
 	return cache_crashWith
 }
 
-var cache_crashWith__gopurs_runtime_Value_1894115486 gopurs_runtime.Value
-var once_crashWith__gopurs_runtime_Value_1894115486 sync.Once
-func Get_crashWith__gopurs_runtime_Value_1894115486() gopurs_runtime.Value {
-	once_crashWith__gopurs_runtime_Value_1894115486.Do(func() {
-		cache_crashWith__gopurs_runtime_Value_1894115486 = gopurs_runtime.Func(func(_dollar__unused_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_crashWith__gopurs_runtime_Value_1894115486(_dollar__unused_0_box)
-})
-	})
-	return cache_crashWith__gopurs_runtime_Value_1894115486
-}
-
 var cache_crash gopurs_runtime.Value
 var once_crash sync.Once
 func Get_crash() gopurs_runtime.Value {
@@ -38,13 +27,18 @@ return Call_crash(_dollar__unused_0_box)
 	return cache_crash
 }
 
-func Call_crashWith(_dollar__unused_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
-_ = _dollar__unused_0
-return Get__crashWith()
+var cache_crashWith__1894115486 gopurs_runtime.Value
+var once_crashWith__1894115486 sync.Once
+func Get_crashWith__1894115486() gopurs_runtime.Value {
+	once_crashWith__1894115486.Do(func() {
+		cache_crashWith__1894115486 = gopurs_runtime.Func(func(_dollar__unused_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_crashWith__1894115486(_dollar__unused_0_box)
+})
+	})
+	return cache_crashWith__1894115486
 }
 
-func Call_crashWith__gopurs_runtime_Value_1894115486(_dollar__unused_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_crashWith(_dollar__unused_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 return Get__crashWith()
@@ -54,6 +48,12 @@ func Call_crash(_dollar__unused_0_loop gopurs_runtime.Value) gopurs_runtime.Valu
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 return gopurs_runtime.Apply(Get__crashWith(), gopurs_runtime.Str("Partial.crash: partial function"))
+}
+
+func Call_crashWith__1894115486(_dollar__unused_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
+_ = _dollar__unused_0
+return Get__crashWith()
 }
 
 func Get__crashWith() gopurs_runtime.Value {
