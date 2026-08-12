@@ -5,6 +5,7 @@ import (
 	pkg_Control_Monad "gopurs/output/Control.Monad"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	unsafe "unsafe"
 )
 
 var cache_monadPlusArray gopurs_runtime.Value
@@ -20,6 +21,23 @@ return pkg_Control_Monad.Get_monadArray()
 	return cache_monadPlusArray
 }
 
+type Constructor_MonadPlus[T_m any] struct {
+	Rc uint32
+	V0 gopurs_runtime.Value
+	V1 gopurs_runtime.Value
+}
+
+
+func init() {
+	gopurs_runtime.StructGetters[3236234573] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
+		c := (*Constructor_MonadPlus[gopurs_runtime.Value])(ptr)
+		switch key {
+		case "Alternative1": return c.V0
+		case "Monad0": return c.V1
+		default: panic("Key not found in dictionary Constructor_MonadPlus: " + key)
+		}
+	}
+}
 
 
 

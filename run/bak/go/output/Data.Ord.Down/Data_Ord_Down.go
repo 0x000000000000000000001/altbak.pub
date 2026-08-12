@@ -4,6 +4,7 @@ import (
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	unsafe "unsafe"
 )
 
 var cache_Down gopurs_runtime.Value
@@ -106,7 +107,7 @@ _ = __local_var_4_1
 var __t2 gopurs_runtime.Value
 {
 if (__local_var_4_1.Type == 9 && __local_var_4_1.IntVal == 380165415) {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}
 goto end_branch_2
 } else {
 
@@ -114,7 +115,7 @@ goto end_branch_2
 }
 {
 if (__local_var_4_1.Type == 9 && __local_var_4_1.IntVal == 902936544) {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}
 goto end_branch_2
 } else {
 
@@ -122,7 +123,7 @@ goto end_branch_2
 }
 {
 if (__local_var_4_1.Type == 9 && __local_var_4_1.IntVal == 1527465420) {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil}
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}
 goto end_branch_2
 } else {
 
@@ -153,7 +154,7 @@ _ = __local_var_5_3
 var __t4 gopurs_runtime.Value
 {
 if (__local_var_5_3.Type == 9 && __local_var_5_3.IntVal == 380165415) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}
 goto end_branch_4
 } else {
 
@@ -161,7 +162,7 @@ goto end_branch_4
 }
 {
 if (__local_var_5_3.Type == 9 && __local_var_5_3.IntVal == 902936544) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}
 goto end_branch_4
 } else {
 
@@ -169,7 +170,7 @@ goto end_branch_4
 }
 {
 if (__local_var_5_3.Type == 9 && __local_var_5_3.IntVal == 1527465420) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil}
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}
 goto end_branch_4
 } else {
 

@@ -45,7 +45,7 @@ var once_genericNot_prime sync.Once
 func Get_genericNot_prime() gopurs_runtime.Value {
 	once_genericNot_prime.Do(func() {
 		cache_genericNot_prime = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericNot_prime(dict_0_box)
+return Call_genericNot_prime(gopurs_runtime.CoerceToStruct[Constructor_GenericHeytingAlgebra[gopurs_runtime.Value]](dict_0_box))
 })
 	})
 	return cache_genericNot_prime
@@ -56,7 +56,7 @@ var once_genericNot_prime__gopurs_runtime_Value_4234376174 sync.Once
 func Get_genericNot_prime__gopurs_runtime_Value_4234376174() gopurs_runtime.Value {
 	once_genericNot_prime__gopurs_runtime_Value_4234376174.Do(func() {
 		cache_genericNot_prime__gopurs_runtime_Value_4234376174 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericNot_prime__gopurs_runtime_Value_4234376174(dict_0_box)
+return Call_genericNot_prime__gopurs_runtime_Value_4234376174(gopurs_runtime.CoerceToStruct[Constructor_GenericHeytingAlgebra[gopurs_runtime.Value]](dict_0_box))
 })
 	})
 	return cache_genericNot_prime__gopurs_runtime_Value_4234376174
@@ -67,7 +67,7 @@ var once_genericNot sync.Once
 func Get_genericNot() gopurs_runtime.Value {
 	once_genericNot.Do(func() {
 		cache_genericNot = gopurs_runtime.Func3(func(dictGeneric_0_box gopurs_runtime.Value, dictGenericHeytingAlgebra_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericNot(dictGeneric_0_box, dictGenericHeytingAlgebra_1_box, x_2_box)
+return Call_genericNot(gopurs_runtime.CoerceToStruct[pkg_Data_Generic_Rep.Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value]](dictGeneric_0_box), gopurs_runtime.CoerceToStruct[Constructor_GenericHeytingAlgebra[gopurs_runtime.Value]](dictGenericHeytingAlgebra_1_box), x_2_box)
 })
 	})
 	return cache_genericNot
@@ -78,7 +78,7 @@ var once_genericImplies_prime sync.Once
 func Get_genericImplies_prime() gopurs_runtime.Value {
 	once_genericImplies_prime.Do(func() {
 		cache_genericImplies_prime = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericImplies_prime(dict_0_box)
+return Call_genericImplies_prime(gopurs_runtime.CoerceToStruct[Constructor_GenericHeytingAlgebra[gopurs_runtime.Value]](dict_0_box))
 })
 	})
 	return cache_genericImplies_prime
@@ -89,7 +89,7 @@ var once_genericImplies_prime__gopurs_runtime_Value_1368982791 sync.Once
 func Get_genericImplies_prime__gopurs_runtime_Value_1368982791() gopurs_runtime.Value {
 	once_genericImplies_prime__gopurs_runtime_Value_1368982791.Do(func() {
 		cache_genericImplies_prime__gopurs_runtime_Value_1368982791 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericImplies_prime__gopurs_runtime_Value_1368982791(dict_0_box)
+return Call_genericImplies_prime__gopurs_runtime_Value_1368982791(gopurs_runtime.CoerceToStruct[Constructor_GenericHeytingAlgebra[gopurs_runtime.Value]](dict_0_box))
 })
 	})
 	return cache_genericImplies_prime__gopurs_runtime_Value_1368982791
@@ -100,7 +100,7 @@ var once_genericImplies sync.Once
 func Get_genericImplies() gopurs_runtime.Value {
 	once_genericImplies.Do(func() {
 		cache_genericImplies = gopurs_runtime.Func4(func(dictGeneric_0_box gopurs_runtime.Value, dictGenericHeytingAlgebra_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value, y_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericImplies(dictGeneric_0_box, dictGenericHeytingAlgebra_1_box, x_2_box, y_3_box)
+return Call_genericImplies(gopurs_runtime.CoerceToStruct[pkg_Data_Generic_Rep.Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value]](dictGeneric_0_box), gopurs_runtime.CoerceToStruct[Constructor_GenericHeytingAlgebra[gopurs_runtime.Value]](dictGenericHeytingAlgebra_1_box), x_2_box, y_3_box)
 })
 	})
 	return cache_genericImplies
@@ -112,19 +112,19 @@ func Get_genericHeytingAlgebraNoArguments() gopurs_runtime.Value {
 	once_genericHeytingAlgebraNoArguments.Do(func() {
 		cache_genericHeytingAlgebraNoArguments = gopurs_runtime.RecordDict([]string{"genericConj'", "genericDisj'", "genericFF'", "genericImplies'", "genericNot'", "genericTT'"}, []gopurs_runtime.Value{gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1454898258, UnsafePtr: nil}
+return gopurs_runtime.Value{Type: 9, IntVal: 1454898258, UnsafePtr: unsafe.Pointer(nil)}
 })
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1454898258, UnsafePtr: nil}
+return gopurs_runtime.Value{Type: 9, IntVal: 1454898258, UnsafePtr: unsafe.Pointer(nil)}
 })
-}), gopurs_runtime.Value{Type: 9, IntVal: 1454898258, UnsafePtr: nil}, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Value{Type: 9, IntVal: 1454898258, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1454898258, UnsafePtr: nil}
+return gopurs_runtime.Value{Type: 9, IntVal: 1454898258, UnsafePtr: unsafe.Pointer(nil)}
 })
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1454898258, UnsafePtr: nil}
-}), gopurs_runtime.Value{Type: 9, IntVal: 1454898258, UnsafePtr: nil}})
+return gopurs_runtime.Value{Type: 9, IntVal: 1454898258, UnsafePtr: unsafe.Pointer(nil)}
+}), gopurs_runtime.Value{Type: 9, IntVal: 1454898258, UnsafePtr: unsafe.Pointer(nil)}})
 	})
 	return cache_genericHeytingAlgebraNoArguments
 }
@@ -178,7 +178,7 @@ var once_genericDisj_prime sync.Once
 func Get_genericDisj_prime() gopurs_runtime.Value {
 	once_genericDisj_prime.Do(func() {
 		cache_genericDisj_prime = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericDisj_prime(dict_0_box)
+return Call_genericDisj_prime(gopurs_runtime.CoerceToStruct[Constructor_GenericHeytingAlgebra[gopurs_runtime.Value]](dict_0_box))
 })
 	})
 	return cache_genericDisj_prime
@@ -189,7 +189,7 @@ var once_genericDisj_prime__gopurs_runtime_Value_1368982791 sync.Once
 func Get_genericDisj_prime__gopurs_runtime_Value_1368982791() gopurs_runtime.Value {
 	once_genericDisj_prime__gopurs_runtime_Value_1368982791.Do(func() {
 		cache_genericDisj_prime__gopurs_runtime_Value_1368982791 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericDisj_prime__gopurs_runtime_Value_1368982791(dict_0_box)
+return Call_genericDisj_prime__gopurs_runtime_Value_1368982791(gopurs_runtime.CoerceToStruct[Constructor_GenericHeytingAlgebra[gopurs_runtime.Value]](dict_0_box))
 })
 	})
 	return cache_genericDisj_prime__gopurs_runtime_Value_1368982791
@@ -200,7 +200,7 @@ var once_genericDisj sync.Once
 func Get_genericDisj() gopurs_runtime.Value {
 	once_genericDisj.Do(func() {
 		cache_genericDisj = gopurs_runtime.Func4(func(dictGeneric_0_box gopurs_runtime.Value, dictGenericHeytingAlgebra_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value, y_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericDisj(dictGeneric_0_box, dictGenericHeytingAlgebra_1_box, x_2_box, y_3_box)
+return Call_genericDisj(gopurs_runtime.CoerceToStruct[pkg_Data_Generic_Rep.Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value]](dictGeneric_0_box), gopurs_runtime.CoerceToStruct[Constructor_GenericHeytingAlgebra[gopurs_runtime.Value]](dictGenericHeytingAlgebra_1_box), x_2_box, y_3_box)
 })
 	})
 	return cache_genericDisj
@@ -211,7 +211,7 @@ var once_genericConj_prime sync.Once
 func Get_genericConj_prime() gopurs_runtime.Value {
 	once_genericConj_prime.Do(func() {
 		cache_genericConj_prime = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericConj_prime(dict_0_box)
+return Call_genericConj_prime(gopurs_runtime.CoerceToStruct[Constructor_GenericHeytingAlgebra[gopurs_runtime.Value]](dict_0_box))
 })
 	})
 	return cache_genericConj_prime
@@ -222,7 +222,7 @@ var once_genericConj_prime__gopurs_runtime_Value_1368982791 sync.Once
 func Get_genericConj_prime__gopurs_runtime_Value_1368982791() gopurs_runtime.Value {
 	once_genericConj_prime__gopurs_runtime_Value_1368982791.Do(func() {
 		cache_genericConj_prime__gopurs_runtime_Value_1368982791 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericConj_prime__gopurs_runtime_Value_1368982791(dict_0_box)
+return Call_genericConj_prime__gopurs_runtime_Value_1368982791(gopurs_runtime.CoerceToStruct[Constructor_GenericHeytingAlgebra[gopurs_runtime.Value]](dict_0_box))
 })
 	})
 	return cache_genericConj_prime__gopurs_runtime_Value_1368982791
@@ -243,8 +243,8 @@ var cache_genericHeytingAlgebraProduct gopurs_runtime.Value
 var once_genericHeytingAlgebraProduct sync.Once
 func Get_genericHeytingAlgebraProduct() gopurs_runtime.Value {
 	once_genericHeytingAlgebraProduct.Do(func() {
-		cache_genericHeytingAlgebraProduct = gopurs_runtime.Func(func(dictGenericHeytingAlgebra_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericHeytingAlgebraProduct(dictGenericHeytingAlgebra_0_box)
+		cache_genericHeytingAlgebraProduct = gopurs_runtime.Func2(func(dictGenericHeytingAlgebra_0_box gopurs_runtime.Value, dictGenericHeytingAlgebra1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genericHeytingAlgebraProduct(dictGenericHeytingAlgebra_0_box, dictGenericHeytingAlgebra1_1_box)
 })
 	})
 	return cache_genericHeytingAlgebraProduct
@@ -255,11 +255,38 @@ var once_genericConj sync.Once
 func Get_genericConj() gopurs_runtime.Value {
 	once_genericConj.Do(func() {
 		cache_genericConj = gopurs_runtime.Func4(func(dictGeneric_0_box gopurs_runtime.Value, dictGenericHeytingAlgebra_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value, y_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericConj(dictGeneric_0_box, dictGenericHeytingAlgebra_1_box, x_2_box, y_3_box)
+return Call_genericConj(gopurs_runtime.CoerceToStruct[pkg_Data_Generic_Rep.Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value]](dictGeneric_0_box), gopurs_runtime.CoerceToStruct[Constructor_GenericHeytingAlgebra[gopurs_runtime.Value]](dictGenericHeytingAlgebra_1_box), x_2_box, y_3_box)
 })
 	})
 	return cache_genericConj
 }
+
+type Constructor_GenericHeytingAlgebra[T_a any] struct {
+	Rc uint32
+	V0 gopurs_runtime.Value
+	V1 gopurs_runtime.Value
+	V2 T_a
+	V3 gopurs_runtime.Value
+	V4 gopurs_runtime.Value
+	V5 T_a
+}
+
+
+func init() {
+	gopurs_runtime.StructGetters[2831861733] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
+		c := (*Constructor_GenericHeytingAlgebra[gopurs_runtime.Value])(ptr)
+		switch key {
+		case "genericConj'": return c.V0
+		case "genericDisj'": return c.V1
+		case "genericFF'": return c.V2
+		case "genericImplies'": return c.V3
+		case "genericNot'": return c.V4
+		case "genericTT'": return c.V5
+		default: panic("Key not found in dictionary Constructor_GenericHeytingAlgebra: " + key)
+		}
+	}
+}
+
 
 func Call_genericTT_prime(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
@@ -281,50 +308,50 @@ _ = dictGenericHeytingAlgebra_1
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "to"), gopurs_runtime.RecordGet(dictGenericHeytingAlgebra_1, "genericTT'"))
 }
 
-func Call_genericNot_prime(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
+func Call_genericNot_prime(dict_0_loop *Constructor_GenericHeytingAlgebra[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_GenericHeytingAlgebra[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "genericNot'")
+return dict_0.V4
 }
 
-func Call_genericNot_prime__gopurs_runtime_Value_4234376174(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
+func Call_genericNot_prime__gopurs_runtime_Value_4234376174(dict_0_loop *Constructor_GenericHeytingAlgebra[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_GenericHeytingAlgebra[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "genericNot'")
+return dict_0.V4
 }
 
-func Call_genericNot(dictGeneric_0_loop gopurs_runtime.Value, dictGenericHeytingAlgebra_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictGeneric_0 gopurs_runtime.Value = dictGeneric_0_loop
+func Call_genericNot(dictGeneric_0_loop *pkg_Data_Generic_Rep.Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value], dictGenericHeytingAlgebra_1_loop *Constructor_GenericHeytingAlgebra[gopurs_runtime.Value], x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictGeneric_0 *pkg_Data_Generic_Rep.Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value] = dictGeneric_0_loop
 _ = dictGeneric_0
-var dictGenericHeytingAlgebra_1 gopurs_runtime.Value = dictGenericHeytingAlgebra_1_loop
+var dictGenericHeytingAlgebra_1 *Constructor_GenericHeytingAlgebra[gopurs_runtime.Value] = dictGenericHeytingAlgebra_1_loop
 _ = dictGenericHeytingAlgebra_1
 var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "to"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra_1, "genericNot'"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "from"), x_2)))
+return gopurs_runtime.Apply(dictGeneric_0.V1, gopurs_runtime.Apply(dictGenericHeytingAlgebra_1.V4, gopurs_runtime.Apply(dictGeneric_0.V0, x_2)))
 }
 
-func Call_genericImplies_prime(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
+func Call_genericImplies_prime(dict_0_loop *Constructor_GenericHeytingAlgebra[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_GenericHeytingAlgebra[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "genericImplies'")
+return dict_0.V3
 }
 
-func Call_genericImplies_prime__gopurs_runtime_Value_1368982791(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
+func Call_genericImplies_prime__gopurs_runtime_Value_1368982791(dict_0_loop *Constructor_GenericHeytingAlgebra[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_GenericHeytingAlgebra[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "genericImplies'")
+return dict_0.V3
 }
 
-func Call_genericImplies(dictGeneric_0_loop gopurs_runtime.Value, dictGenericHeytingAlgebra_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value, y_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictGeneric_0 gopurs_runtime.Value = dictGeneric_0_loop
+func Call_genericImplies(dictGeneric_0_loop *pkg_Data_Generic_Rep.Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value], dictGenericHeytingAlgebra_1_loop *Constructor_GenericHeytingAlgebra[gopurs_runtime.Value], x_2_loop gopurs_runtime.Value, y_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictGeneric_0 *pkg_Data_Generic_Rep.Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value] = dictGeneric_0_loop
 _ = dictGeneric_0
-var dictGenericHeytingAlgebra_1 gopurs_runtime.Value = dictGenericHeytingAlgebra_1_loop
+var dictGenericHeytingAlgebra_1 *Constructor_GenericHeytingAlgebra[gopurs_runtime.Value] = dictGenericHeytingAlgebra_1_loop
 _ = dictGenericHeytingAlgebra_1
 var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
 var y_3 gopurs_runtime.Value = y_3_loop
 _ = y_3
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "to"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra_1, "genericImplies'"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "from"), x_2), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "from"), y_3)))
+return gopurs_runtime.Apply(dictGeneric_0.V1, gopurs_runtime.Apply2(dictGenericHeytingAlgebra_1.V3, gopurs_runtime.Apply(dictGeneric_0.V0, x_2), gopurs_runtime.Apply(dictGeneric_0.V0, y_3)))
 }
 
 func Call_genericHeytingAlgebraArgument(dictHeytingAlgebra_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -367,40 +394,40 @@ _ = dictGenericHeytingAlgebra_1
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "to"), gopurs_runtime.RecordGet(dictGenericHeytingAlgebra_1, "genericFF'"))
 }
 
-func Call_genericDisj_prime(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
+func Call_genericDisj_prime(dict_0_loop *Constructor_GenericHeytingAlgebra[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_GenericHeytingAlgebra[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "genericDisj'")
+return dict_0.V1
 }
 
-func Call_genericDisj_prime__gopurs_runtime_Value_1368982791(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
+func Call_genericDisj_prime__gopurs_runtime_Value_1368982791(dict_0_loop *Constructor_GenericHeytingAlgebra[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_GenericHeytingAlgebra[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "genericDisj'")
+return dict_0.V1
 }
 
-func Call_genericDisj(dictGeneric_0_loop gopurs_runtime.Value, dictGenericHeytingAlgebra_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value, y_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictGeneric_0 gopurs_runtime.Value = dictGeneric_0_loop
+func Call_genericDisj(dictGeneric_0_loop *pkg_Data_Generic_Rep.Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value], dictGenericHeytingAlgebra_1_loop *Constructor_GenericHeytingAlgebra[gopurs_runtime.Value], x_2_loop gopurs_runtime.Value, y_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictGeneric_0 *pkg_Data_Generic_Rep.Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value] = dictGeneric_0_loop
 _ = dictGeneric_0
-var dictGenericHeytingAlgebra_1 gopurs_runtime.Value = dictGenericHeytingAlgebra_1_loop
+var dictGenericHeytingAlgebra_1 *Constructor_GenericHeytingAlgebra[gopurs_runtime.Value] = dictGenericHeytingAlgebra_1_loop
 _ = dictGenericHeytingAlgebra_1
 var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
 var y_3 gopurs_runtime.Value = y_3_loop
 _ = y_3
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "to"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra_1, "genericDisj'"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "from"), x_2), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "from"), y_3)))
+return gopurs_runtime.Apply(dictGeneric_0.V1, gopurs_runtime.Apply2(dictGenericHeytingAlgebra_1.V1, gopurs_runtime.Apply(dictGeneric_0.V0, x_2), gopurs_runtime.Apply(dictGeneric_0.V0, y_3)))
 }
 
-func Call_genericConj_prime(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
+func Call_genericConj_prime(dict_0_loop *Constructor_GenericHeytingAlgebra[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_GenericHeytingAlgebra[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "genericConj'")
+return dict_0.V0
 }
 
-func Call_genericConj_prime__gopurs_runtime_Value_1368982791(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
+func Call_genericConj_prime__gopurs_runtime_Value_1368982791(dict_0_loop *Constructor_GenericHeytingAlgebra[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_GenericHeytingAlgebra[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "genericConj'")
+return dict_0.V0
 }
 
 func Call_genericHeytingAlgebraConstructor(dictGenericHeytingAlgebra_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -423,42 +450,38 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra_0
 }), gopurs_runtime.RecordGet(dictGenericHeytingAlgebra_0, "genericTT'")})
 }
 
-func Call_genericHeytingAlgebraProduct(dictGenericHeytingAlgebra_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_genericHeytingAlgebraProduct(dictGenericHeytingAlgebra_0_loop gopurs_runtime.Value, dictGenericHeytingAlgebra1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictGenericHeytingAlgebra_0 gopurs_runtime.Value = dictGenericHeytingAlgebra_0_loop
 _ = dictGenericHeytingAlgebra_0
-genericFF_prime1_1_0 := gopurs_runtime.RecordGet(dictGenericHeytingAlgebra_0, "genericFF'")
-_ = genericFF_prime1_1_0
-genericTT_prime1_2_1 := gopurs_runtime.RecordGet(dictGenericHeytingAlgebra_0, "genericTT'")
-_ = genericTT_prime1_2_1
-return gopurs_runtime.Func(func(dictGenericHeytingAlgebra1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict([]string{"genericConj'", "genericDisj'", "genericFF'", "genericImplies'", "genericNot'", "genericTT'"}, []gopurs_runtime.Value{gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra_0, "genericConj'"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_4.UnsafePtr).V0, (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v1_5.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra1_3, "genericConj'"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_4.UnsafePtr).V1, (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v1_5.UnsafePtr).V1)})}
+var dictGenericHeytingAlgebra1_1 gopurs_runtime.Value = dictGenericHeytingAlgebra1_1_loop
+_ = dictGenericHeytingAlgebra1_1
+return gopurs_runtime.RecordDict([]string{"genericConj'", "genericDisj'", "genericFF'", "genericImplies'", "genericNot'", "genericTT'"}, []gopurs_runtime.Value{gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra_0, "genericConj'"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0, (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra1_1, "genericConj'"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1, (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V1)})}))}
 })
-}), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra_0, "genericDisj'"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_4.UnsafePtr).V0, (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v1_5.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra1_3, "genericDisj'"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_4.UnsafePtr).V1, (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v1_5.UnsafePtr).V1)})}
+}), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra_0, "genericDisj'"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0, (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra1_1, "genericDisj'"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1, (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V1)})}))}
 })
-}), gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]{1, genericFF_prime1_1_0, gopurs_runtime.RecordGet(dictGenericHeytingAlgebra1_3, "genericFF'")})}, gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra_0, "genericImplies'"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_4.UnsafePtr).V0, (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v1_5.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra1_3, "genericImplies'"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_4.UnsafePtr).V1, (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v1_5.UnsafePtr).V1)})}
+}), gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.RecordGet(dictGenericHeytingAlgebra_0, "genericFF'"), gopurs_runtime.RecordGet(dictGenericHeytingAlgebra1_1, "genericFF'")})}))}, gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra_0, "genericImplies'"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0, (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra1_1, "genericImplies'"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1, (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V1)})}))}
 })
-}), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra_0, "genericNot'"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_4.UnsafePtr).V0), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra1_3, "genericNot'"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_4.UnsafePtr).V1)})}
-}), gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]{1, genericTT_prime1_2_1, gopurs_runtime.RecordGet(dictGenericHeytingAlgebra1_3, "genericTT'")})}})
-})
+}), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra_0, "genericNot'"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra1_1, "genericNot'"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1)})}))}
+}), gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.RecordGet(dictGenericHeytingAlgebra_0, "genericTT'"), gopurs_runtime.RecordGet(dictGenericHeytingAlgebra1_1, "genericTT'")})}))}})
 }
 
-func Call_genericConj(dictGeneric_0_loop gopurs_runtime.Value, dictGenericHeytingAlgebra_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value, y_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictGeneric_0 gopurs_runtime.Value = dictGeneric_0_loop
+func Call_genericConj(dictGeneric_0_loop *pkg_Data_Generic_Rep.Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value], dictGenericHeytingAlgebra_1_loop *Constructor_GenericHeytingAlgebra[gopurs_runtime.Value], x_2_loop gopurs_runtime.Value, y_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictGeneric_0 *pkg_Data_Generic_Rep.Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value] = dictGeneric_0_loop
 _ = dictGeneric_0
-var dictGenericHeytingAlgebra_1 gopurs_runtime.Value = dictGenericHeytingAlgebra_1_loop
+var dictGenericHeytingAlgebra_1 *Constructor_GenericHeytingAlgebra[gopurs_runtime.Value] = dictGenericHeytingAlgebra_1_loop
 _ = dictGenericHeytingAlgebra_1
 var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
 var y_3 gopurs_runtime.Value = y_3_loop
 _ = y_3
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "to"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericHeytingAlgebra_1, "genericConj'"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "from"), x_2), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "from"), y_3)))
+return gopurs_runtime.Apply(dictGeneric_0.V1, gopurs_runtime.Apply2(dictGenericHeytingAlgebra_1.V0, gopurs_runtime.Apply(dictGeneric_0.V0, x_2), gopurs_runtime.Apply(dictGeneric_0.V0, y_3)))
 }
 
 

@@ -1,12 +1,17 @@
 package Data_Array_NonEmpty
 
 import (
+	pkg_Control_Alternative "gopurs/output/Control.Alternative"
+	pkg_Control_Applicative "gopurs/output/Control.Applicative"
 	pkg_Control_Bind "gopurs/output/Control.Bind"
+	pkg_Control_Monad "gopurs/output/Control.Monad"
+	pkg_Control_Monad_Rec_Class "gopurs/output/Control.Monad.Rec.Class"
 	pkg_Control_Monad_ST_Internal "gopurs/output/Control.Monad.ST.Internal"
 	pkg_Data_Array "gopurs/output/Data.Array"
 	pkg_Data_Array_NonEmpty_Internal "gopurs/output/Data.Array.NonEmpty.Internal"
 	pkg_Data_Array_ST "gopurs/output/Data.Array.ST"
 	pkg_Data_Bifunctor "gopurs/output/Data.Bifunctor"
+	pkg_Data_Eq "gopurs/output/Data.Eq"
 	pkg_Data_Foldable "gopurs/output/Data.Foldable"
 	pkg_Data_Functor "gopurs/output/Data.Functor"
 	pkg_Data_FunctorWithIndex "gopurs/output/Data.FunctorWithIndex"
@@ -15,59 +20,14 @@ import (
 	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Semigroup_Foldable "gopurs/output/Data.Semigroup.Foldable"
+	pkg_Data_Traversable "gopurs/output/Data.Traversable"
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
+	pkg_Data_Unfoldable "gopurs/output/Data.Unfoldable"
+	pkg_Data_Unfoldable1 "gopurs/output/Data.Unfoldable1"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	unsafe "unsafe"
 )
-
-var cache_max gopurs_runtime.Value
-var once_max sync.Once
-func Get_max() gopurs_runtime.Value {
-	once_max.Do(func() {
-		cache_max = func() gopurs_runtime.Value {
-__local_var_0_0 := gopurs_runtime.Apply3(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil})
-_ = __local_var_0_0
-return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(y_2 gopurs_runtime.Value) gopurs_runtime.Value {
-v_3_1 := gopurs_runtime.Apply2(__local_var_0_0, x_1, y_2)
-_ = v_3_1
-var __t2 gopurs_runtime.Value
-{
-if (v_3_1.Type == 9 && v_3_1.IntVal == 1527465420) {
-__t2 = y_2
-goto end_branch_2
-} else {
-
-}
-}
-{
-if (v_3_1.Type == 9 && v_3_1.IntVal == 902936544) {
-__t2 = x_1
-goto end_branch_2
-} else {
-
-}
-}
-{
-if (v_3_1.Type == 9 && v_3_1.IntVal == 380165415) {
-__t2 = x_1
-goto end_branch_2
-} else {
-
-}
-}
-{
-__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_2:
-return __t2
-})
-})
-}()
-	})
-	return cache_max
-}
 
 var cache_intercalate1 gopurs_runtime.Value
 var once_intercalate1 sync.Once
@@ -78,68 +38,6 @@ return Call_intercalate1(dictSemigroup_0_box)
 })
 	})
 	return cache_intercalate1
-}
-
-var cache_greaterThan gopurs_runtime.Value
-var once_greaterThan sync.Once
-func Get_greaterThan() gopurs_runtime.Value {
-	once_greaterThan.Do(func() {
-		cache_greaterThan = func() gopurs_runtime.Value {
-__local_var_0_0 := gopurs_runtime.Apply3(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil})
-_ = __local_var_0_0
-return gopurs_runtime.Func(func(a1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(a2_2 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t1 gopurs_runtime.Value
-{
-var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Apply2(__local_var_0_0, a1_1, a2_2)
-if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 380165415) {
-__t1 = gopurs_runtime.Bool(true)
-goto end_branch_1
-} else {
-
-}
-}
-{
-__t1 = gopurs_runtime.Bool(false)
-}
-end_branch_1:
-return gopurs_runtime.Bool((__t1.IntVal) != (0))
-})
-})
-}()
-	})
-	return cache_greaterThan
-}
-
-var cache_lessThan gopurs_runtime.Value
-var once_lessThan sync.Once
-func Get_lessThan() gopurs_runtime.Value {
-	once_lessThan.Do(func() {
-		cache_lessThan = func() gopurs_runtime.Value {
-__local_var_0_0 := gopurs_runtime.Apply3(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil})
-_ = __local_var_0_0
-return gopurs_runtime.Func(func(a1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(a2_2 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t1 gopurs_runtime.Value
-{
-var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Apply2(__local_var_0_0, a1_1, a2_2)
-if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 1527465420) {
-__t1 = gopurs_runtime.Bool(true)
-goto end_branch_1
-} else {
-
-}
-}
-{
-__t1 = gopurs_runtime.Bool(false)
-}
-end_branch_1:
-return gopurs_runtime.Bool((__t1.IntVal) != (0))
-})
-})
-}()
-	})
-	return cache_lessThan
 }
 
 var cache_transpose gopurs_runtime.Value
@@ -263,12 +161,17 @@ var once_toArray__gopurs_runtime_Value_1068313307 sync.Once
 func Get_toArray__gopurs_runtime_Value_1068313307() gopurs_runtime.Value {
 	once_toArray__gopurs_runtime_Value_1068313307.Do(func() {
 		cache_toArray__gopurs_runtime_Value_1068313307 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Array(Call_toArray__gopurs_runtime_Value_1068313307(func() []gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+					arr := Call_toArray__gopurs_runtime_Value_1068313307(func() []*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] {
 					arr := *(*[]gopurs_runtime.Value)(v_0_box.UnsafePtr)
-					unboxed := make([]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { unboxed[i] = v }
+					unboxed := make([]*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value], len(arr))
+					for i, v := range arr { unboxed[i] = gopurs_runtime.CoerceToStruct[pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](v) }
 					return unboxed
-				}()))
+				}())
+					boxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { boxed[i] = gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v)} }
+					return gopurs_runtime.Array(boxed)
+				}()
 })
 	})
 	return cache_toArray__gopurs_runtime_Value_1068313307
@@ -337,7 +240,7 @@ var once_union_prime sync.Once
 func Get_union_prime() gopurs_runtime.Value {
 	once_union_prime.Do(func() {
 		cache_union_prime = gopurs_runtime.Func(func(dictEq_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_union_prime(dictEq_0_box)
+return Call_union_prime(gopurs_runtime.CoerceToStruct[pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]](dictEq_0_box))
 })
 	})
 	return cache_union_prime
@@ -390,7 +293,7 @@ var once_union sync.Once
 func Get_union() gopurs_runtime.Value {
 	once_union.Do(func() {
 		cache_union = gopurs_runtime.Func(func(dictEq_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_union(dictEq_0_box)
+return Call_union(gopurs_runtime.CoerceToStruct[pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]](dictEq_0_box))
 })
 	})
 	return cache_union
@@ -432,7 +335,8 @@ var once_zip sync.Once
 func Get_zip() gopurs_runtime.Value {
 	once_zip.Do(func() {
 		cache_zip = gopurs_runtime.Func2(func(xs_0_box gopurs_runtime.Value, ys_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Array(Call_zip(func() []gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+					arr := Call_zip(func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(xs_0_box.UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
@@ -442,7 +346,11 @@ return gopurs_runtime.Array(Call_zip(func() []gopurs_runtime.Value {
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
-				}()))
+				}())
+					boxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { boxed[i] = gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v)} }
+					return gopurs_runtime.Array(boxed)
+				}()
 })
 	})
 	return cache_zip
@@ -473,8 +381,18 @@ var cache_zipWithA gopurs_runtime.Value
 var once_zipWithA sync.Once
 func Get_zipWithA() gopurs_runtime.Value {
 	once_zipWithA.Do(func() {
-		cache_zipWithA = gopurs_runtime.Func(func(dictApplicative_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_zipWithA(dictApplicative_0_box)
+		cache_zipWithA = gopurs_runtime.Func4(func(dictApplicative_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, xs_2_box gopurs_runtime.Value, ys_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_zipWithA(gopurs_runtime.CoerceToStruct[pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]](dictApplicative_0_box), f_1_box, func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(xs_2_box.UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}(), func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(ys_3_box.UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}())
 })
 	})
 	return cache_zipWithA
@@ -500,8 +418,8 @@ var cache_some gopurs_runtime.Value
 var once_some sync.Once
 func Get_some() gopurs_runtime.Value {
 	once_some.Do(func() {
-		cache_some = gopurs_runtime.Func3(func(dictAlternative_0_box gopurs_runtime.Value, dictLazy_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_some(dictAlternative_0_box, dictLazy_1_box, x_2_box)
+		cache_some = gopurs_runtime.Func(func(dictAlternative_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_some(gopurs_runtime.CoerceToStruct[pkg_Control_Alternative.Constructor_Alternative[gopurs_runtime.Value]](dictAlternative_0_box))
 })
 	})
 	return cache_some
@@ -693,7 +611,7 @@ var once_intersect_prime sync.Once
 func Get_intersect_prime() gopurs_runtime.Value {
 	once_intersect_prime.Do(func() {
 		cache_intersect_prime = gopurs_runtime.Func(func(dictEq_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_intersect_prime(dictEq_0_box)
+return Call_intersect_prime(gopurs_runtime.CoerceToStruct[pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]](dictEq_0_box))
 })
 	})
 	return cache_intersect_prime
@@ -704,7 +622,7 @@ var once_intersect sync.Once
 func Get_intersect() gopurs_runtime.Value {
 	once_intersect.Do(func() {
 		cache_intersect = gopurs_runtime.Func(func(dictEq_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_intersect(dictEq_0_box)
+return Call_intersect(gopurs_runtime.CoerceToStruct[pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]](dictEq_0_box))
 })
 	})
 	return cache_intersect
@@ -715,7 +633,7 @@ var once_intercalate sync.Once
 func Get_intercalate() gopurs_runtime.Value {
 	once_intercalate.Do(func() {
 		cache_intercalate = gopurs_runtime.Func(func(dictSemigroup_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_intercalate(dictSemigroup_0_box)
+return Call_intercalate(gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]](dictSemigroup_0_box))
 })
 	})
 	return cache_intercalate
@@ -742,7 +660,7 @@ var once_fromFoldable1 sync.Once
 func Get_fromFoldable1() gopurs_runtime.Value {
 	once_fromFoldable1.Do(func() {
 		cache_fromFoldable1 = gopurs_runtime.Func(func(dictFoldable1_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_fromFoldable1(dictFoldable1_0_box)
+return Call_fromFoldable1(gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup_Foldable.Constructor_Foldable1[gopurs_runtime.Value]](dictFoldable1_0_box))
 })
 	})
 	return cache_fromFoldable1
@@ -838,7 +756,7 @@ var once_fromFoldable sync.Once
 func Get_fromFoldable() gopurs_runtime.Value {
 	once_fromFoldable.Do(func() {
 		cache_fromFoldable = gopurs_runtime.Func(func(dictFoldable_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_fromFoldable(dictFoldable_0_box)
+return Call_fromFoldable(gopurs_runtime.CoerceToStruct[pkg_Data_Foldable.Constructor_Foldable[gopurs_runtime.Value]](dictFoldable_0_box))
 })
 	})
 	return cache_fromFoldable
@@ -888,7 +806,7 @@ var once_foldMap1 sync.Once
 func Get_foldMap1() gopurs_runtime.Value {
 	once_foldMap1.Do(func() {
 		cache_foldMap1 = gopurs_runtime.Func(func(dictSemigroup_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_foldMap1(dictSemigroup_0_box)
+return Call_foldMap1(gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]](dictSemigroup_0_box))
 })
 	})
 	return cache_foldMap1
@@ -899,7 +817,7 @@ var once_fold1 sync.Once
 func Get_fold1() gopurs_runtime.Value {
 	once_fold1.Do(func() {
 		cache_fold1 = gopurs_runtime.Func(func(dictSemigroup_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_fold1(dictSemigroup_0_box)
+return Call_fold1(gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]](dictSemigroup_0_box))
 })
 	})
 	return cache_fold1
@@ -910,7 +828,7 @@ var once_difference_prime sync.Once
 func Get_difference_prime() gopurs_runtime.Value {
 	once_difference_prime.Do(func() {
 		cache_difference_prime = gopurs_runtime.Func(func(dictEq_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_difference_prime(dictEq_0_box)
+return Call_difference_prime(gopurs_runtime.CoerceToStruct[pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]](dictEq_0_box))
 })
 	})
 	return cache_difference_prime
@@ -921,7 +839,7 @@ var once_difference_prime__gopurs_runtime_Value_564981534 sync.Once
 func Get_difference_prime__gopurs_runtime_Value_564981534() gopurs_runtime.Value {
 	once_difference_prime__gopurs_runtime_Value_564981534.Do(func() {
 		cache_difference_prime__gopurs_runtime_Value_564981534 = gopurs_runtime.Func(func(dictEq_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_difference_prime__gopurs_runtime_Value_564981534(dictEq_0_box)
+return Call_difference_prime__gopurs_runtime_Value_564981534(gopurs_runtime.CoerceToStruct[pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]](dictEq_0_box))
 })
 	})
 	return cache_difference_prime__gopurs_runtime_Value_564981534
@@ -964,7 +882,7 @@ var once_fromNonEmpty sync.Once
 func Get_fromNonEmpty() gopurs_runtime.Value {
 	once_fromNonEmpty.Do(func() {
 		cache_fromNonEmpty = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Array(Call_fromNonEmpty(v_0_box))
+return gopurs_runtime.Array(Call_fromNonEmpty(gopurs_runtime.CoerceToStruct[pkg_Data_NonEmpty.Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value]](v_0_box)))
 })
 	})
 	return cache_fromNonEmpty
@@ -1139,12 +1057,12 @@ var once_toNonEmpty sync.Once
 func Get_toNonEmpty() gopurs_runtime.Value {
 	once_toNonEmpty.Do(func() {
 		cache_toNonEmpty = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_toNonEmpty(func() []gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(Call_toNonEmpty(func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(x_0_box.UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
-				}())
+				}()))}
 })
 	})
 	return cache_toNonEmpty
@@ -1206,7 +1124,7 @@ func Get_catMaybes() gopurs_runtime.Value {
 return gopurs_runtime.Array(Call_catMaybes(func() []*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value] {
 					arr := *(*[]gopurs_runtime.Value)(x_0_box.UnsafePtr)
 					unboxed := make([]*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value], len(arr))
-					for i, v := range arr { unboxed[i] = (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v.UnsafePtr) }
+					for i, v := range arr { unboxed[i] = gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]](v) }
 					return unboxed
 				}()))
 })
@@ -1219,7 +1137,12 @@ var once_delete sync.Once
 func Get_delete() gopurs_runtime.Value {
 	once_delete.Do(func() {
 		cache_delete = gopurs_runtime.Func3(func(dictEq_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_delete(dictEq_0_box, x_1_box, x_2_box)
+return gopurs_runtime.Array(Call_delete(gopurs_runtime.CoerceToStruct[pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]](dictEq_0_box), x_1_box, func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(x_2_box.UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}()))
 })
 	})
 	return cache_delete
@@ -1261,8 +1184,13 @@ var cache_difference gopurs_runtime.Value
 var once_difference sync.Once
 func Get_difference() gopurs_runtime.Value {
 	once_difference.Do(func() {
-		cache_difference = gopurs_runtime.Func(func(dictEq_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_difference(dictEq_0_box)
+		cache_difference = gopurs_runtime.Func2(func(dictEq_0_box gopurs_runtime.Value, xs_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_difference(gopurs_runtime.CoerceToStruct[pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]](dictEq_0_box), func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(xs_1_box.UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}())
 })
 	})
 	return cache_difference
@@ -1321,7 +1249,12 @@ var once_elem sync.Once
 func Get_elem() gopurs_runtime.Value {
 	once_elem.Do(func() {
 		cache_elem = gopurs_runtime.Func3(func(dictEq_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_elem(dictEq_0_box, x_1_box, x_2_box)
+return gopurs_runtime.Bool(Call_elem(gopurs_runtime.CoerceToStruct[pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]](dictEq_0_box), x_1_box, func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(x_2_box.UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}()))
 })
 	})
 	return cache_elem
@@ -1332,7 +1265,12 @@ var once_elemIndex sync.Once
 func Get_elemIndex() gopurs_runtime.Value {
 	once_elemIndex.Do(func() {
 		cache_elemIndex = gopurs_runtime.Func3(func(dictEq_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_elemIndex(dictEq_0_box, x_1_box, x_2_box)
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_elemIndex(gopurs_runtime.CoerceToStruct[pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]](dictEq_0_box), x_1_box, func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(x_2_box.UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}()))}
 })
 	})
 	return cache_elemIndex
@@ -1343,7 +1281,12 @@ var once_elemLastIndex sync.Once
 func Get_elemLastIndex() gopurs_runtime.Value {
 	once_elemLastIndex.Do(func() {
 		cache_elemLastIndex = gopurs_runtime.Func3(func(dictEq_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_elemLastIndex(dictEq_0_box, x_1_box, x_2_box)
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_elemLastIndex(gopurs_runtime.CoerceToStruct[pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]](dictEq_0_box), x_1_box, func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(x_2_box.UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}()))}
 })
 	})
 	return cache_elemLastIndex
@@ -1369,8 +1312,8 @@ var cache_filterA gopurs_runtime.Value
 var once_filterA sync.Once
 func Get_filterA() gopurs_runtime.Value {
 	once_filterA.Do(func() {
-		cache_filterA = gopurs_runtime.Func(func(dictApplicative_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_filterA(dictApplicative_0_box)
+		cache_filterA = gopurs_runtime.Func2(func(dictApplicative_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_filterA(gopurs_runtime.CoerceToStruct[pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]](dictApplicative_0_box), f_1_box)
 })
 	})
 	return cache_filterA
@@ -1444,8 +1387,8 @@ var cache_foldM gopurs_runtime.Value
 var once_foldM sync.Once
 func Get_foldM() gopurs_runtime.Value {
 	once_foldM.Do(func() {
-		cache_foldM = gopurs_runtime.Func4(func(dictMonad_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, acc_2_box gopurs_runtime.Value, x_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_foldM(dictMonad_0_box, f_1_box, acc_2_box, x_3_box)
+		cache_foldM = gopurs_runtime.Func3(func(dictMonad_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, acc_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_foldM(gopurs_runtime.CoerceToStruct[pkg_Control_Monad.Constructor_Monad[gopurs_runtime.Value]](dictMonad_0_box), f_1_box, acc_2_box)
 })
 	})
 	return cache_foldM
@@ -1455,8 +1398,8 @@ var cache_foldRecM gopurs_runtime.Value
 var once_foldRecM sync.Once
 func Get_foldRecM() gopurs_runtime.Value {
 	once_foldRecM.Do(func() {
-		cache_foldRecM = gopurs_runtime.Func(func(dictMonadRec_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_foldRecM(dictMonadRec_0_box)
+		cache_foldRecM = gopurs_runtime.Func3(func(dictMonadRec_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, acc_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_foldRecM(gopurs_runtime.CoerceToStruct[pkg_Control_Monad_Rec_Class.Constructor_MonadRec[gopurs_runtime.Value]](dictMonadRec_0_box), f_1_box, acc_2_box)
 })
 	})
 	return cache_foldRecM
@@ -1531,7 +1474,12 @@ var once_notElem sync.Once
 func Get_notElem() gopurs_runtime.Value {
 	once_notElem.Do(func() {
 		cache_notElem = gopurs_runtime.Func3(func(dictEq_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_notElem(dictEq_0_box, x_1_box, x_2_box)
+return gopurs_runtime.Bool(Call_notElem(gopurs_runtime.CoerceToStruct[pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]](dictEq_0_box), x_1_box, func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(x_2_box.UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}()))
 })
 	})
 	return cache_notElem
@@ -1638,7 +1586,12 @@ var once_toUnfoldable sync.Once
 func Get_toUnfoldable() gopurs_runtime.Value {
 	once_toUnfoldable.Do(func() {
 		cache_toUnfoldable = gopurs_runtime.Func2(func(dictUnfoldable_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_toUnfoldable(dictUnfoldable_0_box, x_1_box)
+return Call_toUnfoldable(gopurs_runtime.CoerceToStruct[pkg_Data_Unfoldable.Constructor_Unfoldable[gopurs_runtime.Value]](dictUnfoldable_0_box), func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(x_1_box.UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}())
 })
 	})
 	return cache_toUnfoldable
@@ -1665,7 +1618,7 @@ var once_group sync.Once
 func Get_group() gopurs_runtime.Value {
 	once_group.Do(func() {
 		cache_group = gopurs_runtime.Func(func(dictEq_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_group(dictEq_0_box)
+return Call_group(gopurs_runtime.CoerceToStruct[pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]](dictEq_0_box))
 })
 	})
 	return cache_group
@@ -1698,7 +1651,7 @@ var once_groupAll sync.Once
 func Get_groupAll() gopurs_runtime.Value {
 	once_groupAll.Do(func() {
 		cache_groupAll = gopurs_runtime.Func(func(dictOrd_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_groupAll(dictOrd_0_box)
+return Call_groupAll(gopurs_runtime.CoerceToStruct[pkg_Data_Ord.Constructor_Ord[gopurs_runtime.Value]](dictOrd_0_box))
 })
 	})
 	return cache_groupAll
@@ -1725,7 +1678,12 @@ var once_insert sync.Once
 func Get_insert() gopurs_runtime.Value {
 	once_insert.Do(func() {
 		cache_insert = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_insert(dictOrd_0_box, x_1_box, x_2_box)
+return gopurs_runtime.Array(Call_insert(gopurs_runtime.CoerceToStruct[pkg_Data_Ord.Constructor_Ord[gopurs_runtime.Value]](dictOrd_0_box), x_1_box, func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(x_2_box.UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}()))
 })
 	})
 	return cache_insert
@@ -1778,8 +1736,13 @@ var cache_modifyAtIndices gopurs_runtime.Value
 var once_modifyAtIndices sync.Once
 func Get_modifyAtIndices() gopurs_runtime.Value {
 	once_modifyAtIndices.Do(func() {
-		cache_modifyAtIndices = gopurs_runtime.Func(func(dictFoldable_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_modifyAtIndices(dictFoldable_0_box)
+		cache_modifyAtIndices = gopurs_runtime.Func4(func(dictFoldable_0_box gopurs_runtime.Value, is_1_box gopurs_runtime.Value, f_2_box gopurs_runtime.Value, x_3_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Array(Call_modifyAtIndices(gopurs_runtime.CoerceToStruct[pkg_Data_Foldable.Constructor_Foldable[gopurs_runtime.Value]](dictFoldable_0_box), is_1_box, f_2_box, func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(x_3_box.UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}()))
 })
 	})
 	return cache_modifyAtIndices
@@ -1790,7 +1753,12 @@ var once_nub sync.Once
 func Get_nub() gopurs_runtime.Value {
 	once_nub.Do(func() {
 		cache_nub = gopurs_runtime.Func2(func(dictOrd_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_nub(dictOrd_0_box, x_1_box)
+return gopurs_runtime.Array(Call_nub(gopurs_runtime.CoerceToStruct[pkg_Data_Ord.Constructor_Ord[gopurs_runtime.Value]](dictOrd_0_box), func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(x_1_box.UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}()))
 })
 	})
 	return cache_nub
@@ -1833,7 +1801,12 @@ var once_nubEq sync.Once
 func Get_nubEq() gopurs_runtime.Value {
 	once_nubEq.Do(func() {
 		cache_nubEq = gopurs_runtime.Func2(func(dictEq_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_nubEq(dictEq_0_box, x_1_box)
+return gopurs_runtime.Array(Call_nubEq(gopurs_runtime.CoerceToStruct[pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]](dictEq_0_box), func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(x_1_box.UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}()))
 })
 	})
 	return cache_nubEq
@@ -1892,7 +1865,7 @@ var once_sort sync.Once
 func Get_sort() gopurs_runtime.Value {
 	once_sort.Do(func() {
 		cache_sort = gopurs_runtime.Func(func(dictOrd_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_sort(dictOrd_0_box)
+return Call_sort(gopurs_runtime.CoerceToStruct[pkg_Data_Ord.Constructor_Ord[gopurs_runtime.Value]](dictOrd_0_box))
 })
 	})
 	return cache_sort
@@ -1919,7 +1892,12 @@ var once_sortWith sync.Once
 func Get_sortWith() gopurs_runtime.Value {
 	once_sortWith.Do(func() {
 		cache_sortWith = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_sortWith(dictOrd_0_box, f_1_box, x_2_box)
+return gopurs_runtime.Array(Call_sortWith(gopurs_runtime.CoerceToStruct[pkg_Data_Ord.Constructor_Ord[gopurs_runtime.Value]](dictOrd_0_box), f_1_box, func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(x_2_box.UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}()))
 })
 	})
 	return cache_sortWith
@@ -1929,8 +1907,13 @@ var cache_updateAtIndices gopurs_runtime.Value
 var once_updateAtIndices sync.Once
 func Get_updateAtIndices() gopurs_runtime.Value {
 	once_updateAtIndices.Do(func() {
-		cache_updateAtIndices = gopurs_runtime.Func(func(dictFoldable_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_updateAtIndices(dictFoldable_0_box)
+		cache_updateAtIndices = gopurs_runtime.Func3(func(dictFoldable_0_box gopurs_runtime.Value, pairs_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Array(Call_updateAtIndices(gopurs_runtime.CoerceToStruct[pkg_Data_Foldable.Constructor_Foldable[gopurs_runtime.Value]](dictFoldable_0_box), pairs_1_box, func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(x_2_box.UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}()))
 })
 	})
 	return cache_updateAtIndices
@@ -1941,7 +1924,12 @@ var once_unsafeIndex sync.Once
 func Get_unsafeIndex() gopurs_runtime.Value {
 	once_unsafeIndex.Do(func() {
 		cache_unsafeIndex = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value, __local_var_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_unsafeIndex(_dollar__unused_0_box, x_1_box, __local_var_2_box)
+return Call_unsafeIndex(_dollar__unused_0_box, func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(x_1_box.UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}(), __local_var_2_box.IntVal)
 })
 	})
 	return cache_unsafeIndex
@@ -1952,7 +1940,12 @@ var once_unsafeIndex__gopurs_runtime_Value_2808089623 sync.Once
 func Get_unsafeIndex__gopurs_runtime_Value_2808089623() gopurs_runtime.Value {
 	once_unsafeIndex__gopurs_runtime_Value_2808089623.Do(func() {
 		cache_unsafeIndex__gopurs_runtime_Value_2808089623 = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value, __local_var_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_unsafeIndex__gopurs_runtime_Value_2808089623(_dollar__unused_0_box, x_1_box, __local_var_2_box)
+return Call_unsafeIndex__gopurs_runtime_Value_2808089623(_dollar__unused_0_box, func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(x_1_box.UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}(), __local_var_2_box.IntVal)
 })
 	})
 	return cache_unsafeIndex__gopurs_runtime_Value_2808089623
@@ -1963,7 +1956,12 @@ var once_toUnfoldable1 sync.Once
 func Get_toUnfoldable1() gopurs_runtime.Value {
 	once_toUnfoldable1.Do(func() {
 		cache_toUnfoldable1 = gopurs_runtime.Func2(func(dictUnfoldable1_0_box gopurs_runtime.Value, xs_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_toUnfoldable1(dictUnfoldable1_0_box, xs_1_box)
+return Call_toUnfoldable1(gopurs_runtime.CoerceToStruct[pkg_Data_Unfoldable1.Constructor_Unfoldable1[gopurs_runtime.Value]](dictUnfoldable1_0_box), func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(xs_1_box.UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}())
 })
 	})
 	return cache_toUnfoldable1
@@ -1972,17 +1970,17 @@ return Call_toUnfoldable1(dictUnfoldable1_0_box, xs_1_box)
 func Call_intercalate1(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
 _ = dictSemigroup_0
-foldMap12_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Array_NonEmpty_Internal.Get_foldable1NonEmptyArray(), "foldMap1"), gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+semigroupJoinWith1_1_0 := &pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]{1, gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(j_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append"), gopurs_runtime.Apply(v_1, j_3), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append"), j_3, gopurs_runtime.Apply(v1_2, j_3)))
 })
 })
-})))
-_ = foldMap12_1_0
+})}
+_ = semigroupJoinWith1_1_0
 return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(foldable_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(foldMap12_1_0, gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply4(gopurs_runtime.RecordGet(pkg_Data_Array_NonEmpty_Internal.Get_foldable1NonEmptyArray(), "foldMap1"), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(semigroupJoinWith1_1_0)}, gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_4
 })
@@ -2032,8 +2030,8 @@ _ = v_0
 return v_0
 }
 
-func Call_toArray__gopurs_runtime_Value_1068313307(v_0_loop []gopurs_runtime.Value) []gopurs_runtime.Value {
-var v_0 []gopurs_runtime.Value = v_0_loop
+func Call_toArray__gopurs_runtime_Value_1068313307(v_0_loop []*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]) []*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] {
+var v_0 []*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] = v_0_loop
 _ = v_0
 return v_0
 }
@@ -2074,10 +2072,10 @@ return func() []gopurs_runtime.Value {
 				}()
 }
 
-func Call_union_prime(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+func Call_union_prime(dictEq_0_loop *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dictEq_0 *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value] = dictEq_0_loop
 _ = dictEq_0
-return gopurs_runtime.Apply(Get_unionBy_prime(), gopurs_runtime.RecordGet(dictEq_0, "eq"))
+return gopurs_runtime.Apply(Get_unionBy_prime(), dictEq_0.V0)
 }
 
 func Call_unionBy(eq_0_loop gopurs_runtime.Value, xs_1_loop []gopurs_runtime.Value, x_2_loop []gopurs_runtime.Value) []gopurs_runtime.Value {
@@ -2110,10 +2108,10 @@ return func() []gopurs_runtime.Value {
 				}()
 }
 
-func Call_union(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+func Call_union(dictEq_0_loop *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dictEq_0 *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value] = dictEq_0_loop
 _ = dictEq_0
-return gopurs_runtime.Apply(Get_unionBy(), gopurs_runtime.RecordGet(dictEq_0, "eq"))
+return gopurs_runtime.Apply(Get_unionBy(), dictEq_0.V0)
 }
 
 func Call_updateAt(i_0_loop int64, x_1_loop gopurs_runtime.Value, x_2_loop []gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value] {
@@ -2123,18 +2121,18 @@ var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
 var x_2 []gopurs_runtime.Value = x_2_loop
 _ = x_2
-return (*pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value])(gopurs_runtime.UncurriedApp5(pkg_Data_Array.Get__updateAt(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}, gopurs_runtime.Int(i_0), x_1, gopurs_runtime.Array(x_2)).UnsafePtr)
+return gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value]](gopurs_runtime.UncurriedApp5(pkg_Data_Array.Get__updateAt(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}, gopurs_runtime.Int(i_0), x_1, gopurs_runtime.Array(x_2)))
 }
 
-func Call_zip(xs_0_loop []gopurs_runtime.Value, ys_1_loop []gopurs_runtime.Value) []gopurs_runtime.Value {
+func Call_zip(xs_0_loop []gopurs_runtime.Value, ys_1_loop []gopurs_runtime.Value) []*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] {
 var xs_0 []gopurs_runtime.Value = xs_0_loop
 _ = xs_0
 var ys_1 []gopurs_runtime.Value = ys_1_loop
 _ = ys_1
-return func() []gopurs_runtime.Value {
+return func() []*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.UncurriedApp3(pkg_Data_Array.Get_zipWithImpl(), pkg_Data_Tuple.Get_Tuple(), gopurs_runtime.Array(xs_0), gopurs_runtime.Array(ys_1)).UnsafePtr)
-					unboxed := make([]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { unboxed[i] = v }
+					unboxed := make([]*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value], len(arr))
+					for i, v := range arr { unboxed[i] = gopurs_runtime.CoerceToStruct[pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](v) }
 					return unboxed
 				}()
 }
@@ -2154,18 +2152,16 @@ return func() []gopurs_runtime.Value {
 				}()
 }
 
-func Call_zipWithA(dictApplicative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
+func Call_zipWithA(dictApplicative_0_loop *pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value], f_1_loop gopurs_runtime.Value, xs_2_loop []gopurs_runtime.Value, ys_3_loop []gopurs_runtime.Value) gopurs_runtime.Value {
+var dictApplicative_0 *pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value] = dictApplicative_0_loop
 _ = dictApplicative_0
-zipWithA1_1_0 := gopurs_runtime.Apply(pkg_Data_Array.Get_zipWithA(), dictApplicative_0)
-_ = zipWithA1_1_0
-return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(xs_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(ys_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(zipWithA1_1_0, f_2, xs_3, ys_4)
-})
-})
-})
+var f_1 gopurs_runtime.Value = f_1_loop
+_ = f_1
+var xs_2 []gopurs_runtime.Value = xs_2_loop
+_ = xs_2
+var ys_3 []gopurs_runtime.Value = ys_3_loop
+_ = ys_3
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Traversable.Get_traversableArray(), "sequence"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(dictApplicative_0)}, gopurs_runtime.UncurriedApp3(pkg_Data_Array.Get_zipWithImpl(), f_1, gopurs_runtime.Array(xs_2), gopurs_runtime.Array(ys_3)))
 }
 
 func Call_splitAt(i_0_loop int64, xs_1_loop []gopurs_runtime.Value) gopurs_runtime.Value {
@@ -2176,14 +2172,18 @@ _ = xs_1
 return gopurs_runtime.Apply2(pkg_Data_Array.Get_splitAt(), gopurs_runtime.Int(i_0), gopurs_runtime.Array(xs_1))
 }
 
-func Call_some(dictAlternative_0_loop gopurs_runtime.Value, dictLazy_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictAlternative_0 gopurs_runtime.Value = dictAlternative_0_loop
+func Call_some(dictAlternative_0_loop *pkg_Control_Alternative.Constructor_Alternative[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dictAlternative_0 *pkg_Control_Alternative.Constructor_Alternative[gopurs_runtime.Value] = dictAlternative_0_loop
 _ = dictAlternative_0
-var dictLazy_1 gopurs_runtime.Value = dictLazy_1_loop
-_ = dictLazy_1
-var x_2 gopurs_runtime.Value = x_2_loop
-_ = x_2
-return gopurs_runtime.Apply3(pkg_Data_Array.Get_some(), dictAlternative_0, dictLazy_1, x_2)
+some1_1_0 := gopurs_runtime.Apply(pkg_Data_Array.Get_some(), gopurs_runtime.Value{Type: 9, IntVal: 397869517, UnsafePtr: unsafe.Pointer(dictAlternative_0)})
+_ = some1_1_0
+return gopurs_runtime.Func(func(dictLazy_2 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_3_1 := gopurs_runtime.Apply(some1_1_0, dictLazy_2)
+_ = __local_var_3_1
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_3_1, x_4)
+})
+})
 }
 
 func Call_snoc_prime(xs_0_loop []gopurs_runtime.Value, x_1_loop gopurs_runtime.Value) []gopurs_runtime.Value {
@@ -2228,8 +2228,39 @@ var i_0 int64 = i_0_loop
 _ = i_0
 var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
+v_2_0 := gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Int(1), gopurs_runtime.Int(i_0))
+_ = v_2_0
+var __t1 gopurs_runtime.Value
+{
+if (v_2_0.Type == 9 && v_2_0.IntVal == 1527465420) {
+__t1 = gopurs_runtime.Int(i_0)
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (v_2_0.Type == 9 && v_2_0.IntVal == 902936544) {
+__t1 = gopurs_runtime.Int(1)
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (v_2_0.Type == 9 && v_2_0.IntVal == 380165415) {
+__t1 = gopurs_runtime.Int(1)
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_1:
 return func() []gopurs_runtime.Value {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.UncurriedApp2(pkg_Data_Array.Get_replicateImpl(), gopurs_runtime.Apply2(Get_max(), gopurs_runtime.Int(1), gopurs_runtime.Int(i_0)), x_1).UnsafePtr)
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.UncurriedApp2(pkg_Data_Array.Get_replicateImpl(), __t1, x_1).UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
@@ -2269,7 +2300,7 @@ var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 var x_2 []gopurs_runtime.Value = x_2_loop
 _ = x_2
-return (*pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value])(gopurs_runtime.Apply3(pkg_Data_Array.Get_modifyAt(), gopurs_runtime.Int(i_0), f_1, gopurs_runtime.Array(x_2)).UnsafePtr)
+return gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value]](gopurs_runtime.Apply3(pkg_Data_Array.Get_modifyAt(), gopurs_runtime.Int(i_0), f_1, gopurs_runtime.Array(x_2)))
 }
 
 func Call_intersectBy_prime(eq_0_loop gopurs_runtime.Value, xs_1_loop []gopurs_runtime.Value) gopurs_runtime.Value {
@@ -2318,22 +2349,22 @@ return func() []gopurs_runtime.Value {
 				}()
 }
 
-func Call_intersect_prime(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+func Call_intersect_prime(dictEq_0_loop *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dictEq_0 *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value] = dictEq_0_loop
 _ = dictEq_0
-return gopurs_runtime.Apply(Get_intersectBy_prime(), gopurs_runtime.RecordGet(dictEq_0, "eq"))
+return gopurs_runtime.Apply(Get_intersectBy_prime(), dictEq_0.V0)
 }
 
-func Call_intersect(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+func Call_intersect(dictEq_0_loop *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dictEq_0 *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value] = dictEq_0_loop
 _ = dictEq_0
-return gopurs_runtime.Apply(Get_intersectBy(), gopurs_runtime.RecordGet(dictEq_0, "eq"))
+return gopurs_runtime.Apply(Get_intersectBy(), dictEq_0.V0)
 }
 
-func Call_intercalate(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
+func Call_intercalate(dictSemigroup_0_loop *pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dictSemigroup_0 *pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value] = dictSemigroup_0_loop
 _ = dictSemigroup_0
-return Call_intercalate1(dictSemigroup_0)
+return Call_intercalate1(gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(dictSemigroup_0)})
 }
 
 func Call_insertAt(i_0_loop int64, x_1_loop gopurs_runtime.Value, x_2_loop []gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value] {
@@ -2343,13 +2374,13 @@ var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
 var x_2 []gopurs_runtime.Value = x_2_loop
 _ = x_2
-return (*pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value])(gopurs_runtime.UncurriedApp5(pkg_Data_Array.Get__insertAt(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}, gopurs_runtime.Int(i_0), x_1, gopurs_runtime.Array(x_2)).UnsafePtr)
+return gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value]](gopurs_runtime.UncurriedApp5(pkg_Data_Array.Get__insertAt(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}, gopurs_runtime.Int(i_0), x_1, gopurs_runtime.Array(x_2)))
 }
 
-func Call_fromFoldable1(dictFoldable1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictFoldable1_0 gopurs_runtime.Value = dictFoldable1_0_loop
+func Call_fromFoldable1(dictFoldable1_0_loop *pkg_Data_Semigroup_Foldable.Constructor_Foldable1[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dictFoldable1_0 *pkg_Data_Semigroup_Foldable.Constructor_Foldable1[gopurs_runtime.Value] = dictFoldable1_0_loop
 _ = dictFoldable1_0
-__local_var_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_0, "Foldable0"), gopurs_runtime.Value{}), "foldr")
+__local_var_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(dictFoldable1_0.V0, gopurs_runtime.Value{}), "foldr")
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp2(pkg_Data_Array.Get_fromFoldableImpl(), __local_var_1_0, x_2)
@@ -2361,18 +2392,32 @@ var xs_0 []gopurs_runtime.Value = xs_0_loop
 _ = xs_0
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply2(Get_greaterThan(), gopurs_runtime.Int(int64(len(xs_0))), gopurs_runtime.Int(0)).IntVal) != (0) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, gopurs_runtime.Array(xs_0)})}.UnsafePtr))}
+var __t1 gopurs_runtime.Value
+{
+var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Int(int64(len(xs_0))), gopurs_runtime.Int(0))
+if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 380165415) {
+__t1 = gopurs_runtime.Bool(true)
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = gopurs_runtime.Bool(false)
+}
+end_branch_1:
+if (__t1.IntVal) != (0) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, gopurs_runtime.Array(xs_0)})}))}
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}.UnsafePtr))}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}))}
 }
 end_branch_0:
-return (*pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value])(__t0.UnsafePtr)
+return gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value]](__t0)
 }
 
 func Call_fromArray__gopurs_runtime_Value_2195001498(xs_0_loop []int64) *pkg_Data_Maybe.Constructor_Just[[]int64] {
@@ -2380,23 +2425,37 @@ var xs_0 []int64 = xs_0_loop
 _ = xs_0
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply2(Get_greaterThan(), gopurs_runtime.Int(int64(len(xs_0))), gopurs_runtime.Int(0)).IntVal) != (0) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, func() gopurs_runtime.Value {
+var __t1 gopurs_runtime.Value
+{
+var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Int(int64(len(xs_0))), gopurs_runtime.Int(0))
+if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 380165415) {
+__t1 = gopurs_runtime.Bool(true)
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = gopurs_runtime.Bool(false)
+}
+end_branch_1:
+if (__t1.IntVal) != (0) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, func() gopurs_runtime.Value {
 					arr := xs_0
 					boxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { boxed[i] = gopurs_runtime.Int(v) }
 					return gopurs_runtime.Array(boxed)
-				}()})}.UnsafePtr))}
+				}()})}))}
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}.UnsafePtr))}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}))}
 }
 end_branch_0:
-return (*pkg_Data_Maybe.Constructor_Just[[]int64])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value])(__t0.UnsafePtr))}.UnsafePtr)
+return gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[[]int64]](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value]](__t0))})
 }
 
 func Call_fromArray__gopurs_runtime_Value_260997498(xs_0_loop []string) *pkg_Data_Maybe.Constructor_Just[[]string] {
@@ -2404,23 +2463,37 @@ var xs_0 []string = xs_0_loop
 _ = xs_0
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply2(Get_greaterThan(), gopurs_runtime.Int(int64(len(xs_0))), gopurs_runtime.Int(0)).IntVal) != (0) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, func() gopurs_runtime.Value {
+var __t1 gopurs_runtime.Value
+{
+var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Int(int64(len(xs_0))), gopurs_runtime.Int(0))
+if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 380165415) {
+__t1 = gopurs_runtime.Bool(true)
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = gopurs_runtime.Bool(false)
+}
+end_branch_1:
+if (__t1.IntVal) != (0) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, func() gopurs_runtime.Value {
 					arr := xs_0
 					boxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { boxed[i] = gopurs_runtime.Str(v) }
 					return gopurs_runtime.Array(boxed)
-				}()})}.UnsafePtr))}
+				}()})}))}
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}.UnsafePtr))}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}))}
 }
 end_branch_0:
-return (*pkg_Data_Maybe.Constructor_Just[[]string])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value])(__t0.UnsafePtr))}.UnsafePtr)
+return gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[[]string]](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value]](__t0))})
 }
 
 func Call_fromArray__gopurs_runtime_Value_7061562(xs_0_loop []gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value] {
@@ -2428,18 +2501,32 @@ var xs_0 []gopurs_runtime.Value = xs_0_loop
 _ = xs_0
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply2(Get_greaterThan(), gopurs_runtime.Int(int64(len(xs_0))), gopurs_runtime.Int(0)).IntVal) != (0) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, gopurs_runtime.Array(xs_0)})}.UnsafePtr))}
+var __t1 gopurs_runtime.Value
+{
+var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Int(int64(len(xs_0))), gopurs_runtime.Int(0))
+if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 380165415) {
+__t1 = gopurs_runtime.Bool(true)
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = gopurs_runtime.Bool(false)
+}
+end_branch_1:
+if (__t1.IntVal) != (0) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, gopurs_runtime.Array(xs_0)})}))}
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}.UnsafePtr))}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}))}
 }
 end_branch_0:
-return (*pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value])(__t0.UnsafePtr)
+return gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value]](__t0)
 }
 
 func Call_fromArray__gopurs_runtime_Value_1294666874(xs_0_loop [][]gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[[][]gopurs_runtime.Value] {
@@ -2447,102 +2534,96 @@ var xs_0 [][]gopurs_runtime.Value = xs_0_loop
 _ = xs_0
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply2(Get_greaterThan(), gopurs_runtime.Int(int64(len(xs_0))), gopurs_runtime.Int(0)).IntVal) != (0) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, func() gopurs_runtime.Value {
-					arr := xs_0
-					boxed := make([]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { boxed[i] = gopurs_runtime.Array(v) }
-					return gopurs_runtime.Array(boxed)
-				}()})}.UnsafePtr))}
-goto end_branch_0
-} else {
-
-}
-}
-{
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}.UnsafePtr))}
-}
-end_branch_0:
-return (*pkg_Data_Maybe.Constructor_Just[[][]gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value])(__t0.UnsafePtr))}.UnsafePtr)
-}
-
-func Call_fromFoldable(dictFoldable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictFoldable_0 gopurs_runtime.Value = dictFoldable_0_loop
-_ = dictFoldable_0
-__local_var_1_0 := gopurs_runtime.RecordGet(dictFoldable_0, "foldr")
-_ = __local_var_1_0
-return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_3_1 := gopurs_runtime.UncurriedApp2(pkg_Data_Array.Get_fromFoldableImpl(), __local_var_1_0, x_2)
-_ = __local_var_3_1
-var __t2 gopurs_runtime.Value
-{
-if (gopurs_runtime.Apply2(Get_greaterThan(), gopurs_runtime.Int(int64(gopurs_runtime.ArrayLength(__local_var_3_1))), gopurs_runtime.Int(0)).IntVal) != (0) {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, __local_var_3_1})}.UnsafePtr))}
-goto end_branch_2
-} else {
-
-}
-}
-{
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}.UnsafePtr))}
-}
-end_branch_2:
-return __t2
-})
-}
-
-func Call_transpose_prime(x_0_loop [][]gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[[][]gopurs_runtime.Value] {
-var x_0 [][]gopurs_runtime.Value = x_0_loop
-_ = x_0
-__local_var_1_0 := gopurs_runtime.Apply(pkg_Data_Array.Get_transpose(), func() gopurs_runtime.Value {
-					arr := x_0
-					boxed := make([]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { boxed[i] = gopurs_runtime.Array(v) }
-					return gopurs_runtime.Array(boxed)
-				}())
-_ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply2(Get_greaterThan(), gopurs_runtime.Int(int64(gopurs_runtime.ArrayLength(__local_var_1_0))), gopurs_runtime.Int(0)).IntVal) != (0) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, __local_var_1_0})}.UnsafePtr))}
+var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Int(int64(len(xs_0))), gopurs_runtime.Int(0))
+if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 380165415) {
+__t1 = gopurs_runtime.Bool(true)
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}.UnsafePtr))}
+__t1 = gopurs_runtime.Bool(false)
 }
 end_branch_1:
-return (*pkg_Data_Maybe.Constructor_Just[[][]gopurs_runtime.Value])(__t1.UnsafePtr)
+if (__t1.IntVal) != (0) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, func() gopurs_runtime.Value {
+					arr := xs_0
+					boxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { boxed[i] = gopurs_runtime.Array(v) }
+					return gopurs_runtime.Array(boxed)
+				}()})}))}
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}))}
+}
+end_branch_0:
+return gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[[][]gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value]](__t0))})
 }
 
-func Call_foldMap1(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
+func Call_fromFoldable(dictFoldable_0_loop *pkg_Data_Foldable.Constructor_Foldable[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dictFoldable_0 *pkg_Data_Foldable.Constructor_Foldable[gopurs_runtime.Value] = dictFoldable_0_loop
+_ = dictFoldable_0
+__local_var_1_0 := dictFoldable_0.V2
+_ = __local_var_1_0
+return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_fromArray(func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.UncurriedApp2(pkg_Data_Array.Get_fromFoldableImpl(), __local_var_1_0, x_2).UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}()))}
+})
+}
+
+func Call_transpose_prime(x_0_loop [][]gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[[][]gopurs_runtime.Value] {
+var x_0 [][]gopurs_runtime.Value = x_0_loop
+_ = x_0
+return gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[[][]gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_fromArray(func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply(pkg_Data_Array.Get_transpose(), func() gopurs_runtime.Value {
+					arr := x_0
+					boxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { boxed[i] = gopurs_runtime.Array(v) }
+					return gopurs_runtime.Array(boxed)
+				}()).UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}()))})
+}
+
+func Call_foldMap1(dictSemigroup_0_loop *pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dictSemigroup_0 *pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value] = dictSemigroup_0_loop
 _ = dictSemigroup_0
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Array_NonEmpty_Internal.Get_foldable1NonEmptyArray(), "foldMap1"), dictSemigroup_0)
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Array_NonEmpty_Internal.Get_foldable1NonEmptyArray(), "foldMap1"), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(dictSemigroup_0)})
 }
 
-func Call_fold1(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
+func Call_fold1(dictSemigroup_0_loop *pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dictSemigroup_0 *pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value] = dictSemigroup_0_loop
 _ = dictSemigroup_0
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Array_NonEmpty_Internal.Get_foldable1NonEmptyArray(), "foldMap1"), dictSemigroup_0, pkg_Data_Semigroup_Foldable.Get_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Array_NonEmpty_Internal.Get_foldable1NonEmptyArray(), "foldMap1"), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(dictSemigroup_0)}, pkg_Data_Semigroup_Foldable.Get_identity())
 }
 
-func Call_difference_prime(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+func Call_difference_prime(dictEq_0_loop *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dictEq_0 *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value] = dictEq_0_loop
 _ = dictEq_0
-difference1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableArray(), "foldr"), gopurs_runtime.Apply(pkg_Data_Array.Get_delete(), dictEq_0))
+difference1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableArray(), "foldr"), gopurs_runtime.Apply(pkg_Data_Array.Get_delete(), gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(dictEq_0)}))
 _ = difference1_1_0
 return gopurs_runtime.Func(func(xs_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(difference1_1_0, xs_2)
 })
 }
 
-func Call_difference_prime__gopurs_runtime_Value_564981534(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+func Call_difference_prime__gopurs_runtime_Value_564981534(dictEq_0_loop *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dictEq_0 *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value] = dictEq_0_loop
 _ = dictEq_0
-difference1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableArray(), "foldr"), gopurs_runtime.Apply(pkg_Data_Array.Get_delete(), dictEq_0))
+difference1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableArray(), "foldr"), gopurs_runtime.Apply(pkg_Data_Array.Get_delete(), gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(dictEq_0)}))
 _ = difference1_1_0
 return gopurs_runtime.Func(func(xs_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(difference1_1_0, xs_2)
@@ -2575,11 +2656,11 @@ return func() []gopurs_runtime.Value {
 				}()
 }
 
-func Call_fromNonEmpty(v_0_loop gopurs_runtime.Value) []gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
+func Call_fromNonEmpty(v_0_loop *pkg_Data_NonEmpty.Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value]) []gopurs_runtime.Value {
+var v_0 *pkg_Data_NonEmpty.Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value] = v_0_loop
 _ = v_0
 return func() []gopurs_runtime.Value {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupArray(), "append"), gopurs_runtime.Array([]gopurs_runtime.Value{(*pkg_Data_NonEmpty.Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V0}), (*pkg_Data_NonEmpty.Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V1).UnsafePtr)
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupArray(), "append"), gopurs_runtime.Array([]gopurs_runtime.Value{(*pkg_Data_NonEmpty.Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0}), (*pkg_Data_NonEmpty.Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1).UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
@@ -2619,7 +2700,7 @@ var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 var x_2 []gopurs_runtime.Value = x_2_loop
 _ = x_2
-return (*pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value])(gopurs_runtime.Apply3(pkg_Data_Array.Get_alterAt(), gopurs_runtime.Int(i_0), f_1, gopurs_runtime.Array(x_2)).UnsafePtr)
+return gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value]](gopurs_runtime.Apply3(pkg_Data_Array.Get_alterAt(), gopurs_runtime.Int(i_0), f_1, gopurs_runtime.Array(x_2)))
 }
 
 func Call_head(x_0_loop []gopurs_runtime.Value) gopurs_runtime.Value {
@@ -2695,7 +2776,7 @@ __local_var_1_0 := gopurs_runtime.UncurriedApp3(pkg_Data_Array.Get_unconsImpl(),
 return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
 }), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(xs_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, xs_2})}.UnsafePtr))}
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, xs_2})}))}
 })
 }), gopurs_runtime.Array(x_0))
 _ = __local_var_1_0
@@ -2727,12 +2808,12 @@ __local_var_1_0 := gopurs_runtime.UncurriedApp3(pkg_Data_Array.Get_unconsImpl(),
 return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
 }), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(xs_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, gopurs_runtime.RecordDict2("head", "tail", x_1, gopurs_runtime.Array(func() []gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, gopurs_runtime.RecordDict2("head", "tail", x_1, gopurs_runtime.Array(func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(xs_2.UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
-				}()))})}.UnsafePtr))}
+				}()))})}))}
 })
 }), gopurs_runtime.Array(x_0))
 _ = __local_var_1_0
@@ -2759,12 +2840,12 @@ __local_var_1_0 := gopurs_runtime.UncurriedApp3(pkg_Data_Array.Get_unconsImpl(),
 return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
 }), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(xs_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, gopurs_runtime.RecordDict2("head", "tail", x_1, gopurs_runtime.Array(func() []gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, gopurs_runtime.RecordDict2("head", "tail", x_1, gopurs_runtime.Array(func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(xs_2.UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
-				}()))})}.UnsafePtr))}
+				}()))})}))}
 })
 }), gopurs_runtime.Array(x_0))
 _ = __local_var_1_0
@@ -2784,12 +2865,12 @@ end_branch_1:
 return __t1
 }
 
-func Call_toNonEmpty(x_0_loop []gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_toNonEmpty(x_0_loop []gopurs_runtime.Value) *pkg_Data_NonEmpty.Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value] {
 var x_0 []gopurs_runtime.Value = x_0_loop
 _ = x_0
 __local_var_1_0 := Call_uncons(x_0)
 _ = __local_var_1_0
-return gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(&pkg_Data_NonEmpty.Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.RecordGet(__local_var_1_0, "head"), gopurs_runtime.RecordGet(__local_var_1_0, "tail")})}
+return gopurs_runtime.CoerceToStruct[pkg_Data_NonEmpty.Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(&pkg_Data_NonEmpty.Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.RecordGet(__local_var_1_0, "head"), gopurs_runtime.RecordGet(__local_var_1_0, "tail")})})
 }
 
 func Call_unsnoc(x_0_loop []gopurs_runtime.Value) gopurs_runtime.Value {
@@ -2847,14 +2928,19 @@ return x_1
 				}()
 }
 
-func Call_delete(dictEq_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+func Call_delete(dictEq_0_loop *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value], x_1_loop gopurs_runtime.Value, x_2_loop []gopurs_runtime.Value) []gopurs_runtime.Value {
+var dictEq_0 *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value] = dictEq_0_loop
 _ = dictEq_0
 var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
-var x_2 gopurs_runtime.Value = x_2_loop
+var x_2 []gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.Apply3(pkg_Data_Array.Get_deleteBy(), gopurs_runtime.RecordGet(dictEq_0, "eq"), x_1, x_2)
+return func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply3(pkg_Data_Array.Get_deleteBy(), dictEq_0.V0, x_1, gopurs_runtime.Array(x_2)).UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}()
 }
 
 func Call_deleteAt(i_0_loop int64, x_1_loop []gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value] {
@@ -2862,7 +2948,7 @@ var i_0 int64 = i_0_loop
 _ = i_0
 var x_1 []gopurs_runtime.Value = x_1_loop
 _ = x_1
-return (*pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value])(gopurs_runtime.UncurriedApp4(pkg_Data_Array.Get__deleteAt(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}, gopurs_runtime.Int(i_0), gopurs_runtime.Array(x_1)).UnsafePtr)
+return gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[[]gopurs_runtime.Value]](gopurs_runtime.UncurriedApp4(pkg_Data_Array.Get__deleteAt(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}, gopurs_runtime.Int(i_0), gopurs_runtime.Array(x_1)))
 }
 
 func Call_deleteBy(f_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value, x_2_loop []gopurs_runtime.Value) []gopurs_runtime.Value {
@@ -2880,17 +2966,15 @@ return func() []gopurs_runtime.Value {
 				}()
 }
 
-func Call_difference(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+func Call_difference(dictEq_0_loop *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value], xs_1_loop []gopurs_runtime.Value) gopurs_runtime.Value {
+var dictEq_0 *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value] = dictEq_0_loop
 _ = dictEq_0
-difference1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableArray(), "foldr"), gopurs_runtime.Apply(pkg_Data_Array.Get_delete(), dictEq_0))
-_ = difference1_1_0
-return gopurs_runtime.Func(func(xs_2 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_3_1 := gopurs_runtime.Apply(difference1_1_0, xs_2)
-_ = __local_var_3_1
-return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_3_1, x_4)
-})
+var xs_1 []gopurs_runtime.Value = xs_1_loop
+_ = xs_1
+__local_var_2_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableArray(), "foldr"), gopurs_runtime.Apply(pkg_Data_Array.Get_delete(), gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(dictEq_0)}), gopurs_runtime.Array(xs_1))
+_ = __local_var_2_0
+return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_2_0, x_3)
 })
 }
 
@@ -2899,26 +2983,8 @@ var i_0 int64 = i_0_loop
 _ = i_0
 var x_1 []gopurs_runtime.Value = x_1_loop
 _ = x_1
-var __t0 gopurs_runtime.Value
-{
-if (gopurs_runtime.Apply2(pkg_Data_Array.Get_lessThan(), gopurs_runtime.Int(i_0), gopurs_runtime.Int(1)).IntVal) != (0) {
-__t0 = gopurs_runtime.Array(x_1)
-goto end_branch_0
-} else {
-
-}
-}
-{
-__t0 = gopurs_runtime.Array(func() []gopurs_runtime.Value {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.UncurriedApp3(pkg_Data_Array.Get_sliceImpl(), gopurs_runtime.Int(i_0), gopurs_runtime.Int(int64(len(x_1))), gopurs_runtime.Array(x_1)).UnsafePtr)
-					unboxed := make([]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { unboxed[i] = v }
-					return unboxed
-				}())
-}
-end_branch_0:
 return func() []gopurs_runtime.Value {
-					arr := *(*[]gopurs_runtime.Value)(__t0.UnsafePtr)
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(pkg_Data_Array.Get_drop(), gopurs_runtime.Int(i_0), gopurs_runtime.Array(x_1)).UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
@@ -2931,7 +2997,7 @@ _ = i_0
 var x_1 []gopurs_runtime.Value = x_1_loop
 _ = x_1
 return func() []gopurs_runtime.Value {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(pkg_Data_Array.Get_dropEnd(), gopurs_runtime.Int(i_0), gopurs_runtime.Array(x_1)).UnsafePtr)
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(pkg_Data_Array.Get_take(), gopurs_runtime.Int((gopurs_runtime.Int(int64(len(x_1))).IntVal) - (i_0)), gopurs_runtime.Array(x_1)).UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
@@ -2951,38 +3017,38 @@ return func() []gopurs_runtime.Value {
 				}()
 }
 
-func Call_elem(dictEq_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+func Call_elem(dictEq_0_loop *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value], x_1_loop gopurs_runtime.Value, x_2_loop []gopurs_runtime.Value) bool {
+var dictEq_0 *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value] = dictEq_0_loop
 _ = dictEq_0
 var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
-var x_2 gopurs_runtime.Value = x_2_loop
+var x_2 []gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.Apply3(pkg_Data_Array.Get_elem(), dictEq_0, x_1, x_2)
+return (gopurs_runtime.Apply3(pkg_Data_Array.Get_elem(), gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(dictEq_0)}, x_1, gopurs_runtime.Array(x_2)).IntVal) != (0)
 }
 
-func Call_elemIndex(dictEq_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+func Call_elemIndex(dictEq_0_loop *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value], x_1_loop gopurs_runtime.Value, x_2_loop []gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[int64] {
+var dictEq_0 *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value] = dictEq_0_loop
 _ = dictEq_0
 var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
-var x_2 gopurs_runtime.Value = x_2_loop
+var x_2 []gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.UncurriedApp4(pkg_Data_Array.Get_findIndexImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}, gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), v_3, x_1).IntVal) != (0))
-}), x_2)
+return gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[int64]](gopurs_runtime.UncurriedApp4(pkg_Data_Array.Get_findIndexImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}, gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool((gopurs_runtime.Apply2(dictEq_0.V0, v_3, x_1).IntVal) != (0))
+}), gopurs_runtime.Array(x_2)))
 }
 
-func Call_elemLastIndex(dictEq_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+func Call_elemLastIndex(dictEq_0_loop *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value], x_1_loop gopurs_runtime.Value, x_2_loop []gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[int64] {
+var dictEq_0 *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value] = dictEq_0_loop
 _ = dictEq_0
 var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
-var x_2 gopurs_runtime.Value = x_2_loop
+var x_2 []gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.UncurriedApp4(pkg_Data_Array.Get_findLastIndexImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}, gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), v_3, x_1).IntVal) != (0))
-}), x_2)
+return gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[int64]](gopurs_runtime.UncurriedApp4(pkg_Data_Array.Get_findLastIndexImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}, gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool((gopurs_runtime.Apply2(dictEq_0.V0, v_3, x_1).IntVal) != (0))
+}), gopurs_runtime.Array(x_2)))
 }
 
 func Call_filter(f_0_loop gopurs_runtime.Value, x_1_loop []gopurs_runtime.Value) []gopurs_runtime.Value {
@@ -2998,17 +3064,15 @@ return func() []gopurs_runtime.Value {
 				}()
 }
 
-func Call_filterA(dictApplicative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictApplicative_0 gopurs_runtime.Value = dictApplicative_0_loop
+func Call_filterA(dictApplicative_0_loop *pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value], f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictApplicative_0 *pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value] = dictApplicative_0_loop
 _ = dictApplicative_0
-filterA1_1_0 := gopurs_runtime.Apply(pkg_Data_Array.Get_filterA(), dictApplicative_0)
-_ = filterA1_1_0
-return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_3_1 := gopurs_runtime.Apply(filterA1_1_0, f_2)
-_ = __local_var_3_1
-return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_3_1, x_4)
-})
+var f_1 gopurs_runtime.Value = f_1_loop
+_ = f_1
+__local_var_2_0 := gopurs_runtime.Apply2(pkg_Data_Array.Get_filterA(), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(dictApplicative_0)}, f_1)
+_ = __local_var_2_0
+return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_2_0, x_3)
 })
 }
 
@@ -3017,7 +3081,7 @@ var p_0 gopurs_runtime.Value = p_0_loop
 _ = p_0
 var x_1 []gopurs_runtime.Value = x_1_loop
 _ = x_1
-return (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(gopurs_runtime.Apply2(pkg_Data_Array.Get_find(), p_0, gopurs_runtime.Array(x_1)).UnsafePtr)
+return gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]](gopurs_runtime.Apply2(pkg_Data_Array.Get_find(), p_0, gopurs_runtime.Array(x_1)))
 }
 
 func Call_findIndex(p_0_loop gopurs_runtime.Value, x_1_loop []gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[int64] {
@@ -3025,7 +3089,7 @@ var p_0 gopurs_runtime.Value = p_0_loop
 _ = p_0
 var x_1 []gopurs_runtime.Value = x_1_loop
 _ = x_1
-return (*pkg_Data_Maybe.Constructor_Just[int64])(gopurs_runtime.UncurriedApp4(pkg_Data_Array.Get_findIndexImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}, p_0, gopurs_runtime.Array(x_1)).UnsafePtr)
+return gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[int64]](gopurs_runtime.UncurriedApp4(pkg_Data_Array.Get_findIndexImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}, p_0, gopurs_runtime.Array(x_1)))
 }
 
 func Call_findLastIndex(x_0_loop gopurs_runtime.Value, x_1_loop []gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[int64] {
@@ -3033,7 +3097,7 @@ var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
 var x_1 []gopurs_runtime.Value = x_1_loop
 _ = x_1
-return (*pkg_Data_Maybe.Constructor_Just[int64])(gopurs_runtime.UncurriedApp4(pkg_Data_Array.Get_findLastIndexImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}, x_0, gopurs_runtime.Array(x_1)).UnsafePtr)
+return gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[int64]](gopurs_runtime.UncurriedApp4(pkg_Data_Array.Get_findLastIndexImpl(), pkg_Data_Maybe.Get_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}, x_0, gopurs_runtime.Array(x_1)))
 }
 
 func Call_findMap(p_0_loop gopurs_runtime.Value, x_1_loop []gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value] {
@@ -3041,34 +3105,34 @@ var p_0 gopurs_runtime.Value = p_0_loop
 _ = p_0
 var x_1 []gopurs_runtime.Value = x_1_loop
 _ = x_1
-return (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(gopurs_runtime.UncurriedApp4(pkg_Data_Array.Get_findMapImpl(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}, pkg_Data_Maybe.Get_isJust(), p_0, gopurs_runtime.Array(x_1)).UnsafePtr)
+return gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]](gopurs_runtime.UncurriedApp4(pkg_Data_Array.Get_findMapImpl(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}, pkg_Data_Maybe.Get_isJust(), p_0, gopurs_runtime.Array(x_1)))
 }
 
-func Call_foldM(dictMonad_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, acc_2_loop gopurs_runtime.Value, x_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
+func Call_foldM(dictMonad_0_loop *pkg_Control_Monad.Constructor_Monad[gopurs_runtime.Value], f_1_loop gopurs_runtime.Value, acc_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictMonad_0 *pkg_Control_Monad.Constructor_Monad[gopurs_runtime.Value] = dictMonad_0_loop
 _ = dictMonad_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 var acc_2 gopurs_runtime.Value = acc_2_loop
 _ = acc_2
-var x_3 gopurs_runtime.Value = x_3_loop
-_ = x_3
-return gopurs_runtime.Apply4(pkg_Data_Array.Get_foldM(), dictMonad_0, f_1, acc_2, x_3)
+__local_var_3_0 := gopurs_runtime.Apply3(pkg_Data_Array.Get_foldM(), gopurs_runtime.Value{Type: 9, IntVal: 778916621, UnsafePtr: unsafe.Pointer(dictMonad_0)}, f_1, acc_2)
+_ = __local_var_3_0
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_3_0, x_4)
+})
 }
 
-func Call_foldRecM(dictMonadRec_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictMonadRec_0 gopurs_runtime.Value = dictMonadRec_0_loop
+func Call_foldRecM(dictMonadRec_0_loop *pkg_Control_Monad_Rec_Class.Constructor_MonadRec[gopurs_runtime.Value], f_1_loop gopurs_runtime.Value, acc_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictMonadRec_0 *pkg_Control_Monad_Rec_Class.Constructor_MonadRec[gopurs_runtime.Value] = dictMonadRec_0_loop
 _ = dictMonadRec_0
-foldRecM1_1_0 := gopurs_runtime.Apply(pkg_Data_Array.Get_foldRecM(), dictMonadRec_0)
-_ = foldRecM1_1_0
-return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(acc_3 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_4_1 := gopurs_runtime.Apply2(foldRecM1_1_0, f_2, acc_3)
-_ = __local_var_4_1
-return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_4_1, x_5)
-})
-})
+var f_1 gopurs_runtime.Value = f_1_loop
+_ = f_1
+var acc_2 gopurs_runtime.Value = acc_2_loop
+_ = acc_2
+__local_var_3_0 := gopurs_runtime.Apply3(pkg_Data_Array.Get_foldRecM(), gopurs_runtime.Value{Type: 9, IntVal: 3709389635, UnsafePtr: unsafe.Pointer(dictMonadRec_0)}, f_1, acc_2)
+_ = __local_var_3_0
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_3_0, x_4)
 })
 }
 
@@ -3103,14 +3167,14 @@ return func() []gopurs_runtime.Value {
 				}()
 }
 
-func Call_notElem(dictEq_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+func Call_notElem(dictEq_0_loop *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value], x_1_loop gopurs_runtime.Value, x_2_loop []gopurs_runtime.Value) bool {
+var dictEq_0 *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value] = dictEq_0_loop
 _ = dictEq_0
 var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
-var x_2 gopurs_runtime.Value = x_2_loop
+var x_2 []gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.Apply3(pkg_Data_Array.Get_notElem(), dictEq_0, x_1, x_2)
+return (gopurs_runtime.Apply3(pkg_Data_Array.Get_notElem(), gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(dictEq_0)}, x_1, gopurs_runtime.Array(x_2)).IntVal) != (0)
 }
 
 func Call_partition(f_0_loop gopurs_runtime.Value, x_1_loop []gopurs_runtime.Value) gopurs_runtime.Value {
@@ -3149,31 +3213,8 @@ var i_0 int64 = i_0_loop
 _ = i_0
 var x_1 []gopurs_runtime.Value = x_1_loop
 _ = x_1
-var __t0 gopurs_runtime.Value
-{
-if (gopurs_runtime.Apply2(pkg_Data_Array.Get_lessThan(), gopurs_runtime.Int(i_0), gopurs_runtime.Int(1)).IntVal) != (0) {
-__t0 = gopurs_runtime.Array(func() []gopurs_runtime.Value {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array([]gopurs_runtime.Value{}).UnsafePtr)
-					unboxed := make([]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { unboxed[i] = v }
-					return unboxed
-				}())
-goto end_branch_0
-} else {
-
-}
-}
-{
-__t0 = gopurs_runtime.Array(func() []gopurs_runtime.Value {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.UncurriedApp3(pkg_Data_Array.Get_sliceImpl(), gopurs_runtime.Int(0), gopurs_runtime.Int(i_0), gopurs_runtime.Array(x_1)).UnsafePtr)
-					unboxed := make([]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { unboxed[i] = v }
-					return unboxed
-				}())
-}
-end_branch_0:
 return func() []gopurs_runtime.Value {
-					arr := *(*[]gopurs_runtime.Value)(__t0.UnsafePtr)
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(pkg_Data_Array.Get_take(), gopurs_runtime.Int(i_0), gopurs_runtime.Array(x_1)).UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
@@ -3186,7 +3227,7 @@ _ = i_0
 var x_1 []gopurs_runtime.Value = x_1_loop
 _ = x_1
 return func() []gopurs_runtime.Value {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(pkg_Data_Array.Get_takeEnd(), gopurs_runtime.Int(i_0), gopurs_runtime.Array(x_1)).UnsafePtr)
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(pkg_Data_Array.Get_drop(), gopurs_runtime.Int((gopurs_runtime.Int(int64(len(x_1))).IntVal) - (i_0)), gopurs_runtime.Array(x_1)).UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
@@ -3206,12 +3247,12 @@ return func() []gopurs_runtime.Value {
 				}()
 }
 
-func Call_toUnfoldable(dictUnfoldable_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictUnfoldable_0 gopurs_runtime.Value = dictUnfoldable_0_loop
+func Call_toUnfoldable(dictUnfoldable_0_loop *pkg_Data_Unfoldable.Constructor_Unfoldable[gopurs_runtime.Value], x_1_loop []gopurs_runtime.Value) gopurs_runtime.Value {
+var dictUnfoldable_0 *pkg_Data_Unfoldable.Constructor_Unfoldable[gopurs_runtime.Value] = dictUnfoldable_0_loop
 _ = dictUnfoldable_0
-var x_1 gopurs_runtime.Value = x_1_loop
+var x_1 []gopurs_runtime.Value = x_1_loop
 _ = x_1
-return gopurs_runtime.Apply2(pkg_Data_Array.Get_toUnfoldable(), dictUnfoldable_0, x_1)
+return gopurs_runtime.Apply2(pkg_Data_Array.Get_toUnfoldable(), gopurs_runtime.Value{Type: 9, IntVal: 2670894170, UnsafePtr: unsafe.Pointer(dictUnfoldable_0)}, gopurs_runtime.Array(x_1))
 }
 
 func Call_cons(x_0_loop gopurs_runtime.Value, x_1_loop []gopurs_runtime.Value) []gopurs_runtime.Value {
@@ -3227,13 +3268,13 @@ return func() []gopurs_runtime.Value {
 				}()
 }
 
-func Call_group(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+func Call_group(dictEq_0_loop *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dictEq_0 *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value] = dictEq_0_loop
 _ = dictEq_0
-eq2_1_0 := gopurs_runtime.RecordGet(dictEq_0, "eq")
-_ = eq2_1_0
+eq_1_0 := dictEq_0.V0
+_ = eq_1_0
 return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(pkg_Data_Array.Get_groupBy(), eq2_1_0, x_2)
+return gopurs_runtime.Apply2(pkg_Data_Array.Get_groupBy(), eq_1_0, x_2)
 })
 }
 
@@ -3257,10 +3298,10 @@ return gopurs_runtime.Apply(__local_var_1_0, x_2)
 })
 }
 
-func Call_groupAll(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
+func Call_groupAll(dictOrd_0_loop *pkg_Data_Ord.Constructor_Ord[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dictOrd_0 *pkg_Data_Ord.Constructor_Ord[gopurs_runtime.Value] = dictOrd_0_loop
 _ = dictOrd_0
-__local_var_1_0 := gopurs_runtime.Apply(pkg_Data_Array.Get_groupAllBy(), gopurs_runtime.RecordGet(dictOrd_0, "compare"))
+__local_var_1_0 := gopurs_runtime.Apply(pkg_Data_Array.Get_groupAllBy(), dictOrd_0.V1)
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_1_0, x_2)
@@ -3280,14 +3321,19 @@ return func() []gopurs_runtime.Value {
 				}()
 }
 
-func Call_insert(dictOrd_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
+func Call_insert(dictOrd_0_loop *pkg_Data_Ord.Constructor_Ord[gopurs_runtime.Value], x_1_loop gopurs_runtime.Value, x_2_loop []gopurs_runtime.Value) []gopurs_runtime.Value {
+var dictOrd_0 *pkg_Data_Ord.Constructor_Ord[gopurs_runtime.Value] = dictOrd_0_loop
 _ = dictOrd_0
 var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
-var x_2 gopurs_runtime.Value = x_2_loop
+var x_2 []gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.Apply3(pkg_Data_Array.Get_insertBy(), gopurs_runtime.RecordGet(dictOrd_0, "compare"), x_1, x_2)
+return func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply3(pkg_Data_Array.Get_insertBy(), dictOrd_0.V1, x_1, gopurs_runtime.Array(x_2)).UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}()
 }
 
 func Call_insertBy(f_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value, x_2_loop []gopurs_runtime.Value) []gopurs_runtime.Value {
@@ -3328,28 +3374,34 @@ return gopurs_runtime.Apply(__local_var_1_0, x_2)
 })
 }
 
-func Call_modifyAtIndices(dictFoldable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictFoldable_0 gopurs_runtime.Value = dictFoldable_0_loop
+func Call_modifyAtIndices(dictFoldable_0_loop *pkg_Data_Foldable.Constructor_Foldable[gopurs_runtime.Value], is_1_loop gopurs_runtime.Value, f_2_loop gopurs_runtime.Value, x_3_loop []gopurs_runtime.Value) []gopurs_runtime.Value {
+var dictFoldable_0 *pkg_Data_Foldable.Constructor_Foldable[gopurs_runtime.Value] = dictFoldable_0_loop
 _ = dictFoldable_0
-modifyAtIndices1_1_0 := gopurs_runtime.Apply(pkg_Data_Array.Get_modifyAtIndices(), dictFoldable_0)
-_ = modifyAtIndices1_1_0
-return gopurs_runtime.Func(func(is_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_4_1 := gopurs_runtime.Apply2(modifyAtIndices1_1_0, is_2, f_3)
-_ = __local_var_4_1
-return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_4_1, x_5)
-})
-})
-})
+var is_1 gopurs_runtime.Value = is_1_loop
+_ = is_1
+var f_2 gopurs_runtime.Value = f_2_loop
+_ = f_2
+var x_3 []gopurs_runtime.Value = x_3_loop
+_ = x_3
+return func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply4(pkg_Data_Array.Get_modifyAtIndices(), gopurs_runtime.Value{Type: 9, IntVal: 4280266298, UnsafePtr: unsafe.Pointer(dictFoldable_0)}, is_1, f_2, gopurs_runtime.Array(x_3)).UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}()
 }
 
-func Call_nub(dictOrd_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
+func Call_nub(dictOrd_0_loop *pkg_Data_Ord.Constructor_Ord[gopurs_runtime.Value], x_1_loop []gopurs_runtime.Value) []gopurs_runtime.Value {
+var dictOrd_0 *pkg_Data_Ord.Constructor_Ord[gopurs_runtime.Value] = dictOrd_0_loop
 _ = dictOrd_0
-var x_1 gopurs_runtime.Value = x_1_loop
+var x_1 []gopurs_runtime.Value = x_1_loop
 _ = x_1
-return gopurs_runtime.Apply2(pkg_Data_Array.Get_nubBy(), gopurs_runtime.RecordGet(dictOrd_0, "compare"), x_1)
+return func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(pkg_Data_Array.Get_nubBy(), dictOrd_0.V1, gopurs_runtime.Array(x_1)).UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}()
 }
 
 func Call_nubBy(f_0_loop gopurs_runtime.Value, x_1_loop []gopurs_runtime.Value) []gopurs_runtime.Value {
@@ -3378,12 +3430,17 @@ return func() []gopurs_runtime.Value {
 				}()
 }
 
-func Call_nubEq(dictEq_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+func Call_nubEq(dictEq_0_loop *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value], x_1_loop []gopurs_runtime.Value) []gopurs_runtime.Value {
+var dictEq_0 *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value] = dictEq_0_loop
 _ = dictEq_0
-var x_1 gopurs_runtime.Value = x_1_loop
+var x_1 []gopurs_runtime.Value = x_1_loop
 _ = x_1
-return gopurs_runtime.Apply2(pkg_Data_Array.Get_nubByEq(), gopurs_runtime.RecordGet(dictEq_0, "eq"), x_1)
+return func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(pkg_Data_Array.Get_nubByEq(), dictEq_0.V0, gopurs_runtime.Array(x_1)).UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}()
 }
 
 func Call_reverse(x_0_loop []gopurs_runtime.Value) []gopurs_runtime.Value {
@@ -3427,10 +3484,10 @@ return func() []gopurs_runtime.Value {
 				}()
 }
 
-func Call_sort(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
+func Call_sort(dictOrd_0_loop *pkg_Data_Ord.Constructor_Ord[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dictOrd_0 *pkg_Data_Ord.Constructor_Ord[gopurs_runtime.Value] = dictOrd_0_loop
 _ = dictOrd_0
-compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0, "compare")
+compare_1_0 := dictOrd_0.V1
 _ = compare_1_0
 return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(pkg_Data_Array.Get_sortBy(), compare_1_0, x_2)
@@ -3450,62 +3507,82 @@ return func() []gopurs_runtime.Value {
 				}()
 }
 
-func Call_sortWith(dictOrd_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
+func Call_sortWith(dictOrd_0_loop *pkg_Data_Ord.Constructor_Ord[gopurs_runtime.Value], f_1_loop gopurs_runtime.Value, x_2_loop []gopurs_runtime.Value) []gopurs_runtime.Value {
+var dictOrd_0 *pkg_Data_Ord.Constructor_Ord[gopurs_runtime.Value] = dictOrd_0_loop
 _ = dictOrd_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-var x_2 gopurs_runtime.Value = x_2_loop
+var x_2 []gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.Apply3(pkg_Data_Array.Get_sortWith(), dictOrd_0, f_1, x_2)
+return func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply3(pkg_Data_Array.Get_sortWith(), gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(dictOrd_0)}, f_1, gopurs_runtime.Array(x_2)).UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}()
 }
 
-func Call_updateAtIndices(dictFoldable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictFoldable_0 gopurs_runtime.Value = dictFoldable_0_loop
+func Call_updateAtIndices(dictFoldable_0_loop *pkg_Data_Foldable.Constructor_Foldable[gopurs_runtime.Value], pairs_1_loop gopurs_runtime.Value, x_2_loop []gopurs_runtime.Value) []gopurs_runtime.Value {
+var dictFoldable_0 *pkg_Data_Foldable.Constructor_Foldable[gopurs_runtime.Value] = dictFoldable_0_loop
 _ = dictFoldable_0
-updateAtIndices1_1_0 := gopurs_runtime.Apply(pkg_Data_Array.Get_updateAtIndices(), dictFoldable_0)
-_ = updateAtIndices1_1_0
-return gopurs_runtime.Func(func(pairs_2 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_3_1 := gopurs_runtime.Apply(updateAtIndices1_1_0, pairs_2)
-_ = __local_var_3_1
-return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_3_1, x_4)
-})
-})
+var pairs_1 gopurs_runtime.Value = pairs_1_loop
+_ = pairs_1
+var x_2 []gopurs_runtime.Value = x_2_loop
+_ = x_2
+return func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply3(pkg_Data_Array.Get_updateAtIndices(), gopurs_runtime.Value{Type: 9, IntVal: 4280266298, UnsafePtr: unsafe.Pointer(dictFoldable_0)}, pairs_1, gopurs_runtime.Array(x_2)).UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}()
 }
 
-func Call_unsafeIndex(_dollar__unused_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value, __local_var_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_unsafeIndex(_dollar__unused_0_loop gopurs_runtime.Value, x_1_loop []gopurs_runtime.Value, __local_var_2_loop int64) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
-var x_1 gopurs_runtime.Value = x_1_loop
+var x_1 []gopurs_runtime.Value = x_1_loop
 _ = x_1
-var __local_var_2 gopurs_runtime.Value = __local_var_2_loop
+var __local_var_2 int64 = __local_var_2_loop
 _ = __local_var_2
-return gopurs_runtime.ArrayAccess(x_1, int(__local_var_2.IntVal))
+return x_1[__local_var_2]
 }
 
-func Call_unsafeIndex__gopurs_runtime_Value_2808089623(_dollar__unused_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value, __local_var_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_unsafeIndex__gopurs_runtime_Value_2808089623(_dollar__unused_0_loop gopurs_runtime.Value, x_1_loop []gopurs_runtime.Value, __local_var_2_loop int64) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
-var x_1 gopurs_runtime.Value = x_1_loop
+var x_1 []gopurs_runtime.Value = x_1_loop
 _ = x_1
-var __local_var_2 gopurs_runtime.Value = __local_var_2_loop
+var __local_var_2 int64 = __local_var_2_loop
 _ = __local_var_2
-return gopurs_runtime.ArrayAccess(x_1, int(__local_var_2.IntVal))
+return x_1[__local_var_2]
 }
 
-func Call_toUnfoldable1(dictUnfoldable1_0_loop gopurs_runtime.Value, xs_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictUnfoldable1_0 gopurs_runtime.Value = dictUnfoldable1_0_loop
+func Call_toUnfoldable1(dictUnfoldable1_0_loop *pkg_Data_Unfoldable1.Constructor_Unfoldable1[gopurs_runtime.Value], xs_1_loop []gopurs_runtime.Value) gopurs_runtime.Value {
+var dictUnfoldable1_0 *pkg_Data_Unfoldable1.Constructor_Unfoldable1[gopurs_runtime.Value] = dictUnfoldable1_0_loop
 _ = dictUnfoldable1_0
-var xs_1 gopurs_runtime.Value = xs_1_loop
+var xs_1 []gopurs_runtime.Value = xs_1_loop
 _ = xs_1
-len_2_0 := gopurs_runtime.Int(int64(gopurs_runtime.ArrayLength(xs_1)))
+len_2_0 := gopurs_runtime.Int(int64(len(xs_1))).IntVal
 _ = len_2_0
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictUnfoldable1_0, "unfoldr1"), gopurs_runtime.Func(func(i_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(dictUnfoldable1_0.V0, gopurs_runtime.Func(func(i_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply2(Get_lessThan(), i_3, gopurs_runtime.Int((len_2_0.IntVal) - (1))).IntVal) != (0) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*pkg_Data_Maybe.Constructor_Just[int64])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, gopurs_runtime.Int((i_3.IntVal) + (1))})}.UnsafePtr))}
+var __t2 gopurs_runtime.Value
+{
+var __t_tag_3 gopurs_runtime.Value = gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, i_3, gopurs_runtime.Int((len_2_0) - (1)))
+if (__t_tag_3.Type == 9 && __t_tag_3.IntVal == 1527465420) {
+__t2 = gopurs_runtime.Bool(true)
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = gopurs_runtime.Bool(false)
+}
+end_branch_2:
+if (__t2.IntVal) != (0) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[int64]](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, gopurs_runtime.Int((i_3.IntVal) + (1))})}))}
 goto end_branch_1
 } else {
 
@@ -3515,7 +3592,7 @@ goto end_branch_1
 __t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil}
 }
 end_branch_1:
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.ArrayAccess(xs_1, int(i_3.IntVal)), __t1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, *pkg_Data_Maybe.Constructor_Just[int64]]](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, xs_1[i_3.IntVal], __t1})}))}
 }), gopurs_runtime.Int(0))
 }
 

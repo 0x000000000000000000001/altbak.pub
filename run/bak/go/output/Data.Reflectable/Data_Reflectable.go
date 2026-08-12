@@ -3,6 +3,7 @@ package Data_Reflectable
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	unsafe "unsafe"
 )
 
 var cache_reifiableString gopurs_runtime.Value
@@ -57,11 +58,44 @@ var once_reflectType sync.Once
 func Get_reflectType() gopurs_runtime.Value {
 	once_reflectType.Do(func() {
 		cache_reflectType = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_reflectType(dict_0_box)
+return Call_reflectType(gopurs_runtime.CoerceToStruct[Constructor_Reflectable[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
 })
 	})
 	return cache_reflectType
 }
+
+type Constructor_Reifiable[T_t any] struct {
+	Rc uint32
+}
+
+
+func init() {
+	gopurs_runtime.StructGetters[3870607684] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
+		c := (*Constructor_Reifiable[gopurs_runtime.Value])(ptr)
+		switch key {
+
+		default: panic("Key not found in dictionary Constructor_Reifiable: " + key)
+		}
+	}
+}
+
+
+type Constructor_Reflectable[T_v any, T_t any] struct {
+	Rc uint32
+	V0 gopurs_runtime.Value
+}
+
+
+func init() {
+	gopurs_runtime.StructGetters[19771322] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
+		c := (*Constructor_Reflectable[gopurs_runtime.Value, gopurs_runtime.Value])(ptr)
+		switch key {
+		case "reflectType": return c.V0
+		default: panic("Key not found in dictionary Constructor_Reflectable: " + key)
+		}
+	}
+}
+
 
 func Call_reifyType(_dollar__unused_0_loop gopurs_runtime.Value, s_1_loop gopurs_runtime.Value, f_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
@@ -74,13 +108,13 @@ return gopurs_runtime.Apply3(Get_unsafeCoerce(), gopurs_runtime.Func(func(dictRe
 return gopurs_runtime.Apply(f_2, dictReflectable_3)
 }), gopurs_runtime.RecordDict1("reflectType", gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return s_1
-})), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: nil})
+})), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(nil)})
 }
 
-func Call_reflectType(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
+func Call_reflectType(dict_0_loop *Constructor_Reflectable[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_Reflectable[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "reflectType")
+return dict_0.V0
 }
 
 func Get_unsafeCoerce() gopurs_runtime.Value {

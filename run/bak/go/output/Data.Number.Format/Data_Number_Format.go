@@ -7,89 +7,6 @@ import (
 	unsafe "unsafe"
 )
 
-var cache_clamp gopurs_runtime.Value
-var once_clamp sync.Once
-func Get_clamp() gopurs_runtime.Value {
-	once_clamp.Do(func() {
-		cache_clamp = func() gopurs_runtime.Value {
-__local_var_0_0 := gopurs_runtime.Apply3(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil})
-_ = __local_var_0_0
-return gopurs_runtime.Func(func(low_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(hi_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-v_4_1 := gopurs_runtime.Apply2(__local_var_0_0, low_1, x_3)
-_ = v_4_1
-var __t3 gopurs_runtime.Value
-{
-if (v_4_1.Type == 9 && v_4_1.IntVal == 1527465420) {
-__t3 = x_3
-goto end_branch_3
-} else {
-
-}
-}
-{
-if (v_4_1.Type == 9 && v_4_1.IntVal == 902936544) {
-__t3 = low_1
-goto end_branch_3
-} else {
-
-}
-}
-{
-if (v_4_1.Type == 9 && v_4_1.IntVal == 380165415) {
-__t3 = low_1
-goto end_branch_3
-} else {
-
-}
-}
-{
-__t3 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_3:
-__local_var_5_2 := __t3
-_ = __local_var_5_2
-v_6_4 := gopurs_runtime.Apply2(__local_var_0_0, hi_2, __local_var_5_2)
-_ = v_6_4
-var __t5 gopurs_runtime.Value
-{
-if (v_6_4.Type == 9 && v_6_4.IntVal == 1527465420) {
-__t5 = hi_2
-goto end_branch_5
-} else {
-
-}
-}
-{
-if (v_6_4.Type == 9 && v_6_4.IntVal == 902936544) {
-__t5 = hi_2
-goto end_branch_5
-} else {
-
-}
-}
-{
-if (v_6_4.Type == 9 && v_6_4.IntVal == 380165415) {
-__t5 = __local_var_5_2
-goto end_branch_5
-} else {
-
-}
-}
-{
-__t5 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_5:
-return __t5
-})
-})
-})
-}()
-	})
-	return cache_clamp
-}
-
 var cache_Precision gopurs_runtime.Value
 var once_Precision sync.Once
 func Get_Precision() gopurs_runtime.Value {
@@ -139,10 +56,74 @@ var once_precision sync.Once
 func Get_precision() gopurs_runtime.Value {
 	once_precision.Do(func() {
 		cache_precision = func() gopurs_runtime.Value {
-__local_var_0_0 := gopurs_runtime.Apply2(Get_clamp(), gopurs_runtime.Int(1), gopurs_runtime.Int(21))
+__local_var_0_0 := gopurs_runtime.Apply3(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)})
 _ = __local_var_0_0
 return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1786680275, UnsafePtr: unsafe.Pointer(&Constructor_Precision{1, gopurs_runtime.Apply(__local_var_0_0, x_1).IntVal})}
+v_2_1 := gopurs_runtime.Apply2(__local_var_0_0, gopurs_runtime.Int(1), x_1)
+_ = v_2_1
+var __t3 gopurs_runtime.Value
+{
+if (v_2_1.Type == 9 && v_2_1.IntVal == 1527465420) {
+__t3 = x_1
+goto end_branch_3
+} else {
+
+}
+}
+{
+if (v_2_1.Type == 9 && v_2_1.IntVal == 902936544) {
+__t3 = gopurs_runtime.Int(1)
+goto end_branch_3
+} else {
+
+}
+}
+{
+if (v_2_1.Type == 9 && v_2_1.IntVal == 380165415) {
+__t3 = gopurs_runtime.Int(1)
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_3:
+__local_var_3_2 := __t3
+_ = __local_var_3_2
+v_4_4 := gopurs_runtime.Apply2(__local_var_0_0, gopurs_runtime.Int(21), __local_var_3_2)
+_ = v_4_4
+var __t5 gopurs_runtime.Value
+{
+if (v_4_4.Type == 9 && v_4_4.IntVal == 1527465420) {
+__t5 = gopurs_runtime.Int(21)
+goto end_branch_5
+} else {
+
+}
+}
+{
+if (v_4_4.Type == 9 && v_4_4.IntVal == 902936544) {
+__t5 = gopurs_runtime.Int(21)
+goto end_branch_5
+} else {
+
+}
+}
+{
+if (v_4_4.Type == 9 && v_4_4.IntVal == 380165415) {
+__t5 = __local_var_3_2
+goto end_branch_5
+} else {
+
+}
+}
+{
+__t5 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_5:
+return gopurs_runtime.Value{Type: 9, IntVal: 1786680275, UnsafePtr: unsafe.Pointer(&Constructor_Precision{1, __t5.IntVal})}
 })
 }()
 	})
@@ -154,10 +135,74 @@ var once_fixed sync.Once
 func Get_fixed() gopurs_runtime.Value {
 	once_fixed.Do(func() {
 		cache_fixed = func() gopurs_runtime.Value {
-__local_var_0_0 := gopurs_runtime.Apply2(Get_clamp(), gopurs_runtime.Int(0), gopurs_runtime.Int(20))
+__local_var_0_0 := gopurs_runtime.Apply3(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)})
 _ = __local_var_0_0
 return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1390206259, UnsafePtr: unsafe.Pointer(&Constructor_Fixed{1, gopurs_runtime.Apply(__local_var_0_0, x_1).IntVal})}
+v_2_1 := gopurs_runtime.Apply2(__local_var_0_0, gopurs_runtime.Int(0), x_1)
+_ = v_2_1
+var __t3 gopurs_runtime.Value
+{
+if (v_2_1.Type == 9 && v_2_1.IntVal == 1527465420) {
+__t3 = x_1
+goto end_branch_3
+} else {
+
+}
+}
+{
+if (v_2_1.Type == 9 && v_2_1.IntVal == 902936544) {
+__t3 = gopurs_runtime.Int(0)
+goto end_branch_3
+} else {
+
+}
+}
+{
+if (v_2_1.Type == 9 && v_2_1.IntVal == 380165415) {
+__t3 = gopurs_runtime.Int(0)
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_3:
+__local_var_3_2 := __t3
+_ = __local_var_3_2
+v_4_4 := gopurs_runtime.Apply2(__local_var_0_0, gopurs_runtime.Int(20), __local_var_3_2)
+_ = v_4_4
+var __t5 gopurs_runtime.Value
+{
+if (v_4_4.Type == 9 && v_4_4.IntVal == 1527465420) {
+__t5 = gopurs_runtime.Int(20)
+goto end_branch_5
+} else {
+
+}
+}
+{
+if (v_4_4.Type == 9 && v_4_4.IntVal == 902936544) {
+__t5 = gopurs_runtime.Int(20)
+goto end_branch_5
+} else {
+
+}
+}
+{
+if (v_4_4.Type == 9 && v_4_4.IntVal == 380165415) {
+__t5 = __local_var_3_2
+goto end_branch_5
+} else {
+
+}
+}
+{
+__t5 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_5:
+return gopurs_runtime.Value{Type: 9, IntVal: 1390206259, UnsafePtr: unsafe.Pointer(&Constructor_Fixed{1, __t5.IntVal})}
 })
 }()
 	})
@@ -169,10 +214,74 @@ var once_exponential sync.Once
 func Get_exponential() gopurs_runtime.Value {
 	once_exponential.Do(func() {
 		cache_exponential = func() gopurs_runtime.Value {
-__local_var_0_0 := gopurs_runtime.Apply2(Get_clamp(), gopurs_runtime.Int(0), gopurs_runtime.Int(20))
+__local_var_0_0 := gopurs_runtime.Apply3(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)})
 _ = __local_var_0_0
 return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1734244434, UnsafePtr: unsafe.Pointer(&Constructor_Exponential{1, gopurs_runtime.Apply(__local_var_0_0, x_1).IntVal})}
+v_2_1 := gopurs_runtime.Apply2(__local_var_0_0, gopurs_runtime.Int(0), x_1)
+_ = v_2_1
+var __t3 gopurs_runtime.Value
+{
+if (v_2_1.Type == 9 && v_2_1.IntVal == 1527465420) {
+__t3 = x_1
+goto end_branch_3
+} else {
+
+}
+}
+{
+if (v_2_1.Type == 9 && v_2_1.IntVal == 902936544) {
+__t3 = gopurs_runtime.Int(0)
+goto end_branch_3
+} else {
+
+}
+}
+{
+if (v_2_1.Type == 9 && v_2_1.IntVal == 380165415) {
+__t3 = gopurs_runtime.Int(0)
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_3:
+__local_var_3_2 := __t3
+_ = __local_var_3_2
+v_4_4 := gopurs_runtime.Apply2(__local_var_0_0, gopurs_runtime.Int(20), __local_var_3_2)
+_ = v_4_4
+var __t5 gopurs_runtime.Value
+{
+if (v_4_4.Type == 9 && v_4_4.IntVal == 1527465420) {
+__t5 = gopurs_runtime.Int(20)
+goto end_branch_5
+} else {
+
+}
+}
+{
+if (v_4_4.Type == 9 && v_4_4.IntVal == 902936544) {
+__t5 = gopurs_runtime.Int(20)
+goto end_branch_5
+} else {
+
+}
+}
+{
+if (v_4_4.Type == 9 && v_4_4.IntVal == 380165415) {
+__t5 = __local_var_3_2
+goto end_branch_5
+} else {
+
+}
+}
+{
+__t5 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_5:
+return gopurs_runtime.Value{Type: 9, IntVal: 1734244434, UnsafePtr: unsafe.Pointer(&Constructor_Exponential{1, __t5.IntVal})}
 })
 }()
 	})

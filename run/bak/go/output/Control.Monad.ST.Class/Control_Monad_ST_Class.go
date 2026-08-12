@@ -6,6 +6,7 @@ import (
 	pkg_Unsafe_Coerce "gopurs/output/Unsafe.Coerce"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	unsafe "unsafe"
 )
 
 var cache_monadSTST gopurs_runtime.Value
@@ -37,16 +38,35 @@ var once_liftST sync.Once
 func Get_liftST() gopurs_runtime.Value {
 	once_liftST.Do(func() {
 		cache_liftST = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_liftST(dict_0_box)
+return Call_liftST(gopurs_runtime.CoerceToStruct[Constructor_MonadST[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
 })
 	})
 	return cache_liftST
 }
 
-func Call_liftST(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
+type Constructor_MonadST[T_s any, T_m any] struct {
+	Rc uint32
+	V0 gopurs_runtime.Value
+	V1 gopurs_runtime.Value
+}
+
+
+func init() {
+	gopurs_runtime.StructGetters[2155655715] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
+		c := (*Constructor_MonadST[gopurs_runtime.Value, gopurs_runtime.Value])(ptr)
+		switch key {
+		case "Monad0": return c.V0
+		case "liftST": return c.V1
+		default: panic("Key not found in dictionary Constructor_MonadST: " + key)
+		}
+	}
+}
+
+
+func Call_liftST(dict_0_loop *Constructor_MonadST[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_MonadST[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "liftST")
+return dict_0.V1
 }
 
 

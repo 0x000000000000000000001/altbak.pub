@@ -1,8 +1,10 @@
 package Data_Traversable_Accum_Internal
 
 import (
+	pkg_Control_Applicative "gopurs/output/Control.Applicative"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	unsafe "unsafe"
 )
 
 var cache_StateR gopurs_runtime.Value
@@ -238,6 +240,21 @@ return gopurs_runtime.RecordDict2("accum", "value", s_1, a_0)
 	return cache_applicativeStateR
 }
 
+var cache_applicativeStateR__ptrControl_Applicative_Constructor_Applicative_gopurs_runtime_Value__2039640491 gopurs_runtime.Value
+var once_applicativeStateR__ptrControl_Applicative_Constructor_Applicative_gopurs_runtime_Value__2039640491 sync.Once
+func Get_applicativeStateR__ptrControl_Applicative_Constructor_Applicative_gopurs_runtime_Value__2039640491() gopurs_runtime.Value {
+	once_applicativeStateR__ptrControl_Applicative_Constructor_Applicative_gopurs_runtime_Value__2039640491.Do(func() {
+		cache_applicativeStateR__ptrControl_Applicative_Constructor_Applicative_gopurs_runtime_Value__2039640491 = gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(&pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_applyStateR()
+}), gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict2("accum", "value", s_1, a_0)
+})
+})})}
+	})
+	return cache_applicativeStateR__ptrControl_Applicative_Constructor_Applicative_gopurs_runtime_Value__2039640491
+}
+
 var cache_applicativeStateL gopurs_runtime.Value
 var once_applicativeStateL sync.Once
 func Get_applicativeStateL() gopurs_runtime.Value {
@@ -251,6 +268,21 @@ return gopurs_runtime.RecordDict2("accum", "value", s_1, a_0)
 }))
 	})
 	return cache_applicativeStateL
+}
+
+var cache_applicativeStateL__ptrControl_Applicative_Constructor_Applicative_gopurs_runtime_Value__2039640491 gopurs_runtime.Value
+var once_applicativeStateL__ptrControl_Applicative_Constructor_Applicative_gopurs_runtime_Value__2039640491 sync.Once
+func Get_applicativeStateL__ptrControl_Applicative_Constructor_Applicative_gopurs_runtime_Value__2039640491() gopurs_runtime.Value {
+	once_applicativeStateL__ptrControl_Applicative_Constructor_Applicative_gopurs_runtime_Value__2039640491.Do(func() {
+		cache_applicativeStateL__ptrControl_Applicative_Constructor_Applicative_gopurs_runtime_Value__2039640491 = gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(&pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_applyStateL()
+}), gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict2("accum", "value", s_1, a_0)
+})
+})})}
+	})
+	return cache_applicativeStateL__ptrControl_Applicative_Constructor_Applicative_gopurs_runtime_Value__2039640491
 }
 
 func Call_StateR(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {

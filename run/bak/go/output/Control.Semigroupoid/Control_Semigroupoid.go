@@ -3,6 +3,7 @@ package Control_Semigroupoid
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	unsafe "unsafe"
 )
 
 var cache_semigroupoidFn gopurs_runtime.Value
@@ -18,6 +19,21 @@ return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(g_1, x_2))
 }))
 	})
 	return cache_semigroupoidFn
+}
+
+var cache_semigroupoidFn__ptrConstructor_Semigroupoid_gopurs_runtime_Value__2387483462 gopurs_runtime.Value
+var once_semigroupoidFn__ptrConstructor_Semigroupoid_gopurs_runtime_Value__2387483462 sync.Once
+func Get_semigroupoidFn__ptrConstructor_Semigroupoid_gopurs_runtime_Value__2387483462() gopurs_runtime.Value {
+	once_semigroupoidFn__ptrConstructor_Semigroupoid_gopurs_runtime_Value__2387483462.Do(func() {
+		cache_semigroupoidFn__ptrConstructor_Semigroupoid_gopurs_runtime_Value__2387483462 = gopurs_runtime.Value{Type: 9, IntVal: 350442445, UnsafePtr: unsafe.Pointer(&Constructor_Semigroupoid[gopurs_runtime.Value]{1, gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(g_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(g_1, x_2))
+})
+})
+})})}
+	})
+	return cache_semigroupoidFn__ptrConstructor_Semigroupoid_gopurs_runtime_Value__2387483462
 }
 
 var cache_semigroupoidFn__gopurs_runtime_Value_3002128382 gopurs_runtime.Value
@@ -40,7 +56,7 @@ var once_compose sync.Once
 func Get_compose() gopurs_runtime.Value {
 	once_compose.Do(func() {
 		cache_compose = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_compose(dict_0_box)
+return Call_compose(gopurs_runtime.CoerceToStruct[Constructor_Semigroupoid[gopurs_runtime.Value]](dict_0_box))
 })
 	})
 	return cache_compose
@@ -51,7 +67,7 @@ var once_compose__gopurs_runtime_Value_858342840 sync.Once
 func Get_compose__gopurs_runtime_Value_858342840() gopurs_runtime.Value {
 	once_compose__gopurs_runtime_Value_858342840.Do(func() {
 		cache_compose__gopurs_runtime_Value_858342840 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_compose__gopurs_runtime_Value_858342840(dict_0_box)
+return Call_compose__gopurs_runtime_Value_858342840(gopurs_runtime.CoerceToStruct[Constructor_Semigroupoid[gopurs_runtime.Value]](dict_0_box))
 })
 	})
 	return cache_compose__gopurs_runtime_Value_858342840
@@ -62,7 +78,7 @@ var once_composeFlipped sync.Once
 func Get_composeFlipped() gopurs_runtime.Value {
 	once_composeFlipped.Do(func() {
 		cache_composeFlipped = gopurs_runtime.Func3(func(dictSemigroupoid_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, g_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_composeFlipped(dictSemigroupoid_0_box, f_1_box, g_2_box)
+return Call_composeFlipped(gopurs_runtime.CoerceToStruct[Constructor_Semigroupoid[gopurs_runtime.Value]](dictSemigroupoid_0_box), f_1_box, g_2_box)
 })
 	})
 	return cache_composeFlipped
@@ -73,42 +89,59 @@ var once_composeFlipped__gopurs_runtime_Value_2583068543 sync.Once
 func Get_composeFlipped__gopurs_runtime_Value_2583068543() gopurs_runtime.Value {
 	once_composeFlipped__gopurs_runtime_Value_2583068543.Do(func() {
 		cache_composeFlipped__gopurs_runtime_Value_2583068543 = gopurs_runtime.Func3(func(dictSemigroupoid_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, g_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_composeFlipped__gopurs_runtime_Value_2583068543(dictSemigroupoid_0_box, f_1_box, g_2_box)
+return Call_composeFlipped__gopurs_runtime_Value_2583068543(gopurs_runtime.CoerceToStruct[Constructor_Semigroupoid[gopurs_runtime.Value]](dictSemigroupoid_0_box), f_1_box, g_2_box)
 })
 	})
 	return cache_composeFlipped__gopurs_runtime_Value_2583068543
 }
 
-func Call_compose(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
-_ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "compose")
+type Constructor_Semigroupoid[T_a any] struct {
+	Rc uint32
+	V0 gopurs_runtime.Value
 }
 
-func Call_compose__gopurs_runtime_Value_858342840(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
-_ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "compose")
+
+func init() {
+	gopurs_runtime.StructGetters[350442445] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
+		c := (*Constructor_Semigroupoid[gopurs_runtime.Value])(ptr)
+		switch key {
+		case "compose": return c.V0
+		default: panic("Key not found in dictionary Constructor_Semigroupoid: " + key)
+		}
+	}
 }
 
-func Call_composeFlipped(dictSemigroupoid_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, g_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictSemigroupoid_0 gopurs_runtime.Value = dictSemigroupoid_0_loop
+
+func Call_compose(dict_0_loop *Constructor_Semigroupoid[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_Semigroupoid[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_compose__gopurs_runtime_Value_858342840(dict_0_loop *Constructor_Semigroupoid[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_Semigroupoid[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_composeFlipped(dictSemigroupoid_0_loop *Constructor_Semigroupoid[gopurs_runtime.Value], f_1_loop gopurs_runtime.Value, g_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictSemigroupoid_0 *Constructor_Semigroupoid[gopurs_runtime.Value] = dictSemigroupoid_0_loop
 _ = dictSemigroupoid_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 var g_2 gopurs_runtime.Value = g_2_loop
 _ = g_2
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroupoid_0, "compose"), g_2, f_1)
+return gopurs_runtime.Apply2(dictSemigroupoid_0.V0, g_2, f_1)
 }
 
-func Call_composeFlipped__gopurs_runtime_Value_2583068543(dictSemigroupoid_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, g_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictSemigroupoid_0 gopurs_runtime.Value = dictSemigroupoid_0_loop
+func Call_composeFlipped__gopurs_runtime_Value_2583068543(dictSemigroupoid_0_loop *Constructor_Semigroupoid[gopurs_runtime.Value], f_1_loop gopurs_runtime.Value, g_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictSemigroupoid_0 *Constructor_Semigroupoid[gopurs_runtime.Value] = dictSemigroupoid_0_loop
 _ = dictSemigroupoid_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 var g_2 gopurs_runtime.Value = g_2_loop
 _ = g_2
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroupoid_0, "compose"), g_2, f_1)
+return gopurs_runtime.Apply2(dictSemigroupoid_0.V0, g_2, f_1)
 }
 
 

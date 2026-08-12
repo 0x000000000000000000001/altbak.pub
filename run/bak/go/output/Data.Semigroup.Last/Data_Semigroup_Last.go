@@ -4,6 +4,7 @@ import (
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	unsafe "unsafe"
 )
 
 var cache_Last gopurs_runtime.Value
@@ -39,6 +40,19 @@ return x_1
 }))
 	})
 	return cache_semigroupLast
+}
+
+var cache_semigroupLast__ptrData_Semigroup_Constructor_Semigroup_gopurs_runtime_Value__2108226578 gopurs_runtime.Value
+var once_semigroupLast__ptrData_Semigroup_Constructor_Semigroup_gopurs_runtime_Value__2108226578 sync.Once
+func Get_semigroupLast__ptrData_Semigroup_Constructor_Semigroup_gopurs_runtime_Value__2108226578() gopurs_runtime.Value {
+	once_semigroupLast__ptrData_Semigroup_Constructor_Semigroup_gopurs_runtime_Value__2108226578.Do(func() {
+		cache_semigroupLast__ptrData_Semigroup_Constructor_Semigroup_gopurs_runtime_Value__2108226578 = gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(&pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]{1, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+})
+})})}
+	})
+	return cache_semigroupLast__ptrData_Semigroup_Constructor_Semigroup_gopurs_runtime_Value__2108226578
 }
 
 var cache_ordLast gopurs_runtime.Value

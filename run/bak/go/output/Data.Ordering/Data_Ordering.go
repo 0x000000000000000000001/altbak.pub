@@ -3,13 +3,14 @@ package Data_Ordering
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	unsafe "unsafe"
 )
 
 var cache_LT gopurs_runtime.Value
 var once_LT sync.Once
 func Get_LT() gopurs_runtime.Value {
 	once_LT.Do(func() {
-		cache_LT = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}
+		cache_LT = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}
 	})
 	return cache_LT
 }
@@ -18,7 +19,7 @@ var cache_GT gopurs_runtime.Value
 var once_GT sync.Once
 func Get_GT() gopurs_runtime.Value {
 	once_GT.Do(func() {
-		cache_GT = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil}
+		cache_GT = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}
 	})
 	return cache_GT
 }
@@ -27,7 +28,7 @@ var cache_EQ gopurs_runtime.Value
 var once_EQ sync.Once
 func Get_EQ() gopurs_runtime.Value {
 	once_EQ.Do(func() {
-		cache_EQ = gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}
+		cache_EQ = gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}
 	})
 	return cache_EQ
 }
@@ -81,7 +82,7 @@ return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value 
 var __t0 gopurs_runtime.Value
 {
 if (v_0.Type == 9 && v_0.IntVal == 1527465420) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}
 goto end_branch_0
 } else {
 
@@ -89,7 +90,7 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 380165415) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}
 goto end_branch_0
 } else {
 
@@ -214,7 +215,7 @@ _ = v_0
 var __t0 gopurs_runtime.Value
 {
 if (v_0.Type == 9 && v_0.IntVal == 380165415) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: nil}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}
 goto end_branch_0
 } else {
 
@@ -222,7 +223,7 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 902936544) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}
 goto end_branch_0
 } else {
 
@@ -230,7 +231,7 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 1527465420) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: nil}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}
 goto end_branch_0
 } else {
 

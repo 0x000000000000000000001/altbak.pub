@@ -13,7 +13,7 @@ var once_prj sync.Once
 func Get_prj() gopurs_runtime.Value {
 	once_prj.Do(func() {
 		cache_prj = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_prj(dict_0_box)
+return Call_prj(gopurs_runtime.CoerceToStruct[Constructor_Inject[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
 })
 	})
 	return cache_prj
@@ -67,7 +67,7 @@ var once_inj sync.Once
 func Get_inj() gopurs_runtime.Value {
 	once_inj.Do(func() {
 		cache_inj = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_inj(dict_0_box)
+return Call_inj(gopurs_runtime.CoerceToStruct[Constructor_Inject[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
 })
 	})
 	return cache_inj
@@ -84,16 +84,35 @@ return Call_injectRight(dictInject_0_box)
 	return cache_injectRight
 }
 
-func Call_prj(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
-_ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "prj")
+type Constructor_Inject[T_a any, T_b any] struct {
+	Rc uint32
+	V0 gopurs_runtime.Value
+	V1 gopurs_runtime.Value
 }
 
-func Call_inj(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
+
+func init() {
+	gopurs_runtime.StructGetters[89024546] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
+		c := (*Constructor_Inject[gopurs_runtime.Value, gopurs_runtime.Value])(ptr)
+		switch key {
+		case "inj": return c.V0
+		case "prj": return c.V1
+		default: panic("Key not found in dictionary Constructor_Inject: " + key)
+		}
+	}
+}
+
+
+func Call_prj(dict_0_loop *Constructor_Inject[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_Inject[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "inj")
+return dict_0.V1
+}
+
+func Call_inj(dict_0_loop *Constructor_Inject[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_Inject[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
 }
 
 func Call_injectRight(dictInject_0_loop gopurs_runtime.Value) gopurs_runtime.Value {

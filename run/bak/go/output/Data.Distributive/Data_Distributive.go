@@ -8,6 +8,7 @@ import (
 	pkg_Unsafe_Coerce "gopurs/output/Unsafe.Coerce"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	unsafe "unsafe"
 )
 
 var cache_identity gopurs_runtime.Value
@@ -53,7 +54,7 @@ var once_distribute sync.Once
 func Get_distribute() gopurs_runtime.Value {
 	once_distribute.Do(func() {
 		cache_distribute = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_distribute(dict_0_box)
+return Call_distribute(gopurs_runtime.CoerceToStruct[Constructor_Distributive[gopurs_runtime.Value]](dict_0_box))
 })
 	})
 	return cache_distribute
@@ -64,7 +65,7 @@ var once_distribute__gopurs_runtime_Value_2045770422 sync.Once
 func Get_distribute__gopurs_runtime_Value_2045770422() gopurs_runtime.Value {
 	once_distribute__gopurs_runtime_Value_2045770422.Do(func() {
 		cache_distribute__gopurs_runtime_Value_2045770422 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_distribute__gopurs_runtime_Value_2045770422(dict_0_box)
+return Call_distribute__gopurs_runtime_Value_2045770422(gopurs_runtime.CoerceToStruct[Constructor_Distributive[gopurs_runtime.Value]](dict_0_box))
 })
 	})
 	return cache_distribute__gopurs_runtime_Value_2045770422
@@ -103,8 +104,8 @@ var cache_cotraverse gopurs_runtime.Value
 var once_cotraverse sync.Once
 func Get_cotraverse() gopurs_runtime.Value {
 	once_cotraverse.Do(func() {
-		cache_cotraverse = gopurs_runtime.Func2(func(dictDistributive_0_box gopurs_runtime.Value, dictFunctor_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_cotraverse(dictDistributive_0_box, dictFunctor_1_box)
+		cache_cotraverse = gopurs_runtime.Func(func(dictDistributive_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_cotraverse(gopurs_runtime.CoerceToStruct[Constructor_Distributive[gopurs_runtime.Value]](dictDistributive_0_box))
 })
 	})
 	return cache_cotraverse
@@ -115,7 +116,7 @@ var once_collectDefault sync.Once
 func Get_collectDefault() gopurs_runtime.Value {
 	once_collectDefault.Do(func() {
 		cache_collectDefault = gopurs_runtime.Func2(func(dictDistributive_0_box gopurs_runtime.Value, dictFunctor_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_collectDefault(dictDistributive_0_box, dictFunctor_1_box)
+return Call_collectDefault(gopurs_runtime.CoerceToStruct[Constructor_Distributive[gopurs_runtime.Value]](dictDistributive_0_box), gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](dictFunctor_1_box))
 })
 	})
 	return cache_collectDefault
@@ -137,7 +138,7 @@ var once_collect sync.Once
 func Get_collect() gopurs_runtime.Value {
 	once_collect.Do(func() {
 		cache_collect = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_collect(dict_0_box)
+return Call_collect(gopurs_runtime.CoerceToStruct[Constructor_Distributive[gopurs_runtime.Value]](dict_0_box))
 })
 	})
 	return cache_collect
@@ -148,7 +149,7 @@ var once_collect__gopurs_runtime_Value_1176340970 sync.Once
 func Get_collect__gopurs_runtime_Value_1176340970() gopurs_runtime.Value {
 	once_collect__gopurs_runtime_Value_1176340970.Do(func() {
 		cache_collect__gopurs_runtime_Value_1176340970 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_collect__gopurs_runtime_Value_1176340970(dict_0_box)
+return Call_collect__gopurs_runtime_Value_1176340970(gopurs_runtime.CoerceToStruct[Constructor_Distributive[gopurs_runtime.Value]](dict_0_box))
 })
 	})
 	return cache_collect__gopurs_runtime_Value_1176340970
@@ -159,11 +160,32 @@ var once_distributeDefault sync.Once
 func Get_distributeDefault() gopurs_runtime.Value {
 	once_distributeDefault.Do(func() {
 		cache_distributeDefault = gopurs_runtime.Func2(func(dictDistributive_0_box gopurs_runtime.Value, dictFunctor_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_distributeDefault(dictDistributive_0_box, dictFunctor_1_box)
+return Call_distributeDefault(gopurs_runtime.CoerceToStruct[Constructor_Distributive[gopurs_runtime.Value]](dictDistributive_0_box), gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](dictFunctor_1_box))
 })
 	})
 	return cache_distributeDefault
 }
+
+type Constructor_Distributive[T_f any] struct {
+	Rc uint32
+	V0 gopurs_runtime.Value
+	V1 gopurs_runtime.Value
+	V2 gopurs_runtime.Value
+}
+
+
+func init() {
+	gopurs_runtime.StructGetters[457335066] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
+		c := (*Constructor_Distributive[gopurs_runtime.Value])(ptr)
+		switch key {
+		case "Functor0": return c.V0
+		case "collect": return c.V1
+		case "distribute": return c.V2
+		default: panic("Key not found in dictionary Constructor_Distributive: " + key)
+		}
+	}
+}
+
 
 func Call_identity(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
@@ -171,43 +193,45 @@ _ = x_0
 return x_0
 }
 
-func Call_distribute(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
+func Call_distribute(dict_0_loop *Constructor_Distributive[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_Distributive[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "distribute")
+return dict_0.V2
 }
 
-func Call_distribute__gopurs_runtime_Value_2045770422(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
+func Call_distribute__gopurs_runtime_Value_2045770422(dict_0_loop *Constructor_Distributive[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_Distributive[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "distribute")
+return dict_0.V2
 }
 
-func Call_cotraverse(dictDistributive_0_loop gopurs_runtime.Value, dictFunctor_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictDistributive_0 gopurs_runtime.Value = dictDistributive_0_loop
+func Call_cotraverse(dictDistributive_0_loop *Constructor_Distributive[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dictDistributive_0 *Constructor_Distributive[gopurs_runtime.Value] = dictDistributive_0_loop
 _ = dictDistributive_0
-var dictFunctor_1 gopurs_runtime.Value = dictFunctor_1_loop
-_ = dictFunctor_1
-distribute2_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDistributive_0, "distribute"), dictFunctor_1)
-_ = distribute2_2_0
-return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDistributive_0, "Functor0"), gopurs_runtime.Value{}), "map"), f_3)
-_ = __local_var_4_1
-return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_4_1, gopurs_runtime.Apply(distribute2_2_0, x_5))
+Functor0_1_0 := gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(dictDistributive_0.V0, gopurs_runtime.Value{}))
+_ = Functor0_1_0
+return gopurs_runtime.Func(func(dictFunctor_2 gopurs_runtime.Value) gopurs_runtime.Value {
+distribute2_3_1 := gopurs_runtime.Apply(dictDistributive_0.V2, dictFunctor_2)
+_ = distribute2_3_1
+return gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_5_2 := gopurs_runtime.Apply(Functor0_1_0.V0, f_4)
+_ = __local_var_5_2
+return gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_5_2, gopurs_runtime.Apply(distribute2_3_1, x_6))
 })
 })
+})
 }
 
-func Call_collectDefault(dictDistributive_0_loop gopurs_runtime.Value, dictFunctor_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictDistributive_0 gopurs_runtime.Value = dictDistributive_0_loop
+func Call_collectDefault(dictDistributive_0_loop *Constructor_Distributive[gopurs_runtime.Value], dictFunctor_1_loop *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dictDistributive_0 *Constructor_Distributive[gopurs_runtime.Value] = dictDistributive_0_loop
 _ = dictDistributive_0
-var dictFunctor_1 gopurs_runtime.Value = dictFunctor_1_loop
+var dictFunctor_1 *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value] = dictFunctor_1_loop
 _ = dictFunctor_1
-distribute2_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDistributive_0, "distribute"), dictFunctor_1)
+distribute2_2_0 := gopurs_runtime.Apply(dictDistributive_0.V2, gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(dictFunctor_1)})
 _ = distribute2_2_0
 return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_1, "map"), f_3)
+__local_var_4_1 := gopurs_runtime.Apply(dictFunctor_1.V0, f_3)
 _ = __local_var_4_1
 return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(distribute2_2_0, gopurs_runtime.Apply(__local_var_4_1, x_5))
@@ -221,52 +245,50 @@ for {
 if false { continue distributiveTuple }
 var dictTypeEquals_0 gopurs_runtime.Value = dictTypeEquals_0_loop
 _ = dictTypeEquals_0
-from_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictTypeEquals_0, "proof"), gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return a_1
-}))
-_ = from_1_0
-return gopurs_runtime.RecordDict3("Functor0", "collect", "distribute", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict3("Functor0", "collect", "distribute", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return pkg_Data_Tuple.Get_functorTuple()
-}), gopurs_runtime.Func(func(dictFunctor_2 gopurs_runtime.Value) gopurs_runtime.Value {
-distribute2_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Call_distributiveTuple(dictTypeEquals_0), "distribute"), dictFunctor_2)
-_ = distribute2_3_1
-return gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_5_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_2, "map"), f_4)
-_ = __local_var_5_2
-return gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(distribute2_3_1, gopurs_runtime.Apply(__local_var_5_2, x_6))
-})
-})
-}), gopurs_runtime.Func(func(dictFunctor_2 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_3_3 := gopurs_runtime.Apply(pkg_Data_Tuple.Get_Tuple(), gopurs_runtime.Apply(from_1_0, pkg_Data_Unit.Get_unit()))
-_ = __local_var_3_3
-__local_var_4_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_2, "map"), pkg_Data_Tuple.Get_snd())
-_ = __local_var_4_4
+}), gopurs_runtime.Func(func(dictFunctor_1 gopurs_runtime.Value) gopurs_runtime.Value {
+distribute2_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Call_distributiveTuple(dictTypeEquals_0), "distribute"), dictFunctor_1)
+_ = distribute2_2_0
+return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_1, "map"), f_3)
+_ = __local_var_4_1
 return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_3_3, gopurs_runtime.Apply(__local_var_4_4, x_5))
+return gopurs_runtime.Apply(distribute2_2_0, gopurs_runtime.Apply(__local_var_4_1, x_5))
+})
+})
+}), gopurs_runtime.Func(func(dictFunctor_1 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_2_2 := gopurs_runtime.Apply(pkg_Data_Tuple.Get_Tuple(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictTypeEquals_0, "proof"), gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return a_2
+}), pkg_Data_Unit.Get_unit()))
+_ = __local_var_2_2
+__local_var_3_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_1, "map"), pkg_Data_Tuple.Get_snd())
+_ = __local_var_3_3
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_2_2, gopurs_runtime.Apply(__local_var_3_3, x_4))
 })
 }))
 }
 }
 
-func Call_collect(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
+func Call_collect(dict_0_loop *Constructor_Distributive[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_Distributive[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "collect")
+return dict_0.V1
 }
 
-func Call_collect__gopurs_runtime_Value_1176340970(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
+func Call_collect__gopurs_runtime_Value_1176340970(dict_0_loop *Constructor_Distributive[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_Distributive[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "collect")
+return dict_0.V1
 }
 
-func Call_distributeDefault(dictDistributive_0_loop gopurs_runtime.Value, dictFunctor_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictDistributive_0 gopurs_runtime.Value = dictDistributive_0_loop
+func Call_distributeDefault(dictDistributive_0_loop *Constructor_Distributive[gopurs_runtime.Value], dictFunctor_1_loop *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dictDistributive_0 *Constructor_Distributive[gopurs_runtime.Value] = dictDistributive_0_loop
 _ = dictDistributive_0
-var dictFunctor_1 gopurs_runtime.Value = dictFunctor_1_loop
+var dictFunctor_1 *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value] = dictFunctor_1_loop
 _ = dictFunctor_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictDistributive_0, "collect"), dictFunctor_1, Get_identity())
+return gopurs_runtime.Apply2(dictDistributive_0.V1, gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(dictFunctor_1)}, Get_identity())
 }
 
 

@@ -1,10 +1,12 @@
 package Control_Comonad_Traced_Class
 
 import (
+	pkg_Control_Comonad "gopurs/output/Control.Comonad"
 	pkg_Control_Comonad_Env_Trans "gopurs/output/Control.Comonad.Env.Trans"
 	pkg_Control_Comonad_Store_Trans "gopurs/output/Control.Comonad.Store.Trans"
 	pkg_Control_Comonad_Traced_Trans "gopurs/output/Control.Comonad.Traced.Trans"
 	pkg_Control_Comonad_Trans_Class "gopurs/output/Control.Comonad.Trans.Class"
+	pkg_Data_Functor "gopurs/output/Data.Functor"
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
@@ -16,7 +18,7 @@ var once_track sync.Once
 func Get_track() gopurs_runtime.Value {
 	once_track.Do(func() {
 		cache_track = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_track(dict_0_box)
+return Call_track(gopurs_runtime.CoerceToStruct[Constructor_ComonadTraced[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
 })
 	})
 	return cache_track
@@ -27,7 +29,7 @@ var once_track__gopurs_runtime_Value_250573732 sync.Once
 func Get_track__gopurs_runtime_Value_250573732() gopurs_runtime.Value {
 	once_track__gopurs_runtime_Value_250573732.Do(func() {
 		cache_track__gopurs_runtime_Value_250573732 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_track__gopurs_runtime_Value_250573732(dict_0_box)
+return Call_track__gopurs_runtime_Value_250573732(gopurs_runtime.CoerceToStruct[Constructor_ComonadTraced[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
 })
 	})
 	return cache_track__gopurs_runtime_Value_250573732
@@ -37,8 +39,8 @@ var cache_tracks gopurs_runtime.Value
 var once_tracks sync.Once
 func Get_tracks() gopurs_runtime.Value {
 	once_tracks.Do(func() {
-		cache_tracks = gopurs_runtime.Func3(func(dictComonadTraced_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, w_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_tracks(dictComonadTraced_0_box, f_1_box, w_2_box)
+		cache_tracks = gopurs_runtime.Func(func(dictComonadTraced_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_tracks(gopurs_runtime.CoerceToStruct[Constructor_ComonadTraced[gopurs_runtime.Value, gopurs_runtime.Value]](dictComonadTraced_0_box))
 })
 	})
 	return cache_tracks
@@ -82,7 +84,7 @@ var once_listens sync.Once
 func Get_listens() gopurs_runtime.Value {
 	once_listens.Do(func() {
 		cache_listens = gopurs_runtime.Func3(func(dictFunctor_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_listens(dictFunctor_0_box, f_1_box, v_2_box)
+return Call_listens(gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](dictFunctor_0_box), f_1_box, v_2_box)
 })
 	})
 	return cache_listens
@@ -93,7 +95,7 @@ var once_listen sync.Once
 func Get_listen() gopurs_runtime.Value {
 	once_listen.Do(func() {
 		cache_listen = gopurs_runtime.Func2(func(dictFunctor_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_listen(dictFunctor_0_box, v_1_box)
+return Call_listen(gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](dictFunctor_0_box), v_1_box)
 })
 	})
 	return cache_listen
@@ -148,32 +150,53 @@ var once_censor sync.Once
 func Get_censor() gopurs_runtime.Value {
 	once_censor.Do(func() {
 		cache_censor = gopurs_runtime.Func3(func(dictFunctor_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_censor(dictFunctor_0_box, f_1_box, v_2_box)
+return Call_censor(gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](dictFunctor_0_box), f_1_box, v_2_box)
 })
 	})
 	return cache_censor
 }
 
-func Call_track(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
-_ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "track")
+type Constructor_ComonadTraced[T_t any, T_w any] struct {
+	Rc uint32
+	V0 gopurs_runtime.Value
+	V1 gopurs_runtime.Value
 }
 
-func Call_track__gopurs_runtime_Value_250573732(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
-_ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "track")
+
+func init() {
+	gopurs_runtime.StructGetters[433046755] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
+		c := (*Constructor_ComonadTraced[gopurs_runtime.Value, gopurs_runtime.Value])(ptr)
+		switch key {
+		case "Comonad0": return c.V0
+		case "track": return c.V1
+		default: panic("Key not found in dictionary Constructor_ComonadTraced: " + key)
+		}
+	}
 }
 
-func Call_tracks(dictComonadTraced_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, w_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictComonadTraced_0 gopurs_runtime.Value = dictComonadTraced_0_loop
+
+func Call_track(dict_0_loop *Constructor_ComonadTraced[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_ComonadTraced[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V1
+}
+
+func Call_track__gopurs_runtime_Value_250573732(dict_0_loop *Constructor_ComonadTraced[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_ComonadTraced[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V1
+}
+
+func Call_tracks(dictComonadTraced_0_loop *Constructor_ComonadTraced[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+var dictComonadTraced_0 *Constructor_ComonadTraced[gopurs_runtime.Value, gopurs_runtime.Value] = dictComonadTraced_0_loop
 _ = dictComonadTraced_0
-var f_1 gopurs_runtime.Value = f_1_loop
-_ = f_1
-var w_2 gopurs_runtime.Value = w_2_loop
-_ = w_2
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictComonadTraced_0, "track"), gopurs_runtime.Apply(f_1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadTraced_0, "Comonad0"), gopurs_runtime.Value{}), "extract"), w_2)), w_2)
+Comonad0_1_0 := gopurs_runtime.CoerceToStruct[pkg_Control_Comonad.Constructor_Comonad[gopurs_runtime.Value]](gopurs_runtime.Apply(dictComonadTraced_0.V0, gopurs_runtime.Value{}))
+_ = Comonad0_1_0
+return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(w_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(dictComonadTraced_0.V1, gopurs_runtime.Apply(f_2, gopurs_runtime.Apply(Comonad0_1_0.V1, w_3)), w_3)
+})
+})
 }
 
 func Call_lowerTrack1(dictComonadTraced_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -218,28 +241,28 @@ return gopurs_runtime.Apply(__local_var_3_1, gopurs_runtime.Apply(lower1_1_0, x_
 })
 }
 
-func Call_listens(dictFunctor_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
+func Call_listens(dictFunctor_0_loop *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value], f_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictFunctor_0 *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value] = dictFunctor_0_loop
 _ = dictFunctor_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func(func(g_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(dictFunctor_0.V0, gopurs_runtime.Func(func(g_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(t_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply(g_3, t_4), gopurs_runtime.Apply(f_1, t_4)})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply(g_3, t_4), gopurs_runtime.Apply(f_1, t_4)})}))}
 })
 }), v_2)
 }
 
-func Call_listen(dictFunctor_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
+func Call_listen(dictFunctor_0_loop *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value], v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictFunctor_0 *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value] = dictFunctor_0_loop
 _ = dictFunctor_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(dictFunctor_0.V0, gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(t_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply(f_2, t_3), t_3})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply(f_2, t_3), t_3})}))}
 })
 }), v_1)
 }
@@ -312,14 +335,14 @@ return comonadEnvT_1_0
 }), Call_lowerTrack3(dictComonadTraced_0))
 }
 
-func Call_censor(dictFunctor_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
+func Call_censor(dictFunctor_0_loop *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value], f_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictFunctor_0 *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value] = dictFunctor_0_loop
 _ = dictFunctor_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(dictFunctor_0.V0, gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(v1_3, gopurs_runtime.Apply(f_1, x_4))
 })

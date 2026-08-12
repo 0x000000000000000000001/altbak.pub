@@ -4,6 +4,7 @@ import (
 	pkg_Data_Functor "gopurs/output/Data.Functor"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	unsafe "unsafe"
 )
 
 var cache_invariantMultiplicative gopurs_runtime.Value
@@ -103,7 +104,7 @@ var once_imapF sync.Once
 func Get_imapF() gopurs_runtime.Value {
 	once_imapF.Do(func() {
 		cache_imapF = gopurs_runtime.Func3(func(dictFunctor_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_imapF(dictFunctor_0_box, f_1_box, v_2_box)
+return Call_imapF(gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](dictFunctor_0_box), f_1_box, v_2_box)
 })
 	})
 	return cache_imapF
@@ -140,7 +141,7 @@ var once_imap sync.Once
 func Get_imap() gopurs_runtime.Value {
 	once_imap.Do(func() {
 		cache_imap = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_imap(dict_0_box)
+return Call_imap(gopurs_runtime.CoerceToStruct[Constructor_Invariant[gopurs_runtime.Value]](dict_0_box))
 })
 	})
 	return cache_imap
@@ -151,7 +152,7 @@ var once_imap__gopurs_runtime_Value_2950557085 sync.Once
 func Get_imap__gopurs_runtime_Value_2950557085() gopurs_runtime.Value {
 	once_imap__gopurs_runtime_Value_2950557085.Do(func() {
 		cache_imap__gopurs_runtime_Value_2950557085 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_imap__gopurs_runtime_Value_2950557085(dict_0_box)
+return Call_imap__gopurs_runtime_Value_2950557085(gopurs_runtime.CoerceToStruct[Constructor_Invariant[gopurs_runtime.Value]](dict_0_box))
 })
 	})
 	return cache_imap__gopurs_runtime_Value_2950557085
@@ -168,26 +169,43 @@ return Call_invariantAlternate(dictInvariant_0_box)
 	return cache_invariantAlternate
 }
 
-func Call_imapF(dictFunctor_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
+type Constructor_Invariant[T_f any] struct {
+	Rc uint32
+	V0 gopurs_runtime.Value
+}
+
+
+func init() {
+	gopurs_runtime.StructGetters[2396985522] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
+		c := (*Constructor_Invariant[gopurs_runtime.Value])(ptr)
+		switch key {
+		case "imap": return c.V0
+		default: panic("Key not found in dictionary Constructor_Invariant: " + key)
+		}
+	}
+}
+
+
+func Call_imapF(dictFunctor_0_loop *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value], f_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictFunctor_0 *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value] = dictFunctor_0_loop
 _ = dictFunctor_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_0, "map"), f_1)
+return gopurs_runtime.Apply(dictFunctor_0.V0, f_1)
 }
 
-func Call_imap(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
+func Call_imap(dict_0_loop *Constructor_Invariant[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_Invariant[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "imap")
+return dict_0.V0
 }
 
-func Call_imap__gopurs_runtime_Value_2950557085(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
+func Call_imap__gopurs_runtime_Value_2950557085(dict_0_loop *Constructor_Invariant[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_Invariant[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "imap")
+return dict_0.V0
 }
 
 func Call_invariantAlternate(dictInvariant_0_loop gopurs_runtime.Value) gopurs_runtime.Value {

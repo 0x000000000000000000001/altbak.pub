@@ -1,10 +1,16 @@
 package Data_Lazy
 
 import (
+	pkg_Control_Applicative "gopurs/output/Control.Applicative"
+	pkg_Control_Apply "gopurs/output/Control.Apply"
+	pkg_Data_Eq "gopurs/output/Data.Eq"
+	pkg_Data_Functor "gopurs/output/Data.Functor"
+	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	unsafe "unsafe"
 )
 
 var cache_showLazy gopurs_runtime.Value
@@ -88,6 +94,21 @@ return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(Get_force(), l_1))
 }))
 	})
 	return cache_functorLazy
+}
+
+var cache_functorLazy__ptrData_Functor_Constructor_Functor_gopurs_runtime_Value__491347738 gopurs_runtime.Value
+var once_functorLazy__ptrData_Functor_Constructor_Functor_gopurs_runtime_Value__491347738 sync.Once
+func Get_functorLazy__ptrData_Functor_Constructor_Functor_gopurs_runtime_Value__491347738() gopurs_runtime.Value {
+	once_functorLazy__ptrData_Functor_Constructor_Functor_gopurs_runtime_Value__491347738.Do(func() {
+		cache_functorLazy__ptrData_Functor_Constructor_Functor_gopurs_runtime_Value__491347738 = gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(&pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]{1, gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(l_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(Get_force(), l_1))
+}))
+})
+})})}
+	})
+	return cache_functorLazy__ptrData_Functor_Constructor_Functor_gopurs_runtime_Value__491347738
 }
 
 var cache_functorLazy__gopurs_runtime_Value_3988504945 gopurs_runtime.Value
@@ -249,21 +270,25 @@ return Get_foldableLazy()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_functorLazy()
 }), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(l_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_2
-}))
-}), gopurs_runtime.Apply(Get_force(), l_1))
-})
-}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+Functor0_1_0 := gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
+_ = Functor0_1_0
 return gopurs_runtime.Func(func(l_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Functor0_1_0.V0, gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_3
 }))
-}), gopurs_runtime.Apply(f_1, gopurs_runtime.Apply(Get_force(), l_2)))
+}), gopurs_runtime.Apply(Get_force(), l_2))
+})
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+Functor0_1_1 := gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
+_ = Functor0_1_1
+return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(l_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Functor0_1_1.V0, gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_4
+}))
+}), gopurs_runtime.Apply(f_2, gopurs_runtime.Apply(Get_force(), l_3)))
 })
 })
 }))
@@ -280,21 +305,25 @@ return Get_foldableLazy()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_functorLazy()
 }), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(l_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_2
-}))
-}), gopurs_runtime.Apply(Get_force(), l_1))
-})
-}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+Functor0_1_0 := gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
+_ = Functor0_1_0
 return gopurs_runtime.Func(func(l_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Functor0_1_0.V0, gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_3
 }))
-}), gopurs_runtime.Apply(f_1, gopurs_runtime.Apply(Get_force(), l_2)))
+}), gopurs_runtime.Apply(Get_force(), l_2))
+})
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+Functor0_1_1 := gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
+_ = Functor0_1_1
+return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(l_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Functor0_1_1.V0, gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_4
+}))
+}), gopurs_runtime.Apply(f_2, gopurs_runtime.Apply(Get_force(), l_3)))
 })
 })
 }))
@@ -382,21 +411,25 @@ return Get_foldable1Lazy()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_traversableLazy()
 }), gopurs_runtime.Func(func(dictApply_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(l_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_0, "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_2
-}))
-}), gopurs_runtime.Apply(Get_force(), l_1))
-})
-}), gopurs_runtime.Func(func(dictApply_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+Functor0_1_0 := gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_0, "Functor0"), gopurs_runtime.Value{}))
+_ = Functor0_1_0
 return gopurs_runtime.Func(func(l_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_0, "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Functor0_1_0.V0, gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_3
 }))
-}), gopurs_runtime.Apply(f_1, gopurs_runtime.Apply(Get_force(), l_2)))
+}), gopurs_runtime.Apply(Get_force(), l_2))
+})
+}), gopurs_runtime.Func(func(dictApply_0 gopurs_runtime.Value) gopurs_runtime.Value {
+Functor0_1_1 := gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_0, "Functor0"), gopurs_runtime.Value{}))
+_ = Functor0_1_1
+return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(l_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Functor0_1_1.V0, gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_4
+}))
+}), gopurs_runtime.Apply(f_2, gopurs_runtime.Apply(Get_force(), l_3)))
 })
 })
 }))
@@ -471,6 +504,17 @@ return gopurs_runtime.RecordGet(Call_eqLazy(dictEq_0), "eq")
 	return cache_eq1Lazy
 }
 
+var cache_eq1Lazy__ptrData_Eq_Constructor_Eq1_gopurs_runtime_Value__3789574347 gopurs_runtime.Value
+var once_eq1Lazy__ptrData_Eq_Constructor_Eq1_gopurs_runtime_Value__3789574347 sync.Once
+func Get_eq1Lazy__ptrData_Eq_Constructor_Eq1_gopurs_runtime_Value__3789574347() gopurs_runtime.Value {
+	once_eq1Lazy__ptrData_Eq_Constructor_Eq1_gopurs_runtime_Value__3789574347.Do(func() {
+		cache_eq1Lazy__ptrData_Eq_Constructor_Eq1_gopurs_runtime_Value__3789574347 = gopurs_runtime.Value{Type: 9, IntVal: 1715248107, UnsafePtr: unsafe.Pointer(&pkg_Data_Eq.Constructor_Eq1[gopurs_runtime.Value]{1, gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordGet(Call_eqLazy(dictEq_0), "eq")
+})})}
+	})
+	return cache_eq1Lazy__ptrData_Eq_Constructor_Eq1_gopurs_runtime_Value__3789574347
+}
+
 var cache_eq1Lazy__gopurs_runtime_Value_251633054 gopurs_runtime.Value
 var once_eq1Lazy__gopurs_runtime_Value_251633054 sync.Once
 func Get_eq1Lazy__gopurs_runtime_Value_251633054() gopurs_runtime.Value {
@@ -493,6 +537,19 @@ return gopurs_runtime.RecordGet(Call_ordLazy(dictOrd_0), "compare")
 }))
 	})
 	return cache_ord1Lazy
+}
+
+var cache_ord1Lazy__ptrData_Ord_Constructor_Ord1_gopurs_runtime_Value__2079329387 gopurs_runtime.Value
+var once_ord1Lazy__ptrData_Ord_Constructor_Ord1_gopurs_runtime_Value__2079329387 sync.Once
+func Get_ord1Lazy__ptrData_Ord_Constructor_Ord1_gopurs_runtime_Value__2079329387() gopurs_runtime.Value {
+	once_ord1Lazy__ptrData_Ord_Constructor_Ord1_gopurs_runtime_Value__2079329387.Do(func() {
+		cache_ord1Lazy__ptrData_Ord_Constructor_Ord1_gopurs_runtime_Value__2079329387 = gopurs_runtime.Value{Type: 9, IntVal: 1632188299, UnsafePtr: unsafe.Pointer(&pkg_Data_Ord.Constructor_Ord1[gopurs_runtime.Value]{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_eq1Lazy()
+}), gopurs_runtime.Func(func(dictOrd_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordGet(Call_ordLazy(dictOrd_0), "compare")
+})})}
+	})
+	return cache_ord1Lazy__ptrData_Ord_Constructor_Ord1_gopurs_runtime_Value__2079329387
 }
 
 var cache_comonadLazy gopurs_runtime.Value
@@ -554,6 +611,23 @@ return gopurs_runtime.Apply2(Get_force(), f_0, gopurs_runtime.Apply(Get_force(),
 }))
 	})
 	return cache_applyLazy
+}
+
+var cache_applyLazy__ptrControl_Apply_Constructor_Apply_gopurs_runtime_Value__879424557 gopurs_runtime.Value
+var once_applyLazy__ptrControl_Apply_Constructor_Apply_gopurs_runtime_Value__879424557 sync.Once
+func Get_applyLazy__ptrControl_Apply_Constructor_Apply_gopurs_runtime_Value__879424557() gopurs_runtime.Value {
+	once_applyLazy__ptrControl_Apply_Constructor_Apply_gopurs_runtime_Value__879424557.Do(func() {
+		cache_applyLazy__ptrControl_Apply_Constructor_Apply_gopurs_runtime_Value__879424557 = gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(&pkg_Control_Apply.Constructor_Apply[gopurs_runtime.Value]{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_functorLazy()
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Get_force(), f_0, gopurs_runtime.Apply(Get_force(), x_1))
+}))
+})
+})})}
+	})
+	return cache_applyLazy__ptrControl_Apply_Constructor_Apply_gopurs_runtime_Value__879424557
 }
 
 var cache_applyLazy__gopurs_runtime_Value_225241115 gopurs_runtime.Value
@@ -644,6 +718,21 @@ return a_0
 	return cache_applicativeLazy
 }
 
+var cache_applicativeLazy__ptrControl_Applicative_Constructor_Applicative_gopurs_runtime_Value__690919725 gopurs_runtime.Value
+var once_applicativeLazy__ptrControl_Applicative_Constructor_Applicative_gopurs_runtime_Value__690919725 sync.Once
+func Get_applicativeLazy__ptrControl_Applicative_Constructor_Applicative_gopurs_runtime_Value__690919725() gopurs_runtime.Value {
+	once_applicativeLazy__ptrControl_Applicative_Constructor_Applicative_gopurs_runtime_Value__690919725.Do(func() {
+		cache_applicativeLazy__ptrControl_Applicative_Constructor_Applicative_gopurs_runtime_Value__690919725 = gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(&pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_applyLazy()
+}), gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return a_0
+}))
+})})}
+	})
+	return cache_applicativeLazy__ptrControl_Applicative_Constructor_Applicative_gopurs_runtime_Value__690919725
+}
+
 var cache_applicativeLazy__gopurs_runtime_Value_3467920360 gopurs_runtime.Value
 var once_applicativeLazy__gopurs_runtime_Value_3467920360 sync.Once
 func Get_applicativeLazy__gopurs_runtime_Value_3467920360() gopurs_runtime.Value {
@@ -683,26 +772,22 @@ return gopurs_runtime.Str(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Dat
 func Call_semiringLazy(dictSemiring_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictSemiring_0 gopurs_runtime.Value = dictSemiring_0_loop
 _ = dictSemiring_0
-zero_1_0 := gopurs_runtime.RecordGet(dictSemiring_0, "zero")
-_ = zero_1_0
-one_2_1 := gopurs_runtime.RecordGet(dictSemiring_0, "one")
-_ = one_2_1
-return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring_0, "add"), gopurs_runtime.Apply(Get_force(), a_3), gopurs_runtime.Apply(Get_force(), b_4))
+return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring_0, "add"), gopurs_runtime.Apply(Get_force(), a_1), gopurs_runtime.Apply(Get_force(), b_2))
 }))
 })
-}), gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring_0, "mul"), gopurs_runtime.Apply(Get_force(), a_3), gopurs_runtime.Apply(Get_force(), b_4))
+}), gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring_0, "mul"), gopurs_runtime.Apply(Get_force(), a_1), gopurs_runtime.Apply(Get_force(), b_2))
 }))
 })
-}), gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return one_2_1
-})), gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return zero_1_0
+}), gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordGet(dictSemiring_0, "one")
+})), gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordGet(dictSemiring_0, "zero")
 })))
 }
 
@@ -737,14 +822,12 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictRing_0, "sub"), gopurs
 func Call_monoidLazy(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
-mempty_1_0 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
-_ = mempty_1_0
-semigroupLazy1_2_1 := Call_semigroupLazy(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
-_ = semigroupLazy1_2_1
-return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return semigroupLazy1_2_1
-}), gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return mempty_1_0
+semigroupLazy1_1_0 := Call_semigroupLazy(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
+_ = semigroupLazy1_1_0
+return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return semigroupLazy1_1_0
+}), gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
 })))
 }
 
@@ -813,54 +896,46 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEuclideanRing_0, "mod"
 func Call_boundedLazy(dictBounded_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictBounded_0 gopurs_runtime.Value = dictBounded_0_loop
 _ = dictBounded_0
-top_1_0 := gopurs_runtime.RecordGet(dictBounded_0, "top")
-_ = top_1_0
-bottom_2_1 := gopurs_runtime.RecordGet(dictBounded_0, "bottom")
-_ = bottom_2_1
-ordLazy1_3_2 := Call_ordLazy(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBounded_0, "Ord0"), gopurs_runtime.Value{}))
-_ = ordLazy1_3_2
-return gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return ordLazy1_3_2
-}), gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return bottom_2_1
-})), gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return top_1_0
+ordLazy1_1_0 := Call_ordLazy(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBounded_0, "Ord0"), gopurs_runtime.Value{}))
+_ = ordLazy1_1_0
+return gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return ordLazy1_1_0
+}), gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordGet(dictBounded_0, "bottom")
+})), gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordGet(dictBounded_0, "top")
 })))
 }
 
 func Call_heytingAlgebraLazy(dictHeytingAlgebra_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictHeytingAlgebra_0 gopurs_runtime.Value = dictHeytingAlgebra_0_loop
 _ = dictHeytingAlgebra_0
-ff_1_0 := gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "ff")
-_ = ff_1_0
-tt_2_1 := gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "tt")
-_ = tt_2_1
-implies_3_2 := gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "implies")
-_ = implies_3_2
-conj_4_3 := gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "conj")
-_ = conj_4_3
-disj_5_4 := gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "disj")
-_ = disj_5_4
-not_6_5 := gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "not")
-_ = not_6_5
-return gopurs_runtime.RecordDict([]string{"conj", "disj", "ff", "implies", "not", "tt"}, []gopurs_runtime.Value{gopurs_runtime.Func(func(a_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_applyLazy(), "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_functorLazy(), "map"), conj_4_3, a_7), b_8)
+implies_1_0 := gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "implies")
+_ = implies_1_0
+conj_2_1 := gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "conj")
+_ = conj_2_1
+disj_3_2 := gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "disj")
+_ = disj_3_2
+not_4_3 := gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "not")
+_ = not_4_3
+return gopurs_runtime.RecordDict([]string{"conj", "disj", "ff", "implies", "not", "tt"}, []gopurs_runtime.Value{gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_applyLazy(), "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_functorLazy(), "map"), conj_2_1, a_5), b_6)
 })
-}), gopurs_runtime.Func(func(a_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_applyLazy(), "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_functorLazy(), "map"), disj_5_4, a_7), b_8)
+}), gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_applyLazy(), "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_functorLazy(), "map"), disj_3_2, a_5), b_6)
 })
-}), gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return ff_1_0
-})), gopurs_runtime.Func(func(a_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_applyLazy(), "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_functorLazy(), "map"), implies_3_2, a_7), b_8)
+}), gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "ff")
+})), gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_applyLazy(), "apply"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_functorLazy(), "map"), implies_1_0, a_5), b_6)
 })
-}), gopurs_runtime.Func(func(a_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_functorLazy(), "map"), not_6_5, a_7)
-}), gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return tt_2_1
+}), gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_functorLazy(), "map"), not_4_3, a_5)
+}), gopurs_runtime.Apply(Get_go__defer(), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "tt")
 }))})
 }
 

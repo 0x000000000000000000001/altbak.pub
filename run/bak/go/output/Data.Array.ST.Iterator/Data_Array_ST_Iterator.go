@@ -51,7 +51,7 @@ var once_peek sync.Once
 func Get_peek() gopurs_runtime.Value {
 	once_peek.Do(func() {
 		cache_peek = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_peek(v_0_box)
+return Call_peek(gopurs_runtime.CoerceToStruct[Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value]](v_0_box))
 })
 	})
 	return cache_peek
@@ -62,7 +62,7 @@ var once_peek__gopurs_runtime_Value_201669949 sync.Once
 func Get_peek__gopurs_runtime_Value_201669949() gopurs_runtime.Value {
 	once_peek__gopurs_runtime_Value_201669949.Do(func() {
 		cache_peek__gopurs_runtime_Value_201669949 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_peek__gopurs_runtime_Value_201669949(v_0_box)
+return Call_peek__gopurs_runtime_Value_201669949(gopurs_runtime.CoerceToStruct[Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value]](v_0_box))
 })
 	})
 	return cache_peek__gopurs_runtime_Value_201669949
@@ -73,7 +73,7 @@ var once_peek__gopurs_runtime_Value_2731492779 sync.Once
 func Get_peek__gopurs_runtime_Value_2731492779() gopurs_runtime.Value {
 	once_peek__gopurs_runtime_Value_2731492779.Do(func() {
 		cache_peek__gopurs_runtime_Value_2731492779 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_peek__gopurs_runtime_Value_2731492779(v_0_box)
+return Call_peek__gopurs_runtime_Value_2731492779(gopurs_runtime.CoerceToStruct[Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value]](v_0_box))
 })
 	})
 	return cache_peek__gopurs_runtime_Value_2731492779
@@ -84,7 +84,7 @@ var once_next sync.Once
 func Get_next() gopurs_runtime.Value {
 	once_next.Do(func() {
 		cache_next = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_next(v_0_box)
+return Call_next(gopurs_runtime.CoerceToStruct[Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value]](v_0_box))
 })
 	})
 	return cache_next
@@ -95,7 +95,7 @@ var once_next__gopurs_runtime_Value_2731492779 sync.Once
 func Get_next__gopurs_runtime_Value_2731492779() gopurs_runtime.Value {
 	once_next__gopurs_runtime_Value_2731492779.Do(func() {
 		cache_next__gopurs_runtime_Value_2731492779 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_next__gopurs_runtime_Value_2731492779(v_0_box)
+return Call_next__gopurs_runtime_Value_2731492779(gopurs_runtime.CoerceToStruct[Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value]](v_0_box))
 })
 	})
 	return cache_next__gopurs_runtime_Value_2731492779
@@ -106,7 +106,7 @@ var once_pushWhile sync.Once
 func Get_pushWhile() gopurs_runtime.Value {
 	once_pushWhile.Do(func() {
 		cache_pushWhile = gopurs_runtime.Func3(func(p_0_box gopurs_runtime.Value, iter_1_box gopurs_runtime.Value, array_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_pushWhile(p_0_box, iter_1_box, array_2_box)
+return Call_pushWhile(p_0_box, gopurs_runtime.CoerceToStruct[Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value]](iter_1_box), array_2_box)
 })
 	})
 	return cache_pushWhile
@@ -117,7 +117,7 @@ var once_pushWhile__gopurs_runtime_Value_2298419255 sync.Once
 func Get_pushWhile__gopurs_runtime_Value_2298419255() gopurs_runtime.Value {
 	once_pushWhile__gopurs_runtime_Value_2298419255.Do(func() {
 		cache_pushWhile__gopurs_runtime_Value_2298419255 = gopurs_runtime.Func3(func(p_0_box gopurs_runtime.Value, iter_1_box gopurs_runtime.Value, array_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_pushWhile__gopurs_runtime_Value_2298419255(p_0_box, iter_1_box, array_2_box)
+return Call_pushWhile__gopurs_runtime_Value_2298419255(p_0_box, gopurs_runtime.CoerceToStruct[Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value]](iter_1_box), array_2_box)
 })
 	})
 	return cache_pushWhile__gopurs_runtime_Value_2298419255
@@ -161,7 +161,7 @@ var once_iterate sync.Once
 func Get_iterate() gopurs_runtime.Value {
 	once_iterate.Do(func() {
 		cache_iterate = gopurs_runtime.Func2(func(iter_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_iterate(iter_0_box, f_1_box)
+return Call_iterate(gopurs_runtime.CoerceToStruct[Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value]](iter_0_box), f_1_box)
 })
 	})
 	return cache_iterate
@@ -172,7 +172,7 @@ var once_iterate__gopurs_runtime_Value_1936300090 sync.Once
 func Get_iterate__gopurs_runtime_Value_1936300090() gopurs_runtime.Value {
 	once_iterate__gopurs_runtime_Value_1936300090.Do(func() {
 		cache_iterate__gopurs_runtime_Value_1936300090 = gopurs_runtime.Func2(func(iter_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_iterate__gopurs_runtime_Value_1936300090(iter_0_box, f_1_box)
+return Call_iterate__gopurs_runtime_Value_1936300090(gopurs_runtime.CoerceToStruct[Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value]](iter_0_box), f_1_box)
 })
 	})
 	return cache_iterate__gopurs_runtime_Value_1936300090
@@ -186,7 +186,7 @@ func Get_exhausted() gopurs_runtime.Value {
 __local_var_0_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Control_Monad_ST_Internal.Get_functorST(), "map"), pkg_Data_Maybe.Get_isNothing())
 _ = __local_var_0_0
 return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_0_0, Call_peek(x_1))
+return gopurs_runtime.Apply(__local_var_0_0, Call_peek(gopurs_runtime.CoerceToStruct[Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value]](x_1)))
 })
 }()
 	})
@@ -200,65 +200,46 @@ type Constructor_Iterator[T_r any, T_a any] struct {
 }
 
 
-func Call_peek(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
+func Call_peek(v_0_loop *Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+var v_0 *Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value] = v_0_loop
 _ = v_0
-__local_var_1_0 := (*Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V1
+__local_var_1_0 := (*Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 3127013252, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1
 _ = __local_var_1_0
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Control_Monad_ST_Internal.Get_bindST(), "bind"), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return (*(__local_var_1_0.PtrVal().(*interface{}))).(gopurs_runtime.Value)
 }), gopurs_runtime.Func(func(i_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Control_Monad_ST_Internal.Get_applicativeST(), "pure"), gopurs_runtime.Apply((*Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V0, i_2))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Control_Monad_ST_Internal.Get_applicativeST(), "pure"), gopurs_runtime.Apply((*Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 3127013252, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0, i_2))
 }))
 }
 
-func Call_peek__gopurs_runtime_Value_201669949(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
+func Call_peek__gopurs_runtime_Value_201669949(v_0_loop *Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+var v_0 *Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value] = v_0_loop
 _ = v_0
-__local_var_1_0 := (*Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V1
+__local_var_1_0 := (*Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 3127013252, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1
 _ = __local_var_1_0
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Control_Monad_ST_Internal.Get_bindST(), "bind"), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return (*(__local_var_1_0.PtrVal().(*interface{}))).(gopurs_runtime.Value)
 }), gopurs_runtime.Func(func(i_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Control_Monad_ST_Internal.Get_applicativeST(), "pure"), gopurs_runtime.Apply((*Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V0, i_2))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Control_Monad_ST_Internal.Get_applicativeST(), "pure"), gopurs_runtime.Apply((*Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 3127013252, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0, i_2))
 }))
 }
 
-func Call_peek__gopurs_runtime_Value_2731492779(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
+func Call_peek__gopurs_runtime_Value_2731492779(v_0_loop *Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+var v_0 *Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value] = v_0_loop
 _ = v_0
-__local_var_1_0 := (*Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V1
+__local_var_1_0 := (*Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 3127013252, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1
 _ = __local_var_1_0
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Control_Monad_ST_Internal.Get_bindST(), "bind"), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return (*(__local_var_1_0.PtrVal().(*interface{}))).(gopurs_runtime.Value)
 }), gopurs_runtime.Func(func(i_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Control_Monad_ST_Internal.Get_applicativeST(), "pure"), gopurs_runtime.Apply((*Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V0, i_2))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Control_Monad_ST_Internal.Get_applicativeST(), "pure"), gopurs_runtime.Apply((*Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 3127013252, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0, i_2))
 }))
 }
 
-func Call_next(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
+func Call_next(v_0_loop *Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+var v_0 *Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value] = v_0_loop
 _ = v_0
-__local_var_1_0 := (*Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V1
-_ = __local_var_1_0
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Control_Monad_ST_Internal.Get_bindST(), "bind"), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return (*(__local_var_1_0.PtrVal().(*interface{}))).(gopurs_runtime.Value)
-}), gopurs_runtime.Func(func(i_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Control_Monad_ST_Internal.Get_bindST(), "bind"), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_3_1 := (*(__local_var_1_0.PtrVal().(*interface{}))).(gopurs_runtime.Value)
-_ = __local_var_3_1
-*(__local_var_1_0.PtrVal().(*interface{})) = gopurs_runtime.Int((__local_var_3_1.IntVal) + (1))
-return gopurs_runtime.Int((__local_var_3_1.IntVal) + (1))
-}), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Control_Monad_ST_Internal.Get_applicativeST(), "pure"), gopurs_runtime.Apply((*Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V0, i_2))
-}))
-}))
-}
-
-func Call_next__gopurs_runtime_Value_2731492779(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var v_0 gopurs_runtime.Value = v_0_loop
-_ = v_0
-__local_var_1_0 := (*Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V1
+__local_var_1_0 := (*Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 3127013252, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1
 _ = __local_var_1_0
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Control_Monad_ST_Internal.Get_bindST(), "bind"), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return (*(__local_var_1_0.PtrVal().(*interface{}))).(gopurs_runtime.Value)
@@ -269,15 +250,34 @@ _ = __local_var_3_1
 *(__local_var_1_0.PtrVal().(*interface{})) = gopurs_runtime.Int((__local_var_3_1.IntVal) + (1))
 return gopurs_runtime.Int((__local_var_3_1.IntVal) + (1))
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Control_Monad_ST_Internal.Get_applicativeST(), "pure"), gopurs_runtime.Apply((*Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V0, i_2))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Control_Monad_ST_Internal.Get_applicativeST(), "pure"), gopurs_runtime.Apply((*Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 3127013252, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0, i_2))
 }))
 }))
 }
 
-func Call_pushWhile(p_0_loop gopurs_runtime.Value, iter_1_loop gopurs_runtime.Value, array_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_next__gopurs_runtime_Value_2731492779(v_0_loop *Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+var v_0 *Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value] = v_0_loop
+_ = v_0
+__local_var_1_0 := (*Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 3127013252, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1
+_ = __local_var_1_0
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Control_Monad_ST_Internal.Get_bindST(), "bind"), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+return (*(__local_var_1_0.PtrVal().(*interface{}))).(gopurs_runtime.Value)
+}), gopurs_runtime.Func(func(i_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Control_Monad_ST_Internal.Get_bindST(), "bind"), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_3_1 := (*(__local_var_1_0.PtrVal().(*interface{}))).(gopurs_runtime.Value)
+_ = __local_var_3_1
+*(__local_var_1_0.PtrVal().(*interface{})) = gopurs_runtime.Int((__local_var_3_1.IntVal) + (1))
+return gopurs_runtime.Int((__local_var_3_1.IntVal) + (1))
+}), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Control_Monad_ST_Internal.Get_applicativeST(), "pure"), gopurs_runtime.Apply((*Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 3127013252, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0, i_2))
+}))
+}))
+}
+
+func Call_pushWhile(p_0_loop gopurs_runtime.Value, iter_1_loop *Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value], array_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var p_0 gopurs_runtime.Value = p_0_loop
 _ = p_0
-var iter_1 gopurs_runtime.Value = iter_1_loop
+var iter_1 *Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value] = iter_1_loop
 _ = iter_1
 var array_2 gopurs_runtime.Value = array_2_loop
 _ = array_2
@@ -312,10 +312,10 @@ return __t0
 }))
 }
 
-func Call_pushWhile__gopurs_runtime_Value_2298419255(p_0_loop gopurs_runtime.Value, iter_1_loop gopurs_runtime.Value, array_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_pushWhile__gopurs_runtime_Value_2298419255(p_0_loop gopurs_runtime.Value, iter_1_loop *Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value], array_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var p_0 gopurs_runtime.Value = p_0_loop
 _ = p_0
-var iter_1 gopurs_runtime.Value = iter_1_loop
+var iter_1 *Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value] = iter_1_loop
 _ = iter_1
 var array_2 gopurs_runtime.Value = array_2_loop
 _ = array_2
@@ -362,8 +362,8 @@ _ = f_0
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Control_Monad_ST_Internal.Get_functorST(), "map"), gopurs_runtime.Apply(Get_Iterator(), f_0), gopurs_runtime.Apply(pkg_Control_Monad_ST_Internal.Get_newImpl(), gopurs_runtime.Int(0)))
 }
 
-func Call_iterate(iter_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var iter_0 gopurs_runtime.Value = iter_0_loop
+func Call_iterate(iter_0_loop *Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value], f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var iter_0 *Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value] = iter_0_loop
 _ = iter_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
@@ -400,8 +400,8 @@ return __t0
 }))
 }
 
-func Call_iterate__gopurs_runtime_Value_1936300090(iter_0_loop gopurs_runtime.Value, f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var iter_0 gopurs_runtime.Value = iter_0_loop
+func Call_iterate__gopurs_runtime_Value_1936300090(iter_0_loop *Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value], f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var iter_0 *Constructor_Iterator[gopurs_runtime.Value, gopurs_runtime.Value] = iter_0_loop
 _ = iter_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1

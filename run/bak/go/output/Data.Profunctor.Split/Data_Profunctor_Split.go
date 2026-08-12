@@ -1,6 +1,7 @@
 package Data_Profunctor_Split
 
 import (
+	pkg_Data_Functor_Invariant "gopurs/output/Data.Functor.Invariant"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	unsafe "unsafe"
@@ -100,7 +101,7 @@ var once_lowerSplit sync.Once
 func Get_lowerSplit() gopurs_runtime.Value {
 	once_lowerSplit.Do(func() {
 		cache_lowerSplit = gopurs_runtime.Func2(func(dictInvariant_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_lowerSplit(dictInvariant_0_box, v_1_box)
+return Call_lowerSplit(gopurs_runtime.CoerceToStruct[pkg_Data_Functor_Invariant.Constructor_Invariant[gopurs_runtime.Value]](dictInvariant_0_box), v_1_box)
 })
 	})
 	return cache_lowerSplit
@@ -193,12 +194,12 @@ _ = fx_2
 return gopurs_runtime.Value{Type: 9, IntVal: 1995432569, UnsafePtr: unsafe.Pointer(&Constructor_SplitF[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]{1, f_0, g_1, fx_2})}
 }
 
-func Call_lowerSplit(dictInvariant_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictInvariant_0 gopurs_runtime.Value = dictInvariant_0_loop
+func Call_lowerSplit(dictInvariant_0_loop *pkg_Data_Functor_Invariant.Constructor_Invariant[gopurs_runtime.Value], v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictInvariant_0 *pkg_Data_Functor_Invariant.Constructor_Invariant[gopurs_runtime.Value] = dictInvariant_0_loop
 _ = dictInvariant_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictInvariant_0, "imap"), (*Constructor_SplitF[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V1, (*Constructor_SplitF[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V0, (*Constructor_SplitF[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V2)
+return gopurs_runtime.Apply3(dictInvariant_0.V0, (*Constructor_SplitF[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V1, (*Constructor_SplitF[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V0, (*Constructor_SplitF[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V2)
 }
 
 func Call_liftSplit(fx_0_loop gopurs_runtime.Value) gopurs_runtime.Value {

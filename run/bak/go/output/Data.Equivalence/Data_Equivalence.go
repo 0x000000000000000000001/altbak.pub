@@ -1,10 +1,12 @@
 package Data_Equivalence
 
 import (
+	pkg_Data_Eq "gopurs/output/Data.Eq"
 	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
 	pkg_Data_Ordering "gopurs/output/Data.Ordering"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	unsafe "unsafe"
 )
 
 var cache_Equivalence gopurs_runtime.Value
@@ -83,7 +85,7 @@ var once_defaultEquivalence sync.Once
 func Get_defaultEquivalence() gopurs_runtime.Value {
 	once_defaultEquivalence.Do(func() {
 		cache_defaultEquivalence = gopurs_runtime.Func(func(dictEq_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_defaultEquivalence(dictEq_0_box)
+return Call_defaultEquivalence(gopurs_runtime.CoerceToStruct[pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]](dictEq_0_box))
 })
 	})
 	return cache_defaultEquivalence
@@ -140,10 +142,10 @@ _ = x_0
 return x_0
 }
 
-func Call_defaultEquivalence(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
+func Call_defaultEquivalence(dictEq_0_loop *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dictEq_0 *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value] = dictEq_0_loop
 _ = dictEq_0
-return gopurs_runtime.RecordGet(dictEq_0, "eq")
+return dictEq_0.V0
 }
 
 func Call_comparisonEquivalence(v_0_loop gopurs_runtime.Value, a_1_loop gopurs_runtime.Value, b_2_loop gopurs_runtime.Value) bool {
@@ -153,7 +155,7 @@ var a_1 gopurs_runtime.Value = a_1_loop
 _ = a_1
 var b_2 gopurs_runtime.Value = b_2_loop
 _ = b_2
-return (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ordering.Get_eqOrdering(), "eq"), gopurs_runtime.Apply2(v_0, a_1, b_2), gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: nil}).IntVal) != (0)
+return (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ordering.Get_eqOrdering(), "eq"), gopurs_runtime.Apply2(v_0, a_1, b_2), gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}).IntVal) != (0)
 }
 
 

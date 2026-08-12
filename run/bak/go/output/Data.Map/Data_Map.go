@@ -53,8 +53,8 @@ var cache_semigroupSemigroupMap gopurs_runtime.Value
 var once_semigroupSemigroupMap sync.Once
 func Get_semigroupSemigroupMap() gopurs_runtime.Value {
 	once_semigroupSemigroupMap.Do(func() {
-		cache_semigroupSemigroupMap = gopurs_runtime.Func(func(dictOrd_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_semigroupSemigroupMap(dictOrd_0_box)
+		cache_semigroupSemigroupMap = gopurs_runtime.Func2(func(dictOrd_0_box gopurs_runtime.Value, dictSemigroup_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_semigroupSemigroupMap(dictOrd_0_box, dictSemigroup_1_box)
 })
 	})
 	return cache_semigroupSemigroupMap
@@ -108,8 +108,8 @@ var cache_monoidSemigroupMap gopurs_runtime.Value
 var once_monoidSemigroupMap sync.Once
 func Get_monoidSemigroupMap() gopurs_runtime.Value {
 	once_monoidSemigroupMap.Do(func() {
-		cache_monoidSemigroupMap = gopurs_runtime.Func(func(dictOrd_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_monoidSemigroupMap(dictOrd_0_box)
+		cache_monoidSemigroupMap = gopurs_runtime.Func2(func(dictOrd_0_box gopurs_runtime.Value, dictSemigroup_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_monoidSemigroupMap(dictOrd_0_box, dictSemigroup_1_box)
 })
 	})
 	return cache_monoidSemigroupMap
@@ -237,20 +237,18 @@ _ = dictShow1_1
 return gopurs_runtime.Apply2(pkg_Data_Map_Internal.Get_showMap(), dictShow_0, dictShow1_1)
 }
 
-func Call_semigroupSemigroupMap(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_semigroupSemigroupMap(dictOrd_0_loop gopurs_runtime.Value, dictSemigroup_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0, "compare")
-_ = compare_1_0
-return gopurs_runtime.Func(func(dictSemigroup_2 gopurs_runtime.Value) gopurs_runtime.Value {
-append_3_1 := gopurs_runtime.RecordGet(dictSemigroup_2, "append")
-_ = append_3_1
-return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer((*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.UncurriedApp4(pkg_Data_Map_Internal.Get_unsafeUnionWith(), compare_1_0, append_3_1, v_4, v1_5).UnsafePtr))}
+var dictSemigroup_1 gopurs_runtime.Value = dictSemigroup_1_loop
+_ = dictSemigroup_1
+append_2_0 := gopurs_runtime.RecordGet(dictSemigroup_1, "append")
+_ = append_2_0
+return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.UncurriedApp4(pkg_Data_Map_Internal.Get_unsafeUnionWith(), gopurs_runtime.RecordGet(dictOrd_0, "compare"), append_2_0, v_3, v1_4)))}
 })
 }))
-})
 }
 
 func Call_plusSemigroupMap(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -275,18 +273,22 @@ _ = dictOrd_0
 return gopurs_runtime.Apply(pkg_Data_Map_Internal.Get_ord1Map(), dictOrd_0)
 }
 
-func Call_monoidSemigroupMap(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_monoidSemigroupMap(dictOrd_0_loop gopurs_runtime.Value, dictSemigroup_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-semigroupSemigroupMap1_1_0 := Call_semigroupSemigroupMap(dictOrd_0)
-_ = semigroupSemigroupMap1_1_0
-return gopurs_runtime.Func(func(dictSemigroup_2 gopurs_runtime.Value) gopurs_runtime.Value {
-semigroupSemigroupMap2_3_1 := gopurs_runtime.Apply(semigroupSemigroupMap1_1_0, dictSemigroup_2)
-_ = semigroupSemigroupMap2_3_1
-return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return semigroupSemigroupMap2_3_1
-}), gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer((*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}.UnsafePtr))})
+var dictSemigroup_1 gopurs_runtime.Value = dictSemigroup_1_loop
+_ = dictSemigroup_1
+append_2_1 := gopurs_runtime.RecordGet(dictSemigroup_1, "append")
+_ = append_2_1
+semigroupSemigroupMap2_2_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.UncurriedApp4(pkg_Data_Map_Internal.Get_unsafeUnionWith(), gopurs_runtime.RecordGet(dictOrd_0, "compare"), append_2_1, v_3, v1_4)))}
 })
+}))
+_ = semigroupSemigroupMap2_2_0
+return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return semigroupSemigroupMap2_2_0
+}), gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: nil}))})
 }
 
 func Call_eqSemigroupMap(dictEq_0_loop gopurs_runtime.Value, dictEq1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -320,7 +322,7 @@ return gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(
 return pkg_Data_Map_Internal.Get_functorMap()
 }), gopurs_runtime.Func(func(m1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(m2_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer((*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.UncurriedApp4(pkg_Data_Map_Internal.Get_unsafeIntersectionWith(), compare_1_0, pkg_Data_Map_Internal.Get_identity2(), m1_2, m2_3).UnsafePtr))}
+return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.UncurriedApp4(pkg_Data_Map_Internal.Get_unsafeIntersectionWith(), compare_1_0, pkg_Data_Map_Internal.Get_identity2(), m1_2, m2_3)))}
 })
 }))
 }
@@ -334,7 +336,7 @@ return gopurs_runtime.RecordDict2("Functor0", "alt", gopurs_runtime.Func(func(_d
 return pkg_Data_Map_Internal.Get_functorMap()
 }), gopurs_runtime.Func(func(m1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(m2_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer((*pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.UncurriedApp4(pkg_Data_Map_Internal.Get_unsafeUnionWith(), compare_1_0, pkg_Data_Function.Get_go__const(), m1_2, m2_3).UnsafePtr))}
+return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Map_Internal.Constructor_Node[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.UncurriedApp4(pkg_Data_Map_Internal.Get_unsafeUnionWith(), compare_1_0, pkg_Data_Function.Get_go__const(), m1_2, m2_3)))}
 })
 }))
 }

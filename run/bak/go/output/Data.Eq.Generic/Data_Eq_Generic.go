@@ -5,6 +5,7 @@ import (
 	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	unsafe "unsafe"
 )
 
 var cache_genericEqNoConstructors gopurs_runtime.Value
@@ -49,7 +50,7 @@ var once_genericEq_prime sync.Once
 func Get_genericEq_prime() gopurs_runtime.Value {
 	once_genericEq_prime.Do(func() {
 		cache_genericEq_prime = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericEq_prime(dict_0_box)
+return Call_genericEq_prime(gopurs_runtime.CoerceToStruct[Constructor_GenericEq[gopurs_runtime.Value]](dict_0_box))
 })
 	})
 	return cache_genericEq_prime
@@ -60,7 +61,7 @@ var once_genericEq_prime__gopurs_runtime_Value_1422345493 sync.Once
 func Get_genericEq_prime__gopurs_runtime_Value_1422345493() gopurs_runtime.Value {
 	once_genericEq_prime__gopurs_runtime_Value_1422345493.Do(func() {
 		cache_genericEq_prime__gopurs_runtime_Value_1422345493 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericEq_prime__gopurs_runtime_Value_1422345493(dict_0_box)
+return Call_genericEq_prime__gopurs_runtime_Value_1422345493(gopurs_runtime.CoerceToStruct[Constructor_GenericEq[gopurs_runtime.Value]](dict_0_box))
 })
 	})
 	return cache_genericEq_prime__gopurs_runtime_Value_1422345493
@@ -104,11 +105,28 @@ var once_genericEq sync.Once
 func Get_genericEq() gopurs_runtime.Value {
 	once_genericEq.Do(func() {
 		cache_genericEq = gopurs_runtime.Func4(func(dictGeneric_0_box gopurs_runtime.Value, dictGenericEq_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value, y_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_genericEq(dictGeneric_0_box, dictGenericEq_1_box, x_2_box, y_3_box)
+return gopurs_runtime.Bool(Call_genericEq(gopurs_runtime.CoerceToStruct[pkg_Data_Generic_Rep.Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value]](dictGeneric_0_box), gopurs_runtime.CoerceToStruct[Constructor_GenericEq[gopurs_runtime.Value]](dictGenericEq_1_box), x_2_box, y_3_box))
 })
 	})
 	return cache_genericEq
 }
+
+type Constructor_GenericEq[T_a any] struct {
+	Rc uint32
+	V0 gopurs_runtime.Value
+}
+
+
+func init() {
+	gopurs_runtime.StructGetters[106035173] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
+		c := (*Constructor_GenericEq[gopurs_runtime.Value])(ptr)
+		switch key {
+		case "genericEq'": return c.V0
+		default: panic("Key not found in dictionary Constructor_GenericEq: " + key)
+		}
+	}
+}
+
 
 func Call_genericEqArgument(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
@@ -120,16 +138,16 @@ return gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictE
 }))
 }
 
-func Call_genericEq_prime(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
+func Call_genericEq_prime(dict_0_loop *Constructor_GenericEq[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_GenericEq[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "genericEq'")
+return dict_0.V0
 }
 
-func Call_genericEq_prime__gopurs_runtime_Value_1422345493(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
+func Call_genericEq_prime__gopurs_runtime_Value_1422345493(dict_0_loop *Constructor_GenericEq[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_GenericEq[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "genericEq'")
+return dict_0.V0
 }
 
 func Call_genericEqConstructor(dictGenericEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -200,16 +218,16 @@ return gopurs_runtime.Bool((__t0.IntVal) != (0))
 }))
 }
 
-func Call_genericEq(dictGeneric_0_loop gopurs_runtime.Value, dictGenericEq_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value, y_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictGeneric_0 gopurs_runtime.Value = dictGeneric_0_loop
+func Call_genericEq(dictGeneric_0_loop *pkg_Data_Generic_Rep.Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value], dictGenericEq_1_loop *Constructor_GenericEq[gopurs_runtime.Value], x_2_loop gopurs_runtime.Value, y_3_loop gopurs_runtime.Value) bool {
+var dictGeneric_0 *pkg_Data_Generic_Rep.Constructor_Generic[gopurs_runtime.Value, gopurs_runtime.Value] = dictGeneric_0_loop
 _ = dictGeneric_0
-var dictGenericEq_1 gopurs_runtime.Value = dictGenericEq_1_loop
+var dictGenericEq_1 *Constructor_GenericEq[gopurs_runtime.Value] = dictGenericEq_1_loop
 _ = dictGenericEq_1
 var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
 var y_3 gopurs_runtime.Value = y_3_loop
 _ = y_3
-return gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericEq_1, "genericEq'"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "from"), x_2), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "from"), y_3)).IntVal) != (0))
+return (gopurs_runtime.Apply2(dictGenericEq_1.V0, gopurs_runtime.Apply(dictGeneric_0.V0, x_2), gopurs_runtime.Apply(dictGeneric_0.V0, y_3)).IntVal) != (0)
 }
 
 

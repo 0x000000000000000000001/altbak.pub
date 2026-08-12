@@ -4,6 +4,7 @@ import (
 	pkg_Control_Alt "gopurs/output/Control.Alt"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	unsafe "unsafe"
 )
 
 var cache_plusArray gopurs_runtime.Value
@@ -59,6 +60,25 @@ return Call_empty__gopurs_runtime_Value_932402776(dict_0_box)
 	})
 	return cache_empty__gopurs_runtime_Value_932402776
 }
+
+type Constructor_Plus[T_f any] struct {
+	Rc uint32
+	V0 gopurs_runtime.Value
+	V1 gopurs_runtime.Value
+}
+
+
+func init() {
+	gopurs_runtime.StructGetters[3709470893] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
+		c := (*Constructor_Plus[gopurs_runtime.Value])(ptr)
+		switch key {
+		case "Alt0": return c.V0
+		case "empty": return c.V1
+		default: panic("Key not found in dictionary Constructor_Plus: " + key)
+		}
+	}
+}
+
 
 func Call_empty(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop

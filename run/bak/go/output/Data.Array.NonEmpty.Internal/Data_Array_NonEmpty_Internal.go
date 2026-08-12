@@ -20,6 +20,7 @@ import (
 	pkg_Data_Unfoldable1 "gopurs/output/Data.Unfoldable1"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	unsafe "unsafe"
 )
 
 var cache_NonEmptyArray gopurs_runtime.Value
@@ -40,6 +41,15 @@ func Get_unfoldable1NonEmptyArray() gopurs_runtime.Value {
 		cache_unfoldable1NonEmptyArray = pkg_Data_Unfoldable1.Get_unfoldable1Array()
 	})
 	return cache_unfoldable1NonEmptyArray
+}
+
+var cache_unfoldable1NonEmptyArray__ptrData_Unfoldable1_Constructor_Unfoldable1_arrgopurs_runtime_Value__3769668500 gopurs_runtime.Value
+var once_unfoldable1NonEmptyArray__ptrData_Unfoldable1_Constructor_Unfoldable1_arrgopurs_runtime_Value__3769668500 sync.Once
+func Get_unfoldable1NonEmptyArray__ptrData_Unfoldable1_Constructor_Unfoldable1_arrgopurs_runtime_Value__3769668500() gopurs_runtime.Value {
+	once_unfoldable1NonEmptyArray__ptrData_Unfoldable1_Constructor_Unfoldable1_arrgopurs_runtime_Value__3769668500.Do(func() {
+		cache_unfoldable1NonEmptyArray__ptrData_Unfoldable1_Constructor_Unfoldable1_arrgopurs_runtime_Value__3769668500 = gopurs_runtime.Value{Type: 9, IntVal: 3553002490, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Unfoldable1.Constructor_Unfoldable1[[]gopurs_runtime.Value]](pkg_Data_Unfoldable1.Get_unfoldable1Array()))}
+	})
+	return cache_unfoldable1NonEmptyArray__ptrData_Unfoldable1_Constructor_Unfoldable1_arrgopurs_runtime_Value__3769668500
 }
 
 var cache_traversableWithIndexNonEmptyArray gopurs_runtime.Value
@@ -134,6 +144,15 @@ func Get_functorNonEmptyArray() gopurs_runtime.Value {
 		cache_functorNonEmptyArray = pkg_Data_Functor.Get_functorArray()
 	})
 	return cache_functorNonEmptyArray
+}
+
+var cache_functorNonEmptyArray__ptrData_Functor_Constructor_Functor_arrgopurs_runtime_Value__2527715796 gopurs_runtime.Value
+var once_functorNonEmptyArray__ptrData_Functor_Constructor_Functor_arrgopurs_runtime_Value__2527715796 sync.Once
+func Get_functorNonEmptyArray__ptrData_Functor_Constructor_Functor_arrgopurs_runtime_Value__2527715796() gopurs_runtime.Value {
+	once_functorNonEmptyArray__ptrData_Functor_Constructor_Functor_arrgopurs_runtime_Value__2527715796.Do(func() {
+		cache_functorNonEmptyArray__ptrData_Functor_Constructor_Functor_arrgopurs_runtime_Value__2527715796 = gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[[]gopurs_runtime.Value]](pkg_Data_Functor.Get_functorArray()))}
+	})
+	return cache_functorNonEmptyArray__ptrData_Functor_Constructor_Functor_arrgopurs_runtime_Value__2527715796
 }
 
 var cache_foldableWithIndexNonEmptyArray gopurs_runtime.Value
@@ -305,8 +324,10 @@ return x_0
 func Call_showNonEmptyArray(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
 _ = dictShow_0
-return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str("(NonEmptyArray "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply2(pkg_Data_Show.Get_showArrayImpl(), gopurs_runtime.RecordGet(dictShow_0, "show"), v_1), gopurs_runtime.Str(")"))).StrVal())
+showArray_1_0 := &pkg_Data_Show.Constructor_Show[[]gopurs_runtime.Value]{1, gopurs_runtime.Apply(pkg_Data_Show.Get_showArrayImpl(), gopurs_runtime.RecordGet(dictShow_0, "show"))}
+_ = showArray_1_0
+return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str("(NonEmptyArray "), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply(showArray_1_0.V0, v_2), gopurs_runtime.Str(")"))).StrVal())
 }))
 }
 

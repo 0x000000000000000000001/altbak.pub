@@ -1,9 +1,11 @@
 package Data_Identity
 
 import (
+	pkg_Control_Monad "gopurs/output/Control.Monad"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	unsafe "unsafe"
 )
 
 var cache_Identity gopurs_runtime.Value
@@ -381,6 +383,19 @@ return Get_bindIdentity()
 }))
 	})
 	return cache_monadIdentity
+}
+
+var cache_monadIdentity__ptrControl_Monad_Constructor_Monad_gopurs_runtime_Value__2437051429 gopurs_runtime.Value
+var once_monadIdentity__ptrControl_Monad_Constructor_Monad_gopurs_runtime_Value__2437051429 sync.Once
+func Get_monadIdentity__ptrControl_Monad_Constructor_Monad_gopurs_runtime_Value__2437051429() gopurs_runtime.Value {
+	once_monadIdentity__ptrControl_Monad_Constructor_Monad_gopurs_runtime_Value__2437051429.Do(func() {
+		cache_monadIdentity__ptrControl_Monad_Constructor_Monad_gopurs_runtime_Value__2437051429 = gopurs_runtime.Value{Type: 9, IntVal: 778916621, UnsafePtr: unsafe.Pointer(&pkg_Control_Monad.Constructor_Monad[gopurs_runtime.Value]{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_applicativeIdentity()
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_bindIdentity()
+})})}
+	})
+	return cache_monadIdentity__ptrControl_Monad_Constructor_Monad_gopurs_runtime_Value__2437051429
 }
 
 var cache_monadIdentity__gopurs_runtime_Value_1104192371 gopurs_runtime.Value

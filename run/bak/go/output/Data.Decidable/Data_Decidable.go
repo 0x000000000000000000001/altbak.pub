@@ -5,6 +5,7 @@ import (
 	pkg_Data_Divisible "gopurs/output/Data.Divisible"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	unsafe "unsafe"
 )
 
 var cache_identity gopurs_runtime.Value
@@ -23,7 +24,7 @@ var once_lose sync.Once
 func Get_lose() gopurs_runtime.Value {
 	once_lose.Do(func() {
 		cache_lose = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_lose(dict_0_box)
+return Call_lose(gopurs_runtime.CoerceToStruct[Constructor_Decidable[gopurs_runtime.Value]](dict_0_box))
 })
 	})
 	return cache_lose
@@ -34,7 +35,7 @@ var once_lose__gopurs_runtime_Value_3306256519 sync.Once
 func Get_lose__gopurs_runtime_Value_3306256519() gopurs_runtime.Value {
 	once_lose__gopurs_runtime_Value_3306256519.Do(func() {
 		cache_lose__gopurs_runtime_Value_3306256519 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_lose__gopurs_runtime_Value_3306256519(dict_0_box)
+return Call_lose__gopurs_runtime_Value_3306256519(gopurs_runtime.CoerceToStruct[Constructor_Decidable[gopurs_runtime.Value]](dict_0_box))
 })
 	})
 	return cache_lose__gopurs_runtime_Value_3306256519
@@ -160,22 +161,43 @@ return gopurs_runtime.Apply(spin_3_0_3, gopurs_runtime.Apply(f_0, a_1))
 	return cache_decidableComparison
 }
 
+type Constructor_Decidable[T_f any] struct {
+	Rc uint32
+	V0 gopurs_runtime.Value
+	V1 gopurs_runtime.Value
+	V2 gopurs_runtime.Value
+}
+
+
+func init() {
+	gopurs_runtime.StructGetters[336732346] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
+		c := (*Constructor_Decidable[gopurs_runtime.Value])(ptr)
+		switch key {
+		case "Decide0": return c.V0
+		case "Divisible1": return c.V1
+		case "lose": return c.V2
+		default: panic("Key not found in dictionary Constructor_Decidable: " + key)
+		}
+	}
+}
+
+
 func Call_identity(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
 return x_0
 }
 
-func Call_lose(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
+func Call_lose(dict_0_loop *Constructor_Decidable[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_Decidable[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "lose")
+return dict_0.V2
 }
 
-func Call_lose__gopurs_runtime_Value_3306256519(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dict_0 gopurs_runtime.Value = dict_0_loop
+func Call_lose__gopurs_runtime_Value_3306256519(dict_0_loop *Constructor_Decidable[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_Decidable[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
-return gopurs_runtime.RecordGet(dict_0, "lose")
+return dict_0.V2
 }
 
 func Call_lost(dictDecidable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {

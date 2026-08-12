@@ -4,6 +4,7 @@ import (
 	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	unsafe "unsafe"
 )
 
 var cache_identity gopurs_runtime.Value
@@ -40,6 +41,38 @@ return x_0
 	})
 	return cache_categoryFn
 }
+
+var cache_categoryFn__ptrConstructor_Category_gopurs_runtime_Value__3492036198 gopurs_runtime.Value
+var once_categoryFn__ptrConstructor_Category_gopurs_runtime_Value__3492036198 sync.Once
+func Get_categoryFn__ptrConstructor_Category_gopurs_runtime_Value__3492036198() gopurs_runtime.Value {
+	once_categoryFn__ptrConstructor_Category_gopurs_runtime_Value__3492036198.Do(func() {
+		cache_categoryFn__ptrConstructor_Category_gopurs_runtime_Value__3492036198 = gopurs_runtime.Value{Type: 9, IntVal: 784524589, UnsafePtr: unsafe.Pointer(&Constructor_Category[gopurs_runtime.Value]{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return pkg_Control_Semigroupoid.Get_semigroupoidFn()
+}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_0
+})})}
+	})
+	return cache_categoryFn__ptrConstructor_Category_gopurs_runtime_Value__3492036198
+}
+
+type Constructor_Category[T_a any] struct {
+	Rc uint32
+	V0 gopurs_runtime.Value
+	V1 gopurs_runtime.Value
+}
+
+
+func init() {
+	gopurs_runtime.StructGetters[784524589] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
+		c := (*Constructor_Category[gopurs_runtime.Value])(ptr)
+		switch key {
+		case "Semigroupoid0": return c.V0
+		case "identity": return c.V1
+		default: panic("Key not found in dictionary Constructor_Category: " + key)
+		}
+	}
+}
+
 
 func Call_identity(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dict_0 gopurs_runtime.Value = dict_0_loop
