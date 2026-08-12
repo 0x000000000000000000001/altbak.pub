@@ -329,7 +329,7 @@ var dictShow_1 *pkg_Data_Show.Constructor_Show[gopurs_runtime.Value] = dictShow_
 _ = dictShow_1
 var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.Apply(dictMonadEffect_0.V1, gopurs_runtime.Apply(pkg_Effect_Console.Get_warn(), gopurs_runtime.Apply(dictShow_1.V0, x_2)))
+return gopurs_runtime.Apply(dictMonadEffect_0.V1, gopurs_runtime.Apply(pkg_Effect_Console.Get_warn(), gopurs_runtime.Str(gopurs_runtime.Apply(dictShow_1.V0, x_2).StrVal())))
 }
 
 func Call_warn(dictMonadEffect_0_loop *pkg_Effect_Class.Constructor_MonadEffect[gopurs_runtime.Value], x_1_loop string) gopurs_runtime.Value {
@@ -371,7 +371,7 @@ var dictShow_1 *pkg_Data_Show.Constructor_Show[gopurs_runtime.Value] = dictShow_
 _ = dictShow_1
 var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.Apply(dictMonadEffect_0.V1, gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(dictShow_1.V0, x_2)))
+return gopurs_runtime.Apply(dictMonadEffect_0.V1, gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str(gopurs_runtime.Apply(dictShow_1.V0, x_2).StrVal())))
 }
 
 func Call_log(dictMonadEffect_0_loop *pkg_Effect_Class.Constructor_MonadEffect[gopurs_runtime.Value], x_1_loop string) gopurs_runtime.Value {
@@ -389,7 +389,7 @@ var dictShow_1 *pkg_Data_Show.Constructor_Show[gopurs_runtime.Value] = dictShow_
 _ = dictShow_1
 var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.Apply(dictMonadEffect_0.V1, gopurs_runtime.Apply(pkg_Effect_Console.Get_info(), gopurs_runtime.Apply(dictShow_1.V0, x_2)))
+return gopurs_runtime.Apply(dictMonadEffect_0.V1, gopurs_runtime.Apply(pkg_Effect_Console.Get_info(), gopurs_runtime.Str(gopurs_runtime.Apply(dictShow_1.V0, x_2).StrVal())))
 }
 
 func Call_info(dictMonadEffect_0_loop *pkg_Effect_Class.Constructor_MonadEffect[gopurs_runtime.Value], x_1_loop string) gopurs_runtime.Value {
@@ -435,7 +435,7 @@ Applicative0_4_3 := gopurs_runtime.CoerceToStruct[pkg_Control_Applicative.Constr
 _ = Applicative0_4_3
 return gopurs_runtime.Func(func(name_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(inner_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(pkg_Control_Bind.Get_discardUnit(), "discard"), gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(Bind1_2_1)}, gopurs_runtime.Apply(dictMonadEffect_0.V1, gopurs_runtime.Apply(pkg_Effect_Console.Get_group(), name_5)), gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(pkg_Control_Bind.Get_discardUnit(), "discard"), gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(Bind1_2_1)}, gopurs_runtime.Apply(dictMonadEffect_0.V1, gopurs_runtime.Apply(pkg_Effect_Console.Get_group(), gopurs_runtime.Str(name_5.StrVal()))), gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(Bind1_2_1.V1, inner_6, gopurs_runtime.Func(func(result_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(pkg_Control_Bind.Get_discardUnit(), "discard"), gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(Bind1_2_1)}, groupEnd1_3_2, gopurs_runtime.Func(func(_dollar__unused_9 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(Applicative0_4_3.V1, result_8)
@@ -453,7 +453,7 @@ var dictShow_1 *pkg_Data_Show.Constructor_Show[gopurs_runtime.Value] = dictShow_
 _ = dictShow_1
 var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.Apply(dictMonadEffect_0.V1, gopurs_runtime.Apply(pkg_Effect_Console.Get_error(), gopurs_runtime.Apply(dictShow_1.V0, x_2)))
+return gopurs_runtime.Apply(dictMonadEffect_0.V1, gopurs_runtime.Apply(pkg_Effect_Console.Get_error(), gopurs_runtime.Str(gopurs_runtime.Apply(dictShow_1.V0, x_2).StrVal())))
 }
 
 func Call_error(dictMonadEffect_0_loop *pkg_Effect_Class.Constructor_MonadEffect[gopurs_runtime.Value], x_1_loop string) gopurs_runtime.Value {
@@ -471,7 +471,7 @@ var dictShow_1 *pkg_Data_Show.Constructor_Show[gopurs_runtime.Value] = dictShow_
 _ = dictShow_1
 var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.Apply(dictMonadEffect_0.V1, gopurs_runtime.Apply(pkg_Effect_Console.Get_debug(), gopurs_runtime.Apply(dictShow_1.V0, x_2)))
+return gopurs_runtime.Apply(dictMonadEffect_0.V1, gopurs_runtime.Apply(pkg_Effect_Console.Get_debug(), gopurs_runtime.Str(gopurs_runtime.Apply(dictShow_1.V0, x_2).StrVal())))
 }
 
 func Call_debug(dictMonadEffect_0_loop *pkg_Effect_Class.Constructor_MonadEffect[gopurs_runtime.Value], x_1_loop string) gopurs_runtime.Value {

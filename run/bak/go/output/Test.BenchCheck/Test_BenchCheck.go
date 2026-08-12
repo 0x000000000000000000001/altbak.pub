@@ -20,7 +20,7 @@ func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
 		cache_act = gopurs_runtime.Apply2(Get_bind__3328406721(), pkg_Bench.Get_benchNow(), gopurs_runtime.Func(func(t1_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(Get_bind__3328406721(), pkg_Bench.Get_benchNow(), gopurs_runtime.Func(func(t2_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("Delta: "), gopurs_runtime.Apply(Get_show__3380206610(), gopurs_runtime.Apply2(Get_sub__1135378904(), t2_1, t1_0))))
+return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("Delta: "), gopurs_runtime.Str(gopurs_runtime.Apply(Get_show__3380206610(), gopurs_runtime.Float(gopurs_runtime.Apply2(Get_sub__1135378904(), gopurs_runtime.Float(t2_1.FloatVal()), gopurs_runtime.Float(t1_0.FloatVal())).FloatVal())).StrVal())).StrVal()))
 }))
 }))
 	})

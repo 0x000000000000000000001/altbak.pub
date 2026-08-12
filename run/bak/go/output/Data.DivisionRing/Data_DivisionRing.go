@@ -51,7 +51,7 @@ return gopurs_runtime.RecordDict2("Semiring0", "sub", gopurs_runtime.Func(func(_
 return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", pkg_Data_Semiring.Get_numAdd(), pkg_Data_Semiring.Get_numMul(), gopurs_runtime.Float(1.0), gopurs_runtime.Float(0.0))
 }), pkg_Data_Ring.Get_numSub())
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(gopurs_runtime.Apply2(Get_div__1002719800(), gopurs_runtime.Float(1.0), x_0).FloatVal())
+return gopurs_runtime.Float(gopurs_runtime.Apply2(Get_div__1002719800(), gopurs_runtime.Float(1.0), gopurs_runtime.Float(x_0.FloatVal())).FloatVal())
 }))
 	})
 	return cache_divisionringNumber

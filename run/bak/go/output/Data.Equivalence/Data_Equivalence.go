@@ -27,7 +27,7 @@ func Get_semigroupEquivalence() gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(b_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool((gopurs_runtime.Apply2(Get_conj__3676519832(), gopurs_runtime.Apply2(v_0, a_2, b_3), gopurs_runtime.Apply2(v1_1, a_2, b_3)).IntVal) != (0))
+return gopurs_runtime.Bool((gopurs_runtime.Apply2(Get_conj__3676519832(), gopurs_runtime.Bool((gopurs_runtime.Apply2(v_0, a_2, b_3).IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.Apply2(v1_1, a_2, b_3).IntVal) != (0))).IntVal) != (0))
 })
 })
 })
@@ -129,7 +129,7 @@ func Get_semigroupEquivalence__2325462015() gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(b_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool((gopurs_runtime.Apply2(Get_conj__3676519832(), gopurs_runtime.Apply2(v_0, a_2, b_3), gopurs_runtime.Apply2(v1_1, a_2, b_3)).IntVal) != (0))
+return gopurs_runtime.Bool((gopurs_runtime.Apply2(Get_conj__3676519832(), gopurs_runtime.Bool((gopurs_runtime.Apply2(v_0, a_2, b_3).IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.Apply2(v1_1, a_2, b_3).IntVal) != (0))).IntVal) != (0))
 })
 })
 })
@@ -239,7 +239,7 @@ var a_1 gopurs_runtime.Value = a_1_loop
 _ = a_1
 var b_2 gopurs_runtime.Value = b_2_loop
 _ = b_2
-return (gopurs_runtime.Apply2(Get_eq__1272715810(), gopurs_runtime.Apply2(v_0, a_1, b_2), gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}).IntVal) != (0)
+return (gopurs_runtime.Apply2(Get_eq__1272715810(), gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(v_0, a_1, b_2).IntVal)), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}).IntVal) != (0)
 }
 
 func Call_eq__2384498378(dict_0_loop *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]) gopurs_runtime.Value {

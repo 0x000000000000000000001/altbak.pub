@@ -13,6 +13,7 @@ import (
 	pkg_Data_Functor "gopurs/output/Data.Functor"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	unsafe "unsafe"
 )
 
 var cache_ReaderT gopurs_runtime.Value
@@ -751,7 +752,7 @@ return gopurs_runtime.Apply(__local_var_4_3, gopurs_runtime.Apply(__local_var_5_
 }), gopurs_runtime.Func(func(dictFunctor_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(e_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictDistributive_0, "collect"), dictFunctor_2, gopurs_runtime.Func(func(r_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictDistributive_0, "collect"), gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](dictFunctor_2))}, gopurs_runtime.Func(func(r_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(r_5, e_4)
 }), a_3)
 })

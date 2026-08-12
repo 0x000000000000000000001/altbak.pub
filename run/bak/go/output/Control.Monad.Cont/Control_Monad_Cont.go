@@ -126,13 +126,21 @@ return Call_unwrap__3267718003(gopurs_runtime.CoerceToStruct[pkg_Data_Newtype.Co
 func Call_withCont(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Control_Semigroupoid.Get_semigroupoidFn(), "compose"), pkg_Data_Identity.Get_Identity())
+__local_var_1_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Control_Semigroupoid.Get_semigroupoidFn(), "compose"), pkg_Data_Identity.Get_Identity())
+_ = __local_var_1_1
+__local_var_2_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Control_Semigroupoid.Get_semigroupoidFn(), "compose"), pkg_Unsafe_Coerce.Get_unsafeCoerce())
+_ = __local_var_2_3
+__local_var_2_2 := gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(__local_var_2_3, x_3))
+})
+_ = __local_var_2_2
+__local_var_1_0 := gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_1_1, gopurs_runtime.Apply(__local_var_2_2, x_3))
+})
 _ = __local_var_1_0
-__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Control_Semigroupoid.Get_semigroupoidFn(), "compose"), pkg_Unsafe_Coerce.Get_unsafeCoerce())
-_ = __local_var_2_1
-return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(k_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(v_3, gopurs_runtime.Apply(__local_var_1_0, gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(__local_var_2_1, k_4))))
+return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(k_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v_2, gopurs_runtime.Apply(__local_var_1_0, k_3))
 })
 })
 }

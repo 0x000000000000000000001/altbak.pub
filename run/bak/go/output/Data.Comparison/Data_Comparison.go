@@ -13,19 +13,23 @@ var cache_semigroupFn gopurs_runtime.Value
 var once_semigroupFn sync.Once
 func Get_semigroupFn() gopurs_runtime.Value {
 	once_semigroupFn.Do(func() {
-		cache_semigroupFn = gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(&pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]{1, gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_semigroupFn = func() gopurs_runtime.Value {
+__local_var_0_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(g_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_3_0 := gopurs_runtime.Apply(f_0, x_2)
-_ = __local_var_3_0
-__local_var_4_1 := gopurs_runtime.Apply(g_1, x_2)
-_ = __local_var_4_1
-return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ordering.Get_semigroupOrdering(), "append"), gopurs_runtime.Apply(__local_var_3_0, x_5), gopurs_runtime.Apply(__local_var_4_1, x_5))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ordering.Get_semigroupOrdering(), "append"), gopurs_runtime.Apply(f_0, x_2), gopurs_runtime.Apply(g_1, x_2))
 })
 })
+}))
+_ = __local_var_0_0
+return gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]](gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(g_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_0_0, "append"), gopurs_runtime.Apply(f_1, x_3), gopurs_runtime.Apply(g_2, x_3))
 })
-})})}
+})
+}))))}
+}()
 	})
 	return cache_semigroupFn
 }

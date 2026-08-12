@@ -256,11 +256,11 @@ semigroupEffect_1_0 := gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup.Construc
 _ = semigroupEffect_1_0
 return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(f2_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func9(func(a_4 gopurs_runtime.Value, __local_var_5 gopurs_runtime.Value, c_6 gopurs_runtime.Value, __local_var_7 gopurs_runtime.Value, e_8 gopurs_runtime.Value, __local_var_9 gopurs_runtime.Value, g_10 gopurs_runtime.Value, __local_var_11 gopurs_runtime.Value, i_12 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func9(func(__local_var_4 gopurs_runtime.Value, __local_var_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value, __local_var_7 gopurs_runtime.Value, __local_var_8 gopurs_runtime.Value, __local_var_9 gopurs_runtime.Value, __local_var_10 gopurs_runtime.Value, __local_var_11 gopurs_runtime.Value, __local_var_12 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.Apply2(semigroupEffect_1_0.V0, gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp(f1_2, a_4, __local_var_5, c_6, __local_var_7, e_8, __local_var_9, g_10, __local_var_11, i_12)
+return gopurs_runtime.UncurriedApp(f1_2, __local_var_4, __local_var_5, __local_var_6, __local_var_7, __local_var_8, __local_var_9, __local_var_10, __local_var_11, __local_var_12)
 }), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp(f2_3, a_4, __local_var_5, c_6, __local_var_7, e_8, __local_var_9, g_10, __local_var_11, i_12)
+return gopurs_runtime.UncurriedApp(f2_3, __local_var_4, __local_var_5, __local_var_6, __local_var_7, __local_var_8, __local_var_9, __local_var_10, __local_var_11, __local_var_12)
 })), gopurs_runtime.Value{})
 })
 })
@@ -274,11 +274,11 @@ semigroupEffect_1_0 := gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup.Construc
 _ = semigroupEffect_1_0
 return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(f2_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func8(func(a_4 gopurs_runtime.Value, __local_var_5 gopurs_runtime.Value, c_6 gopurs_runtime.Value, __local_var_7 gopurs_runtime.Value, e_8 gopurs_runtime.Value, __local_var_9 gopurs_runtime.Value, g_10 gopurs_runtime.Value, __local_var_11 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func8(func(__local_var_4 gopurs_runtime.Value, __local_var_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value, __local_var_7 gopurs_runtime.Value, __local_var_8 gopurs_runtime.Value, __local_var_9 gopurs_runtime.Value, __local_var_10 gopurs_runtime.Value, __local_var_11 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.Apply2(semigroupEffect_1_0.V0, gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp(f1_2, a_4, __local_var_5, c_6, __local_var_7, e_8, __local_var_9, g_10, __local_var_11)
+return gopurs_runtime.UncurriedApp(f1_2, __local_var_4, __local_var_5, __local_var_6, __local_var_7, __local_var_8, __local_var_9, __local_var_10, __local_var_11)
 }), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp(f2_3, a_4, __local_var_5, c_6, __local_var_7, e_8, __local_var_9, g_10, __local_var_11)
+return gopurs_runtime.UncurriedApp(f2_3, __local_var_4, __local_var_5, __local_var_6, __local_var_7, __local_var_8, __local_var_9, __local_var_10, __local_var_11)
 })), gopurs_runtime.Value{})
 })
 })
@@ -292,11 +292,11 @@ semigroupEffect_1_0 := gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup.Construc
 _ = semigroupEffect_1_0
 return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(f2_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func7(func(a_4 gopurs_runtime.Value, __local_var_5 gopurs_runtime.Value, c_6 gopurs_runtime.Value, __local_var_7 gopurs_runtime.Value, e_8 gopurs_runtime.Value, __local_var_9 gopurs_runtime.Value, g_10 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func7(func(__local_var_4 gopurs_runtime.Value, __local_var_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value, __local_var_7 gopurs_runtime.Value, __local_var_8 gopurs_runtime.Value, __local_var_9 gopurs_runtime.Value, __local_var_10 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.Apply2(semigroupEffect_1_0.V0, gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp(f1_2, a_4, __local_var_5, c_6, __local_var_7, e_8, __local_var_9, g_10)
+return gopurs_runtime.UncurriedApp(f1_2, __local_var_4, __local_var_5, __local_var_6, __local_var_7, __local_var_8, __local_var_9, __local_var_10)
 }), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp(f2_3, a_4, __local_var_5, c_6, __local_var_7, e_8, __local_var_9, g_10)
+return gopurs_runtime.UncurriedApp(f2_3, __local_var_4, __local_var_5, __local_var_6, __local_var_7, __local_var_8, __local_var_9, __local_var_10)
 })), gopurs_runtime.Value{})
 })
 })
@@ -310,11 +310,11 @@ semigroupEffect_1_0 := gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup.Construc
 _ = semigroupEffect_1_0
 return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(f2_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func6(func(a_4 gopurs_runtime.Value, __local_var_5 gopurs_runtime.Value, c_6 gopurs_runtime.Value, __local_var_7 gopurs_runtime.Value, e_8 gopurs_runtime.Value, __local_var_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func6(func(__local_var_4 gopurs_runtime.Value, __local_var_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value, __local_var_7 gopurs_runtime.Value, __local_var_8 gopurs_runtime.Value, __local_var_9 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.Apply2(semigroupEffect_1_0.V0, gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp(f1_2, a_4, __local_var_5, c_6, __local_var_7, e_8, __local_var_9)
+return gopurs_runtime.UncurriedApp(f1_2, __local_var_4, __local_var_5, __local_var_6, __local_var_7, __local_var_8, __local_var_9)
 }), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp(f2_3, a_4, __local_var_5, c_6, __local_var_7, e_8, __local_var_9)
+return gopurs_runtime.UncurriedApp(f2_3, __local_var_4, __local_var_5, __local_var_6, __local_var_7, __local_var_8, __local_var_9)
 })), gopurs_runtime.Value{})
 })
 })
@@ -328,11 +328,11 @@ semigroupEffect_1_0 := gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup.Construc
 _ = semigroupEffect_1_0
 return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(f2_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func5(func(a_4 gopurs_runtime.Value, __local_var_5 gopurs_runtime.Value, c_6 gopurs_runtime.Value, __local_var_7 gopurs_runtime.Value, e_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func5(func(__local_var_4 gopurs_runtime.Value, __local_var_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value, __local_var_7 gopurs_runtime.Value, __local_var_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.Apply2(semigroupEffect_1_0.V0, gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp5(f1_2, a_4, __local_var_5, c_6, __local_var_7, e_8)
+return gopurs_runtime.UncurriedApp5(f1_2, __local_var_4, __local_var_5, __local_var_6, __local_var_7, __local_var_8)
 }), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp5(f2_3, a_4, __local_var_5, c_6, __local_var_7, e_8)
+return gopurs_runtime.UncurriedApp5(f2_3, __local_var_4, __local_var_5, __local_var_6, __local_var_7, __local_var_8)
 })), gopurs_runtime.Value{})
 })
 })
@@ -346,11 +346,11 @@ semigroupEffect_1_0 := gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup.Construc
 _ = semigroupEffect_1_0
 return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(f2_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func4(func(a_4 gopurs_runtime.Value, __local_var_5 gopurs_runtime.Value, c_6 gopurs_runtime.Value, __local_var_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func4(func(__local_var_4 gopurs_runtime.Value, __local_var_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value, __local_var_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.Apply2(semigroupEffect_1_0.V0, gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp4(f1_2, a_4, __local_var_5, c_6, __local_var_7)
+return gopurs_runtime.UncurriedApp4(f1_2, __local_var_4, __local_var_5, __local_var_6, __local_var_7)
 }), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp4(f2_3, a_4, __local_var_5, c_6, __local_var_7)
+return gopurs_runtime.UncurriedApp4(f2_3, __local_var_4, __local_var_5, __local_var_6, __local_var_7)
 })), gopurs_runtime.Value{})
 })
 })
@@ -364,11 +364,11 @@ semigroupEffect_1_0 := gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup.Construc
 _ = semigroupEffect_1_0
 return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(f2_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func3(func(a_4 gopurs_runtime.Value, __local_var_5 gopurs_runtime.Value, c_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func3(func(__local_var_4 gopurs_runtime.Value, __local_var_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.Apply2(semigroupEffect_1_0.V0, gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp3(f1_2, a_4, __local_var_5, c_6)
+return gopurs_runtime.UncurriedApp3(f1_2, __local_var_4, __local_var_5, __local_var_6)
 }), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp3(f2_3, a_4, __local_var_5, c_6)
+return gopurs_runtime.UncurriedApp3(f2_3, __local_var_4, __local_var_5, __local_var_6)
 })), gopurs_runtime.Value{})
 })
 })
@@ -382,11 +382,11 @@ semigroupEffect_1_0 := gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup.Construc
 _ = semigroupEffect_1_0
 return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(f2_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func2(func(a_4 gopurs_runtime.Value, __local_var_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func2(func(__local_var_4 gopurs_runtime.Value, __local_var_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.Apply2(semigroupEffect_1_0.V0, gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp2(f1_2, a_4, __local_var_5)
+return gopurs_runtime.UncurriedApp2(f1_2, __local_var_4, __local_var_5)
 }), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp2(f2_3, a_4, __local_var_5)
+return gopurs_runtime.UncurriedApp2(f2_3, __local_var_4, __local_var_5)
 })), gopurs_runtime.Value{})
 })
 })
@@ -400,11 +400,11 @@ semigroupEffect_1_0 := gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup.Construc
 _ = semigroupEffect_1_0
 return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(f2_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func10(func(a_4 gopurs_runtime.Value, __local_var_5 gopurs_runtime.Value, c_6 gopurs_runtime.Value, __local_var_7 gopurs_runtime.Value, e_8 gopurs_runtime.Value, __local_var_9 gopurs_runtime.Value, g_10 gopurs_runtime.Value, __local_var_11 gopurs_runtime.Value, i_12 gopurs_runtime.Value, __local_var_13 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func10(func(__local_var_4 gopurs_runtime.Value, __local_var_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value, __local_var_7 gopurs_runtime.Value, __local_var_8 gopurs_runtime.Value, __local_var_9 gopurs_runtime.Value, __local_var_10 gopurs_runtime.Value, __local_var_11 gopurs_runtime.Value, __local_var_12 gopurs_runtime.Value, __local_var_13 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.Apply2(semigroupEffect_1_0.V0, gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp(f1_2, a_4, __local_var_5, c_6, __local_var_7, e_8, __local_var_9, g_10, __local_var_11, i_12, __local_var_13)
+return gopurs_runtime.UncurriedApp(f1_2, __local_var_4, __local_var_5, __local_var_6, __local_var_7, __local_var_8, __local_var_9, __local_var_10, __local_var_11, __local_var_12, __local_var_13)
 }), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp(f2_3, a_4, __local_var_5, c_6, __local_var_7, e_8, __local_var_9, g_10, __local_var_11, i_12, __local_var_13)
+return gopurs_runtime.UncurriedApp(f2_3, __local_var_4, __local_var_5, __local_var_6, __local_var_7, __local_var_8, __local_var_9, __local_var_10, __local_var_11, __local_var_12, __local_var_13)
 })), gopurs_runtime.Value{})
 })
 })
@@ -418,11 +418,11 @@ semigroupEffect_1_0 := gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup.Construc
 _ = semigroupEffect_1_0
 return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(f2_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(a_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(__local_var_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.Apply2(semigroupEffect_1_0.V0, gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp(f1_2, a_4)
+return gopurs_runtime.UncurriedApp(f1_2, __local_var_4)
 }), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp(f2_3, a_4)
+return gopurs_runtime.UncurriedApp(f2_3, __local_var_4)
 })), gopurs_runtime.Value{})
 })
 })
@@ -438,7 +438,7 @@ semigroupEffectFn91_2_1 := Call_semigroupEffectFn9(gopurs_runtime.Apply(gopurs_r
 _ = semigroupEffectFn91_2_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEffectFn91_2_1
-}), gopurs_runtime.Func9(func(v_3 gopurs_runtime.Value, __local_var_4 gopurs_runtime.Value, v2_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value, v4_7 gopurs_runtime.Value, __local_var_8 gopurs_runtime.Value, v6_9 gopurs_runtime.Value, __local_var_10 gopurs_runtime.Value, v8_11 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func9(func(__local_var_3 gopurs_runtime.Value, __local_var_4 gopurs_runtime.Value, __local_var_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value, __local_var_7 gopurs_runtime.Value, __local_var_8 gopurs_runtime.Value, __local_var_9 gopurs_runtime.Value, __local_var_10 gopurs_runtime.Value, __local_var_11 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(mempty_1_0, gopurs_runtime.Value{})
 }))
 }
@@ -452,7 +452,7 @@ semigroupEffectFn81_2_1 := Call_semigroupEffectFn8(gopurs_runtime.Apply(gopurs_r
 _ = semigroupEffectFn81_2_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEffectFn81_2_1
-}), gopurs_runtime.Func8(func(v_3 gopurs_runtime.Value, __local_var_4 gopurs_runtime.Value, v2_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value, v4_7 gopurs_runtime.Value, __local_var_8 gopurs_runtime.Value, v6_9 gopurs_runtime.Value, __local_var_10 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func8(func(__local_var_3 gopurs_runtime.Value, __local_var_4 gopurs_runtime.Value, __local_var_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value, __local_var_7 gopurs_runtime.Value, __local_var_8 gopurs_runtime.Value, __local_var_9 gopurs_runtime.Value, __local_var_10 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(mempty_1_0, gopurs_runtime.Value{})
 }))
 }
@@ -466,7 +466,7 @@ semigroupEffectFn71_2_1 := Call_semigroupEffectFn7(gopurs_runtime.Apply(gopurs_r
 _ = semigroupEffectFn71_2_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEffectFn71_2_1
-}), gopurs_runtime.Func7(func(v_3 gopurs_runtime.Value, __local_var_4 gopurs_runtime.Value, v2_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value, v4_7 gopurs_runtime.Value, __local_var_8 gopurs_runtime.Value, v6_9 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func7(func(__local_var_3 gopurs_runtime.Value, __local_var_4 gopurs_runtime.Value, __local_var_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value, __local_var_7 gopurs_runtime.Value, __local_var_8 gopurs_runtime.Value, __local_var_9 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(mempty_1_0, gopurs_runtime.Value{})
 }))
 }
@@ -480,7 +480,7 @@ semigroupEffectFn61_2_1 := Call_semigroupEffectFn6(gopurs_runtime.Apply(gopurs_r
 _ = semigroupEffectFn61_2_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEffectFn61_2_1
-}), gopurs_runtime.Func6(func(v_3 gopurs_runtime.Value, __local_var_4 gopurs_runtime.Value, v2_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value, v4_7 gopurs_runtime.Value, __local_var_8 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func6(func(__local_var_3 gopurs_runtime.Value, __local_var_4 gopurs_runtime.Value, __local_var_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value, __local_var_7 gopurs_runtime.Value, __local_var_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(mempty_1_0, gopurs_runtime.Value{})
 }))
 }
@@ -494,7 +494,7 @@ semigroupEffectFn51_2_1 := Call_semigroupEffectFn5(gopurs_runtime.Apply(gopurs_r
 _ = semigroupEffectFn51_2_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEffectFn51_2_1
-}), gopurs_runtime.Func5(func(v_3 gopurs_runtime.Value, __local_var_4 gopurs_runtime.Value, v2_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value, v4_7 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func5(func(__local_var_3 gopurs_runtime.Value, __local_var_4 gopurs_runtime.Value, __local_var_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value, __local_var_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(mempty_1_0, gopurs_runtime.Value{})
 }))
 }
@@ -508,7 +508,7 @@ semigroupEffectFn41_2_1 := Call_semigroupEffectFn4(gopurs_runtime.Apply(gopurs_r
 _ = semigroupEffectFn41_2_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEffectFn41_2_1
-}), gopurs_runtime.Func4(func(v_3 gopurs_runtime.Value, __local_var_4 gopurs_runtime.Value, v2_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func4(func(__local_var_3 gopurs_runtime.Value, __local_var_4 gopurs_runtime.Value, __local_var_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(mempty_1_0, gopurs_runtime.Value{})
 }))
 }
@@ -522,7 +522,7 @@ semigroupEffectFn31_2_1 := Call_semigroupEffectFn3(gopurs_runtime.Apply(gopurs_r
 _ = semigroupEffectFn31_2_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEffectFn31_2_1
-}), gopurs_runtime.Func3(func(v_3 gopurs_runtime.Value, __local_var_4 gopurs_runtime.Value, v2_5 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func3(func(__local_var_3 gopurs_runtime.Value, __local_var_4 gopurs_runtime.Value, __local_var_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(mempty_1_0, gopurs_runtime.Value{})
 }))
 }
@@ -536,7 +536,7 @@ semigroupEffectFn21_2_1 := Call_semigroupEffectFn2(gopurs_runtime.Apply(gopurs_r
 _ = semigroupEffectFn21_2_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEffectFn21_2_1
-}), gopurs_runtime.Func2(func(v_3 gopurs_runtime.Value, __local_var_4 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func2(func(__local_var_3 gopurs_runtime.Value, __local_var_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(mempty_1_0, gopurs_runtime.Value{})
 }))
 }
@@ -550,7 +550,7 @@ semigroupEffectFn101_2_1 := Call_semigroupEffectFn10(gopurs_runtime.Apply(gopurs
 _ = semigroupEffectFn101_2_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEffectFn101_2_1
-}), gopurs_runtime.Func10(func(v_3 gopurs_runtime.Value, __local_var_4 gopurs_runtime.Value, v2_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value, v4_7 gopurs_runtime.Value, __local_var_8 gopurs_runtime.Value, v6_9 gopurs_runtime.Value, __local_var_10 gopurs_runtime.Value, v8_11 gopurs_runtime.Value, __local_var_12 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func10(func(__local_var_3 gopurs_runtime.Value, __local_var_4 gopurs_runtime.Value, __local_var_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value, __local_var_7 gopurs_runtime.Value, __local_var_8 gopurs_runtime.Value, __local_var_9 gopurs_runtime.Value, __local_var_10 gopurs_runtime.Value, __local_var_11 gopurs_runtime.Value, __local_var_12 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(mempty_1_0, gopurs_runtime.Value{})
 }))
 }
@@ -564,7 +564,7 @@ semigroupEffectFn11_2_1 := Call_semigroupEffectFn1(gopurs_runtime.Apply(gopurs_r
 _ = semigroupEffectFn11_2_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEffectFn11_2_1
-}), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(__local_var_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(mempty_1_0, gopurs_runtime.Value{})
 }))
 }

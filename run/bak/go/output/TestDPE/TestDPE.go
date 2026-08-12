@@ -47,7 +47,7 @@ func Get_intMonoidish() gopurs_runtime.Value {
 	once_intMonoidish.Do(func() {
 		cache_intMonoidish = gopurs_runtime.RecordDict2("mappend_", "mempty_", gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(b_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Int(gopurs_runtime.Apply2(Get_add__560788792(), a_0, b_1).IntVal)
+return gopurs_runtime.Int(gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.Int(a_0.IntVal), gopurs_runtime.Int(b_1.IntVal)).IntVal)
 })
 }), gopurs_runtime.Int(0))
 	})
@@ -187,7 +187,7 @@ goto end_branch_1
 }
 }
 {
-__t1 = gopurs_runtime.Apply2(Call_polyLoop(dictMonoidish_0), gopurs_runtime.Apply2(Get_sub__1043827704(), v_2, gopurs_runtime.Int(1)), gopurs_runtime.Apply2(dictMonoidish_0.V0, v1_3, mempty_1_1_0))
+__t1 = gopurs_runtime.Apply2(Call_polyLoop(dictMonoidish_0), gopurs_runtime.Int(gopurs_runtime.Apply2(Get_sub__1043827704(), gopurs_runtime.Int(v_2.IntVal), gopurs_runtime.Int(1)).IntVal), gopurs_runtime.Apply2(dictMonoidish_0.V0, v1_3, mempty_1_1_0))
 }
 end_branch_1:
 return __t1
@@ -229,7 +229,7 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.Apply2(Call_polyLoop(gopurs_runtime.CoerceToStruct[Constructor_Monoidish[gopurs_runtime.Value]](Get_intMonoidish())), gopurs_runtime.Int((v_0) - (1)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_intMonoidish(), "mappend_"), v1_1, gopurs_runtime.RecordGet(Get_intMonoidish(), "mempty_")))
+__t0 = gopurs_runtime.Apply2(Call_polyLoop(gopurs_runtime.CoerceToStruct[Constructor_Monoidish[gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 2768669742, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Monoidish[int64]](Get_intMonoidish()))})), gopurs_runtime.Int((v_0) - (1)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_intMonoidish(), "mappend_"), v1_1, gopurs_runtime.RecordGet(Get_intMonoidish(), "mempty_")))
 }
 end_branch_0:
 return __t0

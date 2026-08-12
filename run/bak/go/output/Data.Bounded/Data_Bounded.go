@@ -410,9 +410,9 @@ _ = __local_var_10_7
 eqRowCons2_9_5 := gopurs_runtime.RecordDict1("eqRecord", gopurs_runtime.Func(func(v_11 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(ra_12 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(rb_13 gopurs_runtime.Value) gopurs_runtime.Value {
-get_14_8 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}))
+get_14_8 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}).StrVal()))
 _ = get_14_8
-return gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_10_7, "eq"), gopurs_runtime.Apply(get_14_8, ra_12), gopurs_runtime.Apply(get_14_8, rb_13)), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_9_6, "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_12, rb_13)).IntVal) != (0))
+return gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_10_7, "eq"), gopurs_runtime.Apply(get_14_8, ra_12), gopurs_runtime.Apply(get_14_8, rb_13)).IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_9_6, "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_12, rb_13).IntVal) != (0))).IntVal) != (0))
 })
 })
 }))
@@ -424,11 +424,11 @@ return gopurs_runtime.Func(func(ra_11 gopurs_runtime.Value) gopurs_runtime.Value
 return gopurs_runtime.Func(func(rb_12 gopurs_runtime.Value) gopurs_runtime.Value {
 key_13_9 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil})
 _ = key_13_9
-left_14_10 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Ord0_4_2, "compare"), gopurs_runtime.Apply2(pkg_Record_Unsafe.Get_unsafeGet(), key_13_9, ra_11), gopurs_runtime.Apply2(pkg_Record_Unsafe.Get_unsafeGet(), key_13_9, rb_12))
+left_14_10 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Ord0_4_2, "compare"), gopurs_runtime.Apply2(pkg_Record_Unsafe.Get_unsafeGet(), gopurs_runtime.Str(key_13_9.StrVal()), ra_11), gopurs_runtime.Apply2(pkg_Record_Unsafe.Get_unsafeGet(), gopurs_runtime.Str(key_13_9.StrVal()), rb_12))
 _ = left_14_10
 var __t11 uint32
 {
-if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ordering.Get_eqOrdering(), "eq"), left_14_10, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}), gopurs_runtime.Bool(false)).IntVal) != (0) {
+if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ordering.Get_eqOrdering(), "eq"), gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(left_14_10.IntVal)), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}).IntVal) != (0)), gopurs_runtime.Bool(false)).IntVal) != (0) {
 __t11 = uint32(left_14_10.IntVal)
 goto end_branch_11
 } else {
@@ -448,11 +448,11 @@ return gopurs_runtime.RecordDict3("OrdRecord0", "bottomRecord", "topRecord", gop
 return ordRecordCons_8_3
 }), gopurs_runtime.Func(func(v_9 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(rowProxy_10 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}), bottom1_3_1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBoundedRecord_7, "bottomRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(rowProxy_10.IntVal)), UnsafePtr: nil}))
+return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}).StrVal()), bottom1_3_1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBoundedRecord_7, "bottomRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(rowProxy_10.IntVal)), UnsafePtr: nil}))
 })
 }), gopurs_runtime.Func(func(v_9 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(rowProxy_10 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}), top1_2_0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBoundedRecord_7, "topRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(rowProxy_10.IntVal)), UnsafePtr: nil}))
+return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}).StrVal()), top1_2_0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBoundedRecord_7, "topRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(rowProxy_10.IntVal)), UnsafePtr: nil}))
 })
 }))
 })

@@ -12,6 +12,7 @@ import (
 	pkg_Data_Functor_Flip "gopurs/output/Data.Functor.Flip"
 	pkg_Data_Functor_Joker "gopurs/output/Data.Functor.Joker"
 	pkg_Data_Functor_Product2 "gopurs/output/Data.Functor.Product2"
+	pkg_Data_Monoid "gopurs/output/Data.Monoid"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Traversable "gopurs/output/Data.Traversable"
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
@@ -854,7 +855,7 @@ bifoldableJoker_2_2 := gopurs_runtime.RecordDict3("bifoldMap", "bifoldl", "bifol
 return gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(r_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_2_3, "foldMap"), dictMonoid_3, r_5, v1_6)
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_2_3, "foldMap"), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Monoid.Constructor_Monoid[gopurs_runtime.Value]](dictMonoid_3))}, r_5, v1_6)
 })
 })
 })
@@ -884,7 +885,7 @@ return bifunctorJoker_1_0
 Functor0_4_4 := gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_3, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
 _ = Functor0_4_4
 return gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(Functor0_4_4.V0, pkg_Data_Functor_Joker.Get_Joker(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictTraversable_0, "sequence"), dictApplicative_3, v_5))
+return gopurs_runtime.Apply2(Functor0_4_4.V0, pkg_Data_Functor_Joker.Get_Joker(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictTraversable_0, "sequence"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]](dictApplicative_3))}, v_5))
 })
 }), gopurs_runtime.Func(func(dictApplicative_3 gopurs_runtime.Value) gopurs_runtime.Value {
 Functor0_4_5 := gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_3, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
@@ -892,7 +893,7 @@ _ = Functor0_4_5
 return gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(r_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(Functor0_4_5.V0, pkg_Data_Functor_Joker.Get_Joker(), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictTraversable_0, "traverse"), dictApplicative_3, r_6, v1_7))
+return gopurs_runtime.Apply2(Functor0_4_5.V0, pkg_Data_Functor_Joker.Get_Joker(), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictTraversable_0, "traverse"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]](dictApplicative_3))}, r_6, v1_7))
 })
 })
 })
@@ -918,7 +919,7 @@ bifoldableClown_2_2 := gopurs_runtime.RecordDict3("bifoldMap", "bifoldl", "bifol
 return gopurs_runtime.Func(func(l_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_2_3, "foldMap"), dictMonoid_3, l_4, v1_6)
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_2_3, "foldMap"), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Monoid.Constructor_Monoid[gopurs_runtime.Value]](dictMonoid_3))}, l_4, v1_6)
 })
 })
 })
@@ -948,7 +949,7 @@ return bifunctorClown_1_0
 Functor0_4_4 := gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_3, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
 _ = Functor0_4_4
 return gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(Functor0_4_4.V0, pkg_Data_Functor_Clown.Get_Clown(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictTraversable_0, "sequence"), dictApplicative_3, v_5))
+return gopurs_runtime.Apply2(Functor0_4_4.V0, pkg_Data_Functor_Clown.Get_Clown(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictTraversable_0, "sequence"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]](dictApplicative_3))}, v_5))
 })
 }), gopurs_runtime.Func(func(dictApplicative_3 gopurs_runtime.Value) gopurs_runtime.Value {
 Functor0_4_5 := gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_3, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
@@ -956,7 +957,7 @@ _ = Functor0_4_5
 return gopurs_runtime.Func(func(l_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(Functor0_4_5.V0, pkg_Data_Functor_Clown.Get_Clown(), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictTraversable_0, "traverse"), dictApplicative_3, l_5, v1_7))
+return gopurs_runtime.Apply2(Functor0_4_5.V0, pkg_Data_Functor_Clown.Get_Clown(), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictTraversable_0, "traverse"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]](dictApplicative_3))}, l_5, v1_7))
 })
 })
 })
@@ -996,7 +997,7 @@ bifoldableFlip_2_2 := gopurs_runtime.RecordDict3("bifoldMap", "bifoldl", "bifold
 return gopurs_runtime.Func(func(r_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(l_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply4(gopurs_runtime.RecordGet(__local_var_2_3, "bifoldMap"), dictMonoid_3, l_5, r_4, v_6)
+return gopurs_runtime.Apply4(gopurs_runtime.RecordGet(__local_var_2_3, "bifoldMap"), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Monoid.Constructor_Monoid[gopurs_runtime.Value]](dictMonoid_3))}, l_5, r_4, v_6)
 })
 })
 })
@@ -1026,7 +1027,7 @@ return bifunctorFlip_1_0
 Functor0_4_4 := gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_3, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
 _ = Functor0_4_4
 return gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(Functor0_4_4.V0, pkg_Data_Functor_Flip.Get_Flip(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBitraversable_0, "bisequence"), dictApplicative_3, v_5))
+return gopurs_runtime.Apply2(Functor0_4_4.V0, pkg_Data_Functor_Flip.Get_Flip(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBitraversable_0, "bisequence"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]](dictApplicative_3))}, v_5))
 })
 }), gopurs_runtime.Func(func(dictApplicative_3 gopurs_runtime.Value) gopurs_runtime.Value {
 Functor0_4_5 := gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_3, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
@@ -1034,7 +1035,7 @@ _ = Functor0_4_5
 return gopurs_runtime.Func(func(r_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(l_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(Functor0_4_5.V0, pkg_Data_Functor_Flip.Get_Flip(), gopurs_runtime.Apply4(gopurs_runtime.RecordGet(dictBitraversable_0, "bitraverse"), dictApplicative_3, l_6, r_5, v_7))
+return gopurs_runtime.Apply2(Functor0_4_5.V0, pkg_Data_Functor_Flip.Get_Flip(), gopurs_runtime.Apply4(gopurs_runtime.RecordGet(dictBitraversable_0, "bitraverse"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]](dictApplicative_3))}, l_6, r_5, v_7))
 })
 })
 })
@@ -1071,7 +1072,7 @@ _ = Apply0_7_5
 Functor0_8_6 := gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_6, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
 _ = Functor0_8_6
 return gopurs_runtime.Func(func(v_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(Apply0_7_5.V1, gopurs_runtime.Apply2(Functor0_8_6.V0, pkg_Data_Functor_Product2.Get_Product2(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBitraversable_0, "bisequence"), dictApplicative_6, (*pkg_Data_Functor_Product2.Constructor_Product2[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_9.UnsafePtr).V0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBitraversable1_3, "bisequence"), dictApplicative_6, (*pkg_Data_Functor_Product2.Constructor_Product2[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_9.UnsafePtr).V1))
+return gopurs_runtime.Apply2(Apply0_7_5.V1, gopurs_runtime.Apply2(Functor0_8_6.V0, pkg_Data_Functor_Product2.Get_Product2(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBitraversable_0, "bisequence"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]](dictApplicative_6))}, (*pkg_Data_Functor_Product2.Constructor_Product2[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_9.UnsafePtr).V0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBitraversable1_3, "bisequence"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]](dictApplicative_6))}, (*pkg_Data_Functor_Product2.Constructor_Product2[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_9.UnsafePtr).V1))
 })
 }), gopurs_runtime.Func(func(dictApplicative_6 gopurs_runtime.Value) gopurs_runtime.Value {
 Apply0_7_7 := gopurs_runtime.CoerceToStruct[pkg_Control_Apply.Constructor_Apply[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_6, "Apply0"), gopurs_runtime.Value{}))
@@ -1081,7 +1082,7 @@ _ = Functor0_8_8
 return gopurs_runtime.Func(func(l_9 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(r_10 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_11 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(Apply0_7_7.V1, gopurs_runtime.Apply2(Functor0_8_8.V0, pkg_Data_Functor_Product2.Get_Product2(), gopurs_runtime.Apply4(gopurs_runtime.RecordGet(dictBitraversable_0, "bitraverse"), dictApplicative_6, l_9, r_10, (*pkg_Data_Functor_Product2.Constructor_Product2[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_11.UnsafePtr).V0)), gopurs_runtime.Apply4(gopurs_runtime.RecordGet(dictBitraversable1_3, "bitraverse"), dictApplicative_6, l_9, r_10, (*pkg_Data_Functor_Product2.Constructor_Product2[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_11.UnsafePtr).V1))
+return gopurs_runtime.Apply2(Apply0_7_7.V1, gopurs_runtime.Apply2(Functor0_8_8.V0, pkg_Data_Functor_Product2.Get_Product2(), gopurs_runtime.Apply4(gopurs_runtime.RecordGet(dictBitraversable_0, "bitraverse"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]](dictApplicative_6))}, l_9, r_10, (*pkg_Data_Functor_Product2.Constructor_Product2[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_11.UnsafePtr).V0)), gopurs_runtime.Apply4(gopurs_runtime.RecordGet(dictBitraversable1_3, "bitraverse"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]](dictApplicative_6))}, l_9, r_10, (*pkg_Data_Functor_Product2.Constructor_Product2[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_11.UnsafePtr).V1))
 })
 })
 })
@@ -1098,7 +1099,7 @@ return gopurs_runtime.Func(func(dictApplicative_2 gopurs_runtime.Value) gopurs_r
 return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(g_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(t_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(dictBitraversable_0.V2, dictApplicative_2, gopurs_runtime.Apply3(Bifunctor0_1_0.V0, f_3, g_4, t_5))
+return gopurs_runtime.Apply2(dictBitraversable_0.V2, gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]](dictApplicative_2))}, gopurs_runtime.Apply3(Bifunctor0_1_0.V0, f_3, g_4, t_5))
 })
 })
 })

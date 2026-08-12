@@ -36,7 +36,7 @@ var once_showReplacement sync.Once
 func Get_showReplacement() gopurs_runtime.Value {
 	once_showReplacement.Do(func() {
 		cache_showReplacement = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("(Replacement "), gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Apply(Get_show__3756561682(), v_0), gopurs_runtime.Str(")"))).StrVal())
+return gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("(Replacement "), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_show__3756561682(), gopurs_runtime.Str(v_0.StrVal())).StrVal()), gopurs_runtime.Str(")")).StrVal())).StrVal())
 }))
 	})
 	return cache_showReplacement
@@ -47,7 +47,7 @@ var once_showPattern sync.Once
 func Get_showPattern() gopurs_runtime.Value {
 	once_showPattern.Do(func() {
 		cache_showPattern = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("(Pattern "), gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Apply(Get_show__3756561682(), v_0), gopurs_runtime.Str(")"))).StrVal())
+return gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("(Pattern "), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_show__3756561682(), gopurs_runtime.Str(v_0.StrVal())).StrVal()), gopurs_runtime.Str(")")).StrVal())).StrVal())
 }))
 	})
 	return cache_showPattern
@@ -81,7 +81,7 @@ func Get_eqReplacement() gopurs_runtime.Value {
 	once_eqReplacement.Do(func() {
 		cache_eqReplacement = gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool((gopurs_runtime.Apply2(Get_eq__472317769(), x_0, y_1).IntVal) != (0))
+return gopurs_runtime.Bool((gopurs_runtime.Apply2(Get_eq__472317769(), gopurs_runtime.Str(x_0.StrVal()), gopurs_runtime.Str(y_1.StrVal())).IntVal) != (0))
 })
 }))
 	})
@@ -96,7 +96,7 @@ func Get_ordReplacement() gopurs_runtime.Value {
 return Get_eqReplacement()
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(Get_compare__882312371(), x_0, y_1).IntVal)), UnsafePtr: nil}
+return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(Get_compare__882312371(), gopurs_runtime.Str(x_0.StrVal()), gopurs_runtime.Str(y_1.StrVal())).IntVal)), UnsafePtr: nil}
 })
 }))
 	})
@@ -109,7 +109,7 @@ func Get_eqPattern() gopurs_runtime.Value {
 	once_eqPattern.Do(func() {
 		cache_eqPattern = gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool((gopurs_runtime.Apply2(Get_eq__472317769(), x_0, y_1).IntVal) != (0))
+return gopurs_runtime.Bool((gopurs_runtime.Apply2(Get_eq__472317769(), gopurs_runtime.Str(x_0.StrVal()), gopurs_runtime.Str(y_1.StrVal())).IntVal) != (0))
 })
 }))
 	})
@@ -124,7 +124,7 @@ func Get_ordPattern() gopurs_runtime.Value {
 return Get_eqPattern()
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(Get_compare__882312371(), x_0, y_1).IntVal)), UnsafePtr: nil}
+return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(Get_compare__882312371(), gopurs_runtime.Str(x_0.StrVal()), gopurs_runtime.Str(y_1.StrVal())).IntVal)), UnsafePtr: nil}
 })
 }))
 	})

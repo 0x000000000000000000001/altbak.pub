@@ -1041,7 +1041,7 @@ return gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_do
 return eqArray_1_0
 }), gopurs_runtime.Func(func(xs_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(ys_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(Get_compare__372254389(), gopurs_runtime.Int(0), gopurs_runtime.Apply3(Get_ordArrayImpl(), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(Get_compare__372254389(), gopurs_runtime.Int(0), gopurs_runtime.Int(gopurs_runtime.Apply3(Get_ordArrayImpl(), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_5 gopurs_runtime.Value) gopurs_runtime.Value {
 v_6_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), x_4, y_5)
 _ = v_6_1
@@ -1076,7 +1076,17 @@ __t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 end_branch_2:
 return gopurs_runtime.Int(__t2.IntVal)
 })
-}), xs_2, ys_3)).IntVal)), UnsafePtr: nil}
+}), gopurs_runtime.Array(func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(xs_2.UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}()), gopurs_runtime.Array(func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(ys_3.UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}())).IntVal)).IntVal)), UnsafePtr: nil}
 })
 }))
 }
@@ -1100,11 +1110,11 @@ return gopurs_runtime.Func(func(ra_8 gopurs_runtime.Value) gopurs_runtime.Value 
 return gopurs_runtime.Func(func(rb_9 gopurs_runtime.Value) gopurs_runtime.Value {
 key_10_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_3, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil})
 _ = key_10_3
-left_11_4 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_5, "compare"), gopurs_runtime.Apply2(pkg_Record_Unsafe.Get_unsafeGet(), key_10_3, ra_8), gopurs_runtime.Apply2(pkg_Record_Unsafe.Get_unsafeGet(), key_10_3, rb_9))
+left_11_4 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_5, "compare"), gopurs_runtime.Apply2(pkg_Record_Unsafe.Get_unsafeGet(), gopurs_runtime.Str(key_10_3.StrVal()), ra_8), gopurs_runtime.Apply2(pkg_Record_Unsafe.Get_unsafeGet(), gopurs_runtime.Str(key_10_3.StrVal()), rb_9))
 _ = left_11_4
 var __t5 uint32
 {
-if (gopurs_runtime.Bool(Call_notEq__1272715810(left_11_4, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil})).IntVal) != (0) {
+if (gopurs_runtime.Bool(Call_notEq__1272715810(gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(left_11_4.IntVal)), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil})).IntVal) != (0) {
 __t5 = uint32(left_11_4.IntVal)
 goto end_branch_5
 } else {
@@ -1133,11 +1143,11 @@ var hi_2 gopurs_runtime.Value = hi_2_loop
 _ = hi_2
 var x_3 gopurs_runtime.Value = x_3_loop
 _ = x_3
-v_4_0 := gopurs_runtime.Apply2(dictOrd_0.V1, low_1, x_3)
-_ = v_4_0
+v_4_1 := gopurs_runtime.Apply2(dictOrd_0.V1, low_1, x_3)
+_ = v_4_1
 var __t2 gopurs_runtime.Value
 {
-if (uint32(v_4_0.IntVal) == 1527465420) {
+if (uint32(v_4_1.IntVal) == 1527465420) {
 __t2 = x_3
 goto end_branch_2
 } else {
@@ -1145,7 +1155,7 @@ goto end_branch_2
 }
 }
 {
-if (uint32(v_4_0.IntVal) == 902936544) {
+if (uint32(v_4_1.IntVal) == 902936544) {
 __t2 = low_1
 goto end_branch_2
 } else {
@@ -1153,7 +1163,7 @@ goto end_branch_2
 }
 }
 {
-if (uint32(v_4_0.IntVal) == 380165415) {
+if (uint32(v_4_1.IntVal) == 380165415) {
 __t2 = low_1
 goto end_branch_2
 } else {
@@ -1164,13 +1174,13 @@ goto end_branch_2
 __t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_2:
-__local_var_5_1 := __t2
-_ = __local_var_5_1
-v_6_3 := gopurs_runtime.Apply2(dictOrd_0.V1, hi_2, __local_var_5_1)
-_ = v_6_3
+__local_var_4_0 := __t2
+_ = __local_var_4_0
+v_5_3 := gopurs_runtime.Apply2(dictOrd_0.V1, hi_2, __local_var_4_0)
+_ = v_5_3
 var __t4 gopurs_runtime.Value
 {
-if (uint32(v_6_3.IntVal) == 1527465420) {
+if (uint32(v_5_3.IntVal) == 1527465420) {
 __t4 = hi_2
 goto end_branch_4
 } else {
@@ -1178,7 +1188,7 @@ goto end_branch_4
 }
 }
 {
-if (uint32(v_6_3.IntVal) == 902936544) {
+if (uint32(v_5_3.IntVal) == 902936544) {
 __t4 = hi_2
 goto end_branch_4
 } else {
@@ -1186,8 +1196,8 @@ goto end_branch_4
 }
 }
 {
-if (uint32(v_6_3.IntVal) == 380165415) {
-__t4 = __local_var_5_1
+if (uint32(v_5_3.IntVal) == 380165415) {
+__t4 = __local_var_4_0
 goto end_branch_4
 } else {
 
@@ -1313,7 +1323,7 @@ var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
 var y_2 gopurs_runtime.Value = y_2_loop
 _ = y_2
-return (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Apply2(dictEq_0.V0, x_1, y_2), gopurs_runtime.Bool(false)).IntVal) != (0)
+return (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Bool((gopurs_runtime.Apply2(dictEq_0.V0, x_1, y_2).IntVal) != (0)), gopurs_runtime.Bool(false)).IntVal) != (0)
 }
 
 func Call_notEq__1272715810(x_0_loop gopurs_runtime.Value, y_1_loop gopurs_runtime.Value) bool {
@@ -1321,7 +1331,7 @@ var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
 var y_1 gopurs_runtime.Value = y_1_loop
 _ = y_1
-return (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ordering.Get_eqOrdering(), "eq"), x_0, y_1), gopurs_runtime.Bool(false)).IntVal) != (0)
+return (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ordering.Get_eqOrdering(), "eq"), x_0, y_1).IntVal) != (0)), gopurs_runtime.Bool(false)).IntVal) != (0)
 }
 
 func Call_compare__821463600(dict_0_loop *Constructor_Ord[gopurs_runtime.Value]) gopurs_runtime.Value {

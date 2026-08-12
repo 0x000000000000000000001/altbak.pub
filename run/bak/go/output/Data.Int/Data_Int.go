@@ -308,7 +308,7 @@ func Get_semiringParity() gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 uint32
 {
-if (gopurs_runtime.Apply2(Get_eq__196302102(), x_0, y_1).IntVal) != (0) {
+if (gopurs_runtime.Apply2(Get_eq__196302102(), gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(x_0.IntVal)), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(y_1.IntVal)), UnsafePtr: nil}).IntVal) != (0) {
 __t0 = 2591059121
 goto end_branch_0
 } else {
@@ -740,7 +740,7 @@ var n_0 int64 = n_0_loop
 _ = n_0
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply2(Get_conj__3676519832(), gopurs_runtime.Bool(Call_greaterThanOrEq__4087042607(gopurs_runtime.Int(n_0), gopurs_runtime.Int(2))), gopurs_runtime.Bool(Call_lessThanOrEq__4087042607(gopurs_runtime.Int(n_0), gopurs_runtime.Int(36)))).IntVal) != (0) {
+if (gopurs_runtime.Apply2(Get_conj__3676519832(), gopurs_runtime.Bool((gopurs_runtime.Bool(Call_greaterThanOrEq__4087042607(gopurs_runtime.Int(n_0), gopurs_runtime.Int(2))).IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.Bool(Call_lessThanOrEq__4087042607(gopurs_runtime.Int(n_0), gopurs_runtime.Int(36))).IntVal) != (0))).IntVal) != (0) {
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, gopurs_runtime.Int(n_0)})}
 goto end_branch_0
 } else {
@@ -765,7 +765,7 @@ var x_0 float64 = x_0_loop
 _ = x_0
 var __t0 int64
 {
-if (gopurs_runtime.Apply(Get_not__3201284355(), gopurs_runtime.Apply(pkg_Data_Number.Get_isFinite(), gopurs_runtime.Float(x_0))).IntVal) != (0) {
+if (gopurs_runtime.Apply(Get_not__3201284355(), gopurs_runtime.Bool((gopurs_runtime.Apply(pkg_Data_Number.Get_isFinite(), gopurs_runtime.Float(x_0)).IntVal) != (0))).IntVal) != (0) {
 __t0 = 0
 goto end_branch_0
 } else {
@@ -773,7 +773,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(Call_greaterThanOrEq__1061005983(gopurs_runtime.Float(x_0), gopurs_runtime.Apply(Get_toNumber(), gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedInt(), "top")))).IntVal) != (0) {
+if (gopurs_runtime.Bool(Call_greaterThanOrEq__1061005983(gopurs_runtime.Float(x_0), gopurs_runtime.Float(gopurs_runtime.Apply(Get_toNumber(), gopurs_runtime.Int(gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedInt(), "top").IntVal)).FloatVal()))).IntVal) != (0) {
 __t0 = gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedInt(), "top").IntVal
 goto end_branch_0
 } else {
@@ -781,7 +781,7 @@ goto end_branch_0
 }
 }
 {
-if (gopurs_runtime.Bool(Call_lessThanOrEq__1061005983(gopurs_runtime.Float(x_0), gopurs_runtime.Apply(Get_toNumber(), gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedInt(), "bottom")))).IntVal) != (0) {
+if (gopurs_runtime.Bool(Call_lessThanOrEq__1061005983(gopurs_runtime.Float(x_0), gopurs_runtime.Float(gopurs_runtime.Apply(Get_toNumber(), gopurs_runtime.Int(gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedInt(), "bottom").IntVal)).FloatVal()))).IntVal) != (0) {
 __t0 = gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedInt(), "bottom").IntVal
 goto end_branch_0
 } else {
@@ -789,7 +789,7 @@ goto end_branch_0
 }
 }
 {
-__t0 = Call_fromMaybe__1972796397(gopurs_runtime.Int(0), gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]](gopurs_runtime.Apply(Get_fromNumber(), gopurs_runtime.Float(x_0)))).IntVal
+__t0 = Call_fromMaybe__1972796397(gopurs_runtime.Int(0), gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[int64]](gopurs_runtime.Apply(Get_fromNumber(), gopurs_runtime.Float(x_0))))})).IntVal
 }
 end_branch_0:
 return __t0
@@ -871,7 +871,7 @@ var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
 var y_2 gopurs_runtime.Value = y_2_loop
 _ = y_2
-return (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Apply2(dictEq_0.V0, x_1, y_2), gopurs_runtime.Bool(false)).IntVal) != (0)
+return (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Bool((gopurs_runtime.Apply2(dictEq_0.V0, x_1, y_2).IntVal) != (0)), gopurs_runtime.Bool(false)).IntVal) != (0)
 }
 
 func Call_conj__3472268504(dict_0_loop *pkg_Data_HeytingAlgebra.Constructor_HeytingAlgebra[gopurs_runtime.Value]) gopurs_runtime.Value {

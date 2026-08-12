@@ -273,7 +273,7 @@ goto end_branch_5
 __t5 = ""
 }
 end_branch_5:
-return gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(__t0), gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(__t1), gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(__t2), gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(__t3), gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(__t4), gopurs_runtime.Str(__t5)))))).StrVal()
+return gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(__t0), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(__t1), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(__t2), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(__t3), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(__t4), gopurs_runtime.Str(__t5)).StrVal())).StrVal())).StrVal())).StrVal())).StrVal()
 }
 
 func Call_regex(s_0_loop string, f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -281,7 +281,7 @@ var s_0 string = s_0_loop
 _ = s_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-return gopurs_runtime.Apply4(Get_regexImpl(), pkg_Data_Either.Get_Left(), pkg_Data_Either.Get_Right(), gopurs_runtime.Str(s_0), gopurs_runtime.Str(Call_renderFlags(f_1)))
+return gopurs_runtime.Apply4(Get_regexImpl(), pkg_Data_Either.Get_Left(), pkg_Data_Either.Get_Right(), gopurs_runtime.Str(s_0), gopurs_runtime.Str(gopurs_runtime.Str(Call_renderFlags(f_1)).StrVal()))
 }
 
 func Call_parseFlags(s_0_loop string) gopurs_runtime.Value {

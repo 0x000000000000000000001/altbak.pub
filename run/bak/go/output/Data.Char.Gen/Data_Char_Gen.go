@@ -14,6 +14,7 @@ import (
 	pkg_Data_NonEmpty "gopurs/output/Data.NonEmpty"
 	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Data_Ring "gopurs/output/Data.Ring"
+	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Semigroup_Foldable "gopurs/output/Data.Semigroup.Foldable"
 	pkg_Data_Semigroup_Last "gopurs/output/Data.Semigroup.Last"
 	pkg_Data_Semiring "gopurs/output/Data.Semiring"
@@ -295,7 +296,7 @@ _ = bottom2_0_0
 return gopurs_runtime.Func(func(low_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(high_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-v_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Enum.Get_boundedEnumChar(), "toEnum"), x_3)
+v_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Enum.Get_boundedEnumChar(), "toEnum"), gopurs_runtime.Int(x_3.IntVal))
 _ = v_4_1
 var __t3 gopurs_runtime.Value
 {
@@ -310,7 +311,7 @@ goto end_branch_3
 if (v_4_1.Type == 9 && v_4_1.IntVal == 930809136 && v_4_1.UnsafePtr == nil) {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(Call_lessThan__4087042607(x_3, gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Enum.Get_boundedEnumChar(), "fromEnum"), bottom2_0_0))).IntVal) != (0) {
+if (gopurs_runtime.Bool(Call_lessThan__4087042607(gopurs_runtime.Int(x_3.IntVal), gopurs_runtime.Int(gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Enum.Get_boundedEnumChar(), "fromEnum"), bottom2_0_0).IntVal))).IntVal) != (0) {
 __t2 = low_1
 goto end_branch_2
 } else {
@@ -665,43 +666,48 @@ return Call_zero__1204848985(dict_0_box)
 func Call_genUnicodeChar(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Apply2(Get_toEnumWithDefaults__3941305703(), gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "bottom"), gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "top")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0, "chooseInt"), gopurs_runtime.Int(0), gopurs_runtime.Int(65536)))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Apply2(Get_toEnumWithDefaults__3941305703(), gopurs_runtime.Str(gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "bottom").StrVal()), gopurs_runtime.Str(gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "top").StrVal())), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0, "chooseInt"), gopurs_runtime.Int(0), gopurs_runtime.Int(65536)))
 }
 
 func Call_genDigitChar(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Apply2(Get_toEnumWithDefaults__3941305703(), gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "bottom"), gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "top")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0, "chooseInt"), gopurs_runtime.Int(48), gopurs_runtime.Int(57)))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Apply2(Get_toEnumWithDefaults__3941305703(), gopurs_runtime.Str(gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "bottom").StrVal()), gopurs_runtime.Str(gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "top").StrVal())), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0, "chooseInt"), gopurs_runtime.Int(48), gopurs_runtime.Int(57)))
 }
 
 func Call_genAsciiChar_prime(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Apply2(Get_toEnumWithDefaults__3941305703(), gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "bottom"), gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "top")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0, "chooseInt"), gopurs_runtime.Int(0), gopurs_runtime.Int(127)))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Apply2(Get_toEnumWithDefaults__3941305703(), gopurs_runtime.Str(gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "bottom").StrVal()), gopurs_runtime.Str(gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "top").StrVal())), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0, "chooseInt"), gopurs_runtime.Int(0), gopurs_runtime.Int(127)))
 }
 
 func Call_genAsciiChar(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Apply2(Get_toEnumWithDefaults__3941305703(), gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "bottom"), gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "top")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0, "chooseInt"), gopurs_runtime.Int(32), gopurs_runtime.Int(127)))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Apply2(Get_toEnumWithDefaults__3941305703(), gopurs_runtime.Str(gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "bottom").StrVal()), gopurs_runtime.Str(gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "top").StrVal())), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0, "chooseInt"), gopurs_runtime.Int(32), gopurs_runtime.Int(127)))
 }
 
 func Call_genAlphaUppercase(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Apply2(Get_toEnumWithDefaults__3941305703(), gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "bottom"), gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "top")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0, "chooseInt"), gopurs_runtime.Int(65), gopurs_runtime.Int(90)))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Apply2(Get_toEnumWithDefaults__3941305703(), gopurs_runtime.Str(gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "bottom").StrVal()), gopurs_runtime.Str(gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "top").StrVal())), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0, "chooseInt"), gopurs_runtime.Int(65), gopurs_runtime.Int(90)))
 }
 
 func Call_genAlphaLowercase(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Apply2(Get_toEnumWithDefaults__3941305703(), gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "bottom"), gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "top")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0, "chooseInt"), gopurs_runtime.Int(97), gopurs_runtime.Int(122)))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Apply2(Get_toEnumWithDefaults__3941305703(), gopurs_runtime.Str(gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "bottom").StrVal()), gopurs_runtime.Str(gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "top").StrVal())), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0, "chooseInt"), gopurs_runtime.Int(97), gopurs_runtime.Int(122)))
 }
 
 func Call_genAlpha(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
-return gopurs_runtime.Apply3(pkg_Control_Monad_Gen.Get_oneOf(), dictMonadGen_0, gopurs_runtime.Value{Type: 9, IntVal: 2465059545, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup_Foldable.Constructor_Foldable1[*pkg_Data_NonEmpty.Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value]]](Get_foldable1NonEmpty()))}, gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(&pkg_Data_NonEmpty.Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value]{1, Call_genAlphaLowercase(dictMonadGen_0), gopurs_runtime.Array([]gopurs_runtime.Value{Call_genAlphaUppercase(dictMonadGen_0)})})})
+return gopurs_runtime.Apply3(pkg_Control_Monad_Gen.Get_oneOf(), gopurs_runtime.Value{Type: 9, IntVal: 2254593219, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Control_Monad_Gen_Class.Constructor_MonadGen[gopurs_runtime.Value]](dictMonadGen_0))}, gopurs_runtime.Value{Type: 9, IntVal: 2465059545, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup_Foldable.Constructor_Foldable1[*pkg_Data_NonEmpty.Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value]]](Get_foldable1NonEmpty()))}, gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(&pkg_Data_NonEmpty.Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value]{1, Call_genAlphaLowercase(gopurs_runtime.Value{Type: 9, IntVal: 2254593219, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Control_Monad_Gen_Class.Constructor_MonadGen[gopurs_runtime.Value]](dictMonadGen_0))}), gopurs_runtime.Array(func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array([]gopurs_runtime.Value{Call_genAlphaUppercase(dictMonadGen_0)}).UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}())})})
 }
 
 func Call_bind__1858449959(dict_0_loop *pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value]) gopurs_runtime.Value {
@@ -733,12 +739,12 @@ var go__go_4_1_0 gopurs_runtime.Value
 go__go_4_1_0 = gopurs_runtime.Func(func(v_5_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_6_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
-var v_5_loop gopurs_runtime.Value = v_5_loop_val
+var v_5_loop int64 = v_5_loop_val.IntVal
 var v1_6_loop gopurs_runtime.Value = v1_6_loop_val
 go__go_4_1_0:
 for {
 if false { continue go__go_4_1_0 }
-var v_5 gopurs_runtime.Value = v_5_loop
+var v_5 int64 = v_5_loop
 _ = v_5
 var v1_6 gopurs_runtime.Value = v1_6_loop
 _ = v1_6
@@ -756,7 +762,7 @@ goto end_branch_3
 }
 }
 {
-if (gopurs_runtime.Bool(Call_lessThanOrEq__4087042607(v_5, gopurs_runtime.Int(0))).IntVal) != (0) {
+if (gopurs_runtime.Bool(Call_lessThanOrEq__4087042607(gopurs_runtime.Int(v_5), gopurs_runtime.Int(0))).IntVal) != (0) {
 __t3 = (*pkg_Control_Monad_Gen.Constructor_Cons[gopurs_runtime.Value])(v1_6.UnsafePtr).V0
 goto end_branch_3
 } else {
@@ -764,7 +770,7 @@ goto end_branch_3
 }
 }
 {
-v_5_loop = gopurs_runtime.Apply2(Get_sub__1043827704(), v_5, gopurs_runtime.Int(1))
+v_5_loop = gopurs_runtime.Apply2(Get_sub__1043827704(), gopurs_runtime.Int(v_5), gopurs_runtime.Int(1)).IntVal
 v1_6_loop = gopurs_runtime.Value{Type: 9, IntVal: 759514854, UnsafePtr: unsafe.Pointer((*pkg_Control_Monad_Gen.Constructor_Cons[gopurs_runtime.Value])(v1_6.UnsafePtr).V1)}
 continue go__go_4_1_0
 __t3 = gopurs_runtime.Value{}
@@ -778,7 +784,7 @@ goto end_branch_4
 }
 {
 if (v1_6.Type == 9 && v1_6.IntVal == 759514854 && v1_6.UnsafePtr == nil) {
-__t4 = gopurs_runtime.Apply3(dictFoldable1_0.V1, pkg_Data_Semigroup_Last.Get_semigroupLast(), pkg_Data_Semigroup_Last.Get_Last(), xs_3)
+__t4 = gopurs_runtime.Apply3(dictFoldable1_0.V1, gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]](pkg_Data_Semigroup_Last.Get_semigroupLast()))}, pkg_Data_Semigroup_Last.Get_Last(), xs_3)
 goto end_branch_4
 } else {
 
@@ -793,7 +799,7 @@ return __t4
 }()
 })
 })
-return gopurs_runtime.Apply2(go__go_4_1_0, i_2, gopurs_runtime.Apply3(Foldable0_1_0.V2, pkg_Control_Monad_Gen.Get_Cons(), gopurs_runtime.Value{Type: 9, IntVal: 759514854, UnsafePtr: unsafe.Pointer((*pkg_Control_Monad_Gen.Constructor_Cons[gopurs_runtime.Value])(nil))}, xs_3))
+return gopurs_runtime.Apply2(go__go_4_1_0, gopurs_runtime.Int(i_2.IntVal), gopurs_runtime.Value{Type: 9, IntVal: 759514854, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Control_Monad_Gen.Constructor_Cons[gopurs_runtime.Value]](gopurs_runtime.Apply3(Foldable0_1_0.V2, pkg_Control_Monad_Gen.Get_Cons(), gopurs_runtime.Value{Type: 9, IntVal: 759514854, UnsafePtr: unsafe.Pointer((*pkg_Control_Monad_Gen.Constructor_Cons[gopurs_runtime.Value])(nil))}, xs_3)))})
 })
 })
 }
@@ -809,12 +815,12 @@ var go__go_4_1_1 gopurs_runtime.Value
 go__go_4_1_1 = gopurs_runtime.Func(func(v_5_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_6_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
-var v_5_loop gopurs_runtime.Value = v_5_loop_val
+var v_5_loop int64 = v_5_loop_val.IntVal
 var v1_6_loop gopurs_runtime.Value = v1_6_loop_val
 go__go_4_1_1:
 for {
 if false { continue go__go_4_1_1 }
-var v_5 gopurs_runtime.Value = v_5_loop
+var v_5 int64 = v_5_loop
 _ = v_5
 var v1_6 gopurs_runtime.Value = v1_6_loop
 _ = v1_6
@@ -832,7 +838,7 @@ goto end_branch_3
 }
 }
 {
-if (gopurs_runtime.Bool(Call_lessThanOrEq__4087042607(v_5, gopurs_runtime.Int(0))).IntVal) != (0) {
+if (gopurs_runtime.Bool(Call_lessThanOrEq__4087042607(gopurs_runtime.Int(v_5), gopurs_runtime.Int(0))).IntVal) != (0) {
 __t3 = (*pkg_Control_Monad_Gen.Constructor_Cons[gopurs_runtime.Value])(v1_6.UnsafePtr).V0
 goto end_branch_3
 } else {
@@ -840,7 +846,7 @@ goto end_branch_3
 }
 }
 {
-v_5_loop = gopurs_runtime.Apply2(Get_sub__1043827704(), v_5, gopurs_runtime.Int(1))
+v_5_loop = gopurs_runtime.Apply2(Get_sub__1043827704(), gopurs_runtime.Int(v_5), gopurs_runtime.Int(1)).IntVal
 v1_6_loop = gopurs_runtime.Value{Type: 9, IntVal: 759514854, UnsafePtr: unsafe.Pointer((*pkg_Control_Monad_Gen.Constructor_Cons[gopurs_runtime.Value])(v1_6.UnsafePtr).V1)}
 continue go__go_4_1_1
 __t3 = gopurs_runtime.Value{}
@@ -854,7 +860,7 @@ goto end_branch_4
 }
 {
 if (v1_6.Type == 9 && v1_6.IntVal == 759514854 && v1_6.UnsafePtr == nil) {
-__t4 = gopurs_runtime.Apply3(dictFoldable1_0.V1, pkg_Data_Semigroup_Last.Get_semigroupLast(), pkg_Data_Semigroup_Last.Get_Last(), xs_3)
+__t4 = gopurs_runtime.Apply3(dictFoldable1_0.V1, gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]](pkg_Data_Semigroup_Last.Get_semigroupLast()))}, pkg_Data_Semigroup_Last.Get_Last(), xs_3)
 goto end_branch_4
 } else {
 
@@ -869,7 +875,7 @@ return __t4
 }()
 })
 })
-return gopurs_runtime.Apply2(go__go_4_1_1, i_2, gopurs_runtime.Apply3(Foldable0_1_0.V2, pkg_Control_Monad_Gen.Get_Cons(), gopurs_runtime.Value{Type: 9, IntVal: 759514854, UnsafePtr: unsafe.Pointer((*pkg_Control_Monad_Gen.Constructor_Cons[gopurs_runtime.Value])(nil))}, xs_3))
+return gopurs_runtime.Apply2(go__go_4_1_1, gopurs_runtime.Int(i_2.IntVal), gopurs_runtime.Value{Type: 9, IntVal: 759514854, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Control_Monad_Gen.Constructor_Cons[gopurs_runtime.Value]](gopurs_runtime.Apply3(Foldable0_1_0.V2, pkg_Control_Monad_Gen.Get_Cons(), gopurs_runtime.Value{Type: 9, IntVal: 759514854, UnsafePtr: unsafe.Pointer((*pkg_Control_Monad_Gen.Constructor_Cons[gopurs_runtime.Value])(nil))}, xs_3)))})
 })
 })
 }
@@ -883,12 +889,14 @@ return gopurs_runtime.Func(func(dictFoldable1_2 gopurs_runtime.Value) gopurs_run
 Foldable0_3_1 := gopurs_runtime.CoerceToStruct[pkg_Data_Foldable.Constructor_Foldable[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_2, "Foldable0"), gopurs_runtime.Value{}))
 _ = Foldable0_3_1
 return gopurs_runtime.Func(func(xs_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(Bind1_1_0.V1, gopurs_runtime.Apply2(dictMonadGen_0.V3, gopurs_runtime.Int(0), gopurs_runtime.Apply2(Get_sub__1043827704(), gopurs_runtime.Apply3(Foldable0_3_1.V1, gopurs_runtime.Func(func(c_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Int((1) + (c_5.IntVal))
+__local_var_5_2 := &pkg_Data_Semiring.Constructor_Semiring[int64]{1, pkg_Data_Semiring.Get_intAdd(), pkg_Data_Semiring.Get_intMul(), 1, 0}
+_ = __local_var_5_2
+return gopurs_runtime.Apply2(Bind1_1_0.V1, gopurs_runtime.Apply2(dictMonadGen_0.V3, gopurs_runtime.Int(0), gopurs_runtime.Int(gopurs_runtime.Apply2(Get_sub__1043827704(), gopurs_runtime.Int(gopurs_runtime.Apply3(Foldable0_3_1.V1, gopurs_runtime.Func(func(c_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(__local_var_5_2.V0, __local_var_5_2.V2, c_6)
 })
-}), gopurs_runtime.Int(0), xs_4), gopurs_runtime.Int(1))), gopurs_runtime.Func(func(n_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(pkg_Control_Monad_Gen.Get_fromIndex(), dictFoldable1_2, n_5, xs_4)
+}), __local_var_5_2.V3, xs_4).IntVal), gopurs_runtime.Int(1)).IntVal)), gopurs_runtime.Func(func(n_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(pkg_Control_Monad_Gen.Get_fromIndex(), gopurs_runtime.Value{Type: 9, IntVal: 2465059545, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup_Foldable.Constructor_Foldable1[gopurs_runtime.Value]](dictFoldable1_2))}, gopurs_runtime.Int(n_5.IntVal), xs_4)
 }))
 })
 })
@@ -902,12 +910,14 @@ _ = Bind1_1_0
 Foldable0_2_1 := gopurs_runtime.CoerceToStruct[pkg_Data_Foldable.Constructor_Foldable[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup_Foldable.Constructor_Foldable1[*pkg_Data_NonEmpty.Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value]]](Get_foldable1NonEmpty()).V0, gopurs_runtime.Value{}))
 _ = Foldable0_2_1
 return gopurs_runtime.Func(func(xs_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(Bind1_1_0.V1, gopurs_runtime.Apply2(dictMonadGen_0.V3, gopurs_runtime.Int(0), gopurs_runtime.Apply2(Get_sub__1043827704(), gopurs_runtime.Apply3(Foldable0_2_1.V1, gopurs_runtime.Func(func(c_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Int((1) + (c_4.IntVal))
+__local_var_4_2 := &pkg_Data_Semiring.Constructor_Semiring[int64]{1, pkg_Data_Semiring.Get_intAdd(), pkg_Data_Semiring.Get_intMul(), 1, 0}
+_ = __local_var_4_2
+return gopurs_runtime.Apply2(Bind1_1_0.V1, gopurs_runtime.Apply2(dictMonadGen_0.V3, gopurs_runtime.Int(0), gopurs_runtime.Int(gopurs_runtime.Apply2(Get_sub__1043827704(), gopurs_runtime.Int(gopurs_runtime.Apply3(Foldable0_2_1.V1, gopurs_runtime.Func(func(c_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(__local_var_4_2.V0, __local_var_4_2.V2, c_5)
 })
-}), gopurs_runtime.Int(0), xs_3), gopurs_runtime.Int(1))), gopurs_runtime.Func(func(n_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(pkg_Control_Monad_Gen.Get_fromIndex(), gopurs_runtime.Value{Type: 9, IntVal: 2465059545, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup_Foldable.Constructor_Foldable1[*pkg_Data_NonEmpty.Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value]]](Get_foldable1NonEmpty()))}, n_4, xs_3)
+}), __local_var_4_2.V3, xs_3).IntVal), gopurs_runtime.Int(1)).IntVal)), gopurs_runtime.Func(func(n_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(pkg_Control_Monad_Gen.Get_fromIndex(), gopurs_runtime.Value{Type: 9, IntVal: 2465059545, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup_Foldable.Constructor_Foldable1[*pkg_Data_NonEmpty.Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value]]](Get_foldable1NonEmpty()))}, gopurs_runtime.Int(n_4.IntVal), xs_3)
 }))
 })
 }
@@ -927,7 +937,7 @@ return gopurs_runtime.RecordGet(dict_0, "top")
 func Call_genAlphaLowercase__4294897069(dictMonadGen_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadGen_0 gopurs_runtime.Value = dictMonadGen_0_loop
 _ = dictMonadGen_0
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Apply2(Get_toEnumWithDefaults__3941305703(), gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "bottom"), gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "top")), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0, "chooseInt"), gopurs_runtime.Int(97), gopurs_runtime.Int(122)))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Apply2(Get_toEnumWithDefaults__3941305703(), gopurs_runtime.Str(gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "bottom").StrVal()), gopurs_runtime.Str(gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedChar(), "top").StrVal())), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0, "chooseInt"), gopurs_runtime.Int(97), gopurs_runtime.Int(122)))
 }
 
 func Call_defaultPred__1581620096(toEnum_prime_0_loop gopurs_runtime.Value, fromEnum_prime_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value] {
@@ -937,7 +947,7 @@ var fromEnum_prime_1 gopurs_runtime.Value = fromEnum_prime_1_loop
 _ = fromEnum_prime_1
 var a_2 gopurs_runtime.Value = a_2_loop
 _ = a_2
-return gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]](gopurs_runtime.Apply(toEnum_prime_0, gopurs_runtime.Apply2(Get_sub__1043827704(), gopurs_runtime.Apply(fromEnum_prime_1, a_2), gopurs_runtime.Int(1))))
+return gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]](gopurs_runtime.Apply(toEnum_prime_0, gopurs_runtime.Int(gopurs_runtime.Apply2(Get_sub__1043827704(), gopurs_runtime.Int(gopurs_runtime.Apply(fromEnum_prime_1, a_2).IntVal), gopurs_runtime.Int(1)).IntVal)))
 }
 
 func Call_defaultPred__2204581824(toEnum_prime_0_loop gopurs_runtime.Value, fromEnum_prime_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value] {
@@ -947,7 +957,7 @@ var fromEnum_prime_1 gopurs_runtime.Value = fromEnum_prime_1_loop
 _ = fromEnum_prime_1
 var a_2 gopurs_runtime.Value = a_2_loop
 _ = a_2
-return gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]](gopurs_runtime.Apply(toEnum_prime_0, gopurs_runtime.Apply2(Get_sub__1043827704(), gopurs_runtime.Apply(fromEnum_prime_1, a_2), gopurs_runtime.Int(1))))
+return gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]](gopurs_runtime.Apply(toEnum_prime_0, gopurs_runtime.Int(gopurs_runtime.Apply2(Get_sub__1043827704(), gopurs_runtime.Int(gopurs_runtime.Apply(fromEnum_prime_1, a_2).IntVal), gopurs_runtime.Int(1)).IntVal)))
 }
 
 func Call_defaultSucc__1581620096(toEnum_prime_0_loop gopurs_runtime.Value, fromEnum_prime_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value] {
@@ -957,7 +967,7 @@ var fromEnum_prime_1 gopurs_runtime.Value = fromEnum_prime_1_loop
 _ = fromEnum_prime_1
 var a_2 gopurs_runtime.Value = a_2_loop
 _ = a_2
-return gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]](gopurs_runtime.Apply(toEnum_prime_0, gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.Apply(fromEnum_prime_1, a_2), gopurs_runtime.Int(1))))
+return gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]](gopurs_runtime.Apply(toEnum_prime_0, gopurs_runtime.Int(gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.Int(gopurs_runtime.Apply(fromEnum_prime_1, a_2).IntVal), gopurs_runtime.Int(1)).IntVal)))
 }
 
 func Call_defaultSucc__2204581824(toEnum_prime_0_loop gopurs_runtime.Value, fromEnum_prime_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) *pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value] {
@@ -967,7 +977,7 @@ var fromEnum_prime_1 gopurs_runtime.Value = fromEnum_prime_1_loop
 _ = fromEnum_prime_1
 var a_2 gopurs_runtime.Value = a_2_loop
 _ = a_2
-return gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]](gopurs_runtime.Apply(toEnum_prime_0, gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.Apply(fromEnum_prime_1, a_2), gopurs_runtime.Int(1))))
+return gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]](gopurs_runtime.Apply(toEnum_prime_0, gopurs_runtime.Int(gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.Int(gopurs_runtime.Apply(fromEnum_prime_1, a_2).IntVal), gopurs_runtime.Int(1)).IntVal)))
 }
 
 func Call_fromEnum__1637084359(dict_0_loop *pkg_Data_Enum.Constructor_BoundedEnum[gopurs_runtime.Value]) gopurs_runtime.Value {
@@ -990,7 +1000,7 @@ _ = bottom2_1_0
 return gopurs_runtime.Func(func(low_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(high_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-v_5_1 := gopurs_runtime.Apply(dictBoundedEnum_0.V4, x_4)
+v_5_1 := gopurs_runtime.Apply(dictBoundedEnum_0.V4, gopurs_runtime.Int(x_4.IntVal))
 _ = v_5_1
 var __t3 gopurs_runtime.Value
 {
@@ -1005,7 +1015,7 @@ goto end_branch_3
 if (v_5_1.Type == 9 && v_5_1.IntVal == 930809136 && v_5_1.UnsafePtr == nil) {
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(Call_lessThan__4087042607(x_4, gopurs_runtime.Apply(dictBoundedEnum_0.V3, bottom2_1_0))).IntVal) != (0) {
+if (gopurs_runtime.Bool(Call_lessThan__4087042607(gopurs_runtime.Int(x_4.IntVal), gopurs_runtime.Int(gopurs_runtime.Apply(dictBoundedEnum_0.V3, bottom2_1_0).IntVal))).IntVal) != (0) {
 __t2 = low_2
 goto end_branch_2
 } else {

@@ -336,22 +336,24 @@ _ = Monad0_2_1
 return gopurs_runtime.Func(func(dictMonoid_3 gopurs_runtime.Value) gopurs_runtime.Value {
 monadEffectRWS_4_2 := gopurs_runtime.Apply2(pkg_Control_Monad_RWS_Trans.Get_monadEffectRWS(), dictMonoid_3, MonadEffect0_1_0)
 _ = monadEffectRWS_4_2
-Bind1_5_3 := gopurs_runtime.CoerceToStruct[pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_2_1, "Bind1"), gopurs_runtime.Value{}))
-_ = Bind1_5_3
-pure_6_4 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_2_1, "Applicative0"), gopurs_runtime.Value{}), "pure")
-_ = pure_6_4
-return gopurs_runtime.RecordDict2("MonadEffect0", "liftAff", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return monadEffectRWS_4_2
-}), gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_8_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAff_0, "liftAff"), x_7)
-_ = __local_var_8_5
-return gopurs_runtime.Func(func(v_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(s_10 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(Bind1_5_3.V1, __local_var_8_5, gopurs_runtime.Func(func(a_11 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(pure_6_4, gopurs_runtime.Value{Type: 9, IntVal: 2367475031, UnsafePtr: unsafe.Pointer(&pkg_Control_Monad_RWS_Trans.Constructor_RWSResult[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]{1, s_10, a_11, gopurs_runtime.RecordGet(dictMonoid_3, "mempty")})})
+Bind1_5_4 := gopurs_runtime.CoerceToStruct[pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_2_1, "Bind1"), gopurs_runtime.Value{}))
+_ = Bind1_5_4
+pure_6_5 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_2_1, "Applicative0"), gopurs_runtime.Value{}), "pure")
+_ = pure_6_5
+__local_var_5_3 := gopurs_runtime.Func(func(m_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(s_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Bind1_5_4.V1, m_7, gopurs_runtime.Func(func(a_10 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(pure_6_5, gopurs_runtime.Value{Type: 9, IntVal: 2367475031, UnsafePtr: unsafe.Pointer(&pkg_Control_Monad_RWS_Trans.Constructor_RWSResult[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]{1, s_9, a_10, gopurs_runtime.RecordGet(dictMonoid_3, "mempty")})})
 }))
 })
 })
+})
+_ = __local_var_5_3
+return gopurs_runtime.RecordDict2("MonadEffect0", "liftAff", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return monadEffectRWS_4_2
+}), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_5_3, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAff_0, "liftAff"), x_6))
 }))
 })
 }
@@ -398,16 +400,20 @@ _ = Monad0_2_1
 return gopurs_runtime.Func(func(dictMonoid_3 gopurs_runtime.Value) gopurs_runtime.Value {
 monadEffectWriter_4_2 := gopurs_runtime.Apply2(pkg_Control_Monad_Writer_Trans.Get_monadEffectWriter(), dictMonoid_3, MonadEffect0_1_0)
 _ = monadEffectWriter_4_2
-Bind1_5_3 := gopurs_runtime.CoerceToStruct[pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_2_1, "Bind1"), gopurs_runtime.Value{}))
-_ = Bind1_5_3
-pure_6_4 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_2_1, "Applicative0"), gopurs_runtime.Value{}), "pure")
-_ = pure_6_4
+Bind1_5_4 := gopurs_runtime.CoerceToStruct[pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_2_1, "Bind1"), gopurs_runtime.Value{}))
+_ = Bind1_5_4
+pure_6_5 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_2_1, "Applicative0"), gopurs_runtime.Value{}), "pure")
+_ = pure_6_5
+__local_var_5_3 := gopurs_runtime.Func(func(m_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Bind1_5_4.V1, m_7, gopurs_runtime.Func(func(a_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(pure_6_5, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, a_8, gopurs_runtime.RecordGet(dictMonoid_3, "mempty")})})
+}))
+})
+_ = __local_var_5_3
 return gopurs_runtime.RecordDict2("MonadEffect0", "liftAff", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadEffectWriter_4_2
-}), gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(Bind1_5_3.V1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAff_0, "liftAff"), x_7), gopurs_runtime.Func(func(a_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(pure_6_4, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, a_8, gopurs_runtime.RecordGet(dictMonoid_3, "mempty")})})
-}))
+}), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_5_3, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAff_0, "liftAff"), x_6))
 }))
 })
 }

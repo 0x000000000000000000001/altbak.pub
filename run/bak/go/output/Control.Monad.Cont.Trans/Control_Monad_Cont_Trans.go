@@ -4,12 +4,14 @@ import (
 	pkg_Control_Applicative "gopurs/output/Control.Applicative"
 	pkg_Control_Apply "gopurs/output/Control.Apply"
 	pkg_Control_Bind "gopurs/output/Control.Bind"
+	pkg_Control_Monad "gopurs/output/Control.Monad"
 	pkg_Control_Monad_Reader_Class "gopurs/output/Control.Monad.Reader.Class"
 	pkg_Control_Monad_Trans_Class "gopurs/output/Control.Monad.Trans.Class"
 	pkg_Control_Semigroupoid "gopurs/output/Control.Semigroupoid"
 	pkg_Data_Functor "gopurs/output/Data.Functor"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	unsafe "unsafe"
 )
 
 var cache_ContT gopurs_runtime.Value
@@ -688,7 +690,7 @@ monadContT1_1_0 := Call_monadContT(gopurs_runtime.Apply(gopurs_runtime.RecordGet
 _ = monadContT1_1_0
 return gopurs_runtime.RecordDict2("Monad0", "ask", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadContT1_1_0
-}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_monadTransContT(), "lift"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAsk_0, "Monad0"), gopurs_runtime.Value{}), gopurs_runtime.RecordGet(dictMonadAsk_0, "ask")))
+}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_monadTransContT(), "lift"), gopurs_runtime.Value{Type: 9, IntVal: 778916621, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Control_Monad.Constructor_Monad[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAsk_0, "Monad0"), gopurs_runtime.Value{})))}, gopurs_runtime.RecordGet(dictMonadAsk_0, "ask")))
 }
 
 func Call_monadReaderContT(dictMonadReader_0_loop gopurs_runtime.Value) gopurs_runtime.Value {

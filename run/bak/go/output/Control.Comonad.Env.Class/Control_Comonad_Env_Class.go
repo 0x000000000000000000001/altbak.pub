@@ -226,7 +226,7 @@ func Get_extendTuple__754007552() gopurs_runtime.Value {
 return pkg_Data_Tuple.Get_functorTuple()
 }), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V0, gopurs_runtime.Apply(f_0, v_1)})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V0, gopurs_runtime.Apply(f_0, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](v_1))})})}
 })
 }))
 	})
@@ -422,14 +422,18 @@ _ = comonadTracedT_2_1
 return gopurs_runtime.Func(func(dictMonoid_3 gopurs_runtime.Value) gopurs_runtime.Value {
 comonadTracedT1_4_2 := gopurs_runtime.Apply(comonadTracedT_2_1, dictMonoid_3)
 _ = comonadTracedT1_4_2
-Functor0_5_3 := gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Comonad0_1_0, "Extend0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
-_ = Functor0_5_3
+Functor0_5_4 := gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Comonad0_1_0, "Extend0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
+_ = Functor0_5_4
+__local_var_5_3 := gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Functor0_5_4.V0, gopurs_runtime.Func(func(f_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_7, gopurs_runtime.RecordGet(dictMonoid_3, "mempty"))
+}), v_6)
+})
+_ = __local_var_5_3
 return gopurs_runtime.RecordDict2("Comonad0", "ask", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return comonadTracedT1_4_2
 }), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadAsk_0, "ask"), gopurs_runtime.Apply2(Functor0_5_3.V0, gopurs_runtime.Func(func(f_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_7, gopurs_runtime.RecordGet(dictMonoid_3, "mempty"))
-}), x_6))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadAsk_0, "ask"), gopurs_runtime.Apply(__local_var_5_3, x_6))
 }))
 })
 }

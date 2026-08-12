@@ -99,30 +99,34 @@ var s_0 string = s_0_loop
 _ = s_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-__local_var_2_0 := gopurs_runtime.Apply4(pkg_Data_String_Regex.Get_regexImpl(), pkg_Data_Either.Get_Left(), pkg_Data_Either.Get_Right(), gopurs_runtime.Str(s_0), gopurs_runtime.Apply(pkg_Data_String_Regex.Get_renderFlags(), f_1))
+__local_var_2_0 := gopurs_runtime.Apply4(pkg_Data_String_Regex.Get_regexImpl(), pkg_Data_Either.Get_Left(), pkg_Data_Either.Get_Right(), gopurs_runtime.Str(s_0), gopurs_runtime.Str(gopurs_runtime.Apply(pkg_Data_String_Regex.Get_renderFlags(), f_1).StrVal()))
 _ = __local_var_2_0
-var __t1 gopurs_runtime.Value
+var __t2 gopurs_runtime.Value
 {
 if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 3711209382) {
-__t1 = gopurs_runtime.Apply(pkg_Partial.Get__crashWith(), (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(__local_var_2_0.UnsafePtr).V0)
-goto end_branch_1
+__local_var_3_1 := (*pkg_Data_Either.Constructor_Left[gopurs_runtime.Value, gopurs_runtime.Value])(__local_var_2_0.UnsafePtr).V0
+_ = __local_var_3_1
+__t2 = gopurs_runtime.Apply(pkg_Partial_Unsafe.Get__unsafePartial(), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(pkg_Partial.Get__crashWith(), gopurs_runtime.Str(__local_var_3_1.StrVal()))
+}))
+goto end_branch_2
 } else {
 
 }
 }
 {
 if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 2465973597) {
-__t1 = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(__local_var_2_0.UnsafePtr).V0
-goto end_branch_1
+__t2 = (*pkg_Data_Either.Constructor_Right[gopurs_runtime.Value, gopurs_runtime.Value])(__local_var_2_0.UnsafePtr).V0
+goto end_branch_2
 } else {
 
 }
 }
 {
-__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
-end_branch_1:
-return __t1
+end_branch_2:
+return __t2
 }
 
 func Call_either__1999147371(v_0_loop gopurs_runtime.Value, v1_1_loop gopurs_runtime.Value, v2_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -196,7 +200,9 @@ return dict_0.V0
 func Call_unsafeCrashWith__3091512314(msg_0_loop string) gopurs_runtime.Value {
 var msg_0 string = msg_0_loop
 _ = msg_0
+return gopurs_runtime.Apply(pkg_Partial_Unsafe.Get__unsafePartial(), gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(pkg_Partial.Get__crashWith(), gopurs_runtime.Str(msg_0))
+}))
 }
 
 func Call_crashWith__3377663964(_dollar__unused_0_loop gopurs_runtime.Value) gopurs_runtime.Value {

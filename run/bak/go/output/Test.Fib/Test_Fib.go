@@ -39,7 +39,7 @@ var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
 		cache_act = gopurs_runtime.Apply2(Get_bind__3550378017(), gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(10)), gopurs_runtime.Func(func(dummy_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showInt(), "show"), gopurs_runtime.Int(Call_fib(dummy_0.IntVal))))
+return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showInt(), "show"), gopurs_runtime.Int(gopurs_runtime.Int(Call_fib(dummy_0.IntVal)).IntVal)).StrVal()))
 }))
 	})
 	return cache_act
@@ -182,7 +182,7 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.Int(Call_fib(gopurs_runtime.Apply2(Get_sub__1043827704(), gopurs_runtime.Int(v_0), gopurs_runtime.Int(1)).IntVal)), gopurs_runtime.Int(Call_fib(gopurs_runtime.Apply2(Get_sub__1043827704(), gopurs_runtime.Int(v_0), gopurs_runtime.Int(2)).IntVal))).IntVal
+__t0 = gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.Int(gopurs_runtime.Int(Call_fib(gopurs_runtime.Apply2(Get_sub__1043827704(), gopurs_runtime.Int(v_0), gopurs_runtime.Int(1)).IntVal)).IntVal), gopurs_runtime.Int(gopurs_runtime.Int(Call_fib(gopurs_runtime.Apply2(Get_sub__1043827704(), gopurs_runtime.Int(v_0), gopurs_runtime.Int(2)).IntVal)).IntVal)).IntVal
 }
 end_branch_0:
 return __t0

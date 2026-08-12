@@ -269,7 +269,7 @@ return gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(b_6 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t4 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply2(Get_disj__3676519832(), gopurs_runtime.Apply2(dictEq_0.V0, a_5, zero_3_1), gopurs_runtime.Apply2(dictEq_0.V0, b_6, zero_3_1)).IntVal) != (0) {
+if (gopurs_runtime.Apply2(Get_disj__3676519832(), gopurs_runtime.Bool((gopurs_runtime.Apply2(dictEq_0.V0, a_5, zero_3_1).IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.Apply2(dictEq_0.V0, b_6, zero_3_1).IntVal) != (0))).IntVal) != (0) {
 __t4 = zero_3_1
 goto end_branch_4
 } else {

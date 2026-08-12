@@ -50,7 +50,7 @@ var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
 		cache_act = gopurs_runtime.Apply2(Get_bind__3550378017(), gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(10000)), gopurs_runtime.Func(func(dummy_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_logShow__2885109999(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(Call_updateRec(dummy_0.IntVal, Get_initial()), "b"), "d"), "f"))
+return Call_logShow__2885109999(gopurs_runtime.Int(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(Call_updateRec(dummy_0.IntVal, Get_initial()), "b"), "d"), "f").IntVal))
 }))
 	})
 	return cache_act
@@ -244,11 +244,11 @@ v_0_loop = gopurs_runtime.Apply2(Get_sub__1043827704(), gopurs_runtime.Int(v_0),
 v1_1_loop = func() gopurs_runtime.Value {
 origVal := v1_1
 if origVal.Type != gopurs_runtime.TypeRecord2 {
-return gopurs_runtime.RecordUpdateDict(origVal, []string{"a", "b"}, []gopurs_runtime.Value{gopurs_runtime.Int(gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.RecordGet(v1_1, "a"), gopurs_runtime.Int(1)).IntVal), gopurs_runtime.RecordUpdate2(gopurs_runtime.RecordGet(v1_1, "b"), "c", gopurs_runtime.Int(gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "c"), gopurs_runtime.Int(2)).IntVal), "d", gopurs_runtime.RecordUpdate2(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "e", gopurs_runtime.Int(gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "e"), gopurs_runtime.Int(3)).IntVal), "f", gopurs_runtime.Int(gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "f"), gopurs_runtime.Apply2(Get_mod__2185172824(), gopurs_runtime.Int(v_0), gopurs_runtime.Int(5))).IntVal)))})
+return gopurs_runtime.RecordUpdateDict(origVal, []string{"a", "b"}, []gopurs_runtime.Value{gopurs_runtime.Int(gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.Int(gopurs_runtime.RecordGet(v1_1, "a").IntVal), gopurs_runtime.Int(1)).IntVal), gopurs_runtime.RecordUpdate2(gopurs_runtime.RecordGet(v1_1, "b"), "c", gopurs_runtime.Int(gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.Int(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "c").IntVal), gopurs_runtime.Int(2)).IntVal), "d", gopurs_runtime.RecordUpdate2(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "e", gopurs_runtime.Int(gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.Int(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "e").IntVal), gopurs_runtime.Int(3)).IntVal), "f", gopurs_runtime.Int(gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.Int(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "f").IntVal), gopurs_runtime.Int(gopurs_runtime.Apply2(Get_mod__2185172824(), gopurs_runtime.Int(v_0), gopurs_runtime.Int(5)).IntVal)).IntVal)))})
 }
 clone := *((*gopurs_runtime.RecordData2)(origVal.UnsafePtr))
-clone.V0 = gopurs_runtime.Int(gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.RecordGet(v1_1, "a"), gopurs_runtime.Int(1)).IntVal)
-clone.V1 = gopurs_runtime.RecordUpdate2(gopurs_runtime.RecordGet(v1_1, "b"), "c", gopurs_runtime.Int(gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "c"), gopurs_runtime.Int(2)).IntVal), "d", gopurs_runtime.RecordUpdate2(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "e", gopurs_runtime.Int(gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "e"), gopurs_runtime.Int(3)).IntVal), "f", gopurs_runtime.Int(gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "f"), gopurs_runtime.Apply2(Get_mod__2185172824(), gopurs_runtime.Int(v_0), gopurs_runtime.Int(5))).IntVal)))
+clone.V0 = gopurs_runtime.Int(gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.Int(gopurs_runtime.RecordGet(v1_1, "a").IntVal), gopurs_runtime.Int(1)).IntVal)
+clone.V1 = gopurs_runtime.RecordUpdate2(gopurs_runtime.RecordGet(v1_1, "b"), "c", gopurs_runtime.Int(gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.Int(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "c").IntVal), gopurs_runtime.Int(2)).IntVal), "d", gopurs_runtime.RecordUpdate2(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "e", gopurs_runtime.Int(gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.Int(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "e").IntVal), gopurs_runtime.Int(3)).IntVal), "f", gopurs_runtime.Int(gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.Int(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "f").IntVal), gopurs_runtime.Int(gopurs_runtime.Apply2(Get_mod__2185172824(), gopurs_runtime.Int(v_0), gopurs_runtime.Int(5)).IntVal)).IntVal)))
 return gopurs_runtime.Value{Type: gopurs_runtime.TypeRecord2, UnsafePtr: unsafe.Pointer(&clone)}
 }()
 continue updateRec
@@ -292,7 +292,7 @@ return dict_0.V0
 func Call_logShow__2885109999(a_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var a_0 gopurs_runtime.Value = a_0_loop
 _ = a_0
-return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showInt(), "show"), a_0))
+return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showInt(), "show"), a_0).StrVal()))
 }
 
 func Call_logShow__339054415(dictShow_0_loop *pkg_Data_Show.Constructor_Show[gopurs_runtime.Value], a_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -300,7 +300,7 @@ var dictShow_0 *pkg_Data_Show.Constructor_Show[gopurs_runtime.Value] = dictShow_
 _ = dictShow_0
 var a_1 gopurs_runtime.Value = a_1_loop
 _ = a_1
-return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(dictShow_0.V0, a_1))
+return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str(gopurs_runtime.Apply(dictShow_0.V0, a_1).StrVal()))
 }
 
 

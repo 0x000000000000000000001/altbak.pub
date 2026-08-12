@@ -892,17 +892,23 @@ return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Point
 })
 }))
 _ = functorStateT1_1_0
-Bind1_2_2 := gopurs_runtime.CoerceToStruct[pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value]](Call_bindStateT(dictMonad_0))
-_ = Bind1_2_2
-Applicative0_3_3 := gopurs_runtime.CoerceToStruct[pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]](Call_applicativeStateT(dictMonad_0))
-_ = Applicative0_3_3
+__local_var_2_2 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_applicativeStateT(dictMonad_0)
+}), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bindStateT(dictMonad_0)
+}))
+_ = __local_var_2_2
+Bind1_3_3 := gopurs_runtime.CoerceToStruct[pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_2, "Bind1"), gopurs_runtime.Value{}))
+_ = Bind1_3_3
+Applicative0_4_4 := gopurs_runtime.CoerceToStruct[pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_2, "Applicative0"), gopurs_runtime.Value{}))
+_ = Applicative0_4_4
 return gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorStateT1_1_0
-}), gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(Bind1_2_2.V1, f_4, gopurs_runtime.Func(func(f_prime_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(Bind1_2_2.V1, a_5, gopurs_runtime.Func(func(a_prime_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Applicative0_3_3.V1, gopurs_runtime.Apply(f_prime_6, a_prime_7))
+}), gopurs_runtime.Func(func(f_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Bind1_3_3.V1, f_5, gopurs_runtime.Func(func(f_prime_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Bind1_3_3.V1, a_6, gopurs_runtime.Func(func(a_prime_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Applicative0_4_4.V1, gopurs_runtime.Apply(f_prime_7, a_prime_8))
 }))
 }))
 })
@@ -954,7 +960,7 @@ return Call_bindStateT(__local_var_1_1)
 _ = monadStateT1_1_0
 return gopurs_runtime.RecordDict2("Monad0", "ask", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadStateT1_1_0
-}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_monadTransStateT(), "lift"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAsk_0, "Monad0"), gopurs_runtime.Value{}), gopurs_runtime.RecordGet(dictMonadAsk_0, "ask")))
+}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_monadTransStateT(), "lift"), gopurs_runtime.Value{Type: 9, IntVal: 778916621, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Control_Monad.Constructor_Monad[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAsk_0, "Monad0"), gopurs_runtime.Value{})))}, gopurs_runtime.RecordGet(dictMonadAsk_0, "ask")))
 }
 
 func Call_monadReaderStateT(dictMonadReader_0_loop gopurs_runtime.Value) gopurs_runtime.Value {

@@ -82,7 +82,7 @@ var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
 		cache_act = gopurs_runtime.Apply2(Get_bind__3550378017(), gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(1000)), gopurs_runtime.Func(func(dummy_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showInt(), "show"), gopurs_runtime.Int(Call_runManyTimes(dummy_0.IntVal, 0))))
+return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showInt(), "show"), gopurs_runtime.Int(gopurs_runtime.Int(Call_runManyTimes(dummy_0.IntVal, 0)).IntVal)).StrVal()))
 }))
 	})
 	return cache_act
@@ -273,7 +273,7 @@ goto end_branch_0
 {
 v_0_loop = gopurs_runtime.Apply2(Get_sub__1043827704(), gopurs_runtime.Int(v_0), gopurs_runtime.Int(1)).IntVal
 v1_1_loop = gopurs_runtime.Apply(Get_defer__3520065601(), gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Int(gopurs_runtime.Apply2(Get_add__560788792(), Call_force__3902501304(v1_1), gopurs_runtime.Int(1)).IntVal)
+return gopurs_runtime.Int(gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.Int(Call_force__3902501304(v1_1).IntVal), gopurs_runtime.Int(1)).IntVal)
 }))
 continue buildThunks
 __t0 = gopurs_runtime.Value{}
@@ -302,9 +302,9 @@ goto end_branch_0
 }
 {
 v_0_loop = gopurs_runtime.Apply2(Get_sub__1043827704(), gopurs_runtime.Int(v_0), gopurs_runtime.Int(1)).IntVal
-v1_1_loop = gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.Int(v1_1), Call_force__3902501304(Call_buildThunks(1000, gopurs_runtime.Apply(Get_defer__3520065601(), gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+v1_1_loop = gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.Int(v1_1), gopurs_runtime.Int(Call_force__3902501304(Call_buildThunks(1000, gopurs_runtime.Apply(Get_defer__3520065601(), gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Int(0)
-}))))).IntVal
+})))).IntVal)).IntVal
 continue runManyTimes
 __t0 = gopurs_runtime.Value{}.IntVal
 }

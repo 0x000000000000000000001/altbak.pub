@@ -20,7 +20,7 @@ var once_showSecond sync.Once
 func Get_showSecond() gopurs_runtime.Value {
 	once_showSecond.Do(func() {
 		cache_showSecond = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("(Second "), gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Apply(Get_show__1488465650(), v_0), gopurs_runtime.Str(")"))).StrVal())
+return gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("(Second "), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_show__1488465650(), gopurs_runtime.Int(v_0.IntVal)).StrVal()), gopurs_runtime.Str(")")).StrVal())).StrVal())
 }))
 	})
 	return cache_showSecond
@@ -31,7 +31,7 @@ var once_showMinute sync.Once
 func Get_showMinute() gopurs_runtime.Value {
 	once_showMinute.Do(func() {
 		cache_showMinute = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("(Minute "), gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Apply(Get_show__1488465650(), v_0), gopurs_runtime.Str(")"))).StrVal())
+return gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("(Minute "), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_show__1488465650(), gopurs_runtime.Int(v_0.IntVal)).StrVal()), gopurs_runtime.Str(")")).StrVal())).StrVal())
 }))
 	})
 	return cache_showMinute
@@ -42,7 +42,7 @@ var once_showMillisecond sync.Once
 func Get_showMillisecond() gopurs_runtime.Value {
 	once_showMillisecond.Do(func() {
 		cache_showMillisecond = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("(Millisecond "), gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Apply(Get_show__1488465650(), v_0), gopurs_runtime.Str(")"))).StrVal())
+return gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("(Millisecond "), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_show__1488465650(), gopurs_runtime.Int(v_0.IntVal)).StrVal()), gopurs_runtime.Str(")")).StrVal())).StrVal())
 }))
 	})
 	return cache_showMillisecond
@@ -53,7 +53,7 @@ var once_showHour sync.Once
 func Get_showHour() gopurs_runtime.Value {
 	once_showHour.Do(func() {
 		cache_showHour = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("(Hour "), gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Apply(Get_show__1488465650(), v_0), gopurs_runtime.Str(")"))).StrVal())
+return gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("(Hour "), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_show__1488465650(), gopurs_runtime.Int(v_0.IntVal)).StrVal()), gopurs_runtime.Str(")")).StrVal())).StrVal())
 }))
 	})
 	return cache_showHour
@@ -196,8 +196,8 @@ return gopurs_runtime.Int(v_0.IntVal)
 }), gopurs_runtime.Func(func(n_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply2(Get_conj__3676519832(), gopurs_runtime.Bool(Call_greaterThanOrEq__4087042607(n_0, gopurs_runtime.Int(0))), gopurs_runtime.Bool(Call_lessThanOrEq__4087042607(n_0, gopurs_runtime.Int(59)))).IntVal) != (0) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, n_0})}
+if (gopurs_runtime.Apply2(Get_conj__3676519832(), gopurs_runtime.Bool((gopurs_runtime.Bool(Call_greaterThanOrEq__4087042607(gopurs_runtime.Int(n_0.IntVal), gopurs_runtime.Int(0))).IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.Bool(Call_lessThanOrEq__4087042607(gopurs_runtime.Int(n_0.IntVal), gopurs_runtime.Int(59))).IntVal) != (0))).IntVal) != (0) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, gopurs_runtime.Int(n_0.IntVal)})}
 goto end_branch_0
 } else {
 
@@ -220,9 +220,9 @@ func Get_enumSecond() gopurs_runtime.Value {
 		cache_enumSecond = gopurs_runtime.RecordDict3("Ord0", "pred", "succ", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_ordSecond()
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumSecond(), "toEnum"), gopurs_runtime.Apply2(Get_sub__1043827704(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumSecond(), "fromEnum"), x_0), gopurs_runtime.Int(1)))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumSecond(), "toEnum"), gopurs_runtime.Int(gopurs_runtime.Apply2(Get_sub__1043827704(), gopurs_runtime.Int(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumSecond(), "fromEnum"), x_0).IntVal), gopurs_runtime.Int(1)).IntVal))
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumSecond(), "toEnum"), gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumSecond(), "fromEnum"), x_0), gopurs_runtime.Int(1)))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumSecond(), "toEnum"), gopurs_runtime.Int(gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.Int(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumSecond(), "fromEnum"), x_0).IntVal), gopurs_runtime.Int(1)).IntVal))
 }))
 	})
 	return cache_enumSecond
@@ -241,8 +241,8 @@ return gopurs_runtime.Int(v_0.IntVal)
 }), gopurs_runtime.Func(func(n_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply2(Get_conj__3676519832(), gopurs_runtime.Bool(Call_greaterThanOrEq__4087042607(n_0, gopurs_runtime.Int(0))), gopurs_runtime.Bool(Call_lessThanOrEq__4087042607(n_0, gopurs_runtime.Int(59)))).IntVal) != (0) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, n_0})}
+if (gopurs_runtime.Apply2(Get_conj__3676519832(), gopurs_runtime.Bool((gopurs_runtime.Bool(Call_greaterThanOrEq__4087042607(gopurs_runtime.Int(n_0.IntVal), gopurs_runtime.Int(0))).IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.Bool(Call_lessThanOrEq__4087042607(gopurs_runtime.Int(n_0.IntVal), gopurs_runtime.Int(59))).IntVal) != (0))).IntVal) != (0) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, gopurs_runtime.Int(n_0.IntVal)})}
 goto end_branch_0
 } else {
 
@@ -265,9 +265,9 @@ func Get_enumMinute() gopurs_runtime.Value {
 		cache_enumMinute = gopurs_runtime.RecordDict3("Ord0", "pred", "succ", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_ordMinute()
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumMinute(), "toEnum"), gopurs_runtime.Apply2(Get_sub__1043827704(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumMinute(), "fromEnum"), x_0), gopurs_runtime.Int(1)))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumMinute(), "toEnum"), gopurs_runtime.Int(gopurs_runtime.Apply2(Get_sub__1043827704(), gopurs_runtime.Int(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumMinute(), "fromEnum"), x_0).IntVal), gopurs_runtime.Int(1)).IntVal))
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumMinute(), "toEnum"), gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumMinute(), "fromEnum"), x_0), gopurs_runtime.Int(1)))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumMinute(), "toEnum"), gopurs_runtime.Int(gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.Int(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumMinute(), "fromEnum"), x_0).IntVal), gopurs_runtime.Int(1)).IntVal))
 }))
 	})
 	return cache_enumMinute
@@ -286,8 +286,8 @@ return gopurs_runtime.Int(v_0.IntVal)
 }), gopurs_runtime.Func(func(n_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply2(Get_conj__3676519832(), gopurs_runtime.Bool(Call_greaterThanOrEq__4087042607(n_0, gopurs_runtime.Int(0))), gopurs_runtime.Bool(Call_lessThanOrEq__4087042607(n_0, gopurs_runtime.Int(999)))).IntVal) != (0) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, n_0})}
+if (gopurs_runtime.Apply2(Get_conj__3676519832(), gopurs_runtime.Bool((gopurs_runtime.Bool(Call_greaterThanOrEq__4087042607(gopurs_runtime.Int(n_0.IntVal), gopurs_runtime.Int(0))).IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.Bool(Call_lessThanOrEq__4087042607(gopurs_runtime.Int(n_0.IntVal), gopurs_runtime.Int(999))).IntVal) != (0))).IntVal) != (0) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, gopurs_runtime.Int(n_0.IntVal)})}
 goto end_branch_0
 } else {
 
@@ -310,9 +310,9 @@ func Get_enumMillisecond() gopurs_runtime.Value {
 		cache_enumMillisecond = gopurs_runtime.RecordDict3("Ord0", "pred", "succ", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_ordMillisecond()
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumMillisecond(), "toEnum"), gopurs_runtime.Apply2(Get_sub__1043827704(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumMillisecond(), "fromEnum"), x_0), gopurs_runtime.Int(1)))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumMillisecond(), "toEnum"), gopurs_runtime.Int(gopurs_runtime.Apply2(Get_sub__1043827704(), gopurs_runtime.Int(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumMillisecond(), "fromEnum"), x_0).IntVal), gopurs_runtime.Int(1)).IntVal))
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumMillisecond(), "toEnum"), gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumMillisecond(), "fromEnum"), x_0), gopurs_runtime.Int(1)))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumMillisecond(), "toEnum"), gopurs_runtime.Int(gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.Int(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumMillisecond(), "fromEnum"), x_0).IntVal), gopurs_runtime.Int(1)).IntVal))
 }))
 	})
 	return cache_enumMillisecond
@@ -331,8 +331,8 @@ return gopurs_runtime.Int(v_0.IntVal)
 }), gopurs_runtime.Func(func(n_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply2(Get_conj__3676519832(), gopurs_runtime.Bool(Call_greaterThanOrEq__4087042607(n_0, gopurs_runtime.Int(0))), gopurs_runtime.Bool(Call_lessThanOrEq__4087042607(n_0, gopurs_runtime.Int(23)))).IntVal) != (0) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, n_0})}
+if (gopurs_runtime.Apply2(Get_conj__3676519832(), gopurs_runtime.Bool((gopurs_runtime.Bool(Call_greaterThanOrEq__4087042607(gopurs_runtime.Int(n_0.IntVal), gopurs_runtime.Int(0))).IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.Bool(Call_lessThanOrEq__4087042607(gopurs_runtime.Int(n_0.IntVal), gopurs_runtime.Int(23))).IntVal) != (0))).IntVal) != (0) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, gopurs_runtime.Int(n_0.IntVal)})}
 goto end_branch_0
 } else {
 
@@ -355,9 +355,9 @@ func Get_enumHour() gopurs_runtime.Value {
 		cache_enumHour = gopurs_runtime.RecordDict3("Ord0", "pred", "succ", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_ordHour()
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumHour(), "toEnum"), gopurs_runtime.Apply2(Get_sub__1043827704(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumHour(), "fromEnum"), x_0), gopurs_runtime.Int(1)))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumHour(), "toEnum"), gopurs_runtime.Int(gopurs_runtime.Apply2(Get_sub__1043827704(), gopurs_runtime.Int(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumHour(), "fromEnum"), x_0).IntVal), gopurs_runtime.Int(1)).IntVal))
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumHour(), "toEnum"), gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumHour(), "fromEnum"), x_0), gopurs_runtime.Int(1)))
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumHour(), "toEnum"), gopurs_runtime.Int(gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.Int(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_boundedEnumHour(), "fromEnum"), x_0).IntVal), gopurs_runtime.Int(1)).IntVal))
 }))
 	})
 	return cache_enumHour

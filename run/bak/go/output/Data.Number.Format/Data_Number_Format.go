@@ -244,11 +244,11 @@ var hi_1 gopurs_runtime.Value = hi_1_loop
 _ = hi_1
 var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
-v_3_0 := gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, low_0, x_2)
-_ = v_3_0
+v_3_1 := gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, low_0, x_2)
+_ = v_3_1
 var __t2 gopurs_runtime.Value
 {
-if (uint32(v_3_0.IntVal) == 1527465420) {
+if (uint32(v_3_1.IntVal) == 1527465420) {
 __t2 = x_2
 goto end_branch_2
 } else {
@@ -256,7 +256,7 @@ goto end_branch_2
 }
 }
 {
-if (uint32(v_3_0.IntVal) == 902936544) {
+if (uint32(v_3_1.IntVal) == 902936544) {
 __t2 = low_0
 goto end_branch_2
 } else {
@@ -264,7 +264,7 @@ goto end_branch_2
 }
 }
 {
-if (uint32(v_3_0.IntVal) == 380165415) {
+if (uint32(v_3_1.IntVal) == 380165415) {
 __t2 = low_0
 goto end_branch_2
 } else {
@@ -275,13 +275,13 @@ goto end_branch_2
 __t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_2:
-__local_var_4_1 := __t2
-_ = __local_var_4_1
-v_5_3 := gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, hi_1, __local_var_4_1)
-_ = v_5_3
+__local_var_3_0 := __t2
+_ = __local_var_3_0
+v_4_3 := gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, hi_1, __local_var_3_0)
+_ = v_4_3
 var __t4 gopurs_runtime.Value
 {
-if (uint32(v_5_3.IntVal) == 1527465420) {
+if (uint32(v_4_3.IntVal) == 1527465420) {
 __t4 = hi_1
 goto end_branch_4
 } else {
@@ -289,7 +289,7 @@ goto end_branch_4
 }
 }
 {
-if (uint32(v_5_3.IntVal) == 902936544) {
+if (uint32(v_4_3.IntVal) == 902936544) {
 __t4 = hi_1
 goto end_branch_4
 } else {
@@ -297,8 +297,8 @@ goto end_branch_4
 }
 }
 {
-if (uint32(v_5_3.IntVal) == 380165415) {
-__t4 = __local_var_4_1
+if (uint32(v_4_3.IntVal) == 380165415) {
+__t4 = __local_var_3_0
 goto end_branch_4
 } else {
 
@@ -320,11 +320,11 @@ var hi_2 gopurs_runtime.Value = hi_2_loop
 _ = hi_2
 var x_3 gopurs_runtime.Value = x_3_loop
 _ = x_3
-v_4_0 := gopurs_runtime.Apply2(dictOrd_0.V1, low_1, x_3)
-_ = v_4_0
+v_4_1 := gopurs_runtime.Apply2(dictOrd_0.V1, low_1, x_3)
+_ = v_4_1
 var __t2 gopurs_runtime.Value
 {
-if (uint32(v_4_0.IntVal) == 1527465420) {
+if (uint32(v_4_1.IntVal) == 1527465420) {
 __t2 = x_3
 goto end_branch_2
 } else {
@@ -332,7 +332,7 @@ goto end_branch_2
 }
 }
 {
-if (uint32(v_4_0.IntVal) == 902936544) {
+if (uint32(v_4_1.IntVal) == 902936544) {
 __t2 = low_1
 goto end_branch_2
 } else {
@@ -340,7 +340,7 @@ goto end_branch_2
 }
 }
 {
-if (uint32(v_4_0.IntVal) == 380165415) {
+if (uint32(v_4_1.IntVal) == 380165415) {
 __t2 = low_1
 goto end_branch_2
 } else {
@@ -351,13 +351,13 @@ goto end_branch_2
 __t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_2:
-__local_var_5_1 := __t2
-_ = __local_var_5_1
-v_6_3 := gopurs_runtime.Apply2(dictOrd_0.V1, hi_2, __local_var_5_1)
-_ = v_6_3
+__local_var_4_0 := __t2
+_ = __local_var_4_0
+v_5_3 := gopurs_runtime.Apply2(dictOrd_0.V1, hi_2, __local_var_4_0)
+_ = v_5_3
 var __t4 gopurs_runtime.Value
 {
-if (uint32(v_6_3.IntVal) == 1527465420) {
+if (uint32(v_5_3.IntVal) == 1527465420) {
 __t4 = hi_2
 goto end_branch_4
 } else {
@@ -365,7 +365,7 @@ goto end_branch_4
 }
 }
 {
-if (uint32(v_6_3.IntVal) == 902936544) {
+if (uint32(v_5_3.IntVal) == 902936544) {
 __t4 = hi_2
 goto end_branch_4
 } else {
@@ -373,8 +373,8 @@ goto end_branch_4
 }
 }
 {
-if (uint32(v_6_3.IntVal) == 380165415) {
-__t4 = __local_var_5_1
+if (uint32(v_5_3.IntVal) == 380165415) {
+__t4 = __local_var_4_0
 goto end_branch_4
 } else {
 

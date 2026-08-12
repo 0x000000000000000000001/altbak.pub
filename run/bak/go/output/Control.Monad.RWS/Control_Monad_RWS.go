@@ -355,7 +355,7 @@ var r_1 gopurs_runtime.Value = r_1_loop
 _ = r_1
 var s_2 gopurs_runtime.Value = s_2_loop
 _ = s_2
-return gopurs_runtime.CoerceToStruct[pkg_Control_Monad_RWS_Trans.Constructor_RWSResult[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Identity.Get_applicativeIdentity(), "pure"), gopurs_runtime.Apply2(f_0, r_1, s_2)))
+return gopurs_runtime.CoerceToStruct[pkg_Control_Monad_RWS_Trans.Constructor_RWSResult[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Identity.Get_applicativeIdentity(), "pure"), gopurs_runtime.Value{Type: 9, IntVal: 2367475031, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Control_Monad_RWS_Trans.Constructor_RWSResult[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Apply2(f_0, r_1, s_2)))}))
 }
 
 func Call_runRWS(m_0_loop gopurs_runtime.Value, r_1_loop gopurs_runtime.Value, s_2_loop gopurs_runtime.Value) *pkg_Control_Monad_RWS_Trans.Constructor_RWSResult[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] {
@@ -501,9 +501,9 @@ var r_2 gopurs_runtime.Value = r_2_loop
 _ = r_2
 var s_3 gopurs_runtime.Value = s_3_loop
 _ = s_3
-__local_var_4_0 := gopurs_runtime.Apply2(f_0, r_2, s_3)
+__local_var_4_0 := gopurs_runtime.CoerceToStruct[pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Apply2(f_0, r_2, s_3))
 _ = __local_var_4_0
-return gopurs_runtime.CoerceToStruct[pkg_Control_Monad_RWS_Trans.Constructor_RWSResult[*pkg_Control_Monad_RWS_Trans.Constructor_RWSResult[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value], gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Apply2(m_1, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(__local_var_4_0.UnsafePtr).V0, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(__local_var_4_0.UnsafePtr).V1))
+return gopurs_runtime.CoerceToStruct[pkg_Control_Monad_RWS_Trans.Constructor_RWSResult[*pkg_Control_Monad_RWS_Trans.Constructor_RWSResult[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value], gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Apply2(m_1, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(__local_var_4_0)}.UnsafePtr).V0, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(__local_var_4_0)}.UnsafePtr).V1))
 }
 
 func Call_compose__858342840(dict_0_loop *pkg_Control_Semigroupoid.Constructor_Semigroupoid[gopurs_runtime.Value]) gopurs_runtime.Value {

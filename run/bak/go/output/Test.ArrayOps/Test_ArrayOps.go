@@ -79,7 +79,7 @@ var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
 		cache_act = gopurs_runtime.Apply2(Get_bind__3550378017(), gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(900)), gopurs_runtime.Func(func(dummy_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showInt(), "show"), gopurs_runtime.Int(Call_sumEvens(dummy_0.IntVal))))
+return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showInt(), "show"), gopurs_runtime.Int(gopurs_runtime.Int(Call_sumEvens(dummy_0.IntVal)).IntVal)).StrVal()))
 }))
 	})
 	return cache_act
@@ -266,7 +266,7 @@ var arr_0 []int64 = arr_0_loop
 _ = arr_0
 return func() []int64 {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array(Call_filter__4047711382(gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool((gopurs_runtime.Apply2(Get_eq__2843686287(), gopurs_runtime.Apply2(Get_mod__2185172824(), x_1, gopurs_runtime.Int(2)), gopurs_runtime.Int(0)).IntVal) != (0))
+return gopurs_runtime.Bool((gopurs_runtime.Apply2(Get_eq__2843686287(), gopurs_runtime.Int(gopurs_runtime.Apply2(Get_mod__2185172824(), gopurs_runtime.Int(x_1.IntVal), gopurs_runtime.Int(2)).IntVal), gopurs_runtime.Int(0)).IntVal) != (0))
 }), func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(func() gopurs_runtime.Value {
 					arr := arr_0
@@ -287,14 +287,34 @@ return gopurs_runtime.Bool((gopurs_runtime.Apply2(Get_eq__2843686287(), gopurs_r
 func Call_sumEvens(n_0_loop int64) int64 {
 var n_0 int64 = n_0_loop
 _ = n_0
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableArray(), "foldl"), pkg_Data_Semiring.Get_intAdd(), gopurs_runtime.Int(0), gopurs_runtime.Array(Call_filter__4047711382(gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool((gopurs_runtime.Apply2(Get_eq__2843686287(), gopurs_runtime.Apply2(Get_mod__2185172824(), x_1, gopurs_runtime.Int(2)), gopurs_runtime.Int(0)).IntVal) != (0))
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(pkg_Data_Foldable.Get_foldableArray(), "foldl"), pkg_Data_Semiring.Get_intAdd(), gopurs_runtime.Int(0), func() gopurs_runtime.Value {
+					arr := func() []int64 {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array(Call_filter__4047711382(gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool((gopurs_runtime.Apply2(Get_eq__2843686287(), gopurs_runtime.Int(gopurs_runtime.Apply2(Get_mod__2185172824(), gopurs_runtime.Int(x_1.IntVal), gopurs_runtime.Int(2)).IntVal), gopurs_runtime.Int(0)).IntVal) != (0))
 }), func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(func() gopurs_runtime.Value {
+					arr := func() []int64 {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.UncurriedApp2(pkg_Data_Array.Get_rangeImpl(), gopurs_runtime.Int(1), gopurs_runtime.Int(n_0)).UnsafePtr)
+					unboxed := make([]int64, len(arr))
+					for i, v := range arr { unboxed[i] = v.IntVal }
+					return unboxed
+				}()
+					boxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { boxed[i] = gopurs_runtime.Int(v) }
+					return gopurs_runtime.Array(boxed)
+				}().UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
-				}()))).IntVal
+				}())).UnsafePtr)
+					unboxed := make([]int64, len(arr))
+					for i, v := range arr { unboxed[i] = v.IntVal }
+					return unboxed
+				}()
+					boxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { boxed[i] = gopurs_runtime.Int(v) }
+					return gopurs_runtime.Array(boxed)
+				}()).IntVal
 }
 
 func Call_bind__2601835655(dict_0_loop *pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value]) gopurs_runtime.Value {

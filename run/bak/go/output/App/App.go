@@ -52,7 +52,7 @@ return gopurs_runtime.Apply2(Get_bind__3328406721(), gopurs_runtime.Apply2(pkg_B
 return gopurs_runtime.Apply2(Get_bind__3328406721(), gopurs_runtime.Apply2(pkg_Bench.Get_runBench(), pkg_Test_StateMonad.Get_describe(), pkg_Test_StateMonad.Get_act()), gopurs_runtime.Func(func(t11_10 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(Get_bind__3328406721(), gopurs_runtime.Apply2(pkg_Bench.Get_runBench(), pkg_Test_LazyEvaluation.Get_describe(), pkg_Test_LazyEvaluation.Get_act()), gopurs_runtime.Func(func(t12_11 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(Get_bind__3328406721(), gopurs_runtime.Apply2(pkg_Bench.Get_runBench(), pkg_Test_ArrayOps.Get_describe(), pkg_Test_ArrayOps.Get_act()), gopurs_runtime.Func(func(t13_12 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("\x0a==================================================\x0a\x0aTotal exec time: "), gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Apply(pkg_Bench.Get_formatNumber(), gopurs_runtime.Apply2(Get_add__137136408(), gopurs_runtime.Apply2(Get_add__137136408(), gopurs_runtime.Apply2(Get_add__137136408(), gopurs_runtime.Apply2(Get_add__137136408(), gopurs_runtime.Apply2(Get_add__137136408(), gopurs_runtime.Apply2(Get_add__137136408(), gopurs_runtime.Apply2(Get_add__137136408(), gopurs_runtime.Apply2(Get_add__137136408(), gopurs_runtime.Apply2(Get_add__137136408(), gopurs_runtime.Apply2(Get_add__137136408(), gopurs_runtime.Apply2(Get_add__137136408(), gopurs_runtime.Apply2(Get_add__137136408(), gopurs_runtime.Apply2(Get_div__1002719800(), t1_0, gopurs_runtime.Float(1000.0)), gopurs_runtime.Apply2(Get_div__1002719800(), t2_1, gopurs_runtime.Float(1000.0))), gopurs_runtime.Apply2(Get_div__1002719800(), t3_2, gopurs_runtime.Float(1000.0))), gopurs_runtime.Apply2(Get_div__1002719800(), t4_3, gopurs_runtime.Float(1000.0))), gopurs_runtime.Apply2(Get_div__1002719800(), t5_4, gopurs_runtime.Float(1000.0))), gopurs_runtime.Apply2(Get_div__1002719800(), t6_5, gopurs_runtime.Float(1000.0))), gopurs_runtime.Apply2(Get_div__1002719800(), t7_6, gopurs_runtime.Float(1000.0))), gopurs_runtime.Apply2(Get_div__1002719800(), t8_7, gopurs_runtime.Float(1000.0))), gopurs_runtime.Apply2(Get_div__1002719800(), t9_8, gopurs_runtime.Float(1000.0))), gopurs_runtime.Apply2(Get_div__1002719800(), t10_9, gopurs_runtime.Float(1000.0))), gopurs_runtime.Apply2(Get_div__1002719800(), t11_10, gopurs_runtime.Float(1000.0))), gopurs_runtime.Apply2(Get_div__1002719800(), t12_11, gopurs_runtime.Float(1000.0))), gopurs_runtime.Apply2(Get_div__1002719800(), t13_12, gopurs_runtime.Float(1000.0)))), gopurs_runtime.Str(" ms\x0a"))))
+return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("\x0a==================================================\x0a\x0aTotal exec time: "), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(gopurs_runtime.Apply(pkg_Bench.Get_formatNumber(), gopurs_runtime.Float(gopurs_runtime.Apply2(Get_add__137136408(), gopurs_runtime.Float(gopurs_runtime.Apply2(Get_add__137136408(), gopurs_runtime.Float(gopurs_runtime.Apply2(Get_add__137136408(), gopurs_runtime.Float(gopurs_runtime.Apply2(Get_add__137136408(), gopurs_runtime.Float(gopurs_runtime.Apply2(Get_add__137136408(), gopurs_runtime.Float(gopurs_runtime.Apply2(Get_add__137136408(), gopurs_runtime.Float(gopurs_runtime.Apply2(Get_add__137136408(), gopurs_runtime.Float(gopurs_runtime.Apply2(Get_add__137136408(), gopurs_runtime.Float(gopurs_runtime.Apply2(Get_add__137136408(), gopurs_runtime.Float(gopurs_runtime.Apply2(Get_add__137136408(), gopurs_runtime.Float(gopurs_runtime.Apply2(Get_add__137136408(), gopurs_runtime.Float(gopurs_runtime.Apply2(Get_add__137136408(), gopurs_runtime.Float(gopurs_runtime.Apply2(Get_div__1002719800(), gopurs_runtime.Float(t1_0.FloatVal()), gopurs_runtime.Float(1000.0)).FloatVal()), gopurs_runtime.Float(gopurs_runtime.Apply2(Get_div__1002719800(), gopurs_runtime.Float(t2_1.FloatVal()), gopurs_runtime.Float(1000.0)).FloatVal())).FloatVal()), gopurs_runtime.Float(gopurs_runtime.Apply2(Get_div__1002719800(), gopurs_runtime.Float(t3_2.FloatVal()), gopurs_runtime.Float(1000.0)).FloatVal())).FloatVal()), gopurs_runtime.Float(gopurs_runtime.Apply2(Get_div__1002719800(), gopurs_runtime.Float(t4_3.FloatVal()), gopurs_runtime.Float(1000.0)).FloatVal())).FloatVal()), gopurs_runtime.Float(gopurs_runtime.Apply2(Get_div__1002719800(), gopurs_runtime.Float(t5_4.FloatVal()), gopurs_runtime.Float(1000.0)).FloatVal())).FloatVal()), gopurs_runtime.Float(gopurs_runtime.Apply2(Get_div__1002719800(), gopurs_runtime.Float(t6_5.FloatVal()), gopurs_runtime.Float(1000.0)).FloatVal())).FloatVal()), gopurs_runtime.Float(gopurs_runtime.Apply2(Get_div__1002719800(), gopurs_runtime.Float(t7_6.FloatVal()), gopurs_runtime.Float(1000.0)).FloatVal())).FloatVal()), gopurs_runtime.Float(gopurs_runtime.Apply2(Get_div__1002719800(), gopurs_runtime.Float(t8_7.FloatVal()), gopurs_runtime.Float(1000.0)).FloatVal())).FloatVal()), gopurs_runtime.Float(gopurs_runtime.Apply2(Get_div__1002719800(), gopurs_runtime.Float(t9_8.FloatVal()), gopurs_runtime.Float(1000.0)).FloatVal())).FloatVal()), gopurs_runtime.Float(gopurs_runtime.Apply2(Get_div__1002719800(), gopurs_runtime.Float(t10_9.FloatVal()), gopurs_runtime.Float(1000.0)).FloatVal())).FloatVal()), gopurs_runtime.Float(gopurs_runtime.Apply2(Get_div__1002719800(), gopurs_runtime.Float(t11_10.FloatVal()), gopurs_runtime.Float(1000.0)).FloatVal())).FloatVal()), gopurs_runtime.Float(gopurs_runtime.Apply2(Get_div__1002719800(), gopurs_runtime.Float(t12_11.FloatVal()), gopurs_runtime.Float(1000.0)).FloatVal())).FloatVal()), gopurs_runtime.Float(gopurs_runtime.Apply2(Get_div__1002719800(), gopurs_runtime.Float(t13_12.FloatVal()), gopurs_runtime.Float(1000.0)).FloatVal())).FloatVal())).StrVal()), gopurs_runtime.Str(" ms\x0a")).StrVal())).StrVal()))
 }))
 }))
 }))
@@ -132,7 +132,7 @@ var cache_discard__203210016 gopurs_runtime.Value
 var once_discard__203210016 sync.Once
 func Get_discard__203210016() gopurs_runtime.Value {
 	once_discard__203210016.Do(func() {
-		cache_discard__203210016 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Control_Bind.Get_discardUnit(), "discard"), pkg_Effect.Get_bindEffect())
+		cache_discard__203210016 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Control_Bind.Get_discardUnit(), "discard"), gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value]](pkg_Effect.Get_bindEffect()))})
 	})
 	return cache_discard__203210016
 }
@@ -930,7 +930,7 @@ var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
 var y_2 gopurs_runtime.Value = y_2_loop
 _ = y_2
-return (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Apply2(dictEq_0.V0, x_1, y_2), gopurs_runtime.Bool(false)).IntVal) != (0)
+return (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Bool((gopurs_runtime.Apply2(dictEq_0.V0, x_1, y_2).IntVal) != (0)), gopurs_runtime.Bool(false)).IntVal) != (0)
 }
 
 func Call_div__2579358968(dict_0_loop *pkg_Data_EuclideanRing.Constructor_EuclideanRing[gopurs_runtime.Value]) gopurs_runtime.Value {
@@ -1074,7 +1074,7 @@ return dict_0.V0
 func Call_logShow__2885109999(a_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var a_0 gopurs_runtime.Value = a_0_loop
 _ = a_0
-return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showInt(), "show"), a_0))
+return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showInt(), "show"), a_0).StrVal()))
 }
 
 func Call_logShow__339054415(dictShow_0_loop *pkg_Data_Show.Constructor_Show[gopurs_runtime.Value], a_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1082,7 +1082,7 @@ var dictShow_0 *pkg_Data_Show.Constructor_Show[gopurs_runtime.Value] = dictShow_
 _ = dictShow_0
 var a_1 gopurs_runtime.Value = a_1_loop
 _ = a_1
-return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(dictShow_0.V0, a_1))
+return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str(gopurs_runtime.Apply(dictShow_0.V0, a_1).StrVal()))
 }
 
 func Call_mulC__1746928225(m_0_loop gopurs_runtime.Value, n_1_loop gopurs_runtime.Value, f_2_loop gopurs_runtime.Value, x_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1232,18 +1232,18 @@ var go__go_2_0_0 gopurs_runtime.Value
 go__go_2_0_0 = gopurs_runtime.Func(func(v_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_4_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
-var v_3_loop gopurs_runtime.Value = v_3_loop_val
+var v_3_loop int64 = v_3_loop_val.IntVal
 var v1_4_loop gopurs_runtime.Value = v1_4_loop_val
 go__go_2_0_0:
 for {
 if false { continue go__go_2_0_0 }
-var v_3 gopurs_runtime.Value = v_3_loop
+var v_3 int64 = v_3_loop
 _ = v_3
 var v1_4 gopurs_runtime.Value = v1_4_loop
 _ = v1_4
 var __t1 gopurs_runtime.Value
 {
-if (v_3.IntVal) == (0) {
+if (v_3) == (0) {
 __t1 = v1_4
 goto end_branch_1
 } else {
@@ -1251,7 +1251,7 @@ goto end_branch_1
 }
 }
 {
-v_3_loop = gopurs_runtime.Int((v_3.IntVal) - (1))
+v_3_loop = (v_3) - (1)
 v1_4_loop = gopurs_runtime.Int((v1_4.IntVal) + (1))
 continue go__go_2_0_0
 __t1 = gopurs_runtime.Value{}
@@ -1276,18 +1276,18 @@ var go__go_3_0_1 gopurs_runtime.Value
 go__go_3_0_1 = gopurs_runtime.Func(func(v_4_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_5_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
-var v_4_loop gopurs_runtime.Value = v_4_loop_val
+var v_4_loop int64 = v_4_loop_val.IntVal
 var v1_5_loop gopurs_runtime.Value = v1_5_loop_val
 go__go_3_0_1:
 for {
 if false { continue go__go_3_0_1 }
-var v_4 gopurs_runtime.Value = v_4_loop
+var v_4 int64 = v_4_loop
 _ = v_4
 var v1_5 gopurs_runtime.Value = v1_5_loop
 _ = v1_5
 var __t1 gopurs_runtime.Value
 {
-if (v_4.IntVal) == (0) {
+if (v_4) == (0) {
 __t1 = v1_5
 goto end_branch_1
 } else {
@@ -1295,7 +1295,7 @@ goto end_branch_1
 }
 }
 {
-v_4_loop = gopurs_runtime.Int((v_4.IntVal) - (1))
+v_4_loop = (v_4) - (1)
 v1_5_loop = gopurs_runtime.Apply2(dictMonoidish_0.V0, v1_5, dictMonoidish_0.V1)
 continue go__go_3_0_1
 __t1 = gopurs_runtime.Value{}
@@ -1319,13 +1319,13 @@ go__go_2_0_2 = gopurs_runtime.Func(func(v_3_loop_val gopurs_runtime.Value) gopur
 return gopurs_runtime.Func(func(v1_4_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_3_loop gopurs_runtime.Value = v_3_loop_val
-var v1_4_loop gopurs_runtime.Value = v1_4_loop_val
+var v1_4_loop *pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value] = gopurs_runtime.CoerceToStruct[pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value]](v1_4_loop_val)
 go__go_2_0_2:
 for {
 if false { continue go__go_2_0_2 }
 var v_3 gopurs_runtime.Value = v_3_loop
 _ = v_3
-var v1_4 gopurs_runtime.Value = v1_4_loop
+var v1_4 *pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value] = v1_4_loop
 _ = v1_4
 var __t4 gopurs_runtime.Value
 {
@@ -1372,7 +1372,7 @@ return gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Point
 }()
 })
 })
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value]](gopurs_runtime.Apply2(go__go_5_1_3, v1_4, gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer((*pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value])(nil))})))}
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value]](gopurs_runtime.Apply2(go__go_5_1_3, gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(v1_4)}, gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer((*pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value])(nil))})))}
 goto end_branch_4
 } else {
 
@@ -1384,7 +1384,7 @@ var __t3 *pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value]
 {
 if (gopurs_runtime.Apply(p_0, (*pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value])(v_3.UnsafePtr).V0).IntVal) != (0) {
 v_3_loop = gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer((*pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value])(v_3.UnsafePtr).V1)}
-v1_4_loop = gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(&pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value]{1, (*pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value])(v_3.UnsafePtr).V0, gopurs_runtime.CoerceToStruct[pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value]](v1_4)})}
+v1_4_loop = gopurs_runtime.CoerceToStruct[pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(&pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value]{1, (*pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value])(v_3.UnsafePtr).V0, v1_4})})
 continue go__go_2_0_2
 __t3 = gopurs_runtime.CoerceToStruct[pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value]](gopurs_runtime.Value{})
 goto end_branch_3
@@ -1427,13 +1427,13 @@ go__go_2_0_4 = gopurs_runtime.Func(func(v_3_loop_val gopurs_runtime.Value) gopur
 return gopurs_runtime.Func(func(v1_4_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_3_loop gopurs_runtime.Value = v_3_loop_val
-var v1_4_loop gopurs_runtime.Value = v1_4_loop_val
+var v1_4_loop *pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value] = gopurs_runtime.CoerceToStruct[pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value]](v1_4_loop_val)
 go__go_2_0_4:
 for {
 if false { continue go__go_2_0_4 }
 var v_3 gopurs_runtime.Value = v_3_loop
 _ = v_3
-var v1_4 gopurs_runtime.Value = v1_4_loop
+var v1_4 *pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value] = v1_4_loop
 _ = v1_4
 var __t4 gopurs_runtime.Value
 {
@@ -1480,7 +1480,7 @@ return gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Point
 }()
 })
 })
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value]](gopurs_runtime.Apply2(go__go_5_1_5, v1_4, gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer((*pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value])(nil))})))}
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value]](gopurs_runtime.Apply2(go__go_5_1_5, gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(v1_4)}, gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer((*pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value])(nil))})))}
 goto end_branch_4
 } else {
 
@@ -1492,7 +1492,7 @@ var __t3 *pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value]
 {
 if (gopurs_runtime.Apply(p_0, (*pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value])(v_3.UnsafePtr).V0).IntVal) != (0) {
 v_3_loop = gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer((*pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value])(v_3.UnsafePtr).V1)}
-v1_4_loop = gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(&pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value]{1, (*pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value])(v_3.UnsafePtr).V0, gopurs_runtime.CoerceToStruct[pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value]](v1_4)})}
+v1_4_loop = gopurs_runtime.CoerceToStruct[pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(&pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value]{1, (*pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value])(v_3.UnsafePtr).V0, v1_4})})
 continue go__go_2_0_4
 __t3 = gopurs_runtime.CoerceToStruct[pkg_Test_Primes.Constructor_Cons[gopurs_runtime.Value]](gopurs_runtime.Value{})
 goto end_branch_3

@@ -395,14 +395,14 @@ _ = Plus1_2_0
 return gopurs_runtime.Func(func(dictFoldable_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(dictFunctor_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(f_5 gopurs_runtime.Value) gopurs_runtime.Value {
-alt_6_1 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(Plus1_2_0.V0, gopurs_runtime.Value{}), "alt")
-_ = alt_6_1
-__local_var_7_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFoldable_3, "foldr"), gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(alt_6_1, gopurs_runtime.Apply(dictParallel_0.V2, gopurs_runtime.Apply(f_5, x_7)))
+alt_6_2 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(Plus1_2_0.V0, gopurs_runtime.Value{}), "alt")
+_ = alt_6_2
+__local_var_6_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFoldable_3, "foldr"), gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(alt_6_2, gopurs_runtime.Apply(dictParallel_0.V2, gopurs_runtime.Apply(f_5, x_7)))
 }), Plus1_2_0.V1)
-_ = __local_var_7_2
-return gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(dictParallel_0.V3, gopurs_runtime.Apply(__local_var_7_2, x_8))
+_ = __local_var_6_1
+return gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(dictParallel_0.V3, gopurs_runtime.Apply(__local_var_6_1, x_7))
 })
 })
 })
@@ -418,14 +418,14 @@ Plus1_2_0 := gopurs_runtime.CoerceToStruct[pkg_Control_Plus.Constructor_Plus[gop
 _ = Plus1_2_0
 return gopurs_runtime.Func(func(dictFoldable_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(dictFunctor_4 gopurs_runtime.Value) gopurs_runtime.Value {
-alt_5_1 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(Plus1_2_0.V0, gopurs_runtime.Value{}), "alt")
-_ = alt_5_1
-__local_var_6_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFoldable_3, "foldr"), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(alt_5_1, gopurs_runtime.Apply(dictParallel_0.V2, x_6))
+alt_5_2 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(Plus1_2_0.V0, gopurs_runtime.Value{}), "alt")
+_ = alt_5_2
+__local_var_5_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFoldable_3, "foldr"), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(alt_5_2, gopurs_runtime.Apply(dictParallel_0.V2, x_6))
 }), Plus1_2_0.V1)
-_ = __local_var_6_2
-return gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(dictParallel_0.V3, gopurs_runtime.Apply(__local_var_6_2, x_7))
+_ = __local_var_5_1
+return gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(dictParallel_0.V3, gopurs_runtime.Apply(__local_var_5_1, x_6))
 })
 })
 })

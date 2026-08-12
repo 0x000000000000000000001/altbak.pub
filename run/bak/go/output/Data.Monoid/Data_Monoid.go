@@ -436,9 +436,9 @@ return gopurs_runtime.Func(func(ra_8 gopurs_runtime.Value) gopurs_runtime.Value 
 return gopurs_runtime.Func(func(rb_9 gopurs_runtime.Value) gopurs_runtime.Value {
 key_10_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil})
 _ = key_10_4
-get_11_5 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), key_10_4)
+get_11_5 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), gopurs_runtime.Str(key_10_4.StrVal()))
 _ = get_11_5
-return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), key_10_4, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Semigroup0_3_1, "append"), gopurs_runtime.Apply(get_11_5, ra_8), gopurs_runtime.Apply(get_11_5, rb_9)), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_6_3, "appendRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_8, rb_9))
+return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), gopurs_runtime.Str(key_10_4.StrVal()), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Semigroup0_3_1, "append"), gopurs_runtime.Apply(get_11_5, ra_8), gopurs_runtime.Apply(get_11_5, rb_9)), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_6_3, "appendRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_8, rb_9))
 })
 })
 }))
@@ -446,7 +446,7 @@ _ = semigroupRecordCons1_6_2
 return gopurs_runtime.RecordDict2("SemigroupRecord0", "memptyRecord", gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupRecordCons1_6_2
 }), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}), mempty1_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoidRecord_5, "memptyRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}))
+return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}).StrVal()), mempty1_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoidRecord_5, "memptyRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}))
 }))
 })
 })
@@ -465,7 +465,7 @@ _ = go__go_4_2_0
 go__go_4_2_0 = gopurs_runtime.Func(func(p_5 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t5 gopurs_runtime.Value
 {
-if (gopurs_runtime.Bool(Call_lessThanOrEq__4087042607(p_5, gopurs_runtime.Int(0))).IntVal) != (0) {
+if (gopurs_runtime.Bool(Call_lessThanOrEq__4087042607(gopurs_runtime.Int(p_5.IntVal), gopurs_runtime.Int(0))).IntVal) != (0) {
 __t5 = mempty1_1_0
 goto end_branch_5
 } else {
@@ -473,7 +473,7 @@ goto end_branch_5
 }
 }
 {
-if (gopurs_runtime.Apply2(Get_eq__2843686287(), p_5, gopurs_runtime.Int(1)).IntVal) != (0) {
+if (gopurs_runtime.Apply2(Get_eq__2843686287(), gopurs_runtime.Int(p_5.IntVal), gopurs_runtime.Int(1)).IntVal) != (0) {
 __t5 = x_3
 goto end_branch_5
 } else {
@@ -481,8 +481,8 @@ goto end_branch_5
 }
 }
 {
-if (gopurs_runtime.Apply2(Get_eq__2843686287(), gopurs_runtime.Apply2(Get_mod__2185172824(), p_5, gopurs_runtime.Int(2)), gopurs_runtime.Int(0)).IntVal) != (0) {
-x_prime_6_4 := gopurs_runtime.Apply(go__go_4_2_0, gopurs_runtime.Apply2(Get_div__2185172824(), p_5, gopurs_runtime.Int(2)))
+if (gopurs_runtime.Apply2(Get_eq__2843686287(), gopurs_runtime.Int(gopurs_runtime.Apply2(Get_mod__2185172824(), gopurs_runtime.Int(p_5.IntVal), gopurs_runtime.Int(2)).IntVal), gopurs_runtime.Int(0)).IntVal) != (0) {
+x_prime_6_4 := gopurs_runtime.Apply(go__go_4_2_0, gopurs_runtime.Int(gopurs_runtime.Apply2(Get_div__2185172824(), gopurs_runtime.Int(p_5.IntVal), gopurs_runtime.Int(2)).IntVal))
 _ = x_prime_6_4
 __t5 = gopurs_runtime.Apply2(Semigroup0_2_1.V0, x_prime_6_4, x_prime_6_4)
 goto end_branch_5
@@ -491,7 +491,7 @@ goto end_branch_5
 }
 }
 {
-x_prime_6_3 := gopurs_runtime.Apply(go__go_4_2_0, gopurs_runtime.Apply2(Get_div__2185172824(), p_5, gopurs_runtime.Int(2)))
+x_prime_6_3 := gopurs_runtime.Apply(go__go_4_2_0, gopurs_runtime.Int(gopurs_runtime.Apply2(Get_div__2185172824(), gopurs_runtime.Int(p_5.IntVal), gopurs_runtime.Int(2)).IntVal))
 _ = x_prime_6_3
 __t5 = gopurs_runtime.Apply2(Semigroup0_2_1.V0, x_prime_6_3, gopurs_runtime.Apply2(Semigroup0_2_1.V0, x_prime_6_3, x_3))
 }

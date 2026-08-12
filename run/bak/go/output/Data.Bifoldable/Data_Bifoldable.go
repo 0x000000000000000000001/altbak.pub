@@ -828,7 +828,7 @@ return gopurs_runtime.RecordDict3("bifoldMap", "bifoldl", "bifoldr", gopurs_runt
 return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(r_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictFoldable_0, "foldMap"), dictMonoid_1, r_3, v1_4)
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictFoldable_0, "foldMap"), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Monoid.Constructor_Monoid[gopurs_runtime.Value]](dictMonoid_1))}, r_3, v1_4)
 })
 })
 })
@@ -858,7 +858,7 @@ return gopurs_runtime.RecordDict3("bifoldMap", "bifoldl", "bifoldr", gopurs_runt
 return gopurs_runtime.Func(func(l_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictFoldable_0, "foldMap"), dictMonoid_1, l_2, v1_4)
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictFoldable_0, "foldMap"), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Monoid.Constructor_Monoid[gopurs_runtime.Value]](dictMonoid_1))}, l_2, v1_4)
 })
 })
 })
@@ -938,7 +938,7 @@ return gopurs_runtime.RecordDict3("bifoldMap", "bifoldl", "bifoldr", gopurs_runt
 return gopurs_runtime.Func(func(r_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(l_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply4(gopurs_runtime.RecordGet(dictBifoldable_0, "bifoldMap"), dictMonoid_1, l_3, r_2, v_4)
+return gopurs_runtime.Apply4(gopurs_runtime.RecordGet(dictBifoldable_0, "bifoldMap"), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Monoid.Constructor_Monoid[gopurs_runtime.Value]](dictMonoid_1))}, l_3, r_2, v_4)
 })
 })
 })
@@ -1015,7 +1015,7 @@ _ = Semigroup0_3_0
 return gopurs_runtime.Func(func(l_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(r_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(Semigroup0_3_0.V0, gopurs_runtime.Apply4(gopurs_runtime.RecordGet(dictBifoldable_0, "bifoldMap"), dictMonoid_2, l_4, r_5, (*pkg_Data_Functor_Product2.Constructor_Product2[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_6.UnsafePtr).V0), gopurs_runtime.Apply4(gopurs_runtime.RecordGet(dictBifoldable1_1, "bifoldMap"), dictMonoid_2, l_4, r_5, (*pkg_Data_Functor_Product2.Constructor_Product2[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_6.UnsafePtr).V1))
+return gopurs_runtime.Apply2(Semigroup0_3_0.V0, gopurs_runtime.Apply4(gopurs_runtime.RecordGet(dictBifoldable_0, "bifoldMap"), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Monoid.Constructor_Monoid[gopurs_runtime.Value]](dictMonoid_2))}, l_4, r_5, (*pkg_Data_Functor_Product2.Constructor_Product2[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_6.UnsafePtr).V0), gopurs_runtime.Apply4(gopurs_runtime.RecordGet(dictBifoldable1_1, "bifoldMap"), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Monoid.Constructor_Monoid[gopurs_runtime.Value]](dictMonoid_2))}, l_4, r_5, (*pkg_Data_Functor_Product2.Constructor_Product2[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v_6.UnsafePtr).V1))
 })
 })
 })
@@ -1023,7 +1023,7 @@ return gopurs_runtime.Apply2(Semigroup0_3_0.V0, gopurs_runtime.Apply4(gopurs_run
 return gopurs_runtime.Func(func(r_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(u_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(m_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_bifoldlDefault(gopurs_runtime.CoerceToStruct[Constructor_Bifoldable[gopurs_runtime.Value]](Call_bifoldableProduct2(dictBifoldable_0, dictBifoldable1_1)), l_2, r_3, u_4, m_5)
+return Call_bifoldlDefault(gopurs_runtime.CoerceToStruct[Constructor_Bifoldable[gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 4001671834, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Bifoldable[*pkg_Data_Functor_Product2.Constructor_Product2[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]]](Call_bifoldableProduct2(dictBifoldable_0, dictBifoldable1_1)))}), l_2, r_3, u_4, gopurs_runtime.Value{Type: 9, IntVal: 3559137202, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Functor_Product2.Constructor_Product2[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](m_5))})
 })
 })
 })
@@ -1031,7 +1031,7 @@ return Call_bifoldlDefault(gopurs_runtime.CoerceToStruct[Constructor_Bifoldable[
 return gopurs_runtime.Func(func(r_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(u_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(m_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_bifoldrDefault(gopurs_runtime.CoerceToStruct[Constructor_Bifoldable[gopurs_runtime.Value]](Call_bifoldableProduct2(dictBifoldable_0, dictBifoldable1_1)), l_2, r_3, u_4, m_5)
+return Call_bifoldrDefault(gopurs_runtime.CoerceToStruct[Constructor_Bifoldable[gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 4001671834, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Bifoldable[*pkg_Data_Functor_Product2.Constructor_Product2[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]]](Call_bifoldableProduct2(dictBifoldable_0, dictBifoldable1_1)))}), l_2, r_3, u_4, gopurs_runtime.Value{Type: 9, IntVal: 3559137202, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Functor_Product2.Constructor_Product2[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](m_5))})
 })
 })
 })

@@ -1004,10 +1004,18 @@ return gopurs_runtime.Apply(k_3, gopurs_runtime.Apply(f_1, a_4))
 })}
 _ = functorContT_1_0
 return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_3_1 := gopurs_runtime.Apply(functorContT_1_0.V0, f_2)
+__local_var_3_1 := gopurs_runtime.RecordGet(Call_monadParParCont(dictMonadEffect_0), "parallel")
 _ = __local_var_3_1
-return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Call_monadParParCont(dictMonadEffect_0), "parallel"), gopurs_runtime.Apply(__local_var_3_1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Call_monadParParCont(dictMonadEffect_0), "sequential"), x_4)))
+__local_var_4_3 := gopurs_runtime.Apply(functorContT_1_0.V0, f_2)
+_ = __local_var_4_3
+__local_var_5_4 := gopurs_runtime.RecordGet(Call_monadParParCont(dictMonadEffect_0), "sequential")
+_ = __local_var_5_4
+__local_var_4_2 := gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_4_3, gopurs_runtime.Apply(__local_var_5_4, x_6))
+})
+_ = __local_var_4_2
+return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_3_1, gopurs_runtime.Apply(__local_var_4_2, x_5))
 })
 }))
 }
@@ -1089,11 +1097,13 @@ var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
 applyParCont1_1_0 := Call_applyParCont(dictMonadEffect_0)
 _ = applyParCont1_1_0
+__local_var_2_1 := gopurs_runtime.RecordGet(Call_monadParParCont(dictMonadEffect_0), "parallel")
+_ = __local_var_2_1
 return gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return applyParCont1_1_0
-}), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Call_monadParParCont(dictMonadEffect_0), "parallel"), gopurs_runtime.Func(func(k_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(k_3, x_2)
+}), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_2_1, gopurs_runtime.Func(func(k_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(k_4, x_3)
 }))
 }))
 }

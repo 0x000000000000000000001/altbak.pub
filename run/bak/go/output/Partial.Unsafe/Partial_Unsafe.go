@@ -49,7 +49,9 @@ return Call_crashWith__1894115486(_dollar__unused_0_box)
 func Call_unsafeCrashWith(msg_0_loop string) gopurs_runtime.Value {
 var msg_0 string = msg_0_loop
 _ = msg_0
+return gopurs_runtime.Apply(Get__unsafePartial(), gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(pkg_Partial.Get__crashWith(), gopurs_runtime.Str(msg_0))
+}))
 }
 
 func Call_crashWith__1894115486(_dollar__unused_0_loop gopurs_runtime.Value) gopurs_runtime.Value {

@@ -26,7 +26,7 @@ var once_showCaseInsensitiveNonEmptyString sync.Once
 func Get_showCaseInsensitiveNonEmptyString() gopurs_runtime.Value {
 	once_showCaseInsensitiveNonEmptyString.Do(func() {
 		cache_showCaseInsensitiveNonEmptyString = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("(CaseInsensitiveNonEmptyString "), gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Apply(Get_show__3756561682(), v_0), gopurs_runtime.Str(")"))).StrVal())
+return gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("(CaseInsensitiveNonEmptyString "), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_show__3756561682(), gopurs_runtime.Str(v_0.StrVal())).StrVal()), gopurs_runtime.Str(")")).StrVal())).StrVal())
 }))
 	})
 	return cache_showCaseInsensitiveNonEmptyString
@@ -49,7 +49,7 @@ func Get_eqCaseInsensitiveNonEmptyString() gopurs_runtime.Value {
 	once_eqCaseInsensitiveNonEmptyString.Do(func() {
 		cache_eqCaseInsensitiveNonEmptyString = gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool((gopurs_runtime.Apply2(Get_eq__472317769(), gopurs_runtime.Apply(pkg_Data_String_Common.Get_toLower(), v_0), gopurs_runtime.Apply(pkg_Data_String_Common.Get_toLower(), v1_1)).IntVal) != (0))
+return gopurs_runtime.Bool((gopurs_runtime.Apply2(Get_eq__472317769(), gopurs_runtime.Str(gopurs_runtime.Apply(pkg_Data_String_Common.Get_toLower(), gopurs_runtime.Str(v_0.StrVal())).StrVal()), gopurs_runtime.Str(gopurs_runtime.Apply(pkg_Data_String_Common.Get_toLower(), gopurs_runtime.Str(v1_1.StrVal())).StrVal())).IntVal) != (0))
 })
 }))
 	})
@@ -64,7 +64,7 @@ func Get_ordCaseInsensitiveNonEmptyString() gopurs_runtime.Value {
 return Get_eqCaseInsensitiveNonEmptyString()
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(Get_compare__882312371(), gopurs_runtime.Apply(pkg_Data_String_Common.Get_toLower(), v_0), gopurs_runtime.Apply(pkg_Data_String_Common.Get_toLower(), v1_1)).IntVal)), UnsafePtr: nil}
+return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(Get_compare__882312371(), gopurs_runtime.Str(gopurs_runtime.Apply(pkg_Data_String_Common.Get_toLower(), gopurs_runtime.Str(v_0.StrVal())).StrVal()), gopurs_runtime.Str(gopurs_runtime.Apply(pkg_Data_String_Common.Get_toLower(), gopurs_runtime.Str(v1_1.StrVal())).StrVal())).IntVal)), UnsafePtr: nil}
 })
 }))
 	})

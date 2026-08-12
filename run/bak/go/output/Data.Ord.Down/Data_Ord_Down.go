@@ -148,7 +148,7 @@ func Call_showDown(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
 _ = dictShow_0
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("(Down "), gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1), gopurs_runtime.Str(")"))).StrVal())
+return gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("(Down "), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal()), gopurs_runtime.Str(")")).StrVal())).StrVal())
 }))
 }
 
@@ -167,11 +167,11 @@ return gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_do
 return eqDown1_1_0
 }), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_4_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), v_2, v1_3)
+__local_var_4_1 := uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), v_2, v1_3).IntVal)
 _ = __local_var_4_1
 var __t2 gopurs_runtime.Value
 {
-if (uint32(__local_var_4_1.IntVal) == 380165415) {
+if (__local_var_4_1 == 380165415) {
 __t2 = gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}
 goto end_branch_2
 } else {
@@ -179,7 +179,7 @@ goto end_branch_2
 }
 }
 {
-if (uint32(__local_var_4_1.IntVal) == 902936544) {
+if (__local_var_4_1 == 902936544) {
 __t2 = gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}
 goto end_branch_2
 } else {
@@ -187,7 +187,7 @@ goto end_branch_2
 }
 }
 {
-if (uint32(__local_var_4_1.IntVal) == 1527465420) {
+if (__local_var_4_1 == 1527465420) {
 __t2 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
 goto end_branch_2
 } else {
@@ -214,11 +214,11 @@ ordDown1_1_0 := gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func
 return eqDown1_2_2
 }), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_5_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_1, "compare"), v_3, v1_4)
+__local_var_5_3 := uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_1, "compare"), v_3, v1_4).IntVal)
 _ = __local_var_5_3
 var __t4 gopurs_runtime.Value
 {
-if (uint32(__local_var_5_3.IntVal) == 380165415) {
+if (__local_var_5_3 == 380165415) {
 __t4 = gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}
 goto end_branch_4
 } else {
@@ -226,7 +226,7 @@ goto end_branch_4
 }
 }
 {
-if (uint32(__local_var_5_3.IntVal) == 902936544) {
+if (__local_var_5_3 == 902936544) {
 __t4 = gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}
 goto end_branch_4
 } else {
@@ -234,7 +234,7 @@ goto end_branch_4
 }
 }
 {
-if (uint32(__local_var_5_3.IntVal) == 1527465420) {
+if (__local_var_5_3 == 1527465420) {
 __t4 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
 goto end_branch_4
 } else {

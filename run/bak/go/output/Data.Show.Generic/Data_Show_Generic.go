@@ -293,7 +293,27 @@ _ = dictGenericShowArgs1_1
 return gopurs_runtime.RecordDict1("genericShowArgs", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 					arr := func() []string {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(Get_append__2285093048(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShowArgs_0, "genericShowArgs"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShowArgs1_1, "genericShowArgs"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1)).UnsafePtr)
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(Get_append__2285093048(), func() gopurs_runtime.Value {
+					arr := func() []string {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShowArgs_0, "genericShowArgs"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0).UnsafePtr)
+					unboxed := make([]string, len(arr))
+					for i, v := range arr { unboxed[i] = v.StrVal() }
+					return unboxed
+				}()
+					boxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { boxed[i] = gopurs_runtime.Str(v) }
+					return gopurs_runtime.Array(boxed)
+				}(), func() gopurs_runtime.Value {
+					arr := func() []string {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShowArgs1_1, "genericShowArgs"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1).UnsafePtr)
+					unboxed := make([]string, len(arr))
+					for i, v := range arr { unboxed[i] = v.StrVal() }
+					return unboxed
+				}()
+					boxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { boxed[i] = gopurs_runtime.Str(v) }
+					return gopurs_runtime.Array(boxed)
+				}()).UnsafePtr)
 					unboxed := make([]string, len(arr))
 					for i, v := range arr { unboxed[i] = v.StrVal() }
 					return unboxed
@@ -325,12 +345,32 @@ goto end_branch_2
 }
 }
 {
-__t2 = gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("("), gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Apply2(Get_intercalate(), gopurs_runtime.Str(" "), gopurs_runtime.Apply2(Get_append__2285093048(), func() gopurs_runtime.Value {
+__t2 = gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("("), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_intercalate(), gopurs_runtime.Str(" "), func() gopurs_runtime.Value {
+					arr := func() []string {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(Get_append__2285093048(), func() gopurs_runtime.Value {
 					arr := []string{ctor_3_0}
 					boxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { boxed[i] = gopurs_runtime.Str(v) }
 					return gopurs_runtime.Array(boxed)
-				}(), v1_4_1)), gopurs_runtime.Str(")"))).StrVal()
+				}(), func() gopurs_runtime.Value {
+					arr := func() []string {
+					arr := *(*[]gopurs_runtime.Value)(v1_4_1.UnsafePtr)
+					unboxed := make([]string, len(arr))
+					for i, v := range arr { unboxed[i] = v.StrVal() }
+					return unboxed
+				}()
+					boxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { boxed[i] = gopurs_runtime.Str(v) }
+					return gopurs_runtime.Array(boxed)
+				}()).UnsafePtr)
+					unboxed := make([]string, len(arr))
+					for i, v := range arr { unboxed[i] = v.StrVal() }
+					return unboxed
+				}()
+					boxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { boxed[i] = gopurs_runtime.Str(v) }
+					return gopurs_runtime.Array(boxed)
+				}()).StrVal()), gopurs_runtime.Str(")")).StrVal())).StrVal()
 }
 end_branch_2:
 return gopurs_runtime.Str(__t2)

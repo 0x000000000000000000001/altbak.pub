@@ -54,7 +54,7 @@ func Get_intMonoidish() gopurs_runtime.Value {
 	once_intMonoidish.Do(func() {
 		cache_intMonoidish = gopurs_runtime.RecordDict2("mappend_", "mempty_", gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Int(gopurs_runtime.Apply2(Get_add__560788792(), x_0, y_1).IntVal)
+return gopurs_runtime.Int(gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.Int(x_0.IntVal), gopurs_runtime.Int(y_1.IntVal)).IntVal)
 })
 }), gopurs_runtime.Int(1))
 	})
@@ -75,7 +75,7 @@ var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
 		cache_act = gopurs_runtime.Apply2(Get_bind__3550378017(), gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(10000000)), gopurs_runtime.Func(func(dummy_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showInt(), "show"), Call_polyLoop__1533381815(dummy_0.IntVal, gopurs_runtime.Int(0))))
+return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showInt(), "show"), gopurs_runtime.Int(Call_polyLoop__1533381815(dummy_0.IntVal, gopurs_runtime.Int(0)).IntVal)).StrVal()))
 }))
 	})
 	return cache_act
@@ -280,18 +280,18 @@ var go__go_3_0_0 gopurs_runtime.Value
 go__go_3_0_0 = gopurs_runtime.Func(func(v_4_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_5_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
-var v_4_loop gopurs_runtime.Value = v_4_loop_val
+var v_4_loop int64 = v_4_loop_val.IntVal
 var v1_5_loop gopurs_runtime.Value = v1_5_loop_val
 go__go_3_0_0:
 for {
 if false { continue go__go_3_0_0 }
-var v_4 gopurs_runtime.Value = v_4_loop
+var v_4 int64 = v_4_loop
 _ = v_4
 var v1_5 gopurs_runtime.Value = v1_5_loop
 _ = v1_5
 var __t1 gopurs_runtime.Value
 {
-if (v_4.IntVal) == (0) {
+if (v_4) == (0) {
 __t1 = v1_5
 goto end_branch_1
 } else {
@@ -299,7 +299,7 @@ goto end_branch_1
 }
 }
 {
-v_4_loop = gopurs_runtime.Apply2(Get_sub__1043827704(), v_4, gopurs_runtime.Int(1))
+v_4_loop = gopurs_runtime.Apply2(Get_sub__1043827704(), gopurs_runtime.Int(v_4), gopurs_runtime.Int(1)).IntVal
 v1_5_loop = gopurs_runtime.Apply2(dictMonoidish_0.V0, v1_5, dictMonoidish_0.V1)
 continue go__go_3_0_0
 __t1 = gopurs_runtime.Value{}
@@ -352,18 +352,18 @@ var go__go_2_0_1 gopurs_runtime.Value
 go__go_2_0_1 = gopurs_runtime.Func(func(v_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_4_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
-var v_3_loop gopurs_runtime.Value = v_3_loop_val
+var v_3_loop int64 = v_3_loop_val.IntVal
 var v1_4_loop gopurs_runtime.Value = v1_4_loop_val
 go__go_2_0_1:
 for {
 if false { continue go__go_2_0_1 }
-var v_3 gopurs_runtime.Value = v_3_loop
+var v_3 int64 = v_3_loop
 _ = v_3
 var v1_4 gopurs_runtime.Value = v1_4_loop
 _ = v1_4
 var __t1 gopurs_runtime.Value
 {
-if (v_3.IntVal) == (0) {
+if (v_3) == (0) {
 __t1 = v1_4
 goto end_branch_1
 } else {
@@ -371,7 +371,7 @@ goto end_branch_1
 }
 }
 {
-v_3_loop = gopurs_runtime.Int((v_3.IntVal) - (1))
+v_3_loop = (v_3) - (1)
 v1_4_loop = gopurs_runtime.Int((v1_4.IntVal) + (1))
 continue go__go_2_0_1
 __t1 = gopurs_runtime.Value{}
@@ -396,18 +396,18 @@ var go__go_3_0_2 gopurs_runtime.Value
 go__go_3_0_2 = gopurs_runtime.Func(func(v_4_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_5_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
-var v_4_loop gopurs_runtime.Value = v_4_loop_val
+var v_4_loop int64 = v_4_loop_val.IntVal
 var v1_5_loop gopurs_runtime.Value = v1_5_loop_val
 go__go_3_0_2:
 for {
 if false { continue go__go_3_0_2 }
-var v_4 gopurs_runtime.Value = v_4_loop
+var v_4 int64 = v_4_loop
 _ = v_4
 var v1_5 gopurs_runtime.Value = v1_5_loop
 _ = v1_5
 var __t1 gopurs_runtime.Value
 {
-if (v_4.IntVal) == (0) {
+if (v_4) == (0) {
 __t1 = v1_5
 goto end_branch_1
 } else {
@@ -415,7 +415,7 @@ goto end_branch_1
 }
 }
 {
-v_4_loop = gopurs_runtime.Int((v_4.IntVal) - (1))
+v_4_loop = (v_4) - (1)
 v1_5_loop = gopurs_runtime.Apply2(dictMonoidish_0.V0, v1_5, dictMonoidish_0.V1)
 continue go__go_3_0_2
 __t1 = gopurs_runtime.Value{}

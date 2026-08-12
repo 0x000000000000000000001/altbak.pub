@@ -101,7 +101,7 @@ var once_act sync.Once
 func Get_act() gopurs_runtime.Value {
 	once_act.Do(func() {
 		cache_act = gopurs_runtime.Apply2(Get_bind__3550378017(), gopurs_runtime.Apply(pkg_Bench.Get_opaque(), gopurs_runtime.Int(3)), gopurs_runtime.Func(func(dummy_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showInt(), "show"), gopurs_runtime.Int(Call_eval(Call_buildTree(dummy_0.IntVal)))))
+return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showInt(), "show"), gopurs_runtime.Int(gopurs_runtime.Int(Call_eval(Call_buildTree(dummy_0.IntVal))).IntVal)).StrVal()))
 }))
 	})
 	return cache_act
@@ -284,7 +284,7 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 2937956733) {
-__t0 = gopurs_runtime.Int(gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.Int(Call_eval((*Constructor_Add)(v_0.UnsafePtr).V0)), gopurs_runtime.Int(Call_eval((*Constructor_Add)(v_0.UnsafePtr).V1))).IntVal)
+__t0 = gopurs_runtime.Int(gopurs_runtime.Apply2(Get_add__560788792(), gopurs_runtime.Int(gopurs_runtime.Int(Call_eval((*Constructor_Add)(v_0.UnsafePtr).V0)).IntVal), gopurs_runtime.Int(gopurs_runtime.Int(Call_eval((*Constructor_Add)(v_0.UnsafePtr).V1)).IntVal)).IntVal)
 goto end_branch_0
 } else {
 
@@ -292,7 +292,7 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 3406566728) {
-__t0 = gopurs_runtime.Int(gopurs_runtime.Apply2(Get_mul__560788792(), gopurs_runtime.Int(Call_eval((*Constructor_Mul)(v_0.UnsafePtr).V0)), gopurs_runtime.Int(Call_eval((*Constructor_Mul)(v_0.UnsafePtr).V1))).IntVal)
+__t0 = gopurs_runtime.Int(gopurs_runtime.Apply2(Get_mul__560788792(), gopurs_runtime.Int(gopurs_runtime.Int(Call_eval((*Constructor_Mul)(v_0.UnsafePtr).V0)).IntVal), gopurs_runtime.Int(gopurs_runtime.Int(Call_eval((*Constructor_Mul)(v_0.UnsafePtr).V1)).IntVal)).IntVal)
 goto end_branch_0
 } else {
 
@@ -300,7 +300,7 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 2029887576) {
-__t0 = gopurs_runtime.Int(gopurs_runtime.Apply2(Get_sub__1043827704(), gopurs_runtime.Int(Call_eval((*Constructor_Sub)(v_0.UnsafePtr).V0)), gopurs_runtime.Int(Call_eval((*Constructor_Sub)(v_0.UnsafePtr).V1))).IntVal)
+__t0 = gopurs_runtime.Int(gopurs_runtime.Apply2(Get_sub__1043827704(), gopurs_runtime.Int(gopurs_runtime.Int(Call_eval((*Constructor_Sub)(v_0.UnsafePtr).V0)).IntVal), gopurs_runtime.Int(gopurs_runtime.Int(Call_eval((*Constructor_Sub)(v_0.UnsafePtr).V1)).IntVal)).IntVal)
 goto end_branch_0
 } else {
 

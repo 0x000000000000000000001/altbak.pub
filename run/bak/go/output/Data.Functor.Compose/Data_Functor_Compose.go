@@ -377,7 +377,7 @@ func Call_showCompose(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value
 var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
 _ = dictShow_0
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("(Compose "), gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1), gopurs_runtime.Str(")"))).StrVal())
+return gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("(Compose "), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal()), gopurs_runtime.Str(")")).StrVal())).StrVal())
 }))
 }
 
@@ -402,7 +402,7 @@ var dictEq_2 gopurs_runtime.Value = dictEq_2_loop
 _ = dictEq_2
 eqApp1_3_0 := &pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]{1, gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictEq11_1, "eq1"), dictEq_2, x_3, y_4).IntVal) != (0))
+return gopurs_runtime.Bool((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictEq11_1, "eq1"), gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]](dictEq_2))}, x_3, y_4).IntVal) != (0))
 })
 })}
 _ = eqApp1_3_0
@@ -428,7 +428,7 @@ __local_var_6_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_5, "Eq0
 _ = __local_var_6_5
 eqApp2_6_4 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_3_1, "eq1"), __local_var_6_5, x_7, y_8).IntVal) != (0))
+return gopurs_runtime.Bool((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_3_1, "eq1"), gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]](__local_var_6_5))}, x_7, y_8).IntVal) != (0))
 })
 }))
 _ = eqApp2_6_4
@@ -436,7 +436,7 @@ ordApp1_6_3 := gopurs_runtime.CoerceToStruct[pkg_Data_Ord.Constructor_Ord[gopurs
 return eqApp2_6_4
 }), gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictOrd11_2, "compare1"), dictOrd_5, x_7, y_8).IntVal)), UnsafePtr: nil}
+return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictOrd11_2, "compare1"), gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Ord.Constructor_Ord[gopurs_runtime.Value]](dictOrd_5))}, x_7, y_8).IntVal)), UnsafePtr: nil}
 })
 })))
 _ = ordApp1_6_3
@@ -444,7 +444,7 @@ __local_var_7_7 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_5, "Eq0
 _ = __local_var_7_7
 eqApp1_8_8 := &pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]{1, gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_4_2, "eq1"), __local_var_7_7, x_8, y_9).IntVal) != (0))
+return gopurs_runtime.Bool((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_4_2, "eq1"), gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]](__local_var_7_7))}, x_8, y_9).IntVal) != (0))
 })
 })}
 _ = eqApp1_8_8
@@ -473,7 +473,7 @@ _ = dictEq11_1
 return gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq_2 gopurs_runtime.Value) gopurs_runtime.Value {
 eqApp1_3_0 := &pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]{1, gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictEq11_1, "eq1"), dictEq_2, x_3, y_4).IntVal) != (0))
+return gopurs_runtime.Bool((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictEq11_1, "eq1"), gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]](dictEq_2))}, x_3, y_4).IntVal) != (0))
 })
 })}
 _ = eqApp1_3_0
@@ -500,7 +500,7 @@ _ = __local_var_5_4
 eq1Compose2_5_3 := gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq_6 gopurs_runtime.Value) gopurs_runtime.Value {
 eqApp1_7_5 := &pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]{1, gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_5_4, "eq1"), dictEq_6, x_7, y_8).IntVal) != (0))
+return gopurs_runtime.Bool((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_5_4, "eq1"), gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]](dictEq_6))}, x_7, y_8).IntVal) != (0))
 })
 })}
 _ = eqApp1_7_5
@@ -566,33 +566,31 @@ __local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative
 _ = __local_var_1_0
 Functor0_2_1 := gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "Functor0"), gopurs_runtime.Value{}))
 _ = Functor0_2_1
-__local_var_3_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "Functor0"), gopurs_runtime.Value{})
-_ = __local_var_3_3
-applyCompose1_3_2 := gopurs_runtime.Func(func(dictApply1_4 gopurs_runtime.Value) gopurs_runtime.Value {
-apply_5_4 := gopurs_runtime.RecordGet(dictApply1_4, "apply")
-_ = apply_5_4
-__local_var_6_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply1_4, "Functor0"), gopurs_runtime.Value{})
-_ = __local_var_6_6
-functorCompose2_6_5 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_3, "map"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_6_6, "map"), f_7), v_8)
-})
-}))
-_ = functorCompose2_6_5
-return gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return functorCompose2_6_5
-}), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "apply"), gopurs_runtime.Apply2(Functor0_2_1.V0, apply_5_4, v_7), v1_8)
-})
-}))
-})
-_ = applyCompose1_3_2
+__local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_3_2
 return gopurs_runtime.Func(func(dictApplicative1_4 gopurs_runtime.Value) gopurs_runtime.Value {
-applyCompose2_5_7 := gopurs_runtime.Apply(applyCompose1_3_2, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative1_4, "Apply0"), gopurs_runtime.Value{}))
-_ = applyCompose2_5_7
+__local_var_5_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative1_4, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_5_4
+apply_6_5 := gopurs_runtime.RecordGet(__local_var_5_4, "apply")
+_ = apply_6_5
+__local_var_7_7 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_5_4, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_7_7
+functorCompose2_7_6 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_2, "map"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_7_7, "map"), f_8), v_9)
+})
+}))
+_ = functorCompose2_7_6
+applyCompose2_5_3 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorCompose2_7_6
+}), gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "apply"), gopurs_runtime.Apply2(Functor0_2_1.V0, apply_6_5, v_8), v1_9)
+})
+}))
+_ = applyCompose2_5_3
 return gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return applyCompose2_5_7
+return applyCompose2_5_3
 }), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative1_4, "pure"), x_6))
 }))
