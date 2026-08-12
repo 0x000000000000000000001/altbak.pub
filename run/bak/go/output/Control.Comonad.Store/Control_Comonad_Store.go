@@ -46,7 +46,9 @@ var cache_map__2311960860 gopurs_runtime.Value
 var once_map__2311960860 sync.Once
 func Get_map__2311960860() gopurs_runtime.Value {
 	once_map__2311960860.Do(func() {
-		cache_map__2311960860 = gopurs_runtime.RecordGet(pkg_Data_Tuple.Get_functorTuple(), "map")
+		cache_map__2311960860 = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, m_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(Call_map__2311960860(f_0_box, gopurs_runtime.CoerceToStruct[pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](m_1_box)))}
+})
 	})
 	return cache_map__2311960860
 }
@@ -117,6 +119,14 @@ func Call_map__2199395572(dict_0_loop *pkg_Data_Functor.Constructor_Functor[gopu
 var dict_0 *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V0
+}
+
+func Call_map__2311960860(f_0_loop gopurs_runtime.Value, m_1_loop *pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]) *pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var m_1 *pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] = m_1_loop
+_ = m_1
+return gopurs_runtime.CoerceToStruct[pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(m_1)}.UnsafePtr).V0, gopurs_runtime.Apply(f_0, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(m_1)}.UnsafePtr).V1)})})
 }
 
 func Call_swap__572690077(v_0_loop *pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]) *pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] {

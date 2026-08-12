@@ -569,7 +569,9 @@ var cache_mapWithIndex__835054498 gopurs_runtime.Value
 var once_mapWithIndex__835054498 sync.Once
 func Get_mapWithIndex__835054498() gopurs_runtime.Value {
 	once_mapWithIndex__835054498.Do(func() {
-		cache_mapWithIndex__835054498 = gopurs_runtime.RecordGet(pkg_Data_FunctorWithIndex.Get_functorWithIndexArray(), "mapWithIndex")
+		cache_mapWithIndex__835054498 = gopurs_runtime.Func2(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mapWithIndex__835054498(__eta0_0_box, __eta1_1_box)
+})
 	})
 	return cache_mapWithIndex__835054498
 }
@@ -646,7 +648,9 @@ var cache_append__493084344 gopurs_runtime.Value
 var once_append__493084344 sync.Once
 func Get_append__493084344() gopurs_runtime.Value {
 	once_append__493084344.Do(func() {
-		cache_append__493084344 = gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append")
+		cache_append__493084344 = gopurs_runtime.Func2(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_append__493084344(__eta0_0_box, __eta1_1_box)
+})
 	})
 	return cache_append__493084344
 }
@@ -808,7 +812,7 @@ _ = dictShow_0
 showArray_1_0 := &pkg_Data_Show.Constructor_Show[[]gopurs_runtime.Value]{1, gopurs_runtime.Apply(pkg_Data_Show.Get_showArrayImpl(), gopurs_runtime.RecordGet(dictShow_0, "show"))}
 _ = showArray_1_0
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("(NonEmptyArray "), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(gopurs_runtime.Apply(showArray_1_0.V0, gopurs_runtime.Array(func() []gopurs_runtime.Value {
+return gopurs_runtime.Str(Call_append__493084344(gopurs_runtime.Str("(NonEmptyArray "), gopurs_runtime.Str(Call_append__493084344(gopurs_runtime.Str(gopurs_runtime.Apply(showArray_1_0.V0, gopurs_runtime.Array(func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(v_2.UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
@@ -853,6 +857,14 @@ _ = a_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
 return a_0
+}
+
+func Call_mapWithIndex__835054498(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+return gopurs_runtime.Apply2(pkg_Data_FunctorWithIndex.Get_mapWithIndexArray(), __eta0_0, __eta1_1)
 }
 
 func Call_mapWithIndex__55256674(dict_0_loop *pkg_Data_FunctorWithIndex.Constructor_FunctorWithIndex[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
@@ -969,6 +981,14 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
 return __t0
+}
+
+func Call_append__493084344(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+return gopurs_runtime.Str((__eta0_0.StrVal()) + (__eta1_1.StrVal()))
 }
 
 func Call_append__1230318264(dict_0_loop *pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]) gopurs_runtime.Value {

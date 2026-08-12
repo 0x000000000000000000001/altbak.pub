@@ -30,7 +30,9 @@ var cache_eq__472317769 gopurs_runtime.Value
 var once_eq__472317769 sync.Once
 func Get_eq__472317769() gopurs_runtime.Value {
 	once_eq__472317769.Do(func() {
-		cache_eq__472317769 = gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqString(), "eq")
+		cache_eq__472317769 = gopurs_runtime.Func2(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_eq__472317769(__eta0_0_box, __eta1_1_box)
+})
 	})
 	return cache_eq__472317769
 }
@@ -49,7 +51,15 @@ return Call_eq__2384498378(gopurs_runtime.CoerceToStruct[pkg_Data_Eq.Constructor
 func Call_null(s_0_loop string) bool {
 var s_0 string = s_0_loop
 _ = s_0
-return (gopurs_runtime.Apply2(Get_eq__472317769(), gopurs_runtime.Str(s_0), gopurs_runtime.Str("")).IntVal) != (0)
+return (Call_eq__472317769(gopurs_runtime.Str(s_0), gopurs_runtime.Str("")).IntVal) != (0)
+}
+
+func Call_eq__472317769(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+return gopurs_runtime.Bool((__eta0_0.StrVal()) == (__eta1_1.StrVal()))
 }
 
 func Call_eq__2384498378(dict_0_loop *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]) gopurs_runtime.Value {

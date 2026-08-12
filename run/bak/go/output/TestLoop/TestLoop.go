@@ -21,7 +21,9 @@ var cache_sub__1043827704 gopurs_runtime.Value
 var once_sub__1043827704 sync.Once
 func Get_sub__1043827704() gopurs_runtime.Value {
 	once_sub__1043827704.Do(func() {
-		cache_sub__1043827704 = pkg_Data_Ring.Get_intSub()
+		cache_sub__1043827704 = gopurs_runtime.Func2(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_sub__1043827704(__eta0_0_box, __eta1_1_box)
+})
 	})
 	return cache_sub__1043827704
 }
@@ -53,13 +55,21 @@ goto end_branch_0
 }
 }
 {
-v_0_loop = gopurs_runtime.Apply2(Get_sub__1043827704(), gopurs_runtime.Int(v_0), gopurs_runtime.Int(1)).IntVal
+v_0_loop = Call_sub__1043827704(gopurs_runtime.Int(v_0), gopurs_runtime.Int(1)).IntVal
 continue loop
 __t0 = gopurs_runtime.Value{}.IntVal
 }
 end_branch_0:
 return __t0
 }
+}
+
+func Call_sub__1043827704(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+return gopurs_runtime.Int((__eta0_0.IntVal) - (__eta1_1.IntVal))
 }
 
 func Call_sub__3675938712(dict_0_loop *pkg_Data_Ring.Constructor_Ring[gopurs_runtime.Value]) gopurs_runtime.Value {

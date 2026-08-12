@@ -319,15 +319,6 @@ func Get_functorFn__2451697751() gopurs_runtime.Value {
 	return cache_functorFn__2451697751
 }
 
-var cache_functorFn__1074564752 gopurs_runtime.Value
-var once_functorFn__1074564752 sync.Once
-func Get_functorFn__1074564752() gopurs_runtime.Value {
-	once_functorFn__1074564752.Do(func() {
-		cache_functorFn__1074564752 = gopurs_runtime.RecordDict1("map", gopurs_runtime.RecordGet(pkg_Control_Semigroupoid.Get_semigroupoidFn(), "compose"))
-	})
-	return cache_functorFn__1074564752
-}
-
 var cache_map__2199395572 gopurs_runtime.Value
 var once_map__2199395572 sync.Once
 func Get_map__2199395572() gopurs_runtime.Value {
@@ -343,7 +334,9 @@ var cache_map__3436901780 gopurs_runtime.Value
 var once_map__3436901780 sync.Once
 func Get_map__3436901780() gopurs_runtime.Value {
 	once_map__3436901780.Do(func() {
-		cache_map__3436901780 = gopurs_runtime.RecordGet(pkg_Data_Functor.Get_functorFn(), "map")
+		cache_map__3436901780 = gopurs_runtime.Func3(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_map__3436901780(__eta0_0_box, __eta1_1_box, x_2_box)
+})
 	})
 	return cache_map__3436901780
 }
@@ -752,6 +745,16 @@ func Call_map__2199395572(dict_0_loop *pkg_Data_Functor.Constructor_Functor[gopu
 var dict_0 *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V0
+}
+
+func Call_map__3436901780(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+var x_2 gopurs_runtime.Value = x_2_loop
+_ = x_2
+return gopurs_runtime.Apply(__eta0_0, gopurs_runtime.Apply(__eta1_1, x_2))
 }
 
 func Call_map__2549863700(dict_0_loop *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]) gopurs_runtime.Value {

@@ -308,7 +308,9 @@ var cache_coerce__3644730900 gopurs_runtime.Value
 var once_coerce__3644730900 sync.Once
 func Get_coerce__3644730900() gopurs_runtime.Value {
 	once_coerce__3644730900.Do(func() {
-		cache_coerce__3644730900 = pkg_Unsafe_Coerce.Get_unsafeCoerce()
+		cache_coerce__3644730900 = gopurs_runtime.Func(func(__eta0_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_coerce__3644730900(__eta0_0_box)
+})
 	})
 	return cache_coerce__3644730900
 }
@@ -520,6 +522,12 @@ func Call_coerce__529298068(_dollar__unused_0_loop gopurs_runtime.Value) gopurs_
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 return pkg_Unsafe_Coerce.Get_unsafeCoerce()
+}
+
+func Call_coerce__3644730900(__eta0_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+return __eta0_0
 }
 
 

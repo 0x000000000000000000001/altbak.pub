@@ -156,6 +156,17 @@ return Call_compare__821463600(gopurs_runtime.CoerceToStruct[pkg_Data_Ord.Constr
 	return cache_compare__821463600
 }
 
+var cache_max__1124926121 gopurs_runtime.Value
+var once_max__1124926121 sync.Once
+func Get_max__1124926121() gopurs_runtime.Value {
+	once_max__1124926121.Do(func() {
+		cache_max__1124926121 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value, y_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_max__1124926121(gopurs_runtime.CoerceToStruct[pkg_Data_Ord.Constructor_Ord[gopurs_runtime.Value]](dictOrd_0_box), x_1_box, y_2_box)
+})
+	})
+	return cache_max__1124926121
+}
+
 var cache_max__2767602680 gopurs_runtime.Value
 var once_max__2767602680 sync.Once
 func Get_max__2767602680() gopurs_runtime.Value {
@@ -165,6 +176,17 @@ return Call_max__2767602680(gopurs_runtime.CoerceToStruct[pkg_Data_Ord.Construct
 })
 	})
 	return cache_max__2767602680
+}
+
+var cache_min__1124926121 gopurs_runtime.Value
+var once_min__1124926121 sync.Once
+func Get_min__1124926121() gopurs_runtime.Value {
+	once_min__1124926121.Do(func() {
+		cache_min__1124926121 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value, y_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_min__1124926121(gopurs_runtime.CoerceToStruct[pkg_Data_Ord.Constructor_Ord[gopurs_runtime.Value]](dictOrd_0_box), x_1_box, y_2_box)
+})
+	})
+	return cache_min__1124926121
 }
 
 var cache_min__2767602680 gopurs_runtime.Value
@@ -393,6 +415,47 @@ _ = dict_0
 return dict_0.V1
 }
 
+func Call_max__1124926121(dictOrd_0_loop *pkg_Data_Ord.Constructor_Ord[gopurs_runtime.Value], x_1_loop gopurs_runtime.Value, y_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictOrd_0 *pkg_Data_Ord.Constructor_Ord[gopurs_runtime.Value] = dictOrd_0_loop
+_ = dictOrd_0
+var x_1 gopurs_runtime.Value = x_1_loop
+_ = x_1
+var y_2 gopurs_runtime.Value = y_2_loop
+_ = y_2
+v_3_0 := gopurs_runtime.Apply2(dictOrd_0.V1, x_1, y_2)
+_ = v_3_0
+var __t1 gopurs_runtime.Value
+{
+if (uint32(v_3_0.IntVal) == 1527465420) {
+__t1 = y_2
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (uint32(v_3_0.IntVal) == 902936544) {
+__t1 = x_1
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (uint32(v_3_0.IntVal) == 380165415) {
+__t1 = x_1
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_1:
+return __t1
+}
+
 func Call_max__2767602680(dictOrd_0_loop *pkg_Data_Ord.Constructor_Ord[gopurs_runtime.Value], x_1_loop gopurs_runtime.Value, y_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd_0 *pkg_Data_Ord.Constructor_Ord[gopurs_runtime.Value] = dictOrd_0_loop
 _ = dictOrd_0
@@ -422,6 +485,47 @@ goto end_branch_1
 {
 if (uint32(v_3_0.IntVal) == 380165415) {
 __t1 = x_1
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_1:
+return __t1
+}
+
+func Call_min__1124926121(dictOrd_0_loop *pkg_Data_Ord.Constructor_Ord[gopurs_runtime.Value], x_1_loop gopurs_runtime.Value, y_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictOrd_0 *pkg_Data_Ord.Constructor_Ord[gopurs_runtime.Value] = dictOrd_0_loop
+_ = dictOrd_0
+var x_1 gopurs_runtime.Value = x_1_loop
+_ = x_1
+var y_2 gopurs_runtime.Value = y_2_loop
+_ = y_2
+v_3_0 := gopurs_runtime.Apply2(dictOrd_0.V1, x_1, y_2)
+_ = v_3_0
+var __t1 gopurs_runtime.Value
+{
+if (uint32(v_3_0.IntVal) == 1527465420) {
+__t1 = x_1
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (uint32(v_3_0.IntVal) == 902936544) {
+__t1 = x_1
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (uint32(v_3_0.IntVal) == 380165415) {
+__t1 = y_2
 goto end_branch_1
 } else {
 

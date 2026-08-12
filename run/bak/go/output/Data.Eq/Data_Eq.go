@@ -211,7 +211,9 @@ var cache_eq__2276491096 gopurs_runtime.Value
 var once_eq__2276491096 sync.Once
 func Get_eq__2276491096() gopurs_runtime.Value {
 	once_eq__2276491096.Do(func() {
-		cache_eq__2276491096 = gopurs_runtime.RecordGet(Get_eqBoolean(), "eq")
+		cache_eq__2276491096 = gopurs_runtime.Func2(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_eq__2276491096(__eta0_0_box, __eta1_1_box)
+})
 	})
 	return cache_eq__2276491096
 }
@@ -264,7 +266,9 @@ var cache_conj__3676519832 gopurs_runtime.Value
 var once_conj__3676519832 sync.Once
 func Get_conj__3676519832() gopurs_runtime.Value {
 	once_conj__3676519832.Do(func() {
-		cache_conj__3676519832 = gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj")
+		cache_conj__3676519832 = gopurs_runtime.Func2(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_conj__3676519832(__eta0_0_box, __eta1_1_box)
+})
 	})
 	return cache_conj__3676519832
 }
@@ -284,7 +288,9 @@ var cache_disj__3676519832 gopurs_runtime.Value
 var once_disj__3676519832 sync.Once
 func Get_disj__3676519832() gopurs_runtime.Value {
 	once_disj__3676519832.Do(func() {
-		cache_disj__3676519832 = gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "disj")
+		cache_disj__3676519832 = gopurs_runtime.Func2(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_disj__3676519832(__eta0_0_box, __eta1_1_box)
+})
 	})
 	return cache_disj__3676519832
 }
@@ -304,7 +310,9 @@ var cache_not__3201284355 gopurs_runtime.Value
 var once_not__3201284355 sync.Once
 func Get_not__3201284355() gopurs_runtime.Value {
 	once_not__3201284355.Do(func() {
-		cache_not__3201284355 = gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "not")
+		cache_not__3201284355 = gopurs_runtime.Func(func(__eta0_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_not__3201284355(__eta0_0_box)
+})
 	})
 	return cache_not__3201284355
 }
@@ -439,7 +447,7 @@ return gopurs_runtime.Func(func(ra_5 gopurs_runtime.Value) gopurs_runtime.Value 
 return gopurs_runtime.Func(func(rb_6 gopurs_runtime.Value) gopurs_runtime.Value {
 get_7_0 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_2, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}).StrVal()))
 _ = get_7_0
-return gopurs_runtime.Bool((gopurs_runtime.Apply2(Get_conj__3676519832(), gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_3, "eq"), gopurs_runtime.Apply(get_7_0, ra_5), gopurs_runtime.Apply(get_7_0, rb_6)).IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictEqRecord_0, "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_5, rb_6).IntVal) != (0))).IntVal) != (0))
+return gopurs_runtime.Bool((Call_conj__3676519832(gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_3, "eq"), gopurs_runtime.Apply(get_7_0, ra_5), gopurs_runtime.Apply(get_7_0, rb_6)).IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictEqRecord_0, "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_5, rb_6).IntVal) != (0))).IntVal) != (0))
 })
 })
 }))
@@ -452,7 +460,7 @@ var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
 var y_2 gopurs_runtime.Value = y_2_loop
 _ = y_2
-return (gopurs_runtime.Apply2(Get_eq__2276491096(), gopurs_runtime.Bool((gopurs_runtime.Apply2(dictEq_0.V0, x_1, y_2).IntVal) != (0)), gopurs_runtime.Bool(false)).IntVal) != (0)
+return (Call_eq__2276491096(gopurs_runtime.Bool((gopurs_runtime.Apply2(dictEq_0.V0, x_1, y_2).IntVal) != (0)), gopurs_runtime.Bool(false)).IntVal) != (0)
 }
 
 func Call_notEq1(dictEq1_0_loop *Constructor_Eq1[gopurs_runtime.Value], dictEq_1_loop *Constructor_Eq[gopurs_runtime.Value], x_2_loop gopurs_runtime.Value, y_3_loop gopurs_runtime.Value) bool {
@@ -464,7 +472,15 @@ var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
 var y_3 gopurs_runtime.Value = y_3_loop
 _ = y_3
-return (gopurs_runtime.Apply2(Get_eq__2276491096(), gopurs_runtime.Bool((gopurs_runtime.Apply3(dictEq1_0.V0, gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(dictEq_1)}, x_2, y_3).IntVal) != (0)), gopurs_runtime.Bool(false)).IntVal) != (0)
+return (Call_eq__2276491096(gopurs_runtime.Bool((gopurs_runtime.Apply3(dictEq1_0.V0, gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(dictEq_1)}, x_2, y_3).IntVal) != (0)), gopurs_runtime.Bool(false)).IntVal) != (0)
+}
+
+func Call_eq__2276491096(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+return gopurs_runtime.Bool(((__eta0_0.IntVal) != (0)) == ((__eta1_1.IntVal) != (0)))
 }
 
 func Call_eq__2384498378(dict_0_loop *Constructor_Eq[gopurs_runtime.Value]) gopurs_runtime.Value {
@@ -491,16 +507,38 @@ _ = dict_0
 return dict_0.V0
 }
 
+func Call_conj__3676519832(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+return gopurs_runtime.Bool(((__eta0_0.IntVal) != (0)) && ((__eta1_1.IntVal) != (0)))
+}
+
 func Call_conj__3472268504(dict_0_loop *pkg_Data_HeytingAlgebra.Constructor_HeytingAlgebra[gopurs_runtime.Value]) gopurs_runtime.Value {
 var dict_0 *pkg_Data_HeytingAlgebra.Constructor_HeytingAlgebra[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V0
 }
 
+func Call_disj__3676519832(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+return gopurs_runtime.Bool(((__eta0_0.IntVal) != (0)) || ((__eta1_1.IntVal) != (0)))
+}
+
 func Call_disj__3472268504(dict_0_loop *pkg_Data_HeytingAlgebra.Constructor_HeytingAlgebra[gopurs_runtime.Value]) gopurs_runtime.Value {
 var dict_0 *pkg_Data_HeytingAlgebra.Constructor_HeytingAlgebra[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V1
+}
+
+func Call_not__3201284355(__eta0_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+return gopurs_runtime.Bool(((__eta0_0.IntVal) != (0)) != (true))
 }
 
 func Call_not__1505204753(dict_0_loop *pkg_Data_HeytingAlgebra.Constructor_HeytingAlgebra[gopurs_runtime.Value]) gopurs_runtime.Value {

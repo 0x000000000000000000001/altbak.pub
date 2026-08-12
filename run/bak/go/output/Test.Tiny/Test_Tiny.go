@@ -46,7 +46,9 @@ var cache_mul__560788792 gopurs_runtime.Value
 var once_mul__560788792 sync.Once
 func Get_mul__560788792() gopurs_runtime.Value {
 	once_mul__560788792.Do(func() {
-		cache_mul__560788792 = pkg_Data_Semiring.Get_intMul()
+		cache_mul__560788792 = gopurs_runtime.Func2(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mul__560788792(__eta0_0_box, __eta1_1_box)
+})
 	})
 	return cache_mul__560788792
 }
@@ -81,7 +83,7 @@ _ = v_0
 var __t0 gopurs_runtime.Value
 {
 if (v_0.Type == 9 && v_0.IntVal == 248718980) {
-__t0 = gopurs_runtime.Int(gopurs_runtime.Apply2(Get_mul__560788792(), gopurs_runtime.Int((*Constructor_Circle)(v_0.UnsafePtr).V0), gopurs_runtime.Int((*Constructor_Circle)(v_0.UnsafePtr).V0)).IntVal)
+__t0 = gopurs_runtime.Int(Call_mul__560788792(gopurs_runtime.Int((*Constructor_Circle)(v_0.UnsafePtr).V0), gopurs_runtime.Int((*Constructor_Circle)(v_0.UnsafePtr).V0)).IntVal)
 goto end_branch_0
 } else {
 
@@ -89,7 +91,7 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 261969494) {
-__t0 = gopurs_runtime.Int(gopurs_runtime.Apply2(Get_mul__560788792(), gopurs_runtime.Int((*Constructor_Rect)(v_0.UnsafePtr).V0), gopurs_runtime.Int((*Constructor_Rect)(v_0.UnsafePtr).V1)).IntVal)
+__t0 = gopurs_runtime.Int(Call_mul__560788792(gopurs_runtime.Int((*Constructor_Rect)(v_0.UnsafePtr).V0), gopurs_runtime.Int((*Constructor_Rect)(v_0.UnsafePtr).V1)).IntVal)
 goto end_branch_0
 } else {
 
@@ -100,6 +102,14 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
 return __t0.IntVal
+}
+
+func Call_mul__560788792(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+return gopurs_runtime.Int((__eta0_0.IntVal) * (__eta1_1.IntVal))
 }
 
 func Call_mul__1614463960(dict_0_loop *pkg_Data_Semiring.Constructor_Semiring[gopurs_runtime.Value]) gopurs_runtime.Value {

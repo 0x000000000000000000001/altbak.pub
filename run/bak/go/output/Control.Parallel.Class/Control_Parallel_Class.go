@@ -309,7 +309,9 @@ var cache_discard__439597126 gopurs_runtime.Value
 var once_discard__439597126 sync.Once
 func Get_discard__439597126() gopurs_runtime.Value {
 	once_discard__439597126.Do(func() {
-		cache_discard__439597126 = gopurs_runtime.RecordGet(pkg_Control_Bind.Get_discardUnit(), "discard")
+		cache_discard__439597126 = gopurs_runtime.Func(func(dictBind_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_discard__439597126(dictBind_0_box)
+})
 	})
 	return cache_discard__439597126
 }
@@ -1252,6 +1254,12 @@ func Call_bind__2763824711(dict_0_loop *pkg_Control_Bind.Constructor_Bind[gopurs
 var dict_0 *pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V1
+}
+
+func Call_discard__439597126(dictBind_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictBind_0 gopurs_runtime.Value = dictBind_0_loop
+_ = dictBind_0
+return gopurs_runtime.RecordGet(dictBind_0, "bind")
 }
 
 func Call_discard__317162198(dict_0_loop *pkg_Control_Bind.Constructor_Discard[gopurs_runtime.Value]) gopurs_runtime.Value {

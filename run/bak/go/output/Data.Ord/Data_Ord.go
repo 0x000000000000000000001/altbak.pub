@@ -428,11 +428,35 @@ return Call_abs(gopurs_runtime.CoerceToStruct[Constructor_Ord[gopurs_runtime.Val
 	return cache_abs
 }
 
+var cache_eq__789642299 gopurs_runtime.Value
+var once_eq__789642299 sync.Once
+func Get_eq__789642299() gopurs_runtime.Value {
+	once_eq__789642299.Do(func() {
+		cache_eq__789642299 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_eq__789642299(gopurs_runtime.CoerceToStruct[pkg_Data_Eq.Constructor_Eq[bool]](dict_0_box))
+})
+	})
+	return cache_eq__789642299
+}
+
+var cache_eq__1697837627 gopurs_runtime.Value
+var once_eq__1697837627 sync.Once
+func Get_eq__1697837627() gopurs_runtime.Value {
+	once_eq__1697837627.Do(func() {
+		cache_eq__1697837627 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_eq__1697837627(gopurs_runtime.CoerceToStruct[pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_eq__1697837627
+}
+
 var cache_eq__2276491096 gopurs_runtime.Value
 var once_eq__2276491096 sync.Once
 func Get_eq__2276491096() gopurs_runtime.Value {
 	once_eq__2276491096.Do(func() {
-		cache_eq__2276491096 = gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq")
+		cache_eq__2276491096 = gopurs_runtime.Func2(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_eq__2276491096(__eta0_0_box, __eta1_1_box)
+})
 	})
 	return cache_eq__2276491096
 }
@@ -513,7 +537,9 @@ var cache_compare__372254389 gopurs_runtime.Value
 var once_compare__372254389 sync.Once
 func Get_compare__372254389() gopurs_runtime.Value {
 	once_compare__372254389.Do(func() {
-		cache_compare__372254389 = gopurs_runtime.Apply3(Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil})
+		cache_compare__372254389 = gopurs_runtime.Func2(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_compare__372254389(__eta0_0_box, __eta1_1_box)
+})
 	})
 	return cache_compare__372254389
 }
@@ -610,8 +636,8 @@ var cache_negate__2635823316 gopurs_runtime.Value
 var once_negate__2635823316 sync.Once
 func Get_negate__2635823316() gopurs_runtime.Value {
 	once_negate__2635823316.Do(func() {
-		cache_negate__2635823316 = gopurs_runtime.Func(func(a_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_negate__2635823316(a_0_box)
+		cache_negate__2635823316 = gopurs_runtime.Func(func(__eta0_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_negate__2635823316(__eta0_0_box)
 })
 	})
 	return cache_negate__2635823316
@@ -626,6 +652,17 @@ return Call_negate__1364373265(gopurs_runtime.CoerceToStruct[pkg_Data_Ring.Const
 })
 	})
 	return cache_negate__1364373265
+}
+
+var cache_sub__1124926121 gopurs_runtime.Value
+var once_sub__1124926121 sync.Once
+func Get_sub__1124926121() gopurs_runtime.Value {
+	once_sub__1124926121.Do(func() {
+		cache_sub__1124926121 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_sub__1124926121(gopurs_runtime.CoerceToStruct[pkg_Data_Ring.Constructor_Ring[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_sub__1124926121
 }
 
 var cache_sub__3675938712 gopurs_runtime.Value
@@ -648,6 +685,17 @@ return Call_one__1204848985(dict_0_box)
 })
 	})
 	return cache_one__1204848985
+}
+
+var cache_zero__1556010056 gopurs_runtime.Value
+var once_zero__1556010056 sync.Once
+func Get_zero__1556010056() gopurs_runtime.Value {
+	once_zero__1556010056.Do(func() {
+		cache_zero__1556010056 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_zero__1556010056(dict_0_box)
+})
+	})
+	return cache_zero__1556010056
 }
 
 var cache_zero__1204848985 gopurs_runtime.Value
@@ -1041,7 +1089,7 @@ return gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_do
 return eqArray_1_0
 }), gopurs_runtime.Func(func(xs_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(ys_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(Get_compare__372254389(), gopurs_runtime.Int(0), gopurs_runtime.Int(gopurs_runtime.Apply3(Get_ordArrayImpl(), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(Call_compare__372254389(gopurs_runtime.Int(0), gopurs_runtime.Int(gopurs_runtime.Apply3(Get_ordArrayImpl(), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_5 gopurs_runtime.Value) gopurs_runtime.Value {
 v_6_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), x_4, y_5)
 _ = v_6_1
@@ -1310,6 +1358,26 @@ return __t3
 })
 }
 
+func Call_eq__789642299(dict_0_loop *pkg_Data_Eq.Constructor_Eq[bool]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Eq.Constructor_Eq[bool] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_eq__1697837627(dict_0_loop *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_eq__2276491096(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+return gopurs_runtime.Bool(((__eta0_0.IntVal) != (0)) == ((__eta1_1.IntVal) != (0)))
+}
+
 func Call_eq__2384498378(dict_0_loop *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]) gopurs_runtime.Value {
 var dict_0 *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
@@ -1323,7 +1391,7 @@ var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
 var y_2 gopurs_runtime.Value = y_2_loop
 _ = y_2
-return (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Bool((gopurs_runtime.Apply2(dictEq_0.V0, x_1, y_2).IntVal) != (0)), gopurs_runtime.Bool(false)).IntVal) != (0)
+return ((gopurs_runtime.Apply2(dictEq_0.V0, x_1, y_2).IntVal) != (0)) != (true)
 }
 
 func Call_notEq__1272715810(x_0_loop gopurs_runtime.Value, y_1_loop gopurs_runtime.Value) bool {
@@ -1331,7 +1399,15 @@ var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
 var y_1 gopurs_runtime.Value = y_1_loop
 _ = y_1
-return (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ordering.Get_eqOrdering(), "eq"), x_0, y_1).IntVal) != (0)), gopurs_runtime.Bool(false)).IntVal) != (0)
+return ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ordering.Get_eqOrdering(), "eq"), x_0, y_1).IntVal) != (0)) != (true)
+}
+
+func Call_compare__372254389(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+return gopurs_runtime.Apply5(Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, __eta0_0, __eta1_1)
 }
 
 func Call_compare__821463600(dict_0_loop *Constructor_Ord[gopurs_runtime.Value]) gopurs_runtime.Value {
@@ -1506,10 +1582,10 @@ end_branch_1:
 return __t1
 }
 
-func Call_negate__2635823316(a_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var a_0 gopurs_runtime.Value = a_0_loop
-_ = a_0
-return gopurs_runtime.Int(-(a_0.IntVal))
+func Call_negate__2635823316(__eta0_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+return gopurs_runtime.Int(-(__eta0_0.IntVal))
 }
 
 func Call_negate__1364373265(dictRing_0_loop *pkg_Data_Ring.Constructor_Ring[gopurs_runtime.Value]) gopurs_runtime.Value {
@@ -1522,6 +1598,12 @@ return gopurs_runtime.Apply2(dictRing_0.V1, Semiring0_1_0.V3, a_2)
 })
 }
 
+func Call_sub__1124926121(dict_0_loop *pkg_Data_Ring.Constructor_Ring[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Ring.Constructor_Ring[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V1
+}
+
 func Call_sub__3675938712(dict_0_loop *pkg_Data_Ring.Constructor_Ring[gopurs_runtime.Value]) gopurs_runtime.Value {
 var dict_0 *pkg_Data_Ring.Constructor_Ring[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
@@ -1532,6 +1614,12 @@ func Call_one__1204848985(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value
 var dict_0 gopurs_runtime.Value = dict_0_loop
 _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "one")
+}
+
+func Call_zero__1556010056(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dict_0 gopurs_runtime.Value = dict_0_loop
+_ = dict_0
+return gopurs_runtime.RecordGet(dict_0, "zero")
 }
 
 func Call_zero__1204848985(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {

@@ -9,7 +9,6 @@ import (
 	pkg_Data_Functor "gopurs/output/Data.Functor"
 	pkg_Data_Newtype "gopurs/output/Data.Newtype"
 	pkg_Data_Ord "gopurs/output/Data.Ord"
-	pkg_Data_Ordering "gopurs/output/Data.Ordering"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Tuple "gopurs/output/Data.Tuple"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
@@ -495,7 +494,9 @@ var cache_eq__1272715810 gopurs_runtime.Value
 var once_eq__1272715810 sync.Once
 func Get_eq__1272715810() gopurs_runtime.Value {
 	once_eq__1272715810.Do(func() {
-		cache_eq__1272715810 = gopurs_runtime.RecordGet(pkg_Data_Ordering.Get_eqOrdering(), "eq")
+		cache_eq__1272715810 = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool(Call_eq__1272715810(uint32(v_0_box.IntVal), uint32(v1_1_box.IntVal)))
+})
 	})
 	return cache_eq__1272715810
 }
@@ -948,7 +949,9 @@ var cache_coerce__3644730900 gopurs_runtime.Value
 var once_coerce__3644730900 sync.Once
 func Get_coerce__3644730900() gopurs_runtime.Value {
 	once_coerce__3644730900.Do(func() {
-		cache_coerce__3644730900 = pkg_Unsafe_Coerce.Get_unsafeCoerce()
+		cache_coerce__3644730900 = gopurs_runtime.Func(func(__eta0_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_coerce__3644730900(__eta0_0_box)
+})
 	})
 	return cache_coerce__3644730900
 }
@@ -1016,7 +1019,7 @@ return gopurs_runtime.Apply(dictFoldable1_0.V2, gopurs_runtime.Func(func(x_2 gop
 return gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply2(Get_eq__1272715810(), gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(cmp_1, x_2, y_3).IntVal)), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}).IntVal) != (0) {
+if (gopurs_runtime.Bool(Call_eq__1272715810(uint32(gopurs_runtime.Apply2(cmp_1, x_2, y_3).IntVal), 380165415)).IntVal) != (0) {
 __t0 = x_2
 goto end_branch_0
 } else {
@@ -1041,7 +1044,7 @@ return gopurs_runtime.Apply(dictFoldable1_0.V2, gopurs_runtime.Func(func(x_2 gop
 return gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply2(Get_eq__1272715810(), gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(cmp_1, x_2, y_3).IntVal)), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}).IntVal) != (0) {
+if (gopurs_runtime.Bool(Call_eq__1272715810(uint32(gopurs_runtime.Apply2(cmp_1, x_2, y_3).IntVal), 1527465420)).IntVal) != (0) {
 __t0 = x_2
 goto end_branch_0
 } else {
@@ -1405,6 +1408,69 @@ _ = dict_0
 return dict_0.V0
 }
 
+func Call_eq__1272715810(v_0_loop uint32, v1_1_loop uint32) bool {
+var v_0 uint32 = v_0_loop
+_ = v_0
+var v1_1 uint32 = v1_1_loop
+_ = v1_1
+var __t2 bool
+{
+if (v_0 == 1527465420) {
+var __t0 bool
+{
+if (v1_1 == 1527465420) {
+__t0 = true
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = false
+}
+end_branch_0:
+__t2 = __t0
+goto end_branch_2
+} else {
+
+}
+}
+{
+if (v_0 == 380165415) {
+var __t1 bool
+{
+if (v1_1 == 380165415) {
+__t1 = true
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = false
+}
+end_branch_1:
+__t2 = __t1
+goto end_branch_2
+} else {
+
+}
+}
+{
+if ((v_0 == 902936544)) && ((v1_1 == 902936544)) {
+__t2 = true
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = false
+}
+end_branch_2:
+return __t2
+}
+
 func Call_const__1496134642(a_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var a_0 gopurs_runtime.Value = a_0_loop
 _ = a_0
@@ -1665,6 +1731,12 @@ func Call_coerce__529298068(_dollar__unused_0_loop gopurs_runtime.Value) gopurs_
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 return pkg_Unsafe_Coerce.Get_unsafeCoerce()
+}
+
+func Call_coerce__3644730900(__eta0_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+return __eta0_0
 }
 
 

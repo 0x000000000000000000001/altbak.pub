@@ -77,6 +77,28 @@ return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Point
 	return cache_evalRWS
 }
 
+var cache_pure__189931222 gopurs_runtime.Value
+var once_pure__189931222 sync.Once
+func Get_pure__189931222() gopurs_runtime.Value {
+	once_pure__189931222.Do(func() {
+		cache_pure__189931222 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_pure__189931222(gopurs_runtime.CoerceToStruct[pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_pure__189931222
+}
+
+var cache_pure__1222698838 gopurs_runtime.Value
+var once_pure__1222698838 sync.Once
+func Get_pure__1222698838() gopurs_runtime.Value {
+	once_pure__1222698838.Do(func() {
+		cache_pure__1222698838 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_pure__1222698838(gopurs_runtime.CoerceToStruct[pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_pure__1222698838
+}
+
 var cache_pure__3215807376 gopurs_runtime.Value
 var once_pure__3215807376 sync.Once
 func Get_pure__3215807376() gopurs_runtime.Value {
@@ -97,6 +119,28 @@ return Call_pure__1953455120(gopurs_runtime.CoerceToStruct[pkg_Control_Applicati
 })
 	})
 	return cache_pure__1953455120
+}
+
+var cache_bind__2879969985 gopurs_runtime.Value
+var once_bind__2879969985 sync.Once
+func Get_bind__2879969985() gopurs_runtime.Value {
+	once_bind__2879969985.Do(func() {
+		cache_bind__2879969985 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bind__2879969985(gopurs_runtime.CoerceToStruct[pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_bind__2879969985
+}
+
+var cache_bind__3304361473 gopurs_runtime.Value
+var once_bind__3304361473 sync.Once
+func Get_bind__3304361473() gopurs_runtime.Value {
+	once_bind__3304361473.Do(func() {
+		cache_bind__3304361473 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bind__3304361473(gopurs_runtime.CoerceToStruct[pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_bind__3304361473
 }
 
 var cache_bind__2601835655 gopurs_runtime.Value
@@ -136,21 +180,9 @@ var cache_evalRWST__2802039376 gopurs_runtime.Value
 var once_evalRWST__2802039376 sync.Once
 func Get_evalRWST__2802039376() gopurs_runtime.Value {
 	once_evalRWST__2802039376.Do(func() {
-		cache_evalRWST__2802039376 = func() gopurs_runtime.Value {
-Bind1_0_0 := gopurs_runtime.CoerceToStruct[pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Identity.Get_monadIdentity(), "Bind1"), gopurs_runtime.Value{}))
-_ = Bind1_0_0
-Applicative0_1_1 := gopurs_runtime.CoerceToStruct[pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Identity.Get_monadIdentity(), "Applicative0"), gopurs_runtime.Value{}))
-_ = Applicative0_1_1
-return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(r_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(s_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(Bind1_0_0.V1, gopurs_runtime.Apply2(v_2, r_3, s_4), gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Applicative0_1_1.V1, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*pkg_Control_Monad_RWS_Trans.Constructor_RWSResult[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v1_5.UnsafePtr).V1, (*pkg_Control_Monad_RWS_Trans.Constructor_RWSResult[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v1_5.UnsafePtr).V2})})
-}))
+		cache_evalRWST__2802039376 = gopurs_runtime.Func3(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value, __eta2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_evalRWST__2802039376(__eta0_0_box, __eta1_1_box, __eta2_2_box)
 })
-})
-})
-}()
 	})
 	return cache_evalRWST__2802039376
 }
@@ -170,21 +202,9 @@ var cache_execRWST__2802039376 gopurs_runtime.Value
 var once_execRWST__2802039376 sync.Once
 func Get_execRWST__2802039376() gopurs_runtime.Value {
 	once_execRWST__2802039376.Do(func() {
-		cache_execRWST__2802039376 = func() gopurs_runtime.Value {
-Bind1_0_0 := gopurs_runtime.CoerceToStruct[pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Identity.Get_monadIdentity(), "Bind1"), gopurs_runtime.Value{}))
-_ = Bind1_0_0
-Applicative0_1_1 := gopurs_runtime.CoerceToStruct[pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Identity.Get_monadIdentity(), "Applicative0"), gopurs_runtime.Value{}))
-_ = Applicative0_1_1
-return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(r_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(s_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(Bind1_0_0.V1, gopurs_runtime.Apply2(v_2, r_3, s_4), gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Applicative0_1_1.V1, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*pkg_Control_Monad_RWS_Trans.Constructor_RWSResult[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v1_5.UnsafePtr).V0, (*pkg_Control_Monad_RWS_Trans.Constructor_RWSResult[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v1_5.UnsafePtr).V2})})
-}))
+		cache_execRWST__2802039376 = gopurs_runtime.Func3(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value, __eta2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_execRWST__2802039376(__eta0_0_box, __eta1_1_box, __eta2_2_box)
 })
-})
-})
-}()
 	})
 	return cache_execRWST__2802039376
 }
@@ -408,6 +428,18 @@ return gopurs_runtime.Apply(Applicative0_3_0.V1, gopurs_runtime.Value{Type: 9, I
 })))
 }
 
+func Call_pure__189931222(dict_0_loop *pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V1
+}
+
+func Call_pure__1222698838(dict_0_loop *pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V1
+}
+
 func Call_pure__3215807376(dict_0_loop *pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]) gopurs_runtime.Value {
 var dict_0 *pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
@@ -416,6 +448,18 @@ return dict_0.V1
 
 func Call_pure__1953455120(dict_0_loop *pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]) gopurs_runtime.Value {
 var dict_0 *pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V1
+}
+
+func Call_bind__2879969985(dict_0_loop *pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V1
+}
+
+func Call_bind__3304361473(dict_0_loop *pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V1
 }
@@ -450,6 +494,18 @@ return gopurs_runtime.Apply(Applicative0_2_1.V1, gopurs_runtime.Value{Type: 9, I
 })
 }
 
+func Call_evalRWST__2802039376(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value, __eta2_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+var __eta2_2 gopurs_runtime.Value = __eta2_2_loop
+_ = __eta2_2
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Identity.Get_bindIdentity(), "bind"), gopurs_runtime.Apply2(__eta0_0, __eta1_1, __eta2_2), gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Identity.Get_applicativeIdentity(), "pure"), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*pkg_Control_Monad_RWS_Trans.Constructor_RWSResult[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V1, (*pkg_Control_Monad_RWS_Trans.Constructor_RWSResult[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V2})})
+}))
+}
+
 func Call_execRWST__2982438712(dictMonad_0_loop *pkg_Control_Monad.Constructor_Monad[gopurs_runtime.Value]) gopurs_runtime.Value {
 var dictMonad_0 *pkg_Control_Monad.Constructor_Monad[gopurs_runtime.Value] = dictMonad_0_loop
 _ = dictMonad_0
@@ -466,6 +522,18 @@ return gopurs_runtime.Apply(Applicative0_2_1.V1, gopurs_runtime.Value{Type: 9, I
 })
 })
 })
+}
+
+func Call_execRWST__2802039376(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value, __eta2_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+var __eta2_2 gopurs_runtime.Value = __eta2_2_loop
+_ = __eta2_2
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Identity.Get_bindIdentity(), "bind"), gopurs_runtime.Apply2(__eta0_0, __eta1_1, __eta2_2), gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Identity.Get_applicativeIdentity(), "pure"), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*pkg_Control_Monad_RWS_Trans.Constructor_RWSResult[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V0, (*pkg_Control_Monad_RWS_Trans.Constructor_RWSResult[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V2})})
+}))
 }
 
 func Call_mapRWST__3506688348(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, r_2_loop gopurs_runtime.Value, s_3_loop gopurs_runtime.Value) gopurs_runtime.Value {

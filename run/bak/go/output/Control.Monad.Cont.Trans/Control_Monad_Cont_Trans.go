@@ -284,6 +284,17 @@ return Call_lift2__1699116848(gopurs_runtime.CoerceToStruct[pkg_Control_Apply.Co
 	return cache_lift2__1699116848
 }
 
+var cache_bind__2879969985 gopurs_runtime.Value
+var once_bind__2879969985 sync.Once
+func Get_bind__2879969985() gopurs_runtime.Value {
+	once_bind__2879969985.Do(func() {
+		cache_bind__2879969985 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bind__2879969985(gopurs_runtime.CoerceToStruct[pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_bind__2879969985
+}
+
 var cache_bind__2601835655 gopurs_runtime.Value
 var once_bind__2601835655 sync.Once
 func Get_bind__2601835655() gopurs_runtime.Value {
@@ -338,7 +349,9 @@ var cache_lift__1331755881 gopurs_runtime.Value
 var once_lift__1331755881 sync.Once
 func Get_lift__1331755881() gopurs_runtime.Value {
 	once_lift__1331755881.Do(func() {
-		cache_lift__1331755881 = gopurs_runtime.RecordGet(Get_monadTransContT(), "lift")
+		cache_lift__1331755881 = gopurs_runtime.Func(func(dictMonad_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_lift__1331755881(dictMonad_0_box)
+})
 	})
 	return cache_lift__1331755881
 }
@@ -911,6 +924,12 @@ return gopurs_runtime.Apply2(dictApply_0.V1, gopurs_runtime.Apply2(Functor0_1_0.
 })
 }
 
+func Call_bind__2879969985(dict_0_loop *pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V1
+}
+
 func Call_bind__2601835655(dict_0_loop *pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value]) gopurs_runtime.Value {
 var dict_0 *pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
@@ -927,6 +946,18 @@ func Call_lift__3816229929(dict_0_loop *pkg_Control_Monad_Trans_Class.Constructo
 var dict_0 *pkg_Control_Monad_Trans_Class.Constructor_MonadTrans[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V0
+}
+
+func Call_lift__1331755881(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
+_ = dictMonad_0
+Bind1_1_0 := gopurs_runtime.CoerceToStruct[pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}))
+_ = Bind1_1_0
+return gopurs_runtime.Func(func(m_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(k_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Bind1_1_0.V1, m_2, k_3)
+})
+})
 }
 
 func Call_compose__858342840(dict_0_loop *pkg_Control_Semigroupoid.Constructor_Semigroupoid[gopurs_runtime.Value]) gopurs_runtime.Value {

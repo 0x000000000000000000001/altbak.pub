@@ -51,7 +51,7 @@ return gopurs_runtime.RecordDict2("Semiring0", "sub", gopurs_runtime.Func(func(_
 return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", pkg_Data_Semiring.Get_numAdd(), pkg_Data_Semiring.Get_numMul(), gopurs_runtime.Float(1.0), gopurs_runtime.Float(0.0))
 }), pkg_Data_Ring.Get_numSub())
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(gopurs_runtime.Apply2(Get_div__1002719800(), gopurs_runtime.Float(1.0), gopurs_runtime.Float(x_0.FloatVal())).FloatVal())
+return gopurs_runtime.Float(Call_div__1002719800(gopurs_runtime.Float(1.0), gopurs_runtime.Float(x_0.FloatVal())).FloatVal())
 }))
 	})
 	return cache_divisionringNumber
@@ -72,7 +72,9 @@ var cache_div__1002719800 gopurs_runtime.Value
 var once_div__1002719800 sync.Once
 func Get_div__1002719800() gopurs_runtime.Value {
 	once_div__1002719800.Do(func() {
-		cache_div__1002719800 = gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingNumber(), "div")
+		cache_div__1002719800 = gopurs_runtime.Func2(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_div__1002719800(__eta0_0_box, __eta1_1_box)
+})
 	})
 	return cache_div__1002719800
 }
@@ -152,6 +154,14 @@ func Call_recip__1644564657(dict_0_loop *Constructor_DivisionRing[gopurs_runtime
 var dict_0 *Constructor_DivisionRing[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V1
+}
+
+func Call_div__1002719800(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+return gopurs_runtime.Float((__eta0_0.FloatVal()) / (__eta1_1.FloatVal()))
 }
 
 func Call_div__2579358968(dict_0_loop *pkg_Data_EuclideanRing.Constructor_EuclideanRing[gopurs_runtime.Value]) gopurs_runtime.Value {

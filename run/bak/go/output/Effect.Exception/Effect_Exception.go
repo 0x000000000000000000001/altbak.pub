@@ -93,7 +93,9 @@ var cache_map__113987891 gopurs_runtime.Value
 var once_map__113987891 sync.Once
 func Get_map__113987891() gopurs_runtime.Value {
 	once_map__113987891.Do(func() {
-		cache_map__113987891 = gopurs_runtime.RecordGet(pkg_Effect.Get_functorEffect(), "map")
+		cache_map__113987891 = gopurs_runtime.Func2(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_map__113987891(__eta0_0_box, __eta1_1_box)
+})
 	})
 	return cache_map__113987891
 }
@@ -139,6 +141,14 @@ func Call_map__2199395572(dict_0_loop *pkg_Data_Functor.Constructor_Functor[gopu
 var dict_0 *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V0
+}
+
+func Call_map__113987891(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Effect.Get_applicativeEffect(), "Apply0"), gopurs_runtime.Value{}), "apply"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Effect.Get_applicativeEffect(), "pure"), __eta0_0), __eta1_1)
 }
 
 func Get_catchException() gopurs_runtime.Value {

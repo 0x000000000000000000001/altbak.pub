@@ -162,7 +162,9 @@ var cache_append__2611908184 gopurs_runtime.Value
 var once_append__2611908184 sync.Once
 func Get_append__2611908184() gopurs_runtime.Value {
 	once_append__2611908184.Do(func() {
-		cache_append__2611908184 = gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]](Get_semigroupFn()).V0
+		cache_append__2611908184 = gopurs_runtime.Func2(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_append__2611908184(__eta0_0_box, __eta1_1_box)
+})
 	})
 	return cache_append__2611908184
 }
@@ -207,6 +209,14 @@ func Call_append__1230318264(dict_0_loop *pkg_Data_Semigroup.Constructor_Semigro
 var dict_0 *pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V0
+}
+
+func Call_append__2611908184(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+return gopurs_runtime.Apply2(gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]](Get_semigroupFn()).V0, __eta0_0, __eta1_1)
 }
 
 

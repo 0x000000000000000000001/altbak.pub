@@ -157,7 +157,9 @@ var cache_eq__2843686287 gopurs_runtime.Value
 var once_eq__2843686287 sync.Once
 func Get_eq__2843686287() gopurs_runtime.Value {
 	once_eq__2843686287.Do(func() {
-		cache_eq__2843686287 = pkg_Data_Eq.Get_eqIntImpl()
+		cache_eq__2843686287 = gopurs_runtime.Func2(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_eq__2843686287(__eta0_0_box, __eta1_1_box)
+})
 	})
 	return cache_eq__2843686287
 }
@@ -177,7 +179,9 @@ var cache_div__2185172824 gopurs_runtime.Value
 var once_div__2185172824 sync.Once
 func Get_div__2185172824() gopurs_runtime.Value {
 	once_div__2185172824.Do(func() {
-		cache_div__2185172824 = gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingInt(), "div")
+		cache_div__2185172824 = gopurs_runtime.Func2(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_div__2185172824(__eta0_0_box, __eta1_1_box)
+})
 	})
 	return cache_div__2185172824
 }
@@ -197,7 +201,9 @@ var cache_mod__2185172824 gopurs_runtime.Value
 var once_mod__2185172824 sync.Once
 func Get_mod__2185172824() gopurs_runtime.Value {
 	once_mod__2185172824.Do(func() {
-		cache_mod__2185172824 = gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingInt(), "mod")
+		cache_mod__2185172824 = gopurs_runtime.Func2(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mod__2185172824(__eta0_0_box, __eta1_1_box)
+})
 	})
 	return cache_mod__2185172824
 }
@@ -244,6 +250,17 @@ return Call_memptyRecord__4056812038(gopurs_runtime.CoerceToStruct[Constructor_M
 })
 	})
 	return cache_memptyRecord__4056812038
+}
+
+var cache_compare__669572705 gopurs_runtime.Value
+var once_compare__669572705 sync.Once
+func Get_compare__669572705() gopurs_runtime.Value {
+	once_compare__669572705.Do(func() {
+		cache_compare__669572705 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_compare__669572705(gopurs_runtime.CoerceToStruct[pkg_Data_Ord.Constructor_Ord[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_compare__669572705
 }
 
 var cache_compare__821463600 gopurs_runtime.Value
@@ -473,7 +490,7 @@ goto end_branch_5
 }
 }
 {
-if (gopurs_runtime.Apply2(Get_eq__2843686287(), gopurs_runtime.Int(p_5.IntVal), gopurs_runtime.Int(1)).IntVal) != (0) {
+if (Call_eq__2843686287(gopurs_runtime.Int(p_5.IntVal), gopurs_runtime.Int(1)).IntVal) != (0) {
 __t5 = x_3
 goto end_branch_5
 } else {
@@ -481,8 +498,8 @@ goto end_branch_5
 }
 }
 {
-if (gopurs_runtime.Apply2(Get_eq__2843686287(), gopurs_runtime.Int(gopurs_runtime.Apply2(Get_mod__2185172824(), gopurs_runtime.Int(p_5.IntVal), gopurs_runtime.Int(2)).IntVal), gopurs_runtime.Int(0)).IntVal) != (0) {
-x_prime_6_4 := gopurs_runtime.Apply(go__go_4_2_0, gopurs_runtime.Int(gopurs_runtime.Apply2(Get_div__2185172824(), gopurs_runtime.Int(p_5.IntVal), gopurs_runtime.Int(2)).IntVal))
+if (Call_eq__2843686287(gopurs_runtime.Int(Call_mod__2185172824(gopurs_runtime.Int(p_5.IntVal), gopurs_runtime.Int(2)).IntVal), gopurs_runtime.Int(0)).IntVal) != (0) {
+x_prime_6_4 := gopurs_runtime.Apply(go__go_4_2_0, gopurs_runtime.Int(Call_div__2185172824(gopurs_runtime.Int(p_5.IntVal), gopurs_runtime.Int(2)).IntVal))
 _ = x_prime_6_4
 __t5 = gopurs_runtime.Apply2(Semigroup0_2_1.V0, x_prime_6_4, x_prime_6_4)
 goto end_branch_5
@@ -491,7 +508,7 @@ goto end_branch_5
 }
 }
 {
-x_prime_6_3 := gopurs_runtime.Apply(go__go_4_2_0, gopurs_runtime.Int(gopurs_runtime.Apply2(Get_div__2185172824(), gopurs_runtime.Int(p_5.IntVal), gopurs_runtime.Int(2)).IntVal))
+x_prime_6_3 := gopurs_runtime.Apply(go__go_4_2_0, gopurs_runtime.Int(Call_div__2185172824(gopurs_runtime.Int(p_5.IntVal), gopurs_runtime.Int(2)).IntVal))
 _ = x_prime_6_3
 __t5 = gopurs_runtime.Apply2(Semigroup0_2_1.V0, x_prime_6_3, gopurs_runtime.Apply2(Semigroup0_2_1.V0, x_prime_6_3, x_3))
 }
@@ -527,16 +544,40 @@ return __t1
 })
 }
 
+func Call_eq__2843686287(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+return gopurs_runtime.Bool((__eta0_0.IntVal) == (__eta1_1.IntVal))
+}
+
 func Call_eq__2384498378(dict_0_loop *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]) gopurs_runtime.Value {
 var dict_0 *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V0
 }
 
+func Call_div__2185172824(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+return gopurs_runtime.Int((__eta0_0.IntVal) / (__eta1_1.IntVal))
+}
+
 func Call_div__2579358968(dict_0_loop *pkg_Data_EuclideanRing.Constructor_EuclideanRing[gopurs_runtime.Value]) gopurs_runtime.Value {
 var dict_0 *pkg_Data_EuclideanRing.Constructor_EuclideanRing[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V2
+}
+
+func Call_mod__2185172824(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+return gopurs_runtime.Apply2(pkg_Data_EuclideanRing.Get_intMod(), __eta0_0, __eta1_1)
 }
 
 func Call_mod__2579358968(dict_0_loop *pkg_Data_EuclideanRing.Constructor_EuclideanRing[gopurs_runtime.Value]) gopurs_runtime.Value {
@@ -559,6 +600,12 @@ return dict_0.V1
 
 func Call_memptyRecord__4056812038(dict_0_loop *Constructor_MonoidRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
 var dict_0 *Constructor_MonoidRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V1
+}
+
+func Call_compare__669572705(dict_0_loop *pkg_Data_Ord.Constructor_Ord[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Ord.Constructor_Ord[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V1
 }

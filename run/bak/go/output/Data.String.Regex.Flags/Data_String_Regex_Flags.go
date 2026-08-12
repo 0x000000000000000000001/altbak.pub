@@ -61,7 +61,7 @@ var once_showRegexFlags sync.Once
 func Get_showRegexFlags() gopurs_runtime.Value {
 	once_showRegexFlags.Do(func() {
 		cache_showRegexFlags = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-usedFlags_1_0 := gopurs_runtime.Apply2(Get_append__2285093048(), func() gopurs_runtime.Value {
+usedFlags_1_0 := Call_append__2285093048(func() gopurs_runtime.Value {
 					arr := func() []string {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array([]gopurs_runtime.Value{}).UnsafePtr)
 					unboxed := make([]string, len(arr))
@@ -73,7 +73,7 @@ usedFlags_1_0 := gopurs_runtime.Apply2(Get_append__2285093048(), func() gopurs_r
 					return gopurs_runtime.Array(boxed)
 				}(), func() gopurs_runtime.Value {
 					arr := func() []string {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(Get_append__2285093048(), func() gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(Call_append__2285093048(func() gopurs_runtime.Value {
 					arr := func() []string {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Functor.Get_functorArray(), "map"), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str("global")
@@ -92,7 +92,7 @@ return gopurs_runtime.Str("global")
 					return gopurs_runtime.Array(boxed)
 				}(), func() gopurs_runtime.Value {
 					arr := func() []string {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(Get_append__2285093048(), func() gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(Call_append__2285093048(func() gopurs_runtime.Value {
 					arr := func() []string {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Functor.Get_functorArray(), "map"), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str("ignoreCase")
@@ -111,7 +111,7 @@ return gopurs_runtime.Str("ignoreCase")
 					return gopurs_runtime.Array(boxed)
 				}(), func() gopurs_runtime.Value {
 					arr := func() []string {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(Get_append__2285093048(), func() gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(Call_append__2285093048(func() gopurs_runtime.Value {
 					arr := func() []string {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Functor.Get_functorArray(), "map"), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str("multiline")
@@ -130,7 +130,7 @@ return gopurs_runtime.Str("multiline")
 					return gopurs_runtime.Array(boxed)
 				}(), func() gopurs_runtime.Value {
 					arr := func() []string {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(Get_append__2285093048(), func() gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(Call_append__2285093048(func() gopurs_runtime.Value {
 					arr := func() []string {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Functor.Get_functorArray(), "map"), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str("dotAll")
@@ -149,7 +149,7 @@ return gopurs_runtime.Str("dotAll")
 					return gopurs_runtime.Array(boxed)
 				}(), func() gopurs_runtime.Value {
 					arr := func() []string {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(Get_append__2285093048(), func() gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(Call_append__2285093048(func() gopurs_runtime.Value {
 					arr := func() []string {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Functor.Get_functorArray(), "map"), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str("sticky")
@@ -227,7 +227,7 @@ return gopurs_runtime.Str("unicode")
 _ = usedFlags_1_0
 var __t1 string
 {
-if (gopurs_runtime.Apply2(Get_eq__3977211983(), func() gopurs_runtime.Value {
+if (Call_eq__3977211983(func() gopurs_runtime.Value {
 					arr := func() []string {
 					arr := *(*[]gopurs_runtime.Value)(usedFlags_1_0.UnsafePtr)
 					unboxed := make([]string, len(arr))
@@ -255,7 +255,7 @@ goto end_branch_1
 }
 }
 {
-__t1 = gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("("), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(gopurs_runtime.Apply2(pkg_Data_String_Common.Get_joinWith(), gopurs_runtime.Str(" <> "), func() gopurs_runtime.Value {
+__t1 = Call_append__493084344(gopurs_runtime.Str("("), gopurs_runtime.Str(Call_append__493084344(gopurs_runtime.Str(gopurs_runtime.Apply2(pkg_Data_String_Common.Get_joinWith(), gopurs_runtime.Str(" <> "), func() gopurs_runtime.Value {
 					arr := func() []string {
 					arr := *(*[]gopurs_runtime.Value)(usedFlags_1_0.UnsafePtr)
 					unboxed := make([]string, len(arr))
@@ -280,7 +280,7 @@ func Get_semigroupRegexFlags() gopurs_runtime.Value {
 	once_semigroupRegexFlags.Do(func() {
 		cache_semigroupRegexFlags = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict([]string{"dotAll", "global", "ignoreCase", "multiline", "sticky", "unicode"}, []gopurs_runtime.Value{gopurs_runtime.Bool((gopurs_runtime.Apply2(Get_disj__3676519832(), gopurs_runtime.Bool((gopurs_runtime.RecordGet(v_0, "dotAll").IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.RecordGet(v1_1, "dotAll").IntVal) != (0))).IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.Apply2(Get_disj__3676519832(), gopurs_runtime.Bool((gopurs_runtime.RecordGet(v_0, "global").IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.RecordGet(v1_1, "global").IntVal) != (0))).IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.Apply2(Get_disj__3676519832(), gopurs_runtime.Bool((gopurs_runtime.RecordGet(v_0, "ignoreCase").IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.RecordGet(v1_1, "ignoreCase").IntVal) != (0))).IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.Apply2(Get_disj__3676519832(), gopurs_runtime.Bool((gopurs_runtime.RecordGet(v_0, "multiline").IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.RecordGet(v1_1, "multiline").IntVal) != (0))).IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.Apply2(Get_disj__3676519832(), gopurs_runtime.Bool((gopurs_runtime.RecordGet(v_0, "sticky").IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.RecordGet(v1_1, "sticky").IntVal) != (0))).IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.Apply2(Get_disj__3676519832(), gopurs_runtime.Bool((gopurs_runtime.RecordGet(v_0, "unicode").IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.RecordGet(v1_1, "unicode").IntVal) != (0))).IntVal) != (0))})
+return gopurs_runtime.RecordDict([]string{"dotAll", "global", "ignoreCase", "multiline", "sticky", "unicode"}, []gopurs_runtime.Value{gopurs_runtime.Bool((Call_disj__3676519832(gopurs_runtime.Bool((gopurs_runtime.RecordGet(v_0, "dotAll").IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.RecordGet(v1_1, "dotAll").IntVal) != (0))).IntVal) != (0)), gopurs_runtime.Bool((Call_disj__3676519832(gopurs_runtime.Bool((gopurs_runtime.RecordGet(v_0, "global").IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.RecordGet(v1_1, "global").IntVal) != (0))).IntVal) != (0)), gopurs_runtime.Bool((Call_disj__3676519832(gopurs_runtime.Bool((gopurs_runtime.RecordGet(v_0, "ignoreCase").IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.RecordGet(v1_1, "ignoreCase").IntVal) != (0))).IntVal) != (0)), gopurs_runtime.Bool((Call_disj__3676519832(gopurs_runtime.Bool((gopurs_runtime.RecordGet(v_0, "multiline").IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.RecordGet(v1_1, "multiline").IntVal) != (0))).IntVal) != (0)), gopurs_runtime.Bool((Call_disj__3676519832(gopurs_runtime.Bool((gopurs_runtime.RecordGet(v_0, "sticky").IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.RecordGet(v1_1, "sticky").IntVal) != (0))).IntVal) != (0)), gopurs_runtime.Bool((Call_disj__3676519832(gopurs_runtime.Bool((gopurs_runtime.RecordGet(v_0, "unicode").IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.RecordGet(v1_1, "unicode").IntVal) != (0))).IntVal) != (0))})
 })
 }))
 	})
@@ -355,7 +355,7 @@ return gopurs_runtime.Func(func(ra_1 gopurs_runtime.Value) gopurs_runtime.Value 
 return gopurs_runtime.Func(func(rb_2 gopurs_runtime.Value) gopurs_runtime.Value {
 get_3_1 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), gopurs_runtime.Str("unicode"))
 _ = get_3_1
-return gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Apply(get_3_1, ra_1), gopurs_runtime.Apply(get_3_1, rb_2)).IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqRowNil(), "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_1, rb_2).IntVal) != (0))).IntVal) != (0))
+return gopurs_runtime.Bool(((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Apply(get_3_1, ra_1), gopurs_runtime.Apply(get_3_1, rb_2)).IntVal) != (0)) && ((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqRowNil(), "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_1, rb_2).IntVal) != (0)))
 })
 })
 }))
@@ -365,7 +365,7 @@ return gopurs_runtime.Func(func(ra_2 gopurs_runtime.Value) gopurs_runtime.Value 
 return gopurs_runtime.Func(func(rb_3 gopurs_runtime.Value) gopurs_runtime.Value {
 get_4_3 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), gopurs_runtime.Str("sticky"))
 _ = get_4_3
-return gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Apply(get_4_3, ra_2), gopurs_runtime.Apply(get_4_3, rb_3)).IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_0_0, "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_2, rb_3).IntVal) != (0))).IntVal) != (0))
+return gopurs_runtime.Bool(((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Apply(get_4_3, ra_2), gopurs_runtime.Apply(get_4_3, rb_3)).IntVal) != (0)) && ((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_0_0, "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_2, rb_3).IntVal) != (0)))
 })
 })
 }))
@@ -375,7 +375,7 @@ return gopurs_runtime.Func(func(ra_3 gopurs_runtime.Value) gopurs_runtime.Value 
 return gopurs_runtime.Func(func(rb_4 gopurs_runtime.Value) gopurs_runtime.Value {
 get_5_5 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), gopurs_runtime.Str("multiline"))
 _ = get_5_5
-return gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Apply(get_5_5, ra_3), gopurs_runtime.Apply(get_5_5, rb_4)).IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_1_2, "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_3, rb_4).IntVal) != (0))).IntVal) != (0))
+return gopurs_runtime.Bool(((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Apply(get_5_5, ra_3), gopurs_runtime.Apply(get_5_5, rb_4)).IntVal) != (0)) && ((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_1_2, "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_3, rb_4).IntVal) != (0)))
 })
 })
 }))
@@ -385,7 +385,7 @@ return gopurs_runtime.Func(func(ra_4 gopurs_runtime.Value) gopurs_runtime.Value 
 return gopurs_runtime.Func(func(rb_5 gopurs_runtime.Value) gopurs_runtime.Value {
 get_6_7 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), gopurs_runtime.Str("ignoreCase"))
 _ = get_6_7
-return gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Apply(get_6_7, ra_4), gopurs_runtime.Apply(get_6_7, rb_5)).IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_2_4, "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_4, rb_5).IntVal) != (0))).IntVal) != (0))
+return gopurs_runtime.Bool(((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Apply(get_6_7, ra_4), gopurs_runtime.Apply(get_6_7, rb_5)).IntVal) != (0)) && ((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_2_4, "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_4, rb_5).IntVal) != (0)))
 })
 })
 }))
@@ -395,7 +395,7 @@ return gopurs_runtime.Func(func(ra_5 gopurs_runtime.Value) gopurs_runtime.Value 
 return gopurs_runtime.Func(func(rb_6 gopurs_runtime.Value) gopurs_runtime.Value {
 get_7_9 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), gopurs_runtime.Str("global"))
 _ = get_7_9
-return gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Apply(get_7_9, ra_5), gopurs_runtime.Apply(get_7_9, rb_6)).IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_3_6, "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_5, rb_6).IntVal) != (0))).IntVal) != (0))
+return gopurs_runtime.Bool(((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Apply(get_7_9, ra_5), gopurs_runtime.Apply(get_7_9, rb_6)).IntVal) != (0)) && ((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_3_6, "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_5, rb_6).IntVal) != (0)))
 })
 })
 }))
@@ -404,7 +404,7 @@ return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(ra_5 gopurs_run
 return gopurs_runtime.Func(func(rb_6 gopurs_runtime.Value) gopurs_runtime.Value {
 get_7_10 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), gopurs_runtime.Str("dotAll"))
 _ = get_7_10
-return gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Apply(get_7_10, ra_5), gopurs_runtime.Apply(get_7_10, rb_6)).IntVal) != (0)), gopurs_runtime.Bool((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_4_8, "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_5, rb_6).IntVal) != (0))).IntVal) != (0))
+return gopurs_runtime.Bool(((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Eq.Get_eqBoolean(), "eq"), gopurs_runtime.Apply(get_7_10, ra_5), gopurs_runtime.Apply(get_7_10, rb_6)).IntVal) != (0)) && ((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_4_8, "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_5, rb_6).IntVal) != (0)))
 })
 }))
 }()
@@ -538,7 +538,9 @@ var cache_eq__3977211983 gopurs_runtime.Value
 var once_eq__3977211983 sync.Once
 func Get_eq__3977211983() gopurs_runtime.Value {
 	once_eq__3977211983.Do(func() {
-		cache_eq__3977211983 = gopurs_runtime.CoerceToStruct[pkg_Data_Eq.Constructor_Eq[[]string]](Get_eqArray()).V0
+		cache_eq__3977211983 = gopurs_runtime.Func2(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_eq__3977211983(__eta0_0_box, __eta1_1_box)
+})
 	})
 	return cache_eq__3977211983
 }
@@ -570,6 +572,17 @@ func Get_functorArray__361387505() gopurs_runtime.Value {
 		cache_functorArray__361387505 = gopurs_runtime.RecordDict1("map", pkg_Data_Functor.Get_arrayMap())
 	})
 	return cache_functorArray__361387505
+}
+
+var cache_map__2665381605 gopurs_runtime.Value
+var once_map__2665381605 sync.Once
+func Get_map__2665381605() gopurs_runtime.Value {
+	once_map__2665381605.Do(func() {
+		cache_map__2665381605 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_map__2665381605(gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_map__2665381605
 }
 
 var cache_map__2199395572 gopurs_runtime.Value
@@ -609,7 +622,9 @@ var cache_disj__3676519832 gopurs_runtime.Value
 var once_disj__3676519832 sync.Once
 func Get_disj__3676519832() gopurs_runtime.Value {
 	once_disj__3676519832.Do(func() {
-		cache_disj__3676519832 = gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "disj")
+		cache_disj__3676519832 = gopurs_runtime.Func2(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_disj__3676519832(__eta0_0_box, __eta1_1_box)
+})
 	})
 	return cache_disj__3676519832
 }
@@ -629,7 +644,9 @@ var cache_not__3201284355 gopurs_runtime.Value
 var once_not__3201284355 sync.Once
 func Get_not__3201284355() gopurs_runtime.Value {
 	once_not__3201284355.Do(func() {
-		cache_not__3201284355 = gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "not")
+		cache_not__3201284355 = gopurs_runtime.Func(func(__eta0_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_not__3201284355(__eta0_0_box)
+})
 	})
 	return cache_not__3201284355
 }
@@ -649,7 +666,9 @@ var cache_append__493084344 gopurs_runtime.Value
 var once_append__493084344 sync.Once
 func Get_append__493084344() gopurs_runtime.Value {
 	once_append__493084344.Do(func() {
-		cache_append__493084344 = gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append")
+		cache_append__493084344 = gopurs_runtime.Func2(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_append__493084344(__eta0_0_box, __eta1_1_box)
+})
 	})
 	return cache_append__493084344
 }
@@ -669,7 +688,9 @@ var cache_append__2285093048 gopurs_runtime.Value
 var once_append__2285093048 sync.Once
 func Get_append__2285093048() gopurs_runtime.Value {
 	once_append__2285093048.Do(func() {
-		cache_append__2285093048 = gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupArray(), "append")
+		cache_append__2285093048 = gopurs_runtime.Func2(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_append__2285093048(__eta0_0_box, __eta1_1_box)
+})
 	})
 	return cache_append__2285093048
 }
@@ -732,12 +753,26 @@ _ = dict_0
 return dict_0.V0
 }
 
+func Call_eq__3977211983(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+return gopurs_runtime.Apply2(gopurs_runtime.CoerceToStruct[pkg_Data_Eq.Constructor_Eq[[]string]](Get_eqArray()).V0, __eta0_0, __eta1_1)
+}
+
 func Call_const__641934996(a_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var a_0 gopurs_runtime.Value = a_0_loop
 _ = a_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
 return a_0
+}
+
+func Call_map__2665381605(dict_0_loop *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
 }
 
 func Call_map__2199395572(dict_0_loop *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]) gopurs_runtime.Value {
@@ -768,10 +803,24 @@ return x_2
 }), f_1)
 }
 
+func Call_disj__3676519832(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+return gopurs_runtime.Bool(((__eta0_0.IntVal) != (0)) || ((__eta1_1.IntVal) != (0)))
+}
+
 func Call_disj__3472268504(dict_0_loop *pkg_Data_HeytingAlgebra.Constructor_HeytingAlgebra[gopurs_runtime.Value]) gopurs_runtime.Value {
 var dict_0 *pkg_Data_HeytingAlgebra.Constructor_HeytingAlgebra[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V1
+}
+
+func Call_not__3201284355(__eta0_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+return gopurs_runtime.Bool(((__eta0_0.IntVal) != (0)) != (true))
 }
 
 func Call_not__1505204753(dict_0_loop *pkg_Data_HeytingAlgebra.Constructor_HeytingAlgebra[gopurs_runtime.Value]) gopurs_runtime.Value {
@@ -780,10 +829,26 @@ _ = dict_0
 return dict_0.V4
 }
 
+func Call_append__493084344(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+return gopurs_runtime.Str((__eta0_0.StrVal()) + (__eta1_1.StrVal()))
+}
+
 func Call_append__1230318264(dict_0_loop *pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]) gopurs_runtime.Value {
 var dict_0 *pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V0
+}
+
+func Call_append__2285093048(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+return gopurs_runtime.Apply2(pkg_Data_Semigroup.Get_concatArray(), __eta0_0, __eta1_1)
 }
 
 

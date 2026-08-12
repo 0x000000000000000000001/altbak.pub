@@ -134,7 +134,9 @@ var cache_append__493084344 gopurs_runtime.Value
 var once_append__493084344 sync.Once
 func Get_append__493084344() gopurs_runtime.Value {
 	once_append__493084344.Do(func() {
-		cache_append__493084344 = gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append")
+		cache_append__493084344 = gopurs_runtime.Func2(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_append__493084344(__eta0_0_box, __eta1_1_box)
+})
 	})
 	return cache_append__493084344
 }
@@ -154,7 +156,9 @@ var cache_append__2285093048 gopurs_runtime.Value
 var once_append__2285093048 sync.Once
 func Get_append__2285093048() gopurs_runtime.Value {
 	once_append__2285093048.Do(func() {
-		cache_append__2285093048 = gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupArray(), "append")
+		cache_append__2285093048 = gopurs_runtime.Func2(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_append__2285093048(__eta0_0_box, __eta1_1_box)
+})
 	})
 	return cache_append__2285093048
 }
@@ -166,6 +170,17 @@ func Get_semigroupArray__4207347319() gopurs_runtime.Value {
 		cache_semigroupArray__4207347319 = gopurs_runtime.RecordDict1("append", pkg_Data_Semigroup.Get_concatArray())
 	})
 	return cache_semigroupArray__4207347319
+}
+
+var cache_genericShow_prime__3102496331 gopurs_runtime.Value
+var once_genericShow_prime__3102496331 sync.Once
+func Get_genericShow_prime__3102496331() gopurs_runtime.Value {
+	once_genericShow_prime__3102496331.Do(func() {
+		cache_genericShow_prime__3102496331 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_genericShow_prime__3102496331(gopurs_runtime.CoerceToStruct[Constructor_GenericShow[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_genericShow_prime__3102496331
 }
 
 var cache_genericShow_prime__2423230701 gopurs_runtime.Value
@@ -183,7 +198,9 @@ var cache_genericShow_prime__1538939821 gopurs_runtime.Value
 var once_genericShow_prime__1538939821 sync.Once
 func Get_genericShow_prime__1538939821() gopurs_runtime.Value {
 	once_genericShow_prime__1538939821.Do(func() {
-		cache_genericShow_prime__1538939821 = gopurs_runtime.RecordGet(Get_genericShowNoConstructors(), "genericShow'")
+		cache_genericShow_prime__1538939821 = gopurs_runtime.Func(func(a_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str(Call_genericShow_prime__1538939821(a_0_box))
+})
 	})
 	return cache_genericShow_prime__1538939821
 }
@@ -293,7 +310,7 @@ _ = dictGenericShowArgs1_1
 return gopurs_runtime.RecordDict1("genericShowArgs", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 					arr := func() []string {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(Get_append__2285093048(), func() gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(Call_append__2285093048(func() gopurs_runtime.Value {
 					arr := func() []string {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShowArgs_0, "genericShowArgs"), (*pkg_Data_Generic_Rep.Constructor_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0).UnsafePtr)
 					unboxed := make([]string, len(arr))
@@ -345,9 +362,9 @@ goto end_branch_2
 }
 }
 {
-__t2 = gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("("), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_intercalate(), gopurs_runtime.Str(" "), func() gopurs_runtime.Value {
+__t2 = Call_append__493084344(gopurs_runtime.Str("("), gopurs_runtime.Str(Call_append__493084344(gopurs_runtime.Str(gopurs_runtime.Apply2(Get_intercalate(), gopurs_runtime.Str(" "), func() gopurs_runtime.Value {
 					arr := func() []string {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(Get_append__2285093048(), func() gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(Call_append__2285093048(func() gopurs_runtime.Value {
 					arr := []string{ctor_3_0}
 					boxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { boxed[i] = gopurs_runtime.Str(v) }
@@ -430,8 +447,30 @@ _ = dict_0
 return dict_0.V0
 }
 
+func Call_append__493084344(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+return gopurs_runtime.Str((__eta0_0.StrVal()) + (__eta1_1.StrVal()))
+}
+
 func Call_append__1230318264(dict_0_loop *pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]) gopurs_runtime.Value {
 var dict_0 *pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_append__2285093048(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+return gopurs_runtime.Apply2(pkg_Data_Semigroup.Get_concatArray(), __eta0_0, __eta1_1)
+}
+
+func Call_genericShow_prime__3102496331(dict_0_loop *Constructor_GenericShow[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *Constructor_GenericShow[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V0
 }
@@ -440,6 +479,12 @@ func Call_genericShow_prime__2423230701(dict_0_loop *Constructor_GenericShow[gop
 var dict_0 *Constructor_GenericShow[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V0
+}
+
+func Call_genericShow_prime__1538939821(a_0_loop gopurs_runtime.Value) string {
+var a_0 gopurs_runtime.Value = a_0_loop
+_ = a_0
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_genericShowNoConstructors(), "genericShow'"), a_0).StrVal()
 }
 
 func Call_genericShowArgs__157062380(dict_0_loop *Constructor_GenericShowArgs[gopurs_runtime.Value]) gopurs_runtime.Value {

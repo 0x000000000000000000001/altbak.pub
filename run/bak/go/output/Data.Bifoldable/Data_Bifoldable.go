@@ -690,7 +690,9 @@ var cache_unwrap__2928868755 gopurs_runtime.Value
 var once_unwrap__2928868755 sync.Once
 func Get_unwrap__2928868755() gopurs_runtime.Value {
 	once_unwrap__2928868755.Do(func() {
-		cache_unwrap__2928868755 = pkg_Unsafe_Coerce.Get_unsafeCoerce()
+		cache_unwrap__2928868755 = gopurs_runtime.Func(func(__eta0_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_unwrap__2928868755(__eta0_0_box)
+})
 	})
 	return cache_unwrap__2928868755
 }
@@ -1355,6 +1357,12 @@ func Call_unwrap__3267718003(_dollar__unused_0_loop *pkg_Data_Newtype.Constructo
 var _dollar__unused_0 *pkg_Data_Newtype.Constructor_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_0_loop
 _ = _dollar__unused_0
 return pkg_Unsafe_Coerce.Get_unsafeCoerce()
+}
+
+func Call_unwrap__2928868755(__eta0_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+return __eta0_0
 }
 
 func Call_append__1230318264(dict_0_loop *pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]) gopurs_runtime.Value {

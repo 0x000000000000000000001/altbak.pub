@@ -117,7 +117,7 @@ var once_showSeconds sync.Once
 func Get_showSeconds() gopurs_runtime.Value {
 	once_showSeconds.Do(func() {
 		cache_showSeconds = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("(Seconds "), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_show__3380206610(), gopurs_runtime.Float(v_0.FloatVal())).StrVal()), gopurs_runtime.Str(")")).StrVal())).StrVal())
+return gopurs_runtime.Str(Call_append__493084344(gopurs_runtime.Str("(Seconds "), gopurs_runtime.Str(Call_append__493084344(gopurs_runtime.Str(Call_show__3380206610(gopurs_runtime.Float(v_0.FloatVal())).StrVal()), gopurs_runtime.Str(")")).StrVal())).StrVal())
 }))
 	})
 	return cache_showSeconds
@@ -128,7 +128,7 @@ var once_showMinutes sync.Once
 func Get_showMinutes() gopurs_runtime.Value {
 	once_showMinutes.Do(func() {
 		cache_showMinutes = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("(Minutes "), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_show__3380206610(), gopurs_runtime.Float(v_0.FloatVal())).StrVal()), gopurs_runtime.Str(")")).StrVal())).StrVal())
+return gopurs_runtime.Str(Call_append__493084344(gopurs_runtime.Str("(Minutes "), gopurs_runtime.Str(Call_append__493084344(gopurs_runtime.Str(Call_show__3380206610(gopurs_runtime.Float(v_0.FloatVal())).StrVal()), gopurs_runtime.Str(")")).StrVal())).StrVal())
 }))
 	})
 	return cache_showMinutes
@@ -139,7 +139,7 @@ var once_showMilliseconds sync.Once
 func Get_showMilliseconds() gopurs_runtime.Value {
 	once_showMilliseconds.Do(func() {
 		cache_showMilliseconds = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("(Milliseconds "), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_show__3380206610(), gopurs_runtime.Float(v_0.FloatVal())).StrVal()), gopurs_runtime.Str(")")).StrVal())).StrVal())
+return gopurs_runtime.Str(Call_append__493084344(gopurs_runtime.Str("(Milliseconds "), gopurs_runtime.Str(Call_append__493084344(gopurs_runtime.Str(Call_show__3380206610(gopurs_runtime.Float(v_0.FloatVal())).StrVal()), gopurs_runtime.Str(")")).StrVal())).StrVal())
 }))
 	})
 	return cache_showMilliseconds
@@ -150,7 +150,7 @@ var once_showHours sync.Once
 func Get_showHours() gopurs_runtime.Value {
 	once_showHours.Do(func() {
 		cache_showHours = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("(Hours "), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_show__3380206610(), gopurs_runtime.Float(v_0.FloatVal())).StrVal()), gopurs_runtime.Str(")")).StrVal())).StrVal())
+return gopurs_runtime.Str(Call_append__493084344(gopurs_runtime.Str("(Hours "), gopurs_runtime.Str(Call_append__493084344(gopurs_runtime.Str(Call_show__3380206610(gopurs_runtime.Float(v_0.FloatVal())).StrVal()), gopurs_runtime.Str(")")).StrVal())).StrVal())
 }))
 	})
 	return cache_showHours
@@ -161,7 +161,7 @@ var once_showDays sync.Once
 func Get_showDays() gopurs_runtime.Value {
 	once_showDays.Do(func() {
 		cache_showDays = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str("(Days "), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_append__493084344(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_show__3380206610(), gopurs_runtime.Float(v_0.FloatVal())).StrVal()), gopurs_runtime.Str(")")).StrVal())).StrVal())
+return gopurs_runtime.Str(Call_append__493084344(gopurs_runtime.Str("(Days "), gopurs_runtime.Str(Call_append__493084344(gopurs_runtime.Str(Call_show__3380206610(gopurs_runtime.Float(v_0.FloatVal())).StrVal()), gopurs_runtime.Str(")")).StrVal())).StrVal())
 }))
 	})
 	return cache_showDays
@@ -173,7 +173,7 @@ func Get_semigroupSeconds() gopurs_runtime.Value {
 	once_semigroupSeconds.Do(func() {
 		cache_semigroupSeconds = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(gopurs_runtime.Apply2(Get_add__137136408(), gopurs_runtime.Float(v_0.FloatVal()), gopurs_runtime.Float(v1_1.FloatVal())).FloatVal())
+return gopurs_runtime.Float(Call_add__137136408(gopurs_runtime.Float(v_0.FloatVal()), gopurs_runtime.Float(v1_1.FloatVal())).FloatVal())
 })
 }))
 	})
@@ -186,7 +186,7 @@ func Get_semigroupMinutes() gopurs_runtime.Value {
 	once_semigroupMinutes.Do(func() {
 		cache_semigroupMinutes = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(gopurs_runtime.Apply2(Get_add__137136408(), gopurs_runtime.Float(v_0.FloatVal()), gopurs_runtime.Float(v1_1.FloatVal())).FloatVal())
+return gopurs_runtime.Float(Call_add__137136408(gopurs_runtime.Float(v_0.FloatVal()), gopurs_runtime.Float(v1_1.FloatVal())).FloatVal())
 })
 }))
 	})
@@ -199,7 +199,7 @@ func Get_semigroupMilliseconds() gopurs_runtime.Value {
 	once_semigroupMilliseconds.Do(func() {
 		cache_semigroupMilliseconds = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(gopurs_runtime.Apply2(Get_add__137136408(), gopurs_runtime.Float(v_0.FloatVal()), gopurs_runtime.Float(v1_1.FloatVal())).FloatVal())
+return gopurs_runtime.Float(Call_add__137136408(gopurs_runtime.Float(v_0.FloatVal()), gopurs_runtime.Float(v1_1.FloatVal())).FloatVal())
 })
 }))
 	})
@@ -212,7 +212,7 @@ func Get_semigroupHours() gopurs_runtime.Value {
 	once_semigroupHours.Do(func() {
 		cache_semigroupHours = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(gopurs_runtime.Apply2(Get_add__137136408(), gopurs_runtime.Float(v_0.FloatVal()), gopurs_runtime.Float(v1_1.FloatVal())).FloatVal())
+return gopurs_runtime.Float(Call_add__137136408(gopurs_runtime.Float(v_0.FloatVal()), gopurs_runtime.Float(v1_1.FloatVal())).FloatVal())
 })
 }))
 	})
@@ -225,7 +225,7 @@ func Get_semigroupDays() gopurs_runtime.Value {
 	once_semigroupDays.Do(func() {
 		cache_semigroupDays = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(gopurs_runtime.Apply2(Get_add__137136408(), gopurs_runtime.Float(v_0.FloatVal()), gopurs_runtime.Float(v1_1.FloatVal())).FloatVal())
+return gopurs_runtime.Float(Call_add__137136408(gopurs_runtime.Float(v_0.FloatVal()), gopurs_runtime.Float(v1_1.FloatVal())).FloatVal())
 })
 }))
 	})
@@ -459,9 +459,9 @@ var once_durationSeconds sync.Once
 func Get_durationSeconds() gopurs_runtime.Value {
 	once_durationSeconds.Do(func() {
 		cache_durationSeconds = gopurs_runtime.RecordDict2("fromDuration", "toDuration", gopurs_runtime.Apply(Call_over__1710753389(Get_Seconds()), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(gopurs_runtime.Apply2(Get_mul__137136408(), gopurs_runtime.Float(v_0.FloatVal()), gopurs_runtime.Float(1000.0)).FloatVal())
+return gopurs_runtime.Float(Call_mul__137136408(gopurs_runtime.Float(v_0.FloatVal()), gopurs_runtime.Float(1000.0)).FloatVal())
 })), gopurs_runtime.Apply(Call_over__1710753389(Get_Milliseconds()), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(gopurs_runtime.Apply2(Get_div__1002719800(), gopurs_runtime.Float(v_0.FloatVal()), gopurs_runtime.Float(1000.0)).FloatVal())
+return gopurs_runtime.Float(Call_div__1002719800(gopurs_runtime.Float(v_0.FloatVal()), gopurs_runtime.Float(1000.0)).FloatVal())
 })))
 	})
 	return cache_durationSeconds
@@ -472,9 +472,9 @@ var once_durationMinutes sync.Once
 func Get_durationMinutes() gopurs_runtime.Value {
 	once_durationMinutes.Do(func() {
 		cache_durationMinutes = gopurs_runtime.RecordDict2("fromDuration", "toDuration", gopurs_runtime.Apply(Call_over__1710753389(Get_Minutes()), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(gopurs_runtime.Apply2(Get_mul__137136408(), gopurs_runtime.Float(v_0.FloatVal()), gopurs_runtime.Float(60000.0)).FloatVal())
+return gopurs_runtime.Float(Call_mul__137136408(gopurs_runtime.Float(v_0.FloatVal()), gopurs_runtime.Float(60000.0)).FloatVal())
 })), gopurs_runtime.Apply(Call_over__1710753389(Get_Milliseconds()), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(gopurs_runtime.Apply2(Get_div__1002719800(), gopurs_runtime.Float(v_0.FloatVal()), gopurs_runtime.Float(60000.0)).FloatVal())
+return gopurs_runtime.Float(Call_div__1002719800(gopurs_runtime.Float(v_0.FloatVal()), gopurs_runtime.Float(60000.0)).FloatVal())
 })))
 	})
 	return cache_durationMinutes
@@ -494,9 +494,9 @@ var once_durationHours sync.Once
 func Get_durationHours() gopurs_runtime.Value {
 	once_durationHours.Do(func() {
 		cache_durationHours = gopurs_runtime.RecordDict2("fromDuration", "toDuration", gopurs_runtime.Apply(Call_over__1710753389(Get_Hours()), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(gopurs_runtime.Apply2(Get_mul__137136408(), gopurs_runtime.Float(v_0.FloatVal()), gopurs_runtime.Float(3600000.0)).FloatVal())
+return gopurs_runtime.Float(Call_mul__137136408(gopurs_runtime.Float(v_0.FloatVal()), gopurs_runtime.Float(3600000.0)).FloatVal())
 })), gopurs_runtime.Apply(Call_over__1710753389(Get_Milliseconds()), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(gopurs_runtime.Apply2(Get_div__1002719800(), gopurs_runtime.Float(v_0.FloatVal()), gopurs_runtime.Float(3600000.0)).FloatVal())
+return gopurs_runtime.Float(Call_div__1002719800(gopurs_runtime.Float(v_0.FloatVal()), gopurs_runtime.Float(3600000.0)).FloatVal())
 })))
 	})
 	return cache_durationHours
@@ -507,9 +507,9 @@ var once_durationDays sync.Once
 func Get_durationDays() gopurs_runtime.Value {
 	once_durationDays.Do(func() {
 		cache_durationDays = gopurs_runtime.RecordDict2("fromDuration", "toDuration", gopurs_runtime.Apply(Call_over__1710753389(Get_Days()), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(gopurs_runtime.Apply2(Get_mul__137136408(), gopurs_runtime.Float(v_0.FloatVal()), gopurs_runtime.Float(86400000.0)).FloatVal())
+return gopurs_runtime.Float(Call_mul__137136408(gopurs_runtime.Float(v_0.FloatVal()), gopurs_runtime.Float(86400000.0)).FloatVal())
 })), gopurs_runtime.Apply(Call_over__1710753389(Get_Milliseconds()), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(gopurs_runtime.Apply2(Get_div__1002719800(), gopurs_runtime.Float(v_0.FloatVal()), gopurs_runtime.Float(86400000.0)).FloatVal())
+return gopurs_runtime.Float(Call_div__1002719800(gopurs_runtime.Float(v_0.FloatVal()), gopurs_runtime.Float(86400000.0)).FloatVal())
 })))
 	})
 	return cache_durationDays
@@ -556,7 +556,9 @@ var cache_div__1002719800 gopurs_runtime.Value
 var once_div__1002719800 sync.Once
 func Get_div__1002719800() gopurs_runtime.Value {
 	once_div__1002719800.Do(func() {
-		cache_div__1002719800 = gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingNumber(), "div")
+		cache_div__1002719800 = gopurs_runtime.Func2(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_div__1002719800(__eta0_0_box, __eta1_1_box)
+})
 	})
 	return cache_div__1002719800
 }
@@ -609,7 +611,9 @@ var cache_append__493084344 gopurs_runtime.Value
 var once_append__493084344 sync.Once
 func Get_append__493084344() gopurs_runtime.Value {
 	once_append__493084344.Do(func() {
-		cache_append__493084344 = gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append")
+		cache_append__493084344 = gopurs_runtime.Func2(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_append__493084344(__eta0_0_box, __eta1_1_box)
+})
 	})
 	return cache_append__493084344
 }
@@ -629,7 +633,9 @@ var cache_add__137136408 gopurs_runtime.Value
 var once_add__137136408 sync.Once
 func Get_add__137136408() gopurs_runtime.Value {
 	once_add__137136408.Do(func() {
-		cache_add__137136408 = pkg_Data_Semiring.Get_numAdd()
+		cache_add__137136408 = gopurs_runtime.Func2(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_add__137136408(__eta0_0_box, __eta1_1_box)
+})
 	})
 	return cache_add__137136408
 }
@@ -649,7 +655,9 @@ var cache_mul__137136408 gopurs_runtime.Value
 var once_mul__137136408 sync.Once
 func Get_mul__137136408() gopurs_runtime.Value {
 	once_mul__137136408.Do(func() {
-		cache_mul__137136408 = pkg_Data_Semiring.Get_numMul()
+		cache_mul__137136408 = gopurs_runtime.Func2(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mul__137136408(__eta0_0_box, __eta1_1_box)
+})
 	})
 	return cache_mul__137136408
 }
@@ -669,7 +677,9 @@ var cache_show__3380206610 gopurs_runtime.Value
 var once_show__3380206610 sync.Once
 func Get_show__3380206610() gopurs_runtime.Value {
 	once_show__3380206610.Do(func() {
-		cache_show__3380206610 = gopurs_runtime.RecordGet(pkg_Data_Show.Get_showNumber(), "show")
+		cache_show__3380206610 = gopurs_runtime.Func(func(__eta0_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_show__3380206610(__eta0_0_box)
+})
 	})
 	return cache_show__3380206610
 }
@@ -776,6 +786,14 @@ _ = dict_0
 return dict_0.V0
 }
 
+func Call_div__1002719800(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+return gopurs_runtime.Float((__eta0_0.FloatVal()) / (__eta1_1.FloatVal()))
+}
+
 func Call_div__2579358968(dict_0_loop *pkg_Data_EuclideanRing.Constructor_EuclideanRing[gopurs_runtime.Value]) gopurs_runtime.Value {
 var dict_0 *pkg_Data_EuclideanRing.Constructor_EuclideanRing[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
@@ -804,10 +822,26 @@ _ = v_2
 return pkg_Unsafe_Coerce.Get_unsafeCoerce()
 }
 
+func Call_append__493084344(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+return gopurs_runtime.Str((__eta0_0.StrVal()) + (__eta1_1.StrVal()))
+}
+
 func Call_append__1230318264(dict_0_loop *pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]) gopurs_runtime.Value {
 var dict_0 *pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V0
+}
+
+func Call_add__137136408(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+return gopurs_runtime.Float((__eta0_0.FloatVal()) + (__eta1_1.FloatVal()))
 }
 
 func Call_add__1614463960(dict_0_loop *pkg_Data_Semiring.Constructor_Semiring[gopurs_runtime.Value]) gopurs_runtime.Value {
@@ -816,10 +850,24 @@ _ = dict_0
 return dict_0.V0
 }
 
+func Call_mul__137136408(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+return gopurs_runtime.Float((__eta0_0.FloatVal()) * (__eta1_1.FloatVal()))
+}
+
 func Call_mul__1614463960(dict_0_loop *pkg_Data_Semiring.Constructor_Semiring[gopurs_runtime.Value]) gopurs_runtime.Value {
 var dict_0 *pkg_Data_Semiring.Constructor_Semiring[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V1
+}
+
+func Call_show__3380206610(__eta0_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+return gopurs_runtime.Str(gopurs_runtime.Apply(pkg_Data_Show.Get_showNumberImpl(), __eta0_0).StrVal())
 }
 
 func Call_show__2742601362(dict_0_loop *pkg_Data_Show.Constructor_Show[gopurs_runtime.Value]) gopurs_runtime.Value {

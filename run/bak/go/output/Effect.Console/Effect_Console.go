@@ -92,7 +92,9 @@ var cache_pure__1641029622 gopurs_runtime.Value
 var once_pure__1641029622 sync.Once
 func Get_pure__1641029622() gopurs_runtime.Value {
 	once_pure__1641029622.Do(func() {
-		cache_pure__1641029622 = gopurs_runtime.RecordGet(pkg_Effect.Get_applicativeEffect(), "pure")
+		cache_pure__1641029622 = gopurs_runtime.Func(func(__eta0_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_pure__1641029622(__eta0_0_box)
+})
 	})
 	return cache_pure__1641029622
 }
@@ -112,7 +114,9 @@ var cache_bind__1598467489 gopurs_runtime.Value
 var once_bind__1598467489 sync.Once
 func Get_bind__1598467489() gopurs_runtime.Value {
 	once_bind__1598467489.Do(func() {
-		cache_bind__1598467489 = gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind")
+		cache_bind__1598467489 = gopurs_runtime.Func2(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_bind__1598467489(__eta0_0_box, __eta1_1_box)
+})
 	})
 	return cache_bind__1598467489
 }
@@ -121,7 +125,9 @@ var cache_discard__1979268384 gopurs_runtime.Value
 var once_discard__1979268384 sync.Once
 func Get_discard__1979268384() gopurs_runtime.Value {
 	once_discard__1979268384.Do(func() {
-		cache_discard__1979268384 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Control_Bind.Get_discardUnit(), "discard"), gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value]](pkg_Effect.Get_bindEffect()))})
+		cache_discard__1979268384 = gopurs_runtime.Func2(func(__eta0_0_box gopurs_runtime.Value, __eta1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_discard__1979268384(__eta0_0_box, __eta1_1_box)
+})
 	})
 	return cache_discard__1979268384
 }
@@ -283,10 +289,38 @@ _ = dict_0
 return dict_0.V1
 }
 
+func Call_pure__1641029622(__eta0_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+return __eta0_0
+})
+}
+
 func Call_bind__2601835655(dict_0_loop *pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value]) gopurs_runtime.Value {
 var dict_0 *pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V1
+}
+
+func Call_bind__1598467489(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_2_0 := gopurs_runtime.Apply(__eta0_0, gopurs_runtime.Value{})
+_ = __local_var_2_0
+return gopurs_runtime.Apply(gopurs_runtime.Apply(__eta1_1, __local_var_2_0), gopurs_runtime.Value{})
+})
+}
+
+func Call_discard__1979268384(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
+_ = __eta1_1
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Effect.Get_bindEffect(), "bind"), __eta0_0, __eta1_1)
 }
 
 func Call_discard__317162198(dict_0_loop *pkg_Control_Bind.Constructor_Discard[gopurs_runtime.Value]) gopurs_runtime.Value {

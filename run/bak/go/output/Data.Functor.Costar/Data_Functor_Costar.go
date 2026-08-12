@@ -442,6 +442,17 @@ return Call_map__2418274292(gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Const
 	return cache_map__2418274292
 }
 
+var cache_dimap__650672149 gopurs_runtime.Value
+var once_dimap__650672149 sync.Once
+func Get_dimap__650672149() gopurs_runtime.Value {
+	once_dimap__650672149.Do(func() {
+		cache_dimap__650672149 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_dimap__650672149(gopurs_runtime.CoerceToStruct[pkg_Data_Profunctor.Constructor_Profunctor[gopurs_runtime.Value]](dict_0_box))
+})
+	})
+	return cache_dimap__650672149
+}
+
 var cache_dimap__1466332548 gopurs_runtime.Value
 var once_dimap__1466332548 sync.Once
 func Get_dimap__1466332548() gopurs_runtime.Value {
@@ -752,6 +763,12 @@ return dict_0.V0
 
 func Call_map__2418274292(dict_0_loop *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]) gopurs_runtime.Value {
 var dict_0 *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value] = dict_0_loop
+_ = dict_0
+return dict_0.V0
+}
+
+func Call_dimap__650672149(dict_0_loop *pkg_Data_Profunctor.Constructor_Profunctor[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dict_0 *pkg_Data_Profunctor.Constructor_Profunctor[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V0
 }
