@@ -4,7 +4,6 @@ import (
 	pkg_Bench "gopurs/output/Bench"
 	pkg_Data_Eq "gopurs/output/Data.Eq"
 	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
-	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Data_Show "gopurs/output/Data.Show"
 	pkg_Effect "gopurs/output/Effect"
 	pkg_Effect_Console "gopurs/output/Effect.Console"
@@ -168,7 +167,54 @@ return gopurs_runtime.Int(__t1.IntVal)
 }()
 })
 })
-return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showInt(), "show"), gopurs_runtime.Apply2(go__go_1_0_10, gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(Call_sieve(gopurs_runtime.CoerceToStruct[Constructor_Cons[int64]](gopurs_runtime.Apply2(Get_go__range(), gopurs_runtime.Int(2), dummy_0))))}, gopurs_runtime.Int(0))))
+var go__go_2_2_11 gopurs_runtime.Value
+go__go_2_2_11 = gopurs_runtime.Func(func(curr_3_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(acc_4_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+var curr_3_loop gopurs_runtime.Value = curr_3_loop_val
+var acc_4_loop *Constructor_Cons[int64] = gopurs_runtime.CoerceToStruct[Constructor_Cons[int64]](acc_4_loop_val)
+go__go_2_2_11:
+for {
+if false { continue go__go_2_2_11 }
+var curr_3 gopurs_runtime.Value = curr_3_loop
+_ = curr_3
+var acc_4 *Constructor_Cons[int64] = acc_4_loop
+_ = acc_4
+var __t3 gopurs_runtime.Value
+{
+var __t4 gopurs_runtime.Value
+{
+if (curr_3.IntVal) < (2) {
+__t4 = gopurs_runtime.Bool(true)
+goto end_branch_4
+} else {
+
+}
+}
+{
+__t4 = gopurs_runtime.Bool(false)
+}
+end_branch_4:
+if (__t4.IntVal) != (0) {
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(acc_4)}
+goto end_branch_3
+} else {
+
+}
+}
+{
+curr_3_loop = gopurs_runtime.Int((curr_3.IntVal) - (1))
+acc_4_loop = gopurs_runtime.CoerceToStruct[Constructor_Cons[int64]](gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(&Constructor_Cons[gopurs_runtime.Value]{1, curr_3, gopurs_runtime.CoerceToStruct[Constructor_Cons[gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(acc_4)})})})
+continue go__go_2_2_11
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Cons[int64]](gopurs_runtime.Value{}))}
+}
+end_branch_3:
+return gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Cons[int64]](__t3))}
+}
+}()
+})
+})
+return gopurs_runtime.Apply(pkg_Effect_Console.Get_log(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Show.Get_showInt(), "show"), gopurs_runtime.Apply2(go__go_1_0_10, gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(Call_sieve(gopurs_runtime.CoerceToStruct[Constructor_Cons[int64]](gopurs_runtime.Apply2(go__go_2_2_11, dummy_0, gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: nil}))))}, gopurs_runtime.Int(0))))
 }))
 	})
 	return cache_act
@@ -352,8 +398,7 @@ var __t1 gopurs_runtime.Value
 {
 var __t2 gopurs_runtime.Value
 {
-var __t_tag_3 gopurs_runtime.Value = gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, curr_3, gopurs_runtime.Int(start_0))
-if (__t_tag_3.Type == 9 && __t_tag_3.IntVal == 1527465420) {
+if (curr_3.IntVal) < (start_0) {
 __t2 = gopurs_runtime.Bool(true)
 goto end_branch_2
 } else {

@@ -2,7 +2,6 @@ package Test_RBTree
 
 import (
 	pkg_Bench "gopurs/output/Bench"
-	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Data_Show "gopurs/output/Data.Show"
 	pkg_Effect "gopurs/output/Effect"
 	pkg_Effect_Console "gopurs/output/Effect.Console"
@@ -185,8 +184,7 @@ var __t0 gopurs_runtime.Value
 {
 var __t1 gopurs_runtime.Value
 {
-var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Int(x_0), gopurs_runtime.Int(y_1))
-if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 380165415) {
+if (x_0) > (y_1) {
 __t1 = gopurs_runtime.Bool(true)
 goto end_branch_1
 } else {
@@ -263,8 +261,7 @@ var __t3 gopurs_runtime.Value
 {
 var __t4 gopurs_runtime.Value
 {
-var __t_tag_5 gopurs_runtime.Value = gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, __local_var_1_1, __local_var_2_2)
-if (__t_tag_5.Type == 9 && __t_tag_5.IntVal == 380165415) {
+if (__local_var_1_1.IntVal) > (__local_var_2_2.IntVal) {
 __t4 = gopurs_runtime.Bool(true)
 goto end_branch_4
 } else {
@@ -877,25 +874,24 @@ goto end_branch_0
 }
 {
 if (gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.Type == 9 && gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.IntVal == 3983586014 && gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr != nil) {
+var __t3 gopurs_runtime.Value
+{
 var __t4 gopurs_runtime.Value
 {
-var __t5 gopurs_runtime.Value
-{
-var __t_tag_6 gopurs_runtime.Value = gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Int(v_0), gopurs_runtime.Int((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V2))
-if (__t_tag_6.Type == 9 && __t_tag_6.IntVal == 1527465420) {
-__t5 = gopurs_runtime.Bool(true)
-goto end_branch_5
+if (v_0) < (gopurs_runtime.Int((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V2).IntVal) {
+__t4 = gopurs_runtime.Bool(true)
+goto end_branch_4
 } else {
 
 }
 }
 {
-__t5 = gopurs_runtime.Bool(false)
+__t4 = gopurs_runtime.Bool(false)
 }
-end_branch_5:
-if (__t5.IntVal) != (0) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(Call_balance((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V0, gopurs_runtime.CoerceToStruct[Constructor_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(Call_ins(v_0, gopurs_runtime.CoerceToStruct[Constructor_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V1)})))}), gopurs_runtime.Int((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V2).IntVal, gopurs_runtime.CoerceToStruct[Constructor_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V3)})))}))}
-goto end_branch_4
+end_branch_4:
+if (__t4.IntVal) != (0) {
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(Call_balance((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V0, gopurs_runtime.CoerceToStruct[Constructor_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(Call_ins(v_0, gopurs_runtime.CoerceToStruct[Constructor_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V1)})))}), gopurs_runtime.Int((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V2).IntVal, gopurs_runtime.CoerceToStruct[Constructor_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V3)})))}))}
+goto end_branch_3
 } else {
 
 }
@@ -905,8 +901,7 @@ var __t1 gopurs_runtime.Value
 {
 var __t2 gopurs_runtime.Value
 {
-var __t_tag_3 gopurs_runtime.Value = gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Int(v_0), gopurs_runtime.Int((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V2))
-if (__t_tag_3.Type == 9 && __t_tag_3.IntVal == 380165415) {
+if (v_0) > (gopurs_runtime.Int((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V2).IntVal) {
 __t2 = gopurs_runtime.Bool(true)
 goto end_branch_2
 } else {
@@ -928,10 +923,10 @@ goto end_branch_1
 __t1 = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_T{1, (*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V0, gopurs_runtime.CoerceToStruct[Constructor_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V1)}), gopurs_runtime.Int((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V2).IntVal, gopurs_runtime.CoerceToStruct[Constructor_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer((*Constructor_T)(gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(v1_1)}.UnsafePtr).V3)})})}))}
 }
 end_branch_1:
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_T](__t1))}
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_T](__t1))}
 }
-end_branch_4:
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_T](__t4))}
+end_branch_3:
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_T](__t3))}
 goto end_branch_0
 } else {
 

@@ -2,7 +2,6 @@ package Data_Monoid
 
 import (
 	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
-	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Data_Ordering "gopurs/output/Data.Ordering"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Unit "gopurs/output/Data.Unit"
@@ -283,11 +282,11 @@ _ = __local_var_6_3
 semigroupRecordCons1_6_2 := gopurs_runtime.RecordDict1("appendRecord", gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(ra_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(rb_9 gopurs_runtime.Value) gopurs_runtime.Value {
-key_10_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(nil)}).StrVal()
+key_10_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(nil)})
 _ = key_10_4
-get_11_5 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), gopurs_runtime.Str(key_10_4))
+get_11_5 := gopurs_runtime.Apply(pkg_Record_Unsafe.Get_unsafeGet(), key_10_4)
 _ = get_11_5
-return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), gopurs_runtime.Str(key_10_4), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Semigroup0_3_1, "append"), gopurs_runtime.Apply(get_11_5, ra_8), gopurs_runtime.Apply(get_11_5, rb_9)), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_6_3, "appendRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(nil)}, ra_8, rb_9))
+return gopurs_runtime.Apply3(pkg_Record_Unsafe.Get_unsafeSet(), key_10_4, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Semigroup0_3_1, "append"), gopurs_runtime.Apply(get_11_5, ra_8), gopurs_runtime.Apply(get_11_5, rb_9)), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_6_3, "appendRecord"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(nil)}, ra_8, rb_9))
 })
 })
 }))
@@ -316,8 +315,7 @@ var __t4 gopurs_runtime.Value
 {
 var __t5 gopurs_runtime.Value
 {
-var __t_tag_6 gopurs_runtime.Value = gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, p_5, gopurs_runtime.Int(0))
-if (__t_tag_6.Type == 9 && __t_tag_6.IntVal == 380165415) {
+if (p_5.IntVal) > (0) {
 __t5 = gopurs_runtime.Bool(false)
 goto end_branch_5
 } else {
@@ -345,9 +343,9 @@ goto end_branch_4
 }
 {
 if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingInt(), "mod"), p_5, gopurs_runtime.Int(2)).IntVal) == (0) {
-x_prime_6_7 := gopurs_runtime.Apply(go__go_4_2_0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingInt(), "div"), p_5, gopurs_runtime.Int(2)))
-_ = x_prime_6_7
-__t4 = gopurs_runtime.Apply2(Semigroup0_2_1.V0, x_prime_6_7, x_prime_6_7)
+x_prime_6_6 := gopurs_runtime.Apply(go__go_4_2_0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingInt(), "div"), p_5, gopurs_runtime.Int(2)))
+_ = x_prime_6_6
+__t4 = gopurs_runtime.Apply2(Semigroup0_2_1.V0, x_prime_6_6, x_prime_6_6)
 goto end_branch_4
 } else {
 

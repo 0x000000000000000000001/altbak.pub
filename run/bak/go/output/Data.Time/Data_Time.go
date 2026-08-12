@@ -6,7 +6,6 @@ import (
 	pkg_Data_Int "gopurs/output/Data.Int"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	pkg_Data_Number "gopurs/output/Data.Number"
-	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Time_Component "gopurs/output/Data.Time.Component"
 	pkg_Data_Time_Duration "gopurs/output/Data.Time.Duration"
@@ -417,31 +416,30 @@ var d_1 gopurs_runtime.Value = d_1_loop
 _ = d_1
 var t_2 *Constructor_Time = t_2_loop
 _ = t_2
-d_prime_3_0 := gopurs_runtime.Apply(dictDuration_0.V0, d_1).FloatVal()
+d_prime_3_0 := gopurs_runtime.Apply(dictDuration_0.V0, d_1)
 _ = d_prime_3_0
-wholeDays_4_1 := gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingNumber(), "div"), gopurs_runtime.Float(d_prime_3_0), gopurs_runtime.Float(86400000.0))).FloatVal()
+wholeDays_4_1 := gopurs_runtime.Apply(pkg_Data_Number.Get_floor(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingNumber(), "div"), d_prime_3_0, gopurs_runtime.Float(86400000.0))).FloatVal()
 _ = wholeDays_4_1
-msAdjusted_5_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupMilliseconds(), "append"), gopurs_runtime.Float(Call_timeToMillis(t_2)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupMilliseconds(), "append"), gopurs_runtime.Float(d_prime_3_0), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationMilliseconds(), "toDuration"), gopurs_runtime.Float(-(gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationMilliseconds(), "fromDuration"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationDays(), "fromDuration"), gopurs_runtime.Float(wholeDays_4_1))).FloatVal()))))).FloatVal()
+msAdjusted_5_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupMilliseconds(), "append"), gopurs_runtime.Float(Call_timeToMillis(t_2)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupMilliseconds(), "append"), d_prime_3_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationMilliseconds(), "toDuration"), gopurs_runtime.Float(-(gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationMilliseconds(), "fromDuration"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_durationDays(), "fromDuration"), gopurs_runtime.Float(wholeDays_4_1))).FloatVal())))))
 _ = msAdjusted_5_2
+var __t6 gopurs_runtime.Value
+{
 var __t7 gopurs_runtime.Value
 {
-var __t8 gopurs_runtime.Value
-{
-var __t_tag_9 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordNumber(), "compare"), gopurs_runtime.Float(msAdjusted_5_2), gopurs_runtime.Float(Get_maxTime().FloatVal()))
-if (__t_tag_9.Type == 9 && __t_tag_9.IntVal == 380165415) {
-__t8 = gopurs_runtime.Bool(true)
-goto end_branch_8
+if (msAdjusted_5_2.FloatVal()) > (Get_maxTime().FloatVal()) {
+__t7 = gopurs_runtime.Bool(true)
+goto end_branch_7
 } else {
 
 }
 }
 {
-__t8 = gopurs_runtime.Bool(false)
+__t7 = gopurs_runtime.Bool(false)
 }
-end_branch_8:
-if (__t8.IntVal) != (0) {
-__t7 = gopurs_runtime.Float(1.0)
-goto end_branch_7
+end_branch_7:
+if (__t7.IntVal) != (0) {
+__t6 = gopurs_runtime.Float(1.0)
+goto end_branch_6
 } else {
 
 }
@@ -451,8 +449,7 @@ var __t4 gopurs_runtime.Value
 {
 var __t5 gopurs_runtime.Value
 {
-var __t_tag_6 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordNumber(), "compare"), gopurs_runtime.Float(msAdjusted_5_2), gopurs_runtime.Float(Get_minTime().FloatVal()))
-if (__t_tag_6.Type == 9 && __t_tag_6.IntVal == 1527465420) {
+if (msAdjusted_5_2.FloatVal()) < (Get_minTime().FloatVal()) {
 __t5 = gopurs_runtime.Bool(true)
 goto end_branch_5
 } else {
@@ -474,12 +471,12 @@ goto end_branch_4
 __t4 = gopurs_runtime.Float(0.0)
 }
 end_branch_4:
-__t7 = gopurs_runtime.Float(__t4.FloatVal())
+__t6 = gopurs_runtime.Float(__t4.FloatVal())
 }
-end_branch_7:
-wrap_6_3 := __t7
+end_branch_6:
+wrap_6_3 := __t6
 _ = wrap_6_3
-return gopurs_runtime.CoerceToStruct[pkg_Data_Tuple.Constructor_Tuple[float64, *Constructor_Time]](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupDays(), "append"), gopurs_runtime.Float(wholeDays_4_1), wrap_6_3), gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(Call_millisToTime(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupMilliseconds(), "append"), gopurs_runtime.Float(msAdjusted_5_2), gopurs_runtime.Float((86400000.0) * (-(wrap_6_3.FloatVal())))).FloatVal()))}})})
+return gopurs_runtime.CoerceToStruct[pkg_Data_Tuple.Constructor_Tuple[float64, *Constructor_Time]](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupDays(), "append"), gopurs_runtime.Float(wholeDays_4_1), wrap_6_3), gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(Call_millisToTime(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Time_Duration.Get_semigroupMilliseconds(), "append"), msAdjusted_5_2, gopurs_runtime.Float((86400000.0) * (-(wrap_6_3.FloatVal())))).FloatVal()))}})})
 }
 
 

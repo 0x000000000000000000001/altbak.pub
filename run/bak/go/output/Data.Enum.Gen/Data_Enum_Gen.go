@@ -45,19 +45,19 @@ Enum1_3_1 := gopurs_runtime.CoerceToStruct[pkg_Data_Enum.Constructor_Enum[gopurs
 _ = Enum1_3_1
 Bounded0_4_2 := gopurs_runtime.CoerceToStruct[pkg_Data_Bounded.Constructor_Bounded[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBoundedEnum_2, "Bounded0"), gopurs_runtime.Value{}))
 _ = Bounded0_4_2
-v_5_3 := gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]](gopurs_runtime.Apply(Enum1_3_1.V2, Bounded0_4_2.V1))
+v_5_3 := gopurs_runtime.Apply(Enum1_3_1.V2, Bounded0_4_2.V1)
 _ = v_5_3
 var __t4 gopurs_runtime.Value
 {
-if (gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(v_5_3)}.Type == 9 && gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(v_5_3)}.IntVal == 930809136 && gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(v_5_3)}.UnsafePtr != nil) {
-__t4 = gopurs_runtime.Apply3(pkg_Control_Monad_Gen.Get_elements(), dictMonadGen_0, gopurs_runtime.Value{Type: 9, IntVal: 2465059545, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup_Foldable.Constructor_Foldable1[*pkg_Data_NonEmpty.Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value]]](Get_foldable1NonEmpty()))}, gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(&pkg_Data_NonEmpty.Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value]{1, Bounded0_4_2.V1, gopurs_runtime.Apply4(pkg_Data_Enum.Get_enumFromTo(), gopurs_runtime.Value{Type: 9, IntVal: 4075786298, UnsafePtr: unsafe.Pointer(Enum1_3_1)}, pkg_Data_Unfoldable1.Get_unfoldable1Array(), (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(v_5_3)}.UnsafePtr).V0, Bounded0_4_2.V2)})})
+if (v_5_3.Type == 9 && v_5_3.IntVal == 930809136 && v_5_3.UnsafePtr != nil) {
+__t4 = gopurs_runtime.Apply3(pkg_Control_Monad_Gen.Get_elements(), dictMonadGen_0, gopurs_runtime.Value{Type: 9, IntVal: 2465059545, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup_Foldable.Constructor_Foldable1[*pkg_Data_NonEmpty.Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value]]](Get_foldable1NonEmpty()))}, gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(&pkg_Data_NonEmpty.Constructor_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value]{1, Bounded0_4_2.V1, gopurs_runtime.Apply4(pkg_Data_Enum.Get_enumFromTo(), gopurs_runtime.Value{Type: 9, IntVal: 4075786298, UnsafePtr: unsafe.Pointer(Enum1_3_1)}, pkg_Data_Unfoldable1.Get_unfoldable1Array(), (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v_5_3.UnsafePtr).V0, Bounded0_4_2.V2)})})
 goto end_branch_4
 } else {
 
 }
 }
 {
-if (gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(v_5_3)}.Type == 9 && gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(v_5_3)}.IntVal == 930809136 && gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(v_5_3)}.UnsafePtr == nil) {
+if (v_5_3.Type == 9 && v_5_3.IntVal == 930809136 && v_5_3.UnsafePtr == nil) {
 __t4 = gopurs_runtime.Apply(Applicative0_1_0.V1, Bounded0_4_2.V1)
 goto end_branch_4
 } else {

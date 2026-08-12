@@ -1,9 +1,7 @@
 package Data_String_NonEmpty_CodePoints
 
 import (
-	pkg_Data_Array_NonEmpty "gopurs/output/Data.Array.NonEmpty"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
-	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Semigroup_Foldable "gopurs/output/Data.Semigroup.Foldable"
 	pkg_Data_String_CodePoints "gopurs/output/Data.String.CodePoints"
@@ -388,8 +386,7 @@ var __t0 gopurs_runtime.Value
 {
 var __t1 gopurs_runtime.Value
 {
-var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Int(i_0), gopurs_runtime.Int(1))
-if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 1527465420) {
+if (i_0) < (1) {
 __t1 = gopurs_runtime.Bool(true)
 goto end_branch_1
 } else {
@@ -428,12 +425,25 @@ return func() []int64 {
 func Call_toNonEmptyCodePointArray(x_0_loop string) []int64 {
 var x_0 string = x_0_loop
 _ = x_0
-__local_var_1_0 := gopurs_runtime.Apply(pkg_Data_Array_NonEmpty.Get_fromArray(), gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_toCodePointArray(), gopurs_runtime.Str(x_0)))
+__local_var_1_0 := gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_toCodePointArray(), gopurs_runtime.Str(x_0))
 _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
-if (__local_var_1_0.Type == 9 && __local_var_1_0.IntVal == 930809136 && __local_var_1_0.UnsafePtr != nil) {
-__t1 = (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(__local_var_1_0.UnsafePtr).V0
+var __t2 gopurs_runtime.Value
+{
+if (gopurs_runtime.Int(int64(gopurs_runtime.ArrayLength(__local_var_1_0))).IntVal) > (0) {
+__t2 = gopurs_runtime.Bool(true)
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = gopurs_runtime.Bool(false)
+}
+end_branch_2:
+if (__t2.IntVal) != (0) {
+__t1 = __local_var_1_0
 goto end_branch_1
 } else {
 
@@ -573,8 +583,7 @@ var __t0 gopurs_runtime.Value
 {
 var __t1 gopurs_runtime.Value
 {
-var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Int(i_0), gopurs_runtime.Int(int64(gopurs_runtime.ArrayLength(gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_toCodePointArray(), gopurs_runtime.Str(nes_1))))))
-if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 1527465420) {
+if (i_0) < (gopurs_runtime.Int(int64(gopurs_runtime.ArrayLength(gopurs_runtime.Apply(pkg_Data_String_CodePoints.Get_toCodePointArray(), gopurs_runtime.Str(nes_1))))).IntVal) {
 __t1 = gopurs_runtime.Bool(false)
 goto end_branch_1
 } else {

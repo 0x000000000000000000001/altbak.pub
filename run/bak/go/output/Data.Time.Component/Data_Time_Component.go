@@ -195,8 +195,7 @@ var __t0 gopurs_runtime.Value
 {
 var __t1 gopurs_runtime.Value
 {
-var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, n_0, gopurs_runtime.Int(0))
-if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 1527465420) {
+if (n_0.IntVal) < (0) {
 __t1 = gopurs_runtime.Bool(false)
 goto end_branch_1
 } else {
@@ -207,21 +206,20 @@ goto end_branch_1
 __t1 = gopurs_runtime.Bool(true)
 }
 end_branch_1:
-var __t3 gopurs_runtime.Value
+var __t2 gopurs_runtime.Value
 {
-var __t_tag_4 gopurs_runtime.Value = gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, n_0, gopurs_runtime.Int(59))
-if (__t_tag_4.Type == 9 && __t_tag_4.IntVal == 380165415) {
-__t3 = gopurs_runtime.Bool(false)
-goto end_branch_3
+if (n_0.IntVal) > (59) {
+__t2 = gopurs_runtime.Bool(false)
+goto end_branch_2
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.Bool(true)
+__t2 = gopurs_runtime.Bool(true)
 }
-end_branch_3:
-if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), __t1, __t3).IntVal) != (0) {
+end_branch_2:
+if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), __t1, __t2).IntVal) != (0) {
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[int64]](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, n_0})}))}
 goto end_branch_0
 } else {
@@ -268,8 +266,7 @@ var __t0 gopurs_runtime.Value
 {
 var __t1 gopurs_runtime.Value
 {
-var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, n_0, gopurs_runtime.Int(0))
-if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 1527465420) {
+if (n_0.IntVal) < (0) {
 __t1 = gopurs_runtime.Bool(false)
 goto end_branch_1
 } else {
@@ -280,21 +277,20 @@ goto end_branch_1
 __t1 = gopurs_runtime.Bool(true)
 }
 end_branch_1:
-var __t3 gopurs_runtime.Value
+var __t2 gopurs_runtime.Value
 {
-var __t_tag_4 gopurs_runtime.Value = gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, n_0, gopurs_runtime.Int(59))
-if (__t_tag_4.Type == 9 && __t_tag_4.IntVal == 380165415) {
-__t3 = gopurs_runtime.Bool(false)
-goto end_branch_3
+if (n_0.IntVal) > (59) {
+__t2 = gopurs_runtime.Bool(false)
+goto end_branch_2
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.Bool(true)
+__t2 = gopurs_runtime.Bool(true)
 }
-end_branch_3:
-if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), __t1, __t3).IntVal) != (0) {
+end_branch_2:
+if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), __t1, __t2).IntVal) != (0) {
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[int64]](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, n_0})}))}
 goto end_branch_0
 } else {
@@ -341,8 +337,7 @@ var __t0 gopurs_runtime.Value
 {
 var __t1 gopurs_runtime.Value
 {
-var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, n_0, gopurs_runtime.Int(0))
-if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 1527465420) {
+if (n_0.IntVal) < (0) {
 __t1 = gopurs_runtime.Bool(false)
 goto end_branch_1
 } else {
@@ -353,21 +348,20 @@ goto end_branch_1
 __t1 = gopurs_runtime.Bool(true)
 }
 end_branch_1:
-var __t3 gopurs_runtime.Value
+var __t2 gopurs_runtime.Value
 {
-var __t_tag_4 gopurs_runtime.Value = gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, n_0, gopurs_runtime.Int(999))
-if (__t_tag_4.Type == 9 && __t_tag_4.IntVal == 380165415) {
-__t3 = gopurs_runtime.Bool(false)
-goto end_branch_3
+if (n_0.IntVal) > (999) {
+__t2 = gopurs_runtime.Bool(false)
+goto end_branch_2
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.Bool(true)
+__t2 = gopurs_runtime.Bool(true)
 }
-end_branch_3:
-if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), __t1, __t3).IntVal) != (0) {
+end_branch_2:
+if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), __t1, __t2).IntVal) != (0) {
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[int64]](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, n_0})}))}
 goto end_branch_0
 } else {
@@ -414,8 +408,7 @@ var __t0 gopurs_runtime.Value
 {
 var __t1 gopurs_runtime.Value
 {
-var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, n_0, gopurs_runtime.Int(0))
-if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 1527465420) {
+if (n_0.IntVal) < (0) {
 __t1 = gopurs_runtime.Bool(false)
 goto end_branch_1
 } else {
@@ -426,21 +419,20 @@ goto end_branch_1
 __t1 = gopurs_runtime.Bool(true)
 }
 end_branch_1:
-var __t3 gopurs_runtime.Value
+var __t2 gopurs_runtime.Value
 {
-var __t_tag_4 gopurs_runtime.Value = gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, n_0, gopurs_runtime.Int(23))
-if (__t_tag_4.Type == 9 && __t_tag_4.IntVal == 380165415) {
-__t3 = gopurs_runtime.Bool(false)
-goto end_branch_3
+if (n_0.IntVal) > (23) {
+__t2 = gopurs_runtime.Bool(false)
+goto end_branch_2
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.Bool(true)
+__t2 = gopurs_runtime.Bool(true)
 }
-end_branch_3:
-if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), __t1, __t3).IntVal) != (0) {
+end_branch_2:
+if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), __t1, __t2).IntVal) != (0) {
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[int64]](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, n_0})}))}
 goto end_branch_0
 } else {

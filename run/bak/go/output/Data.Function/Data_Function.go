@@ -1,10 +1,8 @@
 package Data_Function
 
 import (
-	pkg_Data_Ord "gopurs/output/Data.Ord"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	unsafe "unsafe"
 )
 
 var cache_on gopurs_runtime.Value
@@ -351,8 +349,7 @@ var __t1 gopurs_runtime.Value
 {
 var __t2 gopurs_runtime.Value
 {
-var __t_tag_3 gopurs_runtime.Value = gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, n_2, gopurs_runtime.Int(0))
-if (__t_tag_3.Type == 9 && __t_tag_3.IntVal == 380165415) {
+if (n_2.IntVal) > (0) {
 __t2 = gopurs_runtime.Bool(false)
 goto end_branch_2
 } else {

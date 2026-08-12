@@ -7,7 +7,6 @@ import (
 	pkg_Data_Foldable "gopurs/output/Data.Foldable"
 	pkg_Data_Functor "gopurs/output/Data.Functor"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
-	pkg_Data_Ord "gopurs/output/Data.Ord"
 	pkg_Data_Semigroup "gopurs/output/Data.Semigroup"
 	pkg_Data_Semigroup_Foldable "gopurs/output/Data.Semigroup.Foldable"
 	pkg_Data_Semigroup_Last "gopurs/output/Data.Semigroup.Last"
@@ -307,8 +306,7 @@ var __t8 gopurs_runtime.Value
 {
 var __t9 gopurs_runtime.Value
 {
-var __t_tag_10 gopurs_runtime.Value = gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_8.UnsafePtr).V1, gopurs_runtime.Int(0))
-if (__t_tag_10.Type == 9 && __t_tag_10.IntVal == 380165415) {
+if ((*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_8.UnsafePtr).V1.IntVal) > (0) {
 __t9 = gopurs_runtime.Bool(false)
 goto end_branch_9
 } else {
@@ -339,8 +337,8 @@ end_branch_8:
 return __t8
 }))
 _ = __local_var_8_5
-__local_var_9_11 := gopurs_runtime.Apply(pkg_Data_Tuple.Get_Tuple(), gopurs_runtime.Value{Type: 9, IntVal: 759514854, UnsafePtr: nil})
-_ = __local_var_9_11
+__local_var_9_10 := gopurs_runtime.Apply(pkg_Data_Tuple.Get_Tuple(), gopurs_runtime.Value{Type: 9, IntVal: 759514854, UnsafePtr: nil})
+_ = __local_var_9_10
 return gopurs_runtime.Apply2(Functor0_5_3.V0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictUnfoldable_6, "unfoldr"), gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t4 gopurs_runtime.Value
 {
@@ -365,7 +363,7 @@ __t4 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 end_branch_4:
 return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, *Constructor_Cons[gopurs_runtime.Value]]]](__t4))}
 })), gopurs_runtime.Apply(dictMonadGen_1.V5, gopurs_runtime.Func(func(x_10 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_8_5, gopurs_runtime.Apply(__local_var_9_11, x_10))
+return gopurs_runtime.Apply(__local_var_8_5, gopurs_runtime.Apply(__local_var_9_10, x_10))
 })))
 })
 })
@@ -391,8 +389,7 @@ var __t8 gopurs_runtime.Value
 {
 var __t9 gopurs_runtime.Value
 {
-var __t_tag_10 gopurs_runtime.Value = gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_8.UnsafePtr).V1, gopurs_runtime.Int(0))
-if (__t_tag_10.Type == 9 && __t_tag_10.IntVal == 380165415) {
+if ((*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_8.UnsafePtr).V1.IntVal) > (0) {
 __t9 = gopurs_runtime.Bool(false)
 goto end_branch_9
 } else {
@@ -423,8 +420,8 @@ end_branch_8:
 return __t8
 }))
 _ = __local_var_8_5
-__local_var_9_11 := gopurs_runtime.Apply(pkg_Data_Tuple.Get_Tuple(), gopurs_runtime.Value{Type: 9, IntVal: 759514854, UnsafePtr: nil})
-_ = __local_var_9_11
+__local_var_9_10 := gopurs_runtime.Apply(pkg_Data_Tuple.Get_Tuple(), gopurs_runtime.Value{Type: 9, IntVal: 759514854, UnsafePtr: nil})
+_ = __local_var_9_10
 return gopurs_runtime.Apply2(Functor0_5_3.V0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictUnfoldable_6, "unfoldr"), gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t4 gopurs_runtime.Value
 {
@@ -449,7 +446,7 @@ __t4 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 end_branch_4:
 return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, *Constructor_Cons[gopurs_runtime.Value]]]](__t4))}
 })), gopurs_runtime.Apply(dictMonadGen_1.V5, gopurs_runtime.Func(func(x_10 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_8_5, gopurs_runtime.Apply(__local_var_9_11, x_10))
+return gopurs_runtime.Apply(__local_var_8_5, gopurs_runtime.Apply(__local_var_9_10, x_10))
 })))
 })
 })
@@ -491,8 +488,7 @@ goto end_branch_3
 {
 var __t5 gopurs_runtime.Value
 {
-var __t_tag_6 gopurs_runtime.Value = gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, v_5, gopurs_runtime.Int(0))
-if (__t_tag_6.Type == 9 && __t_tag_6.IntVal == 380165415) {
+if (v_5.IntVal) > (0) {
 __t5 = gopurs_runtime.Bool(false)
 goto end_branch_5
 } else {
@@ -581,8 +577,7 @@ goto end_branch_3
 {
 var __t5 gopurs_runtime.Value
 {
-var __t_tag_6 gopurs_runtime.Value = gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, v_5, gopurs_runtime.Int(0))
-if (__t_tag_6.Type == 9 && __t_tag_6.IntVal == 380165415) {
+if (v_5.IntVal) > (0) {
 __t5 = gopurs_runtime.Bool(false)
 goto end_branch_5
 } else {
@@ -687,8 +682,7 @@ var __t2 gopurs_runtime.Value
 {
 var __t3 gopurs_runtime.Value
 {
-var __t_tag_4 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordNumber(), "compare"), pos_3, __local_var_1_0)
-if (__t_tag_4.Type == 9 && __t_tag_4.IntVal == 1527465420) {
+if (pos_3.FloatVal()) < (__local_var_1_0.FloatVal()) {
 __t3 = gopurs_runtime.Bool(false)
 goto end_branch_3
 } else {
@@ -726,8 +720,7 @@ var __t2 gopurs_runtime.Value
 {
 var __t3 gopurs_runtime.Value
 {
-var __t_tag_4 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordNumber(), "compare"), pos_3, __local_var_1_0)
-if (__t_tag_4.Type == 9 && __t_tag_4.IntVal == 1527465420) {
+if (pos_3.FloatVal()) < (__local_var_1_0.FloatVal()) {
 __t3 = gopurs_runtime.Bool(false)
 goto end_branch_3
 } else {

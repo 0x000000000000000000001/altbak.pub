@@ -203,8 +203,7 @@ var __t4 gopurs_runtime.Value
 {
 var __t5 gopurs_runtime.Value
 {
-var __t_tag_6 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordNumber(), "compare"), n_7, bias_5)
-if (__t_tag_6.Type == 9 && __t_tag_6.IntVal == 1527465420) {
+if (n_7.FloatVal()) < (bias_5.FloatVal()) {
 __t5 = gopurs_runtime.Bool(true)
 goto end_branch_5
 } else {
@@ -250,8 +249,7 @@ var __t4 gopurs_runtime.Value
 {
 var __t5 gopurs_runtime.Value
 {
-var __t_tag_6 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordNumber(), "compare"), n_7, bias_5)
-if (__t_tag_6.Type == 9 && __t_tag_6.IntVal == 1527465420) {
+if (n_7.FloatVal()) < (bias_5.FloatVal()) {
 __t5 = gopurs_runtime.Bool(true)
 goto end_branch_5
 } else {
@@ -308,8 +306,7 @@ var __t3 gopurs_runtime.Value
 {
 var __t4 gopurs_runtime.Value
 {
-var __t_tag_5 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordNumber(), "compare"), n_7, bias_4)
-if (__t_tag_5.Type == 9 && __t_tag_5.IntVal == 1527465420) {
+if (n_7.FloatVal()) < (bias_4.FloatVal()) {
 __t4 = gopurs_runtime.Bool(true)
 goto end_branch_4
 } else {
@@ -355,8 +352,7 @@ var __t3 gopurs_runtime.Value
 {
 var __t4 gopurs_runtime.Value
 {
-var __t_tag_5 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordNumber(), "compare"), n_7, bias_4)
-if (__t_tag_5.Type == 9 && __t_tag_5.IntVal == 1527465420) {
+if (n_7.FloatVal()) < (bias_4.FloatVal()) {
 __t4 = gopurs_runtime.Bool(true)
 goto end_branch_4
 } else {

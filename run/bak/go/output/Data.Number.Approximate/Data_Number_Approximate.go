@@ -4,7 +4,6 @@ import (
 	pkg_Data_EuclideanRing "gopurs/output/Data.EuclideanRing"
 	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
 	pkg_Data_Number "gopurs/output/Data.Number"
-	pkg_Data_Ord "gopurs/output/Data.Ord"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 )
@@ -92,13 +91,33 @@ var v1_1 float64 = v1_1_loop
 _ = v1_1
 var v2_2 float64 = v2_2_loop
 _ = v2_2
-var __t2 gopurs_runtime.Value
+var __t1 gopurs_runtime.Value
 {
 if (v1_1) == (0.0) {
+var __t2 gopurs_runtime.Value
+{
+if (gopurs_runtime.Apply(pkg_Data_Number.Get_abs(), gopurs_runtime.Float(v2_2)).FloatVal()) > (v_0) {
+__t2 = gopurs_runtime.Bool(false)
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = gopurs_runtime.Bool(true)
+}
+end_branch_2:
+__t1 = gopurs_runtime.Bool((__t2.IntVal) != (0))
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (v2_2) == (0.0) {
 var __t3 gopurs_runtime.Value
 {
-var __t_tag_4 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordNumber(), "compare"), gopurs_runtime.Apply(pkg_Data_Number.Get_abs(), gopurs_runtime.Float(v2_2)), gopurs_runtime.Float(v_0))
-if (__t_tag_4.Type == 9 && __t_tag_4.IntVal == 380165415) {
+if (gopurs_runtime.Apply(pkg_Data_Number.Get_abs(), gopurs_runtime.Float(v1_1)).FloatVal()) > (v_0) {
 __t3 = gopurs_runtime.Bool(false)
 goto end_branch_3
 } else {
@@ -109,30 +128,8 @@ goto end_branch_3
 __t3 = gopurs_runtime.Bool(true)
 }
 end_branch_3:
-__t2 = gopurs_runtime.Bool((__t3.IntVal) != (0))
-goto end_branch_2
-} else {
-
-}
-}
-{
-if (v2_2) == (0.0) {
-var __t5 gopurs_runtime.Value
-{
-var __t_tag_6 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordNumber(), "compare"), gopurs_runtime.Apply(pkg_Data_Number.Get_abs(), gopurs_runtime.Float(v1_1)), gopurs_runtime.Float(v_0))
-if (__t_tag_6.Type == 9 && __t_tag_6.IntVal == 380165415) {
-__t5 = gopurs_runtime.Bool(false)
-goto end_branch_5
-} else {
-
-}
-}
-{
-__t5 = gopurs_runtime.Bool(true)
-}
-end_branch_5:
-__t2 = gopurs_runtime.Bool((__t5.IntVal) != (0))
-goto end_branch_2
+__t1 = gopurs_runtime.Bool((__t3.IntVal) != (0))
+goto end_branch_1
 } else {
 
 }
@@ -140,8 +137,7 @@ goto end_branch_2
 {
 var __t0 gopurs_runtime.Value
 {
-var __t_tag_1 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordNumber(), "compare"), gopurs_runtime.Apply(pkg_Data_Number.Get_abs(), gopurs_runtime.Float((v1_1) - (v2_2))), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingNumber(), "div"), gopurs_runtime.Float((v_0) * (gopurs_runtime.Apply(pkg_Data_Number.Get_abs(), gopurs_runtime.Float((v1_1) + (v2_2))).FloatVal())), gopurs_runtime.Float(2.0)))
-if (__t_tag_1.Type == 9 && __t_tag_1.IntVal == 380165415) {
+if (gopurs_runtime.Apply(pkg_Data_Number.Get_abs(), gopurs_runtime.Float((v1_1) - (v2_2))).FloatVal()) > (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_EuclideanRing.Get_euclideanRingNumber(), "div"), gopurs_runtime.Float((v_0) * (gopurs_runtime.Apply(pkg_Data_Number.Get_abs(), gopurs_runtime.Float((v1_1) + (v2_2))).FloatVal())), gopurs_runtime.Float(2.0)).FloatVal()) {
 __t0 = gopurs_runtime.Bool(false)
 goto end_branch_0
 } else {
@@ -152,10 +148,10 @@ goto end_branch_0
 __t0 = gopurs_runtime.Bool(true)
 }
 end_branch_0:
-__t2 = gopurs_runtime.Bool((__t0.IntVal) != (0))
+__t1 = gopurs_runtime.Bool((__t0.IntVal) != (0))
 }
-end_branch_2:
-return (__t2.IntVal) != (0)
+end_branch_1:
+return (__t1.IntVal) != (0)
 }
 
 func Call_neqApproximate(x_0_loop float64, y_1_loop float64) bool {
@@ -175,8 +171,7 @@ var y_2 float64 = y_2_loop
 _ = y_2
 var __t0 gopurs_runtime.Value
 {
-var __t_tag_1 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordNumber(), "compare"), gopurs_runtime.Apply(pkg_Data_Number.Get_abs(), gopurs_runtime.Float((x_1) - (y_2))), gopurs_runtime.Float(v_0))
-if (__t_tag_1.Type == 9 && __t_tag_1.IntVal == 380165415) {
+if (gopurs_runtime.Apply(pkg_Data_Number.Get_abs(), gopurs_runtime.Float((x_1) - (y_2))).FloatVal()) > (v_0) {
 __t0 = gopurs_runtime.Bool(false)
 goto end_branch_0
 } else {

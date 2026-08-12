@@ -115,6 +115,17 @@ return Call_wrapEffect__gopurs_runtime_Value_3965193927(gopurs_runtime.CoerceToS
 	return cache_wrapEffect__gopurs_runtime_Value_3965193927
 }
 
+var cache_unfold_ForAll_f_a_z_ConstrainedType_Control_Monad_Monad_Any_Func_Func_Any_TypeApp_Any_ADT_Data_Maybe_Maybe_ADT_Data_Tuple_Tuple_Any_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any gopurs_runtime.Value
+var once_unfold_ForAll_f_a_z_ConstrainedType_Control_Monad_Monad_Any_Func_Func_Any_TypeApp_Any_ADT_Data_Maybe_Maybe_ADT_Data_Tuple_Tuple_Any_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any sync.Once
+func Get_unfold_ForAll_f_a_z_ConstrainedType_Control_Monad_Monad_Any_Func_Func_Any_TypeApp_Any_ADT_Data_Maybe_Maybe_ADT_Data_Tuple_Tuple_Any_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any() gopurs_runtime.Value {
+	once_unfold_ForAll_f_a_z_ConstrainedType_Control_Monad_Monad_Any_Func_Func_Any_TypeApp_Any_ADT_Data_Maybe_Maybe_ADT_Data_Tuple_Tuple_Any_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any.Do(func() {
+		cache_unfold_ForAll_f_a_z_ConstrainedType_Control_Monad_Monad_Any_Func_Func_Any_TypeApp_Any_ADT_Data_Maybe_Maybe_ADT_Data_Tuple_Tuple_Any_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any = gopurs_runtime.Func(func(dictMonad_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_unfold_ForAll_f_a_z_ConstrainedType_Control_Monad_Monad_Any_Func_Func_Any_TypeApp_Any_ADT_Data_Maybe_Maybe_ADT_Data_Tuple_Tuple_Any_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any(gopurs_runtime.CoerceToStruct[pkg_Control_Monad.Constructor_Monad[gopurs_runtime.Value]](dictMonad_0_box))
+})
+	})
+	return cache_unfold_ForAll_f_a_z_ConstrainedType_Control_Monad_Monad_Any_Func_Func_Any_TypeApp_Any_ADT_Data_Maybe_Maybe_ADT_Data_Tuple_Tuple_Any_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any
+}
+
 var cache_unfold gopurs_runtime.Value
 var once_unfold sync.Once
 func Get_unfold() gopurs_runtime.Value {
@@ -135,6 +146,17 @@ return Call_unfold__gopurs_runtime_Value_3487137686(gopurs_runtime.CoerceToStruc
 })
 	})
 	return cache_unfold__gopurs_runtime_Value_3487137686
+}
+
+var cache_uncons_ForAll_f_a_ConstrainedType_Control_Monad_Monad_Any_Func_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Data_Maybe_Maybe_ADT_Data_Tuple_Tuple_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any gopurs_runtime.Value
+var once_uncons_ForAll_f_a_ConstrainedType_Control_Monad_Monad_Any_Func_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Data_Maybe_Maybe_ADT_Data_Tuple_Tuple_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any sync.Once
+func Get_uncons_ForAll_f_a_ConstrainedType_Control_Monad_Monad_Any_Func_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Data_Maybe_Maybe_ADT_Data_Tuple_Tuple_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any() gopurs_runtime.Value {
+	once_uncons_ForAll_f_a_ConstrainedType_Control_Monad_Monad_Any_Func_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Data_Maybe_Maybe_ADT_Data_Tuple_Tuple_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any.Do(func() {
+		cache_uncons_ForAll_f_a_ConstrainedType_Control_Monad_Monad_Any_Func_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Data_Maybe_Maybe_ADT_Data_Tuple_Tuple_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any = gopurs_runtime.Func(func(dictMonad_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_uncons_ForAll_f_a_ConstrainedType_Control_Monad_Monad_Any_Func_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Data_Maybe_Maybe_ADT_Data_Tuple_Tuple_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any(gopurs_runtime.CoerceToStruct[pkg_Control_Monad.Constructor_Monad[gopurs_runtime.Value]](dictMonad_0_box))
+})
+	})
+	return cache_uncons_ForAll_f_a_ConstrainedType_Control_Monad_Monad_Any_Func_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Data_Maybe_Maybe_ADT_Data_Tuple_Tuple_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any
 }
 
 var cache_uncons gopurs_runtime.Value
@@ -168,6 +190,17 @@ return Call_tail(gopurs_runtime.CoerceToStruct[pkg_Control_Monad.Constructor_Mon
 })
 	})
 	return cache_tail
+}
+
+var cache_takeWhile_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Func_Any_Boolean_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any gopurs_runtime.Value
+var once_takeWhile_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Func_Any_Boolean_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any sync.Once
+func Get_takeWhile_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Func_Any_Boolean_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any() gopurs_runtime.Value {
+	once_takeWhile_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Func_Any_Boolean_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any.Do(func() {
+		cache_takeWhile_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Func_Any_Boolean_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any = gopurs_runtime.Func(func(dictApplicative_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_takeWhile_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Func_Any_Boolean_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any(gopurs_runtime.CoerceToStruct[pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]](dictApplicative_0_box))
+})
+	})
+	return cache_takeWhile_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Func_Any_Boolean_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any
 }
 
 var cache_takeWhile gopurs_runtime.Value
@@ -291,6 +324,17 @@ return Call_singleton__gopurs_runtime_Value_2427543124(gopurs_runtime.CoerceToSt
 	return cache_singleton__gopurs_runtime_Value_2427543124
 }
 
+var cache_take_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Int_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any gopurs_runtime.Value
+var once_take_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Int_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any sync.Once
+func Get_take_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Int_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any() gopurs_runtime.Value {
+	once_take_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Int_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any.Do(func() {
+		cache_take_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Int_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any = gopurs_runtime.Func(func(dictApplicative_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_take_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Int_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any(gopurs_runtime.CoerceToStruct[pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]](dictApplicative_0_box))
+})
+	})
+	return cache_take_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Int_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any
+}
+
 var cache_take gopurs_runtime.Value
 var once_take sync.Once
 func Get_take() gopurs_runtime.Value {
@@ -311,6 +355,17 @@ return Call_take__gopurs_runtime_Value_1964165395(gopurs_runtime.CoerceToStruct[
 })
 	})
 	return cache_take__gopurs_runtime_Value_1964165395
+}
+
+var cache_zipWith_prime_ForAll_f_a_b_c_ConstrainedType_Control_Monad_Monad_Any_Func_Func_Any_Any_TypeApp_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any gopurs_runtime.Value
+var once_zipWith_prime_ForAll_f_a_b_c_ConstrainedType_Control_Monad_Monad_Any_Func_Func_Any_Any_TypeApp_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any sync.Once
+func Get_zipWith_prime_ForAll_f_a_b_c_ConstrainedType_Control_Monad_Monad_Any_Func_Func_Any_Any_TypeApp_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any() gopurs_runtime.Value {
+	once_zipWith_prime_ForAll_f_a_b_c_ConstrainedType_Control_Monad_Monad_Any_Func_Func_Any_Any_TypeApp_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any.Do(func() {
+		cache_zipWith_prime_ForAll_f_a_b_c_ConstrainedType_Control_Monad_Monad_Any_Func_Func_Any_Any_TypeApp_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any = gopurs_runtime.Func(func(dictMonad_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_zipWith_prime_ForAll_f_a_b_c_ConstrainedType_Control_Monad_Monad_Any_Func_Func_Any_Any_TypeApp_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any(gopurs_runtime.CoerceToStruct[pkg_Control_Monad.Constructor_Monad[gopurs_runtime.Value]](dictMonad_0_box))
+})
+	})
+	return cache_zipWith_prime_ForAll_f_a_b_c_ConstrainedType_Control_Monad_Monad_Any_Func_Func_Any_Any_TypeApp_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any
 }
 
 var cache_zipWith_prime gopurs_runtime.Value
@@ -355,6 +410,17 @@ return gopurs_runtime.Value{}
 }))
 	})
 	return cache_newtypeListT
+}
+
+var cache_mapMaybe_ForAll_f_a_b_ConstrainedType_Data_Functor_Functor_Any_Func_Func_Any_ADT_Data_Maybe_Maybe_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any gopurs_runtime.Value
+var once_mapMaybe_ForAll_f_a_b_ConstrainedType_Data_Functor_Functor_Any_Func_Func_Any_ADT_Data_Maybe_Maybe_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any sync.Once
+func Get_mapMaybe_ForAll_f_a_b_ConstrainedType_Data_Functor_Functor_Any_Func_Func_Any_ADT_Data_Maybe_Maybe_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any() gopurs_runtime.Value {
+	once_mapMaybe_ForAll_f_a_b_ConstrainedType_Data_Functor_Functor_Any_Func_Func_Any_ADT_Data_Maybe_Maybe_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any.Do(func() {
+		cache_mapMaybe_ForAll_f_a_b_ConstrainedType_Data_Functor_Functor_Any_Func_Func_Any_ADT_Data_Maybe_Maybe_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any = gopurs_runtime.Func3(func(dictFunctor_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_mapMaybe_ForAll_f_a_b_ConstrainedType_Data_Functor_Functor_Any_Func_Func_Any_ADT_Data_Maybe_Maybe_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any(gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](dictFunctor_0_box), f_1_box, v_2_box)
+})
+	})
+	return cache_mapMaybe_ForAll_f_a_b_ConstrainedType_Data_Functor_Functor_Any_Func_Func_Any_ADT_Data_Maybe_Maybe_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any
 }
 
 var cache_mapMaybe gopurs_runtime.Value
@@ -544,6 +610,17 @@ return Call_foldl(gopurs_runtime.CoerceToStruct[pkg_Control_Monad.Constructor_Mo
 	return cache_foldl
 }
 
+var cache_filter_ForAll_f_a_ConstrainedType_Data_Functor_Functor_Any_Func_Func_Any_Boolean_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any gopurs_runtime.Value
+var once_filter_ForAll_f_a_ConstrainedType_Data_Functor_Functor_Any_Func_Func_Any_Boolean_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any sync.Once
+func Get_filter_ForAll_f_a_ConstrainedType_Data_Functor_Functor_Any_Func_Func_Any_Boolean_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any() gopurs_runtime.Value {
+	once_filter_ForAll_f_a_ConstrainedType_Data_Functor_Functor_Any_Func_Func_Any_Boolean_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any.Do(func() {
+		cache_filter_ForAll_f_a_ConstrainedType_Data_Functor_Functor_Any_Func_Func_Any_Boolean_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any = gopurs_runtime.Func3(func(dictFunctor_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_filter_ForAll_f_a_ConstrainedType_Data_Functor_Functor_Any_Func_Func_Any_Boolean_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any(gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](dictFunctor_0_box), f_1_box, v_2_box)
+})
+	})
+	return cache_filter_ForAll_f_a_ConstrainedType_Data_Functor_Functor_Any_Func_Func_Any_Boolean_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any
+}
+
 var cache_filter gopurs_runtime.Value
 var once_filter sync.Once
 func Get_filter() gopurs_runtime.Value {
@@ -566,6 +643,17 @@ return Call_filter__gopurs_runtime_Value_1345510683(gopurs_runtime.CoerceToStruc
 	return cache_filter__gopurs_runtime_Value_1345510683
 }
 
+var cache_dropWhile_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Func_Any_Boolean_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any gopurs_runtime.Value
+var once_dropWhile_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Func_Any_Boolean_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any sync.Once
+func Get_dropWhile_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Func_Any_Boolean_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any() gopurs_runtime.Value {
+	once_dropWhile_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Func_Any_Boolean_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any.Do(func() {
+		cache_dropWhile_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Func_Any_Boolean_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any = gopurs_runtime.Func(func(dictApplicative_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_dropWhile_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Func_Any_Boolean_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any(gopurs_runtime.CoerceToStruct[pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]](dictApplicative_0_box))
+})
+	})
+	return cache_dropWhile_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Func_Any_Boolean_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any
+}
+
 var cache_dropWhile gopurs_runtime.Value
 var once_dropWhile sync.Once
 func Get_dropWhile() gopurs_runtime.Value {
@@ -586,6 +674,17 @@ return Call_dropWhile__gopurs_runtime_Value_504781836(gopurs_runtime.CoerceToStr
 })
 	})
 	return cache_dropWhile__gopurs_runtime_Value_504781836
+}
+
+var cache_drop_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Int_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any gopurs_runtime.Value
+var once_drop_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Int_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any sync.Once
+func Get_drop_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Int_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any() gopurs_runtime.Value {
+	once_drop_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Int_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any.Do(func() {
+		cache_drop_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Int_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any = gopurs_runtime.Func(func(dictApplicative_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_drop_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Int_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any(gopurs_runtime.CoerceToStruct[pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]](dictApplicative_0_box))
+})
+	})
+	return cache_drop_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Int_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any
 }
 
 var cache_drop gopurs_runtime.Value
@@ -876,6 +975,45 @@ return x_2
 }), v_1)
 }
 
+func Call_unfold_ForAll_f_a_z_ConstrainedType_Control_Monad_Monad_Any_Func_Func_Any_TypeApp_Any_ADT_Data_Maybe_Maybe_ADT_Data_Tuple_Tuple_Any_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any(dictMonad_0_loop *pkg_Control_Monad.Constructor_Monad[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dictMonad_0 *pkg_Control_Monad.Constructor_Monad[gopurs_runtime.Value] = dictMonad_0_loop
+_ = dictMonad_0
+Functor0_1_0 := gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(dictMonad_0.V1, gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
+_ = Functor0_1_0
+return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(z_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Functor0_1_0.V0, gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t1 gopurs_runtime.Value
+{
+if (v_4.Type == 9 && v_4.IntVal == 930809136 && v_4.UnsafePtr != nil) {
+__local_var_5_2 := (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V0
+_ = __local_var_5_2
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1320412129, UnsafePtr: unsafe.Pointer(&Constructor_Yield[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V1, gopurs_runtime.Apply(pkg_Data_Lazy.Get_go__defer(), gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Call_unfold(dictMonad_0), f_2, __local_var_5_2)
+}))})}
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (v_4.Type == 9 && v_4.IntVal == 930809136 && v_4.UnsafePtr == nil) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 489128924, UnsafePtr: unsafe.Pointer(nil)}
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_1:
+return __t1
+}), gopurs_runtime.Apply(f_2, z_3))
+})
+})
+}
+
 func Call_unfold(dictMonad_0_loop *pkg_Control_Monad.Constructor_Monad[gopurs_runtime.Value]) gopurs_runtime.Value {
 var dictMonad_0 *pkg_Control_Monad.Constructor_Monad[gopurs_runtime.Value] = dictMonad_0_loop
 _ = dictMonad_0
@@ -951,6 +1089,51 @@ end_branch_1:
 return __t1
 }), gopurs_runtime.Apply(f_2, z_3))
 })
+})
+}
+
+func Call_uncons_ForAll_f_a_ConstrainedType_Control_Monad_Monad_Any_Func_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Data_Maybe_Maybe_ADT_Data_Tuple_Tuple_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any(dictMonad_0_loop *pkg_Control_Monad.Constructor_Monad[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dictMonad_0 *pkg_Control_Monad.Constructor_Monad[gopurs_runtime.Value] = dictMonad_0_loop
+_ = dictMonad_0
+pure_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(dictMonad_0.V0, gopurs_runtime.Value{}), "pure")
+_ = pure_1_0
+Applicative0_2_1 := gopurs_runtime.CoerceToStruct[pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]](gopurs_runtime.Apply(dictMonad_0.V0, gopurs_runtime.Value{}))
+_ = Applicative0_2_1
+Bind1_3_2 := gopurs_runtime.CoerceToStruct[pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value]](gopurs_runtime.Apply(dictMonad_0.V1, gopurs_runtime.Value{}))
+_ = Bind1_3_2
+return gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Bind1_3_2.V1, v_4, gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t3 gopurs_runtime.Value
+{
+if (v1_5.Type == 9 && v1_5.IntVal == 1320412129) {
+__t3 = gopurs_runtime.Apply(pure_1_0, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*Constructor_Yield[gopurs_runtime.Value, gopurs_runtime.Value])(v1_5.UnsafePtr).V0, gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), (*Constructor_Yield[gopurs_runtime.Value, gopurs_runtime.Value])(v1_5.UnsafePtr).V1)})}})})
+goto end_branch_3
+} else {
+
+}
+}
+{
+if (v1_5.Type == 9 && v1_5.IntVal == 813447293) {
+__t3 = gopurs_runtime.Apply(Call_uncons(dictMonad_0), gopurs_runtime.Apply(pkg_Data_Lazy.Get_force(), (*Constructor_Skip[gopurs_runtime.Value, gopurs_runtime.Value])(v1_5.UnsafePtr).V0))
+goto end_branch_3
+} else {
+
+}
+}
+{
+if (v1_5.Type == 9 && v1_5.IntVal == 489128924) {
+__t3 = gopurs_runtime.Apply(Applicative0_2_1.V1, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: nil})
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_3:
+return __t3
+}))
 })
 }
 
@@ -1051,6 +1234,62 @@ Functor0_1_0 := gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Funct
 _ = Functor0_1_0
 return gopurs_runtime.Func(func(l_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(Functor0_1_0.V0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_functorMaybe(), "map"), pkg_Data_Tuple.Get_snd()), gopurs_runtime.Apply(Call_uncons(dictMonad_0), l_2))
+})
+}
+
+func Call_takeWhile_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Func_Any_Boolean_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any(dictApplicative_0_loop *pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dictApplicative_0 *pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value] = dictApplicative_0_loop
+_ = dictApplicative_0
+Functor0_1_0 := gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(dictApplicative_0.V0, gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
+_ = Functor0_1_0
+return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Functor0_1_0.V0, gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t1 gopurs_runtime.Value
+{
+if (v_4.Type == 9 && v_4.IntVal == 1320412129) {
+var __t2 gopurs_runtime.Value
+{
+if (gopurs_runtime.Apply(f_2, (*Constructor_Yield[gopurs_runtime.Value, gopurs_runtime.Value])(v_4.UnsafePtr).V0).IntVal) != (0) {
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: 1320412129, UnsafePtr: unsafe.Pointer(&Constructor_Yield[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*Constructor_Yield[gopurs_runtime.Value, gopurs_runtime.Value])(v_4.UnsafePtr).V0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Lazy.Get_functorLazy(), "map"), gopurs_runtime.Apply(Call_takeWhile(dictApplicative_0), f_2), (*Constructor_Yield[gopurs_runtime.Value, gopurs_runtime.Value])(v_4.UnsafePtr).V1)})}
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: 489128924, UnsafePtr: unsafe.Pointer(nil)}
+}
+end_branch_2:
+__t1 = __t2
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (v_4.Type == 9 && v_4.IntVal == 813447293) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 813447293, UnsafePtr: unsafe.Pointer(&Constructor_Skip[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Lazy.Get_functorLazy(), "map"), gopurs_runtime.Apply(Call_takeWhile(dictApplicative_0), f_2), (*Constructor_Skip[gopurs_runtime.Value, gopurs_runtime.Value])(v_4.UnsafePtr).V0)})}
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (v_4.Type == 9 && v_4.IntVal == 489128924) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 489128924, UnsafePtr: unsafe.Pointer(nil)}
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_1:
+return __t1
+}), v_3)
+})
 })
 }
 
@@ -1295,6 +1534,64 @@ return nil1_1_0
 })
 }
 
+func Call_take_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Int_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any(dictApplicative_0_loop *pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dictApplicative_0 *pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value] = dictApplicative_0_loop
+_ = dictApplicative_0
+nil1_1_0 := gopurs_runtime.Apply(dictApplicative_0.V1, gopurs_runtime.Value{Type: 9, IntVal: 489128924, UnsafePtr: unsafe.Pointer(nil)})
+_ = nil1_1_0
+Functor0_2_1 := gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(dictApplicative_0.V0, gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
+_ = Functor0_2_1
+return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t3 gopurs_runtime.Value
+{
+if (v_3.IntVal) == (0) {
+__t3 = nil1_1_0
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = gopurs_runtime.Apply2(Functor0_2_1.V0, gopurs_runtime.Func(func(v2_5 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t2 gopurs_runtime.Value
+{
+if (v2_5.Type == 9 && v2_5.IntVal == 1320412129) {
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: 1320412129, UnsafePtr: unsafe.Pointer(&Constructor_Yield[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*Constructor_Yield[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5.UnsafePtr).V0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Lazy.Get_functorLazy(), "map"), gopurs_runtime.Apply(Call_take(dictApplicative_0), gopurs_runtime.Int((v_3.IntVal) - (1))), (*Constructor_Yield[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5.UnsafePtr).V1)})}
+goto end_branch_2
+} else {
+
+}
+}
+{
+if (v2_5.Type == 9 && v2_5.IntVal == 813447293) {
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: 813447293, UnsafePtr: unsafe.Pointer(&Constructor_Skip[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Lazy.Get_functorLazy(), "map"), gopurs_runtime.Apply(Call_take(dictApplicative_0), v_3), (*Constructor_Skip[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5.UnsafePtr).V0)})}
+goto end_branch_2
+} else {
+
+}
+}
+{
+if (v2_5.Type == 9 && v2_5.IntVal == 489128924) {
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: 489128924, UnsafePtr: unsafe.Pointer(nil)}
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_2:
+return __t2
+}), v1_4)
+}
+end_branch_3:
+return __t3
+})
+})
+}
+
 func Call_take(dictApplicative_0_loop *pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]) gopurs_runtime.Value {
 var dictApplicative_0 *pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value] = dictApplicative_0_loop
 _ = dictApplicative_0
@@ -1407,6 +1704,79 @@ return __t2
 }
 end_branch_3:
 return __t3
+})
+})
+}
+
+func Call_zipWith_prime_ForAll_f_a_b_c_ConstrainedType_Control_Monad_Monad_Any_Func_Func_Any_Any_TypeApp_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any(dictMonad_0_loop *pkg_Control_Monad.Constructor_Monad[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dictMonad_0 *pkg_Control_Monad.Constructor_Monad[gopurs_runtime.Value] = dictMonad_0_loop
+_ = dictMonad_0
+Applicative0_1_0 := gopurs_runtime.CoerceToStruct[pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]](gopurs_runtime.Apply(dictMonad_0.V0, gopurs_runtime.Value{}))
+_ = Applicative0_1_0
+Functor0_2_1 := gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(dictMonad_0.V1, gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
+_ = Functor0_2_1
+__local_var_3_3 := gopurs_runtime.Apply(dictMonad_0.V0, gopurs_runtime.Value{})
+_ = __local_var_3_3
+prepend_prime1_3_2 := gopurs_runtime.Func(func(h_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(t_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_3, "pure"), gopurs_runtime.Value{Type: 9, IntVal: 1320412129, UnsafePtr: unsafe.Pointer(&Constructor_Yield[gopurs_runtime.Value, gopurs_runtime.Value]{1, h_4, t_5})})
+})
+})
+_ = prepend_prime1_3_2
+Bind1_4_4 := gopurs_runtime.CoerceToStruct[pkg_Control_Bind.Constructor_Bind[gopurs_runtime.Value]](gopurs_runtime.Apply(dictMonad_0.V1, gopurs_runtime.Value{}))
+_ = Bind1_4_4
+return gopurs_runtime.Func(func(f_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(fa_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(fb_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Functor0_2_1.V0, gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 813447293, UnsafePtr: unsafe.Pointer(&Constructor_Skip[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply(pkg_Data_Lazy.Get_go__defer(), gopurs_runtime.Func(func(v_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_8
+}))})}
+}), gopurs_runtime.Apply2(Bind1_4_4.V1, gopurs_runtime.Apply(Call_uncons(dictMonad_0), fa_6), gopurs_runtime.Func(func(ua_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Bind1_4_4.V1, gopurs_runtime.Apply(Call_uncons(dictMonad_0), fb_7), gopurs_runtime.Func(func(ub_9 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t5 gopurs_runtime.Value
+{
+if (ub_9.Type == 9 && ub_9.IntVal == 930809136 && ub_9.UnsafePtr == nil) {
+__t5 = gopurs_runtime.Apply(Applicative0_1_0.V1, gopurs_runtime.Apply(Applicative0_1_0.V1, gopurs_runtime.Value{Type: 9, IntVal: 489128924, UnsafePtr: unsafe.Pointer(nil)}))
+goto end_branch_5
+} else {
+
+}
+}
+{
+if (ua_8.Type == 9 && ua_8.IntVal == 930809136 && ua_8.UnsafePtr == nil) {
+__t5 = gopurs_runtime.Apply(Applicative0_1_0.V1, gopurs_runtime.Apply(Applicative0_1_0.V1, gopurs_runtime.Value{Type: 9, IntVal: 489128924, UnsafePtr: unsafe.Pointer(nil)}))
+goto end_branch_5
+} else {
+
+}
+}
+{
+if ((ua_8.Type == 9 && ua_8.IntVal == 930809136 && ua_8.UnsafePtr != nil)) && ((ub_9.Type == 9 && ub_9.IntVal == 930809136 && ub_9.UnsafePtr != nil)) {
+__local_var_10_6 := (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(ua_8.UnsafePtr).V0.UnsafePtr).V1
+_ = __local_var_10_6
+__local_var_11_7 := (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(ub_9.UnsafePtr).V0.UnsafePtr).V1
+_ = __local_var_11_7
+__local_var_12_8 := gopurs_runtime.Apply(pkg_Data_Lazy.Get_go__defer(), gopurs_runtime.Func(func(v2_12 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply4(Get_zipWith_prime(), gopurs_runtime.Value{Type: 9, IntVal: 778916621, UnsafePtr: unsafe.Pointer(dictMonad_0)}, f_5, __local_var_10_6, __local_var_11_7)
+}))
+_ = __local_var_12_8
+__t5 = gopurs_runtime.Apply2(Functor0_2_1.V0, gopurs_runtime.Func(func(a_13 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(prepend_prime1_3_2, a_13, __local_var_12_8)
+}), gopurs_runtime.Apply2(f_5, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(ua_8.UnsafePtr).V0.UnsafePtr).V0, (*pkg_Data_Tuple.Constructor_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])((*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(ub_9.UnsafePtr).V0.UnsafePtr).V0))
+goto end_branch_5
+} else {
+
+}
+}
+{
+__t5 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_5:
+return __t5
+}))
+})))
+})
 })
 })
 }
@@ -1569,6 +1939,70 @@ return gopurs_runtime.Apply(pure_1_0, gopurs_runtime.Apply2(f_2, a_3, b_4))
 })
 }))
 })
+}
+
+func Call_mapMaybe_ForAll_f_a_b_ConstrainedType_Data_Functor_Functor_Any_Func_Func_Any_ADT_Data_Maybe_Maybe_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any(dictFunctor_0_loop *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value], f_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictFunctor_0 *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value] = dictFunctor_0_loop
+_ = dictFunctor_0
+var f_1 gopurs_runtime.Value = f_1_loop
+_ = f_1
+var v_2 gopurs_runtime.Value = v_2_loop
+_ = v_2
+return gopurs_runtime.Apply2(dictFunctor_0.V0, gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t0 gopurs_runtime.Value
+{
+if (v_3.Type == 9 && v_3.IntVal == 1320412129) {
+__local_var_4_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Maybe.Get_functorMaybe(), "map"), Get_Yield(), gopurs_runtime.Apply(f_1, (*Constructor_Yield[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V0))
+_ = __local_var_4_1
+var __t2 gopurs_runtime.Value
+{
+if (__local_var_4_1.Type == 9 && __local_var_4_1.IntVal == 930809136 && __local_var_4_1.UnsafePtr == nil) {
+__t2 = Get_Skip()
+goto end_branch_2
+} else {
+
+}
+}
+{
+if (__local_var_4_1.Type == 9 && __local_var_4_1.IntVal == 930809136 && __local_var_4_1.UnsafePtr != nil) {
+__t2 = (*pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value])(__local_var_4_1.UnsafePtr).V0
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_2:
+__t0 = gopurs_runtime.Apply(__t2, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Lazy.Get_functorLazy(), "map"), gopurs_runtime.Apply2(Get_mapMaybe(), gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(dictFunctor_0)}, f_1), (*Constructor_Yield[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V1))
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (v_3.Type == 9 && v_3.IntVal == 813447293) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 813447293, UnsafePtr: unsafe.Pointer(&Constructor_Skip[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Lazy.Get_functorLazy(), "map"), gopurs_runtime.Apply2(Get_mapMaybe(), gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(dictFunctor_0)}, f_1), (*Constructor_Skip[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V0)})}
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (v_3.Type == 9 && v_3.IntVal == 489128924) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 489128924, UnsafePtr: unsafe.Pointer(nil)}
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_0:
+return __t0
+}), v_2)
 }
 
 func Call_mapMaybe(dictFunctor_0_loop *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value], f_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -2111,6 +2545,62 @@ return loop_4_2_2
 })
 }
 
+func Call_filter_ForAll_f_a_ConstrainedType_Data_Functor_Functor_Any_Func_Func_Any_Boolean_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any(dictFunctor_0_loop *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value], f_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictFunctor_0 *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value] = dictFunctor_0_loop
+_ = dictFunctor_0
+var f_1 gopurs_runtime.Value = f_1_loop
+_ = f_1
+var v_2 gopurs_runtime.Value = v_2_loop
+_ = v_2
+return gopurs_runtime.Apply2(dictFunctor_0.V0, gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t0 gopurs_runtime.Value
+{
+if (v_3.Type == 9 && v_3.IntVal == 1320412129) {
+s_prime_4_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Lazy.Get_functorLazy(), "map"), gopurs_runtime.Apply2(Get_filter(), gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(dictFunctor_0)}, f_1), (*Constructor_Yield[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V1)
+_ = s_prime_4_1
+var __t2 gopurs_runtime.Value
+{
+if (gopurs_runtime.Apply(f_1, (*Constructor_Yield[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V0).IntVal) != (0) {
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: 1320412129, UnsafePtr: unsafe.Pointer(&Constructor_Yield[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*Constructor_Yield[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V0, s_prime_4_1})}
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: 813447293, UnsafePtr: unsafe.Pointer(&Constructor_Skip[gopurs_runtime.Value, gopurs_runtime.Value]{1, s_prime_4_1})}
+}
+end_branch_2:
+__t0 = __t2
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (v_3.Type == 9 && v_3.IntVal == 813447293) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 813447293, UnsafePtr: unsafe.Pointer(&Constructor_Skip[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Lazy.Get_functorLazy(), "map"), gopurs_runtime.Apply2(Get_filter(), gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(dictFunctor_0)}, f_1), (*Constructor_Skip[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V0)})}
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (v_3.Type == 9 && v_3.IntVal == 489128924) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 489128924, UnsafePtr: unsafe.Pointer(nil)}
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_0:
+return __t0
+}), v_2)
+}
+
 func Call_filter(dictFunctor_0_loop *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value], f_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictFunctor_0 *pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value] = dictFunctor_0_loop
 _ = dictFunctor_0
@@ -2223,6 +2713,62 @@ return __t0
 }), v_2)
 }
 
+func Call_dropWhile_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Func_Any_Boolean_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any(dictApplicative_0_loop *pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dictApplicative_0 *pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value] = dictApplicative_0_loop
+_ = dictApplicative_0
+Functor0_1_0 := gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(dictApplicative_0.V0, gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
+_ = Functor0_1_0
+return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Functor0_1_0.V0, gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t1 gopurs_runtime.Value
+{
+if (v_4.Type == 9 && v_4.IntVal == 1320412129) {
+var __t2 gopurs_runtime.Value
+{
+if (gopurs_runtime.Apply(f_2, (*Constructor_Yield[gopurs_runtime.Value, gopurs_runtime.Value])(v_4.UnsafePtr).V0).IntVal) != (0) {
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: 813447293, UnsafePtr: unsafe.Pointer(&Constructor_Skip[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Lazy.Get_functorLazy(), "map"), gopurs_runtime.Apply(Call_dropWhile(dictApplicative_0), f_2), (*Constructor_Yield[gopurs_runtime.Value, gopurs_runtime.Value])(v_4.UnsafePtr).V1)})}
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: 1320412129, UnsafePtr: unsafe.Pointer(&Constructor_Yield[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*Constructor_Yield[gopurs_runtime.Value, gopurs_runtime.Value])(v_4.UnsafePtr).V0, (*Constructor_Yield[gopurs_runtime.Value, gopurs_runtime.Value])(v_4.UnsafePtr).V1})}
+}
+end_branch_2:
+__t1 = __t2
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (v_4.Type == 9 && v_4.IntVal == 813447293) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 813447293, UnsafePtr: unsafe.Pointer(&Constructor_Skip[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Lazy.Get_functorLazy(), "map"), gopurs_runtime.Apply(Call_dropWhile(dictApplicative_0), f_2), (*Constructor_Skip[gopurs_runtime.Value, gopurs_runtime.Value])(v_4.UnsafePtr).V0)})}
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (v_4.Type == 9 && v_4.IntVal == 489128924) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 489128924, UnsafePtr: unsafe.Pointer(nil)}
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_1:
+return __t1
+}), v_3)
+})
+})
+}
+
 func Call_dropWhile(dictApplicative_0_loop *pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]) gopurs_runtime.Value {
 var dictApplicative_0 *pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value] = dictApplicative_0_loop
 _ = dictApplicative_0
@@ -2331,6 +2877,62 @@ __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 end_branch_1:
 return __t1
 }), v_3)
+})
+})
+}
+
+func Call_drop_ForAll_f_a_ConstrainedType_Control_Applicative_Applicative_Any_Func_Int_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any_TypeApp_Any_ADT_Control_Monad_List_Trans_Step_Any_ADT_Control_Monad_List_Trans_ListT_Any_Any(dictApplicative_0_loop *pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dictApplicative_0 *pkg_Control_Applicative.Constructor_Applicative[gopurs_runtime.Value] = dictApplicative_0_loop
+_ = dictApplicative_0
+Functor0_1_0 := gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(dictApplicative_0.V0, gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
+_ = Functor0_1_0
+return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t2 gopurs_runtime.Value
+{
+if (v_2.IntVal) == (0) {
+__t2 = v1_3
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = gopurs_runtime.Apply2(Functor0_1_0.V0, gopurs_runtime.Func(func(v2_4 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t1 gopurs_runtime.Value
+{
+if (v2_4.Type == 9 && v2_4.IntVal == 1320412129) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 813447293, UnsafePtr: unsafe.Pointer(&Constructor_Skip[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Lazy.Get_functorLazy(), "map"), gopurs_runtime.Apply(Call_drop(dictApplicative_0), gopurs_runtime.Int((v_2.IntVal) - (1))), (*Constructor_Yield[gopurs_runtime.Value, gopurs_runtime.Value])(v2_4.UnsafePtr).V1)})}
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (v2_4.Type == 9 && v2_4.IntVal == 813447293) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 813447293, UnsafePtr: unsafe.Pointer(&Constructor_Skip[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Lazy.Get_functorLazy(), "map"), gopurs_runtime.Apply(Call_drop(dictApplicative_0), v_2), (*Constructor_Skip[gopurs_runtime.Value, gopurs_runtime.Value])(v2_4.UnsafePtr).V0)})}
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (v2_4.Type == 9 && v2_4.IntVal == 489128924) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 489128924, UnsafePtr: unsafe.Pointer(nil)}
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_1:
+return __t1
+}), v1_3)
+}
+end_branch_2:
+return __t2
 })
 })
 }

@@ -6,7 +6,6 @@ import (
 	pkg_Data_HeytingAlgebra "gopurs/output/Data.HeytingAlgebra"
 	pkg_Data_Maybe "gopurs/output/Data.Maybe"
 	pkg_Data_Number "gopurs/output/Data.Number"
-	pkg_Data_Ord "gopurs/output/Data.Ord"
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
 	unsafe "unsafe"
@@ -485,8 +484,7 @@ var __t0 gopurs_runtime.Value
 {
 var __t1 gopurs_runtime.Value
 {
-var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Int(n_0), gopurs_runtime.Int(2))
-if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 1527465420) {
+if (n_0) < (2) {
 __t1 = gopurs_runtime.Bool(false)
 goto end_branch_1
 } else {
@@ -497,21 +495,20 @@ goto end_branch_1
 __t1 = gopurs_runtime.Bool(true)
 }
 end_branch_1:
-var __t3 gopurs_runtime.Value
+var __t2 gopurs_runtime.Value
 {
-var __t_tag_4 gopurs_runtime.Value = gopurs_runtime.Apply5(pkg_Data_Ord.Get_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: 1527465420, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 902936544, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Value{Type: 9, IntVal: 380165415, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.Int(n_0), gopurs_runtime.Int(36))
-if (__t_tag_4.Type == 9 && __t_tag_4.IntVal == 380165415) {
-__t3 = gopurs_runtime.Bool(false)
-goto end_branch_3
+if (n_0) > (36) {
+__t2 = gopurs_runtime.Bool(false)
+goto end_branch_2
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.Bool(true)
+__t2 = gopurs_runtime.Bool(true)
 }
-end_branch_3:
-if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), __t1, __t3).IntVal) != (0) {
+end_branch_2:
+if (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_HeytingAlgebra.Get_heytingAlgebraBoolean(), "conj"), __t1, __t2).IntVal) != (0) {
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[pkg_Data_Maybe.Constructor_Just[int64]](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&pkg_Data_Maybe.Constructor_Just[gopurs_runtime.Value]{1, gopurs_runtime.Int(n_0)})}))}
 goto end_branch_0
 } else {
@@ -546,8 +543,7 @@ goto end_branch_2
 {
 var __t3 gopurs_runtime.Value
 {
-var __t_tag_4 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordNumber(), "compare"), gopurs_runtime.Float(x_0), gopurs_runtime.Apply(Get_toNumber(), gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedInt(), "top")))
-if (__t_tag_4.Type == 9 && __t_tag_4.IntVal == 1527465420) {
+if (x_0) < (gopurs_runtime.Apply(Get_toNumber(), gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedInt(), "top")).FloatVal()) {
 __t3 = gopurs_runtime.Bool(false)
 goto end_branch_3
 } else {
@@ -566,21 +562,20 @@ goto end_branch_2
 }
 }
 {
-var __t5 gopurs_runtime.Value
+var __t4 gopurs_runtime.Value
 {
-var __t_tag_6 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Ord.Get_ordNumber(), "compare"), gopurs_runtime.Float(x_0), gopurs_runtime.Apply(Get_toNumber(), gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedInt(), "bottom")))
-if (__t_tag_6.Type == 9 && __t_tag_6.IntVal == 380165415) {
-__t5 = gopurs_runtime.Bool(false)
-goto end_branch_5
+if (x_0) > (gopurs_runtime.Apply(Get_toNumber(), gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedInt(), "bottom")).FloatVal()) {
+__t4 = gopurs_runtime.Bool(false)
+goto end_branch_4
 } else {
 
 }
 }
 {
-__t5 = gopurs_runtime.Bool(true)
+__t4 = gopurs_runtime.Bool(true)
 }
-end_branch_5:
-if (__t5.IntVal) != (0) {
+end_branch_4:
+if (__t4.IntVal) != (0) {
 __t2 = gopurs_runtime.Int(gopurs_runtime.RecordGet(pkg_Data_Bounded.Get_boundedInt(), "bottom").IntVal)
 goto end_branch_2
 } else {

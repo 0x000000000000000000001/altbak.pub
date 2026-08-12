@@ -226,16 +226,11 @@ _ = dictIsSymbol_1
 return gopurs_runtime.RecordDict1("genericShow'", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 ctor_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_1, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: 513803634, UnsafePtr: unsafe.Pointer(nil)}).StrVal()
 _ = ctor_3_0
-v1_4_1 := func() []string {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShowArgs_0, "genericShowArgs"), v_2).UnsafePtr)
-					unboxed := make([]string, len(arr))
-					for i, v := range arr { unboxed[i] = v.StrVal() }
-					return unboxed
-				}()
+v1_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShowArgs_0, "genericShowArgs"), v_2)
 _ = v1_4_1
 var __t2 gopurs_runtime.Value
 {
-if (gopurs_runtime.Int(int64(len(v1_4_1))).IntVal) == (0) {
+if (gopurs_runtime.Int(int64(gopurs_runtime.ArrayLength(v1_4_1))).IntVal) == (0) {
 __t2 = gopurs_runtime.Str(ctor_3_0)
 goto end_branch_2
 } else {
@@ -248,12 +243,7 @@ __t2 = gopurs_runtime.Str(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Dat
 					boxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { boxed[i] = gopurs_runtime.Str(v) }
 					return gopurs_runtime.Array(boxed)
-				}(), func() gopurs_runtime.Value {
-					arr := v1_4_1
-					boxed := make([]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { boxed[i] = gopurs_runtime.Str(v) }
-					return gopurs_runtime.Array(boxed)
-				}())), gopurs_runtime.Str(")"))).StrVal())
+				}(), v1_4_1)), gopurs_runtime.Str(")"))).StrVal())
 }
 end_branch_2:
 return gopurs_runtime.Str(__t2.StrVal())

@@ -284,6 +284,122 @@ return Call_over__gopurs_runtime_Value_3140749367(gopurs_runtime.CoerceToStruct[
 	return cache_over__gopurs_runtime_Value_3140749367
 }
 
+var cache_foldableInterval_ADT_Data_Foldable_Foldable_ADT_Data_Interval_Interval_Any gopurs_runtime.Value
+var once_foldableInterval_ADT_Data_Foldable_Foldable_ADT_Data_Interval_Interval_Any sync.Once
+func Get_foldableInterval_ADT_Data_Foldable_Foldable_ADT_Data_Interval_Interval_Any() gopurs_runtime.Value {
+	once_foldableInterval_ADT_Data_Foldable_Foldable_ADT_Data_Interval_Interval_Any.Do(func() {
+		cache_foldableInterval_ADT_Data_Foldable_Foldable_ADT_Data_Interval_Interval_Any = gopurs_runtime.RecordDict3("foldMap", "foldl", "foldr", gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
+Semigroup0_1_0 := gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
+_ = Semigroup0_1_0
+mempty_2_1 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
+_ = mempty_2_1
+return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_foldableInterval(), "foldl"), gopurs_runtime.Func(func(acc_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Semigroup0_1_0.V0, acc_4, gopurs_runtime.Apply(f_3, x_5))
+})
+}), mempty_2_1)
+})
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t2 gopurs_runtime.Value
+{
+if (v2_2.Type == 9 && v2_2.IntVal == 237113226) {
+__t2 = gopurs_runtime.Apply2(v_0, gopurs_runtime.Apply2(v_0, v1_1, (*Constructor_StartEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0), (*Constructor_StartEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V1)
+goto end_branch_2
+} else {
+
+}
+}
+{
+if (v2_2.Type == 9 && v2_2.IntVal == 1992629780) {
+__t2 = gopurs_runtime.Apply2(v_0, v1_1, (*Constructor_DurationEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V1)
+goto end_branch_2
+} else {
+
+}
+}
+{
+if (v2_2.Type == 9 && v2_2.IntVal == 2020675835) {
+__t2 = gopurs_runtime.Apply2(v_0, v1_1, (*Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0)
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = v1_1
+}
+end_branch_2:
+return __t2
+})
+})
+}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(pkg_Data_Foldable.Get_foldrDefault(), Get_foldableInterval(), x_0)
+}))
+	})
+	return cache_foldableInterval_ADT_Data_Foldable_Foldable_ADT_Data_Interval_Interval_Any
+}
+
+var cache_foldableInterval_Record_Row_foldr_ForAll_a_b_Func_Func_Any_Any_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_foldl_ForAll_a_b_Func_Func_Any_Any_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_foldMap_ForAll_a_m_ConstrainedType_Data_Monoid_Monoid_Any_Func_Func_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_Any gopurs_runtime.Value
+var once_foldableInterval_Record_Row_foldr_ForAll_a_b_Func_Func_Any_Any_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_foldl_ForAll_a_b_Func_Func_Any_Any_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_foldMap_ForAll_a_m_ConstrainedType_Data_Monoid_Monoid_Any_Func_Func_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_Any sync.Once
+func Get_foldableInterval_Record_Row_foldr_ForAll_a_b_Func_Func_Any_Any_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_foldl_ForAll_a_b_Func_Func_Any_Any_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_foldMap_ForAll_a_m_ConstrainedType_Data_Monoid_Monoid_Any_Func_Func_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_Any() gopurs_runtime.Value {
+	once_foldableInterval_Record_Row_foldr_ForAll_a_b_Func_Func_Any_Any_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_foldl_ForAll_a_b_Func_Func_Any_Any_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_foldMap_ForAll_a_m_ConstrainedType_Data_Monoid_Monoid_Any_Func_Func_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_Any.Do(func() {
+		cache_foldableInterval_Record_Row_foldr_ForAll_a_b_Func_Func_Any_Any_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_foldl_ForAll_a_b_Func_Func_Any_Any_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_foldMap_ForAll_a_m_ConstrainedType_Data_Monoid_Monoid_Any_Func_Func_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_Any = gopurs_runtime.RecordDict3("foldMap", "foldl", "foldr", gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
+Semigroup0_1_0 := gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
+_ = Semigroup0_1_0
+mempty_2_1 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
+_ = mempty_2_1
+return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_foldableInterval(), "foldl"), gopurs_runtime.Func(func(acc_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Semigroup0_1_0.V0, acc_4, gopurs_runtime.Apply(f_3, x_5))
+})
+}), mempty_2_1)
+})
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t2 gopurs_runtime.Value
+{
+if (v2_2.Type == 9 && v2_2.IntVal == 237113226) {
+__t2 = gopurs_runtime.Apply2(v_0, gopurs_runtime.Apply2(v_0, v1_1, (*Constructor_StartEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0), (*Constructor_StartEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V1)
+goto end_branch_2
+} else {
+
+}
+}
+{
+if (v2_2.Type == 9 && v2_2.IntVal == 1992629780) {
+__t2 = gopurs_runtime.Apply2(v_0, v1_1, (*Constructor_DurationEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V1)
+goto end_branch_2
+} else {
+
+}
+}
+{
+if (v2_2.Type == 9 && v2_2.IntVal == 2020675835) {
+__t2 = gopurs_runtime.Apply2(v_0, v1_1, (*Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value])(v2_2.UnsafePtr).V0)
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = v1_1
+}
+end_branch_2:
+return __t2
+})
+})
+}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(pkg_Data_Foldable.Get_foldrDefault(), Get_foldableInterval(), x_0)
+}))
+	})
+	return cache_foldableInterval_Record_Row_foldr_ForAll_a_b_Func_Func_Any_Any_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_foldl_ForAll_a_b_Func_Func_Any_Any_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_foldMap_ForAll_a_m_ConstrainedType_Data_Monoid_Monoid_Any_Func_Func_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_Any
+}
+
 var cache_foldableInterval gopurs_runtime.Value
 var once_foldableInterval sync.Once
 func Get_foldableInterval() gopurs_runtime.Value {
@@ -456,6 +572,43 @@ return gopurs_runtime.Apply2(pkg_Data_Foldable.Get_foldrDefault(), Get_foldableI
 }))
 	})
 	return cache_foldableInterval__gopurs_runtime_Value_526261656
+}
+
+var cache_foldableRecurringInterval_Record_Row_foldr_ForAll_a_b_Func_Func_Any_Any_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_foldl_ForAll_a_b_Func_Func_Any_Any_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_foldMap_ForAll_a_m_ConstrainedType_Data_Monoid_Monoid_Any_Func_Func_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_Any gopurs_runtime.Value
+var once_foldableRecurringInterval_Record_Row_foldr_ForAll_a_b_Func_Func_Any_Any_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_foldl_ForAll_a_b_Func_Func_Any_Any_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_foldMap_ForAll_a_m_ConstrainedType_Data_Monoid_Monoid_Any_Func_Func_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_Any sync.Once
+func Get_foldableRecurringInterval_Record_Row_foldr_ForAll_a_b_Func_Func_Any_Any_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_foldl_ForAll_a_b_Func_Func_Any_Any_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_foldMap_ForAll_a_m_ConstrainedType_Data_Monoid_Monoid_Any_Func_Func_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_Any() gopurs_runtime.Value {
+	once_foldableRecurringInterval_Record_Row_foldr_ForAll_a_b_Func_Func_Any_Any_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_foldl_ForAll_a_b_Func_Func_Any_Any_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_foldMap_ForAll_a_m_ConstrainedType_Data_Monoid_Monoid_Any_Func_Func_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_Any.Do(func() {
+		cache_foldableRecurringInterval_Record_Row_foldr_ForAll_a_b_Func_Func_Any_Any_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_foldl_ForAll_a_b_Func_Func_Any_Any_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_foldMap_ForAll_a_m_ConstrainedType_Data_Monoid_Monoid_Any_Func_Func_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_Any = gopurs_runtime.RecordDict3("foldMap", "foldl", "foldr", gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
+Semigroup0_1_0 := gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
+_ = Semigroup0_1_0
+mempty_2_1 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
+_ = mempty_2_1
+return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_foldableRecurringInterval(), "foldl"), gopurs_runtime.Func(func(acc_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Semigroup0_1_0.V0, acc_4, gopurs_runtime.Apply(f_3, x_5))
+})
+}), mempty_2_1)
+})
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(i_1 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_2_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_foldableInterval(), "foldl"), f_0, i_1)
+_ = __local_var_2_2
+return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_2_2, (*Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value])(x_3.UnsafePtr).V1)
+})
+})
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(i_1 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_2_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_foldableInterval(), "foldr"), f_0, i_1)
+_ = __local_var_2_3
+return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_2_3, (*Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value])(x_3.UnsafePtr).V1)
+})
+})
+}))
+	})
+	return cache_foldableRecurringInterval_Record_Row_foldr_ForAll_a_b_Func_Func_Any_Any_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_foldl_ForAll_a_b_Func_Func_Any_Any_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_foldMap_ForAll_a_m_ConstrainedType_Data_Monoid_Monoid_Any_Func_Func_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_Any
 }
 
 var cache_foldableRecurringInterval gopurs_runtime.Value
@@ -944,6 +1097,72 @@ return __local_var_2_0
 	return cache_extendRecurringInterval
 }
 
+var cache_traversableInterval_ADT_Data_Traversable_Traversable_ADT_Data_Interval_Interval_Any gopurs_runtime.Value
+var once_traversableInterval_ADT_Data_Traversable_Traversable_ADT_Data_Interval_Interval_Any sync.Once
+func Get_traversableInterval_ADT_Data_Traversable_Traversable_ADT_Data_Interval_Interval_Any() gopurs_runtime.Value {
+	once_traversableInterval_ADT_Data_Traversable_Traversable_ADT_Data_Interval_Interval_Any.Do(func() {
+		cache_traversableInterval_ADT_Data_Traversable_Traversable_ADT_Data_Interval_Interval_Any = gopurs_runtime.RecordDict4("Foldable1", "Functor0", "sequence", "traverse", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_foldableInterval()
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_functorInterval()
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_traversableInterval(), "traverse"), dictApplicative_0, pkg_Data_Traversable.Get_identity())
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+Apply0_1_0 := gopurs_runtime.CoerceToStruct[pkg_Control_Apply.Constructor_Apply[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}))
+_ = Apply0_1_0
+Functor0_2_1 := gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
+_ = Functor0_2_1
+return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t2 gopurs_runtime.Value
+{
+if (v1_4.Type == 9 && v1_4.IntVal == 237113226) {
+__t2 = gopurs_runtime.Apply2(Apply0_1_0.V1, gopurs_runtime.Apply2(Functor0_2_1.V0, Get_StartEnd(), gopurs_runtime.Apply(v_3, (*Constructor_StartEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v1_4.UnsafePtr).V0)), gopurs_runtime.Apply(v_3, (*Constructor_StartEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v1_4.UnsafePtr).V1))
+goto end_branch_2
+} else {
+
+}
+}
+{
+if (v1_4.Type == 9 && v1_4.IntVal == 1992629780) {
+__t2 = gopurs_runtime.Apply2(Functor0_2_1.V0, gopurs_runtime.Apply(Get_DurationEnd(), (*Constructor_DurationEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v1_4.UnsafePtr).V0), gopurs_runtime.Apply(v_3, (*Constructor_DurationEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v1_4.UnsafePtr).V1))
+goto end_branch_2
+} else {
+
+}
+}
+{
+if (v1_4.Type == 9 && v1_4.IntVal == 2020675835) {
+__local_var_5_3 := (*Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value])(v1_4.UnsafePtr).V1
+_ = __local_var_5_3
+__t2 = gopurs_runtime.Apply2(Functor0_2_1.V0, gopurs_runtime.Func(func(v2_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2020675835, UnsafePtr: unsafe.Pointer(&Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value]{1, v2_6, __local_var_5_3})}
+}), gopurs_runtime.Apply(v_3, (*Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value])(v1_4.UnsafePtr).V0))
+goto end_branch_2
+} else {
+
+}
+}
+{
+if (v1_4.Type == 9 && v1_4.IntVal == 2281256335) {
+__t2 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), gopurs_runtime.Value{Type: 9, IntVal: 2281256335, UnsafePtr: unsafe.Pointer(&Constructor_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*Constructor_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value])(v1_4.UnsafePtr).V0})})
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_2:
+return __t2
+})
+})
+}))
+	})
+	return cache_traversableInterval_ADT_Data_Traversable_Traversable_ADT_Data_Interval_Interval_Any
+}
+
 var cache_traversableInterval gopurs_runtime.Value
 var once_traversableInterval sync.Once
 func Get_traversableInterval() gopurs_runtime.Value {
@@ -1097,6 +1316,154 @@ return Call_over(Functor0_1_0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Ge
 }))
 	})
 	return cache_traversableRecurringInterval
+}
+
+var cache_bifoldableInterval_ADT_Data_Bifoldable_Bifoldable_ADT_Data_Interval_Interval gopurs_runtime.Value
+var once_bifoldableInterval_ADT_Data_Bifoldable_Bifoldable_ADT_Data_Interval_Interval sync.Once
+func Get_bifoldableInterval_ADT_Data_Bifoldable_Bifoldable_ADT_Data_Interval_Interval() gopurs_runtime.Value {
+	once_bifoldableInterval_ADT_Data_Bifoldable_Bifoldable_ADT_Data_Interval_Interval.Do(func() {
+		cache_bifoldableInterval_ADT_Data_Bifoldable_Bifoldable_ADT_Data_Interval_Interval = gopurs_runtime.RecordDict3("bifoldMap", "bifoldl", "bifoldr", gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
+Semigroup0_1_0 := gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
+_ = Semigroup0_1_0
+mempty_2_1 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
+_ = mempty_2_1
+return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(g_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_bifoldableInterval(), "bifoldl"), gopurs_runtime.Func(func(m_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Semigroup0_1_0.V0, m_5, gopurs_runtime.Apply(f_3, a_6))
+})
+}), gopurs_runtime.Func(func(m_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Semigroup0_1_0.V0, m_5, gopurs_runtime.Apply(g_4, b_6))
+})
+}), mempty_2_1)
+})
+})
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v3_3 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t2 gopurs_runtime.Value
+{
+if (v3_3.Type == 9 && v3_3.IntVal == 237113226) {
+__t2 = gopurs_runtime.Apply2(v1_1, gopurs_runtime.Apply2(v1_1, v2_2, (*Constructor_StartEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v3_3.UnsafePtr).V0), (*Constructor_StartEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v3_3.UnsafePtr).V1)
+goto end_branch_2
+} else {
+
+}
+}
+{
+if (v3_3.Type == 9 && v3_3.IntVal == 1992629780) {
+__t2 = gopurs_runtime.Apply2(v1_1, gopurs_runtime.Apply2(v_0, v2_2, (*Constructor_DurationEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v3_3.UnsafePtr).V0), (*Constructor_DurationEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v3_3.UnsafePtr).V1)
+goto end_branch_2
+} else {
+
+}
+}
+{
+if (v3_3.Type == 9 && v3_3.IntVal == 2020675835) {
+__t2 = gopurs_runtime.Apply2(v1_1, gopurs_runtime.Apply2(v_0, v2_2, (*Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value])(v3_3.UnsafePtr).V1), (*Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value])(v3_3.UnsafePtr).V0)
+goto end_branch_2
+} else {
+
+}
+}
+{
+if (v3_3.Type == 9 && v3_3.IntVal == 2281256335) {
+__t2 = gopurs_runtime.Apply2(v_0, v2_2, (*Constructor_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value])(v3_3.UnsafePtr).V0)
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_2:
+return __t2
+})
+})
+})
+}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(pkg_Data_Bifoldable.Get_bifoldrDefault(), Get_bifoldableInterval(), x_0)
+}))
+	})
+	return cache_bifoldableInterval_ADT_Data_Bifoldable_Bifoldable_ADT_Data_Interval_Interval
+}
+
+var cache_bifoldableInterval_Record_Row_bifoldr_ForAll_a_b_c_Func_Func_Any_Any_Any_Func_Any_Any_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_bifoldl_ForAll_a_b_c_Func_Func_Any_Any_Any_Func_Any_Any_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_bifoldMap_ForAll_m_a_b_ConstrainedType_Data_Monoid_Monoid_Any_Func_Func_Any_Any_Func_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_Any gopurs_runtime.Value
+var once_bifoldableInterval_Record_Row_bifoldr_ForAll_a_b_c_Func_Func_Any_Any_Any_Func_Any_Any_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_bifoldl_ForAll_a_b_c_Func_Func_Any_Any_Any_Func_Any_Any_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_bifoldMap_ForAll_m_a_b_ConstrainedType_Data_Monoid_Monoid_Any_Func_Func_Any_Any_Func_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_Any sync.Once
+func Get_bifoldableInterval_Record_Row_bifoldr_ForAll_a_b_c_Func_Func_Any_Any_Any_Func_Any_Any_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_bifoldl_ForAll_a_b_c_Func_Func_Any_Any_Any_Func_Any_Any_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_bifoldMap_ForAll_m_a_b_ConstrainedType_Data_Monoid_Monoid_Any_Func_Func_Any_Any_Func_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_Any() gopurs_runtime.Value {
+	once_bifoldableInterval_Record_Row_bifoldr_ForAll_a_b_c_Func_Func_Any_Any_Any_Func_Any_Any_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_bifoldl_ForAll_a_b_c_Func_Func_Any_Any_Any_Func_Any_Any_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_bifoldMap_ForAll_m_a_b_ConstrainedType_Data_Monoid_Monoid_Any_Func_Func_Any_Any_Func_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_Any.Do(func() {
+		cache_bifoldableInterval_Record_Row_bifoldr_ForAll_a_b_c_Func_Func_Any_Any_Any_Func_Any_Any_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_bifoldl_ForAll_a_b_c_Func_Func_Any_Any_Any_Func_Any_Any_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_bifoldMap_ForAll_m_a_b_ConstrainedType_Data_Monoid_Monoid_Any_Func_Func_Any_Any_Func_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_Any = gopurs_runtime.RecordDict3("bifoldMap", "bifoldl", "bifoldr", gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
+Semigroup0_1_0 := gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
+_ = Semigroup0_1_0
+mempty_2_1 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
+_ = mempty_2_1
+return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(g_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_bifoldableInterval(), "bifoldl"), gopurs_runtime.Func(func(m_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Semigroup0_1_0.V0, m_5, gopurs_runtime.Apply(f_3, a_6))
+})
+}), gopurs_runtime.Func(func(m_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Semigroup0_1_0.V0, m_5, gopurs_runtime.Apply(g_4, b_6))
+})
+}), mempty_2_1)
+})
+})
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v3_3 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t2 gopurs_runtime.Value
+{
+if (v3_3.Type == 9 && v3_3.IntVal == 237113226) {
+__t2 = gopurs_runtime.Apply2(v1_1, gopurs_runtime.Apply2(v1_1, v2_2, (*Constructor_StartEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v3_3.UnsafePtr).V0), (*Constructor_StartEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v3_3.UnsafePtr).V1)
+goto end_branch_2
+} else {
+
+}
+}
+{
+if (v3_3.Type == 9 && v3_3.IntVal == 1992629780) {
+__t2 = gopurs_runtime.Apply2(v1_1, gopurs_runtime.Apply2(v_0, v2_2, (*Constructor_DurationEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v3_3.UnsafePtr).V0), (*Constructor_DurationEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v3_3.UnsafePtr).V1)
+goto end_branch_2
+} else {
+
+}
+}
+{
+if (v3_3.Type == 9 && v3_3.IntVal == 2020675835) {
+__t2 = gopurs_runtime.Apply2(v1_1, gopurs_runtime.Apply2(v_0, v2_2, (*Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value])(v3_3.UnsafePtr).V1), (*Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value])(v3_3.UnsafePtr).V0)
+goto end_branch_2
+} else {
+
+}
+}
+{
+if (v3_3.Type == 9 && v3_3.IntVal == 2281256335) {
+__t2 = gopurs_runtime.Apply2(v_0, v2_2, (*Constructor_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value])(v3_3.UnsafePtr).V0)
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_2:
+return __t2
+})
+})
+})
+}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(pkg_Data_Bifoldable.Get_bifoldrDefault(), Get_bifoldableInterval(), x_0)
+}))
+	})
+	return cache_bifoldableInterval_Record_Row_bifoldr_ForAll_a_b_c_Func_Func_Any_Any_Any_Func_Any_Any_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_bifoldl_ForAll_a_b_c_Func_Func_Any_Any_Any_Func_Any_Any_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_bifoldMap_ForAll_m_a_b_ConstrainedType_Data_Monoid_Monoid_Any_Func_Func_Any_Any_Func_Any_Any_ADT_Data_Interval_Interval_Any_Any_Any_Any
 }
 
 var cache_bifoldableInterval gopurs_runtime.Value
@@ -1321,6 +1688,53 @@ return gopurs_runtime.Apply2(pkg_Data_Bifoldable.Get_bifoldrDefault(), Get_bifol
 	return cache_bifoldableInterval__gopurs_runtime_Value_740659151
 }
 
+var cache_bifoldableRecurringInterval_Record_Row_bifoldr_ForAll_a_b_c_Func_Func_Any_Any_Any_Func_Any_Any_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_bifoldl_ForAll_a_b_c_Func_Func_Any_Any_Any_Func_Any_Any_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_bifoldMap_ForAll_m_a_b_ConstrainedType_Data_Monoid_Monoid_Any_Func_Func_Any_Any_Func_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_Any gopurs_runtime.Value
+var once_bifoldableRecurringInterval_Record_Row_bifoldr_ForAll_a_b_c_Func_Func_Any_Any_Any_Func_Any_Any_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_bifoldl_ForAll_a_b_c_Func_Func_Any_Any_Any_Func_Any_Any_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_bifoldMap_ForAll_m_a_b_ConstrainedType_Data_Monoid_Monoid_Any_Func_Func_Any_Any_Func_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_Any sync.Once
+func Get_bifoldableRecurringInterval_Record_Row_bifoldr_ForAll_a_b_c_Func_Func_Any_Any_Any_Func_Any_Any_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_bifoldl_ForAll_a_b_c_Func_Func_Any_Any_Any_Func_Any_Any_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_bifoldMap_ForAll_m_a_b_ConstrainedType_Data_Monoid_Monoid_Any_Func_Func_Any_Any_Func_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_Any() gopurs_runtime.Value {
+	once_bifoldableRecurringInterval_Record_Row_bifoldr_ForAll_a_b_c_Func_Func_Any_Any_Any_Func_Any_Any_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_bifoldl_ForAll_a_b_c_Func_Func_Any_Any_Any_Func_Any_Any_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_bifoldMap_ForAll_m_a_b_ConstrainedType_Data_Monoid_Monoid_Any_Func_Func_Any_Any_Func_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_Any.Do(func() {
+		cache_bifoldableRecurringInterval_Record_Row_bifoldr_ForAll_a_b_c_Func_Func_Any_Any_Any_Func_Any_Any_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_bifoldl_ForAll_a_b_c_Func_Func_Any_Any_Any_Func_Any_Any_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_bifoldMap_ForAll_m_a_b_ConstrainedType_Data_Monoid_Monoid_Any_Func_Func_Any_Any_Func_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_Any = gopurs_runtime.RecordDict3("bifoldMap", "bifoldl", "bifoldr", gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
+Semigroup0_1_0 := gopurs_runtime.CoerceToStruct[pkg_Data_Semigroup.Constructor_Semigroup[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
+_ = Semigroup0_1_0
+mempty_2_1 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
+_ = mempty_2_1
+return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(g_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_bifoldableRecurringInterval(), "bifoldl"), gopurs_runtime.Func(func(m_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Semigroup0_1_0.V0, m_5, gopurs_runtime.Apply(f_3, a_6))
+})
+}), gopurs_runtime.Func(func(m_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Semigroup0_1_0.V0, m_5, gopurs_runtime.Apply(g_4, b_6))
+})
+}), mempty_2_1)
+})
+})
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(g_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(i_2 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_3_2 := gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_bifoldableInterval(), "bifoldl"), f_0, g_1, i_2)
+_ = __local_var_3_2
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_3_2, (*Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value])(x_4.UnsafePtr).V1)
+})
+})
+})
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(g_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(i_2 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_3_3 := gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_bifoldableInterval(), "bifoldr"), f_0, g_1, i_2)
+_ = __local_var_3_3
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_3_3, (*Constructor_RecurringInterval[gopurs_runtime.Value, gopurs_runtime.Value])(x_4.UnsafePtr).V1)
+})
+})
+})
+}))
+	})
+	return cache_bifoldableRecurringInterval_Record_Row_bifoldr_ForAll_a_b_c_Func_Func_Any_Any_Any_Func_Any_Any_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_bifoldl_ForAll_a_b_c_Func_Func_Any_Any_Any_Func_Any_Any_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_bifoldMap_ForAll_m_a_b_ConstrainedType_Data_Monoid_Monoid_Any_Func_Func_Any_Any_Func_Any_Any_ADT_Data_Interval_RecurringInterval_Any_Any_Any_Any
+}
+
 var cache_bifoldableRecurringInterval gopurs_runtime.Value
 var once_bifoldableRecurringInterval sync.Once
 func Get_bifoldableRecurringInterval() gopurs_runtime.Value {
@@ -1413,6 +1827,70 @@ return gopurs_runtime.Apply(__local_var_3_3, (*Constructor_RecurringInterval[gop
 }))
 	})
 	return cache_bifoldableRecurringInterval__gopurs_runtime_Value_4077340974
+}
+
+var cache_bitraversableInterval_ADT_Data_Bitraversable_Bitraversable_ADT_Data_Interval_Interval gopurs_runtime.Value
+var once_bitraversableInterval_ADT_Data_Bitraversable_Bitraversable_ADT_Data_Interval_Interval sync.Once
+func Get_bitraversableInterval_ADT_Data_Bitraversable_Bitraversable_ADT_Data_Interval_Interval() gopurs_runtime.Value {
+	once_bitraversableInterval_ADT_Data_Bitraversable_Bitraversable_ADT_Data_Interval_Interval.Do(func() {
+		cache_bitraversableInterval_ADT_Data_Bitraversable_Bitraversable_ADT_Data_Interval_Interval = gopurs_runtime.RecordDict4("Bifoldable1", "Bifunctor0", "bisequence", "bitraverse", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_bifoldableInterval()
+}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_bifunctorInterval()
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_bitraversableInterval(), "bitraverse"), dictApplicative_0, pkg_Data_Bitraversable.Get_identity(), pkg_Data_Bitraversable.Get_identity1())
+}), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
+Apply0_1_0 := gopurs_runtime.CoerceToStruct[pkg_Control_Apply.Constructor_Apply[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}))
+_ = Apply0_1_0
+Functor0_2_1 := gopurs_runtime.CoerceToStruct[pkg_Data_Functor.Constructor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
+_ = Functor0_2_1
+return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v2_5 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t2 gopurs_runtime.Value
+{
+if (v2_5.Type == 9 && v2_5.IntVal == 237113226) {
+__t2 = gopurs_runtime.Apply2(Apply0_1_0.V1, gopurs_runtime.Apply2(Functor0_2_1.V0, Get_StartEnd(), gopurs_runtime.Apply(v1_4, (*Constructor_StartEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5.UnsafePtr).V0)), gopurs_runtime.Apply(v1_4, (*Constructor_StartEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5.UnsafePtr).V1))
+goto end_branch_2
+} else {
+
+}
+}
+{
+if (v2_5.Type == 9 && v2_5.IntVal == 1992629780) {
+__t2 = gopurs_runtime.Apply2(Apply0_1_0.V1, gopurs_runtime.Apply2(Functor0_2_1.V0, Get_DurationEnd(), gopurs_runtime.Apply(v_3, (*Constructor_DurationEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5.UnsafePtr).V0)), gopurs_runtime.Apply(v1_4, (*Constructor_DurationEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5.UnsafePtr).V1))
+goto end_branch_2
+} else {
+
+}
+}
+{
+if (v2_5.Type == 9 && v2_5.IntVal == 2020675835) {
+__t2 = gopurs_runtime.Apply2(Apply0_1_0.V1, gopurs_runtime.Apply2(Functor0_2_1.V0, Get_StartDuration(), gopurs_runtime.Apply(v1_4, (*Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5.UnsafePtr).V0)), gopurs_runtime.Apply(v_3, (*Constructor_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5.UnsafePtr).V1))
+goto end_branch_2
+} else {
+
+}
+}
+{
+if (v2_5.Type == 9 && v2_5.IntVal == 2281256335) {
+__t2 = gopurs_runtime.Apply2(Functor0_2_1.V0, Get_DurationOnly(), gopurs_runtime.Apply(v_3, (*Constructor_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5.UnsafePtr).V0))
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_2:
+return __t2
+})
+})
+})
+}))
+	})
+	return cache_bitraversableInterval_ADT_Data_Bitraversable_Bitraversable_ADT_Data_Interval_Interval
 }
 
 var cache_bitraversableInterval gopurs_runtime.Value

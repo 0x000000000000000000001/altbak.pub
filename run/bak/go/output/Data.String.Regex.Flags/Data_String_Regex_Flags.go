@@ -55,8 +55,7 @@ var once_showRegexFlags sync.Once
 func Get_showRegexFlags() gopurs_runtime.Value {
 	once_showRegexFlags.Do(func() {
 		cache_showRegexFlags = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-usedFlags_1_0 := func() []string {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupArray(), "append"), gopurs_runtime.Array([]gopurs_runtime.Value{}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupArray(), "append"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Functor.Get_functorArray(), "map"), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+usedFlags_1_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupArray(), "append"), gopurs_runtime.Array([]gopurs_runtime.Value{}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupArray(), "append"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Functor.Get_functorArray(), "map"), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str("global")
 }), gopurs_runtime.Apply2(pkg_Control_Alternative.Get_guard(), pkg_Control_Alternative.Get_alternativeArray(), gopurs_runtime.RecordGet(v_0, "global"))), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupArray(), "append"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Functor.Get_functorArray(), "map"), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str("ignoreCase")
@@ -68,20 +67,11 @@ return gopurs_runtime.Str("dotAll")
 return gopurs_runtime.Str("sticky")
 }), gopurs_runtime.Apply2(pkg_Control_Alternative.Get_guard(), pkg_Control_Alternative.Get_alternativeArray(), gopurs_runtime.RecordGet(v_0, "sticky"))), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Functor.Get_functorArray(), "map"), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str("unicode")
-}), gopurs_runtime.Apply2(pkg_Control_Alternative.Get_guard(), pkg_Control_Alternative.Get_alternativeArray(), gopurs_runtime.RecordGet(v_0, "unicode"))))))))).UnsafePtr)
-					unboxed := make([]string, len(arr))
-					for i, v := range arr { unboxed[i] = v.StrVal() }
-					return unboxed
-				}()
+}), gopurs_runtime.Apply2(pkg_Control_Alternative.Get_guard(), pkg_Control_Alternative.Get_alternativeArray(), gopurs_runtime.RecordGet(v_0, "unicode")))))))))
 _ = usedFlags_1_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply2(gopurs_runtime.CoerceToStruct[pkg_Data_Eq.Constructor_Eq[[]string]](Get_eqArray()).V0, func() gopurs_runtime.Value {
-					arr := usedFlags_1_0
-					boxed := make([]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { boxed[i] = gopurs_runtime.Str(v) }
-					return gopurs_runtime.Array(boxed)
-				}(), gopurs_runtime.Array([]gopurs_runtime.Value{})).IntVal) != (0) {
+if (gopurs_runtime.Apply2(gopurs_runtime.CoerceToStruct[pkg_Data_Eq.Constructor_Eq[[]string]](Get_eqArray()).V0, usedFlags_1_0, gopurs_runtime.Array([]gopurs_runtime.Value{})).IntVal) != (0) {
 __t1 = gopurs_runtime.Str("noFlags")
 goto end_branch_1
 } else {
@@ -89,12 +79,7 @@ goto end_branch_1
 }
 }
 {
-__t1 = gopurs_runtime.Str(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str("("), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply2(pkg_Data_String_Common.Get_joinWith(), gopurs_runtime.Str(" <> "), func() gopurs_runtime.Value {
-					arr := usedFlags_1_0
-					boxed := make([]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { boxed[i] = gopurs_runtime.Str(v) }
-					return gopurs_runtime.Array(boxed)
-				}()), gopurs_runtime.Str(")"))).StrVal())
+__t1 = gopurs_runtime.Str(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Str("("), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(pkg_Data_Semigroup.Get_semigroupString(), "append"), gopurs_runtime.Apply2(pkg_Data_String_Common.Get_joinWith(), gopurs_runtime.Str(" <> "), usedFlags_1_0), gopurs_runtime.Str(")"))).StrVal())
 }
 end_branch_1:
 return gopurs_runtime.Str(__t1.StrVal())

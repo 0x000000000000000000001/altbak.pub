@@ -32,6 +32,17 @@ return Call_mod__gopurs_runtime_Value_2579358968(gopurs_runtime.CoerceToStruct[C
 	return cache_mod__gopurs_runtime_Value_2579358968
 }
 
+var cache_gcd_ForAll_a_ConstrainedType_Data_Eq_Eq_Any_Data_EuclideanRing_EuclideanRing_Any_Func_Any_Any_Any gopurs_runtime.Value
+var once_gcd_ForAll_a_ConstrainedType_Data_Eq_Eq_Any_Data_EuclideanRing_EuclideanRing_Any_Func_Any_Any_Any sync.Once
+func Get_gcd_ForAll_a_ConstrainedType_Data_Eq_Eq_Any_Data_EuclideanRing_EuclideanRing_Any_Func_Any_Any_Any() gopurs_runtime.Value {
+	once_gcd_ForAll_a_ConstrainedType_Data_Eq_Eq_Any_Data_EuclideanRing_EuclideanRing_Any_Func_Any_Any_Any.Do(func() {
+		cache_gcd_ForAll_a_ConstrainedType_Data_Eq_Eq_Any_Data_EuclideanRing_EuclideanRing_Any_Func_Any_Any_Any = gopurs_runtime.Func2(func(dictEq_0_box gopurs_runtime.Value, dictEuclideanRing_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_gcd_ForAll_a_ConstrainedType_Data_Eq_Eq_Any_Data_EuclideanRing_EuclideanRing_Any_Func_Any_Any_Any(gopurs_runtime.CoerceToStruct[pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value]](dictEq_0_box), gopurs_runtime.CoerceToStruct[Constructor_EuclideanRing[gopurs_runtime.Value]](dictEuclideanRing_1_box))
+})
+	})
+	return cache_gcd_ForAll_a_ConstrainedType_Data_Eq_Eq_Any_Data_EuclideanRing_EuclideanRing_Any_Func_Any_Any_Any
+}
+
 var cache_gcd gopurs_runtime.Value
 var once_gcd sync.Once
 func Get_gcd() gopurs_runtime.Value {
@@ -159,6 +170,33 @@ func Call_mod__gopurs_runtime_Value_2579358968(dict_0_loop *Constructor_Euclidea
 var dict_0 *Constructor_EuclideanRing[gopurs_runtime.Value] = dict_0_loop
 _ = dict_0
 return dict_0.V3
+}
+
+func Call_gcd_ForAll_a_ConstrainedType_Data_Eq_Eq_Any_Data_EuclideanRing_EuclideanRing_Any_Func_Any_Any_Any(dictEq_0_loop *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value], dictEuclideanRing_1_loop *Constructor_EuclideanRing[gopurs_runtime.Value]) gopurs_runtime.Value {
+var dictEq_0 *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value] = dictEq_0_loop
+_ = dictEq_0
+var dictEuclideanRing_1 *Constructor_EuclideanRing[gopurs_runtime.Value] = dictEuclideanRing_1_loop
+_ = dictEuclideanRing_1
+zero_2_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(dictEuclideanRing_1.V0, gopurs_runtime.Value{}), "Ring0"), gopurs_runtime.Value{}), "Semiring0"), gopurs_runtime.Value{}), "zero")
+_ = zero_2_0
+return gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_4 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t1 gopurs_runtime.Value
+{
+if (gopurs_runtime.Apply2(dictEq_0.V0, b_4, zero_2_0).IntVal) != (0) {
+__t1 = a_3
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = gopurs_runtime.Apply2(Call_gcd(dictEq_0, dictEuclideanRing_1), b_4, gopurs_runtime.Apply2(dictEuclideanRing_1.V3, a_3, b_4))
+}
+end_branch_1:
+return __t1
+})
+})
 }
 
 func Call_gcd(dictEq_0_loop *pkg_Data_Eq.Constructor_Eq[gopurs_runtime.Value], dictEuclideanRing_1_loop *Constructor_EuclideanRing[gopurs_runtime.Value]) gopurs_runtime.Value {
