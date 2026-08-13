@@ -21,11 +21,11 @@ var cache_Control_Monad_ST_Class_monadSTST gopurs_runtime.Value
 var once_Control_Monad_ST_Class_monadSTST sync.Once
 func Get_Control_Monad_ST_Class_monadSTST() gopurs_runtime.Value {
 	once_Control_Monad_ST_Class_monadSTST.Do(func() {
-		cache_Control_Monad_ST_Class_monadSTST = gopurs_runtime.RecordDict2("Monad0", "liftST", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Control_Monad_ST_Internal_monadST()
+		cache_Control_Monad_ST_Class_monadSTST = gopurs_runtime.Value{Type: 9, IntVal: 2155655715, UnsafePtr: unsafe.Pointer(&Constructor_Control_Monad_ST_Class_MonadST{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 778916621, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Monad](Get_Control_Monad_ST_Internal_monadST()))}
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_0
-}))
+})})}
 	})
 	return cache_Control_Monad_ST_Class_monadSTST
 }
@@ -34,9 +34,9 @@ var cache_Control_Monad_ST_Class_monadSTEffect gopurs_runtime.Value
 var once_Control_Monad_ST_Class_monadSTEffect sync.Once
 func Get_Control_Monad_ST_Class_monadSTEffect() gopurs_runtime.Value {
 	once_Control_Monad_ST_Class_monadSTEffect.Do(func() {
-		cache_Control_Monad_ST_Class_monadSTEffect = gopurs_runtime.RecordDict2("Monad0", "liftST", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_monadEffect()
-}), Get_Unsafe_Coerce_unsafeCoerce())
+		cache_Control_Monad_ST_Class_monadSTEffect = gopurs_runtime.Value{Type: 9, IntVal: 2155655715, UnsafePtr: unsafe.Pointer(&Constructor_Control_Monad_ST_Class_MonadST{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 778916621, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Monad](Get_Effect_monadEffect()))}
+}), Get_Unsafe_Coerce_unsafeCoerce()})}
 	})
 	return cache_Control_Monad_ST_Class_monadSTEffect
 }

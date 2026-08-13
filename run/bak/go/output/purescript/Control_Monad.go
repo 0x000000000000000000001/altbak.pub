@@ -43,11 +43,11 @@ var cache_Control_Monad_monadProxy gopurs_runtime.Value
 var once_Control_Monad_monadProxy sync.Once
 func Get_Control_Monad_monadProxy() gopurs_runtime.Value {
 	once_Control_Monad_monadProxy.Do(func() {
-		cache_Control_Monad_monadProxy = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Control_Applicative_applicativeProxy()
+		cache_Control_Monad_monadProxy = gopurs_runtime.Value{Type: 9, IntVal: 778916621, UnsafePtr: unsafe.Pointer(&Constructor_Control_Monad_Monad{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](Get_Control_Applicative_applicativeProxy()))}
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Control_Bind_bindProxy()
-}))
+return gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](Get_Control_Bind_bindProxy()))}
+})})}
 	})
 	return cache_Control_Monad_monadProxy
 }
@@ -56,11 +56,11 @@ var cache_Control_Monad_monadFn gopurs_runtime.Value
 var once_Control_Monad_monadFn sync.Once
 func Get_Control_Monad_monadFn() gopurs_runtime.Value {
 	once_Control_Monad_monadFn.Do(func() {
-		cache_Control_Monad_monadFn = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Control_Applicative_applicativeFn()
+		cache_Control_Monad_monadFn = gopurs_runtime.Value{Type: 9, IntVal: 778916621, UnsafePtr: unsafe.Pointer(&Constructor_Control_Monad_Monad{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](Get_Control_Applicative_applicativeFn()))}
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Control_Bind_bindFn()
-}))
+return gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](Get_Control_Bind_bindFn()))}
+})})}
 	})
 	return cache_Control_Monad_monadFn
 }
@@ -69,11 +69,11 @@ var cache_Control_Monad_monadArray gopurs_runtime.Value
 var once_Control_Monad_monadArray sync.Once
 func Get_Control_Monad_monadArray() gopurs_runtime.Value {
 	once_Control_Monad_monadArray.Do(func() {
-		cache_Control_Monad_monadArray = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Control_Applicative_applicativeArray()
+		cache_Control_Monad_monadArray = gopurs_runtime.Value{Type: 9, IntVal: 778916621, UnsafePtr: unsafe.Pointer(&Constructor_Control_Monad_Monad{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](Get_Control_Applicative_applicativeArray()))}
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Control_Bind_bindArray()
-}))
+return gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](Get_Control_Bind_bindArray()))}
+})})}
 	})
 	return cache_Control_Monad_monadArray
 }
@@ -133,30 +133,17 @@ return Call_Control_Monad_liftM1__1370921000(gopurs_runtime.CoerceToStruct[Const
 	return cache_Control_Monad_liftM1__1370921000
 }
 
-var cache_Control_Monad_monadArray__2289780851 gopurs_runtime.Value
-var once_Control_Monad_monadArray__2289780851 sync.Once
-func Get_Control_Monad_monadArray__2289780851() gopurs_runtime.Value {
-	once_Control_Monad_monadArray__2289780851.Do(func() {
-		cache_Control_Monad_monadArray__2289780851 = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Control_Applicative_applicativeArray()
+var cache_Control_Monad_monadFn__3662171887 gopurs_runtime.Value
+var once_Control_Monad_monadFn__3662171887 sync.Once
+func Get_Control_Monad_monadFn__3662171887() gopurs_runtime.Value {
+	once_Control_Monad_monadFn__3662171887.Do(func() {
+		cache_Control_Monad_monadFn__3662171887 = gopurs_runtime.Value{Type: 9, IntVal: 778916621, UnsafePtr: unsafe.Pointer(&Constructor_Control_Monad_Monad{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](Get_Control_Applicative_applicativeFn()))}
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Control_Bind_bindArray()
-}))
+return gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](Get_Control_Bind_bindFn()))}
+})})}
 	})
-	return cache_Control_Monad_monadArray__2289780851
-}
-
-var cache_Control_Monad_monadFn__1938941618 gopurs_runtime.Value
-var once_Control_Monad_monadFn__1938941618 sync.Once
-func Get_Control_Monad_monadFn__1938941618() gopurs_runtime.Value {
-	once_Control_Monad_monadFn__1938941618.Do(func() {
-		cache_Control_Monad_monadFn__1938941618 = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Control_Applicative_applicativeFn()
-}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Control_Bind_bindFn()
-}))
-	})
-	return cache_Control_Monad_monadFn__1938941618
+	return cache_Control_Monad_monadFn__3662171887
 }
 
 type Constructor_Control_Monad_Monad struct {

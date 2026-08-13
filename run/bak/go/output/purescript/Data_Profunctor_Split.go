@@ -69,7 +69,7 @@ var cache_Data_Profunctor_Split_profunctorSplit gopurs_runtime.Value
 var once_Data_Profunctor_Split_profunctorSplit sync.Once
 func Get_Data_Profunctor_Split_profunctorSplit() gopurs_runtime.Value {
 	once_Data_Profunctor_Split_profunctorSplit.Do(func() {
-		cache_Data_Profunctor_Split_profunctorSplit = gopurs_runtime.RecordDict1("dimap", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Profunctor_Split_profunctorSplit = gopurs_runtime.Value{Type: 9, IntVal: 2367018778, UnsafePtr: unsafe.Pointer(&Constructor_Data_Profunctor_Profunctor{1, gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(g_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 1995432569, UnsafePtr: unsafe.Pointer(&Constructor_Data_Profunctor_Split_SplitF{1, gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -79,7 +79,7 @@ return gopurs_runtime.Apply(g_1, gopurs_runtime.Apply((*Constructor_Data_Profunc
 }), (*Constructor_Data_Profunctor_Split_SplitF)(v_2.UnsafePtr).V2})}
 })
 })
-}))
+})})}
 	})
 	return cache_Data_Profunctor_Split_profunctorSplit
 }
@@ -121,13 +121,13 @@ var cache_Data_Profunctor_Split_functorSplit gopurs_runtime.Value
 var once_Data_Profunctor_Split_functorSplit sync.Once
 func Get_Data_Profunctor_Split_functorSplit() gopurs_runtime.Value {
 	once_Data_Profunctor_Split_functorSplit.Do(func() {
-		cache_Data_Profunctor_Split_functorSplit = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Profunctor_Split_functorSplit = gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(&Constructor_Data_Functor_Functor{1, gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 1995432569, UnsafePtr: unsafe.Pointer(&Constructor_Data_Profunctor_Split_SplitF{1, (*Constructor_Data_Profunctor_Split_SplitF)(v_1.UnsafePtr).V0, gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply((*Constructor_Data_Profunctor_Split_SplitF)(v_1.UnsafePtr).V1, x_2))
 }), (*Constructor_Data_Profunctor_Split_SplitF)(v_1.UnsafePtr).V2})}
 })
-}))
+})})}
 	})
 	return cache_Data_Profunctor_Split_functorSplit
 }

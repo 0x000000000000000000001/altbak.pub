@@ -3,6 +3,7 @@ package purescript
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	unsafe "unsafe"
 )
 
 var cache_Data_Semigroup_First_First gopurs_runtime.Value
@@ -31,11 +32,11 @@ var cache_Data_Semigroup_First_semigroupFirst gopurs_runtime.Value
 var once_Data_Semigroup_First_semigroupFirst sync.Once
 func Get_Data_Semigroup_First_semigroupFirst() gopurs_runtime.Value {
 	once_Data_Semigroup_First_semigroupFirst.Do(func() {
-		cache_Data_Semigroup_First_semigroupFirst = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Semigroup_First_semigroupFirst = gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(&Constructor_Data_Semigroup_Semigroup{1, gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_0
 })
-}))
+})})}
 	})
 	return cache_Data_Semigroup_First_semigroupFirst
 }
@@ -55,11 +56,11 @@ var cache_Data_Semigroup_First_functorFirst gopurs_runtime.Value
 var once_Data_Semigroup_First_functorFirst sync.Once
 func Get_Data_Semigroup_First_functorFirst() gopurs_runtime.Value {
 	once_Data_Semigroup_First_functorFirst.Do(func() {
-		cache_Data_Semigroup_First_functorFirst = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Semigroup_First_functorFirst = gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(&Constructor_Data_Functor_Functor{1, gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(m_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_0, m_1)
 })
-}))
+})})}
 	})
 	return cache_Data_Semigroup_First_functorFirst
 }
@@ -79,9 +80,9 @@ var cache_Data_Semigroup_First_eq1First gopurs_runtime.Value
 var once_Data_Semigroup_First_eq1First sync.Once
 func Get_Data_Semigroup_First_eq1First() gopurs_runtime.Value {
 	once_Data_Semigroup_First_eq1First.Do(func() {
-		cache_Data_Semigroup_First_eq1First = gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Semigroup_First_eq1First = gopurs_runtime.Value{Type: 9, IntVal: 1715248107, UnsafePtr: unsafe.Pointer(&Constructor_Data_Eq_Eq1{1, gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordGet(dictEq_0, "eq")
-}))
+})})}
 	})
 	return cache_Data_Semigroup_First_eq1First
 }
@@ -90,11 +91,11 @@ var cache_Data_Semigroup_First_ord1First gopurs_runtime.Value
 var once_Data_Semigroup_First_ord1First sync.Once
 func Get_Data_Semigroup_First_ord1First() gopurs_runtime.Value {
 	once_Data_Semigroup_First_ord1First.Do(func() {
-		cache_Data_Semigroup_First_ord1First = gopurs_runtime.RecordDict2("Eq10", "compare1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Semigroup_First_eq1First()
+		cache_Data_Semigroup_First_ord1First = gopurs_runtime.Value{Type: 9, IntVal: 1632188299, UnsafePtr: unsafe.Pointer(&Constructor_Data_Ord_Ord1{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1715248107, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq1](Get_Data_Semigroup_First_eq1First()))}
 }), gopurs_runtime.Func(func(dictOrd_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordGet(dictOrd_0, "compare")
-}))
+})})}
 	})
 	return cache_Data_Semigroup_First_ord1First
 }
@@ -114,13 +115,13 @@ var cache_Data_Semigroup_First_applyFirst gopurs_runtime.Value
 var once_Data_Semigroup_First_applyFirst sync.Once
 func Get_Data_Semigroup_First_applyFirst() gopurs_runtime.Value {
 	once_Data_Semigroup_First_applyFirst.Do(func() {
-		cache_Data_Semigroup_First_applyFirst = gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Semigroup_First_functorFirst()
+		cache_Data_Semigroup_First_applyFirst = gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(&Constructor_Control_Apply_Apply{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](Get_Data_Semigroup_First_functorFirst()))}
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(v_0, v1_1)
 })
-}))
+})})}
 	})
 	return cache_Data_Semigroup_First_applyFirst
 }
@@ -129,13 +130,13 @@ var cache_Data_Semigroup_First_bindFirst gopurs_runtime.Value
 var once_Data_Semigroup_First_bindFirst sync.Once
 func Get_Data_Semigroup_First_bindFirst() gopurs_runtime.Value {
 	once_Data_Semigroup_First_bindFirst.Do(func() {
-		cache_Data_Semigroup_First_bindFirst = gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Semigroup_First_applyFirst()
+		cache_Data_Semigroup_First_bindFirst = gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(&Constructor_Control_Bind_Bind{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](Get_Data_Semigroup_First_applyFirst()))}
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_1, v_0)
 })
-}))
+})})}
 	})
 	return cache_Data_Semigroup_First_bindFirst
 }
@@ -144,11 +145,11 @@ var cache_Data_Semigroup_First_applicativeFirst gopurs_runtime.Value
 var once_Data_Semigroup_First_applicativeFirst sync.Once
 func Get_Data_Semigroup_First_applicativeFirst() gopurs_runtime.Value {
 	once_Data_Semigroup_First_applicativeFirst.Do(func() {
-		cache_Data_Semigroup_First_applicativeFirst = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Semigroup_First_applyFirst()
+		cache_Data_Semigroup_First_applicativeFirst = gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(&Constructor_Control_Applicative_Applicative{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](Get_Data_Semigroup_First_applyFirst()))}
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_0
-}))
+})})}
 	})
 	return cache_Data_Semigroup_First_applicativeFirst
 }
@@ -157,80 +158,80 @@ var cache_Data_Semigroup_First_monadFirst gopurs_runtime.Value
 var once_Data_Semigroup_First_monadFirst sync.Once
 func Get_Data_Semigroup_First_monadFirst() gopurs_runtime.Value {
 	once_Data_Semigroup_First_monadFirst.Do(func() {
-		cache_Data_Semigroup_First_monadFirst = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Semigroup_First_applicativeFirst()
+		cache_Data_Semigroup_First_monadFirst = gopurs_runtime.Value{Type: 9, IntVal: 778916621, UnsafePtr: unsafe.Pointer(&Constructor_Control_Monad_Monad{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](Get_Data_Semigroup_First_applicativeFirst()))}
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Semigroup_First_bindFirst()
-}))
+return gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](Get_Data_Semigroup_First_bindFirst()))}
+})})}
 	})
 	return cache_Data_Semigroup_First_monadFirst
 }
 
-var cache_Data_Semigroup_First_applicativeFirst__4045440648 gopurs_runtime.Value
-var once_Data_Semigroup_First_applicativeFirst__4045440648 sync.Once
-func Get_Data_Semigroup_First_applicativeFirst__4045440648() gopurs_runtime.Value {
-	once_Data_Semigroup_First_applicativeFirst__4045440648.Do(func() {
-		cache_Data_Semigroup_First_applicativeFirst__4045440648 = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Semigroup_First_applyFirst()
+var cache_Data_Semigroup_First_applicativeFirst__995286821 gopurs_runtime.Value
+var once_Data_Semigroup_First_applicativeFirst__995286821 sync.Once
+func Get_Data_Semigroup_First_applicativeFirst__995286821() gopurs_runtime.Value {
+	once_Data_Semigroup_First_applicativeFirst__995286821.Do(func() {
+		cache_Data_Semigroup_First_applicativeFirst__995286821 = gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(&Constructor_Control_Applicative_Applicative{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](Get_Data_Semigroup_First_applyFirst()))}
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_0
-}))
+})})}
 	})
-	return cache_Data_Semigroup_First_applicativeFirst__4045440648
+	return cache_Data_Semigroup_First_applicativeFirst__995286821
 }
 
-var cache_Data_Semigroup_First_applyFirst__3199351098 gopurs_runtime.Value
-var once_Data_Semigroup_First_applyFirst__3199351098 sync.Once
-func Get_Data_Semigroup_First_applyFirst__3199351098() gopurs_runtime.Value {
-	once_Data_Semigroup_First_applyFirst__3199351098.Do(func() {
-		cache_Data_Semigroup_First_applyFirst__3199351098 = gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Semigroup_First_functorFirst()
+var cache_Data_Semigroup_First_applyFirst__111100453 gopurs_runtime.Value
+var once_Data_Semigroup_First_applyFirst__111100453 sync.Once
+func Get_Data_Semigroup_First_applyFirst__111100453() gopurs_runtime.Value {
+	once_Data_Semigroup_First_applyFirst__111100453.Do(func() {
+		cache_Data_Semigroup_First_applyFirst__111100453 = gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(&Constructor_Control_Apply_Apply{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](Get_Data_Semigroup_First_functorFirst()))}
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(v_0, v1_1)
 })
-}))
+})})}
 	})
-	return cache_Data_Semigroup_First_applyFirst__3199351098
+	return cache_Data_Semigroup_First_applyFirst__111100453
 }
 
-var cache_Data_Semigroup_First_bindFirst__329376103 gopurs_runtime.Value
-var once_Data_Semigroup_First_bindFirst__329376103 sync.Once
-func Get_Data_Semigroup_First_bindFirst__329376103() gopurs_runtime.Value {
-	once_Data_Semigroup_First_bindFirst__329376103.Do(func() {
-		cache_Data_Semigroup_First_bindFirst__329376103 = gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Semigroup_First_applyFirst()
+var cache_Data_Semigroup_First_bindFirst__2224694053 gopurs_runtime.Value
+var once_Data_Semigroup_First_bindFirst__2224694053 sync.Once
+func Get_Data_Semigroup_First_bindFirst__2224694053() gopurs_runtime.Value {
+	once_Data_Semigroup_First_bindFirst__2224694053.Do(func() {
+		cache_Data_Semigroup_First_bindFirst__2224694053 = gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(&Constructor_Control_Bind_Bind{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](Get_Data_Semigroup_First_applyFirst()))}
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_1, v_0)
 })
-}))
+})})}
 	})
-	return cache_Data_Semigroup_First_bindFirst__329376103
+	return cache_Data_Semigroup_First_bindFirst__2224694053
 }
 
-var cache_Data_Semigroup_First_eq1First__1905950174 gopurs_runtime.Value
-var once_Data_Semigroup_First_eq1First__1905950174 sync.Once
-func Get_Data_Semigroup_First_eq1First__1905950174() gopurs_runtime.Value {
-	once_Data_Semigroup_First_eq1First__1905950174.Do(func() {
-		cache_Data_Semigroup_First_eq1First__1905950174 = gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
+var cache_Data_Semigroup_First_eq1First__294625475 gopurs_runtime.Value
+var once_Data_Semigroup_First_eq1First__294625475 sync.Once
+func Get_Data_Semigroup_First_eq1First__294625475() gopurs_runtime.Value {
+	once_Data_Semigroup_First_eq1First__294625475.Do(func() {
+		cache_Data_Semigroup_First_eq1First__294625475 = gopurs_runtime.Value{Type: 9, IntVal: 1715248107, UnsafePtr: unsafe.Pointer(&Constructor_Data_Eq_Eq1{1, gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordGet(dictEq_0, "eq")
-}))
+})})}
 	})
-	return cache_Data_Semigroup_First_eq1First__1905950174
+	return cache_Data_Semigroup_First_eq1First__294625475
 }
 
-var cache_Data_Semigroup_First_functorFirst__943655089 gopurs_runtime.Value
-var once_Data_Semigroup_First_functorFirst__943655089 sync.Once
-func Get_Data_Semigroup_First_functorFirst__943655089() gopurs_runtime.Value {
-	once_Data_Semigroup_First_functorFirst__943655089.Do(func() {
-		cache_Data_Semigroup_First_functorFirst__943655089 = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+var cache_Data_Semigroup_First_functorFirst__850816530 gopurs_runtime.Value
+var once_Data_Semigroup_First_functorFirst__850816530 sync.Once
+func Get_Data_Semigroup_First_functorFirst__850816530() gopurs_runtime.Value {
+	once_Data_Semigroup_First_functorFirst__850816530.Do(func() {
+		cache_Data_Semigroup_First_functorFirst__850816530 = gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(&Constructor_Data_Functor_Functor{1, gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(m_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_0, m_1)
 })
-}))
+})})}
 	})
-	return cache_Data_Semigroup_First_functorFirst__943655089
+	return cache_Data_Semigroup_First_functorFirst__850816530
 }
 
 func Call_Data_Semigroup_First_First(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -242,27 +243,27 @@ return x_0
 func Call_Data_Semigroup_First_showFirst(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
 _ = dictShow_0
-return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1835580986, UnsafePtr: unsafe.Pointer(&Constructor_Data_Show_Show{1, gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str((("(First ") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal())) + (")"))
-}))
+})})}
 }
 
 func Call_Data_Semigroup_First_ordFirst(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-return dictOrd_0
+return gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0))}
 }
 
 func Call_Data_Semigroup_First_eqFirst(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
 _ = dictEq_0
-return dictEq_0
+return gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](dictEq_0))}
 }
 
 func Call_Data_Semigroup_First_boundedFirst(dictBounded_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictBounded_0 gopurs_runtime.Value = dictBounded_0_loop
 _ = dictBounded_0
-return dictBounded_0
+return gopurs_runtime.Value{Type: 9, IntVal: 3510799738, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Bounded_Bounded](dictBounded_0))}
 }
 
 

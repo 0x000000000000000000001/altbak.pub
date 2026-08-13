@@ -3,6 +3,7 @@ package purescript
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	unsafe "unsafe"
 )
 
 var cache_Data_Const_Const gopurs_runtime.Value
@@ -42,11 +43,11 @@ var cache_Data_Const_semigroupoidConst gopurs_runtime.Value
 var once_Data_Const_semigroupoidConst sync.Once
 func Get_Data_Const_semigroupoidConst() gopurs_runtime.Value {
 	once_Data_Const_semigroupoidConst.Do(func() {
-		cache_Data_Const_semigroupoidConst = gopurs_runtime.RecordDict1("compose", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Const_semigroupoidConst = gopurs_runtime.Value{Type: 9, IntVal: 350442445, UnsafePtr: unsafe.Pointer(&Constructor_Control_Semigroupoid_Semigroupoid{1, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return v1_1
 })
-}))
+})})}
 	})
 	return cache_Data_Const_semigroupoidConst
 }
@@ -88,9 +89,9 @@ var cache_Data_Const_newtypeConst gopurs_runtime.Value
 var once_Data_Const_newtypeConst sync.Once
 func Get_Data_Const_newtypeConst() gopurs_runtime.Value {
 	once_Data_Const_newtypeConst.Do(func() {
-		cache_Data_Const_newtypeConst = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Const_newtypeConst = gopurs_runtime.Value{Type: 9, IntVal: 3322196858, UnsafePtr: unsafe.Pointer(&Constructor_Data_Newtype_Newtype{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
-}))
+})})}
 	})
 	return cache_Data_Const_newtypeConst
 }
@@ -121,11 +122,11 @@ var cache_Data_Const_functorConst gopurs_runtime.Value
 var once_Data_Const_functorConst sync.Once
 func Get_Data_Const_functorConst() gopurs_runtime.Value {
 	once_Data_Const_functorConst.Do(func() {
-		cache_Data_Const_functorConst = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Const_functorConst = gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(&Constructor_Data_Functor_Functor{1, gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(m_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return m_1
 })
-}))
+})})}
 	})
 	return cache_Data_Const_functorConst
 }
@@ -134,13 +135,13 @@ var cache_Data_Const_invariantConst gopurs_runtime.Value
 var once_Data_Const_invariantConst sync.Once
 func Get_Data_Const_invariantConst() gopurs_runtime.Value {
 	once_Data_Const_invariantConst.Do(func() {
-		cache_Data_Const_invariantConst = gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Const_invariantConst = gopurs_runtime.Value{Type: 9, IntVal: 2396985522, UnsafePtr: unsafe.Pointer(&Constructor_Data_Functor_Invariant_Invariant{1, gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(m_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return m_2
 })
 })
-}))
+})})}
 	})
 	return cache_Data_Const_invariantConst
 }
@@ -244,17 +245,17 @@ return Call_Data_Const_applicativeConst(dictMonoid_0_box)
 	return cache_Data_Const_applicativeConst
 }
 
-var cache_Data_Const_functorConst__1992455793 gopurs_runtime.Value
-var once_Data_Const_functorConst__1992455793 sync.Once
-func Get_Data_Const_functorConst__1992455793() gopurs_runtime.Value {
-	once_Data_Const_functorConst__1992455793.Do(func() {
-		cache_Data_Const_functorConst__1992455793 = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+var cache_Data_Const_functorConst__3854454365 gopurs_runtime.Value
+var once_Data_Const_functorConst__3854454365 sync.Once
+func Get_Data_Const_functorConst__3854454365() gopurs_runtime.Value {
+	once_Data_Const_functorConst__3854454365.Do(func() {
+		cache_Data_Const_functorConst__3854454365 = gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(&Constructor_Data_Functor_Functor{1, gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(m_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return m_1
 })
-}))
+})})}
 	})
-	return cache_Data_Const_functorConst__1992455793
+	return cache_Data_Const_functorConst__3854454365
 }
 
 func Call_Data_Const_Const(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -266,57 +267,57 @@ return x_0
 func Call_Data_Const_showConst(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
 _ = dictShow_0
-return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1835580986, UnsafePtr: unsafe.Pointer(&Constructor_Data_Show_Show{1, gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str((("(Const ") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal())) + (")"))
-}))
+})})}
 }
 
 func Call_Data_Const_semiringConst(dictSemiring_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictSemiring_0 gopurs_runtime.Value = dictSemiring_0_loop
 _ = dictSemiring_0
-return dictSemiring_0
+return gopurs_runtime.Value{Type: 9, IntVal: 134961754, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring](dictSemiring_0))}
 }
 
 func Call_Data_Const_semigroupConst(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
 _ = dictSemigroup_0
-return dictSemigroup_0
+return gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](dictSemigroup_0))}
 }
 
 func Call_Data_Const_ringConst(dictRing_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictRing_0 gopurs_runtime.Value = dictRing_0_loop
 _ = dictRing_0
-return dictRing_0
+return gopurs_runtime.Value{Type: 9, IntVal: 3955491866, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring](dictRing_0))}
 }
 
 func Call_Data_Const_ordConst(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-return dictOrd_0
+return gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0))}
 }
 
 func Call_Data_Const_monoidConst(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
-return dictMonoid_0
+return gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](dictMonoid_0))}
 }
 
 func Call_Data_Const_heytingAlgebraConst(dictHeytingAlgebra_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictHeytingAlgebra_0 gopurs_runtime.Value = dictHeytingAlgebra_0_loop
 _ = dictHeytingAlgebra_0
-return dictHeytingAlgebra_0
+return gopurs_runtime.Value{Type: 9, IntVal: 926771738, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebra](dictHeytingAlgebra_0))}
 }
 
 func Call_Data_Const_euclideanRingConst(dictEuclideanRing_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictEuclideanRing_0 gopurs_runtime.Value = dictEuclideanRing_0_loop
 _ = dictEuclideanRing_0
-return dictEuclideanRing_0
+return gopurs_runtime.Value{Type: 9, IntVal: 3214993658, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_EuclideanRing_EuclideanRing](dictEuclideanRing_0))}
 }
 
 func Call_Data_Const_eqConst(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
 _ = dictEq_0
-return dictEq_0
+return gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](dictEq_0))}
 }
 
 func Call_Data_Const_eq1Const(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -325,9 +326,9 @@ _ = dictEq_0
 // TAST (Let): eq_1_0 -> gopurs_runtime.Value
 eq_1_0 := gopurs_runtime.RecordGet(dictEq_0, "eq")
 _ = eq_1_0
-return gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1715248107, UnsafePtr: unsafe.Pointer(&Constructor_Data_Eq_Eq1{1, gopurs_runtime.Func(func(dictEq1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return eq_1_0
-}))
+})})}
 }
 
 func Call_Data_Const_ord1Const(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -339,46 +340,46 @@ _ = compare_1_0
 // TAST (Let): eq_2_2 -> gopurs_runtime.Value
 eq_2_2 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0, "Eq0"), gopurs_runtime.Value{}), "eq")
 _ = eq_2_2
-// TAST (Let): eq1Const1_2_1 -> gopurs_runtime.Value
-eq1Const1_2_1 := gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): eq1Const1_2_1 -> *Constructor_Data_Eq_Eq1
+eq1Const1_2_1 := &Constructor_Data_Eq_Eq1{1, gopurs_runtime.Func(func(dictEq1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return eq_2_2
-}))
+})}
 _ = eq1Const1_2_1
-return gopurs_runtime.RecordDict2("Eq10", "compare1", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return eq1Const1_2_1
+return gopurs_runtime.Value{Type: 9, IntVal: 1632188299, UnsafePtr: unsafe.Pointer(&Constructor_Data_Ord_Ord1{1, gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1715248107, UnsafePtr: unsafe.Pointer(eq1Const1_2_1)}
 }), gopurs_runtime.Func(func(dictOrd1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return compare_1_0
-}))
+})})}
 }
 
 func Call_Data_Const_commutativeRingConst(dictCommutativeRing_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictCommutativeRing_0 gopurs_runtime.Value = dictCommutativeRing_0_loop
 _ = dictCommutativeRing_0
-return dictCommutativeRing_0
+return gopurs_runtime.Value{Type: 9, IntVal: 1775085946, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_CommutativeRing_CommutativeRing](dictCommutativeRing_0))}
 }
 
 func Call_Data_Const_boundedConst(dictBounded_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictBounded_0 gopurs_runtime.Value = dictBounded_0_loop
 _ = dictBounded_0
-return dictBounded_0
+return gopurs_runtime.Value{Type: 9, IntVal: 3510799738, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Bounded_Bounded](dictBounded_0))}
 }
 
 func Call_Data_Const_booleanAlgebraConst(dictBooleanAlgebra_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictBooleanAlgebra_0 gopurs_runtime.Value = dictBooleanAlgebra_0_loop
 _ = dictBooleanAlgebra_0
-return dictBooleanAlgebra_0
+return gopurs_runtime.Value{Type: 9, IntVal: 3257204378, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_BooleanAlgebra_BooleanAlgebra](dictBooleanAlgebra_0))}
 }
 
 func Call_Data_Const_applyConst(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
 _ = dictSemigroup_0
-return gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Const_functorConst()
+return gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(&Constructor_Control_Apply_Apply{1, gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](Get_Data_Const_functorConst()))}
 }), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append"), v_1, v1_2)
 })
-}))
+})})}
 }
 
 func Call_Data_Const_applicativeConst(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -387,20 +388,20 @@ _ = dictMonoid_0
 // TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
 __local_var_1_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{})
 _ = __local_var_1_1
-// TAST (Let): applyConst1_1_0 -> gopurs_runtime.Value
-applyConst1_1_0 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Const_functorConst()
+// TAST (Let): applyConst1_1_0 -> *Constructor_Control_Apply_Apply
+applyConst1_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](Get_Data_Const_functorConst()))}
 }), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_1, "append"), v_2, v1_3)
 })
-}))
+})))
 _ = applyConst1_1_0
-return gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return applyConst1_1_0
+return gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(&Constructor_Control_Applicative_Applicative{1, gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(applyConst1_1_0)}
 }), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
-}))
+})})}
 }
 
 

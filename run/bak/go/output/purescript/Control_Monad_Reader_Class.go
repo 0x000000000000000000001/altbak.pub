@@ -32,11 +32,11 @@ var cache_Control_Monad_Reader_Class_monadAskFun gopurs_runtime.Value
 var once_Control_Monad_Reader_Class_monadAskFun sync.Once
 func Get_Control_Monad_Reader_Class_monadAskFun() gopurs_runtime.Value {
 	once_Control_Monad_Reader_Class_monadAskFun.Do(func() {
-		cache_Control_Monad_Reader_Class_monadAskFun = gopurs_runtime.RecordDict2("Monad0", "ask", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Control_Monad_monadFn()
+		cache_Control_Monad_Reader_Class_monadAskFun = gopurs_runtime.Value{Type: 9, IntVal: 1229730751, UnsafePtr: unsafe.Pointer(&Constructor_Control_Monad_Reader_Class_MonadAsk{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 778916621, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Monad](Get_Control_Monad_monadFn()))}
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_0
-}))
+})})}
 	})
 	return cache_Control_Monad_Reader_Class_monadAskFun
 }
@@ -45,15 +45,15 @@ var cache_Control_Monad_Reader_Class_monadReaderFun gopurs_runtime.Value
 var once_Control_Monad_Reader_Class_monadReaderFun sync.Once
 func Get_Control_Monad_Reader_Class_monadReaderFun() gopurs_runtime.Value {
 	once_Control_Monad_Reader_Class_monadReaderFun.Do(func() {
-		cache_Control_Monad_Reader_Class_monadReaderFun = gopurs_runtime.RecordDict2("MonadAsk0", "local", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Control_Monad_Reader_Class_monadAskFun()
+		cache_Control_Monad_Reader_Class_monadReaderFun = gopurs_runtime.Value{Type: 9, IntVal: 2457234979, UnsafePtr: unsafe.Pointer(&Constructor_Control_Monad_Reader_Class_MonadReader{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1229730751, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Reader_Class_MonadAsk](Get_Control_Monad_Reader_Class_monadAskFun()))}
 }), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(g_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(g_1, gopurs_runtime.Apply(f_0, x_2))
 })
 })
-}))
+})})}
 	})
 	return cache_Control_Monad_Reader_Class_monadReaderFun
 }
@@ -135,17 +135,17 @@ return Call_Control_Monad_Reader_Class_local__909940799(gopurs_runtime.CoerceToS
 	return cache_Control_Monad_Reader_Class_local__909940799
 }
 
-var cache_Control_Monad_Reader_Class_monadAskFun__466477709 gopurs_runtime.Value
-var once_Control_Monad_Reader_Class_monadAskFun__466477709 sync.Once
-func Get_Control_Monad_Reader_Class_monadAskFun__466477709() gopurs_runtime.Value {
-	once_Control_Monad_Reader_Class_monadAskFun__466477709.Do(func() {
-		cache_Control_Monad_Reader_Class_monadAskFun__466477709 = gopurs_runtime.RecordDict2("Monad0", "ask", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Control_Monad_monadFn()
+var cache_Control_Monad_Reader_Class_monadAskFun__1869198580 gopurs_runtime.Value
+var once_Control_Monad_Reader_Class_monadAskFun__1869198580 sync.Once
+func Get_Control_Monad_Reader_Class_monadAskFun__1869198580() gopurs_runtime.Value {
+	once_Control_Monad_Reader_Class_monadAskFun__1869198580.Do(func() {
+		cache_Control_Monad_Reader_Class_monadAskFun__1869198580 = gopurs_runtime.Value{Type: 9, IntVal: 1229730751, UnsafePtr: unsafe.Pointer(&Constructor_Control_Monad_Reader_Class_MonadAsk{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 778916621, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Monad](Get_Control_Monad_monadFn()))}
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_0
-}))
+})})}
 	})
-	return cache_Control_Monad_Reader_Class_monadAskFun__466477709
+	return cache_Control_Monad_Reader_Class_monadAskFun__1869198580
 }
 
 type Constructor_Control_Monad_Reader_Class_MonadAsk struct {

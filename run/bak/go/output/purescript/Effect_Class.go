@@ -21,11 +21,11 @@ var cache_Effect_Class_monadEffectEffect gopurs_runtime.Value
 var once_Effect_Class_monadEffectEffect sync.Once
 func Get_Effect_Class_monadEffectEffect() gopurs_runtime.Value {
 	once_Effect_Class_monadEffectEffect.Do(func() {
-		cache_Effect_Class_monadEffectEffect = gopurs_runtime.RecordDict2("Monad0", "liftEffect", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_monadEffect()
+		cache_Effect_Class_monadEffectEffect = gopurs_runtime.Value{Type: 9, IntVal: 2217729261, UnsafePtr: unsafe.Pointer(&Constructor_Effect_Class_MonadEffect{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 778916621, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Monad](Get_Effect_monadEffect()))}
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_0
-}))
+})})}
 	})
 	return cache_Effect_Class_monadEffectEffect
 }

@@ -32,26 +32,13 @@ var cache_Control_Category_categoryFn gopurs_runtime.Value
 var once_Control_Category_categoryFn sync.Once
 func Get_Control_Category_categoryFn() gopurs_runtime.Value {
 	once_Control_Category_categoryFn.Do(func() {
-		cache_Control_Category_categoryFn = gopurs_runtime.RecordDict2("Semigroupoid0", "identity", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Control_Semigroupoid_semigroupoidFn()
+		cache_Control_Category_categoryFn = gopurs_runtime.Value{Type: 9, IntVal: 784524589, UnsafePtr: unsafe.Pointer(&Constructor_Control_Category_Category{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 350442445, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Semigroupoid_Semigroupoid](Get_Control_Semigroupoid_semigroupoidFn()))}
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_0
-}))
+})})}
 	})
 	return cache_Control_Category_categoryFn
-}
-
-var cache_Control_Category_categoryFn__3492036198 gopurs_runtime.Value
-var once_Control_Category_categoryFn__3492036198 sync.Once
-func Get_Control_Category_categoryFn__3492036198() gopurs_runtime.Value {
-	once_Control_Category_categoryFn__3492036198.Do(func() {
-		cache_Control_Category_categoryFn__3492036198 = gopurs_runtime.RecordDict2("Semigroupoid0", "identity", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Control_Semigroupoid_semigroupoidFn()
-}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_0
-}))
-	})
-	return cache_Control_Category_categoryFn__3492036198
 }
 
 var cache_Control_Category_identity__2527656589 gopurs_runtime.Value

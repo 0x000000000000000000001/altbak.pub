@@ -54,11 +54,11 @@ var cache_TestDPE_intMonoidish gopurs_runtime.Value
 var once_TestDPE_intMonoidish sync.Once
 func Get_TestDPE_intMonoidish() gopurs_runtime.Value {
 	once_TestDPE_intMonoidish.Do(func() {
-		cache_TestDPE_intMonoidish = gopurs_runtime.RecordDict2("mappend_", "mempty_", gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_TestDPE_intMonoidish = gopurs_runtime.Value{Type: 9, IntVal: 2768669742, UnsafePtr: unsafe.Pointer(&Constructor_TestDPE_Monoidish{1, gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(b_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Int((a_0.IntVal) + (b_1.IntVal))
 })
-}), gopurs_runtime.Int(0))
+}), gopurs_runtime.Int(0)})}
 	})
 	return cache_TestDPE_intMonoidish
 }

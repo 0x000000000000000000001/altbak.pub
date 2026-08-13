@@ -76,8 +76,8 @@ var cache_Data_Profunctor_Choice_choiceFn gopurs_runtime.Value
 var once_Data_Profunctor_Choice_choiceFn sync.Once
 func Get_Data_Profunctor_Choice_choiceFn() gopurs_runtime.Value {
 	once_Data_Profunctor_Choice_choiceFn.Do(func() {
-		cache_Data_Profunctor_Choice_choiceFn = gopurs_runtime.RecordDict3("Profunctor0", "left", "right", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Profunctor_profunctorFn()
+		cache_Data_Profunctor_Choice_choiceFn = gopurs_runtime.Value{Type: 9, IntVal: 3666633887, UnsafePtr: unsafe.Pointer(&Constructor_Data_Profunctor_Choice_Choice{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2367018778, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Profunctor_Profunctor](Get_Data_Profunctor_profunctorFn()))}
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
@@ -103,7 +103,32 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 end_branch_0:
 return __t0
 })
-}), gopurs_runtime.RecordGet(Get_Data_Either_functorEither(), "map"))
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(m_1 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t1 gopurs_runtime.Value
+{
+if (m_1.Type == 9 && m_1.IntVal == 3711209382) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Left{1, (*Constructor_Data_Either_Left)(m_1.UnsafePtr).V0})}
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (m_1.Type == 9 && m_1.IntVal == 2465973597) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Right{1, gopurs_runtime.Apply(f_0, (*Constructor_Data_Either_Right)(m_1.UnsafePtr).V0)})}
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_1:
+return __t1
+})
+})})}
 	})
 	return cache_Data_Profunctor_Choice_choiceFn
 }

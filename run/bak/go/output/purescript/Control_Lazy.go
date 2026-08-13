@@ -21,9 +21,9 @@ var cache_Control_Lazy_lazyUnit gopurs_runtime.Value
 var once_Control_Lazy_lazyUnit sync.Once
 func Get_Control_Lazy_lazyUnit() gopurs_runtime.Value {
 	once_Control_Lazy_lazyUnit.Do(func() {
-		cache_Control_Lazy_lazyUnit = gopurs_runtime.RecordDict1("defer", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Control_Lazy_lazyUnit = gopurs_runtime.Value{Type: 9, IntVal: 1860244333, UnsafePtr: unsafe.Pointer(&Constructor_Control_Lazy_Lazy{1, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Unit_unit()
-}))
+})})}
 	})
 	return cache_Control_Lazy_lazyUnit
 }
@@ -32,11 +32,11 @@ var cache_Control_Lazy_lazyFn gopurs_runtime.Value
 var once_Control_Lazy_lazyFn sync.Once
 func Get_Control_Lazy_lazyFn() gopurs_runtime.Value {
 	once_Control_Lazy_lazyFn.Do(func() {
-		cache_Control_Lazy_lazyFn = gopurs_runtime.RecordDict1("defer", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Control_Lazy_lazyFn = gopurs_runtime.Value{Type: 9, IntVal: 1860244333, UnsafePtr: unsafe.Pointer(&Constructor_Control_Lazy_Lazy{1, gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(f_0, Get_Data_Unit_unit(), x_1)
 })
-}))
+})})}
 	})
 	return cache_Control_Lazy_lazyFn
 }
@@ -284,7 +284,7 @@ var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var go__go_1_0_2 gopurs_runtime.Value
 _ = go__go_1_0_2
-go__go_1_0_2 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_List_Lazy_Types_lazyList(), "defer"), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+go__go_1_0_2 = gopurs_runtime.Apply(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Control_Lazy_Lazy](Get_Data_List_Lazy_Types_lazyList()).V0), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_0, go__go_1_0_2)
 }))
 return go__go_1_0_2

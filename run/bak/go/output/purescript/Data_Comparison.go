@@ -82,7 +82,7 @@ var cache_Data_Comparison_semigroupComparison gopurs_runtime.Value
 var once_Data_Comparison_semigroupComparison sync.Once
 func Get_Data_Comparison_semigroupComparison() gopurs_runtime.Value {
 	once_Data_Comparison_semigroupComparison.Do(func() {
-		cache_Data_Comparison_semigroupComparison = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Comparison_semigroupComparison = gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(&Constructor_Data_Semigroup_Semigroup{1, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_2_0 -> gopurs_runtime.Value
 __local_var_2_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -132,7 +132,7 @@ return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_0, "append"), gopurs_runtime.Apply(v_0, x_3), gopurs_runtime.Apply(v1_1, x_3))
 })
 })
-}))
+})})}
 	})
 	return cache_Data_Comparison_semigroupComparison
 }
@@ -141,9 +141,9 @@ var cache_Data_Comparison_newtypeComparison gopurs_runtime.Value
 var once_Data_Comparison_newtypeComparison sync.Once
 func Get_Data_Comparison_newtypeComparison() gopurs_runtime.Value {
 	once_Data_Comparison_newtypeComparison.Do(func() {
-		cache_Data_Comparison_newtypeComparison = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Comparison_newtypeComparison = gopurs_runtime.Value{Type: 9, IntVal: 3322196858, UnsafePtr: unsafe.Pointer(&Constructor_Data_Newtype_Newtype{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
-}))
+})})}
 	})
 	return cache_Data_Comparison_newtypeComparison
 }
@@ -152,13 +152,13 @@ var cache_Data_Comparison_monoidComparison gopurs_runtime.Value
 var once_Data_Comparison_monoidComparison sync.Once
 func Get_Data_Comparison_monoidComparison() gopurs_runtime.Value {
 	once_Data_Comparison_monoidComparison.Do(func() {
-		cache_Data_Comparison_monoidComparison = gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Comparison_semigroupComparison()
+		cache_Data_Comparison_monoidComparison = gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(&Constructor_Data_Monoid_Monoid{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](Get_Data_Comparison_semigroupComparison()))}
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}
 })
-}))
+})})}
 	})
 	return cache_Data_Comparison_monoidComparison
 }
@@ -178,7 +178,7 @@ var cache_Data_Comparison_contravariantComparison gopurs_runtime.Value
 var once_Data_Comparison_contravariantComparison sync.Once
 func Get_Data_Comparison_contravariantComparison() gopurs_runtime.Value {
 	once_Data_Comparison_contravariantComparison.Do(func() {
-		cache_Data_Comparison_contravariantComparison = gopurs_runtime.RecordDict1("cmap", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Comparison_contravariantComparison = gopurs_runtime.Value{Type: 9, IntVal: 85171506, UnsafePtr: unsafe.Pointer(&Constructor_Data_Functor_Contravariant_Contravariant{1, gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -186,16 +186,16 @@ return gopurs_runtime.Apply2(v_1, gopurs_runtime.Apply(f_0, x_2), gopurs_runtime
 })
 })
 })
-}))
+})})}
 	})
 	return cache_Data_Comparison_contravariantComparison
 }
 
-var cache_Data_Comparison_contravariantComparison__1065380147 gopurs_runtime.Value
-var once_Data_Comparison_contravariantComparison__1065380147 sync.Once
-func Get_Data_Comparison_contravariantComparison__1065380147() gopurs_runtime.Value {
-	once_Data_Comparison_contravariantComparison__1065380147.Do(func() {
-		cache_Data_Comparison_contravariantComparison__1065380147 = gopurs_runtime.RecordDict1("cmap", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+var cache_Data_Comparison_contravariantComparison__3618244851 gopurs_runtime.Value
+var once_Data_Comparison_contravariantComparison__3618244851 sync.Once
+func Get_Data_Comparison_contravariantComparison__3618244851() gopurs_runtime.Value {
+	once_Data_Comparison_contravariantComparison__3618244851.Do(func() {
+		cache_Data_Comparison_contravariantComparison__3618244851 = gopurs_runtime.Value{Type: 9, IntVal: 85171506, UnsafePtr: unsafe.Pointer(&Constructor_Data_Functor_Contravariant_Contravariant{1, gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -203,16 +203,16 @@ return gopurs_runtime.Apply2(v_1, gopurs_runtime.Apply(f_0, x_2), gopurs_runtime
 })
 })
 })
-}))
+})})}
 	})
-	return cache_Data_Comparison_contravariantComparison__1065380147
+	return cache_Data_Comparison_contravariantComparison__3618244851
 }
 
-var cache_Data_Comparison_semigroupComparison__1133613061 gopurs_runtime.Value
-var once_Data_Comparison_semigroupComparison__1133613061 sync.Once
-func Get_Data_Comparison_semigroupComparison__1133613061() gopurs_runtime.Value {
-	once_Data_Comparison_semigroupComparison__1133613061.Do(func() {
-		cache_Data_Comparison_semigroupComparison__1133613061 = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+var cache_Data_Comparison_semigroupComparison__1240790907 gopurs_runtime.Value
+var once_Data_Comparison_semigroupComparison__1240790907 sync.Once
+func Get_Data_Comparison_semigroupComparison__1240790907() gopurs_runtime.Value {
+	once_Data_Comparison_semigroupComparison__1240790907.Do(func() {
+		cache_Data_Comparison_semigroupComparison__1240790907 = gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(&Constructor_Data_Semigroup_Semigroup{1, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_2_0 -> gopurs_runtime.Value
 __local_var_2_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -262,9 +262,9 @@ return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_0, "append"), gopurs_runtime.Apply(v_0, x_3), gopurs_runtime.Apply(v1_1, x_3))
 })
 })
-}))
+})})}
 	})
-	return cache_Data_Comparison_semigroupComparison__1133613061
+	return cache_Data_Comparison_semigroupComparison__1240790907
 }
 
 func Call_Data_Comparison_Comparison(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {

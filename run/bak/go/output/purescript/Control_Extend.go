@@ -43,9 +43,9 @@ var cache_Control_Extend_extendArray gopurs_runtime.Value
 var once_Control_Extend_extendArray sync.Once
 func Get_Control_Extend_extendArray() gopurs_runtime.Value {
 	once_Control_Extend_extendArray.Do(func() {
-		cache_Control_Extend_extendArray = gopurs_runtime.RecordDict2("Functor0", "extend", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Functor_functorArray()
-}), Get_Control_Extend_arrayExtend())
+		cache_Control_Extend_extendArray = gopurs_runtime.Value{Type: 9, IntVal: 3028639021, UnsafePtr: unsafe.Pointer(&Constructor_Control_Extend_Extend{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](Get_Data_Functor_functorArray()))}
+}), Get_Control_Extend_arrayExtend()})}
 	})
 	return cache_Control_Extend_extendArray
 }
@@ -206,8 +206,8 @@ return x_0
 func Call_Control_Extend_extendFn(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
 _ = dictSemigroup_0
-return gopurs_runtime.RecordDict2("Functor0", "extend", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Functor_functorFn()
+return gopurs_runtime.Value{Type: 9, IntVal: 3028639021, UnsafePtr: unsafe.Pointer(&Constructor_Control_Extend_Extend{1, gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](Get_Data_Functor_functorFn()))}
 }), gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(g_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(w_3 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -216,7 +216,7 @@ return gopurs_runtime.Apply(g_2, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(
 }))
 })
 })
-}))
+})})}
 }
 
 func Call_Control_Extend_extend(dict_0_loop *Constructor_Control_Extend_Extend) gopurs_runtime.Value {

@@ -279,9 +279,9 @@ var cache_Data_Newtype_newtypeMultiplicative gopurs_runtime.Value
 var once_Data_Newtype_newtypeMultiplicative sync.Once
 func Get_Data_Newtype_newtypeMultiplicative() gopurs_runtime.Value {
 	once_Data_Newtype_newtypeMultiplicative.Do(func() {
-		cache_Data_Newtype_newtypeMultiplicative = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Newtype_newtypeMultiplicative = gopurs_runtime.Value{Type: 9, IntVal: 3322196858, UnsafePtr: unsafe.Pointer(&Constructor_Data_Newtype_Newtype{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
-}))
+})})}
 	})
 	return cache_Data_Newtype_newtypeMultiplicative
 }
@@ -290,9 +290,9 @@ var cache_Data_Newtype_newtypeLast gopurs_runtime.Value
 var once_Data_Newtype_newtypeLast sync.Once
 func Get_Data_Newtype_newtypeLast() gopurs_runtime.Value {
 	once_Data_Newtype_newtypeLast.Do(func() {
-		cache_Data_Newtype_newtypeLast = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Newtype_newtypeLast = gopurs_runtime.Value{Type: 9, IntVal: 3322196858, UnsafePtr: unsafe.Pointer(&Constructor_Data_Newtype_Newtype{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
-}))
+})})}
 	})
 	return cache_Data_Newtype_newtypeLast
 }
@@ -301,9 +301,9 @@ var cache_Data_Newtype_newtypeFirst gopurs_runtime.Value
 var once_Data_Newtype_newtypeFirst sync.Once
 func Get_Data_Newtype_newtypeFirst() gopurs_runtime.Value {
 	once_Data_Newtype_newtypeFirst.Do(func() {
-		cache_Data_Newtype_newtypeFirst = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Newtype_newtypeFirst = gopurs_runtime.Value{Type: 9, IntVal: 3322196858, UnsafePtr: unsafe.Pointer(&Constructor_Data_Newtype_Newtype{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
-}))
+})})}
 	})
 	return cache_Data_Newtype_newtypeFirst
 }
@@ -312,9 +312,9 @@ var cache_Data_Newtype_newtypeEndo gopurs_runtime.Value
 var once_Data_Newtype_newtypeEndo sync.Once
 func Get_Data_Newtype_newtypeEndo() gopurs_runtime.Value {
 	once_Data_Newtype_newtypeEndo.Do(func() {
-		cache_Data_Newtype_newtypeEndo = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Newtype_newtypeEndo = gopurs_runtime.Value{Type: 9, IntVal: 3322196858, UnsafePtr: unsafe.Pointer(&Constructor_Data_Newtype_Newtype{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
-}))
+})})}
 	})
 	return cache_Data_Newtype_newtypeEndo
 }
@@ -323,9 +323,9 @@ var cache_Data_Newtype_newtypeDual gopurs_runtime.Value
 var once_Data_Newtype_newtypeDual sync.Once
 func Get_Data_Newtype_newtypeDual() gopurs_runtime.Value {
 	once_Data_Newtype_newtypeDual.Do(func() {
-		cache_Data_Newtype_newtypeDual = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Newtype_newtypeDual = gopurs_runtime.Value{Type: 9, IntVal: 3322196858, UnsafePtr: unsafe.Pointer(&Constructor_Data_Newtype_Newtype{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
-}))
+})})}
 	})
 	return cache_Data_Newtype_newtypeDual
 }
@@ -334,9 +334,9 @@ var cache_Data_Newtype_newtypeDisj gopurs_runtime.Value
 var once_Data_Newtype_newtypeDisj sync.Once
 func Get_Data_Newtype_newtypeDisj() gopurs_runtime.Value {
 	once_Data_Newtype_newtypeDisj.Do(func() {
-		cache_Data_Newtype_newtypeDisj = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Newtype_newtypeDisj = gopurs_runtime.Value{Type: 9, IntVal: 3322196858, UnsafePtr: unsafe.Pointer(&Constructor_Data_Newtype_Newtype{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
-}))
+})})}
 	})
 	return cache_Data_Newtype_newtypeDisj
 }
@@ -345,9 +345,9 @@ var cache_Data_Newtype_newtypeConj gopurs_runtime.Value
 var once_Data_Newtype_newtypeConj sync.Once
 func Get_Data_Newtype_newtypeConj() gopurs_runtime.Value {
 	once_Data_Newtype_newtypeConj.Do(func() {
-		cache_Data_Newtype_newtypeConj = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Newtype_newtypeConj = gopurs_runtime.Value{Type: 9, IntVal: 3322196858, UnsafePtr: unsafe.Pointer(&Constructor_Data_Newtype_Newtype{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
-}))
+})})}
 	})
 	return cache_Data_Newtype_newtypeConj
 }
@@ -356,9 +356,9 @@ var cache_Data_Newtype_newtypeAdditive gopurs_runtime.Value
 var once_Data_Newtype_newtypeAdditive sync.Once
 func Get_Data_Newtype_newtypeAdditive() gopurs_runtime.Value {
 	once_Data_Newtype_newtypeAdditive.Do(func() {
-		cache_Data_Newtype_newtypeAdditive = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Newtype_newtypeAdditive = gopurs_runtime.Value{Type: 9, IntVal: 3322196858, UnsafePtr: unsafe.Pointer(&Constructor_Data_Newtype_Newtype{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
-}))
+})})}
 	})
 	return cache_Data_Newtype_newtypeAdditive
 }
@@ -737,6 +737,39 @@ return Call_Data_Newtype_unwrap__3267718003(gopurs_runtime.CoerceToStruct[Constr
 	return cache_Data_Newtype_unwrap__3267718003
 }
 
+var cache_Data_Newtype_unwrap__175820179 gopurs_runtime.Value
+var once_Data_Newtype_unwrap__175820179 sync.Once
+func Get_Data_Newtype_unwrap__175820179() gopurs_runtime.Value {
+	once_Data_Newtype_unwrap__175820179.Do(func() {
+		cache_Data_Newtype_unwrap__175820179 = gopurs_runtime.Func(func(_dollar__unused_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Data_Newtype_unwrap__175820179(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_0_box))
+})
+	})
+	return cache_Data_Newtype_unwrap__175820179
+}
+
+var cache_Data_Newtype_unwrap__1607930611 gopurs_runtime.Value
+var once_Data_Newtype_unwrap__1607930611 sync.Once
+func Get_Data_Newtype_unwrap__1607930611() gopurs_runtime.Value {
+	once_Data_Newtype_unwrap__1607930611.Do(func() {
+		cache_Data_Newtype_unwrap__1607930611 = gopurs_runtime.Func(func(_dollar__unused_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Data_Newtype_unwrap__1607930611(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_0_box))
+})
+	})
+	return cache_Data_Newtype_unwrap__1607930611
+}
+
+var cache_Data_Newtype_unwrap__479902899 gopurs_runtime.Value
+var once_Data_Newtype_unwrap__479902899 sync.Once
+func Get_Data_Newtype_unwrap__479902899() gopurs_runtime.Value {
+	once_Data_Newtype_unwrap__479902899.Do(func() {
+		cache_Data_Newtype_unwrap__479902899 = gopurs_runtime.Func(func(_dollar__unused_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Data_Newtype_unwrap__479902899(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_0_box))
+})
+	})
+	return cache_Data_Newtype_unwrap__479902899
+}
+
 var cache_Data_Newtype_unwrap__3044449299 gopurs_runtime.Value
 var once_Data_Newtype_unwrap__3044449299 sync.Once
 func Get_Data_Newtype_unwrap__3044449299() gopurs_runtime.Value {
@@ -779,6 +812,39 @@ return Call_Data_Newtype_unwrap__2949884499(__eta0_0_box)
 })
 	})
 	return cache_Data_Newtype_unwrap__2949884499
+}
+
+var cache_Data_Newtype_unwrap__54673875 gopurs_runtime.Value
+var once_Data_Newtype_unwrap__54673875 sync.Once
+func Get_Data_Newtype_unwrap__54673875() gopurs_runtime.Value {
+	once_Data_Newtype_unwrap__54673875.Do(func() {
+		cache_Data_Newtype_unwrap__54673875 = gopurs_runtime.Func(func(__eta0_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Data_Newtype_unwrap__54673875(__eta0_0_box)
+})
+	})
+	return cache_Data_Newtype_unwrap__54673875
+}
+
+var cache_Data_Newtype_unwrap__3854970067 gopurs_runtime.Value
+var once_Data_Newtype_unwrap__3854970067 sync.Once
+func Get_Data_Newtype_unwrap__3854970067() gopurs_runtime.Value {
+	once_Data_Newtype_unwrap__3854970067.Do(func() {
+		cache_Data_Newtype_unwrap__3854970067 = gopurs_runtime.Func(func(__eta0_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Data_Newtype_unwrap__3854970067(__eta0_0_box)
+})
+	})
+	return cache_Data_Newtype_unwrap__3854970067
+}
+
+var cache_Data_Newtype_unwrap__305119571 gopurs_runtime.Value
+var once_Data_Newtype_unwrap__305119571 sync.Once
+func Get_Data_Newtype_unwrap__305119571() gopurs_runtime.Value {
+	once_Data_Newtype_unwrap__305119571.Do(func() {
+		cache_Data_Newtype_unwrap__305119571 = gopurs_runtime.Func(func(__eta0_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Data_Newtype_unwrap__305119571(__eta0_0_box)
+})
+	})
+	return cache_Data_Newtype_unwrap__305119571
 }
 
 var cache_Data_Newtype_unwrap__3882047635 gopurs_runtime.Value
@@ -1287,6 +1353,24 @@ _ = _dollar__unused_0
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
+func Call_Data_Newtype_unwrap__175820179(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype) gopurs_runtime.Value {
+var _dollar__unused_0 *Constructor_Data_Newtype_Newtype = _dollar__unused_0_loop
+_ = _dollar__unused_0
+return Get_Unsafe_Coerce_unsafeCoerce()
+}
+
+func Call_Data_Newtype_unwrap__1607930611(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype) gopurs_runtime.Value {
+var _dollar__unused_0 *Constructor_Data_Newtype_Newtype = _dollar__unused_0_loop
+_ = _dollar__unused_0
+return Get_Unsafe_Coerce_unsafeCoerce()
+}
+
+func Call_Data_Newtype_unwrap__479902899(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype) gopurs_runtime.Value {
+var _dollar__unused_0 *Constructor_Data_Newtype_Newtype = _dollar__unused_0_loop
+_ = _dollar__unused_0
+return Get_Unsafe_Coerce_unsafeCoerce()
+}
+
 func Call_Data_Newtype_unwrap__3044449299(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype) gopurs_runtime.Value {
 var _dollar__unused_0 *Constructor_Data_Newtype_Newtype = _dollar__unused_0_loop
 _ = _dollar__unused_0
@@ -1306,6 +1390,24 @@ return __eta0_0
 }
 
 func Call_Data_Newtype_unwrap__2949884499(__eta0_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+return __eta0_0
+}
+
+func Call_Data_Newtype_unwrap__54673875(__eta0_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+return __eta0_0
+}
+
+func Call_Data_Newtype_unwrap__3854970067(__eta0_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
+_ = __eta0_0
+return __eta0_0
+}
+
+func Call_Data_Newtype_unwrap__305119571(__eta0_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
 _ = __eta0_0
 return __eta0_0

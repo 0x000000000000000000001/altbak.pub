@@ -21,9 +21,9 @@ var cache_Control_Alt_altArray gopurs_runtime.Value
 var once_Control_Alt_altArray sync.Once
 func Get_Control_Alt_altArray() gopurs_runtime.Value {
 	once_Control_Alt_altArray.Do(func() {
-		cache_Control_Alt_altArray = gopurs_runtime.RecordDict2("Functor0", "alt", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Functor_functorArray()
-}), Get_Data_Semigroup_concatArray())
+		cache_Control_Alt_altArray = gopurs_runtime.Value{Type: 9, IntVal: 4060500237, UnsafePtr: unsafe.Pointer(&Constructor_Control_Alt_Alt{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](Get_Data_Functor_functorArray()))}
+}), Get_Data_Semigroup_concatArray()})}
 	})
 	return cache_Control_Alt_altArray
 }
@@ -147,17 +147,6 @@ return Call_Control_Alt_alt__3108117974(gopurs_runtime.CoerceToStruct[Constructo
 })
 	})
 	return cache_Control_Alt_alt__3108117974
-}
-
-var cache_Control_Alt_altArray__2010533188 gopurs_runtime.Value
-var once_Control_Alt_altArray__2010533188 sync.Once
-func Get_Control_Alt_altArray__2010533188() gopurs_runtime.Value {
-	once_Control_Alt_altArray__2010533188.Do(func() {
-		cache_Control_Alt_altArray__2010533188 = gopurs_runtime.RecordDict2("Functor0", "alt", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Functor_functorArray()
-}), Get_Data_Semigroup_concatArray())
-	})
-	return cache_Control_Alt_altArray__2010533188
 }
 
 type Constructor_Control_Alt_Alt struct {

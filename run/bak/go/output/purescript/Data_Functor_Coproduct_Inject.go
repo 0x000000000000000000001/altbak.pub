@@ -32,9 +32,9 @@ var cache_Data_Functor_Coproduct_Inject_injectReflexive gopurs_runtime.Value
 var once_Data_Functor_Coproduct_Inject_injectReflexive sync.Once
 func Get_Data_Functor_Coproduct_Inject_injectReflexive() gopurs_runtime.Value {
 	once_Data_Functor_Coproduct_Inject_injectReflexive.Do(func() {
-		cache_Data_Functor_Coproduct_Inject_injectReflexive = gopurs_runtime.RecordDict2("inj", "prj", gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Functor_Coproduct_Inject_injectReflexive = gopurs_runtime.Value{Type: 9, IntVal: 3819687178, UnsafePtr: unsafe.Pointer(&Constructor_Data_Functor_Coproduct_Inject_Inject{1, gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_0
-}), Get_Data_Maybe_Just())
+}), Get_Data_Maybe_Just()})}
 	})
 	return cache_Data_Functor_Coproduct_Inject_injectReflexive
 }
@@ -43,7 +43,7 @@ var cache_Data_Functor_Coproduct_Inject_injectLeft gopurs_runtime.Value
 var once_Data_Functor_Coproduct_Inject_injectLeft sync.Once
 func Get_Data_Functor_Coproduct_Inject_injectLeft() gopurs_runtime.Value {
 	once_Data_Functor_Coproduct_Inject_injectLeft.Do(func() {
-		cache_Data_Functor_Coproduct_Inject_injectLeft = gopurs_runtime.RecordDict2("inj", "prj", gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Functor_Coproduct_Inject_injectLeft = gopurs_runtime.Value{Type: 9, IntVal: 3819687178, UnsafePtr: unsafe.Pointer(&Constructor_Data_Functor_Coproduct_Inject_Inject{1, gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Left{1, x_0})}
 }), gopurs_runtime.Func(func(v2_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 *Constructor_Data_Maybe_Just
@@ -68,7 +68,7 @@ __t0 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_
 }
 end_branch_0:
 return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t0)}
-}))
+})})}
 	})
 	return cache_Data_Functor_Coproduct_Inject_injectLeft
 }
@@ -136,7 +136,7 @@ return gopurs_runtime.Box(dict_0.V0)
 func Call_Data_Functor_Coproduct_Inject_injectRight(dictInject_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictInject_0 gopurs_runtime.Value = dictInject_0_loop
 _ = dictInject_0
-return gopurs_runtime.RecordDict2("inj", "prj", gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3819687178, UnsafePtr: unsafe.Pointer(&Constructor_Data_Functor_Coproduct_Inject_Inject{1, gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Right{1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictInject_0, "inj"), x_1)})}
 }), gopurs_runtime.Func(func(v2_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 *Constructor_Data_Maybe_Just
@@ -161,7 +161,7 @@ __t0 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_
 }
 end_branch_0:
 return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t0)}
-}))
+})})}
 }
 
 

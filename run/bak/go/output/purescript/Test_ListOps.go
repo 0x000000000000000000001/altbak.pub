@@ -19,7 +19,9 @@ var cache_Test_ListOps_logShow gopurs_runtime.Value
 var once_Test_ListOps_logShow sync.Once
 func Get_Test_ListOps_logShow() gopurs_runtime.Value {
 	once_Test_ListOps_logShow.Do(func() {
-		cache_Test_ListOps_logShow = gopurs_runtime.Apply(Get_Effect_Console_logShow(), Get_Data_Show_showInt())
+		cache_Test_ListOps_logShow = gopurs_runtime.Func(func(a_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Test_ListOps_logShow(a_0_box.IntVal)
+})
 	})
 	return cache_Test_ListOps_logShow
 }
@@ -150,6 +152,12 @@ type Constructor_Test_ListOps_Cons struct {
 	V1 *Constructor_Test_ListOps_Cons
 }
 
+
+func Call_Test_ListOps_logShow(a_0_loop int64) gopurs_runtime.Value {
+var a_0 int64 = a_0_loop
+_ = a_0
+return gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(a_0)).StrVal()))
+}
 
 func Call_Test_ListOps_go__range(start_0_loop int64, end_1_loop int64) *Constructor_Test_ListOps_Cons {
 var start_0 int64 = start_0_loop

@@ -79,9 +79,9 @@ var cache_Data_String_CodePoints_showCodePoint gopurs_runtime.Value
 var once_Data_String_CodePoints_showCodePoint sync.Once
 func Get_Data_String_CodePoints_showCodePoint() gopurs_runtime.Value {
 	once_Data_String_CodePoints_showCodePoint.Do(func() {
-		cache_Data_String_CodePoints_showCodePoint = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_String_CodePoints_showCodePoint = gopurs_runtime.Value{Type: 9, IntVal: 1835580986, UnsafePtr: unsafe.Pointer(&Constructor_Data_Show_Show{1, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str((("(CodePoint 0x") + (gopurs_runtime.Apply(Get_Data_String_Common_toUpper(), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_Data_Int_toStringAs(), gopurs_runtime.Int(16), gopurs_runtime.Int(v_0.IntVal)).StrVal())).StrVal())) + (")"))
-}))
+})})}
 	})
 	return cache_Data_String_CodePoints_showCodePoint
 }
@@ -256,11 +256,11 @@ var cache_Data_String_CodePoints_eqCodePoint gopurs_runtime.Value
 var once_Data_String_CodePoints_eqCodePoint sync.Once
 func Get_Data_String_CodePoints_eqCodePoint() gopurs_runtime.Value {
 	once_Data_String_CodePoints_eqCodePoint.Do(func() {
-		cache_Data_String_CodePoints_eqCodePoint = gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_String_CodePoints_eqCodePoint = gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(&Constructor_Data_Eq_Eq{1, gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool((x_0.IntVal) == (y_1.IntVal))
 })
-}))
+})})}
 	})
 	return cache_Data_String_CodePoints_eqCodePoint
 }
@@ -269,13 +269,13 @@ var cache_Data_String_CodePoints_ordCodePoint gopurs_runtime.Value
 var once_Data_String_CodePoints_ordCodePoint sync.Once
 func Get_Data_String_CodePoints_ordCodePoint() gopurs_runtime.Value {
 	once_Data_String_CodePoints_ordCodePoint.Do(func() {
-		cache_Data_String_CodePoints_ordCodePoint = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_String_CodePoints_eqCodePoint()
+		cache_Data_String_CodePoints_ordCodePoint = gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(&Constructor_Data_Ord_Ord{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](Get_Data_String_CodePoints_eqCodePoint()))}
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply5(Get_Data_Ord_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Int(x_0.IntVal), gopurs_runtime.Int(y_1.IntVal)).IntVal)), UnsafePtr: nil}
 })
-}))
+})})}
 	})
 	return cache_Data_String_CodePoints_ordCodePoint
 }
@@ -392,9 +392,9 @@ var cache_Data_String_CodePoints_boundedCodePoint gopurs_runtime.Value
 var once_Data_String_CodePoints_boundedCodePoint sync.Once
 func Get_Data_String_CodePoints_boundedCodePoint() gopurs_runtime.Value {
 	once_Data_String_CodePoints_boundedCodePoint.Do(func() {
-		cache_Data_String_CodePoints_boundedCodePoint = gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_String_CodePoints_ordCodePoint()
-}), gopurs_runtime.Int(0), gopurs_runtime.Int(1114111))
+		cache_Data_String_CodePoints_boundedCodePoint = gopurs_runtime.Value{Type: 9, IntVal: 3510799738, UnsafePtr: unsafe.Pointer(&Constructor_Data_Bounded_Bounded{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](Get_Data_String_CodePoints_ordCodePoint()))}
+}), gopurs_runtime.Int(0), gopurs_runtime.Int(1114111)})}
 	})
 	return cache_Data_String_CodePoints_boundedCodePoint
 }
@@ -403,11 +403,11 @@ var cache_Data_String_CodePoints_boundedEnumCodePoint gopurs_runtime.Value
 var once_Data_String_CodePoints_boundedEnumCodePoint sync.Once
 func Get_Data_String_CodePoints_boundedEnumCodePoint() gopurs_runtime.Value {
 	once_Data_String_CodePoints_boundedEnumCodePoint.Do(func() {
-		cache_Data_String_CodePoints_boundedEnumCodePoint = gopurs_runtime.RecordDict5("Bounded0", "Enum1", "cardinality", "fromEnum", "toEnum", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_String_CodePoints_boundedCodePoint()
+		cache_Data_String_CodePoints_boundedEnumCodePoint = gopurs_runtime.Value{Type: 9, IntVal: 287434377, UnsafePtr: unsafe.Pointer(&Constructor_Data_Enum_BoundedEnum{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3510799738, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Bounded_Bounded](Get_Data_String_CodePoints_boundedCodePoint()))}
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_String_CodePoints_enumCodePoint()
-}), gopurs_runtime.Int(1114112), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 4075786298, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Enum_Enum](Get_Data_String_CodePoints_enumCodePoint()))}
+}), gopurs_runtime.Int(1114112).IntVal, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Int(v_0.IntVal)
 }), gopurs_runtime.Func(func(n_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t3 *Constructor_Data_Maybe_Just
@@ -455,7 +455,7 @@ __t3 = (*Constructor_Data_Maybe_Just)(nil)
 }
 end_branch_3:
 return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t3)}
-}))
+})})}
 	})
 	return cache_Data_String_CodePoints_boundedEnumCodePoint
 }
@@ -464,8 +464,8 @@ var cache_Data_String_CodePoints_enumCodePoint gopurs_runtime.Value
 var once_Data_String_CodePoints_enumCodePoint sync.Once
 func Get_Data_String_CodePoints_enumCodePoint() gopurs_runtime.Value {
 	once_Data_String_CodePoints_enumCodePoint.Do(func() {
-		cache_Data_String_CodePoints_enumCodePoint = gopurs_runtime.RecordDict3("Ord0", "pred", "succ", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_String_CodePoints_ordCodePoint()
+		cache_Data_String_CodePoints_enumCodePoint = gopurs_runtime.Value{Type: 9, IntVal: 4075786298, UnsafePtr: unsafe.Pointer(&Constructor_Data_Enum_Enum{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](Get_Data_String_CodePoints_ordCodePoint()))}
 }), gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_1_0 -> int64
 __local_var_1_0 := (a_0.IntVal) - (1)
@@ -564,7 +564,7 @@ __t9 = (*Constructor_Data_Maybe_Just)(nil)
 }
 end_branch_9:
 return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t9)}
-}))
+})})}
 	})
 	return cache_Data_String_CodePoints_enumCodePoint
 }
@@ -657,7 +657,24 @@ func Call_Data_String_CodePoints_toCodePointArrayFallback(s_0_loop string) []int
 var s_0 string = s_0_loop
 _ = s_0
 return func() []int64 {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Unfoldable_unfoldableArray(), "unfoldr"), Get_Data_String_CodePoints_unconsButWithTuple(), gopurs_runtime.Str(s_0)).UnsafePtr)
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply6(Get_Data_Unfoldable_unfoldrArrayImpl(), Get_Data_Maybe_isNothing(), gopurs_runtime.Apply(Get_Partial_Unsafe__unsafePartial(), gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t0 gopurs_runtime.Value
+{
+if (v_2.Type == 9 && v_2.IntVal == 930809136 && v_2.UnsafePtr != nil) {
+__t0 = (*Constructor_Data_Maybe_Just)(v_2.UnsafePtr).V0
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_0:
+return __t0
+})
+})), Get_Data_Tuple_fst(), Get_Data_Tuple_snd(), Get_Data_String_CodePoints_unconsButWithTuple(), gopurs_runtime.Str(s_0)).UnsafePtr)
 					unboxed := make([]int64, len(arr))
 					for i, v := range arr { unboxed[i] = v.IntVal }
 					return unboxed

@@ -52,13 +52,13 @@ var cache_Data_Ord_ordVoid gopurs_runtime.Value
 var once_Data_Ord_ordVoid sync.Once
 func Get_Data_Ord_ordVoid() gopurs_runtime.Value {
 	once_Data_Ord_ordVoid.Do(func() {
-		cache_Data_Ord_ordVoid = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Eq_eqVoid()
+		cache_Data_Ord_ordVoid = gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(&Constructor_Data_Ord_Ord{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](Get_Data_Eq_eqVoid()))}
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}
 })
-}))
+})})}
 	})
 	return cache_Data_Ord_ordVoid
 }
@@ -67,13 +67,13 @@ var cache_Data_Ord_ordUnit gopurs_runtime.Value
 var once_Data_Ord_ordUnit sync.Once
 func Get_Data_Ord_ordUnit() gopurs_runtime.Value {
 	once_Data_Ord_ordUnit.Do(func() {
-		cache_Data_Ord_ordUnit = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Eq_eqUnit()
+		cache_Data_Ord_ordUnit = gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(&Constructor_Data_Ord_Ord{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](Get_Data_Eq_eqUnit()))}
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}
 })
-}))
+})})}
 	})
 	return cache_Data_Ord_ordUnit
 }
@@ -82,9 +82,9 @@ var cache_Data_Ord_ordString gopurs_runtime.Value
 var once_Data_Ord_ordString sync.Once
 func Get_Data_Ord_ordString() gopurs_runtime.Value {
 	once_Data_Ord_ordString.Do(func() {
-		cache_Data_Ord_ordString = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Eq_eqString()
-}), gopurs_runtime.Apply3(Get_Data_Ord_ordStringImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}))
+		cache_Data_Ord_ordString = gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(&Constructor_Data_Ord_Ord{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](Get_Data_Eq_eqString()))}
+}), gopurs_runtime.Apply3(Get_Data_Ord_ordStringImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil})})}
 	})
 	return cache_Data_Ord_ordString
 }
@@ -93,15 +93,15 @@ var cache_Data_Ord_ordRecordNil gopurs_runtime.Value
 var once_Data_Ord_ordRecordNil sync.Once
 func Get_Data_Ord_ordRecordNil() gopurs_runtime.Value {
 	once_Data_Ord_ordRecordNil.Do(func() {
-		cache_Data_Ord_ordRecordNil = gopurs_runtime.RecordDict2("EqRecord0", "compareRecord", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Eq_eqRowNil()
+		cache_Data_Ord_ordRecordNil = gopurs_runtime.Value{Type: 9, IntVal: 4162894775, UnsafePtr: unsafe.Pointer(&Constructor_Data_Ord_OrdRecord{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1311326743, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_EqRecord](Get_Data_Eq_eqRowNil()))}
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}
 })
 })
-}))
+})})}
 	})
 	return cache_Data_Ord_ordRecordNil
 }
@@ -110,13 +110,13 @@ var cache_Data_Ord_ordProxy gopurs_runtime.Value
 var once_Data_Ord_ordProxy sync.Once
 func Get_Data_Ord_ordProxy() gopurs_runtime.Value {
 	once_Data_Ord_ordProxy.Do(func() {
-		cache_Data_Ord_ordProxy = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Eq_eqProxy()
+		cache_Data_Ord_ordProxy = gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(&Constructor_Data_Ord_Ord{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](Get_Data_Eq_eqProxy()))}
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}
 })
-}))
+})})}
 	})
 	return cache_Data_Ord_ordProxy
 }
@@ -125,8 +125,8 @@ var cache_Data_Ord_ordOrdering gopurs_runtime.Value
 var once_Data_Ord_ordOrdering sync.Once
 func Get_Data_Ord_ordOrdering() gopurs_runtime.Value {
 	once_Data_Ord_ordOrdering.Do(func() {
-		cache_Data_Ord_ordOrdering = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Ordering_eqOrdering()
+		cache_Data_Ord_ordOrdering = gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(&Constructor_Data_Ord_Ord{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](Get_Data_Ordering_eqOrdering()))}
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t3 uint32
@@ -215,7 +215,7 @@ __t3 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().In
 end_branch_3:
 return gopurs_runtime.Value{Type: 9, IntVal: int64(__t3), UnsafePtr: nil}
 })
-}))
+})})}
 	})
 	return cache_Data_Ord_ordOrdering
 }
@@ -224,9 +224,9 @@ var cache_Data_Ord_ordNumber gopurs_runtime.Value
 var once_Data_Ord_ordNumber sync.Once
 func Get_Data_Ord_ordNumber() gopurs_runtime.Value {
 	once_Data_Ord_ordNumber.Do(func() {
-		cache_Data_Ord_ordNumber = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Eq_eqNumber()
-}), gopurs_runtime.Apply3(Get_Data_Ord_ordNumberImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}))
+		cache_Data_Ord_ordNumber = gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(&Constructor_Data_Ord_Ord{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](Get_Data_Eq_eqNumber()))}
+}), gopurs_runtime.Apply3(Get_Data_Ord_ordNumberImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil})})}
 	})
 	return cache_Data_Ord_ordNumber
 }
@@ -235,9 +235,9 @@ var cache_Data_Ord_ordInt gopurs_runtime.Value
 var once_Data_Ord_ordInt sync.Once
 func Get_Data_Ord_ordInt() gopurs_runtime.Value {
 	once_Data_Ord_ordInt.Do(func() {
-		cache_Data_Ord_ordInt = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Eq_eqInt()
-}), gopurs_runtime.Apply3(Get_Data_Ord_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}))
+		cache_Data_Ord_ordInt = gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(&Constructor_Data_Ord_Ord{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](Get_Data_Eq_eqInt()))}
+}), gopurs_runtime.Apply3(Get_Data_Ord_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil})})}
 	})
 	return cache_Data_Ord_ordInt
 }
@@ -246,9 +246,9 @@ var cache_Data_Ord_ordChar gopurs_runtime.Value
 var once_Data_Ord_ordChar sync.Once
 func Get_Data_Ord_ordChar() gopurs_runtime.Value {
 	once_Data_Ord_ordChar.Do(func() {
-		cache_Data_Ord_ordChar = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Eq_eqChar()
-}), gopurs_runtime.Apply3(Get_Data_Ord_ordCharImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}))
+		cache_Data_Ord_ordChar = gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(&Constructor_Data_Ord_Ord{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](Get_Data_Eq_eqChar()))}
+}), gopurs_runtime.Apply3(Get_Data_Ord_ordCharImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil})})}
 	})
 	return cache_Data_Ord_ordChar
 }
@@ -257,9 +257,9 @@ var cache_Data_Ord_ordBoolean gopurs_runtime.Value
 var once_Data_Ord_ordBoolean sync.Once
 func Get_Data_Ord_ordBoolean() gopurs_runtime.Value {
 	once_Data_Ord_ordBoolean.Do(func() {
-		cache_Data_Ord_ordBoolean = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Eq_eqBoolean()
-}), gopurs_runtime.Apply3(Get_Data_Ord_ordBooleanImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}))
+		cache_Data_Ord_ordBoolean = gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(&Constructor_Data_Ord_Ord{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](Get_Data_Eq_eqBoolean()))}
+}), gopurs_runtime.Apply3(Get_Data_Ord_ordBooleanImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil})})}
 	})
 	return cache_Data_Ord_ordBoolean
 }
@@ -411,8 +411,8 @@ var cache_Data_Ord_ord1Array gopurs_runtime.Value
 var once_Data_Ord_ord1Array sync.Once
 func Get_Data_Ord_ord1Array() gopurs_runtime.Value {
 	once_Data_Ord_ord1Array.Do(func() {
-		cache_Data_Ord_ord1Array = gopurs_runtime.RecordDict2("Eq10", "compare1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Eq_eq1Array()
+		cache_Data_Ord_ord1Array = gopurs_runtime.Value{Type: 9, IntVal: 1632188299, UnsafePtr: unsafe.Pointer(&Constructor_Data_Ord_Ord1{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1715248107, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq1](Get_Data_Eq_eq1Array()))}
 }), gopurs_runtime.Func(func(dictOrd_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(xs_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(ys_2 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -465,7 +465,7 @@ return gopurs_runtime.Int(__t1)
 				}())).IntVal)).IntVal)), UnsafePtr: nil}
 })
 })
-}))
+})})}
 	})
 	return cache_Data_Ord_ord1Array
 }
@@ -1261,99 +1261,36 @@ return Call_Data_Ord_min__2767602680(gopurs_runtime.CoerceToStruct[Constructor_D
 	return cache_Data_Ord_min__2767602680
 }
 
-var cache_Data_Ord_ord1Array__2954870633 gopurs_runtime.Value
-var once_Data_Ord_ord1Array__2954870633 sync.Once
-func Get_Data_Ord_ord1Array__2954870633() gopurs_runtime.Value {
-	once_Data_Ord_ord1Array__2954870633.Do(func() {
-		cache_Data_Ord_ord1Array__2954870633 = gopurs_runtime.RecordDict2("Eq10", "compare1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Eq_eq1Array()
-}), gopurs_runtime.Func(func(dictOrd_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(xs_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(ys_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply5(Get_Data_Ord_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Int(0), gopurs_runtime.Int(gopurs_runtime.Apply3(Get_Data_Ord_ordArrayImpl(), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(y_4 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): v_5_0 -> gopurs_runtime.Value
-v_5_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), x_3, y_4)
-_ = v_5_0
-var __t1 int64
-{
-if (uint32(v_5_0.IntVal) == 902936544) {
-__t1 = 0
-goto end_branch_1
-} else {
-
-}
-}
-{
-if (uint32(v_5_0.IntVal) == 1527465420) {
-__t1 = 1
-goto end_branch_1
-} else {
-
-}
-}
-{
-if (uint32(v_5_0.IntVal) == 380165415) {
-__t1 = -1
-goto end_branch_1
-} else {
-
-}
-}
-{
-__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
-}
-end_branch_1:
-return gopurs_runtime.Int(__t1)
-})
-}), gopurs_runtime.Array(func() []gopurs_runtime.Value {
-					arr := *(*[]gopurs_runtime.Value)(xs_1.UnsafePtr)
-					unboxed := make([]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { unboxed[i] = v }
-					return unboxed
-				}()), gopurs_runtime.Array(func() []gopurs_runtime.Value {
-					arr := *(*[]gopurs_runtime.Value)(ys_2.UnsafePtr)
-					unboxed := make([]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { unboxed[i] = v }
-					return unboxed
-				}())).IntVal)).IntVal)), UnsafePtr: nil}
-})
-})
-}))
-	})
-	return cache_Data_Ord_ord1Array__2954870633
-}
-
-var cache_Data_Ord_ordProxy__2266765976 gopurs_runtime.Value
-var once_Data_Ord_ordProxy__2266765976 sync.Once
-func Get_Data_Ord_ordProxy__2266765976() gopurs_runtime.Value {
-	once_Data_Ord_ordProxy__2266765976.Do(func() {
-		cache_Data_Ord_ordProxy__2266765976 = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Eq_eqProxy()
+var cache_Data_Ord_ordProxy__1361862173 gopurs_runtime.Value
+var once_Data_Ord_ordProxy__1361862173 sync.Once
+func Get_Data_Ord_ordProxy__1361862173() gopurs_runtime.Value {
+	once_Data_Ord_ordProxy__1361862173.Do(func() {
+		cache_Data_Ord_ordProxy__1361862173 = gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(&Constructor_Data_Ord_Ord{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](Get_Data_Eq_eqProxy()))}
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}
 })
-}))
+})})}
 	})
-	return cache_Data_Ord_ordProxy__2266765976
+	return cache_Data_Ord_ordProxy__1361862173
 }
 
-var cache_Data_Ord_ordRecordNil__512917160 gopurs_runtime.Value
-var once_Data_Ord_ordRecordNil__512917160 sync.Once
-func Get_Data_Ord_ordRecordNil__512917160() gopurs_runtime.Value {
-	once_Data_Ord_ordRecordNil__512917160.Do(func() {
-		cache_Data_Ord_ordRecordNil__512917160 = gopurs_runtime.RecordDict2("EqRecord0", "compareRecord", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Eq_eqRowNil()
+var cache_Data_Ord_ordRecordNil__2428069645 gopurs_runtime.Value
+var once_Data_Ord_ordRecordNil__2428069645 sync.Once
+func Get_Data_Ord_ordRecordNil__2428069645() gopurs_runtime.Value {
+	once_Data_Ord_ordRecordNil__2428069645.Do(func() {
+		cache_Data_Ord_ordRecordNil__2428069645 = gopurs_runtime.Value{Type: 9, IntVal: 4162894775, UnsafePtr: unsafe.Pointer(&Constructor_Data_Ord_OrdRecord{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1311326743, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_EqRecord](Get_Data_Eq_eqRowNil()))}
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}
 })
 })
-}))
+})})}
 	})
-	return cache_Data_Ord_ordRecordNil__512917160
+	return cache_Data_Ord_ordRecordNil__2428069645
 }
 
 type Constructor_Data_Ord_OrdRecord struct {
@@ -1445,12 +1382,12 @@ var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var dictOrdRecord_1 gopurs_runtime.Value = dictOrdRecord_1_loop
 _ = dictOrdRecord_1
-// TAST (Let): eqRec1_2_0 -> gopurs_runtime.Value
-eqRec1_2_0 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrdRecord_1, "EqRecord0"), gopurs_runtime.Value{}), "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}))
+// TAST (Let): eqRec1_2_0 -> *Constructor_Data_Eq_Eq
+eqRec1_2_0 := &Constructor_Data_Eq_Eq{1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrdRecord_1, "EqRecord0"), gopurs_runtime.Value{}), "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil})}
 _ = eqRec1_2_0
-return gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return eqRec1_2_0
-}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrdRecord_1, "compareRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}))
+return gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(&Constructor_Data_Ord_Ord{1, gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(eqRec1_2_0)}
+}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrdRecord_1, "compareRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil})})}
 }
 
 func Call_Data_Ord_compare1(dict_0_loop *Constructor_Data_Ord_Ord1) gopurs_runtime.Value {
@@ -1736,11 +1673,11 @@ return __t1
 func Call_Data_Ord_ordArray(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-// TAST (Let): eqArray_1_0 -> gopurs_runtime.Value
-eqArray_1_0 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(Get_Data_Eq_eqArrayImpl(), gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0, "Eq0"), gopurs_runtime.Value{}), "eq")))
+// TAST (Let): eqArray_1_0 -> *Constructor_Data_Eq_Eq
+eqArray_1_0 := &Constructor_Data_Eq_Eq{1, gopurs_runtime.Apply(Get_Data_Eq_eqArrayImpl(), gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_0, "Eq0"), gopurs_runtime.Value{}), "eq"))}
 _ = eqArray_1_0
-return gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return eqArray_1_0
+return gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(&Constructor_Data_Ord_Ord{1, gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(eqArray_1_0)}
 }), gopurs_runtime.Func(func(xs_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(ys_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(Call_Data_Ord_compare__372254389(gopurs_runtime.Int(0), gopurs_runtime.Int(gopurs_runtime.Apply3(Get_Data_Ord_ordArrayImpl(), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1791,7 +1728,7 @@ return gopurs_runtime.Int(__t2)
 					return unboxed
 				}())).IntVal)).IntVal)), UnsafePtr: nil}
 })
-}))
+})})}
 }
 
 func Call_Data_Ord_ordRecordCons(dictOrdRecord_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1806,11 +1743,11 @@ return gopurs_runtime.Func(func(dictIsSymbol_3 gopurs_runtime.Value) gopurs_runt
 eqRowCons1_4_1 := gopurs_runtime.Apply(eqRowCons_1_0, dictIsSymbol_3)
 _ = eqRowCons1_4_1
 return gopurs_runtime.Func(func(dictOrd_5 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): eqRowCons2_6_2 -> gopurs_runtime.Value
-eqRowCons2_6_2 := gopurs_runtime.Apply(eqRowCons1_4_1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_5, "Eq0"), gopurs_runtime.Value{}))
+// TAST (Let): eqRowCons2_6_2 -> *Constructor_Data_Eq_EqRecord
+eqRowCons2_6_2 := gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_EqRecord](gopurs_runtime.Apply(eqRowCons1_4_1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_5, "Eq0"), gopurs_runtime.Value{})))
 _ = eqRowCons2_6_2
-return gopurs_runtime.RecordDict2("EqRecord0", "compareRecord", gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return eqRowCons2_6_2
+return gopurs_runtime.Value{Type: 9, IntVal: 4162894775, UnsafePtr: unsafe.Pointer(&Constructor_Data_Ord_OrdRecord{1, gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1311326743, UnsafePtr: unsafe.Pointer(eqRowCons2_6_2)}
 }), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(ra_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(rb_9 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1868,7 +1805,7 @@ end_branch_9:
 return gopurs_runtime.Value{Type: 9, IntVal: int64(__t9), UnsafePtr: nil}
 })
 })
-}))
+})})}
 })
 })
 })
@@ -2134,7 +2071,7 @@ _ = hi_1
 var x_2 int64 = x_2_loop
 _ = x_2
 // TAST (Let): v_3_1 -> gopurs_runtime.Value
-v_3_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Ord_ordInt(), "compare"), gopurs_runtime.Int(low_0), gopurs_runtime.Int(x_2))
+v_3_1 := gopurs_runtime.Apply5(Get_Data_Ord_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Int(low_0), gopurs_runtime.Int(x_2))
 _ = v_3_1
 var __t2 gopurs_runtime.Value
 {
@@ -2169,7 +2106,7 @@ end_branch_2:
 __local_var_3_0 := __t2.IntVal
 _ = __local_var_3_0
 // TAST (Let): v_4_3 -> gopurs_runtime.Value
-v_4_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Ord_ordInt(), "compare"), gopurs_runtime.Int(hi_1), gopurs_runtime.Int(__local_var_3_0))
+v_4_3 := gopurs_runtime.Apply5(Get_Data_Ord_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Int(hi_1), gopurs_runtime.Int(__local_var_3_0))
 _ = v_4_3
 var __t4 gopurs_runtime.Value
 {
@@ -2704,7 +2641,7 @@ _ = x_0
 var y_1 *Constructor_Data_Date_Date = y_1_loop
 _ = y_1
 // TAST (Let): v_2_0 -> uint32
-v_2_0 := uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Date_Component_ordYear(), "compare"), gopurs_runtime.Int((x_0).V0), gopurs_runtime.Int((y_1).V0)).IntVal)
+v_2_0 := uint32(gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](Get_Data_Date_Component_ordYear()).V1), gopurs_runtime.Int((x_0).V0), gopurs_runtime.Int((y_1).V0)).IntVal)
 _ = v_2_0
 var __t3 uint32
 {
@@ -2725,7 +2662,7 @@ goto end_branch_3
 }
 {
 // TAST (Let): v1_3_1 -> uint32
-v1_3_1 := uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Date_Component_ordMonth(), "compare"), gopurs_runtime.Value{Type: 9, IntVal: int64((x_0).V1), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64((y_1).V1), UnsafePtr: nil}).IntVal)
+v1_3_1 := uint32(gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](Get_Data_Date_Component_ordMonth()).V1), gopurs_runtime.Value{Type: 9, IntVal: int64((x_0).V1), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64((y_1).V1), UnsafePtr: nil}).IntVal)
 _ = v1_3_1
 var __t2 uint32
 {
@@ -2745,7 +2682,7 @@ goto end_branch_2
 }
 }
 {
-__t2 = uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Date_Component_ordDay(), "compare"), gopurs_runtime.Int((x_0).V2), gopurs_runtime.Int((y_1).V2)).IntVal)
+__t2 = uint32(gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](Get_Data_Date_Component_ordDay()).V1), gopurs_runtime.Int((x_0).V2), gopurs_runtime.Int((y_1).V2)).IntVal)
 }
 end_branch_2:
 __t3 = __t2
@@ -3001,7 +2938,7 @@ _ = x_0
 var y_1 *Constructor_Data_Time_Time = y_1_loop
 _ = y_1
 // TAST (Let): v_2_0 -> uint32
-v_2_0 := uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Time_Component_ordHour(), "compare"), gopurs_runtime.Int((x_0).V0), gopurs_runtime.Int((y_1).V0)).IntVal)
+v_2_0 := uint32(gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](Get_Data_Time_Component_ordHour()).V1), gopurs_runtime.Int((x_0).V0), gopurs_runtime.Int((y_1).V0)).IntVal)
 _ = v_2_0
 var __t5 uint32
 {
@@ -3022,7 +2959,7 @@ goto end_branch_5
 }
 {
 // TAST (Let): v1_3_1 -> uint32
-v1_3_1 := uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Time_Component_ordMinute(), "compare"), gopurs_runtime.Int((x_0).V1), gopurs_runtime.Int((y_1).V1)).IntVal)
+v1_3_1 := uint32(gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](Get_Data_Time_Component_ordMinute()).V1), gopurs_runtime.Int((x_0).V1), gopurs_runtime.Int((y_1).V1)).IntVal)
 _ = v1_3_1
 var __t4 uint32
 {
@@ -3043,7 +2980,7 @@ goto end_branch_4
 }
 {
 // TAST (Let): v2_4_2 -> uint32
-v2_4_2 := uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Time_Component_ordSecond(), "compare"), gopurs_runtime.Int((x_0).V2), gopurs_runtime.Int((y_1).V2)).IntVal)
+v2_4_2 := uint32(gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](Get_Data_Time_Component_ordSecond()).V1), gopurs_runtime.Int((x_0).V2), gopurs_runtime.Int((y_1).V2)).IntVal)
 _ = v2_4_2
 var __t3 uint32
 {
@@ -3063,7 +3000,7 @@ goto end_branch_3
 }
 }
 {
-__t3 = uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Time_Component_ordMillisecond(), "compare"), gopurs_runtime.Int((x_0).V3), gopurs_runtime.Int((y_1).V3)).IntVal)
+__t3 = uint32(gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](Get_Data_Time_Component_ordMillisecond()).V1), gopurs_runtime.Int((x_0).V3), gopurs_runtime.Int((y_1).V3)).IntVal)
 }
 end_branch_3:
 __t4 = __t3
@@ -3217,7 +3154,7 @@ var a2_1 float64 = a2_1_loop
 _ = a2_1
 var __t1 bool
 {
-var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Time_Duration_ordMilliseconds(), "compare"), gopurs_runtime.Float(a1_0), gopurs_runtime.Float(a2_1))
+var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](Get_Data_Time_Duration_ordMilliseconds()).V1), gopurs_runtime.Float(a1_0), gopurs_runtime.Float(a2_1))
 if (uint32(__t_tag_0.IntVal) == 380165415) {
 __t1 = true
 goto end_branch_1
@@ -3376,20 +3313,21 @@ var a1_0 float64 = a1_0_loop
 _ = a1_0
 var a2_1 float64 = a2_1_loop
 _ = a2_1
-var __t0 bool
+var __t1 bool
 {
-if (a1_0) < (a2_1) {
-__t0 = false
-goto end_branch_0
+var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply5(Get_Data_Ord_ordNumberImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Float(a1_0), gopurs_runtime.Float(a2_1))
+if (uint32(__t_tag_0.IntVal) == 1527465420) {
+__t1 = false
+goto end_branch_1
 } else {
 
 }
 }
 {
-__t0 = true
+__t1 = true
 }
-end_branch_0:
-return __t0
+end_branch_1:
+return __t1
 }
 
 func Call_Data_Ord_greaterThanOrEq__1409282474(dictOrd_0_loop *Constructor_Data_Ord_Ord, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
@@ -3490,20 +3428,21 @@ var a1_0 float64 = a1_0_loop
 _ = a1_0
 var a2_1 float64 = a2_1_loop
 _ = a2_1
-var __t0 bool
+var __t1 bool
 {
-if (a1_0) < (a2_1) {
-__t0 = true
-goto end_branch_0
+var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply5(Get_Data_Ord_ordNumberImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Float(a1_0), gopurs_runtime.Float(a2_1))
+if (uint32(__t_tag_0.IntVal) == 1527465420) {
+__t1 = true
+goto end_branch_1
 } else {
 
 }
 }
 {
-__t0 = false
+__t1 = false
 }
-end_branch_0:
-return __t0
+end_branch_1:
+return __t1
 }
 
 func Call_Data_Ord_lessThan__1409282474(dictOrd_0_loop *Constructor_Data_Ord_Ord, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
@@ -3580,20 +3519,21 @@ var a1_0 float64 = a1_0_loop
 _ = a1_0
 var a2_1 float64 = a2_1_loop
 _ = a2_1
-var __t0 bool
+var __t1 bool
 {
-if (a1_0) > (a2_1) {
-__t0 = false
-goto end_branch_0
+var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply5(Get_Data_Ord_ordNumberImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Float(a1_0), gopurs_runtime.Float(a2_1))
+if (uint32(__t_tag_0.IntVal) == 380165415) {
+__t1 = false
+goto end_branch_1
 } else {
 
 }
 }
 {
-__t0 = true
+__t1 = true
 }
-end_branch_0:
-return __t0
+end_branch_1:
+return __t1
 }
 
 func Call_Data_Ord_lessThanOrEq__3448835524(dictOrd_0_loop *Constructor_Data_Ord_Ord, a1_1_loop string, a2_2_loop string) bool {
@@ -3740,7 +3680,7 @@ _ = x_0
 var y_1 int64 = y_1_loop
 _ = y_1
 // TAST (Let): v_2_0 -> gopurs_runtime.Value
-v_2_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Ord_ordInt(), "compare"), gopurs_runtime.Int(x_0), gopurs_runtime.Int(y_1))
+v_2_0 := gopurs_runtime.Apply5(Get_Data_Ord_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Int(x_0), gopurs_runtime.Int(y_1))
 _ = v_2_0
 var __t1 int64
 {

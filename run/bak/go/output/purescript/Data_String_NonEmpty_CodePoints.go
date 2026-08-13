@@ -10,7 +10,9 @@ var cache_Data_String_NonEmpty_CodePoints_toNonEmptyString gopurs_runtime.Value
 var once_Data_String_NonEmpty_CodePoints_toNonEmptyString sync.Once
 func Get_Data_String_NonEmpty_CodePoints_toNonEmptyString() gopurs_runtime.Value {
 	once_Data_String_NonEmpty_CodePoints_toNonEmptyString.Do(func() {
-		cache_Data_String_NonEmpty_CodePoints_toNonEmptyString = Get_Data_String_NonEmpty_Internal_NonEmptyString()
+		cache_Data_String_NonEmpty_CodePoints_toNonEmptyString = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str(Call_Data_String_NonEmpty_CodePoints_toNonEmptyString(x_0_box.StrVal()))
+})
 	})
 	return cache_Data_String_NonEmpty_CodePoints_toNonEmptyString
 }
@@ -406,6 +408,12 @@ return Call_Data_String_NonEmpty_CodePoints_liftS__3230749042(f_0_box, v_1_box.S
 })
 	})
 	return cache_Data_String_NonEmpty_CodePoints_liftS__3230749042
+}
+
+func Call_Data_String_NonEmpty_CodePoints_toNonEmptyString(x_0_loop string) string {
+var x_0 string = x_0_loop
+_ = x_0
+return x_0
 }
 
 func Call_Data_String_NonEmpty_CodePoints_snoc(c_0_loop int64, s_1_loop string) string {

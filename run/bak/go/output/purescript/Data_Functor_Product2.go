@@ -119,9 +119,9 @@ var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
 _ = dictShow_0
 var dictShow1_1 gopurs_runtime.Value = dictShow1_1_loop
 _ = dictShow1_1
-return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1835580986, UnsafePtr: unsafe.Pointer(&Constructor_Data_Show_Show{1, gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str((((("(Product2 ") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*Constructor_Data_Functor_Product2_Product2)(v_2.UnsafePtr).V0).StrVal())) + (" ")) + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*Constructor_Data_Functor_Product2_Product2)(v_2.UnsafePtr).V1).StrVal())) + (")"))
-}))
+})})}
 }
 
 func Call_Data_Functor_Product2_profunctorProduct2(dictProfunctor_0_loop gopurs_runtime.Value, dictProfunctor1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -129,13 +129,13 @@ var dictProfunctor_0 gopurs_runtime.Value = dictProfunctor_0_loop
 _ = dictProfunctor_0
 var dictProfunctor1_1 gopurs_runtime.Value = dictProfunctor1_1_loop
 _ = dictProfunctor1_1
-return gopurs_runtime.RecordDict1("dimap", gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2367018778, UnsafePtr: unsafe.Pointer(&Constructor_Data_Profunctor_Profunctor{1, gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(g_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 3559137202, UnsafePtr: unsafe.Pointer(&Constructor_Data_Functor_Product2_Product2{1, gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictProfunctor_0, "dimap"), f_2, g_3, (*Constructor_Data_Functor_Product2_Product2)(v_4.UnsafePtr).V0), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictProfunctor1_1, "dimap"), f_2, g_3, (*Constructor_Data_Functor_Product2_Product2)(v_4.UnsafePtr).V1)})}
 })
 })
-}))
+})})}
 }
 
 func Call_Data_Functor_Product2_functorProduct2(dictFunctor_0_loop gopurs_runtime.Value, dictFunctor1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -143,11 +143,11 @@ var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
 var dictFunctor1_1 gopurs_runtime.Value = dictFunctor1_1_loop
 _ = dictFunctor1_1
-return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(&Constructor_Data_Functor_Functor{1, gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 3559137202, UnsafePtr: unsafe.Pointer(&Constructor_Data_Functor_Product2_Product2{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), f_2, (*Constructor_Data_Functor_Product2_Product2)(v_3.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor1_1, "map"), f_2, (*Constructor_Data_Functor_Product2_Product2)(v_3.UnsafePtr).V1)})}
 })
-}))
+})})}
 }
 
 func Call_Data_Functor_Product2_eqProduct2(dictEq_0_loop gopurs_runtime.Value, dictEq1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -155,11 +155,11 @@ var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
 _ = dictEq_0
 var dictEq1_1 gopurs_runtime.Value = dictEq1_1_loop
 _ = dictEq1_1
-return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(&Constructor_Data_Eq_Eq{1, gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), (*Constructor_Data_Functor_Product2_Product2)(x_2.UnsafePtr).V0, (*Constructor_Data_Functor_Product2_Product2)(y_3.UnsafePtr).V0).IntVal) != (0)) && ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_1, "eq"), (*Constructor_Data_Functor_Product2_Product2)(x_2.UnsafePtr).V1, (*Constructor_Data_Functor_Product2_Product2)(y_3.UnsafePtr).V1).IntVal) != (0)))
 })
-}))
+})})}
 }
 
 func Call_Data_Functor_Product2_ordProduct2(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -172,15 +172,15 @@ return gopurs_runtime.Func(func(dictOrd1_2 gopurs_runtime.Value) gopurs_runtime.
 // TAST (Let): __local_var_3_2 -> gopurs_runtime.Value
 __local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_2, "Eq0"), gopurs_runtime.Value{})
 _ = __local_var_3_2
-// TAST (Let): eqProduct22_3_1 -> gopurs_runtime.Value
-eqProduct22_3_1 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): eqProduct22_3_1 -> *Constructor_Data_Eq_Eq
+eqProduct22_3_1 := gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "eq"), (*Constructor_Data_Functor_Product2_Product2)(x_4.UnsafePtr).V0, (*Constructor_Data_Functor_Product2_Product2)(y_5.UnsafePtr).V0).IntVal) != (0)) && ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_2, "eq"), (*Constructor_Data_Functor_Product2_Product2)(x_4.UnsafePtr).V1, (*Constructor_Data_Functor_Product2_Product2)(y_5.UnsafePtr).V1).IntVal) != (0)))
 })
-}))
+})))
 _ = eqProduct22_3_1
-return gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return eqProduct22_3_1
+return gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(&Constructor_Data_Ord_Ord{1, gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(eqProduct22_3_1)}
 }), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_5 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): v_6_3 -> gopurs_runtime.Value
@@ -209,7 +209,7 @@ __t4 = uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd1_2, "compar
 end_branch_4:
 return gopurs_runtime.Value{Type: 9, IntVal: int64(__t4), UnsafePtr: nil}
 })
-}))
+})})}
 })
 }
 
@@ -218,13 +218,13 @@ var dictBifunctor_0 gopurs_runtime.Value = dictBifunctor_0_loop
 _ = dictBifunctor_0
 var dictBifunctor1_1 gopurs_runtime.Value = dictBifunctor1_1_loop
 _ = dictBifunctor1_1
-return gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 4141114362, UnsafePtr: unsafe.Pointer(&Constructor_Data_Bifunctor_Bifunctor{1, gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(g_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 3559137202, UnsafePtr: unsafe.Pointer(&Constructor_Data_Functor_Product2_Product2{1, gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictBifunctor_0, "bimap"), f_2, g_3, (*Constructor_Data_Functor_Product2_Product2)(v_4.UnsafePtr).V0), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictBifunctor1_1, "bimap"), f_2, g_3, (*Constructor_Data_Functor_Product2_Product2)(v_4.UnsafePtr).V1)})}
 })
 })
-}))
+})})}
 }
 
 func Call_Data_Functor_Product2_biapplyProduct2(dictBiapply_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -237,22 +237,22 @@ return gopurs_runtime.Func(func(dictBiapply1_2 gopurs_runtime.Value) gopurs_runt
 // TAST (Let): __local_var_3_2 -> gopurs_runtime.Value
 __local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictBiapply1_2, "Bifunctor0"), gopurs_runtime.Value{})
 _ = __local_var_3_2
-// TAST (Let): bifunctorProduct22_3_1 -> gopurs_runtime.Value
-bifunctorProduct22_3_1 := gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): bifunctorProduct22_3_1 -> *Constructor_Data_Bifunctor_Bifunctor
+bifunctorProduct22_3_1 := gopurs_runtime.CoerceToStruct[Constructor_Data_Bifunctor_Bifunctor](gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(g_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 3559137202, UnsafePtr: unsafe.Pointer(&Constructor_Data_Functor_Product2_Product2{1, gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_1_0, "bimap"), f_4, g_5, (*Constructor_Data_Functor_Product2_Product2)(v_6.UnsafePtr).V0), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_3_2, "bimap"), f_4, g_5, (*Constructor_Data_Functor_Product2_Product2)(v_6.UnsafePtr).V1)})}
 })
 })
-}))
+})))
 _ = bifunctorProduct22_3_1
-return gopurs_runtime.RecordDict2("Bifunctor0", "biapply", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return bifunctorProduct22_3_1
+return gopurs_runtime.Value{Type: 9, IntVal: 3774602829, UnsafePtr: unsafe.Pointer(&Constructor_Control_Biapply_Biapply{1, gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 4141114362, UnsafePtr: unsafe.Pointer(bifunctorProduct22_3_1)}
 }), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 3559137202, UnsafePtr: unsafe.Pointer(&Constructor_Data_Functor_Product2_Product2{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBiapply_0, "biapply"), (*Constructor_Data_Functor_Product2_Product2)(v_4.UnsafePtr).V0, (*Constructor_Data_Functor_Product2_Product2)(v1_5.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBiapply1_2, "biapply"), (*Constructor_Data_Functor_Product2_Product2)(v_4.UnsafePtr).V1, (*Constructor_Data_Functor_Product2_Product2)(v1_5.UnsafePtr).V1)})}
 })
-}))
+})})}
 })
 }
 
@@ -272,31 +272,31 @@ _ = __local_var_4_3
 // TAST (Let): __local_var_5_5 -> gopurs_runtime.Value
 __local_var_5_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_3, "Bifunctor0"), gopurs_runtime.Value{})
 _ = __local_var_5_5
-// TAST (Let): bifunctorProduct22_5_4 -> gopurs_runtime.Value
-bifunctorProduct22_5_4 := gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func(func(f_6 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): bifunctorProduct22_5_4 -> *Constructor_Data_Bifunctor_Bifunctor
+bifunctorProduct22_5_4 := gopurs_runtime.CoerceToStruct[Constructor_Data_Bifunctor_Bifunctor](gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func(func(f_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(g_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 3559137202, UnsafePtr: unsafe.Pointer(&Constructor_Data_Functor_Product2_Product2{1, gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_2_1, "bimap"), f_6, g_7, (*Constructor_Data_Functor_Product2_Product2)(v_8.UnsafePtr).V0), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_5_5, "bimap"), f_6, g_7, (*Constructor_Data_Functor_Product2_Product2)(v_8.UnsafePtr).V1)})}
 })
 })
-}))
+})))
 _ = bifunctorProduct22_5_4
-// TAST (Let): biapplyProduct22_4_2 -> gopurs_runtime.Value
-biapplyProduct22_4_2 := gopurs_runtime.RecordDict2("Bifunctor0", "biapply", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return bifunctorProduct22_5_4
+// TAST (Let): biapplyProduct22_4_2 -> *Constructor_Control_Biapply_Biapply
+biapplyProduct22_4_2 := &Constructor_Control_Biapply_Biapply{1, gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 4141114362, UnsafePtr: unsafe.Pointer(bifunctorProduct22_5_4)}
 }), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 3559137202, UnsafePtr: unsafe.Pointer(&Constructor_Data_Functor_Product2_Product2{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "biapply"), (*Constructor_Data_Functor_Product2_Product2)(v_6.UnsafePtr).V0, (*Constructor_Data_Functor_Product2_Product2)(v1_7.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_3, "biapply"), (*Constructor_Data_Functor_Product2_Product2)(v_6.UnsafePtr).V1, (*Constructor_Data_Functor_Product2_Product2)(v1_7.UnsafePtr).V1)})}
 })
-}))
+})}
 _ = biapplyProduct22_4_2
-return gopurs_runtime.RecordDict2("Biapply0", "bipure", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return biapplyProduct22_4_2
+return gopurs_runtime.Value{Type: 9, IntVal: 3949191309, UnsafePtr: unsafe.Pointer(&Constructor_Control_Biapplicative_Biapplicative{1, gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3774602829, UnsafePtr: unsafe.Pointer(biapplyProduct22_4_2)}
 }), gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(b_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 3559137202, UnsafePtr: unsafe.Pointer(&Constructor_Data_Functor_Product2_Product2{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBiapplicative_0, "bipure"), a_5, b_6), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBiapplicative1_3, "bipure"), a_5, b_6)})}
 })
-}))
+})})}
 })
 }
 

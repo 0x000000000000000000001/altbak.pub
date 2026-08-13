@@ -32,9 +32,9 @@ var cache_Control_Biapplicative_biapplicativeTuple gopurs_runtime.Value
 var once_Control_Biapplicative_biapplicativeTuple sync.Once
 func Get_Control_Biapplicative_biapplicativeTuple() gopurs_runtime.Value {
 	once_Control_Biapplicative_biapplicativeTuple.Do(func() {
-		cache_Control_Biapplicative_biapplicativeTuple = gopurs_runtime.RecordDict2("Biapply0", "bipure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Control_Biapply_biapplyTuple()
-}), Get_Data_Tuple_Tuple())
+		cache_Control_Biapplicative_biapplicativeTuple = gopurs_runtime.Value{Type: 9, IntVal: 3949191309, UnsafePtr: unsafe.Pointer(&Constructor_Control_Biapplicative_Biapplicative{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3774602829, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Biapply_Biapply](Get_Control_Biapply_biapplyTuple()))}
+}), Get_Data_Tuple_Tuple()})}
 	})
 	return cache_Control_Biapplicative_biapplicativeTuple
 }

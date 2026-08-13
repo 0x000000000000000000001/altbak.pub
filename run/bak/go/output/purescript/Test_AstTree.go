@@ -10,7 +10,9 @@ var cache_Test_AstTree_logShow gopurs_runtime.Value
 var once_Test_AstTree_logShow sync.Once
 func Get_Test_AstTree_logShow() gopurs_runtime.Value {
 	once_Test_AstTree_logShow.Do(func() {
-		cache_Test_AstTree_logShow = gopurs_runtime.Apply(Get_Effect_Console_logShow(), Get_Data_Show_showInt())
+		cache_Test_AstTree_logShow = gopurs_runtime.Func(func(a_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Test_AstTree_logShow(a_0_box.IntVal)
+})
 	})
 	return cache_Test_AstTree_logShow
 }
@@ -140,6 +142,12 @@ type Constructor_Test_AstTree_Sub struct {
 	V1 gopurs_runtime.Value
 }
 
+
+func Call_Test_AstTree_logShow(a_0_loop int64) gopurs_runtime.Value {
+var a_0 int64 = a_0_loop
+_ = a_0
+return gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(a_0)).StrVal()))
+}
 
 func Call_Test_AstTree_eval(v_0_loop gopurs_runtime.Value) int64 {
 eval:

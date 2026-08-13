@@ -3,6 +3,7 @@ package purescript
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	unsafe "unsafe"
 )
 
 var cache_Data_Ordering_LT gopurs_runtime.Value
@@ -36,7 +37,7 @@ var cache_Data_Ordering_showOrdering gopurs_runtime.Value
 var once_Data_Ordering_showOrdering sync.Once
 func Get_Data_Ordering_showOrdering() gopurs_runtime.Value {
 	once_Data_Ordering_showOrdering.Do(func() {
-		cache_Data_Ordering_showOrdering = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Ordering_showOrdering = gopurs_runtime.Value{Type: 9, IntVal: 1835580986, UnsafePtr: unsafe.Pointer(&Constructor_Data_Show_Show{1, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 string
 {
 if (uint32(v_0.IntVal) == 1527465420) {
@@ -67,7 +68,7 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }().StrVal()
 }
 end_branch_0:
 return gopurs_runtime.Str(__t0)
-}))
+})})}
 	})
 	return cache_Data_Ordering_showOrdering
 }
@@ -76,7 +77,7 @@ var cache_Data_Ordering_semigroupOrdering gopurs_runtime.Value
 var once_Data_Ordering_semigroupOrdering sync.Once
 func Get_Data_Ordering_semigroupOrdering() gopurs_runtime.Value {
 	once_Data_Ordering_semigroupOrdering.Do(func() {
-		cache_Data_Ordering_semigroupOrdering = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Ordering_semigroupOrdering = gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(&Constructor_Data_Semigroup_Semigroup{1, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 uint32
 {
@@ -109,7 +110,7 @@ __t0 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().In
 end_branch_0:
 return gopurs_runtime.Value{Type: 9, IntVal: int64(__t0), UnsafePtr: nil}
 })
-}))
+})})}
 	})
 	return cache_Data_Ordering_semigroupOrdering
 }
@@ -129,7 +130,7 @@ var cache_Data_Ordering_eqOrdering gopurs_runtime.Value
 var once_Data_Ordering_eqOrdering sync.Once
 func Get_Data_Ordering_eqOrdering() gopurs_runtime.Value {
 	once_Data_Ordering_eqOrdering.Do(func() {
-		cache_Data_Ordering_eqOrdering = gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Ordering_eqOrdering = gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(&Constructor_Data_Eq_Eq{1, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 bool
 {
@@ -188,7 +189,7 @@ __t2 = false
 end_branch_2:
 return gopurs_runtime.Bool(__t2)
 })
-}))
+})})}
 	})
 	return cache_Data_Ordering_eqOrdering
 }

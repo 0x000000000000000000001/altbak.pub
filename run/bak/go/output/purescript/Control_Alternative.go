@@ -32,39 +32,13 @@ var cache_Control_Alternative_alternativeArray gopurs_runtime.Value
 var once_Control_Alternative_alternativeArray sync.Once
 func Get_Control_Alternative_alternativeArray() gopurs_runtime.Value {
 	once_Control_Alternative_alternativeArray.Do(func() {
-		cache_Control_Alternative_alternativeArray = gopurs_runtime.RecordDict2("Applicative0", "Plus1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Control_Applicative_applicativeArray()
+		cache_Control_Alternative_alternativeArray = gopurs_runtime.Value{Type: 9, IntVal: 397869517, UnsafePtr: unsafe.Pointer(&Constructor_Control_Alternative_Alternative{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](Get_Control_Applicative_applicativeArray()))}
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Control_Plus_plusArray()
-}))
+return gopurs_runtime.Value{Type: 9, IntVal: 3709470893, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Plus_Plus](Get_Control_Plus_plusArray()))}
+})})}
 	})
 	return cache_Control_Alternative_alternativeArray
-}
-
-var cache_Control_Alternative_alternativeArray__2415002109 gopurs_runtime.Value
-var once_Control_Alternative_alternativeArray__2415002109 sync.Once
-func Get_Control_Alternative_alternativeArray__2415002109() gopurs_runtime.Value {
-	once_Control_Alternative_alternativeArray__2415002109.Do(func() {
-		cache_Control_Alternative_alternativeArray__2415002109 = gopurs_runtime.RecordDict2("Applicative0", "Plus1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Control_Applicative_applicativeArray()
-}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Control_Plus_plusArray()
-}))
-	})
-	return cache_Control_Alternative_alternativeArray__2415002109
-}
-
-var cache_Control_Alternative_alternativeArray__1996030013 gopurs_runtime.Value
-var once_Control_Alternative_alternativeArray__1996030013 sync.Once
-func Get_Control_Alternative_alternativeArray__1996030013() gopurs_runtime.Value {
-	once_Control_Alternative_alternativeArray__1996030013.Do(func() {
-		cache_Control_Alternative_alternativeArray__1996030013 = gopurs_runtime.RecordDict2("Applicative0", "Plus1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Control_Applicative_applicativeArray()
-}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Control_Plus_plusArray()
-}))
-	})
-	return cache_Control_Alternative_alternativeArray__1996030013
 }
 
 var cache_Control_Alternative_guard__2168855335 gopurs_runtime.Value
@@ -175,14 +149,14 @@ _ = __eta0_0
 var __t0 *Constructor_Data_Maybe_Just
 {
 if (__eta0_0.IntVal) != (0) {
-__t0 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Maybe_applicativeMaybe(), "pure"), Get_Data_Unit_unit()))
+__t0 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](Get_Data_Maybe_applicativeMaybe()).V1), Get_Data_Unit_unit()))
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.RecordGet(Get_Data_Maybe_plusMaybe(), "empty"))
+__t0 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Control_Plus_Plus](Get_Data_Maybe_plusMaybe()).V1))
 }
 end_branch_0:
 return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t0)}

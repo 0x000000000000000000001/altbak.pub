@@ -32,8 +32,8 @@ var cache_Data_Divide_dividePredicate gopurs_runtime.Value
 var once_Data_Divide_dividePredicate sync.Once
 func Get_Data_Divide_dividePredicate() gopurs_runtime.Value {
 	once_Data_Divide_dividePredicate.Do(func() {
-		cache_Data_Divide_dividePredicate = gopurs_runtime.RecordDict2("Contravariant0", "divide", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Predicate_contravariantPredicate()
+		cache_Data_Divide_dividePredicate = gopurs_runtime.Value{Type: 9, IntVal: 2642321722, UnsafePtr: unsafe.Pointer(&Constructor_Data_Divide_Divide{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 85171506, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Contravariant_Contravariant](Get_Data_Predicate_contravariantPredicate()))}
 }), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -45,7 +45,7 @@ return gopurs_runtime.Bool(((gopurs_runtime.Apply(v_1, (v2_4_0).V0).IntVal) != (
 })
 })
 })
-}))
+})})}
 	})
 	return cache_Data_Divide_dividePredicate
 }
@@ -65,8 +65,8 @@ var cache_Data_Divide_divideEquivalence gopurs_runtime.Value
 var once_Data_Divide_divideEquivalence sync.Once
 func Get_Data_Divide_divideEquivalence() gopurs_runtime.Value {
 	once_Data_Divide_divideEquivalence.Do(func() {
-		cache_Data_Divide_divideEquivalence = gopurs_runtime.RecordDict2("Contravariant0", "divide", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Equivalence_contravariantEquivalence()
+		cache_Data_Divide_divideEquivalence = gopurs_runtime.Value{Type: 9, IntVal: 2642321722, UnsafePtr: unsafe.Pointer(&Constructor_Data_Divide_Divide{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 85171506, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Contravariant_Contravariant](Get_Data_Equivalence_contravariantEquivalence()))}
 }), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -83,7 +83,7 @@ return gopurs_runtime.Bool(((gopurs_runtime.Apply2(v_1, (v2_5_0).V0, (v3_6_1).V0
 })
 })
 })
-}))
+})})}
 	})
 	return cache_Data_Divide_divideEquivalence
 }
@@ -92,8 +92,8 @@ var cache_Data_Divide_divideComparison gopurs_runtime.Value
 var once_Data_Divide_divideComparison sync.Once
 func Get_Data_Divide_divideComparison() gopurs_runtime.Value {
 	once_Data_Divide_divideComparison.Do(func() {
-		cache_Data_Divide_divideComparison = gopurs_runtime.RecordDict2("Contravariant0", "divide", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Comparison_contravariantComparison()
+		cache_Data_Divide_divideComparison = gopurs_runtime.Value{Type: 9, IntVal: 2642321722, UnsafePtr: unsafe.Pointer(&Constructor_Data_Divide_Divide{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 85171506, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Contravariant_Contravariant](Get_Data_Comparison_contravariantComparison()))}
 }), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -145,7 +145,7 @@ return gopurs_runtime.Value{Type: 9, IntVal: int64(__t4), UnsafePtr: nil}
 })
 })
 })
-}))
+})})}
 	})
 	return cache_Data_Divide_divideComparison
 }
@@ -194,12 +194,12 @@ return Call_Data_Divide_divide__3365952934(gopurs_runtime.CoerceToStruct[Constru
 	return cache_Data_Divide_divide__3365952934
 }
 
-var cache_Data_Divide_divideComparison__295028591 gopurs_runtime.Value
-var once_Data_Divide_divideComparison__295028591 sync.Once
-func Get_Data_Divide_divideComparison__295028591() gopurs_runtime.Value {
-	once_Data_Divide_divideComparison__295028591.Do(func() {
-		cache_Data_Divide_divideComparison__295028591 = gopurs_runtime.RecordDict2("Contravariant0", "divide", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Comparison_contravariantComparison()
+var cache_Data_Divide_divideComparison__1969551483 gopurs_runtime.Value
+var once_Data_Divide_divideComparison__1969551483 sync.Once
+func Get_Data_Divide_divideComparison__1969551483() gopurs_runtime.Value {
+	once_Data_Divide_divideComparison__1969551483.Do(func() {
+		cache_Data_Divide_divideComparison__1969551483 = gopurs_runtime.Value{Type: 9, IntVal: 2642321722, UnsafePtr: unsafe.Pointer(&Constructor_Data_Divide_Divide{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 85171506, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Contravariant_Contravariant](Get_Data_Comparison_contravariantComparison()))}
 }), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -251,17 +251,17 @@ return gopurs_runtime.Value{Type: 9, IntVal: int64(__t4), UnsafePtr: nil}
 })
 })
 })
-}))
+})})}
 	})
-	return cache_Data_Divide_divideComparison__295028591
+	return cache_Data_Divide_divideComparison__1969551483
 }
 
-var cache_Data_Divide_divideEquivalence__2464526773 gopurs_runtime.Value
-var once_Data_Divide_divideEquivalence__2464526773 sync.Once
-func Get_Data_Divide_divideEquivalence__2464526773() gopurs_runtime.Value {
-	once_Data_Divide_divideEquivalence__2464526773.Do(func() {
-		cache_Data_Divide_divideEquivalence__2464526773 = gopurs_runtime.RecordDict2("Contravariant0", "divide", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Equivalence_contravariantEquivalence()
+var cache_Data_Divide_divideEquivalence__1166972705 gopurs_runtime.Value
+var once_Data_Divide_divideEquivalence__1166972705 sync.Once
+func Get_Data_Divide_divideEquivalence__1166972705() gopurs_runtime.Value {
+	once_Data_Divide_divideEquivalence__1166972705.Do(func() {
+		cache_Data_Divide_divideEquivalence__1166972705 = gopurs_runtime.Value{Type: 9, IntVal: 2642321722, UnsafePtr: unsafe.Pointer(&Constructor_Data_Divide_Divide{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 85171506, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Contravariant_Contravariant](Get_Data_Equivalence_contravariantEquivalence()))}
 }), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -278,17 +278,17 @@ return gopurs_runtime.Bool(((gopurs_runtime.Apply2(v_1, (v2_5_0).V0, (v3_6_1).V0
 })
 })
 })
-}))
+})})}
 	})
-	return cache_Data_Divide_divideEquivalence__2464526773
+	return cache_Data_Divide_divideEquivalence__1166972705
 }
 
-var cache_Data_Divide_dividePredicate__3306073532 gopurs_runtime.Value
-var once_Data_Divide_dividePredicate__3306073532 sync.Once
-func Get_Data_Divide_dividePredicate__3306073532() gopurs_runtime.Value {
-	once_Data_Divide_dividePredicate__3306073532.Do(func() {
-		cache_Data_Divide_dividePredicate__3306073532 = gopurs_runtime.RecordDict2("Contravariant0", "divide", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Predicate_contravariantPredicate()
+var cache_Data_Divide_dividePredicate__2324723848 gopurs_runtime.Value
+var once_Data_Divide_dividePredicate__2324723848 sync.Once
+func Get_Data_Divide_dividePredicate__2324723848() gopurs_runtime.Value {
+	once_Data_Divide_dividePredicate__2324723848.Do(func() {
+		cache_Data_Divide_dividePredicate__2324723848 = gopurs_runtime.Value{Type: 9, IntVal: 2642321722, UnsafePtr: unsafe.Pointer(&Constructor_Data_Divide_Divide{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 85171506, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Contravariant_Contravariant](Get_Data_Predicate_contravariantPredicate()))}
 }), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -300,9 +300,9 @@ return gopurs_runtime.Bool(((gopurs_runtime.Apply(v_1, (v2_4_0).V0).IntVal) != (
 })
 })
 })
-}))
+})})}
 	})
-	return cache_Data_Divide_dividePredicate__3306073532
+	return cache_Data_Divide_dividePredicate__2324723848
 }
 
 type Constructor_Data_Divide_Divide struct {
@@ -340,8 +340,8 @@ return x_0
 func Call_Data_Divide_divideOp(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
 _ = dictSemigroup_0
-return gopurs_runtime.RecordDict2("Contravariant0", "divide", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Op_contravariantOp()
+return gopurs_runtime.Value{Type: 9, IntVal: 2642321722, UnsafePtr: unsafe.Pointer(&Constructor_Data_Divide_Divide{1, gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 85171506, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Contravariant_Contravariant](Get_Data_Op_contravariantOp()))}
 }), gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -353,7 +353,7 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append")
 })
 })
 })
-}))
+})})}
 }
 
 func Call_Data_Divide_divide(dict_0_loop *Constructor_Data_Divide_Divide) gopurs_runtime.Value {

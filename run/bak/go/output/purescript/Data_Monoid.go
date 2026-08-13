@@ -43,9 +43,9 @@ var cache_Data_Monoid_monoidUnit gopurs_runtime.Value
 var once_Data_Monoid_monoidUnit sync.Once
 func Get_Data_Monoid_monoidUnit() gopurs_runtime.Value {
 	once_Data_Monoid_monoidUnit.Do(func() {
-		cache_Data_Monoid_monoidUnit = gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Semigroup_semigroupUnit()
-}), Get_Data_Unit_unit())
+		cache_Data_Monoid_monoidUnit = gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(&Constructor_Data_Monoid_Monoid{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](Get_Data_Semigroup_semigroupUnit()))}
+}), Get_Data_Unit_unit()})}
 	})
 	return cache_Data_Monoid_monoidUnit
 }
@@ -54,9 +54,9 @@ var cache_Data_Monoid_monoidString gopurs_runtime.Value
 var once_Data_Monoid_monoidString sync.Once
 func Get_Data_Monoid_monoidString() gopurs_runtime.Value {
 	once_Data_Monoid_monoidString.Do(func() {
-		cache_Data_Monoid_monoidString = gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Semigroup_semigroupString()
-}), gopurs_runtime.Str(""))
+		cache_Data_Monoid_monoidString = gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(&Constructor_Data_Monoid_Monoid{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](Get_Data_Semigroup_semigroupString()))}
+}), gopurs_runtime.Str("")})}
 	})
 	return cache_Data_Monoid_monoidString
 }
@@ -65,11 +65,11 @@ var cache_Data_Monoid_monoidRecordNil gopurs_runtime.Value
 var once_Data_Monoid_monoidRecordNil sync.Once
 func Get_Data_Monoid_monoidRecordNil() gopurs_runtime.Value {
 	once_Data_Monoid_monoidRecordNil.Do(func() {
-		cache_Data_Monoid_monoidRecordNil = gopurs_runtime.RecordDict2("SemigroupRecord0", "memptyRecord", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Semigroup_semigroupRecordNil()
+		cache_Data_Monoid_monoidRecordNil = gopurs_runtime.Value{Type: 9, IntVal: 2415148183, UnsafePtr: unsafe.Pointer(&Constructor_Data_Monoid_MonoidRecord{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3847494007, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_SemigroupRecord](Get_Data_Semigroup_semigroupRecordNil()))}
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict0()
-}))
+})})}
 	})
 	return cache_Data_Monoid_monoidRecordNil
 }
@@ -78,9 +78,9 @@ var cache_Data_Monoid_monoidOrdering gopurs_runtime.Value
 var once_Data_Monoid_monoidOrdering sync.Once
 func Get_Data_Monoid_monoidOrdering() gopurs_runtime.Value {
 	once_Data_Monoid_monoidOrdering.Do(func() {
-		cache_Data_Monoid_monoidOrdering = gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Ordering_semigroupOrdering()
-}), gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil})
+		cache_Data_Monoid_monoidOrdering = gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(&Constructor_Data_Monoid_Monoid{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](Get_Data_Ordering_semigroupOrdering()))}
+}), gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}})}
 	})
 	return cache_Data_Monoid_monoidOrdering
 }
@@ -89,14 +89,14 @@ var cache_Data_Monoid_monoidArray gopurs_runtime.Value
 var once_Data_Monoid_monoidArray sync.Once
 func Get_Data_Monoid_monoidArray() gopurs_runtime.Value {
 	once_Data_Monoid_monoidArray.Do(func() {
-		cache_Data_Monoid_monoidArray = gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Semigroup_semigroupArray()
+		cache_Data_Monoid_monoidArray = gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(&Constructor_Data_Monoid_Monoid{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](Get_Data_Semigroup_semigroupArray()))}
 }), gopurs_runtime.Array(func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array([]gopurs_runtime.Value{}).UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
-				}()))
+				}())})}
 	})
 	return cache_Data_Monoid_monoidArray
 }
@@ -254,7 +254,7 @@ func init() {
 func Call_Data_Monoid_semigroupRecord(dictSemigroupRecord_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictSemigroupRecord_0 gopurs_runtime.Value = dictSemigroupRecord_0_loop
 _ = dictSemigroupRecord_0
-return gopurs_runtime.RecordDict1("append", gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictSemigroupRecord_0, "appendRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}))
+return gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(&Constructor_Data_Semigroup_Semigroup{1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictSemigroupRecord_0, "appendRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil})})}
 }
 
 func Call_Data_Monoid_MonoidRecord_dollarDict(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -280,12 +280,12 @@ var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var dictMonoidRecord_1 gopurs_runtime.Value = dictMonoidRecord_1_loop
 _ = dictMonoidRecord_1
-// TAST (Let): semigroupRecord1_2_0 -> gopurs_runtime.Value
-semigroupRecord1_2_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoidRecord_1, "SemigroupRecord0"), gopurs_runtime.Value{}), "appendRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}))
+// TAST (Let): semigroupRecord1_2_0 -> *Constructor_Data_Semigroup_Semigroup
+semigroupRecord1_2_0 := &Constructor_Data_Semigroup_Semigroup{1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoidRecord_1, "SemigroupRecord0"), gopurs_runtime.Value{}), "appendRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil})}
 _ = semigroupRecord1_2_0
-return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return semigroupRecord1_2_0
-}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoidRecord_1, "memptyRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}))
+return gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(&Constructor_Data_Monoid_Monoid{1, gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(semigroupRecord1_2_0)}
+}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoidRecord_1, "memptyRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil})})}
 }
 
 func Call_Data_Monoid_mempty(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -300,20 +300,20 @@ _ = dictMonoid_0
 // TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
 __local_var_1_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{})
 _ = __local_var_1_1
-// TAST (Let): semigroupFn_1_0 -> gopurs_runtime.Value
-semigroupFn_1_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): semigroupFn_1_0 -> *Constructor_Data_Semigroup_Semigroup
+semigroupFn_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(g_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_1, "append"), gopurs_runtime.Apply(f_2, x_4), gopurs_runtime.Apply(g_3, x_4))
 })
 })
-}))
+})))
 _ = semigroupFn_1_0
-return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return semigroupFn_1_0
+return gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(&Constructor_Data_Monoid_Monoid{1, gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(semigroupFn_1_0)}
 }), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
-}))
+})})}
 }
 
 func Call_Data_Monoid_monoidRecordCons(dictIsSymbol_0_loop gopurs_runtime.Value, dictMonoid_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -332,8 +332,8 @@ return gopurs_runtime.Func(func(dictMonoidRecord_5 gopurs_runtime.Value) gopurs_
 // TAST (Let): __local_var_6_3 -> gopurs_runtime.Value
 __local_var_6_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoidRecord_5, "SemigroupRecord0"), gopurs_runtime.Value{})
 _ = __local_var_6_3
-// TAST (Let): semigroupRecordCons1_6_2 -> gopurs_runtime.Value
-semigroupRecordCons1_6_2 := gopurs_runtime.RecordDict1("appendRecord", gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): semigroupRecordCons1_6_2 -> *Constructor_Data_Semigroup_SemigroupRecord
+semigroupRecordCons1_6_2 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_SemigroupRecord](gopurs_runtime.RecordDict1("appendRecord", gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(ra_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(rb_9 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): key_10_4 -> gopurs_runtime.Value
@@ -345,13 +345,13 @@ _ = get_11_5
 return gopurs_runtime.Apply3(Get_Record_Unsafe_unsafeSet(), gopurs_runtime.Str(key_10_4.StrVal()), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Semigroup0_3_1, "append"), gopurs_runtime.Apply(get_11_5, ra_8), gopurs_runtime.Apply(get_11_5, rb_9)), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_6_3, "appendRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_8, rb_9))
 })
 })
-}))
+})))
 _ = semigroupRecordCons1_6_2
-return gopurs_runtime.RecordDict2("SemigroupRecord0", "memptyRecord", gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return semigroupRecordCons1_6_2
+return gopurs_runtime.Value{Type: 9, IntVal: 2415148183, UnsafePtr: unsafe.Pointer(&Constructor_Data_Monoid_MonoidRecord{1, gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3847494007, UnsafePtr: unsafe.Pointer(semigroupRecordCons1_6_2)}
 }), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply3(Get_Record_Unsafe_unsafeSet(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}).StrVal()), mempty1_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoidRecord_5, "memptyRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}))
-}))
+})})}
 })
 })
 }

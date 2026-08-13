@@ -43,11 +43,11 @@ var cache_Data_Eq_eqVoid gopurs_runtime.Value
 var once_Data_Eq_eqVoid sync.Once
 func Get_Data_Eq_eqVoid() gopurs_runtime.Value {
 	once_Data_Eq_eqVoid.Do(func() {
-		cache_Data_Eq_eqVoid = gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Eq_eqVoid = gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(&Constructor_Data_Eq_Eq{1, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(true)
 })
-}))
+})})}
 	})
 	return cache_Data_Eq_eqVoid
 }
@@ -56,11 +56,11 @@ var cache_Data_Eq_eqUnit gopurs_runtime.Value
 var once_Data_Eq_eqUnit sync.Once
 func Get_Data_Eq_eqUnit() gopurs_runtime.Value {
 	once_Data_Eq_eqUnit.Do(func() {
-		cache_Data_Eq_eqUnit = gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Eq_eqUnit = gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(&Constructor_Data_Eq_Eq{1, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(true)
 })
-}))
+})})}
 	})
 	return cache_Data_Eq_eqUnit
 }
@@ -69,7 +69,7 @@ var cache_Data_Eq_eqString gopurs_runtime.Value
 var once_Data_Eq_eqString sync.Once
 func Get_Data_Eq_eqString() gopurs_runtime.Value {
 	once_Data_Eq_eqString.Do(func() {
-		cache_Data_Eq_eqString = gopurs_runtime.RecordDict1("eq", Get_Data_Eq_eqStringImpl())
+		cache_Data_Eq_eqString = gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(&Constructor_Data_Eq_Eq{1, Get_Data_Eq_eqStringImpl()})}
 	})
 	return cache_Data_Eq_eqString
 }
@@ -78,13 +78,13 @@ var cache_Data_Eq_eqRowNil gopurs_runtime.Value
 var once_Data_Eq_eqRowNil sync.Once
 func Get_Data_Eq_eqRowNil() gopurs_runtime.Value {
 	once_Data_Eq_eqRowNil.Do(func() {
-		cache_Data_Eq_eqRowNil = gopurs_runtime.RecordDict1("eqRecord", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Eq_eqRowNil = gopurs_runtime.Value{Type: 9, IntVal: 1311326743, UnsafePtr: unsafe.Pointer(&Constructor_Data_Eq_EqRecord{1, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(true)
 })
 })
-}))
+})})}
 	})
 	return cache_Data_Eq_eqRowNil
 }
@@ -115,11 +115,11 @@ var cache_Data_Eq_eqProxy gopurs_runtime.Value
 var once_Data_Eq_eqProxy sync.Once
 func Get_Data_Eq_eqProxy() gopurs_runtime.Value {
 	once_Data_Eq_eqProxy.Do(func() {
-		cache_Data_Eq_eqProxy = gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Eq_eqProxy = gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(&Constructor_Data_Eq_Eq{1, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(true)
 })
-}))
+})})}
 	})
 	return cache_Data_Eq_eqProxy
 }
@@ -128,7 +128,7 @@ var cache_Data_Eq_eqNumber gopurs_runtime.Value
 var once_Data_Eq_eqNumber sync.Once
 func Get_Data_Eq_eqNumber() gopurs_runtime.Value {
 	once_Data_Eq_eqNumber.Do(func() {
-		cache_Data_Eq_eqNumber = gopurs_runtime.RecordDict1("eq", Get_Data_Eq_eqNumberImpl())
+		cache_Data_Eq_eqNumber = gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(&Constructor_Data_Eq_Eq{1, Get_Data_Eq_eqNumberImpl()})}
 	})
 	return cache_Data_Eq_eqNumber
 }
@@ -137,7 +137,7 @@ var cache_Data_Eq_eqInt gopurs_runtime.Value
 var once_Data_Eq_eqInt sync.Once
 func Get_Data_Eq_eqInt() gopurs_runtime.Value {
 	once_Data_Eq_eqInt.Do(func() {
-		cache_Data_Eq_eqInt = gopurs_runtime.RecordDict1("eq", Get_Data_Eq_eqIntImpl())
+		cache_Data_Eq_eqInt = gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(&Constructor_Data_Eq_Eq{1, Get_Data_Eq_eqIntImpl()})}
 	})
 	return cache_Data_Eq_eqInt
 }
@@ -146,7 +146,7 @@ var cache_Data_Eq_eqChar gopurs_runtime.Value
 var once_Data_Eq_eqChar sync.Once
 func Get_Data_Eq_eqChar() gopurs_runtime.Value {
 	once_Data_Eq_eqChar.Do(func() {
-		cache_Data_Eq_eqChar = gopurs_runtime.RecordDict1("eq", Get_Data_Eq_eqCharImpl())
+		cache_Data_Eq_eqChar = gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(&Constructor_Data_Eq_Eq{1, Get_Data_Eq_eqCharImpl()})}
 	})
 	return cache_Data_Eq_eqChar
 }
@@ -155,7 +155,7 @@ var cache_Data_Eq_eqBoolean gopurs_runtime.Value
 var once_Data_Eq_eqBoolean sync.Once
 func Get_Data_Eq_eqBoolean() gopurs_runtime.Value {
 	once_Data_Eq_eqBoolean.Do(func() {
-		cache_Data_Eq_eqBoolean = gopurs_runtime.RecordDict1("eq", Get_Data_Eq_eqBooleanImpl())
+		cache_Data_Eq_eqBoolean = gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(&Constructor_Data_Eq_Eq{1, Get_Data_Eq_eqBooleanImpl()})}
 	})
 	return cache_Data_Eq_eqBoolean
 }
@@ -197,9 +197,9 @@ var cache_Data_Eq_eq1Array gopurs_runtime.Value
 var once_Data_Eq_eq1Array sync.Once
 func Get_Data_Eq_eq1Array() gopurs_runtime.Value {
 	once_Data_Eq_eq1Array.Do(func() {
-		cache_Data_Eq_eq1Array = gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Eq_eq1Array = gopurs_runtime.Value{Type: 9, IntVal: 1715248107, UnsafePtr: unsafe.Pointer(&Constructor_Data_Eq_Eq1{1, gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(Get_Data_Eq_eqArrayImpl(), gopurs_runtime.RecordGet(dictEq_0, "eq"))
-}))
+})})}
 	})
 	return cache_Data_Eq_eq1Array
 }
@@ -545,41 +545,30 @@ return Call_Data_Eq_eq1__3587165073(dictEq_0_box)
 	return cache_Data_Eq_eq1__3587165073
 }
 
-var cache_Data_Eq_eq1Array__2389734302 gopurs_runtime.Value
-var once_Data_Eq_eq1Array__2389734302 sync.Once
-func Get_Data_Eq_eq1Array__2389734302() gopurs_runtime.Value {
-	once_Data_Eq_eq1Array__2389734302.Do(func() {
-		cache_Data_Eq_eq1Array__2389734302 = gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_Data_Eq_eqArrayImpl(), gopurs_runtime.RecordGet(dictEq_0, "eq"))
-}))
-	})
-	return cache_Data_Eq_eq1Array__2389734302
-}
-
-var cache_Data_Eq_eqProxy__2316826405 gopurs_runtime.Value
-var once_Data_Eq_eqProxy__2316826405 sync.Once
-func Get_Data_Eq_eqProxy__2316826405() gopurs_runtime.Value {
-	once_Data_Eq_eqProxy__2316826405.Do(func() {
-		cache_Data_Eq_eqProxy__2316826405 = gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+var cache_Data_Eq_eqProxy__747952251 gopurs_runtime.Value
+var once_Data_Eq_eqProxy__747952251 sync.Once
+func Get_Data_Eq_eqProxy__747952251() gopurs_runtime.Value {
+	once_Data_Eq_eqProxy__747952251.Do(func() {
+		cache_Data_Eq_eqProxy__747952251 = gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(&Constructor_Data_Eq_Eq{1, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(true)
 })
-}))
+})})}
 	})
-	return cache_Data_Eq_eqProxy__2316826405
+	return cache_Data_Eq_eqProxy__747952251
 }
 
-var cache_Data_Eq_eqProxy__2077298405 gopurs_runtime.Value
-var once_Data_Eq_eqProxy__2077298405 sync.Once
-func Get_Data_Eq_eqProxy__2077298405() gopurs_runtime.Value {
-	once_Data_Eq_eqProxy__2077298405.Do(func() {
-		cache_Data_Eq_eqProxy__2077298405 = gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+var cache_Data_Eq_eqProxy__1987575805 gopurs_runtime.Value
+var once_Data_Eq_eqProxy__1987575805 sync.Once
+func Get_Data_Eq_eqProxy__1987575805() gopurs_runtime.Value {
+	once_Data_Eq_eqProxy__1987575805.Do(func() {
+		cache_Data_Eq_eqProxy__1987575805 = gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(&Constructor_Data_Eq_Eq{1, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(true)
 })
-}))
+})})}
 	})
-	return cache_Data_Eq_eqProxy__2077298405
+	return cache_Data_Eq_eqProxy__1987575805
 }
 
 var cache_Data_Eq_eqRecord__1610867122 gopurs_runtime.Value
@@ -604,34 +593,34 @@ return Call_Data_Eq_eqRecord__1747372340(gopurs_runtime.CoerceToStruct[Construct
 	return cache_Data_Eq_eqRecord__1747372340
 }
 
-var cache_Data_Eq_eqRowNil__3458192115 gopurs_runtime.Value
-var once_Data_Eq_eqRowNil__3458192115 sync.Once
-func Get_Data_Eq_eqRowNil__3458192115() gopurs_runtime.Value {
-	once_Data_Eq_eqRowNil__3458192115.Do(func() {
-		cache_Data_Eq_eqRowNil__3458192115 = gopurs_runtime.RecordDict1("eqRecord", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+var cache_Data_Eq_eqRowNil__3548194859 gopurs_runtime.Value
+var once_Data_Eq_eqRowNil__3548194859 sync.Once
+func Get_Data_Eq_eqRowNil__3548194859() gopurs_runtime.Value {
+	once_Data_Eq_eqRowNil__3548194859.Do(func() {
+		cache_Data_Eq_eqRowNil__3548194859 = gopurs_runtime.Value{Type: 9, IntVal: 1311326743, UnsafePtr: unsafe.Pointer(&Constructor_Data_Eq_EqRecord{1, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(true)
 })
 })
-}))
+})})}
 	})
-	return cache_Data_Eq_eqRowNil__3458192115
+	return cache_Data_Eq_eqRowNil__3548194859
 }
 
-var cache_Data_Eq_eqRowNil__2234696885 gopurs_runtime.Value
-var once_Data_Eq_eqRowNil__2234696885 sync.Once
-func Get_Data_Eq_eqRowNil__2234696885() gopurs_runtime.Value {
-	once_Data_Eq_eqRowNil__2234696885.Do(func() {
-		cache_Data_Eq_eqRowNil__2234696885 = gopurs_runtime.RecordDict1("eqRecord", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+var cache_Data_Eq_eqRowNil__1584927405 gopurs_runtime.Value
+var once_Data_Eq_eqRowNil__1584927405 sync.Once
+func Get_Data_Eq_eqRowNil__1584927405() gopurs_runtime.Value {
+	once_Data_Eq_eqRowNil__1584927405.Do(func() {
+		cache_Data_Eq_eqRowNil__1584927405 = gopurs_runtime.Value{Type: 9, IntVal: 1311326743, UnsafePtr: unsafe.Pointer(&Constructor_Data_Eq_EqRecord{1, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(true)
 })
 })
-}))
+})})}
 	})
-	return cache_Data_Eq_eqRowNil__2234696885
+	return cache_Data_Eq_eqRowNil__1584927405
 }
 
 var cache_Data_Eq_notEq__2843686287 gopurs_runtime.Value
@@ -761,7 +750,7 @@ var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var dictEqRecord_1 gopurs_runtime.Value = dictEqRecord_1_loop
 _ = dictEqRecord_1
-return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEqRecord_1, "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}))
+return gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(&Constructor_Data_Eq_Eq{1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictEqRecord_1, "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil})})}
 }
 
 func Call_Data_Eq_eq1(dict_0_loop *Constructor_Data_Eq_Eq1) gopurs_runtime.Value {
@@ -779,7 +768,7 @@ return gopurs_runtime.Box(dict_0.V0)
 func Call_Data_Eq_eqArray(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
 _ = dictEq_0
-return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(Get_Data_Eq_eqArrayImpl(), gopurs_runtime.RecordGet(dictEq_0, "eq")))
+return gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(&Constructor_Data_Eq_Eq{1, gopurs_runtime.Apply(Get_Data_Eq_eqArrayImpl(), gopurs_runtime.RecordGet(dictEq_0, "eq"))})}
 }
 
 func Call_Data_Eq_eqRowCons(dictEqRecord_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, dictIsSymbol_2_loop gopurs_runtime.Value, dictEq_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -791,7 +780,7 @@ var dictIsSymbol_2 gopurs_runtime.Value = dictIsSymbol_2_loop
 _ = dictIsSymbol_2
 var dictEq_3 gopurs_runtime.Value = dictEq_3_loop
 _ = dictEq_3
-return gopurs_runtime.RecordDict1("eqRecord", gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1311326743, UnsafePtr: unsafe.Pointer(&Constructor_Data_Eq_EqRecord{1, gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(ra_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(rb_6 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): get_7_0 -> gopurs_runtime.Value
@@ -800,7 +789,7 @@ _ = get_7_0
 return gopurs_runtime.Bool(((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_3, "eq"), gopurs_runtime.Apply(get_7_0, ra_5), gopurs_runtime.Apply(get_7_0, rb_6)).IntVal) != (0)) && ((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictEqRecord_0, "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_5, rb_6).IntVal) != (0)))
 })
 })
-}))
+})})}
 }
 
 func Call_Data_Eq_notEq(dictEq_0_loop *Constructor_Data_Eq_Eq, x_1_loop gopurs_runtime.Value, y_2_loop gopurs_runtime.Value) bool {
@@ -1150,7 +1139,7 @@ var x_0 *Constructor_Data_Date_Date = x_0_loop
 _ = x_0
 var y_1 *Constructor_Data_Date_Date = y_1_loop
 _ = y_1
-return (((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Date_Component_eqYear(), "eq"), gopurs_runtime.Int((x_0).V0), gopurs_runtime.Int((y_1).V0)).IntVal) != (0)) && ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Date_Component_eqMonth(), "eq"), gopurs_runtime.Value{Type: 9, IntVal: int64((x_0).V1), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64((y_1).V1), UnsafePtr: nil}).IntVal) != (0))) && ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Date_Component_eqDay(), "eq"), gopurs_runtime.Int((x_0).V2), gopurs_runtime.Int((y_1).V2)).IntVal) != (0))
+return (((gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](Get_Data_Date_Component_eqYear()).V0), gopurs_runtime.Int((x_0).V0), gopurs_runtime.Int((y_1).V0)).IntVal) != (0)) && ((gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](Get_Data_Date_Component_eqMonth()).V0), gopurs_runtime.Value{Type: 9, IntVal: int64((x_0).V1), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64((y_1).V1), UnsafePtr: nil}).IntVal) != (0))) && ((gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](Get_Data_Date_Component_eqDay()).V0), gopurs_runtime.Int((x_0).V2), gopurs_runtime.Int((y_1).V2)).IntVal) != (0))
 }
 
 func Call_Data_Eq_eq__196302102(x_0_loop uint32, y_1_loop uint32) bool {
@@ -1456,7 +1445,7 @@ var x_0 *Constructor_Data_Time_Time = x_0_loop
 _ = x_0
 var y_1 *Constructor_Data_Time_Time = y_1_loop
 _ = y_1
-return ((((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Time_Component_eqHour(), "eq"), gopurs_runtime.Int((x_0).V0), gopurs_runtime.Int((y_1).V0)).IntVal) != (0)) && ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Time_Component_eqMinute(), "eq"), gopurs_runtime.Int((x_0).V1), gopurs_runtime.Int((y_1).V1)).IntVal) != (0))) && ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Time_Component_eqSecond(), "eq"), gopurs_runtime.Int((x_0).V2), gopurs_runtime.Int((y_1).V2)).IntVal) != (0))) && ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Time_Component_eqMillisecond(), "eq"), gopurs_runtime.Int((x_0).V3), gopurs_runtime.Int((y_1).V3)).IntVal) != (0))
+return ((((gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](Get_Data_Time_Component_eqHour()).V0), gopurs_runtime.Int((x_0).V0), gopurs_runtime.Int((y_1).V0)).IntVal) != (0)) && ((gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](Get_Data_Time_Component_eqMinute()).V0), gopurs_runtime.Int((x_0).V1), gopurs_runtime.Int((y_1).V1)).IntVal) != (0))) && ((gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](Get_Data_Time_Component_eqSecond()).V0), gopurs_runtime.Int((x_0).V2), gopurs_runtime.Int((y_1).V2)).IntVal) != (0))) && ((gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](Get_Data_Time_Component_eqMillisecond()).V0), gopurs_runtime.Int((x_0).V3), gopurs_runtime.Int((y_1).V3)).IntVal) != (0))
 }
 
 func Call_Data_Eq_eq__163522700(dict_0_loop *Constructor_Data_Eq_Eq) gopurs_runtime.Value {
@@ -1532,7 +1521,7 @@ var x_0 uint32 = x_0_loop
 _ = x_0
 var y_1 uint32 = y_1_loop
 _ = y_1
-return ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Ordering_eqOrdering(), "eq"), gopurs_runtime.Value{Type: 9, IntVal: int64(x_0), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(y_1), UnsafePtr: nil}).IntVal) != (0)) != (true)
+return ((gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](Get_Data_Ordering_eqOrdering()).V0), gopurs_runtime.Value{Type: 9, IntVal: int64(x_0), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(y_1), UnsafePtr: nil}).IntVal) != (0)) != (true)
 }
 
 func Get_Data_Eq_eqArrayImpl() gopurs_runtime.Value {

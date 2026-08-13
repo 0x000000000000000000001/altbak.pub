@@ -21,9 +21,9 @@ var cache_Data_Profunctor_Closed_closedFunction gopurs_runtime.Value
 var once_Data_Profunctor_Closed_closedFunction sync.Once
 func Get_Data_Profunctor_Closed_closedFunction() gopurs_runtime.Value {
 	once_Data_Profunctor_Closed_closedFunction.Do(func() {
-		cache_Data_Profunctor_Closed_closedFunction = gopurs_runtime.RecordDict2("Profunctor0", "closed", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Profunctor_profunctorFn()
-}), gopurs_runtime.RecordGet(Get_Control_Semigroupoid_semigroupoidFn(), "compose"))
+		cache_Data_Profunctor_Closed_closedFunction = gopurs_runtime.Value{Type: 9, IntVal: 768764671, UnsafePtr: unsafe.Pointer(&Constructor_Data_Profunctor_Closed_Closed{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2367018778, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Profunctor_Profunctor](Get_Data_Profunctor_profunctorFn()))}
+}), gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Control_Semigroupoid_Semigroupoid](Get_Control_Semigroupoid_semigroupoidFn()).V0)})}
 	})
 	return cache_Data_Profunctor_Closed_closedFunction
 }

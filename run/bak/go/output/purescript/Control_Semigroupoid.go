@@ -21,13 +21,13 @@ var cache_Control_Semigroupoid_semigroupoidFn gopurs_runtime.Value
 var once_Control_Semigroupoid_semigroupoidFn sync.Once
 func Get_Control_Semigroupoid_semigroupoidFn() gopurs_runtime.Value {
 	once_Control_Semigroupoid_semigroupoidFn.Do(func() {
-		cache_Control_Semigroupoid_semigroupoidFn = gopurs_runtime.RecordDict1("compose", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Control_Semigroupoid_semigroupoidFn = gopurs_runtime.Value{Type: 9, IntVal: 350442445, UnsafePtr: unsafe.Pointer(&Constructor_Control_Semigroupoid_Semigroupoid{1, gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(g_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(g_1, x_2))
 })
 })
-}))
+})})}
 	})
 	return cache_Control_Semigroupoid_semigroupoidFn
 }
@@ -107,6 +107,17 @@ return Call_Control_Semigroupoid_compose__1254722180(gopurs_runtime.CoerceToStru
 })
 	})
 	return cache_Control_Semigroupoid_compose__1254722180
+}
+
+var cache_Control_Semigroupoid_compose__171208900 gopurs_runtime.Value
+var once_Control_Semigroupoid_compose__171208900 sync.Once
+func Get_Control_Semigroupoid_compose__171208900() gopurs_runtime.Value {
+	once_Control_Semigroupoid_compose__171208900.Do(func() {
+		cache_Control_Semigroupoid_compose__171208900 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Control_Semigroupoid_compose__171208900(gopurs_runtime.CoerceToStruct[Constructor_Control_Semigroupoid_Semigroupoid](dict_0_box))
+})
+	})
+	return cache_Control_Semigroupoid_compose__171208900
 }
 
 var cache_Control_Semigroupoid_compose__1362634137 gopurs_runtime.Value
@@ -208,6 +219,17 @@ return Call_Control_Semigroupoid_compose__1555187646(gopurs_runtime.CoerceToStru
 	return cache_Control_Semigroupoid_compose__1555187646
 }
 
+var cache_Control_Semigroupoid_compose__3547310942 gopurs_runtime.Value
+var once_Control_Semigroupoid_compose__3547310942 sync.Once
+func Get_Control_Semigroupoid_compose__3547310942() gopurs_runtime.Value {
+	once_Control_Semigroupoid_compose__3547310942.Do(func() {
+		cache_Control_Semigroupoid_compose__3547310942 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Control_Semigroupoid_compose__3547310942(gopurs_runtime.CoerceToStruct[Constructor_Control_Semigroupoid_Semigroupoid](dict_0_box))
+})
+	})
+	return cache_Control_Semigroupoid_compose__3547310942
+}
+
 var cache_Control_Semigroupoid_compose__2527254334 gopurs_runtime.Value
 var once_Control_Semigroupoid_compose__2527254334 sync.Once
 func Get_Control_Semigroupoid_compose__2527254334() gopurs_runtime.Value {
@@ -272,6 +294,17 @@ return Call_Control_Semigroupoid_compose__4254807102(gopurs_runtime.CoerceToStru
 })
 	})
 	return cache_Control_Semigroupoid_compose__4254807102
+}
+
+var cache_Control_Semigroupoid_compose__3937671998 gopurs_runtime.Value
+var once_Control_Semigroupoid_compose__3937671998 sync.Once
+func Get_Control_Semigroupoid_compose__3937671998() gopurs_runtime.Value {
+	once_Control_Semigroupoid_compose__3937671998.Do(func() {
+		cache_Control_Semigroupoid_compose__3937671998 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Control_Semigroupoid_compose__3937671998(gopurs_runtime.CoerceToStruct[Constructor_Control_Semigroupoid_Semigroupoid](dict_0_box))
+})
+	})
+	return cache_Control_Semigroupoid_compose__3937671998
 }
 
 var cache_Control_Semigroupoid_compose__2995688990 gopurs_runtime.Value
@@ -604,6 +637,17 @@ return Call_Control_Semigroupoid_compose__1863173246(gopurs_runtime.CoerceToStru
 	return cache_Control_Semigroupoid_compose__1863173246
 }
 
+var cache_Control_Semigroupoid_compose__1386080478 gopurs_runtime.Value
+var once_Control_Semigroupoid_compose__1386080478 sync.Once
+func Get_Control_Semigroupoid_compose__1386080478() gopurs_runtime.Value {
+	once_Control_Semigroupoid_compose__1386080478.Do(func() {
+		cache_Control_Semigroupoid_compose__1386080478 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Control_Semigroupoid_compose__1386080478(gopurs_runtime.CoerceToStruct[Constructor_Control_Semigroupoid_Semigroupoid](dict_0_box))
+})
+	})
+	return cache_Control_Semigroupoid_compose__1386080478
+}
+
 var cache_Control_Semigroupoid_compose__1796733246 gopurs_runtime.Value
 var once_Control_Semigroupoid_compose__1796733246 sync.Once
 func Get_Control_Semigroupoid_compose__1796733246() gopurs_runtime.Value {
@@ -624,6 +668,39 @@ return Call_Control_Semigroupoid_compose__2493224702(gopurs_runtime.CoerceToStru
 })
 	})
 	return cache_Control_Semigroupoid_compose__2493224702
+}
+
+var cache_Control_Semigroupoid_compose__855121246 gopurs_runtime.Value
+var once_Control_Semigroupoid_compose__855121246 sync.Once
+func Get_Control_Semigroupoid_compose__855121246() gopurs_runtime.Value {
+	once_Control_Semigroupoid_compose__855121246.Do(func() {
+		cache_Control_Semigroupoid_compose__855121246 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Control_Semigroupoid_compose__855121246(gopurs_runtime.CoerceToStruct[Constructor_Control_Semigroupoid_Semigroupoid](dict_0_box))
+})
+	})
+	return cache_Control_Semigroupoid_compose__855121246
+}
+
+var cache_Control_Semigroupoid_compose__3195020574 gopurs_runtime.Value
+var once_Control_Semigroupoid_compose__3195020574 sync.Once
+func Get_Control_Semigroupoid_compose__3195020574() gopurs_runtime.Value {
+	once_Control_Semigroupoid_compose__3195020574.Do(func() {
+		cache_Control_Semigroupoid_compose__3195020574 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Control_Semigroupoid_compose__3195020574(gopurs_runtime.CoerceToStruct[Constructor_Control_Semigroupoid_Semigroupoid](dict_0_box))
+})
+	})
+	return cache_Control_Semigroupoid_compose__3195020574
+}
+
+var cache_Control_Semigroupoid_compose__1654929502 gopurs_runtime.Value
+var once_Control_Semigroupoid_compose__1654929502 sync.Once
+func Get_Control_Semigroupoid_compose__1654929502() gopurs_runtime.Value {
+	once_Control_Semigroupoid_compose__1654929502.Do(func() {
+		cache_Control_Semigroupoid_compose__1654929502 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Control_Semigroupoid_compose__1654929502(gopurs_runtime.CoerceToStruct[Constructor_Control_Semigroupoid_Semigroupoid](dict_0_box))
+})
+	})
+	return cache_Control_Semigroupoid_compose__1654929502
 }
 
 var cache_Control_Semigroupoid_compose__3977568382 gopurs_runtime.Value
@@ -758,36 +835,6 @@ return Call_Control_Semigroupoid_composeFlipped__1872684191(gopurs_runtime.Coerc
 	return cache_Control_Semigroupoid_composeFlipped__1872684191
 }
 
-var cache_Control_Semigroupoid_semigroupoidFn__2387483462 gopurs_runtime.Value
-var once_Control_Semigroupoid_semigroupoidFn__2387483462 sync.Once
-func Get_Control_Semigroupoid_semigroupoidFn__2387483462() gopurs_runtime.Value {
-	once_Control_Semigroupoid_semigroupoidFn__2387483462.Do(func() {
-		cache_Control_Semigroupoid_semigroupoidFn__2387483462 = gopurs_runtime.RecordDict1("compose", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(g_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(g_1, x_2))
-})
-})
-}))
-	})
-	return cache_Control_Semigroupoid_semigroupoidFn__2387483462
-}
-
-var cache_Control_Semigroupoid_semigroupoidFn__3002128382 gopurs_runtime.Value
-var once_Control_Semigroupoid_semigroupoidFn__3002128382 sync.Once
-func Get_Control_Semigroupoid_semigroupoidFn__3002128382() gopurs_runtime.Value {
-	once_Control_Semigroupoid_semigroupoidFn__3002128382.Do(func() {
-		cache_Control_Semigroupoid_semigroupoidFn__3002128382 = gopurs_runtime.RecordDict1("compose", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(g_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(g_1, x_2))
-})
-})
-}))
-	})
-	return cache_Control_Semigroupoid_semigroupoidFn__3002128382
-}
-
 type Constructor_Control_Semigroupoid_Semigroupoid struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
@@ -858,6 +905,12 @@ _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
+func Call_Control_Semigroupoid_compose__171208900(dict_0_loop *Constructor_Control_Semigroupoid_Semigroupoid) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Semigroupoid_Semigroupoid = dict_0_loop
+_ = dict_0
+return gopurs_runtime.Box(dict_0.V0)
+}
+
 func Call_Control_Semigroupoid_compose__1362634137(dict_0_loop *Constructor_Control_Semigroupoid_Semigroupoid) gopurs_runtime.Value {
 var dict_0 *Constructor_Control_Semigroupoid_Semigroupoid = dict_0_loop
 _ = dict_0
@@ -912,6 +965,12 @@ _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
+func Call_Control_Semigroupoid_compose__3547310942(dict_0_loop *Constructor_Control_Semigroupoid_Semigroupoid) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Semigroupoid_Semigroupoid = dict_0_loop
+_ = dict_0
+return gopurs_runtime.Box(dict_0.V0)
+}
+
 func Call_Control_Semigroupoid_compose__2527254334(dict_0_loop *Constructor_Control_Semigroupoid_Semigroupoid) gopurs_runtime.Value {
 var dict_0 *Constructor_Control_Semigroupoid_Semigroupoid = dict_0_loop
 _ = dict_0
@@ -943,6 +1002,12 @@ return gopurs_runtime.Box(dict_0.V0)
 }
 
 func Call_Control_Semigroupoid_compose__4254807102(dict_0_loop *Constructor_Control_Semigroupoid_Semigroupoid) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Semigroupoid_Semigroupoid = dict_0_loop
+_ = dict_0
+return gopurs_runtime.Box(dict_0.V0)
+}
+
+func Call_Control_Semigroupoid_compose__3937671998(dict_0_loop *Constructor_Control_Semigroupoid_Semigroupoid) gopurs_runtime.Value {
 var dict_0 *Constructor_Control_Semigroupoid_Semigroupoid = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
@@ -1128,6 +1193,12 @@ _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
+func Call_Control_Semigroupoid_compose__1386080478(dict_0_loop *Constructor_Control_Semigroupoid_Semigroupoid) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Semigroupoid_Semigroupoid = dict_0_loop
+_ = dict_0
+return gopurs_runtime.Box(dict_0.V0)
+}
+
 func Call_Control_Semigroupoid_compose__1796733246(dict_0_loop *Constructor_Control_Semigroupoid_Semigroupoid) gopurs_runtime.Value {
 var dict_0 *Constructor_Control_Semigroupoid_Semigroupoid = dict_0_loop
 _ = dict_0
@@ -1135,6 +1206,24 @@ return gopurs_runtime.Box(dict_0.V0)
 }
 
 func Call_Control_Semigroupoid_compose__2493224702(dict_0_loop *Constructor_Control_Semigroupoid_Semigroupoid) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Semigroupoid_Semigroupoid = dict_0_loop
+_ = dict_0
+return gopurs_runtime.Box(dict_0.V0)
+}
+
+func Call_Control_Semigroupoid_compose__855121246(dict_0_loop *Constructor_Control_Semigroupoid_Semigroupoid) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Semigroupoid_Semigroupoid = dict_0_loop
+_ = dict_0
+return gopurs_runtime.Box(dict_0.V0)
+}
+
+func Call_Control_Semigroupoid_compose__3195020574(dict_0_loop *Constructor_Control_Semigroupoid_Semigroupoid) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Semigroupoid_Semigroupoid = dict_0_loop
+_ = dict_0
+return gopurs_runtime.Box(dict_0.V0)
+}
+
+func Call_Control_Semigroupoid_compose__1654929502(dict_0_loop *Constructor_Control_Semigroupoid_Semigroupoid) gopurs_runtime.Value {
 var dict_0 *Constructor_Control_Semigroupoid_Semigroupoid = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)

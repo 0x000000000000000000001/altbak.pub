@@ -32,11 +32,11 @@ var cache_Data_Unfoldable1_unfoldable1Maybe gopurs_runtime.Value
 var once_Data_Unfoldable1_unfoldable1Maybe sync.Once
 func Get_Data_Unfoldable1_unfoldable1Maybe() gopurs_runtime.Value {
 	once_Data_Unfoldable1_unfoldable1Maybe.Do(func() {
-		cache_Data_Unfoldable1_unfoldable1Maybe = gopurs_runtime.RecordDict1("unfoldr1", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Unfoldable1_unfoldable1Maybe = gopurs_runtime.Value{Type: 9, IntVal: 3553002490, UnsafePtr: unsafe.Pointer(&Constructor_Data_Unfoldable1_Unfoldable1{1, gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(b_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, (*Constructor_Data_Tuple_Tuple)(gopurs_runtime.Apply(f_0, b_1).UnsafePtr).V0})}
 })
-}))
+})})}
 	})
 	return cache_Data_Unfoldable1_unfoldable1Maybe
 }
@@ -45,7 +45,7 @@ var cache_Data_Unfoldable1_unfoldable1Array gopurs_runtime.Value
 var once_Data_Unfoldable1_unfoldable1Array sync.Once
 func Get_Data_Unfoldable1_unfoldable1Array() gopurs_runtime.Value {
 	once_Data_Unfoldable1_unfoldable1Array.Do(func() {
-		cache_Data_Unfoldable1_unfoldable1Array = gopurs_runtime.RecordDict1("unfoldr1", gopurs_runtime.Apply4(Get_Data_Unfoldable1_unfoldr1ArrayImpl(), Get_Data_Maybe_isNothing(), gopurs_runtime.Apply(Get_Partial_Unsafe__unsafePartial(), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Unfoldable1_unfoldable1Array = gopurs_runtime.Value{Type: 9, IntVal: 3553002490, UnsafePtr: unsafe.Pointer(&Constructor_Data_Unfoldable1_Unfoldable1{1, gopurs_runtime.Apply4(Get_Data_Unfoldable1_unfoldr1ArrayImpl(), Get_Data_Maybe_isNothing(), gopurs_runtime.Apply(Get_Partial_Unsafe__unsafePartial(), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
@@ -62,7 +62,7 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 end_branch_0:
 return __t0
 })
-})), Get_Data_Tuple_fst(), Get_Data_Tuple_snd()))
+})), Get_Data_Tuple_fst(), Get_Data_Tuple_snd())})}
 	})
 	return cache_Data_Unfoldable1_unfoldable1Array
 }
@@ -153,71 +153,6 @@ return Call_Data_Unfoldable1_singleton__1620623815(gopurs_runtime.CoerceToStruct
 })
 	})
 	return cache_Data_Unfoldable1_singleton__1620623815
-}
-
-var cache_Data_Unfoldable1_unfoldable1Array__2415700810 gopurs_runtime.Value
-var once_Data_Unfoldable1_unfoldable1Array__2415700810 sync.Once
-func Get_Data_Unfoldable1_unfoldable1Array__2415700810() gopurs_runtime.Value {
-	once_Data_Unfoldable1_unfoldable1Array__2415700810.Do(func() {
-		cache_Data_Unfoldable1_unfoldable1Array__2415700810 = gopurs_runtime.RecordDict1("unfoldr1", gopurs_runtime.Apply4(Get_Data_Unfoldable1_unfoldr1ArrayImpl(), Get_Data_Maybe_isNothing(), gopurs_runtime.Apply(Get_Partial_Unsafe__unsafePartial(), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
-{
-if (v_1.Type == 9 && v_1.IntVal == 930809136 && v_1.UnsafePtr != nil) {
-__t0 = (*Constructor_Data_Maybe_Just)(v_1.UnsafePtr).V0
-goto end_branch_0
-} else {
-
-}
-}
-{
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_0:
-return __t0
-})
-})), Get_Data_Tuple_fst(), Get_Data_Tuple_snd()))
-	})
-	return cache_Data_Unfoldable1_unfoldable1Array__2415700810
-}
-
-var cache_Data_Unfoldable1_unfoldable1Array__4196906331 gopurs_runtime.Value
-var once_Data_Unfoldable1_unfoldable1Array__4196906331 sync.Once
-func Get_Data_Unfoldable1_unfoldable1Array__4196906331() gopurs_runtime.Value {
-	once_Data_Unfoldable1_unfoldable1Array__4196906331.Do(func() {
-		cache_Data_Unfoldable1_unfoldable1Array__4196906331 = gopurs_runtime.RecordDict1("unfoldr1", gopurs_runtime.Apply4(Get_Data_Unfoldable1_unfoldr1ArrayImpl(), Get_Data_Maybe_isNothing(), gopurs_runtime.Apply(Get_Partial_Unsafe__unsafePartial(), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
-{
-if (v_1.Type == 9 && v_1.IntVal == 930809136 && v_1.UnsafePtr != nil) {
-__t0 = (*Constructor_Data_Maybe_Just)(v_1.UnsafePtr).V0
-goto end_branch_0
-} else {
-
-}
-}
-{
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_0:
-return __t0
-})
-})), Get_Data_Tuple_fst(), Get_Data_Tuple_snd()))
-	})
-	return cache_Data_Unfoldable1_unfoldable1Array__4196906331
-}
-
-var cache_Data_Unfoldable1_unfoldable1Maybe__3214541052 gopurs_runtime.Value
-var once_Data_Unfoldable1_unfoldable1Maybe__3214541052 sync.Once
-func Get_Data_Unfoldable1_unfoldable1Maybe__3214541052() gopurs_runtime.Value {
-	once_Data_Unfoldable1_unfoldable1Maybe__3214541052.Do(func() {
-		cache_Data_Unfoldable1_unfoldable1Maybe__3214541052 = gopurs_runtime.RecordDict1("unfoldr1", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, (*Constructor_Data_Tuple_Tuple)(gopurs_runtime.Apply(f_0, b_1).UnsafePtr).V0})}
-})
-}))
-	})
-	return cache_Data_Unfoldable1_unfoldable1Maybe__3214541052
 }
 
 var cache_Data_Unfoldable1_unfoldr1__2739418437 gopurs_runtime.Value

@@ -43,7 +43,7 @@ var cache_Data_Semiring_Generic_genericSemiringNoArguments gopurs_runtime.Value
 var once_Data_Semiring_Generic_genericSemiringNoArguments sync.Once
 func Get_Data_Semiring_Generic_genericSemiringNoArguments() gopurs_runtime.Value {
 	once_Data_Semiring_Generic_genericSemiringNoArguments.Do(func() {
-		cache_Data_Semiring_Generic_genericSemiringNoArguments = gopurs_runtime.RecordDict4("genericAdd'", "genericMul'", "genericOne'", "genericZero'", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Semiring_Generic_genericSemiringNoArguments = gopurs_runtime.Value{Type: 9, IntVal: 3093875941, UnsafePtr: unsafe.Pointer(&Constructor_Data_Semiring_Generic_GenericSemiring{1, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: int64(1454898258), UnsafePtr: nil}
 })
@@ -51,7 +51,7 @@ return gopurs_runtime.Value{Type: 9, IntVal: int64(1454898258), UnsafePtr: nil}
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: int64(1454898258), UnsafePtr: nil}
 })
-}), gopurs_runtime.Value{Type: 9, IntVal: int64(1454898258), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(1454898258), UnsafePtr: nil})
+}), gopurs_runtime.Value{Type: 9, IntVal: int64(1454898258), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(1454898258), UnsafePtr: nil}})}
 	})
 	return cache_Data_Semiring_Generic_genericSemiringNoArguments
 }
@@ -246,7 +246,7 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "to"), gopur
 func Call_Data_Semiring_Generic_genericSemiringArgument(dictSemiring_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictSemiring_0 gopurs_runtime.Value = dictSemiring_0_loop
 _ = dictSemiring_0
-return gopurs_runtime.RecordDict4("genericAdd'", "genericMul'", "genericOne'", "genericZero'", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3093875941, UnsafePtr: unsafe.Pointer(&Constructor_Data_Semiring_Generic_GenericSemiring{1, gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring_0, "add"), v_1, v1_2)
 })
@@ -254,7 +254,7 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring_0, "add"), v_
 return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring_0, "mul"), v_1, v1_2)
 })
-}), gopurs_runtime.RecordGet(dictSemiring_0, "one"), gopurs_runtime.RecordGet(dictSemiring_0, "zero"))
+}), gopurs_runtime.RecordGet(dictSemiring_0, "one"), gopurs_runtime.RecordGet(dictSemiring_0, "zero")})}
 }
 
 func Call_Data_Semiring_Generic_genericOne_prime(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -298,7 +298,7 @@ return gopurs_runtime.Box(dict_0.V0)
 func Call_Data_Semiring_Generic_genericSemiringConstructor(dictGenericSemiring_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictGenericSemiring_0 gopurs_runtime.Value = dictGenericSemiring_0_loop
 _ = dictGenericSemiring_0
-return gopurs_runtime.RecordDict4("genericAdd'", "genericMul'", "genericOne'", "genericZero'", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3093875941, UnsafePtr: unsafe.Pointer(&Constructor_Data_Semiring_Generic_GenericSemiring{1, gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericSemiring_0, "genericAdd'"), v_1, v1_2)
 })
@@ -306,7 +306,7 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericSemiring_0, "ge
 return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericSemiring_0, "genericMul'"), v_1, v1_2)
 })
-}), gopurs_runtime.RecordGet(dictGenericSemiring_0, "genericOne'"), gopurs_runtime.RecordGet(dictGenericSemiring_0, "genericZero'"))
+}), gopurs_runtime.RecordGet(dictGenericSemiring_0, "genericOne'"), gopurs_runtime.RecordGet(dictGenericSemiring_0, "genericZero'")})}
 }
 
 func Call_Data_Semiring_Generic_genericSemiringProduct(dictGenericSemiring_0_loop gopurs_runtime.Value, dictGenericSemiring1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -314,7 +314,7 @@ var dictGenericSemiring_0 gopurs_runtime.Value = dictGenericSemiring_0_loop
 _ = dictGenericSemiring_0
 var dictGenericSemiring1_1 gopurs_runtime.Value = dictGenericSemiring1_1_loop
 _ = dictGenericSemiring1_1
-return gopurs_runtime.RecordDict4("genericAdd'", "genericMul'", "genericOne'", "genericZero'", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3093875941, UnsafePtr: unsafe.Pointer(&Constructor_Data_Semiring_Generic_GenericSemiring{1, gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&Constructor_Data_Generic_Rep_Product{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericSemiring_0, "genericAdd'"), (*Constructor_Data_Generic_Rep_Product)(v_2.UnsafePtr).V0, (*Constructor_Data_Generic_Rep_Product)(v1_3.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericSemiring1_1, "genericAdd'"), (*Constructor_Data_Generic_Rep_Product)(v_2.UnsafePtr).V1, (*Constructor_Data_Generic_Rep_Product)(v1_3.UnsafePtr).V1)})}
 })
@@ -322,7 +322,7 @@ return gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Point
 return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&Constructor_Data_Generic_Rep_Product{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericSemiring_0, "genericMul'"), (*Constructor_Data_Generic_Rep_Product)(v_2.UnsafePtr).V0, (*Constructor_Data_Generic_Rep_Product)(v1_3.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericSemiring1_1, "genericMul'"), (*Constructor_Data_Generic_Rep_Product)(v_2.UnsafePtr).V1, (*Constructor_Data_Generic_Rep_Product)(v1_3.UnsafePtr).V1)})}
 })
-}), gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&Constructor_Data_Generic_Rep_Product{1, gopurs_runtime.RecordGet(dictGenericSemiring_0, "genericOne'"), gopurs_runtime.RecordGet(dictGenericSemiring1_1, "genericOne'")})}, gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&Constructor_Data_Generic_Rep_Product{1, gopurs_runtime.RecordGet(dictGenericSemiring_0, "genericZero'"), gopurs_runtime.RecordGet(dictGenericSemiring1_1, "genericZero'")})})
+}), gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&Constructor_Data_Generic_Rep_Product{1, gopurs_runtime.RecordGet(dictGenericSemiring_0, "genericOne'"), gopurs_runtime.RecordGet(dictGenericSemiring1_1, "genericOne'")})}, gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&Constructor_Data_Generic_Rep_Product{1, gopurs_runtime.RecordGet(dictGenericSemiring_0, "genericZero'"), gopurs_runtime.RecordGet(dictGenericSemiring1_1, "genericZero'")})}})}
 }
 
 func Call_Data_Semiring_Generic_genericAdd(dictGeneric_0_loop *Constructor_Data_Generic_Rep_Generic, dictGenericSemiring_1_loop *Constructor_Data_Semiring_Generic_GenericSemiring, x_2_loop gopurs_runtime.Value, y_3_loop gopurs_runtime.Value) gopurs_runtime.Value {

@@ -32,7 +32,7 @@ var cache_Data_Show_Generic_genericShowArgsNoArguments gopurs_runtime.Value
 var once_Data_Show_Generic_genericShowArgsNoArguments sync.Once
 func Get_Data_Show_Generic_genericShowArgsNoArguments() gopurs_runtime.Value {
 	once_Data_Show_Generic_genericShowArgsNoArguments.Do(func() {
-		cache_Data_Show_Generic_genericShowArgsNoArguments = gopurs_runtime.RecordDict1("genericShowArgs", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Show_Generic_genericShowArgsNoArguments = gopurs_runtime.Value{Type: 9, IntVal: 1968625250, UnsafePtr: unsafe.Pointer(&Constructor_Data_Show_Generic_GenericShowArgs{1, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 					arr := func() []string {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array([]gopurs_runtime.Value{}).UnsafePtr)
@@ -44,7 +44,7 @@ return func() gopurs_runtime.Value {
 					for i, v := range arr { boxed[i] = gopurs_runtime.Str(v) }
 					return gopurs_runtime.Array(boxed)
 				}()
-}))
+})})}
 	})
 	return cache_Data_Show_Generic_genericShowArgsNoArguments
 }
@@ -108,9 +108,9 @@ var cache_Data_Show_Generic_genericShowNoConstructors gopurs_runtime.Value
 var once_Data_Show_Generic_genericShowNoConstructors sync.Once
 func Get_Data_Show_Generic_genericShowNoConstructors() gopurs_runtime.Value {
 	once_Data_Show_Generic_genericShowNoConstructors.Do(func() {
-		cache_Data_Show_Generic_genericShowNoConstructors = gopurs_runtime.RecordDict1("genericShow'", gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Show_Generic_genericShowNoConstructors = gopurs_runtime.Value{Type: 9, IntVal: 2730968613, UnsafePtr: unsafe.Pointer(&Constructor_Data_Show_Generic_GenericShow{1, gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str(gopurs_runtime.Apply(Get_Data_Show_Generic_genericShow_prime__1538939821(), a_0).StrVal())
-}))
+})})}
 	})
 	return cache_Data_Show_Generic_genericShowNoConstructors
 }
@@ -232,14 +232,14 @@ return x_0
 func Call_Data_Show_Generic_genericShowArgsArgument(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
 _ = dictShow_0
-return gopurs_runtime.RecordDict1("genericShowArgs", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1968625250, UnsafePtr: unsafe.Pointer(&Constructor_Data_Show_Generic_GenericShowArgs{1, gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 					arr := []string{gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), v_1).StrVal()}
 					boxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { boxed[i] = gopurs_runtime.Str(v) }
 					return gopurs_runtime.Array(boxed)
 				}()
-}))
+})})}
 }
 
 func Call_Data_Show_Generic_genericShowArgs(dict_0_loop *Constructor_Data_Show_Generic_GenericShowArgs) gopurs_runtime.Value {
@@ -253,7 +253,7 @@ var dictGenericShowArgs_0 gopurs_runtime.Value = dictGenericShowArgs_0_loop
 _ = dictGenericShowArgs_0
 var dictGenericShowArgs1_1 gopurs_runtime.Value = dictGenericShowArgs1_1_loop
 _ = dictGenericShowArgs1_1
-return gopurs_runtime.RecordDict1("genericShowArgs", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1968625250, UnsafePtr: unsafe.Pointer(&Constructor_Data_Show_Generic_GenericShowArgs{1, gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 					arr := func() []string {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(Get_Data_Semigroup_concatArray(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShowArgs_0, "genericShowArgs"), (*Constructor_Data_Generic_Rep_Product)(v_2.UnsafePtr).V0), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShowArgs1_1, "genericShowArgs"), (*Constructor_Data_Generic_Rep_Product)(v_2.UnsafePtr).V1)).UnsafePtr)
@@ -265,7 +265,7 @@ return func() gopurs_runtime.Value {
 					for i, v := range arr { boxed[i] = gopurs_runtime.Str(v) }
 					return gopurs_runtime.Array(boxed)
 				}()
-}))
+})})}
 }
 
 func Call_Data_Show_Generic_genericShowConstructor(dictGenericShowArgs_0_loop gopurs_runtime.Value, dictIsSymbol_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -273,7 +273,7 @@ var dictGenericShowArgs_0 gopurs_runtime.Value = dictGenericShowArgs_0_loop
 _ = dictGenericShowArgs_0
 var dictIsSymbol_1 gopurs_runtime.Value = dictIsSymbol_1_loop
 _ = dictIsSymbol_1
-return gopurs_runtime.RecordDict1("genericShow'", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2730968613, UnsafePtr: unsafe.Pointer(&Constructor_Data_Show_Generic_GenericShow{1, gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): ctor_3_0 -> string
 ctor_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_1, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}).StrVal()
 _ = ctor_3_0
@@ -309,7 +309,7 @@ __t2 = (("(") + (gopurs_runtime.Apply2(Get_Data_Show_Generic_intercalate(), gopu
 }
 end_branch_2:
 return gopurs_runtime.Str(__t2)
-}))
+})})}
 }
 
 func Call_Data_Show_Generic_genericShow_prime(dict_0_loop *Constructor_Data_Show_Generic_GenericShow) gopurs_runtime.Value {
@@ -323,7 +323,7 @@ var dictGenericShow_0 gopurs_runtime.Value = dictGenericShow_0_loop
 _ = dictGenericShow_0
 var dictGenericShow1_1 gopurs_runtime.Value = dictGenericShow1_1_loop
 _ = dictGenericShow1_1
-return gopurs_runtime.RecordDict1("genericShow'", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2730968613, UnsafePtr: unsafe.Pointer(&Constructor_Data_Show_Generic_GenericShow{1, gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 string
 {
 if (v_2.Type == 9 && v_2.IntVal == 3478632216) {
@@ -346,7 +346,7 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }().StrVal()
 }
 end_branch_0:
 return gopurs_runtime.Str(__t0)
-}))
+})})}
 }
 
 func Call_Data_Show_Generic_genericShow(dictGeneric_0_loop *Constructor_Data_Generic_Rep_Generic, dictGenericShow_1_loop *Constructor_Data_Show_Generic_GenericShow, x_2_loop gopurs_runtime.Value) string {

@@ -87,13 +87,13 @@ var cache_Data_Bifunctor_bifunctorTuple gopurs_runtime.Value
 var once_Data_Bifunctor_bifunctorTuple sync.Once
 func Get_Data_Bifunctor_bifunctorTuple() gopurs_runtime.Value {
 	once_Data_Bifunctor_bifunctorTuple.Do(func() {
-		cache_Data_Bifunctor_bifunctorTuple = gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Bifunctor_bifunctorTuple = gopurs_runtime.Value{Type: 9, IntVal: 4141114362, UnsafePtr: unsafe.Pointer(&Constructor_Data_Bifunctor_Bifunctor{1, gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(g_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply(f_0, (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V0), gopurs_runtime.Apply(g_1, (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V1)})}
 })
 })
-}))
+})})}
 	})
 	return cache_Data_Bifunctor_bifunctorTuple
 }
@@ -102,7 +102,7 @@ var cache_Data_Bifunctor_bifunctorEither gopurs_runtime.Value
 var once_Data_Bifunctor_bifunctorEither sync.Once
 func Get_Data_Bifunctor_bifunctorEither() gopurs_runtime.Value {
 	once_Data_Bifunctor_bifunctorEither.Do(func() {
-		cache_Data_Bifunctor_bifunctorEither = gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Bifunctor_bifunctorEither = gopurs_runtime.Value{Type: 9, IntVal: 4141114362, UnsafePtr: unsafe.Pointer(&Constructor_Data_Bifunctor_Bifunctor{1, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
@@ -129,7 +129,7 @@ end_branch_0:
 return __t0
 })
 })
-}))
+})})}
 	})
 	return cache_Data_Bifunctor_bifunctorEither
 }
@@ -138,132 +138,30 @@ var cache_Data_Bifunctor_bifunctorConst gopurs_runtime.Value
 var once_Data_Bifunctor_bifunctorConst sync.Once
 func Get_Data_Bifunctor_bifunctorConst() gopurs_runtime.Value {
 	once_Data_Bifunctor_bifunctorConst.Do(func() {
-		cache_Data_Bifunctor_bifunctorConst = gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Bifunctor_bifunctorConst = gopurs_runtime.Value{Type: 9, IntVal: 4141114362, UnsafePtr: unsafe.Pointer(&Constructor_Data_Bifunctor_Bifunctor{1, gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_0, v1_2)
 })
 })
-}))
+})})}
 	})
 	return cache_Data_Bifunctor_bifunctorConst
 }
 
-var cache_Data_Bifunctor_bifunctorConst__3156923452 gopurs_runtime.Value
-var once_Data_Bifunctor_bifunctorConst__3156923452 sync.Once
-func Get_Data_Bifunctor_bifunctorConst__3156923452() gopurs_runtime.Value {
-	once_Data_Bifunctor_bifunctorConst__3156923452.Do(func() {
-		cache_Data_Bifunctor_bifunctorConst__3156923452 = gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+var cache_Data_Bifunctor_bifunctorConst__2047151570 gopurs_runtime.Value
+var once_Data_Bifunctor_bifunctorConst__2047151570 sync.Once
+func Get_Data_Bifunctor_bifunctorConst__2047151570() gopurs_runtime.Value {
+	once_Data_Bifunctor_bifunctorConst__2047151570.Do(func() {
+		cache_Data_Bifunctor_bifunctorConst__2047151570 = gopurs_runtime.Value{Type: 9, IntVal: 4141114362, UnsafePtr: unsafe.Pointer(&Constructor_Data_Bifunctor_Bifunctor{1, gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_0, v1_2)
 })
 })
-}))
+})})}
 	})
-	return cache_Data_Bifunctor_bifunctorConst__3156923452
-}
-
-var cache_Data_Bifunctor_bifunctorEither__3558063994 gopurs_runtime.Value
-var once_Data_Bifunctor_bifunctorEither__3558063994 sync.Once
-func Get_Data_Bifunctor_bifunctorEither__3558063994() gopurs_runtime.Value {
-	once_Data_Bifunctor_bifunctorEither__3558063994.Do(func() {
-		cache_Data_Bifunctor_bifunctorEither__3558063994 = gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
-{
-if (v2_2.Type == 9 && v2_2.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Left{1, gopurs_runtime.Apply(v_0, (*Constructor_Data_Either_Left)(v2_2.UnsafePtr).V0)})}
-goto end_branch_0
-} else {
-
-}
-}
-{
-if (v2_2.Type == 9 && v2_2.IntVal == 2465973597) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Right{1, gopurs_runtime.Apply(v1_1, (*Constructor_Data_Either_Right)(v2_2.UnsafePtr).V0)})}
-goto end_branch_0
-} else {
-
-}
-}
-{
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_0:
-return __t0
-})
-})
-}))
-	})
-	return cache_Data_Bifunctor_bifunctorEither__3558063994
-}
-
-var cache_Data_Bifunctor_bifunctorEither__1585706332 gopurs_runtime.Value
-var once_Data_Bifunctor_bifunctorEither__1585706332 sync.Once
-func Get_Data_Bifunctor_bifunctorEither__1585706332() gopurs_runtime.Value {
-	once_Data_Bifunctor_bifunctorEither__1585706332.Do(func() {
-		cache_Data_Bifunctor_bifunctorEither__1585706332 = gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
-{
-if (v2_2.Type == 9 && v2_2.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Left{1, gopurs_runtime.Apply(v_0, (*Constructor_Data_Either_Left)(v2_2.UnsafePtr).V0)})}
-goto end_branch_0
-} else {
-
-}
-}
-{
-if (v2_2.Type == 9 && v2_2.IntVal == 2465973597) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Right{1, gopurs_runtime.Apply(v1_1, (*Constructor_Data_Either_Right)(v2_2.UnsafePtr).V0)})}
-goto end_branch_0
-} else {
-
-}
-}
-{
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_0:
-return __t0
-})
-})
-}))
-	})
-	return cache_Data_Bifunctor_bifunctorEither__1585706332
-}
-
-var cache_Data_Bifunctor_bifunctorTuple__3421321530 gopurs_runtime.Value
-var once_Data_Bifunctor_bifunctorTuple__3421321530 sync.Once
-func Get_Data_Bifunctor_bifunctorTuple__3421321530() gopurs_runtime.Value {
-	once_Data_Bifunctor_bifunctorTuple__3421321530.Do(func() {
-		cache_Data_Bifunctor_bifunctorTuple__3421321530 = gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(g_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply(f_0, (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V0), gopurs_runtime.Apply(g_1, (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V1)})}
-})
-})
-}))
-	})
-	return cache_Data_Bifunctor_bifunctorTuple__3421321530
-}
-
-var cache_Data_Bifunctor_bifunctorTuple__553376860 gopurs_runtime.Value
-var once_Data_Bifunctor_bifunctorTuple__553376860 sync.Once
-func Get_Data_Bifunctor_bifunctorTuple__553376860() gopurs_runtime.Value {
-	once_Data_Bifunctor_bifunctorTuple__553376860.Do(func() {
-		cache_Data_Bifunctor_bifunctorTuple__553376860 = gopurs_runtime.RecordDict1("bimap", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(g_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply(f_0, (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V0), gopurs_runtime.Apply(g_1, (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V1)})}
-})
-})
-}))
-	})
-	return cache_Data_Bifunctor_bifunctorTuple__553376860
+	return cache_Data_Bifunctor_bifunctorConst__2047151570
 }
 
 var cache_Data_Bifunctor_bimap__4044928099 gopurs_runtime.Value

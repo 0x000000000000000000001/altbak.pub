@@ -32,9 +32,9 @@ var cache_Control_Comonad_Trans_Class_comonadTransIdentityT gopurs_runtime.Value
 var once_Control_Comonad_Trans_Class_comonadTransIdentityT sync.Once
 func Get_Control_Comonad_Trans_Class_comonadTransIdentityT() gopurs_runtime.Value {
 	once_Control_Comonad_Trans_Class_comonadTransIdentityT.Do(func() {
-		cache_Control_Comonad_Trans_Class_comonadTransIdentityT = gopurs_runtime.RecordDict1("lower", gopurs_runtime.Func(func(dictComonad_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Control_Comonad_Trans_Class_comonadTransIdentityT = gopurs_runtime.Value{Type: 9, IntVal: 3399197123, UnsafePtr: unsafe.Pointer(&Constructor_Control_Comonad_Trans_Class_ComonadTrans{1, gopurs_runtime.Func(func(dictComonad_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Control_Monad_Identity_Trans_runIdentityT()
-}))
+})})}
 	})
 	return cache_Control_Comonad_Trans_Class_comonadTransIdentityT
 }

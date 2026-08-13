@@ -59,11 +59,11 @@ var dictEuclideanRing_0 gopurs_runtime.Value = dictEuclideanRing_0_loop
 _ = dictEuclideanRing_0
 var dictDivisionRing_1 gopurs_runtime.Value = dictDivisionRing_1_loop
 _ = dictDivisionRing_1
-return gopurs_runtime.RecordDict2("DivisionRing1", "EuclideanRing0", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return dictDivisionRing_1
+return gopurs_runtime.Value{Type: 9, IntVal: 3997783546, UnsafePtr: unsafe.Pointer(&Constructor_Data_Field_Field{1, gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2548491258, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_DivisionRing_DivisionRing](dictDivisionRing_1))}
 }), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return dictEuclideanRing_0
-}))
+return gopurs_runtime.Value{Type: 9, IntVal: 3214993658, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_EuclideanRing_EuclideanRing](dictEuclideanRing_0))}
+})})}
 }
 
 

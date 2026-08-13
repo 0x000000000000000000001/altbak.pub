@@ -21,13 +21,17 @@ var cache_Data_Profunctor_Strong_strongFn gopurs_runtime.Value
 var once_Data_Profunctor_Strong_strongFn sync.Once
 func Get_Data_Profunctor_Strong_strongFn() gopurs_runtime.Value {
 	once_Data_Profunctor_Strong_strongFn.Do(func() {
-		cache_Data_Profunctor_Strong_strongFn = gopurs_runtime.RecordDict3("Profunctor0", "first", "second", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Profunctor_profunctorFn()
+		cache_Data_Profunctor_Strong_strongFn = gopurs_runtime.Value{Type: 9, IntVal: 1323482783, UnsafePtr: unsafe.Pointer(&Constructor_Data_Profunctor_Strong_Strong{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2367018778, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Profunctor_Profunctor](Get_Data_Profunctor_profunctorFn()))}
 }), gopurs_runtime.Func(func(a2b_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply(a2b_0, (*Constructor_Data_Tuple_Tuple)(v_1.UnsafePtr).V0), (*Constructor_Data_Tuple_Tuple)(v_1.UnsafePtr).V1})}
 })
-}), gopurs_runtime.RecordGet(Get_Data_Tuple_functorTuple(), "map"))
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(m_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, (*Constructor_Data_Tuple_Tuple)(m_1.UnsafePtr).V0, gopurs_runtime.Apply(f_0, (*Constructor_Data_Tuple_Tuple)(m_1.UnsafePtr).V1)})}
+})
+})})}
 	})
 	return cache_Data_Profunctor_Strong_strongFn
 }

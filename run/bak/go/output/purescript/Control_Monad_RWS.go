@@ -10,7 +10,9 @@ var cache_Control_Monad_RWS_pure gopurs_runtime.Value
 var once_Control_Monad_RWS_pure sync.Once
 func Get_Control_Monad_RWS_pure() gopurs_runtime.Value {
 	once_Control_Monad_RWS_pure.Do(func() {
-		cache_Control_Monad_RWS_pure = gopurs_runtime.RecordGet(Get_Data_Identity_applicativeIdentity(), "pure")
+		cache_Control_Monad_RWS_pure = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2367475031, UnsafePtr: unsafe.Pointer(Call_Control_Monad_RWS_pure(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_RWS_Trans_RWSResult](x_0_box)))}
+})
 	})
 	return cache_Control_Monad_RWS_pure
 }
@@ -104,6 +106,12 @@ return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Point
 })
 	})
 	return cache_Control_Monad_RWS_evalRWS
+}
+
+func Call_Control_Monad_RWS_pure(x_0_loop *Constructor_Control_Monad_RWS_Trans_RWSResult) *Constructor_Control_Monad_RWS_Trans_RWSResult {
+var x_0 *Constructor_Control_Monad_RWS_Trans_RWSResult = x_0_loop
+_ = x_0
+return x_0
 }
 
 func Call_Control_Monad_RWS_rws(f_0_loop gopurs_runtime.Value, r_1_loop gopurs_runtime.Value, s_2_loop gopurs_runtime.Value) *Constructor_Control_Monad_RWS_Trans_RWSResult {

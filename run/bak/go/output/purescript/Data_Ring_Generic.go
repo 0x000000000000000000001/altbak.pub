@@ -54,11 +54,11 @@ var cache_Data_Ring_Generic_genericRingNoArguments gopurs_runtime.Value
 var once_Data_Ring_Generic_genericRingNoArguments sync.Once
 func Get_Data_Ring_Generic_genericRingNoArguments() gopurs_runtime.Value {
 	once_Data_Ring_Generic_genericRingNoArguments.Do(func() {
-		cache_Data_Ring_Generic_genericRingNoArguments = gopurs_runtime.RecordDict1("genericSub'", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Ring_Generic_genericRingNoArguments = gopurs_runtime.Value{Type: 9, IntVal: 3896698597, UnsafePtr: unsafe.Pointer(&Constructor_Data_Ring_Generic_GenericRing{1, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: int64(1454898258), UnsafePtr: nil}
 })
-}))
+})})}
 	})
 	return cache_Data_Ring_Generic_genericRingNoArguments
 }
@@ -143,31 +143,31 @@ var dictGenericRing_0 gopurs_runtime.Value = dictGenericRing_0_loop
 _ = dictGenericRing_0
 var dictGenericRing1_1 gopurs_runtime.Value = dictGenericRing1_1_loop
 _ = dictGenericRing1_1
-return gopurs_runtime.RecordDict1("genericSub'", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3896698597, UnsafePtr: unsafe.Pointer(&Constructor_Data_Ring_Generic_GenericRing{1, gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&Constructor_Data_Generic_Rep_Product{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericRing_0, "genericSub'"), (*Constructor_Data_Generic_Rep_Product)(v_2.UnsafePtr).V0, (*Constructor_Data_Generic_Rep_Product)(v1_3.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericRing1_1, "genericSub'"), (*Constructor_Data_Generic_Rep_Product)(v_2.UnsafePtr).V1, (*Constructor_Data_Generic_Rep_Product)(v1_3.UnsafePtr).V1)})}
 })
-}))
+})})}
 }
 
 func Call_Data_Ring_Generic_genericRingConstructor(dictGenericRing_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictGenericRing_0 gopurs_runtime.Value = dictGenericRing_0_loop
 _ = dictGenericRing_0
-return gopurs_runtime.RecordDict1("genericSub'", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3896698597, UnsafePtr: unsafe.Pointer(&Constructor_Data_Ring_Generic_GenericRing{1, gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericRing_0, "genericSub'"), v_1, v1_2)
 })
-}))
+})})}
 }
 
 func Call_Data_Ring_Generic_genericRingArgument(dictRing_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictRing_0 gopurs_runtime.Value = dictRing_0_loop
 _ = dictRing_0
-return gopurs_runtime.RecordDict1("genericSub'", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3896698597, UnsafePtr: unsafe.Pointer(&Constructor_Data_Ring_Generic_GenericRing{1, gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictRing_0, "sub"), v_1, v1_2)
 })
-}))
+})})}
 }
 
 func Call_Data_Ring_Generic_genericSub_prime__469823367(dict_0_loop *Constructor_Data_Ring_Generic_GenericRing) gopurs_runtime.Value {

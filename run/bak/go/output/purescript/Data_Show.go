@@ -32,7 +32,7 @@ var cache_Data_Show_showVoid gopurs_runtime.Value
 var once_Data_Show_showVoid sync.Once
 func Get_Data_Show_showVoid() gopurs_runtime.Value {
 	once_Data_Show_showVoid.Do(func() {
-		cache_Data_Show_showVoid = gopurs_runtime.RecordDict1("show", Get_Data_Void_absurd())
+		cache_Data_Show_showVoid = gopurs_runtime.Value{Type: 9, IntVal: 1835580986, UnsafePtr: unsafe.Pointer(&Constructor_Data_Show_Show{1, Get_Data_Void_absurd()})}
 	})
 	return cache_Data_Show_showVoid
 }
@@ -41,9 +41,9 @@ var cache_Data_Show_showUnit gopurs_runtime.Value
 var once_Data_Show_showUnit sync.Once
 func Get_Data_Show_showUnit() gopurs_runtime.Value {
 	once_Data_Show_showUnit.Do(func() {
-		cache_Data_Show_showUnit = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Show_showUnit = gopurs_runtime.Value{Type: 9, IntVal: 1835580986, UnsafePtr: unsafe.Pointer(&Constructor_Data_Show_Show{1, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str("unit")
-}))
+})})}
 	})
 	return cache_Data_Show_showUnit
 }
@@ -52,7 +52,7 @@ var cache_Data_Show_showString gopurs_runtime.Value
 var once_Data_Show_showString sync.Once
 func Get_Data_Show_showString() gopurs_runtime.Value {
 	once_Data_Show_showString.Do(func() {
-		cache_Data_Show_showString = gopurs_runtime.RecordDict1("show", Get_Data_Show_showStringImpl())
+		cache_Data_Show_showString = gopurs_runtime.Value{Type: 9, IntVal: 1835580986, UnsafePtr: unsafe.Pointer(&Constructor_Data_Show_Show{1, Get_Data_Show_showStringImpl()})}
 	})
 	return cache_Data_Show_showString
 }
@@ -61,11 +61,11 @@ var cache_Data_Show_showRecordFieldsNil gopurs_runtime.Value
 var once_Data_Show_showRecordFieldsNil sync.Once
 func Get_Data_Show_showRecordFieldsNil() gopurs_runtime.Value {
 	once_Data_Show_showRecordFieldsNil.Do(func() {
-		cache_Data_Show_showRecordFieldsNil = gopurs_runtime.RecordDict1("showRecordFields", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Show_showRecordFieldsNil = gopurs_runtime.Value{Type: 9, IntVal: 2498393510, UnsafePtr: unsafe.Pointer(&Constructor_Data_Show_ShowRecordFields{1, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str("")
 })
-}))
+})})}
 	})
 	return cache_Data_Show_showRecordFieldsNil
 }
@@ -96,9 +96,9 @@ var cache_Data_Show_showProxy gopurs_runtime.Value
 var once_Data_Show_showProxy sync.Once
 func Get_Data_Show_showProxy() gopurs_runtime.Value {
 	once_Data_Show_showProxy.Do(func() {
-		cache_Data_Show_showProxy = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Show_showProxy = gopurs_runtime.Value{Type: 9, IntVal: 1835580986, UnsafePtr: unsafe.Pointer(&Constructor_Data_Show_Show{1, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str("Proxy")
-}))
+})})}
 	})
 	return cache_Data_Show_showProxy
 }
@@ -107,7 +107,7 @@ var cache_Data_Show_showNumber gopurs_runtime.Value
 var once_Data_Show_showNumber sync.Once
 func Get_Data_Show_showNumber() gopurs_runtime.Value {
 	once_Data_Show_showNumber.Do(func() {
-		cache_Data_Show_showNumber = gopurs_runtime.RecordDict1("show", Get_Data_Show_showNumberImpl())
+		cache_Data_Show_showNumber = gopurs_runtime.Value{Type: 9, IntVal: 1835580986, UnsafePtr: unsafe.Pointer(&Constructor_Data_Show_Show{1, Get_Data_Show_showNumberImpl()})}
 	})
 	return cache_Data_Show_showNumber
 }
@@ -116,7 +116,7 @@ var cache_Data_Show_showInt gopurs_runtime.Value
 var once_Data_Show_showInt sync.Once
 func Get_Data_Show_showInt() gopurs_runtime.Value {
 	once_Data_Show_showInt.Do(func() {
-		cache_Data_Show_showInt = gopurs_runtime.RecordDict1("show", Get_Data_Show_showIntImpl())
+		cache_Data_Show_showInt = gopurs_runtime.Value{Type: 9, IntVal: 1835580986, UnsafePtr: unsafe.Pointer(&Constructor_Data_Show_Show{1, Get_Data_Show_showIntImpl()})}
 	})
 	return cache_Data_Show_showInt
 }
@@ -125,7 +125,7 @@ var cache_Data_Show_showChar gopurs_runtime.Value
 var once_Data_Show_showChar sync.Once
 func Get_Data_Show_showChar() gopurs_runtime.Value {
 	once_Data_Show_showChar.Do(func() {
-		cache_Data_Show_showChar = gopurs_runtime.RecordDict1("show", Get_Data_Show_showCharImpl())
+		cache_Data_Show_showChar = gopurs_runtime.Value{Type: 9, IntVal: 1835580986, UnsafePtr: unsafe.Pointer(&Constructor_Data_Show_Show{1, Get_Data_Show_showCharImpl()})}
 	})
 	return cache_Data_Show_showChar
 }
@@ -134,7 +134,7 @@ var cache_Data_Show_showBoolean gopurs_runtime.Value
 var once_Data_Show_showBoolean sync.Once
 func Get_Data_Show_showBoolean() gopurs_runtime.Value {
 	once_Data_Show_showBoolean.Do(func() {
-		cache_Data_Show_showBoolean = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Show_showBoolean = gopurs_runtime.Value{Type: 9, IntVal: 1835580986, UnsafePtr: unsafe.Pointer(&Constructor_Data_Show_Show{1, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 string
 {
 if (v_0.IntVal) != (0) {
@@ -149,7 +149,7 @@ __t0 = "false"
 }
 end_branch_0:
 return gopurs_runtime.Str(__t0)
-}))
+})})}
 	})
 	return cache_Data_Show_showBoolean
 }
@@ -545,9 +545,9 @@ var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
 _ = _dollar__unused_1
 var dictShowRecordFields_2 gopurs_runtime.Value = dictShowRecordFields_2_loop
 _ = dictShowRecordFields_2
-return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(record_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1835580986, UnsafePtr: unsafe.Pointer(&Constructor_Data_Show_Show{1, gopurs_runtime.Func(func(record_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str((("{") + (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictShowRecordFields_2, "showRecordFields"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, record_3).StrVal())) + ("}"))
-}))
+})})}
 }
 
 func Call_Data_Show_show(dict_0_loop *Constructor_Data_Show_Show) gopurs_runtime.Value {
@@ -559,7 +559,7 @@ return gopurs_runtime.Box(dict_0.V0)
 func Call_Data_Show_showArray(dictShow_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictShow_0 gopurs_runtime.Value = dictShow_0_loop
 _ = dictShow_0
-return gopurs_runtime.RecordDict1("show", gopurs_runtime.Apply(Get_Data_Show_showArrayImpl(), gopurs_runtime.RecordGet(dictShow_0, "show")))
+return gopurs_runtime.Value{Type: 9, IntVal: 1835580986, UnsafePtr: unsafe.Pointer(&Constructor_Data_Show_Show{1, gopurs_runtime.Apply(Get_Data_Show_showArrayImpl(), gopurs_runtime.RecordGet(dictShow_0, "show"))})}
 }
 
 func Call_Data_Show_showRecordFieldsCons(dictIsSymbol_0_loop gopurs_runtime.Value, dictShowRecordFields_1_loop gopurs_runtime.Value, dictShow_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -569,14 +569,14 @@ var dictShowRecordFields_1 gopurs_runtime.Value = dictShowRecordFields_1_loop
 _ = dictShowRecordFields_1
 var dictShow_2 gopurs_runtime.Value = dictShow_2_loop
 _ = dictShow_2
-return gopurs_runtime.RecordDict1("showRecordFields", gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2498393510, UnsafePtr: unsafe.Pointer(&Constructor_Data_Show_ShowRecordFields{1, gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(record_4 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): key_5_0 -> gopurs_runtime.Value
 key_5_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil})
 _ = key_5_0
 return gopurs_runtime.Str((((((" ") + (key_5_0.StrVal())) + (": ")) + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_2, "show"), gopurs_runtime.Apply2(Get_Record_Unsafe_unsafeGet(), gopurs_runtime.Str(key_5_0.StrVal()), record_4)).StrVal())) + (",")) + (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictShowRecordFields_1, "showRecordFields"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, record_4).StrVal()))
 })
-}))
+})})}
 }
 
 func Call_Data_Show_showRecordFieldsConsNil(dictIsSymbol_0_loop gopurs_runtime.Value, dictShow_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -584,14 +584,14 @@ var dictIsSymbol_0 gopurs_runtime.Value = dictIsSymbol_0_loop
 _ = dictIsSymbol_0
 var dictShow_1 gopurs_runtime.Value = dictShow_1_loop
 _ = dictShow_1
-return gopurs_runtime.RecordDict1("showRecordFields", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2498393510, UnsafePtr: unsafe.Pointer(&Constructor_Data_Show_ShowRecordFields{1, gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(record_3 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): key_4_0 -> gopurs_runtime.Value
 key_4_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil})
 _ = key_4_0
 return gopurs_runtime.Str(((((" ") + (key_4_0.StrVal())) + (": ")) + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_1, "show"), gopurs_runtime.Apply2(Get_Record_Unsafe_unsafeGet(), gopurs_runtime.Str(key_4_0.StrVal()), record_3)).StrVal())) + (" "))
 })
-}))
+})})}
 }
 
 func Call_Data_Show_show__857859206(dict_0_loop *Constructor_Data_Show_Show) gopurs_runtime.Value {
@@ -758,7 +758,7 @@ return __t0
 func Call_Data_Show_show__1723386194(v_0_loop *Constructor_Data_Date_Date) string {
 var v_0 *Constructor_Data_Date_Date = v_0_loop
 _ = v_0
-return (((((("(Date ") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_showYear(), "show"), gopurs_runtime.Int((v_0).V0)).StrVal())) + (" ")) + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_showMonth(), "show"), gopurs_runtime.Value{Type: 9, IntVal: int64((v_0).V1), UnsafePtr: nil}).StrVal())) + (" ")) + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_showDay(), "show"), gopurs_runtime.Int((v_0).V2)).StrVal())) + (")")
+return (((((("(Date ") + (gopurs_runtime.Apply(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Show_Show](Get_Data_Date_Component_showYear()).V0), gopurs_runtime.Int((v_0).V0)).StrVal())) + (" ")) + (gopurs_runtime.Apply(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Show_Show](Get_Data_Date_Component_showMonth()).V0), gopurs_runtime.Value{Type: 9, IntVal: int64((v_0).V1), UnsafePtr: nil}).StrVal())) + (" ")) + (gopurs_runtime.Apply(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Show_Show](Get_Data_Date_Component_showDay()).V0), gopurs_runtime.Int((v_0).V2)).StrVal())) + (")")
 }
 
 func Call_Data_Show_show__1261750354(v_0_loop uint32) string {
@@ -879,7 +879,7 @@ return gopurs_runtime.Box(dict_0.V0)
 func Call_Data_Show_show__1073032466(v_0_loop *Constructor_Data_Time_Time) string {
 var v_0 *Constructor_Data_Time_Time = v_0_loop
 _ = v_0
-return (((((((("(Time ") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Component_showHour(), "show"), gopurs_runtime.Int((v_0).V0)).StrVal())) + (" ")) + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Component_showMinute(), "show"), gopurs_runtime.Int((v_0).V1)).StrVal())) + (" ")) + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Component_showSecond(), "show"), gopurs_runtime.Int((v_0).V2)).StrVal())) + (" ")) + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Component_showMillisecond(), "show"), gopurs_runtime.Int((v_0).V3)).StrVal())) + (")")
+return (((((((("(Time ") + (gopurs_runtime.Apply(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Show_Show](Get_Data_Time_Component_showHour()).V0), gopurs_runtime.Int((v_0).V0)).StrVal())) + (" ")) + (gopurs_runtime.Apply(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Show_Show](Get_Data_Time_Component_showMinute()).V0), gopurs_runtime.Int((v_0).V1)).StrVal())) + (" ")) + (gopurs_runtime.Apply(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Show_Show](Get_Data_Time_Component_showSecond()).V0), gopurs_runtime.Int((v_0).V2)).StrVal())) + (" ")) + (gopurs_runtime.Apply(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Show_Show](Get_Data_Time_Component_showMillisecond()).V0), gopurs_runtime.Int((v_0).V3)).StrVal())) + (")")
 }
 
 func Call_Data_Show_show__3978978930(dict_0_loop *Constructor_Data_Show_Show) gopurs_runtime.Value {

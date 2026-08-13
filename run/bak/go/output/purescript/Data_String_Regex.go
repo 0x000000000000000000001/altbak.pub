@@ -10,7 +10,7 @@ var cache_Data_String_Regex_showRegex gopurs_runtime.Value
 var once_Data_String_Regex_showRegex sync.Once
 func Get_Data_String_Regex_showRegex() gopurs_runtime.Value {
 	once_Data_String_Regex_showRegex.Do(func() {
-		cache_Data_String_Regex_showRegex = gopurs_runtime.RecordDict1("show", Get_Data_String_Regex_showRegexImpl())
+		cache_Data_String_Regex_showRegex = gopurs_runtime.Value{Type: 9, IntVal: 1835580986, UnsafePtr: unsafe.Pointer(&Constructor_Data_Show_Show{1, Get_Data_String_Regex_showRegexImpl()})}
 	})
 	return cache_Data_String_Regex_showRegex
 }

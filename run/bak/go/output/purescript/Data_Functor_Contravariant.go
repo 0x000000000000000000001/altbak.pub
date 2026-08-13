@@ -21,11 +21,11 @@ var cache_Data_Functor_Contravariant_contravariantConst gopurs_runtime.Value
 var once_Data_Functor_Contravariant_contravariantConst sync.Once
 func Get_Data_Functor_Contravariant_contravariantConst() gopurs_runtime.Value {
 	once_Data_Functor_Contravariant_contravariantConst.Do(func() {
-		cache_Data_Functor_Contravariant_contravariantConst = gopurs_runtime.RecordDict1("cmap", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Functor_Contravariant_contravariantConst = gopurs_runtime.Value{Type: 9, IntVal: 85171506, UnsafePtr: unsafe.Pointer(&Constructor_Data_Functor_Contravariant_Contravariant{1, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return v1_1
 })
-}))
+})})}
 	})
 	return cache_Data_Functor_Contravariant_contravariantConst
 }

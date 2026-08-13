@@ -87,9 +87,9 @@ var cache_Data_String_NonEmpty_Internal_showNonEmptyString gopurs_runtime.Value
 var once_Data_String_NonEmpty_Internal_showNonEmptyString sync.Once
 func Get_Data_String_NonEmpty_Internal_showNonEmptyString() gopurs_runtime.Value {
 	once_Data_String_NonEmpty_Internal_showNonEmptyString.Do(func() {
-		cache_Data_String_NonEmpty_Internal_showNonEmptyString = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_String_NonEmpty_Internal_showNonEmptyString = gopurs_runtime.Value{Type: 9, IntVal: 1835580986, UnsafePtr: unsafe.Pointer(&Constructor_Data_Show_Show{1, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str((("(NonEmptyString.unsafeFromString ") + (gopurs_runtime.Apply(Get_Data_Show_showStringImpl(), gopurs_runtime.Str(v_0.StrVal())).StrVal())) + (")"))
-}))
+})})}
 	})
 	return cache_Data_String_NonEmpty_Internal_showNonEmptyString
 }
@@ -98,9 +98,9 @@ var cache_Data_String_NonEmpty_Internal_showNonEmptyReplacement gopurs_runtime.V
 var once_Data_String_NonEmpty_Internal_showNonEmptyReplacement sync.Once
 func Get_Data_String_NonEmpty_Internal_showNonEmptyReplacement() gopurs_runtime.Value {
 	once_Data_String_NonEmpty_Internal_showNonEmptyReplacement.Do(func() {
-		cache_Data_String_NonEmpty_Internal_showNonEmptyReplacement = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_String_NonEmpty_Internal_showNonEmptyReplacement = gopurs_runtime.Value{Type: 9, IntVal: 1835580986, UnsafePtr: unsafe.Pointer(&Constructor_Data_Show_Show{1, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str((("(NonEmptyReplacement ") + (gopurs_runtime.Apply(Get_Data_Show_showStringImpl(), gopurs_runtime.Str(v_0.StrVal())).StrVal())) + (")"))
-}))
+})})}
 	})
 	return cache_Data_String_NonEmpty_Internal_showNonEmptyReplacement
 }
@@ -109,7 +109,7 @@ var cache_Data_String_NonEmpty_Internal_semigroupNonEmptyString gopurs_runtime.V
 var once_Data_String_NonEmpty_Internal_semigroupNonEmptyString sync.Once
 func Get_Data_String_NonEmpty_Internal_semigroupNonEmptyString() gopurs_runtime.Value {
 	once_Data_String_NonEmpty_Internal_semigroupNonEmptyString.Do(func() {
-		cache_Data_String_NonEmpty_Internal_semigroupNonEmptyString = Get_Data_Semigroup_semigroupString()
+		cache_Data_String_NonEmpty_Internal_semigroupNonEmptyString = gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](Get_Data_Semigroup_semigroupString()))}
 	})
 	return cache_Data_String_NonEmpty_Internal_semigroupNonEmptyString
 }
@@ -118,7 +118,7 @@ var cache_Data_String_NonEmpty_Internal_semigroupNonEmptyReplacement gopurs_runt
 var once_Data_String_NonEmpty_Internal_semigroupNonEmptyReplacement sync.Once
 func Get_Data_String_NonEmpty_Internal_semigroupNonEmptyReplacement() gopurs_runtime.Value {
 	once_Data_String_NonEmpty_Internal_semigroupNonEmptyReplacement.Do(func() {
-		cache_Data_String_NonEmpty_Internal_semigroupNonEmptyReplacement = Get_Data_Semigroup_semigroupString()
+		cache_Data_String_NonEmpty_Internal_semigroupNonEmptyReplacement = gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](Get_Data_Semigroup_semigroupString()))}
 	})
 	return cache_Data_String_NonEmpty_Internal_semigroupNonEmptyReplacement
 }
@@ -160,7 +160,7 @@ var cache_Data_String_NonEmpty_Internal_ordNonEmptyString gopurs_runtime.Value
 var once_Data_String_NonEmpty_Internal_ordNonEmptyString sync.Once
 func Get_Data_String_NonEmpty_Internal_ordNonEmptyString() gopurs_runtime.Value {
 	once_Data_String_NonEmpty_Internal_ordNonEmptyString.Do(func() {
-		cache_Data_String_NonEmpty_Internal_ordNonEmptyString = Get_Data_Ord_ordString()
+		cache_Data_String_NonEmpty_Internal_ordNonEmptyString = gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](Get_Data_Ord_ordString()))}
 	})
 	return cache_Data_String_NonEmpty_Internal_ordNonEmptyString
 }
@@ -169,7 +169,7 @@ var cache_Data_String_NonEmpty_Internal_ordNonEmptyReplacement gopurs_runtime.Va
 var once_Data_String_NonEmpty_Internal_ordNonEmptyReplacement sync.Once
 func Get_Data_String_NonEmpty_Internal_ordNonEmptyReplacement() gopurs_runtime.Value {
 	once_Data_String_NonEmpty_Internal_ordNonEmptyReplacement.Do(func() {
-		cache_Data_String_NonEmpty_Internal_ordNonEmptyReplacement = Get_Data_Ord_ordString()
+		cache_Data_String_NonEmpty_Internal_ordNonEmptyReplacement = gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](Get_Data_Ord_ordString()))}
 	})
 	return cache_Data_String_NonEmpty_Internal_ordNonEmptyReplacement
 }
@@ -332,7 +332,7 @@ var cache_Data_String_NonEmpty_Internal_eqNonEmptyString gopurs_runtime.Value
 var once_Data_String_NonEmpty_Internal_eqNonEmptyString sync.Once
 func Get_Data_String_NonEmpty_Internal_eqNonEmptyString() gopurs_runtime.Value {
 	once_Data_String_NonEmpty_Internal_eqNonEmptyString.Do(func() {
-		cache_Data_String_NonEmpty_Internal_eqNonEmptyString = Get_Data_Eq_eqString()
+		cache_Data_String_NonEmpty_Internal_eqNonEmptyString = gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](Get_Data_Eq_eqString()))}
 	})
 	return cache_Data_String_NonEmpty_Internal_eqNonEmptyString
 }
@@ -341,7 +341,7 @@ var cache_Data_String_NonEmpty_Internal_eqNonEmptyReplacement gopurs_runtime.Val
 var once_Data_String_NonEmpty_Internal_eqNonEmptyReplacement sync.Once
 func Get_Data_String_NonEmpty_Internal_eqNonEmptyReplacement() gopurs_runtime.Value {
 	once_Data_String_NonEmpty_Internal_eqNonEmptyReplacement.Do(func() {
-		cache_Data_String_NonEmpty_Internal_eqNonEmptyReplacement = Get_Data_Eq_eqString()
+		cache_Data_String_NonEmpty_Internal_eqNonEmptyReplacement = gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](Get_Data_Eq_eqString()))}
 	})
 	return cache_Data_String_NonEmpty_Internal_eqNonEmptyReplacement
 }
@@ -527,9 +527,9 @@ return (s1_0) + (v_1)
 func Call_Data_String_NonEmpty_Internal_nonEmptyNonEmpty(dictIsSymbol_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictIsSymbol_0 gopurs_runtime.Value = dictIsSymbol_0_loop
 _ = dictIsSymbol_0
-return gopurs_runtime.RecordDict1("nes", gopurs_runtime.Func(func(p_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1987403114, UnsafePtr: unsafe.Pointer(&Constructor_Data_String_NonEmpty_Internal_MakeNonEmpty{1, gopurs_runtime.Func(func(p_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSymbol_0, "reflectSymbol"), gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(p_1.IntVal)), UnsafePtr: nil}).StrVal())
-}))
+})})}
 }
 
 func Call_Data_String_NonEmpty_Internal_nes(dict_0_loop *Constructor_Data_String_NonEmpty_Internal_MakeNonEmpty) gopurs_runtime.Value {
@@ -541,9 +541,9 @@ return gopurs_runtime.Box(dict_0.V0)
 func Call_Data_String_NonEmpty_Internal_makeNonEmptyBad(_dollar__unused_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
-return gopurs_runtime.RecordDict1("nes", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1987403114, UnsafePtr: unsafe.Pointer(&Constructor_Data_String_NonEmpty_Internal_MakeNonEmpty{1, gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str("")
-}))
+})})}
 }
 
 func Call_Data_String_NonEmpty_Internal_localeCompare(v_0_loop string, v1_1_loop string) uint32 {

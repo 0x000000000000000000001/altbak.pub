@@ -21,13 +21,13 @@ var cache_Control_Biapply_biapplyTuple gopurs_runtime.Value
 var once_Control_Biapply_biapplyTuple sync.Once
 func Get_Control_Biapply_biapplyTuple() gopurs_runtime.Value {
 	once_Control_Biapply_biapplyTuple.Do(func() {
-		cache_Control_Biapply_biapplyTuple = gopurs_runtime.RecordDict2("Bifunctor0", "biapply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Bifunctor_bifunctorTuple()
+		cache_Control_Biapply_biapplyTuple = gopurs_runtime.Value{Type: 9, IntVal: 3774602829, UnsafePtr: unsafe.Pointer(&Constructor_Control_Biapply_Biapply{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 4141114362, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Bifunctor_Bifunctor](Get_Data_Bifunctor_bifunctorTuple()))}
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply((*Constructor_Data_Tuple_Tuple)(v_0.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple)(v1_1.UnsafePtr).V0), gopurs_runtime.Apply((*Constructor_Data_Tuple_Tuple)(v_0.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple)(v1_1.UnsafePtr).V1)})}
 })
-}))
+})})}
 	})
 	return cache_Control_Biapply_biapplyTuple
 }
@@ -107,21 +107,6 @@ return Call_Control_Biapply_biapply__2409699611(gopurs_runtime.CoerceToStruct[Co
 })
 	})
 	return cache_Control_Biapply_biapply__2409699611
-}
-
-var cache_Control_Biapply_biapplyTuple__355763440 gopurs_runtime.Value
-var once_Control_Biapply_biapplyTuple__355763440 sync.Once
-func Get_Control_Biapply_biapplyTuple__355763440() gopurs_runtime.Value {
-	once_Control_Biapply_biapplyTuple__355763440.Do(func() {
-		cache_Control_Biapply_biapplyTuple__355763440 = gopurs_runtime.RecordDict2("Bifunctor0", "biapply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Bifunctor_bifunctorTuple()
-}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply((*Constructor_Data_Tuple_Tuple)(v_0.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple)(v1_1.UnsafePtr).V0), gopurs_runtime.Apply((*Constructor_Data_Tuple_Tuple)(v_0.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple)(v1_1.UnsafePtr).V1)})}
-})
-}))
-	})
-	return cache_Control_Biapply_biapplyTuple__355763440
 }
 
 type Constructor_Control_Biapply_Biapply struct {

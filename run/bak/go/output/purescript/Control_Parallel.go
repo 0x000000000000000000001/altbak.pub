@@ -186,10 +186,27 @@ var dictFoldable_2 *Constructor_Data_Foldable_Foldable = dictFoldable_2_loop
 _ = dictFoldable_2
 var f_3 gopurs_runtime.Value = f_3_loop
 _ = f_3
+// TAST (Let): __local_var_4_2 -> gopurs_runtime.Value
+__local_var_4_2 := gopurs_runtime.Apply(gopurs_runtime.Box(dictApplicative_1.V0), gopurs_runtime.Value{})
+_ = __local_var_4_2
+// TAST (Let): Functor0_5_3 -> *Constructor_Data_Functor_Functor
+Functor0_5_3 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_2, "Functor0"), gopurs_runtime.Value{}))
+_ = Functor0_5_3
+// TAST (Let): applySecond_4_1 -> gopurs_runtime.Value
+applySecond_4_1 := gopurs_runtime.Func(func(a_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_2, "apply"), gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_5_3.V0), gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_9
+})
+}), a_6), b_7)
+})
+})
+_ = applySecond_4_1
 // TAST (Let): __local_var_4_0 -> gopurs_runtime.Value
-__local_var_4_0 := gopurs_runtime.Apply3(Get_Data_Foldable_traverse_(), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(dictApplicative_1)}, gopurs_runtime.Value{Type: 9, IntVal: 4280266298, UnsafePtr: unsafe.Pointer(dictFoldable_2)}, gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Box(dictParallel_0.V2), gopurs_runtime.Apply(f_3, x_4))
-}))
+__local_var_4_0 := gopurs_runtime.Apply2(gopurs_runtime.Box(dictFoldable_2.V2), gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(applySecond_4_1, gopurs_runtime.Apply(gopurs_runtime.Box(dictParallel_0.V2), gopurs_runtime.Apply(f_3, x_5)))
+}), gopurs_runtime.Apply(gopurs_runtime.Box(dictApplicative_1.V1), Get_Data_Unit_unit()))
 _ = __local_var_4_0
 return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.Box(dictParallel_0.V3), gopurs_runtime.Apply(__local_var_4_0, x_5))
@@ -222,10 +239,27 @@ var dictApplicative_1 *Constructor_Control_Applicative_Applicative = dictApplica
 _ = dictApplicative_1
 var dictFoldable_2 *Constructor_Data_Foldable_Foldable = dictFoldable_2_loop
 _ = dictFoldable_2
+// TAST (Let): __local_var_3_2 -> gopurs_runtime.Value
+__local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.Box(dictApplicative_1.V0), gopurs_runtime.Value{})
+_ = __local_var_3_2
+// TAST (Let): Functor0_4_3 -> *Constructor_Data_Functor_Functor
+Functor0_4_3 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_2, "Functor0"), gopurs_runtime.Value{}))
+_ = Functor0_4_3
+// TAST (Let): applySecond_3_1 -> gopurs_runtime.Value
+applySecond_3_1 := gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_2, "apply"), gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_4_3.V0), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_8
+})
+}), a_5), b_6)
+})
+})
+_ = applySecond_3_1
 // TAST (Let): __local_var_3_0 -> gopurs_runtime.Value
-__local_var_3_0 := gopurs_runtime.Apply3(Get_Data_Foldable_traverse_(), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(dictApplicative_1)}, gopurs_runtime.Value{Type: 9, IntVal: 4280266298, UnsafePtr: unsafe.Pointer(dictFoldable_2)}, gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Box(dictParallel_0.V2), x_3)
-}))
+__local_var_3_0 := gopurs_runtime.Apply2(gopurs_runtime.Box(dictFoldable_2.V2), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(applySecond_3_1, gopurs_runtime.Apply(gopurs_runtime.Box(dictParallel_0.V2), x_4))
+}), gopurs_runtime.Apply(gopurs_runtime.Box(dictApplicative_1.V1), Get_Data_Unit_unit()))
 _ = __local_var_3_0
 return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.Box(dictParallel_0.V3), gopurs_runtime.Apply(__local_var_3_0, x_4))
@@ -321,10 +355,27 @@ var dictApplicative_1 *Constructor_Control_Applicative_Applicative = dictApplica
 _ = dictApplicative_1
 var dictFoldable_2 *Constructor_Data_Foldable_Foldable = dictFoldable_2_loop
 _ = dictFoldable_2
+// TAST (Let): __local_var_3_2 -> gopurs_runtime.Value
+__local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.Box(dictApplicative_1.V0), gopurs_runtime.Value{})
+_ = __local_var_3_2
+// TAST (Let): Functor0_4_3 -> *Constructor_Data_Functor_Functor
+Functor0_4_3 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_2, "Functor0"), gopurs_runtime.Value{}))
+_ = Functor0_4_3
+// TAST (Let): applySecond_3_1 -> gopurs_runtime.Value
+applySecond_3_1 := gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_2, "apply"), gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_4_3.V0), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_8
+})
+}), a_5), b_6)
+})
+})
+_ = applySecond_3_1
 // TAST (Let): __local_var_3_0 -> gopurs_runtime.Value
-__local_var_3_0 := gopurs_runtime.Apply3(Get_Data_Foldable_traverse_(), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(dictApplicative_1)}, gopurs_runtime.Value{Type: 9, IntVal: 4280266298, UnsafePtr: unsafe.Pointer(dictFoldable_2)}, gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Box(dictParallel_0.V2), x_3)
-}))
+__local_var_3_0 := gopurs_runtime.Apply2(gopurs_runtime.Box(dictFoldable_2.V2), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(applySecond_3_1, gopurs_runtime.Apply(gopurs_runtime.Box(dictParallel_0.V2), x_4))
+}), gopurs_runtime.Apply(gopurs_runtime.Box(dictApplicative_1.V1), Get_Data_Unit_unit()))
 _ = __local_var_3_0
 return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.Box(dictParallel_0.V3), gopurs_runtime.Apply(__local_var_3_0, x_4))
@@ -334,9 +385,26 @@ return gopurs_runtime.Apply(gopurs_runtime.Box(dictParallel_0.V3), gopurs_runtim
 func Call_Control_Parallel_parSequence___3793531865(__eta0_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
 _ = __eta0_0
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_Aff_parallelAff(), "sequential"), gopurs_runtime.Apply4(Get_Data_Foldable_traverse_(), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](Get_Effect_Aff_applicativeParAff()))}, gopurs_runtime.Value{Type: 9, IntVal: 4280266298, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Foldable_Foldable](Get_Data_Foldable_foldableArray()))}, gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_Aff_parallelAff(), "parallel"), x_1)
-}), __eta0_0))
+// TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
+__local_var_1_1 := gopurs_runtime.Apply(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](Get_Effect_Aff_applicativeParAff()).V0), gopurs_runtime.Value{})
+_ = __local_var_1_1
+// TAST (Let): Functor0_2_2 -> *Constructor_Data_Functor_Functor
+Functor0_2_2 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_1, "Functor0"), gopurs_runtime.Value{}))
+_ = Functor0_2_2
+// TAST (Let): applySecond_1_0 -> gopurs_runtime.Value
+applySecond_1_0 := gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_1, "apply"), gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_2_2.V0), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_6
+})
+}), a_3), b_4)
+})
+})
+_ = applySecond_1_0
+return gopurs_runtime.Apply(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Control_Parallel_Class_Parallel](Get_Effect_Aff_parallelAff()).V3), gopurs_runtime.Apply3(Get_Data_Foldable_foldrArray(), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(applySecond_1_0, gopurs_runtime.Apply(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Control_Parallel_Class_Parallel](Get_Effect_Aff_parallelAff()).V2), x_2))
+}), gopurs_runtime.Apply(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](Get_Effect_Aff_applicativeParAff()).V1), Get_Data_Unit_unit()), __eta0_0))
 }
 
 func Call_Control_Parallel_parTraverse__1055730709(dictParallel_0_loop *Constructor_Control_Parallel_Class_Parallel, dictApplicative_1_loop *Constructor_Control_Applicative_Applicative, dictTraversable_2_loop *Constructor_Data_Traversable_Traversable, f_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -386,10 +454,27 @@ var dictFoldable_2 *Constructor_Data_Foldable_Foldable = dictFoldable_2_loop
 _ = dictFoldable_2
 var f_3 gopurs_runtime.Value = f_3_loop
 _ = f_3
+// TAST (Let): __local_var_4_2 -> gopurs_runtime.Value
+__local_var_4_2 := gopurs_runtime.Apply(gopurs_runtime.Box(dictApplicative_1.V0), gopurs_runtime.Value{})
+_ = __local_var_4_2
+// TAST (Let): Functor0_5_3 -> *Constructor_Data_Functor_Functor
+Functor0_5_3 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_2, "Functor0"), gopurs_runtime.Value{}))
+_ = Functor0_5_3
+// TAST (Let): applySecond_4_1 -> gopurs_runtime.Value
+applySecond_4_1 := gopurs_runtime.Func(func(a_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_2, "apply"), gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_5_3.V0), gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_9
+})
+}), a_6), b_7)
+})
+})
+_ = applySecond_4_1
 // TAST (Let): __local_var_4_0 -> gopurs_runtime.Value
-__local_var_4_0 := gopurs_runtime.Apply3(Get_Data_Foldable_traverse_(), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(dictApplicative_1)}, gopurs_runtime.Value{Type: 9, IntVal: 4280266298, UnsafePtr: unsafe.Pointer(dictFoldable_2)}, gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Box(dictParallel_0.V2), gopurs_runtime.Apply(f_3, x_4))
-}))
+__local_var_4_0 := gopurs_runtime.Apply2(gopurs_runtime.Box(dictFoldable_2.V2), gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(applySecond_4_1, gopurs_runtime.Apply(gopurs_runtime.Box(dictParallel_0.V2), gopurs_runtime.Apply(f_3, x_5)))
+}), gopurs_runtime.Apply(gopurs_runtime.Box(dictApplicative_1.V1), Get_Data_Unit_unit()))
 _ = __local_var_4_0
 return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.Box(dictParallel_0.V3), gopurs_runtime.Apply(__local_var_4_0, x_5))
@@ -405,10 +490,27 @@ var dictFoldable_2 *Constructor_Data_Foldable_Foldable = dictFoldable_2_loop
 _ = dictFoldable_2
 var f_3 gopurs_runtime.Value = f_3_loop
 _ = f_3
+// TAST (Let): __local_var_4_2 -> gopurs_runtime.Value
+__local_var_4_2 := gopurs_runtime.Apply(gopurs_runtime.Box(dictApplicative_1.V0), gopurs_runtime.Value{})
+_ = __local_var_4_2
+// TAST (Let): Functor0_5_3 -> *Constructor_Data_Functor_Functor
+Functor0_5_3 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_2, "Functor0"), gopurs_runtime.Value{}))
+_ = Functor0_5_3
+// TAST (Let): applySecond_4_1 -> gopurs_runtime.Value
+applySecond_4_1 := gopurs_runtime.Func(func(a_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_2, "apply"), gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_5_3.V0), gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_9
+})
+}), a_6), b_7)
+})
+})
+_ = applySecond_4_1
 // TAST (Let): __local_var_4_0 -> gopurs_runtime.Value
-__local_var_4_0 := gopurs_runtime.Apply3(Get_Data_Foldable_traverse_(), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(dictApplicative_1)}, gopurs_runtime.Value{Type: 9, IntVal: 4280266298, UnsafePtr: unsafe.Pointer(dictFoldable_2)}, gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Box(dictParallel_0.V2), gopurs_runtime.Apply(f_3, x_4))
-}))
+__local_var_4_0 := gopurs_runtime.Apply2(gopurs_runtime.Box(dictFoldable_2.V2), gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(applySecond_4_1, gopurs_runtime.Apply(gopurs_runtime.Box(dictParallel_0.V2), gopurs_runtime.Apply(f_3, x_5)))
+}), gopurs_runtime.Apply(gopurs_runtime.Box(dictApplicative_1.V1), Get_Data_Unit_unit()))
 _ = __local_var_4_0
 return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.Box(dictParallel_0.V3), gopurs_runtime.Apply(__local_var_4_0, x_5))
@@ -424,10 +526,27 @@ var dictFoldable_2 *Constructor_Data_Foldable_Foldable = dictFoldable_2_loop
 _ = dictFoldable_2
 var f_3 gopurs_runtime.Value = f_3_loop
 _ = f_3
+// TAST (Let): __local_var_4_2 -> gopurs_runtime.Value
+__local_var_4_2 := gopurs_runtime.Apply(gopurs_runtime.Box(dictApplicative_1.V0), gopurs_runtime.Value{})
+_ = __local_var_4_2
+// TAST (Let): Functor0_5_3 -> *Constructor_Data_Functor_Functor
+Functor0_5_3 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_2, "Functor0"), gopurs_runtime.Value{}))
+_ = Functor0_5_3
+// TAST (Let): applySecond_4_1 -> gopurs_runtime.Value
+applySecond_4_1 := gopurs_runtime.Func(func(a_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_2, "apply"), gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_5_3.V0), gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_9
+})
+}), a_6), b_7)
+})
+})
+_ = applySecond_4_1
 // TAST (Let): __local_var_4_0 -> gopurs_runtime.Value
-__local_var_4_0 := gopurs_runtime.Apply3(Get_Data_Foldable_traverse_(), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(dictApplicative_1)}, gopurs_runtime.Value{Type: 9, IntVal: 4280266298, UnsafePtr: unsafe.Pointer(dictFoldable_2)}, gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Box(dictParallel_0.V2), gopurs_runtime.Apply(f_3, x_4))
-}))
+__local_var_4_0 := gopurs_runtime.Apply2(gopurs_runtime.Box(dictFoldable_2.V2), gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(applySecond_4_1, gopurs_runtime.Apply(gopurs_runtime.Box(dictParallel_0.V2), gopurs_runtime.Apply(f_3, x_5)))
+}), gopurs_runtime.Apply(gopurs_runtime.Box(dictApplicative_1.V1), Get_Data_Unit_unit()))
 _ = __local_var_4_0
 return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.Box(dictParallel_0.V3), gopurs_runtime.Apply(__local_var_4_0, x_5))

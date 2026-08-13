@@ -50,8 +50,8 @@ var cache_Data_Distributive_distributiveIdentity gopurs_runtime.Value
 var once_Data_Distributive_distributiveIdentity sync.Once
 func Get_Data_Distributive_distributiveIdentity() gopurs_runtime.Value {
 	once_Data_Distributive_distributiveIdentity.Do(func() {
-		cache_Data_Distributive_distributiveIdentity = gopurs_runtime.RecordDict3("Functor0", "collect", "distribute", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Identity_functorIdentity()
+		cache_Data_Distributive_distributiveIdentity = gopurs_runtime.Value{Type: 9, IntVal: 457335066, UnsafePtr: unsafe.Pointer(&Constructor_Data_Distributive_Distributive{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](Get_Data_Identity_functorIdentity()))}
 }), gopurs_runtime.Func(func(dictFunctor_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_2_0 -> gopurs_runtime.Value
@@ -70,7 +70,7 @@ _ = __local_var_1_1
 return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_1_1, x_2)
 })
-}))
+})})}
 	})
 	return cache_Data_Distributive_distributiveIdentity
 }
@@ -90,12 +90,12 @@ var cache_Data_Distributive_distributiveFunction gopurs_runtime.Value
 var once_Data_Distributive_distributiveFunction sync.Once
 func Get_Data_Distributive_distributiveFunction() gopurs_runtime.Value {
 	once_Data_Distributive_distributiveFunction.Do(func() {
-		cache_Data_Distributive_distributiveFunction = gopurs_runtime.RecordDict3("Functor0", "collect", "distribute", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Functor_functorFn()
+		cache_Data_Distributive_distributiveFunction = gopurs_runtime.Value{Type: 9, IntVal: 457335066, UnsafePtr: unsafe.Pointer(&Constructor_Data_Distributive_Distributive{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](Get_Data_Functor_functorFn()))}
 }), gopurs_runtime.Func(func(dictFunctor_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_2_0 -> gopurs_runtime.Value
-__local_var_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Distributive_distributiveFunction(), "distribute"), dictFunctor_0)
+__local_var_2_0 := gopurs_runtime.Apply(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Distributive_Distributive](Get_Data_Distributive_distributiveFunction()).V2), dictFunctor_0)
 _ = __local_var_2_0
 // TAST (Let): __local_var_3_1 -> gopurs_runtime.Value
 __local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_0, "map"), f_1)
@@ -112,7 +112,7 @@ return gopurs_runtime.Apply(v_3, e_2)
 }), a_1)
 })
 })
-}))
+})})}
 	})
 	return cache_Data_Distributive_distributiveFunction
 }
@@ -301,8 +301,8 @@ for {
 if false { continue distributiveTuple }
 var dictTypeEquals_0 gopurs_runtime.Value = dictTypeEquals_0_loop
 _ = dictTypeEquals_0
-return gopurs_runtime.RecordDict3("Functor0", "collect", "distribute", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Tuple_functorTuple()
+return gopurs_runtime.Value{Type: 9, IntVal: 457335066, UnsafePtr: unsafe.Pointer(&Constructor_Data_Distributive_Distributive{1, gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](Get_Data_Tuple_functorTuple()))}
 }), gopurs_runtime.Func(func(dictFunctor_1 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): distribute2_2_0 -> gopurs_runtime.Value
 distribute2_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Call_Data_Distributive_distributiveTuple(dictTypeEquals_0), "distribute"), dictFunctor_1)
@@ -327,7 +327,7 @@ _ = __local_var_3_3
 return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_2_2, gopurs_runtime.Apply(__local_var_3_3, x_4))
 })
-}))
+})})}
 }
 }
 

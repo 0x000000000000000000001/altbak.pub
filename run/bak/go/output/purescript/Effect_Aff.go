@@ -63,9 +63,9 @@ var cache_Effect_Aff_newtypeCanceler gopurs_runtime.Value
 var once_Effect_Aff_newtypeCanceler sync.Once
 func Get_Effect_Aff_newtypeCanceler() gopurs_runtime.Value {
 	once_Effect_Aff_newtypeCanceler.Do(func() {
-		cache_Effect_Aff_newtypeCanceler = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Effect_Aff_newtypeCanceler = gopurs_runtime.Value{Type: 9, IntVal: 3322196858, UnsafePtr: unsafe.Pointer(&Constructor_Data_Newtype_Newtype{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
-}))
+})})}
 	})
 	return cache_Effect_Aff_newtypeCanceler
 }
@@ -129,7 +129,7 @@ var cache_Effect_Aff_functorParAff gopurs_runtime.Value
 var once_Effect_Aff_functorParAff sync.Once
 func Get_Effect_Aff_functorParAff() gopurs_runtime.Value {
 	once_Effect_Aff_functorParAff.Do(func() {
-		cache_Effect_Aff_functorParAff = gopurs_runtime.RecordDict1("map", Get_Effect_Aff__parAffMap())
+		cache_Effect_Aff_functorParAff = gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(&Constructor_Data_Functor_Functor{1, Get_Effect_Aff__parAffMap()})}
 	})
 	return cache_Effect_Aff_functorParAff
 }
@@ -138,7 +138,7 @@ var cache_Effect_Aff_functorAff gopurs_runtime.Value
 var once_Effect_Aff_functorAff sync.Once
 func Get_Effect_Aff_functorAff() gopurs_runtime.Value {
 	once_Effect_Aff_functorAff.Do(func() {
-		cache_Effect_Aff_functorAff = gopurs_runtime.RecordDict1("map", Get_Effect_Aff__map())
+		cache_Effect_Aff_functorAff = gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(&Constructor_Data_Functor_Functor{1, Get_Effect_Aff__map()})}
 	})
 	return cache_Effect_Aff_functorAff
 }
@@ -169,9 +169,9 @@ var cache_Effect_Aff_applyParAff gopurs_runtime.Value
 var once_Effect_Aff_applyParAff sync.Once
 func Get_Effect_Aff_applyParAff() gopurs_runtime.Value {
 	once_Effect_Aff_applyParAff.Do(func() {
-		cache_Effect_Aff_applyParAff = gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_functorParAff()
-}), Get_Effect_Aff__parAffApply())
+		cache_Effect_Aff_applyParAff = gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(&Constructor_Control_Apply_Apply{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](Get_Effect_Aff_functorParAff()))}
+}), Get_Effect_Aff__parAffApply()})}
 	})
 	return cache_Effect_Aff_applyParAff
 }
@@ -191,11 +191,11 @@ var cache_Effect_Aff_monadAff gopurs_runtime.Value
 var once_Effect_Aff_monadAff sync.Once
 func Get_Effect_Aff_monadAff() gopurs_runtime.Value {
 	once_Effect_Aff_monadAff.Do(func() {
-		cache_Effect_Aff_monadAff = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_applicativeAff()
+		cache_Effect_Aff_monadAff = gopurs_runtime.Value{Type: 9, IntVal: 778916621, UnsafePtr: unsafe.Pointer(&Constructor_Control_Monad_Monad{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](Get_Effect_Aff_applicativeAff()))}
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_bindAff()
-}))
+return gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](Get_Effect_Aff_bindAff()))}
+})})}
 	})
 	return cache_Effect_Aff_monadAff
 }
@@ -204,9 +204,9 @@ var cache_Effect_Aff_bindAff gopurs_runtime.Value
 var once_Effect_Aff_bindAff sync.Once
 func Get_Effect_Aff_bindAff() gopurs_runtime.Value {
 	once_Effect_Aff_bindAff.Do(func() {
-		cache_Effect_Aff_bindAff = gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_applyAff()
-}), Get_Effect_Aff__bind())
+		cache_Effect_Aff_bindAff = gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(&Constructor_Control_Bind_Bind{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](Get_Effect_Aff_applyAff()))}
+}), Get_Effect_Aff__bind()})}
 	})
 	return cache_Effect_Aff_bindAff
 }
@@ -215,17 +215,17 @@ var cache_Effect_Aff_applyAff gopurs_runtime.Value
 var once_Effect_Aff_applyAff sync.Once
 func Get_Effect_Aff_applyAff() gopurs_runtime.Value {
 	once_Effect_Aff_applyAff.Do(func() {
-		cache_Effect_Aff_applyAff = gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_functorAff()
+		cache_Effect_Aff_applyAff = gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(&Constructor_Control_Apply_Apply{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](Get_Effect_Aff_functorAff()))}
 }), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(Get_Effect_Aff__bind(), f_0, gopurs_runtime.Func(func(f_prime_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(Get_Effect_Aff__bind(), a_1, gopurs_runtime.Func(func(a_prime_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_Aff_applicativeAff(), "pure"), gopurs_runtime.Apply(f_prime_2, a_prime_3))
+return gopurs_runtime.Apply(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](Get_Effect_Aff_applicativeAff()).V1), gopurs_runtime.Apply(f_prime_2, a_prime_3))
 }))
 }))
 })
-}))
+})})}
 	})
 	return cache_Effect_Aff_applyAff
 }
@@ -234,9 +234,9 @@ var cache_Effect_Aff_applicativeAff gopurs_runtime.Value
 var once_Effect_Aff_applicativeAff sync.Once
 func Get_Effect_Aff_applicativeAff() gopurs_runtime.Value {
 	once_Effect_Aff_applicativeAff.Do(func() {
-		cache_Effect_Aff_applicativeAff = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_applyAff()
-}), Get_Effect_Aff__pure())
+		cache_Effect_Aff_applicativeAff = gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(&Constructor_Control_Applicative_Applicative{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](Get_Effect_Aff_applyAff()))}
+}), Get_Effect_Aff__pure()})}
 	})
 	return cache_Effect_Aff_applicativeAff
 }
@@ -287,9 +287,9 @@ var cache_Effect_Aff_lazyAff gopurs_runtime.Value
 var once_Effect_Aff_lazyAff sync.Once
 func Get_Effect_Aff_lazyAff() gopurs_runtime.Value {
 	once_Effect_Aff_lazyAff.Do(func() {
-		cache_Effect_Aff_lazyAff = gopurs_runtime.RecordDict1("defer", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Effect_Aff_lazyAff = gopurs_runtime.Value{Type: 9, IntVal: 1860244333, UnsafePtr: unsafe.Pointer(&Constructor_Control_Lazy_Lazy{1, gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(Get_Effect_Aff__bind(), gopurs_runtime.Apply(Get_Effect_Aff__pure(), Get_Data_Unit_unit()), f_0)
-}))
+})})}
 	})
 	return cache_Effect_Aff_lazyAff
 }
@@ -298,11 +298,11 @@ var cache_Effect_Aff_parallelAff gopurs_runtime.Value
 var once_Effect_Aff_parallelAff sync.Once
 func Get_Effect_Aff_parallelAff() gopurs_runtime.Value {
 	once_Effect_Aff_parallelAff.Do(func() {
-		cache_Effect_Aff_parallelAff = gopurs_runtime.RecordDict4("Apply0", "Apply1", "parallel", "sequential", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_applyAff()
+		cache_Effect_Aff_parallelAff = gopurs_runtime.Value{Type: 9, IntVal: 327692956, UnsafePtr: unsafe.Pointer(&Constructor_Control_Parallel_Class_Parallel{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](Get_Effect_Aff_applyAff()))}
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_applyParAff()
-}), Get_Unsafe_Coerce_unsafeCoerce(), Get_Effect_Aff__sequential())
+return gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](Get_Effect_Aff_applyParAff()))}
+}), Get_Unsafe_Coerce_unsafeCoerce(), Get_Effect_Aff__sequential()})}
 	})
 	return cache_Effect_Aff_parallelAff
 }
@@ -311,11 +311,11 @@ var cache_Effect_Aff_applicativeParAff gopurs_runtime.Value
 var once_Effect_Aff_applicativeParAff sync.Once
 func Get_Effect_Aff_applicativeParAff() gopurs_runtime.Value {
 	once_Effect_Aff_applicativeParAff.Do(func() {
-		cache_Effect_Aff_applicativeParAff = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_applyParAff()
+		cache_Effect_Aff_applicativeParAff = gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(&Constructor_Control_Applicative_Applicative{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](Get_Effect_Aff_applyParAff()))}
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(Get_Effect_Aff__pure(), x_0)
-}))
+})})}
 	})
 	return cache_Effect_Aff_applicativeParAff
 }
@@ -335,18 +335,26 @@ var cache_Effect_Aff_semigroupCanceler gopurs_runtime.Value
 var once_Effect_Aff_semigroupCanceler sync.Once
 func Get_Effect_Aff_semigroupCanceler() gopurs_runtime.Value {
 	once_Effect_Aff_semigroupCanceler.Do(func() {
-		cache_Effect_Aff_semigroupCanceler = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Effect_Aff_semigroupCanceler = gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(&Constructor_Data_Semigroup_Semigroup{1, gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(err_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply4(Get_Control_Parallel_parSequence_(), gopurs_runtime.Value{Type: 9, IntVal: 327692956, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Parallel_Class_Parallel](Get_Effect_Aff_parallelAff()))}, gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](Get_Effect_Aff_applicativeParAff()))}, gopurs_runtime.Value{Type: 9, IntVal: 4280266298, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Foldable_Foldable](Get_Data_Foldable_foldableArray()))}, gopurs_runtime.Array(func() []gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_Effect_Aff__sequential(), gopurs_runtime.Apply3(Get_Data_Foldable_foldrArray(), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Get_Effect_Aff__parAffApply(), gopurs_runtime.Apply2(Get_Effect_Aff__parAffMap(), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_6
+})
+}), x_3), b_4)
+})
+}), gopurs_runtime.Apply(Get_Effect_Aff__pure(), Get_Data_Unit_unit()), gopurs_runtime.Array(func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array([]gopurs_runtime.Value{gopurs_runtime.Apply(v_0, err_2), gopurs_runtime.Apply(v1_1, err_2)}).UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
-				}()))
+				}())))
 })
 })
-}))
+})})}
 	})
 	return cache_Effect_Aff_semigroupCanceler
 }
@@ -366,9 +374,9 @@ var cache_Effect_Aff_monadEffectAff gopurs_runtime.Value
 var once_Effect_Aff_monadEffectAff sync.Once
 func Get_Effect_Aff_monadEffectAff() gopurs_runtime.Value {
 	once_Effect_Aff_monadEffectAff.Do(func() {
-		cache_Effect_Aff_monadEffectAff = gopurs_runtime.RecordDict2("Monad0", "liftEffect", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_monadAff()
-}), Get_Effect_Aff__liftEffect())
+		cache_Effect_Aff_monadEffectAff = gopurs_runtime.Value{Type: 9, IntVal: 2217729261, UnsafePtr: unsafe.Pointer(&Constructor_Effect_Class_MonadEffect{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 778916621, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Monad](Get_Effect_Aff_monadAff()))}
+}), Get_Effect_Aff__liftEffect()})}
 	})
 	return cache_Effect_Aff_monadEffectAff
 }
@@ -408,11 +416,11 @@ var cache_Effect_Aff_functorFiber gopurs_runtime.Value
 var once_Effect_Aff_functorFiber sync.Once
 func Get_Effect_Aff_functorFiber() gopurs_runtime.Value {
 	once_Effect_Aff_functorFiber.Do(func() {
-		cache_Effect_Aff_functorFiber = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Effect_Aff_functorFiber = gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(&Constructor_Data_Functor_Functor{1, gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(t_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(Get_Effect_Unsafe_unsafePerformEffect(), Call_Effect_Aff_makeFiber(gopurs_runtime.Apply2(Get_Effect_Aff__map(), f_0, Call_Effect_Aff_joinFiber(t_1))))
 })
-}))
+})})}
 	})
 	return cache_Effect_Aff_functorFiber
 }
@@ -421,13 +429,20 @@ var cache_Effect_Aff_applyFiber gopurs_runtime.Value
 var once_Effect_Aff_applyFiber sync.Once
 func Get_Effect_Aff_applyFiber() gopurs_runtime.Value {
 	once_Effect_Aff_applyFiber.Do(func() {
-		cache_Effect_Aff_applyFiber = gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_functorFiber()
+		cache_Effect_Aff_applyFiber = gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(&Constructor_Control_Apply_Apply{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](Get_Effect_Aff_functorFiber()))}
 }), gopurs_runtime.Func(func(t1_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(t2_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_Effect_Unsafe_unsafePerformEffect(), Call_Effect_Aff_makeFiber(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Effect_Aff_applyAff(), "apply"), Call_Effect_Aff_joinFiber(t1_0), Call_Effect_Aff_joinFiber(t2_1))))
-})
+// TAST (Let): __local_var_2_0 -> gopurs_runtime.Value
+__local_var_2_0 := Call_Effect_Aff_joinFiber(t2_1)
+_ = __local_var_2_0
+return gopurs_runtime.Apply(Get_Effect_Unsafe_unsafePerformEffect(), Call_Effect_Aff_makeFiber(gopurs_runtime.Apply2(Get_Effect_Aff__bind(), Call_Effect_Aff_joinFiber(t1_0), gopurs_runtime.Func(func(f_prime_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Get_Effect_Aff__bind(), __local_var_2_0, gopurs_runtime.Func(func(a_prime_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_Effect_Aff__pure(), gopurs_runtime.Apply(f_prime_3, a_prime_4))
 }))
+}))))
+})
+})})}
 	})
 	return cache_Effect_Aff_applyFiber
 }
@@ -436,11 +451,11 @@ var cache_Effect_Aff_applicativeFiber gopurs_runtime.Value
 var once_Effect_Aff_applicativeFiber sync.Once
 func Get_Effect_Aff_applicativeFiber() gopurs_runtime.Value {
 	once_Effect_Aff_applicativeFiber.Do(func() {
-		cache_Effect_Aff_applicativeFiber = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_applyFiber()
+		cache_Effect_Aff_applicativeFiber = gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(&Constructor_Control_Applicative_Applicative{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](Get_Effect_Aff_applyFiber()))}
 }), gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(Get_Effect_Unsafe_unsafePerformEffect(), Call_Effect_Aff_makeFiber(gopurs_runtime.Apply(Get_Effect_Aff__pure(), a_0)))
-}))
+})})}
 	})
 	return cache_Effect_Aff_applicativeFiber
 }
@@ -504,11 +519,11 @@ var cache_Effect_Aff_monadSTAff gopurs_runtime.Value
 var once_Effect_Aff_monadSTAff sync.Once
 func Get_Effect_Aff_monadSTAff() gopurs_runtime.Value {
 	once_Effect_Aff_monadSTAff.Do(func() {
-		cache_Effect_Aff_monadSTAff = gopurs_runtime.RecordDict2("Monad0", "liftST", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_monadAff()
+		cache_Effect_Aff_monadSTAff = gopurs_runtime.Value{Type: 9, IntVal: 2155655715, UnsafePtr: unsafe.Pointer(&Constructor_Control_Monad_ST_Class_MonadST{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 778916621, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Monad](Get_Effect_Aff_monadAff()))}
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(Get_Effect_Aff__liftEffect(), x_0)
-}))
+})})}
 	})
 	return cache_Effect_Aff_monadSTAff
 }
@@ -517,9 +532,9 @@ var cache_Effect_Aff_monadThrowAff gopurs_runtime.Value
 var once_Effect_Aff_monadThrowAff sync.Once
 func Get_Effect_Aff_monadThrowAff() gopurs_runtime.Value {
 	once_Effect_Aff_monadThrowAff.Do(func() {
-		cache_Effect_Aff_monadThrowAff = gopurs_runtime.RecordDict2("Monad0", "throwError", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_monadAff()
-}), Get_Effect_Aff__throwError())
+		cache_Effect_Aff_monadThrowAff = gopurs_runtime.Value{Type: 9, IntVal: 23967309, UnsafePtr: unsafe.Pointer(&Constructor_Control_Monad_Error_Class_MonadThrow{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 778916621, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Monad](Get_Effect_Aff_monadAff()))}
+}), Get_Effect_Aff__throwError()})}
 	})
 	return cache_Effect_Aff_monadThrowAff
 }
@@ -528,9 +543,9 @@ var cache_Effect_Aff_monadErrorAff gopurs_runtime.Value
 var once_Effect_Aff_monadErrorAff sync.Once
 func Get_Effect_Aff_monadErrorAff() gopurs_runtime.Value {
 	once_Effect_Aff_monadErrorAff.Do(func() {
-		cache_Effect_Aff_monadErrorAff = gopurs_runtime.RecordDict2("MonadThrow0", "catchError", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_monadThrowAff()
-}), Get_Effect_Aff__catchError())
+		cache_Effect_Aff_monadErrorAff = gopurs_runtime.Value{Type: 9, IntVal: 1402181699, UnsafePtr: unsafe.Pointer(&Constructor_Control_Monad_Error_Class_MonadError{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 23967309, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Error_Class_MonadThrow](Get_Effect_Aff_monadThrowAff()))}
+}), Get_Effect_Aff__catchError()})}
 	})
 	return cache_Effect_Aff_monadErrorAff
 }
@@ -539,7 +554,9 @@ var cache_Effect_Aff_attempt gopurs_runtime.Value
 var once_Effect_Aff_attempt sync.Once
 func Get_Effect_Aff_attempt() gopurs_runtime.Value {
 	once_Effect_Aff_attempt.Do(func() {
-		cache_Effect_Aff_attempt = gopurs_runtime.Apply(Get_Control_Monad_Error_Class_try(), Get_Effect_Aff_monadErrorAff())
+		cache_Effect_Aff_attempt = gopurs_runtime.Func(func(a_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Effect_Aff_attempt(a_0_box)
+})
 	})
 	return cache_Effect_Aff_attempt
 }
@@ -581,8 +598,8 @@ var cache_Effect_Aff_monadRecAff gopurs_runtime.Value
 var once_Effect_Aff_monadRecAff sync.Once
 func Get_Effect_Aff_monadRecAff() gopurs_runtime.Value {
 	once_Effect_Aff_monadRecAff.Do(func() {
-		cache_Effect_Aff_monadRecAff = gopurs_runtime.RecordDict2("Monad0", "tailRecM", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_monadAff()
+		cache_Effect_Aff_monadRecAff = gopurs_runtime.Value{Type: 9, IntVal: 3709389635, UnsafePtr: unsafe.Pointer(&Constructor_Control_Monad_Rec_Class_MonadRec{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 778916621, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Monad](Get_Effect_Aff_monadAff()))}
 }), gopurs_runtime.Func(func(k_0 gopurs_runtime.Value) gopurs_runtime.Value {
 var go__go_1_0_0 gopurs_runtime.Value
 _ = go__go_1_0_0
@@ -613,7 +630,7 @@ return __t1
 }))
 })
 return go__go_1_0_0
-}))
+})})}
 	})
 	return cache_Effect_Aff_monadRecAff
 }
@@ -649,9 +666,9 @@ var cache_Effect_Aff_monoidCanceler gopurs_runtime.Value
 var once_Effect_Aff_monoidCanceler sync.Once
 func Get_Effect_Aff_monoidCanceler() gopurs_runtime.Value {
 	once_Effect_Aff_monoidCanceler.Do(func() {
-		cache_Effect_Aff_monoidCanceler = gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_semigroupCanceler()
-}), Get_Effect_Aff_nonCanceler())
+		cache_Effect_Aff_monoidCanceler = gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(&Constructor_Data_Monoid_Monoid{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](Get_Effect_Aff_semigroupCanceler()))}
+}), Get_Effect_Aff_nonCanceler()})}
 	})
 	return cache_Effect_Aff_monoidCanceler
 }
@@ -675,15 +692,14 @@ func Get_Effect_Aff_apathize() gopurs_runtime.Value {
 	once_Effect_Aff_apathize.Do(func() {
 		cache_Effect_Aff_apathize = func() gopurs_runtime.Value {
 // TAST (Let): __local_var_0_0 -> gopurs_runtime.Value
-__local_var_0_0 := gopurs_runtime.Apply(Get_Control_Monad_Error_Class_try(), Get_Effect_Aff_monadErrorAff())
-_ = __local_var_0_0
-// TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
-__local_var_1_1 := gopurs_runtime.Apply(Get_Effect_Aff__map(), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_0_0 := gopurs_runtime.Apply(Get_Effect_Aff__map(), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Unit_unit()
 }))
-_ = __local_var_1_1
-return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_1_1, gopurs_runtime.Apply(__local_var_0_0, x_2))
+_ = __local_var_0_0
+return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Apply2(Get_Effect_Aff__catchError(), gopurs_runtime.Apply2(Get_Effect_Aff__map(), Get_Data_Either_Right(), x_1), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_Effect_Aff__pure(), gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Left{1, x_2})})
+})))
 })
 }()
 	})
@@ -694,9 +710,9 @@ var cache_Effect_Aff_altParAff gopurs_runtime.Value
 var once_Effect_Aff_altParAff sync.Once
 func Get_Effect_Aff_altParAff() gopurs_runtime.Value {
 	once_Effect_Aff_altParAff.Do(func() {
-		cache_Effect_Aff_altParAff = gopurs_runtime.RecordDict2("Functor0", "alt", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_functorParAff()
-}), Get_Effect_Aff__parAffAlt())
+		cache_Effect_Aff_altParAff = gopurs_runtime.Value{Type: 9, IntVal: 4060500237, UnsafePtr: unsafe.Pointer(&Constructor_Control_Alt_Alt{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](Get_Effect_Aff_functorParAff()))}
+}), Get_Effect_Aff__parAffAlt()})}
 	})
 	return cache_Effect_Aff_altParAff
 }
@@ -705,15 +721,15 @@ var cache_Effect_Aff_altAff gopurs_runtime.Value
 var once_Effect_Aff_altAff sync.Once
 func Get_Effect_Aff_altAff() gopurs_runtime.Value {
 	once_Effect_Aff_altAff.Do(func() {
-		cache_Effect_Aff_altAff = gopurs_runtime.RecordDict2("Functor0", "alt", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_functorAff()
+		cache_Effect_Aff_altAff = gopurs_runtime.Value{Type: 9, IntVal: 4060500237, UnsafePtr: unsafe.Pointer(&Constructor_Control_Alt_Alt{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](Get_Effect_Aff_functorAff()))}
 }), gopurs_runtime.Func(func(a1_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a2_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(Get_Effect_Aff__catchError(), a1_0, gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return a2_1
 }))
 })
-}))
+})})}
 	})
 	return cache_Effect_Aff_altAff
 }
@@ -722,9 +738,9 @@ var cache_Effect_Aff_plusAff gopurs_runtime.Value
 var once_Effect_Aff_plusAff sync.Once
 func Get_Effect_Aff_plusAff() gopurs_runtime.Value {
 	once_Effect_Aff_plusAff.Do(func() {
-		cache_Effect_Aff_plusAff = gopurs_runtime.RecordDict2("Alt0", "empty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_altAff()
-}), gopurs_runtime.Apply(Get_Effect_Aff__throwError(), gopurs_runtime.Apply(Get_Effect_Exception_error(), gopurs_runtime.Str("Always fails"))))
+		cache_Effect_Aff_plusAff = gopurs_runtime.Value{Type: 9, IntVal: 3709470893, UnsafePtr: unsafe.Pointer(&Constructor_Control_Plus_Plus{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 4060500237, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Alt_Alt](Get_Effect_Aff_altAff()))}
+}), gopurs_runtime.Apply(Get_Effect_Aff__throwError(), gopurs_runtime.Apply(Get_Effect_Exception_error(), gopurs_runtime.Str("Always fails")))})}
 	})
 	return cache_Effect_Aff_plusAff
 }
@@ -733,9 +749,9 @@ var cache_Effect_Aff_plusParAff gopurs_runtime.Value
 var once_Effect_Aff_plusParAff sync.Once
 func Get_Effect_Aff_plusParAff() gopurs_runtime.Value {
 	once_Effect_Aff_plusParAff.Do(func() {
-		cache_Effect_Aff_plusParAff = gopurs_runtime.RecordDict2("Alt0", "empty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_altParAff()
-}), gopurs_runtime.RecordGet(Get_Effect_Aff_plusAff(), "empty"))
+		cache_Effect_Aff_plusParAff = gopurs_runtime.Value{Type: 9, IntVal: 3709470893, UnsafePtr: unsafe.Pointer(&Constructor_Control_Plus_Plus{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 4060500237, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Alt_Alt](Get_Effect_Aff_altParAff()))}
+}), gopurs_runtime.Apply(Get_Effect_Aff__throwError(), gopurs_runtime.Apply(Get_Effect_Exception_error(), gopurs_runtime.Str("Always fails")))})}
 	})
 	return cache_Effect_Aff_plusParAff
 }
@@ -744,208 +760,46 @@ var cache_Effect_Aff_alternativeParAff gopurs_runtime.Value
 var once_Effect_Aff_alternativeParAff sync.Once
 func Get_Effect_Aff_alternativeParAff() gopurs_runtime.Value {
 	once_Effect_Aff_alternativeParAff.Do(func() {
-		cache_Effect_Aff_alternativeParAff = gopurs_runtime.RecordDict2("Applicative0", "Plus1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_applicativeParAff()
+		cache_Effect_Aff_alternativeParAff = gopurs_runtime.Value{Type: 9, IntVal: 397869517, UnsafePtr: unsafe.Pointer(&Constructor_Control_Alternative_Alternative{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](Get_Effect_Aff_applicativeParAff()))}
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_plusParAff()
-}))
+return gopurs_runtime.Value{Type: 9, IntVal: 3709470893, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Plus_Plus](Get_Effect_Aff_plusParAff()))}
+})})}
 	})
 	return cache_Effect_Aff_alternativeParAff
 }
 
-var cache_Effect_Aff_altAff__154760964 gopurs_runtime.Value
-var once_Effect_Aff_altAff__154760964 sync.Once
-func Get_Effect_Aff_altAff__154760964() gopurs_runtime.Value {
-	once_Effect_Aff_altAff__154760964.Do(func() {
-		cache_Effect_Aff_altAff__154760964 = gopurs_runtime.RecordDict2("Functor0", "alt", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_functorAff()
-}), gopurs_runtime.Func(func(a1_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(a2_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(Get_Effect_Aff__catchError(), a1_0, gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return a2_1
-}))
-})
-}))
-	})
-	return cache_Effect_Aff_altAff__154760964
-}
-
-var cache_Effect_Aff_altParAff__2031255559 gopurs_runtime.Value
-var once_Effect_Aff_altParAff__2031255559 sync.Once
-func Get_Effect_Aff_altParAff__2031255559() gopurs_runtime.Value {
-	once_Effect_Aff_altParAff__2031255559.Do(func() {
-		cache_Effect_Aff_altParAff__2031255559 = gopurs_runtime.RecordDict2("Functor0", "alt", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_functorParAff()
-}), Get_Effect_Aff__parAffAlt())
-	})
-	return cache_Effect_Aff_altParAff__2031255559
-}
-
-var cache_Effect_Aff_applicativeAff__3333162410 gopurs_runtime.Value
-var once_Effect_Aff_applicativeAff__3333162410 sync.Once
-func Get_Effect_Aff_applicativeAff__3333162410() gopurs_runtime.Value {
-	once_Effect_Aff_applicativeAff__3333162410.Do(func() {
-		cache_Effect_Aff_applicativeAff__3333162410 = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_applyAff()
-}), Get_Effect_Aff__pure())
-	})
-	return cache_Effect_Aff_applicativeAff__3333162410
-}
-
-var cache_Effect_Aff_applicativeAff__156155496 gopurs_runtime.Value
-var once_Effect_Aff_applicativeAff__156155496 sync.Once
-func Get_Effect_Aff_applicativeAff__156155496() gopurs_runtime.Value {
-	once_Effect_Aff_applicativeAff__156155496.Do(func() {
-		cache_Effect_Aff_applicativeAff__156155496 = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_applyAff()
-}), Get_Effect_Aff__pure())
-	})
-	return cache_Effect_Aff_applicativeAff__156155496
-}
-
-var cache_Effect_Aff_applicativeParAff__995286821 gopurs_runtime.Value
-var once_Effect_Aff_applicativeParAff__995286821 sync.Once
-func Get_Effect_Aff_applicativeParAff__995286821() gopurs_runtime.Value {
-	once_Effect_Aff_applicativeParAff__995286821.Do(func() {
-		cache_Effect_Aff_applicativeParAff__995286821 = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_applyParAff()
-}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_Effect_Aff__pure(), x_0)
-}))
-	})
-	return cache_Effect_Aff_applicativeParAff__995286821
-}
-
-var cache_Effect_Aff_applicativeParAff__2568423465 gopurs_runtime.Value
-var once_Effect_Aff_applicativeParAff__2568423465 sync.Once
-func Get_Effect_Aff_applicativeParAff__2568423465() gopurs_runtime.Value {
-	once_Effect_Aff_applicativeParAff__2568423465.Do(func() {
-		cache_Effect_Aff_applicativeParAff__2568423465 = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_applyParAff()
-}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_Effect_Aff__pure(), x_0)
-}))
-	})
-	return cache_Effect_Aff_applicativeParAff__2568423465
-}
-
-var cache_Effect_Aff_applicativeParAff__2496133224 gopurs_runtime.Value
-var once_Effect_Aff_applicativeParAff__2496133224 sync.Once
-func Get_Effect_Aff_applicativeParAff__2496133224() gopurs_runtime.Value {
-	once_Effect_Aff_applicativeParAff__2496133224.Do(func() {
-		cache_Effect_Aff_applicativeParAff__2496133224 = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_applyParAff()
-}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_Effect_Aff__pure(), x_0)
-}))
-	})
-	return cache_Effect_Aff_applicativeParAff__2496133224
-}
-
-var cache_Effect_Aff_applyAff__4077982506 gopurs_runtime.Value
-var once_Effect_Aff_applyAff__4077982506 sync.Once
-func Get_Effect_Aff_applyAff__4077982506() gopurs_runtime.Value {
-	once_Effect_Aff_applyAff__4077982506.Do(func() {
-		cache_Effect_Aff_applyAff__4077982506 = gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_functorAff()
-}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(Get_Effect_Aff__bind(), f_0, gopurs_runtime.Func(func(f_prime_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(Get_Effect_Aff__bind(), a_1, gopurs_runtime.Func(func(a_prime_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_Effect_Aff__pure(), gopurs_runtime.Apply(f_prime_2, a_prime_3))
-}))
-}))
-})
-}))
-	})
-	return cache_Effect_Aff_applyAff__4077982506
-}
-
-var cache_Effect_Aff_applyAff__2964533948 gopurs_runtime.Value
-var once_Effect_Aff_applyAff__2964533948 sync.Once
-func Get_Effect_Aff_applyAff__2964533948() gopurs_runtime.Value {
-	once_Effect_Aff_applyAff__2964533948.Do(func() {
-		cache_Effect_Aff_applyAff__2964533948 = gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_functorAff()
-}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(Get_Effect_Aff__bind(), f_0, gopurs_runtime.Func(func(f_prime_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(Get_Effect_Aff__bind(), a_1, gopurs_runtime.Func(func(a_prime_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_Effect_Aff__pure(), gopurs_runtime.Apply(f_prime_2, a_prime_3))
-}))
-}))
-})
-}))
-	})
-	return cache_Effect_Aff_applyAff__2964533948
-}
-
-var cache_Effect_Aff_applyFiber__166674623 gopurs_runtime.Value
-var once_Effect_Aff_applyFiber__166674623 sync.Once
-func Get_Effect_Aff_applyFiber__166674623() gopurs_runtime.Value {
-	once_Effect_Aff_applyFiber__166674623.Do(func() {
-		cache_Effect_Aff_applyFiber__166674623 = gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_functorFiber()
+var cache_Effect_Aff_applyFiber__1571045576 gopurs_runtime.Value
+var once_Effect_Aff_applyFiber__1571045576 sync.Once
+func Get_Effect_Aff_applyFiber__1571045576() gopurs_runtime.Value {
+	once_Effect_Aff_applyFiber__1571045576.Do(func() {
+		cache_Effect_Aff_applyFiber__1571045576 = gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(&Constructor_Control_Apply_Apply{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](Get_Effect_Aff_functorFiber()))}
 }), gopurs_runtime.Func(func(t1_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(t2_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_Effect_Unsafe_unsafePerformEffect(), Call_Effect_Aff_makeFiber(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Effect_Aff_applyAff(), "apply"), Call_Effect_Aff_joinFiber(t1_0), Call_Effect_Aff_joinFiber(t2_1))))
-})
+// TAST (Let): __local_var_2_0 -> gopurs_runtime.Value
+__local_var_2_0 := Call_Effect_Aff_joinFiber(t2_1)
+_ = __local_var_2_0
+return gopurs_runtime.Apply(Get_Effect_Unsafe_unsafePerformEffect(), Call_Effect_Aff_makeFiber(gopurs_runtime.Apply2(Get_Effect_Aff__bind(), Call_Effect_Aff_joinFiber(t1_0), gopurs_runtime.Func(func(f_prime_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Get_Effect_Aff__bind(), __local_var_2_0, gopurs_runtime.Func(func(a_prime_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_Effect_Aff__pure(), gopurs_runtime.Apply(f_prime_3, a_prime_4))
 }))
+}))))
+})
+})})}
 	})
-	return cache_Effect_Aff_applyFiber__166674623
-}
-
-var cache_Effect_Aff_applyParAff__2385036585 gopurs_runtime.Value
-var once_Effect_Aff_applyParAff__2385036585 sync.Once
-func Get_Effect_Aff_applyParAff__2385036585() gopurs_runtime.Value {
-	once_Effect_Aff_applyParAff__2385036585.Do(func() {
-		cache_Effect_Aff_applyParAff__2385036585 = gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_functorParAff()
-}), Get_Effect_Aff__parAffApply())
-	})
-	return cache_Effect_Aff_applyParAff__2385036585
-}
-
-var cache_Effect_Aff_applyParAff__3038657279 gopurs_runtime.Value
-var once_Effect_Aff_applyParAff__3038657279 sync.Once
-func Get_Effect_Aff_applyParAff__3038657279() gopurs_runtime.Value {
-	once_Effect_Aff_applyParAff__3038657279.Do(func() {
-		cache_Effect_Aff_applyParAff__3038657279 = gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_functorParAff()
-}), Get_Effect_Aff__parAffApply())
-	})
-	return cache_Effect_Aff_applyParAff__3038657279
+	return cache_Effect_Aff_applyFiber__1571045576
 }
 
 var cache_Effect_Aff_attempt__1549600275 gopurs_runtime.Value
 var once_Effect_Aff_attempt__1549600275 sync.Once
 func Get_Effect_Aff_attempt__1549600275() gopurs_runtime.Value {
 	once_Effect_Aff_attempt__1549600275.Do(func() {
-		cache_Effect_Aff_attempt__1549600275 = gopurs_runtime.Apply(Get_Control_Monad_Error_Class_try(), Get_Effect_Aff_monadErrorAff())
+		cache_Effect_Aff_attempt__1549600275 = gopurs_runtime.Func(func(a_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Effect_Aff_attempt__1549600275(a_0_box)
+})
 	})
 	return cache_Effect_Aff_attempt__1549600275
-}
-
-var cache_Effect_Aff_bindAff__1273005738 gopurs_runtime.Value
-var once_Effect_Aff_bindAff__1273005738 sync.Once
-func Get_Effect_Aff_bindAff__1273005738() gopurs_runtime.Value {
-	once_Effect_Aff_bindAff__1273005738.Do(func() {
-		cache_Effect_Aff_bindAff__1273005738 = gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_applyAff()
-}), Get_Effect_Aff__bind())
-	})
-	return cache_Effect_Aff_bindAff__1273005738
-}
-
-var cache_Effect_Aff_bindAff__1025486311 gopurs_runtime.Value
-var once_Effect_Aff_bindAff__1025486311 sync.Once
-func Get_Effect_Aff_bindAff__1025486311() gopurs_runtime.Value {
-	once_Effect_Aff_bindAff__1025486311.Do(func() {
-		cache_Effect_Aff_bindAff__1025486311 = gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_applyAff()
-}), Get_Effect_Aff__bind())
-	})
-	return cache_Effect_Aff_bindAff__1025486311
 }
 
 var cache_Effect_Aff_bracket__3747730269 gopurs_runtime.Value
@@ -970,44 +824,17 @@ return Call_Effect_Aff_bracket__967388557(acquire_0_box, completed_1_box)
 	return cache_Effect_Aff_bracket__967388557
 }
 
-var cache_Effect_Aff_functorAff__1039414525 gopurs_runtime.Value
-var once_Effect_Aff_functorAff__1039414525 sync.Once
-func Get_Effect_Aff_functorAff__1039414525() gopurs_runtime.Value {
-	once_Effect_Aff_functorAff__1039414525.Do(func() {
-		cache_Effect_Aff_functorAff__1039414525 = gopurs_runtime.RecordDict1("map", Get_Effect_Aff__map())
-	})
-	return cache_Effect_Aff_functorAff__1039414525
-}
-
-var cache_Effect_Aff_functorAff__2378915857 gopurs_runtime.Value
-var once_Effect_Aff_functorAff__2378915857 sync.Once
-func Get_Effect_Aff_functorAff__2378915857() gopurs_runtime.Value {
-	once_Effect_Aff_functorAff__2378915857.Do(func() {
-		cache_Effect_Aff_functorAff__2378915857 = gopurs_runtime.RecordDict1("map", Get_Effect_Aff__map())
-	})
-	return cache_Effect_Aff_functorAff__2378915857
-}
-
-var cache_Effect_Aff_functorFiber__1732109553 gopurs_runtime.Value
-var once_Effect_Aff_functorFiber__1732109553 sync.Once
-func Get_Effect_Aff_functorFiber__1732109553() gopurs_runtime.Value {
-	once_Effect_Aff_functorFiber__1732109553.Do(func() {
-		cache_Effect_Aff_functorFiber__1732109553 = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+var cache_Effect_Aff_functorFiber__3628804511 gopurs_runtime.Value
+var once_Effect_Aff_functorFiber__3628804511 sync.Once
+func Get_Effect_Aff_functorFiber__3628804511() gopurs_runtime.Value {
+	once_Effect_Aff_functorFiber__3628804511.Do(func() {
+		cache_Effect_Aff_functorFiber__3628804511 = gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(&Constructor_Data_Functor_Functor{1, gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(t_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(Get_Effect_Unsafe_unsafePerformEffect(), Call_Effect_Aff_makeFiber(gopurs_runtime.Apply2(Get_Effect_Aff__map(), f_0, Call_Effect_Aff_joinFiber(t_1))))
 })
-}))
+})})}
 	})
-	return cache_Effect_Aff_functorFiber__1732109553
-}
-
-var cache_Effect_Aff_functorParAff__4103318257 gopurs_runtime.Value
-var once_Effect_Aff_functorParAff__4103318257 sync.Once
-func Get_Effect_Aff_functorParAff__4103318257() gopurs_runtime.Value {
-	once_Effect_Aff_functorParAff__4103318257.Do(func() {
-		cache_Effect_Aff_functorParAff__4103318257 = gopurs_runtime.RecordDict1("map", Get_Effect_Aff__parAffMap())
-	})
-	return cache_Effect_Aff_functorParAff__4103318257
+	return cache_Effect_Aff_functorFiber__3628804511
 }
 
 var cache_Effect_Aff_joinFiber__1248077776 gopurs_runtime.Value
@@ -1140,122 +967,6 @@ return Call_Effect_Aff_makeFiber__4185835653(aff_0_box)
 })
 	})
 	return cache_Effect_Aff_makeFiber__4185835653
-}
-
-var cache_Effect_Aff_monadAff__2914113427 gopurs_runtime.Value
-var once_Effect_Aff_monadAff__2914113427 sync.Once
-func Get_Effect_Aff_monadAff__2914113427() gopurs_runtime.Value {
-	once_Effect_Aff_monadAff__2914113427.Do(func() {
-		cache_Effect_Aff_monadAff__2914113427 = gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_applicativeAff()
-}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_bindAff()
-}))
-	})
-	return cache_Effect_Aff_monadAff__2914113427
-}
-
-var cache_Effect_Aff_monadEffectAff__2194637066 gopurs_runtime.Value
-var once_Effect_Aff_monadEffectAff__2194637066 sync.Once
-func Get_Effect_Aff_monadEffectAff__2194637066() gopurs_runtime.Value {
-	once_Effect_Aff_monadEffectAff__2194637066.Do(func() {
-		cache_Effect_Aff_monadEffectAff__2194637066 = gopurs_runtime.RecordDict2("Monad0", "liftEffect", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_monadAff()
-}), Get_Effect_Aff__liftEffect())
-	})
-	return cache_Effect_Aff_monadEffectAff__2194637066
-}
-
-var cache_Effect_Aff_monadEffectAff__1856968838 gopurs_runtime.Value
-var once_Effect_Aff_monadEffectAff__1856968838 sync.Once
-func Get_Effect_Aff_monadEffectAff__1856968838() gopurs_runtime.Value {
-	once_Effect_Aff_monadEffectAff__1856968838.Do(func() {
-		cache_Effect_Aff_monadEffectAff__1856968838 = gopurs_runtime.RecordDict2("Monad0", "liftEffect", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_monadAff()
-}), Get_Effect_Aff__liftEffect())
-	})
-	return cache_Effect_Aff_monadEffectAff__1856968838
-}
-
-var cache_Effect_Aff_monadErrorAff__3346684269 gopurs_runtime.Value
-var once_Effect_Aff_monadErrorAff__3346684269 sync.Once
-func Get_Effect_Aff_monadErrorAff__3346684269() gopurs_runtime.Value {
-	once_Effect_Aff_monadErrorAff__3346684269.Do(func() {
-		cache_Effect_Aff_monadErrorAff__3346684269 = gopurs_runtime.RecordDict2("MonadThrow0", "catchError", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_monadThrowAff()
-}), Get_Effect_Aff__catchError())
-	})
-	return cache_Effect_Aff_monadErrorAff__3346684269
-}
-
-var cache_Effect_Aff_monadErrorAff__2250703981 gopurs_runtime.Value
-var once_Effect_Aff_monadErrorAff__2250703981 sync.Once
-func Get_Effect_Aff_monadErrorAff__2250703981() gopurs_runtime.Value {
-	once_Effect_Aff_monadErrorAff__2250703981.Do(func() {
-		cache_Effect_Aff_monadErrorAff__2250703981 = gopurs_runtime.RecordDict2("MonadThrow0", "catchError", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_monadThrowAff()
-}), Get_Effect_Aff__catchError())
-	})
-	return cache_Effect_Aff_monadErrorAff__2250703981
-}
-
-var cache_Effect_Aff_monadThrowAff__1033845923 gopurs_runtime.Value
-var once_Effect_Aff_monadThrowAff__1033845923 sync.Once
-func Get_Effect_Aff_monadThrowAff__1033845923() gopurs_runtime.Value {
-	once_Effect_Aff_monadThrowAff__1033845923.Do(func() {
-		cache_Effect_Aff_monadThrowAff__1033845923 = gopurs_runtime.RecordDict2("Monad0", "throwError", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_monadAff()
-}), Get_Effect_Aff__throwError())
-	})
-	return cache_Effect_Aff_monadThrowAff__1033845923
-}
-
-var cache_Effect_Aff_monadThrowAff__799187270 gopurs_runtime.Value
-var once_Effect_Aff_monadThrowAff__799187270 sync.Once
-func Get_Effect_Aff_monadThrowAff__799187270() gopurs_runtime.Value {
-	once_Effect_Aff_monadThrowAff__799187270.Do(func() {
-		cache_Effect_Aff_monadThrowAff__799187270 = gopurs_runtime.RecordDict2("Monad0", "throwError", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_monadAff()
-}), Get_Effect_Aff__throwError())
-	})
-	return cache_Effect_Aff_monadThrowAff__799187270
-}
-
-var cache_Effect_Aff_parallelAff__3386337330 gopurs_runtime.Value
-var once_Effect_Aff_parallelAff__3386337330 sync.Once
-func Get_Effect_Aff_parallelAff__3386337330() gopurs_runtime.Value {
-	once_Effect_Aff_parallelAff__3386337330.Do(func() {
-		cache_Effect_Aff_parallelAff__3386337330 = gopurs_runtime.RecordDict4("Apply0", "Apply1", "parallel", "sequential", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_applyAff()
-}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_applyParAff()
-}), Get_Unsafe_Coerce_unsafeCoerce(), Get_Effect_Aff__sequential())
-	})
-	return cache_Effect_Aff_parallelAff__3386337330
-}
-
-var cache_Effect_Aff_parallelAff__959558577 gopurs_runtime.Value
-var once_Effect_Aff_parallelAff__959558577 sync.Once
-func Get_Effect_Aff_parallelAff__959558577() gopurs_runtime.Value {
-	once_Effect_Aff_parallelAff__959558577.Do(func() {
-		cache_Effect_Aff_parallelAff__959558577 = gopurs_runtime.RecordDict4("Apply0", "Apply1", "parallel", "sequential", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_applyAff()
-}), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_applyParAff()
-}), Get_Unsafe_Coerce_unsafeCoerce(), Get_Effect_Aff__sequential())
-	})
-	return cache_Effect_Aff_parallelAff__959558577
-}
-
-var cache_Effect_Aff_plusParAff__4391090 gopurs_runtime.Value
-var once_Effect_Aff_plusParAff__4391090 sync.Once
-func Get_Effect_Aff_plusParAff__4391090() gopurs_runtime.Value {
-	once_Effect_Aff_plusParAff__4391090.Do(func() {
-		cache_Effect_Aff_plusParAff__4391090 = gopurs_runtime.RecordDict2("Alt0", "empty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_Aff_altParAff()
-}), gopurs_runtime.RecordGet(Get_Effect_Aff_plusAff(), "empty"))
-	})
-	return cache_Effect_Aff_plusParAff__4391090
 }
 
 var cache_Effect_Aff_runAff__2713492946 gopurs_runtime.Value
@@ -1428,11 +1139,11 @@ _ = dictSemigroup_0
 // TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
 __local_var_1_0 := gopurs_runtime.RecordGet(dictSemigroup_0, "append")
 _ = __local_var_1_0
-return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(&Constructor_Data_Semigroup_Semigroup{1, gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(b_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(Get_Effect_Aff__parAffApply(), gopurs_runtime.Apply2(Get_Effect_Aff__parAffMap(), __local_var_1_0, a_2), b_3)
 })
-}))
+})})}
 }
 
 func Call_Effect_Aff_cancelWith(aff_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1501,16 +1212,16 @@ _ = dictMonoid_0
 // TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
 __local_var_1_1 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}), "append")
 _ = __local_var_1_1
-// TAST (Let): semigroupParAff1_1_0 -> gopurs_runtime.Value
-semigroupParAff1_1_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): semigroupParAff1_1_0 -> *Constructor_Data_Semigroup_Semigroup
+semigroupParAff1_1_0 := &Constructor_Data_Semigroup_Semigroup{1, gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(b_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(Get_Effect_Aff__parAffApply(), gopurs_runtime.Apply2(Get_Effect_Aff__parAffMap(), __local_var_1_1, a_2), b_3)
 })
-}))
+})}
 _ = semigroupParAff1_1_0
-return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return semigroupParAff1_1_0
-}), gopurs_runtime.Apply(Get_Effect_Aff__pure(), gopurs_runtime.RecordGet(dictMonoid_0, "mempty")))
+return gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(&Constructor_Data_Monoid_Monoid{1, gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(semigroupParAff1_1_0)}
+}), gopurs_runtime.Apply(Get_Effect_Aff__pure(), gopurs_runtime.RecordGet(dictMonoid_0, "mempty"))})}
 }
 
 func Call_Effect_Aff_semigroupAff(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1519,11 +1230,15 @@ _ = dictSemigroup_0
 // TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
 __local_var_1_0 := gopurs_runtime.RecordGet(dictSemigroup_0, "append")
 _ = __local_var_1_0
-return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(&Constructor_Data_Semigroup_Semigroup{1, gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(b_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Effect_Aff_applyAff(), "apply"), gopurs_runtime.Apply2(Get_Effect_Aff__map(), __local_var_1_0, a_2), b_3)
-})
+return gopurs_runtime.Apply2(Get_Effect_Aff__bind(), gopurs_runtime.Apply2(Get_Effect_Aff__map(), __local_var_1_0, a_2), gopurs_runtime.Func(func(f_prime_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Get_Effect_Aff__bind(), b_3, gopurs_runtime.Func(func(a_prime_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_Effect_Aff__pure(), gopurs_runtime.Apply(f_prime_4, a_prime_5))
 }))
+}))
+})
+})})}
 }
 
 func Call_Effect_Aff_effectCanceler(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1665,14 +1380,22 @@ return __local_var_1_3
 return __local_var_1_5
 }), gopurs_runtime.Func(func(err_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(sup_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply4(Get_Control_Parallel_parSequence_(), gopurs_runtime.Value{Type: 9, IntVal: 327692956, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Parallel_Class_Parallel](Get_Effect_Aff_parallelAff()))}, gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](Get_Effect_Aff_applicativeParAff()))}, gopurs_runtime.Value{Type: 9, IntVal: 4280266298, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Foldable_Foldable](Get_Data_Foldable_foldableArray()))}, gopurs_runtime.Array(func() []gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_Effect_Aff__sequential(), gopurs_runtime.Apply3(Get_Data_Foldable_foldrArray(), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Get_Effect_Aff__parAffApply(), gopurs_runtime.Apply2(Get_Effect_Aff__parAffMap(), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_6
+})
+}), x_3), b_4)
+})
+}), gopurs_runtime.Apply(Get_Effect_Aff__pure(), Get_Data_Unit_unit()), gopurs_runtime.Array(func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array([]gopurs_runtime.Value{Call_Effect_Aff_killFiber(err_1, gopurs_runtime.RecordGet(sup_2, "fiber")), Call_Effect_Aff_makeAff__3447620704(gopurs_runtime.Func(func(k_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp3(Get_Effect_Aff__killAll(), err_1, gopurs_runtime.RecordGet(sup_2, "supervisor"), gopurs_runtime.Apply(k_3, gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Right{1, Get_Data_Unit_unit()})}))
 }))}).UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
-				}()))
+				}())))
 })
 })), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_Effect_Aff_joinFiber(gopurs_runtime.RecordGet(x_1, "fiber"))
@@ -1685,13 +1408,23 @@ _ = aff_0
 return gopurs_runtime.Apply(Get_Effect_Aff__liftEffect(), Call_Effect_Aff_makeFiber(aff_0))
 }
 
+func Call_Effect_Aff_attempt(a_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var a_0 gopurs_runtime.Value = a_0_loop
+_ = a_0
+return gopurs_runtime.Apply2(Get_Effect_Aff__catchError(), gopurs_runtime.Apply2(Get_Effect_Aff__map(), Get_Data_Either_Right(), a_0), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_Effect_Aff__pure(), gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Left{1, x_1})})
+}))
+}
+
 func Call_Effect_Aff_runAff(k_0_loop gopurs_runtime.Value, aff_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var k_0 gopurs_runtime.Value = k_0_loop
 _ = k_0
 var aff_1 gopurs_runtime.Value = aff_1_loop
 _ = aff_1
 // TAST (Let): __local_var_2_0 -> gopurs_runtime.Value
-__local_var_2_0 := Call_Effect_Aff_makeFiber(gopurs_runtime.Apply2(Get_Effect_Aff__bind(), gopurs_runtime.Apply2(Get_Control_Monad_Error_Class_try(), gopurs_runtime.Value{Type: 9, IntVal: 1402181699, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Error_Class_MonadError](Get_Effect_Aff_monadErrorAff()))}, aff_1), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_2_0 := Call_Effect_Aff_makeFiber(gopurs_runtime.Apply2(Get_Effect_Aff__bind(), gopurs_runtime.Apply2(Get_Effect_Aff__catchError(), gopurs_runtime.Apply2(Get_Effect_Aff__map(), Get_Data_Either_Right(), aff_1), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_Effect_Aff__pure(), gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Left{1, x_2})})
+})), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(Get_Effect_Aff__liftEffect(), gopurs_runtime.Apply(k_0, x_2))
 })))
 _ = __local_var_2_0
@@ -1728,7 +1461,9 @@ var k_0 gopurs_runtime.Value = k_0_loop
 _ = k_0
 var aff_1 gopurs_runtime.Value = aff_1_loop
 _ = aff_1
-return Call_Effect_Aff_makeFiber(gopurs_runtime.Apply2(Get_Effect_Aff__bind(), gopurs_runtime.Apply2(Get_Control_Monad_Error_Class_try(), gopurs_runtime.Value{Type: 9, IntVal: 1402181699, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Error_Class_MonadError](Get_Effect_Aff_monadErrorAff()))}, aff_1), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Effect_Aff_makeFiber(gopurs_runtime.Apply2(Get_Effect_Aff__bind(), gopurs_runtime.Apply2(Get_Effect_Aff__catchError(), gopurs_runtime.Apply2(Get_Effect_Aff__map(), Get_Data_Either_Right(), aff_1), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_Effect_Aff__pure(), gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Left{1, x_2})})
+})), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(Get_Effect_Aff__liftEffect(), gopurs_runtime.Apply(k_0, x_2))
 })))
 }
@@ -1739,16 +1474,28 @@ _ = dictMonoid_0
 // TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
 __local_var_1_1 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}), "append")
 _ = __local_var_1_1
-// TAST (Let): semigroupAff1_1_0 -> gopurs_runtime.Value
-semigroupAff1_1_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): semigroupAff1_1_0 -> *Constructor_Data_Semigroup_Semigroup
+semigroupAff1_1_0 := &Constructor_Data_Semigroup_Semigroup{1, gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(b_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Effect_Aff_applyAff(), "apply"), gopurs_runtime.Apply2(Get_Effect_Aff__map(), __local_var_1_1, a_2), b_3)
-})
+return gopurs_runtime.Apply2(Get_Effect_Aff__bind(), gopurs_runtime.Apply2(Get_Effect_Aff__map(), __local_var_1_1, a_2), gopurs_runtime.Func(func(f_prime_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(Get_Effect_Aff__bind(), b_3, gopurs_runtime.Func(func(a_prime_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_Effect_Aff__pure(), gopurs_runtime.Apply(f_prime_4, a_prime_5))
 }))
+}))
+})
+})}
 _ = semigroupAff1_1_0
-return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return semigroupAff1_1_0
-}), gopurs_runtime.Apply(Get_Effect_Aff__pure(), gopurs_runtime.RecordGet(dictMonoid_0, "mempty")))
+return gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(&Constructor_Data_Monoid_Monoid{1, gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(semigroupAff1_1_0)}
+}), gopurs_runtime.Apply(Get_Effect_Aff__pure(), gopurs_runtime.RecordGet(dictMonoid_0, "mempty"))})}
+}
+
+func Call_Effect_Aff_attempt__1549600275(a_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var a_0 gopurs_runtime.Value = a_0_loop
+_ = a_0
+return gopurs_runtime.Apply2(Get_Effect_Aff__catchError(), gopurs_runtime.Apply2(Get_Effect_Aff__map(), Get_Data_Either_Right(), a_0), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_Effect_Aff__pure(), gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Left{1, x_1})})
+}))
 }
 
 func Call_Effect_Aff_bracket__3747730269(acquire_0_loop gopurs_runtime.Value, completed_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -2093,7 +1840,9 @@ _ = k_0
 var aff_1 gopurs_runtime.Value = aff_1_loop
 _ = aff_1
 // TAST (Let): __local_var_2_0 -> gopurs_runtime.Value
-__local_var_2_0 := Call_Effect_Aff_makeFiber(gopurs_runtime.Apply2(Get_Effect_Aff__bind(), gopurs_runtime.Apply2(Get_Control_Monad_Error_Class_try(), gopurs_runtime.Value{Type: 9, IntVal: 1402181699, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Error_Class_MonadError](Get_Effect_Aff_monadErrorAff()))}, aff_1), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_2_0 := Call_Effect_Aff_makeFiber(gopurs_runtime.Apply2(Get_Effect_Aff__bind(), gopurs_runtime.Apply2(Get_Effect_Aff__catchError(), gopurs_runtime.Apply2(Get_Effect_Aff__map(), Get_Data_Either_Right(), aff_1), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(Get_Effect_Aff__pure(), gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Left{1, x_2})})
+})), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(Get_Effect_Aff__liftEffect(), gopurs_runtime.Apply(k_0, x_2))
 })))
 _ = __local_var_2_0

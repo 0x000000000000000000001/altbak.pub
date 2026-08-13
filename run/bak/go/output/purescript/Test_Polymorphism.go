@@ -10,7 +10,9 @@ var cache_Test_Polymorphism_logShow gopurs_runtime.Value
 var once_Test_Polymorphism_logShow sync.Once
 func Get_Test_Polymorphism_logShow() gopurs_runtime.Value {
 	once_Test_Polymorphism_logShow.Do(func() {
-		cache_Test_Polymorphism_logShow = gopurs_runtime.Apply(Get_Effect_Console_logShow(), Get_Data_Show_showInt())
+		cache_Test_Polymorphism_logShow = gopurs_runtime.Func(func(a_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Test_Polymorphism_logShow(a_0_box.IntVal)
+})
 	})
 	return cache_Test_Polymorphism_logShow
 }
@@ -63,11 +65,11 @@ var cache_Test_Polymorphism_intMonoidish gopurs_runtime.Value
 var once_Test_Polymorphism_intMonoidish sync.Once
 func Get_Test_Polymorphism_intMonoidish() gopurs_runtime.Value {
 	once_Test_Polymorphism_intMonoidish.Do(func() {
-		cache_Test_Polymorphism_intMonoidish = gopurs_runtime.RecordDict2("mappend_", "mempty_", gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Test_Polymorphism_intMonoidish = gopurs_runtime.Value{Type: 9, IntVal: 459160245, UnsafePtr: unsafe.Pointer(&Constructor_Test_Polymorphism_Monoidish{1, gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Int((x_0.IntVal) + (y_1.IntVal))
 })
-}), gopurs_runtime.Int(1))
+}), gopurs_runtime.Int(1)})}
 	})
 	return cache_Test_Polymorphism_intMonoidish
 }
@@ -184,6 +186,12 @@ func init() {
 	}
 }
 
+
+func Call_Test_Polymorphism_logShow(a_0_loop int64) gopurs_runtime.Value {
+var a_0 int64 = a_0_loop
+_ = a_0
+return gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(a_0)).StrVal()))
+}
 
 func Call_Test_Polymorphism_Monoidish_dollarDict(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var x_0 gopurs_runtime.Value = x_0_loop

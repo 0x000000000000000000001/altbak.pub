@@ -54,11 +54,11 @@ var cache_Data_DivisionRing_divisionringNumber gopurs_runtime.Value
 var once_Data_DivisionRing_divisionringNumber sync.Once
 func Get_Data_DivisionRing_divisionringNumber() gopurs_runtime.Value {
 	once_Data_DivisionRing_divisionringNumber.Do(func() {
-		cache_Data_DivisionRing_divisionringNumber = gopurs_runtime.RecordDict2("Ring0", "recip", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Ring_ringNumber()
+		cache_Data_DivisionRing_divisionringNumber = gopurs_runtime.Value{Type: 9, IntVal: 2548491258, UnsafePtr: unsafe.Pointer(&Constructor_Data_DivisionRing_DivisionRing{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3955491866, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring](Get_Data_Ring_ringNumber()))}
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Float((1.0) / (x_0.FloatVal()))
-}))
+})})}
 	})
 	return cache_Data_DivisionRing_divisionringNumber
 }

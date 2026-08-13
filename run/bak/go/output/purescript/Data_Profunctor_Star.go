@@ -54,9 +54,9 @@ var cache_Data_Profunctor_Star_newtypeStar gopurs_runtime.Value
 var once_Data_Profunctor_Star_newtypeStar sync.Once
 func Get_Data_Profunctor_Star_newtypeStar() gopurs_runtime.Value {
 	once_Data_Profunctor_Star_newtypeStar.Do(func() {
-		cache_Data_Profunctor_Star_newtypeStar = gopurs_runtime.RecordDict1("Coercible0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Profunctor_Star_newtypeStar = gopurs_runtime.Value{Type: 9, IntVal: 3322196858, UnsafePtr: unsafe.Pointer(&Constructor_Data_Newtype_Newtype{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
-}))
+})})}
 	})
 	return cache_Data_Profunctor_Star_newtypeStar
 }
@@ -235,19 +235,19 @@ return x_0
 func Call_Data_Profunctor_Star_semigroupoidStar(dictBind_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictBind_0 gopurs_runtime.Value = dictBind_0_loop
 _ = dictBind_0
-return gopurs_runtime.RecordDict1("compose", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 350442445, UnsafePtr: unsafe.Pointer(&Constructor_Control_Semigroupoid_Semigroupoid{1, gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictBind_0, "bind"), gopurs_runtime.Apply(v1_2, x_3), v_1)
 })
 })
-}))
+})})}
 }
 
 func Call_Data_Profunctor_Star_profunctorStar(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
-return gopurs_runtime.RecordDict1("dimap", gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2367018778, UnsafePtr: unsafe.Pointer(&Constructor_Data_Profunctor_Profunctor{1, gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(g_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_4_1 -> gopurs_runtime.Value
@@ -263,14 +263,14 @@ return gopurs_runtime.Apply(__local_var_4_0, gopurs_runtime.Apply(f_1, x_5))
 })
 })
 })
-}))
+})})}
 }
 
 func Call_Data_Profunctor_Star_strongStar(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
-// TAST (Let): profunctorStar1_1_0 -> gopurs_runtime.Value
-profunctorStar1_1_0 := gopurs_runtime.RecordDict1("dimap", gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): profunctorStar1_1_0 -> *Constructor_Data_Profunctor_Profunctor
+profunctorStar1_1_0 := &Constructor_Data_Profunctor_Profunctor{1, gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(g_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_4_2 -> gopurs_runtime.Value
@@ -286,10 +286,10 @@ return gopurs_runtime.Apply(__local_var_4_1, gopurs_runtime.Apply(f_1, x_5))
 })
 })
 })
-}))
+})}
 _ = profunctorStar1_1_0
-return gopurs_runtime.RecordDict3("Profunctor0", "first", "second", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return profunctorStar1_1_0
+return gopurs_runtime.Value{Type: 9, IntVal: 1323482783, UnsafePtr: unsafe.Pointer(&Constructor_Data_Profunctor_Strong_Strong{1, gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2367018778, UnsafePtr: unsafe.Pointer(profunctorStar1_1_0)}
 }), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_4_3 -> gopurs_runtime.Value
@@ -303,13 +303,13 @@ return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Point
 return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), gopurs_runtime.Apply(Get_Data_Tuple_Tuple(), (*Constructor_Data_Tuple_Tuple)(v1_3.UnsafePtr).V0), gopurs_runtime.Apply(v_2, (*Constructor_Data_Tuple_Tuple)(v1_3.UnsafePtr).V1))
 })
-}))
+})})}
 }
 
 func Call_Data_Profunctor_Star_invariantStar(dictInvariant_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictInvariant_0 gopurs_runtime.Value = dictInvariant_0_loop
 _ = dictInvariant_0
-return gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2396985522, UnsafePtr: unsafe.Pointer(&Constructor_Data_Functor_Invariant_Invariant{1, gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(g_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_4_0 -> gopurs_runtime.Value
@@ -320,7 +320,7 @@ return gopurs_runtime.Apply(__local_var_4_0, gopurs_runtime.Apply(v_3, x_5))
 })
 })
 })
-}))
+})})}
 }
 
 func Call_Data_Profunctor_Star_hoistStar(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -336,7 +336,7 @@ return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(v_1, x_2))
 func Call_Data_Profunctor_Star_functorStar(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictFunctor_0 gopurs_runtime.Value = dictFunctor_0_loop
 _ = dictFunctor_0
-return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(&Constructor_Data_Functor_Functor{1, gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_3_0 -> gopurs_runtime.Value
 __local_var_3_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_0, "map"), f_1)
@@ -345,7 +345,7 @@ return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_3_0, gopurs_runtime.Apply(v_2, x_4))
 })
 })
-}))
+})})}
 }
 
 func Call_Data_Profunctor_Star_distributiveStar(dictDistributive_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -357,8 +357,8 @@ _ = dictDistributive_0
 // TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
 __local_var_1_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDistributive_0, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_1_1
-// TAST (Let): functorStar1_1_0 -> gopurs_runtime.Value
-functorStar1_1_0 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): functorStar1_1_0 -> *Constructor_Data_Functor_Functor
+functorStar1_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_4_2 -> gopurs_runtime.Value
 __local_var_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_1, "map"), f_2)
@@ -367,10 +367,10 @@ return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_4_2, gopurs_runtime.Apply(v_3, x_5))
 })
 })
-}))
+})))
 _ = functorStar1_1_0
-return gopurs_runtime.RecordDict3("Functor0", "collect", "distribute", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return functorStar1_1_0
+return gopurs_runtime.Value{Type: 9, IntVal: 457335066, UnsafePtr: unsafe.Pointer(&Constructor_Data_Distributive_Distributive{1, gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(functorStar1_1_0)}
 }), gopurs_runtime.Func(func(dictFunctor_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_4_3 -> gopurs_runtime.Value
@@ -391,7 +391,7 @@ return gopurs_runtime.Apply(v_5, a_4)
 }), f_3)
 })
 })
-}))
+})})}
 }
 }
 
@@ -401,8 +401,8 @@ _ = dictDistributive_0
 // TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
 __local_var_1_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDistributive_0, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_1_1
-// TAST (Let): profunctorStar1_1_0 -> gopurs_runtime.Value
-profunctorStar1_1_0 := gopurs_runtime.RecordDict1("dimap", gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): profunctorStar1_1_0 -> *Constructor_Data_Profunctor_Profunctor
+profunctorStar1_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Profunctor_Profunctor](gopurs_runtime.RecordDict1("dimap", gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(g_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_5_3 -> gopurs_runtime.Value
@@ -418,17 +418,17 @@ return gopurs_runtime.Apply(__local_var_5_2, gopurs_runtime.Apply(f_2, x_6))
 })
 })
 })
-}))
+})))
 _ = profunctorStar1_1_0
-return gopurs_runtime.RecordDict2("Profunctor0", "closed", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return profunctorStar1_1_0
+return gopurs_runtime.Value{Type: 9, IntVal: 768764671, UnsafePtr: unsafe.Pointer(&Constructor_Data_Profunctor_Closed_Closed{1, gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2367018778, UnsafePtr: unsafe.Pointer(profunctorStar1_1_0)}
 }), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(g_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictDistributive_0, "distribute"), gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](Get_Data_Functor_functorFn()))}, gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(v_2, gopurs_runtime.Apply(g_3, x_4))
 }))
 })
-}))
+})})}
 }
 
 func Call_Data_Profunctor_Star_choiceStar(dictApplicative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -443,8 +443,8 @@ _ = Functor0_2_1
 // TAST (Let): __local_var_3_3 -> gopurs_runtime.Value
 __local_var_3_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Apply0_1_0, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_3_3
-// TAST (Let): profunctorStar1_3_2 -> gopurs_runtime.Value
-profunctorStar1_3_2 := gopurs_runtime.RecordDict1("dimap", gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): profunctorStar1_3_2 -> *Constructor_Data_Profunctor_Profunctor
+profunctorStar1_3_2 := gopurs_runtime.CoerceToStruct[Constructor_Data_Profunctor_Profunctor](gopurs_runtime.RecordDict1("dimap", gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(g_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_7_5 -> gopurs_runtime.Value
@@ -460,10 +460,10 @@ return gopurs_runtime.Apply(__local_var_7_4, gopurs_runtime.Apply(f_4, x_8))
 })
 })
 })
-}))
+})))
 _ = profunctorStar1_3_2
-return gopurs_runtime.RecordDict3("Profunctor0", "left", "right", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return profunctorStar1_3_2
+return gopurs_runtime.Value{Type: 9, IntVal: 3666633887, UnsafePtr: unsafe.Pointer(&Constructor_Data_Profunctor_Choice_Choice{1, gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 2367018778, UnsafePtr: unsafe.Pointer(profunctorStar1_3_2)}
 }), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_5_7 -> gopurs_runtime.Value
 __local_var_5_7 := gopurs_runtime.Apply(gopurs_runtime.Box(Functor0_2_1.V0), Get_Data_Either_Left())
@@ -530,7 +530,7 @@ __t11 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 end_branch_11:
 return __t11
 })
-}))
+})})}
 }
 
 func Call_Data_Profunctor_Star_categoryStar(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -539,18 +539,18 @@ _ = dictMonad_0
 // TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
 __local_var_1_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{})
 _ = __local_var_1_1
-// TAST (Let): semigroupoidStar1_1_0 -> gopurs_runtime.Value
-semigroupoidStar1_1_0 := gopurs_runtime.RecordDict1("compose", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): semigroupoidStar1_1_0 -> *Constructor_Control_Semigroupoid_Semigroupoid
+semigroupoidStar1_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Semigroupoid_Semigroupoid](gopurs_runtime.RecordDict1("compose", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_1, "bind"), gopurs_runtime.Apply(v1_3, x_4), v_2)
 })
 })
-}))
+})))
 _ = semigroupoidStar1_1_0
-return gopurs_runtime.RecordDict2("Semigroupoid0", "identity", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return semigroupoidStar1_1_0
-}), gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{}), "pure"))
+return gopurs_runtime.Value{Type: 9, IntVal: 784524589, UnsafePtr: unsafe.Pointer(&Constructor_Control_Category_Category{1, gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 350442445, UnsafePtr: unsafe.Pointer(semigroupoidStar1_1_0)}
+}), gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{}), "pure")})}
 }
 
 func Call_Data_Profunctor_Star_applyStar(dictApply_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -559,8 +559,8 @@ _ = dictApply_0
 // TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
 __local_var_1_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_0, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_1_1
-// TAST (Let): functorStar1_1_0 -> gopurs_runtime.Value
-functorStar1_1_0 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): functorStar1_1_0 -> *Constructor_Data_Functor_Functor
+functorStar1_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_4_2 -> gopurs_runtime.Value
 __local_var_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_1, "map"), f_2)
@@ -569,17 +569,17 @@ return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_4_2, gopurs_runtime.Apply(v_3, x_5))
 })
 })
-}))
+})))
 _ = functorStar1_1_0
-return gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return functorStar1_1_0
+return gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(&Constructor_Control_Apply_Apply{1, gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(functorStar1_1_0)}
 }), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictApply_0, "apply"), gopurs_runtime.Apply(v_2, a_4), gopurs_runtime.Apply(v1_3, a_4))
 })
 })
-}))
+})})}
 }
 
 func Call_Data_Profunctor_Star_bindStar(dictBind_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -591,8 +591,8 @@ _ = __local_var_1_1
 // TAST (Let): __local_var_2_3 -> gopurs_runtime.Value
 __local_var_2_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_1, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_2_3
-// TAST (Let): functorStar1_2_2 -> gopurs_runtime.Value
-functorStar1_2_2 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): functorStar1_2_2 -> *Constructor_Data_Functor_Functor
+functorStar1_2_2 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_5_4 -> gopurs_runtime.Value
 __local_var_5_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_3, "map"), f_3)
@@ -601,21 +601,21 @@ return gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_5_4, gopurs_runtime.Apply(v_4, x_6))
 })
 })
-}))
+})))
 _ = functorStar1_2_2
-// TAST (Let): applyStar1_1_0 -> gopurs_runtime.Value
-applyStar1_1_0 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return functorStar1_2_2
+// TAST (Let): applyStar1_1_0 -> *Constructor_Control_Apply_Apply
+applyStar1_1_0 := &Constructor_Control_Apply_Apply{1, gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(functorStar1_2_2)}
 }), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_1, "apply"), gopurs_runtime.Apply(v_3, a_5), gopurs_runtime.Apply(v1_4, a_5))
 })
 })
-}))
+})}
 _ = applyStar1_1_0
-return gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return applyStar1_1_0
+return gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(&Constructor_Control_Bind_Bind{1, gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(applyStar1_1_0)}
 }), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -624,7 +624,7 @@ return gopurs_runtime.Apply2(f_3, a_5, x_4)
 }))
 })
 })
-}))
+})})}
 }
 
 func Call_Data_Profunctor_Star_applicativeStar(dictApplicative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -636,8 +636,8 @@ _ = __local_var_1_1
 // TAST (Let): __local_var_2_3 -> gopurs_runtime.Value
 __local_var_2_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_1, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_2_3
-// TAST (Let): functorStar1_2_2 -> gopurs_runtime.Value
-functorStar1_2_2 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): functorStar1_2_2 -> *Constructor_Data_Functor_Functor
+functorStar1_2_2 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_5_4 -> gopurs_runtime.Value
 __local_var_5_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_3, "map"), f_3)
@@ -646,26 +646,26 @@ return gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_5_4, gopurs_runtime.Apply(v_4, x_6))
 })
 })
-}))
+})))
 _ = functorStar1_2_2
-// TAST (Let): applyStar1_1_0 -> gopurs_runtime.Value
-applyStar1_1_0 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return functorStar1_2_2
+// TAST (Let): applyStar1_1_0 -> *Constructor_Control_Apply_Apply
+applyStar1_1_0 := &Constructor_Control_Apply_Apply{1, gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(functorStar1_2_2)}
 }), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_1, "apply"), gopurs_runtime.Apply(v_3, a_5), gopurs_runtime.Apply(v1_4, a_5))
 })
 })
-}))
+})}
 _ = applyStar1_1_0
-return gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return applyStar1_1_0
+return gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(&Constructor_Control_Applicative_Applicative{1, gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(applyStar1_1_0)}
 }), gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "pure"), a_2)
 })
-}))
+})})}
 }
 
 func Call_Data_Profunctor_Star_monadStar(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -680,8 +680,8 @@ _ = __local_var_2_3
 // TAST (Let): __local_var_3_5 -> gopurs_runtime.Value
 __local_var_3_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_3, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_3_5
-// TAST (Let): functorStar1_3_4 -> gopurs_runtime.Value
-functorStar1_3_4 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): functorStar1_3_4 -> *Constructor_Data_Functor_Functor
+functorStar1_3_4 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_6_6 -> gopurs_runtime.Value
 __local_var_6_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_5, "map"), f_4)
@@ -690,27 +690,27 @@ return gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_6_6, gopurs_runtime.Apply(v_5, x_7))
 })
 })
-}))
+})))
 _ = functorStar1_3_4
-// TAST (Let): applyStar1_2_2 -> gopurs_runtime.Value
-applyStar1_2_2 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return functorStar1_3_4
+// TAST (Let): applyStar1_2_2 -> *Constructor_Control_Apply_Apply
+applyStar1_2_2 := &Constructor_Control_Apply_Apply{1, gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(functorStar1_3_4)}
 }), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_3, "apply"), gopurs_runtime.Apply(v_4, a_6), gopurs_runtime.Apply(v1_5, a_6))
 })
 })
-}))
+})}
 _ = applyStar1_2_2
-// TAST (Let): applicativeStar1_1_0 -> gopurs_runtime.Value
-applicativeStar1_1_0 := gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return applyStar1_2_2
+// TAST (Let): applicativeStar1_1_0 -> *Constructor_Control_Applicative_Applicative
+applicativeStar1_1_0 := &Constructor_Control_Applicative_Applicative{1, gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(applyStar1_2_2)}
 }), gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_1, "pure"), a_3)
 })
-}))
+})}
 _ = applicativeStar1_1_0
 // TAST (Let): __local_var_2_8 -> gopurs_runtime.Value
 __local_var_2_8 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{})
@@ -721,8 +721,8 @@ _ = __local_var_3_10
 // TAST (Let): __local_var_4_12 -> gopurs_runtime.Value
 __local_var_4_12 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_10, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_4_12
-// TAST (Let): functorStar1_4_11 -> gopurs_runtime.Value
-functorStar1_4_11 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_5 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): functorStar1_4_11 -> *Constructor_Data_Functor_Functor
+functorStar1_4_11 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_7_13 -> gopurs_runtime.Value
 __local_var_7_13 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_12, "map"), f_5)
@@ -731,22 +731,22 @@ return gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_7_13, gopurs_runtime.Apply(v_6, x_8))
 })
 })
-}))
+})))
 _ = functorStar1_4_11
-// TAST (Let): applyStar1_3_9 -> gopurs_runtime.Value
-applyStar1_3_9 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return functorStar1_4_11
+// TAST (Let): applyStar1_3_9 -> *Constructor_Control_Apply_Apply
+applyStar1_3_9 := &Constructor_Control_Apply_Apply{1, gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(functorStar1_4_11)}
 }), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_10, "apply"), gopurs_runtime.Apply(v_5, a_7), gopurs_runtime.Apply(v1_6, a_7))
 })
 })
-}))
+})}
 _ = applyStar1_3_9
-// TAST (Let): bindStar1_2_7 -> gopurs_runtime.Value
-bindStar1_2_7 := gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return applyStar1_3_9
+// TAST (Let): bindStar1_2_7 -> *Constructor_Control_Bind_Bind
+bindStar1_2_7 := &Constructor_Control_Bind_Bind{1, gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(applyStar1_3_9)}
 }), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(f_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -755,13 +755,13 @@ return gopurs_runtime.Apply2(f_5, a_7, x_6)
 }))
 })
 })
-}))
+})}
 _ = bindStar1_2_7
-return gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return applicativeStar1_1_0
+return gopurs_runtime.Value{Type: 9, IntVal: 778916621, UnsafePtr: unsafe.Pointer(&Constructor_Control_Monad_Monad{1, gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(applicativeStar1_1_0)}
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return bindStar1_2_7
-}))
+return gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(bindStar1_2_7)}
+})})}
 }
 
 func Call_Data_Profunctor_Star_altStar(dictAlt_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -770,8 +770,8 @@ _ = dictAlt_0
 // TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
 __local_var_1_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictAlt_0, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_1_1
-// TAST (Let): functorStar1_1_0 -> gopurs_runtime.Value
-functorStar1_1_0 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): functorStar1_1_0 -> *Constructor_Data_Functor_Functor
+functorStar1_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_4_2 -> gopurs_runtime.Value
 __local_var_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_1, "map"), f_2)
@@ -780,17 +780,17 @@ return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_4_2, gopurs_runtime.Apply(v_3, x_5))
 })
 })
-}))
+})))
 _ = functorStar1_1_0
-return gopurs_runtime.RecordDict2("Functor0", "alt", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return functorStar1_1_0
+return gopurs_runtime.Value{Type: 9, IntVal: 4060500237, UnsafePtr: unsafe.Pointer(&Constructor_Control_Alt_Alt{1, gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(functorStar1_1_0)}
 }), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictAlt_0, "alt"), gopurs_runtime.Apply(v_2, a_4), gopurs_runtime.Apply(v1_3, a_4))
 })
 })
-}))
+})})}
 }
 
 func Call_Data_Profunctor_Star_plusStar(dictPlus_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -805,8 +805,8 @@ _ = __local_var_2_2
 // TAST (Let): __local_var_3_4 -> gopurs_runtime.Value
 __local_var_3_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_2, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_3_4
-// TAST (Let): functorStar1_3_3 -> gopurs_runtime.Value
-functorStar1_3_3 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): functorStar1_3_3 -> *Constructor_Data_Functor_Functor
+functorStar1_3_3 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_6_5 -> gopurs_runtime.Value
 __local_var_6_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_4, "map"), f_4)
@@ -815,24 +815,24 @@ return gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_6_5, gopurs_runtime.Apply(v_5, x_7))
 })
 })
-}))
+})))
 _ = functorStar1_3_3
-// TAST (Let): altStar1_2_1 -> gopurs_runtime.Value
-altStar1_2_1 := gopurs_runtime.RecordDict2("Functor0", "alt", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return functorStar1_3_3
+// TAST (Let): altStar1_2_1 -> *Constructor_Control_Alt_Alt
+altStar1_2_1 := &Constructor_Control_Alt_Alt{1, gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(functorStar1_3_3)}
 }), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_2, "alt"), gopurs_runtime.Apply(v_4, a_6), gopurs_runtime.Apply(v1_5, a_6))
 })
 })
-}))
+})}
 _ = altStar1_2_1
-return gopurs_runtime.RecordDict2("Alt0", "empty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return altStar1_2_1
+return gopurs_runtime.Value{Type: 9, IntVal: 3709470893, UnsafePtr: unsafe.Pointer(&Constructor_Control_Plus_Plus{1, gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 4060500237, UnsafePtr: unsafe.Pointer(altStar1_2_1)}
 }), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return empty_1_0
-}))
+})})}
 }
 
 func Call_Data_Profunctor_Star_alternativeStar(dictAlternative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -847,8 +847,8 @@ _ = __local_var_2_3
 // TAST (Let): __local_var_3_5 -> gopurs_runtime.Value
 __local_var_3_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_3, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_3_5
-// TAST (Let): functorStar1_3_4 -> gopurs_runtime.Value
-functorStar1_3_4 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): functorStar1_3_4 -> *Constructor_Data_Functor_Functor
+functorStar1_3_4 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_6_6 -> gopurs_runtime.Value
 __local_var_6_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_5, "map"), f_4)
@@ -857,27 +857,27 @@ return gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_6_6, gopurs_runtime.Apply(v_5, x_7))
 })
 })
-}))
+})))
 _ = functorStar1_3_4
-// TAST (Let): applyStar1_2_2 -> gopurs_runtime.Value
-applyStar1_2_2 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return functorStar1_3_4
+// TAST (Let): applyStar1_2_2 -> *Constructor_Control_Apply_Apply
+applyStar1_2_2 := &Constructor_Control_Apply_Apply{1, gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(functorStar1_3_4)}
 }), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_3, "apply"), gopurs_runtime.Apply(v_4, a_6), gopurs_runtime.Apply(v1_5, a_6))
 })
 })
-}))
+})}
 _ = applyStar1_2_2
-// TAST (Let): applicativeStar1_1_0 -> gopurs_runtime.Value
-applicativeStar1_1_0 := gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return applyStar1_2_2
+// TAST (Let): applicativeStar1_1_0 -> *Constructor_Control_Applicative_Applicative
+applicativeStar1_1_0 := &Constructor_Control_Applicative_Applicative{1, gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(applyStar1_2_2)}
 }), gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_1, "pure"), a_3)
 })
-}))
+})}
 _ = applicativeStar1_1_0
 // TAST (Let): __local_var_2_8 -> gopurs_runtime.Value
 __local_var_2_8 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictAlternative_0, "Plus1"), gopurs_runtime.Value{})
@@ -891,8 +891,8 @@ _ = __local_var_4_11
 // TAST (Let): __local_var_5_13 -> gopurs_runtime.Value
 __local_var_5_13 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_11, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_5_13
-// TAST (Let): functorStar1_5_12 -> gopurs_runtime.Value
-functorStar1_5_12 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_6 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): functorStar1_5_12 -> *Constructor_Data_Functor_Functor
+functorStar1_5_12 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_8_14 -> gopurs_runtime.Value
 __local_var_8_14 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_5_13, "map"), f_6)
@@ -901,31 +901,31 @@ return gopurs_runtime.Func(func(x_9 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_8_14, gopurs_runtime.Apply(v_7, x_9))
 })
 })
-}))
+})))
 _ = functorStar1_5_12
-// TAST (Let): altStar1_4_10 -> gopurs_runtime.Value
-altStar1_4_10 := gopurs_runtime.RecordDict2("Functor0", "alt", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return functorStar1_5_12
+// TAST (Let): altStar1_4_10 -> *Constructor_Control_Alt_Alt
+altStar1_4_10 := &Constructor_Control_Alt_Alt{1, gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(functorStar1_5_12)}
 }), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_11, "alt"), gopurs_runtime.Apply(v_6, a_8), gopurs_runtime.Apply(v1_7, a_8))
 })
 })
-}))
+})}
 _ = altStar1_4_10
-// TAST (Let): plusStar1_2_7 -> gopurs_runtime.Value
-plusStar1_2_7 := gopurs_runtime.RecordDict2("Alt0", "empty", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return altStar1_4_10
+// TAST (Let): plusStar1_2_7 -> *Constructor_Control_Plus_Plus
+plusStar1_2_7 := &Constructor_Control_Plus_Plus{1, gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 4060500237, UnsafePtr: unsafe.Pointer(altStar1_4_10)}
 }), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return empty_3_9
-}))
+})}
 _ = plusStar1_2_7
-return gopurs_runtime.RecordDict2("Applicative0", "Plus1", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return applicativeStar1_1_0
+return gopurs_runtime.Value{Type: 9, IntVal: 397869517, UnsafePtr: unsafe.Pointer(&Constructor_Control_Alternative_Alternative{1, gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(applicativeStar1_1_0)}
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return plusStar1_2_7
-}))
+return gopurs_runtime.Value{Type: 9, IntVal: 3709470893, UnsafePtr: unsafe.Pointer(plusStar1_2_7)}
+})})}
 }
 
 func Call_Data_Profunctor_Star_monadPlusStar(dictMonadPlus_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -943,8 +943,8 @@ _ = __local_var_3_5
 // TAST (Let): __local_var_4_7 -> gopurs_runtime.Value
 __local_var_4_7 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_5, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_4_7
-// TAST (Let): functorStar1_4_6 -> gopurs_runtime.Value
-functorStar1_4_6 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_5 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): functorStar1_4_6 -> *Constructor_Data_Functor_Functor
+functorStar1_4_6 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_7_8 -> gopurs_runtime.Value
 __local_var_7_8 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_7, "map"), f_5)
@@ -953,27 +953,27 @@ return gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_7_8, gopurs_runtime.Apply(v_6, x_8))
 })
 })
-}))
+})))
 _ = functorStar1_4_6
-// TAST (Let): applyStar1_3_4 -> gopurs_runtime.Value
-applyStar1_3_4 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return functorStar1_4_6
+// TAST (Let): applyStar1_3_4 -> *Constructor_Control_Apply_Apply
+applyStar1_3_4 := &Constructor_Control_Apply_Apply{1, gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(functorStar1_4_6)}
 }), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_5, "apply"), gopurs_runtime.Apply(v_5, a_7), gopurs_runtime.Apply(v1_6, a_7))
 })
 })
-}))
+})}
 _ = applyStar1_3_4
-// TAST (Let): applicativeStar1_2_2 -> gopurs_runtime.Value
-applicativeStar1_2_2 := gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return applyStar1_3_4
+// TAST (Let): applicativeStar1_2_2 -> *Constructor_Control_Applicative_Applicative
+applicativeStar1_2_2 := &Constructor_Control_Applicative_Applicative{1, gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(applyStar1_3_4)}
 }), gopurs_runtime.Func(func(a_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_3, "pure"), a_4)
 })
-}))
+})}
 _ = applicativeStar1_2_2
 // TAST (Let): __local_var_3_10 -> gopurs_runtime.Value
 __local_var_3_10 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_1, "Bind1"), gopurs_runtime.Value{})
@@ -984,8 +984,8 @@ _ = __local_var_4_12
 // TAST (Let): __local_var_5_14 -> gopurs_runtime.Value
 __local_var_5_14 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_12, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_5_14
-// TAST (Let): functorStar1_5_13 -> gopurs_runtime.Value
-functorStar1_5_13 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_6 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): functorStar1_5_13 -> *Constructor_Data_Functor_Functor
+functorStar1_5_13 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_8_15 -> gopurs_runtime.Value
 __local_var_8_15 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_5_14, "map"), f_6)
@@ -994,22 +994,22 @@ return gopurs_runtime.Func(func(x_9 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_8_15, gopurs_runtime.Apply(v_7, x_9))
 })
 })
-}))
+})))
 _ = functorStar1_5_13
-// TAST (Let): applyStar1_4_11 -> gopurs_runtime.Value
-applyStar1_4_11 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return functorStar1_5_13
+// TAST (Let): applyStar1_4_11 -> *Constructor_Control_Apply_Apply
+applyStar1_4_11 := &Constructor_Control_Apply_Apply{1, gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(functorStar1_5_13)}
 }), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_12, "apply"), gopurs_runtime.Apply(v_6, a_8), gopurs_runtime.Apply(v1_7, a_8))
 })
 })
-}))
+})}
 _ = applyStar1_4_11
-// TAST (Let): bindStar1_3_9 -> gopurs_runtime.Value
-bindStar1_3_9 := gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return applyStar1_4_11
+// TAST (Let): bindStar1_3_9 -> *Constructor_Control_Bind_Bind
+bindStar1_3_9 := &Constructor_Control_Bind_Bind{1, gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(applyStar1_4_11)}
 }), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(f_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1018,14 +1018,14 @@ return gopurs_runtime.Apply2(f_6, a_8, x_7)
 }))
 })
 })
-}))
+})}
 _ = bindStar1_3_9
-// TAST (Let): monadStar1_1_0 -> gopurs_runtime.Value
-monadStar1_1_0 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return applicativeStar1_2_2
+// TAST (Let): monadStar1_1_0 -> *Constructor_Control_Monad_Monad
+monadStar1_1_0 := &Constructor_Control_Monad_Monad{1, gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(applicativeStar1_2_2)}
 }), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return bindStar1_3_9
-}))
+return gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(bindStar1_3_9)}
+})}
 _ = monadStar1_1_0
 // TAST (Let): __local_var_2_17 -> gopurs_runtime.Value
 __local_var_2_17 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadPlus_0, "Alternative1"), gopurs_runtime.Value{})
@@ -1039,8 +1039,8 @@ _ = __local_var_4_21
 // TAST (Let): __local_var_5_23 -> gopurs_runtime.Value
 __local_var_5_23 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_21, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_5_23
-// TAST (Let): functorStar1_5_22 -> gopurs_runtime.Value
-functorStar1_5_22 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_6 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): functorStar1_5_22 -> *Constructor_Data_Functor_Functor
+functorStar1_5_22 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_8_24 -> gopurs_runtime.Value
 __local_var_8_24 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_5_23, "map"), f_6)
@@ -1049,27 +1049,27 @@ return gopurs_runtime.Func(func(x_9 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_8_24, gopurs_runtime.Apply(v_7, x_9))
 })
 })
-}))
+})))
 _ = functorStar1_5_22
-// TAST (Let): applyStar1_4_20 -> gopurs_runtime.Value
-applyStar1_4_20 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return functorStar1_5_22
+// TAST (Let): applyStar1_4_20 -> *Constructor_Control_Apply_Apply
+applyStar1_4_20 := &Constructor_Control_Apply_Apply{1, gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(functorStar1_5_22)}
 }), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_21, "apply"), gopurs_runtime.Apply(v_6, a_8), gopurs_runtime.Apply(v1_7, a_8))
 })
 })
-}))
+})}
 _ = applyStar1_4_20
-// TAST (Let): applicativeStar1_3_18 -> gopurs_runtime.Value
-applicativeStar1_3_18 := gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return applyStar1_4_20
+// TAST (Let): applicativeStar1_3_18 -> *Constructor_Control_Applicative_Applicative
+applicativeStar1_3_18 := &Constructor_Control_Applicative_Applicative{1, gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(applyStar1_4_20)}
 }), gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_19, "pure"), a_5)
 })
-}))
+})}
 _ = applicativeStar1_3_18
 // TAST (Let): __local_var_4_26 -> gopurs_runtime.Value
 __local_var_4_26 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_17, "Plus1"), gopurs_runtime.Value{})
@@ -1083,8 +1083,8 @@ _ = __local_var_6_29
 // TAST (Let): __local_var_7_31 -> gopurs_runtime.Value
 __local_var_7_31 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_6_29, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_7_31
-// TAST (Let): functorStar1_7_30 -> gopurs_runtime.Value
-functorStar1_7_30 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_8 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): functorStar1_7_30 -> *Constructor_Data_Functor_Functor
+functorStar1_7_30 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_9 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_10_32 -> gopurs_runtime.Value
 __local_var_10_32 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_7_31, "map"), f_8)
@@ -1093,38 +1093,38 @@ return gopurs_runtime.Func(func(x_11 gopurs_runtime.Value) gopurs_runtime.Value 
 return gopurs_runtime.Apply(__local_var_10_32, gopurs_runtime.Apply(v_9, x_11))
 })
 })
-}))
+})))
 _ = functorStar1_7_30
-// TAST (Let): altStar1_6_28 -> gopurs_runtime.Value
-altStar1_6_28 := gopurs_runtime.RecordDict2("Functor0", "alt", gopurs_runtime.Func(func(_dollar__unused_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return functorStar1_7_30
+// TAST (Let): altStar1_6_28 -> *Constructor_Control_Alt_Alt
+altStar1_6_28 := &Constructor_Control_Alt_Alt{1, gopurs_runtime.Func(func(_dollar__unused_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(functorStar1_7_30)}
 }), gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_9 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a_10 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_6_29, "alt"), gopurs_runtime.Apply(v_8, a_10), gopurs_runtime.Apply(v1_9, a_10))
 })
 })
-}))
+})}
 _ = altStar1_6_28
-// TAST (Let): plusStar1_4_25 -> gopurs_runtime.Value
-plusStar1_4_25 := gopurs_runtime.RecordDict2("Alt0", "empty", gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return altStar1_6_28
+// TAST (Let): plusStar1_4_25 -> *Constructor_Control_Plus_Plus
+plusStar1_4_25 := &Constructor_Control_Plus_Plus{1, gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 4060500237, UnsafePtr: unsafe.Pointer(altStar1_6_28)}
 }), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return empty_5_27
-}))
+})}
 _ = plusStar1_4_25
-// TAST (Let): alternativeStar1_2_16 -> gopurs_runtime.Value
-alternativeStar1_2_16 := gopurs_runtime.RecordDict2("Applicative0", "Plus1", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return applicativeStar1_3_18
+// TAST (Let): alternativeStar1_2_16 -> *Constructor_Control_Alternative_Alternative
+alternativeStar1_2_16 := &Constructor_Control_Alternative_Alternative{1, gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(applicativeStar1_3_18)}
 }), gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return plusStar1_4_25
-}))
+return gopurs_runtime.Value{Type: 9, IntVal: 3709470893, UnsafePtr: unsafe.Pointer(plusStar1_4_25)}
+})}
 _ = alternativeStar1_2_16
-return gopurs_runtime.RecordDict2("Alternative1", "Monad0", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return alternativeStar1_2_16
+return gopurs_runtime.Value{Type: 9, IntVal: 3236234573, UnsafePtr: unsafe.Pointer(&Constructor_Control_MonadPlus_MonadPlus{1, gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 397869517, UnsafePtr: unsafe.Pointer(alternativeStar1_2_16)}
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return monadStar1_1_0
-}))
+return gopurs_runtime.Value{Type: 9, IntVal: 778916621, UnsafePtr: unsafe.Pointer(monadStar1_1_0)}
+})})}
 }
 
 

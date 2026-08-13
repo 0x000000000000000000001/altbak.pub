@@ -32,7 +32,7 @@ var cache_Data_Bounded_Generic_genericTopNoArguments gopurs_runtime.Value
 var once_Data_Bounded_Generic_genericTopNoArguments sync.Once
 func Get_Data_Bounded_Generic_genericTopNoArguments() gopurs_runtime.Value {
 	once_Data_Bounded_Generic_genericTopNoArguments.Do(func() {
-		cache_Data_Bounded_Generic_genericTopNoArguments = gopurs_runtime.RecordDict1("genericTop'", gopurs_runtime.Value{Type: 9, IntVal: int64(1454898258), UnsafePtr: nil})
+		cache_Data_Bounded_Generic_genericTopNoArguments = gopurs_runtime.Value{Type: 9, IntVal: 190657853, UnsafePtr: unsafe.Pointer(&Constructor_Data_Bounded_Generic_GenericTop{1, gopurs_runtime.Value{Type: 9, IntVal: int64(1454898258), UnsafePtr: nil}})}
 	})
 	return cache_Data_Bounded_Generic_genericTopNoArguments
 }
@@ -107,7 +107,7 @@ var cache_Data_Bounded_Generic_genericBottomNoArguments gopurs_runtime.Value
 var once_Data_Bounded_Generic_genericBottomNoArguments sync.Once
 func Get_Data_Bounded_Generic_genericBottomNoArguments() gopurs_runtime.Value {
 	once_Data_Bounded_Generic_genericBottomNoArguments.Do(func() {
-		cache_Data_Bounded_Generic_genericBottomNoArguments = gopurs_runtime.RecordDict1("genericBottom'", gopurs_runtime.Value{Type: 9, IntVal: int64(1454898258), UnsafePtr: nil})
+		cache_Data_Bounded_Generic_genericBottomNoArguments = gopurs_runtime.Value{Type: 9, IntVal: 2049928665, UnsafePtr: unsafe.Pointer(&Constructor_Data_Bounded_Generic_GenericBottom{1, gopurs_runtime.Value{Type: 9, IntVal: int64(1454898258), UnsafePtr: nil}})}
 	})
 	return cache_Data_Bounded_Generic_genericBottomNoArguments
 }
@@ -251,7 +251,7 @@ return x_0
 func Call_Data_Bounded_Generic_genericTopArgument(dictBounded_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictBounded_0 gopurs_runtime.Value = dictBounded_0_loop
 _ = dictBounded_0
-return gopurs_runtime.RecordDict1("genericTop'", gopurs_runtime.RecordGet(dictBounded_0, "top"))
+return gopurs_runtime.Value{Type: 9, IntVal: 190657853, UnsafePtr: unsafe.Pointer(&Constructor_Data_Bounded_Generic_GenericTop{1, gopurs_runtime.RecordGet(dictBounded_0, "top")})}
 }
 
 func Call_Data_Bounded_Generic_genericTop_prime(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -263,7 +263,7 @@ return gopurs_runtime.RecordGet(dict_0, "genericTop'")
 func Call_Data_Bounded_Generic_genericTopConstructor(dictGenericTop_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictGenericTop_0 gopurs_runtime.Value = dictGenericTop_0_loop
 _ = dictGenericTop_0
-return gopurs_runtime.RecordDict1("genericTop'", gopurs_runtime.RecordGet(dictGenericTop_0, "genericTop'"))
+return gopurs_runtime.Value{Type: 9, IntVal: 190657853, UnsafePtr: unsafe.Pointer(&Constructor_Data_Bounded_Generic_GenericTop{1, gopurs_runtime.RecordGet(dictGenericTop_0, "genericTop'")})}
 }
 
 func Call_Data_Bounded_Generic_genericTopProduct(dictGenericTop_0_loop gopurs_runtime.Value, dictGenericTop1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -271,13 +271,13 @@ var dictGenericTop_0 gopurs_runtime.Value = dictGenericTop_0_loop
 _ = dictGenericTop_0
 var dictGenericTop1_1 gopurs_runtime.Value = dictGenericTop1_1_loop
 _ = dictGenericTop1_1
-return gopurs_runtime.RecordDict1("genericTop'", gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&Constructor_Data_Generic_Rep_Product{1, gopurs_runtime.RecordGet(dictGenericTop_0, "genericTop'"), gopurs_runtime.RecordGet(dictGenericTop1_1, "genericTop'")})})
+return gopurs_runtime.Value{Type: 9, IntVal: 190657853, UnsafePtr: unsafe.Pointer(&Constructor_Data_Bounded_Generic_GenericTop{1, gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&Constructor_Data_Generic_Rep_Product{1, gopurs_runtime.RecordGet(dictGenericTop_0, "genericTop'"), gopurs_runtime.RecordGet(dictGenericTop1_1, "genericTop'")})}})}
 }
 
 func Call_Data_Bounded_Generic_genericTopSum(dictGenericTop_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictGenericTop_0 gopurs_runtime.Value = dictGenericTop_0_loop
 _ = dictGenericTop_0
-return gopurs_runtime.RecordDict1("genericTop'", gopurs_runtime.Value{Type: 9, IntVal: 492034566, UnsafePtr: unsafe.Pointer(&Constructor_Data_Generic_Rep_Inr{1, gopurs_runtime.RecordGet(dictGenericTop_0, "genericTop'")})})
+return gopurs_runtime.Value{Type: 9, IntVal: 190657853, UnsafePtr: unsafe.Pointer(&Constructor_Data_Bounded_Generic_GenericTop{1, gopurs_runtime.Value{Type: 9, IntVal: 492034566, UnsafePtr: unsafe.Pointer(&Constructor_Data_Generic_Rep_Inr{1, gopurs_runtime.RecordGet(dictGenericTop_0, "genericTop'")})}})}
 }
 
 func Call_Data_Bounded_Generic_genericTop(dictGeneric_0_loop gopurs_runtime.Value, dictGenericTop_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -291,7 +291,7 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGeneric_0, "to"), gopur
 func Call_Data_Bounded_Generic_genericBottomArgument(dictBounded_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictBounded_0 gopurs_runtime.Value = dictBounded_0_loop
 _ = dictBounded_0
-return gopurs_runtime.RecordDict1("genericBottom'", gopurs_runtime.RecordGet(dictBounded_0, "bottom"))
+return gopurs_runtime.Value{Type: 9, IntVal: 2049928665, UnsafePtr: unsafe.Pointer(&Constructor_Data_Bounded_Generic_GenericBottom{1, gopurs_runtime.RecordGet(dictBounded_0, "bottom")})}
 }
 
 func Call_Data_Bounded_Generic_genericBottom_prime(dict_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -303,7 +303,7 @@ return gopurs_runtime.RecordGet(dict_0, "genericBottom'")
 func Call_Data_Bounded_Generic_genericBottomConstructor(dictGenericBottom_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictGenericBottom_0 gopurs_runtime.Value = dictGenericBottom_0_loop
 _ = dictGenericBottom_0
-return gopurs_runtime.RecordDict1("genericBottom'", gopurs_runtime.RecordGet(dictGenericBottom_0, "genericBottom'"))
+return gopurs_runtime.Value{Type: 9, IntVal: 2049928665, UnsafePtr: unsafe.Pointer(&Constructor_Data_Bounded_Generic_GenericBottom{1, gopurs_runtime.RecordGet(dictGenericBottom_0, "genericBottom'")})}
 }
 
 func Call_Data_Bounded_Generic_genericBottomProduct(dictGenericBottom_0_loop gopurs_runtime.Value, dictGenericBottom1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -311,13 +311,13 @@ var dictGenericBottom_0 gopurs_runtime.Value = dictGenericBottom_0_loop
 _ = dictGenericBottom_0
 var dictGenericBottom1_1 gopurs_runtime.Value = dictGenericBottom1_1_loop
 _ = dictGenericBottom1_1
-return gopurs_runtime.RecordDict1("genericBottom'", gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&Constructor_Data_Generic_Rep_Product{1, gopurs_runtime.RecordGet(dictGenericBottom_0, "genericBottom'"), gopurs_runtime.RecordGet(dictGenericBottom1_1, "genericBottom'")})})
+return gopurs_runtime.Value{Type: 9, IntVal: 2049928665, UnsafePtr: unsafe.Pointer(&Constructor_Data_Bounded_Generic_GenericBottom{1, gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&Constructor_Data_Generic_Rep_Product{1, gopurs_runtime.RecordGet(dictGenericBottom_0, "genericBottom'"), gopurs_runtime.RecordGet(dictGenericBottom1_1, "genericBottom'")})}})}
 }
 
 func Call_Data_Bounded_Generic_genericBottomSum(dictGenericBottom_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictGenericBottom_0 gopurs_runtime.Value = dictGenericBottom_0_loop
 _ = dictGenericBottom_0
-return gopurs_runtime.RecordDict1("genericBottom'", gopurs_runtime.Value{Type: 9, IntVal: 3478632216, UnsafePtr: unsafe.Pointer(&Constructor_Data_Generic_Rep_Inl{1, gopurs_runtime.RecordGet(dictGenericBottom_0, "genericBottom'")})})
+return gopurs_runtime.Value{Type: 9, IntVal: 2049928665, UnsafePtr: unsafe.Pointer(&Constructor_Data_Bounded_Generic_GenericBottom{1, gopurs_runtime.Value{Type: 9, IntVal: 3478632216, UnsafePtr: unsafe.Pointer(&Constructor_Data_Generic_Rep_Inl{1, gopurs_runtime.RecordGet(dictGenericBottom_0, "genericBottom'")})}})}
 }
 
 func Call_Data_Bounded_Generic_genericBottom(dictGeneric_0_loop gopurs_runtime.Value, dictGenericBottom_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

@@ -61,7 +61,7 @@ var cache_Data_Profunctor_profunctorFn gopurs_runtime.Value
 var once_Data_Profunctor_profunctorFn sync.Once
 func Get_Data_Profunctor_profunctorFn() gopurs_runtime.Value {
 	once_Data_Profunctor_profunctorFn.Do(func() {
-		cache_Data_Profunctor_profunctorFn = gopurs_runtime.RecordDict1("dimap", gopurs_runtime.Func(func(a2b_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Data_Profunctor_profunctorFn = gopurs_runtime.Value{Type: 9, IntVal: 2367018778, UnsafePtr: unsafe.Pointer(&Constructor_Data_Profunctor_Profunctor{1, gopurs_runtime.Func(func(a2b_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(c2d_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(b2c_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -69,7 +69,7 @@ return gopurs_runtime.Apply(c2d_1, gopurs_runtime.Apply(b2c_2, gopurs_runtime.Ap
 })
 })
 })
-}))
+})})}
 	})
 	return cache_Data_Profunctor_profunctorFn
 }
@@ -237,40 +237,6 @@ return Call_Data_Profunctor_lcmap__351678174(a2b_0_box, b2c_1_box, x_2_box)
 })
 	})
 	return cache_Data_Profunctor_lcmap__351678174
-}
-
-var cache_Data_Profunctor_profunctorFn__542207281 gopurs_runtime.Value
-var once_Data_Profunctor_profunctorFn__542207281 sync.Once
-func Get_Data_Profunctor_profunctorFn__542207281() gopurs_runtime.Value {
-	once_Data_Profunctor_profunctorFn__542207281.Do(func() {
-		cache_Data_Profunctor_profunctorFn__542207281 = gopurs_runtime.RecordDict1("dimap", gopurs_runtime.Func(func(a2b_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(c2d_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b2c_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(c2d_1, gopurs_runtime.Apply(b2c_2, gopurs_runtime.Apply(a2b_0, x_3)))
-})
-})
-})
-}))
-	})
-	return cache_Data_Profunctor_profunctorFn__542207281
-}
-
-var cache_Data_Profunctor_profunctorFn__3736629211 gopurs_runtime.Value
-var once_Data_Profunctor_profunctorFn__3736629211 sync.Once
-func Get_Data_Profunctor_profunctorFn__3736629211() gopurs_runtime.Value {
-	once_Data_Profunctor_profunctorFn__3736629211.Do(func() {
-		cache_Data_Profunctor_profunctorFn__3736629211 = gopurs_runtime.RecordDict1("dimap", gopurs_runtime.Func(func(a2b_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(c2d_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b2c_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(c2d_1, gopurs_runtime.Apply(b2c_2, gopurs_runtime.Apply(a2b_0, x_3)))
-})
-})
-})
-}))
-	})
-	return cache_Data_Profunctor_profunctorFn__3736629211
 }
 
 var cache_Data_Profunctor_rmap__1762133278 gopurs_runtime.Value

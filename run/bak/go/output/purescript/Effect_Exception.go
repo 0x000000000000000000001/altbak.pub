@@ -50,7 +50,7 @@ var cache_Effect_Exception_showError gopurs_runtime.Value
 var once_Effect_Exception_showError sync.Once
 func Get_Effect_Exception_showError() gopurs_runtime.Value {
 	once_Effect_Exception_showError.Do(func() {
-		cache_Effect_Exception_showError = gopurs_runtime.RecordDict1("show", Get_Effect_Exception_showErrorImpl())
+		cache_Effect_Exception_showError = gopurs_runtime.Value{Type: 9, IntVal: 1835580986, UnsafePtr: unsafe.Pointer(&Constructor_Data_Show_Show{1, Get_Effect_Exception_showErrorImpl()})}
 	})
 	return cache_Effect_Exception_showError
 }

@@ -32,7 +32,7 @@ var cache_Data_Reflectable_reifiableString gopurs_runtime.Value
 var once_Data_Reflectable_reifiableString sync.Once
 func Get_Data_Reflectable_reifiableString() gopurs_runtime.Value {
 	once_Data_Reflectable_reifiableString.Do(func() {
-		cache_Data_Reflectable_reifiableString = gopurs_runtime.RecordDict0()
+		cache_Data_Reflectable_reifiableString = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.RecordDict0().IntVal)), UnsafePtr: nil}
 	})
 	return cache_Data_Reflectable_reifiableString
 }
@@ -41,7 +41,7 @@ var cache_Data_Reflectable_reifiableOrdering gopurs_runtime.Value
 var once_Data_Reflectable_reifiableOrdering sync.Once
 func Get_Data_Reflectable_reifiableOrdering() gopurs_runtime.Value {
 	once_Data_Reflectable_reifiableOrdering.Do(func() {
-		cache_Data_Reflectable_reifiableOrdering = gopurs_runtime.RecordDict0()
+		cache_Data_Reflectable_reifiableOrdering = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.RecordDict0().IntVal)), UnsafePtr: nil}
 	})
 	return cache_Data_Reflectable_reifiableOrdering
 }
@@ -50,7 +50,7 @@ var cache_Data_Reflectable_reifiableInt gopurs_runtime.Value
 var once_Data_Reflectable_reifiableInt sync.Once
 func Get_Data_Reflectable_reifiableInt() gopurs_runtime.Value {
 	once_Data_Reflectable_reifiableInt.Do(func() {
-		cache_Data_Reflectable_reifiableInt = gopurs_runtime.RecordDict0()
+		cache_Data_Reflectable_reifiableInt = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.RecordDict0().IntVal)), UnsafePtr: nil}
 	})
 	return cache_Data_Reflectable_reifiableInt
 }
@@ -59,7 +59,7 @@ var cache_Data_Reflectable_reifiableBoolean gopurs_runtime.Value
 var once_Data_Reflectable_reifiableBoolean sync.Once
 func Get_Data_Reflectable_reifiableBoolean() gopurs_runtime.Value {
 	once_Data_Reflectable_reifiableBoolean.Do(func() {
-		cache_Data_Reflectable_reifiableBoolean = gopurs_runtime.RecordDict0()
+		cache_Data_Reflectable_reifiableBoolean = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.RecordDict0().IntVal)), UnsafePtr: nil}
 	})
 	return cache_Data_Reflectable_reifiableBoolean
 }

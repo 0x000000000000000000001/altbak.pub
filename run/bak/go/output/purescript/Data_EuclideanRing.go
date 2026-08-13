@@ -43,15 +43,15 @@ var cache_Data_EuclideanRing_euclideanRingNumber gopurs_runtime.Value
 var once_Data_EuclideanRing_euclideanRingNumber sync.Once
 func Get_Data_EuclideanRing_euclideanRingNumber() gopurs_runtime.Value {
 	once_Data_EuclideanRing_euclideanRingNumber.Do(func() {
-		cache_Data_EuclideanRing_euclideanRingNumber = gopurs_runtime.RecordDict4("CommutativeRing0", "degree", "div", "mod", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_CommutativeRing_commutativeRingNumber()
+		cache_Data_EuclideanRing_euclideanRingNumber = gopurs_runtime.Value{Type: 9, IntVal: 3214993658, UnsafePtr: unsafe.Pointer(&Constructor_Data_EuclideanRing_EuclideanRing{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1775085946, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_CommutativeRing_CommutativeRing](Get_Data_CommutativeRing_commutativeRingNumber()))}
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Int(1)
 }), Get_Data_EuclideanRing_numDiv(), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Float(0.0)
 })
-}))
+})})}
 	})
 	return cache_Data_EuclideanRing_euclideanRingNumber
 }
@@ -60,9 +60,9 @@ var cache_Data_EuclideanRing_euclideanRingInt gopurs_runtime.Value
 var once_Data_EuclideanRing_euclideanRingInt sync.Once
 func Get_Data_EuclideanRing_euclideanRingInt() gopurs_runtime.Value {
 	once_Data_EuclideanRing_euclideanRingInt.Do(func() {
-		cache_Data_EuclideanRing_euclideanRingInt = gopurs_runtime.RecordDict4("CommutativeRing0", "degree", "div", "mod", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_CommutativeRing_commutativeRingInt()
-}), Get_Data_EuclideanRing_intDegree(), Get_Data_EuclideanRing_intDiv(), Get_Data_EuclideanRing_intMod())
+		cache_Data_EuclideanRing_euclideanRingInt = gopurs_runtime.Value{Type: 9, IntVal: 3214993658, UnsafePtr: unsafe.Pointer(&Constructor_Data_EuclideanRing_EuclideanRing{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 1775085946, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_CommutativeRing_CommutativeRing](Get_Data_CommutativeRing_commutativeRingInt()))}
+}), Get_Data_EuclideanRing_intDegree(), Get_Data_EuclideanRing_intDiv(), Get_Data_EuclideanRing_intMod()})}
 	})
 	return cache_Data_EuclideanRing_euclideanRingInt
 }

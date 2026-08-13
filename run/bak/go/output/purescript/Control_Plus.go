@@ -21,14 +21,14 @@ var cache_Control_Plus_plusArray gopurs_runtime.Value
 var once_Control_Plus_plusArray sync.Once
 func Get_Control_Plus_plusArray() gopurs_runtime.Value {
 	once_Control_Plus_plusArray.Do(func() {
-		cache_Control_Plus_plusArray = gopurs_runtime.RecordDict2("Alt0", "empty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Control_Alt_altArray()
+		cache_Control_Plus_plusArray = gopurs_runtime.Value{Type: 9, IntVal: 3709470893, UnsafePtr: unsafe.Pointer(&Constructor_Control_Plus_Plus{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 4060500237, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Alt_Alt](Get_Control_Alt_altArray()))}
 }), gopurs_runtime.Array(func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array([]gopurs_runtime.Value{}).UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
-				}()))
+				}())})}
 	})
 	return cache_Control_Plus_plusArray
 }
@@ -53,22 +53,6 @@ return Call_Control_Plus_empty__932402776(dict_0_box)
 })
 	})
 	return cache_Control_Plus_empty__932402776
-}
-
-var cache_Control_Plus_plusArray__4260531026 gopurs_runtime.Value
-var once_Control_Plus_plusArray__4260531026 sync.Once
-func Get_Control_Plus_plusArray__4260531026() gopurs_runtime.Value {
-	once_Control_Plus_plusArray__4260531026.Do(func() {
-		cache_Control_Plus_plusArray__4260531026 = gopurs_runtime.RecordDict2("Alt0", "empty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Control_Alt_altArray()
-}), gopurs_runtime.Array(func() []gopurs_runtime.Value {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array([]gopurs_runtime.Value{}).UnsafePtr)
-					unboxed := make([]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { unboxed[i] = v }
-					return unboxed
-				}()))
-	})
-	return cache_Control_Plus_plusArray__4260531026
 }
 
 type Constructor_Control_Plus_Plus struct {

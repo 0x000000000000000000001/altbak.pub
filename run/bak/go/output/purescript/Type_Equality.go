@@ -43,11 +43,11 @@ var cache_Type_Equality_refl gopurs_runtime.Value
 var once_Type_Equality_refl sync.Once
 func Get_Type_Equality_refl() gopurs_runtime.Value {
 	once_Type_Equality_refl.Do(func() {
-		cache_Type_Equality_refl = gopurs_runtime.RecordDict2("Coercible0", "proof", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+		cache_Type_Equality_refl = gopurs_runtime.Value{Type: 9, IntVal: 3275391293, UnsafePtr: unsafe.Pointer(&Constructor_Type_Equality_TypeEquals{1, gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{}
 }), gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return a_0
-}))
+})})}
 	})
 	return cache_Type_Equality_refl
 }
