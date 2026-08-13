@@ -342,7 +342,9 @@ var dictDistributive_0 *Constructor_Data_Distributive_Distributive = dictDistrib
 _ = dictDistributive_0
 var dictFunctor_1 *Constructor_Data_Functor_Functor = dictFunctor_1_loop
 _ = dictFunctor_1
-return gopurs_runtime.Apply2(gopurs_runtime.Box(dictDistributive_0.V1), gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(dictFunctor_1)}, Get_Data_Distributive_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.Box(dictDistributive_0.V1), gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(dictFunctor_1)}, gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+}))
 }
 
 func Call_Data_Distributive_collect__1176340970(dict_0_loop *Constructor_Data_Distributive_Distributive) gopurs_runtime.Value {

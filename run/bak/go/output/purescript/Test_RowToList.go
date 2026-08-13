@@ -114,7 +114,7 @@ _ = __local_var_0_0
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
 _ = __local_var_1_1
-return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Show_showInt(), "show"), gopurs_runtime.Int(gopurs_runtime.Apply(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Test_RowToList_RecordKeys](Get_Test_RowToList_keysCons1()).V0), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}).IntVal)).StrVal())), gopurs_runtime.Value{})
+return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Show_showInt(), "show"), gopurs_runtime.Int((5) + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Test_RowToList_keysNil(), "keysImpl"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}).IntVal))).StrVal())), gopurs_runtime.Value{})
 })
 }()
 	})

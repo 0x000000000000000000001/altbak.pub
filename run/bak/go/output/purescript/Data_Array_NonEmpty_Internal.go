@@ -168,7 +168,9 @@ return Get_Data_Array_NonEmpty_Internal_foldable1NonEmptyArray()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Traversable_traversableArray()
 }), gopurs_runtime.Func(func(dictApply_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Array_NonEmpty_Internal_traversable1NonEmptyArray(), "traverse1"), gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](dictApply_0))}, Get_Data_Semigroup_Traversable_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Array_NonEmpty_Internal_traversable1NonEmptyArray(), "traverse1"), gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](dictApply_0))}, gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}))
 }), gopurs_runtime.Func(func(dictApply_0 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): apply_1_0 -> gopurs_runtime.Value
 apply_1_0 := gopurs_runtime.RecordGet(dictApply_0, "apply")

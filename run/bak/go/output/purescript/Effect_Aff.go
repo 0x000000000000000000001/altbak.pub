@@ -118,9 +118,16 @@ var cache_Effect_Aff_launchAff_ gopurs_runtime.Value
 var once_Effect_Aff_launchAff_ sync.Once
 func Get_Effect_Aff_launchAff_() gopurs_runtime.Value {
 	once_Effect_Aff_launchAff_.Do(func() {
-		cache_Effect_Aff_launchAff_ = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Effect_Aff_launchAff_(x_0_box)
+		cache_Effect_Aff_launchAff_ = func() gopurs_runtime.Value {
+// TAST (Let): __local_var_0_0 -> gopurs_runtime.Value
+__local_var_0_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_functorEffect(), "map"), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_Data_Unit_unit()
+}))
+_ = __local_var_0_0
+return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_0_0, Call_Effect_Aff_launchAff(x_1))
 })
+}()
 	})
 	return cache_Effect_Aff_launchAff_
 }
@@ -346,7 +353,9 @@ func Get_Effect_Aff_semigroupCanceler() gopurs_runtime.Value {
 		cache_Effect_Aff_semigroupCanceler = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(err_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply5(Get_Control_Parallel_parTraverse_(), gopurs_runtime.Value{Type: 9, IntVal: 327692956, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Parallel_Class_Parallel](Get_Effect_Aff_parallelAff()))}, gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](Get_Effect_Aff_applicativeParAff()))}, gopurs_runtime.Value{Type: 9, IntVal: 4280266298, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Foldable_Foldable](Get_Data_Foldable_foldableArray()))}, Get_Control_Parallel_identity(), gopurs_runtime.Array(func() []gopurs_runtime.Value {
+return gopurs_runtime.Apply5(Get_Control_Parallel_parTraverse_(), gopurs_runtime.Value{Type: 9, IntVal: 327692956, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Parallel_Class_Parallel](Get_Effect_Aff_parallelAff()))}, gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](Get_Effect_Aff_applicativeParAff()))}, gopurs_runtime.Value{Type: 9, IntVal: 4280266298, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Foldable_Foldable](Get_Data_Foldable_foldableArray()))}, gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_3
+}), gopurs_runtime.Array(func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array([]gopurs_runtime.Value{gopurs_runtime.Apply(v_0, err_2), gopurs_runtime.Apply(v1_1, err_2)}).UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
@@ -683,12 +692,15 @@ func Get_Effect_Aff_apathize() gopurs_runtime.Value {
 	once_Effect_Aff_apathize.Do(func() {
 		cache_Effect_Aff_apathize = func() gopurs_runtime.Value {
 // TAST (Let): __local_var_0_0 -> gopurs_runtime.Value
-__local_var_0_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_Aff_functorAff(), "map"), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_0_0 := gopurs_runtime.Apply(Get_Control_Monad_Error_Class_try(), Get_Effect_Aff_monadErrorAff())
+_ = __local_var_0_0
+// TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
+__local_var_1_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_Aff_functorAff(), "map"), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Unit_unit()
 }))
-_ = __local_var_0_0
-return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Apply(Get_Effect_Aff_attempt(), x_1))
+_ = __local_var_1_1
+return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_1_1, gopurs_runtime.Apply(__local_var_0_0, x_2))
 })
 }()
 	})
@@ -1359,12 +1371,6 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_applicativeEffec
 }))
 }
 
-func Call_Effect_Aff_launchAff_(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var x_0 gopurs_runtime.Value = x_0_loop
-_ = x_0
-return gopurs_runtime.Apply(Get_Effect_Aff_void(), Call_Effect_Aff_launchAff(x_0))
-}
-
 func Call_Effect_Aff_delay(v_0_loop float64) gopurs_runtime.Value {
 var v_0 float64 = v_0_loop
 _ = v_0
@@ -1530,7 +1536,9 @@ return gopurs_runtime.Apply2(Get_Effect_Aff__bind(), gopurs_runtime.Apply(Get_Ef
 var __t0 gopurs_runtime.Value
 {
 if (suspended_2.IntVal) != (0) {
-__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_Aff_monadEffectAff(), "liftEffect"), gopurs_runtime.Apply(Get_Effect_Aff_void1(), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(v_1, "kill"), e_0, gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_Aff_monadEffectAff(), "liftEffect"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Effect_functorEffect(), "map"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_Data_Unit_unit()
+}), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(v_1, "kill"), e_0, gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Unit_unit()
 })
@@ -1599,7 +1607,9 @@ return __local_var_1_0
 return __local_var_1_2
 }), gopurs_runtime.Func(func(err_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(sup_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply5(Get_Control_Parallel_parTraverse_(), gopurs_runtime.Value{Type: 9, IntVal: 327692956, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Parallel_Class_Parallel](Get_Effect_Aff_parallelAff()))}, gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](Get_Effect_Aff_applicativeParAff()))}, gopurs_runtime.Value{Type: 9, IntVal: 4280266298, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Foldable_Foldable](Get_Data_Foldable_foldableArray()))}, Get_Control_Parallel_identity(), gopurs_runtime.Array(func() []gopurs_runtime.Value {
+return gopurs_runtime.Apply5(Get_Control_Parallel_parTraverse_(), gopurs_runtime.Value{Type: 9, IntVal: 327692956, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Parallel_Class_Parallel](Get_Effect_Aff_parallelAff()))}, gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](Get_Effect_Aff_applicativeParAff()))}, gopurs_runtime.Value{Type: 9, IntVal: 4280266298, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Foldable_Foldable](Get_Data_Foldable_foldableArray()))}, gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_3
+}), gopurs_runtime.Array(func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array([]gopurs_runtime.Value{Call_Effect_Aff_killFiber(err_1, gopurs_runtime.RecordGet(sup_2, "fiber")), Call_Effect_Aff_makeAff__3447620704(gopurs_runtime.Func(func(k_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp3(Get_Effect_Aff__killAll(), err_1, gopurs_runtime.RecordGet(sup_2, "supervisor"), gopurs_runtime.Apply(k_3, gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Right{1, Get_Data_Unit_unit()})}))
 }))}).UnsafePtr)
@@ -1634,7 +1644,9 @@ var k_0 gopurs_runtime.Value = k_0_loop
 _ = k_0
 var aff_1 gopurs_runtime.Value = aff_1_loop
 _ = aff_1
-return gopurs_runtime.Apply(Get_Effect_Aff_void(), Call_Effect_Aff_runAff(k_0, aff_1))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Effect_functorEffect(), "map"), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_Data_Unit_unit()
+}), Call_Effect_Aff_runAff(k_0, aff_1))
 }
 
 func Call_Effect_Aff_runSuspendedAff(k_0_loop gopurs_runtime.Value, aff_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1731,7 +1743,9 @@ return gopurs_runtime.Apply2(Get_Effect_Aff__bind(), gopurs_runtime.Apply(Get_Ef
 var __t0 gopurs_runtime.Value
 {
 if (suspended_2.IntVal) != (0) {
-__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_Aff_monadEffectAff(), "liftEffect"), gopurs_runtime.Apply(Get_Effect_Aff_void1(), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(v_1, "kill"), e_0, gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_Aff_monadEffectAff(), "liftEffect"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Effect_functorEffect(), "map"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_Data_Unit_unit()
+}), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(v_1, "kill"), e_0, gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Unit_unit()
 })
@@ -1768,7 +1782,9 @@ return gopurs_runtime.Apply2(Get_Effect_Aff__bind(), gopurs_runtime.Apply(Get_Ef
 var __t0 gopurs_runtime.Value
 {
 if (suspended_2.IntVal) != (0) {
-__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_Aff_monadEffectAff(), "liftEffect"), gopurs_runtime.Apply(Get_Effect_Aff_void1(), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(v_1, "kill"), e_0, gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_Aff_monadEffectAff(), "liftEffect"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Effect_functorEffect(), "map"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_Data_Unit_unit()
+}), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(v_1, "kill"), e_0, gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Unit_unit()
 })

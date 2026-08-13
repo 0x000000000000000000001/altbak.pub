@@ -464,7 +464,9 @@ __t10 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs
 }
 end_branch_10:
 // TAST (Let): __local_var_4_2 -> *Constructor_Data_Maybe_Just
-__local_var_4_2 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Maybe_bindMaybe(), "bind"), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t10)}, Get_Control_Bind_identity()))
+__local_var_4_2 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Maybe_bindMaybe(), "bind"), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t10)}, gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_4
+})))
 _ = __local_var_4_2
 var __t11 *Constructor_Data_Maybe_Just
 {

@@ -369,7 +369,9 @@ var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Data_Profunctor_profunctorFn(), "dimap"), f_0, Get_Data_Profunctor_identity(), v_1)
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Data_Profunctor_profunctorFn(), "dimap"), f_0, gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+}), v_1)
 }
 
 func Call_Data_Functor_Costar_closedCostar(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {

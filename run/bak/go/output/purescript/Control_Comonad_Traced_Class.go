@@ -334,9 +334,19 @@ _ = dictComonadTraced_0
 // TAST (Let): comonadStoreT_1_0 -> gopurs_runtime.Value
 comonadStoreT_1_0 := gopurs_runtime.Apply(Get_Control_Comonad_Store_Trans_comonadStoreT(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadTraced_0, "Comonad0"), gopurs_runtime.Value{}))
 _ = comonadStoreT_1_0
+// TAST (Let): lower1_2_1 -> gopurs_runtime.Value
+lower1_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Comonad_Store_Trans_comonadTransStoreT(), "lower"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadTraced_0, "Comonad0"), gopurs_runtime.Value{}))
+_ = lower1_2_1
 return gopurs_runtime.RecordDict2("Comonad0", "track", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return comonadStoreT_1_0
-}), Call_Control_Comonad_Traced_Class_lowerTrack1(gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Traced_Class_ComonadTraced](dictComonadTraced_0)))
+}), gopurs_runtime.Func(func(m_3 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_4_2 -> gopurs_runtime.Value
+__local_var_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadTraced_0, "track"), m_3)
+_ = __local_var_4_2
+return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_4_2, gopurs_runtime.Apply(lower1_2_1, x_5))
+})
+}))
 }
 
 func Call_Control_Comonad_Traced_Class_comonadTracedIdentityT(dictComonadTraced_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -369,9 +379,19 @@ return extendIdentityI1_2_2
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_1, "extract"), x_3)
 }))
 _ = comonadIdentityT_1_0
+// TAST (Let): lower1_2_5 -> gopurs_runtime.Value
+lower1_2_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Comonad_Trans_Class_comonadTransIdentityT(), "lower"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadTraced_0, "Comonad0"), gopurs_runtime.Value{}))
+_ = lower1_2_5
 return gopurs_runtime.RecordDict2("Comonad0", "track", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return comonadIdentityT_1_0
-}), Call_Control_Comonad_Traced_Class_lowerTrack2(gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Traced_Class_ComonadTraced](dictComonadTraced_0)))
+}), gopurs_runtime.Func(func(m_3 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_4_6 -> gopurs_runtime.Value
+__local_var_4_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadTraced_0, "track"), m_3)
+_ = __local_var_4_6
+return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_4_6, gopurs_runtime.Apply(lower1_2_5, x_5))
+})
+}))
 }
 
 func Call_Control_Comonad_Traced_Class_comonadTracedEnvT(dictComonadTraced_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -380,9 +400,19 @@ _ = dictComonadTraced_0
 // TAST (Let): comonadEnvT_1_0 -> gopurs_runtime.Value
 comonadEnvT_1_0 := gopurs_runtime.Apply(Get_Control_Comonad_Env_Trans_comonadEnvT(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadTraced_0, "Comonad0"), gopurs_runtime.Value{}))
 _ = comonadEnvT_1_0
+// TAST (Let): lower1_2_1 -> gopurs_runtime.Value
+lower1_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Comonad_Env_Trans_comonadTransEnvT(), "lower"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadTraced_0, "Comonad0"), gopurs_runtime.Value{}))
+_ = lower1_2_1
 return gopurs_runtime.RecordDict2("Comonad0", "track", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return comonadEnvT_1_0
-}), Call_Control_Comonad_Traced_Class_lowerTrack3(gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Traced_Class_ComonadTraced](dictComonadTraced_0)))
+}), gopurs_runtime.Func(func(m_3 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_4_2 -> gopurs_runtime.Value
+__local_var_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadTraced_0, "track"), m_3)
+_ = __local_var_4_2
+return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_4_2, gopurs_runtime.Apply(lower1_2_1, x_5))
+})
+}))
 }
 
 func Call_Control_Comonad_Traced_Class_censor(dictFunctor_0_loop *Constructor_Data_Functor_Functor, f_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {

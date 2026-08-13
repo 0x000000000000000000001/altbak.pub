@@ -209,7 +209,9 @@ Profunctor0_2_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Profunctor_Pro
 _ = Profunctor0_2_0
 return gopurs_runtime.Func(func(l_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(r_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.Box(Profunctor0_2_0.V0), Get_Data_Profunctor_identity1(), gopurs_runtime.Func(func(v2_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(gopurs_runtime.Box(Profunctor0_2_0.V0), gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_5
+}), gopurs_runtime.Func(func(v2_5 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
 if (v2_5.Type == 9 && v2_5.IntVal == 3711209382) {

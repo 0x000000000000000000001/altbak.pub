@@ -245,7 +245,9 @@ func Call_Control_Comonad_Store_Class_seeks(dictComonadStore_0_loop *Constructor
 var dictComonadStore_0 *Constructor_Control_Comonad_Store_Class_ComonadStore = dictComonadStore_0_loop
 _ = dictComonadStore_0
 // TAST (Let): duplicate_1_0 -> gopurs_runtime.Value
-duplicate_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.Box(dictComonadStore_0.V0), gopurs_runtime.Value{}), "Extend0"), gopurs_runtime.Value{}), "extend"), Get_Control_Extend_identity())
+duplicate_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.Box(dictComonadStore_0.V0), gopurs_runtime.Value{}), "Extend0"), gopurs_runtime.Value{}), "extend"), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}))
 _ = duplicate_1_0
 return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -261,7 +263,9 @@ func Call_Control_Comonad_Store_Class_seek(dictComonadStore_0_loop *Constructor_
 var dictComonadStore_0 *Constructor_Control_Comonad_Store_Class_ComonadStore = dictComonadStore_0_loop
 _ = dictComonadStore_0
 // TAST (Let): duplicate_1_0 -> gopurs_runtime.Value
-duplicate_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.Box(dictComonadStore_0.V0), gopurs_runtime.Value{}), "Extend0"), gopurs_runtime.Value{}), "extend"), Get_Control_Extend_identity())
+duplicate_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.Box(dictComonadStore_0.V0), gopurs_runtime.Value{}), "Extend0"), gopurs_runtime.Value{}), "extend"), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}))
 _ = duplicate_1_0
 return gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_3_1 -> gopurs_runtime.Value

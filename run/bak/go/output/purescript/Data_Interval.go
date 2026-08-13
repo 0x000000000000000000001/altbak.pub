@@ -617,7 +617,9 @@ return Get_Data_Interval_foldableInterval()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Interval_functorInterval()
 }), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Interval_traversableInterval(), "traverse"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](dictApplicative_0))}, Get_Data_Traversable_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Interval_traversableInterval(), "traverse"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](dictApplicative_0))}, gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}))
 }), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): Apply0_1_0 -> *Constructor_Control_Apply_Apply
 Apply0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}))
@@ -686,7 +688,9 @@ return Get_Data_Interval_foldableRecurringInterval()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Interval_functorRecurringInterval()
 }), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Interval_traversableRecurringInterval(), "traverse"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](dictApplicative_0))}, Get_Data_Traversable_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Interval_traversableRecurringInterval(), "traverse"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](dictApplicative_0))}, gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}))
 }), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): Functor0_1_0 -> *Constructor_Data_Functor_Functor
 Functor0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
@@ -837,7 +841,11 @@ return Get_Data_Interval_bifoldableInterval()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Interval_bifunctorInterval()
 }), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Data_Interval_bitraversableInterval(), "bitraverse"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](dictApplicative_0))}, Get_Data_Bitraversable_identity(), Get_Data_Bitraversable_identity1())
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Data_Interval_bitraversableInterval(), "bitraverse"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](dictApplicative_0))}, gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}))
 }), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): Apply0_1_0 -> *Constructor_Control_Apply_Apply
 Apply0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}))
@@ -903,7 +911,11 @@ return Get_Data_Interval_bifoldableRecurringInterval()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Interval_bifunctorRecurringInterval()
 }), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Data_Interval_bitraversableRecurringInterval(), "bitraverse"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](dictApplicative_0))}, Get_Data_Bitraversable_identity(), Get_Data_Bitraversable_identity1())
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Data_Interval_bitraversableRecurringInterval(), "bitraverse"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](dictApplicative_0))}, gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}))
 }), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): Functor0_1_0 -> *Constructor_Data_Functor_Functor
 Functor0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
@@ -1251,7 +1263,11 @@ return Get_Data_Interval_bifoldableInterval()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Interval_bifunctorInterval()
 }), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Data_Interval_bitraversableInterval(), "bitraverse"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](dictApplicative_0))}, Get_Data_Bitraversable_identity(), Get_Data_Bitraversable_identity1())
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Data_Interval_bitraversableInterval(), "bitraverse"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](dictApplicative_0))}, gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}))
 }), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): Apply0_1_0 -> *Constructor_Control_Apply_Apply
 Apply0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}))
@@ -1587,7 +1603,9 @@ return Get_Data_Interval_foldableInterval()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Interval_functorInterval()
 }), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Interval_traversableInterval(), "traverse"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](dictApplicative_0))}, Get_Data_Traversable_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Interval_traversableInterval(), "traverse"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](dictApplicative_0))}, gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}))
 }), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): Apply0_1_0 -> *Constructor_Control_Apply_Apply
 Apply0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}))
@@ -1737,7 +1755,30 @@ _ = dictShow1_1
 showInterval2_2_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Show_Show](Call_Data_Interval_showInterval(dictShow_0, dictShow1_1))
 _ = showInterval2_2_0
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str((((("(RecurringInterval ") + (gopurs_runtime.Apply(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Show_Show](Get_Data_Interval_showMaybe()).V0), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Interval_RecurringInterval)(v_3.UnsafePtr).V0)}).StrVal())) + (" ")) + (gopurs_runtime.Apply(gopurs_runtime.Box(showInterval2_2_0.V0), (*Constructor_Data_Interval_RecurringInterval)(v_3.UnsafePtr).V1).StrVal())) + (")"))
+var __t3 string
+{
+var __t_tag_1 *Constructor_Data_Maybe_Just = (*Constructor_Data_Interval_RecurringInterval)(v_3.UnsafePtr).V0
+if (__t_tag_1 != nil) {
+__t3 = (("(RecurringInterval (Just ") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Show_showInt(), "show"), ((*Constructor_Data_Interval_RecurringInterval)(v_3.UnsafePtr).V0).V0).StrVal())) + (") ")
+goto end_branch_3
+} else {
+
+}
+}
+{
+var __t_tag_2 *Constructor_Data_Maybe_Just = (*Constructor_Data_Interval_RecurringInterval)(v_3.UnsafePtr).V0
+if (__t_tag_2 == nil) {
+__t3 = "(RecurringInterval Nothing "
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = func() gopurs_runtime.Value { panic("Failed pattern match") }().StrVal()
+}
+end_branch_3:
+return gopurs_runtime.Str(((__t3) + (gopurs_runtime.Apply(gopurs_runtime.Box(showInterval2_2_0.V0), (*Constructor_Data_Interval_RecurringInterval)(v_3.UnsafePtr).V1).StrVal())) + (")"))
 }))
 }
 
@@ -1855,7 +1896,50 @@ eqInterval2_2_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](Call_Da
 _ = eqInterval2_2_0
 return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(((gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](Get_Data_Interval_eqMaybe()).V0), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Interval_RecurringInterval)(x_3.UnsafePtr).V0)}, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Interval_RecurringInterval)(y_4.UnsafePtr).V0)}).IntVal) != (0)) && ((gopurs_runtime.Apply2(gopurs_runtime.Box(eqInterval2_2_0.V0), (*Constructor_Data_Interval_RecurringInterval)(x_3.UnsafePtr).V1, (*Constructor_Data_Interval_RecurringInterval)(y_4.UnsafePtr).V1).IntVal) != (0)))
+var __t7 bool
+{
+var __t_tag_1 *Constructor_Data_Maybe_Just = (*Constructor_Data_Interval_RecurringInterval)(x_3.UnsafePtr).V0
+if (__t_tag_1 == nil) {
+var __t3 bool
+{
+var __t_tag_2 *Constructor_Data_Maybe_Just = (*Constructor_Data_Interval_RecurringInterval)(y_4.UnsafePtr).V0
+if (__t_tag_2 == nil) {
+__t3 = true
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = false
+}
+end_branch_3:
+__t7 = __t3
+goto end_branch_7
+} else {
+
+}
+}
+{
+var __t_tag_4 *Constructor_Data_Maybe_Just = (*Constructor_Data_Interval_RecurringInterval)(x_3.UnsafePtr).V0
+var __t_and_6 bool = false
+if (__t_tag_4 != nil) {
+
+var __t_tag_5 *Constructor_Data_Maybe_Just = (*Constructor_Data_Interval_RecurringInterval)(y_4.UnsafePtr).V0
+__t_and_6 = (__t_tag_5 != nil)
+}
+if __t_and_6 {
+__t7 = (((*Constructor_Data_Interval_RecurringInterval)(x_3.UnsafePtr).V0).V0.IntVal) == (((*Constructor_Data_Interval_RecurringInterval)(y_4.UnsafePtr).V0).V0.IntVal)
+goto end_branch_7
+} else {
+
+}
+}
+{
+__t7 = false
+}
+end_branch_7:
+return gopurs_runtime.Bool((__t7) && ((gopurs_runtime.Apply2(gopurs_runtime.Box(eqInterval2_2_0.V0), (*Constructor_Data_Interval_RecurringInterval)(x_3.UnsafePtr).V1, (*Constructor_Data_Interval_RecurringInterval)(y_4.UnsafePtr).V1).IntVal) != (0)))
 })
 }))
 }
@@ -2072,31 +2156,88 @@ return gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_do
 return eqRecurringInterval2_5_3
 }), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_7 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): v_8_4 -> gopurs_runtime.Value
-v_8_4 := gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](Get_Data_Interval_ordMaybe()).V1), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Interval_RecurringInterval)(x_6.UnsafePtr).V0)}, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Interval_RecurringInterval)(y_7.UnsafePtr).V0)})
-_ = v_8_4
-var __t5 uint32
+// TAST (Let): __local_var_8_4 -> gopurs_runtime.Value
+__local_var_8_4 := gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict1("eq", Get_Data_Eq_eqIntImpl())
+}), gopurs_runtime.Apply3(Get_Data_Ord_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}))
+_ = __local_var_8_4
+var __t13 uint32
 {
-if (uint32(v_8_4.IntVal) == 1527465420) {
-__t5 = 1527465420
-goto end_branch_5
+var __t_tag_6 *Constructor_Data_Maybe_Just = (*Constructor_Data_Interval_RecurringInterval)(x_6.UnsafePtr).V0
+if (__t_tag_6 == nil) {
+var __t8 uint32
+{
+var __t_tag_7 *Constructor_Data_Maybe_Just = (*Constructor_Data_Interval_RecurringInterval)(y_7.UnsafePtr).V0
+if (__t_tag_7 == nil) {
+__t8 = 902936544
+goto end_branch_8
 } else {
 
 }
 }
 {
-if (uint32(v_8_4.IntVal) == 380165415) {
-__t5 = 380165415
-goto end_branch_5
+__t8 = 1527465420
+}
+end_branch_8:
+__t13 = __t8
+goto end_branch_13
 } else {
 
 }
 }
 {
-__t5 = uint32(gopurs_runtime.Apply2(gopurs_runtime.Box(ordInterval2_4_2.V1), (*Constructor_Data_Interval_RecurringInterval)(x_6.UnsafePtr).V1, (*Constructor_Data_Interval_RecurringInterval)(y_7.UnsafePtr).V1).IntVal)
+var __t_tag_9 *Constructor_Data_Maybe_Just = (*Constructor_Data_Interval_RecurringInterval)(y_7.UnsafePtr).V0
+if (__t_tag_9 == nil) {
+__t13 = 380165415
+goto end_branch_13
+} else {
+
 }
-end_branch_5:
-return gopurs_runtime.Value{Type: 9, IntVal: int64(__t5), UnsafePtr: nil}
+}
+{
+var __t_tag_10 *Constructor_Data_Maybe_Just = (*Constructor_Data_Interval_RecurringInterval)(x_6.UnsafePtr).V0
+var __t_and_12 bool = false
+if (__t_tag_10 != nil) {
+
+var __t_tag_11 *Constructor_Data_Maybe_Just = (*Constructor_Data_Interval_RecurringInterval)(y_7.UnsafePtr).V0
+__t_and_12 = (__t_tag_11 != nil)
+}
+if __t_and_12 {
+__t13 = uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_8_4, "compare"), ((*Constructor_Data_Interval_RecurringInterval)(x_6.UnsafePtr).V0).V0, ((*Constructor_Data_Interval_RecurringInterval)(y_7.UnsafePtr).V0).V0).IntVal)
+goto end_branch_13
+} else {
+
+}
+}
+{
+__t13 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
+}
+end_branch_13:
+// TAST (Let): v_9_5 -> uint32
+v_9_5 := __t13
+_ = v_9_5
+var __t14 uint32
+{
+if (v_9_5 == 1527465420) {
+__t14 = 1527465420
+goto end_branch_14
+} else {
+
+}
+}
+{
+if (v_9_5 == 380165415) {
+__t14 = 380165415
+goto end_branch_14
+} else {
+
+}
+}
+{
+__t14 = uint32(gopurs_runtime.Apply2(gopurs_runtime.Box(ordInterval2_4_2.V1), (*Constructor_Data_Interval_RecurringInterval)(x_6.UnsafePtr).V1, (*Constructor_Data_Interval_RecurringInterval)(y_7.UnsafePtr).V1).IntVal)
+}
+end_branch_14:
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t14), UnsafePtr: nil}
 })
 }))
 })

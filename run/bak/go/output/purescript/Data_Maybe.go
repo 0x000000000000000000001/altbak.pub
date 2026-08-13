@@ -2035,7 +2035,9 @@ return (__t0.IntVal) != (0)
 func Call_Data_Maybe_fromMaybe_prime(a_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var a_0 gopurs_runtime.Value = a_0_loop
 _ = a_0
-return gopurs_runtime.Apply2(Get_Data_Maybe_maybe_prime(), a_0, Get_Data_Maybe_identity())
+return gopurs_runtime.Apply2(Get_Data_Maybe_maybe_prime(), a_0, gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}))
 }
 
 func Call_Data_Maybe_fromMaybe(a_0_loop gopurs_runtime.Value, v2_1_loop *Constructor_Data_Maybe_Just) gopurs_runtime.Value {

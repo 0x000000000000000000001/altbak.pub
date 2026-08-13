@@ -1137,7 +1137,9 @@ return Get_Data_Map_Internal_foldableMap()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Map_Internal_functorMap()
 }), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Map_Internal_traversableMap(), "traverse"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](dictApplicative_0))}, Get_Data_Map_Internal_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Map_Internal_traversableMap(), "traverse"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](dictApplicative_0))}, gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}))
 }), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): Apply0_1_0 -> *Constructor_Control_Apply_Apply
 Apply0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}))
@@ -3284,7 +3286,9 @@ return Get_Data_Map_Internal_foldableMap()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Map_Internal_functorMap()
 }), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Map_Internal_traversableMap(), "traverse"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](dictApplicative_0))}, Get_Data_Map_Internal_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Map_Internal_traversableMap(), "traverse"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](dictApplicative_0))}, gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}))
 }), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): Apply0_1_0 -> *Constructor_Control_Apply_Apply
 Apply0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}))
@@ -3348,7 +3352,9 @@ return Get_Data_Map_Internal_foldableMap()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Map_Internal_functorMap()
 }), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Map_Internal_traversableMap(), "traverse"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](dictApplicative_0))}, Get_Data_Map_Internal_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Map_Internal_traversableMap(), "traverse"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](dictApplicative_0))}, gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}))
 }), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): Apply0_1_0 -> *Constructor_Control_Apply_Apply
 Apply0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}))
@@ -7269,7 +7275,9 @@ func Call_Data_Map_Internal_catMaybes(dictOrd_0_loop *Constructor_Data_Ord_Ord) 
 var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 return Call_Data_Map_Internal_mapMaybeWithKey(dictOrd_0, gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Map_Internal_identity1()
+return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+})
 }))
 }
 
@@ -7283,7 +7291,9 @@ return gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(
 return Get_Data_Map_Internal_functorMap()
 }), gopurs_runtime.Func(func(m1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(m2_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](gopurs_runtime.UncurriedApp4(Get_Data_Map_Internal_unsafeIntersectionWith(), compare_1_0, Get_Data_Map_Internal_identity2(), gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](m1_2))}, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](m2_3))})))}
+return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](gopurs_runtime.UncurriedApp4(Get_Data_Map_Internal_unsafeIntersectionWith(), compare_1_0, gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_4
+}), gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](m1_2))}, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](m2_3))})))}
 })
 }))
 }
@@ -7291,70 +7301,71 @@ return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointe
 func Call_Data_Map_Internal_bindMap(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-// TAST (Let): compare_1_1 -> gopurs_runtime.Value
-compare_1_1 := gopurs_runtime.RecordGet(dictOrd_0, "compare")
-_ = compare_1_1
 // TAST (Let): applyMap1_1_0 -> gopurs_runtime.Value
-applyMap1_1_0 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Map_Internal_functorMap()
-}), gopurs_runtime.Func(func(m1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(m2_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](gopurs_runtime.UncurriedApp4(Get_Data_Map_Internal_unsafeIntersectionWith(), compare_1_1, Get_Data_Map_Internal_identity2(), gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](m1_2))}, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](m2_3))})))}
-})
-}))
+applyMap1_1_0 := Call_Data_Map_Internal_applyMap(dictOrd_0)
 _ = applyMap1_1_0
 return gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return applyMap1_1_0
 }), gopurs_runtime.Func(func(m_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](gopurs_runtime.Apply(Call_Data_Map_Internal_mapMaybeWithKey(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0), gopurs_runtime.Func(func(k_4 gopurs_runtime.Value) gopurs_runtime.Value {
-var go__go_5_3_33 gopurs_runtime.Value
-go__go_5_3_33 = gopurs_runtime.Func(func(v_6_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
+var go__go_5_2_33 gopurs_runtime.Value
+go__go_5_2_33 = gopurs_runtime.Func(func(v_6_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
 var v_6_loop gopurs_runtime.Value = v_6_loop_val
-go__go_5_3_33:
+go__go_5_2_33:
 for {
-if false { continue go__go_5_3_33 }
+if false { continue go__go_5_2_33 }
 var v_6 gopurs_runtime.Value = v_6_loop
 _ = v_6
-var __t6 *Constructor_Data_Maybe_Just
+var __t5 *Constructor_Data_Maybe_Just
 {
 if (v_6.Type == 9 && v_6.IntVal == 324739070 && v_6.UnsafePtr == nil) {
-__t6 = (*Constructor_Data_Maybe_Just)(nil)
-goto end_branch_6
+__t5 = (*Constructor_Data_Maybe_Just)(nil)
+goto end_branch_5
 } else {
 
 }
 }
 {
 if (v_6.Type == 9 && v_6.IntVal == 324739070 && v_6.UnsafePtr != nil) {
-// TAST (Let): v1_7_4 -> gopurs_runtime.Value
-v1_7_4 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), k_4, (*Constructor_Data_Map_Internal_Node)(v_6.UnsafePtr).V2)
-_ = v1_7_4
-var __t5 *Constructor_Data_Maybe_Just
+// TAST (Let): v1_7_3 -> gopurs_runtime.Value
+v1_7_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), k_4, (*Constructor_Data_Map_Internal_Node)(v_6.UnsafePtr).V2)
+_ = v1_7_3
+var __t4 *Constructor_Data_Maybe_Just
 {
-if (uint32(v1_7_4.IntVal) == 1527465420) {
+if (uint32(v1_7_3.IntVal) == 1527465420) {
 v_6_loop = gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer((*Constructor_Data_Map_Internal_Node)(v_6.UnsafePtr).V4)}
-continue go__go_5_3_33
-__t5 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{})
-goto end_branch_5
+continue go__go_5_2_33
+__t4 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{})
+goto end_branch_4
 } else {
 
 }
 }
 {
-if (uint32(v1_7_4.IntVal) == 380165415) {
+if (uint32(v1_7_3.IntVal) == 380165415) {
 v_6_loop = gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer((*Constructor_Data_Map_Internal_Node)(v_6.UnsafePtr).V5)}
-continue go__go_5_3_33
-__t5 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{})
-goto end_branch_5
+continue go__go_5_2_33
+__t4 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{})
+goto end_branch_4
 } else {
 
 }
 }
 {
-if (uint32(v1_7_4.IntVal) == 902936544) {
-__t5 = &Constructor_Data_Maybe_Just{1, (*Constructor_Data_Map_Internal_Node)(v_6.UnsafePtr).V3}
+if (uint32(v1_7_3.IntVal) == 902936544) {
+__t4 = &Constructor_Data_Maybe_Just{1, (*Constructor_Data_Map_Internal_Node)(v_6.UnsafePtr).V3}
+goto end_branch_4
+} else {
+
+}
+}
+{
+__t4 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_runtime.Value { panic("Failed pattern match") }())
+}
+end_branch_4:
+__t5 = __t4
 goto end_branch_5
 } else {
 
@@ -7364,25 +7375,15 @@ goto end_branch_5
 __t5 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_runtime.Value { panic("Failed pattern match") }())
 }
 end_branch_5:
-__t6 = __t5
-goto end_branch_6
-} else {
-
-}
-}
-{
-__t6 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_runtime.Value { panic("Failed pattern match") }())
-}
-end_branch_6:
-return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t6)}
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t5)}
 }
 }()
 })
-// TAST (Let): __local_var_5_2 -> gopurs_runtime.Value
-__local_var_5_2 := go__go_5_3_33
-_ = __local_var_5_2
+// TAST (Let): __local_var_5_1 -> gopurs_runtime.Value
+__local_var_5_1 := go__go_5_2_33
+_ = __local_var_5_1
 return gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_5_2, gopurs_runtime.Apply(f_3, x_6))
+return gopurs_runtime.Apply(__local_var_5_1, gopurs_runtime.Apply(f_3, x_6))
 })
 })), gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](m_2))})))}
 })

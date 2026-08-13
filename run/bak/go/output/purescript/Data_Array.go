@@ -79,7 +79,9 @@ var cache_Data_Array_fold1 gopurs_runtime.Value
 var once_Data_Array_fold1 sync.Once
 func Get_Data_Array_fold1() gopurs_runtime.Value {
 	once_Data_Array_fold1.Do(func() {
-		cache_Data_Array_fold1 = gopurs_runtime.Apply(Get_Data_Foldable_fold(), Get_Data_Foldable_foldableArray())
+		cache_Data_Array_fold1 = gopurs_runtime.Func(func(dictMonoid_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Data_Array_fold1(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](dictMonoid_0_box))
+})
 	})
 	return cache_Data_Array_fold1
 }
@@ -2905,6 +2907,14 @@ end_branch_0:
 return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](__t0)
 }
 
+func Call_Data_Array_fold1(dictMonoid_0_loop *Constructor_Data_Monoid_Monoid) gopurs_runtime.Value {
+var dictMonoid_0 *Constructor_Data_Monoid_Monoid = dictMonoid_0_loop
+_ = dictMonoid_0
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Foldable_foldableArray(), "foldMap"), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(dictMonoid_0)}, gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}))
+}
+
 func Call_Data_Array_zipWith(__local_var_0_loop gopurs_runtime.Value, __local_var_1_loop []gopurs_runtime.Value, __local_var_2_loop []gopurs_runtime.Value) []gopurs_runtime.Value {
 var __local_var_0 gopurs_runtime.Value = __local_var_0_loop
 _ = __local_var_0
@@ -3421,7 +3431,34 @@ return __t4
 func Call_Data_Array_intercalate(dictMonoid_0_loop *Constructor_Data_Monoid_Monoid) gopurs_runtime.Value {
 var dictMonoid_0 *Constructor_Data_Monoid_Monoid = dictMonoid_0_loop
 _ = dictMonoid_0
-return Call_Data_Array_intercalate1(dictMonoid_0)
+// TAST (Let): Semigroup0_1_0 -> *Constructor_Data_Semigroup_Semigroup
+Semigroup0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](gopurs_runtime.Apply(gopurs_runtime.Box(dictMonoid_0.V0), gopurs_runtime.Value{}))
+_ = Semigroup0_1_0
+// TAST (Let): mempty_2_1 -> gopurs_runtime.Value
+mempty_2_1 := gopurs_runtime.Box(dictMonoid_0.V1)
+_ = mempty_2_1
+return gopurs_runtime.Func(func(sep_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(xs_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordGet(gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Data_Foldable_foldableArray(), "foldl"), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t2 gopurs_runtime.Value
+{
+if (gopurs_runtime.RecordGet(v_5, "init").IntVal) != (0) {
+__t2 = gopurs_runtime.RecordDict2("acc", "init", v1_6, gopurs_runtime.Bool(false))
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = gopurs_runtime.RecordDict2("acc", "init", gopurs_runtime.Apply2(gopurs_runtime.Box(Semigroup0_1_0.V0), gopurs_runtime.RecordGet(v_5, "acc"), gopurs_runtime.Apply2(gopurs_runtime.Box(Semigroup0_1_0.V0), sep_3, v1_6)), gopurs_runtime.Bool(false))
+}
+end_branch_2:
+return __t2
+})
+}), gopurs_runtime.RecordDict2("acc", "init", mempty_2_1, gopurs_runtime.Bool(true)), xs_4), "acc")
+})
+})
 }
 
 func Call_Data_Array_insertAt(__local_var_0_loop int64, __local_var_1_loop gopurs_runtime.Value, __local_var_2_loop []gopurs_runtime.Value) *Constructor_Data_Maybe_Just {
@@ -3556,10 +3593,14 @@ return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Control_Bind_discardUn
 // TAST (Let): __local_var_5_0 -> gopurs_runtime.Value
 __local_var_5_0 := (*Constructor_Data_Tuple_Tuple)(v_4.UnsafePtr).V1
 _ = __local_var_5_0
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Control_Bind_discardUnit(), "discard"), gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](Get_Control_Monad_ST_Internal_bindST()))}, gopurs_runtime.Apply(Get_Data_Array_void(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Control_Bind_discardUnit(), "discard"), gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](Get_Control_Monad_ST_Internal_bindST()))}, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_functorST(), "map"), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_Data_Unit_unit()
+}), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp2(Get_Data_Array_ST_pushImpl(), (*Constructor_Data_Tuple_Tuple)(v_4.UnsafePtr).V0, fsts_1)
 })), gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_Data_Array_void(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_functorST(), "map"), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_Data_Unit_unit()
+}), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp2(Get_Data_Array_ST_pushImpl(), __local_var_5_0, snds_2)
 }))
 }))
@@ -3733,7 +3774,9 @@ return (*Constructor_Data_Tuple_Tuple)(gopurs_runtime.Apply(__local_var_7_3, x_8
 return gopurs_runtime.UncurriedApp(Get_Data_Array_ST_unsafeFreezeImpl(), result_4)
 })), gopurs_runtime.Func(func(lst_7 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_8_6 -> gopurs_runtime.Value
-__local_var_8_6 := gopurs_runtime.Apply(Get_Data_Array_void(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_8_6 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_functorST(), "map"), gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_Data_Unit_unit()
+}), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp2(Get_Data_Array_ST_pushImpl(), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v1_5))}, result_4)
 }))
 _ = __local_var_8_6
@@ -4271,7 +4314,9 @@ return gopurs_runtime.Apply3(Call_Data_Array_foldM(dictMonad_0), f_3, b_prime_8,
 func Call_Data_Array_fold(dictMonoid_0_loop *Constructor_Data_Monoid_Monoid) gopurs_runtime.Value {
 var dictMonoid_0 *Constructor_Data_Monoid_Monoid = dictMonoid_0_loop
 _ = dictMonoid_0
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Foldable_foldableArray(), "foldMap"), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(dictMonoid_0)}, Get_Data_Foldable_identity1())
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Foldable_foldableArray(), "foldMap"), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(dictMonoid_0)}, gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}))
 }
 
 func Call_Data_Array_findMap(__local_var_0_loop gopurs_runtime.Value, __local_var_1_loop []gopurs_runtime.Value) *Constructor_Data_Maybe_Just {
@@ -5085,7 +5130,9 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_HeytingAlgebra_hey
 return gopurs_runtime.UncurriedApp(Get_Data_Array_ST_unsafeFreezeImpl(), arr_2)
 })), gopurs_runtime.Func(func(e_4 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_5_1 -> gopurs_runtime.Value
-__local_var_5_1 := gopurs_runtime.Apply(Get_Data_Array_void(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_5_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_functorST(), "map"), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_Data_Unit_unit()
+}), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp2(Get_Data_Array_ST_pushImpl(), x_3, arr_2)
 }))
 _ = __local_var_5_1
@@ -6697,7 +6744,9 @@ return (*Constructor_Data_Tuple_Tuple)(gopurs_runtime.Apply(__local_var_7_3, x_8
 return gopurs_runtime.UncurriedApp(Get_Data_Array_ST_unsafeFreezeImpl(), result_4)
 })), gopurs_runtime.Func(func(lst_7 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_8_6 -> gopurs_runtime.Value
-__local_var_8_6 := gopurs_runtime.Apply(Get_Data_Array_void(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_8_6 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_functorST(), "map"), gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_Data_Unit_unit()
+}), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp2(Get_Data_Array_ST_pushImpl(), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v1_5))}, result_4)
 }))
 _ = __local_var_8_6
@@ -6778,7 +6827,9 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_HeytingAlgebra_hey
 return gopurs_runtime.UncurriedApp(Get_Data_Array_ST_unsafeFreezeImpl(), arr_2)
 })), gopurs_runtime.Func(func(e_4 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_5_1 -> gopurs_runtime.Value
-__local_var_5_1 := gopurs_runtime.Apply(Get_Data_Array_void(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_5_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_functorST(), "map"), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_Data_Unit_unit()
+}), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp2(Get_Data_Array_ST_pushImpl(), x_3, arr_2)
 }))
 _ = __local_var_5_1
@@ -7671,10 +7722,14 @@ return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Control_Bind_discardUn
 // TAST (Let): __local_var_5_0 -> gopurs_runtime.Value
 __local_var_5_0 := (*Constructor_Data_Tuple_Tuple)(v_4.UnsafePtr).V1
 _ = __local_var_5_0
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Control_Bind_discardUnit(), "discard"), gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](Get_Control_Monad_ST_Internal_bindST()))}, gopurs_runtime.Apply(Get_Data_Array_void(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Control_Bind_discardUnit(), "discard"), gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](Get_Control_Monad_ST_Internal_bindST()))}, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_functorST(), "map"), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_Data_Unit_unit()
+}), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp2(Get_Data_Array_ST_pushImpl(), (*Constructor_Data_Tuple_Tuple)(v_4.UnsafePtr).V0, fsts_1)
 })), gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_Data_Array_void(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_functorST(), "map"), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_Data_Unit_unit()
+}), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp2(Get_Data_Array_ST_pushImpl(), __local_var_5_0, snds_2)
 }))
 }))

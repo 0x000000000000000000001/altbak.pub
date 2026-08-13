@@ -486,7 +486,7 @@ var t1_1 *Constructor_Data_Time_Time = t1_1_loop
 _ = t1_1
 var t2_2 *Constructor_Data_Time_Time = t2_2_loop
 _ = t2_2
-return gopurs_runtime.Apply(gopurs_runtime.Box(dictDuration_0.V1), gopurs_runtime.Float((Call_Data_Time_timeToMillis(t1_1)) + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Duration_durationMilliseconds(), "toDuration"), gopurs_runtime.Apply(Get_Data_Time_Duration_negate(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Duration_durationMilliseconds(), "fromDuration"), gopurs_runtime.Float(Call_Data_Time_timeToMillis(t2_2))))).FloatVal())))
+return gopurs_runtime.Apply(gopurs_runtime.Box(dictDuration_0.V1), gopurs_runtime.Float((Call_Data_Time_timeToMillis(t1_1)) + (gopurs_runtime.Apply(Get_Data_Time_Duration_negateDuration__4195558286(), gopurs_runtime.Float(Call_Data_Time_timeToMillis(t2_2))).FloatVal())))
 }
 
 func Call_Data_Time_adjust(dictDuration_0_loop *Constructor_Data_Time_Duration_Duration, d_1_loop gopurs_runtime.Value, t_2_loop *Constructor_Data_Time_Time) *Constructor_Data_Tuple_Tuple {
@@ -503,7 +503,7 @@ _ = d_prime_3_0
 wholeDays_4_1 := gopurs_runtime.Apply(Get_Data_Number_floor(), gopurs_runtime.Float((d_prime_3_0.FloatVal()) / (86400000.0))).FloatVal()
 _ = wholeDays_4_1
 // TAST (Let): msAdjusted_5_2 -> float64
-msAdjusted_5_2 := ((Call_Data_Time_timeToMillis(t_2)) + (d_prime_3_0.FloatVal())) + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Duration_durationMilliseconds(), "toDuration"), gopurs_runtime.Apply(Get_Data_Time_Duration_negate(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Duration_durationMilliseconds(), "fromDuration"), gopurs_runtime.Float((wholeDays_4_1) * (86400000.0))))).FloatVal())
+msAdjusted_5_2 := ((Call_Data_Time_timeToMillis(t_2)) + (d_prime_3_0.FloatVal())) + (gopurs_runtime.Apply(Get_Data_Time_Duration_negateDuration__4195558286(), gopurs_runtime.Float((wholeDays_4_1) * (86400000.0))).FloatVal())
 _ = msAdjusted_5_2
 var __t7 float64
 {

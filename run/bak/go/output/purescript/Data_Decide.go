@@ -625,7 +625,9 @@ return gopurs_runtime.Box(dict_0.V1)
 func Call_Data_Decide_chosen(dictDecide_0_loop *Constructor_Data_Decide_Decide) gopurs_runtime.Value {
 var dictDecide_0 *Constructor_Data_Decide_Decide = dictDecide_0_loop
 _ = dictDecide_0
-return gopurs_runtime.Apply(gopurs_runtime.Box(dictDecide_0.V1), Get_Data_Decide_identity())
+return gopurs_runtime.Apply(gopurs_runtime.Box(dictDecide_0.V1), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}))
 }
 
 func Call_Data_Decide_choose__2139889126(dict_0_loop *Constructor_Data_Decide_Decide) gopurs_runtime.Value {

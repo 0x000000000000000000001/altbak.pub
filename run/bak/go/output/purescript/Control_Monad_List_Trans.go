@@ -1471,7 +1471,9 @@ return gopurs_runtime.Apply(pure_1_0, gopurs_runtime.Value{Type: 9, IntVal: 9308
 func Call_Control_Monad_List_Trans_repeat(dictMonad_0_loop *Constructor_Control_Monad_Monad) gopurs_runtime.Value {
 var dictMonad_0 *Constructor_Control_Monad_Monad = dictMonad_0_loop
 _ = dictMonad_0
-return gopurs_runtime.Apply(Call_Control_Monad_List_Trans_iterate(dictMonad_0), Get_Control_Monad_List_Trans_identity())
+return gopurs_runtime.Apply(Call_Control_Monad_List_Trans_iterate(dictMonad_0), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}))
 }
 
 func Call_Control_Monad_List_Trans_head(dictMonad_0_loop *Constructor_Control_Monad_Monad) gopurs_runtime.Value {
@@ -2134,7 +2136,9 @@ return semigroupListT1_1_0
 func Call_Control_Monad_List_Trans_catMaybes(dictFunctor_0_loop *Constructor_Data_Functor_Functor) gopurs_runtime.Value {
 var dictFunctor_0 *Constructor_Data_Functor_Functor = dictFunctor_0_loop
 _ = dictFunctor_0
-return gopurs_runtime.Apply2(Get_Control_Monad_List_Trans_mapMaybe(), gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(dictFunctor_0)}, Get_Control_Monad_List_Trans_identity1())
+return gopurs_runtime.Apply2(Get_Control_Monad_List_Trans_mapMaybe(), gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(dictFunctor_0)}, gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}))
 }
 
 func Call_Control_Monad_List_Trans_monadListT(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {

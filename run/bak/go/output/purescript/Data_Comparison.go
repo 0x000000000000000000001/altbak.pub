@@ -49,7 +49,18 @@ func Get_Data_Comparison_semigroupComparison() gopurs_runtime.Value {
 	once_Data_Comparison_semigroupComparison.Do(func() {
 		cache_Data_Comparison_semigroupComparison = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](Get_Data_Comparison_semigroupFn()).V0), v_0, v1_1)
+// TAST (Let): __local_var_2_0 -> gopurs_runtime.Value
+__local_var_2_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(g_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Ordering_semigroupOrdering(), "append"), gopurs_runtime.Apply(f_2, x_4), gopurs_runtime.Apply(g_3, x_4))
+})
+})
+}))
+_ = __local_var_2_0
+return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_0, "append"), gopurs_runtime.Apply(v_0, x_3), gopurs_runtime.Apply(v1_1, x_3))
+})
 })
 }))
 	})
@@ -133,7 +144,18 @@ func Get_Data_Comparison_semigroupComparison__1133613061() gopurs_runtime.Value 
 	once_Data_Comparison_semigroupComparison__1133613061.Do(func() {
 		cache_Data_Comparison_semigroupComparison__1133613061 = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](Get_Data_Comparison_semigroupFn()).V0), v_0, v1_1)
+// TAST (Let): __local_var_2_0 -> gopurs_runtime.Value
+__local_var_2_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(g_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Ordering_semigroupOrdering(), "append"), gopurs_runtime.Apply(f_2, x_4), gopurs_runtime.Apply(g_3, x_4))
+})
+})
+}))
+_ = __local_var_2_0
+return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_0, "append"), gopurs_runtime.Apply(v_0, x_3), gopurs_runtime.Apply(v1_1, x_3))
+})
 })
 }))
 	})

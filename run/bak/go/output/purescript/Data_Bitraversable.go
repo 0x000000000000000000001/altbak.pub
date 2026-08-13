@@ -611,7 +611,11 @@ var dictBitraversable_0 *Constructor_Data_Bitraversable_Bitraversable = dictBitr
 _ = dictBitraversable_0
 var dictApplicative_1 *Constructor_Control_Applicative_Applicative = dictApplicative_1_loop
 _ = dictApplicative_1
-return gopurs_runtime.Apply3(gopurs_runtime.Box(dictBitraversable_0.V3), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(dictApplicative_1)}, Get_Data_Bitraversable_identity(), Get_Data_Bitraversable_identity1())
+return gopurs_runtime.Apply3(gopurs_runtime.Box(dictBitraversable_0.V3), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(dictApplicative_1)}, gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+}), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+}))
 }
 
 func Call_Data_Bitraversable_bisequence(dict_0_loop *Constructor_Data_Bitraversable_Bitraversable) gopurs_runtime.Value {

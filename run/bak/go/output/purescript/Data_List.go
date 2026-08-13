@@ -5116,7 +5116,9 @@ return gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](gopurs_ru
 func Call_Data_List_concat(v_0_loop *Constructor_Data_List_Types_Cons) *Constructor_Data_List_Types_Cons {
 var v_0 *Constructor_Data_List_Types_Cons = v_0_loop
 _ = v_0
-return gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_List_Types_bindList(), "bind"), gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}, Get_Data_List_identity()))
+return gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_List_Types_bindList(), "bind"), gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}, gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+})))
 }
 
 func Call_Data_List_alterAt(v_0_loop int64, v1_1_loop gopurs_runtime.Value, v2_2_loop *Constructor_Data_List_Types_Cons) *Constructor_Data_Maybe_Just {

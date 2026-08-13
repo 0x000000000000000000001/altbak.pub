@@ -117,7 +117,9 @@ return Get_Data_Semigroup_Foldable_foldableDual()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Traversable_traversableDual()
 }), gopurs_runtime.Func(func(dictApply_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Semigroup_Traversable_traversableDual(), "traverse1"), gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](dictApply_0))}, Get_Data_Semigroup_Traversable_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Semigroup_Traversable_traversableDual(), "traverse1"), gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](dictApply_0))}, gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}))
 }), gopurs_runtime.Func(func(dictApply_0 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): Functor0_1_0 -> *Constructor_Data_Functor_Functor
 Functor0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_0, "Functor0"), gopurs_runtime.Value{}))
@@ -141,7 +143,9 @@ return Get_Data_Semigroup_Foldable_foldableMultiplicative()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Traversable_traversableMultiplicative()
 }), gopurs_runtime.Func(func(dictApply_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Semigroup_Traversable_traversableMultiplicative(), "traverse1"), gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](dictApply_0))}, Get_Data_Semigroup_Traversable_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Semigroup_Traversable_traversableMultiplicative(), "traverse1"), gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](dictApply_0))}, gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}))
 }), gopurs_runtime.Func(func(dictApply_0 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): Functor0_1_0 -> *Constructor_Data_Functor_Functor
 Functor0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_0, "Functor0"), gopurs_runtime.Value{}))
@@ -291,7 +295,9 @@ var dictTraversable1_0 *Constructor_Data_Semigroup_Traversable_Traversable1 = di
 _ = dictTraversable1_0
 var dictApply_1 *Constructor_Control_Apply_Apply = dictApply_1_loop
 _ = dictApply_1
-return gopurs_runtime.Apply2(gopurs_runtime.Box(dictTraversable1_0.V3), gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(dictApply_1)}, Get_Data_Semigroup_Traversable_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.Box(dictTraversable1_0.V3), gopurs_runtime.Value{Type: 9, IntVal: 3032403085, UnsafePtr: unsafe.Pointer(dictApply_1)}, gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+}))
 }
 
 func Call_Data_Semigroup_Traversable_sequence1(dict_0_loop *Constructor_Data_Semigroup_Traversable_Traversable1) gopurs_runtime.Value {

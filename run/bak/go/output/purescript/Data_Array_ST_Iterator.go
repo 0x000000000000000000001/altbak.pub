@@ -285,7 +285,9 @@ if ((mx_4.Type == 9 && mx_4.IntVal == 930809136 && mx_4.UnsafePtr != nil)) && ((
 __t0 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_bindST(), "bind"), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp2(Get_Data_Array_ST_pushImpl(), (*Constructor_Data_Maybe_Just)(mx_4.UnsafePtr).V0, array_2)
 }), gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_Data_Array_ST_Iterator_void(), Call_Data_Array_ST_Iterator_next(iter_1))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_functorST(), "map"), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_Data_Unit_unit()
+}), Call_Data_Array_ST_Iterator_next(iter_1))
 }))
 goto end_branch_0
 } else {
@@ -293,7 +295,9 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.Apply(Get_Data_Array_ST_Iterator_void1(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+__t0 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_functorST(), "map"), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_Data_Unit_unit()
+}), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 *(go__break_3.PtrVal().(*interface{})) = gopurs_runtime.Bool(true)
 return gopurs_runtime.Bool(true)
 }))
@@ -330,7 +334,9 @@ goto end_branch_0
 }
 {
 if (mx_3.Type == 9 && mx_3.IntVal == 930809136 && mx_3.UnsafePtr == nil) {
-__t0 = gopurs_runtime.Apply(Get_Data_Array_ST_Iterator_void1(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+__t0 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_functorST(), "map"), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_Data_Unit_unit()
+}), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 *(go__break_2.PtrVal().(*interface{})) = gopurs_runtime.Bool(true)
 return gopurs_runtime.Bool(true)
 }))
@@ -368,7 +374,9 @@ goto end_branch_0
 }
 {
 if (mx_3.Type == 9 && mx_3.IntVal == 930809136 && mx_3.UnsafePtr == nil) {
-__t0 = gopurs_runtime.Apply(Get_Data_Array_ST_Iterator_void1(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+__t0 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_functorST(), "map"), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_Data_Unit_unit()
+}), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 *(go__break_2.PtrVal().(*interface{})) = gopurs_runtime.Bool(true)
 return gopurs_runtime.Bool(true)
 }))
@@ -406,7 +414,9 @@ goto end_branch_0
 }
 {
 if (mx_3.Type == 9 && mx_3.IntVal == 930809136 && mx_3.UnsafePtr == nil) {
-__t0 = gopurs_runtime.Apply(Get_Data_Array_ST_Iterator_void1(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+__t0 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_functorST(), "map"), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_Data_Unit_unit()
+}), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 *(go__break_2.PtrVal().(*interface{})) = gopurs_runtime.Bool(true)
 return gopurs_runtime.Bool(true)
 }))
@@ -513,7 +523,9 @@ if ((mx_4.Type == 9 && mx_4.IntVal == 930809136 && mx_4.UnsafePtr != nil)) && ((
 __t0 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_bindST(), "bind"), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp2(Get_Data_Array_ST_pushImpl(), (*Constructor_Data_Maybe_Just)(mx_4.UnsafePtr).V0, array_2)
 }), gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_Data_Array_ST_Iterator_void(), Call_Data_Array_ST_Iterator_next(iter_1))
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_functorST(), "map"), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_Data_Unit_unit()
+}), Call_Data_Array_ST_Iterator_next(iter_1))
 }))
 goto end_branch_0
 } else {
@@ -521,7 +533,9 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.Apply(Get_Data_Array_ST_Iterator_void1(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+__t0 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_functorST(), "map"), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_Data_Unit_unit()
+}), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 *(go__break_3.PtrVal().(*interface{})) = gopurs_runtime.Bool(true)
 return gopurs_runtime.Bool(true)
 }))

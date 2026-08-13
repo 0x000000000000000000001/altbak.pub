@@ -1001,7 +1001,11 @@ var dictBifoldable_0 *Constructor_Data_Bifoldable_Bifoldable = dictBifoldable_0_
 _ = dictBifoldable_0
 var dictApplicative_1 *Constructor_Control_Applicative_Applicative = dictApplicative_1_loop
 _ = dictApplicative_1
-return gopurs_runtime.Apply2(Call_Data_Bifoldable_bitraverse_(dictBifoldable_0, dictApplicative_1), Get_Data_Bifoldable_identity(), Get_Data_Bifoldable_identity1())
+return gopurs_runtime.Apply2(Call_Data_Bifoldable_bitraverse_(dictBifoldable_0, dictApplicative_1), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+}), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+}))
 }
 
 func Call_Data_Bifoldable_bifoldl(dict_0_loop *Constructor_Data_Bifoldable_Bifoldable) gopurs_runtime.Value {
@@ -1165,7 +1169,36 @@ var z_3 gopurs_runtime.Value = z_3_loop
 _ = z_3
 var p_4 gopurs_runtime.Value = p_4_loop
 _ = p_4
-return gopurs_runtime.Apply5(gopurs_runtime.Box(dictBifoldable_0.V0), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](Get_Data_Bifoldable_monoidDual()))}, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_5_1 -> gopurs_runtime.Value
+__local_var_5_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Category_categoryFn(), "Semigroupoid0"), gopurs_runtime.Value{})
+_ = __local_var_5_1
+// TAST (Let): semigroupEndo1_5_0 -> gopurs_runtime.Value
+semigroupEndo1_5_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_5_1, "compose"), v_6, v1_7)
+})
+}))
+_ = semigroupEndo1_5_0
+// TAST (Let): __local_var_6_2 -> gopurs_runtime.Value
+__local_var_6_2 := gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return semigroupEndo1_5_0
+}), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_6
+}))
+_ = __local_var_6_2
+// TAST (Let): __local_var_7_4 -> gopurs_runtime.Value
+__local_var_7_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_6_2, "Semigroup0"), gopurs_runtime.Value{})
+_ = __local_var_7_4
+// TAST (Let): semigroupDual1_7_3 -> gopurs_runtime.Value
+semigroupDual1_7_3 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_7_4, "append"), v1_9, v_8)
+})
+}))
+_ = semigroupDual1_7_3
+return gopurs_runtime.Apply5(gopurs_runtime.Box(dictBifoldable_0.V0), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return semigroupDual1_7_3
+}), gopurs_runtime.RecordGet(__local_var_6_2, "mempty"))))}, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(f_1, a_6, x_5)
 })
@@ -1187,7 +1220,21 @@ var z_3 gopurs_runtime.Value = z_3_loop
 _ = z_3
 var p_4 gopurs_runtime.Value = p_4_loop
 _ = p_4
-return gopurs_runtime.Apply5(gopurs_runtime.Box(dictBifoldable_0.V0), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](Get_Data_Bifoldable_monoidEndo()))}, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_5_1 -> gopurs_runtime.Value
+__local_var_5_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Category_categoryFn(), "Semigroupoid0"), gopurs_runtime.Value{})
+_ = __local_var_5_1
+// TAST (Let): semigroupEndo1_5_0 -> gopurs_runtime.Value
+semigroupEndo1_5_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_5_1, "compose"), v_6, v1_7)
+})
+}))
+_ = semigroupEndo1_5_0
+return gopurs_runtime.Apply5(gopurs_runtime.Box(dictBifoldable_0.V0), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return semigroupEndo1_5_0
+}), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_6
+}))))}, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_1, x_5)
 }), gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(g_2, x_5)
@@ -1238,7 +1285,11 @@ var dictBifoldable_0 *Constructor_Data_Bifoldable_Bifoldable = dictBifoldable_0_
 _ = dictBifoldable_0
 var dictMonoid_1 *Constructor_Data_Monoid_Monoid = dictMonoid_1_loop
 _ = dictMonoid_1
-return gopurs_runtime.Apply3(gopurs_runtime.Box(dictBifoldable_0.V0), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(dictMonoid_1)}, Get_Data_Bifoldable_identity2(), Get_Data_Bifoldable_identity2())
+return gopurs_runtime.Apply3(gopurs_runtime.Box(dictBifoldable_0.V0), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(dictMonoid_1)}, gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+}), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+}))
 }
 
 func Call_Data_Bifoldable_biany(dictBifoldable_0_loop *Constructor_Data_Bifoldable_Bifoldable, dictBooleanAlgebra_1_loop *Constructor_Data_BooleanAlgebra_BooleanAlgebra) gopurs_runtime.Value {
@@ -1322,7 +1373,36 @@ return gopurs_runtime.Box(dict_0.V0)
 func Call_Data_Bifoldable_bifoldMap__1302573585(dict_0_loop *Constructor_Data_Bifoldable_Bifoldable) gopurs_runtime.Value {
 var dict_0 *Constructor_Data_Bifoldable_Bifoldable = dict_0_loop
 _ = dict_0
-return gopurs_runtime.Apply(gopurs_runtime.Box(dict_0.V0), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](Get_Data_Bifoldable_monoidDual()))})
+// TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
+__local_var_1_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Category_categoryFn(), "Semigroupoid0"), gopurs_runtime.Value{})
+_ = __local_var_1_1
+// TAST (Let): semigroupEndo1_1_0 -> gopurs_runtime.Value
+semigroupEndo1_1_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_1, "compose"), v_2, v1_3)
+})
+}))
+_ = semigroupEndo1_1_0
+// TAST (Let): __local_var_2_2 -> gopurs_runtime.Value
+__local_var_2_2 := gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return semigroupEndo1_1_0
+}), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+}))
+_ = __local_var_2_2
+// TAST (Let): __local_var_3_4 -> gopurs_runtime.Value
+__local_var_3_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_2, "Semigroup0"), gopurs_runtime.Value{})
+_ = __local_var_3_4
+// TAST (Let): semigroupDual1_3_3 -> gopurs_runtime.Value
+semigroupDual1_3_3 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_4, "append"), v1_5, v_4)
+})
+}))
+_ = semigroupDual1_3_3
+return gopurs_runtime.Apply(gopurs_runtime.Box(dict_0.V0), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return semigroupDual1_3_3
+}), gopurs_runtime.RecordGet(__local_var_2_2, "mempty"))))})
 }
 
 func Call_Data_Bifoldable_bifoldMap__581634711(dict_0_loop *Constructor_Data_Bifoldable_Bifoldable) gopurs_runtime.Value {
@@ -1334,7 +1414,36 @@ return gopurs_runtime.Box(dict_0.V0)
 func Call_Data_Bifoldable_bifoldMap__2444163767(dict_0_loop *Constructor_Data_Bifoldable_Bifoldable) gopurs_runtime.Value {
 var dict_0 *Constructor_Data_Bifoldable_Bifoldable = dict_0_loop
 _ = dict_0
-return gopurs_runtime.Apply(gopurs_runtime.Box(dict_0.V0), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](Get_Data_Bifoldable_monoidDual()))})
+// TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
+__local_var_1_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Category_categoryFn(), "Semigroupoid0"), gopurs_runtime.Value{})
+_ = __local_var_1_1
+// TAST (Let): semigroupEndo1_1_0 -> gopurs_runtime.Value
+semigroupEndo1_1_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_1, "compose"), v_2, v1_3)
+})
+}))
+_ = semigroupEndo1_1_0
+// TAST (Let): __local_var_2_2 -> gopurs_runtime.Value
+__local_var_2_2 := gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return semigroupEndo1_1_0
+}), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+}))
+_ = __local_var_2_2
+// TAST (Let): __local_var_3_4 -> gopurs_runtime.Value
+__local_var_3_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_2, "Semigroup0"), gopurs_runtime.Value{})
+_ = __local_var_3_4
+// TAST (Let): semigroupDual1_3_3 -> gopurs_runtime.Value
+semigroupDual1_3_3 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_4, "append"), v1_5, v_4)
+})
+}))
+_ = semigroupDual1_3_3
+return gopurs_runtime.Apply(gopurs_runtime.Box(dict_0.V0), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return semigroupDual1_3_3
+}), gopurs_runtime.RecordGet(__local_var_2_2, "mempty"))))})
 }
 
 func Call_Data_Bifoldable_bifoldMap__394664215(dict_0_loop *Constructor_Data_Bifoldable_Bifoldable) gopurs_runtime.Value {
@@ -1346,7 +1455,21 @@ return gopurs_runtime.Box(dict_0.V0)
 func Call_Data_Bifoldable_bifoldMap__3595123447(dict_0_loop *Constructor_Data_Bifoldable_Bifoldable) gopurs_runtime.Value {
 var dict_0 *Constructor_Data_Bifoldable_Bifoldable = dict_0_loop
 _ = dict_0
-return gopurs_runtime.Apply(gopurs_runtime.Box(dict_0.V0), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](Get_Data_Bifoldable_monoidEndo()))})
+// TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
+__local_var_1_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Category_categoryFn(), "Semigroupoid0"), gopurs_runtime.Value{})
+_ = __local_var_1_1
+// TAST (Let): semigroupEndo1_1_0 -> gopurs_runtime.Value
+semigroupEndo1_1_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_1, "compose"), v_2, v1_3)
+})
+}))
+_ = semigroupEndo1_1_0
+return gopurs_runtime.Apply(gopurs_runtime.Box(dict_0.V0), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return semigroupEndo1_1_0
+}), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+}))))})
 }
 
 func Call_Data_Bifoldable_bifoldMap__237389305(dict_0_loop *Constructor_Data_Bifoldable_Bifoldable) gopurs_runtime.Value {
@@ -1427,7 +1550,36 @@ var z_3 gopurs_runtime.Value = z_3_loop
 _ = z_3
 var p_4 gopurs_runtime.Value = p_4_loop
 _ = p_4
-return gopurs_runtime.Apply5(gopurs_runtime.Box(dictBifoldable_0.V0), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](Get_Data_Bifoldable_monoidDual()))}, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_5_1 -> gopurs_runtime.Value
+__local_var_5_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Category_categoryFn(), "Semigroupoid0"), gopurs_runtime.Value{})
+_ = __local_var_5_1
+// TAST (Let): semigroupEndo1_5_0 -> gopurs_runtime.Value
+semigroupEndo1_5_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_5_1, "compose"), v_6, v1_7)
+})
+}))
+_ = semigroupEndo1_5_0
+// TAST (Let): __local_var_6_2 -> gopurs_runtime.Value
+__local_var_6_2 := gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return semigroupEndo1_5_0
+}), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_6
+}))
+_ = __local_var_6_2
+// TAST (Let): __local_var_7_4 -> gopurs_runtime.Value
+__local_var_7_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_6_2, "Semigroup0"), gopurs_runtime.Value{})
+_ = __local_var_7_4
+// TAST (Let): semigroupDual1_7_3 -> gopurs_runtime.Value
+semigroupDual1_7_3 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_7_4, "append"), v1_9, v_8)
+})
+}))
+_ = semigroupDual1_7_3
+return gopurs_runtime.Apply5(gopurs_runtime.Box(dictBifoldable_0.V0), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return semigroupDual1_7_3
+}), gopurs_runtime.RecordGet(__local_var_6_2, "mempty"))))}, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(f_1, a_6, x_5)
 })
@@ -1449,7 +1601,36 @@ var z_3 gopurs_runtime.Value = z_3_loop
 _ = z_3
 var p_4 *Constructor_Data_Functor_Product2_Product2 = p_4_loop
 _ = p_4
-return gopurs_runtime.Apply5(gopurs_runtime.Box(dictBifoldable_0.V0), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](Get_Data_Bifoldable_monoidDual()))}, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_5_1 -> gopurs_runtime.Value
+__local_var_5_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Category_categoryFn(), "Semigroupoid0"), gopurs_runtime.Value{})
+_ = __local_var_5_1
+// TAST (Let): semigroupEndo1_5_0 -> gopurs_runtime.Value
+semigroupEndo1_5_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_5_1, "compose"), v_6, v1_7)
+})
+}))
+_ = semigroupEndo1_5_0
+// TAST (Let): __local_var_6_2 -> gopurs_runtime.Value
+__local_var_6_2 := gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return semigroupEndo1_5_0
+}), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_6
+}))
+_ = __local_var_6_2
+// TAST (Let): __local_var_7_4 -> gopurs_runtime.Value
+__local_var_7_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_6_2, "Semigroup0"), gopurs_runtime.Value{})
+_ = __local_var_7_4
+// TAST (Let): semigroupDual1_7_3 -> gopurs_runtime.Value
+semigroupDual1_7_3 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_7_4, "append"), v1_9, v_8)
+})
+}))
+_ = semigroupDual1_7_3
+return gopurs_runtime.Apply5(gopurs_runtime.Box(dictBifoldable_0.V0), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return semigroupDual1_7_3
+}), gopurs_runtime.RecordGet(__local_var_6_2, "mempty"))))}, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(f_1, a_6, x_5)
 })
@@ -1495,7 +1676,21 @@ var z_3 gopurs_runtime.Value = z_3_loop
 _ = z_3
 var p_4 gopurs_runtime.Value = p_4_loop
 _ = p_4
-return gopurs_runtime.Apply5(gopurs_runtime.Box(dictBifoldable_0.V0), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](Get_Data_Bifoldable_monoidEndo()))}, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_5_1 -> gopurs_runtime.Value
+__local_var_5_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Category_categoryFn(), "Semigroupoid0"), gopurs_runtime.Value{})
+_ = __local_var_5_1
+// TAST (Let): semigroupEndo1_5_0 -> gopurs_runtime.Value
+semigroupEndo1_5_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_5_1, "compose"), v_6, v1_7)
+})
+}))
+_ = semigroupEndo1_5_0
+return gopurs_runtime.Apply5(gopurs_runtime.Box(dictBifoldable_0.V0), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return semigroupEndo1_5_0
+}), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_6
+}))))}, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_1, x_5)
 }), gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(g_2, x_5)
@@ -1513,7 +1708,21 @@ var z_3 gopurs_runtime.Value = z_3_loop
 _ = z_3
 var p_4 gopurs_runtime.Value = p_4_loop
 _ = p_4
-return gopurs_runtime.Apply5(gopurs_runtime.Box(dictBifoldable_0.V0), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](Get_Data_Bifoldable_monoidEndo()))}, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_5_1 -> gopurs_runtime.Value
+__local_var_5_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Category_categoryFn(), "Semigroupoid0"), gopurs_runtime.Value{})
+_ = __local_var_5_1
+// TAST (Let): semigroupEndo1_5_0 -> gopurs_runtime.Value
+semigroupEndo1_5_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_5_1, "compose"), v_6, v1_7)
+})
+}))
+_ = semigroupEndo1_5_0
+return gopurs_runtime.Apply5(gopurs_runtime.Box(dictBifoldable_0.V0), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return semigroupEndo1_5_0
+}), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_6
+}))))}, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_1, x_5)
 }), gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(g_2, x_5)
@@ -1531,7 +1740,21 @@ var z_3 gopurs_runtime.Value = z_3_loop
 _ = z_3
 var p_4 *Constructor_Data_Functor_Product2_Product2 = p_4_loop
 _ = p_4
-return gopurs_runtime.Apply5(gopurs_runtime.Box(dictBifoldable_0.V0), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](Get_Data_Bifoldable_monoidEndo()))}, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_5_1 -> gopurs_runtime.Value
+__local_var_5_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Category_categoryFn(), "Semigroupoid0"), gopurs_runtime.Value{})
+_ = __local_var_5_1
+// TAST (Let): semigroupEndo1_5_0 -> gopurs_runtime.Value
+semigroupEndo1_5_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_5_1, "compose"), v_6, v1_7)
+})
+}))
+_ = semigroupEndo1_5_0
+return gopurs_runtime.Apply5(gopurs_runtime.Box(dictBifoldable_0.V0), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return semigroupEndo1_5_0
+}), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_6
+}))))}, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_1, x_5)
 }), gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(g_2, x_5)
@@ -1547,7 +1770,21 @@ var z_2 gopurs_runtime.Value = z_2_loop
 _ = z_2
 var p_3 gopurs_runtime.Value = p_3_loop
 _ = p_3
-return gopurs_runtime.Apply5(gopurs_runtime.RecordGet(Get_Data_Interval_bifoldableInterval(), "bifoldMap"), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](Get_Data_Bifoldable_monoidEndo()))}, gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_4_1 -> gopurs_runtime.Value
+__local_var_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Category_categoryFn(), "Semigroupoid0"), gopurs_runtime.Value{})
+_ = __local_var_4_1
+// TAST (Let): semigroupEndo1_4_0 -> gopurs_runtime.Value
+semigroupEndo1_4_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_1, "compose"), v_5, v1_6)
+})
+}))
+_ = semigroupEndo1_4_0
+return gopurs_runtime.Apply5(gopurs_runtime.RecordGet(Get_Data_Interval_bifoldableInterval(), "bifoldMap"), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return semigroupEndo1_4_0
+}), gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_5
+}))))}, gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(f_0, x_4)
 }), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(g_1, x_4)

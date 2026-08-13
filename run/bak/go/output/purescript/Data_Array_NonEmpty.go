@@ -10,7 +10,9 @@ var cache_Data_Array_NonEmpty_intercalate1 gopurs_runtime.Value
 var once_Data_Array_NonEmpty_intercalate1 sync.Once
 func Get_Data_Array_NonEmpty_intercalate1() gopurs_runtime.Value {
 	once_Data_Array_NonEmpty_intercalate1.Do(func() {
-		cache_Data_Array_NonEmpty_intercalate1 = gopurs_runtime.Apply(Get_Data_Semigroup_Foldable_intercalate(), Get_Data_Array_NonEmpty_Internal_foldable1NonEmptyArray())
+		cache_Data_Array_NonEmpty_intercalate1 = gopurs_runtime.Func(func(dictSemigroup_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Data_Array_NonEmpty_intercalate1(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](dictSemigroup_0_box))
+})
 	})
 	return cache_Data_Array_NonEmpty_intercalate1
 }
@@ -28,7 +30,9 @@ var cache_Data_Array_NonEmpty_fold11 gopurs_runtime.Value
 var once_Data_Array_NonEmpty_fold11 sync.Once
 func Get_Data_Array_NonEmpty_fold11() gopurs_runtime.Value {
 	once_Data_Array_NonEmpty_fold11.Do(func() {
-		cache_Data_Array_NonEmpty_fold11 = gopurs_runtime.Apply(Get_Data_Semigroup_Foldable_fold1(), Get_Data_Array_NonEmpty_Internal_foldable1NonEmptyArray())
+		cache_Data_Array_NonEmpty_fold11 = gopurs_runtime.Func(func(dictSemigroup_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Data_Array_NonEmpty_fold11(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](dictSemigroup_0_box))
+})
 	})
 	return cache_Data_Array_NonEmpty_fold11
 }
@@ -2480,6 +2484,49 @@ return Call_Data_Array_NonEmpty_unsafeIndex__2808089623(_dollar__unused_0_box, f
 	return cache_Data_Array_NonEmpty_unsafeIndex__2808089623
 }
 
+func Call_Data_Array_NonEmpty_intercalate1(dictSemigroup_0_loop *Constructor_Data_Semigroup_Semigroup) gopurs_runtime.Value {
+var dictSemigroup_0 *Constructor_Data_Semigroup_Semigroup = dictSemigroup_0_loop
+_ = dictSemigroup_0
+// TAST (Let): semigroupJoinWith1_1_1 -> *Constructor_Data_Semigroup_Semigroup
+semigroupJoinWith1_1_1 := &Constructor_Data_Semigroup_Semigroup{1, gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(j_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.Box(dictSemigroup_0.V0), gopurs_runtime.Apply(v_1, j_3), gopurs_runtime.Apply2(gopurs_runtime.Box(dictSemigroup_0.V0), j_3, gopurs_runtime.Apply(v1_2, j_3)))
+})
+})
+})}
+_ = semigroupJoinWith1_1_1
+// TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
+__local_var_1_0 := gopurs_runtime.Func(func(j_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(foldable_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply4(gopurs_runtime.RecordGet(Get_Data_Array_NonEmpty_Internal_foldable1NonEmptyArray(), "foldMap1"), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(semigroupJoinWith1_1_1)}, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_6_2 -> gopurs_runtime.Value
+__local_var_6_2 := gopurs_runtime.Apply(f_3, x_5)
+_ = __local_var_6_2
+return gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return __local_var_6_2
+})
+}), foldable_4, j_2)
+})
+})
+})
+_ = __local_var_1_0
+return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(__local_var_1_0, a_2, gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_3
+}))
+})
+}
+
+func Call_Data_Array_NonEmpty_fold11(dictSemigroup_0_loop *Constructor_Data_Semigroup_Semigroup) gopurs_runtime.Value {
+var dictSemigroup_0 *Constructor_Data_Semigroup_Semigroup = dictSemigroup_0_loop
+_ = dictSemigroup_0
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Array_NonEmpty_Internal_foldable1NonEmptyArray(), "foldMap1"), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(dictSemigroup_0)}, gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}))
+}
+
 func Call_Data_Array_NonEmpty_fromJust(v_0_loop *Constructor_Data_Maybe_Just) gopurs_runtime.Value {
 var v_0 *Constructor_Data_Maybe_Just = v_0_loop
 _ = v_0
@@ -2794,7 +2841,36 @@ return gopurs_runtime.Apply(Get_Data_Array_NonEmpty_intersectBy(), gopurs_runtim
 func Call_Data_Array_NonEmpty_intercalate(dictSemigroup_0_loop *Constructor_Data_Semigroup_Semigroup) gopurs_runtime.Value {
 var dictSemigroup_0 *Constructor_Data_Semigroup_Semigroup = dictSemigroup_0_loop
 _ = dictSemigroup_0
-return gopurs_runtime.Apply2(Get_Data_Semigroup_Foldable_intercalate(), Get_Data_Array_NonEmpty_Internal_foldable1NonEmptyArray(), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(dictSemigroup_0)})
+// TAST (Let): semigroupJoinWith1_1_1 -> *Constructor_Data_Semigroup_Semigroup
+semigroupJoinWith1_1_1 := &Constructor_Data_Semigroup_Semigroup{1, gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(j_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.Box(dictSemigroup_0.V0), gopurs_runtime.Apply(v_1, j_3), gopurs_runtime.Apply2(gopurs_runtime.Box(dictSemigroup_0.V0), j_3, gopurs_runtime.Apply(v1_2, j_3)))
+})
+})
+})}
+_ = semigroupJoinWith1_1_1
+// TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
+__local_var_1_0 := gopurs_runtime.Func(func(j_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(foldable_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply4(gopurs_runtime.RecordGet(Get_Data_Array_NonEmpty_Internal_foldable1NonEmptyArray(), "foldMap1"), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(semigroupJoinWith1_1_1)}, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_6_2 -> gopurs_runtime.Value
+__local_var_6_2 := gopurs_runtime.Apply(f_3, x_5)
+_ = __local_var_6_2
+return gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return __local_var_6_2
+})
+}), foldable_4, j_2)
+})
+})
+})
+_ = __local_var_1_0
+return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(__local_var_1_0, a_2, gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_3
+}))
+})
 }
 
 func Call_Data_Array_NonEmpty_insertAt(i_0_loop int64, x_1_loop gopurs_runtime.Value, x_2_loop []gopurs_runtime.Value) *Constructor_Data_Maybe_Just {
@@ -2974,7 +3050,9 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Array_NonEmpty_Int
 func Call_Data_Array_NonEmpty_fold1(dictSemigroup_0_loop *Constructor_Data_Semigroup_Semigroup) gopurs_runtime.Value {
 var dictSemigroup_0 *Constructor_Data_Semigroup_Semigroup = dictSemigroup_0_loop
 _ = dictSemigroup_0
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Array_NonEmpty_Internal_foldable1NonEmptyArray(), "foldMap1"), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(dictSemigroup_0)}, Get_Data_Semigroup_Foldable_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Array_NonEmpty_Internal_foldable1NonEmptyArray(), "foldMap1"), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(dictSemigroup_0)}, gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}))
 }
 
 func Call_Data_Array_NonEmpty_difference_prime(dictEq_0_loop *Constructor_Data_Eq_Eq) gopurs_runtime.Value {

@@ -342,7 +342,9 @@ var dictProfunctor_0 *Constructor_Data_Profunctor_Profunctor = dictProfunctor_0_
 _ = dictProfunctor_0
 var a2b_1 gopurs_runtime.Value = a2b_1_loop
 _ = a2b_1
-return gopurs_runtime.Apply2(gopurs_runtime.Box(dictProfunctor_0.V0), a2b_1, Get_Data_Profunctor_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.Box(dictProfunctor_0.V0), a2b_1, gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+}))
 }
 
 func Call_Data_Profunctor_rmap(dictProfunctor_0_loop *Constructor_Data_Profunctor_Profunctor, b2c_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -350,7 +352,9 @@ var dictProfunctor_0 *Constructor_Data_Profunctor_Profunctor = dictProfunctor_0_
 _ = dictProfunctor_0
 var b2c_1 gopurs_runtime.Value = b2c_1_loop
 _ = b2c_1
-return gopurs_runtime.Apply2(gopurs_runtime.Box(dictProfunctor_0.V0), Get_Data_Profunctor_identity1(), b2c_1)
+return gopurs_runtime.Apply2(gopurs_runtime.Box(dictProfunctor_0.V0), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+}), b2c_1)
 }
 
 func Call_Data_Profunctor_unwrapIso(dictProfunctor_0_loop *Constructor_Data_Profunctor_Profunctor, _dollar__unused_1_loop *Constructor_Data_Newtype_Newtype) gopurs_runtime.Value {
@@ -379,7 +383,9 @@ identity2_1_0 := gopurs_runtime.Box(dictCategory_0.V1)
 _ = identity2_1_0
 return gopurs_runtime.Func(func(dictProfunctor_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictProfunctor_2, "dimap"), Get_Data_Profunctor_identity1(), f_3, identity2_1_0)
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictProfunctor_2, "dimap"), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_4
+}), f_3, identity2_1_0)
 })
 })
 }
@@ -425,7 +431,9 @@ var dictProfunctor_0 *Constructor_Data_Profunctor_Profunctor = dictProfunctor_0_
 _ = dictProfunctor_0
 var a2b_1 gopurs_runtime.Value = a2b_1_loop
 _ = a2b_1
-return gopurs_runtime.Apply2(gopurs_runtime.Box(dictProfunctor_0.V0), a2b_1, Get_Data_Profunctor_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.Box(dictProfunctor_0.V0), a2b_1, gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+}))
 }
 
 func Call_Data_Profunctor_lcmap__1379840958(dictProfunctor_0_loop *Constructor_Data_Profunctor_Profunctor, a2b_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -433,13 +441,17 @@ var dictProfunctor_0 *Constructor_Data_Profunctor_Profunctor = dictProfunctor_0_
 _ = dictProfunctor_0
 var a2b_1 gopurs_runtime.Value = a2b_1_loop
 _ = a2b_1
-return gopurs_runtime.Apply2(gopurs_runtime.Box(dictProfunctor_0.V0), a2b_1, Get_Data_Profunctor_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.Box(dictProfunctor_0.V0), a2b_1, gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+}))
 }
 
 func Call_Data_Profunctor_lcmap__351678174(a2b_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var a2b_0 gopurs_runtime.Value = a2b_0_loop
 _ = a2b_0
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Profunctor_profunctorFn(), "dimap"), a2b_0, Get_Data_Profunctor_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Profunctor_profunctorFn(), "dimap"), a2b_0, gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}))
 }
 
 func Call_Data_Profunctor_rmap__1762133278(dictProfunctor_0_loop *Constructor_Data_Profunctor_Profunctor, b2c_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -447,7 +459,9 @@ var dictProfunctor_0 *Constructor_Data_Profunctor_Profunctor = dictProfunctor_0_
 _ = dictProfunctor_0
 var b2c_1 gopurs_runtime.Value = b2c_1_loop
 _ = b2c_1
-return gopurs_runtime.Apply2(gopurs_runtime.Box(dictProfunctor_0.V0), Get_Data_Profunctor_identity1(), b2c_1)
+return gopurs_runtime.Apply2(gopurs_runtime.Box(dictProfunctor_0.V0), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+}), b2c_1)
 }
 
 func Call_Data_Profunctor_rmap__2905617982(dictProfunctor_0_loop *Constructor_Data_Profunctor_Profunctor, b2c_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -455,7 +469,9 @@ var dictProfunctor_0 *Constructor_Data_Profunctor_Profunctor = dictProfunctor_0_
 _ = dictProfunctor_0
 var b2c_1 gopurs_runtime.Value = b2c_1_loop
 _ = b2c_1
-return gopurs_runtime.Apply2(gopurs_runtime.Box(dictProfunctor_0.V0), Get_Data_Profunctor_identity1(), b2c_1)
+return gopurs_runtime.Apply2(gopurs_runtime.Box(dictProfunctor_0.V0), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+}), b2c_1)
 }
 
 

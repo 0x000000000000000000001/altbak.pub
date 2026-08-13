@@ -236,7 +236,11 @@ return gopurs_runtime.Apply3(gopurs_runtime.Box(dictInvariant_0.V0), (*Construct
 func Call_Data_Profunctor_Split_liftSplit(fx_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var fx_0 gopurs_runtime.Value = fx_0_loop
 _ = fx_0
-return gopurs_runtime.Value{Type: 9, IntVal: 1995432569, UnsafePtr: unsafe.Pointer(&Constructor_Data_Profunctor_Split_SplitF{1, Get_Data_Profunctor_Split_identity(), Get_Data_Profunctor_Split_identity(), fx_0})}
+return gopurs_runtime.Value{Type: 9, IntVal: 1995432569, UnsafePtr: unsafe.Pointer(&Constructor_Data_Profunctor_Split_SplitF{1, gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}), fx_0})}
 }
 
 func Call_Data_Profunctor_Split_hoistSplit(nat_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

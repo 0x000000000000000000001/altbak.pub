@@ -96,7 +96,7 @@ return gopurs_runtime.Str("unicode")
 _ = usedFlags_1_0
 var __t1 string
 {
-if (gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](Get_Data_String_Regex_Flags_eqArray()).V0), func() gopurs_runtime.Value {
+if (gopurs_runtime.Apply3(Get_Data_Eq_eqArrayImpl(), gopurs_runtime.RecordGet(Get_Data_Eq_eqString(), "eq"), func() gopurs_runtime.Value {
 					arr := func() []string {
 					arr := *(*[]gopurs_runtime.Value)(usedFlags_1_0.UnsafePtr)
 					unboxed := make([]string, len(arr))

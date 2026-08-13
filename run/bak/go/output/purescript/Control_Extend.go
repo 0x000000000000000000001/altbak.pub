@@ -238,7 +238,9 @@ return gopurs_runtime.Apply2(gopurs_runtime.Box(dictExtend_0.V1), f_2, w_1)
 func Call_Control_Extend_duplicate(dictExtend_0_loop *Constructor_Control_Extend_Extend) gopurs_runtime.Value {
 var dictExtend_0 *Constructor_Control_Extend_Extend = dictExtend_0_loop
 _ = dictExtend_0
-return gopurs_runtime.Apply(gopurs_runtime.Box(dictExtend_0.V1), Get_Control_Extend_identity())
+return gopurs_runtime.Apply(gopurs_runtime.Box(dictExtend_0.V1), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}))
 }
 
 func Call_Control_Extend_composeCoKleisliFlipped(dictExtend_0_loop *Constructor_Control_Extend_Extend, f_1_loop gopurs_runtime.Value, g_2_loop gopurs_runtime.Value, w_3_loop gopurs_runtime.Value) gopurs_runtime.Value {

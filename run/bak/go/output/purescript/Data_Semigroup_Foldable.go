@@ -1133,7 +1133,11 @@ func Call_Data_Semigroup_Foldable_foldl1Default(dictFoldable1_0_loop *Constructo
 var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dictFoldable1_0_loop
 _ = dictFoldable1_0
 // TAST (Let): __local_var_1_2 -> gopurs_runtime.Value
-__local_var_1_2 := gopurs_runtime.Apply2(gopurs_runtime.Box(dictFoldable1_0.V1), Get_Data_Semigroup_Foldable_semigroupDual(), Get_Data_Semigroup_Foldable_mkFoldRight1())
+__local_var_1_2 := gopurs_runtime.Apply2(gopurs_runtime.Box(dictFoldable1_0.V1), gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Semigroup_Foldable_foldRight1Semigroup(), "append"), v1_2, v_1)
+})
+})), Get_Data_Semigroup_Foldable_mkFoldRight1())
 _ = __local_var_1_2
 // TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
 __local_var_1_1 := gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1241,7 +1245,9 @@ return __local_var_7_2
 })
 _ = __local_var_2_0
 return gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(__local_var_2_0, a_3, Get_Data_Semigroup_Foldable_identity())
+return gopurs_runtime.Apply2(__local_var_2_0, a_3, gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_4
+}))
 })
 }
 
@@ -1389,7 +1395,9 @@ var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dictFoldabl
 _ = dictFoldable1_0
 var dictApply_1 *Constructor_Control_Apply_Apply = dictApply_1_loop
 _ = dictApply_1
-return gopurs_runtime.Apply(Call_Data_Semigroup_Foldable_traverse1_(dictFoldable1_0, dictApply_1), Get_Data_Semigroup_Foldable_identity1())
+return gopurs_runtime.Apply(Call_Data_Semigroup_Foldable_traverse1_(dictFoldable1_0, dictApply_1), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+}))
 }
 
 func Call_Data_Semigroup_Foldable_fold1(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1, dictSemigroup_1_loop *Constructor_Data_Semigroup_Semigroup) gopurs_runtime.Value {
@@ -1397,7 +1405,9 @@ var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dictFoldabl
 _ = dictFoldable1_0
 var dictSemigroup_1 *Constructor_Data_Semigroup_Semigroup = dictSemigroup_1_loop
 _ = dictSemigroup_1
-return gopurs_runtime.Apply2(gopurs_runtime.Box(dictFoldable1_0.V1), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(dictSemigroup_1)}, Get_Data_Semigroup_Foldable_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.Box(dictFoldable1_0.V1), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(dictSemigroup_1)}, gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+}))
 }
 
 func Call_Data_Semigroup_Foldable_foldMap1__1646952192(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1) gopurs_runtime.Value {

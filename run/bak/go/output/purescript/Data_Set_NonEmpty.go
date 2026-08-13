@@ -291,23 +291,32 @@ return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_2_0 -> gopurs_runtime.Value
 __local_var_2_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_List_Types_foldable1NonEmptyList(), "foldMap1"), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](dictSemigroup_0))}, f_1)
 _ = __local_var_2_0
-return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(Get_Data_Set_NonEmpty_toUnfoldable11(), x_3))
+// TAST (Let): __local_var_3_1 -> gopurs_runtime.Value
+__local_var_3_1 := Call_Data_Set_NonEmpty_toUnfoldable1(gopurs_runtime.CoerceToStruct[Constructor_Data_Unfoldable1_Unfoldable1](Get_Data_List_Types_unfoldable1NonEmptyList()))
+_ = __local_var_3_1
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(__local_var_3_1, x_4))
 })
-})
-}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
-__local_var_1_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_List_Types_foldable1NonEmptyList(), "foldl1"), f_0)
-_ = __local_var_1_1
-return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_1_1, gopurs_runtime.Apply(Get_Data_Set_NonEmpty_toUnfoldable11(), x_2))
 })
 }), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_1_2 -> gopurs_runtime.Value
-__local_var_1_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_List_Types_foldable1NonEmptyList(), "foldr1"), f_0)
+__local_var_1_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_List_Types_foldable1NonEmptyList(), "foldl1"), f_0)
 _ = __local_var_1_2
-return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_1_2, gopurs_runtime.Apply(Get_Data_Set_NonEmpty_toUnfoldable11(), x_2))
+// TAST (Let): __local_var_2_3 -> gopurs_runtime.Value
+__local_var_2_3 := Call_Data_Set_NonEmpty_toUnfoldable1(gopurs_runtime.CoerceToStruct[Constructor_Data_Unfoldable1_Unfoldable1](Get_Data_List_Types_unfoldable1NonEmptyList()))
+_ = __local_var_2_3
+return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_1_2, gopurs_runtime.Apply(__local_var_2_3, x_3))
+})
+}), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_1_4 -> gopurs_runtime.Value
+__local_var_1_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_List_Types_foldable1NonEmptyList(), "foldr1"), f_0)
+_ = __local_var_1_4
+// TAST (Let): __local_var_2_5 -> gopurs_runtime.Value
+__local_var_2_5 := Call_Data_Set_NonEmpty_toUnfoldable1(gopurs_runtime.CoerceToStruct[Constructor_Data_Unfoldable1_Unfoldable1](Get_Data_List_Types_unfoldable1NonEmptyList()))
+_ = __local_var_2_5
+return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_1_4, gopurs_runtime.Apply(__local_var_2_5, x_3))
 })
 }))
 	})

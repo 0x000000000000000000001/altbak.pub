@@ -466,13 +466,17 @@ var dictBifunctor_0 *Constructor_Data_Bifunctor_Bifunctor = dictBifunctor_0_loop
 _ = dictBifunctor_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-return gopurs_runtime.Apply2(gopurs_runtime.Box(dictBifunctor_0.V0), f_1, Get_Data_Bifunctor_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.Box(dictBifunctor_0.V0), f_1, gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+}))
 }
 
 func Call_Data_Bifunctor_rmap(dictBifunctor_0_loop *Constructor_Data_Bifunctor_Bifunctor) gopurs_runtime.Value {
 var dictBifunctor_0 *Constructor_Data_Bifunctor_Bifunctor = dictBifunctor_0_loop
 _ = dictBifunctor_0
-return gopurs_runtime.Apply(gopurs_runtime.Box(dictBifunctor_0.V0), Get_Data_Bifunctor_identity1())
+return gopurs_runtime.Apply(gopurs_runtime.Box(dictBifunctor_0.V0), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}))
 }
 
 func Call_Data_Bifunctor_bimap__4044928099(dict_0_loop *Constructor_Data_Bifunctor_Bifunctor) gopurs_runtime.Value {
@@ -696,7 +700,9 @@ var dictBifunctor_0 *Constructor_Data_Bifunctor_Bifunctor = dictBifunctor_0_loop
 _ = dictBifunctor_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-return gopurs_runtime.Apply2(gopurs_runtime.Box(dictBifunctor_0.V0), f_1, Get_Data_Bifunctor_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.Box(dictBifunctor_0.V0), f_1, gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+}))
 }
 
 

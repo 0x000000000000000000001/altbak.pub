@@ -173,7 +173,9 @@ return gopurs_runtime.Func(func(l_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(r_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply3(gopurs_runtime.Box(Profunctor0_2_0.V0), gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, a_5, a_5})}
-}), Get_Data_Profunctor_identity(), gopurs_runtime.Apply2(gopurs_runtime.Box(dictSemigroupoid_0.V0), gopurs_runtime.Apply(gopurs_runtime.Box(dictStrong_1.V2), r_4), gopurs_runtime.Apply(gopurs_runtime.Box(dictStrong_1.V1), l_3)))
+}), gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_5
+}), gopurs_runtime.Apply2(gopurs_runtime.Box(dictSemigroupoid_0.V0), gopurs_runtime.Apply(gopurs_runtime.Box(dictStrong_1.V2), r_4), gopurs_runtime.Apply(gopurs_runtime.Box(dictStrong_1.V1), l_3)))
 })
 })
 }

@@ -16,6 +16,7 @@ instance keysNil :: RecordKeys Nil where
 instance keysCons :: RecordKeys tail => RecordKeys (Cons sym ty tail) where
   keysImpl _ = 1 + keysImpl (Proxy :: Proxy tail)
 
+-- | @inline always
 keys :: forall row rl. RowToList row rl => RecordKeys rl => Record row -> Int
 keys _ = keysImpl (Proxy :: Proxy rl)
 

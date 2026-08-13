@@ -1278,7 +1278,9 @@ return gopurs_runtime.Apply(Get_Data_Map_Internal_checkValid(), gopurs_runtime.V
 func Call_Data_Set_catMaybes(dictOrd_0_loop *Constructor_Data_Ord_Ord) gopurs_runtime.Value {
 var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
-return Call_Data_Set_mapMaybe(dictOrd_0, Get_Data_Set_identity())
+return Call_Data_Set_mapMaybe(dictOrd_0, gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}))
 }
 
 func Call_Data_Set_delete__4217907800(dictOrd_0_loop *Constructor_Data_Ord_Ord) gopurs_runtime.Value {

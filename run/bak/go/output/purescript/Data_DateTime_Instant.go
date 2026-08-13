@@ -496,7 +496,7 @@ var dt1_1 float64 = dt1_1_loop
 _ = dt1_1
 var dt2_2 float64 = dt2_2_loop
 _ = dt2_2
-return gopurs_runtime.Apply(gopurs_runtime.Box(dictDuration_0.V1), gopurs_runtime.Float((dt1_1) + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Duration_durationMilliseconds(), "toDuration"), gopurs_runtime.Apply(Get_Data_Time_Duration_negate(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Duration_durationMilliseconds(), "fromDuration"), gopurs_runtime.Float(dt2_2)))).FloatVal())))
+return gopurs_runtime.Apply(gopurs_runtime.Box(dictDuration_0.V1), gopurs_runtime.Float((dt1_1) + (gopurs_runtime.Apply(Get_Data_Time_Duration_negateDuration__4195558286(), gopurs_runtime.Float(dt2_2)).FloatVal())))
 }
 
 func Get_Data_DateTime_Instant_fromDateTimeImpl() gopurs_runtime.Value {

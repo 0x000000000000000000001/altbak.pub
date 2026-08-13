@@ -2107,7 +2107,9 @@ var dictBind_0 *Constructor_Control_Bind_Bind = dictBind_0_loop
 _ = dictBind_0
 var m_1 gopurs_runtime.Value = m_1_loop
 _ = m_1
-return gopurs_runtime.Apply2(gopurs_runtime.Box(dictBind_0.V1), m_1, Get_Control_Bind_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.Box(dictBind_0.V1), m_1, gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+}))
 }
 
 func Call_Control_Bind_bind__3818858255(dict_0_loop *Constructor_Control_Bind_Bind) gopurs_runtime.Value {
@@ -3563,13 +3565,17 @@ var dictBind_0 *Constructor_Control_Bind_Bind = dictBind_0_loop
 _ = dictBind_0
 var m_1 gopurs_runtime.Value = m_1_loop
 _ = m_1
-return gopurs_runtime.Apply2(gopurs_runtime.Box(dictBind_0.V1), m_1, Get_Control_Bind_identity())
+return gopurs_runtime.Apply2(gopurs_runtime.Box(dictBind_0.V1), m_1, gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+}))
 }
 
 func Call_Control_Bind_join__880516349(m_0_loop *Constructor_Data_Maybe_Just) *Constructor_Data_Maybe_Just {
 var m_0 *Constructor_Data_Maybe_Just = m_0_loop
 _ = m_0
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Maybe_bindMaybe(), "bind"), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(m_0)}, Get_Control_Bind_identity()))
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Maybe_bindMaybe(), "bind"), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(m_0)}, gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+})))
 }
 
 func Get_Control_Bind_arrayBind() gopurs_runtime.Value {

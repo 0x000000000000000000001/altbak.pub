@@ -701,15 +701,27 @@ _ = dictMonadGen_0
 Bind1_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.Box(dictMonadGen_0.V0), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}))
 _ = Bind1_1_0
 return gopurs_runtime.Func(func(dictFoldable1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_3_2 -> gopurs_runtime.Value
+__local_var_3_2 := gopurs_runtime.RecordDict4("add", "mul", "one", "zero", Get_Data_Semiring_numAdd(), Get_Data_Semiring_numMul(), gopurs_runtime.Float(1.0), gopurs_runtime.Float(0.0))
+_ = __local_var_3_2
+// TAST (Let): semigroupAdditive1_4_3 -> gopurs_runtime.Value
+semigroupAdditive1_4_3 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_2, "add"), v_4, v1_5)
+})
+}))
+_ = semigroupAdditive1_4_3
 // TAST (Let): foldMap_3_1 -> gopurs_runtime.Value
-foldMap_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_2, "Foldable0"), gopurs_runtime.Value{}), "foldMap"), Get_Control_Monad_Gen_monoidAdditive())
+foldMap_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFoldable1_2, "Foldable0"), gopurs_runtime.Value{}), "foldMap"), gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return semigroupAdditive1_4_3
+}), gopurs_runtime.RecordGet(__local_var_3_2, "zero")))
 _ = foldMap_3_1
 return gopurs_runtime.Func(func(xs_4 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): __local_var_5_2 -> gopurs_runtime.Value
-__local_var_5_2 := gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictFoldable1_2, "foldMap1"), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](Get_Control_Monad_Gen_semigroupFreqSemigroup()))}, Get_Control_Monad_Gen_freqSemigroup(), xs_4)
-_ = __local_var_5_2
+// TAST (Let): __local_var_5_4 -> gopurs_runtime.Value
+__local_var_5_4 := gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictFoldable1_2, "foldMap1"), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](Get_Control_Monad_Gen_semigroupFreqSemigroup()))}, Get_Control_Monad_Gen_freqSemigroup(), xs_4)
+_ = __local_var_5_4
 return gopurs_runtime.Apply2(gopurs_runtime.Box(Bind1_1_0.V1), gopurs_runtime.Apply2(gopurs_runtime.Box(dictMonadGen_0.V2), gopurs_runtime.Float(0.0), gopurs_runtime.Float(gopurs_runtime.Apply2(foldMap_3_1, Get_Data_Tuple_fst(), xs_4).FloatVal())), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return (*Constructor_Data_Tuple_Tuple)(gopurs_runtime.Apply(__local_var_5_2, x_6).UnsafePtr).V1
+return (*Constructor_Data_Tuple_Tuple)(gopurs_runtime.Apply(__local_var_5_4, x_6).UnsafePtr).V1
 }))
 })
 })

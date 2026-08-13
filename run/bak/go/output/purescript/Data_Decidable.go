@@ -224,7 +224,9 @@ return gopurs_runtime.Box(dict_0.V2)
 func Call_Data_Decidable_lost(dictDecidable_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictDecidable_0 gopurs_runtime.Value = dictDecidable_0_loop
 _ = dictDecidable_0
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDecidable_0, "lose"), Get_Data_Decidable_identity())
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictDecidable_0, "lose"), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}))
 }
 
 func Call_Data_Decidable_decidableOp(dictMonoid_0_loop gopurs_runtime.Value) gopurs_runtime.Value {

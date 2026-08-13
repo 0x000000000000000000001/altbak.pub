@@ -365,7 +365,9 @@ return gopurs_runtime.Box(dict_0.V1)
 func Call_Data_Divide_divided(dictDivide_0_loop *Constructor_Data_Divide_Divide) gopurs_runtime.Value {
 var dictDivide_0 *Constructor_Data_Divide_Divide = dictDivide_0_loop
 _ = dictDivide_0
-return gopurs_runtime.Apply(gopurs_runtime.Box(dictDivide_0.V1), Get_Data_Divide_identity())
+return gopurs_runtime.Apply(gopurs_runtime.Box(dictDivide_0.V1), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}))
 }
 
 func Call_Data_Divide_divide__1446725958(dict_0_loop *Constructor_Data_Divide_Divide) gopurs_runtime.Value {
