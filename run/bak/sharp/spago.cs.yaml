@@ -1,0 +1,66 @@
+package:
+  name: ps-cs-test
+  dependencies:
+    - aff
+    - console
+    - effect
+    - prelude
+    - datetime
+    - strings
+    - arrays
+    - partial
+    - st
+    - maybe
+    - either
+    - now
+    - lazy
+workspace:
+  packageSet:
+    registry: 77.7.0
+  extraPackages:
+    prelude:
+      path: "../sharpurs/sharpurs-prelude"
+    effect:
+      path: "../sharpurs/sharpurs-effect"
+    console:
+      path: "../sharpurs/sharpurs-console"
+    aff:
+      path: "../sharpurs/sharpurs-aff"
+    now:
+      path: "../sharpurs/sharpurs-now"
+    datetime:
+      path: "../sharpurs/sharpurs-datetime"
+    exceptions:
+      path: "../sharpurs/sharpurs-exceptions"
+    foldable-traversable:
+      path: "../sharpurs/sharpurs-foldable-traversable"
+    st:
+      path: "../sharpurs/sharpurs-st"
+    refs:
+      path: "../sharpurs/sharpurs-refs"
+    unsafe-coerce:
+      path: "../sharpurs/sharpurs-unsafe-coerce"
+    functions:
+      path: "../sharpurs/sharpurs-functions"
+    partial:
+      path: "../sharpurs/sharpurs-partial"
+    arrays:
+      path: "../sharpurs/sharpurs-arrays"
+    strings:
+      path: "../sharpurs/sharpurs-strings"
+    integers:
+      path: "../sharpurs/sharpurs-integers"
+    enums:
+      path: "../sharpurs/sharpurs-enums"
+    foreign-object:
+      path: "../sharpurs/sharpurs-foreign-object"
+    numbers:
+      path: "../sharpurs/sharpurs-numbers"
+    record:
+      path: "../sharpurs/sharpurs-record"
+    assert:
+      path: "../sharpurs/sharpurs-assert"
+    lazy:
+      path: "../sharpurs/sharpurs-lazy"
+  backend:
+    cmd: "../csharpurs/bin/csharpurs"

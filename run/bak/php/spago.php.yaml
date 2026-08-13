@@ -1,0 +1,59 @@
+package:
+  name: ps-php-test
+  dependencies:
+    - aff
+    - console
+    - effect
+    - prelude
+    - datetime
+    - strings
+    - arrays
+    - partial
+    - st
+    - maybe
+    - either
+    - now
+workspace:
+  packageSet:
+    registry: 77.7.0
+  extraPackages:
+    prelude:
+      path: "../phpurs/phpurs-prelude"
+    effect:
+      path: "../phpurs/phpurs-effect"
+    console:
+      path: "../phpurs/phpurs-console"
+    aff:
+      path: "../phpurs/phpurs-aff"
+    now:
+      path: "../phpurs/phpurs-now"
+    datetime:
+      path: "../phpurs/phpurs-datetime"
+    exceptions:
+      path: "../phpurs/phpurs-exceptions"
+    foldable-traversable:
+      path: "../phpurs/phpurs-foldable-traversable"
+    st:
+      path: "../phpurs/phpurs-st"
+    refs:
+      path: "../phpurs/phpurs-refs"
+    unsafe-coerce:
+      path: "../phpurs/phpurs-unsafe-coerce"
+    functions:
+      path: "../phpurs/phpurs-functions"
+    partial:
+      path: "../phpurs/phpurs-partial"
+    arrays:
+      path: "../phpurs/phpurs-arrays"
+    strings:
+      path: "../phpurs/phpurs-strings"
+    enums:
+      path: "../phpurs/phpurs-enums"
+    integers:
+      path: "../phpurs/phpurs-integers"
+    unfoldable:
+      path: "../phpurs/phpurs-unfoldable"
+    math:
+      path: "../phpurs/phpurs-math"
+  backend:
+    cmd: "../phpurs/phpurs/bin/phpurs"
