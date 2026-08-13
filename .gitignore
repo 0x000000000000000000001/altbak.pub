@@ -15,7 +15,7 @@ composer.json
 .composer-spago.json
 cachegrind.out*
 .psc-ide-port
-run/bak/*/output/
+run/bak/*/output*/
 run/bak/*/spago/
 run/bak/*/.spago/
 *.gopurs-cache.json
