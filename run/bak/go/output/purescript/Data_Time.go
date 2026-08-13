@@ -270,7 +270,7 @@ var cache_Data_Time_maxTime gopurs_runtime.Value
 var once_Data_Time_maxTime sync.Once
 func Get_Data_Time_maxTime() gopurs_runtime.Value {
 	once_Data_Time_maxTime.Do(func() {
-		cache_Data_Time_maxTime = gopurs_runtime.Float(gopurs_runtime.Float(Call_Data_Time_timeToMillis(gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Time](gopurs_runtime.RecordGet(Get_Data_Time_boundedTime(), "top")))).FloatVal())
+		cache_Data_Time_maxTime = gopurs_runtime.Float(Call_Data_Time_timeToMillis(gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Time](gopurs_runtime.RecordGet(Get_Data_Time_boundedTime(), "top"))))
 	})
 	return cache_Data_Time_maxTime
 }
@@ -279,7 +279,7 @@ var cache_Data_Time_minTime gopurs_runtime.Value
 var once_Data_Time_minTime sync.Once
 func Get_Data_Time_minTime() gopurs_runtime.Value {
 	once_Data_Time_minTime.Do(func() {
-		cache_Data_Time_minTime = gopurs_runtime.Float(gopurs_runtime.Float(Call_Data_Time_timeToMillis(gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Time](gopurs_runtime.RecordGet(Get_Data_Time_boundedTime(), "bottom")))).FloatVal())
+		cache_Data_Time_minTime = gopurs_runtime.Float(Call_Data_Time_timeToMillis(gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Time](gopurs_runtime.RecordGet(Get_Data_Time_boundedTime(), "bottom"))))
 	})
 	return cache_Data_Time_minTime
 }
@@ -309,7 +309,7 @@ var s_0 int64 = s_0_loop
 _ = s_0
 var v_1 *Constructor_Data_Time_Time = v_1_loop
 _ = v_1
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Time](gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Constructor_Data_Time_Time{1, (v_1).V0, (v_1).V1, s_0, (v_1).V3})})
+return &Constructor_Data_Time_Time{1, (v_1).V0, (v_1).V1, s_0, (v_1).V3}
 }
 
 func Call_Data_Time_setMinute(m_0_loop int64, v_1_loop *Constructor_Data_Time_Time) *Constructor_Data_Time_Time {
@@ -317,7 +317,7 @@ var m_0 int64 = m_0_loop
 _ = m_0
 var v_1 *Constructor_Data_Time_Time = v_1_loop
 _ = v_1
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Time](gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Constructor_Data_Time_Time{1, (v_1).V0, m_0, (v_1).V2, (v_1).V3})})
+return &Constructor_Data_Time_Time{1, (v_1).V0, m_0, (v_1).V2, (v_1).V3}
 }
 
 func Call_Data_Time_setMillisecond(ms_0_loop int64, v_1_loop *Constructor_Data_Time_Time) *Constructor_Data_Time_Time {
@@ -325,7 +325,7 @@ var ms_0 int64 = ms_0_loop
 _ = ms_0
 var v_1 *Constructor_Data_Time_Time = v_1_loop
 _ = v_1
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Time](gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Constructor_Data_Time_Time{1, (v_1).V0, (v_1).V1, (v_1).V2, ms_0})})
+return &Constructor_Data_Time_Time{1, (v_1).V0, (v_1).V1, (v_1).V2, ms_0}
 }
 
 func Call_Data_Time_setHour(h_0_loop int64, v_1_loop *Constructor_Data_Time_Time) *Constructor_Data_Time_Time {
@@ -333,7 +333,7 @@ var h_0 int64 = h_0_loop
 _ = h_0
 var v_1 *Constructor_Data_Time_Time = v_1_loop
 _ = v_1
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Time](gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(&Constructor_Data_Time_Time{1, h_0, (v_1).V1, (v_1).V2, (v_1).V3})})
+return &Constructor_Data_Time_Time{1, h_0, (v_1).V1, (v_1).V2, (v_1).V3}
 }
 
 func Call_Data_Time_second(v_0_loop *Constructor_Data_Time_Time) int64 {
@@ -487,7 +487,7 @@ var t1_1 *Constructor_Data_Time_Time = t1_1_loop
 _ = t1_1
 var t2_2 *Constructor_Data_Time_Time = t2_2_loop
 _ = t2_2
-return gopurs_runtime.Apply(gopurs_runtime.Box(dictDuration_0.V1), gopurs_runtime.Float((gopurs_runtime.Float(Call_Data_Time_timeToMillis(t1_1)).FloatVal()) + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Duration_durationMilliseconds(), "toDuration"), gopurs_runtime.Apply(Get_Data_Time_Duration_negate(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Duration_durationMilliseconds(), "fromDuration"), gopurs_runtime.Float(gopurs_runtime.Float(Call_Data_Time_timeToMillis(t2_2)).FloatVal())))).FloatVal())))
+return gopurs_runtime.Apply(gopurs_runtime.Box(dictDuration_0.V1), gopurs_runtime.Float((Call_Data_Time_timeToMillis(t1_1)) + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Duration_durationMilliseconds(), "toDuration"), gopurs_runtime.Apply(Get_Data_Time_Duration_negate(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Duration_durationMilliseconds(), "fromDuration"), gopurs_runtime.Float(Call_Data_Time_timeToMillis(t2_2))))).FloatVal())))
 }
 
 func Call_Data_Time_adjust(dictDuration_0_loop *Constructor_Data_Time_Duration_Duration, d_1_loop gopurs_runtime.Value, t_2_loop *Constructor_Data_Time_Time) *Constructor_Data_Tuple_Tuple {
@@ -504,7 +504,7 @@ _ = d_prime_3_0
 wholeDays_4_1 := gopurs_runtime.Apply(Get_Data_Number_floor(), gopurs_runtime.Float((d_prime_3_0.FloatVal()) / (86400000.0))).FloatVal()
 _ = wholeDays_4_1
 // TAST (Let): msAdjusted_5_2 -> float64
-msAdjusted_5_2 := ((gopurs_runtime.Float(Call_Data_Time_timeToMillis(t_2)).FloatVal()) + (d_prime_3_0.FloatVal())) + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Duration_durationMilliseconds(), "toDuration"), gopurs_runtime.Apply(Get_Data_Time_Duration_negate(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Duration_durationMilliseconds(), "fromDuration"), gopurs_runtime.Float((wholeDays_4_1) * (86400000.0))))).FloatVal())
+msAdjusted_5_2 := ((Call_Data_Time_timeToMillis(t_2)) + (d_prime_3_0.FloatVal())) + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Duration_durationMilliseconds(), "toDuration"), gopurs_runtime.Apply(Get_Data_Time_Duration_negate(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Duration_durationMilliseconds(), "fromDuration"), gopurs_runtime.Float((wholeDays_4_1) * (86400000.0))))).FloatVal())
 _ = msAdjusted_5_2
 var __t7 float64
 {
@@ -560,7 +560,7 @@ __t7 = __t5
 end_branch_7:
 // TAST (Let): wrap_6_3 -> gopurs_runtime.Value
 var wrap_6_3 gopurs_runtime.Value = gopurs_runtime.Float(__t7)
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Float((wholeDays_4_1) + (wrap_6_3.FloatVal())), gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Time](gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(Call_Data_Time_millisToTime((msAdjusted_5_2) + ((86400000.0) * (-(wrap_6_3.FloatVal())))))}))}})})
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Float((wholeDays_4_1) + (wrap_6_3.FloatVal())), gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(Call_Data_Time_millisToTime((msAdjusted_5_2) + ((86400000.0) * (-(wrap_6_3.FloatVal())))))}})})
 }
 
 

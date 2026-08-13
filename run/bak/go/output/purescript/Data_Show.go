@@ -651,10 +651,10 @@ return gopurs_runtime.Box(dict_0.V0)
 func Call_Data_Show_show__1626410898(v_0_loop uint32) string {
 var v_0 uint32 = v_0_loop
 _ = v_0
-var __t0 gopurs_runtime.Value
+var __t0 string
 {
 if (v_0 == 1908470532) {
-__t0 = gopurs_runtime.Str("January")
+__t0 = "January"
 goto end_branch_0
 } else {
 
@@ -662,7 +662,7 @@ goto end_branch_0
 }
 {
 if (v_0 == 2455627378) {
-__t0 = gopurs_runtime.Str("February")
+__t0 = "February"
 goto end_branch_0
 } else {
 
@@ -670,7 +670,7 @@ goto end_branch_0
 }
 {
 if (v_0 == 4162469099) {
-__t0 = gopurs_runtime.Str("March")
+__t0 = "March"
 goto end_branch_0
 } else {
 
@@ -678,7 +678,7 @@ goto end_branch_0
 }
 {
 if (v_0 == 1692989816) {
-__t0 = gopurs_runtime.Str("April")
+__t0 = "April"
 goto end_branch_0
 } else {
 
@@ -686,7 +686,7 @@ goto end_branch_0
 }
 {
 if (v_0 == 330658827) {
-__t0 = gopurs_runtime.Str("May")
+__t0 = "May"
 goto end_branch_0
 } else {
 
@@ -694,7 +694,7 @@ goto end_branch_0
 }
 {
 if (v_0 == 4067355978) {
-__t0 = gopurs_runtime.Str("June")
+__t0 = "June"
 goto end_branch_0
 } else {
 
@@ -702,7 +702,7 @@ goto end_branch_0
 }
 {
 if (v_0 == 2276710548) {
-__t0 = gopurs_runtime.Str("July")
+__t0 = "July"
 goto end_branch_0
 } else {
 
@@ -710,7 +710,7 @@ goto end_branch_0
 }
 {
 if (v_0 == 243771071) {
-__t0 = gopurs_runtime.Str("August")
+__t0 = "August"
 goto end_branch_0
 } else {
 
@@ -718,7 +718,7 @@ goto end_branch_0
 }
 {
 if (v_0 == 215731793) {
-__t0 = gopurs_runtime.Str("September")
+__t0 = "September"
 goto end_branch_0
 } else {
 
@@ -726,7 +726,7 @@ goto end_branch_0
 }
 {
 if (v_0 == 8639228) {
-__t0 = gopurs_runtime.Str("October")
+__t0 = "October"
 goto end_branch_0
 } else {
 
@@ -734,7 +734,7 @@ goto end_branch_0
 }
 {
 if (v_0 == 49471444) {
-__t0 = gopurs_runtime.Str("November")
+__t0 = "November"
 goto end_branch_0
 } else {
 
@@ -742,17 +742,17 @@ goto end_branch_0
 }
 {
 if (v_0 == 3889233761) {
-__t0 = gopurs_runtime.Str("December")
+__t0 = "December"
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }().StrVal()
 }
 end_branch_0:
-return __t0.StrVal()
+return __t0
 }
 
 func Call_Data_Show_show__1723386194(v_0_loop *Constructor_Data_Date_Date) string {
@@ -764,10 +764,10 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Semigroup_semigro
 func Call_Data_Show_show__1261750354(v_0_loop uint32) string {
 var v_0 uint32 = v_0_loop
 _ = v_0
-var __t0 gopurs_runtime.Value
+var __t0 string
 {
 if (v_0 == 217821258) {
-__t0 = gopurs_runtime.Str("Minute")
+__t0 = "Minute"
 goto end_branch_0
 } else {
 
@@ -775,7 +775,7 @@ goto end_branch_0
 }
 {
 if (v_0 == 3908053364) {
-__t0 = gopurs_runtime.Str("Second")
+__t0 = "Second"
 goto end_branch_0
 } else {
 
@@ -783,7 +783,7 @@ goto end_branch_0
 }
 {
 if (v_0 == 1292308612) {
-__t0 = gopurs_runtime.Str("Hour")
+__t0 = "Hour"
 goto end_branch_0
 } else {
 
@@ -791,7 +791,7 @@ goto end_branch_0
 }
 {
 if (v_0 == 2311060696) {
-__t0 = gopurs_runtime.Str("Day")
+__t0 = "Day"
 goto end_branch_0
 } else {
 
@@ -799,7 +799,7 @@ goto end_branch_0
 }
 {
 if (v_0 == 401302776) {
-__t0 = gopurs_runtime.Str("Week")
+__t0 = "Week"
 goto end_branch_0
 } else {
 
@@ -807,7 +807,7 @@ goto end_branch_0
 }
 {
 if (v_0 == 3327533908) {
-__t0 = gopurs_runtime.Str("Month")
+__t0 = "Month"
 goto end_branch_0
 } else {
 
@@ -815,17 +815,17 @@ goto end_branch_0
 }
 {
 if (v_0 == 3631736139) {
-__t0 = gopurs_runtime.Str("Year")
+__t0 = "Year"
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }().StrVal()
 }
 end_branch_0:
-return __t0.StrVal()
+return __t0
 }
 
 func Call_Data_Show_show__2929403666(dict_0_loop *Constructor_Data_Show_Show) gopurs_runtime.Value {

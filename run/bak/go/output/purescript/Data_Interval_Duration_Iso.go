@@ -187,10 +187,10 @@ var once_Data_Interval_Duration_Iso_showError sync.Once
 func Get_Data_Interval_Duration_Iso_showError() gopurs_runtime.Value {
 	once_Data_Interval_Duration_Iso_showError.Do(func() {
 		cache_Data_Interval_Duration_Iso_showError = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t16 gopurs_runtime.Value
+var __t16 string
 {
 if (v_0.Type == 9 && v_0.IntVal == 1422140417) {
-__t16 = gopurs_runtime.Str("(IsEmpty)")
+__t16 = "(IsEmpty)"
 goto end_branch_16
 } else {
 
@@ -198,7 +198,7 @@ goto end_branch_16
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 1775501833) {
-__t16 = gopurs_runtime.Str("(InvalidWeekComponentUsage)")
+__t16 = "(InvalidWeekComponentUsage)"
 goto end_branch_16
 } else {
 
@@ -206,11 +206,11 @@ goto end_branch_16
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 3224543173) {
-var __t7 gopurs_runtime.Value
+var __t7 string
 {
 var __t_tag_0 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0
 if (uint32(__t_tag_0) == 217821258) {
-__t7 = gopurs_runtime.Str("(ContainsNegativeValue Minute)")
+__t7 = "(ContainsNegativeValue Minute)"
 goto end_branch_7
 } else {
 
@@ -219,7 +219,7 @@ goto end_branch_7
 {
 var __t_tag_1 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0
 if (uint32(__t_tag_1) == 3908053364) {
-__t7 = gopurs_runtime.Str("(ContainsNegativeValue Second)")
+__t7 = "(ContainsNegativeValue Second)"
 goto end_branch_7
 } else {
 
@@ -228,7 +228,7 @@ goto end_branch_7
 {
 var __t_tag_2 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0
 if (uint32(__t_tag_2) == 1292308612) {
-__t7 = gopurs_runtime.Str("(ContainsNegativeValue Hour)")
+__t7 = "(ContainsNegativeValue Hour)"
 goto end_branch_7
 } else {
 
@@ -237,7 +237,7 @@ goto end_branch_7
 {
 var __t_tag_3 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0
 if (uint32(__t_tag_3) == 2311060696) {
-__t7 = gopurs_runtime.Str("(ContainsNegativeValue Day)")
+__t7 = "(ContainsNegativeValue Day)"
 goto end_branch_7
 } else {
 
@@ -246,7 +246,7 @@ goto end_branch_7
 {
 var __t_tag_4 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0
 if (uint32(__t_tag_4) == 401302776) {
-__t7 = gopurs_runtime.Str("(ContainsNegativeValue Week)")
+__t7 = "(ContainsNegativeValue Week)"
 goto end_branch_7
 } else {
 
@@ -255,7 +255,7 @@ goto end_branch_7
 {
 var __t_tag_5 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0
 if (uint32(__t_tag_5) == 3327533908) {
-__t7 = gopurs_runtime.Str("(ContainsNegativeValue Month)")
+__t7 = "(ContainsNegativeValue Month)"
 goto end_branch_7
 } else {
 
@@ -264,17 +264,17 @@ goto end_branch_7
 {
 var __t_tag_6 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0
 if (uint32(__t_tag_6) == 3631736139) {
-__t7 = gopurs_runtime.Str("(ContainsNegativeValue Year)")
+__t7 = "(ContainsNegativeValue Year)"
 goto end_branch_7
 } else {
 
 }
 }
 {
-__t7 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t7 = func() gopurs_runtime.Value { panic("Failed pattern match") }().StrVal()
 }
 end_branch_7:
-__t16 = gopurs_runtime.Str(__t7.StrVal())
+__t16 = __t7
 goto end_branch_16
 } else {
 
@@ -282,11 +282,11 @@ goto end_branch_16
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 574232667) {
-var __t15 gopurs_runtime.Value
+var __t15 string
 {
 var __t_tag_8 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0
 if (uint32(__t_tag_8) == 217821258) {
-__t15 = gopurs_runtime.Str("(InvalidFractionalUse Minute)")
+__t15 = "(InvalidFractionalUse Minute)"
 goto end_branch_15
 } else {
 
@@ -295,7 +295,7 @@ goto end_branch_15
 {
 var __t_tag_9 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0
 if (uint32(__t_tag_9) == 3908053364) {
-__t15 = gopurs_runtime.Str("(InvalidFractionalUse Second)")
+__t15 = "(InvalidFractionalUse Second)"
 goto end_branch_15
 } else {
 
@@ -304,7 +304,7 @@ goto end_branch_15
 {
 var __t_tag_10 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0
 if (uint32(__t_tag_10) == 1292308612) {
-__t15 = gopurs_runtime.Str("(InvalidFractionalUse Hour)")
+__t15 = "(InvalidFractionalUse Hour)"
 goto end_branch_15
 } else {
 
@@ -313,7 +313,7 @@ goto end_branch_15
 {
 var __t_tag_11 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0
 if (uint32(__t_tag_11) == 2311060696) {
-__t15 = gopurs_runtime.Str("(InvalidFractionalUse Day)")
+__t15 = "(InvalidFractionalUse Day)"
 goto end_branch_15
 } else {
 
@@ -322,7 +322,7 @@ goto end_branch_15
 {
 var __t_tag_12 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0
 if (uint32(__t_tag_12) == 401302776) {
-__t15 = gopurs_runtime.Str("(InvalidFractionalUse Week)")
+__t15 = "(InvalidFractionalUse Week)"
 goto end_branch_15
 } else {
 
@@ -331,7 +331,7 @@ goto end_branch_15
 {
 var __t_tag_13 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0
 if (uint32(__t_tag_13) == 3327533908) {
-__t15 = gopurs_runtime.Str("(InvalidFractionalUse Month)")
+__t15 = "(InvalidFractionalUse Month)"
 goto end_branch_15
 } else {
 
@@ -340,27 +340,27 @@ goto end_branch_15
 {
 var __t_tag_14 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0
 if (uint32(__t_tag_14) == 3631736139) {
-__t15 = gopurs_runtime.Str("(InvalidFractionalUse Year)")
+__t15 = "(InvalidFractionalUse Year)"
 goto end_branch_15
 } else {
 
 }
 }
 {
-__t15 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t15 = func() gopurs_runtime.Value { panic("Failed pattern match") }().StrVal()
 }
 end_branch_15:
-__t16 = gopurs_runtime.Str(__t15.StrVal())
+__t16 = __t15
 goto end_branch_16
 } else {
 
 }
 }
 {
-__t16 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t16 = func() gopurs_runtime.Value { panic("Failed pattern match") }().StrVal()
 }
 end_branch_16:
-return gopurs_runtime.Str(__t16.StrVal())
+return gopurs_runtime.Str(__t16)
 }))
 	})
 	return cache_Data_Interval_Duration_Iso_showError
@@ -818,7 +818,7 @@ func Get_Data_Interval_Duration_Iso_ordError() gopurs_runtime.Value {
 return Get_Data_Interval_Duration_Iso_eqError()
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_1 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t59 gopurs_runtime.Value
+var __t59 uint32
 {
 if (x_0.Type == 9 && x_0.IntVal == 1422140417) {
 var __t0 uint32
@@ -834,7 +834,7 @@ goto end_branch_0
 __t0 = 1527465420
 }
 end_branch_0:
-__t59 = gopurs_runtime.Value{Type: 9, IntVal: int64(__t0), UnsafePtr: nil}
+__t59 = __t0
 goto end_branch_59
 } else {
 
@@ -842,7 +842,7 @@ goto end_branch_59
 }
 {
 if (y_1.Type == 9 && y_1.IntVal == 1422140417) {
-__t59 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
+__t59 = 380165415
 goto end_branch_59
 } else {
 
@@ -863,7 +863,7 @@ goto end_branch_1
 __t1 = 1527465420
 }
 end_branch_1:
-__t59 = gopurs_runtime.Value{Type: 9, IntVal: int64(__t1), UnsafePtr: nil}
+__t59 = __t1
 goto end_branch_59
 } else {
 
@@ -871,7 +871,7 @@ goto end_branch_59
 }
 {
 if (y_1.Type == 9 && y_1.IntVal == 1775501833) {
-__t59 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
+__t59 = 380165415
 goto end_branch_59
 } else {
 
@@ -882,7 +882,7 @@ if (x_0.Type == 9 && x_0.IntVal == 3224543173) {
 var __t30 uint32
 {
 if (y_1.Type == 9 && y_1.IntVal == 3224543173) {
-var __t29 gopurs_runtime.Value
+var __t29 uint32
 {
 var __t_tag_2 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(x_0.UnsafePtr).V0
 if (uint32(__t_tag_2) == 3908053364) {
@@ -900,7 +900,7 @@ goto end_branch_4
 __t4 = 1527465420
 }
 end_branch_4:
-__t29 = gopurs_runtime.Value{Type: 9, IntVal: int64(__t4), UnsafePtr: nil}
+__t29 = __t4
 goto end_branch_29
 } else {
 
@@ -909,7 +909,7 @@ goto end_branch_29
 {
 var __t_tag_5 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0
 if (uint32(__t_tag_5) == 3908053364) {
-__t29 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
+__t29 = 380165415
 goto end_branch_29
 } else {
 
@@ -932,7 +932,7 @@ goto end_branch_8
 __t8 = 1527465420
 }
 end_branch_8:
-__t29 = gopurs_runtime.Value{Type: 9, IntVal: int64(__t8), UnsafePtr: nil}
+__t29 = __t8
 goto end_branch_29
 } else {
 
@@ -941,7 +941,7 @@ goto end_branch_29
 {
 var __t_tag_9 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0
 if (uint32(__t_tag_9) == 217821258) {
-__t29 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
+__t29 = 380165415
 goto end_branch_29
 } else {
 
@@ -964,7 +964,7 @@ goto end_branch_12
 __t12 = 1527465420
 }
 end_branch_12:
-__t29 = gopurs_runtime.Value{Type: 9, IntVal: int64(__t12), UnsafePtr: nil}
+__t29 = __t12
 goto end_branch_29
 } else {
 
@@ -973,7 +973,7 @@ goto end_branch_29
 {
 var __t_tag_13 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0
 if (uint32(__t_tag_13) == 1292308612) {
-__t29 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
+__t29 = 380165415
 goto end_branch_29
 } else {
 
@@ -996,7 +996,7 @@ goto end_branch_16
 __t16 = 1527465420
 }
 end_branch_16:
-__t29 = gopurs_runtime.Value{Type: 9, IntVal: int64(__t16), UnsafePtr: nil}
+__t29 = __t16
 goto end_branch_29
 } else {
 
@@ -1005,7 +1005,7 @@ goto end_branch_29
 {
 var __t_tag_17 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0
 if (uint32(__t_tag_17) == 2311060696) {
-__t29 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
+__t29 = 380165415
 goto end_branch_29
 } else {
 
@@ -1028,7 +1028,7 @@ goto end_branch_20
 __t20 = 1527465420
 }
 end_branch_20:
-__t29 = gopurs_runtime.Value{Type: 9, IntVal: int64(__t20), UnsafePtr: nil}
+__t29 = __t20
 goto end_branch_29
 } else {
 
@@ -1037,7 +1037,7 @@ goto end_branch_29
 {
 var __t_tag_21 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0
 if (uint32(__t_tag_21) == 401302776) {
-__t29 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
+__t29 = 380165415
 goto end_branch_29
 } else {
 
@@ -1060,7 +1060,7 @@ goto end_branch_24
 __t24 = 1527465420
 }
 end_branch_24:
-__t29 = gopurs_runtime.Value{Type: 9, IntVal: int64(__t24), UnsafePtr: nil}
+__t29 = __t24
 goto end_branch_29
 } else {
 
@@ -1069,7 +1069,7 @@ goto end_branch_29
 {
 var __t_tag_25 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0
 if (uint32(__t_tag_25) == 3327533908) {
-__t29 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
+__t29 = 380165415
 goto end_branch_29
 } else {
 
@@ -1084,17 +1084,17 @@ var __t_tag_27 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativ
 __t_and_28 = (uint32(__t_tag_27) == 3631736139)
 }
 if __t_and_28 {
-__t29 = gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}
+__t29 = 902936544
 goto end_branch_29
 } else {
 
 }
 }
 {
-__t29 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t29 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
 }
 end_branch_29:
-__t30 = uint32(__t29.IntVal)
+__t30 = __t29
 goto end_branch_30
 } else {
 
@@ -1104,7 +1104,7 @@ goto end_branch_30
 __t30 = 1527465420
 }
 end_branch_30:
-__t59 = gopurs_runtime.Value{Type: 9, IntVal: int64(__t30), UnsafePtr: nil}
+__t59 = __t30
 goto end_branch_59
 } else {
 
@@ -1112,7 +1112,7 @@ goto end_branch_59
 }
 {
 if (y_1.Type == 9 && y_1.IntVal == 3224543173) {
-__t59 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
+__t59 = 380165415
 goto end_branch_59
 } else {
 
@@ -1120,7 +1120,7 @@ goto end_branch_59
 }
 {
 if ((x_0.Type == 9 && x_0.IntVal == 574232667)) && ((y_1.Type == 9 && y_1.IntVal == 574232667)) {
-var __t58 gopurs_runtime.Value
+var __t58 uint32
 {
 var __t_tag_31 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(x_0.UnsafePtr).V0
 if (uint32(__t_tag_31) == 3908053364) {
@@ -1138,7 +1138,7 @@ goto end_branch_33
 __t33 = 1527465420
 }
 end_branch_33:
-__t58 = gopurs_runtime.Value{Type: 9, IntVal: int64(__t33), UnsafePtr: nil}
+__t58 = __t33
 goto end_branch_58
 } else {
 
@@ -1147,7 +1147,7 @@ goto end_branch_58
 {
 var __t_tag_34 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0
 if (uint32(__t_tag_34) == 3908053364) {
-__t58 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
+__t58 = 380165415
 goto end_branch_58
 } else {
 
@@ -1170,7 +1170,7 @@ goto end_branch_37
 __t37 = 1527465420
 }
 end_branch_37:
-__t58 = gopurs_runtime.Value{Type: 9, IntVal: int64(__t37), UnsafePtr: nil}
+__t58 = __t37
 goto end_branch_58
 } else {
 
@@ -1179,7 +1179,7 @@ goto end_branch_58
 {
 var __t_tag_38 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0
 if (uint32(__t_tag_38) == 217821258) {
-__t58 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
+__t58 = 380165415
 goto end_branch_58
 } else {
 
@@ -1202,7 +1202,7 @@ goto end_branch_41
 __t41 = 1527465420
 }
 end_branch_41:
-__t58 = gopurs_runtime.Value{Type: 9, IntVal: int64(__t41), UnsafePtr: nil}
+__t58 = __t41
 goto end_branch_58
 } else {
 
@@ -1211,7 +1211,7 @@ goto end_branch_58
 {
 var __t_tag_42 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0
 if (uint32(__t_tag_42) == 1292308612) {
-__t58 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
+__t58 = 380165415
 goto end_branch_58
 } else {
 
@@ -1234,7 +1234,7 @@ goto end_branch_45
 __t45 = 1527465420
 }
 end_branch_45:
-__t58 = gopurs_runtime.Value{Type: 9, IntVal: int64(__t45), UnsafePtr: nil}
+__t58 = __t45
 goto end_branch_58
 } else {
 
@@ -1243,7 +1243,7 @@ goto end_branch_58
 {
 var __t_tag_46 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0
 if (uint32(__t_tag_46) == 2311060696) {
-__t58 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
+__t58 = 380165415
 goto end_branch_58
 } else {
 
@@ -1266,7 +1266,7 @@ goto end_branch_49
 __t49 = 1527465420
 }
 end_branch_49:
-__t58 = gopurs_runtime.Value{Type: 9, IntVal: int64(__t49), UnsafePtr: nil}
+__t58 = __t49
 goto end_branch_58
 } else {
 
@@ -1275,7 +1275,7 @@ goto end_branch_58
 {
 var __t_tag_50 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0
 if (uint32(__t_tag_50) == 401302776) {
-__t58 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
+__t58 = 380165415
 goto end_branch_58
 } else {
 
@@ -1298,7 +1298,7 @@ goto end_branch_53
 __t53 = 1527465420
 }
 end_branch_53:
-__t58 = gopurs_runtime.Value{Type: 9, IntVal: int64(__t53), UnsafePtr: nil}
+__t58 = __t53
 goto end_branch_58
 } else {
 
@@ -1307,7 +1307,7 @@ goto end_branch_58
 {
 var __t_tag_54 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0
 if (uint32(__t_tag_54) == 3327533908) {
-__t58 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
+__t58 = 380165415
 goto end_branch_58
 } else {
 
@@ -1322,27 +1322,27 @@ var __t_tag_56 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFraction
 __t_and_57 = (uint32(__t_tag_56) == 3631736139)
 }
 if __t_and_57 {
-__t58 = gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}
+__t58 = 902936544
 goto end_branch_58
 } else {
 
 }
 }
 {
-__t58 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t58 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
 }
 end_branch_58:
-__t59 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(__t58.IntVal)), UnsafePtr: nil}
+__t59 = __t58
 goto end_branch_59
 } else {
 
 }
 }
 {
-__t59 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t59 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
 }
 end_branch_59:
-return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(__t59.IntVal)), UnsafePtr: nil}
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t59), UnsafePtr: nil}
 })
 }))
 	})
@@ -1452,10 +1452,10 @@ return v_0
 func Call_Data_Interval_Duration_Iso_prettyError(v_0_loop gopurs_runtime.Value) string {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-var __t16 gopurs_runtime.Value
+var __t16 string
 {
 if (v_0.Type == 9 && v_0.IntVal == 1422140417) {
-__t16 = gopurs_runtime.Str("Duration is empty (has no components)")
+__t16 = "Duration is empty (has no components)"
 goto end_branch_16
 } else {
 
@@ -1463,7 +1463,7 @@ goto end_branch_16
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 1775501833) {
-__t16 = gopurs_runtime.Str("Week component of Duration is used with other components")
+__t16 = "Week component of Duration is used with other components"
 goto end_branch_16
 } else {
 
@@ -1471,11 +1471,11 @@ goto end_branch_16
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 3224543173) {
-var __t7 gopurs_runtime.Value
+var __t7 string
 {
 var __t_tag_0 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0
 if (uint32(__t_tag_0) == 217821258) {
-__t7 = gopurs_runtime.Str("Component `Minute` contains negative value")
+__t7 = "Component `Minute` contains negative value"
 goto end_branch_7
 } else {
 
@@ -1484,7 +1484,7 @@ goto end_branch_7
 {
 var __t_tag_1 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0
 if (uint32(__t_tag_1) == 3908053364) {
-__t7 = gopurs_runtime.Str("Component `Second` contains negative value")
+__t7 = "Component `Second` contains negative value"
 goto end_branch_7
 } else {
 
@@ -1493,7 +1493,7 @@ goto end_branch_7
 {
 var __t_tag_2 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0
 if (uint32(__t_tag_2) == 1292308612) {
-__t7 = gopurs_runtime.Str("Component `Hour` contains negative value")
+__t7 = "Component `Hour` contains negative value"
 goto end_branch_7
 } else {
 
@@ -1502,7 +1502,7 @@ goto end_branch_7
 {
 var __t_tag_3 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0
 if (uint32(__t_tag_3) == 2311060696) {
-__t7 = gopurs_runtime.Str("Component `Day` contains negative value")
+__t7 = "Component `Day` contains negative value"
 goto end_branch_7
 } else {
 
@@ -1511,7 +1511,7 @@ goto end_branch_7
 {
 var __t_tag_4 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0
 if (uint32(__t_tag_4) == 401302776) {
-__t7 = gopurs_runtime.Str("Component `Week` contains negative value")
+__t7 = "Component `Week` contains negative value"
 goto end_branch_7
 } else {
 
@@ -1520,7 +1520,7 @@ goto end_branch_7
 {
 var __t_tag_5 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0
 if (uint32(__t_tag_5) == 3327533908) {
-__t7 = gopurs_runtime.Str("Component `Month` contains negative value")
+__t7 = "Component `Month` contains negative value"
 goto end_branch_7
 } else {
 
@@ -1529,17 +1529,17 @@ goto end_branch_7
 {
 var __t_tag_6 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0
 if (uint32(__t_tag_6) == 3631736139) {
-__t7 = gopurs_runtime.Str("Component `Year` contains negative value")
+__t7 = "Component `Year` contains negative value"
 goto end_branch_7
 } else {
 
 }
 }
 {
-__t7 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t7 = func() gopurs_runtime.Value { panic("Failed pattern match") }().StrVal()
 }
 end_branch_7:
-__t16 = gopurs_runtime.Str(__t7.StrVal())
+__t16 = __t7
 goto end_branch_16
 } else {
 
@@ -1547,11 +1547,11 @@ goto end_branch_16
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 574232667) {
-var __t15 gopurs_runtime.Value
+var __t15 string
 {
 var __t_tag_8 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0
 if (uint32(__t_tag_8) == 217821258) {
-__t15 = gopurs_runtime.Str("Invalid usage of Fractional value at component `Minute`")
+__t15 = "Invalid usage of Fractional value at component `Minute`"
 goto end_branch_15
 } else {
 
@@ -1560,7 +1560,7 @@ goto end_branch_15
 {
 var __t_tag_9 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0
 if (uint32(__t_tag_9) == 3908053364) {
-__t15 = gopurs_runtime.Str("Invalid usage of Fractional value at component `Second`")
+__t15 = "Invalid usage of Fractional value at component `Second`"
 goto end_branch_15
 } else {
 
@@ -1569,7 +1569,7 @@ goto end_branch_15
 {
 var __t_tag_10 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0
 if (uint32(__t_tag_10) == 1292308612) {
-__t15 = gopurs_runtime.Str("Invalid usage of Fractional value at component `Hour`")
+__t15 = "Invalid usage of Fractional value at component `Hour`"
 goto end_branch_15
 } else {
 
@@ -1578,7 +1578,7 @@ goto end_branch_15
 {
 var __t_tag_11 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0
 if (uint32(__t_tag_11) == 2311060696) {
-__t15 = gopurs_runtime.Str("Invalid usage of Fractional value at component `Day`")
+__t15 = "Invalid usage of Fractional value at component `Day`"
 goto end_branch_15
 } else {
 
@@ -1587,7 +1587,7 @@ goto end_branch_15
 {
 var __t_tag_12 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0
 if (uint32(__t_tag_12) == 401302776) {
-__t15 = gopurs_runtime.Str("Invalid usage of Fractional value at component `Week`")
+__t15 = "Invalid usage of Fractional value at component `Week`"
 goto end_branch_15
 } else {
 
@@ -1596,7 +1596,7 @@ goto end_branch_15
 {
 var __t_tag_13 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0
 if (uint32(__t_tag_13) == 3327533908) {
-__t15 = gopurs_runtime.Str("Invalid usage of Fractional value at component `Month`")
+__t15 = "Invalid usage of Fractional value at component `Month`"
 goto end_branch_15
 } else {
 
@@ -1605,27 +1605,27 @@ goto end_branch_15
 {
 var __t_tag_14 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0
 if (uint32(__t_tag_14) == 3631736139) {
-__t15 = gopurs_runtime.Str("Invalid usage of Fractional value at component `Year`")
+__t15 = "Invalid usage of Fractional value at component `Year`"
 goto end_branch_15
 } else {
 
 }
 }
 {
-__t15 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t15 = func() gopurs_runtime.Value { panic("Failed pattern match") }().StrVal()
 }
 end_branch_15:
-__t16 = gopurs_runtime.Str(__t15.StrVal())
+__t16 = __t15
 goto end_branch_16
 } else {
 
 }
 }
 {
-__t16 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t16 = func() gopurs_runtime.Value { panic("Failed pattern match") }().StrVal()
 }
 end_branch_16:
-return __t16.StrVal()
+return __t16
 }
 
 func Call_Data_Interval_Duration_Iso_checkWeekUsage(v_0_loop gopurs_runtime.Value) *Constructor_Data_List_Types_Cons {
@@ -1662,11 +1662,11 @@ if (__t1.IntVal) != (0) {
 
 var __t5 bool
 {
-var __t4 gopurs_runtime.Value
+var __t4 int64
 {
 var __t_tag_2 *Constructor_Data_Map_Internal_Node = gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](gopurs_runtime.RecordGet(v_0, "asMap"))
 if (__t_tag_2 == nil) {
-__t4 = gopurs_runtime.Int(0)
+__t4 = 0
 goto end_branch_4
 } else {
 
@@ -1675,17 +1675,17 @@ goto end_branch_4
 {
 var __t_tag_3 *Constructor_Data_Map_Internal_Node = gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](gopurs_runtime.RecordGet(v_0, "asMap"))
 if (__t_tag_3 != nil) {
-__t4 = gopurs_runtime.Int((*Constructor_Data_Map_Internal_Node)(gopurs_runtime.RecordGet(v_0, "asMap").UnsafePtr).V1)
+__t4 = (*Constructor_Data_Map_Internal_Node)(gopurs_runtime.RecordGet(v_0, "asMap").UnsafePtr).V1
 goto end_branch_4
 } else {
 
 }
 }
 {
-__t4 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t4 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
 }
 end_branch_4:
-if (__t4.IntVal) > (1) {
+if (__t4) > (1) {
 __t5 = true
 goto end_branch_5
 } else {
@@ -1699,7 +1699,7 @@ end_branch_5:
 __t_and_6 = __t5
 }
 if __t_and_6 {
-__t7 = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons{1, gopurs_runtime.Value{Type: 9, IntVal: 1775501833, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer((*Constructor_Data_List_Types_Cons)(nil))})})}
+__t7 = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons{1, gopurs_runtime.Value{Type: 9, IntVal: 1775501833, UnsafePtr: unsafe.Pointer(nil)}, (*Constructor_Data_List_Types_Cons)(nil)})}
 goto end_branch_7
 } else {
 
@@ -1739,7 +1739,7 @@ goto end_branch_1
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons{1, gopurs_runtime.Value{Type: 9, IntVal: 3224543173, UnsafePtr: unsafe.Pointer(&Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue{1, uint32((*Constructor_Data_Tuple_Tuple)(v1_1.UnsafePtr).V0.IntVal)})}, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer((*Constructor_Data_List_Types_Cons)(nil))})})}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons{1, gopurs_runtime.Value{Type: 9, IntVal: 3224543173, UnsafePtr: unsafe.Pointer(&Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue{1, uint32((*Constructor_Data_Tuple_Tuple)(v1_1.UnsafePtr).V0.IntVal)})}, (*Constructor_Data_List_Types_Cons)(nil)})}
 }
 end_branch_1:
 return gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](__t1))}
@@ -1782,7 +1782,7 @@ end_branch_2:
 __t_and_3 = __t2
 }
 if __t_and_3 {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons{1, gopurs_runtime.Value{Type: 9, IntVal: 574232667, UnsafePtr: unsafe.Pointer(&Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse{1, uint32((*Constructor_Data_Tuple_Tuple)((v1_1_0).V0.UnsafePtr).V0.IntVal)})}, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer((*Constructor_Data_List_Types_Cons)(nil))})})}
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons{1, gopurs_runtime.Value{Type: 9, IntVal: 574232667, UnsafePtr: unsafe.Pointer(&Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse{1, uint32((*Constructor_Data_Tuple_Tuple)((v1_1_0).V0.UnsafePtr).V0.IntVal)})}, (*Constructor_Data_List_Types_Cons)(nil)})}
 goto end_branch_4
 } else {
 
@@ -1815,7 +1815,7 @@ __t1 = false
 }
 end_branch_1:
 if __t1 {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons{1, gopurs_runtime.Value{Type: 9, IntVal: 1422140417, UnsafePtr: unsafe.Pointer(nil)}, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer((*Constructor_Data_List_Types_Cons)(nil))})})}
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons{1, gopurs_runtime.Value{Type: 9, IntVal: 1422140417, UnsafePtr: unsafe.Pointer(nil)}, (*Constructor_Data_List_Types_Cons)(nil)})}
 goto end_branch_2
 } else {
 
@@ -1844,10 +1844,10 @@ var v_2 *Constructor_Data_List_Types_Cons = v_2_loop
 _ = v_2
 var v1_3 gopurs_runtime.Value = v1_3_loop
 _ = v1_3
-var __t1 gopurs_runtime.Value
+var __t1 *Constructor_Data_List_Types_Cons
 {
 if (v1_3.Type == 9 && v1_3.IntVal == 1358893437 && v1_3.UnsafePtr == nil) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_2)}
+__t1 = v_2
 goto end_branch_1
 } else {
 
@@ -1858,17 +1858,17 @@ if (v1_3.Type == 9 && v1_3.IntVal == 1358893437 && v1_3.UnsafePtr != nil) {
 v_2_loop = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons{1, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple]((*Constructor_Data_List_Types_Cons)(v1_3.UnsafePtr).V0))}, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_2)})})})
 v1_3_loop = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer((*Constructor_Data_List_Types_Cons)(v1_3.UnsafePtr).V1)}
 continue go__go_1_0_0
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](gopurs_runtime.Value{}))}
+__t1 = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](gopurs_runtime.Value{})
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t1 = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](func() gopurs_runtime.Value { panic("Failed pattern match") }())
 }
 end_branch_1:
-return gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](__t1))}
+return gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(__t1)}
 }
 }()
 })
@@ -1885,7 +1885,7 @@ func Call_Data_Interval_Duration_Iso_mkIsoDuration(d_0_loop *Constructor_Data_Ma
 var d_0 *Constructor_Data_Map_Internal_Node = d_0_loop
 _ = d_0
 // TAST (Let): __local_var_1_1 -> *Constructor_Data_List_Types_Cons
-__local_var_1_1 := gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(Call_Data_Interval_Duration_Iso_checkValidIsoDuration(d_0))})
+__local_var_1_1 := Call_Data_Interval_Duration_Iso_checkValidIsoDuration(d_0)
 _ = __local_var_1_1
 var __t2 gopurs_runtime.Value
 {

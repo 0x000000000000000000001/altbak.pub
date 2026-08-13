@@ -107,7 +107,7 @@ _ = __local_var_0_0
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
 _ = __local_var_1_1
-return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Show_showInt(), "show"), gopurs_runtime.Int(gopurs_runtime.Int(Call_Test_AstTree_eval(Call_Test_AstTree_buildTree(__local_var_1_1.IntVal))).IntVal)).StrVal())), gopurs_runtime.Value{})
+return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Show_showInt(), "show"), gopurs_runtime.Int(Call_Test_AstTree_eval(Call_Test_AstTree_buildTree(__local_var_1_1.IntVal)))).StrVal())), gopurs_runtime.Value{})
 })
 }()
 	})
@@ -147,10 +147,10 @@ for {
 if false { continue eval }
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-var __t0 gopurs_runtime.Value
+var __t0 int64
 {
 if (v_0.Type == 9 && v_0.IntVal == 245188743) {
-__t0 = gopurs_runtime.Int((*Constructor_Test_AstTree_Val)(v_0.UnsafePtr).V0)
+__t0 = (*Constructor_Test_AstTree_Val)(v_0.UnsafePtr).V0
 goto end_branch_0
 } else {
 
@@ -158,7 +158,7 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 2937956733) {
-__t0 = gopurs_runtime.Int((gopurs_runtime.Int(Call_Test_AstTree_eval((*Constructor_Test_AstTree_Add)(v_0.UnsafePtr).V0)).IntVal) + (gopurs_runtime.Int(Call_Test_AstTree_eval((*Constructor_Test_AstTree_Add)(v_0.UnsafePtr).V1)).IntVal))
+__t0 = (Call_Test_AstTree_eval((*Constructor_Test_AstTree_Add)(v_0.UnsafePtr).V0)) + (Call_Test_AstTree_eval((*Constructor_Test_AstTree_Add)(v_0.UnsafePtr).V1))
 goto end_branch_0
 } else {
 
@@ -166,7 +166,7 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 3406566728) {
-__t0 = gopurs_runtime.Int((gopurs_runtime.Int(Call_Test_AstTree_eval((*Constructor_Test_AstTree_Mul)(v_0.UnsafePtr).V0)).IntVal) * (gopurs_runtime.Int(Call_Test_AstTree_eval((*Constructor_Test_AstTree_Mul)(v_0.UnsafePtr).V1)).IntVal))
+__t0 = (Call_Test_AstTree_eval((*Constructor_Test_AstTree_Mul)(v_0.UnsafePtr).V0)) * (Call_Test_AstTree_eval((*Constructor_Test_AstTree_Mul)(v_0.UnsafePtr).V1))
 goto end_branch_0
 } else {
 
@@ -174,17 +174,17 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 2029887576) {
-__t0 = gopurs_runtime.Int((gopurs_runtime.Int(Call_Test_AstTree_eval((*Constructor_Test_AstTree_Sub)(v_0.UnsafePtr).V0)).IntVal) - (gopurs_runtime.Int(Call_Test_AstTree_eval((*Constructor_Test_AstTree_Sub)(v_0.UnsafePtr).V1)).IntVal))
+__t0 = (Call_Test_AstTree_eval((*Constructor_Test_AstTree_Sub)(v_0.UnsafePtr).V0)) - (Call_Test_AstTree_eval((*Constructor_Test_AstTree_Sub)(v_0.UnsafePtr).V1))
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
 }
 end_branch_0:
-return __t0.IntVal
+return __t0
 }
 }
 

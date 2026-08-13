@@ -898,7 +898,7 @@ return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtim
 func Call_Data_Tuple_Nested_tuple1(a_0_loop gopurs_runtime.Value) *Constructor_Data_Tuple_Tuple {
 var a_0 gopurs_runtime.Value = a_0_loop
 _ = a_0
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, a_0, Get_Data_Unit_unit()})})
+return &Constructor_Data_Tuple_Tuple{1, a_0, Get_Data_Unit_unit()}
 }
 
 func Call_Data_Tuple_Nested_over9(o_0_loop gopurs_runtime.Value, v_1_loop *Constructor_Data_Tuple_Tuple) *Constructor_Data_Tuple_Tuple {
@@ -978,7 +978,7 @@ var o_0 gopurs_runtime.Value = o_0_loop
 _ = o_0
 var v_1 *Constructor_Data_Tuple_Tuple = v_1_loop
 _ = v_1
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply(o_0, (v_1).V0), (v_1).V1})})
+return &Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply(o_0, (v_1).V0), (v_1).V1}
 }
 
 func Call_Data_Tuple_Nested_get9(v_0_loop *Constructor_Data_Tuple_Tuple) gopurs_runtime.Value {

@@ -37,10 +37,10 @@ var once_Data_Ordering_showOrdering sync.Once
 func Get_Data_Ordering_showOrdering() gopurs_runtime.Value {
 	once_Data_Ordering_showOrdering.Do(func() {
 		cache_Data_Ordering_showOrdering = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
+var __t0 string
 {
 if (uint32(v_0.IntVal) == 1527465420) {
-__t0 = gopurs_runtime.Str("LT")
+__t0 = "LT"
 goto end_branch_0
 } else {
 
@@ -48,7 +48,7 @@ goto end_branch_0
 }
 {
 if (uint32(v_0.IntVal) == 380165415) {
-__t0 = gopurs_runtime.Str("GT")
+__t0 = "GT"
 goto end_branch_0
 } else {
 
@@ -56,17 +56,17 @@ goto end_branch_0
 }
 {
 if (uint32(v_0.IntVal) == 902936544) {
-__t0 = gopurs_runtime.Str("EQ")
+__t0 = "EQ"
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }().StrVal()
 }
 end_branch_0:
-return gopurs_runtime.Str(__t0.StrVal())
+return gopurs_runtime.Str(__t0)
 }))
 	})
 	return cache_Data_Ordering_showOrdering
@@ -78,10 +78,10 @@ func Get_Data_Ordering_semigroupOrdering() gopurs_runtime.Value {
 	once_Data_Ordering_semigroupOrdering.Do(func() {
 		cache_Data_Ordering_semigroupOrdering = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
+var __t0 uint32
 {
 if (uint32(v_0.IntVal) == 1527465420) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}
+__t0 = 1527465420
 goto end_branch_0
 } else {
 
@@ -89,7 +89,7 @@ goto end_branch_0
 }
 {
 if (uint32(v_0.IntVal) == 380165415) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
+__t0 = 380165415
 goto end_branch_0
 } else {
 
@@ -97,17 +97,17 @@ goto end_branch_0
 }
 {
 if (uint32(v_0.IntVal) == 902936544) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(v1_1.IntVal)), UnsafePtr: nil}
+__t0 = uint32(v1_1.IntVal)
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
 }
 end_branch_0:
-return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(__t0.IntVal)), UnsafePtr: nil}
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t0), UnsafePtr: nil}
 })
 }))
 	})
@@ -211,10 +211,10 @@ type Constructor_Data_Ordering_EQ struct {
 func Call_Data_Ordering_invert(v_0_loop uint32) uint32 {
 var v_0 uint32 = v_0_loop
 _ = v_0
-var __t0 gopurs_runtime.Value
+var __t0 uint32
 {
 if (v_0 == 380165415) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}
+__t0 = 1527465420
 goto end_branch_0
 } else {
 
@@ -222,7 +222,7 @@ goto end_branch_0
 }
 {
 if (v_0 == 902936544) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}
+__t0 = 902936544
 goto end_branch_0
 } else {
 
@@ -230,17 +230,17 @@ goto end_branch_0
 }
 {
 if (v_0 == 1527465420) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
+__t0 = 380165415
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
 }
 end_branch_0:
-return uint32(__t0.IntVal)
+return __t0
 }
 
 

@@ -57,10 +57,10 @@ type Constructor_Test_Tiny_Rect struct {
 func Call_Test_Tiny_area(v_0_loop gopurs_runtime.Value) int64 {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
-var __t0 gopurs_runtime.Value
+var __t0 int64
 {
 if (v_0.Type == 9 && v_0.IntVal == 248718980) {
-__t0 = gopurs_runtime.Int(((*Constructor_Test_Tiny_Circle)(v_0.UnsafePtr).V0) * ((*Constructor_Test_Tiny_Circle)(v_0.UnsafePtr).V0))
+__t0 = ((*Constructor_Test_Tiny_Circle)(v_0.UnsafePtr).V0) * ((*Constructor_Test_Tiny_Circle)(v_0.UnsafePtr).V0)
 goto end_branch_0
 } else {
 
@@ -68,17 +68,17 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 261969494) {
-__t0 = gopurs_runtime.Int(((*Constructor_Test_Tiny_Rect)(v_0.UnsafePtr).V0) * ((*Constructor_Test_Tiny_Rect)(v_0.UnsafePtr).V1))
+__t0 = ((*Constructor_Test_Tiny_Rect)(v_0.UnsafePtr).V0) * ((*Constructor_Test_Tiny_Rect)(v_0.UnsafePtr).V1)
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
 }
 end_branch_0:
-return __t0.IntVal
+return __t0
 }
 
 

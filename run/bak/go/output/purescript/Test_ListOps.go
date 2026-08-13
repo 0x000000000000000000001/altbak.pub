@@ -110,7 +110,7 @@ _ = __local_var_0_0
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
 _ = __local_var_1_1
-return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Show_showInt(), "show"), gopurs_runtime.Int(gopurs_runtime.Int(Call_Test_ListOps_sumEvens(__local_var_1_1.IntVal)).IntVal)).StrVal())), gopurs_runtime.Value{})
+return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Show_showInt(), "show"), gopurs_runtime.Int(Call_Test_ListOps_sumEvens(__local_var_1_1.IntVal))).StrVal())), gopurs_runtime.Value{})
 })
 }()
 	})
@@ -261,10 +261,10 @@ var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
 var v1_3 *Constructor_Test_ListOps_Cons = v1_3_loop
 _ = v1_3
-var __t2 gopurs_runtime.Value
+var __t2 *Constructor_Test_ListOps_Cons
 {
 if (v_2.Type == 9 && v_2.IntVal == 1127792131 && v_2.UnsafePtr == nil) {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(v1_3)}
+__t2 = v1_3
 goto end_branch_2
 } else {
 
@@ -291,17 +291,17 @@ continue go__go_1_0_1
 __t1 = gopurs_runtime.CoerceToStruct[Constructor_Test_ListOps_Cons](gopurs_runtime.Value{})
 }
 end_branch_1:
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(__t1)}
+__t2 = __t1
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t2 = gopurs_runtime.CoerceToStruct[Constructor_Test_ListOps_Cons](func() gopurs_runtime.Value { panic("Failed pattern match") }())
 }
 end_branch_2:
-return gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Test_ListOps_Cons](__t2))}
+return gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(__t2)}
 }
 }()
 })
@@ -359,7 +359,7 @@ return gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Point
 }()
 })
 })
-return Call_Test_ListOps_foldl(Get_Data_Semiring_intAdd(), gopurs_runtime.Int(0), gopurs_runtime.CoerceToStruct[Constructor_Test_ListOps_Cons](gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Test_ListOps_Cons](gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(Call_Test_ListOps_filterEvens(gopurs_runtime.CoerceToStruct[Constructor_Test_ListOps_Cons](gopurs_runtime.Apply2(go__go_1_0_2, gopurs_runtime.Int(n_0), gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer((*Constructor_Test_ListOps_Cons)(nil))}))))}))})).IntVal
+return Call_Test_ListOps_foldl(Get_Data_Semiring_intAdd(), gopurs_runtime.Int(0), gopurs_runtime.CoerceToStruct[Constructor_Test_ListOps_Cons](gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(Call_Test_ListOps_filterEvens(gopurs_runtime.CoerceToStruct[Constructor_Test_ListOps_Cons](gopurs_runtime.Apply2(go__go_1_0_2, gopurs_runtime.Int(n_0), gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer((*Constructor_Test_ListOps_Cons)(nil))}))))})).IntVal
 }
 
 func Call_Test_ListOps_foldl__3262866295(v_0_loop gopurs_runtime.Value, v1_1_loop int64, v2_2_loop *Constructor_Test_ListOps_Cons) int64 {
@@ -369,10 +369,10 @@ var v1_1 int64 = v1_1_loop
 _ = v1_1
 var v2_2 *Constructor_Test_ListOps_Cons = v2_2_loop
 _ = v2_2
-var __t0 gopurs_runtime.Value
+var __t0 int64
 {
 if (v2_2 == nil) {
-__t0 = gopurs_runtime.Int(v1_1)
+__t0 = v1_1
 goto end_branch_0
 } else {
 
@@ -380,17 +380,17 @@ goto end_branch_0
 }
 {
 if (v2_2 != nil) {
-__t0 = gopurs_runtime.Int(Call_Test_ListOps_foldl(v_0, gopurs_runtime.Int(gopurs_runtime.Apply2(v_0, gopurs_runtime.Int(v1_1), (v2_2).V0).IntVal), (v2_2).V1).IntVal)
+__t0 = Call_Test_ListOps_foldl(v_0, gopurs_runtime.Int(gopurs_runtime.Apply2(v_0, gopurs_runtime.Int(v1_1), (v2_2).V0).IntVal), (v2_2).V1).IntVal
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
 }
 end_branch_0:
-return __t0.IntVal
+return __t0
 }
 
 func Call_Test_ListOps_foldl__1255354935(v_0_loop gopurs_runtime.Value, v1_1_loop gopurs_runtime.Value, v2_2_loop *Constructor_Test_ListOps_Cons) gopurs_runtime.Value {

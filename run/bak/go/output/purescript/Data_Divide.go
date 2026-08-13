@@ -111,10 +111,10 @@ _ = __local_var_7_2
 // TAST (Let): __local_var_8_3 -> uint32
 __local_var_8_3 := uint32(gopurs_runtime.Apply2(v1_2, (v2_5_0).V1, (v3_6_1).V1).IntVal)
 _ = __local_var_8_3
-var __t4 gopurs_runtime.Value
+var __t4 uint32
 {
 if (__local_var_7_2 == 1527465420) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}
+__t4 = 1527465420
 goto end_branch_4
 } else {
 
@@ -122,7 +122,7 @@ goto end_branch_4
 }
 {
 if (__local_var_7_2 == 380165415) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
+__t4 = 380165415
 goto end_branch_4
 } else {
 
@@ -130,17 +130,17 @@ goto end_branch_4
 }
 {
 if (__local_var_7_2 == 902936544) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: int64(__local_var_8_3), UnsafePtr: nil}
+__t4 = __local_var_8_3
 goto end_branch_4
 } else {
 
 }
 }
 {
-__t4 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t4 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
 }
 end_branch_4:
-return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(__t4.IntVal)), UnsafePtr: nil}
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t4), UnsafePtr: nil}
 })
 })
 })
@@ -217,10 +217,10 @@ _ = __local_var_7_2
 // TAST (Let): __local_var_8_3 -> uint32
 __local_var_8_3 := uint32(gopurs_runtime.Apply2(v1_2, (v2_5_0).V1, (v3_6_1).V1).IntVal)
 _ = __local_var_8_3
-var __t4 gopurs_runtime.Value
+var __t4 uint32
 {
 if (__local_var_7_2 == 1527465420) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}
+__t4 = 1527465420
 goto end_branch_4
 } else {
 
@@ -228,7 +228,7 @@ goto end_branch_4
 }
 {
 if (__local_var_7_2 == 380165415) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
+__t4 = 380165415
 goto end_branch_4
 } else {
 
@@ -236,17 +236,17 @@ goto end_branch_4
 }
 {
 if (__local_var_7_2 == 902936544) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: int64(__local_var_8_3), UnsafePtr: nil}
+__t4 = __local_var_8_3
 goto end_branch_4
 } else {
 
 }
 }
 {
-__t4 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t4 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
 }
 end_branch_4:
-return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(__t4.IntVal)), UnsafePtr: nil}
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t4), UnsafePtr: nil}
 })
 })
 })

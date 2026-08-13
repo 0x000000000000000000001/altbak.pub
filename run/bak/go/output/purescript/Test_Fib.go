@@ -45,7 +45,7 @@ _ = __local_var_0_0
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
 _ = __local_var_1_1
-return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Show_showInt(), "show"), gopurs_runtime.Int(gopurs_runtime.Int(Call_Test_Fib_fib(__local_var_1_1.IntVal)).IntVal)).StrVal())), gopurs_runtime.Value{})
+return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Show_showInt(), "show"), gopurs_runtime.Int(Call_Test_Fib_fib(__local_var_1_1.IntVal))).StrVal())), gopurs_runtime.Value{})
 })
 }()
 	})
@@ -76,7 +76,7 @@ goto end_branch_0
 }
 }
 {
-__t0 = (gopurs_runtime.Int(Call_Test_Fib_fib((v_0) - (1))).IntVal) + (gopurs_runtime.Int(Call_Test_Fib_fib((v_0) - (2))).IntVal)
+__t0 = (Call_Test_Fib_fib((v_0) - (1))) + (Call_Test_Fib_fib((v_0) - (2)))
 }
 end_branch_0:
 return __t0

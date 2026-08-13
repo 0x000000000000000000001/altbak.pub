@@ -388,7 +388,7 @@ var v_4 gopurs_runtime.Value = v_4_loop
 _ = v_4
 var v1_5 gopurs_runtime.Value = v1_5_loop
 _ = v1_5
-var __t4 gopurs_runtime.Value
+var __t4 uint32
 {
 if (v_4.Type == 9 && v_4.IntVal == 218341868 && v_4.UnsafePtr == nil) {
 var __t1 uint32
@@ -404,7 +404,7 @@ goto end_branch_1
 __t1 = 1527465420
 }
 end_branch_1:
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: int64(__t1), UnsafePtr: nil}
+__t4 = __t1
 goto end_branch_4
 } else {
 
@@ -412,7 +412,7 @@ goto end_branch_4
 }
 {
 if (v1_5.Type == 9 && v1_5.IntVal == 218341868 && v1_5.UnsafePtr == nil) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
+__t4 = 380165415
 goto end_branch_4
 } else {
 
@@ -439,17 +439,17 @@ goto end_branch_3
 __t3 = uint32(v2_6_2.IntVal)
 }
 end_branch_3:
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: int64(__t3), UnsafePtr: nil}
+__t4 = __t3
 goto end_branch_4
 } else {
 
 }
 }
 {
-__t4 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t4 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
 }
 end_branch_4:
-return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(__t4.IntVal)), UnsafePtr: nil}
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t4), UnsafePtr: nil}
 }
 }()
 })
@@ -887,10 +887,10 @@ return Get_Data_List_Lazy_Types_foldableNonEmptyList()
 return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply3(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_FoldableWithIndex_FoldableWithIndex](Get_Data_List_Lazy_Types_foldableWithIndexNonEmpty()).V1), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](dictMonoid_0))}, gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
+var __t0 int64
 {
 if (x_3.Type == 9 && x_3.IntVal == 930809136 && x_3.UnsafePtr == nil) {
-__t0 = gopurs_runtime.Int(0)
+__t0 = 0
 goto end_branch_0
 } else {
 
@@ -898,17 +898,17 @@ goto end_branch_0
 }
 {
 if (x_3.Type == 9 && x_3.IntVal == 930809136 && x_3.UnsafePtr != nil) {
-__t0 = gopurs_runtime.Int((1) + ((*Constructor_Data_Maybe_Just)(x_3.UnsafePtr).V0.IntVal))
+__t0 = (1) + ((*Constructor_Data_Maybe_Just)(x_3.UnsafePtr).V0.IntVal)
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
 }
 end_branch_0:
-return gopurs_runtime.Apply(f_1, gopurs_runtime.Int(__t0.IntVal))
+return gopurs_runtime.Apply(f_1, gopurs_runtime.Int(__t0))
 }), gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty](gopurs_runtime.Apply(Get_Data_Lazy_force(), v_2)))})
 })
 })
@@ -916,10 +916,10 @@ return gopurs_runtime.Apply(f_1, gopurs_runtime.Int(__t0.IntVal))
 return gopurs_runtime.Func(func(b_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply3(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_FoldableWithIndex_FoldableWithIndex](Get_Data_List_Lazy_Types_foldableWithIndexNonEmpty()).V2), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t1 gopurs_runtime.Value
+var __t1 int64
 {
 if (x_3.Type == 9 && x_3.IntVal == 930809136 && x_3.UnsafePtr == nil) {
-__t1 = gopurs_runtime.Int(0)
+__t1 = 0
 goto end_branch_1
 } else {
 
@@ -927,17 +927,17 @@ goto end_branch_1
 }
 {
 if (x_3.Type == 9 && x_3.IntVal == 930809136 && x_3.UnsafePtr != nil) {
-__t1 = gopurs_runtime.Int((1) + ((*Constructor_Data_Maybe_Just)(x_3.UnsafePtr).V0.IntVal))
+__t1 = (1) + ((*Constructor_Data_Maybe_Just)(x_3.UnsafePtr).V0.IntVal)
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
 }
 end_branch_1:
-return gopurs_runtime.Apply(f_0, gopurs_runtime.Int(__t1.IntVal))
+return gopurs_runtime.Apply(f_0, gopurs_runtime.Int(__t1))
 }), b_1, gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty](gopurs_runtime.Apply(Get_Data_Lazy_force(), v_2)))})
 })
 })
@@ -945,10 +945,10 @@ return gopurs_runtime.Apply(f_0, gopurs_runtime.Int(__t1.IntVal))
 return gopurs_runtime.Func(func(b_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply3(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_FoldableWithIndex_FoldableWithIndex](Get_Data_List_Lazy_Types_foldableWithIndexNonEmpty()).V3), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t2 gopurs_runtime.Value
+var __t2 int64
 {
 if (x_3.Type == 9 && x_3.IntVal == 930809136 && x_3.UnsafePtr == nil) {
-__t2 = gopurs_runtime.Int(0)
+__t2 = 0
 goto end_branch_2
 } else {
 
@@ -956,17 +956,17 @@ goto end_branch_2
 }
 {
 if (x_3.Type == 9 && x_3.IntVal == 930809136 && x_3.UnsafePtr != nil) {
-__t2 = gopurs_runtime.Int((1) + ((*Constructor_Data_Maybe_Just)(x_3.UnsafePtr).V0.IntVal))
+__t2 = (1) + ((*Constructor_Data_Maybe_Just)(x_3.UnsafePtr).V0.IntVal)
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
 }
 end_branch_2:
-return gopurs_runtime.Apply(f_0, gopurs_runtime.Int(__t2.IntVal))
+return gopurs_runtime.Apply(f_0, gopurs_runtime.Int(__t2))
 }), b_1, gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty](gopurs_runtime.Apply(Get_Data_Lazy_force(), v_2)))})
 })
 })
@@ -1038,10 +1038,10 @@ return Get_Data_List_Lazy_Types_functorNonEmptyList()
 return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(Get_Data_Lazy_go__defer(), gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty](gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_FunctorWithIndex_FunctorWithIndex](Get_Data_List_Lazy_Types_functorWithIndex()).V1), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
+var __t0 int64
 {
 if (x_3.Type == 9 && x_3.IntVal == 930809136 && x_3.UnsafePtr == nil) {
-__t0 = gopurs_runtime.Int(0)
+__t0 = 0
 goto end_branch_0
 } else {
 
@@ -1049,17 +1049,17 @@ goto end_branch_0
 }
 {
 if (x_3.Type == 9 && x_3.IntVal == 930809136 && x_3.UnsafePtr != nil) {
-__t0 = gopurs_runtime.Int((1) + ((*Constructor_Data_Maybe_Just)(x_3.UnsafePtr).V0.IntVal))
+__t0 = (1) + ((*Constructor_Data_Maybe_Just)(x_3.UnsafePtr).V0.IntVal)
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
 }
 end_branch_0:
-return gopurs_runtime.Apply(f_0, gopurs_runtime.Int(__t0.IntVal))
+return gopurs_runtime.Apply(f_0, gopurs_runtime.Int(__t0))
 }), gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty](gopurs_runtime.Apply(Get_Data_Lazy_force(), v_1)))})))}
 }))
 })
@@ -1239,10 +1239,10 @@ return gopurs_runtime.Apply(Get_Data_Lazy_go__defer(), gopurs_runtime.Func(func(
 return gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty](xxs_4))}
 }))
 }), gopurs_runtime.Apply3(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_TraversableWithIndex_TraversableWithIndex](Get_Data_List_Lazy_Types_traversableWithIndexNonEmpty()).V3), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](dictApplicative_0))}, gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t1 gopurs_runtime.Value
+var __t1 int64
 {
 if (x_4.Type == 9 && x_4.IntVal == 930809136 && x_4.UnsafePtr == nil) {
-__t1 = gopurs_runtime.Int(0)
+__t1 = 0
 goto end_branch_1
 } else {
 
@@ -1250,17 +1250,17 @@ goto end_branch_1
 }
 {
 if (x_4.Type == 9 && x_4.IntVal == 930809136 && x_4.UnsafePtr != nil) {
-__t1 = gopurs_runtime.Int((1) + ((*Constructor_Data_Maybe_Just)(x_4.UnsafePtr).V0.IntVal))
+__t1 = (1) + ((*Constructor_Data_Maybe_Just)(x_4.UnsafePtr).V0.IntVal)
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
 }
 end_branch_1:
-return gopurs_runtime.Apply(f_2, gopurs_runtime.Int(__t1.IntVal))
+return gopurs_runtime.Apply(f_2, gopurs_runtime.Int(__t1))
 }), gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty](gopurs_runtime.Apply(Get_Data_Lazy_force(), v_3)))}))
 })
 })
@@ -2803,10 +2803,10 @@ return Get_Data_List_Lazy_Types_foldableNonEmptyList()
 return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply3(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_FoldableWithIndex_FoldableWithIndex](Get_Data_List_Lazy_Types_foldableWithIndexNonEmpty()).V1), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](dictMonoid_0))}, gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
+var __t0 int64
 {
 if (x_3.Type == 9 && x_3.IntVal == 930809136 && x_3.UnsafePtr == nil) {
-__t0 = gopurs_runtime.Int(0)
+__t0 = 0
 goto end_branch_0
 } else {
 
@@ -2814,17 +2814,17 @@ goto end_branch_0
 }
 {
 if (x_3.Type == 9 && x_3.IntVal == 930809136 && x_3.UnsafePtr != nil) {
-__t0 = gopurs_runtime.Int((1) + ((*Constructor_Data_Maybe_Just)(x_3.UnsafePtr).V0.IntVal))
+__t0 = (1) + ((*Constructor_Data_Maybe_Just)(x_3.UnsafePtr).V0.IntVal)
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
 }
 end_branch_0:
-return gopurs_runtime.Apply(f_1, gopurs_runtime.Int(__t0.IntVal))
+return gopurs_runtime.Apply(f_1, gopurs_runtime.Int(__t0))
 }), gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty](gopurs_runtime.Apply(Get_Data_Lazy_force(), v_2)))})
 })
 })
@@ -2832,10 +2832,10 @@ return gopurs_runtime.Apply(f_1, gopurs_runtime.Int(__t0.IntVal))
 return gopurs_runtime.Func(func(b_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply3(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_FoldableWithIndex_FoldableWithIndex](Get_Data_List_Lazy_Types_foldableWithIndexNonEmpty()).V2), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t1 gopurs_runtime.Value
+var __t1 int64
 {
 if (x_3.Type == 9 && x_3.IntVal == 930809136 && x_3.UnsafePtr == nil) {
-__t1 = gopurs_runtime.Int(0)
+__t1 = 0
 goto end_branch_1
 } else {
 
@@ -2843,17 +2843,17 @@ goto end_branch_1
 }
 {
 if (x_3.Type == 9 && x_3.IntVal == 930809136 && x_3.UnsafePtr != nil) {
-__t1 = gopurs_runtime.Int((1) + ((*Constructor_Data_Maybe_Just)(x_3.UnsafePtr).V0.IntVal))
+__t1 = (1) + ((*Constructor_Data_Maybe_Just)(x_3.UnsafePtr).V0.IntVal)
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
 }
 end_branch_1:
-return gopurs_runtime.Apply(f_0, gopurs_runtime.Int(__t1.IntVal))
+return gopurs_runtime.Apply(f_0, gopurs_runtime.Int(__t1))
 }), b_1, gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty](gopurs_runtime.Apply(Get_Data_Lazy_force(), v_2)))})
 })
 })
@@ -2861,10 +2861,10 @@ return gopurs_runtime.Apply(f_0, gopurs_runtime.Int(__t1.IntVal))
 return gopurs_runtime.Func(func(b_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply3(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_FoldableWithIndex_FoldableWithIndex](Get_Data_List_Lazy_Types_foldableWithIndexNonEmpty()).V3), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t2 gopurs_runtime.Value
+var __t2 int64
 {
 if (x_3.Type == 9 && x_3.IntVal == 930809136 && x_3.UnsafePtr == nil) {
-__t2 = gopurs_runtime.Int(0)
+__t2 = 0
 goto end_branch_2
 } else {
 
@@ -2872,17 +2872,17 @@ goto end_branch_2
 }
 {
 if (x_3.Type == 9 && x_3.IntVal == 930809136 && x_3.UnsafePtr != nil) {
-__t2 = gopurs_runtime.Int((1) + ((*Constructor_Data_Maybe_Just)(x_3.UnsafePtr).V0.IntVal))
+__t2 = (1) + ((*Constructor_Data_Maybe_Just)(x_3.UnsafePtr).V0.IntVal)
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
 }
 end_branch_2:
-return gopurs_runtime.Apply(f_0, gopurs_runtime.Int(__t2.IntVal))
+return gopurs_runtime.Apply(f_0, gopurs_runtime.Int(__t2))
 }), b_1, gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty](gopurs_runtime.Apply(Get_Data_Lazy_force(), v_2)))})
 })
 })
@@ -3010,10 +3010,10 @@ return Get_Data_List_Lazy_Types_functorNonEmptyList()
 return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(Get_Data_Lazy_go__defer(), gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty](gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_FunctorWithIndex_FunctorWithIndex](Get_Data_List_Lazy_Types_functorWithIndex()).V1), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
+var __t0 int64
 {
 if (x_3.Type == 9 && x_3.IntVal == 930809136 && x_3.UnsafePtr == nil) {
-__t0 = gopurs_runtime.Int(0)
+__t0 = 0
 goto end_branch_0
 } else {
 
@@ -3021,17 +3021,17 @@ goto end_branch_0
 }
 {
 if (x_3.Type == 9 && x_3.IntVal == 930809136 && x_3.UnsafePtr != nil) {
-__t0 = gopurs_runtime.Int((1) + ((*Constructor_Data_Maybe_Just)(x_3.UnsafePtr).V0.IntVal))
+__t0 = (1) + ((*Constructor_Data_Maybe_Just)(x_3.UnsafePtr).V0.IntVal)
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
 }
 end_branch_0:
-return gopurs_runtime.Apply(f_0, gopurs_runtime.Int(__t0.IntVal))
+return gopurs_runtime.Apply(f_0, gopurs_runtime.Int(__t0))
 }), gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty](gopurs_runtime.Apply(Get_Data_Lazy_force(), v_1)))})))}
 }))
 })
@@ -3752,10 +3752,10 @@ return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(xs_1 gopurs_r
 // TAST (Let): v_2_0 -> *Constructor_Data_List_Lazy_Types_Cons
 v_2_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons](gopurs_runtime.Apply(Get_Data_Lazy_force(), xs_1))
 _ = v_2_0
-var __t1 gopurs_runtime.Value
+var __t1 string
 {
 if (v_2_0 == nil) {
-__t1 = gopurs_runtime.Str("(fromFoldable [])")
+__t1 = "(fromFoldable [])"
 goto end_branch_1
 } else {
 
@@ -3763,21 +3763,21 @@ goto end_branch_1
 }
 {
 if (v_2_0 != nil) {
-__t1 = gopurs_runtime.Str(((("(fromFoldable [") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (v_2_0).V0).StrVal())) + (gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Data_List_Lazy_Types_foldableList(), "foldl"), gopurs_runtime.Func(func(shown_3 gopurs_runtime.Value) gopurs_runtime.Value {
+__t1 = ((("(fromFoldable [") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (v_2_0).V0).StrVal())) + (gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Data_List_Lazy_Types_foldableList(), "foldl"), gopurs_runtime.Func(func(shown_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_prime_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str(((shown_3.StrVal()) + (",")) + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), x_prime_4).StrVal()))
 })
-}), gopurs_runtime.Str(""), (v_2_0).V1).StrVal())) + ("])"))
+}), gopurs_runtime.Str(""), (v_2_0).V1).StrVal())) + ("])")
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }().StrVal()
 }
 end_branch_1:
-return gopurs_runtime.Str(__t1.StrVal())
+return gopurs_runtime.Str(__t1)
 }))
 }
 
@@ -3809,10 +3809,10 @@ _ = dictShow_0
 showList1_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Show_Show](Call_Data_List_Lazy_Types_showList(dictShow_0))
 _ = showList1_1_0
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t1 gopurs_runtime.Value
+var __t1 string
 {
 if (v_2.Type == 9 && v_2.IntVal == 218341868 && v_2.UnsafePtr == nil) {
-__t1 = gopurs_runtime.Str("Nil")
+__t1 = "Nil"
 goto end_branch_1
 } else {
 
@@ -3820,17 +3820,17 @@ goto end_branch_1
 }
 {
 if (v_2.Type == 9 && v_2.IntVal == 218341868 && v_2.UnsafePtr != nil) {
-__t1 = gopurs_runtime.Str((((("(") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*Constructor_Data_List_Lazy_Types_Cons)(v_2.UnsafePtr).V0).StrVal())) + (" : ")) + (gopurs_runtime.Apply(gopurs_runtime.Box(showList1_1_0.V0), (*Constructor_Data_List_Lazy_Types_Cons)(v_2.UnsafePtr).V1).StrVal())) + (")"))
+__t1 = (((("(") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*Constructor_Data_List_Lazy_Types_Cons)(v_2.UnsafePtr).V0).StrVal())) + (" : ")) + (gopurs_runtime.Apply(gopurs_runtime.Box(showList1_1_0.V0), (*Constructor_Data_List_Lazy_Types_Cons)(v_2.UnsafePtr).V1).StrVal())) + (")")
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }().StrVal()
 }
 end_branch_1:
-return gopurs_runtime.Str(__t1.StrVal())
+return gopurs_runtime.Str(__t1)
 }))
 }
 

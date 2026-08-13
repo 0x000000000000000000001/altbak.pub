@@ -364,10 +364,10 @@ func Get_Data_Either_applyEither() gopurs_runtime.Value {
 return Get_Data_Either_functorEither()
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
+var __t0 *Constructor_Data_Either_Left
 {
 if (v_0.Type == 9 && v_0.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Left{1, (*Constructor_Data_Either_Left)(v_0.UnsafePtr).V0})}
+__t0 = &Constructor_Data_Either_Left{1, (*Constructor_Data_Either_Left)(v_0.UnsafePtr).V0}
 goto end_branch_0
 } else {
 
@@ -375,17 +375,17 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 2465973597) {
-__t0 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Either_functorEither(), "map"), (*Constructor_Data_Either_Right)(v_0.UnsafePtr).V0, v1_1)
+__t0 = gopurs_runtime.CoerceToStruct[Constructor_Data_Either_Left](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Either_functorEither(), "map"), (*Constructor_Data_Either_Right)(v_0.UnsafePtr).V0, v1_1))
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = gopurs_runtime.CoerceToStruct[Constructor_Data_Either_Left](func() gopurs_runtime.Value { panic("Failed pattern match") }())
 }
 end_branch_0:
-return __t0
+return gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(__t0)}
 })
 }))
 	})
@@ -529,10 +529,10 @@ func Get_Data_Either_applyEither__2246489028() gopurs_runtime.Value {
 return Get_Data_Either_functorEither()
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
+var __t0 *Constructor_Data_Either_Left
 {
 if (v_0.Type == 9 && v_0.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Left{1, (*Constructor_Data_Either_Left)(v_0.UnsafePtr).V0})}
+__t0 = &Constructor_Data_Either_Left{1, (*Constructor_Data_Either_Left)(v_0.UnsafePtr).V0}
 goto end_branch_0
 } else {
 
@@ -540,17 +540,17 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 2465973597) {
-__t0 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Either_functorEither(), "map"), (*Constructor_Data_Either_Right)(v_0.UnsafePtr).V0, v1_1)
+__t0 = gopurs_runtime.CoerceToStruct[Constructor_Data_Either_Left](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Either_functorEither(), "map"), (*Constructor_Data_Either_Right)(v_0.UnsafePtr).V0, v1_1))
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = gopurs_runtime.CoerceToStruct[Constructor_Data_Either_Left](func() gopurs_runtime.Value { panic("Failed pattern match") }())
 }
 end_branch_0:
-return __t0
+return gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(__t0)}
 })
 }))
 	})
@@ -565,10 +565,10 @@ func Get_Data_Either_applyEither__3806012498() gopurs_runtime.Value {
 return Get_Data_Either_functorEither()
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
+var __t0 *Constructor_Data_Either_Left
 {
 if (v_0.Type == 9 && v_0.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Left{1, (*Constructor_Data_Either_Left)(v_0.UnsafePtr).V0})}
+__t0 = &Constructor_Data_Either_Left{1, (*Constructor_Data_Either_Left)(v_0.UnsafePtr).V0}
 goto end_branch_0
 } else {
 
@@ -576,17 +576,17 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 2465973597) {
-__t0 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Either_functorEither(), "map"), (*Constructor_Data_Either_Right)(v_0.UnsafePtr).V0, v1_1)
+__t0 = gopurs_runtime.CoerceToStruct[Constructor_Data_Either_Left](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Either_functorEither(), "map"), (*Constructor_Data_Either_Right)(v_0.UnsafePtr).V0, v1_1))
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = gopurs_runtime.CoerceToStruct[Constructor_Data_Either_Left](func() gopurs_runtime.Value { panic("Failed pattern match") }())
 }
 end_branch_0:
-return __t0
+return gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(__t0)}
 })
 }))
 	})
@@ -824,10 +824,10 @@ _ = dictShow_0
 var dictShow1_1 gopurs_runtime.Value = dictShow1_1_loop
 _ = dictShow1_1
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
+var __t0 string
 {
 if (v_2.Type == 9 && v_2.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Str((("(Left ") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*Constructor_Data_Either_Left)(v_2.UnsafePtr).V0).StrVal())) + (")"))
+__t0 = (("(Left ") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*Constructor_Data_Either_Left)(v_2.UnsafePtr).V0).StrVal())) + (")")
 goto end_branch_0
 } else {
 
@@ -835,17 +835,17 @@ goto end_branch_0
 }
 {
 if (v_2.Type == 9 && v_2.IntVal == 2465973597) {
-__t0 = gopurs_runtime.Str((("(Right ") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*Constructor_Data_Either_Right)(v_2.UnsafePtr).V0).StrVal())) + (")"))
+__t0 = (("(Right ") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*Constructor_Data_Either_Right)(v_2.UnsafePtr).V0).StrVal())) + (")")
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }().StrVal()
 }
 end_branch_0:
-return gopurs_runtime.Str(__t0.StrVal())
+return gopurs_runtime.Str(__t0)
 }))
 }
 
@@ -1071,7 +1071,7 @@ return gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_do
 return eqEither2_3_1
 }), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_5 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t6 gopurs_runtime.Value
+var __t6 uint32
 {
 if (x_4.Type == 9 && x_4.IntVal == 3711209382) {
 var __t5 uint32
@@ -1087,7 +1087,7 @@ goto end_branch_5
 __t5 = 1527465420
 }
 end_branch_5:
-__t6 = gopurs_runtime.Value{Type: 9, IntVal: int64(__t5), UnsafePtr: nil}
+__t6 = __t5
 goto end_branch_6
 } else {
 
@@ -1095,7 +1095,7 @@ goto end_branch_6
 }
 {
 if (y_5.Type == 9 && y_5.IntVal == 3711209382) {
-__t6 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
+__t6 = 380165415
 goto end_branch_6
 } else {
 
@@ -1103,17 +1103,17 @@ goto end_branch_6
 }
 {
 if ((x_4.Type == 9 && x_4.IntVal == 2465973597)) && ((y_5.Type == 9 && y_5.IntVal == 2465973597)) {
-__t6 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd1_2, "compare"), (*Constructor_Data_Either_Right)(x_4.UnsafePtr).V0, (*Constructor_Data_Either_Right)(y_5.UnsafePtr).V0).IntVal)), UnsafePtr: nil}
+__t6 = uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd1_2, "compare"), (*Constructor_Data_Either_Right)(x_4.UnsafePtr).V0, (*Constructor_Data_Either_Right)(y_5.UnsafePtr).V0).IntVal)
 goto end_branch_6
 } else {
 
 }
 }
 {
-__t6 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t6 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
 }
 end_branch_6:
-return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(__t6.IntVal)), UnsafePtr: nil}
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t6), UnsafePtr: nil}
 })
 }))
 })
@@ -1443,10 +1443,10 @@ var v1_1 gopurs_runtime.Value = v1_1_loop
 _ = v1_1
 var v2_2 gopurs_runtime.Value = v2_2_loop
 _ = v2_2
-var __t0 gopurs_runtime.Value
+var __t0 bool
 {
 if (v2_2.Type == 9 && v2_2.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Bool((gopurs_runtime.Apply(v_0, (*Constructor_Data_Either_Left)(v2_2.UnsafePtr).V0).IntVal) != (0))
+__t0 = (gopurs_runtime.Apply(v_0, (*Constructor_Data_Either_Left)(v2_2.UnsafePtr).V0).IntVal) != (0)
 goto end_branch_0
 } else {
 
@@ -1454,17 +1454,17 @@ goto end_branch_0
 }
 {
 if (v2_2.Type == 9 && v2_2.IntVal == 2465973597) {
-__t0 = gopurs_runtime.Bool((gopurs_runtime.Apply(v1_1, (*Constructor_Data_Either_Right)(v2_2.UnsafePtr).V0).IntVal) != (0))
+__t0 = (gopurs_runtime.Apply(v1_1, (*Constructor_Data_Either_Right)(v2_2.UnsafePtr).V0).IntVal) != (0)
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = (func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal) != (0)
 }
 end_branch_0:
-return (__t0.IntVal) != (0)
+return __t0
 }
 
 func Call_Data_Either_either__2158544585(v_0_loop gopurs_runtime.Value, v1_1_loop gopurs_runtime.Value, v2_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1536,10 +1536,10 @@ var v1_1 gopurs_runtime.Value = v1_1_loop
 _ = v1_1
 var v2_2 gopurs_runtime.Value = v2_2_loop
 _ = v2_2
-var __t0 gopurs_runtime.Value
+var __t0 *Constructor_Data_Maybe_Just
 {
 if (v2_2.Type == 9 && v2_2.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(v_0, (*Constructor_Data_Either_Left)(v2_2.UnsafePtr).V0)))}
+__t0 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(v_0, (*Constructor_Data_Either_Left)(v2_2.UnsafePtr).V0))
 goto end_branch_0
 } else {
 
@@ -1547,17 +1547,17 @@ goto end_branch_0
 }
 {
 if (v2_2.Type == 9 && v2_2.IntVal == 2465973597) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(v1_1, (*Constructor_Data_Either_Right)(v2_2.UnsafePtr).V0)))}
+__t0 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(v1_1, (*Constructor_Data_Either_Right)(v2_2.UnsafePtr).V0))
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_runtime.Value { panic("Failed pattern match") }())
 }
 end_branch_0:
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t0)
+return __t0
 }
 
 func Call_Data_Either_either__3251677286(v_0_loop gopurs_runtime.Value, v1_1_loop gopurs_runtime.Value, v2_2_loop gopurs_runtime.Value) gopurs_runtime.Value {

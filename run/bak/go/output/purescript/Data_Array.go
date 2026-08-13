@@ -3060,10 +3060,10 @@ var __local_var_1 []gopurs_runtime.Value = __local_var_1_loop
 _ = __local_var_1
 return func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.UncurriedApp3(Get_Data_Array_sortByImpl(), comp_0, gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
+var __t0 int64
 {
 if (uint32(v_2.IntVal) == 380165415) {
-__t0 = gopurs_runtime.Int(1)
+__t0 = 1
 goto end_branch_0
 } else {
 
@@ -3071,7 +3071,7 @@ goto end_branch_0
 }
 {
 if (uint32(v_2.IntVal) == 902936544) {
-__t0 = gopurs_runtime.Int(0)
+__t0 = 0
 goto end_branch_0
 } else {
 
@@ -3079,17 +3079,17 @@ goto end_branch_0
 }
 {
 if (uint32(v_2.IntVal) == 1527465420) {
-__t0 = gopurs_runtime.Int(-1)
+__t0 = -1
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
 }
 end_branch_0:
-return gopurs_runtime.Int(__t0.IntVal)
+return gopurs_runtime.Int(__t0)
 }), gopurs_runtime.Array(__local_var_1)).UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
@@ -3116,17 +3116,12 @@ _ = dictOrd_0
 compare_1_0 := gopurs_runtime.Box(dictOrd_0.V1)
 _ = compare_1_0
 return gopurs_runtime.Func(func(xs_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Array(func() []gopurs_runtime.Value {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array(Call_Data_Array_sortBy(compare_1_0, func() []gopurs_runtime.Value {
+return gopurs_runtime.Array(Call_Data_Array_sortBy(compare_1_0, func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(xs_2.UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
-				}())).UnsafePtr)
-					unboxed := make([]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { unboxed[i] = v }
-					return unboxed
-				}())
+				}()))
 })
 }
 
@@ -3645,15 +3640,15 @@ v_3_1 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runti
 					return unboxed
 				}()), gopurs_runtime.Int(0)))
 _ = v_3_1
-var __t8 gopurs_runtime.Value
+var __t8 []gopurs_runtime.Value
 {
 if (v_3_1 == nil) {
-__t8 = gopurs_runtime.Array(func() []gopurs_runtime.Value {
+__t8 = func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array([]gopurs_runtime.Value{}).UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
-				}())
+				}()
 goto end_branch_8
 } else {
 
@@ -3661,7 +3656,7 @@ goto end_branch_8
 }
 {
 if (v_3_1 != nil) {
-__t8 = gopurs_runtime.Array(func() []gopurs_runtime.Value {
+__t8 = func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Functor_functorArray(), "map"), Get_Data_Tuple_snd(), func() gopurs_runtime.Value {
 					arr := func() []*Constructor_Data_Tuple_Tuple {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply(Call_Data_Array_sortWith(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(&Constructor_Data_Ord_Ord{1, gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -3782,22 +3777,22 @@ return gopurs_runtime.UncurriedApp(Get_Data_Array_ST_unsafeFreezeImpl(), result_
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
-				}())
+				}()
 goto end_branch_8
 } else {
 
 }
 }
 {
-__t8 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_8:
-return func() []gopurs_runtime.Value {
-					arr := *(*[]gopurs_runtime.Value)(__t8.UnsafePtr)
+__t8 = func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(func() gopurs_runtime.Value { panic("Failed pattern match") }().UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
 				}()
+}
+end_branch_8:
+return __t8
 }
 
 func Call_Data_Array_nub(dictOrd_0_loop *Constructor_Data_Ord_Ord) gopurs_runtime.Value {
@@ -3923,27 +3918,12 @@ eq_1_0 := gopurs_runtime.Box(dictEq_0.V0)
 _ = eq_1_0
 return gopurs_runtime.Func(func(xs_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
-					arr := func() [][]gopurs_runtime.Value {
-					arr := *(*[]gopurs_runtime.Value)(func() gopurs_runtime.Value {
 					arr := Call_Data_Array_groupBy(eq_1_0, func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(xs_2.UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
 				}())
-					boxed := make([]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { boxed[i] = gopurs_runtime.Array(v) }
-					return gopurs_runtime.Array(boxed)
-				}().UnsafePtr)
-					unboxed := make([][]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { unboxed[i] = func() []gopurs_runtime.Value {
-					arr := *(*[]gopurs_runtime.Value)(v.UnsafePtr)
-					unboxed := make([]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { unboxed[i] = v }
-					return unboxed
-				}() }
-					return unboxed
-				}()
 					boxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { boxed[i] = gopurs_runtime.Array(v) }
 					return gopurs_runtime.Array(boxed)
@@ -4072,15 +4052,10 @@ return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointe
 					return gopurs_runtime.Array(boxed)
 				}()))
 _ = v_4_1
-var __t7 gopurs_runtime.Value
+var __t7 [][]gopurs_runtime.Value
 {
 if (v_4_1 == nil) {
-__t7 = func() gopurs_runtime.Value {
-					arr := allArrays_3
-					boxed := make([]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { boxed[i] = gopurs_runtime.Array(v) }
-					return gopurs_runtime.Array(boxed)
-				}()
+__t7 = allArrays_3
 goto end_branch_7
 } else {
 
@@ -4121,8 +4096,7 @@ allArrays_3_loop = func() [][]gopurs_runtime.Value {
 					return unboxed
 				}()
 continue go__go_1_0_0
-__t7 = func() gopurs_runtime.Value {
-					arr := func() [][]gopurs_runtime.Value {
+__t7 = func() [][]gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Value{}.UnsafePtr)
 					unboxed := make([][]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = func() []gopurs_runtime.Value {
@@ -4133,22 +4107,14 @@ __t7 = func() gopurs_runtime.Value {
 				}() }
 					return unboxed
 				}()
-					boxed := make([]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { boxed[i] = gopurs_runtime.Array(v) }
-					return gopurs_runtime.Array(boxed)
-				}()
 goto end_branch_7
 } else {
 
 }
 }
 {
-__t7 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_7:
-return func() gopurs_runtime.Value {
-					arr := func() [][]gopurs_runtime.Value {
-					arr := *(*[]gopurs_runtime.Value)(__t7.UnsafePtr)
+__t7 = func() [][]gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(func() gopurs_runtime.Value { panic("Failed pattern match") }().UnsafePtr)
 					unboxed := make([][]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(v.UnsafePtr)
@@ -4158,6 +4124,10 @@ return func() gopurs_runtime.Value {
 				}() }
 					return unboxed
 				}()
+}
+end_branch_7:
+return func() gopurs_runtime.Value {
+					arr := __t7
 					boxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { boxed[i] = gopurs_runtime.Array(v) }
 					return gopurs_runtime.Array(boxed)
@@ -4356,10 +4326,10 @@ end_branch_2:
 return gopurs_runtime.Bool(__t2)
 }), gopurs_runtime.Array(ys_2)))
 _ = __local_var_3_0
-var __t4 gopurs_runtime.Value
+var __t4 int64
 {
 if (__local_var_3_0 == nil) {
-__t4 = gopurs_runtime.Int(0)
+__t4 = 0
 goto end_branch_4
 } else {
 
@@ -4367,18 +4337,18 @@ goto end_branch_4
 }
 {
 if (__local_var_3_0 != nil) {
-__t4 = gopurs_runtime.Int(((__local_var_3_0).V0.IntVal) + (1))
+__t4 = ((__local_var_3_0).V0.IntVal) + (1)
 goto end_branch_4
 } else {
 
 }
 }
 {
-__t4 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t4 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
 }
 end_branch_4:
 // TAST (Let): i_4_3 -> int64
-i_4_3 := __t4.IntVal
+i_4_3 := __t4
 _ = i_4_3
 return func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply(Get_Partial_Unsafe__unsafePartial(), gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -5170,12 +5140,7 @@ return gopurs_runtime.Array(Call_Data_Array_deleteBy(eq_0, a_4, func() []gopurs_
 					return unboxed
 				}()))
 })
-}), gopurs_runtime.Array(func() []gopurs_runtime.Value {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array(Call_Data_Array_nubByEq(eq_0, ys_2)).UnsafePtr)
-					unboxed := make([]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { unboxed[i] = v }
-					return unboxed
-				}()), gopurs_runtime.Array(xs_1)).UnsafePtr)
+}), gopurs_runtime.Array(Call_Data_Array_nubByEq(eq_0, ys_2)), gopurs_runtime.Array(xs_1)).UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
@@ -5216,10 +5181,10 @@ if (__local_var_3_0 != nil) {
 // TAST (Let): v_4_1 -> *Constructor_Data_Maybe_Just
 v_4_1 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(f_1, (__local_var_3_0).V0))
 _ = v_4_1
-var __t2 gopurs_runtime.Value
+var __t2 *Constructor_Data_Maybe_Just
 {
 if (v_4_1 == nil) {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.UncurriedApp4(Get_Data_Array__deleteAt(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}, gopurs_runtime.Int(i_0), gopurs_runtime.Array(xs_2))))}
+__t2 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.UncurriedApp4(Get_Data_Array__deleteAt(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}, gopurs_runtime.Int(i_0), gopurs_runtime.Array(xs_2)))
 goto end_branch_2
 } else {
 
@@ -5227,17 +5192,17 @@ goto end_branch_2
 }
 {
 if (v_4_1 != nil) {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.UncurriedApp5(Get_Data_Array__updateAt(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}, gopurs_runtime.Int(i_0), (v_4_1).V0, gopurs_runtime.Array(xs_2))))}
+__t2 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.UncurriedApp5(Get_Data_Array__updateAt(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}, gopurs_runtime.Int(i_0), (v_4_1).V0, gopurs_runtime.Array(xs_2)))
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t2 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_runtime.Value { panic("Failed pattern match") }())
 }
 end_branch_2:
-__t3 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t2))}
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t2)}
 goto end_branch_3
 } else {
 
@@ -5290,10 +5255,10 @@ if (__local_var_3_0 != nil) {
 // TAST (Let): v_4_1 -> *Constructor_Data_Maybe_Just
 v_4_1 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(f_1, (__local_var_3_0).V0))
 _ = v_4_1
-var __t2 gopurs_runtime.Value
+var __t2 *Constructor_Data_Maybe_Just
 {
 if (v_4_1 == nil) {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.UncurriedApp4(Get_Data_Array__deleteAt(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}, gopurs_runtime.Int(i_0), gopurs_runtime.Array(xs_2))))}
+__t2 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.UncurriedApp4(Get_Data_Array__deleteAt(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}, gopurs_runtime.Int(i_0), gopurs_runtime.Array(xs_2)))
 goto end_branch_2
 } else {
 
@@ -5301,17 +5266,17 @@ goto end_branch_2
 }
 {
 if (v_4_1 != nil) {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.UncurriedApp5(Get_Data_Array__updateAt(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}, gopurs_runtime.Int(i_0), (v_4_1).V0, gopurs_runtime.Array(xs_2))))}
+__t2 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.UncurriedApp5(Get_Data_Array__updateAt(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}, gopurs_runtime.Int(i_0), (v_4_1).V0, gopurs_runtime.Array(xs_2)))
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t2 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_runtime.Value { panic("Failed pattern match") }())
 }
 end_branch_2:
-__t3 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t2))}
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t2)}
 goto end_branch_3
 } else {
 
@@ -6156,10 +6121,10 @@ end_branch_2:
 return gopurs_runtime.Bool(__t2)
 }), gopurs_runtime.Array(ys_2)))
 _ = __local_var_3_0
-var __t4 gopurs_runtime.Value
+var __t4 int64
 {
 if (__local_var_3_0 == nil) {
-__t4 = gopurs_runtime.Int(0)
+__t4 = 0
 goto end_branch_4
 } else {
 
@@ -6167,18 +6132,18 @@ goto end_branch_4
 }
 {
 if (__local_var_3_0 != nil) {
-__t4 = gopurs_runtime.Int(((__local_var_3_0).V0.IntVal) + (1))
+__t4 = ((__local_var_3_0).V0.IntVal) + (1)
 goto end_branch_4
 } else {
 
 }
 }
 {
-__t4 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t4 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
 }
 end_branch_4:
 // TAST (Let): i_4_3 -> int64
-i_4_3 := __t4.IntVal
+i_4_3 := __t4
 _ = i_4_3
 return func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply(Get_Partial_Unsafe__unsafePartial(), gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -6639,15 +6604,15 @@ v_3_1 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runti
 					return unboxed
 				}()), gopurs_runtime.Int(0)))
 _ = v_3_1
-var __t8 gopurs_runtime.Value
+var __t8 []gopurs_runtime.Value
 {
 if (v_3_1 == nil) {
-__t8 = gopurs_runtime.Array(func() []gopurs_runtime.Value {
+__t8 = func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array([]gopurs_runtime.Value{}).UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
-				}())
+				}()
 goto end_branch_8
 } else {
 
@@ -6655,7 +6620,7 @@ goto end_branch_8
 }
 {
 if (v_3_1 != nil) {
-__t8 = gopurs_runtime.Array(func() []gopurs_runtime.Value {
+__t8 = func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Functor_functorArray(), "map"), Get_Data_Tuple_snd(), func() gopurs_runtime.Value {
 					arr := func() []*Constructor_Data_Tuple_Tuple {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply(Call_Data_Array_sortWith(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(&Constructor_Data_Ord_Ord{1, gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -6776,22 +6741,22 @@ return gopurs_runtime.UncurriedApp(Get_Data_Array_ST_unsafeFreezeImpl(), result_
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
-				}())
+				}()
 goto end_branch_8
 } else {
 
 }
 }
 {
-__t8 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_8:
-return func() []gopurs_runtime.Value {
-					arr := *(*[]gopurs_runtime.Value)(__t8.UnsafePtr)
+__t8 = func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(func() gopurs_runtime.Value { panic("Failed pattern match") }().UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
 				}()
+}
+end_branch_8:
+return __t8
 }
 
 func Call_Data_Array_nubByEq__3443670074(eq_0_loop gopurs_runtime.Value, xs_1_loop []gopurs_runtime.Value) []gopurs_runtime.Value {
@@ -7018,10 +6983,10 @@ var __local_var_1 []gopurs_runtime.Value = __local_var_1_loop
 _ = __local_var_1
 return func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.UncurriedApp3(Get_Data_Array_sortByImpl(), comp_0, gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
+var __t0 int64
 {
 if (uint32(v_2.IntVal) == 380165415) {
-__t0 = gopurs_runtime.Int(1)
+__t0 = 1
 goto end_branch_0
 } else {
 
@@ -7029,7 +6994,7 @@ goto end_branch_0
 }
 {
 if (uint32(v_2.IntVal) == 902936544) {
-__t0 = gopurs_runtime.Int(0)
+__t0 = 0
 goto end_branch_0
 } else {
 
@@ -7037,17 +7002,17 @@ goto end_branch_0
 }
 {
 if (uint32(v_2.IntVal) == 1527465420) {
-__t0 = gopurs_runtime.Int(-1)
+__t0 = -1
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
 }
 end_branch_0:
-return gopurs_runtime.Int(__t0.IntVal)
+return gopurs_runtime.Int(__t0)
 }), gopurs_runtime.Array(__local_var_1)).UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
@@ -7062,10 +7027,10 @@ var __local_var_1 []*Constructor_Data_Tuple_Tuple = __local_var_1_loop
 _ = __local_var_1
 return func() []*Constructor_Data_Tuple_Tuple {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.UncurriedApp3(Get_Data_Array_sortByImpl(), comp_0, gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
+var __t0 int64
 {
 if (uint32(v_2.IntVal) == 380165415) {
-__t0 = gopurs_runtime.Int(1)
+__t0 = 1
 goto end_branch_0
 } else {
 
@@ -7073,7 +7038,7 @@ goto end_branch_0
 }
 {
 if (uint32(v_2.IntVal) == 902936544) {
-__t0 = gopurs_runtime.Int(0)
+__t0 = 0
 goto end_branch_0
 } else {
 
@@ -7081,17 +7046,17 @@ goto end_branch_0
 }
 {
 if (uint32(v_2.IntVal) == 1527465420) {
-__t0 = gopurs_runtime.Int(-1)
+__t0 = -1
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
 }
 end_branch_0:
-return gopurs_runtime.Int(__t0.IntVal)
+return gopurs_runtime.Int(__t0)
 }), func() gopurs_runtime.Value {
 					arr := __local_var_1
 					boxed := make([]gopurs_runtime.Value, len(arr))
@@ -7488,15 +7453,10 @@ return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointe
 					return gopurs_runtime.Array(boxed)
 				}()))
 _ = v_4_1
-var __t7 gopurs_runtime.Value
+var __t7 [][]gopurs_runtime.Value
 {
 if (v_4_1 == nil) {
-__t7 = func() gopurs_runtime.Value {
-					arr := allArrays_3
-					boxed := make([]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { boxed[i] = gopurs_runtime.Array(v) }
-					return gopurs_runtime.Array(boxed)
-				}()
+__t7 = allArrays_3
 goto end_branch_7
 } else {
 
@@ -7537,8 +7497,7 @@ allArrays_3_loop = func() [][]gopurs_runtime.Value {
 					return unboxed
 				}()
 continue go__go_1_0_1
-__t7 = func() gopurs_runtime.Value {
-					arr := func() [][]gopurs_runtime.Value {
+__t7 = func() [][]gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Value{}.UnsafePtr)
 					unboxed := make([][]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = func() []gopurs_runtime.Value {
@@ -7549,22 +7508,14 @@ __t7 = func() gopurs_runtime.Value {
 				}() }
 					return unboxed
 				}()
-					boxed := make([]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { boxed[i] = gopurs_runtime.Array(v) }
-					return gopurs_runtime.Array(boxed)
-				}()
 goto end_branch_7
 } else {
 
 }
 }
 {
-__t7 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_7:
-return func() gopurs_runtime.Value {
-					arr := func() [][]gopurs_runtime.Value {
-					arr := *(*[]gopurs_runtime.Value)(__t7.UnsafePtr)
+__t7 = func() [][]gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(func() gopurs_runtime.Value { panic("Failed pattern match") }().UnsafePtr)
 					unboxed := make([][]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(v.UnsafePtr)
@@ -7574,6 +7525,10 @@ return func() gopurs_runtime.Value {
 				}() }
 					return unboxed
 				}()
+}
+end_branch_7:
+return func() gopurs_runtime.Value {
+					arr := __t7
 					boxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { boxed[i] = gopurs_runtime.Array(v) }
 					return gopurs_runtime.Array(boxed)
@@ -7645,12 +7600,7 @@ return gopurs_runtime.Array(Call_Data_Array_deleteBy(eq_0, a_4, func() []gopurs_
 					return unboxed
 				}()))
 })
-}), gopurs_runtime.Array(func() []gopurs_runtime.Value {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array(Call_Data_Array_nubByEq(eq_0, ys_2)).UnsafePtr)
-					unboxed := make([]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { unboxed[i] = v }
-					return unboxed
-				}()), gopurs_runtime.Array(xs_1)).UnsafePtr)
+}), gopurs_runtime.Array(Call_Data_Array_nubByEq(eq_0, ys_2)), gopurs_runtime.Array(xs_1)).UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed

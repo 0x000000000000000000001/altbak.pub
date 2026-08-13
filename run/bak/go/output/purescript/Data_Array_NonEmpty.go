@@ -3110,12 +3110,12 @@ _ = x_0
 // TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
 __local_var_1_0 := gopurs_runtime.Apply(Get_Data_Array_NonEmpty_uncons(), gopurs_runtime.Array(x_0))
 _ = __local_var_1_0
-return gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty](gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(&Constructor_Data_NonEmpty_NonEmpty{1, gopurs_runtime.RecordGet(__local_var_1_0, "head"), gopurs_runtime.Array(func() []gopurs_runtime.Value {
+return &Constructor_Data_NonEmpty_NonEmpty{1, gopurs_runtime.RecordGet(__local_var_1_0, "head"), gopurs_runtime.Array(func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.RecordGet(__local_var_1_0, "tail").UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
-				}())})})
+				}())}
 }
 
 func Call_Data_Array_NonEmpty_adaptAny(f_0_loop gopurs_runtime.Value, x_1_loop []gopurs_runtime.Value) gopurs_runtime.Value {

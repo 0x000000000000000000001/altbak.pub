@@ -277,8 +277,7 @@ _ = pat_0
 var x_1 string = x_1_loop
 _ = x_1
 // TAST (Let): __local_var_2_0 -> gopurs_runtime.Value
-__local_var_2_0 := gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_String_CodeUnits_stripPrefix(pat_0, gopurs_runtime.Str(x_1).StrVal()))}
-_ = __local_var_2_0
+var __local_var_2_0 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_String_CodeUnits_stripPrefix(pat_0, gopurs_runtime.Str(x_1).StrVal()))}
 var __t1 gopurs_runtime.Value
 {
 if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 930809136 && __local_var_2_0.UnsafePtr == nil) {
@@ -309,8 +308,7 @@ _ = pat_0
 var x_1 string = x_1_loop
 _ = x_1
 // TAST (Let): __local_var_2_0 -> gopurs_runtime.Value
-__local_var_2_0 := gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_String_CodeUnits_stripSuffix(pat_0, gopurs_runtime.Str(x_1).StrVal()))}
-_ = __local_var_2_0
+var __local_var_2_0 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_String_CodeUnits_stripSuffix(pat_0, gopurs_runtime.Str(x_1).StrVal()))}
 var __t1 gopurs_runtime.Value
 {
 if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 930809136 && __local_var_2_0.UnsafePtr == nil) {

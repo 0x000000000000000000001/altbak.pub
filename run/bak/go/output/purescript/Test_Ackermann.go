@@ -45,7 +45,7 @@ _ = __local_var_0_0
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
 _ = __local_var_1_1
-return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Show_showInt(), "show"), gopurs_runtime.Int(gopurs_runtime.Int(Call_Test_Ackermann_ackermann(__local_var_1_1.IntVal, 4)).IntVal)).StrVal())), gopurs_runtime.Value{})
+return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Show_showInt(), "show"), gopurs_runtime.Int(Call_Test_Ackermann_ackermann(__local_var_1_1.IntVal, 4))).StrVal())), gopurs_runtime.Value{})
 })
 }()
 	})
@@ -82,7 +82,7 @@ goto end_branch_0
 }
 {
 v_0_loop = (v_0) - (1)
-v1_1_loop = gopurs_runtime.Int(Call_Test_Ackermann_ackermann(v_0, (v1_1) - (1))).IntVal
+v1_1_loop = Call_Test_Ackermann_ackermann(v_0, (v1_1) - (1))
 continue ackermann
 __t0 = gopurs_runtime.Value{}.IntVal
 }

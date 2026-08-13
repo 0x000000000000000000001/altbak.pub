@@ -77,20 +77,20 @@ var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var v_1 *Constructor_Data_List_Types_Cons = v_1_loop
 _ = v_1
-var __t0 gopurs_runtime.Value
+var __t0 *Constructor_Data_List_Types_Cons
 {
 if (v_1 != nil) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer((v_1).V1)}
+__t0 = (v_1).V1
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](func() gopurs_runtime.Value { panic("Failed pattern match") }())
 }
 end_branch_0:
-return gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](__t0)
+return __t0
 }
 
 func Call_Data_List_Partial_last(_dollar__unused_0_loop gopurs_runtime.Value, v_1_loop *Constructor_Data_List_Types_Cons) gopurs_runtime.Value {
@@ -157,7 +157,7 @@ goto end_branch_1
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons{1, (v_1).V0, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(Call_Data_List_Partial_init(gopurs_runtime.Value{}, (v_1).V1))})})}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons{1, (v_1).V0, Call_Data_List_Partial_init(gopurs_runtime.Value{}, (v_1).V1)})}
 }
 end_branch_1:
 __t2 = __t1
@@ -214,7 +214,7 @@ goto end_branch_1
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons{1, (v_1).V0, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(Call_Data_List_Partial_init(gopurs_runtime.Value{}, (v_1).V1))})})}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons{1, (v_1).V0, Call_Data_List_Partial_init(gopurs_runtime.Value{}, (v_1).V1)})}
 }
 end_branch_1:
 __t2 = __t1

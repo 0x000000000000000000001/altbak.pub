@@ -586,10 +586,10 @@ for {
 if false { continue go__go_2_0_0 }
 var v_3 gopurs_runtime.Value = v_3_loop
 _ = v_3
-var __t3 gopurs_runtime.Value
+var __t3 bool
 {
 if (v_3.Type == 9 && v_3.IntVal == 324739070 && v_3.UnsafePtr == nil) {
-__t3 = gopurs_runtime.Bool(false)
+__t3 = false
 goto end_branch_3
 } else {
 
@@ -600,12 +600,12 @@ if (v_3.Type == 9 && v_3.IntVal == 324739070 && v_3.UnsafePtr != nil) {
 // TAST (Let): v1_4_1 -> gopurs_runtime.Value
 v1_4_1 := gopurs_runtime.Apply2(gopurs_runtime.Box(dictOrd_0.V1), k_1, (*Constructor_Data_Map_Internal_Node)(v_3.UnsafePtr).V2)
 _ = v1_4_1
-var __t2 gopurs_runtime.Value
+var __t2 bool
 {
 if (uint32(v1_4_1.IntVal) == 1527465420) {
 v_3_loop = gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer((*Constructor_Data_Map_Internal_Node)(v_3.UnsafePtr).V4)}
 continue go__go_2_0_0
-__t2 = gopurs_runtime.Bool((gopurs_runtime.Value{}.IntVal) != (0))
+__t2 = (gopurs_runtime.Value{}.IntVal) != (0)
 goto end_branch_2
 } else {
 
@@ -615,7 +615,7 @@ goto end_branch_2
 if (uint32(v1_4_1.IntVal) == 380165415) {
 v_3_loop = gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer((*Constructor_Data_Map_Internal_Node)(v_3.UnsafePtr).V5)}
 continue go__go_2_0_0
-__t2 = gopurs_runtime.Bool((gopurs_runtime.Value{}.IntVal) != (0))
+__t2 = (gopurs_runtime.Value{}.IntVal) != (0)
 goto end_branch_2
 } else {
 
@@ -623,27 +623,27 @@ goto end_branch_2
 }
 {
 if (uint32(v1_4_1.IntVal) == 902936544) {
-__t2 = gopurs_runtime.Bool(true)
+__t2 = true
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t2 = (func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal) != (0)
 }
 end_branch_2:
-__t3 = gopurs_runtime.Bool((__t2.IntVal) != (0))
+__t3 = __t2
 goto end_branch_3
 } else {
 
 }
 }
 {
-__t3 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t3 = (func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal) != (0)
 }
 end_branch_3:
-return gopurs_runtime.Bool((__t3.IntVal) != (0))
+return gopurs_runtime.Bool(__t3)
 }
 }()
 })

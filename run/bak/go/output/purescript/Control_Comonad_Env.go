@@ -68,7 +68,7 @@ var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var v_1 *Constructor_Data_Tuple_Tuple = v_1_loop
 _ = v_1
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, (v_1).V0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Identity_functorIdentity(), "map"), f_0, (v_1).V1)})})
+return &Constructor_Data_Tuple_Tuple{1, (v_1).V0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Identity_functorIdentity(), "map"), f_0, (v_1).V1)}
 }
 
 func Call_Control_Comonad_Env_env(e_0_loop gopurs_runtime.Value, a_1_loop gopurs_runtime.Value) *Constructor_Data_Tuple_Tuple {
@@ -76,7 +76,7 @@ var e_0 gopurs_runtime.Value = e_0_loop
 _ = e_0
 var a_1 gopurs_runtime.Value = a_1_loop
 _ = a_1
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, e_0, a_1})})
+return &Constructor_Data_Tuple_Tuple{1, e_0, a_1}
 }
 
 

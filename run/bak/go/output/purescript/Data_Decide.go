@@ -96,16 +96,16 @@ return gopurs_runtime.Func(func(b_4 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): v2_5_0 -> gopurs_runtime.Value
 v2_5_0 := gopurs_runtime.Apply(f_0, a_3)
 _ = v2_5_0
-var __t5 gopurs_runtime.Value
+var __t5 bool
 {
 if (v2_5_0.Type == 9 && v2_5_0.IntVal == 3711209382) {
 // TAST (Let): v3_6_1 -> gopurs_runtime.Value
 v3_6_1 := gopurs_runtime.Apply(f_0, b_4)
 _ = v3_6_1
-var __t2 gopurs_runtime.Value
+var __t2 bool
 {
 if (v3_6_1.Type == 9 && v3_6_1.IntVal == 3711209382) {
-__t2 = gopurs_runtime.Bool((gopurs_runtime.Apply2(v_1, (*Constructor_Data_Either_Left)(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Left)(v3_6_1.UnsafePtr).V0).IntVal) != (0))
+__t2 = (gopurs_runtime.Apply2(v_1, (*Constructor_Data_Either_Left)(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Left)(v3_6_1.UnsafePtr).V0).IntVal) != (0)
 goto end_branch_2
 } else {
 
@@ -113,17 +113,17 @@ goto end_branch_2
 }
 {
 if (v3_6_1.Type == 9 && v3_6_1.IntVal == 2465973597) {
-__t2 = gopurs_runtime.Bool(false)
+__t2 = false
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t2 = (func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal) != (0)
 }
 end_branch_2:
-__t5 = gopurs_runtime.Bool((__t2.IntVal) != (0))
+__t5 = __t2
 goto end_branch_5
 } else {
 
@@ -134,10 +134,10 @@ if (v2_5_0.Type == 9 && v2_5_0.IntVal == 2465973597) {
 // TAST (Let): v3_6_3 -> gopurs_runtime.Value
 v3_6_3 := gopurs_runtime.Apply(f_0, b_4)
 _ = v3_6_3
-var __t4 gopurs_runtime.Value
+var __t4 bool
 {
 if (v3_6_3.Type == 9 && v3_6_3.IntVal == 3711209382) {
-__t4 = gopurs_runtime.Bool(false)
+__t4 = false
 goto end_branch_4
 } else {
 
@@ -145,27 +145,27 @@ goto end_branch_4
 }
 {
 if (v3_6_3.Type == 9 && v3_6_3.IntVal == 2465973597) {
-__t4 = gopurs_runtime.Bool((gopurs_runtime.Apply2(v1_2, (*Constructor_Data_Either_Right)(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Right)(v3_6_3.UnsafePtr).V0).IntVal) != (0))
+__t4 = (gopurs_runtime.Apply2(v1_2, (*Constructor_Data_Either_Right)(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Right)(v3_6_3.UnsafePtr).V0).IntVal) != (0)
 goto end_branch_4
 } else {
 
 }
 }
 {
-__t4 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t4 = (func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal) != (0)
 }
 end_branch_4:
-__t5 = gopurs_runtime.Bool((__t4.IntVal) != (0))
+__t5 = __t4
 goto end_branch_5
 } else {
 
 }
 }
 {
-__t5 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t5 = (func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal) != (0)
 }
 end_branch_5:
-return gopurs_runtime.Bool((__t5.IntVal) != (0))
+return gopurs_runtime.Bool(__t5)
 })
 })
 })
@@ -189,16 +189,16 @@ return gopurs_runtime.Func(func(b_4 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): v2_5_0 -> gopurs_runtime.Value
 v2_5_0 := gopurs_runtime.Apply(f_0, a_3)
 _ = v2_5_0
-var __t5 gopurs_runtime.Value
+var __t5 uint32
 {
 if (v2_5_0.Type == 9 && v2_5_0.IntVal == 3711209382) {
 // TAST (Let): v3_6_1 -> gopurs_runtime.Value
 v3_6_1 := gopurs_runtime.Apply(f_0, b_4)
 _ = v3_6_1
-var __t2 gopurs_runtime.Value
+var __t2 uint32
 {
 if (v3_6_1.Type == 9 && v3_6_1.IntVal == 3711209382) {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(v_1, (*Constructor_Data_Either_Left)(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Left)(v3_6_1.UnsafePtr).V0).IntVal)), UnsafePtr: nil}
+__t2 = uint32(gopurs_runtime.Apply2(v_1, (*Constructor_Data_Either_Left)(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Left)(v3_6_1.UnsafePtr).V0).IntVal)
 goto end_branch_2
 } else {
 
@@ -206,17 +206,17 @@ goto end_branch_2
 }
 {
 if (v3_6_1.Type == 9 && v3_6_1.IntVal == 2465973597) {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}
+__t2 = 1527465420
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t2 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
 }
 end_branch_2:
-__t5 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(__t2.IntVal)), UnsafePtr: nil}
+__t5 = __t2
 goto end_branch_5
 } else {
 
@@ -227,10 +227,10 @@ if (v2_5_0.Type == 9 && v2_5_0.IntVal == 2465973597) {
 // TAST (Let): v3_6_3 -> gopurs_runtime.Value
 v3_6_3 := gopurs_runtime.Apply(f_0, b_4)
 _ = v3_6_3
-var __t4 gopurs_runtime.Value
+var __t4 uint32
 {
 if (v3_6_3.Type == 9 && v3_6_3.IntVal == 3711209382) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
+__t4 = 380165415
 goto end_branch_4
 } else {
 
@@ -238,27 +238,27 @@ goto end_branch_4
 }
 {
 if (v3_6_3.Type == 9 && v3_6_3.IntVal == 2465973597) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(v1_2, (*Constructor_Data_Either_Right)(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Right)(v3_6_3.UnsafePtr).V0).IntVal)), UnsafePtr: nil}
+__t4 = uint32(gopurs_runtime.Apply2(v1_2, (*Constructor_Data_Either_Right)(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Right)(v3_6_3.UnsafePtr).V0).IntVal)
 goto end_branch_4
 } else {
 
 }
 }
 {
-__t4 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t4 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
 }
 end_branch_4:
-__t5 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(__t4.IntVal)), UnsafePtr: nil}
+__t5 = __t4
 goto end_branch_5
 } else {
 
 }
 }
 {
-__t5 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t5 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
 }
 end_branch_5:
-return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(__t5.IntVal)), UnsafePtr: nil}
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t5), UnsafePtr: nil}
 })
 })
 })
@@ -326,16 +326,16 @@ return gopurs_runtime.Func(func(b_4 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): v2_5_0 -> gopurs_runtime.Value
 v2_5_0 := gopurs_runtime.Apply(f_0, a_3)
 _ = v2_5_0
-var __t5 gopurs_runtime.Value
+var __t5 uint32
 {
 if (v2_5_0.Type == 9 && v2_5_0.IntVal == 3711209382) {
 // TAST (Let): v3_6_1 -> gopurs_runtime.Value
 v3_6_1 := gopurs_runtime.Apply(f_0, b_4)
 _ = v3_6_1
-var __t2 gopurs_runtime.Value
+var __t2 uint32
 {
 if (v3_6_1.Type == 9 && v3_6_1.IntVal == 3711209382) {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(v_1, (*Constructor_Data_Either_Left)(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Left)(v3_6_1.UnsafePtr).V0).IntVal)), UnsafePtr: nil}
+__t2 = uint32(gopurs_runtime.Apply2(v_1, (*Constructor_Data_Either_Left)(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Left)(v3_6_1.UnsafePtr).V0).IntVal)
 goto end_branch_2
 } else {
 
@@ -343,17 +343,17 @@ goto end_branch_2
 }
 {
 if (v3_6_1.Type == 9 && v3_6_1.IntVal == 2465973597) {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}
+__t2 = 1527465420
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t2 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
 }
 end_branch_2:
-__t5 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(__t2.IntVal)), UnsafePtr: nil}
+__t5 = __t2
 goto end_branch_5
 } else {
 
@@ -364,10 +364,10 @@ if (v2_5_0.Type == 9 && v2_5_0.IntVal == 2465973597) {
 // TAST (Let): v3_6_3 -> gopurs_runtime.Value
 v3_6_3 := gopurs_runtime.Apply(f_0, b_4)
 _ = v3_6_3
-var __t4 gopurs_runtime.Value
+var __t4 uint32
 {
 if (v3_6_3.Type == 9 && v3_6_3.IntVal == 3711209382) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
+__t4 = 380165415
 goto end_branch_4
 } else {
 
@@ -375,27 +375,27 @@ goto end_branch_4
 }
 {
 if (v3_6_3.Type == 9 && v3_6_3.IntVal == 2465973597) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(v1_2, (*Constructor_Data_Either_Right)(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Right)(v3_6_3.UnsafePtr).V0).IntVal)), UnsafePtr: nil}
+__t4 = uint32(gopurs_runtime.Apply2(v1_2, (*Constructor_Data_Either_Right)(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Right)(v3_6_3.UnsafePtr).V0).IntVal)
 goto end_branch_4
 } else {
 
 }
 }
 {
-__t4 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t4 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
 }
 end_branch_4:
-__t5 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(__t4.IntVal)), UnsafePtr: nil}
+__t5 = __t4
 goto end_branch_5
 } else {
 
 }
 }
 {
-__t5 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t5 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
 }
 end_branch_5:
-return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(__t5.IntVal)), UnsafePtr: nil}
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t5), UnsafePtr: nil}
 })
 })
 })
@@ -419,16 +419,16 @@ return gopurs_runtime.Func(func(b_4 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): v2_5_0 -> gopurs_runtime.Value
 v2_5_0 := gopurs_runtime.Apply(f_0, a_3)
 _ = v2_5_0
-var __t5 gopurs_runtime.Value
+var __t5 bool
 {
 if (v2_5_0.Type == 9 && v2_5_0.IntVal == 3711209382) {
 // TAST (Let): v3_6_1 -> gopurs_runtime.Value
 v3_6_1 := gopurs_runtime.Apply(f_0, b_4)
 _ = v3_6_1
-var __t2 gopurs_runtime.Value
+var __t2 bool
 {
 if (v3_6_1.Type == 9 && v3_6_1.IntVal == 3711209382) {
-__t2 = gopurs_runtime.Bool((gopurs_runtime.Apply2(v_1, (*Constructor_Data_Either_Left)(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Left)(v3_6_1.UnsafePtr).V0).IntVal) != (0))
+__t2 = (gopurs_runtime.Apply2(v_1, (*Constructor_Data_Either_Left)(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Left)(v3_6_1.UnsafePtr).V0).IntVal) != (0)
 goto end_branch_2
 } else {
 
@@ -436,17 +436,17 @@ goto end_branch_2
 }
 {
 if (v3_6_1.Type == 9 && v3_6_1.IntVal == 2465973597) {
-__t2 = gopurs_runtime.Bool(false)
+__t2 = false
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t2 = (func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal) != (0)
 }
 end_branch_2:
-__t5 = gopurs_runtime.Bool((__t2.IntVal) != (0))
+__t5 = __t2
 goto end_branch_5
 } else {
 
@@ -457,10 +457,10 @@ if (v2_5_0.Type == 9 && v2_5_0.IntVal == 2465973597) {
 // TAST (Let): v3_6_3 -> gopurs_runtime.Value
 v3_6_3 := gopurs_runtime.Apply(f_0, b_4)
 _ = v3_6_3
-var __t4 gopurs_runtime.Value
+var __t4 bool
 {
 if (v3_6_3.Type == 9 && v3_6_3.IntVal == 3711209382) {
-__t4 = gopurs_runtime.Bool(false)
+__t4 = false
 goto end_branch_4
 } else {
 
@@ -468,27 +468,27 @@ goto end_branch_4
 }
 {
 if (v3_6_3.Type == 9 && v3_6_3.IntVal == 2465973597) {
-__t4 = gopurs_runtime.Bool((gopurs_runtime.Apply2(v1_2, (*Constructor_Data_Either_Right)(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Right)(v3_6_3.UnsafePtr).V0).IntVal) != (0))
+__t4 = (gopurs_runtime.Apply2(v1_2, (*Constructor_Data_Either_Right)(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Right)(v3_6_3.UnsafePtr).V0).IntVal) != (0)
 goto end_branch_4
 } else {
 
 }
 }
 {
-__t4 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t4 = (func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal) != (0)
 }
 end_branch_4:
-__t5 = gopurs_runtime.Bool((__t4.IntVal) != (0))
+__t5 = __t4
 goto end_branch_5
 } else {
 
 }
 }
 {
-__t5 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t5 = (func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal) != (0)
 }
 end_branch_5:
-return gopurs_runtime.Bool((__t5.IntVal) != (0))
+return gopurs_runtime.Bool(__t5)
 })
 })
 })

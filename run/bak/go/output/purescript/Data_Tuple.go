@@ -750,7 +750,7 @@ return gopurs_runtime.Apply2(f_0, (v_1).V0, (v_1).V1)
 func Call_Data_Tuple_swap(v_0_loop *Constructor_Data_Tuple_Tuple) *Constructor_Data_Tuple_Tuple {
 var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, (v_0).V1, (v_0).V0})})
+return &Constructor_Data_Tuple_Tuple{1, (v_0).V1, (v_0).V0}
 }
 
 func Call_Data_Tuple_snd(v_0_loop *Constructor_Data_Tuple_Tuple) gopurs_runtime.Value {
@@ -1328,19 +1328,19 @@ return (v_0).V1
 func Call_Data_Tuple_swap__572690077(v_0_loop *Constructor_Data_Tuple_Tuple) *Constructor_Data_Tuple_Tuple {
 var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, (v_0).V1, (v_0).V0})})
+return &Constructor_Data_Tuple_Tuple{1, (v_0).V1, (v_0).V0}
 }
 
 func Call_Data_Tuple_swap__249254301(v_0_loop *Constructor_Data_Tuple_Tuple) *Constructor_Data_Tuple_Tuple {
 var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, (v_0).V1, (v_0).V0})})
+return &Constructor_Data_Tuple_Tuple{1, (v_0).V1, (v_0).V0}
 }
 
 func Call_Data_Tuple_swap__1502889949(v_0_loop *Constructor_Data_Tuple_Tuple) *Constructor_Data_Tuple_Tuple {
 var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, (v_0).V1, (v_0).V0})})
+return &Constructor_Data_Tuple_Tuple{1, (v_0).V1, (v_0).V0}
 }
 
 func Call_Data_Tuple_uncurry__3533477633(f_0_loop gopurs_runtime.Value, v_1_loop *Constructor_Data_Tuple_Tuple) gopurs_runtime.Value {

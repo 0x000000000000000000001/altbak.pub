@@ -184,7 +184,7 @@ var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var v_1 *Constructor_Data_Tuple_Tuple = v_1_loop
 _ = v_1
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply(f_0, (v_1).V0), (v_1).V1})})
+return &Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply(f_0, (v_1).V0), (v_1).V1}
 }
 
 func Call_Control_Comonad_Env_Trans_runEnvT(v_0_loop *Constructor_Data_Tuple_Tuple) *Constructor_Data_Tuple_Tuple {
@@ -198,7 +198,7 @@ var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var v_1 *Constructor_Data_Tuple_Tuple = v_1_loop
 _ = v_1
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, (v_1).V0, gopurs_runtime.Apply(f_0, (v_1).V1)})})
+return &Constructor_Data_Tuple_Tuple{1, (v_1).V0, gopurs_runtime.Apply(f_0, (v_1).V1)}
 }
 
 func Call_Control_Comonad_Env_Trans_functorEnvT(dictFunctor_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -464,7 +464,7 @@ var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var v_1 *Constructor_Data_Tuple_Tuple = v_1_loop
 _ = v_1
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply(f_0, (v_1).V0), (v_1).V1})})
+return &Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply(f_0, (v_1).V0), (v_1).V1}
 }
 
 

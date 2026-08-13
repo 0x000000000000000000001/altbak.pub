@@ -58,10 +58,10 @@ var once_Data_Int_showParity sync.Once
 func Get_Data_Int_showParity() gopurs_runtime.Value {
 	once_Data_Int_showParity.Do(func() {
 		cache_Data_Int_showParity = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
+var __t0 string
 {
 if (uint32(v_0.IntVal) == 2591059121) {
-__t0 = gopurs_runtime.Str("Even")
+__t0 = "Even"
 goto end_branch_0
 } else {
 
@@ -69,17 +69,17 @@ goto end_branch_0
 }
 {
 if (uint32(v_0.IntVal) == 658452902) {
-__t0 = gopurs_runtime.Str("Odd")
+__t0 = "Odd"
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }().StrVal()
 }
 end_branch_0:
-return gopurs_runtime.Str(__t0.StrVal())
+return gopurs_runtime.Str(__t0)
 }))
 	})
 	return cache_Data_Int_showParity
@@ -273,7 +273,7 @@ func Get_Data_Int_ordParity() gopurs_runtime.Value {
 return Get_Data_Int_eqParity()
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_1 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t1 gopurs_runtime.Value
+var __t1 uint32
 {
 if (uint32(x_0.IntVal) == 2591059121) {
 var __t0 uint32
@@ -289,7 +289,7 @@ goto end_branch_0
 __t0 = 1527465420
 }
 end_branch_0:
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: int64(__t0), UnsafePtr: nil}
+__t1 = __t0
 goto end_branch_1
 } else {
 
@@ -297,7 +297,7 @@ goto end_branch_1
 }
 {
 if (uint32(y_1.IntVal) == 2591059121) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
+__t1 = 380165415
 goto end_branch_1
 } else {
 
@@ -305,17 +305,17 @@ goto end_branch_1
 }
 {
 if ((uint32(x_0.IntVal) == 658452902)) && ((uint32(y_1.IntVal) == 658452902)) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}
+__t1 = 902936544
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t1 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
 }
 end_branch_1:
-return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(__t1.IntVal)), UnsafePtr: nil}
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t1), UnsafePtr: nil}
 })
 }))
 	})
@@ -459,10 +459,10 @@ func Get_Data_Int_euclideanRingParity() gopurs_runtime.Value {
 		cache_Data_Int_euclideanRingParity = gopurs_runtime.RecordDict4("CommutativeRing0", "degree", "div", "mod", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Int_commutativeRingParity()
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
+var __t0 int64
 {
 if (uint32(v_0.IntVal) == 2591059121) {
-__t0 = gopurs_runtime.Int(0)
+__t0 = 0
 goto end_branch_0
 } else {
 
@@ -470,17 +470,17 @@ goto end_branch_0
 }
 {
 if (uint32(v_0.IntVal) == 658452902) {
-__t0 = gopurs_runtime.Int(1)
+__t0 = 1
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
 }
 end_branch_0:
-return gopurs_runtime.Int(__t0.IntVal)
+return gopurs_runtime.Int(__t0)
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(x_0.IntVal)), UnsafePtr: nil}

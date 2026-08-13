@@ -68,7 +68,7 @@ return gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Point
 return eqMaybe1_0_0
 }), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_2 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t5 gopurs_runtime.Value
+var __t5 uint32
 {
 if (x_1.Type == 9 && x_1.IntVal == 930809136 && x_1.UnsafePtr == nil) {
 var __t4 uint32
@@ -84,7 +84,7 @@ goto end_branch_4
 __t4 = 1527465420
 }
 end_branch_4:
-__t5 = gopurs_runtime.Value{Type: 9, IntVal: int64(__t4), UnsafePtr: nil}
+__t5 = __t4
 goto end_branch_5
 } else {
 
@@ -92,7 +92,7 @@ goto end_branch_5
 }
 {
 if (y_2.Type == 9 && y_2.IntVal == 930809136 && y_2.UnsafePtr == nil) {
-__t5 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
+__t5 = 380165415
 goto end_branch_5
 } else {
 
@@ -100,17 +100,17 @@ goto end_branch_5
 }
 {
 if ((x_1.Type == 9 && x_1.IntVal == 930809136 && x_1.UnsafePtr != nil)) && ((y_2.Type == 9 && y_2.IntVal == 930809136 && y_2.UnsafePtr != nil)) {
-__t5 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Date_Component_ordDay(), "compare"), (*Constructor_Data_Maybe_Just)(x_1.UnsafePtr).V0, (*Constructor_Data_Maybe_Just)(y_2.UnsafePtr).V0).IntVal)), UnsafePtr: nil}
+__t5 = uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Date_Component_ordDay(), "compare"), (*Constructor_Data_Maybe_Just)(x_1.UnsafePtr).V0, (*Constructor_Data_Maybe_Just)(y_2.UnsafePtr).V0).IntVal)
 goto end_branch_5
 } else {
 
 }
 }
 {
-__t5 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t5 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
 }
 end_branch_5:
-return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(__t5.IntVal)), UnsafePtr: nil}
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t5), UnsafePtr: nil}
 })
 }))))}
 }()
@@ -150,11 +150,11 @@ func Get_Data_Date_weekday() gopurs_runtime.Value {
 	once_Data_Date_weekday.Do(func() {
 		cache_Data_Date_weekday = gopurs_runtime.Apply(Get_Partial_Unsafe__unsafePartial(), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t13 gopurs_runtime.Value
+var __t13 int64
 {
 var __t_tag_1 uint32 = (*Constructor_Data_Date_Date)(v_1.UnsafePtr).V1
 if (uint32(__t_tag_1) == 1908470532) {
-__t13 = gopurs_runtime.Int(1)
+__t13 = 1
 goto end_branch_13
 } else {
 
@@ -163,7 +163,7 @@ goto end_branch_13
 {
 var __t_tag_2 uint32 = (*Constructor_Data_Date_Date)(v_1.UnsafePtr).V1
 if (uint32(__t_tag_2) == 2455627378) {
-__t13 = gopurs_runtime.Int(2)
+__t13 = 2
 goto end_branch_13
 } else {
 
@@ -172,7 +172,7 @@ goto end_branch_13
 {
 var __t_tag_3 uint32 = (*Constructor_Data_Date_Date)(v_1.UnsafePtr).V1
 if (uint32(__t_tag_3) == 4162469099) {
-__t13 = gopurs_runtime.Int(3)
+__t13 = 3
 goto end_branch_13
 } else {
 
@@ -181,7 +181,7 @@ goto end_branch_13
 {
 var __t_tag_4 uint32 = (*Constructor_Data_Date_Date)(v_1.UnsafePtr).V1
 if (uint32(__t_tag_4) == 1692989816) {
-__t13 = gopurs_runtime.Int(4)
+__t13 = 4
 goto end_branch_13
 } else {
 
@@ -190,7 +190,7 @@ goto end_branch_13
 {
 var __t_tag_5 uint32 = (*Constructor_Data_Date_Date)(v_1.UnsafePtr).V1
 if (uint32(__t_tag_5) == 330658827) {
-__t13 = gopurs_runtime.Int(5)
+__t13 = 5
 goto end_branch_13
 } else {
 
@@ -199,7 +199,7 @@ goto end_branch_13
 {
 var __t_tag_6 uint32 = (*Constructor_Data_Date_Date)(v_1.UnsafePtr).V1
 if (uint32(__t_tag_6) == 4067355978) {
-__t13 = gopurs_runtime.Int(6)
+__t13 = 6
 goto end_branch_13
 } else {
 
@@ -208,7 +208,7 @@ goto end_branch_13
 {
 var __t_tag_7 uint32 = (*Constructor_Data_Date_Date)(v_1.UnsafePtr).V1
 if (uint32(__t_tag_7) == 2276710548) {
-__t13 = gopurs_runtime.Int(7)
+__t13 = 7
 goto end_branch_13
 } else {
 
@@ -217,7 +217,7 @@ goto end_branch_13
 {
 var __t_tag_8 uint32 = (*Constructor_Data_Date_Date)(v_1.UnsafePtr).V1
 if (uint32(__t_tag_8) == 243771071) {
-__t13 = gopurs_runtime.Int(8)
+__t13 = 8
 goto end_branch_13
 } else {
 
@@ -226,7 +226,7 @@ goto end_branch_13
 {
 var __t_tag_9 uint32 = (*Constructor_Data_Date_Date)(v_1.UnsafePtr).V1
 if (uint32(__t_tag_9) == 215731793) {
-__t13 = gopurs_runtime.Int(9)
+__t13 = 9
 goto end_branch_13
 } else {
 
@@ -235,7 +235,7 @@ goto end_branch_13
 {
 var __t_tag_10 uint32 = (*Constructor_Data_Date_Date)(v_1.UnsafePtr).V1
 if (uint32(__t_tag_10) == 8639228) {
-__t13 = gopurs_runtime.Int(10)
+__t13 = 10
 goto end_branch_13
 } else {
 
@@ -244,7 +244,7 @@ goto end_branch_13
 {
 var __t_tag_11 uint32 = (*Constructor_Data_Date_Date)(v_1.UnsafePtr).V1
 if (uint32(__t_tag_11) == 49471444) {
-__t13 = gopurs_runtime.Int(11)
+__t13 = 11
 goto end_branch_13
 } else {
 
@@ -253,18 +253,18 @@ goto end_branch_13
 {
 var __t_tag_12 uint32 = (*Constructor_Data_Date_Date)(v_1.UnsafePtr).V1
 if (uint32(__t_tag_12) == 3889233761) {
-__t13 = gopurs_runtime.Int(12)
+__t13 = 12
 goto end_branch_13
 } else {
 
 }
 }
 {
-__t13 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t13 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
 }
 end_branch_13:
 // TAST (Let): n_2_0 -> gopurs_runtime.Value
-n_2_0 := gopurs_runtime.UncurriedApp3(Get_Data_Date_calcWeekday(), gopurs_runtime.Int((*Constructor_Data_Date_Date)(v_1.UnsafePtr).V0), gopurs_runtime.Int(__t13.IntVal), gopurs_runtime.Int((*Constructor_Data_Date_Date)(v_1.UnsafePtr).V2))
+n_2_0 := gopurs_runtime.UncurriedApp3(Get_Data_Date_calcWeekday(), gopurs_runtime.Int((*Constructor_Data_Date_Date)(v_1.UnsafePtr).V0), gopurs_runtime.Int(__t13), gopurs_runtime.Int((*Constructor_Data_Date_Date)(v_1.UnsafePtr).V2))
 _ = n_2_0
 var __t18 uint32
 {
@@ -272,20 +272,20 @@ if (n_2_0.IntVal) == (0) {
 // TAST (Let): __local_var_3_16 -> *Constructor_Data_Maybe_Just
 __local_var_3_16 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(Get_Data_Enum_toEnum__2793813158(), gopurs_runtime.Int(7)))
 _ = __local_var_3_16
-var __t17 gopurs_runtime.Value
+var __t17 uint32
 {
 if (__local_var_3_16 != nil) {
-__t17 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32((__local_var_3_16).V0.IntVal)), UnsafePtr: nil}
+__t17 = uint32((__local_var_3_16).V0.IntVal)
 goto end_branch_17
 } else {
 
 }
 }
 {
-__t17 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t17 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
 }
 end_branch_17:
-__t18 = uint32(__t17.IntVal)
+__t18 = __t17
 goto end_branch_18
 } else {
 
@@ -295,20 +295,20 @@ goto end_branch_18
 // TAST (Let): __local_var_3_14 -> *Constructor_Data_Maybe_Just
 __local_var_3_14 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(Get_Data_Enum_toEnum__2793813158(), gopurs_runtime.Int(n_2_0.IntVal)))
 _ = __local_var_3_14
-var __t15 gopurs_runtime.Value
+var __t15 uint32
 {
 if (__local_var_3_14 != nil) {
-__t15 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32((__local_var_3_14).V0.IntVal)), UnsafePtr: nil}
+__t15 = uint32((__local_var_3_14).V0.IntVal)
 goto end_branch_15
 } else {
 
 }
 }
 {
-__t15 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t15 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
 }
 end_branch_15:
-__t18 = uint32(__t15.IntVal)
+__t18 = __t15
 }
 end_branch_18:
 return gopurs_runtime.Value{Type: 9, IntVal: int64(__t18), UnsafePtr: nil}
@@ -323,11 +323,11 @@ var once_Data_Date_showDate sync.Once
 func Get_Data_Date_showDate() gopurs_runtime.Value {
 	once_Data_Date_showDate.Do(func() {
 		cache_Data_Date_showDate = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t12 gopurs_runtime.Value
+var __t12 string
 {
 var __t_tag_0 uint32 = (*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1
 if (uint32(__t_tag_0) == 1908470532) {
-__t12 = gopurs_runtime.Str("January")
+__t12 = "January"
 goto end_branch_12
 } else {
 
@@ -336,7 +336,7 @@ goto end_branch_12
 {
 var __t_tag_1 uint32 = (*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1
 if (uint32(__t_tag_1) == 2455627378) {
-__t12 = gopurs_runtime.Str("February")
+__t12 = "February"
 goto end_branch_12
 } else {
 
@@ -345,7 +345,7 @@ goto end_branch_12
 {
 var __t_tag_2 uint32 = (*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1
 if (uint32(__t_tag_2) == 4162469099) {
-__t12 = gopurs_runtime.Str("March")
+__t12 = "March"
 goto end_branch_12
 } else {
 
@@ -354,7 +354,7 @@ goto end_branch_12
 {
 var __t_tag_3 uint32 = (*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1
 if (uint32(__t_tag_3) == 1692989816) {
-__t12 = gopurs_runtime.Str("April")
+__t12 = "April"
 goto end_branch_12
 } else {
 
@@ -363,7 +363,7 @@ goto end_branch_12
 {
 var __t_tag_4 uint32 = (*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1
 if (uint32(__t_tag_4) == 330658827) {
-__t12 = gopurs_runtime.Str("May")
+__t12 = "May"
 goto end_branch_12
 } else {
 
@@ -372,7 +372,7 @@ goto end_branch_12
 {
 var __t_tag_5 uint32 = (*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1
 if (uint32(__t_tag_5) == 4067355978) {
-__t12 = gopurs_runtime.Str("June")
+__t12 = "June"
 goto end_branch_12
 } else {
 
@@ -381,7 +381,7 @@ goto end_branch_12
 {
 var __t_tag_6 uint32 = (*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1
 if (uint32(__t_tag_6) == 2276710548) {
-__t12 = gopurs_runtime.Str("July")
+__t12 = "July"
 goto end_branch_12
 } else {
 
@@ -390,7 +390,7 @@ goto end_branch_12
 {
 var __t_tag_7 uint32 = (*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1
 if (uint32(__t_tag_7) == 243771071) {
-__t12 = gopurs_runtime.Str("August")
+__t12 = "August"
 goto end_branch_12
 } else {
 
@@ -399,7 +399,7 @@ goto end_branch_12
 {
 var __t_tag_8 uint32 = (*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1
 if (uint32(__t_tag_8) == 215731793) {
-__t12 = gopurs_runtime.Str("September")
+__t12 = "September"
 goto end_branch_12
 } else {
 
@@ -408,7 +408,7 @@ goto end_branch_12
 {
 var __t_tag_9 uint32 = (*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1
 if (uint32(__t_tag_9) == 8639228) {
-__t12 = gopurs_runtime.Str("October")
+__t12 = "October"
 goto end_branch_12
 } else {
 
@@ -417,7 +417,7 @@ goto end_branch_12
 {
 var __t_tag_10 uint32 = (*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1
 if (uint32(__t_tag_10) == 49471444) {
-__t12 = gopurs_runtime.Str("November")
+__t12 = "November"
 goto end_branch_12
 } else {
 
@@ -426,17 +426,17 @@ goto end_branch_12
 {
 var __t_tag_11 uint32 = (*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1
 if (uint32(__t_tag_11) == 3889233761) {
-__t12 = gopurs_runtime.Str("December")
+__t12 = "December"
 goto end_branch_12
 } else {
 
 }
 }
 {
-__t12 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t12 = func() gopurs_runtime.Value { panic("Failed pattern match") }().StrVal()
 }
 end_branch_12:
-return gopurs_runtime.Str((((((("(Date ") + (gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V0)).StrVal())) + (" ")) + (__t12.StrVal())) + (" ")) + (gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V2)).StrVal())) + (")"))
+return gopurs_runtime.Str((((((("(Date ") + (gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V0)).StrVal())) + (" ")) + (__t12)) + (" ")) + (gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V2)).StrVal())) + (")"))
 }))
 	})
 	return cache_Data_Date_showDate
@@ -622,8 +622,7 @@ end_branch_5:
 // TAST (Let): m_prime_3_2 -> gopurs_runtime.Value
 var m_prime_3_2 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(__t5), UnsafePtr: nil}
 // TAST (Let): l_4_6 -> gopurs_runtime.Value
-l_4_6 := gopurs_runtime.Int(Call_Data_Date_lastDayOfMonth((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V0, uint32(m_prime_3_2.IntVal)))
-_ = l_4_6
+var l_4_6 gopurs_runtime.Value = gopurs_runtime.Int(Call_Data_Date_lastDayOfMonth((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V0, uint32(m_prime_3_2.IntVal)))
 var __t13 gopurs_runtime.Value
 {
 var __t10 gopurs_runtime.Value
@@ -797,7 +796,7 @@ var __t25 gopurs_runtime.Value
 {
 var __t24 bool
 {
-var __t_tag_23 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](Get_Data_Date_ordMaybe()).V1), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(v1_2_21)}, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Int(gopurs_runtime.Int(Call_Data_Date_lastDayOfMonth((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V0, (*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1)).IntVal)})})
+var __t_tag_23 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](Get_Data_Date_ordMaybe()).V1), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(v1_2_21)}, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Int(Call_Data_Date_lastDayOfMonth((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V0, (*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1))})})
 if (uint32(__t_tag_23.IntVal) == 380165415) {
 __t24 = true
 goto end_branch_24
@@ -1158,10 +1157,10 @@ __local_var_2_0 := gopurs_runtime.Apply(Get_Partial_Unsafe__unsafePartial(), gop
 return Get_Data_Maybe_fromJust__1577979644()
 }))
 _ = __local_var_2_0
-var __t2 gopurs_runtime.Value
+var __t2 int64
 {
 if (m_1 == 1908470532) {
-__t2 = gopurs_runtime.Int(gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(31))).IntVal)
+__t2 = gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(31))).IntVal
 goto end_branch_2
 } else {
 
@@ -1171,7 +1170,7 @@ goto end_branch_2
 if (m_1 == 2455627378) {
 var __t1 int64
 {
-if (gopurs_runtime.Bool(Call_Data_Date_isLeapYear(y_0)).IntVal) != (0) {
+if Call_Data_Date_isLeapYear(y_0) {
 __t1 = gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(29))).IntVal
 goto end_branch_1
 } else {
@@ -1182,7 +1181,7 @@ goto end_branch_1
 __t1 = gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(28))).IntVal
 }
 end_branch_1:
-__t2 = gopurs_runtime.Int(__t1)
+__t2 = __t1
 goto end_branch_2
 } else {
 
@@ -1190,7 +1189,7 @@ goto end_branch_2
 }
 {
 if (m_1 == 4162469099) {
-__t2 = gopurs_runtime.Int(gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(31))).IntVal)
+__t2 = gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(31))).IntVal
 goto end_branch_2
 } else {
 
@@ -1198,7 +1197,7 @@ goto end_branch_2
 }
 {
 if (m_1 == 1692989816) {
-__t2 = gopurs_runtime.Int(gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(30))).IntVal)
+__t2 = gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(30))).IntVal
 goto end_branch_2
 } else {
 
@@ -1206,7 +1205,7 @@ goto end_branch_2
 }
 {
 if (m_1 == 330658827) {
-__t2 = gopurs_runtime.Int(gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(31))).IntVal)
+__t2 = gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(31))).IntVal
 goto end_branch_2
 } else {
 
@@ -1214,7 +1213,7 @@ goto end_branch_2
 }
 {
 if (m_1 == 4067355978) {
-__t2 = gopurs_runtime.Int(gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(30))).IntVal)
+__t2 = gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(30))).IntVal
 goto end_branch_2
 } else {
 
@@ -1222,7 +1221,7 @@ goto end_branch_2
 }
 {
 if (m_1 == 2276710548) {
-__t2 = gopurs_runtime.Int(gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(31))).IntVal)
+__t2 = gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(31))).IntVal
 goto end_branch_2
 } else {
 
@@ -1230,7 +1229,7 @@ goto end_branch_2
 }
 {
 if (m_1 == 243771071) {
-__t2 = gopurs_runtime.Int(gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(31))).IntVal)
+__t2 = gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(31))).IntVal
 goto end_branch_2
 } else {
 
@@ -1238,7 +1237,7 @@ goto end_branch_2
 }
 {
 if (m_1 == 215731793) {
-__t2 = gopurs_runtime.Int(gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(30))).IntVal)
+__t2 = gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(30))).IntVal
 goto end_branch_2
 } else {
 
@@ -1246,7 +1245,7 @@ goto end_branch_2
 }
 {
 if (m_1 == 8639228) {
-__t2 = gopurs_runtime.Int(gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(31))).IntVal)
+__t2 = gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(31))).IntVal
 goto end_branch_2
 } else {
 
@@ -1254,7 +1253,7 @@ goto end_branch_2
 }
 {
 if (m_1 == 49471444) {
-__t2 = gopurs_runtime.Int(gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(30))).IntVal)
+__t2 = gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(30))).IntVal
 goto end_branch_2
 } else {
 
@@ -1262,17 +1261,17 @@ goto end_branch_2
 }
 {
 if (m_1 == 3889233761) {
-__t2 = gopurs_runtime.Int(gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(31))).IntVal)
+__t2 = gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(31))).IntVal
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
 }
 end_branch_2:
-return __t2.IntVal
+return __t2
 }
 
 func Call_Data_Date_diff(dictDuration_0_loop *Constructor_Data_Time_Duration_Duration, v_1_loop *Constructor_Data_Date_Date, v1_2_loop *Constructor_Data_Date_Date) gopurs_runtime.Value {
@@ -1282,11 +1281,11 @@ var v_1 *Constructor_Data_Date_Date = v_1_loop
 _ = v_1
 var v1_2 *Constructor_Data_Date_Date = v1_2_loop
 _ = v1_2
-var __t12 gopurs_runtime.Value
+var __t12 int64
 {
 var __t_tag_0 uint32 = (v_1).V1
 if (uint32(__t_tag_0) == 1908470532) {
-__t12 = gopurs_runtime.Int(1)
+__t12 = 1
 goto end_branch_12
 } else {
 
@@ -1295,7 +1294,7 @@ goto end_branch_12
 {
 var __t_tag_1 uint32 = (v_1).V1
 if (uint32(__t_tag_1) == 2455627378) {
-__t12 = gopurs_runtime.Int(2)
+__t12 = 2
 goto end_branch_12
 } else {
 
@@ -1304,7 +1303,7 @@ goto end_branch_12
 {
 var __t_tag_2 uint32 = (v_1).V1
 if (uint32(__t_tag_2) == 4162469099) {
-__t12 = gopurs_runtime.Int(3)
+__t12 = 3
 goto end_branch_12
 } else {
 
@@ -1313,7 +1312,7 @@ goto end_branch_12
 {
 var __t_tag_3 uint32 = (v_1).V1
 if (uint32(__t_tag_3) == 1692989816) {
-__t12 = gopurs_runtime.Int(4)
+__t12 = 4
 goto end_branch_12
 } else {
 
@@ -1322,7 +1321,7 @@ goto end_branch_12
 {
 var __t_tag_4 uint32 = (v_1).V1
 if (uint32(__t_tag_4) == 330658827) {
-__t12 = gopurs_runtime.Int(5)
+__t12 = 5
 goto end_branch_12
 } else {
 
@@ -1331,7 +1330,7 @@ goto end_branch_12
 {
 var __t_tag_5 uint32 = (v_1).V1
 if (uint32(__t_tag_5) == 4067355978) {
-__t12 = gopurs_runtime.Int(6)
+__t12 = 6
 goto end_branch_12
 } else {
 
@@ -1340,7 +1339,7 @@ goto end_branch_12
 {
 var __t_tag_6 uint32 = (v_1).V1
 if (uint32(__t_tag_6) == 2276710548) {
-__t12 = gopurs_runtime.Int(7)
+__t12 = 7
 goto end_branch_12
 } else {
 
@@ -1349,7 +1348,7 @@ goto end_branch_12
 {
 var __t_tag_7 uint32 = (v_1).V1
 if (uint32(__t_tag_7) == 243771071) {
-__t12 = gopurs_runtime.Int(8)
+__t12 = 8
 goto end_branch_12
 } else {
 
@@ -1358,7 +1357,7 @@ goto end_branch_12
 {
 var __t_tag_8 uint32 = (v_1).V1
 if (uint32(__t_tag_8) == 215731793) {
-__t12 = gopurs_runtime.Int(9)
+__t12 = 9
 goto end_branch_12
 } else {
 
@@ -1367,7 +1366,7 @@ goto end_branch_12
 {
 var __t_tag_9 uint32 = (v_1).V1
 if (uint32(__t_tag_9) == 8639228) {
-__t12 = gopurs_runtime.Int(10)
+__t12 = 10
 goto end_branch_12
 } else {
 
@@ -1376,7 +1375,7 @@ goto end_branch_12
 {
 var __t_tag_10 uint32 = (v_1).V1
 if (uint32(__t_tag_10) == 49471444) {
-__t12 = gopurs_runtime.Int(11)
+__t12 = 11
 goto end_branch_12
 } else {
 
@@ -1385,21 +1384,21 @@ goto end_branch_12
 {
 var __t_tag_11 uint32 = (v_1).V1
 if (uint32(__t_tag_11) == 3889233761) {
-__t12 = gopurs_runtime.Int(12)
+__t12 = 12
 goto end_branch_12
 } else {
 
 }
 }
 {
-__t12 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t12 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
 }
 end_branch_12:
-var __t25 gopurs_runtime.Value
+var __t25 int64
 {
 var __t_tag_13 uint32 = (v1_2).V1
 if (uint32(__t_tag_13) == 1908470532) {
-__t25 = gopurs_runtime.Int(1)
+__t25 = 1
 goto end_branch_25
 } else {
 
@@ -1408,7 +1407,7 @@ goto end_branch_25
 {
 var __t_tag_14 uint32 = (v1_2).V1
 if (uint32(__t_tag_14) == 2455627378) {
-__t25 = gopurs_runtime.Int(2)
+__t25 = 2
 goto end_branch_25
 } else {
 
@@ -1417,7 +1416,7 @@ goto end_branch_25
 {
 var __t_tag_15 uint32 = (v1_2).V1
 if (uint32(__t_tag_15) == 4162469099) {
-__t25 = gopurs_runtime.Int(3)
+__t25 = 3
 goto end_branch_25
 } else {
 
@@ -1426,7 +1425,7 @@ goto end_branch_25
 {
 var __t_tag_16 uint32 = (v1_2).V1
 if (uint32(__t_tag_16) == 1692989816) {
-__t25 = gopurs_runtime.Int(4)
+__t25 = 4
 goto end_branch_25
 } else {
 
@@ -1435,7 +1434,7 @@ goto end_branch_25
 {
 var __t_tag_17 uint32 = (v1_2).V1
 if (uint32(__t_tag_17) == 330658827) {
-__t25 = gopurs_runtime.Int(5)
+__t25 = 5
 goto end_branch_25
 } else {
 
@@ -1444,7 +1443,7 @@ goto end_branch_25
 {
 var __t_tag_18 uint32 = (v1_2).V1
 if (uint32(__t_tag_18) == 4067355978) {
-__t25 = gopurs_runtime.Int(6)
+__t25 = 6
 goto end_branch_25
 } else {
 
@@ -1453,7 +1452,7 @@ goto end_branch_25
 {
 var __t_tag_19 uint32 = (v1_2).V1
 if (uint32(__t_tag_19) == 2276710548) {
-__t25 = gopurs_runtime.Int(7)
+__t25 = 7
 goto end_branch_25
 } else {
 
@@ -1462,7 +1461,7 @@ goto end_branch_25
 {
 var __t_tag_20 uint32 = (v1_2).V1
 if (uint32(__t_tag_20) == 243771071) {
-__t25 = gopurs_runtime.Int(8)
+__t25 = 8
 goto end_branch_25
 } else {
 
@@ -1471,7 +1470,7 @@ goto end_branch_25
 {
 var __t_tag_21 uint32 = (v1_2).V1
 if (uint32(__t_tag_21) == 215731793) {
-__t25 = gopurs_runtime.Int(9)
+__t25 = 9
 goto end_branch_25
 } else {
 
@@ -1480,7 +1479,7 @@ goto end_branch_25
 {
 var __t_tag_22 uint32 = (v1_2).V1
 if (uint32(__t_tag_22) == 8639228) {
-__t25 = gopurs_runtime.Int(10)
+__t25 = 10
 goto end_branch_25
 } else {
 
@@ -1489,7 +1488,7 @@ goto end_branch_25
 {
 var __t_tag_23 uint32 = (v1_2).V1
 if (uint32(__t_tag_23) == 49471444) {
-__t25 = gopurs_runtime.Int(11)
+__t25 = 11
 goto end_branch_25
 } else {
 
@@ -1498,17 +1497,17 @@ goto end_branch_25
 {
 var __t_tag_24 uint32 = (v1_2).V1
 if (uint32(__t_tag_24) == 3889233761) {
-__t25 = gopurs_runtime.Int(12)
+__t25 = 12
 goto end_branch_25
 } else {
 
 }
 }
 {
-__t25 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t25 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
 }
 end_branch_25:
-return gopurs_runtime.Apply(gopurs_runtime.Box(dictDuration_0.V1), gopurs_runtime.Float(gopurs_runtime.UncurriedApp6(Get_Data_Date_calcDiff(), gopurs_runtime.Int((v_1).V0), gopurs_runtime.Int(__t12.IntVal), gopurs_runtime.Int((v_1).V2), gopurs_runtime.Int((v1_2).V0), gopurs_runtime.Int(__t25.IntVal), gopurs_runtime.Int((v1_2).V2)).FloatVal()))
+return gopurs_runtime.Apply(gopurs_runtime.Box(dictDuration_0.V1), gopurs_runtime.Float(gopurs_runtime.UncurriedApp6(Get_Data_Date_calcDiff(), gopurs_runtime.Int((v_1).V0), gopurs_runtime.Int(__t12), gopurs_runtime.Int((v_1).V2), gopurs_runtime.Int((v1_2).V0), gopurs_runtime.Int(__t25), gopurs_runtime.Int((v1_2).V2)).FloatVal()))
 }
 
 func Call_Data_Date_day(v_0_loop *Constructor_Data_Date_Date) int64 {
@@ -1524,10 +1523,10 @@ var m_1 uint32 = m_1_loop
 _ = m_1
 var d_2 int64 = d_2_loop
 _ = d_2
-var __t2 gopurs_runtime.Value
+var __t2 int64
 {
 if (m_1 == 1908470532) {
-__t2 = gopurs_runtime.Int(1)
+__t2 = 1
 goto end_branch_2
 } else {
 
@@ -1535,7 +1534,7 @@ goto end_branch_2
 }
 {
 if (m_1 == 2455627378) {
-__t2 = gopurs_runtime.Int(2)
+__t2 = 2
 goto end_branch_2
 } else {
 
@@ -1543,7 +1542,7 @@ goto end_branch_2
 }
 {
 if (m_1 == 4162469099) {
-__t2 = gopurs_runtime.Int(3)
+__t2 = 3
 goto end_branch_2
 } else {
 
@@ -1551,7 +1550,7 @@ goto end_branch_2
 }
 {
 if (m_1 == 1692989816) {
-__t2 = gopurs_runtime.Int(4)
+__t2 = 4
 goto end_branch_2
 } else {
 
@@ -1559,7 +1558,7 @@ goto end_branch_2
 }
 {
 if (m_1 == 330658827) {
-__t2 = gopurs_runtime.Int(5)
+__t2 = 5
 goto end_branch_2
 } else {
 
@@ -1567,7 +1566,7 @@ goto end_branch_2
 }
 {
 if (m_1 == 4067355978) {
-__t2 = gopurs_runtime.Int(6)
+__t2 = 6
 goto end_branch_2
 } else {
 
@@ -1575,7 +1574,7 @@ goto end_branch_2
 }
 {
 if (m_1 == 2276710548) {
-__t2 = gopurs_runtime.Int(7)
+__t2 = 7
 goto end_branch_2
 } else {
 
@@ -1583,7 +1582,7 @@ goto end_branch_2
 }
 {
 if (m_1 == 243771071) {
-__t2 = gopurs_runtime.Int(8)
+__t2 = 8
 goto end_branch_2
 } else {
 
@@ -1591,7 +1590,7 @@ goto end_branch_2
 }
 {
 if (m_1 == 215731793) {
-__t2 = gopurs_runtime.Int(9)
+__t2 = 9
 goto end_branch_2
 } else {
 
@@ -1599,7 +1598,7 @@ goto end_branch_2
 }
 {
 if (m_1 == 8639228) {
-__t2 = gopurs_runtime.Int(10)
+__t2 = 10
 goto end_branch_2
 } else {
 
@@ -1607,7 +1606,7 @@ goto end_branch_2
 }
 {
 if (m_1 == 49471444) {
-__t2 = gopurs_runtime.Int(11)
+__t2 = 11
 goto end_branch_2
 } else {
 
@@ -1615,14 +1614,14 @@ goto end_branch_2
 }
 {
 if (m_1 == 3889233761) {
-__t2 = gopurs_runtime.Int(12)
+__t2 = 12
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
 }
 end_branch_2:
 return gopurs_runtime.CoerceToStruct[Constructor_Data_Date_Date](gopurs_runtime.UncurriedApp4(Get_Data_Date_canonicalDateImpl(), gopurs_runtime.Apply(Get_Partial_Unsafe__unsafePartial(), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1632,24 +1631,24 @@ return gopurs_runtime.Func(func(d_prime_6 gopurs_runtime.Value) gopurs_runtime.V
 // TAST (Let): __local_var_7_0 -> *Constructor_Data_Maybe_Just
 __local_var_7_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(Get_Data_Enum_toEnum__2309750950(), gopurs_runtime.Int(m_prime_5.IntVal)))
 _ = __local_var_7_0
-var __t1 gopurs_runtime.Value
+var __t1 uint32
 {
 if (__local_var_7_0 != nil) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32((__local_var_7_0).V0.IntVal)), UnsafePtr: nil}
+__t1 = uint32((__local_var_7_0).V0.IntVal)
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t1 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
 }
 end_branch_1:
-return gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(&Constructor_Data_Date_Date{1, y_prime_4.IntVal, uint32(__t1.IntVal), d_prime_6.IntVal})}
+return gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(&Constructor_Data_Date_Date{1, y_prime_4.IntVal, __t1, d_prime_6.IntVal})}
 })
 })
 })
-})), gopurs_runtime.Int(y_0), gopurs_runtime.Int(__t2.IntVal), gopurs_runtime.Int(d_2)))
+})), gopurs_runtime.Int(y_0), gopurs_runtime.Int(__t2), gopurs_runtime.Int(d_2)))
 }
 
 func Call_Data_Date_exactDate(y_0_loop int64, m_1_loop uint32, d_2_loop int64) *Constructor_Data_Maybe_Just {
@@ -1661,7 +1660,7 @@ var d_2 int64 = d_2_loop
 _ = d_2
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Apply2(Get_Data_Eq_eq__1204755874(), gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Date_Date](gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(Call_Data_Date_canonicalDate(y_0, m_1, d_2))}))}, gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(&Constructor_Data_Date_Date{1, y_0, m_1, d_2})}).IntVal) != (0) {
+if (gopurs_runtime.Apply2(Get_Data_Eq_eq__1204755874(), gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(Call_Data_Date_canonicalDate(y_0, m_1, d_2))}, gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(&Constructor_Data_Date_Date{1, y_0, m_1, d_2})}).IntVal) != (0) {
 __t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(&Constructor_Data_Date_Date{1, y_0, m_1, d_2})}})}
 goto end_branch_0
 } else {
@@ -1751,8 +1750,7 @@ __t7 = (*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V1
 }
 end_branch_7:
 // TAST (Let): l_7_4 -> gopurs_runtime.Value
-l_7_4 := gopurs_runtime.Int(Call_Data_Date_lastDayOfMonth((*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V0, __t7))
-_ = l_7_4
+var l_7_4 gopurs_runtime.Value = gopurs_runtime.Int(Call_Data_Date_lastDayOfMonth((*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V0, __t7))
 var __t9 bool
 {
 if (j_5_1) > (l_7_4.IntVal) {

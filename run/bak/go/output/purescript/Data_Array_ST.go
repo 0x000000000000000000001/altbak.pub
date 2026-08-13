@@ -512,10 +512,10 @@ func Call_Data_Array_ST_sortBy(comp_0_loop gopurs_runtime.Value) gopurs_runtime.
 var comp_0 gopurs_runtime.Value = comp_0_loop
 _ = comp_0
 return gopurs_runtime.Apply3(Get_Control_Monad_ST_Uncurried_runSTFn3(), Get_Data_Array_ST_sortByImpl(), comp_0, gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
+var __t0 int64
 {
 if (uint32(v_1.IntVal) == 380165415) {
-__t0 = gopurs_runtime.Int(1)
+__t0 = 1
 goto end_branch_0
 } else {
 
@@ -523,7 +523,7 @@ goto end_branch_0
 }
 {
 if (uint32(v_1.IntVal) == 902936544) {
-__t0 = gopurs_runtime.Int(0)
+__t0 = 0
 goto end_branch_0
 } else {
 
@@ -531,17 +531,17 @@ goto end_branch_0
 }
 {
 if (uint32(v_1.IntVal) == 1527465420) {
-__t0 = gopurs_runtime.Int(-1)
+__t0 = -1
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
 }
 end_branch_0:
-return gopurs_runtime.Int(__t0.IntVal)
+return gopurs_runtime.Int(__t0)
 }))
 }
 
@@ -669,10 +669,10 @@ func Call_Data_Array_ST_sortBy__2466834470(comp_0_loop gopurs_runtime.Value) gop
 var comp_0 gopurs_runtime.Value = comp_0_loop
 _ = comp_0
 return gopurs_runtime.Apply3(Get_Control_Monad_ST_Uncurried_runSTFn3(), Get_Data_Array_ST_sortByImpl(), comp_0, gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
+var __t0 int64
 {
 if (uint32(v_1.IntVal) == 380165415) {
-__t0 = gopurs_runtime.Int(1)
+__t0 = 1
 goto end_branch_0
 } else {
 
@@ -680,7 +680,7 @@ goto end_branch_0
 }
 {
 if (uint32(v_1.IntVal) == 902936544) {
-__t0 = gopurs_runtime.Int(0)
+__t0 = 0
 goto end_branch_0
 } else {
 
@@ -688,17 +688,17 @@ goto end_branch_0
 }
 {
 if (uint32(v_1.IntVal) == 1527465420) {
-__t0 = gopurs_runtime.Int(-1)
+__t0 = -1
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
 }
 end_branch_0:
-return gopurs_runtime.Int(__t0.IntVal)
+return gopurs_runtime.Int(__t0)
 }))
 }
 

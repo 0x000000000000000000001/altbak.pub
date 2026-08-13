@@ -118,10 +118,10 @@ func Get_Control_Monad_Error_Class_monadErrorEither() gopurs_runtime.Value {
 return Get_Control_Monad_Error_Class_monadThrowEither()
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
+var __t0 *Constructor_Data_Either_Right
 {
 if (v_0.Type == 9 && v_0.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Apply(v1_1, (*Constructor_Data_Either_Left)(v_0.UnsafePtr).V0)
+__t0 = gopurs_runtime.CoerceToStruct[Constructor_Data_Either_Right](gopurs_runtime.Apply(v1_1, (*Constructor_Data_Either_Left)(v_0.UnsafePtr).V0))
 goto end_branch_0
 } else {
 
@@ -129,17 +129,17 @@ goto end_branch_0
 }
 {
 if (v_0.Type == 9 && v_0.IntVal == 2465973597) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Right{1, (*Constructor_Data_Either_Right)(v_0.UnsafePtr).V0})}
+__t0 = &Constructor_Data_Either_Right{1, (*Constructor_Data_Either_Right)(v_0.UnsafePtr).V0}
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = gopurs_runtime.CoerceToStruct[Constructor_Data_Either_Right](func() gopurs_runtime.Value { panic("Failed pattern match") }())
 }
 end_branch_0:
-return __t0
+return gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(__t0)}
 })
 }))
 	})

@@ -393,10 +393,10 @@ var v_4 gopurs_runtime.Value = v_4_loop
 _ = v_4
 var v1_5 gopurs_runtime.Value = v1_5_loop
 _ = v1_5
-var __t7 gopurs_runtime.Value
+var __t7 *Constructor_Data_List_Internal_Two
 {
 if (v_4.Type == 9 && v_4.IntVal == 1358893437 && v_4.UnsafePtr == nil) {
-__t7 = gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two{1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V0, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V2})}
+__t7 = &Constructor_Data_List_Internal_Two{1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V0, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V2}
 goto end_branch_7
 } else {
 
@@ -463,17 +463,17 @@ goto end_branch_6
 __t6 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_6:
-__t7 = __t6
+__t7 = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Internal_Two](__t6)
 goto end_branch_7
 } else {
 
 }
 }
 {
-__t7 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t7 = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Internal_Two](func() gopurs_runtime.Value { panic("Failed pattern match") }())
 }
 end_branch_7:
-return __t7
+return gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(__t7)}
 }
 }()
 })
@@ -714,10 +714,10 @@ var v_4 gopurs_runtime.Value = v_4_loop
 _ = v_4
 var v1_5 gopurs_runtime.Value = v1_5_loop
 _ = v1_5
-var __t7 gopurs_runtime.Value
+var __t7 *Constructor_Data_List_Internal_Two
 {
 if (v_4.Type == 9 && v_4.IntVal == 1358893437 && v_4.UnsafePtr == nil) {
-__t7 = gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two{1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V0, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V2})}
+__t7 = &Constructor_Data_List_Internal_Two{1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V0, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V2}
 goto end_branch_7
 } else {
 
@@ -784,17 +784,17 @@ goto end_branch_6
 __t6 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_6:
-__t7 = __t6
+__t7 = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Internal_Two](__t6)
 goto end_branch_7
 } else {
 
 }
 }
 {
-__t7 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t7 = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Internal_Two](func() gopurs_runtime.Value { panic("Failed pattern match") }())
 }
 end_branch_7:
-return __t7
+return gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(__t7)}
 }
 }()
 })

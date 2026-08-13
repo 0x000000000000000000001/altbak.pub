@@ -1149,7 +1149,7 @@ var v_5 int64 = v_5_loop
 _ = v_5
 var v1_6 gopurs_runtime.Value = v1_6_loop
 _ = v1_6
-var __t5 gopurs_runtime.Value
+var __t5 string
 {
 if (v1_6.Type == 9 && v1_6.IntVal == 759514854 && v1_6.UnsafePtr != nil) {
 var __t4 string
@@ -1190,7 +1190,7 @@ continue go__go_4_1_3
 __t4 = gopurs_runtime.Value{}.StrVal()
 }
 end_branch_4:
-__t5 = gopurs_runtime.Str(__t4)
+__t5 = __t4
 goto end_branch_5
 } else {
 
@@ -1198,17 +1198,17 @@ goto end_branch_5
 }
 {
 if (v1_6.Type == 9 && v1_6.IntVal == 759514854 && v1_6.UnsafePtr == nil) {
-__t5 = gopurs_runtime.Str(gopurs_runtime.Apply3(gopurs_runtime.Box(dictFoldable1_0.V1), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](Get_Data_Semigroup_Last_semigroupLast()))}, Get_Data_Semigroup_Last_Last(), gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty](xs_3))}).StrVal())
+__t5 = gopurs_runtime.Apply3(gopurs_runtime.Box(dictFoldable1_0.V1), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](Get_Data_Semigroup_Last_semigroupLast()))}, Get_Data_Semigroup_Last_Last(), gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty](xs_3))}).StrVal()
 goto end_branch_5
 } else {
 
 }
 }
 {
-__t5 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t5 = func() gopurs_runtime.Value { panic("Failed pattern match") }().StrVal()
 }
 end_branch_5:
-return gopurs_runtime.Str(__t5.StrVal())
+return gopurs_runtime.Str(__t5)
 }
 }()
 })

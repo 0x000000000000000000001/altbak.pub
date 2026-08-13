@@ -324,10 +324,10 @@ _ = dictGenericShow_0
 var dictGenericShow1_1 gopurs_runtime.Value = dictGenericShow1_1_loop
 _ = dictGenericShow1_1
 return gopurs_runtime.RecordDict1("genericShow'", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
+var __t0 string
 {
 if (v_2.Type == 9 && v_2.IntVal == 3478632216) {
-__t0 = gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShow_0, "genericShow'"), (*Constructor_Data_Generic_Rep_Inl)(v_2.UnsafePtr).V0).StrVal())
+__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShow_0, "genericShow'"), (*Constructor_Data_Generic_Rep_Inl)(v_2.UnsafePtr).V0).StrVal()
 goto end_branch_0
 } else {
 
@@ -335,17 +335,17 @@ goto end_branch_0
 }
 {
 if (v_2.Type == 9 && v_2.IntVal == 492034566) {
-__t0 = gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShow1_1, "genericShow'"), (*Constructor_Data_Generic_Rep_Inr)(v_2.UnsafePtr).V0).StrVal())
+__t0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictGenericShow1_1, "genericShow'"), (*Constructor_Data_Generic_Rep_Inr)(v_2.UnsafePtr).V0).StrVal()
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }().StrVal()
 }
 end_branch_0:
-return gopurs_runtime.Str(__t0.StrVal())
+return gopurs_runtime.Str(__t0)
 }))
 }
 

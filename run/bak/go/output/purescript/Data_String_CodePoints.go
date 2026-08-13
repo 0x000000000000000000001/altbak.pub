@@ -541,7 +541,7 @@ func Call_Data_String_CodePoints_unconsButWithTuple(s_0_loop string) *Constructo
 var s_0 string = s_0_loop
 _ = s_0
 // TAST (Let): __local_var_1_0 -> *Constructor_Data_Maybe_Just
-__local_var_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_String_CodePoints_uncons(s_0))})
+__local_var_1_0 := Call_Data_String_CodePoints_uncons(s_0)
 _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
@@ -886,12 +886,12 @@ goto end_branch_3
 }
 {
 // TAST (Let): v2_2_0 -> *Constructor_Data_Maybe_Just
-v2_2_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_String_CodePoints_uncons(v1_1))})
+v2_2_0 := Call_Data_String_CodePoints_uncons(v1_1)
 _ = v2_2_0
 var __t1 string
 {
 if (v2_2_0 != nil) {
-__t1 = (gopurs_runtime.Apply(Get_Data_String_CodePoints_singleton(), gopurs_runtime.Int(gopurs_runtime.RecordGet((v2_2_0).V0, "head").IntVal)).StrVal()) + (gopurs_runtime.Str(Call_Data_String_CodePoints_takeFallback((v_0) - (1), gopurs_runtime.RecordGet((v2_2_0).V0, "tail").StrVal())).StrVal())
+__t1 = (gopurs_runtime.Apply(Get_Data_String_CodePoints_singleton(), gopurs_runtime.Int(gopurs_runtime.RecordGet((v2_2_0).V0, "head").IntVal)).StrVal()) + (Call_Data_String_CodePoints_takeFallback((v_0) - (1), gopurs_runtime.RecordGet((v2_2_0).V0, "tail").StrVal()))
 goto end_branch_1
 } else {
 
@@ -993,7 +993,7 @@ _ = s_1
 var accum_2 int64 = accum_2_loop
 _ = accum_2
 // TAST (Let): v_3_0 -> *Constructor_Data_Maybe_Just
-v_3_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_String_CodePoints_uncons(s_1))})
+v_3_0 := Call_Data_String_CodePoints_uncons(s_1)
 _ = v_3_0
 var __t2 int64
 {
@@ -1034,7 +1034,7 @@ var p_0 gopurs_runtime.Value = p_0_loop
 _ = p_0
 var s_1 string = s_1_loop
 _ = s_1
-return gopurs_runtime.Int(Call_Data_String_CodePoints_countTail(p_0, s_1, 0)).IntVal
+return Call_Data_String_CodePoints_countTail(p_0, s_1, 0)
 }
 
 func Call_Data_String_CodePoints_dropWhile(p_0_loop gopurs_runtime.Value, s_1_loop string) string {
@@ -1068,7 +1068,7 @@ _ = n_0
 var s_1 string = s_1_loop
 _ = s_1
 // TAST (Let): v_2_0 -> *Constructor_Data_Maybe_Just
-v_2_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_String_CodePoints_uncons(s_1))})
+v_2_0 := Call_Data_String_CodePoints_uncons(s_1)
 _ = v_2_0
 var __t2 gopurs_runtime.Value
 {

@@ -1,0 +1,1716 @@
+=== Rebuilding gopurs backend ===
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: gopurs
+
+Downloading dependencies...
+Building...
+[1 of 2] Compiling Gopurs.CodeGen
+[2 of 2] Compiling Main
+[WARNING 1/95 UnusedExplicitImport] src/Gopurs/CodeGen.purs:4:1
+
+  4  import PureScript.Backend.Optimizer.Syntax (BackendSyntax(..), BackendAccessor(..), Pair(..), Level(..), BackendOperator(..), BackendOperator1(..), BackendOperator2(..), BackendOperatorOrd(..), BackendOperatorNum(..), BackendEffect(..))
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.Syntax contains the following unused references:
+    Level
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.Syntax (BackendAccessor(..), BackendEffect(..), BackendOperator(..), BackendOperator1(..), BackendOperator2(..), BackendOperatorNum(..), BackendOperatorOrd(..), BackendSyntax(..), Pair(..))
+
+[WARNING 2/95 UnusedImport] src/Gopurs/CodeGen.purs:5:1
+
+  5  import PureScript.Backend.Optimizer.Semantics (NeutralExpr(..))
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of PureScript.Backend.Optimizer.Semantics is redundant
+
+[WARNING 3/95 UnusedExplicitImport] src/Gopurs/CodeGen.purs:6:1
+
+  6  import PureScript.Backend.Optimizer.Convert (BackendModule, BackendBindingGroup)
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.Convert contains the following unused references:
+    BackendBindingGroup
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.Convert (BackendModule)
+
+[WARNING 4/95 UnusedExplicitImport] src/Gopurs/CodeGen.purs:9:1
+
+  9  import Data.Maybe (Maybe(..), fromMaybe, isJust)
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module Data.Maybe contains the following unused references:
+    isJust
+  It could be replaced with:
+    import Data.Maybe (Maybe(..), fromMaybe)
+
+[WARNING 5/95 UnusedExplicitImport] src/Gopurs/CodeGen.purs:11:1
+
+  11  import PureScript.Backend.Optimizer.CoreFn (Ann(..), Bind(..), Binder(..), Binding(..), CaseAlternative(..), CaseGuard(..), Comment, ConstructorType(..), DataConstructor, DataDecl, Expr(..), ExprType(..), Guard(..), Ident(..), Import(..), Literal(..), Meta(..), Module(..), ModuleName(..), Prop(..), ProperName(..), Qualified(..), ReExport, exprAnn, findProp, propKey, propValue, qualifiedModuleName, unQualified)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.CoreFn contains the following unused references:
+    Ann
+    Bind
+    Binder
+    Binding
+    CaseAlternative
+    CaseGuard
+    Comment
+    ConstructorType
+    DataConstructor
+    Expr
+    Guard
+    Import
+    Meta
+    Module
+    ProperName
+    ReExport
+    exprAnn
+    findProp
+    propKey
+    propValue
+    qualifiedModuleName
+    unQualified
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.CoreFn (DataDecl, ExprType(..), Ident(..), Literal(..), ModuleName(..), Prop(..), Qualified(..))
+
+[WARNING 6/95 UnusedImport] src/Gopurs/CodeGen.purs:13:1
+
+  13  import Data.Array.NonEmpty as NonEmptyArray
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Data.Array.NonEmpty as NonEmptyArray is redundant
+
+[WARNING 7/95 UnusedExplicitImport] src/Gopurs/CodeGen.purs:14:1
+
+  14  import Data.Array.NonEmpty (NonEmptyArray, fromArray, toArray)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module Data.Array.NonEmpty contains the following unused references:
+    NonEmptyArray
+  It could be replaced with:
+    import Data.Array.NonEmpty (fromArray, toArray)
+
+[WARNING 8/95 UnusedImport] src/Gopurs/CodeGen.purs:19:1
+
+  19  import Partial.Unsafe (unsafePartial)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Partial.Unsafe is redundant
+
+[WARNING 9/95 DuplicateImport] src/Gopurs/CodeGen.purs:28:1
+
+  28  import Data.Set as Set
+      ^^^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Data.Set as Set
+
+[WARNING 10/95 UnusedExplicitImport] src/Gopurs/CodeGen.purs:35:1
+
+  35  import PureScript.Backend.Optimizer.Substitute (unify, substituteExprType, mapTcoExprTypes, substituteAst)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.Substitute contains the following unused references:
+    unify
+    mapTcoExprTypes
+    substituteAst
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.Substitute (substituteExprType)
+
+[WARNING 11/95 UnusedExplicitImport] src/Gopurs/CodeGen.purs:36:1
+
+  36  import Gopurs.GoAst (GoFile, GoDecl, GoExpr(..), GoType(..), goTypeToStr)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module Gopurs.GoAst contains the following unused references:
+    GoFile
+  It could be replaced with:
+    import Gopurs.GoAst (GoDecl, GoExpr(..), GoType(..), goTypeToStr)
+
+[WARNING 12/95 UnusedExplicitImport] src/Gopurs/CodeGen.purs:41:1
+
+  41  import PureScript.Backend.Optimizer.Codegen.Tco (TcoExpr(..), tcoAnalysisOf)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.Codegen.Tco contains the following unused references:
+    tcoAnalysisOf
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.Codegen.Tco (TcoExpr(..))
+
+[WARNING 13/95 UnusedImport] src/Gopurs/CodeGen.purs:43:1
+
+  43  import Node.Path as Path
+      ^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Node.Path as Path is redundant
+
+[WARNING 14/95 UnusedImport] src/Gopurs/CodeGen.purs:44:1
+
+  44  import Node.FS.Sync as FS
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Node.FS.Sync as FS is redundant
+
+[WARNING 15/95 DuplicateSelectiveImport] src/Gopurs/CodeGen.purs:45:1
+
+  45  import Data.Tuple (Tuple(..), fst)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  There is an existing import of Data.Tuple, consider merging the import lists
+
+[WARNING 16/95 DuplicateSelectiveImport] src/Gopurs/CodeGen.purs:48:1
+
+  48  import Data.Maybe (fromMaybe)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  There is an existing import of Data.Maybe, consider merging the import lists
+
+[WARNING 17/95 UserDefinedWarning] src/Gopurs/CodeGen.purs:50:1
+
+  50  coerceGoExpr :: GoExpr -> GoType -> GoType -> GoExpr
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A custom warning occurred while solving type class constraints:
+    Debug function usage
+  in value declaration coerceGoExpr
+
+[WARNING 18/95 UnusedName] src/Gopurs/CodeGen.purs:85:5
+
+  85      cleanType = String.replaceAll (Pattern " ") (Replacement "_") typeStrSafe6
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name cleanType was introduced but not used.
+  in value declaration mangleType
+
+[WARNING 19/95 UnusedName] src/Gopurs/CodeGen.purs:96:18
+
+  96  exprTypeToGoType ptrPaths enumAdts modNameStr (Record _) = TypeValue
+                       ^^^^^^^^
+
+  Name ptrPaths was introduced but not used.
+  in value declaration exprTypeToGoType
+
+[WARNING 20/95 UnusedName] src/Gopurs/CodeGen.purs:96:27
+
+  96  exprTypeToGoType ptrPaths enumAdts modNameStr (Record _) = TypeValue
+                                ^^^^^^^^
+
+  Name enumAdts was introduced but not used.
+  in value declaration exprTypeToGoType
+
+[WARNING 21/95 UnusedName] src/Gopurs/CodeGen.purs:96:36
+
+  96  exprTypeToGoType ptrPaths enumAdts modNameStr (Record _) = TypeValue
+                                         ^^^^^^^^^^
+
+  Name modNameStr was introduced but not used.
+  in value declaration exprTypeToGoType
+
+[WARNING 22/95 UnusedName] src/Gopurs/CodeGen.purs:120:33
+
+  120  exprTypeToGoType _ _ _ (TypeVar v) = TypeValue
+                                       ^
+
+  Name v was introduced but not used.
+  in value declaration exprTypeToGoType
+
+[WARNING 23/95 UnusedName] src/Gopurs/CodeGen.purs:149:26
+
+  149  instantiateGenericGoType env t = t
+                                ^^^
+
+  Name env was introduced but not used.
+  in value declaration instantiateGenericGoType
+
+[WARNING 24/95 UserDefinedWarning] src/Gopurs/CodeGen.purs:152:1
+
+  152  unboxGoExpr :: GoExpr -> GoType -> GoType -> GoExpr
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A custom warning occurred while solving type class constraints:
+    Debug function usage
+  in binding group unboxGoExpr
+
+[WARNING 25/95 UserDefinedWarning] src/Gopurs/CodeGen.purs:268:1
+
+  268  translate :: Set.Set String -> Set.Set String -> Map.Map String { ctorName :: String, arity :: Int } -> Set.Set String -> Map.Map String { nodeBaseStruct :: String, nodeCtor :: String } -> Set.Set ExprType -> Set.Set String -> Map.Map String { vars :: Array String, fields :: Array ExprType } -> Map.Map String ExprType -> InstantiationMap -> Map.Map String String -> Map.Map String { vars :: Array String, fields :: Array { name :: String, "type" :: ExprType } } -> Array (Array String) -> BackendModule -> String
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A custom warning occurred while solving type class constraints:
+    Debug function usage
+  in value declaration translate
+
+[WARNING 26/95 UnusedName] src/Gopurs/CodeGen.purs:269:79
+
+  269  translate enumAdts enumCtors pointerAdtPaths pointerAdtNodes pointerAdtLeaves adtTypes elidedCtors ctorTypes globalTypes rawInstantiations classDeclsMap classDeclsFields importsArray mod =
+                                                                                     ^^^^^^^^
+
+  Name adtTypes was introduced but not used.
+  in value declaration translate
+
+[WARNING 27/95 UnusedName] src/Gopurs/CodeGen.purs:269:140
+
+  269  translate enumAdts enumCtors pointerAdtPaths pointerAdtNodes pointerAdtLeaves adtTypes elidedCtors ctorTypes globalTypes rawInstantiations classDeclsMap classDeclsFields importsArray mod =
+                                                                                                                                                  ^^^^^^^^^^^^^
+
+  Name classDeclsMap was introduced but not used.
+  in value declaration translate
+
+[WARNING 28/95 ShadowedName] src/Gopurs/CodeGen.purs:282:26
+
+  282          checkSafe (ADT _ parts args) = 
+                                ^^^^^
+
+  Name parts was shadowed.
+  in value declaration translate
+
+[WARNING 29/95 UnusedName] src/Gopurs/CodeGen.purs:303:5
+
+           v
+  303      instantiations = Map.mapMaybe (\typeMap ->
+  304          let set = Set.fromFoldable (Map.keys typeMap)
+  305              safeSet = Set.filter isSafeType set
+  306          in if Set.isEmpty safeSet then Nothing else Just safeSet
+  307        ) rawInstantiations
+                               ^
+
+  Name instantiations was introduced but not used.
+  in value declaration translate
+
+[WARNING 30/95 ShadowedName] src/Gopurs/CodeGen.purs:363:5
+
+  363      getExprType (TcoExpr _ (Typed ty _)) = ty
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name getExprType was shadowed.
+  in value declaration translate
+
+[WARNING 31/95 ShadowedName] src/Gopurs/CodeGen.purs:364:5
+
+  364      getExprType _ = Any -- fallback
+           ^^^^^^^^^^^^^^^^^^^
+
+  Name getExprType was shadowed.
+  in value declaration translate
+
+[WARNING 32/95 UnusedName] src/Gopurs/CodeGen.purs:367:5
+
+  367      setTcoExprType ty (TcoExpr a (Typed _ inner)) = TcoExpr a (Typed ty inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name setTcoExprType was introduced but not used.
+  in value declaration translate
+
+[WARNING 33/95 UnusedName] src/Gopurs/CodeGen.purs:368:5
+
+  368      setTcoExprType _ expr = expr
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name setTcoExprType was introduced but not used.
+  in value declaration translate
+
+[WARNING 34/95 UnusedName] src/Gopurs/CodeGen.purs:377:28
+
+  377                Just { args, body, fvs } ->
+                                  ^^^^
+
+  Name body was introduced but not used.
+  in value declaration translate
+
+[WARNING 35/95 UnusedName] src/Gopurs/CodeGen.purs:377:34
+
+  377                Just { args, body, fvs } ->
+                                        ^^^
+
+  Name fvs was introduced but not used.
+  in value declaration translate
+
+[WARNING 36/95 UnusedName] src/Gopurs/CodeGen.purs:420:45
+
+  420                    processBindingGroup binds isRec =
+                                                   ^^^^^
+
+  Name isRec was introduced but not used.
+  in value declaration translate
+
+[WARNING 37/95 UnusedName] src/Gopurs/CodeGen.purs:427:29
+
+  427                              loopCtxs = map (\fn -> { ident: fn.ident, params: fn.args, loopParams: map (\p -> p <> "_loop") fn.args }) fns
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name loopCtxs was introduced but not used.
+  in value declaration translate
+
+[WARNING 38/95 UnusedName] src/Gopurs/CodeGen.purs:442:35
+
+  442                                    loopParams = map (\(Tuple idStr _) -> idStr <> "_loop") paramsWithTypes
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name loopParams was introduced but not used.
+  in value declaration translate
+
+[WARNING 39/95 UserDefinedWarning] src/Gopurs/CodeGen.purs:617:1
+
+  617  translateExprImpl_ :: Ref { decls :: Array GoDecl, rawDecls :: Array String, elidedCtors :: Set.Set String, ctorTypes :: Map String { vars :: Array String, fields :: Array ExprType }, pointerAdtPaths :: Map String { ctorName :: String, arity :: Int }, pointerAdtNodes :: Set String, pointerAdtLeaves :: Map String { nodeBaseStruct :: String, nodeCtor :: String }, enumAdts :: Set.Set String, enumCtors :: Set.Set String, globalTypes :: Map.Map String ExprType, classDeclsFields :: Map String { vars :: Array String, fields :: Array { name :: String, "type" :: ExprType } }, globalId :: Int } -> Int -> String -> Array String -> Map String { fullName :: String, fArgs :: Array GoType, fRet :: GoType, arity :: Int } -> Map String { name :: String, goType :: GoType } -> Maybe String -> Array { ident :: String, params :: Array String, loopParams :: Array String, goTypes :: Array GoType } -> Boolean -> Boolean -> Int -> TcoExpr -> { stmts :: StmtTree, expr :: GoExpr, exprType :: GoType, nextId :: Int }
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A custom warning occurred while solving type class constraints:
+    Debug function usage
+  in binding group translateExprImpl_
+
+[WARNING 40/95 UserDefinedWarning] src/Gopurs/CodeGen.purs:617:1
+
+  617  translateExprImpl_ :: Ref { decls :: Array GoDecl, rawDecls :: Array String, elidedCtors :: Set.Set String, ctorTypes :: Map String { vars :: Array String, fields :: Array ExprType }, pointerAdtPaths :: Map String { ctorName :: String, arity :: Int }, pointerAdtNodes :: Set String, pointerAdtLeaves :: Map String { nodeBaseStruct :: String, nodeCtor :: String }, enumAdts :: Set.Set String, enumCtors :: Set.Set String, globalTypes :: Map.Map String ExprType, classDeclsFields :: Map String { vars :: Array String, fields :: Array { name :: String, "type" :: ExprType } }, globalId :: Int } -> Int -> String -> Array String -> Map String { fullName :: String, fArgs :: Array GoType, fRet :: GoType, arity :: Int } -> Map String { name :: String, goType :: GoType } -> Maybe String -> Array { ident :: String, params :: Array String, loopParams :: Array String, goTypes :: Array GoType } -> Boolean -> Boolean -> Int -> TcoExpr -> { stmts :: StmtTree, expr :: GoExpr, exprType :: GoType, nextId :: Int }
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A custom warning occurred while solving type class constraints:
+    Debug function usage
+  in binding group translateExprImpl_
+
+[WARNING 41/95 UnusedName] src/Gopurs/CodeGen.purs:667:85
+
+  667            Lit (LitRecord props), TypeStructPointer baseStructName fullName fullPath tArgs ->
+                                                                                           ^^^^^
+
+  Name tArgs was introduced but not used.
+  in value declaration translateExprImpl_
+
+[WARNING 42/95 ShadowedName] src/Gopurs/CodeGen.purs:673:25
+
+  673                      ADT fullName _ tArgs -> 
+                               ^^^^^^^^
+
+  Name fullName was shadowed.
+  in value declaration translateExprImpl_
+
+[WARNING 43/95 ShadowedName] src/Gopurs/CodeGen.purs:673:36
+
+  673                      ADT fullName _ tArgs -> 
+                                          ^^^^^
+
+  Name tArgs was shadowed.
+  in value declaration translateExprImpl_
+
+[WARNING 44/95 ShadowedName] src/Gopurs/CodeGen.purs:755:11
+
+  755            expr = if n == 0.0 && 1.0 / n < 0.0 then GoCall (GoSelector (GoVar "gopurs_runtime") "NegativeZero") [] else GoRaw (show n)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name expr was shadowed.
+  in value declaration translateExprImpl_
+
+[WARNING 45/95 ShadowedName] src/Gopurs/CodeGen.purs:780:48
+
+  780                let boxedExprs = Array.zipWith (\expr ty -> boxGoExpr expr ty) accXs.exprs accXs.exprTypes
+                                                      ^^^^
+
+  Name expr was shadowed.
+  in value declaration translateExprImpl_
+
+[WARNING 46/95 UnusedName] src/Gopurs/CodeGen.purs:804:30
+
+  804                  ADT fullName path adtArgs ->
+                                    ^^^^
+
+  Name path was introduced but not used.
+  in value declaration translateExprImpl_
+
+[WARNING 47/95 UnusedName] src/Gopurs/CodeGen.purs:840:11
+
+  840        App fn args ->
+                 ^^
+
+  Name fn was introduced but not used.
+  in value declaration translateExprImpl_
+
+[WARNING 48/95 UnusedName] src/Gopurs/CodeGen.purs:842:11
+
+  842            argsArr = toArray args
+                 ^^^^^^^^^^^^^^^^^^^^^^
+
+  Name argsArr was introduced but not used.
+  in value declaration translateExprImpl_
+
+[WARNING 49/95 UnusedName] src/Gopurs/CodeGen.purs:852:30
+
+  852                Var (Qualified mbMod (Ident name)) ->
+                                    ^^^^^
+
+  Name mbMod was introduced but not used.
+  in value declaration translateExprImpl_
+
+[WARNING 50/95 UnusedName] src/Gopurs/CodeGen.purs:1543:17
+
+  1543                  combinedLoopCtx = loopCtxs <> loopCtx
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name combinedLoopCtx was introduced but not used.
+  in value declaration translateExprImpl_
+
+[WARNING 51/95 UnusedName] src/Gopurs/CodeGen.purs:1562:25
+
+  1562                          loopParams = map (\(Tuple idStr _) -> idStr <> "_loop") paramsWithTypes
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name loopParams was introduced but not used.
+  in value declaration translateExprImpl_
+
+[WARNING 52/95 UnusedName] src/Gopurs/CodeGen.purs:1574:59
+
+  1574                          funcExpr = Array.foldr (\(Tuple p goT) acc -> GoCall (GoSelector (GoVar "gopurs_runtime") "Func") [ GoRaw ("func(" <> p <> "_loop_val gopurs_runtime.Value) gopurs_runtime.Value {\nreturn " <> printGoExpr acc <> "\n}") ]) iife paramsWithTypes
+                                                                  ^^^
+
+  Name goT was introduced but not used.
+  in value declaration translateExprImpl_
+
+[WARNING 53/95 UnusedName] src/Gopurs/CodeGen.purs:1588:47
+
+  1588                    ( \acc (Tuple (Tuple (Ident ident) val) alloc) ->
+                                                      ^^^^^
+
+  Name ident was introduced but not used.
+  in value declaration translateExprImpl_
+
+[WARNING 54/95 UnusedName] src/Gopurs/CodeGen.purs:1611:28
+
+  1611                  TypeRecord fields -> { stmts: resObj.stmts, expr: GoRecordAccess (boxGoExpr resObj.expr resObj.exprType) prop, exprType: TypeValue, nextId: resObj.nextId }
+                                   ^^^^^^
+
+  Name fields was introduced but not used.
+  in value declaration translateExprImpl_
+
+[WARNING 55/95 ShadowedName] src/Gopurs/CodeGen.purs:1751:17
+
+  1751              ADT fullName _ tArgs -> 
+                        ^^^^^^^^
+
+  Name fullName was shadowed.
+  in value declaration translateExprImpl_
+
+[WARNING 56/95 UnusedName] src/Gopurs/CodeGen.purs:1758:21
+
+  1758              TypeApp fn arg ->
+                            ^^
+
+  Name fn was introduced but not used.
+  in value declaration translateExprImpl_
+
+[WARNING 57/95 UnusedName] src/Gopurs/CodeGen.purs:1758:24
+
+  1758              TypeApp fn arg ->
+                               ^^^
+
+  Name arg was introduced but not used.
+  in value declaration translateExprImpl_
+
+[WARNING 58/95 UnusedName] src/Gopurs/CodeGen.purs:1763:28
+
+  1763                  Tuple (ADT fnName _ tArgs) allArgs ->
+                                   ^^^^^^
+
+  Name fnName was introduced but not used.
+  in value declaration translateExprImpl_
+
+[WARNING 59/95 UnusedName] src/Gopurs/CodeGen.purs:1772:15
+
+                      v
+  1772                expectedExprType = case Array.index fields' i of
+  1773                  Just ty -> ty
+  1774                  Nothing -> Any
+                                     ^
+
+  Name expectedExprType was introduced but not used.
+  in value declaration translateExprImpl_
+
+[WARNING 60/95 ShadowedName] src/Gopurs/CodeGen.purs:1856:17
+
+  1856              ADT fullName _ tArgs -> 
+                        ^^^^^^^^
+
+  Name fullName was shadowed.
+  in value declaration translateExprImpl_
+
+[WARNING 61/95 ShadowedName] src/Gopurs/CodeGen.purs:1919:17
+
+  1919              ADT fullName _ tArgs ->
+                        ^^^^^^^^
+
+  Name fullName was shadowed.
+  in value declaration translateExprImpl_
+
+[WARNING 62/95 ShadowedName] src/Gopurs/CodeGen.purs:1927:20
+
+  1927                Just ctorInfo -> map (const TypeValue) ctorInfo.vars
+                           ^^^^^^^^
+
+  Name ctorInfo was shadowed.
+  in value declaration translateExprImpl_
+
+[WARNING 63/95 ShadowedName] src/Gopurs/CodeGen.purs:1934:22
+
+  1934                  Just expr -> { expr: boxGoExpr expr (fromMaybe TypeValue (map (exprTypeToGoType (unsafePerformEffect (Ref.read helpersRef)).pointerAdtPaths (unsafePerformEffect (Ref.read helpersRef)).enumAdts modNameStr) (Array.index fields 0))), exprType: TypeValue }
+                             ^^^^
+
+  Name expr was shadowed.
+  in value declaration translateExprImpl_
+
+[WARNING 64/95 UnusedName] src/Gopurs/CodeGen.purs:2326:37
+
+  2326      fieldStr = Array.mapWithIndex (\i (Tuple fK fT) ->
+                                            ^
+
+  Name i was introduced but not used.
+  in value declaration wrapReturn
+
+[WARNING 65/95 UnusedName] src/Gopurs/CodeGen.purs:2345:41
+
+  2345          fieldStr = Array.mapWithIndex (\i (Tuple fK fT) ->
+                                                ^
+
+  Name i was introduced but not used.
+  in value declaration wrapReturn
+
+[WARNING 66/95 UnusedName] src/Gopurs/CodeGen.purs:2405:19
+
+  2405    ConstrainedType constraints body -> "(ConstrainedType " <> printExprType body <> ")"
+                          ^^^^^^^^^^^
+
+  Name constraints was introduced but not used.
+  in value declaration printExprType
+
+[WARNING 67/95 UnusedName] src/Gopurs/CodeGen.purs:2406:7
+
+  2406    ADT fullName path args -> "(ADT " <> show path <> " [" <> String.joinWith ", " (map printExprType args) <> "])"
+              ^^^^^^^^
+
+  Name fullName was introduced but not used.
+  in value declaration printExprType
+
+[WARNING 68/95 UnusedName] src/Gopurs/CodeGen.purs:2427:15
+
+  2427           Just r -> retStr == "any" || retStr == "interface{}" || retStr == "gopurs_runtime.Value"
+                      ^
+
+  Name r was introduced but not used.
+  in value declaration isStandardPursFunc
+
+[WARNING 69/95 UnusedName] src/Gopurs/CodeGen.purs:2454:7
+
+              v
+  2454        substituteGeneric t = 
+  2455          let s = printTypeNode t 
+  2456              res = Array.foldl (\acc tp -> String.replaceAll (Pattern ("\\b" <> tp <> "\\b")) (Replacement "gopurs_runtime.Value") acc) s d.typeParams
+  2457          in TUnknown res 
+                              ^
+
+  Name substituteGeneric was introduced but not used.
+  in value declaration generateWrapperFunc
+
+[WARNING 70/95 UnusedName] src/Gopurs/CodeGen.purs:2459:7
+
+  2459        newLines = []
+              ^^^^^^^^^^^^^
+
+  Name newLines was introduced but not used.
+  in value declaration generateWrapperFunc
+
+[WARNING 71/95 UnusedExplicitImport] src/Main.purs:7:1
+
+  7  import Effect.Aff (Aff, launchAff_, attempt)
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module Effect.Aff contains the following unused references:
+    Aff
+  It could be replaced with:
+    import Effect.Aff (attempt, launchAff_)
+
+[WARNING 72/95 UnusedImport] src/Main.purs:8:1
+
+  8  import Effect.Console (log, logShow)
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Effect.Console is redundant
+
+[WARNING 73/95 UnusedExplicitImport] src/Main.purs:16:1
+
+  16  import Data.Either (Either(..), isRight)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module Data.Either contains the following unused references:
+    isRight
+  It could be replaced with:
+    import Data.Either (Either(..))
+
+[WARNING 74/95 UnusedImport] src/Main.purs:20:1
+
+  20  import Data.Traversable (for, sequence)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Data.Traversable is redundant
+
+[WARNING 75/95 UnusedImport] src/Main.purs:24:1
+
+  24  import Data.List as List
+      ^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Data.List as List is redundant
+
+[WARNING 76/95 DuplicateSelectiveImport] src/Main.purs:26:1
+
+  26  import Data.Tuple (Tuple(..))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  There is an existing import of Data.Tuple, consider merging the import lists
+
+[WARNING 77/95 DuplicateSelectiveImport] src/Main.purs:31:1
+
+  31  import Data.Traversable (traverse)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  There is an existing import of Data.Traversable, consider merging the import lists
+
+[WARNING 78/95 UnusedImport] src/Main.purs:35:1
+
+  35  import PureScript.Backend.Optimizer.CoreFn.Json (decodeModule)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of PureScript.Backend.Optimizer.CoreFn.Json is redundant
+
+[WARNING 79/95 UnusedImport] src/Main.purs:36:1
+
+  36  import PureScript.Backend.Optimizer.CoreFn.Sort (sortModules)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of PureScript.Backend.Optimizer.CoreFn.Sort is redundant
+
+[WARNING 80/95 UnusedImport] src/Main.purs:38:1
+
+  38  import PureScript.Backend.Optimizer.Directives.Defaults (defaultDirectives)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of PureScript.Backend.Optimizer.Directives.Defaults is redundant
+
+[WARNING 81/95 UnusedImport] src/Main.purs:39:1
+
+  39  import PureScript.Backend.Optimizer.Directives (parseDirectiveFile)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of PureScript.Backend.Optimizer.Directives is redundant
+
+[WARNING 82/95 UnusedExplicitImport] src/Main.purs:40:1
+
+  40  import PureScript.Backend.Optimizer.Monomorphize (collectInstantiations, InstantiationMap, collectAllTypes, mangleType, monomorphize, transitiveCollect)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.Monomorphize contains the following unused references:
+    InstantiationMap
+    mangleType
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.Monomorphize (collectAllTypes, collectInstantiations, getExprAnn, monomorphize, transitiveCollect)
+
+[WARNING 83/95 DuplicateImport] src/Main.purs:43:1
+
+  43  import Data.String as String
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Data.String as String
+
+[WARNING 84/95 DuplicateSelectiveImport] src/Main.purs:44:1
+
+  44  import PureScript.Backend.Optimizer.Monomorphize (getExprAnn)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  There is an existing import of PureScript.Backend.Optimizer.Monomorphize, consider merging the import lists
+
+[WARNING 85/95 DuplicateImport] src/Main.purs:46:1
+
+  46  import Debug as Debug
+      ^^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Debug as Debug
+
+[WARNING 86/95 DuplicateSelectiveImport] src/Main.purs:52:1
+
+  52  import PureScript.Backend.Optimizer.Monomorphize (collectInstantiations)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  There is an existing import of PureScript.Backend.Optimizer.Monomorphize, consider merging the import lists
+
+[WARNING 87/95 UnusedImport] src/Main.purs:56:1
+
+  56  import Node.FS.Sync (writeTextFile)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Node.FS.Sync is redundant
+
+[WARNING 88/95 DuplicateImport] src/Main.purs:57:1
+
+  57  import Node.Encoding (Encoding(..))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Node.Encoding (Encoding(..))
+
+[WARNING 89/95 UserDefinedWarning] src/Main.purs:116:1
+
+  116  main :: Effect Unit
+       ^^^^^^^^^^^^^^^^^^^
+
+  A custom warning occurred while solving type class constraints:
+    Debug function usage
+  in value declaration main
+
+[WARNING 90/95 UnusedName] src/Main.purs:158:5
+
+           v
+  158      allClassDecls = foldl (\acc (Module m) ->
+  159        foldl (\acc' c -> Set.insert c.name acc') acc m.classDecls
+  160      ) Set.empty finalModules
+                                  ^
+
+  Name allClassDecls was introduced but not used.
+  in value declaration main
+
+[WARNING 91/95 UnusedName] src/Main.purs:202:5
+
+  202      getClassName (ADT fullName _ _) = Just fullName
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name getClassName was introduced but not used.
+  in value declaration main
+
+[WARNING 92/95 UnusedName] src/Main.purs:203:5
+
+  203      getClassName _ = Nothing
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name getClassName was introduced but not used.
+  in value declaration main
+
+[WARNING 93/95 UnusedName] src/Main.purs:288:16
+
+  288            Just backendMod -> do
+                      ^^^^^^^^^^
+
+  Name backendMod was introduced but not used.
+  in value declaration main
+
+[WARNING 94/95 ShadowedName] src/Main.purs:316:19
+
+  316                let safeModName = String.replaceAll (Pattern ".") (Replacement "_") modNameStr
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name safeModName was shadowed.
+  in value declaration main
+
+[WARNING 95/95 ShadowedName] src/Main.purs:333:19
+
+  333                let safeModName = String.replaceAll (Pattern ".") (Replacement "_") modNameStr
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name safeModName was shadowed.
+  in value declaration main
+
+           Src   Lib   All
+Warnings    95     0    95
+Errors       0     0     0
+
+✓ Build succeeded.
+
+[  1 of 418] Building Control.Semigroupoid
+[  2 of 418] Building Type.Proxy
+[  3 of 418] Building Data.Symbol
+[  4 of 418] Building Data.Unit
+[  5 of 418] Building Record.Unsafe
+[  6 of 418] Building Data.HeytingAlgebra
+[  7 of 418] Building Data.Void
+[  8 of 418] Building Data.Eq
+[  9 of 418] Building Control.Category
+[ 10 of 418] Building Data.Boolean
+[ 11 of 418] Building Data.Semigroup
+[ 12 of 418] Building Data.Show
+[ 13 of 418] Building Data.Ordering
+[ 14 of 418] Building Data.Semiring
+[ 15 of 418] Building Data.Ring
+[ 16 of 418] Building Data.Ord
+[ 17 of 418] Building Data.Function
+[ 18 of 418] Building Data.Functor
+[ 19 of 418] Building Control.Alt
+[ 20 of 418] Building Control.Apply
+[ 21 of 418] Building Control.Applicative
+[ 22 of 418] Building Control.Bind
+[ 23 of 418] Building Control.Plus
+[ 24 of 418] Building Data.BooleanAlgebra
+[ 25 of 418] Building Data.Bounded
+[ 26 of 418] Building Data.CommutativeRing
+[ 27 of 418] Building Data.EuclideanRing
+[ 28 of 418] Building Control.Monad
+[ 29 of 418] Building Data.Monoid
+[ 30 of 418] Building Data.DivisionRing
+[ 31 of 418] Building Data.Field
+[ 32 of 418] Building Data.NaturalTransformation
+[ 33 of 418] Building Prelude
+[ 34 of 418] Building Data.Monoid.Additive
+[ 35 of 418] Building Control.Alternative
+[ 36 of 418] Building Control.Extend
+[ 37 of 418] Building Control.Comonad
+[ 38 of 418] Building Data.Monoid.Conj
+[ 39 of 418] Building Data.Monoid.Disj
+[ 40 of 418] Building Data.Monoid.Dual
+[ 41 of 418] Building Data.Monoid.Endo
+[ 42 of 418] Building Data.Monoid.Multiplicative
+[ 43 of 418] Building Data.Semigroup.First
+[ 44 of 418] Building Data.Semigroup.Last
+[ 45 of 418] Building Unsafe.Coerce
+[ 46 of 418] Building Safe.Coerce
+[ 47 of 418] Building Data.Newtype
+[ 48 of 418] Building Data.Monoid.Alternate
+[ 49 of 418] Building Data.Functor.Invariant
+[ 50 of 418] Building Data.Const
+[ 51 of 418] Building Data.Generic.Rep
+[ 52 of 418] Building Data.Maybe
+[ 53 of 418] Building Data.Either
+[ 54 of 418] Building Control.Lazy
+[ 55 of 418] Building Control.MonadPlus
+[ 56 of 418] Building Data.Functor.App
+[ 57 of 418] Building Data.Functor.Compose
+[ 58 of 418] Building Data.Tuple
+[ 59 of 418] Building Data.Bifunctor
+[ 60 of 418] Building Data.Functor.Coproduct
+[ 61 of 418] Building Data.Functor.Product
+[ 62 of 418] Building Data.Identity
+[ 63 of 418] Building Data.Maybe.First
+[ 64 of 418] Building Data.Maybe.Last
+[ 65 of 418] Building Data.Foldable
+[ 66 of 418] Building Effect
+[ 67 of 418] Building Effect.Ref
+[ 68 of 418] Building Partial
+[ 69 of 418] Building Partial.Unsafe
+[ 70 of 418] Building Control.Monad.Rec.Class
+[ 71 of 418] Building Data.FunctorWithIndex
+[ 72 of 418] Building Data.FoldableWithIndex
+[ 73 of 418] Building Data.Ord.Max
+[ 74 of 418] Building Data.Ord.Min
+[ 75 of 418] Building Data.Semigroup.Foldable
+[ 76 of 418] Building Data.Traversable.Accum
+[ 77 of 418] Building Data.Traversable.Accum.Internal
+[ 78 of 418] Building Data.Traversable
+[ 79 of 418] Building Data.TraversableWithIndex
+[ 80 of 418] Building Data.Semigroup.Traversable
+[ 81 of 418] Building Data.Unfoldable1
+[ 82 of 418] Building Data.Unfoldable
+[ 83 of 418] Building Data.NonEmpty
+[ 84 of 418] Building Data.List.Types
+[ 85 of 418] Building Data.List.Internal
+[ 86 of 418] Building Data.List
+[ 87 of 418] Building Data.List.NonEmpty
+[ 88 of 418] Building Data.Show.Generic
+[ 89 of 418] Building Ansi.Codes
+[ 90 of 418] Building Ansi.Output
+[ 91 of 418] Building Control.Biapply
+[ 92 of 418] Building Control.Biapplicative
+[ 93 of 418] Building Control.Monad.Trans.Class
+[ 94 of 418] Building Data.CatQueue
+[ 95 of 418] Building Data.CatList
+[ 96 of 418] Building Control.Monad.Free
+[ 97 of 418] Building Control.Monad.State.Class
+[ 98 of 418] Building Control.Monad.Cont.Class
+[ 99 of 418] Building Effect.Exception
+[100 of 418] Building Control.Monad.Error.Class
+[101 of 418] Building Control.Monad.Reader.Class
+[102 of 418] Building Control.Monad.ST.Internal
+[103 of 418] Building Control.Monad.ST
+[104 of 418] Building Control.Monad.ST.Global
+[105 of 418] Building Control.Monad.ST.Class
+[106 of 418] Building Control.Monad.Writer.Class
+[107 of 418] Building Effect.Class
+[108 of 418] Building Control.Monad.State.Trans
+[109 of 418] Building Control.Monad.State
+[110 of 418] Building Data.Lazy
+[111 of 418] Building Control.Comonad.Cofree
+[112 of 418] Building Control.Monad.Identity.Trans
+[113 of 418] Building Control.Comonad.Trans.Class
+[114 of 418] Building Control.Comonad.Env.Trans
+[115 of 418] Building Control.Comonad.Store.Trans
+[116 of 418] Building Control.Comonad.Traced.Trans
+[117 of 418] Building Control.Comonad.Cofree.Class
+[118 of 418] Building Control.Comonad.Store.Class
+[119 of 418] Building Control.Comonad.Store
+[120 of 418] Building Control.Comonad.Env.Class
+[121 of 418] Building Control.Comonad.Env
+[122 of 418] Building Control.Comonad.Traced.Class
+[123 of 418] Building Control.Comonad.Traced
+[124 of 418] Building Control.Monad.Cont.Trans
+[125 of 418] Building Control.Monad.Cont
+[126 of 418] Building Control.Monad.Except.Trans
+[127 of 418] Building Control.Monad.Except
+[128 of 418] Building Control.Monad.Maybe.Trans
+[129 of 418] Building Type.Equality
+[130 of 418] Building Data.Distributive
+[131 of 418] Building Control.Monad.Reader.Trans
+[132 of 418] Building Control.Monad.Writer.Trans
+[133 of 418] Building Control.Monad.Free.Class
+[134 of 418] Building Control.Monad.Gen.Class
+[135 of 418] Building Control.Monad.Gen
+[136 of 418] Building Control.Monad.Gen.Common
+[137 of 418] Building Control.Monad.List.Trans
+[138 of 418] Building Control.Monad.RWS.Trans
+[139 of 418] Building Control.Monad.RWS
+[140 of 418] Building Control.Monad.Reader
+[141 of 418] Building Control.Monad.ST.Ref
+[142 of 418] Building Control.Monad.ST.Uncurried
+[143 of 418] Building Control.Monad.Trampoline
+[144 of 418] Building Control.Monad.Writer
+[145 of 418] Building Data.Functor.Contravariant
+[146 of 418] Building Data.Profunctor
+[147 of 418] Building Data.Profunctor.Closed
+[148 of 418] Building Data.Profunctor.Strong
+[149 of 418] Building Data.Functor.Costar
+[150 of 418] Building Data.Profunctor.Choice
+[151 of 418] Building Data.Profunctor.Star
+[152 of 418] Building Control.Parallel.Class
+[153 of 418] Building Control.Parallel
+[154 of 418] Building Data.Function.Uncurried
+[155 of 418] Building Data.Array.NonEmpty.Internal
+[156 of 418] Building Data.Array.ST
+[157 of 418] Building Data.Array.ST.Iterator
+[158 of 418] Building Data.Array
+[159 of 418] Building Foreign.Object.ST
+[160 of 418] Building Type.Data.Boolean
+[161 of 418] Building Type.Data.Ordering
+[162 of 418] Building Type.Data.Symbol
+[163 of 418] Building Type.RowList
+[164 of 418] Building Type.Row.Homogeneous
+[165 of 418] Building Foreign.Object
+[166 of 418] Building Data.Argonaut.Core
+[167 of 418] Building Data.Argonaut.Decode.Error
+[168 of 418] Building Data.Array.NonEmpty
+[169 of 418] Building Data.Int.Bits
+[170 of 418] Building Data.Number
+[171 of 418] Building Data.Int
+[172 of 418] Building Data.Map.Internal
+[173 of 418] Building Data.Set
+[174 of 418] Building Data.Map
+[175 of 418] Building Data.Enum
+[176 of 418] Building Data.String.Pattern
+[177 of 418] Building Data.String.Unsafe
+[178 of 418] Building Data.String.CodeUnits
+[179 of 418] Building Data.String.Common
+[180 of 418] Building Data.String.CodePoints
+[181 of 418] Building Data.String
+[182 of 418] Building Data.String.NonEmpty.Internal
+[183 of 418] Building Data.String.NonEmpty.CodePoints
+[184 of 418] Building Data.String.NonEmpty
+[185 of 418] Building Data.Argonaut.Decode.Decoders
+[186 of 418] Building Record.Unsafe.Union
+[187 of 418] Building Record
+[188 of 418] Building Data.Argonaut.Decode.Class
+[189 of 418] Building Data.Argonaut.Decode.Combinators
+[190 of 418] Building Data.Argonaut.Parser
+[191 of 418] Building Data.Argonaut.Decode.Parser
+[192 of 418] Building Data.Argonaut.Decode
+[193 of 418] Building Data.Argonaut.Encode.Encoders
+[194 of 418] Building Data.Argonaut.Encode.Class
+[195 of 418] Building Data.Argonaut.Encode.Combinators
+[196 of 418] Building Data.Argonaut.Encode
+[197 of 418] Building Data.Char.Gen
+[198 of 418] Building Data.String.Gen
+[199 of 418] Building Data.Argonaut.Gen
+[200 of 418] Building Data.Argonaut.JCursor
+[201 of 418] Building Data.Argonaut.JCursor.Gen
+[202 of 418] Building Data.Lens.Internal.Wander
+[203 of 418] Building Data.Lens.Internal.Indexed
+[204 of 418] Building Data.Lens.Internal.Shop
+[205 of 418] Building Data.Functor.Clown
+[206 of 418] Building Data.Functor.Flip
+[207 of 418] Building Data.Functor.Joker
+[208 of 418] Building Data.Functor.Product2
+[209 of 418] Building Data.Bifoldable
+[210 of 418] Building Data.Bitraversable
+[211 of 418] Building Data.Lens.Internal.Bazaar
+[212 of 418] Building Data.Lens.Internal.Exchange
+[213 of 418] Building Data.Profunctor.Cochoice
+[214 of 418] Building Data.Lens.Internal.Forget
+[215 of 418] Building Data.Lens.Internal.Grating
+[216 of 418] Building Data.Lens.Internal.Market
+[217 of 418] Building Data.Profunctor.Costrong
+[218 of 418] Building Data.Lens.Internal.Re
+[219 of 418] Building Data.Lens.Internal.Stall
+[220 of 418] Building Data.Lens.Internal.Tagged
+[221 of 418] Building Data.Lens.Types
+[222 of 418] Building Data.Lens.Lens
+[223 of 418] Building Data.Lens.Lens.Tuple
+[224 of 418] Building Data.Lens.Lens.Unit
+[225 of 418] Building Data.Lens.Prism
+[226 of 418] Building Data.Lens.Prism.Either
+[227 of 418] Building Data.Lens.Prism.Maybe
+[228 of 418] Building Data.Lens.Common
+[229 of 418] Building Data.Lens.Fold
+[230 of 418] Building Data.Lens.Getter
+[231 of 418] Building Data.Lens.Internal.Zipping
+[232 of 418] Building Data.Lens.Grate
+[233 of 418] Building Data.Lens.Iso
+[234 of 418] Building Data.Lens.Setter
+[235 of 418] Building Data.Lens.Iso.Newtype
+[236 of 418] Building Data.Lens.Indexed
+[237 of 418] Building Data.Lens.Traversal
+[238 of 418] Building Data.Lens
+[239 of 418] Building Data.Argonaut.Prisms
+[240 of 418] Building Data.Argonaut.Traversals
+[241 of 418] Building Data.Argonaut
+[242 of 418] Building Data.Array.Partial
+[243 of 418] Building Data.Array.ST.Partial
+[244 of 418] Building Data.ArrayBuffer.Types
+[245 of 418] Building Data.Bifunctor.Join
+[246 of 418] Building Data.Bounded.Generic
+[247 of 418] Building Data.Char
+[248 of 418] Building Data.Comparison
+[249 of 418] Building Data.Exists
+[250 of 418] Building Data.Coyoneda
+[251 of 418] Building Data.Date.Component
+[252 of 418] Building Data.Enum.Gen
+[253 of 418] Building Data.Date.Component.Gen
+[254 of 418] Building Data.Time.Duration
+[255 of 418] Building Data.Date
+[256 of 418] Building Data.Date.Gen
+[257 of 418] Building Data.Time.Component
+[258 of 418] Building Data.Time
+[259 of 418] Building Data.DateTime
+[260 of 418] Building Data.Time.Component.Gen
+[261 of 418] Building Data.Time.Gen
+[262 of 418] Building Data.DateTime.Gen
+[263 of 418] Building Data.DateTime.Instant
+[264 of 418] Building Data.Equivalence
+[265 of 418] Building Data.Op
+[266 of 418] Building Data.Predicate
+[267 of 418] Building Data.Divide
+[268 of 418] Building Data.Decide
+[269 of 418] Building Data.Divisible
+[270 of 418] Building Data.Decidable
+[271 of 418] Building Data.Either.Inject
+[272 of 418] Building Data.Either.Nested
+[273 of 418] Building Data.Enum.Generic
+[274 of 418] Building Data.Eq.Generic
+[275 of 418] Building Data.Functor.Coproduct.Inject
+[276 of 418] Building Data.Functor.Coproduct.Nested
+[277 of 418] Building Data.Functor.Product.Nested
+[278 of 418] Building Data.HeytingAlgebra.Generic
+[279 of 418] Building Data.Interval.Duration
+[280 of 418] Building Data.Interval.Duration.Iso
+[281 of 418] Building Data.Interval
+[282 of 418] Building Foreign
+[283 of 418] Building Data.JSDate
+[284 of 418] Building Data.Lens.AffineTraversal
+[285 of 418] Building Data.Lens.Index
+[286 of 418] Building Data.Lens.At
+[287 of 418] Building Data.Lens.Fold.Partial
+[288 of 418] Building Data.Lens.Internal.Focusing
+[289 of 418] Building Data.Lens.Lens.Product
+[290 of 418] Building Data.Lens.Lens.Void
+[291 of 418] Building Data.Lens.Prism.Coproduct
+[292 of 418] Building Data.Lens.Record
+[293 of 418] Building Data.Lens.Zoom
+[294 of 418] Building Data.List.Lazy.Types
+[295 of 418] Building Data.List.Lazy
+[296 of 418] Building Data.List.Lazy.NonEmpty
+[297 of 418] Building Data.List.Partial
+[298 of 418] Building Data.List.ZipList
+[299 of 418] Building Data.Map.Gen
+[300 of 418] Building Data.Monoid.Generic
+[301 of 418] Building Data.Nullable
+[302 of 418] Building Data.Number.Approximate
+[303 of 418] Building Data.Number.Format
+[304 of 418] Building Data.Ord.Down
+[305 of 418] Building Data.Ord.Generic
+[306 of 418] Building Data.Posix.Signal
+[307 of 418] Building Data.Posix
+[308 of 418] Building Data.Profunctor.Join
+[309 of 418] Building Data.Profunctor.Split
+[310 of 418] Building Data.Reflectable
+[311 of 418] Building Data.Ring.Generic
+[312 of 418] Building Data.Semigroup.Generic
+[313 of 418] Building Data.Semiring.Generic
+[314 of 418] Building Data.Set.NonEmpty
+[315 of 418] Building Data.String.CaseInsensitive
+[316 of 418] Building Data.String.NonEmpty.CaseInsensitive
+[317 of 418] Building Data.String.NonEmpty.CodeUnits
+[318 of 418] Building Data.String.Regex.Flags
+[319 of 418] Building Data.String.Regex
+[320 of 418] Building Data.String.Regex.Unsafe
+[321 of 418] Building Data.Time.Duration.Gen
+[322 of 418] Building Data.Tuple.Nested
+[323 of 418] Building Data.Yoneda
+[324 of 418] Building Debug
+[325 of 418] Building Dodo.Internal
+[326 of 418] Building Dodo.Internal.Buffer
+[327 of 418] Building Dodo
+[328 of 418] Building Dodo.Ansi
+[329 of 418] Building Dodo.Box
+[330 of 418] Building Dodo.Common
+[331 of 418] Building Effect.Unsafe
+[332 of 418] Building Effect.Aff
+[333 of 418] Building Effect.Aff.Class
+[334 of 418] Building Effect.Uncurried
+[335 of 418] Building Effect.Aff.Compat
+[336 of 418] Building Effect.Console
+[337 of 418] Building Effect.Class.Console
+[338 of 418] Building Effect.Exception.Unsafe
+[339 of 418] Building Foreign.Index
+[340 of 418] Building Foreign.Keys
+[341 of 418] Building Foreign.Object.Gen
+[342 of 418] Building Foreign.Object.ST.Unsafe
+[343 of 418] Building Foreign.Object.Unsafe
+[344 of 418] Building Gopurs.FfiTypes
+[345 of 418] Building PureScript.Backend.Optimizer.CoreFn
+[346 of 418] Building Gopurs.GoAst
+[347 of 418] Building Gopurs.Printer
+[348 of 418] Building Node.Buffer.Types
+[349 of 418] Building Node.Encoding
+[350 of 418] Building Node.Buffer.Immutable
+[351 of 418] Building Node.Buffer.Class
+[352 of 418] Building Node.Buffer
+[353 of 418] Building Node.FS.Constants
+[354 of 418] Building Node.FS
+[355 of 418] Building Node.FS.Perms
+[356 of 418] Building Node.FS.Stats
+[357 of 418] Building Node.Path
+[358 of 418] Building Node.FS.Sync
+[359 of 418] Building PureScript.Backend.Optimizer.Syntax
+[360 of 418] Building PureScript.Backend.Optimizer.Analysis
+[361 of 418] Building PureScript.Backend.Optimizer.Utils
+[362 of 418] Building PureScript.Backend.Optimizer.Semantics
+[363 of 418] Building PureScript.Backend.Optimizer.Codegen.Tco
+[364 of 418] Building PureScript.Backend.Optimizer.Debug
+[365 of 418] Building PureScript.CST.Types
+[366 of 418] Building PureScript.CST.Print
+[367 of 418] Building PureScript.CST.Errors
+[368 of 418] Building PureScript.CST.Layout
+[369 of 418] Building PureScript.CST.TokenStream
+[370 of 418] Building PureScript.CST.Lexer
+[371 of 418] Building PureScript.CST.Parser.Monad
+[372 of 418] Building PureScript.Backend.Optimizer.Directives
+[373 of 418] Building PureScript.Backend.Optimizer.Semantics.Foreign
+[374 of 418] Building PureScript.Backend.Optimizer.Convert
+[375 of 418] Building PureScript.Backend.Optimizer.FfiSupport
+[376 of 418] Building PureScript.Backend.Optimizer.FreeVars
+[377 of 418] Building PureScript.Backend.Optimizer.Substitute
+[378 of 418] Building PureScript.Backend.Optimizer.Monomorphize
+[379 of 418] Building Gopurs.CodeGen
+[380 of 418] Building Gopurs.FBIP
+[381 of 418] Building Gopurs.FfiSupport
+[382 of 418] Building Gopurs.Runtime
+[383 of 418] Building Gopurs.ShowTco
+[384 of 418] Building Gopurs.TestTrace
+[385 of 418] Building Gopurs.UsageAnalysis
+[386 of 418] Building Node.FS.Async
+[387 of 418] Building Node.FS.Aff
+[388 of 418] Building Node.Symbol
+[389 of 418] Building Node.EventEmitter
+[390 of 418] Building Node.EventEmitter.UtilTypes
+[391 of 418] Building Node.Platform
+[392 of 418] Building Node.Stream
+[393 of 418] Building Node.Process
+[394 of 418] Building PureScript.Backend.Optimizer.CoreFn.Json
+[395 of 418] Building PureScript.Backend.Optimizer.CoreFn.Sort
+[396 of 418] Building PureScript.Backend.Optimizer.Directives.Defaults
+[397 of 418] Building PureScript.Backend.Optimizer.App
+[398 of 418] Building PureScript.Backend.Optimizer.Builder
+[399 of 418] Building Main
+[400 of 418] Building Node.Buffer.Constants
+[401 of 418] Building Node.Buffer.ST
+[402 of 418] Building Node.FS.Stream
+[403 of 418] Building Node.Stream.Aff
+[404 of 418] Building PureScript.Backend.Optimizer.Reachability
+[405 of 418] Building PureScript.Backend.Optimizer.TestUnify
+[406 of 418] Building PureScript.Backend.Optimizer.Tracer.Printer
+[407 of 418] Building PureScript.CST.ModuleGraph
+[408 of 418] Building PureScript.CST.Parser
+[409 of 418] Building PureScript.CST.Range.TokenList
+[410 of 418] Building PureScript.CST.Range
+[411 of 418] Building Type.Row
+[412 of 418] Building PureScript.CST.Traversal
+[413 of 418] Building PureScript.CST
+[414 of 418] Building Record.Builder
+[415 of 418] Building Spago.Generated.BuildInfo
+[416 of 418] Building TestMangle
+[417 of 418] Building Type.Function
+[418 of 418] Building Type.Prelude
+
+  bin/gopurs.js  1011.0kb
+
+⚡ Done in 23ms
+Building...
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: ps-go-test
+
+Downloading dependencies...
+Building...
+[  4 of 270] Compiling Type.Proxy
+[  5 of 270] Compiling Record.Unsafe
+[  3 of 270] Compiling Type.Equality
+[  2 of 270] Compiling Spago.Generated.BuildInfo
+[  1 of 270] Compiling Unsafe.Coerce
+[  6 of 270] Compiling Partial
+[  7 of 270] Compiling Data.Void
+[  8 of 270] Compiling Data.Unit
+[  9 of 270] Compiling Data.Traversable.Accum
+[ 10 of 270] Compiling Data.String.Unsafe
+[ 11 of 270] Compiling Data.NaturalTransformation
+[ 12 of 270] Compiling Data.Int.Bits
+[ 13 of 270] Compiling Data.Boolean
+[ 14 of 270] Compiling Control.Semigroupoid
+[ 17 of 270] Compiling Safe.Coerce
+[ 16 of 270] Compiling Data.Symbol
+[ 15 of 270] Compiling Data.Function.Uncurried
+[ 18 of 270] Compiling Data.Exists
+[ 19 of 270] Compiling Control.Lazy
+[ 20 of 270] Compiling Control.Category
+[ 21 of 270] Compiling Partial.Unsafe
+[ 22 of 270] Compiling Data.Semigroup
+[ 23 of 270] Compiling Data.HeytingAlgebra
+[ 24 of 270] Compiling Data.Semiring
+[ 25 of 270] Compiling Data.Show
+[ 26 of 270] Compiling Data.Ring
+[ 27 of 270] Compiling Data.Generic.Rep
+[ 28 of 270] Compiling Data.BooleanAlgebra
+[ 29 of 270] Compiling Data.Eq
+[ 30 of 270] Compiling Data.CommutativeRing
+[ 31 of 270] Compiling Data.Ordering
+[ 32 of 270] Compiling Data.EuclideanRing
+[ 33 of 270] Compiling Data.Ord
+[ 34 of 270] Compiling Data.DivisionRing
+[ 35 of 270] Compiling Data.Field
+[ 38 of 270] Compiling Data.Bounded
+[ 37 of 270] Compiling Data.Monoid
+[ 36 of 270] Compiling Data.Function
+[ 39 of 270] Compiling Data.Reflectable
+[ 40 of 270] Compiling Data.Functor
+[ 42 of 270] Compiling Control.Alt
+[ 43 of 270] Compiling Control.Apply
+[ 41 of 270] Compiling Control.Extend
+[ 44 of 270] Compiling Data.Monoid.Generic
+[ 45 of 270] Compiling Data.Bounded.Generic
+[ 46 of 270] Compiling Control.Plus
+[ 47 of 270] Compiling Control.Comonad
+[ 48 of 270] Compiling Control.Applicative
+[ 50 of 270] Compiling Control.Alternative
+[ 49 of 270] Compiling Control.Bind
+[ 51 of 270] Compiling Control.Monad
+[ 53 of 270] Compiling Control.MonadPlus
+[ 52 of 270] Compiling Prelude
+[ 55 of 270] Compiling Data.Monoid.Dual
+[ 54 of 270] Compiling Control.Monad.Reader.Class
+[ 56 of 270] Compiling TestLoop
+[ 57 of 270] Compiling Data.Traversable.Accum.Internal
+[ 58 of 270] Compiling Data.Monoid.Disj
+[ 59 of 270] Compiling Data.Ord.Generic
+[ 60 of 270] Compiling Control.Monad.Gen.Class
+[ 61 of 270] Compiling Data.Eq.Generic
+[ 62 of 270] Compiling Data.HeytingAlgebra.Generic
+[ 63 of 270] Compiling Data.Monoid.Conj
+[ 65 of 270] Compiling TestDPE
+[ 64 of 270] Compiling Data.Number.Format
+[ 66 of 270] Compiling Effect
+[ 67 of 270] Compiling Test.Tiny
+[ 68 of 270] Compiling Data.Semiring.Generic
+[ 69 of 270] Compiling Data.Monoid.Multiplicative
+[ 70 of 270] Compiling Control.Monad.Trans.Class
+[ 71 of 270] Compiling Data.Ring.Generic
+[ 72 of 270] Compiling Data.Show.Generic
+[ 73 of 270] Compiling Data.Semigroup.Last
+[ 74 of 270] Compiling Data.Semigroup.First
+[ 75 of 270] Compiling TestLet
+[ 76 of 270] Compiling Data.Semigroup.Generic
+[ 77 of 270] Compiling Data.Monoid.Additive
+[ 78 of 270] Compiling Data.Monoid.Endo
+[ 80 of 270] Compiling Effect.Console
+[ 79 of 270] Compiling Control.Monad.Cont.Class
+[ 81 of 270] Compiling Effect.Class
+[ 82 of 270] Compiling Effect.Uncurried
+[ 83 of 270] Compiling Effect.Unsafe
+[ 84 of 270] Compiling Effect.Ref
+[ 85 of 270] Compiling Effect.Class.Console
+[ 86 of 270] Compiling Data.Newtype
+[ 88 of 270] Compiling Data.Monoid.Alternate
+[ 87 of 270] Compiling Data.Functor.App
+[ 89 of 270] Compiling Data.Ord.Down
+[ 90 of 270] Compiling Data.Time.Duration
+[ 91 of 270] Compiling Data.Profunctor
+[ 92 of 270] Compiling Data.Ord.Min
+[ 93 of 270] Compiling Data.Ord.Max
+[ 94 of 270] Compiling Data.String.Pattern
+[ 95 of 270] Compiling Data.Profunctor.Closed
+[ 96 of 270] Compiling Data.String.Common
+[ 97 of 270] Compiling Data.Functor.Invariant
+[ 98 of 270] Compiling Data.Functor.Compose
+[100 of 270] Compiling Data.Const
+[ 99 of 270] Compiling Data.Maybe
+[101 of 270] Compiling Data.Profunctor.Split
+[102 of 270] Compiling Data.Identity
+[103 of 270] Compiling Data.Profunctor.Join
+[104 of 270] Compiling Data.Tuple
+[105 of 270] Compiling Data.Functor.Contravariant
+[106 of 270] Compiling Data.Op
+[107 of 270] Compiling Data.Comparison
+[108 of 270] Compiling Data.Predicate
+[109 of 270] Compiling Data.Maybe.Last
+[110 of 270] Compiling Data.String.CodeUnits
+[111 of 270] Compiling Data.Maybe.First
+[112 of 270] Compiling Data.Either
+[113 of 270] Compiling Data.Number
+[114 of 270] Compiling Data.Equivalence
+[115 of 270] Compiling Data.Number.Approximate
+[116 of 270] Compiling Data.Int
+[117 of 270] Compiling Data.Divide
+[118 of 270] Compiling Data.Profunctor.Costrong
+[119 of 270] Compiling Control.Monad.State.Class
+[120 of 270] Compiling Data.Profunctor.Strong
+[122 of 270] Compiling Data.Distributive
+[121 of 270] Compiling Data.Tuple.Nested
+[123 of 270] Compiling Control.Monad.Writer.Class
+[124 of 270] Compiling Data.Divisible
+[125 of 270] Compiling Data.Either.Inject
+[127 of 270] Compiling Data.Decide
+[128 of 270] Compiling Data.Profunctor.Cochoice
+[129 of 270] Compiling Effect.Exception
+[130 of 270] Compiling Data.Profunctor.Choice
+[131 of 270] Compiling Data.Bifunctor
+[126 of 270] Compiling Data.Either.Nested
+[133 of 270] Compiling Effect.Exception.Unsafe
+[132 of 270] Compiling Control.Monad.Error.Class
+[134 of 270] Compiling Data.Profunctor.Star
+[135 of 270] Compiling Control.Monad.Rec.Class
+[136 of 270] Compiling Data.Functor.Product
+[137 of 270] Compiling Control.Biapply
+[139 of 270] Compiling Data.Functor.Costar
+[138 of 270] Compiling Data.Functor.Coproduct
+[140 of 270] Compiling Data.Decidable
+[141 of 270] Compiling Control.Biapplicative
+[142 of 270] Compiling Data.Functor.Clown
+[143 of 270] Compiling Data.Functor.Flip
+[144 of 270] Compiling Data.Functor.Joker
+[145 of 270] Compiling Data.Bifunctor.Join
+[146 of 270] Compiling Data.Functor.Product2
+[147 of 270] Compiling Data.Functor.Coproduct.Nested
+[148 of 270] Compiling Data.Functor.Coproduct.Inject
+[149 of 270] Compiling Data.FunctorWithIndex
+[150 of 270] Compiling Data.Foldable
+[151 of 270] Compiling Data.Functor.Product.Nested
+[152 of 270] Compiling Control.Monad.ST.Internal
+[153 of 270] Compiling Control.Monad.ST
+[154 of 270] Compiling Control.Monad.ST.Ref
+[155 of 270] Compiling Control.Monad.ST.Uncurried
+[156 of 270] Compiling Control.Monad.ST.Global
+[157 of 270] Compiling Control.Monad.ST.Class
+[158 of 270] Compiling Control.Monad.Cont.Trans
+[159 of 270] Compiling Control.Monad.Reader.Trans
+[161 of 270] Compiling Control.Monad.Except.Trans
+[160 of 270] Compiling Control.Monad.Maybe.Trans
+[163 of 270] Compiling Control.Monad.RWS.Trans
+[164 of 270] Compiling Control.Monad.Writer.Trans
+[162 of 270] Compiling Control.Monad.State.Trans
+[165 of 270] Compiling Data.Array.ST
+[166 of 270] Compiling Data.Array.ST.Iterator
+[167 of 270] Compiling Data.Array.ST.Partial
+[168 of 270] Compiling Control.Monad.Cont
+[169 of 270] Compiling Control.Monad.Reader
+[170 of 270] Compiling Control.Monad.Except
+[171 of 270] Compiling Data.Semigroup.Foldable
+[172 of 270] Compiling Data.Traversable
+[173 of 270] Compiling Data.Bifoldable
+[174 of 270] Compiling Data.FoldableWithIndex
+[175 of 270] Compiling Control.Monad.State
+[176 of 270] Compiling Control.Parallel.Class
+[177 of 270] Compiling Control.Monad.Writer
+[178 of 270] Compiling Control.Monad.RWS
+[179 of 270] Compiling Data.Bitraversable
+[180 of 270] Compiling Data.Semigroup.Traversable
+[181 of 270] Compiling Control.Monad.Identity.Trans
+[182 of 270] Compiling Control.Parallel
+[183 of 270] Compiling Effect.Aff
+[184 of 270] Compiling Data.TraversableWithIndex
+[185 of 270] Compiling Data.Unfoldable1
+[186 of 270] Compiling Control.Comonad.Trans.Class
+[188 of 270] Compiling Control.Comonad.Traced.Trans
+[187 of 270] Compiling Control.Comonad.Store.Trans
+[189 of 270] Compiling Data.Unfoldable
+[191 of 270] Compiling Control.Monad.Gen
+[190 of 270] Compiling Data.Enum
+[192 of 270] Compiling Data.Time.Duration.Gen
+[193 of 270] Compiling Data.NonEmpty
+[194 of 270] Compiling Data.Array.NonEmpty.Internal
+[196 of 270] Compiling Data.Lazy
+[195 of 270] Compiling Control.Comonad.Env.Trans
+[197 of 270] Compiling Effect.Aff.Compat
+[198 of 270] Compiling Bench
+[199 of 270] Compiling Test.Fib
+[200 of 270] Compiling Test.Records
+[201 of 270] Compiling Test.Polymorphism
+[202 of 270] Compiling Test.Ackermann
+[203 of 270] Compiling Test.RBTree
+[204 of 270] Compiling Test.TCO
+[205 of 270] Compiling Test.StateMonad
+[206 of 270] Compiling Test.ListOps
+[207 of 270] Compiling Test.AstTree
+[208 of 270] Compiling Test.BenchCheck
+[209 of 270] Compiling Test.Church
+[210 of 270] Compiling Test.LazyEvaluation
+[211 of 270] Compiling Test.Primes
+[213 of 270] Compiling Data.Date.Component
+[212 of 270] Compiling Data.Enum.Generic
+[214 of 270] Compiling Data.Time.Component
+[215 of 270] Compiling Data.Array
+[216 of 270] Compiling Data.Char
+[217 of 270] Compiling Control.Comonad.Store.Class
+[218 of 270] Compiling Control.Monad.List.Trans
+[219 of 270] Compiling Data.Time
+[220 of 270] Compiling Data.Enum.Gen
+[221 of 270] Compiling Data.List.Lazy.Types
+[222 of 270] Compiling Data.Char.Gen
+[223 of 270] Compiling Control.Comonad.Store
+[224 of 270] Compiling Control.Monad.Gen.Common
+[225 of 270] Compiling Data.List.Types
+[226 of 270] Compiling Data.Time.Component.Gen
+[227 of 270] Compiling Control.Comonad.Env.Class
+[228 of 270] Compiling Data.Date
+[230 of 270] Compiling Data.Date.Component.Gen
+[229 of 270] Compiling Data.String.Gen
+[231 of 270] Compiling Control.Comonad.Env
+[232 of 270] Compiling Data.Time.Gen
+[233 of 270] Compiling Control.Comonad.Traced.Class
+[234 of 270] Compiling Control.Comonad.Traced
+[236 of 270] Compiling Data.Date.Gen
+[235 of 270] Compiling Data.DateTime
+[238 of 270] Compiling Test.ArrayOps
+[237 of 270] Compiling Data.String.CodePoints
+[239 of 270] Compiling Data.Array.Partial
+[240 of 270] Compiling Data.Array.NonEmpty
+[241 of 270] Compiling App
+[243 of 270] Compiling Data.DateTime.Gen
+[242 of 270] Compiling Data.DateTime.Instant
+[244 of 270] Compiling Effect.Now
+[245 of 270] Compiling Effect.Aff.Class
+[246 of 270] Compiling Data.List.Internal
+[247 of 270] Compiling Data.String
+[249 of 270] Compiling Data.String.CaseInsensitive
+[250 of 270] Compiling Data.String.Regex.Flags
+[248 of 270] Compiling Data.String.NonEmpty.Internal
+[252 of 270] Compiling Data.List
+[251 of 270] Compiling Data.List.Lazy
+[253 of 270] Compiling Data.String.Regex
+[255 of 270] Compiling Data.String.NonEmpty.CodePoints
+[254 of 270] Compiling Data.String.NonEmpty.CodeUnits
+[256 of 270] Compiling Data.String.Regex.Unsafe
+[257 of 270] Compiling Data.String.NonEmpty
+[258 of 270] Compiling Data.String.NonEmpty.CaseInsensitive
+[260 of 270] Compiling Data.List.Partial
+[261 of 270] Compiling Data.List.NonEmpty
+[259 of 270] Compiling Data.Map.Internal
+[262 of 270] Compiling Data.List.ZipList
+[263 of 270] Compiling Data.List.Lazy.NonEmpty
+[264 of 270] Compiling Data.Set
+[266 of 270] Compiling Data.Map
+[265 of 270] Compiling Data.Set.NonEmpty
+[267 of 270] Compiling Data.Map.Gen
+[268 of 270] Compiling Data.Interval.Duration
+[269 of 270] Compiling Data.Interval
+[270 of 270] Compiling Data.Interval.Duration.Iso
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Compiling with backend "../gopurs/gopurs/bin/gopurs"
+
+✓ Backend build succeeded.
+
+=== Go ===
+--------------------------------------------------
+
+(Test)
+
+AST Evaluation:
+
+(Output)
+
+7
+
+(Execution time)
+
+19.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Fibonacci:
+
+(Output)
+
+55
+
+(Execution time)
+
+3.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+List Processing (900 elements):
+
+(Output)
+
+202950
+
+(Execution time)
+
+98.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Tail Call Optimization (100k calls):
+
+(Output)
+
+100000
+
+(Execution time)
+
+1239.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Deep Record Updates (10k iterations):
+
+(Output)
+
+20000
+
+(Execution time)
+
+1477.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Ackermann (3, 4):
+
+(Output)
+
+125
+
+(Execution time)
+
+49.25 μs
+
+--------------------------------------------------
+
+(Test)
+
+Church Numerals (100k Closure Applications):
+
+(Output)
+
+100000
+
+(Execution time)
+
+1268.25 μs
+
+--------------------------------------------------
+
+(Test)
+
+Prime Sieve (sum primes up to 500):
+
+(Output)
+
+21536
+
+(Execution time)
+
+314.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Red-Black Tree (100k Worst-Case Insertions):
+
+(Output)
+
+22
+
+(Execution time)
+
+53333.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Polymorphism (10M Type Class Dict Lookups):
+
+(Output)
+
+10000000
+
+(Execution time)
+
+2629.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+State Monad (1.2k Binds, 60 Stack Depth):
+
+(Output)
+
+1200
+
+(Execution time)
+
+215.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Lazy Evaluation (1M Thunks Forced, 1k Depth):
+
+(Output)
+
+1000000
+
+(Execution time)
+
+24856.75 μs
+
+--------------------------------------------------
+
+(Test)
+
+Array Processing (900 elements):
+
+(Output)
+
+202950
+
+(Execution time)
+
+62.00 μs
+
+
+==================================================
+
+Total exec time: 85.56 ms
+

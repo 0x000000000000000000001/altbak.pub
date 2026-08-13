@@ -156,7 +156,7 @@ var x_0 float64 = x_0_loop
 _ = x_0
 var y_1 float64 = y_1_loop
 _ = y_1
-return ((gopurs_runtime.Bool(Call_Data_Number_Approximate_eqRelative(0.000001, x_0, y_1)).IntVal) != (0)) != (true)
+return (Call_Data_Number_Approximate_eqRelative(0.000001, x_0, y_1)) != (true)
 }
 
 func Call_Data_Number_Approximate_eqAbsolute(v_0_loop float64, x_1_loop float64, y_2_loop float64) bool {

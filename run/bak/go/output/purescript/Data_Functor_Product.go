@@ -342,7 +342,7 @@ var fa_0 gopurs_runtime.Value = fa_0_loop
 _ = fa_0
 var ga_1 gopurs_runtime.Value = ga_1_loop
 _ = ga_1
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, fa_0, ga_1})})
+return &Constructor_Data_Tuple_Tuple{1, fa_0, ga_1}
 }
 
 func Call_Data_Functor_Product_functorProduct(dictFunctor_0_loop gopurs_runtime.Value, dictFunctor1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -564,7 +564,7 @@ var fa_0 gopurs_runtime.Value = fa_0_loop
 _ = fa_0
 var ga_1 gopurs_runtime.Value = ga_1_loop
 _ = ga_1
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, fa_0, ga_1})})
+return &Constructor_Data_Tuple_Tuple{1, fa_0, ga_1}
 }
 
 func Call_Data_Functor_Product_product__346705816(fa_0_loop gopurs_runtime.Value, ga_1_loop gopurs_runtime.Value) *Constructor_Data_Tuple_Tuple {
@@ -572,7 +572,7 @@ var fa_0 gopurs_runtime.Value = fa_0_loop
 _ = fa_0
 var ga_1 gopurs_runtime.Value = ga_1_loop
 _ = ga_1
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, fa_0, ga_1})})
+return &Constructor_Data_Tuple_Tuple{1, fa_0, ga_1}
 }
 
 func Call_Data_Functor_Product_product__2025901598(fa_0_loop gopurs_runtime.Value, ga_1_loop gopurs_runtime.Value) *Constructor_Data_Tuple_Tuple {
@@ -580,7 +580,7 @@ var fa_0 gopurs_runtime.Value = fa_0_loop
 _ = fa_0
 var ga_1 gopurs_runtime.Value = ga_1_loop
 _ = ga_1
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, fa_0, ga_1})})
+return &Constructor_Data_Tuple_Tuple{1, fa_0, ga_1}
 }
 
 func Call_Data_Functor_Product_product__3868608679(fa_0_loop gopurs_runtime.Value, ga_1_loop gopurs_runtime.Value) *Constructor_Data_Tuple_Tuple {
@@ -588,7 +588,7 @@ var fa_0 gopurs_runtime.Value = fa_0_loop
 _ = fa_0
 var ga_1 gopurs_runtime.Value = ga_1_loop
 _ = ga_1
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, fa_0, ga_1})})
+return &Constructor_Data_Tuple_Tuple{1, fa_0, ga_1}
 }
 
 func Call_Data_Functor_Product_product__3582060361(fa_0_loop gopurs_runtime.Value, ga_1_loop *Constructor_Data_Tuple_Tuple) *Constructor_Data_Tuple_Tuple {

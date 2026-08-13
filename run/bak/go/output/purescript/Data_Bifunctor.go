@@ -688,7 +688,7 @@ var g_1 gopurs_runtime.Value = g_1_loop
 _ = g_1
 var v_2 *Constructor_Data_Tuple_Tuple = v_2_loop
 _ = v_2
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply(f_0, (v_2).V0), gopurs_runtime.Apply(g_1, (v_2).V1)})})
+return &Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply(f_0, (v_2).V0), gopurs_runtime.Apply(g_1, (v_2).V1)}
 }
 
 func Call_Data_Bifunctor_lmap__2196160232(dictBifunctor_0_loop *Constructor_Data_Bifunctor_Bifunctor, f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
