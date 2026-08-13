@@ -98,10 +98,10 @@ func Get_Data_Number_e() gopurs_runtime.Value {
 	return cache_Data_Number_e
 }
 
-func Call_Data_Number_fromString(str_0_loop string) *Constructor_Data_Maybe_Just[float64] {
+func Call_Data_Number_fromString(str_0_loop string) *Constructor_Data_Maybe_Just {
 var str_0 string = str_0_loop
 _ = str_0
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[float64]](gopurs_runtime.UncurriedApp4(Get_Data_Number_fromStringImpl(), gopurs_runtime.Str(str_0), Get_Data_Number_isFinite(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))}))
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.UncurriedApp4(Get_Data_Number_fromStringImpl(), gopurs_runtime.Str(str_0), Get_Data_Number_isFinite(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}))
 }
 
 func Get_Data_Number_abs() gopurs_runtime.Value {

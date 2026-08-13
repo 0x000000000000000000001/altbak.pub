@@ -111,8 +111,8 @@ return gopurs_runtime.Apply(f_1, gopurs_runtime.Apply(g_3, t_4))
 func Call_Control_Comonad_Traced_Trans_extendTracedT(dictExtend_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictExtend_0 gopurs_runtime.Value = dictExtend_0_loop
 _ = dictExtend_0
-// TAST (Let): Functor0_1_0 -> *Constructor_Data_Functor_Functor[gopurs_runtime.Value]
-Functor0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictExtend_0, "Functor0"), gopurs_runtime.Value{}))
+// TAST (Let): Functor0_1_0 -> *Constructor_Data_Functor_Functor
+Functor0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictExtend_0, "Functor0"), gopurs_runtime.Value{}))
 _ = Functor0_1_0
 // TAST (Let): __local_var_2_2 -> gopurs_runtime.Value
 __local_var_2_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictExtend_0, "Functor0"), gopurs_runtime.Value{})
@@ -151,8 +151,8 @@ func Call_Control_Comonad_Traced_Trans_comonadTransTracedT(dictMonoid_0_loop gop
 var dictMonoid_0 gopurs_runtime.Value = dictMonoid_0_loop
 _ = dictMonoid_0
 return gopurs_runtime.RecordDict1("lower", gopurs_runtime.Func(func(dictComonad_1 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): Functor0_2_0 -> *Constructor_Data_Functor_Functor[gopurs_runtime.Value]
-Functor0_2_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_1, "Extend0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
+// TAST (Let): Functor0_2_0 -> *Constructor_Data_Functor_Functor
+Functor0_2_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_1, "Extend0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
 _ = Functor0_2_0
 return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_2_0.V0), gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -168,8 +168,8 @@ _ = dictComonad_0
 // TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
 __local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonad_0, "Extend0"), gopurs_runtime.Value{})
 _ = __local_var_1_0
-// TAST (Let): Functor0_2_1 -> *Constructor_Data_Functor_Functor[gopurs_runtime.Value]
-Functor0_2_1 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "Functor0"), gopurs_runtime.Value{}))
+// TAST (Let): Functor0_2_1 -> *Constructor_Data_Functor_Functor
+Functor0_2_1 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "Functor0"), gopurs_runtime.Value{}))
 _ = Functor0_2_1
 // TAST (Let): __local_var_3_4 -> gopurs_runtime.Value
 __local_var_3_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "Functor0"), gopurs_runtime.Value{})

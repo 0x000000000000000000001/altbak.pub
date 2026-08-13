@@ -11,7 +11,7 @@ var once_Data_Generic_Rep_Inl sync.Once
 func Get_Data_Generic_Rep_Inl() gopurs_runtime.Value {
 	once_Data_Generic_Rep_Inl.Do(func() {
 		cache_Data_Generic_Rep_Inl = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 3478632216, UnsafePtr: unsafe.Pointer(&Constructor_Data_Generic_Rep_Inl[gopurs_runtime.Value, gopurs_runtime.Value]{1, value0})}
+return gopurs_runtime.Value{Type: 9, IntVal: 3478632216, UnsafePtr: unsafe.Pointer(&Constructor_Data_Generic_Rep_Inl{1, value0})}
 })
 	})
 	return cache_Data_Generic_Rep_Inl
@@ -22,7 +22,7 @@ var once_Data_Generic_Rep_Inr sync.Once
 func Get_Data_Generic_Rep_Inr() gopurs_runtime.Value {
 	once_Data_Generic_Rep_Inr.Do(func() {
 		cache_Data_Generic_Rep_Inr = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 492034566, UnsafePtr: unsafe.Pointer(&Constructor_Data_Generic_Rep_Inr[gopurs_runtime.Value, gopurs_runtime.Value]{1, value0})}
+return gopurs_runtime.Value{Type: 9, IntVal: 492034566, UnsafePtr: unsafe.Pointer(&Constructor_Data_Generic_Rep_Inr{1, value0})}
 })
 	})
 	return cache_Data_Generic_Rep_Inr
@@ -34,7 +34,7 @@ func Get_Data_Generic_Rep_Product() gopurs_runtime.Value {
 	once_Data_Generic_Rep_Product.Do(func() {
 		cache_Data_Generic_Rep_Product = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&Constructor_Data_Generic_Rep_Product[gopurs_runtime.Value, gopurs_runtime.Value]{1, value0, value1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&Constructor_Data_Generic_Rep_Product{1, value0, value1})}
 })
 })
 	})
@@ -99,7 +99,7 @@ var once_Data_Generic_Rep_to sync.Once
 func Get_Data_Generic_Rep_to() gopurs_runtime.Value {
 	once_Data_Generic_Rep_to.Do(func() {
 		cache_Data_Generic_Rep_to = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Generic_Rep_to(gopurs_runtime.CoerceToStruct[Constructor_Data_Generic_Rep_Generic[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Generic_Rep_to(gopurs_runtime.CoerceToStruct[Constructor_Data_Generic_Rep_Generic](dict_0_box))
 })
 	})
 	return cache_Data_Generic_Rep_to
@@ -165,7 +165,7 @@ var once_Data_Generic_Rep_repOf sync.Once
 func Get_Data_Generic_Rep_repOf() gopurs_runtime.Value {
 	once_Data_Generic_Rep_repOf.Do(func() {
 		cache_Data_Generic_Rep_repOf = gopurs_runtime.Func2(func(dictGeneric_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: int64(Call_Data_Generic_Rep_repOf(gopurs_runtime.CoerceToStruct[Constructor_Data_Generic_Rep_Generic[gopurs_runtime.Value, gopurs_runtime.Value]](dictGeneric_0_box), uint32(v_1_box.IntVal))), UnsafePtr: nil}
+return gopurs_runtime.Value{Type: 9, IntVal: int64(Call_Data_Generic_Rep_repOf(gopurs_runtime.CoerceToStruct[Constructor_Data_Generic_Rep_Generic](dictGeneric_0_box), uint32(v_1_box.IntVal))), UnsafePtr: nil}
 })
 	})
 	return cache_Data_Generic_Rep_repOf
@@ -176,7 +176,7 @@ var once_Data_Generic_Rep_from sync.Once
 func Get_Data_Generic_Rep_from() gopurs_runtime.Value {
 	once_Data_Generic_Rep_from.Do(func() {
 		cache_Data_Generic_Rep_from = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Generic_Rep_from(gopurs_runtime.CoerceToStruct[Constructor_Data_Generic_Rep_Generic[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Generic_Rep_from(gopurs_runtime.CoerceToStruct[Constructor_Data_Generic_Rep_Generic](dict_0_box))
 })
 	})
 	return cache_Data_Generic_Rep_from
@@ -187,7 +187,7 @@ var once_Data_Generic_Rep_from__1498760952 sync.Once
 func Get_Data_Generic_Rep_from__1498760952() gopurs_runtime.Value {
 	once_Data_Generic_Rep_from__1498760952.Do(func() {
 		cache_Data_Generic_Rep_from__1498760952 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Generic_Rep_from__1498760952(gopurs_runtime.CoerceToStruct[Constructor_Data_Generic_Rep_Generic[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Generic_Rep_from__1498760952(gopurs_runtime.CoerceToStruct[Constructor_Data_Generic_Rep_Generic](dict_0_box))
 })
 	})
 	return cache_Data_Generic_Rep_from__1498760952
@@ -198,28 +198,28 @@ var once_Data_Generic_Rep_to__1498760952 sync.Once
 func Get_Data_Generic_Rep_to__1498760952() gopurs_runtime.Value {
 	once_Data_Generic_Rep_to__1498760952.Do(func() {
 		cache_Data_Generic_Rep_to__1498760952 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Generic_Rep_to__1498760952(gopurs_runtime.CoerceToStruct[Constructor_Data_Generic_Rep_Generic[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Generic_Rep_to__1498760952(gopurs_runtime.CoerceToStruct[Constructor_Data_Generic_Rep_Generic](dict_0_box))
 })
 	})
 	return cache_Data_Generic_Rep_to__1498760952
 }
 
-type Constructor_Data_Generic_Rep_Inl[T_a any, T_b any] struct {
+type Constructor_Data_Generic_Rep_Inl struct {
 	Rc uint32
-	V0 T_a
+	V0 gopurs_runtime.Value
 }
 
 
-type Constructor_Data_Generic_Rep_Inr[T_a any, T_b any] struct {
+type Constructor_Data_Generic_Rep_Inr struct {
 	Rc uint32
-	V0 T_b
+	V0 gopurs_runtime.Value
 }
 
 
-type Constructor_Data_Generic_Rep_Product[T_a any, T_b any] struct {
+type Constructor_Data_Generic_Rep_Product struct {
 	Rc uint32
-	V0 T_a
-	V1 T_b
+	V0 gopurs_runtime.Value
+	V1 gopurs_runtime.Value
 }
 
 
@@ -228,7 +228,7 @@ type Constructor_Data_Generic_Rep_NoArguments struct {
 }
 
 
-type Constructor_Data_Generic_Rep_Generic[T_a any, T_rep any] struct {
+type Constructor_Data_Generic_Rep_Generic struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -237,7 +237,7 @@ type Constructor_Data_Generic_Rep_Generic[T_a any, T_rep any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[1921946594] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_Generic_Rep_Generic[gopurs_runtime.Value, gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_Generic_Rep_Generic)(ptr)
 		_ = c
 		switch key {
 		case "from": return gopurs_runtime.Box(c.V0)
@@ -272,8 +272,8 @@ _ = x_0
 return x_0
 }
 
-func Call_Data_Generic_Rep_to(dict_0_loop *Constructor_Data_Generic_Rep_Generic[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Generic_Rep_Generic[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Generic_Rep_to(dict_0_loop *Constructor_Data_Generic_Rep_Generic) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Generic_Rep_Generic = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
@@ -287,7 +287,7 @@ return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_ru
 var __t0 gopurs_runtime.Value
 {
 if (v_2.Type == 9 && v_2.IntVal == 3478632216) {
-__t0 = gopurs_runtime.Str((("(Inl ") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*Constructor_Data_Generic_Rep_Inl[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0).StrVal())) + (")"))
+__t0 = gopurs_runtime.Str((("(Inl ") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*Constructor_Data_Generic_Rep_Inl)(v_2.UnsafePtr).V0).StrVal())) + (")"))
 goto end_branch_0
 } else {
 
@@ -295,7 +295,7 @@ goto end_branch_0
 }
 {
 if (v_2.Type == 9 && v_2.IntVal == 492034566) {
-__t0 = gopurs_runtime.Str((("(Inr ") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*Constructor_Data_Generic_Rep_Inr[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0).StrVal())) + (")"))
+__t0 = gopurs_runtime.Str((("(Inr ") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*Constructor_Data_Generic_Rep_Inr)(v_2.UnsafePtr).V0).StrVal())) + (")"))
 goto end_branch_0
 } else {
 
@@ -315,7 +315,7 @@ _ = dictShow_0
 var dictShow1_1 gopurs_runtime.Value = dictShow1_1_loop
 _ = dictShow1_1
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str((((("(Product ") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*Constructor_Data_Generic_Rep_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0).StrVal())) + (" ")) + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*Constructor_Data_Generic_Rep_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1).StrVal())) + (")"))
+return gopurs_runtime.Str((((("(Product ") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*Constructor_Data_Generic_Rep_Product)(v_2.UnsafePtr).V0).StrVal())) + (" ")) + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*Constructor_Data_Generic_Rep_Product)(v_2.UnsafePtr).V1).StrVal())) + (")"))
 }))
 }
 
@@ -337,28 +337,28 @@ return gopurs_runtime.Str((("(Argument ") + (gopurs_runtime.Apply(gopurs_runtime
 }))
 }
 
-func Call_Data_Generic_Rep_repOf(dictGeneric_0_loop *Constructor_Data_Generic_Rep_Generic[gopurs_runtime.Value, gopurs_runtime.Value], v_1_loop uint32) uint32 {
-var dictGeneric_0 *Constructor_Data_Generic_Rep_Generic[gopurs_runtime.Value, gopurs_runtime.Value] = dictGeneric_0_loop
+func Call_Data_Generic_Rep_repOf(dictGeneric_0_loop *Constructor_Data_Generic_Rep_Generic, v_1_loop uint32) uint32 {
+var dictGeneric_0 *Constructor_Data_Generic_Rep_Generic = dictGeneric_0_loop
 _ = dictGeneric_0
 var v_1 uint32 = v_1_loop
 _ = v_1
 return 513803634
 }
 
-func Call_Data_Generic_Rep_from(dict_0_loop *Constructor_Data_Generic_Rep_Generic[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Generic_Rep_Generic[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Generic_Rep_from(dict_0_loop *Constructor_Data_Generic_Rep_Generic) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Generic_Rep_Generic = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_Data_Generic_Rep_from__1498760952(dict_0_loop *Constructor_Data_Generic_Rep_Generic[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Generic_Rep_Generic[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Generic_Rep_from__1498760952(dict_0_loop *Constructor_Data_Generic_Rep_Generic) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Generic_Rep_Generic = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_Data_Generic_Rep_to__1498760952(dict_0_loop *Constructor_Data_Generic_Rep_Generic[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Generic_Rep_Generic[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Generic_Rep_to__1498760952(dict_0_loop *Constructor_Data_Generic_Rep_Generic) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Generic_Rep_Generic = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }

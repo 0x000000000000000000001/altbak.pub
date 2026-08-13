@@ -63,7 +63,7 @@ var once_Control_Monad_Reader_Class_local sync.Once
 func Get_Control_Monad_Reader_Class_local() gopurs_runtime.Value {
 	once_Control_Monad_Reader_Class_local.Do(func() {
 		cache_Control_Monad_Reader_Class_local = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Monad_Reader_Class_local(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Reader_Class_MonadReader[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Monad_Reader_Class_local(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Reader_Class_MonadReader](dict_0_box))
 })
 	})
 	return cache_Control_Monad_Reader_Class_local
@@ -85,7 +85,7 @@ var once_Control_Monad_Reader_Class_asks sync.Once
 func Get_Control_Monad_Reader_Class_asks() gopurs_runtime.Value {
 	once_Control_Monad_Reader_Class_asks.Do(func() {
 		cache_Control_Monad_Reader_Class_asks = gopurs_runtime.Func(func(dictMonadAsk_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Monad_Reader_Class_asks(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Reader_Class_MonadAsk[gopurs_runtime.Value, gopurs_runtime.Value]](dictMonadAsk_0_box))
+return Call_Control_Monad_Reader_Class_asks(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Reader_Class_MonadAsk](dictMonadAsk_0_box))
 })
 	})
 	return cache_Control_Monad_Reader_Class_asks
@@ -96,7 +96,7 @@ var once_Control_Monad_Reader_Class_local__1299460031 sync.Once
 func Get_Control_Monad_Reader_Class_local__1299460031() gopurs_runtime.Value {
 	once_Control_Monad_Reader_Class_local__1299460031.Do(func() {
 		cache_Control_Monad_Reader_Class_local__1299460031 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Monad_Reader_Class_local__1299460031(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Reader_Class_MonadReader[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Monad_Reader_Class_local__1299460031(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Reader_Class_MonadReader](dict_0_box))
 })
 	})
 	return cache_Control_Monad_Reader_Class_local__1299460031
@@ -107,7 +107,7 @@ var once_Control_Monad_Reader_Class_local__190530239 sync.Once
 func Get_Control_Monad_Reader_Class_local__190530239() gopurs_runtime.Value {
 	once_Control_Monad_Reader_Class_local__190530239.Do(func() {
 		cache_Control_Monad_Reader_Class_local__190530239 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Monad_Reader_Class_local__190530239(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Reader_Class_MonadReader[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Monad_Reader_Class_local__190530239(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Reader_Class_MonadReader](dict_0_box))
 })
 	})
 	return cache_Control_Monad_Reader_Class_local__190530239
@@ -118,7 +118,7 @@ var once_Control_Monad_Reader_Class_local__4056952415 sync.Once
 func Get_Control_Monad_Reader_Class_local__4056952415() gopurs_runtime.Value {
 	once_Control_Monad_Reader_Class_local__4056952415.Do(func() {
 		cache_Control_Monad_Reader_Class_local__4056952415 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Monad_Reader_Class_local__4056952415(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Reader_Class_MonadReader[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Monad_Reader_Class_local__4056952415(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Reader_Class_MonadReader](dict_0_box))
 })
 	})
 	return cache_Control_Monad_Reader_Class_local__4056952415
@@ -129,7 +129,7 @@ var once_Control_Monad_Reader_Class_local__909940799 sync.Once
 func Get_Control_Monad_Reader_Class_local__909940799() gopurs_runtime.Value {
 	once_Control_Monad_Reader_Class_local__909940799.Do(func() {
 		cache_Control_Monad_Reader_Class_local__909940799 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Monad_Reader_Class_local__909940799(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Reader_Class_MonadReader[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Monad_Reader_Class_local__909940799(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Reader_Class_MonadReader](dict_0_box))
 })
 	})
 	return cache_Control_Monad_Reader_Class_local__909940799
@@ -148,7 +148,7 @@ return x_0
 	return cache_Control_Monad_Reader_Class_monadAskFun__466477709
 }
 
-type Constructor_Control_Monad_Reader_Class_MonadAsk[T_r any, T_m any] struct {
+type Constructor_Control_Monad_Reader_Class_MonadAsk struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -157,7 +157,7 @@ type Constructor_Control_Monad_Reader_Class_MonadAsk[T_r any, T_m any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[1229730751] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Control_Monad_Reader_Class_MonadAsk[gopurs_runtime.Value, gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Control_Monad_Reader_Class_MonadAsk)(ptr)
 		_ = c
 		switch key {
 		case "Monad0": return gopurs_runtime.Box(c.V0)
@@ -168,7 +168,7 @@ func init() {
 }
 
 
-type Constructor_Control_Monad_Reader_Class_MonadReader[T_r any, T_m any] struct {
+type Constructor_Control_Monad_Reader_Class_MonadReader struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -177,7 +177,7 @@ type Constructor_Control_Monad_Reader_Class_MonadReader[T_r any, T_m any] struct
 
 func init() {
 	gopurs_runtime.StructGetters[2457234979] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Control_Monad_Reader_Class_MonadReader[gopurs_runtime.Value, gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Control_Monad_Reader_Class_MonadReader)(ptr)
 		_ = c
 		switch key {
 		case "MonadAsk0": return gopurs_runtime.Box(c.V0)
@@ -200,8 +200,8 @@ _ = x_0
 return x_0
 }
 
-func Call_Control_Monad_Reader_Class_local(dict_0_loop *Constructor_Control_Monad_Reader_Class_MonadReader[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Monad_Reader_Class_MonadReader[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Monad_Reader_Class_local(dict_0_loop *Constructor_Control_Monad_Reader_Class_MonadReader) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Monad_Reader_Class_MonadReader = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
@@ -212,11 +212,11 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "ask")
 }
 
-func Call_Control_Monad_Reader_Class_asks(dictMonadAsk_0_loop *Constructor_Control_Monad_Reader_Class_MonadAsk[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictMonadAsk_0 *Constructor_Control_Monad_Reader_Class_MonadAsk[gopurs_runtime.Value, gopurs_runtime.Value] = dictMonadAsk_0_loop
+func Call_Control_Monad_Reader_Class_asks(dictMonadAsk_0_loop *Constructor_Control_Monad_Reader_Class_MonadAsk) gopurs_runtime.Value {
+var dictMonadAsk_0 *Constructor_Control_Monad_Reader_Class_MonadAsk = dictMonadAsk_0_loop
 _ = dictMonadAsk_0
-// TAST (Let): Functor0_1_0 -> *Constructor_Data_Functor_Functor[gopurs_runtime.Value]
-Functor0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.Box(dictMonadAsk_0.V0), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
+// TAST (Let): Functor0_1_0 -> *Constructor_Data_Functor_Functor
+Functor0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.Box(dictMonadAsk_0.V0), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
 _ = Functor0_1_0
 // TAST (Let): ask1_2_1 -> gopurs_runtime.Value
 ask1_2_1 := gopurs_runtime.Box(dictMonadAsk_0.V1)
@@ -226,26 +226,26 @@ return gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_1_0.V0), f_3, ask1_2_1)
 })
 }
 
-func Call_Control_Monad_Reader_Class_local__1299460031(dict_0_loop *Constructor_Control_Monad_Reader_Class_MonadReader[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Monad_Reader_Class_MonadReader[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Monad_Reader_Class_local__1299460031(dict_0_loop *Constructor_Control_Monad_Reader_Class_MonadReader) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Monad_Reader_Class_MonadReader = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Control_Monad_Reader_Class_local__190530239(dict_0_loop *Constructor_Control_Monad_Reader_Class_MonadReader[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Monad_Reader_Class_MonadReader[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Monad_Reader_Class_local__190530239(dict_0_loop *Constructor_Control_Monad_Reader_Class_MonadReader) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Monad_Reader_Class_MonadReader = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Control_Monad_Reader_Class_local__4056952415(dict_0_loop *Constructor_Control_Monad_Reader_Class_MonadReader[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Monad_Reader_Class_MonadReader[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Monad_Reader_Class_local__4056952415(dict_0_loop *Constructor_Control_Monad_Reader_Class_MonadReader) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Monad_Reader_Class_MonadReader = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Control_Monad_Reader_Class_local__909940799(dict_0_loop *Constructor_Control_Monad_Reader_Class_MonadReader[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Monad_Reader_Class_MonadReader[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Monad_Reader_Class_local__909940799(dict_0_loop *Constructor_Control_Monad_Reader_Class_MonadReader) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Monad_Reader_Class_MonadReader = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }

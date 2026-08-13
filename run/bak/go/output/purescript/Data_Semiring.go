@@ -33,7 +33,7 @@ var once_Data_Semiring_zeroRecord sync.Once
 func Get_Data_Semiring_zeroRecord() gopurs_runtime.Value {
 	once_Data_Semiring_zeroRecord.Do(func() {
 		cache_Data_Semiring_zeroRecord = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semiring_zeroRecord(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semiring_zeroRecord(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_SemiringRecord](dict_0_box))
 })
 	})
 	return cache_Data_Semiring_zeroRecord
@@ -136,7 +136,7 @@ var once_Data_Semiring_oneRecord sync.Once
 func Get_Data_Semiring_oneRecord() gopurs_runtime.Value {
 	once_Data_Semiring_oneRecord.Do(func() {
 		cache_Data_Semiring_oneRecord = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semiring_oneRecord(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semiring_oneRecord(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_SemiringRecord](dict_0_box))
 })
 	})
 	return cache_Data_Semiring_oneRecord
@@ -158,7 +158,7 @@ var once_Data_Semiring_mulRecord sync.Once
 func Get_Data_Semiring_mulRecord() gopurs_runtime.Value {
 	once_Data_Semiring_mulRecord.Do(func() {
 		cache_Data_Semiring_mulRecord = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semiring_mulRecord(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semiring_mulRecord(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_SemiringRecord](dict_0_box))
 })
 	})
 	return cache_Data_Semiring_mulRecord
@@ -169,7 +169,7 @@ var once_Data_Semiring_mul sync.Once
 func Get_Data_Semiring_mul() gopurs_runtime.Value {
 	once_Data_Semiring_mul.Do(func() {
 		cache_Data_Semiring_mul = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semiring_mul(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semiring_mul(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring](dict_0_box))
 })
 	})
 	return cache_Data_Semiring_mul
@@ -180,7 +180,7 @@ var once_Data_Semiring_addRecord sync.Once
 func Get_Data_Semiring_addRecord() gopurs_runtime.Value {
 	once_Data_Semiring_addRecord.Do(func() {
 		cache_Data_Semiring_addRecord = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semiring_addRecord(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semiring_addRecord(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_SemiringRecord](dict_0_box))
 })
 	})
 	return cache_Data_Semiring_addRecord
@@ -202,7 +202,7 @@ var once_Data_Semiring_add sync.Once
 func Get_Data_Semiring_add() gopurs_runtime.Value {
 	once_Data_Semiring_add.Do(func() {
 		cache_Data_Semiring_add = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semiring_add(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semiring_add(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring](dict_0_box))
 })
 	})
 	return cache_Data_Semiring_add
@@ -235,7 +235,7 @@ var once_Data_Semiring_add__2927892844 sync.Once
 func Get_Data_Semiring_add__2927892844() gopurs_runtime.Value {
 	once_Data_Semiring_add__2927892844.Do(func() {
 		cache_Data_Semiring_add__2927892844 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semiring_add__2927892844(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring[int64]](dict_0_box))
+return Call_Data_Semiring_add__2927892844(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring](dict_0_box))
 })
 	})
 	return cache_Data_Semiring_add__2927892844
@@ -246,7 +246,7 @@ var once_Data_Semiring_add__101133084 sync.Once
 func Get_Data_Semiring_add__101133084() gopurs_runtime.Value {
 	once_Data_Semiring_add__101133084.Do(func() {
 		cache_Data_Semiring_add__101133084 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semiring_add__101133084(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring[float64]](dict_0_box))
+return Call_Data_Semiring_add__101133084(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring](dict_0_box))
 })
 	})
 	return cache_Data_Semiring_add__101133084
@@ -257,7 +257,7 @@ var once_Data_Semiring_add__1124926121 sync.Once
 func Get_Data_Semiring_add__1124926121() gopurs_runtime.Value {
 	once_Data_Semiring_add__1124926121.Do(func() {
 		cache_Data_Semiring_add__1124926121 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semiring_add__1124926121(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semiring_add__1124926121(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring](dict_0_box))
 })
 	})
 	return cache_Data_Semiring_add__1124926121
@@ -268,7 +268,7 @@ var once_Data_Semiring_add__1841809173 sync.Once
 func Get_Data_Semiring_add__1841809173() gopurs_runtime.Value {
 	once_Data_Semiring_add__1841809173.Do(func() {
 		cache_Data_Semiring_add__1841809173 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semiring_add__1841809173(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring[uint32]](dict_0_box))
+return Call_Data_Semiring_add__1841809173(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring](dict_0_box))
 })
 	})
 	return cache_Data_Semiring_add__1841809173
@@ -279,7 +279,7 @@ var once_Data_Semiring_add__190951261 sync.Once
 func Get_Data_Semiring_add__190951261() gopurs_runtime.Value {
 	once_Data_Semiring_add__190951261.Do(func() {
 		cache_Data_Semiring_add__190951261 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semiring_add__190951261(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring[*Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]]](dict_0_box))
+return Call_Data_Semiring_add__190951261(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring](dict_0_box))
 })
 	})
 	return cache_Data_Semiring_add__190951261
@@ -312,7 +312,7 @@ var once_Data_Semiring_add__113410424 sync.Once
 func Get_Data_Semiring_add__113410424() gopurs_runtime.Value {
 	once_Data_Semiring_add__113410424.Do(func() {
 		cache_Data_Semiring_add__113410424 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semiring_add__113410424(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring[string]](dict_0_box))
+return Call_Data_Semiring_add__113410424(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring](dict_0_box))
 })
 	})
 	return cache_Data_Semiring_add__113410424
@@ -323,7 +323,7 @@ var once_Data_Semiring_add__1614463960 sync.Once
 func Get_Data_Semiring_add__1614463960() gopurs_runtime.Value {
 	once_Data_Semiring_add__1614463960.Do(func() {
 		cache_Data_Semiring_add__1614463960 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semiring_add__1614463960(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semiring_add__1614463960(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring](dict_0_box))
 })
 	})
 	return cache_Data_Semiring_add__1614463960
@@ -334,7 +334,7 @@ var once_Data_Semiring_add__1336467000 sync.Once
 func Get_Data_Semiring_add__1336467000() gopurs_runtime.Value {
 	once_Data_Semiring_add__1336467000.Do(func() {
 		cache_Data_Semiring_add__1336467000 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semiring_add__1336467000(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring[*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]]](dict_0_box))
+return Call_Data_Semiring_add__1336467000(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring](dict_0_box))
 })
 	})
 	return cache_Data_Semiring_add__1336467000
@@ -345,7 +345,7 @@ var once_Data_Semiring_add__3584309752 sync.Once
 func Get_Data_Semiring_add__3584309752() gopurs_runtime.Value {
 	once_Data_Semiring_add__3584309752.Do(func() {
 		cache_Data_Semiring_add__3584309752 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semiring_add__3584309752(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semiring_add__3584309752(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring](dict_0_box))
 })
 	})
 	return cache_Data_Semiring_add__3584309752
@@ -356,7 +356,7 @@ var once_Data_Semiring_addRecord__177134144 sync.Once
 func Get_Data_Semiring_addRecord__177134144() gopurs_runtime.Value {
 	once_Data_Semiring_addRecord__177134144.Do(func() {
 		cache_Data_Semiring_addRecord__177134144 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semiring_addRecord__177134144(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semiring_addRecord__177134144(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_SemiringRecord](dict_0_box))
 })
 	})
 	return cache_Data_Semiring_addRecord__177134144
@@ -367,7 +367,7 @@ var once_Data_Semiring_addRecord__2348817094 sync.Once
 func Get_Data_Semiring_addRecord__2348817094() gopurs_runtime.Value {
 	once_Data_Semiring_addRecord__2348817094.Do(func() {
 		cache_Data_Semiring_addRecord__2348817094 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semiring_addRecord__2348817094(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semiring_addRecord__2348817094(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_SemiringRecord](dict_0_box))
 })
 	})
 	return cache_Data_Semiring_addRecord__2348817094
@@ -378,7 +378,7 @@ var once_Data_Semiring_mul__101133084 sync.Once
 func Get_Data_Semiring_mul__101133084() gopurs_runtime.Value {
 	once_Data_Semiring_mul__101133084.Do(func() {
 		cache_Data_Semiring_mul__101133084 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semiring_mul__101133084(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring[float64]](dict_0_box))
+return Call_Data_Semiring_mul__101133084(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring](dict_0_box))
 })
 	})
 	return cache_Data_Semiring_mul__101133084
@@ -411,7 +411,7 @@ var once_Data_Semiring_mul__1614463960 sync.Once
 func Get_Data_Semiring_mul__1614463960() gopurs_runtime.Value {
 	once_Data_Semiring_mul__1614463960.Do(func() {
 		cache_Data_Semiring_mul__1614463960 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semiring_mul__1614463960(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semiring_mul__1614463960(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring](dict_0_box))
 })
 	})
 	return cache_Data_Semiring_mul__1614463960
@@ -422,7 +422,7 @@ var once_Data_Semiring_mulRecord__177134144 sync.Once
 func Get_Data_Semiring_mulRecord__177134144() gopurs_runtime.Value {
 	once_Data_Semiring_mulRecord__177134144.Do(func() {
 		cache_Data_Semiring_mulRecord__177134144 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semiring_mulRecord__177134144(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semiring_mulRecord__177134144(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_SemiringRecord](dict_0_box))
 })
 	})
 	return cache_Data_Semiring_mulRecord__177134144
@@ -433,7 +433,7 @@ var once_Data_Semiring_mulRecord__2348817094 sync.Once
 func Get_Data_Semiring_mulRecord__2348817094() gopurs_runtime.Value {
 	once_Data_Semiring_mulRecord__2348817094.Do(func() {
 		cache_Data_Semiring_mulRecord__2348817094 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semiring_mulRecord__2348817094(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semiring_mulRecord__2348817094(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_SemiringRecord](dict_0_box))
 })
 	})
 	return cache_Data_Semiring_mulRecord__2348817094
@@ -477,7 +477,7 @@ var once_Data_Semiring_oneRecord__283722528 sync.Once
 func Get_Data_Semiring_oneRecord__283722528() gopurs_runtime.Value {
 	once_Data_Semiring_oneRecord__283722528.Do(func() {
 		cache_Data_Semiring_oneRecord__283722528 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semiring_oneRecord__283722528(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semiring_oneRecord__283722528(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_SemiringRecord](dict_0_box))
 })
 	})
 	return cache_Data_Semiring_oneRecord__283722528
@@ -488,7 +488,7 @@ var once_Data_Semiring_oneRecord__2618241440 sync.Once
 func Get_Data_Semiring_oneRecord__2618241440() gopurs_runtime.Value {
 	once_Data_Semiring_oneRecord__2618241440.Do(func() {
 		cache_Data_Semiring_oneRecord__2618241440 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semiring_oneRecord__2618241440(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semiring_oneRecord__2618241440(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_SemiringRecord](dict_0_box))
 })
 	})
 	return cache_Data_Semiring_oneRecord__2618241440
@@ -668,7 +668,7 @@ var once_Data_Semiring_zeroRecord__283722528 sync.Once
 func Get_Data_Semiring_zeroRecord__283722528() gopurs_runtime.Value {
 	once_Data_Semiring_zeroRecord__283722528.Do(func() {
 		cache_Data_Semiring_zeroRecord__283722528 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semiring_zeroRecord__283722528(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semiring_zeroRecord__283722528(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_SemiringRecord](dict_0_box))
 })
 	})
 	return cache_Data_Semiring_zeroRecord__283722528
@@ -679,13 +679,13 @@ var once_Data_Semiring_zeroRecord__2618241440 sync.Once
 func Get_Data_Semiring_zeroRecord__2618241440() gopurs_runtime.Value {
 	once_Data_Semiring_zeroRecord__2618241440.Do(func() {
 		cache_Data_Semiring_zeroRecord__2618241440 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semiring_zeroRecord__2618241440(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semiring_zeroRecord__2618241440(gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_SemiringRecord](dict_0_box))
 })
 	})
 	return cache_Data_Semiring_zeroRecord__2618241440
 }
 
-type Constructor_Data_Semiring_SemiringRecord[T_rowlist any, T_row any, T_subrow any] struct {
+type Constructor_Data_Semiring_SemiringRecord struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -696,7 +696,7 @@ type Constructor_Data_Semiring_SemiringRecord[T_rowlist any, T_row any, T_subrow
 
 func init() {
 	gopurs_runtime.StructGetters[3914418263] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_Semiring_SemiringRecord)(ptr)
 		_ = c
 		switch key {
 		case "addRecord": return gopurs_runtime.Box(c.V0)
@@ -709,18 +709,18 @@ func init() {
 }
 
 
-type Constructor_Data_Semiring_Semiring[T_a any] struct {
+type Constructor_Data_Semiring_Semiring struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
-	V2 T_a
-	V3 T_a
+	V2 gopurs_runtime.Value
+	V3 gopurs_runtime.Value
 }
 
 
 func init() {
 	gopurs_runtime.StructGetters[134961754] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_Semiring_Semiring[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_Semiring_Semiring)(ptr)
 		_ = c
 		switch key {
 		case "add": return gopurs_runtime.Box(c.V0)
@@ -745,8 +745,8 @@ _ = x_0
 return x_0
 }
 
-func Call_Data_Semiring_zeroRecord(dict_0_loop *Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semiring_zeroRecord(dict_0_loop *Constructor_Data_Semiring_SemiringRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semiring_SemiringRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V3)
 }
@@ -757,8 +757,8 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "zero")
 }
 
-func Call_Data_Semiring_oneRecord(dict_0_loop *Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semiring_oneRecord(dict_0_loop *Constructor_Data_Semiring_SemiringRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semiring_SemiringRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V2)
 }
@@ -769,20 +769,20 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "one")
 }
 
-func Call_Data_Semiring_mulRecord(dict_0_loop *Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semiring_mulRecord(dict_0_loop *Constructor_Data_Semiring_SemiringRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semiring_SemiringRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Semiring_mul(dict_0_loop *Constructor_Data_Semiring_Semiring[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semiring_Semiring[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semiring_mul(dict_0_loop *Constructor_Data_Semiring_Semiring) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semiring_Semiring = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Semiring_addRecord(dict_0_loop *Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semiring_addRecord(dict_0_loop *Constructor_Data_Semiring_SemiringRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semiring_SemiringRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
@@ -795,8 +795,8 @@ _ = dictSemiringRecord_1
 return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictSemiringRecord_1, "addRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictSemiringRecord_1, "mulRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiringRecord_1, "oneRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiringRecord_1, "zeroRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}))
 }
 
-func Call_Data_Semiring_add(dict_0_loop *Constructor_Data_Semiring_Semiring[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semiring_Semiring[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semiring_add(dict_0_loop *Constructor_Data_Semiring_Semiring) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semiring_Semiring = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
@@ -873,32 +873,32 @@ return gopurs_runtime.Apply3(Get_Record_Unsafe_unsafeSet(), gopurs_runtime.Str(g
 }))
 }
 
-func Call_Data_Semiring_add__2927892844(dict_0_loop *Constructor_Data_Semiring_Semiring[int64]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semiring_Semiring[int64] = dict_0_loop
+func Call_Data_Semiring_add__2927892844(dict_0_loop *Constructor_Data_Semiring_Semiring) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semiring_Semiring = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_Data_Semiring_add__101133084(dict_0_loop *Constructor_Data_Semiring_Semiring[float64]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semiring_Semiring[float64] = dict_0_loop
+func Call_Data_Semiring_add__101133084(dict_0_loop *Constructor_Data_Semiring_Semiring) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semiring_Semiring = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_Data_Semiring_add__1124926121(dict_0_loop *Constructor_Data_Semiring_Semiring[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semiring_Semiring[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semiring_add__1124926121(dict_0_loop *Constructor_Data_Semiring_Semiring) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semiring_Semiring = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_Data_Semiring_add__1841809173(dict_0_loop *Constructor_Data_Semiring_Semiring[uint32]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semiring_Semiring[uint32] = dict_0_loop
+func Call_Data_Semiring_add__1841809173(dict_0_loop *Constructor_Data_Semiring_Semiring) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semiring_Semiring = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_Data_Semiring_add__190951261(dict_0_loop *Constructor_Data_Semiring_Semiring[*Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semiring_Semiring[*Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]] = dict_0_loop
+func Call_Data_Semiring_add__190951261(dict_0_loop *Constructor_Data_Semiring_Semiring) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semiring_Semiring = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
@@ -919,44 +919,44 @@ _ = __eta1_1
 return gopurs_runtime.Float((__eta0_0.FloatVal()) + (__eta1_1.FloatVal()))
 }
 
-func Call_Data_Semiring_add__113410424(dict_0_loop *Constructor_Data_Semiring_Semiring[string]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semiring_Semiring[string] = dict_0_loop
+func Call_Data_Semiring_add__113410424(dict_0_loop *Constructor_Data_Semiring_Semiring) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semiring_Semiring = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_Data_Semiring_add__1614463960(dict_0_loop *Constructor_Data_Semiring_Semiring[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semiring_Semiring[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semiring_add__1614463960(dict_0_loop *Constructor_Data_Semiring_Semiring) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semiring_Semiring = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_Data_Semiring_add__1336467000(dict_0_loop *Constructor_Data_Semiring_Semiring[*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semiring_Semiring[*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]] = dict_0_loop
+func Call_Data_Semiring_add__1336467000(dict_0_loop *Constructor_Data_Semiring_Semiring) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semiring_Semiring = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_Data_Semiring_add__3584309752(dict_0_loop *Constructor_Data_Semiring_Semiring[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semiring_Semiring[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semiring_add__3584309752(dict_0_loop *Constructor_Data_Semiring_Semiring) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semiring_Semiring = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_Data_Semiring_addRecord__177134144(dict_0_loop *Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semiring_addRecord__177134144(dict_0_loop *Constructor_Data_Semiring_SemiringRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semiring_SemiringRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_Data_Semiring_addRecord__2348817094(dict_0_loop *Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semiring_addRecord__2348817094(dict_0_loop *Constructor_Data_Semiring_SemiringRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semiring_SemiringRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_Data_Semiring_mul__101133084(dict_0_loop *Constructor_Data_Semiring_Semiring[float64]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semiring_Semiring[float64] = dict_0_loop
+func Call_Data_Semiring_mul__101133084(dict_0_loop *Constructor_Data_Semiring_Semiring) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semiring_Semiring = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
@@ -977,20 +977,20 @@ _ = __eta1_1
 return gopurs_runtime.Float((__eta0_0.FloatVal()) * (__eta1_1.FloatVal()))
 }
 
-func Call_Data_Semiring_mul__1614463960(dict_0_loop *Constructor_Data_Semiring_Semiring[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semiring_Semiring[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semiring_mul__1614463960(dict_0_loop *Constructor_Data_Semiring_Semiring) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semiring_Semiring = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Semiring_mulRecord__177134144(dict_0_loop *Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semiring_mulRecord__177134144(dict_0_loop *Constructor_Data_Semiring_SemiringRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semiring_SemiringRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Semiring_mulRecord__2348817094(dict_0_loop *Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semiring_mulRecord__2348817094(dict_0_loop *Constructor_Data_Semiring_SemiringRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semiring_SemiringRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
@@ -1013,14 +1013,14 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "one")
 }
 
-func Call_Data_Semiring_oneRecord__283722528(dict_0_loop *Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semiring_oneRecord__283722528(dict_0_loop *Constructor_Data_Semiring_SemiringRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semiring_SemiringRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V2)
 }
 
-func Call_Data_Semiring_oneRecord__2618241440(dict_0_loop *Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semiring_oneRecord__2618241440(dict_0_loop *Constructor_Data_Semiring_SemiringRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semiring_SemiringRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V2)
 }
@@ -1067,14 +1067,14 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "zero")
 }
 
-func Call_Data_Semiring_zeroRecord__283722528(dict_0_loop *Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semiring_zeroRecord__283722528(dict_0_loop *Constructor_Data_Semiring_SemiringRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semiring_SemiringRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V3)
 }
 
-func Call_Data_Semiring_zeroRecord__2618241440(dict_0_loop *Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semiring_SemiringRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semiring_zeroRecord__2618241440(dict_0_loop *Constructor_Data_Semiring_SemiringRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semiring_SemiringRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V3)
 }

@@ -478,7 +478,7 @@ return gopurs_runtime.Apply(__local_var_4_3, gopurs_runtime.Apply(__local_var_5_
 }), gopurs_runtime.Func(func(dictFunctor_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(e_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictDistributive_0, "collect"), gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor[gopurs_runtime.Value]](dictFunctor_2))}, gopurs_runtime.Func(func(r_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictDistributive_0, "collect"), gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](dictFunctor_2))}, gopurs_runtime.Func(func(r_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(r_5, e_4)
 }), a_3)
 })
@@ -579,8 +579,8 @@ return gopurs_runtime.Apply(__local_var_3_3, gopurs_runtime.Apply(v_4, x_5))
 })
 }))
 _ = functorReaderT1_1_1
-// TAST (Let): applyReaderT1_1_0 -> *Constructor_Control_Apply_Apply[gopurs_runtime.Value]
-applyReaderT1_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply[gopurs_runtime.Value]](gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): applyReaderT1_1_0 -> *Constructor_Control_Apply_Apply
+applyReaderT1_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return functorReaderT1_1_1
 }), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -591,8 +591,8 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictApply_0, "apply"), gop
 })))
 _ = applyReaderT1_1_0
 return gopurs_runtime.Func(func(dictSemigroup_2 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): Functor0_3_4 -> *Constructor_Data_Functor_Functor[gopurs_runtime.Value]
-Functor0_3_4 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.Box(applyReaderT1_1_0.V0), gopurs_runtime.Value{}))
+// TAST (Let): Functor0_3_4 -> *Constructor_Data_Functor_Functor
+Functor0_3_4 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.Box(applyReaderT1_1_0.V0), gopurs_runtime.Value{}))
 _ = Functor0_3_4
 // TAST (Let): __local_var_4_5 -> gopurs_runtime.Value
 __local_var_4_5 := gopurs_runtime.RecordGet(dictSemigroup_2, "append")
@@ -782,8 +782,8 @@ _ = dictMonadRec_0
 // TAST (Let): Monad0_1_0 -> gopurs_runtime.Value
 Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadRec_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
-// TAST (Let): Bind1_2_1 -> *Constructor_Control_Bind_Bind[gopurs_runtime.Value]
-Bind1_2_1 := gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bind1"), gopurs_runtime.Value{}))
+// TAST (Let): Bind1_2_1 -> *Constructor_Control_Bind_Bind
+Bind1_2_1 := gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bind1"), gopurs_runtime.Value{}))
 _ = Bind1_2_1
 // TAST (Let): pure_3_2 -> gopurs_runtime.Value
 pure_3_2 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}), "pure")
@@ -960,8 +960,8 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_2, "apply"),
 })
 }))
 _ = applyReaderT1_1_1
-// TAST (Let): applicativeReaderT1_1_0 -> *Constructor_Control_Applicative_Applicative[gopurs_runtime.Value]
-applicativeReaderT1_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative[gopurs_runtime.Value]](gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): applicativeReaderT1_1_0 -> *Constructor_Control_Applicative_Applicative
+applicativeReaderT1_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return applyReaderT1_1_1
 }), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_3_6 -> gopurs_runtime.Value

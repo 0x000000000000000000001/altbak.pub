@@ -112,7 +112,7 @@ var once_Data_FunctorWithIndex_mapWithIndex sync.Once
 func Get_Data_FunctorWithIndex_mapWithIndex() gopurs_runtime.Value {
 	once_Data_FunctorWithIndex_mapWithIndex.Do(func() {
 		cache_Data_FunctorWithIndex_mapWithIndex = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_FunctorWithIndex_mapWithIndex(gopurs_runtime.CoerceToStruct[Constructor_Data_FunctorWithIndex_FunctorWithIndex[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_FunctorWithIndex_mapWithIndex(gopurs_runtime.CoerceToStruct[Constructor_Data_FunctorWithIndex_FunctorWithIndex](dict_0_box))
 })
 	})
 	return cache_Data_FunctorWithIndex_mapWithIndex
@@ -123,7 +123,7 @@ var once_Data_FunctorWithIndex_mapDefault sync.Once
 func Get_Data_FunctorWithIndex_mapDefault() gopurs_runtime.Value {
 	once_Data_FunctorWithIndex_mapDefault.Do(func() {
 		cache_Data_FunctorWithIndex_mapDefault = gopurs_runtime.Func2(func(dictFunctorWithIndex_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_FunctorWithIndex_mapDefault(gopurs_runtime.CoerceToStruct[Constructor_Data_FunctorWithIndex_FunctorWithIndex[gopurs_runtime.Value, gopurs_runtime.Value]](dictFunctorWithIndex_0_box), f_1_box)
+return Call_Data_FunctorWithIndex_mapDefault(gopurs_runtime.CoerceToStruct[Constructor_Data_FunctorWithIndex_FunctorWithIndex](dictFunctorWithIndex_0_box), f_1_box)
 })
 	})
 	return cache_Data_FunctorWithIndex_mapDefault
@@ -553,7 +553,7 @@ var once_Data_FunctorWithIndex_mapWithIndex__55256674 sync.Once
 func Get_Data_FunctorWithIndex_mapWithIndex__55256674() gopurs_runtime.Value {
 	once_Data_FunctorWithIndex_mapWithIndex__55256674.Do(func() {
 		cache_Data_FunctorWithIndex_mapWithIndex__55256674 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_FunctorWithIndex_mapWithIndex__55256674(gopurs_runtime.CoerceToStruct[Constructor_Data_FunctorWithIndex_FunctorWithIndex[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_FunctorWithIndex_mapWithIndex__55256674(gopurs_runtime.CoerceToStruct[Constructor_Data_FunctorWithIndex_FunctorWithIndex](dict_0_box))
 })
 	})
 	return cache_Data_FunctorWithIndex_mapWithIndex__55256674
@@ -564,7 +564,7 @@ var once_Data_FunctorWithIndex_mapWithIndex__2239747170 sync.Once
 func Get_Data_FunctorWithIndex_mapWithIndex__2239747170() gopurs_runtime.Value {
 	once_Data_FunctorWithIndex_mapWithIndex__2239747170.Do(func() {
 		cache_Data_FunctorWithIndex_mapWithIndex__2239747170 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_FunctorWithIndex_mapWithIndex__2239747170(gopurs_runtime.CoerceToStruct[Constructor_Data_FunctorWithIndex_FunctorWithIndex[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_FunctorWithIndex_mapWithIndex__2239747170(gopurs_runtime.CoerceToStruct[Constructor_Data_FunctorWithIndex_FunctorWithIndex](dict_0_box))
 })
 	})
 	return cache_Data_FunctorWithIndex_mapWithIndex__2239747170
@@ -575,7 +575,7 @@ var once_Data_FunctorWithIndex_mapWithIndex__3104159586 sync.Once
 func Get_Data_FunctorWithIndex_mapWithIndex__3104159586() gopurs_runtime.Value {
 	once_Data_FunctorWithIndex_mapWithIndex__3104159586.Do(func() {
 		cache_Data_FunctorWithIndex_mapWithIndex__3104159586 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_FunctorWithIndex_mapWithIndex__3104159586(gopurs_runtime.CoerceToStruct[Constructor_Data_FunctorWithIndex_FunctorWithIndex[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_FunctorWithIndex_mapWithIndex__3104159586(gopurs_runtime.CoerceToStruct[Constructor_Data_FunctorWithIndex_FunctorWithIndex](dict_0_box))
 })
 	})
 	return cache_Data_FunctorWithIndex_mapWithIndex__3104159586
@@ -614,7 +614,7 @@ return Call_Data_FunctorWithIndex_mapWithIndex__598554346(__eta0_0_box, __eta1_1
 	return cache_Data_FunctorWithIndex_mapWithIndex__598554346
 }
 
-type Constructor_Data_FunctorWithIndex_FunctorWithIndex[T_i any, T_f any] struct {
+type Constructor_Data_FunctorWithIndex_FunctorWithIndex struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -623,7 +623,7 @@ type Constructor_Data_FunctorWithIndex_FunctorWithIndex[T_i any, T_f any] struct
 
 func init() {
 	gopurs_runtime.StructGetters[4077743418] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_FunctorWithIndex_FunctorWithIndex[gopurs_runtime.Value, gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_FunctorWithIndex_FunctorWithIndex)(ptr)
 		_ = c
 		switch key {
 		case "Functor0": return gopurs_runtime.Box(c.V0)
@@ -640,14 +640,14 @@ _ = x_0
 return x_0
 }
 
-func Call_Data_FunctorWithIndex_mapWithIndex(dict_0_loop *Constructor_Data_FunctorWithIndex_FunctorWithIndex[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_FunctorWithIndex_FunctorWithIndex[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_FunctorWithIndex_mapWithIndex(dict_0_loop *Constructor_Data_FunctorWithIndex_FunctorWithIndex) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_FunctorWithIndex_FunctorWithIndex = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_FunctorWithIndex_mapDefault(dictFunctorWithIndex_0_loop *Constructor_Data_FunctorWithIndex_FunctorWithIndex[gopurs_runtime.Value, gopurs_runtime.Value], f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictFunctorWithIndex_0 *Constructor_Data_FunctorWithIndex_FunctorWithIndex[gopurs_runtime.Value, gopurs_runtime.Value] = dictFunctorWithIndex_0_loop
+func Call_Data_FunctorWithIndex_mapDefault(dictFunctorWithIndex_0_loop *Constructor_Data_FunctorWithIndex_FunctorWithIndex, f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictFunctorWithIndex_0 *Constructor_Data_FunctorWithIndex_FunctorWithIndex = dictFunctorWithIndex_0_loop
 _ = dictFunctorWithIndex_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
@@ -670,11 +670,11 @@ return gopurs_runtime.RecordDict2("Functor0", "mapWithIndex", gopurs_runtime.Fun
 return functorProduct1_3_1
 }), gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Data_Bifunctor_bifunctorTuple(), "bimap"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctorWithIndex_0, "mapWithIndex"), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_4, gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Left[gopurs_runtime.Value, gopurs_runtime.Value]{1, x_6})})
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Data_Bifunctor_bifunctorTuple(), "bimap"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctorWithIndex_0, "mapWithIndex"), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(f_4, gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Left{1, x_6})})
 })), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctorWithIndex1_2, "mapWithIndex"), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_4, gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Right[gopurs_runtime.Value, gopurs_runtime.Value]{1, x_6})})
-})), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](v_5))})))}
+return gopurs_runtime.Apply(f_4, gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Right{1, x_6})})
+})), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_5))})))}
 })
 }))
 })
@@ -695,9 +695,9 @@ return functorCoproduct1_3_1
 }), gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Data_Bifunctor_bifunctorEither(), "bimap"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctorWithIndex_0, "mapWithIndex"), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_4, gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Left[gopurs_runtime.Value, gopurs_runtime.Value]{1, x_6})})
+return gopurs_runtime.Apply(f_4, gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Left{1, x_6})})
 })), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctorWithIndex1_2, "mapWithIndex"), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_4, gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Right[gopurs_runtime.Value, gopurs_runtime.Value]{1, x_6})})
+return gopurs_runtime.Apply(f_4, gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Right{1, x_6})})
 })), v_5)
 })
 }))
@@ -727,7 +727,7 @@ return functorCompose1_3_1
 return gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctorWithIndex_0, "mapWithIndex"), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctorWithIndex1_2, "mapWithIndex"), gopurs_runtime.Func(func(b_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_4, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, x_6, b_7})})
+return gopurs_runtime.Apply(f_4, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, x_6, b_7})})
 }))
 }), v_5)
 })
@@ -766,20 +766,20 @@ _ = __eta1_1
 return gopurs_runtime.Apply2(Get_Data_FunctorWithIndex_mapWithIndexArray(), __eta0_0, __eta1_1)
 }
 
-func Call_Data_FunctorWithIndex_mapWithIndex__55256674(dict_0_loop *Constructor_Data_FunctorWithIndex_FunctorWithIndex[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_FunctorWithIndex_FunctorWithIndex[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_FunctorWithIndex_mapWithIndex__55256674(dict_0_loop *Constructor_Data_FunctorWithIndex_FunctorWithIndex) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_FunctorWithIndex_FunctorWithIndex = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_FunctorWithIndex_mapWithIndex__2239747170(dict_0_loop *Constructor_Data_FunctorWithIndex_FunctorWithIndex[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_FunctorWithIndex_FunctorWithIndex[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_FunctorWithIndex_mapWithIndex__2239747170(dict_0_loop *Constructor_Data_FunctorWithIndex_FunctorWithIndex) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_FunctorWithIndex_FunctorWithIndex = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_FunctorWithIndex_mapWithIndex__3104159586(dict_0_loop *Constructor_Data_FunctorWithIndex_FunctorWithIndex[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_FunctorWithIndex_FunctorWithIndex[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_FunctorWithIndex_mapWithIndex__3104159586(dict_0_loop *Constructor_Data_FunctorWithIndex_FunctorWithIndex) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_FunctorWithIndex_FunctorWithIndex = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
@@ -789,7 +789,7 @@ var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
 _ = __eta0_0
 var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
 _ = __eta1_1
-return gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_FunctorWithIndex_FunctorWithIndex[*Constructor_Data_Maybe_Just[int64], *Constructor_Data_NonEmpty_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value]]](Get_Data_List_Lazy_Types_functorWithIndex()).V1), __eta0_0, __eta1_1)
+return gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_FunctorWithIndex_FunctorWithIndex](Get_Data_List_Lazy_Types_functorWithIndex()).V1), __eta0_0, __eta1_1)
 }
 
 func Call_Data_FunctorWithIndex_mapWithIndex__3380890378(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -797,7 +797,7 @@ var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
 _ = __eta0_0
 var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
 _ = __eta1_1
-return gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_FunctorWithIndex_FunctorWithIndex[*Constructor_Data_Maybe_Just[int64], *Constructor_Data_NonEmpty_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value]]](Get_Data_List_Lazy_Types_functorWithIndex()).V1), __eta0_0, __eta1_1)
+return gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_FunctorWithIndex_FunctorWithIndex](Get_Data_List_Lazy_Types_functorWithIndex()).V1), __eta0_0, __eta1_1)
 }
 
 func Call_Data_FunctorWithIndex_mapWithIndex__598554346(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -805,7 +805,7 @@ var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
 _ = __eta0_0
 var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
 _ = __eta1_1
-return gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_FunctorWithIndex_FunctorWithIndex[*Constructor_Data_Maybe_Just[int64], *Constructor_Data_NonEmpty_NonEmpty[*Constructor_Data_List_Types_Cons[gopurs_runtime.Value], gopurs_runtime.Value]]](Get_Data_List_Types_functorWithIndex()).V1), __eta0_0, __eta1_1)
+return gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_FunctorWithIndex_FunctorWithIndex](Get_Data_List_Types_functorWithIndex()).V1), __eta0_0, __eta1_1)
 }
 
 func Get_Data_FunctorWithIndex_mapWithIndexArray() gopurs_runtime.Value {

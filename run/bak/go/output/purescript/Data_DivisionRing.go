@@ -22,7 +22,7 @@ var once_Data_DivisionRing_recip sync.Once
 func Get_Data_DivisionRing_recip() gopurs_runtime.Value {
 	once_Data_DivisionRing_recip.Do(func() {
 		cache_Data_DivisionRing_recip = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_DivisionRing_recip(gopurs_runtime.CoerceToStruct[Constructor_Data_DivisionRing_DivisionRing[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_DivisionRing_recip(gopurs_runtime.CoerceToStruct[Constructor_Data_DivisionRing_DivisionRing](dict_0_box))
 })
 	})
 	return cache_Data_DivisionRing_recip
@@ -33,7 +33,7 @@ var once_Data_DivisionRing_rightDiv sync.Once
 func Get_Data_DivisionRing_rightDiv() gopurs_runtime.Value {
 	once_Data_DivisionRing_rightDiv.Do(func() {
 		cache_Data_DivisionRing_rightDiv = gopurs_runtime.Func(func(dictDivisionRing_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_DivisionRing_rightDiv(gopurs_runtime.CoerceToStruct[Constructor_Data_DivisionRing_DivisionRing[gopurs_runtime.Value]](dictDivisionRing_0_box))
+return Call_Data_DivisionRing_rightDiv(gopurs_runtime.CoerceToStruct[Constructor_Data_DivisionRing_DivisionRing](dictDivisionRing_0_box))
 })
 	})
 	return cache_Data_DivisionRing_rightDiv
@@ -44,7 +44,7 @@ var once_Data_DivisionRing_leftDiv sync.Once
 func Get_Data_DivisionRing_leftDiv() gopurs_runtime.Value {
 	once_Data_DivisionRing_leftDiv.Do(func() {
 		cache_Data_DivisionRing_leftDiv = gopurs_runtime.Func(func(dictDivisionRing_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_DivisionRing_leftDiv(gopurs_runtime.CoerceToStruct[Constructor_Data_DivisionRing_DivisionRing[gopurs_runtime.Value]](dictDivisionRing_0_box))
+return Call_Data_DivisionRing_leftDiv(gopurs_runtime.CoerceToStruct[Constructor_Data_DivisionRing_DivisionRing](dictDivisionRing_0_box))
 })
 	})
 	return cache_Data_DivisionRing_leftDiv
@@ -70,13 +70,13 @@ var once_Data_DivisionRing_recip__1644564657 sync.Once
 func Get_Data_DivisionRing_recip__1644564657() gopurs_runtime.Value {
 	once_Data_DivisionRing_recip__1644564657.Do(func() {
 		cache_Data_DivisionRing_recip__1644564657 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_DivisionRing_recip__1644564657(gopurs_runtime.CoerceToStruct[Constructor_Data_DivisionRing_DivisionRing[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_DivisionRing_recip__1644564657(gopurs_runtime.CoerceToStruct[Constructor_Data_DivisionRing_DivisionRing](dict_0_box))
 })
 	})
 	return cache_Data_DivisionRing_recip__1644564657
 }
 
-type Constructor_Data_DivisionRing_DivisionRing[T_a any] struct {
+type Constructor_Data_DivisionRing_DivisionRing struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -85,7 +85,7 @@ type Constructor_Data_DivisionRing_DivisionRing[T_a any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[2548491258] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_DivisionRing_DivisionRing[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_DivisionRing_DivisionRing)(ptr)
 		_ = c
 		switch key {
 		case "Ring0": return gopurs_runtime.Box(c.V0)
@@ -102,17 +102,17 @@ _ = x_0
 return x_0
 }
 
-func Call_Data_DivisionRing_recip(dict_0_loop *Constructor_Data_DivisionRing_DivisionRing[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_DivisionRing_DivisionRing[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_DivisionRing_recip(dict_0_loop *Constructor_Data_DivisionRing_DivisionRing) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_DivisionRing_DivisionRing = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_DivisionRing_rightDiv(dictDivisionRing_0_loop *Constructor_Data_DivisionRing_DivisionRing[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictDivisionRing_0 *Constructor_Data_DivisionRing_DivisionRing[gopurs_runtime.Value] = dictDivisionRing_0_loop
+func Call_Data_DivisionRing_rightDiv(dictDivisionRing_0_loop *Constructor_Data_DivisionRing_DivisionRing) gopurs_runtime.Value {
+var dictDivisionRing_0 *Constructor_Data_DivisionRing_DivisionRing = dictDivisionRing_0_loop
 _ = dictDivisionRing_0
-// TAST (Let): Semiring0_1_0 -> *Constructor_Data_Semiring_Semiring[gopurs_runtime.Value]
-Semiring0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.Box(dictDivisionRing_0.V0), gopurs_runtime.Value{}), "Semiring0"), gopurs_runtime.Value{}))
+// TAST (Let): Semiring0_1_0 -> *Constructor_Data_Semiring_Semiring
+Semiring0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.Box(dictDivisionRing_0.V0), gopurs_runtime.Value{}), "Semiring0"), gopurs_runtime.Value{}))
 _ = Semiring0_1_0
 return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(b_3 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -121,11 +121,11 @@ return gopurs_runtime.Apply2(gopurs_runtime.Box(Semiring0_1_0.V1), a_2, gopurs_r
 })
 }
 
-func Call_Data_DivisionRing_leftDiv(dictDivisionRing_0_loop *Constructor_Data_DivisionRing_DivisionRing[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictDivisionRing_0 *Constructor_Data_DivisionRing_DivisionRing[gopurs_runtime.Value] = dictDivisionRing_0_loop
+func Call_Data_DivisionRing_leftDiv(dictDivisionRing_0_loop *Constructor_Data_DivisionRing_DivisionRing) gopurs_runtime.Value {
+var dictDivisionRing_0 *Constructor_Data_DivisionRing_DivisionRing = dictDivisionRing_0_loop
 _ = dictDivisionRing_0
-// TAST (Let): Semiring0_1_0 -> *Constructor_Data_Semiring_Semiring[gopurs_runtime.Value]
-Semiring0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.Box(dictDivisionRing_0.V0), gopurs_runtime.Value{}), "Semiring0"), gopurs_runtime.Value{}))
+// TAST (Let): Semiring0_1_0 -> *Constructor_Data_Semiring_Semiring
+Semiring0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.Box(dictDivisionRing_0.V0), gopurs_runtime.Value{}), "Semiring0"), gopurs_runtime.Value{}))
 _ = Semiring0_1_0
 return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(b_3 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -134,8 +134,8 @@ return gopurs_runtime.Apply2(gopurs_runtime.Box(Semiring0_1_0.V1), gopurs_runtim
 })
 }
 
-func Call_Data_DivisionRing_recip__1644564657(dict_0_loop *Constructor_Data_DivisionRing_DivisionRing[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_DivisionRing_DivisionRing[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_DivisionRing_recip__1644564657(dict_0_loop *Constructor_Data_DivisionRing_DivisionRing) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_DivisionRing_DivisionRing = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }

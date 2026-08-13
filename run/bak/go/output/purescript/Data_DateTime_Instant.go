@@ -76,13 +76,13 @@ return gopurs_runtime.Func(func(h_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(mi_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(s_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(ms_7 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): __local_var_8_0 -> *Constructor_Data_Maybe_Just[uint32]
-__local_var_8_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[uint32]](gopurs_runtime.Apply(Get_Data_Enum_toEnum__2309750950(), gopurs_runtime.Int(mo_2.IntVal)))
+// TAST (Let): __local_var_8_0 -> *Constructor_Data_Maybe_Just
+__local_var_8_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(Get_Data_Enum_toEnum__2309750950(), gopurs_runtime.Int(mo_2.IntVal)))
 _ = __local_var_8_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__local_var_8_0)}.Type == 9 && gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__local_var_8_0)}.IntVal == 930809136 && gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__local_var_8_0)}.UnsafePtr != nil) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__local_var_8_0)}.UnsafePtr).V0.IntVal)), UnsafePtr: nil}
+if (__local_var_8_0 != nil) {
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32((__local_var_8_0).V0.IntVal)), UnsafePtr: nil}
 goto end_branch_1
 } else {
 
@@ -172,7 +172,7 @@ var once_Data_DateTime_Instant_diff sync.Once
 func Get_Data_DateTime_Instant_diff() gopurs_runtime.Value {
 	once_Data_DateTime_Instant_diff.Do(func() {
 		cache_Data_DateTime_Instant_diff = gopurs_runtime.Func3(func(dictDuration_0_box gopurs_runtime.Value, dt1_1_box gopurs_runtime.Value, dt2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_DateTime_Instant_diff(gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Duration_Duration[gopurs_runtime.Value]](dictDuration_0_box), dt1_1_box.FloatVal(), dt2_2_box.FloatVal())
+return Call_Data_DateTime_Instant_diff(gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Duration_Duration](dictDuration_0_box), dt1_1_box.FloatVal(), dt2_2_box.FloatVal())
 })
 	})
 	return cache_Data_DateTime_Instant_diff
@@ -201,7 +201,7 @@ _ = v_0
 return v_0
 }
 
-func Call_Data_DateTime_Instant_instant(v_0_loop float64) *Constructor_Data_Maybe_Just[float64] {
+func Call_Data_DateTime_Instant_instant(v_0_loop float64) *Constructor_Data_Maybe_Just {
 var v_0 float64 = v_0_loop
 _ = v_0
 var __t3 gopurs_runtime.Value
@@ -238,17 +238,17 @@ end_branch_1:
 __t_and_2 = __t1
 }
 if __t_and_2 {
-__t3 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just[gopurs_runtime.Value]{1, gopurs_runtime.Float(v_0)})}
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Float(v_0)})}
 goto end_branch_3
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))}
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
 }
 end_branch_3:
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[float64]](__t3)
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t3)
 }
 
 func Call_Data_DateTime_Instant_fromDateTime(v_0_loop *Constructor_Data_DateTime_DateTime) float64 {
@@ -256,7 +256,7 @@ var v_0 *Constructor_Data_DateTime_DateTime = v_0_loop
 _ = v_0
 var __t12 gopurs_runtime.Value
 {
-var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer((*Constructor_Data_DateTime_DateTime)(gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0)}.UnsafePtr).V1), UnsafePtr: nil}
+var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v_0).V0).V1), UnsafePtr: nil}
 if (uint32(__t_tag_0.IntVal) == 1908470532) {
 __t12 = gopurs_runtime.Int(1)
 goto end_branch_12
@@ -265,7 +265,7 @@ goto end_branch_12
 }
 }
 {
-var __t_tag_1 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer((*Constructor_Data_DateTime_DateTime)(gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0)}.UnsafePtr).V1), UnsafePtr: nil}
+var __t_tag_1 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v_0).V0).V1), UnsafePtr: nil}
 if (uint32(__t_tag_1.IntVal) == 2455627378) {
 __t12 = gopurs_runtime.Int(2)
 goto end_branch_12
@@ -274,7 +274,7 @@ goto end_branch_12
 }
 }
 {
-var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer((*Constructor_Data_DateTime_DateTime)(gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0)}.UnsafePtr).V1), UnsafePtr: nil}
+var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v_0).V0).V1), UnsafePtr: nil}
 if (uint32(__t_tag_2.IntVal) == 4162469099) {
 __t12 = gopurs_runtime.Int(3)
 goto end_branch_12
@@ -283,7 +283,7 @@ goto end_branch_12
 }
 }
 {
-var __t_tag_3 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer((*Constructor_Data_DateTime_DateTime)(gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0)}.UnsafePtr).V1), UnsafePtr: nil}
+var __t_tag_3 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v_0).V0).V1), UnsafePtr: nil}
 if (uint32(__t_tag_3.IntVal) == 1692989816) {
 __t12 = gopurs_runtime.Int(4)
 goto end_branch_12
@@ -292,7 +292,7 @@ goto end_branch_12
 }
 }
 {
-var __t_tag_4 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer((*Constructor_Data_DateTime_DateTime)(gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0)}.UnsafePtr).V1), UnsafePtr: nil}
+var __t_tag_4 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v_0).V0).V1), UnsafePtr: nil}
 if (uint32(__t_tag_4.IntVal) == 330658827) {
 __t12 = gopurs_runtime.Int(5)
 goto end_branch_12
@@ -301,7 +301,7 @@ goto end_branch_12
 }
 }
 {
-var __t_tag_5 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer((*Constructor_Data_DateTime_DateTime)(gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0)}.UnsafePtr).V1), UnsafePtr: nil}
+var __t_tag_5 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v_0).V0).V1), UnsafePtr: nil}
 if (uint32(__t_tag_5.IntVal) == 4067355978) {
 __t12 = gopurs_runtime.Int(6)
 goto end_branch_12
@@ -310,7 +310,7 @@ goto end_branch_12
 }
 }
 {
-var __t_tag_6 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer((*Constructor_Data_DateTime_DateTime)(gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0)}.UnsafePtr).V1), UnsafePtr: nil}
+var __t_tag_6 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v_0).V0).V1), UnsafePtr: nil}
 if (uint32(__t_tag_6.IntVal) == 2276710548) {
 __t12 = gopurs_runtime.Int(7)
 goto end_branch_12
@@ -319,7 +319,7 @@ goto end_branch_12
 }
 }
 {
-var __t_tag_7 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer((*Constructor_Data_DateTime_DateTime)(gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0)}.UnsafePtr).V1), UnsafePtr: nil}
+var __t_tag_7 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v_0).V0).V1), UnsafePtr: nil}
 if (uint32(__t_tag_7.IntVal) == 243771071) {
 __t12 = gopurs_runtime.Int(8)
 goto end_branch_12
@@ -328,7 +328,7 @@ goto end_branch_12
 }
 }
 {
-var __t_tag_8 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer((*Constructor_Data_DateTime_DateTime)(gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0)}.UnsafePtr).V1), UnsafePtr: nil}
+var __t_tag_8 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v_0).V0).V1), UnsafePtr: nil}
 if (uint32(__t_tag_8.IntVal) == 215731793) {
 __t12 = gopurs_runtime.Int(9)
 goto end_branch_12
@@ -337,7 +337,7 @@ goto end_branch_12
 }
 }
 {
-var __t_tag_9 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer((*Constructor_Data_DateTime_DateTime)(gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0)}.UnsafePtr).V1), UnsafePtr: nil}
+var __t_tag_9 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v_0).V0).V1), UnsafePtr: nil}
 if (uint32(__t_tag_9.IntVal) == 8639228) {
 __t12 = gopurs_runtime.Int(10)
 goto end_branch_12
@@ -346,7 +346,7 @@ goto end_branch_12
 }
 }
 {
-var __t_tag_10 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer((*Constructor_Data_DateTime_DateTime)(gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0)}.UnsafePtr).V1), UnsafePtr: nil}
+var __t_tag_10 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v_0).V0).V1), UnsafePtr: nil}
 if (uint32(__t_tag_10.IntVal) == 49471444) {
 __t12 = gopurs_runtime.Int(11)
 goto end_branch_12
@@ -355,7 +355,7 @@ goto end_branch_12
 }
 }
 {
-var __t_tag_11 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer((*Constructor_Data_DateTime_DateTime)(gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0)}.UnsafePtr).V1), UnsafePtr: nil}
+var __t_tag_11 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v_0).V0).V1), UnsafePtr: nil}
 if (uint32(__t_tag_11.IntVal) == 3889233761) {
 __t12 = gopurs_runtime.Int(12)
 goto end_branch_12
@@ -367,7 +367,7 @@ goto end_branch_12
 __t12 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_12:
-return gopurs_runtime.UncurriedApp7(Get_Data_DateTime_Instant_fromDateTimeImpl(), gopurs_runtime.Int((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer((*Constructor_Data_DateTime_DateTime)(gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0)}.UnsafePtr).V0), gopurs_runtime.Int(__t12.IntVal), gopurs_runtime.Int((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer((*Constructor_Data_DateTime_DateTime)(gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0)}.UnsafePtr).V2), gopurs_runtime.Int((*Constructor_Data_Time_Time)(gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer((*Constructor_Data_DateTime_DateTime)(gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1)}.UnsafePtr).V0), gopurs_runtime.Int((*Constructor_Data_Time_Time)(gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer((*Constructor_Data_DateTime_DateTime)(gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1)}.UnsafePtr).V1), gopurs_runtime.Int((*Constructor_Data_Time_Time)(gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer((*Constructor_Data_DateTime_DateTime)(gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1)}.UnsafePtr).V2), gopurs_runtime.Int((*Constructor_Data_Time_Time)(gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer((*Constructor_Data_DateTime_DateTime)(gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1)}.UnsafePtr).V3)).FloatVal()
+return gopurs_runtime.UncurriedApp7(Get_Data_DateTime_Instant_fromDateTimeImpl(), gopurs_runtime.Int(((v_0).V0).V0), gopurs_runtime.Int(__t12.IntVal), gopurs_runtime.Int(((v_0).V0).V2), gopurs_runtime.Int(((v_0).V1).V0), gopurs_runtime.Int(((v_0).V1).V1), gopurs_runtime.Int(((v_0).V1).V2), gopurs_runtime.Int(((v_0).V1).V3)).FloatVal()
 }
 
 func Call_Data_DateTime_Instant_fromDate(d_0_loop *Constructor_Data_Date_Date) float64 {
@@ -375,7 +375,7 @@ var d_0 *Constructor_Data_Date_Date = d_0_loop
 _ = d_0
 var __t12 gopurs_runtime.Value
 {
-var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(d_0)}.UnsafePtr).V1), UnsafePtr: nil}
+var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((d_0).V1), UnsafePtr: nil}
 if (uint32(__t_tag_0.IntVal) == 1908470532) {
 __t12 = gopurs_runtime.Int(1)
 goto end_branch_12
@@ -384,7 +384,7 @@ goto end_branch_12
 }
 }
 {
-var __t_tag_1 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(d_0)}.UnsafePtr).V1), UnsafePtr: nil}
+var __t_tag_1 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((d_0).V1), UnsafePtr: nil}
 if (uint32(__t_tag_1.IntVal) == 2455627378) {
 __t12 = gopurs_runtime.Int(2)
 goto end_branch_12
@@ -393,7 +393,7 @@ goto end_branch_12
 }
 }
 {
-var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(d_0)}.UnsafePtr).V1), UnsafePtr: nil}
+var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((d_0).V1), UnsafePtr: nil}
 if (uint32(__t_tag_2.IntVal) == 4162469099) {
 __t12 = gopurs_runtime.Int(3)
 goto end_branch_12
@@ -402,7 +402,7 @@ goto end_branch_12
 }
 }
 {
-var __t_tag_3 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(d_0)}.UnsafePtr).V1), UnsafePtr: nil}
+var __t_tag_3 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((d_0).V1), UnsafePtr: nil}
 if (uint32(__t_tag_3.IntVal) == 1692989816) {
 __t12 = gopurs_runtime.Int(4)
 goto end_branch_12
@@ -411,7 +411,7 @@ goto end_branch_12
 }
 }
 {
-var __t_tag_4 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(d_0)}.UnsafePtr).V1), UnsafePtr: nil}
+var __t_tag_4 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((d_0).V1), UnsafePtr: nil}
 if (uint32(__t_tag_4.IntVal) == 330658827) {
 __t12 = gopurs_runtime.Int(5)
 goto end_branch_12
@@ -420,7 +420,7 @@ goto end_branch_12
 }
 }
 {
-var __t_tag_5 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(d_0)}.UnsafePtr).V1), UnsafePtr: nil}
+var __t_tag_5 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((d_0).V1), UnsafePtr: nil}
 if (uint32(__t_tag_5.IntVal) == 4067355978) {
 __t12 = gopurs_runtime.Int(6)
 goto end_branch_12
@@ -429,7 +429,7 @@ goto end_branch_12
 }
 }
 {
-var __t_tag_6 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(d_0)}.UnsafePtr).V1), UnsafePtr: nil}
+var __t_tag_6 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((d_0).V1), UnsafePtr: nil}
 if (uint32(__t_tag_6.IntVal) == 2276710548) {
 __t12 = gopurs_runtime.Int(7)
 goto end_branch_12
@@ -438,7 +438,7 @@ goto end_branch_12
 }
 }
 {
-var __t_tag_7 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(d_0)}.UnsafePtr).V1), UnsafePtr: nil}
+var __t_tag_7 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((d_0).V1), UnsafePtr: nil}
 if (uint32(__t_tag_7.IntVal) == 243771071) {
 __t12 = gopurs_runtime.Int(8)
 goto end_branch_12
@@ -447,7 +447,7 @@ goto end_branch_12
 }
 }
 {
-var __t_tag_8 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(d_0)}.UnsafePtr).V1), UnsafePtr: nil}
+var __t_tag_8 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((d_0).V1), UnsafePtr: nil}
 if (uint32(__t_tag_8.IntVal) == 215731793) {
 __t12 = gopurs_runtime.Int(9)
 goto end_branch_12
@@ -456,7 +456,7 @@ goto end_branch_12
 }
 }
 {
-var __t_tag_9 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(d_0)}.UnsafePtr).V1), UnsafePtr: nil}
+var __t_tag_9 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((d_0).V1), UnsafePtr: nil}
 if (uint32(__t_tag_9.IntVal) == 8639228) {
 __t12 = gopurs_runtime.Int(10)
 goto end_branch_12
@@ -465,7 +465,7 @@ goto end_branch_12
 }
 }
 {
-var __t_tag_10 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(d_0)}.UnsafePtr).V1), UnsafePtr: nil}
+var __t_tag_10 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((d_0).V1), UnsafePtr: nil}
 if (uint32(__t_tag_10.IntVal) == 49471444) {
 __t12 = gopurs_runtime.Int(11)
 goto end_branch_12
@@ -474,7 +474,7 @@ goto end_branch_12
 }
 }
 {
-var __t_tag_11 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(d_0)}.UnsafePtr).V1), UnsafePtr: nil}
+var __t_tag_11 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((d_0).V1), UnsafePtr: nil}
 if (uint32(__t_tag_11.IntVal) == 3889233761) {
 __t12 = gopurs_runtime.Int(12)
 goto end_branch_12
@@ -486,11 +486,11 @@ goto end_branch_12
 __t12 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_12:
-return gopurs_runtime.UncurriedApp7(Get_Data_DateTime_Instant_fromDateTimeImpl(), gopurs_runtime.Int((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(d_0)}.UnsafePtr).V0), gopurs_runtime.Int(__t12.IntVal), gopurs_runtime.Int((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(d_0)}.UnsafePtr).V2), gopurs_runtime.Int(gopurs_runtime.RecordGet(Get_Data_Time_Component_boundedHour(), "bottom").IntVal), gopurs_runtime.Int(gopurs_runtime.RecordGet(Get_Data_Time_Component_boundedMinute(), "bottom").IntVal), gopurs_runtime.Int(gopurs_runtime.RecordGet(Get_Data_Time_Component_boundedSecond(), "bottom").IntVal), gopurs_runtime.Int(gopurs_runtime.RecordGet(Get_Data_Time_Component_boundedMillisecond(), "bottom").IntVal)).FloatVal()
+return gopurs_runtime.UncurriedApp7(Get_Data_DateTime_Instant_fromDateTimeImpl(), gopurs_runtime.Int((d_0).V0), gopurs_runtime.Int(__t12.IntVal), gopurs_runtime.Int((d_0).V2), gopurs_runtime.Int(gopurs_runtime.RecordGet(Get_Data_Time_Component_boundedHour(), "bottom").IntVal), gopurs_runtime.Int(gopurs_runtime.RecordGet(Get_Data_Time_Component_boundedMinute(), "bottom").IntVal), gopurs_runtime.Int(gopurs_runtime.RecordGet(Get_Data_Time_Component_boundedSecond(), "bottom").IntVal), gopurs_runtime.Int(gopurs_runtime.RecordGet(Get_Data_Time_Component_boundedMillisecond(), "bottom").IntVal)).FloatVal()
 }
 
-func Call_Data_DateTime_Instant_diff(dictDuration_0_loop *Constructor_Data_Time_Duration_Duration[gopurs_runtime.Value], dt1_1_loop float64, dt2_2_loop float64) gopurs_runtime.Value {
-var dictDuration_0 *Constructor_Data_Time_Duration_Duration[gopurs_runtime.Value] = dictDuration_0_loop
+func Call_Data_DateTime_Instant_diff(dictDuration_0_loop *Constructor_Data_Time_Duration_Duration, dt1_1_loop float64, dt2_2_loop float64) gopurs_runtime.Value {
+var dictDuration_0 *Constructor_Data_Time_Duration_Duration = dictDuration_0_loop
 _ = dictDuration_0
 var dt1_1 float64 = dt1_1_loop
 _ = dt1_1

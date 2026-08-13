@@ -68,22 +68,22 @@ return Call_Control_Monad_State_evalState(v_0_box, s_1_box)
 	return cache_Control_Monad_State_evalState
 }
 
-func Call_Control_Monad_State_runState(v_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value) *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] {
+func Call_Control_Monad_State_runState(v_0_loop gopurs_runtime.Value, x_1_loop gopurs_runtime.Value) *Constructor_Data_Tuple_Tuple {
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Apply(v_0, x_1))
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply(v_0, x_1))
 }
 
-func Call_Control_Monad_State_mapState(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] {
+func Call_Control_Monad_State_mapState(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) *Constructor_Data_Tuple_Tuple {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
 var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(v_1, x_2)))
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(v_1, x_2)))
 }
 
 func Call_Control_Monad_State_execState(v_0_loop gopurs_runtime.Value, s_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -91,7 +91,7 @@ var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var s_1 gopurs_runtime.Value = s_1_loop
 _ = s_1
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Apply(v_0, s_1).UnsafePtr).V1
+return (*Constructor_Data_Tuple_Tuple)(gopurs_runtime.Apply(v_0, s_1).UnsafePtr).V1
 }
 
 func Call_Control_Monad_State_evalState(v_0_loop gopurs_runtime.Value, s_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -99,7 +99,7 @@ var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 var s_1 gopurs_runtime.Value = s_1_loop
 _ = s_1
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Apply(v_0, s_1).UnsafePtr).V0
+return (*Constructor_Data_Tuple_Tuple)(gopurs_runtime.Apply(v_0, s_1).UnsafePtr).V0
 }
 
 

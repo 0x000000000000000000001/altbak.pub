@@ -57,7 +57,7 @@ var once_Type_Equality_proof sync.Once
 func Get_Type_Equality_proof() gopurs_runtime.Value {
 	once_Type_Equality_proof.Do(func() {
 		cache_Type_Equality_proof = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Type_Equality_proof(gopurs_runtime.CoerceToStruct[Constructor_Type_Equality_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Type_Equality_proof(gopurs_runtime.CoerceToStruct[Constructor_Type_Equality_TypeEquals](dict_0_box))
 })
 	})
 	return cache_Type_Equality_proof
@@ -68,7 +68,7 @@ var once_Type_Equality_to sync.Once
 func Get_Type_Equality_to() gopurs_runtime.Value {
 	once_Type_Equality_to.Do(func() {
 		cache_Type_Equality_to = gopurs_runtime.Func(func(dictTypeEquals_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Type_Equality_to(gopurs_runtime.CoerceToStruct[Constructor_Type_Equality_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value]](dictTypeEquals_0_box))
+return Call_Type_Equality_to(gopurs_runtime.CoerceToStruct[Constructor_Type_Equality_TypeEquals](dictTypeEquals_0_box))
 })
 	})
 	return cache_Type_Equality_to
@@ -79,7 +79,7 @@ var once_Type_Equality_from sync.Once
 func Get_Type_Equality_from() gopurs_runtime.Value {
 	once_Type_Equality_from.Do(func() {
 		cache_Type_Equality_from = gopurs_runtime.Func(func(dictTypeEquals_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Type_Equality_from(gopurs_runtime.CoerceToStruct[Constructor_Type_Equality_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value]](dictTypeEquals_0_box))
+return Call_Type_Equality_from(gopurs_runtime.CoerceToStruct[Constructor_Type_Equality_TypeEquals](dictTypeEquals_0_box))
 })
 	})
 	return cache_Type_Equality_from
@@ -90,7 +90,7 @@ var once_Type_Equality_from__4089948322 sync.Once
 func Get_Type_Equality_from__4089948322() gopurs_runtime.Value {
 	once_Type_Equality_from__4089948322.Do(func() {
 		cache_Type_Equality_from__4089948322 = gopurs_runtime.Func(func(dictTypeEquals_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Type_Equality_from__4089948322(gopurs_runtime.CoerceToStruct[Constructor_Type_Equality_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value]](dictTypeEquals_0_box))
+return Call_Type_Equality_from__4089948322(gopurs_runtime.CoerceToStruct[Constructor_Type_Equality_TypeEquals](dictTypeEquals_0_box))
 })
 	})
 	return cache_Type_Equality_from__4089948322
@@ -101,7 +101,7 @@ var once_Type_Equality_from__2366809570 sync.Once
 func Get_Type_Equality_from__2366809570() gopurs_runtime.Value {
 	once_Type_Equality_from__2366809570.Do(func() {
 		cache_Type_Equality_from__2366809570 = gopurs_runtime.Func(func(dictTypeEquals_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Type_Equality_from__2366809570(gopurs_runtime.CoerceToStruct[Constructor_Type_Equality_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value]](dictTypeEquals_0_box))
+return Call_Type_Equality_from__2366809570(gopurs_runtime.CoerceToStruct[Constructor_Type_Equality_TypeEquals](dictTypeEquals_0_box))
 })
 	})
 	return cache_Type_Equality_from__2366809570
@@ -112,7 +112,7 @@ var once_Type_Equality_proof__3118023201 sync.Once
 func Get_Type_Equality_proof__3118023201() gopurs_runtime.Value {
 	once_Type_Equality_proof__3118023201.Do(func() {
 		cache_Type_Equality_proof__3118023201 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Type_Equality_proof__3118023201(gopurs_runtime.CoerceToStruct[Constructor_Type_Equality_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Type_Equality_proof__3118023201(gopurs_runtime.CoerceToStruct[Constructor_Type_Equality_TypeEquals](dict_0_box))
 })
 	})
 	return cache_Type_Equality_proof__3118023201
@@ -123,13 +123,13 @@ var once_Type_Equality_proof__3363032129 sync.Once
 func Get_Type_Equality_proof__3363032129() gopurs_runtime.Value {
 	once_Type_Equality_proof__3363032129.Do(func() {
 		cache_Type_Equality_proof__3363032129 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Type_Equality_proof__3363032129(gopurs_runtime.CoerceToStruct[Constructor_Type_Equality_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Type_Equality_proof__3363032129(gopurs_runtime.CoerceToStruct[Constructor_Type_Equality_TypeEquals](dict_0_box))
 })
 	})
 	return cache_Type_Equality_proof__3363032129
 }
 
-type Constructor_Type_Equality_TypeEquals[T_a any, T_b any] struct {
+type Constructor_Type_Equality_TypeEquals struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -138,7 +138,7 @@ type Constructor_Type_Equality_TypeEquals[T_a any, T_b any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[3275391293] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Type_Equality_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Type_Equality_TypeEquals)(ptr)
 		_ = c
 		switch key {
 		case "Coercible0": return gopurs_runtime.Box(c.V0)
@@ -167,52 +167,52 @@ _ = x_0
 return x_0
 }
 
-func Call_Type_Equality_proof(dict_0_loop *Constructor_Type_Equality_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Type_Equality_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Type_Equality_proof(dict_0_loop *Constructor_Type_Equality_TypeEquals) gopurs_runtime.Value {
+var dict_0 *Constructor_Type_Equality_TypeEquals = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Type_Equality_to(dictTypeEquals_0_loop *Constructor_Type_Equality_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictTypeEquals_0 *Constructor_Type_Equality_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value] = dictTypeEquals_0_loop
+func Call_Type_Equality_to(dictTypeEquals_0_loop *Constructor_Type_Equality_TypeEquals) gopurs_runtime.Value {
+var dictTypeEquals_0 *Constructor_Type_Equality_TypeEquals = dictTypeEquals_0_loop
 _ = dictTypeEquals_0
 return gopurs_runtime.Apply(gopurs_runtime.Box(dictTypeEquals_0.V1), gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return a_1
 }))
 }
 
-func Call_Type_Equality_from(dictTypeEquals_0_loop *Constructor_Type_Equality_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictTypeEquals_0 *Constructor_Type_Equality_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value] = dictTypeEquals_0_loop
+func Call_Type_Equality_from(dictTypeEquals_0_loop *Constructor_Type_Equality_TypeEquals) gopurs_runtime.Value {
+var dictTypeEquals_0 *Constructor_Type_Equality_TypeEquals = dictTypeEquals_0_loop
 _ = dictTypeEquals_0
 return gopurs_runtime.Apply(gopurs_runtime.Box(dictTypeEquals_0.V1), gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return a_1
 }))
 }
 
-func Call_Type_Equality_from__4089948322(dictTypeEquals_0_loop *Constructor_Type_Equality_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictTypeEquals_0 *Constructor_Type_Equality_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value] = dictTypeEquals_0_loop
+func Call_Type_Equality_from__4089948322(dictTypeEquals_0_loop *Constructor_Type_Equality_TypeEquals) gopurs_runtime.Value {
+var dictTypeEquals_0 *Constructor_Type_Equality_TypeEquals = dictTypeEquals_0_loop
 _ = dictTypeEquals_0
 return gopurs_runtime.Apply(gopurs_runtime.Box(dictTypeEquals_0.V1), gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return a_1
 }))
 }
 
-func Call_Type_Equality_from__2366809570(dictTypeEquals_0_loop *Constructor_Type_Equality_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictTypeEquals_0 *Constructor_Type_Equality_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value] = dictTypeEquals_0_loop
+func Call_Type_Equality_from__2366809570(dictTypeEquals_0_loop *Constructor_Type_Equality_TypeEquals) gopurs_runtime.Value {
+var dictTypeEquals_0 *Constructor_Type_Equality_TypeEquals = dictTypeEquals_0_loop
 _ = dictTypeEquals_0
 return gopurs_runtime.Apply(gopurs_runtime.Box(dictTypeEquals_0.V1), gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return a_1
 }))
 }
 
-func Call_Type_Equality_proof__3118023201(dict_0_loop *Constructor_Type_Equality_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Type_Equality_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Type_Equality_proof__3118023201(dict_0_loop *Constructor_Type_Equality_TypeEquals) gopurs_runtime.Value {
+var dict_0 *Constructor_Type_Equality_TypeEquals = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Type_Equality_proof__3363032129(dict_0_loop *Constructor_Type_Equality_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Type_Equality_TypeEquals[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Type_Equality_proof__3363032129(dict_0_loop *Constructor_Type_Equality_TypeEquals) gopurs_runtime.Value {
+var dict_0 *Constructor_Type_Equality_TypeEquals = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }

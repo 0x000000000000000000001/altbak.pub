@@ -33,7 +33,7 @@ var once_TestDPE_mappend_ sync.Once
 func Get_TestDPE_mappend_() gopurs_runtime.Value {
 	once_TestDPE_mappend_.Do(func() {
 		cache_TestDPE_mappend_ = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_TestDPE_mappend_(gopurs_runtime.CoerceToStruct[Constructor_TestDPE_Monoidish[gopurs_runtime.Value]](dict_0_box))
+return Call_TestDPE_mappend_(gopurs_runtime.CoerceToStruct[Constructor_TestDPE_Monoidish](dict_0_box))
 })
 	})
 	return cache_TestDPE_mappend_
@@ -44,7 +44,7 @@ var once_TestDPE_polyLoop sync.Once
 func Get_TestDPE_polyLoop() gopurs_runtime.Value {
 	once_TestDPE_polyLoop.Do(func() {
 		cache_TestDPE_polyLoop = gopurs_runtime.Func(func(dictMonoidish_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_TestDPE_polyLoop(gopurs_runtime.CoerceToStruct[Constructor_TestDPE_Monoidish[gopurs_runtime.Value]](dictMonoidish_0_box))
+return Call_TestDPE_polyLoop(gopurs_runtime.CoerceToStruct[Constructor_TestDPE_Monoidish](dictMonoidish_0_box))
 })
 	})
 	return cache_TestDPE_polyLoop
@@ -77,7 +77,7 @@ var once_TestDPE_mappend___2927892844 sync.Once
 func Get_TestDPE_mappend___2927892844() gopurs_runtime.Value {
 	once_TestDPE_mappend___2927892844.Do(func() {
 		cache_TestDPE_mappend___2927892844 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_TestDPE_mappend___2927892844(gopurs_runtime.CoerceToStruct[Constructor_TestDPE_Monoidish[int64]](dict_0_box))
+return Call_TestDPE_mappend___2927892844(gopurs_runtime.CoerceToStruct[Constructor_TestDPE_Monoidish](dict_0_box))
 })
 	})
 	return cache_TestDPE_mappend___2927892844
@@ -88,7 +88,7 @@ var once_TestDPE_mappend___1285086188 sync.Once
 func Get_TestDPE_mappend___1285086188() gopurs_runtime.Value {
 	once_TestDPE_mappend___1285086188.Do(func() {
 		cache_TestDPE_mappend___1285086188 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_TestDPE_mappend___1285086188(gopurs_runtime.CoerceToStruct[Constructor_TestDPE_Monoidish[int64]](dict_0_box))
+return Call_TestDPE_mappend___1285086188(gopurs_runtime.CoerceToStruct[Constructor_TestDPE_Monoidish](dict_0_box))
 })
 	})
 	return cache_TestDPE_mappend___1285086188
@@ -99,7 +99,7 @@ var once_TestDPE_mappend___3425151628 sync.Once
 func Get_TestDPE_mappend___3425151628() gopurs_runtime.Value {
 	once_TestDPE_mappend___3425151628.Do(func() {
 		cache_TestDPE_mappend___3425151628 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_TestDPE_mappend___3425151628(gopurs_runtime.CoerceToStruct[Constructor_TestDPE_Monoidish[gopurs_runtime.Value]](dict_0_box))
+return Call_TestDPE_mappend___3425151628(gopurs_runtime.CoerceToStruct[Constructor_TestDPE_Monoidish](dict_0_box))
 })
 	})
 	return cache_TestDPE_mappend___3425151628
@@ -110,7 +110,7 @@ var once_TestDPE_polyLoop__2927892844 sync.Once
 func Get_TestDPE_polyLoop__2927892844() gopurs_runtime.Value {
 	once_TestDPE_polyLoop__2927892844.Do(func() {
 		cache_TestDPE_polyLoop__2927892844 = gopurs_runtime.Func(func(dictMonoidish_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_TestDPE_polyLoop__2927892844(gopurs_runtime.CoerceToStruct[Constructor_TestDPE_Monoidish[int64]](dictMonoidish_0_box))
+return Call_TestDPE_polyLoop__2927892844(gopurs_runtime.CoerceToStruct[Constructor_TestDPE_Monoidish](dictMonoidish_0_box))
 })
 	})
 	return cache_TestDPE_polyLoop__2927892844
@@ -132,22 +132,22 @@ var once_TestDPE_polyLoop__11377801 sync.Once
 func Get_TestDPE_polyLoop__11377801() gopurs_runtime.Value {
 	once_TestDPE_polyLoop__11377801.Do(func() {
 		cache_TestDPE_polyLoop__11377801 = gopurs_runtime.Func(func(dictMonoidish_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_TestDPE_polyLoop__11377801(gopurs_runtime.CoerceToStruct[Constructor_TestDPE_Monoidish[gopurs_runtime.Value]](dictMonoidish_0_box))
+return Call_TestDPE_polyLoop__11377801(gopurs_runtime.CoerceToStruct[Constructor_TestDPE_Monoidish](dictMonoidish_0_box))
 })
 	})
 	return cache_TestDPE_polyLoop__11377801
 }
 
-type Constructor_TestDPE_Monoidish[T_a any] struct {
+type Constructor_TestDPE_Monoidish struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
-	V1 T_a
+	V1 gopurs_runtime.Value
 }
 
 
 func init() {
 	gopurs_runtime.StructGetters[2768669742] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_TestDPE_Monoidish[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_TestDPE_Monoidish)(ptr)
 		_ = c
 		switch key {
 		case "mappend_": return gopurs_runtime.Box(c.V0)
@@ -170,17 +170,17 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "mempty_")
 }
 
-func Call_TestDPE_mappend_(dict_0_loop *Constructor_TestDPE_Monoidish[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_TestDPE_Monoidish[gopurs_runtime.Value] = dict_0_loop
+func Call_TestDPE_mappend_(dict_0_loop *Constructor_TestDPE_Monoidish) gopurs_runtime.Value {
+var dict_0 *Constructor_TestDPE_Monoidish = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_TestDPE_polyLoop(dictMonoidish_0_loop *Constructor_TestDPE_Monoidish[gopurs_runtime.Value]) gopurs_runtime.Value {
+func Call_TestDPE_polyLoop(dictMonoidish_0_loop *Constructor_TestDPE_Monoidish) gopurs_runtime.Value {
 polyLoop:
 for {
 if false { continue polyLoop }
-var dictMonoidish_0 *Constructor_TestDPE_Monoidish[gopurs_runtime.Value] = dictMonoidish_0_loop
+var dictMonoidish_0 *Constructor_TestDPE_Monoidish = dictMonoidish_0_loop
 _ = dictMonoidish_0
 // TAST (Let): mempty_1_1_0 -> gopurs_runtime.Value
 mempty_1_1_0 := gopurs_runtime.Box(dictMonoidish_0.V1)
@@ -206,26 +206,26 @@ return __t1
 }
 }
 
-func Call_TestDPE_mappend___2927892844(dict_0_loop *Constructor_TestDPE_Monoidish[int64]) gopurs_runtime.Value {
-var dict_0 *Constructor_TestDPE_Monoidish[int64] = dict_0_loop
+func Call_TestDPE_mappend___2927892844(dict_0_loop *Constructor_TestDPE_Monoidish) gopurs_runtime.Value {
+var dict_0 *Constructor_TestDPE_Monoidish = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_TestDPE_mappend___1285086188(dict_0_loop *Constructor_TestDPE_Monoidish[int64]) gopurs_runtime.Value {
-var dict_0 *Constructor_TestDPE_Monoidish[int64] = dict_0_loop
+func Call_TestDPE_mappend___1285086188(dict_0_loop *Constructor_TestDPE_Monoidish) gopurs_runtime.Value {
+var dict_0 *Constructor_TestDPE_Monoidish = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_TestDPE_mappend___3425151628(dict_0_loop *Constructor_TestDPE_Monoidish[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_TestDPE_Monoidish[gopurs_runtime.Value] = dict_0_loop
+func Call_TestDPE_mappend___3425151628(dict_0_loop *Constructor_TestDPE_Monoidish) gopurs_runtime.Value {
+var dict_0 *Constructor_TestDPE_Monoidish = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_TestDPE_polyLoop__2927892844(dictMonoidish_0_loop *Constructor_TestDPE_Monoidish[int64]) gopurs_runtime.Value {
-var dictMonoidish_0 *Constructor_TestDPE_Monoidish[int64] = dictMonoidish_0_loop
+func Call_TestDPE_polyLoop__2927892844(dictMonoidish_0_loop *Constructor_TestDPE_Monoidish) gopurs_runtime.Value {
+var dictMonoidish_0 *Constructor_TestDPE_Monoidish = dictMonoidish_0_loop
 _ = dictMonoidish_0
 // TAST (Let): mempty_1_1_0 -> int64
 mempty_1_1_0 := gopurs_runtime.Box(dictMonoidish_0.V1).IntVal
@@ -242,7 +242,7 @@ goto end_branch_1
 }
 }
 {
-__t1 = gopurs_runtime.Apply2(Call_TestDPE_polyLoop(gopurs_runtime.CoerceToStruct[Constructor_TestDPE_Monoidish[gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 2768669742, UnsafePtr: unsafe.Pointer(dictMonoidish_0)})), gopurs_runtime.Int((v_2.IntVal) - (1)), gopurs_runtime.Int(gopurs_runtime.Apply2(gopurs_runtime.Box(dictMonoidish_0.V0), gopurs_runtime.Int(v1_3.IntVal), gopurs_runtime.Int(mempty_1_1_0)).IntVal)).IntVal
+__t1 = gopurs_runtime.Apply2(Call_TestDPE_polyLoop(gopurs_runtime.CoerceToStruct[Constructor_TestDPE_Monoidish](gopurs_runtime.Value{Type: 9, IntVal: 2768669742, UnsafePtr: unsafe.Pointer(dictMonoidish_0)})), gopurs_runtime.Int((v_2.IntVal) - (1)), gopurs_runtime.Int(gopurs_runtime.Apply2(gopurs_runtime.Box(dictMonoidish_0.V0), gopurs_runtime.Int(v1_3.IntVal), gopurs_runtime.Int(mempty_1_1_0)).IntVal)).IntVal
 }
 end_branch_1:
 return gopurs_runtime.Int(__t1)
@@ -265,14 +265,14 @@ goto end_branch_0
 }
 }
 {
-__t0 = gopurs_runtime.Apply2(Call_TestDPE_polyLoop(gopurs_runtime.CoerceToStruct[Constructor_TestDPE_Monoidish[gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 2768669742, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_TestDPE_Monoidish[int64]](Get_TestDPE_intMonoidish()))})), gopurs_runtime.Int((__eta0_0.IntVal) - (1)), gopurs_runtime.Int(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_TestDPE_intMonoidish(), "mappend_"), gopurs_runtime.Int(__eta1_1.IntVal), gopurs_runtime.Int(gopurs_runtime.RecordGet(Get_TestDPE_intMonoidish(), "mempty_").IntVal)).IntVal)).IntVal
+__t0 = gopurs_runtime.Apply2(Call_TestDPE_polyLoop(gopurs_runtime.CoerceToStruct[Constructor_TestDPE_Monoidish](gopurs_runtime.Value{Type: 9, IntVal: 2768669742, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_TestDPE_Monoidish](Get_TestDPE_intMonoidish()))})), gopurs_runtime.Int((__eta0_0.IntVal) - (1)), gopurs_runtime.Int(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_TestDPE_intMonoidish(), "mappend_"), gopurs_runtime.Int(__eta1_1.IntVal), gopurs_runtime.Int(gopurs_runtime.RecordGet(Get_TestDPE_intMonoidish(), "mempty_").IntVal)).IntVal)).IntVal
 }
 end_branch_0:
 return gopurs_runtime.Int(__t0)
 }
 
-func Call_TestDPE_polyLoop__11377801(dictMonoidish_0_loop *Constructor_TestDPE_Monoidish[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictMonoidish_0 *Constructor_TestDPE_Monoidish[gopurs_runtime.Value] = dictMonoidish_0_loop
+func Call_TestDPE_polyLoop__11377801(dictMonoidish_0_loop *Constructor_TestDPE_Monoidish) gopurs_runtime.Value {
+var dictMonoidish_0 *Constructor_TestDPE_Monoidish = dictMonoidish_0_loop
 _ = dictMonoidish_0
 // TAST (Let): mempty_1_1_0 -> gopurs_runtime.Value
 mempty_1_1_0 := gopurs_runtime.Box(dictMonoidish_0.V1)

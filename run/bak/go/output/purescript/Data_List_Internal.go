@@ -22,7 +22,7 @@ func Get_Data_List_Internal_Two() gopurs_runtime.Value {
 		cache_Data_List_Internal_Two = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two[gopurs_runtime.Value]{1, value0, value1, value2})}
+return gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two{1, value0, value1, value2})}
 })
 })
 })
@@ -39,7 +39,7 @@ return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Valu
 return gopurs_runtime.Func(func(value2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1064476974, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Three[gopurs_runtime.Value]{1, value0, value1, value2, value3, value4})}
+return gopurs_runtime.Value{Type: 9, IntVal: 1064476974, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Three{1, value0, value1, value2, value3, value4})}
 })
 })
 })
@@ -55,7 +55,7 @@ func Get_Data_List_Internal_TwoLeft() gopurs_runtime.Value {
 	once_Data_List_Internal_TwoLeft.Do(func() {
 		cache_Data_List_Internal_TwoLeft = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1304506903, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_TwoLeft[gopurs_runtime.Value]{1, value0, value1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 1304506903, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_TwoLeft{1, value0, value1})}
 })
 })
 	})
@@ -68,7 +68,7 @@ func Get_Data_List_Internal_TwoRight() gopurs_runtime.Value {
 	once_Data_List_Internal_TwoRight.Do(func() {
 		cache_Data_List_Internal_TwoRight = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2884341868, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_TwoRight[gopurs_runtime.Value]{1, value0, value1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2884341868, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_TwoRight{1, value0, value1})}
 })
 })
 	})
@@ -83,7 +83,7 @@ func Get_Data_List_Internal_ThreeLeft() gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2195694037, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_ThreeLeft[gopurs_runtime.Value]{1, value0, value1, value2, value3})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2195694037, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_ThreeLeft{1, value0, value1, value2, value3})}
 })
 })
 })
@@ -100,7 +100,7 @@ func Get_Data_List_Internal_ThreeMiddle() gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1584522659, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_ThreeMiddle[gopurs_runtime.Value]{1, value0, value1, value2, value3})}
+return gopurs_runtime.Value{Type: 9, IntVal: 1584522659, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_ThreeMiddle{1, value0, value1, value2, value3})}
 })
 })
 })
@@ -117,7 +117,7 @@ func Get_Data_List_Internal_ThreeRight() gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 3952671150, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_ThreeRight[gopurs_runtime.Value]{1, value0, value1, value2, value3})}
+return gopurs_runtime.Value{Type: 9, IntVal: 3952671150, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_ThreeRight{1, value0, value1, value2, value3})}
 })
 })
 })
@@ -133,7 +133,7 @@ func Get_Data_List_Internal_KickUp() gopurs_runtime.Value {
 		cache_Data_List_Internal_KickUp = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2023586927, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value]{1, value0, value1, value2})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2023586927, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_KickUp{1, value0, value1, value2})}
 })
 })
 })
@@ -146,7 +146,7 @@ var once_Data_List_Internal_fromZipper sync.Once
 func Get_Data_List_Internal_fromZipper() gopurs_runtime.Value {
 	once_Data_List_Internal_fromZipper.Do(func() {
 		cache_Data_List_Internal_fromZipper = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_List_Internal_fromZipper(gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](v_0_box), v1_1_box)
+return Call_Data_List_Internal_fromZipper(gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](v_0_box), v1_1_box)
 })
 	})
 	return cache_Data_List_Internal_fromZipper
@@ -186,7 +186,7 @@ var once_Data_List_Internal_fromZipper__1019554324 sync.Once
 func Get_Data_List_Internal_fromZipper__1019554324() gopurs_runtime.Value {
 	once_Data_List_Internal_fromZipper__1019554324.Do(func() {
 		cache_Data_List_Internal_fromZipper__1019554324 = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_List_Internal_fromZipper__1019554324(gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](v_0_box), v1_1_box)
+return Call_Data_List_Internal_fromZipper__1019554324(gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](v_0_box), v1_1_box)
 })
 	})
 	return cache_Data_List_Internal_fromZipper__1019554324
@@ -203,89 +203,89 @@ return Call_Data_List_Internal_insertAndLookupBy__3244745033(comp_0_box, k_1_box
 	return cache_Data_List_Internal_insertAndLookupBy__3244745033
 }
 
-type Constructor_Data_List_Internal_Leaf[T_k any] struct {
+type Constructor_Data_List_Internal_Leaf struct {
 	Rc uint32
 }
 
 
-type Constructor_Data_List_Internal_Two[T_k any] struct {
+type Constructor_Data_List_Internal_Two struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
-	V1 T_k
+	V1 gopurs_runtime.Value
 	V2 gopurs_runtime.Value
 }
 
 
-type Constructor_Data_List_Internal_Three[T_k any] struct {
+type Constructor_Data_List_Internal_Three struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
-	V1 T_k
+	V1 gopurs_runtime.Value
 	V2 gopurs_runtime.Value
-	V3 T_k
+	V3 gopurs_runtime.Value
 	V4 gopurs_runtime.Value
 }
 
 
-type Constructor_Data_List_Internal_TwoLeft[T_k any] struct {
+type Constructor_Data_List_Internal_TwoLeft struct {
 	Rc uint32
-	V0 T_k
+	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
 }
 
 
-type Constructor_Data_List_Internal_TwoRight[T_k any] struct {
+type Constructor_Data_List_Internal_TwoRight struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
-	V1 T_k
-}
-
-
-type Constructor_Data_List_Internal_ThreeLeft[T_k any] struct {
-	Rc uint32
-	V0 T_k
 	V1 gopurs_runtime.Value
-	V2 T_k
+}
+
+
+type Constructor_Data_List_Internal_ThreeLeft struct {
+	Rc uint32
+	V0 gopurs_runtime.Value
+	V1 gopurs_runtime.Value
+	V2 gopurs_runtime.Value
 	V3 gopurs_runtime.Value
 }
 
 
-type Constructor_Data_List_Internal_ThreeMiddle[T_k any] struct {
+type Constructor_Data_List_Internal_ThreeMiddle struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
-	V1 T_k
-	V2 T_k
+	V1 gopurs_runtime.Value
+	V2 gopurs_runtime.Value
 	V3 gopurs_runtime.Value
 }
 
 
-type Constructor_Data_List_Internal_ThreeRight[T_k any] struct {
+type Constructor_Data_List_Internal_ThreeRight struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
-	V1 T_k
+	V1 gopurs_runtime.Value
 	V2 gopurs_runtime.Value
-	V3 T_k
+	V3 gopurs_runtime.Value
 }
 
 
-type Constructor_Data_List_Internal_KickUp[T_k any] struct {
+type Constructor_Data_List_Internal_KickUp struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
-	V1 T_k
+	V1 gopurs_runtime.Value
 	V2 gopurs_runtime.Value
 }
 
 
-func Call_Data_List_Internal_fromZipper(v_0_loop *Constructor_Data_List_Types_Cons[gopurs_runtime.Value], v1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_Data_List_Internal_fromZipper(v_0_loop *Constructor_Data_List_Types_Cons, v1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 fromZipper:
 for {
 if false { continue fromZipper }
-var v_0 *Constructor_Data_List_Types_Cons[gopurs_runtime.Value] = v_0_loop
+var v_0 *Constructor_Data_List_Types_Cons = v_0_loop
 _ = v_0
 var v1_1 gopurs_runtime.Value = v1_1_loop
 _ = v1_1
 var __t6 gopurs_runtime.Value
 {
-if (gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.Type == 9 && gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.IntVal == 1358893437 && gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr == nil) {
+if (v_0 == nil) {
 __t6 = v1_1
 goto end_branch_6
 } else {
@@ -293,13 +293,13 @@ goto end_branch_6
 }
 }
 {
-if (gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.Type == 9 && gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.IntVal == 1358893437 && gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr != nil) {
+if (v_0 != nil) {
 var __t5 gopurs_runtime.Value
 {
-var __t_tag_0 gopurs_runtime.Value = (*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0
+var __t_tag_0 gopurs_runtime.Value = (v_0).V0
 if (__t_tag_0.Type == 9 && __t_tag_0.IntVal == 1304506903) {
-v_0_loop = (*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1
-v1_1_loop = gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two[gopurs_runtime.Value]{1, v1_1, (*Constructor_Data_List_Internal_TwoLeft[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_TwoLeft[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V1})}
+v_0_loop = (v_0).V1
+v1_1_loop = gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two{1, v1_1, (*Constructor_Data_List_Internal_TwoLeft)((v_0).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_TwoLeft)((v_0).V0.UnsafePtr).V1})}
 continue fromZipper
 __t5 = gopurs_runtime.Value{}
 goto end_branch_5
@@ -308,10 +308,10 @@ goto end_branch_5
 }
 }
 {
-var __t_tag_1 gopurs_runtime.Value = (*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0
+var __t_tag_1 gopurs_runtime.Value = (v_0).V0
 if (__t_tag_1.Type == 9 && __t_tag_1.IntVal == 2884341868) {
-v_0_loop = (*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1
-v1_1_loop = gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_TwoRight[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_TwoRight[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V1, v1_1})}
+v_0_loop = (v_0).V1
+v1_1_loop = gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two{1, (*Constructor_Data_List_Internal_TwoRight)((v_0).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_TwoRight)((v_0).V0.UnsafePtr).V1, v1_1})}
 continue fromZipper
 __t5 = gopurs_runtime.Value{}
 goto end_branch_5
@@ -320,10 +320,10 @@ goto end_branch_5
 }
 }
 {
-var __t_tag_2 gopurs_runtime.Value = (*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0
+var __t_tag_2 gopurs_runtime.Value = (v_0).V0
 if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 2195694037) {
-v_0_loop = (*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1
-v1_1_loop = gopurs_runtime.Value{Type: 9, IntVal: 1064476974, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Three[gopurs_runtime.Value]{1, v1_1, (*Constructor_Data_List_Internal_ThreeLeft[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_ThreeLeft[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V1, (*Constructor_Data_List_Internal_ThreeLeft[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V2, (*Constructor_Data_List_Internal_ThreeLeft[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V3})}
+v_0_loop = (v_0).V1
+v1_1_loop = gopurs_runtime.Value{Type: 9, IntVal: 1064476974, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Three{1, v1_1, (*Constructor_Data_List_Internal_ThreeLeft)((v_0).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_ThreeLeft)((v_0).V0.UnsafePtr).V1, (*Constructor_Data_List_Internal_ThreeLeft)((v_0).V0.UnsafePtr).V2, (*Constructor_Data_List_Internal_ThreeLeft)((v_0).V0.UnsafePtr).V3})}
 continue fromZipper
 __t5 = gopurs_runtime.Value{}
 goto end_branch_5
@@ -332,10 +332,10 @@ goto end_branch_5
 }
 }
 {
-var __t_tag_3 gopurs_runtime.Value = (*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0
+var __t_tag_3 gopurs_runtime.Value = (v_0).V0
 if (__t_tag_3.Type == 9 && __t_tag_3.IntVal == 1584522659) {
-v_0_loop = (*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1
-v1_1_loop = gopurs_runtime.Value{Type: 9, IntVal: 1064476974, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Three[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_ThreeMiddle[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_ThreeMiddle[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V1, v1_1, (*Constructor_Data_List_Internal_ThreeMiddle[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V2, (*Constructor_Data_List_Internal_ThreeMiddle[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V3})}
+v_0_loop = (v_0).V1
+v1_1_loop = gopurs_runtime.Value{Type: 9, IntVal: 1064476974, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Three{1, (*Constructor_Data_List_Internal_ThreeMiddle)((v_0).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_ThreeMiddle)((v_0).V0.UnsafePtr).V1, v1_1, (*Constructor_Data_List_Internal_ThreeMiddle)((v_0).V0.UnsafePtr).V2, (*Constructor_Data_List_Internal_ThreeMiddle)((v_0).V0.UnsafePtr).V3})}
 continue fromZipper
 __t5 = gopurs_runtime.Value{}
 goto end_branch_5
@@ -344,10 +344,10 @@ goto end_branch_5
 }
 }
 {
-var __t_tag_4 gopurs_runtime.Value = (*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0
+var __t_tag_4 gopurs_runtime.Value = (v_0).V0
 if (__t_tag_4.Type == 9 && __t_tag_4.IntVal == 3952671150) {
-v_0_loop = (*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1
-v1_1_loop = gopurs_runtime.Value{Type: 9, IntVal: 1064476974, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Three[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_ThreeRight[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_ThreeRight[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V1, (*Constructor_Data_List_Internal_ThreeRight[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V2, (*Constructor_Data_List_Internal_ThreeRight[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V3, v1_1})}
+v_0_loop = (v_0).V1
+v1_1_loop = gopurs_runtime.Value{Type: 9, IntVal: 1064476974, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Three{1, (*Constructor_Data_List_Internal_ThreeRight)((v_0).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_ThreeRight)((v_0).V0.UnsafePtr).V1, (*Constructor_Data_List_Internal_ThreeRight)((v_0).V0.UnsafePtr).V2, (*Constructor_Data_List_Internal_ThreeRight)((v_0).V0.UnsafePtr).V3, v1_1})}
 continue fromZipper
 __t5 = gopurs_runtime.Value{}
 goto end_branch_5
@@ -396,7 +396,7 @@ _ = v1_5
 var __t7 gopurs_runtime.Value
 {
 if (v_4.Type == 9 && v_4.IntVal == 1358893437 && v_4.UnsafePtr == nil) {
-__t7 = gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V0, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V2})}
+__t7 = gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two{1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V0, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V2})}
 goto end_branch_7
 } else {
 
@@ -406,28 +406,28 @@ goto end_branch_7
 if (v_4.Type == 9 && v_4.IntVal == 1358893437 && v_4.UnsafePtr != nil) {
 var __t6 gopurs_runtime.Value
 {
-var __t_tag_1 gopurs_runtime.Value = (*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0
+var __t_tag_1 gopurs_runtime.Value = (*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0
 if (__t_tag_1.Type == 9 && __t_tag_1.IntVal == 1304506903) {
-__t6 = Call_Data_List_Internal_fromZipper((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V1, gopurs_runtime.Value{Type: 9, IntVal: 1064476974, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Three[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V0, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V2, (*Constructor_Data_List_Internal_TwoLeft[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_TwoLeft[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V1})})
+__t6 = Call_Data_List_Internal_fromZipper((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V1, gopurs_runtime.Value{Type: 9, IntVal: 1064476974, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Three{1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V0, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V2, (*Constructor_Data_List_Internal_TwoLeft)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_TwoLeft)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V1})})
 goto end_branch_6
 } else {
 
 }
 }
 {
-var __t_tag_2 gopurs_runtime.Value = (*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0
+var __t_tag_2 gopurs_runtime.Value = (*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0
 if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 2884341868) {
-__t6 = Call_Data_List_Internal_fromZipper((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V1, gopurs_runtime.Value{Type: 9, IntVal: 1064476974, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Three[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_TwoRight[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_TwoRight[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V0, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V2})})
+__t6 = Call_Data_List_Internal_fromZipper((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V1, gopurs_runtime.Value{Type: 9, IntVal: 1064476974, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Three{1, (*Constructor_Data_List_Internal_TwoRight)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_TwoRight)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V0, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V2})})
 goto end_branch_6
 } else {
 
 }
 }
 {
-var __t_tag_3 gopurs_runtime.Value = (*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0
+var __t_tag_3 gopurs_runtime.Value = (*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0
 if (__t_tag_3.Type == 9 && __t_tag_3.IntVal == 2195694037) {
-v_4_loop = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V1)}
-v1_5_loop = gopurs_runtime.Value{Type: 9, IntVal: 2023586927, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value]{1, gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V0, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V2})}, (*Constructor_Data_List_Internal_ThreeLeft[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V0, gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_ThreeLeft[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V1, (*Constructor_Data_List_Internal_ThreeLeft[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V2, (*Constructor_Data_List_Internal_ThreeLeft[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V3})}})}
+v_4_loop = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V1)}
+v1_5_loop = gopurs_runtime.Value{Type: 9, IntVal: 2023586927, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_KickUp{1, gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two{1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V0, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V2})}, (*Constructor_Data_List_Internal_ThreeLeft)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V0, gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two{1, (*Constructor_Data_List_Internal_ThreeLeft)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V1, (*Constructor_Data_List_Internal_ThreeLeft)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V2, (*Constructor_Data_List_Internal_ThreeLeft)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V3})}})}
 continue up_3_0_0
 __t6 = gopurs_runtime.Value{}
 goto end_branch_6
@@ -436,10 +436,10 @@ goto end_branch_6
 }
 }
 {
-var __t_tag_4 gopurs_runtime.Value = (*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0
+var __t_tag_4 gopurs_runtime.Value = (*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0
 if (__t_tag_4.Type == 9 && __t_tag_4.IntVal == 1584522659) {
-v_4_loop = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V1)}
-v1_5_loop = gopurs_runtime.Value{Type: 9, IntVal: 2023586927, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value]{1, gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_ThreeMiddle[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_ThreeMiddle[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V0})}, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V1, gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V2, (*Constructor_Data_List_Internal_ThreeMiddle[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V2, (*Constructor_Data_List_Internal_ThreeMiddle[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V3})}})}
+v_4_loop = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V1)}
+v1_5_loop = gopurs_runtime.Value{Type: 9, IntVal: 2023586927, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_KickUp{1, gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two{1, (*Constructor_Data_List_Internal_ThreeMiddle)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_ThreeMiddle)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V0})}, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V1, gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two{1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V2, (*Constructor_Data_List_Internal_ThreeMiddle)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V2, (*Constructor_Data_List_Internal_ThreeMiddle)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V3})}})}
 continue up_3_0_0
 __t6 = gopurs_runtime.Value{}
 goto end_branch_6
@@ -448,10 +448,10 @@ goto end_branch_6
 }
 }
 {
-var __t_tag_5 gopurs_runtime.Value = (*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0
+var __t_tag_5 gopurs_runtime.Value = (*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0
 if (__t_tag_5.Type == 9 && __t_tag_5.IntVal == 3952671150) {
-v_4_loop = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V1)}
-v1_5_loop = gopurs_runtime.Value{Type: 9, IntVal: 2023586927, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value]{1, gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_ThreeRight[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_ThreeRight[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V1, (*Constructor_Data_List_Internal_ThreeRight[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V2})}, (*Constructor_Data_List_Internal_ThreeRight[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V3, gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V0, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V2})}})}
+v_4_loop = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V1)}
+v1_5_loop = gopurs_runtime.Value{Type: 9, IntVal: 2023586927, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_KickUp{1, gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two{1, (*Constructor_Data_List_Internal_ThreeRight)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_ThreeRight)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V1, (*Constructor_Data_List_Internal_ThreeRight)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V2})}, (*Constructor_Data_List_Internal_ThreeRight)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V3, gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two{1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V0, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V2})}})}
 continue up_3_0_0
 __t6 = gopurs_runtime.Value{}
 goto end_branch_6
@@ -482,19 +482,19 @@ var down_4_8_1 gopurs_runtime.Value
 down_4_8_1 = gopurs_runtime.Func(func(v_5_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_6_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
-var v_5_loop *Constructor_Data_List_Types_Cons[gopurs_runtime.Value] = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](v_5_loop_val)
+var v_5_loop *Constructor_Data_List_Types_Cons = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](v_5_loop_val)
 var v1_6_loop gopurs_runtime.Value = v1_6_loop_val
 down_4_8_1:
 for {
 if false { continue down_4_8_1 }
-var v_5 *Constructor_Data_List_Types_Cons[gopurs_runtime.Value] = v_5_loop
+var v_5 *Constructor_Data_List_Types_Cons = v_5_loop
 _ = v_5
 var v1_6 gopurs_runtime.Value = v1_6_loop
 _ = v1_6
 var __t15 gopurs_runtime.Value
 {
 if (v1_6.Type == 9 && v1_6.IntVal == 2764020654) {
-__t15 = gopurs_runtime.RecordDict2("found", "result", gopurs_runtime.Bool(false), gopurs_runtime.Apply2(up_3_0_0, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_5)}, gopurs_runtime.Value{Type: 9, IntVal: 2023586927, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value]{1, gopurs_runtime.Value{Type: 9, IntVal: 2764020654, UnsafePtr: unsafe.Pointer(nil)}, k_1, gopurs_runtime.Value{Type: 9, IntVal: 2764020654, UnsafePtr: unsafe.Pointer(nil)}})}))
+__t15 = gopurs_runtime.RecordDict2("found", "result", gopurs_runtime.Bool(false), gopurs_runtime.Apply2(up_3_0_0, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_5)}, gopurs_runtime.Value{Type: 9, IntVal: 2023586927, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_KickUp{1, gopurs_runtime.Value{Type: 9, IntVal: 2764020654, UnsafePtr: unsafe.Pointer(nil)}, k_1, gopurs_runtime.Value{Type: 9, IntVal: 2764020654, UnsafePtr: unsafe.Pointer(nil)}})}))
 goto end_branch_15
 } else {
 
@@ -503,7 +503,7 @@ goto end_branch_15
 {
 if (v1_6.Type == 9 && v1_6.IntVal == 1177901036) {
 // TAST (Let): v2_7_9 -> gopurs_runtime.Value
-v2_7_9 := gopurs_runtime.Apply2(comp_0, k_1, (*Constructor_Data_List_Internal_Two[gopurs_runtime.Value])(v1_6.UnsafePtr).V1)
+v2_7_9 := gopurs_runtime.Apply2(comp_0, k_1, (*Constructor_Data_List_Internal_Two)(v1_6.UnsafePtr).V1)
 _ = v2_7_9
 var __t10 gopurs_runtime.Value
 {
@@ -516,8 +516,8 @@ goto end_branch_10
 }
 {
 if (uint32(v2_7_9.IntVal) == 1527465420) {
-v_5_loop = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons[gopurs_runtime.Value]{1, gopurs_runtime.Value{Type: 9, IntVal: 1304506903, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_TwoLeft[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_Two[gopurs_runtime.Value])(v1_6.UnsafePtr).V1, (*Constructor_Data_List_Internal_Two[gopurs_runtime.Value])(v1_6.UnsafePtr).V2})}, v_5})})
-v1_6_loop = (*Constructor_Data_List_Internal_Two[gopurs_runtime.Value])(v1_6.UnsafePtr).V0
+v_5_loop = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons{1, gopurs_runtime.Value{Type: 9, IntVal: 1304506903, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_TwoLeft{1, (*Constructor_Data_List_Internal_Two)(v1_6.UnsafePtr).V1, (*Constructor_Data_List_Internal_Two)(v1_6.UnsafePtr).V2})}, v_5})})
+v1_6_loop = (*Constructor_Data_List_Internal_Two)(v1_6.UnsafePtr).V0
 continue down_4_8_1
 __t10 = gopurs_runtime.Value{}
 goto end_branch_10
@@ -526,8 +526,8 @@ goto end_branch_10
 }
 }
 {
-v_5_loop = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons[gopurs_runtime.Value]{1, gopurs_runtime.Value{Type: 9, IntVal: 2884341868, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_TwoRight[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_Two[gopurs_runtime.Value])(v1_6.UnsafePtr).V0, (*Constructor_Data_List_Internal_Two[gopurs_runtime.Value])(v1_6.UnsafePtr).V1})}, v_5})})
-v1_6_loop = (*Constructor_Data_List_Internal_Two[gopurs_runtime.Value])(v1_6.UnsafePtr).V2
+v_5_loop = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons{1, gopurs_runtime.Value{Type: 9, IntVal: 2884341868, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_TwoRight{1, (*Constructor_Data_List_Internal_Two)(v1_6.UnsafePtr).V0, (*Constructor_Data_List_Internal_Two)(v1_6.UnsafePtr).V1})}, v_5})})
+v1_6_loop = (*Constructor_Data_List_Internal_Two)(v1_6.UnsafePtr).V2
 continue down_4_8_1
 __t10 = gopurs_runtime.Value{}
 }
@@ -541,7 +541,7 @@ goto end_branch_15
 {
 if (v1_6.Type == 9 && v1_6.IntVal == 1064476974) {
 // TAST (Let): v2_7_11 -> gopurs_runtime.Value
-v2_7_11 := gopurs_runtime.Apply2(comp_0, k_1, (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V1)
+v2_7_11 := gopurs_runtime.Apply2(comp_0, k_1, (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V1)
 _ = v2_7_11
 var __t14 gopurs_runtime.Value
 {
@@ -554,7 +554,7 @@ goto end_branch_14
 }
 {
 // TAST (Let): v3_8_12 -> gopurs_runtime.Value
-v3_8_12 := gopurs_runtime.Apply2(comp_0, k_1, (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V3)
+v3_8_12 := gopurs_runtime.Apply2(comp_0, k_1, (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V3)
 _ = v3_8_12
 var __t13 gopurs_runtime.Value
 {
@@ -567,8 +567,8 @@ goto end_branch_13
 }
 {
 if (uint32(v2_7_11.IntVal) == 1527465420) {
-v_5_loop = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons[gopurs_runtime.Value]{1, gopurs_runtime.Value{Type: 9, IntVal: 2195694037, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_ThreeLeft[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V1, (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V2, (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V3, (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V4})}, v_5})})
-v1_6_loop = (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V0
+v_5_loop = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons{1, gopurs_runtime.Value{Type: 9, IntVal: 2195694037, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_ThreeLeft{1, (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V1, (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V2, (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V3, (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V4})}, v_5})})
+v1_6_loop = (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V0
 continue down_4_8_1
 __t13 = gopurs_runtime.Value{}
 goto end_branch_13
@@ -578,8 +578,8 @@ goto end_branch_13
 }
 {
 if ((uint32(v2_7_11.IntVal) == 380165415)) && ((uint32(v3_8_12.IntVal) == 1527465420)) {
-v_5_loop = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons[gopurs_runtime.Value]{1, gopurs_runtime.Value{Type: 9, IntVal: 1584522659, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_ThreeMiddle[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V0, (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V1, (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V3, (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V4})}, v_5})})
-v1_6_loop = (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V2
+v_5_loop = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons{1, gopurs_runtime.Value{Type: 9, IntVal: 1584522659, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_ThreeMiddle{1, (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V0, (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V1, (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V3, (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V4})}, v_5})})
+v1_6_loop = (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V2
 continue down_4_8_1
 __t13 = gopurs_runtime.Value{}
 goto end_branch_13
@@ -588,8 +588,8 @@ goto end_branch_13
 }
 }
 {
-v_5_loop = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons[gopurs_runtime.Value]{1, gopurs_runtime.Value{Type: 9, IntVal: 3952671150, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_ThreeRight[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V0, (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V1, (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V2, (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V3})}, v_5})})
-v1_6_loop = (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V4
+v_5_loop = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons{1, gopurs_runtime.Value{Type: 9, IntVal: 3952671150, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_ThreeRight{1, (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V0, (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V1, (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V2, (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V3})}, v_5})})
+v1_6_loop = (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V4
 continue down_4_8_1
 __t13 = gopurs_runtime.Value{}
 }
@@ -612,17 +612,17 @@ return __t15
 }()
 })
 })
-return gopurs_runtime.Apply2(down_4_8_1, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(nil))}, orig_2)
+return gopurs_runtime.Apply2(down_4_8_1, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer((*Constructor_Data_List_Types_Cons)(nil))}, orig_2)
 }
 
-func Call_Data_List_Internal_fromZipper__1019554324(v_0_loop *Constructor_Data_List_Types_Cons[gopurs_runtime.Value], v1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var v_0 *Constructor_Data_List_Types_Cons[gopurs_runtime.Value] = v_0_loop
+func Call_Data_List_Internal_fromZipper__1019554324(v_0_loop *Constructor_Data_List_Types_Cons, v1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var v_0 *Constructor_Data_List_Types_Cons = v_0_loop
 _ = v_0
 var v1_1 gopurs_runtime.Value = v1_1_loop
 _ = v1_1
 var __t6 gopurs_runtime.Value
 {
-if (gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.Type == 9 && gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.IntVal == 1358893437 && gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr == nil) {
+if (v_0 == nil) {
 __t6 = v1_1
 goto end_branch_6
 } else {
@@ -630,48 +630,48 @@ goto end_branch_6
 }
 }
 {
-if (gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.Type == 9 && gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.IntVal == 1358893437 && gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr != nil) {
+if (v_0 != nil) {
 var __t5 gopurs_runtime.Value
 {
-var __t_tag_0 gopurs_runtime.Value = (*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0
+var __t_tag_0 gopurs_runtime.Value = (v_0).V0
 if (__t_tag_0.Type == 9 && __t_tag_0.IntVal == 1304506903) {
-__t5 = Call_Data_List_Internal_fromZipper((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1, gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two[gopurs_runtime.Value]{1, v1_1, (*Constructor_Data_List_Internal_TwoLeft[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_TwoLeft[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V1})})
+__t5 = Call_Data_List_Internal_fromZipper((v_0).V1, gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two{1, v1_1, (*Constructor_Data_List_Internal_TwoLeft)((v_0).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_TwoLeft)((v_0).V0.UnsafePtr).V1})})
 goto end_branch_5
 } else {
 
 }
 }
 {
-var __t_tag_1 gopurs_runtime.Value = (*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0
+var __t_tag_1 gopurs_runtime.Value = (v_0).V0
 if (__t_tag_1.Type == 9 && __t_tag_1.IntVal == 2884341868) {
-__t5 = Call_Data_List_Internal_fromZipper((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1, gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_TwoRight[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_TwoRight[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V1, v1_1})})
+__t5 = Call_Data_List_Internal_fromZipper((v_0).V1, gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two{1, (*Constructor_Data_List_Internal_TwoRight)((v_0).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_TwoRight)((v_0).V0.UnsafePtr).V1, v1_1})})
 goto end_branch_5
 } else {
 
 }
 }
 {
-var __t_tag_2 gopurs_runtime.Value = (*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0
+var __t_tag_2 gopurs_runtime.Value = (v_0).V0
 if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 2195694037) {
-__t5 = Call_Data_List_Internal_fromZipper((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1, gopurs_runtime.Value{Type: 9, IntVal: 1064476974, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Three[gopurs_runtime.Value]{1, v1_1, (*Constructor_Data_List_Internal_ThreeLeft[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_ThreeLeft[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V1, (*Constructor_Data_List_Internal_ThreeLeft[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V2, (*Constructor_Data_List_Internal_ThreeLeft[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V3})})
+__t5 = Call_Data_List_Internal_fromZipper((v_0).V1, gopurs_runtime.Value{Type: 9, IntVal: 1064476974, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Three{1, v1_1, (*Constructor_Data_List_Internal_ThreeLeft)((v_0).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_ThreeLeft)((v_0).V0.UnsafePtr).V1, (*Constructor_Data_List_Internal_ThreeLeft)((v_0).V0.UnsafePtr).V2, (*Constructor_Data_List_Internal_ThreeLeft)((v_0).V0.UnsafePtr).V3})})
 goto end_branch_5
 } else {
 
 }
 }
 {
-var __t_tag_3 gopurs_runtime.Value = (*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0
+var __t_tag_3 gopurs_runtime.Value = (v_0).V0
 if (__t_tag_3.Type == 9 && __t_tag_3.IntVal == 1584522659) {
-__t5 = Call_Data_List_Internal_fromZipper((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1, gopurs_runtime.Value{Type: 9, IntVal: 1064476974, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Three[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_ThreeMiddle[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_ThreeMiddle[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V1, v1_1, (*Constructor_Data_List_Internal_ThreeMiddle[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V2, (*Constructor_Data_List_Internal_ThreeMiddle[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V3})})
+__t5 = Call_Data_List_Internal_fromZipper((v_0).V1, gopurs_runtime.Value{Type: 9, IntVal: 1064476974, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Three{1, (*Constructor_Data_List_Internal_ThreeMiddle)((v_0).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_ThreeMiddle)((v_0).V0.UnsafePtr).V1, v1_1, (*Constructor_Data_List_Internal_ThreeMiddle)((v_0).V0.UnsafePtr).V2, (*Constructor_Data_List_Internal_ThreeMiddle)((v_0).V0.UnsafePtr).V3})})
 goto end_branch_5
 } else {
 
 }
 }
 {
-var __t_tag_4 gopurs_runtime.Value = (*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0
+var __t_tag_4 gopurs_runtime.Value = (v_0).V0
 if (__t_tag_4.Type == 9 && __t_tag_4.IntVal == 3952671150) {
-__t5 = Call_Data_List_Internal_fromZipper((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1, gopurs_runtime.Value{Type: 9, IntVal: 1064476974, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Three[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_ThreeRight[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_ThreeRight[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V1, (*Constructor_Data_List_Internal_ThreeRight[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V2, (*Constructor_Data_List_Internal_ThreeRight[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.UnsafePtr).V3, v1_1})})
+__t5 = Call_Data_List_Internal_fromZipper((v_0).V1, gopurs_runtime.Value{Type: 9, IntVal: 1064476974, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Three{1, (*Constructor_Data_List_Internal_ThreeRight)((v_0).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_ThreeRight)((v_0).V0.UnsafePtr).V1, (*Constructor_Data_List_Internal_ThreeRight)((v_0).V0.UnsafePtr).V2, (*Constructor_Data_List_Internal_ThreeRight)((v_0).V0.UnsafePtr).V3, v1_1})})
 goto end_branch_5
 } else {
 
@@ -717,7 +717,7 @@ _ = v1_5
 var __t7 gopurs_runtime.Value
 {
 if (v_4.Type == 9 && v_4.IntVal == 1358893437 && v_4.UnsafePtr == nil) {
-__t7 = gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V0, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V2})}
+__t7 = gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two{1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V0, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V2})}
 goto end_branch_7
 } else {
 
@@ -727,28 +727,28 @@ goto end_branch_7
 if (v_4.Type == 9 && v_4.IntVal == 1358893437 && v_4.UnsafePtr != nil) {
 var __t6 gopurs_runtime.Value
 {
-var __t_tag_1 gopurs_runtime.Value = (*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0
+var __t_tag_1 gopurs_runtime.Value = (*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0
 if (__t_tag_1.Type == 9 && __t_tag_1.IntVal == 1304506903) {
-__t6 = Call_Data_List_Internal_fromZipper((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V1, gopurs_runtime.Value{Type: 9, IntVal: 1064476974, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Three[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V0, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V2, (*Constructor_Data_List_Internal_TwoLeft[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_TwoLeft[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V1})})
+__t6 = Call_Data_List_Internal_fromZipper((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V1, gopurs_runtime.Value{Type: 9, IntVal: 1064476974, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Three{1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V0, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V2, (*Constructor_Data_List_Internal_TwoLeft)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_TwoLeft)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V1})})
 goto end_branch_6
 } else {
 
 }
 }
 {
-var __t_tag_2 gopurs_runtime.Value = (*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0
+var __t_tag_2 gopurs_runtime.Value = (*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0
 if (__t_tag_2.Type == 9 && __t_tag_2.IntVal == 2884341868) {
-__t6 = Call_Data_List_Internal_fromZipper((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V1, gopurs_runtime.Value{Type: 9, IntVal: 1064476974, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Three[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_TwoRight[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_TwoRight[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V0, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V2})})
+__t6 = Call_Data_List_Internal_fromZipper((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V1, gopurs_runtime.Value{Type: 9, IntVal: 1064476974, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Three{1, (*Constructor_Data_List_Internal_TwoRight)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_TwoRight)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V0, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V2})})
 goto end_branch_6
 } else {
 
 }
 }
 {
-var __t_tag_3 gopurs_runtime.Value = (*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0
+var __t_tag_3 gopurs_runtime.Value = (*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0
 if (__t_tag_3.Type == 9 && __t_tag_3.IntVal == 2195694037) {
-v_4_loop = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V1)}
-v1_5_loop = gopurs_runtime.Value{Type: 9, IntVal: 2023586927, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value]{1, gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V0, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V2})}, (*Constructor_Data_List_Internal_ThreeLeft[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V0, gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_ThreeLeft[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V1, (*Constructor_Data_List_Internal_ThreeLeft[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V2, (*Constructor_Data_List_Internal_ThreeLeft[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V3})}})}
+v_4_loop = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V1)}
+v1_5_loop = gopurs_runtime.Value{Type: 9, IntVal: 2023586927, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_KickUp{1, gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two{1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V0, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V2})}, (*Constructor_Data_List_Internal_ThreeLeft)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V0, gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two{1, (*Constructor_Data_List_Internal_ThreeLeft)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V1, (*Constructor_Data_List_Internal_ThreeLeft)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V2, (*Constructor_Data_List_Internal_ThreeLeft)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V3})}})}
 continue up_3_0_2
 __t6 = gopurs_runtime.Value{}
 goto end_branch_6
@@ -757,10 +757,10 @@ goto end_branch_6
 }
 }
 {
-var __t_tag_4 gopurs_runtime.Value = (*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0
+var __t_tag_4 gopurs_runtime.Value = (*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0
 if (__t_tag_4.Type == 9 && __t_tag_4.IntVal == 1584522659) {
-v_4_loop = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V1)}
-v1_5_loop = gopurs_runtime.Value{Type: 9, IntVal: 2023586927, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value]{1, gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_ThreeMiddle[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_ThreeMiddle[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V0})}, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V1, gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V2, (*Constructor_Data_List_Internal_ThreeMiddle[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V2, (*Constructor_Data_List_Internal_ThreeMiddle[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V3})}})}
+v_4_loop = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V1)}
+v1_5_loop = gopurs_runtime.Value{Type: 9, IntVal: 2023586927, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_KickUp{1, gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two{1, (*Constructor_Data_List_Internal_ThreeMiddle)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_ThreeMiddle)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V0})}, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V1, gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two{1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V2, (*Constructor_Data_List_Internal_ThreeMiddle)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V2, (*Constructor_Data_List_Internal_ThreeMiddle)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V3})}})}
 continue up_3_0_2
 __t6 = gopurs_runtime.Value{}
 goto end_branch_6
@@ -769,10 +769,10 @@ goto end_branch_6
 }
 }
 {
-var __t_tag_5 gopurs_runtime.Value = (*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0
+var __t_tag_5 gopurs_runtime.Value = (*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0
 if (__t_tag_5.Type == 9 && __t_tag_5.IntVal == 3952671150) {
-v_4_loop = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V1)}
-v1_5_loop = gopurs_runtime.Value{Type: 9, IntVal: 2023586927, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value]{1, gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_ThreeRight[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_ThreeRight[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V1, (*Constructor_Data_List_Internal_ThreeRight[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V2})}, (*Constructor_Data_List_Internal_ThreeRight[gopurs_runtime.Value])((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(v_4.UnsafePtr).V0.UnsafePtr).V3, gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V0, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value])(v1_5.UnsafePtr).V2})}})}
+v_4_loop = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V1)}
+v1_5_loop = gopurs_runtime.Value{Type: 9, IntVal: 2023586927, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_KickUp{1, gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two{1, (*Constructor_Data_List_Internal_ThreeRight)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V0, (*Constructor_Data_List_Internal_ThreeRight)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V1, (*Constructor_Data_List_Internal_ThreeRight)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V2})}, (*Constructor_Data_List_Internal_ThreeRight)((*Constructor_Data_List_Types_Cons)(v_4.UnsafePtr).V0.UnsafePtr).V3, gopurs_runtime.Value{Type: 9, IntVal: 1177901036, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_Two{1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V0, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V1, (*Constructor_Data_List_Internal_KickUp)(v1_5.UnsafePtr).V2})}})}
 continue up_3_0_2
 __t6 = gopurs_runtime.Value{}
 goto end_branch_6
@@ -803,19 +803,19 @@ var down_4_8_3 gopurs_runtime.Value
 down_4_8_3 = gopurs_runtime.Func(func(v_5_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_6_loop_val gopurs_runtime.Value) gopurs_runtime.Value {
 return func() gopurs_runtime.Value {
-var v_5_loop *Constructor_Data_List_Types_Cons[gopurs_runtime.Value] = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](v_5_loop_val)
+var v_5_loop *Constructor_Data_List_Types_Cons = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](v_5_loop_val)
 var v1_6_loop gopurs_runtime.Value = v1_6_loop_val
 down_4_8_3:
 for {
 if false { continue down_4_8_3 }
-var v_5 *Constructor_Data_List_Types_Cons[gopurs_runtime.Value] = v_5_loop
+var v_5 *Constructor_Data_List_Types_Cons = v_5_loop
 _ = v_5
 var v1_6 gopurs_runtime.Value = v1_6_loop
 _ = v1_6
 var __t15 gopurs_runtime.Value
 {
 if (v1_6.Type == 9 && v1_6.IntVal == 2764020654) {
-__t15 = gopurs_runtime.RecordDict2("found", "result", gopurs_runtime.Bool(false), gopurs_runtime.Apply2(up_3_0_2, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_5)}, gopurs_runtime.Value{Type: 9, IntVal: 2023586927, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_KickUp[gopurs_runtime.Value]{1, gopurs_runtime.Value{Type: 9, IntVal: 2764020654, UnsafePtr: unsafe.Pointer(nil)}, k_1, gopurs_runtime.Value{Type: 9, IntVal: 2764020654, UnsafePtr: unsafe.Pointer(nil)}})}))
+__t15 = gopurs_runtime.RecordDict2("found", "result", gopurs_runtime.Bool(false), gopurs_runtime.Apply2(up_3_0_2, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(v_5)}, gopurs_runtime.Value{Type: 9, IntVal: 2023586927, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_KickUp{1, gopurs_runtime.Value{Type: 9, IntVal: 2764020654, UnsafePtr: unsafe.Pointer(nil)}, k_1, gopurs_runtime.Value{Type: 9, IntVal: 2764020654, UnsafePtr: unsafe.Pointer(nil)}})}))
 goto end_branch_15
 } else {
 
@@ -824,7 +824,7 @@ goto end_branch_15
 {
 if (v1_6.Type == 9 && v1_6.IntVal == 1177901036) {
 // TAST (Let): v2_7_9 -> gopurs_runtime.Value
-v2_7_9 := gopurs_runtime.Apply2(comp_0, k_1, (*Constructor_Data_List_Internal_Two[gopurs_runtime.Value])(v1_6.UnsafePtr).V1)
+v2_7_9 := gopurs_runtime.Apply2(comp_0, k_1, (*Constructor_Data_List_Internal_Two)(v1_6.UnsafePtr).V1)
 _ = v2_7_9
 var __t10 gopurs_runtime.Value
 {
@@ -837,8 +837,8 @@ goto end_branch_10
 }
 {
 if (uint32(v2_7_9.IntVal) == 1527465420) {
-v_5_loop = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons[gopurs_runtime.Value]{1, gopurs_runtime.Value{Type: 9, IntVal: 1304506903, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_TwoLeft[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_Two[gopurs_runtime.Value])(v1_6.UnsafePtr).V1, (*Constructor_Data_List_Internal_Two[gopurs_runtime.Value])(v1_6.UnsafePtr).V2})}, v_5})})
-v1_6_loop = (*Constructor_Data_List_Internal_Two[gopurs_runtime.Value])(v1_6.UnsafePtr).V0
+v_5_loop = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons{1, gopurs_runtime.Value{Type: 9, IntVal: 1304506903, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_TwoLeft{1, (*Constructor_Data_List_Internal_Two)(v1_6.UnsafePtr).V1, (*Constructor_Data_List_Internal_Two)(v1_6.UnsafePtr).V2})}, v_5})})
+v1_6_loop = (*Constructor_Data_List_Internal_Two)(v1_6.UnsafePtr).V0
 continue down_4_8_3
 __t10 = gopurs_runtime.Value{}
 goto end_branch_10
@@ -847,8 +847,8 @@ goto end_branch_10
 }
 }
 {
-v_5_loop = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons[gopurs_runtime.Value]{1, gopurs_runtime.Value{Type: 9, IntVal: 2884341868, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_TwoRight[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_Two[gopurs_runtime.Value])(v1_6.UnsafePtr).V0, (*Constructor_Data_List_Internal_Two[gopurs_runtime.Value])(v1_6.UnsafePtr).V1})}, v_5})})
-v1_6_loop = (*Constructor_Data_List_Internal_Two[gopurs_runtime.Value])(v1_6.UnsafePtr).V2
+v_5_loop = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons{1, gopurs_runtime.Value{Type: 9, IntVal: 2884341868, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_TwoRight{1, (*Constructor_Data_List_Internal_Two)(v1_6.UnsafePtr).V0, (*Constructor_Data_List_Internal_Two)(v1_6.UnsafePtr).V1})}, v_5})})
+v1_6_loop = (*Constructor_Data_List_Internal_Two)(v1_6.UnsafePtr).V2
 continue down_4_8_3
 __t10 = gopurs_runtime.Value{}
 }
@@ -862,7 +862,7 @@ goto end_branch_15
 {
 if (v1_6.Type == 9 && v1_6.IntVal == 1064476974) {
 // TAST (Let): v2_7_11 -> gopurs_runtime.Value
-v2_7_11 := gopurs_runtime.Apply2(comp_0, k_1, (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V1)
+v2_7_11 := gopurs_runtime.Apply2(comp_0, k_1, (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V1)
 _ = v2_7_11
 var __t14 gopurs_runtime.Value
 {
@@ -875,7 +875,7 @@ goto end_branch_14
 }
 {
 // TAST (Let): v3_8_12 -> gopurs_runtime.Value
-v3_8_12 := gopurs_runtime.Apply2(comp_0, k_1, (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V3)
+v3_8_12 := gopurs_runtime.Apply2(comp_0, k_1, (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V3)
 _ = v3_8_12
 var __t13 gopurs_runtime.Value
 {
@@ -888,8 +888,8 @@ goto end_branch_13
 }
 {
 if (uint32(v2_7_11.IntVal) == 1527465420) {
-v_5_loop = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons[gopurs_runtime.Value]{1, gopurs_runtime.Value{Type: 9, IntVal: 2195694037, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_ThreeLeft[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V1, (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V2, (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V3, (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V4})}, v_5})})
-v1_6_loop = (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V0
+v_5_loop = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons{1, gopurs_runtime.Value{Type: 9, IntVal: 2195694037, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_ThreeLeft{1, (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V1, (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V2, (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V3, (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V4})}, v_5})})
+v1_6_loop = (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V0
 continue down_4_8_3
 __t13 = gopurs_runtime.Value{}
 goto end_branch_13
@@ -899,8 +899,8 @@ goto end_branch_13
 }
 {
 if ((uint32(v2_7_11.IntVal) == 380165415)) && ((uint32(v3_8_12.IntVal) == 1527465420)) {
-v_5_loop = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons[gopurs_runtime.Value]{1, gopurs_runtime.Value{Type: 9, IntVal: 1584522659, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_ThreeMiddle[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V0, (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V1, (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V3, (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V4})}, v_5})})
-v1_6_loop = (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V2
+v_5_loop = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons{1, gopurs_runtime.Value{Type: 9, IntVal: 1584522659, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_ThreeMiddle{1, (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V0, (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V1, (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V3, (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V4})}, v_5})})
+v1_6_loop = (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V2
 continue down_4_8_3
 __t13 = gopurs_runtime.Value{}
 goto end_branch_13
@@ -909,8 +909,8 @@ goto end_branch_13
 }
 }
 {
-v_5_loop = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons[gopurs_runtime.Value]{1, gopurs_runtime.Value{Type: 9, IntVal: 3952671150, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_ThreeRight[gopurs_runtime.Value]{1, (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V0, (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V1, (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V2, (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V3})}, v_5})})
-v1_6_loop = (*Constructor_Data_List_Internal_Three[gopurs_runtime.Value])(v1_6.UnsafePtr).V4
+v_5_loop = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons{1, gopurs_runtime.Value{Type: 9, IntVal: 3952671150, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Internal_ThreeRight{1, (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V0, (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V1, (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V2, (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V3})}, v_5})})
+v1_6_loop = (*Constructor_Data_List_Internal_Three)(v1_6.UnsafePtr).V4
 continue down_4_8_3
 __t13 = gopurs_runtime.Value{}
 }
@@ -933,7 +933,7 @@ return __t15
 }()
 })
 })
-return gopurs_runtime.Apply2(down_4_8_3, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer((*Constructor_Data_List_Types_Cons[gopurs_runtime.Value])(nil))}, orig_2)
+return gopurs_runtime.Apply2(down_4_8_3, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer((*Constructor_Data_List_Types_Cons)(nil))}, orig_2)
 }
 
 

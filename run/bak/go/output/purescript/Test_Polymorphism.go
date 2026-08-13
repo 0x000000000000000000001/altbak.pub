@@ -42,7 +42,7 @@ var once_Test_Polymorphism_mappend_ sync.Once
 func Get_Test_Polymorphism_mappend_() gopurs_runtime.Value {
 	once_Test_Polymorphism_mappend_.Do(func() {
 		cache_Test_Polymorphism_mappend_ = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Test_Polymorphism_mappend_(gopurs_runtime.CoerceToStruct[Constructor_Test_Polymorphism_Monoidish[gopurs_runtime.Value]](dict_0_box))
+return Call_Test_Polymorphism_mappend_(gopurs_runtime.CoerceToStruct[Constructor_Test_Polymorphism_Monoidish](dict_0_box))
 })
 	})
 	return cache_Test_Polymorphism_mappend_
@@ -53,7 +53,7 @@ var once_Test_Polymorphism_polyLoop sync.Once
 func Get_Test_Polymorphism_polyLoop() gopurs_runtime.Value {
 	once_Test_Polymorphism_polyLoop.Do(func() {
 		cache_Test_Polymorphism_polyLoop = gopurs_runtime.Func3(func(dictMonoidish_0_box gopurs_runtime.Value, n_init_1_box gopurs_runtime.Value, acc_init_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Test_Polymorphism_polyLoop(gopurs_runtime.CoerceToStruct[Constructor_Test_Polymorphism_Monoidish[gopurs_runtime.Value]](dictMonoidish_0_box), n_init_1_box.IntVal, acc_init_2_box)
+return Call_Test_Polymorphism_polyLoop(gopurs_runtime.CoerceToStruct[Constructor_Test_Polymorphism_Monoidish](dictMonoidish_0_box), n_init_1_box.IntVal, acc_init_2_box)
 })
 	})
 	return cache_Test_Polymorphism_polyLoop
@@ -104,7 +104,7 @@ var once_Test_Polymorphism_mappend___2927892844 sync.Once
 func Get_Test_Polymorphism_mappend___2927892844() gopurs_runtime.Value {
 	once_Test_Polymorphism_mappend___2927892844.Do(func() {
 		cache_Test_Polymorphism_mappend___2927892844 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Test_Polymorphism_mappend___2927892844(gopurs_runtime.CoerceToStruct[Constructor_Test_Polymorphism_Monoidish[int64]](dict_0_box))
+return Call_Test_Polymorphism_mappend___2927892844(gopurs_runtime.CoerceToStruct[Constructor_Test_Polymorphism_Monoidish](dict_0_box))
 })
 	})
 	return cache_Test_Polymorphism_mappend___2927892844
@@ -115,7 +115,7 @@ var once_Test_Polymorphism_mappend___3566619927 sync.Once
 func Get_Test_Polymorphism_mappend___3566619927() gopurs_runtime.Value {
 	once_Test_Polymorphism_mappend___3566619927.Do(func() {
 		cache_Test_Polymorphism_mappend___3566619927 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Test_Polymorphism_mappend___3566619927(gopurs_runtime.CoerceToStruct[Constructor_Test_Polymorphism_Monoidish[gopurs_runtime.Value]](dict_0_box))
+return Call_Test_Polymorphism_mappend___3566619927(gopurs_runtime.CoerceToStruct[Constructor_Test_Polymorphism_Monoidish](dict_0_box))
 })
 	})
 	return cache_Test_Polymorphism_mappend___3566619927
@@ -159,22 +159,22 @@ var once_Test_Polymorphism_polyLoop__2675791634 sync.Once
 func Get_Test_Polymorphism_polyLoop__2675791634() gopurs_runtime.Value {
 	once_Test_Polymorphism_polyLoop__2675791634.Do(func() {
 		cache_Test_Polymorphism_polyLoop__2675791634 = gopurs_runtime.Func3(func(dictMonoidish_0_box gopurs_runtime.Value, n_init_1_box gopurs_runtime.Value, acc_init_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Test_Polymorphism_polyLoop__2675791634(gopurs_runtime.CoerceToStruct[Constructor_Test_Polymorphism_Monoidish[gopurs_runtime.Value]](dictMonoidish_0_box), n_init_1_box.IntVal, acc_init_2_box)
+return Call_Test_Polymorphism_polyLoop__2675791634(gopurs_runtime.CoerceToStruct[Constructor_Test_Polymorphism_Monoidish](dictMonoidish_0_box), n_init_1_box.IntVal, acc_init_2_box)
 })
 	})
 	return cache_Test_Polymorphism_polyLoop__2675791634
 }
 
-type Constructor_Test_Polymorphism_Monoidish[T_a any] struct {
+type Constructor_Test_Polymorphism_Monoidish struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
-	V1 T_a
+	V1 gopurs_runtime.Value
 }
 
 
 func init() {
 	gopurs_runtime.StructGetters[459160245] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Test_Polymorphism_Monoidish[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Test_Polymorphism_Monoidish)(ptr)
 		_ = c
 		switch key {
 		case "mappend_": return gopurs_runtime.Box(c.V0)
@@ -197,14 +197,14 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "mempty_")
 }
 
-func Call_Test_Polymorphism_mappend_(dict_0_loop *Constructor_Test_Polymorphism_Monoidish[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Test_Polymorphism_Monoidish[gopurs_runtime.Value] = dict_0_loop
+func Call_Test_Polymorphism_mappend_(dict_0_loop *Constructor_Test_Polymorphism_Monoidish) gopurs_runtime.Value {
+var dict_0 *Constructor_Test_Polymorphism_Monoidish = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_Test_Polymorphism_polyLoop(dictMonoidish_0_loop *Constructor_Test_Polymorphism_Monoidish[gopurs_runtime.Value], n_init_1_loop int64, acc_init_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictMonoidish_0 *Constructor_Test_Polymorphism_Monoidish[gopurs_runtime.Value] = dictMonoidish_0_loop
+func Call_Test_Polymorphism_polyLoop(dictMonoidish_0_loop *Constructor_Test_Polymorphism_Monoidish, n_init_1_loop int64, acc_init_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictMonoidish_0 *Constructor_Test_Polymorphism_Monoidish = dictMonoidish_0_loop
 _ = dictMonoidish_0
 var n_init_1 int64 = n_init_1_loop
 _ = n_init_1
@@ -247,14 +247,14 @@ return __t1
 return gopurs_runtime.Apply2(go__go_3_0_0, gopurs_runtime.Int(n_init_1), acc_init_2)
 }
 
-func Call_Test_Polymorphism_mappend___2927892844(dict_0_loop *Constructor_Test_Polymorphism_Monoidish[int64]) gopurs_runtime.Value {
-var dict_0 *Constructor_Test_Polymorphism_Monoidish[int64] = dict_0_loop
+func Call_Test_Polymorphism_mappend___2927892844(dict_0_loop *Constructor_Test_Polymorphism_Monoidish) gopurs_runtime.Value {
+var dict_0 *Constructor_Test_Polymorphism_Monoidish = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_Test_Polymorphism_mappend___3566619927(dict_0_loop *Constructor_Test_Polymorphism_Monoidish[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Test_Polymorphism_Monoidish[gopurs_runtime.Value] = dict_0_loop
+func Call_Test_Polymorphism_mappend___3566619927(dict_0_loop *Constructor_Test_Polymorphism_Monoidish) gopurs_runtime.Value {
+var dict_0 *Constructor_Test_Polymorphism_Monoidish = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
@@ -313,8 +313,8 @@ return gopurs_runtime.Int(__t1)
 return gopurs_runtime.Apply2(go__go_2_0_1, gopurs_runtime.Int(n_init_0), gopurs_runtime.Int(acc_init_1)).IntVal
 }
 
-func Call_Test_Polymorphism_polyLoop__2675791634(dictMonoidish_0_loop *Constructor_Test_Polymorphism_Monoidish[gopurs_runtime.Value], n_init_1_loop int64, acc_init_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictMonoidish_0 *Constructor_Test_Polymorphism_Monoidish[gopurs_runtime.Value] = dictMonoidish_0_loop
+func Call_Test_Polymorphism_polyLoop__2675791634(dictMonoidish_0_loop *Constructor_Test_Polymorphism_Monoidish, n_init_1_loop int64, acc_init_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictMonoidish_0 *Constructor_Test_Polymorphism_Monoidish = dictMonoidish_0_loop
 _ = dictMonoidish_0
 var n_init_1 int64 = n_init_1_loop
 _ = n_init_1

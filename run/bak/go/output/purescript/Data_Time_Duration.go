@@ -16,8 +16,8 @@ __local_var_0_0 := gopurs_runtime.RecordDict2("Semiring0", "sub", gopurs_runtime
 return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", Get_Data_Semiring_numAdd(), Get_Data_Semiring_numMul(), gopurs_runtime.Float(1.0), gopurs_runtime.Float(0.0))
 }), Get_Data_Ring_numSub())
 _ = __local_var_0_0
-// TAST (Let): Semiring0_1_1 -> *Constructor_Data_Semiring_Semiring[gopurs_runtime.Value]
-Semiring0_1_1 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_0_0, "Semiring0"), gopurs_runtime.Value{}))
+// TAST (Let): Semiring0_1_1 -> *Constructor_Data_Semiring_Semiring
+Semiring0_1_1 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring](gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_0_0, "Semiring0"), gopurs_runtime.Value{}))
 _ = Semiring0_1_1
 return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_0_0, "sub"), gopurs_runtime.Box(Semiring0_1_1.V3), a_2)
@@ -109,7 +109,7 @@ var once_Data_Time_Duration_toDuration sync.Once
 func Get_Data_Time_Duration_toDuration() gopurs_runtime.Value {
 	once_Data_Time_Duration_toDuration.Do(func() {
 		cache_Data_Time_Duration_toDuration = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Time_Duration_toDuration(gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Duration_Duration[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Time_Duration_toDuration(gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Duration_Duration](dict_0_box))
 })
 	})
 	return cache_Data_Time_Duration_toDuration
@@ -395,7 +395,7 @@ var once_Data_Time_Duration_fromDuration sync.Once
 func Get_Data_Time_Duration_fromDuration() gopurs_runtime.Value {
 	once_Data_Time_Duration_fromDuration.Do(func() {
 		cache_Data_Time_Duration_fromDuration = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Time_Duration_fromDuration(gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Duration_Duration[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Time_Duration_fromDuration(gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Duration_Duration](dict_0_box))
 })
 	})
 	return cache_Data_Time_Duration_fromDuration
@@ -406,7 +406,7 @@ var once_Data_Time_Duration_negateDuration sync.Once
 func Get_Data_Time_Duration_negateDuration() gopurs_runtime.Value {
 	once_Data_Time_Duration_negateDuration.Do(func() {
 		cache_Data_Time_Duration_negateDuration = gopurs_runtime.Func2(func(dictDuration_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Time_Duration_negateDuration(gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Duration_Duration[gopurs_runtime.Value]](dictDuration_0_box), x_1_box)
+return Call_Data_Time_Duration_negateDuration(gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Duration_Duration](dictDuration_0_box), x_1_box)
 })
 	})
 	return cache_Data_Time_Duration_negateDuration
@@ -523,7 +523,7 @@ var once_Data_Time_Duration_convertDuration sync.Once
 func Get_Data_Time_Duration_convertDuration() gopurs_runtime.Value {
 	once_Data_Time_Duration_convertDuration.Do(func() {
 		cache_Data_Time_Duration_convertDuration = gopurs_runtime.Func3(func(dictDuration_0_box gopurs_runtime.Value, dictDuration1_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Time_Duration_convertDuration(gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Duration_Duration[gopurs_runtime.Value]](dictDuration_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Duration_Duration[gopurs_runtime.Value]](dictDuration1_1_box), x_2_box)
+return Call_Data_Time_Duration_convertDuration(gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Duration_Duration](dictDuration_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Duration_Duration](dictDuration1_1_box), x_2_box)
 })
 	})
 	return cache_Data_Time_Duration_convertDuration
@@ -545,7 +545,7 @@ var once_Data_Time_Duration_fromDuration__1721614606 sync.Once
 func Get_Data_Time_Duration_fromDuration__1721614606() gopurs_runtime.Value {
 	once_Data_Time_Duration_fromDuration__1721614606.Do(func() {
 		cache_Data_Time_Duration_fromDuration__1721614606 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Time_Duration_fromDuration__1721614606(gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Duration_Duration[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Time_Duration_fromDuration__1721614606(gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Duration_Duration](dict_0_box))
 })
 	})
 	return cache_Data_Time_Duration_fromDuration__1721614606
@@ -567,7 +567,7 @@ var once_Data_Time_Duration_negateDuration__3870190523 sync.Once
 func Get_Data_Time_Duration_negateDuration__3870190523() gopurs_runtime.Value {
 	once_Data_Time_Duration_negateDuration__3870190523.Do(func() {
 		cache_Data_Time_Duration_negateDuration__3870190523 = gopurs_runtime.Func2(func(dictDuration_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Time_Duration_negateDuration__3870190523(gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Duration_Duration[gopurs_runtime.Value]](dictDuration_0_box), x_1_box)
+return Call_Data_Time_Duration_negateDuration__3870190523(gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Duration_Duration](dictDuration_0_box), x_1_box)
 })
 	})
 	return cache_Data_Time_Duration_negateDuration__3870190523
@@ -578,13 +578,13 @@ var once_Data_Time_Duration_toDuration__2440169646 sync.Once
 func Get_Data_Time_Duration_toDuration__2440169646() gopurs_runtime.Value {
 	once_Data_Time_Duration_toDuration__2440169646.Do(func() {
 		cache_Data_Time_Duration_toDuration__2440169646 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Time_Duration_toDuration__2440169646(gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Duration_Duration[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Time_Duration_toDuration__2440169646(gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Duration_Duration](dict_0_box))
 })
 	})
 	return cache_Data_Time_Duration_toDuration__2440169646
 }
 
-type Constructor_Data_Time_Duration_Duration[T_a any] struct {
+type Constructor_Data_Time_Duration_Duration struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -593,7 +593,7 @@ type Constructor_Data_Time_Duration_Duration[T_a any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[487663984] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_Time_Duration_Duration[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_Time_Duration_Duration)(ptr)
 		_ = c
 		switch key {
 		case "fromDuration": return gopurs_runtime.Box(c.V0)
@@ -646,30 +646,30 @@ _ = x_0
 return x_0
 }
 
-func Call_Data_Time_Duration_toDuration(dict_0_loop *Constructor_Data_Time_Duration_Duration[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Time_Duration_Duration[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Time_Duration_toDuration(dict_0_loop *Constructor_Data_Time_Duration_Duration) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Time_Duration_Duration = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Time_Duration_fromDuration(dict_0_loop *Constructor_Data_Time_Duration_Duration[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Time_Duration_Duration[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Time_Duration_fromDuration(dict_0_loop *Constructor_Data_Time_Duration_Duration) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Time_Duration_Duration = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_Data_Time_Duration_negateDuration(dictDuration_0_loop *Constructor_Data_Time_Duration_Duration[gopurs_runtime.Value], x_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictDuration_0 *Constructor_Data_Time_Duration_Duration[gopurs_runtime.Value] = dictDuration_0_loop
+func Call_Data_Time_Duration_negateDuration(dictDuration_0_loop *Constructor_Data_Time_Duration_Duration, x_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictDuration_0 *Constructor_Data_Time_Duration_Duration = dictDuration_0_loop
 _ = dictDuration_0
 var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
 return gopurs_runtime.Apply(gopurs_runtime.Box(dictDuration_0.V1), gopurs_runtime.Apply(Get_Data_Time_Duration_negate(), gopurs_runtime.Apply(gopurs_runtime.Box(dictDuration_0.V0), x_1)))
 }
 
-func Call_Data_Time_Duration_convertDuration(dictDuration_0_loop *Constructor_Data_Time_Duration_Duration[gopurs_runtime.Value], dictDuration1_1_loop *Constructor_Data_Time_Duration_Duration[gopurs_runtime.Value], x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictDuration_0 *Constructor_Data_Time_Duration_Duration[gopurs_runtime.Value] = dictDuration_0_loop
+func Call_Data_Time_Duration_convertDuration(dictDuration_0_loop *Constructor_Data_Time_Duration_Duration, dictDuration1_1_loop *Constructor_Data_Time_Duration_Duration, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictDuration_0 *Constructor_Data_Time_Duration_Duration = dictDuration_0_loop
 _ = dictDuration_0
-var dictDuration1_1 *Constructor_Data_Time_Duration_Duration[gopurs_runtime.Value] = dictDuration1_1_loop
+var dictDuration1_1 *Constructor_Data_Time_Duration_Duration = dictDuration1_1_loop
 _ = dictDuration1_1
 var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
@@ -682,8 +682,8 @@ _ = __eta0_0
 return gopurs_runtime.Float((__eta0_0.FloatVal()) * (86400000.0))
 }
 
-func Call_Data_Time_Duration_fromDuration__1721614606(dict_0_loop *Constructor_Data_Time_Duration_Duration[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Time_Duration_Duration[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Time_Duration_fromDuration__1721614606(dict_0_loop *Constructor_Data_Time_Duration_Duration) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Time_Duration_Duration = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
@@ -694,16 +694,16 @@ _ = __eta0_0
 return gopurs_runtime.Float(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Duration_durationMilliseconds(), "toDuration"), gopurs_runtime.Apply(Get_Data_Time_Duration_negate(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Duration_durationMilliseconds(), "fromDuration"), __eta0_0))).FloatVal())
 }
 
-func Call_Data_Time_Duration_negateDuration__3870190523(dictDuration_0_loop *Constructor_Data_Time_Duration_Duration[gopurs_runtime.Value], x_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictDuration_0 *Constructor_Data_Time_Duration_Duration[gopurs_runtime.Value] = dictDuration_0_loop
+func Call_Data_Time_Duration_negateDuration__3870190523(dictDuration_0_loop *Constructor_Data_Time_Duration_Duration, x_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictDuration_0 *Constructor_Data_Time_Duration_Duration = dictDuration_0_loop
 _ = dictDuration_0
 var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
 return gopurs_runtime.Apply(gopurs_runtime.Box(dictDuration_0.V1), gopurs_runtime.Apply(Get_Data_Time_Duration_negate(), gopurs_runtime.Apply(gopurs_runtime.Box(dictDuration_0.V0), x_1)))
 }
 
-func Call_Data_Time_Duration_toDuration__2440169646(dict_0_loop *Constructor_Data_Time_Duration_Duration[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Time_Duration_Duration[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Time_Duration_toDuration__2440169646(dict_0_loop *Constructor_Data_Time_Duration_Duration) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Time_Duration_Duration = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }

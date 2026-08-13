@@ -31,7 +31,7 @@ var once_Control_Comonad_Store_Class_pos sync.Once
 func Get_Control_Comonad_Store_Class_pos() gopurs_runtime.Value {
 	once_Control_Comonad_Store_Class_pos.Do(func() {
 		cache_Control_Comonad_Store_Class_pos = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Comonad_Store_Class_pos(gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Comonad_Store_Class_pos(gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Store_Class_ComonadStore](dict_0_box))
 })
 	})
 	return cache_Control_Comonad_Store_Class_pos
@@ -42,7 +42,7 @@ var once_Control_Comonad_Store_Class_peek sync.Once
 func Get_Control_Comonad_Store_Class_peek() gopurs_runtime.Value {
 	once_Control_Comonad_Store_Class_peek.Do(func() {
 		cache_Control_Comonad_Store_Class_peek = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Comonad_Store_Class_peek(gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Comonad_Store_Class_peek(gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Store_Class_ComonadStore](dict_0_box))
 })
 	})
 	return cache_Control_Comonad_Store_Class_peek
@@ -53,7 +53,7 @@ var once_Control_Comonad_Store_Class_peeks sync.Once
 func Get_Control_Comonad_Store_Class_peeks() gopurs_runtime.Value {
 	once_Control_Comonad_Store_Class_peeks.Do(func() {
 		cache_Control_Comonad_Store_Class_peeks = gopurs_runtime.Func3(func(dictComonadStore_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Comonad_Store_Class_peeks(gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]](dictComonadStore_0_box), f_1_box, x_2_box)
+return Call_Control_Comonad_Store_Class_peeks(gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Store_Class_ComonadStore](dictComonadStore_0_box), f_1_box, x_2_box)
 })
 	})
 	return cache_Control_Comonad_Store_Class_peeks
@@ -64,7 +64,7 @@ var once_Control_Comonad_Store_Class_seeks sync.Once
 func Get_Control_Comonad_Store_Class_seeks() gopurs_runtime.Value {
 	once_Control_Comonad_Store_Class_seeks.Do(func() {
 		cache_Control_Comonad_Store_Class_seeks = gopurs_runtime.Func(func(dictComonadStore_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Comonad_Store_Class_seeks(gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]](dictComonadStore_0_box))
+return Call_Control_Comonad_Store_Class_seeks(gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Store_Class_ComonadStore](dictComonadStore_0_box))
 })
 	})
 	return cache_Control_Comonad_Store_Class_seeks
@@ -75,7 +75,7 @@ var once_Control_Comonad_Store_Class_seek sync.Once
 func Get_Control_Comonad_Store_Class_seek() gopurs_runtime.Value {
 	once_Control_Comonad_Store_Class_seek.Do(func() {
 		cache_Control_Comonad_Store_Class_seek = gopurs_runtime.Func(func(dictComonadStore_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Comonad_Store_Class_seek(gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]](dictComonadStore_0_box))
+return Call_Control_Comonad_Store_Class_seek(gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Store_Class_ComonadStore](dictComonadStore_0_box))
 })
 	})
 	return cache_Control_Comonad_Store_Class_seek
@@ -86,7 +86,7 @@ var once_Control_Comonad_Store_Class_experiment sync.Once
 func Get_Control_Comonad_Store_Class_experiment() gopurs_runtime.Value {
 	once_Control_Comonad_Store_Class_experiment.Do(func() {
 		cache_Control_Comonad_Store_Class_experiment = gopurs_runtime.Func4(func(dictComonadStore_0_box gopurs_runtime.Value, dictFunctor_1_box gopurs_runtime.Value, f_2_box gopurs_runtime.Value, x_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Comonad_Store_Class_experiment(gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]](dictComonadStore_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor[gopurs_runtime.Value]](dictFunctor_1_box), f_2_box, x_3_box)
+return Call_Control_Comonad_Store_Class_experiment(gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Store_Class_ComonadStore](dictComonadStore_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](dictFunctor_1_box), f_2_box, x_3_box)
 })
 	})
 	return cache_Control_Comonad_Store_Class_experiment
@@ -130,7 +130,7 @@ var once_Control_Comonad_Store_Class_peek__413153475 sync.Once
 func Get_Control_Comonad_Store_Class_peek__413153475() gopurs_runtime.Value {
 	once_Control_Comonad_Store_Class_peek__413153475.Do(func() {
 		cache_Control_Comonad_Store_Class_peek__413153475 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Comonad_Store_Class_peek__413153475(gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Comonad_Store_Class_peek__413153475(gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Store_Class_ComonadStore](dict_0_box))
 })
 	})
 	return cache_Control_Comonad_Store_Class_peek__413153475
@@ -141,7 +141,7 @@ var once_Control_Comonad_Store_Class_peek__3957251203 sync.Once
 func Get_Control_Comonad_Store_Class_peek__3957251203() gopurs_runtime.Value {
 	once_Control_Comonad_Store_Class_peek__3957251203.Do(func() {
 		cache_Control_Comonad_Store_Class_peek__3957251203 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Comonad_Store_Class_peek__3957251203(gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Comonad_Store_Class_peek__3957251203(gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Store_Class_ComonadStore](dict_0_box))
 })
 	})
 	return cache_Control_Comonad_Store_Class_peek__3957251203
@@ -152,7 +152,7 @@ var once_Control_Comonad_Store_Class_peeks__2913274603 sync.Once
 func Get_Control_Comonad_Store_Class_peeks__2913274603() gopurs_runtime.Value {
 	once_Control_Comonad_Store_Class_peeks__2913274603.Do(func() {
 		cache_Control_Comonad_Store_Class_peeks__2913274603 = gopurs_runtime.Func3(func(dictComonadStore_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Comonad_Store_Class_peeks__2913274603(gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]](dictComonadStore_0_box), f_1_box, x_2_box)
+return Call_Control_Comonad_Store_Class_peeks__2913274603(gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Store_Class_ComonadStore](dictComonadStore_0_box), f_1_box, x_2_box)
 })
 	})
 	return cache_Control_Comonad_Store_Class_peeks__2913274603
@@ -163,7 +163,7 @@ var once_Control_Comonad_Store_Class_peeks__110217771 sync.Once
 func Get_Control_Comonad_Store_Class_peeks__110217771() gopurs_runtime.Value {
 	once_Control_Comonad_Store_Class_peeks__110217771.Do(func() {
 		cache_Control_Comonad_Store_Class_peeks__110217771 = gopurs_runtime.Func3(func(dictComonadStore_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Comonad_Store_Class_peeks__110217771(gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]](dictComonadStore_0_box), f_1_box, x_2_box)
+return Call_Control_Comonad_Store_Class_peeks__110217771(gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Store_Class_ComonadStore](dictComonadStore_0_box), f_1_box, x_2_box)
 })
 	})
 	return cache_Control_Comonad_Store_Class_peeks__110217771
@@ -174,7 +174,7 @@ var once_Control_Comonad_Store_Class_pos__639385354 sync.Once
 func Get_Control_Comonad_Store_Class_pos__639385354() gopurs_runtime.Value {
 	once_Control_Comonad_Store_Class_pos__639385354.Do(func() {
 		cache_Control_Comonad_Store_Class_pos__639385354 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Comonad_Store_Class_pos__639385354(gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Comonad_Store_Class_pos__639385354(gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Store_Class_ComonadStore](dict_0_box))
 })
 	})
 	return cache_Control_Comonad_Store_Class_pos__639385354
@@ -185,13 +185,13 @@ var once_Control_Comonad_Store_Class_pos__3752461637 sync.Once
 func Get_Control_Comonad_Store_Class_pos__3752461637() gopurs_runtime.Value {
 	once_Control_Comonad_Store_Class_pos__3752461637.Do(func() {
 		cache_Control_Comonad_Store_Class_pos__3752461637 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Comonad_Store_Class_pos__3752461637(gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Comonad_Store_Class_pos__3752461637(gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Store_Class_ComonadStore](dict_0_box))
 })
 	})
 	return cache_Control_Comonad_Store_Class_pos__3752461637
 }
 
-type Constructor_Control_Comonad_Store_Class_ComonadStore[T_s any, T_w any] struct {
+type Constructor_Control_Comonad_Store_Class_ComonadStore struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -201,7 +201,7 @@ type Constructor_Control_Comonad_Store_Class_ComonadStore[T_s any, T_w any] stru
 
 func init() {
 	gopurs_runtime.StructGetters[4264314723] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Control_Comonad_Store_Class_ComonadStore)(ptr)
 		_ = c
 		switch key {
 		case "Comonad0": return gopurs_runtime.Box(c.V0)
@@ -219,20 +219,20 @@ _ = x_0
 return x_0
 }
 
-func Call_Control_Comonad_Store_Class_pos(dict_0_loop *Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Comonad_Store_Class_pos(dict_0_loop *Constructor_Control_Comonad_Store_Class_ComonadStore) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Comonad_Store_Class_ComonadStore = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V2)
 }
 
-func Call_Control_Comonad_Store_Class_peek(dict_0_loop *Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Comonad_Store_Class_peek(dict_0_loop *Constructor_Control_Comonad_Store_Class_ComonadStore) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Comonad_Store_Class_ComonadStore = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Control_Comonad_Store_Class_peeks(dictComonadStore_0_loop *Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value], f_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictComonadStore_0 *Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value] = dictComonadStore_0_loop
+func Call_Control_Comonad_Store_Class_peeks(dictComonadStore_0_loop *Constructor_Control_Comonad_Store_Class_ComonadStore, f_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictComonadStore_0 *Constructor_Control_Comonad_Store_Class_ComonadStore = dictComonadStore_0_loop
 _ = dictComonadStore_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
@@ -241,8 +241,8 @@ _ = x_2
 return gopurs_runtime.Apply2(gopurs_runtime.Box(dictComonadStore_0.V1), gopurs_runtime.Apply(f_1, gopurs_runtime.Apply(gopurs_runtime.Box(dictComonadStore_0.V2), x_2)), x_2)
 }
 
-func Call_Control_Comonad_Store_Class_seeks(dictComonadStore_0_loop *Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictComonadStore_0 *Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value] = dictComonadStore_0_loop
+func Call_Control_Comonad_Store_Class_seeks(dictComonadStore_0_loop *Constructor_Control_Comonad_Store_Class_ComonadStore) gopurs_runtime.Value {
+var dictComonadStore_0 *Constructor_Control_Comonad_Store_Class_ComonadStore = dictComonadStore_0_loop
 _ = dictComonadStore_0
 // TAST (Let): duplicate_1_0 -> gopurs_runtime.Value
 duplicate_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.Box(dictComonadStore_0.V0), gopurs_runtime.Value{}), "Extend0"), gopurs_runtime.Value{}), "extend"), Get_Control_Extend_identity())
@@ -257,8 +257,8 @@ return gopurs_runtime.Apply2(gopurs_runtime.Box(dictComonadStore_0.V1), gopurs_r
 })
 }
 
-func Call_Control_Comonad_Store_Class_seek(dictComonadStore_0_loop *Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictComonadStore_0 *Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value] = dictComonadStore_0_loop
+func Call_Control_Comonad_Store_Class_seek(dictComonadStore_0_loop *Constructor_Control_Comonad_Store_Class_ComonadStore) gopurs_runtime.Value {
+var dictComonadStore_0 *Constructor_Control_Comonad_Store_Class_ComonadStore = dictComonadStore_0_loop
 _ = dictComonadStore_0
 // TAST (Let): duplicate_1_0 -> gopurs_runtime.Value
 duplicate_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.Box(dictComonadStore_0.V0), gopurs_runtime.Value{}), "Extend0"), gopurs_runtime.Value{}), "extend"), Get_Control_Extend_identity())
@@ -273,10 +273,10 @@ return gopurs_runtime.Apply(__local_var_3_1, gopurs_runtime.Apply(duplicate_1_0,
 })
 }
 
-func Call_Control_Comonad_Store_Class_experiment(dictComonadStore_0_loop *Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value], dictFunctor_1_loop *Constructor_Data_Functor_Functor[gopurs_runtime.Value], f_2_loop gopurs_runtime.Value, x_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictComonadStore_0 *Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value] = dictComonadStore_0_loop
+func Call_Control_Comonad_Store_Class_experiment(dictComonadStore_0_loop *Constructor_Control_Comonad_Store_Class_ComonadStore, dictFunctor_1_loop *Constructor_Data_Functor_Functor, f_2_loop gopurs_runtime.Value, x_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictComonadStore_0 *Constructor_Control_Comonad_Store_Class_ComonadStore = dictComonadStore_0_loop
 _ = dictComonadStore_0
-var dictFunctor_1 *Constructor_Data_Functor_Functor[gopurs_runtime.Value] = dictFunctor_1_loop
+var dictFunctor_1 *Constructor_Data_Functor_Functor = dictFunctor_1_loop
 _ = dictFunctor_1
 var f_2 gopurs_runtime.Value = f_2_loop
 _ = f_2
@@ -297,8 +297,8 @@ _ = Comonad0_1_0
 comonadTracedT_2_1 := gopurs_runtime.Apply(Get_Control_Comonad_Traced_Trans_comonadTracedT(), Comonad0_1_0)
 _ = comonadTracedT_2_1
 return gopurs_runtime.Func(func(dictMonoid_3 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): Functor0_4_3 -> *Constructor_Data_Functor_Functor[gopurs_runtime.Value]
-Functor0_4_3 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Comonad0_1_0, "Extend0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
+// TAST (Let): Functor0_4_3 -> *Constructor_Data_Functor_Functor
+Functor0_4_3 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Comonad0_1_0, "Extend0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
 _ = Functor0_4_3
 // TAST (Let): lower1_4_2 -> gopurs_runtime.Value
 lower1_4_2 := gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -335,10 +335,10 @@ return gopurs_runtime.RecordDict3("Comonad0", "peek", "pos", gopurs_runtime.Func
 return comonadStoreT_1_0
 }), gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictComonad_0, "extract"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_3.UnsafePtr).V0, s_2)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictComonad_0, "extract"), (*Constructor_Data_Tuple_Tuple)(v_3.UnsafePtr).V0, s_2)
 })
 }), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1
+return (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V1
 }))
 }
 
@@ -368,20 +368,20 @@ return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadStore_0, "pos"),
 }))
 }
 
-func Call_Control_Comonad_Store_Class_peek__413153475(dict_0_loop *Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Comonad_Store_Class_peek__413153475(dict_0_loop *Constructor_Control_Comonad_Store_Class_ComonadStore) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Comonad_Store_Class_ComonadStore = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Control_Comonad_Store_Class_peek__3957251203(dict_0_loop *Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Comonad_Store_Class_peek__3957251203(dict_0_loop *Constructor_Control_Comonad_Store_Class_ComonadStore) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Comonad_Store_Class_ComonadStore = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Control_Comonad_Store_Class_peeks__2913274603(dictComonadStore_0_loop *Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value], f_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictComonadStore_0 *Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value] = dictComonadStore_0_loop
+func Call_Control_Comonad_Store_Class_peeks__2913274603(dictComonadStore_0_loop *Constructor_Control_Comonad_Store_Class_ComonadStore, f_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictComonadStore_0 *Constructor_Control_Comonad_Store_Class_ComonadStore = dictComonadStore_0_loop
 _ = dictComonadStore_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
@@ -390,8 +390,8 @@ _ = x_2
 return gopurs_runtime.Apply2(gopurs_runtime.Box(dictComonadStore_0.V1), gopurs_runtime.Apply(f_1, gopurs_runtime.Apply(gopurs_runtime.Box(dictComonadStore_0.V2), x_2)), x_2)
 }
 
-func Call_Control_Comonad_Store_Class_peeks__110217771(dictComonadStore_0_loop *Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value], f_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictComonadStore_0 *Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value] = dictComonadStore_0_loop
+func Call_Control_Comonad_Store_Class_peeks__110217771(dictComonadStore_0_loop *Constructor_Control_Comonad_Store_Class_ComonadStore, f_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictComonadStore_0 *Constructor_Control_Comonad_Store_Class_ComonadStore = dictComonadStore_0_loop
 _ = dictComonadStore_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
@@ -400,14 +400,14 @@ _ = x_2
 return gopurs_runtime.Apply2(gopurs_runtime.Box(dictComonadStore_0.V1), gopurs_runtime.Apply(f_1, gopurs_runtime.Apply(gopurs_runtime.Box(dictComonadStore_0.V2), x_2)), x_2)
 }
 
-func Call_Control_Comonad_Store_Class_pos__639385354(dict_0_loop *Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Comonad_Store_Class_pos__639385354(dict_0_loop *Constructor_Control_Comonad_Store_Class_ComonadStore) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Comonad_Store_Class_ComonadStore = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V2)
 }
 
-func Call_Control_Comonad_Store_Class_pos__3752461637(dict_0_loop *Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Comonad_Store_Class_ComonadStore[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Comonad_Store_Class_pos__3752461637(dict_0_loop *Constructor_Control_Comonad_Store_Class_ComonadStore) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Comonad_Store_Class_ComonadStore = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V2)
 }

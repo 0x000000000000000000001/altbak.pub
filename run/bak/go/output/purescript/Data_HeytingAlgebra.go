@@ -33,7 +33,7 @@ var once_Data_HeytingAlgebra_ttRecord sync.Once
 func Get_Data_HeytingAlgebra_ttRecord() gopurs_runtime.Value {
 	once_Data_HeytingAlgebra_ttRecord.Do(func() {
 		cache_Data_HeytingAlgebra_ttRecord = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_HeytingAlgebra_ttRecord(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_HeytingAlgebra_ttRecord(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord](dict_0_box))
 })
 	})
 	return cache_Data_HeytingAlgebra_ttRecord
@@ -55,7 +55,7 @@ var once_Data_HeytingAlgebra_notRecord sync.Once
 func Get_Data_HeytingAlgebra_notRecord() gopurs_runtime.Value {
 	once_Data_HeytingAlgebra_notRecord.Do(func() {
 		cache_Data_HeytingAlgebra_notRecord = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_HeytingAlgebra_notRecord(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_HeytingAlgebra_notRecord(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord](dict_0_box))
 })
 	})
 	return cache_Data_HeytingAlgebra_notRecord
@@ -66,7 +66,7 @@ var once_Data_HeytingAlgebra_not sync.Once
 func Get_Data_HeytingAlgebra_not() gopurs_runtime.Value {
 	once_Data_HeytingAlgebra_not.Do(func() {
 		cache_Data_HeytingAlgebra_not = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_HeytingAlgebra_not(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebra[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_HeytingAlgebra_not(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebra](dict_0_box))
 })
 	})
 	return cache_Data_HeytingAlgebra_not
@@ -77,7 +77,7 @@ var once_Data_HeytingAlgebra_impliesRecord sync.Once
 func Get_Data_HeytingAlgebra_impliesRecord() gopurs_runtime.Value {
 	once_Data_HeytingAlgebra_impliesRecord.Do(func() {
 		cache_Data_HeytingAlgebra_impliesRecord = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_HeytingAlgebra_impliesRecord(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_HeytingAlgebra_impliesRecord(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord](dict_0_box))
 })
 	})
 	return cache_Data_HeytingAlgebra_impliesRecord
@@ -88,7 +88,7 @@ var once_Data_HeytingAlgebra_implies sync.Once
 func Get_Data_HeytingAlgebra_implies() gopurs_runtime.Value {
 	once_Data_HeytingAlgebra_implies.Do(func() {
 		cache_Data_HeytingAlgebra_implies = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_HeytingAlgebra_implies(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebra[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_HeytingAlgebra_implies(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebra](dict_0_box))
 })
 	})
 	return cache_Data_HeytingAlgebra_implies
@@ -184,7 +184,7 @@ var once_Data_HeytingAlgebra_ffRecord sync.Once
 func Get_Data_HeytingAlgebra_ffRecord() gopurs_runtime.Value {
 	once_Data_HeytingAlgebra_ffRecord.Do(func() {
 		cache_Data_HeytingAlgebra_ffRecord = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_HeytingAlgebra_ffRecord(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_HeytingAlgebra_ffRecord(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord](dict_0_box))
 })
 	})
 	return cache_Data_HeytingAlgebra_ffRecord
@@ -206,7 +206,7 @@ var once_Data_HeytingAlgebra_disjRecord sync.Once
 func Get_Data_HeytingAlgebra_disjRecord() gopurs_runtime.Value {
 	once_Data_HeytingAlgebra_disjRecord.Do(func() {
 		cache_Data_HeytingAlgebra_disjRecord = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_HeytingAlgebra_disjRecord(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_HeytingAlgebra_disjRecord(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord](dict_0_box))
 })
 	})
 	return cache_Data_HeytingAlgebra_disjRecord
@@ -217,7 +217,7 @@ var once_Data_HeytingAlgebra_disj sync.Once
 func Get_Data_HeytingAlgebra_disj() gopurs_runtime.Value {
 	once_Data_HeytingAlgebra_disj.Do(func() {
 		cache_Data_HeytingAlgebra_disj = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_HeytingAlgebra_disj(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebra[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_HeytingAlgebra_disj(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebra](dict_0_box))
 })
 	})
 	return cache_Data_HeytingAlgebra_disj
@@ -241,7 +241,7 @@ var once_Data_HeytingAlgebra_conjRecord sync.Once
 func Get_Data_HeytingAlgebra_conjRecord() gopurs_runtime.Value {
 	once_Data_HeytingAlgebra_conjRecord.Do(func() {
 		cache_Data_HeytingAlgebra_conjRecord = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_HeytingAlgebra_conjRecord(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_HeytingAlgebra_conjRecord(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord](dict_0_box))
 })
 	})
 	return cache_Data_HeytingAlgebra_conjRecord
@@ -263,7 +263,7 @@ var once_Data_HeytingAlgebra_conj sync.Once
 func Get_Data_HeytingAlgebra_conj() gopurs_runtime.Value {
 	once_Data_HeytingAlgebra_conj.Do(func() {
 		cache_Data_HeytingAlgebra_conj = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_HeytingAlgebra_conj(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebra[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_HeytingAlgebra_conj(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebra](dict_0_box))
 })
 	})
 	return cache_Data_HeytingAlgebra_conj
@@ -296,7 +296,7 @@ var once_Data_HeytingAlgebra_conj__2927892844 sync.Once
 func Get_Data_HeytingAlgebra_conj__2927892844() gopurs_runtime.Value {
 	once_Data_HeytingAlgebra_conj__2927892844.Do(func() {
 		cache_Data_HeytingAlgebra_conj__2927892844 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_HeytingAlgebra_conj__2927892844(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebra[int64]](dict_0_box))
+return Call_Data_HeytingAlgebra_conj__2927892844(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebra](dict_0_box))
 })
 	})
 	return cache_Data_HeytingAlgebra_conj__2927892844
@@ -307,7 +307,7 @@ var once_Data_HeytingAlgebra_conj__4093645121 sync.Once
 func Get_Data_HeytingAlgebra_conj__4093645121() gopurs_runtime.Value {
 	once_Data_HeytingAlgebra_conj__4093645121.Do(func() {
 		cache_Data_HeytingAlgebra_conj__4093645121 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_HeytingAlgebra_conj__4093645121(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebra[*Constructor_Data_Date_Date]](dict_0_box))
+return Call_Data_HeytingAlgebra_conj__4093645121(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebra](dict_0_box))
 })
 	})
 	return cache_Data_HeytingAlgebra_conj__4093645121
@@ -318,7 +318,7 @@ var once_Data_HeytingAlgebra_conj__204561377 sync.Once
 func Get_Data_HeytingAlgebra_conj__204561377() gopurs_runtime.Value {
 	once_Data_HeytingAlgebra_conj__204561377.Do(func() {
 		cache_Data_HeytingAlgebra_conj__204561377 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_HeytingAlgebra_conj__204561377(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebra[*Constructor_Data_Time_Time]](dict_0_box))
+return Call_Data_HeytingAlgebra_conj__204561377(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebra](dict_0_box))
 })
 	})
 	return cache_Data_HeytingAlgebra_conj__204561377
@@ -340,7 +340,7 @@ var once_Data_HeytingAlgebra_conj__3472268504 sync.Once
 func Get_Data_HeytingAlgebra_conj__3472268504() gopurs_runtime.Value {
 	once_Data_HeytingAlgebra_conj__3472268504.Do(func() {
 		cache_Data_HeytingAlgebra_conj__3472268504 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_HeytingAlgebra_conj__3472268504(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebra[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_HeytingAlgebra_conj__3472268504(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebra](dict_0_box))
 })
 	})
 	return cache_Data_HeytingAlgebra_conj__3472268504
@@ -351,7 +351,7 @@ var once_Data_HeytingAlgebra_conjRecord__2439193216 sync.Once
 func Get_Data_HeytingAlgebra_conjRecord__2439193216() gopurs_runtime.Value {
 	once_Data_HeytingAlgebra_conjRecord__2439193216.Do(func() {
 		cache_Data_HeytingAlgebra_conjRecord__2439193216 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_HeytingAlgebra_conjRecord__2439193216(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_HeytingAlgebra_conjRecord__2439193216(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord](dict_0_box))
 })
 	})
 	return cache_Data_HeytingAlgebra_conjRecord__2439193216
@@ -362,7 +362,7 @@ var once_Data_HeytingAlgebra_conjRecord__497482630 sync.Once
 func Get_Data_HeytingAlgebra_conjRecord__497482630() gopurs_runtime.Value {
 	once_Data_HeytingAlgebra_conjRecord__497482630.Do(func() {
 		cache_Data_HeytingAlgebra_conjRecord__497482630 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_HeytingAlgebra_conjRecord__497482630(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_HeytingAlgebra_conjRecord__497482630(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord](dict_0_box))
 })
 	})
 	return cache_Data_HeytingAlgebra_conjRecord__497482630
@@ -384,7 +384,7 @@ var once_Data_HeytingAlgebra_disj__3472268504 sync.Once
 func Get_Data_HeytingAlgebra_disj__3472268504() gopurs_runtime.Value {
 	once_Data_HeytingAlgebra_disj__3472268504.Do(func() {
 		cache_Data_HeytingAlgebra_disj__3472268504 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_HeytingAlgebra_disj__3472268504(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebra[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_HeytingAlgebra_disj__3472268504(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebra](dict_0_box))
 })
 	})
 	return cache_Data_HeytingAlgebra_disj__3472268504
@@ -395,7 +395,7 @@ var once_Data_HeytingAlgebra_disjRecord__2439193216 sync.Once
 func Get_Data_HeytingAlgebra_disjRecord__2439193216() gopurs_runtime.Value {
 	once_Data_HeytingAlgebra_disjRecord__2439193216.Do(func() {
 		cache_Data_HeytingAlgebra_disjRecord__2439193216 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_HeytingAlgebra_disjRecord__2439193216(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_HeytingAlgebra_disjRecord__2439193216(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord](dict_0_box))
 })
 	})
 	return cache_Data_HeytingAlgebra_disjRecord__2439193216
@@ -406,7 +406,7 @@ var once_Data_HeytingAlgebra_disjRecord__497482630 sync.Once
 func Get_Data_HeytingAlgebra_disjRecord__497482630() gopurs_runtime.Value {
 	once_Data_HeytingAlgebra_disjRecord__497482630.Do(func() {
 		cache_Data_HeytingAlgebra_disjRecord__497482630 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_HeytingAlgebra_disjRecord__497482630(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_HeytingAlgebra_disjRecord__497482630(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord](dict_0_box))
 })
 	})
 	return cache_Data_HeytingAlgebra_disjRecord__497482630
@@ -428,7 +428,7 @@ var once_Data_HeytingAlgebra_ffRecord__2798009952 sync.Once
 func Get_Data_HeytingAlgebra_ffRecord__2798009952() gopurs_runtime.Value {
 	once_Data_HeytingAlgebra_ffRecord__2798009952.Do(func() {
 		cache_Data_HeytingAlgebra_ffRecord__2798009952 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_HeytingAlgebra_ffRecord__2798009952(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_HeytingAlgebra_ffRecord__2798009952(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord](dict_0_box))
 })
 	})
 	return cache_Data_HeytingAlgebra_ffRecord__2798009952
@@ -439,7 +439,7 @@ var once_Data_HeytingAlgebra_ffRecord__465956064 sync.Once
 func Get_Data_HeytingAlgebra_ffRecord__465956064() gopurs_runtime.Value {
 	once_Data_HeytingAlgebra_ffRecord__465956064.Do(func() {
 		cache_Data_HeytingAlgebra_ffRecord__465956064 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_HeytingAlgebra_ffRecord__465956064(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_HeytingAlgebra_ffRecord__465956064(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord](dict_0_box))
 })
 	})
 	return cache_Data_HeytingAlgebra_ffRecord__465956064
@@ -512,7 +512,7 @@ var once_Data_HeytingAlgebra_implies__3472268504 sync.Once
 func Get_Data_HeytingAlgebra_implies__3472268504() gopurs_runtime.Value {
 	once_Data_HeytingAlgebra_implies__3472268504.Do(func() {
 		cache_Data_HeytingAlgebra_implies__3472268504 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_HeytingAlgebra_implies__3472268504(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebra[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_HeytingAlgebra_implies__3472268504(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebra](dict_0_box))
 })
 	})
 	return cache_Data_HeytingAlgebra_implies__3472268504
@@ -523,7 +523,7 @@ var once_Data_HeytingAlgebra_impliesRecord__2439193216 sync.Once
 func Get_Data_HeytingAlgebra_impliesRecord__2439193216() gopurs_runtime.Value {
 	once_Data_HeytingAlgebra_impliesRecord__2439193216.Do(func() {
 		cache_Data_HeytingAlgebra_impliesRecord__2439193216 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_HeytingAlgebra_impliesRecord__2439193216(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_HeytingAlgebra_impliesRecord__2439193216(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord](dict_0_box))
 })
 	})
 	return cache_Data_HeytingAlgebra_impliesRecord__2439193216
@@ -534,7 +534,7 @@ var once_Data_HeytingAlgebra_impliesRecord__497482630 sync.Once
 func Get_Data_HeytingAlgebra_impliesRecord__497482630() gopurs_runtime.Value {
 	once_Data_HeytingAlgebra_impliesRecord__497482630.Do(func() {
 		cache_Data_HeytingAlgebra_impliesRecord__497482630 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_HeytingAlgebra_impliesRecord__497482630(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_HeytingAlgebra_impliesRecord__497482630(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord](dict_0_box))
 })
 	})
 	return cache_Data_HeytingAlgebra_impliesRecord__497482630
@@ -556,7 +556,7 @@ var once_Data_HeytingAlgebra_not__1505204753 sync.Once
 func Get_Data_HeytingAlgebra_not__1505204753() gopurs_runtime.Value {
 	once_Data_HeytingAlgebra_not__1505204753.Do(func() {
 		cache_Data_HeytingAlgebra_not__1505204753 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_HeytingAlgebra_not__1505204753(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebra[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_HeytingAlgebra_not__1505204753(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebra](dict_0_box))
 })
 	})
 	return cache_Data_HeytingAlgebra_not__1505204753
@@ -578,7 +578,7 @@ var once_Data_HeytingAlgebra_notRecord__3181681457 sync.Once
 func Get_Data_HeytingAlgebra_notRecord__3181681457() gopurs_runtime.Value {
 	once_Data_HeytingAlgebra_notRecord__3181681457.Do(func() {
 		cache_Data_HeytingAlgebra_notRecord__3181681457 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_HeytingAlgebra_notRecord__3181681457(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_HeytingAlgebra_notRecord__3181681457(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord](dict_0_box))
 })
 	})
 	return cache_Data_HeytingAlgebra_notRecord__3181681457
@@ -589,7 +589,7 @@ var once_Data_HeytingAlgebra_notRecord__726562039 sync.Once
 func Get_Data_HeytingAlgebra_notRecord__726562039() gopurs_runtime.Value {
 	once_Data_HeytingAlgebra_notRecord__726562039.Do(func() {
 		cache_Data_HeytingAlgebra_notRecord__726562039 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_HeytingAlgebra_notRecord__726562039(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_HeytingAlgebra_notRecord__726562039(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord](dict_0_box))
 })
 	})
 	return cache_Data_HeytingAlgebra_notRecord__726562039
@@ -611,7 +611,7 @@ var once_Data_HeytingAlgebra_ttRecord__2798009952 sync.Once
 func Get_Data_HeytingAlgebra_ttRecord__2798009952() gopurs_runtime.Value {
 	once_Data_HeytingAlgebra_ttRecord__2798009952.Do(func() {
 		cache_Data_HeytingAlgebra_ttRecord__2798009952 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_HeytingAlgebra_ttRecord__2798009952(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_HeytingAlgebra_ttRecord__2798009952(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord](dict_0_box))
 })
 	})
 	return cache_Data_HeytingAlgebra_ttRecord__2798009952
@@ -622,13 +622,13 @@ var once_Data_HeytingAlgebra_ttRecord__465956064 sync.Once
 func Get_Data_HeytingAlgebra_ttRecord__465956064() gopurs_runtime.Value {
 	once_Data_HeytingAlgebra_ttRecord__465956064.Do(func() {
 		cache_Data_HeytingAlgebra_ttRecord__465956064 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_HeytingAlgebra_ttRecord__465956064(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_HeytingAlgebra_ttRecord__465956064(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord](dict_0_box))
 })
 	})
 	return cache_Data_HeytingAlgebra_ttRecord__465956064
 }
 
-type Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[T_rowlist any, T_row any, T_subrow any] struct {
+type Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -641,7 +641,7 @@ type Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[T_rowlist any, T_row a
 
 func init() {
 	gopurs_runtime.StructGetters[3558753879] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord)(ptr)
 		_ = c
 		switch key {
 		case "conjRecord": return gopurs_runtime.Box(c.V0)
@@ -656,20 +656,20 @@ func init() {
 }
 
 
-type Constructor_Data_HeytingAlgebra_HeytingAlgebra[T_a any] struct {
+type Constructor_Data_HeytingAlgebra_HeytingAlgebra struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
-	V2 T_a
+	V2 gopurs_runtime.Value
 	V3 gopurs_runtime.Value
 	V4 gopurs_runtime.Value
-	V5 T_a
+	V5 gopurs_runtime.Value
 }
 
 
 func init() {
 	gopurs_runtime.StructGetters[926771738] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_HeytingAlgebra_HeytingAlgebra[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_HeytingAlgebra_HeytingAlgebra)(ptr)
 		_ = c
 		switch key {
 		case "conj": return gopurs_runtime.Box(c.V0)
@@ -696,8 +696,8 @@ _ = x_0
 return x_0
 }
 
-func Call_Data_HeytingAlgebra_ttRecord(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_HeytingAlgebra_ttRecord(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V5)
 }
@@ -708,32 +708,32 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "tt")
 }
 
-func Call_Data_HeytingAlgebra_notRecord(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_HeytingAlgebra_notRecord(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V4)
 }
 
-func Call_Data_HeytingAlgebra_not(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebra[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebra[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_HeytingAlgebra_not(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebra) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebra = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V4)
 }
 
-func Call_Data_HeytingAlgebra_impliesRecord(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_HeytingAlgebra_impliesRecord(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V3)
 }
 
-func Call_Data_HeytingAlgebra_implies(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebra[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebra[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_HeytingAlgebra_implies(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebra) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebra = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V3)
 }
 
-func Call_Data_HeytingAlgebra_ffRecord(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_HeytingAlgebra_ffRecord(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V2)
 }
@@ -744,20 +744,20 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "ff")
 }
 
-func Call_Data_HeytingAlgebra_disjRecord(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_HeytingAlgebra_disjRecord(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_HeytingAlgebra_disj(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebra[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebra[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_HeytingAlgebra_disj(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebra) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebra = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_HeytingAlgebra_conjRecord(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_HeytingAlgebra_conjRecord(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
@@ -770,8 +770,8 @@ _ = dictHeytingAlgebraRecord_1
 return gopurs_runtime.RecordDict([]string{"conj", "disj", "ff", "implies", "not", "tt"}, []gopurs_runtime.Value{gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictHeytingAlgebraRecord_1, "conjRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictHeytingAlgebraRecord_1, "disjRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebraRecord_1, "ffRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictHeytingAlgebraRecord_1, "impliesRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictHeytingAlgebraRecord_1, "notRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebraRecord_1, "ttRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil})})
 }
 
-func Call_Data_HeytingAlgebra_conj(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebra[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebra[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_HeytingAlgebra_conj(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebra) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebra = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
@@ -877,20 +877,20 @@ return gopurs_runtime.Apply3(Get_Record_Unsafe_unsafeSet(), gopurs_runtime.Str(g
 })})
 }
 
-func Call_Data_HeytingAlgebra_conj__2927892844(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebra[int64]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebra[int64] = dict_0_loop
+func Call_Data_HeytingAlgebra_conj__2927892844(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebra) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebra = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_Data_HeytingAlgebra_conj__4093645121(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebra[*Constructor_Data_Date_Date]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebra[*Constructor_Data_Date_Date] = dict_0_loop
+func Call_Data_HeytingAlgebra_conj__4093645121(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebra) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebra = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_Data_HeytingAlgebra_conj__204561377(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebra[*Constructor_Data_Time_Time]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebra[*Constructor_Data_Time_Time] = dict_0_loop
+func Call_Data_HeytingAlgebra_conj__204561377(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebra) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebra = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
@@ -903,20 +903,20 @@ _ = __eta1_1
 return gopurs_runtime.Bool(((__eta0_0.IntVal) != (0)) && ((__eta1_1.IntVal) != (0)))
 }
 
-func Call_Data_HeytingAlgebra_conj__3472268504(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebra[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebra[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_HeytingAlgebra_conj__3472268504(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebra) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebra = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_Data_HeytingAlgebra_conjRecord__2439193216(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_HeytingAlgebra_conjRecord__2439193216(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_Data_HeytingAlgebra_conjRecord__497482630(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_HeytingAlgebra_conjRecord__497482630(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
@@ -929,20 +929,20 @@ _ = __eta1_1
 return gopurs_runtime.Bool(((__eta0_0.IntVal) != (0)) || ((__eta1_1.IntVal) != (0)))
 }
 
-func Call_Data_HeytingAlgebra_disj__3472268504(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebra[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebra[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_HeytingAlgebra_disj__3472268504(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebra) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebra = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_HeytingAlgebra_disjRecord__2439193216(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_HeytingAlgebra_disjRecord__2439193216(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_HeytingAlgebra_disjRecord__497482630(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_HeytingAlgebra_disjRecord__497482630(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
@@ -953,32 +953,32 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "ff")
 }
 
-func Call_Data_HeytingAlgebra_ffRecord__2798009952(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_HeytingAlgebra_ffRecord__2798009952(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V2)
 }
 
-func Call_Data_HeytingAlgebra_ffRecord__465956064(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_HeytingAlgebra_ffRecord__465956064(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V2)
 }
 
-func Call_Data_HeytingAlgebra_implies__3472268504(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebra[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebra[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_HeytingAlgebra_implies__3472268504(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebra) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebra = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V3)
 }
 
-func Call_Data_HeytingAlgebra_impliesRecord__2439193216(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_HeytingAlgebra_impliesRecord__2439193216(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V3)
 }
 
-func Call_Data_HeytingAlgebra_impliesRecord__497482630(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_HeytingAlgebra_impliesRecord__497482630(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V3)
 }
@@ -989,8 +989,8 @@ _ = __eta0_0
 return gopurs_runtime.Bool(((__eta0_0.IntVal) != (0)) != (true))
 }
 
-func Call_Data_HeytingAlgebra_not__1505204753(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebra[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebra[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_HeytingAlgebra_not__1505204753(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebra) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebra = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V4)
 }
@@ -998,17 +998,17 @@ return gopurs_runtime.Box(dict_0.V4)
 func Call_Data_HeytingAlgebra_not__2235433470(__eta0_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
 _ = __eta0_0
-return gopurs_runtime.Apply(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebra[gopurs_runtime.Value]](Get_Data_Interval_Duration_Iso_heytingAlgebraFunction()).V4), __eta0_0)
+return gopurs_runtime.Apply(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_HeytingAlgebra_HeytingAlgebra](Get_Data_Interval_Duration_Iso_heytingAlgebraFunction()).V4), __eta0_0)
 }
 
-func Call_Data_HeytingAlgebra_notRecord__3181681457(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_HeytingAlgebra_notRecord__3181681457(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V4)
 }
 
-func Call_Data_HeytingAlgebra_notRecord__726562039(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_HeytingAlgebra_notRecord__726562039(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V4)
 }
@@ -1019,14 +1019,14 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "tt")
 }
 
-func Call_Data_HeytingAlgebra_ttRecord__2798009952(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_HeytingAlgebra_ttRecord__2798009952(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V5)
 }
 
-func Call_Data_HeytingAlgebra_ttRecord__465956064(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_HeytingAlgebra_ttRecord__465956064(dict_0_loop *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_HeytingAlgebra_HeytingAlgebraRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V5)
 }

@@ -39,7 +39,7 @@ var cache_Data_String_CodeUnits_toChar gopurs_runtime.Value
 var once_Data_String_CodeUnits_toChar sync.Once
 func Get_Data_String_CodeUnits_toChar() gopurs_runtime.Value {
 	once_Data_String_CodeUnits_toChar.Do(func() {
-		cache_Data_String_CodeUnits_toChar = gopurs_runtime.Apply2(Get_Data_String_CodeUnits__toChar(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))})
+		cache_Data_String_CodeUnits_toChar = gopurs_runtime.Apply2(Get_Data_String_CodeUnits__toChar(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
 	})
 	return cache_Data_String_CodeUnits_toChar
 }
@@ -103,7 +103,7 @@ var cache_Data_String_CodeUnits_lastIndexOf_prime gopurs_runtime.Value
 var once_Data_String_CodeUnits_lastIndexOf_prime sync.Once
 func Get_Data_String_CodeUnits_lastIndexOf_prime() gopurs_runtime.Value {
 	once_Data_String_CodeUnits_lastIndexOf_prime.Do(func() {
-		cache_Data_String_CodeUnits_lastIndexOf_prime = gopurs_runtime.Apply2(Get_Data_String_CodeUnits__lastIndexOfStartingAt(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))})
+		cache_Data_String_CodeUnits_lastIndexOf_prime = gopurs_runtime.Apply2(Get_Data_String_CodeUnits__lastIndexOfStartingAt(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
 	})
 	return cache_Data_String_CodeUnits_lastIndexOf_prime
 }
@@ -112,7 +112,7 @@ var cache_Data_String_CodeUnits_lastIndexOf gopurs_runtime.Value
 var once_Data_String_CodeUnits_lastIndexOf sync.Once
 func Get_Data_String_CodeUnits_lastIndexOf() gopurs_runtime.Value {
 	once_Data_String_CodeUnits_lastIndexOf.Do(func() {
-		cache_Data_String_CodeUnits_lastIndexOf = gopurs_runtime.Apply2(Get_Data_String_CodeUnits__lastIndexOf(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))})
+		cache_Data_String_CodeUnits_lastIndexOf = gopurs_runtime.Apply2(Get_Data_String_CodeUnits__lastIndexOf(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
 	})
 	return cache_Data_String_CodeUnits_lastIndexOf
 }
@@ -121,7 +121,7 @@ var cache_Data_String_CodeUnits_indexOf_prime gopurs_runtime.Value
 var once_Data_String_CodeUnits_indexOf_prime sync.Once
 func Get_Data_String_CodeUnits_indexOf_prime() gopurs_runtime.Value {
 	once_Data_String_CodeUnits_indexOf_prime.Do(func() {
-		cache_Data_String_CodeUnits_indexOf_prime = gopurs_runtime.Apply2(Get_Data_String_CodeUnits__indexOfStartingAt(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))})
+		cache_Data_String_CodeUnits_indexOf_prime = gopurs_runtime.Apply2(Get_Data_String_CodeUnits__indexOfStartingAt(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
 	})
 	return cache_Data_String_CodeUnits_indexOf_prime
 }
@@ -130,7 +130,7 @@ var cache_Data_String_CodeUnits_indexOf gopurs_runtime.Value
 var once_Data_String_CodeUnits_indexOf sync.Once
 func Get_Data_String_CodeUnits_indexOf() gopurs_runtime.Value {
 	once_Data_String_CodeUnits_indexOf.Do(func() {
-		cache_Data_String_CodeUnits_indexOf = gopurs_runtime.Apply2(Get_Data_String_CodeUnits__indexOf(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))})
+		cache_Data_String_CodeUnits_indexOf = gopurs_runtime.Apply2(Get_Data_String_CodeUnits__indexOf(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
 	})
 	return cache_Data_String_CodeUnits_indexOf
 }
@@ -183,28 +183,28 @@ var cache_Data_String_CodeUnits_charAt gopurs_runtime.Value
 var once_Data_String_CodeUnits_charAt sync.Once
 func Get_Data_String_CodeUnits_charAt() gopurs_runtime.Value {
 	once_Data_String_CodeUnits_charAt.Do(func() {
-		cache_Data_String_CodeUnits_charAt = gopurs_runtime.Apply2(Get_Data_String_CodeUnits__charAt(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))})
+		cache_Data_String_CodeUnits_charAt = gopurs_runtime.Apply2(Get_Data_String_CodeUnits__charAt(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
 	})
 	return cache_Data_String_CodeUnits_charAt
 }
 
-func Call_Data_String_CodeUnits_uncons(v_0_loop string) *Constructor_Data_Maybe_Just[gopurs_runtime.Value] {
+func Call_Data_String_CodeUnits_uncons(v_0_loop string) *Constructor_Data_Maybe_Just {
 var v_0 string = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
 if (v_0) == ("") {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just[gopurs_runtime.Value]{1, gopurs_runtime.RecordDict2("head", "tail", gopurs_runtime.Str(gopurs_runtime.Apply2(Get_Data_String_Unsafe_charAt(), gopurs_runtime.Int(0), gopurs_runtime.Str(v_0)).StrVal()), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_Data_String_CodeUnits_drop(), gopurs_runtime.Int(1), gopurs_runtime.Str(v_0)).StrVal()))})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.RecordDict2("head", "tail", gopurs_runtime.Str(gopurs_runtime.Apply2(Get_Data_String_Unsafe_charAt(), gopurs_runtime.Int(0), gopurs_runtime.Str(v_0)).StrVal()), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_Data_String_CodeUnits_drop(), gopurs_runtime.Int(1), gopurs_runtime.Str(v_0)).StrVal()))})}
 }
 end_branch_0:
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[gopurs_runtime.Value]](__t0)
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t0)
 }
 
 func Call_Data_String_CodeUnits_takeWhile(p_0_loop gopurs_runtime.Value, s_1_loop string) string {
@@ -223,7 +223,7 @@ _ = s_1
 return gopurs_runtime.Apply2(Get_Data_String_CodeUnits_drop(), gopurs_runtime.Int((gopurs_runtime.Apply(Get_Data_String_CodeUnits_length(), gopurs_runtime.Str(s_1)).IntVal) - (i_0)), gopurs_runtime.Str(s_1)).StrVal()
 }
 
-func Call_Data_String_CodeUnits_stripSuffix(v_0_loop string, str_1_loop string) *Constructor_Data_Maybe_Just[string] {
+func Call_Data_String_CodeUnits_stripSuffix(v_0_loop string, str_1_loop string) *Constructor_Data_Maybe_Just {
 var v_0 string = v_0_loop
 _ = v_0
 var str_1 string = str_1_loop
@@ -234,20 +234,20 @@ _ = v1_2_0
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.RecordGet(v1_2_0, "after").StrVal()) == (v_0) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just[gopurs_runtime.Value]{1, gopurs_runtime.Str(gopurs_runtime.RecordGet(v1_2_0, "before").StrVal())})}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Str(gopurs_runtime.RecordGet(v1_2_0, "before").StrVal())})}
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
 }
 end_branch_1:
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[string]](__t1)
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t1)
 }
 
-func Call_Data_String_CodeUnits_stripPrefix(v_0_loop string, str_1_loop string) *Constructor_Data_Maybe_Just[string] {
+func Call_Data_String_CodeUnits_stripPrefix(v_0_loop string, str_1_loop string) *Constructor_Data_Maybe_Just {
 var v_0 string = v_0_loop
 _ = v_0
 var str_1 string = str_1_loop
@@ -258,17 +258,17 @@ _ = v1_2_0
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.RecordGet(v1_2_0, "before").StrVal()) == (v_0) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just[gopurs_runtime.Value]{1, gopurs_runtime.Str(gopurs_runtime.RecordGet(v1_2_0, "after").StrVal())})}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Str(gopurs_runtime.RecordGet(v1_2_0, "after").StrVal())})}
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
 }
 end_branch_1:
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[string]](__t1)
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t1)
 }
 
 func Call_Data_String_CodeUnits_startsWith(pat_0_loop string, x_1_loop string) bool {

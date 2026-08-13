@@ -14,7 +14,7 @@ func Get_Type_Proxy_Proxy() gopurs_runtime.Value {
 	return cache_Type_Proxy_Proxy
 }
 
-type Constructor_Type_Proxy_Proxy[T_a any] struct {
+type Constructor_Type_Proxy_Proxy struct {
 	Rc uint32
 }
 

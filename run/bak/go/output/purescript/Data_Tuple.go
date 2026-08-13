@@ -12,7 +12,7 @@ func Get_Data_Tuple_Tuple() gopurs_runtime.Value {
 	once_Data_Tuple_Tuple.Do(func() {
 		cache_Data_Tuple_Tuple = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, value0, value1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, value0, value1})}
 })
 })
 	})
@@ -24,7 +24,7 @@ var once_Data_Tuple_uncurry sync.Once
 func Get_Data_Tuple_uncurry() gopurs_runtime.Value {
 	once_Data_Tuple_uncurry.Do(func() {
 		cache_Data_Tuple_uncurry = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Tuple_uncurry(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](v_1_box))
+return Call_Data_Tuple_uncurry(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_1_box))
 })
 	})
 	return cache_Data_Tuple_uncurry
@@ -35,7 +35,7 @@ var once_Data_Tuple_swap sync.Once
 func Get_Data_Tuple_swap() gopurs_runtime.Value {
 	once_Data_Tuple_swap.Do(func() {
 		cache_Data_Tuple_swap = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(Call_Data_Tuple_swap(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](v_0_box)))}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(Call_Data_Tuple_swap(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_0_box)))}
 })
 	})
 	return cache_Data_Tuple_swap
@@ -46,7 +46,7 @@ var once_Data_Tuple_snd sync.Once
 func Get_Data_Tuple_snd() gopurs_runtime.Value {
 	once_Data_Tuple_snd.Do(func() {
 		cache_Data_Tuple_snd = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Tuple_snd(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](v_0_box))
+return Call_Data_Tuple_snd(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_0_box))
 })
 	})
 	return cache_Data_Tuple_snd
@@ -80,7 +80,7 @@ func Get_Data_Tuple_semigroupoidTuple() gopurs_runtime.Value {
 	once_Data_Tuple_semigroupoidTuple.Do(func() {
 		cache_Data_Tuple_semigroupoidTuple = gopurs_runtime.RecordDict1("compose", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_1.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_0.UnsafePtr).V1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, (*Constructor_Data_Tuple_Tuple)(v1_1.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple)(v_0.UnsafePtr).V1})}
 })
 }))
 	})
@@ -136,9 +136,9 @@ var once_Data_Tuple_genericTuple sync.Once
 func Get_Data_Tuple_genericTuple() gopurs_runtime.Value {
 	once_Data_Tuple_genericTuple.Do(func() {
 		cache_Data_Tuple_genericTuple = gopurs_runtime.RecordDict2("from", "to", gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&Constructor_Data_Generic_Rep_Product[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(x_0.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(x_0.UnsafePtr).V1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&Constructor_Data_Generic_Rep_Product{1, (*Constructor_Data_Tuple_Tuple)(x_0.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple)(x_0.UnsafePtr).V1})}
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*Constructor_Data_Generic_Rep_Product[gopurs_runtime.Value, gopurs_runtime.Value])(x_0.UnsafePtr).V0, (*Constructor_Data_Generic_Rep_Product[gopurs_runtime.Value, gopurs_runtime.Value])(x_0.UnsafePtr).V1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, (*Constructor_Data_Generic_Rep_Product)(x_0.UnsafePtr).V0, (*Constructor_Data_Generic_Rep_Product)(x_0.UnsafePtr).V1})}
 }))
 	})
 	return cache_Data_Tuple_genericTuple
@@ -150,7 +150,7 @@ func Get_Data_Tuple_functorTuple() gopurs_runtime.Value {
 	once_Data_Tuple_functorTuple.Do(func() {
 		cache_Data_Tuple_functorTuple = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(m_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(m_1.UnsafePtr).V0, gopurs_runtime.Apply(f_0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(m_1.UnsafePtr).V1)})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, (*Constructor_Data_Tuple_Tuple)(m_1.UnsafePtr).V0, gopurs_runtime.Apply(f_0, (*Constructor_Data_Tuple_Tuple)(m_1.UnsafePtr).V1)})}
 })
 }))
 	})
@@ -175,7 +175,7 @@ var once_Data_Tuple_fst sync.Once
 func Get_Data_Tuple_fst() gopurs_runtime.Value {
 	once_Data_Tuple_fst.Do(func() {
 		cache_Data_Tuple_fst = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Tuple_fst(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](v_0_box))
+return Call_Data_Tuple_fst(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_0_box))
 })
 	})
 	return cache_Data_Tuple_fst
@@ -200,7 +200,7 @@ func Get_Data_Tuple_extendTuple() gopurs_runtime.Value {
 return Get_Data_Tuple_functorTuple()
 }), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V0, gopurs_runtime.Apply(f_0, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](v_1))})})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, (*Constructor_Data_Tuple_Tuple)(v_1.UnsafePtr).V0, gopurs_runtime.Apply(f_0, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_1))})})}
 })
 }))
 	})
@@ -391,7 +391,7 @@ func Get_Data_Tuple_extendTuple__754007552() gopurs_runtime.Value {
 return Get_Data_Tuple_functorTuple()
 }), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V0, gopurs_runtime.Apply(f_0, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](v_1))})})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, (*Constructor_Data_Tuple_Tuple)(v_1.UnsafePtr).V0, gopurs_runtime.Apply(f_0, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_1))})})}
 })
 }))
 	})
@@ -403,7 +403,7 @@ var once_Data_Tuple_fst__3478736243 sync.Once
 func Get_Data_Tuple_fst__3478736243() gopurs_runtime.Value {
 	once_Data_Tuple_fst__3478736243.Do(func() {
 		cache_Data_Tuple_fst__3478736243 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Int(Call_Data_Tuple_fst__3478736243(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value]](v_0_box)))
+return gopurs_runtime.Int(Call_Data_Tuple_fst__3478736243(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_0_box)))
 })
 	})
 	return cache_Data_Tuple_fst__3478736243
@@ -414,7 +414,7 @@ var once_Data_Tuple_fst__549384412 sync.Once
 func Get_Data_Tuple_fst__549384412() gopurs_runtime.Value {
 	once_Data_Tuple_fst__549384412.Do(func() {
 		cache_Data_Tuple_fst__549384412 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(Call_Data_Tuple_fst__549384412(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[float64, gopurs_runtime.Value]](v_0_box)))
+return gopurs_runtime.Float(Call_Data_Tuple_fst__549384412(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_0_box)))
 })
 	})
 	return cache_Data_Tuple_fst__549384412
@@ -425,7 +425,7 @@ var once_Data_Tuple_fst__20422131 sync.Once
 func Get_Data_Tuple_fst__20422131() gopurs_runtime.Value {
 	once_Data_Tuple_fst__20422131.Do(func() {
 		cache_Data_Tuple_fst__20422131 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Tuple_fst__20422131(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](v_0_box))
+return Call_Data_Tuple_fst__20422131(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_0_box))
 })
 	})
 	return cache_Data_Tuple_fst__20422131
@@ -436,7 +436,7 @@ var once_Data_Tuple_fst__2554656696 sync.Once
 func Get_Data_Tuple_fst__2554656696() gopurs_runtime.Value {
 	once_Data_Tuple_fst__2554656696.Do(func() {
 		cache_Data_Tuple_fst__2554656696 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Tuple_fst__2554656696(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](v_0_box))
+return Call_Data_Tuple_fst__2554656696(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_0_box))
 })
 	})
 	return cache_Data_Tuple_fst__2554656696
@@ -447,7 +447,7 @@ var once_Data_Tuple_fst__4285080947 sync.Once
 func Get_Data_Tuple_fst__4285080947() gopurs_runtime.Value {
 	once_Data_Tuple_fst__4285080947.Do(func() {
 		cache_Data_Tuple_fst__4285080947 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Tuple_fst__4285080947(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](v_0_box))
+return Call_Data_Tuple_fst__4285080947(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_0_box))
 })
 	})
 	return cache_Data_Tuple_fst__4285080947
@@ -458,7 +458,7 @@ var once_Data_Tuple_fst__395594805 sync.Once
 func Get_Data_Tuple_fst__395594805() gopurs_runtime.Value {
 	once_Data_Tuple_fst__395594805.Do(func() {
 		cache_Data_Tuple_fst__395594805 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Tuple_fst__395594805(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](v_0_box))
+return Call_Data_Tuple_fst__395594805(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_0_box))
 })
 	})
 	return cache_Data_Tuple_fst__395594805
@@ -469,7 +469,7 @@ var once_Data_Tuple_fst__82526164 sync.Once
 func Get_Data_Tuple_fst__82526164() gopurs_runtime.Value {
 	once_Data_Tuple_fst__82526164.Do(func() {
 		cache_Data_Tuple_fst__82526164 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Tuple_fst__82526164(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, *Constructor_Data_Maybe_Just[gopurs_runtime.Value]]](v_0_box))
+return Call_Data_Tuple_fst__82526164(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_0_box))
 })
 	})
 	return cache_Data_Tuple_fst__82526164
@@ -480,7 +480,7 @@ var once_Data_Tuple_fst__2754781306 sync.Once
 func Get_Data_Tuple_fst__2754781306() gopurs_runtime.Value {
 	once_Data_Tuple_fst__2754781306.Do(func() {
 		cache_Data_Tuple_fst__2754781306 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Tuple_fst__2754781306(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](v_0_box))
+return Call_Data_Tuple_fst__2754781306(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_0_box))
 })
 	})
 	return cache_Data_Tuple_fst__2754781306
@@ -492,7 +492,7 @@ func Get_Data_Tuple_functorTuple__2544689875() gopurs_runtime.Value {
 	once_Data_Tuple_functorTuple__2544689875.Do(func() {
 		cache_Data_Tuple_functorTuple__2544689875 = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(m_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(m_1.UnsafePtr).V0, gopurs_runtime.Apply(f_0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(m_1.UnsafePtr).V1)})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, (*Constructor_Data_Tuple_Tuple)(m_1.UnsafePtr).V0, gopurs_runtime.Apply(f_0, (*Constructor_Data_Tuple_Tuple)(m_1.UnsafePtr).V1)})}
 })
 }))
 	})
@@ -505,7 +505,7 @@ func Get_Data_Tuple_functorTuple__2249620049() gopurs_runtime.Value {
 	once_Data_Tuple_functorTuple__2249620049.Do(func() {
 		cache_Data_Tuple_functorTuple__2249620049 = gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(m_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(m_1.UnsafePtr).V0, gopurs_runtime.Apply(f_0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(m_1.UnsafePtr).V1)})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, (*Constructor_Data_Tuple_Tuple)(m_1.UnsafePtr).V0, gopurs_runtime.Apply(f_0, (*Constructor_Data_Tuple_Tuple)(m_1.UnsafePtr).V1)})}
 })
 }))
 	})
@@ -517,7 +517,7 @@ var once_Data_Tuple_snd__1234761462 sync.Once
 func Get_Data_Tuple_snd__1234761462() gopurs_runtime.Value {
 	once_Data_Tuple_snd__1234761462.Do(func() {
 		cache_Data_Tuple_snd__1234761462 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Tuple_snd__1234761462(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value]](v_0_box))
+return Call_Data_Tuple_snd__1234761462(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_0_box))
 })
 	})
 	return cache_Data_Tuple_snd__1234761462
@@ -528,7 +528,7 @@ var once_Data_Tuple_snd__4069939766 sync.Once
 func Get_Data_Tuple_snd__4069939766() gopurs_runtime.Value {
 	once_Data_Tuple_snd__4069939766.Do(func() {
 		cache_Data_Tuple_snd__4069939766 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Tuple_snd__4069939766(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value]](v_0_box))
+return Call_Data_Tuple_snd__4069939766(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_0_box))
 })
 	})
 	return cache_Data_Tuple_snd__4069939766
@@ -539,7 +539,7 @@ var once_Data_Tuple_snd__3058387254 sync.Once
 func Get_Data_Tuple_snd__3058387254() gopurs_runtime.Value {
 	once_Data_Tuple_snd__3058387254.Do(func() {
 		cache_Data_Tuple_snd__3058387254 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(Call_Data_Tuple_snd__3058387254(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[int64, *Constructor_Data_List_Types_Cons[gopurs_runtime.Value]]](v_0_box)))}
+return gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(Call_Data_Tuple_snd__3058387254(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_0_box)))}
 })
 	})
 	return cache_Data_Tuple_snd__3058387254
@@ -550,7 +550,7 @@ var once_Data_Tuple_snd__2618926102 sync.Once
 func Get_Data_Tuple_snd__2618926102() gopurs_runtime.Value {
 	once_Data_Tuple_snd__2618926102.Do(func() {
 		cache_Data_Tuple_snd__2618926102 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Tuple_snd__2618926102(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value]](v_0_box))
+return Call_Data_Tuple_snd__2618926102(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_0_box))
 })
 	})
 	return cache_Data_Tuple_snd__2618926102
@@ -561,7 +561,7 @@ var once_Data_Tuple_snd__21214742 sync.Once
 func Get_Data_Tuple_snd__21214742() gopurs_runtime.Value {
 	once_Data_Tuple_snd__21214742.Do(func() {
 		cache_Data_Tuple_snd__21214742 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Tuple_snd__21214742(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value]](v_0_box))
+return Call_Data_Tuple_snd__21214742(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_0_box))
 })
 	})
 	return cache_Data_Tuple_snd__21214742
@@ -572,7 +572,7 @@ var once_Data_Tuple_snd__20422131 sync.Once
 func Get_Data_Tuple_snd__20422131() gopurs_runtime.Value {
 	once_Data_Tuple_snd__20422131.Do(func() {
 		cache_Data_Tuple_snd__20422131 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Tuple_snd__20422131(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](v_0_box))
+return Call_Data_Tuple_snd__20422131(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_0_box))
 })
 	})
 	return cache_Data_Tuple_snd__20422131
@@ -583,7 +583,7 @@ var once_Data_Tuple_snd__2198421043 sync.Once
 func Get_Data_Tuple_snd__2198421043() gopurs_runtime.Value {
 	once_Data_Tuple_snd__2198421043.Do(func() {
 		cache_Data_Tuple_snd__2198421043 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Tuple_snd__2198421043(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](v_0_box))
+return Call_Data_Tuple_snd__2198421043(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_0_box))
 })
 	})
 	return cache_Data_Tuple_snd__2198421043
@@ -594,7 +594,7 @@ var once_Data_Tuple_snd__4038973427 sync.Once
 func Get_Data_Tuple_snd__4038973427() gopurs_runtime.Value {
 	once_Data_Tuple_snd__4038973427.Do(func() {
 		cache_Data_Tuple_snd__4038973427 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Tuple_snd__4038973427(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](v_0_box))
+return Call_Data_Tuple_snd__4038973427(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_0_box))
 })
 	})
 	return cache_Data_Tuple_snd__4038973427
@@ -605,7 +605,7 @@ var once_Data_Tuple_snd__2019004820 sync.Once
 func Get_Data_Tuple_snd__2019004820() gopurs_runtime.Value {
 	once_Data_Tuple_snd__2019004820.Do(func() {
 		cache_Data_Tuple_snd__2019004820 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float(Call_Data_Tuple_snd__2019004820(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[uint32, float64]](v_0_box)))
+return gopurs_runtime.Float(Call_Data_Tuple_snd__2019004820(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_0_box)))
 })
 	})
 	return cache_Data_Tuple_snd__2019004820
@@ -616,7 +616,7 @@ var once_Data_Tuple_snd__4227940231 sync.Once
 func Get_Data_Tuple_snd__4227940231() gopurs_runtime.Value {
 	once_Data_Tuple_snd__4227940231.Do(func() {
 		cache_Data_Tuple_snd__4227940231 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Tuple_snd__4227940231(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[*Constructor_Data_Maybe_Just[float64], gopurs_runtime.Value]](v_0_box))
+return Call_Data_Tuple_snd__4227940231(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_0_box))
 })
 	})
 	return cache_Data_Tuple_snd__4227940231
@@ -627,7 +627,7 @@ var once_Data_Tuple_snd__3388842183 sync.Once
 func Get_Data_Tuple_snd__3388842183() gopurs_runtime.Value {
 	once_Data_Tuple_snd__3388842183.Do(func() {
 		cache_Data_Tuple_snd__3388842183 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Tuple_snd__3388842183(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[*Constructor_Data_Maybe_Just[float64], gopurs_runtime.Value]](v_0_box))
+return Call_Data_Tuple_snd__3388842183(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_0_box))
 })
 	})
 	return cache_Data_Tuple_snd__3388842183
@@ -638,7 +638,7 @@ var once_Data_Tuple_snd__1694562576 sync.Once
 func Get_Data_Tuple_snd__1694562576() gopurs_runtime.Value {
 	once_Data_Tuple_snd__1694562576.Do(func() {
 		cache_Data_Tuple_snd__1694562576 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Tuple_snd__1694562576(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value]](v_0_box))
+return Call_Data_Tuple_snd__1694562576(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_0_box))
 })
 	})
 	return cache_Data_Tuple_snd__1694562576
@@ -649,7 +649,7 @@ var once_Data_Tuple_snd__395594805 sync.Once
 func Get_Data_Tuple_snd__395594805() gopurs_runtime.Value {
 	once_Data_Tuple_snd__395594805.Do(func() {
 		cache_Data_Tuple_snd__395594805 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Tuple_snd__395594805(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](v_0_box))
+return Call_Data_Tuple_snd__395594805(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_0_box))
 })
 	})
 	return cache_Data_Tuple_snd__395594805
@@ -660,7 +660,7 @@ var once_Data_Tuple_swap__572690077 sync.Once
 func Get_Data_Tuple_swap__572690077() gopurs_runtime.Value {
 	once_Data_Tuple_swap__572690077.Do(func() {
 		cache_Data_Tuple_swap__572690077 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(Call_Data_Tuple_swap__572690077(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](v_0_box)))}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(Call_Data_Tuple_swap__572690077(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_0_box)))}
 })
 	})
 	return cache_Data_Tuple_swap__572690077
@@ -671,7 +671,7 @@ var once_Data_Tuple_swap__249254301 sync.Once
 func Get_Data_Tuple_swap__249254301() gopurs_runtime.Value {
 	once_Data_Tuple_swap__249254301.Do(func() {
 		cache_Data_Tuple_swap__249254301 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(Call_Data_Tuple_swap__249254301(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](v_0_box)))}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(Call_Data_Tuple_swap__249254301(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_0_box)))}
 })
 	})
 	return cache_Data_Tuple_swap__249254301
@@ -682,7 +682,7 @@ var once_Data_Tuple_swap__1502889949 sync.Once
 func Get_Data_Tuple_swap__1502889949() gopurs_runtime.Value {
 	once_Data_Tuple_swap__1502889949.Do(func() {
 		cache_Data_Tuple_swap__1502889949 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(Call_Data_Tuple_swap__1502889949(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](v_0_box)))}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(Call_Data_Tuple_swap__1502889949(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_0_box)))}
 })
 	})
 	return cache_Data_Tuple_swap__1502889949
@@ -693,7 +693,7 @@ var once_Data_Tuple_uncurry__3533477633 sync.Once
 func Get_Data_Tuple_uncurry__3533477633() gopurs_runtime.Value {
 	once_Data_Tuple_uncurry__3533477633.Do(func() {
 		cache_Data_Tuple_uncurry__3533477633 = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Tuple_uncurry__3533477633(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](v_1_box))
+return Call_Data_Tuple_uncurry__3533477633(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_1_box))
 })
 	})
 	return cache_Data_Tuple_uncurry__3533477633
@@ -704,7 +704,7 @@ var once_Data_Tuple_uncurry__2421405441 sync.Once
 func Get_Data_Tuple_uncurry__2421405441() gopurs_runtime.Value {
 	once_Data_Tuple_uncurry__2421405441.Do(func() {
 		cache_Data_Tuple_uncurry__2421405441 = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2367475031, UnsafePtr: unsafe.Pointer(Call_Data_Tuple_uncurry__2421405441(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](v_1_box)))}
+return gopurs_runtime.Value{Type: 9, IntVal: 2367475031, UnsafePtr: unsafe.Pointer(Call_Data_Tuple_uncurry__2421405441(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_1_box)))}
 })
 	})
 	return cache_Data_Tuple_uncurry__2421405441
@@ -715,7 +715,7 @@ var once_Data_Tuple_uncurry__1489344417 sync.Once
 func Get_Data_Tuple_uncurry__1489344417() gopurs_runtime.Value {
 	once_Data_Tuple_uncurry__1489344417.Do(func() {
 		cache_Data_Tuple_uncurry__1489344417 = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Tuple_uncurry__1489344417(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](v_1_box))
+return Call_Data_Tuple_uncurry__1489344417(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_1_box))
 })
 	})
 	return cache_Data_Tuple_uncurry__1489344417
@@ -726,37 +726,37 @@ var once_Data_Tuple_uncurry__601611969 sync.Once
 func Get_Data_Tuple_uncurry__601611969() gopurs_runtime.Value {
 	once_Data_Tuple_uncurry__601611969.Do(func() {
 		cache_Data_Tuple_uncurry__601611969 = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(Call_Data_Tuple_uncurry__601611969(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](v_1_box)))}
+return gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(Call_Data_Tuple_uncurry__601611969(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_1_box)))}
 })
 	})
 	return cache_Data_Tuple_uncurry__601611969
 }
 
-type Constructor_Data_Tuple_Tuple[T_a any, T_b any] struct {
+type Constructor_Data_Tuple_Tuple struct {
 	Rc uint32
-	V0 T_a
-	V1 T_b
+	V0 gopurs_runtime.Value
+	V1 gopurs_runtime.Value
 }
 
 
-func Call_Data_Tuple_uncurry(f_0_loop gopurs_runtime.Value, v_1_loop *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+func Call_Data_Tuple_uncurry(f_0_loop gopurs_runtime.Value, v_1_loop *Constructor_Data_Tuple_Tuple) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-var v_1 *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] = v_1_loop
+var v_1 *Constructor_Data_Tuple_Tuple = v_1_loop
 _ = v_1
-return gopurs_runtime.Apply2(f_0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_1)}.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_1)}.UnsafePtr).V1)
+return gopurs_runtime.Apply2(f_0, (v_1).V0, (v_1).V1)
 }
 
-func Call_Data_Tuple_swap(v_0_loop *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]) *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] {
-var v_0 *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] = v_0_loop
+func Call_Data_Tuple_swap(v_0_loop *Constructor_Data_Tuple_Tuple) *Constructor_Data_Tuple_Tuple {
+var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0})})
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, (v_0).V1, (v_0).V0})})
 }
 
-func Call_Data_Tuple_snd(v_0_loop *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var v_0 *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] = v_0_loop
+func Call_Data_Tuple_snd(v_0_loop *Constructor_Data_Tuple_Tuple) gopurs_runtime.Value {
+var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1
+return (v_0).V1
 }
 
 func Call_Data_Tuple_showTuple(dictShow_0_loop gopurs_runtime.Value, dictShow1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -765,7 +765,7 @@ _ = dictShow_0
 var dictShow1_1 gopurs_runtime.Value = dictShow1_1_loop
 _ = dictShow1_1
 return gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str((((("(Tuple ") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0).StrVal())) + (" ")) + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1).StrVal())) + (")"))
+return gopurs_runtime.Str((((("(Tuple ") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow_0, "show"), (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V0).StrVal())) + (" ")) + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictShow1_1, "show"), (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V1).StrVal())) + (")"))
 }))
 }
 
@@ -776,13 +776,13 @@ var dictSemiring1_1 gopurs_runtime.Value = dictSemiring1_1_loop
 _ = dictSemiring1_1
 return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring_0, "add"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring1_1, "add"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V1)})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring_0, "add"), (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple)(v1_3.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring1_1, "add"), (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple)(v1_3.UnsafePtr).V1)})}
 })
 }), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring_0, "mul"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring1_1, "mul"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V1)})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring_0, "mul"), (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple)(v1_3.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemiring1_1, "mul"), (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple)(v1_3.UnsafePtr).V1)})}
 })
-}), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.RecordGet(dictSemiring_0, "one"), gopurs_runtime.RecordGet(dictSemiring1_1, "one")})}, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.RecordGet(dictSemiring_0, "zero"), gopurs_runtime.RecordGet(dictSemiring1_1, "zero")})})
+}), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.RecordGet(dictSemiring_0, "one"), gopurs_runtime.RecordGet(dictSemiring1_1, "one")})}, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.RecordGet(dictSemiring_0, "zero"), gopurs_runtime.RecordGet(dictSemiring1_1, "zero")})})
 }
 
 func Call_Data_Tuple_semigroupTuple(dictSemigroup_0_loop gopurs_runtime.Value, dictSemigroup1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -792,7 +792,7 @@ var dictSemigroup1_1 gopurs_runtime.Value = dictSemigroup1_1_loop
 _ = dictSemigroup1_1
 return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup1_1, "append"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V1)})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append"), (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple)(v1_3.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup1_1, "append"), (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple)(v1_3.UnsafePtr).V1)})}
 })
 }))
 }
@@ -810,19 +810,19 @@ _ = __local_var_3_2
 // TAST (Let): semiringTuple2_3_1 -> gopurs_runtime.Value
 semiringTuple2_3_1 := gopurs_runtime.RecordDict4("add", "mul", "one", "zero", gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "add"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_4.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_5.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_2, "add"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_4.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_5.UnsafePtr).V1)})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "add"), (*Constructor_Data_Tuple_Tuple)(v_4.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple)(v1_5.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_2, "add"), (*Constructor_Data_Tuple_Tuple)(v_4.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple)(v1_5.UnsafePtr).V1)})}
 })
 }), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "mul"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_4.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_5.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_2, "mul"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_4.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_5.UnsafePtr).V1)})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "mul"), (*Constructor_Data_Tuple_Tuple)(v_4.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple)(v1_5.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_2, "mul"), (*Constructor_Data_Tuple_Tuple)(v_4.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple)(v1_5.UnsafePtr).V1)})}
 })
-}), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.RecordGet(__local_var_1_0, "one"), gopurs_runtime.RecordGet(__local_var_3_2, "one")})}, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.RecordGet(__local_var_1_0, "zero"), gopurs_runtime.RecordGet(__local_var_3_2, "zero")})})
+}), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.RecordGet(__local_var_1_0, "one"), gopurs_runtime.RecordGet(__local_var_3_2, "one")})}, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.RecordGet(__local_var_1_0, "zero"), gopurs_runtime.RecordGet(__local_var_3_2, "zero")})})
 _ = semiringTuple2_3_1
 return gopurs_runtime.RecordDict2("Semiring0", "sub", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return semiringTuple2_3_1
 }), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictRing_0, "sub"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_4.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_5.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictRing1_2, "sub"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_4.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_5.UnsafePtr).V1)})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictRing_0, "sub"), (*Constructor_Data_Tuple_Tuple)(v_4.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple)(v1_5.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictRing1_2, "sub"), (*Constructor_Data_Tuple_Tuple)(v_4.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple)(v1_5.UnsafePtr).V1)})}
 })
 }))
 })
@@ -841,13 +841,13 @@ _ = __local_var_3_2
 // TAST (Let): semigroupTuple2_3_1 -> gopurs_runtime.Value
 semigroupTuple2_3_1 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "append"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_4.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_5.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_2, "append"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_4.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_5.UnsafePtr).V1)})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "append"), (*Constructor_Data_Tuple_Tuple)(v_4.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple)(v1_5.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_2, "append"), (*Constructor_Data_Tuple_Tuple)(v_4.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple)(v1_5.UnsafePtr).V1)})}
 })
 }))
 _ = semigroupTuple2_3_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupTuple2_3_1
-}), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.RecordGet(dictMonoid_0, "mempty"), gopurs_runtime.RecordGet(dictMonoid1_2, "mempty")})})
+}), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.RecordGet(dictMonoid_0, "mempty"), gopurs_runtime.RecordGet(dictMonoid1_2, "mempty")})})
 })
 }
 
@@ -858,25 +858,25 @@ var dictHeytingAlgebra1_1 gopurs_runtime.Value = dictHeytingAlgebra1_1_loop
 _ = dictHeytingAlgebra1_1
 return gopurs_runtime.RecordDict([]string{"conj", "disj", "ff", "implies", "not", "tt"}, []gopurs_runtime.Value{gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "conj"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra1_1, "conj"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V1)})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "conj"), (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple)(v1_3.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra1_1, "conj"), (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple)(v1_3.UnsafePtr).V1)})}
 })
 }), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "disj"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra1_1, "disj"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V1)})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "disj"), (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple)(v1_3.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra1_1, "disj"), (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple)(v1_3.UnsafePtr).V1)})}
 })
-}), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "ff"), gopurs_runtime.RecordGet(dictHeytingAlgebra1_1, "ff")})}, gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "ff"), gopurs_runtime.RecordGet(dictHeytingAlgebra1_1, "ff")})}, gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "implies"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra1_1, "implies"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V1)})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "implies"), (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple)(v1_3.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictHeytingAlgebra1_1, "implies"), (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple)(v1_3.UnsafePtr).V1)})}
 })
 }), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "not"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictHeytingAlgebra1_1, "not"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1)})}
-}), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "tt"), gopurs_runtime.RecordGet(dictHeytingAlgebra1_1, "tt")})}})
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "not"), (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V0), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictHeytingAlgebra1_1, "not"), (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V1)})}
+}), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.RecordGet(dictHeytingAlgebra_0, "tt"), gopurs_runtime.RecordGet(dictHeytingAlgebra1_1, "tt")})}})
 }
 
-func Call_Data_Tuple_fst(v_0_loop *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var v_0 *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] = v_0_loop
+func Call_Data_Tuple_fst(v_0_loop *Constructor_Data_Tuple_Tuple) gopurs_runtime.Value {
+var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0
+return (v_0).V0
 }
 
 func Call_Data_Tuple_lazyTuple(dictLazy_0_loop gopurs_runtime.Value, dictLazy1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -885,10 +885,10 @@ _ = dictLazy_0
 var dictLazy1_1 gopurs_runtime.Value = dictLazy1_1_loop
 _ = dictLazy1_1
 return gopurs_runtime.RecordDict1("defer", gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictLazy_0, "defer"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Apply(f_2, Get_Data_Unit_unit()).UnsafePtr).V0
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictLazy_0, "defer"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return (*Constructor_Data_Tuple_Tuple)(gopurs_runtime.Apply(f_2, Get_Data_Unit_unit()).UnsafePtr).V0
 })), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictLazy1_1, "defer"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Apply(f_2, Get_Data_Unit_unit()).UnsafePtr).V1
+return (*Constructor_Data_Tuple_Tuple)(gopurs_runtime.Apply(f_2, Get_Data_Unit_unit()).UnsafePtr).V1
 }))})}
 }))
 }
@@ -900,7 +900,7 @@ var dictEq1_1 gopurs_runtime.Value = dictEq1_1_loop
 _ = dictEq1_1
 return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(x_2.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(y_3.UnsafePtr).V0).IntVal) != (0)) && ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_1, "eq"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(x_2.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(y_3.UnsafePtr).V1).IntVal) != (0)))
+return gopurs_runtime.Bool(((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), (*Constructor_Data_Tuple_Tuple)(x_2.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple)(y_3.UnsafePtr).V0).IntVal) != (0)) && ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_1, "eq"), (*Constructor_Data_Tuple_Tuple)(x_2.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple)(y_3.UnsafePtr).V1).IntVal) != (0)))
 })
 }))
 }
@@ -918,7 +918,7 @@ _ = __local_var_3_2
 // TAST (Let): eqTuple2_3_1 -> gopurs_runtime.Value
 eqTuple2_3_1 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "eq"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(x_4.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(y_5.UnsafePtr).V0).IntVal) != (0)) && ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_2, "eq"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(x_4.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(y_5.UnsafePtr).V1).IntVal) != (0)))
+return gopurs_runtime.Bool(((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "eq"), (*Constructor_Data_Tuple_Tuple)(x_4.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple)(y_5.UnsafePtr).V0).IntVal) != (0)) && ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_2, "eq"), (*Constructor_Data_Tuple_Tuple)(x_4.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple)(y_5.UnsafePtr).V1).IntVal) != (0)))
 })
 }))
 _ = eqTuple2_3_1
@@ -927,7 +927,7 @@ return eqTuple2_3_1
 }), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_5 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): v_6_3 -> gopurs_runtime.Value
-v_6_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(x_4.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(y_5.UnsafePtr).V0)
+v_6_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), (*Constructor_Data_Tuple_Tuple)(x_4.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple)(y_5.UnsafePtr).V0)
 _ = v_6_3
 var __t4 uint32
 {
@@ -947,7 +947,7 @@ goto end_branch_4
 }
 }
 {
-__t4 = uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd1_2, "compare"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(x_4.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(y_5.UnsafePtr).V1).IntVal)
+__t4 = uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd1_2, "compare"), (*Constructor_Data_Tuple_Tuple)(x_4.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple)(y_5.UnsafePtr).V1).IntVal)
 }
 end_branch_4:
 return gopurs_runtime.Value{Type: 9, IntVal: int64(__t4), UnsafePtr: nil}
@@ -962,7 +962,7 @@ _ = dictEq_0
 return gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(x_2.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(y_3.UnsafePtr).V0).IntVal) != (0)) && ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_1, "eq"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(x_2.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(y_3.UnsafePtr).V1).IntVal) != (0)))
+return gopurs_runtime.Bool(((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq_0, "eq"), (*Constructor_Data_Tuple_Tuple)(x_2.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple)(y_3.UnsafePtr).V0).IntVal) != (0)) && ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_1, "eq"), (*Constructor_Data_Tuple_Tuple)(x_2.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple)(y_3.UnsafePtr).V1).IntVal) != (0)))
 })
 })
 }))
@@ -978,7 +978,7 @@ _ = __local_var_1_1
 eq1Tuple1_1_0 := gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq1_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_1, "eq"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(x_3.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(y_4.UnsafePtr).V0).IntVal) != (0)) && ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_2, "eq"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(x_3.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(y_4.UnsafePtr).V1).IntVal) != (0)))
+return gopurs_runtime.Bool(((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_1, "eq"), (*Constructor_Data_Tuple_Tuple)(x_3.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple)(y_4.UnsafePtr).V0).IntVal) != (0)) && ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictEq1_2, "eq"), (*Constructor_Data_Tuple_Tuple)(x_3.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple)(y_4.UnsafePtr).V1).IntVal) != (0)))
 })
 })
 }))
@@ -989,7 +989,7 @@ return eq1Tuple1_1_0
 return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_4 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): v_5_2 -> gopurs_runtime.Value
-v_5_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(x_3.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(y_4.UnsafePtr).V0)
+v_5_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), (*Constructor_Data_Tuple_Tuple)(x_3.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple)(y_4.UnsafePtr).V0)
 _ = v_5_2
 var __t3 uint32
 {
@@ -1009,7 +1009,7 @@ goto end_branch_3
 }
 }
 {
-__t3 = uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd1_2, "compare"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(x_3.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(y_4.UnsafePtr).V1).IntVal)
+__t3 = uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd1_2, "compare"), (*Constructor_Data_Tuple_Tuple)(x_3.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple)(y_4.UnsafePtr).V1).IntVal)
 }
 end_branch_3:
 return gopurs_runtime.Value{Type: 9, IntVal: int64(__t3), UnsafePtr: nil}
@@ -1025,7 +1025,7 @@ var a_1 gopurs_runtime.Value = a_1_loop
 _ = a_1
 var b_2 gopurs_runtime.Value = b_2_loop
 _ = b_2
-return gopurs_runtime.Apply(f_0, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, a_1, b_2})})
+return gopurs_runtime.Apply(f_0, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, a_1, b_2})})
 }
 
 func Call_Data_Tuple_commutativeRingTuple(dictCommutativeRing_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1063,7 +1063,7 @@ _ = __local_var_5_5
 // TAST (Let): eqTuple2_5_4 -> gopurs_runtime.Value
 eqTuple2_5_4 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "eq"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(x_6.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(y_7.UnsafePtr).V0).IntVal) != (0)) && ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_5_5, "eq"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(x_6.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(y_7.UnsafePtr).V1).IntVal) != (0)))
+return gopurs_runtime.Bool(((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "eq"), (*Constructor_Data_Tuple_Tuple)(x_6.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple)(y_7.UnsafePtr).V0).IntVal) != (0)) && ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_5_5, "eq"), (*Constructor_Data_Tuple_Tuple)(x_6.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple)(y_7.UnsafePtr).V1).IntVal) != (0)))
 })
 }))
 _ = eqTuple2_5_4
@@ -1073,7 +1073,7 @@ return eqTuple2_5_4
 }), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_7 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): v_8_6 -> gopurs_runtime.Value
-v_8_6 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "compare"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(x_6.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(y_7.UnsafePtr).V0)
+v_8_6 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "compare"), (*Constructor_Data_Tuple_Tuple)(x_6.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple)(y_7.UnsafePtr).V0)
 _ = v_8_6
 var __t7 uint32
 {
@@ -1093,7 +1093,7 @@ goto end_branch_7
 }
 }
 {
-__t7 = uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_3, "compare"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(x_6.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(y_7.UnsafePtr).V1).IntVal)
+__t7 = uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_3, "compare"), (*Constructor_Data_Tuple_Tuple)(x_6.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple)(y_7.UnsafePtr).V1).IntVal)
 }
 end_branch_7:
 return gopurs_runtime.Value{Type: 9, IntVal: int64(__t7), UnsafePtr: nil}
@@ -1102,7 +1102,7 @@ return gopurs_runtime.Value{Type: 9, IntVal: int64(__t7), UnsafePtr: nil}
 _ = ordTuple2_4_2
 return gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return ordTuple2_4_2
-}), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.RecordGet(dictBounded_0, "bottom"), gopurs_runtime.RecordGet(dictBounded1_3, "bottom")})}, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.RecordGet(dictBounded_0, "top"), gopurs_runtime.RecordGet(dictBounded1_3, "top")})})
+}), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.RecordGet(dictBounded_0, "bottom"), gopurs_runtime.RecordGet(dictBounded1_3, "bottom")})}, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.RecordGet(dictBounded_0, "top"), gopurs_runtime.RecordGet(dictBounded1_3, "top")})})
 })
 }
 
@@ -1129,7 +1129,7 @@ return gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(
 return Get_Data_Tuple_functorTuple()
 }), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_2.UnsafePtr).V0), gopurs_runtime.Apply((*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_1.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_2.UnsafePtr).V1)})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append"), (*Constructor_Data_Tuple_Tuple)(v_1.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple)(v1_2.UnsafePtr).V0), gopurs_runtime.Apply((*Constructor_Data_Tuple_Tuple)(v_1.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple)(v1_2.UnsafePtr).V1)})}
 })
 }))
 }
@@ -1144,10 +1144,10 @@ return gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_do
 return applyTuple1_1_0
 }), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): v1_4_1 -> *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]
-v1_4_1 := gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Apply(f_3, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1))
+// TAST (Let): v1_4_1 -> *Constructor_Data_Tuple_Tuple
+v1_4_1 := gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply(f_3, (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V1))
 _ = v1_4_1
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append"), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v1_4_1)}.UnsafePtr).V0), (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v1_4_1)}.UnsafePtr).V1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictSemigroup_0, "append"), (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V0, (v1_4_1).V0), (v1_4_1).V1})}
 })
 }))
 }
@@ -1186,7 +1186,7 @@ var a_1 gopurs_runtime.Value = a_1_loop
 _ = a_1
 var b_2 gopurs_runtime.Value = b_2_loop
 _ = b_2
-return gopurs_runtime.Apply(f_0, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, a_1, b_2})})
+return gopurs_runtime.Apply(f_0, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, a_1, b_2})})
 }
 
 func Call_Data_Tuple_curry__4081152289(f_0_loop gopurs_runtime.Value, a_1_loop gopurs_runtime.Value, b_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1196,183 +1196,183 @@ var a_1 gopurs_runtime.Value = a_1_loop
 _ = a_1
 var b_2 gopurs_runtime.Value = b_2_loop
 _ = b_2
-return gopurs_runtime.Apply(f_0, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, a_1, b_2})})
+return gopurs_runtime.Apply(f_0, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, a_1, b_2})})
 }
 
-func Call_Data_Tuple_fst__3478736243(v_0_loop *Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value]) int64 {
-var v_0 *Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value] = v_0_loop
+func Call_Data_Tuple_fst__3478736243(v_0_loop *Constructor_Data_Tuple_Tuple) int64 {
+var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.IntVal
+return (v_0).V0.IntVal
 }
 
-func Call_Data_Tuple_fst__549384412(v_0_loop *Constructor_Data_Tuple_Tuple[float64, gopurs_runtime.Value]) float64 {
-var v_0 *Constructor_Data_Tuple_Tuple[float64, gopurs_runtime.Value] = v_0_loop
+func Call_Data_Tuple_fst__549384412(v_0_loop *Constructor_Data_Tuple_Tuple) float64 {
+var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0.FloatVal()
+return (v_0).V0.FloatVal()
 }
 
-func Call_Data_Tuple_fst__20422131(v_0_loop *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var v_0 *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] = v_0_loop
+func Call_Data_Tuple_fst__20422131(v_0_loop *Constructor_Data_Tuple_Tuple) gopurs_runtime.Value {
+var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0
+return (v_0).V0
 }
 
-func Call_Data_Tuple_fst__2554656696(v_0_loop *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var v_0 *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] = v_0_loop
+func Call_Data_Tuple_fst__2554656696(v_0_loop *Constructor_Data_Tuple_Tuple) gopurs_runtime.Value {
+var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0
+return (v_0).V0
 }
 
-func Call_Data_Tuple_fst__4285080947(v_0_loop *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var v_0 *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] = v_0_loop
+func Call_Data_Tuple_fst__4285080947(v_0_loop *Constructor_Data_Tuple_Tuple) gopurs_runtime.Value {
+var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0
+return (v_0).V0
 }
 
-func Call_Data_Tuple_fst__395594805(v_0_loop *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var v_0 *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] = v_0_loop
+func Call_Data_Tuple_fst__395594805(v_0_loop *Constructor_Data_Tuple_Tuple) gopurs_runtime.Value {
+var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0
+return (v_0).V0
 }
 
-func Call_Data_Tuple_fst__82526164(v_0_loop *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, *Constructor_Data_Maybe_Just[gopurs_runtime.Value]]) gopurs_runtime.Value {
-var v_0 *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, *Constructor_Data_Maybe_Just[gopurs_runtime.Value]] = v_0_loop
+func Call_Data_Tuple_fst__82526164(v_0_loop *Constructor_Data_Tuple_Tuple) gopurs_runtime.Value {
+var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0
+return (v_0).V0
 }
 
-func Call_Data_Tuple_fst__2754781306(v_0_loop *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var v_0 *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] = v_0_loop
+func Call_Data_Tuple_fst__2754781306(v_0_loop *Constructor_Data_Tuple_Tuple) gopurs_runtime.Value {
+var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0
+return (v_0).V0
 }
 
-func Call_Data_Tuple_snd__1234761462(v_0_loop *Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value]) gopurs_runtime.Value {
-var v_0 *Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value] = v_0_loop
+func Call_Data_Tuple_snd__1234761462(v_0_loop *Constructor_Data_Tuple_Tuple) gopurs_runtime.Value {
+var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1
+return (v_0).V1
 }
 
-func Call_Data_Tuple_snd__4069939766(v_0_loop *Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value]) gopurs_runtime.Value {
-var v_0 *Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value] = v_0_loop
+func Call_Data_Tuple_snd__4069939766(v_0_loop *Constructor_Data_Tuple_Tuple) gopurs_runtime.Value {
+var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1
+return (v_0).V1
 }
 
-func Call_Data_Tuple_snd__3058387254(v_0_loop *Constructor_Data_Tuple_Tuple[int64, *Constructor_Data_List_Types_Cons[gopurs_runtime.Value]]) *Constructor_Data_List_Types_Cons[gopurs_runtime.Value] {
-var v_0 *Constructor_Data_Tuple_Tuple[int64, *Constructor_Data_List_Types_Cons[gopurs_runtime.Value]] = v_0_loop
+func Call_Data_Tuple_snd__3058387254(v_0_loop *Constructor_Data_Tuple_Tuple) *Constructor_Data_List_Types_Cons {
+var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]]((*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1)
+return gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons]((v_0).V1)
 }
 
-func Call_Data_Tuple_snd__2618926102(v_0_loop *Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value]) gopurs_runtime.Value {
-var v_0 *Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value] = v_0_loop
+func Call_Data_Tuple_snd__2618926102(v_0_loop *Constructor_Data_Tuple_Tuple) gopurs_runtime.Value {
+var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1
+return (v_0).V1
 }
 
-func Call_Data_Tuple_snd__21214742(v_0_loop *Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value]) gopurs_runtime.Value {
-var v_0 *Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value] = v_0_loop
+func Call_Data_Tuple_snd__21214742(v_0_loop *Constructor_Data_Tuple_Tuple) gopurs_runtime.Value {
+var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1
+return (v_0).V1
 }
 
-func Call_Data_Tuple_snd__20422131(v_0_loop *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var v_0 *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] = v_0_loop
+func Call_Data_Tuple_snd__20422131(v_0_loop *Constructor_Data_Tuple_Tuple) gopurs_runtime.Value {
+var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1
+return (v_0).V1
 }
 
-func Call_Data_Tuple_snd__2198421043(v_0_loop *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var v_0 *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] = v_0_loop
+func Call_Data_Tuple_snd__2198421043(v_0_loop *Constructor_Data_Tuple_Tuple) gopurs_runtime.Value {
+var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1
+return (v_0).V1
 }
 
-func Call_Data_Tuple_snd__4038973427(v_0_loop *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var v_0 *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] = v_0_loop
+func Call_Data_Tuple_snd__4038973427(v_0_loop *Constructor_Data_Tuple_Tuple) gopurs_runtime.Value {
+var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1
+return (v_0).V1
 }
 
-func Call_Data_Tuple_snd__2019004820(v_0_loop *Constructor_Data_Tuple_Tuple[uint32, float64]) float64 {
-var v_0 *Constructor_Data_Tuple_Tuple[uint32, float64] = v_0_loop
+func Call_Data_Tuple_snd__2019004820(v_0_loop *Constructor_Data_Tuple_Tuple) float64 {
+var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1.FloatVal()
+return (v_0).V1.FloatVal()
 }
 
-func Call_Data_Tuple_snd__4227940231(v_0_loop *Constructor_Data_Tuple_Tuple[*Constructor_Data_Maybe_Just[float64], gopurs_runtime.Value]) gopurs_runtime.Value {
-var v_0 *Constructor_Data_Tuple_Tuple[*Constructor_Data_Maybe_Just[float64], gopurs_runtime.Value] = v_0_loop
+func Call_Data_Tuple_snd__4227940231(v_0_loop *Constructor_Data_Tuple_Tuple) gopurs_runtime.Value {
+var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1
+return (v_0).V1
 }
 
-func Call_Data_Tuple_snd__3388842183(v_0_loop *Constructor_Data_Tuple_Tuple[*Constructor_Data_Maybe_Just[float64], gopurs_runtime.Value]) gopurs_runtime.Value {
-var v_0 *Constructor_Data_Tuple_Tuple[*Constructor_Data_Maybe_Just[float64], gopurs_runtime.Value] = v_0_loop
+func Call_Data_Tuple_snd__3388842183(v_0_loop *Constructor_Data_Tuple_Tuple) gopurs_runtime.Value {
+var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1
+return (v_0).V1
 }
 
-func Call_Data_Tuple_snd__1694562576(v_0_loop *Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value]) gopurs_runtime.Value {
-var v_0 *Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value] = v_0_loop
+func Call_Data_Tuple_snd__1694562576(v_0_loop *Constructor_Data_Tuple_Tuple) gopurs_runtime.Value {
+var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1
+return (v_0).V1
 }
 
-func Call_Data_Tuple_snd__395594805(v_0_loop *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var v_0 *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] = v_0_loop
+func Call_Data_Tuple_snd__395594805(v_0_loop *Constructor_Data_Tuple_Tuple) gopurs_runtime.Value {
+var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1
+return (v_0).V1
 }
 
-func Call_Data_Tuple_swap__572690077(v_0_loop *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]) *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] {
-var v_0 *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] = v_0_loop
+func Call_Data_Tuple_swap__572690077(v_0_loop *Constructor_Data_Tuple_Tuple) *Constructor_Data_Tuple_Tuple {
+var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0})})
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, (v_0).V1, (v_0).V0})})
 }
 
-func Call_Data_Tuple_swap__249254301(v_0_loop *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]) *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] {
-var v_0 *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] = v_0_loop
+func Call_Data_Tuple_swap__249254301(v_0_loop *Constructor_Data_Tuple_Tuple) *Constructor_Data_Tuple_Tuple {
+var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0})})
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, (v_0).V1, (v_0).V0})})
 }
 
-func Call_Data_Tuple_swap__1502889949(v_0_loop *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]) *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] {
-var v_0 *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] = v_0_loop
+func Call_Data_Tuple_swap__1502889949(v_0_loop *Constructor_Data_Tuple_Tuple) *Constructor_Data_Tuple_Tuple {
+var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0})})
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, (v_0).V1, (v_0).V0})})
 }
 
-func Call_Data_Tuple_uncurry__3533477633(f_0_loop gopurs_runtime.Value, v_1_loop *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+func Call_Data_Tuple_uncurry__3533477633(f_0_loop gopurs_runtime.Value, v_1_loop *Constructor_Data_Tuple_Tuple) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-var v_1 *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] = v_1_loop
+var v_1 *Constructor_Data_Tuple_Tuple = v_1_loop
 _ = v_1
-return gopurs_runtime.Apply2(f_0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_1)}.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_1)}.UnsafePtr).V1)
+return gopurs_runtime.Apply2(f_0, (v_1).V0, (v_1).V1)
 }
 
-func Call_Data_Tuple_uncurry__2421405441(f_0_loop gopurs_runtime.Value, v_1_loop *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]) *Constructor_Control_Monad_RWS_Trans_RWSResult[*Constructor_Control_Monad_RWS_Trans_RWSResult[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value], gopurs_runtime.Value, gopurs_runtime.Value] {
+func Call_Data_Tuple_uncurry__2421405441(f_0_loop gopurs_runtime.Value, v_1_loop *Constructor_Data_Tuple_Tuple) *Constructor_Control_Monad_RWS_Trans_RWSResult {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-var v_1 *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] = v_1_loop
+var v_1 *Constructor_Data_Tuple_Tuple = v_1_loop
 _ = v_1
-return gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_RWS_Trans_RWSResult[*Constructor_Control_Monad_RWS_Trans_RWSResult[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value], gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Apply2(f_0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_1)}.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_1)}.UnsafePtr).V1))
+return gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_RWS_Trans_RWSResult](gopurs_runtime.Apply2(f_0, (v_1).V0, (v_1).V1))
 }
 
-func Call_Data_Tuple_uncurry__1489344417(f_0_loop gopurs_runtime.Value, v_1_loop *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+func Call_Data_Tuple_uncurry__1489344417(f_0_loop gopurs_runtime.Value, v_1_loop *Constructor_Data_Tuple_Tuple) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-var v_1 *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] = v_1_loop
+var v_1 *Constructor_Data_Tuple_Tuple = v_1_loop
 _ = v_1
-return gopurs_runtime.Apply2(f_0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_1)}.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_1)}.UnsafePtr).V1)
+return gopurs_runtime.Apply2(f_0, (v_1).V0, (v_1).V1)
 }
 
-func Call_Data_Tuple_uncurry__601611969(f_0_loop gopurs_runtime.Value, v_1_loop *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]) *Constructor_Data_NonEmpty_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value] {
+func Call_Data_Tuple_uncurry__601611969(f_0_loop gopurs_runtime.Value, v_1_loop *Constructor_Data_Tuple_Tuple) *Constructor_Data_NonEmpty_NonEmpty {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-var v_1 *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] = v_1_loop
+var v_1 *Constructor_Data_Tuple_Tuple = v_1_loop
 _ = v_1
-return gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Apply2(f_0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_1)}.UnsafePtr).V0, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(v_1)}.UnsafePtr).V1))
+return gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty](gopurs_runtime.Apply2(f_0, (v_1).V0, (v_1).V1))
 }
 
 

@@ -28,7 +28,7 @@ return Call_Data_Field_field(dictEuclideanRing_0_box, dictDivisionRing_1_box)
 	return cache_Data_Field_field
 }
 
-type Constructor_Data_Field_Field[T_a any] struct {
+type Constructor_Data_Field_Field struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -37,7 +37,7 @@ type Constructor_Data_Field_Field[T_a any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[3997783546] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_Field_Field[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_Field_Field)(ptr)
 		_ = c
 		switch key {
 		case "DivisionRing1": return gopurs_runtime.Box(c.V0)

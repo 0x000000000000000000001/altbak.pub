@@ -44,7 +44,7 @@ _ = __local_var_4_0
 var __t1 gopurs_runtime.Value
 {
 if (__local_var_4_0.Type == 9 && __local_var_4_0.IntVal == 3711209382) {
-__t1 = gopurs_runtime.Apply(v_1, (*Constructor_Data_Either_Left[gopurs_runtime.Value, gopurs_runtime.Value])(__local_var_4_0.UnsafePtr).V0)
+__t1 = gopurs_runtime.Apply(v_1, (*Constructor_Data_Either_Left)(__local_var_4_0.UnsafePtr).V0)
 goto end_branch_1
 } else {
 
@@ -52,7 +52,7 @@ goto end_branch_1
 }
 {
 if (__local_var_4_0.Type == 9 && __local_var_4_0.IntVal == 2465973597) {
-__t1 = gopurs_runtime.Apply(v1_2, (*Constructor_Data_Either_Right[gopurs_runtime.Value, gopurs_runtime.Value])(__local_var_4_0.UnsafePtr).V0)
+__t1 = gopurs_runtime.Apply(v1_2, (*Constructor_Data_Either_Right)(__local_var_4_0.UnsafePtr).V0)
 goto end_branch_1
 } else {
 
@@ -105,7 +105,7 @@ _ = v3_6_1
 var __t2 gopurs_runtime.Value
 {
 if (v3_6_1.Type == 9 && v3_6_1.IntVal == 3711209382) {
-__t2 = gopurs_runtime.Bool((gopurs_runtime.Apply2(v_1, (*Constructor_Data_Either_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v3_6_1.UnsafePtr).V0).IntVal) != (0))
+__t2 = gopurs_runtime.Bool((gopurs_runtime.Apply2(v_1, (*Constructor_Data_Either_Left)(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Left)(v3_6_1.UnsafePtr).V0).IntVal) != (0))
 goto end_branch_2
 } else {
 
@@ -145,7 +145,7 @@ goto end_branch_4
 }
 {
 if (v3_6_3.Type == 9 && v3_6_3.IntVal == 2465973597) {
-__t4 = gopurs_runtime.Bool((gopurs_runtime.Apply2(v1_2, (*Constructor_Data_Either_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v3_6_3.UnsafePtr).V0).IntVal) != (0))
+__t4 = gopurs_runtime.Bool((gopurs_runtime.Apply2(v1_2, (*Constructor_Data_Either_Right)(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Right)(v3_6_3.UnsafePtr).V0).IntVal) != (0))
 goto end_branch_4
 } else {
 
@@ -198,7 +198,7 @@ _ = v3_6_1
 var __t2 gopurs_runtime.Value
 {
 if (v3_6_1.Type == 9 && v3_6_1.IntVal == 3711209382) {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(v_1, (*Constructor_Data_Either_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v3_6_1.UnsafePtr).V0).IntVal)), UnsafePtr: nil}
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(v_1, (*Constructor_Data_Either_Left)(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Left)(v3_6_1.UnsafePtr).V0).IntVal)), UnsafePtr: nil}
 goto end_branch_2
 } else {
 
@@ -238,7 +238,7 @@ goto end_branch_4
 }
 {
 if (v3_6_3.Type == 9 && v3_6_3.IntVal == 2465973597) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(v1_2, (*Constructor_Data_Either_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v3_6_3.UnsafePtr).V0).IntVal)), UnsafePtr: nil}
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(v1_2, (*Constructor_Data_Either_Right)(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Right)(v3_6_3.UnsafePtr).V0).IntVal)), UnsafePtr: nil}
 goto end_branch_4
 } else {
 
@@ -273,7 +273,7 @@ var once_Data_Decide_choose sync.Once
 func Get_Data_Decide_choose() gopurs_runtime.Value {
 	once_Data_Decide_choose.Do(func() {
 		cache_Data_Decide_choose = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Decide_choose(gopurs_runtime.CoerceToStruct[Constructor_Data_Decide_Decide[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Decide_choose(gopurs_runtime.CoerceToStruct[Constructor_Data_Decide_Decide](dict_0_box))
 })
 	})
 	return cache_Data_Decide_choose
@@ -284,7 +284,7 @@ var once_Data_Decide_chosen sync.Once
 func Get_Data_Decide_chosen() gopurs_runtime.Value {
 	once_Data_Decide_chosen.Do(func() {
 		cache_Data_Decide_chosen = gopurs_runtime.Func(func(dictDecide_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Decide_chosen(gopurs_runtime.CoerceToStruct[Constructor_Data_Decide_Decide[gopurs_runtime.Value]](dictDecide_0_box))
+return Call_Data_Decide_chosen(gopurs_runtime.CoerceToStruct[Constructor_Data_Decide_Decide](dictDecide_0_box))
 })
 	})
 	return cache_Data_Decide_chosen
@@ -295,7 +295,7 @@ var once_Data_Decide_choose__2139889126 sync.Once
 func Get_Data_Decide_choose__2139889126() gopurs_runtime.Value {
 	once_Data_Decide_choose__2139889126.Do(func() {
 		cache_Data_Decide_choose__2139889126 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Decide_choose__2139889126(gopurs_runtime.CoerceToStruct[Constructor_Data_Decide_Decide[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Decide_choose__2139889126(gopurs_runtime.CoerceToStruct[Constructor_Data_Decide_Decide](dict_0_box))
 })
 	})
 	return cache_Data_Decide_choose__2139889126
@@ -306,7 +306,7 @@ var once_Data_Decide_choose__3147709126 sync.Once
 func Get_Data_Decide_choose__3147709126() gopurs_runtime.Value {
 	once_Data_Decide_choose__3147709126.Do(func() {
 		cache_Data_Decide_choose__3147709126 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Decide_choose__3147709126(gopurs_runtime.CoerceToStruct[Constructor_Data_Decide_Decide[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Decide_choose__3147709126(gopurs_runtime.CoerceToStruct[Constructor_Data_Decide_Decide](dict_0_box))
 })
 	})
 	return cache_Data_Decide_choose__3147709126
@@ -335,7 +335,7 @@ _ = v3_6_1
 var __t2 gopurs_runtime.Value
 {
 if (v3_6_1.Type == 9 && v3_6_1.IntVal == 3711209382) {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(v_1, (*Constructor_Data_Either_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v3_6_1.UnsafePtr).V0).IntVal)), UnsafePtr: nil}
+__t2 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(v_1, (*Constructor_Data_Either_Left)(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Left)(v3_6_1.UnsafePtr).V0).IntVal)), UnsafePtr: nil}
 goto end_branch_2
 } else {
 
@@ -375,7 +375,7 @@ goto end_branch_4
 }
 {
 if (v3_6_3.Type == 9 && v3_6_3.IntVal == 2465973597) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(v1_2, (*Constructor_Data_Either_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v3_6_3.UnsafePtr).V0).IntVal)), UnsafePtr: nil}
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(v1_2, (*Constructor_Data_Either_Right)(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Right)(v3_6_3.UnsafePtr).V0).IntVal)), UnsafePtr: nil}
 goto end_branch_4
 } else {
 
@@ -428,7 +428,7 @@ _ = v3_6_1
 var __t2 gopurs_runtime.Value
 {
 if (v3_6_1.Type == 9 && v3_6_1.IntVal == 3711209382) {
-__t2 = gopurs_runtime.Bool((gopurs_runtime.Apply2(v_1, (*Constructor_Data_Either_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Left[gopurs_runtime.Value, gopurs_runtime.Value])(v3_6_1.UnsafePtr).V0).IntVal) != (0))
+__t2 = gopurs_runtime.Bool((gopurs_runtime.Apply2(v_1, (*Constructor_Data_Either_Left)(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Left)(v3_6_1.UnsafePtr).V0).IntVal) != (0))
 goto end_branch_2
 } else {
 
@@ -468,7 +468,7 @@ goto end_branch_4
 }
 {
 if (v3_6_3.Type == 9 && v3_6_3.IntVal == 2465973597) {
-__t4 = gopurs_runtime.Bool((gopurs_runtime.Apply2(v1_2, (*Constructor_Data_Either_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Right[gopurs_runtime.Value, gopurs_runtime.Value])(v3_6_3.UnsafePtr).V0).IntVal) != (0))
+__t4 = gopurs_runtime.Bool((gopurs_runtime.Apply2(v1_2, (*Constructor_Data_Either_Right)(v2_5_0.UnsafePtr).V0, (*Constructor_Data_Either_Right)(v3_6_3.UnsafePtr).V0).IntVal) != (0))
 goto end_branch_4
 } else {
 
@@ -514,7 +514,7 @@ _ = __local_var_4_0
 var __t1 gopurs_runtime.Value
 {
 if (__local_var_4_0.Type == 9 && __local_var_4_0.IntVal == 3711209382) {
-__t1 = gopurs_runtime.Apply(v_1, (*Constructor_Data_Either_Left[gopurs_runtime.Value, gopurs_runtime.Value])(__local_var_4_0.UnsafePtr).V0)
+__t1 = gopurs_runtime.Apply(v_1, (*Constructor_Data_Either_Left)(__local_var_4_0.UnsafePtr).V0)
 goto end_branch_1
 } else {
 
@@ -522,7 +522,7 @@ goto end_branch_1
 }
 {
 if (__local_var_4_0.Type == 9 && __local_var_4_0.IntVal == 2465973597) {
-__t1 = gopurs_runtime.Apply(v1_2, (*Constructor_Data_Either_Right[gopurs_runtime.Value, gopurs_runtime.Value])(__local_var_4_0.UnsafePtr).V0)
+__t1 = gopurs_runtime.Apply(v1_2, (*Constructor_Data_Either_Right)(__local_var_4_0.UnsafePtr).V0)
 goto end_branch_1
 } else {
 
@@ -541,7 +541,7 @@ return __t1
 	return cache_Data_Decide_choosePredicate__1380088508
 }
 
-type Constructor_Data_Decide_Decide[T_f any] struct {
+type Constructor_Data_Decide_Decide struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -550,7 +550,7 @@ type Constructor_Data_Decide_Decide[T_f any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[1618621146] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_Decide_Decide[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_Decide_Decide)(ptr)
 		_ = c
 		switch key {
 		case "Divide0": return gopurs_runtime.Box(c.V0)
@@ -591,7 +591,7 @@ _ = __local_var_6_1
 var __t2 gopurs_runtime.Value
 {
 if (__local_var_6_1.Type == 9 && __local_var_6_1.IntVal == 3711209382) {
-__t2 = gopurs_runtime.Apply(v_3, (*Constructor_Data_Either_Left[gopurs_runtime.Value, gopurs_runtime.Value])(__local_var_6_1.UnsafePtr).V0)
+__t2 = gopurs_runtime.Apply(v_3, (*Constructor_Data_Either_Left)(__local_var_6_1.UnsafePtr).V0)
 goto end_branch_2
 } else {
 
@@ -599,7 +599,7 @@ goto end_branch_2
 }
 {
 if (__local_var_6_1.Type == 9 && __local_var_6_1.IntVal == 2465973597) {
-__t2 = gopurs_runtime.Apply(v1_4, (*Constructor_Data_Either_Right[gopurs_runtime.Value, gopurs_runtime.Value])(__local_var_6_1.UnsafePtr).V0)
+__t2 = gopurs_runtime.Apply(v1_4, (*Constructor_Data_Either_Right)(__local_var_6_1.UnsafePtr).V0)
 goto end_branch_2
 } else {
 
@@ -616,26 +616,26 @@ return __t2
 }))
 }
 
-func Call_Data_Decide_choose(dict_0_loop *Constructor_Data_Decide_Decide[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Decide_Decide[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Decide_choose(dict_0_loop *Constructor_Data_Decide_Decide) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Decide_Decide = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Decide_chosen(dictDecide_0_loop *Constructor_Data_Decide_Decide[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictDecide_0 *Constructor_Data_Decide_Decide[gopurs_runtime.Value] = dictDecide_0_loop
+func Call_Data_Decide_chosen(dictDecide_0_loop *Constructor_Data_Decide_Decide) gopurs_runtime.Value {
+var dictDecide_0 *Constructor_Data_Decide_Decide = dictDecide_0_loop
 _ = dictDecide_0
 return gopurs_runtime.Apply(gopurs_runtime.Box(dictDecide_0.V1), Get_Data_Decide_identity())
 }
 
-func Call_Data_Decide_choose__2139889126(dict_0_loop *Constructor_Data_Decide_Decide[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Decide_Decide[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Decide_choose__2139889126(dict_0_loop *Constructor_Data_Decide_Decide) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Decide_Decide = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Decide_choose__3147709126(dict_0_loop *Constructor_Data_Decide_Decide[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Decide_Decide[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Decide_choose__3147709126(dict_0_loop *Constructor_Data_Decide_Decide) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Decide_Decide = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }

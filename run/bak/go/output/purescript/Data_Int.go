@@ -129,7 +129,7 @@ var cache_Data_Int_fromStringAs gopurs_runtime.Value
 var once_Data_Int_fromStringAs sync.Once
 func Get_Data_Int_fromStringAs() gopurs_runtime.Value {
 	once_Data_Int_fromStringAs.Do(func() {
-		cache_Data_Int_fromStringAs = gopurs_runtime.Apply2(Get_Data_Int_fromStringAsImpl(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))})
+		cache_Data_Int_fromStringAs = gopurs_runtime.Apply2(Get_Data_Int_fromStringAsImpl(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
 	})
 	return cache_Data_Int_fromStringAs
 }
@@ -147,7 +147,7 @@ var cache_Data_Int_fromNumber gopurs_runtime.Value
 var once_Data_Int_fromNumber sync.Once
 func Get_Data_Int_fromNumber() gopurs_runtime.Value {
 	once_Data_Int_fromNumber.Do(func() {
-		cache_Data_Int_fromNumber = gopurs_runtime.Apply2(Get_Data_Int_fromNumberImpl(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))})
+		cache_Data_Int_fromNumber = gopurs_runtime.Apply2(Get_Data_Int_fromNumberImpl(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
 	})
 	return cache_Data_Int_fromNumber
 }
@@ -550,7 +550,7 @@ _ = x_0
 return x_0
 }
 
-func Call_Data_Int_radix(n_0_loop int64) *Constructor_Data_Maybe_Just[int64] {
+func Call_Data_Int_radix(n_0_loop int64) *Constructor_Data_Maybe_Just {
 var n_0 int64 = n_0_loop
 _ = n_0
 var __t3 gopurs_runtime.Value
@@ -587,17 +587,17 @@ end_branch_1:
 __t_and_2 = __t1
 }
 if __t_and_2 {
-__t3 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just[gopurs_runtime.Value]{1, gopurs_runtime.Int(n_0)})}
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Int(n_0)})}
 goto end_branch_3
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))}
+__t3 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
 }
 end_branch_3:
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[int64]](__t3)
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t3)
 }
 
 func Call_Data_Int_odd(x_0_loop int64) bool {
@@ -661,12 +661,12 @@ goto end_branch_4
 }
 }
 {
-// TAST (Let): __local_var_1_0 -> *Constructor_Data_Maybe_Just[int64]
-__local_var_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[int64]](gopurs_runtime.Apply(Get_Data_Int_fromNumber(), gopurs_runtime.Float(x_0)))
+// TAST (Let): __local_var_1_0 -> *Constructor_Data_Maybe_Just
+__local_var_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(Get_Data_Int_fromNumber(), gopurs_runtime.Float(x_0)))
 _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__local_var_1_0)}.Type == 9 && gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__local_var_1_0)}.IntVal == 930809136 && gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__local_var_1_0)}.UnsafePtr == nil) {
+if (__local_var_1_0 == nil) {
 __t1 = gopurs_runtime.Int(0)
 goto end_branch_1
 } else {
@@ -674,8 +674,8 @@ goto end_branch_1
 }
 }
 {
-if (gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__local_var_1_0)}.Type == 9 && gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__local_var_1_0)}.IntVal == 930809136 && gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__local_var_1_0)}.UnsafePtr != nil) {
-__t1 = (*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__local_var_1_0)}.UnsafePtr).V0
+if (__local_var_1_0 != nil) {
+__t1 = (__local_var_1_0).V0
 goto end_branch_1
 } else {
 

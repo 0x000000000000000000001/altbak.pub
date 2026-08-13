@@ -80,7 +80,7 @@ var once_Data_Distributive_distribute sync.Once
 func Get_Data_Distributive_distribute() gopurs_runtime.Value {
 	once_Data_Distributive_distribute.Do(func() {
 		cache_Data_Distributive_distribute = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Distributive_distribute(gopurs_runtime.CoerceToStruct[Constructor_Data_Distributive_Distributive[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Distributive_distribute(gopurs_runtime.CoerceToStruct[Constructor_Data_Distributive_Distributive](dict_0_box))
 })
 	})
 	return cache_Data_Distributive_distribute
@@ -122,7 +122,7 @@ var once_Data_Distributive_cotraverse sync.Once
 func Get_Data_Distributive_cotraverse() gopurs_runtime.Value {
 	once_Data_Distributive_cotraverse.Do(func() {
 		cache_Data_Distributive_cotraverse = gopurs_runtime.Func(func(dictDistributive_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Distributive_cotraverse(gopurs_runtime.CoerceToStruct[Constructor_Data_Distributive_Distributive[gopurs_runtime.Value]](dictDistributive_0_box))
+return Call_Data_Distributive_cotraverse(gopurs_runtime.CoerceToStruct[Constructor_Data_Distributive_Distributive](dictDistributive_0_box))
 })
 	})
 	return cache_Data_Distributive_cotraverse
@@ -133,7 +133,7 @@ var once_Data_Distributive_collectDefault sync.Once
 func Get_Data_Distributive_collectDefault() gopurs_runtime.Value {
 	once_Data_Distributive_collectDefault.Do(func() {
 		cache_Data_Distributive_collectDefault = gopurs_runtime.Func2(func(dictDistributive_0_box gopurs_runtime.Value, dictFunctor_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Distributive_collectDefault(gopurs_runtime.CoerceToStruct[Constructor_Data_Distributive_Distributive[gopurs_runtime.Value]](dictDistributive_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor[gopurs_runtime.Value]](dictFunctor_1_box))
+return Call_Data_Distributive_collectDefault(gopurs_runtime.CoerceToStruct[Constructor_Data_Distributive_Distributive](dictDistributive_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](dictFunctor_1_box))
 })
 	})
 	return cache_Data_Distributive_collectDefault
@@ -155,7 +155,7 @@ var once_Data_Distributive_collect sync.Once
 func Get_Data_Distributive_collect() gopurs_runtime.Value {
 	once_Data_Distributive_collect.Do(func() {
 		cache_Data_Distributive_collect = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Distributive_collect(gopurs_runtime.CoerceToStruct[Constructor_Data_Distributive_Distributive[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Distributive_collect(gopurs_runtime.CoerceToStruct[Constructor_Data_Distributive_Distributive](dict_0_box))
 })
 	})
 	return cache_Data_Distributive_collect
@@ -166,7 +166,7 @@ var once_Data_Distributive_distributeDefault sync.Once
 func Get_Data_Distributive_distributeDefault() gopurs_runtime.Value {
 	once_Data_Distributive_distributeDefault.Do(func() {
 		cache_Data_Distributive_distributeDefault = gopurs_runtime.Func2(func(dictDistributive_0_box gopurs_runtime.Value, dictFunctor_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Distributive_distributeDefault(gopurs_runtime.CoerceToStruct[Constructor_Data_Distributive_Distributive[gopurs_runtime.Value]](dictDistributive_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor[gopurs_runtime.Value]](dictFunctor_1_box))
+return Call_Data_Distributive_distributeDefault(gopurs_runtime.CoerceToStruct[Constructor_Data_Distributive_Distributive](dictDistributive_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](dictFunctor_1_box))
 })
 	})
 	return cache_Data_Distributive_distributeDefault
@@ -177,7 +177,7 @@ var once_Data_Distributive_collect__1176340970 sync.Once
 func Get_Data_Distributive_collect__1176340970() gopurs_runtime.Value {
 	once_Data_Distributive_collect__1176340970.Do(func() {
 		cache_Data_Distributive_collect__1176340970 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Distributive_collect__1176340970(gopurs_runtime.CoerceToStruct[Constructor_Data_Distributive_Distributive[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Distributive_collect__1176340970(gopurs_runtime.CoerceToStruct[Constructor_Data_Distributive_Distributive](dict_0_box))
 })
 	})
 	return cache_Data_Distributive_collect__1176340970
@@ -188,7 +188,7 @@ var once_Data_Distributive_collect__2649935082 sync.Once
 func Get_Data_Distributive_collect__2649935082() gopurs_runtime.Value {
 	once_Data_Distributive_collect__2649935082.Do(func() {
 		cache_Data_Distributive_collect__2649935082 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Distributive_collect__2649935082(gopurs_runtime.CoerceToStruct[Constructor_Data_Distributive_Distributive[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Distributive_collect__2649935082(gopurs_runtime.CoerceToStruct[Constructor_Data_Distributive_Distributive](dict_0_box))
 })
 	})
 	return cache_Data_Distributive_collect__2649935082
@@ -199,7 +199,7 @@ var once_Data_Distributive_collect__4289358698 sync.Once
 func Get_Data_Distributive_collect__4289358698() gopurs_runtime.Value {
 	once_Data_Distributive_collect__4289358698.Do(func() {
 		cache_Data_Distributive_collect__4289358698 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Distributive_collect__4289358698(gopurs_runtime.CoerceToStruct[Constructor_Data_Distributive_Distributive[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Distributive_collect__4289358698(gopurs_runtime.CoerceToStruct[Constructor_Data_Distributive_Distributive](dict_0_box))
 })
 	})
 	return cache_Data_Distributive_collect__4289358698
@@ -210,13 +210,13 @@ var once_Data_Distributive_distribute__2045770422 sync.Once
 func Get_Data_Distributive_distribute__2045770422() gopurs_runtime.Value {
 	once_Data_Distributive_distribute__2045770422.Do(func() {
 		cache_Data_Distributive_distribute__2045770422 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Distributive_distribute__2045770422(gopurs_runtime.CoerceToStruct[Constructor_Data_Distributive_Distributive[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Distributive_distribute__2045770422(gopurs_runtime.CoerceToStruct[Constructor_Data_Distributive_Distributive](dict_0_box))
 })
 	})
 	return cache_Data_Distributive_distribute__2045770422
 }
 
-type Constructor_Data_Distributive_Distributive[T_f any] struct {
+type Constructor_Data_Distributive_Distributive struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -226,7 +226,7 @@ type Constructor_Data_Distributive_Distributive[T_f any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[457335066] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_Distributive_Distributive[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_Distributive_Distributive)(ptr)
 		_ = c
 		switch key {
 		case "Functor0": return gopurs_runtime.Box(c.V0)
@@ -250,17 +250,17 @@ _ = x_0
 return x_0
 }
 
-func Call_Data_Distributive_distribute(dict_0_loop *Constructor_Data_Distributive_Distributive[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Distributive_Distributive[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Distributive_distribute(dict_0_loop *Constructor_Data_Distributive_Distributive) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Distributive_Distributive = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V2)
 }
 
-func Call_Data_Distributive_cotraverse(dictDistributive_0_loop *Constructor_Data_Distributive_Distributive[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictDistributive_0 *Constructor_Data_Distributive_Distributive[gopurs_runtime.Value] = dictDistributive_0_loop
+func Call_Data_Distributive_cotraverse(dictDistributive_0_loop *Constructor_Data_Distributive_Distributive) gopurs_runtime.Value {
+var dictDistributive_0 *Constructor_Data_Distributive_Distributive = dictDistributive_0_loop
 _ = dictDistributive_0
-// TAST (Let): Functor0_1_0 -> *Constructor_Data_Functor_Functor[gopurs_runtime.Value]
-Functor0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.Box(dictDistributive_0.V0), gopurs_runtime.Value{}))
+// TAST (Let): Functor0_1_0 -> *Constructor_Data_Functor_Functor
+Functor0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.Box(dictDistributive_0.V0), gopurs_runtime.Value{}))
 _ = Functor0_1_0
 return gopurs_runtime.Func(func(dictFunctor_2 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): distribute2_3_1 -> gopurs_runtime.Value
@@ -277,10 +277,10 @@ return gopurs_runtime.Apply(__local_var_5_2, gopurs_runtime.Apply(distribute2_3_
 })
 }
 
-func Call_Data_Distributive_collectDefault(dictDistributive_0_loop *Constructor_Data_Distributive_Distributive[gopurs_runtime.Value], dictFunctor_1_loop *Constructor_Data_Functor_Functor[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictDistributive_0 *Constructor_Data_Distributive_Distributive[gopurs_runtime.Value] = dictDistributive_0_loop
+func Call_Data_Distributive_collectDefault(dictDistributive_0_loop *Constructor_Data_Distributive_Distributive, dictFunctor_1_loop *Constructor_Data_Functor_Functor) gopurs_runtime.Value {
+var dictDistributive_0 *Constructor_Data_Distributive_Distributive = dictDistributive_0_loop
 _ = dictDistributive_0
-var dictFunctor_1 *Constructor_Data_Functor_Functor[gopurs_runtime.Value] = dictFunctor_1_loop
+var dictFunctor_1 *Constructor_Data_Functor_Functor = dictFunctor_1_loop
 _ = dictFunctor_1
 // TAST (Let): distribute2_2_0 -> gopurs_runtime.Value
 distribute2_2_0 := gopurs_runtime.Apply(gopurs_runtime.Box(dictDistributive_0.V2), gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(dictFunctor_1)})
@@ -331,40 +331,40 @@ return gopurs_runtime.Apply(__local_var_2_2, gopurs_runtime.Apply(__local_var_3_
 }
 }
 
-func Call_Data_Distributive_collect(dict_0_loop *Constructor_Data_Distributive_Distributive[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Distributive_Distributive[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Distributive_collect(dict_0_loop *Constructor_Data_Distributive_Distributive) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Distributive_Distributive = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Distributive_distributeDefault(dictDistributive_0_loop *Constructor_Data_Distributive_Distributive[gopurs_runtime.Value], dictFunctor_1_loop *Constructor_Data_Functor_Functor[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictDistributive_0 *Constructor_Data_Distributive_Distributive[gopurs_runtime.Value] = dictDistributive_0_loop
+func Call_Data_Distributive_distributeDefault(dictDistributive_0_loop *Constructor_Data_Distributive_Distributive, dictFunctor_1_loop *Constructor_Data_Functor_Functor) gopurs_runtime.Value {
+var dictDistributive_0 *Constructor_Data_Distributive_Distributive = dictDistributive_0_loop
 _ = dictDistributive_0
-var dictFunctor_1 *Constructor_Data_Functor_Functor[gopurs_runtime.Value] = dictFunctor_1_loop
+var dictFunctor_1 *Constructor_Data_Functor_Functor = dictFunctor_1_loop
 _ = dictFunctor_1
 return gopurs_runtime.Apply2(gopurs_runtime.Box(dictDistributive_0.V1), gopurs_runtime.Value{Type: 9, IntVal: 929368378, UnsafePtr: unsafe.Pointer(dictFunctor_1)}, Get_Data_Distributive_identity())
 }
 
-func Call_Data_Distributive_collect__1176340970(dict_0_loop *Constructor_Data_Distributive_Distributive[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Distributive_Distributive[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Distributive_collect__1176340970(dict_0_loop *Constructor_Data_Distributive_Distributive) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Distributive_Distributive = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Distributive_collect__2649935082(dict_0_loop *Constructor_Data_Distributive_Distributive[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Distributive_Distributive[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Distributive_collect__2649935082(dict_0_loop *Constructor_Data_Distributive_Distributive) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Distributive_Distributive = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Distributive_collect__4289358698(dict_0_loop *Constructor_Data_Distributive_Distributive[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Distributive_Distributive[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Distributive_collect__4289358698(dict_0_loop *Constructor_Data_Distributive_Distributive) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Distributive_Distributive = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Distributive_distribute__2045770422(dict_0_loop *Constructor_Data_Distributive_Distributive[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Distributive_Distributive[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Distributive_distribute__2045770422(dict_0_loop *Constructor_Data_Distributive_Distributive) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Distributive_Distributive = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V2)
 }

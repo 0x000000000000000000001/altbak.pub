@@ -46,13 +46,13 @@ var once_Control_Monad_ST_Class_liftST sync.Once
 func Get_Control_Monad_ST_Class_liftST() gopurs_runtime.Value {
 	once_Control_Monad_ST_Class_liftST.Do(func() {
 		cache_Control_Monad_ST_Class_liftST = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Monad_ST_Class_liftST(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_ST_Class_MonadST[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Monad_ST_Class_liftST(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_ST_Class_MonadST](dict_0_box))
 })
 	})
 	return cache_Control_Monad_ST_Class_liftST
 }
 
-type Constructor_Control_Monad_ST_Class_MonadST[T_s any, T_m any] struct {
+type Constructor_Control_Monad_ST_Class_MonadST struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -61,7 +61,7 @@ type Constructor_Control_Monad_ST_Class_MonadST[T_s any, T_m any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[2155655715] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Control_Monad_ST_Class_MonadST[gopurs_runtime.Value, gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Control_Monad_ST_Class_MonadST)(ptr)
 		_ = c
 		switch key {
 		case "Monad0": return gopurs_runtime.Box(c.V0)
@@ -78,8 +78,8 @@ _ = x_0
 return x_0
 }
 
-func Call_Control_Monad_ST_Class_liftST(dict_0_loop *Constructor_Control_Monad_ST_Class_MonadST[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Monad_ST_Class_MonadST[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Monad_ST_Class_liftST(dict_0_loop *Constructor_Control_Monad_ST_Class_MonadST) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Monad_ST_Class_MonadST = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }

@@ -64,7 +64,7 @@ var once_Data_Equivalence_defaultEquivalence sync.Once
 func Get_Data_Equivalence_defaultEquivalence() gopurs_runtime.Value {
 	once_Data_Equivalence_defaultEquivalence.Do(func() {
 		cache_Data_Equivalence_defaultEquivalence = gopurs_runtime.Func(func(dictEq_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Equivalence_defaultEquivalence(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq[gopurs_runtime.Value]](dictEq_0_box))
+return Call_Data_Equivalence_defaultEquivalence(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](dictEq_0_box))
 })
 	})
 	return cache_Data_Equivalence_defaultEquivalence
@@ -138,8 +138,8 @@ _ = x_0
 return x_0
 }
 
-func Call_Data_Equivalence_defaultEquivalence(dictEq_0_loop *Constructor_Data_Eq_Eq[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictEq_0 *Constructor_Data_Eq_Eq[gopurs_runtime.Value] = dictEq_0_loop
+func Call_Data_Equivalence_defaultEquivalence(dictEq_0_loop *Constructor_Data_Eq_Eq) gopurs_runtime.Value {
+var dictEq_0 *Constructor_Data_Eq_Eq = dictEq_0_loop
 _ = dictEq_0
 return gopurs_runtime.Box(dictEq_0.V0)
 }

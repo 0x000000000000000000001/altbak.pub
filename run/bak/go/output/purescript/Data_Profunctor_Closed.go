@@ -33,13 +33,13 @@ var once_Data_Profunctor_Closed_closed sync.Once
 func Get_Data_Profunctor_Closed_closed() gopurs_runtime.Value {
 	once_Data_Profunctor_Closed_closed.Do(func() {
 		cache_Data_Profunctor_Closed_closed = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Profunctor_Closed_closed(gopurs_runtime.CoerceToStruct[Constructor_Data_Profunctor_Closed_Closed[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Profunctor_Closed_closed(gopurs_runtime.CoerceToStruct[Constructor_Data_Profunctor_Closed_Closed](dict_0_box))
 })
 	})
 	return cache_Data_Profunctor_Closed_closed
 }
 
-type Constructor_Data_Profunctor_Closed_Closed[T_p any] struct {
+type Constructor_Data_Profunctor_Closed_Closed struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -48,7 +48,7 @@ type Constructor_Data_Profunctor_Closed_Closed[T_p any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[768764671] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_Profunctor_Closed_Closed[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_Profunctor_Closed_Closed)(ptr)
 		_ = c
 		switch key {
 		case "Profunctor0": return gopurs_runtime.Box(c.V0)
@@ -65,8 +65,8 @@ _ = x_0
 return x_0
 }
 
-func Call_Data_Profunctor_Closed_closed(dict_0_loop *Constructor_Data_Profunctor_Closed_Closed[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Profunctor_Closed_Closed[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Profunctor_Closed_closed(dict_0_loop *Constructor_Data_Profunctor_Closed_Closed) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Profunctor_Closed_Closed = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }

@@ -41,7 +41,7 @@ var cache_Effect_Exception_stack gopurs_runtime.Value
 var once_Effect_Exception_stack sync.Once
 func Get_Effect_Exception_stack() gopurs_runtime.Value {
 	once_Effect_Exception_stack.Do(func() {
-		cache_Effect_Exception_stack = gopurs_runtime.Apply2(Get_Effect_Exception_stackImpl(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))})
+		cache_Effect_Exception_stack = gopurs_runtime.Apply2(Get_Effect_Exception_stackImpl(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
 	})
 	return cache_Effect_Exception_stack
 }
@@ -59,7 +59,7 @@ func Call_Effect_Exception_try(action_0_loop gopurs_runtime.Value) gopurs_runtim
 var action_0 gopurs_runtime.Value = action_0_loop
 _ = action_0
 return gopurs_runtime.Apply2(Get_Effect_Exception_catchException(), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_applicativeEffect(), "pure"), gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Left[gopurs_runtime.Value, gopurs_runtime.Value]{1, x_1})})
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_applicativeEffect(), "pure"), gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Left{1, x_1})})
 }), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Effect_functorEffect(), "map"), Get_Data_Either_Right(), action_0))
 }
 

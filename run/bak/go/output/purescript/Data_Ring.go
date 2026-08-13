@@ -44,7 +44,7 @@ var once_Data_Ring_subRecord sync.Once
 func Get_Data_Ring_subRecord() gopurs_runtime.Value {
 	once_Data_Ring_subRecord.Do(func() {
 		cache_Data_Ring_subRecord = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ring_subRecord(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_RingRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Ring_subRecord(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_RingRecord](dict_0_box))
 })
 	})
 	return cache_Data_Ring_subRecord
@@ -55,7 +55,7 @@ var once_Data_Ring_sub sync.Once
 func Get_Data_Ring_sub() gopurs_runtime.Value {
 	once_Data_Ring_sub.Do(func() {
 		cache_Data_Ring_sub = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ring_sub(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Ring_sub(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring](dict_0_box))
 })
 	})
 	return cache_Data_Ring_sub
@@ -168,7 +168,7 @@ var once_Data_Ring_negate sync.Once
 func Get_Data_Ring_negate() gopurs_runtime.Value {
 	once_Data_Ring_negate.Do(func() {
 		cache_Data_Ring_negate = gopurs_runtime.Func(func(dictRing_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ring_negate(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring[gopurs_runtime.Value]](dictRing_0_box))
+return Call_Data_Ring_negate(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring](dictRing_0_box))
 })
 	})
 	return cache_Data_Ring_negate
@@ -179,7 +179,7 @@ var once_Data_Ring_negate__1541574592 sync.Once
 func Get_Data_Ring_negate__1541574592() gopurs_runtime.Value {
 	once_Data_Ring_negate__1541574592.Do(func() {
 		cache_Data_Ring_negate__1541574592 = gopurs_runtime.Func(func(dictRing_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ring_negate__1541574592(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring[int64]](dictRing_0_box))
+return Call_Data_Ring_negate__1541574592(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring](dictRing_0_box))
 })
 	})
 	return cache_Data_Ring_negate__1541574592
@@ -212,7 +212,7 @@ var once_Data_Ring_negate__1364373265 sync.Once
 func Get_Data_Ring_negate__1364373265() gopurs_runtime.Value {
 	once_Data_Ring_negate__1364373265.Do(func() {
 		cache_Data_Ring_negate__1364373265 = gopurs_runtime.Func(func(dictRing_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ring_negate__1364373265(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring[gopurs_runtime.Value]](dictRing_0_box))
+return Call_Data_Ring_negate__1364373265(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring](dictRing_0_box))
 })
 	})
 	return cache_Data_Ring_negate__1364373265
@@ -223,7 +223,7 @@ var once_Data_Ring_negate__753141756 sync.Once
 func Get_Data_Ring_negate__753141756() gopurs_runtime.Value {
 	once_Data_Ring_negate__753141756.Do(func() {
 		cache_Data_Ring_negate__753141756 = gopurs_runtime.Func(func(dictRing_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ring_negate__753141756(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring[*Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value]]](dictRing_0_box))
+return Call_Data_Ring_negate__753141756(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring](dictRing_0_box))
 })
 	})
 	return cache_Data_Ring_negate__753141756
@@ -266,7 +266,7 @@ var once_Data_Ring_sub__2927892844 sync.Once
 func Get_Data_Ring_sub__2927892844() gopurs_runtime.Value {
 	once_Data_Ring_sub__2927892844.Do(func() {
 		cache_Data_Ring_sub__2927892844 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ring_sub__2927892844(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring[int64]](dict_0_box))
+return Call_Data_Ring_sub__2927892844(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring](dict_0_box))
 })
 	})
 	return cache_Data_Ring_sub__2927892844
@@ -277,7 +277,7 @@ var once_Data_Ring_sub__101133084 sync.Once
 func Get_Data_Ring_sub__101133084() gopurs_runtime.Value {
 	once_Data_Ring_sub__101133084.Do(func() {
 		cache_Data_Ring_sub__101133084 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ring_sub__101133084(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring[float64]](dict_0_box))
+return Call_Data_Ring_sub__101133084(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring](dict_0_box))
 })
 	})
 	return cache_Data_Ring_sub__101133084
@@ -288,7 +288,7 @@ var once_Data_Ring_sub__1124926121 sync.Once
 func Get_Data_Ring_sub__1124926121() gopurs_runtime.Value {
 	once_Data_Ring_sub__1124926121.Do(func() {
 		cache_Data_Ring_sub__1124926121 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ring_sub__1124926121(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Ring_sub__1124926121(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring](dict_0_box))
 })
 	})
 	return cache_Data_Ring_sub__1124926121
@@ -299,7 +299,7 @@ var once_Data_Ring_sub__1841809173 sync.Once
 func Get_Data_Ring_sub__1841809173() gopurs_runtime.Value {
 	once_Data_Ring_sub__1841809173.Do(func() {
 		cache_Data_Ring_sub__1841809173 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ring_sub__1841809173(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring[uint32]](dict_0_box))
+return Call_Data_Ring_sub__1841809173(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring](dict_0_box))
 })
 	})
 	return cache_Data_Ring_sub__1841809173
@@ -310,7 +310,7 @@ var once_Data_Ring_sub__190951261 sync.Once
 func Get_Data_Ring_sub__190951261() gopurs_runtime.Value {
 	once_Data_Ring_sub__190951261.Do(func() {
 		cache_Data_Ring_sub__190951261 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ring_sub__190951261(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring[*Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]]](dict_0_box))
+return Call_Data_Ring_sub__190951261(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring](dict_0_box))
 })
 	})
 	return cache_Data_Ring_sub__190951261
@@ -343,7 +343,7 @@ var once_Data_Ring_sub__1023426360 sync.Once
 func Get_Data_Ring_sub__1023426360() gopurs_runtime.Value {
 	once_Data_Ring_sub__1023426360.Do(func() {
 		cache_Data_Ring_sub__1023426360 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ring_sub__1023426360(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring[string]](dict_0_box))
+return Call_Data_Ring_sub__1023426360(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring](dict_0_box))
 })
 	})
 	return cache_Data_Ring_sub__1023426360
@@ -354,7 +354,7 @@ var once_Data_Ring_sub__3675938712 sync.Once
 func Get_Data_Ring_sub__3675938712() gopurs_runtime.Value {
 	once_Data_Ring_sub__3675938712.Do(func() {
 		cache_Data_Ring_sub__3675938712 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ring_sub__3675938712(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Ring_sub__3675938712(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring](dict_0_box))
 })
 	})
 	return cache_Data_Ring_sub__3675938712
@@ -365,7 +365,7 @@ var once_Data_Ring_sub__2345699288 sync.Once
 func Get_Data_Ring_sub__2345699288() gopurs_runtime.Value {
 	once_Data_Ring_sub__2345699288.Do(func() {
 		cache_Data_Ring_sub__2345699288 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ring_sub__2345699288(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring[*Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value]]](dict_0_box))
+return Call_Data_Ring_sub__2345699288(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring](dict_0_box))
 })
 	})
 	return cache_Data_Ring_sub__2345699288
@@ -376,7 +376,7 @@ var once_Data_Ring_sub__3885659384 sync.Once
 func Get_Data_Ring_sub__3885659384() gopurs_runtime.Value {
 	once_Data_Ring_sub__3885659384.Do(func() {
 		cache_Data_Ring_sub__3885659384 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ring_sub__3885659384(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring[*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]]](dict_0_box))
+return Call_Data_Ring_sub__3885659384(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring](dict_0_box))
 })
 	})
 	return cache_Data_Ring_sub__3885659384
@@ -387,7 +387,7 @@ var once_Data_Ring_sub__871462840 sync.Once
 func Get_Data_Ring_sub__871462840() gopurs_runtime.Value {
 	once_Data_Ring_sub__871462840.Do(func() {
 		cache_Data_Ring_sub__871462840 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ring_sub__871462840(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Ring_sub__871462840(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring](dict_0_box))
 })
 	})
 	return cache_Data_Ring_sub__871462840
@@ -398,7 +398,7 @@ var once_Data_Ring_subRecord__3826282112 sync.Once
 func Get_Data_Ring_subRecord__3826282112() gopurs_runtime.Value {
 	once_Data_Ring_subRecord__3826282112.Do(func() {
 		cache_Data_Ring_subRecord__3826282112 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ring_subRecord__3826282112(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_RingRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Ring_subRecord__3826282112(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_RingRecord](dict_0_box))
 })
 	})
 	return cache_Data_Ring_subRecord__3826282112
@@ -409,13 +409,13 @@ var once_Data_Ring_subRecord__2650724742 sync.Once
 func Get_Data_Ring_subRecord__2650724742() gopurs_runtime.Value {
 	once_Data_Ring_subRecord__2650724742.Do(func() {
 		cache_Data_Ring_subRecord__2650724742 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ring_subRecord__2650724742(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_RingRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Ring_subRecord__2650724742(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_RingRecord](dict_0_box))
 })
 	})
 	return cache_Data_Ring_subRecord__2650724742
 }
 
-type Constructor_Data_Ring_RingRecord[T_rowlist any, T_row any, T_subrow any] struct {
+type Constructor_Data_Ring_RingRecord struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -424,7 +424,7 @@ type Constructor_Data_Ring_RingRecord[T_rowlist any, T_row any, T_subrow any] st
 
 func init() {
 	gopurs_runtime.StructGetters[4246880791] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_Ring_RingRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_Ring_RingRecord)(ptr)
 		_ = c
 		switch key {
 		case "SemiringRecord0": return gopurs_runtime.Box(c.V0)
@@ -435,7 +435,7 @@ func init() {
 }
 
 
-type Constructor_Data_Ring_Ring[T_a any] struct {
+type Constructor_Data_Ring_Ring struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -444,7 +444,7 @@ type Constructor_Data_Ring_Ring[T_a any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[3955491866] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_Ring_Ring[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_Ring_Ring)(ptr)
 		_ = c
 		switch key {
 		case "Semiring0": return gopurs_runtime.Box(c.V0)
@@ -473,14 +473,14 @@ _ = x_0
 return x_0
 }
 
-func Call_Data_Ring_subRecord(dict_0_loop *Constructor_Data_Ring_RingRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ring_RingRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Ring_subRecord(dict_0_loop *Constructor_Data_Ring_RingRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ring_RingRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Ring_sub(dict_0_loop *Constructor_Data_Ring_Ring[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ring_Ring[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Ring_sub(dict_0_loop *Constructor_Data_Ring_Ring) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ring_Ring = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
@@ -569,22 +569,22 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictRing_0, "sub"), gopurs
 }))
 }
 
-func Call_Data_Ring_negate(dictRing_0_loop *Constructor_Data_Ring_Ring[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictRing_0 *Constructor_Data_Ring_Ring[gopurs_runtime.Value] = dictRing_0_loop
+func Call_Data_Ring_negate(dictRing_0_loop *Constructor_Data_Ring_Ring) gopurs_runtime.Value {
+var dictRing_0 *Constructor_Data_Ring_Ring = dictRing_0_loop
 _ = dictRing_0
-// TAST (Let): Semiring0_1_0 -> *Constructor_Data_Semiring_Semiring[gopurs_runtime.Value]
-Semiring0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.Box(dictRing_0.V0), gopurs_runtime.Value{}))
+// TAST (Let): Semiring0_1_0 -> *Constructor_Data_Semiring_Semiring
+Semiring0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring](gopurs_runtime.Apply(gopurs_runtime.Box(dictRing_0.V0), gopurs_runtime.Value{}))
 _ = Semiring0_1_0
 return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.Box(dictRing_0.V1), gopurs_runtime.Box(Semiring0_1_0.V3), a_2)
 })
 }
 
-func Call_Data_Ring_negate__1541574592(dictRing_0_loop *Constructor_Data_Ring_Ring[int64]) gopurs_runtime.Value {
-var dictRing_0 *Constructor_Data_Ring_Ring[int64] = dictRing_0_loop
+func Call_Data_Ring_negate__1541574592(dictRing_0_loop *Constructor_Data_Ring_Ring) gopurs_runtime.Value {
+var dictRing_0 *Constructor_Data_Ring_Ring = dictRing_0_loop
 _ = dictRing_0
-// TAST (Let): Semiring0_1_0 -> *Constructor_Data_Semiring_Semiring[int64]
-Semiring0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring[int64]](gopurs_runtime.Apply(gopurs_runtime.Box(dictRing_0.V0), gopurs_runtime.Value{}))
+// TAST (Let): Semiring0_1_0 -> *Constructor_Data_Semiring_Semiring
+Semiring0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring](gopurs_runtime.Apply(gopurs_runtime.Box(dictRing_0.V0), gopurs_runtime.Value{}))
 _ = Semiring0_1_0
 return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Int(gopurs_runtime.Apply2(gopurs_runtime.Box(dictRing_0.V1), gopurs_runtime.Int(gopurs_runtime.Box(Semiring0_1_0.V3).IntVal), gopurs_runtime.Int(a_2.IntVal)).IntVal)
@@ -603,54 +603,54 @@ _ = __eta0_0
 return gopurs_runtime.Float(-(__eta0_0.FloatVal()))
 }
 
-func Call_Data_Ring_negate__1364373265(dictRing_0_loop *Constructor_Data_Ring_Ring[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictRing_0 *Constructor_Data_Ring_Ring[gopurs_runtime.Value] = dictRing_0_loop
+func Call_Data_Ring_negate__1364373265(dictRing_0_loop *Constructor_Data_Ring_Ring) gopurs_runtime.Value {
+var dictRing_0 *Constructor_Data_Ring_Ring = dictRing_0_loop
 _ = dictRing_0
-// TAST (Let): Semiring0_1_0 -> *Constructor_Data_Semiring_Semiring[gopurs_runtime.Value]
-Semiring0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.Box(dictRing_0.V0), gopurs_runtime.Value{}))
+// TAST (Let): Semiring0_1_0 -> *Constructor_Data_Semiring_Semiring
+Semiring0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring](gopurs_runtime.Apply(gopurs_runtime.Box(dictRing_0.V0), gopurs_runtime.Value{}))
 _ = Semiring0_1_0
 return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.Box(dictRing_0.V1), gopurs_runtime.Box(Semiring0_1_0.V3), a_2)
 })
 }
 
-func Call_Data_Ring_negate__753141756(dictRing_0_loop *Constructor_Data_Ring_Ring[*Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value]]) gopurs_runtime.Value {
-var dictRing_0 *Constructor_Data_Ring_Ring[*Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value]] = dictRing_0_loop
+func Call_Data_Ring_negate__753141756(dictRing_0_loop *Constructor_Data_Ring_Ring) gopurs_runtime.Value {
+var dictRing_0 *Constructor_Data_Ring_Ring = dictRing_0_loop
 _ = dictRing_0
-// TAST (Let): Semiring0_1_0 -> *Constructor_Data_Semiring_Semiring[*Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value]]
-Semiring0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring[*Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value]]](gopurs_runtime.Apply(gopurs_runtime.Box(dictRing_0.V0), gopurs_runtime.Value{}))
+// TAST (Let): Semiring0_1_0 -> *Constructor_Data_Semiring_Semiring
+Semiring0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring](gopurs_runtime.Apply(gopurs_runtime.Box(dictRing_0.V0), gopurs_runtime.Value{}))
 _ = Semiring0_1_0
 return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value]](gopurs_runtime.Apply2(gopurs_runtime.Box(dictRing_0.V1), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value]](gopurs_runtime.Box(Semiring0_1_0.V3)))}, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value]](a_2))})))}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply2(gopurs_runtime.Box(dictRing_0.V1), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Box(Semiring0_1_0.V3)))}, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](a_2))})))}
 })
 }
 
-func Call_Data_Ring_sub__2927892844(dict_0_loop *Constructor_Data_Ring_Ring[int64]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ring_Ring[int64] = dict_0_loop
+func Call_Data_Ring_sub__2927892844(dict_0_loop *Constructor_Data_Ring_Ring) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ring_Ring = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Ring_sub__101133084(dict_0_loop *Constructor_Data_Ring_Ring[float64]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ring_Ring[float64] = dict_0_loop
+func Call_Data_Ring_sub__101133084(dict_0_loop *Constructor_Data_Ring_Ring) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ring_Ring = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Ring_sub__1124926121(dict_0_loop *Constructor_Data_Ring_Ring[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ring_Ring[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Ring_sub__1124926121(dict_0_loop *Constructor_Data_Ring_Ring) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ring_Ring = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Ring_sub__1841809173(dict_0_loop *Constructor_Data_Ring_Ring[uint32]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ring_Ring[uint32] = dict_0_loop
+func Call_Data_Ring_sub__1841809173(dict_0_loop *Constructor_Data_Ring_Ring) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ring_Ring = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Ring_sub__190951261(dict_0_loop *Constructor_Data_Ring_Ring[*Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ring_Ring[*Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]] = dict_0_loop
+func Call_Data_Ring_sub__190951261(dict_0_loop *Constructor_Data_Ring_Ring) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ring_Ring = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
@@ -671,44 +671,44 @@ _ = __eta1_1
 return gopurs_runtime.Float((__eta0_0.FloatVal()) - (__eta1_1.FloatVal()))
 }
 
-func Call_Data_Ring_sub__1023426360(dict_0_loop *Constructor_Data_Ring_Ring[string]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ring_Ring[string] = dict_0_loop
+func Call_Data_Ring_sub__1023426360(dict_0_loop *Constructor_Data_Ring_Ring) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ring_Ring = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Ring_sub__3675938712(dict_0_loop *Constructor_Data_Ring_Ring[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ring_Ring[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Ring_sub__3675938712(dict_0_loop *Constructor_Data_Ring_Ring) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ring_Ring = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Ring_sub__2345699288(dict_0_loop *Constructor_Data_Ring_Ring[*Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value]]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ring_Ring[*Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value]] = dict_0_loop
+func Call_Data_Ring_sub__2345699288(dict_0_loop *Constructor_Data_Ring_Ring) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ring_Ring = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Ring_sub__3885659384(dict_0_loop *Constructor_Data_Ring_Ring[*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ring_Ring[*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]] = dict_0_loop
+func Call_Data_Ring_sub__3885659384(dict_0_loop *Constructor_Data_Ring_Ring) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ring_Ring = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Ring_sub__871462840(dict_0_loop *Constructor_Data_Ring_Ring[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ring_Ring[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Ring_sub__871462840(dict_0_loop *Constructor_Data_Ring_Ring) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ring_Ring = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Ring_subRecord__3826282112(dict_0_loop *Constructor_Data_Ring_RingRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ring_RingRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Ring_subRecord__3826282112(dict_0_loop *Constructor_Data_Ring_RingRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ring_RingRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Ring_subRecord__2650724742(dict_0_loop *Constructor_Data_Ring_RingRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ring_RingRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Ring_subRecord__2650724742(dict_0_loop *Constructor_Data_Ring_RingRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ring_RingRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }

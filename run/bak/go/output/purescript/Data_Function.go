@@ -165,7 +165,7 @@ var once_Data_Function_const__702735379 sync.Once
 func Get_Data_Function_const__702735379() gopurs_runtime.Value {
 	once_Data_Function_const__702735379.Do(func() {
 		cache_Data_Function_const__702735379 = gopurs_runtime.Func2(func(a_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_Function_const__702735379(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[gopurs_runtime.Value]](a_0_box), v_1_box))}
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_Function_const__702735379(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](a_0_box), v_1_box))}
 })
 	})
 	return cache_Data_Function_const__702735379
@@ -176,7 +176,7 @@ var once_Data_Function_const__3834287059 sync.Once
 func Get_Data_Function_const__3834287059() gopurs_runtime.Value {
 	once_Data_Function_const__3834287059.Do(func() {
 		cache_Data_Function_const__3834287059 = gopurs_runtime.Func2(func(a_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_Function_const__3834287059(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[gopurs_runtime.Value]](a_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[gopurs_runtime.Value]](v_1_box)))}
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_Function_const__3834287059(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](a_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](v_1_box)))}
 })
 	})
 	return cache_Data_Function_const__3834287059
@@ -429,7 +429,7 @@ var once_Data_Function_const__1628252324 sync.Once
 func Get_Data_Function_const__1628252324() gopurs_runtime.Value {
 	once_Data_Function_const__1628252324.Do(func() {
 		cache_Data_Function_const__1628252324 = gopurs_runtime.Func2(func(a_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 953589075, UnsafePtr: unsafe.Pointer(Call_Data_Function_const__1628252324(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_IterNext[gopurs_runtime.Value, gopurs_runtime.Value]](a_0_box), v_1_box))}
+return gopurs_runtime.Value{Type: 9, IntVal: 953589075, UnsafePtr: unsafe.Pointer(Call_Data_Function_const__1628252324(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_IterNext](a_0_box), v_1_box))}
 })
 	})
 	return cache_Data_Function_const__1628252324
@@ -440,7 +440,7 @@ var once_Data_Function_const__3470624004 sync.Once
 func Get_Data_Function_const__3470624004() gopurs_runtime.Value {
 	once_Data_Function_const__3470624004.Do(func() {
 		cache_Data_Function_const__3470624004 = gopurs_runtime.Func2(func(a_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_Function_const__3470624004(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[gopurs_runtime.Value]](a_0_box), v_1_box))}
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_Function_const__3470624004(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](a_0_box), v_1_box))}
 })
 	})
 	return cache_Data_Function_const__3470624004
@@ -451,7 +451,7 @@ var once_Data_Function_const__587810660 sync.Once
 func Get_Data_Function_const__587810660() gopurs_runtime.Value {
 	once_Data_Function_const__587810660.Do(func() {
 		cache_Data_Function_const__587810660 = gopurs_runtime.Func2(func(a_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_Function_const__587810660(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[gopurs_runtime.Value]](a_0_box), v_1_box))}
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_Function_const__587810660(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](a_0_box), v_1_box))}
 })
 	})
 	return cache_Data_Function_const__587810660
@@ -462,7 +462,7 @@ var once_Data_Function_const__3525124788 sync.Once
 func Get_Data_Function_const__3525124788() gopurs_runtime.Value {
 	once_Data_Function_const__3525124788.Do(func() {
 		cache_Data_Function_const__3525124788 = gopurs_runtime.Func2(func(a_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_Function_const__3525124788(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[gopurs_runtime.Value]](a_0_box), v_1_box))}
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_Function_const__3525124788(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](a_0_box), v_1_box))}
 })
 	})
 	return cache_Data_Function_const__3525124788
@@ -473,7 +473,7 @@ var once_Data_Function_const__153462564 sync.Once
 func Get_Data_Function_const__153462564() gopurs_runtime.Value {
 	once_Data_Function_const__153462564.Do(func() {
 		cache_Data_Function_const__153462564 = gopurs_runtime.Func2(func(a_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_Function_const__153462564(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[[]gopurs_runtime.Value]](a_0_box), v_1_box))}
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_Function_const__153462564(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](a_0_box), v_1_box))}
 })
 	})
 	return cache_Data_Function_const__153462564
@@ -484,7 +484,7 @@ var once_Data_Function_const__839298276 sync.Once
 func Get_Data_Function_const__839298276() gopurs_runtime.Value {
 	once_Data_Function_const__839298276.Do(func() {
 		cache_Data_Function_const__839298276 = gopurs_runtime.Func2(func(a_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_Function_const__839298276(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]]](a_0_box), v_1_box))}
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_Function_const__839298276(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](a_0_box), v_1_box))}
 })
 	})
 	return cache_Data_Function_const__839298276
@@ -495,7 +495,7 @@ var once_Data_Function_const__3168103323 sync.Once
 func Get_Data_Function_const__3168103323() gopurs_runtime.Value {
 	once_Data_Function_const__3168103323.Do(func() {
 		cache_Data_Function_const__3168103323 = gopurs_runtime.Func2(func(a_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_Function_const__3168103323(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[gopurs_runtime.Value]](a_0_box), v_1_box))}
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_Function_const__3168103323(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](a_0_box), v_1_box))}
 })
 	})
 	return cache_Data_Function_const__3168103323
@@ -506,7 +506,7 @@ var once_Data_Function_const__106415396 sync.Once
 func Get_Data_Function_const__106415396() gopurs_runtime.Value {
 	once_Data_Function_const__106415396.Do(func() {
 		cache_Data_Function_const__106415396 = gopurs_runtime.Func2(func(a_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_Function_const__106415396(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[gopurs_runtime.Value]](a_0_box), v_1_box))}
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_Function_const__106415396(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](a_0_box), v_1_box))}
 })
 	})
 	return cache_Data_Function_const__106415396
@@ -907,7 +907,7 @@ var once_Data_Function_flip__3709724320 sync.Once
 func Get_Data_Function_flip__3709724320() gopurs_runtime.Value {
 	once_Data_Function_flip__3709724320.Do(func() {
 		cache_Data_Function_flip__3709724320 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Function_flip__3709724320(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](b_1_box), a_2_box)
+return Call_Data_Function_flip__3709724320(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](b_1_box), a_2_box)
 })
 	})
 	return cache_Data_Function_flip__3709724320
@@ -918,7 +918,7 @@ var once_Data_Function_flip__3563101792 sync.Once
 func Get_Data_Function_flip__3563101792() gopurs_runtime.Value {
 	once_Data_Function_flip__3563101792.Do(func() {
 		cache_Data_Function_flip__3563101792 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(Call_Data_Function_flip__3563101792(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](b_1_box), a_2_box))}
+return gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(Call_Data_Function_flip__3563101792(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](b_1_box), a_2_box))}
 })
 	})
 	return cache_Data_Function_flip__3563101792
@@ -929,7 +929,7 @@ var once_Data_Function_flip__4284296032 sync.Once
 func Get_Data_Function_flip__4284296032() gopurs_runtime.Value {
 	once_Data_Function_flip__4284296032.Do(func() {
 		cache_Data_Function_flip__4284296032 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_Function_flip__4284296032(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[gopurs_runtime.Value]](b_1_box), a_2_box))}
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_Function_flip__4284296032(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](b_1_box), a_2_box))}
 })
 	})
 	return cache_Data_Function_flip__4284296032
@@ -940,7 +940,7 @@ var once_Data_Function_flip__1288774720 sync.Once
 func Get_Data_Function_flip__1288774720() gopurs_runtime.Value {
 	once_Data_Function_flip__1288774720.Do(func() {
 		cache_Data_Function_flip__1288774720 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(Call_Data_Function_flip__1288774720(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[gopurs_runtime.Value]](b_1_box), a_2_box))}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(Call_Data_Function_flip__1288774720(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](b_1_box), a_2_box))}
 })
 	})
 	return cache_Data_Function_flip__1288774720
@@ -951,7 +951,7 @@ var once_Data_Function_flip__1833071808 sync.Once
 func Get_Data_Function_flip__1833071808() gopurs_runtime.Value {
 	once_Data_Function_flip__1833071808.Do(func() {
 		cache_Data_Function_flip__1833071808 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(Call_Data_Function_flip__1833071808(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty[*Constructor_Data_List_Types_Cons[gopurs_runtime.Value], gopurs_runtime.Value]](b_1_box), a_2_box))}
+return gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(Call_Data_Function_flip__1833071808(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty](b_1_box), a_2_box))}
 })
 	})
 	return cache_Data_Function_flip__1833071808
@@ -1170,7 +1170,7 @@ var once_Data_Function_flip__816740064 sync.Once
 func Get_Data_Function_flip__816740064() gopurs_runtime.Value {
 	once_Data_Function_flip__816740064.Do(func() {
 		cache_Data_Function_flip__816740064 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Function_flip__816740064(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]](a_2_box))
+return Call_Data_Function_flip__816740064(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons](a_2_box))
 })
 	})
 	return cache_Data_Function_flip__816740064
@@ -1181,7 +1181,7 @@ var once_Data_Function_flip__1026675680 sync.Once
 func Get_Data_Function_flip__1026675680() gopurs_runtime.Value {
 	once_Data_Function_flip__1026675680.Do(func() {
 		cache_Data_Function_flip__1026675680 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Function_flip__1026675680(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]](a_2_box))
+return Call_Data_Function_flip__1026675680(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons](a_2_box))
 })
 	})
 	return cache_Data_Function_flip__1026675680
@@ -1192,7 +1192,7 @@ var once_Data_Function_flip__141921312 sync.Once
 func Get_Data_Function_flip__141921312() gopurs_runtime.Value {
 	once_Data_Function_flip__141921312.Do(func() {
 		cache_Data_Function_flip__141921312 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Function_flip__141921312(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]](a_2_box))
+return Call_Data_Function_flip__141921312(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons](a_2_box))
 })
 	})
 	return cache_Data_Function_flip__141921312
@@ -1203,7 +1203,7 @@ var once_Data_Function_flip__2175652032 sync.Once
 func Get_Data_Function_flip__2175652032() gopurs_runtime.Value {
 	once_Data_Function_flip__2175652032.Do(func() {
 		cache_Data_Function_flip__2175652032 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Function_flip__2175652032(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]](a_2_box))
+return Call_Data_Function_flip__2175652032(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons](a_2_box))
 })
 	})
 	return cache_Data_Function_flip__2175652032
@@ -1214,7 +1214,7 @@ var once_Data_Function_flip__848188896 sync.Once
 func Get_Data_Function_flip__848188896() gopurs_runtime.Value {
 	once_Data_Function_flip__848188896.Do(func() {
 		cache_Data_Function_flip__848188896 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Function_flip__848188896(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]](a_2_box))
+return Call_Data_Function_flip__848188896(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons](a_2_box))
 })
 	})
 	return cache_Data_Function_flip__848188896
@@ -1225,7 +1225,7 @@ var once_Data_Function_flip__913470112 sync.Once
 func Get_Data_Function_flip__913470112() gopurs_runtime.Value {
 	once_Data_Function_flip__913470112.Do(func() {
 		cache_Data_Function_flip__913470112 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Function_flip__913470112(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]](a_2_box))
+return Call_Data_Function_flip__913470112(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons](a_2_box))
 })
 	})
 	return cache_Data_Function_flip__913470112
@@ -1236,7 +1236,7 @@ var once_Data_Function_flip__4017289888 sync.Once
 func Get_Data_Function_flip__4017289888() gopurs_runtime.Value {
 	once_Data_Function_flip__4017289888.Do(func() {
 		cache_Data_Function_flip__4017289888 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Function_flip__4017289888(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]](a_2_box))
+return Call_Data_Function_flip__4017289888(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons](a_2_box))
 })
 	})
 	return cache_Data_Function_flip__4017289888
@@ -1247,7 +1247,7 @@ var once_Data_Function_flip__3036739744 sync.Once
 func Get_Data_Function_flip__3036739744() gopurs_runtime.Value {
 	once_Data_Function_flip__3036739744.Do(func() {
 		cache_Data_Function_flip__3036739744 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Function_flip__3036739744(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]](a_2_box))
+return Call_Data_Function_flip__3036739744(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons](a_2_box))
 })
 	})
 	return cache_Data_Function_flip__3036739744
@@ -1258,7 +1258,7 @@ var once_Data_Function_flip__3539834656 sync.Once
 func Get_Data_Function_flip__3539834656() gopurs_runtime.Value {
 	once_Data_Function_flip__3539834656.Do(func() {
 		cache_Data_Function_flip__3539834656 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Function_flip__3539834656(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]](a_2_box))
+return Call_Data_Function_flip__3539834656(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons](a_2_box))
 })
 	})
 	return cache_Data_Function_flip__3539834656
@@ -1269,7 +1269,7 @@ var once_Data_Function_flip__2097869248 sync.Once
 func Get_Data_Function_flip__2097869248() gopurs_runtime.Value {
 	once_Data_Function_flip__2097869248.Do(func() {
 		cache_Data_Function_flip__2097869248 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Function_flip__2097869248(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]](a_2_box))
+return Call_Data_Function_flip__2097869248(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons](a_2_box))
 })
 	})
 	return cache_Data_Function_flip__2097869248
@@ -1280,7 +1280,7 @@ var once_Data_Function_flip__3152946016 sync.Once
 func Get_Data_Function_flip__3152946016() gopurs_runtime.Value {
 	once_Data_Function_flip__3152946016.Do(func() {
 		cache_Data_Function_flip__3152946016 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Function_flip__3152946016(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]](a_2_box))
+return Call_Data_Function_flip__3152946016(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons](a_2_box))
 })
 	})
 	return cache_Data_Function_flip__3152946016
@@ -1291,7 +1291,7 @@ var once_Data_Function_flip__1036339264 sync.Once
 func Get_Data_Function_flip__1036339264() gopurs_runtime.Value {
 	once_Data_Function_flip__1036339264.Do(func() {
 		cache_Data_Function_flip__1036339264 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Function_flip__1036339264(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]](a_2_box))
+return Call_Data_Function_flip__1036339264(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons](a_2_box))
 })
 	})
 	return cache_Data_Function_flip__1036339264
@@ -1302,7 +1302,7 @@ var once_Data_Function_flip__754346432 sync.Once
 func Get_Data_Function_flip__754346432() gopurs_runtime.Value {
 	once_Data_Function_flip__754346432.Do(func() {
 		cache_Data_Function_flip__754346432 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Function_flip__754346432(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](b_1_box), gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons[*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]]](a_2_box))
+return Call_Data_Function_flip__754346432(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](b_1_box), gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons](a_2_box))
 })
 	})
 	return cache_Data_Function_flip__754346432
@@ -1313,7 +1313,7 @@ var once_Data_Function_flip__3959849920 sync.Once
 func Get_Data_Function_flip__3959849920() gopurs_runtime.Value {
 	once_Data_Function_flip__3959849920.Do(func() {
 		cache_Data_Function_flip__3959849920 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Function_flip__3959849920(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](b_1_box), gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons[*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]]](a_2_box))
+return Call_Data_Function_flip__3959849920(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](b_1_box), gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons](a_2_box))
 })
 	})
 	return cache_Data_Function_flip__3959849920
@@ -1324,7 +1324,7 @@ var once_Data_Function_flip__4236888928 sync.Once
 func Get_Data_Function_flip__4236888928() gopurs_runtime.Value {
 	once_Data_Function_flip__4236888928.Do(func() {
 		cache_Data_Function_flip__4236888928 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(Call_Data_Function_flip__4236888928(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](b_1_box), gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons[*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]]](a_2_box)))}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(Call_Data_Function_flip__4236888928(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](b_1_box), gopurs_runtime.CoerceToStruct[Constructor_Data_List_Lazy_Types_Cons](a_2_box)))}
 })
 	})
 	return cache_Data_Function_flip__4236888928
@@ -1335,7 +1335,7 @@ var once_Data_Function_flip__1744188480 sync.Once
 func Get_Data_Function_flip__1744188480() gopurs_runtime.Value {
 	once_Data_Function_flip__1744188480.Do(func() {
 		cache_Data_Function_flip__1744188480 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Function_flip__1744188480(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](b_1_box), gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](a_2_box))
+return Call_Data_Function_flip__1744188480(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](b_1_box), gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](a_2_box))
 })
 	})
 	return cache_Data_Function_flip__1744188480
@@ -1346,7 +1346,7 @@ var once_Data_Function_flip__3468792800 sync.Once
 func Get_Data_Function_flip__3468792800() gopurs_runtime.Value {
 	once_Data_Function_flip__3468792800.Do(func() {
 		cache_Data_Function_flip__3468792800 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(Call_Data_Function_flip__3468792800(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](b_1_box), gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](a_2_box)))}
+return gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(Call_Data_Function_flip__3468792800(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](b_1_box), gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](a_2_box)))}
 })
 	})
 	return cache_Data_Function_flip__3468792800
@@ -1357,7 +1357,7 @@ var once_Data_Function_flip__2373571712 sync.Once
 func Get_Data_Function_flip__2373571712() gopurs_runtime.Value {
 	once_Data_Function_flip__2373571712.Do(func() {
 		cache_Data_Function_flip__2373571712 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(Call_Data_Function_flip__2373571712(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](a_2_box)))}
+return gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(Call_Data_Function_flip__2373571712(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](a_2_box)))}
 })
 	})
 	return cache_Data_Function_flip__2373571712
@@ -1368,7 +1368,7 @@ var once_Data_Function_flip__437353440 sync.Once
 func Get_Data_Function_flip__437353440() gopurs_runtime.Value {
 	once_Data_Function_flip__437353440.Do(func() {
 		cache_Data_Function_flip__437353440 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Function_flip__437353440(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node[gopurs_runtime.Value, gopurs_runtime.Value]](a_2_box))
+return Call_Data_Function_flip__437353440(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](a_2_box))
 })
 	})
 	return cache_Data_Function_flip__437353440
@@ -1379,7 +1379,7 @@ var once_Data_Function_flip__1172723328 sync.Once
 func Get_Data_Function_flip__1172723328() gopurs_runtime.Value {
 	once_Data_Function_flip__1172723328.Do(func() {
 		cache_Data_Function_flip__1172723328 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Function_flip__1172723328(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node[gopurs_runtime.Value, gopurs_runtime.Value]](a_2_box))
+return Call_Data_Function_flip__1172723328(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](a_2_box))
 })
 	})
 	return cache_Data_Function_flip__1172723328
@@ -1390,7 +1390,7 @@ var once_Data_Function_flip__4067779648 sync.Once
 func Get_Data_Function_flip__4067779648() gopurs_runtime.Value {
 	once_Data_Function_flip__4067779648.Do(func() {
 		cache_Data_Function_flip__4067779648 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Function_flip__4067779648(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node[uint32, float64]](a_2_box))
+return Call_Data_Function_flip__4067779648(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](a_2_box))
 })
 	})
 	return cache_Data_Function_flip__4067779648
@@ -1401,7 +1401,7 @@ var once_Data_Function_flip__1273449376 sync.Once
 func Get_Data_Function_flip__1273449376() gopurs_runtime.Value {
 	once_Data_Function_flip__1273449376.Do(func() {
 		cache_Data_Function_flip__1273449376 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Function_flip__1273449376(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[gopurs_runtime.Value]](a_2_box))
+return Call_Data_Function_flip__1273449376(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](a_2_box))
 })
 	})
 	return cache_Data_Function_flip__1273449376
@@ -1412,7 +1412,7 @@ var once_Data_Function_flip__3468501600 sync.Once
 func Get_Data_Function_flip__3468501600() gopurs_runtime.Value {
 	once_Data_Function_flip__3468501600.Do(func() {
 		cache_Data_Function_flip__3468501600 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Array(Call_Data_Function_flip__3468501600(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[gopurs_runtime.Value]](a_2_box)))
+return gopurs_runtime.Array(Call_Data_Function_flip__3468501600(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](a_2_box)))
 })
 	})
 	return cache_Data_Function_flip__3468501600
@@ -1423,7 +1423,7 @@ var once_Data_Function_flip__1570464832 sync.Once
 func Get_Data_Function_flip__1570464832() gopurs_runtime.Value {
 	once_Data_Function_flip__1570464832.Do(func() {
 		cache_Data_Function_flip__1570464832 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(Call_Data_Function_flip__1570464832(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty[*Constructor_Data_List_Types_Cons[gopurs_runtime.Value], gopurs_runtime.Value]](a_2_box)))}
+return gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(Call_Data_Function_flip__1570464832(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty](a_2_box)))}
 })
 	})
 	return cache_Data_Function_flip__1570464832
@@ -1434,7 +1434,7 @@ var once_Data_Function_flip__1764632704 sync.Once
 func Get_Data_Function_flip__1764632704() gopurs_runtime.Value {
 	once_Data_Function_flip__1764632704.Do(func() {
 		cache_Data_Function_flip__1764632704 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Function_flip__1764632704(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, bool]](a_2_box))
+return Call_Data_Function_flip__1764632704(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](a_2_box))
 })
 	})
 	return cache_Data_Function_flip__1764632704
@@ -1445,7 +1445,7 @@ var once_Data_Function_flip__362459520 sync.Once
 func Get_Data_Function_flip__362459520() gopurs_runtime.Value {
 	once_Data_Function_flip__362459520.Do(func() {
 		cache_Data_Function_flip__362459520 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Array(Call_Data_Function_flip__362459520(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, bool]](a_2_box)))
+return gopurs_runtime.Array(Call_Data_Function_flip__362459520(f_0_box, b_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](a_2_box)))
 })
 	})
 	return cache_Data_Function_flip__362459520
@@ -1456,7 +1456,7 @@ var once_Data_Function_flip__3192966848 sync.Once
 func Get_Data_Function_flip__3192966848() gopurs_runtime.Value {
 	once_Data_Function_flip__3192966848.Do(func() {
 		cache_Data_Function_flip__3192966848 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Function_flip__3192966848(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[*Constructor_Data_List_Types_Cons[gopurs_runtime.Value], *Constructor_Data_List_Types_Cons[gopurs_runtime.Value]]](b_1_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](a_2_box))
+return Call_Data_Function_flip__3192966848(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](b_1_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](a_2_box))
 })
 	})
 	return cache_Data_Function_flip__3192966848
@@ -1467,7 +1467,7 @@ var once_Data_Function_flip__2681340064 sync.Once
 func Get_Data_Function_flip__2681340064() gopurs_runtime.Value {
 	once_Data_Function_flip__2681340064.Do(func() {
 		cache_Data_Function_flip__2681340064 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(Call_Data_Function_flip__2681340064(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[*Constructor_Data_List_Types_Cons[gopurs_runtime.Value], *Constructor_Data_List_Types_Cons[gopurs_runtime.Value]]](b_1_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](a_2_box)))}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(Call_Data_Function_flip__2681340064(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](b_1_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](a_2_box)))}
 })
 	})
 	return cache_Data_Function_flip__2681340064
@@ -1588,7 +1588,7 @@ var once_Data_Function_flip__2033550272 sync.Once
 func Get_Data_Function_flip__2033550272() gopurs_runtime.Value {
 	once_Data_Function_flip__2033550272.Do(func() {
 		cache_Data_Function_flip__2033550272 = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, b_1_box gopurs_runtime.Value, a_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_Function_flip__2033550272(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[gopurs_runtime.Value]](b_1_box), a_2_box))}
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_Function_flip__2033550272(f_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](b_1_box), a_2_box))}
 })
 	})
 	return cache_Data_Function_flip__2033550272
@@ -1801,18 +1801,18 @@ _ = v_1
 return a_0
 }
 
-func Call_Data_Function_const__702735379(a_0_loop *Constructor_Data_Maybe_Just[gopurs_runtime.Value], v_1_loop gopurs_runtime.Value) *Constructor_Data_Maybe_Just[gopurs_runtime.Value] {
-var a_0 *Constructor_Data_Maybe_Just[gopurs_runtime.Value] = a_0_loop
+func Call_Data_Function_const__702735379(a_0_loop *Constructor_Data_Maybe_Just, v_1_loop gopurs_runtime.Value) *Constructor_Data_Maybe_Just {
+var a_0 *Constructor_Data_Maybe_Just = a_0_loop
 _ = a_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
 return a_0
 }
 
-func Call_Data_Function_const__3834287059(a_0_loop *Constructor_Data_Maybe_Just[gopurs_runtime.Value], v_1_loop *Constructor_Data_Maybe_Just[gopurs_runtime.Value]) *Constructor_Data_Maybe_Just[gopurs_runtime.Value] {
-var a_0 *Constructor_Data_Maybe_Just[gopurs_runtime.Value] = a_0_loop
+func Call_Data_Function_const__3834287059(a_0_loop *Constructor_Data_Maybe_Just, v_1_loop *Constructor_Data_Maybe_Just) *Constructor_Data_Maybe_Just {
+var a_0 *Constructor_Data_Maybe_Just = a_0_loop
 _ = a_0
-var v_1 *Constructor_Data_Maybe_Just[gopurs_runtime.Value] = v_1_loop
+var v_1 *Constructor_Data_Maybe_Just = v_1_loop
 _ = v_1
 return a_0
 }
@@ -1993,64 +1993,64 @@ _ = v_1
 return a_0
 }
 
-func Call_Data_Function_const__1628252324(a_0_loop *Constructor_Data_Map_Internal_IterNext[gopurs_runtime.Value, gopurs_runtime.Value], v_1_loop gopurs_runtime.Value) *Constructor_Data_Map_Internal_IterNext[gopurs_runtime.Value, gopurs_runtime.Value] {
-var a_0 *Constructor_Data_Map_Internal_IterNext[gopurs_runtime.Value, gopurs_runtime.Value] = a_0_loop
+func Call_Data_Function_const__1628252324(a_0_loop *Constructor_Data_Map_Internal_IterNext, v_1_loop gopurs_runtime.Value) *Constructor_Data_Map_Internal_IterNext {
+var a_0 *Constructor_Data_Map_Internal_IterNext = a_0_loop
 _ = a_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
 return a_0
 }
 
-func Call_Data_Function_const__3470624004(a_0_loop *Constructor_Data_Maybe_Just[gopurs_runtime.Value], v_1_loop gopurs_runtime.Value) *Constructor_Data_Maybe_Just[gopurs_runtime.Value] {
-var a_0 *Constructor_Data_Maybe_Just[gopurs_runtime.Value] = a_0_loop
+func Call_Data_Function_const__3470624004(a_0_loop *Constructor_Data_Maybe_Just, v_1_loop gopurs_runtime.Value) *Constructor_Data_Maybe_Just {
+var a_0 *Constructor_Data_Maybe_Just = a_0_loop
 _ = a_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
 return a_0
 }
 
-func Call_Data_Function_const__587810660(a_0_loop *Constructor_Data_Maybe_Just[gopurs_runtime.Value], v_1_loop gopurs_runtime.Value) *Constructor_Data_Maybe_Just[gopurs_runtime.Value] {
-var a_0 *Constructor_Data_Maybe_Just[gopurs_runtime.Value] = a_0_loop
+func Call_Data_Function_const__587810660(a_0_loop *Constructor_Data_Maybe_Just, v_1_loop gopurs_runtime.Value) *Constructor_Data_Maybe_Just {
+var a_0 *Constructor_Data_Maybe_Just = a_0_loop
 _ = a_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
 return a_0
 }
 
-func Call_Data_Function_const__3525124788(a_0_loop *Constructor_Data_Maybe_Just[gopurs_runtime.Value], v_1_loop gopurs_runtime.Value) *Constructor_Data_Maybe_Just[gopurs_runtime.Value] {
-var a_0 *Constructor_Data_Maybe_Just[gopurs_runtime.Value] = a_0_loop
+func Call_Data_Function_const__3525124788(a_0_loop *Constructor_Data_Maybe_Just, v_1_loop gopurs_runtime.Value) *Constructor_Data_Maybe_Just {
+var a_0 *Constructor_Data_Maybe_Just = a_0_loop
 _ = a_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
 return a_0
 }
 
-func Call_Data_Function_const__153462564(a_0_loop *Constructor_Data_Maybe_Just[[]gopurs_runtime.Value], v_1_loop gopurs_runtime.Value) *Constructor_Data_Maybe_Just[[]gopurs_runtime.Value] {
-var a_0 *Constructor_Data_Maybe_Just[[]gopurs_runtime.Value] = a_0_loop
+func Call_Data_Function_const__153462564(a_0_loop *Constructor_Data_Maybe_Just, v_1_loop gopurs_runtime.Value) *Constructor_Data_Maybe_Just {
+var a_0 *Constructor_Data_Maybe_Just = a_0_loop
 _ = a_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
 return a_0
 }
 
-func Call_Data_Function_const__839298276(a_0_loop *Constructor_Data_Maybe_Just[*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]], v_1_loop gopurs_runtime.Value) *Constructor_Data_Maybe_Just[*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]] {
-var a_0 *Constructor_Data_Maybe_Just[*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]] = a_0_loop
+func Call_Data_Function_const__839298276(a_0_loop *Constructor_Data_Maybe_Just, v_1_loop gopurs_runtime.Value) *Constructor_Data_Maybe_Just {
+var a_0 *Constructor_Data_Maybe_Just = a_0_loop
 _ = a_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
 return a_0
 }
 
-func Call_Data_Function_const__3168103323(a_0_loop *Constructor_Data_Maybe_Just[gopurs_runtime.Value], v_1_loop gopurs_runtime.Value) *Constructor_Data_Maybe_Just[gopurs_runtime.Value] {
-var a_0 *Constructor_Data_Maybe_Just[gopurs_runtime.Value] = a_0_loop
+func Call_Data_Function_const__3168103323(a_0_loop *Constructor_Data_Maybe_Just, v_1_loop gopurs_runtime.Value) *Constructor_Data_Maybe_Just {
+var a_0 *Constructor_Data_Maybe_Just = a_0_loop
 _ = a_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
 return a_0
 }
 
-func Call_Data_Function_const__106415396(a_0_loop *Constructor_Data_Maybe_Just[gopurs_runtime.Value], v_1_loop gopurs_runtime.Value) *Constructor_Data_Maybe_Just[gopurs_runtime.Value] {
-var a_0 *Constructor_Data_Maybe_Just[gopurs_runtime.Value] = a_0_loop
+func Call_Data_Function_const__106415396(a_0_loop *Constructor_Data_Maybe_Just, v_1_loop gopurs_runtime.Value) *Constructor_Data_Maybe_Just {
+var a_0 *Constructor_Data_Maybe_Just = a_0_loop
 _ = a_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
@@ -2163,14 +2163,14 @@ _ = a_2
 return gopurs_runtime.Apply2(f_0, a_2, b_1)
 }
 
-func Call_Data_Function_flip__1826582752(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_Date_Date, a_2_loop int64) *Constructor_Data_Maybe_Just[*Constructor_Data_Date_Date] {
+func Call_Data_Function_flip__1826582752(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_Date_Date, a_2_loop int64) *Constructor_Data_Maybe_Just {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var b_1 *Constructor_Data_Date_Date = b_1_loop
 _ = b_1
 var a_2 int64 = a_2_loop
 _ = a_2
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[*Constructor_Data_Date_Date]](gopurs_runtime.Apply2(f_0, gopurs_runtime.Int(a_2), gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(b_1)}))
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(f_0, gopurs_runtime.Int(a_2), gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(b_1)}))
 }
 
 func Call_Data_Function_flip__2176113088(f_0_loop gopurs_runtime.Value, b_1_loop string, a_2_loop string) gopurs_runtime.Value {
@@ -2183,14 +2183,14 @@ _ = a_2
 return gopurs_runtime.Apply2(f_0, gopurs_runtime.Str(a_2), gopurs_runtime.Str(b_1))
 }
 
-func Call_Data_Function_flip__4032303232(f_0_loop gopurs_runtime.Value, b_1_loop string, a_2_loop string) *Constructor_Data_Maybe_Just[string] {
+func Call_Data_Function_flip__4032303232(f_0_loop gopurs_runtime.Value, b_1_loop string, a_2_loop string) *Constructor_Data_Maybe_Just {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var b_1 string = b_1_loop
 _ = b_1
 var a_2 string = a_2_loop
 _ = a_2
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[string]](gopurs_runtime.Apply2(f_0, gopurs_runtime.Str(a_2), gopurs_runtime.Str(b_1)))
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(f_0, gopurs_runtime.Str(a_2), gopurs_runtime.Str(b_1)))
 }
 
 func Call_Data_Function_flip__1384624704(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -2258,14 +2258,14 @@ _ = a_2
 return gopurs_runtime.Apply2(f_0, a_2, b_1)
 }
 
-func Call_Data_Function_flip__1540101856(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) *Constructor_Data_Generic_Rep_Product[gopurs_runtime.Value, gopurs_runtime.Value] {
+func Call_Data_Function_flip__1540101856(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) *Constructor_Data_Generic_Rep_Product {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var b_1 gopurs_runtime.Value = b_1_loop
 _ = b_1
 var a_2 gopurs_runtime.Value = a_2_loop
 _ = a_2
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Generic_Rep_Product[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Apply2(f_0, a_2, b_1))
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Generic_Rep_Product](gopurs_runtime.Apply2(f_0, a_2, b_1))
 }
 
 func Call_Data_Function_flip__3658931456(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -2278,24 +2278,24 @@ _ = a_2
 return gopurs_runtime.Apply2(f_0, a_2, b_1)
 }
 
-func Call_Data_Function_flip__2974723072(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) *Constructor_Data_List_Types_Cons[gopurs_runtime.Value] {
+func Call_Data_Function_flip__2974723072(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) *Constructor_Data_List_Types_Cons {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var b_1 gopurs_runtime.Value = b_1_loop
 _ = b_1
 var a_2 gopurs_runtime.Value = a_2_loop
 _ = a_2
-return gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](gopurs_runtime.Apply2(f_0, a_2, b_1))
+return gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](gopurs_runtime.Apply2(f_0, a_2, b_1))
 }
 
-func Call_Data_Function_flip__73563104(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] {
+func Call_Data_Function_flip__73563104(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) *Constructor_Data_Tuple_Tuple {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var b_1 gopurs_runtime.Value = b_1_loop
 _ = b_1
 var a_2 gopurs_runtime.Value = a_2_loop
 _ = a_2
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Apply2(f_0, a_2, b_1))
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply2(f_0, a_2, b_1))
 }
 
 func Call_Data_Function_flip__787327104(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -2363,14 +2363,14 @@ _ = a_2
 return gopurs_runtime.Apply2(f_0, a_2, gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(b_1)})
 }
 
-func Call_Data_Function_flip__2733110176(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_Date_Date, a_2_loop gopurs_runtime.Value) *Constructor_Data_Maybe_Just[*Constructor_Data_Date_Date] {
+func Call_Data_Function_flip__2733110176(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_Date_Date, a_2_loop gopurs_runtime.Value) *Constructor_Data_Maybe_Just {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var b_1 *Constructor_Data_Date_Date = b_1_loop
 _ = b_1
 var a_2 gopurs_runtime.Value = a_2_loop
 _ = a_2
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[*Constructor_Data_Date_Date]](gopurs_runtime.Apply2(f_0, a_2, gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(b_1)}))
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(f_0, a_2, gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(b_1)}))
 }
 
 func Call_Data_Function_flip__3019832928(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -2393,54 +2393,54 @@ _ = a_2
 return gopurs_runtime.Apply2(f_0, a_2, b_1)
 }
 
-func Call_Data_Function_flip__3709724320(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_List_Types_Cons[gopurs_runtime.Value], a_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_Data_Function_flip__3709724320(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_List_Types_Cons, a_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-var b_1 *Constructor_Data_List_Types_Cons[gopurs_runtime.Value] = b_1_loop
+var b_1 *Constructor_Data_List_Types_Cons = b_1_loop
 _ = b_1
 var a_2 gopurs_runtime.Value = a_2_loop
 _ = a_2
 return gopurs_runtime.Apply2(f_0, a_2, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(b_1)})
 }
 
-func Call_Data_Function_flip__3563101792(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_List_Types_Cons[gopurs_runtime.Value], a_2_loop gopurs_runtime.Value) *Constructor_Data_List_Types_Cons[gopurs_runtime.Value] {
+func Call_Data_Function_flip__3563101792(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_List_Types_Cons, a_2_loop gopurs_runtime.Value) *Constructor_Data_List_Types_Cons {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-var b_1 *Constructor_Data_List_Types_Cons[gopurs_runtime.Value] = b_1_loop
+var b_1 *Constructor_Data_List_Types_Cons = b_1_loop
 _ = b_1
 var a_2 gopurs_runtime.Value = a_2_loop
 _ = a_2
-return gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](gopurs_runtime.Apply2(f_0, a_2, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(b_1)}))
+return gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](gopurs_runtime.Apply2(f_0, a_2, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(b_1)}))
 }
 
-func Call_Data_Function_flip__4284296032(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_Maybe_Just[gopurs_runtime.Value], a_2_loop gopurs_runtime.Value) *Constructor_Data_Maybe_Just[[]gopurs_runtime.Value] {
+func Call_Data_Function_flip__4284296032(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_Maybe_Just, a_2_loop gopurs_runtime.Value) *Constructor_Data_Maybe_Just {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-var b_1 *Constructor_Data_Maybe_Just[gopurs_runtime.Value] = b_1_loop
+var b_1 *Constructor_Data_Maybe_Just = b_1_loop
 _ = b_1
 var a_2 gopurs_runtime.Value = a_2_loop
 _ = a_2
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[[]gopurs_runtime.Value]](gopurs_runtime.Apply2(f_0, a_2, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(b_1)}))
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(f_0, a_2, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(b_1)}))
 }
 
-func Call_Data_Function_flip__1288774720(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_Maybe_Just[gopurs_runtime.Value], a_2_loop gopurs_runtime.Value) *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, *Constructor_Data_Maybe_Just[gopurs_runtime.Value]] {
+func Call_Data_Function_flip__1288774720(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_Maybe_Just, a_2_loop gopurs_runtime.Value) *Constructor_Data_Tuple_Tuple {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-var b_1 *Constructor_Data_Maybe_Just[gopurs_runtime.Value] = b_1_loop
+var b_1 *Constructor_Data_Maybe_Just = b_1_loop
 _ = b_1
 var a_2 gopurs_runtime.Value = a_2_loop
 _ = a_2
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, *Constructor_Data_Maybe_Just[gopurs_runtime.Value]]](gopurs_runtime.Apply2(f_0, a_2, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(b_1)}))
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply2(f_0, a_2, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(b_1)}))
 }
 
-func Call_Data_Function_flip__1833071808(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_NonEmpty_NonEmpty[*Constructor_Data_List_Types_Cons[gopurs_runtime.Value], gopurs_runtime.Value], a_2_loop gopurs_runtime.Value) *Constructor_Data_NonEmpty_NonEmpty[*Constructor_Data_List_Types_Cons[gopurs_runtime.Value], gopurs_runtime.Value] {
+func Call_Data_Function_flip__1833071808(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_NonEmpty_NonEmpty, a_2_loop gopurs_runtime.Value) *Constructor_Data_NonEmpty_NonEmpty {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-var b_1 *Constructor_Data_NonEmpty_NonEmpty[*Constructor_Data_List_Types_Cons[gopurs_runtime.Value], gopurs_runtime.Value] = b_1_loop
+var b_1 *Constructor_Data_NonEmpty_NonEmpty = b_1_loop
 _ = b_1
 var a_2 gopurs_runtime.Value = a_2_loop
 _ = a_2
-return gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty[*Constructor_Data_List_Types_Cons[gopurs_runtime.Value], gopurs_runtime.Value]](gopurs_runtime.Apply2(f_0, a_2, gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(b_1)}))
+return gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty](gopurs_runtime.Apply2(f_0, a_2, gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(b_1)}))
 }
 
 func Call_Data_Function_flip__1350495552(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -2463,14 +2463,14 @@ _ = a_2
 return gopurs_runtime.Apply2(f_0, a_2, b_1)
 }
 
-func Call_Data_Function_flip__1295484160(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) *Constructor_Data_List_Types_Cons[gopurs_runtime.Value] {
+func Call_Data_Function_flip__1295484160(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) *Constructor_Data_List_Types_Cons {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var b_1 gopurs_runtime.Value = b_1_loop
 _ = b_1
 var a_2 gopurs_runtime.Value = a_2_loop
 _ = a_2
-return gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](gopurs_runtime.Apply2(f_0, a_2, b_1))
+return gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](gopurs_runtime.Apply2(f_0, a_2, b_1))
 }
 
 func Call_Data_Function_flip__1673583840(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -2573,14 +2573,14 @@ _ = a_2
 return gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(a_2)}, gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(b_1)})
 }
 
-func Call_Data_Function_flip__4154956096(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_Date_Date, a_2_loop *Constructor_Data_Date_Date) *Constructor_Data_Maybe_Just[*Constructor_Data_Date_Date] {
+func Call_Data_Function_flip__4154956096(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_Date_Date, a_2_loop *Constructor_Data_Date_Date) *Constructor_Data_Maybe_Just {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var b_1 *Constructor_Data_Date_Date = b_1_loop
 _ = b_1
 var a_2 *Constructor_Data_Date_Date = a_2_loop
 _ = a_2
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[*Constructor_Data_Date_Date]](gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(a_2)}, gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(b_1)}))
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(a_2)}, gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(b_1)}))
 }
 
 func Call_Data_Function_flip__682087456(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_Time_Time, a_2_loop *Constructor_Data_Date_Date) *Constructor_Data_DateTime_DateTime {
@@ -2633,232 +2633,232 @@ _ = a_2
 return gopurs_runtime.Apply2(f_0, a_2, b_1)
 }
 
-func Call_Data_Function_flip__816740064(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]) gopurs_runtime.Value {
+func Call_Data_Function_flip__816740064(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_List_Lazy_Types_Cons) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var b_1 gopurs_runtime.Value = b_1_loop
 _ = b_1
-var a_2 *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value] = a_2_loop
+var a_2 *Constructor_Data_List_Lazy_Types_Cons = a_2_loop
 _ = a_2
 return gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(a_2)}, b_1)
 }
 
-func Call_Data_Function_flip__1026675680(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]) gopurs_runtime.Value {
+func Call_Data_Function_flip__1026675680(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_List_Lazy_Types_Cons) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var b_1 gopurs_runtime.Value = b_1_loop
 _ = b_1
-var a_2 *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value] = a_2_loop
+var a_2 *Constructor_Data_List_Lazy_Types_Cons = a_2_loop
 _ = a_2
 return gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(a_2)}, b_1)
 }
 
-func Call_Data_Function_flip__141921312(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]) gopurs_runtime.Value {
+func Call_Data_Function_flip__141921312(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_List_Lazy_Types_Cons) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var b_1 gopurs_runtime.Value = b_1_loop
 _ = b_1
-var a_2 *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value] = a_2_loop
+var a_2 *Constructor_Data_List_Lazy_Types_Cons = a_2_loop
 _ = a_2
 return gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(a_2)}, b_1)
 }
 
-func Call_Data_Function_flip__2175652032(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]) gopurs_runtime.Value {
+func Call_Data_Function_flip__2175652032(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_List_Lazy_Types_Cons) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var b_1 gopurs_runtime.Value = b_1_loop
 _ = b_1
-var a_2 *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value] = a_2_loop
+var a_2 *Constructor_Data_List_Lazy_Types_Cons = a_2_loop
 _ = a_2
 return gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(a_2)}, b_1)
 }
 
-func Call_Data_Function_flip__848188896(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]) gopurs_runtime.Value {
+func Call_Data_Function_flip__848188896(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_List_Lazy_Types_Cons) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var b_1 gopurs_runtime.Value = b_1_loop
 _ = b_1
-var a_2 *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value] = a_2_loop
+var a_2 *Constructor_Data_List_Lazy_Types_Cons = a_2_loop
 _ = a_2
 return gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(a_2)}, b_1)
 }
 
-func Call_Data_Function_flip__913470112(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]) gopurs_runtime.Value {
+func Call_Data_Function_flip__913470112(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_List_Lazy_Types_Cons) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var b_1 gopurs_runtime.Value = b_1_loop
 _ = b_1
-var a_2 *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value] = a_2_loop
+var a_2 *Constructor_Data_List_Lazy_Types_Cons = a_2_loop
 _ = a_2
 return gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(a_2)}, b_1)
 }
 
-func Call_Data_Function_flip__4017289888(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]) gopurs_runtime.Value {
+func Call_Data_Function_flip__4017289888(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_List_Lazy_Types_Cons) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var b_1 gopurs_runtime.Value = b_1_loop
 _ = b_1
-var a_2 *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value] = a_2_loop
+var a_2 *Constructor_Data_List_Lazy_Types_Cons = a_2_loop
 _ = a_2
 return gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(a_2)}, b_1)
 }
 
-func Call_Data_Function_flip__3036739744(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]) gopurs_runtime.Value {
+func Call_Data_Function_flip__3036739744(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_List_Lazy_Types_Cons) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var b_1 gopurs_runtime.Value = b_1_loop
 _ = b_1
-var a_2 *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value] = a_2_loop
+var a_2 *Constructor_Data_List_Lazy_Types_Cons = a_2_loop
 _ = a_2
 return gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(a_2)}, b_1)
 }
 
-func Call_Data_Function_flip__3539834656(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]) gopurs_runtime.Value {
+func Call_Data_Function_flip__3539834656(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_List_Lazy_Types_Cons) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var b_1 gopurs_runtime.Value = b_1_loop
 _ = b_1
-var a_2 *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value] = a_2_loop
+var a_2 *Constructor_Data_List_Lazy_Types_Cons = a_2_loop
 _ = a_2
 return gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(a_2)}, b_1)
 }
 
-func Call_Data_Function_flip__2097869248(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]) gopurs_runtime.Value {
+func Call_Data_Function_flip__2097869248(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_List_Lazy_Types_Cons) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var b_1 gopurs_runtime.Value = b_1_loop
 _ = b_1
-var a_2 *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value] = a_2_loop
+var a_2 *Constructor_Data_List_Lazy_Types_Cons = a_2_loop
 _ = a_2
 return gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(a_2)}, b_1)
 }
 
-func Call_Data_Function_flip__3152946016(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]) gopurs_runtime.Value {
+func Call_Data_Function_flip__3152946016(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_List_Lazy_Types_Cons) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var b_1 gopurs_runtime.Value = b_1_loop
 _ = b_1
-var a_2 *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value] = a_2_loop
+var a_2 *Constructor_Data_List_Lazy_Types_Cons = a_2_loop
 _ = a_2
 return gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(a_2)}, b_1)
 }
 
-func Call_Data_Function_flip__1036339264(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]) gopurs_runtime.Value {
+func Call_Data_Function_flip__1036339264(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_List_Lazy_Types_Cons) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var b_1 gopurs_runtime.Value = b_1_loop
 _ = b_1
-var a_2 *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value] = a_2_loop
+var a_2 *Constructor_Data_List_Lazy_Types_Cons = a_2_loop
 _ = a_2
 return gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(a_2)}, b_1)
 }
 
-func Call_Data_Function_flip__754346432(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value], a_2_loop *Constructor_Data_List_Lazy_Types_Cons[*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]]) gopurs_runtime.Value {
+func Call_Data_Function_flip__754346432(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_Tuple_Tuple, a_2_loop *Constructor_Data_List_Lazy_Types_Cons) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-var b_1 *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] = b_1_loop
+var b_1 *Constructor_Data_Tuple_Tuple = b_1_loop
 _ = b_1
-var a_2 *Constructor_Data_List_Lazy_Types_Cons[*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]] = a_2_loop
+var a_2 *Constructor_Data_List_Lazy_Types_Cons = a_2_loop
 _ = a_2
 return gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(a_2)}, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(b_1)})
 }
 
-func Call_Data_Function_flip__3959849920(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value], a_2_loop *Constructor_Data_List_Lazy_Types_Cons[*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]]) gopurs_runtime.Value {
+func Call_Data_Function_flip__3959849920(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_Tuple_Tuple, a_2_loop *Constructor_Data_List_Lazy_Types_Cons) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-var b_1 *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] = b_1_loop
+var b_1 *Constructor_Data_Tuple_Tuple = b_1_loop
 _ = b_1
-var a_2 *Constructor_Data_List_Lazy_Types_Cons[*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]] = a_2_loop
+var a_2 *Constructor_Data_List_Lazy_Types_Cons = a_2_loop
 _ = a_2
 return gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(a_2)}, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(b_1)})
 }
 
-func Call_Data_Function_flip__4236888928(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value], a_2_loop *Constructor_Data_List_Lazy_Types_Cons[*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]]) *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] {
+func Call_Data_Function_flip__4236888928(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_Tuple_Tuple, a_2_loop *Constructor_Data_List_Lazy_Types_Cons) *Constructor_Data_Tuple_Tuple {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-var b_1 *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] = b_1_loop
+var b_1 *Constructor_Data_Tuple_Tuple = b_1_loop
 _ = b_1
-var a_2 *Constructor_Data_List_Lazy_Types_Cons[*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]] = a_2_loop
+var a_2 *Constructor_Data_List_Lazy_Types_Cons = a_2_loop
 _ = a_2
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(a_2)}, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(b_1)}))
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(a_2)}, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(b_1)}))
 }
 
-func Call_Data_Function_flip__1744188480(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_List_Types_Cons[gopurs_runtime.Value], a_2_loop *Constructor_Data_List_Types_Cons[gopurs_runtime.Value]) gopurs_runtime.Value {
+func Call_Data_Function_flip__1744188480(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_List_Types_Cons, a_2_loop *Constructor_Data_List_Types_Cons) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-var b_1 *Constructor_Data_List_Types_Cons[gopurs_runtime.Value] = b_1_loop
+var b_1 *Constructor_Data_List_Types_Cons = b_1_loop
 _ = b_1
-var a_2 *Constructor_Data_List_Types_Cons[gopurs_runtime.Value] = a_2_loop
+var a_2 *Constructor_Data_List_Types_Cons = a_2_loop
 _ = a_2
 return gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(a_2)}, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(b_1)})
 }
 
-func Call_Data_Function_flip__3468792800(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_List_Types_Cons[gopurs_runtime.Value], a_2_loop *Constructor_Data_List_Types_Cons[gopurs_runtime.Value]) *Constructor_Data_NonEmpty_NonEmpty[*Constructor_Data_List_Types_Cons[gopurs_runtime.Value], *Constructor_Data_List_Types_Cons[gopurs_runtime.Value]] {
+func Call_Data_Function_flip__3468792800(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_List_Types_Cons, a_2_loop *Constructor_Data_List_Types_Cons) *Constructor_Data_NonEmpty_NonEmpty {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-var b_1 *Constructor_Data_List_Types_Cons[gopurs_runtime.Value] = b_1_loop
+var b_1 *Constructor_Data_List_Types_Cons = b_1_loop
 _ = b_1
-var a_2 *Constructor_Data_List_Types_Cons[gopurs_runtime.Value] = a_2_loop
+var a_2 *Constructor_Data_List_Types_Cons = a_2_loop
 _ = a_2
-return gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty[*Constructor_Data_List_Types_Cons[gopurs_runtime.Value], *Constructor_Data_List_Types_Cons[gopurs_runtime.Value]]](gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(a_2)}, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(b_1)}))
+return gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty](gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(a_2)}, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(b_1)}))
 }
 
-func Call_Data_Function_flip__2373571712(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_List_Types_Cons[gopurs_runtime.Value]) *Constructor_Data_List_Types_Cons[gopurs_runtime.Value] {
+func Call_Data_Function_flip__2373571712(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_List_Types_Cons) *Constructor_Data_List_Types_Cons {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var b_1 gopurs_runtime.Value = b_1_loop
 _ = b_1
-var a_2 *Constructor_Data_List_Types_Cons[gopurs_runtime.Value] = a_2_loop
+var a_2 *Constructor_Data_List_Types_Cons = a_2_loop
 _ = a_2
-return gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(a_2)}, b_1))
+return gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(a_2)}, b_1))
 }
 
-func Call_Data_Function_flip__437353440(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_Map_Internal_Node[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+func Call_Data_Function_flip__437353440(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_Map_Internal_Node) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var b_1 gopurs_runtime.Value = b_1_loop
 _ = b_1
-var a_2 *Constructor_Data_Map_Internal_Node[gopurs_runtime.Value, gopurs_runtime.Value] = a_2_loop
-_ = a_2
-return gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(a_2)}, b_1)
-}
-
-func Call_Data_Function_flip__1172723328(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_Map_Internal_Node[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var f_0 gopurs_runtime.Value = f_0_loop
-_ = f_0
-var b_1 gopurs_runtime.Value = b_1_loop
-_ = b_1
-var a_2 *Constructor_Data_Map_Internal_Node[gopurs_runtime.Value, gopurs_runtime.Value] = a_2_loop
+var a_2 *Constructor_Data_Map_Internal_Node = a_2_loop
 _ = a_2
 return gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(a_2)}, b_1)
 }
 
-func Call_Data_Function_flip__4067779648(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_Map_Internal_Node[uint32, float64]) gopurs_runtime.Value {
+func Call_Data_Function_flip__1172723328(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_Map_Internal_Node) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var b_1 gopurs_runtime.Value = b_1_loop
 _ = b_1
-var a_2 *Constructor_Data_Map_Internal_Node[uint32, float64] = a_2_loop
+var a_2 *Constructor_Data_Map_Internal_Node = a_2_loop
 _ = a_2
 return gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(a_2)}, b_1)
 }
 
-func Call_Data_Function_flip__1273449376(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_Maybe_Just[gopurs_runtime.Value]) gopurs_runtime.Value {
+func Call_Data_Function_flip__4067779648(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_Map_Internal_Node) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var b_1 gopurs_runtime.Value = b_1_loop
 _ = b_1
-var a_2 *Constructor_Data_Maybe_Just[gopurs_runtime.Value] = a_2_loop
+var a_2 *Constructor_Data_Map_Internal_Node = a_2_loop
+_ = a_2
+return gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(a_2)}, b_1)
+}
+
+func Call_Data_Function_flip__1273449376(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_Maybe_Just) gopurs_runtime.Value {
+var f_0 gopurs_runtime.Value = f_0_loop
+_ = f_0
+var b_1 gopurs_runtime.Value = b_1_loop
+_ = b_1
+var a_2 *Constructor_Data_Maybe_Just = a_2_loop
 _ = a_2
 return gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(a_2)}, b_1)
 }
 
-func Call_Data_Function_flip__3468501600(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_Maybe_Just[gopurs_runtime.Value]) []gopurs_runtime.Value {
+func Call_Data_Function_flip__3468501600(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_Maybe_Just) []gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var b_1 gopurs_runtime.Value = b_1_loop
 _ = b_1
-var a_2 *Constructor_Data_Maybe_Just[gopurs_runtime.Value] = a_2_loop
+var a_2 *Constructor_Data_Maybe_Just = a_2_loop
 _ = a_2
 return func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(a_2)}, b_1).UnsafePtr)
@@ -2868,32 +2868,32 @@ return func() []gopurs_runtime.Value {
 				}()
 }
 
-func Call_Data_Function_flip__1570464832(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_NonEmpty_NonEmpty[*Constructor_Data_List_Types_Cons[gopurs_runtime.Value], gopurs_runtime.Value]) *Constructor_Data_NonEmpty_NonEmpty[*Constructor_Data_List_Types_Cons[gopurs_runtime.Value], gopurs_runtime.Value] {
+func Call_Data_Function_flip__1570464832(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_NonEmpty_NonEmpty) *Constructor_Data_NonEmpty_NonEmpty {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var b_1 gopurs_runtime.Value = b_1_loop
 _ = b_1
-var a_2 *Constructor_Data_NonEmpty_NonEmpty[*Constructor_Data_List_Types_Cons[gopurs_runtime.Value], gopurs_runtime.Value] = a_2_loop
+var a_2 *Constructor_Data_NonEmpty_NonEmpty = a_2_loop
 _ = a_2
-return gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty[*Constructor_Data_List_Types_Cons[gopurs_runtime.Value], gopurs_runtime.Value]](gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(a_2)}, b_1))
+return gopurs_runtime.CoerceToStruct[Constructor_Data_NonEmpty_NonEmpty](gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(a_2)}, b_1))
 }
 
-func Call_Data_Function_flip__1764632704(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, bool]) gopurs_runtime.Value {
+func Call_Data_Function_flip__1764632704(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_Tuple_Tuple) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var b_1 gopurs_runtime.Value = b_1_loop
 _ = b_1
-var a_2 *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, bool] = a_2_loop
+var a_2 *Constructor_Data_Tuple_Tuple = a_2_loop
 _ = a_2
 return gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(a_2)}, b_1)
 }
 
-func Call_Data_Function_flip__362459520(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, bool]) []gopurs_runtime.Value {
+func Call_Data_Function_flip__362459520(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop *Constructor_Data_Tuple_Tuple) []gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var b_1 gopurs_runtime.Value = b_1_loop
 _ = b_1
-var a_2 *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, bool] = a_2_loop
+var a_2 *Constructor_Data_Tuple_Tuple = a_2_loop
 _ = a_2
 return func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(a_2)}, b_1).UnsafePtr)
@@ -2903,24 +2903,24 @@ return func() []gopurs_runtime.Value {
 				}()
 }
 
-func Call_Data_Function_flip__3192966848(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_Tuple_Tuple[*Constructor_Data_List_Types_Cons[gopurs_runtime.Value], *Constructor_Data_List_Types_Cons[gopurs_runtime.Value]], a_2_loop *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
+func Call_Data_Function_flip__3192966848(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_Tuple_Tuple, a_2_loop *Constructor_Data_Tuple_Tuple) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-var b_1 *Constructor_Data_Tuple_Tuple[*Constructor_Data_List_Types_Cons[gopurs_runtime.Value], *Constructor_Data_List_Types_Cons[gopurs_runtime.Value]] = b_1_loop
+var b_1 *Constructor_Data_Tuple_Tuple = b_1_loop
 _ = b_1
-var a_2 *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] = a_2_loop
+var a_2 *Constructor_Data_Tuple_Tuple = a_2_loop
 _ = a_2
 return gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(a_2)}, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(b_1)})
 }
 
-func Call_Data_Function_flip__2681340064(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_Tuple_Tuple[*Constructor_Data_List_Types_Cons[gopurs_runtime.Value], *Constructor_Data_List_Types_Cons[gopurs_runtime.Value]], a_2_loop *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]) *Constructor_Data_Tuple_Tuple[*Constructor_Data_List_Types_Cons[gopurs_runtime.Value], *Constructor_Data_List_Types_Cons[gopurs_runtime.Value]] {
+func Call_Data_Function_flip__2681340064(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_Tuple_Tuple, a_2_loop *Constructor_Data_Tuple_Tuple) *Constructor_Data_Tuple_Tuple {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-var b_1 *Constructor_Data_Tuple_Tuple[*Constructor_Data_List_Types_Cons[gopurs_runtime.Value], *Constructor_Data_List_Types_Cons[gopurs_runtime.Value]] = b_1_loop
+var b_1 *Constructor_Data_Tuple_Tuple = b_1_loop
 _ = b_1
-var a_2 *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] = a_2_loop
+var a_2 *Constructor_Data_Tuple_Tuple = a_2_loop
 _ = a_2
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[*Constructor_Data_List_Types_Cons[gopurs_runtime.Value], *Constructor_Data_List_Types_Cons[gopurs_runtime.Value]]](gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(a_2)}, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(b_1)}))
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply2(f_0, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(a_2)}, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(b_1)}))
 }
 
 func Call_Data_Function_flip__3261866592(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -2943,14 +2943,14 @@ _ = a_2
 return gopurs_runtime.Apply2(f_0, a_2, b_1)
 }
 
-func Call_Data_Function_flip__4091748192(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) *Constructor_Data_List_Types_Cons[gopurs_runtime.Value] {
+func Call_Data_Function_flip__4091748192(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) *Constructor_Data_List_Types_Cons {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var b_1 gopurs_runtime.Value = b_1_loop
 _ = b_1
 var a_2 gopurs_runtime.Value = a_2_loop
 _ = a_2
-return gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons[gopurs_runtime.Value]](gopurs_runtime.Apply2(f_0, a_2, b_1))
+return gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](gopurs_runtime.Apply2(f_0, a_2, b_1))
 }
 
 func Call_Data_Function_flip__535340480(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -3023,14 +3023,14 @@ _ = a_2
 return gopurs_runtime.Apply2(f_0, a_2, b_1)
 }
 
-func Call_Data_Function_flip__2033550272(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_Maybe_Just[gopurs_runtime.Value], a_2_loop gopurs_runtime.Value) *Constructor_Data_Maybe_Just[[]gopurs_runtime.Value] {
+func Call_Data_Function_flip__2033550272(f_0_loop gopurs_runtime.Value, b_1_loop *Constructor_Data_Maybe_Just, a_2_loop gopurs_runtime.Value) *Constructor_Data_Maybe_Just {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-var b_1 *Constructor_Data_Maybe_Just[gopurs_runtime.Value] = b_1_loop
+var b_1 *Constructor_Data_Maybe_Just = b_1_loop
 _ = b_1
 var a_2 gopurs_runtime.Value = a_2_loop
 _ = a_2
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[[]gopurs_runtime.Value]](gopurs_runtime.Apply2(f_0, a_2, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(b_1)}))
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(f_0, a_2, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(b_1)}))
 }
 
 func Call_Data_Function_flip__3047022592(f_0_loop gopurs_runtime.Value, b_1_loop gopurs_runtime.Value, a_2_loop gopurs_runtime.Value) gopurs_runtime.Value {

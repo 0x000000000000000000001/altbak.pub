@@ -269,7 +269,7 @@ var once_Data_Ord_compareRecord sync.Once
 func Get_Data_Ord_compareRecord() gopurs_runtime.Value {
 	once_Data_Ord_compareRecord.Do(func() {
 		cache_Data_Ord_compareRecord = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_compareRecord(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_OrdRecord[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Ord_compareRecord(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_OrdRecord](dict_0_box))
 })
 	})
 	return cache_Data_Ord_compareRecord
@@ -291,7 +291,7 @@ var once_Data_Ord_compare1 sync.Once
 func Get_Data_Ord_compare1() gopurs_runtime.Value {
 	once_Data_Ord_compare1.Do(func() {
 		cache_Data_Ord_compare1 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_compare1(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord1[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Ord_compare1(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord1](dict_0_box))
 })
 	})
 	return cache_Data_Ord_compare1
@@ -302,7 +302,7 @@ var once_Data_Ord_compare sync.Once
 func Get_Data_Ord_compare() gopurs_runtime.Value {
 	once_Data_Ord_compare.Do(func() {
 		cache_Data_Ord_compare = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_compare(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Ord_compare(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dict_0_box))
 })
 	})
 	return cache_Data_Ord_compare
@@ -313,7 +313,7 @@ var once_Data_Ord_comparing sync.Once
 func Get_Data_Ord_comparing() gopurs_runtime.Value {
 	once_Data_Ord_comparing.Do(func() {
 		cache_Data_Ord_comparing = gopurs_runtime.Func4(func(dictOrd_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value, y_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: int64(Call_Data_Ord_comparing(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dictOrd_0_box), f_1_box, x_2_box, y_3_box)), UnsafePtr: nil}
+return gopurs_runtime.Value{Type: 9, IntVal: int64(Call_Data_Ord_comparing(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), f_1_box, x_2_box, y_3_box)), UnsafePtr: nil}
 })
 	})
 	return cache_Data_Ord_comparing
@@ -324,7 +324,7 @@ var once_Data_Ord_greaterThan sync.Once
 func Get_Data_Ord_greaterThan() gopurs_runtime.Value {
 	once_Data_Ord_greaterThan.Do(func() {
 		cache_Data_Ord_greaterThan = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_Data_Ord_greaterThan(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dictOrd_0_box), a1_1_box, a2_2_box))
+return gopurs_runtime.Bool(Call_Data_Ord_greaterThan(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), a1_1_box, a2_2_box))
 })
 	})
 	return cache_Data_Ord_greaterThan
@@ -335,7 +335,7 @@ var once_Data_Ord_greaterThanOrEq sync.Once
 func Get_Data_Ord_greaterThanOrEq() gopurs_runtime.Value {
 	once_Data_Ord_greaterThanOrEq.Do(func() {
 		cache_Data_Ord_greaterThanOrEq = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_Data_Ord_greaterThanOrEq(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dictOrd_0_box), a1_1_box, a2_2_box))
+return gopurs_runtime.Bool(Call_Data_Ord_greaterThanOrEq(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), a1_1_box, a2_2_box))
 })
 	})
 	return cache_Data_Ord_greaterThanOrEq
@@ -346,7 +346,7 @@ var once_Data_Ord_lessThan sync.Once
 func Get_Data_Ord_lessThan() gopurs_runtime.Value {
 	once_Data_Ord_lessThan.Do(func() {
 		cache_Data_Ord_lessThan = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_Data_Ord_lessThan(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dictOrd_0_box), a1_1_box, a2_2_box))
+return gopurs_runtime.Bool(Call_Data_Ord_lessThan(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), a1_1_box, a2_2_box))
 })
 	})
 	return cache_Data_Ord_lessThan
@@ -357,7 +357,7 @@ var once_Data_Ord_signum sync.Once
 func Get_Data_Ord_signum() gopurs_runtime.Value {
 	once_Data_Ord_signum.Do(func() {
 		cache_Data_Ord_signum = gopurs_runtime.Func2(func(dictOrd_0_box gopurs_runtime.Value, dictRing_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_signum(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dictOrd_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring[gopurs_runtime.Value]](dictRing_1_box))
+return Call_Data_Ord_signum(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring](dictRing_1_box))
 })
 	})
 	return cache_Data_Ord_signum
@@ -368,7 +368,7 @@ var once_Data_Ord_lessThanOrEq sync.Once
 func Get_Data_Ord_lessThanOrEq() gopurs_runtime.Value {
 	once_Data_Ord_lessThanOrEq.Do(func() {
 		cache_Data_Ord_lessThanOrEq = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_Data_Ord_lessThanOrEq(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dictOrd_0_box), a1_1_box, a2_2_box))
+return gopurs_runtime.Bool(Call_Data_Ord_lessThanOrEq(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), a1_1_box, a2_2_box))
 })
 	})
 	return cache_Data_Ord_lessThanOrEq
@@ -379,7 +379,7 @@ var once_Data_Ord_max sync.Once
 func Get_Data_Ord_max() gopurs_runtime.Value {
 	once_Data_Ord_max.Do(func() {
 		cache_Data_Ord_max = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value, y_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_max(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dictOrd_0_box), x_1_box, y_2_box)
+return Call_Data_Ord_max(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), x_1_box, y_2_box)
 })
 	})
 	return cache_Data_Ord_max
@@ -390,7 +390,7 @@ var once_Data_Ord_min sync.Once
 func Get_Data_Ord_min() gopurs_runtime.Value {
 	once_Data_Ord_min.Do(func() {
 		cache_Data_Ord_min = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value, y_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_min(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dictOrd_0_box), x_1_box, y_2_box)
+return Call_Data_Ord_min(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), x_1_box, y_2_box)
 })
 	})
 	return cache_Data_Ord_min
@@ -436,7 +436,7 @@ var once_Data_Ord_clamp sync.Once
 func Get_Data_Ord_clamp() gopurs_runtime.Value {
 	once_Data_Ord_clamp.Do(func() {
 		cache_Data_Ord_clamp = gopurs_runtime.Func4(func(dictOrd_0_box gopurs_runtime.Value, low_1_box gopurs_runtime.Value, hi_2_box gopurs_runtime.Value, x_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_clamp(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dictOrd_0_box), low_1_box, hi_2_box, x_3_box)
+return Call_Data_Ord_clamp(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), low_1_box, hi_2_box, x_3_box)
 })
 	})
 	return cache_Data_Ord_clamp
@@ -447,7 +447,7 @@ var once_Data_Ord_between sync.Once
 func Get_Data_Ord_between() gopurs_runtime.Value {
 	once_Data_Ord_between.Do(func() {
 		cache_Data_Ord_between = gopurs_runtime.Func4(func(dictOrd_0_box gopurs_runtime.Value, low_1_box gopurs_runtime.Value, hi_2_box gopurs_runtime.Value, x_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_Data_Ord_between(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dictOrd_0_box), low_1_box, hi_2_box, x_3_box))
+return gopurs_runtime.Bool(Call_Data_Ord_between(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), low_1_box, hi_2_box, x_3_box))
 })
 	})
 	return cache_Data_Ord_between
@@ -458,7 +458,7 @@ var once_Data_Ord_abs sync.Once
 func Get_Data_Ord_abs() gopurs_runtime.Value {
 	once_Data_Ord_abs.Do(func() {
 		cache_Data_Ord_abs = gopurs_runtime.Func2(func(dictOrd_0_box gopurs_runtime.Value, dictRing_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_abs(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dictOrd_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring[gopurs_runtime.Value]](dictRing_1_box))
+return Call_Data_Ord_abs(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring](dictRing_1_box))
 })
 	})
 	return cache_Data_Ord_abs
@@ -480,7 +480,7 @@ var once_Data_Ord_abs__2515802711 sync.Once
 func Get_Data_Ord_abs__2515802711() gopurs_runtime.Value {
 	once_Data_Ord_abs__2515802711.Do(func() {
 		cache_Data_Ord_abs__2515802711 = gopurs_runtime.Func2(func(dictOrd_0_box gopurs_runtime.Value, dictRing_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_abs__2515802711(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dictOrd_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring[gopurs_runtime.Value]](dictRing_1_box))
+return Call_Data_Ord_abs__2515802711(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Ring](dictRing_1_box))
 })
 	})
 	return cache_Data_Ord_abs__2515802711
@@ -502,7 +502,7 @@ var once_Data_Ord_clamp__709576177 sync.Once
 func Get_Data_Ord_clamp__709576177() gopurs_runtime.Value {
 	once_Data_Ord_clamp__709576177.Do(func() {
 		cache_Data_Ord_clamp__709576177 = gopurs_runtime.Func4(func(dictOrd_0_box gopurs_runtime.Value, low_1_box gopurs_runtime.Value, hi_2_box gopurs_runtime.Value, x_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_clamp__709576177(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dictOrd_0_box), low_1_box, hi_2_box, x_3_box)
+return Call_Data_Ord_clamp__709576177(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), low_1_box, hi_2_box, x_3_box)
 })
 	})
 	return cache_Data_Ord_clamp__709576177
@@ -513,7 +513,7 @@ var once_Data_Ord_compare__1787266401 sync.Once
 func Get_Data_Ord_compare__1787266401() gopurs_runtime.Value {
 	once_Data_Ord_compare__1787266401.Do(func() {
 		cache_Data_Ord_compare__1787266401 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_compare__1787266401(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[int64]](dict_0_box))
+return Call_Data_Ord_compare__1787266401(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dict_0_box))
 })
 	})
 	return cache_Data_Ord_compare__1787266401
@@ -524,7 +524,7 @@ var once_Data_Ord_compare__2286295841 sync.Once
 func Get_Data_Ord_compare__2286295841() gopurs_runtime.Value {
 	once_Data_Ord_compare__2286295841.Do(func() {
 		cache_Data_Ord_compare__2286295841 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_compare__2286295841(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[float64]](dict_0_box))
+return Call_Data_Ord_compare__2286295841(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dict_0_box))
 })
 	})
 	return cache_Data_Ord_compare__2286295841
@@ -535,7 +535,7 @@ var once_Data_Ord_compare__669572705 sync.Once
 func Get_Data_Ord_compare__669572705() gopurs_runtime.Value {
 	once_Data_Ord_compare__669572705.Do(func() {
 		cache_Data_Ord_compare__669572705 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_compare__669572705(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Ord_compare__669572705(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dict_0_box))
 })
 	})
 	return cache_Data_Ord_compare__669572705
@@ -546,7 +546,7 @@ var once_Data_Ord_compare__1110679617 sync.Once
 func Get_Data_Ord_compare__1110679617() gopurs_runtime.Value {
 	once_Data_Ord_compare__1110679617.Do(func() {
 		cache_Data_Ord_compare__1110679617 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_compare__1110679617(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[*Constructor_Data_Date_Date]](dict_0_box))
+return Call_Data_Ord_compare__1110679617(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dict_0_box))
 })
 	})
 	return cache_Data_Ord_compare__1110679617
@@ -557,7 +557,7 @@ var once_Data_Ord_compare__45059489 sync.Once
 func Get_Data_Ord_compare__45059489() gopurs_runtime.Value {
 	once_Data_Ord_compare__45059489.Do(func() {
 		cache_Data_Ord_compare__45059489 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_compare__45059489(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[uint32]](dict_0_box))
+return Call_Data_Ord_compare__45059489(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dict_0_box))
 })
 	})
 	return cache_Data_Ord_compare__45059489
@@ -568,7 +568,7 @@ var once_Data_Ord_compare__2790853377 sync.Once
 func Get_Data_Ord_compare__2790853377() gopurs_runtime.Value {
 	once_Data_Ord_compare__2790853377.Do(func() {
 		cache_Data_Ord_compare__2790853377 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_compare__2790853377(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[*Constructor_Data_Maybe_Just[int64]]](dict_0_box))
+return Call_Data_Ord_compare__2790853377(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dict_0_box))
 })
 	})
 	return cache_Data_Ord_compare__2790853377
@@ -579,7 +579,7 @@ var once_Data_Ord_compare__3635905793 sync.Once
 func Get_Data_Ord_compare__3635905793() gopurs_runtime.Value {
 	once_Data_Ord_compare__3635905793.Do(func() {
 		cache_Data_Ord_compare__3635905793 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_compare__3635905793(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[*Constructor_Data_Time_Time]](dict_0_box))
+return Call_Data_Ord_compare__3635905793(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dict_0_box))
 })
 	})
 	return cache_Data_Ord_compare__3635905793
@@ -612,7 +612,7 @@ var once_Data_Ord_compare__472859678 sync.Once
 func Get_Data_Ord_compare__472859678() gopurs_runtime.Value {
 	once_Data_Ord_compare__472859678.Do(func() {
 		cache_Data_Ord_compare__472859678 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_compare__472859678(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[string]](dict_0_box))
+return Call_Data_Ord_compare__472859678(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dict_0_box))
 })
 	})
 	return cache_Data_Ord_compare__472859678
@@ -623,7 +623,7 @@ var once_Data_Ord_compare__821463600 sync.Once
 func Get_Data_Ord_compare__821463600() gopurs_runtime.Value {
 	once_Data_Ord_compare__821463600.Do(func() {
 		cache_Data_Ord_compare__821463600 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_compare__821463600(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Ord_compare__821463600(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dict_0_box))
 })
 	})
 	return cache_Data_Ord_compare__821463600
@@ -634,7 +634,7 @@ var once_Data_Ord_compare__4035831926 sync.Once
 func Get_Data_Ord_compare__4035831926() gopurs_runtime.Value {
 	once_Data_Ord_compare__4035831926.Do(func() {
 		cache_Data_Ord_compare__4035831926 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_compare__4035831926(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[[]gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Ord_compare__4035831926(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dict_0_box))
 })
 	})
 	return cache_Data_Ord_compare__4035831926
@@ -678,7 +678,7 @@ var once_Data_Ord_compare__738396984 sync.Once
 func Get_Data_Ord_compare__738396984() gopurs_runtime.Value {
 	once_Data_Ord_compare__738396984.Do(func() {
 		cache_Data_Ord_compare__738396984 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_compare__738396984(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Ord_compare__738396984(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dict_0_box))
 })
 	})
 	return cache_Data_Ord_compare__738396984
@@ -689,7 +689,7 @@ var once_Data_Ord_compare__2349537221 sync.Once
 func Get_Data_Ord_compare__2349537221() gopurs_runtime.Value {
 	once_Data_Ord_compare__2349537221.Do(func() {
 		cache_Data_Ord_compare__2349537221 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_compare__2349537221(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Ord_compare__2349537221(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dict_0_box))
 })
 	})
 	return cache_Data_Ord_compare__2349537221
@@ -700,7 +700,7 @@ var once_Data_Ord_compare__3029065925 sync.Once
 func Get_Data_Ord_compare__3029065925() gopurs_runtime.Value {
 	once_Data_Ord_compare__3029065925.Do(func() {
 		cache_Data_Ord_compare__3029065925 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_compare__3029065925(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[*Constructor_Data_List_Types_Cons[gopurs_runtime.Value]]](dict_0_box))
+return Call_Data_Ord_compare__3029065925(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dict_0_box))
 })
 	})
 	return cache_Data_Ord_compare__3029065925
@@ -722,7 +722,7 @@ var once_Data_Ord_compare__2802126154 sync.Once
 func Get_Data_Ord_compare__2802126154() gopurs_runtime.Value {
 	once_Data_Ord_compare__2802126154.Do(func() {
 		cache_Data_Ord_compare__2802126154 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_compare__2802126154(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Ord_compare__2802126154(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dict_0_box))
 })
 	})
 	return cache_Data_Ord_compare__2802126154
@@ -744,7 +744,7 @@ var once_Data_Ord_compare__1746579729 sync.Once
 func Get_Data_Ord_compare__1746579729() gopurs_runtime.Value {
 	once_Data_Ord_compare__1746579729.Do(func() {
 		cache_Data_Ord_compare__1746579729 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_compare__1746579729(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[*Constructor_Data_Maybe_Just[gopurs_runtime.Value]]](dict_0_box))
+return Call_Data_Ord_compare__1746579729(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dict_0_box))
 })
 	})
 	return cache_Data_Ord_compare__1746579729
@@ -766,7 +766,7 @@ var once_Data_Ord_compare__1965400253 sync.Once
 func Get_Data_Ord_compare__1965400253() gopurs_runtime.Value {
 	once_Data_Ord_compare__1965400253.Do(func() {
 		cache_Data_Ord_compare__1965400253 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_compare__1965400253(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[*Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value]]](dict_0_box))
+return Call_Data_Ord_compare__1965400253(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dict_0_box))
 })
 	})
 	return cache_Data_Ord_compare__1965400253
@@ -777,7 +777,7 @@ var once_Data_Ord_compare__2107160184 sync.Once
 func Get_Data_Ord_compare__2107160184() gopurs_runtime.Value {
 	once_Data_Ord_compare__2107160184.Do(func() {
 		cache_Data_Ord_compare__2107160184 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_compare__2107160184(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]]](dict_0_box))
+return Call_Data_Ord_compare__2107160184(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dict_0_box))
 })
 	})
 	return cache_Data_Ord_compare__2107160184
@@ -788,7 +788,7 @@ var once_Data_Ord_compare__3175661023 sync.Once
 func Get_Data_Ord_compare__3175661023() gopurs_runtime.Value {
 	once_Data_Ord_compare__3175661023.Do(func() {
 		cache_Data_Ord_compare__3175661023 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_compare__3175661023(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Ord_compare__3175661023(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dict_0_box))
 })
 	})
 	return cache_Data_Ord_compare__3175661023
@@ -799,7 +799,7 @@ var once_Data_Ord_compare__3215000822 sync.Once
 func Get_Data_Ord_compare__3215000822() gopurs_runtime.Value {
 	once_Data_Ord_compare__3215000822.Do(func() {
 		cache_Data_Ord_compare__3215000822 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_compare__3215000822(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Ord_compare__3215000822(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dict_0_box))
 })
 	})
 	return cache_Data_Ord_compare__3215000822
@@ -810,7 +810,7 @@ var once_Data_Ord_compare1__650153534 sync.Once
 func Get_Data_Ord_compare1__650153534() gopurs_runtime.Value {
 	once_Data_Ord_compare1__650153534.Do(func() {
 		cache_Data_Ord_compare1__650153534 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_compare1__650153534(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord1[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Ord_compare1__650153534(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord1](dict_0_box))
 })
 	})
 	return cache_Data_Ord_compare1__650153534
@@ -821,7 +821,7 @@ var once_Data_Ord_compare1__3498430039 sync.Once
 func Get_Data_Ord_compare1__3498430039() gopurs_runtime.Value {
 	once_Data_Ord_compare1__3498430039.Do(func() {
 		cache_Data_Ord_compare1__3498430039 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_compare1__3498430039(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord1[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Ord_compare1__3498430039(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord1](dict_0_box))
 })
 	})
 	return cache_Data_Ord_compare1__3498430039
@@ -843,7 +843,7 @@ var once_Data_Ord_compareRecord__1222555784 sync.Once
 func Get_Data_Ord_compareRecord__1222555784() gopurs_runtime.Value {
 	once_Data_Ord_compareRecord__1222555784.Do(func() {
 		cache_Data_Ord_compareRecord__1222555784 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_compareRecord__1222555784(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_OrdRecord[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Ord_compareRecord__1222555784(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_OrdRecord](dict_0_box))
 })
 	})
 	return cache_Data_Ord_compareRecord__1222555784
@@ -854,7 +854,7 @@ var once_Data_Ord_compareRecord__2984072590 sync.Once
 func Get_Data_Ord_compareRecord__2984072590() gopurs_runtime.Value {
 	once_Data_Ord_compareRecord__2984072590.Do(func() {
 		cache_Data_Ord_compareRecord__2984072590 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_compareRecord__2984072590(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_OrdRecord[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Ord_compareRecord__2984072590(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_OrdRecord](dict_0_box))
 })
 	})
 	return cache_Data_Ord_compareRecord__2984072590
@@ -865,7 +865,7 @@ var once_Data_Ord_comparing__3783120632 sync.Once
 func Get_Data_Ord_comparing__3783120632() gopurs_runtime.Value {
 	once_Data_Ord_comparing__3783120632.Do(func() {
 		cache_Data_Ord_comparing__3783120632 = gopurs_runtime.Func4(func(dictOrd_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value, y_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: int64(Call_Data_Ord_comparing__3783120632(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[int64]](dictOrd_0_box), f_1_box, x_2_box, y_3_box)), UnsafePtr: nil}
+return gopurs_runtime.Value{Type: 9, IntVal: int64(Call_Data_Ord_comparing__3783120632(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), f_1_box, x_2_box, y_3_box)), UnsafePtr: nil}
 })
 	})
 	return cache_Data_Ord_comparing__3783120632
@@ -876,7 +876,7 @@ var once_Data_Ord_comparing__1990975733 sync.Once
 func Get_Data_Ord_comparing__1990975733() gopurs_runtime.Value {
 	once_Data_Ord_comparing__1990975733.Do(func() {
 		cache_Data_Ord_comparing__1990975733 = gopurs_runtime.Func4(func(dictOrd_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value, y_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: int64(Call_Data_Ord_comparing__1990975733(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[int64]](dictOrd_0_box), f_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value]](x_2_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value]](y_3_box))), UnsafePtr: nil}
+return gopurs_runtime.Value{Type: 9, IntVal: int64(Call_Data_Ord_comparing__1990975733(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), f_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](x_2_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](y_3_box))), UnsafePtr: nil}
 })
 	})
 	return cache_Data_Ord_comparing__1990975733
@@ -887,7 +887,7 @@ var once_Data_Ord_comparing__3506074860 sync.Once
 func Get_Data_Ord_comparing__3506074860() gopurs_runtime.Value {
 	once_Data_Ord_comparing__3506074860.Do(func() {
 		cache_Data_Ord_comparing__3506074860 = gopurs_runtime.Func4(func(dictOrd_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value, y_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: int64(Call_Data_Ord_comparing__3506074860(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dictOrd_0_box), f_1_box, x_2_box, y_3_box)), UnsafePtr: nil}
+return gopurs_runtime.Value{Type: 9, IntVal: int64(Call_Data_Ord_comparing__3506074860(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), f_1_box, x_2_box, y_3_box)), UnsafePtr: nil}
 })
 	})
 	return cache_Data_Ord_comparing__3506074860
@@ -898,7 +898,7 @@ var once_Data_Ord_greaterThan__3259097883 sync.Once
 func Get_Data_Ord_greaterThan__3259097883() gopurs_runtime.Value {
 	once_Data_Ord_greaterThan__3259097883.Do(func() {
 		cache_Data_Ord_greaterThan__3259097883 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_Data_Ord_greaterThan__3259097883(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[*Constructor_Data_Date_Date]](dictOrd_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Date_Date](a1_1_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Date_Date](a2_2_box)))
+return gopurs_runtime.Bool(Call_Data_Ord_greaterThan__3259097883(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Date_Date](a1_1_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Date_Date](a2_2_box)))
 })
 	})
 	return cache_Data_Ord_greaterThan__3259097883
@@ -931,7 +931,7 @@ var once_Data_Ord_greaterThan__3448835524 sync.Once
 func Get_Data_Ord_greaterThan__3448835524() gopurs_runtime.Value {
 	once_Data_Ord_greaterThan__3448835524.Do(func() {
 		cache_Data_Ord_greaterThan__3448835524 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_Data_Ord_greaterThan__3448835524(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[string]](dictOrd_0_box), a1_1_box.StrVal(), a2_2_box.StrVal()))
+return gopurs_runtime.Bool(Call_Data_Ord_greaterThan__3448835524(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), a1_1_box.StrVal(), a2_2_box.StrVal()))
 })
 	})
 	return cache_Data_Ord_greaterThan__3448835524
@@ -942,7 +942,7 @@ var once_Data_Ord_greaterThan__1409282474 sync.Once
 func Get_Data_Ord_greaterThan__1409282474() gopurs_runtime.Value {
 	once_Data_Ord_greaterThan__1409282474.Do(func() {
 		cache_Data_Ord_greaterThan__1409282474 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_Data_Ord_greaterThan__1409282474(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dictOrd_0_box), a1_1_box, a2_2_box))
+return gopurs_runtime.Bool(Call_Data_Ord_greaterThan__1409282474(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), a1_1_box, a2_2_box))
 })
 	})
 	return cache_Data_Ord_greaterThan__1409282474
@@ -953,7 +953,7 @@ var once_Data_Ord_greaterThan__2157625836 sync.Once
 func Get_Data_Ord_greaterThan__2157625836() gopurs_runtime.Value {
 	once_Data_Ord_greaterThan__2157625836.Do(func() {
 		cache_Data_Ord_greaterThan__2157625836 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_Data_Ord_greaterThan__2157625836(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[[]gopurs_runtime.Value]](dictOrd_0_box), func() []gopurs_runtime.Value {
+return gopurs_runtime.Bool(Call_Data_Ord_greaterThan__2157625836(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(a1_1_box.UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
@@ -974,7 +974,7 @@ var once_Data_Ord_greaterThan__2400628110 sync.Once
 func Get_Data_Ord_greaterThan__2400628110() gopurs_runtime.Value {
 	once_Data_Ord_greaterThan__2400628110.Do(func() {
 		cache_Data_Ord_greaterThan__2400628110 = gopurs_runtime.Func2(func(a1_0_box gopurs_runtime.Value, a2_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_Data_Ord_greaterThan__2400628110(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[int64]](a1_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[int64]](a2_1_box)))
+return gopurs_runtime.Bool(Call_Data_Ord_greaterThan__2400628110(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](a1_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](a2_1_box)))
 })
 	})
 	return cache_Data_Ord_greaterThan__2400628110
@@ -985,7 +985,7 @@ var once_Data_Ord_greaterThanOrEq__1710332219 sync.Once
 func Get_Data_Ord_greaterThanOrEq__1710332219() gopurs_runtime.Value {
 	once_Data_Ord_greaterThanOrEq__1710332219.Do(func() {
 		cache_Data_Ord_greaterThanOrEq__1710332219 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_Data_Ord_greaterThanOrEq__1710332219(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[int64]](dictOrd_0_box), a1_1_box.IntVal, a2_2_box.IntVal))
+return gopurs_runtime.Bool(Call_Data_Ord_greaterThanOrEq__1710332219(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), a1_1_box.IntVal, a2_2_box.IntVal))
 })
 	})
 	return cache_Data_Ord_greaterThanOrEq__1710332219
@@ -1018,7 +1018,7 @@ var once_Data_Ord_greaterThanOrEq__1409282474 sync.Once
 func Get_Data_Ord_greaterThanOrEq__1409282474() gopurs_runtime.Value {
 	once_Data_Ord_greaterThanOrEq__1409282474.Do(func() {
 		cache_Data_Ord_greaterThanOrEq__1409282474 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_Data_Ord_greaterThanOrEq__1409282474(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dictOrd_0_box), a1_1_box, a2_2_box))
+return gopurs_runtime.Bool(Call_Data_Ord_greaterThanOrEq__1409282474(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), a1_1_box, a2_2_box))
 })
 	})
 	return cache_Data_Ord_greaterThanOrEq__1409282474
@@ -1029,7 +1029,7 @@ var once_Data_Ord_greaterThanOrEq__2065354949 sync.Once
 func Get_Data_Ord_greaterThanOrEq__2065354949() gopurs_runtime.Value {
 	once_Data_Ord_greaterThanOrEq__2065354949.Do(func() {
 		cache_Data_Ord_greaterThanOrEq__2065354949 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_Data_Ord_greaterThanOrEq__2065354949(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dictOrd_0_box), a1_1_box, a2_2_box))
+return gopurs_runtime.Bool(Call_Data_Ord_greaterThanOrEq__2065354949(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), a1_1_box, a2_2_box))
 })
 	})
 	return cache_Data_Ord_greaterThanOrEq__2065354949
@@ -1040,7 +1040,7 @@ var once_Data_Ord_lessThan__828536027 sync.Once
 func Get_Data_Ord_lessThan__828536027() gopurs_runtime.Value {
 	once_Data_Ord_lessThan__828536027.Do(func() {
 		cache_Data_Ord_lessThan__828536027 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_Data_Ord_lessThan__828536027(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[string]](dictOrd_0_box), a1_1_box.StrVal(), a2_2_box.StrVal()))
+return gopurs_runtime.Bool(Call_Data_Ord_lessThan__828536027(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), a1_1_box.StrVal(), a2_2_box.StrVal()))
 })
 	})
 	return cache_Data_Ord_lessThan__828536027
@@ -1073,7 +1073,7 @@ var once_Data_Ord_lessThan__1409282474 sync.Once
 func Get_Data_Ord_lessThan__1409282474() gopurs_runtime.Value {
 	once_Data_Ord_lessThan__1409282474.Do(func() {
 		cache_Data_Ord_lessThan__1409282474 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_Data_Ord_lessThan__1409282474(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dictOrd_0_box), a1_1_box, a2_2_box))
+return gopurs_runtime.Bool(Call_Data_Ord_lessThan__1409282474(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), a1_1_box, a2_2_box))
 })
 	})
 	return cache_Data_Ord_lessThan__1409282474
@@ -1084,7 +1084,7 @@ var once_Data_Ord_lessThanOrEq__1710332219 sync.Once
 func Get_Data_Ord_lessThanOrEq__1710332219() gopurs_runtime.Value {
 	once_Data_Ord_lessThanOrEq__1710332219.Do(func() {
 		cache_Data_Ord_lessThanOrEq__1710332219 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_Data_Ord_lessThanOrEq__1710332219(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[int64]](dictOrd_0_box), a1_1_box.IntVal, a2_2_box.IntVal))
+return gopurs_runtime.Bool(Call_Data_Ord_lessThanOrEq__1710332219(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), a1_1_box.IntVal, a2_2_box.IntVal))
 })
 	})
 	return cache_Data_Ord_lessThanOrEq__1710332219
@@ -1117,7 +1117,7 @@ var once_Data_Ord_lessThanOrEq__3448835524 sync.Once
 func Get_Data_Ord_lessThanOrEq__3448835524() gopurs_runtime.Value {
 	once_Data_Ord_lessThanOrEq__3448835524.Do(func() {
 		cache_Data_Ord_lessThanOrEq__3448835524 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_Data_Ord_lessThanOrEq__3448835524(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[string]](dictOrd_0_box), a1_1_box.StrVal(), a2_2_box.StrVal()))
+return gopurs_runtime.Bool(Call_Data_Ord_lessThanOrEq__3448835524(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), a1_1_box.StrVal(), a2_2_box.StrVal()))
 })
 	})
 	return cache_Data_Ord_lessThanOrEq__3448835524
@@ -1128,7 +1128,7 @@ var once_Data_Ord_lessThanOrEq__1409282474 sync.Once
 func Get_Data_Ord_lessThanOrEq__1409282474() gopurs_runtime.Value {
 	once_Data_Ord_lessThanOrEq__1409282474.Do(func() {
 		cache_Data_Ord_lessThanOrEq__1409282474 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_Data_Ord_lessThanOrEq__1409282474(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dictOrd_0_box), a1_1_box, a2_2_box))
+return gopurs_runtime.Bool(Call_Data_Ord_lessThanOrEq__1409282474(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), a1_1_box, a2_2_box))
 })
 	})
 	return cache_Data_Ord_lessThanOrEq__1409282474
@@ -1139,7 +1139,7 @@ var once_Data_Ord_lessThanOrEq__1395963554 sync.Once
 func Get_Data_Ord_lessThanOrEq__1395963554() gopurs_runtime.Value {
 	once_Data_Ord_lessThanOrEq__1395963554.Do(func() {
 		cache_Data_Ord_lessThanOrEq__1395963554 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_Data_Ord_lessThanOrEq__1395963554(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]]](dictOrd_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](a1_1_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]](a2_2_box)))
+return gopurs_runtime.Bool(Call_Data_Ord_lessThanOrEq__1395963554(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](a1_1_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](a2_2_box)))
 })
 	})
 	return cache_Data_Ord_lessThanOrEq__1395963554
@@ -1150,7 +1150,7 @@ var once_Data_Ord_lessThanOrEq__2065354949 sync.Once
 func Get_Data_Ord_lessThanOrEq__2065354949() gopurs_runtime.Value {
 	once_Data_Ord_lessThanOrEq__2065354949.Do(func() {
 		cache_Data_Ord_lessThanOrEq__2065354949 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, a1_1_box gopurs_runtime.Value, a2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(Call_Data_Ord_lessThanOrEq__2065354949(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dictOrd_0_box), a1_1_box, a2_2_box))
+return gopurs_runtime.Bool(Call_Data_Ord_lessThanOrEq__2065354949(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), a1_1_box, a2_2_box))
 })
 	})
 	return cache_Data_Ord_lessThanOrEq__2065354949
@@ -1161,7 +1161,7 @@ var once_Data_Ord_max__2927892844 sync.Once
 func Get_Data_Ord_max__2927892844() gopurs_runtime.Value {
 	once_Data_Ord_max__2927892844.Do(func() {
 		cache_Data_Ord_max__2927892844 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value, y_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Int(Call_Data_Ord_max__2927892844(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[int64]](dictOrd_0_box), x_1_box.IntVal, y_2_box.IntVal))
+return gopurs_runtime.Int(Call_Data_Ord_max__2927892844(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), x_1_box.IntVal, y_2_box.IntVal))
 })
 	})
 	return cache_Data_Ord_max__2927892844
@@ -1183,7 +1183,7 @@ var once_Data_Ord_max__2767602680 sync.Once
 func Get_Data_Ord_max__2767602680() gopurs_runtime.Value {
 	once_Data_Ord_max__2767602680.Do(func() {
 		cache_Data_Ord_max__2767602680 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value, y_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_max__2767602680(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dictOrd_0_box), x_1_box, y_2_box)
+return Call_Data_Ord_max__2767602680(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), x_1_box, y_2_box)
 })
 	})
 	return cache_Data_Ord_max__2767602680
@@ -1194,7 +1194,7 @@ var once_Data_Ord_min__2927892844 sync.Once
 func Get_Data_Ord_min__2927892844() gopurs_runtime.Value {
 	once_Data_Ord_min__2927892844.Do(func() {
 		cache_Data_Ord_min__2927892844 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value, y_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Int(Call_Data_Ord_min__2927892844(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[int64]](dictOrd_0_box), x_1_box.IntVal, y_2_box.IntVal))
+return gopurs_runtime.Int(Call_Data_Ord_min__2927892844(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), x_1_box.IntVal, y_2_box.IntVal))
 })
 	})
 	return cache_Data_Ord_min__2927892844
@@ -1205,7 +1205,7 @@ var once_Data_Ord_min__2767602680 sync.Once
 func Get_Data_Ord_min__2767602680() gopurs_runtime.Value {
 	once_Data_Ord_min__2767602680.Do(func() {
 		cache_Data_Ord_min__2767602680 = gopurs_runtime.Func3(func(dictOrd_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value, y_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ord_min__2767602680(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dictOrd_0_box), x_1_box, y_2_box)
+return Call_Data_Ord_min__2767602680(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), x_1_box, y_2_box)
 })
 	})
 	return cache_Data_Ord_min__2767602680
@@ -1256,7 +1256,7 @@ return gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}
 	return cache_Data_Ord_ordRecordNil__512917160
 }
 
-type Constructor_Data_Ord_OrdRecord[T_rowlist any, T_row any] struct {
+type Constructor_Data_Ord_OrdRecord struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -1265,7 +1265,7 @@ type Constructor_Data_Ord_OrdRecord[T_rowlist any, T_row any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[4162894775] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_Ord_OrdRecord[gopurs_runtime.Value, gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_Ord_OrdRecord)(ptr)
 		_ = c
 		switch key {
 		case "EqRecord0": return gopurs_runtime.Box(c.V0)
@@ -1276,7 +1276,7 @@ func init() {
 }
 
 
-type Constructor_Data_Ord_Ord[T_a any] struct {
+type Constructor_Data_Ord_Ord struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -1285,7 +1285,7 @@ type Constructor_Data_Ord_Ord[T_a any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[1435789946] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_Ord_Ord[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_Ord_Ord)(ptr)
 		_ = c
 		switch key {
 		case "Eq0": return gopurs_runtime.Box(c.V0)
@@ -1296,7 +1296,7 @@ func init() {
 }
 
 
-type Constructor_Data_Ord_Ord1[T_f any] struct {
+type Constructor_Data_Ord_Ord1 struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -1305,7 +1305,7 @@ type Constructor_Data_Ord_Ord1[T_f any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[1632188299] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_Ord_Ord1[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_Ord_Ord1)(ptr)
 		_ = c
 		switch key {
 		case "Eq10": return gopurs_runtime.Box(c.V0)
@@ -1334,8 +1334,8 @@ _ = x_0
 return x_0
 }
 
-func Call_Data_Ord_compareRecord(dict_0_loop *Constructor_Data_Ord_OrdRecord[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ord_OrdRecord[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Ord_compareRecord(dict_0_loop *Constructor_Data_Ord_OrdRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ord_OrdRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
@@ -1353,20 +1353,20 @@ return eqRec1_2_0
 }), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrdRecord_1, "compareRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}))
 }
 
-func Call_Data_Ord_compare1(dict_0_loop *Constructor_Data_Ord_Ord1[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ord_Ord1[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Ord_compare1(dict_0_loop *Constructor_Data_Ord_Ord1) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ord_Ord1 = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Ord_compare(dict_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Ord_compare(dict_0_loop *Constructor_Data_Ord_Ord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ord_Ord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Ord_comparing(dictOrd_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value], f_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value, y_3_loop gopurs_runtime.Value) uint32 {
-var dictOrd_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dictOrd_0_loop
+func Call_Data_Ord_comparing(dictOrd_0_loop *Constructor_Data_Ord_Ord, f_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value, y_3_loop gopurs_runtime.Value) uint32 {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
@@ -1377,8 +1377,8 @@ _ = y_3
 return uint32(gopurs_runtime.Apply2(gopurs_runtime.Box(dictOrd_0.V1), gopurs_runtime.Apply(f_1, x_2), gopurs_runtime.Apply(f_1, y_3)).IntVal)
 }
 
-func Call_Data_Ord_greaterThan(dictOrd_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value], a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
-var dictOrd_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dictOrd_0_loop
+func Call_Data_Ord_greaterThan(dictOrd_0_loop *Constructor_Data_Ord_Ord, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var a1_1 gopurs_runtime.Value = a1_1_loop
 _ = a1_1
@@ -1401,8 +1401,8 @@ end_branch_1:
 return __t1
 }
 
-func Call_Data_Ord_greaterThanOrEq(dictOrd_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value], a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
-var dictOrd_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dictOrd_0_loop
+func Call_Data_Ord_greaterThanOrEq(dictOrd_0_loop *Constructor_Data_Ord_Ord, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var a1_1 gopurs_runtime.Value = a1_1_loop
 _ = a1_1
@@ -1425,8 +1425,8 @@ end_branch_1:
 return __t1
 }
 
-func Call_Data_Ord_lessThan(dictOrd_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value], a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
-var dictOrd_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dictOrd_0_loop
+func Call_Data_Ord_lessThan(dictOrd_0_loop *Constructor_Data_Ord_Ord, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var a1_1 gopurs_runtime.Value = a1_1_loop
 _ = a1_1
@@ -1449,10 +1449,10 @@ end_branch_1:
 return __t1
 }
 
-func Call_Data_Ord_signum(dictOrd_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value], dictRing_1_loop *Constructor_Data_Ring_Ring[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictOrd_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dictOrd_0_loop
+func Call_Data_Ord_signum(dictOrd_0_loop *Constructor_Data_Ord_Ord, dictRing_1_loop *Constructor_Data_Ring_Ring) gopurs_runtime.Value {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
-var dictRing_1 *Constructor_Data_Ring_Ring[gopurs_runtime.Value] = dictRing_1_loop
+var dictRing_1 *Constructor_Data_Ring_Ring = dictRing_1_loop
 _ = dictRing_1
 // TAST (Let): Semiring0_2_0 -> gopurs_runtime.Value
 Semiring0_2_0 := gopurs_runtime.Apply(gopurs_runtime.Box(dictRing_1.V0), gopurs_runtime.Value{})
@@ -1460,8 +1460,8 @@ _ = Semiring0_2_0
 // TAST (Let): zero_3_1 -> gopurs_runtime.Value
 zero_3_1 := gopurs_runtime.RecordGet(Semiring0_2_0, "zero")
 _ = zero_3_1
-// TAST (Let): Semiring01_4_2 -> *Constructor_Data_Semiring_Semiring[gopurs_runtime.Value]
-Semiring01_4_2 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.Box(dictRing_1.V0), gopurs_runtime.Value{}))
+// TAST (Let): Semiring01_4_2 -> *Constructor_Data_Semiring_Semiring
+Semiring01_4_2 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring](gopurs_runtime.Apply(gopurs_runtime.Box(dictRing_1.V0), gopurs_runtime.Value{}))
 _ = Semiring01_4_2
 // TAST (Let): one_5_3 -> gopurs_runtime.Value
 one_5_3 := gopurs_runtime.RecordGet(Semiring0_2_0, "one")
@@ -1525,8 +1525,8 @@ return __t9
 })
 }
 
-func Call_Data_Ord_lessThanOrEq(dictOrd_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value], a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
-var dictOrd_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dictOrd_0_loop
+func Call_Data_Ord_lessThanOrEq(dictOrd_0_loop *Constructor_Data_Ord_Ord, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var a1_1 gopurs_runtime.Value = a1_1_loop
 _ = a1_1
@@ -1549,8 +1549,8 @@ end_branch_1:
 return __t1
 }
 
-func Call_Data_Ord_max(dictOrd_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value], x_1_loop gopurs_runtime.Value, y_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictOrd_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dictOrd_0_loop
+func Call_Data_Ord_max(dictOrd_0_loop *Constructor_Data_Ord_Ord, x_1_loop gopurs_runtime.Value, y_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
@@ -1591,8 +1591,8 @@ end_branch_1:
 return __t1
 }
 
-func Call_Data_Ord_min(dictOrd_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value], x_1_loop gopurs_runtime.Value, y_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictOrd_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dictOrd_0_loop
+func Call_Data_Ord_min(dictOrd_0_loop *Constructor_Data_Ord_Ord, x_1_loop gopurs_runtime.Value, y_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
@@ -1742,8 +1742,8 @@ return gopurs_runtime.Value{Type: 9, IntVal: int64(__t5), UnsafePtr: nil}
 })
 }
 
-func Call_Data_Ord_clamp(dictOrd_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value], low_1_loop gopurs_runtime.Value, hi_2_loop gopurs_runtime.Value, x_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictOrd_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dictOrd_0_loop
+func Call_Data_Ord_clamp(dictOrd_0_loop *Constructor_Data_Ord_Ord, low_1_loop gopurs_runtime.Value, hi_2_loop gopurs_runtime.Value, x_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var low_1 gopurs_runtime.Value = low_1_loop
 _ = low_1
@@ -1821,8 +1821,8 @@ end_branch_4:
 return __t4
 }
 
-func Call_Data_Ord_between(dictOrd_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value], low_1_loop gopurs_runtime.Value, hi_2_loop gopurs_runtime.Value, x_3_loop gopurs_runtime.Value) bool {
-var dictOrd_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dictOrd_0_loop
+func Call_Data_Ord_between(dictOrd_0_loop *Constructor_Data_Ord_Ord, low_1_loop gopurs_runtime.Value, hi_2_loop gopurs_runtime.Value, x_3_loop gopurs_runtime.Value) bool {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var low_1 gopurs_runtime.Value = low_1_loop
 _ = low_1
@@ -1882,10 +1882,10 @@ end_branch_4:
 return __t4
 }
 
-func Call_Data_Ord_abs(dictOrd_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value], dictRing_1_loop *Constructor_Data_Ring_Ring[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictOrd_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dictOrd_0_loop
+func Call_Data_Ord_abs(dictOrd_0_loop *Constructor_Data_Ord_Ord, dictRing_1_loop *Constructor_Data_Ring_Ring) gopurs_runtime.Value {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
-var dictRing_1 *Constructor_Data_Ring_Ring[gopurs_runtime.Value] = dictRing_1_loop
+var dictRing_1 *Constructor_Data_Ring_Ring = dictRing_1_loop
 _ = dictRing_1
 // TAST (Let): zero_2_0 -> gopurs_runtime.Value
 zero_2_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.Box(dictRing_1.V0), gopurs_runtime.Value{}), "zero")
@@ -1948,8 +1948,8 @@ goto end_branch_2
 }
 }
 {
-// TAST (Let): __local_var_1_0 -> *Constructor_Data_Ring_Ring[int64]
-__local_var_1_0 := &Constructor_Data_Ring_Ring[int64]{1, gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_1_0 -> *Constructor_Data_Ring_Ring
+__local_var_1_0 := &Constructor_Data_Ring_Ring{1, gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", Get_Data_Semiring_intAdd(), Get_Data_Semiring_intMul(), gopurs_runtime.Int(1), gopurs_runtime.Int(0))
 }), Get_Data_Ring_intSub()}
 _ = __local_var_1_0
@@ -1959,10 +1959,10 @@ end_branch_2:
 return gopurs_runtime.Int(__t2)
 }
 
-func Call_Data_Ord_abs__2515802711(dictOrd_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value], dictRing_1_loop *Constructor_Data_Ring_Ring[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictOrd_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dictOrd_0_loop
+func Call_Data_Ord_abs__2515802711(dictOrd_0_loop *Constructor_Data_Ord_Ord, dictRing_1_loop *Constructor_Data_Ring_Ring) gopurs_runtime.Value {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
-var dictRing_1 *Constructor_Data_Ring_Ring[gopurs_runtime.Value] = dictRing_1_loop
+var dictRing_1 *Constructor_Data_Ring_Ring = dictRing_1_loop
 _ = dictRing_1
 // TAST (Let): zero_2_0 -> gopurs_runtime.Value
 zero_2_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.Box(dictRing_1.V0), gopurs_runtime.Value{}), "zero")
@@ -2076,8 +2076,8 @@ end_branch_4:
 return __t4.IntVal
 }
 
-func Call_Data_Ord_clamp__709576177(dictOrd_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value], low_1_loop gopurs_runtime.Value, hi_2_loop gopurs_runtime.Value, x_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictOrd_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dictOrd_0_loop
+func Call_Data_Ord_clamp__709576177(dictOrd_0_loop *Constructor_Data_Ord_Ord, low_1_loop gopurs_runtime.Value, hi_2_loop gopurs_runtime.Value, x_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var low_1 gopurs_runtime.Value = low_1_loop
 _ = low_1
@@ -2155,44 +2155,44 @@ end_branch_4:
 return __t4
 }
 
-func Call_Data_Ord_compare__1787266401(dict_0_loop *Constructor_Data_Ord_Ord[int64]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ord_Ord[int64] = dict_0_loop
+func Call_Data_Ord_compare__1787266401(dict_0_loop *Constructor_Data_Ord_Ord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ord_Ord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Ord_compare__2286295841(dict_0_loop *Constructor_Data_Ord_Ord[float64]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ord_Ord[float64] = dict_0_loop
+func Call_Data_Ord_compare__2286295841(dict_0_loop *Constructor_Data_Ord_Ord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ord_Ord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Ord_compare__669572705(dict_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Ord_compare__669572705(dict_0_loop *Constructor_Data_Ord_Ord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ord_Ord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Ord_compare__1110679617(dict_0_loop *Constructor_Data_Ord_Ord[*Constructor_Data_Date_Date]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ord_Ord[*Constructor_Data_Date_Date] = dict_0_loop
+func Call_Data_Ord_compare__1110679617(dict_0_loop *Constructor_Data_Ord_Ord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ord_Ord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Ord_compare__45059489(dict_0_loop *Constructor_Data_Ord_Ord[uint32]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ord_Ord[uint32] = dict_0_loop
+func Call_Data_Ord_compare__45059489(dict_0_loop *Constructor_Data_Ord_Ord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ord_Ord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Ord_compare__2790853377(dict_0_loop *Constructor_Data_Ord_Ord[*Constructor_Data_Maybe_Just[int64]]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ord_Ord[*Constructor_Data_Maybe_Just[int64]] = dict_0_loop
+func Call_Data_Ord_compare__2790853377(dict_0_loop *Constructor_Data_Ord_Ord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ord_Ord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Ord_compare__3635905793(dict_0_loop *Constructor_Data_Ord_Ord[*Constructor_Data_Time_Time]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ord_Ord[*Constructor_Data_Time_Time] = dict_0_loop
+func Call_Data_Ord_compare__3635905793(dict_0_loop *Constructor_Data_Ord_Ord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ord_Ord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
@@ -2213,20 +2213,20 @@ _ = __eta1_1
 return gopurs_runtime.Apply5(Get_Data_Ord_ordStringImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, __eta0_0, __eta1_1)
 }
 
-func Call_Data_Ord_compare__472859678(dict_0_loop *Constructor_Data_Ord_Ord[string]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ord_Ord[string] = dict_0_loop
+func Call_Data_Ord_compare__472859678(dict_0_loop *Constructor_Data_Ord_Ord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ord_Ord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Ord_compare__821463600(dict_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Ord_compare__821463600(dict_0_loop *Constructor_Data_Ord_Ord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ord_Ord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Ord_compare__4035831926(dict_0_loop *Constructor_Data_Ord_Ord[[]gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ord_Ord[[]gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Ord_compare__4035831926(dict_0_loop *Constructor_Data_Ord_Ord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ord_Ord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
@@ -2577,7 +2577,7 @@ _ = x_0
 var y_1 *Constructor_Data_Date_Date = y_1_loop
 _ = y_1
 // TAST (Let): v_2_0 -> uint32
-v_2_0 := uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Date_Component_ordYear(), "compare"), gopurs_runtime.Int((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(x_0)}.UnsafePtr).V0), gopurs_runtime.Int((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(y_1)}.UnsafePtr).V0)).IntVal)
+v_2_0 := uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Date_Component_ordYear(), "compare"), gopurs_runtime.Int((x_0).V0), gopurs_runtime.Int((y_1).V0)).IntVal)
 _ = v_2_0
 var __t3 uint32
 {
@@ -2598,7 +2598,7 @@ goto end_branch_3
 }
 {
 // TAST (Let): v1_3_1 -> uint32
-v1_3_1 := uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Date_Component_ordMonth(), "compare"), gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(x_0)}.UnsafePtr).V1), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(y_1)}.UnsafePtr).V1), UnsafePtr: nil}).IntVal)
+v1_3_1 := uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Date_Component_ordMonth(), "compare"), gopurs_runtime.Value{Type: 9, IntVal: int64((x_0).V1), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64((y_1).V1), UnsafePtr: nil}).IntVal)
 _ = v1_3_1
 var __t2 uint32
 {
@@ -2618,7 +2618,7 @@ goto end_branch_2
 }
 }
 {
-__t2 = uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Date_Component_ordDay(), "compare"), gopurs_runtime.Int((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(x_0)}.UnsafePtr).V2), gopurs_runtime.Int((*Constructor_Data_Date_Date)(gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(y_1)}.UnsafePtr).V2)).IntVal)
+__t2 = uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Date_Component_ordDay(), "compare"), gopurs_runtime.Int((x_0).V2), gopurs_runtime.Int((y_1).V2)).IntVal)
 }
 end_branch_2:
 __t3 = __t2
@@ -2822,20 +2822,20 @@ end_branch_6:
 return uint32(__t6.IntVal)
 }
 
-func Call_Data_Ord_compare__738396984(dict_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Ord_compare__738396984(dict_0_loop *Constructor_Data_Ord_Ord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ord_Ord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Ord_compare__2349537221(dict_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Ord_compare__2349537221(dict_0_loop *Constructor_Data_Ord_Ord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ord_Ord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Ord_compare__3029065925(dict_0_loop *Constructor_Data_Ord_Ord[*Constructor_Data_List_Types_Cons[gopurs_runtime.Value]]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ord_Ord[*Constructor_Data_List_Types_Cons[gopurs_runtime.Value]] = dict_0_loop
+func Call_Data_Ord_compare__3029065925(dict_0_loop *Constructor_Data_Ord_Ord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ord_Ord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
@@ -2845,11 +2845,11 @@ var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
 _ = __eta0_0
 var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
 _ = __eta1_1
-return gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[*Constructor_Data_Map_Internal_Node[uint32, float64]]](Get_Data_Interval_Duration_ordMap()).V1), __eta0_0, __eta1_1)
+return gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](Get_Data_Interval_Duration_ordMap()).V1), __eta0_0, __eta1_1)
 }
 
-func Call_Data_Ord_compare__2802126154(dict_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Ord_compare__2802126154(dict_0_loop *Constructor_Data_Ord_Ord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ord_Ord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
@@ -2859,11 +2859,11 @@ var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
 _ = __eta0_0
 var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
 _ = __eta1_1
-return gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[*Constructor_Data_Maybe_Just[int64]]](Get_Data_Interval_ordMaybe()).V1), __eta0_0, __eta1_1)
+return gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](Get_Data_Interval_ordMaybe()).V1), __eta0_0, __eta1_1)
 }
 
-func Call_Data_Ord_compare__1746579729(dict_0_loop *Constructor_Data_Ord_Ord[*Constructor_Data_Maybe_Just[gopurs_runtime.Value]]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ord_Ord[*Constructor_Data_Maybe_Just[gopurs_runtime.Value]] = dict_0_loop
+func Call_Data_Ord_compare__1746579729(dict_0_loop *Constructor_Data_Ord_Ord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ord_Ord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
@@ -2874,7 +2874,7 @@ _ = x_0
 var y_1 *Constructor_Data_Time_Time = y_1_loop
 _ = y_1
 // TAST (Let): v_2_0 -> uint32
-v_2_0 := uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Time_Component_ordHour(), "compare"), gopurs_runtime.Int((*Constructor_Data_Time_Time)(gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(x_0)}.UnsafePtr).V0), gopurs_runtime.Int((*Constructor_Data_Time_Time)(gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(y_1)}.UnsafePtr).V0)).IntVal)
+v_2_0 := uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Time_Component_ordHour(), "compare"), gopurs_runtime.Int((x_0).V0), gopurs_runtime.Int((y_1).V0)).IntVal)
 _ = v_2_0
 var __t5 uint32
 {
@@ -2895,7 +2895,7 @@ goto end_branch_5
 }
 {
 // TAST (Let): v1_3_1 -> uint32
-v1_3_1 := uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Time_Component_ordMinute(), "compare"), gopurs_runtime.Int((*Constructor_Data_Time_Time)(gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(x_0)}.UnsafePtr).V1), gopurs_runtime.Int((*Constructor_Data_Time_Time)(gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(y_1)}.UnsafePtr).V1)).IntVal)
+v1_3_1 := uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Time_Component_ordMinute(), "compare"), gopurs_runtime.Int((x_0).V1), gopurs_runtime.Int((y_1).V1)).IntVal)
 _ = v1_3_1
 var __t4 uint32
 {
@@ -2916,7 +2916,7 @@ goto end_branch_4
 }
 {
 // TAST (Let): v2_4_2 -> uint32
-v2_4_2 := uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Time_Component_ordSecond(), "compare"), gopurs_runtime.Int((*Constructor_Data_Time_Time)(gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(x_0)}.UnsafePtr).V2), gopurs_runtime.Int((*Constructor_Data_Time_Time)(gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(y_1)}.UnsafePtr).V2)).IntVal)
+v2_4_2 := uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Time_Component_ordSecond(), "compare"), gopurs_runtime.Int((x_0).V2), gopurs_runtime.Int((y_1).V2)).IntVal)
 _ = v2_4_2
 var __t3 uint32
 {
@@ -2936,7 +2936,7 @@ goto end_branch_3
 }
 }
 {
-__t3 = uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Time_Component_ordMillisecond(), "compare"), gopurs_runtime.Int((*Constructor_Data_Time_Time)(gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(x_0)}.UnsafePtr).V3), gopurs_runtime.Int((*Constructor_Data_Time_Time)(gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer(y_1)}.UnsafePtr).V3)).IntVal)
+__t3 = uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Time_Component_ordMillisecond(), "compare"), gopurs_runtime.Int((x_0).V3), gopurs_runtime.Int((y_1).V3)).IntVal)
 }
 end_branch_3:
 __t4 = __t3
@@ -2948,38 +2948,38 @@ end_branch_5:
 return __t5
 }
 
-func Call_Data_Ord_compare__1965400253(dict_0_loop *Constructor_Data_Ord_Ord[*Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value]]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ord_Ord[*Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value]] = dict_0_loop
+func Call_Data_Ord_compare__1965400253(dict_0_loop *Constructor_Data_Ord_Ord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ord_Ord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Ord_compare__2107160184(dict_0_loop *Constructor_Data_Ord_Ord[*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ord_Ord[*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]] = dict_0_loop
+func Call_Data_Ord_compare__2107160184(dict_0_loop *Constructor_Data_Ord_Ord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ord_Ord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Ord_compare__3175661023(dict_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Ord_compare__3175661023(dict_0_loop *Constructor_Data_Ord_Ord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ord_Ord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Ord_compare__3215000822(dict_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Ord_compare__3215000822(dict_0_loop *Constructor_Data_Ord_Ord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ord_Ord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Ord_compare1__650153534(dict_0_loop *Constructor_Data_Ord_Ord1[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ord_Ord1[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Ord_compare1__650153534(dict_0_loop *Constructor_Data_Ord_Ord1) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ord_Ord1 = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Ord_compare1__3498430039(dict_0_loop *Constructor_Data_Ord_Ord1[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ord_Ord1[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Ord_compare1__3498430039(dict_0_loop *Constructor_Data_Ord_Ord1) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ord_Ord1 = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
@@ -2990,20 +2990,20 @@ _ = dictOrd_0
 return gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_Data_Lazy_ordLazy(), dictOrd_0), "compare")
 }
 
-func Call_Data_Ord_compareRecord__1222555784(dict_0_loop *Constructor_Data_Ord_OrdRecord[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ord_OrdRecord[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Ord_compareRecord__1222555784(dict_0_loop *Constructor_Data_Ord_OrdRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ord_OrdRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Ord_compareRecord__2984072590(dict_0_loop *Constructor_Data_Ord_OrdRecord[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ord_OrdRecord[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Ord_compareRecord__2984072590(dict_0_loop *Constructor_Data_Ord_OrdRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ord_OrdRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Ord_comparing__3783120632(dictOrd_0_loop *Constructor_Data_Ord_Ord[int64], f_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value, y_3_loop gopurs_runtime.Value) uint32 {
-var dictOrd_0 *Constructor_Data_Ord_Ord[int64] = dictOrd_0_loop
+func Call_Data_Ord_comparing__3783120632(dictOrd_0_loop *Constructor_Data_Ord_Ord, f_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value, y_3_loop gopurs_runtime.Value) uint32 {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
@@ -3014,20 +3014,20 @@ _ = y_3
 return uint32(gopurs_runtime.Apply2(gopurs_runtime.Box(dictOrd_0.V1), gopurs_runtime.Int(gopurs_runtime.Apply(f_1, x_2).IntVal), gopurs_runtime.Int(gopurs_runtime.Apply(f_1, y_3).IntVal)).IntVal)
 }
 
-func Call_Data_Ord_comparing__1990975733(dictOrd_0_loop *Constructor_Data_Ord_Ord[int64], f_1_loop gopurs_runtime.Value, x_2_loop *Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value], y_3_loop *Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value]) uint32 {
-var dictOrd_0 *Constructor_Data_Ord_Ord[int64] = dictOrd_0_loop
+func Call_Data_Ord_comparing__1990975733(dictOrd_0_loop *Constructor_Data_Ord_Ord, f_1_loop gopurs_runtime.Value, x_2_loop *Constructor_Data_Tuple_Tuple, y_3_loop *Constructor_Data_Tuple_Tuple) uint32 {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
-var x_2 *Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value] = x_2_loop
+var x_2 *Constructor_Data_Tuple_Tuple = x_2_loop
 _ = x_2
-var y_3 *Constructor_Data_Tuple_Tuple[int64, gopurs_runtime.Value] = y_3_loop
+var y_3 *Constructor_Data_Tuple_Tuple = y_3_loop
 _ = y_3
 return uint32(gopurs_runtime.Apply2(gopurs_runtime.Box(dictOrd_0.V1), gopurs_runtime.Int(gopurs_runtime.Apply(f_1, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(x_2)}).IntVal), gopurs_runtime.Int(gopurs_runtime.Apply(f_1, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(y_3)}).IntVal)).IntVal)
 }
 
-func Call_Data_Ord_comparing__3506074860(dictOrd_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value], f_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value, y_3_loop gopurs_runtime.Value) uint32 {
-var dictOrd_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dictOrd_0_loop
+func Call_Data_Ord_comparing__3506074860(dictOrd_0_loop *Constructor_Data_Ord_Ord, f_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value, y_3_loop gopurs_runtime.Value) uint32 {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
@@ -3038,8 +3038,8 @@ _ = y_3
 return uint32(gopurs_runtime.Apply2(gopurs_runtime.Box(dictOrd_0.V1), gopurs_runtime.Apply(f_1, x_2), gopurs_runtime.Apply(f_1, y_3)).IntVal)
 }
 
-func Call_Data_Ord_greaterThan__3259097883(dictOrd_0_loop *Constructor_Data_Ord_Ord[*Constructor_Data_Date_Date], a1_1_loop *Constructor_Data_Date_Date, a2_2_loop *Constructor_Data_Date_Date) bool {
-var dictOrd_0 *Constructor_Data_Ord_Ord[*Constructor_Data_Date_Date] = dictOrd_0_loop
+func Call_Data_Ord_greaterThan__3259097883(dictOrd_0_loop *Constructor_Data_Ord_Ord, a1_1_loop *Constructor_Data_Date_Date, a2_2_loop *Constructor_Data_Date_Date) bool {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var a1_1 *Constructor_Data_Date_Date = a1_1_loop
 _ = a1_1
@@ -3105,8 +3105,8 @@ end_branch_1:
 return __t1
 }
 
-func Call_Data_Ord_greaterThan__3448835524(dictOrd_0_loop *Constructor_Data_Ord_Ord[string], a1_1_loop string, a2_2_loop string) bool {
-var dictOrd_0 *Constructor_Data_Ord_Ord[string] = dictOrd_0_loop
+func Call_Data_Ord_greaterThan__3448835524(dictOrd_0_loop *Constructor_Data_Ord_Ord, a1_1_loop string, a2_2_loop string) bool {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var a1_1 string = a1_1_loop
 _ = a1_1
@@ -3129,8 +3129,8 @@ end_branch_1:
 return __t1
 }
 
-func Call_Data_Ord_greaterThan__1409282474(dictOrd_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value], a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
-var dictOrd_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dictOrd_0_loop
+func Call_Data_Ord_greaterThan__1409282474(dictOrd_0_loop *Constructor_Data_Ord_Ord, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var a1_1 gopurs_runtime.Value = a1_1_loop
 _ = a1_1
@@ -3153,8 +3153,8 @@ end_branch_1:
 return __t1
 }
 
-func Call_Data_Ord_greaterThan__2157625836(dictOrd_0_loop *Constructor_Data_Ord_Ord[[]gopurs_runtime.Value], a1_1_loop []gopurs_runtime.Value, a2_2_loop []gopurs_runtime.Value) bool {
-var dictOrd_0 *Constructor_Data_Ord_Ord[[]gopurs_runtime.Value] = dictOrd_0_loop
+func Call_Data_Ord_greaterThan__2157625836(dictOrd_0_loop *Constructor_Data_Ord_Ord, a1_1_loop []gopurs_runtime.Value, a2_2_loop []gopurs_runtime.Value) bool {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var a1_1 []gopurs_runtime.Value = a1_1_loop
 _ = a1_1
@@ -3177,14 +3177,14 @@ end_branch_1:
 return __t1
 }
 
-func Call_Data_Ord_greaterThan__2400628110(a1_0_loop *Constructor_Data_Maybe_Just[int64], a2_1_loop *Constructor_Data_Maybe_Just[int64]) bool {
-var a1_0 *Constructor_Data_Maybe_Just[int64] = a1_0_loop
+func Call_Data_Ord_greaterThan__2400628110(a1_0_loop *Constructor_Data_Maybe_Just, a2_1_loop *Constructor_Data_Maybe_Just) bool {
+var a1_0 *Constructor_Data_Maybe_Just = a1_0_loop
 _ = a1_0
-var a2_1 *Constructor_Data_Maybe_Just[int64] = a2_1_loop
+var a2_1 *Constructor_Data_Maybe_Just = a2_1_loop
 _ = a2_1
 var __t1 bool
 {
-var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[*Constructor_Data_Maybe_Just[int64]]](Get_Data_Date_ordMaybe()).V1), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(a1_0)}, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(a2_1)})
+var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](Get_Data_Date_ordMaybe()).V1), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(a1_0)}, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(a2_1)})
 if (uint32(__t_tag_0.IntVal) == 380165415) {
 __t1 = true
 goto end_branch_1
@@ -3199,8 +3199,8 @@ end_branch_1:
 return __t1
 }
 
-func Call_Data_Ord_greaterThanOrEq__1710332219(dictOrd_0_loop *Constructor_Data_Ord_Ord[int64], a1_1_loop int64, a2_2_loop int64) bool {
-var dictOrd_0 *Constructor_Data_Ord_Ord[int64] = dictOrd_0_loop
+func Call_Data_Ord_greaterThanOrEq__1710332219(dictOrd_0_loop *Constructor_Data_Ord_Ord, a1_1_loop int64, a2_2_loop int64) bool {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var a1_1 int64 = a1_1_loop
 _ = a1_1
@@ -3265,8 +3265,8 @@ end_branch_0:
 return __t0
 }
 
-func Call_Data_Ord_greaterThanOrEq__1409282474(dictOrd_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value], a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
-var dictOrd_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dictOrd_0_loop
+func Call_Data_Ord_greaterThanOrEq__1409282474(dictOrd_0_loop *Constructor_Data_Ord_Ord, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var a1_1 gopurs_runtime.Value = a1_1_loop
 _ = a1_1
@@ -3289,8 +3289,8 @@ end_branch_1:
 return __t1
 }
 
-func Call_Data_Ord_greaterThanOrEq__2065354949(dictOrd_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value], a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
-var dictOrd_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dictOrd_0_loop
+func Call_Data_Ord_greaterThanOrEq__2065354949(dictOrd_0_loop *Constructor_Data_Ord_Ord, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var a1_1 gopurs_runtime.Value = a1_1_loop
 _ = a1_1
@@ -3313,8 +3313,8 @@ end_branch_1:
 return __t1
 }
 
-func Call_Data_Ord_lessThan__828536027(dictOrd_0_loop *Constructor_Data_Ord_Ord[string], a1_1_loop string, a2_2_loop string) bool {
-var dictOrd_0 *Constructor_Data_Ord_Ord[string] = dictOrd_0_loop
+func Call_Data_Ord_lessThan__828536027(dictOrd_0_loop *Constructor_Data_Ord_Ord, a1_1_loop string, a2_2_loop string) bool {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var a1_1 string = a1_1_loop
 _ = a1_1
@@ -3379,8 +3379,8 @@ end_branch_0:
 return __t0
 }
 
-func Call_Data_Ord_lessThan__1409282474(dictOrd_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value], a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
-var dictOrd_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dictOrd_0_loop
+func Call_Data_Ord_lessThan__1409282474(dictOrd_0_loop *Constructor_Data_Ord_Ord, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var a1_1 gopurs_runtime.Value = a1_1_loop
 _ = a1_1
@@ -3403,8 +3403,8 @@ end_branch_1:
 return __t1
 }
 
-func Call_Data_Ord_lessThanOrEq__1710332219(dictOrd_0_loop *Constructor_Data_Ord_Ord[int64], a1_1_loop int64, a2_2_loop int64) bool {
-var dictOrd_0 *Constructor_Data_Ord_Ord[int64] = dictOrd_0_loop
+func Call_Data_Ord_lessThanOrEq__1710332219(dictOrd_0_loop *Constructor_Data_Ord_Ord, a1_1_loop int64, a2_2_loop int64) bool {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var a1_1 int64 = a1_1_loop
 _ = a1_1
@@ -3469,8 +3469,8 @@ end_branch_0:
 return __t0
 }
 
-func Call_Data_Ord_lessThanOrEq__3448835524(dictOrd_0_loop *Constructor_Data_Ord_Ord[string], a1_1_loop string, a2_2_loop string) bool {
-var dictOrd_0 *Constructor_Data_Ord_Ord[string] = dictOrd_0_loop
+func Call_Data_Ord_lessThanOrEq__3448835524(dictOrd_0_loop *Constructor_Data_Ord_Ord, a1_1_loop string, a2_2_loop string) bool {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var a1_1 string = a1_1_loop
 _ = a1_1
@@ -3493,8 +3493,8 @@ end_branch_1:
 return __t1
 }
 
-func Call_Data_Ord_lessThanOrEq__1409282474(dictOrd_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value], a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
-var dictOrd_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dictOrd_0_loop
+func Call_Data_Ord_lessThanOrEq__1409282474(dictOrd_0_loop *Constructor_Data_Ord_Ord, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var a1_1 gopurs_runtime.Value = a1_1_loop
 _ = a1_1
@@ -3517,12 +3517,12 @@ end_branch_1:
 return __t1
 }
 
-func Call_Data_Ord_lessThanOrEq__1395963554(dictOrd_0_loop *Constructor_Data_Ord_Ord[*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]], a1_1_loop *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value], a2_2_loop *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]) bool {
-var dictOrd_0 *Constructor_Data_Ord_Ord[*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]] = dictOrd_0_loop
+func Call_Data_Ord_lessThanOrEq__1395963554(dictOrd_0_loop *Constructor_Data_Ord_Ord, a1_1_loop *Constructor_Data_Tuple_Tuple, a2_2_loop *Constructor_Data_Tuple_Tuple) bool {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
-var a1_1 *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] = a1_1_loop
+var a1_1 *Constructor_Data_Tuple_Tuple = a1_1_loop
 _ = a1_1
-var a2_2 *Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value] = a2_2_loop
+var a2_2 *Constructor_Data_Tuple_Tuple = a2_2_loop
 _ = a2_2
 var __t1 bool
 {
@@ -3541,8 +3541,8 @@ end_branch_1:
 return __t1
 }
 
-func Call_Data_Ord_lessThanOrEq__2065354949(dictOrd_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value], a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
-var dictOrd_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dictOrd_0_loop
+func Call_Data_Ord_lessThanOrEq__2065354949(dictOrd_0_loop *Constructor_Data_Ord_Ord, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var a1_1 gopurs_runtime.Value = a1_1_loop
 _ = a1_1
@@ -3565,8 +3565,8 @@ end_branch_1:
 return __t1
 }
 
-func Call_Data_Ord_max__2927892844(dictOrd_0_loop *Constructor_Data_Ord_Ord[int64], x_1_loop int64, y_2_loop int64) int64 {
-var dictOrd_0 *Constructor_Data_Ord_Ord[int64] = dictOrd_0_loop
+func Call_Data_Ord_max__2927892844(dictOrd_0_loop *Constructor_Data_Ord_Ord, x_1_loop int64, y_2_loop int64) int64 {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var x_1 int64 = x_1_loop
 _ = x_1
@@ -3647,8 +3647,8 @@ end_branch_1:
 return __t1.IntVal
 }
 
-func Call_Data_Ord_max__2767602680(dictOrd_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value], x_1_loop gopurs_runtime.Value, y_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictOrd_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dictOrd_0_loop
+func Call_Data_Ord_max__2767602680(dictOrd_0_loop *Constructor_Data_Ord_Ord, x_1_loop gopurs_runtime.Value, y_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1
@@ -3689,8 +3689,8 @@ end_branch_1:
 return __t1
 }
 
-func Call_Data_Ord_min__2927892844(dictOrd_0_loop *Constructor_Data_Ord_Ord[int64], x_1_loop int64, y_2_loop int64) int64 {
-var dictOrd_0 *Constructor_Data_Ord_Ord[int64] = dictOrd_0_loop
+func Call_Data_Ord_min__2927892844(dictOrd_0_loop *Constructor_Data_Ord_Ord, x_1_loop int64, y_2_loop int64) int64 {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var x_1 int64 = x_1_loop
 _ = x_1
@@ -3731,8 +3731,8 @@ end_branch_1:
 return __t1.IntVal
 }
 
-func Call_Data_Ord_min__2767602680(dictOrd_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value], x_1_loop gopurs_runtime.Value, y_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictOrd_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dictOrd_0_loop
+func Call_Data_Ord_min__2767602680(dictOrd_0_loop *Constructor_Data_Ord_Ord, x_1_loop gopurs_runtime.Value, y_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var x_1 gopurs_runtime.Value = x_1_loop
 _ = x_1

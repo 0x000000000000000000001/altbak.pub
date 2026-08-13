@@ -11,7 +11,7 @@ var once_Data_String_NonEmpty_Internal_fromJust sync.Once
 func Get_Data_String_NonEmpty_Internal_fromJust() gopurs_runtime.Value {
 	once_Data_String_NonEmpty_Internal_fromJust.Do(func() {
 		cache_Data_String_NonEmpty_Internal_fromJust = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str(Call_Data_String_NonEmpty_Internal_fromJust(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[string]](v_0_box)))
+return gopurs_runtime.Str(Call_Data_String_NonEmpty_Internal_fromJust(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](v_0_box)))
 })
 	})
 	return cache_Data_String_NonEmpty_Internal_fromJust
@@ -190,7 +190,7 @@ var once_Data_String_NonEmpty_Internal_nes sync.Once
 func Get_Data_String_NonEmpty_Internal_nes() gopurs_runtime.Value {
 	once_Data_String_NonEmpty_Internal_nes.Do(func() {
 		cache_Data_String_NonEmpty_Internal_nes = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_String_NonEmpty_Internal_nes(gopurs_runtime.CoerceToStruct[Constructor_Data_String_NonEmpty_Internal_MakeNonEmpty[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_String_NonEmpty_Internal_nes(gopurs_runtime.CoerceToStruct[Constructor_Data_String_NonEmpty_Internal_MakeNonEmpty](dict_0_box))
 })
 	})
 	return cache_Data_String_NonEmpty_Internal_nes
@@ -245,7 +245,7 @@ var once_Data_String_NonEmpty_Internal_joinWith1 sync.Once
 func Get_Data_String_NonEmpty_Internal_joinWith1() gopurs_runtime.Value {
 	once_Data_String_NonEmpty_Internal_joinWith1.Do(func() {
 		cache_Data_String_NonEmpty_Internal_joinWith1 = gopurs_runtime.Func(func(dictFoldable1_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_String_NonEmpty_Internal_joinWith1(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dictFoldable1_0_box))
+return Call_Data_String_NonEmpty_Internal_joinWith1(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dictFoldable1_0_box))
 })
 	})
 	return cache_Data_String_NonEmpty_Internal_joinWith1
@@ -256,7 +256,7 @@ var once_Data_String_NonEmpty_Internal_joinWith sync.Once
 func Get_Data_String_NonEmpty_Internal_joinWith() gopurs_runtime.Value {
 	once_Data_String_NonEmpty_Internal_joinWith.Do(func() {
 		cache_Data_String_NonEmpty_Internal_joinWith = gopurs_runtime.Func2(func(dictFoldable_0_box gopurs_runtime.Value, splice_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_String_NonEmpty_Internal_joinWith(gopurs_runtime.CoerceToStruct[Constructor_Data_Foldable_Foldable[gopurs_runtime.Value]](dictFoldable_0_box), splice_1_box.StrVal())
+return Call_Data_String_NonEmpty_Internal_joinWith(gopurs_runtime.CoerceToStruct[Constructor_Data_Foldable_Foldable](dictFoldable_0_box), splice_1_box.StrVal())
 })
 	})
 	return cache_Data_String_NonEmpty_Internal_joinWith
@@ -267,7 +267,7 @@ var once_Data_String_NonEmpty_Internal_join1With sync.Once
 func Get_Data_String_NonEmpty_Internal_join1With() gopurs_runtime.Value {
 	once_Data_String_NonEmpty_Internal_join1With.Do(func() {
 		cache_Data_String_NonEmpty_Internal_join1With = gopurs_runtime.Func(func(dictFoldable1_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_String_NonEmpty_Internal_join1With(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dictFoldable1_0_box))
+return Call_Data_String_NonEmpty_Internal_join1With(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dictFoldable1_0_box))
 })
 	})
 	return cache_Data_String_NonEmpty_Internal_join1With
@@ -384,7 +384,7 @@ var once_Data_String_NonEmpty_Internal_joinWith__632268499 sync.Once
 func Get_Data_String_NonEmpty_Internal_joinWith__632268499() gopurs_runtime.Value {
 	once_Data_String_NonEmpty_Internal_joinWith__632268499.Do(func() {
 		cache_Data_String_NonEmpty_Internal_joinWith__632268499 = gopurs_runtime.Func2(func(dictFoldable_0_box gopurs_runtime.Value, splice_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_String_NonEmpty_Internal_joinWith__632268499(gopurs_runtime.CoerceToStruct[Constructor_Data_Foldable_Foldable[gopurs_runtime.Value]](dictFoldable_0_box), splice_1_box.StrVal())
+return Call_Data_String_NonEmpty_Internal_joinWith__632268499(gopurs_runtime.CoerceToStruct[Constructor_Data_Foldable_Foldable](dictFoldable_0_box), splice_1_box.StrVal())
 })
 	})
 	return cache_Data_String_NonEmpty_Internal_joinWith__632268499
@@ -423,7 +423,7 @@ return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointe
 	return cache_Data_String_NonEmpty_Internal_liftS__3241548146
 }
 
-type Constructor_Data_String_NonEmpty_Internal_MakeNonEmpty[T_s any] struct {
+type Constructor_Data_String_NonEmpty_Internal_MakeNonEmpty struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 }
@@ -431,7 +431,7 @@ type Constructor_Data_String_NonEmpty_Internal_MakeNonEmpty[T_s any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[1987403114] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_String_NonEmpty_Internal_MakeNonEmpty[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_String_NonEmpty_Internal_MakeNonEmpty)(ptr)
 		_ = c
 		switch key {
 		case "nes": return gopurs_runtime.Box(c.V0)
@@ -441,13 +441,13 @@ func init() {
 }
 
 
-func Call_Data_String_NonEmpty_Internal_fromJust(v_0_loop *Constructor_Data_Maybe_Just[string]) string {
-var v_0 *Constructor_Data_Maybe_Just[string] = v_0_loop
+func Call_Data_String_NonEmpty_Internal_fromJust(v_0_loop *Constructor_Data_Maybe_Just) string {
+var v_0 *Constructor_Data_Maybe_Just = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(v_0)}.Type == 9 && gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(v_0)}.IntVal == 930809136 && gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr != nil) {
-__t0 = (*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0
+if (v_0 != nil) {
+__t0 = (v_0).V0
 goto end_branch_0
 } else {
 
@@ -532,8 +532,8 @@ return gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictIsSy
 }))
 }
 
-func Call_Data_String_NonEmpty_Internal_nes(dict_0_loop *Constructor_Data_String_NonEmpty_Internal_MakeNonEmpty[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_String_NonEmpty_Internal_MakeNonEmpty[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_String_NonEmpty_Internal_nes(dict_0_loop *Constructor_Data_String_NonEmpty_Internal_MakeNonEmpty) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_String_NonEmpty_Internal_MakeNonEmpty = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
@@ -594,15 +594,15 @@ end_branch_1:
 return (__t1.IntVal) != (0)
 }
 
-func Call_Data_String_NonEmpty_Internal_joinWith1(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dictFoldable1_0_loop
+func Call_Data_String_NonEmpty_Internal_joinWith1(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1) gopurs_runtime.Value {
+var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dictFoldable1_0_loop
 _ = dictFoldable1_0
-// TAST (Let): Foldable0_1_0 -> *Constructor_Data_Foldable_Foldable[gopurs_runtime.Value]
-Foldable0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Foldable_Foldable[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.Box(dictFoldable1_0.V0), gopurs_runtime.Value{}))
+// TAST (Let): Foldable0_1_0 -> *Constructor_Data_Foldable_Foldable
+Foldable0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Foldable_Foldable](gopurs_runtime.Apply(gopurs_runtime.Box(dictFoldable1_0.V0), gopurs_runtime.Value{}))
 _ = Foldable0_1_0
 return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): Semigroup0_3_2 -> *Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]
-Semigroup0_3_2 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Monoid_monoidString(), "Semigroup0"), gopurs_runtime.Value{}))
+// TAST (Let): Semigroup0_3_2 -> *Constructor_Data_Semigroup_Semigroup
+Semigroup0_3_2 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Monoid_monoidString(), "Semigroup0"), gopurs_runtime.Value{}))
 _ = Semigroup0_3_2
 // TAST (Let): __local_var_3_1 -> gopurs_runtime.Value
 __local_var_3_1 := gopurs_runtime.Func(func(xs_4 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -632,13 +632,13 @@ return gopurs_runtime.Apply(__local_var_3_1, x_4)
 })
 }
 
-func Call_Data_String_NonEmpty_Internal_joinWith(dictFoldable_0_loop *Constructor_Data_Foldable_Foldable[gopurs_runtime.Value], splice_1_loop string) gopurs_runtime.Value {
-var dictFoldable_0 *Constructor_Data_Foldable_Foldable[gopurs_runtime.Value] = dictFoldable_0_loop
+func Call_Data_String_NonEmpty_Internal_joinWith(dictFoldable_0_loop *Constructor_Data_Foldable_Foldable, splice_1_loop string) gopurs_runtime.Value {
+var dictFoldable_0 *Constructor_Data_Foldable_Foldable = dictFoldable_0_loop
 _ = dictFoldable_0
 var splice_1 string = splice_1_loop
 _ = splice_1
-// TAST (Let): Semigroup0_2_1 -> *Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]
-Semigroup0_2_1 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Monoid_monoidString(), "Semigroup0"), gopurs_runtime.Value{}))
+// TAST (Let): Semigroup0_2_1 -> *Constructor_Data_Semigroup_Semigroup
+Semigroup0_2_1 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Monoid_monoidString(), "Semigroup0"), gopurs_runtime.Value{}))
 _ = Semigroup0_2_1
 // TAST (Let): __local_var_2_0 -> gopurs_runtime.Value
 __local_var_2_0 := gopurs_runtime.Func(func(xs_3 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -667,11 +667,11 @@ return gopurs_runtime.Apply(__local_var_2_0, x_3)
 })
 }
 
-func Call_Data_String_NonEmpty_Internal_join1With(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dictFoldable1_0_loop
+func Call_Data_String_NonEmpty_Internal_join1With(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1) gopurs_runtime.Value {
+var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dictFoldable1_0_loop
 _ = dictFoldable1_0
-// TAST (Let): Foldable0_1_0 -> *Constructor_Data_Foldable_Foldable[gopurs_runtime.Value]
-Foldable0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Foldable_Foldable[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.Box(dictFoldable1_0.V0), gopurs_runtime.Value{}))
+// TAST (Let): Foldable0_1_0 -> *Constructor_Data_Foldable_Foldable
+Foldable0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Foldable_Foldable](gopurs_runtime.Apply(gopurs_runtime.Box(dictFoldable1_0.V0), gopurs_runtime.Value{}))
 _ = Foldable0_1_0
 return gopurs_runtime.Func(func(splice_2 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_3_1 -> gopurs_runtime.Value
@@ -683,23 +683,23 @@ return gopurs_runtime.Apply(__local_var_3_1, x_4)
 })
 }
 
-func Call_Data_String_NonEmpty_Internal_fromString(v_0_loop string) *Constructor_Data_Maybe_Just[string] {
+func Call_Data_String_NonEmpty_Internal_fromString(v_0_loop string) *Constructor_Data_Maybe_Just {
 var v_0 string = v_0_loop
 _ = v_0
 var __t0 gopurs_runtime.Value
 {
 if (v_0) == ("") {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just[gopurs_runtime.Value]{1, gopurs_runtime.Str(v_0)})}
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Str(v_0)})}
 }
 end_branch_0:
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[string]](__t0)
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t0)
 }
 
 func Call_Data_String_NonEmpty_Internal_stripPrefix(pat_0_loop string) gopurs_runtime.Value {
@@ -714,7 +714,7 @@ _ = pat_0
 return gopurs_runtime.Apply2(Get_Control_Bind_composeKleisliFlipped__2781497852(), Get_Data_String_NonEmpty_Internal_fromString(), gopurs_runtime.Apply(Get_Data_String_NonEmpty_Internal_liftS__3241548146(), gopurs_runtime.Apply(Get_Data_String_CodeUnits_stripSuffix(), gopurs_runtime.Str(pat_0))))
 }
 
-func Call_Data_String_NonEmpty_Internal_trim(v_0_loop string) *Constructor_Data_Maybe_Just[string] {
+func Call_Data_String_NonEmpty_Internal_trim(v_0_loop string) *Constructor_Data_Maybe_Just {
 var v_0 string = v_0_loop
 _ = v_0
 // TAST (Let): __local_var_1_0 -> string
@@ -723,17 +723,17 @@ _ = __local_var_1_0
 var __t1 gopurs_runtime.Value
 {
 if (__local_var_1_0) == ("") {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just[gopurs_runtime.Value]{1, gopurs_runtime.Str(__local_var_1_0)})}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Str(__local_var_1_0)})}
 }
 end_branch_1:
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[string]](__t1)
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t1)
 }
 
 func Call_Data_String_NonEmpty_Internal_unsafeFromString(_dollar__unused_0_loop gopurs_runtime.Value, x_1_loop string) string {
@@ -744,22 +744,22 @@ _ = x_1
 var __t1 gopurs_runtime.Value
 {
 if (gopurs_runtime.Str(x_1).StrVal()) == ("") {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just[gopurs_runtime.Value]{1, gopurs_runtime.Str(gopurs_runtime.Str(x_1).StrVal())})}
+__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Str(gopurs_runtime.Str(x_1).StrVal())})}
 }
 end_branch_1:
 // TAST (Let): __local_var_2_0 -> gopurs_runtime.Value
-var __local_var_2_0 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[string]](__t1))}
+var __local_var_2_0 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t1))}
 var __t2 gopurs_runtime.Value
 {
 if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 930809136 && __local_var_2_0.UnsafePtr != nil) {
-__t2 = (*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(__local_var_2_0.UnsafePtr).V0
+__t2 = (*Constructor_Data_Maybe_Just)(__local_var_2_0.UnsafePtr).V0
 goto end_branch_2
 } else {
 
@@ -823,13 +823,13 @@ _ = s2_1
 return (v_0) + (s2_1)
 }
 
-func Call_Data_String_NonEmpty_Internal_joinWith__632268499(dictFoldable_0_loop *Constructor_Data_Foldable_Foldable[gopurs_runtime.Value], splice_1_loop string) gopurs_runtime.Value {
-var dictFoldable_0 *Constructor_Data_Foldable_Foldable[gopurs_runtime.Value] = dictFoldable_0_loop
+func Call_Data_String_NonEmpty_Internal_joinWith__632268499(dictFoldable_0_loop *Constructor_Data_Foldable_Foldable, splice_1_loop string) gopurs_runtime.Value {
+var dictFoldable_0 *Constructor_Data_Foldable_Foldable = dictFoldable_0_loop
 _ = dictFoldable_0
 var splice_1 string = splice_1_loop
 _ = splice_1
-// TAST (Let): Semigroup0_2_1 -> *Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]
-Semigroup0_2_1 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Monoid_monoidString(), "Semigroup0"), gopurs_runtime.Value{}))
+// TAST (Let): Semigroup0_2_1 -> *Constructor_Data_Semigroup_Semigroup
+Semigroup0_2_1 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Monoid_monoidString(), "Semigroup0"), gopurs_runtime.Value{}))
 _ = Semigroup0_2_1
 // TAST (Let): __local_var_2_0 -> gopurs_runtime.Value
 __local_var_2_0 := gopurs_runtime.Func(func(xs_3 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -874,12 +874,12 @@ _ = v_1
 return gopurs_runtime.Apply(f_0, gopurs_runtime.Str(v_1))
 }
 
-func Call_Data_String_NonEmpty_Internal_liftS__3241548146(f_0_loop gopurs_runtime.Value, v_1_loop string) *Constructor_Data_Maybe_Just[string] {
+func Call_Data_String_NonEmpty_Internal_liftS__3241548146(f_0_loop gopurs_runtime.Value, v_1_loop string) *Constructor_Data_Maybe_Just {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var v_1 string = v_1_loop
 _ = v_1
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[string]](gopurs_runtime.Apply(f_0, gopurs_runtime.Str(v_1)))
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(f_0, gopurs_runtime.Str(v_1)))
 }
 
 

@@ -45,7 +45,7 @@ var __t2 gopurs_runtime.Value
 {
 if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 3711209382) {
 // TAST (Let): __local_var_3_1 -> gopurs_runtime.Value
-__local_var_3_1 := (*Constructor_Data_Either_Left[gopurs_runtime.Value, gopurs_runtime.Value])(__local_var_2_0.UnsafePtr).V0
+__local_var_3_1 := (*Constructor_Data_Either_Left)(__local_var_2_0.UnsafePtr).V0
 _ = __local_var_3_1
 __t2 = gopurs_runtime.Apply(Get_Partial_Unsafe__unsafePartial(), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(Get_Partial__crashWith(), gopurs_runtime.Str(__local_var_3_1.StrVal()))
@@ -57,7 +57,7 @@ goto end_branch_2
 }
 {
 if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 2465973597) {
-__t2 = (*Constructor_Data_Either_Right[gopurs_runtime.Value, gopurs_runtime.Value])(__local_var_2_0.UnsafePtr).V0
+__t2 = (*Constructor_Data_Either_Right)(__local_var_2_0.UnsafePtr).V0
 goto end_branch_2
 } else {
 

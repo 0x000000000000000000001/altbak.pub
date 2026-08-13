@@ -130,7 +130,7 @@ var once_Data_Newtype_wrap sync.Once
 func Get_Data_Newtype_wrap() gopurs_runtime.Value {
 	once_Data_Newtype_wrap.Do(func() {
 		cache_Data_Newtype_wrap = gopurs_runtime.Func(func(_dollar__unused_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_wrap(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_0_box))
+return Call_Data_Newtype_wrap(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_0_box))
 })
 	})
 	return cache_Data_Newtype_wrap
@@ -150,7 +150,7 @@ var once_Data_Newtype_unwrap sync.Once
 func Get_Data_Newtype_unwrap() gopurs_runtime.Value {
 	once_Data_Newtype_unwrap.Do(func() {
 		cache_Data_Newtype_unwrap = gopurs_runtime.Func(func(_dollar__unused_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_unwrap(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_0_box))
+return Call_Data_Newtype_unwrap(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_0_box))
 })
 	})
 	return cache_Data_Newtype_unwrap
@@ -170,7 +170,7 @@ var once_Data_Newtype_underF2 sync.Once
 func Get_Data_Newtype_underF2() gopurs_runtime.Value {
 	once_Data_Newtype_underF2.Do(func() {
 		cache_Data_Newtype_underF2 = gopurs_runtime.Func5(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, _dollar__unused_2_box gopurs_runtime.Value, _dollar__unused_3_box gopurs_runtime.Value, v_4_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_underF2(_dollar__unused_0_box, _dollar__unused_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_2_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_3_box), v_4_box)
+return Call_Data_Newtype_underF2(_dollar__unused_0_box, _dollar__unused_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_2_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_3_box), v_4_box)
 })
 	})
 	return cache_Data_Newtype_underF2
@@ -181,7 +181,7 @@ var once_Data_Newtype_underF sync.Once
 func Get_Data_Newtype_underF() gopurs_runtime.Value {
 	once_Data_Newtype_underF.Do(func() {
 		cache_Data_Newtype_underF = gopurs_runtime.Func5(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, _dollar__unused_2_box gopurs_runtime.Value, _dollar__unused_3_box gopurs_runtime.Value, v_4_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_underF(_dollar__unused_0_box, _dollar__unused_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_2_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_3_box), v_4_box)
+return Call_Data_Newtype_underF(_dollar__unused_0_box, _dollar__unused_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_2_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_3_box), v_4_box)
 })
 	})
 	return cache_Data_Newtype_underF
@@ -192,7 +192,7 @@ var once_Data_Newtype_under2 sync.Once
 func Get_Data_Newtype_under2() gopurs_runtime.Value {
 	once_Data_Newtype_under2.Do(func() {
 		cache_Data_Newtype_under2 = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_under2(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_1_box), v_2_box)
+return Call_Data_Newtype_under2(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_1_box), v_2_box)
 })
 	})
 	return cache_Data_Newtype_under2
@@ -203,7 +203,7 @@ var once_Data_Newtype_under sync.Once
 func Get_Data_Newtype_under() gopurs_runtime.Value {
 	once_Data_Newtype_under.Do(func() {
 		cache_Data_Newtype_under = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_under(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_1_box), v_2_box)
+return Call_Data_Newtype_under(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_1_box), v_2_box)
 })
 	})
 	return cache_Data_Newtype_under
@@ -214,7 +214,7 @@ var once_Data_Newtype_un sync.Once
 func Get_Data_Newtype_un() gopurs_runtime.Value {
 	once_Data_Newtype_un.Do(func() {
 		cache_Data_Newtype_un = gopurs_runtime.Func2(func(_dollar__unused_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_un(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_0_box), v_1_box)
+return Call_Data_Newtype_un(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_0_box), v_1_box)
 })
 	})
 	return cache_Data_Newtype_un
@@ -225,7 +225,7 @@ var once_Data_Newtype_traverse sync.Once
 func Get_Data_Newtype_traverse() gopurs_runtime.Value {
 	once_Data_Newtype_traverse.Do(func() {
 		cache_Data_Newtype_traverse = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_traverse(_dollar__unused_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_1_box), v_2_box)
+return Call_Data_Newtype_traverse(_dollar__unused_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_1_box), v_2_box)
 })
 	})
 	return cache_Data_Newtype_traverse
@@ -236,7 +236,7 @@ var once_Data_Newtype_overF2 sync.Once
 func Get_Data_Newtype_overF2() gopurs_runtime.Value {
 	once_Data_Newtype_overF2.Do(func() {
 		cache_Data_Newtype_overF2 = gopurs_runtime.Func5(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, _dollar__unused_2_box gopurs_runtime.Value, _dollar__unused_3_box gopurs_runtime.Value, v_4_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_overF2(_dollar__unused_0_box, _dollar__unused_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_2_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_3_box), v_4_box)
+return Call_Data_Newtype_overF2(_dollar__unused_0_box, _dollar__unused_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_2_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_3_box), v_4_box)
 })
 	})
 	return cache_Data_Newtype_overF2
@@ -247,7 +247,7 @@ var once_Data_Newtype_overF sync.Once
 func Get_Data_Newtype_overF() gopurs_runtime.Value {
 	once_Data_Newtype_overF.Do(func() {
 		cache_Data_Newtype_overF = gopurs_runtime.Func5(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, _dollar__unused_2_box gopurs_runtime.Value, _dollar__unused_3_box gopurs_runtime.Value, v_4_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_overF(_dollar__unused_0_box, _dollar__unused_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_2_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_3_box), v_4_box)
+return Call_Data_Newtype_overF(_dollar__unused_0_box, _dollar__unused_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_2_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_3_box), v_4_box)
 })
 	})
 	return cache_Data_Newtype_overF
@@ -258,7 +258,7 @@ var once_Data_Newtype_over2 sync.Once
 func Get_Data_Newtype_over2() gopurs_runtime.Value {
 	once_Data_Newtype_over2.Do(func() {
 		cache_Data_Newtype_over2 = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_over2(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_1_box), v_2_box)
+return Call_Data_Newtype_over2(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_1_box), v_2_box)
 })
 	})
 	return cache_Data_Newtype_over2
@@ -269,7 +269,7 @@ var once_Data_Newtype_over sync.Once
 func Get_Data_Newtype_over() gopurs_runtime.Value {
 	once_Data_Newtype_over.Do(func() {
 		cache_Data_Newtype_over = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_over(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_1_box), v_2_box)
+return Call_Data_Newtype_over(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_1_box), v_2_box)
 })
 	})
 	return cache_Data_Newtype_over
@@ -368,7 +368,7 @@ var once_Data_Newtype_modify sync.Once
 func Get_Data_Newtype_modify() gopurs_runtime.Value {
 	once_Data_Newtype_modify.Do(func() {
 		cache_Data_Newtype_modify = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, fn_1_box gopurs_runtime.Value, t_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_modify(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_0_box), fn_1_box, t_2_box)
+return Call_Data_Newtype_modify(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_0_box), fn_1_box, t_2_box)
 })
 	})
 	return cache_Data_Newtype_modify
@@ -379,7 +379,7 @@ var once_Data_Newtype_collect sync.Once
 func Get_Data_Newtype_collect() gopurs_runtime.Value {
 	once_Data_Newtype_collect.Do(func() {
 		cache_Data_Newtype_collect = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_collect(_dollar__unused_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_1_box), v_2_box)
+return Call_Data_Newtype_collect(_dollar__unused_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_1_box), v_2_box)
 })
 	})
 	return cache_Data_Newtype_collect
@@ -390,7 +390,7 @@ var once_Data_Newtype_alaF sync.Once
 func Get_Data_Newtype_alaF() gopurs_runtime.Value {
 	once_Data_Newtype_alaF.Do(func() {
 		cache_Data_Newtype_alaF = gopurs_runtime.Func5(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, _dollar__unused_2_box gopurs_runtime.Value, _dollar__unused_3_box gopurs_runtime.Value, v_4_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_alaF(_dollar__unused_0_box, _dollar__unused_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_2_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_3_box), v_4_box)
+return Call_Data_Newtype_alaF(_dollar__unused_0_box, _dollar__unused_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_2_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_3_box), v_4_box)
 })
 	})
 	return cache_Data_Newtype_alaF
@@ -401,7 +401,7 @@ var once_Data_Newtype_ala sync.Once
 func Get_Data_Newtype_ala() gopurs_runtime.Value {
 	once_Data_Newtype_ala.Do(func() {
 		cache_Data_Newtype_ala = gopurs_runtime.Func5(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, _dollar__unused_2_box gopurs_runtime.Value, v_3_box gopurs_runtime.Value, f_4_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_ala(_dollar__unused_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_1_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_2_box), v_3_box, f_4_box)
+return Call_Data_Newtype_ala(_dollar__unused_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_1_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_2_box), v_3_box, f_4_box)
 })
 	})
 	return cache_Data_Newtype_ala
@@ -412,7 +412,7 @@ var once_Data_Newtype_ala__2430830187 sync.Once
 func Get_Data_Newtype_ala__2430830187() gopurs_runtime.Value {
 	once_Data_Newtype_ala__2430830187.Do(func() {
 		cache_Data_Newtype_ala__2430830187 = gopurs_runtime.Func5(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, _dollar__unused_2_box gopurs_runtime.Value, v_3_box gopurs_runtime.Value, f_4_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_ala__2430830187(_dollar__unused_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_1_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_2_box), v_3_box, f_4_box)
+return Call_Data_Newtype_ala__2430830187(_dollar__unused_0_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_1_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_2_box), v_3_box, f_4_box)
 })
 	})
 	return cache_Data_Newtype_ala__2430830187
@@ -423,7 +423,7 @@ var once_Data_Newtype_alaF__1321707980 sync.Once
 func Get_Data_Newtype_alaF__1321707980() gopurs_runtime.Value {
 	once_Data_Newtype_alaF__1321707980.Do(func() {
 		cache_Data_Newtype_alaF__1321707980 = gopurs_runtime.Func5(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, _dollar__unused_2_box gopurs_runtime.Value, _dollar__unused_3_box gopurs_runtime.Value, v_4_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_alaF__1321707980(_dollar__unused_0_box, _dollar__unused_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_2_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, bool]](_dollar__unused_3_box), v_4_box)
+return Call_Data_Newtype_alaF__1321707980(_dollar__unused_0_box, _dollar__unused_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_2_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_3_box), v_4_box)
 })
 	})
 	return cache_Data_Newtype_alaF__1321707980
@@ -434,7 +434,7 @@ var once_Data_Newtype_alaF__476165004 sync.Once
 func Get_Data_Newtype_alaF__476165004() gopurs_runtime.Value {
 	once_Data_Newtype_alaF__476165004.Do(func() {
 		cache_Data_Newtype_alaF__476165004 = gopurs_runtime.Func5(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, _dollar__unused_2_box gopurs_runtime.Value, _dollar__unused_3_box gopurs_runtime.Value, v_4_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_alaF__476165004(_dollar__unused_0_box, _dollar__unused_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_2_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, bool]](_dollar__unused_3_box), v_4_box)
+return Call_Data_Newtype_alaF__476165004(_dollar__unused_0_box, _dollar__unused_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_2_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_3_box), v_4_box)
 })
 	})
 	return cache_Data_Newtype_alaF__476165004
@@ -445,7 +445,7 @@ var once_Data_Newtype_alaF__933886072 sync.Once
 func Get_Data_Newtype_alaF__933886072() gopurs_runtime.Value {
 	once_Data_Newtype_alaF__933886072.Do(func() {
 		cache_Data_Newtype_alaF__933886072 = gopurs_runtime.Func5(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, _dollar__unused_2_box gopurs_runtime.Value, _dollar__unused_3_box gopurs_runtime.Value, v_4_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_alaF__933886072(_dollar__unused_0_box, _dollar__unused_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]]](_dollar__unused_2_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, bool]](_dollar__unused_3_box), v_4_box)
+return Call_Data_Newtype_alaF__933886072(_dollar__unused_0_box, _dollar__unused_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_2_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_3_box), v_4_box)
 })
 	})
 	return cache_Data_Newtype_alaF__933886072
@@ -478,7 +478,7 @@ var once_Data_Newtype_alaF__4085337484 sync.Once
 func Get_Data_Newtype_alaF__4085337484() gopurs_runtime.Value {
 	once_Data_Newtype_alaF__4085337484.Do(func() {
 		cache_Data_Newtype_alaF__4085337484 = gopurs_runtime.Func5(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, _dollar__unused_2_box gopurs_runtime.Value, _dollar__unused_3_box gopurs_runtime.Value, v_4_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_alaF__4085337484(_dollar__unused_0_box, _dollar__unused_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_2_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_3_box), v_4_box)
+return Call_Data_Newtype_alaF__4085337484(_dollar__unused_0_box, _dollar__unused_1_box, gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_2_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_3_box), v_4_box)
 })
 	})
 	return cache_Data_Newtype_alaF__4085337484
@@ -533,7 +533,7 @@ var once_Data_Newtype_over__2540313282 sync.Once
 func Get_Data_Newtype_over__2540313282() gopurs_runtime.Value {
 	once_Data_Newtype_over__2540313282.Do(func() {
 		cache_Data_Newtype_over__2540313282 = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_over__2540313282(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, float64]](_dollar__unused_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_1_box), v_2_box)
+return Call_Data_Newtype_over__2540313282(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_1_box), v_2_box)
 })
 	})
 	return cache_Data_Newtype_over__2540313282
@@ -544,7 +544,7 @@ var once_Data_Newtype_over__1462660013 sync.Once
 func Get_Data_Newtype_over__1462660013() gopurs_runtime.Value {
 	once_Data_Newtype_over__1462660013.Do(func() {
 		cache_Data_Newtype_over__1462660013 = gopurs_runtime.Func3(func(_dollar__unused_0_box gopurs_runtime.Value, _dollar__unused_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_over__1462660013(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_1_box), v_2_box)
+return Call_Data_Newtype_over__1462660013(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_1_box), v_2_box)
 })
 	})
 	return cache_Data_Newtype_over__1462660013
@@ -588,7 +588,7 @@ var once_Data_Newtype_un__2927362652 sync.Once
 func Get_Data_Newtype_un__2927362652() gopurs_runtime.Value {
 	once_Data_Newtype_un__2927362652.Do(func() {
 		cache_Data_Newtype_un__2927362652 = gopurs_runtime.Func2(func(_dollar__unused_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_un__2927362652(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, string]](_dollar__unused_0_box), v_1_box)
+return Call_Data_Newtype_un__2927362652(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_0_box), v_1_box)
 })
 	})
 	return cache_Data_Newtype_un__2927362652
@@ -599,7 +599,7 @@ var once_Data_Newtype_un__3470773042 sync.Once
 func Get_Data_Newtype_un__3470773042() gopurs_runtime.Value {
 	once_Data_Newtype_un__3470773042.Do(func() {
 		cache_Data_Newtype_un__3470773042 = gopurs_runtime.Func2(func(_dollar__unused_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_un__3470773042(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_0_box), v_1_box)
+return Call_Data_Newtype_un__3470773042(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_0_box), v_1_box)
 })
 	})
 	return cache_Data_Newtype_un__3470773042
@@ -610,7 +610,7 @@ var once_Data_Newtype_un__1660466461 sync.Once
 func Get_Data_Newtype_un__1660466461() gopurs_runtime.Value {
 	once_Data_Newtype_un__1660466461.Do(func() {
 		cache_Data_Newtype_un__1660466461 = gopurs_runtime.Func2(func(_dollar__unused_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_un__1660466461(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_0_box), v_1_box)
+return Call_Data_Newtype_un__1660466461(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_0_box), v_1_box)
 })
 	})
 	return cache_Data_Newtype_un__1660466461
@@ -632,7 +632,7 @@ var once_Data_Newtype_unwrap__1971311275 sync.Once
 func Get_Data_Newtype_unwrap__1971311275() gopurs_runtime.Value {
 	once_Data_Newtype_unwrap__1971311275.Do(func() {
 		cache_Data_Newtype_unwrap__1971311275 = gopurs_runtime.Func(func(_dollar__unused_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_unwrap__1971311275(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_0_box))
+return Call_Data_Newtype_unwrap__1971311275(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_0_box))
 })
 	})
 	return cache_Data_Newtype_unwrap__1971311275
@@ -643,7 +643,7 @@ var once_Data_Newtype_unwrap__1997596318 sync.Once
 func Get_Data_Newtype_unwrap__1997596318() gopurs_runtime.Value {
 	once_Data_Newtype_unwrap__1997596318.Do(func() {
 		cache_Data_Newtype_unwrap__1997596318 = gopurs_runtime.Func(func(_dollar__unused_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_unwrap__1997596318(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_0_box))
+return Call_Data_Newtype_unwrap__1997596318(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_0_box))
 })
 	})
 	return cache_Data_Newtype_unwrap__1997596318
@@ -654,7 +654,7 @@ var once_Data_Newtype_unwrap__321736283 sync.Once
 func Get_Data_Newtype_unwrap__321736283() gopurs_runtime.Value {
 	once_Data_Newtype_unwrap__321736283.Do(func() {
 		cache_Data_Newtype_unwrap__321736283 = gopurs_runtime.Func(func(_dollar__unused_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_unwrap__321736283(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]]](_dollar__unused_0_box))
+return Call_Data_Newtype_unwrap__321736283(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_0_box))
 })
 	})
 	return cache_Data_Newtype_unwrap__321736283
@@ -665,7 +665,7 @@ var once_Data_Newtype_unwrap__4073450430 sync.Once
 func Get_Data_Newtype_unwrap__4073450430() gopurs_runtime.Value {
 	once_Data_Newtype_unwrap__4073450430.Do(func() {
 		cache_Data_Newtype_unwrap__4073450430 = gopurs_runtime.Func(func(_dollar__unused_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_unwrap__4073450430(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_0_box))
+return Call_Data_Newtype_unwrap__4073450430(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_0_box))
 })
 	})
 	return cache_Data_Newtype_unwrap__4073450430
@@ -676,7 +676,7 @@ var once_Data_Newtype_unwrap__3159071614 sync.Once
 func Get_Data_Newtype_unwrap__3159071614() gopurs_runtime.Value {
 	once_Data_Newtype_unwrap__3159071614.Do(func() {
 		cache_Data_Newtype_unwrap__3159071614 = gopurs_runtime.Func(func(_dollar__unused_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_unwrap__3159071614(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_0_box))
+return Call_Data_Newtype_unwrap__3159071614(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_0_box))
 })
 	})
 	return cache_Data_Newtype_unwrap__3159071614
@@ -687,7 +687,7 @@ var once_Data_Newtype_unwrap__3531743166 sync.Once
 func Get_Data_Newtype_unwrap__3531743166() gopurs_runtime.Value {
 	once_Data_Newtype_unwrap__3531743166.Do(func() {
 		cache_Data_Newtype_unwrap__3531743166 = gopurs_runtime.Func(func(_dollar__unused_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_unwrap__3531743166(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]]](_dollar__unused_0_box))
+return Call_Data_Newtype_unwrap__3531743166(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_0_box))
 })
 	})
 	return cache_Data_Newtype_unwrap__3531743166
@@ -698,7 +698,7 @@ var once_Data_Newtype_unwrap__1763047240 sync.Once
 func Get_Data_Newtype_unwrap__1763047240() gopurs_runtime.Value {
 	once_Data_Newtype_unwrap__1763047240.Do(func() {
 		cache_Data_Newtype_unwrap__1763047240 = gopurs_runtime.Func(func(_dollar__unused_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_unwrap__1763047240(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_0_box))
+return Call_Data_Newtype_unwrap__1763047240(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_0_box))
 })
 	})
 	return cache_Data_Newtype_unwrap__1763047240
@@ -731,7 +731,7 @@ var once_Data_Newtype_unwrap__3267718003 sync.Once
 func Get_Data_Newtype_unwrap__3267718003() gopurs_runtime.Value {
 	once_Data_Newtype_unwrap__3267718003.Do(func() {
 		cache_Data_Newtype_unwrap__3267718003 = gopurs_runtime.Func(func(_dollar__unused_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_unwrap__3267718003(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_0_box))
+return Call_Data_Newtype_unwrap__3267718003(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_0_box))
 })
 	})
 	return cache_Data_Newtype_unwrap__3267718003
@@ -742,7 +742,7 @@ var once_Data_Newtype_unwrap__3044449299 sync.Once
 func Get_Data_Newtype_unwrap__3044449299() gopurs_runtime.Value {
 	once_Data_Newtype_unwrap__3044449299.Do(func() {
 		cache_Data_Newtype_unwrap__3044449299 = gopurs_runtime.Func(func(_dollar__unused_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_unwrap__3044449299(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_0_box))
+return Call_Data_Newtype_unwrap__3044449299(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_0_box))
 })
 	})
 	return cache_Data_Newtype_unwrap__3044449299
@@ -841,13 +841,13 @@ var once_Data_Newtype_wrap__3267718003 sync.Once
 func Get_Data_Newtype_wrap__3267718003() gopurs_runtime.Value {
 	once_Data_Newtype_wrap__3267718003.Do(func() {
 		cache_Data_Newtype_wrap__3267718003 = gopurs_runtime.Func(func(_dollar__unused_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Newtype_wrap__3267718003(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]](_dollar__unused_0_box))
+return Call_Data_Newtype_wrap__3267718003(gopurs_runtime.CoerceToStruct[Constructor_Data_Newtype_Newtype](_dollar__unused_0_box))
 })
 	})
 	return cache_Data_Newtype_wrap__3267718003
 }
 
-type Constructor_Data_Newtype_Newtype[T_t any, T_a any] struct {
+type Constructor_Data_Newtype_Newtype struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 }
@@ -855,7 +855,7 @@ type Constructor_Data_Newtype_Newtype[T_t any, T_a any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[3322196858] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_Newtype_Newtype)(ptr)
 		_ = c
 		switch key {
 		case "Coercible0": return gopurs_runtime.Box(c.V0)
@@ -871,134 +871,134 @@ _ = x_0
 return x_0
 }
 
-func Call_Data_Newtype_wrap(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var _dollar__unused_0 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_0_loop
+func Call_Data_Newtype_wrap(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype) gopurs_runtime.Value {
+var _dollar__unused_0 *Constructor_Data_Newtype_Newtype = _dollar__unused_0_loop
 _ = _dollar__unused_0
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
-func Call_Data_Newtype_unwrap(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var _dollar__unused_0 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_0_loop
+func Call_Data_Newtype_unwrap(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype) gopurs_runtime.Value {
+var _dollar__unused_0 *Constructor_Data_Newtype_Newtype = _dollar__unused_0_loop
 _ = _dollar__unused_0
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
-func Call_Data_Newtype_underF2(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], _dollar__unused_3_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_Data_Newtype_underF2(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop *Constructor_Data_Newtype_Newtype, _dollar__unused_3_loop *Constructor_Data_Newtype_Newtype, v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
 _ = _dollar__unused_1
-var _dollar__unused_2 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_2_loop
+var _dollar__unused_2 *Constructor_Data_Newtype_Newtype = _dollar__unused_2_loop
 _ = _dollar__unused_2
-var _dollar__unused_3 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_3_loop
+var _dollar__unused_3 *Constructor_Data_Newtype_Newtype = _dollar__unused_3_loop
 _ = _dollar__unused_3
 var v_4 gopurs_runtime.Value = v_4_loop
 _ = v_4
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
-func Call_Data_Newtype_underF(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], _dollar__unused_3_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_Data_Newtype_underF(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop *Constructor_Data_Newtype_Newtype, _dollar__unused_3_loop *Constructor_Data_Newtype_Newtype, v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
 _ = _dollar__unused_1
-var _dollar__unused_2 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_2_loop
+var _dollar__unused_2 *Constructor_Data_Newtype_Newtype = _dollar__unused_2_loop
 _ = _dollar__unused_2
-var _dollar__unused_3 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_3_loop
+var _dollar__unused_3 *Constructor_Data_Newtype_Newtype = _dollar__unused_3_loop
 _ = _dollar__unused_3
 var v_4 gopurs_runtime.Value = v_4_loop
 _ = v_4
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
-func Call_Data_Newtype_under2(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], _dollar__unused_1_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var _dollar__unused_0 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_0_loop
+func Call_Data_Newtype_under2(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype, _dollar__unused_1_loop *Constructor_Data_Newtype_Newtype, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var _dollar__unused_0 *Constructor_Data_Newtype_Newtype = _dollar__unused_0_loop
 _ = _dollar__unused_0
-var _dollar__unused_1 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_1_loop
+var _dollar__unused_1 *Constructor_Data_Newtype_Newtype = _dollar__unused_1_loop
 _ = _dollar__unused_1
 var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
-func Call_Data_Newtype_under(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], _dollar__unused_1_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var _dollar__unused_0 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_0_loop
+func Call_Data_Newtype_under(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype, _dollar__unused_1_loop *Constructor_Data_Newtype_Newtype, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var _dollar__unused_0 *Constructor_Data_Newtype_Newtype = _dollar__unused_0_loop
 _ = _dollar__unused_0
-var _dollar__unused_1 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_1_loop
+var _dollar__unused_1 *Constructor_Data_Newtype_Newtype = _dollar__unused_1_loop
 _ = _dollar__unused_1
 var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
-func Call_Data_Newtype_un(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var _dollar__unused_0 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_0_loop
+func Call_Data_Newtype_un(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var _dollar__unused_0 *Constructor_Data_Newtype_Newtype = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
-func Call_Data_Newtype_traverse(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_Data_Newtype_traverse(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop *Constructor_Data_Newtype_Newtype, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
-var _dollar__unused_1 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_1_loop
+var _dollar__unused_1 *Constructor_Data_Newtype_Newtype = _dollar__unused_1_loop
 _ = _dollar__unused_1
 var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
-func Call_Data_Newtype_overF2(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], _dollar__unused_3_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_Data_Newtype_overF2(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop *Constructor_Data_Newtype_Newtype, _dollar__unused_3_loop *Constructor_Data_Newtype_Newtype, v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
 _ = _dollar__unused_1
-var _dollar__unused_2 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_2_loop
+var _dollar__unused_2 *Constructor_Data_Newtype_Newtype = _dollar__unused_2_loop
 _ = _dollar__unused_2
-var _dollar__unused_3 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_3_loop
+var _dollar__unused_3 *Constructor_Data_Newtype_Newtype = _dollar__unused_3_loop
 _ = _dollar__unused_3
 var v_4 gopurs_runtime.Value = v_4_loop
 _ = v_4
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
-func Call_Data_Newtype_overF(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], _dollar__unused_3_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_Data_Newtype_overF(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop *Constructor_Data_Newtype_Newtype, _dollar__unused_3_loop *Constructor_Data_Newtype_Newtype, v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
 _ = _dollar__unused_1
-var _dollar__unused_2 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_2_loop
+var _dollar__unused_2 *Constructor_Data_Newtype_Newtype = _dollar__unused_2_loop
 _ = _dollar__unused_2
-var _dollar__unused_3 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_3_loop
+var _dollar__unused_3 *Constructor_Data_Newtype_Newtype = _dollar__unused_3_loop
 _ = _dollar__unused_3
 var v_4 gopurs_runtime.Value = v_4_loop
 _ = v_4
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
-func Call_Data_Newtype_over2(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], _dollar__unused_1_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var _dollar__unused_0 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_0_loop
+func Call_Data_Newtype_over2(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype, _dollar__unused_1_loop *Constructor_Data_Newtype_Newtype, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var _dollar__unused_0 *Constructor_Data_Newtype_Newtype = _dollar__unused_0_loop
 _ = _dollar__unused_0
-var _dollar__unused_1 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_1_loop
+var _dollar__unused_1 *Constructor_Data_Newtype_Newtype = _dollar__unused_1_loop
 _ = _dollar__unused_1
 var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
-func Call_Data_Newtype_over(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], _dollar__unused_1_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var _dollar__unused_0 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_0_loop
+func Call_Data_Newtype_over(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype, _dollar__unused_1_loop *Constructor_Data_Newtype_Newtype, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var _dollar__unused_0 *Constructor_Data_Newtype_Newtype = _dollar__unused_0_loop
 _ = _dollar__unused_0
-var _dollar__unused_1 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_1_loop
+var _dollar__unused_1 *Constructor_Data_Newtype_Newtype = _dollar__unused_1_loop
 _ = _dollar__unused_1
 var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
-func Call_Data_Newtype_modify(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], fn_1_loop gopurs_runtime.Value, t_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var _dollar__unused_0 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_0_loop
+func Call_Data_Newtype_modify(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype, fn_1_loop gopurs_runtime.Value, t_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var _dollar__unused_0 *Constructor_Data_Newtype_Newtype = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var fn_1 gopurs_runtime.Value = fn_1_loop
 _ = fn_1
@@ -1007,36 +1007,36 @@ _ = t_2
 return gopurs_runtime.Apply(fn_1, t_2)
 }
 
-func Call_Data_Newtype_collect(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_Data_Newtype_collect(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop *Constructor_Data_Newtype_Newtype, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
-var _dollar__unused_1 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_1_loop
+var _dollar__unused_1 *Constructor_Data_Newtype_Newtype = _dollar__unused_1_loop
 _ = _dollar__unused_1
 var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
-func Call_Data_Newtype_alaF(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], _dollar__unused_3_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_Data_Newtype_alaF(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop *Constructor_Data_Newtype_Newtype, _dollar__unused_3_loop *Constructor_Data_Newtype_Newtype, v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
 _ = _dollar__unused_1
-var _dollar__unused_2 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_2_loop
+var _dollar__unused_2 *Constructor_Data_Newtype_Newtype = _dollar__unused_2_loop
 _ = _dollar__unused_2
-var _dollar__unused_3 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_3_loop
+var _dollar__unused_3 *Constructor_Data_Newtype_Newtype = _dollar__unused_3_loop
 _ = _dollar__unused_3
 var v_4 gopurs_runtime.Value = v_4_loop
 _ = v_4
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
-func Call_Data_Newtype_ala(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], _dollar__unused_2_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], v_3_loop gopurs_runtime.Value, f_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_Data_Newtype_ala(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop *Constructor_Data_Newtype_Newtype, _dollar__unused_2_loop *Constructor_Data_Newtype_Newtype, v_3_loop gopurs_runtime.Value, f_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
-var _dollar__unused_1 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_1_loop
+var _dollar__unused_1 *Constructor_Data_Newtype_Newtype = _dollar__unused_1_loop
 _ = _dollar__unused_1
-var _dollar__unused_2 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_2_loop
+var _dollar__unused_2 *Constructor_Data_Newtype_Newtype = _dollar__unused_2_loop
 _ = _dollar__unused_2
 var v_3 gopurs_runtime.Value = v_3_loop
 _ = v_3
@@ -1045,12 +1045,12 @@ _ = f_4
 return gopurs_runtime.Apply(f_4, Get_Unsafe_Coerce_unsafeCoerce())
 }
 
-func Call_Data_Newtype_ala__2430830187(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], _dollar__unused_2_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], v_3_loop gopurs_runtime.Value, f_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_Data_Newtype_ala__2430830187(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop *Constructor_Data_Newtype_Newtype, _dollar__unused_2_loop *Constructor_Data_Newtype_Newtype, v_3_loop gopurs_runtime.Value, f_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
-var _dollar__unused_1 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_1_loop
+var _dollar__unused_1 *Constructor_Data_Newtype_Newtype = _dollar__unused_1_loop
 _ = _dollar__unused_1
-var _dollar__unused_2 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_2_loop
+var _dollar__unused_2 *Constructor_Data_Newtype_Newtype = _dollar__unused_2_loop
 _ = _dollar__unused_2
 var v_3 gopurs_runtime.Value = v_3_loop
 _ = v_3
@@ -1059,42 +1059,42 @@ _ = f_4
 return gopurs_runtime.Apply(f_4, Get_Unsafe_Coerce_unsafeCoerce())
 }
 
-func Call_Data_Newtype_alaF__1321707980(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], _dollar__unused_3_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, bool], v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_Data_Newtype_alaF__1321707980(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop *Constructor_Data_Newtype_Newtype, _dollar__unused_3_loop *Constructor_Data_Newtype_Newtype, v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
 _ = _dollar__unused_1
-var _dollar__unused_2 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_2_loop
+var _dollar__unused_2 *Constructor_Data_Newtype_Newtype = _dollar__unused_2_loop
 _ = _dollar__unused_2
-var _dollar__unused_3 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, bool] = _dollar__unused_3_loop
+var _dollar__unused_3 *Constructor_Data_Newtype_Newtype = _dollar__unused_3_loop
 _ = _dollar__unused_3
 var v_4 gopurs_runtime.Value = v_4_loop
 _ = v_4
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
-func Call_Data_Newtype_alaF__476165004(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], _dollar__unused_3_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, bool], v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_Data_Newtype_alaF__476165004(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop *Constructor_Data_Newtype_Newtype, _dollar__unused_3_loop *Constructor_Data_Newtype_Newtype, v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
 _ = _dollar__unused_1
-var _dollar__unused_2 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_2_loop
+var _dollar__unused_2 *Constructor_Data_Newtype_Newtype = _dollar__unused_2_loop
 _ = _dollar__unused_2
-var _dollar__unused_3 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, bool] = _dollar__unused_3_loop
+var _dollar__unused_3 *Constructor_Data_Newtype_Newtype = _dollar__unused_3_loop
 _ = _dollar__unused_3
 var v_4 gopurs_runtime.Value = v_4_loop
 _ = v_4
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
-func Call_Data_Newtype_alaF__933886072(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]], _dollar__unused_3_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, bool], v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_Data_Newtype_alaF__933886072(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop *Constructor_Data_Newtype_Newtype, _dollar__unused_3_loop *Constructor_Data_Newtype_Newtype, v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
 _ = _dollar__unused_1
-var _dollar__unused_2 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]] = _dollar__unused_2_loop
+var _dollar__unused_2 *Constructor_Data_Newtype_Newtype = _dollar__unused_2_loop
 _ = _dollar__unused_2
-var _dollar__unused_3 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, bool] = _dollar__unused_3_loop
+var _dollar__unused_3 *Constructor_Data_Newtype_Newtype = _dollar__unused_3_loop
 _ = _dollar__unused_3
 var v_4 gopurs_runtime.Value = v_4_loop
 _ = v_4
@@ -1117,14 +1117,14 @@ _ = v_0
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
-func Call_Data_Newtype_alaF__4085337484(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], _dollar__unused_3_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_Data_Newtype_alaF__4085337484(_dollar__unused_0_loop gopurs_runtime.Value, _dollar__unused_1_loop gopurs_runtime.Value, _dollar__unused_2_loop *Constructor_Data_Newtype_Newtype, _dollar__unused_3_loop *Constructor_Data_Newtype_Newtype, v_4_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var _dollar__unused_1 gopurs_runtime.Value = _dollar__unused_1_loop
 _ = _dollar__unused_1
-var _dollar__unused_2 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_2_loop
+var _dollar__unused_2 *Constructor_Data_Newtype_Newtype = _dollar__unused_2_loop
 _ = _dollar__unused_2
-var _dollar__unused_3 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_3_loop
+var _dollar__unused_3 *Constructor_Data_Newtype_Newtype = _dollar__unused_3_loop
 _ = _dollar__unused_3
 var v_4 gopurs_runtime.Value = v_4_loop
 _ = v_4
@@ -1155,20 +1155,20 @@ _ = v_0
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
-func Call_Data_Newtype_over__2540313282(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, float64], _dollar__unused_1_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var _dollar__unused_0 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, float64] = _dollar__unused_0_loop
+func Call_Data_Newtype_over__2540313282(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype, _dollar__unused_1_loop *Constructor_Data_Newtype_Newtype, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var _dollar__unused_0 *Constructor_Data_Newtype_Newtype = _dollar__unused_0_loop
 _ = _dollar__unused_0
-var _dollar__unused_1 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_1_loop
+var _dollar__unused_1 *Constructor_Data_Newtype_Newtype = _dollar__unused_1_loop
 _ = _dollar__unused_1
 var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
-func Call_Data_Newtype_over__1462660013(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], _dollar__unused_1_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var _dollar__unused_0 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_0_loop
+func Call_Data_Newtype_over__1462660013(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype, _dollar__unused_1_loop *Constructor_Data_Newtype_Newtype, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var _dollar__unused_0 *Constructor_Data_Newtype_Newtype = _dollar__unused_0_loop
 _ = _dollar__unused_0
-var _dollar__unused_1 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_1_loop
+var _dollar__unused_1 *Constructor_Data_Newtype_Newtype = _dollar__unused_1_loop
 _ = _dollar__unused_1
 var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
@@ -1197,24 +1197,24 @@ _ = v_0
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
-func Call_Data_Newtype_un__2927362652(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, string], v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var _dollar__unused_0 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, string] = _dollar__unused_0_loop
+func Call_Data_Newtype_un__2927362652(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var _dollar__unused_0 *Constructor_Data_Newtype_Newtype = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
-func Call_Data_Newtype_un__3470773042(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var _dollar__unused_0 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_0_loop
+func Call_Data_Newtype_un__3470773042(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var _dollar__unused_0 *Constructor_Data_Newtype_Newtype = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
-func Call_Data_Newtype_un__1660466461(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value], v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var _dollar__unused_0 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_0_loop
+func Call_Data_Newtype_un__1660466461(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var _dollar__unused_0 *Constructor_Data_Newtype_Newtype = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
@@ -1227,44 +1227,44 @@ _ = v_0
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
-func Call_Data_Newtype_unwrap__1971311275(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var _dollar__unused_0 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_0_loop
+func Call_Data_Newtype_unwrap__1971311275(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype) gopurs_runtime.Value {
+var _dollar__unused_0 *Constructor_Data_Newtype_Newtype = _dollar__unused_0_loop
 _ = _dollar__unused_0
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
-func Call_Data_Newtype_unwrap__1997596318(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var _dollar__unused_0 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_0_loop
+func Call_Data_Newtype_unwrap__1997596318(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype) gopurs_runtime.Value {
+var _dollar__unused_0 *Constructor_Data_Newtype_Newtype = _dollar__unused_0_loop
 _ = _dollar__unused_0
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
-func Call_Data_Newtype_unwrap__321736283(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]]) gopurs_runtime.Value {
-var _dollar__unused_0 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]] = _dollar__unused_0_loop
+func Call_Data_Newtype_unwrap__321736283(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype) gopurs_runtime.Value {
+var _dollar__unused_0 *Constructor_Data_Newtype_Newtype = _dollar__unused_0_loop
 _ = _dollar__unused_0
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
-func Call_Data_Newtype_unwrap__4073450430(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var _dollar__unused_0 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_0_loop
+func Call_Data_Newtype_unwrap__4073450430(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype) gopurs_runtime.Value {
+var _dollar__unused_0 *Constructor_Data_Newtype_Newtype = _dollar__unused_0_loop
 _ = _dollar__unused_0
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
-func Call_Data_Newtype_unwrap__3159071614(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var _dollar__unused_0 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_0_loop
+func Call_Data_Newtype_unwrap__3159071614(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype) gopurs_runtime.Value {
+var _dollar__unused_0 *Constructor_Data_Newtype_Newtype = _dollar__unused_0_loop
 _ = _dollar__unused_0
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
-func Call_Data_Newtype_unwrap__3531743166(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]]) gopurs_runtime.Value {
-var _dollar__unused_0 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, *Constructor_Data_List_Lazy_Types_Cons[gopurs_runtime.Value]] = _dollar__unused_0_loop
+func Call_Data_Newtype_unwrap__3531743166(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype) gopurs_runtime.Value {
+var _dollar__unused_0 *Constructor_Data_Newtype_Newtype = _dollar__unused_0_loop
 _ = _dollar__unused_0
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
-func Call_Data_Newtype_unwrap__1763047240(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var _dollar__unused_0 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_0_loop
+func Call_Data_Newtype_unwrap__1763047240(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype) gopurs_runtime.Value {
+var _dollar__unused_0 *Constructor_Data_Newtype_Newtype = _dollar__unused_0_loop
 _ = _dollar__unused_0
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
@@ -1281,14 +1281,14 @@ _ = __eta0_0
 return __eta0_0
 }
 
-func Call_Data_Newtype_unwrap__3267718003(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var _dollar__unused_0 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_0_loop
+func Call_Data_Newtype_unwrap__3267718003(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype) gopurs_runtime.Value {
+var _dollar__unused_0 *Constructor_Data_Newtype_Newtype = _dollar__unused_0_loop
 _ = _dollar__unused_0
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
 
-func Call_Data_Newtype_unwrap__3044449299(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var _dollar__unused_0 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_0_loop
+func Call_Data_Newtype_unwrap__3044449299(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype) gopurs_runtime.Value {
+var _dollar__unused_0 *Constructor_Data_Newtype_Newtype = _dollar__unused_0_loop
 _ = _dollar__unused_0
 return Get_Unsafe_Coerce_unsafeCoerce()
 }
@@ -1341,8 +1341,8 @@ _ = __eta0_0
 return __eta0_0
 }
 
-func Call_Data_Newtype_wrap__3267718003(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var _dollar__unused_0 *Constructor_Data_Newtype_Newtype[gopurs_runtime.Value, gopurs_runtime.Value] = _dollar__unused_0_loop
+func Call_Data_Newtype_wrap__3267718003(_dollar__unused_0_loop *Constructor_Data_Newtype_Newtype) gopurs_runtime.Value {
+var _dollar__unused_0 *Constructor_Data_Newtype_Newtype = _dollar__unused_0_loop
 _ = _dollar__unused_0
 return Get_Unsafe_Coerce_unsafeCoerce()
 }

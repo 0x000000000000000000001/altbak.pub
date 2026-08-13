@@ -33,7 +33,7 @@ var once_Data_Symbol_reflectSymbol sync.Once
 func Get_Data_Symbol_reflectSymbol() gopurs_runtime.Value {
 	once_Data_Symbol_reflectSymbol.Do(func() {
 		cache_Data_Symbol_reflectSymbol = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Symbol_reflectSymbol(gopurs_runtime.CoerceToStruct[Constructor_Data_Symbol_IsSymbol[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Symbol_reflectSymbol(gopurs_runtime.CoerceToStruct[Constructor_Data_Symbol_IsSymbol](dict_0_box))
 })
 	})
 	return cache_Data_Symbol_reflectSymbol
@@ -44,7 +44,7 @@ var once_Data_Symbol_reflectSymbol__3416619207 sync.Once
 func Get_Data_Symbol_reflectSymbol__3416619207() gopurs_runtime.Value {
 	once_Data_Symbol_reflectSymbol__3416619207.Do(func() {
 		cache_Data_Symbol_reflectSymbol__3416619207 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Symbol_reflectSymbol__3416619207(gopurs_runtime.CoerceToStruct[Constructor_Data_Symbol_IsSymbol[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Symbol_reflectSymbol__3416619207(gopurs_runtime.CoerceToStruct[Constructor_Data_Symbol_IsSymbol](dict_0_box))
 })
 	})
 	return cache_Data_Symbol_reflectSymbol__3416619207
@@ -55,13 +55,13 @@ var once_Data_Symbol_reflectSymbol__1166932993 sync.Once
 func Get_Data_Symbol_reflectSymbol__1166932993() gopurs_runtime.Value {
 	once_Data_Symbol_reflectSymbol__1166932993.Do(func() {
 		cache_Data_Symbol_reflectSymbol__1166932993 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Symbol_reflectSymbol__1166932993(gopurs_runtime.CoerceToStruct[Constructor_Data_Symbol_IsSymbol[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Symbol_reflectSymbol__1166932993(gopurs_runtime.CoerceToStruct[Constructor_Data_Symbol_IsSymbol](dict_0_box))
 })
 	})
 	return cache_Data_Symbol_reflectSymbol__1166932993
 }
 
-type Constructor_Data_Symbol_IsSymbol[T_sym any] struct {
+type Constructor_Data_Symbol_IsSymbol struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 }
@@ -69,7 +69,7 @@ type Constructor_Data_Symbol_IsSymbol[T_sym any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[2134024384] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_Symbol_IsSymbol[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_Symbol_IsSymbol)(ptr)
 		_ = c
 		switch key {
 		case "reflectSymbol": return gopurs_runtime.Box(c.V0)
@@ -97,20 +97,20 @@ return gopurs_runtime.Str(s_0)
 })), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil})
 }
 
-func Call_Data_Symbol_reflectSymbol(dict_0_loop *Constructor_Data_Symbol_IsSymbol[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Symbol_IsSymbol[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Symbol_reflectSymbol(dict_0_loop *Constructor_Data_Symbol_IsSymbol) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Symbol_IsSymbol = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_Data_Symbol_reflectSymbol__3416619207(dict_0_loop *Constructor_Data_Symbol_IsSymbol[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Symbol_IsSymbol[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Symbol_reflectSymbol__3416619207(dict_0_loop *Constructor_Data_Symbol_IsSymbol) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Symbol_IsSymbol = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_Data_Symbol_reflectSymbol__1166932993(dict_0_loop *Constructor_Data_Symbol_IsSymbol[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Symbol_IsSymbol[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Symbol_reflectSymbol__1166932993(dict_0_loop *Constructor_Data_Symbol_IsSymbol) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Symbol_IsSymbol = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }

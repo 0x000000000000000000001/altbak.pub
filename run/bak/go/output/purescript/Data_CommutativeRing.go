@@ -131,7 +131,7 @@ return Call_Data_CommutativeRing_commutativeRingFn(dictCommutativeRing_0_box)
 	return cache_Data_CommutativeRing_commutativeRingFn
 }
 
-type Constructor_Data_CommutativeRing_CommutativeRingRecord[T_rowlist any, T_row any, T_subrow any] struct {
+type Constructor_Data_CommutativeRing_CommutativeRingRecord struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 }
@@ -139,7 +139,7 @@ type Constructor_Data_CommutativeRing_CommutativeRingRecord[T_rowlist any, T_row
 
 func init() {
 	gopurs_runtime.StructGetters[292222263] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_CommutativeRing_CommutativeRingRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_CommutativeRing_CommutativeRingRecord)(ptr)
 		_ = c
 		switch key {
 		case "RingRecord0": return gopurs_runtime.Box(c.V0)
@@ -149,7 +149,7 @@ func init() {
 }
 
 
-type Constructor_Data_CommutativeRing_CommutativeRing[T_a any] struct {
+type Constructor_Data_CommutativeRing_CommutativeRing struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 }
@@ -157,7 +157,7 @@ type Constructor_Data_CommutativeRing_CommutativeRing[T_a any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[1775085946] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_CommutativeRing_CommutativeRing[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_CommutativeRing_CommutativeRing)(ptr)
 		_ = c
 		switch key {
 		case "Ring0": return gopurs_runtime.Box(c.V0)

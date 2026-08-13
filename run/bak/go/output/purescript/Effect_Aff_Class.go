@@ -89,7 +89,7 @@ var once_Effect_Aff_Class_liftAff sync.Once
 func Get_Effect_Aff_Class_liftAff() gopurs_runtime.Value {
 	once_Effect_Aff_Class_liftAff.Do(func() {
 		cache_Effect_Aff_Class_liftAff = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Effect_Aff_Class_liftAff(gopurs_runtime.CoerceToStruct[Constructor_Effect_Aff_Class_MonadAff[gopurs_runtime.Value]](dict_0_box))
+return Call_Effect_Aff_Class_liftAff(gopurs_runtime.CoerceToStruct[Constructor_Effect_Aff_Class_MonadAff](dict_0_box))
 })
 	})
 	return cache_Effect_Aff_Class_liftAff
@@ -183,7 +183,7 @@ return Call_Effect_Aff_Class_monadAffWriter(dictMonadAff_0_box)
 	return cache_Effect_Aff_Class_monadAffWriter
 }
 
-type Constructor_Effect_Aff_Class_MonadAff[T_m any] struct {
+type Constructor_Effect_Aff_Class_MonadAff struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -192,7 +192,7 @@ type Constructor_Effect_Aff_Class_MonadAff[T_m any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[3183257445] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Effect_Aff_Class_MonadAff[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Effect_Aff_Class_MonadAff)(ptr)
 		_ = c
 		switch key {
 		case "MonadEffect0": return gopurs_runtime.Box(c.V0)
@@ -209,8 +209,8 @@ _ = x_0
 return x_0
 }
 
-func Call_Effect_Aff_Class_liftAff(dict_0_loop *Constructor_Effect_Aff_Class_MonadAff[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Effect_Aff_Class_MonadAff[gopurs_runtime.Value] = dict_0_loop
+func Call_Effect_Aff_Class_liftAff(dict_0_loop *Constructor_Effect_Aff_Class_MonadAff) gopurs_runtime.Value {
+var dict_0 *Constructor_Effect_Aff_Class_MonadAff = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
@@ -304,8 +304,8 @@ return gopurs_runtime.Func(func(dictMonoid_3 gopurs_runtime.Value) gopurs_runtim
 // TAST (Let): monadEffectRWS_4_2 -> gopurs_runtime.Value
 monadEffectRWS_4_2 := gopurs_runtime.Apply2(Get_Control_Monad_RWS_Trans_monadEffectRWS(), dictMonoid_3, MonadEffect0_1_0)
 _ = monadEffectRWS_4_2
-// TAST (Let): Bind1_5_4 -> *Constructor_Control_Bind_Bind[gopurs_runtime.Value]
-Bind1_5_4 := gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_2_1, "Bind1"), gopurs_runtime.Value{}))
+// TAST (Let): Bind1_5_4 -> *Constructor_Control_Bind_Bind
+Bind1_5_4 := gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_2_1, "Bind1"), gopurs_runtime.Value{}))
 _ = Bind1_5_4
 // TAST (Let): pure_6_5 -> gopurs_runtime.Value
 pure_6_5 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_2_1, "Applicative0"), gopurs_runtime.Value{}), "pure")
@@ -315,7 +315,7 @@ __local_var_5_3 := gopurs_runtime.Func(func(m_7 gopurs_runtime.Value) gopurs_run
 return gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(s_9 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.Box(Bind1_5_4.V1), m_7, gopurs_runtime.Func(func(a_10 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(pure_6_5, gopurs_runtime.Value{Type: 9, IntVal: 2367475031, UnsafePtr: unsafe.Pointer(&Constructor_Control_Monad_RWS_Trans_RWSResult[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]{1, s_9, a_10, gopurs_runtime.RecordGet(dictMonoid_3, "mempty")})})
+return gopurs_runtime.Apply(pure_6_5, gopurs_runtime.Value{Type: 9, IntVal: 2367475031, UnsafePtr: unsafe.Pointer(&Constructor_Control_Monad_RWS_Trans_RWSResult{1, s_9, a_10, gopurs_runtime.RecordGet(dictMonoid_3, "mempty")})})
 }))
 })
 })
@@ -380,8 +380,8 @@ return gopurs_runtime.Func(func(dictMonoid_3 gopurs_runtime.Value) gopurs_runtim
 // TAST (Let): monadEffectWriter_4_2 -> gopurs_runtime.Value
 monadEffectWriter_4_2 := gopurs_runtime.Apply2(Get_Control_Monad_Writer_Trans_monadEffectWriter(), dictMonoid_3, MonadEffect0_1_0)
 _ = monadEffectWriter_4_2
-// TAST (Let): Bind1_5_4 -> *Constructor_Control_Bind_Bind[gopurs_runtime.Value]
-Bind1_5_4 := gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_2_1, "Bind1"), gopurs_runtime.Value{}))
+// TAST (Let): Bind1_5_4 -> *Constructor_Control_Bind_Bind
+Bind1_5_4 := gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_2_1, "Bind1"), gopurs_runtime.Value{}))
 _ = Bind1_5_4
 // TAST (Let): pure_6_5 -> gopurs_runtime.Value
 pure_6_5 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_2_1, "Applicative0"), gopurs_runtime.Value{}), "pure")
@@ -389,7 +389,7 @@ _ = pure_6_5
 // TAST (Let): __local_var_5_3 -> gopurs_runtime.Value
 __local_var_5_3 := gopurs_runtime.Func(func(m_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.Box(Bind1_5_4.V1), m_7, gopurs_runtime.Func(func(a_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(pure_6_5, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, a_8, gopurs_runtime.RecordGet(dictMonoid_3, "mempty")})})
+return gopurs_runtime.Apply(pure_6_5, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, a_8, gopurs_runtime.RecordGet(dictMonoid_3, "mempty")})})
 }))
 })
 _ = __local_var_5_3

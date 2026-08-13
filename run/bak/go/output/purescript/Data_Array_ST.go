@@ -103,7 +103,7 @@ var once_Data_Array_ST_sortWith sync.Once
 func Get_Data_Array_ST_sortWith() gopurs_runtime.Value {
 	once_Data_Array_ST_sortWith.Do(func() {
 		cache_Data_Array_ST_sortWith = gopurs_runtime.Func2(func(dictOrd_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Array_ST_sortWith(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dictOrd_0_box), f_1_box)
+return Call_Data_Array_ST_sortWith(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box), f_1_box)
 })
 	})
 	return cache_Data_Array_ST_sortWith
@@ -114,7 +114,7 @@ var once_Data_Array_ST_sort sync.Once
 func Get_Data_Array_ST_sort() gopurs_runtime.Value {
 	once_Data_Array_ST_sort.Do(func() {
 		cache_Data_Array_ST_sort = gopurs_runtime.Func(func(dictOrd_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Array_ST_sort(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dictOrd_0_box))
+return Call_Data_Array_ST_sort(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box))
 })
 	})
 	return cache_Data_Array_ST_sort
@@ -124,7 +124,7 @@ var cache_Data_Array_ST_shift gopurs_runtime.Value
 var once_Data_Array_ST_shift sync.Once
 func Get_Data_Array_ST_shift() gopurs_runtime.Value {
 	once_Data_Array_ST_shift.Do(func() {
-		cache_Data_Array_ST_shift = gopurs_runtime.Apply3(Get_Control_Monad_ST_Uncurried_runSTFn3(), Get_Data_Array_ST_shiftImpl(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))})
+		cache_Data_Array_ST_shift = gopurs_runtime.Apply3(Get_Control_Monad_ST_Uncurried_runSTFn3(), Get_Data_Array_ST_shiftImpl(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
 	})
 	return cache_Data_Array_ST_shift
 }
@@ -162,7 +162,7 @@ var cache_Data_Array_ST_pop gopurs_runtime.Value
 var once_Data_Array_ST_pop sync.Once
 func Get_Data_Array_ST_pop() gopurs_runtime.Value {
 	once_Data_Array_ST_pop.Do(func() {
-		cache_Data_Array_ST_pop = gopurs_runtime.Apply3(Get_Control_Monad_ST_Uncurried_runSTFn3(), Get_Data_Array_ST_popImpl(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))})
+		cache_Data_Array_ST_pop = gopurs_runtime.Apply3(Get_Control_Monad_ST_Uncurried_runSTFn3(), Get_Data_Array_ST_popImpl(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
 	})
 	return cache_Data_Array_ST_pop
 }
@@ -180,7 +180,7 @@ var cache_Data_Array_ST_peek gopurs_runtime.Value
 var once_Data_Array_ST_peek sync.Once
 func Get_Data_Array_ST_peek() gopurs_runtime.Value {
 	once_Data_Array_ST_peek.Do(func() {
-		cache_Data_Array_ST_peek = gopurs_runtime.Apply3(Get_Control_Monad_ST_Uncurried_runSTFn4(), Get_Data_Array_ST_peekImpl(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))})
+		cache_Data_Array_ST_peek = gopurs_runtime.Apply3(Get_Control_Monad_ST_Uncurried_runSTFn4(), Get_Data_Array_ST_peekImpl(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
 	})
 	return cache_Data_Array_ST_peek
 }
@@ -265,7 +265,7 @@ var cache_Data_Array_ST_peek__1114289340 gopurs_runtime.Value
 var once_Data_Array_ST_peek__1114289340 sync.Once
 func Get_Data_Array_ST_peek__1114289340() gopurs_runtime.Value {
 	once_Data_Array_ST_peek__1114289340.Do(func() {
-		cache_Data_Array_ST_peek__1114289340 = gopurs_runtime.Apply3(Get_Control_Monad_ST_Uncurried_runSTFn4(), Get_Data_Array_ST_peekImpl(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))})
+		cache_Data_Array_ST_peek__1114289340 = gopurs_runtime.Apply3(Get_Control_Monad_ST_Uncurried_runSTFn4(), Get_Data_Array_ST_peekImpl(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
 	})
 	return cache_Data_Array_ST_peek__1114289340
 }
@@ -545,8 +545,8 @@ return gopurs_runtime.Int(__t0.IntVal)
 }))
 }
 
-func Call_Data_Array_ST_sortWith(dictOrd_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value], f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictOrd_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dictOrd_0_loop
+func Call_Data_Array_ST_sortWith(dictOrd_0_loop *Constructor_Data_Ord_Ord, f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
@@ -557,8 +557,8 @@ return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(
 }))
 }
 
-func Call_Data_Array_ST_sort(dictOrd_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictOrd_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dictOrd_0_loop
+func Call_Data_Array_ST_sort(dictOrd_0_loop *Constructor_Data_Ord_Ord) gopurs_runtime.Value {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 return Call_Data_Array_ST_sortBy(gopurs_runtime.Box(dictOrd_0.V1))
 }
@@ -582,13 +582,13 @@ _ = f_1
 var xs_2 gopurs_runtime.Value = xs_2_loop
 _ = xs_2
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_bindST(), "bind"), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp4(Get_Data_Array_ST_peekImpl(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))}, gopurs_runtime.Int(i_0), xs_2)
+return gopurs_runtime.UncurriedApp4(Get_Data_Array_ST_peekImpl(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}, gopurs_runtime.Int(i_0), xs_2)
 }), gopurs_runtime.Func(func(entry_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
 if (entry_3.Type == 9 && entry_3.IntVal == 930809136 && entry_3.UnsafePtr != nil) {
 // TAST (Let): __local_var_4_0 -> gopurs_runtime.Value
-__local_var_4_0 := gopurs_runtime.Apply(f_1, (*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(entry_3.UnsafePtr).V0)
+__local_var_4_0 := gopurs_runtime.Apply(f_1, (*Constructor_Data_Maybe_Just)(entry_3.UnsafePtr).V0)
 _ = __local_var_4_0
 __t1 = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp3(Get_Data_Array_ST_pokeImpl(), gopurs_runtime.Int(i_0), __local_var_4_0, xs_2)
@@ -622,13 +622,13 @@ _ = f_1
 var xs_2 gopurs_runtime.Value = xs_2_loop
 _ = xs_2
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_bindST(), "bind"), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp4(Get_Data_Array_ST_peekImpl(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))}, gopurs_runtime.Int(i_0), xs_2)
+return gopurs_runtime.UncurriedApp4(Get_Data_Array_ST_peekImpl(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}, gopurs_runtime.Int(i_0), xs_2)
 }), gopurs_runtime.Func(func(entry_3 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
 if (entry_3.Type == 9 && entry_3.IntVal == 930809136 && entry_3.UnsafePtr != nil) {
 // TAST (Let): __local_var_4_0 -> gopurs_runtime.Value
-__local_var_4_0 := gopurs_runtime.Apply(f_1, (*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(entry_3.UnsafePtr).V0)
+__local_var_4_0 := gopurs_runtime.Apply(f_1, (*Constructor_Data_Maybe_Just)(entry_3.UnsafePtr).V0)
 _ = __local_var_4_0
 __t1 = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.UncurriedApp3(Get_Data_Array_ST_pokeImpl(), gopurs_runtime.Int(i_0), __local_var_4_0, xs_2)

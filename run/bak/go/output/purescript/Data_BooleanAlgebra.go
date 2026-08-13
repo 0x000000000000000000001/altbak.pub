@@ -114,7 +114,7 @@ return Get_Data_HeytingAlgebra_heytingAlgebraBoolean()
 	return cache_Data_BooleanAlgebra_booleanAlgebraBoolean
 }
 
-type Constructor_Data_BooleanAlgebra_BooleanAlgebraRecord[T_rowlist any, T_row any, T_subrow any] struct {
+type Constructor_Data_BooleanAlgebra_BooleanAlgebraRecord struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 }
@@ -122,7 +122,7 @@ type Constructor_Data_BooleanAlgebra_BooleanAlgebraRecord[T_rowlist any, T_row a
 
 func init() {
 	gopurs_runtime.StructGetters[700691287] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_BooleanAlgebra_BooleanAlgebraRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_BooleanAlgebra_BooleanAlgebraRecord)(ptr)
 		_ = c
 		switch key {
 		case "HeytingAlgebraRecord0": return gopurs_runtime.Box(c.V0)
@@ -132,7 +132,7 @@ func init() {
 }
 
 
-type Constructor_Data_BooleanAlgebra_BooleanAlgebra[T_a any] struct {
+type Constructor_Data_BooleanAlgebra_BooleanAlgebra struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 }
@@ -140,7 +140,7 @@ type Constructor_Data_BooleanAlgebra_BooleanAlgebra[T_a any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[3257204378] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_BooleanAlgebra_BooleanAlgebra[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_BooleanAlgebra_BooleanAlgebra)(ptr)
 		_ = c
 		switch key {
 		case "HeytingAlgebra0": return gopurs_runtime.Box(c.V0)

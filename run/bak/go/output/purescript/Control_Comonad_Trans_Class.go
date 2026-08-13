@@ -22,7 +22,7 @@ var once_Control_Comonad_Trans_Class_lower sync.Once
 func Get_Control_Comonad_Trans_Class_lower() gopurs_runtime.Value {
 	once_Control_Comonad_Trans_Class_lower.Do(func() {
 		cache_Control_Comonad_Trans_Class_lower = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Comonad_Trans_Class_lower(gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Trans_Class_ComonadTrans[gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Comonad_Trans_Class_lower(gopurs_runtime.CoerceToStruct[Constructor_Control_Comonad_Trans_Class_ComonadTrans](dict_0_box))
 })
 	})
 	return cache_Control_Comonad_Trans_Class_lower
@@ -39,7 +39,7 @@ return Get_Control_Monad_Identity_Trans_runIdentityT()
 	return cache_Control_Comonad_Trans_Class_comonadTransIdentityT
 }
 
-type Constructor_Control_Comonad_Trans_Class_ComonadTrans[T_f any] struct {
+type Constructor_Control_Comonad_Trans_Class_ComonadTrans struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 }
@@ -47,7 +47,7 @@ type Constructor_Control_Comonad_Trans_Class_ComonadTrans[T_f any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[3399197123] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Control_Comonad_Trans_Class_ComonadTrans[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Control_Comonad_Trans_Class_ComonadTrans)(ptr)
 		_ = c
 		switch key {
 		case "lower": return gopurs_runtime.Box(c.V0)
@@ -63,8 +63,8 @@ _ = x_0
 return x_0
 }
 
-func Call_Control_Comonad_Trans_Class_lower(dict_0_loop *Constructor_Control_Comonad_Trans_Class_ComonadTrans[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Comonad_Trans_Class_ComonadTrans[gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Comonad_Trans_Class_lower(dict_0_loop *Constructor_Control_Comonad_Trans_Class_ComonadTrans) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Comonad_Trans_Class_ComonadTrans = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }

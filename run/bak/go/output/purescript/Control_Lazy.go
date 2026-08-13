@@ -46,7 +46,7 @@ var once_Control_Lazy_go__defer sync.Once
 func Get_Control_Lazy_go__defer() gopurs_runtime.Value {
 	once_Control_Lazy_go__defer.Do(func() {
 		cache_Control_Lazy_go__defer = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Lazy_go__defer(gopurs_runtime.CoerceToStruct[Constructor_Control_Lazy_Lazy[gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Lazy_go__defer(gopurs_runtime.CoerceToStruct[Constructor_Control_Lazy_Lazy](dict_0_box))
 })
 	})
 	return cache_Control_Lazy_go__defer
@@ -57,7 +57,7 @@ var once_Control_Lazy_fix sync.Once
 func Get_Control_Lazy_fix() gopurs_runtime.Value {
 	once_Control_Lazy_fix.Do(func() {
 		cache_Control_Lazy_fix = gopurs_runtime.Func2(func(dictLazy_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Lazy_fix(gopurs_runtime.CoerceToStruct[Constructor_Control_Lazy_Lazy[gopurs_runtime.Value]](dictLazy_0_box), f_1_box)
+return Call_Control_Lazy_fix(gopurs_runtime.CoerceToStruct[Constructor_Control_Lazy_Lazy](dictLazy_0_box), f_1_box)
 })
 	})
 	return cache_Control_Lazy_fix
@@ -68,7 +68,7 @@ var once_Control_Lazy_defer__3258767445 sync.Once
 func Get_Control_Lazy_defer__3258767445() gopurs_runtime.Value {
 	once_Control_Lazy_defer__3258767445.Do(func() {
 		cache_Control_Lazy_defer__3258767445 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Lazy_defer__3258767445(gopurs_runtime.CoerceToStruct[Constructor_Control_Lazy_Lazy[gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Lazy_defer__3258767445(gopurs_runtime.CoerceToStruct[Constructor_Control_Lazy_Lazy](dict_0_box))
 })
 	})
 	return cache_Control_Lazy_defer__3258767445
@@ -79,7 +79,7 @@ var once_Control_Lazy_defer__3734051733 sync.Once
 func Get_Control_Lazy_defer__3734051733() gopurs_runtime.Value {
 	once_Control_Lazy_defer__3734051733.Do(func() {
 		cache_Control_Lazy_defer__3734051733 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Lazy_defer__3734051733(gopurs_runtime.CoerceToStruct[Constructor_Control_Lazy_Lazy[gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Lazy_defer__3734051733(gopurs_runtime.CoerceToStruct[Constructor_Control_Lazy_Lazy](dict_0_box))
 })
 	})
 	return cache_Control_Lazy_defer__3734051733
@@ -90,7 +90,7 @@ var once_Control_Lazy_defer__2812710261 sync.Once
 func Get_Control_Lazy_defer__2812710261() gopurs_runtime.Value {
 	once_Control_Lazy_defer__2812710261.Do(func() {
 		cache_Control_Lazy_defer__2812710261 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Lazy_defer__2812710261(gopurs_runtime.CoerceToStruct[Constructor_Control_Lazy_Lazy[gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Lazy_defer__2812710261(gopurs_runtime.CoerceToStruct[Constructor_Control_Lazy_Lazy](dict_0_box))
 })
 	})
 	return cache_Control_Lazy_defer__2812710261
@@ -101,7 +101,7 @@ var once_Control_Lazy_defer__3967925939 sync.Once
 func Get_Control_Lazy_defer__3967925939() gopurs_runtime.Value {
 	once_Control_Lazy_defer__3967925939.Do(func() {
 		cache_Control_Lazy_defer__3967925939 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Lazy_defer__3967925939(gopurs_runtime.CoerceToStruct[Constructor_Control_Lazy_Lazy[gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Lazy_defer__3967925939(gopurs_runtime.CoerceToStruct[Constructor_Control_Lazy_Lazy](dict_0_box))
 })
 	})
 	return cache_Control_Lazy_defer__3967925939
@@ -123,7 +123,7 @@ var once_Control_Lazy_defer__308916730 sync.Once
 func Get_Control_Lazy_defer__308916730() gopurs_runtime.Value {
 	once_Control_Lazy_defer__308916730.Do(func() {
 		cache_Control_Lazy_defer__308916730 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Lazy_defer__308916730(gopurs_runtime.CoerceToStruct[Constructor_Control_Lazy_Lazy[gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Lazy_defer__308916730(gopurs_runtime.CoerceToStruct[Constructor_Control_Lazy_Lazy](dict_0_box))
 })
 	})
 	return cache_Control_Lazy_defer__308916730
@@ -134,7 +134,7 @@ var once_Control_Lazy_defer__774977193 sync.Once
 func Get_Control_Lazy_defer__774977193() gopurs_runtime.Value {
 	once_Control_Lazy_defer__774977193.Do(func() {
 		cache_Control_Lazy_defer__774977193 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Lazy_defer__774977193(gopurs_runtime.CoerceToStruct[Constructor_Control_Lazy_Lazy[gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Lazy_defer__774977193(gopurs_runtime.CoerceToStruct[Constructor_Control_Lazy_Lazy](dict_0_box))
 })
 	})
 	return cache_Control_Lazy_defer__774977193
@@ -145,7 +145,7 @@ var once_Control_Lazy_defer__449752361 sync.Once
 func Get_Control_Lazy_defer__449752361() gopurs_runtime.Value {
 	once_Control_Lazy_defer__449752361.Do(func() {
 		cache_Control_Lazy_defer__449752361 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Lazy_defer__449752361(gopurs_runtime.CoerceToStruct[Constructor_Control_Lazy_Lazy[gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Lazy_defer__449752361(gopurs_runtime.CoerceToStruct[Constructor_Control_Lazy_Lazy](dict_0_box))
 })
 	})
 	return cache_Control_Lazy_defer__449752361
@@ -156,7 +156,7 @@ var once_Control_Lazy_fix__1475205859 sync.Once
 func Get_Control_Lazy_fix__1475205859() gopurs_runtime.Value {
 	once_Control_Lazy_fix__1475205859.Do(func() {
 		cache_Control_Lazy_fix__1475205859 = gopurs_runtime.Func2(func(dictLazy_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Lazy_fix__1475205859(gopurs_runtime.CoerceToStruct[Constructor_Control_Lazy_Lazy[gopurs_runtime.Value]](dictLazy_0_box), f_1_box)
+return Call_Control_Lazy_fix__1475205859(gopurs_runtime.CoerceToStruct[Constructor_Control_Lazy_Lazy](dictLazy_0_box), f_1_box)
 })
 	})
 	return cache_Control_Lazy_fix__1475205859
@@ -173,7 +173,7 @@ return Call_Control_Lazy_fix__3570066147(f_0_box)
 	return cache_Control_Lazy_fix__3570066147
 }
 
-type Constructor_Control_Lazy_Lazy[T_l any] struct {
+type Constructor_Control_Lazy_Lazy struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 }
@@ -181,7 +181,7 @@ type Constructor_Control_Lazy_Lazy[T_l any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[1860244333] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Control_Lazy_Lazy[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Control_Lazy_Lazy)(ptr)
 		_ = c
 		switch key {
 		case "defer": return gopurs_runtime.Box(c.V0)
@@ -197,14 +197,14 @@ _ = x_0
 return x_0
 }
 
-func Call_Control_Lazy_go__defer(dict_0_loop *Constructor_Control_Lazy_Lazy[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Lazy_Lazy[gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Lazy_go__defer(dict_0_loop *Constructor_Control_Lazy_Lazy) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Lazy_Lazy = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_Control_Lazy_fix(dictLazy_0_loop *Constructor_Control_Lazy_Lazy[gopurs_runtime.Value], f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictLazy_0 *Constructor_Control_Lazy_Lazy[gopurs_runtime.Value] = dictLazy_0_loop
+func Call_Control_Lazy_fix(dictLazy_0_loop *Constructor_Control_Lazy_Lazy, f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictLazy_0 *Constructor_Control_Lazy_Lazy = dictLazy_0_loop
 _ = dictLazy_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
@@ -216,26 +216,26 @@ return gopurs_runtime.Apply(f_1, go__go_2_0_0)
 return go__go_2_0_0
 }
 
-func Call_Control_Lazy_defer__3258767445(dict_0_loop *Constructor_Control_Lazy_Lazy[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Lazy_Lazy[gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Lazy_defer__3258767445(dict_0_loop *Constructor_Control_Lazy_Lazy) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Lazy_Lazy = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_Control_Lazy_defer__3734051733(dict_0_loop *Constructor_Control_Lazy_Lazy[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Lazy_Lazy[gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Lazy_defer__3734051733(dict_0_loop *Constructor_Control_Lazy_Lazy) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Lazy_Lazy = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_Control_Lazy_defer__2812710261(dict_0_loop *Constructor_Control_Lazy_Lazy[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Lazy_Lazy[gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Lazy_defer__2812710261(dict_0_loop *Constructor_Control_Lazy_Lazy) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Lazy_Lazy = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_Control_Lazy_defer__3967925939(dict_0_loop *Constructor_Control_Lazy_Lazy[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Lazy_Lazy[gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Lazy_defer__3967925939(dict_0_loop *Constructor_Control_Lazy_Lazy) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Lazy_Lazy = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
@@ -248,26 +248,26 @@ return gopurs_runtime.Apply(Get_Data_List_Lazy_Types_step(), gopurs_runtime.Appl
 }))
 }
 
-func Call_Control_Lazy_defer__308916730(dict_0_loop *Constructor_Control_Lazy_Lazy[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Lazy_Lazy[gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Lazy_defer__308916730(dict_0_loop *Constructor_Control_Lazy_Lazy) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Lazy_Lazy = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_Control_Lazy_defer__774977193(dict_0_loop *Constructor_Control_Lazy_Lazy[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Lazy_Lazy[gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Lazy_defer__774977193(dict_0_loop *Constructor_Control_Lazy_Lazy) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Lazy_Lazy = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_Control_Lazy_defer__449752361(dict_0_loop *Constructor_Control_Lazy_Lazy[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Lazy_Lazy[gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Lazy_defer__449752361(dict_0_loop *Constructor_Control_Lazy_Lazy) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Lazy_Lazy = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_Control_Lazy_fix__1475205859(dictLazy_0_loop *Constructor_Control_Lazy_Lazy[gopurs_runtime.Value], f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictLazy_0 *Constructor_Control_Lazy_Lazy[gopurs_runtime.Value] = dictLazy_0_loop
+func Call_Control_Lazy_fix__1475205859(dictLazy_0_loop *Constructor_Control_Lazy_Lazy, f_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictLazy_0 *Constructor_Control_Lazy_Lazy = dictLazy_0_loop
 _ = dictLazy_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1

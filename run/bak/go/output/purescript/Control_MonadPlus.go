@@ -30,7 +30,7 @@ return Get_Control_Monad_monadArray()
 	return cache_Control_MonadPlus_monadPlusArray
 }
 
-type Constructor_Control_MonadPlus_MonadPlus[T_m any] struct {
+type Constructor_Control_MonadPlus_MonadPlus struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -39,7 +39,7 @@ type Constructor_Control_MonadPlus_MonadPlus[T_m any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[3236234573] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Control_MonadPlus_MonadPlus[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Control_MonadPlus_MonadPlus)(ptr)
 		_ = c
 		switch key {
 		case "Alternative1": return gopurs_runtime.Box(c.V0)

@@ -92,15 +92,15 @@ return Call_Data_Monoid_Generic_genericMempty_prime__3900442342(dict_0_box)
 	return cache_Data_Monoid_Generic_genericMempty_prime__3900442342
 }
 
-type Constructor_Data_Monoid_Generic_GenericMonoid[T_a any] struct {
+type Constructor_Data_Monoid_Generic_GenericMonoid struct {
 	Rc uint32
-	V0 T_a
+	V0 gopurs_runtime.Value
 }
 
 
 func init() {
 	gopurs_runtime.StructGetters[2569012965] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_Monoid_Generic_GenericMonoid[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_Monoid_Generic_GenericMonoid)(ptr)
 		_ = c
 		switch key {
 		case "genericMempty'": return gopurs_runtime.Box(c.V0)
@@ -139,7 +139,7 @@ var dictGenericMonoid_0 gopurs_runtime.Value = dictGenericMonoid_0_loop
 _ = dictGenericMonoid_0
 var dictGenericMonoid1_1 gopurs_runtime.Value = dictGenericMonoid1_1_loop
 _ = dictGenericMonoid1_1
-return gopurs_runtime.RecordDict1("genericMempty'", gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&Constructor_Data_Generic_Rep_Product[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.RecordGet(dictGenericMonoid_0, "genericMempty'"), gopurs_runtime.RecordGet(dictGenericMonoid1_1, "genericMempty'")})})
+return gopurs_runtime.RecordDict1("genericMempty'", gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&Constructor_Data_Generic_Rep_Product{1, gopurs_runtime.RecordGet(dictGenericMonoid_0, "genericMempty'"), gopurs_runtime.RecordGet(dictGenericMonoid1_1, "genericMempty'")})})
 }
 
 func Call_Data_Monoid_Generic_genericMempty(dictGeneric_0_loop gopurs_runtime.Value, dictGenericMonoid_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

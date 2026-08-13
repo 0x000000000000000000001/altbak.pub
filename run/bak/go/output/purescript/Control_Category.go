@@ -65,7 +65,7 @@ return Call_Control_Category_identity__2527656589(dict_0_box)
 	return cache_Control_Category_identity__2527656589
 }
 
-type Constructor_Control_Category_Category[T_a any] struct {
+type Constructor_Control_Category_Category struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -74,7 +74,7 @@ type Constructor_Control_Category_Category[T_a any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[784524589] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Control_Category_Category[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Control_Category_Category)(ptr)
 		_ = c
 		switch key {
 		case "Semigroupoid0": return gopurs_runtime.Box(c.V0)

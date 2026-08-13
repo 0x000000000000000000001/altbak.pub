@@ -71,7 +71,7 @@ return Get_Control_Alt_altArray()
 	return cache_Control_Plus_plusArray__4260531026
 }
 
-type Constructor_Control_Plus_Plus[T_f any] struct {
+type Constructor_Control_Plus_Plus struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -80,7 +80,7 @@ type Constructor_Control_Plus_Plus[T_f any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[3709470893] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Control_Plus_Plus[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Control_Plus_Plus)(ptr)
 		_ = c
 		switch key {
 		case "Alt0": return gopurs_runtime.Box(c.V0)

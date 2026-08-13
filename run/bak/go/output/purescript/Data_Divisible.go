@@ -125,7 +125,7 @@ return gopurs_runtime.Bool(true)
 	return cache_Data_Divisible_divisiblePredicate__1930744184
 }
 
-type Constructor_Data_Divisible_Divisible[T_f any] struct {
+type Constructor_Data_Divisible_Divisible struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -134,7 +134,7 @@ type Constructor_Data_Divisible_Divisible[T_f any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[2265116602] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_Divisible_Divisible[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_Divisible_Divisible)(ptr)
 		_ = c
 		switch key {
 		case "Divide0": return gopurs_runtime.Box(c.V0)

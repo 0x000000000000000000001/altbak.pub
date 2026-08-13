@@ -56,7 +56,7 @@ func Get_Data_Semigroup_Foldable_FoldRight1() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_FoldRight1.Do(func() {
 		cache_Data_Semigroup_Foldable_FoldRight1 = gopurs_runtime.Func(func(value0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(value1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 3805997843, UnsafePtr: unsafe.Pointer(&Constructor_Data_Semigroup_Foldable_FoldRight1[gopurs_runtime.Value]{1, value0, value1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 3805997843, UnsafePtr: unsafe.Pointer(&Constructor_Data_Semigroup_Foldable_FoldRight1{1, value0, value1})}
 })
 })
 	})
@@ -101,7 +101,7 @@ var once_Data_Semigroup_Foldable_runFoldRight1 sync.Once
 func Get_Data_Semigroup_Foldable_runFoldRight1() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_runFoldRight1.Do(func() {
 		cache_Data_Semigroup_Foldable_runFoldRight1 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_runFoldRight1(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_FoldRight1[gopurs_runtime.Value]](v_0_box))
+return Call_Data_Semigroup_Foldable_runFoldRight1(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_FoldRight1](v_0_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_runFoldRight1
@@ -143,7 +143,7 @@ var once_Data_Semigroup_Foldable_foldr1 sync.Once
 func Get_Data_Semigroup_Foldable_foldr1() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_foldr1.Do(func() {
 		cache_Data_Semigroup_Foldable_foldr1 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_foldr1(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semigroup_Foldable_foldr1(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dict_0_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_foldr1
@@ -154,7 +154,7 @@ var once_Data_Semigroup_Foldable_foldl1 sync.Once
 func Get_Data_Semigroup_Foldable_foldl1() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_foldl1.Do(func() {
 		cache_Data_Semigroup_Foldable_foldl1 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_foldl1(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semigroup_Foldable_foldl1(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dict_0_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_foldl1
@@ -165,7 +165,7 @@ var once_Data_Semigroup_Foldable_maximumBy sync.Once
 func Get_Data_Semigroup_Foldable_maximumBy() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_maximumBy.Do(func() {
 		cache_Data_Semigroup_Foldable_maximumBy = gopurs_runtime.Func2(func(dictFoldable1_0_box gopurs_runtime.Value, cmp_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_maximumBy(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dictFoldable1_0_box), cmp_1_box)
+return Call_Data_Semigroup_Foldable_maximumBy(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dictFoldable1_0_box), cmp_1_box)
 })
 	})
 	return cache_Data_Semigroup_Foldable_maximumBy
@@ -176,7 +176,7 @@ var once_Data_Semigroup_Foldable_minimumBy sync.Once
 func Get_Data_Semigroup_Foldable_minimumBy() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_minimumBy.Do(func() {
 		cache_Data_Semigroup_Foldable_minimumBy = gopurs_runtime.Func2(func(dictFoldable1_0_box gopurs_runtime.Value, cmp_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_minimumBy(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dictFoldable1_0_box), cmp_1_box)
+return Call_Data_Semigroup_Foldable_minimumBy(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dictFoldable1_0_box), cmp_1_box)
 })
 	})
 	return cache_Data_Semigroup_Foldable_minimumBy
@@ -191,16 +191,16 @@ return Get_Data_Foldable_foldableTuple()
 }), gopurs_runtime.Func(func(dictSemigroup_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1)
+return gopurs_runtime.Apply(f_1, (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V1)
 })
 })
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_1.UnsafePtr).V1
+return (*Constructor_Data_Tuple_Tuple)(v1_1.UnsafePtr).V1
 })
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_1.UnsafePtr).V1
+return (*Constructor_Data_Tuple_Tuple)(v1_1.UnsafePtr).V1
 })
 }))
 	})
@@ -289,13 +289,13 @@ func Get_Data_Semigroup_Foldable_foldRight1Semigroup() gopurs_runtime.Value {
 		cache_Data_Semigroup_Foldable_foldRight1Semigroup = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_2_0 -> gopurs_runtime.Value
-__local_var_2_0 := (*Constructor_Data_Semigroup_Foldable_FoldRight1[gopurs_runtime.Value])(v_0.UnsafePtr).V1
+__local_var_2_0 := (*Constructor_Data_Semigroup_Foldable_FoldRight1)(v_0.UnsafePtr).V1
 _ = __local_var_2_0
-return gopurs_runtime.Value{Type: 9, IntVal: 3805997843, UnsafePtr: unsafe.Pointer(&Constructor_Data_Semigroup_Foldable_FoldRight1[gopurs_runtime.Value]{1, gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3805997843, UnsafePtr: unsafe.Pointer(&Constructor_Data_Semigroup_Foldable_FoldRight1{1, gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2((*Constructor_Data_Semigroup_Foldable_FoldRight1[gopurs_runtime.Value])(v_0.UnsafePtr).V0, gopurs_runtime.Apply2(f_4, __local_var_2_0, gopurs_runtime.Apply2((*Constructor_Data_Semigroup_Foldable_FoldRight1[gopurs_runtime.Value])(v1_1.UnsafePtr).V0, a_3, f_4)), f_4)
+return gopurs_runtime.Apply2((*Constructor_Data_Semigroup_Foldable_FoldRight1)(v_0.UnsafePtr).V0, gopurs_runtime.Apply2(f_4, __local_var_2_0, gopurs_runtime.Apply2((*Constructor_Data_Semigroup_Foldable_FoldRight1)(v1_1.UnsafePtr).V0, a_3, f_4)), f_4)
 })
-}), (*Constructor_Data_Semigroup_Foldable_FoldRight1[gopurs_runtime.Value])(v1_1.UnsafePtr).V1})}
+}), (*Constructor_Data_Semigroup_Foldable_FoldRight1)(v1_1.UnsafePtr).V1})}
 })
 }))
 	})
@@ -320,7 +320,7 @@ var once_Data_Semigroup_Foldable_foldMap1DefaultR sync.Once
 func Get_Data_Semigroup_Foldable_foldMap1DefaultR() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_foldMap1DefaultR.Do(func() {
 		cache_Data_Semigroup_Foldable_foldMap1DefaultR = gopurs_runtime.Func3(func(dictFoldable1_0_box gopurs_runtime.Value, dictFunctor_1_box gopurs_runtime.Value, dictSemigroup_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_foldMap1DefaultR(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dictFoldable1_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor[gopurs_runtime.Value]](dictFunctor_1_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]](dictSemigroup_2_box))
+return Call_Data_Semigroup_Foldable_foldMap1DefaultR(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dictFoldable1_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](dictFunctor_1_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](dictSemigroup_2_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_foldMap1DefaultR
@@ -331,7 +331,7 @@ var once_Data_Semigroup_Foldable_foldMap1DefaultL sync.Once
 func Get_Data_Semigroup_Foldable_foldMap1DefaultL() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_foldMap1DefaultL.Do(func() {
 		cache_Data_Semigroup_Foldable_foldMap1DefaultL = gopurs_runtime.Func3(func(dictFoldable1_0_box gopurs_runtime.Value, dictFunctor_1_box gopurs_runtime.Value, dictSemigroup_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_foldMap1DefaultL(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dictFoldable1_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor[gopurs_runtime.Value]](dictFunctor_1_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]](dictSemigroup_2_box))
+return Call_Data_Semigroup_Foldable_foldMap1DefaultL(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dictFoldable1_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](dictFunctor_1_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](dictSemigroup_2_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_foldMap1DefaultL
@@ -342,7 +342,7 @@ var once_Data_Semigroup_Foldable_foldMap1 sync.Once
 func Get_Data_Semigroup_Foldable_foldMap1() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_foldMap1.Do(func() {
 		cache_Data_Semigroup_Foldable_foldMap1 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_foldMap1(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semigroup_Foldable_foldMap1(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dict_0_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_foldMap1
@@ -353,7 +353,7 @@ var once_Data_Semigroup_Foldable_foldl1Default sync.Once
 func Get_Data_Semigroup_Foldable_foldl1Default() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_foldl1Default.Do(func() {
 		cache_Data_Semigroup_Foldable_foldl1Default = gopurs_runtime.Func(func(dictFoldable1_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_foldl1Default(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dictFoldable1_0_box))
+return Call_Data_Semigroup_Foldable_foldl1Default(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dictFoldable1_0_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_foldl1Default
@@ -364,7 +364,7 @@ var once_Data_Semigroup_Foldable_foldr1Default sync.Once
 func Get_Data_Semigroup_Foldable_foldr1Default() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_foldr1Default.Do(func() {
 		cache_Data_Semigroup_Foldable_foldr1Default = gopurs_runtime.Func(func(dictFoldable1_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_foldr1Default(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dictFoldable1_0_box))
+return Call_Data_Semigroup_Foldable_foldr1Default(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dictFoldable1_0_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_foldr1Default
@@ -375,7 +375,7 @@ var once_Data_Semigroup_Foldable_intercalateMap sync.Once
 func Get_Data_Semigroup_Foldable_intercalateMap() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_intercalateMap.Do(func() {
 		cache_Data_Semigroup_Foldable_intercalateMap = gopurs_runtime.Func2(func(dictFoldable1_0_box gopurs_runtime.Value, dictSemigroup_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_intercalateMap(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dictFoldable1_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]](dictSemigroup_1_box))
+return Call_Data_Semigroup_Foldable_intercalateMap(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dictFoldable1_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](dictSemigroup_1_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_intercalateMap
@@ -386,7 +386,7 @@ var once_Data_Semigroup_Foldable_intercalate sync.Once
 func Get_Data_Semigroup_Foldable_intercalate() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_intercalate.Do(func() {
 		cache_Data_Semigroup_Foldable_intercalate = gopurs_runtime.Func2(func(dictFoldable1_0_box gopurs_runtime.Value, dictSemigroup_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_intercalate(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dictFoldable1_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]](dictSemigroup_1_box))
+return Call_Data_Semigroup_Foldable_intercalate(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dictFoldable1_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](dictSemigroup_1_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_intercalate
@@ -397,7 +397,7 @@ var once_Data_Semigroup_Foldable_maximum sync.Once
 func Get_Data_Semigroup_Foldable_maximum() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_maximum.Do(func() {
 		cache_Data_Semigroup_Foldable_maximum = gopurs_runtime.Func(func(dictOrd_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_maximum(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dictOrd_0_box))
+return Call_Data_Semigroup_Foldable_maximum(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_maximum
@@ -408,7 +408,7 @@ var once_Data_Semigroup_Foldable_minimum sync.Once
 func Get_Data_Semigroup_Foldable_minimum() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_minimum.Do(func() {
 		cache_Data_Semigroup_Foldable_minimum = gopurs_runtime.Func(func(dictOrd_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_minimum(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord[gopurs_runtime.Value]](dictOrd_0_box))
+return Call_Data_Semigroup_Foldable_minimum(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_0_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_minimum
@@ -419,7 +419,7 @@ var once_Data_Semigroup_Foldable_traverse1_ sync.Once
 func Get_Data_Semigroup_Foldable_traverse1_() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_traverse1_.Do(func() {
 		cache_Data_Semigroup_Foldable_traverse1_ = gopurs_runtime.Func2(func(dictFoldable1_0_box gopurs_runtime.Value, dictApply_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_traverse1_(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dictFoldable1_0_box), gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply[gopurs_runtime.Value]](dictApply_1_box))
+return Call_Data_Semigroup_Foldable_traverse1_(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dictFoldable1_0_box), gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](dictApply_1_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_traverse1_
@@ -430,7 +430,7 @@ var once_Data_Semigroup_Foldable_for1_ sync.Once
 func Get_Data_Semigroup_Foldable_for1_() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_for1_.Do(func() {
 		cache_Data_Semigroup_Foldable_for1_ = gopurs_runtime.Func2(func(dictFoldable1_0_box gopurs_runtime.Value, dictApply_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_for1_(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dictFoldable1_0_box), gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply[gopurs_runtime.Value]](dictApply_1_box))
+return Call_Data_Semigroup_Foldable_for1_(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dictFoldable1_0_box), gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](dictApply_1_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_for1_
@@ -441,7 +441,7 @@ var once_Data_Semigroup_Foldable_sequence1_ sync.Once
 func Get_Data_Semigroup_Foldable_sequence1_() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_sequence1_.Do(func() {
 		cache_Data_Semigroup_Foldable_sequence1_ = gopurs_runtime.Func2(func(dictFoldable1_0_box gopurs_runtime.Value, dictApply_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_sequence1_(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dictFoldable1_0_box), gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply[gopurs_runtime.Value]](dictApply_1_box))
+return Call_Data_Semigroup_Foldable_sequence1_(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dictFoldable1_0_box), gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](dictApply_1_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_sequence1_
@@ -452,7 +452,7 @@ var once_Data_Semigroup_Foldable_fold1 sync.Once
 func Get_Data_Semigroup_Foldable_fold1() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_fold1.Do(func() {
 		cache_Data_Semigroup_Foldable_fold1 = gopurs_runtime.Func2(func(dictFoldable1_0_box gopurs_runtime.Value, dictSemigroup_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_fold1(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dictFoldable1_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]](dictSemigroup_1_box))
+return Call_Data_Semigroup_Foldable_fold1(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dictFoldable1_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](dictSemigroup_1_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_fold1
@@ -463,7 +463,7 @@ var once_Data_Semigroup_Foldable_foldMap1__1646952192 sync.Once
 func Get_Data_Semigroup_Foldable_foldMap1__1646952192() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_foldMap1__1646952192.Do(func() {
 		cache_Data_Semigroup_Foldable_foldMap1__1646952192 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_foldMap1__1646952192(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semigroup_Foldable_foldMap1__1646952192(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dict_0_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_foldMap1__1646952192
@@ -474,7 +474,7 @@ var once_Data_Semigroup_Foldable_foldMap1__3675913824 sync.Once
 func Get_Data_Semigroup_Foldable_foldMap1__3675913824() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_foldMap1__3675913824.Do(func() {
 		cache_Data_Semigroup_Foldable_foldMap1__3675913824 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_foldMap1__3675913824(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semigroup_Foldable_foldMap1__3675913824(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dict_0_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_foldMap1__3675913824
@@ -485,7 +485,7 @@ var once_Data_Semigroup_Foldable_foldMap1__4118857699 sync.Once
 func Get_Data_Semigroup_Foldable_foldMap1__4118857699() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_foldMap1__4118857699.Do(func() {
 		cache_Data_Semigroup_Foldable_foldMap1__4118857699 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_foldMap1__4118857699(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semigroup_Foldable_foldMap1__4118857699(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dict_0_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_foldMap1__4118857699
@@ -496,7 +496,7 @@ var once_Data_Semigroup_Foldable_foldMap1__3342855683 sync.Once
 func Get_Data_Semigroup_Foldable_foldMap1__3342855683() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_foldMap1__3342855683.Do(func() {
 		cache_Data_Semigroup_Foldable_foldMap1__3342855683 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_foldMap1__3342855683(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semigroup_Foldable_foldMap1__3342855683(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dict_0_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_foldMap1__3342855683
@@ -507,7 +507,7 @@ var once_Data_Semigroup_Foldable_foldMap1__2273408387 sync.Once
 func Get_Data_Semigroup_Foldable_foldMap1__2273408387() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_foldMap1__2273408387.Do(func() {
 		cache_Data_Semigroup_Foldable_foldMap1__2273408387 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_foldMap1__2273408387(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semigroup_Foldable_foldMap1__2273408387(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dict_0_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_foldMap1__2273408387
@@ -518,7 +518,7 @@ var once_Data_Semigroup_Foldable_foldMap1__3962279491 sync.Once
 func Get_Data_Semigroup_Foldable_foldMap1__3962279491() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_foldMap1__3962279491.Do(func() {
 		cache_Data_Semigroup_Foldable_foldMap1__3962279491 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_foldMap1__3962279491(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semigroup_Foldable_foldMap1__3962279491(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dict_0_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_foldMap1__3962279491
@@ -529,7 +529,7 @@ var once_Data_Semigroup_Foldable_foldMap1__3881804011 sync.Once
 func Get_Data_Semigroup_Foldable_foldMap1__3881804011() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_foldMap1__3881804011.Do(func() {
 		cache_Data_Semigroup_Foldable_foldMap1__3881804011 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_foldMap1__3881804011(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semigroup_Foldable_foldMap1__3881804011(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dict_0_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_foldMap1__3881804011
@@ -540,7 +540,7 @@ var once_Data_Semigroup_Foldable_foldMap1__3273114988 sync.Once
 func Get_Data_Semigroup_Foldable_foldMap1__3273114988() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_foldMap1__3273114988.Do(func() {
 		cache_Data_Semigroup_Foldable_foldMap1__3273114988 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_foldMap1__3273114988(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semigroup_Foldable_foldMap1__3273114988(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dict_0_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_foldMap1__3273114988
@@ -551,7 +551,7 @@ var once_Data_Semigroup_Foldable_foldMap1__1749181674 sync.Once
 func Get_Data_Semigroup_Foldable_foldMap1__1749181674() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_foldMap1__1749181674.Do(func() {
 		cache_Data_Semigroup_Foldable_foldMap1__1749181674 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_foldMap1__1749181674(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semigroup_Foldable_foldMap1__1749181674(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dict_0_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_foldMap1__1749181674
@@ -562,7 +562,7 @@ var once_Data_Semigroup_Foldable_foldMap1__912539845 sync.Once
 func Get_Data_Semigroup_Foldable_foldMap1__912539845() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_foldMap1__912539845.Do(func() {
 		cache_Data_Semigroup_Foldable_foldMap1__912539845 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_foldMap1__912539845(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semigroup_Foldable_foldMap1__912539845(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dict_0_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_foldMap1__912539845
@@ -573,7 +573,7 @@ var once_Data_Semigroup_Foldable_foldMap1__4160988333 sync.Once
 func Get_Data_Semigroup_Foldable_foldMap1__4160988333() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_foldMap1__4160988333.Do(func() {
 		cache_Data_Semigroup_Foldable_foldMap1__4160988333 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_foldMap1__4160988333(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semigroup_Foldable_foldMap1__4160988333(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dict_0_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_foldMap1__4160988333
@@ -584,7 +584,7 @@ var once_Data_Semigroup_Foldable_foldMap1__3028551755 sync.Once
 func Get_Data_Semigroup_Foldable_foldMap1__3028551755() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_foldMap1__3028551755.Do(func() {
 		cache_Data_Semigroup_Foldable_foldMap1__3028551755 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_foldMap1__3028551755(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semigroup_Foldable_foldMap1__3028551755(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dict_0_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_foldMap1__3028551755
@@ -595,7 +595,7 @@ var once_Data_Semigroup_Foldable_foldMap1__2836832395 sync.Once
 func Get_Data_Semigroup_Foldable_foldMap1__2836832395() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_foldMap1__2836832395.Do(func() {
 		cache_Data_Semigroup_Foldable_foldMap1__2836832395 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_foldMap1__2836832395(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[*Constructor_Data_NonEmpty_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value]]](dict_0_box))
+return Call_Data_Semigroup_Foldable_foldMap1__2836832395(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dict_0_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_foldMap1__2836832395
@@ -606,7 +606,7 @@ var once_Data_Semigroup_Foldable_foldMap1__3134302309 sync.Once
 func Get_Data_Semigroup_Foldable_foldMap1__3134302309() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_foldMap1__3134302309.Do(func() {
 		cache_Data_Semigroup_Foldable_foldMap1__3134302309 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_foldMap1__3134302309(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[*Constructor_Data_NonEmpty_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value]]](dict_0_box))
+return Call_Data_Semigroup_Foldable_foldMap1__3134302309(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dict_0_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_foldMap1__3134302309
@@ -630,13 +630,13 @@ func Get_Data_Semigroup_Foldable_foldRight1Semigroup__1201419834() gopurs_runtim
 		cache_Data_Semigroup_Foldable_foldRight1Semigroup__1201419834 = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_2_0 -> gopurs_runtime.Value
-__local_var_2_0 := (*Constructor_Data_Semigroup_Foldable_FoldRight1[gopurs_runtime.Value])(v_0.UnsafePtr).V1
+__local_var_2_0 := (*Constructor_Data_Semigroup_Foldable_FoldRight1)(v_0.UnsafePtr).V1
 _ = __local_var_2_0
-return gopurs_runtime.Value{Type: 9, IntVal: 3805997843, UnsafePtr: unsafe.Pointer(&Constructor_Data_Semigroup_Foldable_FoldRight1[gopurs_runtime.Value]{1, gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 3805997843, UnsafePtr: unsafe.Pointer(&Constructor_Data_Semigroup_Foldable_FoldRight1{1, gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2((*Constructor_Data_Semigroup_Foldable_FoldRight1[gopurs_runtime.Value])(v_0.UnsafePtr).V0, gopurs_runtime.Apply2(f_4, __local_var_2_0, gopurs_runtime.Apply2((*Constructor_Data_Semigroup_Foldable_FoldRight1[gopurs_runtime.Value])(v1_1.UnsafePtr).V0, a_3, f_4)), f_4)
+return gopurs_runtime.Apply2((*Constructor_Data_Semigroup_Foldable_FoldRight1)(v_0.UnsafePtr).V0, gopurs_runtime.Apply2(f_4, __local_var_2_0, gopurs_runtime.Apply2((*Constructor_Data_Semigroup_Foldable_FoldRight1)(v1_1.UnsafePtr).V0, a_3, f_4)), f_4)
 })
-}), (*Constructor_Data_Semigroup_Foldable_FoldRight1[gopurs_runtime.Value])(v1_1.UnsafePtr).V1})}
+}), (*Constructor_Data_Semigroup_Foldable_FoldRight1)(v1_1.UnsafePtr).V1})}
 })
 }))
 	})
@@ -727,16 +727,16 @@ return Get_Data_Foldable_foldableTuple()
 }), gopurs_runtime.Func(func(dictSemigroup_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_1, (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1)
+return gopurs_runtime.Apply(f_1, (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V1)
 })
 })
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_1.UnsafePtr).V1
+return (*Constructor_Data_Tuple_Tuple)(v1_1.UnsafePtr).V1
 })
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return (*Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value])(v1_1.UnsafePtr).V1
+return (*Constructor_Data_Tuple_Tuple)(v1_1.UnsafePtr).V1
 })
 }))
 	})
@@ -748,7 +748,7 @@ var once_Data_Semigroup_Foldable_foldl1__3059734942 sync.Once
 func Get_Data_Semigroup_Foldable_foldl1__3059734942() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_foldl1__3059734942.Do(func() {
 		cache_Data_Semigroup_Foldable_foldl1__3059734942 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_foldl1__3059734942(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semigroup_Foldable_foldl1__3059734942(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dict_0_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_foldl1__3059734942
@@ -770,7 +770,7 @@ var once_Data_Semigroup_Foldable_foldr1__3059734942 sync.Once
 func Get_Data_Semigroup_Foldable_foldr1__3059734942() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_foldr1__3059734942.Do(func() {
 		cache_Data_Semigroup_Foldable_foldr1__3059734942 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_foldr1__3059734942(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Semigroup_Foldable_foldr1__3059734942(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dict_0_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_foldr1__3059734942
@@ -834,7 +834,7 @@ var once_Data_Semigroup_Foldable_runFoldRight1__3719153019 sync.Once
 func Get_Data_Semigroup_Foldable_runFoldRight1__3719153019() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_runFoldRight1__3719153019.Do(func() {
 		cache_Data_Semigroup_Foldable_runFoldRight1__3719153019 = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_runFoldRight1__3719153019(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_FoldRight1[gopurs_runtime.Value]](v_0_box))
+return Call_Data_Semigroup_Foldable_runFoldRight1__3719153019(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_FoldRight1](v_0_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_runFoldRight1__3719153019
@@ -845,7 +845,7 @@ var once_Data_Semigroup_Foldable_traverse1___3055398386 sync.Once
 func Get_Data_Semigroup_Foldable_traverse1___3055398386() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_traverse1___3055398386.Do(func() {
 		cache_Data_Semigroup_Foldable_traverse1___3055398386 = gopurs_runtime.Func2(func(dictFoldable1_0_box gopurs_runtime.Value, dictApply_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_traverse1___3055398386(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dictFoldable1_0_box), gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply[gopurs_runtime.Value]](dictApply_1_box))
+return Call_Data_Semigroup_Foldable_traverse1___3055398386(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dictFoldable1_0_box), gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](dictApply_1_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_traverse1___3055398386
@@ -856,20 +856,20 @@ var once_Data_Semigroup_Foldable_traverse1___1509071858 sync.Once
 func Get_Data_Semigroup_Foldable_traverse1___1509071858() gopurs_runtime.Value {
 	once_Data_Semigroup_Foldable_traverse1___1509071858.Do(func() {
 		cache_Data_Semigroup_Foldable_traverse1___1509071858 = gopurs_runtime.Func2(func(dictFoldable1_0_box gopurs_runtime.Value, dictApply_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Semigroup_Foldable_traverse1___1509071858(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]](dictFoldable1_0_box), gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply[gopurs_runtime.Value]](dictApply_1_box))
+return Call_Data_Semigroup_Foldable_traverse1___1509071858(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Foldable_Foldable1](dictFoldable1_0_box), gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](dictApply_1_box))
 })
 	})
 	return cache_Data_Semigroup_Foldable_traverse1___1509071858
 }
 
-type Constructor_Data_Semigroup_Foldable_FoldRight1[T_a any] struct {
+type Constructor_Data_Semigroup_Foldable_FoldRight1 struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
-	V1 T_a
+	V1 gopurs_runtime.Value
 }
 
 
-type Constructor_Data_Semigroup_Foldable_Foldable1[T_t any] struct {
+type Constructor_Data_Semigroup_Foldable_Foldable1 struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -880,7 +880,7 @@ type Constructor_Data_Semigroup_Foldable_Foldable1[T_t any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[2465059545] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_Semigroup_Foldable_Foldable1)(ptr)
 		_ = c
 		switch key {
 		case "Foldable0": return gopurs_runtime.Box(c.V0)
@@ -949,10 +949,10 @@ return x_4
 }))
 }
 
-func Call_Data_Semigroup_Foldable_runFoldRight1(v_0_loop *Constructor_Data_Semigroup_Foldable_FoldRight1[gopurs_runtime.Value]) gopurs_runtime.Value {
-var v_0 *Constructor_Data_Semigroup_Foldable_FoldRight1[gopurs_runtime.Value] = v_0_loop
+func Call_Data_Semigroup_Foldable_runFoldRight1(v_0_loop *Constructor_Data_Semigroup_Foldable_FoldRight1) gopurs_runtime.Value {
+var v_0 *Constructor_Data_Semigroup_Foldable_FoldRight1 = v_0_loop
 _ = v_0
-return gopurs_runtime.Apply((*Constructor_Data_Semigroup_Foldable_FoldRight1[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 3805997843, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0, (*Constructor_Data_Semigroup_Foldable_FoldRight1[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 3805997843, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1)
+return gopurs_runtime.Apply((v_0).V0, (v_0).V1)
 }
 
 func Call_Data_Semigroup_Foldable_joinee(v_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -967,20 +967,20 @@ _ = v_0
 return v_0
 }
 
-func Call_Data_Semigroup_Foldable_foldr1(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semigroup_Foldable_foldr1(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V3)
 }
 
-func Call_Data_Semigroup_Foldable_foldl1(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semigroup_Foldable_foldl1(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V2)
 }
 
-func Call_Data_Semigroup_Foldable_maximumBy(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value], cmp_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dictFoldable1_0_loop
+func Call_Data_Semigroup_Foldable_maximumBy(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1, cmp_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dictFoldable1_0_loop
 _ = dictFoldable1_0
 var cmp_1 gopurs_runtime.Value = cmp_1_loop
 _ = cmp_1
@@ -1028,8 +1028,8 @@ return __t2
 }))
 }
 
-func Call_Data_Semigroup_Foldable_minimumBy(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value], cmp_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dictFoldable1_0_loop
+func Call_Data_Semigroup_Foldable_minimumBy(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1, cmp_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dictFoldable1_0_loop
 _ = dictFoldable1_0
 var cmp_1 gopurs_runtime.Value = cmp_1_loop
 _ = cmp_1
@@ -1077,12 +1077,12 @@ return __t2
 }))
 }
 
-func Call_Data_Semigroup_Foldable_foldMap1DefaultR(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value], dictFunctor_1_loop *Constructor_Data_Functor_Functor[gopurs_runtime.Value], dictSemigroup_2_loop *Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dictFoldable1_0_loop
+func Call_Data_Semigroup_Foldable_foldMap1DefaultR(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1, dictFunctor_1_loop *Constructor_Data_Functor_Functor, dictSemigroup_2_loop *Constructor_Data_Semigroup_Semigroup) gopurs_runtime.Value {
+var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dictFoldable1_0_loop
 _ = dictFoldable1_0
-var dictFunctor_1 *Constructor_Data_Functor_Functor[gopurs_runtime.Value] = dictFunctor_1_loop
+var dictFunctor_1 *Constructor_Data_Functor_Functor = dictFunctor_1_loop
 _ = dictFunctor_1
-var dictSemigroup_2 *Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value] = dictSemigroup_2_loop
+var dictSemigroup_2 *Constructor_Data_Semigroup_Semigroup = dictSemigroup_2_loop
 _ = dictSemigroup_2
 // TAST (Let): append_3_0 -> gopurs_runtime.Value
 append_3_0 := gopurs_runtime.Box(dictSemigroup_2.V0)
@@ -1100,12 +1100,12 @@ return gopurs_runtime.Apply(__local_var_6_2, gopurs_runtime.Apply(__local_var_5_
 })
 }
 
-func Call_Data_Semigroup_Foldable_foldMap1DefaultL(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value], dictFunctor_1_loop *Constructor_Data_Functor_Functor[gopurs_runtime.Value], dictSemigroup_2_loop *Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dictFoldable1_0_loop
+func Call_Data_Semigroup_Foldable_foldMap1DefaultL(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1, dictFunctor_1_loop *Constructor_Data_Functor_Functor, dictSemigroup_2_loop *Constructor_Data_Semigroup_Semigroup) gopurs_runtime.Value {
+var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dictFoldable1_0_loop
 _ = dictFoldable1_0
-var dictFunctor_1 *Constructor_Data_Functor_Functor[gopurs_runtime.Value] = dictFunctor_1_loop
+var dictFunctor_1 *Constructor_Data_Functor_Functor = dictFunctor_1_loop
 _ = dictFunctor_1
-var dictSemigroup_2 *Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value] = dictSemigroup_2_loop
+var dictSemigroup_2 *Constructor_Data_Semigroup_Semigroup = dictSemigroup_2_loop
 _ = dictSemigroup_2
 // TAST (Let): append_3_0 -> gopurs_runtime.Value
 append_3_0 := gopurs_runtime.Box(dictSemigroup_2.V0)
@@ -1123,14 +1123,14 @@ return gopurs_runtime.Apply(__local_var_6_2, gopurs_runtime.Apply(__local_var_5_
 })
 }
 
-func Call_Data_Semigroup_Foldable_foldMap1(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semigroup_Foldable_foldMap1(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Semigroup_Foldable_foldl1Default(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dictFoldable1_0_loop
+func Call_Data_Semigroup_Foldable_foldl1Default(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1) gopurs_runtime.Value {
+var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dictFoldable1_0_loop
 _ = dictFoldable1_0
 // TAST (Let): __local_var_1_2 -> gopurs_runtime.Value
 __local_var_1_2 := gopurs_runtime.Apply2(gopurs_runtime.Box(dictFoldable1_0.V1), Get_Data_Semigroup_Foldable_semigroupDual(), Get_Data_Semigroup_Foldable_mkFoldRight1())
@@ -1140,7 +1140,7 @@ __local_var_1_1 := gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_run
 // TAST (Let): __local_var_3_3 -> gopurs_runtime.Value
 __local_var_3_3 := gopurs_runtime.Apply(__local_var_1_2, x_2)
 _ = __local_var_3_3
-return gopurs_runtime.Apply((*Constructor_Data_Semigroup_Foldable_FoldRight1[gopurs_runtime.Value])(__local_var_3_3.UnsafePtr).V0, (*Constructor_Data_Semigroup_Foldable_FoldRight1[gopurs_runtime.Value])(__local_var_3_3.UnsafePtr).V1)
+return gopurs_runtime.Apply((*Constructor_Data_Semigroup_Foldable_FoldRight1)(__local_var_3_3.UnsafePtr).V0, (*Constructor_Data_Semigroup_Foldable_FoldRight1)(__local_var_3_3.UnsafePtr).V1)
 })
 _ = __local_var_1_1
 // TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
@@ -1159,18 +1159,18 @@ return gopurs_runtime.Apply2(x_2, a_4, b_3)
 })
 }
 
-func Call_Data_Semigroup_Foldable_foldr1Default(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dictFoldable1_0_loop
+func Call_Data_Semigroup_Foldable_foldr1Default(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1) gopurs_runtime.Value {
+var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dictFoldable1_0_loop
 _ = dictFoldable1_0
 // TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
-__local_var_1_1 := gopurs_runtime.Apply2(gopurs_runtime.Box(dictFoldable1_0.V1), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup[*Constructor_Data_Semigroup_Foldable_FoldRight1[gopurs_runtime.Value]]](Get_Data_Semigroup_Foldable_foldRight1Semigroup()))}, Get_Data_Semigroup_Foldable_mkFoldRight1())
+__local_var_1_1 := gopurs_runtime.Apply2(gopurs_runtime.Box(dictFoldable1_0.V1), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](Get_Data_Semigroup_Foldable_foldRight1Semigroup()))}, Get_Data_Semigroup_Foldable_mkFoldRight1())
 _ = __local_var_1_1
 // TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
 __local_var_1_0 := gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_3_2 -> gopurs_runtime.Value
 __local_var_3_2 := gopurs_runtime.Apply(__local_var_1_1, x_2)
 _ = __local_var_3_2
-return gopurs_runtime.Apply((*Constructor_Data_Semigroup_Foldable_FoldRight1[gopurs_runtime.Value])(__local_var_3_2.UnsafePtr).V0, (*Constructor_Data_Semigroup_Foldable_FoldRight1[gopurs_runtime.Value])(__local_var_3_2.UnsafePtr).V1)
+return gopurs_runtime.Apply((*Constructor_Data_Semigroup_Foldable_FoldRight1)(__local_var_3_2.UnsafePtr).V0, (*Constructor_Data_Semigroup_Foldable_FoldRight1)(__local_var_3_2.UnsafePtr).V1)
 })
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(b_2 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1180,13 +1180,13 @@ return gopurs_runtime.Apply2(__local_var_1_0, a_3, b_2)
 })
 }
 
-func Call_Data_Semigroup_Foldable_intercalateMap(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value], dictSemigroup_1_loop *Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dictFoldable1_0_loop
+func Call_Data_Semigroup_Foldable_intercalateMap(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1, dictSemigroup_1_loop *Constructor_Data_Semigroup_Semigroup) gopurs_runtime.Value {
+var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dictFoldable1_0_loop
 _ = dictFoldable1_0
-var dictSemigroup_1 *Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value] = dictSemigroup_1_loop
+var dictSemigroup_1 *Constructor_Data_Semigroup_Semigroup = dictSemigroup_1_loop
 _ = dictSemigroup_1
-// TAST (Let): semigroupJoinWith1_2_0 -> *Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]
-semigroupJoinWith1_2_0 := &Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]{1, gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): semigroupJoinWith1_2_0 -> *Constructor_Data_Semigroup_Semigroup
+semigroupJoinWith1_2_0 := &Constructor_Data_Semigroup_Semigroup{1, gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(j_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.Box(dictSemigroup_1.V0), gopurs_runtime.Apply(v_2, j_4), gopurs_runtime.Apply2(gopurs_runtime.Box(dictSemigroup_1.V0), j_4, gopurs_runtime.Apply(v1_3, j_4)))
@@ -1210,13 +1210,13 @@ return __local_var_7_1
 })
 }
 
-func Call_Data_Semigroup_Foldable_intercalate(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value], dictSemigroup_1_loop *Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dictFoldable1_0_loop
+func Call_Data_Semigroup_Foldable_intercalate(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1, dictSemigroup_1_loop *Constructor_Data_Semigroup_Semigroup) gopurs_runtime.Value {
+var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dictFoldable1_0_loop
 _ = dictFoldable1_0
-var dictSemigroup_1 *Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value] = dictSemigroup_1_loop
+var dictSemigroup_1 *Constructor_Data_Semigroup_Semigroup = dictSemigroup_1_loop
 _ = dictSemigroup_1
-// TAST (Let): semigroupJoinWith1_2_1 -> *Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]
-semigroupJoinWith1_2_1 := &Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]{1, gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): semigroupJoinWith1_2_1 -> *Constructor_Data_Semigroup_Semigroup
+semigroupJoinWith1_2_1 := &Constructor_Data_Semigroup_Semigroup{1, gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(j_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.Box(dictSemigroup_1.V0), gopurs_runtime.Apply(v_2, j_4), gopurs_runtime.Apply2(gopurs_runtime.Box(dictSemigroup_1.V0), j_4, gopurs_runtime.Apply(v1_3, j_4)))
@@ -1245,8 +1245,8 @@ return gopurs_runtime.Apply2(__local_var_2_0, a_3, Get_Data_Semigroup_Foldable_i
 })
 }
 
-func Call_Data_Semigroup_Foldable_maximum(dictOrd_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictOrd_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dictOrd_0_loop
+func Call_Data_Semigroup_Foldable_maximum(dictOrd_0_loop *Constructor_Data_Ord_Ord) gopurs_runtime.Value {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 // TAST (Let): semigroupMax_1_0 -> gopurs_runtime.Value
 semigroupMax_1_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1292,8 +1292,8 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFoldable1_2, "foldMap1
 })
 }
 
-func Call_Data_Semigroup_Foldable_minimum(dictOrd_0_loop *Constructor_Data_Ord_Ord[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictOrd_0 *Constructor_Data_Ord_Ord[gopurs_runtime.Value] = dictOrd_0_loop
+func Call_Data_Semigroup_Foldable_minimum(dictOrd_0_loop *Constructor_Data_Ord_Ord) gopurs_runtime.Value {
+var dictOrd_0 *Constructor_Data_Ord_Ord = dictOrd_0_loop
 _ = dictOrd_0
 // TAST (Let): semigroupMin_1_0 -> gopurs_runtime.Value
 semigroupMin_1_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1339,16 +1339,16 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFoldable1_2, "foldMap1
 })
 }
 
-func Call_Data_Semigroup_Foldable_traverse1_(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value], dictApply_1_loop *Constructor_Control_Apply_Apply[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dictFoldable1_0_loop
+func Call_Data_Semigroup_Foldable_traverse1_(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1, dictApply_1_loop *Constructor_Control_Apply_Apply) gopurs_runtime.Value {
+var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dictFoldable1_0_loop
 _ = dictFoldable1_0
-var dictApply_1 *Constructor_Control_Apply_Apply[gopurs_runtime.Value] = dictApply_1_loop
+var dictApply_1 *Constructor_Control_Apply_Apply = dictApply_1_loop
 _ = dictApply_1
-// TAST (Let): Functor0_2_0 -> *Constructor_Data_Functor_Functor[gopurs_runtime.Value]
-Functor0_2_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.Box(dictApply_1.V0), gopurs_runtime.Value{}))
+// TAST (Let): Functor0_2_0 -> *Constructor_Data_Functor_Functor
+Functor0_2_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.Box(dictApply_1.V0), gopurs_runtime.Value{}))
 _ = Functor0_2_0
-// TAST (Let): semigroupAct1_3_1 -> *Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]
-semigroupAct1_3_1 := &Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]{1, gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): semigroupAct1_3_1 -> *Constructor_Data_Semigroup_Semigroup
+semigroupAct1_3_1 := &Constructor_Data_Semigroup_Semigroup{1, gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.Box(dictApply_1.V1), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.Box(dictApply_1.V0), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1369,10 +1369,10 @@ return gopurs_runtime.Apply(f_4, x_6)
 })
 }
 
-func Call_Data_Semigroup_Foldable_for1_(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value], dictApply_1_loop *Constructor_Control_Apply_Apply[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dictFoldable1_0_loop
+func Call_Data_Semigroup_Foldable_for1_(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1, dictApply_1_loop *Constructor_Control_Apply_Apply) gopurs_runtime.Value {
+var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dictFoldable1_0_loop
 _ = dictFoldable1_0
-var dictApply_1 *Constructor_Control_Apply_Apply[gopurs_runtime.Value] = dictApply_1_loop
+var dictApply_1 *Constructor_Control_Apply_Apply = dictApply_1_loop
 _ = dictApply_1
 // TAST (Let): __local_var_2_0 -> gopurs_runtime.Value
 __local_var_2_0 := Call_Data_Semigroup_Foldable_traverse1_(dictFoldable1_0, dictApply_1)
@@ -1384,104 +1384,104 @@ return gopurs_runtime.Apply2(__local_var_2_0, a_4, b_3)
 })
 }
 
-func Call_Data_Semigroup_Foldable_sequence1_(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value], dictApply_1_loop *Constructor_Control_Apply_Apply[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dictFoldable1_0_loop
+func Call_Data_Semigroup_Foldable_sequence1_(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1, dictApply_1_loop *Constructor_Control_Apply_Apply) gopurs_runtime.Value {
+var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dictFoldable1_0_loop
 _ = dictFoldable1_0
-var dictApply_1 *Constructor_Control_Apply_Apply[gopurs_runtime.Value] = dictApply_1_loop
+var dictApply_1 *Constructor_Control_Apply_Apply = dictApply_1_loop
 _ = dictApply_1
 return gopurs_runtime.Apply(Call_Data_Semigroup_Foldable_traverse1_(dictFoldable1_0, dictApply_1), Get_Data_Semigroup_Foldable_identity1())
 }
 
-func Call_Data_Semigroup_Foldable_fold1(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value], dictSemigroup_1_loop *Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dictFoldable1_0_loop
+func Call_Data_Semigroup_Foldable_fold1(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1, dictSemigroup_1_loop *Constructor_Data_Semigroup_Semigroup) gopurs_runtime.Value {
+var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dictFoldable1_0_loop
 _ = dictFoldable1_0
-var dictSemigroup_1 *Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value] = dictSemigroup_1_loop
+var dictSemigroup_1 *Constructor_Data_Semigroup_Semigroup = dictSemigroup_1_loop
 _ = dictSemigroup_1
 return gopurs_runtime.Apply2(gopurs_runtime.Box(dictFoldable1_0.V1), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(dictSemigroup_1)}, Get_Data_Semigroup_Foldable_identity())
 }
 
-func Call_Data_Semigroup_Foldable_foldMap1__1646952192(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semigroup_Foldable_foldMap1__1646952192(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dict_0_loop
 _ = dict_0
-return gopurs_runtime.Apply(gopurs_runtime.Box(dict_0.V1), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup[string]](Get_Data_String_NonEmpty_Internal_semigroupNonEmptyString()))})
+return gopurs_runtime.Apply(gopurs_runtime.Box(dict_0.V1), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](Get_Data_String_NonEmpty_Internal_semigroupNonEmptyString()))})
 }
 
-func Call_Data_Semigroup_Foldable_foldMap1__3675913824(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semigroup_Foldable_foldMap1__3675913824(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dict_0_loop
 _ = dict_0
-return gopurs_runtime.Apply(gopurs_runtime.Box(dict_0.V1), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup[string]](Get_Data_String_NonEmpty_Internal_semigroupNonEmptyString()))})
+return gopurs_runtime.Apply(gopurs_runtime.Box(dict_0.V1), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](Get_Data_String_NonEmpty_Internal_semigroupNonEmptyString()))})
 }
 
-func Call_Data_Semigroup_Foldable_foldMap1__4118857699(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semigroup_Foldable_foldMap1__4118857699(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Semigroup_Foldable_foldMap1__3342855683(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semigroup_Foldable_foldMap1__3342855683(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Semigroup_Foldable_foldMap1__2273408387(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semigroup_Foldable_foldMap1__2273408387(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Semigroup_Foldable_foldMap1__3962279491(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semigroup_Foldable_foldMap1__3962279491(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Semigroup_Foldable_foldMap1__3881804011(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semigroup_Foldable_foldMap1__3881804011(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dict_0_loop
 _ = dict_0
-return gopurs_runtime.Apply(gopurs_runtime.Box(dict_0.V1), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup[*Constructor_Data_Semigroup_Foldable_FoldRight1[gopurs_runtime.Value]]](Get_Data_Semigroup_Foldable_foldRight1Semigroup()))})
+return gopurs_runtime.Apply(gopurs_runtime.Box(dict_0.V1), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](Get_Data_Semigroup_Foldable_foldRight1Semigroup()))})
 }
 
-func Call_Data_Semigroup_Foldable_foldMap1__3273114988(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semigroup_Foldable_foldMap1__3273114988(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dict_0_loop
 _ = dict_0
-return gopurs_runtime.Apply(gopurs_runtime.Box(dict_0.V1), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]](Get_Data_Semigroup_Last_semigroupLast()))})
+return gopurs_runtime.Apply(gopurs_runtime.Box(dict_0.V1), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](Get_Data_Semigroup_Last_semigroupLast()))})
 }
 
-func Call_Data_Semigroup_Foldable_foldMap1__1749181674(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semigroup_Foldable_foldMap1__1749181674(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Semigroup_Foldable_foldMap1__912539845(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semigroup_Foldable_foldMap1__912539845(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Semigroup_Foldable_foldMap1__4160988333(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semigroup_Foldable_foldMap1__4160988333(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dict_0_loop
 _ = dict_0
-return gopurs_runtime.Apply(gopurs_runtime.Box(dict_0.V1), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]](Get_Control_Monad_Gen_semigroupFreqSemigroup()))})
+return gopurs_runtime.Apply(gopurs_runtime.Box(dict_0.V1), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](Get_Control_Monad_Gen_semigroupFreqSemigroup()))})
 }
 
-func Call_Data_Semigroup_Foldable_foldMap1__3028551755(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semigroup_Foldable_foldMap1__3028551755(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Semigroup_Foldable_foldMap1__2836832395(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[*Constructor_Data_NonEmpty_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value]]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1[*Constructor_Data_NonEmpty_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value]] = dict_0_loop
+func Call_Data_Semigroup_Foldable_foldMap1__2836832395(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dict_0_loop
 _ = dict_0
-return gopurs_runtime.Apply(gopurs_runtime.Box(dict_0.V1), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup[string]](Get_Data_Semigroup_Last_semigroupLast()))})
+return gopurs_runtime.Apply(gopurs_runtime.Box(dict_0.V1), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](Get_Data_Semigroup_Last_semigroupLast()))})
 }
 
-func Call_Data_Semigroup_Foldable_foldMap1__3134302309(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[*Constructor_Data_NonEmpty_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value]]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1[*Constructor_Data_NonEmpty_NonEmpty[gopurs_runtime.Value, gopurs_runtime.Value]] = dict_0_loop
+func Call_Data_Semigroup_Foldable_foldMap1__3134302309(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dict_0_loop
 _ = dict_0
-return gopurs_runtime.Apply(gopurs_runtime.Box(dict_0.V1), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]](Get_Data_Semigroup_Last_semigroupLast()))})
+return gopurs_runtime.Apply(gopurs_runtime.Box(dict_0.V1), gopurs_runtime.Value{Type: 9, IntVal: 2053112122, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](Get_Data_Semigroup_Last_semigroupLast()))})
 }
 
 func Call_Data_Semigroup_Foldable_foldMap1__3810372805(__eta0_0_loop gopurs_runtime.Value, __eta1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1492,8 +1492,8 @@ _ = __eta1_1
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_List_Types_foldable1NonEmptyList(), "foldMap1"), __eta0_0, __eta1_1)
 }
 
-func Call_Data_Semigroup_Foldable_foldl1__3059734942(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semigroup_Foldable_foldl1__3059734942(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V2)
 }
@@ -1506,8 +1506,8 @@ _ = __eta1_1
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_List_Types_foldable1NonEmptyList(), "foldl1"), __eta0_0, __eta1_1)
 }
 
-func Call_Data_Semigroup_Foldable_foldr1__3059734942(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Semigroup_Foldable_foldr1__3059734942(dict_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V3)
 }
@@ -1538,22 +1538,22 @@ _ = v_0
 return v_0
 }
 
-func Call_Data_Semigroup_Foldable_runFoldRight1__3719153019(v_0_loop *Constructor_Data_Semigroup_Foldable_FoldRight1[gopurs_runtime.Value]) gopurs_runtime.Value {
-var v_0 *Constructor_Data_Semigroup_Foldable_FoldRight1[gopurs_runtime.Value] = v_0_loop
+func Call_Data_Semigroup_Foldable_runFoldRight1__3719153019(v_0_loop *Constructor_Data_Semigroup_Foldable_FoldRight1) gopurs_runtime.Value {
+var v_0 *Constructor_Data_Semigroup_Foldable_FoldRight1 = v_0_loop
 _ = v_0
-return gopurs_runtime.Apply((*Constructor_Data_Semigroup_Foldable_FoldRight1[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 3805997843, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V0, (*Constructor_Data_Semigroup_Foldable_FoldRight1[gopurs_runtime.Value])(gopurs_runtime.Value{Type: 9, IntVal: 3805997843, UnsafePtr: unsafe.Pointer(v_0)}.UnsafePtr).V1)
+return gopurs_runtime.Apply((v_0).V0, (v_0).V1)
 }
 
-func Call_Data_Semigroup_Foldable_traverse1___3055398386(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value], dictApply_1_loop *Constructor_Control_Apply_Apply[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dictFoldable1_0_loop
+func Call_Data_Semigroup_Foldable_traverse1___3055398386(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1, dictApply_1_loop *Constructor_Control_Apply_Apply) gopurs_runtime.Value {
+var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dictFoldable1_0_loop
 _ = dictFoldable1_0
-var dictApply_1 *Constructor_Control_Apply_Apply[gopurs_runtime.Value] = dictApply_1_loop
+var dictApply_1 *Constructor_Control_Apply_Apply = dictApply_1_loop
 _ = dictApply_1
-// TAST (Let): Functor0_2_0 -> *Constructor_Data_Functor_Functor[gopurs_runtime.Value]
-Functor0_2_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.Box(dictApply_1.V0), gopurs_runtime.Value{}))
+// TAST (Let): Functor0_2_0 -> *Constructor_Data_Functor_Functor
+Functor0_2_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.Box(dictApply_1.V0), gopurs_runtime.Value{}))
 _ = Functor0_2_0
-// TAST (Let): semigroupAct1_3_1 -> *Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]
-semigroupAct1_3_1 := &Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]{1, gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): semigroupAct1_3_1 -> *Constructor_Data_Semigroup_Semigroup
+semigroupAct1_3_1 := &Constructor_Data_Semigroup_Semigroup{1, gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.Box(dictApply_1.V1), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.Box(dictApply_1.V0), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1574,16 +1574,16 @@ return gopurs_runtime.Apply(f_4, x_6)
 })
 }
 
-func Call_Data_Semigroup_Foldable_traverse1___1509071858(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value], dictApply_1_loop *Constructor_Control_Apply_Apply[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1[gopurs_runtime.Value] = dictFoldable1_0_loop
+func Call_Data_Semigroup_Foldable_traverse1___1509071858(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1, dictApply_1_loop *Constructor_Control_Apply_Apply) gopurs_runtime.Value {
+var dictFoldable1_0 *Constructor_Data_Semigroup_Foldable_Foldable1 = dictFoldable1_0_loop
 _ = dictFoldable1_0
-var dictApply_1 *Constructor_Control_Apply_Apply[gopurs_runtime.Value] = dictApply_1_loop
+var dictApply_1 *Constructor_Control_Apply_Apply = dictApply_1_loop
 _ = dictApply_1
-// TAST (Let): Functor0_2_0 -> *Constructor_Data_Functor_Functor[gopurs_runtime.Value]
-Functor0_2_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.Box(dictApply_1.V0), gopurs_runtime.Value{}))
+// TAST (Let): Functor0_2_0 -> *Constructor_Data_Functor_Functor
+Functor0_2_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.Box(dictApply_1.V0), gopurs_runtime.Value{}))
 _ = Functor0_2_0
-// TAST (Let): semigroupAct1_3_1 -> *Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]
-semigroupAct1_3_1 := &Constructor_Data_Semigroup_Semigroup[gopurs_runtime.Value]{1, gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): semigroupAct1_3_1 -> *Constructor_Data_Semigroup_Semigroup
+semigroupAct1_3_1 := &Constructor_Data_Semigroup_Semigroup{1, gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.Box(dictApply_1.V1), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.Box(dictApply_1.V0), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {

@@ -22,7 +22,7 @@ var once_Control_Biapplicative_bipure sync.Once
 func Get_Control_Biapplicative_bipure() gopurs_runtime.Value {
 	once_Control_Biapplicative_bipure.Do(func() {
 		cache_Control_Biapplicative_bipure = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Biapplicative_bipure(gopurs_runtime.CoerceToStruct[Constructor_Control_Biapplicative_Biapplicative[gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Biapplicative_bipure(gopurs_runtime.CoerceToStruct[Constructor_Control_Biapplicative_Biapplicative](dict_0_box))
 })
 	})
 	return cache_Control_Biapplicative_bipure
@@ -44,13 +44,13 @@ var once_Control_Biapplicative_bipure__1449949980 sync.Once
 func Get_Control_Biapplicative_bipure__1449949980() gopurs_runtime.Value {
 	once_Control_Biapplicative_bipure__1449949980.Do(func() {
 		cache_Control_Biapplicative_bipure__1449949980 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Biapplicative_bipure__1449949980(gopurs_runtime.CoerceToStruct[Constructor_Control_Biapplicative_Biapplicative[gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Biapplicative_bipure__1449949980(gopurs_runtime.CoerceToStruct[Constructor_Control_Biapplicative_Biapplicative](dict_0_box))
 })
 	})
 	return cache_Control_Biapplicative_bipure__1449949980
 }
 
-type Constructor_Control_Biapplicative_Biapplicative[T_w any] struct {
+type Constructor_Control_Biapplicative_Biapplicative struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -59,7 +59,7 @@ type Constructor_Control_Biapplicative_Biapplicative[T_w any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[3949191309] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Control_Biapplicative_Biapplicative[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Control_Biapplicative_Biapplicative)(ptr)
 		_ = c
 		switch key {
 		case "Biapply0": return gopurs_runtime.Box(c.V0)
@@ -76,14 +76,14 @@ _ = x_0
 return x_0
 }
 
-func Call_Control_Biapplicative_bipure(dict_0_loop *Constructor_Control_Biapplicative_Biapplicative[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Biapplicative_Biapplicative[gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Biapplicative_bipure(dict_0_loop *Constructor_Control_Biapplicative_Biapplicative) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Biapplicative_Biapplicative = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Control_Biapplicative_bipure__1449949980(dict_0_loop *Constructor_Control_Biapplicative_Biapplicative[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Biapplicative_Biapplicative[gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Biapplicative_bipure__1449949980(dict_0_loop *Constructor_Control_Biapplicative_Biapplicative) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Biapplicative_Biapplicative = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }

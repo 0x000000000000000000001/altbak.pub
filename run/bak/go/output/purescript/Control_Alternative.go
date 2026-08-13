@@ -22,7 +22,7 @@ var once_Control_Alternative_guard sync.Once
 func Get_Control_Alternative_guard() gopurs_runtime.Value {
 	once_Control_Alternative_guard.Do(func() {
 		cache_Control_Alternative_guard = gopurs_runtime.Func(func(dictAlternative_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Alternative_guard(gopurs_runtime.CoerceToStruct[Constructor_Control_Alternative_Alternative[gopurs_runtime.Value]](dictAlternative_0_box))
+return Call_Control_Alternative_guard(gopurs_runtime.CoerceToStruct[Constructor_Control_Alternative_Alternative](dictAlternative_0_box))
 })
 	})
 	return cache_Control_Alternative_guard
@@ -72,7 +72,7 @@ var once_Control_Alternative_guard__2168855335 sync.Once
 func Get_Control_Alternative_guard__2168855335() gopurs_runtime.Value {
 	once_Control_Alternative_guard__2168855335.Do(func() {
 		cache_Control_Alternative_guard__2168855335 = gopurs_runtime.Func(func(dictAlternative_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Alternative_guard__2168855335(gopurs_runtime.CoerceToStruct[Constructor_Control_Alternative_Alternative[gopurs_runtime.Value]](dictAlternative_0_box))
+return Call_Control_Alternative_guard__2168855335(gopurs_runtime.CoerceToStruct[Constructor_Control_Alternative_Alternative](dictAlternative_0_box))
 })
 	})
 	return cache_Control_Alternative_guard__2168855335
@@ -89,7 +89,7 @@ return Call_Control_Alternative_guard__666381313(__eta0_0_box)
 	return cache_Control_Alternative_guard__666381313
 }
 
-type Constructor_Control_Alternative_Alternative[T_f any] struct {
+type Constructor_Control_Alternative_Alternative struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -98,7 +98,7 @@ type Constructor_Control_Alternative_Alternative[T_f any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[397869517] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Control_Alternative_Alternative[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Control_Alternative_Alternative)(ptr)
 		_ = c
 		switch key {
 		case "Applicative0": return gopurs_runtime.Box(c.V0)
@@ -115,11 +115,11 @@ _ = x_0
 return x_0
 }
 
-func Call_Control_Alternative_guard(dictAlternative_0_loop *Constructor_Control_Alternative_Alternative[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictAlternative_0 *Constructor_Control_Alternative_Alternative[gopurs_runtime.Value] = dictAlternative_0_loop
+func Call_Control_Alternative_guard(dictAlternative_0_loop *Constructor_Control_Alternative_Alternative) gopurs_runtime.Value {
+var dictAlternative_0 *Constructor_Control_Alternative_Alternative = dictAlternative_0_loop
 _ = dictAlternative_0
-// TAST (Let): Applicative0_1_0 -> *Constructor_Control_Applicative_Applicative[gopurs_runtime.Value]
-Applicative0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.Box(dictAlternative_0.V0), gopurs_runtime.Value{}))
+// TAST (Let): Applicative0_1_0 -> *Constructor_Control_Applicative_Applicative
+Applicative0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](gopurs_runtime.Apply(gopurs_runtime.Box(dictAlternative_0.V0), gopurs_runtime.Value{}))
 _ = Applicative0_1_0
 // TAST (Let): empty_2_1 -> gopurs_runtime.Value
 empty_2_1 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.Box(dictAlternative_0.V1), gopurs_runtime.Value{}), "empty")
@@ -142,11 +142,11 @@ return __t2
 })
 }
 
-func Call_Control_Alternative_guard__2168855335(dictAlternative_0_loop *Constructor_Control_Alternative_Alternative[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictAlternative_0 *Constructor_Control_Alternative_Alternative[gopurs_runtime.Value] = dictAlternative_0_loop
+func Call_Control_Alternative_guard__2168855335(dictAlternative_0_loop *Constructor_Control_Alternative_Alternative) gopurs_runtime.Value {
+var dictAlternative_0 *Constructor_Control_Alternative_Alternative = dictAlternative_0_loop
 _ = dictAlternative_0
-// TAST (Let): Applicative0_1_0 -> *Constructor_Control_Applicative_Applicative[gopurs_runtime.Value]
-Applicative0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.Box(dictAlternative_0.V0), gopurs_runtime.Value{}))
+// TAST (Let): Applicative0_1_0 -> *Constructor_Control_Applicative_Applicative
+Applicative0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](gopurs_runtime.Apply(gopurs_runtime.Box(dictAlternative_0.V0), gopurs_runtime.Value{}))
 _ = Applicative0_1_0
 // TAST (Let): empty_2_1 -> gopurs_runtime.Value
 empty_2_1 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.Box(dictAlternative_0.V1), gopurs_runtime.Value{}), "empty")
@@ -172,17 +172,17 @@ return __t2
 func Call_Control_Alternative_guard__666381313(__eta0_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
 _ = __eta0_0
-var __t0 *Constructor_Data_Maybe_Just[gopurs_runtime.Value]
+var __t0 *Constructor_Data_Maybe_Just
 {
 if (__eta0_0.IntVal) != (0) {
-__t0 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Maybe_applicativeMaybe(), "pure"), Get_Data_Unit_unit()))
+__t0 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Maybe_applicativeMaybe(), "pure"), Get_Data_Unit_unit()))
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[gopurs_runtime.Value]](gopurs_runtime.RecordGet(Get_Data_Maybe_plusMaybe(), "empty"))
+__t0 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.RecordGet(Get_Data_Maybe_plusMaybe(), "empty"))
 }
 end_branch_0:
 return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t0)}

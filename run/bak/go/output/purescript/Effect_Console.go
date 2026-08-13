@@ -11,7 +11,7 @@ var once_Effect_Console_warnShow sync.Once
 func Get_Effect_Console_warnShow() gopurs_runtime.Value {
 	once_Effect_Console_warnShow.Do(func() {
 		cache_Effect_Console_warnShow = gopurs_runtime.Func2(func(dictShow_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Effect_Console_warnShow(gopurs_runtime.CoerceToStruct[Constructor_Data_Show_Show[gopurs_runtime.Value]](dictShow_0_box), a_1_box)
+return Call_Effect_Console_warnShow(gopurs_runtime.CoerceToStruct[Constructor_Data_Show_Show](dictShow_0_box), a_1_box)
 })
 	})
 	return cache_Effect_Console_warnShow
@@ -22,7 +22,7 @@ var once_Effect_Console_logShow sync.Once
 func Get_Effect_Console_logShow() gopurs_runtime.Value {
 	once_Effect_Console_logShow.Do(func() {
 		cache_Effect_Console_logShow = gopurs_runtime.Func2(func(dictShow_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Effect_Console_logShow(gopurs_runtime.CoerceToStruct[Constructor_Data_Show_Show[gopurs_runtime.Value]](dictShow_0_box), a_1_box)
+return Call_Effect_Console_logShow(gopurs_runtime.CoerceToStruct[Constructor_Data_Show_Show](dictShow_0_box), a_1_box)
 })
 	})
 	return cache_Effect_Console_logShow
@@ -33,7 +33,7 @@ var once_Effect_Console_infoShow sync.Once
 func Get_Effect_Console_infoShow() gopurs_runtime.Value {
 	once_Effect_Console_infoShow.Do(func() {
 		cache_Effect_Console_infoShow = gopurs_runtime.Func2(func(dictShow_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Effect_Console_infoShow(gopurs_runtime.CoerceToStruct[Constructor_Data_Show_Show[gopurs_runtime.Value]](dictShow_0_box), a_1_box)
+return Call_Effect_Console_infoShow(gopurs_runtime.CoerceToStruct[Constructor_Data_Show_Show](dictShow_0_box), a_1_box)
 })
 	})
 	return cache_Effect_Console_infoShow
@@ -55,7 +55,7 @@ var once_Effect_Console_errorShow sync.Once
 func Get_Effect_Console_errorShow() gopurs_runtime.Value {
 	once_Effect_Console_errorShow.Do(func() {
 		cache_Effect_Console_errorShow = gopurs_runtime.Func2(func(dictShow_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Effect_Console_errorShow(gopurs_runtime.CoerceToStruct[Constructor_Data_Show_Show[gopurs_runtime.Value]](dictShow_0_box), a_1_box)
+return Call_Effect_Console_errorShow(gopurs_runtime.CoerceToStruct[Constructor_Data_Show_Show](dictShow_0_box), a_1_box)
 })
 	})
 	return cache_Effect_Console_errorShow
@@ -66,7 +66,7 @@ var once_Effect_Console_debugShow sync.Once
 func Get_Effect_Console_debugShow() gopurs_runtime.Value {
 	once_Effect_Console_debugShow.Do(func() {
 		cache_Effect_Console_debugShow = gopurs_runtime.Func2(func(dictShow_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Effect_Console_debugShow(gopurs_runtime.CoerceToStruct[Constructor_Data_Show_Show[gopurs_runtime.Value]](dictShow_0_box), a_1_box)
+return Call_Effect_Console_debugShow(gopurs_runtime.CoerceToStruct[Constructor_Data_Show_Show](dictShow_0_box), a_1_box)
 })
 	})
 	return cache_Effect_Console_debugShow
@@ -88,30 +88,30 @@ var once_Effect_Console_logShow__339054415 sync.Once
 func Get_Effect_Console_logShow__339054415() gopurs_runtime.Value {
 	once_Effect_Console_logShow__339054415.Do(func() {
 		cache_Effect_Console_logShow__339054415 = gopurs_runtime.Func2(func(dictShow_0_box gopurs_runtime.Value, a_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Effect_Console_logShow__339054415(gopurs_runtime.CoerceToStruct[Constructor_Data_Show_Show[gopurs_runtime.Value]](dictShow_0_box), a_1_box)
+return Call_Effect_Console_logShow__339054415(gopurs_runtime.CoerceToStruct[Constructor_Data_Show_Show](dictShow_0_box), a_1_box)
 })
 	})
 	return cache_Effect_Console_logShow__339054415
 }
 
-func Call_Effect_Console_warnShow(dictShow_0_loop *Constructor_Data_Show_Show[gopurs_runtime.Value], a_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictShow_0 *Constructor_Data_Show_Show[gopurs_runtime.Value] = dictShow_0_loop
+func Call_Effect_Console_warnShow(dictShow_0_loop *Constructor_Data_Show_Show, a_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictShow_0 *Constructor_Data_Show_Show = dictShow_0_loop
 _ = dictShow_0
 var a_1 gopurs_runtime.Value = a_1_loop
 _ = a_1
 return gopurs_runtime.Apply(Get_Effect_Console_warn(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.Box(dictShow_0.V0), a_1).StrVal()))
 }
 
-func Call_Effect_Console_logShow(dictShow_0_loop *Constructor_Data_Show_Show[gopurs_runtime.Value], a_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictShow_0 *Constructor_Data_Show_Show[gopurs_runtime.Value] = dictShow_0_loop
+func Call_Effect_Console_logShow(dictShow_0_loop *Constructor_Data_Show_Show, a_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictShow_0 *Constructor_Data_Show_Show = dictShow_0_loop
 _ = dictShow_0
 var a_1 gopurs_runtime.Value = a_1_loop
 _ = a_1
 return gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.Box(dictShow_0.V0), a_1).StrVal()))
 }
 
-func Call_Effect_Console_infoShow(dictShow_0_loop *Constructor_Data_Show_Show[gopurs_runtime.Value], a_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictShow_0 *Constructor_Data_Show_Show[gopurs_runtime.Value] = dictShow_0_loop
+func Call_Effect_Console_infoShow(dictShow_0_loop *Constructor_Data_Show_Show, a_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictShow_0 *Constructor_Data_Show_Show = dictShow_0_loop
 _ = dictShow_0
 var a_1 gopurs_runtime.Value = a_1_loop
 _ = a_1
@@ -123,25 +123,25 @@ var name_0 string = name_0_loop
 _ = name_0
 var inner_1 gopurs_runtime.Value = inner_1_loop
 _ = inner_1
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Control_Bind_discardUnit(), "discard"), gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind[gopurs_runtime.Value]](Get_Effect_bindEffect()))}, gopurs_runtime.Apply(Get_Effect_Console_group(), gopurs_runtime.Str(name_0)), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Control_Bind_discardUnit(), "discard"), gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](Get_Effect_bindEffect()))}, gopurs_runtime.Apply(Get_Effect_Console_group(), gopurs_runtime.Str(name_0)), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Effect_bindEffect(), "bind"), inner_1, gopurs_runtime.Func(func(result_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Control_Bind_discardUnit(), "discard"), gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind[gopurs_runtime.Value]](Get_Effect_bindEffect()))}, Get_Effect_Console_groupEnd(), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Control_Bind_discardUnit(), "discard"), gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](Get_Effect_bindEffect()))}, Get_Effect_Console_groupEnd(), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_applicativeEffect(), "pure"), result_3)
 }))
 }))
 }))
 }
 
-func Call_Effect_Console_errorShow(dictShow_0_loop *Constructor_Data_Show_Show[gopurs_runtime.Value], a_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictShow_0 *Constructor_Data_Show_Show[gopurs_runtime.Value] = dictShow_0_loop
+func Call_Effect_Console_errorShow(dictShow_0_loop *Constructor_Data_Show_Show, a_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictShow_0 *Constructor_Data_Show_Show = dictShow_0_loop
 _ = dictShow_0
 var a_1 gopurs_runtime.Value = a_1_loop
 _ = a_1
 return gopurs_runtime.Apply(Get_Effect_Console_error(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.Box(dictShow_0.V0), a_1).StrVal()))
 }
 
-func Call_Effect_Console_debugShow(dictShow_0_loop *Constructor_Data_Show_Show[gopurs_runtime.Value], a_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictShow_0 *Constructor_Data_Show_Show[gopurs_runtime.Value] = dictShow_0_loop
+func Call_Effect_Console_debugShow(dictShow_0_loop *Constructor_Data_Show_Show, a_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictShow_0 *Constructor_Data_Show_Show = dictShow_0_loop
 _ = dictShow_0
 var a_1 gopurs_runtime.Value = a_1_loop
 _ = a_1
@@ -154,8 +154,8 @@ _ = a_0
 return gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Show_showInt(), "show"), gopurs_runtime.Int(a_0)).StrVal()))
 }
 
-func Call_Effect_Console_logShow__339054415(dictShow_0_loop *Constructor_Data_Show_Show[gopurs_runtime.Value], a_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictShow_0 *Constructor_Data_Show_Show[gopurs_runtime.Value] = dictShow_0_loop
+func Call_Effect_Console_logShow__339054415(dictShow_0_loop *Constructor_Data_Show_Show, a_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictShow_0 *Constructor_Data_Show_Show = dictShow_0_loop
 _ = dictShow_0
 var a_1 gopurs_runtime.Value = a_1_loop
 _ = a_1

@@ -19,7 +19,7 @@ var cache_Data_String_Regex_search gopurs_runtime.Value
 var once_Data_String_Regex_search sync.Once
 func Get_Data_String_Regex_search() gopurs_runtime.Value {
 	once_Data_String_Regex_search.Do(func() {
-		cache_Data_String_Regex_search = gopurs_runtime.Apply2(Get_Data_String_Regex__search(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))})
+		cache_Data_String_Regex_search = gopurs_runtime.Apply2(Get_Data_String_Regex__search(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
 	})
 	return cache_Data_String_Regex_search
 }
@@ -28,7 +28,7 @@ var cache_Data_String_Regex_replace_prime gopurs_runtime.Value
 var once_Data_String_Regex_replace_prime sync.Once
 func Get_Data_String_Regex_replace_prime() gopurs_runtime.Value {
 	once_Data_String_Regex_replace_prime.Do(func() {
-		cache_Data_String_Regex_replace_prime = gopurs_runtime.Apply2(Get_Data_String_Regex__replaceBy(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))})
+		cache_Data_String_Regex_replace_prime = gopurs_runtime.Apply2(Get_Data_String_Regex__replaceBy(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
 	})
 	return cache_Data_String_Regex_replace_prime
 }
@@ -70,7 +70,7 @@ var cache_Data_String_Regex_match gopurs_runtime.Value
 var once_Data_String_Regex_match sync.Once
 func Get_Data_String_Regex_match() gopurs_runtime.Value {
 	once_Data_String_Regex_match.Do(func() {
-		cache_Data_String_Regex_match = gopurs_runtime.Apply2(Get_Data_String_Regex__match(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))})
+		cache_Data_String_Regex_match = gopurs_runtime.Apply2(Get_Data_String_Regex__match(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
 	})
 	return cache_Data_String_Regex_match
 }

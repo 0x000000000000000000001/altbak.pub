@@ -80,20 +80,20 @@ var once_Data_Reflectable_reflectType sync.Once
 func Get_Data_Reflectable_reflectType() gopurs_runtime.Value {
 	once_Data_Reflectable_reflectType.Do(func() {
 		cache_Data_Reflectable_reflectType = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Reflectable_reflectType(gopurs_runtime.CoerceToStruct[Constructor_Data_Reflectable_Reflectable[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Reflectable_reflectType(gopurs_runtime.CoerceToStruct[Constructor_Data_Reflectable_Reflectable](dict_0_box))
 })
 	})
 	return cache_Data_Reflectable_reflectType
 }
 
-type Constructor_Data_Reflectable_Reifiable[T_t any] struct {
+type Constructor_Data_Reflectable_Reifiable struct {
 	Rc uint32
 }
 
 
 func init() {
 	gopurs_runtime.StructGetters[3870607684] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_Reflectable_Reifiable[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_Reflectable_Reifiable)(ptr)
 		_ = c
 		switch key {
 
@@ -103,7 +103,7 @@ func init() {
 }
 
 
-type Constructor_Data_Reflectable_Reflectable[T_v any, T_t any] struct {
+type Constructor_Data_Reflectable_Reflectable struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 }
@@ -111,7 +111,7 @@ type Constructor_Data_Reflectable_Reflectable[T_v any, T_t any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[19771322] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_Reflectable_Reflectable[gopurs_runtime.Value, gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_Reflectable_Reflectable)(ptr)
 		_ = c
 		switch key {
 		case "reflectType": return gopurs_runtime.Box(c.V0)
@@ -147,8 +147,8 @@ return s_1
 })), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil})
 }
 
-func Call_Data_Reflectable_reflectType(dict_0_loop *Constructor_Data_Reflectable_Reflectable[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Reflectable_Reflectable[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Reflectable_reflectType(dict_0_loop *Constructor_Data_Reflectable_Reflectable) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Reflectable_Reflectable = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }

@@ -34,11 +34,11 @@ var once_Effect_applyEffect sync.Once
 func Get_Effect_applyEffect() gopurs_runtime.Value {
 	once_Effect_applyEffect.Do(func() {
 		cache_Effect_applyEffect = func() gopurs_runtime.Value {
-// TAST (Let): Bind1_0_0 -> *Constructor_Control_Bind_Bind[gopurs_runtime.Value]
-Bind1_0_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_monadEffect(), "Bind1"), gopurs_runtime.Value{}))
+// TAST (Let): Bind1_0_0 -> *Constructor_Control_Bind_Bind
+Bind1_0_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_monadEffect(), "Bind1"), gopurs_runtime.Value{}))
 _ = Bind1_0_0
-// TAST (Let): Applicative0_1_1 -> *Constructor_Control_Applicative_Applicative[gopurs_runtime.Value]
-Applicative0_1_1 := gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_monadEffect(), "Applicative0"), gopurs_runtime.Value{}))
+// TAST (Let): Applicative0_1_1 -> *Constructor_Control_Applicative_Applicative
+Applicative0_1_1 := gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_monadEffect(), "Applicative0"), gopurs_runtime.Value{}))
 _ = Applicative0_1_1
 return gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Effect_functorEffect()
@@ -72,8 +72,8 @@ var once_Effect_functorEffect sync.Once
 func Get_Effect_functorEffect() gopurs_runtime.Value {
 	once_Effect_functorEffect.Do(func() {
 		cache_Effect_functorEffect = func() gopurs_runtime.Value {
-// TAST (Let): Apply0_0_0 -> *Constructor_Control_Apply_Apply[gopurs_runtime.Value]
-Apply0_0_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_applicativeEffect(), "Apply0"), gopurs_runtime.Value{}))
+// TAST (Let): Apply0_0_0 -> *Constructor_Control_Apply_Apply
+Apply0_0_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_applicativeEffect(), "Apply0"), gopurs_runtime.Value{}))
 _ = Apply0_0_0
 return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -134,11 +134,11 @@ var once_Effect_applyEffect__1723132130 sync.Once
 func Get_Effect_applyEffect__1723132130() gopurs_runtime.Value {
 	once_Effect_applyEffect__1723132130.Do(func() {
 		cache_Effect_applyEffect__1723132130 = func() gopurs_runtime.Value {
-// TAST (Let): Bind1_0_0 -> *Constructor_Control_Bind_Bind[gopurs_runtime.Value]
-Bind1_0_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_monadEffect(), "Bind1"), gopurs_runtime.Value{}))
+// TAST (Let): Bind1_0_0 -> *Constructor_Control_Bind_Bind
+Bind1_0_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_monadEffect(), "Bind1"), gopurs_runtime.Value{}))
 _ = Bind1_0_0
-// TAST (Let): Applicative0_1_1 -> *Constructor_Control_Applicative_Applicative[gopurs_runtime.Value]
-Applicative0_1_1 := gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_monadEffect(), "Applicative0"), gopurs_runtime.Value{}))
+// TAST (Let): Applicative0_1_1 -> *Constructor_Control_Applicative_Applicative
+Applicative0_1_1 := gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_monadEffect(), "Applicative0"), gopurs_runtime.Value{}))
 _ = Applicative0_1_1
 return gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Effect_functorEffect()
@@ -161,11 +161,11 @@ var once_Effect_applyEffect__2014400020 sync.Once
 func Get_Effect_applyEffect__2014400020() gopurs_runtime.Value {
 	once_Effect_applyEffect__2014400020.Do(func() {
 		cache_Effect_applyEffect__2014400020 = func() gopurs_runtime.Value {
-// TAST (Let): Bind1_0_0 -> *Constructor_Control_Bind_Bind[gopurs_runtime.Value]
-Bind1_0_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_monadEffect(), "Bind1"), gopurs_runtime.Value{}))
+// TAST (Let): Bind1_0_0 -> *Constructor_Control_Bind_Bind
+Bind1_0_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_monadEffect(), "Bind1"), gopurs_runtime.Value{}))
 _ = Bind1_0_0
-// TAST (Let): Applicative0_1_1 -> *Constructor_Control_Applicative_Applicative[gopurs_runtime.Value]
-Applicative0_1_1 := gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_monadEffect(), "Applicative0"), gopurs_runtime.Value{}))
+// TAST (Let): Applicative0_1_1 -> *Constructor_Control_Applicative_Applicative
+Applicative0_1_1 := gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_monadEffect(), "Applicative0"), gopurs_runtime.Value{}))
 _ = Applicative0_1_1
 return gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Effect_functorEffect()
@@ -210,8 +210,8 @@ var once_Effect_functorEffect__347161653 sync.Once
 func Get_Effect_functorEffect__347161653() gopurs_runtime.Value {
 	once_Effect_functorEffect__347161653.Do(func() {
 		cache_Effect_functorEffect__347161653 = func() gopurs_runtime.Value {
-// TAST (Let): Apply0_0_0 -> *Constructor_Control_Apply_Apply[gopurs_runtime.Value]
-Apply0_0_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_applicativeEffect(), "Apply0"), gopurs_runtime.Value{}))
+// TAST (Let): Apply0_0_0 -> *Constructor_Control_Apply_Apply
+Apply0_0_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_applicativeEffect(), "Apply0"), gopurs_runtime.Value{}))
 _ = Apply0_0_0
 return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -228,8 +228,8 @@ var once_Effect_functorEffect__3107547953 sync.Once
 func Get_Effect_functorEffect__3107547953() gopurs_runtime.Value {
 	once_Effect_functorEffect__3107547953.Do(func() {
 		cache_Effect_functorEffect__3107547953 = func() gopurs_runtime.Value {
-// TAST (Let): Apply0_0_0 -> *Constructor_Control_Apply_Apply[gopurs_runtime.Value]
-Apply0_0_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_applicativeEffect(), "Apply0"), gopurs_runtime.Value{}))
+// TAST (Let): Apply0_0_0 -> *Constructor_Control_Apply_Apply
+Apply0_0_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_applicativeEffect(), "Apply0"), gopurs_runtime.Value{}))
 _ = Apply0_0_0
 return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -257,19 +257,19 @@ return Get_Effect_bindEffect()
 func Call_Effect_semigroupEffect(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictSemigroup_0 gopurs_runtime.Value = dictSemigroup_0_loop
 _ = dictSemigroup_0
-// TAST (Let): Functor0_1_0 -> *Constructor_Data_Functor_Functor[gopurs_runtime.Value]
-Functor0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_applyEffect(), "Functor0"), gopurs_runtime.Value{}))
+// TAST (Let): Functor0_1_0 -> *Constructor_Data_Functor_Functor
+Functor0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_applyEffect(), "Functor0"), gopurs_runtime.Value{}))
 _ = Functor0_1_0
 // TAST (Let): __local_var_2_1 -> gopurs_runtime.Value
 __local_var_2_1 := gopurs_runtime.RecordGet(dictSemigroup_0, "append")
 _ = __local_var_2_1
 return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(b_4 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): Bind1_5_2 -> *Constructor_Control_Bind_Bind[gopurs_runtime.Value]
-Bind1_5_2 := gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_monadEffect(), "Bind1"), gopurs_runtime.Value{}))
+// TAST (Let): Bind1_5_2 -> *Constructor_Control_Bind_Bind
+Bind1_5_2 := gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_monadEffect(), "Bind1"), gopurs_runtime.Value{}))
 _ = Bind1_5_2
-// TAST (Let): Applicative0_6_3 -> *Constructor_Control_Applicative_Applicative[gopurs_runtime.Value]
-Applicative0_6_3 := gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_monadEffect(), "Applicative0"), gopurs_runtime.Value{}))
+// TAST (Let): Applicative0_6_3 -> *Constructor_Control_Applicative_Applicative
+Applicative0_6_3 := gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_monadEffect(), "Applicative0"), gopurs_runtime.Value{}))
 _ = Applicative0_6_3
 return gopurs_runtime.Apply2(gopurs_runtime.Box(Bind1_5_2.V1), gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_1_0.V0), __local_var_2_1, a_3), gopurs_runtime.Func(func(f_prime_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.Box(Bind1_5_2.V1), b_4, gopurs_runtime.Func(func(a_prime_8 gopurs_runtime.Value) gopurs_runtime.Value {

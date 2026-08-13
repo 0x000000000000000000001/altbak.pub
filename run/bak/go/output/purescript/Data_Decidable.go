@@ -33,7 +33,7 @@ var once_Data_Decidable_lose sync.Once
 func Get_Data_Decidable_lose() gopurs_runtime.Value {
 	once_Data_Decidable_lose.Do(func() {
 		cache_Data_Decidable_lose = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Decidable_lose(gopurs_runtime.CoerceToStruct[Constructor_Data_Decidable_Decidable[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Decidable_lose(gopurs_runtime.CoerceToStruct[Constructor_Data_Decidable_Decidable](dict_0_box))
 })
 	})
 	return cache_Data_Decidable_lose
@@ -164,7 +164,7 @@ var once_Data_Decidable_lose__3306256519 sync.Once
 func Get_Data_Decidable_lose__3306256519() gopurs_runtime.Value {
 	once_Data_Decidable_lose__3306256519.Do(func() {
 		cache_Data_Decidable_lose__3306256519 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Decidable_lose__3306256519(gopurs_runtime.CoerceToStruct[Constructor_Data_Decidable_Decidable[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Decidable_lose__3306256519(gopurs_runtime.CoerceToStruct[Constructor_Data_Decidable_Decidable](dict_0_box))
 })
 	})
 	return cache_Data_Decidable_lose__3306256519
@@ -175,13 +175,13 @@ var once_Data_Decidable_lose__2926568423 sync.Once
 func Get_Data_Decidable_lose__2926568423() gopurs_runtime.Value {
 	once_Data_Decidable_lose__2926568423.Do(func() {
 		cache_Data_Decidable_lose__2926568423 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Decidable_lose__2926568423(gopurs_runtime.CoerceToStruct[Constructor_Data_Decidable_Decidable[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Decidable_lose__2926568423(gopurs_runtime.CoerceToStruct[Constructor_Data_Decidable_Decidable](dict_0_box))
 })
 	})
 	return cache_Data_Decidable_lose__2926568423
 }
 
-type Constructor_Data_Decidable_Decidable[T_f any] struct {
+type Constructor_Data_Decidable_Decidable struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -191,7 +191,7 @@ type Constructor_Data_Decidable_Decidable[T_f any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[336732346] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_Decidable_Decidable[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_Decidable_Decidable)(ptr)
 		_ = c
 		switch key {
 		case "Decide0": return gopurs_runtime.Box(c.V0)
@@ -215,8 +215,8 @@ _ = x_0
 return x_0
 }
 
-func Call_Data_Decidable_lose(dict_0_loop *Constructor_Data_Decidable_Decidable[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Decidable_Decidable[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Decidable_lose(dict_0_loop *Constructor_Data_Decidable_Decidable) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Decidable_Decidable = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V2)
 }
@@ -262,14 +262,14 @@ return gopurs_runtime.Apply(spin_5_2_1, gopurs_runtime.Apply(f_3, a_4))
 }))
 }
 
-func Call_Data_Decidable_lose__3306256519(dict_0_loop *Constructor_Data_Decidable_Decidable[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Decidable_Decidable[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Decidable_lose__3306256519(dict_0_loop *Constructor_Data_Decidable_Decidable) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Decidable_Decidable = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V2)
 }
 
-func Call_Data_Decidable_lose__2926568423(dict_0_loop *Constructor_Data_Decidable_Decidable[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Decidable_Decidable[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Decidable_lose__2926568423(dict_0_loop *Constructor_Data_Decidable_Decidable) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Decidable_Decidable = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V2)
 }

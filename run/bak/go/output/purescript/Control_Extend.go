@@ -55,7 +55,7 @@ var once_Control_Extend_extend sync.Once
 func Get_Control_Extend_extend() gopurs_runtime.Value {
 	once_Control_Extend_extend.Do(func() {
 		cache_Control_Extend_extend = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Extend_extend(gopurs_runtime.CoerceToStruct[Constructor_Control_Extend_Extend[gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Extend_extend(gopurs_runtime.CoerceToStruct[Constructor_Control_Extend_Extend](dict_0_box))
 })
 	})
 	return cache_Control_Extend_extend
@@ -66,7 +66,7 @@ var once_Control_Extend_extendFlipped sync.Once
 func Get_Control_Extend_extendFlipped() gopurs_runtime.Value {
 	once_Control_Extend_extendFlipped.Do(func() {
 		cache_Control_Extend_extendFlipped = gopurs_runtime.Func3(func(dictExtend_0_box gopurs_runtime.Value, w_1_box gopurs_runtime.Value, f_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Extend_extendFlipped(gopurs_runtime.CoerceToStruct[Constructor_Control_Extend_Extend[gopurs_runtime.Value]](dictExtend_0_box), w_1_box, f_2_box)
+return Call_Control_Extend_extendFlipped(gopurs_runtime.CoerceToStruct[Constructor_Control_Extend_Extend](dictExtend_0_box), w_1_box, f_2_box)
 })
 	})
 	return cache_Control_Extend_extendFlipped
@@ -77,7 +77,7 @@ var once_Control_Extend_duplicate sync.Once
 func Get_Control_Extend_duplicate() gopurs_runtime.Value {
 	once_Control_Extend_duplicate.Do(func() {
 		cache_Control_Extend_duplicate = gopurs_runtime.Func(func(dictExtend_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Extend_duplicate(gopurs_runtime.CoerceToStruct[Constructor_Control_Extend_Extend[gopurs_runtime.Value]](dictExtend_0_box))
+return Call_Control_Extend_duplicate(gopurs_runtime.CoerceToStruct[Constructor_Control_Extend_Extend](dictExtend_0_box))
 })
 	})
 	return cache_Control_Extend_duplicate
@@ -88,7 +88,7 @@ var once_Control_Extend_composeCoKleisliFlipped sync.Once
 func Get_Control_Extend_composeCoKleisliFlipped() gopurs_runtime.Value {
 	once_Control_Extend_composeCoKleisliFlipped.Do(func() {
 		cache_Control_Extend_composeCoKleisliFlipped = gopurs_runtime.Func4(func(dictExtend_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, g_2_box gopurs_runtime.Value, w_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Extend_composeCoKleisliFlipped(gopurs_runtime.CoerceToStruct[Constructor_Control_Extend_Extend[gopurs_runtime.Value]](dictExtend_0_box), f_1_box, g_2_box, w_3_box)
+return Call_Control_Extend_composeCoKleisliFlipped(gopurs_runtime.CoerceToStruct[Constructor_Control_Extend_Extend](dictExtend_0_box), f_1_box, g_2_box, w_3_box)
 })
 	})
 	return cache_Control_Extend_composeCoKleisliFlipped
@@ -99,7 +99,7 @@ var once_Control_Extend_composeCoKleisli sync.Once
 func Get_Control_Extend_composeCoKleisli() gopurs_runtime.Value {
 	once_Control_Extend_composeCoKleisli.Do(func() {
 		cache_Control_Extend_composeCoKleisli = gopurs_runtime.Func4(func(dictExtend_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, g_2_box gopurs_runtime.Value, w_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Extend_composeCoKleisli(gopurs_runtime.CoerceToStruct[Constructor_Control_Extend_Extend[gopurs_runtime.Value]](dictExtend_0_box), f_1_box, g_2_box, w_3_box)
+return Call_Control_Extend_composeCoKleisli(gopurs_runtime.CoerceToStruct[Constructor_Control_Extend_Extend](dictExtend_0_box), f_1_box, g_2_box, w_3_box)
 })
 	})
 	return cache_Control_Extend_composeCoKleisli
@@ -110,7 +110,7 @@ var once_Control_Extend_composeCoKleisliFlipped__1582554720 sync.Once
 func Get_Control_Extend_composeCoKleisliFlipped__1582554720() gopurs_runtime.Value {
 	once_Control_Extend_composeCoKleisliFlipped__1582554720.Do(func() {
 		cache_Control_Extend_composeCoKleisliFlipped__1582554720 = gopurs_runtime.Func4(func(dictExtend_0_box gopurs_runtime.Value, f_1_box gopurs_runtime.Value, g_2_box gopurs_runtime.Value, w_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Extend_composeCoKleisliFlipped__1582554720(gopurs_runtime.CoerceToStruct[Constructor_Control_Extend_Extend[gopurs_runtime.Value]](dictExtend_0_box), f_1_box, g_2_box, w_3_box)
+return Call_Control_Extend_composeCoKleisliFlipped__1582554720(gopurs_runtime.CoerceToStruct[Constructor_Control_Extend_Extend](dictExtend_0_box), f_1_box, g_2_box, w_3_box)
 })
 	})
 	return cache_Control_Extend_composeCoKleisliFlipped__1582554720
@@ -121,7 +121,7 @@ var once_Control_Extend_extend__1264481661 sync.Once
 func Get_Control_Extend_extend__1264481661() gopurs_runtime.Value {
 	once_Control_Extend_extend__1264481661.Do(func() {
 		cache_Control_Extend_extend__1264481661 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Extend_extend__1264481661(gopurs_runtime.CoerceToStruct[Constructor_Control_Extend_Extend[gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Extend_extend__1264481661(gopurs_runtime.CoerceToStruct[Constructor_Control_Extend_Extend](dict_0_box))
 })
 	})
 	return cache_Control_Extend_extend__1264481661
@@ -132,7 +132,7 @@ var once_Control_Extend_extend__3641500541 sync.Once
 func Get_Control_Extend_extend__3641500541() gopurs_runtime.Value {
 	once_Control_Extend_extend__3641500541.Do(func() {
 		cache_Control_Extend_extend__3641500541 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Extend_extend__3641500541(gopurs_runtime.CoerceToStruct[Constructor_Control_Extend_Extend[gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Extend_extend__3641500541(gopurs_runtime.CoerceToStruct[Constructor_Control_Extend_Extend](dict_0_box))
 })
 	})
 	return cache_Control_Extend_extend__3641500541
@@ -143,7 +143,7 @@ var once_Control_Extend_extend__267444733 sync.Once
 func Get_Control_Extend_extend__267444733() gopurs_runtime.Value {
 	once_Control_Extend_extend__267444733.Do(func() {
 		cache_Control_Extend_extend__267444733 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Extend_extend__267444733(gopurs_runtime.CoerceToStruct[Constructor_Control_Extend_Extend[gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Extend_extend__267444733(gopurs_runtime.CoerceToStruct[Constructor_Control_Extend_Extend](dict_0_box))
 })
 	})
 	return cache_Control_Extend_extend__267444733
@@ -154,7 +154,7 @@ var once_Control_Extend_extend__1965081501 sync.Once
 func Get_Control_Extend_extend__1965081501() gopurs_runtime.Value {
 	once_Control_Extend_extend__1965081501.Do(func() {
 		cache_Control_Extend_extend__1965081501 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Extend_extend__1965081501(gopurs_runtime.CoerceToStruct[Constructor_Control_Extend_Extend[gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Extend_extend__1965081501(gopurs_runtime.CoerceToStruct[Constructor_Control_Extend_Extend](dict_0_box))
 })
 	})
 	return cache_Control_Extend_extend__1965081501
@@ -171,7 +171,7 @@ return Call_Control_Extend_extend__4254185051(v_0_box, v1_1_box)
 	return cache_Control_Extend_extend__4254185051
 }
 
-type Constructor_Control_Extend_Extend[T_w any] struct {
+type Constructor_Control_Extend_Extend struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -180,7 +180,7 @@ type Constructor_Control_Extend_Extend[T_w any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[3028639021] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Control_Extend_Extend[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Control_Extend_Extend)(ptr)
 		_ = c
 		switch key {
 		case "Functor0": return gopurs_runtime.Box(c.V0)
@@ -219,14 +219,14 @@ return gopurs_runtime.Apply(g_2, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(
 }))
 }
 
-func Call_Control_Extend_extend(dict_0_loop *Constructor_Control_Extend_Extend[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Extend_Extend[gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Extend_extend(dict_0_loop *Constructor_Control_Extend_Extend) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Extend_Extend = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Control_Extend_extendFlipped(dictExtend_0_loop *Constructor_Control_Extend_Extend[gopurs_runtime.Value], w_1_loop gopurs_runtime.Value, f_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictExtend_0 *Constructor_Control_Extend_Extend[gopurs_runtime.Value] = dictExtend_0_loop
+func Call_Control_Extend_extendFlipped(dictExtend_0_loop *Constructor_Control_Extend_Extend, w_1_loop gopurs_runtime.Value, f_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictExtend_0 *Constructor_Control_Extend_Extend = dictExtend_0_loop
 _ = dictExtend_0
 var w_1 gopurs_runtime.Value = w_1_loop
 _ = w_1
@@ -235,14 +235,14 @@ _ = f_2
 return gopurs_runtime.Apply2(gopurs_runtime.Box(dictExtend_0.V1), f_2, w_1)
 }
 
-func Call_Control_Extend_duplicate(dictExtend_0_loop *Constructor_Control_Extend_Extend[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictExtend_0 *Constructor_Control_Extend_Extend[gopurs_runtime.Value] = dictExtend_0_loop
+func Call_Control_Extend_duplicate(dictExtend_0_loop *Constructor_Control_Extend_Extend) gopurs_runtime.Value {
+var dictExtend_0 *Constructor_Control_Extend_Extend = dictExtend_0_loop
 _ = dictExtend_0
 return gopurs_runtime.Apply(gopurs_runtime.Box(dictExtend_0.V1), Get_Control_Extend_identity())
 }
 
-func Call_Control_Extend_composeCoKleisliFlipped(dictExtend_0_loop *Constructor_Control_Extend_Extend[gopurs_runtime.Value], f_1_loop gopurs_runtime.Value, g_2_loop gopurs_runtime.Value, w_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictExtend_0 *Constructor_Control_Extend_Extend[gopurs_runtime.Value] = dictExtend_0_loop
+func Call_Control_Extend_composeCoKleisliFlipped(dictExtend_0_loop *Constructor_Control_Extend_Extend, f_1_loop gopurs_runtime.Value, g_2_loop gopurs_runtime.Value, w_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictExtend_0 *Constructor_Control_Extend_Extend = dictExtend_0_loop
 _ = dictExtend_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
@@ -253,8 +253,8 @@ _ = w_3
 return gopurs_runtime.Apply(f_1, gopurs_runtime.Apply2(gopurs_runtime.Box(dictExtend_0.V1), g_2, w_3))
 }
 
-func Call_Control_Extend_composeCoKleisli(dictExtend_0_loop *Constructor_Control_Extend_Extend[gopurs_runtime.Value], f_1_loop gopurs_runtime.Value, g_2_loop gopurs_runtime.Value, w_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictExtend_0 *Constructor_Control_Extend_Extend[gopurs_runtime.Value] = dictExtend_0_loop
+func Call_Control_Extend_composeCoKleisli(dictExtend_0_loop *Constructor_Control_Extend_Extend, f_1_loop gopurs_runtime.Value, g_2_loop gopurs_runtime.Value, w_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictExtend_0 *Constructor_Control_Extend_Extend = dictExtend_0_loop
 _ = dictExtend_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
@@ -265,8 +265,8 @@ _ = w_3
 return gopurs_runtime.Apply(g_2, gopurs_runtime.Apply2(gopurs_runtime.Box(dictExtend_0.V1), f_1, w_3))
 }
 
-func Call_Control_Extend_composeCoKleisliFlipped__1582554720(dictExtend_0_loop *Constructor_Control_Extend_Extend[gopurs_runtime.Value], f_1_loop gopurs_runtime.Value, g_2_loop gopurs_runtime.Value, w_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictExtend_0 *Constructor_Control_Extend_Extend[gopurs_runtime.Value] = dictExtend_0_loop
+func Call_Control_Extend_composeCoKleisliFlipped__1582554720(dictExtend_0_loop *Constructor_Control_Extend_Extend, f_1_loop gopurs_runtime.Value, g_2_loop gopurs_runtime.Value, w_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictExtend_0 *Constructor_Control_Extend_Extend = dictExtend_0_loop
 _ = dictExtend_0
 var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
@@ -277,26 +277,26 @@ _ = w_3
 return gopurs_runtime.Apply(f_1, gopurs_runtime.Apply2(gopurs_runtime.Box(dictExtend_0.V1), g_2, w_3))
 }
 
-func Call_Control_Extend_extend__1264481661(dict_0_loop *Constructor_Control_Extend_Extend[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Extend_Extend[gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Extend_extend__1264481661(dict_0_loop *Constructor_Control_Extend_Extend) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Extend_Extend = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Control_Extend_extend__3641500541(dict_0_loop *Constructor_Control_Extend_Extend[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Extend_Extend[gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Extend_extend__3641500541(dict_0_loop *Constructor_Control_Extend_Extend) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Extend_Extend = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Control_Extend_extend__267444733(dict_0_loop *Constructor_Control_Extend_Extend[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Extend_Extend[gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Extend_extend__267444733(dict_0_loop *Constructor_Control_Extend_Extend) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Extend_Extend = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Control_Extend_extend__1965081501(dict_0_loop *Constructor_Control_Extend_Extend[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Extend_Extend[gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Extend_extend__1965081501(dict_0_loop *Constructor_Control_Extend_Extend) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Extend_Extend = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
@@ -317,7 +317,7 @@ goto end_branch_0
 }
 {
 if (v1_1.Type == 9 && v1_1.IntVal == 1992629780) {
-__t0 = gopurs_runtime.Apply2(Get_Data_Interval_DurationEnd(), (*Constructor_Data_Interval_DurationEnd[gopurs_runtime.Value, gopurs_runtime.Value])(v1_1.UnsafePtr).V0, gopurs_runtime.Apply(v_0, v1_1))
+__t0 = gopurs_runtime.Apply2(Get_Data_Interval_DurationEnd(), (*Constructor_Data_Interval_DurationEnd)(v1_1.UnsafePtr).V0, gopurs_runtime.Apply(v_0, v1_1))
 goto end_branch_0
 } else {
 
@@ -325,7 +325,7 @@ goto end_branch_0
 }
 {
 if (v1_1.Type == 9 && v1_1.IntVal == 2020675835) {
-__t0 = gopurs_runtime.Apply2(Get_Data_Interval_StartDuration(), gopurs_runtime.Apply(v_0, v1_1), (*Constructor_Data_Interval_StartDuration[gopurs_runtime.Value, gopurs_runtime.Value])(v1_1.UnsafePtr).V1)
+__t0 = gopurs_runtime.Apply2(Get_Data_Interval_StartDuration(), gopurs_runtime.Apply(v_0, v1_1), (*Constructor_Data_Interval_StartDuration)(v1_1.UnsafePtr).V1)
 goto end_branch_0
 } else {
 
@@ -333,7 +333,7 @@ goto end_branch_0
 }
 {
 if (v1_1.Type == 9 && v1_1.IntVal == 2281256335) {
-__t0 = gopurs_runtime.Apply(Get_Data_Interval_DurationOnly(), (*Constructor_Data_Interval_DurationOnly[gopurs_runtime.Value, gopurs_runtime.Value])(v1_1.UnsafePtr).V0)
+__t0 = gopurs_runtime.Apply(Get_Data_Interval_DurationOnly(), (*Constructor_Data_Interval_DurationOnly)(v1_1.UnsafePtr).V0)
 goto end_branch_0
 } else {
 

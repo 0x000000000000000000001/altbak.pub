@@ -33,7 +33,7 @@ var once_Control_Parallel_Class_sequential sync.Once
 func Get_Control_Parallel_Class_sequential() gopurs_runtime.Value {
 	once_Control_Parallel_Class_sequential.Do(func() {
 		cache_Control_Parallel_Class_sequential = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Parallel_Class_sequential(gopurs_runtime.CoerceToStruct[Constructor_Control_Parallel_Class_Parallel[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Parallel_Class_sequential(gopurs_runtime.CoerceToStruct[Constructor_Control_Parallel_Class_Parallel](dict_0_box))
 })
 	})
 	return cache_Control_Parallel_Class_sequential
@@ -44,7 +44,7 @@ var once_Control_Parallel_Class_parallel sync.Once
 func Get_Control_Parallel_Class_parallel() gopurs_runtime.Value {
 	once_Control_Parallel_Class_parallel.Do(func() {
 		cache_Control_Parallel_Class_parallel = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Parallel_Class_parallel(gopurs_runtime.CoerceToStruct[Constructor_Control_Parallel_Class_Parallel[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Parallel_Class_parallel(gopurs_runtime.CoerceToStruct[Constructor_Control_Parallel_Class_Parallel](dict_0_box))
 })
 	})
 	return cache_Control_Parallel_Class_parallel
@@ -209,7 +209,7 @@ var once_Control_Parallel_Class_parallel__2242335472 sync.Once
 func Get_Control_Parallel_Class_parallel__2242335472() gopurs_runtime.Value {
 	once_Control_Parallel_Class_parallel__2242335472.Do(func() {
 		cache_Control_Parallel_Class_parallel__2242335472 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Parallel_Class_parallel__2242335472(gopurs_runtime.CoerceToStruct[Constructor_Control_Parallel_Class_Parallel[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Parallel_Class_parallel__2242335472(gopurs_runtime.CoerceToStruct[Constructor_Control_Parallel_Class_Parallel](dict_0_box))
 })
 	})
 	return cache_Control_Parallel_Class_parallel__2242335472
@@ -220,7 +220,7 @@ var once_Control_Parallel_Class_parallel__412321264 sync.Once
 func Get_Control_Parallel_Class_parallel__412321264() gopurs_runtime.Value {
 	once_Control_Parallel_Class_parallel__412321264.Do(func() {
 		cache_Control_Parallel_Class_parallel__412321264 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Parallel_Class_parallel__412321264(gopurs_runtime.CoerceToStruct[Constructor_Control_Parallel_Class_Parallel[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Parallel_Class_parallel__412321264(gopurs_runtime.CoerceToStruct[Constructor_Control_Parallel_Class_Parallel](dict_0_box))
 })
 	})
 	return cache_Control_Parallel_Class_parallel__412321264
@@ -231,7 +231,7 @@ var once_Control_Parallel_Class_parallel__1250658000 sync.Once
 func Get_Control_Parallel_Class_parallel__1250658000() gopurs_runtime.Value {
 	once_Control_Parallel_Class_parallel__1250658000.Do(func() {
 		cache_Control_Parallel_Class_parallel__1250658000 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Parallel_Class_parallel__1250658000(gopurs_runtime.CoerceToStruct[Constructor_Control_Parallel_Class_Parallel[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Parallel_Class_parallel__1250658000(gopurs_runtime.CoerceToStruct[Constructor_Control_Parallel_Class_Parallel](dict_0_box))
 })
 	})
 	return cache_Control_Parallel_Class_parallel__1250658000
@@ -242,7 +242,7 @@ var once_Control_Parallel_Class_parallel__4223476656 sync.Once
 func Get_Control_Parallel_Class_parallel__4223476656() gopurs_runtime.Value {
 	once_Control_Parallel_Class_parallel__4223476656.Do(func() {
 		cache_Control_Parallel_Class_parallel__4223476656 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Parallel_Class_parallel__4223476656(gopurs_runtime.CoerceToStruct[Constructor_Control_Parallel_Class_Parallel[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Parallel_Class_parallel__4223476656(gopurs_runtime.CoerceToStruct[Constructor_Control_Parallel_Class_Parallel](dict_0_box))
 })
 	})
 	return cache_Control_Parallel_Class_parallel__4223476656
@@ -264,7 +264,7 @@ var once_Control_Parallel_Class_sequential__2242335472 sync.Once
 func Get_Control_Parallel_Class_sequential__2242335472() gopurs_runtime.Value {
 	once_Control_Parallel_Class_sequential__2242335472.Do(func() {
 		cache_Control_Parallel_Class_sequential__2242335472 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Parallel_Class_sequential__2242335472(gopurs_runtime.CoerceToStruct[Constructor_Control_Parallel_Class_Parallel[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Parallel_Class_sequential__2242335472(gopurs_runtime.CoerceToStruct[Constructor_Control_Parallel_Class_Parallel](dict_0_box))
 })
 	})
 	return cache_Control_Parallel_Class_sequential__2242335472
@@ -275,7 +275,7 @@ var once_Control_Parallel_Class_sequential__412321264 sync.Once
 func Get_Control_Parallel_Class_sequential__412321264() gopurs_runtime.Value {
 	once_Control_Parallel_Class_sequential__412321264.Do(func() {
 		cache_Control_Parallel_Class_sequential__412321264 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Parallel_Class_sequential__412321264(gopurs_runtime.CoerceToStruct[Constructor_Control_Parallel_Class_Parallel[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Parallel_Class_sequential__412321264(gopurs_runtime.CoerceToStruct[Constructor_Control_Parallel_Class_Parallel](dict_0_box))
 })
 	})
 	return cache_Control_Parallel_Class_sequential__412321264
@@ -286,13 +286,13 @@ var once_Control_Parallel_Class_sequential__1250658000 sync.Once
 func Get_Control_Parallel_Class_sequential__1250658000() gopurs_runtime.Value {
 	once_Control_Parallel_Class_sequential__1250658000.Do(func() {
 		cache_Control_Parallel_Class_sequential__1250658000 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Parallel_Class_sequential__1250658000(gopurs_runtime.CoerceToStruct[Constructor_Control_Parallel_Class_Parallel[gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Control_Parallel_Class_sequential__1250658000(gopurs_runtime.CoerceToStruct[Constructor_Control_Parallel_Class_Parallel](dict_0_box))
 })
 	})
 	return cache_Control_Parallel_Class_sequential__1250658000
 }
 
-type Constructor_Control_Parallel_Class_Parallel[T_f any, T_m any] struct {
+type Constructor_Control_Parallel_Class_Parallel struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -303,7 +303,7 @@ type Constructor_Control_Parallel_Class_Parallel[T_f any, T_m any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[327692956] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Control_Parallel_Class_Parallel[gopurs_runtime.Value, gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Control_Parallel_Class_Parallel)(ptr)
 		_ = c
 		switch key {
 		case "Apply0": return gopurs_runtime.Box(c.V0)
@@ -328,14 +328,14 @@ _ = x_0
 return x_0
 }
 
-func Call_Control_Parallel_Class_sequential(dict_0_loop *Constructor_Control_Parallel_Class_Parallel[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Parallel_Class_Parallel[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Parallel_Class_sequential(dict_0_loop *Constructor_Control_Parallel_Class_Parallel) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Parallel_Class_Parallel = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V3)
 }
 
-func Call_Control_Parallel_Class_parallel(dict_0_loop *Constructor_Control_Parallel_Class_Parallel[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Parallel_Class_Parallel[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Parallel_Class_parallel(dict_0_loop *Constructor_Control_Parallel_Class_Parallel) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Parallel_Class_Parallel = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V2)
 }
@@ -523,8 +523,8 @@ _ = dictParallel_0
 // TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
 __local_var_1_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictParallel_0, "Apply1"), gopurs_runtime.Value{})
 _ = __local_var_1_1
-// TAST (Let): Functor0_2_2 -> *Constructor_Data_Functor_Functor[gopurs_runtime.Value]
-Functor0_2_2 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_1, "Functor0"), gopurs_runtime.Value{}))
+// TAST (Let): Functor0_2_2 -> *Constructor_Data_Functor_Functor
+Functor0_2_2 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_1, "Functor0"), gopurs_runtime.Value{}))
 _ = Functor0_2_2
 // TAST (Let): __local_var_3_3 -> gopurs_runtime.Value
 __local_var_3_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_1, "Functor0"), gopurs_runtime.Value{})
@@ -570,8 +570,8 @@ _ = dictParallel_0
 // TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
 __local_var_1_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictParallel_0, "Apply1"), gopurs_runtime.Value{})
 _ = __local_var_1_1
-// TAST (Let): Functor0_2_2 -> *Constructor_Data_Functor_Functor[gopurs_runtime.Value]
-Functor0_2_2 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_1, "Functor0"), gopurs_runtime.Value{}))
+// TAST (Let): Functor0_2_2 -> *Constructor_Data_Functor_Functor
+Functor0_2_2 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_1, "Functor0"), gopurs_runtime.Value{}))
 _ = Functor0_2_2
 // TAST (Let): __local_var_3_3 -> gopurs_runtime.Value
 __local_var_3_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_1, "Functor0"), gopurs_runtime.Value{})
@@ -670,8 +670,8 @@ return v_2
 func Call_Control_Parallel_Class_functorParCont(dictMonadEffect_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
-// TAST (Let): functorContT_1_0 -> *Constructor_Data_Functor_Functor[gopurs_runtime.Value]
-functorContT_1_0 := &Constructor_Data_Functor_Functor[gopurs_runtime.Value]{1, gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): functorContT_1_0 -> *Constructor_Data_Functor_Functor
+functorContT_1_0 := &Constructor_Data_Functor_Functor{1, gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(k_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(v_2, gopurs_runtime.Func(func(a_4 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -705,22 +705,22 @@ return gopurs_runtime.Apply(__local_var_3_1, gopurs_runtime.Apply(__local_var_4_
 func Call_Control_Parallel_Class_applyParCont(dictMonadEffect_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
-// TAST (Let): Bind1_1_0 -> *Constructor_Control_Bind_Bind[gopurs_runtime.Value]
-Bind1_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}))
+// TAST (Let): Bind1_1_0 -> *Constructor_Control_Bind_Bind
+Bind1_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}))
 _ = Bind1_1_0
 return gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_Control_Parallel_Class_functorParCont(dictMonadEffect_0)
 }), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(k_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.Box(Bind1_1_0.V1), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(Get_Effect_Ref__new(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))})), gopurs_runtime.Func(func(ra_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.Box(Bind1_1_0.V1), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(Get_Effect_Ref__new(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))})), gopurs_runtime.Func(func(rb_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.Box(Bind1_1_0.V1), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(Get_Effect_Ref__new(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})), gopurs_runtime.Func(func(ra_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.Box(Bind1_1_0.V1), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(Get_Effect_Ref__new(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})), gopurs_runtime.Func(func(rb_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Control_Bind_discardUnit(), "discard"), gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(Bind1_1_0)}, gopurs_runtime.Apply(v_2, gopurs_runtime.Func(func(a_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.Box(Bind1_1_0.V1), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply(Get_Effect_Ref_read(), rb_6)), gopurs_runtime.Func(func(mb_8 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t1 gopurs_runtime.Value
 {
 if (mb_8.Type == 9 && mb_8.IntVal == 930809136 && mb_8.UnsafePtr == nil) {
-__t1 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply2(Get_Effect_Ref_write(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just[gopurs_runtime.Value]{1, a_7})}, ra_5))
+__t1 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply2(Get_Effect_Ref_write(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, a_7})}, ra_5))
 goto end_branch_1
 } else {
 
@@ -728,7 +728,7 @@ goto end_branch_1
 }
 {
 if (mb_8.Type == 9 && mb_8.IntVal == 930809136 && mb_8.UnsafePtr != nil) {
-__t1 = gopurs_runtime.Apply(k_4, gopurs_runtime.Apply(a_7, (*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(mb_8.UnsafePtr).V0))
+__t1 = gopurs_runtime.Apply(k_4, gopurs_runtime.Apply(a_7, (*Constructor_Data_Maybe_Just)(mb_8.UnsafePtr).V0))
 goto end_branch_1
 } else {
 
@@ -746,7 +746,7 @@ return gopurs_runtime.Apply2(gopurs_runtime.Box(Bind1_1_0.V1), gopurs_runtime.Ap
 var __t2 gopurs_runtime.Value
 {
 if (ma_9.Type == 9 && ma_9.IntVal == 930809136 && ma_9.UnsafePtr == nil) {
-__t2 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply2(Get_Effect_Ref_write(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just[gopurs_runtime.Value]{1, b_8})}, rb_6))
+__t2 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), gopurs_runtime.Apply2(Get_Effect_Ref_write(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, b_8})}, rb_6))
 goto end_branch_2
 } else {
 
@@ -754,7 +754,7 @@ goto end_branch_2
 }
 {
 if (ma_9.Type == 9 && ma_9.IntVal == 930809136 && ma_9.UnsafePtr != nil) {
-__t2 = gopurs_runtime.Apply(k_4, gopurs_runtime.Apply((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(ma_9.UnsafePtr).V0, b_8))
+__t2 = gopurs_runtime.Apply(k_4, gopurs_runtime.Apply((*Constructor_Data_Maybe_Just)(ma_9.UnsafePtr).V0, b_8))
 goto end_branch_2
 } else {
 
@@ -799,11 +799,11 @@ _ = dictMonadEffect_0
 // TAST (Let): Monad0_1_0 -> gopurs_runtime.Value
 Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
-// TAST (Let): Bind1_2_1 -> *Constructor_Control_Bind_Bind[gopurs_runtime.Value]
-Bind1_2_1 := gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bind1"), gopurs_runtime.Value{}))
+// TAST (Let): Bind1_2_1 -> *Constructor_Control_Bind_Bind
+Bind1_2_1 := gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bind1"), gopurs_runtime.Value{}))
 _ = Bind1_2_1
-// TAST (Let): Applicative0_3_2 -> *Constructor_Control_Applicative_Applicative[gopurs_runtime.Value]
-Applicative0_3_2 := gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}))
+// TAST (Let): Applicative0_3_2 -> *Constructor_Control_Applicative_Applicative
+Applicative0_3_2 := gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}))
 _ = Applicative0_3_2
 // TAST (Let): functorParCont1_4_3 -> gopurs_runtime.Value
 functorParCont1_4_3 := Call_Control_Parallel_Class_functorParCont(dictMonadEffect_0)
@@ -864,8 +864,8 @@ return __t5
 func Call_Control_Parallel_Class_plusParCont(dictMonadEffect_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadEffect_0 gopurs_runtime.Value = dictMonadEffect_0_loop
 _ = dictMonadEffect_0
-// TAST (Let): Applicative0_1_0 -> *Constructor_Control_Applicative_Applicative[gopurs_runtime.Value]
-Applicative0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "Monad0"), gopurs_runtime.Value{}), "Applicative0"), gopurs_runtime.Value{}))
+// TAST (Let): Applicative0_1_0 -> *Constructor_Control_Applicative_Applicative
+Applicative0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "Monad0"), gopurs_runtime.Value{}), "Applicative0"), gopurs_runtime.Value{}))
 _ = Applicative0_1_0
 // TAST (Let): altParCont1_2_1 -> gopurs_runtime.Value
 altParCont1_2_1 := Call_Control_Parallel_Class_altParCont(dictMonadEffect_0)
@@ -893,26 +893,26 @@ return plusParCont1_2_1
 }))
 }
 
-func Call_Control_Parallel_Class_parallel__2242335472(dict_0_loop *Constructor_Control_Parallel_Class_Parallel[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Parallel_Class_Parallel[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Parallel_Class_parallel__2242335472(dict_0_loop *Constructor_Control_Parallel_Class_Parallel) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Parallel_Class_Parallel = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V2)
 }
 
-func Call_Control_Parallel_Class_parallel__412321264(dict_0_loop *Constructor_Control_Parallel_Class_Parallel[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Parallel_Class_Parallel[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Parallel_Class_parallel__412321264(dict_0_loop *Constructor_Control_Parallel_Class_Parallel) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Parallel_Class_Parallel = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V2)
 }
 
-func Call_Control_Parallel_Class_parallel__1250658000(dict_0_loop *Constructor_Control_Parallel_Class_Parallel[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Parallel_Class_Parallel[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Parallel_Class_parallel__1250658000(dict_0_loop *Constructor_Control_Parallel_Class_Parallel) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Parallel_Class_Parallel = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V2)
 }
 
-func Call_Control_Parallel_Class_parallel__4223476656(dict_0_loop *Constructor_Control_Parallel_Class_Parallel[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Parallel_Class_Parallel[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Parallel_Class_parallel__4223476656(dict_0_loop *Constructor_Control_Parallel_Class_Parallel) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Parallel_Class_Parallel = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V2)
 }
@@ -923,20 +923,20 @@ _ = __eta0_0
 return __eta0_0
 }
 
-func Call_Control_Parallel_Class_sequential__2242335472(dict_0_loop *Constructor_Control_Parallel_Class_Parallel[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Parallel_Class_Parallel[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Parallel_Class_sequential__2242335472(dict_0_loop *Constructor_Control_Parallel_Class_Parallel) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Parallel_Class_Parallel = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V3)
 }
 
-func Call_Control_Parallel_Class_sequential__412321264(dict_0_loop *Constructor_Control_Parallel_Class_Parallel[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Parallel_Class_Parallel[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Parallel_Class_sequential__412321264(dict_0_loop *Constructor_Control_Parallel_Class_Parallel) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Parallel_Class_Parallel = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V3)
 }
 
-func Call_Control_Parallel_Class_sequential__1250658000(dict_0_loop *Constructor_Control_Parallel_Class_Parallel[gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Control_Parallel_Class_Parallel[gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Control_Parallel_Class_sequential__1250658000(dict_0_loop *Constructor_Control_Parallel_Class_Parallel) gopurs_runtime.Value {
+var dict_0 *Constructor_Control_Parallel_Class_Parallel = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V3)
 }

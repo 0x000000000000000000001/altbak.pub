@@ -44,7 +44,7 @@ var once_Data_Bounded_topRecord sync.Once
 func Get_Data_Bounded_topRecord() gopurs_runtime.Value {
 	once_Data_Bounded_topRecord.Do(func() {
 		cache_Data_Bounded_topRecord = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Bounded_topRecord(gopurs_runtime.CoerceToStruct[Constructor_Data_Bounded_BoundedRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Bounded_topRecord(gopurs_runtime.CoerceToStruct[Constructor_Data_Bounded_BoundedRecord](dict_0_box))
 })
 	})
 	return cache_Data_Bounded_topRecord
@@ -164,7 +164,7 @@ var once_Data_Bounded_bottomRecord sync.Once
 func Get_Data_Bounded_bottomRecord() gopurs_runtime.Value {
 	once_Data_Bounded_bottomRecord.Do(func() {
 		cache_Data_Bounded_bottomRecord = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Bounded_bottomRecord(gopurs_runtime.CoerceToStruct[Constructor_Data_Bounded_BoundedRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Bounded_bottomRecord(gopurs_runtime.CoerceToStruct[Constructor_Data_Bounded_BoundedRecord](dict_0_box))
 })
 	})
 	return cache_Data_Bounded_bottomRecord
@@ -219,7 +219,7 @@ var once_Data_Bounded_bottomRecord__1740832576 sync.Once
 func Get_Data_Bounded_bottomRecord__1740832576() gopurs_runtime.Value {
 	once_Data_Bounded_bottomRecord__1740832576.Do(func() {
 		cache_Data_Bounded_bottomRecord__1740832576 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Bounded_bottomRecord__1740832576(gopurs_runtime.CoerceToStruct[Constructor_Data_Bounded_BoundedRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Bounded_bottomRecord__1740832576(gopurs_runtime.CoerceToStruct[Constructor_Data_Bounded_BoundedRecord](dict_0_box))
 })
 	})
 	return cache_Data_Bounded_bottomRecord__1740832576
@@ -230,7 +230,7 @@ var once_Data_Bounded_bottomRecord__2610646464 sync.Once
 func Get_Data_Bounded_bottomRecord__2610646464() gopurs_runtime.Value {
 	once_Data_Bounded_bottomRecord__2610646464.Do(func() {
 		cache_Data_Bounded_bottomRecord__2610646464 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Bounded_bottomRecord__2610646464(gopurs_runtime.CoerceToStruct[Constructor_Data_Bounded_BoundedRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Bounded_bottomRecord__2610646464(gopurs_runtime.CoerceToStruct[Constructor_Data_Bounded_BoundedRecord](dict_0_box))
 })
 	})
 	return cache_Data_Bounded_bottomRecord__2610646464
@@ -252,7 +252,7 @@ var once_Data_Bounded_topRecord__1740832576 sync.Once
 func Get_Data_Bounded_topRecord__1740832576() gopurs_runtime.Value {
 	once_Data_Bounded_topRecord__1740832576.Do(func() {
 		cache_Data_Bounded_topRecord__1740832576 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Bounded_topRecord__1740832576(gopurs_runtime.CoerceToStruct[Constructor_Data_Bounded_BoundedRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Bounded_topRecord__1740832576(gopurs_runtime.CoerceToStruct[Constructor_Data_Bounded_BoundedRecord](dict_0_box))
 })
 	})
 	return cache_Data_Bounded_topRecord__1740832576
@@ -263,13 +263,13 @@ var once_Data_Bounded_topRecord__2610646464 sync.Once
 func Get_Data_Bounded_topRecord__2610646464() gopurs_runtime.Value {
 	once_Data_Bounded_topRecord__2610646464.Do(func() {
 		cache_Data_Bounded_topRecord__2610646464 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Bounded_topRecord__2610646464(gopurs_runtime.CoerceToStruct[Constructor_Data_Bounded_BoundedRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Bounded_topRecord__2610646464(gopurs_runtime.CoerceToStruct[Constructor_Data_Bounded_BoundedRecord](dict_0_box))
 })
 	})
 	return cache_Data_Bounded_topRecord__2610646464
 }
 
-type Constructor_Data_Bounded_BoundedRecord[T_rowlist any, T_row any, T_subrow any] struct {
+type Constructor_Data_Bounded_BoundedRecord struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -279,7 +279,7 @@ type Constructor_Data_Bounded_BoundedRecord[T_rowlist any, T_row any, T_subrow a
 
 func init() {
 	gopurs_runtime.StructGetters[4260658871] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_Bounded_BoundedRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_Bounded_BoundedRecord)(ptr)
 		_ = c
 		switch key {
 		case "OrdRecord0": return gopurs_runtime.Box(c.V0)
@@ -291,17 +291,17 @@ func init() {
 }
 
 
-type Constructor_Data_Bounded_Bounded[T_a any] struct {
+type Constructor_Data_Bounded_Bounded struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
-	V1 T_a
-	V2 T_a
+	V1 gopurs_runtime.Value
+	V2 gopurs_runtime.Value
 }
 
 
 func init() {
 	gopurs_runtime.StructGetters[3510799738] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_Bounded_Bounded[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_Bounded_Bounded)(ptr)
 		_ = c
 		switch key {
 		case "Ord0": return gopurs_runtime.Box(c.V0)
@@ -336,8 +336,8 @@ _ = x_0
 return x_0
 }
 
-func Call_Data_Bounded_topRecord(dict_0_loop *Constructor_Data_Bounded_BoundedRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Bounded_BoundedRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Bounded_topRecord(dict_0_loop *Constructor_Data_Bounded_BoundedRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Bounded_BoundedRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V2)
 }
@@ -348,8 +348,8 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "top")
 }
 
-func Call_Data_Bounded_bottomRecord(dict_0_loop *Constructor_Data_Bounded_BoundedRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Bounded_BoundedRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Bounded_bottomRecord(dict_0_loop *Constructor_Data_Bounded_BoundedRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Bounded_BoundedRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
@@ -471,14 +471,14 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "bottom")
 }
 
-func Call_Data_Bounded_bottomRecord__1740832576(dict_0_loop *Constructor_Data_Bounded_BoundedRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Bounded_BoundedRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Bounded_bottomRecord__1740832576(dict_0_loop *Constructor_Data_Bounded_BoundedRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Bounded_BoundedRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
 
-func Call_Data_Bounded_bottomRecord__2610646464(dict_0_loop *Constructor_Data_Bounded_BoundedRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Bounded_BoundedRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Bounded_bottomRecord__2610646464(dict_0_loop *Constructor_Data_Bounded_BoundedRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Bounded_BoundedRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
@@ -489,14 +489,14 @@ _ = dict_0
 return gopurs_runtime.RecordGet(dict_0, "top")
 }
 
-func Call_Data_Bounded_topRecord__1740832576(dict_0_loop *Constructor_Data_Bounded_BoundedRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Bounded_BoundedRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Bounded_topRecord__1740832576(dict_0_loop *Constructor_Data_Bounded_BoundedRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Bounded_BoundedRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V2)
 }
 
-func Call_Data_Bounded_topRecord__2610646464(dict_0_loop *Constructor_Data_Bounded_BoundedRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Bounded_BoundedRecord[gopurs_runtime.Value, gopurs_runtime.Value, gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Bounded_topRecord__2610646464(dict_0_loop *Constructor_Data_Bounded_BoundedRecord) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Bounded_BoundedRecord = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V2)
 }

@@ -22,7 +22,7 @@ var once_Data_Profunctor_Cochoice_unright sync.Once
 func Get_Data_Profunctor_Cochoice_unright() gopurs_runtime.Value {
 	once_Data_Profunctor_Cochoice_unright.Do(func() {
 		cache_Data_Profunctor_Cochoice_unright = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Profunctor_Cochoice_unright(gopurs_runtime.CoerceToStruct[Constructor_Data_Profunctor_Cochoice_Cochoice[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Profunctor_Cochoice_unright(gopurs_runtime.CoerceToStruct[Constructor_Data_Profunctor_Cochoice_Cochoice](dict_0_box))
 })
 	})
 	return cache_Data_Profunctor_Cochoice_unright
@@ -33,13 +33,13 @@ var once_Data_Profunctor_Cochoice_unleft sync.Once
 func Get_Data_Profunctor_Cochoice_unleft() gopurs_runtime.Value {
 	once_Data_Profunctor_Cochoice_unleft.Do(func() {
 		cache_Data_Profunctor_Cochoice_unleft = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Profunctor_Cochoice_unleft(gopurs_runtime.CoerceToStruct[Constructor_Data_Profunctor_Cochoice_Cochoice[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Profunctor_Cochoice_unleft(gopurs_runtime.CoerceToStruct[Constructor_Data_Profunctor_Cochoice_Cochoice](dict_0_box))
 })
 	})
 	return cache_Data_Profunctor_Cochoice_unleft
 }
 
-type Constructor_Data_Profunctor_Cochoice_Cochoice[T_p any] struct {
+type Constructor_Data_Profunctor_Cochoice_Cochoice struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -49,7 +49,7 @@ type Constructor_Data_Profunctor_Cochoice_Cochoice[T_p any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[1827340575] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_Profunctor_Cochoice_Cochoice[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_Profunctor_Cochoice_Cochoice)(ptr)
 		_ = c
 		switch key {
 		case "Profunctor0": return gopurs_runtime.Box(c.V0)
@@ -67,14 +67,14 @@ _ = x_0
 return x_0
 }
 
-func Call_Data_Profunctor_Cochoice_unright(dict_0_loop *Constructor_Data_Profunctor_Cochoice_Cochoice[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Profunctor_Cochoice_Cochoice[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Profunctor_Cochoice_unright(dict_0_loop *Constructor_Data_Profunctor_Cochoice_Cochoice) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Profunctor_Cochoice_Cochoice = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V2)
 }
 
-func Call_Data_Profunctor_Cochoice_unleft(dict_0_loop *Constructor_Data_Profunctor_Cochoice_Cochoice[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Profunctor_Cochoice_Cochoice[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Profunctor_Cochoice_unleft(dict_0_loop *Constructor_Data_Profunctor_Cochoice_Cochoice) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Profunctor_Cochoice_Cochoice = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }

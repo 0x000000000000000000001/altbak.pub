@@ -22,7 +22,7 @@ var once_Data_EuclideanRing_mod sync.Once
 func Get_Data_EuclideanRing_mod() gopurs_runtime.Value {
 	once_Data_EuclideanRing_mod.Do(func() {
 		cache_Data_EuclideanRing_mod = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_EuclideanRing_mod(gopurs_runtime.CoerceToStruct[Constructor_Data_EuclideanRing_EuclideanRing[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_EuclideanRing_mod(gopurs_runtime.CoerceToStruct[Constructor_Data_EuclideanRing_EuclideanRing](dict_0_box))
 })
 	})
 	return cache_Data_EuclideanRing_mod
@@ -33,7 +33,7 @@ var once_Data_EuclideanRing_gcd sync.Once
 func Get_Data_EuclideanRing_gcd() gopurs_runtime.Value {
 	once_Data_EuclideanRing_gcd.Do(func() {
 		cache_Data_EuclideanRing_gcd = gopurs_runtime.Func2(func(dictEq_0_box gopurs_runtime.Value, dictEuclideanRing_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_EuclideanRing_gcd(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq[gopurs_runtime.Value]](dictEq_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_EuclideanRing_EuclideanRing[gopurs_runtime.Value]](dictEuclideanRing_1_box))
+return Call_Data_EuclideanRing_gcd(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](dictEq_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_EuclideanRing_EuclideanRing](dictEuclideanRing_1_box))
 })
 	})
 	return cache_Data_EuclideanRing_gcd
@@ -72,7 +72,7 @@ var once_Data_EuclideanRing_div sync.Once
 func Get_Data_EuclideanRing_div() gopurs_runtime.Value {
 	once_Data_EuclideanRing_div.Do(func() {
 		cache_Data_EuclideanRing_div = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_EuclideanRing_div(gopurs_runtime.CoerceToStruct[Constructor_Data_EuclideanRing_EuclideanRing[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_EuclideanRing_div(gopurs_runtime.CoerceToStruct[Constructor_Data_EuclideanRing_EuclideanRing](dict_0_box))
 })
 	})
 	return cache_Data_EuclideanRing_div
@@ -83,7 +83,7 @@ var once_Data_EuclideanRing_lcm sync.Once
 func Get_Data_EuclideanRing_lcm() gopurs_runtime.Value {
 	once_Data_EuclideanRing_lcm.Do(func() {
 		cache_Data_EuclideanRing_lcm = gopurs_runtime.Func2(func(dictEq_0_box gopurs_runtime.Value, dictEuclideanRing_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_EuclideanRing_lcm(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq[gopurs_runtime.Value]](dictEq_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_EuclideanRing_EuclideanRing[gopurs_runtime.Value]](dictEuclideanRing_1_box))
+return Call_Data_EuclideanRing_lcm(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](dictEq_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_EuclideanRing_EuclideanRing](dictEuclideanRing_1_box))
 })
 	})
 	return cache_Data_EuclideanRing_lcm
@@ -94,7 +94,7 @@ var once_Data_EuclideanRing_degree sync.Once
 func Get_Data_EuclideanRing_degree() gopurs_runtime.Value {
 	once_Data_EuclideanRing_degree.Do(func() {
 		cache_Data_EuclideanRing_degree = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_EuclideanRing_degree(gopurs_runtime.CoerceToStruct[Constructor_Data_EuclideanRing_EuclideanRing[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_EuclideanRing_degree(gopurs_runtime.CoerceToStruct[Constructor_Data_EuclideanRing_EuclideanRing](dict_0_box))
 })
 	})
 	return cache_Data_EuclideanRing_degree
@@ -127,7 +127,7 @@ var once_Data_EuclideanRing_div__2579358968 sync.Once
 func Get_Data_EuclideanRing_div__2579358968() gopurs_runtime.Value {
 	once_Data_EuclideanRing_div__2579358968.Do(func() {
 		cache_Data_EuclideanRing_div__2579358968 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_EuclideanRing_div__2579358968(gopurs_runtime.CoerceToStruct[Constructor_Data_EuclideanRing_EuclideanRing[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_EuclideanRing_div__2579358968(gopurs_runtime.CoerceToStruct[Constructor_Data_EuclideanRing_EuclideanRing](dict_0_box))
 })
 	})
 	return cache_Data_EuclideanRing_div__2579358968
@@ -138,7 +138,7 @@ var once_Data_EuclideanRing_gcd__3697052990 sync.Once
 func Get_Data_EuclideanRing_gcd__3697052990() gopurs_runtime.Value {
 	once_Data_EuclideanRing_gcd__3697052990.Do(func() {
 		cache_Data_EuclideanRing_gcd__3697052990 = gopurs_runtime.Func2(func(dictEq_0_box gopurs_runtime.Value, dictEuclideanRing_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_EuclideanRing_gcd__3697052990(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq[gopurs_runtime.Value]](dictEq_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_EuclideanRing_EuclideanRing[gopurs_runtime.Value]](dictEuclideanRing_1_box))
+return Call_Data_EuclideanRing_gcd__3697052990(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](dictEq_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_EuclideanRing_EuclideanRing](dictEuclideanRing_1_box))
 })
 	})
 	return cache_Data_EuclideanRing_gcd__3697052990
@@ -160,13 +160,13 @@ var once_Data_EuclideanRing_mod__2579358968 sync.Once
 func Get_Data_EuclideanRing_mod__2579358968() gopurs_runtime.Value {
 	once_Data_EuclideanRing_mod__2579358968.Do(func() {
 		cache_Data_EuclideanRing_mod__2579358968 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_EuclideanRing_mod__2579358968(gopurs_runtime.CoerceToStruct[Constructor_Data_EuclideanRing_EuclideanRing[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_EuclideanRing_mod__2579358968(gopurs_runtime.CoerceToStruct[Constructor_Data_EuclideanRing_EuclideanRing](dict_0_box))
 })
 	})
 	return cache_Data_EuclideanRing_mod__2579358968
 }
 
-type Constructor_Data_EuclideanRing_EuclideanRing[T_a any] struct {
+type Constructor_Data_EuclideanRing_EuclideanRing struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 	V1 gopurs_runtime.Value
@@ -177,7 +177,7 @@ type Constructor_Data_EuclideanRing_EuclideanRing[T_a any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[3214993658] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_EuclideanRing_EuclideanRing[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_EuclideanRing_EuclideanRing)(ptr)
 		_ = c
 		switch key {
 		case "CommutativeRing0": return gopurs_runtime.Box(c.V0)
@@ -196,19 +196,19 @@ _ = x_0
 return x_0
 }
 
-func Call_Data_EuclideanRing_mod(dict_0_loop *Constructor_Data_EuclideanRing_EuclideanRing[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_EuclideanRing_EuclideanRing[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_EuclideanRing_mod(dict_0_loop *Constructor_Data_EuclideanRing_EuclideanRing) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_EuclideanRing_EuclideanRing = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V3)
 }
 
-func Call_Data_EuclideanRing_gcd(dictEq_0_loop *Constructor_Data_Eq_Eq[gopurs_runtime.Value], dictEuclideanRing_1_loop *Constructor_Data_EuclideanRing_EuclideanRing[gopurs_runtime.Value]) gopurs_runtime.Value {
+func Call_Data_EuclideanRing_gcd(dictEq_0_loop *Constructor_Data_Eq_Eq, dictEuclideanRing_1_loop *Constructor_Data_EuclideanRing_EuclideanRing) gopurs_runtime.Value {
 gcd:
 for {
 if false { continue gcd }
-var dictEq_0 *Constructor_Data_Eq_Eq[gopurs_runtime.Value] = dictEq_0_loop
+var dictEq_0 *Constructor_Data_Eq_Eq = dictEq_0_loop
 _ = dictEq_0
-var dictEuclideanRing_1 *Constructor_Data_EuclideanRing_EuclideanRing[gopurs_runtime.Value] = dictEuclideanRing_1_loop
+var dictEuclideanRing_1 *Constructor_Data_EuclideanRing_EuclideanRing = dictEuclideanRing_1_loop
 _ = dictEuclideanRing_1
 // TAST (Let): zero_2_0 -> gopurs_runtime.Value
 zero_2_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.Box(dictEuclideanRing_1.V0), gopurs_runtime.Value{}), "Ring0"), gopurs_runtime.Value{}), "Semiring0"), gopurs_runtime.Value{}), "zero")
@@ -234,16 +234,16 @@ return __t1
 }
 }
 
-func Call_Data_EuclideanRing_div(dict_0_loop *Constructor_Data_EuclideanRing_EuclideanRing[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_EuclideanRing_EuclideanRing[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_EuclideanRing_div(dict_0_loop *Constructor_Data_EuclideanRing_EuclideanRing) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_EuclideanRing_EuclideanRing = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V2)
 }
 
-func Call_Data_EuclideanRing_lcm(dictEq_0_loop *Constructor_Data_Eq_Eq[gopurs_runtime.Value], dictEuclideanRing_1_loop *Constructor_Data_EuclideanRing_EuclideanRing[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictEq_0 *Constructor_Data_Eq_Eq[gopurs_runtime.Value] = dictEq_0_loop
+func Call_Data_EuclideanRing_lcm(dictEq_0_loop *Constructor_Data_Eq_Eq, dictEuclideanRing_1_loop *Constructor_Data_EuclideanRing_EuclideanRing) gopurs_runtime.Value {
+var dictEq_0 *Constructor_Data_Eq_Eq = dictEq_0_loop
 _ = dictEq_0
-var dictEuclideanRing_1 *Constructor_Data_EuclideanRing_EuclideanRing[gopurs_runtime.Value] = dictEuclideanRing_1_loop
+var dictEuclideanRing_1 *Constructor_Data_EuclideanRing_EuclideanRing = dictEuclideanRing_1_loop
 _ = dictEuclideanRing_1
 // TAST (Let): Ring0_2_0 -> gopurs_runtime.Value
 Ring0_2_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.Box(dictEuclideanRing_1.V0), gopurs_runtime.Value{}), "Ring0"), gopurs_runtime.Value{})
@@ -251,8 +251,8 @@ _ = Ring0_2_0
 // TAST (Let): zero_3_1 -> gopurs_runtime.Value
 zero_3_1 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Ring0_2_0, "Semiring0"), gopurs_runtime.Value{}), "zero")
 _ = zero_3_1
-// TAST (Let): Semiring0_4_2 -> *Constructor_Data_Semiring_Semiring[gopurs_runtime.Value]
-Semiring0_4_2 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring[gopurs_runtime.Value]](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Ring0_2_0, "Semiring0"), gopurs_runtime.Value{}))
+// TAST (Let): Semiring0_4_2 -> *Constructor_Data_Semiring_Semiring
+Semiring0_4_2 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Ring0_2_0, "Semiring0"), gopurs_runtime.Value{}))
 _ = Semiring0_4_2
 return gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(b_6 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -287,8 +287,8 @@ return __t4
 })
 }
 
-func Call_Data_EuclideanRing_degree(dict_0_loop *Constructor_Data_EuclideanRing_EuclideanRing[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_EuclideanRing_EuclideanRing[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_EuclideanRing_degree(dict_0_loop *Constructor_Data_EuclideanRing_EuclideanRing) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_EuclideanRing_EuclideanRing = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V1)
 }
@@ -309,16 +309,16 @@ _ = __eta1_1
 return gopurs_runtime.Float((__eta0_0.FloatVal()) / (__eta1_1.FloatVal()))
 }
 
-func Call_Data_EuclideanRing_div__2579358968(dict_0_loop *Constructor_Data_EuclideanRing_EuclideanRing[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_EuclideanRing_EuclideanRing[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_EuclideanRing_div__2579358968(dict_0_loop *Constructor_Data_EuclideanRing_EuclideanRing) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_EuclideanRing_EuclideanRing = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V2)
 }
 
-func Call_Data_EuclideanRing_gcd__3697052990(dictEq_0_loop *Constructor_Data_Eq_Eq[gopurs_runtime.Value], dictEuclideanRing_1_loop *Constructor_Data_EuclideanRing_EuclideanRing[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dictEq_0 *Constructor_Data_Eq_Eq[gopurs_runtime.Value] = dictEq_0_loop
+func Call_Data_EuclideanRing_gcd__3697052990(dictEq_0_loop *Constructor_Data_Eq_Eq, dictEuclideanRing_1_loop *Constructor_Data_EuclideanRing_EuclideanRing) gopurs_runtime.Value {
+var dictEq_0 *Constructor_Data_Eq_Eq = dictEq_0_loop
 _ = dictEq_0
-var dictEuclideanRing_1 *Constructor_Data_EuclideanRing_EuclideanRing[gopurs_runtime.Value] = dictEuclideanRing_1_loop
+var dictEuclideanRing_1 *Constructor_Data_EuclideanRing_EuclideanRing = dictEuclideanRing_1_loop
 _ = dictEuclideanRing_1
 // TAST (Let): zero_2_0 -> gopurs_runtime.Value
 zero_2_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.Box(dictEuclideanRing_1.V0), gopurs_runtime.Value{}), "Ring0"), gopurs_runtime.Value{}), "Semiring0"), gopurs_runtime.Value{}), "zero")
@@ -367,8 +367,8 @@ _ = __eta1_1
 return gopurs_runtime.Apply2(Get_Data_EuclideanRing_intMod(), __eta0_0, __eta1_1)
 }
 
-func Call_Data_EuclideanRing_mod__2579358968(dict_0_loop *Constructor_Data_EuclideanRing_EuclideanRing[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_EuclideanRing_EuclideanRing[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_EuclideanRing_mod__2579358968(dict_0_loop *Constructor_Data_EuclideanRing_EuclideanRing) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_EuclideanRing_EuclideanRing = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V3)
 }

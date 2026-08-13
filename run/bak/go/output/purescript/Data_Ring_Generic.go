@@ -22,7 +22,7 @@ var once_Data_Ring_Generic_genericSub_prime sync.Once
 func Get_Data_Ring_Generic_genericSub_prime() gopurs_runtime.Value {
 	once_Data_Ring_Generic_genericSub_prime.Do(func() {
 		cache_Data_Ring_Generic_genericSub_prime = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ring_Generic_genericSub_prime(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Generic_GenericRing[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Ring_Generic_genericSub_prime(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Generic_GenericRing](dict_0_box))
 })
 	})
 	return cache_Data_Ring_Generic_genericSub_prime
@@ -33,7 +33,7 @@ var once_Data_Ring_Generic_genericSub sync.Once
 func Get_Data_Ring_Generic_genericSub() gopurs_runtime.Value {
 	once_Data_Ring_Generic_genericSub.Do(func() {
 		cache_Data_Ring_Generic_genericSub = gopurs_runtime.Func4(func(dictGeneric_0_box gopurs_runtime.Value, dictGenericRing_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value, y_3_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ring_Generic_genericSub(gopurs_runtime.CoerceToStruct[Constructor_Data_Generic_Rep_Generic[gopurs_runtime.Value, gopurs_runtime.Value]](dictGeneric_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Generic_GenericRing[gopurs_runtime.Value]](dictGenericRing_1_box), x_2_box, y_3_box)
+return Call_Data_Ring_Generic_genericSub(gopurs_runtime.CoerceToStruct[Constructor_Data_Generic_Rep_Generic](dictGeneric_0_box), gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Generic_GenericRing](dictGenericRing_1_box), x_2_box, y_3_box)
 })
 	})
 	return cache_Data_Ring_Generic_genericSub
@@ -90,13 +90,13 @@ var once_Data_Ring_Generic_genericSub_prime__469823367 sync.Once
 func Get_Data_Ring_Generic_genericSub_prime__469823367() gopurs_runtime.Value {
 	once_Data_Ring_Generic_genericSub_prime__469823367.Do(func() {
 		cache_Data_Ring_Generic_genericSub_prime__469823367 = gopurs_runtime.Func(func(dict_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Ring_Generic_genericSub_prime__469823367(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Generic_GenericRing[gopurs_runtime.Value]](dict_0_box))
+return Call_Data_Ring_Generic_genericSub_prime__469823367(gopurs_runtime.CoerceToStruct[Constructor_Data_Ring_Generic_GenericRing](dict_0_box))
 })
 	})
 	return cache_Data_Ring_Generic_genericSub_prime__469823367
 }
 
-type Constructor_Data_Ring_Generic_GenericRing[T_a any] struct {
+type Constructor_Data_Ring_Generic_GenericRing struct {
 	Rc uint32
 	V0 gopurs_runtime.Value
 }
@@ -104,7 +104,7 @@ type Constructor_Data_Ring_Generic_GenericRing[T_a any] struct {
 
 func init() {
 	gopurs_runtime.StructGetters[3896698597] = func(ptr unsafe.Pointer, key string) gopurs_runtime.Value {
-		c := (*Constructor_Data_Ring_Generic_GenericRing[gopurs_runtime.Value])(ptr)
+		c := (*Constructor_Data_Ring_Generic_GenericRing)(ptr)
 		_ = c
 		switch key {
 		case "genericSub'": return gopurs_runtime.Box(c.V0)
@@ -120,16 +120,16 @@ _ = x_0
 return x_0
 }
 
-func Call_Data_Ring_Generic_genericSub_prime(dict_0_loop *Constructor_Data_Ring_Generic_GenericRing[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ring_Generic_GenericRing[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Ring_Generic_genericSub_prime(dict_0_loop *Constructor_Data_Ring_Generic_GenericRing) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ring_Generic_GenericRing = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_Data_Ring_Generic_genericSub(dictGeneric_0_loop *Constructor_Data_Generic_Rep_Generic[gopurs_runtime.Value, gopurs_runtime.Value], dictGenericRing_1_loop *Constructor_Data_Ring_Generic_GenericRing[gopurs_runtime.Value], x_2_loop gopurs_runtime.Value, y_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
-var dictGeneric_0 *Constructor_Data_Generic_Rep_Generic[gopurs_runtime.Value, gopurs_runtime.Value] = dictGeneric_0_loop
+func Call_Data_Ring_Generic_genericSub(dictGeneric_0_loop *Constructor_Data_Generic_Rep_Generic, dictGenericRing_1_loop *Constructor_Data_Ring_Generic_GenericRing, x_2_loop gopurs_runtime.Value, y_3_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictGeneric_0 *Constructor_Data_Generic_Rep_Generic = dictGeneric_0_loop
 _ = dictGeneric_0
-var dictGenericRing_1 *Constructor_Data_Ring_Generic_GenericRing[gopurs_runtime.Value] = dictGenericRing_1_loop
+var dictGenericRing_1 *Constructor_Data_Ring_Generic_GenericRing = dictGenericRing_1_loop
 _ = dictGenericRing_1
 var x_2 gopurs_runtime.Value = x_2_loop
 _ = x_2
@@ -145,7 +145,7 @@ var dictGenericRing1_1 gopurs_runtime.Value = dictGenericRing1_1_loop
 _ = dictGenericRing1_1
 return gopurs_runtime.RecordDict1("genericSub'", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&Constructor_Data_Generic_Rep_Product[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericRing_0, "genericSub'"), (*Constructor_Data_Generic_Rep_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V0, (*Constructor_Data_Generic_Rep_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericRing1_1, "genericSub'"), (*Constructor_Data_Generic_Rep_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v_2.UnsafePtr).V1, (*Constructor_Data_Generic_Rep_Product[gopurs_runtime.Value, gopurs_runtime.Value])(v1_3.UnsafePtr).V1)})}
+return gopurs_runtime.Value{Type: 9, IntVal: 1171963320, UnsafePtr: unsafe.Pointer(&Constructor_Data_Generic_Rep_Product{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericRing_0, "genericSub'"), (*Constructor_Data_Generic_Rep_Product)(v_2.UnsafePtr).V0, (*Constructor_Data_Generic_Rep_Product)(v1_3.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictGenericRing1_1, "genericSub'"), (*Constructor_Data_Generic_Rep_Product)(v_2.UnsafePtr).V1, (*Constructor_Data_Generic_Rep_Product)(v1_3.UnsafePtr).V1)})}
 })
 }))
 }
@@ -170,8 +170,8 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictRing_0, "sub"), v_1, v
 }))
 }
 
-func Call_Data_Ring_Generic_genericSub_prime__469823367(dict_0_loop *Constructor_Data_Ring_Generic_GenericRing[gopurs_runtime.Value]) gopurs_runtime.Value {
-var dict_0 *Constructor_Data_Ring_Generic_GenericRing[gopurs_runtime.Value] = dict_0_loop
+func Call_Data_Ring_Generic_genericSub_prime__469823367(dict_0_loop *Constructor_Data_Ring_Generic_GenericRing) gopurs_runtime.Value {
+var dict_0 *Constructor_Data_Ring_Generic_GenericRing = dict_0_loop
 _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
