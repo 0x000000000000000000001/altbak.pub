@@ -3426,12 +3426,28 @@ _ = f_0
 var x_1 []gopurs_runtime.Value = x_1_loop
 _ = x_1
 return func() []gopurs_runtime.Value {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.UncurriedApp2(Get_Data_Array_filterImpl(), f_0, gopurs_runtime.Array(func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array(func() []gopurs_runtime.Value {
+arr_val_filterImpl0 := gopurs_runtime.Array(func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Array(x_1).UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
-				}())).UnsafePtr)
+				}())
+_ = arr_val_filterImpl0
+_ = arr_val_filterImpl0
+arr_go_filterImpl0 := (*[]gopurs_runtime.Value)(arr_val_filterImpl0.UnsafePtr)
+_ = arr_go_filterImpl0
+res_go_filterImpl0 := make([]gopurs_runtime.Value, 0)
+_ = res_go_filterImpl0
+for _, v_filterImpl0 := range *arr_go_filterImpl0 {
+if gopurs_runtime.Apply(f_0, v_filterImpl0).BoolVal() {
+res_go_filterImpl0 = append(res_go_filterImpl0, v_filterImpl0)
+} else {
+
+}
+}
+return res_go_filterImpl0
+}()).UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed

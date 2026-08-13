@@ -4523,11 +4523,22 @@ _ = __local_var_0
 var __local_var_1 []gopurs_runtime.Value = __local_var_1_loop
 _ = __local_var_1
 return func() []gopurs_runtime.Value {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.UncurriedApp2(Get_Data_Array_filterImpl(), __local_var_0, gopurs_runtime.Array(__local_var_1)).UnsafePtr)
-					unboxed := make([]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { unboxed[i] = v }
-					return unboxed
-				}()
+arr_val_filterImpl0 := __local_var_1
+_ = arr_val_filterImpl0
+_ = arr_val_filterImpl0
+arr_go_filterImpl0 := arr_val_filterImpl0
+_ = arr_go_filterImpl0
+res_go_filterImpl0 := make([]gopurs_runtime.Value, 0)
+_ = res_go_filterImpl0
+for _, v_filterImpl0 := range arr_go_filterImpl0 {
+if gopurs_runtime.Apply(__local_var_0, v_filterImpl0).BoolVal() {
+res_go_filterImpl0 = append(res_go_filterImpl0, v_filterImpl0)
+} else {
+
+}
+}
+return res_go_filterImpl0
+}()
 }
 
 func Call_Data_Array_intersectBy(eq_0_loop gopurs_runtime.Value, xs_1_loop []gopurs_runtime.Value, ys_2_loop []gopurs_runtime.Value) []gopurs_runtime.Value {
@@ -4538,7 +4549,15 @@ _ = xs_1
 var ys_2 []gopurs_runtime.Value = ys_2_loop
 _ = ys_2
 return func() []gopurs_runtime.Value {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.UncurriedApp2(Get_Data_Array_filterImpl(), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+arr_val_filterImpl0 := xs_1
+_ = arr_val_filterImpl0
+_ = arr_val_filterImpl0
+arr_go_filterImpl0 := arr_val_filterImpl0
+_ = arr_go_filterImpl0
+res_go_filterImpl0 := make([]gopurs_runtime.Value, 0)
+_ = res_go_filterImpl0
+for _, v_filterImpl0 := range arr_go_filterImpl0 {
+if gopurs_runtime.Apply(gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_4_0 -> *Constructor_Data_Maybe_Just[int64]
 __local_var_4_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[int64]](gopurs_runtime.UncurriedApp4(Get_Data_Array_findIndexImpl(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))}, gopurs_runtime.Apply(eq_0, x_3), gopurs_runtime.Array(ys_2)))
 _ = __local_var_4_0
@@ -4564,11 +4583,14 @@ __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
 return gopurs_runtime.Bool((__t1.IntVal) != (0))
-}), gopurs_runtime.Array(xs_1)).UnsafePtr)
-					unboxed := make([]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { unboxed[i] = v }
-					return unboxed
-				}()
+}), v_filterImpl0).BoolVal() {
+res_go_filterImpl0 = append(res_go_filterImpl0, v_filterImpl0)
+} else {
+
+}
+}
+return res_go_filterImpl0
+}()
 }
 
 func Call_Data_Array_intersect(dictEq_0_loop *Constructor_Data_Eq_Eq[gopurs_runtime.Value]) gopurs_runtime.Value {
@@ -5658,16 +5680,22 @@ _ = __local_var_0
 var __local_var_1 []int64 = __local_var_1_loop
 _ = __local_var_1
 return func() []int64 {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.UncurriedApp2(Get_Data_Array_filterImpl(), __local_var_0, func() gopurs_runtime.Value {
-					arr := __local_var_1
-					boxed := make([]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { boxed[i] = gopurs_runtime.Int(v) }
-					return gopurs_runtime.Array(boxed)
-				}()).UnsafePtr)
-					unboxed := make([]int64, len(arr))
-					for i, v := range arr { unboxed[i] = v.IntVal }
-					return unboxed
-				}()
+arr_val_filterImpl0 := __local_var_1
+_ = arr_val_filterImpl0
+_ = arr_val_filterImpl0
+arr_go_filterImpl0 := arr_val_filterImpl0
+_ = arr_go_filterImpl0
+res_go_filterImpl0 := make([]int64, 0)
+_ = res_go_filterImpl0
+for _, v_filterImpl0 := range arr_go_filterImpl0 {
+if gopurs_runtime.Apply(__local_var_0, gopurs_runtime.Int(v_filterImpl0)).BoolVal() {
+res_go_filterImpl0 = append(res_go_filterImpl0, v_filterImpl0)
+} else {
+
+}
+}
+return res_go_filterImpl0
+}()
 }
 
 func Call_Data_Array_filter__377906483(__local_var_0_loop gopurs_runtime.Value, __local_var_1_loop []gopurs_runtime.Value) []gopurs_runtime.Value {
@@ -5676,11 +5704,22 @@ _ = __local_var_0
 var __local_var_1 []gopurs_runtime.Value = __local_var_1_loop
 _ = __local_var_1
 return func() []gopurs_runtime.Value {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.UncurriedApp2(Get_Data_Array_filterImpl(), __local_var_0, gopurs_runtime.Array(__local_var_1)).UnsafePtr)
-					unboxed := make([]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { unboxed[i] = v }
-					return unboxed
-				}()
+arr_val_filterImpl0 := __local_var_1
+_ = arr_val_filterImpl0
+_ = arr_val_filterImpl0
+arr_go_filterImpl0 := arr_val_filterImpl0
+_ = arr_go_filterImpl0
+res_go_filterImpl0 := make([]gopurs_runtime.Value, 0)
+_ = res_go_filterImpl0
+for _, v_filterImpl0 := range arr_go_filterImpl0 {
+if gopurs_runtime.Apply(__local_var_0, v_filterImpl0).BoolVal() {
+res_go_filterImpl0 = append(res_go_filterImpl0, v_filterImpl0)
+} else {
+
+}
+}
+return res_go_filterImpl0
+}()
 }
 
 func Call_Data_Array_filterA__2723385228(dictApplicative_0_loop *Constructor_Control_Applicative_Applicative[gopurs_runtime.Value]) gopurs_runtime.Value {
@@ -6180,7 +6219,15 @@ _ = xs_1
 var ys_2 []gopurs_runtime.Value = ys_2_loop
 _ = ys_2
 return func() []gopurs_runtime.Value {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.UncurriedApp2(Get_Data_Array_filterImpl(), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+arr_val_filterImpl0 := xs_1
+_ = arr_val_filterImpl0
+_ = arr_val_filterImpl0
+arr_go_filterImpl0 := arr_val_filterImpl0
+_ = arr_go_filterImpl0
+res_go_filterImpl0 := make([]gopurs_runtime.Value, 0)
+_ = res_go_filterImpl0
+for _, v_filterImpl0 := range arr_go_filterImpl0 {
+if gopurs_runtime.Apply(gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_4_0 -> *Constructor_Data_Maybe_Just[int64]
 __local_var_4_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[int64]](gopurs_runtime.UncurriedApp4(Get_Data_Array_findIndexImpl(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))}, gopurs_runtime.Apply(eq_0, x_3), gopurs_runtime.Array(ys_2)))
 _ = __local_var_4_0
@@ -6206,11 +6253,14 @@ __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
 return gopurs_runtime.Bool((__t1.IntVal) != (0))
-}), gopurs_runtime.Array(xs_1)).UnsafePtr)
-					unboxed := make([]gopurs_runtime.Value, len(arr))
-					for i, v := range arr { unboxed[i] = v }
-					return unboxed
-				}()
+}), v_filterImpl0).BoolVal() {
+res_go_filterImpl0 = append(res_go_filterImpl0, v_filterImpl0)
+} else {
+
+}
+}
+return res_go_filterImpl0
+}()
 }
 
 func Call_Data_Array_intersperse__4002752745(a_0_loop gopurs_runtime.Value, arr_1_loop []gopurs_runtime.Value) []gopurs_runtime.Value {

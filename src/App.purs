@@ -17,7 +17,6 @@ import Test.Polymorphism as Polymorphism
 import Test.StateMonad as StateMonad
 import Test.LazyEvaluation as LazyEvaluation
 import Test.ArrayOps as ArrayOps
-import TestLet as TestLet
 
 main :: Effect Unit
 main = do
