@@ -1694,11 +1694,12 @@ goto end_branch_18
 }
 }
 {
-// TAST (Let): j_5_1 -> gopurs_runtime.Value
-var j_5_1 gopurs_runtime.Value = gopurs_runtime.Int((v1_3.IntVal) + ((*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V2))
+// TAST (Let): j_5_1 -> int64
+j_5_1 := (v1_3.IntVal) + ((*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V2)
+_ = j_5_1
 var __t3 bool
 {
-if (j_5_1.IntVal) < (1) {
+if (j_5_1) < (1) {
 __t3 = true
 goto end_branch_3
 } else {
@@ -1754,7 +1755,7 @@ l_7_4 := gopurs_runtime.Int(Call_Data_Date_lastDayOfMonth((*Constructor_Data_Dat
 _ = l_7_4
 var __t9 bool
 {
-if (j_5_1.IntVal) > (l_7_4.IntVal) {
+if (j_5_1) > (l_7_4.IntVal) {
 __t9 = true
 goto end_branch_9
 } else {
@@ -1809,7 +1810,7 @@ goto end_branch_16
 __local_var_9_10 := gopurs_runtime.Apply2(Get_Data_Date_Date(), gopurs_runtime.Int((*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V0), gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V1), UnsafePtr: nil})
 _ = __local_var_9_10
 // TAST (Let): __local_var_10_11 -> *Constructor_Data_Maybe_Just[int64]
-__local_var_10_11 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[int64]](gopurs_runtime.Apply(Get_Data_Enum_toEnum__2099864294(), gopurs_runtime.Int(j_5_1.IntVal)))
+__local_var_10_11 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[int64]](gopurs_runtime.Apply(Get_Data_Enum_toEnum__2099864294(), gopurs_runtime.Int(j_5_1)))
 _ = __local_var_10_11
 var __t12 gopurs_runtime.Value
 {
@@ -1830,7 +1831,7 @@ end_branch_16:
 var __t17 int64
 {
 if low_6_2 {
-__t17 = j_5_1.IntVal
+__t17 = j_5_1
 goto end_branch_17
 } else {
 
@@ -1838,7 +1839,7 @@ goto end_branch_17
 }
 {
 if hi_8_8 {
-__t17 = ((j_5_1.IntVal) - (l_7_4.IntVal)) - (1)
+__t17 = ((j_5_1) - (l_7_4.IntVal)) - (1)
 goto end_branch_17
 } else {
 

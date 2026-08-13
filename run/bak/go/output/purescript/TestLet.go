@@ -22,9 +22,10 @@ _ = x_0
 // TAST (Let): y_1_0 -> int64
 y_1_0 := gopurs_runtime.Apply(Get_TestLet_opaque(), gopurs_runtime.Int(x_0)).IntVal
 _ = y_1_0
-// TAST (Let): z_2_1 -> gopurs_runtime.Value
-var z_2_1 gopurs_runtime.Value = gopurs_runtime.Int((y_1_0) + (y_1_0))
-return (z_2_1.IntVal) + (z_2_1.IntVal)
+// TAST (Let): z_2_1 -> int64
+z_2_1 := (y_1_0) + (y_1_0)
+_ = z_2_1
+return (z_2_1) + (z_2_1)
 }
 
 func Get_TestLet_opaque() gopurs_runtime.Value {

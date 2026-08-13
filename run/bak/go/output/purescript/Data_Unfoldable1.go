@@ -491,8 +491,9 @@ end_branch_2:
 __local_var_3_0 := __t2
 _ = __local_var_3_0
 return gopurs_runtime.Apply2(gopurs_runtime.Box(dictUnfoldable1_0.V0), gopurs_runtime.Func(func(i_4 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): i_prime_5_3 -> gopurs_runtime.Value
-var i_prime_5_3 gopurs_runtime.Value = gopurs_runtime.Int((i_4.IntVal) + (__local_var_3_0))
+// TAST (Let): i_prime_5_3 -> int64
+i_prime_5_3 := (i_4.IntVal) + (__local_var_3_0)
+_ = i_prime_5_3
 var __t4 gopurs_runtime.Value
 {
 if (i_4.IntVal) == (end_2) {
@@ -503,7 +504,7 @@ goto end_branch_4
 }
 }
 {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just[gopurs_runtime.Value]{1, gopurs_runtime.Int(i_prime_5_3.IntVal)})}
+__t4 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just[gopurs_runtime.Value]{1, gopurs_runtime.Int(i_prime_5_3)})}
 }
 end_branch_4:
 return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple[gopurs_runtime.Value, gopurs_runtime.Value]{1, gopurs_runtime.Int(i_4.IntVal), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just[int64]](__t4))}})}
