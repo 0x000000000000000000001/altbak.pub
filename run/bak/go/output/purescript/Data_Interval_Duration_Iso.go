@@ -208,8 +208,8 @@ goto end_branch_16
 if (v_0.Type == 9 && v_0.IntVal == 3224543173) {
 var __t7 gopurs_runtime.Value
 {
-var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_0.IntVal) == 217821258) {
+var __t_tag_0 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0
+if (uint32(__t_tag_0) == 217821258) {
 __t7 = gopurs_runtime.Str("(ContainsNegativeValue Minute)")
 goto end_branch_7
 } else {
@@ -217,8 +217,8 @@ goto end_branch_7
 }
 }
 {
-var __t_tag_1 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_1.IntVal) == 3908053364) {
+var __t_tag_1 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0
+if (uint32(__t_tag_1) == 3908053364) {
 __t7 = gopurs_runtime.Str("(ContainsNegativeValue Second)")
 goto end_branch_7
 } else {
@@ -226,8 +226,8 @@ goto end_branch_7
 }
 }
 {
-var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_2.IntVal) == 1292308612) {
+var __t_tag_2 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0
+if (uint32(__t_tag_2) == 1292308612) {
 __t7 = gopurs_runtime.Str("(ContainsNegativeValue Hour)")
 goto end_branch_7
 } else {
@@ -235,8 +235,8 @@ goto end_branch_7
 }
 }
 {
-var __t_tag_3 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_3.IntVal) == 2311060696) {
+var __t_tag_3 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0
+if (uint32(__t_tag_3) == 2311060696) {
 __t7 = gopurs_runtime.Str("(ContainsNegativeValue Day)")
 goto end_branch_7
 } else {
@@ -244,8 +244,8 @@ goto end_branch_7
 }
 }
 {
-var __t_tag_4 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_4.IntVal) == 401302776) {
+var __t_tag_4 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0
+if (uint32(__t_tag_4) == 401302776) {
 __t7 = gopurs_runtime.Str("(ContainsNegativeValue Week)")
 goto end_branch_7
 } else {
@@ -253,8 +253,8 @@ goto end_branch_7
 }
 }
 {
-var __t_tag_5 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_5.IntVal) == 3327533908) {
+var __t_tag_5 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0
+if (uint32(__t_tag_5) == 3327533908) {
 __t7 = gopurs_runtime.Str("(ContainsNegativeValue Month)")
 goto end_branch_7
 } else {
@@ -262,8 +262,8 @@ goto end_branch_7
 }
 }
 {
-var __t_tag_6 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_6.IntVal) == 3631736139) {
+var __t_tag_6 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0
+if (uint32(__t_tag_6) == 3631736139) {
 __t7 = gopurs_runtime.Str("(ContainsNegativeValue Year)")
 goto end_branch_7
 } else {
@@ -284,8 +284,8 @@ goto end_branch_16
 if (v_0.Type == 9 && v_0.IntVal == 574232667) {
 var __t15 gopurs_runtime.Value
 {
-var __t_tag_8 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_8.IntVal) == 217821258) {
+var __t_tag_8 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0
+if (uint32(__t_tag_8) == 217821258) {
 __t15 = gopurs_runtime.Str("(InvalidFractionalUse Minute)")
 goto end_branch_15
 } else {
@@ -293,8 +293,8 @@ goto end_branch_15
 }
 }
 {
-var __t_tag_9 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_9.IntVal) == 3908053364) {
+var __t_tag_9 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0
+if (uint32(__t_tag_9) == 3908053364) {
 __t15 = gopurs_runtime.Str("(InvalidFractionalUse Second)")
 goto end_branch_15
 } else {
@@ -302,8 +302,8 @@ goto end_branch_15
 }
 }
 {
-var __t_tag_10 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_10.IntVal) == 1292308612) {
+var __t_tag_10 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0
+if (uint32(__t_tag_10) == 1292308612) {
 __t15 = gopurs_runtime.Str("(InvalidFractionalUse Hour)")
 goto end_branch_15
 } else {
@@ -311,8 +311,8 @@ goto end_branch_15
 }
 }
 {
-var __t_tag_11 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_11.IntVal) == 2311060696) {
+var __t_tag_11 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0
+if (uint32(__t_tag_11) == 2311060696) {
 __t15 = gopurs_runtime.Str("(InvalidFractionalUse Day)")
 goto end_branch_15
 } else {
@@ -320,8 +320,8 @@ goto end_branch_15
 }
 }
 {
-var __t_tag_12 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_12.IntVal) == 401302776) {
+var __t_tag_12 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0
+if (uint32(__t_tag_12) == 401302776) {
 __t15 = gopurs_runtime.Str("(InvalidFractionalUse Week)")
 goto end_branch_15
 } else {
@@ -329,8 +329,8 @@ goto end_branch_15
 }
 }
 {
-var __t_tag_13 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_13.IntVal) == 3327533908) {
+var __t_tag_13 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0
+if (uint32(__t_tag_13) == 3327533908) {
 __t15 = gopurs_runtime.Str("(InvalidFractionalUse Month)")
 goto end_branch_15
 } else {
@@ -338,8 +338,8 @@ goto end_branch_15
 }
 }
 {
-var __t_tag_14 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_14.IntVal) == 3631736139) {
+var __t_tag_14 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0
+if (uint32(__t_tag_14) == 3631736139) {
 __t15 = gopurs_runtime.Str("(InvalidFractionalUse Year)")
 goto end_branch_15
 } else {
@@ -461,12 +461,12 @@ var __t24 bool
 if (y_1.Type == 9 && y_1.IntVal == 3224543173) {
 var __t23 bool
 {
-var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(x_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_2.IntVal) == 3908053364) {
+var __t_tag_2 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(x_0.UnsafePtr).V0
+if (uint32(__t_tag_2) == 3908053364) {
 var __t4 bool
 {
-var __t_tag_3 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_3.IntVal) == 3908053364) {
+var __t_tag_3 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_3) == 3908053364) {
 __t4 = true
 goto end_branch_4
 } else {
@@ -484,12 +484,12 @@ goto end_branch_23
 }
 }
 {
-var __t_tag_5 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(x_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_5.IntVal) == 217821258) {
+var __t_tag_5 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(x_0.UnsafePtr).V0
+if (uint32(__t_tag_5) == 217821258) {
 var __t7 bool
 {
-var __t_tag_6 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_6.IntVal) == 217821258) {
+var __t_tag_6 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_6) == 217821258) {
 __t7 = true
 goto end_branch_7
 } else {
@@ -507,12 +507,12 @@ goto end_branch_23
 }
 }
 {
-var __t_tag_8 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(x_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_8.IntVal) == 1292308612) {
+var __t_tag_8 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(x_0.UnsafePtr).V0
+if (uint32(__t_tag_8) == 1292308612) {
 var __t10 bool
 {
-var __t_tag_9 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_9.IntVal) == 1292308612) {
+var __t_tag_9 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_9) == 1292308612) {
 __t10 = true
 goto end_branch_10
 } else {
@@ -530,12 +530,12 @@ goto end_branch_23
 }
 }
 {
-var __t_tag_11 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(x_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_11.IntVal) == 2311060696) {
+var __t_tag_11 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(x_0.UnsafePtr).V0
+if (uint32(__t_tag_11) == 2311060696) {
 var __t13 bool
 {
-var __t_tag_12 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_12.IntVal) == 2311060696) {
+var __t_tag_12 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_12) == 2311060696) {
 __t13 = true
 goto end_branch_13
 } else {
@@ -553,12 +553,12 @@ goto end_branch_23
 }
 }
 {
-var __t_tag_14 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(x_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_14.IntVal) == 401302776) {
+var __t_tag_14 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(x_0.UnsafePtr).V0
+if (uint32(__t_tag_14) == 401302776) {
 var __t16 bool
 {
-var __t_tag_15 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_15.IntVal) == 401302776) {
+var __t_tag_15 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_15) == 401302776) {
 __t16 = true
 goto end_branch_16
 } else {
@@ -576,12 +576,12 @@ goto end_branch_23
 }
 }
 {
-var __t_tag_17 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(x_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_17.IntVal) == 3327533908) {
+var __t_tag_17 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(x_0.UnsafePtr).V0
+if (uint32(__t_tag_17) == 3327533908) {
 var __t19 bool
 {
-var __t_tag_18 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_18.IntVal) == 3327533908) {
+var __t_tag_18 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_18) == 3327533908) {
 __t19 = true
 goto end_branch_19
 } else {
@@ -599,12 +599,12 @@ goto end_branch_23
 }
 }
 {
-var __t_tag_20 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(x_0.UnsafePtr).V0), UnsafePtr: nil}
+var __t_tag_20 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(x_0.UnsafePtr).V0
 var __t_and_22 bool = false
-if (uint32(__t_tag_20.IntVal) == 3631736139) {
+if (uint32(__t_tag_20) == 3631736139) {
 
-var __t_tag_21 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-__t_and_22 = (uint32(__t_tag_21.IntVal) == 3631736139)
+var __t_tag_21 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0
+__t_and_22 = (uint32(__t_tag_21) == 3631736139)
 }
 if __t_and_22 {
 __t23 = true
@@ -637,12 +637,12 @@ goto end_branch_47
 if ((x_0.Type == 9 && x_0.IntVal == 574232667)) && ((y_1.Type == 9 && y_1.IntVal == 574232667)) {
 var __t46 bool
 {
-var __t_tag_25 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(x_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_25.IntVal) == 3908053364) {
+var __t_tag_25 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(x_0.UnsafePtr).V0
+if (uint32(__t_tag_25) == 3908053364) {
 var __t27 bool
 {
-var __t_tag_26 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_26.IntVal) == 3908053364) {
+var __t_tag_26 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_26) == 3908053364) {
 __t27 = true
 goto end_branch_27
 } else {
@@ -660,12 +660,12 @@ goto end_branch_46
 }
 }
 {
-var __t_tag_28 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(x_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_28.IntVal) == 217821258) {
+var __t_tag_28 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(x_0.UnsafePtr).V0
+if (uint32(__t_tag_28) == 217821258) {
 var __t30 bool
 {
-var __t_tag_29 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_29.IntVal) == 217821258) {
+var __t_tag_29 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_29) == 217821258) {
 __t30 = true
 goto end_branch_30
 } else {
@@ -683,12 +683,12 @@ goto end_branch_46
 }
 }
 {
-var __t_tag_31 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(x_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_31.IntVal) == 1292308612) {
+var __t_tag_31 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(x_0.UnsafePtr).V0
+if (uint32(__t_tag_31) == 1292308612) {
 var __t33 bool
 {
-var __t_tag_32 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_32.IntVal) == 1292308612) {
+var __t_tag_32 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_32) == 1292308612) {
 __t33 = true
 goto end_branch_33
 } else {
@@ -706,12 +706,12 @@ goto end_branch_46
 }
 }
 {
-var __t_tag_34 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(x_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_34.IntVal) == 2311060696) {
+var __t_tag_34 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(x_0.UnsafePtr).V0
+if (uint32(__t_tag_34) == 2311060696) {
 var __t36 bool
 {
-var __t_tag_35 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_35.IntVal) == 2311060696) {
+var __t_tag_35 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_35) == 2311060696) {
 __t36 = true
 goto end_branch_36
 } else {
@@ -729,12 +729,12 @@ goto end_branch_46
 }
 }
 {
-var __t_tag_37 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(x_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_37.IntVal) == 401302776) {
+var __t_tag_37 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(x_0.UnsafePtr).V0
+if (uint32(__t_tag_37) == 401302776) {
 var __t39 bool
 {
-var __t_tag_38 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_38.IntVal) == 401302776) {
+var __t_tag_38 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_38) == 401302776) {
 __t39 = true
 goto end_branch_39
 } else {
@@ -752,12 +752,12 @@ goto end_branch_46
 }
 }
 {
-var __t_tag_40 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(x_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_40.IntVal) == 3327533908) {
+var __t_tag_40 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(x_0.UnsafePtr).V0
+if (uint32(__t_tag_40) == 3327533908) {
 var __t42 bool
 {
-var __t_tag_41 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_41.IntVal) == 3327533908) {
+var __t_tag_41 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_41) == 3327533908) {
 __t42 = true
 goto end_branch_42
 } else {
@@ -775,12 +775,12 @@ goto end_branch_46
 }
 }
 {
-var __t_tag_43 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(x_0.UnsafePtr).V0), UnsafePtr: nil}
+var __t_tag_43 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(x_0.UnsafePtr).V0
 var __t_and_45 bool = false
-if (uint32(__t_tag_43.IntVal) == 3631736139) {
+if (uint32(__t_tag_43) == 3631736139) {
 
-var __t_tag_44 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-__t_and_45 = (uint32(__t_tag_44.IntVal) == 3631736139)
+var __t_tag_44 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0
+__t_and_45 = (uint32(__t_tag_44) == 3631736139)
 }
 if __t_and_45 {
 __t46 = true
@@ -884,12 +884,12 @@ var __t30 uint32
 if (y_1.Type == 9 && y_1.IntVal == 3224543173) {
 var __t29 gopurs_runtime.Value
 {
-var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(x_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_2.IntVal) == 3908053364) {
+var __t_tag_2 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(x_0.UnsafePtr).V0
+if (uint32(__t_tag_2) == 3908053364) {
 var __t4 uint32
 {
-var __t_tag_3 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_3.IntVal) == 3908053364) {
+var __t_tag_3 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_3) == 3908053364) {
 __t4 = 902936544
 goto end_branch_4
 } else {
@@ -907,8 +907,8 @@ goto end_branch_29
 }
 }
 {
-var __t_tag_5 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_5.IntVal) == 3908053364) {
+var __t_tag_5 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_5) == 3908053364) {
 __t29 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
 goto end_branch_29
 } else {
@@ -916,12 +916,12 @@ goto end_branch_29
 }
 }
 {
-var __t_tag_6 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(x_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_6.IntVal) == 217821258) {
+var __t_tag_6 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(x_0.UnsafePtr).V0
+if (uint32(__t_tag_6) == 217821258) {
 var __t8 uint32
 {
-var __t_tag_7 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_7.IntVal) == 217821258) {
+var __t_tag_7 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_7) == 217821258) {
 __t8 = 902936544
 goto end_branch_8
 } else {
@@ -939,8 +939,8 @@ goto end_branch_29
 }
 }
 {
-var __t_tag_9 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_9.IntVal) == 217821258) {
+var __t_tag_9 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_9) == 217821258) {
 __t29 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
 goto end_branch_29
 } else {
@@ -948,12 +948,12 @@ goto end_branch_29
 }
 }
 {
-var __t_tag_10 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(x_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_10.IntVal) == 1292308612) {
+var __t_tag_10 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(x_0.UnsafePtr).V0
+if (uint32(__t_tag_10) == 1292308612) {
 var __t12 uint32
 {
-var __t_tag_11 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_11.IntVal) == 1292308612) {
+var __t_tag_11 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_11) == 1292308612) {
 __t12 = 902936544
 goto end_branch_12
 } else {
@@ -971,8 +971,8 @@ goto end_branch_29
 }
 }
 {
-var __t_tag_13 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_13.IntVal) == 1292308612) {
+var __t_tag_13 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_13) == 1292308612) {
 __t29 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
 goto end_branch_29
 } else {
@@ -980,12 +980,12 @@ goto end_branch_29
 }
 }
 {
-var __t_tag_14 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(x_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_14.IntVal) == 2311060696) {
+var __t_tag_14 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(x_0.UnsafePtr).V0
+if (uint32(__t_tag_14) == 2311060696) {
 var __t16 uint32
 {
-var __t_tag_15 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_15.IntVal) == 2311060696) {
+var __t_tag_15 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_15) == 2311060696) {
 __t16 = 902936544
 goto end_branch_16
 } else {
@@ -1003,8 +1003,8 @@ goto end_branch_29
 }
 }
 {
-var __t_tag_17 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_17.IntVal) == 2311060696) {
+var __t_tag_17 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_17) == 2311060696) {
 __t29 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
 goto end_branch_29
 } else {
@@ -1012,12 +1012,12 @@ goto end_branch_29
 }
 }
 {
-var __t_tag_18 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(x_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_18.IntVal) == 401302776) {
+var __t_tag_18 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(x_0.UnsafePtr).V0
+if (uint32(__t_tag_18) == 401302776) {
 var __t20 uint32
 {
-var __t_tag_19 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_19.IntVal) == 401302776) {
+var __t_tag_19 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_19) == 401302776) {
 __t20 = 902936544
 goto end_branch_20
 } else {
@@ -1035,8 +1035,8 @@ goto end_branch_29
 }
 }
 {
-var __t_tag_21 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_21.IntVal) == 401302776) {
+var __t_tag_21 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_21) == 401302776) {
 __t29 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
 goto end_branch_29
 } else {
@@ -1044,12 +1044,12 @@ goto end_branch_29
 }
 }
 {
-var __t_tag_22 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(x_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_22.IntVal) == 3327533908) {
+var __t_tag_22 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(x_0.UnsafePtr).V0
+if (uint32(__t_tag_22) == 3327533908) {
 var __t24 uint32
 {
-var __t_tag_23 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_23.IntVal) == 3327533908) {
+var __t_tag_23 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_23) == 3327533908) {
 __t24 = 902936544
 goto end_branch_24
 } else {
@@ -1067,8 +1067,8 @@ goto end_branch_29
 }
 }
 {
-var __t_tag_25 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_25.IntVal) == 3327533908) {
+var __t_tag_25 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_25) == 3327533908) {
 __t29 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
 goto end_branch_29
 } else {
@@ -1076,12 +1076,12 @@ goto end_branch_29
 }
 }
 {
-var __t_tag_26 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(x_0.UnsafePtr).V0), UnsafePtr: nil}
+var __t_tag_26 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(x_0.UnsafePtr).V0
 var __t_and_28 bool = false
-if (uint32(__t_tag_26.IntVal) == 3631736139) {
+if (uint32(__t_tag_26) == 3631736139) {
 
-var __t_tag_27 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-__t_and_28 = (uint32(__t_tag_27.IntVal) == 3631736139)
+var __t_tag_27 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(y_1.UnsafePtr).V0
+__t_and_28 = (uint32(__t_tag_27) == 3631736139)
 }
 if __t_and_28 {
 __t29 = gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}
@@ -1122,12 +1122,12 @@ goto end_branch_59
 if ((x_0.Type == 9 && x_0.IntVal == 574232667)) && ((y_1.Type == 9 && y_1.IntVal == 574232667)) {
 var __t58 gopurs_runtime.Value
 {
-var __t_tag_31 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(x_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_31.IntVal) == 3908053364) {
+var __t_tag_31 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(x_0.UnsafePtr).V0
+if (uint32(__t_tag_31) == 3908053364) {
 var __t33 uint32
 {
-var __t_tag_32 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_32.IntVal) == 3908053364) {
+var __t_tag_32 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_32) == 3908053364) {
 __t33 = 902936544
 goto end_branch_33
 } else {
@@ -1145,8 +1145,8 @@ goto end_branch_58
 }
 }
 {
-var __t_tag_34 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_34.IntVal) == 3908053364) {
+var __t_tag_34 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_34) == 3908053364) {
 __t58 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
 goto end_branch_58
 } else {
@@ -1154,12 +1154,12 @@ goto end_branch_58
 }
 }
 {
-var __t_tag_35 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(x_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_35.IntVal) == 217821258) {
+var __t_tag_35 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(x_0.UnsafePtr).V0
+if (uint32(__t_tag_35) == 217821258) {
 var __t37 uint32
 {
-var __t_tag_36 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_36.IntVal) == 217821258) {
+var __t_tag_36 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_36) == 217821258) {
 __t37 = 902936544
 goto end_branch_37
 } else {
@@ -1177,8 +1177,8 @@ goto end_branch_58
 }
 }
 {
-var __t_tag_38 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_38.IntVal) == 217821258) {
+var __t_tag_38 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_38) == 217821258) {
 __t58 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
 goto end_branch_58
 } else {
@@ -1186,12 +1186,12 @@ goto end_branch_58
 }
 }
 {
-var __t_tag_39 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(x_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_39.IntVal) == 1292308612) {
+var __t_tag_39 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(x_0.UnsafePtr).V0
+if (uint32(__t_tag_39) == 1292308612) {
 var __t41 uint32
 {
-var __t_tag_40 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_40.IntVal) == 1292308612) {
+var __t_tag_40 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_40) == 1292308612) {
 __t41 = 902936544
 goto end_branch_41
 } else {
@@ -1209,8 +1209,8 @@ goto end_branch_58
 }
 }
 {
-var __t_tag_42 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_42.IntVal) == 1292308612) {
+var __t_tag_42 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_42) == 1292308612) {
 __t58 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
 goto end_branch_58
 } else {
@@ -1218,12 +1218,12 @@ goto end_branch_58
 }
 }
 {
-var __t_tag_43 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(x_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_43.IntVal) == 2311060696) {
+var __t_tag_43 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(x_0.UnsafePtr).V0
+if (uint32(__t_tag_43) == 2311060696) {
 var __t45 uint32
 {
-var __t_tag_44 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_44.IntVal) == 2311060696) {
+var __t_tag_44 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_44) == 2311060696) {
 __t45 = 902936544
 goto end_branch_45
 } else {
@@ -1241,8 +1241,8 @@ goto end_branch_58
 }
 }
 {
-var __t_tag_46 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_46.IntVal) == 2311060696) {
+var __t_tag_46 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_46) == 2311060696) {
 __t58 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
 goto end_branch_58
 } else {
@@ -1250,12 +1250,12 @@ goto end_branch_58
 }
 }
 {
-var __t_tag_47 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(x_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_47.IntVal) == 401302776) {
+var __t_tag_47 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(x_0.UnsafePtr).V0
+if (uint32(__t_tag_47) == 401302776) {
 var __t49 uint32
 {
-var __t_tag_48 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_48.IntVal) == 401302776) {
+var __t_tag_48 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_48) == 401302776) {
 __t49 = 902936544
 goto end_branch_49
 } else {
@@ -1273,8 +1273,8 @@ goto end_branch_58
 }
 }
 {
-var __t_tag_50 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_50.IntVal) == 401302776) {
+var __t_tag_50 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_50) == 401302776) {
 __t58 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
 goto end_branch_58
 } else {
@@ -1282,12 +1282,12 @@ goto end_branch_58
 }
 }
 {
-var __t_tag_51 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(x_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_51.IntVal) == 3327533908) {
+var __t_tag_51 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(x_0.UnsafePtr).V0
+if (uint32(__t_tag_51) == 3327533908) {
 var __t53 uint32
 {
-var __t_tag_52 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_52.IntVal) == 3327533908) {
+var __t_tag_52 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_52) == 3327533908) {
 __t53 = 902936544
 goto end_branch_53
 } else {
@@ -1305,8 +1305,8 @@ goto end_branch_58
 }
 }
 {
-var __t_tag_54 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_54.IntVal) == 3327533908) {
+var __t_tag_54 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0
+if (uint32(__t_tag_54) == 3327533908) {
 __t58 = gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}
 goto end_branch_58
 } else {
@@ -1314,12 +1314,12 @@ goto end_branch_58
 }
 }
 {
-var __t_tag_55 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(x_0.UnsafePtr).V0), UnsafePtr: nil}
+var __t_tag_55 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(x_0.UnsafePtr).V0
 var __t_and_57 bool = false
-if (uint32(__t_tag_55.IntVal) == 3631736139) {
+if (uint32(__t_tag_55) == 3631736139) {
 
-var __t_tag_56 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0), UnsafePtr: nil}
-__t_and_57 = (uint32(__t_tag_56.IntVal) == 3631736139)
+var __t_tag_56 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(y_1.UnsafePtr).V0
+__t_and_57 = (uint32(__t_tag_56) == 3631736139)
 }
 if __t_and_57 {
 __t58 = gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}
@@ -1473,8 +1473,8 @@ goto end_branch_16
 if (v_0.Type == 9 && v_0.IntVal == 3224543173) {
 var __t7 gopurs_runtime.Value
 {
-var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_0.IntVal) == 217821258) {
+var __t_tag_0 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0
+if (uint32(__t_tag_0) == 217821258) {
 __t7 = gopurs_runtime.Str("Component `Minute` contains negative value")
 goto end_branch_7
 } else {
@@ -1482,8 +1482,8 @@ goto end_branch_7
 }
 }
 {
-var __t_tag_1 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_1.IntVal) == 3908053364) {
+var __t_tag_1 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0
+if (uint32(__t_tag_1) == 3908053364) {
 __t7 = gopurs_runtime.Str("Component `Second` contains negative value")
 goto end_branch_7
 } else {
@@ -1491,8 +1491,8 @@ goto end_branch_7
 }
 }
 {
-var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_2.IntVal) == 1292308612) {
+var __t_tag_2 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0
+if (uint32(__t_tag_2) == 1292308612) {
 __t7 = gopurs_runtime.Str("Component `Hour` contains negative value")
 goto end_branch_7
 } else {
@@ -1500,8 +1500,8 @@ goto end_branch_7
 }
 }
 {
-var __t_tag_3 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_3.IntVal) == 2311060696) {
+var __t_tag_3 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0
+if (uint32(__t_tag_3) == 2311060696) {
 __t7 = gopurs_runtime.Str("Component `Day` contains negative value")
 goto end_branch_7
 } else {
@@ -1509,8 +1509,8 @@ goto end_branch_7
 }
 }
 {
-var __t_tag_4 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_4.IntVal) == 401302776) {
+var __t_tag_4 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0
+if (uint32(__t_tag_4) == 401302776) {
 __t7 = gopurs_runtime.Str("Component `Week` contains negative value")
 goto end_branch_7
 } else {
@@ -1518,8 +1518,8 @@ goto end_branch_7
 }
 }
 {
-var __t_tag_5 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_5.IntVal) == 3327533908) {
+var __t_tag_5 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0
+if (uint32(__t_tag_5) == 3327533908) {
 __t7 = gopurs_runtime.Str("Component `Month` contains negative value")
 goto end_branch_7
 } else {
@@ -1527,8 +1527,8 @@ goto end_branch_7
 }
 }
 {
-var __t_tag_6 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_6.IntVal) == 3631736139) {
+var __t_tag_6 uint32 = (*Constructor_Data_Interval_Duration_Iso_ContainsNegativeValue)(v_0.UnsafePtr).V0
+if (uint32(__t_tag_6) == 3631736139) {
 __t7 = gopurs_runtime.Str("Component `Year` contains negative value")
 goto end_branch_7
 } else {
@@ -1549,8 +1549,8 @@ goto end_branch_16
 if (v_0.Type == 9 && v_0.IntVal == 574232667) {
 var __t15 gopurs_runtime.Value
 {
-var __t_tag_8 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_8.IntVal) == 217821258) {
+var __t_tag_8 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0
+if (uint32(__t_tag_8) == 217821258) {
 __t15 = gopurs_runtime.Str("Invalid usage of Fractional value at component `Minute`")
 goto end_branch_15
 } else {
@@ -1558,8 +1558,8 @@ goto end_branch_15
 }
 }
 {
-var __t_tag_9 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_9.IntVal) == 3908053364) {
+var __t_tag_9 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0
+if (uint32(__t_tag_9) == 3908053364) {
 __t15 = gopurs_runtime.Str("Invalid usage of Fractional value at component `Second`")
 goto end_branch_15
 } else {
@@ -1567,8 +1567,8 @@ goto end_branch_15
 }
 }
 {
-var __t_tag_10 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_10.IntVal) == 1292308612) {
+var __t_tag_10 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0
+if (uint32(__t_tag_10) == 1292308612) {
 __t15 = gopurs_runtime.Str("Invalid usage of Fractional value at component `Hour`")
 goto end_branch_15
 } else {
@@ -1576,8 +1576,8 @@ goto end_branch_15
 }
 }
 {
-var __t_tag_11 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_11.IntVal) == 2311060696) {
+var __t_tag_11 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0
+if (uint32(__t_tag_11) == 2311060696) {
 __t15 = gopurs_runtime.Str("Invalid usage of Fractional value at component `Day`")
 goto end_branch_15
 } else {
@@ -1585,8 +1585,8 @@ goto end_branch_15
 }
 }
 {
-var __t_tag_12 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_12.IntVal) == 401302776) {
+var __t_tag_12 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0
+if (uint32(__t_tag_12) == 401302776) {
 __t15 = gopurs_runtime.Str("Invalid usage of Fractional value at component `Week`")
 goto end_branch_15
 } else {
@@ -1594,8 +1594,8 @@ goto end_branch_15
 }
 }
 {
-var __t_tag_13 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_13.IntVal) == 3327533908) {
+var __t_tag_13 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0
+if (uint32(__t_tag_13) == 3327533908) {
 __t15 = gopurs_runtime.Str("Invalid usage of Fractional value at component `Month`")
 goto end_branch_15
 } else {
@@ -1603,8 +1603,8 @@ goto end_branch_15
 }
 }
 {
-var __t_tag_14 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0), UnsafePtr: nil}
-if (uint32(__t_tag_14.IntVal) == 3631736139) {
+var __t_tag_14 uint32 = (*Constructor_Data_Interval_Duration_Iso_InvalidFractionalUse)(v_0.UnsafePtr).V0
+if (uint32(__t_tag_14) == 3631736139) {
 __t15 = gopurs_runtime.Str("Invalid usage of Fractional value at component `Year`")
 goto end_branch_15
 } else {

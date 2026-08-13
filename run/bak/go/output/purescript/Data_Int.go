@@ -332,12 +332,12 @@ var __t7 uint32
 {
 var __t6 bool
 {
-var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(x_0.IntVal)), UnsafePtr: nil}
-if (uint32(__t_tag_0.IntVal) == 2591059121) {
+var __t_tag_0 uint32 = uint32(x_0.IntVal)
+if (uint32(__t_tag_0) == 2591059121) {
 var __t2 bool
 {
-var __t_tag_1 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(y_1.IntVal)), UnsafePtr: nil}
-if (uint32(__t_tag_1.IntVal) == 2591059121) {
+var __t_tag_1 uint32 = uint32(y_1.IntVal)
+if (uint32(__t_tag_1) == 2591059121) {
 __t2 = true
 goto end_branch_2
 } else {
@@ -355,12 +355,12 @@ goto end_branch_6
 }
 }
 {
-var __t_tag_3 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(x_0.IntVal)), UnsafePtr: nil}
+var __t_tag_3 uint32 = uint32(x_0.IntVal)
 var __t_and_5 bool = false
-if (uint32(__t_tag_3.IntVal) == 658452902) {
+if (uint32(__t_tag_3) == 658452902) {
 
-var __t_tag_4 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(y_1.IntVal)), UnsafePtr: nil}
-__t_and_5 = (uint32(__t_tag_4.IntVal) == 658452902)
+var __t_tag_4 uint32 = uint32(y_1.IntVal)
+__t_and_5 = (uint32(__t_tag_4) == 658452902)
 }
 if __t_and_5 {
 __t6 = true

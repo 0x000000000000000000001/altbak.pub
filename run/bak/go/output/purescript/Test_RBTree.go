@@ -328,16 +328,16 @@ var __t84 *Constructor_Test_RBTree_T
 if (v1_1 != nil) {
 var __t71 *Constructor_Test_RBTree_T
 {
-var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((v1_1).V0), UnsafePtr: nil}
-if (uint32(__t_tag_0.IntVal) == 3668501016) {
+var __t_tag_0 uint32 = (v1_1).V0
+if (uint32(__t_tag_0) == 3668501016) {
 var __t58 *Constructor_Test_RBTree_T
 {
 var __t_tag_1 *Constructor_Test_RBTree_T = (v1_1).V1
 if (__t_tag_1 != nil) {
 var __t30 *Constructor_Test_RBTree_T
 {
-var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v1_1).V1).V0), UnsafePtr: nil}
-if (uint32(__t_tag_2.IntVal) == 3668501016) {
+var __t_tag_2 uint32 = ((v1_1).V1).V0
+if (uint32(__t_tag_2) == 3668501016) {
 __t30 = &Constructor_Test_RBTree_T{1, 3668501016, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, ((v1_1).V1).V1, ((v1_1).V1).V2, ((v1_1).V1).V3})}), (v1_1).V2, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, (v1_1).V3, v2_2, v3_3})})}
 goto end_branch_30
 } else {
@@ -349,8 +349,8 @@ var __t_tag_3 *Constructor_Test_RBTree_T = (v1_1).V3
 if (__t_tag_3 != nil) {
 var __t17 *Constructor_Test_RBTree_T
 {
-var __t_tag_4 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v1_1).V3).V0), UnsafePtr: nil}
-if (uint32(__t_tag_4.IntVal) == 3668501016) {
+var __t_tag_4 uint32 = ((v1_1).V3).V0
+if (uint32(__t_tag_4) == 3668501016) {
 __t17 = &Constructor_Test_RBTree_T{1, 3668501016, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, (v1_1).V1, (v1_1).V2, ((v1_1).V3).V1})}), ((v1_1).V3).V2, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, ((v1_1).V3).V3, v2_2, v3_3})})}
 goto end_branch_17
 } else {
@@ -361,8 +361,8 @@ goto end_branch_17
 var __t_and_6 bool = false
 if (v3_3 != nil) {
 
-var __t_tag_5 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((v3_3).V0), UnsafePtr: nil}
-__t_and_6 = (uint32(__t_tag_5.IntVal) == 3668501016)
+var __t_tag_5 uint32 = (v3_3).V0
+__t_and_6 = (uint32(__t_tag_5) == 3668501016)
 }
 if __t_and_6 {
 var __t16 *Constructor_Test_RBTree_T
@@ -371,8 +371,8 @@ var __t_tag_7 *Constructor_Test_RBTree_T = (v3_3).V1
 if (__t_tag_7 != nil) {
 var __t12 *Constructor_Test_RBTree_T
 {
-var __t_tag_8 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v3_3).V1).V0), UnsafePtr: nil}
-if (uint32(__t_tag_8.IntVal) == 3668501016) {
+var __t_tag_8 uint32 = ((v3_3).V1).V0
+if (uint32(__t_tag_8) == 3668501016) {
 __t12 = &Constructor_Test_RBTree_T{1, 3668501016, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, v1_1, v2_2, ((v3_3).V1).V1})}), ((v3_3).V1).V2, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, ((v3_3).V1).V3, (v3_3).V2, (v3_3).V3})})}
 goto end_branch_12
 } else {
@@ -384,8 +384,8 @@ var __t_tag_9 *Constructor_Test_RBTree_T = (v3_3).V3
 var __t_and_11 bool = false
 if (__t_tag_9 != nil) {
 
-var __t_tag_10 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v3_3).V3).V0), UnsafePtr: nil}
-__t_and_11 = (uint32(__t_tag_10.IntVal) == 3668501016)
+var __t_tag_10 uint32 = ((v3_3).V3).V0
+__t_and_11 = (uint32(__t_tag_10) == 3668501016)
 }
 if __t_and_11 {
 __t12 = &Constructor_Test_RBTree_T{1, 3668501016, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, v1_1, v2_2, (v3_3).V1})}), (v3_3).V2, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, ((v3_3).V3).V1, ((v3_3).V3).V2, ((v3_3).V3).V3})})}
@@ -409,8 +409,8 @@ var __t_tag_13 *Constructor_Test_RBTree_T = (v3_3).V3
 var __t_and_15 bool = false
 if (__t_tag_13 != nil) {
 
-var __t_tag_14 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v3_3).V3).V0), UnsafePtr: nil}
-__t_and_15 = (uint32(__t_tag_14.IntVal) == 3668501016)
+var __t_tag_14 uint32 = ((v3_3).V3).V0
+__t_and_15 = (uint32(__t_tag_14) == 3668501016)
 }
 if __t_and_15 {
 __t16 = &Constructor_Test_RBTree_T{1, 3668501016, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, v1_1, v2_2, (v3_3).V1})}), (v3_3).V2, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, ((v3_3).V3).V1, ((v3_3).V3).V2, ((v3_3).V3).V3})})}
@@ -443,8 +443,8 @@ goto end_branch_30
 var __t_and_19 bool = false
 if (v3_3 != nil) {
 
-var __t_tag_18 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((v3_3).V0), UnsafePtr: nil}
-__t_and_19 = (uint32(__t_tag_18.IntVal) == 3668501016)
+var __t_tag_18 uint32 = (v3_3).V0
+__t_and_19 = (uint32(__t_tag_18) == 3668501016)
 }
 if __t_and_19 {
 var __t29 *Constructor_Test_RBTree_T
@@ -453,8 +453,8 @@ var __t_tag_20 *Constructor_Test_RBTree_T = (v3_3).V1
 if (__t_tag_20 != nil) {
 var __t25 *Constructor_Test_RBTree_T
 {
-var __t_tag_21 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v3_3).V1).V0), UnsafePtr: nil}
-if (uint32(__t_tag_21.IntVal) == 3668501016) {
+var __t_tag_21 uint32 = ((v3_3).V1).V0
+if (uint32(__t_tag_21) == 3668501016) {
 __t25 = &Constructor_Test_RBTree_T{1, 3668501016, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, v1_1, v2_2, ((v3_3).V1).V1})}), ((v3_3).V1).V2, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, ((v3_3).V1).V3, (v3_3).V2, (v3_3).V3})})}
 goto end_branch_25
 } else {
@@ -466,8 +466,8 @@ var __t_tag_22 *Constructor_Test_RBTree_T = (v3_3).V3
 var __t_and_24 bool = false
 if (__t_tag_22 != nil) {
 
-var __t_tag_23 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v3_3).V3).V0), UnsafePtr: nil}
-__t_and_24 = (uint32(__t_tag_23.IntVal) == 3668501016)
+var __t_tag_23 uint32 = ((v3_3).V3).V0
+__t_and_24 = (uint32(__t_tag_23) == 3668501016)
 }
 if __t_and_24 {
 __t25 = &Constructor_Test_RBTree_T{1, 3668501016, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, v1_1, v2_2, (v3_3).V1})}), (v3_3).V2, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, ((v3_3).V3).V1, ((v3_3).V3).V2, ((v3_3).V3).V3})})}
@@ -491,8 +491,8 @@ var __t_tag_26 *Constructor_Test_RBTree_T = (v3_3).V3
 var __t_and_28 bool = false
 if (__t_tag_26 != nil) {
 
-var __t_tag_27 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v3_3).V3).V0), UnsafePtr: nil}
-__t_and_28 = (uint32(__t_tag_27.IntVal) == 3668501016)
+var __t_tag_27 uint32 = ((v3_3).V3).V0
+__t_and_28 = (uint32(__t_tag_27) == 3668501016)
 }
 if __t_and_28 {
 __t29 = &Constructor_Test_RBTree_T{1, 3668501016, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, v1_1, v2_2, (v3_3).V1})}), (v3_3).V2, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, ((v3_3).V3).V1, ((v3_3).V3).V2, ((v3_3).V3).V3})})}
@@ -526,8 +526,8 @@ var __t_tag_31 *Constructor_Test_RBTree_T = (v1_1).V3
 if (__t_tag_31 != nil) {
 var __t45 *Constructor_Test_RBTree_T
 {
-var __t_tag_32 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v1_1).V3).V0), UnsafePtr: nil}
-if (uint32(__t_tag_32.IntVal) == 3668501016) {
+var __t_tag_32 uint32 = ((v1_1).V3).V0
+if (uint32(__t_tag_32) == 3668501016) {
 __t45 = &Constructor_Test_RBTree_T{1, 3668501016, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, (v1_1).V1, (v1_1).V2, ((v1_1).V3).V1})}), ((v1_1).V3).V2, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, ((v1_1).V3).V3, v2_2, v3_3})})}
 goto end_branch_45
 } else {
@@ -538,8 +538,8 @@ goto end_branch_45
 var __t_and_34 bool = false
 if (v3_3 != nil) {
 
-var __t_tag_33 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((v3_3).V0), UnsafePtr: nil}
-__t_and_34 = (uint32(__t_tag_33.IntVal) == 3668501016)
+var __t_tag_33 uint32 = (v3_3).V0
+__t_and_34 = (uint32(__t_tag_33) == 3668501016)
 }
 if __t_and_34 {
 var __t44 *Constructor_Test_RBTree_T
@@ -548,8 +548,8 @@ var __t_tag_35 *Constructor_Test_RBTree_T = (v3_3).V1
 if (__t_tag_35 != nil) {
 var __t40 *Constructor_Test_RBTree_T
 {
-var __t_tag_36 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v3_3).V1).V0), UnsafePtr: nil}
-if (uint32(__t_tag_36.IntVal) == 3668501016) {
+var __t_tag_36 uint32 = ((v3_3).V1).V0
+if (uint32(__t_tag_36) == 3668501016) {
 __t40 = &Constructor_Test_RBTree_T{1, 3668501016, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, v1_1, v2_2, ((v3_3).V1).V1})}), ((v3_3).V1).V2, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, ((v3_3).V1).V3, (v3_3).V2, (v3_3).V3})})}
 goto end_branch_40
 } else {
@@ -561,8 +561,8 @@ var __t_tag_37 *Constructor_Test_RBTree_T = (v3_3).V3
 var __t_and_39 bool = false
 if (__t_tag_37 != nil) {
 
-var __t_tag_38 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v3_3).V3).V0), UnsafePtr: nil}
-__t_and_39 = (uint32(__t_tag_38.IntVal) == 3668501016)
+var __t_tag_38 uint32 = ((v3_3).V3).V0
+__t_and_39 = (uint32(__t_tag_38) == 3668501016)
 }
 if __t_and_39 {
 __t40 = &Constructor_Test_RBTree_T{1, 3668501016, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, v1_1, v2_2, (v3_3).V1})}), (v3_3).V2, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, ((v3_3).V3).V1, ((v3_3).V3).V2, ((v3_3).V3).V3})})}
@@ -586,8 +586,8 @@ var __t_tag_41 *Constructor_Test_RBTree_T = (v3_3).V3
 var __t_and_43 bool = false
 if (__t_tag_41 != nil) {
 
-var __t_tag_42 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v3_3).V3).V0), UnsafePtr: nil}
-__t_and_43 = (uint32(__t_tag_42.IntVal) == 3668501016)
+var __t_tag_42 uint32 = ((v3_3).V3).V0
+__t_and_43 = (uint32(__t_tag_42) == 3668501016)
 }
 if __t_and_43 {
 __t44 = &Constructor_Test_RBTree_T{1, 3668501016, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, v1_1, v2_2, (v3_3).V1})}), (v3_3).V2, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, ((v3_3).V3).V1, ((v3_3).V3).V2, ((v3_3).V3).V3})})}
@@ -620,8 +620,8 @@ goto end_branch_58
 var __t_and_47 bool = false
 if (v3_3 != nil) {
 
-var __t_tag_46 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((v3_3).V0), UnsafePtr: nil}
-__t_and_47 = (uint32(__t_tag_46.IntVal) == 3668501016)
+var __t_tag_46 uint32 = (v3_3).V0
+__t_and_47 = (uint32(__t_tag_46) == 3668501016)
 }
 if __t_and_47 {
 var __t57 *Constructor_Test_RBTree_T
@@ -630,8 +630,8 @@ var __t_tag_48 *Constructor_Test_RBTree_T = (v3_3).V1
 if (__t_tag_48 != nil) {
 var __t53 *Constructor_Test_RBTree_T
 {
-var __t_tag_49 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v3_3).V1).V0), UnsafePtr: nil}
-if (uint32(__t_tag_49.IntVal) == 3668501016) {
+var __t_tag_49 uint32 = ((v3_3).V1).V0
+if (uint32(__t_tag_49) == 3668501016) {
 __t53 = &Constructor_Test_RBTree_T{1, 3668501016, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, v1_1, v2_2, ((v3_3).V1).V1})}), ((v3_3).V1).V2, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, ((v3_3).V1).V3, (v3_3).V2, (v3_3).V3})})}
 goto end_branch_53
 } else {
@@ -643,8 +643,8 @@ var __t_tag_50 *Constructor_Test_RBTree_T = (v3_3).V3
 var __t_and_52 bool = false
 if (__t_tag_50 != nil) {
 
-var __t_tag_51 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v3_3).V3).V0), UnsafePtr: nil}
-__t_and_52 = (uint32(__t_tag_51.IntVal) == 3668501016)
+var __t_tag_51 uint32 = ((v3_3).V3).V0
+__t_and_52 = (uint32(__t_tag_51) == 3668501016)
 }
 if __t_and_52 {
 __t53 = &Constructor_Test_RBTree_T{1, 3668501016, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, v1_1, v2_2, (v3_3).V1})}), (v3_3).V2, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, ((v3_3).V3).V1, ((v3_3).V3).V2, ((v3_3).V3).V3})})}
@@ -668,8 +668,8 @@ var __t_tag_54 *Constructor_Test_RBTree_T = (v3_3).V3
 var __t_and_56 bool = false
 if (__t_tag_54 != nil) {
 
-var __t_tag_55 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v3_3).V3).V0), UnsafePtr: nil}
-__t_and_56 = (uint32(__t_tag_55.IntVal) == 3668501016)
+var __t_tag_55 uint32 = ((v3_3).V3).V0
+__t_and_56 = (uint32(__t_tag_55) == 3668501016)
 }
 if __t_and_56 {
 __t57 = &Constructor_Test_RBTree_T{1, 3668501016, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, v1_1, v2_2, (v3_3).V1})}), (v3_3).V2, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, ((v3_3).V3).V1, ((v3_3).V3).V2, ((v3_3).V3).V3})})}
@@ -702,8 +702,8 @@ goto end_branch_71
 var __t_and_60 bool = false
 if (v3_3 != nil) {
 
-var __t_tag_59 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((v3_3).V0), UnsafePtr: nil}
-__t_and_60 = (uint32(__t_tag_59.IntVal) == 3668501016)
+var __t_tag_59 uint32 = (v3_3).V0
+__t_and_60 = (uint32(__t_tag_59) == 3668501016)
 }
 if __t_and_60 {
 var __t70 *Constructor_Test_RBTree_T
@@ -712,8 +712,8 @@ var __t_tag_61 *Constructor_Test_RBTree_T = (v3_3).V1
 if (__t_tag_61 != nil) {
 var __t66 *Constructor_Test_RBTree_T
 {
-var __t_tag_62 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v3_3).V1).V0), UnsafePtr: nil}
-if (uint32(__t_tag_62.IntVal) == 3668501016) {
+var __t_tag_62 uint32 = ((v3_3).V1).V0
+if (uint32(__t_tag_62) == 3668501016) {
 __t66 = &Constructor_Test_RBTree_T{1, 3668501016, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, v1_1, v2_2, ((v3_3).V1).V1})}), ((v3_3).V1).V2, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, ((v3_3).V1).V3, (v3_3).V2, (v3_3).V3})})}
 goto end_branch_66
 } else {
@@ -725,8 +725,8 @@ var __t_tag_63 *Constructor_Test_RBTree_T = (v3_3).V3
 var __t_and_65 bool = false
 if (__t_tag_63 != nil) {
 
-var __t_tag_64 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v3_3).V3).V0), UnsafePtr: nil}
-__t_and_65 = (uint32(__t_tag_64.IntVal) == 3668501016)
+var __t_tag_64 uint32 = ((v3_3).V3).V0
+__t_and_65 = (uint32(__t_tag_64) == 3668501016)
 }
 if __t_and_65 {
 __t66 = &Constructor_Test_RBTree_T{1, 3668501016, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, v1_1, v2_2, (v3_3).V1})}), (v3_3).V2, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, ((v3_3).V3).V1, ((v3_3).V3).V2, ((v3_3).V3).V3})})}
@@ -750,8 +750,8 @@ var __t_tag_67 *Constructor_Test_RBTree_T = (v3_3).V3
 var __t_and_69 bool = false
 if (__t_tag_67 != nil) {
 
-var __t_tag_68 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v3_3).V3).V0), UnsafePtr: nil}
-__t_and_69 = (uint32(__t_tag_68.IntVal) == 3668501016)
+var __t_tag_68 uint32 = ((v3_3).V3).V0
+__t_and_69 = (uint32(__t_tag_68) == 3668501016)
 }
 if __t_and_69 {
 __t70 = &Constructor_Test_RBTree_T{1, 3668501016, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, v1_1, v2_2, (v3_3).V1})}), (v3_3).V2, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, ((v3_3).V3).V1, ((v3_3).V3).V2, ((v3_3).V3).V3})})}
@@ -784,8 +784,8 @@ goto end_branch_84
 var __t_and_73 bool = false
 if (v3_3 != nil) {
 
-var __t_tag_72 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((v3_3).V0), UnsafePtr: nil}
-__t_and_73 = (uint32(__t_tag_72.IntVal) == 3668501016)
+var __t_tag_72 uint32 = (v3_3).V0
+__t_and_73 = (uint32(__t_tag_72) == 3668501016)
 }
 if __t_and_73 {
 var __t83 *Constructor_Test_RBTree_T
@@ -794,8 +794,8 @@ var __t_tag_74 *Constructor_Test_RBTree_T = (v3_3).V1
 if (__t_tag_74 != nil) {
 var __t79 *Constructor_Test_RBTree_T
 {
-var __t_tag_75 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v3_3).V1).V0), UnsafePtr: nil}
-if (uint32(__t_tag_75.IntVal) == 3668501016) {
+var __t_tag_75 uint32 = ((v3_3).V1).V0
+if (uint32(__t_tag_75) == 3668501016) {
 __t79 = &Constructor_Test_RBTree_T{1, 3668501016, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, v1_1, v2_2, ((v3_3).V1).V1})}), ((v3_3).V1).V2, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, ((v3_3).V1).V3, (v3_3).V2, (v3_3).V3})})}
 goto end_branch_79
 } else {
@@ -807,8 +807,8 @@ var __t_tag_76 *Constructor_Test_RBTree_T = (v3_3).V3
 var __t_and_78 bool = false
 if (__t_tag_76 != nil) {
 
-var __t_tag_77 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v3_3).V3).V0), UnsafePtr: nil}
-__t_and_78 = (uint32(__t_tag_77.IntVal) == 3668501016)
+var __t_tag_77 uint32 = ((v3_3).V3).V0
+__t_and_78 = (uint32(__t_tag_77) == 3668501016)
 }
 if __t_and_78 {
 __t79 = &Constructor_Test_RBTree_T{1, 3668501016, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, v1_1, v2_2, (v3_3).V1})}), (v3_3).V2, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, ((v3_3).V3).V1, ((v3_3).V3).V2, ((v3_3).V3).V3})})}
@@ -832,8 +832,8 @@ var __t_tag_80 *Constructor_Test_RBTree_T = (v3_3).V3
 var __t_and_82 bool = false
 if (__t_tag_80 != nil) {
 
-var __t_tag_81 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(((v3_3).V3).V0), UnsafePtr: nil}
-__t_and_82 = (uint32(__t_tag_81.IntVal) == 3668501016)
+var __t_tag_81 uint32 = ((v3_3).V3).V0
+__t_and_82 = (uint32(__t_tag_81) == 3668501016)
 }
 if __t_and_82 {
 __t83 = &Constructor_Test_RBTree_T{1, 3668501016, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, v1_1, v2_2, (v3_3).V1})}), (v3_3).V2, gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, ((v3_3).V3).V1, ((v3_3).V3).V2, ((v3_3).V3).V3})})}
