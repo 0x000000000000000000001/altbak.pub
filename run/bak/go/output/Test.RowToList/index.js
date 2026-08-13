@@ -1,0 +1,50 @@
+import * as Bench from "../Bench/index.js";
+import * as Data_Show from "../Data.Show/index.js";
+import * as Effect_Console from "../Effect.Console/index.js";
+import * as Type_Proxy from "../Type.Proxy/index.js";
+var keysNil = {
+    keysImpl: function (v) {
+        return 0;
+    }
+};
+var keysImpl = function (dict) {
+    return dict.keysImpl;
+};
+var keysCons = function (dictRecordKeys) {
+    return {
+        keysImpl: function (v) {
+            return 1 + keysImpl(dictRecordKeys)(Type_Proxy["Proxy"].value) | 0;
+        }
+    };
+};
+var keysCons1 = /* #__PURE__ */ keysCons(/* #__PURE__ */ keysCons(/* #__PURE__ */ keysCons(/* #__PURE__ */ keysCons(/* #__PURE__ */ keysCons(keysNil)))));
+
+// | @inline always
+var keys = function () {
+    return function (dictRecordKeys) {
+        return function (v) {
+            return keysImpl(dictRecordKeys)(Type_Proxy["Proxy"].value);
+        };
+    };
+};
+var describe = /* #__PURE__ */ Effect_Console.log("RowToList (Keys Count):");
+var act = function __do() {
+    Bench.opaque(10000)();
+    var rec = {
+        a: 1,
+        b: "two",
+        c: true,
+        d: 4.0,
+        e: "five"
+    };
+    return Effect_Console.logShow(Data_Show.showInt)(keys()(keysCons1)(rec))();
+};
+export {
+    keysImpl,
+    keys,
+    describe,
+    act,
+    keysNil,
+    keysCons
+};
+//# sourceMappingURL=index.js.map

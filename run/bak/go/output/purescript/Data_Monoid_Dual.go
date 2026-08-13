@@ -181,7 +181,9 @@ return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value 
 return gopurs_runtime.Apply(v_1, v1_2)
 })
 }))
-}), Get_Data_Monoid_Dual_Dual())
+}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_0
+}))
 	})
 	return cache_Data_Monoid_Dual_applicativeDual
 }
@@ -203,7 +205,9 @@ return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value 
 return gopurs_runtime.Apply(v_2, v1_3)
 })
 }))
-}), Get_Data_Monoid_Dual_Dual())
+}), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+}))
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -243,7 +247,9 @@ return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value 
 return gopurs_runtime.Apply(v_1, v1_2)
 })
 }))
-}), Get_Data_Monoid_Dual_Dual())
+}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_0
+}))
 	})
 	return cache_Data_Monoid_Dual_applicativeDual__4045440648
 }

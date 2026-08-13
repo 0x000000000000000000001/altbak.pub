@@ -88,7 +88,9 @@ var once_Control_Monad_Identity_Trans_monadTransIdentityT sync.Once
 func Get_Control_Monad_Identity_Trans_monadTransIdentityT() gopurs_runtime.Value {
 	once_Control_Monad_Identity_Trans_monadTransIdentityT.Do(func() {
 		cache_Control_Monad_Identity_Trans_monadTransIdentityT = gopurs_runtime.RecordDict1("lift", gopurs_runtime.Func(func(dictMonad_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Control_Monad_Identity_Trans_IdentityT()
+return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
+})
 }))
 	})
 	return cache_Control_Monad_Identity_Trans_monadTransIdentityT

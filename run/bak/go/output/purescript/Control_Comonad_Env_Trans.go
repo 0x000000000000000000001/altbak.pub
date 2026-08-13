@@ -353,7 +353,9 @@ return functorEnvT1_1_0
 Functor0_4_4 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_3, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
 _ = Functor0_4_4
 return gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_4_4.V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Functor_functorFn(), "map"), Get_Control_Comonad_Env_Trans_EnvT(), gopurs_runtime.Apply(Get_Data_Tuple_Tuple(), (*Constructor_Data_Tuple_Tuple)(v_5.UnsafePtr).V0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictTraversable_0, "sequence"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](dictApplicative_3))}, (*Constructor_Data_Tuple_Tuple)(v_5.UnsafePtr).V1))
+return gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_4_4.V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Functor_functorFn(), "map"), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_6
+}), gopurs_runtime.Apply(Get_Data_Tuple_Tuple(), (*Constructor_Data_Tuple_Tuple)(v_5.UnsafePtr).V0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictTraversable_0, "sequence"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](dictApplicative_3))}, (*Constructor_Data_Tuple_Tuple)(v_5.UnsafePtr).V1))
 })
 }), gopurs_runtime.Func(func(dictApplicative_3 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): Functor0_4_5 -> *Constructor_Data_Functor_Functor
@@ -361,7 +363,9 @@ Functor0_4_5 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](
 _ = Functor0_4_5
 return gopurs_runtime.Func(func(f_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_4_5.V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Functor_functorFn(), "map"), Get_Control_Comonad_Env_Trans_EnvT(), gopurs_runtime.Apply(Get_Data_Tuple_Tuple(), (*Constructor_Data_Tuple_Tuple)(v_6.UnsafePtr).V0)), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictTraversable_0, "traverse"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](dictApplicative_3))}, f_5, (*Constructor_Data_Tuple_Tuple)(v_6.UnsafePtr).V1))
+return gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_4_5.V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Functor_functorFn(), "map"), gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_7
+}), gopurs_runtime.Apply(Get_Data_Tuple_Tuple(), (*Constructor_Data_Tuple_Tuple)(v_6.UnsafePtr).V0)), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictTraversable_0, "traverse"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](dictApplicative_3))}, f_5, (*Constructor_Data_Tuple_Tuple)(v_6.UnsafePtr).V1))
 })
 })
 }))
@@ -489,7 +493,9 @@ return functorEnvT1_4_10
 Functor0_7_14 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_6, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
 _ = Functor0_7_14
 return gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_7_14.V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Functor_functorFn(), "map"), Get_Control_Comonad_Env_Trans_EnvT(), gopurs_runtime.Apply(Get_Data_Tuple_Tuple(), (*Constructor_Data_Tuple_Tuple)(v_8.UnsafePtr).V0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_9, "sequence"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](dictApplicative_6))}, (*Constructor_Data_Tuple_Tuple)(v_8.UnsafePtr).V1))
+return gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_7_14.V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Functor_functorFn(), "map"), gopurs_runtime.Func(func(x_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_9
+}), gopurs_runtime.Apply(Get_Data_Tuple_Tuple(), (*Constructor_Data_Tuple_Tuple)(v_8.UnsafePtr).V0)), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_9, "sequence"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](dictApplicative_6))}, (*Constructor_Data_Tuple_Tuple)(v_8.UnsafePtr).V1))
 })
 }), gopurs_runtime.Func(func(dictApplicative_6 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): Functor0_7_15 -> *Constructor_Data_Functor_Functor
@@ -497,7 +503,9 @@ Functor0_7_15 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor]
 _ = Functor0_7_15
 return gopurs_runtime.Func(func(f_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_7_15.V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Functor_functorFn(), "map"), Get_Control_Comonad_Env_Trans_EnvT(), gopurs_runtime.Apply(Get_Data_Tuple_Tuple(), (*Constructor_Data_Tuple_Tuple)(v_9.UnsafePtr).V0)), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_3_9, "traverse"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](dictApplicative_6))}, f_8, (*Constructor_Data_Tuple_Tuple)(v_9.UnsafePtr).V1))
+return gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_7_15.V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Functor_functorFn(), "map"), gopurs_runtime.Func(func(x_10 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_10
+}), gopurs_runtime.Apply(Get_Data_Tuple_Tuple(), (*Constructor_Data_Tuple_Tuple)(v_9.UnsafePtr).V0)), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_3_9, "traverse"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](dictApplicative_6))}, f_8, (*Constructor_Data_Tuple_Tuple)(v_9.UnsafePtr).V1))
 })
 })
 }))
@@ -514,7 +522,9 @@ Functor0_5_16 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor]
 _ = Functor0_5_16
 return gopurs_runtime.Func(func(f_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_5_16.V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Functor_functorFn(), "map"), Get_Control_Comonad_Env_Trans_EnvT(), gopurs_runtime.Apply(Get_Data_Tuple_Tuple(), (*Constructor_Data_Tuple_Tuple)(v_7.UnsafePtr).V0)), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictTraversableWithIndex_0, "traverseWithIndex"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](dictApplicative_4))}, f_6, (*Constructor_Data_Tuple_Tuple)(v_7.UnsafePtr).V1))
+return gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_5_16.V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Functor_functorFn(), "map"), gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_8
+}), gopurs_runtime.Apply(Get_Data_Tuple_Tuple(), (*Constructor_Data_Tuple_Tuple)(v_7.UnsafePtr).V0)), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictTraversableWithIndex_0, "traverseWithIndex"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](dictApplicative_4))}, f_6, (*Constructor_Data_Tuple_Tuple)(v_7.UnsafePtr).V1))
 })
 })
 }))

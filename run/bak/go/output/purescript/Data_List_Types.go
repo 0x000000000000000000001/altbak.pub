@@ -7574,7 +7574,9 @@ Functor0_1_122 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor
 _ = Functor0_1_122
 return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_1_122.V0), Get_Data_List_Types_NonEmptyList(), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_Data_NonEmpty_traversableWithIndexNonEmpty(), gopurs_runtime.RecordDict4("FoldableWithIndex1", "FunctorWithIndex0", "Traversable2", "traverseWithIndex", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_1_122.V0), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_4
+}), gopurs_runtime.Apply3(gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_Data_NonEmpty_traversableWithIndexNonEmpty(), gopurs_runtime.RecordDict4("FoldableWithIndex1", "FunctorWithIndex0", "Traversable2", "traverseWithIndex", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict4("Foldable0", "foldMapWithIndex", "foldlWithIndex", "foldrWithIndex", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict3("foldMap", "foldl", "foldr", gopurs_runtime.Func(func(dictMonoid_6 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): Semigroup0_7_123 -> *Constructor_Data_Semigroup_Semigroup

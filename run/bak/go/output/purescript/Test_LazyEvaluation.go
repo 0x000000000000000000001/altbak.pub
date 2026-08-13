@@ -49,7 +49,9 @@ var cache_Test_LazyEvaluation_go__defer gopurs_runtime.Value
 var once_Test_LazyEvaluation_go__defer sync.Once
 func Get_Test_LazyEvaluation_go__defer() gopurs_runtime.Value {
 	once_Test_LazyEvaluation_go__defer.Do(func() {
-		cache_Test_LazyEvaluation_go__defer = Get_Test_LazyEvaluation_Lazy()
+		cache_Test_LazyEvaluation_go__defer = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Test_LazyEvaluation_go__defer(x_0_box)
+})
 	})
 	return cache_Test_LazyEvaluation_go__defer
 }
@@ -98,7 +100,9 @@ var cache_Test_LazyEvaluation_defer__3520065601 gopurs_runtime.Value
 var once_Test_LazyEvaluation_defer__3520065601 sync.Once
 func Get_Test_LazyEvaluation_defer__3520065601() gopurs_runtime.Value {
 	once_Test_LazyEvaluation_defer__3520065601.Do(func() {
-		cache_Test_LazyEvaluation_defer__3520065601 = Get_Test_LazyEvaluation_Lazy()
+		cache_Test_LazyEvaluation_defer__3520065601 = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Test_LazyEvaluation_defer__3520065601(x_0_box)
+})
 	})
 	return cache_Test_LazyEvaluation_defer__3520065601
 }
@@ -107,7 +111,9 @@ var cache_Test_LazyEvaluation_defer__3363737377 gopurs_runtime.Value
 var once_Test_LazyEvaluation_defer__3363737377 sync.Once
 func Get_Test_LazyEvaluation_defer__3363737377() gopurs_runtime.Value {
 	once_Test_LazyEvaluation_defer__3363737377.Do(func() {
-		cache_Test_LazyEvaluation_defer__3363737377 = Get_Test_LazyEvaluation_Lazy()
+		cache_Test_LazyEvaluation_defer__3363737377 = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Test_LazyEvaluation_defer__3363737377(x_0_box)
+})
 	})
 	return cache_Test_LazyEvaluation_defer__3363737377
 }
@@ -146,6 +152,12 @@ _ = v_0
 return gopurs_runtime.Apply(v_0, Get_Data_Unit_unit())
 }
 
+func Call_Test_LazyEvaluation_go__defer(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0
+}
+
 func Call_Test_LazyEvaluation_buildThunks(v_0_loop int64, v1_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 buildThunks:
 for {
@@ -165,7 +177,7 @@ goto end_branch_0
 }
 {
 v_0_loop = (v_0) - (1)
-v1_1_loop = gopurs_runtime.Apply(Get_Test_LazyEvaluation_defer__3520065601(), gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+v1_1_loop = Call_Test_LazyEvaluation_defer__3520065601(gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Int((Call_Test_LazyEvaluation_force__3902501304(v1_1)) + (1))
 }))
 continue buildThunks
@@ -195,7 +207,7 @@ goto end_branch_0
 }
 {
 v_0_loop = (v_0) - (1)
-v1_1_loop = (v1_1) + (Call_Test_LazyEvaluation_force__3902501304(Call_Test_LazyEvaluation_buildThunks(1000, gopurs_runtime.Apply(Get_Test_LazyEvaluation_defer__3520065601(), gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
+v1_1_loop = (v1_1) + (Call_Test_LazyEvaluation_force__3902501304(Call_Test_LazyEvaluation_buildThunks(1000, Call_Test_LazyEvaluation_defer__3520065601(gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Int(0)
 })))))
 continue runManyTimes
@@ -204,6 +216,18 @@ __t0 = gopurs_runtime.Value{}.IntVal
 end_branch_0:
 return __t0
 }
+}
+
+func Call_Test_LazyEvaluation_defer__3520065601(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0
+}
+
+func Call_Test_LazyEvaluation_defer__3363737377(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var x_0 gopurs_runtime.Value = x_0_loop
+_ = x_0
+return x_0
 }
 
 func Call_Test_LazyEvaluation_force__3902501304(v_0_loop gopurs_runtime.Value) int64 {

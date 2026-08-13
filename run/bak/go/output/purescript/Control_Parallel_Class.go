@@ -662,7 +662,9 @@ return gopurs_runtime.RecordDict4("Apply0", "Apply1", "parallel", "sequential", 
 return applyContT_1_0
 }), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return Call_Control_Parallel_Class_applyParCont(dictMonadEffect_0)
-}), Get_Control_Parallel_Class_ParCont(), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+}), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_2
+}), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return v_2
 }))
 }

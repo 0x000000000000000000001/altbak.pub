@@ -171,7 +171,9 @@ var cache_Data_Set_fromMap gopurs_runtime.Value
 var once_Data_Set_fromMap sync.Once
 func Get_Data_Set_fromMap() gopurs_runtime.Value {
 	once_Data_Set_fromMap.Do(func() {
-		cache_Data_Set_fromMap = Get_Data_Set_Set()
+		cache_Data_Set_fromMap = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(Call_Data_Set_fromMap(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](x_0_box)))}
+})
 	})
 	return cache_Data_Set_fromMap
 }
@@ -1000,7 +1002,9 @@ var cache_Data_Set_fromMap__556171355 gopurs_runtime.Value
 var once_Data_Set_fromMap__556171355 sync.Once
 func Get_Data_Set_fromMap__556171355() gopurs_runtime.Value {
 	once_Data_Set_fromMap__556171355.Do(func() {
-		cache_Data_Set_fromMap__556171355 = Get_Data_Set_Set()
+		cache_Data_Set_fromMap__556171355 = gopurs_runtime.Func(func(x_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(Call_Data_Set_fromMap__556171355(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](x_0_box)))}
+})
 	})
 	return cache_Data_Set_fromMap__556171355
 }
@@ -1549,6 +1553,12 @@ _ = v_2
 return gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](gopurs_runtime.Apply4(Get_Data_Map_Internal_insert(), gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(dictOrd_0)}, a_1, Get_Data_Unit_unit(), gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(v_2)}))
 }
 
+func Call_Data_Set_fromMap(x_0_loop *Constructor_Data_Map_Internal_Node) *Constructor_Data_Map_Internal_Node {
+var x_0 *Constructor_Data_Map_Internal_Node = x_0_loop
+_ = x_0
+return x_0
+}
+
 func Call_Data_Set_findMin(v_0_loop *Constructor_Data_Map_Internal_Node) *Constructor_Data_Maybe_Just {
 var v_0 *Constructor_Data_Map_Internal_Node = v_0_loop
 _ = v_0
@@ -2033,6 +2043,12 @@ _ = v_0
 return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Maybe_functorMaybe(), "map"), gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordGet(v1_1, "key")
 }), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(Get_Data_Map_Internal_findMin(), gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(v_0)})))}))
+}
+
+func Call_Data_Set_fromMap__556171355(x_0_loop *Constructor_Data_Map_Internal_Node) *Constructor_Data_Map_Internal_Node {
+var x_0 *Constructor_Data_Map_Internal_Node = x_0_loop
+_ = x_0
+return x_0
 }
 
 func Call_Data_Set_insert__4217907800(dictOrd_0_loop *Constructor_Data_Ord_Ord, a_1_loop gopurs_runtime.Value, v_2_loop *Constructor_Data_Map_Internal_Node) *Constructor_Data_Map_Internal_Node {

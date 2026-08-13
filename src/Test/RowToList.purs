@@ -25,6 +25,6 @@ describe = log "RowToList (Keys Count):"
 
 act :: Effect Unit
 act = do
-  dummy <- Bench.opaque 10000
+  _ <- Bench.opaque 10000
   let rec = { a: 1, b: "two", c: true, d: 4.0, e: "five" }
   logShow (keys rec)
