@@ -374,7 +374,7 @@ return gopurs_runtime.Box(dict_0.V0)
 func Call_Data_Show_Generic_genericShow_prime__1538939821(a_0_loop gopurs_runtime.Value) string {
 var a_0 gopurs_runtime.Value = a_0_loop
 _ = a_0
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Show_Generic_genericShowNoConstructors(), "genericShow'"), a_0).StrVal()
+return gopurs_runtime.Apply(Get_Data_Show_Generic_genericShow_prime__1538939821(), a_0).StrVal()
 }
 
 func Call_Data_Show_Generic_genericShowArgs__157062380(dict_0_loop *Constructor_Data_Show_Generic_GenericShowArgs) gopurs_runtime.Value {

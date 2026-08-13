@@ -232,20 +232,39 @@ mempty_1_1_0 := gopurs_runtime.Box(dictMonoidish_0.V1).IntVal
 _ = mempty_1_1_0
 return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t1 int64
+var __t4 int64
 {
 if (v_2.IntVal) == (0) {
-__t1 = v1_3.IntVal
-goto end_branch_1
+__t4 = v1_3.IntVal
+goto end_branch_4
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Apply2(Call_TestDPE_polyLoop(gopurs_runtime.CoerceToStruct[Constructor_TestDPE_Monoidish](gopurs_runtime.Value{Type: 9, IntVal: 2768669742, UnsafePtr: unsafe.Pointer(dictMonoidish_0)})), gopurs_runtime.Int((v_2.IntVal) - (1)), gopurs_runtime.Int(gopurs_runtime.Apply2(gopurs_runtime.Box(dictMonoidish_0.V0), gopurs_runtime.Int(v1_3.IntVal), gopurs_runtime.Int(mempty_1_1_0)).IntVal)).IntVal
+// TAST (Let): __local_var_4_1 -> int64
+__local_var_4_1 := (v_2.IntVal) - (1)
+_ = __local_var_4_1
+// TAST (Let): __local_var_5_2 -> int64
+__local_var_5_2 := gopurs_runtime.Apply2(gopurs_runtime.Box(dictMonoidish_0.V0), gopurs_runtime.Int(v1_3.IntVal), gopurs_runtime.Int(mempty_1_1_0)).IntVal
+_ = __local_var_5_2
+var __t3 gopurs_runtime.Value
+{
+if (__local_var_4_1) == (0) {
+__t3 = gopurs_runtime.Int(__local_var_5_2)
+goto end_branch_3
+} else {
+
 }
-end_branch_1:
-return gopurs_runtime.Int(__t1)
+}
+{
+__t3 = gopurs_runtime.Apply2(Call_TestDPE_polyLoop(gopurs_runtime.CoerceToStruct[Constructor_TestDPE_Monoidish](gopurs_runtime.Value{Type: 9, IntVal: 2768669742, UnsafePtr: unsafe.Pointer(dictMonoidish_0)})), gopurs_runtime.Int((__local_var_4_1) - (1)), gopurs_runtime.Apply2(gopurs_runtime.Box(dictMonoidish_0.V0), gopurs_runtime.Int(__local_var_5_2), gopurs_runtime.Box(dictMonoidish_0.V1)))
+}
+end_branch_3:
+__t4 = __t3.IntVal
+}
+end_branch_4:
+return gopurs_runtime.Int(__t4)
 })
 })
 }
@@ -255,20 +274,46 @@ var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
 _ = __eta0_0
 var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
 _ = __eta1_1
-var __t0 int64
+var __t4 int64
 {
 if (__eta0_0.IntVal) == (0) {
-__t0 = __eta1_1.IntVal
-goto end_branch_0
+__t4 = __eta1_1.IntVal
+goto end_branch_4
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Apply2(Call_TestDPE_polyLoop(gopurs_runtime.CoerceToStruct[Constructor_TestDPE_Monoidish](gopurs_runtime.Value{Type: 9, IntVal: 2768669742, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_TestDPE_Monoidish](Get_TestDPE_intMonoidish()))})), gopurs_runtime.Int((__eta0_0.IntVal) - (1)), gopurs_runtime.Int(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_TestDPE_intMonoidish(), "mappend_"), gopurs_runtime.Int(__eta1_1.IntVal), gopurs_runtime.Int(gopurs_runtime.RecordGet(Get_TestDPE_intMonoidish(), "mempty_").IntVal)).IntVal)).IntVal
+// TAST (Let): __local_var_2_0 -> *Constructor_TestDPE_Monoidish
+__local_var_2_0 := &Constructor_TestDPE_Monoidish{1, gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Int((a_2.IntVal) + (b_3.IntVal))
+})
+}), gopurs_runtime.Int(0)}
+_ = __local_var_2_0
+// TAST (Let): __local_var_3_1 -> int64
+__local_var_3_1 := (__eta0_0.IntVal) - (1)
+_ = __local_var_3_1
+// TAST (Let): __local_var_4_2 -> int64
+__local_var_4_2 := (__eta1_1.IntVal) + (0)
+_ = __local_var_4_2
+var __t3 gopurs_runtime.Value
+{
+if (__local_var_3_1) == (0) {
+__t3 = gopurs_runtime.Int(__local_var_4_2)
+goto end_branch_3
+} else {
+
 }
-end_branch_0:
-return gopurs_runtime.Int(__t0)
+}
+{
+__t3 = gopurs_runtime.Apply2(Call_TestDPE_polyLoop(gopurs_runtime.CoerceToStruct[Constructor_TestDPE_Monoidish](gopurs_runtime.Value{Type: 9, IntVal: 2768669742, UnsafePtr: unsafe.Pointer(__local_var_2_0)})), gopurs_runtime.Int((__local_var_3_1) - (1)), gopurs_runtime.Apply2(gopurs_runtime.Box(__local_var_2_0.V0), gopurs_runtime.Int(__local_var_4_2), gopurs_runtime.Box(__local_var_2_0.V1)))
+}
+end_branch_3:
+__t4 = __t3.IntVal
+}
+end_branch_4:
+return gopurs_runtime.Int(__t4)
 }
 
 func Call_TestDPE_polyLoop__11377801(dictMonoidish_0_loop *Constructor_TestDPE_Monoidish) gopurs_runtime.Value {
@@ -279,20 +324,39 @@ mempty_1_1_0 := gopurs_runtime.Box(dictMonoidish_0.V1)
 _ = mempty_1_1_0
 return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t1 gopurs_runtime.Value
+var __t4 gopurs_runtime.Value
 {
 if (v_2.IntVal) == (0) {
-__t1 = v1_3
-goto end_branch_1
+__t4 = v1_3
+goto end_branch_4
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Apply2(Call_TestDPE_polyLoop(dictMonoidish_0), gopurs_runtime.Int((v_2.IntVal) - (1)), gopurs_runtime.Apply2(gopurs_runtime.Box(dictMonoidish_0.V0), v1_3, mempty_1_1_0))
+// TAST (Let): __local_var_4_1 -> int64
+__local_var_4_1 := (v_2.IntVal) - (1)
+_ = __local_var_4_1
+// TAST (Let): __local_var_5_2 -> gopurs_runtime.Value
+__local_var_5_2 := gopurs_runtime.Apply2(gopurs_runtime.Box(dictMonoidish_0.V0), v1_3, mempty_1_1_0)
+_ = __local_var_5_2
+var __t3 gopurs_runtime.Value
+{
+if (__local_var_4_1) == (0) {
+__t3 = __local_var_5_2
+goto end_branch_3
+} else {
+
 }
-end_branch_1:
-return __t1
+}
+{
+__t3 = gopurs_runtime.Apply2(Call_TestDPE_polyLoop(dictMonoidish_0), gopurs_runtime.Int((__local_var_4_1) - (1)), gopurs_runtime.Apply2(gopurs_runtime.Box(dictMonoidish_0.V0), __local_var_5_2, gopurs_runtime.Box(dictMonoidish_0.V1)))
+}
+end_branch_3:
+__t4 = __t3
+}
+end_branch_4:
+return __t4
 })
 })
 }

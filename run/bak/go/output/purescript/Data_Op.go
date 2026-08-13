@@ -84,7 +84,13 @@ var once_Data_Op_categoryOp sync.Once
 func Get_Data_Op_categoryOp() gopurs_runtime.Value {
 	once_Data_Op_categoryOp.Do(func() {
 		cache_Data_Op_categoryOp = gopurs_runtime.RecordDict2("Semigroupoid0", "identity", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Op_semigroupoidOp()
+return gopurs_runtime.RecordDict1("compose", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v1_2, gopurs_runtime.Apply(v_1, x_3))
+})
+})
+}))
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_0
 }))

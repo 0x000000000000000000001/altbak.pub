@@ -292,39 +292,59 @@ return gopurs_runtime.Bool((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictE
 func Call_Data_Functor_Compose_ord1Compose(dictOrd1_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd1_0 gopurs_runtime.Value = dictOrd1_0_loop
 _ = dictOrd1_0
-// TAST (Let): ordCompose1_1_0 -> gopurs_runtime.Value
-ordCompose1_1_0 := Call_Data_Functor_Compose_ordCompose(dictOrd1_0)
-_ = ordCompose1_1_0
-// TAST (Let): __local_var_2_1 -> gopurs_runtime.Value
-__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_0, "Eq10"), gopurs_runtime.Value{})
-_ = __local_var_2_1
-return gopurs_runtime.Func(func(dictOrd11_3 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): ordCompose2_4_2 -> gopurs_runtime.Value
-ordCompose2_4_2 := gopurs_runtime.Apply(ordCompose1_1_0, dictOrd11_3)
-_ = ordCompose2_4_2
-// TAST (Let): __local_var_5_4 -> gopurs_runtime.Value
-__local_var_5_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd11_3, "Eq10"), gopurs_runtime.Value{})
-_ = __local_var_5_4
-// TAST (Let): eq1Compose2_5_3 -> gopurs_runtime.Value
-eq1Compose2_5_3 := gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq_6 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): eqApp1_7_5 -> *Constructor_Data_Eq_Eq
-eqApp1_7_5 := &Constructor_Data_Eq_Eq{1, gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(y_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_5_4, "eq1"), gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](dictEq_6))}, x_7, y_8).IntVal) != (0))
+// TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd1_0, "Eq10"), gopurs_runtime.Value{})
+_ = __local_var_1_0
+return gopurs_runtime.Func(func(dictOrd11_2 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_3_1 -> gopurs_runtime.Value
+__local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd11_2, "Eq10"), gopurs_runtime.Value{})
+_ = __local_var_3_1
+// TAST (Let): __local_var_4_3 -> gopurs_runtime.Value
+__local_var_4_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd11_2, "Eq10"), gopurs_runtime.Value{})
+_ = __local_var_4_3
+// TAST (Let): eq1Compose2_4_2 -> gopurs_runtime.Value
+eq1Compose2_4_2 := gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq_5 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): eqApp1_6_4 -> *Constructor_Data_Eq_Eq
+eqApp1_6_4 := &Constructor_Data_Eq_Eq{1, gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_4_3, "eq1"), gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](dictEq_5))}, x_6, y_7).IntVal) != (0))
 })
 })}
-_ = eqApp1_7_5
-return gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_2_1, "eq1"), gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(eqApp1_7_5)}, v_8, v1_9).IntVal) != (0))
+_ = eqApp1_6_4
+return gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_1_0, "eq1"), gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(eqApp1_6_4)}, v_7, v1_8).IntVal) != (0))
 })
 })
 }))
-_ = eq1Compose2_5_3
-return gopurs_runtime.RecordDict2("Eq10", "compare1", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return eq1Compose2_5_3
-}), gopurs_runtime.Func(func(dictOrd_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(gopurs_runtime.Apply(ordCompose2_4_2, dictOrd_6), "compare")
+_ = eq1Compose2_4_2
+return gopurs_runtime.RecordDict2("Eq10", "compare1", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return eq1Compose2_4_2
+}), gopurs_runtime.Func(func(dictOrd_5 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_6_7 -> gopurs_runtime.Value
+__local_var_6_7 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictOrd_5, "Eq0"), gopurs_runtime.Value{})
+_ = __local_var_6_7
+// TAST (Let): eqApp2_6_6 -> gopurs_runtime.Value
+eqApp2_6_6 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_3_1, "eq1"), gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](__local_var_6_7))}, x_7, y_8).IntVal) != (0))
+})
+}))
+_ = eqApp2_6_6
+// TAST (Let): ordApp1_6_5 -> *Constructor_Data_Ord_Ord
+ordApp1_6_5 := gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return eqApp2_6_6
+}), gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictOrd11_2, "compare1"), gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](dictOrd_5))}, x_7, y_8).IntVal)), UnsafePtr: nil}
+})
+})))
+_ = ordApp1_6_5
+return gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictOrd1_0, "compare1"), gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(ordApp1_6_5)}, v_7, v1_8).IntVal)), UnsafePtr: nil}
+})
+})
 }))
 })
 }
@@ -482,55 +502,98 @@ return altCompose2_5_3
 func Call_Data_Functor_Compose_alternativeCompose(dictAlternative_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictAlternative_0 gopurs_runtime.Value = dictAlternative_0_loop
 _ = dictAlternative_0
-// TAST (Let): applicativeCompose1_1_0 -> gopurs_runtime.Value
-applicativeCompose1_1_0 := Call_Data_Functor_Compose_applicativeCompose(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictAlternative_0, "Applicative0"), gopurs_runtime.Value{}))
-_ = applicativeCompose1_1_0
+// TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
+__local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictAlternative_0, "Applicative0"), gopurs_runtime.Value{})
+_ = __local_var_1_0
 // TAST (Let): __local_var_2_1 -> gopurs_runtime.Value
-__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictAlternative_0, "Plus1"), gopurs_runtime.Value{})
+__local_var_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "Apply0"), gopurs_runtime.Value{})
 _ = __local_var_2_1
-// TAST (Let): empty_3_2 -> gopurs_runtime.Value
-empty_3_2 := gopurs_runtime.RecordGet(__local_var_2_1, "empty")
-_ = empty_3_2
+// TAST (Let): Functor0_3_3 -> *Constructor_Data_Functor_Functor
+Functor0_3_3 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_1, "Functor0"), gopurs_runtime.Value{}))
+_ = Functor0_3_3
 // TAST (Let): __local_var_4_4 -> gopurs_runtime.Value
-__local_var_4_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_1, "Alt0"), gopurs_runtime.Value{})
+__local_var_4_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_1, "Functor0"), gopurs_runtime.Value{})
 _ = __local_var_4_4
-// TAST (Let): __local_var_5_5 -> gopurs_runtime.Value
-__local_var_5_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_4, "Functor0"), gopurs_runtime.Value{})
-_ = __local_var_5_5
-// TAST (Let): plusCompose1_4_3 -> gopurs_runtime.Value
-plusCompose1_4_3 := gopurs_runtime.Func(func(dictFunctor_6 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): functorCompose2_7_7 -> gopurs_runtime.Value
-functorCompose2_7_7 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_5_5, "map"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_6, "map"), f_7), v_8)
+// TAST (Let): applicativeCompose1_3_2 -> gopurs_runtime.Value
+applicativeCompose1_3_2 := gopurs_runtime.Func(func(dictApplicative1_5 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_6_6 -> gopurs_runtime.Value
+__local_var_6_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative1_5, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_6_6
+// TAST (Let): apply_7_7 -> gopurs_runtime.Value
+apply_7_7 := gopurs_runtime.RecordGet(__local_var_6_6, "apply")
+_ = apply_7_7
+// TAST (Let): __local_var_8_9 -> gopurs_runtime.Value
+__local_var_8_9 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_6_6, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_8_9
+// TAST (Let): functorCompose2_8_8 -> gopurs_runtime.Value
+functorCompose2_8_8 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_10 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_4, "map"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_8_9, "map"), f_9), v_10)
 })
 }))
-_ = functorCompose2_7_7
-// TAST (Let): altCompose2_7_6 -> gopurs_runtime.Value
-altCompose2_7_6 := gopurs_runtime.RecordDict2("Functor0", "alt", gopurs_runtime.Func(func(_dollar__unused_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return functorCompose2_7_7
-}), gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_4, "alt"), v_8, v1_9)
+_ = functorCompose2_8_8
+// TAST (Let): applyCompose2_6_5 -> gopurs_runtime.Value
+applyCompose2_6_5 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorCompose2_8_8
+}), gopurs_runtime.Func(func(v_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_10 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "apply"), gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_3_3.V0), apply_7_7, v_9), v1_10)
 })
 }))
-_ = altCompose2_7_6
-return gopurs_runtime.RecordDict2("Alt0", "empty", gopurs_runtime.Func(func(_dollar__unused_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return altCompose2_7_6
-}), empty_3_2)
+_ = applyCompose2_6_5
+return gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return applyCompose2_6_5
+}), gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "pure"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative1_5, "pure"), x_7))
+}))
 })
-_ = plusCompose1_4_3
-return gopurs_runtime.Func(func(dictApplicative_5 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): applicativeCompose2_6_8 -> gopurs_runtime.Value
-applicativeCompose2_6_8 := gopurs_runtime.Apply(applicativeCompose1_1_0, dictApplicative_5)
-_ = applicativeCompose2_6_8
-// TAST (Let): plusCompose2_7_9 -> gopurs_runtime.Value
-plusCompose2_7_9 := gopurs_runtime.Apply(plusCompose1_4_3, gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_5, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
-_ = plusCompose2_7_9
-return gopurs_runtime.RecordDict2("Applicative0", "Plus1", gopurs_runtime.Func(func(_dollar__unused_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return applicativeCompose2_6_8
-}), gopurs_runtime.Func(func(_dollar__unused_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return plusCompose2_7_9
+_ = applicativeCompose1_3_2
+// TAST (Let): __local_var_4_10 -> gopurs_runtime.Value
+__local_var_4_10 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictAlternative_0, "Plus1"), gopurs_runtime.Value{})
+_ = __local_var_4_10
+// TAST (Let): empty_5_11 -> gopurs_runtime.Value
+empty_5_11 := gopurs_runtime.RecordGet(__local_var_4_10, "empty")
+_ = empty_5_11
+// TAST (Let): __local_var_6_13 -> gopurs_runtime.Value
+__local_var_6_13 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_10, "Alt0"), gopurs_runtime.Value{})
+_ = __local_var_6_13
+// TAST (Let): __local_var_7_14 -> gopurs_runtime.Value
+__local_var_7_14 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_6_13, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_7_14
+// TAST (Let): plusCompose1_6_12 -> gopurs_runtime.Value
+plusCompose1_6_12 := gopurs_runtime.Func(func(dictFunctor_8 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): functorCompose2_9_16 -> gopurs_runtime.Value
+functorCompose2_9_16 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_10 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_7_14, "map"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_8, "map"), f_9), v_10)
+})
+}))
+_ = functorCompose2_9_16
+// TAST (Let): altCompose2_9_15 -> gopurs_runtime.Value
+altCompose2_9_15 := gopurs_runtime.RecordDict2("Functor0", "alt", gopurs_runtime.Func(func(_dollar__unused_10 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorCompose2_9_16
+}), gopurs_runtime.Func(func(v_10 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_11 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_6_13, "alt"), v_10, v1_11)
+})
+}))
+_ = altCompose2_9_15
+return gopurs_runtime.RecordDict2("Alt0", "empty", gopurs_runtime.Func(func(_dollar__unused_10 gopurs_runtime.Value) gopurs_runtime.Value {
+return altCompose2_9_15
+}), empty_5_11)
+})
+_ = plusCompose1_6_12
+return gopurs_runtime.Func(func(dictApplicative_7 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): applicativeCompose2_8_17 -> gopurs_runtime.Value
+applicativeCompose2_8_17 := gopurs_runtime.Apply(applicativeCompose1_3_2, dictApplicative_7)
+_ = applicativeCompose2_8_17
+// TAST (Let): plusCompose2_9_18 -> gopurs_runtime.Value
+plusCompose2_9_18 := gopurs_runtime.Apply(plusCompose1_6_12, gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_7, "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
+_ = plusCompose2_9_18
+return gopurs_runtime.RecordDict2("Applicative0", "Plus1", gopurs_runtime.Func(func(_dollar__unused_10 gopurs_runtime.Value) gopurs_runtime.Value {
+return applicativeCompose2_8_17
+}), gopurs_runtime.Func(func(_dollar__unused_10 gopurs_runtime.Value) gopurs_runtime.Value {
+return plusCompose2_9_18
 }))
 })
 }

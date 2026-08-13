@@ -304,9 +304,7 @@ return gopurs_runtime.Apply2(Get_Data_Map_Internal_eqMap(), dictEq_0, dictEq1_1)
 func Call_Data_Map_eq1SemigroupMap(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
 _ = dictEq_0
-return gopurs_runtime.RecordDict1("eq1", gopurs_runtime.Func(func(dictEq1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(gopurs_runtime.Apply2(Get_Data_Map_Internal_eqMap(), dictEq_0, dictEq1_1), "eq")
-}))
+return gopurs_runtime.Apply(Get_Data_Map_Internal_eq1Map(), dictEq_0)
 }
 
 func Call_Data_Map_bindSemigroupMap(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -324,16 +322,7 @@ return gopurs_runtime.Apply(Get_Data_Map_Internal_applyMap(), dictOrd_0)
 func Call_Data_Map_altSemigroupMap(dictOrd_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictOrd_0 gopurs_runtime.Value = dictOrd_0_loop
 _ = dictOrd_0
-// TAST (Let): compare_1_0 -> gopurs_runtime.Value
-compare_1_0 := gopurs_runtime.RecordGet(dictOrd_0, "compare")
-_ = compare_1_0
-return gopurs_runtime.RecordDict2("Functor0", "alt", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Map_Internal_functorMap()
-}), gopurs_runtime.Func(func(m1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(m2_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](gopurs_runtime.UncurriedApp4(Get_Data_Map_Internal_unsafeUnionWith(), compare_1_0, Get_Data_Function_go__const(), gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](m1_2))}, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](m2_3))})))}
-})
-}))
+return gopurs_runtime.Apply(Get_Data_Map_Internal_altMap(), dictOrd_0)
 }
 
 

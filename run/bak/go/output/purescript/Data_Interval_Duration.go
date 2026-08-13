@@ -165,7 +165,70 @@ var cache_Data_Interval_Duration_showMap gopurs_runtime.Value
 var once_Data_Interval_Duration_showMap sync.Once
 func Get_Data_Interval_Duration_showMap() gopurs_runtime.Value {
 	once_Data_Interval_Duration_showMap.Do(func() {
-		cache_Data_Interval_Duration_showMap = gopurs_runtime.Value{Type: 9, IntVal: 1835580986, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Show_Show](gopurs_runtime.Apply2(Get_Data_Map_Internal_showMap(), Get_Data_Interval_Duration_showDurationComponent(), Get_Data_Show_showNumber())))}
+		cache_Data_Interval_Duration_showMap = gopurs_runtime.Value{Type: 9, IntVal: 1835580986, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Show_Show](gopurs_runtime.Apply2(Get_Data_Map_Internal_showMap(), gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t0 string
+{
+if (uint32(v_0.IntVal) == 217821258) {
+__t0 = "Minute"
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (uint32(v_0.IntVal) == 3908053364) {
+__t0 = "Second"
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (uint32(v_0.IntVal) == 1292308612) {
+__t0 = "Hour"
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (uint32(v_0.IntVal) == 2311060696) {
+__t0 = "Day"
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (uint32(v_0.IntVal) == 401302776) {
+__t0 = "Week"
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (uint32(v_0.IntVal) == 3327533908) {
+__t0 = "Month"
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (uint32(v_0.IntVal) == 3631736139) {
+__t0 = "Year"
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }().StrVal()
+}
+end_branch_0:
+return gopurs_runtime.Str(__t0)
+})), Get_Data_Show_showNumber())))}
 	})
 	return cache_Data_Interval_Duration_showMap
 }
@@ -175,7 +238,70 @@ var once_Data_Interval_Duration_showDuration sync.Once
 func Get_Data_Interval_Duration_showDuration() gopurs_runtime.Value {
 	once_Data_Interval_Duration_showDuration.Do(func() {
 		cache_Data_Interval_Duration_showDuration = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str((("(Duration ") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply2(Get_Data_Map_Internal_showMap(), Get_Data_Interval_Duration_showDurationComponent(), Get_Data_Show_showNumber()), "show"), gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](v_0))}).StrVal())) + (")"))
+return gopurs_runtime.Str((("(Duration ") + (gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply2(Get_Data_Map_Internal_showMap(), gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t0 string
+{
+if (uint32(v_1.IntVal) == 217821258) {
+__t0 = "Minute"
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (uint32(v_1.IntVal) == 3908053364) {
+__t0 = "Second"
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (uint32(v_1.IntVal) == 1292308612) {
+__t0 = "Hour"
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (uint32(v_1.IntVal) == 2311060696) {
+__t0 = "Day"
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (uint32(v_1.IntVal) == 401302776) {
+__t0 = "Week"
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (uint32(v_1.IntVal) == 3327533908) {
+__t0 = "Month"
+goto end_branch_0
+} else {
+
+}
+}
+{
+if (uint32(v_1.IntVal) == 3631736139) {
+__t0 = "Year"
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }().StrVal()
+}
+end_branch_0:
+return gopurs_runtime.Str(__t0)
+})), Get_Data_Show_showNumber()), "show"), gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](v_0))}).StrVal())) + (")"))
 }))
 	})
 	return cache_Data_Interval_Duration_showDuration
@@ -348,7 +474,150 @@ var cache_Data_Interval_Duration_eqMap gopurs_runtime.Value
 var once_Data_Interval_Duration_eqMap sync.Once
 func Get_Data_Interval_Duration_eqMap() gopurs_runtime.Value {
 	once_Data_Interval_Duration_eqMap.Do(func() {
-		cache_Data_Interval_Duration_eqMap = gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](gopurs_runtime.Apply2(Get_Data_Map_Internal_eqMap(), Get_Data_Interval_Duration_eqDurationComponent(), Get_Data_Eq_eqNumber())))}
+		cache_Data_Interval_Duration_eqMap = gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](gopurs_runtime.Apply2(Get_Data_Map_Internal_eqMap(), gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_1 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t6 bool
+{
+if (uint32(x_0.IntVal) == 3908053364) {
+var __t0 bool
+{
+if (uint32(y_1.IntVal) == 3908053364) {
+__t0 = true
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = false
+}
+end_branch_0:
+__t6 = __t0
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(x_0.IntVal) == 217821258) {
+var __t1 bool
+{
+if (uint32(y_1.IntVal) == 217821258) {
+__t1 = true
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = false
+}
+end_branch_1:
+__t6 = __t1
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(x_0.IntVal) == 1292308612) {
+var __t2 bool
+{
+if (uint32(y_1.IntVal) == 1292308612) {
+__t2 = true
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = false
+}
+end_branch_2:
+__t6 = __t2
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(x_0.IntVal) == 2311060696) {
+var __t3 bool
+{
+if (uint32(y_1.IntVal) == 2311060696) {
+__t3 = true
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = false
+}
+end_branch_3:
+__t6 = __t3
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(x_0.IntVal) == 401302776) {
+var __t4 bool
+{
+if (uint32(y_1.IntVal) == 401302776) {
+__t4 = true
+goto end_branch_4
+} else {
+
+}
+}
+{
+__t4 = false
+}
+end_branch_4:
+__t6 = __t4
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(x_0.IntVal) == 3327533908) {
+var __t5 bool
+{
+if (uint32(y_1.IntVal) == 3327533908) {
+__t5 = true
+goto end_branch_5
+} else {
+
+}
+}
+{
+__t5 = false
+}
+end_branch_5:
+__t6 = __t5
+goto end_branch_6
+} else {
+
+}
+}
+{
+if ((uint32(x_0.IntVal) == 3631736139)) && ((uint32(y_1.IntVal) == 3631736139)) {
+__t6 = true
+goto end_branch_6
+} else {
+
+}
+}
+{
+__t6 = false
+}
+end_branch_6:
+return gopurs_runtime.Bool(__t6)
+})
+})), Get_Data_Eq_eqNumber())))}
 	})
 	return cache_Data_Interval_Duration_eqMap
 }
@@ -358,15 +627,705 @@ var once_Data_Interval_Duration_ordDurationComponent sync.Once
 func Get_Data_Interval_Duration_ordDurationComponent() gopurs_runtime.Value {
 	once_Data_Interval_Duration_ordDurationComponent.Do(func() {
 		cache_Data_Interval_Duration_ordDurationComponent = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Interval_Duration_eqDurationComponent()
+return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_2 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t6 bool
+{
+if (uint32(x_1.IntVal) == 3908053364) {
+var __t0 bool
+{
+if (uint32(y_2.IntVal) == 3908053364) {
+__t0 = true
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = false
+}
+end_branch_0:
+__t6 = __t0
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(x_1.IntVal) == 217821258) {
+var __t1 bool
+{
+if (uint32(y_2.IntVal) == 217821258) {
+__t1 = true
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = false
+}
+end_branch_1:
+__t6 = __t1
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(x_1.IntVal) == 1292308612) {
+var __t2 bool
+{
+if (uint32(y_2.IntVal) == 1292308612) {
+__t2 = true
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = false
+}
+end_branch_2:
+__t6 = __t2
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(x_1.IntVal) == 2311060696) {
+var __t3 bool
+{
+if (uint32(y_2.IntVal) == 2311060696) {
+__t3 = true
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = false
+}
+end_branch_3:
+__t6 = __t3
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(x_1.IntVal) == 401302776) {
+var __t4 bool
+{
+if (uint32(y_2.IntVal) == 401302776) {
+__t4 = true
+goto end_branch_4
+} else {
+
+}
+}
+{
+__t4 = false
+}
+end_branch_4:
+__t6 = __t4
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(x_1.IntVal) == 3327533908) {
+var __t5 bool
+{
+if (uint32(y_2.IntVal) == 3327533908) {
+__t5 = true
+goto end_branch_5
+} else {
+
+}
+}
+{
+__t5 = false
+}
+end_branch_5:
+__t6 = __t5
+goto end_branch_6
+} else {
+
+}
+}
+{
+if ((uint32(x_1.IntVal) == 3631736139)) && ((uint32(y_2.IntVal) == 3631736139)) {
+__t6 = true
+goto end_branch_6
+} else {
+
+}
+}
+{
+__t6 = false
+}
+end_branch_6:
+return gopurs_runtime.Bool(__t6)
+})
+}))
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_1 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t6 uint32
+var __t13 uint32
 {
 if (uint32(x_0.IntVal) == 3908053364) {
-var __t0 uint32
+var __t7 uint32
 {
 if (uint32(y_1.IntVal) == 3908053364) {
+__t7 = 902936544
+goto end_branch_7
+} else {
+
+}
+}
+{
+__t7 = 1527465420
+}
+end_branch_7:
+__t13 = __t7
+goto end_branch_13
+} else {
+
+}
+}
+{
+if (uint32(y_1.IntVal) == 3908053364) {
+__t13 = 380165415
+goto end_branch_13
+} else {
+
+}
+}
+{
+if (uint32(x_0.IntVal) == 217821258) {
+var __t8 uint32
+{
+if (uint32(y_1.IntVal) == 217821258) {
+__t8 = 902936544
+goto end_branch_8
+} else {
+
+}
+}
+{
+__t8 = 1527465420
+}
+end_branch_8:
+__t13 = __t8
+goto end_branch_13
+} else {
+
+}
+}
+{
+if (uint32(y_1.IntVal) == 217821258) {
+__t13 = 380165415
+goto end_branch_13
+} else {
+
+}
+}
+{
+if (uint32(x_0.IntVal) == 1292308612) {
+var __t9 uint32
+{
+if (uint32(y_1.IntVal) == 1292308612) {
+__t9 = 902936544
+goto end_branch_9
+} else {
+
+}
+}
+{
+__t9 = 1527465420
+}
+end_branch_9:
+__t13 = __t9
+goto end_branch_13
+} else {
+
+}
+}
+{
+if (uint32(y_1.IntVal) == 1292308612) {
+__t13 = 380165415
+goto end_branch_13
+} else {
+
+}
+}
+{
+if (uint32(x_0.IntVal) == 2311060696) {
+var __t10 uint32
+{
+if (uint32(y_1.IntVal) == 2311060696) {
+__t10 = 902936544
+goto end_branch_10
+} else {
+
+}
+}
+{
+__t10 = 1527465420
+}
+end_branch_10:
+__t13 = __t10
+goto end_branch_13
+} else {
+
+}
+}
+{
+if (uint32(y_1.IntVal) == 2311060696) {
+__t13 = 380165415
+goto end_branch_13
+} else {
+
+}
+}
+{
+if (uint32(x_0.IntVal) == 401302776) {
+var __t11 uint32
+{
+if (uint32(y_1.IntVal) == 401302776) {
+__t11 = 902936544
+goto end_branch_11
+} else {
+
+}
+}
+{
+__t11 = 1527465420
+}
+end_branch_11:
+__t13 = __t11
+goto end_branch_13
+} else {
+
+}
+}
+{
+if (uint32(y_1.IntVal) == 401302776) {
+__t13 = 380165415
+goto end_branch_13
+} else {
+
+}
+}
+{
+if (uint32(x_0.IntVal) == 3327533908) {
+var __t12 uint32
+{
+if (uint32(y_1.IntVal) == 3327533908) {
+__t12 = 902936544
+goto end_branch_12
+} else {
+
+}
+}
+{
+__t12 = 1527465420
+}
+end_branch_12:
+__t13 = __t12
+goto end_branch_13
+} else {
+
+}
+}
+{
+if (uint32(y_1.IntVal) == 3327533908) {
+__t13 = 380165415
+goto end_branch_13
+} else {
+
+}
+}
+{
+if ((uint32(x_0.IntVal) == 3631736139)) && ((uint32(y_1.IntVal) == 3631736139)) {
+__t13 = 902936544
+goto end_branch_13
+} else {
+
+}
+}
+{
+__t13 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
+}
+end_branch_13:
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t13), UnsafePtr: nil}
+})
+}))
+	})
+	return cache_Data_Interval_Duration_ordDurationComponent
+}
+
+var cache_Data_Interval_Duration_ordMap gopurs_runtime.Value
+var once_Data_Interval_Duration_ordMap sync.Once
+func Get_Data_Interval_Duration_ordMap() gopurs_runtime.Value {
+	once_Data_Interval_Duration_ordMap.Do(func() {
+		cache_Data_Interval_Duration_ordMap = gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](gopurs_runtime.Apply2(Get_Data_Map_Internal_ordMap(), gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_2 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t6 bool
+{
+if (uint32(x_1.IntVal) == 3908053364) {
+var __t0 bool
+{
+if (uint32(y_2.IntVal) == 3908053364) {
+__t0 = true
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = false
+}
+end_branch_0:
+__t6 = __t0
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(x_1.IntVal) == 217821258) {
+var __t1 bool
+{
+if (uint32(y_2.IntVal) == 217821258) {
+__t1 = true
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = false
+}
+end_branch_1:
+__t6 = __t1
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(x_1.IntVal) == 1292308612) {
+var __t2 bool
+{
+if (uint32(y_2.IntVal) == 1292308612) {
+__t2 = true
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = false
+}
+end_branch_2:
+__t6 = __t2
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(x_1.IntVal) == 2311060696) {
+var __t3 bool
+{
+if (uint32(y_2.IntVal) == 2311060696) {
+__t3 = true
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = false
+}
+end_branch_3:
+__t6 = __t3
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(x_1.IntVal) == 401302776) {
+var __t4 bool
+{
+if (uint32(y_2.IntVal) == 401302776) {
+__t4 = true
+goto end_branch_4
+} else {
+
+}
+}
+{
+__t4 = false
+}
+end_branch_4:
+__t6 = __t4
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(x_1.IntVal) == 3327533908) {
+var __t5 bool
+{
+if (uint32(y_2.IntVal) == 3327533908) {
+__t5 = true
+goto end_branch_5
+} else {
+
+}
+}
+{
+__t5 = false
+}
+end_branch_5:
+__t6 = __t5
+goto end_branch_6
+} else {
+
+}
+}
+{
+if ((uint32(x_1.IntVal) == 3631736139)) && ((uint32(y_2.IntVal) == 3631736139)) {
+__t6 = true
+goto end_branch_6
+} else {
+
+}
+}
+{
+__t6 = false
+}
+end_branch_6:
+return gopurs_runtime.Bool(__t6)
+})
+}))
+}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_1 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t13 uint32
+{
+if (uint32(x_0.IntVal) == 3908053364) {
+var __t7 uint32
+{
+if (uint32(y_1.IntVal) == 3908053364) {
+__t7 = 902936544
+goto end_branch_7
+} else {
+
+}
+}
+{
+__t7 = 1527465420
+}
+end_branch_7:
+__t13 = __t7
+goto end_branch_13
+} else {
+
+}
+}
+{
+if (uint32(y_1.IntVal) == 3908053364) {
+__t13 = 380165415
+goto end_branch_13
+} else {
+
+}
+}
+{
+if (uint32(x_0.IntVal) == 217821258) {
+var __t8 uint32
+{
+if (uint32(y_1.IntVal) == 217821258) {
+__t8 = 902936544
+goto end_branch_8
+} else {
+
+}
+}
+{
+__t8 = 1527465420
+}
+end_branch_8:
+__t13 = __t8
+goto end_branch_13
+} else {
+
+}
+}
+{
+if (uint32(y_1.IntVal) == 217821258) {
+__t13 = 380165415
+goto end_branch_13
+} else {
+
+}
+}
+{
+if (uint32(x_0.IntVal) == 1292308612) {
+var __t9 uint32
+{
+if (uint32(y_1.IntVal) == 1292308612) {
+__t9 = 902936544
+goto end_branch_9
+} else {
+
+}
+}
+{
+__t9 = 1527465420
+}
+end_branch_9:
+__t13 = __t9
+goto end_branch_13
+} else {
+
+}
+}
+{
+if (uint32(y_1.IntVal) == 1292308612) {
+__t13 = 380165415
+goto end_branch_13
+} else {
+
+}
+}
+{
+if (uint32(x_0.IntVal) == 2311060696) {
+var __t10 uint32
+{
+if (uint32(y_1.IntVal) == 2311060696) {
+__t10 = 902936544
+goto end_branch_10
+} else {
+
+}
+}
+{
+__t10 = 1527465420
+}
+end_branch_10:
+__t13 = __t10
+goto end_branch_13
+} else {
+
+}
+}
+{
+if (uint32(y_1.IntVal) == 2311060696) {
+__t13 = 380165415
+goto end_branch_13
+} else {
+
+}
+}
+{
+if (uint32(x_0.IntVal) == 401302776) {
+var __t11 uint32
+{
+if (uint32(y_1.IntVal) == 401302776) {
+__t11 = 902936544
+goto end_branch_11
+} else {
+
+}
+}
+{
+__t11 = 1527465420
+}
+end_branch_11:
+__t13 = __t11
+goto end_branch_13
+} else {
+
+}
+}
+{
+if (uint32(y_1.IntVal) == 401302776) {
+__t13 = 380165415
+goto end_branch_13
+} else {
+
+}
+}
+{
+if (uint32(x_0.IntVal) == 3327533908) {
+var __t12 uint32
+{
+if (uint32(y_1.IntVal) == 3327533908) {
+__t12 = 902936544
+goto end_branch_12
+} else {
+
+}
+}
+{
+__t12 = 1527465420
+}
+end_branch_12:
+__t13 = __t12
+goto end_branch_13
+} else {
+
+}
+}
+{
+if (uint32(y_1.IntVal) == 3327533908) {
+__t13 = 380165415
+goto end_branch_13
+} else {
+
+}
+}
+{
+if ((uint32(x_0.IntVal) == 3631736139)) && ((uint32(y_1.IntVal) == 3631736139)) {
+__t13 = 902936544
+goto end_branch_13
+} else {
+
+}
+}
+{
+__t13 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
+}
+end_branch_13:
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t13), UnsafePtr: nil}
+})
+})), Get_Data_Ord_ordNumber())))}
+	})
+	return cache_Data_Interval_Duration_ordMap
+}
+
+var cache_Data_Interval_Duration_semigroupDuration gopurs_runtime.Value
+var once_Data_Interval_Duration_semigroupDuration sync.Once
+func Get_Data_Interval_Duration_semigroupDuration() gopurs_runtime.Value {
+	once_Data_Interval_Duration_semigroupDuration.Do(func() {
+		cache_Data_Interval_Duration_semigroupDuration = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](gopurs_runtime.UncurriedApp4(Get_Data_Map_Internal_unsafeUnionWith(), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t6 uint32
+{
+if (uint32(x_2.IntVal) == 3908053364) {
+var __t0 uint32
+{
+if (uint32(y_3.IntVal) == 3908053364) {
 __t0 = 902936544
 goto end_branch_0
 } else {
@@ -384,7 +1343,7 @@ goto end_branch_6
 }
 }
 {
-if (uint32(y_1.IntVal) == 3908053364) {
+if (uint32(y_3.IntVal) == 3908053364) {
 __t6 = 380165415
 goto end_branch_6
 } else {
@@ -392,10 +1351,10 @@ goto end_branch_6
 }
 }
 {
-if (uint32(x_0.IntVal) == 217821258) {
+if (uint32(x_2.IntVal) == 217821258) {
 var __t1 uint32
 {
-if (uint32(y_1.IntVal) == 217821258) {
+if (uint32(y_3.IntVal) == 217821258) {
 __t1 = 902936544
 goto end_branch_1
 } else {
@@ -413,7 +1372,7 @@ goto end_branch_6
 }
 }
 {
-if (uint32(y_1.IntVal) == 217821258) {
+if (uint32(y_3.IntVal) == 217821258) {
 __t6 = 380165415
 goto end_branch_6
 } else {
@@ -421,10 +1380,10 @@ goto end_branch_6
 }
 }
 {
-if (uint32(x_0.IntVal) == 1292308612) {
+if (uint32(x_2.IntVal) == 1292308612) {
 var __t2 uint32
 {
-if (uint32(y_1.IntVal) == 1292308612) {
+if (uint32(y_3.IntVal) == 1292308612) {
 __t2 = 902936544
 goto end_branch_2
 } else {
@@ -442,7 +1401,7 @@ goto end_branch_6
 }
 }
 {
-if (uint32(y_1.IntVal) == 1292308612) {
+if (uint32(y_3.IntVal) == 1292308612) {
 __t6 = 380165415
 goto end_branch_6
 } else {
@@ -450,10 +1409,10 @@ goto end_branch_6
 }
 }
 {
-if (uint32(x_0.IntVal) == 2311060696) {
+if (uint32(x_2.IntVal) == 2311060696) {
 var __t3 uint32
 {
-if (uint32(y_1.IntVal) == 2311060696) {
+if (uint32(y_3.IntVal) == 2311060696) {
 __t3 = 902936544
 goto end_branch_3
 } else {
@@ -471,7 +1430,7 @@ goto end_branch_6
 }
 }
 {
-if (uint32(y_1.IntVal) == 2311060696) {
+if (uint32(y_3.IntVal) == 2311060696) {
 __t6 = 380165415
 goto end_branch_6
 } else {
@@ -479,10 +1438,10 @@ goto end_branch_6
 }
 }
 {
-if (uint32(x_0.IntVal) == 401302776) {
+if (uint32(x_2.IntVal) == 401302776) {
 var __t4 uint32
 {
-if (uint32(y_1.IntVal) == 401302776) {
+if (uint32(y_3.IntVal) == 401302776) {
 __t4 = 902936544
 goto end_branch_4
 } else {
@@ -500,7 +1459,7 @@ goto end_branch_6
 }
 }
 {
-if (uint32(y_1.IntVal) == 401302776) {
+if (uint32(y_3.IntVal) == 401302776) {
 __t6 = 380165415
 goto end_branch_6
 } else {
@@ -508,10 +1467,10 @@ goto end_branch_6
 }
 }
 {
-if (uint32(x_0.IntVal) == 3327533908) {
+if (uint32(x_2.IntVal) == 3327533908) {
 var __t5 uint32
 {
-if (uint32(y_1.IntVal) == 3327533908) {
+if (uint32(y_3.IntVal) == 3327533908) {
 __t5 = 902936544
 goto end_branch_5
 } else {
@@ -529,7 +1488,7 @@ goto end_branch_6
 }
 }
 {
-if (uint32(y_1.IntVal) == 3327533908) {
+if (uint32(y_3.IntVal) == 3327533908) {
 __t6 = 380165415
 goto end_branch_6
 } else {
@@ -537,7 +1496,7 @@ goto end_branch_6
 }
 }
 {
-if ((uint32(x_0.IntVal) == 3631736139)) && ((uint32(y_1.IntVal) == 3631736139)) {
+if ((uint32(x_2.IntVal) == 3631736139)) && ((uint32(y_3.IntVal) == 3631736139)) {
 __t6 = 902936544
 goto end_branch_6
 } else {
@@ -550,27 +1509,7 @@ __t6 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().In
 end_branch_6:
 return gopurs_runtime.Value{Type: 9, IntVal: int64(__t6), UnsafePtr: nil}
 })
-}))
-	})
-	return cache_Data_Interval_Duration_ordDurationComponent
-}
-
-var cache_Data_Interval_Duration_ordMap gopurs_runtime.Value
-var once_Data_Interval_Duration_ordMap sync.Once
-func Get_Data_Interval_Duration_ordMap() gopurs_runtime.Value {
-	once_Data_Interval_Duration_ordMap.Do(func() {
-		cache_Data_Interval_Duration_ordMap = gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Ord_Ord](gopurs_runtime.Apply2(Get_Data_Map_Internal_ordMap(), Get_Data_Interval_Duration_ordDurationComponent(), Get_Data_Ord_ordNumber())))}
-	})
-	return cache_Data_Interval_Duration_ordMap
-}
-
-var cache_Data_Interval_Duration_semigroupDuration gopurs_runtime.Value
-var once_Data_Interval_Duration_semigroupDuration sync.Once
-func Get_Data_Interval_Duration_semigroupDuration() gopurs_runtime.Value {
-	once_Data_Interval_Duration_semigroupDuration.Do(func() {
-		cache_Data_Interval_Duration_semigroupDuration = gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](gopurs_runtime.UncurriedApp4(Get_Data_Map_Internal_unsafeUnionWith(), gopurs_runtime.RecordGet(Get_Data_Interval_Duration_ordDurationComponent(), "compare"), Get_Data_Semiring_numAdd(), gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](v_0))}, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](v1_1))})))}
+}), Get_Data_Semiring_numAdd(), gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](v_0))}, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](v1_1))})))}
 })
 }))
 	})
@@ -582,7 +1521,202 @@ var once_Data_Interval_Duration_monoidDuration sync.Once
 func Get_Data_Interval_Duration_monoidDuration() gopurs_runtime.Value {
 	once_Data_Interval_Duration_monoidDuration.Do(func() {
 		cache_Data_Interval_Duration_monoidDuration = gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Interval_Duration_semigroupDuration()
+return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](gopurs_runtime.UncurriedApp4(Get_Data_Map_Internal_unsafeUnionWith(), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_4 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t6 uint32
+{
+if (uint32(x_3.IntVal) == 3908053364) {
+var __t0 uint32
+{
+if (uint32(y_4.IntVal) == 3908053364) {
+__t0 = 902936544
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = 1527465420
+}
+end_branch_0:
+__t6 = __t0
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(y_4.IntVal) == 3908053364) {
+__t6 = 380165415
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(x_3.IntVal) == 217821258) {
+var __t1 uint32
+{
+if (uint32(y_4.IntVal) == 217821258) {
+__t1 = 902936544
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = 1527465420
+}
+end_branch_1:
+__t6 = __t1
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(y_4.IntVal) == 217821258) {
+__t6 = 380165415
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(x_3.IntVal) == 1292308612) {
+var __t2 uint32
+{
+if (uint32(y_4.IntVal) == 1292308612) {
+__t2 = 902936544
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = 1527465420
+}
+end_branch_2:
+__t6 = __t2
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(y_4.IntVal) == 1292308612) {
+__t6 = 380165415
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(x_3.IntVal) == 2311060696) {
+var __t3 uint32
+{
+if (uint32(y_4.IntVal) == 2311060696) {
+__t3 = 902936544
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = 1527465420
+}
+end_branch_3:
+__t6 = __t3
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(y_4.IntVal) == 2311060696) {
+__t6 = 380165415
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(x_3.IntVal) == 401302776) {
+var __t4 uint32
+{
+if (uint32(y_4.IntVal) == 401302776) {
+__t4 = 902936544
+goto end_branch_4
+} else {
+
+}
+}
+{
+__t4 = 1527465420
+}
+end_branch_4:
+__t6 = __t4
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(y_4.IntVal) == 401302776) {
+__t6 = 380165415
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(x_3.IntVal) == 3327533908) {
+var __t5 uint32
+{
+if (uint32(y_4.IntVal) == 3327533908) {
+__t5 = 902936544
+goto end_branch_5
+} else {
+
+}
+}
+{
+__t5 = 1527465420
+}
+end_branch_5:
+__t6 = __t5
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(y_4.IntVal) == 3327533908) {
+__t6 = 380165415
+goto end_branch_6
+} else {
+
+}
+}
+{
+if ((uint32(x_3.IntVal) == 3631736139)) && ((uint32(y_4.IntVal) == 3631736139)) {
+__t6 = 902936544
+goto end_branch_6
+} else {
+
+}
+}
+{
+__t6 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
+}
+end_branch_6:
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t6), UnsafePtr: nil}
+})
+}), Get_Data_Semiring_numAdd(), gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](v_1))}, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](v1_2))})))}
+})
+}))
 }), gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer((*Constructor_Data_Map_Internal_Node)(nil))})
 	})
 	return cache_Data_Interval_Duration_monoidDuration
@@ -594,7 +1728,150 @@ func Get_Data_Interval_Duration_eqDuration() gopurs_runtime.Value {
 	once_Data_Interval_Duration_eqDuration.Do(func() {
 		cache_Data_Interval_Duration_eqDuration = gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply2(Get_Data_Map_Internal_eqMap(), Get_Data_Interval_Duration_eqDurationComponent(), Get_Data_Eq_eqNumber()), "eq"), gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](x_0))}, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](y_1))}).IntVal) != (0))
+return gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply2(Get_Data_Map_Internal_eqMap(), gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t6 bool
+{
+if (uint32(x_2.IntVal) == 3908053364) {
+var __t0 bool
+{
+if (uint32(y_3.IntVal) == 3908053364) {
+__t0 = true
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = false
+}
+end_branch_0:
+__t6 = __t0
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(x_2.IntVal) == 217821258) {
+var __t1 bool
+{
+if (uint32(y_3.IntVal) == 217821258) {
+__t1 = true
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = false
+}
+end_branch_1:
+__t6 = __t1
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(x_2.IntVal) == 1292308612) {
+var __t2 bool
+{
+if (uint32(y_3.IntVal) == 1292308612) {
+__t2 = true
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = false
+}
+end_branch_2:
+__t6 = __t2
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(x_2.IntVal) == 2311060696) {
+var __t3 bool
+{
+if (uint32(y_3.IntVal) == 2311060696) {
+__t3 = true
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = false
+}
+end_branch_3:
+__t6 = __t3
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(x_2.IntVal) == 401302776) {
+var __t4 bool
+{
+if (uint32(y_3.IntVal) == 401302776) {
+__t4 = true
+goto end_branch_4
+} else {
+
+}
+}
+{
+__t4 = false
+}
+end_branch_4:
+__t6 = __t4
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(x_2.IntVal) == 3327533908) {
+var __t5 bool
+{
+if (uint32(y_3.IntVal) == 3327533908) {
+__t5 = true
+goto end_branch_5
+} else {
+
+}
+}
+{
+__t5 = false
+}
+end_branch_5:
+__t6 = __t5
+goto end_branch_6
+} else {
+
+}
+}
+{
+if ((uint32(x_2.IntVal) == 3631736139)) && ((uint32(y_3.IntVal) == 3631736139)) {
+__t6 = true
+goto end_branch_6
+} else {
+
+}
+}
+{
+__t6 = false
+}
+end_branch_6:
+return gopurs_runtime.Bool(__t6)
+})
+})), Get_Data_Eq_eqNumber()), "eq"), gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](x_0))}, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](y_1))}).IntVal) != (0))
 })
 }))
 	})
@@ -606,10 +1883,493 @@ var once_Data_Interval_Duration_ordDuration sync.Once
 func Get_Data_Interval_Duration_ordDuration() gopurs_runtime.Value {
 	once_Data_Interval_Duration_ordDuration.Do(func() {
 		cache_Data_Interval_Duration_ordDuration = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Interval_Duration_eqDuration()
+return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply2(Get_Data_Map_Internal_eqMap(), gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_4 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t6 bool
+{
+if (uint32(x_3.IntVal) == 3908053364) {
+var __t0 bool
+{
+if (uint32(y_4.IntVal) == 3908053364) {
+__t0 = true
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = false
+}
+end_branch_0:
+__t6 = __t0
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(x_3.IntVal) == 217821258) {
+var __t1 bool
+{
+if (uint32(y_4.IntVal) == 217821258) {
+__t1 = true
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = false
+}
+end_branch_1:
+__t6 = __t1
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(x_3.IntVal) == 1292308612) {
+var __t2 bool
+{
+if (uint32(y_4.IntVal) == 1292308612) {
+__t2 = true
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = false
+}
+end_branch_2:
+__t6 = __t2
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(x_3.IntVal) == 2311060696) {
+var __t3 bool
+{
+if (uint32(y_4.IntVal) == 2311060696) {
+__t3 = true
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = false
+}
+end_branch_3:
+__t6 = __t3
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(x_3.IntVal) == 401302776) {
+var __t4 bool
+{
+if (uint32(y_4.IntVal) == 401302776) {
+__t4 = true
+goto end_branch_4
+} else {
+
+}
+}
+{
+__t4 = false
+}
+end_branch_4:
+__t6 = __t4
+goto end_branch_6
+} else {
+
+}
+}
+{
+if (uint32(x_3.IntVal) == 3327533908) {
+var __t5 bool
+{
+if (uint32(y_4.IntVal) == 3327533908) {
+__t5 = true
+goto end_branch_5
+} else {
+
+}
+}
+{
+__t5 = false
+}
+end_branch_5:
+__t6 = __t5
+goto end_branch_6
+} else {
+
+}
+}
+{
+if ((uint32(x_3.IntVal) == 3631736139)) && ((uint32(y_4.IntVal) == 3631736139)) {
+__t6 = true
+goto end_branch_6
+} else {
+
+}
+}
+{
+__t6 = false
+}
+end_branch_6:
+return gopurs_runtime.Bool(__t6)
+})
+})), Get_Data_Eq_eqNumber()), "eq"), gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](x_1))}, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](y_2))}).IntVal) != (0))
+})
+}))
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply2(Get_Data_Map_Internal_ordMap(), Get_Data_Interval_Duration_ordDurationComponent(), Get_Data_Ord_ordNumber()), "compare"), gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](x_0))}, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](y_1))}).IntVal)), UnsafePtr: nil}
+return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply2(Get_Data_Map_Internal_ordMap(), gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_4 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t13 bool
+{
+if (uint32(x_3.IntVal) == 3908053364) {
+var __t7 bool
+{
+if (uint32(y_4.IntVal) == 3908053364) {
+__t7 = true
+goto end_branch_7
+} else {
+
+}
+}
+{
+__t7 = false
+}
+end_branch_7:
+__t13 = __t7
+goto end_branch_13
+} else {
+
+}
+}
+{
+if (uint32(x_3.IntVal) == 217821258) {
+var __t8 bool
+{
+if (uint32(y_4.IntVal) == 217821258) {
+__t8 = true
+goto end_branch_8
+} else {
+
+}
+}
+{
+__t8 = false
+}
+end_branch_8:
+__t13 = __t8
+goto end_branch_13
+} else {
+
+}
+}
+{
+if (uint32(x_3.IntVal) == 1292308612) {
+var __t9 bool
+{
+if (uint32(y_4.IntVal) == 1292308612) {
+__t9 = true
+goto end_branch_9
+} else {
+
+}
+}
+{
+__t9 = false
+}
+end_branch_9:
+__t13 = __t9
+goto end_branch_13
+} else {
+
+}
+}
+{
+if (uint32(x_3.IntVal) == 2311060696) {
+var __t10 bool
+{
+if (uint32(y_4.IntVal) == 2311060696) {
+__t10 = true
+goto end_branch_10
+} else {
+
+}
+}
+{
+__t10 = false
+}
+end_branch_10:
+__t13 = __t10
+goto end_branch_13
+} else {
+
+}
+}
+{
+if (uint32(x_3.IntVal) == 401302776) {
+var __t11 bool
+{
+if (uint32(y_4.IntVal) == 401302776) {
+__t11 = true
+goto end_branch_11
+} else {
+
+}
+}
+{
+__t11 = false
+}
+end_branch_11:
+__t13 = __t11
+goto end_branch_13
+} else {
+
+}
+}
+{
+if (uint32(x_3.IntVal) == 3327533908) {
+var __t12 bool
+{
+if (uint32(y_4.IntVal) == 3327533908) {
+__t12 = true
+goto end_branch_12
+} else {
+
+}
+}
+{
+__t12 = false
+}
+end_branch_12:
+__t13 = __t12
+goto end_branch_13
+} else {
+
+}
+}
+{
+if ((uint32(x_3.IntVal) == 3631736139)) && ((uint32(y_4.IntVal) == 3631736139)) {
+__t13 = true
+goto end_branch_13
+} else {
+
+}
+}
+{
+__t13 = false
+}
+end_branch_13:
+return gopurs_runtime.Bool(__t13)
+})
+}))
+}), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t20 uint32
+{
+if (uint32(x_2.IntVal) == 3908053364) {
+var __t14 uint32
+{
+if (uint32(y_3.IntVal) == 3908053364) {
+__t14 = 902936544
+goto end_branch_14
+} else {
+
+}
+}
+{
+__t14 = 1527465420
+}
+end_branch_14:
+__t20 = __t14
+goto end_branch_20
+} else {
+
+}
+}
+{
+if (uint32(y_3.IntVal) == 3908053364) {
+__t20 = 380165415
+goto end_branch_20
+} else {
+
+}
+}
+{
+if (uint32(x_2.IntVal) == 217821258) {
+var __t15 uint32
+{
+if (uint32(y_3.IntVal) == 217821258) {
+__t15 = 902936544
+goto end_branch_15
+} else {
+
+}
+}
+{
+__t15 = 1527465420
+}
+end_branch_15:
+__t20 = __t15
+goto end_branch_20
+} else {
+
+}
+}
+{
+if (uint32(y_3.IntVal) == 217821258) {
+__t20 = 380165415
+goto end_branch_20
+} else {
+
+}
+}
+{
+if (uint32(x_2.IntVal) == 1292308612) {
+var __t16 uint32
+{
+if (uint32(y_3.IntVal) == 1292308612) {
+__t16 = 902936544
+goto end_branch_16
+} else {
+
+}
+}
+{
+__t16 = 1527465420
+}
+end_branch_16:
+__t20 = __t16
+goto end_branch_20
+} else {
+
+}
+}
+{
+if (uint32(y_3.IntVal) == 1292308612) {
+__t20 = 380165415
+goto end_branch_20
+} else {
+
+}
+}
+{
+if (uint32(x_2.IntVal) == 2311060696) {
+var __t17 uint32
+{
+if (uint32(y_3.IntVal) == 2311060696) {
+__t17 = 902936544
+goto end_branch_17
+} else {
+
+}
+}
+{
+__t17 = 1527465420
+}
+end_branch_17:
+__t20 = __t17
+goto end_branch_20
+} else {
+
+}
+}
+{
+if (uint32(y_3.IntVal) == 2311060696) {
+__t20 = 380165415
+goto end_branch_20
+} else {
+
+}
+}
+{
+if (uint32(x_2.IntVal) == 401302776) {
+var __t18 uint32
+{
+if (uint32(y_3.IntVal) == 401302776) {
+__t18 = 902936544
+goto end_branch_18
+} else {
+
+}
+}
+{
+__t18 = 1527465420
+}
+end_branch_18:
+__t20 = __t18
+goto end_branch_20
+} else {
+
+}
+}
+{
+if (uint32(y_3.IntVal) == 401302776) {
+__t20 = 380165415
+goto end_branch_20
+} else {
+
+}
+}
+{
+if (uint32(x_2.IntVal) == 3327533908) {
+var __t19 uint32
+{
+if (uint32(y_3.IntVal) == 3327533908) {
+__t19 = 902936544
+goto end_branch_19
+} else {
+
+}
+}
+{
+__t19 = 1527465420
+}
+end_branch_19:
+__t20 = __t19
+goto end_branch_20
+} else {
+
+}
+}
+{
+if (uint32(y_3.IntVal) == 3327533908) {
+__t20 = 380165415
+goto end_branch_20
+} else {
+
+}
+}
+{
+if ((uint32(x_2.IntVal) == 3631736139)) && ((uint32(y_3.IntVal) == 3631736139)) {
+__t20 = 902936544
+goto end_branch_20
+} else {
+
+}
+}
+{
+__t20 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
+}
+end_branch_20:
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t20), UnsafePtr: nil}
+})
+})), Get_Data_Ord_ordNumber()), "compare"), gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](x_0))}, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](y_1))}).IntVal)), UnsafePtr: nil}
 })
 }))
 	})

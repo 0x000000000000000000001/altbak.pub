@@ -674,8 +674,35 @@ _ = dictFoldable1_0
 Foldable0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Foldable_Foldable](gopurs_runtime.Apply(gopurs_runtime.Box(dictFoldable1_0.V0), gopurs_runtime.Value{}))
 _ = Foldable0_1_0
 return gopurs_runtime.Func(func(splice_2 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): Semigroup0_3_3 -> *Constructor_Data_Semigroup_Semigroup
+Semigroup0_3_3 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Monoid_monoidString(), "Semigroup0"), gopurs_runtime.Value{}))
+_ = Semigroup0_3_3
+// TAST (Let): __local_var_3_2 -> gopurs_runtime.Value
+__local_var_3_2 := gopurs_runtime.Func(func(xs_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordGet(gopurs_runtime.Apply3(gopurs_runtime.Box(Foldable0_1_0.V1), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t4 gopurs_runtime.Value
+{
+if (gopurs_runtime.RecordGet(v_5, "init").IntVal) != (0) {
+__t4 = gopurs_runtime.RecordDict2("acc", "init", v1_6, gopurs_runtime.Bool(false))
+goto end_branch_4
+} else {
+
+}
+}
+{
+__t4 = gopurs_runtime.RecordDict2("acc", "init", gopurs_runtime.Apply2(gopurs_runtime.Box(Semigroup0_3_3.V0), gopurs_runtime.RecordGet(v_5, "acc"), gopurs_runtime.Apply2(gopurs_runtime.Box(Semigroup0_3_3.V0), gopurs_runtime.Str(splice_2.StrVal()), v1_6)), gopurs_runtime.Bool(false))
+}
+end_branch_4:
+return __t4
+})
+}), gopurs_runtime.RecordDict2("acc", "init", gopurs_runtime.RecordGet(Get_Data_Monoid_monoidString(), "mempty"), gopurs_runtime.Bool(true)), xs_4), "acc")
+})
+_ = __local_var_3_2
 // TAST (Let): __local_var_3_1 -> gopurs_runtime.Value
-__local_var_3_1 := Call_Data_String_NonEmpty_Internal_joinWith(Foldable0_1_0, splice_2.StrVal())
+__local_var_3_1 := gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_3_2, x_4)
+})
 _ = __local_var_3_1
 return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_3_1, x_4)

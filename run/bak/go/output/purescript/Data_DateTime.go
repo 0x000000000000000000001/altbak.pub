@@ -114,7 +114,11 @@ var once_Data_DateTime_ordDateTime sync.Once
 func Get_Data_DateTime_ordDateTime() gopurs_runtime.Value {
 	once_Data_DateTime_ordDateTime.Do(func() {
 		cache_Data_DateTime_ordDateTime = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_DateTime_eqDateTime()
+return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool(((gopurs_runtime.Apply2(Get_Data_Eq_eq__1204755874(), gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer((*Constructor_Data_DateTime_DateTime)(x_1.UnsafePtr).V0)}, gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer((*Constructor_Data_DateTime_DateTime)(y_2.UnsafePtr).V0)}).IntVal) != (0)) && ((gopurs_runtime.Apply2(Get_Data_Eq_eq__1287514754(), gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer((*Constructor_Data_DateTime_DateTime)(x_1.UnsafePtr).V1)}, gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer((*Constructor_Data_DateTime_DateTime)(y_2.UnsafePtr).V1)}).IntVal) != (0)))
+})
+}))
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_1 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): v_2_0 -> gopurs_runtime.Value
@@ -175,7 +179,41 @@ var once_Data_DateTime_boundedDateTime sync.Once
 func Get_Data_DateTime_boundedDateTime() gopurs_runtime.Value {
 	once_Data_DateTime_boundedDateTime.Do(func() {
 		cache_Data_DateTime_boundedDateTime = gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_DateTime_ordDateTime()
+return gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool(((gopurs_runtime.Apply2(Get_Data_Eq_eq__1204755874(), gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer((*Constructor_Data_DateTime_DateTime)(x_2.UnsafePtr).V0)}, gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer((*Constructor_Data_DateTime_DateTime)(y_3.UnsafePtr).V0)}).IntVal) != (0)) && ((gopurs_runtime.Apply2(Get_Data_Eq_eq__1287514754(), gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer((*Constructor_Data_DateTime_DateTime)(x_2.UnsafePtr).V1)}, gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer((*Constructor_Data_DateTime_DateTime)(y_3.UnsafePtr).V1)}).IntVal) != (0)))
+})
+}))
+}), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_2 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): v_3_0 -> gopurs_runtime.Value
+v_3_0 := gopurs_runtime.Apply2(Get_Data_Ord_compare__146529112(), gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer((*Constructor_Data_DateTime_DateTime)(x_1.UnsafePtr).V0)}, gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer((*Constructor_Data_DateTime_DateTime)(y_2.UnsafePtr).V0)})
+_ = v_3_0
+var __t1 uint32
+{
+if (uint32(v_3_0.IntVal) == 1527465420) {
+__t1 = 1527465420
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (uint32(v_3_0.IntVal) == 380165415) {
+__t1 = 380165415
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = uint32(gopurs_runtime.Apply2(Get_Data_Ord_compare__463614392(), gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer((*Constructor_Data_DateTime_DateTime)(x_1.UnsafePtr).V1)}, gopurs_runtime.Value{Type: 9, IntVal: 922918650, UnsafePtr: unsafe.Pointer((*Constructor_Data_DateTime_DateTime)(y_2.UnsafePtr).V1)}).IntVal)
+}
+end_branch_1:
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t1), UnsafePtr: nil}
+})
+}))
 }), gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(&Constructor_Data_DateTime_DateTime{1, gopurs_runtime.CoerceToStruct[Constructor_Data_Date_Date](gopurs_runtime.RecordGet(Get_Data_Date_boundedDate(), "bottom")), gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Time](gopurs_runtime.RecordGet(Get_Data_Time_boundedTime(), "bottom"))})}, gopurs_runtime.Value{Type: 9, IntVal: 1665554298, UnsafePtr: unsafe.Pointer(&Constructor_Data_DateTime_DateTime{1, gopurs_runtime.CoerceToStruct[Constructor_Data_Date_Date](gopurs_runtime.RecordGet(Get_Data_Date_boundedDate(), "top")), gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Time](gopurs_runtime.RecordGet(Get_Data_Time_boundedTime(), "top"))})})
 	})
 	return cache_Data_DateTime_boundedDateTime

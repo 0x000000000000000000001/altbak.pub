@@ -232,8 +232,8 @@ var cache_Data_Profunctor_lcmap__351678174 gopurs_runtime.Value
 var once_Data_Profunctor_lcmap__351678174 sync.Once
 func Get_Data_Profunctor_lcmap__351678174() gopurs_runtime.Value {
 	once_Data_Profunctor_lcmap__351678174.Do(func() {
-		cache_Data_Profunctor_lcmap__351678174 = gopurs_runtime.Func(func(a2b_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Profunctor_lcmap__351678174(a2b_0_box)
+		cache_Data_Profunctor_lcmap__351678174 = gopurs_runtime.Func3(func(a2b_0_box gopurs_runtime.Value, b2c_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Data_Profunctor_lcmap__351678174(a2b_0_box, b2c_1_box, x_2_box)
 })
 	})
 	return cache_Data_Profunctor_lcmap__351678174
@@ -446,12 +446,14 @@ return x_2
 }))
 }
 
-func Call_Data_Profunctor_lcmap__351678174(a2b_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_Data_Profunctor_lcmap__351678174(a2b_0_loop gopurs_runtime.Value, b2c_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var a2b_0 gopurs_runtime.Value = a2b_0_loop
 _ = a2b_0
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Profunctor_profunctorFn(), "dimap"), a2b_0, gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_1
-}))
+var b2c_1 gopurs_runtime.Value = b2c_1_loop
+_ = b2c_1
+var x_2 gopurs_runtime.Value = x_2_loop
+_ = x_2
+return gopurs_runtime.Apply(b2c_1, gopurs_runtime.Apply(a2b_0, x_2))
 }
 
 func Call_Data_Profunctor_rmap__1762133278(dictProfunctor_0_loop *Constructor_Data_Profunctor_Profunctor, b2c_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

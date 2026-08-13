@@ -223,7 +223,9 @@ var once_Data_Time_Component_boundedEnumSecond sync.Once
 func Get_Data_Time_Component_boundedEnumSecond() gopurs_runtime.Value {
 	once_Data_Time_Component_boundedEnumSecond.Do(func() {
 		cache_Data_Time_Component_boundedEnumSecond = gopurs_runtime.RecordDict5("Bounded0", "Enum1", "cardinality", "fromEnum", "toEnum", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Time_Component_boundedSecond()
+return gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_Data_Time_Component_ordSecond()
+}), gopurs_runtime.Int(0), gopurs_runtime.Int(59))
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Time_Component_enumSecond()
 }), gopurs_runtime.Int(60), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -286,9 +288,103 @@ func Get_Data_Time_Component_enumSecond() gopurs_runtime.Value {
 		cache_Data_Time_Component_enumSecond = gopurs_runtime.RecordDict3("Ord0", "pred", "succ", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Time_Component_ordSecond()
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Component_boundedEnumSecond(), "toEnum"), gopurs_runtime.Int((gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Component_boundedEnumSecond(), "fromEnum"), x_0).IntVal) - (1)))
+// TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
+__local_var_1_0 := gopurs_runtime.Int((gopurs_runtime.Int(x_0.IntVal).IntVal) - (1))
+_ = __local_var_1_0
+var __t4 *Constructor_Data_Maybe_Just
+{
+var __t1 bool
+{
+if (__local_var_1_0.IntVal) < (0) {
+__t1 = false
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = true
+}
+end_branch_1:
+var __t_and_3 bool = false
+if __t1 {
+
+var __t2 bool
+{
+if (__local_var_1_0.IntVal) > (59) {
+__t2 = false
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = true
+}
+end_branch_2:
+__t_and_3 = __t2
+}
+if __t_and_3 {
+__t4 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Int(__local_var_1_0.IntVal)}
+goto end_branch_4
+} else {
+
+}
+}
+{
+__t4 = (*Constructor_Data_Maybe_Just)(nil)
+}
+end_branch_4:
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t4)}
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Component_boundedEnumSecond(), "toEnum"), gopurs_runtime.Int((gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Component_boundedEnumSecond(), "fromEnum"), x_0).IntVal) + (1)))
+// TAST (Let): __local_var_1_5 -> gopurs_runtime.Value
+__local_var_1_5 := gopurs_runtime.Int((x_0.IntVal) + (1))
+_ = __local_var_1_5
+var __t9 *Constructor_Data_Maybe_Just
+{
+var __t6 bool
+{
+if (__local_var_1_5.IntVal) < (0) {
+__t6 = false
+goto end_branch_6
+} else {
+
+}
+}
+{
+__t6 = true
+}
+end_branch_6:
+var __t_and_8 bool = false
+if __t6 {
+
+var __t7 bool
+{
+if (__local_var_1_5.IntVal) > (59) {
+__t7 = false
+goto end_branch_7
+} else {
+
+}
+}
+{
+__t7 = true
+}
+end_branch_7:
+__t_and_8 = __t7
+}
+if __t_and_8 {
+__t9 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Int(__local_var_1_5.IntVal)}
+goto end_branch_9
+} else {
+
+}
+}
+{
+__t9 = (*Constructor_Data_Maybe_Just)(nil)
+}
+end_branch_9:
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t9)}
 }))
 	})
 	return cache_Data_Time_Component_enumSecond
@@ -299,7 +395,9 @@ var once_Data_Time_Component_boundedEnumMinute sync.Once
 func Get_Data_Time_Component_boundedEnumMinute() gopurs_runtime.Value {
 	once_Data_Time_Component_boundedEnumMinute.Do(func() {
 		cache_Data_Time_Component_boundedEnumMinute = gopurs_runtime.RecordDict5("Bounded0", "Enum1", "cardinality", "fromEnum", "toEnum", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Time_Component_boundedMinute()
+return gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_Data_Time_Component_ordMinute()
+}), gopurs_runtime.Int(0), gopurs_runtime.Int(59))
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Time_Component_enumMinute()
 }), gopurs_runtime.Int(60), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -362,9 +460,103 @@ func Get_Data_Time_Component_enumMinute() gopurs_runtime.Value {
 		cache_Data_Time_Component_enumMinute = gopurs_runtime.RecordDict3("Ord0", "pred", "succ", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Time_Component_ordMinute()
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Component_boundedEnumMinute(), "toEnum"), gopurs_runtime.Int((gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Component_boundedEnumMinute(), "fromEnum"), x_0).IntVal) - (1)))
+// TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
+__local_var_1_0 := gopurs_runtime.Int((gopurs_runtime.Int(x_0.IntVal).IntVal) - (1))
+_ = __local_var_1_0
+var __t4 *Constructor_Data_Maybe_Just
+{
+var __t1 bool
+{
+if (__local_var_1_0.IntVal) < (0) {
+__t1 = false
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = true
+}
+end_branch_1:
+var __t_and_3 bool = false
+if __t1 {
+
+var __t2 bool
+{
+if (__local_var_1_0.IntVal) > (59) {
+__t2 = false
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = true
+}
+end_branch_2:
+__t_and_3 = __t2
+}
+if __t_and_3 {
+__t4 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Int(__local_var_1_0.IntVal)}
+goto end_branch_4
+} else {
+
+}
+}
+{
+__t4 = (*Constructor_Data_Maybe_Just)(nil)
+}
+end_branch_4:
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t4)}
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Component_boundedEnumMinute(), "toEnum"), gopurs_runtime.Int((gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Component_boundedEnumMinute(), "fromEnum"), x_0).IntVal) + (1)))
+// TAST (Let): __local_var_1_5 -> gopurs_runtime.Value
+__local_var_1_5 := gopurs_runtime.Int((x_0.IntVal) + (1))
+_ = __local_var_1_5
+var __t9 *Constructor_Data_Maybe_Just
+{
+var __t6 bool
+{
+if (__local_var_1_5.IntVal) < (0) {
+__t6 = false
+goto end_branch_6
+} else {
+
+}
+}
+{
+__t6 = true
+}
+end_branch_6:
+var __t_and_8 bool = false
+if __t6 {
+
+var __t7 bool
+{
+if (__local_var_1_5.IntVal) > (59) {
+__t7 = false
+goto end_branch_7
+} else {
+
+}
+}
+{
+__t7 = true
+}
+end_branch_7:
+__t_and_8 = __t7
+}
+if __t_and_8 {
+__t9 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Int(__local_var_1_5.IntVal)}
+goto end_branch_9
+} else {
+
+}
+}
+{
+__t9 = (*Constructor_Data_Maybe_Just)(nil)
+}
+end_branch_9:
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t9)}
 }))
 	})
 	return cache_Data_Time_Component_enumMinute
@@ -375,7 +567,9 @@ var once_Data_Time_Component_boundedEnumMillisecond sync.Once
 func Get_Data_Time_Component_boundedEnumMillisecond() gopurs_runtime.Value {
 	once_Data_Time_Component_boundedEnumMillisecond.Do(func() {
 		cache_Data_Time_Component_boundedEnumMillisecond = gopurs_runtime.RecordDict5("Bounded0", "Enum1", "cardinality", "fromEnum", "toEnum", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Time_Component_boundedMillisecond()
+return gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_Data_Time_Component_ordMillisecond()
+}), gopurs_runtime.Int(0), gopurs_runtime.Int(999))
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Time_Component_enumMillisecond()
 }), gopurs_runtime.Int(1000), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -438,9 +632,103 @@ func Get_Data_Time_Component_enumMillisecond() gopurs_runtime.Value {
 		cache_Data_Time_Component_enumMillisecond = gopurs_runtime.RecordDict3("Ord0", "pred", "succ", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Time_Component_ordMillisecond()
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Component_boundedEnumMillisecond(), "toEnum"), gopurs_runtime.Int((gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Component_boundedEnumMillisecond(), "fromEnum"), x_0).IntVal) - (1)))
+// TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
+__local_var_1_0 := gopurs_runtime.Int((gopurs_runtime.Int(x_0.IntVal).IntVal) - (1))
+_ = __local_var_1_0
+var __t4 *Constructor_Data_Maybe_Just
+{
+var __t1 bool
+{
+if (__local_var_1_0.IntVal) < (0) {
+__t1 = false
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = true
+}
+end_branch_1:
+var __t_and_3 bool = false
+if __t1 {
+
+var __t2 bool
+{
+if (__local_var_1_0.IntVal) > (999) {
+__t2 = false
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = true
+}
+end_branch_2:
+__t_and_3 = __t2
+}
+if __t_and_3 {
+__t4 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Int(__local_var_1_0.IntVal)}
+goto end_branch_4
+} else {
+
+}
+}
+{
+__t4 = (*Constructor_Data_Maybe_Just)(nil)
+}
+end_branch_4:
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t4)}
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Component_boundedEnumMillisecond(), "toEnum"), gopurs_runtime.Int((gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Component_boundedEnumMillisecond(), "fromEnum"), x_0).IntVal) + (1)))
+// TAST (Let): __local_var_1_5 -> gopurs_runtime.Value
+__local_var_1_5 := gopurs_runtime.Int((x_0.IntVal) + (1))
+_ = __local_var_1_5
+var __t9 *Constructor_Data_Maybe_Just
+{
+var __t6 bool
+{
+if (__local_var_1_5.IntVal) < (0) {
+__t6 = false
+goto end_branch_6
+} else {
+
+}
+}
+{
+__t6 = true
+}
+end_branch_6:
+var __t_and_8 bool = false
+if __t6 {
+
+var __t7 bool
+{
+if (__local_var_1_5.IntVal) > (999) {
+__t7 = false
+goto end_branch_7
+} else {
+
+}
+}
+{
+__t7 = true
+}
+end_branch_7:
+__t_and_8 = __t7
+}
+if __t_and_8 {
+__t9 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Int(__local_var_1_5.IntVal)}
+goto end_branch_9
+} else {
+
+}
+}
+{
+__t9 = (*Constructor_Data_Maybe_Just)(nil)
+}
+end_branch_9:
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t9)}
 }))
 	})
 	return cache_Data_Time_Component_enumMillisecond
@@ -451,7 +739,9 @@ var once_Data_Time_Component_boundedEnumHour sync.Once
 func Get_Data_Time_Component_boundedEnumHour() gopurs_runtime.Value {
 	once_Data_Time_Component_boundedEnumHour.Do(func() {
 		cache_Data_Time_Component_boundedEnumHour = gopurs_runtime.RecordDict5("Bounded0", "Enum1", "cardinality", "fromEnum", "toEnum", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Time_Component_boundedHour()
+return gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_Data_Time_Component_ordHour()
+}), gopurs_runtime.Int(0), gopurs_runtime.Int(23))
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Time_Component_enumHour()
 }), gopurs_runtime.Int(24), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -514,9 +804,103 @@ func Get_Data_Time_Component_enumHour() gopurs_runtime.Value {
 		cache_Data_Time_Component_enumHour = gopurs_runtime.RecordDict3("Ord0", "pred", "succ", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Time_Component_ordHour()
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Component_boundedEnumHour(), "toEnum"), gopurs_runtime.Int((gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Component_boundedEnumHour(), "fromEnum"), x_0).IntVal) - (1)))
+// TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
+__local_var_1_0 := gopurs_runtime.Int((gopurs_runtime.Int(x_0.IntVal).IntVal) - (1))
+_ = __local_var_1_0
+var __t4 *Constructor_Data_Maybe_Just
+{
+var __t1 bool
+{
+if (__local_var_1_0.IntVal) < (0) {
+__t1 = false
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = true
+}
+end_branch_1:
+var __t_and_3 bool = false
+if __t1 {
+
+var __t2 bool
+{
+if (__local_var_1_0.IntVal) > (23) {
+__t2 = false
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = true
+}
+end_branch_2:
+__t_and_3 = __t2
+}
+if __t_and_3 {
+__t4 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Int(__local_var_1_0.IntVal)}
+goto end_branch_4
+} else {
+
+}
+}
+{
+__t4 = (*Constructor_Data_Maybe_Just)(nil)
+}
+end_branch_4:
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t4)}
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Component_boundedEnumHour(), "toEnum"), gopurs_runtime.Int((gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Time_Component_boundedEnumHour(), "fromEnum"), x_0).IntVal) + (1)))
+// TAST (Let): __local_var_1_5 -> gopurs_runtime.Value
+__local_var_1_5 := gopurs_runtime.Int((x_0.IntVal) + (1))
+_ = __local_var_1_5
+var __t9 *Constructor_Data_Maybe_Just
+{
+var __t6 bool
+{
+if (__local_var_1_5.IntVal) < (0) {
+__t6 = false
+goto end_branch_6
+} else {
+
+}
+}
+{
+__t6 = true
+}
+end_branch_6:
+var __t_and_8 bool = false
+if __t6 {
+
+var __t7 bool
+{
+if (__local_var_1_5.IntVal) > (23) {
+__t7 = false
+goto end_branch_7
+} else {
+
+}
+}
+{
+__t7 = true
+}
+end_branch_7:
+__t_and_8 = __t7
+}
+if __t_and_8 {
+__t9 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Int(__local_var_1_5.IntVal)}
+goto end_branch_9
+} else {
+
+}
+}
+{
+__t9 = (*Constructor_Data_Maybe_Just)(nil)
+}
+end_branch_9:
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t9)}
 }))
 	})
 	return cache_Data_Time_Component_enumHour

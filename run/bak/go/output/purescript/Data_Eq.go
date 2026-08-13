@@ -1514,7 +1514,7 @@ var x_0 float64 = x_0_loop
 _ = x_0
 var y_1 float64 = y_1_loop
 _ = y_1
-return ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Eq_eqNumber(), "eq"), gopurs_runtime.Float(x_0), gopurs_runtime.Float(y_1)).IntVal) != (0)) != (true)
+return ((x_0) == (y_1)) != (true)
 }
 
 func Call_Data_Eq_notEq__2384498378(dictEq_0_loop *Constructor_Data_Eq_Eq, x_1_loop gopurs_runtime.Value, y_2_loop gopurs_runtime.Value) bool {

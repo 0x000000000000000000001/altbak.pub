@@ -421,8 +421,21 @@ _ = dictMonoid_0
 // TAST (Let): mempty_1_0 -> gopurs_runtime.Value
 mempty_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_Effect_monoidEffect(), dictMonoid_0), "mempty")
 _ = mempty_1_0
+// TAST (Let): semigroupEffect_2_2 -> *Constructor_Data_Semigroup_Semigroup
+semigroupEffect_2_2 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](gopurs_runtime.Apply(Get_Effect_semigroupEffect(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{})))
+_ = semigroupEffect_2_2
 // TAST (Let): semigroupEffectFn91_2_1 -> gopurs_runtime.Value
-semigroupEffectFn91_2_1 := Call_Effect_Uncurried_semigroupEffectFn9(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
+semigroupEffectFn91_2_1 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f2_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func9(func(__local_var_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value, __local_var_7 gopurs_runtime.Value, __local_var_8 gopurs_runtime.Value, __local_var_9 gopurs_runtime.Value, __local_var_10 gopurs_runtime.Value, __local_var_11 gopurs_runtime.Value, __local_var_12 gopurs_runtime.Value, __local_var_13 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.Apply2(gopurs_runtime.Box(semigroupEffect_2_2.V0), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UncurriedApp(f1_3, __local_var_5, __local_var_6, __local_var_7, __local_var_8, __local_var_9, __local_var_10, __local_var_11, __local_var_12, __local_var_13)
+}), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UncurriedApp(f2_4, __local_var_5, __local_var_6, __local_var_7, __local_var_8, __local_var_9, __local_var_10, __local_var_11, __local_var_12, __local_var_13)
+})), gopurs_runtime.Value{})
+})
+})
+}))
 _ = semigroupEffectFn91_2_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEffectFn91_2_1
@@ -437,8 +450,21 @@ _ = dictMonoid_0
 // TAST (Let): mempty_1_0 -> gopurs_runtime.Value
 mempty_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_Effect_monoidEffect(), dictMonoid_0), "mempty")
 _ = mempty_1_0
+// TAST (Let): semigroupEffect_2_2 -> *Constructor_Data_Semigroup_Semigroup
+semigroupEffect_2_2 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](gopurs_runtime.Apply(Get_Effect_semigroupEffect(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{})))
+_ = semigroupEffect_2_2
 // TAST (Let): semigroupEffectFn81_2_1 -> gopurs_runtime.Value
-semigroupEffectFn81_2_1 := Call_Effect_Uncurried_semigroupEffectFn8(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
+semigroupEffectFn81_2_1 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f2_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func8(func(__local_var_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value, __local_var_7 gopurs_runtime.Value, __local_var_8 gopurs_runtime.Value, __local_var_9 gopurs_runtime.Value, __local_var_10 gopurs_runtime.Value, __local_var_11 gopurs_runtime.Value, __local_var_12 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.Apply2(gopurs_runtime.Box(semigroupEffect_2_2.V0), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UncurriedApp(f1_3, __local_var_5, __local_var_6, __local_var_7, __local_var_8, __local_var_9, __local_var_10, __local_var_11, __local_var_12)
+}), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UncurriedApp(f2_4, __local_var_5, __local_var_6, __local_var_7, __local_var_8, __local_var_9, __local_var_10, __local_var_11, __local_var_12)
+})), gopurs_runtime.Value{})
+})
+})
+}))
 _ = semigroupEffectFn81_2_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEffectFn81_2_1
@@ -453,8 +479,21 @@ _ = dictMonoid_0
 // TAST (Let): mempty_1_0 -> gopurs_runtime.Value
 mempty_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_Effect_monoidEffect(), dictMonoid_0), "mempty")
 _ = mempty_1_0
+// TAST (Let): semigroupEffect_2_2 -> *Constructor_Data_Semigroup_Semigroup
+semigroupEffect_2_2 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](gopurs_runtime.Apply(Get_Effect_semigroupEffect(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{})))
+_ = semigroupEffect_2_2
 // TAST (Let): semigroupEffectFn71_2_1 -> gopurs_runtime.Value
-semigroupEffectFn71_2_1 := Call_Effect_Uncurried_semigroupEffectFn7(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
+semigroupEffectFn71_2_1 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f2_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func7(func(__local_var_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value, __local_var_7 gopurs_runtime.Value, __local_var_8 gopurs_runtime.Value, __local_var_9 gopurs_runtime.Value, __local_var_10 gopurs_runtime.Value, __local_var_11 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.Apply2(gopurs_runtime.Box(semigroupEffect_2_2.V0), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UncurriedApp(f1_3, __local_var_5, __local_var_6, __local_var_7, __local_var_8, __local_var_9, __local_var_10, __local_var_11)
+}), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UncurriedApp(f2_4, __local_var_5, __local_var_6, __local_var_7, __local_var_8, __local_var_9, __local_var_10, __local_var_11)
+})), gopurs_runtime.Value{})
+})
+})
+}))
 _ = semigroupEffectFn71_2_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEffectFn71_2_1
@@ -469,8 +508,21 @@ _ = dictMonoid_0
 // TAST (Let): mempty_1_0 -> gopurs_runtime.Value
 mempty_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_Effect_monoidEffect(), dictMonoid_0), "mempty")
 _ = mempty_1_0
+// TAST (Let): semigroupEffect_2_2 -> *Constructor_Data_Semigroup_Semigroup
+semigroupEffect_2_2 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](gopurs_runtime.Apply(Get_Effect_semigroupEffect(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{})))
+_ = semigroupEffect_2_2
 // TAST (Let): semigroupEffectFn61_2_1 -> gopurs_runtime.Value
-semigroupEffectFn61_2_1 := Call_Effect_Uncurried_semigroupEffectFn6(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
+semigroupEffectFn61_2_1 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f2_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func6(func(__local_var_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value, __local_var_7 gopurs_runtime.Value, __local_var_8 gopurs_runtime.Value, __local_var_9 gopurs_runtime.Value, __local_var_10 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.Apply2(gopurs_runtime.Box(semigroupEffect_2_2.V0), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UncurriedApp(f1_3, __local_var_5, __local_var_6, __local_var_7, __local_var_8, __local_var_9, __local_var_10)
+}), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UncurriedApp(f2_4, __local_var_5, __local_var_6, __local_var_7, __local_var_8, __local_var_9, __local_var_10)
+})), gopurs_runtime.Value{})
+})
+})
+}))
 _ = semigroupEffectFn61_2_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEffectFn61_2_1
@@ -485,8 +537,21 @@ _ = dictMonoid_0
 // TAST (Let): mempty_1_0 -> gopurs_runtime.Value
 mempty_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_Effect_monoidEffect(), dictMonoid_0), "mempty")
 _ = mempty_1_0
+// TAST (Let): semigroupEffect_2_2 -> *Constructor_Data_Semigroup_Semigroup
+semigroupEffect_2_2 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](gopurs_runtime.Apply(Get_Effect_semigroupEffect(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{})))
+_ = semigroupEffect_2_2
 // TAST (Let): semigroupEffectFn51_2_1 -> gopurs_runtime.Value
-semigroupEffectFn51_2_1 := Call_Effect_Uncurried_semigroupEffectFn5(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
+semigroupEffectFn51_2_1 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f2_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func5(func(__local_var_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value, __local_var_7 gopurs_runtime.Value, __local_var_8 gopurs_runtime.Value, __local_var_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.Apply2(gopurs_runtime.Box(semigroupEffect_2_2.V0), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UncurriedApp5(f1_3, __local_var_5, __local_var_6, __local_var_7, __local_var_8, __local_var_9)
+}), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UncurriedApp5(f2_4, __local_var_5, __local_var_6, __local_var_7, __local_var_8, __local_var_9)
+})), gopurs_runtime.Value{})
+})
+})
+}))
 _ = semigroupEffectFn51_2_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEffectFn51_2_1
@@ -501,8 +566,21 @@ _ = dictMonoid_0
 // TAST (Let): mempty_1_0 -> gopurs_runtime.Value
 mempty_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_Effect_monoidEffect(), dictMonoid_0), "mempty")
 _ = mempty_1_0
+// TAST (Let): semigroupEffect_2_2 -> *Constructor_Data_Semigroup_Semigroup
+semigroupEffect_2_2 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](gopurs_runtime.Apply(Get_Effect_semigroupEffect(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{})))
+_ = semigroupEffect_2_2
 // TAST (Let): semigroupEffectFn41_2_1 -> gopurs_runtime.Value
-semigroupEffectFn41_2_1 := Call_Effect_Uncurried_semigroupEffectFn4(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
+semigroupEffectFn41_2_1 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f2_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func4(func(__local_var_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value, __local_var_7 gopurs_runtime.Value, __local_var_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.Apply2(gopurs_runtime.Box(semigroupEffect_2_2.V0), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UncurriedApp4(f1_3, __local_var_5, __local_var_6, __local_var_7, __local_var_8)
+}), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UncurriedApp4(f2_4, __local_var_5, __local_var_6, __local_var_7, __local_var_8)
+})), gopurs_runtime.Value{})
+})
+})
+}))
 _ = semigroupEffectFn41_2_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEffectFn41_2_1
@@ -517,8 +595,21 @@ _ = dictMonoid_0
 // TAST (Let): mempty_1_0 -> gopurs_runtime.Value
 mempty_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_Effect_monoidEffect(), dictMonoid_0), "mempty")
 _ = mempty_1_0
+// TAST (Let): semigroupEffect_2_2 -> *Constructor_Data_Semigroup_Semigroup
+semigroupEffect_2_2 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](gopurs_runtime.Apply(Get_Effect_semigroupEffect(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{})))
+_ = semigroupEffect_2_2
 // TAST (Let): semigroupEffectFn31_2_1 -> gopurs_runtime.Value
-semigroupEffectFn31_2_1 := Call_Effect_Uncurried_semigroupEffectFn3(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
+semigroupEffectFn31_2_1 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f2_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func3(func(__local_var_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value, __local_var_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.Apply2(gopurs_runtime.Box(semigroupEffect_2_2.V0), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UncurriedApp3(f1_3, __local_var_5, __local_var_6, __local_var_7)
+}), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UncurriedApp3(f2_4, __local_var_5, __local_var_6, __local_var_7)
+})), gopurs_runtime.Value{})
+})
+})
+}))
 _ = semigroupEffectFn31_2_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEffectFn31_2_1
@@ -533,8 +624,21 @@ _ = dictMonoid_0
 // TAST (Let): mempty_1_0 -> gopurs_runtime.Value
 mempty_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_Effect_monoidEffect(), dictMonoid_0), "mempty")
 _ = mempty_1_0
+// TAST (Let): semigroupEffect_2_2 -> *Constructor_Data_Semigroup_Semigroup
+semigroupEffect_2_2 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](gopurs_runtime.Apply(Get_Effect_semigroupEffect(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{})))
+_ = semigroupEffect_2_2
 // TAST (Let): semigroupEffectFn21_2_1 -> gopurs_runtime.Value
-semigroupEffectFn21_2_1 := Call_Effect_Uncurried_semigroupEffectFn2(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
+semigroupEffectFn21_2_1 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f2_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func2(func(__local_var_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.Apply2(gopurs_runtime.Box(semigroupEffect_2_2.V0), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UncurriedApp2(f1_3, __local_var_5, __local_var_6)
+}), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UncurriedApp2(f2_4, __local_var_5, __local_var_6)
+})), gopurs_runtime.Value{})
+})
+})
+}))
 _ = semigroupEffectFn21_2_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEffectFn21_2_1
@@ -549,8 +653,21 @@ _ = dictMonoid_0
 // TAST (Let): mempty_1_0 -> gopurs_runtime.Value
 mempty_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_Effect_monoidEffect(), dictMonoid_0), "mempty")
 _ = mempty_1_0
+// TAST (Let): semigroupEffect_2_2 -> *Constructor_Data_Semigroup_Semigroup
+semigroupEffect_2_2 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](gopurs_runtime.Apply(Get_Effect_semigroupEffect(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{})))
+_ = semigroupEffect_2_2
 // TAST (Let): semigroupEffectFn101_2_1 -> gopurs_runtime.Value
-semigroupEffectFn101_2_1 := Call_Effect_Uncurried_semigroupEffectFn10(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
+semigroupEffectFn101_2_1 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f2_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func10(func(__local_var_5 gopurs_runtime.Value, __local_var_6 gopurs_runtime.Value, __local_var_7 gopurs_runtime.Value, __local_var_8 gopurs_runtime.Value, __local_var_9 gopurs_runtime.Value, __local_var_10 gopurs_runtime.Value, __local_var_11 gopurs_runtime.Value, __local_var_12 gopurs_runtime.Value, __local_var_13 gopurs_runtime.Value, __local_var_14 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.Apply2(gopurs_runtime.Box(semigroupEffect_2_2.V0), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UncurriedApp(f1_3, __local_var_5, __local_var_6, __local_var_7, __local_var_8, __local_var_9, __local_var_10, __local_var_11, __local_var_12, __local_var_13, __local_var_14)
+}), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UncurriedApp(f2_4, __local_var_5, __local_var_6, __local_var_7, __local_var_8, __local_var_9, __local_var_10, __local_var_11, __local_var_12, __local_var_13, __local_var_14)
+})), gopurs_runtime.Value{})
+})
+})
+}))
 _ = semigroupEffectFn101_2_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEffectFn101_2_1
@@ -565,8 +682,21 @@ _ = dictMonoid_0
 // TAST (Let): mempty_1_0 -> gopurs_runtime.Value
 mempty_1_0 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(Get_Effect_monoidEffect(), dictMonoid_0), "mempty")
 _ = mempty_1_0
+// TAST (Let): semigroupEffect_2_2 -> *Constructor_Data_Semigroup_Semigroup
+semigroupEffect_2_2 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](gopurs_runtime.Apply(Get_Effect_semigroupEffect(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{})))
+_ = semigroupEffect_2_2
 // TAST (Let): semigroupEffectFn11_2_1 -> gopurs_runtime.Value
-semigroupEffectFn11_2_1 := Call_Effect_Uncurried_semigroupEffectFn1(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
+semigroupEffectFn11_2_1 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(f2_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(__local_var_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.Apply2(gopurs_runtime.Box(semigroupEffect_2_2.V0), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UncurriedApp(f1_3, __local_var_5)
+}), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UncurriedApp(f2_4, __local_var_5)
+})), gopurs_runtime.Value{})
+})
+})
+}))
 _ = semigroupEffectFn11_2_1
 return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEffectFn11_2_1

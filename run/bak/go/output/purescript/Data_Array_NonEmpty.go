@@ -3059,7 +3059,7 @@ func Call_Data_Array_NonEmpty_difference_prime(dictEq_0_loop *Constructor_Data_E
 var dictEq_0 *Constructor_Data_Eq_Eq = dictEq_0_loop
 _ = dictEq_0
 // TAST (Let): difference1_1_0 -> gopurs_runtime.Value
-difference1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Foldable_foldableArray(), "foldr"), gopurs_runtime.Apply(Get_Data_Array_delete(), gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(dictEq_0)}))
+difference1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Foldable_foldableArray(), "foldr"), gopurs_runtime.Apply(Get_Data_Array_deleteBy(), gopurs_runtime.Box(dictEq_0.V0)))
 _ = difference1_1_0
 return gopurs_runtime.Func(func(xs_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(difference1_1_0, gopurs_runtime.Array(func() []gopurs_runtime.Value {
@@ -3317,7 +3317,7 @@ _ = dictEq_0
 var xs_1 []gopurs_runtime.Value = xs_1_loop
 _ = xs_1
 // TAST (Let): __local_var_2_0 -> gopurs_runtime.Value
-__local_var_2_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Foldable_foldableArray(), "foldr"), gopurs_runtime.Apply(Get_Data_Array_delete(), gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(dictEq_0)}), gopurs_runtime.Array(xs_1))
+__local_var_2_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Foldable_foldableArray(), "foldr"), gopurs_runtime.Apply(Get_Data_Array_deleteBy(), gopurs_runtime.Box(dictEq_0.V0)), gopurs_runtime.Array(xs_1))
 _ = __local_var_2_0
 return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Array(func() []gopurs_runtime.Value {
@@ -4760,7 +4760,7 @@ func Call_Data_Array_NonEmpty_difference_prime__564981534(dictEq_0_loop *Constru
 var dictEq_0 *Constructor_Data_Eq_Eq = dictEq_0_loop
 _ = dictEq_0
 // TAST (Let): difference1_1_0 -> gopurs_runtime.Value
-difference1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Foldable_foldableArray(), "foldr"), gopurs_runtime.Apply(Get_Data_Array_delete(), gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(dictEq_0)}))
+difference1_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Foldable_foldableArray(), "foldr"), gopurs_runtime.Apply(Get_Data_Array_deleteBy(), gopurs_runtime.Box(dictEq_0.V0)))
 _ = difference1_1_0
 return gopurs_runtime.Func(func(xs_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(difference1_1_0, gopurs_runtime.Array(func() []gopurs_runtime.Value {

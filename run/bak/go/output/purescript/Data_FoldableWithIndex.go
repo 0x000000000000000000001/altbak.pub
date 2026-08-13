@@ -1095,57 +1095,116 @@ func Get_Data_FoldableWithIndex_foldableWithIndexArray__740253118() gopurs_runti
 		cache_Data_FoldableWithIndex_foldableWithIndexArray__740253118 = gopurs_runtime.RecordDict4("Foldable0", "foldMapWithIndex", "foldlWithIndex", "foldrWithIndex", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Foldable_foldableArray()
 }), gopurs_runtime.Func(func(dictMonoid_0 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): Semigroup0_1_0 -> *Constructor_Data_Semigroup_Semigroup
-Semigroup0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
-_ = Semigroup0_1_0
-// TAST (Let): mempty_2_1 -> gopurs_runtime.Value
-mempty_2_1 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
-_ = mempty_2_1
-return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_FoldableWithIndex_foldableWithIndexArray(), "foldrWithIndex"), gopurs_runtime.Func(func(i_4 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
+__local_var_1_0 := gopurs_runtime.RecordDict4("Foldable0", "foldMapWithIndex", "foldlWithIndex", "foldrWithIndex", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_Data_Foldable_foldableArray()
+}), gopurs_runtime.Func(func(dictMonoid_1 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): Semigroup0_2_1 -> *Constructor_Data_Semigroup_Semigroup
+Semigroup0_2_1 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_1, "Semigroup0"), gopurs_runtime.Value{}))
+_ = Semigroup0_2_1
+// TAST (Let): mempty_3_2 -> gopurs_runtime.Value
+mempty_3_2 := gopurs_runtime.RecordGet(dictMonoid_1, "mempty")
+_ = mempty_3_2
+return gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_FoldableWithIndex_foldableWithIndexArray(), "foldrWithIndex"), gopurs_runtime.Func(func(i_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(acc_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.Box(Semigroup0_2_1.V0), gopurs_runtime.Apply2(f_4, i_5, x_6), acc_7)
+})
+})
+}), mempty_3_2)
+})
+}), gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(z_2 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_3_3 -> gopurs_runtime.Value
+__local_var_3_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Foldable_foldableArray(), "foldl"), gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(f_1, gopurs_runtime.Int((*Constructor_Data_Tuple_Tuple)(v_4.UnsafePtr).V0.IntVal), y_3, (*Constructor_Data_Tuple_Tuple)(v_4.UnsafePtr).V1)
+})
+}), z_2)
+_ = __local_var_3_3
+// TAST (Let): __local_var_4_4 -> gopurs_runtime.Value
+__local_var_4_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_FunctorWithIndex_functorWithIndexArray(), "mapWithIndex"), Get_Data_Tuple_Tuple())
+_ = __local_var_4_4
 return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(acc_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.Box(Semigroup0_1_0.V0), gopurs_runtime.Apply2(f_3, i_4, x_5), acc_6)
+return gopurs_runtime.Apply(__local_var_3_3, gopurs_runtime.Apply(__local_var_4_4, x_5))
 })
 })
-}), mempty_2_1)
+}), gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(z_2 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_3_5 -> gopurs_runtime.Value
+__local_var_3_5 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Foldable_foldableArray(), "foldr"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_4_6 -> gopurs_runtime.Value
+__local_var_4_6 := (*Constructor_Data_Tuple_Tuple)(v_3.UnsafePtr).V0
+_ = __local_var_4_6
+// TAST (Let): __local_var_5_7 -> gopurs_runtime.Value
+__local_var_5_7 := (*Constructor_Data_Tuple_Tuple)(v_3.UnsafePtr).V1
+_ = __local_var_5_7
+return gopurs_runtime.Func(func(y_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(f_1, gopurs_runtime.Int(__local_var_4_6.IntVal), __local_var_5_7, y_6)
+})
+}), z_2)
+_ = __local_var_3_5
+// TAST (Let): __local_var_4_8 -> gopurs_runtime.Value
+__local_var_4_8 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_FunctorWithIndex_functorWithIndexArray(), "mapWithIndex"), Get_Data_Tuple_Tuple())
+_ = __local_var_4_8
+return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_3_5, gopurs_runtime.Apply(__local_var_4_8, x_5))
+})
+})
+}))
+_ = __local_var_1_0
+// TAST (Let): Semigroup0_2_9 -> *Constructor_Data_Semigroup_Semigroup
+Semigroup0_2_9 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_0, "Semigroup0"), gopurs_runtime.Value{}))
+_ = Semigroup0_2_9
+// TAST (Let): mempty_3_10 -> gopurs_runtime.Value
+mempty_3_10 := gopurs_runtime.RecordGet(dictMonoid_0, "mempty")
+_ = mempty_3_10
+return gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "foldrWithIndex"), gopurs_runtime.Func(func(i_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(acc_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.Box(Semigroup0_2_9.V0), gopurs_runtime.Apply2(f_4, i_5, x_6), acc_7)
+})
+})
+}), mempty_3_10)
 })
 }), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(z_1 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): __local_var_2_2 -> gopurs_runtime.Value
-__local_var_2_2 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Foldable_foldableArray(), "foldl"), gopurs_runtime.Func(func(y_2 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_2_11 -> gopurs_runtime.Value
+__local_var_2_11 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Foldable_foldableArray(), "foldl"), gopurs_runtime.Func(func(y_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply3(f_0, gopurs_runtime.Int((*Constructor_Data_Tuple_Tuple)(v_3.UnsafePtr).V0.IntVal), y_2, (*Constructor_Data_Tuple_Tuple)(v_3.UnsafePtr).V1)
 })
 }), z_1)
-_ = __local_var_2_2
-// TAST (Let): __local_var_3_3 -> gopurs_runtime.Value
-__local_var_3_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_FunctorWithIndex_functorWithIndexArray(), "mapWithIndex"), Get_Data_Tuple_Tuple())
-_ = __local_var_3_3
+_ = __local_var_2_11
+// TAST (Let): __local_var_3_12 -> gopurs_runtime.Value
+__local_var_3_12 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_FunctorWithIndex_functorWithIndexArray(), "mapWithIndex"), Get_Data_Tuple_Tuple())
+_ = __local_var_3_12
 return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_2_2, gopurs_runtime.Apply(__local_var_3_3, x_4))
+return gopurs_runtime.Apply(__local_var_2_11, gopurs_runtime.Apply(__local_var_3_12, x_4))
 })
 })
 }), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(z_1 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): __local_var_2_4 -> gopurs_runtime.Value
-__local_var_2_4 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Foldable_foldableArray(), "foldr"), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): __local_var_3_5 -> gopurs_runtime.Value
-__local_var_3_5 := (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V0
-_ = __local_var_3_5
-// TAST (Let): __local_var_4_6 -> gopurs_runtime.Value
-__local_var_4_6 := (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V1
-_ = __local_var_4_6
+// TAST (Let): __local_var_2_13 -> gopurs_runtime.Value
+__local_var_2_13 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Foldable_foldableArray(), "foldr"), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_3_14 -> gopurs_runtime.Value
+__local_var_3_14 := (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V0
+_ = __local_var_3_14
+// TAST (Let): __local_var_4_15 -> gopurs_runtime.Value
+__local_var_4_15 := (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V1
+_ = __local_var_4_15
 return gopurs_runtime.Func(func(y_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(f_0, gopurs_runtime.Int(__local_var_3_5.IntVal), __local_var_4_6, y_5)
+return gopurs_runtime.Apply3(f_0, gopurs_runtime.Int(__local_var_3_14.IntVal), __local_var_4_15, y_5)
 })
 }), z_1)
-_ = __local_var_2_4
-// TAST (Let): __local_var_3_7 -> gopurs_runtime.Value
-__local_var_3_7 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_FunctorWithIndex_functorWithIndexArray(), "mapWithIndex"), Get_Data_Tuple_Tuple())
-_ = __local_var_3_7
+_ = __local_var_2_13
+// TAST (Let): __local_var_3_16 -> gopurs_runtime.Value
+__local_var_3_16 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_FunctorWithIndex_functorWithIndexArray(), "mapWithIndex"), Get_Data_Tuple_Tuple())
+_ = __local_var_3_16
 return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_2_4, gopurs_runtime.Apply(__local_var_3_7, x_4))
+return gopurs_runtime.Apply(__local_var_2_13, gopurs_runtime.Apply(__local_var_3_16, x_4))
 })
 })
 }))
@@ -1851,16 +1910,34 @@ return gopurs_runtime.Apply(applySecond_1_0, gopurs_runtime.Apply(__local_var_5_
 func Call_Data_FoldableWithIndex_forWithIndex_(dictApplicative_0_loop *Constructor_Control_Applicative_Applicative) gopurs_runtime.Value {
 var dictApplicative_0 *Constructor_Control_Applicative_Applicative = dictApplicative_0_loop
 _ = dictApplicative_0
-// TAST (Let): traverseWithIndex_1_1_0 -> gopurs_runtime.Value
-traverseWithIndex_1_1_0 := Call_Data_FoldableWithIndex_traverseWithIndex_(dictApplicative_0)
-_ = traverseWithIndex_1_1_0
-return gopurs_runtime.Func(func(dictFoldableWithIndex_2 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): __local_var_3_1 -> gopurs_runtime.Value
-__local_var_3_1 := gopurs_runtime.Apply(traverseWithIndex_1_1_0, dictFoldableWithIndex_2)
-_ = __local_var_3_1
+// TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
+__local_var_1_1 := gopurs_runtime.Apply(gopurs_runtime.Box(dictApplicative_0.V0), gopurs_runtime.Value{})
+_ = __local_var_1_1
+// TAST (Let): Functor0_2_2 -> *Constructor_Data_Functor_Functor
+Functor0_2_2 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_1, "Functor0"), gopurs_runtime.Value{}))
+_ = Functor0_2_2
+// TAST (Let): applySecond_1_0 -> gopurs_runtime.Value
+applySecond_1_0 := gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(b_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(a_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(__local_var_3_1, a_5, b_4)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_1, "apply"), gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_2_2.V0), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_6
+})
+}), a_3), b_4)
+})
+})
+_ = applySecond_1_0
+return gopurs_runtime.Func(func(dictFoldableWithIndex_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(a_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictFoldableWithIndex_2, "foldrWithIndex"), gopurs_runtime.Func(func(i_5 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_6_3 -> gopurs_runtime.Value
+__local_var_6_3 := gopurs_runtime.Apply(a_4, i_5)
+_ = __local_var_6_3
+return gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(applySecond_1_0, gopurs_runtime.Apply(__local_var_6_3, x_7))
+})
+}), gopurs_runtime.Apply(gopurs_runtime.Box(dictApplicative_0.V1), Get_Data_Unit_unit()), b_3)
 })
 })
 })

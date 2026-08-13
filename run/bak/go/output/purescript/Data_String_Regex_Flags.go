@@ -190,8 +190,12 @@ var once_Data_String_Regex_Flags_monoidRegexFlags sync.Once
 func Get_Data_String_Regex_Flags_monoidRegexFlags() gopurs_runtime.Value {
 	once_Data_String_Regex_Flags_monoidRegexFlags.Do(func() {
 		cache_Data_String_Regex_Flags_monoidRegexFlags = gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_String_Regex_Flags_semigroupRegexFlags()
-}), Get_Data_String_Regex_Flags_noFlags())
+return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict([]string{"dotAll", "global", "ignoreCase", "multiline", "sticky", "unicode"}, []gopurs_runtime.Value{gopurs_runtime.Bool(((gopurs_runtime.RecordGet(v_1, "dotAll").IntVal) != (0)) || ((gopurs_runtime.RecordGet(v1_2, "dotAll").IntVal) != (0))), gopurs_runtime.Bool(((gopurs_runtime.RecordGet(v_1, "global").IntVal) != (0)) || ((gopurs_runtime.RecordGet(v1_2, "global").IntVal) != (0))), gopurs_runtime.Bool(((gopurs_runtime.RecordGet(v_1, "ignoreCase").IntVal) != (0)) || ((gopurs_runtime.RecordGet(v1_2, "ignoreCase").IntVal) != (0))), gopurs_runtime.Bool(((gopurs_runtime.RecordGet(v_1, "multiline").IntVal) != (0)) || ((gopurs_runtime.RecordGet(v1_2, "multiline").IntVal) != (0))), gopurs_runtime.Bool(((gopurs_runtime.RecordGet(v_1, "sticky").IntVal) != (0)) || ((gopurs_runtime.RecordGet(v1_2, "sticky").IntVal) != (0))), gopurs_runtime.Bool(((gopurs_runtime.RecordGet(v_1, "unicode").IntVal) != (0)) || ((gopurs_runtime.RecordGet(v1_2, "unicode").IntVal) != (0)))})
+})
+}))
+}), gopurs_runtime.RecordDict([]string{"dotAll", "global", "ignoreCase", "multiline", "sticky", "unicode"}, []gopurs_runtime.Value{gopurs_runtime.Bool(false), gopurs_runtime.Bool(false), gopurs_runtime.Bool(false), gopurs_runtime.Bool(false), gopurs_runtime.Bool(false), gopurs_runtime.Bool(false)}))
 	})
 	return cache_Data_String_Regex_Flags_monoidRegexFlags
 }

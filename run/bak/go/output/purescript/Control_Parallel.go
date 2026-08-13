@@ -222,9 +222,14 @@ var dictApplicative_1 *Constructor_Control_Applicative_Applicative = dictApplica
 _ = dictApplicative_1
 var dictFoldable_2 *Constructor_Data_Foldable_Foldable = dictFoldable_2_loop
 _ = dictFoldable_2
-return Call_Control_Parallel_parTraverse_(dictParallel_0, dictApplicative_1, dictFoldable_2, gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_3
+// TAST (Let): __local_var_3_0 -> gopurs_runtime.Value
+__local_var_3_0 := gopurs_runtime.Apply3(Get_Data_Foldable_traverse_(), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(dictApplicative_1)}, gopurs_runtime.Value{Type: 9, IntVal: 4280266298, UnsafePtr: unsafe.Pointer(dictFoldable_2)}, gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.Box(dictParallel_0.V2), x_3)
 }))
+_ = __local_var_3_0
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.Box(dictParallel_0.V3), gopurs_runtime.Apply(__local_var_3_0, x_4))
+})
 }
 
 func Call_Control_Parallel_parSequence(dictParallel_0_loop *Constructor_Control_Parallel_Class_Parallel, dictApplicative_1_loop *Constructor_Control_Applicative_Applicative, dictTraversable_2_loop *Constructor_Data_Traversable_Traversable) gopurs_runtime.Value {
@@ -316,17 +321,22 @@ var dictApplicative_1 *Constructor_Control_Applicative_Applicative = dictApplica
 _ = dictApplicative_1
 var dictFoldable_2 *Constructor_Data_Foldable_Foldable = dictFoldable_2_loop
 _ = dictFoldable_2
-return Call_Control_Parallel_parTraverse_(dictParallel_0, dictApplicative_1, dictFoldable_2, gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_3
+// TAST (Let): __local_var_3_0 -> gopurs_runtime.Value
+__local_var_3_0 := gopurs_runtime.Apply3(Get_Data_Foldable_traverse_(), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(dictApplicative_1)}, gopurs_runtime.Value{Type: 9, IntVal: 4280266298, UnsafePtr: unsafe.Pointer(dictFoldable_2)}, gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.Box(dictParallel_0.V2), x_3)
 }))
+_ = __local_var_3_0
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.Box(dictParallel_0.V3), gopurs_runtime.Apply(__local_var_3_0, x_4))
+})
 }
 
 func Call_Control_Parallel_parSequence___3793531865(__eta0_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
 _ = __eta0_0
-return gopurs_runtime.Apply(Call_Control_Parallel_parTraverse_(gopurs_runtime.CoerceToStruct[Constructor_Control_Parallel_Class_Parallel](Get_Effect_Aff_parallelAff()), gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](Get_Effect_Aff_applicativeParAff()), gopurs_runtime.CoerceToStruct[Constructor_Data_Foldable_Foldable](Get_Data_Foldable_foldableArray()), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_1
-})), __eta0_0)
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_Aff_parallelAff(), "sequential"), gopurs_runtime.Apply4(Get_Data_Foldable_traverse_(), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](Get_Effect_Aff_applicativeParAff()))}, gopurs_runtime.Value{Type: 9, IntVal: 4280266298, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Foldable_Foldable](Get_Data_Foldable_foldableArray()))}, gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_Aff_parallelAff(), "parallel"), x_1)
+}), __eta0_0))
 }
 
 func Call_Control_Parallel_parTraverse__1055730709(dictParallel_0_loop *Constructor_Control_Parallel_Class_Parallel, dictApplicative_1_loop *Constructor_Control_Applicative_Applicative, dictTraversable_2_loop *Constructor_Data_Traversable_Traversable, f_3_loop gopurs_runtime.Value) gopurs_runtime.Value {

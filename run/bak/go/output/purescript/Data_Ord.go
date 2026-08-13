@@ -414,7 +414,57 @@ func Get_Data_Ord_ord1Array() gopurs_runtime.Value {
 		cache_Data_Ord_ord1Array = gopurs_runtime.RecordDict2("Eq10", "compare1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Eq_eq1Array()
 }), gopurs_runtime.Func(func(dictOrd_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(Call_Data_Ord_ordArray(dictOrd_0), "compare")
+return gopurs_runtime.Func(func(xs_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(ys_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(Call_Data_Ord_compare__372254389(gopurs_runtime.Int(0), gopurs_runtime.Int(gopurs_runtime.Apply3(Get_Data_Ord_ordArrayImpl(), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_4 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): v_5_0 -> gopurs_runtime.Value
+v_5_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), x_3, y_4)
+_ = v_5_0
+var __t1 int64
+{
+if (uint32(v_5_0.IntVal) == 902936544) {
+__t1 = 0
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (uint32(v_5_0.IntVal) == 1527465420) {
+__t1 = 1
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (uint32(v_5_0.IntVal) == 380165415) {
+__t1 = -1
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
+}
+end_branch_1:
+return gopurs_runtime.Int(__t1)
+})
+}), gopurs_runtime.Array(func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(xs_1.UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}()), gopurs_runtime.Array(func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(ys_2.UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}())).IntVal)).IntVal)), UnsafePtr: nil}
+})
+})
 }))
 	})
 	return cache_Data_Ord_ord1Array
@@ -1218,7 +1268,57 @@ func Get_Data_Ord_ord1Array__2954870633() gopurs_runtime.Value {
 		cache_Data_Ord_ord1Array__2954870633 = gopurs_runtime.RecordDict2("Eq10", "compare1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Eq_eq1Array()
 }), gopurs_runtime.Func(func(dictOrd_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(Call_Data_Ord_ordArray(dictOrd_0), "compare")
+return gopurs_runtime.Func(func(xs_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(ys_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.Apply5(Get_Data_Ord_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Int(0), gopurs_runtime.Int(gopurs_runtime.Apply3(Get_Data_Ord_ordArrayImpl(), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_4 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): v_5_0 -> gopurs_runtime.Value
+v_5_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_0, "compare"), x_3, y_4)
+_ = v_5_0
+var __t1 int64
+{
+if (uint32(v_5_0.IntVal) == 902936544) {
+__t1 = 0
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (uint32(v_5_0.IntVal) == 1527465420) {
+__t1 = 1
+goto end_branch_1
+} else {
+
+}
+}
+{
+if (uint32(v_5_0.IntVal) == 380165415) {
+__t1 = -1
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
+}
+end_branch_1:
+return gopurs_runtime.Int(__t1)
+})
+}), gopurs_runtime.Array(func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(xs_1.UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}()), gopurs_runtime.Array(func() []gopurs_runtime.Value {
+					arr := *(*[]gopurs_runtime.Value)(ys_2.UnsafePtr)
+					unboxed := make([]gopurs_runtime.Value, len(arr))
+					for i, v := range arr { unboxed[i] = v }
+					return unboxed
+				}())).IntVal)).IntVal)), UnsafePtr: nil}
+})
+})
 }))
 	})
 	return cache_Data_Ord_ord1Array__2954870633
@@ -3249,20 +3349,21 @@ var a1_0 float64 = a1_0_loop
 _ = a1_0
 var a2_1 float64 = a2_1_loop
 _ = a2_1
-var __t0 bool
+var __t1 bool
 {
-if (a1_0) < (a2_1) {
-__t0 = false
-goto end_branch_0
+var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply5(Get_Data_Ord_ordNumberImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Float(a1_0), gopurs_runtime.Float(a2_1))
+if (uint32(__t_tag_0.IntVal) == 1527465420) {
+__t1 = false
+goto end_branch_1
 } else {
 
 }
 }
 {
-__t0 = true
+__t1 = true
 }
-end_branch_0:
-return __t0
+end_branch_1:
+return __t1
 }
 
 func Call_Data_Ord_greaterThanOrEq__1409282474(dictOrd_0_loop *Constructor_Data_Ord_Ord, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
@@ -3363,20 +3464,21 @@ var a1_0 float64 = a1_0_loop
 _ = a1_0
 var a2_1 float64 = a2_1_loop
 _ = a2_1
-var __t0 bool
+var __t1 bool
 {
-if (a1_0) < (a2_1) {
-__t0 = true
-goto end_branch_0
+var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply5(Get_Data_Ord_ordNumberImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Float(a1_0), gopurs_runtime.Float(a2_1))
+if (uint32(__t_tag_0.IntVal) == 1527465420) {
+__t1 = true
+goto end_branch_1
 } else {
 
 }
 }
 {
-__t0 = false
+__t1 = false
 }
-end_branch_0:
-return __t0
+end_branch_1:
+return __t1
 }
 
 func Call_Data_Ord_lessThan__1409282474(dictOrd_0_loop *Constructor_Data_Ord_Ord, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
@@ -3453,20 +3555,21 @@ var a1_0 float64 = a1_0_loop
 _ = a1_0
 var a2_1 float64 = a2_1_loop
 _ = a2_1
-var __t0 bool
+var __t1 bool
 {
-if (a1_0) > (a2_1) {
-__t0 = false
-goto end_branch_0
+var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply5(Get_Data_Ord_ordNumberImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Float(a1_0), gopurs_runtime.Float(a2_1))
+if (uint32(__t_tag_0.IntVal) == 380165415) {
+__t1 = false
+goto end_branch_1
 } else {
 
 }
 }
 {
-__t0 = true
+__t1 = true
 }
-end_branch_0:
-return __t0
+end_branch_1:
+return __t1
 }
 
 func Call_Data_Ord_lessThanOrEq__3448835524(dictOrd_0_loop *Constructor_Data_Ord_Ord, a1_1_loop string, a2_2_loop string) bool {

@@ -69,7 +69,9 @@ var cache_Control_Monad_Reader_Trans_lift gopurs_runtime.Value
 var once_Control_Monad_Reader_Trans_lift sync.Once
 func Get_Control_Monad_Reader_Trans_lift() gopurs_runtime.Value {
 	once_Control_Monad_Reader_Trans_lift.Do(func() {
-		cache_Control_Monad_Reader_Trans_lift = gopurs_runtime.RecordGet(Get_Control_Monad_Reader_Trans_monadTransReaderT(), "lift")
+		cache_Control_Monad_Reader_Trans_lift = gopurs_runtime.Func3(func(dictMonad_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value, v_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Control_Monad_Reader_Trans_lift(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Monad](dictMonad_0_box), x_1_box, v_2_box)
+})
 	})
 	return cache_Control_Monad_Reader_Trans_lift
 }
@@ -415,6 +417,16 @@ _ = v_0
 return v_0
 }
 
+func Call_Control_Monad_Reader_Trans_lift(dictMonad_0_loop *Constructor_Control_Monad_Monad, x_1_loop gopurs_runtime.Value, v_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
+var dictMonad_0 *Constructor_Control_Monad_Monad = dictMonad_0_loop
+_ = dictMonad_0
+var x_1 gopurs_runtime.Value = x_1_loop
+_ = x_1
+var v_2 gopurs_runtime.Value = v_2_loop
+_ = v_2
+return x_1
+}
+
 func Call_Control_Monad_Reader_Trans_mapReaderT(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
@@ -696,8 +708,50 @@ return __local_var_4_7
 })
 }))
 _ = applicativeReaderT1_1_0
+// TAST (Let): __local_var_2_9 -> gopurs_runtime.Value
+__local_var_2_9 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{})
+_ = __local_var_2_9
+// TAST (Let): __local_var_3_11 -> gopurs_runtime.Value
+__local_var_3_11 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_9, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_3_11
+// TAST (Let): __local_var_4_13 -> gopurs_runtime.Value
+__local_var_4_13 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_11, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_4_13
+// TAST (Let): functorReaderT1_4_12 -> gopurs_runtime.Value
+functorReaderT1_4_12 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_6_14 -> gopurs_runtime.Value
+__local_var_6_14 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_13, "map"), x_5)
+_ = __local_var_6_14
+return gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_6_14, gopurs_runtime.Apply(v_7, x_8))
+})
+})
+}))
+_ = functorReaderT1_4_12
+// TAST (Let): applyReaderT1_3_10 -> gopurs_runtime.Value
+applyReaderT1_3_10 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorReaderT1_4_12
+}), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_11, "apply"), gopurs_runtime.Apply(v_5, r_7), gopurs_runtime.Apply(v1_6, r_7))
+})
+})
+}))
+_ = applyReaderT1_3_10
 // TAST (Let): bindReaderT1_2_8 -> gopurs_runtime.Value
-bindReaderT1_2_8 := Call_Control_Monad_Reader_Trans_bindReaderT(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{}))
+bindReaderT1_2_8 := gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return applyReaderT1_3_10
+}), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(k_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_9, "bind"), gopurs_runtime.Apply(v_4, r_6), gopurs_runtime.Func(func(a_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(k_5, a_7, r_6)
+}))
+})
+})
+}))
 _ = bindReaderT1_2_8
 return gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return applicativeReaderT1_1_0
@@ -709,8 +763,101 @@ return bindReaderT1_2_8
 func Call_Control_Monad_Reader_Trans_monadAskReaderT(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
+// TAST (Let): __local_var_1_2 -> gopurs_runtime.Value
+__local_var_1_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{})
+_ = __local_var_1_2
+// TAST (Let): __local_var_2_4 -> gopurs_runtime.Value
+__local_var_2_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_2, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_2_4
+// TAST (Let): __local_var_3_6 -> gopurs_runtime.Value
+__local_var_3_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_4, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_3_6
+// TAST (Let): functorReaderT1_3_5 -> gopurs_runtime.Value
+functorReaderT1_3_5 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_5_7 -> gopurs_runtime.Value
+__local_var_5_7 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_6, "map"), x_4)
+_ = __local_var_5_7
+return gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_5_7, gopurs_runtime.Apply(v_6, x_7))
+})
+})
+}))
+_ = functorReaderT1_3_5
+// TAST (Let): applyReaderT1_2_3 -> gopurs_runtime.Value
+applyReaderT1_2_3 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorReaderT1_3_5
+}), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_4, "apply"), gopurs_runtime.Apply(v_4, r_6), gopurs_runtime.Apply(v1_5, r_6))
+})
+})
+}))
+_ = applyReaderT1_2_3
+// TAST (Let): applicativeReaderT1_1_1 -> gopurs_runtime.Value
+applicativeReaderT1_1_1 := gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return applyReaderT1_2_3
+}), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_4_8 -> gopurs_runtime.Value
+__local_var_4_8 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_2, "pure"), x_3)
+_ = __local_var_4_8
+return gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return __local_var_4_8
+})
+}))
+_ = applicativeReaderT1_1_1
+// TAST (Let): __local_var_2_10 -> gopurs_runtime.Value
+__local_var_2_10 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{})
+_ = __local_var_2_10
+// TAST (Let): __local_var_3_12 -> gopurs_runtime.Value
+__local_var_3_12 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_10, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_3_12
+// TAST (Let): __local_var_4_14 -> gopurs_runtime.Value
+__local_var_4_14 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_12, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_4_14
+// TAST (Let): functorReaderT1_4_13 -> gopurs_runtime.Value
+functorReaderT1_4_13 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_6_15 -> gopurs_runtime.Value
+__local_var_6_15 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_14, "map"), x_5)
+_ = __local_var_6_15
+return gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_6_15, gopurs_runtime.Apply(v_7, x_8))
+})
+})
+}))
+_ = functorReaderT1_4_13
+// TAST (Let): applyReaderT1_3_11 -> gopurs_runtime.Value
+applyReaderT1_3_11 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorReaderT1_4_13
+}), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_12, "apply"), gopurs_runtime.Apply(v_5, r_7), gopurs_runtime.Apply(v1_6, r_7))
+})
+})
+}))
+_ = applyReaderT1_3_11
+// TAST (Let): bindReaderT1_2_9 -> gopurs_runtime.Value
+bindReaderT1_2_9 := gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return applyReaderT1_3_11
+}), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(k_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_10, "bind"), gopurs_runtime.Apply(v_4, r_6), gopurs_runtime.Func(func(a_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(k_5, a_7, r_6)
+}))
+})
+})
+}))
+_ = bindReaderT1_2_9
 // TAST (Let): monadReaderT1_1_0 -> gopurs_runtime.Value
-monadReaderT1_1_0 := Call_Control_Monad_Reader_Trans_monadReaderT(dictMonad_0)
+monadReaderT1_1_0 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return applicativeReaderT1_1_1
+}), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return bindReaderT1_2_9
+}))
 _ = monadReaderT1_1_0
 return gopurs_runtime.RecordDict2("Monad0", "ask", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadReaderT1_1_0
@@ -720,8 +867,101 @@ return monadReaderT1_1_0
 func Call_Control_Monad_Reader_Trans_monadReaderReaderT(dictMonad_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonad_0 gopurs_runtime.Value = dictMonad_0_loop
 _ = dictMonad_0
+// TAST (Let): __local_var_1_3 -> gopurs_runtime.Value
+__local_var_1_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Applicative0"), gopurs_runtime.Value{})
+_ = __local_var_1_3
+// TAST (Let): __local_var_2_5 -> gopurs_runtime.Value
+__local_var_2_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_3, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_2_5
+// TAST (Let): __local_var_3_7 -> gopurs_runtime.Value
+__local_var_3_7 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_5, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_3_7
+// TAST (Let): functorReaderT1_3_6 -> gopurs_runtime.Value
+functorReaderT1_3_6 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_5_8 -> gopurs_runtime.Value
+__local_var_5_8 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_7, "map"), x_4)
+_ = __local_var_5_8
+return gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_5_8, gopurs_runtime.Apply(v_6, x_7))
+})
+})
+}))
+_ = functorReaderT1_3_6
+// TAST (Let): applyReaderT1_2_4 -> gopurs_runtime.Value
+applyReaderT1_2_4 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorReaderT1_3_6
+}), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_5, "apply"), gopurs_runtime.Apply(v_4, r_6), gopurs_runtime.Apply(v1_5, r_6))
+})
+})
+}))
+_ = applyReaderT1_2_4
+// TAST (Let): applicativeReaderT1_1_2 -> gopurs_runtime.Value
+applicativeReaderT1_1_2 := gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return applyReaderT1_2_4
+}), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_4_9 -> gopurs_runtime.Value
+__local_var_4_9 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_3, "pure"), x_3)
+_ = __local_var_4_9
+return gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return __local_var_4_9
+})
+}))
+_ = applicativeReaderT1_1_2
+// TAST (Let): __local_var_2_11 -> gopurs_runtime.Value
+__local_var_2_11 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonad_0, "Bind1"), gopurs_runtime.Value{})
+_ = __local_var_2_11
+// TAST (Let): __local_var_3_13 -> gopurs_runtime.Value
+__local_var_3_13 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_11, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_3_13
+// TAST (Let): __local_var_4_15 -> gopurs_runtime.Value
+__local_var_4_15 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_13, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_4_15
+// TAST (Let): functorReaderT1_4_14 -> gopurs_runtime.Value
+functorReaderT1_4_14 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_6_16 -> gopurs_runtime.Value
+__local_var_6_16 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_15, "map"), x_5)
+_ = __local_var_6_16
+return gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_6_16, gopurs_runtime.Apply(v_7, x_8))
+})
+})
+}))
+_ = functorReaderT1_4_14
+// TAST (Let): applyReaderT1_3_12 -> gopurs_runtime.Value
+applyReaderT1_3_12 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorReaderT1_4_14
+}), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_13, "apply"), gopurs_runtime.Apply(v_5, r_7), gopurs_runtime.Apply(v1_6, r_7))
+})
+})
+}))
+_ = applyReaderT1_3_12
+// TAST (Let): bindReaderT1_2_10 -> gopurs_runtime.Value
+bindReaderT1_2_10 := gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return applyReaderT1_3_12
+}), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(k_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_11, "bind"), gopurs_runtime.Apply(v_4, r_6), gopurs_runtime.Func(func(a_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(k_5, a_7, r_6)
+}))
+})
+})
+}))
+_ = bindReaderT1_2_10
 // TAST (Let): monadReaderT1_1_1 -> gopurs_runtime.Value
-monadReaderT1_1_1 := Call_Control_Monad_Reader_Trans_monadReaderT(dictMonad_0)
+monadReaderT1_1_1 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return applicativeReaderT1_1_2
+}), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return bindReaderT1_2_10
+}))
 _ = monadReaderT1_1_1
 // TAST (Let): monadAskReaderT1_1_0 -> gopurs_runtime.Value
 monadAskReaderT1_1_0 := gopurs_runtime.RecordDict2("Monad0", "ask", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -736,8 +976,104 @@ return monadAskReaderT1_1_0
 func Call_Control_Monad_Reader_Trans_monadContReaderT(dictMonadCont_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadCont_0 gopurs_runtime.Value = dictMonadCont_0_loop
 _ = dictMonadCont_0
+// TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
+__local_var_1_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadCont_0, "Monad0"), gopurs_runtime.Value{})
+_ = __local_var_1_1
+// TAST (Let): __local_var_2_3 -> gopurs_runtime.Value
+__local_var_2_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_1, "Applicative0"), gopurs_runtime.Value{})
+_ = __local_var_2_3
+// TAST (Let): __local_var_3_5 -> gopurs_runtime.Value
+__local_var_3_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_3, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_3_5
+// TAST (Let): __local_var_4_7 -> gopurs_runtime.Value
+__local_var_4_7 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_5, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_4_7
+// TAST (Let): functorReaderT1_4_6 -> gopurs_runtime.Value
+functorReaderT1_4_6 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_6_8 -> gopurs_runtime.Value
+__local_var_6_8 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_7, "map"), x_5)
+_ = __local_var_6_8
+return gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_6_8, gopurs_runtime.Apply(v_7, x_8))
+})
+})
+}))
+_ = functorReaderT1_4_6
+// TAST (Let): applyReaderT1_3_4 -> gopurs_runtime.Value
+applyReaderT1_3_4 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorReaderT1_4_6
+}), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_5, "apply"), gopurs_runtime.Apply(v_5, r_7), gopurs_runtime.Apply(v1_6, r_7))
+})
+})
+}))
+_ = applyReaderT1_3_4
+// TAST (Let): applicativeReaderT1_2_2 -> gopurs_runtime.Value
+applicativeReaderT1_2_2 := gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return applyReaderT1_3_4
+}), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_5_9 -> gopurs_runtime.Value
+__local_var_5_9 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_3, "pure"), x_4)
+_ = __local_var_5_9
+return gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return __local_var_5_9
+})
+}))
+_ = applicativeReaderT1_2_2
+// TAST (Let): __local_var_3_11 -> gopurs_runtime.Value
+__local_var_3_11 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_1, "Bind1"), gopurs_runtime.Value{})
+_ = __local_var_3_11
+// TAST (Let): __local_var_4_13 -> gopurs_runtime.Value
+__local_var_4_13 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_11, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_4_13
+// TAST (Let): __local_var_5_15 -> gopurs_runtime.Value
+__local_var_5_15 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_13, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_5_15
+// TAST (Let): functorReaderT1_5_14 -> gopurs_runtime.Value
+functorReaderT1_5_14 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_7_16 -> gopurs_runtime.Value
+__local_var_7_16 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_5_15, "map"), x_6)
+_ = __local_var_7_16
+return gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_7_16, gopurs_runtime.Apply(v_8, x_9))
+})
+})
+}))
+_ = functorReaderT1_5_14
+// TAST (Let): applyReaderT1_4_12 -> gopurs_runtime.Value
+applyReaderT1_4_12 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorReaderT1_5_14
+}), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_13, "apply"), gopurs_runtime.Apply(v_6, r_8), gopurs_runtime.Apply(v1_7, r_8))
+})
+})
+}))
+_ = applyReaderT1_4_12
+// TAST (Let): bindReaderT1_3_10 -> gopurs_runtime.Value
+bindReaderT1_3_10 := gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return applyReaderT1_4_12
+}), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(k_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_11, "bind"), gopurs_runtime.Apply(v_5, r_7), gopurs_runtime.Func(func(a_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(k_6, a_8, r_7)
+}))
+})
+})
+}))
+_ = bindReaderT1_3_10
 // TAST (Let): monadReaderT1_1_0 -> gopurs_runtime.Value
-monadReaderT1_1_0 := Call_Control_Monad_Reader_Trans_monadReaderT(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadCont_0, "Monad0"), gopurs_runtime.Value{}))
+monadReaderT1_1_0 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return applicativeReaderT1_2_2
+}), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return bindReaderT1_3_10
+}))
 _ = monadReaderT1_1_0
 return gopurs_runtime.RecordDict2("Monad0", "callCC", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadReaderT1_1_0
@@ -745,11 +1081,11 @@ return monadReaderT1_1_0
 return gopurs_runtime.Func(func(r_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadCont_0, "callCC"), gopurs_runtime.Func(func(c_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(f_2, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): __local_var_6_1 -> gopurs_runtime.Value
-__local_var_6_1 := gopurs_runtime.Apply(c_4, x_5)
-_ = __local_var_6_1
+// TAST (Let): __local_var_6_17 -> gopurs_runtime.Value
+__local_var_6_17 := gopurs_runtime.Apply(c_4, x_5)
+_ = __local_var_6_17
 return gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return __local_var_6_1
+return __local_var_6_17
 })
 }), r_3)
 }))
@@ -763,16 +1099,111 @@ _ = dictMonadEffect_0
 // TAST (Let): Monad0_1_0 -> gopurs_runtime.Value
 Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
+// TAST (Let): __local_var_2_3 -> gopurs_runtime.Value
+__local_var_2_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{})
+_ = __local_var_2_3
+// TAST (Let): __local_var_3_5 -> gopurs_runtime.Value
+__local_var_3_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_3, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_3_5
+// TAST (Let): __local_var_4_7 -> gopurs_runtime.Value
+__local_var_4_7 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_5, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_4_7
+// TAST (Let): functorReaderT1_4_6 -> gopurs_runtime.Value
+functorReaderT1_4_6 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_6_8 -> gopurs_runtime.Value
+__local_var_6_8 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_7, "map"), x_5)
+_ = __local_var_6_8
+return gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_6_8, gopurs_runtime.Apply(v_7, x_8))
+})
+})
+}))
+_ = functorReaderT1_4_6
+// TAST (Let): applyReaderT1_3_4 -> gopurs_runtime.Value
+applyReaderT1_3_4 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorReaderT1_4_6
+}), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_5, "apply"), gopurs_runtime.Apply(v_5, r_7), gopurs_runtime.Apply(v1_6, r_7))
+})
+})
+}))
+_ = applyReaderT1_3_4
+// TAST (Let): applicativeReaderT1_2_2 -> gopurs_runtime.Value
+applicativeReaderT1_2_2 := gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return applyReaderT1_3_4
+}), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_5_9 -> gopurs_runtime.Value
+__local_var_5_9 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_3, "pure"), x_4)
+_ = __local_var_5_9
+return gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return __local_var_5_9
+})
+}))
+_ = applicativeReaderT1_2_2
+// TAST (Let): __local_var_3_11 -> gopurs_runtime.Value
+__local_var_3_11 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bind1"), gopurs_runtime.Value{})
+_ = __local_var_3_11
+// TAST (Let): __local_var_4_13 -> gopurs_runtime.Value
+__local_var_4_13 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_11, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_4_13
+// TAST (Let): __local_var_5_15 -> gopurs_runtime.Value
+__local_var_5_15 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_13, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_5_15
+// TAST (Let): functorReaderT1_5_14 -> gopurs_runtime.Value
+functorReaderT1_5_14 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_7_16 -> gopurs_runtime.Value
+__local_var_7_16 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_5_15, "map"), x_6)
+_ = __local_var_7_16
+return gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_7_16, gopurs_runtime.Apply(v_8, x_9))
+})
+})
+}))
+_ = functorReaderT1_5_14
+// TAST (Let): applyReaderT1_4_12 -> gopurs_runtime.Value
+applyReaderT1_4_12 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorReaderT1_5_14
+}), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_13, "apply"), gopurs_runtime.Apply(v_6, r_8), gopurs_runtime.Apply(v1_7, r_8))
+})
+})
+}))
+_ = applyReaderT1_4_12
+// TAST (Let): bindReaderT1_3_10 -> gopurs_runtime.Value
+bindReaderT1_3_10 := gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return applyReaderT1_4_12
+}), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(k_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_11, "bind"), gopurs_runtime.Apply(v_5, r_7), gopurs_runtime.Func(func(a_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(k_6, a_8, r_7)
+}))
+})
+})
+}))
+_ = bindReaderT1_3_10
 // TAST (Let): monadReaderT1_2_1 -> gopurs_runtime.Value
-monadReaderT1_2_1 := Call_Control_Monad_Reader_Trans_monadReaderT(Monad0_1_0)
+monadReaderT1_2_1 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return applicativeReaderT1_2_2
+}), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return bindReaderT1_3_10
+}))
 _ = monadReaderT1_2_1
-// TAST (Let): __local_var_3_2 -> gopurs_runtime.Value
-__local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Monad_Reader_Trans_monadTransReaderT(), "lift"), Monad0_1_0)
-_ = __local_var_3_2
 return gopurs_runtime.RecordDict2("Monad0", "liftEffect", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadReaderT1_2_1
-}), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_3_2, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), x_4))
+}), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_4_17 -> gopurs_runtime.Value
+__local_var_4_17 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadEffect_0, "liftEffect"), x_3)
+_ = __local_var_4_17
+return gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return __local_var_4_17
+})
 }))
 }
 
@@ -788,8 +1219,101 @@ _ = Bind1_2_1
 // TAST (Let): pure_3_2 -> gopurs_runtime.Value
 pure_3_2 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{}), "pure")
 _ = pure_3_2
+// TAST (Let): __local_var_4_5 -> gopurs_runtime.Value
+__local_var_4_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{})
+_ = __local_var_4_5
+// TAST (Let): __local_var_5_7 -> gopurs_runtime.Value
+__local_var_5_7 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_5, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_5_7
+// TAST (Let): __local_var_6_9 -> gopurs_runtime.Value
+__local_var_6_9 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_5_7, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_6_9
+// TAST (Let): functorReaderT1_6_8 -> gopurs_runtime.Value
+functorReaderT1_6_8 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_8_10 -> gopurs_runtime.Value
+__local_var_8_10 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_6_9, "map"), x_7)
+_ = __local_var_8_10
+return gopurs_runtime.Func(func(v_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_10 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_8_10, gopurs_runtime.Apply(v_9, x_10))
+})
+})
+}))
+_ = functorReaderT1_6_8
+// TAST (Let): applyReaderT1_5_6 -> gopurs_runtime.Value
+applyReaderT1_5_6 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorReaderT1_6_8
+}), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_5_7, "apply"), gopurs_runtime.Apply(v_7, r_9), gopurs_runtime.Apply(v1_8, r_9))
+})
+})
+}))
+_ = applyReaderT1_5_6
+// TAST (Let): applicativeReaderT1_4_4 -> gopurs_runtime.Value
+applicativeReaderT1_4_4 := gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return applyReaderT1_5_6
+}), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_7_11 -> gopurs_runtime.Value
+__local_var_7_11 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_5, "pure"), x_6)
+_ = __local_var_7_11
+return gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return __local_var_7_11
+})
+}))
+_ = applicativeReaderT1_4_4
+// TAST (Let): __local_var_5_13 -> gopurs_runtime.Value
+__local_var_5_13 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bind1"), gopurs_runtime.Value{})
+_ = __local_var_5_13
+// TAST (Let): __local_var_6_15 -> gopurs_runtime.Value
+__local_var_6_15 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_5_13, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_6_15
+// TAST (Let): __local_var_7_17 -> gopurs_runtime.Value
+__local_var_7_17 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_6_15, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_7_17
+// TAST (Let): functorReaderT1_7_16 -> gopurs_runtime.Value
+functorReaderT1_7_16 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_9_18 -> gopurs_runtime.Value
+__local_var_9_18 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_7_17, "map"), x_8)
+_ = __local_var_9_18
+return gopurs_runtime.Func(func(v_10 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_11 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_9_18, gopurs_runtime.Apply(v_10, x_11))
+})
+})
+}))
+_ = functorReaderT1_7_16
+// TAST (Let): applyReaderT1_6_14 -> gopurs_runtime.Value
+applyReaderT1_6_14 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorReaderT1_7_16
+}), gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_10 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_6_15, "apply"), gopurs_runtime.Apply(v_8, r_10), gopurs_runtime.Apply(v1_9, r_10))
+})
+})
+}))
+_ = applyReaderT1_6_14
+// TAST (Let): bindReaderT1_5_12 -> gopurs_runtime.Value
+bindReaderT1_5_12 := gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return applyReaderT1_6_14
+}), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(k_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_5_13, "bind"), gopurs_runtime.Apply(v_7, r_9), gopurs_runtime.Func(func(a_10 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(k_8, a_10, r_9)
+}))
+})
+})
+}))
+_ = bindReaderT1_5_12
 // TAST (Let): monadReaderT1_4_3 -> gopurs_runtime.Value
-monadReaderT1_4_3 := Call_Control_Monad_Reader_Trans_monadReaderT(Monad0_1_0)
+monadReaderT1_4_3 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return applicativeReaderT1_4_4
+}), gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return bindReaderT1_5_12
+}))
 _ = monadReaderT1_4_3
 return gopurs_runtime.RecordDict2("Monad0", "tailRecM", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadReaderT1_4_3
@@ -810,16 +1334,111 @@ _ = dictMonadState_0
 // TAST (Let): Monad0_1_0 -> gopurs_runtime.Value
 Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
+// TAST (Let): __local_var_2_3 -> gopurs_runtime.Value
+__local_var_2_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{})
+_ = __local_var_2_3
+// TAST (Let): __local_var_3_5 -> gopurs_runtime.Value
+__local_var_3_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_3, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_3_5
+// TAST (Let): __local_var_4_7 -> gopurs_runtime.Value
+__local_var_4_7 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_5, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_4_7
+// TAST (Let): functorReaderT1_4_6 -> gopurs_runtime.Value
+functorReaderT1_4_6 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_6_8 -> gopurs_runtime.Value
+__local_var_6_8 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_7, "map"), x_5)
+_ = __local_var_6_8
+return gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_6_8, gopurs_runtime.Apply(v_7, x_8))
+})
+})
+}))
+_ = functorReaderT1_4_6
+// TAST (Let): applyReaderT1_3_4 -> gopurs_runtime.Value
+applyReaderT1_3_4 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorReaderT1_4_6
+}), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_5, "apply"), gopurs_runtime.Apply(v_5, r_7), gopurs_runtime.Apply(v1_6, r_7))
+})
+})
+}))
+_ = applyReaderT1_3_4
+// TAST (Let): applicativeReaderT1_2_2 -> gopurs_runtime.Value
+applicativeReaderT1_2_2 := gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return applyReaderT1_3_4
+}), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_5_9 -> gopurs_runtime.Value
+__local_var_5_9 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_3, "pure"), x_4)
+_ = __local_var_5_9
+return gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return __local_var_5_9
+})
+}))
+_ = applicativeReaderT1_2_2
+// TAST (Let): __local_var_3_11 -> gopurs_runtime.Value
+__local_var_3_11 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bind1"), gopurs_runtime.Value{})
+_ = __local_var_3_11
+// TAST (Let): __local_var_4_13 -> gopurs_runtime.Value
+__local_var_4_13 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_11, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_4_13
+// TAST (Let): __local_var_5_15 -> gopurs_runtime.Value
+__local_var_5_15 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_13, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_5_15
+// TAST (Let): functorReaderT1_5_14 -> gopurs_runtime.Value
+functorReaderT1_5_14 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_7_16 -> gopurs_runtime.Value
+__local_var_7_16 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_5_15, "map"), x_6)
+_ = __local_var_7_16
+return gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_7_16, gopurs_runtime.Apply(v_8, x_9))
+})
+})
+}))
+_ = functorReaderT1_5_14
+// TAST (Let): applyReaderT1_4_12 -> gopurs_runtime.Value
+applyReaderT1_4_12 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorReaderT1_5_14
+}), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_13, "apply"), gopurs_runtime.Apply(v_6, r_8), gopurs_runtime.Apply(v1_7, r_8))
+})
+})
+}))
+_ = applyReaderT1_4_12
+// TAST (Let): bindReaderT1_3_10 -> gopurs_runtime.Value
+bindReaderT1_3_10 := gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return applyReaderT1_4_12
+}), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(k_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_11, "bind"), gopurs_runtime.Apply(v_5, r_7), gopurs_runtime.Func(func(a_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(k_6, a_8, r_7)
+}))
+})
+})
+}))
+_ = bindReaderT1_3_10
 // TAST (Let): monadReaderT1_2_1 -> gopurs_runtime.Value
-monadReaderT1_2_1 := Call_Control_Monad_Reader_Trans_monadReaderT(Monad0_1_0)
+monadReaderT1_2_1 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return applicativeReaderT1_2_2
+}), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return bindReaderT1_3_10
+}))
 _ = monadReaderT1_2_1
-// TAST (Let): __local_var_3_2 -> gopurs_runtime.Value
-__local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Monad_Reader_Trans_monadTransReaderT(), "lift"), Monad0_1_0)
-_ = __local_var_3_2
 return gopurs_runtime.RecordDict2("Monad0", "state", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadReaderT1_2_1
-}), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_3_2, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0, "state"), x_4))
+}), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_4_17 -> gopurs_runtime.Value
+__local_var_4_17 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadState_0, "state"), x_3)
+_ = __local_var_4_17
+return gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return __local_var_4_17
+})
 }))
 }
 
@@ -832,18 +1451,113 @@ _ = Monad1_1_0
 // TAST (Let): Semigroup0_2_1 -> gopurs_runtime.Value
 Semigroup0_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadTell_0, "Semigroup0"), gopurs_runtime.Value{})
 _ = Semigroup0_2_1
+// TAST (Let): __local_var_3_4 -> gopurs_runtime.Value
+__local_var_3_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad1_1_0, "Applicative0"), gopurs_runtime.Value{})
+_ = __local_var_3_4
+// TAST (Let): __local_var_4_6 -> gopurs_runtime.Value
+__local_var_4_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_4, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_4_6
+// TAST (Let): __local_var_5_8 -> gopurs_runtime.Value
+__local_var_5_8 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_6, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_5_8
+// TAST (Let): functorReaderT1_5_7 -> gopurs_runtime.Value
+functorReaderT1_5_7 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_7_9 -> gopurs_runtime.Value
+__local_var_7_9 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_5_8, "map"), x_6)
+_ = __local_var_7_9
+return gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_7_9, gopurs_runtime.Apply(v_8, x_9))
+})
+})
+}))
+_ = functorReaderT1_5_7
+// TAST (Let): applyReaderT1_4_5 -> gopurs_runtime.Value
+applyReaderT1_4_5 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorReaderT1_5_7
+}), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_6, "apply"), gopurs_runtime.Apply(v_6, r_8), gopurs_runtime.Apply(v1_7, r_8))
+})
+})
+}))
+_ = applyReaderT1_4_5
+// TAST (Let): applicativeReaderT1_3_3 -> gopurs_runtime.Value
+applicativeReaderT1_3_3 := gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return applyReaderT1_4_5
+}), gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_6_10 -> gopurs_runtime.Value
+__local_var_6_10 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_4, "pure"), x_5)
+_ = __local_var_6_10
+return gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return __local_var_6_10
+})
+}))
+_ = applicativeReaderT1_3_3
+// TAST (Let): __local_var_4_12 -> gopurs_runtime.Value
+__local_var_4_12 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad1_1_0, "Bind1"), gopurs_runtime.Value{})
+_ = __local_var_4_12
+// TAST (Let): __local_var_5_14 -> gopurs_runtime.Value
+__local_var_5_14 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_12, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_5_14
+// TAST (Let): __local_var_6_16 -> gopurs_runtime.Value
+__local_var_6_16 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_5_14, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_6_16
+// TAST (Let): functorReaderT1_6_15 -> gopurs_runtime.Value
+functorReaderT1_6_15 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_8_17 -> gopurs_runtime.Value
+__local_var_8_17 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_6_16, "map"), x_7)
+_ = __local_var_8_17
+return gopurs_runtime.Func(func(v_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_10 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_8_17, gopurs_runtime.Apply(v_9, x_10))
+})
+})
+}))
+_ = functorReaderT1_6_15
+// TAST (Let): applyReaderT1_5_13 -> gopurs_runtime.Value
+applyReaderT1_5_13 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorReaderT1_6_15
+}), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_5_14, "apply"), gopurs_runtime.Apply(v_7, r_9), gopurs_runtime.Apply(v1_8, r_9))
+})
+})
+}))
+_ = applyReaderT1_5_13
+// TAST (Let): bindReaderT1_4_11 -> gopurs_runtime.Value
+bindReaderT1_4_11 := gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return applyReaderT1_5_13
+}), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(k_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_12, "bind"), gopurs_runtime.Apply(v_6, r_8), gopurs_runtime.Func(func(a_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(k_7, a_9, r_8)
+}))
+})
+})
+}))
+_ = bindReaderT1_4_11
 // TAST (Let): monadReaderT1_3_2 -> gopurs_runtime.Value
-monadReaderT1_3_2 := Call_Control_Monad_Reader_Trans_monadReaderT(Monad1_1_0)
+monadReaderT1_3_2 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return applicativeReaderT1_3_3
+}), gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return bindReaderT1_4_11
+}))
 _ = monadReaderT1_3_2
-// TAST (Let): __local_var_4_3 -> gopurs_runtime.Value
-__local_var_4_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Monad_Reader_Trans_monadTransReaderT(), "lift"), Monad1_1_0)
-_ = __local_var_4_3
 return gopurs_runtime.RecordDict3("Monad1", "Semigroup0", "tell", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadReaderT1_3_2
 }), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return Semigroup0_2_1
-}), gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_4_3, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadTell_0, "tell"), x_5))
+}), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_5_18 -> gopurs_runtime.Value
+__local_var_5_18 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadTell_0, "tell"), x_4)
+_ = __local_var_5_18
+return gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return __local_var_5_18
+})
 }))
 }
 
@@ -853,8 +1567,124 @@ _ = dictMonadWriter_0
 // TAST (Let): Monoid0_1_0 -> gopurs_runtime.Value
 Monoid0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadWriter_0, "Monoid0"), gopurs_runtime.Value{})
 _ = Monoid0_1_0
+// TAST (Let): __local_var_2_2 -> gopurs_runtime.Value
+__local_var_2_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadWriter_0, "MonadTell1"), gopurs_runtime.Value{})
+_ = __local_var_2_2
+// TAST (Let): Monad1_3_3 -> gopurs_runtime.Value
+Monad1_3_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_2, "Monad1"), gopurs_runtime.Value{})
+_ = Monad1_3_3
+// TAST (Let): Semigroup0_4_4 -> gopurs_runtime.Value
+Semigroup0_4_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_2, "Semigroup0"), gopurs_runtime.Value{})
+_ = Semigroup0_4_4
+// TAST (Let): __local_var_5_7 -> gopurs_runtime.Value
+__local_var_5_7 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad1_3_3, "Applicative0"), gopurs_runtime.Value{})
+_ = __local_var_5_7
+// TAST (Let): __local_var_6_9 -> gopurs_runtime.Value
+__local_var_6_9 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_5_7, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_6_9
+// TAST (Let): __local_var_7_11 -> gopurs_runtime.Value
+__local_var_7_11 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_6_9, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_7_11
+// TAST (Let): functorReaderT1_7_10 -> gopurs_runtime.Value
+functorReaderT1_7_10 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_9_12 -> gopurs_runtime.Value
+__local_var_9_12 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_7_11, "map"), x_8)
+_ = __local_var_9_12
+return gopurs_runtime.Func(func(v_10 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_11 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_9_12, gopurs_runtime.Apply(v_10, x_11))
+})
+})
+}))
+_ = functorReaderT1_7_10
+// TAST (Let): applyReaderT1_6_8 -> gopurs_runtime.Value
+applyReaderT1_6_8 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorReaderT1_7_10
+}), gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_10 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_6_9, "apply"), gopurs_runtime.Apply(v_8, r_10), gopurs_runtime.Apply(v1_9, r_10))
+})
+})
+}))
+_ = applyReaderT1_6_8
+// TAST (Let): applicativeReaderT1_5_6 -> gopurs_runtime.Value
+applicativeReaderT1_5_6 := gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return applyReaderT1_6_8
+}), gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_8_13 -> gopurs_runtime.Value
+__local_var_8_13 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_5_7, "pure"), x_7)
+_ = __local_var_8_13
+return gopurs_runtime.Func(func(v_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return __local_var_8_13
+})
+}))
+_ = applicativeReaderT1_5_6
+// TAST (Let): __local_var_6_15 -> gopurs_runtime.Value
+__local_var_6_15 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad1_3_3, "Bind1"), gopurs_runtime.Value{})
+_ = __local_var_6_15
+// TAST (Let): __local_var_7_17 -> gopurs_runtime.Value
+__local_var_7_17 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_6_15, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_7_17
+// TAST (Let): __local_var_8_19 -> gopurs_runtime.Value
+__local_var_8_19 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_7_17, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_8_19
+// TAST (Let): functorReaderT1_8_18 -> gopurs_runtime.Value
+functorReaderT1_8_18 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_9 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_10_20 -> gopurs_runtime.Value
+__local_var_10_20 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_8_19, "map"), x_9)
+_ = __local_var_10_20
+return gopurs_runtime.Func(func(v_11 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_12 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_10_20, gopurs_runtime.Apply(v_11, x_12))
+})
+})
+}))
+_ = functorReaderT1_8_18
+// TAST (Let): applyReaderT1_7_16 -> gopurs_runtime.Value
+applyReaderT1_7_16 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorReaderT1_8_18
+}), gopurs_runtime.Func(func(v_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_10 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_11 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_7_17, "apply"), gopurs_runtime.Apply(v_9, r_11), gopurs_runtime.Apply(v1_10, r_11))
+})
+})
+}))
+_ = applyReaderT1_7_16
+// TAST (Let): bindReaderT1_6_14 -> gopurs_runtime.Value
+bindReaderT1_6_14 := gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return applyReaderT1_7_16
+}), gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(k_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_10 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_6_15, "bind"), gopurs_runtime.Apply(v_8, r_10), gopurs_runtime.Func(func(a_11 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(k_9, a_11, r_10)
+}))
+})
+})
+}))
+_ = bindReaderT1_6_14
+// TAST (Let): monadReaderT1_5_5 -> gopurs_runtime.Value
+monadReaderT1_5_5 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return applicativeReaderT1_5_6
+}), gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return bindReaderT1_6_14
+}))
+_ = monadReaderT1_5_5
 // TAST (Let): monadTellReaderT1_2_1 -> gopurs_runtime.Value
-monadTellReaderT1_2_1 := Call_Control_Monad_Reader_Trans_monadTellReaderT(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadWriter_0, "MonadTell1"), gopurs_runtime.Value{}))
+monadTellReaderT1_2_1 := gopurs_runtime.RecordDict3("Monad1", "Semigroup0", "tell", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return monadReaderT1_5_5
+}), gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return Semigroup0_4_4
+}), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_7_21 -> gopurs_runtime.Value
+__local_var_7_21 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_2, "tell"), x_6)
+_ = __local_var_7_21
+return gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return __local_var_7_21
+})
+}))
 _ = monadTellReaderT1_2_1
 return gopurs_runtime.RecordDict4("MonadTell1", "Monoid0", "listen", "pass", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadTellReaderT1_2_1
@@ -877,24 +1707,230 @@ _ = dictMonadThrow_0
 // TAST (Let): Monad0_1_0 -> gopurs_runtime.Value
 Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadThrow_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
+// TAST (Let): __local_var_2_3 -> gopurs_runtime.Value
+__local_var_2_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{})
+_ = __local_var_2_3
+// TAST (Let): __local_var_3_5 -> gopurs_runtime.Value
+__local_var_3_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_3, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_3_5
+// TAST (Let): __local_var_4_7 -> gopurs_runtime.Value
+__local_var_4_7 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_5, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_4_7
+// TAST (Let): functorReaderT1_4_6 -> gopurs_runtime.Value
+functorReaderT1_4_6 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_6_8 -> gopurs_runtime.Value
+__local_var_6_8 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_7, "map"), x_5)
+_ = __local_var_6_8
+return gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_6_8, gopurs_runtime.Apply(v_7, x_8))
+})
+})
+}))
+_ = functorReaderT1_4_6
+// TAST (Let): applyReaderT1_3_4 -> gopurs_runtime.Value
+applyReaderT1_3_4 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorReaderT1_4_6
+}), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_5, "apply"), gopurs_runtime.Apply(v_5, r_7), gopurs_runtime.Apply(v1_6, r_7))
+})
+})
+}))
+_ = applyReaderT1_3_4
+// TAST (Let): applicativeReaderT1_2_2 -> gopurs_runtime.Value
+applicativeReaderT1_2_2 := gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return applyReaderT1_3_4
+}), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_5_9 -> gopurs_runtime.Value
+__local_var_5_9 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_3, "pure"), x_4)
+_ = __local_var_5_9
+return gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return __local_var_5_9
+})
+}))
+_ = applicativeReaderT1_2_2
+// TAST (Let): __local_var_3_11 -> gopurs_runtime.Value
+__local_var_3_11 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bind1"), gopurs_runtime.Value{})
+_ = __local_var_3_11
+// TAST (Let): __local_var_4_13 -> gopurs_runtime.Value
+__local_var_4_13 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_11, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_4_13
+// TAST (Let): __local_var_5_15 -> gopurs_runtime.Value
+__local_var_5_15 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_13, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_5_15
+// TAST (Let): functorReaderT1_5_14 -> gopurs_runtime.Value
+functorReaderT1_5_14 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_7_16 -> gopurs_runtime.Value
+__local_var_7_16 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_5_15, "map"), x_6)
+_ = __local_var_7_16
+return gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_7_16, gopurs_runtime.Apply(v_8, x_9))
+})
+})
+}))
+_ = functorReaderT1_5_14
+// TAST (Let): applyReaderT1_4_12 -> gopurs_runtime.Value
+applyReaderT1_4_12 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorReaderT1_5_14
+}), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_13, "apply"), gopurs_runtime.Apply(v_6, r_8), gopurs_runtime.Apply(v1_7, r_8))
+})
+})
+}))
+_ = applyReaderT1_4_12
+// TAST (Let): bindReaderT1_3_10 -> gopurs_runtime.Value
+bindReaderT1_3_10 := gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return applyReaderT1_4_12
+}), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(k_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_11, "bind"), gopurs_runtime.Apply(v_5, r_7), gopurs_runtime.Func(func(a_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(k_6, a_8, r_7)
+}))
+})
+})
+}))
+_ = bindReaderT1_3_10
 // TAST (Let): monadReaderT1_2_1 -> gopurs_runtime.Value
-monadReaderT1_2_1 := Call_Control_Monad_Reader_Trans_monadReaderT(Monad0_1_0)
+monadReaderT1_2_1 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return applicativeReaderT1_2_2
+}), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return bindReaderT1_3_10
+}))
 _ = monadReaderT1_2_1
-// TAST (Let): __local_var_3_2 -> gopurs_runtime.Value
-__local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Monad_Reader_Trans_monadTransReaderT(), "lift"), Monad0_1_0)
-_ = __local_var_3_2
 return gopurs_runtime.RecordDict2("Monad0", "throwError", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadReaderT1_2_1
-}), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_3_2, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadThrow_0, "throwError"), x_4))
+}), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_4_17 -> gopurs_runtime.Value
+__local_var_4_17 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadThrow_0, "throwError"), x_3)
+_ = __local_var_4_17
+return gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return __local_var_4_17
+})
 }))
 }
 
 func Call_Control_Monad_Reader_Trans_monadErrorReaderT(dictMonadError_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadError_0 gopurs_runtime.Value = dictMonadError_0_loop
 _ = dictMonadError_0
+// TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
+__local_var_1_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadError_0, "MonadThrow0"), gopurs_runtime.Value{})
+_ = __local_var_1_1
+// TAST (Let): Monad0_2_2 -> gopurs_runtime.Value
+Monad0_2_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_1, "Monad0"), gopurs_runtime.Value{})
+_ = Monad0_2_2
+// TAST (Let): __local_var_3_5 -> gopurs_runtime.Value
+__local_var_3_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_2_2, "Applicative0"), gopurs_runtime.Value{})
+_ = __local_var_3_5
+// TAST (Let): __local_var_4_7 -> gopurs_runtime.Value
+__local_var_4_7 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_5, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_4_7
+// TAST (Let): __local_var_5_9 -> gopurs_runtime.Value
+__local_var_5_9 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_7, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_5_9
+// TAST (Let): functorReaderT1_5_8 -> gopurs_runtime.Value
+functorReaderT1_5_8 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_7_10 -> gopurs_runtime.Value
+__local_var_7_10 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_5_9, "map"), x_6)
+_ = __local_var_7_10
+return gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_7_10, gopurs_runtime.Apply(v_8, x_9))
+})
+})
+}))
+_ = functorReaderT1_5_8
+// TAST (Let): applyReaderT1_4_6 -> gopurs_runtime.Value
+applyReaderT1_4_6 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorReaderT1_5_8
+}), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_7, "apply"), gopurs_runtime.Apply(v_6, r_8), gopurs_runtime.Apply(v1_7, r_8))
+})
+})
+}))
+_ = applyReaderT1_4_6
+// TAST (Let): applicativeReaderT1_3_4 -> gopurs_runtime.Value
+applicativeReaderT1_3_4 := gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return applyReaderT1_4_6
+}), gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_6_11 -> gopurs_runtime.Value
+__local_var_6_11 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_5, "pure"), x_5)
+_ = __local_var_6_11
+return gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return __local_var_6_11
+})
+}))
+_ = applicativeReaderT1_3_4
+// TAST (Let): __local_var_4_13 -> gopurs_runtime.Value
+__local_var_4_13 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_2_2, "Bind1"), gopurs_runtime.Value{})
+_ = __local_var_4_13
+// TAST (Let): __local_var_5_15 -> gopurs_runtime.Value
+__local_var_5_15 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_13, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_5_15
+// TAST (Let): __local_var_6_17 -> gopurs_runtime.Value
+__local_var_6_17 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_5_15, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_6_17
+// TAST (Let): functorReaderT1_6_16 -> gopurs_runtime.Value
+functorReaderT1_6_16 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_8_18 -> gopurs_runtime.Value
+__local_var_8_18 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_6_17, "map"), x_7)
+_ = __local_var_8_18
+return gopurs_runtime.Func(func(v_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_10 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_8_18, gopurs_runtime.Apply(v_9, x_10))
+})
+})
+}))
+_ = functorReaderT1_6_16
+// TAST (Let): applyReaderT1_5_14 -> gopurs_runtime.Value
+applyReaderT1_5_14 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorReaderT1_6_16
+}), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_5_15, "apply"), gopurs_runtime.Apply(v_7, r_9), gopurs_runtime.Apply(v1_8, r_9))
+})
+})
+}))
+_ = applyReaderT1_5_14
+// TAST (Let): bindReaderT1_4_12 -> gopurs_runtime.Value
+bindReaderT1_4_12 := gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return applyReaderT1_5_14
+}), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(k_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_13, "bind"), gopurs_runtime.Apply(v_6, r_8), gopurs_runtime.Func(func(a_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(k_7, a_9, r_8)
+}))
+})
+})
+}))
+_ = bindReaderT1_4_12
+// TAST (Let): monadReaderT1_3_3 -> gopurs_runtime.Value
+monadReaderT1_3_3 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return applicativeReaderT1_3_4
+}), gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return bindReaderT1_4_12
+}))
+_ = monadReaderT1_3_3
 // TAST (Let): monadThrowReaderT1_1_0 -> gopurs_runtime.Value
-monadThrowReaderT1_1_0 := Call_Control_Monad_Reader_Trans_monadThrowReaderT(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadError_0, "MonadThrow0"), gopurs_runtime.Value{}))
+monadThrowReaderT1_1_0 := gopurs_runtime.RecordDict2("Monad0", "throwError", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return monadReaderT1_3_3
+}), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_5_19 -> gopurs_runtime.Value
+__local_var_5_19 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_1, "throwError"), x_4)
+_ = __local_var_5_19
+return gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return __local_var_5_19
+})
+}))
 _ = monadThrowReaderT1_1_0
 return gopurs_runtime.RecordDict2("MonadThrow0", "catchError", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadThrowReaderT1_1_0
@@ -915,16 +1951,111 @@ _ = dictMonadST_0
 // TAST (Let): Monad0_1_0 -> gopurs_runtime.Value
 Monad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadST_0, "Monad0"), gopurs_runtime.Value{})
 _ = Monad0_1_0
+// TAST (Let): __local_var_2_3 -> gopurs_runtime.Value
+__local_var_2_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Applicative0"), gopurs_runtime.Value{})
+_ = __local_var_2_3
+// TAST (Let): __local_var_3_5 -> gopurs_runtime.Value
+__local_var_3_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_3, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_3_5
+// TAST (Let): __local_var_4_7 -> gopurs_runtime.Value
+__local_var_4_7 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_5, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_4_7
+// TAST (Let): functorReaderT1_4_6 -> gopurs_runtime.Value
+functorReaderT1_4_6 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_6_8 -> gopurs_runtime.Value
+__local_var_6_8 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_7, "map"), x_5)
+_ = __local_var_6_8
+return gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_6_8, gopurs_runtime.Apply(v_7, x_8))
+})
+})
+}))
+_ = functorReaderT1_4_6
+// TAST (Let): applyReaderT1_3_4 -> gopurs_runtime.Value
+applyReaderT1_3_4 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorReaderT1_4_6
+}), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_5, "apply"), gopurs_runtime.Apply(v_5, r_7), gopurs_runtime.Apply(v1_6, r_7))
+})
+})
+}))
+_ = applyReaderT1_3_4
+// TAST (Let): applicativeReaderT1_2_2 -> gopurs_runtime.Value
+applicativeReaderT1_2_2 := gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return applyReaderT1_3_4
+}), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_5_9 -> gopurs_runtime.Value
+__local_var_5_9 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_3, "pure"), x_4)
+_ = __local_var_5_9
+return gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return __local_var_5_9
+})
+}))
+_ = applicativeReaderT1_2_2
+// TAST (Let): __local_var_3_11 -> gopurs_runtime.Value
+__local_var_3_11 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Monad0_1_0, "Bind1"), gopurs_runtime.Value{})
+_ = __local_var_3_11
+// TAST (Let): __local_var_4_13 -> gopurs_runtime.Value
+__local_var_4_13 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_11, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_4_13
+// TAST (Let): __local_var_5_15 -> gopurs_runtime.Value
+__local_var_5_15 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_13, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_5_15
+// TAST (Let): functorReaderT1_5_14 -> gopurs_runtime.Value
+functorReaderT1_5_14 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_7_16 -> gopurs_runtime.Value
+__local_var_7_16 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_5_15, "map"), x_6)
+_ = __local_var_7_16
+return gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_7_16, gopurs_runtime.Apply(v_8, x_9))
+})
+})
+}))
+_ = functorReaderT1_5_14
+// TAST (Let): applyReaderT1_4_12 -> gopurs_runtime.Value
+applyReaderT1_4_12 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorReaderT1_5_14
+}), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_13, "apply"), gopurs_runtime.Apply(v_6, r_8), gopurs_runtime.Apply(v1_7, r_8))
+})
+})
+}))
+_ = applyReaderT1_4_12
+// TAST (Let): bindReaderT1_3_10 -> gopurs_runtime.Value
+bindReaderT1_3_10 := gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return applyReaderT1_4_12
+}), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(k_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_11, "bind"), gopurs_runtime.Apply(v_5, r_7), gopurs_runtime.Func(func(a_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(k_6, a_8, r_7)
+}))
+})
+})
+}))
+_ = bindReaderT1_3_10
 // TAST (Let): monadReaderT1_2_1 -> gopurs_runtime.Value
-monadReaderT1_2_1 := Call_Control_Monad_Reader_Trans_monadReaderT(Monad0_1_0)
+monadReaderT1_2_1 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return applicativeReaderT1_2_2
+}), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return bindReaderT1_3_10
+}))
 _ = monadReaderT1_2_1
-// TAST (Let): __local_var_3_2 -> gopurs_runtime.Value
-__local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Monad_Reader_Trans_monadTransReaderT(), "lift"), Monad0_1_0)
-_ = __local_var_3_2
 return gopurs_runtime.RecordDict2("Monad0", "liftST", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadReaderT1_2_1
-}), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_3_2, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadST_0, "liftST"), x_4))
+}), gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_4_17 -> gopurs_runtime.Value
+__local_var_4_17 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadST_0, "liftST"), x_3)
+_ = __local_var_4_17
+return gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return __local_var_4_17
+})
 }))
 }
 
@@ -972,16 +2103,52 @@ return __local_var_3_6
 })
 })))
 _ = applicativeReaderT1_1_0
-// TAST (Let): semigroupReaderT1_2_7 -> gopurs_runtime.Value
-semigroupReaderT1_2_7 := Call_Control_Monad_Reader_Trans_semigroupReaderT(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{}))
-_ = semigroupReaderT1_2_7
-return gopurs_runtime.Func(func(dictMonoid_3 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): semigroupReaderT2_4_8 -> gopurs_runtime.Value
-semigroupReaderT2_4_8 := gopurs_runtime.Apply(semigroupReaderT1_2_7, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_3, "Semigroup0"), gopurs_runtime.Value{}))
-_ = semigroupReaderT2_4_8
-return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return semigroupReaderT2_4_8
-}), gopurs_runtime.Apply(gopurs_runtime.Box(applicativeReaderT1_1_0.V1), gopurs_runtime.RecordGet(dictMonoid_3, "mempty")))
+// TAST (Let): __local_var_2_7 -> gopurs_runtime.Value
+__local_var_2_7 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApplicative_0, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_2_7
+// TAST (Let): __local_var_3_10 -> gopurs_runtime.Value
+__local_var_3_10 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_7, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_3_10
+// TAST (Let): functorReaderT1_3_9 -> gopurs_runtime.Value
+functorReaderT1_3_9 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_5_11 -> gopurs_runtime.Value
+__local_var_5_11 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_10, "map"), x_4)
+_ = __local_var_5_11
+return gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_5_11, gopurs_runtime.Apply(v_6, x_7))
+})
+})
+}))
+_ = functorReaderT1_3_9
+// TAST (Let): applyReaderT1_3_8 -> *Constructor_Control_Apply_Apply
+applyReaderT1_3_8 := gopurs_runtime.CoerceToStruct[Constructor_Control_Apply_Apply](gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorReaderT1_3_9
+}), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_7, "apply"), gopurs_runtime.Apply(v_4, r_6), gopurs_runtime.Apply(v1_5, r_6))
+})
+})
+})))
+_ = applyReaderT1_3_8
+return gopurs_runtime.Func(func(dictMonoid_4 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): Functor0_5_13 -> *Constructor_Data_Functor_Functor
+Functor0_5_13 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.Box(applyReaderT1_3_8.V0), gopurs_runtime.Value{}))
+_ = Functor0_5_13
+// TAST (Let): __local_var_6_14 -> gopurs_runtime.Value
+__local_var_6_14 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonoid_4, "Semigroup0"), gopurs_runtime.Value{}), "append")
+_ = __local_var_6_14
+// TAST (Let): semigroupReaderT2_5_12 -> gopurs_runtime.Value
+semigroupReaderT2_5_12 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(a_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(b_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.Box(applyReaderT1_3_8.V1), gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_5_13.V0), __local_var_6_14, a_7), b_8)
+})
+}))
+_ = semigroupReaderT2_5_12
+return gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return semigroupReaderT2_5_12
+}), gopurs_runtime.Apply(gopurs_runtime.Box(applicativeReaderT1_1_0.V1), gopurs_runtime.RecordGet(dictMonoid_4, "mempty")))
 })
 }
 
@@ -1155,14 +2322,203 @@ return plusReaderT1_2_8
 func Call_Control_Monad_Reader_Trans_monadPlusReaderT(dictMonadPlus_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadPlus_0 gopurs_runtime.Value = dictMonadPlus_0_loop
 _ = dictMonadPlus_0
+// TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
+__local_var_1_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadPlus_0, "Monad0"), gopurs_runtime.Value{})
+_ = __local_var_1_1
+// TAST (Let): __local_var_2_3 -> gopurs_runtime.Value
+__local_var_2_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_1, "Applicative0"), gopurs_runtime.Value{})
+_ = __local_var_2_3
+// TAST (Let): __local_var_3_5 -> gopurs_runtime.Value
+__local_var_3_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_3, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_3_5
+// TAST (Let): __local_var_4_7 -> gopurs_runtime.Value
+__local_var_4_7 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_5, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_4_7
+// TAST (Let): functorReaderT1_4_6 -> gopurs_runtime.Value
+functorReaderT1_4_6 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_6_8 -> gopurs_runtime.Value
+__local_var_6_8 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_7, "map"), x_5)
+_ = __local_var_6_8
+return gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_6_8, gopurs_runtime.Apply(v_7, x_8))
+})
+})
+}))
+_ = functorReaderT1_4_6
+// TAST (Let): applyReaderT1_3_4 -> gopurs_runtime.Value
+applyReaderT1_3_4 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorReaderT1_4_6
+}), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_5, "apply"), gopurs_runtime.Apply(v_5, r_7), gopurs_runtime.Apply(v1_6, r_7))
+})
+})
+}))
+_ = applyReaderT1_3_4
+// TAST (Let): applicativeReaderT1_2_2 -> gopurs_runtime.Value
+applicativeReaderT1_2_2 := gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return applyReaderT1_3_4
+}), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_5_9 -> gopurs_runtime.Value
+__local_var_5_9 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_3, "pure"), x_4)
+_ = __local_var_5_9
+return gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return __local_var_5_9
+})
+}))
+_ = applicativeReaderT1_2_2
+// TAST (Let): __local_var_3_11 -> gopurs_runtime.Value
+__local_var_3_11 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_1, "Bind1"), gopurs_runtime.Value{})
+_ = __local_var_3_11
+// TAST (Let): __local_var_4_13 -> gopurs_runtime.Value
+__local_var_4_13 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_11, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_4_13
+// TAST (Let): __local_var_5_15 -> gopurs_runtime.Value
+__local_var_5_15 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_13, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_5_15
+// TAST (Let): functorReaderT1_5_14 -> gopurs_runtime.Value
+functorReaderT1_5_14 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_7_16 -> gopurs_runtime.Value
+__local_var_7_16 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_5_15, "map"), x_6)
+_ = __local_var_7_16
+return gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_7_16, gopurs_runtime.Apply(v_8, x_9))
+})
+})
+}))
+_ = functorReaderT1_5_14
+// TAST (Let): applyReaderT1_4_12 -> gopurs_runtime.Value
+applyReaderT1_4_12 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorReaderT1_5_14
+}), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_13, "apply"), gopurs_runtime.Apply(v_6, r_8), gopurs_runtime.Apply(v1_7, r_8))
+})
+})
+}))
+_ = applyReaderT1_4_12
+// TAST (Let): bindReaderT1_3_10 -> gopurs_runtime.Value
+bindReaderT1_3_10 := gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return applyReaderT1_4_12
+}), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(k_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_11, "bind"), gopurs_runtime.Apply(v_5, r_7), gopurs_runtime.Func(func(a_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(k_6, a_8, r_7)
+}))
+})
+})
+}))
+_ = bindReaderT1_3_10
 // TAST (Let): monadReaderT1_1_0 -> gopurs_runtime.Value
-monadReaderT1_1_0 := Call_Control_Monad_Reader_Trans_monadReaderT(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadPlus_0, "Monad0"), gopurs_runtime.Value{}))
+monadReaderT1_1_0 := gopurs_runtime.RecordDict2("Applicative0", "Bind1", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return applicativeReaderT1_2_2
+}), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return bindReaderT1_3_10
+}))
 _ = monadReaderT1_1_0
-// TAST (Let): alternativeReaderT1_2_1 -> gopurs_runtime.Value
-alternativeReaderT1_2_1 := Call_Control_Monad_Reader_Trans_alternativeReaderT(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadPlus_0, "Alternative1"), gopurs_runtime.Value{}))
-_ = alternativeReaderT1_2_1
+// TAST (Let): __local_var_2_18 -> gopurs_runtime.Value
+__local_var_2_18 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadPlus_0, "Alternative1"), gopurs_runtime.Value{})
+_ = __local_var_2_18
+// TAST (Let): __local_var_3_20 -> gopurs_runtime.Value
+__local_var_3_20 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_18, "Applicative0"), gopurs_runtime.Value{})
+_ = __local_var_3_20
+// TAST (Let): __local_var_4_22 -> gopurs_runtime.Value
+__local_var_4_22 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_20, "Apply0"), gopurs_runtime.Value{})
+_ = __local_var_4_22
+// TAST (Let): __local_var_5_24 -> gopurs_runtime.Value
+__local_var_5_24 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_22, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_5_24
+// TAST (Let): functorReaderT1_5_23 -> gopurs_runtime.Value
+functorReaderT1_5_23 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_7_25 -> gopurs_runtime.Value
+__local_var_7_25 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_5_24, "map"), x_6)
+_ = __local_var_7_25
+return gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_7_25, gopurs_runtime.Apply(v_8, x_9))
+})
+})
+}))
+_ = functorReaderT1_5_23
+// TAST (Let): applyReaderT1_4_21 -> gopurs_runtime.Value
+applyReaderT1_4_21 := gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorReaderT1_5_23
+}), gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_22, "apply"), gopurs_runtime.Apply(v_6, r_8), gopurs_runtime.Apply(v1_7, r_8))
+})
+})
+}))
+_ = applyReaderT1_4_21
+// TAST (Let): applicativeReaderT1_3_19 -> gopurs_runtime.Value
+applicativeReaderT1_3_19 := gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return applyReaderT1_4_21
+}), gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_6_26 -> gopurs_runtime.Value
+__local_var_6_26 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_20, "pure"), x_5)
+_ = __local_var_6_26
+return gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return __local_var_6_26
+})
+}))
+_ = applicativeReaderT1_3_19
+// TAST (Let): __local_var_4_28 -> gopurs_runtime.Value
+__local_var_4_28 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_18, "Plus1"), gopurs_runtime.Value{})
+_ = __local_var_4_28
+// TAST (Let): __local_var_5_30 -> gopurs_runtime.Value
+__local_var_5_30 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_4_28, "Alt0"), gopurs_runtime.Value{})
+_ = __local_var_5_30
+// TAST (Let): __local_var_6_32 -> gopurs_runtime.Value
+__local_var_6_32 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_5_30, "Functor0"), gopurs_runtime.Value{})
+_ = __local_var_6_32
+// TAST (Let): functorReaderT1_6_31 -> gopurs_runtime.Value
+functorReaderT1_6_31 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_8_33 -> gopurs_runtime.Value
+__local_var_8_33 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_6_32, "map"), x_7)
+_ = __local_var_8_33
+return gopurs_runtime.Func(func(v_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_10 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_8_33, gopurs_runtime.Apply(v_9, x_10))
+})
+})
+}))
+_ = functorReaderT1_6_31
+// TAST (Let): altReaderT1_5_29 -> gopurs_runtime.Value
+altReaderT1_5_29 := gopurs_runtime.RecordDict2("Functor0", "alt", gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return functorReaderT1_6_31
+}), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(r_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_5_30, "alt"), gopurs_runtime.Apply(v_7, r_9), gopurs_runtime.Apply(v1_8, r_9))
+})
+})
+}))
+_ = altReaderT1_5_29
+// TAST (Let): __local_var_6_34 -> gopurs_runtime.Value
+__local_var_6_34 := gopurs_runtime.RecordGet(__local_var_4_28, "empty")
+_ = __local_var_6_34
+// TAST (Let): plusReaderT1_4_27 -> gopurs_runtime.Value
+plusReaderT1_4_27 := gopurs_runtime.RecordDict2("Alt0", "empty", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return altReaderT1_5_29
+}), gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return __local_var_6_34
+}))
+_ = plusReaderT1_4_27
+// TAST (Let): alternativeReaderT1_2_17 -> gopurs_runtime.Value
+alternativeReaderT1_2_17 := gopurs_runtime.RecordDict2("Applicative0", "Plus1", gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return applicativeReaderT1_3_19
+}), gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return plusReaderT1_4_27
+}))
+_ = alternativeReaderT1_2_17
 return gopurs_runtime.RecordDict2("Alternative1", "Monad0", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return alternativeReaderT1_2_1
+return alternativeReaderT1_2_17
 }), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadReaderT1_1_0
 }))

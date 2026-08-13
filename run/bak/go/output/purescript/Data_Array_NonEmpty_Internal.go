@@ -164,7 +164,28 @@ var once_Data_Array_NonEmpty_Internal_traversable1NonEmptyArray sync.Once
 func Get_Data_Array_NonEmpty_Internal_traversable1NonEmptyArray() gopurs_runtime.Value {
 	once_Data_Array_NonEmpty_Internal_traversable1NonEmptyArray.Do(func() {
 		cache_Data_Array_NonEmpty_Internal_traversable1NonEmptyArray = gopurs_runtime.RecordDict4("Foldable10", "Traversable1", "sequence1", "traverse1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Array_NonEmpty_Internal_foldable1NonEmptyArray()
+return gopurs_runtime.RecordDict4("Foldable0", "foldMap1", "foldl1", "foldr1", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_Data_Foldable_foldableArray()
+}), gopurs_runtime.Func(func(dictSemigroup_1 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): append_2_0 -> gopurs_runtime.Value
+append_2_0 := gopurs_runtime.RecordGet(dictSemigroup_1, "append")
+_ = append_2_0
+return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_4_1 -> gopurs_runtime.Value
+__local_var_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Functor_functorArray(), "map"), f_3)
+_ = __local_var_4_1
+// TAST (Let): __local_var_5_2 -> gopurs_runtime.Value
+__local_var_5_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Array_NonEmpty_Internal_foldable1NonEmptyArray(), "foldl1"), append_2_0)
+_ = __local_var_5_2
+return gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_5_2, gopurs_runtime.Apply(__local_var_4_1, x_6))
+})
+})
+}), gopurs_runtime.Func2(func(__local_var_1 gopurs_runtime.Value, __local_var_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UncurriedApp2(Get_Data_Array_NonEmpty_Internal_foldl1Impl(), __local_var_1, __local_var_2)
+}), gopurs_runtime.Func2(func(__local_var_1 gopurs_runtime.Value, __local_var_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UncurriedApp2(Get_Data_Array_NonEmpty_Internal_foldr1Impl(), __local_var_1, __local_var_2)
+}))
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Traversable_traversableArray()
 }), gopurs_runtime.Func(func(dictApply_0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -172,14 +193,14 @@ return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Array_NonEmpty_In
 return x_1
 }))
 }), gopurs_runtime.Func(func(dictApply_0 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): apply_1_0 -> gopurs_runtime.Value
-apply_1_0 := gopurs_runtime.RecordGet(dictApply_0, "apply")
-_ = apply_1_0
-// TAST (Let): go__map_2_1 -> gopurs_runtime.Value
-go__map_2_1 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_0, "Functor0"), gopurs_runtime.Value{}), "map")
-_ = go__map_2_1
+// TAST (Let): apply_1_3 -> gopurs_runtime.Value
+apply_1_3 := gopurs_runtime.RecordGet(dictApply_0, "apply")
+_ = apply_1_3
+// TAST (Let): go__map_2_4 -> gopurs_runtime.Value
+go__map_2_4 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictApply_0, "Functor0"), gopurs_runtime.Value{}), "map")
+_ = go__map_2_4
 return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp3(Get_Data_Array_NonEmpty_Internal_traverse1Impl(), apply_1_0, go__map_2_1, f_3)
+return gopurs_runtime.UncurriedApp3(Get_Data_Array_NonEmpty_Internal_traverse1Impl(), apply_1_3, go__map_2_4, f_3)
 })
 }))
 	})
@@ -249,18 +270,42 @@ func Get_Data_Array_NonEmpty_Internal_foldable1NonEmptyArray__4102232191() gopur
 		cache_Data_Array_NonEmpty_Internal_foldable1NonEmptyArray__4102232191 = gopurs_runtime.RecordDict4("Foldable0", "foldMap1", "foldl1", "foldr1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Foldable_foldableArray()
 }), gopurs_runtime.Func(func(dictSemigroup_0 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): append_1_0 -> gopurs_runtime.Value
-append_1_0 := gopurs_runtime.RecordGet(dictSemigroup_0, "append")
-_ = append_1_0
-return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): __local_var_3_1 -> gopurs_runtime.Value
-__local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Functor_functorArray(), "map"), f_2)
-_ = __local_var_3_1
+// TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
+__local_var_1_0 := gopurs_runtime.RecordDict4("Foldable0", "foldMap1", "foldl1", "foldr1", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return Get_Data_Foldable_foldableArray()
+}), gopurs_runtime.Func(func(dictSemigroup_1 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): append_2_1 -> gopurs_runtime.Value
+append_2_1 := gopurs_runtime.RecordGet(dictSemigroup_1, "append")
+_ = append_2_1
+return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_4_2 -> gopurs_runtime.Value
-__local_var_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Array_NonEmpty_Internal_foldable1NonEmptyArray(), "foldl1"), append_1_0)
+__local_var_4_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Functor_functorArray(), "map"), f_3)
 _ = __local_var_4_2
-return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_4_2, gopurs_runtime.Apply(__local_var_3_1, x_5))
+// TAST (Let): __local_var_5_3 -> gopurs_runtime.Value
+__local_var_5_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Array_NonEmpty_Internal_foldable1NonEmptyArray(), "foldl1"), append_2_1)
+_ = __local_var_5_3
+return gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_5_3, gopurs_runtime.Apply(__local_var_4_2, x_6))
+})
+})
+}), gopurs_runtime.Func2(func(__local_var_1 gopurs_runtime.Value, __local_var_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UncurriedApp2(Get_Data_Array_NonEmpty_Internal_foldl1Impl(), __local_var_1, __local_var_2)
+}), gopurs_runtime.Func2(func(__local_var_1 gopurs_runtime.Value, __local_var_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.UncurriedApp2(Get_Data_Array_NonEmpty_Internal_foldr1Impl(), __local_var_1, __local_var_2)
+}))
+_ = __local_var_1_0
+// TAST (Let): append_2_4 -> gopurs_runtime.Value
+append_2_4 := gopurs_runtime.RecordGet(dictSemigroup_0, "append")
+_ = append_2_4
+return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_4_5 -> gopurs_runtime.Value
+__local_var_4_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Functor_functorArray(), "map"), f_3)
+_ = __local_var_4_5
+// TAST (Let): __local_var_5_6 -> gopurs_runtime.Value
+__local_var_5_6 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "foldl1"), append_2_4)
+_ = __local_var_5_6
+return gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_5_6, gopurs_runtime.Apply(__local_var_4_5, x_6))
 })
 })
 }), gopurs_runtime.Func2(func(__local_var_0 gopurs_runtime.Value, __local_var_1 gopurs_runtime.Value) gopurs_runtime.Value {

@@ -4704,9 +4704,20 @@ var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var x_1 string = x_1_loop
 _ = x_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Functor_functorArray(), "map"), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+arr_val_arrayMap0 := f_0
+_ = arr_val_arrayMap0
+arr_go_arrayMap0 := (*[]gopurs_runtime.Value)(arr_val_arrayMap0.UnsafePtr)
+_ = arr_go_arrayMap0
+res_go_arrayMap0 := make([]gopurs_runtime.Value, len(*arr_go_arrayMap0))
+_ = res_go_arrayMap0
+for i_arrayMap0, v_arrayMap0 := range *arr_go_arrayMap0 {
+res_go_arrayMap0[i_arrayMap0] = gopurs_runtime.Apply(gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Str(x_1)
-}), f_0)
+}), v_arrayMap0)
+}
+return gopurs_runtime.Array(res_go_arrayMap0)
+}()
 }
 
 func Call_Data_Functor_voidLeft__32301756(dictFunctor_0_loop *Constructor_Data_Functor_Functor, f_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {

@@ -270,23 +270,22 @@ var once_Data_Int_ordParity sync.Once
 func Get_Data_Int_ordParity() gopurs_runtime.Value {
 	once_Data_Int_ordParity.Do(func() {
 		cache_Data_Int_ordParity = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Int_eqParity()
-}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(y_1 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t1 uint32
+return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_2 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t1 bool
 {
-if (uint32(x_0.IntVal) == 2591059121) {
-var __t0 uint32
+if (uint32(x_1.IntVal) == 2591059121) {
+var __t0 bool
 {
-if (uint32(y_1.IntVal) == 2591059121) {
-__t0 = 902936544
+if (uint32(y_2.IntVal) == 2591059121) {
+__t0 = true
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = 1527465420
+__t0 = false
 }
 end_branch_0:
 __t1 = __t0
@@ -296,26 +295,65 @@ goto end_branch_1
 }
 }
 {
-if (uint32(y_1.IntVal) == 2591059121) {
-__t1 = 380165415
+if ((uint32(x_1.IntVal) == 658452902)) && ((uint32(y_2.IntVal) == 658452902)) {
+__t1 = true
 goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = false
+}
+end_branch_1:
+return gopurs_runtime.Bool(__t1)
+})
+}))
+}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_1 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t3 uint32
+{
+if (uint32(x_0.IntVal) == 2591059121) {
+var __t2 uint32
+{
+if (uint32(y_1.IntVal) == 2591059121) {
+__t2 = 902936544
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = 1527465420
+}
+end_branch_2:
+__t3 = __t2
+goto end_branch_3
+} else {
+
+}
+}
+{
+if (uint32(y_1.IntVal) == 2591059121) {
+__t3 = 380165415
+goto end_branch_3
 } else {
 
 }
 }
 {
 if ((uint32(x_0.IntVal) == 658452902)) && ((uint32(y_1.IntVal) == 658452902)) {
-__t1 = 902936544
-goto end_branch_1
+__t3 = 902936544
+goto end_branch_3
 } else {
 
 }
 }
 {
-__t1 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
+__t3 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
 }
-end_branch_1:
-return gopurs_runtime.Value{Type: 9, IntVal: int64(__t1), UnsafePtr: nil}
+end_branch_3:
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t3), UnsafePtr: nil}
 })
 }))
 	})
@@ -413,8 +451,145 @@ var once_Data_Int_ringParity sync.Once
 func Get_Data_Int_ringParity() gopurs_runtime.Value {
 	once_Data_Int_ringParity.Do(func() {
 		cache_Data_Int_ringParity = gopurs_runtime.RecordDict2("Semiring0", "sub", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Int_semiringParity()
-}), gopurs_runtime.RecordGet(Get_Data_Int_semiringParity(), "add"))
+return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_2 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t7 uint32
+{
+var __t6 bool
+{
+var __t_tag_0 uint32 = uint32(x_1.IntVal)
+if (uint32(__t_tag_0) == 2591059121) {
+var __t2 bool
+{
+var __t_tag_1 uint32 = uint32(y_2.IntVal)
+if (uint32(__t_tag_1) == 2591059121) {
+__t2 = true
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = false
+}
+end_branch_2:
+__t6 = __t2
+goto end_branch_6
+} else {
+
+}
+}
+{
+var __t_tag_3 uint32 = uint32(x_1.IntVal)
+var __t_and_5 bool = false
+if (uint32(__t_tag_3) == 658452902) {
+
+var __t_tag_4 uint32 = uint32(y_2.IntVal)
+__t_and_5 = (uint32(__t_tag_4) == 658452902)
+}
+if __t_and_5 {
+__t6 = true
+goto end_branch_6
+} else {
+
+}
+}
+{
+__t6 = false
+}
+end_branch_6:
+if __t6 {
+__t7 = 2591059121
+goto end_branch_7
+} else {
+
+}
+}
+{
+__t7 = 658452902
+}
+end_branch_7:
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t7), UnsafePtr: nil}
+})
+}), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t8 uint32
+{
+if ((uint32(v_1.IntVal) == 658452902)) && ((uint32(v1_2.IntVal) == 658452902)) {
+__t8 = 658452902
+goto end_branch_8
+} else {
+
+}
+}
+{
+__t8 = 2591059121
+}
+end_branch_8:
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t8), UnsafePtr: nil}
+})
+}), gopurs_runtime.Value{Type: 9, IntVal: int64(658452902), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(2591059121), UnsafePtr: nil})
+}), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_1 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t16 uint32
+{
+var __t15 bool
+{
+var __t_tag_9 uint32 = uint32(x_0.IntVal)
+if (uint32(__t_tag_9) == 2591059121) {
+var __t11 bool
+{
+var __t_tag_10 uint32 = uint32(y_1.IntVal)
+if (uint32(__t_tag_10) == 2591059121) {
+__t11 = true
+goto end_branch_11
+} else {
+
+}
+}
+{
+__t11 = false
+}
+end_branch_11:
+__t15 = __t11
+goto end_branch_15
+} else {
+
+}
+}
+{
+var __t_tag_12 uint32 = uint32(x_0.IntVal)
+var __t_and_14 bool = false
+if (uint32(__t_tag_12) == 658452902) {
+
+var __t_tag_13 uint32 = uint32(y_1.IntVal)
+__t_and_14 = (uint32(__t_tag_13) == 658452902)
+}
+if __t_and_14 {
+__t15 = true
+goto end_branch_15
+} else {
+
+}
+}
+{
+__t15 = false
+}
+end_branch_15:
+if __t15 {
+__t16 = 2591059121
+goto end_branch_16
+} else {
+
+}
+}
+{
+__t16 = 658452902
+}
+end_branch_16:
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t16), UnsafePtr: nil}
+})
+}))
 	})
 	return cache_Data_Int_ringParity
 }
@@ -424,7 +599,146 @@ var once_Data_Int_divisionRingParity sync.Once
 func Get_Data_Int_divisionRingParity() gopurs_runtime.Value {
 	once_Data_Int_divisionRingParity.Do(func() {
 		cache_Data_Int_divisionRingParity = gopurs_runtime.RecordDict2("Ring0", "recip", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Int_ringParity()
+return gopurs_runtime.RecordDict2("Semiring0", "sub", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t7 uint32
+{
+var __t6 bool
+{
+var __t_tag_0 uint32 = uint32(x_2.IntVal)
+if (uint32(__t_tag_0) == 2591059121) {
+var __t2 bool
+{
+var __t_tag_1 uint32 = uint32(y_3.IntVal)
+if (uint32(__t_tag_1) == 2591059121) {
+__t2 = true
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = false
+}
+end_branch_2:
+__t6 = __t2
+goto end_branch_6
+} else {
+
+}
+}
+{
+var __t_tag_3 uint32 = uint32(x_2.IntVal)
+var __t_and_5 bool = false
+if (uint32(__t_tag_3) == 658452902) {
+
+var __t_tag_4 uint32 = uint32(y_3.IntVal)
+__t_and_5 = (uint32(__t_tag_4) == 658452902)
+}
+if __t_and_5 {
+__t6 = true
+goto end_branch_6
+} else {
+
+}
+}
+{
+__t6 = false
+}
+end_branch_6:
+if __t6 {
+__t7 = 2591059121
+goto end_branch_7
+} else {
+
+}
+}
+{
+__t7 = 658452902
+}
+end_branch_7:
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t7), UnsafePtr: nil}
+})
+}), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t8 uint32
+{
+if ((uint32(v_2.IntVal) == 658452902)) && ((uint32(v1_3.IntVal) == 658452902)) {
+__t8 = 658452902
+goto end_branch_8
+} else {
+
+}
+}
+{
+__t8 = 2591059121
+}
+end_branch_8:
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t8), UnsafePtr: nil}
+})
+}), gopurs_runtime.Value{Type: 9, IntVal: int64(658452902), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(2591059121), UnsafePtr: nil})
+}), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_2 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t16 uint32
+{
+var __t15 bool
+{
+var __t_tag_9 uint32 = uint32(x_1.IntVal)
+if (uint32(__t_tag_9) == 2591059121) {
+var __t11 bool
+{
+var __t_tag_10 uint32 = uint32(y_2.IntVal)
+if (uint32(__t_tag_10) == 2591059121) {
+__t11 = true
+goto end_branch_11
+} else {
+
+}
+}
+{
+__t11 = false
+}
+end_branch_11:
+__t15 = __t11
+goto end_branch_15
+} else {
+
+}
+}
+{
+var __t_tag_12 uint32 = uint32(x_1.IntVal)
+var __t_and_14 bool = false
+if (uint32(__t_tag_12) == 658452902) {
+
+var __t_tag_13 uint32 = uint32(y_2.IntVal)
+__t_and_14 = (uint32(__t_tag_13) == 658452902)
+}
+if __t_and_14 {
+__t15 = true
+goto end_branch_15
+} else {
+
+}
+}
+{
+__t15 = false
+}
+end_branch_15:
+if __t15 {
+__t16 = 2591059121
+goto end_branch_16
+} else {
+
+}
+}
+{
+__t16 = 658452902
+}
+end_branch_16:
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t16), UnsafePtr: nil}
+})
+}))
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_0
 }))
@@ -446,7 +760,146 @@ var once_Data_Int_commutativeRingParity sync.Once
 func Get_Data_Int_commutativeRingParity() gopurs_runtime.Value {
 	once_Data_Int_commutativeRingParity.Do(func() {
 		cache_Data_Int_commutativeRingParity = gopurs_runtime.RecordDict1("Ring0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Int_ringParity()
+return gopurs_runtime.RecordDict2("Semiring0", "sub", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t7 uint32
+{
+var __t6 bool
+{
+var __t_tag_0 uint32 = uint32(x_2.IntVal)
+if (uint32(__t_tag_0) == 2591059121) {
+var __t2 bool
+{
+var __t_tag_1 uint32 = uint32(y_3.IntVal)
+if (uint32(__t_tag_1) == 2591059121) {
+__t2 = true
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = false
+}
+end_branch_2:
+__t6 = __t2
+goto end_branch_6
+} else {
+
+}
+}
+{
+var __t_tag_3 uint32 = uint32(x_2.IntVal)
+var __t_and_5 bool = false
+if (uint32(__t_tag_3) == 658452902) {
+
+var __t_tag_4 uint32 = uint32(y_3.IntVal)
+__t_and_5 = (uint32(__t_tag_4) == 658452902)
+}
+if __t_and_5 {
+__t6 = true
+goto end_branch_6
+} else {
+
+}
+}
+{
+__t6 = false
+}
+end_branch_6:
+if __t6 {
+__t7 = 2591059121
+goto end_branch_7
+} else {
+
+}
+}
+{
+__t7 = 658452902
+}
+end_branch_7:
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t7), UnsafePtr: nil}
+})
+}), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t8 uint32
+{
+if ((uint32(v_2.IntVal) == 658452902)) && ((uint32(v1_3.IntVal) == 658452902)) {
+__t8 = 658452902
+goto end_branch_8
+} else {
+
+}
+}
+{
+__t8 = 2591059121
+}
+end_branch_8:
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t8), UnsafePtr: nil}
+})
+}), gopurs_runtime.Value{Type: 9, IntVal: int64(658452902), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(2591059121), UnsafePtr: nil})
+}), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_2 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t16 uint32
+{
+var __t15 bool
+{
+var __t_tag_9 uint32 = uint32(x_1.IntVal)
+if (uint32(__t_tag_9) == 2591059121) {
+var __t11 bool
+{
+var __t_tag_10 uint32 = uint32(y_2.IntVal)
+if (uint32(__t_tag_10) == 2591059121) {
+__t11 = true
+goto end_branch_11
+} else {
+
+}
+}
+{
+__t11 = false
+}
+end_branch_11:
+__t15 = __t11
+goto end_branch_15
+} else {
+
+}
+}
+{
+var __t_tag_12 uint32 = uint32(x_1.IntVal)
+var __t_and_14 bool = false
+if (uint32(__t_tag_12) == 658452902) {
+
+var __t_tag_13 uint32 = uint32(y_2.IntVal)
+__t_and_14 = (uint32(__t_tag_13) == 658452902)
+}
+if __t_and_14 {
+__t15 = true
+goto end_branch_15
+} else {
+
+}
+}
+{
+__t15 = false
+}
+end_branch_15:
+if __t15 {
+__t16 = 2591059121
+goto end_branch_16
+} else {
+
+}
+}
+{
+__t16 = 658452902
+}
+end_branch_16:
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t16), UnsafePtr: nil}
+})
+}))
 }))
 	})
 	return cache_Data_Int_commutativeRingParity
@@ -457,30 +910,171 @@ var once_Data_Int_euclideanRingParity sync.Once
 func Get_Data_Int_euclideanRingParity() gopurs_runtime.Value {
 	once_Data_Int_euclideanRingParity.Do(func() {
 		cache_Data_Int_euclideanRingParity = gopurs_runtime.RecordDict4("CommutativeRing0", "degree", "div", "mod", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Int_commutativeRingParity()
+return gopurs_runtime.RecordDict1("Ring0", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict2("Semiring0", "sub", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_4 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t7 uint32
+{
+var __t6 bool
+{
+var __t_tag_0 uint32 = uint32(x_3.IntVal)
+if (uint32(__t_tag_0) == 2591059121) {
+var __t2 bool
+{
+var __t_tag_1 uint32 = uint32(y_4.IntVal)
+if (uint32(__t_tag_1) == 2591059121) {
+__t2 = true
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = false
+}
+end_branch_2:
+__t6 = __t2
+goto end_branch_6
+} else {
+
+}
+}
+{
+var __t_tag_3 uint32 = uint32(x_3.IntVal)
+var __t_and_5 bool = false
+if (uint32(__t_tag_3) == 658452902) {
+
+var __t_tag_4 uint32 = uint32(y_4.IntVal)
+__t_and_5 = (uint32(__t_tag_4) == 658452902)
+}
+if __t_and_5 {
+__t6 = true
+goto end_branch_6
+} else {
+
+}
+}
+{
+__t6 = false
+}
+end_branch_6:
+if __t6 {
+__t7 = 2591059121
+goto end_branch_7
+} else {
+
+}
+}
+{
+__t7 = 658452902
+}
+end_branch_7:
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t7), UnsafePtr: nil}
+})
+}), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t8 uint32
+{
+if ((uint32(v_3.IntVal) == 658452902)) && ((uint32(v1_4.IntVal) == 658452902)) {
+__t8 = 658452902
+goto end_branch_8
+} else {
+
+}
+}
+{
+__t8 = 2591059121
+}
+end_branch_8:
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t8), UnsafePtr: nil}
+})
+}), gopurs_runtime.Value{Type: 9, IntVal: int64(658452902), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(2591059121), UnsafePtr: nil})
+}), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t16 uint32
+{
+var __t15 bool
+{
+var __t_tag_9 uint32 = uint32(x_2.IntVal)
+if (uint32(__t_tag_9) == 2591059121) {
+var __t11 bool
+{
+var __t_tag_10 uint32 = uint32(y_3.IntVal)
+if (uint32(__t_tag_10) == 2591059121) {
+__t11 = true
+goto end_branch_11
+} else {
+
+}
+}
+{
+__t11 = false
+}
+end_branch_11:
+__t15 = __t11
+goto end_branch_15
+} else {
+
+}
+}
+{
+var __t_tag_12 uint32 = uint32(x_2.IntVal)
+var __t_and_14 bool = false
+if (uint32(__t_tag_12) == 658452902) {
+
+var __t_tag_13 uint32 = uint32(y_3.IntVal)
+__t_and_14 = (uint32(__t_tag_13) == 658452902)
+}
+if __t_and_14 {
+__t15 = true
+goto end_branch_15
+} else {
+
+}
+}
+{
+__t15 = false
+}
+end_branch_15:
+if __t15 {
+__t16 = 2591059121
+goto end_branch_16
+} else {
+
+}
+}
+{
+__t16 = 658452902
+}
+end_branch_16:
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t16), UnsafePtr: nil}
+})
+}))
+}))
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 int64
+var __t17 int64
 {
 if (uint32(v_0.IntVal) == 2591059121) {
-__t0 = 0
-goto end_branch_0
+__t17 = 0
+goto end_branch_17
 } else {
 
 }
 }
 {
 if (uint32(v_0.IntVal) == 658452902) {
-__t0 = 1
-goto end_branch_0
+__t17 = 1
+goto end_branch_17
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
+__t17 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
 }
-end_branch_0:
-return gopurs_runtime.Int(__t0)
+end_branch_17:
+return gopurs_runtime.Int(__t17)
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(x_0.IntVal)), UnsafePtr: nil}
@@ -510,7 +1104,93 @@ var once_Data_Int_boundedParity sync.Once
 func Get_Data_Int_boundedParity() gopurs_runtime.Value {
 	once_Data_Int_boundedParity.Do(func() {
 		cache_Data_Int_boundedParity = gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Int_ordParity()
+return gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t1 bool
+{
+if (uint32(x_2.IntVal) == 2591059121) {
+var __t0 bool
+{
+if (uint32(y_3.IntVal) == 2591059121) {
+__t0 = true
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = false
+}
+end_branch_0:
+__t1 = __t0
+goto end_branch_1
+} else {
+
+}
+}
+{
+if ((uint32(x_2.IntVal) == 658452902)) && ((uint32(y_3.IntVal) == 658452902)) {
+__t1 = true
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = false
+}
+end_branch_1:
+return gopurs_runtime.Bool(__t1)
+})
+}))
+}), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_2 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t3 uint32
+{
+if (uint32(x_1.IntVal) == 2591059121) {
+var __t2 uint32
+{
+if (uint32(y_2.IntVal) == 2591059121) {
+__t2 = 902936544
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = 1527465420
+}
+end_branch_2:
+__t3 = __t2
+goto end_branch_3
+} else {
+
+}
+}
+{
+if (uint32(y_2.IntVal) == 2591059121) {
+__t3 = 380165415
+goto end_branch_3
+} else {
+
+}
+}
+{
+if ((uint32(x_1.IntVal) == 658452902)) && ((uint32(y_2.IntVal) == 658452902)) {
+__t3 = 902936544
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
+}
+end_branch_3:
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t3), UnsafePtr: nil}
+})
+}))
 }), gopurs_runtime.Value{Type: 9, IntVal: int64(2591059121), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(658452902), UnsafePtr: nil})
 	})
 	return cache_Data_Int_boundedParity
@@ -609,32 +1289,11 @@ return (((x_0) & (1)) == (0)) != (true)
 func Call_Data_Int_unsafeClamp(x_0_loop float64) int64 {
 var x_0 float64 = x_0_loop
 _ = x_0
-var __t4 int64
+var __t6 int64
 {
 if ((gopurs_runtime.Apply(Get_Data_Number_isFinite(), gopurs_runtime.Float(x_0)).IntVal) != (0)) != (true) {
-__t4 = 0
-goto end_branch_4
-} else {
-
-}
-}
-{
-var __t2 bool
-{
-if (x_0) < (gopurs_runtime.Apply(Get_Data_Int_toNumber(), gopurs_runtime.Int(gopurs_runtime.RecordGet(Get_Data_Bounded_boundedInt(), "top").IntVal)).FloatVal()) {
-__t2 = false
-goto end_branch_2
-} else {
-
-}
-}
-{
-__t2 = true
-}
-end_branch_2:
-if __t2 {
-__t4 = gopurs_runtime.RecordGet(Get_Data_Bounded_boundedInt(), "top").IntVal
-goto end_branch_4
+__t6 = 0
+goto end_branch_6
 } else {
 
 }
@@ -642,7 +1301,8 @@ goto end_branch_4
 {
 var __t3 bool
 {
-if (x_0) > (gopurs_runtime.Apply(Get_Data_Int_toNumber(), gopurs_runtime.Int(gopurs_runtime.RecordGet(Get_Data_Bounded_boundedInt(), "bottom").IntVal)).FloatVal()) {
+var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Apply5(Get_Data_Ord_ordNumberImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Float(x_0), gopurs_runtime.Float(gopurs_runtime.Apply(Get_Data_Int_toNumber(), gopurs_runtime.Int(gopurs_runtime.RecordGet(Get_Data_Bounded_boundedInt(), "top").IntVal)).FloatVal()))
+if (uint32(__t_tag_2.IntVal) == 1527465420) {
 __t3 = false
 goto end_branch_3
 } else {
@@ -654,8 +1314,30 @@ __t3 = true
 }
 end_branch_3:
 if __t3 {
-__t4 = gopurs_runtime.RecordGet(Get_Data_Bounded_boundedInt(), "bottom").IntVal
-goto end_branch_4
+__t6 = gopurs_runtime.RecordGet(Get_Data_Bounded_boundedInt(), "top").IntVal
+goto end_branch_6
+} else {
+
+}
+}
+{
+var __t5 bool
+{
+var __t_tag_4 gopurs_runtime.Value = gopurs_runtime.Apply5(Get_Data_Ord_ordNumberImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Float(x_0), gopurs_runtime.Float(gopurs_runtime.Apply(Get_Data_Int_toNumber(), gopurs_runtime.Int(gopurs_runtime.RecordGet(Get_Data_Bounded_boundedInt(), "bottom").IntVal)).FloatVal()))
+if (uint32(__t_tag_4.IntVal) == 380165415) {
+__t5 = false
+goto end_branch_5
+} else {
+
+}
+}
+{
+__t5 = true
+}
+end_branch_5:
+if __t5 {
+__t6 = gopurs_runtime.RecordGet(Get_Data_Bounded_boundedInt(), "bottom").IntVal
+goto end_branch_6
 } else {
 
 }
@@ -685,10 +1367,10 @@ goto end_branch_1
 __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
-__t4 = __t1.IntVal
+__t6 = __t1.IntVal
 }
-end_branch_4:
-return __t4
+end_branch_6:
+return __t6
 }
 
 func Call_Data_Int_round(x_0_loop float64) int64 {
