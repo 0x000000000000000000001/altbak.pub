@@ -126,7 +126,7 @@ func Get_Data_Functor_Invariant_invariantArray() gopurs_runtime.Value {
 	once_Data_Functor_Invariant_invariantArray.Do(func() {
 		cache_Data_Functor_Invariant_invariantArray = gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Functor_functorArray(), "map"), f_0)
+return gopurs_runtime.Apply(Get_Data_Functor_arrayMap(), f_0)
 })
 }))
 	})
@@ -139,7 +139,7 @@ func Get_Data_Functor_Invariant_invariantFn() gopurs_runtime.Value {
 	once_Data_Functor_Invariant_invariantFn.Do(func() {
 		cache_Data_Functor_Invariant_invariantFn = gopurs_runtime.RecordDict1("imap", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Functor_functorFn(), "map"), f_0)
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Semigroupoid_semigroupoidFn(), "compose"), f_0)
 })
 }))
 	})

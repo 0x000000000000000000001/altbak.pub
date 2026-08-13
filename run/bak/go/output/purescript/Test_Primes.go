@@ -201,7 +201,7 @@ return gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Point
 }()
 })
 })
-return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Show_showInt(), "show"), gopurs_runtime.Int(gopurs_runtime.Apply2(go__go_2_2_5, gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(Call_Test_Primes_sieve(gopurs_runtime.CoerceToStruct[Constructor_Test_Primes_Cons](gopurs_runtime.Apply2(go__go_3_4_6, gopurs_runtime.Int(__local_var_1_1.IntVal), gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer((*Constructor_Test_Primes_Cons)(nil))}))))}, gopurs_runtime.Int(0)).IntVal)).StrVal())), gopurs_runtime.Value{})
+return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(gopurs_runtime.Apply2(go__go_2_2_5, gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer(Call_Test_Primes_sieve(gopurs_runtime.CoerceToStruct[Constructor_Test_Primes_Cons](gopurs_runtime.Apply2(go__go_3_4_6, gopurs_runtime.Int(__local_var_1_1.IntVal), gopurs_runtime.Value{Type: 9, IntVal: 2390177629, UnsafePtr: unsafe.Pointer((*Constructor_Test_Primes_Cons)(nil))}))))}, gopurs_runtime.Int(0)).IntVal)).StrVal())), gopurs_runtime.Value{})
 })
 }()
 	})

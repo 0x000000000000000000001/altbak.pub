@@ -113,7 +113,7 @@ var r_1 gopurs_runtime.Value = r_1_loop
 _ = r_1
 var s_2 gopurs_runtime.Value = s_2_loop
 _ = s_2
-return gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_RWS_Trans_RWSResult](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Identity_applicativeIdentity(), "pure"), gopurs_runtime.Value{Type: 9, IntVal: 2367475031, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_RWS_Trans_RWSResult](gopurs_runtime.Apply2(f_0, r_1, s_2)))}))
+return gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_RWS_Trans_RWSResult](gopurs_runtime.Apply2(f_0, r_1, s_2))
 }
 
 func Call_Control_Monad_RWS_runRWS(m_0_loop gopurs_runtime.Value, r_1_loop gopurs_runtime.Value, s_2_loop gopurs_runtime.Value) *Constructor_Control_Monad_RWS_Trans_RWSResult {
@@ -145,12 +145,10 @@ var r_1 gopurs_runtime.Value = r_1_loop
 _ = r_1
 var s_2 gopurs_runtime.Value = s_2_loop
 _ = s_2
-// TAST (Let): Applicative0_3_0 -> *Constructor_Control_Applicative_Applicative
-Applicative0_3_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Identity_monadIdentity(), "Applicative0"), gopurs_runtime.Value{}))
-_ = Applicative0_3_0
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Identity_monadIdentity(), "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply2(m_0, r_1, s_2), gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Box(Applicative0_3_0.V1), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, (*Constructor_Control_Monad_RWS_Trans_RWSResult)(v1_4.UnsafePtr).V0, (*Constructor_Control_Monad_RWS_Trans_RWSResult)(v1_4.UnsafePtr).V2})})
-})))
+// TAST (Let): __local_var_3_0 -> gopurs_runtime.Value
+__local_var_3_0 := gopurs_runtime.Apply2(m_0, r_1, s_2)
+_ = __local_var_3_0
+return &Constructor_Data_Tuple_Tuple{1, (*Constructor_Control_Monad_RWS_Trans_RWSResult)(__local_var_3_0.UnsafePtr).V0, (*Constructor_Control_Monad_RWS_Trans_RWSResult)(__local_var_3_0.UnsafePtr).V2}
 }
 
 func Call_Control_Monad_RWS_evalRWS(m_0_loop gopurs_runtime.Value, r_1_loop gopurs_runtime.Value, s_2_loop gopurs_runtime.Value) *Constructor_Data_Tuple_Tuple {
@@ -160,12 +158,10 @@ var r_1 gopurs_runtime.Value = r_1_loop
 _ = r_1
 var s_2 gopurs_runtime.Value = s_2_loop
 _ = s_2
-// TAST (Let): Applicative0_3_0 -> *Constructor_Control_Applicative_Applicative
-Applicative0_3_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Identity_monadIdentity(), "Applicative0"), gopurs_runtime.Value{}))
-_ = Applicative0_3_0
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Identity_monadIdentity(), "Bind1"), gopurs_runtime.Value{}), "bind"), gopurs_runtime.Apply2(m_0, r_1, s_2), gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Box(Applicative0_3_0.V1), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, (*Constructor_Control_Monad_RWS_Trans_RWSResult)(v1_4.UnsafePtr).V1, (*Constructor_Control_Monad_RWS_Trans_RWSResult)(v1_4.UnsafePtr).V2})})
-})))
+// TAST (Let): __local_var_3_0 -> gopurs_runtime.Value
+__local_var_3_0 := gopurs_runtime.Apply2(m_0, r_1, s_2)
+_ = __local_var_3_0
+return &Constructor_Data_Tuple_Tuple{1, (*Constructor_Control_Monad_RWS_Trans_RWSResult)(__local_var_3_0.UnsafePtr).V1, (*Constructor_Control_Monad_RWS_Trans_RWSResult)(__local_var_3_0.UnsafePtr).V2}
 }
 
 

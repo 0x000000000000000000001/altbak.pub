@@ -224,8 +224,15 @@ _ = MonadEffect0_1_0
 // TAST (Let): monadEffectContT_2_1 -> gopurs_runtime.Value
 monadEffectContT_2_1 := gopurs_runtime.Apply(Get_Control_Monad_Cont_Trans_monadEffectContT(), MonadEffect0_1_0)
 _ = monadEffectContT_2_1
+// TAST (Let): Bind1_3_3 -> *Constructor_Control_Bind_Bind
+Bind1_3_3 := gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(MonadEffect0_1_0, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}))
+_ = Bind1_3_3
 // TAST (Let): __local_var_3_2 -> gopurs_runtime.Value
-__local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Monad_Cont_Trans_monadTransContT(), "lift"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(MonadEffect0_1_0, "Monad0"), gopurs_runtime.Value{}))
+__local_var_3_2 := gopurs_runtime.Func(func(m_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(k_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.Box(Bind1_3_3.V1), m_4, k_5)
+})
+})
 _ = __local_var_3_2
 return gopurs_runtime.RecordDict2("MonadEffect0", "liftAff", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadEffectContT_2_1
@@ -243,8 +250,21 @@ _ = MonadEffect0_1_0
 // TAST (Let): monadEffectExceptT_2_1 -> gopurs_runtime.Value
 monadEffectExceptT_2_1 := gopurs_runtime.Apply(Get_Control_Monad_Except_Trans_monadEffectExceptT(), MonadEffect0_1_0)
 _ = monadEffectExceptT_2_1
+// TAST (Let): __local_var_3_3 -> gopurs_runtime.Value
+__local_var_3_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(MonadEffect0_1_0, "Monad0"), gopurs_runtime.Value{})
+_ = __local_var_3_3
+// TAST (Let): Bind1_4_4 -> *Constructor_Control_Bind_Bind
+Bind1_4_4 := gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_3, "Bind1"), gopurs_runtime.Value{}))
+_ = Bind1_4_4
+// TAST (Let): pure_5_5 -> gopurs_runtime.Value
+pure_5_5 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_3, "Applicative0"), gopurs_runtime.Value{}), "pure")
+_ = pure_5_5
 // TAST (Let): __local_var_3_2 -> gopurs_runtime.Value
-__local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Monad_Except_Trans_monadTransExceptT(), "lift"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(MonadEffect0_1_0, "Monad0"), gopurs_runtime.Value{}))
+__local_var_3_2 := gopurs_runtime.Func(func(m_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.Box(Bind1_4_4.V1), m_6, gopurs_runtime.Func(func(a_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(pure_5_5, gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Right{1, a_7})})
+}))
+})
 _ = __local_var_3_2
 return gopurs_runtime.RecordDict2("MonadEffect0", "liftAff", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadEffectExceptT_2_1
@@ -281,8 +301,26 @@ _ = MonadEffect0_1_0
 // TAST (Let): monadEffectMaybe_2_1 -> gopurs_runtime.Value
 monadEffectMaybe_2_1 := gopurs_runtime.Apply(Get_Control_Monad_Maybe_Trans_monadEffectMaybe(), MonadEffect0_1_0)
 _ = monadEffectMaybe_2_1
+// TAST (Let): __local_var_3_3 -> gopurs_runtime.Value
+__local_var_3_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(MonadEffect0_1_0, "Monad0"), gopurs_runtime.Value{})
+_ = __local_var_3_3
+// TAST (Let): Bind1_4_5 -> *Constructor_Control_Bind_Bind
+Bind1_4_5 := gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_3, "Bind1"), gopurs_runtime.Value{}))
+_ = Bind1_4_5
+// TAST (Let): Applicative0_5_6 -> *Constructor_Control_Applicative_Applicative
+Applicative0_5_6 := gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_3, "Applicative0"), gopurs_runtime.Value{}))
+_ = Applicative0_5_6
+// TAST (Let): __local_var_4_4 -> gopurs_runtime.Value
+__local_var_4_4 := gopurs_runtime.Func(func(a_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.Box(Bind1_4_5.V1), a_6, gopurs_runtime.Func(func(a_prime_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.Box(Applicative0_5_6.V1), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, a_prime_7})})
+}))
+})
+_ = __local_var_4_4
 // TAST (Let): __local_var_3_2 -> gopurs_runtime.Value
-__local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Monad_Maybe_Trans_monadTransMaybeT(), "lift"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(MonadEffect0_1_0, "Monad0"), gopurs_runtime.Value{}))
+__local_var_3_2 := gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_4_4, x_5)
+})
 _ = __local_var_3_2
 return gopurs_runtime.RecordDict2("MonadEffect0", "liftAff", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadEffectMaybe_2_1
@@ -332,19 +370,18 @@ return gopurs_runtime.Apply(__local_var_5_3, gopurs_runtime.Apply(gopurs_runtime
 func Call_Effect_Aff_Class_monadAffReader(dictMonadAff_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictMonadAff_0 gopurs_runtime.Value = dictMonadAff_0_loop
 _ = dictMonadAff_0
-// TAST (Let): MonadEffect0_1_0 -> gopurs_runtime.Value
-MonadEffect0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAff_0, "MonadEffect0"), gopurs_runtime.Value{})
-_ = MonadEffect0_1_0
-// TAST (Let): monadEffectReader_2_1 -> gopurs_runtime.Value
-monadEffectReader_2_1 := gopurs_runtime.Apply(Get_Control_Monad_Reader_Trans_monadEffectReader(), MonadEffect0_1_0)
-_ = monadEffectReader_2_1
-// TAST (Let): __local_var_3_2 -> gopurs_runtime.Value
-__local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Monad_Reader_Trans_monadTransReaderT(), "lift"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(MonadEffect0_1_0, "Monad0"), gopurs_runtime.Value{}))
-_ = __local_var_3_2
-return gopurs_runtime.RecordDict2("MonadEffect0", "liftAff", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return monadEffectReader_2_1
-}), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_3_2, gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAff_0, "liftAff"), x_4))
+// TAST (Let): monadEffectReader_1_0 -> gopurs_runtime.Value
+monadEffectReader_1_0 := gopurs_runtime.Apply(Get_Control_Monad_Reader_Trans_monadEffectReader(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAff_0, "MonadEffect0"), gopurs_runtime.Value{}))
+_ = monadEffectReader_1_0
+return gopurs_runtime.RecordDict2("MonadEffect0", "liftAff", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return monadEffectReader_1_0
+}), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_3_1 -> gopurs_runtime.Value
+__local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadAff_0, "liftAff"), x_2)
+_ = __local_var_3_1
+return gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return __local_var_3_1
+})
 }))
 }
 
@@ -357,8 +394,23 @@ _ = MonadEffect0_1_0
 // TAST (Let): monadEffectState_2_1 -> gopurs_runtime.Value
 monadEffectState_2_1 := gopurs_runtime.Apply(Get_Control_Monad_State_Trans_monadEffectState(), MonadEffect0_1_0)
 _ = monadEffectState_2_1
+// TAST (Let): __local_var_3_3 -> gopurs_runtime.Value
+__local_var_3_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(MonadEffect0_1_0, "Monad0"), gopurs_runtime.Value{})
+_ = __local_var_3_3
+// TAST (Let): Bind1_4_4 -> *Constructor_Control_Bind_Bind
+Bind1_4_4 := gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_3, "Bind1"), gopurs_runtime.Value{}))
+_ = Bind1_4_4
+// TAST (Let): pure_5_5 -> gopurs_runtime.Value
+pure_5_5 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_3, "Applicative0"), gopurs_runtime.Value{}), "pure")
+_ = pure_5_5
 // TAST (Let): __local_var_3_2 -> gopurs_runtime.Value
-__local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Monad_State_Trans_monadTransStateT(), "lift"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(MonadEffect0_1_0, "Monad0"), gopurs_runtime.Value{}))
+__local_var_3_2 := gopurs_runtime.Func(func(m_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(s_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.Box(Bind1_4_4.V1), m_6, gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(pure_5_5, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, x_8, s_7})})
+}))
+})
+})
 _ = __local_var_3_2
 return gopurs_runtime.RecordDict2("MonadEffect0", "liftAff", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return monadEffectState_2_1

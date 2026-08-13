@@ -53,19 +53,18 @@ var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var v_1 gopurs_runtime.Value = v_1_loop
 _ = v_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Identity_functorIdentity(), "map"), gopurs_runtime.Func(func(v2_2 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 gopurs_runtime.Value
 {
-if (v2_2.Type == 9 && v2_2.IntVal == 2465973597) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Right{1, (*Constructor_Data_Either_Right)(v2_2.UnsafePtr).V0})}
+if (v_1.Type == 9 && v_1.IntVal == 2465973597) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Right{1, (*Constructor_Data_Either_Right)(v_1.UnsafePtr).V0})}
 goto end_branch_0
 } else {
 
 }
 }
 {
-if (v2_2.Type == 9 && v2_2.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Left{1, gopurs_runtime.Apply(f_0, (*Constructor_Data_Either_Left)(v2_2.UnsafePtr).V0)})}
+if (v_1.Type == 9 && v_1.IntVal == 3711209382) {
+__t0 = gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Left{1, gopurs_runtime.Apply(f_0, (*Constructor_Data_Either_Left)(v_1.UnsafePtr).V0)})}
 goto end_branch_0
 } else {
 
@@ -76,7 +75,6 @@ __t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_0:
 return __t0
-}), v_1)
 }
 
 func Call_Control_Monad_Except_runExcept(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {

@@ -10,19 +10,9 @@ var cache_Data_Time_Duration_negate gopurs_runtime.Value
 var once_Data_Time_Duration_negate sync.Once
 func Get_Data_Time_Duration_negate() gopurs_runtime.Value {
 	once_Data_Time_Duration_negate.Do(func() {
-		cache_Data_Time_Duration_negate = func() gopurs_runtime.Value {
-// TAST (Let): __local_var_0_0 -> gopurs_runtime.Value
-__local_var_0_0 := gopurs_runtime.RecordDict2("Semiring0", "sub", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", Get_Data_Semiring_numAdd(), Get_Data_Semiring_numMul(), gopurs_runtime.Float(1.0), gopurs_runtime.Float(0.0))
-}), Get_Data_Ring_numSub())
-_ = __local_var_0_0
-// TAST (Let): Semiring0_1_1 -> *Constructor_Data_Semiring_Semiring
-Semiring0_1_1 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring](gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_0_0, "Semiring0"), gopurs_runtime.Value{}))
-_ = Semiring0_1_1
-return gopurs_runtime.Func(func(a_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_0_0, "sub"), gopurs_runtime.Box(Semiring0_1_1.V3), a_2)
+		cache_Data_Time_Duration_negate = gopurs_runtime.Func(func(a_0_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Float(Call_Data_Time_Duration_negate(a_0_box.FloatVal()))
 })
-}()
 	})
 	return cache_Data_Time_Duration_negate
 }
@@ -340,11 +330,7 @@ var once_Data_Time_Duration_monoidSeconds sync.Once
 func Get_Data_Time_Duration_monoidSeconds() gopurs_runtime.Value {
 	once_Data_Time_Duration_monoidSeconds.Do(func() {
 		cache_Data_Time_Duration_monoidSeconds = gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float((v_1.FloatVal()) + (v1_2.FloatVal()))
-})
-}))
+return Get_Data_Time_Duration_semigroupSeconds()
 }), gopurs_runtime.Float(0.0))
 	})
 	return cache_Data_Time_Duration_monoidSeconds
@@ -355,11 +341,7 @@ var once_Data_Time_Duration_monoidMinutes sync.Once
 func Get_Data_Time_Duration_monoidMinutes() gopurs_runtime.Value {
 	once_Data_Time_Duration_monoidMinutes.Do(func() {
 		cache_Data_Time_Duration_monoidMinutes = gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float((v_1.FloatVal()) + (v1_2.FloatVal()))
-})
-}))
+return Get_Data_Time_Duration_semigroupMinutes()
 }), gopurs_runtime.Float(0.0))
 	})
 	return cache_Data_Time_Duration_monoidMinutes
@@ -370,11 +352,7 @@ var once_Data_Time_Duration_monoidMilliseconds sync.Once
 func Get_Data_Time_Duration_monoidMilliseconds() gopurs_runtime.Value {
 	once_Data_Time_Duration_monoidMilliseconds.Do(func() {
 		cache_Data_Time_Duration_monoidMilliseconds = gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float((v_1.FloatVal()) + (v1_2.FloatVal()))
-})
-}))
+return Get_Data_Time_Duration_semigroupMilliseconds()
 }), gopurs_runtime.Float(0.0))
 	})
 	return cache_Data_Time_Duration_monoidMilliseconds
@@ -385,11 +363,7 @@ var once_Data_Time_Duration_monoidHours sync.Once
 func Get_Data_Time_Duration_monoidHours() gopurs_runtime.Value {
 	once_Data_Time_Duration_monoidHours.Do(func() {
 		cache_Data_Time_Duration_monoidHours = gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float((v_1.FloatVal()) + (v1_2.FloatVal()))
-})
-}))
+return Get_Data_Time_Duration_semigroupHours()
 }), gopurs_runtime.Float(0.0))
 	})
 	return cache_Data_Time_Duration_monoidHours
@@ -400,11 +374,7 @@ var once_Data_Time_Duration_monoidDays sync.Once
 func Get_Data_Time_Duration_monoidDays() gopurs_runtime.Value {
 	once_Data_Time_Duration_monoidDays.Do(func() {
 		cache_Data_Time_Duration_monoidDays = gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Float((v_1.FloatVal()) + (v1_2.FloatVal()))
-})
-}))
+return Get_Data_Time_Duration_semigroupDays()
 }), gopurs_runtime.Float(0.0))
 	})
 	return cache_Data_Time_Duration_monoidDays
@@ -425,8 +395,8 @@ var cache_Data_Time_Duration_negateDuration gopurs_runtime.Value
 var once_Data_Time_Duration_negateDuration sync.Once
 func Get_Data_Time_Duration_negateDuration() gopurs_runtime.Value {
 	once_Data_Time_Duration_negateDuration.Do(func() {
-		cache_Data_Time_Duration_negateDuration = gopurs_runtime.Func(func(dictDuration_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Time_Duration_negateDuration(gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Duration_Duration](dictDuration_0_box))
+		cache_Data_Time_Duration_negateDuration = gopurs_runtime.Func2(func(dictDuration_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Data_Time_Duration_negateDuration(gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Duration_Duration](dictDuration_0_box), x_1_box)
 })
 	})
 	return cache_Data_Time_Duration_negateDuration
@@ -590,8 +560,8 @@ var cache_Data_Time_Duration_negateDuration__3870190523 gopurs_runtime.Value
 var once_Data_Time_Duration_negateDuration__3870190523 sync.Once
 func Get_Data_Time_Duration_negateDuration__3870190523() gopurs_runtime.Value {
 	once_Data_Time_Duration_negateDuration__3870190523.Do(func() {
-		cache_Data_Time_Duration_negateDuration__3870190523 = gopurs_runtime.Func(func(dictDuration_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_Time_Duration_negateDuration__3870190523(gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Duration_Duration](dictDuration_0_box))
+		cache_Data_Time_Duration_negateDuration__3870190523 = gopurs_runtime.Func2(func(dictDuration_0_box gopurs_runtime.Value, x_1_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Data_Time_Duration_negateDuration__3870190523(gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Duration_Duration](dictDuration_0_box), x_1_box)
 })
 	})
 	return cache_Data_Time_Duration_negateDuration__3870190523
@@ -627,6 +597,12 @@ func init() {
 	}
 }
 
+
+func Call_Data_Time_Duration_negate(a_0_loop float64) float64 {
+var a_0 float64 = a_0_loop
+_ = a_0
+return gopurs_runtime.Float(-(gopurs_runtime.Float(a_0).FloatVal())).FloatVal()
+}
 
 func Call_Data_Time_Duration_identity(x_0_loop float64) float64 {
 var x_0 float64 = x_0_loop
@@ -682,30 +658,12 @@ _ = dict_0
 return gopurs_runtime.Box(dict_0.V0)
 }
 
-func Call_Data_Time_Duration_negateDuration(dictDuration_0_loop *Constructor_Data_Time_Duration_Duration) gopurs_runtime.Value {
+func Call_Data_Time_Duration_negateDuration(dictDuration_0_loop *Constructor_Data_Time_Duration_Duration, x_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictDuration_0 *Constructor_Data_Time_Duration_Duration = dictDuration_0_loop
 _ = dictDuration_0
-// TAST (Let): __local_var_1_2 -> gopurs_runtime.Value
-__local_var_1_2 := gopurs_runtime.RecordDict2("Semiring0", "sub", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", Get_Data_Semiring_numAdd(), Get_Data_Semiring_numMul(), gopurs_runtime.Float(1.0), gopurs_runtime.Float(0.0))
-}), Get_Data_Ring_numSub())
-_ = __local_var_1_2
-// TAST (Let): Semiring0_2_3 -> *Constructor_Data_Semiring_Semiring
-Semiring0_2_3 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring](gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_2, "Semiring0"), gopurs_runtime.Value{}))
-_ = Semiring0_2_3
-// TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
-__local_var_1_1 := gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_2, "sub"), gopurs_runtime.Box(Semiring0_2_3.V3), a_3)
-})
-_ = __local_var_1_1
-// TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
-__local_var_1_0 := gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_1_1, gopurs_runtime.Apply(gopurs_runtime.Box(dictDuration_0.V0), x_2))
-})
-_ = __local_var_1_0
-return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Box(dictDuration_0.V1), gopurs_runtime.Apply(__local_var_1_0, x_2))
-})
+var x_1 gopurs_runtime.Value = x_1_loop
+_ = x_1
+return gopurs_runtime.Apply(gopurs_runtime.Box(dictDuration_0.V1), gopurs_runtime.Float(-(gopurs_runtime.Apply(gopurs_runtime.Box(dictDuration_0.V0), x_1).FloatVal())))
 }
 
 func Call_Data_Time_Duration_convertDuration(dictDuration_0_loop *Constructor_Data_Time_Duration_Duration, dictDuration1_1_loop *Constructor_Data_Time_Duration_Duration, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -733,38 +691,15 @@ return gopurs_runtime.Box(dict_0.V0)
 func Call_Data_Time_Duration_negateDuration__4195558286(__eta0_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
 _ = __eta0_0
-// TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
-__local_var_1_0 := gopurs_runtime.RecordDict2("Semiring0", "sub", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", Get_Data_Semiring_numAdd(), Get_Data_Semiring_numMul(), gopurs_runtime.Float(1.0), gopurs_runtime.Float(0.0))
-}), Get_Data_Ring_numSub())
-_ = __local_var_1_0
-return gopurs_runtime.Float(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "sub"), gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "Semiring0"), gopurs_runtime.Value{}), "zero"), __eta0_0).FloatVal())
+return gopurs_runtime.Float(gopurs_runtime.Float(-(__eta0_0.FloatVal())).FloatVal())
 }
 
-func Call_Data_Time_Duration_negateDuration__3870190523(dictDuration_0_loop *Constructor_Data_Time_Duration_Duration) gopurs_runtime.Value {
+func Call_Data_Time_Duration_negateDuration__3870190523(dictDuration_0_loop *Constructor_Data_Time_Duration_Duration, x_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictDuration_0 *Constructor_Data_Time_Duration_Duration = dictDuration_0_loop
 _ = dictDuration_0
-// TAST (Let): __local_var_1_2 -> gopurs_runtime.Value
-__local_var_1_2 := gopurs_runtime.RecordDict2("Semiring0", "sub", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", Get_Data_Semiring_numAdd(), Get_Data_Semiring_numMul(), gopurs_runtime.Float(1.0), gopurs_runtime.Float(0.0))
-}), Get_Data_Ring_numSub())
-_ = __local_var_1_2
-// TAST (Let): Semiring0_2_3 -> *Constructor_Data_Semiring_Semiring
-Semiring0_2_3 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semiring_Semiring](gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_2, "Semiring0"), gopurs_runtime.Value{}))
-_ = Semiring0_2_3
-// TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
-__local_var_1_1 := gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_2, "sub"), gopurs_runtime.Box(Semiring0_2_3.V3), a_3)
-})
-_ = __local_var_1_1
-// TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
-__local_var_1_0 := gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_1_1, gopurs_runtime.Apply(gopurs_runtime.Box(dictDuration_0.V0), x_2))
-})
-_ = __local_var_1_0
-return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.Box(dictDuration_0.V1), gopurs_runtime.Apply(__local_var_1_0, x_2))
-})
+var x_1 gopurs_runtime.Value = x_1_loop
+_ = x_1
+return gopurs_runtime.Apply(gopurs_runtime.Box(dictDuration_0.V1), gopurs_runtime.Float(-(gopurs_runtime.Apply(gopurs_runtime.Box(dictDuration_0.V0), x_1).FloatVal())))
 }
 
 func Call_Data_Time_Duration_toDuration__2440169646(dict_0_loop *Constructor_Data_Time_Duration_Duration) gopurs_runtime.Value {

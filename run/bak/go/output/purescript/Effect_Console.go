@@ -3,7 +3,6 @@ package purescript
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	unsafe "unsafe"
 )
 
 var cache_Effect_Console_warnShow gopurs_runtime.Value
@@ -123,13 +122,18 @@ var name_0 string = name_0_loop
 _ = name_0
 var inner_1 gopurs_runtime.Value = inner_1_loop
 _ = inner_1
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Control_Bind_discardUnit(), "discard"), gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](Get_Effect_bindEffect()))}, gopurs_runtime.Apply(Get_Effect_Console_group(), gopurs_runtime.Str(name_0)), gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Effect_bindEffect(), "bind"), inner_1, gopurs_runtime.Func(func(result_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Control_Bind_discardUnit(), "discard"), gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](Get_Effect_bindEffect()))}, Get_Effect_Console_groupEnd(), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_applicativeEffect(), "pure"), result_3)
-}))
-}))
-}))
+// TAST (Let): __local_var_2_0 -> gopurs_runtime.Value
+__local_var_2_0 := gopurs_runtime.Apply(Get_Effect_Console_group(), gopurs_runtime.Str(name_0))
+_ = __local_var_2_0
+return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_3_1 := gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Value{})
+_ = __local_var_3_1
+__local_var_4_2 := gopurs_runtime.Apply(inner_1, gopurs_runtime.Value{})
+_ = __local_var_4_2
+__local_var_5_3 := gopurs_runtime.Apply(Get_Effect_Console_groupEnd(), gopurs_runtime.Value{})
+_ = __local_var_5_3
+return __local_var_4_2
+})
 }
 
 func Call_Effect_Console_errorShow(dictShow_0_loop *Constructor_Data_Show_Show, a_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -151,7 +155,7 @@ return gopurs_runtime.Apply(Get_Effect_Console_debug(), gopurs_runtime.Str(gopur
 func Call_Effect_Console_logShow__2885109999(a_0_loop int64) gopurs_runtime.Value {
 var a_0 int64 = a_0_loop
 _ = a_0
-return gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Show_showInt(), "show"), gopurs_runtime.Int(a_0)).StrVal()))
+return gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(a_0)).StrVal()))
 }
 
 func Call_Effect_Console_logShow__339054415(dictShow_0_loop *Constructor_Data_Show_Show, a_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

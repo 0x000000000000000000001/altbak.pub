@@ -135,7 +135,7 @@ var once_Data_Ring_ringNumber sync.Once
 func Get_Data_Ring_ringNumber() gopurs_runtime.Value {
 	once_Data_Ring_ringNumber.Do(func() {
 		cache_Data_Ring_ringNumber = gopurs_runtime.RecordDict2("Semiring0", "sub", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", Get_Data_Semiring_numAdd(), Get_Data_Semiring_numMul(), gopurs_runtime.Float(1.0), gopurs_runtime.Float(0.0))
+return Get_Data_Semiring_semiringNumber()
 }), Get_Data_Ring_numSub())
 	})
 	return cache_Data_Ring_ringNumber
@@ -146,7 +146,7 @@ var once_Data_Ring_ringInt sync.Once
 func Get_Data_Ring_ringInt() gopurs_runtime.Value {
 	once_Data_Ring_ringInt.Do(func() {
 		cache_Data_Ring_ringInt = gopurs_runtime.RecordDict2("Semiring0", "sub", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", Get_Data_Semiring_intAdd(), Get_Data_Semiring_intMul(), gopurs_runtime.Int(1), gopurs_runtime.Int(0))
+return Get_Data_Semiring_semiringInt()
 }), Get_Data_Ring_intSub())
 	})
 	return cache_Data_Ring_ringInt

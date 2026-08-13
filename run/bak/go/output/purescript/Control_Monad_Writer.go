@@ -73,7 +73,7 @@ return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Point
 func Call_Control_Monad_Writer_writer(x_0_loop *Constructor_Data_Tuple_Tuple) *Constructor_Data_Tuple_Tuple {
 var x_0 *Constructor_Data_Tuple_Tuple = x_0_loop
 _ = x_0
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Identity_applicativeIdentity(), "pure"), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(x_0)}))
+return x_0
 }
 
 func Call_Control_Monad_Writer_runWriter(x_0_loop *Constructor_Data_Tuple_Tuple) *Constructor_Data_Tuple_Tuple {

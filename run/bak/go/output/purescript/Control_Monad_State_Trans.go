@@ -77,9 +77,7 @@ var cache_Control_Monad_State_Trans_lift gopurs_runtime.Value
 var once_Control_Monad_State_Trans_lift sync.Once
 func Get_Control_Monad_State_Trans_lift() gopurs_runtime.Value {
 	once_Control_Monad_State_Trans_lift.Do(func() {
-		cache_Control_Monad_State_Trans_lift = gopurs_runtime.Func(func(dictMonad_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Monad_State_Trans_lift(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Monad](dictMonad_0_box))
-})
+		cache_Control_Monad_State_Trans_lift = gopurs_runtime.RecordGet(Get_Control_Monad_State_Trans_monadTransStateT(), "lift")
 	})
 	return cache_Control_Monad_State_Trans_lift
 }
@@ -459,24 +457,6 @@ func Call_Control_Monad_State_Trans_runStateT(v_0_loop gopurs_runtime.Value) gop
 var v_0 gopurs_runtime.Value = v_0_loop
 _ = v_0
 return v_0
-}
-
-func Call_Control_Monad_State_Trans_lift(dictMonad_0_loop *Constructor_Control_Monad_Monad) gopurs_runtime.Value {
-var dictMonad_0 *Constructor_Control_Monad_Monad = dictMonad_0_loop
-_ = dictMonad_0
-// TAST (Let): Bind1_1_0 -> *Constructor_Control_Bind_Bind
-Bind1_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](gopurs_runtime.Apply(gopurs_runtime.Box(dictMonad_0.V1), gopurs_runtime.Value{}))
-_ = Bind1_1_0
-// TAST (Let): pure_2_1 -> gopurs_runtime.Value
-pure_2_1 := gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.Box(dictMonad_0.V0), gopurs_runtime.Value{}), "pure")
-_ = pure_2_1
-return gopurs_runtime.Func(func(m_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(s_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.Box(Bind1_1_0.V1), m_3, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(pure_2_1, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, x_5, s_4})})
-}))
-})
-})
 }
 
 func Call_Control_Monad_State_Trans_mapStateT(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, x_2_loop gopurs_runtime.Value) gopurs_runtime.Value {

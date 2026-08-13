@@ -23,7 +23,7 @@ func Get_Control_Alt_altArray() gopurs_runtime.Value {
 	once_Control_Alt_altArray.Do(func() {
 		cache_Control_Alt_altArray = gopurs_runtime.RecordDict2("Functor0", "alt", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Functor_functorArray()
-}), gopurs_runtime.RecordGet(Get_Data_Semigroup_semigroupArray(), "append"))
+}), Get_Data_Semigroup_concatArray())
 	})
 	return cache_Control_Alt_altArray
 }
@@ -155,7 +155,7 @@ func Get_Control_Alt_altArray__2010533188() gopurs_runtime.Value {
 	once_Control_Alt_altArray__2010533188.Do(func() {
 		cache_Control_Alt_altArray__2010533188 = gopurs_runtime.RecordDict2("Functor0", "alt", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Functor_functorArray()
-}), gopurs_runtime.RecordGet(Get_Data_Semigroup_semigroupArray(), "append"))
+}), Get_Data_Semigroup_concatArray())
 	})
 	return cache_Control_Alt_altArray__2010533188
 }

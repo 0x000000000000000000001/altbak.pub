@@ -18,8 +18,8 @@ var cache_Control_Monad_Cont_withCont gopurs_runtime.Value
 var once_Control_Monad_Cont_withCont sync.Once
 func Get_Control_Monad_Cont_withCont() gopurs_runtime.Value {
 	once_Control_Monad_Cont_withCont.Do(func() {
-		cache_Control_Monad_Cont_withCont = gopurs_runtime.Func(func(f_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Monad_Cont_withCont(f_0_box)
+		cache_Control_Monad_Cont_withCont = gopurs_runtime.Func3(func(f_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value, k_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return Call_Control_Monad_Cont_withCont(f_0_box, v_1_box, k_2_box)
 })
 	})
 	return cache_Control_Monad_Cont_withCont
@@ -58,30 +58,21 @@ return Call_Control_Monad_Cont_cont(f_0_box, c_1_box)
 	return cache_Control_Monad_Cont_cont
 }
 
-func Call_Control_Monad_Cont_withCont(f_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
+func Call_Control_Monad_Cont_withCont(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, k_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
-// TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
-__local_var_1_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Semigroupoid_semigroupoidFn(), "compose"), Get_Data_Identity_Identity())
-_ = __local_var_1_1
-// TAST (Let): __local_var_2_3 -> gopurs_runtime.Value
-__local_var_2_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Semigroupoid_semigroupoidFn(), "compose"), Get_Unsafe_Coerce_unsafeCoerce())
-_ = __local_var_2_3
-// TAST (Let): __local_var_2_2 -> gopurs_runtime.Value
-__local_var_2_2 := gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(f_0, gopurs_runtime.Apply(__local_var_2_3, x_3))
-})
-_ = __local_var_2_2
-// TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
-__local_var_1_0 := gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_1_1, gopurs_runtime.Apply(__local_var_2_2, x_3))
-})
-_ = __local_var_1_0
-return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(k_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(v_2, gopurs_runtime.Apply(__local_var_1_0, k_3))
-})
-})
+var v_1 gopurs_runtime.Value = v_1_loop
+_ = v_1
+var k_2 gopurs_runtime.Value = k_2_loop
+_ = k_2
+// TAST (Let): __local_var_3_0 -> gopurs_runtime.Value
+__local_var_3_0 := gopurs_runtime.Apply(f_0, gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(k_2, x_3)
+}))
+_ = __local_var_3_0
+return gopurs_runtime.Apply(v_1, gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_3_0, x_4)
+}))
 }
 
 func Call_Control_Monad_Cont_runCont(cc_0_loop gopurs_runtime.Value, k_1_loop gopurs_runtime.Value) gopurs_runtime.Value {

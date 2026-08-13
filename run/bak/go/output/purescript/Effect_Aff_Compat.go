@@ -10,7 +10,7 @@ var cache_Effect_Aff_Compat_pure gopurs_runtime.Value
 var once_Effect_Aff_Compat_pure sync.Once
 func Get_Effect_Aff_Compat_pure() gopurs_runtime.Value {
 	once_Effect_Aff_Compat_pure.Do(func() {
-		cache_Effect_Aff_Compat_pure = gopurs_runtime.RecordGet(Get_Effect_applicativeEffect(), "pure")
+		cache_Effect_Aff_Compat_pure = Get_Effect_pureE()
 	})
 	return cache_Effect_Aff_Compat_pure
 }
@@ -71,21 +71,19 @@ return gopurs_runtime.Apply(gopurs_runtime.Apply(k_1, gopurs_runtime.Value{Type:
 return gopurs_runtime.Apply(gopurs_runtime.Apply(k_1, gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Right{1, __local_var_2})}), gopurs_runtime.Value{})
 }))
 _ = __local_var_2_0
-return gopurs_runtime.Apply(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Effect_applicativeEffect(), "pure"), gopurs_runtime.Func(func(e_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(e_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(Get_Effect_Aff_makeAff__3447620704(), gopurs_runtime.Func(func(k2_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Effect_bindEffect(), "bind"), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp3(__local_var_2_0, e_3, gopurs_runtime.Func(func(__local_var_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_5_1 := gopurs_runtime.UncurriedApp3(__local_var_2_0, e_3, gopurs_runtime.Func(func(__local_var_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.Apply(k2_4, gopurs_runtime.Value{Type: 9, IntVal: 3711209382, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Left{1, __local_var_5})}), gopurs_runtime.Value{})
 }), gopurs_runtime.Func(func(__local_var_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.Apply(k2_4, gopurs_runtime.Value{Type: 9, IntVal: 2465973597, UnsafePtr: unsafe.Pointer(&Constructor_Data_Either_Right{1, __local_var_5})}), gopurs_runtime.Value{})
 }))
-}), gopurs_runtime.Func(func(_dollar__unused_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+_ = __local_var_5_1
 return Get_Effect_Aff_nonCanceler()
 })
 }))
-}))
-})), gopurs_runtime.Value{})
+})
 })
 }))
 }

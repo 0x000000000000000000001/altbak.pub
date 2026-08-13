@@ -3,7 +3,6 @@ package purescript
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	unsafe "unsafe"
 )
 
 var cache_Data_List_ZipList_ZipList gopurs_runtime.Value
@@ -137,22 +136,9 @@ var once_Data_List_ZipList_applicativeZipList sync.Once
 func Get_Data_List_ZipList_applicativeZipList() gopurs_runtime.Value {
 	once_Data_List_ZipList_applicativeZipList.Do(func() {
 		cache_Data_List_ZipList_applicativeZipList = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_List_Lazy_Types_functorList()
-}), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(Get_Data_List_Lazy_zipWith(), Get_Data_Function_apply(), v_1, v1_2)
-})
-}))
+return Get_Data_List_ZipList_applyZipList()
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-var go__go_1_0_0 gopurs_runtime.Value
-_ = go__go_1_0_0
-go__go_1_0_0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_List_Lazy_Types_lazyList(), "defer"), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_Data_Lazy_go__defer(), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Lazy_Types_Cons{1, x_0, go__go_1_0_0})}
-}))
-}))
-return go__go_1_0_0
+return gopurs_runtime.Apply(Get_Data_List_Lazy_repeat(), x_0)
 }))
 	})
 	return cache_Data_List_ZipList_applicativeZipList
@@ -178,14 +164,8 @@ var once_Data_List_ZipList_plusZipList sync.Once
 func Get_Data_List_ZipList_plusZipList() gopurs_runtime.Value {
 	once_Data_List_ZipList_plusZipList.Do(func() {
 		cache_Data_List_ZipList_plusZipList = gopurs_runtime.RecordDict2("Alt0", "empty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("Functor0", "alt", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_List_Lazy_Types_functorList()
-}), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_List_Lazy_Types_semigroupList(), "append"), v_1, gopurs_runtime.Apply2(Get_Data_List_Lazy_drop(), gopurs_runtime.Int(gopurs_runtime.Apply(Get_Data_List_Lazy_length(), v_1).IntVal), v1_2))
-})
-}))
-}), gopurs_runtime.RecordGet(Get_Data_List_Lazy_Types_monoidList(), "mempty"))
+return Get_Data_List_ZipList_altZipList()
+}), Get_Data_List_Lazy_Types_nil())
 	})
 	return cache_Data_List_ZipList_plusZipList
 }
@@ -195,34 +175,9 @@ var once_Data_List_ZipList_alternativeZipList sync.Once
 func Get_Data_List_ZipList_alternativeZipList() gopurs_runtime.Value {
 	once_Data_List_ZipList_alternativeZipList.Do(func() {
 		cache_Data_List_ZipList_alternativeZipList = gopurs_runtime.RecordDict2("Applicative0", "Plus1", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_List_Lazy_Types_functorList()
-}), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(Get_Data_List_Lazy_zipWith(), Get_Data_Function_apply(), v_2, v1_3)
-})
-}))
-}), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-var go__go_2_0_1 gopurs_runtime.Value
-_ = go__go_2_0_1
-go__go_2_0_1 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_List_Lazy_Types_lazyList(), "defer"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_Data_Lazy_go__defer(), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Lazy_Types_Cons{1, x_1, go__go_2_0_1})}
-}))
-}))
-return go__go_2_0_1
-}))
+return Get_Data_List_ZipList_applicativeZipList()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("Alt0", "empty", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("Functor0", "alt", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_List_Lazy_Types_functorList()
-}), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_List_Lazy_Types_semigroupList(), "append"), v_2, gopurs_runtime.Apply2(Get_Data_List_Lazy_drop(), gopurs_runtime.Int(gopurs_runtime.Apply(Get_Data_List_Lazy_length(), v_2).IntVal), v1_3))
-})
-}))
-}), gopurs_runtime.RecordGet(Get_Data_List_Lazy_Types_monoidList(), "mempty"))
+return Get_Data_List_ZipList_plusZipList()
 }))
 	})
 	return cache_Data_List_ZipList_alternativeZipList
@@ -248,22 +203,9 @@ var once_Data_List_ZipList_applicativeZipList__37190504 sync.Once
 func Get_Data_List_ZipList_applicativeZipList__37190504() gopurs_runtime.Value {
 	once_Data_List_ZipList_applicativeZipList__37190504.Do(func() {
 		cache_Data_List_ZipList_applicativeZipList__37190504 = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_List_Lazy_Types_functorList()
-}), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(Get_Data_List_Lazy_zipWith(), Get_Data_Function_apply(), v_1, v1_2)
-})
-}))
+return Get_Data_List_ZipList_applyZipList()
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
-var go__go_1_0_2 gopurs_runtime.Value
-_ = go__go_1_0_2
-go__go_1_0_2 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_List_Lazy_Types_lazyList(), "defer"), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_Data_Lazy_go__defer(), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Lazy_Types_Cons{1, x_0, go__go_1_0_2})}
-}))
-}))
-return go__go_1_0_2
+return gopurs_runtime.Apply(Get_Data_List_Lazy_repeat(), x_0)
 }))
 	})
 	return cache_Data_List_ZipList_applicativeZipList__37190504
@@ -298,14 +240,8 @@ var once_Data_List_ZipList_plusZipList__3460472018 sync.Once
 func Get_Data_List_ZipList_plusZipList__3460472018() gopurs_runtime.Value {
 	once_Data_List_ZipList_plusZipList__3460472018.Do(func() {
 		cache_Data_List_ZipList_plusZipList__3460472018 = gopurs_runtime.RecordDict2("Alt0", "empty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("Functor0", "alt", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_List_Lazy_Types_functorList()
-}), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_List_Lazy_Types_semigroupList(), "append"), v_1, gopurs_runtime.Apply2(Get_Data_List_Lazy_drop(), gopurs_runtime.Int(gopurs_runtime.Apply(Get_Data_List_Lazy_length(), v_1).IntVal), v1_2))
-})
-}))
-}), gopurs_runtime.RecordGet(Get_Data_List_Lazy_Types_monoidList(), "mempty"))
+return Get_Data_List_ZipList_altZipList()
+}), Get_Data_List_Lazy_Types_nil())
 	})
 	return cache_Data_List_ZipList_plusZipList__3460472018
 }
@@ -336,20 +272,14 @@ return gopurs_runtime.Apply(Get_Data_List_Lazy_Types_ordList(), dictOrd_0)
 func Call_Data_List_ZipList_eqZipList(dictEq_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictEq_0 gopurs_runtime.Value = dictEq_0_loop
 _ = dictEq_0
-return gopurs_runtime.Apply(Get_Data_List_Lazy_Types_eqList(), dictEq_0)
+return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_List_Lazy_Types_eq1List(), "eq1"), dictEq_0))
 }
 
 func Call_Data_List_ZipList_zipListIsNotBind(_dollar__unused_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 return gopurs_runtime.RecordDict2("Apply0", "bind", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_List_Lazy_Types_functorList()
-}), gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(Get_Data_List_Lazy_zipWith(), Get_Data_Function_apply(), v_2, v1_3)
-})
-}))
+return Get_Data_List_ZipList_applyZipList()
 }), gopurs_runtime.Apply(Get_Partial_Unsafe__unsafePartial(), gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(Get_Partial__crashWith(), gopurs_runtime.Str("bind: unreachable"))
 })))

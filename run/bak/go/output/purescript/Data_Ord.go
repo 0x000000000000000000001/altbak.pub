@@ -236,7 +236,7 @@ var once_Data_Ord_ordInt sync.Once
 func Get_Data_Ord_ordInt() gopurs_runtime.Value {
 	once_Data_Ord_ordInt.Do(func() {
 		cache_Data_Ord_ordInt = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("eq", Get_Data_Eq_eqIntImpl())
+return Get_Data_Eq_eqInt()
 }), gopurs_runtime.Apply3(Get_Data_Ord_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}))
 	})
 	return cache_Data_Ord_ordInt
@@ -1820,20 +1820,52 @@ _ = key_10_3
 // TAST (Let): left_11_4 -> gopurs_runtime.Value
 left_11_4 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictOrd_5, "compare"), gopurs_runtime.Apply2(Get_Record_Unsafe_unsafeGet(), gopurs_runtime.Str(key_10_3.StrVal()), ra_8), gopurs_runtime.Apply2(Get_Record_Unsafe_unsafeGet(), gopurs_runtime.Str(key_10_3.StrVal()), rb_9))
 _ = left_11_4
-var __t5 uint32
+var __t9 uint32
 {
-if ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Ordering_eqOrdering(), "eq"), gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(left_11_4.IntVal)), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}).IntVal) != (0)) != (true) {
-__t5 = uint32(left_11_4.IntVal)
-goto end_branch_5
+var __t8 bool
+{
+var __t_tag_5 uint32 = uint32(left_11_4.IntVal)
+if (uint32(__t_tag_5) == 1527465420) {
+__t8 = false
+goto end_branch_8
 } else {
 
 }
 }
 {
-__t5 = uint32(gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictOrdRecord_0, "compareRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_8, rb_9).IntVal)
+var __t_tag_6 uint32 = uint32(left_11_4.IntVal)
+if (uint32(__t_tag_6) == 380165415) {
+__t8 = false
+goto end_branch_8
+} else {
+
 }
-end_branch_5:
-return gopurs_runtime.Value{Type: 9, IntVal: int64(__t5), UnsafePtr: nil}
+}
+{
+var __t_tag_7 uint32 = uint32(left_11_4.IntVal)
+if (uint32(__t_tag_7) == 902936544) {
+__t8 = true
+goto end_branch_8
+} else {
+
+}
+}
+{
+__t8 = false
+}
+end_branch_8:
+if (__t8) != (true) {
+__t9 = uint32(left_11_4.IntVal)
+goto end_branch_9
+} else {
+
+}
+}
+{
+__t9 = uint32(gopurs_runtime.Apply3(gopurs_runtime.RecordGet(dictOrdRecord_0, "compareRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_8, rb_9).IntVal)
+}
+end_branch_9:
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t9), UnsafePtr: nil}
 })
 })
 }))
@@ -2025,38 +2057,33 @@ return __t3
 func Call_Data_Ord_abs__1599282999(__eta0_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var __eta0_0 gopurs_runtime.Value = __eta0_0_loop
 _ = __eta0_0
-var __t2 int64
+var __t1 int64
 {
-var __t1 bool
+var __t0 bool
 {
 if (gopurs_runtime.Int(__eta0_0.IntVal).IntVal) < (gopurs_runtime.Int(0).IntVal) {
-__t1 = false
+__t0 = false
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = true
+}
+end_branch_0:
+if __t0 {
+__t1 = __eta0_0.IntVal
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = true
+__t1 = gopurs_runtime.Int(-(gopurs_runtime.Int(__eta0_0.IntVal).IntVal)).IntVal
 }
 end_branch_1:
-if __t1 {
-__t2 = __eta0_0.IntVal
-goto end_branch_2
-} else {
-
-}
-}
-{
-// TAST (Let): __local_var_1_0 -> *Constructor_Data_Ring_Ring
-__local_var_1_0 := &Constructor_Data_Ring_Ring{1, gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", Get_Data_Semiring_intAdd(), Get_Data_Semiring_intMul(), gopurs_runtime.Int(1), gopurs_runtime.Int(0))
-}), Get_Data_Ring_intSub()}
-_ = __local_var_1_0
-__t2 = gopurs_runtime.Apply2(gopurs_runtime.Box(__local_var_1_0.V1), gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.Box(__local_var_1_0.V0), gopurs_runtime.Value{}), "zero"), gopurs_runtime.Int(__eta0_0.IntVal)).IntVal
-}
-end_branch_2:
-return gopurs_runtime.Int(__t2)
+return gopurs_runtime.Int(__t1)
 }
 
 func Call_Data_Ord_abs__2515802711(dictOrd_0_loop *Constructor_Data_Ord_Ord, dictRing_1_loop *Constructor_Data_Ring_Ring) gopurs_runtime.Value {
@@ -2107,7 +2134,7 @@ _ = hi_1
 var x_2 int64 = x_2_loop
 _ = x_2
 // TAST (Let): v_3_1 -> gopurs_runtime.Value
-v_3_1 := gopurs_runtime.Apply5(Get_Data_Ord_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Int(low_0), gopurs_runtime.Int(x_2))
+v_3_1 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Ord_ordInt(), "compare"), gopurs_runtime.Int(low_0), gopurs_runtime.Int(x_2))
 _ = v_3_1
 var __t2 gopurs_runtime.Value
 {
@@ -2142,7 +2169,7 @@ end_branch_2:
 __local_var_3_0 := __t2.IntVal
 _ = __local_var_3_0
 // TAST (Let): v_4_3 -> gopurs_runtime.Value
-v_4_3 := gopurs_runtime.Apply5(Get_Data_Ord_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Int(hi_1), gopurs_runtime.Int(__local_var_3_0))
+v_4_3 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Ord_ordInt(), "compare"), gopurs_runtime.Int(hi_1), gopurs_runtime.Int(__local_var_3_0))
 _ = v_4_3
 var __t4 gopurs_runtime.Value
 {
@@ -3349,21 +3376,20 @@ var a1_0 float64 = a1_0_loop
 _ = a1_0
 var a2_1 float64 = a2_1_loop
 _ = a2_1
-var __t1 bool
+var __t0 bool
 {
-var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply5(Get_Data_Ord_ordNumberImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Float(a1_0), gopurs_runtime.Float(a2_1))
-if (uint32(__t_tag_0.IntVal) == 1527465420) {
-__t1 = false
-goto end_branch_1
+if (a1_0) < (a2_1) {
+__t0 = false
+goto end_branch_0
 } else {
 
 }
 }
 {
-__t1 = true
+__t0 = true
 }
-end_branch_1:
-return __t1
+end_branch_0:
+return __t0
 }
 
 func Call_Data_Ord_greaterThanOrEq__1409282474(dictOrd_0_loop *Constructor_Data_Ord_Ord, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
@@ -3464,21 +3490,20 @@ var a1_0 float64 = a1_0_loop
 _ = a1_0
 var a2_1 float64 = a2_1_loop
 _ = a2_1
-var __t1 bool
+var __t0 bool
 {
-var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply5(Get_Data_Ord_ordNumberImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Float(a1_0), gopurs_runtime.Float(a2_1))
-if (uint32(__t_tag_0.IntVal) == 1527465420) {
-__t1 = true
-goto end_branch_1
+if (a1_0) < (a2_1) {
+__t0 = true
+goto end_branch_0
 } else {
 
 }
 }
 {
-__t1 = false
+__t0 = false
 }
-end_branch_1:
-return __t1
+end_branch_0:
+return __t0
 }
 
 func Call_Data_Ord_lessThan__1409282474(dictOrd_0_loop *Constructor_Data_Ord_Ord, a1_1_loop gopurs_runtime.Value, a2_2_loop gopurs_runtime.Value) bool {
@@ -3555,21 +3580,20 @@ var a1_0 float64 = a1_0_loop
 _ = a1_0
 var a2_1 float64 = a2_1_loop
 _ = a2_1
-var __t1 bool
+var __t0 bool
 {
-var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply5(Get_Data_Ord_ordNumberImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Float(a1_0), gopurs_runtime.Float(a2_1))
-if (uint32(__t_tag_0.IntVal) == 380165415) {
-__t1 = false
-goto end_branch_1
+if (a1_0) > (a2_1) {
+__t0 = false
+goto end_branch_0
 } else {
 
 }
 }
 {
-__t1 = true
+__t0 = true
 }
-end_branch_1:
-return __t1
+end_branch_0:
+return __t0
 }
 
 func Call_Data_Ord_lessThanOrEq__3448835524(dictOrd_0_loop *Constructor_Data_Ord_Ord, a1_1_loop string, a2_2_loop string) bool {
@@ -3716,7 +3740,7 @@ _ = x_0
 var y_1 int64 = y_1_loop
 _ = y_1
 // TAST (Let): v_2_0 -> gopurs_runtime.Value
-v_2_0 := gopurs_runtime.Apply5(Get_Data_Ord_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Int(x_0), gopurs_runtime.Int(y_1))
+v_2_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Ord_ordInt(), "compare"), gopurs_runtime.Int(x_0), gopurs_runtime.Int(y_1))
 _ = v_2_0
 var __t1 int64
 {

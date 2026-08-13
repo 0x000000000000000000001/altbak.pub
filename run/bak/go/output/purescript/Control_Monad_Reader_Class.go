@@ -46,11 +46,7 @@ var once_Control_Monad_Reader_Class_monadReaderFun sync.Once
 func Get_Control_Monad_Reader_Class_monadReaderFun() gopurs_runtime.Value {
 	once_Control_Monad_Reader_Class_monadReaderFun.Do(func() {
 		cache_Control_Monad_Reader_Class_monadReaderFun = gopurs_runtime.RecordDict2("MonadAsk0", "local", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("Monad0", "ask", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Control_Monad_monadFn()
-}), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return x_1
-}))
+return Get_Control_Monad_Reader_Class_monadAskFun()
 }), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(g_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {

@@ -90,26 +90,17 @@ var once_Data_Traversable_Accum_Internal_applyStateR sync.Once
 func Get_Data_Traversable_Accum_Internal_applyStateR() gopurs_runtime.Value {
 	once_Data_Traversable_Accum_Internal_applyStateR.Do(func() {
 		cache_Data_Traversable_Accum_Internal_applyStateR = gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(k_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(s_3 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): v_4_0 -> gopurs_runtime.Value
-v_4_0 := gopurs_runtime.Apply(k_2, s_3)
-_ = v_4_0
-return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v_4_0, "accum"), gopurs_runtime.Apply(f_1, gopurs_runtime.RecordGet(v_4_0, "value")))
-})
-})
-}))
+return Get_Data_Traversable_Accum_Internal_functorStateR()
 }), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): v_3_1 -> gopurs_runtime.Value
-v_3_1 := gopurs_runtime.Apply(x_1, s_2)
-_ = v_3_1
-// TAST (Let): v1_4_2 -> gopurs_runtime.Value
-v1_4_2 := gopurs_runtime.Apply(f_0, gopurs_runtime.RecordGet(v_3_1, "accum"))
-_ = v1_4_2
-return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v1_4_2, "accum"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(v1_4_2, "value"), gopurs_runtime.RecordGet(v_3_1, "value")))
+// TAST (Let): v_3_0 -> gopurs_runtime.Value
+v_3_0 := gopurs_runtime.Apply(x_1, s_2)
+_ = v_3_0
+// TAST (Let): v1_4_1 -> gopurs_runtime.Value
+v1_4_1 := gopurs_runtime.Apply(f_0, gopurs_runtime.RecordGet(v_3_0, "accum"))
+_ = v1_4_1
+return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v1_4_1, "accum"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(v1_4_1, "value"), gopurs_runtime.RecordGet(v_3_0, "value")))
 })
 })
 }))
@@ -122,26 +113,17 @@ var once_Data_Traversable_Accum_Internal_applyStateL sync.Once
 func Get_Data_Traversable_Accum_Internal_applyStateL() gopurs_runtime.Value {
 	once_Data_Traversable_Accum_Internal_applyStateL.Do(func() {
 		cache_Data_Traversable_Accum_Internal_applyStateL = gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(k_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(s_3 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): v_4_0 -> gopurs_runtime.Value
-v_4_0 := gopurs_runtime.Apply(k_2, s_3)
-_ = v_4_0
-return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v_4_0, "accum"), gopurs_runtime.Apply(f_1, gopurs_runtime.RecordGet(v_4_0, "value")))
-})
-})
-}))
+return Get_Data_Traversable_Accum_Internal_functorStateL()
 }), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): v_3_1 -> gopurs_runtime.Value
-v_3_1 := gopurs_runtime.Apply(f_0, s_2)
-_ = v_3_1
-// TAST (Let): v1_4_2 -> gopurs_runtime.Value
-v1_4_2 := gopurs_runtime.Apply(x_1, gopurs_runtime.RecordGet(v_3_1, "accum"))
-_ = v1_4_2
-return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v1_4_2, "accum"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(v_3_1, "value"), gopurs_runtime.RecordGet(v1_4_2, "value")))
+// TAST (Let): v_3_0 -> gopurs_runtime.Value
+v_3_0 := gopurs_runtime.Apply(f_0, s_2)
+_ = v_3_0
+// TAST (Let): v1_4_1 -> gopurs_runtime.Value
+v1_4_1 := gopurs_runtime.Apply(x_1, gopurs_runtime.RecordGet(v_3_0, "accum"))
+_ = v1_4_1
+return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v1_4_1, "accum"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(v_3_0, "value"), gopurs_runtime.RecordGet(v1_4_1, "value")))
 })
 })
 }))
@@ -154,30 +136,7 @@ var once_Data_Traversable_Accum_Internal_applicativeStateR sync.Once
 func Get_Data_Traversable_Accum_Internal_applicativeStateR() gopurs_runtime.Value {
 	once_Data_Traversable_Accum_Internal_applicativeStateR.Do(func() {
 		cache_Data_Traversable_Accum_Internal_applicativeStateR = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(k_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(s_4 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): v_5_0 -> gopurs_runtime.Value
-v_5_0 := gopurs_runtime.Apply(k_3, s_4)
-_ = v_5_0
-return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v_5_0, "accum"), gopurs_runtime.Apply(f_2, gopurs_runtime.RecordGet(v_5_0, "value")))
-})
-})
-}))
-}), gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(s_3 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): v_4_1 -> gopurs_runtime.Value
-v_4_1 := gopurs_runtime.Apply(x_2, s_3)
-_ = v_4_1
-// TAST (Let): v1_5_2 -> gopurs_runtime.Value
-v1_5_2 := gopurs_runtime.Apply(f_1, gopurs_runtime.RecordGet(v_4_1, "accum"))
-_ = v1_5_2
-return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v1_5_2, "accum"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(v1_5_2, "value"), gopurs_runtime.RecordGet(v_4_1, "value")))
-})
-})
-}))
+return Get_Data_Traversable_Accum_Internal_applyStateR()
 }), gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict2("accum", "value", s_1, a_0)
@@ -192,30 +151,7 @@ var once_Data_Traversable_Accum_Internal_applicativeStateL sync.Once
 func Get_Data_Traversable_Accum_Internal_applicativeStateL() gopurs_runtime.Value {
 	once_Data_Traversable_Accum_Internal_applicativeStateL.Do(func() {
 		cache_Data_Traversable_Accum_Internal_applicativeStateL = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(k_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(s_4 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): v_5_0 -> gopurs_runtime.Value
-v_5_0 := gopurs_runtime.Apply(k_3, s_4)
-_ = v_5_0
-return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v_5_0, "accum"), gopurs_runtime.Apply(f_2, gopurs_runtime.RecordGet(v_5_0, "value")))
-})
-})
-}))
-}), gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(s_3 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): v_4_1 -> gopurs_runtime.Value
-v_4_1 := gopurs_runtime.Apply(f_1, s_3)
-_ = v_4_1
-// TAST (Let): v1_5_2 -> gopurs_runtime.Value
-v1_5_2 := gopurs_runtime.Apply(x_2, gopurs_runtime.RecordGet(v_4_1, "accum"))
-_ = v1_5_2
-return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v1_5_2, "accum"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(v_4_1, "value"), gopurs_runtime.RecordGet(v1_5_2, "value")))
-})
-})
-}))
+return Get_Data_Traversable_Accum_Internal_applyStateL()
 }), gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict2("accum", "value", s_1, a_0)
@@ -230,30 +166,7 @@ var once_Data_Traversable_Accum_Internal_applicativeStateL__2039640491 sync.Once
 func Get_Data_Traversable_Accum_Internal_applicativeStateL__2039640491() gopurs_runtime.Value {
 	once_Data_Traversable_Accum_Internal_applicativeStateL__2039640491.Do(func() {
 		cache_Data_Traversable_Accum_Internal_applicativeStateL__2039640491 = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(k_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(s_4 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): v_5_0 -> gopurs_runtime.Value
-v_5_0 := gopurs_runtime.Apply(k_3, s_4)
-_ = v_5_0
-return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v_5_0, "accum"), gopurs_runtime.Apply(f_2, gopurs_runtime.RecordGet(v_5_0, "value")))
-})
-})
-}))
-}), gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(s_3 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): v_4_1 -> gopurs_runtime.Value
-v_4_1 := gopurs_runtime.Apply(f_1, s_3)
-_ = v_4_1
-// TAST (Let): v1_5_2 -> gopurs_runtime.Value
-v1_5_2 := gopurs_runtime.Apply(x_2, gopurs_runtime.RecordGet(v_4_1, "accum"))
-_ = v1_5_2
-return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v1_5_2, "accum"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(v_4_1, "value"), gopurs_runtime.RecordGet(v1_5_2, "value")))
-})
-})
-}))
+return Get_Data_Traversable_Accum_Internal_applyStateL()
 }), gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict2("accum", "value", s_1, a_0)
@@ -268,30 +181,7 @@ var once_Data_Traversable_Accum_Internal_applicativeStateL__3057114219 sync.Once
 func Get_Data_Traversable_Accum_Internal_applicativeStateL__3057114219() gopurs_runtime.Value {
 	once_Data_Traversable_Accum_Internal_applicativeStateL__3057114219.Do(func() {
 		cache_Data_Traversable_Accum_Internal_applicativeStateL__3057114219 = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(k_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(s_4 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): v_5_0 -> gopurs_runtime.Value
-v_5_0 := gopurs_runtime.Apply(k_3, s_4)
-_ = v_5_0
-return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v_5_0, "accum"), gopurs_runtime.Apply(f_2, gopurs_runtime.RecordGet(v_5_0, "value")))
-})
-})
-}))
-}), gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(s_3 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): v_4_1 -> gopurs_runtime.Value
-v_4_1 := gopurs_runtime.Apply(f_1, s_3)
-_ = v_4_1
-// TAST (Let): v1_5_2 -> gopurs_runtime.Value
-v1_5_2 := gopurs_runtime.Apply(x_2, gopurs_runtime.RecordGet(v_4_1, "accum"))
-_ = v1_5_2
-return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v1_5_2, "accum"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(v_4_1, "value"), gopurs_runtime.RecordGet(v1_5_2, "value")))
-})
-})
-}))
+return Get_Data_Traversable_Accum_Internal_applyStateL()
 }), gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict2("accum", "value", s_1, a_0)
@@ -306,30 +196,7 @@ var once_Data_Traversable_Accum_Internal_applicativeStateR__2039640491 sync.Once
 func Get_Data_Traversable_Accum_Internal_applicativeStateR__2039640491() gopurs_runtime.Value {
 	once_Data_Traversable_Accum_Internal_applicativeStateR__2039640491.Do(func() {
 		cache_Data_Traversable_Accum_Internal_applicativeStateR__2039640491 = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(k_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(s_4 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): v_5_0 -> gopurs_runtime.Value
-v_5_0 := gopurs_runtime.Apply(k_3, s_4)
-_ = v_5_0
-return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v_5_0, "accum"), gopurs_runtime.Apply(f_2, gopurs_runtime.RecordGet(v_5_0, "value")))
-})
-})
-}))
-}), gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(s_3 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): v_4_1 -> gopurs_runtime.Value
-v_4_1 := gopurs_runtime.Apply(x_2, s_3)
-_ = v_4_1
-// TAST (Let): v1_5_2 -> gopurs_runtime.Value
-v1_5_2 := gopurs_runtime.Apply(f_1, gopurs_runtime.RecordGet(v_4_1, "accum"))
-_ = v1_5_2
-return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v1_5_2, "accum"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(v1_5_2, "value"), gopurs_runtime.RecordGet(v_4_1, "value")))
-})
-})
-}))
+return Get_Data_Traversable_Accum_Internal_applyStateR()
 }), gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict2("accum", "value", s_1, a_0)
@@ -344,30 +211,7 @@ var once_Data_Traversable_Accum_Internal_applicativeStateR__3057114219 sync.Once
 func Get_Data_Traversable_Accum_Internal_applicativeStateR__3057114219() gopurs_runtime.Value {
 	once_Data_Traversable_Accum_Internal_applicativeStateR__3057114219.Do(func() {
 		cache_Data_Traversable_Accum_Internal_applicativeStateR__3057114219 = gopurs_runtime.RecordDict2("Apply0", "pure", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(k_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(s_4 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): v_5_0 -> gopurs_runtime.Value
-v_5_0 := gopurs_runtime.Apply(k_3, s_4)
-_ = v_5_0
-return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v_5_0, "accum"), gopurs_runtime.Apply(f_2, gopurs_runtime.RecordGet(v_5_0, "value")))
-})
-})
-}))
-}), gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(s_3 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): v_4_1 -> gopurs_runtime.Value
-v_4_1 := gopurs_runtime.Apply(x_2, s_3)
-_ = v_4_1
-// TAST (Let): v1_5_2 -> gopurs_runtime.Value
-v1_5_2 := gopurs_runtime.Apply(f_1, gopurs_runtime.RecordGet(v_4_1, "accum"))
-_ = v1_5_2
-return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v1_5_2, "accum"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(v1_5_2, "value"), gopurs_runtime.RecordGet(v_4_1, "value")))
-})
-})
-}))
+return Get_Data_Traversable_Accum_Internal_applyStateR()
 }), gopurs_runtime.Func(func(a_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(s_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.RecordDict2("accum", "value", s_1, a_0)
@@ -382,26 +226,17 @@ var once_Data_Traversable_Accum_Internal_applyStateL__1243455060 sync.Once
 func Get_Data_Traversable_Accum_Internal_applyStateL__1243455060() gopurs_runtime.Value {
 	once_Data_Traversable_Accum_Internal_applyStateL__1243455060.Do(func() {
 		cache_Data_Traversable_Accum_Internal_applyStateL__1243455060 = gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(k_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(s_3 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): v_4_0 -> gopurs_runtime.Value
-v_4_0 := gopurs_runtime.Apply(k_2, s_3)
-_ = v_4_0
-return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v_4_0, "accum"), gopurs_runtime.Apply(f_1, gopurs_runtime.RecordGet(v_4_0, "value")))
-})
-})
-}))
+return Get_Data_Traversable_Accum_Internal_functorStateL()
 }), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): v_3_1 -> gopurs_runtime.Value
-v_3_1 := gopurs_runtime.Apply(f_0, s_2)
-_ = v_3_1
-// TAST (Let): v1_4_2 -> gopurs_runtime.Value
-v1_4_2 := gopurs_runtime.Apply(x_1, gopurs_runtime.RecordGet(v_3_1, "accum"))
-_ = v1_4_2
-return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v1_4_2, "accum"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(v_3_1, "value"), gopurs_runtime.RecordGet(v1_4_2, "value")))
+// TAST (Let): v_3_0 -> gopurs_runtime.Value
+v_3_0 := gopurs_runtime.Apply(f_0, s_2)
+_ = v_3_0
+// TAST (Let): v1_4_1 -> gopurs_runtime.Value
+v1_4_1 := gopurs_runtime.Apply(x_1, gopurs_runtime.RecordGet(v_3_0, "accum"))
+_ = v1_4_1
+return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v1_4_1, "accum"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(v_3_0, "value"), gopurs_runtime.RecordGet(v1_4_1, "value")))
 })
 })
 }))
@@ -414,26 +249,17 @@ var once_Data_Traversable_Accum_Internal_applyStateR__1243455060 sync.Once
 func Get_Data_Traversable_Accum_Internal_applyStateR__1243455060() gopurs_runtime.Value {
 	once_Data_Traversable_Accum_Internal_applyStateR__1243455060.Do(func() {
 		cache_Data_Traversable_Accum_Internal_applyStateR__1243455060 = gopurs_runtime.RecordDict2("Functor0", "apply", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(k_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(s_3 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): v_4_0 -> gopurs_runtime.Value
-v_4_0 := gopurs_runtime.Apply(k_2, s_3)
-_ = v_4_0
-return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v_4_0, "accum"), gopurs_runtime.Apply(f_1, gopurs_runtime.RecordGet(v_4_0, "value")))
-})
-})
-}))
+return Get_Data_Traversable_Accum_Internal_functorStateR()
 }), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): v_3_1 -> gopurs_runtime.Value
-v_3_1 := gopurs_runtime.Apply(x_1, s_2)
-_ = v_3_1
-// TAST (Let): v1_4_2 -> gopurs_runtime.Value
-v1_4_2 := gopurs_runtime.Apply(f_0, gopurs_runtime.RecordGet(v_3_1, "accum"))
-_ = v1_4_2
-return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v1_4_2, "accum"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(v1_4_2, "value"), gopurs_runtime.RecordGet(v_3_1, "value")))
+// TAST (Let): v_3_0 -> gopurs_runtime.Value
+v_3_0 := gopurs_runtime.Apply(x_1, s_2)
+_ = v_3_0
+// TAST (Let): v1_4_1 -> gopurs_runtime.Value
+v1_4_1 := gopurs_runtime.Apply(f_0, gopurs_runtime.RecordGet(v_3_0, "accum"))
+_ = v1_4_1
+return gopurs_runtime.RecordDict2("accum", "value", gopurs_runtime.RecordGet(v1_4_1, "accum"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(v1_4_1, "value"), gopurs_runtime.RecordGet(v_3_0, "value")))
 })
 })
 }))

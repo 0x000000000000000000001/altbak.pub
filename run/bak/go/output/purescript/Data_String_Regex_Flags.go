@@ -10,7 +10,7 @@ var cache_Data_String_Regex_Flags_eqArray gopurs_runtime.Value
 var once_Data_String_Regex_Flags_eqArray sync.Once
 func Get_Data_String_Regex_Flags_eqArray() gopurs_runtime.Value {
 	once_Data_String_Regex_Flags_eqArray.Do(func() {
-		cache_Data_String_Regex_Flags_eqArray = gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(&Constructor_Data_Eq_Eq{1, gopurs_runtime.Apply(Get_Data_Eq_eqArrayImpl(), gopurs_runtime.RecordGet(Get_Data_Eq_eqString(), "eq"))})}
+		cache_Data_String_Regex_Flags_eqArray = gopurs_runtime.Value{Type: 9, IntVal: 1012063514, UnsafePtr: unsafe.Pointer(&Constructor_Data_Eq_Eq{1, gopurs_runtime.Apply(Get_Data_Eq_eqArrayImpl(), Get_Data_Eq_eqStringImpl())})}
 	})
 	return cache_Data_String_Regex_Flags_eqArray
 }
@@ -50,53 +50,119 @@ func Get_Data_String_Regex_Flags_showRegexFlags() gopurs_runtime.Value {
 	once_Data_String_Regex_Flags_showRegexFlags.Do(func() {
 		cache_Data_String_Regex_Flags_showRegexFlags = gopurs_runtime.RecordDict1("show", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): usedFlags_1_0 -> gopurs_runtime.Value
-usedFlags_1_0 := gopurs_runtime.Apply2(Get_Data_Semigroup_concatArray(), gopurs_runtime.Apply2(Get_Data_Semigroup_concatArray(), gopurs_runtime.Apply2(Get_Data_Semigroup_concatArray(), gopurs_runtime.Apply2(Get_Data_Semigroup_concatArray(), gopurs_runtime.Apply2(Get_Data_Semigroup_concatArray(), gopurs_runtime.Apply2(Get_Data_Semigroup_concatArray(), gopurs_runtime.Array([]gopurs_runtime.Value{}), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Functor_functorArray(), "map"), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("global")
-}), gopurs_runtime.Array(func() []gopurs_runtime.Value {
+usedFlags_1_0 := gopurs_runtime.Apply2(Get_Data_Semigroup_concatArray(), gopurs_runtime.Apply2(Get_Data_Semigroup_concatArray(), gopurs_runtime.Apply2(Get_Data_Semigroup_concatArray(), gopurs_runtime.Apply2(Get_Data_Semigroup_concatArray(), gopurs_runtime.Apply2(Get_Data_Semigroup_concatArray(), gopurs_runtime.Apply2(Get_Data_Semigroup_concatArray(), gopurs_runtime.Array([]gopurs_runtime.Value{}), func() gopurs_runtime.Value {
+arr_val_arrayMap9 := gopurs_runtime.Array(func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(Get_Control_Alternative_guard(), gopurs_runtime.Value{Type: 9, IntVal: 397869517, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Alternative_Alternative](Get_Control_Alternative_alternativeArray()))}, gopurs_runtime.Bool((gopurs_runtime.RecordGet(v_0, "global").IntVal) != (0))).UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
-				}()))), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Functor_functorArray(), "map"), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("ignoreCase")
-}), gopurs_runtime.Array(func() []gopurs_runtime.Value {
+				}())
+_ = arr_val_arrayMap9
+arr_go_arrayMap9 := (*[]gopurs_runtime.Value)(arr_val_arrayMap9.UnsafePtr)
+_ = arr_go_arrayMap9
+res_go_arrayMap9 := make([]gopurs_runtime.Value, len(*arr_go_arrayMap9))
+_ = res_go_arrayMap9
+for i_arrayMap9, v_arrayMap9 := range *arr_go_arrayMap9 {
+res_go_arrayMap9[i_arrayMap9] = gopurs_runtime.Apply(gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str("global")
+}), v_arrayMap9)
+}
+return gopurs_runtime.Array(res_go_arrayMap9)
+}()), func() gopurs_runtime.Value {
+arr_val_arrayMap8 := gopurs_runtime.Array(func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(Get_Control_Alternative_guard(), gopurs_runtime.Value{Type: 9, IntVal: 397869517, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Alternative_Alternative](Get_Control_Alternative_alternativeArray()))}, gopurs_runtime.Bool((gopurs_runtime.RecordGet(v_0, "ignoreCase").IntVal) != (0))).UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
-				}()))), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Functor_functorArray(), "map"), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("multiline")
-}), gopurs_runtime.Array(func() []gopurs_runtime.Value {
+				}())
+_ = arr_val_arrayMap8
+arr_go_arrayMap8 := (*[]gopurs_runtime.Value)(arr_val_arrayMap8.UnsafePtr)
+_ = arr_go_arrayMap8
+res_go_arrayMap8 := make([]gopurs_runtime.Value, len(*arr_go_arrayMap8))
+_ = res_go_arrayMap8
+for i_arrayMap8, v_arrayMap8 := range *arr_go_arrayMap8 {
+res_go_arrayMap8[i_arrayMap8] = gopurs_runtime.Apply(gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str("ignoreCase")
+}), v_arrayMap8)
+}
+return gopurs_runtime.Array(res_go_arrayMap8)
+}()), func() gopurs_runtime.Value {
+arr_val_arrayMap7 := gopurs_runtime.Array(func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(Get_Control_Alternative_guard(), gopurs_runtime.Value{Type: 9, IntVal: 397869517, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Alternative_Alternative](Get_Control_Alternative_alternativeArray()))}, gopurs_runtime.Bool((gopurs_runtime.RecordGet(v_0, "multiline").IntVal) != (0))).UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
-				}()))), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Functor_functorArray(), "map"), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("dotAll")
-}), gopurs_runtime.Array(func() []gopurs_runtime.Value {
+				}())
+_ = arr_val_arrayMap7
+arr_go_arrayMap7 := (*[]gopurs_runtime.Value)(arr_val_arrayMap7.UnsafePtr)
+_ = arr_go_arrayMap7
+res_go_arrayMap7 := make([]gopurs_runtime.Value, len(*arr_go_arrayMap7))
+_ = res_go_arrayMap7
+for i_arrayMap7, v_arrayMap7 := range *arr_go_arrayMap7 {
+res_go_arrayMap7[i_arrayMap7] = gopurs_runtime.Apply(gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str("multiline")
+}), v_arrayMap7)
+}
+return gopurs_runtime.Array(res_go_arrayMap7)
+}()), func() gopurs_runtime.Value {
+arr_val_arrayMap6 := gopurs_runtime.Array(func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(Get_Control_Alternative_guard(), gopurs_runtime.Value{Type: 9, IntVal: 397869517, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Alternative_Alternative](Get_Control_Alternative_alternativeArray()))}, gopurs_runtime.Bool((gopurs_runtime.RecordGet(v_0, "dotAll").IntVal) != (0))).UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
-				}()))), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Functor_functorArray(), "map"), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("sticky")
-}), gopurs_runtime.Array(func() []gopurs_runtime.Value {
+				}())
+_ = arr_val_arrayMap6
+arr_go_arrayMap6 := (*[]gopurs_runtime.Value)(arr_val_arrayMap6.UnsafePtr)
+_ = arr_go_arrayMap6
+res_go_arrayMap6 := make([]gopurs_runtime.Value, len(*arr_go_arrayMap6))
+_ = res_go_arrayMap6
+for i_arrayMap6, v_arrayMap6 := range *arr_go_arrayMap6 {
+res_go_arrayMap6[i_arrayMap6] = gopurs_runtime.Apply(gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str("dotAll")
+}), v_arrayMap6)
+}
+return gopurs_runtime.Array(res_go_arrayMap6)
+}()), func() gopurs_runtime.Value {
+arr_val_arrayMap5 := gopurs_runtime.Array(func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(Get_Control_Alternative_guard(), gopurs_runtime.Value{Type: 9, IntVal: 397869517, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Alternative_Alternative](Get_Control_Alternative_alternativeArray()))}, gopurs_runtime.Bool((gopurs_runtime.RecordGet(v_0, "sticky").IntVal) != (0))).UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
-				}()))), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Functor_functorArray(), "map"), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Str("unicode")
-}), gopurs_runtime.Array(func() []gopurs_runtime.Value {
+				}())
+_ = arr_val_arrayMap5
+arr_go_arrayMap5 := (*[]gopurs_runtime.Value)(arr_val_arrayMap5.UnsafePtr)
+_ = arr_go_arrayMap5
+res_go_arrayMap5 := make([]gopurs_runtime.Value, len(*arr_go_arrayMap5))
+_ = res_go_arrayMap5
+for i_arrayMap5, v_arrayMap5 := range *arr_go_arrayMap5 {
+res_go_arrayMap5[i_arrayMap5] = gopurs_runtime.Apply(gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str("sticky")
+}), v_arrayMap5)
+}
+return gopurs_runtime.Array(res_go_arrayMap5)
+}()), func() gopurs_runtime.Value {
+arr_val_arrayMap4 := gopurs_runtime.Array(func() []gopurs_runtime.Value {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply2(Get_Control_Alternative_guard(), gopurs_runtime.Value{Type: 9, IntVal: 397869517, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Alternative_Alternative](Get_Control_Alternative_alternativeArray()))}, gopurs_runtime.Bool((gopurs_runtime.RecordGet(v_0, "unicode").IntVal) != (0))).UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
-				}())))
+				}())
+_ = arr_val_arrayMap4
+arr_go_arrayMap4 := (*[]gopurs_runtime.Value)(arr_val_arrayMap4.UnsafePtr)
+_ = arr_go_arrayMap4
+res_go_arrayMap4 := make([]gopurs_runtime.Value, len(*arr_go_arrayMap4))
+_ = res_go_arrayMap4
+for i_arrayMap4, v_arrayMap4 := range *arr_go_arrayMap4 {
+res_go_arrayMap4[i_arrayMap4] = gopurs_runtime.Apply(gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str("unicode")
+}), v_arrayMap4)
+}
+return gopurs_runtime.Array(res_go_arrayMap4)
+}())
 _ = usedFlags_1_0
 var __t1 string
 {
-if (gopurs_runtime.Apply3(Get_Data_Eq_eqArrayImpl(), gopurs_runtime.RecordGet(Get_Data_Eq_eqString(), "eq"), func() gopurs_runtime.Value {
+if (gopurs_runtime.Apply2(gopurs_runtime.Box(gopurs_runtime.CoerceToStruct[Constructor_Data_Eq_Eq](Get_Data_String_Regex_Flags_eqArray()).V0), func() gopurs_runtime.Value {
 					arr := func() []string {
 					arr := *(*[]gopurs_runtime.Value)(usedFlags_1_0.UnsafePtr)
 					unboxed := make([]string, len(arr))
@@ -190,12 +256,8 @@ var once_Data_String_Regex_Flags_monoidRegexFlags sync.Once
 func Get_Data_String_Regex_Flags_monoidRegexFlags() gopurs_runtime.Value {
 	once_Data_String_Regex_Flags_monoidRegexFlags.Do(func() {
 		cache_Data_String_Regex_Flags_monoidRegexFlags = gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict([]string{"dotAll", "global", "ignoreCase", "multiline", "sticky", "unicode"}, []gopurs_runtime.Value{gopurs_runtime.Bool(((gopurs_runtime.RecordGet(v_1, "dotAll").IntVal) != (0)) || ((gopurs_runtime.RecordGet(v1_2, "dotAll").IntVal) != (0))), gopurs_runtime.Bool(((gopurs_runtime.RecordGet(v_1, "global").IntVal) != (0)) || ((gopurs_runtime.RecordGet(v1_2, "global").IntVal) != (0))), gopurs_runtime.Bool(((gopurs_runtime.RecordGet(v_1, "ignoreCase").IntVal) != (0)) || ((gopurs_runtime.RecordGet(v1_2, "ignoreCase").IntVal) != (0))), gopurs_runtime.Bool(((gopurs_runtime.RecordGet(v_1, "multiline").IntVal) != (0)) || ((gopurs_runtime.RecordGet(v1_2, "multiline").IntVal) != (0))), gopurs_runtime.Bool(((gopurs_runtime.RecordGet(v_1, "sticky").IntVal) != (0)) || ((gopurs_runtime.RecordGet(v1_2, "sticky").IntVal) != (0))), gopurs_runtime.Bool(((gopurs_runtime.RecordGet(v_1, "unicode").IntVal) != (0)) || ((gopurs_runtime.RecordGet(v1_2, "unicode").IntVal) != (0)))})
-})
-}))
-}), gopurs_runtime.RecordDict([]string{"dotAll", "global", "ignoreCase", "multiline", "sticky", "unicode"}, []gopurs_runtime.Value{gopurs_runtime.Bool(false), gopurs_runtime.Bool(false), gopurs_runtime.Bool(false), gopurs_runtime.Bool(false), gopurs_runtime.Bool(false), gopurs_runtime.Bool(false)}))
+return Get_Data_String_Regex_Flags_semigroupRegexFlags()
+}), Get_Data_String_Regex_Flags_noFlags())
 	})
 	return cache_Data_String_Regex_Flags_monoidRegexFlags
 }
@@ -230,7 +292,7 @@ return gopurs_runtime.Func(func(rb_2 gopurs_runtime.Value) gopurs_runtime.Value 
 // TAST (Let): get_3_1 -> gopurs_runtime.Value
 get_3_1 := gopurs_runtime.Apply(Get_Record_Unsafe_unsafeGet(), gopurs_runtime.Str("unicode"))
 _ = get_3_1
-return gopurs_runtime.Bool(((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Eq_eqBoolean(), "eq"), gopurs_runtime.Apply(get_3_1, ra_1), gopurs_runtime.Apply(get_3_1, rb_2)).IntVal) != (0)) && ((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Data_Eq_eqRowNil(), "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_1, rb_2).IntVal) != (0)))
+return gopurs_runtime.Bool(((gopurs_runtime.Apply(get_3_1, ra_1).IntVal) != (0)) == ((gopurs_runtime.Apply(get_3_1, rb_2).IntVal) != (0)))
 })
 })
 }))
@@ -242,7 +304,7 @@ return gopurs_runtime.Func(func(rb_3 gopurs_runtime.Value) gopurs_runtime.Value 
 // TAST (Let): get_4_3 -> gopurs_runtime.Value
 get_4_3 := gopurs_runtime.Apply(Get_Record_Unsafe_unsafeGet(), gopurs_runtime.Str("sticky"))
 _ = get_4_3
-return gopurs_runtime.Bool(((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Eq_eqBoolean(), "eq"), gopurs_runtime.Apply(get_4_3, ra_2), gopurs_runtime.Apply(get_4_3, rb_3)).IntVal) != (0)) && ((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_0_0, "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_2, rb_3).IntVal) != (0)))
+return gopurs_runtime.Bool((((gopurs_runtime.Apply(get_4_3, ra_2).IntVal) != (0)) == ((gopurs_runtime.Apply(get_4_3, rb_3).IntVal) != (0))) && ((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_0_0, "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_2, rb_3).IntVal) != (0)))
 })
 })
 }))
@@ -254,7 +316,7 @@ return gopurs_runtime.Func(func(rb_4 gopurs_runtime.Value) gopurs_runtime.Value 
 // TAST (Let): get_5_5 -> gopurs_runtime.Value
 get_5_5 := gopurs_runtime.Apply(Get_Record_Unsafe_unsafeGet(), gopurs_runtime.Str("multiline"))
 _ = get_5_5
-return gopurs_runtime.Bool(((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Eq_eqBoolean(), "eq"), gopurs_runtime.Apply(get_5_5, ra_3), gopurs_runtime.Apply(get_5_5, rb_4)).IntVal) != (0)) && ((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_1_2, "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_3, rb_4).IntVal) != (0)))
+return gopurs_runtime.Bool((((gopurs_runtime.Apply(get_5_5, ra_3).IntVal) != (0)) == ((gopurs_runtime.Apply(get_5_5, rb_4).IntVal) != (0))) && ((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_1_2, "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_3, rb_4).IntVal) != (0)))
 })
 })
 }))
@@ -266,7 +328,7 @@ return gopurs_runtime.Func(func(rb_5 gopurs_runtime.Value) gopurs_runtime.Value 
 // TAST (Let): get_6_7 -> gopurs_runtime.Value
 get_6_7 := gopurs_runtime.Apply(Get_Record_Unsafe_unsafeGet(), gopurs_runtime.Str("ignoreCase"))
 _ = get_6_7
-return gopurs_runtime.Bool(((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Eq_eqBoolean(), "eq"), gopurs_runtime.Apply(get_6_7, ra_4), gopurs_runtime.Apply(get_6_7, rb_5)).IntVal) != (0)) && ((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_2_4, "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_4, rb_5).IntVal) != (0)))
+return gopurs_runtime.Bool((((gopurs_runtime.Apply(get_6_7, ra_4).IntVal) != (0)) == ((gopurs_runtime.Apply(get_6_7, rb_5).IntVal) != (0))) && ((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_2_4, "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_4, rb_5).IntVal) != (0)))
 })
 })
 }))
@@ -278,7 +340,7 @@ return gopurs_runtime.Func(func(rb_6 gopurs_runtime.Value) gopurs_runtime.Value 
 // TAST (Let): get_7_9 -> gopurs_runtime.Value
 get_7_9 := gopurs_runtime.Apply(Get_Record_Unsafe_unsafeGet(), gopurs_runtime.Str("global"))
 _ = get_7_9
-return gopurs_runtime.Bool(((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Eq_eqBoolean(), "eq"), gopurs_runtime.Apply(get_7_9, ra_5), gopurs_runtime.Apply(get_7_9, rb_6)).IntVal) != (0)) && ((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_3_6, "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_5, rb_6).IntVal) != (0)))
+return gopurs_runtime.Bool((((gopurs_runtime.Apply(get_7_9, ra_5).IntVal) != (0)) == ((gopurs_runtime.Apply(get_7_9, rb_6).IntVal) != (0))) && ((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_3_6, "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_5, rb_6).IntVal) != (0)))
 })
 })
 }))
@@ -288,7 +350,7 @@ return gopurs_runtime.Func(func(rb_6 gopurs_runtime.Value) gopurs_runtime.Value 
 // TAST (Let): get_7_10 -> gopurs_runtime.Value
 get_7_10 := gopurs_runtime.Apply(Get_Record_Unsafe_unsafeGet(), gopurs_runtime.Str("dotAll"))
 _ = get_7_10
-return gopurs_runtime.Bool(((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Eq_eqBoolean(), "eq"), gopurs_runtime.Apply(get_7_10, ra_5), gopurs_runtime.Apply(get_7_10, rb_6)).IntVal) != (0)) && ((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_4_8, "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_5, rb_6).IntVal) != (0)))
+return gopurs_runtime.Bool((((gopurs_runtime.Apply(get_7_10, ra_5).IntVal) != (0)) == ((gopurs_runtime.Apply(get_7_10, rb_6).IntVal) != (0))) && ((gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_4_8, "eqRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_5, rb_6).IntVal) != (0)))
 })
 }))
 }()

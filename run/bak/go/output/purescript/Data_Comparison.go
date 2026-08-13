@@ -15,7 +15,42 @@ func Get_Data_Comparison_semigroupFn() gopurs_runtime.Value {
 __local_var_0_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(g_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Ordering_semigroupOrdering(), "append"), gopurs_runtime.Apply(f_0, x_2), gopurs_runtime.Apply(g_1, x_2))
+// TAST (Let): __local_var_3_1 -> gopurs_runtime.Value
+__local_var_3_1 := gopurs_runtime.Apply(f_0, x_2)
+_ = __local_var_3_1
+// TAST (Let): __local_var_4_2 -> gopurs_runtime.Value
+__local_var_4_2 := gopurs_runtime.Apply(g_1, x_2)
+_ = __local_var_4_2
+var __t3 uint32
+{
+if (uint32(__local_var_3_1.IntVal) == 1527465420) {
+__t3 = 1527465420
+goto end_branch_3
+} else {
+
+}
+}
+{
+if (uint32(__local_var_3_1.IntVal) == 380165415) {
+__t3 = 380165415
+goto end_branch_3
+} else {
+
+}
+}
+{
+if (uint32(__local_var_3_1.IntVal) == 902936544) {
+__t3 = uint32(__local_var_4_2.IntVal)
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
+}
+end_branch_3:
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t3), UnsafePtr: nil}
 })
 })
 }))
@@ -53,7 +88,42 @@ return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value 
 __local_var_2_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(g_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Ordering_semigroupOrdering(), "append"), gopurs_runtime.Apply(f_2, x_4), gopurs_runtime.Apply(g_3, x_4))
+// TAST (Let): __local_var_5_1 -> gopurs_runtime.Value
+__local_var_5_1 := gopurs_runtime.Apply(f_2, x_4)
+_ = __local_var_5_1
+// TAST (Let): __local_var_6_2 -> gopurs_runtime.Value
+__local_var_6_2 := gopurs_runtime.Apply(g_3, x_4)
+_ = __local_var_6_2
+var __t3 uint32
+{
+if (uint32(__local_var_5_1.IntVal) == 1527465420) {
+__t3 = 1527465420
+goto end_branch_3
+} else {
+
+}
+}
+{
+if (uint32(__local_var_5_1.IntVal) == 380165415) {
+__t3 = 380165415
+goto end_branch_3
+} else {
+
+}
+}
+{
+if (uint32(__local_var_5_1.IntVal) == 902936544) {
+__t3 = uint32(__local_var_6_2.IntVal)
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
+}
+end_branch_3:
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t3), UnsafePtr: nil}
 })
 })
 }))
@@ -83,22 +153,7 @@ var once_Data_Comparison_monoidComparison sync.Once
 func Get_Data_Comparison_monoidComparison() gopurs_runtime.Value {
 	once_Data_Comparison_monoidComparison.Do(func() {
 		cache_Data_Comparison_monoidComparison = gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): __local_var_3_0 -> gopurs_runtime.Value
-__local_var_3_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(g_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Ordering_semigroupOrdering(), "append"), gopurs_runtime.Apply(f_3, x_5), gopurs_runtime.Apply(g_4, x_5))
-})
-})
-}))
-_ = __local_var_3_0
-return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_0, "append"), gopurs_runtime.Apply(v_1, x_4), gopurs_runtime.Apply(v1_2, x_4))
-})
-})
-}))
+return Get_Data_Comparison_semigroupComparison()
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}
@@ -163,7 +218,42 @@ return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value 
 __local_var_2_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(g_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Ordering_semigroupOrdering(), "append"), gopurs_runtime.Apply(f_2, x_4), gopurs_runtime.Apply(g_3, x_4))
+// TAST (Let): __local_var_5_1 -> gopurs_runtime.Value
+__local_var_5_1 := gopurs_runtime.Apply(f_2, x_4)
+_ = __local_var_5_1
+// TAST (Let): __local_var_6_2 -> gopurs_runtime.Value
+__local_var_6_2 := gopurs_runtime.Apply(g_3, x_4)
+_ = __local_var_6_2
+var __t3 uint32
+{
+if (uint32(__local_var_5_1.IntVal) == 1527465420) {
+__t3 = 1527465420
+goto end_branch_3
+} else {
+
+}
+}
+{
+if (uint32(__local_var_5_1.IntVal) == 380165415) {
+__t3 = 380165415
+goto end_branch_3
+} else {
+
+}
+}
+{
+if (uint32(__local_var_5_1.IntVal) == 902936544) {
+__t3 = uint32(__local_var_6_2.IntVal)
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
+}
+end_branch_3:
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t3), UnsafePtr: nil}
 })
 })
 }))

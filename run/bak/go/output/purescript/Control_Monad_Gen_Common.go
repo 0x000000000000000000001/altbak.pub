@@ -159,34 +159,33 @@ _ = Applicative0_4_3
 return gopurs_runtime.Func(func(bias_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(gen_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.Box(Bind1_2_1.V1), gopurs_runtime.Apply2(gopurs_runtime.Box(dictMonadGen_0.V2), gopurs_runtime.Float(0.0), gopurs_runtime.Float(1.0)), gopurs_runtime.Func(func(n_7 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t6 gopurs_runtime.Value
+var __t5 gopurs_runtime.Value
 {
-var __t5 bool
+var __t4 bool
 {
-var __t_tag_4 gopurs_runtime.Value = gopurs_runtime.Apply5(Get_Data_Ord_ordNumberImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Float(n_7.FloatVal()), gopurs_runtime.Float(bias_5.FloatVal()))
-if (uint32(__t_tag_4.IntVal) == 1527465420) {
-__t5 = true
+if (n_7.FloatVal()) < (bias_5.FloatVal()) {
+__t4 = true
+goto end_branch_4
+} else {
+
+}
+}
+{
+__t4 = false
+}
+end_branch_4:
+if __t4 {
+__t5 = gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_3_2.V0), Get_Data_Maybe_Just(), gen_6)
 goto end_branch_5
 } else {
 
 }
 }
 {
-__t5 = false
+__t5 = gopurs_runtime.Apply(gopurs_runtime.Box(Applicative0_4_3.V1), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
 }
 end_branch_5:
-if __t5 {
-__t6 = gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_3_2.V0), Get_Data_Maybe_Just(), gen_6)
-goto end_branch_6
-} else {
-
-}
-}
-{
-__t6 = gopurs_runtime.Apply(gopurs_runtime.Box(Applicative0_4_3.V1), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
-}
-end_branch_6:
-return __t6
+return __t5
 }))
 })
 })
@@ -209,34 +208,33 @@ Applicative0_4_3 := gopurs_runtime.CoerceToStruct[Constructor_Control_Applicativ
 _ = Applicative0_4_3
 return gopurs_runtime.Func(func(gen_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.Box(Bind1_2_1.V1), gopurs_runtime.Apply2(gopurs_runtime.Box(dictMonadGen_0.V2), gopurs_runtime.Float(0.0), gopurs_runtime.Float(1.0)), gopurs_runtime.Func(func(n_6 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t6 gopurs_runtime.Value
+var __t5 gopurs_runtime.Value
 {
-var __t5 bool
+var __t4 bool
 {
-var __t_tag_4 gopurs_runtime.Value = gopurs_runtime.Apply5(Get_Data_Ord_ordNumberImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Float(n_6.FloatVal()), gopurs_runtime.Float(0.75))
-if (uint32(__t_tag_4.IntVal) == 1527465420) {
-__t5 = true
+if (n_6.FloatVal()) < (0.75) {
+__t4 = true
+goto end_branch_4
+} else {
+
+}
+}
+{
+__t4 = false
+}
+end_branch_4:
+if __t4 {
+__t5 = gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_3_2.V0), Get_Data_Maybe_Just(), gen_5)
 goto end_branch_5
 } else {
 
 }
 }
 {
-__t5 = false
+__t5 = gopurs_runtime.Apply(gopurs_runtime.Box(Applicative0_4_3.V1), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
 }
 end_branch_5:
-if __t5 {
-__t6 = gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_3_2.V0), Get_Data_Maybe_Just(), gen_5)
-goto end_branch_6
-} else {
-
-}
-}
-{
-__t6 = gopurs_runtime.Apply(gopurs_runtime.Box(Applicative0_4_3.V1), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
-}
-end_branch_6:
-return __t6
+return __t5
 }))
 })
 }
@@ -263,34 +261,33 @@ return gopurs_runtime.Func(func(bias_4 gopurs_runtime.Value) gopurs_runtime.Valu
 return gopurs_runtime.Func(func(genA_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(genB_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.Box(Bind1_2_1.V1), gopurs_runtime.Apply2(gopurs_runtime.Box(dictMonadGen_0.V2), gopurs_runtime.Float(0.0), gopurs_runtime.Float(1.0)), gopurs_runtime.Func(func(n_7 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t5 gopurs_runtime.Value
+var __t4 gopurs_runtime.Value
 {
-var __t4 bool
+var __t3 bool
 {
-var __t_tag_3 gopurs_runtime.Value = gopurs_runtime.Apply5(Get_Data_Ord_ordNumberImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Float(n_7.FloatVal()), gopurs_runtime.Float(bias_4.FloatVal()))
-if (uint32(__t_tag_3.IntVal) == 1527465420) {
-__t4 = true
+if (n_7.FloatVal()) < (bias_4.FloatVal()) {
+__t3 = true
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = false
+}
+end_branch_3:
+if __t3 {
+__t4 = gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_3_2.V0), Get_Data_Either_Left(), genA_5)
 goto end_branch_4
 } else {
 
 }
 }
 {
-__t4 = false
+__t4 = gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_3_2.V0), Get_Data_Either_Right(), genB_6)
 }
 end_branch_4:
-if __t4 {
-__t5 = gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_3_2.V0), Get_Data_Either_Left(), genA_5)
-goto end_branch_5
-} else {
-
-}
-}
-{
-__t5 = gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_3_2.V0), Get_Data_Either_Right(), genB_6)
-}
-end_branch_5:
-return __t5
+return __t4
 }))
 })
 })
@@ -312,34 +309,33 @@ _ = Functor0_3_2
 return gopurs_runtime.Func(func(genA_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(genB_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.Box(Bind1_2_1.V1), gopurs_runtime.Apply2(gopurs_runtime.Box(dictMonadGen_0.V2), gopurs_runtime.Float(0.0), gopurs_runtime.Float(1.0)), gopurs_runtime.Func(func(n_6 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t5 gopurs_runtime.Value
+var __t4 gopurs_runtime.Value
 {
-var __t4 bool
+var __t3 bool
 {
-var __t_tag_3 gopurs_runtime.Value = gopurs_runtime.Apply5(Get_Data_Ord_ordNumberImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Float(n_6.FloatVal()), gopurs_runtime.Float(0.5))
-if (uint32(__t_tag_3.IntVal) == 1527465420) {
-__t4 = true
+if (n_6.FloatVal()) < (0.5) {
+__t3 = true
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = false
+}
+end_branch_3:
+if __t3 {
+__t4 = gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_3_2.V0), Get_Data_Either_Left(), genA_4)
 goto end_branch_4
 } else {
 
 }
 }
 {
-__t4 = false
+__t4 = gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_3_2.V0), Get_Data_Either_Right(), genB_5)
 }
 end_branch_4:
-if __t4 {
-__t5 = gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_3_2.V0), Get_Data_Either_Left(), genA_4)
-goto end_branch_5
-} else {
-
-}
-}
-{
-__t5 = gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_3_2.V0), Get_Data_Either_Right(), genB_5)
-}
-end_branch_5:
-return __t5
+return __t4
 }))
 })
 })
@@ -361,34 +357,33 @@ return gopurs_runtime.Func(func(bias_4 gopurs_runtime.Value) gopurs_runtime.Valu
 return gopurs_runtime.Func(func(genA_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(genB_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.Box(Bind1_2_1.V1), gopurs_runtime.Apply2(gopurs_runtime.Box(dictMonadGen_0.V2), gopurs_runtime.Float(0.0), gopurs_runtime.Float(1.0)), gopurs_runtime.Func(func(n_7 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t5 gopurs_runtime.Value
+var __t4 gopurs_runtime.Value
 {
-var __t4 bool
+var __t3 bool
 {
-var __t_tag_3 gopurs_runtime.Value = gopurs_runtime.Apply5(Get_Data_Ord_ordNumberImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Float(n_7.FloatVal()), gopurs_runtime.Float(bias_4.FloatVal()))
-if (uint32(__t_tag_3.IntVal) == 1527465420) {
-__t4 = true
+if (n_7.FloatVal()) < (bias_4.FloatVal()) {
+__t3 = true
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = false
+}
+end_branch_3:
+if __t3 {
+__t4 = gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_3_2.V0), Get_Data_Either_Left(), genA_5)
 goto end_branch_4
 } else {
 
 }
 }
 {
-__t4 = false
+__t4 = gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_3_2.V0), Get_Data_Either_Right(), genB_6)
 }
 end_branch_4:
-if __t4 {
-__t5 = gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_3_2.V0), Get_Data_Either_Left(), genA_5)
-goto end_branch_5
-} else {
-
-}
-}
-{
-__t5 = gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_3_2.V0), Get_Data_Either_Right(), genB_6)
-}
-end_branch_5:
-return __t5
+return __t4
 }))
 })
 })
@@ -413,34 +408,33 @@ _ = Applicative0_4_3
 return gopurs_runtime.Func(func(bias_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(gen_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.Box(Bind1_2_1.V1), gopurs_runtime.Apply2(gopurs_runtime.Box(dictMonadGen_0.V2), gopurs_runtime.Float(0.0), gopurs_runtime.Float(1.0)), gopurs_runtime.Func(func(n_7 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t6 gopurs_runtime.Value
+var __t5 gopurs_runtime.Value
 {
-var __t5 bool
+var __t4 bool
 {
-var __t_tag_4 gopurs_runtime.Value = gopurs_runtime.Apply5(Get_Data_Ord_ordNumberImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Float(n_7.FloatVal()), gopurs_runtime.Float(bias_5.FloatVal()))
-if (uint32(__t_tag_4.IntVal) == 1527465420) {
-__t5 = true
+if (n_7.FloatVal()) < (bias_5.FloatVal()) {
+__t4 = true
+goto end_branch_4
+} else {
+
+}
+}
+{
+__t4 = false
+}
+end_branch_4:
+if __t4 {
+__t5 = gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_3_2.V0), Get_Data_Maybe_Just(), gen_6)
 goto end_branch_5
 } else {
 
 }
 }
 {
-__t5 = false
+__t5 = gopurs_runtime.Apply(gopurs_runtime.Box(Applicative0_4_3.V1), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
 }
 end_branch_5:
-if __t5 {
-__t6 = gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_3_2.V0), Get_Data_Maybe_Just(), gen_6)
-goto end_branch_6
-} else {
-
-}
-}
-{
-__t6 = gopurs_runtime.Apply(gopurs_runtime.Box(Applicative0_4_3.V1), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
-}
-end_branch_6:
-return __t6
+return __t5
 }))
 })
 })

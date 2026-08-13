@@ -79,11 +79,7 @@ var once_Control_Monad_Error_Class_monadErrorMaybe sync.Once
 func Get_Control_Monad_Error_Class_monadErrorMaybe() gopurs_runtime.Value {
 	once_Control_Monad_Error_Class_monadErrorMaybe.Do(func() {
 		cache_Control_Monad_Error_Class_monadErrorMaybe = gopurs_runtime.RecordDict2("MonadThrow0", "catchError", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("Monad0", "throwError", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Maybe_monadMaybe()
-}), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
-}))
+return Get_Control_Monad_Error_Class_monadThrowMaybe()
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 *Constructor_Data_Maybe_Just
@@ -119,9 +115,7 @@ var once_Control_Monad_Error_Class_monadErrorEither sync.Once
 func Get_Control_Monad_Error_Class_monadErrorEither() gopurs_runtime.Value {
 	once_Control_Monad_Error_Class_monadErrorEither.Do(func() {
 		cache_Control_Monad_Error_Class_monadErrorEither = gopurs_runtime.RecordDict2("MonadThrow0", "catchError", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("Monad0", "throwError", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Either_monadEither()
-}), Get_Data_Either_Left())
+return Get_Control_Monad_Error_Class_monadThrowEither()
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t0 *Constructor_Data_Either_Right
@@ -157,9 +151,7 @@ var once_Control_Monad_Error_Class_monadErrorEffect sync.Once
 func Get_Control_Monad_Error_Class_monadErrorEffect() gopurs_runtime.Value {
 	once_Control_Monad_Error_Class_monadErrorEffect.Do(func() {
 		cache_Control_Monad_Error_Class_monadErrorEffect = gopurs_runtime.RecordDict2("MonadThrow0", "catchError", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("Monad0", "throwError", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Effect_monadEffect()
-}), Get_Effect_Exception_throwException())
+return Get_Control_Monad_Error_Class_monadThrowEffect()
 }), gopurs_runtime.Func(func(b_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(Get_Effect_Exception_catchException(), a_1, b_0)
@@ -631,7 +623,7 @@ return gopurs_runtime.Func(func(release_7 gopurs_runtime.Value) gopurs_runtime.V
 return gopurs_runtime.Func(func(kleisli_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.Box(Bind1_3_2.V1), acquire_6, gopurs_runtime.Func(func(resource_9 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.Box(Bind1_3_2.V1), gopurs_runtime.Apply(try1_4_3, gopurs_runtime.Apply(kleisli_8, resource_9)), gopurs_runtime.Func(func(result_10 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Control_Bind_discardUnit(), "discard"), gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(Bind1_3_2)}, gopurs_runtime.Apply(release_7, resource_9), gopurs_runtime.Func(func(_dollar__unused_11 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.Box(Bind1_3_2.V1), gopurs_runtime.Apply(release_7, resource_9), gopurs_runtime.Func(func(_dollar__unused_11 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t8 gopurs_runtime.Value
 {
 if (result_10.Type == 9 && result_10.IntVal == 3711209382) {

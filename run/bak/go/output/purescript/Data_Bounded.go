@@ -129,9 +129,7 @@ var once_Data_Bounded_boundedInt sync.Once
 func Get_Data_Bounded_boundedInt() gopurs_runtime.Value {
 	once_Data_Bounded_boundedInt.Do(func() {
 		cache_Data_Bounded_boundedInt = gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("eq", Get_Data_Eq_eqIntImpl())
-}), gopurs_runtime.Apply3(Get_Data_Ord_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}))
+return Get_Data_Ord_ordInt()
 }), gopurs_runtime.Int(Get_Data_Bounded_bottomInt().IntVal), gopurs_runtime.Int(Get_Data_Bounded_topInt().IntVal))
 	})
 	return cache_Data_Bounded_boundedInt
@@ -431,20 +429,52 @@ _ = key_13_9
 // TAST (Let): left_14_10 -> gopurs_runtime.Value
 left_14_10 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Ord0_4_2, "compare"), gopurs_runtime.Apply2(Get_Record_Unsafe_unsafeGet(), gopurs_runtime.Str(key_13_9.StrVal()), ra_11), gopurs_runtime.Apply2(Get_Record_Unsafe_unsafeGet(), gopurs_runtime.Str(key_13_9.StrVal()), rb_12))
 _ = left_14_10
-var __t11 uint32
+var __t15 uint32
 {
-if ((gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Ordering_eqOrdering(), "eq"), gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(left_14_10.IntVal)), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}).IntVal) != (0)) != (true) {
-__t11 = uint32(left_14_10.IntVal)
-goto end_branch_11
+var __t14 bool
+{
+var __t_tag_11 uint32 = uint32(left_14_10.IntVal)
+if (uint32(__t_tag_11) == 1527465420) {
+__t14 = false
+goto end_branch_14
 } else {
 
 }
 }
 {
-__t11 = uint32(gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_8_4, "compareRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_11, rb_12).IntVal)
+var __t_tag_12 uint32 = uint32(left_14_10.IntVal)
+if (uint32(__t_tag_12) == 380165415) {
+__t14 = false
+goto end_branch_14
+} else {
+
 }
-end_branch_11:
-return gopurs_runtime.Value{Type: 9, IntVal: int64(__t11), UnsafePtr: nil}
+}
+{
+var __t_tag_13 uint32 = uint32(left_14_10.IntVal)
+if (uint32(__t_tag_13) == 902936544) {
+__t14 = true
+goto end_branch_14
+} else {
+
+}
+}
+{
+__t14 = false
+}
+end_branch_14:
+if (__t14) != (true) {
+__t15 = uint32(left_14_10.IntVal)
+goto end_branch_15
+} else {
+
+}
+}
+{
+__t15 = uint32(gopurs_runtime.Apply3(gopurs_runtime.RecordGet(__local_var_8_4, "compareRecord"), gopurs_runtime.Value{Type: 9, IntVal: int64(513803634), UnsafePtr: nil}, ra_11, rb_12).IntVal)
+}
+end_branch_15:
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t15), UnsafePtr: nil}
 })
 })
 }))

@@ -49,15 +49,7 @@ var once_Data_Equivalence_monoidEquivalence sync.Once
 func Get_Data_Equivalence_monoidEquivalence() gopurs_runtime.Value {
 	once_Data_Equivalence_monoidEquivalence.Do(func() {
 		cache_Data_Equivalence_monoidEquivalence = gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(a_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(b_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(((gopurs_runtime.Apply2(v_1, a_3, b_4).IntVal) != (0)) && ((gopurs_runtime.Apply2(v1_2, a_3, b_4).IntVal) != (0)))
-})
-})
-})
-}))
+return Get_Data_Equivalence_semigroupEquivalence()
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(true)

@@ -33,36 +33,35 @@ var once_Data_Bifoldable_monoidDual sync.Once
 func Get_Data_Bifoldable_monoidDual() gopurs_runtime.Value {
 	once_Data_Bifoldable_monoidDual.Do(func() {
 		cache_Data_Bifoldable_monoidDual = func() gopurs_runtime.Value {
-// TAST (Let): __local_var_0_1 -> gopurs_runtime.Value
-__local_var_0_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Category_categoryFn(), "Semigroupoid0"), gopurs_runtime.Value{})
-_ = __local_var_0_1
 // TAST (Let): semigroupEndo1_0_0 -> gopurs_runtime.Value
-semigroupEndo1_0_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_0_1, "compose"), v_1, v1_2)
+semigroupEndo1_0_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v_0, gopurs_runtime.Apply(v1_1, x_2))
+})
 })
 }))
 _ = semigroupEndo1_0_0
-// TAST (Let): __local_var_1_2 -> gopurs_runtime.Value
-__local_var_1_2 := gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
+__local_var_1_1 := gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEndo1_0_0
 }), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_1
 }))
-_ = __local_var_1_2
-// TAST (Let): __local_var_2_4 -> gopurs_runtime.Value
-__local_var_2_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_2, "Semigroup0"), gopurs_runtime.Value{})
-_ = __local_var_2_4
-// TAST (Let): semigroupDual1_2_3 -> gopurs_runtime.Value
-semigroupDual1_2_3 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+_ = __local_var_1_1
+// TAST (Let): __local_var_2_3 -> gopurs_runtime.Value
+__local_var_2_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_1, "Semigroup0"), gopurs_runtime.Value{})
+_ = __local_var_2_3
+// TAST (Let): semigroupDual1_2_2 -> gopurs_runtime.Value
+semigroupDual1_2_2 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_4, "append"), v1_4, v_3)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_3, "append"), v1_4, v_3)
 })
 }))
-_ = semigroupDual1_2_3
+_ = semigroupDual1_2_2
 return gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return semigroupDual1_2_3
-}), gopurs_runtime.RecordGet(__local_var_1_2, "mempty"))))}
+return semigroupDual1_2_2
+}), gopurs_runtime.RecordGet(__local_var_1_1, "mempty"))))}
 }()
 	})
 	return cache_Data_Bifoldable_monoidDual
@@ -73,13 +72,12 @@ var once_Data_Bifoldable_monoidEndo sync.Once
 func Get_Data_Bifoldable_monoidEndo() gopurs_runtime.Value {
 	once_Data_Bifoldable_monoidEndo.Do(func() {
 		cache_Data_Bifoldable_monoidEndo = func() gopurs_runtime.Value {
-// TAST (Let): __local_var_0_1 -> gopurs_runtime.Value
-__local_var_0_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Category_categoryFn(), "Semigroupoid0"), gopurs_runtime.Value{})
-_ = __local_var_0_1
 // TAST (Let): semigroupEndo1_0_0 -> gopurs_runtime.Value
-semigroupEndo1_0_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_0_1, "compose"), v_1, v1_2)
+semigroupEndo1_0_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v_0, gopurs_runtime.Apply(v1_1, x_2))
+})
 })
 }))
 _ = semigroupEndo1_0_0
@@ -1235,36 +1233,35 @@ var z_3 gopurs_runtime.Value = z_3_loop
 _ = z_3
 var p_4 gopurs_runtime.Value = p_4_loop
 _ = p_4
-// TAST (Let): __local_var_5_1 -> gopurs_runtime.Value
-__local_var_5_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Category_categoryFn(), "Semigroupoid0"), gopurs_runtime.Value{})
-_ = __local_var_5_1
 // TAST (Let): semigroupEndo1_5_0 -> gopurs_runtime.Value
-semigroupEndo1_5_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_5_1, "compose"), v_6, v1_7)
+semigroupEndo1_5_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v_5, gopurs_runtime.Apply(v1_6, x_7))
+})
 })
 }))
 _ = semigroupEndo1_5_0
-// TAST (Let): __local_var_6_2 -> gopurs_runtime.Value
-__local_var_6_2 := gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_6_1 -> gopurs_runtime.Value
+__local_var_6_1 := gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEndo1_5_0
 }), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_6
 }))
-_ = __local_var_6_2
-// TAST (Let): __local_var_7_4 -> gopurs_runtime.Value
-__local_var_7_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_6_2, "Semigroup0"), gopurs_runtime.Value{})
-_ = __local_var_7_4
-// TAST (Let): semigroupDual1_7_3 -> gopurs_runtime.Value
-semigroupDual1_7_3 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+_ = __local_var_6_1
+// TAST (Let): __local_var_7_3 -> gopurs_runtime.Value
+__local_var_7_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_6_1, "Semigroup0"), gopurs_runtime.Value{})
+_ = __local_var_7_3
+// TAST (Let): semigroupDual1_7_2 -> gopurs_runtime.Value
+semigroupDual1_7_2 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_7_4, "append"), v1_9, v_8)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_7_3, "append"), v1_9, v_8)
 })
 }))
-_ = semigroupDual1_7_3
+_ = semigroupDual1_7_2
 return gopurs_runtime.Apply5(gopurs_runtime.Box(dictBifoldable_0.V0), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return semigroupDual1_7_3
-}), gopurs_runtime.RecordGet(__local_var_6_2, "mempty"))))}, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return semigroupDual1_7_2
+}), gopurs_runtime.RecordGet(__local_var_6_1, "mempty"))))}, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(f_1, a_6, x_5)
 })
@@ -1286,13 +1283,12 @@ var z_3 gopurs_runtime.Value = z_3_loop
 _ = z_3
 var p_4 gopurs_runtime.Value = p_4_loop
 _ = p_4
-// TAST (Let): __local_var_5_1 -> gopurs_runtime.Value
-__local_var_5_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Category_categoryFn(), "Semigroupoid0"), gopurs_runtime.Value{})
-_ = __local_var_5_1
 // TAST (Let): semigroupEndo1_5_0 -> gopurs_runtime.Value
-semigroupEndo1_5_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_5_1, "compose"), v_6, v1_7)
+semigroupEndo1_5_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v_5, gopurs_runtime.Apply(v1_6, x_7))
+})
 })
 }))
 _ = semigroupEndo1_5_0
@@ -1330,36 +1326,35 @@ return gopurs_runtime.Apply2(gopurs_runtime.Box(Semigroup0_3_0.V0), gopurs_runti
 return gopurs_runtime.Func(func(r_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(u_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(m_5 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): __local_var_6_2 -> gopurs_runtime.Value
-__local_var_6_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Category_categoryFn(), "Semigroupoid0"), gopurs_runtime.Value{})
-_ = __local_var_6_2
 // TAST (Let): semigroupEndo1_6_1 -> gopurs_runtime.Value
-semigroupEndo1_6_1 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_6_2, "compose"), v_7, v1_8)
+semigroupEndo1_6_1 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v_6, gopurs_runtime.Apply(v1_7, x_8))
+})
 })
 }))
 _ = semigroupEndo1_6_1
-// TAST (Let): __local_var_7_3 -> gopurs_runtime.Value
-__local_var_7_3 := gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_7_2 -> gopurs_runtime.Value
+__local_var_7_2 := gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEndo1_6_1
 }), gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_7
 }))
-_ = __local_var_7_3
-// TAST (Let): __local_var_8_5 -> gopurs_runtime.Value
-__local_var_8_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_7_3, "Semigroup0"), gopurs_runtime.Value{})
-_ = __local_var_8_5
-// TAST (Let): semigroupDual1_8_4 -> gopurs_runtime.Value
-semigroupDual1_8_4 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_9 gopurs_runtime.Value) gopurs_runtime.Value {
+_ = __local_var_7_2
+// TAST (Let): __local_var_8_4 -> gopurs_runtime.Value
+__local_var_8_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_7_2, "Semigroup0"), gopurs_runtime.Value{})
+_ = __local_var_8_4
+// TAST (Let): semigroupDual1_8_3 -> gopurs_runtime.Value
+semigroupDual1_8_3 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_9 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_10 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_8_5, "append"), v1_10, v_9)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_8_4, "append"), v1_10, v_9)
 })
 }))
-_ = semigroupDual1_8_4
+_ = semigroupDual1_8_3
 return gopurs_runtime.Apply5(gopurs_runtime.RecordGet(Call_Data_Bifoldable_bifoldableProduct2(dictBifoldable_0, dictBifoldable1_1), "bifoldMap"), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return semigroupDual1_8_4
-}), gopurs_runtime.RecordGet(__local_var_7_3, "mempty"))))}, gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return semigroupDual1_8_3
+}), gopurs_runtime.RecordGet(__local_var_7_2, "mempty"))))}, gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(l_2, a_7, x_6)
 })
@@ -1375,18 +1370,17 @@ return gopurs_runtime.Apply2(r_3, a_7, x_6)
 return gopurs_runtime.Func(func(r_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(u_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(m_5 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): __local_var_6_7 -> gopurs_runtime.Value
-__local_var_6_7 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Category_categoryFn(), "Semigroupoid0"), gopurs_runtime.Value{})
-_ = __local_var_6_7
-// TAST (Let): semigroupEndo1_6_6 -> gopurs_runtime.Value
-semigroupEndo1_6_6 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_6_7, "compose"), v_7, v1_8)
+// TAST (Let): semigroupEndo1_6_5 -> gopurs_runtime.Value
+semigroupEndo1_6_5 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_8 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v_6, gopurs_runtime.Apply(v1_7, x_8))
+})
 })
 }))
-_ = semigroupEndo1_6_6
+_ = semigroupEndo1_6_5
 return gopurs_runtime.Apply5(gopurs_runtime.RecordGet(Call_Data_Bifoldable_bifoldableProduct2(dictBifoldable_0, dictBifoldable1_1), "bifoldMap"), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return semigroupEndo1_6_6
+return semigroupEndo1_6_5
 }), gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_7
 }))))}, gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -1494,36 +1488,35 @@ return gopurs_runtime.Box(dict_0.V0)
 func Call_Data_Bifoldable_bifoldMap__1302573585(dict_0_loop *Constructor_Data_Bifoldable_Bifoldable) gopurs_runtime.Value {
 var dict_0 *Constructor_Data_Bifoldable_Bifoldable = dict_0_loop
 _ = dict_0
-// TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
-__local_var_1_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Category_categoryFn(), "Semigroupoid0"), gopurs_runtime.Value{})
-_ = __local_var_1_1
 // TAST (Let): semigroupEndo1_1_0 -> gopurs_runtime.Value
-semigroupEndo1_1_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_1, "compose"), v_2, v1_3)
+semigroupEndo1_1_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v_1, gopurs_runtime.Apply(v1_2, x_3))
+})
 })
 }))
 _ = semigroupEndo1_1_0
-// TAST (Let): __local_var_2_2 -> gopurs_runtime.Value
-__local_var_2_2 := gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_2_1 -> gopurs_runtime.Value
+__local_var_2_1 := gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEndo1_1_0
 }), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_2
 }))
-_ = __local_var_2_2
-// TAST (Let): __local_var_3_4 -> gopurs_runtime.Value
-__local_var_3_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_2, "Semigroup0"), gopurs_runtime.Value{})
-_ = __local_var_3_4
-// TAST (Let): semigroupDual1_3_3 -> gopurs_runtime.Value
-semigroupDual1_3_3 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+_ = __local_var_2_1
+// TAST (Let): __local_var_3_3 -> gopurs_runtime.Value
+__local_var_3_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_1, "Semigroup0"), gopurs_runtime.Value{})
+_ = __local_var_3_3
+// TAST (Let): semigroupDual1_3_2 -> gopurs_runtime.Value
+semigroupDual1_3_2 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_4, "append"), v1_5, v_4)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_3, "append"), v1_5, v_4)
 })
 }))
-_ = semigroupDual1_3_3
+_ = semigroupDual1_3_2
 return gopurs_runtime.Apply(gopurs_runtime.Box(dict_0.V0), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return semigroupDual1_3_3
-}), gopurs_runtime.RecordGet(__local_var_2_2, "mempty"))))})
+return semigroupDual1_3_2
+}), gopurs_runtime.RecordGet(__local_var_2_1, "mempty"))))})
 }
 
 func Call_Data_Bifoldable_bifoldMap__581634711(dict_0_loop *Constructor_Data_Bifoldable_Bifoldable) gopurs_runtime.Value {
@@ -1535,36 +1528,35 @@ return gopurs_runtime.Box(dict_0.V0)
 func Call_Data_Bifoldable_bifoldMap__2444163767(dict_0_loop *Constructor_Data_Bifoldable_Bifoldable) gopurs_runtime.Value {
 var dict_0 *Constructor_Data_Bifoldable_Bifoldable = dict_0_loop
 _ = dict_0
-// TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
-__local_var_1_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Category_categoryFn(), "Semigroupoid0"), gopurs_runtime.Value{})
-_ = __local_var_1_1
 // TAST (Let): semigroupEndo1_1_0 -> gopurs_runtime.Value
-semigroupEndo1_1_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_1, "compose"), v_2, v1_3)
+semigroupEndo1_1_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v_1, gopurs_runtime.Apply(v1_2, x_3))
+})
 })
 }))
 _ = semigroupEndo1_1_0
-// TAST (Let): __local_var_2_2 -> gopurs_runtime.Value
-__local_var_2_2 := gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_2_1 -> gopurs_runtime.Value
+__local_var_2_1 := gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEndo1_1_0
 }), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_2
 }))
-_ = __local_var_2_2
-// TAST (Let): __local_var_3_4 -> gopurs_runtime.Value
-__local_var_3_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_2, "Semigroup0"), gopurs_runtime.Value{})
-_ = __local_var_3_4
-// TAST (Let): semigroupDual1_3_3 -> gopurs_runtime.Value
-semigroupDual1_3_3 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+_ = __local_var_2_1
+// TAST (Let): __local_var_3_3 -> gopurs_runtime.Value
+__local_var_3_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_1, "Semigroup0"), gopurs_runtime.Value{})
+_ = __local_var_3_3
+// TAST (Let): semigroupDual1_3_2 -> gopurs_runtime.Value
+semigroupDual1_3_2 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_4, "append"), v1_5, v_4)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_3, "append"), v1_5, v_4)
 })
 }))
-_ = semigroupDual1_3_3
+_ = semigroupDual1_3_2
 return gopurs_runtime.Apply(gopurs_runtime.Box(dict_0.V0), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return semigroupDual1_3_3
-}), gopurs_runtime.RecordGet(__local_var_2_2, "mempty"))))})
+return semigroupDual1_3_2
+}), gopurs_runtime.RecordGet(__local_var_2_1, "mempty"))))})
 }
 
 func Call_Data_Bifoldable_bifoldMap__394664215(dict_0_loop *Constructor_Data_Bifoldable_Bifoldable) gopurs_runtime.Value {
@@ -1576,13 +1568,12 @@ return gopurs_runtime.Box(dict_0.V0)
 func Call_Data_Bifoldable_bifoldMap__3595123447(dict_0_loop *Constructor_Data_Bifoldable_Bifoldable) gopurs_runtime.Value {
 var dict_0 *Constructor_Data_Bifoldable_Bifoldable = dict_0_loop
 _ = dict_0
-// TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
-__local_var_1_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Category_categoryFn(), "Semigroupoid0"), gopurs_runtime.Value{})
-_ = __local_var_1_1
 // TAST (Let): semigroupEndo1_1_0 -> gopurs_runtime.Value
-semigroupEndo1_1_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_1, "compose"), v_2, v1_3)
+semigroupEndo1_1_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v_1, gopurs_runtime.Apply(v1_2, x_3))
+})
 })
 }))
 _ = semigroupEndo1_1_0
@@ -1671,36 +1662,35 @@ var z_3 gopurs_runtime.Value = z_3_loop
 _ = z_3
 var p_4 gopurs_runtime.Value = p_4_loop
 _ = p_4
-// TAST (Let): __local_var_5_1 -> gopurs_runtime.Value
-__local_var_5_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Category_categoryFn(), "Semigroupoid0"), gopurs_runtime.Value{})
-_ = __local_var_5_1
 // TAST (Let): semigroupEndo1_5_0 -> gopurs_runtime.Value
-semigroupEndo1_5_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_5_1, "compose"), v_6, v1_7)
+semigroupEndo1_5_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v_5, gopurs_runtime.Apply(v1_6, x_7))
+})
 })
 }))
 _ = semigroupEndo1_5_0
-// TAST (Let): __local_var_6_2 -> gopurs_runtime.Value
-__local_var_6_2 := gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_6_1 -> gopurs_runtime.Value
+__local_var_6_1 := gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEndo1_5_0
 }), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_6
 }))
-_ = __local_var_6_2
-// TAST (Let): __local_var_7_4 -> gopurs_runtime.Value
-__local_var_7_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_6_2, "Semigroup0"), gopurs_runtime.Value{})
-_ = __local_var_7_4
-// TAST (Let): semigroupDual1_7_3 -> gopurs_runtime.Value
-semigroupDual1_7_3 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+_ = __local_var_6_1
+// TAST (Let): __local_var_7_3 -> gopurs_runtime.Value
+__local_var_7_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_6_1, "Semigroup0"), gopurs_runtime.Value{})
+_ = __local_var_7_3
+// TAST (Let): semigroupDual1_7_2 -> gopurs_runtime.Value
+semigroupDual1_7_2 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_7_4, "append"), v1_9, v_8)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_7_3, "append"), v1_9, v_8)
 })
 }))
-_ = semigroupDual1_7_3
+_ = semigroupDual1_7_2
 return gopurs_runtime.Apply5(gopurs_runtime.Box(dictBifoldable_0.V0), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return semigroupDual1_7_3
-}), gopurs_runtime.RecordGet(__local_var_6_2, "mempty"))))}, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return semigroupDual1_7_2
+}), gopurs_runtime.RecordGet(__local_var_6_1, "mempty"))))}, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(f_1, a_6, x_5)
 })
@@ -1722,36 +1712,35 @@ var z_3 gopurs_runtime.Value = z_3_loop
 _ = z_3
 var p_4 *Constructor_Data_Functor_Product2_Product2 = p_4_loop
 _ = p_4
-// TAST (Let): __local_var_5_1 -> gopurs_runtime.Value
-__local_var_5_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Category_categoryFn(), "Semigroupoid0"), gopurs_runtime.Value{})
-_ = __local_var_5_1
 // TAST (Let): semigroupEndo1_5_0 -> gopurs_runtime.Value
-semigroupEndo1_5_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_5_1, "compose"), v_6, v1_7)
+semigroupEndo1_5_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v_5, gopurs_runtime.Apply(v1_6, x_7))
+})
 })
 }))
 _ = semigroupEndo1_5_0
-// TAST (Let): __local_var_6_2 -> gopurs_runtime.Value
-__local_var_6_2 := gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_6_1 -> gopurs_runtime.Value
+__local_var_6_1 := gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return semigroupEndo1_5_0
 }), gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return x_6
 }))
-_ = __local_var_6_2
-// TAST (Let): __local_var_7_4 -> gopurs_runtime.Value
-__local_var_7_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_6_2, "Semigroup0"), gopurs_runtime.Value{})
-_ = __local_var_7_4
-// TAST (Let): semigroupDual1_7_3 -> gopurs_runtime.Value
-semigroupDual1_7_3 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
+_ = __local_var_6_1
+// TAST (Let): __local_var_7_3 -> gopurs_runtime.Value
+__local_var_7_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_6_1, "Semigroup0"), gopurs_runtime.Value{})
+_ = __local_var_7_3
+// TAST (Let): semigroupDual1_7_2 -> gopurs_runtime.Value
+semigroupDual1_7_2 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v1_9 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_7_4, "append"), v1_9, v_8)
+return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_7_3, "append"), v1_9, v_8)
 })
 }))
-_ = semigroupDual1_7_3
+_ = semigroupDual1_7_2
 return gopurs_runtime.Apply5(gopurs_runtime.Box(dictBifoldable_0.V0), gopurs_runtime.Value{Type: 9, IntVal: 1722653594, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Monoid_Monoid](gopurs_runtime.RecordDict2("Semigroup0", "mempty", gopurs_runtime.Func(func(_dollar__unused_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return semigroupDual1_7_3
-}), gopurs_runtime.RecordGet(__local_var_6_2, "mempty"))))}, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return semigroupDual1_7_2
+}), gopurs_runtime.RecordGet(__local_var_6_1, "mempty"))))}, gopurs_runtime.Func(func(x_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(a_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(f_1, a_6, x_5)
 })
@@ -1789,13 +1778,12 @@ var z_2 gopurs_runtime.Value = z_2_loop
 _ = z_2
 var p_3 gopurs_runtime.Value = p_3_loop
 _ = p_3
-// TAST (Let): __local_var_4_1 -> gopurs_runtime.Value
-__local_var_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Category_categoryFn(), "Semigroupoid0"), gopurs_runtime.Value{})
-_ = __local_var_4_1
 // TAST (Let): semigroupEndo1_4_0 -> gopurs_runtime.Value
-semigroupEndo1_4_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_1, "compose"), v_5, v1_6)
+semigroupEndo1_4_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v_4, gopurs_runtime.Apply(v1_5, x_6))
+})
 })
 }))
 _ = semigroupEndo1_4_0
@@ -1821,13 +1809,12 @@ var z_3 gopurs_runtime.Value = z_3_loop
 _ = z_3
 var p_4 gopurs_runtime.Value = p_4_loop
 _ = p_4
-// TAST (Let): __local_var_5_1 -> gopurs_runtime.Value
-__local_var_5_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Category_categoryFn(), "Semigroupoid0"), gopurs_runtime.Value{})
-_ = __local_var_5_1
 // TAST (Let): semigroupEndo1_5_0 -> gopurs_runtime.Value
-semigroupEndo1_5_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_5_1, "compose"), v_6, v1_7)
+semigroupEndo1_5_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v_5, gopurs_runtime.Apply(v1_6, x_7))
+})
 })
 }))
 _ = semigroupEndo1_5_0
@@ -1853,13 +1840,12 @@ var z_3 gopurs_runtime.Value = z_3_loop
 _ = z_3
 var p_4 gopurs_runtime.Value = p_4_loop
 _ = p_4
-// TAST (Let): __local_var_5_1 -> gopurs_runtime.Value
-__local_var_5_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Category_categoryFn(), "Semigroupoid0"), gopurs_runtime.Value{})
-_ = __local_var_5_1
 // TAST (Let): semigroupEndo1_5_0 -> gopurs_runtime.Value
-semigroupEndo1_5_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_5_1, "compose"), v_6, v1_7)
+semigroupEndo1_5_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v_5, gopurs_runtime.Apply(v1_6, x_7))
+})
 })
 }))
 _ = semigroupEndo1_5_0
@@ -1885,13 +1871,12 @@ var z_3 gopurs_runtime.Value = z_3_loop
 _ = z_3
 var p_4 *Constructor_Data_Functor_Product2_Product2 = p_4_loop
 _ = p_4
-// TAST (Let): __local_var_5_1 -> gopurs_runtime.Value
-__local_var_5_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Category_categoryFn(), "Semigroupoid0"), gopurs_runtime.Value{})
-_ = __local_var_5_1
 // TAST (Let): semigroupEndo1_5_0 -> gopurs_runtime.Value
-semigroupEndo1_5_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_5_1, "compose"), v_6, v1_7)
+semigroupEndo1_5_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v_5, gopurs_runtime.Apply(v1_6, x_7))
+})
 })
 }))
 _ = semigroupEndo1_5_0
@@ -1915,13 +1900,12 @@ var z_2 gopurs_runtime.Value = z_2_loop
 _ = z_2
 var p_3 gopurs_runtime.Value = p_3_loop
 _ = p_3
-// TAST (Let): __local_var_4_1 -> gopurs_runtime.Value
-__local_var_4_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Category_categoryFn(), "Semigroupoid0"), gopurs_runtime.Value{})
-_ = __local_var_4_1
 // TAST (Let): semigroupEndo1_4_0 -> gopurs_runtime.Value
-semigroupEndo1_4_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_4_1, "compose"), v_5, v1_6)
+semigroupEndo1_4_0 := gopurs_runtime.RecordDict1("append", gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v_4, gopurs_runtime.Apply(v1_5, x_6))
+})
 })
 }))
 _ = semigroupEndo1_4_0

@@ -71,9 +71,7 @@ var cache_Control_Monad_Cont_Trans_lift gopurs_runtime.Value
 var once_Control_Monad_Cont_Trans_lift sync.Once
 func Get_Control_Monad_Cont_Trans_lift() gopurs_runtime.Value {
 	once_Control_Monad_Cont_Trans_lift.Do(func() {
-		cache_Control_Monad_Cont_Trans_lift = gopurs_runtime.Func(func(dictMonad_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Control_Monad_Cont_Trans_lift(gopurs_runtime.CoerceToStruct[Constructor_Control_Monad_Monad](dictMonad_0_box))
-})
+		cache_Control_Monad_Cont_Trans_lift = gopurs_runtime.RecordGet(Get_Control_Monad_Cont_Trans_monadTransContT(), "lift")
 	})
 	return cache_Control_Monad_Cont_Trans_lift
 }
@@ -327,19 +325,6 @@ _ = v_0
 var k_1 gopurs_runtime.Value = k_1_loop
 _ = k_1
 return gopurs_runtime.Apply(v_0, k_1)
-}
-
-func Call_Control_Monad_Cont_Trans_lift(dictMonad_0_loop *Constructor_Control_Monad_Monad) gopurs_runtime.Value {
-var dictMonad_0 *Constructor_Control_Monad_Monad = dictMonad_0_loop
-_ = dictMonad_0
-// TAST (Let): Bind1_1_0 -> *Constructor_Control_Bind_Bind
-Bind1_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](gopurs_runtime.Apply(gopurs_runtime.Box(dictMonad_0.V1), gopurs_runtime.Value{}))
-_ = Bind1_1_0
-return gopurs_runtime.Func(func(m_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(k_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.Box(Bind1_1_0.V1), m_2, k_3)
-})
-})
 }
 
 func Call_Control_Monad_Cont_Trans_mapContT(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, k_2_loop gopurs_runtime.Value) gopurs_runtime.Value {

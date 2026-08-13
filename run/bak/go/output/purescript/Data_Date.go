@@ -20,19 +20,34 @@ var once_Data_Date_ordMaybe sync.Once
 func Get_Data_Date_ordMaybe() gopurs_runtime.Value {
 	once_Data_Date_ordMaybe.Do(func() {
 		cache_Data_Date_ordMaybe = func() gopurs_runtime.Value {
-// TAST (Let): __local_var_0_1 -> gopurs_runtime.Value
-__local_var_0_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_ordDay(), "Eq0"), gopurs_runtime.Value{})
-_ = __local_var_0_1
 // TAST (Let): eqMaybe1_0_0 -> gopurs_runtime.Value
-eqMaybe1_0_0 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(y_2 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t3 bool
-{
-if (x_1.Type == 9 && x_1.IntVal == 930809136 && x_1.UnsafePtr == nil) {
+eqMaybe1_0_0 := gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(y_1 gopurs_runtime.Value) gopurs_runtime.Value {
 var __t2 bool
 {
-if (y_2.Type == 9 && y_2.IntVal == 930809136 && y_2.UnsafePtr == nil) {
-__t2 = true
+if (x_0.Type == 9 && x_0.IntVal == 930809136 && x_0.UnsafePtr == nil) {
+var __t1 bool
+{
+if (y_1.Type == 9 && y_1.IntVal == 930809136 && y_1.UnsafePtr == nil) {
+__t1 = true
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = false
+}
+end_branch_1:
+__t2 = __t1
+goto end_branch_2
+} else {
+
+}
+}
+{
+if ((x_0.Type == 9 && x_0.IntVal == 930809136 && x_0.UnsafePtr != nil)) && ((y_1.Type == 9 && y_1.IntVal == 930809136 && y_1.UnsafePtr != nil)) {
+__t2 = ((*Constructor_Data_Maybe_Just)(x_0.UnsafePtr).V0.IntVal) == ((*Constructor_Data_Maybe_Just)(y_1.UnsafePtr).V0.IntVal)
 goto end_branch_2
 } else {
 
@@ -42,25 +57,7 @@ goto end_branch_2
 __t2 = false
 }
 end_branch_2:
-__t3 = __t2
-goto end_branch_3
-} else {
-
-}
-}
-{
-if ((x_1.Type == 9 && x_1.IntVal == 930809136 && x_1.UnsafePtr != nil)) && ((y_2.Type == 9 && y_2.IntVal == 930809136 && y_2.UnsafePtr != nil)) {
-__t3 = (gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_0_1, "eq"), (*Constructor_Data_Maybe_Just)(x_1.UnsafePtr).V0, (*Constructor_Data_Maybe_Just)(y_2.UnsafePtr).V0).IntVal) != (0)
-goto end_branch_3
-} else {
-
-}
-}
-{
-__t3 = false
-}
-end_branch_3:
-return gopurs_runtime.Bool(__t3)
+return gopurs_runtime.Bool(__t2)
 })
 }))
 _ = eqMaybe1_0_0
@@ -68,49 +65,49 @@ return gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Point
 return eqMaybe1_0_0
 }), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_2 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t5 uint32
-{
-if (x_1.Type == 9 && x_1.IntVal == 930809136 && x_1.UnsafePtr == nil) {
 var __t4 uint32
 {
+if (x_1.Type == 9 && x_1.IntVal == 930809136 && x_1.UnsafePtr == nil) {
+var __t3 uint32
+{
 if (y_2.Type == 9 && y_2.IntVal == 930809136 && y_2.UnsafePtr == nil) {
-__t4 = 902936544
+__t3 = 902936544
+goto end_branch_3
+} else {
+
+}
+}
+{
+__t3 = 1527465420
+}
+end_branch_3:
+__t4 = __t3
 goto end_branch_4
 } else {
 
 }
 }
 {
-__t4 = 1527465420
-}
-end_branch_4:
-__t5 = __t4
-goto end_branch_5
-} else {
-
-}
-}
-{
 if (y_2.Type == 9 && y_2.IntVal == 930809136 && y_2.UnsafePtr == nil) {
-__t5 = 380165415
-goto end_branch_5
+__t4 = 380165415
+goto end_branch_4
 } else {
 
 }
 }
 {
 if ((x_1.Type == 9 && x_1.IntVal == 930809136 && x_1.UnsafePtr != nil)) && ((y_2.Type == 9 && y_2.IntVal == 930809136 && y_2.UnsafePtr != nil)) {
-__t5 = uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Date_Component_ordDay(), "compare"), (*Constructor_Data_Maybe_Just)(x_1.UnsafePtr).V0, (*Constructor_Data_Maybe_Just)(y_2.UnsafePtr).V0).IntVal)
-goto end_branch_5
+__t4 = uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Ord_ordInt(), "compare"), (*Constructor_Data_Maybe_Just)(x_1.UnsafePtr).V0, (*Constructor_Data_Maybe_Just)(y_2.UnsafePtr).V0).IntVal)
+goto end_branch_4
 } else {
 
 }
 }
 {
-__t5 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
+__t4 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
 }
-end_branch_5:
-return gopurs_runtime.Value{Type: 9, IntVal: int64(__t5), UnsafePtr: nil}
+end_branch_4:
+return gopurs_runtime.Value{Type: 9, IntVal: int64(__t4), UnsafePtr: nil}
 })
 }))))}
 }()
@@ -493,11 +490,7 @@ var once_Data_Date_ordDate sync.Once
 func Get_Data_Date_ordDate() gopurs_runtime.Value {
 	once_Data_Date_ordDate.Do(func() {
 		cache_Data_Date_ordDate = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(y_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(((((*Constructor_Data_Date_Date)(x_1.UnsafePtr).V0) == ((*Constructor_Data_Date_Date)(y_2.UnsafePtr).V0)) && ((gopurs_runtime.Apply2(Get_Data_Eq_eq__3887832182(), gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(x_1.UnsafePtr).V1), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(y_2.UnsafePtr).V1), UnsafePtr: nil}).IntVal) != (0))) && (((*Constructor_Data_Date_Date)(x_1.UnsafePtr).V2) == ((*Constructor_Data_Date_Date)(y_2.UnsafePtr).V2)))
-})
-}))
+return Get_Data_Date_eqDate()
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(y_1 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): v_2_0 -> gopurs_runtime.Value
@@ -560,567 +553,1151 @@ var once_Data_Date_enumDate sync.Once
 func Get_Data_Date_enumDate() gopurs_runtime.Value {
 	once_Data_Date_enumDate.Do(func() {
 		cache_Data_Date_enumDate = gopurs_runtime.RecordDict3("Ord0", "pred", "succ", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(((((*Constructor_Data_Date_Date)(x_2.UnsafePtr).V0) == ((*Constructor_Data_Date_Date)(y_3.UnsafePtr).V0)) && ((gopurs_runtime.Apply2(Get_Data_Eq_eq__3887832182(), gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(x_2.UnsafePtr).V1), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(y_3.UnsafePtr).V1), UnsafePtr: nil}).IntVal) != (0))) && (((*Constructor_Data_Date_Date)(x_2.UnsafePtr).V2) == ((*Constructor_Data_Date_Date)(y_3.UnsafePtr).V2)))
-})
-}))
-}), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(y_2 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): v_3_0 -> gopurs_runtime.Value
-v_3_0 := gopurs_runtime.Apply5(Get_Data_Ord_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Int((*Constructor_Data_Date_Date)(x_1.UnsafePtr).V0), gopurs_runtime.Int((*Constructor_Data_Date_Date)(y_2.UnsafePtr).V0))
-_ = v_3_0
-var __t3 uint32
-{
-if (uint32(v_3_0.IntVal) == 1527465420) {
-__t3 = 1527465420
-goto end_branch_3
-} else {
-
-}
-}
-{
-if (uint32(v_3_0.IntVal) == 380165415) {
-__t3 = 380165415
-goto end_branch_3
-} else {
-
-}
-}
-{
-// TAST (Let): v1_4_1 -> gopurs_runtime.Value
-v1_4_1 := gopurs_runtime.Apply2(Get_Data_Ord_compare__696857420(), gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(x_1.UnsafePtr).V1), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(y_2.UnsafePtr).V1), UnsafePtr: nil})
-_ = v1_4_1
-var __t2 uint32
-{
-if (uint32(v1_4_1.IntVal) == 1527465420) {
-__t2 = 1527465420
-goto end_branch_2
-} else {
-
-}
-}
-{
-if (uint32(v1_4_1.IntVal) == 380165415) {
-__t2 = 380165415
-goto end_branch_2
-} else {
-
-}
-}
-{
-__t2 = uint32(gopurs_runtime.Apply5(Get_Data_Ord_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Int((*Constructor_Data_Date_Date)(x_1.UnsafePtr).V2), gopurs_runtime.Int((*Constructor_Data_Date_Date)(y_2.UnsafePtr).V2)).IntVal)
-}
-end_branch_2:
-__t3 = __t2
-}
-end_branch_3:
-return gopurs_runtime.Value{Type: 9, IntVal: int64(__t3), UnsafePtr: nil}
-})
-}))
+return Get_Data_Date_ordDate()
 }), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): pm_1_4 -> *Constructor_Data_Maybe_Just
-pm_1_4 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumMonth(), "toEnum"), gopurs_runtime.Int((gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumMonth(), "fromEnum"), gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1), UnsafePtr: nil}).IntVal) - (1))))
-_ = pm_1_4
-// TAST (Let): pd_2_5 -> *Constructor_Data_Maybe_Just
-pd_2_5 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int((gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "fromEnum"), gopurs_runtime.Int((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V2)).IntVal) - (1))))
-_ = pd_2_5
-var __t9 uint32
+var __t14 int64
 {
-var __t7 gopurs_runtime.Value
-{
-if (pd_2_5 == nil) {
-__t7 = gopurs_runtime.Bool(true)
-goto end_branch_7
-} else {
-
-}
-}
-{
-if (pd_2_5 != nil) {
-__t7 = gopurs_runtime.Bool(false)
-goto end_branch_7
-} else {
-
-}
-}
-{
-__t7 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_7:
-if (__t7.IntVal) != (0) {
-var __t8 gopurs_runtime.Value
-{
-if (pm_1_4 == nil) {
-__t8 = gopurs_runtime.Value{Type: 9, IntVal: int64(3889233761), UnsafePtr: nil}
-goto end_branch_8
-} else {
-
-}
-}
-{
-if (pm_1_4 != nil) {
-__t8 = (pm_1_4).V0
-goto end_branch_8
-} else {
-
-}
-}
-{
-__t8 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_8:
-__t9 = uint32(__t8.IntVal)
-goto end_branch_9
-} else {
-
-}
-}
-{
-__t9 = (*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1
-}
-end_branch_9:
-// TAST (Let): m_prime_3_6 -> gopurs_runtime.Value
-var m_prime_3_6 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(__t9), UnsafePtr: nil}
-// TAST (Let): l_4_10 -> gopurs_runtime.Value
-var l_4_10 gopurs_runtime.Value = gopurs_runtime.Int(Call_Data_Date_lastDayOfMonth((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V0, uint32(m_prime_3_6.IntVal)))
-var __t17 *Constructor_Data_Maybe_Just
-{
-var __t14 gopurs_runtime.Value
-{
-if (pd_2_5 == nil) {
-__t14 = gopurs_runtime.Bool(true)
+var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_2.IntVal) == 1908470532) {
+__t14 = 1
 goto end_branch_14
 } else {
 
 }
 }
 {
-if (pd_2_5 != nil) {
-__t14 = gopurs_runtime.Bool(false)
+var __t_tag_3 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_3.IntVal) == 2455627378) {
+__t14 = 2
 goto end_branch_14
 } else {
 
 }
 }
 {
-__t14 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+var __t_tag_4 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_4.IntVal) == 4162469099) {
+__t14 = 3
+goto end_branch_14
+} else {
+
+}
+}
+{
+var __t_tag_5 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_5.IntVal) == 1692989816) {
+__t14 = 4
+goto end_branch_14
+} else {
+
+}
+}
+{
+var __t_tag_6 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_6.IntVal) == 330658827) {
+__t14 = 5
+goto end_branch_14
+} else {
+
+}
+}
+{
+var __t_tag_7 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_7.IntVal) == 4067355978) {
+__t14 = 6
+goto end_branch_14
+} else {
+
+}
+}
+{
+var __t_tag_8 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_8.IntVal) == 2276710548) {
+__t14 = 7
+goto end_branch_14
+} else {
+
+}
+}
+{
+var __t_tag_9 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_9.IntVal) == 243771071) {
+__t14 = 8
+goto end_branch_14
+} else {
+
+}
+}
+{
+var __t_tag_10 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_10.IntVal) == 215731793) {
+__t14 = 9
+goto end_branch_14
+} else {
+
+}
+}
+{
+var __t_tag_11 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_11.IntVal) == 8639228) {
+__t14 = 10
+goto end_branch_14
+} else {
+
+}
+}
+{
+var __t_tag_12 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_12.IntVal) == 49471444) {
+__t14 = 11
+goto end_branch_14
+} else {
+
+}
+}
+{
+var __t_tag_13 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_13.IntVal) == 3889233761) {
+__t14 = 12
+goto end_branch_14
+} else {
+
+}
+}
+{
+__t14 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
 }
 end_branch_14:
-var __t_and_16 bool = false
-if (__t14.IntVal) != (0) {
-
-var __t15 gopurs_runtime.Value
+// TAST (Let): __local_var_1_1 -> gopurs_runtime.Value
+__local_var_1_1 := gopurs_runtime.Int((gopurs_runtime.Int(__t14).IntVal) - (1))
+_ = __local_var_1_1
+var __t15 *Constructor_Data_Maybe_Just
 {
-if (pm_1_4 == nil) {
-__t15 = gopurs_runtime.Bool(true)
+if (__local_var_1_1.IntVal) == (1) {
+__t15 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(1908470532), UnsafePtr: nil}}
 goto end_branch_15
 } else {
 
 }
 }
 {
-if (pm_1_4 != nil) {
-__t15 = gopurs_runtime.Bool(false)
+if (__local_var_1_1.IntVal) == (2) {
+__t15 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(2455627378), UnsafePtr: nil}}
 goto end_branch_15
 } else {
 
 }
 }
 {
-__t15 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+if (__local_var_1_1.IntVal) == (3) {
+__t15 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(4162469099), UnsafePtr: nil}}
+goto end_branch_15
+} else {
+
+}
+}
+{
+if (__local_var_1_1.IntVal) == (4) {
+__t15 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(1692989816), UnsafePtr: nil}}
+goto end_branch_15
+} else {
+
+}
+}
+{
+if (__local_var_1_1.IntVal) == (5) {
+__t15 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(330658827), UnsafePtr: nil}}
+goto end_branch_15
+} else {
+
+}
+}
+{
+if (__local_var_1_1.IntVal) == (6) {
+__t15 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(4067355978), UnsafePtr: nil}}
+goto end_branch_15
+} else {
+
+}
+}
+{
+if (__local_var_1_1.IntVal) == (7) {
+__t15 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(2276710548), UnsafePtr: nil}}
+goto end_branch_15
+} else {
+
+}
+}
+{
+if (__local_var_1_1.IntVal) == (8) {
+__t15 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(243771071), UnsafePtr: nil}}
+goto end_branch_15
+} else {
+
+}
+}
+{
+if (__local_var_1_1.IntVal) == (9) {
+__t15 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(215731793), UnsafePtr: nil}}
+goto end_branch_15
+} else {
+
+}
+}
+{
+if (__local_var_1_1.IntVal) == (10) {
+__t15 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(8639228), UnsafePtr: nil}}
+goto end_branch_15
+} else {
+
+}
+}
+{
+if (__local_var_1_1.IntVal) == (11) {
+__t15 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(49471444), UnsafePtr: nil}}
+goto end_branch_15
+} else {
+
+}
+}
+{
+if (__local_var_1_1.IntVal) == (12) {
+__t15 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(3889233761), UnsafePtr: nil}}
+goto end_branch_15
+} else {
+
+}
+}
+{
+__t15 = (*Constructor_Data_Maybe_Just)(nil)
 }
 end_branch_15:
-__t_and_16 = (__t15.IntVal) != (0)
-}
-if __t_and_16 {
-__t17 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int((gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "fromEnum"), gopurs_runtime.Int((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V0)).IntVal) - (1)))))})
-goto end_branch_17
-} else {
-
-}
-}
+// TAST (Let): pm_1_0 -> *Constructor_Data_Maybe_Just
+var pm_1_0 *Constructor_Data_Maybe_Just = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t15)})
+// TAST (Let): __local_var_2_17 -> gopurs_runtime.Value
+__local_var_2_17 := gopurs_runtime.Int((gopurs_runtime.Int(gopurs_runtime.Int((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V2).IntVal).IntVal) - (1))
+_ = __local_var_2_17
+var __t21 *Constructor_Data_Maybe_Just
 {
-__t17 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Int((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V0)}
-}
-end_branch_17:
-// TAST (Let): __local_var_5_13 -> *Constructor_Data_Maybe_Just
-var __local_var_5_13 *Constructor_Data_Maybe_Just = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t17)})
-var __t18 *Constructor_Data_Maybe_Just
+var __t18 bool
 {
-if (__local_var_5_13 != nil) {
-__t18 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Apply(Get_Data_Date_Date(), gopurs_runtime.Int((__local_var_5_13).V0.IntVal))}
+if (__local_var_2_17.IntVal) < (1) {
+__t18 = false
 goto end_branch_18
 } else {
 
 }
 }
 {
-__t18 = (*Constructor_Data_Maybe_Just)(nil)
+__t18 = true
 }
 end_branch_18:
-// TAST (Let): __local_var_5_12 -> *Constructor_Data_Maybe_Just
-var __local_var_5_12 *Constructor_Data_Maybe_Just = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t18)})
-var __t19 *Constructor_Data_Maybe_Just
+var __t_and_20 bool = false
+if __t18 {
+
+var __t19 bool
 {
-if (__local_var_5_12 != nil) {
-__t19 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Maybe_functorMaybe(), "map"), (__local_var_5_12).V0, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(m_prime_3_6.IntVal)), UnsafePtr: nil}})}))
+if (__local_var_2_17.IntVal) > (31) {
+__t19 = false
 goto end_branch_19
 } else {
 
 }
 }
 {
-if (__local_var_5_12 == nil) {
-__t19 = (*Constructor_Data_Maybe_Just)(nil)
-goto end_branch_19
-} else {
-
-}
-}
-{
-__t19 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_runtime.Value { panic("Failed pattern match") }())
+__t19 = true
 }
 end_branch_19:
-// TAST (Let): __local_var_5_11 -> *Constructor_Data_Maybe_Just
-__local_var_5_11 := __t19
-_ = __local_var_5_11
-var __t22 *Constructor_Data_Maybe_Just
-{
-var __t21 gopurs_runtime.Value
-{
-if (pd_2_5 == nil) {
-__t21 = gopurs_runtime.Bool(true)
+__t_and_20 = __t19
+}
+if __t_and_20 {
+__t21 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Int(__local_var_2_17.IntVal)}
 goto end_branch_21
 } else {
 
 }
 }
 {
-if (pd_2_5 != nil) {
-__t21 = gopurs_runtime.Bool(false)
-goto end_branch_21
-} else {
-
-}
-}
-{
-__t21 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t21 = (*Constructor_Data_Maybe_Just)(nil)
 }
 end_branch_21:
-if (__t21.IntVal) != (0) {
-__t22 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Int(l_4_10.IntVal)})})
-goto end_branch_22
-} else {
-
-}
-}
+// TAST (Let): pd_2_16 -> *Constructor_Data_Maybe_Just
+var pd_2_16 *Constructor_Data_Maybe_Just = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t21)})
+var __t25 uint32
 {
-__t22 = pd_2_5
-}
-end_branch_22:
-// TAST (Let): __local_var_6_20 -> *Constructor_Data_Maybe_Just
-__local_var_6_20 := __t22
-_ = __local_var_6_20
-var __t23 *Constructor_Data_Maybe_Just
+var __t23 gopurs_runtime.Value
 {
-if (__local_var_5_11 != nil) {
-__t23 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Maybe_functorMaybe(), "map"), (__local_var_5_11).V0, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__local_var_6_20)}))
+if (pd_2_16 == nil) {
+__t23 = gopurs_runtime.Bool(true)
 goto end_branch_23
 } else {
 
 }
 }
 {
-if (__local_var_5_11 == nil) {
-__t23 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
+if (pd_2_16 != nil) {
+__t23 = gopurs_runtime.Bool(false)
 goto end_branch_23
 } else {
 
 }
 }
 {
-__t23 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_runtime.Value { panic("Failed pattern match") }())
+__t23 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_23:
-return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t23)}
-}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): sm_1_24 -> *Constructor_Data_Maybe_Just
-sm_1_24 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumMonth(), "toEnum"), gopurs_runtime.Int((gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumMonth(), "fromEnum"), gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1), UnsafePtr: nil}).IntVal) + (1))))
-_ = sm_1_24
-// TAST (Let): v1_2_25 -> *Constructor_Data_Maybe_Just
-v1_2_25 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int((gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "fromEnum"), gopurs_runtime.Int((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V2)).IntVal) + (1))))
-_ = v1_2_25
-var __t30 *Constructor_Data_Maybe_Just
+if (__t23.IntVal) != (0) {
+var __t24 gopurs_runtime.Value
 {
-var __t29 bool
-{
-// TAST (Let): __local_var_3_27 -> *Constructor_Data_Maybe_Just
-var __local_var_3_27 *Constructor_Data_Maybe_Just = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Int(Call_Data_Date_lastDayOfMonth((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V0, (*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1))})})
-var __t28 uint32
-{
-if (v1_2_25 == nil) {
-__t28 = 1527465420
-goto end_branch_28
+if (pm_1_0 == nil) {
+__t24 = gopurs_runtime.Value{Type: 9, IntVal: int64(3889233761), UnsafePtr: nil}
+goto end_branch_24
 } else {
 
 }
 }
 {
-if (v1_2_25 != nil) {
-__t28 = uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Date_Component_ordDay(), "compare"), (v1_2_25).V0, (__local_var_3_27).V0).IntVal)
-goto end_branch_28
+if (pm_1_0 != nil) {
+__t24 = (pm_1_0).V0
+goto end_branch_24
 } else {
 
 }
 }
 {
-__t28 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
+__t24 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
-end_branch_28:
-if (__t28 == 380165415) {
-__t29 = true
-goto end_branch_29
+end_branch_24:
+__t25 = uint32(__t24.IntVal)
+goto end_branch_25
 } else {
 
 }
 }
 {
-__t29 = false
+__t25 = (*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1
 }
-end_branch_29:
-if __t29 {
-__t30 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
+end_branch_25:
+// TAST (Let): m_prime_3_22 -> gopurs_runtime.Value
+var m_prime_3_22 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(__t25), UnsafePtr: nil}
+// TAST (Let): l_4_26 -> gopurs_runtime.Value
+var l_4_26 gopurs_runtime.Value = gopurs_runtime.Int(Call_Data_Date_lastDayOfMonth((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V0, uint32(m_prime_3_22.IntVal)))
+var __t38 *Constructor_Data_Maybe_Just
+{
+var __t30 gopurs_runtime.Value
+{
+if (pd_2_16 == nil) {
+__t30 = gopurs_runtime.Bool(true)
 goto end_branch_30
 } else {
 
 }
 }
 {
-__t30 = v1_2_25
+if (pd_2_16 != nil) {
+__t30 = gopurs_runtime.Bool(false)
+goto end_branch_30
+} else {
+
+}
+}
+{
+__t30 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_30:
-// TAST (Let): sd_3_26 -> *Constructor_Data_Maybe_Just
-sd_3_26 := __t30
-_ = sd_3_26
+var __t_and_32 bool = false
+if (__t30.IntVal) != (0) {
+
+var __t31 gopurs_runtime.Value
+{
+if (pm_1_0 == nil) {
+__t31 = gopurs_runtime.Bool(true)
+goto end_branch_31
+} else {
+
+}
+}
+{
+if (pm_1_0 != nil) {
+__t31 = gopurs_runtime.Bool(false)
+goto end_branch_31
+} else {
+
+}
+}
+{
+__t31 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_31:
+__t_and_32 = (__t31.IntVal) != (0)
+}
+if __t_and_32 {
+// TAST (Let): __local_var_5_33 -> gopurs_runtime.Value
+__local_var_5_33 := gopurs_runtime.Int((gopurs_runtime.Int(gopurs_runtime.Int((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V0).IntVal).IntVal) - (1))
+_ = __local_var_5_33
 var __t37 *Constructor_Data_Maybe_Just
 {
-var __t34 gopurs_runtime.Value
+var __t34 bool
 {
-if (sd_3_26 == nil) {
-__t34 = gopurs_runtime.Bool(true)
+if (__local_var_5_33.IntVal) < (1) {
+__t34 = false
 goto end_branch_34
 } else {
 
 }
 }
 {
-if (sd_3_26 != nil) {
-__t34 = gopurs_runtime.Bool(false)
-goto end_branch_34
-} else {
-
-}
-}
-{
-__t34 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t34 = true
 }
 end_branch_34:
 var __t_and_36 bool = false
-if (__t34.IntVal) != (0) {
+if __t34 {
 
-var __t35 gopurs_runtime.Value
+var __t35 bool
 {
-if (sm_1_24 == nil) {
-__t35 = gopurs_runtime.Bool(true)
+if (__local_var_5_33.IntVal) > (31) {
+__t35 = false
 goto end_branch_35
 } else {
 
 }
 }
 {
-if (sm_1_24 != nil) {
-__t35 = gopurs_runtime.Bool(false)
-goto end_branch_35
-} else {
-
-}
-}
-{
-__t35 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t35 = true
 }
 end_branch_35:
-__t_and_36 = (__t35.IntVal) != (0)
+__t_and_36 = __t35
 }
 if __t_and_36 {
-__t37 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int((gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "fromEnum"), gopurs_runtime.Int((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V0)).IntVal) + (1)))))})
+__t37 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Int(__local_var_5_33.IntVal)}
 goto end_branch_37
 } else {
 
 }
 }
 {
-__t37 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Int((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V0)}
+__t37 = (*Constructor_Data_Maybe_Just)(nil)
 }
 end_branch_37:
-// TAST (Let): __local_var_4_33 -> *Constructor_Data_Maybe_Just
-var __local_var_4_33 *Constructor_Data_Maybe_Just = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t37)})
-var __t38 *Constructor_Data_Maybe_Just
-{
-if (__local_var_4_33 != nil) {
-__t38 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Apply(Get_Data_Date_Date(), gopurs_runtime.Int((__local_var_4_33).V0.IntVal))}
+__t38 = __t37
 goto end_branch_38
 } else {
 
 }
 }
 {
-__t38 = (*Constructor_Data_Maybe_Just)(nil)
+__t38 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Int((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V0)}
 }
 end_branch_38:
-// TAST (Let): __local_var_4_32 -> *Constructor_Data_Maybe_Just
-var __local_var_4_32 *Constructor_Data_Maybe_Just = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t38)})
-var __t42 uint32
+// TAST (Let): __local_var_5_29 -> *Constructor_Data_Maybe_Just
+var __local_var_5_29 *Constructor_Data_Maybe_Just = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t38)})
+var __t39 *Constructor_Data_Maybe_Just
 {
-var __t40 gopurs_runtime.Value
+if (__local_var_5_29 != nil) {
+__t39 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Apply(Get_Data_Date_Date(), gopurs_runtime.Int((__local_var_5_29).V0.IntVal))}
+goto end_branch_39
+} else {
+
+}
+}
 {
-if (sd_3_26 == nil) {
-__t40 = gopurs_runtime.Bool(true)
+__t39 = (*Constructor_Data_Maybe_Just)(nil)
+}
+end_branch_39:
+// TAST (Let): __local_var_5_28 -> *Constructor_Data_Maybe_Just
+var __local_var_5_28 *Constructor_Data_Maybe_Just = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t39)})
+var __t40 *Constructor_Data_Maybe_Just
+{
+if (__local_var_5_28 != nil) {
+__t40 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Apply((__local_var_5_28).V0, gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(m_prime_3_22.IntVal)), UnsafePtr: nil})}
 goto end_branch_40
 } else {
 
 }
 }
 {
-if (sd_3_26 != nil) {
-__t40 = gopurs_runtime.Bool(false)
+if (__local_var_5_28 == nil) {
+__t40 = (*Constructor_Data_Maybe_Just)(nil)
 goto end_branch_40
 } else {
 
 }
 }
 {
-__t40 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t40 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_runtime.Value { panic("Failed pattern match") }())
 }
 end_branch_40:
-if (__t40.IntVal) != (0) {
-var __t41 gopurs_runtime.Value
+// TAST (Let): __local_var_5_27 -> *Constructor_Data_Maybe_Just
+var __local_var_5_27 *Constructor_Data_Maybe_Just = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t40)})
+var __t43 *Constructor_Data_Maybe_Just
 {
-if (sm_1_24 == nil) {
-__t41 = gopurs_runtime.Value{Type: 9, IntVal: int64(1908470532), UnsafePtr: nil}
-goto end_branch_41
-} else {
-
-}
-}
+var __t42 gopurs_runtime.Value
 {
-if (sm_1_24 != nil) {
-__t41 = (sm_1_24).V0
-goto end_branch_41
-} else {
-
-}
-}
-{
-__t41 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_41:
-__t42 = uint32(__t41.IntVal)
+if (pd_2_16 == nil) {
+__t42 = gopurs_runtime.Bool(true)
 goto end_branch_42
 } else {
 
 }
 }
 {
-__t42 = (*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1
+if (pd_2_16 != nil) {
+__t42 = gopurs_runtime.Bool(false)
+goto end_branch_42
+} else {
+
+}
+}
+{
+__t42 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_42:
-// TAST (Let): __local_var_5_39 -> *Constructor_Data_Maybe_Just
-var __local_var_5_39 *Constructor_Data_Maybe_Just = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(__t42), UnsafePtr: nil}})})
-var __t43 *Constructor_Data_Maybe_Just
-{
-if (__local_var_4_32 != nil) {
-__t43 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Maybe_functorMaybe(), "map"), (__local_var_4_32).V0, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__local_var_5_39)}))
+if (__t42.IntVal) != (0) {
+__t43 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Int(l_4_26.IntVal)})})
 goto end_branch_43
 } else {
 
 }
 }
 {
-if (__local_var_4_32 == nil) {
-__t43 = (*Constructor_Data_Maybe_Just)(nil)
-goto end_branch_43
-} else {
-
-}
-}
-{
-__t43 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_runtime.Value { panic("Failed pattern match") }())
+__t43 = pd_2_16
 }
 end_branch_43:
-// TAST (Let): __local_var_4_31 -> *Constructor_Data_Maybe_Just
-__local_var_4_31 := __t43
-_ = __local_var_4_31
-var __t46 *Constructor_Data_Maybe_Just
+// TAST (Let): __local_var_6_41 -> *Constructor_Data_Maybe_Just
+__local_var_6_41 := __t43
+_ = __local_var_6_41
+var __t45 *Constructor_Data_Maybe_Just
 {
-var __t45 gopurs_runtime.Value
+if (__local_var_5_27 != nil) {
+var __t44 *Constructor_Data_Maybe_Just
 {
-if (sd_3_26 == nil) {
-__t45 = gopurs_runtime.Bool(true)
+if (__local_var_6_41 != nil) {
+__t44 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Apply((__local_var_5_27).V0, (__local_var_6_41).V0)}
+goto end_branch_44
+} else {
+
+}
+}
+{
+__t44 = (*Constructor_Data_Maybe_Just)(nil)
+}
+end_branch_44:
+__t45 = __t44
 goto end_branch_45
 } else {
 
 }
 }
 {
-if (sd_3_26 != nil) {
-__t45 = gopurs_runtime.Bool(false)
+if (__local_var_5_27 == nil) {
+__t45 = (*Constructor_Data_Maybe_Just)(nil)
 goto end_branch_45
 } else {
 
 }
 }
 {
-__t45 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t45 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_runtime.Value { panic("Failed pattern match") }())
 }
 end_branch_45:
-if (__t45.IntVal) != (0) {
-__t46 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(Get_Data_Enum_toEnum__2099864294(), gopurs_runtime.Int(1)))
-goto end_branch_46
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t45)}
+}), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t60 int64
+{
+var __t_tag_48 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_48.IntVal) == 1908470532) {
+__t60 = 2
+goto end_branch_60
 } else {
 
 }
 }
 {
-__t46 = sd_3_26
-}
-end_branch_46:
-// TAST (Let): __local_var_5_44 -> *Constructor_Data_Maybe_Just
-__local_var_5_44 := __t46
-_ = __local_var_5_44
-var __t47 *Constructor_Data_Maybe_Just
-{
-if (__local_var_4_31 != nil) {
-__t47 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Maybe_functorMaybe(), "map"), (__local_var_4_31).V0, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__local_var_5_44)}))
-goto end_branch_47
+var __t_tag_49 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_49.IntVal) == 2455627378) {
+__t60 = 3
+goto end_branch_60
 } else {
 
 }
 }
 {
-if (__local_var_4_31 == nil) {
-__t47 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
-goto end_branch_47
+var __t_tag_50 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_50.IntVal) == 4162469099) {
+__t60 = 4
+goto end_branch_60
 } else {
 
 }
 }
 {
-__t47 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_runtime.Value { panic("Failed pattern match") }())
+var __t_tag_51 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_51.IntVal) == 1692989816) {
+__t60 = 5
+goto end_branch_60
+} else {
+
 }
-end_branch_47:
-return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t47)}
+}
+{
+var __t_tag_52 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_52.IntVal) == 330658827) {
+__t60 = 6
+goto end_branch_60
+} else {
+
+}
+}
+{
+var __t_tag_53 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_53.IntVal) == 4067355978) {
+__t60 = 7
+goto end_branch_60
+} else {
+
+}
+}
+{
+var __t_tag_54 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_54.IntVal) == 2276710548) {
+__t60 = 8
+goto end_branch_60
+} else {
+
+}
+}
+{
+var __t_tag_55 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_55.IntVal) == 243771071) {
+__t60 = 9
+goto end_branch_60
+} else {
+
+}
+}
+{
+var __t_tag_56 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_56.IntVal) == 215731793) {
+__t60 = 10
+goto end_branch_60
+} else {
+
+}
+}
+{
+var __t_tag_57 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_57.IntVal) == 8639228) {
+__t60 = 11
+goto end_branch_60
+} else {
+
+}
+}
+{
+var __t_tag_58 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_58.IntVal) == 49471444) {
+__t60 = 12
+goto end_branch_60
+} else {
+
+}
+}
+{
+var __t_tag_59 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_59.IntVal) == 3889233761) {
+__t60 = 13
+goto end_branch_60
+} else {
+
+}
+}
+{
+__t60 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
+}
+end_branch_60:
+// TAST (Let): __local_var_1_47 -> gopurs_runtime.Value
+__local_var_1_47 := gopurs_runtime.Int(__t60)
+_ = __local_var_1_47
+var __t61 *Constructor_Data_Maybe_Just
+{
+if (__local_var_1_47.IntVal) == (1) {
+__t61 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(1908470532), UnsafePtr: nil}}
+goto end_branch_61
+} else {
+
+}
+}
+{
+if (__local_var_1_47.IntVal) == (2) {
+__t61 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(2455627378), UnsafePtr: nil}}
+goto end_branch_61
+} else {
+
+}
+}
+{
+if (__local_var_1_47.IntVal) == (3) {
+__t61 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(4162469099), UnsafePtr: nil}}
+goto end_branch_61
+} else {
+
+}
+}
+{
+if (__local_var_1_47.IntVal) == (4) {
+__t61 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(1692989816), UnsafePtr: nil}}
+goto end_branch_61
+} else {
+
+}
+}
+{
+if (__local_var_1_47.IntVal) == (5) {
+__t61 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(330658827), UnsafePtr: nil}}
+goto end_branch_61
+} else {
+
+}
+}
+{
+if (__local_var_1_47.IntVal) == (6) {
+__t61 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(4067355978), UnsafePtr: nil}}
+goto end_branch_61
+} else {
+
+}
+}
+{
+if (__local_var_1_47.IntVal) == (7) {
+__t61 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(2276710548), UnsafePtr: nil}}
+goto end_branch_61
+} else {
+
+}
+}
+{
+if (__local_var_1_47.IntVal) == (8) {
+__t61 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(243771071), UnsafePtr: nil}}
+goto end_branch_61
+} else {
+
+}
+}
+{
+if (__local_var_1_47.IntVal) == (9) {
+__t61 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(215731793), UnsafePtr: nil}}
+goto end_branch_61
+} else {
+
+}
+}
+{
+if (__local_var_1_47.IntVal) == (10) {
+__t61 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(8639228), UnsafePtr: nil}}
+goto end_branch_61
+} else {
+
+}
+}
+{
+if (__local_var_1_47.IntVal) == (11) {
+__t61 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(49471444), UnsafePtr: nil}}
+goto end_branch_61
+} else {
+
+}
+}
+{
+if (__local_var_1_47.IntVal) == (12) {
+__t61 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(3889233761), UnsafePtr: nil}}
+goto end_branch_61
+} else {
+
+}
+}
+{
+__t61 = (*Constructor_Data_Maybe_Just)(nil)
+}
+end_branch_61:
+// TAST (Let): sm_1_46 -> *Constructor_Data_Maybe_Just
+var sm_1_46 *Constructor_Data_Maybe_Just = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t61)})
+// TAST (Let): __local_var_2_63 -> gopurs_runtime.Value
+__local_var_2_63 := gopurs_runtime.Int(((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V2) + (1))
+_ = __local_var_2_63
+var __t67 *Constructor_Data_Maybe_Just
+{
+var __t64 bool
+{
+if (__local_var_2_63.IntVal) < (1) {
+__t64 = false
+goto end_branch_64
+} else {
+
+}
+}
+{
+__t64 = true
+}
+end_branch_64:
+var __t_and_66 bool = false
+if __t64 {
+
+var __t65 bool
+{
+if (__local_var_2_63.IntVal) > (31) {
+__t65 = false
+goto end_branch_65
+} else {
+
+}
+}
+{
+__t65 = true
+}
+end_branch_65:
+__t_and_66 = __t65
+}
+if __t_and_66 {
+__t67 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Int(__local_var_2_63.IntVal)}
+goto end_branch_67
+} else {
+
+}
+}
+{
+__t67 = (*Constructor_Data_Maybe_Just)(nil)
+}
+end_branch_67:
+// TAST (Let): v1_2_62 -> *Constructor_Data_Maybe_Just
+var v1_2_62 *Constructor_Data_Maybe_Just = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t67)})
+var __t72 *Constructor_Data_Maybe_Just
+{
+var __t71 bool
+{
+// TAST (Let): __local_var_3_69 -> *Constructor_Data_Maybe_Just
+var __local_var_3_69 *Constructor_Data_Maybe_Just = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Int(Call_Data_Date_lastDayOfMonth((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V0, (*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1))})})
+var __t70 uint32
+{
+if (v1_2_62 == nil) {
+__t70 = 1527465420
+goto end_branch_70
+} else {
+
+}
+}
+{
+if (v1_2_62 != nil) {
+__t70 = uint32(gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Ord_ordInt(), "compare"), (v1_2_62).V0, (__local_var_3_69).V0).IntVal)
+goto end_branch_70
+} else {
+
+}
+}
+{
+__t70 = uint32(func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal)
+}
+end_branch_70:
+if (__t70 == 380165415) {
+__t71 = true
+goto end_branch_71
+} else {
+
+}
+}
+{
+__t71 = false
+}
+end_branch_71:
+if __t71 {
+__t72 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
+goto end_branch_72
+} else {
+
+}
+}
+{
+__t72 = v1_2_62
+}
+end_branch_72:
+// TAST (Let): sd_3_68 -> *Constructor_Data_Maybe_Just
+sd_3_68 := __t72
+_ = sd_3_68
+var __t84 *Constructor_Data_Maybe_Just
+{
+var __t76 gopurs_runtime.Value
+{
+if (sd_3_68 == nil) {
+__t76 = gopurs_runtime.Bool(true)
+goto end_branch_76
+} else {
+
+}
+}
+{
+if (sd_3_68 != nil) {
+__t76 = gopurs_runtime.Bool(false)
+goto end_branch_76
+} else {
+
+}
+}
+{
+__t76 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_76:
+var __t_and_78 bool = false
+if (__t76.IntVal) != (0) {
+
+var __t77 gopurs_runtime.Value
+{
+if (sm_1_46 == nil) {
+__t77 = gopurs_runtime.Bool(true)
+goto end_branch_77
+} else {
+
+}
+}
+{
+if (sm_1_46 != nil) {
+__t77 = gopurs_runtime.Bool(false)
+goto end_branch_77
+} else {
+
+}
+}
+{
+__t77 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_77:
+__t_and_78 = (__t77.IntVal) != (0)
+}
+if __t_and_78 {
+// TAST (Let): __local_var_4_79 -> gopurs_runtime.Value
+__local_var_4_79 := gopurs_runtime.Int(((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V0) + (1))
+_ = __local_var_4_79
+var __t83 *Constructor_Data_Maybe_Just
+{
+var __t80 bool
+{
+if (__local_var_4_79.IntVal) < (1) {
+__t80 = false
+goto end_branch_80
+} else {
+
+}
+}
+{
+__t80 = true
+}
+end_branch_80:
+var __t_and_82 bool = false
+if __t80 {
+
+var __t81 bool
+{
+if (__local_var_4_79.IntVal) > (31) {
+__t81 = false
+goto end_branch_81
+} else {
+
+}
+}
+{
+__t81 = true
+}
+end_branch_81:
+__t_and_82 = __t81
+}
+if __t_and_82 {
+__t83 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Int(__local_var_4_79.IntVal)}
+goto end_branch_83
+} else {
+
+}
+}
+{
+__t83 = (*Constructor_Data_Maybe_Just)(nil)
+}
+end_branch_83:
+__t84 = __t83
+goto end_branch_84
+} else {
+
+}
+}
+{
+__t84 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Int((*Constructor_Data_Date_Date)(v_0.UnsafePtr).V0)}
+}
+end_branch_84:
+// TAST (Let): __local_var_4_75 -> *Constructor_Data_Maybe_Just
+var __local_var_4_75 *Constructor_Data_Maybe_Just = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t84)})
+var __t85 *Constructor_Data_Maybe_Just
+{
+if (__local_var_4_75 != nil) {
+__t85 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Apply(Get_Data_Date_Date(), gopurs_runtime.Int((__local_var_4_75).V0.IntVal))}
+goto end_branch_85
+} else {
+
+}
+}
+{
+__t85 = (*Constructor_Data_Maybe_Just)(nil)
+}
+end_branch_85:
+// TAST (Let): __local_var_4_74 -> *Constructor_Data_Maybe_Just
+var __local_var_4_74 *Constructor_Data_Maybe_Just = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t85)})
+var __t89 uint32
+{
+var __t87 gopurs_runtime.Value
+{
+if (sd_3_68 == nil) {
+__t87 = gopurs_runtime.Bool(true)
+goto end_branch_87
+} else {
+
+}
+}
+{
+if (sd_3_68 != nil) {
+__t87 = gopurs_runtime.Bool(false)
+goto end_branch_87
+} else {
+
+}
+}
+{
+__t87 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_87:
+if (__t87.IntVal) != (0) {
+var __t88 gopurs_runtime.Value
+{
+if (sm_1_46 == nil) {
+__t88 = gopurs_runtime.Value{Type: 9, IntVal: int64(1908470532), UnsafePtr: nil}
+goto end_branch_88
+} else {
+
+}
+}
+{
+if (sm_1_46 != nil) {
+__t88 = (sm_1_46).V0
+goto end_branch_88
+} else {
+
+}
+}
+{
+__t88 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_88:
+__t89 = uint32(__t88.IntVal)
+goto end_branch_89
+} else {
+
+}
+}
+{
+__t89 = (*Constructor_Data_Date_Date)(v_0.UnsafePtr).V1
+}
+end_branch_89:
+// TAST (Let): __local_var_5_86 -> *Constructor_Data_Maybe_Just
+var __local_var_5_86 *Constructor_Data_Maybe_Just = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(__t89), UnsafePtr: nil}})})
+var __t90 *Constructor_Data_Maybe_Just
+{
+if (__local_var_4_74 != nil) {
+__t90 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Apply((__local_var_4_74).V0, (__local_var_5_86).V0)}
+goto end_branch_90
+} else {
+
+}
+}
+{
+if (__local_var_4_74 == nil) {
+__t90 = (*Constructor_Data_Maybe_Just)(nil)
+goto end_branch_90
+} else {
+
+}
+}
+{
+__t90 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_runtime.Value { panic("Failed pattern match") }())
+}
+end_branch_90:
+// TAST (Let): __local_var_4_73 -> *Constructor_Data_Maybe_Just
+var __local_var_4_73 *Constructor_Data_Maybe_Just = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t90)})
+var __t93 *Constructor_Data_Maybe_Just
+{
+var __t92 gopurs_runtime.Value
+{
+if (sd_3_68 == nil) {
+__t92 = gopurs_runtime.Bool(true)
+goto end_branch_92
+} else {
+
+}
+}
+{
+if (sd_3_68 != nil) {
+__t92 = gopurs_runtime.Bool(false)
+goto end_branch_92
+} else {
+
+}
+}
+{
+__t92 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+}
+end_branch_92:
+if (__t92.IntVal) != (0) {
+__t93 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Int(1)})})
+goto end_branch_93
+} else {
+
+}
+}
+{
+__t93 = sd_3_68
+}
+end_branch_93:
+// TAST (Let): __local_var_5_91 -> *Constructor_Data_Maybe_Just
+__local_var_5_91 := __t93
+_ = __local_var_5_91
+var __t95 *Constructor_Data_Maybe_Just
+{
+if (__local_var_4_73 != nil) {
+var __t94 *Constructor_Data_Maybe_Just
+{
+if (__local_var_5_91 != nil) {
+__t94 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Apply((__local_var_4_73).V0, (__local_var_5_91).V0)}
+goto end_branch_94
+} else {
+
+}
+}
+{
+__t94 = (*Constructor_Data_Maybe_Just)(nil)
+}
+end_branch_94:
+__t95 = __t94
+goto end_branch_95
+} else {
+
+}
+}
+{
+if (__local_var_4_73 == nil) {
+__t95 = (*Constructor_Data_Maybe_Just)(nil)
+goto end_branch_95
+} else {
+
+}
+}
+{
+__t95 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_runtime.Value { panic("Failed pattern match") }())
+}
+end_branch_95:
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t95)}
 }))
 	})
 	return cache_Data_Date_enumDate
@@ -1130,9 +1707,7 @@ var cache_Data_Date_pred gopurs_runtime.Value
 var once_Data_Date_pred sync.Once
 func Get_Data_Date_pred() gopurs_runtime.Value {
 	once_Data_Date_pred.Do(func() {
-		cache_Data_Date_pred = gopurs_runtime.Func(func(v_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(Call_Data_Date_pred(gopurs_runtime.CoerceToStruct[Constructor_Data_Date_Date](v_0_box)))}
-})
+		cache_Data_Date_pred = gopurs_runtime.RecordGet(Get_Data_Date_enumDate(), "pred")
 	})
 	return cache_Data_Date_pred
 }
@@ -1186,66 +1761,8 @@ var once_Data_Date_boundedDate sync.Once
 func Get_Data_Date_boundedDate() gopurs_runtime.Value {
 	once_Data_Date_boundedDate.Do(func() {
 		cache_Data_Date_boundedDate = gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("eq", gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(y_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Bool(((((*Constructor_Data_Date_Date)(x_2.UnsafePtr).V0) == ((*Constructor_Data_Date_Date)(y_3.UnsafePtr).V0)) && ((gopurs_runtime.Apply2(Get_Data_Eq_eq__3887832182(), gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(x_2.UnsafePtr).V1), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(y_3.UnsafePtr).V1), UnsafePtr: nil}).IntVal) != (0))) && (((*Constructor_Data_Date_Date)(x_2.UnsafePtr).V2) == ((*Constructor_Data_Date_Date)(y_3.UnsafePtr).V2)))
-})
-}))
-}), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(y_2 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): v_3_0 -> gopurs_runtime.Value
-v_3_0 := gopurs_runtime.Apply5(Get_Data_Ord_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Int((*Constructor_Data_Date_Date)(x_1.UnsafePtr).V0), gopurs_runtime.Int((*Constructor_Data_Date_Date)(y_2.UnsafePtr).V0))
-_ = v_3_0
-var __t3 uint32
-{
-if (uint32(v_3_0.IntVal) == 1527465420) {
-__t3 = 1527465420
-goto end_branch_3
-} else {
-
-}
-}
-{
-if (uint32(v_3_0.IntVal) == 380165415) {
-__t3 = 380165415
-goto end_branch_3
-} else {
-
-}
-}
-{
-// TAST (Let): v1_4_1 -> gopurs_runtime.Value
-v1_4_1 := gopurs_runtime.Apply2(Get_Data_Ord_compare__696857420(), gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(x_1.UnsafePtr).V1), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(y_2.UnsafePtr).V1), UnsafePtr: nil})
-_ = v1_4_1
-var __t2 uint32
-{
-if (uint32(v1_4_1.IntVal) == 1527465420) {
-__t2 = 1527465420
-goto end_branch_2
-} else {
-
-}
-}
-{
-if (uint32(v1_4_1.IntVal) == 380165415) {
-__t2 = 380165415
-goto end_branch_2
-} else {
-
-}
-}
-{
-__t2 = uint32(gopurs_runtime.Apply5(Get_Data_Ord_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Int((*Constructor_Data_Date_Date)(x_1.UnsafePtr).V2), gopurs_runtime.Int((*Constructor_Data_Date_Date)(y_2.UnsafePtr).V2)).IntVal)
-}
-end_branch_2:
-__t3 = __t2
-}
-end_branch_3:
-return gopurs_runtime.Value{Type: 9, IntVal: int64(__t3), UnsafePtr: nil}
-})
-}))
-}), gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(&Constructor_Data_Date_Date{1, gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedYear(), "bottom").IntVal, uint32(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedMonth(), "bottom").IntVal), gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedDay(), "bottom").IntVal})}, gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(&Constructor_Data_Date_Date{1, gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedYear(), "top").IntVal, uint32(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedMonth(), "top").IntVal), gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedDay(), "top").IntVal})})
+return Get_Data_Date_ordDate()
+}), gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(&Constructor_Data_Date_Date{1, -271820, 1908470532, 1})}, gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(&Constructor_Data_Date_Date{1, 275759, 3889233761, 31})})
 	})
 	return cache_Data_Date_boundedDate
 }
@@ -1297,351 +1814,170 @@ __local_var_2_0 := gopurs_runtime.Apply(Get_Partial_Unsafe__unsafePartial(), gop
 return Get_Data_Maybe_fromJust__1577979644()
 }))
 _ = __local_var_2_0
-var __t2 int64
+// TAST (Let): unsafeDay_3_1 -> gopurs_runtime.Value
+unsafeDay_3_1 := gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t5 *Constructor_Data_Maybe_Just
 {
-if (m_1 == 1908470532) {
-__t2 = gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(31))).IntVal
+var __t2 bool
+{
+if (x_3.IntVal) < (1) {
+__t2 = false
 goto end_branch_2
 } else {
 
 }
 }
 {
-if (m_1 == 2455627378) {
-var __t1 int64
-{
-if Call_Data_Date_isLeapYear(y_0) {
-__t1 = gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(29))).IntVal
-goto end_branch_1
-} else {
-
-}
-}
-{
-__t1 = gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(28))).IntVal
-}
-end_branch_1:
-__t2 = __t1
-goto end_branch_2
-} else {
-
-}
-}
-{
-if (m_1 == 4162469099) {
-__t2 = gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(31))).IntVal
-goto end_branch_2
-} else {
-
-}
-}
-{
-if (m_1 == 1692989816) {
-__t2 = gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(30))).IntVal
-goto end_branch_2
-} else {
-
-}
-}
-{
-if (m_1 == 330658827) {
-__t2 = gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(31))).IntVal
-goto end_branch_2
-} else {
-
-}
-}
-{
-if (m_1 == 4067355978) {
-__t2 = gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(30))).IntVal
-goto end_branch_2
-} else {
-
-}
-}
-{
-if (m_1 == 2276710548) {
-__t2 = gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(31))).IntVal
-goto end_branch_2
-} else {
-
-}
-}
-{
-if (m_1 == 243771071) {
-__t2 = gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(31))).IntVal
-goto end_branch_2
-} else {
-
-}
-}
-{
-if (m_1 == 215731793) {
-__t2 = gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(30))).IntVal
-goto end_branch_2
-} else {
-
-}
-}
-{
-if (m_1 == 8639228) {
-__t2 = gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(31))).IntVal
-goto end_branch_2
-} else {
-
-}
-}
-{
-if (m_1 == 49471444) {
-__t2 = gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(30))).IntVal
-goto end_branch_2
-} else {
-
-}
-}
-{
-if (m_1 == 3889233761) {
-__t2 = gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int(31))).IntVal
-goto end_branch_2
-} else {
-
-}
-}
-{
-__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
+__t2 = true
 }
 end_branch_2:
-return __t2
-}
+var __t_and_4 bool = false
+if __t2 {
 
-func Call_Data_Date_pred(v_0_loop *Constructor_Data_Date_Date) *Constructor_Data_Maybe_Just {
-var v_0 *Constructor_Data_Date_Date = v_0_loop
-_ = v_0
-// TAST (Let): pm_1_0 -> *Constructor_Data_Maybe_Just
-pm_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumMonth(), "toEnum"), gopurs_runtime.Int((gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumMonth(), "fromEnum"), gopurs_runtime.Value{Type: 9, IntVal: int64((v_0).V1), UnsafePtr: nil}).IntVal) - (1))))
-_ = pm_1_0
-// TAST (Let): pd_2_1 -> *Constructor_Data_Maybe_Just
-pd_2_1 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int((gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "fromEnum"), gopurs_runtime.Int((v_0).V2)).IntVal) - (1))))
-_ = pd_2_1
-var __t5 uint32
+var __t3 bool
 {
-var __t3 gopurs_runtime.Value
-{
-if (pd_2_1 == nil) {
-__t3 = gopurs_runtime.Bool(true)
+if (x_3.IntVal) > (31) {
+__t3 = false
 goto end_branch_3
 } else {
 
 }
 }
 {
-if (pd_2_1 != nil) {
-__t3 = gopurs_runtime.Bool(false)
-goto end_branch_3
-} else {
-
-}
-}
-{
-__t3 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t3 = true
 }
 end_branch_3:
-if (__t3.IntVal) != (0) {
-var __t4 gopurs_runtime.Value
-{
-if (pm_1_0 == nil) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: int64(3889233761), UnsafePtr: nil}
-goto end_branch_4
-} else {
-
+__t_and_4 = __t3
 }
-}
-{
-if (pm_1_0 != nil) {
-__t4 = (pm_1_0).V0
-goto end_branch_4
-} else {
-
-}
-}
-{
-__t4 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_4:
-__t5 = uint32(__t4.IntVal)
+if __t_and_4 {
+__t5 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Int(x_3.IntVal)}
 goto end_branch_5
 } else {
 
 }
 }
 {
-__t5 = (v_0).V1
+__t5 = (*Constructor_Data_Maybe_Just)(nil)
 }
 end_branch_5:
-// TAST (Let): m_prime_3_2 -> gopurs_runtime.Value
-var m_prime_3_2 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(__t5), UnsafePtr: nil}
-// TAST (Let): l_4_6 -> gopurs_runtime.Value
-var l_4_6 gopurs_runtime.Value = gopurs_runtime.Int(Call_Data_Date_lastDayOfMonth((v_0).V0, uint32(m_prime_3_2.IntVal)))
-var __t13 *Constructor_Data_Maybe_Just
+return gopurs_runtime.Apply(__local_var_2_0, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t5)})
+})
+_ = unsafeDay_3_1
+var __t7 int64
 {
-var __t10 gopurs_runtime.Value
-{
-if (pd_2_1 == nil) {
-__t10 = gopurs_runtime.Bool(true)
-goto end_branch_10
+if (m_1 == 1908470532) {
+__t7 = gopurs_runtime.Apply(unsafeDay_3_1, gopurs_runtime.Int(31)).IntVal
+goto end_branch_7
 } else {
 
 }
 }
 {
-if (pd_2_1 != nil) {
-__t10 = gopurs_runtime.Bool(false)
-goto end_branch_10
+if (m_1 == 2455627378) {
+var __t6 int64
+{
+if Call_Data_Date_isLeapYear(y_0) {
+__t6 = gopurs_runtime.Apply(unsafeDay_3_1, gopurs_runtime.Int(29)).IntVal
+goto end_branch_6
 } else {
 
 }
 }
 {
-__t10 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t6 = gopurs_runtime.Apply(unsafeDay_3_1, gopurs_runtime.Int(28)).IntVal
 }
-end_branch_10:
-var __t_and_12 bool = false
-if (__t10.IntVal) != (0) {
-
-var __t11 gopurs_runtime.Value
-{
-if (pm_1_0 == nil) {
-__t11 = gopurs_runtime.Bool(true)
-goto end_branch_11
+end_branch_6:
+__t7 = __t6
+goto end_branch_7
 } else {
 
 }
 }
 {
-if (pm_1_0 != nil) {
-__t11 = gopurs_runtime.Bool(false)
-goto end_branch_11
+if (m_1 == 4162469099) {
+__t7 = gopurs_runtime.Apply(unsafeDay_3_1, gopurs_runtime.Int(31)).IntVal
+goto end_branch_7
 } else {
 
 }
 }
 {
-__t11 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_11:
-__t_and_12 = (__t11.IntVal) != (0)
-}
-if __t_and_12 {
-__t13 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int((gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "fromEnum"), gopurs_runtime.Int((v_0).V0)).IntVal) - (1)))))})
-goto end_branch_13
+if (m_1 == 1692989816) {
+__t7 = gopurs_runtime.Apply(unsafeDay_3_1, gopurs_runtime.Int(30)).IntVal
+goto end_branch_7
 } else {
 
 }
 }
 {
-__t13 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Int((v_0).V0)}
-}
-end_branch_13:
-// TAST (Let): __local_var_5_9 -> *Constructor_Data_Maybe_Just
-var __local_var_5_9 *Constructor_Data_Maybe_Just = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t13)})
-var __t14 *Constructor_Data_Maybe_Just
-{
-if (__local_var_5_9 != nil) {
-__t14 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Apply(Get_Data_Date_Date(), gopurs_runtime.Int((__local_var_5_9).V0.IntVal))}
-goto end_branch_14
+if (m_1 == 330658827) {
+__t7 = gopurs_runtime.Apply(unsafeDay_3_1, gopurs_runtime.Int(31)).IntVal
+goto end_branch_7
 } else {
 
 }
 }
 {
-__t14 = (*Constructor_Data_Maybe_Just)(nil)
-}
-end_branch_14:
-// TAST (Let): __local_var_5_8 -> *Constructor_Data_Maybe_Just
-var __local_var_5_8 *Constructor_Data_Maybe_Just = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t14)})
-var __t15 *Constructor_Data_Maybe_Just
-{
-if (__local_var_5_8 != nil) {
-__t15 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Maybe_functorMaybe(), "map"), (__local_var_5_8).V0, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(m_prime_3_2.IntVal)), UnsafePtr: nil}})}))
-goto end_branch_15
+if (m_1 == 4067355978) {
+__t7 = gopurs_runtime.Apply(unsafeDay_3_1, gopurs_runtime.Int(30)).IntVal
+goto end_branch_7
 } else {
 
 }
 }
 {
-if (__local_var_5_8 == nil) {
-__t15 = (*Constructor_Data_Maybe_Just)(nil)
-goto end_branch_15
+if (m_1 == 2276710548) {
+__t7 = gopurs_runtime.Apply(unsafeDay_3_1, gopurs_runtime.Int(31)).IntVal
+goto end_branch_7
 } else {
 
 }
 }
 {
-__t15 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_runtime.Value { panic("Failed pattern match") }())
-}
-end_branch_15:
-// TAST (Let): __local_var_5_7 -> *Constructor_Data_Maybe_Just
-__local_var_5_7 := __t15
-_ = __local_var_5_7
-var __t18 *Constructor_Data_Maybe_Just
-{
-var __t17 gopurs_runtime.Value
-{
-if (pd_2_1 == nil) {
-__t17 = gopurs_runtime.Bool(true)
-goto end_branch_17
+if (m_1 == 243771071) {
+__t7 = gopurs_runtime.Apply(unsafeDay_3_1, gopurs_runtime.Int(31)).IntVal
+goto end_branch_7
 } else {
 
 }
 }
 {
-if (pd_2_1 != nil) {
-__t17 = gopurs_runtime.Bool(false)
-goto end_branch_17
+if (m_1 == 215731793) {
+__t7 = gopurs_runtime.Apply(unsafeDay_3_1, gopurs_runtime.Int(30)).IntVal
+goto end_branch_7
 } else {
 
 }
 }
 {
-__t17 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_17:
-if (__t17.IntVal) != (0) {
-__t18 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Int(l_4_6.IntVal)})})
-goto end_branch_18
+if (m_1 == 8639228) {
+__t7 = gopurs_runtime.Apply(unsafeDay_3_1, gopurs_runtime.Int(31)).IntVal
+goto end_branch_7
 } else {
 
 }
 }
 {
-__t18 = pd_2_1
-}
-end_branch_18:
-// TAST (Let): __local_var_6_16 -> *Constructor_Data_Maybe_Just
-__local_var_6_16 := __t18
-_ = __local_var_6_16
-var __t19 *Constructor_Data_Maybe_Just
-{
-if (__local_var_5_7 != nil) {
-__t19 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Maybe_functorMaybe(), "map"), (__local_var_5_7).V0, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__local_var_6_16)}))
-goto end_branch_19
+if (m_1 == 49471444) {
+__t7 = gopurs_runtime.Apply(unsafeDay_3_1, gopurs_runtime.Int(30)).IntVal
+goto end_branch_7
 } else {
 
 }
 }
 {
-if (__local_var_5_7 == nil) {
-__t19 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
-goto end_branch_19
+if (m_1 == 3889233761) {
+__t7 = gopurs_runtime.Apply(unsafeDay_3_1, gopurs_runtime.Int(31)).IntVal
+goto end_branch_7
 } else {
 
 }
 }
 {
-__t19 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_runtime.Value { panic("Failed pattern match") }())
+__t7 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
 }
-end_branch_19:
-return __t19
+end_branch_7:
+return __t7
 }
 
 func Call_Data_Date_diff(dictDuration_0_loop *Constructor_Data_Time_Duration_Duration, v_1_loop *Constructor_Data_Date_Date, v1_2_loop *Constructor_Data_Date_Date) gopurs_runtime.Value {
@@ -2053,11 +2389,11 @@ var adj_2_0_0 gopurs_runtime.Value
 _ = adj_2_0_0
 adj_2_0_0 = gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v2_4 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t38 *Constructor_Data_Maybe_Just
+var __t37 *Constructor_Data_Maybe_Just
 {
 if (v1_3.IntVal) == (0) {
-__t38 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Date_Date](v2_4))}})})
-goto end_branch_38
+__t37 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Date_Date](v2_4))}}
+goto end_branch_37
 } else {
 
 }
@@ -2082,398 +2418,438 @@ end_branch_3:
 // TAST (Let): low_6_2 -> bool
 low_6_2 := __t3
 _ = low_6_2
-var __t7 uint32
+var __t22 uint32
 {
 if low_6_2 {
-// TAST (Let): __local_var_7_5 -> *Constructor_Data_Maybe_Just
-__local_var_7_5 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumMonth(), "toEnum"), gopurs_runtime.Int((gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumMonth(), "fromEnum"), gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V1), UnsafePtr: nil}).IntVal) - (1))))
-_ = __local_var_7_5
-var __t6 gopurs_runtime.Value
+var __t19 int64
 {
-if (__local_var_7_5 == nil) {
-__t6 = gopurs_runtime.Value{Type: 9, IntVal: int64(3889233761), UnsafePtr: nil}
-goto end_branch_6
-} else {
-
-}
-}
-{
-if (__local_var_7_5 != nil) {
-__t6 = (__local_var_7_5).V0
-goto end_branch_6
-} else {
-
-}
-}
-{
-__t6 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
-}
-end_branch_6:
-__t7 = uint32(__t6.IntVal)
-goto end_branch_7
-} else {
-
-}
-}
-{
-__t7 = (*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V1
-}
-end_branch_7:
-// TAST (Let): l_7_4 -> gopurs_runtime.Value
-var l_7_4 gopurs_runtime.Value = gopurs_runtime.Int(Call_Data_Date_lastDayOfMonth((*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V0, __t7))
-var __t9 bool
-{
-if (j_5_1) > (l_7_4.IntVal) {
-__t9 = true
-goto end_branch_9
-} else {
-
-}
-}
-{
-__t9 = false
-}
-end_branch_9:
-// TAST (Let): hi_8_8 -> bool
-hi_8_8 := __t9
-_ = hi_8_8
-var __t36 *Constructor_Data_Maybe_Just
-{
-if low_6_2 {
-// TAST (Let): __local_var_9_13 -> gopurs_runtime.Value
-__local_var_9_13 := gopurs_runtime.Apply2(Get_Data_Date_Date(), gopurs_runtime.Int((*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V0), gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V1), UnsafePtr: nil})
-_ = __local_var_9_13
-// TAST (Let): __local_var_10_14 -> *Constructor_Data_Maybe_Just
-__local_var_10_14 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(Get_Data_Enum_toEnum__2099864294(), gopurs_runtime.Int(1)))
-_ = __local_var_10_14
-var __t15 *Constructor_Data_Maybe_Just
-{
-if (__local_var_10_14 != nil) {
-__t15 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Date_Date](gopurs_runtime.Apply(__local_var_9_13, gopurs_runtime.Int((__local_var_10_14).V0.IntVal))))}}
-goto end_branch_15
-} else {
-
-}
-}
-{
-__t15 = (*Constructor_Data_Maybe_Just)(nil)
-}
-end_branch_15:
-__t36 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Maybe_bindMaybe(), "bind"), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t15)}, gopurs_runtime.Func(func(v_9 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): pm_10_16 -> *Constructor_Data_Maybe_Just
-pm_10_16 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumMonth(), "toEnum"), gopurs_runtime.Int((gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumMonth(), "fromEnum"), gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v_9.UnsafePtr).V1), UnsafePtr: nil}).IntVal) - (1))))
-_ = pm_10_16
-// TAST (Let): pd_11_17 -> *Constructor_Data_Maybe_Just
-pd_11_17 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int((gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "fromEnum"), gopurs_runtime.Int((*Constructor_Data_Date_Date)(v_9.UnsafePtr).V2)).IntVal) - (1))))
-_ = pd_11_17
-var __t21 uint32
-{
-var __t19 gopurs_runtime.Value
-{
-if (pd_11_17 == nil) {
-__t19 = gopurs_runtime.Bool(true)
+var __t_tag_7 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_7.IntVal) == 1908470532) {
+__t19 = 1
 goto end_branch_19
 } else {
 
 }
 }
 {
-if (pd_11_17 != nil) {
-__t19 = gopurs_runtime.Bool(false)
+var __t_tag_8 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_8.IntVal) == 2455627378) {
+__t19 = 2
 goto end_branch_19
 } else {
 
 }
 }
 {
-__t19 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+var __t_tag_9 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_9.IntVal) == 4162469099) {
+__t19 = 3
+goto end_branch_19
+} else {
+
+}
+}
+{
+var __t_tag_10 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_10.IntVal) == 1692989816) {
+__t19 = 4
+goto end_branch_19
+} else {
+
+}
+}
+{
+var __t_tag_11 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_11.IntVal) == 330658827) {
+__t19 = 5
+goto end_branch_19
+} else {
+
+}
+}
+{
+var __t_tag_12 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_12.IntVal) == 4067355978) {
+__t19 = 6
+goto end_branch_19
+} else {
+
+}
+}
+{
+var __t_tag_13 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_13.IntVal) == 2276710548) {
+__t19 = 7
+goto end_branch_19
+} else {
+
+}
+}
+{
+var __t_tag_14 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_14.IntVal) == 243771071) {
+__t19 = 8
+goto end_branch_19
+} else {
+
+}
+}
+{
+var __t_tag_15 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_15.IntVal) == 215731793) {
+__t19 = 9
+goto end_branch_19
+} else {
+
+}
+}
+{
+var __t_tag_16 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_16.IntVal) == 8639228) {
+__t19 = 10
+goto end_branch_19
+} else {
+
+}
+}
+{
+var __t_tag_17 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_17.IntVal) == 49471444) {
+__t19 = 11
+goto end_branch_19
+} else {
+
+}
+}
+{
+var __t_tag_18 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V1), UnsafePtr: nil}
+if (uint32(__t_tag_18.IntVal) == 3889233761) {
+__t19 = 12
+goto end_branch_19
+} else {
+
+}
+}
+{
+__t19 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
 }
 end_branch_19:
-if (__t19.IntVal) != (0) {
-var __t20 gopurs_runtime.Value
+// TAST (Let): __local_var_7_6 -> gopurs_runtime.Value
+__local_var_7_6 := gopurs_runtime.Int((gopurs_runtime.Int(__t19).IntVal) - (1))
+_ = __local_var_7_6
+var __t20 *Constructor_Data_Maybe_Just
 {
-if (pm_10_16 == nil) {
-__t20 = gopurs_runtime.Value{Type: 9, IntVal: int64(3889233761), UnsafePtr: nil}
+if (__local_var_7_6.IntVal) == (1) {
+__t20 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(1908470532), UnsafePtr: nil}}
 goto end_branch_20
 } else {
 
 }
 }
 {
-if (pm_10_16 != nil) {
-__t20 = (pm_10_16).V0
+if (__local_var_7_6.IntVal) == (2) {
+__t20 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(2455627378), UnsafePtr: nil}}
 goto end_branch_20
 } else {
 
 }
 }
 {
-__t20 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+if (__local_var_7_6.IntVal) == (3) {
+__t20 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(4162469099), UnsafePtr: nil}}
+goto end_branch_20
+} else {
+
+}
+}
+{
+if (__local_var_7_6.IntVal) == (4) {
+__t20 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(1692989816), UnsafePtr: nil}}
+goto end_branch_20
+} else {
+
+}
+}
+{
+if (__local_var_7_6.IntVal) == (5) {
+__t20 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(330658827), UnsafePtr: nil}}
+goto end_branch_20
+} else {
+
+}
+}
+{
+if (__local_var_7_6.IntVal) == (6) {
+__t20 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(4067355978), UnsafePtr: nil}}
+goto end_branch_20
+} else {
+
+}
+}
+{
+if (__local_var_7_6.IntVal) == (7) {
+__t20 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(2276710548), UnsafePtr: nil}}
+goto end_branch_20
+} else {
+
+}
+}
+{
+if (__local_var_7_6.IntVal) == (8) {
+__t20 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(243771071), UnsafePtr: nil}}
+goto end_branch_20
+} else {
+
+}
+}
+{
+if (__local_var_7_6.IntVal) == (9) {
+__t20 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(215731793), UnsafePtr: nil}}
+goto end_branch_20
+} else {
+
+}
+}
+{
+if (__local_var_7_6.IntVal) == (10) {
+__t20 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(8639228), UnsafePtr: nil}}
+goto end_branch_20
+} else {
+
+}
+}
+{
+if (__local_var_7_6.IntVal) == (11) {
+__t20 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(49471444), UnsafePtr: nil}}
+goto end_branch_20
+} else {
+
+}
+}
+{
+if (__local_var_7_6.IntVal) == (12) {
+__t20 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(3889233761), UnsafePtr: nil}}
+goto end_branch_20
+} else {
+
+}
+}
+{
+__t20 = (*Constructor_Data_Maybe_Just)(nil)
 }
 end_branch_20:
-__t21 = uint32(__t20.IntVal)
+// TAST (Let): __local_var_7_5 -> *Constructor_Data_Maybe_Just
+var __local_var_7_5 *Constructor_Data_Maybe_Just = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t20)})
+var __t21 gopurs_runtime.Value
+{
+if (__local_var_7_5 == nil) {
+__t21 = gopurs_runtime.Value{Type: 9, IntVal: int64(3889233761), UnsafePtr: nil}
 goto end_branch_21
 } else {
 
 }
 }
 {
-__t21 = (*Constructor_Data_Date_Date)(v_9.UnsafePtr).V1
+if (__local_var_7_5 != nil) {
+__t21 = (__local_var_7_5).V0
+goto end_branch_21
+} else {
+
+}
+}
+{
+__t21 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_21:
-// TAST (Let): m_prime_12_18 -> gopurs_runtime.Value
-var m_prime_12_18 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: int64(__t21), UnsafePtr: nil}
-// TAST (Let): l_13_22 -> gopurs_runtime.Value
-var l_13_22 gopurs_runtime.Value = gopurs_runtime.Int(Call_Data_Date_lastDayOfMonth((*Constructor_Data_Date_Date)(v_9.UnsafePtr).V0, uint32(m_prime_12_18.IntVal)))
-var __t29 *Constructor_Data_Maybe_Just
-{
-var __t26 gopurs_runtime.Value
-{
-if (pd_11_17 == nil) {
-__t26 = gopurs_runtime.Bool(true)
-goto end_branch_26
+__t22 = uint32(__t21.IntVal)
+goto end_branch_22
 } else {
 
 }
 }
 {
-if (pd_11_17 != nil) {
-__t26 = gopurs_runtime.Bool(false)
-goto end_branch_26
+__t22 = (*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V1
+}
+end_branch_22:
+// TAST (Let): l_7_4 -> gopurs_runtime.Value
+var l_7_4 gopurs_runtime.Value = gopurs_runtime.Int(Call_Data_Date_lastDayOfMonth((*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V0, __t22))
+var __t24 bool
+{
+if (j_5_1) > (l_7_4.IntVal) {
+__t24 = true
+goto end_branch_24
 } else {
 
 }
 }
 {
-__t26 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t24 = false
 }
-end_branch_26:
-var __t_and_28 bool = false
-if (__t26.IntVal) != (0) {
-
-var __t27 gopurs_runtime.Value
+end_branch_24:
+// TAST (Let): hi_8_23 -> bool
+hi_8_23 := __t24
+_ = hi_8_23
+var __t33 *Constructor_Data_Maybe_Just
 {
-if (pm_10_16 == nil) {
-__t27 = gopurs_runtime.Bool(true)
-goto end_branch_27
+if low_6_2 {
+__t33 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_enumDate(), "pred"), gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(&Constructor_Data_Date_Date{1, (*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V0, (*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V1, 1})}))
+goto end_branch_33
 } else {
 
 }
 }
 {
-if (pm_10_16 != nil) {
-__t27 = gopurs_runtime.Bool(false)
-goto end_branch_27
+if hi_8_23 {
+__t33 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(Get_Data_Enum_succ__2858180024(), gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(&Constructor_Data_Date_Date{1, (*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V0, (*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V1, l_7_4.IntVal})})))})
+goto end_branch_33
 } else {
 
 }
 }
 {
-__t27 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+// TAST (Let): __local_var_9_26 -> gopurs_runtime.Value
+__local_var_9_26 := gopurs_runtime.Apply2(Get_Data_Date_Date(), gopurs_runtime.Int((*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V0), gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V1), UnsafePtr: nil})
+_ = __local_var_9_26
+var __t31 *Constructor_Data_Maybe_Just
+{
+var __t28 bool
+{
+if (gopurs_runtime.Int(j_5_1).IntVal) < (gopurs_runtime.Int(1).IntVal) {
+__t28 = false
+goto end_branch_28
+} else {
+
 }
-end_branch_27:
-__t_and_28 = (__t27.IntVal) != (0)
 }
-if __t_and_28 {
-__t29 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "toEnum"), gopurs_runtime.Int((gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumDay(), "fromEnum"), gopurs_runtime.Int((*Constructor_Data_Date_Date)(v_9.UnsafePtr).V0)).IntVal) - (1)))))})
+{
+__t28 = true
+}
+end_branch_28:
+var __t_and_30 bool = false
+if __t28 {
+
+var __t29 bool
+{
+if (gopurs_runtime.Int(j_5_1).IntVal) > (gopurs_runtime.Int(31).IntVal) {
+__t29 = false
 goto end_branch_29
 } else {
 
 }
 }
 {
-__t29 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Int((*Constructor_Data_Date_Date)(v_9.UnsafePtr).V0)}
+__t29 = true
 }
 end_branch_29:
-// TAST (Let): __local_var_14_25 -> *Constructor_Data_Maybe_Just
-var __local_var_14_25 *Constructor_Data_Maybe_Just = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t29)})
-var __t30 *Constructor_Data_Maybe_Just
-{
-if (__local_var_14_25 != nil) {
-__t30 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Apply(Get_Data_Date_Date(), gopurs_runtime.Int((__local_var_14_25).V0.IntVal))}
-goto end_branch_30
-} else {
-
+__t_and_30 = __t29
 }
-}
-{
-__t30 = (*Constructor_Data_Maybe_Just)(nil)
-}
-end_branch_30:
-// TAST (Let): __local_var_14_24 -> *Constructor_Data_Maybe_Just
-var __local_var_14_24 *Constructor_Data_Maybe_Just = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t30)})
-var __t31 *Constructor_Data_Maybe_Just
-{
-if (__local_var_14_24 != nil) {
-__t31 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Maybe_functorMaybe(), "map"), (__local_var_14_24).V0, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(m_prime_12_18.IntVal)), UnsafePtr: nil}})}))
+if __t_and_30 {
+__t31 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Int(j_5_1)}
 goto end_branch_31
 } else {
 
 }
 }
 {
-if (__local_var_14_24 == nil) {
 __t31 = (*Constructor_Data_Maybe_Just)(nil)
-goto end_branch_31
-} else {
-
-}
-}
-{
-__t31 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_runtime.Value { panic("Failed pattern match") }())
 }
 end_branch_31:
-// TAST (Let): __local_var_14_23 -> *Constructor_Data_Maybe_Just
-__local_var_14_23 := __t31
-_ = __local_var_14_23
-var __t34 *Constructor_Data_Maybe_Just
+// TAST (Let): __local_var_10_27 -> *Constructor_Data_Maybe_Just
+var __local_var_10_27 *Constructor_Data_Maybe_Just = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t31)})
+var __t32 *Constructor_Data_Maybe_Just
 {
-var __t33 gopurs_runtime.Value
-{
-if (pd_11_17 == nil) {
-__t33 = gopurs_runtime.Bool(true)
-goto end_branch_33
+if (__local_var_10_27 != nil) {
+__t32 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Date_Date](gopurs_runtime.Apply(__local_var_9_26, gopurs_runtime.Int((__local_var_10_27).V0.IntVal))))}}
+goto end_branch_32
 } else {
 
 }
 }
 {
-if (pd_11_17 != nil) {
-__t33 = gopurs_runtime.Bool(false)
-goto end_branch_33
-} else {
-
+__t32 = (*Constructor_Data_Maybe_Just)(nil)
 }
-}
-{
-__t33 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+end_branch_32:
+__t33 = __t32
 }
 end_branch_33:
-if (__t33.IntVal) != (0) {
-__t34 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Int(l_13_22.IntVal)})})
-goto end_branch_34
-} else {
-
-}
-}
-{
-__t34 = pd_11_17
-}
-end_branch_34:
-// TAST (Let): __local_var_15_32 -> *Constructor_Data_Maybe_Just
-__local_var_15_32 := __t34
-_ = __local_var_15_32
-var __t35 *Constructor_Data_Maybe_Just
-{
-if (__local_var_14_23 != nil) {
-__t35 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Maybe_functorMaybe(), "map"), (__local_var_14_23).V0, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__local_var_15_32)}))
-goto end_branch_35
-} else {
-
-}
-}
-{
-if (__local_var_14_23 == nil) {
-__t35 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
-goto end_branch_35
-} else {
-
-}
-}
-{
-__t35 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_runtime.Value { panic("Failed pattern match") }())
-}
-end_branch_35:
-return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t35)}
-}))))})
-goto end_branch_36
-} else {
-
-}
-}
-{
-if hi_8_8 {
-__t36 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(Get_Data_Enum_succ__2858180024(), gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(&Constructor_Data_Date_Date{1, (*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V0, (*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V1, l_7_4.IntVal})})))})
-goto end_branch_36
-} else {
-
-}
-}
-{
-// TAST (Let): __local_var_9_10 -> gopurs_runtime.Value
-__local_var_9_10 := gopurs_runtime.Apply2(Get_Data_Date_Date(), gopurs_runtime.Int((*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V0), gopurs_runtime.Value{Type: 9, IntVal: int64((*Constructor_Data_Date_Date)(v2_4.UnsafePtr).V1), UnsafePtr: nil})
-_ = __local_var_9_10
-// TAST (Let): __local_var_10_11 -> *Constructor_Data_Maybe_Just
-__local_var_10_11 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(Get_Data_Enum_toEnum__2099864294(), gopurs_runtime.Int(j_5_1)))
-_ = __local_var_10_11
-var __t12 *Constructor_Data_Maybe_Just
-{
-if (__local_var_10_11 != nil) {
-__t12 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Date_Date](gopurs_runtime.Apply(__local_var_9_10, gopurs_runtime.Int((__local_var_10_11).V0.IntVal))))}}
-goto end_branch_12
-} else {
-
-}
-}
-{
-__t12 = (*Constructor_Data_Maybe_Just)(nil)
-}
-end_branch_12:
-__t36 = __t12
-}
-end_branch_36:
-var __t37 int64
+// TAST (Let): __local_var_9_25 -> *Constructor_Data_Maybe_Just
+var __local_var_9_25 *Constructor_Data_Maybe_Just = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t33)})
+var __t35 int64
 {
 if low_6_2 {
-__t37 = j_5_1
-goto end_branch_37
+__t35 = j_5_1
+goto end_branch_35
 } else {
 
 }
 }
 {
-if hi_8_8 {
-__t37 = ((j_5_1) - (l_7_4.IntVal)) - (1)
-goto end_branch_37
+if hi_8_23 {
+__t35 = ((j_5_1) - (l_7_4.IntVal)) - (1)
+goto end_branch_35
 } else {
 
 }
 }
 {
-__t37 = 0
+__t35 = 0
+}
+end_branch_35:
+// TAST (Let): __local_var_10_34 -> gopurs_runtime.Value
+__local_var_10_34 := gopurs_runtime.Apply(adj_2_0_0, gopurs_runtime.Int(__t35))
+_ = __local_var_10_34
+var __t36 *Constructor_Data_Maybe_Just
+{
+if (__local_var_9_25 != nil) {
+__t36 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(__local_var_10_34, (__local_var_9_25).V0))
+goto end_branch_36
+} else {
+
+}
+}
+{
+if (__local_var_9_25 == nil) {
+__t36 = (*Constructor_Data_Maybe_Just)(nil)
+goto end_branch_36
+} else {
+
+}
+}
+{
+__t36 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_runtime.Value { panic("Failed pattern match") }())
+}
+end_branch_36:
+__t37 = __t36
 }
 end_branch_37:
-__t38 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Maybe_bindMaybe(), "bind"), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t36)}, gopurs_runtime.Apply(adj_2_0_0, gopurs_runtime.Int(__t37))))
-}
-end_branch_38:
-return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t38)}
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t37)}
 })
 })
-// TAST (Let): __local_var_3_39 -> *Constructor_Data_Maybe_Just
-__local_var_3_39 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(Get_Data_Int_fromNumber(), gopurs_runtime.Float(v_0)))
-_ = __local_var_3_39
-var __t40 *Constructor_Data_Maybe_Just
+// TAST (Let): __local_var_3_38 -> *Constructor_Data_Maybe_Just
+__local_var_3_38 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(Get_Data_Int_fromNumber(), gopurs_runtime.Float(v_0)))
+_ = __local_var_3_38
+var __t39 *Constructor_Data_Maybe_Just
 {
-if (__local_var_3_39 != nil) {
-__t40 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(adj_2_0_0, gopurs_runtime.Int((__local_var_3_39).V0.IntVal), gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(date_1)}))
-goto end_branch_40
+if (__local_var_3_38 != nil) {
+__t39 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(adj_2_0_0, gopurs_runtime.Int((__local_var_3_38).V0.IntVal), gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(date_1)}))
+goto end_branch_39
 } else {
 
 }
 }
 {
-if (__local_var_3_39 == nil) {
-__t40 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
-goto end_branch_40
+if (__local_var_3_38 == nil) {
+__t39 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
+goto end_branch_39
 } else {
 
 }
 }
 {
-__t40 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_runtime.Value { panic("Failed pattern match") }())
+__t39 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_runtime.Value { panic("Failed pattern match") }())
 }
-end_branch_40:
-return __t40
+end_branch_39:
+return __t39
 }
 
 func Get_Data_Date_calcDiff() gopurs_runtime.Value {

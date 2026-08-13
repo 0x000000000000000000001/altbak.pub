@@ -55,9 +55,7 @@ var once_Data_DivisionRing_divisionringNumber sync.Once
 func Get_Data_DivisionRing_divisionringNumber() gopurs_runtime.Value {
 	once_Data_DivisionRing_divisionringNumber.Do(func() {
 		cache_Data_DivisionRing_divisionringNumber = gopurs_runtime.RecordDict2("Ring0", "recip", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("Semiring0", "sub", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", Get_Data_Semiring_numAdd(), Get_Data_Semiring_numMul(), gopurs_runtime.Float(1.0), gopurs_runtime.Float(0.0))
-}), Get_Data_Ring_numSub())
+return Get_Data_Ring_ringNumber()
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Float((1.0) / (x_0.FloatVal()))
 }))

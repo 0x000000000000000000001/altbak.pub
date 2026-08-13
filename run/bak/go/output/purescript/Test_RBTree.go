@@ -156,7 +156,7 @@ _ = __local_var_0_0
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
 _ = __local_var_1_1
-return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Show_showInt(), "show"), gopurs_runtime.Int(Call_Test_RBTree_depth(Call_Test_RBTree_buildTree(__local_var_1_1.IntVal, (*Constructor_Test_RBTree_T)(nil))))).StrVal())), gopurs_runtime.Value{})
+return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(Call_Test_RBTree_depth(Call_Test_RBTree_buildTree(__local_var_1_1.IntVal, (*Constructor_Test_RBTree_T)(nil))))).StrVal())), gopurs_runtime.Value{})
 })
 }()
 	})

@@ -98,9 +98,7 @@ var cache_Data_Time_Component_ordSecond gopurs_runtime.Value
 var once_Data_Time_Component_ordSecond sync.Once
 func Get_Data_Time_Component_ordSecond() gopurs_runtime.Value {
 	once_Data_Time_Component_ordSecond.Do(func() {
-		cache_Data_Time_Component_ordSecond = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("eq", Get_Data_Eq_eqIntImpl())
-}), gopurs_runtime.Apply3(Get_Data_Ord_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}))
+		cache_Data_Time_Component_ordSecond = Get_Data_Ord_ordInt()
 	})
 	return cache_Data_Time_Component_ordSecond
 }
@@ -109,9 +107,7 @@ var cache_Data_Time_Component_ordMinute gopurs_runtime.Value
 var once_Data_Time_Component_ordMinute sync.Once
 func Get_Data_Time_Component_ordMinute() gopurs_runtime.Value {
 	once_Data_Time_Component_ordMinute.Do(func() {
-		cache_Data_Time_Component_ordMinute = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("eq", Get_Data_Eq_eqIntImpl())
-}), gopurs_runtime.Apply3(Get_Data_Ord_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}))
+		cache_Data_Time_Component_ordMinute = Get_Data_Ord_ordInt()
 	})
 	return cache_Data_Time_Component_ordMinute
 }
@@ -120,9 +116,7 @@ var cache_Data_Time_Component_ordMillisecond gopurs_runtime.Value
 var once_Data_Time_Component_ordMillisecond sync.Once
 func Get_Data_Time_Component_ordMillisecond() gopurs_runtime.Value {
 	once_Data_Time_Component_ordMillisecond.Do(func() {
-		cache_Data_Time_Component_ordMillisecond = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("eq", Get_Data_Eq_eqIntImpl())
-}), gopurs_runtime.Apply3(Get_Data_Ord_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}))
+		cache_Data_Time_Component_ordMillisecond = Get_Data_Ord_ordInt()
 	})
 	return cache_Data_Time_Component_ordMillisecond
 }
@@ -131,9 +125,7 @@ var cache_Data_Time_Component_ordHour gopurs_runtime.Value
 var once_Data_Time_Component_ordHour sync.Once
 func Get_Data_Time_Component_ordHour() gopurs_runtime.Value {
 	once_Data_Time_Component_ordHour.Do(func() {
-		cache_Data_Time_Component_ordHour = gopurs_runtime.RecordDict2("Eq0", "compare", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict1("eq", Get_Data_Eq_eqIntImpl())
-}), gopurs_runtime.Apply3(Get_Data_Ord_ordIntImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}))
+		cache_Data_Time_Component_ordHour = Get_Data_Ord_ordInt()
 	})
 	return cache_Data_Time_Component_ordHour
 }
@@ -142,7 +134,7 @@ var cache_Data_Time_Component_eqSecond gopurs_runtime.Value
 var once_Data_Time_Component_eqSecond sync.Once
 func Get_Data_Time_Component_eqSecond() gopurs_runtime.Value {
 	once_Data_Time_Component_eqSecond.Do(func() {
-		cache_Data_Time_Component_eqSecond = gopurs_runtime.RecordDict1("eq", Get_Data_Eq_eqIntImpl())
+		cache_Data_Time_Component_eqSecond = Get_Data_Eq_eqInt()
 	})
 	return cache_Data_Time_Component_eqSecond
 }
@@ -151,7 +143,7 @@ var cache_Data_Time_Component_eqMinute gopurs_runtime.Value
 var once_Data_Time_Component_eqMinute sync.Once
 func Get_Data_Time_Component_eqMinute() gopurs_runtime.Value {
 	once_Data_Time_Component_eqMinute.Do(func() {
-		cache_Data_Time_Component_eqMinute = gopurs_runtime.RecordDict1("eq", Get_Data_Eq_eqIntImpl())
+		cache_Data_Time_Component_eqMinute = Get_Data_Eq_eqInt()
 	})
 	return cache_Data_Time_Component_eqMinute
 }
@@ -160,7 +152,7 @@ var cache_Data_Time_Component_eqMillisecond gopurs_runtime.Value
 var once_Data_Time_Component_eqMillisecond sync.Once
 func Get_Data_Time_Component_eqMillisecond() gopurs_runtime.Value {
 	once_Data_Time_Component_eqMillisecond.Do(func() {
-		cache_Data_Time_Component_eqMillisecond = gopurs_runtime.RecordDict1("eq", Get_Data_Eq_eqIntImpl())
+		cache_Data_Time_Component_eqMillisecond = Get_Data_Eq_eqInt()
 	})
 	return cache_Data_Time_Component_eqMillisecond
 }
@@ -169,7 +161,7 @@ var cache_Data_Time_Component_eqHour gopurs_runtime.Value
 var once_Data_Time_Component_eqHour sync.Once
 func Get_Data_Time_Component_eqHour() gopurs_runtime.Value {
 	once_Data_Time_Component_eqHour.Do(func() {
-		cache_Data_Time_Component_eqHour = gopurs_runtime.RecordDict1("eq", Get_Data_Eq_eqIntImpl())
+		cache_Data_Time_Component_eqHour = Get_Data_Eq_eqInt()
 	})
 	return cache_Data_Time_Component_eqHour
 }
@@ -179,7 +171,7 @@ var once_Data_Time_Component_boundedSecond sync.Once
 func Get_Data_Time_Component_boundedSecond() gopurs_runtime.Value {
 	once_Data_Time_Component_boundedSecond.Do(func() {
 		cache_Data_Time_Component_boundedSecond = gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Time_Component_ordSecond()
+return Get_Data_Ord_ordInt()
 }), gopurs_runtime.Int(0), gopurs_runtime.Int(59))
 	})
 	return cache_Data_Time_Component_boundedSecond
@@ -190,7 +182,7 @@ var once_Data_Time_Component_boundedMinute sync.Once
 func Get_Data_Time_Component_boundedMinute() gopurs_runtime.Value {
 	once_Data_Time_Component_boundedMinute.Do(func() {
 		cache_Data_Time_Component_boundedMinute = gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Time_Component_ordMinute()
+return Get_Data_Ord_ordInt()
 }), gopurs_runtime.Int(0), gopurs_runtime.Int(59))
 	})
 	return cache_Data_Time_Component_boundedMinute
@@ -201,7 +193,7 @@ var once_Data_Time_Component_boundedMillisecond sync.Once
 func Get_Data_Time_Component_boundedMillisecond() gopurs_runtime.Value {
 	once_Data_Time_Component_boundedMillisecond.Do(func() {
 		cache_Data_Time_Component_boundedMillisecond = gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Time_Component_ordMillisecond()
+return Get_Data_Ord_ordInt()
 }), gopurs_runtime.Int(0), gopurs_runtime.Int(999))
 	})
 	return cache_Data_Time_Component_boundedMillisecond
@@ -212,7 +204,7 @@ var once_Data_Time_Component_boundedHour sync.Once
 func Get_Data_Time_Component_boundedHour() gopurs_runtime.Value {
 	once_Data_Time_Component_boundedHour.Do(func() {
 		cache_Data_Time_Component_boundedHour = gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Time_Component_ordHour()
+return Get_Data_Ord_ordInt()
 }), gopurs_runtime.Int(0), gopurs_runtime.Int(23))
 	})
 	return cache_Data_Time_Component_boundedHour
@@ -223,9 +215,7 @@ var once_Data_Time_Component_boundedEnumSecond sync.Once
 func Get_Data_Time_Component_boundedEnumSecond() gopurs_runtime.Value {
 	once_Data_Time_Component_boundedEnumSecond.Do(func() {
 		cache_Data_Time_Component_boundedEnumSecond = gopurs_runtime.RecordDict5("Bounded0", "Enum1", "cardinality", "fromEnum", "toEnum", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Time_Component_ordSecond()
-}), gopurs_runtime.Int(0), gopurs_runtime.Int(59))
+return Get_Data_Time_Component_boundedSecond()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Time_Component_enumSecond()
 }), gopurs_runtime.Int(60), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -286,7 +276,7 @@ var once_Data_Time_Component_enumSecond sync.Once
 func Get_Data_Time_Component_enumSecond() gopurs_runtime.Value {
 	once_Data_Time_Component_enumSecond.Do(func() {
 		cache_Data_Time_Component_enumSecond = gopurs_runtime.RecordDict3("Ord0", "pred", "succ", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Time_Component_ordSecond()
+return Get_Data_Ord_ordInt()
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
 __local_var_1_0 := gopurs_runtime.Int((gopurs_runtime.Int(x_0.IntVal).IntVal) - (1))
@@ -395,9 +385,7 @@ var once_Data_Time_Component_boundedEnumMinute sync.Once
 func Get_Data_Time_Component_boundedEnumMinute() gopurs_runtime.Value {
 	once_Data_Time_Component_boundedEnumMinute.Do(func() {
 		cache_Data_Time_Component_boundedEnumMinute = gopurs_runtime.RecordDict5("Bounded0", "Enum1", "cardinality", "fromEnum", "toEnum", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Time_Component_ordMinute()
-}), gopurs_runtime.Int(0), gopurs_runtime.Int(59))
+return Get_Data_Time_Component_boundedMinute()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Time_Component_enumMinute()
 }), gopurs_runtime.Int(60), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -458,7 +446,7 @@ var once_Data_Time_Component_enumMinute sync.Once
 func Get_Data_Time_Component_enumMinute() gopurs_runtime.Value {
 	once_Data_Time_Component_enumMinute.Do(func() {
 		cache_Data_Time_Component_enumMinute = gopurs_runtime.RecordDict3("Ord0", "pred", "succ", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Time_Component_ordMinute()
+return Get_Data_Ord_ordInt()
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
 __local_var_1_0 := gopurs_runtime.Int((gopurs_runtime.Int(x_0.IntVal).IntVal) - (1))
@@ -567,9 +555,7 @@ var once_Data_Time_Component_boundedEnumMillisecond sync.Once
 func Get_Data_Time_Component_boundedEnumMillisecond() gopurs_runtime.Value {
 	once_Data_Time_Component_boundedEnumMillisecond.Do(func() {
 		cache_Data_Time_Component_boundedEnumMillisecond = gopurs_runtime.RecordDict5("Bounded0", "Enum1", "cardinality", "fromEnum", "toEnum", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Time_Component_ordMillisecond()
-}), gopurs_runtime.Int(0), gopurs_runtime.Int(999))
+return Get_Data_Time_Component_boundedMillisecond()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Time_Component_enumMillisecond()
 }), gopurs_runtime.Int(1000), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -630,7 +616,7 @@ var once_Data_Time_Component_enumMillisecond sync.Once
 func Get_Data_Time_Component_enumMillisecond() gopurs_runtime.Value {
 	once_Data_Time_Component_enumMillisecond.Do(func() {
 		cache_Data_Time_Component_enumMillisecond = gopurs_runtime.RecordDict3("Ord0", "pred", "succ", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Time_Component_ordMillisecond()
+return Get_Data_Ord_ordInt()
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
 __local_var_1_0 := gopurs_runtime.Int((gopurs_runtime.Int(x_0.IntVal).IntVal) - (1))
@@ -739,9 +725,7 @@ var once_Data_Time_Component_boundedEnumHour sync.Once
 func Get_Data_Time_Component_boundedEnumHour() gopurs_runtime.Value {
 	once_Data_Time_Component_boundedEnumHour.Do(func() {
 		cache_Data_Time_Component_boundedEnumHour = gopurs_runtime.RecordDict5("Bounded0", "Enum1", "cardinality", "fromEnum", "toEnum", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict3("Ord0", "bottom", "top", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Time_Component_ordHour()
-}), gopurs_runtime.Int(0), gopurs_runtime.Int(23))
+return Get_Data_Time_Component_boundedHour()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Time_Component_enumHour()
 }), gopurs_runtime.Int(24), gopurs_runtime.Func(func(v_0 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -802,7 +786,7 @@ var once_Data_Time_Component_enumHour sync.Once
 func Get_Data_Time_Component_enumHour() gopurs_runtime.Value {
 	once_Data_Time_Component_enumHour.Do(func() {
 		cache_Data_Time_Component_enumHour = gopurs_runtime.RecordDict3("Ord0", "pred", "succ", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Time_Component_ordHour()
+return Get_Data_Ord_ordInt()
 }), gopurs_runtime.Func(func(x_0 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
 __local_var_1_0 := gopurs_runtime.Int((gopurs_runtime.Int(x_0.IntVal).IntVal) - (1))

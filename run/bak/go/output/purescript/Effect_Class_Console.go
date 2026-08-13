@@ -3,7 +3,6 @@ package purescript
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	unsafe "unsafe"
 )
 
 var cache_Effect_Class_Console_warnShow gopurs_runtime.Value
@@ -332,9 +331,9 @@ Applicative0_4_3 := gopurs_runtime.CoerceToStruct[Constructor_Control_Applicativ
 _ = Applicative0_4_3
 return gopurs_runtime.Func(func(name_5 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(inner_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Control_Bind_discardUnit(), "discard"), gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(Bind1_2_1)}, gopurs_runtime.Apply(gopurs_runtime.Box(dictMonadEffect_0.V1), gopurs_runtime.Apply(Get_Effect_Console_group(), gopurs_runtime.Str(name_5.StrVal()))), gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.Box(Bind1_2_1.V1), gopurs_runtime.Apply(gopurs_runtime.Box(dictMonadEffect_0.V1), gopurs_runtime.Apply(Get_Effect_Console_group(), gopurs_runtime.Str(name_5.StrVal()))), gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply2(gopurs_runtime.Box(Bind1_2_1.V1), inner_6, gopurs_runtime.Func(func(result_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Control_Bind_discardUnit(), "discard"), gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(Bind1_2_1)}, groupEnd1_3_2, gopurs_runtime.Func(func(_dollar__unused_9 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply2(gopurs_runtime.Box(Bind1_2_1.V1), groupEnd1_3_2, gopurs_runtime.Func(func(_dollar__unused_9 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(gopurs_runtime.Box(Applicative0_4_3.V1), result_8)
 }))
 }))

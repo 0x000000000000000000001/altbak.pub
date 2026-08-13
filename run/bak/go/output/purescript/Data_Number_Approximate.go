@@ -88,56 +88,12 @@ var v1_1 float64 = v1_1_loop
 _ = v1_1
 var v2_2 float64 = v2_2_loop
 _ = v2_2
-var __t6 bool
-{
-if (v1_1) == (0.0) {
 var __t3 bool
 {
-var __t_tag_2 gopurs_runtime.Value = gopurs_runtime.Apply5(Get_Data_Ord_ordNumberImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Float(gopurs_runtime.Apply(Get_Data_Number_abs(), gopurs_runtime.Float(v2_2)).FloatVal()), gopurs_runtime.Float(v_0))
-if (uint32(__t_tag_2.IntVal) == 380165415) {
-__t3 = false
-goto end_branch_3
-} else {
-
-}
-}
-{
-__t3 = true
-}
-end_branch_3:
-__t6 = __t3
-goto end_branch_6
-} else {
-
-}
-}
-{
-if (v2_2) == (0.0) {
-var __t5 bool
-{
-var __t_tag_4 gopurs_runtime.Value = gopurs_runtime.Apply5(Get_Data_Ord_ordNumberImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Float(gopurs_runtime.Apply(Get_Data_Number_abs(), gopurs_runtime.Float(v1_1)).FloatVal()), gopurs_runtime.Float(v_0))
-if (uint32(__t_tag_4.IntVal) == 380165415) {
-__t5 = false
-goto end_branch_5
-} else {
-
-}
-}
-{
-__t5 = true
-}
-end_branch_5:
-__t6 = __t5
-goto end_branch_6
-} else {
-
-}
-}
-{
+if (v1_1) == (0.0) {
 var __t1 bool
 {
-var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply5(Get_Data_Ord_ordNumberImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Float(gopurs_runtime.Apply(Get_Data_Number_abs(), gopurs_runtime.Float((v1_1) - (v2_2))).FloatVal()), gopurs_runtime.Float(((v_0) * (gopurs_runtime.Apply(Get_Data_Number_abs(), gopurs_runtime.Float((v1_1) + (v2_2))).FloatVal())) / (2.0)))
-if (uint32(__t_tag_0.IntVal) == 380165415) {
+if (gopurs_runtime.Apply(Get_Data_Number_abs(), gopurs_runtime.Float(v2_2)).FloatVal()) > (v_0) {
 __t1 = false
 goto end_branch_1
 } else {
@@ -148,10 +104,51 @@ goto end_branch_1
 __t1 = true
 }
 end_branch_1:
-__t6 = __t1
+__t3 = __t1
+goto end_branch_3
+} else {
+
 }
-end_branch_6:
-return __t6
+}
+{
+if (v2_2) == (0.0) {
+var __t2 bool
+{
+if (gopurs_runtime.Apply(Get_Data_Number_abs(), gopurs_runtime.Float(v1_1)).FloatVal()) > (v_0) {
+__t2 = false
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = true
+}
+end_branch_2:
+__t3 = __t2
+goto end_branch_3
+} else {
+
+}
+}
+{
+var __t0 bool
+{
+if (gopurs_runtime.Apply(Get_Data_Number_abs(), gopurs_runtime.Float((v1_1) - (v2_2))).FloatVal()) > (((v_0) * (gopurs_runtime.Apply(Get_Data_Number_abs(), gopurs_runtime.Float((v1_1) + (v2_2))).FloatVal())) / (2.0)) {
+__t0 = false
+goto end_branch_0
+} else {
+
+}
+}
+{
+__t0 = true
+}
+end_branch_0:
+__t3 = __t0
+}
+end_branch_3:
+return __t3
 }
 
 func Call_Data_Number_Approximate_neqApproximate(x_0_loop float64, y_1_loop float64) bool {
@@ -169,21 +166,20 @@ var x_1 float64 = x_1_loop
 _ = x_1
 var y_2 float64 = y_2_loop
 _ = y_2
-var __t1 bool
+var __t0 bool
 {
-var __t_tag_0 gopurs_runtime.Value = gopurs_runtime.Apply5(Get_Data_Ord_ordNumberImpl(), gopurs_runtime.Value{Type: 9, IntVal: int64(1527465420), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(902936544), UnsafePtr: nil}, gopurs_runtime.Value{Type: 9, IntVal: int64(380165415), UnsafePtr: nil}, gopurs_runtime.Float(gopurs_runtime.Apply(Get_Data_Number_abs(), gopurs_runtime.Float((x_1) - (y_2))).FloatVal()), gopurs_runtime.Float(v_0))
-if (uint32(__t_tag_0.IntVal) == 380165415) {
-__t1 = false
-goto end_branch_1
+if (gopurs_runtime.Apply(Get_Data_Number_abs(), gopurs_runtime.Float((x_1) - (y_2))).FloatVal()) > (v_0) {
+__t0 = false
+goto end_branch_0
 } else {
 
 }
 }
 {
-__t1 = true
+__t0 = true
 }
-end_branch_1:
-return __t1
+end_branch_0:
+return __t0
 }
 
 

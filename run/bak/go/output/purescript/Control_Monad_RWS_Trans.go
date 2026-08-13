@@ -3183,9 +3183,9 @@ var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
 _ = __eta1_1
 var __eta2_2 gopurs_runtime.Value = __eta2_2_loop
 _ = __eta2_2
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Identity_bindIdentity(), "bind"), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply2(__eta0_0, __eta1_1, __eta2_2)))}, gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Identity_applicativeIdentity(), "pure"), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, (*Constructor_Control_Monad_RWS_Trans_RWSResult)(v1_3.UnsafePtr).V1, (*Constructor_Control_Monad_RWS_Trans_RWSResult)(v1_3.UnsafePtr).V2})})))}
-}))))}
+// TAST (Let): __local_var_3_0 -> gopurs_runtime.Value
+var __local_var_3_0 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply2(__eta0_0, __eta1_1, __eta2_2)))}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, (*Constructor_Control_Monad_RWS_Trans_RWSResult)(__local_var_3_0.UnsafePtr).V1, (*Constructor_Control_Monad_RWS_Trans_RWSResult)(__local_var_3_0.UnsafePtr).V2})}
 }
 
 func Call_Control_Monad_RWS_Trans_execRWST__2982438712(dictMonad_0_loop *Constructor_Control_Monad_Monad) gopurs_runtime.Value {
@@ -3215,9 +3215,9 @@ var __eta1_1 gopurs_runtime.Value = __eta1_1_loop
 _ = __eta1_1
 var __eta2_2 gopurs_runtime.Value = __eta2_2_loop
 _ = __eta2_2
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Identity_bindIdentity(), "bind"), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply2(__eta0_0, __eta1_1, __eta2_2)))}, gopurs_runtime.Func(func(v1_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Identity_applicativeIdentity(), "pure"), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, (*Constructor_Control_Monad_RWS_Trans_RWSResult)(v1_3.UnsafePtr).V0, (*Constructor_Control_Monad_RWS_Trans_RWSResult)(v1_3.UnsafePtr).V2})})))}
-}))))}
+// TAST (Let): __local_var_3_0 -> gopurs_runtime.Value
+var __local_var_3_0 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply2(__eta0_0, __eta1_1, __eta2_2)))}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, (*Constructor_Control_Monad_RWS_Trans_RWSResult)(__local_var_3_0.UnsafePtr).V0, (*Constructor_Control_Monad_RWS_Trans_RWSResult)(__local_var_3_0.UnsafePtr).V2})}
 }
 
 func Call_Control_Monad_RWS_Trans_mapRWST__3506688348(f_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value, r_2_loop gopurs_runtime.Value, s_3_loop gopurs_runtime.Value) *Constructor_Control_Monad_RWS_Trans_RWSResult {

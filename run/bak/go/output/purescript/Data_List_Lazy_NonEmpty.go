@@ -249,17 +249,31 @@ var dictUnfoldable_0 *Constructor_Data_Unfoldable_Unfoldable = dictUnfoldable_0_
 _ = dictUnfoldable_0
 // TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
 __local_var_1_0 := gopurs_runtime.Apply(gopurs_runtime.Box(dictUnfoldable_0.V1), gopurs_runtime.Func(func(xs_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Maybe_functorMaybe(), "map"), gopurs_runtime.Func(func(rec_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.RecordGet(rec_2, "head"), gopurs_runtime.RecordGet(rec_2, "tail")})}
-}), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(Get_Data_List_Lazy_uncons(), xs_1)))})))}
+// TAST (Let): __local_var_2_1 -> *Constructor_Data_Maybe_Just
+__local_var_2_1 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(Get_Data_List_Lazy_uncons(), xs_1))
+_ = __local_var_2_1
+var __t2 *Constructor_Data_Maybe_Just
+{
+if (__local_var_2_1 != nil) {
+__t2 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.RecordGet((__local_var_2_1).V0, "head"), gopurs_runtime.RecordGet((__local_var_2_1).V0, "tail")})}}
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = (*Constructor_Data_Maybe_Just)(nil)
+}
+end_branch_2:
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t2)}
 }))
 _ = __local_var_1_0
 return gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): v1_3_1 -> gopurs_runtime.Value
-v1_3_1 := gopurs_runtime.Apply(Get_Data_Lazy_force(), x_2)
-_ = v1_3_1
+// TAST (Let): v1_3_3 -> gopurs_runtime.Value
+v1_3_3 := gopurs_runtime.Apply(Get_Data_Lazy_force(), x_2)
+_ = v1_3_3
 return gopurs_runtime.Apply(__local_var_1_0, gopurs_runtime.Apply(Get_Data_Lazy_go__defer(), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Lazy_Types_Cons{1, (*Constructor_Data_NonEmpty_NonEmpty)(v1_3_1.UnsafePtr).V0, (*Constructor_Data_NonEmpty_NonEmpty)(v1_3_1.UnsafePtr).V1})}
+return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Lazy_Types_Cons{1, (*Constructor_Data_NonEmpty_NonEmpty)(v1_3_3.UnsafePtr).V0, (*Constructor_Data_NonEmpty_NonEmpty)(v1_3_3.UnsafePtr).V1})}
 })))
 })
 }
@@ -274,14 +288,7 @@ func Call_Data_List_Lazy_NonEmpty_repeat(x_0_loop gopurs_runtime.Value) gopurs_r
 var x_0 gopurs_runtime.Value = x_0_loop
 _ = x_0
 return gopurs_runtime.Apply(Get_Data_Lazy_go__defer(), gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
-var go__go_2_0_0 gopurs_runtime.Value
-_ = go__go_2_0_0
-go__go_2_0_0 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_List_Lazy_Types_lazyList(), "defer"), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(Get_Data_Lazy_go__defer(), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 218341868, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Lazy_Types_Cons{1, x_0, go__go_2_0_0})}
-}))
-}))
-return gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(&Constructor_Data_NonEmpty_NonEmpty{1, x_0, go__go_2_0_0})}
+return gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(&Constructor_Data_NonEmpty_NonEmpty{1, x_0, gopurs_runtime.Apply(Get_Data_List_Lazy_repeat(), x_0)})}
 }))
 }
 

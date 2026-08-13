@@ -497,15 +497,13 @@ var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var xs_1 []gopurs_runtime.Value = xs_1_loop
 _ = xs_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_bindST(), "bind"), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp(Get_Data_Array_ST_thawImpl(), gopurs_runtime.Array(xs_1))
-}), gopurs_runtime.Func(func(result_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_bindST(), "bind"), gopurs_runtime.Apply(f_0, result_2), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp(Get_Data_Array_ST_unsafeFreezeImpl(), result_2)
+__local_var_2_0 := gopurs_runtime.UncurriedApp(Get_Data_Array_ST_thawImpl(), gopurs_runtime.Array(xs_1))
+_ = __local_var_2_0
+__local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.Apply(f_0, __local_var_2_0), gopurs_runtime.Value{})
+_ = __local_var_3_1
+return gopurs_runtime.UncurriedApp(Get_Data_Array_ST_unsafeFreezeImpl(), __local_var_2_0)
 })
-}))
-}))
 }
 
 func Call_Data_Array_ST_sortBy(comp_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -567,7 +565,11 @@ func Call_Data_Array_ST_run(st_0_loop gopurs_runtime.Value) []gopurs_runtime.Val
 var st_0 gopurs_runtime.Value = st_0_loop
 _ = st_0
 return func() []gopurs_runtime.Value {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply(Get_Control_Monad_ST_Internal_run(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_bindST(), "bind"), st_0, Get_Data_Array_ST_unsafeFreeze())).UnsafePtr)
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply(Get_Control_Monad_ST_Internal_run(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_1_0 := gopurs_runtime.Apply(st_0, gopurs_runtime.Value{})
+_ = __local_var_1_0
+return gopurs_runtime.UncurriedApp(Get_Data_Array_ST_unsafeFreezeImpl(), __local_var_1_0)
+})).UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
@@ -581,17 +583,14 @@ var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 var xs_2 gopurs_runtime.Value = xs_2_loop
 _ = xs_2
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_bindST(), "bind"), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp4(Get_Data_Array_ST_peekImpl(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}, gopurs_runtime.Int(i_0), xs_2)
-}), gopurs_runtime.Func(func(entry_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_3_0 := gopurs_runtime.UncurriedApp4(Get_Data_Array_ST_peekImpl(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}, gopurs_runtime.Int(i_0), xs_2)
+_ = __local_var_3_0
 var __t1 gopurs_runtime.Value
 {
-if (entry_3.Type == 9 && entry_3.IntVal == 930809136 && entry_3.UnsafePtr != nil) {
-// TAST (Let): __local_var_4_0 -> gopurs_runtime.Value
-__local_var_4_0 := gopurs_runtime.Apply(f_1, (*Constructor_Data_Maybe_Just)(entry_3.UnsafePtr).V0)
-_ = __local_var_4_0
+if (__local_var_3_0.Type == 9 && __local_var_3_0.IntVal == 930809136 && __local_var_3_0.UnsafePtr != nil) {
 __t1 = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp3(Get_Data_Array_ST_pokeImpl(), gopurs_runtime.Int(i_0), __local_var_4_0, xs_2)
+return gopurs_runtime.UncurriedApp3(Get_Data_Array_ST_pokeImpl(), gopurs_runtime.Int(i_0), gopurs_runtime.Apply(f_1, (*Constructor_Data_Maybe_Just)(__local_var_3_0.UnsafePtr).V0), xs_2)
 })
 goto end_branch_1
 } else {
@@ -599,8 +598,10 @@ goto end_branch_1
 }
 }
 {
-if (entry_3.Type == 9 && entry_3.IntVal == 930809136 && entry_3.UnsafePtr == nil) {
-__t1 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_applicativeST(), "pure"), gopurs_runtime.Bool(false))
+if (__local_var_3_0.Type == 9 && __local_var_3_0.IntVal == 930809136 && __local_var_3_0.UnsafePtr == nil) {
+__t1 = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool(false)
+})
 goto end_branch_1
 } else {
 
@@ -610,8 +611,8 @@ goto end_branch_1
 __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
-return __t1
-}))
+return gopurs_runtime.Apply(__t1, gopurs_runtime.Value{})
+})
 }
 
 func Call_Data_Array_ST_modify__3999472078(i_0_loop int64, f_1_loop gopurs_runtime.Value, xs_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -621,17 +622,14 @@ var f_1 gopurs_runtime.Value = f_1_loop
 _ = f_1
 var xs_2 gopurs_runtime.Value = xs_2_loop
 _ = xs_2
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_bindST(), "bind"), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp4(Get_Data_Array_ST_peekImpl(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}, gopurs_runtime.Int(i_0), xs_2)
-}), gopurs_runtime.Func(func(entry_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_3_0 := gopurs_runtime.UncurriedApp4(Get_Data_Array_ST_peekImpl(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}, gopurs_runtime.Int(i_0), xs_2)
+_ = __local_var_3_0
 var __t1 gopurs_runtime.Value
 {
-if (entry_3.Type == 9 && entry_3.IntVal == 930809136 && entry_3.UnsafePtr != nil) {
-// TAST (Let): __local_var_4_0 -> gopurs_runtime.Value
-__local_var_4_0 := gopurs_runtime.Apply(f_1, (*Constructor_Data_Maybe_Just)(entry_3.UnsafePtr).V0)
-_ = __local_var_4_0
+if (__local_var_3_0.Type == 9 && __local_var_3_0.IntVal == 930809136 && __local_var_3_0.UnsafePtr != nil) {
 __t1 = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp3(Get_Data_Array_ST_pokeImpl(), gopurs_runtime.Int(i_0), __local_var_4_0, xs_2)
+return gopurs_runtime.UncurriedApp3(Get_Data_Array_ST_pokeImpl(), gopurs_runtime.Int(i_0), gopurs_runtime.Apply(f_1, (*Constructor_Data_Maybe_Just)(__local_var_3_0.UnsafePtr).V0), xs_2)
 })
 goto end_branch_1
 } else {
@@ -639,8 +637,10 @@ goto end_branch_1
 }
 }
 {
-if (entry_3.Type == 9 && entry_3.IntVal == 930809136 && entry_3.UnsafePtr == nil) {
-__t1 = gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_applicativeST(), "pure"), gopurs_runtime.Bool(false))
+if (__local_var_3_0.Type == 9 && __local_var_3_0.IntVal == 930809136 && __local_var_3_0.UnsafePtr == nil) {
+__t1 = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Bool(false)
+})
 goto end_branch_1
 } else {
 
@@ -650,15 +650,19 @@ goto end_branch_1
 __t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
 end_branch_1:
-return __t1
-}))
+return gopurs_runtime.Apply(__t1, gopurs_runtime.Value{})
+})
 }
 
 func Call_Data_Array_ST_run__1673253202(st_0_loop gopurs_runtime.Value) []gopurs_runtime.Value {
 var st_0 gopurs_runtime.Value = st_0_loop
 _ = st_0
 return func() []gopurs_runtime.Value {
-					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply(Get_Control_Monad_ST_Internal_run(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_bindST(), "bind"), st_0, Get_Data_Array_ST_unsafeFreeze())).UnsafePtr)
+					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.Apply(Get_Control_Monad_ST_Internal_run(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_1_0 := gopurs_runtime.Apply(st_0, gopurs_runtime.Value{})
+_ = __local_var_1_0
+return gopurs_runtime.UncurriedApp(Get_Data_Array_ST_unsafeFreezeImpl(), __local_var_1_0)
+})).UnsafePtr)
 					unboxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { unboxed[i] = v }
 					return unboxed
@@ -707,15 +711,13 @@ var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var xs_1 []gopurs_runtime.Value = xs_1_loop
 _ = xs_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_bindST(), "bind"), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp(Get_Data_Array_ST_thawImpl(), gopurs_runtime.Array(xs_1))
-}), gopurs_runtime.Func(func(result_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_bindST(), "bind"), gopurs_runtime.Apply(f_0, result_2), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp(Get_Data_Array_ST_unsafeFreezeImpl(), result_2)
+__local_var_2_0 := gopurs_runtime.UncurriedApp(Get_Data_Array_ST_thawImpl(), gopurs_runtime.Array(xs_1))
+_ = __local_var_2_0
+__local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.Apply(f_0, __local_var_2_0), gopurs_runtime.Value{})
+_ = __local_var_3_1
+return gopurs_runtime.UncurriedApp(Get_Data_Array_ST_unsafeFreezeImpl(), __local_var_2_0)
 })
-}))
-}))
 }
 
 func Call_Data_Array_ST_withArray__3965688428(f_0_loop gopurs_runtime.Value, xs_1_loop []gopurs_runtime.Value) gopurs_runtime.Value {
@@ -723,15 +725,13 @@ var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var xs_1 []gopurs_runtime.Value = xs_1_loop
 _ = xs_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_bindST(), "bind"), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp(Get_Data_Array_ST_thawImpl(), gopurs_runtime.Array(xs_1))
-}), gopurs_runtime.Func(func(result_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_bindST(), "bind"), gopurs_runtime.Apply(f_0, result_2), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp(Get_Data_Array_ST_unsafeFreezeImpl(), result_2)
+__local_var_2_0 := gopurs_runtime.UncurriedApp(Get_Data_Array_ST_thawImpl(), gopurs_runtime.Array(xs_1))
+_ = __local_var_2_0
+__local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.Apply(f_0, __local_var_2_0), gopurs_runtime.Value{})
+_ = __local_var_3_1
+return gopurs_runtime.UncurriedApp(Get_Data_Array_ST_unsafeFreezeImpl(), __local_var_2_0)
 })
-}))
-}))
 }
 
 func Call_Data_Array_ST_withArray__2779921436(f_0_loop gopurs_runtime.Value, xs_1_loop []gopurs_runtime.Value) gopurs_runtime.Value {
@@ -739,15 +739,13 @@ var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var xs_1 []gopurs_runtime.Value = xs_1_loop
 _ = xs_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_bindST(), "bind"), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp(Get_Data_Array_ST_thawImpl(), gopurs_runtime.Array(xs_1))
-}), gopurs_runtime.Func(func(result_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_bindST(), "bind"), gopurs_runtime.Apply(f_0, result_2), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp(Get_Data_Array_ST_unsafeFreezeImpl(), result_2)
+__local_var_2_0 := gopurs_runtime.UncurriedApp(Get_Data_Array_ST_thawImpl(), gopurs_runtime.Array(xs_1))
+_ = __local_var_2_0
+__local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.Apply(f_0, __local_var_2_0), gopurs_runtime.Value{})
+_ = __local_var_3_1
+return gopurs_runtime.UncurriedApp(Get_Data_Array_ST_unsafeFreezeImpl(), __local_var_2_0)
 })
-}))
-}))
 }
 
 func Call_Data_Array_ST_withArray__1455372447(f_0_loop gopurs_runtime.Value, xs_1_loop [][]gopurs_runtime.Value) gopurs_runtime.Value {
@@ -755,20 +753,18 @@ var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var xs_1 [][]gopurs_runtime.Value = xs_1_loop
 _ = xs_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_bindST(), "bind"), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp(Get_Data_Array_ST_thawImpl(), func() gopurs_runtime.Value {
+return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_2_0 := gopurs_runtime.UncurriedApp(Get_Data_Array_ST_thawImpl(), func() gopurs_runtime.Value {
 					arr := xs_1
 					boxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { boxed[i] = gopurs_runtime.Array(v) }
 					return gopurs_runtime.Array(boxed)
 				}())
-}), gopurs_runtime.Func(func(result_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_bindST(), "bind"), gopurs_runtime.Apply(f_0, result_2), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp(Get_Data_Array_ST_unsafeFreezeImpl(), result_2)
+_ = __local_var_2_0
+__local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.Apply(f_0, __local_var_2_0), gopurs_runtime.Value{})
+_ = __local_var_3_1
+return gopurs_runtime.UncurriedApp(Get_Data_Array_ST_unsafeFreezeImpl(), __local_var_2_0)
 })
-}))
-}))
 }
 
 func Call_Data_Array_ST_withArray__2734111834(f_0_loop gopurs_runtime.Value, xs_1_loop [][]gopurs_runtime.Value) gopurs_runtime.Value {
@@ -776,20 +772,18 @@ var f_0 gopurs_runtime.Value = f_0_loop
 _ = f_0
 var xs_1 [][]gopurs_runtime.Value = xs_1_loop
 _ = xs_1
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_bindST(), "bind"), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp(Get_Data_Array_ST_thawImpl(), func() gopurs_runtime.Value {
+return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_2_0 := gopurs_runtime.UncurriedApp(Get_Data_Array_ST_thawImpl(), func() gopurs_runtime.Value {
 					arr := xs_1
 					boxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { boxed[i] = gopurs_runtime.Array(v) }
 					return gopurs_runtime.Array(boxed)
 				}())
-}), gopurs_runtime.Func(func(result_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Control_Monad_ST_Internal_bindST(), "bind"), gopurs_runtime.Apply(f_0, result_2), gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.UncurriedApp(Get_Data_Array_ST_unsafeFreezeImpl(), result_2)
+_ = __local_var_2_0
+__local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.Apply(f_0, __local_var_2_0), gopurs_runtime.Value{})
+_ = __local_var_3_1
+return gopurs_runtime.UncurriedApp(Get_Data_Array_ST_unsafeFreezeImpl(), __local_var_2_0)
 })
-}))
-}))
 }
 
 func Get_Data_Array_ST_cloneImpl() gopurs_runtime.Value {

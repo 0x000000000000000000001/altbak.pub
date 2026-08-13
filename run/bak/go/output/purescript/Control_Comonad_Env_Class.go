@@ -64,9 +64,7 @@ var once_Control_Comonad_Env_Class_comonadEnvTuple sync.Once
 func Get_Control_Comonad_Env_Class_comonadEnvTuple() gopurs_runtime.Value {
 	once_Control_Comonad_Env_Class_comonadEnvTuple.Do(func() {
 		cache_Control_Comonad_Env_Class_comonadEnvTuple = gopurs_runtime.RecordDict2("ComonadAsk0", "local", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("Comonad0", "ask", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Tuple_comonadTuple()
-}), Get_Data_Tuple_fst())
+return Get_Control_Comonad_Env_Class_comonadAskTuple()
 }), gopurs_runtime.Func(func(f_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply(f_0, (*Constructor_Data_Tuple_Tuple)(v_1.UnsafePtr).V0), (*Constructor_Data_Tuple_Tuple)(v_1.UnsafePtr).V1})}
@@ -326,8 +324,18 @@ _ = Comonad0_1_0
 // TAST (Let): comonadStoreT_2_1 -> gopurs_runtime.Value
 comonadStoreT_2_1 := gopurs_runtime.Apply(Get_Control_Comonad_Store_Trans_comonadStoreT(), Comonad0_1_0)
 _ = comonadStoreT_2_1
+// TAST (Let): Functor0_3_3 -> *Constructor_Data_Functor_Functor
+Functor0_3_3 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Comonad0_1_0, "Extend0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
+_ = Functor0_3_3
 // TAST (Let): __local_var_3_2 -> gopurs_runtime.Value
-__local_var_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Comonad_Store_Trans_comonadTransStoreT(), "lower"), Comonad0_1_0)
+__local_var_3_2 := gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_5_4 -> gopurs_runtime.Value
+__local_var_5_4 := (*Constructor_Data_Tuple_Tuple)(v_4.UnsafePtr).V1
+_ = __local_var_5_4
+return gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_3_3.V0), gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v1_6, __local_var_5_4)
+}), (*Constructor_Data_Tuple_Tuple)(v_4.UnsafePtr).V0)
+})
 _ = __local_var_3_2
 return gopurs_runtime.RecordDict2("Comonad0", "ask", gopurs_runtime.Func(func(_dollar__unused_3 gopurs_runtime.Value) gopurs_runtime.Value {
 return comonadStoreT_2_1
@@ -348,8 +356,18 @@ _ = Comonad0_2_2
 // TAST (Let): comonadStoreT_3_3 -> gopurs_runtime.Value
 comonadStoreT_3_3 := gopurs_runtime.Apply(Get_Control_Comonad_Store_Trans_comonadStoreT(), Comonad0_2_2)
 _ = comonadStoreT_3_3
+// TAST (Let): Functor0_4_5 -> *Constructor_Data_Functor_Functor
+Functor0_4_5 := gopurs_runtime.CoerceToStruct[Constructor_Data_Functor_Functor](gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Comonad0_2_2, "Extend0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}))
+_ = Functor0_4_5
 // TAST (Let): __local_var_4_4 -> gopurs_runtime.Value
-__local_var_4_4 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Comonad_Store_Trans_comonadTransStoreT(), "lower"), Comonad0_2_2)
+__local_var_4_4 := gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_6_6 -> gopurs_runtime.Value
+__local_var_6_6 := (*Constructor_Data_Tuple_Tuple)(v_5.UnsafePtr).V1
+_ = __local_var_6_6
+return gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_4_5.V0), gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(v1_7, __local_var_6_6)
+}), (*Constructor_Data_Tuple_Tuple)(v_5.UnsafePtr).V0)
+})
 _ = __local_var_4_4
 // TAST (Let): comonadAskStoreT1_1_0 -> gopurs_runtime.Value
 comonadAskStoreT1_1_0 := gopurs_runtime.RecordDict2("Comonad0", "ask", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {

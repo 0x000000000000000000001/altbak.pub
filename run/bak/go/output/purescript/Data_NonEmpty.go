@@ -284,9 +284,26 @@ var dictUnfoldable_0 gopurs_runtime.Value = dictUnfoldable_0_loop
 _ = dictUnfoldable_0
 return gopurs_runtime.RecordDict1("unfoldr1", gopurs_runtime.Func(func(f_1 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(b_2 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_3_1 -> *Constructor_Data_Tuple_Tuple
+__local_var_3_1 := gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply(f_1, b_2))
+_ = __local_var_3_1
 // TAST (Let): __local_var_3_0 -> *Constructor_Data_Tuple_Tuple
-__local_var_3_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Tuple_functorTuple(), "map"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictUnfoldable_0, "unfoldr"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Maybe_functorMaybe(), "map"), f_1)), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply(f_1, b_2)))}))
-_ = __local_var_3_0
+var __local_var_3_0 *Constructor_Data_Tuple_Tuple = gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, (__local_var_3_1).V0, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictUnfoldable_0, "unfoldr"), gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t2 *Constructor_Data_Maybe_Just
+{
+if (v1_4.Type == 9 && v1_4.IntVal == 930809136 && v1_4.UnsafePtr != nil) {
+__t2 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Apply(f_1, (*Constructor_Data_Maybe_Just)(v1_4.UnsafePtr).V0)}
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = (*Constructor_Data_Maybe_Just)(nil)
+}
+end_branch_2:
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t2)}
+}), (__local_var_3_1).V1)})})
 return gopurs_runtime.Value{Type: 9, IntVal: 3111306138, UnsafePtr: unsafe.Pointer(&Constructor_Data_NonEmpty_NonEmpty{1, (__local_var_3_0).V0, (__local_var_3_0).V1})}
 })
 }))

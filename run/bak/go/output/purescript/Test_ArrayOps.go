@@ -91,7 +91,7 @@ _ = __local_var_0_0
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 __local_var_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
 _ = __local_var_1_1
-return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Show_showInt(), "show"), gopurs_runtime.Int(Call_Test_ArrayOps_sumEvens(__local_var_1_1.IntVal))).StrVal())), gopurs_runtime.Value{})
+return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(Call_Test_ArrayOps_sumEvens(__local_var_1_1.IntVal))).StrVal())), gopurs_runtime.Value{})
 })
 }()
 	})
@@ -138,7 +138,8 @@ return res_go_filterImpl0
 func Call_Test_ArrayOps_sumEvens(n_0_loop int64) int64 {
 var n_0 int64 = n_0_loop
 _ = n_0
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Data_Foldable_foldableArray(), "foldl"), Get_Data_Semiring_intAdd(), gopurs_runtime.Int(0), func() gopurs_runtime.Value {
+return func() gopurs_runtime.Value {
+arr_val_foldlArray0 := func() gopurs_runtime.Value {
 					arr := func() []int64 {
 arr_val_filterImpl1 := func() []int64 {
 					arr := *(*[]gopurs_runtime.Value)(gopurs_runtime.UncurriedApp2(Get_Data_Array_rangeImpl(), gopurs_runtime.Int(1), gopurs_runtime.Int(n_0)).UnsafePtr)
@@ -166,7 +167,17 @@ return res_go_filterImpl1
 					boxed := make([]gopurs_runtime.Value, len(arr))
 					for i, v := range arr { boxed[i] = gopurs_runtime.Int(v) }
 					return gopurs_runtime.Array(boxed)
-				}()).IntVal
+				}()
+_ = arr_val_foldlArray0
+res_go_foldlArray0 := gopurs_runtime.Int(0)
+_ = res_go_foldlArray0
+arr_go_foldlArray0 := (*[]gopurs_runtime.Value)(arr_val_foldlArray0.UnsafePtr)
+_ = arr_go_foldlArray0
+for _, v_foldlArray0 := range *arr_go_foldlArray0 {
+res_go_foldlArray0 = gopurs_runtime.Apply2(Get_Data_Semiring_intAdd(), res_go_foldlArray0, v_foldlArray0)
+}
+return res_go_foldlArray0
+}().IntVal
 }
 
 

@@ -349,26 +349,20 @@ return (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V1
 func Call_Control_Comonad_Store_Class_comonadStoreEnvT(dictComonadStore_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
 var dictComonadStore_0 gopurs_runtime.Value = dictComonadStore_0_loop
 _ = dictComonadStore_0
-// TAST (Let): Comonad0_1_0 -> gopurs_runtime.Value
-Comonad0_1_0 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadStore_0, "Comonad0"), gopurs_runtime.Value{})
-_ = Comonad0_1_0
-// TAST (Let): lower1_2_1 -> gopurs_runtime.Value
-lower1_2_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Control_Comonad_Env_Trans_comonadTransEnvT(), "lower"), Comonad0_1_0)
-_ = lower1_2_1
-// TAST (Let): comonadEnvT_3_2 -> gopurs_runtime.Value
-comonadEnvT_3_2 := gopurs_runtime.Apply(Get_Control_Comonad_Env_Trans_comonadEnvT(), Comonad0_1_0)
-_ = comonadEnvT_3_2
-return gopurs_runtime.RecordDict3("Comonad0", "peek", "pos", gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return comonadEnvT_3_2
-}), gopurs_runtime.Func(func(s_4 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): __local_var_5_3 -> gopurs_runtime.Value
-__local_var_5_3 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadStore_0, "peek"), s_4)
-_ = __local_var_5_3
-return gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_5_3, gopurs_runtime.Apply(lower1_2_1, x_6))
+// TAST (Let): comonadEnvT_1_0 -> gopurs_runtime.Value
+comonadEnvT_1_0 := gopurs_runtime.Apply(Get_Control_Comonad_Env_Trans_comonadEnvT(), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadStore_0, "Comonad0"), gopurs_runtime.Value{}))
+_ = comonadEnvT_1_0
+return gopurs_runtime.RecordDict3("Comonad0", "peek", "pos", gopurs_runtime.Func(func(_dollar__unused_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return comonadEnvT_1_0
+}), gopurs_runtime.Func(func(s_2 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_3_1 -> gopurs_runtime.Value
+__local_var_3_1 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadStore_0, "peek"), s_2)
+_ = __local_var_3_1
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(__local_var_3_1, (*Constructor_Data_Tuple_Tuple)(x_4.UnsafePtr).V1)
 })
-}), gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadStore_0, "pos"), gopurs_runtime.Apply(lower1_2_1, x_4))
+}), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictComonadStore_0, "pos"), (*Constructor_Data_Tuple_Tuple)(x_2.UnsafePtr).V1)
 }))
 }
 

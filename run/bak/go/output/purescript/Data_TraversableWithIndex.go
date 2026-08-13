@@ -596,42 +596,17 @@ return Get_Data_FunctorWithIndex_functorWithIndexArray()
 }), gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Traversable_traversableArray()
 }), gopurs_runtime.Func(func(dictApplicative_0 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
-__local_var_1_0 := gopurs_runtime.RecordDict4("FoldableWithIndex1", "FunctorWithIndex0", "Traversable2", "traverseWithIndex", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_FoldableWithIndex_foldableWithIndexArray()
-}), gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_FunctorWithIndex_functorWithIndexArray()
-}), gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return Get_Data_Traversable_traversableArray()
-}), gopurs_runtime.Func(func(dictApplicative_1 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): FunctorWithIndex0_2_1 -> *Constructor_Data_FunctorWithIndex_FunctorWithIndex
-FunctorWithIndex0_2_1 := gopurs_runtime.CoerceToStruct[Constructor_Data_FunctorWithIndex_FunctorWithIndex](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_TraversableWithIndex_traversableWithIndexArray(), "FunctorWithIndex0"), gopurs_runtime.Value{}))
-_ = FunctorWithIndex0_2_1
-// TAST (Let): sequence1_3_2 -> gopurs_runtime.Value
-sequence1_3_2 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_TraversableWithIndex_traversableWithIndexArray(), "Traversable2"), gopurs_runtime.Value{}), "sequence"), dictApplicative_1)
-_ = sequence1_3_2
-return gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): __local_var_5_3 -> gopurs_runtime.Value
-__local_var_5_3 := gopurs_runtime.Apply(gopurs_runtime.Box(FunctorWithIndex0_2_1.V1), f_4)
-_ = __local_var_5_3
-return gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(sequence1_3_2, gopurs_runtime.Apply(__local_var_5_3, x_6))
-})
-})
+// TAST (Let): sequence1_1_0 -> gopurs_runtime.Value
+sequence1_1_0 := gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Traversable_traversableArray(), "traverse"), gopurs_runtime.Value{Type: 9, IntVal: 1459134221, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Applicative_Applicative](dictApplicative_0))}, gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
+return x_1
 }))
-_ = __local_var_1_0
-// TAST (Let): FunctorWithIndex0_2_4 -> *Constructor_Data_FunctorWithIndex_FunctorWithIndex
-FunctorWithIndex0_2_4 := gopurs_runtime.CoerceToStruct[Constructor_Data_FunctorWithIndex_FunctorWithIndex](gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "FunctorWithIndex0"), gopurs_runtime.Value{}))
-_ = FunctorWithIndex0_2_4
-// TAST (Let): sequence1_3_5 -> gopurs_runtime.Value
-sequence1_3_5 := gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "Traversable2"), gopurs_runtime.Value{}), "sequence"), dictApplicative_0)
-_ = sequence1_3_5
-return gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): __local_var_5_6 -> gopurs_runtime.Value
-__local_var_5_6 := gopurs_runtime.Apply(gopurs_runtime.Box(FunctorWithIndex0_2_4.V1), f_4)
-_ = __local_var_5_6
-return gopurs_runtime.Func(func(x_6 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(sequence1_3_5, gopurs_runtime.Apply(__local_var_5_6, x_6))
+_ = sequence1_1_0
+return gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
+// TAST (Let): __local_var_3_1 -> gopurs_runtime.Value
+__local_var_3_1 := gopurs_runtime.Apply(Get_Data_FunctorWithIndex_mapWithIndexArray(), f_2)
+_ = __local_var_3_1
+return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Apply(sequence1_1_0, gopurs_runtime.Apply(__local_var_3_1, x_4))
 })
 })
 }))

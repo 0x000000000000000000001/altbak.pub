@@ -352,7 +352,7 @@ var dictFunctor1_1 gopurs_runtime.Value = dictFunctor1_1_loop
 _ = dictFunctor1_1
 return gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Data_Bifunctor_bifunctorTuple(), "bimap"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor_0, "map"), f_2), gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictFunctor1_1, "map"), f_2), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_3))})))}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor_0, "map"), f_2, (*Constructor_Data_Tuple_Tuple)(v_3.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictFunctor1_1, "map"), f_2, (*Constructor_Data_Tuple_Tuple)(v_3.UnsafePtr).V1)})}
 })
 }))
 }
@@ -487,7 +487,7 @@ var natG_1 gopurs_runtime.Value = natG_1_loop
 _ = natG_1
 var v_2 gopurs_runtime.Value = v_2_loop
 _ = v_2
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Data_Bifunctor_bifunctorTuple(), "bimap"), natF_0, natG_1, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_2))})))}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply(natF_0, (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V0), gopurs_runtime.Apply(natG_1, (*Constructor_Data_Tuple_Tuple)(v_2.UnsafePtr).V1)})}
 }
 
 func Call_Data_Functor_Product_applyProduct(dictApply_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -503,7 +503,7 @@ _ = __local_var_3_2
 // TAST (Let): functorProduct2_3_1 -> gopurs_runtime.Value
 functorProduct2_3_1 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Data_Bifunctor_bifunctorTuple(), "bimap"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_1_0, "map"), f_4), gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_2, "map"), f_4), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_5))})))}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_1_0, "map"), f_4, (*Constructor_Data_Tuple_Tuple)(v_5.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_2, "map"), f_4, (*Constructor_Data_Tuple_Tuple)(v_5.UnsafePtr).V1)})}
 })
 }))
 _ = functorProduct2_3_1
@@ -536,7 +536,7 @@ _ = __local_var_5_5
 // TAST (Let): functorProduct2_5_4 -> gopurs_runtime.Value
 functorProduct2_5_4 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Data_Bifunctor_bifunctorTuple(), "bimap"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_1, "map"), f_6), gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_5_5, "map"), f_6), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_7))})))}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "map"), f_6, (*Constructor_Data_Tuple_Tuple)(v_7.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_5_5, "map"), f_6, (*Constructor_Data_Tuple_Tuple)(v_7.UnsafePtr).V1)})}
 })
 }))
 _ = functorProduct2_5_4
@@ -582,7 +582,7 @@ _ = __local_var_5_5
 // TAST (Let): functorProduct2_5_4 -> gopurs_runtime.Value
 functorProduct2_5_4 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_7 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Data_Bifunctor_bifunctorTuple(), "bimap"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_2_1, "map"), f_6), gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_5_5, "map"), f_6), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_7))})))}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_2_1, "map"), f_6, (*Constructor_Data_Tuple_Tuple)(v_7.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_5_5, "map"), f_6, (*Constructor_Data_Tuple_Tuple)(v_7.UnsafePtr).V1)})}
 })
 }))
 _ = functorProduct2_5_4
@@ -626,7 +626,7 @@ _ = __local_var_6_7
 // TAST (Let): functorProduct2_6_6 -> gopurs_runtime.Value
 functorProduct2_6_6 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_7 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_8 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Data_Bifunctor_bifunctorTuple(), "bimap"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_3_3, "map"), f_7), gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_6_7, "map"), f_7), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_8))})))}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_3_3, "map"), f_7, (*Constructor_Data_Tuple_Tuple)(v_8.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_6_7, "map"), f_7, (*Constructor_Data_Tuple_Tuple)(v_8.UnsafePtr).V1)})}
 })
 }))
 _ = functorProduct2_6_6
@@ -666,7 +666,7 @@ _ = __local_var_9_15
 // TAST (Let): functorProduct2_9_14 -> gopurs_runtime.Value
 functorProduct2_9_14 := gopurs_runtime.RecordDict1("map", gopurs_runtime.Func(func(f_10 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Func(func(v_11 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Data_Bifunctor_bifunctorTuple(), "bimap"), gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_6_11, "map"), f_10), gopurs_runtime.Apply(gopurs_runtime.RecordGet(__local_var_9_15, "map"), f_10), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](v_11))})))}
+return gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_6_11, "map"), f_10, (*Constructor_Data_Tuple_Tuple)(v_11.UnsafePtr).V0), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(__local_var_9_15, "map"), f_10, (*Constructor_Data_Tuple_Tuple)(v_11.UnsafePtr).V1)})}
 })
 }))
 _ = functorProduct2_9_14

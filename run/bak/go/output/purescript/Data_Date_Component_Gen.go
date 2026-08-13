@@ -3,6 +3,7 @@ package purescript
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
+	unsafe "unsafe"
 )
 
 var cache_Data_Date_Component_Gen_toEnum gopurs_runtime.Value
@@ -67,7 +68,51 @@ return Get_Data_Maybe_fromJust__1577979644()
 }))
 _ = __local_var_1_0
 return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(gopurs_runtime.Apply(gopurs_runtime.RecordGet(dictMonadGen_0, "Monad0"), gopurs_runtime.Value{}), "Bind1"), gopurs_runtime.Value{}), "Apply0"), gopurs_runtime.Value{}), "Functor0"), gopurs_runtime.Value{}), "map"), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_1_0, gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedEnumYear(), "toEnum"), x_2))
+var __t4 *Constructor_Data_Maybe_Just
+{
+var __t1 bool
+{
+if (x_2.IntVal) < (-271820) {
+__t1 = false
+goto end_branch_1
+} else {
+
+}
+}
+{
+__t1 = true
+}
+end_branch_1:
+var __t_and_3 bool = false
+if __t1 {
+
+var __t2 bool
+{
+if (x_2.IntVal) > (275759) {
+__t2 = false
+goto end_branch_2
+} else {
+
+}
+}
+{
+__t2 = true
+}
+end_branch_2:
+__t_and_3 = __t2
+}
+if __t_and_3 {
+__t4 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Int(x_2.IntVal)}
+goto end_branch_4
+} else {
+
+}
+}
+{
+__t4 = (*Constructor_Data_Maybe_Just)(nil)
+}
+end_branch_4:
+return gopurs_runtime.Apply(__local_var_1_0, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t4)})
 }), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0, "chooseInt"), gopurs_runtime.Int(1900), gopurs_runtime.Int(2100)))
 }
 

@@ -255,8 +255,8 @@ var cache_Data_String_NonEmpty_Internal_joinWith gopurs_runtime.Value
 var once_Data_String_NonEmpty_Internal_joinWith sync.Once
 func Get_Data_String_NonEmpty_Internal_joinWith() gopurs_runtime.Value {
 	once_Data_String_NonEmpty_Internal_joinWith.Do(func() {
-		cache_Data_String_NonEmpty_Internal_joinWith = gopurs_runtime.Func2(func(dictFoldable_0_box gopurs_runtime.Value, splice_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_String_NonEmpty_Internal_joinWith(gopurs_runtime.CoerceToStruct[Constructor_Data_Foldable_Foldable](dictFoldable_0_box), splice_1_box.StrVal())
+		cache_Data_String_NonEmpty_Internal_joinWith = gopurs_runtime.Func3(func(dictFoldable_0_box gopurs_runtime.Value, splice_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str(Call_Data_String_NonEmpty_Internal_joinWith(gopurs_runtime.CoerceToStruct[Constructor_Data_Foldable_Foldable](dictFoldable_0_box), splice_1_box.StrVal(), x_2_box))
 })
 	})
 	return cache_Data_String_NonEmpty_Internal_joinWith
@@ -383,8 +383,8 @@ var cache_Data_String_NonEmpty_Internal_joinWith__632268499 gopurs_runtime.Value
 var once_Data_String_NonEmpty_Internal_joinWith__632268499 sync.Once
 func Get_Data_String_NonEmpty_Internal_joinWith__632268499() gopurs_runtime.Value {
 	once_Data_String_NonEmpty_Internal_joinWith__632268499.Do(func() {
-		cache_Data_String_NonEmpty_Internal_joinWith__632268499 = gopurs_runtime.Func2(func(dictFoldable_0_box gopurs_runtime.Value, splice_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-return Call_Data_String_NonEmpty_Internal_joinWith__632268499(gopurs_runtime.CoerceToStruct[Constructor_Data_Foldable_Foldable](dictFoldable_0_box), splice_1_box.StrVal())
+		cache_Data_String_NonEmpty_Internal_joinWith__632268499 = gopurs_runtime.Func3(func(dictFoldable_0_box gopurs_runtime.Value, splice_1_box gopurs_runtime.Value, x_2_box gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Str(Call_Data_String_NonEmpty_Internal_joinWith__632268499(gopurs_runtime.CoerceToStruct[Constructor_Data_Foldable_Foldable](dictFoldable_0_box), splice_1_box.StrVal(), x_2_box))
 })
 	})
 	return cache_Data_String_NonEmpty_Internal_joinWith__632268499
@@ -601,70 +601,54 @@ _ = dictFoldable1_0
 Foldable0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Foldable_Foldable](gopurs_runtime.Apply(gopurs_runtime.Box(dictFoldable1_0.V0), gopurs_runtime.Value{}))
 _ = Foldable0_1_0
 return gopurs_runtime.Func(func(v_2 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): Semigroup0_3_2 -> *Constructor_Data_Semigroup_Semigroup
-Semigroup0_3_2 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Monoid_monoidString(), "Semigroup0"), gopurs_runtime.Value{}))
-_ = Semigroup0_3_2
-// TAST (Let): __local_var_3_1 -> gopurs_runtime.Value
-__local_var_3_1 := gopurs_runtime.Func(func(xs_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(gopurs_runtime.Apply3(gopurs_runtime.Box(Foldable0_1_0.V1), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t3 gopurs_runtime.Value
+return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordGet(gopurs_runtime.Apply3(gopurs_runtime.Box(Foldable0_1_0.V1), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.RecordGet(v_5, "init").IntVal) != (0) {
-__t3 = gopurs_runtime.RecordDict2("acc", "init", v1_6, gopurs_runtime.Bool(false))
-goto end_branch_3
+if (gopurs_runtime.RecordGet(v_4, "init").IntVal) != (0) {
+__t1 = gopurs_runtime.RecordDict2("acc", "init", v1_5, gopurs_runtime.Bool(false))
+goto end_branch_1
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.RecordDict2("acc", "init", gopurs_runtime.Apply2(gopurs_runtime.Box(Semigroup0_3_2.V0), gopurs_runtime.RecordGet(v_5, "acc"), gopurs_runtime.Apply2(gopurs_runtime.Box(Semigroup0_3_2.V0), gopurs_runtime.Str(v_2.StrVal()), v1_6)), gopurs_runtime.Bool(false))
+__t1 = gopurs_runtime.RecordDict2("acc", "init", gopurs_runtime.Str(((gopurs_runtime.RecordGet(v_4, "acc").StrVal()) + (v_2.StrVal())) + (v1_5.StrVal())), gopurs_runtime.Bool(false))
 }
-end_branch_3:
-return __t3
+end_branch_1:
+return __t1
 })
-}), gopurs_runtime.RecordDict2("acc", "init", gopurs_runtime.RecordGet(Get_Data_Monoid_monoidString(), "mempty"), gopurs_runtime.Bool(true)), xs_4), "acc")
-})
-_ = __local_var_3_1
-return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_3_1, x_4)
+}), gopurs_runtime.RecordDict2("acc", "init", gopurs_runtime.Str(""), gopurs_runtime.Bool(true)), x_3), "acc")
 })
 })
 }
 
-func Call_Data_String_NonEmpty_Internal_joinWith(dictFoldable_0_loop *Constructor_Data_Foldable_Foldable, splice_1_loop string) gopurs_runtime.Value {
+func Call_Data_String_NonEmpty_Internal_joinWith(dictFoldable_0_loop *Constructor_Data_Foldable_Foldable, splice_1_loop string, x_2_loop gopurs_runtime.Value) string {
 var dictFoldable_0 *Constructor_Data_Foldable_Foldable = dictFoldable_0_loop
 _ = dictFoldable_0
 var splice_1 string = splice_1_loop
 _ = splice_1
-// TAST (Let): Semigroup0_2_1 -> *Constructor_Data_Semigroup_Semigroup
-Semigroup0_2_1 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Monoid_monoidString(), "Semigroup0"), gopurs_runtime.Value{}))
-_ = Semigroup0_2_1
-// TAST (Let): __local_var_2_0 -> gopurs_runtime.Value
-__local_var_2_0 := gopurs_runtime.Func(func(xs_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(gopurs_runtime.Apply3(gopurs_runtime.Box(dictFoldable_0.V1), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t2 gopurs_runtime.Value
+var x_2 gopurs_runtime.Value = x_2_loop
+_ = x_2
+return gopurs_runtime.RecordGet(gopurs_runtime.Apply3(gopurs_runtime.Box(dictFoldable_0.V1), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.RecordGet(v_4, "init").IntVal) != (0) {
-__t2 = gopurs_runtime.RecordDict2("acc", "init", v1_5, gopurs_runtime.Bool(false))
-goto end_branch_2
+if (gopurs_runtime.RecordGet(v_3, "init").IntVal) != (0) {
+__t0 = gopurs_runtime.RecordDict2("acc", "init", v1_4, gopurs_runtime.Bool(false))
+goto end_branch_0
 } else {
 
 }
 }
 {
-__t2 = gopurs_runtime.RecordDict2("acc", "init", gopurs_runtime.Apply2(gopurs_runtime.Box(Semigroup0_2_1.V0), gopurs_runtime.RecordGet(v_4, "acc"), gopurs_runtime.Apply2(gopurs_runtime.Box(Semigroup0_2_1.V0), gopurs_runtime.Str(splice_1), v1_5)), gopurs_runtime.Bool(false))
+__t0 = gopurs_runtime.RecordDict2("acc", "init", gopurs_runtime.Str(((gopurs_runtime.RecordGet(v_3, "acc").StrVal()) + (splice_1)) + (v1_4.StrVal())), gopurs_runtime.Bool(false))
 }
-end_branch_2:
-return __t2
+end_branch_0:
+return __t0
 })
-}), gopurs_runtime.RecordDict2("acc", "init", gopurs_runtime.RecordGet(Get_Data_Monoid_monoidString(), "mempty"), gopurs_runtime.Bool(true)), xs_3), "acc")
-})
-_ = __local_var_2_0
-return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_2_0, x_3)
-})
+}), gopurs_runtime.RecordDict2("acc", "init", gopurs_runtime.Str(""), gopurs_runtime.Bool(true)), x_2), "acc").StrVal()
 }
 
 func Call_Data_String_NonEmpty_Internal_join1With(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1) gopurs_runtime.Value {
@@ -674,38 +658,25 @@ _ = dictFoldable1_0
 Foldable0_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Foldable_Foldable](gopurs_runtime.Apply(gopurs_runtime.Box(dictFoldable1_0.V0), gopurs_runtime.Value{}))
 _ = Foldable0_1_0
 return gopurs_runtime.Func(func(splice_2 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): Semigroup0_3_3 -> *Constructor_Data_Semigroup_Semigroup
-Semigroup0_3_3 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Monoid_monoidString(), "Semigroup0"), gopurs_runtime.Value{}))
-_ = Semigroup0_3_3
-// TAST (Let): __local_var_3_2 -> gopurs_runtime.Value
-__local_var_3_2 := gopurs_runtime.Func(func(xs_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(gopurs_runtime.Apply3(gopurs_runtime.Box(Foldable0_1_0.V1), gopurs_runtime.Func(func(v_5 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_6 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t4 gopurs_runtime.Value
+return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.RecordGet(gopurs_runtime.Apply3(gopurs_runtime.Box(Foldable0_1_0.V1), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t1 gopurs_runtime.Value
 {
-if (gopurs_runtime.RecordGet(v_5, "init").IntVal) != (0) {
-__t4 = gopurs_runtime.RecordDict2("acc", "init", v1_6, gopurs_runtime.Bool(false))
-goto end_branch_4
+if (gopurs_runtime.RecordGet(v_4, "init").IntVal) != (0) {
+__t1 = gopurs_runtime.RecordDict2("acc", "init", v1_5, gopurs_runtime.Bool(false))
+goto end_branch_1
 } else {
 
 }
 }
 {
-__t4 = gopurs_runtime.RecordDict2("acc", "init", gopurs_runtime.Apply2(gopurs_runtime.Box(Semigroup0_3_3.V0), gopurs_runtime.RecordGet(v_5, "acc"), gopurs_runtime.Apply2(gopurs_runtime.Box(Semigroup0_3_3.V0), gopurs_runtime.Str(splice_2.StrVal()), v1_6)), gopurs_runtime.Bool(false))
+__t1 = gopurs_runtime.RecordDict2("acc", "init", gopurs_runtime.Str(((gopurs_runtime.RecordGet(v_4, "acc").StrVal()) + (splice_2.StrVal())) + (v1_5.StrVal())), gopurs_runtime.Bool(false))
 }
-end_branch_4:
-return __t4
+end_branch_1:
+return __t1
 })
-}), gopurs_runtime.RecordDict2("acc", "init", gopurs_runtime.RecordGet(Get_Data_Monoid_monoidString(), "mempty"), gopurs_runtime.Bool(true)), xs_4), "acc")
-})
-_ = __local_var_3_2
-// TAST (Let): __local_var_3_1 -> gopurs_runtime.Value
-__local_var_3_1 := gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_3_2, x_4)
-})
-_ = __local_var_3_1
-return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_3_1, x_4)
+}), gopurs_runtime.RecordDict2("acc", "init", gopurs_runtime.Str(""), gopurs_runtime.Bool(true)), x_3), "acc")
 })
 })
 }
@@ -850,39 +821,31 @@ _ = s2_1
 return (v_0) + (s2_1)
 }
 
-func Call_Data_String_NonEmpty_Internal_joinWith__632268499(dictFoldable_0_loop *Constructor_Data_Foldable_Foldable, splice_1_loop string) gopurs_runtime.Value {
+func Call_Data_String_NonEmpty_Internal_joinWith__632268499(dictFoldable_0_loop *Constructor_Data_Foldable_Foldable, splice_1_loop string, x_2_loop gopurs_runtime.Value) string {
 var dictFoldable_0 *Constructor_Data_Foldable_Foldable = dictFoldable_0_loop
 _ = dictFoldable_0
 var splice_1 string = splice_1_loop
 _ = splice_1
-// TAST (Let): Semigroup0_2_1 -> *Constructor_Data_Semigroup_Semigroup
-Semigroup0_2_1 := gopurs_runtime.CoerceToStruct[Constructor_Data_Semigroup_Semigroup](gopurs_runtime.Apply(gopurs_runtime.RecordGet(Get_Data_Monoid_monoidString(), "Semigroup0"), gopurs_runtime.Value{}))
-_ = Semigroup0_2_1
-// TAST (Let): __local_var_2_0 -> gopurs_runtime.Value
-__local_var_2_0 := gopurs_runtime.Func(func(xs_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordGet(gopurs_runtime.Apply3(gopurs_runtime.Box(dictFoldable_0.V1), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(v1_5 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t2 gopurs_runtime.Value
+var x_2 gopurs_runtime.Value = x_2_loop
+_ = x_2
+return gopurs_runtime.RecordGet(gopurs_runtime.Apply3(gopurs_runtime.Box(dictFoldable_0.V1), gopurs_runtime.Func(func(v_3 gopurs_runtime.Value) gopurs_runtime.Value {
+return gopurs_runtime.Func(func(v1_4 gopurs_runtime.Value) gopurs_runtime.Value {
+var __t0 gopurs_runtime.Value
 {
-if (gopurs_runtime.RecordGet(v_4, "init").IntVal) != (0) {
-__t2 = gopurs_runtime.RecordDict2("acc", "init", v1_5, gopurs_runtime.Bool(false))
-goto end_branch_2
+if (gopurs_runtime.RecordGet(v_3, "init").IntVal) != (0) {
+__t0 = gopurs_runtime.RecordDict2("acc", "init", v1_4, gopurs_runtime.Bool(false))
+goto end_branch_0
 } else {
 
 }
 }
 {
-__t2 = gopurs_runtime.RecordDict2("acc", "init", gopurs_runtime.Apply2(gopurs_runtime.Box(Semigroup0_2_1.V0), gopurs_runtime.RecordGet(v_4, "acc"), gopurs_runtime.Apply2(gopurs_runtime.Box(Semigroup0_2_1.V0), gopurs_runtime.Str(splice_1), v1_5)), gopurs_runtime.Bool(false))
+__t0 = gopurs_runtime.RecordDict2("acc", "init", gopurs_runtime.Str(((gopurs_runtime.RecordGet(v_3, "acc").StrVal()) + (splice_1)) + (v1_4.StrVal())), gopurs_runtime.Bool(false))
 }
-end_branch_2:
-return __t2
+end_branch_0:
+return __t0
 })
-}), gopurs_runtime.RecordDict2("acc", "init", gopurs_runtime.RecordGet(Get_Data_Monoid_monoidString(), "mempty"), gopurs_runtime.Bool(true)), xs_3), "acc")
-})
-_ = __local_var_2_0
-return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply(__local_var_2_0, x_3)
-})
+}), gopurs_runtime.RecordDict2("acc", "init", gopurs_runtime.Str(""), gopurs_runtime.Bool(true)), x_2), "acc").StrVal()
 }
 
 func Call_Data_String_NonEmpty_Internal_liftS__895676186(f_0_loop gopurs_runtime.Value, v_1_loop string) bool {

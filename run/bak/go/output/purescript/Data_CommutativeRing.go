@@ -99,9 +99,7 @@ var once_Data_CommutativeRing_commutativeRingNumber sync.Once
 func Get_Data_CommutativeRing_commutativeRingNumber() gopurs_runtime.Value {
 	once_Data_CommutativeRing_commutativeRingNumber.Do(func() {
 		cache_Data_CommutativeRing_commutativeRingNumber = gopurs_runtime.RecordDict1("Ring0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("Semiring0", "sub", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", Get_Data_Semiring_numAdd(), Get_Data_Semiring_numMul(), gopurs_runtime.Float(1.0), gopurs_runtime.Float(0.0))
-}), Get_Data_Ring_numSub())
+return Get_Data_Ring_ringNumber()
 }))
 	})
 	return cache_Data_CommutativeRing_commutativeRingNumber
@@ -112,9 +110,7 @@ var once_Data_CommutativeRing_commutativeRingInt sync.Once
 func Get_Data_CommutativeRing_commutativeRingInt() gopurs_runtime.Value {
 	once_Data_CommutativeRing_commutativeRingInt.Do(func() {
 		cache_Data_CommutativeRing_commutativeRingInt = gopurs_runtime.RecordDict1("Ring0", gopurs_runtime.Func(func(_dollar__unused_0 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict2("Semiring0", "sub", gopurs_runtime.Func(func(_dollar__unused_1 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.RecordDict4("add", "mul", "one", "zero", Get_Data_Semiring_intAdd(), Get_Data_Semiring_intMul(), gopurs_runtime.Int(1), gopurs_runtime.Int(0))
-}), Get_Data_Ring_intSub())
+return Get_Data_Ring_ringInt()
 }))
 	})
 	return cache_Data_CommutativeRing_commutativeRingInt

@@ -48,9 +48,10 @@ return &Constructor_Data_Tuple_Tuple{1, f_0, x_1}
 func Call_Control_Comonad_Store_runStore(v_0_loop *Constructor_Data_Tuple_Tuple) *Constructor_Data_Tuple_Tuple {
 var v_0 *Constructor_Data_Tuple_Tuple = v_0_loop
 _ = v_0
+// TAST (Let): __local_var_1_1 -> *Constructor_Data_Tuple_Tuple
+var __local_var_1_1 *Constructor_Data_Tuple_Tuple = gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, (v_0).V1, (v_0).V0})})
 // TAST (Let): __local_var_1_0 -> *Constructor_Data_Tuple_Tuple
-__local_var_1_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Tuple_functorTuple(), "map"), Get_Unsafe_Coerce_unsafeCoerce(), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, (v_0).V1, (v_0).V0})}))
-_ = __local_var_1_0
+var __local_var_1_0 *Constructor_Data_Tuple_Tuple = gopurs_runtime.CoerceToStruct[Constructor_Data_Tuple_Tuple](gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, (__local_var_1_1).V0, (__local_var_1_1).V1})})
 return &Constructor_Data_Tuple_Tuple{1, (__local_var_1_0).V1, (__local_var_1_0).V0}
 }
 

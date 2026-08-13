@@ -464,45 +464,63 @@ return __t1
 })
 }))
 _ = fromDone_2_0
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Effect_bindEffect(), "bind"), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Effect_bindEffect(), "bind"), gopurs_runtime.Apply(f_0, a_1), Get_Effect_Ref__new()), gopurs_runtime.Func(func(r_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply3(gopurs_runtime.RecordGet(Get_Control_Bind_discardUnit(), "discard"), gopurs_runtime.Value{Type: 9, IntVal: 4032919565, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Control_Bind_Bind](Get_Effect_bindEffect()))}, gopurs_runtime.Apply(Get_Effect_untilE(), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Effect_bindEffect(), "bind"), gopurs_runtime.Apply(Get_Effect_Ref_read(), r_3), gopurs_runtime.Func(func(v_4 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t4 gopurs_runtime.Value
-{
-if (v_4.Type == 9 && v_4.IntVal == 525585346) {
-__t4 = gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Effect_bindEffect(), "bind"), gopurs_runtime.Apply(f_0, (*Constructor_Control_Monad_Rec_Class_Loop)(v_4.UnsafePtr).V0), gopurs_runtime.Func(func(e_5 gopurs_runtime.Value) gopurs_runtime.Value {
-// TAST (Let): __local_var_6_2 -> gopurs_runtime.Value
-__local_var_6_2 := gopurs_runtime.Apply2(Get_Effect_Ref_write(), e_5, r_3)
-_ = __local_var_6_2
+// TAST (Let): __local_var_3_3 -> gopurs_runtime.Value
+__local_var_3_3 := gopurs_runtime.Apply(f_0, a_1)
+_ = __local_var_3_3
+// TAST (Let): __local_var_3_2 -> gopurs_runtime.Value
+__local_var_3_2 := gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_4_4 := gopurs_runtime.Apply(__local_var_3_3, gopurs_runtime.Value{})
+_ = __local_var_4_4
+return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_Effect_Ref__new(), __local_var_4_4), gopurs_runtime.Value{})
+})
+_ = __local_var_3_2
 return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-__local_var_7_3 := gopurs_runtime.Apply(__local_var_6_2, gopurs_runtime.Value{})
-_ = __local_var_7_3
+__local_var_4_5 := gopurs_runtime.Apply(__local_var_3_2, gopurs_runtime.Value{})
+_ = __local_var_4_5
+// TAST (Let): __local_var_5_7 -> gopurs_runtime.Value
+__local_var_5_7 := gopurs_runtime.Apply(Get_Effect_Ref_read(), __local_var_4_5)
+_ = __local_var_5_7
+__local_var_5_6 := gopurs_runtime.Apply(gopurs_runtime.Apply(Get_Effect_untilE(), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_6_8 := gopurs_runtime.Apply(__local_var_5_7, gopurs_runtime.Value{})
+_ = __local_var_6_8
+var __t11 gopurs_runtime.Value
+{
+if (__local_var_6_8.Type == 9 && __local_var_6_8.IntVal == 525585346) {
+__t11 = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+__local_var_7_9 := gopurs_runtime.Apply(gopurs_runtime.Apply(f_0, (*Constructor_Control_Monad_Rec_Class_Loop)(__local_var_6_8.UnsafePtr).V0), gopurs_runtime.Value{})
+_ = __local_var_7_9
+__local_var_8_10 := gopurs_runtime.Apply(gopurs_runtime.Apply2(Get_Effect_Ref_write(), __local_var_7_9, __local_var_4_5), gopurs_runtime.Value{})
+_ = __local_var_8_10
 return gopurs_runtime.Bool(false)
 })
-}))
-goto end_branch_4
+goto end_branch_11
 } else {
 
 }
 }
 {
-if (v_4.Type == 9 && v_4.IntVal == 60402430) {
-__t4 = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+if (__local_var_6_8.Type == 9 && __local_var_6_8.IntVal == 60402430) {
+__t11 = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Bool(true)
 })
-goto end_branch_4
+goto end_branch_11
 } else {
 
 }
 }
 {
-__t4 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t11 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 }
-end_branch_4:
-return __t4
-}))), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Effect_functorEffect(), "map"), fromDone_2_0, gopurs_runtime.Apply(Get_Effect_Ref_read(), r_3))
-}))
-}))
+end_branch_11:
+return gopurs_runtime.Apply(__t11, gopurs_runtime.Value{})
+})), gopurs_runtime.Value{})
+_ = __local_var_5_6
+__local_var_6_12 := fromDone_2_0
+_ = __local_var_6_12
+__local_var_7_13 := gopurs_runtime.Apply(gopurs_runtime.Apply(Get_Effect_Ref_read(), __local_var_4_5), gopurs_runtime.Value{})
+_ = __local_var_7_13
+return gopurs_runtime.Apply(__local_var_6_12, __local_var_7_13)
+})
 })
 }))
 	})

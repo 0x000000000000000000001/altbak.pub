@@ -10,7 +10,7 @@ var cache_Data_Date_Gen_bottom gopurs_runtime.Value
 var once_Data_Date_Gen_bottom sync.Once
 func Get_Data_Date_Gen_bottom() gopurs_runtime.Value {
 	once_Data_Date_Gen_bottom.Do(func() {
-		cache_Data_Date_Gen_bottom = gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedMonth(), "bottom").IntVal)), UnsafePtr: nil}
+		cache_Data_Date_Gen_bottom = gopurs_runtime.Value{Type: 9, IntVal: int64(1908470532), UnsafePtr: nil}
 	})
 	return cache_Data_Date_Gen_bottom
 }
@@ -19,7 +19,7 @@ var cache_Data_Date_Gen_bottom1 gopurs_runtime.Value
 var once_Data_Date_Gen_bottom1 sync.Once
 func Get_Data_Date_Gen_bottom1() gopurs_runtime.Value {
 	once_Data_Date_Gen_bottom1.Do(func() {
-		cache_Data_Date_Gen_bottom1 = gopurs_runtime.Int(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedDay(), "bottom").IntVal)
+		cache_Data_Date_Gen_bottom1 = gopurs_runtime.Int(1)
 	})
 	return cache_Data_Date_Gen_bottom1
 }
@@ -69,7 +69,7 @@ return gopurs_runtime.Apply(Get_Data_Int_toNumber(), x_6)
 }), gopurs_runtime.Apply2(gopurs_runtime.RecordGet(dictMonadGen_0, "chooseInt"), gopurs_runtime.Int(0), gopurs_runtime.Int(__t4))), gopurs_runtime.Func(func(days_6 gopurs_runtime.Value) gopurs_runtime.Value {
 return gopurs_runtime.Apply(pure_4_3, gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Date_Date](gopurs_runtime.Apply(Get_Partial_Unsafe__unsafePartial(), gopurs_runtime.Func(func(_dollar__unused_7 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_8_6 -> *Constructor_Data_Maybe_Just
-__local_var_8_6 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply3(Get_Data_Date_exactDate(), gopurs_runtime.Int(year_5.IntVal), gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedMonth(), "bottom").IntVal)), UnsafePtr: nil}, gopurs_runtime.Int(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedDay(), "bottom").IntVal)))
+__local_var_8_6 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply3(Get_Data_Date_exactDate(), gopurs_runtime.Int(year_5.IntVal), gopurs_runtime.Value{Type: 9, IntVal: int64(1908470532), UnsafePtr: nil}, gopurs_runtime.Int(1)))
 _ = __local_var_8_6
 var __t7 *Constructor_Data_Maybe_Just
 {
