@@ -143,21 +143,21 @@ var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var v_1 *Constructor_Data_List_Types_Cons = v_1_loop
 _ = v_1
-var __t2 gopurs_runtime.Value
+var __t2 *Constructor_Data_List_Types_Cons
 {
 if (v_1 != nil) {
-var __t1 gopurs_runtime.Value
+var __t1 *Constructor_Data_List_Types_Cons
 {
 var __t_tag_0 *Constructor_Data_List_Types_Cons = (v_1).V1
 if (__t_tag_0 == nil) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer((*Constructor_Data_List_Types_Cons)(nil))}
+__t1 = (*Constructor_Data_List_Types_Cons)(nil)
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons{1, (v_1).V0, Call_Data_List_Partial_init(gopurs_runtime.Value{}, (v_1).V1)})}
+__t1 = &Constructor_Data_List_Types_Cons{1, (v_1).V0, Call_Data_List_Partial_init(gopurs_runtime.Value{}, (v_1).V1)}
 }
 end_branch_1:
 __t2 = __t1
@@ -167,10 +167,10 @@ goto end_branch_2
 }
 }
 {
-__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t2 = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](func() gopurs_runtime.Value { panic("Failed pattern match") }())
 }
 end_branch_2:
-return gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](__t2)
+return __t2
 }
 }
 
@@ -200,21 +200,21 @@ var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var v_1 *Constructor_Data_List_Types_Cons = v_1_loop
 _ = v_1
-var __t2 gopurs_runtime.Value
+var __t2 *Constructor_Data_List_Types_Cons
 {
 if (v_1 != nil) {
-var __t1 gopurs_runtime.Value
+var __t1 *Constructor_Data_List_Types_Cons
 {
 var __t_tag_0 *Constructor_Data_List_Types_Cons = (v_1).V1
 if (__t_tag_0 == nil) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer((*Constructor_Data_List_Types_Cons)(nil))}
+__t1 = (*Constructor_Data_List_Types_Cons)(nil)
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 1358893437, UnsafePtr: unsafe.Pointer(&Constructor_Data_List_Types_Cons{1, (v_1).V0, Call_Data_List_Partial_init(gopurs_runtime.Value{}, (v_1).V1)})}
+__t1 = &Constructor_Data_List_Types_Cons{1, (v_1).V0, Call_Data_List_Partial_init(gopurs_runtime.Value{}, (v_1).V1)}
 }
 end_branch_1:
 __t2 = __t1
@@ -224,10 +224,10 @@ goto end_branch_2
 }
 }
 {
-__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t2 = gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](func() gopurs_runtime.Value { panic("Failed pattern match") }())
 }
 end_branch_2:
-return gopurs_runtime.CoerceToStruct[Constructor_Data_List_Types_Cons](__t2)
+return __t2
 }
 
 func Call_Data_List_Partial_last__2622911464(_dollar__unused_0_loop gopurs_runtime.Value, v_1_loop *Constructor_Data_List_Types_Cons) gopurs_runtime.Value {

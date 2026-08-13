@@ -191,20 +191,20 @@ func Get_Data_String_CodeUnits_charAt() gopurs_runtime.Value {
 func Call_Data_String_CodeUnits_uncons(v_0_loop string) *Constructor_Data_Maybe_Just {
 var v_0 string = v_0_loop
 _ = v_0
-var __t0 gopurs_runtime.Value
+var __t0 *Constructor_Data_Maybe_Just
 {
 if (v_0) == ("") {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
+__t0 = (*Constructor_Data_Maybe_Just)(nil)
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.RecordDict2("head", "tail", gopurs_runtime.Str(gopurs_runtime.Apply2(Get_Data_String_Unsafe_charAt(), gopurs_runtime.Int(0), gopurs_runtime.Str(v_0)).StrVal()), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_Data_String_CodeUnits_drop(), gopurs_runtime.Int(1), gopurs_runtime.Str(v_0)).StrVal()))})}
+__t0 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.RecordDict2("head", "tail", gopurs_runtime.Str(gopurs_runtime.Apply2(Get_Data_String_Unsafe_charAt(), gopurs_runtime.Int(0), gopurs_runtime.Str(v_0)).StrVal()), gopurs_runtime.Str(gopurs_runtime.Apply2(Get_Data_String_CodeUnits_drop(), gopurs_runtime.Int(1), gopurs_runtime.Str(v_0)).StrVal()))}
 }
 end_branch_0:
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t0)
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t0)})
 }
 
 func Call_Data_String_CodeUnits_takeWhile(p_0_loop gopurs_runtime.Value, s_1_loop string) string {
@@ -231,20 +231,20 @@ _ = str_1
 // TAST (Let): v1_2_0 -> gopurs_runtime.Value
 v1_2_0 := gopurs_runtime.Apply2(Get_Data_String_CodeUnits_splitAt(), gopurs_runtime.Int((gopurs_runtime.Apply(Get_Data_String_CodeUnits_length(), gopurs_runtime.Str(str_1)).IntVal) - (gopurs_runtime.Apply(Get_Data_String_CodeUnits_length(), gopurs_runtime.Str(v_0)).IntVal)), gopurs_runtime.Str(str_1))
 _ = v1_2_0
-var __t1 gopurs_runtime.Value
+var __t1 *Constructor_Data_Maybe_Just
 {
 if (gopurs_runtime.RecordGet(v1_2_0, "after").StrVal()) == (v_0) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Str(gopurs_runtime.RecordGet(v1_2_0, "before").StrVal())})}
+__t1 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Str(gopurs_runtime.RecordGet(v1_2_0, "before").StrVal())}
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
+__t1 = (*Constructor_Data_Maybe_Just)(nil)
 }
 end_branch_1:
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t1)
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t1)})
 }
 
 func Call_Data_String_CodeUnits_stripPrefix(v_0_loop string, str_1_loop string) *Constructor_Data_Maybe_Just {
@@ -255,20 +255,20 @@ _ = str_1
 // TAST (Let): v1_2_0 -> gopurs_runtime.Value
 v1_2_0 := gopurs_runtime.Apply2(Get_Data_String_CodeUnits_splitAt(), gopurs_runtime.Int(gopurs_runtime.Apply(Get_Data_String_CodeUnits_length(), gopurs_runtime.Str(v_0)).IntVal), gopurs_runtime.Str(str_1))
 _ = v1_2_0
-var __t1 gopurs_runtime.Value
+var __t1 *Constructor_Data_Maybe_Just
 {
 if (gopurs_runtime.RecordGet(v1_2_0, "before").StrVal()) == (v_0) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Str(gopurs_runtime.RecordGet(v1_2_0, "after").StrVal())})}
+__t1 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Str(gopurs_runtime.RecordGet(v1_2_0, "after").StrVal())}
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
+__t1 = (*Constructor_Data_Maybe_Just)(nil)
 }
 end_branch_1:
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t1)
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t1)})
 }
 
 func Call_Data_String_CodeUnits_startsWith(pat_0_loop string, x_1_loop string) bool {

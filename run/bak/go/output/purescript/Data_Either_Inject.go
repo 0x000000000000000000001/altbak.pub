@@ -44,10 +44,10 @@ var once_Data_Either_Inject_injectLeft sync.Once
 func Get_Data_Either_Inject_injectLeft() gopurs_runtime.Value {
 	once_Data_Either_Inject_injectLeft.Do(func() {
 		cache_Data_Either_Inject_injectLeft = gopurs_runtime.RecordDict2("inj", "prj", Get_Data_Either_Left(), gopurs_runtime.Func(func(v2_0 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t0 gopurs_runtime.Value
+var __t0 *Constructor_Data_Maybe_Just
 {
 if (v2_0.Type == 9 && v2_0.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, (*Constructor_Data_Either_Left)(v2_0.UnsafePtr).V0})}
+__t0 = &Constructor_Data_Maybe_Just{1, (*Constructor_Data_Either_Left)(v2_0.UnsafePtr).V0}
 goto end_branch_0
 } else {
 
@@ -55,17 +55,17 @@ goto end_branch_0
 }
 {
 if (v2_0.Type == 9 && v2_0.IntVal == 2465973597) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
+__t0 = (*Constructor_Data_Maybe_Just)(nil)
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_runtime.Value { panic("Failed pattern match") }())
 }
 end_branch_0:
-return __t0
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t0)}
 }))
 	})
 	return cache_Data_Either_Inject_injectLeft

@@ -686,20 +686,20 @@ return gopurs_runtime.Apply(__local_var_3_1, x_4)
 func Call_Data_String_NonEmpty_Internal_fromString(v_0_loop string) *Constructor_Data_Maybe_Just {
 var v_0 string = v_0_loop
 _ = v_0
-var __t0 gopurs_runtime.Value
+var __t0 *Constructor_Data_Maybe_Just
 {
 if (v_0) == ("") {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
+__t0 = (*Constructor_Data_Maybe_Just)(nil)
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Str(v_0)})}
+__t0 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Str(v_0)}
 }
 end_branch_0:
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t0)
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t0)})
 }
 
 func Call_Data_String_NonEmpty_Internal_stripPrefix(pat_0_loop string) gopurs_runtime.Value {
@@ -720,20 +720,20 @@ _ = v_0
 // TAST (Let): __local_var_1_0 -> string
 __local_var_1_0 := gopurs_runtime.Apply(Get_Data_String_Common_trim(), gopurs_runtime.Str(v_0)).StrVal()
 _ = __local_var_1_0
-var __t1 gopurs_runtime.Value
+var __t1 *Constructor_Data_Maybe_Just
 {
 if (__local_var_1_0) == ("") {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
+__t1 = (*Constructor_Data_Maybe_Just)(nil)
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Str(__local_var_1_0)})}
+__t1 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Str(__local_var_1_0)}
 }
 end_branch_1:
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t1)
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t1)})
 }
 
 func Call_Data_String_NonEmpty_Internal_unsafeFromString(_dollar__unused_0_loop gopurs_runtime.Value, x_1_loop string) string {
@@ -741,21 +741,21 @@ var _dollar__unused_0 gopurs_runtime.Value = _dollar__unused_0_loop
 _ = _dollar__unused_0
 var x_1 string = x_1_loop
 _ = x_1
-var __t1 gopurs_runtime.Value
+var __t1 *Constructor_Data_Maybe_Just
 {
 if (gopurs_runtime.Str(x_1).StrVal()) == ("") {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
+__t1 = (*Constructor_Data_Maybe_Just)(nil)
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Str(gopurs_runtime.Str(x_1).StrVal())})}
+__t1 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Str(gopurs_runtime.Str(x_1).StrVal())}
 }
 end_branch_1:
 // TAST (Let): __local_var_2_0 -> gopurs_runtime.Value
-var __local_var_2_0 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t1))}
+var __local_var_2_0 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t1)}
 var __t2 gopurs_runtime.Value
 {
 if (__local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 930809136 && __local_var_2_0.UnsafePtr != nil) {

@@ -1258,10 +1258,10 @@ return __t0
 func Call_Data_Either_hush(v2_0_loop gopurs_runtime.Value) *Constructor_Data_Maybe_Just {
 var v2_0 gopurs_runtime.Value = v2_0_loop
 _ = v2_0
-var __t0 gopurs_runtime.Value
+var __t0 *Constructor_Data_Maybe_Just
 {
 if (v2_0.Type == 9 && v2_0.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
+__t0 = (*Constructor_Data_Maybe_Just)(nil)
 goto end_branch_0
 } else {
 
@@ -1269,17 +1269,17 @@ goto end_branch_0
 }
 {
 if (v2_0.Type == 9 && v2_0.IntVal == 2465973597) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, (*Constructor_Data_Either_Right)(v2_0.UnsafePtr).V0})}
+__t0 = &Constructor_Data_Maybe_Just{1, (*Constructor_Data_Either_Right)(v2_0.UnsafePtr).V0}
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_runtime.Value { panic("Failed pattern match") }())
 }
 end_branch_0:
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t0)
+return __t0
 }
 
 func Call_Data_Either_isLeft(v2_0_loop gopurs_runtime.Value) bool {
@@ -1368,10 +1368,10 @@ return ordEither2_3_1
 func Call_Data_Either_blush(v2_0_loop gopurs_runtime.Value) *Constructor_Data_Maybe_Just {
 var v2_0 gopurs_runtime.Value = v2_0_loop
 _ = v2_0
-var __t0 gopurs_runtime.Value
+var __t0 *Constructor_Data_Maybe_Just
 {
 if (v2_0.Type == 9 && v2_0.IntVal == 3711209382) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, (*Constructor_Data_Either_Left)(v2_0.UnsafePtr).V0})}
+__t0 = &Constructor_Data_Maybe_Just{1, (*Constructor_Data_Either_Left)(v2_0.UnsafePtr).V0}
 goto end_branch_0
 } else {
 
@@ -1379,17 +1379,17 @@ goto end_branch_0
 }
 {
 if (v2_0.Type == 9 && v2_0.IntVal == 2465973597) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
+__t0 = (*Constructor_Data_Maybe_Just)(nil)
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_runtime.Value { panic("Failed pattern match") }())
 }
 end_branch_0:
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t0)
+return __t0
 }
 
 func Call_Data_Either_semigroupEither(dictSemigroup_0_loop gopurs_runtime.Value) gopurs_runtime.Value {

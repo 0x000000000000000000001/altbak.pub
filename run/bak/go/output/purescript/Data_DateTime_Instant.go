@@ -204,7 +204,7 @@ return v_0
 func Call_Data_DateTime_Instant_instant(v_0_loop float64) *Constructor_Data_Maybe_Just {
 var v_0 float64 = v_0_loop
 _ = v_0
-var __t3 gopurs_runtime.Value
+var __t3 *Constructor_Data_Maybe_Just
 {
 var __t0 bool
 {
@@ -238,17 +238,17 @@ end_branch_1:
 __t_and_2 = __t1
 }
 if __t_and_2 {
-__t3 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Float(v_0)})}
+__t3 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Float(v_0)}
 goto end_branch_3
 } else {
 
 }
 }
 {
-__t3 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
+__t3 = (*Constructor_Data_Maybe_Just)(nil)
 }
 end_branch_3:
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t3)
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t3)})
 }
 
 func Call_Data_DateTime_Instant_fromDateTime(v_0_loop *Constructor_Data_DateTime_DateTime) float64 {

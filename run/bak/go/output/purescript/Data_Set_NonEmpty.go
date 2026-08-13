@@ -697,7 +697,7 @@ return gopurs_runtime.Apply(Get_Data_Set_insert(), gopurs_runtime.Value{Type: 9,
 func Call_Data_Set_NonEmpty_fromSet(s_0_loop *Constructor_Data_Map_Internal_Node) *Constructor_Data_Maybe_Just {
 var s_0 *Constructor_Data_Map_Internal_Node = s_0_loop
 _ = s_0
-var __t1 gopurs_runtime.Value
+var __t1 *Constructor_Data_Maybe_Just
 {
 var __t0 bool
 {
@@ -713,17 +713,17 @@ __t0 = false
 }
 end_branch_0:
 if __t0 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
+__t1 = (*Constructor_Data_Maybe_Just)(nil)
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(s_0)}})}
+__t1 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(s_0)}}
 }
 end_branch_1:
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t1)
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t1)})
 }
 
 func Call_Data_Set_NonEmpty_intersection(dictOrd_0_loop *Constructor_Data_Ord_Ord, v_1_loop *Constructor_Data_Map_Internal_Node, v1_2_loop *Constructor_Data_Map_Internal_Node) *Constructor_Data_Maybe_Just {
@@ -736,7 +736,7 @@ _ = v1_2
 // TAST (Let): __local_var_3_0 -> *Constructor_Data_Map_Internal_Node
 __local_var_3_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](gopurs_runtime.UncurriedApp4(Get_Data_Map_Internal_unsafeIntersectionWith(), gopurs_runtime.Box(dictOrd_0.V1), Get_Data_Function_go__const(), gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(v_1)}, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(v1_2)}))
 _ = __local_var_3_0
-var __t2 gopurs_runtime.Value
+var __t2 *Constructor_Data_Maybe_Just
 {
 var __t1 bool
 {
@@ -752,17 +752,17 @@ __t1 = false
 }
 end_branch_1:
 if __t1 {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
+__t2 = (*Constructor_Data_Maybe_Just)(nil)
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(__local_var_3_0)}})}
+__t2 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(__local_var_3_0)}}
 }
 end_branch_2:
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t2)
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t2)})
 }
 
 func Call_Data_Set_NonEmpty_fromFoldable1(dictFoldable1_0_loop *Constructor_Data_Semigroup_Foldable_Foldable1, dictOrd_1_loop *Constructor_Data_Ord_Ord) gopurs_runtime.Value {
@@ -792,7 +792,7 @@ return gopurs_runtime.Func(func(x_3 gopurs_runtime.Value) gopurs_runtime.Value {
 // TAST (Let): __local_var_4_1 -> gopurs_runtime.Value
 __local_var_4_1 := gopurs_runtime.Apply(__local_var_2_0, x_3)
 _ = __local_var_4_1
-var __t4 gopurs_runtime.Value
+var __t4 *Constructor_Data_Maybe_Just
 {
 var __t3 bool
 {
@@ -809,17 +809,17 @@ __t3 = false
 }
 end_branch_3:
 if __t3 {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
+__t4 = (*Constructor_Data_Maybe_Just)(nil)
 goto end_branch_4
 } else {
 
 }
 }
 {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](__local_var_4_1))}})}
+__t4 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](__local_var_4_1))}}
 }
 end_branch_4:
-return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t4))}
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t4)}
 })
 }
 
@@ -845,7 +845,7 @@ _ = v1_2
 // TAST (Let): __local_var_3_0 -> *Constructor_Data_Map_Internal_Node
 __local_var_3_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](gopurs_runtime.UncurriedApp3(Get_Data_Map_Internal_unsafeDifference(), gopurs_runtime.Box(dictOrd_0.V1), gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(v_1)}, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(v1_2)}))
 _ = __local_var_3_0
-var __t2 gopurs_runtime.Value
+var __t2 *Constructor_Data_Maybe_Just
 {
 var __t1 bool
 {
@@ -861,17 +861,17 @@ __t1 = false
 }
 end_branch_1:
 if __t1 {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
+__t2 = (*Constructor_Data_Maybe_Just)(nil)
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(__local_var_3_0)}})}
+__t2 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(__local_var_3_0)}}
 }
 end_branch_2:
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t2)
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t2)})
 }
 
 func Call_Data_Set_NonEmpty_delete(dictOrd_0_loop *Constructor_Data_Ord_Ord, a_1_loop gopurs_runtime.Value, v_2_loop *Constructor_Data_Map_Internal_Node) *Constructor_Data_Maybe_Just {
@@ -884,7 +884,7 @@ _ = v_2
 // TAST (Let): __local_var_3_0 -> *Constructor_Data_Map_Internal_Node
 __local_var_3_0 := gopurs_runtime.CoerceToStruct[Constructor_Data_Map_Internal_Node](gopurs_runtime.Apply3(Get_Data_Map_Internal_delete(), gopurs_runtime.Value{Type: 9, IntVal: 1435789946, UnsafePtr: unsafe.Pointer(dictOrd_0)}, a_1, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(v_2)}))
 _ = __local_var_3_0
-var __t2 gopurs_runtime.Value
+var __t2 *Constructor_Data_Maybe_Just
 {
 var __t1 bool
 {
@@ -900,17 +900,17 @@ __t1 = false
 }
 end_branch_1:
 if __t1 {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
+__t2 = (*Constructor_Data_Maybe_Just)(nil)
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(__local_var_3_0)}})}
+__t2 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(__local_var_3_0)}}
 }
 end_branch_2:
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t2)
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t2)})
 }
 
 func Call_Data_Set_NonEmpty_cons(dictOrd_0_loop *Constructor_Data_Ord_Ord) gopurs_runtime.Value {
@@ -922,7 +922,7 @@ return gopurs_runtime.Apply(Get_Data_Set_insert(), gopurs_runtime.Value{Type: 9,
 func Call_Data_Set_NonEmpty_fromSet__3199996154(s_0_loop *Constructor_Data_Map_Internal_Node) *Constructor_Data_Maybe_Just {
 var s_0 *Constructor_Data_Map_Internal_Node = s_0_loop
 _ = s_0
-var __t1 gopurs_runtime.Value
+var __t1 *Constructor_Data_Maybe_Just
 {
 var __t0 bool
 {
@@ -938,23 +938,23 @@ __t0 = false
 }
 end_branch_0:
 if __t0 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
+__t1 = (*Constructor_Data_Maybe_Just)(nil)
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(s_0)}})}
+__t1 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(s_0)}}
 }
 end_branch_1:
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t1)
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t1)})
 }
 
 func Call_Data_Set_NonEmpty_fromSet__1805959329(s_0_loop *Constructor_Data_Map_Internal_Node) *Constructor_Data_Maybe_Just {
 var s_0 *Constructor_Data_Map_Internal_Node = s_0_loop
 _ = s_0
-var __t1 gopurs_runtime.Value
+var __t1 *Constructor_Data_Maybe_Just
 {
 var __t0 bool
 {
@@ -970,17 +970,17 @@ __t0 = false
 }
 end_branch_0:
 if __t0 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
+__t1 = (*Constructor_Data_Maybe_Just)(nil)
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(s_0)}})}
+__t1 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: 324739070, UnsafePtr: unsafe.Pointer(s_0)}}
 }
 end_branch_1:
-return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t1)
+return gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t1)})
 }
 
 func Call_Data_Set_NonEmpty_toUnfoldable1__800752263(dictUnfoldable1_0_loop *Constructor_Data_Unfoldable1_Unfoldable1) gopurs_runtime.Value {

@@ -71,10 +71,10 @@ return gopurs_runtime.Apply(pure_4_3, gopurs_runtime.Value{Type: 9, IntVal: 7457
 // TAST (Let): __local_var_8_6 -> *Constructor_Data_Maybe_Just
 __local_var_8_6 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply3(Get_Data_Date_exactDate(), gopurs_runtime.Int(year_5.IntVal), gopurs_runtime.Value{Type: 9, IntVal: int64(uint32(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedMonth(), "bottom").IntVal)), UnsafePtr: nil}, gopurs_runtime.Int(gopurs_runtime.RecordGet(Get_Data_Date_Component_boundedDay(), "bottom").IntVal)))
 _ = __local_var_8_6
-var __t7 gopurs_runtime.Value
+var __t7 *Constructor_Data_Maybe_Just
 {
 if (__local_var_8_6 != nil) {
-__t7 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(Get_Data_Date_adjust(), gopurs_runtime.Float(days_6.FloatVal()), gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Date_Date]((__local_var_8_6).V0))})))}
+__t7 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(Get_Data_Date_adjust(), gopurs_runtime.Float(days_6.FloatVal()), gopurs_runtime.Value{Type: 9, IntVal: 745776346, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Date_Date]((__local_var_8_6).V0))}))
 goto end_branch_7
 } else {
 
@@ -82,18 +82,18 @@ goto end_branch_7
 }
 {
 if (__local_var_8_6 == nil) {
-__t7 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
+__t7 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
 goto end_branch_7
 } else {
 
 }
 }
 {
-__t7 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t7 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_runtime.Value { panic("Failed pattern match") }())
 }
 end_branch_7:
 // TAST (Let): __local_var_8_5 -> *Constructor_Data_Maybe_Just
-__local_var_8_5 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t7)
+__local_var_8_5 := __t7
 _ = __local_var_8_5
 var __t8 *Constructor_Data_Date_Date
 {

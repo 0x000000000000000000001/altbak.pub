@@ -1133,10 +1133,10 @@ return gopurs_runtime.Apply2(Call_Control_Monad_List_Trans_unfold(dictMonad_0), 
 __local_var_6_1 := (*Constructor_Data_Tuple_Tuple)(v_5.UnsafePtr).V0
 _ = __local_var_6_1
 return gopurs_runtime.Apply2(gopurs_runtime.Box(Functor0_1_0.V0), gopurs_runtime.Func(func(v1_7 gopurs_runtime.Value) gopurs_runtime.Value {
-var __t2 gopurs_runtime.Value
+var __t2 *Constructor_Data_Maybe_Just
 {
 if (v1_7.Type == 9 && v1_7.IntVal == 1320412129) {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply2(f_2, __local_var_6_1, (*Constructor_Control_Monad_List_Trans_Yield)(v1_7.UnsafePtr).V0), gopurs_runtime.Apply(Get_Data_Lazy_force(), (*Constructor_Control_Monad_List_Trans_Yield)(v1_7.UnsafePtr).V1)})}, __local_var_6_1})}})}
+__t2 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Apply2(f_2, __local_var_6_1, (*Constructor_Control_Monad_List_Trans_Yield)(v1_7.UnsafePtr).V0), gopurs_runtime.Apply(Get_Data_Lazy_force(), (*Constructor_Control_Monad_List_Trans_Yield)(v1_7.UnsafePtr).V1)})}, __local_var_6_1})}}
 goto end_branch_2
 } else {
 
@@ -1144,7 +1144,7 @@ goto end_branch_2
 }
 {
 if (v1_7.Type == 9 && v1_7.IntVal == 813447293) {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, __local_var_6_1, gopurs_runtime.Apply(Get_Data_Lazy_force(), (*Constructor_Control_Monad_List_Trans_Skip)(v1_7.UnsafePtr).V0)})}, __local_var_6_1})}})}
+__t2 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, __local_var_6_1, gopurs_runtime.Apply(Get_Data_Lazy_force(), (*Constructor_Control_Monad_List_Trans_Skip)(v1_7.UnsafePtr).V0)})}, __local_var_6_1})}}
 goto end_branch_2
 } else {
 
@@ -1152,17 +1152,17 @@ goto end_branch_2
 }
 {
 if (v1_7.Type == 9 && v1_7.IntVal == 489128924) {
-__t2 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
+__t2 = (*Constructor_Data_Maybe_Just)(nil)
 goto end_branch_2
 } else {
 
 }
 }
 {
-__t2 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t2 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_runtime.Value { panic("Failed pattern match") }())
 }
 end_branch_2:
-return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t2))}
+return gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t2)}
 }), (*Constructor_Data_Tuple_Tuple)(v_5.UnsafePtr).V1)
 }), gopurs_runtime.Value{Type: 9, IntVal: 2339352186, UnsafePtr: unsafe.Pointer(&Constructor_Data_Tuple_Tuple{1, b_3, l_4})})
 })

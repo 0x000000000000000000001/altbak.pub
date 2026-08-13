@@ -224,10 +224,10 @@ return __t1
 func Call_Test_RBTree_makeBlack(v_0_loop *Constructor_Test_RBTree_T) *Constructor_Test_RBTree_T {
 var v_0 *Constructor_Test_RBTree_T = v_0_loop
 _ = v_0
-var __t0 gopurs_runtime.Value
+var __t0 *Constructor_Test_RBTree_T
 {
 if (v_0 != nil) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, (v_0).V1, (v_0).V2, (v_0).V3})}
+__t0 = &Constructor_Test_RBTree_T{1, 1583507464, (v_0).V1, (v_0).V2, (v_0).V3}
 goto end_branch_0
 } else {
 
@@ -235,17 +235,17 @@ goto end_branch_0
 }
 {
 if (v_0 == nil) {
-__t0 = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer((*Constructor_Test_RBTree_T)(nil))}
+__t0 = (*Constructor_Test_RBTree_T)(nil)
 goto end_branch_0
 } else {
 
 }
 }
 {
-__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t0 = gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](func() gopurs_runtime.Value { panic("Failed pattern match") }())
 }
 end_branch_0:
-return gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](__t0)
+return __t0
 }
 
 func Call_Test_RBTree_depth(v_0_loop *Constructor_Test_RBTree_T) int64 {
@@ -877,10 +877,10 @@ var v_0 int64 = v_0_loop
 _ = v_0
 var v1_1 *Constructor_Test_RBTree_T = v1_1_loop
 _ = v1_1
-var __t4 gopurs_runtime.Value
+var __t4 *Constructor_Test_RBTree_T
 {
 if (v1_1 == nil) {
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 3668501016, (*Constructor_Test_RBTree_T)(nil), v_0, (*Constructor_Test_RBTree_T)(nil)})}
+__t4 = &Constructor_Test_RBTree_T{1, 3668501016, (*Constructor_Test_RBTree_T)(nil), v_0, (*Constructor_Test_RBTree_T)(nil)}
 goto end_branch_4
 } else {
 
@@ -911,7 +911,7 @@ goto end_branch_3
 }
 }
 {
-var __t1 gopurs_runtime.Value
+var __t1 *Constructor_Test_RBTree_T
 {
 var __t0 bool
 {
@@ -927,30 +927,30 @@ __t0 = false
 }
 end_branch_0:
 if __t0 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(Call_Test_RBTree_balance((v1_1).V0, (v1_1).V1, (v1_1).V2, Call_Test_RBTree_ins(v_0, (v1_1).V3)))}
+__t1 = Call_Test_RBTree_balance((v1_1).V0, (v1_1).V1, (v1_1).V2, Call_Test_RBTree_ins(v_0, (v1_1).V3))
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, (v1_1).V0, (v1_1).V1, (v1_1).V2, (v1_1).V3})}
+__t1 = &Constructor_Test_RBTree_T{1, (v1_1).V0, (v1_1).V1, (v1_1).V2, (v1_1).V3}
 }
 end_branch_1:
-__t3 = gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](__t1)
+__t3 = __t1
 }
 end_branch_3:
-__t4 = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(__t3)}
+__t4 = __t3
 goto end_branch_4
 } else {
 
 }
 }
 {
-__t4 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t4 = gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](func() gopurs_runtime.Value { panic("Failed pattern match") }())
 }
 end_branch_4:
-return gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](__t4)
+return __t4
 }
 }
 
@@ -962,10 +962,10 @@ _ = s_1
 // TAST (Let): __local_var_2_0 -> *Constructor_Test_RBTree_T
 __local_var_2_0 := Call_Test_RBTree_ins(x_0, s_1)
 _ = __local_var_2_0
-var __t1 gopurs_runtime.Value
+var __t1 *Constructor_Test_RBTree_T
 {
 if (__local_var_2_0 != nil) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(&Constructor_Test_RBTree_T{1, 1583507464, (__local_var_2_0).V1, (__local_var_2_0).V2, (__local_var_2_0).V3})}
+__t1 = &Constructor_Test_RBTree_T{1, 1583507464, (__local_var_2_0).V1, (__local_var_2_0).V2, (__local_var_2_0).V3}
 goto end_branch_1
 } else {
 
@@ -973,17 +973,17 @@ goto end_branch_1
 }
 {
 if (__local_var_2_0 == nil) {
-__t1 = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer((*Constructor_Test_RBTree_T)(nil))}
+__t1 = (*Constructor_Test_RBTree_T)(nil)
 goto end_branch_1
 } else {
 
 }
 }
 {
-__t1 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t1 = gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](func() gopurs_runtime.Value { panic("Failed pattern match") }())
 }
 end_branch_1:
-return gopurs_runtime.CoerceToStruct[Constructor_Test_RBTree_T](__t1)
+return __t1
 }
 
 func Call_Test_RBTree_buildTree(v_0_loop int64, v1_1_loop *Constructor_Test_RBTree_T) *Constructor_Test_RBTree_T {

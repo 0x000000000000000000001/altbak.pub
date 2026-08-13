@@ -369,29 +369,28 @@ _ = seconds_3_2
 // TAST (Let): __local_var_4_6 -> *Constructor_Data_Maybe_Just
 __local_var_4_6 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(Get_Data_Enum_toEnum__2099864294(), gopurs_runtime.Int(gopurs_runtime.Apply(Get_Data_Int_unsafeClamp(), gopurs_runtime.Apply(Get_Data_Number_floor(), gopurs_runtime.Float(hours_1_0))).IntVal)))
 _ = __local_var_4_6
-var __t7 gopurs_runtime.Value
+var __t7 *Constructor_Data_Maybe_Just
 {
 if (__local_var_4_6 != nil) {
-__t7 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(&Constructor_Data_Maybe_Just{1, gopurs_runtime.Apply(Get_Data_Time_Time(), gopurs_runtime.Int((__local_var_4_6).V0.IntVal))})}
+__t7 = &Constructor_Data_Maybe_Just{1, gopurs_runtime.Apply(Get_Data_Time_Time(), gopurs_runtime.Int((__local_var_4_6).V0.IntVal))}
 goto end_branch_7
 } else {
 
 }
 }
 {
-__t7 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
+__t7 = (*Constructor_Data_Maybe_Just)(nil)
 }
 end_branch_7:
 // TAST (Let): __local_var_4_5 -> *Constructor_Data_Maybe_Just
-__local_var_4_5 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t7)
-_ = __local_var_4_5
+var __local_var_4_5 *Constructor_Data_Maybe_Just = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t7)})
 // TAST (Let): __local_var_5_8 -> *Constructor_Data_Maybe_Just
 __local_var_5_8 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(Get_Data_Enum_toEnum__2099864294(), gopurs_runtime.Int(gopurs_runtime.Apply(Get_Data_Int_unsafeClamp(), gopurs_runtime.Apply(Get_Data_Number_floor(), gopurs_runtime.Float(minutes_2_1))).IntVal)))
 _ = __local_var_5_8
-var __t9 gopurs_runtime.Value
+var __t9 *Constructor_Data_Maybe_Just
 {
 if (__local_var_4_5 != nil) {
-__t9 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Maybe_functorMaybe(), "map"), (__local_var_4_5).V0, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__local_var_5_8)})))}
+__t9 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Maybe_functorMaybe(), "map"), (__local_var_4_5).V0, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__local_var_5_8)}))
 goto end_branch_9
 } else {
 
@@ -399,26 +398,26 @@ goto end_branch_9
 }
 {
 if (__local_var_4_5 == nil) {
-__t9 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
+__t9 = (*Constructor_Data_Maybe_Just)(nil)
 goto end_branch_9
 } else {
 
 }
 }
 {
-__t9 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t9 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_runtime.Value { panic("Failed pattern match") }())
 }
 end_branch_9:
 // TAST (Let): __local_var_4_4 -> *Constructor_Data_Maybe_Just
-__local_var_4_4 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t9)
+__local_var_4_4 := __t9
 _ = __local_var_4_4
 // TAST (Let): __local_var_5_10 -> *Constructor_Data_Maybe_Just
 __local_var_5_10 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(Get_Data_Enum_toEnum__2099864294(), gopurs_runtime.Int(gopurs_runtime.Apply(Get_Data_Int_unsafeClamp(), gopurs_runtime.Apply(Get_Data_Number_floor(), gopurs_runtime.Float(seconds_3_2))).IntVal)))
 _ = __local_var_5_10
-var __t11 gopurs_runtime.Value
+var __t11 *Constructor_Data_Maybe_Just
 {
 if (__local_var_4_4 != nil) {
-__t11 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Maybe_functorMaybe(), "map"), (__local_var_4_4).V0, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__local_var_5_10)})))}
+__t11 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Maybe_functorMaybe(), "map"), (__local_var_4_4).V0, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__local_var_5_10)}))
 goto end_branch_11
 } else {
 
@@ -426,26 +425,26 @@ goto end_branch_11
 }
 {
 if (__local_var_4_4 == nil) {
-__t11 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
+__t11 = (*Constructor_Data_Maybe_Just)(nil)
 goto end_branch_11
 } else {
 
 }
 }
 {
-__t11 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t11 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_runtime.Value { panic("Failed pattern match") }())
 }
 end_branch_11:
 // TAST (Let): __local_var_4_3 -> *Constructor_Data_Maybe_Just
-__local_var_4_3 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t11)
+__local_var_4_3 := __t11
 _ = __local_var_4_3
 // TAST (Let): __local_var_5_12 -> *Constructor_Data_Maybe_Just
 __local_var_5_12 := gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply(Get_Data_Enum_toEnum__2099864294(), gopurs_runtime.Int(gopurs_runtime.Apply(Get_Data_Int_unsafeClamp(), gopurs_runtime.Apply(Get_Data_Number_floor(), gopurs_runtime.Float((v_0) - ((((hours_1_0) * (3600000.0)) + ((minutes_2_1) * (60000.0))) + ((seconds_3_2) * (1000.0)))))).IntVal)))
 _ = __local_var_5_12
-var __t13 gopurs_runtime.Value
+var __t13 *Constructor_Data_Maybe_Just
 {
 if (__local_var_4_3 != nil) {
-__t13 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Maybe_functorMaybe(), "map"), (__local_var_4_3).V0, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__local_var_5_12)})))}
+__t13 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Apply2(gopurs_runtime.RecordGet(Get_Data_Maybe_functorMaybe(), "map"), (__local_var_4_3).V0, gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__local_var_5_12)}))
 goto end_branch_13
 } else {
 
@@ -453,19 +452,19 @@ goto end_branch_13
 }
 {
 if (__local_var_4_3 == nil) {
-__t13 = gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}
+__t13 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))})
 goto end_branch_13
 } else {
 
 }
 }
 {
-__t13 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
+__t13 = gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](func() gopurs_runtime.Value { panic("Failed pattern match") }())
 }
 end_branch_13:
 return gopurs_runtime.CoerceToStruct[Constructor_Data_Time_Time](gopurs_runtime.Apply2(Get_Partial_Unsafe__unsafePartial(), gopurs_runtime.Func(func(_dollar__unused_4 gopurs_runtime.Value) gopurs_runtime.Value {
 return Get_Data_Maybe_fromJust__755886620()
-}), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(gopurs_runtime.CoerceToStruct[Constructor_Data_Maybe_Just](__t13))}))
+}), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer(__t13)}))
 }
 
 func Call_Data_Time_hour(v_0_loop *Constructor_Data_Time_Time) int64 {
