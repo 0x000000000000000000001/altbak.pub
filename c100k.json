@@ -1,0 +1,489 @@
+{
+  "annotation": {
+    "meta": null,
+    "sourceSpan": {
+      "end": [
+        41,
+        27
+      ],
+      "start": [
+        41,
+        1
+      ]
+    },
+    "type": null
+  },
+  "bindType": "NonRec",
+  "expression": {
+    "annotation": {
+      "meta": null,
+      "sourceSpan": {
+        "end": [
+          41,
+          27
+        ],
+        "start": [
+          41,
+          1
+        ]
+      },
+      "type": {
+        "args": [
+          {
+            "type": "Int"
+          },
+          {
+            "args": [
+              {
+                "type": "Int"
+              }
+            ],
+            "ret": {
+              "type": "Int"
+            },
+            "type": "Func"
+          },
+          {
+            "type": "Int"
+          }
+        ],
+        "ret": {
+          "type": "Int"
+        },
+        "type": "Func"
+      }
+    },
+    "argument": "n",
+    "body": {
+      "abstraction": {
+        "abstraction": {
+          "annotation": {
+            "meta": null,
+            "sourceSpan": {
+              "end": [
+                42,
+                15
+              ],
+              "start": [
+                42,
+                11
+              ]
+            },
+            "type": {
+              "body": {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "name": "a",
+                            "type": "TypeVar"
+                          }
+                        ],
+                        "ret": {
+                          "name": "a",
+                          "type": "TypeVar"
+                        },
+                        "type": "Func"
+                      },
+                      {
+                        "name": "a",
+                        "type": "TypeVar"
+                      }
+                    ],
+                    "ret": {
+                      "name": "a",
+                      "type": "TypeVar"
+                    },
+                    "type": "Func"
+                  },
+                  {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "name": "a",
+                            "type": "TypeVar"
+                          }
+                        ],
+                        "ret": {
+                          "name": "a",
+                          "type": "TypeVar"
+                        },
+                        "type": "Func"
+                      },
+                      {
+                        "name": "a",
+                        "type": "TypeVar"
+                      }
+                    ],
+                    "ret": {
+                      "name": "a",
+                      "type": "TypeVar"
+                    },
+                    "type": "Func"
+                  },
+                  {
+                    "args": [
+                      {
+                        "name": "a",
+                        "type": "TypeVar"
+                      }
+                    ],
+                    "ret": {
+                      "name": "a",
+                      "type": "TypeVar"
+                    },
+                    "type": "Func"
+                  },
+                  {
+                    "name": "a",
+                    "type": "TypeVar"
+                  }
+                ],
+                "ret": {
+                  "name": "a",
+                  "type": "TypeVar"
+                },
+                "type": "Func"
+              },
+              "type": "ForAll",
+              "vars": [
+                "a"
+              ]
+            }
+          },
+          "type": "Var",
+          "value": {
+            "identifier": "mulC",
+            "moduleName": [
+              "Test",
+              "Church"
+            ]
+          }
+        },
+        "annotation": {
+          "meta": null,
+          "sourceSpan": {
+            "end": [
+              42,
+              24
+            ],
+            "start": [
+              42,
+              11
+            ]
+          },
+          "type": {
+            "args": [
+              {
+                "args": [
+                  {
+                    "args": [
+                      {
+                        "type": "Int"
+                      }
+                    ],
+                    "ret": {
+                      "type": "Int"
+                    },
+                    "type": "Func"
+                  },
+                  {
+                    "type": "Int"
+                  }
+                ],
+                "ret": {
+                  "type": "Int"
+                },
+                "type": "Func"
+              },
+              {
+                "args": [
+                  {
+                    "type": "Int"
+                  }
+                ],
+                "ret": {
+                  "type": "Int"
+                },
+                "type": "Func"
+              },
+              {
+                "type": "Int"
+              }
+            ],
+            "ret": {
+              "type": "Int"
+            },
+            "type": "Func"
+          }
+        },
+        "argument": {
+          "abstraction": {
+            "annotation": {
+              "meta": null,
+              "sourceSpan": {
+                "end": [
+                  42,
+                  21
+                ],
+                "start": [
+                  42,
+                  17
+                ]
+              },
+              "type": {
+                "args": [
+                  {
+                    "type": "Int"
+                  },
+                  {
+                    "args": [
+                      {
+                        "type": "Int"
+                      }
+                    ],
+                    "ret": {
+                      "type": "Int"
+                    },
+                    "type": "Func"
+                  },
+                  {
+                    "type": "Int"
+                  }
+                ],
+                "ret": {
+                  "type": "Int"
+                },
+                "type": "Func"
+              }
+            },
+            "type": "Var",
+            "value": {
+              "identifier": "c10k",
+              "moduleName": [
+                "Test",
+                "Church"
+              ]
+            }
+          },
+          "annotation": {
+            "meta": null,
+            "sourceSpan": {
+              "end": [
+                42,
+                23
+              ],
+              "start": [
+                42,
+                17
+              ]
+            },
+            "type": {
+              "args": [
+                {
+                  "args": [
+                    {
+                      "type": "Int"
+                    }
+                  ],
+                  "ret": {
+                    "type": "Int"
+                  },
+                  "type": "Func"
+                },
+                {
+                  "type": "Int"
+                }
+              ],
+              "ret": {
+                "type": "Int"
+              },
+              "type": "Func"
+            }
+          },
+          "argument": {
+            "annotation": {
+              "meta": null,
+              "sourceSpan": {
+                "end": [
+                  42,
+                  23
+                ],
+                "start": [
+                  42,
+                  22
+                ]
+              },
+              "type": {
+                "type": "Int"
+              }
+            },
+            "type": "Var",
+            "value": {
+              "identifier": "n",
+              "sourcePos": [
+                42,
+                1
+              ]
+            }
+          },
+          "type": "App"
+        },
+        "type": "App"
+      },
+      "annotation": {
+        "meta": null,
+        "sourceSpan": {
+          "end": [
+            42,
+            32
+          ],
+          "start": [
+            42,
+            11
+          ]
+        },
+        "type": {
+          "args": [
+            {
+              "args": [
+                {
+                  "type": "Int"
+                }
+              ],
+              "ret": {
+                "type": "Int"
+              },
+              "type": "Func"
+            },
+            {
+              "type": "Int"
+            }
+          ],
+          "ret": {
+            "type": "Int"
+          },
+          "type": "Func"
+        }
+      },
+      "argument": {
+        "abstraction": {
+          "annotation": {
+            "meta": null,
+            "sourceSpan": {
+              "end": [
+                42,
+                29
+              ],
+              "start": [
+                42,
+                26
+              ]
+            },
+            "type": {
+              "args": [
+                {
+                  "type": "Int"
+                },
+                {
+                  "args": [
+                    {
+                      "type": "Int"
+                    }
+                  ],
+                  "ret": {
+                    "type": "Int"
+                  },
+                  "type": "Func"
+                },
+                {
+                  "type": "Int"
+                }
+              ],
+              "ret": {
+                "type": "Int"
+              },
+              "type": "Func"
+            }
+          },
+          "type": "Var",
+          "value": {
+            "identifier": "c10",
+            "moduleName": [
+              "Test",
+              "Church"
+            ]
+          }
+        },
+        "annotation": {
+          "meta": null,
+          "sourceSpan": {
+            "end": [
+              42,
+              31
+            ],
+            "start": [
+              42,
+              26
+            ]
+          },
+          "type": {
+            "args": [
+              {
+                "args": [
+                  {
+                    "type": "Int"
+                  }
+                ],
+                "ret": {
+                  "type": "Int"
+                },
+                "type": "Func"
+              },
+              {
+                "type": "Int"
+              }
+            ],
+            "ret": {
+              "type": "Int"
+            },
+            "type": "Func"
+          }
+        },
+        "argument": {
+          "annotation": {
+            "meta": null,
+            "sourceSpan": {
+              "end": [
+                42,
+                31
+              ],
+              "start": [
+                42,
+                30
+              ]
+            },
+            "type": {
+              "type": "Int"
+            }
+          },
+          "type": "Var",
+          "value": {
+            "identifier": "n",
+            "sourcePos": [
+              42,
+              1
+            ]
+          }
+        },
+        "type": "App"
+      },
+      "type": "App"
+    },
+    "type": "Abs"
+  },
+  "identifier": "c100k"
+}
