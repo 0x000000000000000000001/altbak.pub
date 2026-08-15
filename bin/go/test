@@ -1,0 +1,148 @@
+#!/usr/bin/env bash
+set -e
+cd "$(dirname "$0")/../.."
+
+CLEAN=0
+UPDATE_SNAPSHOTS=${UPDATE_SNAPSHOTS:-0}
+
+while [[ $# -gt 0 ]]
+do
+  case "$1" in
+    -c|--clean)
+    CLEAN=1
+    shift
+    ;;
+    *)
+    shift
+    ;;
+  esac
+done
+
+if [ "$CLEAN" == "1" ]; then
+  rm -rf run/bak/go/output/* run/bak/go/spago/*
+fi
+mkdir -p run/bak/go/output run/bak/go/spago
+rm -rf output .spago spago.yaml spago.lock
+ln -s run/bak/go/output output
+ln -s run/bak/go/spago .spago
+ln -s run/bak/go/spago.go.yaml spago.yaml
+touch run/bak/go/spago.lock && ln -s run/bak/go/spago.lock spago.lock
+
+mkdir -p test/snapshots/go
+
+cp -r srx/Test/* src/Test/
+trap "rm -rf src/Test/STArray.purs src/Test/AffOperations.purs src/Test/StringOps.purs src/Test/FileOps src/Test/Parallelism.purs src/AppTest.purs" EXIT
+
+export PATH="$PWD/run/bak/js/node_modules/.bin:$PATH"
+
+if [ "$CLEAN" == "1" ]; then
+  echo "=== Rebuilding gopurs backend ==="
+  (cd ../gopurs/gopurs && npm run build --silent)
+fi
+
+TEST_MODULES=()
+for f in $(find src/Test -name "*.purs"); do
+  mod=$(grep -E '^module ' "$f" | awk '{print $2}')
+  if [[ "$mod" == Test.* ]]; then
+    TEST_MODULES+=("$mod")
+  fi
+done
+
+failed=0
+passed=0
+
+for mod in "${TEST_MODULES[@]}"; do
+  echo "=== Testing $mod ==="
+  
+  f=$(grep -l "^module $mod " $(find src/Test -name "*.purs"))
+  
+  desc_line=""
+  if grep -q '^describe ::' "$f"; then
+    desc_line="    desc: $mod.describe,"
+  fi
+  
+  act_line=""
+  if grep -q '^act ::' "$f"; then
+    act_line="    act: $mod.act,"
+  fi
+
+  cat <<EOF > /tmp/AppTest_$$.purs
+module AppTest where
+import Prelude
+import Effect (Effect)
+import Bench (opaque)
+import $mod as $mod
+
+main :: Effect Unit
+main = void \$ opaque keepAlive
+  where
+  keepAlive = {
+$desc_line
+$act_line
+    _dummy: unit
+  }
+EOF
+  chmod 444 /tmp/AppTest_$$.purs
+  mv -f /tmp/AppTest_$$.purs src/AppTest.purs
+
+  # Force recompilation of AppTest to avoid timestamp collision issues in purs cache
+  rm -rf output/AppTest
+
+  spago build -q || { echo -e "   \033[0;31m[FAILED]\033[0m spago build failed for $mod"; failed=$((failed+1)); continue; }
+  
+  node ../gopurs/gopurs/bin/gopurs.js --main AppTest > /dev/null || { echo -e "   \033[0;31m[FAILED]\033[0m gopurs failed for $mod"; failed=$((failed+1)); continue; }
+  
+  mod_file_name="${mod//./_}"
+  generated_file="output/purescript/${mod_file_name}.go"
+  snapshot_file="test/snapshots/go/${mod_file_name}.go"
+  
+  if [ ! -f "$generated_file" ]; then
+    echo -e "   \033[0;31m[FAILED]\033[0m gopurs did not generate $generated_file"
+    failed=$((failed+1))
+    continue
+  fi
+  
+  gofmt -w "$generated_file"
+
+  if [ "$UPDATE_SNAPSHOTS" -eq 1 ] || [ ! -f "$snapshot_file" ]; then
+    if [ ! -f "$snapshot_file" ]; then
+      echo -e "   \033[0;34m[INFO]\033[0m Creating initial snapshot for $mod"
+    else
+      echo -e "   \033[0;34m[INFO]\033[0m Updating snapshot for $mod"
+    fi
+    cp "$generated_file" "$snapshot_file"
+    passed=$((passed+1))
+  else
+    if ! diff -u "$snapshot_file" "$generated_file" > output/Main_diff.txt; then
+      echo -e "   \033[0;31m[FAILED]\033[0m Snapshot mismatch for $mod:"
+      cat output/Main_diff.txt
+      failed=$((failed+1))
+    else
+      echo -e "   \033[0;32m[OK]\033[0m Snapshot matches for $mod"
+      passed=$((passed+1))
+    fi
+  fi
+  
+  # Check if generated Go code compiles
+  cd output
+  go mod tidy > /dev/null 2>&1
+  if ! go build -o go_app ./main; then
+    echo -e "   \033[0;31m[FAILED]\033[0m Go compilation failed for $mod"
+    failed=$((failed+1))
+  else
+    mkdir -p ../var
+    if ! GOGC=1000 ./go_app; then
+      echo -e "   \033[0;31m[FAILED]\033[0m Go execution failed for $mod"
+      failed=$((failed+1))
+    fi
+  fi
+  cd ..
+done
+
+echo ""
+if [ $failed -gt 0 ]; then
+  echo -e "Summary: \033[0;31m$failed failed\033[0m, \033[0;32m$passed passed\033[0m."
+  exit 1
+else
+  echo -e "Summary: \033[0;32m$passed passed\033[0m."
+fi
