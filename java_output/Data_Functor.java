@@ -1,0 +1,17 @@
+public class Data_Functor {
+    public static final Object FFI_STUB = new java.util.function.Function<Object, Object>() {
+        public Object apply(Object arg) { return this; }
+    };
+    public static Object arrayMap = FFI_STUB;
+    public static Object arrayMap(Object... args) { return null; }
+
+public static final Object map = (java.util.function.Function<Object, Object>) (dict_0) -> ((java.util.LinkedHashMap<String, Object>) dict_0).get("map");
+public static final Object mapFlipped = (java.util.function.Function<Object, Object>) (dictFunctor_0) -> (java.util.function.Function<Object, Object>) (fa_1) -> (java.util.function.Function<Object, Object>) (f_2) -> ((java.util.function.Function<Object, Object>) (((java.util.function.Function<Object, Object>) (((java.util.LinkedHashMap<String, Object>) dictFunctor_0).get("map"))).apply(f_2))).apply(fa_1);
+public static final Object $void = (java.util.function.Function<Object, Object>) (dictFunctor_0) -> ((java.util.function.Function<Object, Object>) (((java.util.LinkedHashMap<String, Object>) dictFunctor_0).get("map"))).apply((java.util.function.Function<Object, Object>) (v_1) -> Data_Unit.unit);
+public static final Object voidLeft = (java.util.function.Function<Object, Object>) (dictFunctor_0) -> (java.util.function.Function<Object, Object>) (f_1) -> (java.util.function.Function<Object, Object>) (x_2) -> ((java.util.function.Function<Object, Object>) (((java.util.function.Function<Object, Object>) (((java.util.LinkedHashMap<String, Object>) dictFunctor_0).get("map"))).apply((java.util.function.Function<Object, Object>) (v_3) -> x_2))).apply(f_1);
+public static final Object voidRight = (java.util.function.Function<Object, Object>) (dictFunctor_0) -> (java.util.function.Function<Object, Object>) (x_1) -> ((java.util.function.Function<Object, Object>) (((java.util.LinkedHashMap<String, Object>) dictFunctor_0).get("map"))).apply((java.util.function.Function<Object, Object>) (v_2) -> x_1);
+public static final Object functorProxy = (new java.util.function.Supplier<Object>() { public Object get() { java.util.Map<String, Object> __map = new java.util.LinkedHashMap<>(); __map.put("map", (java.util.function.Function<Object, Object>) (v_0) -> (java.util.function.Function<Object, Object>) (v1_1) -> new Type_Proxy.Proxy());  return __map; } }).get();
+public static final Object functorFn = (new java.util.function.Supplier<Object>() { public Object get() { java.util.Map<String, Object> __map = new java.util.LinkedHashMap<>(); __map.put("map", ((java.util.LinkedHashMap<String, Object>) Control_Semigroupoid.semigroupoidFn).get("compose"));  return __map; } }).get();
+public static final Object functorArray = (new java.util.function.Supplier<Object>() { public Object get() { java.util.Map<String, Object> __map = new java.util.LinkedHashMap<>(); __map.put("map", Data_Functor.arrayMap);  return __map; } }).get();
+public static final Object flap = (java.util.function.Function<Object, Object>) (dictFunctor_0) -> (java.util.function.Function<Object, Object>) (ff_1) -> (java.util.function.Function<Object, Object>) (x_2) -> ((java.util.function.Function<Object, Object>) (((java.util.function.Function<Object, Object>) (((java.util.LinkedHashMap<String, Object>) dictFunctor_0).get("map"))).apply((java.util.function.Function<Object, Object>) (f_3) -> ((java.util.function.Function<Object, Object>) (f_3)).apply(x_2)))).apply(ff_1);
+}

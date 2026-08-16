@@ -1,0 +1,12 @@
+public class Data_Functor_Coproduct_Inject {
+    public static final Object FFI_STUB = new java.util.function.Function<Object, Object>() {
+        public Object apply(Object arg) { return this; }
+    };
+
+
+public static final Object prj = (java.util.function.Function<Object, Object>) (dict_0) -> ((java.util.LinkedHashMap<String, Object>) dict_0).get("prj");
+public static final Object injectReflexive = (new java.util.function.Supplier<Object>() { public Object get() { java.util.Map<String, Object> __map = new java.util.LinkedHashMap<>(); __map.put("inj", (java.util.function.Function<Object, Object>) (x_0) -> x_0); __map.put("prj", Data_Maybe.Just);  return __map; } }).get();
+public static final Object injectLeft = (new java.util.function.Supplier<Object>() { public Object get() { java.util.Map<String, Object> __map = new java.util.LinkedHashMap<>(); __map.put("inj", (java.util.function.Function<Object, Object>) (x_0) -> new Data_Either.Left(x_0)); __map.put("prj", (java.util.function.Function<Object, Object>) (v2_0) -> ( ((Boolean) ((v2_0 instanceof Data_Either.Left))) ? new Data_Maybe.Just(((Data_Either.Left) (Object)(v2_0)).value0) : ( ((Boolean) ((v2_0 instanceof Data_Either.Right))) ? new Data_Maybe.Nothing() : (new java.util.function.Supplier<Object>() { public Object get() { throw new RuntimeException("Failed pattern match"); } }).get())));  return __map; } }).get();
+public static final Object inj = (java.util.function.Function<Object, Object>) (dict_0) -> ((java.util.LinkedHashMap<String, Object>) dict_0).get("inj");
+public static final Object injectRight = (java.util.function.Function<Object, Object>) (dictInject_0) -> (new java.util.function.Supplier<Object>() { public Object get() { java.util.Map<String, Object> __map = new java.util.LinkedHashMap<>(); __map.put("inj", (java.util.function.Function<Object, Object>) (x_1) -> new Data_Either.Right(((java.util.function.Function<Object, Object>) (((java.util.LinkedHashMap<String, Object>) dictInject_0).get("inj"))).apply(x_1))); __map.put("prj", (java.util.function.Function<Object, Object>) (v2_1) -> ( ((Boolean) ((v2_1 instanceof Data_Either.Left))) ? new Data_Maybe.Nothing() : ( ((Boolean) ((v2_1 instanceof Data_Either.Right))) ? ((java.util.function.Function<Object, Object>) (((java.util.LinkedHashMap<String, Object>) dictInject_0).get("prj"))).apply(((Data_Either.Right) (Object)(v2_1)).value0) : (new java.util.function.Supplier<Object>() { public Object get() { throw new RuntimeException("Failed pattern match"); } }).get())));  return __map; } }).get();
+}

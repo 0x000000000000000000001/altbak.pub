@@ -1,0 +1,84 @@
+#!/usr/bin/env bash
+set -e
+cd "$(dirname "$0")/../.."
+
+CLEAN=0
+MODE="pure"
+TEST_NAME=""
+
+while [[ $# -gt 0 ]]
+do
+  case "$1" in
+    -c|--clean)
+    CLEAN=1
+    shift
+    ;;
+    --test)
+    MODE="test"
+    TEST_NAME="$2"
+    shift 2
+    ;;
+    --x)
+    MODE="x"
+    shift
+    ;;
+    *)
+    shift
+    ;;
+  esac
+done
+
+if [ "$CLEAN" == "1" ]; then
+  rm -rf run/bak/java/output/* run/bak/java/spago/*
+fi
+mkdir -p run/bak/java/output run/bak/java/spago java_output
+rm -rf output .spago spago.yaml spago.lock
+ln -s run/bak/java/output output
+ln -s run/bak/java/spago .spago
+ln -s run/bak/java/spago.java.yaml spago.yaml
+touch run/bak/java/spago.lock && ln -s run/bak/java/spago.lock spago.lock
+
+ENTRY_POINT="App"
+
+if [ "$MODE" == "test" ]; then
+  ENTRY_POINT="AppX"
+  cat <<INNER_EOF > src/AppX.purs
+module AppX where
+import Prelude
+import Effect (Effect)
+import Bench (runBench)
+import Test.$TEST_NAME as $TEST_NAME
+
+main :: Effect Unit
+main = void \$ runBench $TEST_NAME.describe $TEST_NAME.act
+INNER_EOF
+  trap "rm -f src/AppX.purs" EXIT
+elif [ "$MODE" == "x" ]; then
+  ENTRY_POINT="AppX"
+  cp -r srx/Test/* src/Test/
+  cp srx/AppX.purs src/
+  trap "rm -rf src/Test/STArray.purs src/Test/AffOperations.purs src/Test/StringOps.purs src/Test/FileOps src/Test/Parallelism.purs src/AppX.purs" EXIT
+fi
+
+export PATH="$PWD/run/bak/js/node_modules/.bin:$PATH"
+
+if [ "$CLEAN" == "1" ]; then
+  echo "=== Rebuilding javapurs backend ==="
+  (cd ../javapurs/javapurs && spago build -q)
+fi
+
+echo 'Building...'
+spago build
+
+# Generate Java code
+node ../javapurs/javapurs/bin/javapurs.js --main ${ENTRY_POINT} || { echo "JAVAPURS FAILED"; exit 1; }
+
+echo "=== Java ==="
+if [ -d "java_output" ] && [ -f "java_output/MainRun.java" ]; then
+    cd java_output
+    javac MainRun.java
+    java MainRun
+    cd ..
+else
+    echo "No java_output/MainRun.java generated."
+fi

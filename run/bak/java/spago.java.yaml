@@ -1,0 +1,64 @@
+package:
+  name: ps-java-test
+  dependencies:
+    - aff
+    - console
+    - effect
+    - prelude
+    - datetime
+    - strings
+    - arrays
+    - partial
+    - st
+    - maybe
+    - either
+    - now
+    - lazy
+workspace:
+  packageSet:
+    registry: 77.7.0
+  extraPackages:
+    prelude:
+      path: "../javapurs/javapurs-prelude"
+    effect:
+      path: "../javapurs/javapurs-effect"
+    console:
+      path: "../javapurs/javapurs-console"
+    aff:
+      path: "../javapurs/javapurs-aff"
+    now:
+      path: "../javapurs/javapurs-now"
+    datetime:
+      path: "../javapurs/javapurs-datetime"
+    exceptions:
+      path: "../javapurs/javapurs-exceptions"
+    foldable-traversable:
+      path: "../javapurs/javapurs-foldable-traversable"
+    st:
+      path: "../javapurs/javapurs-st"
+    refs:
+      path: "../javapurs/javapurs-refs"
+    unsafe-coerce:
+      path: "../javapurs/javapurs-unsafe-coerce"
+    functions:
+      path: "../javapurs/javapurs-functions"
+    partial:
+      path: "../javapurs/javapurs-partial"
+    arrays:
+      path: "../javapurs/javapurs-arrays"
+    strings:
+      path: "../javapurs/javapurs-strings"
+    integers:
+      path: "../javapurs/javapurs-integers"
+    enums:
+      path: "../javapurs/javapurs-enums"
+    foreign-object:
+      path: "../javapurs/javapurs-foreign-object"
+    numbers:
+      path: "../javapurs/javapurs-numbers"
+    record:
+      path: "../javapurs/javapurs-record"
+    assert:
+      path: "../javapurs/javapurs-assert"
+    lazy:
+      path: "../javapurs/javapurs-lazy"
