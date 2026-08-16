@@ -47,7 +47,7 @@ if [ "$MODE" == "test" ]; then
   ./bin/gnomon/run $CLEAN --test "$TEST_NAME" || echo "=== Go (Gnomon) failed ==="
   
   echo ""
-  ./bin/cs/run $CLEAN --test "$TEST_NAME" || echo "=== C# failed ==="
+  ./bin/sharp/run $CLEAN --test "$TEST_NAME" || echo "=== F#/C# failed ==="
   
   echo ""
   ./bin/scm/run $CLEAN --test "$TEST_NAME" || echo "=== Scheme failed ==="
@@ -72,7 +72,7 @@ elif [ "$MODE" == "x" ]; then
   ./bin/go/run $CLEAN --x || echo "=== Go (gopurs) failed ==="
   
   echo ""
-  ./bin/cs/run $CLEAN --x || echo "=== C# failed ==="
+  ./bin/sharp/run $CLEAN --x || echo "=== F#/C# failed ==="
 else
   echo "================================"
   echo "    Running pure backends...    "
@@ -99,5 +99,5 @@ else
   ./bin/gnomon/run $CLEAN || echo "=== Go (Gnomon) failed ==="
   
   echo ""
-  ./bin/cs/run $CLEAN || echo "=== C# failed ==="
+  ./bin/sharp/run $CLEAN || echo "=== C# failed ==="
 fi

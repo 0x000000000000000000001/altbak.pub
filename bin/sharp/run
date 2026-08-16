@@ -29,14 +29,14 @@ do
 done
 
 if [ "$CLEAN" == "1" ]; then
-  rm -rf run/bak/cs/output/* run/bak/cs/spago/*
+  rm -rf run/bak/sharp/output/* run/bak/sharp/spago/*
 fi
-mkdir -p run/bak/cs/output run/bak/cs/spago
+mkdir -p run/bak/sharp/output run/bak/sharp/spago
 rm -rf output .spago spago.yaml spago.lock
-ln -s run/bak/cs/output output
-ln -s run/bak/cs/spago .spago
-ln -s run/bak/cs/spago.cs.yaml spago.yaml
-touch run/bak/cs/spago.lock && ln -s run/bak/cs/spago.lock spago.lock
+ln -s run/bak/sharp/output output
+ln -s run/bak/sharp/spago .spago
+ln -s run/bak/sharp/spago.sharp.yaml spago.yaml
+touch run/bak/sharp/spago.lock && ln -s run/bak/sharp/spago.lock spago.lock
 
 ENTRY_POINT="App"
 
@@ -77,7 +77,7 @@ echo "=== C# ==="
 if [ -d "output/csharp" ]; then
     cd output/csharp
     dotnet new console --force > /dev/null 2>&1
-    dotnet run
+    dotnet run -c Release
     cd ../..
 else
     echo "No output/csharp generated."
