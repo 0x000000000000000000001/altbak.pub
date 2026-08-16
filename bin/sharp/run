@@ -60,7 +60,7 @@ elif [ "$MODE" == "x" ]; then
   trap "rm -rf src/Test/STArray.purs src/Test/AffOperations.purs src/Test/StringOps.purs src/Test/FileOps src/AppX.purs" EXIT
 fi
 
-export PATH="$PWD/run/bak/js/node_modules/.bin:$PATH"
+export PATH="$PWD/run/bak/js/node_modules/.bin:$HOME/.dotnet:$PATH"
 
 if [ "$CLEAN" == "1" ]; then
   echo "=== Rebuilding sharpurs backend ==="
@@ -71,14 +71,13 @@ echo 'Building...'
 spago build
 
 # Generate C# code
-node ../sharpurs/sharpurs/bin/sharpurs.js
+node ../sharpurs/sharpurs/bin/sharpurs.js --main ${ENTRY_POINT} || exit 1
 
 echo "=== C# ==="
-if [ -d "output/csharp" ]; then
-    cd output/csharp
-    dotnet new console --force > /dev/null 2>&1
-    dotnet run -c Release
+if [ -d "output/Main" ]; then
+    cd output/Main
+    dotnet run --project Program.fsproj -c Release
     cd ../..
 else
-    echo "No output/csharp generated."
+    echo "No output/Main generated."
 fi
