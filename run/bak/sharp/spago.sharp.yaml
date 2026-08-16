@@ -63,4 +63,4 @@ workspace:
     lazy:
       path: "../sharpurs/sharpurs-lazy"
   backend:
-    cmd: "../csharpurs/bin/csharpurs"
+    cmd: "../sharpurs/sharpurs/bin/sharpurs"

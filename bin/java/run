@@ -77,7 +77,7 @@ echo "=== Java ==="
 if [ -d "java_output" ] && [ -f "java_output/MainRun.java" ]; then
     cd java_output
     javac MainRun.java
-    java MainRun
+    java -Xss100M MainRun
     cd ..
 else
     echo "No java_output/MainRun.java generated."

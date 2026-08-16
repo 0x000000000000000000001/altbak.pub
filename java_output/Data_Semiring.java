@@ -2,14 +2,12 @@ public class Data_Semiring {
     public static final Object FFI_STUB = new java.util.function.Function<Object, Object>() {
         public Object apply(Object arg) { return this; }
     };
-    public static Object intAdd = FFI_STUB;
-    public static Object intAdd(Object... args) { return null; }
-    public static Object intMul = FFI_STUB;
-    public static Object intMul(Object... args) { return null; }
-    public static Object numAdd = FFI_STUB;
-    public static Object numAdd(Object... args) { return null; }
-    public static Object numMul = FFI_STUB;
-    public static Object numMul(Object... args) { return null; }
+    // FFI provided by ../javapurs/javapurs-prelude/src/Data/Semiring.java
+    public static Object intAdd = (java.util.function.Function<Object, Object>) (x) -> (java.util.function.Function<Object, Object>) (y) -> (Integer) x + (Integer) y;
+    public static Object intMul = (java.util.function.Function<Object, Object>) (x) -> (java.util.function.Function<Object, Object>) (y) -> (Integer) x * (Integer) y;
+    public static Object numAdd = (java.util.function.Function<Object, Object>) (x) -> (java.util.function.Function<Object, Object>) (y) -> (Double) x + (Double) y;
+    public static Object numMul = (java.util.function.Function<Object, Object>) (x) -> (java.util.function.Function<Object, Object>) (y) -> (Double) x * (Double) y;
+
 
 public static final Object zeroRecord = (java.util.function.Function<Object, Object>) (dict_0) -> ((java.util.LinkedHashMap<String, Object>) dict_0).get("zeroRecord");
 public static final Object zero = (java.util.function.Function<Object, Object>) (dict_0) -> ((java.util.LinkedHashMap<String, Object>) dict_0).get("zero");

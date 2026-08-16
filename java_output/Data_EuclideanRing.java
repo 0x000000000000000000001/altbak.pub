@@ -2,14 +2,24 @@ public class Data_EuclideanRing {
     public static final Object FFI_STUB = new java.util.function.Function<Object, Object>() {
         public Object apply(Object arg) { return this; }
     };
-    public static Object intDegree = FFI_STUB;
-    public static Object intDegree(Object... args) { return null; }
-    public static Object intDiv = FFI_STUB;
-    public static Object intDiv(Object... args) { return null; }
-    public static Object intMod = FFI_STUB;
-    public static Object intMod(Object... args) { return null; }
-    public static Object numDiv = FFI_STUB;
-    public static Object numDiv(Object... args) { return null; }
+    // FFI provided by ../javapurs/javapurs-prelude/src/Data/EuclideanRing.java
+    public static Object intDegree = (java.util.function.Function<Object, Object>) (x) -> Math.abs((Integer) x);
+    public static Object intDiv = (java.util.function.Function<Object, Object>) (x) -> (java.util.function.Function<Object, Object>) (y) -> {
+        int xInt = (Integer) x;
+        int yInt = (Integer) y;
+        if (yInt == 0) return 0;
+        if (yInt > 0) return (int) Math.floor((double) xInt / yInt);
+        return -(int) Math.floor((double) xInt / -yInt);
+    };
+    public static Object intMod = (java.util.function.Function<Object, Object>) (x) -> (java.util.function.Function<Object, Object>) (y) -> {
+        int xInt = (Integer) x;
+        int yInt = (Integer) y;
+        if (yInt == 0) return 0;
+        int yy = Math.abs(yInt);
+        return ((xInt % yy) + yy) % yy;
+    };
+    public static Object numDiv = (java.util.function.Function<Object, Object>) (x) -> (java.util.function.Function<Object, Object>) (y) -> (Double) x / (Double) y;
+
 
 public static final Object mod = (java.util.function.Function<Object, Object>) (dict_0) -> ((java.util.LinkedHashMap<String, Object>) dict_0).get("mod");
 public static final Object gcd = (java.util.function.Function<Object, Object>) (dictEq_0) -> (java.util.function.Function<Object, Object>) (dictEuclideanRing_1) -> (new java.util.function.Supplier<Object>() { public Object get() { Object __tco_dictEq_0 = dictEq_0; Object __tco_dictEuclideanRing_1 = dictEuclideanRing_1; while(true) { final Object __final_dictEq_0 = __tco_dictEq_0; final Object __final_dictEuclideanRing_1 = __tco_dictEuclideanRing_1; try { return (new java.util.function.Supplier<Object>() { public Object get() { Object zero_2 = ((java.util.LinkedHashMap<String, Object>) ((java.util.function.Function<Object, Object>) (((java.util.LinkedHashMap<String, Object>) ((java.util.function.Function<Object, Object>) (((java.util.LinkedHashMap<String, Object>) ((java.util.function.Function<Object, Object>) (((java.util.LinkedHashMap<String, Object>) __final_dictEuclideanRing_1).get("CommutativeRing0"))).apply(null /* TODO: PrimUndefined */)).get("Ring0"))).apply(null /* TODO: PrimUndefined */)).get("Semiring0"))).apply(null /* TODO: PrimUndefined */)).get("zero"); return (java.util.function.Function<Object, Object>) (a_3) -> (java.util.function.Function<Object, Object>) (b_4) -> ( ((Boolean) (((java.util.function.Function<Object, Object>) (((java.util.function.Function<Object, Object>) (((java.util.LinkedHashMap<String, Object>) dictEq_0).get("eq"))).apply(b_4))).apply(zero_2))) ? a_3 : ((java.util.function.Function<Object, Object>) (((java.util.function.Function<Object, Object>) (((java.util.function.Function<Object, Object>) (((java.util.function.Function<Object, Object>) (Data_EuclideanRing.gcd)).apply(dictEq_0))).apply(dictEuclideanRing_1))).apply(b_4))).apply(((java.util.function.Function<Object, Object>) (((java.util.function.Function<Object, Object>) (((java.util.LinkedHashMap<String, Object>) dictEuclideanRing_1).get("mod"))).apply(a_3))).apply(b_4))); } }).get(); } catch (TcoLoop __tco_ex) { __tco_dictEq_0 = __tco_ex.args[0]; __tco_dictEuclideanRing_1 = __tco_ex.args[1]; } } } }).get();

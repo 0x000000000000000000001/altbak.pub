@@ -2,10 +2,10 @@ public class Data_Ring {
     public static final Object FFI_STUB = new java.util.function.Function<Object, Object>() {
         public Object apply(Object arg) { return this; }
     };
-    public static Object intSub = FFI_STUB;
-    public static Object intSub(Object... args) { return null; }
-    public static Object numSub = FFI_STUB;
-    public static Object numSub(Object... args) { return null; }
+    // FFI provided by ../javapurs/javapurs-prelude/src/Data/Ring.java
+    public static Object intSub = (java.util.function.Function<Object, Object>) (x) -> (java.util.function.Function<Object, Object>) (y) -> (Integer) x - (Integer) y;
+    public static Object numSub = (java.util.function.Function<Object, Object>) (x) -> (java.util.function.Function<Object, Object>) (y) -> (Double) x - (Double) y;
+
 
 public static final Object subRecord = (java.util.function.Function<Object, Object>) (dict_0) -> ((java.util.LinkedHashMap<String, Object>) dict_0).get("subRecord");
 public static final Object sub = (java.util.function.Function<Object, Object>) (dict_0) -> ((java.util.LinkedHashMap<String, Object>) dict_0).get("sub");

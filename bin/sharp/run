@@ -63,15 +63,15 @@ fi
 export PATH="$PWD/run/bak/js/node_modules/.bin:$PATH"
 
 if [ "$CLEAN" == "1" ]; then
-  echo "=== Rebuilding csharpurs backend ==="
-  (cd ../csharpurs && npm run build --silent)
+  echo "=== Rebuilding sharpurs backend ==="
+  (cd ../sharpurs/sharpurs && npm run build --silent)
 fi
 
 echo 'Building...'
-spago build > /dev/null 2>&1
+spago build
 
 # Generate C# code
-node ../csharpurs/bin/csharpurs.js
+node ../sharpurs/sharpurs/bin/sharpurs.js
 
 echo "=== C# ==="
 if [ -d "output/csharp" ]; then
