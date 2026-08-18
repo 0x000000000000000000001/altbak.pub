@@ -1,0 +1,83 @@
+#!/usr/bin/env bash
+set -e
+cd "$(dirname "$0")/../.."
+
+CLEAN=0
+MODE="pure"
+TEST_NAME=""
+
+while [[ $# -gt 0 ]]
+do
+  case "$1" in
+    -c|--clean)
+    CLEAN=1
+    shift
+    ;;
+    --test)
+    MODE="test"
+    TEST_NAME="$2"
+    shift 2
+    ;;
+    --x)
+    MODE="x"
+    shift
+    ;;
+    *)
+    shift
+    ;;
+  esac
+done
+
+if [ "$CLEAN" == "1" ]; then
+  rm -rf run/bak/rust/output/* run/bak/rust/spago/*
+fi
+mkdir -p run/bak/rust/output run/bak/rust/spago
+rm -rf output .spago spago.yaml spago.lock
+ln -s run/bak/rust/output output
+ln -s run/bak/rust/spago .spago
+ln -s run/bak/rust/spago.rust.yaml spago.yaml
+touch run/bak/rust/spago.lock && ln -s run/bak/rust/spago.lock spago.lock
+
+ENTRY_POINT="App"
+
+if [ "$MODE" == "test" ]; then
+  ENTRY_POINT="AppX"
+  cat <<EOF > src/AppX.purs
+module AppX where
+import Prelude
+import Effect (Effect)
+import Bench (runBench)
+import Test.$TEST_NAME as $TEST_NAME
+
+main :: Effect Unit
+main = void $ runBench $TEST_NAME.describe $TEST_NAME.act
+EOF
+  trap "rm -f src/AppX.purs" EXIT
+elif [ "$MODE" == "x" ]; then
+  ENTRY_POINT="AppX"
+  cp -r srx/Test/* src/Test/
+  cp srx/AppX.purs src/
+  trap "rm -rf src/Test/STArray.purs src/Test/AffOperations.purs src/Test/StringOps.purs src/Test/FileOps src/Test/Parallelism.purs src/AppX.purs" EXIT
+fi
+
+export PATH="$PWD/run/bak/js/node_modules/.bin:$PATH"
+
+if [ "$CLEAN" == "1" ]; then
+  echo "=== Rebuilding purust backend ==="
+  (cd ../purust/purust && npm run build --silent)
+fi
+
+echo 'Building...'
+spago build
+
+# Generate Rust code
+node ../purust/purust/bin/purust.js --main ${ENTRY_POINT} || echo "PURUST FAILED" || exit 1
+
+echo "=== Rust ==="
+if [ -d "output/purust_output" ]; then
+    cd output/purust_output
+    cargo run -q --release
+    cd ../..
+else
+    echo "No output/purust_output generated."
+fi

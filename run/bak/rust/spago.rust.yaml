@@ -1,0 +1,65 @@
+package:
+  name: ps-rust-test
+  dependencies:
+    - aff
+    - console
+    - effect
+    - prelude
+    - datetime
+    - strings
+    - arrays
+    - partial
+    - st
+    - maybe
+    - either
+    - now
+    - lazy
+workspace:
+  packageSet:
+    registry: 77.7.0
+  extraPackages:
+    prelude:
+      path: "../purust/purust-prelude"
+    effect:
+      path: "../purust/purust-effect"
+    console:
+      path: "../purust/purust-console"
+    aff:
+      path: "../purust/purust-aff"
+    now:
+      path: "../purust/purust-now"
+    datetime:
+      path: "../purust/purust-datetime"
+    exceptions:
+      path: "../purust/purust-exceptions"
+    foldable-traversable:
+      path: "../purust/purust-foldable-traversable"
+    st:
+      path: "../purust/purust-st"
+    refs:
+      path: "../purust/purust-refs"
+    unsafe-coerce:
+      path: "../purust/purust-unsafe-coerce"
+    functions:
+      path: "../purust/purust-functions"
+    partial:
+      path: "../purust/purust-partial"
+    arrays:
+      path: "../purust/purust-arrays"
+    strings:
+      path: "../purust/purust-strings"
+    integers:
+      path: "../purust/purust-integers"
+    enums:
+      path: "../purust/purust-enums"
+    foreign-object:
+      path: "../purust/purust-foreign-object"
+    numbers:
+      path: "../purust/purust-numbers"
+    record:
+      path: "../purust/purust-record"
+    assert:
+      path: "../purust/purust-assert"
+    lazy:
+      path: "../purust/purust-lazy"
+
