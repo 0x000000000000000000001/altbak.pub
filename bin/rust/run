@@ -76,7 +76,7 @@ node ../purust/purust/bin/purust.js --main ${ENTRY_POINT} || echo "PURUST FAILED
 echo "=== Rust ==="
 if [ -d "output/purust_output" ]; then
     cd output/purust_output
-    samply record cargo run -q --release
+    cargo run -q --release
     cd ../..
 else
     echo "No output/purust_output generated."
