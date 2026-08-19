@@ -30,7 +30,7 @@ Command: `./bin/run` (Runs on all 7 backends). New tests will gradually be added
 =============================================================================================================================================================
 CORE BENCHMARK RESULTS (Fibonacci, AST, tail calls, Church, primes, etc.)                                                                      
 =============================================================================================================================================================
-Benchmark               | JS            | Arista ES      | Go (WIP)     
+Benchmark               | JS            | Arista ES      | Go (mature WIP)     
 ----------------------- | ------------- | -------------- | --------- 
 AST Evaluation          | ~ 93 μs       | ~ 74 μs        | ~ 10 μs   
 Fibonacci               | ~ 43 μs       | ~ 46 μs        | ~ 2 μs    
@@ -48,7 +48,7 @@ Array Processing        | ~ 218 μs      | ~ 222 μs       | ~ 38 μs
 ----------------------- | ------------- | -------------- | --------- 
 Total Execution Time    | ~ 125.77 ms   | ~ 81.21 ms     | ~ 64.68 ms
 
-Benchmark               | Scheme     | Erlang        | PHP (WIP) | Rust (WIP)
+Benchmark               | Scheme     | Erlang        | PHP (normal WIP) | Rust (young WIP)
 ----------------------- | ---------- | ------------- | --------- | ---------
 AST Evaluation          | ~ 9 μs     | ~ 692 μs      | ~ 18 μs   | ~ 168 μs
 Fibonacci               | ~ 2 μs     | ~ 49 μs       | ~ 354 μs  | ~ 25 μs
