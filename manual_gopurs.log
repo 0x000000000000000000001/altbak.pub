@@ -1,5 +1,0 @@
-c100k coercedExpr=gopurs_runtime.Int(gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-return gopurs_runtime.Apply2(__local_var_1_0, gopurs_runtime.Apply(__local_var_2_1, f_3), x_4)
-})
-}).IntVal) from resBodyMut.exprType=gopurs_runtime.Value to expectedRetType=gopurs_runtime.Value

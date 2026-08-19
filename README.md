@@ -70,10 +70,6 @@ Total Execution Time    | ~ 46.87 ms | ~ 131.04 ms   | ~ 465.16 ms| ~ 5638.64 ms
 > **Single-Threaded Benchmark**
 > All benchmarks presented here are strictly **single-threaded**. They measure raw sequential execution speed and do not take into account the powerful multi-threading capabilities inherent to languages like Go or Erlang (BEAM).
 
-> [!WARNING]
-> **About the PHP results**
-> Please note that the `phpurs` backend is a brand new, completely experimental, and homemade compiler built entirely from scratch for this repository. Its execution time is not yet representative of PHP's actual performance limit. The currently displayed time is actively undergoing optimization and debugging!
-
 ### Extended benchmark results (I/O, mutability, async)
 Command: `./bin/run --x` (Skips runtimes lacking necessary FFI bindings like Scheme and Erlang)
 
