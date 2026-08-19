@@ -24,7 +24,6 @@ pub fn Bench_opaque(mut a0: UnknownType) -> UnknownType {
     })
 }
 
-pub fn Bench_formatNumber(mut nObj: UnknownType) -> UnknownType {
-    let n = nObj.init_number.unwrap();
-    mk_string(&format!("{:.2}", n))
+pub fn Bench_formatNumber(mut n: f64) -> String {
+    format!("{:.2}", n)
 }
