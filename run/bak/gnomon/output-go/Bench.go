@@ -6,25 +6,43 @@ var Bench_runBench any
 func init() {
 Bench_runBench = _lazy(func() any { return func(v0_describe any) any {
 return func(v1_act any) any {
-return ((((_force(Control_Bind_discardUnit)).(map[string]any)["discard"]).(func(any) any)(_force(Effect_bindEffect))).(func(any) any)((_force(Effect_Console_log)).(func(any) any)("--------------------------------------------------\n\n(Test)\n"))).(func(any) any)(func(v2_unused any) any {
-return ((((_force(Control_Bind_discardUnit)).(map[string]any)["discard"]).(func(any) any)(_force(Effect_bindEffect))).(func(any) any)(v0_describe)).(func(any) any)(func(v3_unused any) any {
-return ((((_force(Control_Bind_discardUnit)).(map[string]any)["discard"]).(func(any) any)(_force(Effect_bindEffect))).(func(any) any)((_force(Effect_Console_log)).(func(any) any)("\n(Output)\n"))).(func(any) any)(func(v4_unused any) any {
-return (((_force(Effect_bindEffect)).(map[string]any)["bind"]).(func(any) any)(_force(Bench_benchNow))).(func(any) any)(func(v5_t1 any) any {
-return ((((_force(Control_Bind_discardUnit)).(map[string]any)["discard"]).(func(any) any)(_force(Effect_bindEffect))).(func(any) any)(v1_act)).(func(any) any)(func(v6_unused any) any {
-return (((_force(Effect_bindEffect)).(map[string]any)["bind"]).(func(any) any)(_force(Bench_benchNow))).(func(any) any)(func(v7_t2 any) any {
 return func() any {
-var v8_dt any = _numSub(v7_t2, v5_t1)
-_ = v8_dt
-return ((((_force(Control_Bind_discardUnit)).(map[string]any)["discard"]).(func(any) any)(_force(Effect_bindEffect))).(func(any) any)((_force(Effect_Console_log)).(func(any) any)((((_force(Data_Semigroup_semigroupString)).(map[string]any)["append"]).(func(any) any)("\n(Execution time)\n\n")).(func(any) any)((((_force(Data_Semigroup_semigroupString)).(map[string]any)["append"]).(func(any) any)((_force(Bench_formatNumber)).(func(any) any)(v8_dt))).(func(any) any)(" μs\n"))))).(func(any) any)(func(v9_unused any) any {
-return ((_force(Effect_applicativeEffect)).(map[string]any)["pure"]).(func(any) any)(v8_dt)
+var v2 any = (_force(Effect_Console_log)).(func(any) any)("--------------------------------------------------\n\n(Test)\n")
+_ = v2
+return func() any {
+var v3_unused any = _runEffect(v2)
+_ = v3_unused
+return _runEffect(func() any {
+var v4_unused any = _runEffect(v0_describe)
+_ = v4_unused
+return _runEffect(func() any {
+var v5_unused any = _runEffect((_force(Effect_Console_log)).(func(any) any)("\n(Output)\n"))
+_ = v5_unused
+return _runEffect(func() any {
+var v6_t1 any = _runEffect(_force(Bench_benchNow))
+_ = v6_t1
+return _runEffect(func() any {
+var v7_unused any = _runEffect(v1_act)
+_ = v7_unused
+return _runEffect(func() any {
+var v8_t2 any = _runEffect(_force(Bench_benchNow))
+_ = v8_t2
+return _runEffect(func() any {
+var v9_dt any = _numSub(v8_t2, v6_t1)
+_ = v9_dt
+return func() any {
+var v10_unused any = _runEffect((_force(Effect_Console_log)).(func(any) any)(_strAppend(_strAppend("\n(Execution time)\n\n", (_force(Bench_formatNumber)).(func(any) any)(v9_dt)), " μs\n")))
+_ = v10_unused
+return _runEffect(func() any { return v9_dt })
+}
+}())
 })
+})
+})
+})
+})
+}
 }()
-})
-})
-})
-})
-})
-})
 }
 } })
 }

@@ -14,21 +14,18 @@ Test_RBTree_describe = _lazy(func() any { return (_force(Effect_Console_log)).(f
 Test_RBTree_depth = _lazy(func() any { return func(v0_v any) any {
 return func() any {
 if _truthy(_isTag(v0_v, "E")) { return 0 }
-if _truthy(_isTag(v0_v, "T")) { return func() any {
+if _truthy(_isTag(v0_v, "T")) { return _intAdd(1, func() any {
 var v1 any = (_force(Test_RBTree_depth)).(func(any) any)((v0_v).(V).Fields[1])
 _ = v1
 return func() any {
 var v2 any = (_force(Test_RBTree_depth)).(func(any) any)((v0_v).(V).Fields[3])
 _ = v2
 return func() any {
-if _truthy(func() any {
-if _truthy(_isTag((((((_force(Data_Ord_ordIntImpl)).(func(any) any)(V{Tag: "LT", Fields: []any{}})).(func(any) any)(V{Tag: "EQ", Fields: []any{}})).(func(any) any)(V{Tag: "GT", Fields: []any{}})).(func(any) any)(v1)).(func(any) any)(v2), "GT")) { return true }
-return false
-}()) { return _intAdd(1, v1) }
-return _intAdd(1, v2)
+if _truthy(_intGt(v1, v2)) { return v1 }
+return v2
 }()
 }()
-}() }
+}()) }
 return _fail("Failed pattern match")
 }()
 } })
@@ -123,15 +120,9 @@ return func(v1_v1 any) any {
 return func() any {
 if _truthy(_isTag(v1_v1, "E")) { return V{Tag: "T", Fields: []any{V{Tag: "R", Fields: []any{}}, V{Tag: "E", Fields: []any{}}, v0_v, V{Tag: "E", Fields: []any{}}}} }
 if _truthy(_isTag(v1_v1, "T")) { return func() any {
-if _truthy(func() any {
-if _truthy(_isTag((((((_force(Data_Ord_ordIntImpl)).(func(any) any)(V{Tag: "LT", Fields: []any{}})).(func(any) any)(V{Tag: "EQ", Fields: []any{}})).(func(any) any)(V{Tag: "GT", Fields: []any{}})).(func(any) any)(v0_v)).(func(any) any)((v1_v1).(V).Fields[2]), "LT")) { return true }
-return false
-}()) { return ((((_force(Test_RBTree_balance)).(func(any) any)((v1_v1).(V).Fields[0])).(func(any) any)(((_force(Test_RBTree_ins)).(func(any) any)(v0_v)).(func(any) any)((v1_v1).(V).Fields[1]))).(func(any) any)((v1_v1).(V).Fields[2])).(func(any) any)((v1_v1).(V).Fields[3]) }
+if _truthy(_intLt(v0_v, (v1_v1).(V).Fields[2])) { return ((((_force(Test_RBTree_balance)).(func(any) any)((v1_v1).(V).Fields[0])).(func(any) any)(((_force(Test_RBTree_ins)).(func(any) any)(v0_v)).(func(any) any)((v1_v1).(V).Fields[1]))).(func(any) any)((v1_v1).(V).Fields[2])).(func(any) any)((v1_v1).(V).Fields[3]) }
 return func() any {
-if _truthy(func() any {
-if _truthy(_isTag((((((_force(Data_Ord_ordIntImpl)).(func(any) any)(V{Tag: "LT", Fields: []any{}})).(func(any) any)(V{Tag: "EQ", Fields: []any{}})).(func(any) any)(V{Tag: "GT", Fields: []any{}})).(func(any) any)(v0_v)).(func(any) any)((v1_v1).(V).Fields[2]), "GT")) { return true }
-return false
-}()) { return ((((_force(Test_RBTree_balance)).(func(any) any)((v1_v1).(V).Fields[0])).(func(any) any)((v1_v1).(V).Fields[1])).(func(any) any)((v1_v1).(V).Fields[2])).(func(any) any)(((_force(Test_RBTree_ins)).(func(any) any)(v0_v)).(func(any) any)((v1_v1).(V).Fields[3])) }
+if _truthy(_intGt(v0_v, (v1_v1).(V).Fields[2])) { return ((((_force(Test_RBTree_balance)).(func(any) any)((v1_v1).(V).Fields[0])).(func(any) any)((v1_v1).(V).Fields[1])).(func(any) any)((v1_v1).(V).Fields[2])).(func(any) any)(((_force(Test_RBTree_ins)).(func(any) any)(v0_v)).(func(any) any)((v1_v1).(V).Fields[3])) }
 return V{Tag: "T", Fields: []any{(v1_v1).(V).Fields[0], (v1_v1).(V).Fields[1], (v1_v1).(V).Fields[2], (v1_v1).(V).Fields[3]}}
 }()
 }() }
@@ -160,7 +151,13 @@ return ((_force(Test_RBTree_buildTree)).(func(any) any)(_intSub(v0_v, 1))).(func
 }()
 }
 } })
-Test_RBTree_act = _lazy(func() any { return (((_force(Effect_bindEffect)).(map[string]any)["bind"]).(func(any) any)((_force(Bench_opaque)).(func(any) any)(100000))).(func(any) any)(func(v0_dummy any) any {
-return (_force(Effect_Console_log)).(func(any) any)(((_force(Data_Show_showInt)).(map[string]any)["show"]).(func(any) any)((_force(Test_RBTree_depth)).(func(any) any)(((_force(Test_RBTree_buildTree)).(func(any) any)(v0_dummy)).(func(any) any)(V{Tag: "E", Fields: []any{}}))))
-}) })
+Test_RBTree_act = _lazy(func() any { return func() any {
+var v0 any = (_force(Bench_opaque)).(func(any) any)(100000)
+_ = v0
+return func() any {
+var v1_dummy any = _runEffect(v0)
+_ = v1_dummy
+return _runEffect((_force(Effect_Console_log)).(func(any) any)((_force(Data_Show_showIntImpl)).(func(any) any)((_force(Test_RBTree_depth)).(func(any) any)(((_force(Test_RBTree_buildTree)).(func(any) any)(v1_dummy)).(func(any) any)(V{Tag: "E", Fields: []any{}})))))
+}
+}() })
 }

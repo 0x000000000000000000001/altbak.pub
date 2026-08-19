@@ -9,30 +9,21 @@ var mempty_ = function (dict) {
 var mappend_ = function (dict) {
     return dict.mappend_;
 };
+var polyLoopGo = function (dictMonoidish) {
+    var mempty_1 = mempty_(dictMonoidish);
+    return function (v) {
+        return function (v1) {
+            if (v === 0) {
+                return v1;
+            };
+            return polyLoopGo(dictMonoidish)(v - 1 | 0)(mappend_(dictMonoidish)(v1)(mempty_1));
+        };
+    };
+};
 var polyLoop = function (dictMonoidish) {
     return function (n_init) {
         return function (acc_init) {
-            var go = function ($copy_v) {
-                return function ($copy_v1) {
-                    var $tco_var_v = $copy_v;
-                    var $tco_done = false;
-                    var $tco_result;
-                    function $tco_loop(v, v1) {
-                        if (v === 0) {
-                            $tco_done = true;
-                            return v1;
-                        };
-                        $tco_var_v = v - 1 | 0;
-                        $copy_v1 = mappend_(dictMonoidish)(v1)(mempty_(dictMonoidish));
-                        return;
-                    };
-                    while (!$tco_done) {
-                        $tco_result = $tco_loop($tco_var_v, $copy_v1);
-                    };
-                    return $tco_result;
-                };
-            };
-            return go(n_init)(acc_init);
+            return polyLoopGo(dictMonoidish)(n_init)(acc_init);
         };
     };
 };
@@ -52,6 +43,7 @@ var act = function __do() {
 export {
     mappend_,
     mempty_,
+    polyLoopGo,
     polyLoop,
     describe,
     act,
