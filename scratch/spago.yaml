@@ -1,0 +1,9 @@
+package:
+  name: scratch-codegen
+  dependencies:
+    - prelude
+    - maybe
+    - strings
+workspace:
+  package_set:
+    registry: 41.2.0
