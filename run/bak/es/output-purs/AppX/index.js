@@ -2,8 +2,8 @@
 import * as Bench from "../Bench/index.js";
 import * as Data_Functor from "../Data.Functor/index.js";
 import * as Effect from "../Effect/index.js";
-import * as Test_RBTree from "../Test.RBTree/index.js";
-var main = /* #__PURE__ */ Data_Functor["void"](Effect.functorEffect)(/* #__PURE__ */ Bench.runBench(Test_RBTree.describe)(Test_RBTree.act));
+import * as Test_ArrayOps from "../Test.ArrayOps/index.js";
+var main = /* #__PURE__ */ Data_Functor["void"](Effect.functorEffect)(/* #__PURE__ */ Bench.runBench(Test_ArrayOps.describe)(Test_ArrayOps.act));
 export {
     main
 };
