@@ -2,8 +2,8 @@
 import * as Bench from "../Bench/index.js";
 import * as Data_Functor from "../Data.Functor/index.js";
 import * as Effect from "../Effect/index.js";
-import * as Test_ArrayOps from "../Test.ArrayOps/index.js";
-var main = /* #__PURE__ */ Data_Functor["void"](Effect.functorEffect)(/* #__PURE__ */ Bench.runBench(Test_ArrayOps.describe)(Test_ArrayOps.act));
+import * as Test_Polymorphism from "../Test.Polymorphism/index.js";
+var main = /* #__PURE__ */ Data_Functor["void"](Effect.functorEffect)(/* #__PURE__ */ Bench.runBench(Test_Polymorphism.describe)(Test_Polymorphism.act));
 export {
     main
 };
