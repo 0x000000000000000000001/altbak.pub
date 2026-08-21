@@ -11,7 +11,6 @@ var once_Test_StringOps_regexPattern sync.Once
 func Get_Test_StringOps_regexPattern() gopurs_runtime.Value {
 	once_Test_StringOps_regexPattern.Do(func() {
 		cache_Test_StringOps_regexPattern = func() gopurs_runtime.Value {
-			// TAST (Let): __local_var_0_0 -> gopurs_runtime.Value
 			__local_var_0_0 := gopurs_runtime.Apply2(Get_Data_String_Regex_regex(), gopurs_runtime.Str("(hello|world)[0-9]+"), Get_Data_String_Regex_Flags_noFlags())
 			_ = __local_var_0_0
 			var __t1 gopurs_runtime.Value
@@ -97,7 +96,6 @@ func Call_Test_StringOps_runStringOps(n_0_loop int64) int64 {
 							}
 						}
 						{
-							// TAST (Let): concatted_5_1 -> string
 							concatted_5_1 := (((v1_3.StrVal()) + (gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(v_2)).StrVal())) + ("world")) + (gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int((v_2)+(1))).StrVal())
 							_ = concatted_5_1
 							v_2_loop = (v_2) - (1)

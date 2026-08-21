@@ -165,16 +165,13 @@ var once_Test_RBTree_act sync.Once
 
 func Get_Test_RBTree_act() gopurs_runtime.Value {
 	once_Test_RBTree_act.Do(func() {
-		cache_Test_RBTree_act = func() gopurs_runtime.Value {
-			// TAST (Let): __local_var_0_0 -> gopurs_runtime.Value
+		cache_Test_RBTree_act = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 			__local_var_0_0 := gopurs_runtime.Apply(Get_Bench_opaque(), gopurs_runtime.Int(100000))
 			_ = __local_var_0_0
-			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-				dummy_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
-				_ = dummy_1_1
-				return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(Call_Test_RBTree_depth(Call_Test_RBTree_buildTree(dummy_1_1.IntVal, (*Constructor_Test_RBTree_T)(nil))))).StrVal())), gopurs_runtime.Value{})
-			})
-		}()
+			dummy_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
+			_ = dummy_1_1
+			return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(Call_Test_RBTree_depth(Call_Test_RBTree_buildTree(dummy_1_1.IntVal, (*Constructor_Test_RBTree_T)(nil))))).StrVal())), gopurs_runtime.Value{})
+		})
 	})
 	return cache_Test_RBTree_act
 }
@@ -272,10 +269,8 @@ depth:
 		}
 		{
 			if v_0 != nil {
-				// TAST (Let): __local_var_1_0 -> int64
 				__local_var_1_0 := Call_Test_RBTree_depth((v_0).V1)
 				_ = __local_var_1_0
-				// TAST (Let): __local_var_2_1 -> int64
 				__local_var_2_1 := Call_Test_RBTree_depth((v_0).V3)
 				_ = __local_var_2_1
 				var __t2 int64
@@ -929,19 +924,19 @@ func Call_Test_RBTree_insert(x_0_loop int64, s_1_loop *Constructor_Test_RBTree_T
 	_ = x_0
 	var s_1 *Constructor_Test_RBTree_T = s_1_loop
 	_ = s_1
-	// TAST (Let): __local_var_2_0 -> gopurs_runtime.Value
-	var __local_var_2_0 gopurs_runtime.Value = gopurs_runtime.Value{Type: 9, IntVal: 3983586014, UnsafePtr: unsafe.Pointer(Call_Test_RBTree_ins(x_0, s_1))}
+	__local_var_2_0 := Call_Test_RBTree_ins(x_0, s_1)
+	_ = __local_var_2_0
 	var __t1 *Constructor_Test_RBTree_T
 	{
-		if __local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 3983586014 && __local_var_2_0.UnsafePtr != nil {
-			__t1 = (&Constructor_Test_RBTree_T{1, 1583507464, (*Constructor_Test_RBTree_T)(__local_var_2_0.UnsafePtr).V1, (*Constructor_Test_RBTree_T)(__local_var_2_0.UnsafePtr).V2, (*Constructor_Test_RBTree_T)(__local_var_2_0.UnsafePtr).V3})
+		if __local_var_2_0 != nil {
+			__t1 = (&Constructor_Test_RBTree_T{1, 1583507464, (__local_var_2_0).V1, (__local_var_2_0).V2, (__local_var_2_0).V3})
 			goto end_branch_1
 		} else {
 
 		}
 	}
 	{
-		if __local_var_2_0.Type == 9 && __local_var_2_0.IntVal == 3983586014 && __local_var_2_0.UnsafePtr == nil {
+		if __local_var_2_0 == nil {
 			__t1 = (*Constructor_Test_RBTree_T)(nil)
 			goto end_branch_1
 		} else {

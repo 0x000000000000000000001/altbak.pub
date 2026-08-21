@@ -1,0 +1,742 @@
+=== Rebuilding gopurs backend ===
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: gopurs
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+[  1 of 420] Building Control.Semigroupoid
+[  2 of 420] Building Type.Proxy
+[  3 of 420] Building Data.Symbol
+[  4 of 420] Building Data.Unit
+[  5 of 420] Building Record.Unsafe
+[  6 of 420] Building Data.HeytingAlgebra
+[  7 of 420] Building Data.Void
+[  8 of 420] Building Data.Eq
+[  9 of 420] Building Control.Category
+[ 10 of 420] Building Data.Boolean
+[ 11 of 420] Building Data.Semigroup
+[ 12 of 420] Building Data.Show
+[ 13 of 420] Building Data.Ordering
+[ 14 of 420] Building Data.Semiring
+[ 15 of 420] Building Data.Ring
+[ 16 of 420] Building Data.Ord
+[ 17 of 420] Building Data.Function
+[ 18 of 420] Building Data.Functor
+[ 19 of 420] Building Control.Alt
+[ 20 of 420] Building Control.Apply
+[ 21 of 420] Building Control.Applicative
+[ 22 of 420] Building Control.Bind
+[ 23 of 420] Building Control.Plus
+[ 24 of 420] Building Data.BooleanAlgebra
+[ 25 of 420] Building Data.Bounded
+[ 26 of 420] Building Data.CommutativeRing
+[ 27 of 420] Building Data.EuclideanRing
+[ 28 of 420] Building Control.Monad
+[ 29 of 420] Building Data.Monoid
+[ 30 of 420] Building Data.DivisionRing
+[ 31 of 420] Building Data.Field
+[ 32 of 420] Building Data.NaturalTransformation
+[ 33 of 420] Building Prelude
+[ 34 of 420] Building Data.Monoid.Additive
+[ 35 of 420] Building Control.Alternative
+[ 36 of 420] Building Control.Extend
+[ 37 of 420] Building Control.Comonad
+[ 38 of 420] Building Data.Monoid.Conj
+[ 39 of 420] Building Data.Monoid.Disj
+[ 40 of 420] Building Data.Monoid.Dual
+[ 41 of 420] Building Data.Monoid.Endo
+[ 42 of 420] Building Data.Monoid.Multiplicative
+[ 43 of 420] Building Data.Semigroup.First
+[ 44 of 420] Building Data.Semigroup.Last
+[ 45 of 420] Building Unsafe.Coerce
+[ 46 of 420] Building Safe.Coerce
+[ 47 of 420] Building Data.Newtype
+[ 48 of 420] Building Data.Monoid.Alternate
+[ 49 of 420] Building Data.Functor.Invariant
+[ 50 of 420] Building Data.Const
+[ 51 of 420] Building Data.Generic.Rep
+[ 52 of 420] Building Data.Maybe
+[ 53 of 420] Building Data.Either
+[ 54 of 420] Building Control.Lazy
+[ 55 of 420] Building Control.MonadPlus
+[ 56 of 420] Building Data.Functor.App
+[ 57 of 420] Building Data.Functor.Compose
+[ 58 of 420] Building Data.Tuple
+[ 59 of 420] Building Data.Bifunctor
+[ 60 of 420] Building Data.Functor.Coproduct
+[ 61 of 420] Building Data.Functor.Product
+[ 62 of 420] Building Data.Identity
+[ 63 of 420] Building Data.Maybe.First
+[ 64 of 420] Building Data.Maybe.Last
+[ 65 of 420] Building Data.Foldable
+[ 66 of 420] Building Effect
+[ 67 of 420] Building Effect.Ref
+[ 68 of 420] Building Partial
+[ 69 of 420] Building Partial.Unsafe
+[ 70 of 420] Building Control.Monad.Rec.Class
+[ 71 of 420] Building Data.FunctorWithIndex
+[ 72 of 420] Building Data.FoldableWithIndex
+[ 73 of 420] Building Data.Ord.Max
+[ 74 of 420] Building Data.Ord.Min
+[ 75 of 420] Building Data.Semigroup.Foldable
+[ 76 of 420] Building Data.Traversable.Accum
+[ 77 of 420] Building Data.Traversable.Accum.Internal
+[ 78 of 420] Building Data.Traversable
+[ 79 of 420] Building Data.TraversableWithIndex
+[ 80 of 420] Building Data.Semigroup.Traversable
+[ 81 of 420] Building Data.Unfoldable1
+[ 82 of 420] Building Data.Unfoldable
+[ 83 of 420] Building Data.NonEmpty
+[ 84 of 420] Building Data.List.Types
+[ 85 of 420] Building Data.List.Internal
+[ 86 of 420] Building Data.List
+[ 87 of 420] Building Data.List.NonEmpty
+[ 88 of 420] Building Data.Show.Generic
+[ 89 of 420] Building Ansi.Codes
+[ 90 of 420] Building Ansi.Output
+[ 91 of 420] Building Control.Biapply
+[ 92 of 420] Building Control.Biapplicative
+[ 93 of 420] Building Control.Monad.Trans.Class
+[ 94 of 420] Building Data.CatQueue
+[ 95 of 420] Building Data.CatList
+[ 96 of 420] Building Control.Monad.Free
+[ 97 of 420] Building Control.Monad.State.Class
+[ 98 of 420] Building Control.Monad.Cont.Class
+[ 99 of 420] Building Effect.Exception
+[100 of 420] Building Control.Monad.Error.Class
+[101 of 420] Building Control.Monad.Reader.Class
+[102 of 420] Building Control.Monad.ST.Internal
+[103 of 420] Building Control.Monad.ST
+[104 of 420] Building Control.Monad.ST.Global
+[105 of 420] Building Control.Monad.ST.Class
+[106 of 420] Building Control.Monad.Writer.Class
+[107 of 420] Building Effect.Class
+[108 of 420] Building Control.Monad.State.Trans
+[109 of 420] Building Control.Monad.State
+[110 of 420] Building Data.Lazy
+[111 of 420] Building Control.Comonad.Cofree
+[112 of 420] Building Control.Monad.Identity.Trans
+[113 of 420] Building Control.Comonad.Trans.Class
+[114 of 420] Building Control.Comonad.Env.Trans
+[115 of 420] Building Control.Comonad.Store.Trans
+[116 of 420] Building Control.Comonad.Traced.Trans
+[117 of 420] Building Control.Comonad.Cofree.Class
+[118 of 420] Building Control.Comonad.Store.Class
+[119 of 420] Building Control.Comonad.Store
+[120 of 420] Building Control.Comonad.Env.Class
+[121 of 420] Building Control.Comonad.Env
+[122 of 420] Building Control.Comonad.Traced.Class
+[123 of 420] Building Control.Comonad.Traced
+[124 of 420] Building Control.Monad.Cont.Trans
+[125 of 420] Building Control.Monad.Cont
+[126 of 420] Building Control.Monad.Except.Trans
+[127 of 420] Building Control.Monad.Except
+[128 of 420] Building Control.Monad.Maybe.Trans
+[129 of 420] Building Type.Equality
+[130 of 420] Building Data.Distributive
+[131 of 420] Building Control.Monad.Reader.Trans
+[132 of 420] Building Control.Monad.Writer.Trans
+[133 of 420] Building Control.Monad.Free.Class
+[134 of 420] Building Control.Monad.Gen.Class
+[135 of 420] Building Control.Monad.Gen
+[136 of 420] Building Control.Monad.Gen.Common
+[137 of 420] Building Control.Monad.List.Trans
+[138 of 420] Building Control.Monad.RWS.Trans
+[139 of 420] Building Control.Monad.RWS
+[140 of 420] Building Control.Monad.Reader
+[141 of 420] Building Control.Monad.ST.Ref
+[142 of 420] Building Control.Monad.ST.Uncurried
+[143 of 420] Building Control.Monad.Trampoline
+[144 of 420] Building Control.Monad.Writer
+[145 of 420] Building Data.Functor.Contravariant
+[146 of 420] Building Data.Profunctor
+[147 of 420] Building Data.Profunctor.Closed
+[148 of 420] Building Data.Profunctor.Strong
+[149 of 420] Building Data.Functor.Costar
+[150 of 420] Building Data.Profunctor.Choice
+[151 of 420] Building Data.Profunctor.Star
+[152 of 420] Building Control.Parallel.Class
+[153 of 420] Building Control.Parallel
+[154 of 420] Building Data.Function.Uncurried
+[155 of 420] Building Data.Array.NonEmpty.Internal
+[156 of 420] Building Data.Array.ST
+[157 of 420] Building Data.Array.ST.Iterator
+[158 of 420] Building Data.Array
+[159 of 420] Building Foreign.Object.ST
+[160 of 420] Building Type.Data.Boolean
+[161 of 420] Building Type.Data.Ordering
+[162 of 420] Building Type.Data.Symbol
+[163 of 420] Building Type.RowList
+[164 of 420] Building Type.Row.Homogeneous
+[165 of 420] Building Foreign.Object
+[166 of 420] Building Data.Argonaut.Core
+[167 of 420] Building Data.Argonaut.Decode.Error
+[168 of 420] Building Data.Array.NonEmpty
+[169 of 420] Building Data.Int.Bits
+[170 of 420] Building Data.Number
+[171 of 420] Building Data.Int
+[172 of 420] Building Data.Map.Internal
+[173 of 420] Building Data.Set
+[174 of 420] Building Data.Map
+[175 of 420] Building Data.Enum
+[176 of 420] Building Data.String.Pattern
+[177 of 420] Building Data.String.Unsafe
+[178 of 420] Building Data.String.CodeUnits
+[179 of 420] Building Data.String.Common
+[180 of 420] Building Data.String.CodePoints
+[181 of 420] Building Data.String
+[182 of 420] Building Data.String.NonEmpty.Internal
+[183 of 420] Building Data.String.NonEmpty.CodePoints
+[184 of 420] Building Data.String.NonEmpty
+[185 of 420] Building Data.Argonaut.Decode.Decoders
+[186 of 420] Building Record.Unsafe.Union
+[187 of 420] Building Record
+[188 of 420] Building Data.Argonaut.Decode.Class
+[189 of 420] Building Data.Argonaut.Decode.Combinators
+[190 of 420] Building Data.Argonaut.Parser
+[191 of 420] Building Data.Argonaut.Decode.Parser
+[192 of 420] Building Data.Argonaut.Decode
+[193 of 420] Building Data.Argonaut.Encode.Encoders
+[194 of 420] Building Data.Argonaut.Encode.Class
+[195 of 420] Building Data.Argonaut.Encode.Combinators
+[196 of 420] Building Data.Argonaut.Encode
+[197 of 420] Building Data.Char.Gen
+[198 of 420] Building Data.String.Gen
+[199 of 420] Building Data.Argonaut.Gen
+[200 of 420] Building Data.Argonaut.JCursor
+[201 of 420] Building Data.Argonaut.JCursor.Gen
+[202 of 420] Building Data.Lens.Internal.Wander
+[203 of 420] Building Data.Lens.Internal.Indexed
+[204 of 420] Building Data.Lens.Internal.Shop
+[205 of 420] Building Data.Functor.Clown
+[206 of 420] Building Data.Functor.Flip
+[207 of 420] Building Data.Functor.Joker
+[208 of 420] Building Data.Functor.Product2
+[209 of 420] Building Data.Bifoldable
+[210 of 420] Building Data.Bitraversable
+[211 of 420] Building Data.Lens.Internal.Bazaar
+[212 of 420] Building Data.Lens.Internal.Exchange
+[213 of 420] Building Data.Profunctor.Cochoice
+[214 of 420] Building Data.Lens.Internal.Forget
+[215 of 420] Building Data.Lens.Internal.Grating
+[216 of 420] Building Data.Lens.Internal.Market
+[217 of 420] Building Data.Profunctor.Costrong
+[218 of 420] Building Data.Lens.Internal.Re
+[219 of 420] Building Data.Lens.Internal.Stall
+[220 of 420] Building Data.Lens.Internal.Tagged
+[221 of 420] Building Data.Lens.Types
+[222 of 420] Building Data.Lens.Lens
+[223 of 420] Building Data.Lens.Lens.Tuple
+[224 of 420] Building Data.Lens.Lens.Unit
+[225 of 420] Building Data.Lens.Prism
+[226 of 420] Building Data.Lens.Prism.Either
+[227 of 420] Building Data.Lens.Prism.Maybe
+[228 of 420] Building Data.Lens.Common
+[229 of 420] Building Data.Lens.Fold
+[230 of 420] Building Data.Lens.Getter
+[231 of 420] Building Data.Lens.Internal.Zipping
+[232 of 420] Building Data.Lens.Grate
+[233 of 420] Building Data.Lens.Iso
+[234 of 420] Building Data.Lens.Setter
+[235 of 420] Building Data.Lens.Iso.Newtype
+[236 of 420] Building Data.Lens.Indexed
+[237 of 420] Building Data.Lens.Traversal
+[238 of 420] Building Data.Lens
+[239 of 420] Building Data.Argonaut.Prisms
+[240 of 420] Building Data.Argonaut.Traversals
+[241 of 420] Building Data.Argonaut
+[242 of 420] Building Data.Array.Partial
+[243 of 420] Building Data.Array.ST.Partial
+[244 of 420] Building Data.ArrayBuffer.Types
+[245 of 420] Building Data.Bifunctor.Join
+[246 of 420] Building Data.Bounded.Generic
+[247 of 420] Building Data.Char
+[248 of 420] Building Data.Comparison
+[249 of 420] Building Data.Exists
+[250 of 420] Building Data.Coyoneda
+[251 of 420] Building Data.Date.Component
+[252 of 420] Building Data.Enum.Gen
+[253 of 420] Building Data.Date.Component.Gen
+[254 of 420] Building Data.Time.Duration
+[255 of 420] Building Data.Date
+[256 of 420] Building Data.Date.Gen
+[257 of 420] Building Data.Time.Component
+[258 of 420] Building Data.Time
+[259 of 420] Building Data.DateTime
+[260 of 420] Building Data.Time.Component.Gen
+[261 of 420] Building Data.Time.Gen
+[262 of 420] Building Data.DateTime.Gen
+[263 of 420] Building Data.DateTime.Instant
+[264 of 420] Building Data.Equivalence
+[265 of 420] Building Data.Op
+[266 of 420] Building Data.Predicate
+[267 of 420] Building Data.Divide
+[268 of 420] Building Data.Decide
+[269 of 420] Building Data.Divisible
+[270 of 420] Building Data.Decidable
+[271 of 420] Building Data.Either.Inject
+[272 of 420] Building Data.Either.Nested
+[273 of 420] Building Data.Enum.Generic
+[274 of 420] Building Data.Eq.Generic
+[275 of 420] Building Data.Functor.Coproduct.Inject
+[276 of 420] Building Data.Functor.Coproduct.Nested
+[277 of 420] Building Data.Functor.Product.Nested
+[278 of 420] Building Data.HeytingAlgebra.Generic
+[279 of 420] Building Data.Interval.Duration
+[280 of 420] Building Data.Interval.Duration.Iso
+[281 of 420] Building Data.Interval
+[282 of 420] Building Foreign
+[283 of 420] Building Data.JSDate
+[284 of 420] Building Data.Lens.AffineTraversal
+[285 of 420] Building Data.Lens.Index
+[286 of 420] Building Data.Lens.At
+[287 of 420] Building Data.Lens.Fold.Partial
+[288 of 420] Building Data.Lens.Internal.Focusing
+[289 of 420] Building Data.Lens.Lens.Product
+[290 of 420] Building Data.Lens.Lens.Void
+[291 of 420] Building Data.Lens.Prism.Coproduct
+[292 of 420] Building Data.Lens.Record
+[293 of 420] Building Data.Lens.Zoom
+[294 of 420] Building Data.List.Lazy.Types
+[295 of 420] Building Data.List.Lazy
+[296 of 420] Building Data.List.Lazy.NonEmpty
+[297 of 420] Building Data.List.Partial
+[298 of 420] Building Data.List.ZipList
+[299 of 420] Building Data.Map.Gen
+[300 of 420] Building Data.Monoid.Generic
+[301 of 420] Building Data.Nullable
+[302 of 420] Building Data.Number.Approximate
+[303 of 420] Building Data.Number.Format
+[304 of 420] Building Data.Ord.Down
+[305 of 420] Building Data.Ord.Generic
+[306 of 420] Building Data.Posix.Signal
+[307 of 420] Building Data.Posix
+[308 of 420] Building Data.Profunctor.Join
+[309 of 420] Building Data.Profunctor.Split
+[310 of 420] Building Data.Reflectable
+[311 of 420] Building Data.Ring.Generic
+[312 of 420] Building Data.Semigroup.Generic
+[313 of 420] Building Data.Semiring.Generic
+[314 of 420] Building Data.Set.NonEmpty
+[315 of 420] Building Data.String.CaseInsensitive
+[316 of 420] Building Data.String.NonEmpty.CaseInsensitive
+[317 of 420] Building Data.String.NonEmpty.CodeUnits
+[318 of 420] Building Data.String.Regex.Flags
+[319 of 420] Building Data.String.Regex
+[320 of 420] Building Data.String.Regex.Unsafe
+[321 of 420] Building Data.Time.Duration.Gen
+[322 of 420] Building Data.Tuple.Nested
+[323 of 420] Building Data.Yoneda
+[324 of 420] Building Debug
+[325 of 420] Building Dodo.Internal
+[326 of 420] Building Dodo.Internal.Buffer
+[327 of 420] Building Dodo
+[328 of 420] Building Dodo.Ansi
+[329 of 420] Building Dodo.Box
+[330 of 420] Building Dodo.Common
+[331 of 420] Building Effect.Unsafe
+[332 of 420] Building Effect.Aff
+[333 of 420] Building Effect.Aff.Class
+[334 of 420] Building Effect.Uncurried
+[335 of 420] Building Effect.Aff.Compat
+[336 of 420] Building Effect.Console
+[337 of 420] Building Effect.Class.Console
+[338 of 420] Building Effect.Exception.Unsafe
+[339 of 420] Building Foreign.Index
+[340 of 420] Building Foreign.Keys
+[341 of 420] Building Foreign.Object.Gen
+[342 of 420] Building Foreign.Object.ST.Unsafe
+[343 of 420] Building Foreign.Object.Unsafe
+[344 of 420] Building Gopurs.FfiTypes
+[345 of 420] Building PureScript.Backend.Optimizer.CoreFn
+[346 of 420] Building Gopurs.GoAst
+[347 of 420] Building Gopurs.Printer
+[348 of 420] Building Node.Buffer.Types
+[349 of 420] Building Node.Encoding
+[350 of 420] Building Node.Buffer.Immutable
+[351 of 420] Building Node.Buffer.Class
+[352 of 420] Building Node.Buffer
+[353 of 420] Building Node.FS.Constants
+[354 of 420] Building Node.FS
+[355 of 420] Building Node.FS.Perms
+[356 of 420] Building Node.FS.Stats
+[357 of 420] Building Node.Path
+[358 of 420] Building Node.FS.Sync
+[359 of 420] Building PureScript.Backend.Optimizer.Syntax
+[360 of 420] Building PureScript.Backend.Optimizer.Analysis
+[361 of 420] Building PureScript.Backend.Optimizer.Utils
+[362 of 420] Building PureScript.Backend.Optimizer.Semantics
+[363 of 420] Building PureScript.Backend.Optimizer.Codegen.Tco
+[364 of 420] Building PureScript.CST.Types
+[365 of 420] Building PureScript.CST.Print
+[366 of 420] Building PureScript.CST.Errors
+[367 of 420] Building PureScript.CST.Layout
+[368 of 420] Building PureScript.CST.TokenStream
+[369 of 420] Building PureScript.CST.Lexer
+[370 of 420] Building PureScript.CST.Parser.Monad
+[371 of 420] Building PureScript.Backend.Optimizer.Directives
+[372 of 420] Building PureScript.Backend.Optimizer.Semantics.Foreign
+[373 of 420] Building PureScript.Backend.Optimizer.Convert
+[374 of 420] Building PureScript.Backend.Optimizer.FfiSupport
+[375 of 420] Building PureScript.Backend.Optimizer.FreeVars
+[376 of 420] Building PureScript.Backend.Optimizer.Substitute
+[377 of 420] Building PureScript.Backend.Optimizer.Monomorphize
+[378 of 420] Building Gopurs.CodeGen
+[379 of 420] Building Gopurs.CodeGenBackend
+[380 of 420] Building Gopurs.FBIP
+[381 of 420] Building Gopurs.FfiSupport
+[382 of 420] Building Gopurs.QuoteTAST
+[383 of 420] Building Gopurs.OptimizeTAST
+[384 of 420] Building Gopurs.Runtime
+[385 of 420] Building Gopurs.ShowTco
+[386 of 420] Building Gopurs.TestTrace
+[387 of 420] Building Gopurs.UsageAnalysis
+[388 of 420] Building Node.FS.Async
+[389 of 420] Building Node.FS.Aff
+[390 of 420] Building Node.Symbol
+[391 of 420] Building Node.EventEmitter
+[392 of 420] Building Node.EventEmitter.UtilTypes
+[393 of 420] Building Node.Platform
+[394 of 420] Building Node.Stream
+[395 of 420] Building Node.Process
+[396 of 420] Building PureScript.Backend.Optimizer.CoreFn.Json
+[397 of 420] Building PureScript.Backend.Optimizer.CoreFn.Sort
+[398 of 420] Building PureScript.Backend.Optimizer.Directives.Defaults
+[399 of 420] Building PureScript.Backend.Optimizer.App
+[400 of 420] Building PureScript.Backend.Optimizer.Builder
+[401 of 420] Building Main
+[402 of 420] Building Node.Buffer.Constants
+[403 of 420] Building Node.Buffer.ST
+[404 of 420] Building Node.FS.Stream
+[405 of 420] Building Node.Stream.Aff
+[406 of 420] Building PureScript.Backend.Optimizer.Debug
+[407 of 420] Building PureScript.Backend.Optimizer.Reachability
+[408 of 420] Building PureScript.Backend.Optimizer.Tracer.Printer
+[409 of 420] Building PureScript.CST.ModuleGraph
+[410 of 420] Building PureScript.CST.Parser
+[411 of 420] Building PureScript.CST.Range.TokenList
+[412 of 420] Building PureScript.CST.Range
+[413 of 420] Building Type.Row
+[414 of 420] Building PureScript.CST.Traversal
+[415 of 420] Building PureScript.CST
+[416 of 420] Building Record.Builder
+[417 of 420] Building Spago.Generated.BuildInfo
+[418 of 420] Building TestMangle
+[419 of 420] Building Type.Function
+[420 of 420] Building Type.Prelude
+
+  bin/gopurs.js  1.0mb ⚠️
+
+⚡ Done in 40ms
+Building...
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: ps-go-test
+
+Downloading dependencies...
+Building...
+[  1 of 271] Compiling Unsafe.Coerce
+[  2 of 271] Compiling Type.Proxy
+[  3 of 271] Compiling Type.Equality
+[  5 of 271] Compiling Spago.Generated.BuildInfo
+[  6 of 271] Compiling Record.Unsafe
+[  4 of 271] Compiling Partial
+[  7 of 271] Compiling Data.Int.Bits
+[  8 of 271] Compiling Data.Unit
+[  9 of 271] Compiling Data.Void
+[ 10 of 271] Compiling Data.String.Unsafe
+[ 11 of 271] Compiling Data.Traversable.Accum
+[ 12 of 271] Compiling Data.NaturalTransformation
+[ 13 of 271] Compiling Data.Boolean
+[ 14 of 271] Compiling Control.Semigroupoid
+[ 15 of 271] Compiling Partial.Unsafe
+[ 16 of 271] Compiling Data.Symbol
+[ 17 of 271] Compiling Data.Function.Uncurried
+[ 18 of 271] Compiling Control.Lazy
+[ 19 of 271] Compiling Safe.Coerce
+[ 20 of 271] Compiling Control.Category
+[ 21 of 271] Compiling Data.Exists
+[ 23 of 271] Compiling Data.HeytingAlgebra
+[ 22 of 271] Compiling Data.Semigroup
+[ 24 of 271] Compiling Data.Semiring
+[ 25 of 271] Compiling Data.Show
+[ 26 of 271] Compiling Data.Ring
+[ 28 of 271] Compiling Data.BooleanAlgebra
+[ 27 of 271] Compiling Data.Generic.Rep
+[ 29 of 271] Compiling Data.Eq
+[ 30 of 271] Compiling Data.CommutativeRing
+[ 31 of 271] Compiling Data.Ordering
+[ 32 of 271] Compiling Data.EuclideanRing
+[ 33 of 271] Compiling Data.Ord
+[ 34 of 271] Compiling Data.DivisionRing
+[ 35 of 271] Compiling Data.Field
+[ 36 of 271] Compiling Data.Bounded
+[ 37 of 271] Compiling Data.Function
+[ 39 of 271] Compiling Data.Reflectable
+[ 38 of 271] Compiling Data.Monoid
+[ 40 of 271] Compiling Data.Functor
+[ 41 of 271] Compiling Control.Extend
+[ 42 of 271] Compiling Data.Monoid.Generic
+[ 43 of 271] Compiling Control.Apply
+[ 45 of 271] Compiling Control.Alt
+[ 44 of 271] Compiling Data.Bounded.Generic
+[ 46 of 271] Compiling Control.Plus
+[ 47 of 271] Compiling Control.Comonad
+[ 48 of 271] Compiling Control.Applicative
+[ 49 of 271] Compiling Control.Alternative
+[ 50 of 271] Compiling Control.Bind
+[ 51 of 271] Compiling Control.Monad
+[ 53 of 271] Compiling Control.MonadPlus
+[ 52 of 271] Compiling Prelude
+[ 54 of 271] Compiling Data.Monoid.Multiplicative
+[ 55 of 271] Compiling Data.Ring.Generic
+[ 56 of 271] Compiling Data.Eq.Generic
+[ 57 of 271] Compiling Data.Traversable.Accum.Internal
+[ 58 of 271] Compiling Data.Semigroup.Generic
+[ 59 of 271] Compiling Effect
+[ 61 of 271] Compiling Data.Semigroup.First
+[ 60 of 271] Compiling Data.Monoid.Disj
+[ 62 of 271] Compiling Data.Monoid.Dual
+[ 63 of 271] Compiling Data.Semigroup.Last
+[ 64 of 271] Compiling Test.Tiny
+[ 66 of 271] Compiling Data.Monoid.Endo
+[ 65 of 271] Compiling Control.Monad.Reader.Class
+[ 67 of 271] Compiling Data.Ord.Generic
+[ 68 of 271] Compiling Data.Monoid.Conj
+[ 71 of 271] Compiling Data.Semiring.Generic
+[ 69 of 271] Compiling Data.HeytingAlgebra.Generic
+[ 70 of 271] Compiling Data.Show.Generic
+[ 72 of 271] Compiling Control.Monad.Trans.Class
+[ 73 of 271] Compiling Control.Monad.Gen.Class
+[ 74 of 271] Compiling Data.Monoid.Additive
+[ 75 of 271] Compiling Data.Number.Format
+[ 76 of 271] Compiling Control.Monad.Cont.Class
+[ 77 of 271] Compiling Effect.Unsafe
+[ 78 of 271] Compiling Effect.Console
+[ 79 of 271] Compiling Effect.Class
+[ 80 of 271] Compiling Test.Main
+[ 82 of 271] Compiling Effect.Uncurried
+[ 81 of 271] Compiling Effect.Ref
+[ 83 of 271] Compiling Effect.Class.Console
+[ 84 of 271] Compiling Data.Newtype
+[ 85 of 271] Compiling Data.Ord.Down
+[ 86 of 271] Compiling Data.Ord.Min
+[ 87 of 271] Compiling Data.Time.Duration
+[ 88 of 271] Compiling Data.Functor.App
+[ 89 of 271] Compiling Data.Ord.Max
+[ 90 of 271] Compiling Data.Monoid.Alternate
+[ 91 of 271] Compiling Data.String.Pattern
+[ 92 of 271] Compiling Data.Profunctor
+[ 93 of 271] Compiling Data.String.Common
+[ 94 of 271] Compiling Data.Profunctor.Closed
+[ 95 of 271] Compiling Data.Functor.Invariant
+[ 96 of 271] Compiling Data.Functor.Compose
+[ 97 of 271] Compiling Data.Tuple
+[ 98 of 271] Compiling Data.Const
+[ 99 of 271] Compiling Data.Identity
+[100 of 271] Compiling Data.Maybe
+[101 of 271] Compiling Data.Profunctor.Split
+[102 of 271] Compiling Data.Profunctor.Join
+[103 of 271] Compiling Data.Functor.Contravariant
+[104 of 271] Compiling Data.Predicate
+[105 of 271] Compiling Data.Op
+[106 of 271] Compiling Data.Comparison
+[107 of 271] Compiling Data.Maybe.Last
+[108 of 271] Compiling Data.Maybe.First
+[110 of 271] Compiling Data.Either
+[109 of 271] Compiling Data.String.CodeUnits
+[111 of 271] Compiling Data.Number
+[112 of 271] Compiling Data.Equivalence
+[113 of 271] Compiling Data.Number.Approximate
+[114 of 271] Compiling Data.Int
+[115 of 271] Compiling Data.Divide
+[117 of 271] Compiling Control.Monad.State.Class
+[118 of 271] Compiling Data.Profunctor.Strong
+[116 of 271] Compiling Data.Tuple.Nested
+[119 of 271] Compiling Data.Distributive
+[120 of 271] Compiling Data.Profunctor.Costrong
+[121 of 271] Compiling Control.Monad.Writer.Class
+[122 of 271] Compiling Data.Divisible
+[123 of 271] Compiling Data.Decide
+[124 of 271] Compiling Data.Bifunctor
+[125 of 271] Compiling Effect.Exception
+[127 of 271] Compiling Data.Profunctor.Cochoice
+[126 of 271] Compiling Data.Profunctor.Choice
+[128 of 271] Compiling Data.Either.Inject
+[129 of 271] Compiling Data.Either.Nested
+[131 of 271] Compiling Effect.Exception.Unsafe
+[130 of 271] Compiling Control.Monad.Error.Class
+[132 of 271] Compiling Data.Functor.Product
+[133 of 271] Compiling Control.Biapply
+[134 of 271] Compiling Control.Monad.Rec.Class
+[135 of 271] Compiling Data.Profunctor.Star
+[137 of 271] Compiling Data.Functor.Coproduct
+[136 of 271] Compiling Data.Functor.Costar
+[138 of 271] Compiling Data.Decidable
+[139 of 271] Compiling Control.Biapplicative
+[140 of 271] Compiling Data.Functor.Flip
+[141 of 271] Compiling Data.Functor.Joker
+[142 of 271] Compiling Data.Functor.Clown
+[143 of 271] Compiling Data.Bifunctor.Join
+[144 of 271] Compiling Data.Functor.Product2
+[145 of 271] Compiling Data.Functor.Product.Nested
+[146 of 271] Compiling Data.Functor.Coproduct.Nested
+[147 of 271] Compiling Data.Functor.Coproduct.Inject
+[148 of 271] Compiling Data.FunctorWithIndex
+[149 of 271] Compiling Data.Foldable
+[150 of 271] Compiling Control.Monad.ST.Internal
+[151 of 271] Compiling Control.Monad.ST
+[153 of 271] Compiling Control.Monad.ST.Ref
+[152 of 271] Compiling Control.Monad.ST.Uncurried
+[154 of 271] Compiling Control.Monad.ST.Global
+[155 of 271] Compiling Control.Monad.ST.Class
+[156 of 271] Compiling Control.Monad.RWS.Trans
+[157 of 271] Compiling Control.Monad.Maybe.Trans
+[158 of 271] Compiling Control.Monad.Reader.Trans
+[160 of 271] Compiling Control.Monad.Writer.Trans
+[159 of 271] Compiling Control.Monad.Cont.Trans
+[161 of 271] Compiling Control.Monad.State.Trans
+[162 of 271] Compiling Control.Monad.Except.Trans
+[163 of 271] Compiling Data.Array.ST
+[164 of 271] Compiling Control.Monad.Cont
+[165 of 271] Compiling Data.Array.ST.Iterator
+[166 of 271] Compiling Data.Array.ST.Partial
+[167 of 271] Compiling Control.Monad.Reader
+[168 of 271] Compiling Control.Monad.Except
+[169 of 271] Compiling Control.Parallel.Class
+[170 of 271] Compiling Control.Monad.Writer
+[171 of 271] Compiling Control.Monad.State
+[172 of 271] Compiling Control.Monad.RWS
+[173 of 271] Compiling Data.Semigroup.Foldable
+[174 of 271] Compiling Data.Traversable
+[176 of 271] Compiling Data.Bifoldable
+[175 of 271] Compiling Data.FoldableWithIndex
+[177 of 271] Compiling Data.Semigroup.Traversable
+[178 of 271] Compiling Data.Bitraversable
+[180 of 271] Compiling Control.Monad.Identity.Trans
+[179 of 271] Compiling Control.Parallel
+[181 of 271] Compiling Effect.Aff
+[182 of 271] Compiling Data.Unfoldable1
+[183 of 271] Compiling Data.TraversableWithIndex
+[184 of 271] Compiling Control.Comonad.Trans.Class
+[186 of 271] Compiling Control.Comonad.Traced.Trans
+[185 of 271] Compiling Control.Comonad.Store.Trans
+[187 of 271] Compiling Data.Unfoldable
+[188 of 271] Compiling Control.Monad.Gen
+[189 of 271] Compiling Data.Enum
+[190 of 271] Compiling Data.Time.Duration.Gen
+[191 of 271] Compiling Data.NonEmpty
+[192 of 271] Compiling Data.Lazy
+[193 of 271] Compiling Data.Array.NonEmpty.Internal
+[194 of 271] Compiling Control.Comonad.Env.Trans
+[195 of 271] Compiling Data.Array
+[196 of 271] Compiling Effect.Aff.Compat
+[197 of 271] Compiling Bench
+[198 of 271] Compiling Data.Enum.Generic
+[199 of 271] Compiling Data.Char
+[201 of 271] Compiling Data.Date.Component
+[200 of 271] Compiling Data.Time.Component
+[202 of 271] Compiling Test.RowToList
+[203 of 271] Compiling Test.LazyEvaluation
+[204 of 271] Compiling Test.Fib
+[205 of 271] Compiling Test.StateMonad
+[206 of 271] Compiling Test.Polymorphism
+[207 of 271] Compiling Test.AstTree
+[208 of 271] Compiling Test.TCO
+[209 of 271] Compiling Test.Records
+[210 of 271] Compiling Test.RBTree
+[211 of 271] Compiling Test.Church
+[212 of 271] Compiling Test.BenchCheck
+[213 of 271] Compiling Test.Ackermann
+[214 of 271] Compiling Test.ListOps
+[215 of 271] Compiling Control.Comonad.Store.Class
+[216 of 271] Compiling Test.Primes
+[217 of 271] Compiling Control.Monad.Gen.Common
+[218 of 271] Compiling Data.Enum.Gen
+[219 of 271] Compiling Data.Char.Gen
+[220 of 271] Compiling Data.List.Types
+[221 of 271] Compiling Control.Monad.List.Trans
+[222 of 271] Compiling Data.List.Lazy.Types
+[223 of 271] Compiling AppTest
+[224 of 271] Compiling Data.String.Gen
+[225 of 271] Compiling Data.Time
+[226 of 271] Compiling Data.Time.Component.Gen
+[227 of 271] Compiling Control.Comonad.Store
+[228 of 271] Compiling Control.Comonad.Env.Class
+[230 of 271] Compiling Data.Date.Component.Gen
+[229 of 271] Compiling Data.Date
+[231 of 271] Compiling Data.Time.Gen
+[232 of 271] Compiling Control.Comonad.Env
+[233 of 271] Compiling Control.Comonad.Traced.Class
+[234 of 271] Compiling Control.Comonad.Traced
+[235 of 271] Compiling Data.Date.Gen
+[236 of 271] Compiling Data.DateTime
+[238 of 271] Compiling Data.Array.Partial
+[240 of 271] Compiling Test.ArrayOps
+[239 of 271] Compiling Data.String.CodePoints
+[237 of 271] Compiling Data.Array.NonEmpty
+[241 of 271] Compiling App
+[242 of 271] Compiling Data.DateTime.Gen
+[243 of 271] Compiling Data.List.Internal
+[244 of 271] Compiling Data.DateTime.Instant
+[245 of 271] Compiling Main
+[246 of 271] Compiling Effect.Aff.Class
+[247 of 271] Compiling Effect.Now
+[248 of 271] Compiling Data.List.Lazy
+[249 of 271] Compiling Data.List
+[250 of 271] Compiling Data.String
+[251 of 271] Compiling Data.String.Regex.Flags
+[253 of 271] Compiling Data.String.CaseInsensitive
+[252 of 271] Compiling Data.String.NonEmpty.Internal
+[254 of 271] Compiling Data.String.Regex
+[256 of 271] Compiling Data.String.NonEmpty.CodePoints
+[255 of 271] Compiling Data.String.NonEmpty.CodeUnits
+[257 of 271] Compiling Data.String.Regex.Unsafe
+[258 of 271] Compiling Data.String.NonEmpty
+[259 of 271] Compiling Data.String.NonEmpty.CaseInsensitive
+[260 of 271] Compiling Data.List.Partial
+[262 of 271] Compiling Data.List.NonEmpty
+[261 of 271] Compiling Data.Map.Internal
+[263 of 271] Compiling Data.List.ZipList
+[264 of 271] Compiling Data.List.Lazy.NonEmpty
+[265 of 271] Compiling Data.Set
+[267 of 271] Compiling Data.Map
+[266 of 271] Compiling Data.Set.NonEmpty
+[268 of 271] Compiling Data.Map.Gen
+[269 of 271] Compiling Data.Interval.Duration
+[270 of 271] Compiling Data.Interval
+[271 of 271] Compiling Data.Interval.Duration.Iso
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Compiling with backend "../gopurs/gopurs/bin/gopurs"
+file:///Users/0x1/Documents/htdocs/gopurs/gopurs/bin/gopurs.js:2647
+                  throw util2.fromLeft(step);
+                  ^
+
+RangeError: Maximum call stack size exceeded
+    at file:///Users/0x1/Documents/htdocs/gopurs/gopurs/bin/gopurs.js:23909:16
+    at file:///Users/0x1/Documents/htdocs/gopurs/gopurs/bin/gopurs.js:24480:91
+    at file:///Users/0x1/Documents/htdocs/gopurs/gopurs/bin/gopurs.js:24130:46
+    at file:///Users/0x1/Documents/htdocs/gopurs/gopurs/bin/gopurs.js:24480:91
+    at file:///Users/0x1/Documents/htdocs/gopurs/gopurs/bin/gopurs.js:23958:41
+    at file:///Users/0x1/Documents/htdocs/gopurs/gopurs/bin/gopurs.js:24480:91
+    at file:///Users/0x1/Documents/htdocs/gopurs/gopurs/bin/gopurs.js:24130:46
+    at file:///Users/0x1/Documents/htdocs/gopurs/gopurs/bin/gopurs.js:24480:91
+    at file:///Users/0x1/Documents/htdocs/gopurs/gopurs/bin/gopurs.js:23958:41
+    at file:///Users/0x1/Documents/htdocs/gopurs/gopurs/bin/gopurs.js:24480:91
+
+Node.js v24.8.0
+
+✘ Failed to build with backend ../gopurs/gopurs/bin/gopurs
+

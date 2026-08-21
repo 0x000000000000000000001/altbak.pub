@@ -104,8 +104,8 @@ var once_Test_Church_c100 sync.Once
 
 func Get_Test_Church_c100() gopurs_runtime.Value {
 	once_Test_Church_c100.Do(func() {
-		cache_Test_Church_c100 = gopurs_runtime.Func(func(n_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-			return Call_Test_Church_c100(n_0_box.IntVal)
+		cache_Test_Church_c100 = gopurs_runtime.Func3(func(n_0_box gopurs_runtime.Value, f_3_box gopurs_runtime.Value, x_4_box gopurs_runtime.Value) gopurs_runtime.Value {
+			return gopurs_runtime.Int(Call_Test_Church_c100(n_0_box.IntVal, f_3_box, x_4_box.IntVal))
 		})
 	})
 	return cache_Test_Church_c100
@@ -116,8 +116,8 @@ var once_Test_Church_c10k sync.Once
 
 func Get_Test_Church_c10k() gopurs_runtime.Value {
 	once_Test_Church_c10k.Do(func() {
-		cache_Test_Church_c10k = gopurs_runtime.Func(func(n_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-			return Call_Test_Church_c10k(n_0_box.IntVal)
+		cache_Test_Church_c10k = gopurs_runtime.Func3(func(n_0_box gopurs_runtime.Value, f_3_box gopurs_runtime.Value, x_4_box gopurs_runtime.Value) gopurs_runtime.Value {
+			return gopurs_runtime.Int(Call_Test_Church_c10k(n_0_box.IntVal, f_3_box, x_4_box.IntVal))
 		})
 	})
 	return cache_Test_Church_c10k
@@ -128,8 +128,8 @@ var once_Test_Church_c100k sync.Once
 
 func Get_Test_Church_c100k() gopurs_runtime.Value {
 	once_Test_Church_c100k.Do(func() {
-		cache_Test_Church_c100k = gopurs_runtime.Func(func(n_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-			return Call_Test_Church_c100k(n_0_box.IntVal)
+		cache_Test_Church_c100k = gopurs_runtime.Func3(func(n_0_box gopurs_runtime.Value, f_3_box gopurs_runtime.Value, x_4_box gopurs_runtime.Value) gopurs_runtime.Value {
+			return gopurs_runtime.Int(Call_Test_Church_c100k(n_0_box.IntVal, f_3_box, x_4_box.IntVal))
 		})
 	})
 	return cache_Test_Church_c100k
@@ -152,18 +152,15 @@ var once_Test_Church_act sync.Once
 
 func Get_Test_Church_act() gopurs_runtime.Value {
 	once_Test_Church_act.Do(func() {
-		cache_Test_Church_act = func() gopurs_runtime.Value {
-			// TAST (Let): __local_var_0_0 -> gopurs_runtime.Value
+		cache_Test_Church_act = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 			__local_var_0_0 := gopurs_runtime.Apply(Get_Bench_opaque(), gopurs_runtime.Int(10))
 			_ = __local_var_0_0
-			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-				dummy_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
-				_ = dummy_1_1
-				return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(gopurs_runtime.Apply2(Call_Test_Church_c100k(dummy_1_1.IntVal), gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
-					return gopurs_runtime.Int((x_2.IntVal) + (1))
-				}), gopurs_runtime.Int(0)).IntVal)).StrVal())), gopurs_runtime.Value{})
-			})
-		}()
+			dummy_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
+			_ = dummy_1_1
+			return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(gopurs_runtime.Int(Call_Test_Church_c100k(dummy_1_1.IntVal, gopurs_runtime.Func(func(x_2 gopurs_runtime.Value) gopurs_runtime.Value {
+				return gopurs_runtime.Int((x_2.IntVal) + (1))
+			}), 0)).IntVal)).StrVal())), gopurs_runtime.Value{})
+		})
 	})
 	return cache_Test_Church_act
 }
@@ -266,7 +263,6 @@ fromInt:
 			}
 		}
 		{
-			// TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
 			__local_var_1_0 := Call_Test_Church_fromInt((v_0) - (1))
 			_ = __local_var_1_0
 			__t1 = gopurs_runtime.Func(func(f_2 gopurs_runtime.Value) gopurs_runtime.Value {
@@ -286,52 +282,46 @@ func Call_Test_Church_c10(n_0_loop int64) gopurs_runtime.Value {
 	return Call_Test_Church_fromInt(n_0)
 }
 
-func Call_Test_Church_c100(n_0_loop int64) gopurs_runtime.Value {
+func Call_Test_Church_c100(n_0_loop int64, f_3_loop gopurs_runtime.Value, x_4_loop int64) int64 {
 	var n_0 int64 = n_0_loop
 	_ = n_0
-	// TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
+	var f_3 gopurs_runtime.Value = f_3_loop
+	_ = f_3
+	var x_4 int64 = x_4_loop
+	_ = x_4
 	__local_var_1_0 := Call_Test_Church_fromInt(n_0)
 	_ = __local_var_1_0
-	// TAST (Let): __local_var_2_1 -> gopurs_runtime.Value
 	__local_var_2_1 := Call_Test_Church_fromInt(n_0)
 	_ = __local_var_2_1
-	return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Apply2(__local_var_1_0, gopurs_runtime.Apply(__local_var_2_1, f_3), x_4)
-		})
-	})
+	return gopurs_runtime.Apply2(__local_var_1_0, gopurs_runtime.Apply(__local_var_2_1, f_3), gopurs_runtime.Int(x_4)).IntVal
 }
 
-func Call_Test_Church_c10k(n_0_loop int64) gopurs_runtime.Value {
+func Call_Test_Church_c10k(n_0_loop int64, f_3_loop gopurs_runtime.Value, x_4_loop int64) int64 {
 	var n_0 int64 = n_0_loop
 	_ = n_0
-	// TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
-	__local_var_1_0 := Call_Test_Church_c100(n_0)
+	var f_3 gopurs_runtime.Value = f_3_loop
+	_ = f_3
+	var x_4 int64 = x_4_loop
+	_ = x_4
+	__local_var_1_0 := gopurs_runtime.Apply(Get_Test_Church_c100(), gopurs_runtime.Int(n_0))
 	_ = __local_var_1_0
-	// TAST (Let): __local_var_2_1 -> gopurs_runtime.Value
-	__local_var_2_1 := Call_Test_Church_c100(n_0)
+	__local_var_2_1 := gopurs_runtime.Apply(Get_Test_Church_c100(), gopurs_runtime.Int(n_0))
 	_ = __local_var_2_1
-	return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Apply2(__local_var_1_0, gopurs_runtime.Apply(__local_var_2_1, f_3), x_4)
-		})
-	})
+	return gopurs_runtime.Apply2(__local_var_1_0, gopurs_runtime.Apply(__local_var_2_1, f_3), gopurs_runtime.Int(x_4)).IntVal
 }
 
-func Call_Test_Church_c100k(n_0_loop int64) gopurs_runtime.Value {
+func Call_Test_Church_c100k(n_0_loop int64, f_3_loop gopurs_runtime.Value, x_4_loop int64) int64 {
 	var n_0 int64 = n_0_loop
 	_ = n_0
-	// TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
-	__local_var_1_0 := Call_Test_Church_c10k(n_0)
+	var f_3 gopurs_runtime.Value = f_3_loop
+	_ = f_3
+	var x_4 int64 = x_4_loop
+	_ = x_4
+	__local_var_1_0 := gopurs_runtime.Apply(Get_Test_Church_c10k(), gopurs_runtime.Int(n_0))
 	_ = __local_var_1_0
-	// TAST (Let): __local_var_2_1 -> gopurs_runtime.Value
 	__local_var_2_1 := Call_Test_Church_fromInt(n_0)
 	_ = __local_var_2_1
-	return gopurs_runtime.Func(func(f_3 gopurs_runtime.Value) gopurs_runtime.Value {
-		return gopurs_runtime.Func(func(x_4 gopurs_runtime.Value) gopurs_runtime.Value {
-			return gopurs_runtime.Apply2(__local_var_1_0, gopurs_runtime.Apply(__local_var_2_1, f_3), x_4)
-		})
-	})
+	return gopurs_runtime.Apply2(__local_var_1_0, gopurs_runtime.Apply(__local_var_2_1, f_3), gopurs_runtime.Int(x_4)).IntVal
 }
 
 func Call_Test_Church_addC(m_0_loop gopurs_runtime.Value, n_1_loop gopurs_runtime.Value, f_2_loop gopurs_runtime.Value, x_3_loop gopurs_runtime.Value) gopurs_runtime.Value {

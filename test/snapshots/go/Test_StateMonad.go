@@ -140,16 +140,13 @@ var once_Test_StateMonad_act sync.Once
 
 func Get_Test_StateMonad_act() gopurs_runtime.Value {
 	once_Test_StateMonad_act.Do(func() {
-		cache_Test_StateMonad_act = func() gopurs_runtime.Value {
-			// TAST (Let): __local_var_0_0 -> gopurs_runtime.Value
+		cache_Test_StateMonad_act = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
 			__local_var_0_0 := gopurs_runtime.Apply(Get_Bench_opaque(), gopurs_runtime.Int(20))
 			_ = __local_var_0_0
-			return gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-				dummy_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
-				_ = dummy_1_1
-				return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(Call_Test_StateMonad_runManyTimes(dummy_1_1.IntVal, 0))).StrVal())), gopurs_runtime.Value{})
-			})
-		}()
+			dummy_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
+			_ = dummy_1_1
+			return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(Call_Test_StateMonad_runManyTimes(dummy_1_1.IntVal, 0))).StrVal())), gopurs_runtime.Value{})
+		})
 	})
 	return cache_Test_StateMonad_act
 }
@@ -275,7 +272,6 @@ func Call_Test_StateMonad_bindState(v_0_loop gopurs_runtime.Value, g_1_loop gopu
 	_ = g_1
 	var s_2 gopurs_runtime.Value = s_2_loop
 	_ = s_2
-	// TAST (Let): r1_3_0 -> gopurs_runtime.Value
 	r1_3_0 := gopurs_runtime.Apply(v_0, s_2)
 	_ = r1_3_0
 	return gopurs_runtime.Apply2(g_1, gopurs_runtime.RecordGet(r1_3_0, "val"), gopurs_runtime.RecordGet(r1_3_0, "state"))
@@ -309,7 +305,6 @@ chainModifications:
 			}
 		}
 		{
-			// TAST (Let): __local_var_1_0 -> gopurs_runtime.Value
 			__local_var_1_0 := gopurs_runtime.Apply(Get_Test_StateMonad_modify(), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
 				return gopurs_runtime.Int((x_1.IntVal) + (1))
 			}))
@@ -360,7 +355,6 @@ func Call_Test_StateMonad_bindState__3267751411(v_0_loop gopurs_runtime.Value, g
 	_ = g_1
 	var s_2 gopurs_runtime.Value = s_2_loop
 	_ = s_2
-	// TAST (Let): r1_3_0 -> gopurs_runtime.Value
 	r1_3_0 := gopurs_runtime.Apply(v_0, s_2)
 	_ = r1_3_0
 	return gopurs_runtime.Apply2(g_1, gopurs_runtime.RecordGet(r1_3_0, "val"), gopurs_runtime.RecordGet(r1_3_0, "state"))

@@ -1,0 +1,219 @@
+Building...
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: ps-go-test
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Compiling with backend "../gopurs/gopurs/bin/gopurs"
+
+✓ Backend build succeeded.
+
+=== Go ===
+--------------------------------------------------
+
+(Test)
+
+AST Evaluation:
+
+(Output)
+
+7
+
+(Execution time)
+
+5.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Fibonacci:
+
+(Output)
+
+55
+
+(Execution time)
+
+2.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+List Processing (900 elements):
+
+(Output)
+
+202950
+
+(Execution time)
+
+52.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Tail Call Optimization (100k calls):
+
+(Output)
+
+100000
+
+(Execution time)
+
+822.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Deep Record Updates (10k iterations):
+
+(Output)
+
+20000
+
+(Execution time)
+
+1035.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Ackermann (3, 4):
+
+(Output)
+
+125
+
+(Execution time)
+
+30.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Church Numerals (100k Closure Applications):
+
+(Output)
+
+100000
+
+(Execution time)
+
+2618.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Prime Sieve (sum primes up to 500):
+
+(Output)
+
+21536
+
+(Execution time)
+
+213.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Red-Black Tree (100k Worst-Case Insertions):
+
+(Output)
+
+22
+
+(Execution time)
+
+38589.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Polymorphism (10M Type Class Dict Lookups):
+
+(Output)
+
+10000000
+
+(Execution time)
+
+172532.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+State Monad (1.2k Binds, 60 Stack Depth):
+
+(Output)
+
+1200
+
+(Execution time)
+
+93.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Lazy Evaluation (1M Thunks Forced, 1k Depth):
+
+(Output)
+
+1000000
+
+(Execution time)
+
+23490.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Array Processing (900 elements):
+
+(Output)
+
+202950
+
+(Execution time)
+
+44.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+RowToList (Keys Count):
+
+(Output)
+
+5
+
+(Execution time)
+
+2.00 μs
+
+
+==================================================
+
+Total exec time: 239.53 ms
+
