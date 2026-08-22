@@ -30,23 +30,23 @@ Command: `./bin/run` (Runs on all 7 backends). New tests will gradually be added
 =============================================================================================================================================================
 CORE BENCHMARK RESULTS (Fibonacci, AST, tail calls, Church, primes, etc.)                                                                      
 =============================================================================================================================================================
-Benchmark               | JS            | Arista ES      | Go (mature WIP)
------------------------ | ------------- | -------------- | ---------------
-AST Evaluation          | ~ 93 μs       | ~ 74 μs        | ~ 10 μs        
-Fibonacci               | ~ 43 μs       | ~ 46 μs        | ~ 2 μs         
-List Processing         | ~ 386 μs      | ~ 368 μs       | ~ 133 μs       
-Tail Call Optimization  | ~ 1597 μs     | ~ 1550 μs      | ~ 897 μs       
-Deep Record Updates     | ~ 433 μs      | ~ 562 μs       | ~ 1034 μs      
-Ackermann               | ~ 211 μs      | ~ 210 μs       | ~ 58 μs        
-Church Numerals         | ~ 1662 μs     | ~ 1570 μs      | ~ 947 μs       
-Prime Sieve             | ~ 725 μs      | ~ 689 μs       | ~ 225 μs       
-Red-Black Tree          | ~ 94574 μs    | ~ 53648 μs     | ~ 37305 μs     
-Polymorphism            | ~ 9029 μs     | ~ 8111 μs      | ~ 2326 μs      
-State Monad             | ~ 425 μs      | ~ 170 μs       | ~ 181 μs       
-Lazy Evaluation         | ~ 16372 μs    | ~ 13986 μs     | ~ 21525 μs     
-Array Processing        | ~ 218 μs      | ~ 222 μs       | ~ 38 μs        
------------------------ | ------------- | -------------- | ---------------
-Total Execution Time    | ~ 125.77 ms   | ~ 81.21 ms     | ~ 64.68 ms     
+Benchmark               | JS            | Arista ES      | Go (mature WIP) | Native Go FFI
+----------------------- | ------------- | -------------- | --------------- | ------
+AST Evaluation          | ~ 93 μs       | ~ 74 μs        | ~ 10 μs         | ~ 1 μs
+Fibonacci               | ~ 43 μs       | ~ 46 μs        | ~ 2 μs          | -
+List Processing         | ~ 386 μs      | ~ 368 μs       | ~ 133 μs        | -
+Tail Call Optimization  | ~ 1597 μs     | ~ 1550 μs      | ~ 897 μs        | -
+Deep Record Updates     | ~ 433 μs      | ~ 562 μs       | ~ 1034 μs       | -
+Ackermann               | ~ 211 μs      | ~ 210 μs       | ~ 58 μs         | -
+Church Numerals         | ~ 1662 μs     | ~ 1570 μs      | ~ 947 μs        | -
+Prime Sieve             | ~ 725 μs      | ~ 689 μs       | ~ 225 μs        | -
+Red-Black Tree          | ~ 94574 μs    | ~ 53648 μs     | ~ 37305 μs      | ~ 28129 μs
+Polymorphism            | ~ 9029 μs     | ~ 8111 μs      | ~ 2326 μs       | -
+State Monad             | ~ 425 μs      | ~ 170 μs       | ~ 181 μs        | -
+Lazy Evaluation         | ~ 16372 μs    | ~ 13986 μs     | ~ 21525 μs      | -
+Array Processing        | ~ 218 μs      | ~ 222 μs       | ~ 38 μs         | -
+----------------------- | ------------- | -------------- | --------------- | ------
+Total Execution Time    | ~ 125.77 ms   | ~ 81.21 ms     | ~ 64.68 ms      | -
 
 Benchmark               | Scheme        | Erlang        | PHP (normal WIP) | Rust (young WIP)
 ----------------------- | ------------- | ------------- | ---------------- | ----------------
