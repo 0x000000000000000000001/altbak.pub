@@ -13,6 +13,10 @@ do
     CLEAN=1
     shift
     ;;
+    --ffi)
+    MODE="ffi"
+    shift
+    ;;
     --test)
     MODE="test"
     TEST_NAME="$2"
@@ -57,6 +61,8 @@ elif [ "$MODE" == "x" ]; then
   cp -r srx/Test/* src/Test/
   cp srx/AppX.purs src/
   trap "rm -rf src/Test/STArray.purs src/Test/AffOperations.purs src/Test/StringOps.purs src/Test/FileOps src/Test/Parallelism.purs src/AppX.purs" EXIT
+elif [ "$MODE" == "ffi" ]; then
+  ENTRY_POINT="AppFFI"
 fi
 
 echo 'Building...'

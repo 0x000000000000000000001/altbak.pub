@@ -31,48 +31,120 @@ Command: `./bin/run` (Runs on all 7 backends). New tests will gradually be added
 =============================================================================================================================================================
 CORE STRESSTEST BENCHMARK RESULTS (Fibonacci, AST, tail calls, Church, primes, etc.)                                                                      
 =============================================================================================================================================================
-Benchmark               | JS            | Arista ES      | Go (mature WIP) | Native Go FFI
------------------------ | ------------- | -------------- | --------------- | ------
-AST Evaluation          | ~ 93 μs       | ~ 74 μs        | ~ 10 μs         | ~ 6 μs
-Fibonacci               | ~ 43 μs       | ~ 46 μs        | ~ 2 μs          | ~ 2 μs
-List Processing         | ~ 386 μs      | ~ 368 μs       | ~ 133 μs        | ~ 2 μs
-Tail Call Optimization  | ~ 1597 μs     | ~ 1550 μs      | ~ 897 μs        | ~ 39 μs
-Deep Record Updates     | ~ 433 μs      | ~ 562 μs       | ~ 1034 μs       | ~ 5 μs
-Ackermann               | ~ 211 μs      | ~ 210 μs       | ~ 58 μs         | ~ 67 μs
-Church Numerals         | ~ 1662 μs     | ~ 1570 μs      | ~ 947 μs        | ~ 79 μs
-Prime Sieve             | ~ 725 μs      | ~ 689 μs       | ~ 225 μs        | ~ 5 μs
-Red-Black Tree          | ~ 94574 μs    | ~ 53648 μs     | ~ 37305 μs      | ~ 27079 μs
-Polymorphism            | ~ 9029 μs     | ~ 8111 μs      | ~ 2326 μs       | ~ 4541 μs
-State Monad             | ~ 425 μs      | ~ 170 μs       | ~ 181 μs        | ~ 1 μs
-Lazy Evaluation         | ~ 16372 μs    | ~ 13986 μs     | ~ 21525 μs      | ~ 273 μs
-Array Processing        | ~ 218 μs      | ~ 222 μs       | ~ 38 μs         | ~ 2 μs
------------------------ | ------------- | -------------- | --------------- | ------
-Total Execution Time    | ~ 125.77 ms   | ~ 81.21 ms     | ~ 64.68 ms      | ~ 32.10 ms
+Benchmark               | Compiled JS   | Compiled Arista JS | Native JS FFI
+----------------------- | ------------- | ------------------ | -------------
+AST Evaluation          | ~ 93 μs       | ~ 74 μs            | ~ 119 μs
+Fibonacci               | ~ 43 μs       | ~ 46 μs            | ~ 68 μs
+List Processing         | ~ 386 μs      | ~ 368 μs           | ~ 54 μs
+Tail Call Optimization  | ~ 1597 μs     | ~ 1550 μs          | ~ 635 μs
+Deep Record Updates     | ~ 433 μs      | ~ 562 μs           | ~ 606 μs
+Ackermann               | ~ 211 μs      | ~ 210 μs           | ~ 152 μs
+Church Numerals         | ~ 1662 μs     | ~ 1570 μs          | ~ 544 μs
+Prime Sieve             | ~ 725 μs      | ~ 689 μs           | ~ 188 μs
+Red-Black Tree          | ~ 94574 μs    | ~ 53648 μs         | ~ 33658 μs
+Polymorphism            | ~ 9029 μs     | ~ 8111 μs          | ~ 4246 μs
+State Monad             | ~ 425 μs      | ~ 170 μs           | ~ 36 μs
+Lazy Evaluation         | ~ 16372 μs    | ~ 13986 μs         | ~ 357 μs
+Array Processing        | ~ 218 μs      | ~ 222 μs           | ~ 33 μs
+----------------------- | ------------- | ------------------ | -------------
+Total Execution Time    | ~ 125.77 ms   | ~ 81.21 ms         | ~ 40.72 ms
 
-Benchmark               | Scheme        | Erlang        | PHP (normal WIP) | Rust (young WIP)
------------------------ | ------------- | ------------- | ---------------- | ----------------
-AST Evaluation          | ~ 9 μs        | ~ 692 μs      | ~ 18 μs          | ~ 19 μs         
-Fibonacci               | ~ 2 μs        | ~ 49 μs       | ~ 354 μs         | ~ 2 μs          
-List Processing         | ~ 10 μs       | ~ 1212 μs     | ~ 2189 μs        | ~ 82 μs         
-Tail Call Optimization  | ~ 326 μs      | ~ 1478 μs     | ~ 23244 μs       | ~ 108 μs        
-Deep Record Updates     | ~ 260 μs      | ~ 778 μs      | ~ 4943 μs        | ~ 14458 μs      
-Ackermann               | ~ 28 μs       | ~ 57 μs       | ~ 418 μs         | ~ 21 μs         
-Church Numerals         | ~ 369 μs      | ~ 617 μs      | ~ 17684 μs       | ~ 27983 μs      
-Prime Sieve             | ~ 76 μs       | ~ 232 μs      | ~ 7576 μs        | ~ 615 μs        
-Red-Black Tree          | ~ 25020 μs    | ~ 17904 μs    | ~ 300566 μs      | ~ 60880 μs      
-Polymorphism            | ~ 17884 μs    | ~ 92155 μs    | ~ 10591 μs       | ~ 38958 μs      
-State Monad             | ~ 5 μs        | ~ 108 μs      | ~ 539 μs         | ~ 905 μs        
-Lazy Evaluation         | ~ 2868 μs     | ~ 10325 μs    | ~ 95661 μs       | ~ 340275 μs     
-Array Processing        | ~ 13 μs       | ~ 5430 μs     | ~ 1375 μs        | ~ 46 μs         
------------------------ | ------------- | ------------- | ---------------- | ----------------
-Total Execution Time    | ~ 46.87 ms    | ~ 131.04 ms   | ~ 465.16 ms      | ~ 484.36 ms     
+Benchmark               | Compiled Go (mature WIP) | Native Go FFI
+----------------------- | ------------------------ | -------------
+AST Evaluation          | ~ 10 μs                  | ~ 6 μs
+Fibonacci               | ~ 2 μs                   | ~ 2 μs
+List Processing         | ~ 133 μs                 | ~ 2 μs
+Tail Call Optimization  | ~ 897 μs                 | ~ 39 μs
+Deep Record Updates     | ~ 1034 μs                | ~ 5 μs
+Ackermann               | ~ 58 μs                  | ~ 67 μs
+Church Numerals         | ~ 947 μs                 | ~ 79 μs
+Prime Sieve             | ~ 225 μs                 | ~ 5 μs
+Red-Black Tree          | ~ 37305 μs               | ~ 27079 μs
+Polymorphism            | ~ 2326 μs                | ~ 4541 μs
+State Monad             | ~ 181 μs                 | ~ 1 μs
+Lazy Evaluation         | ~ 21525 μs               | ~ 273 μs
+Array Processing        | ~ 38 μs                  | ~ 2 μs
+----------------------- | ------------------------ | -------------
+Total Execution Time    | ~ 64.68 ms               | ~ 32.10 ms
+
+Benchmark               | Compiled Scheme | Native Scheme FFI
+----------------------- | ----------------| -----------------
+AST Evaluation          | ~ 9 μs          | 
+Fibonacci               | ~ 2 μs          | 
+List Processing         | ~ 10 μs         | 
+Tail Call Optimization  | ~ 326 μs        | 
+Deep Record Updates     | ~ 260 μs        | 
+Ackermann               | ~ 28 μs         | 
+Church Numerals         | ~ 369 μs        | 
+Prime Sieve             | ~ 76 μs         | 
+Red-Black Tree          | ~ 25020 μs      | 
+Polymorphism            | ~ 17884 μs      | 
+State Monad             | ~ 5 μs          | 
+Lazy Evaluation         | ~ 2868 μs       | 
+Array Processing        | ~ 13 μs         | 
+----------------------- | ----------------| -----------------
+Total Execution Time    | ~ 46.87 ms      | 
+
+Benchmark               | Compiled Erlang | Native Erlang FFI
+----------------------- | ----------------| -----------------
+AST Evaluation          | ~ 692 μs        | 
+Fibonacci               | ~ 49 μs         | 
+List Processing         | ~ 1212 μs       | 
+Tail Call Optimization  | ~ 1478 μs       | 
+Deep Record Updates     | ~ 778 μs        | 
+Ackermann               | ~ 57 μs         | 
+Church Numerals         | ~ 617 μs        | 
+Prime Sieve             | ~ 232 μs        | 
+Red-Black Tree          | ~ 17904 μs      | 
+Polymorphism            | ~ 92155 μs      | 
+State Monad             | ~ 108 μs        | 
+Lazy Evaluation         | ~ 10325 μs      | 
+Array Processing        | ~ 5430 μs       | 
+----------------------- | ----------------| -----------------
+Total Execution Time    | ~ 131.04 ms     | 
+
+Benchmark               | Compiled PHP (normal WIP) | Native PHP FFI
+----------------------- | ------------------------ | --------------
+AST Evaluation          | ~ 18 μs                  | 
+Fibonacci               | ~ 354 μs                 | 
+List Processing         | ~ 2189 μs                | 
+Tail Call Optimization  | ~ 23244 μs               | 
+Deep Record Updates     | ~ 4943 μs                | 
+Ackermann               | ~ 418 μs                 | 
+Church Numerals         | ~ 17684 μs               | 
+Prime Sieve             | ~ 7576 μs                | 
+Red-Black Tree          | ~ 300566 μs              | 
+Polymorphism            | ~ 10591 μs               | 
+State Monad             | ~ 539 μs                 | 
+Lazy Evaluation         | ~ 95661 μs               | 
+Array Processing        | ~ 1375 μs                | 
+----------------------- | ------------------------ | --------------
+Total Execution Time    | ~ 465.16 ms              | 
+
+Benchmark               | Compiled Rust (young WIP)| Native Rust FFI
+----------------------- | ------------------------ | ---------------
+AST Evaluation          | ~ 19 μs                  | 
+Fibonacci               | ~ 2 μs                   | 
+List Processing         | ~ 82 μs                  | 
+Tail Call Optimization  | ~ 108 μs                 | 
+Deep Record Updates     | ~ 14458 μs               | 
+Ackermann               | ~ 21 μs                  | 
+Church Numerals         | ~ 27983 μs               | 
+Prime Sieve             | ~ 615 μs                 | 
+Red-Black Tree          | ~ 60880 μs               | 
+Polymorphism            | ~ 38958 μs               | 
+State Monad             | ~ 905 μs                 | 
+Lazy Evaluation         | ~ 340275 μs              | 
+Array Processing        | ~ 46 μs                  | 
+----------------------- | ------------------------ | ---------------
+Total Execution Time    | ~ 484.36 ms              | 
 ```
 
 > [!IMPORTANT]
 > **The 99/1 philosophy and the FFI approach**
 > Using Go as an example: the *Native Go FFI* column demonstrates that the code generated by the compiler remains within a highly competitive order of magnitude, especially given the high-level expressiveness of PureScript (i.e., how much low-level machinery we can safely ignore). Since these tests are deliberately naive and designed to stress the runtime, they represent absolute worst-case scenarios for the compiler. The vast majority of real-world code will perform significantly better, yielding a far more favorable ratio between compiled and native execution times.
 >
-> In practice, **99% of your codebase will be nearly as fast as native code**, allowing you to focus entirely on domain concepts rather than hardware details. For the remaining 1% (critical algorithmic *hot paths*), you have three options: accept a minimal Nx slowdown that the compiler actively works to mitigate (n.b. N ~ 2 or 3), use safe mutability abstractions like the `ST` monad (which compile down to highly efficient imperative loops), or seamlessly drop down into FFI to write native code as close to the metal as needed. This philosophy applies universally to all backend languages benchmarked here: imperative code is kept to a strict, perfectly isolated minimum.
+> In practice, **99% of your codebase will be nearly as fast as native code**, allowing you to focus entirely on domain concepts rather than hardware details. For the remaining 1% (critical algorithmic *hot paths*), you have three options: accept a minimal Nx slowdown that the compiler actively works to mitigate (n.b. N ~ 2 or 3), use safe mutability abstractions like the `ST` monad (which compile down to highly efficient imperative loops), or seamlessly drop down into FFI to write native code as close to the metal as needed. This philosophy applies universally to all backend languages benchmarked here: imperative code is kept to a strict, perfectly isolated minimum. At this stage, optimization gains are often on the scale of mere microseconds; while further improvement is always possible, chasing these micro-optimizations is no longer a priority.
 
 > [!NOTE]
 > **Single-threaded benchmark**
