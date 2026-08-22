@@ -25,10 +25,6 @@ To ensure fair and executable comparisons across all backends, the test suite is
 
 ### Core stresstest benchmark results (pure computational)
 
-> [!WARNING]
-> **Deliberately unoptimized algorithms**
-> These tests are written in a deliberately naive and unoptimized functional style (e.g., heavily reliant on recursion, persistent structures, and deep closures) rather than idiomatic patterns. The goal is to act as a **stresstest** to evaluate how well each backend compiler optimizes and mitigates the massive overhead of pure functional programming paradigms.
-
 Command: `./bin/run` (Runs on all 7 backends). New tests will gradually be added.
 
 ```text
