@@ -50,21 +50,21 @@ Total Execution Time    | ~ 125.77 ms   | ~ 81.21 ms     | ~ 64.68 ms
 
 Benchmark               | Scheme        | Erlang        | PHP (normal WIP) | Rust (young WIP)
 ----------------------- | ------------- | ------------- | ---------------- | ----------------
-AST Evaluation          | ~ 9 μs        | ~ 692 μs      | ~ 18 μs          | ~ 72 μs         
+AST Evaluation          | ~ 9 μs        | ~ 692 μs      | ~ 18 μs          | ~ 19 μs         
 Fibonacci               | ~ 2 μs        | ~ 49 μs       | ~ 354 μs         | ~ 2 μs          
-List Processing         | ~ 10 μs       | ~ 1212 μs     | ~ 2189 μs        | ~ 1263 μs       
-Tail Call Optimization  | ~ 326 μs      | ~ 1478 μs     | ~ 23244 μs       | ~ 110 μs        
-Deep Record Updates     | ~ 260 μs      | ~ 778 μs      | ~ 4943 μs        | ~ 14232 μs      
-Ackermann               | ~ 28 μs       | ~ 57 μs       | ~ 418 μs         | ~ 23 μs         
-Church Numerals         | ~ 369 μs      | ~ 617 μs      | ~ 17684 μs       | ~ 27754 μs      
-Prime Sieve             | ~ 76 μs       | ~ 232 μs      | ~ 7576 μs        | ~ 8230 μs       
-Red-Black Tree          | ~ 25020 μs    | ~ 17904 μs    | ~ 300566 μs      | ~ 1980310 μs    
-Polymorphism            | ~ 17884 μs    | ~ 92155 μs    | ~ 10591 μs       | ~ 39572 μs      
-State Monad             | ~ 5 μs        | ~ 108 μs      | ~ 539 μs         | ~ 1240 μs       
-Lazy Evaluation         | ~ 2868 μs     | ~ 10325 μs    | ~ 95661 μs       | ~ 319164 μs     
-Array Processing        | ~ 13 μs       | ~ 5430 μs     | ~ 1375 μs        | ~ 44 μs         
+List Processing         | ~ 10 μs       | ~ 1212 μs     | ~ 2189 μs        | ~ 82 μs         
+Tail Call Optimization  | ~ 326 μs      | ~ 1478 μs     | ~ 23244 μs       | ~ 108 μs        
+Deep Record Updates     | ~ 260 μs      | ~ 778 μs      | ~ 4943 μs        | ~ 14458 μs      
+Ackermann               | ~ 28 μs       | ~ 57 μs       | ~ 418 μs         | ~ 21 μs         
+Church Numerals         | ~ 369 μs      | ~ 617 μs      | ~ 17684 μs       | ~ 27983 μs      
+Prime Sieve             | ~ 76 μs       | ~ 232 μs      | ~ 7576 μs        | ~ 615 μs        
+Red-Black Tree          | ~ 25020 μs    | ~ 17904 μs    | ~ 300566 μs      | ~ 60880 μs      
+Polymorphism            | ~ 17884 μs    | ~ 92155 μs    | ~ 10591 μs       | ~ 38958 μs      
+State Monad             | ~ 5 μs        | ~ 108 μs      | ~ 539 μs         | ~ 905 μs        
+Lazy Evaluation         | ~ 2868 μs     | ~ 10325 μs    | ~ 95661 μs       | ~ 340275 μs     
+Array Processing        | ~ 13 μs       | ~ 5430 μs     | ~ 1375 μs        | ~ 46 μs         
 ----------------------- | ------------- | ------------- | ---------------- | ----------------
-Total Execution Time    | ~ 46.87 ms    | ~ 131.04 ms   | ~ 465.16 ms      | ~ 2392.02 ms    
+Total Execution Time    | ~ 46.87 ms    | ~ 131.04 ms   | ~ 465.16 ms      | ~ 484.36 ms     
 ```
 > [!NOTE]
 > **Single-Threaded Benchmark**
