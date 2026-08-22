@@ -123,21 +123,22 @@ Total Execution Time    | ~ 465.16 ms              |
 
 Benchmark               | Compiled Rust (young WIP)| Native Rust FFI
 ----------------------- | ------------------------ | ---------------
-AST Evaluation          | ~ 19 μs                  | 
-Fibonacci               | ~ 2 μs                   | 
-List Processing         | ~ 82 μs                  | 
-Tail Call Optimization  | ~ 108 μs                 | 
-Deep Record Updates     | ~ 14458 μs               | 
-Ackermann               | ~ 21 μs                  | 
-Church Numerals         | ~ 27983 μs               | 
-Prime Sieve             | ~ 615 μs                 | 
-Red-Black Tree          | ~ 60880 μs               | 
-Polymorphism            | ~ 38958 μs               | 
-State Monad             | ~ 905 μs                 | 
-Lazy Evaluation         | ~ 340275 μs              | 
-Array Processing        | ~ 46 μs                  | 
+AST Evaluation          | ~ 15 μs                  | 
+Fibonacci               | ~ 4 μs                   | 
+List Processing         | ~ 172 μs                 | 
+Tail Call Optimization  | ~ 746 μs                 | 
+Deep Record Updates     | ~ 2295 μs                | 
+Ackermann               | ~ 46 μs                  | 
+Church Numerals         | ~ 46762 μs               | 
+Prime Sieve             | ~ 311 μs                 | 
+Red-Black Tree          | ~ 60546 μs               | 
+Polymorphism            | ~ 38606 μs               | 
+State Monad             | ~ 406 μs                 | 
+Lazy Evaluation         | ~ 310128 μs              | 
+Array Processing        | ~ 42 μs                  | 
+RowToList               | ~ 2 μs                   | 
 ----------------------- | ------------------------ | ---------------
-Total Execution Time    | ~ 484.36 ms              | 
+Total Execution Time    | ~ 460.08 ms              | 
 ```
 
 > [!IMPORTANT]
