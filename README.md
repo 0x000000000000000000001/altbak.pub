@@ -23,12 +23,17 @@ To ensure fair and executable comparisons across all backends, the test suite is
 1. **Core tests (`src/`)**: Pure computational tasks (AST, Fibonacci, recursion) that run seamlessly on all 6 backends. Executed via `./bin/run`.
 2. **Extended tests (`srx/`)**: Tests relying heavily on Javascript/PHP FFI bindings (like `Effect.Aff`, mutable `STArray`, and regex). Since Scheme and Erlang lack FFI implementations for these specific libraries in their package sets, they are isolated in the `srx/` directory. **Note that this is completely normal and expected:** Scheme is targeted here for raw computation, and Erlang's BEAM already natively handles concurrency and multithreading at the VM level (making JS style `Aff` workarounds irrelevant). Executed via `./bin/run --x` (which dynamically injects `srx/` into the compilation step and skips Scheme/Erlang).
 
-### Core benchmark results (pure computational)
+### Core stresstest benchmark results (pure computational)
+
+> [!WARNING]
+> **Deliberately Unoptimized Algorithms**
+> These tests are written in a deliberately naive and unoptimized functional style (e.g., heavily reliant on recursion, persistent structures, and deep closures) rather than idiomatic patterns. The goal is to act as a **stresstest** to evaluate how well each backend compiler optimizes and mitigates the massive overhead of pure functional programming paradigms.
+
 Command: `./bin/run` (Runs on all 7 backends). New tests will gradually be added.
 
 ```text
 =============================================================================================================================================================
-CORE BENCHMARK RESULTS (Fibonacci, AST, tail calls, Church, primes, etc.)                                                                      
+CORE STRESSTEST BENCHMARK RESULTS (Fibonacci, AST, tail calls, Church, primes, etc.)                                                                      
 =============================================================================================================================================================
 Benchmark               | JS            | Arista ES      | Go (mature WIP) | Native Go FFI
 ----------------------- | ------------- | -------------- | --------------- | ------
