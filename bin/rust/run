@@ -71,7 +71,7 @@ echo 'Building...'
 spago build
 
 # Generate Rust code
-node ../purust/purust/bin/purust.js --main ${ENTRY_POINT} > /tmp/purust.log 2> /tmp/purust_trace.log || echo "PURUST FAILED" || exit 1
+node ../purust/purust/bin/purust.js --main ${ENTRY_POINT} --source output --out output/purust_output > /tmp/purust.log 2> /tmp/purust_trace.log || echo "PURUST FAILED" || exit 1
 
 echo "=== Rust ==="
 if [ -d "output/purust_output" ]; then

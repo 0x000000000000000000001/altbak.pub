@@ -37,10 +37,10 @@ if [ "$CLEAN" == "1" ]; then
 fi
 mkdir -p run/bak/go/output run/bak/go/spago
 rm -rf output .spago spago.yaml spago.lock
-ln -s run/bak/go/output output
-ln -s run/bak/go/spago .spago
-ln -s run/bak/go/spago.go.yaml spago.yaml
-touch run/bak/go/spago.lock && ln -s run/bak/go/spago.lock spago.lock
+ln -snf run/bak/go/output output
+ln -snf run/bak/go/spago .spago
+ln -snf run/bak/go/spago.go.yaml spago.yaml
+touch run/bak/go/spago.lock && ln -snf run/bak/go/spago.lock spago.lock
 
 ENTRY_POINT="App"
 

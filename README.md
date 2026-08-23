@@ -53,22 +53,22 @@ Total Execution Time    | ~ 125.77 ms   | ~ 81.21 ms         | ~ 40.72 ms    | -
 
 Benchmark               | Compiled Go (mature WIP) | Native Go FFI |
 ----------------------- | ------------------------ | ------------- |
-AST Evaluation          | ~ 6 μs                   | ~ 4 μs        |
-Fibonacci               | ~ 2 μs                   | ~ 2 μs        |
-List Processing         | ~ 87 μs                  | ~ 1 μs        |
-Tail Call Optimization  | ~ 990 μs                 | ~ 56 μs       |
-Deep Record Updates     | ~ 1313 μs                | ~ 3 μs        |
-Ackermann               | ~ 34 μs                  | ~ 32 μs       |
-Church Numerals         | ~ 7391 μs                | ~ 34 μs       |
-Prime Sieve             | ~ 261 μs                 | ~ 3 μs        |
-Red-Black Tree          | ~ 27163 μs               | ~ 24154 μs    |
-Polymorphism            | ~ 2357 μs                | ~ 2387 μs     |
-State Monad             | ~ 136 μs                 | ~ 1 μs        |
-Lazy Evaluation         | ~ 19762 μs               | ~ 305 μs      |
-Array Processing        | ~ 57 μs                  | ~ 1 μs        |
+AST Evaluation          | ~ 4 μs                   | ~ 4 μs        |
+Fibonacci               | ~ 1 μs                   | ~ 2 μs        |
+List Processing         | ~ 50 μs                  | ~ 1 μs        |
+Tail Call Optimization  | ~ 881 μs                 | ~ 56 μs       |
+Deep Record Updates     | ~ 1093 μs                | ~ 3 μs        |
+Ackermann               | ~ 29 μs                  | ~ 32 μs       |
+Church Numerals         | ~ 5959 μs                | ~ 34 μs       |
+Prime Sieve             | ~ 164 μs                 | ~ 3 μs        |
+Red-Black Tree          | ~ 26073 μs               | ~ 24154 μs    |
+Polymorphism            | ~ 2257 μs                | ~ 2387 μs     |
+State Monad             | ~ 145 μs                 | ~ 1 μs        |
+Lazy Evaluation         | ~ 19055 μs               | ~ 305 μs      |
+Array Processing        | ~ 38 μs                  | ~ 1 μs        |
 RowToList               | ~ 1 μs                   | ~ 1 μs        |
 ----------------------- | ------------------------ | ------------- |
-Total Execution Time    | ~ 59.56 ms               | ~ 26.98 ms    | -> Read the IMPORTANT notice below!
+Total Execution Time    | ~ 55.75 ms               | ~ 26.98 ms    | -> Read the IMPORTANT notice below!
 
 Benchmark               | Compiled Scheme | Native Scheme FFI |
 ----------------------- | ----------------| ----------------- |
