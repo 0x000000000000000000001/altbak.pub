@@ -164,9 +164,9 @@ Total Execution Time    | ~ 449.58 ms               |
 Command: `./bin/run --x` (Skips runtimes lacking necessary FFI bindings like Scheme and Erlang)
 
 ```text
-=========================================================================
+=======================================================================
 EXTENDED BENCHMARK RESULTS (file I/O, regex, STArray, asynchronous Aff)                                                                      
-=========================================================================
+=======================================================================
 Benchmark               | JS            | Arista JS      | Go              
 ----------------------- | ------------- | -------------- | --------------- 
 AST Evaluation          | ~ 96 μs       | ~ 68 μs        | ~ 44 μs         
