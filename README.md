@@ -30,9 +30,9 @@ To ensure fair and executable comparisons across all backends, the test suite is
 Command: `./bin/run` (Runs on all 7 backends). New tests will gradually be added.
 
 ```text
-===================================================================================
+====================================================================================
 CORE STRESSTEST BENCHMARK RESULTS (Fibonacci, AST, tail calls, Church, primes, etc.)                                                                      
-===================================================================================
+====================================================================================
 Benchmark               | Compiled JS   | Compiled Arista JS | Native JS FFI Cheatcode |
 ----------------------- | ------------- | ------------------ | ----------------------- |
 AST Evaluation          | ~ 93 μs       | ~ 74 μs            | ~ 119 μs                |
@@ -164,9 +164,9 @@ Total Execution Time    | ~ 449.58 ms               |
 Command: `./bin/run --x` (Skips runtimes lacking necessary FFI bindings like Scheme and Erlang)
 
 ```text
-========================================================================================
+=========================================================================
 EXTENDED BENCHMARK RESULTS (file I/O, regex, STArray, asynchronous Aff)                                                                      
-========================================================================================
+=========================================================================
 Benchmark               | JS            | Arista JS      | Go              
 ----------------------- | ------------- | -------------- | --------------- 
 AST Evaluation          | ~ 96 μs       | ~ 68 μs        | ~ 44 μs         
