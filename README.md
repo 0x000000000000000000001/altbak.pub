@@ -34,7 +34,7 @@ Command: `./bin/run` (Runs on all 7 backends). New tests will gradually be added
 CORE STRESSTEST BENCHMARK RESULTS (Fibonacci, AST, tail calls, Church, primes, etc.)                                                                      
 =============================================================================================================================================================
 Benchmark               | Compiled JS   | Compiled Arista JS | Native JS FFI Bypass |
------------------------ | ------------- | ------------------ | ------------- |
+----------------------- | ------------- | ------------------ | -------------------- |
 AST Evaluation          | ~ 93 μs       | ~ 74 μs            | ~ 119 μs      |
 Fibonacci               | ~ 43 μs       | ~ 46 μs            | ~ 68 μs       |
 List Processing         | ~ 386 μs      | ~ 368 μs           | ~ 54 μs       |
@@ -48,13 +48,13 @@ Polymorphism            | ~ 9029 μs     | ~ 8111 μs          | ~ 4246 μs     
 State Monad             | ~ 425 μs      | ~ 170 μs           | ~ 36 μs       |
 Lazy Evaluation         | ~ 16372 μs    | ~ 13986 μs         | ~ 357 μs      |
 Array Processing        | ~ 218 μs      | ~ 222 μs           | ~ 33 μs       |
------------------------ | ------------- | ------------------ | ------------- |
+----------------------- | ------------- | ------------------ | -------------------- |
 Total Execution Time    | ~ 125.77 ms   | ~ 81.21 ms         | ~ 40.72 ms    |
                         |
                         \----> Read the IMPORTANT notice below!
 
 Benchmark               | Compiled Go (mature WIP) | Native Go FFI Bypass |
------------------------ | ------------------------ | ------------- |
+----------------------- | ------------------------ | -------------------- |
 AST Evaluation          | ~ 3 μs                   | ~ 4 μs        |
 Fibonacci               | ~ 1 μs                   | ~ 2 μs        |
 List Processing         | ~ 43 μs                  | ~ 1 μs        |
@@ -69,13 +69,13 @@ State Monad             | ~ 234 μs                 | ~ 1 μs        |
 Lazy Evaluation         | ~ 17599 μs               | ~ 305 μs      |
 Array Processing        | ~ 34 μs                  | ~ 1 μs        |
 RowToList               | ~ 1 μs                   | ~ 1 μs        |
------------------------ | ------------------------ | ------------- |
+----------------------- | ------------------------ | -------------------- |
 Total Execution Time    | ~ 48.93 ms               | ~ 26.98 ms    | 
                         |
                         \----> Read the IMPORTANT notice below!
 
 Benchmark               | Compiled Scheme | Native Scheme FFI Bypass |
------------------------ | ----------------| ----------------- |
+----------------------- | ----------------| -------------------- |
 AST Evaluation          | ~ 9 μs          | 
 Fibonacci               | ~ 2 μs          | 
 List Processing         | ~ 10 μs         | 
@@ -89,11 +89,11 @@ Polymorphism            | ~ 17884 μs      |
 State Monad             | ~ 5 μs          | 
 Lazy Evaluation         | ~ 2868 μs       | 
 Array Processing        | ~ 13 μs         | 
------------------------ | ----------------| ----------------- |
+----------------------- | ----------------| -------------------- |
 Total Execution Time    | ~ 46.87 ms      | 
 
 Benchmark               | Compiled Erlang | Native Erlang FFI Bypass |
------------------------ | ----------------| ----------------- |
+----------------------- | ----------------| -------------------- |
 AST Evaluation          | ~ 692 μs        | 
 Fibonacci               | ~ 49 μs         | 
 List Processing         | ~ 1212 μs       | 
@@ -107,11 +107,11 @@ Polymorphism            | ~ 92155 μs      |
 State Monad             | ~ 108 μs        | 
 Lazy Evaluation         | ~ 10325 μs      | 
 Array Processing        | ~ 5430 μs       | 
------------------------ | ----------------| ------------------|
+----------------------- | ----------------| --------------------|
 Total Execution Time    | ~ 131.04 ms     | 
 
 Benchmark               | Compiled PHP (normal WIP) | Native PHP FFI Bypass |
------------------------ | ------------------------- | -------------- |
+----------------------- | ------------------------- | -------------------- |
 AST Evaluation          | ~ 18 μs                   | 
 Fibonacci               | ~ 354 μs                  | 
 List Processing         | ~ 2189 μs                 | 
@@ -125,11 +125,11 @@ Polymorphism            | ~ 10591 μs                |
 State Monad             | ~ 539 μs                  | 
 Lazy Evaluation         | ~ 95661 μs                | 
 Array Processing        | ~ 1375 μs                 | 
------------------------ | ------------------------- | ----------------
+----------------------- | ------------------------- | --------------------
 Total Execution Time    | ~ 465.16 ms               | 
 
 Benchmark               | Compiled Rust (young WIP) | Native Rust FFI Bypass |
------------------------ | ------------------------- | --------------- |
+----------------------- | ------------------------- | -------------------- |
 AST Evaluation          | ~ 48 μs                   | 
 Fibonacci               | ~ 5 μs                    | 
 List Processing         | ~ 146 μs                  | 
@@ -144,7 +144,7 @@ State Monad             | ~ 419 μs                  |
 Lazy Evaluation         | ~ 324862 μs               | 
 Array Processing        | ~ 35 μs                   | 
 RowToList               | ~ 2 μs                    | 
------------------------ | ------------------------- | ---------------
+----------------------- | ------------------------- | --------------------
 Total Execution Time    | ~ 449.58 ms               | 
 ```
 
