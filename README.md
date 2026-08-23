@@ -49,7 +49,9 @@ State Monad             | ~ 425 μs      | ~ 170 μs           | ~ 36 μs       
 Lazy Evaluation         | ~ 16372 μs    | ~ 13986 μs         | ~ 357 μs      |
 Array Processing        | ~ 218 μs      | ~ 222 μs           | ~ 33 μs       |
 ----------------------- | ------------- | ------------------ | ------------- |
-Total Execution Time    | ~ 125.77 ms   | ~ 81.21 ms         | ~ 40.72 ms    | -> Read the IMPORTANT notice below!
+Total Execution Time    | ~ 125.77 ms   | ~ 81.21 ms         | ~ 40.72 ms    |
+                        |
+                        \----> Read the IMPORTANT notice below!
 
 Benchmark               | Compiled Go (mature WIP) | Native Go FFI |
 ----------------------- | ------------------------ | ------------- |
@@ -68,7 +70,9 @@ Lazy Evaluation         | ~ 19186 μs               | ~ 305 μs      |
 Array Processing        | ~ 66 μs                  | ~ 1 μs        |
 RowToList               | ~ 0 μs                   | ~ 1 μs        |
 ----------------------- | ------------------------ | ------------- |
-Total Execution Time    | ~ 54.57 ms               | ~ 26.98 ms    | -> Read the IMPORTANT notice below!
+Total Execution Time    | ~ 54.57 ms               | ~ 26.98 ms    | 
+                        |
+                        \----> Read the IMPORTANT notice below!
 
 Benchmark               | Compiled Scheme | Native Scheme FFI |
 ----------------------- | ----------------| ----------------- |
