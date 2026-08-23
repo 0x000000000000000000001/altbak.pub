@@ -56,21 +56,21 @@ Total Execution Time    | ~ 125.77 ms   | ~ 81.21 ms         | ~ 40.72 ms    |
 Benchmark               | Compiled Go (mature WIP) | Native Go FFI |
 ----------------------- | ------------------------ | ------------- |
 AST Evaluation          | ~ 4 μs                   | ~ 4 μs        |
-Fibonacci               | ~ 1 μs                   | ~ 2 μs        |
-List Processing         | ~ 49 μs                  | ~ 1 μs        |
-Tail Call Optimization  | ~ 860 μs                 | ~ 56 μs       |
-Deep Record Updates     | ~ 1035 μs                | ~ 3 μs        |
-Ackermann               | ~ 33 μs                  | ~ 32 μs       |
-Church Numerals         | ~ 6214 μs                | ~ 34 μs       |
-Prime Sieve             | ~ 180 μs                 | ~ 3 μs        |
-Red-Black Tree          | ~ 24152 μs               | ~ 24154 μs    |
-Polymorphism            | ~ 2255 μs                | ~ 2387 μs     |
-State Monad             | ~ 147 μs                 | ~ 1 μs        |
-Lazy Evaluation         | ~ 16890 μs               | ~ 305 μs      |
-Array Processing        | ~ 46 μs                  | ~ 1 μs        |
+Fibonacci               | ~ 2 μs                   | ~ 2 μs        |
+List Processing         | ~ 36 μs                  | ~ 1 μs        |
+Tail Call Optimization  | ~ 730 μs                 | ~ 56 μs       |
+Deep Record Updates     | ~ 956 μs                 | ~ 3 μs        |
+Ackermann               | ~ 21 μs                  | ~ 32 μs       |
+Church Numerals         | ~ 2313 μs                | ~ 34 μs       |
+Prime Sieve             | ~ 151 μs                 | ~ 3 μs        |
+Red-Black Tree          | ~ 26037 μs               | ~ 24154 μs    |
+Polymorphism            | ~ 2276 μs                | ~ 2387 μs     |
+State Monad             | ~ 91 μs                  | ~ 1 μs        |
+Lazy Evaluation         | ~ 17669 μs               | ~ 305 μs      |
+Array Processing        | ~ 40 μs                  | ~ 1 μs        |
 RowToList               | ~ 1 μs                   | ~ 1 μs        |
 ----------------------- | ------------------------ | ------------- |
-Total Execution Time    | ~ 51.87 ms               | ~ 26.98 ms    | 
+Total Execution Time    | ~ 50.33 ms               | ~ 26.98 ms    | 
                         |
                         \----> Read the IMPORTANT notice below!
 
