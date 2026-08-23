@@ -5,12 +5,17 @@ cd "$(dirname "$0")/../.."
 CLEAN=0
 MODE="pure"
 TEST_NAME=""
+USE_PGO=0
 
 while [[ $# -gt 0 ]]
 do
   case "$1" in
     -c|--clean)
     CLEAN=1
+    shift
+    ;;
+    --pgo)
+    USE_PGO=1
     shift
     ;;
     --test)
@@ -83,10 +88,21 @@ echo "=== Go ==="
 if [ -d "output/main" ]; then
     cd output
     go mod tidy > /dev/null 2>&1
-    go build -o go_app ./main
-    cd ..
     
-    GOGC=1000 ./output/go_app
+    if [ "$USE_PGO" == "1" ]; then
+        echo "=== Profiling run (PGO) ==="
+        PPROF=1 go build -o go_app ./main
+        PPROF=1 GOGC=1000 ./go_app > /dev/null
+        echo "=== Rebuilding with PGO ==="
+        go build -pgo=cpu.prof -o go_app_pgo ./main
+        cd ..
+        GOGC=1000 ./output/go_app_pgo
+    else
+        go build -o go_app ./main
+        cd ..
+        
+        GOGC=1000 ./output/go_app
+    fi
 else
     echo "No output/main/main.go generated."
 fi
