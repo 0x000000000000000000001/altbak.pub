@@ -111,41 +111,41 @@ Array Processing        | ~ 5430 μs       |
 Total Execution Time    | ~ 131.04 ms     | 
 
 Benchmark               | Compiled PHP (normal WIP) | Native PHP FFI |
------------------------ | ------------------------ | --------------- |
-AST Evaluation          | ~ 18 μs                  | 
-Fibonacci               | ~ 354 μs                 | 
-List Processing         | ~ 2189 μs                | 
-Tail Call Optimization  | ~ 23244 μs               | 
-Deep Record Updates     | ~ 4943 μs                | 
-Ackermann               | ~ 418 μs                 | 
-Church Numerals         | ~ 17684 μs               | 
-Prime Sieve             | ~ 7576 μs                | 
-Red-Black Tree          | ~ 300566 μs              | 
-Polymorphism            | ~ 10591 μs               | 
-State Monad             | ~ 539 μs                 | 
-Lazy Evaluation         | ~ 95661 μs               | 
-Array Processing        | ~ 1375 μs                | 
------------------------ | ------------------------ | ----------------
-Total Execution Time    | ~ 465.16 ms              | 
+----------------------- | ------------------------- | -------------- |
+AST Evaluation          | ~ 18 μs                   | 
+Fibonacci               | ~ 354 μs                  | 
+List Processing         | ~ 2189 μs                 | 
+Tail Call Optimization  | ~ 23244 μs                | 
+Deep Record Updates     | ~ 4943 μs                 | 
+Ackermann               | ~ 418 μs                  | 
+Church Numerals         | ~ 17684 μs                | 
+Prime Sieve             | ~ 7576 μs                 | 
+Red-Black Tree          | ~ 300566 μs               | 
+Polymorphism            | ~ 10591 μs                | 
+State Monad             | ~ 539 μs                  | 
+Lazy Evaluation         | ~ 95661 μs                | 
+Array Processing        | ~ 1375 μs                 | 
+----------------------- | ------------------------- | ----------------
+Total Execution Time    | ~ 465.16 ms               | 
 
 Benchmark               | Compiled Rust (young WIP) | Native Rust FFI |
------------------------ | ------------------------- | ----------------|
-AST Evaluation          | ~ 15 μs                  | 
-Fibonacci               | ~ 4 μs                   | 
-List Processing         | ~ 172 μs                 | 
-Tail Call Optimization  | ~ 746 μs                 | 
-Deep Record Updates     | ~ 2295 μs                | 
-Ackermann               | ~ 46 μs                  | 
-Church Numerals         | ~ 46762 μs               | 
-Prime Sieve             | ~ 311 μs                 | 
-Red-Black Tree          | ~ 60546 μs               | 
-Polymorphism            | ~ 38606 μs               | 
-State Monad             | ~ 406 μs                 | 
-Lazy Evaluation         | ~ 310128 μs              | 
-Array Processing        | ~ 42 μs                  | 
-RowToList               | ~ 2 μs                   | 
------------------------ | ------------------------ | ---------------
-Total Execution Time    | ~ 460.08 ms              | 
+----------------------- | ------------------------- | --------------- |
+AST Evaluation          | ~ 48 μs                   | 
+Fibonacci               | ~ 5 μs                    | 
+List Processing         | ~ 146 μs                  | 
+Tail Call Optimization  | ~ 762 μs                  | 
+Deep Record Updates     | ~ 2166 μs                 | 
+Ackermann               | ~ 26 μs                   | 
+Church Numerals         | ~ 16363 μs                | 
+Prime Sieve             | ~ 265 μs                  | 
+Red-Black Tree          | ~ 65765 μs                | 
+Polymorphism            | ~ 38713 μs                | 
+State Monad             | ~ 419 μs                  | 
+Lazy Evaluation         | ~ 324862 μs               | 
+Array Processing        | ~ 35 μs                   | 
+RowToList               | ~ 2 μs                    | 
+----------------------- | ------------------------- | ---------------
+Total Execution Time    | ~ 449.58 ms               | 
 ```
 
 > [!IMPORTANT]
