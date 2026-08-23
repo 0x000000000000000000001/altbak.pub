@@ -1,5 +1,5 @@
 use std::rc::Rc;
-use crate::{mk_number, mk_string, UnknownType, Record_a};
+use crate::{mk_number, mk_string, UnknownType};
 
 pub fn Bench_benchNow() -> UnknownType {
     crate::Value::Func1(purust_core::Func1::Shared(Rc::new(move |mut _u: UnknownType| -> UnknownType {
