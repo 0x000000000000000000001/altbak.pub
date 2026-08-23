@@ -33,6 +33,7 @@ Command: `./bin/run` (Runs on all 7 backends). New tests will gradually be added
 ====================================================================================
 CORE STRESSTEST BENCHMARK RESULTS (Fibonacci, AST, tail calls, Church, primes, etc.)                                                                      
 ====================================================================================
+
 Benchmark               | Compiled JS   | Compiled Arista JS | Native JS FFI Cheatcode |
 ----------------------- | ------------- | ------------------ | ----------------------- |
 AST Evaluation          | ~ 93 μs       | ~ 74 μs            | ~ 119 μs                |
@@ -167,6 +168,7 @@ Command: `./bin/run --x` (Skips runtimes lacking necessary FFI bindings like Sch
 =======================================================================
 EXTENDED BENCHMARK RESULTS (file I/O, regex, STArray, asynchronous Aff)                                                                      
 =======================================================================
+
 Benchmark               | JS            | Arista JS      | Go              
 ----------------------- | ------------- | -------------- | --------------- 
 AST Evaluation          | ~ 96 μs       | ~ 68 μs        | ~ 44 μs         
