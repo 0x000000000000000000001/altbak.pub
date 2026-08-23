@@ -51,21 +51,22 @@ Total Execution Time    | ~ 125.77 ms   | ~ 81.21 ms         | ~ 40.72 ms
 
 Benchmark               | Compiled Go (mature WIP) | Native Go FFI
 ----------------------- | ------------------------ | -------------
-AST Evaluation          | ~ 10 μs                  | ~ 6 μs
+AST Evaluation          | ~ 6 μs                   | ~ 6 μs
 Fibonacci               | ~ 2 μs                   | ~ 2 μs
-List Processing         | ~ 133 μs                 | ~ 2 μs
-Tail Call Optimization  | ~ 897 μs                 | ~ 39 μs
-Deep Record Updates     | ~ 1034 μs                | ~ 5 μs
-Ackermann               | ~ 58 μs                  | ~ 67 μs
-Church Numerals         | ~ 947 μs                 | ~ 79 μs
-Prime Sieve             | ~ 225 μs                 | ~ 5 μs
-Red-Black Tree          | ~ 37305 μs               | ~ 27079 μs
-Polymorphism            | ~ 2326 μs                | ~ 4541 μs
-State Monad             | ~ 181 μs                 | ~ 1 μs
-Lazy Evaluation         | ~ 21525 μs               | ~ 273 μs
-Array Processing        | ~ 38 μs                  | ~ 2 μs
+List Processing         | ~ 87 μs                  | ~ 2 μs
+Tail Call Optimization  | ~ 990 μs                 | ~ 39 μs
+Deep Record Updates     | ~ 1313 μs                | ~ 5 μs
+Ackermann               | ~ 34 μs                  | ~ 67 μs
+Church Numerals         | ~ 7391 μs                | ~ 79 μs
+Prime Sieve             | ~ 261 μs                 | ~ 5 μs
+Red-Black Tree          | ~ 27163 μs               | ~ 27079 μs
+Polymorphism            | ~ 2357 μs                | ~ 4541 μs
+State Monad             | ~ 136 μs                 | ~ 1 μs
+Lazy Evaluation         | ~ 19762 μs               | ~ 273 μs
+Array Processing        | ~ 57 μs                  | ~ 2 μs
+RowToList               | ~ 1 μs                   | ~ 1 μs
 ----------------------- | ------------------------ | -------------
-Total Execution Time    | ~ 64.68 ms               | ~ 32.10 ms
+Total Execution Time    | ~ 59.56 ms               | ~ 32.10 ms
 
 Benchmark               | Compiled Scheme | Native Scheme FFI
 ----------------------- | ----------------| -----------------
