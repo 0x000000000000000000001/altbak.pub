@@ -1,5 +1,8 @@
-export const runFibFFICheatcode = function(n) {
-  if (n === 0) return 0;
-  if (n === 1) return 1;
-  return runFibFFICheatcode(n - 1) + runFibFFICheatcode(n - 2);
+export const runFibFFICheatcode = function(limit) {
+  function fib(n) {
+    if (n <= 0) return 0;
+    if (n === 1) return 1;
+    return fib(n - 1) + fib(n - 2);
+  }
+  return fib(Math.floor(limit));
 };

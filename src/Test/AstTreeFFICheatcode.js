@@ -1,26 +1,20 @@
 export const runAstTreeFFICheatcode = function(limit) {
-  let depth = Math.floor(limit);
-  let tree = buildTree(depth);
-  return evalTree(tree);
+  function buildAst(n) {
+    if (n === 0) return { typ: 0, value: 1 };
+    return {
+      typ: 1,
+      left: { typ: 2, left: { typ: 0, value: n }, right: buildAst(n - 1) },
+      right: { typ: 3, left: buildAst(n - 1), right: { typ: 0, value: 1 } }
+    };
+  }
+  function evalAst(e) {
+    switch (e.typ) {
+      case 0: return e.value;
+      case 1: return evalAst(e.left) + evalAst(e.right);
+      case 2: return evalAst(e.left) * evalAst(e.right);
+      case 3: return evalAst(e.left) - evalAst(e.right);
+    }
+    return 0;
+  }
+  return evalAst(buildAst(Math.floor(limit)));
 };
-
-function buildTree(depth) {
-  if (depth === 0) {
-    return { type: "Literal", value: 1 };
-  }
-  return {
-    type: "Add",
-    left: buildTree(depth - 1),
-    right: buildTree(depth - 1)
-  };
-}
-
-function evalTree(node) {
-  if (node.type === "Literal") {
-    return node.value;
-  }
-  if (node.type === "Add") {
-    return evalTree(node.left) + evalTree(node.right);
-  }
-  return 0;
-}

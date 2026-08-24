@@ -13,6 +13,10 @@ do
     CLEAN=1
     shift
     ;;
+    --fficc)
+    MODE="fficc"
+    shift
+    ;;
     --test)
     MODE="test"
     TEST_NAME="$2"
@@ -40,7 +44,9 @@ touch run/bak/php/spago.lock && ln -s run/bak/php/spago.lock spago.lock
 
 ENTRY_POINT="App"
 
-if [ "$MODE" == "test" ]; then
+if [ "$MODE" == "fficc" ]; then
+  ENTRY_POINT="AppFFICheatcode"
+elif [ "$MODE" == "test" ]; then
   ENTRY_POINT="AppX"
   cat <<EOF > src/AppX.purs
 module AppX where
