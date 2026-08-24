@@ -1,17 +1,23 @@
 export const runLazyEvaluationFFI = function(limit) {
   let n = Math.floor(limit);
-  let count = 0;
-  for (let i = 2; count < n; i++) {
-    let isPrime = true;
-    for (let j = 2; j * j <= i; j++) {
-      if (i % j === 0) {
-        isPrime = false;
-        break;
-      }
-    }
-    if (isPrime) {
-      count++;
-    }
+  
+  function force(lazy) {
+    return lazy();
   }
-  return count;
+  
+  function defer(f) {
+    return f;
+  }
+  
+  function buildThunks(depth, acc) {
+    if (depth === 0) return acc;
+    return buildThunks(depth - 1, defer(() => force(acc) + 1));
+  }
+  
+  function runManyTimes(times, acc) {
+    if (times === 0) return acc;
+    return runManyTimes(times - 1, acc + force(buildThunks(1000, defer(() => 0))));
+  }
+  
+  return runManyTimes(n, 0);
 };

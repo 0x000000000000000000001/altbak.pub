@@ -34,8 +34,8 @@ Command: `./bin/run` (Runs on all 7 backends). New tests will gradually be added
 CORE STRESSTEST BENCHMARK RESULTS (Fibonacci, AST, tail calls, Church, primes, etc.)                                                                      
 ====================================================================================
 
-Benchmark               | Compiled JS   | Compiled Arista JS | Native JS FFI Cheatcode |
------------------------ | ------------- | ------------------ | ----------------------- |
+Benchmark               | Compiled JS   | Compiled Arista JS | Native JS FFI | Native JS FFI Cheatcode |
+----------------------- | ------------- | ------------------ | ------------- | ----------------------- |
 AST Evaluation          | ~ 93 μs       | ~ 74 μs            | ~ 119 μs                |
 Fibonacci               | ~ 43 μs       | ~ 46 μs            | ~ 68 μs                 |
 List Processing         | ~ 386 μs      | ~ 368 μs           | ~ 54 μs                 |
@@ -54,8 +54,8 @@ Total Execution Time    | ~ 125.77 ms   | ~ 81.21 ms         | ~ 40.72 ms       
                         |
                         \----> Read the IMPORTANT notice below!
 
-Benchmark               | Compiled Go (mature WIP) | Native Go FFI Cheatcode |
------------------------ | ------------------------ | ----------------------- |
+Benchmark               | Compiled Go (mature WIP) | Native Go FFI | Native Go FFI Cheatcode |
+----------------------- | ------------------------ | ------------- | ----------------------- |
 AST Evaluation          | ~ 3 μs                   | ~ 4 μs                  |
 Fibonacci               | ~ 1 μs                   | ~ 2 μs                  |
 List Processing         | ~ 43 μs                  | ~ 1 μs                  |
@@ -75,8 +75,8 @@ Total Execution Time    | ~ 48.93 ms               | ~ 26.98 ms              |
                         |
                         \----> Read the IMPORTANT notice below!
 
-Benchmark               | Compiled Scheme | Native Scheme FFI Cheatcode |
------------------------ | ----------------| --------------------------- |
+Benchmark               | Compiled Scheme | Native Scheme FFI | Native Scheme FFI Cheatcode |
+----------------------- | ----------------| ----------------- | --------------------------- |
 AST Evaluation          | ~ 9 μs          | 
 Fibonacci               | ~ 2 μs          | 
 List Processing         | ~ 10 μs         | 
@@ -93,8 +93,8 @@ Array Processing        | ~ 13 μs         |
 ----------------------- | ----------------| --------------------------- |
 Total Execution Time    | ~ 46.87 ms      | 
 
-Benchmark               | Compiled Erlang | Native Erlang FFI Cheatcode |
------------------------ | ----------------| --------------------------- |
+Benchmark               | Compiled Erlang | Native Erlang FFI | Native Erlang FFI Cheatcode |
+----------------------- | ----------------| ----------------- | --------------------------- |
 AST Evaluation          | ~ 692 μs        | 
 Fibonacci               | ~ 49 μs         | 
 List Processing         | ~ 1212 μs       | 
@@ -111,8 +111,8 @@ Array Processing        | ~ 5430 μs       |
 ----------------------- | ----------------| --------------------------- |
 Total Execution Time    | ~ 131.04 ms     | 
 
-Benchmark               | Compiled PHP (normal WIP) | Native PHP FFI Cheatcode |
------------------------ | ------------------------- | ------------------------ |
+Benchmark               | Compiled PHP (normal WIP) | Native PHP FFI | Native PHP FFI Cheatcode |
+----------------------- | ------------------------- | -------------- | ------------------------ |
 AST Evaluation          | ~ 18 μs                   | 
 Fibonacci               | ~ 354 μs                  | 
 List Processing         | ~ 2189 μs                 | 
@@ -129,8 +129,8 @@ Array Processing        | ~ 1375 μs                 |
 ----------------------- | ------------------------- | ------------------------ |
 Total Execution Time    | ~ 465.16 ms               | 
 
-Benchmark               | Compiled Rust (young WIP) | Native Rust FFI Cheatcode |
------------------------ | ------------------------- | ------------------------- |
+Benchmark               | Compiled Rust (young WIP) | Native Rust FFI | Native Rust FFI Cheatcode |
+----------------------- | ------------------------- | --------------- | ------------------------- |
 AST Evaluation          | ~ 48 μs                   | 
 Fibonacci               | ~ 5 μs                    | 
 List Processing         | ~ 146 μs                  | 

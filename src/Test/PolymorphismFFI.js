@@ -1,12 +1,25 @@
 export const runPolymorphismFFI = function(limit) {
-  let n = Math.floor(limit);
-  let sum = 0;
-  for (let i = 0; i < n; i++) {
-    sum += computeLength("hello") + computeLength([1, 2, 3]);
-  }
-  return sum;
+  let dummy = Math.floor(limit);
+  return polyLoop(intMonoidish)(dummy)(0);
 };
 
-function computeLength(x) {
-  return x.length;
+const intMonoidish = {
+  mempty_: 1,
+  mappend_: function(x) {
+    return function(y) {
+      return x + y;
+    };
+  }
+};
+
+function polyLoop(dict) {
+  return function(n_init) {
+    return function(acc_init) {
+      function go(n, acc) {
+        if (n === 0) return acc;
+        return go(n - 1, dict.mappend_(acc)(dict.mempty_));
+      }
+      return go(n_init, acc_init);
+    };
+  };
 }

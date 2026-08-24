@@ -1,10 +1,13 @@
 export const runArrayOpsFFI = function(limit) {
   let n = Math.floor(limit);
-  let sum = 0;
+  let arr = [];
   for (let i = 1; i <= n; i++) {
-    if (i % 2 === 0) {
-      sum += i;
-    }
+    arr.push(i);
   }
+  
+  let evens = arr.filter(function(x) { return x % 2 === 0; });
+  
+  let sum = evens.reduce(function(acc, x) { return acc + x; }, 0);
+  
   return sum;
 };

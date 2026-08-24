@@ -17,6 +17,14 @@ do
     TEST_NAME="$2"
     shift 2
     ;;
+    --ffi)
+    MODE="ffi"
+    shift
+    ;;
+    --fficc)
+    MODE="fficc"
+    shift
+    ;;
     --x)
     MODE="x"
     shift
@@ -79,6 +87,27 @@ elif [ "$MODE" == "x" ]; then
   
   echo ""
   ./bin/sharp/run $CLEAN --x || echo "=== F#/C# failed ==="
+elif [[ "$MODE" == "ffi" || "$MODE" == "fficc" ]]; then
+  echo "================================"
+  echo "    Running FFI backends...     "
+  echo "================================"
+  echo ""
+  ./bin/js/run $CLEAN --$MODE || echo "=== JS failed ==="
+  
+  echo ""
+  ./bin/es/run $CLEAN --$MODE || echo "=== ES failed ==="
+  
+  echo ""
+  ./bin/php/run $CLEAN --$MODE || echo "=== PHP failed ==="
+  
+  echo ""
+  ./bin/go/run $CLEAN --$MODE || echo "=== Go (gopurs) failed ==="
+  
+  echo ""
+  ./bin/rust/run $CLEAN --$MODE || echo "=== Rust (purust) failed ==="
+  
+  echo ""
+  ./bin/sharp/run $CLEAN --$MODE || echo "=== F#/C# failed ==="
 else
   echo "================================"
   echo "    Running pure backends...    "

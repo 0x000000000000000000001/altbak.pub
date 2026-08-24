@@ -1,21 +1,35 @@
 package Test_PolymorphismFFI
 
 
-type Showable interface {
-	Show() string
+type Monoidish interface {
+	mempty_() int
+	mappend_(int) func(int) int
 }
-type MyInt int
-func (m MyInt) Show() string { return "Int" }
+
+type IntMonoidish struct{}
+
+func (IntMonoidish) mempty_() int {
+	return 1
+}
+
+func (IntMonoidish) mappend_(x int) func(int) int {
+	return func(y int) int {
+		return x + y
+	}
+}
+
+func polyLoop(dict Monoidish, n_init int, acc_init int) int {
+	var goFunc func(int, int) int
+	goFunc = func(n int, acc int) int {
+		if n == 0 {
+			return acc
+		}
+		return goFunc(n-1, dict.mappend_(acc)(dict.mempty_()))
+	}
+	return goFunc(n_init, acc_init)
+}
 
 func RunPolymorphismFFI(limit float64) float64 {
-	n := int(limit)
-	count := 0
-	var s Showable = MyInt(0)
-	for i := 0; i < n; i++ {
-		if s.Show() == "Int" {
-			count++
-		}
-	}
-	return float64(count)
+	dummy := int(limit)
+	return float64(polyLoop(IntMonoidish{}, dummy, 0))
 }
-

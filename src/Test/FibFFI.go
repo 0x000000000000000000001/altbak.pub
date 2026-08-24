@@ -14,4 +14,3 @@ func fib(n int) int {
 func RunFibFFI(limit float64) float64 {
 	return float64(fib(int(limit)))
 }
-

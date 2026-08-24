@@ -1,14 +1,68 @@
 package Test_ChurchFFI
 
 
-func RunChurchFFI(limit float64) float64 {
-	// Native Church numerals are essentially functional loops.
-	// We optimize it as a native loop for the FFI.
-	n := int(limit)
-	acc := 0
-	for i := 0; i < n; i++ {
-		acc++
+type Church func(func(int) int) func(int) int
+
+func zeroC() Church {
+	return func(f func(int) int) func(int) int {
+		return func(x int) int {
+			return x
+		}
 	}
-	return float64(acc)
 }
 
+func succC(n Church) Church {
+	return func(f func(int) int) func(int) int {
+		return func(x int) int {
+			return f(n(f)(x))
+		}
+	}
+}
+
+func addC(m Church, n Church) Church {
+	return func(f func(int) int) func(int) int {
+		return func(x int) int {
+			return m(f)(n(f)(x))
+		}
+	}
+}
+
+func mulC(m Church, n Church) Church {
+	return func(f func(int) int) func(int) int {
+		return func(x int) int {
+			return m(n(f))(x)
+		}
+	}
+}
+
+func fromInt(n int) Church {
+	if n == 0 {
+		return zeroC()
+	}
+	return succC(fromInt(n - 1))
+}
+
+func toInt(n Church) int {
+	return n(func(x int) int { return x + 1 })(0)
+}
+
+func c10(n int) Church {
+	return fromInt(n)
+}
+
+func c100(n int) Church {
+	return mulC(c10(n), c10(n))
+}
+
+func c10k(n int) Church {
+	return mulC(c100(n), c100(n))
+}
+
+func c100k(n int) Church {
+	return mulC(c10k(n), c10(n))
+}
+
+func RunChurchFFI(limit float64) float64 {
+	dummy := int(limit)
+	return float64(toInt(c100k(dummy)))
+}

@@ -1,0 +1,16 @@
+module Test.PolymorphismFFICheatcode where
+
+import Prelude
+import Effect (Effect)
+import Effect.Console (logShow, log)
+import Bench as Bench
+
+foreign import runPolymorphismFFICheatcode :: Int -> Int
+
+describe :: Effect Unit
+describe = log "Polymorphism FFICheatcode (10M Type Class Dict Lookups):"
+
+act :: Effect Unit
+act = do
+  dummy <- Bench.opaque 10000000
+  logShow $ runPolymorphismFFICheatcode dummy

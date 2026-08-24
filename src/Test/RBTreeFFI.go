@@ -14,14 +14,8 @@ type tree struct {
 	right *tree
 }
 
-var pool []tree
-var poolIdx int
-
 func alloc(c color, l *tree, v int, r *tree) *tree {
-	pool[poolIdx] = tree{color: c, left: l, value: v, right: r}
-	p := &pool[poolIdx]
-	poolIdx++
-	return p
+	return &tree{color: c, left: l, value: v, right: r}
 }
 
 func balance(c color, a *tree, x int, b *tree) *tree {
@@ -64,9 +58,6 @@ func insert(x int, t *tree) *tree {
 }
 
 func buildTree(n int, acc *tree) *tree {
-	pool = make([]tree, 10000000) 
-	poolIdx = 0
-
 	for i := n; i > 0; i-- {
 		acc = insert(i, acc)
 	}
