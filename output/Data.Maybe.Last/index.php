@@ -1,0 +1,501 @@
+<?php
+
+namespace Data\Maybe\Last;
+
+// ALL IMPORTS: Control.Alt, Control.Alternative, Control.Applicative, Control.Apply, Control.Bind, Control.Extend, Control.Monad, Control.Plus, Data.Bounded, Data.Eq, Data.Functor, Data.Functor.Invariant, Data.Maybe, Data.Maybe.Last, Data.Monoid, Data.Newtype, Data.Ord, Data.Semigroup, Data.Show, Prelude, Prim
+// TO REQUIRE: Control.Alt, Control.Alternative, Control.Applicative, Control.Apply, Control.Bind, Control.Extend, Control.Monad, Control.Plus, Data.Bounded, Data.Eq, Data.Functor, Data.Functor.Invariant, Data.Maybe, Data.Maybe.Last, Data.Monoid, Data.Newtype, Data.Ord, Data.Semigroup, Data.Show, Prelude
+require_once __DIR__ . '/../Control.Alt/index.php';
+require_once __DIR__ . '/../Control.Alternative/index.php';
+require_once __DIR__ . '/../Control.Applicative/index.php';
+require_once __DIR__ . '/../Control.Apply/index.php';
+require_once __DIR__ . '/../Control.Bind/index.php';
+require_once __DIR__ . '/../Control.Extend/index.php';
+require_once __DIR__ . '/../Control.Monad/index.php';
+require_once __DIR__ . '/../Control.Plus/index.php';
+require_once __DIR__ . '/../Data.Bounded/index.php';
+require_once __DIR__ . '/../Data.Eq/index.php';
+require_once __DIR__ . '/../Data.Functor/index.php';
+require_once __DIR__ . '/../Data.Functor.Invariant/index.php';
+require_once __DIR__ . '/../Data.Maybe/index.php';
+require_once __DIR__ . '/../Data.Maybe.Last/index.php';
+require_once __DIR__ . '/../Data.Monoid/index.php';
+require_once __DIR__ . '/../Data.Newtype/index.php';
+require_once __DIR__ . '/../Data.Ord/index.php';
+require_once __DIR__ . '/../Data.Semigroup/index.php';
+require_once __DIR__ . '/../Data.Show/index.php';
+require_once __DIR__ . '/../Prelude/index.php';
+
+if (!class_exists(__NAMESPACE__ . '\\Phpurs_Data0')) {
+  class Phpurs_Data0 { public $tag; public function __construct($t) { $this->tag = $t; } }
+  class Phpurs_Data1 { public $tag; public $value0; public function __construct($t, $value0) { $this->tag = $t; $this->value0 = $value0; } }
+  class Phpurs_Data2 { public $tag; public $value0, $value1; public function __construct($t, $value0, $value1) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; } }
+  class Phpurs_Data3 { public $tag; public $value0, $value1, $value2; public function __construct($t, $value0, $value1, $value2) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; } }
+  class Phpurs_Data4 { public $tag; public $value0, $value1, $value2, $value3; public function __construct($t, $value0, $value1, $value2, $value3) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; } }
+  class Phpurs_Data5 { public $tag; public $value0, $value1, $value2, $value3, $value4; public function __construct($t, $value0, $value1, $value2, $value3, $value4) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; } }
+  class Phpurs_Data6 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; } }
+  class Phpurs_Data7 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5, $value6; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5, $value6) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; $this->value6 = $value6; } }
+  class Phpurs_Data8 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; $this->value6 = $value6; $this->value7 = $value7; } }
+  class Phpurs_Data9 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; $this->value6 = $value6; $this->value7 = $value7; $this->value8 = $value8; } }
+  class Phpurs_Data10 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; $this->value6 = $value6; $this->value7 = $value7; $this->value8 = $value8; $this->value9 = $value9; } }
+  class Phpurs_Data11 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9, $value10; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9, $value10) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; $this->value6 = $value6; $this->value7 = $value7; $this->value8 = $value8; $this->value9 = $value9; $this->value10 = $value10; } }
+  class Phpurs_Data12 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9, $value10, $value11; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9, $value10, $value11) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; $this->value6 = $value6; $this->value7 = $value7; $this->value8 = $value8; $this->value9 = $value9; $this->value10 = $value10; $this->value11 = $value11; } }
+}
+if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
+  function phpurs_curry_fallback($fn, $args, $expected) {
+    $missing = $expected - \count($args);
+    if ($missing === 1) {
+      return function($a) use ($fn, $args, $expected) {
+        $num = \func_num_args();
+        if ($num > 1) {
+          $merged = \array_merge($args, \func_get_args());
+          $res = $fn(...\array_slice($merged, 0, $expected));
+          return $res(...\array_slice($merged, $expected));
+        }
+        $args[] = $a;
+        return $fn(...$args);
+      };
+    }
+    if ($missing === 2) {
+      return function($a, $b = null) use ($fn, $args, $expected) {
+        $num = \func_num_args();
+        if ($num === 1) { $args[] = $a; return phpurs_curry_fallback($fn, $args, $expected); }
+        if ($num > 2) {
+          $merged = \array_merge($args, \func_get_args());
+          $res = $fn(...\array_slice($merged, 0, $expected));
+          return $res(...\array_slice($merged, $expected));
+        }
+        $args[] = $a; $args[] = $b;
+        return $fn(...$args);
+      };
+    }
+    if ($missing === 3) {
+      return function($a, $b = null, $c = null) use ($fn, $args, $expected) {
+        $num = \func_num_args();
+        if ($num === 1) { $args[] = $a; return phpurs_curry_fallback($fn, $args, $expected); }
+        if ($num === 2) { $args[] = $a; $args[] = $b; return phpurs_curry_fallback($fn, $args, $expected); }
+        if ($num > 3) {
+          $merged = \array_merge($args, \func_get_args());
+          $res = $fn(...\array_slice($merged, 0, $expected));
+          return $res(...\array_slice($merged, $expected));
+        }
+        $args[] = $a; $args[] = $b; $args[] = $c;
+        return $fn(...$args);
+      };
+    }
+    if ($missing === 4) {
+      return function($a, $b = null, $c = null, $d = null) use ($fn, $args, $expected) {
+        $num = \func_num_args();
+        if ($num === 1) { $args[] = $a; return phpurs_curry_fallback($fn, $args, $expected); }
+        if ($num === 2) { $args[] = $a; $args[] = $b; return phpurs_curry_fallback($fn, $args, $expected); }
+        if ($num === 3) { $args[] = $a; $args[] = $b; $args[] = $c; return phpurs_curry_fallback($fn, $args, $expected); }
+        if ($num > 4) {
+          $merged = \array_merge($args, \func_get_args());
+          $res = $fn(...\array_slice($merged, 0, $expected));
+          return $res(...\array_slice($merged, $expected));
+        }
+        $args[] = $a; $args[] = $b; $args[] = $c; $args[] = $d;
+        return $fn(...$args);
+      };
+    }
+    return function(...$more) use ($fn, $args, $expected) {
+      $merged = \array_merge($args, $more);
+      if (\count($merged) >= $expected) {
+        $res = $fn(...\array_slice($merged, 0, $expected));
+        if (\count($merged) > $expected) {
+          return $res(...\array_slice($merged, $expected));
+        }
+        return $res;
+      }
+      return phpurs_curry_fallback($fn, $merged, $expected);
+    };
+  }
+}
+if (!\function_exists(__NAMESPACE__ . '\\phpurs_execute_effect')) {
+  function phpurs_execute_effect($val) {
+    if (\is_callable($val)) {
+      return $val($GLOBALS['Data_Unit_unit']);
+    }
+    return $val;
+  }
+}
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+
+
+// Data_Maybe_Last_Last
+function majData_majMaybe_majLast_majLast($x_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMaybe_majLast_majLast';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Maybe_Last_Last'] = __NAMESPACE__ . '\\majData_majMaybe_majLast_majLast';
+
+// Data_Maybe_Last_showLast
+function majData_majMaybe_majLast_showmajLast($dictShow_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMaybe_majLast_showmajLast';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $showMaybe_1_0 = (object)["show" => function($v_1) use ($dictShow_0) {
+  $__num = \func_num_args();
+  $__t0 = null;;
+  if ($v_1 instanceof \Data\Maybe\Data_Maybe_Just) {
+$__t0 = (("(Just " . (($dictShow_0)->{'show'})(($v_1)->{'value0'})) . ")");
+goto end_branch_0;;
+};
+  if ($v_1 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t0 = "Nothing";
+goto end_branch_0;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t0 = null;
+  end_branch_0:;
+  $__res = $__t0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = (object)["show" => function($v_2) use ($showMaybe_1_0) {
+  $__num = \func_num_args();
+  $__res = (("(Last " . (($showMaybe_1_0)->{'show'})($v_2)) . ")");
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Maybe_Last_showLast'] = __NAMESPACE__ . '\\majData_majMaybe_majLast_showmajLast';
+
+// Data_Maybe_Last_semigroupLast
+$GLOBALS['Data_Maybe_Last_semigroupLast'] = (object)["append" => function($v_0) {
+  $__num = \func_num_args();
+  $__res = function($v1_1) use ($v_0) {
+  $__num = \func_num_args();
+  $__t0 = null;;
+  if ($v1_1 instanceof \Data\Maybe\Data_Maybe_Just) {
+$__t0 = $v1_1;
+goto end_branch_0;;
+};
+  if ($v1_1 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t0 = $v_0;
+goto end_branch_0;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t0 = null;
+  end_branch_0:;
+  $__res = $__t0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+
+// Data_Maybe_Last_ordLast
+function majData_majMaybe_majLast_ordmajLast($dictOrd_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMaybe_majLast_ordmajLast';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__local_var_1_0 = (($dictOrd_0)->{'Eq0'})(null);
+  $eqMaybe1_1_0 = (object)["eq" => function($x_2) use ($__local_var_1_0) {
+  $__num = \func_num_args();
+  $__res = function($y_3) use ($__local_var_1_0, $x_2) {
+  $__num = \func_num_args();
+  $__t1 = null;;
+  if ($x_2 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t1 = $y_3 instanceof \Data\Maybe\Data_Maybe_Nothing;
+goto end_branch_1;;
+};
+  $__t1 = ($x_2 instanceof \Data\Maybe\Data_Maybe_Just && ($y_3 instanceof \Data\Maybe\Data_Maybe_Just && ((($__local_var_1_0)->{'eq'})(($x_2)->{'value0'}))(($y_3)->{'value0'})));
+  end_branch_1:;
+  $__res = $__t1;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = (object)["compare" => function($x_2) use ($dictOrd_0) {
+  $__num = \func_num_args();
+  $__res = function($y_3) use ($dictOrd_0, $x_2) {
+  $__num = \func_num_args();
+  $__t3 = null;;
+  if ($x_2 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t4 = null;;
+if ($y_3 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t4 = new \Data\Ordering\Data_Ordering_EQ();
+goto end_branch_4;;
+};
+$__t4 = new \Data\Ordering\Data_Ordering_LT();
+end_branch_4:;
+$__t3 = $__t4;
+goto end_branch_3;;
+};
+  if ($y_3 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t3 = new \Data\Ordering\Data_Ordering_GT();
+goto end_branch_3;;
+};
+  if (($x_2 instanceof \Data\Maybe\Data_Maybe_Just && $y_3 instanceof \Data\Maybe\Data_Maybe_Just)) {
+$__t3 = ((($dictOrd_0)->{'compare'})(($x_2)->{'value0'}))(($y_3)->{'value0'});
+goto end_branch_3;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t3 = null;
+  end_branch_3:;
+  $__res = $__t3;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Eq0" => function($_dollar___unused_2) use ($eqMaybe1_1_0) {
+  $__num = \func_num_args();
+  $__res = $eqMaybe1_1_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Maybe_Last_ordLast'] = __NAMESPACE__ . '\\majData_majMaybe_majLast_ordmajLast';
+
+// Data_Maybe_Last_ord1Last
+$GLOBALS['Data_Maybe_Last_ord1Last'] = $GLOBALS['Data_Maybe_ord1Maybe'];
+
+// Data_Maybe_Last_newtypeLast
+$GLOBALS['Data_Maybe_Last_newtypeLast'] = (object)["Coercible0" => function($_dollar___unused_0) {
+  $__num = \func_num_args();
+  $__res = null;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+
+// Data_Maybe_Last_monoidLast
+$GLOBALS['Data_Maybe_Last_monoidLast'] = (object)["mempty" => new \Data\Maybe\Data_Maybe_Nothing(), "Semigroup0" => function($_dollar___unused_0) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Data_Maybe_Last_semigroupLast'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+
+// Data_Maybe_Last_monadLast
+$GLOBALS['Data_Maybe_Last_monadLast'] = $GLOBALS['Data_Maybe_monadMaybe'];
+
+// Data_Maybe_Last_invariantLast
+$GLOBALS['Data_Maybe_Last_invariantLast'] = $GLOBALS['Data_Maybe_invariantMaybe'];
+
+// Data_Maybe_Last_functorLast
+$GLOBALS['Data_Maybe_Last_functorLast'] = $GLOBALS['Data_Maybe_functorMaybe'];
+
+// Data_Maybe_Last_extendLast
+$GLOBALS['Data_Maybe_Last_extendLast'] = $GLOBALS['Data_Maybe_extendMaybe'];
+
+// Data_Maybe_Last_eqLast
+function majData_majMaybe_majLast_eqmajLast($dictEq_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMaybe_majLast_eqmajLast';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = (object)["eq" => function($x_1) use ($dictEq_0) {
+  $__num = \func_num_args();
+  $__res = function($y_2) use ($dictEq_0, $x_1) {
+  $__num = \func_num_args();
+  $__t0 = null;;
+  if ($x_1 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t0 = $y_2 instanceof \Data\Maybe\Data_Maybe_Nothing;
+goto end_branch_0;;
+};
+  $__t0 = ($x_1 instanceof \Data\Maybe\Data_Maybe_Just && ($y_2 instanceof \Data\Maybe\Data_Maybe_Just && ((($dictEq_0)->{'eq'})(($x_1)->{'value0'}))(($y_2)->{'value0'})));
+  end_branch_0:;
+  $__res = $__t0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Maybe_Last_eqLast'] = __NAMESPACE__ . '\\majData_majMaybe_majLast_eqmajLast';
+
+// Data_Maybe_Last_eq1Last
+$GLOBALS['Data_Maybe_Last_eq1Last'] = $GLOBALS['Data_Maybe_eq1Maybe'];
+
+// Data_Maybe_Last_boundedLast
+function majData_majMaybe_majLast_boundedmajLast($dictBounded_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majMaybe_majLast_boundedmajLast';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__local_var_1_0 = (($dictBounded_0)->{'Ord0'})(null);
+  $__local_var_2_1 = (($__local_var_1_0)->{'Eq0'})(null);
+  $eqMaybe1_2_1 = (object)["eq" => function($x_3) use ($__local_var_2_1) {
+  $__num = \func_num_args();
+  $__res = function($y_4) use ($__local_var_2_1, $x_3) {
+  $__num = \func_num_args();
+  $__t2 = null;;
+  if ($x_3 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t2 = $y_4 instanceof \Data\Maybe\Data_Maybe_Nothing;
+goto end_branch_2;;
+};
+  $__t2 = ($x_3 instanceof \Data\Maybe\Data_Maybe_Just && ($y_4 instanceof \Data\Maybe\Data_Maybe_Just && ((($__local_var_2_1)->{'eq'})(($x_3)->{'value0'}))(($y_4)->{'value0'})));
+  end_branch_2:;
+  $__res = $__t2;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $ordMaybe1_1_0 = (object)["compare" => function($x_3) use ($__local_var_1_0) {
+  $__num = \func_num_args();
+  $__res = function($y_4) use ($__local_var_1_0, $x_3) {
+  $__num = \func_num_args();
+  $__t4 = null;;
+  if ($x_3 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t5 = null;;
+if ($y_4 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t5 = new \Data\Ordering\Data_Ordering_EQ();
+goto end_branch_5;;
+};
+$__t5 = new \Data\Ordering\Data_Ordering_LT();
+end_branch_5:;
+$__t4 = $__t5;
+goto end_branch_4;;
+};
+  if ($y_4 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t4 = new \Data\Ordering\Data_Ordering_GT();
+goto end_branch_4;;
+};
+  if (($x_3 instanceof \Data\Maybe\Data_Maybe_Just && $y_4 instanceof \Data\Maybe\Data_Maybe_Just)) {
+$__t4 = ((($__local_var_1_0)->{'compare'})(($x_3)->{'value0'}))(($y_4)->{'value0'});
+goto end_branch_4;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t4 = null;
+  end_branch_4:;
+  $__res = $__t4;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Eq0" => function($_dollar___unused_3) use ($eqMaybe1_2_1) {
+  $__num = \func_num_args();
+  $__res = $eqMaybe1_2_1;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = (object)["top" => new \Data\Maybe\Data_Maybe_Just(($dictBounded_0)->{'top'}), "bottom" => new \Data\Maybe\Data_Maybe_Nothing(), "Ord0" => function($_dollar___unused_2) use ($ordMaybe1_1_0) {
+  $__num = \func_num_args();
+  $__res = $ordMaybe1_1_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Maybe_Last_boundedLast'] = __NAMESPACE__ . '\\majData_majMaybe_majLast_boundedmajLast';
+
+// Data_Maybe_Last_bindLast
+$GLOBALS['Data_Maybe_Last_bindLast'] = $GLOBALS['Data_Maybe_bindMaybe'];
+
+// Data_Maybe_Last_applyLast
+$GLOBALS['Data_Maybe_Last_applyLast'] = $GLOBALS['Data_Maybe_applyMaybe'];
+
+// Data_Maybe_Last_applicativeLast
+$GLOBALS['Data_Maybe_Last_applicativeLast'] = $GLOBALS['Data_Maybe_applicativeMaybe'];
+
+// Data_Maybe_Last_altLast
+$GLOBALS['Data_Maybe_Last_altLast'] = (object)["alt" => function($v_0) {
+  $__num = \func_num_args();
+  $__res = function($v1_1) use ($v_0) {
+  $__num = \func_num_args();
+  $__t0 = null;;
+  if ($v1_1 instanceof \Data\Maybe\Data_Maybe_Just) {
+$__t0 = $v1_1;
+goto end_branch_0;;
+};
+  if ($v1_1 instanceof \Data\Maybe\Data_Maybe_Nothing) {
+$__t0 = $v_0;
+goto end_branch_0;;
+};
+  throw new \Exception("Failed pattern match at " . __FILE__ . ":" . __LINE__);
+  $__t0 = null;
+  end_branch_0:;
+  $__res = $__t0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar___unused_0) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Data_Maybe_functorMaybe'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+
+// Data_Maybe_Last_plusLast
+$GLOBALS['Data_Maybe_Last_plusLast'] = (object)["empty" => new \Data\Maybe\Data_Maybe_Nothing(), "Alt0" => function($_dollar___unused_0) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Data_Maybe_Last_altLast'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+
+// Data_Maybe_Last_alternativeLast
+$GLOBALS['Data_Maybe_Last_alternativeLast'] = (object)["Applicative0" => function($_dollar___unused_0) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Data_Maybe_applicativeMaybe'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Plus1" => function($_dollar___unused_0) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Data_Maybe_Last_plusLast'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+

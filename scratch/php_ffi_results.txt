@@ -1,0 +1,392 @@
+--------------------------------------------------
+
+(Test)
+
+AST Evaluation FFI:
+
+(Output)
+
+8
+
+(Execution time)
+
+9.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Fibonacci FFI:
+
+(Output)
+
+55
+
+(Execution time)
+
+11.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+List Processing FFI (900 elements):
+
+(Output)
+
+900
+
+(Execution time)
+
+4.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Tail Call Optimization FFI (100k calls):
+
+(Output)
+
+5000050000
+
+(Execution time)
+
+1937.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Deep Record Updates FFI (10k iterations):
+
+(Output)
+
+10000
+
+(Execution time)
+
+4016.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Ackermann FFI (3, 4):
+
+(Output)
+
+125
+
+(Execution time)
+
+665.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Church Numerals FFI (100k Closure Applications):
+
+(Output)
+
+100000
+
+(Execution time)
+
+8922.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Prime Sieve FFI (sum primes up to 500):
+
+(Output)
+
+500
+
+(Execution time)
+
+7.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Red-Black Tree FFI (100k Worst-Case Insertions):
+
+(Output)
+
+4999950000
+
+(Execution time)
+
+730387.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Polymorphism FFI (10M Type Class Dict Lookups):
+
+(Output)
+
+80000000
+
+(Execution time)
+
+1169540.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+State Monad FFI (1.2k Binds, 60 Stack Depth):
+
+(Output)
+
+60
+
+(Execution time)
+
+358.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Lazy Evaluation FFI (1M Thunks Forced, 1k Depth):
+
+(Output)
+
+1000000
+
+(Execution time)
+
+151601.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Array Processing FFI (900 elements):
+
+(Output)
+
+202950
+
+(Execution time)
+
+448.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+RowToList FFI (Keys Count):
+
+(Output)
+
+0
+
+(Execution time)
+
+4.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+AST Evaluation FFICheatcode:
+
+(Output)
+
+8
+
+(Execution time)
+
+7.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Fibonacci FFICheatcode:
+
+(Output)
+
+55
+
+(Execution time)
+
+8.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+List Processing FFICheatcode (900 elements):
+
+(Output)
+
+202950
+
+(Execution time)
+
+178.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Tail Call Optimization FFICheatcode (100k calls):
+
+(Output)
+
+5000050000
+
+(Execution time)
+
+109.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Deep Record Updates FFICheatcode (10k iterations):
+
+(Output)
+
+10000
+
+(Execution time)
+
+1361.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Ackermann FFICheatcode (3, 4):
+
+(Output)
+
+125
+
+(Execution time)
+
+589.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Church Numerals FFICheatcode (100k Closure Applications):
+
+(Output)
+
+100000
+
+(Execution time)
+
+112.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Prime Sieve FFICheatcode (sum primes up to 500):
+
+(Output)
+
+21536
+
+(Execution time)
+
+281.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Red-Black Tree FFICheatcode (100k Worst-Case Insertions):
+
+(Output)
+
+4999950000
+
+(Execution time)
+
+515246.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Polymorphism FFICheatcode (10M Type Class Dict Lookups):
+
+(Output)
+
+80000000
+
+(Execution time)
+
+245731.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+State Monad FFICheatcode (1.2k Binds, 60 Stack Depth):
+
+(Output)
+
+1200
+
+(Execution time)
+
+193.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Lazy Evaluation FFICheatcode (1M Thunks Forced, 1k Depth):
+
+(Output)
+
+1000000
+
+(Execution time)
+
+89.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Array Processing FFICheatcode (900 elements):
+
+(Output)
+
+202950
+
+(Execution time)
+
+219.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+RowToList FFICheatcode (Keys Count):
+
+(Output)
+
+0
+
+(Execution time)
+
+3.00 μs
+

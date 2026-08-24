@@ -1,0 +1,387 @@
+<?php
+
+namespace Effect;
+
+// ALL IMPORTS: Control.Applicative, Control.Apply, Control.Bind, Control.Monad, Data.Functor, Data.Monoid, Data.Semigroup, Effect, Prelude, Prim
+// TO REQUIRE: Control.Applicative, Control.Apply, Control.Bind, Control.Monad, Data.Functor, Data.Monoid, Data.Semigroup, Effect, Prelude
+require_once __DIR__ . '/../Control.Applicative/index.php';
+require_once __DIR__ . '/../Control.Apply/index.php';
+require_once __DIR__ . '/../Control.Bind/index.php';
+require_once __DIR__ . '/../Control.Monad/index.php';
+require_once __DIR__ . '/../Data.Functor/index.php';
+require_once __DIR__ . '/../Data.Monoid/index.php';
+require_once __DIR__ . '/../Data.Semigroup/index.php';
+require_once __DIR__ . '/../Effect/index.php';
+require_once __DIR__ . '/../Prelude/index.php';
+
+if (!class_exists(__NAMESPACE__ . '\\Phpurs_Data0')) {
+  class Phpurs_Data0 { public $tag; public function __construct($t) { $this->tag = $t; } }
+  class Phpurs_Data1 { public $tag; public $value0; public function __construct($t, $value0) { $this->tag = $t; $this->value0 = $value0; } }
+  class Phpurs_Data2 { public $tag; public $value0, $value1; public function __construct($t, $value0, $value1) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; } }
+  class Phpurs_Data3 { public $tag; public $value0, $value1, $value2; public function __construct($t, $value0, $value1, $value2) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; } }
+  class Phpurs_Data4 { public $tag; public $value0, $value1, $value2, $value3; public function __construct($t, $value0, $value1, $value2, $value3) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; } }
+  class Phpurs_Data5 { public $tag; public $value0, $value1, $value2, $value3, $value4; public function __construct($t, $value0, $value1, $value2, $value3, $value4) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; } }
+  class Phpurs_Data6 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; } }
+  class Phpurs_Data7 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5, $value6; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5, $value6) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; $this->value6 = $value6; } }
+  class Phpurs_Data8 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; $this->value6 = $value6; $this->value7 = $value7; } }
+  class Phpurs_Data9 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; $this->value6 = $value6; $this->value7 = $value7; $this->value8 = $value8; } }
+  class Phpurs_Data10 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; $this->value6 = $value6; $this->value7 = $value7; $this->value8 = $value8; $this->value9 = $value9; } }
+  class Phpurs_Data11 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9, $value10; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9, $value10) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; $this->value6 = $value6; $this->value7 = $value7; $this->value8 = $value8; $this->value9 = $value9; $this->value10 = $value10; } }
+  class Phpurs_Data12 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9, $value10, $value11; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9, $value10, $value11) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; $this->value6 = $value6; $this->value7 = $value7; $this->value8 = $value8; $this->value9 = $value9; $this->value10 = $value10; $this->value11 = $value11; } }
+}
+if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
+  function phpurs_curry_fallback($fn, $args, $expected) {
+    $missing = $expected - \count($args);
+    if ($missing === 1) {
+      return function($a) use ($fn, $args, $expected) {
+        $num = \func_num_args();
+        if ($num > 1) {
+          $merged = \array_merge($args, \func_get_args());
+          $res = $fn(...\array_slice($merged, 0, $expected));
+          return $res(...\array_slice($merged, $expected));
+        }
+        $args[] = $a;
+        return $fn(...$args);
+      };
+    }
+    if ($missing === 2) {
+      return function($a, $b = null) use ($fn, $args, $expected) {
+        $num = \func_num_args();
+        if ($num === 1) { $args[] = $a; return phpurs_curry_fallback($fn, $args, $expected); }
+        if ($num > 2) {
+          $merged = \array_merge($args, \func_get_args());
+          $res = $fn(...\array_slice($merged, 0, $expected));
+          return $res(...\array_slice($merged, $expected));
+        }
+        $args[] = $a; $args[] = $b;
+        return $fn(...$args);
+      };
+    }
+    if ($missing === 3) {
+      return function($a, $b = null, $c = null) use ($fn, $args, $expected) {
+        $num = \func_num_args();
+        if ($num === 1) { $args[] = $a; return phpurs_curry_fallback($fn, $args, $expected); }
+        if ($num === 2) { $args[] = $a; $args[] = $b; return phpurs_curry_fallback($fn, $args, $expected); }
+        if ($num > 3) {
+          $merged = \array_merge($args, \func_get_args());
+          $res = $fn(...\array_slice($merged, 0, $expected));
+          return $res(...\array_slice($merged, $expected));
+        }
+        $args[] = $a; $args[] = $b; $args[] = $c;
+        return $fn(...$args);
+      };
+    }
+    if ($missing === 4) {
+      return function($a, $b = null, $c = null, $d = null) use ($fn, $args, $expected) {
+        $num = \func_num_args();
+        if ($num === 1) { $args[] = $a; return phpurs_curry_fallback($fn, $args, $expected); }
+        if ($num === 2) { $args[] = $a; $args[] = $b; return phpurs_curry_fallback($fn, $args, $expected); }
+        if ($num === 3) { $args[] = $a; $args[] = $b; $args[] = $c; return phpurs_curry_fallback($fn, $args, $expected); }
+        if ($num > 4) {
+          $merged = \array_merge($args, \func_get_args());
+          $res = $fn(...\array_slice($merged, 0, $expected));
+          return $res(...\array_slice($merged, $expected));
+        }
+        $args[] = $a; $args[] = $b; $args[] = $c; $args[] = $d;
+        return $fn(...$args);
+      };
+    }
+    return function(...$more) use ($fn, $args, $expected) {
+      $merged = \array_merge($args, $more);
+      if (\count($merged) >= $expected) {
+        $res = $fn(...\array_slice($merged, 0, $expected));
+        if (\count($merged) > $expected) {
+          return $res(...\array_slice($merged, $expected));
+        }
+        return $res;
+      }
+      return phpurs_curry_fallback($fn, $merged, $expected);
+    };
+  }
+}
+if (!\function_exists(__NAMESPACE__ . '\\phpurs_execute_effect')) {
+  function phpurs_execute_effect($val) {
+    if (\is_callable($val)) {
+      return $val($GLOBALS['Data_Unit_unit']);
+    }
+    return $val;
+  }
+}
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+$ffi_Effect = \call_user_func(function() {
+  $exports = [];
+$pureE = function($x) { return function() use($x) { return $x; }; };
+$bindE = function($a, $f) use (&$bindE) {
+    return function() use($a, $f) {
+        $a_res = $a();
+        $res = $f($a_res);
+        return $res();
+    };
+};
+
+$untilE = function($f) {
+    return function() use ($f) {
+        while (!$f()) {}
+    };
+};
+
+$whileE = function($f, $a) use (&$whileE) {
+    return function() use ($f, $a) {
+        while ($f()) {
+            $a();
+        }
+    };
+};
+
+$forE = function($lo, $hi, $f) use (&$forE) {
+    return function() use ($lo, $hi, $f) {
+        for ($i = $lo; $i < $hi; $i++) {
+            $f($i)();
+        }
+    };
+};
+
+$foreachE = function($as, $f) use (&$foreachE) {
+    return function() use ($as, $f) {
+        foreach ($as as $a) {
+            $f($a)();
+        }
+    };
+};
+
+$exports['pureE'] = $pureE;
+$exports['bindE'] = $bindE;
+$exports['untilE'] = $untilE;
+$exports['whileE'] = $whileE;
+$exports['forE'] = $forE;
+$exports['foreachE'] = $foreachE;
+
+return $exports;
+  return $exports;
+});
+function majEffect_bindmajE($v0, $v1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_bindmajE';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Effect;
+  $f = (\array_key_exists('bindE', $ffi_Effect) ? $ffi_Effect['bindE'] : new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Effect_bindE'] = __NAMESPACE__ . '\\majEffect_bindmajE';
+
+function majEffect_formajE(int $v0, $v1 = null, $v2 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_formajE';
+  if ($__num < 3) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 3);
+  }
+  global $ffi_Effect;
+  $f = (\array_key_exists('forE', $ffi_Effect) ? $ffi_Effect['forE'] : new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1, $v2);
+}
+$GLOBALS['Effect_forE'] = __NAMESPACE__ . '\\majEffect_formajE';
+
+function majEffect_foreachmajE($v0, $v1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_foreachmajE';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Effect;
+  $f = (\array_key_exists('foreachE', $ffi_Effect) ? $ffi_Effect['foreachE'] : new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Effect_foreachE'] = __NAMESPACE__ . '\\majEffect_foreachmajE';
+
+function majEffect_puremajE($v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_puremajE';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Effect;
+  $f = (\array_key_exists('pureE', $ffi_Effect) ? $ffi_Effect['pureE'] : new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Effect_pureE'] = __NAMESPACE__ . '\\majEffect_puremajE';
+
+function majEffect_untilmajE($v0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_untilmajE';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  global $ffi_Effect;
+  $f = (\array_key_exists('untilE', $ffi_Effect) ? $ffi_Effect['untilE'] : new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0);
+}
+$GLOBALS['Effect_untilE'] = __NAMESPACE__ . '\\majEffect_untilmajE';
+
+function majEffect_whilemajE($v0, $v1 = null) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\majEffect_whilemajE';
+  if ($__num < 2) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 2);
+  }
+  global $ffi_Effect;
+  $f = (\array_key_exists('whileE', $ffi_Effect) ? $ffi_Effect['whileE'] : new class { public function __invoke(...$args) { return $this; } });
+  return $f($v0, $v1);
+}
+$GLOBALS['Effect_whileE'] = __NAMESPACE__ . '\\majEffect_whilemajE';
+
+
+
+
+
+// Effect_monadEffect
+$GLOBALS['Effect_monadEffect'] = (object)["Applicative0" => function($_dollar___unused_0) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_applicativeEffect'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Bind1" => function($_dollar___unused_0) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_bindEffect'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+
+// Effect_bindEffect
+$GLOBALS['Effect_bindEffect'] = (object)["bind" => $GLOBALS['Effect_bindE'], "Apply0" => function($_dollar___unused_0) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_applyEffect'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+
+// Effect_applyEffect
+$GLOBALS['Effect_applyEffect'] = (object)["apply" => function($f_0) {
+  $__num = \func_num_args();
+  $__res = function($a_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function() use ($a_1, $f_0, &$__fn) {
+$f_prime__2_0 = phpurs_execute_effect($f_0);
+$a_prime__3_1 = phpurs_execute_effect($a_1);
+return phpurs_execute_effect(phpurs_execute_effect((($GLOBALS['Effect_applicativeEffect'])->{'pure'})(($f_prime__2_0)($a_prime__3_1))));
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar___unused_0) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_functorEffect'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+
+// Effect_applicativeEffect
+$GLOBALS['Effect_applicativeEffect'] = (object)["pure" => $GLOBALS['Effect_pureE'], "Apply0" => function($_dollar___unused_0) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Effect_applyEffect'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+
+// Effect_functorEffect
+$GLOBALS['Effect_functorEffect'] = (object)["map" => function($f_0) {
+  $__num = \func_num_args();
+  $__res = function($a_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function() use ($a_1, $f_0, &$__fn) {
+$a_prime__2_0 = phpurs_execute_effect($a_1);
+return phpurs_execute_effect(($f_0)($a_prime__2_0));
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+
+// Effect_semigroupEffect
+function majEffect_semigroupmajEffect($dictSemigroup_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_semigroupmajEffect';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = (object)["append" => function($a_1) use ($dictSemigroup_0) {
+  $__num = \func_num_args();
+  $__res = function($b_2) use ($a_1, $dictSemigroup_0) {
+  $__num = \func_num_args();
+  $__res = function() use ($a_1, $b_2, $dictSemigroup_0, &$__fn) {
+$a_prime__3_0 = phpurs_execute_effect($a_1);
+$f_prime__3_0 = phpurs_execute_effect(phpurs_execute_effect((($dictSemigroup_0)->{'append'})($a_prime__3_0)));
+$a_prime__4_2 = phpurs_execute_effect($b_2);
+return phpurs_execute_effect(phpurs_execute_effect(($f_prime__3_0)($a_prime__4_2)));
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_semigroupEffect'] = __NAMESPACE__ . '\\majEffect_semigroupmajEffect';
+
+// Effect_monoidEffect
+function majEffect_monoidmajEffect($dictMonoid_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majEffect_monoidmajEffect';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__local_var_1_0 = (($dictMonoid_0)->{'Semigroup0'})(null);
+  $semigroupEffect1_1_0 = (object)["append" => function($a_2) use ($__local_var_1_0) {
+  $__num = \func_num_args();
+  $__res = function($b_3) use ($__local_var_1_0, $a_2) {
+  $__num = \func_num_args();
+  $__res = function() use ($__local_var_1_0, $a_2, $b_3, &$__fn) {
+$a_prime__4_1 = phpurs_execute_effect($a_2);
+$f_prime__4_1 = phpurs_execute_effect(phpurs_execute_effect((($__local_var_1_0)->{'append'})($a_prime__4_1)));
+$a_prime__5_3 = phpurs_execute_effect($b_3);
+return phpurs_execute_effect(phpurs_execute_effect(($f_prime__4_1)($a_prime__5_3)));
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  $__res = (object)["mempty" => function() use ($dictMonoid_0, &$__fn) {
+$__local_var_2_5 = ($dictMonoid_0)->{'mempty'};
+return $__local_var_2_5;
+}, "Semigroup0" => function($_dollar___unused_2) use ($semigroupEffect1_1_0) {
+  $__num = \func_num_args();
+  $__res = $semigroupEffect1_1_0;
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Effect_monoidEffect'] = __NAMESPACE__ . '\\majEffect_monoidmajEffect';
+

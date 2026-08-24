@@ -114,21 +114,22 @@ Total Execution Time    | ~ 131.04 ms     |
 
 PHP Benchmark           | Compiled PHP (normal WIP) | Native PHP FFI | Native PHP FFI Cheatcode |
 ----------------------- | ------------------------- | -------------- | ------------------------ |
-AST Evaluation          | ~ 18 μs                   | 
-Fibonacci               | ~ 354 μs                  | 
-List Processing         | ~ 2189 μs                 | 
-Tail Call Optimization  | ~ 23244 μs                | 
-Deep Record Updates     | ~ 4943 μs                 | 
-Ackermann               | ~ 418 μs                  | 
-Church Numerals         | ~ 17684 μs                | 
-Prime Sieve             | ~ 7576 μs                 | 
-Red-Black Tree          | ~ 300566 μs               | 
-Polymorphism            | ~ 10591 μs                | 
-State Monad             | ~ 539 μs                  | 
-Lazy Evaluation         | ~ 95661 μs                | 
-Array Processing        | ~ 1375 μs                 | 
------------------------ | ------------------------- | ------------------------ |
-Total Execution Time    | ~ 465.16 ms               | 
+AST Evaluation          | ~ 18 μs                   | ~ 9 μs         | ~ 7 μs                   |
+Fibonacci               | ~ 354 μs                  | ~ 11 μs        | ~ 8 μs                   |
+List Processing         | ~ 2189 μs                 | ~ 4 μs         | ~ 178 μs                 |
+Tail Call Optimization  | ~ 23244 μs                | ~ 1937 μs      | ~ 109 μs                 |
+Deep Record Updates     | ~ 4943 μs                 | ~ 4016 μs      | ~ 1361 μs                |
+Ackermann               | ~ 418 μs                  | ~ 665 μs       | ~ 589 μs                 |
+Church Numerals         | ~ 17684 μs                | ~ 8922 μs      | ~ 112 μs                 |
+Prime Sieve             | ~ 7576 μs                 | ~ 7 μs         | ~ 281 μs                 |
+Red-Black Tree          | ~ 300566 μs               | ~ 730387 μs    | ~ 515246 μs              |
+Polymorphism            | ~ 10591 μs                | ~ 1169540 μs   | ~ 245731 μs              |
+State Monad             | ~ 539 μs                  | ~ 358 μs       | ~ 193 μs                 |
+Lazy Evaluation         | ~ 95661 μs                | ~ 151601 μs    | ~ 89 μs                  |
+Array Processing        | ~ 1375 μs                 | ~ 448 μs       | ~ 219 μs                 |
+RowToList               | -                         | ~ 4 μs         | ~ 3 μs                   |
+----------------------- | ------------------------- | -------------- | ------------------------ |
+Total Execution Time    | ~ 465.16 ms               | ~ 2067.91 ms   | ~ 764.13 ms              |
 
 Rust Benchmark          | Compiled Rust (young WIP) | Native Rust FFI | Native Rust FFI Cheatcode |
 ----------------------- | ------------------------- | --------------- | ------------------------- |

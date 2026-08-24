@@ -2,8 +2,8 @@ module AppFFI where
 
 import Prelude
 import Effect (Effect)
-import Effect.Console (log)
-import Bench (runBench, formatNumber)
+import Bench (runBench)
+
 import Test.AstTreeFFI as AstTreeFFI
 import Test.FibFFI as FibFFI
 import Test.ListOpsFFI as ListOpsFFI
@@ -19,22 +19,49 @@ import Test.LazyEvaluationFFI as LazyEvaluationFFI
 import Test.ArrayOpsFFI as ArrayOpsFFI
 import Test.RowToListFFI as RowToListFFI
 
+import Test.AstTreeFFICheatcode as AstTreeFFICheatcode
+import Test.FibFFICheatcode as FibFFICheatcode
+import Test.ListOpsFFICheatcode as ListOpsFFICheatcode
+import Test.TCOFFICheatcode as TCOFFICheatcode
+import Test.RecordsFFICheatcode as RecordsFFICheatcode
+import Test.AckermannFFICheatcode as AckermannFFICheatcode
+import Test.ChurchFFICheatcode as ChurchFFICheatcode
+import Test.PrimesFFICheatcode as PrimesFFICheatcode
+import Test.RBTreeFFICheatcode as RBTreeFFICheatcode
+import Test.PolymorphismFFICheatcode as PolymorphismFFICheatcode
+import Test.StateMonadFFICheatcode as StateMonadFFICheatcode
+import Test.LazyEvaluationFFICheatcode as LazyEvaluationFFICheatcode
+import Test.ArrayOpsFFICheatcode as ArrayOpsFFICheatcode
+import Test.RowToListFFICheatcode as RowToListFFICheatcode
+
 main :: Effect Unit
 main = do
-  t1 <- runBench AstTreeFFI.describe AstTreeFFI.act
-  t2 <- runBench FibFFI.describe FibFFI.act
-  t3 <- runBench ListOpsFFI.describe ListOpsFFI.act
-  t4 <- runBench TCOFFI.describe TCOFFI.act
-  t5 <- runBench RecordsFFI.describe RecordsFFI.act
-  t6 <- runBench AckermannFFI.describe AckermannFFI.act
-  t7 <- runBench ChurchFFI.describe ChurchFFI.act
-  t8 <- runBench PrimesFFI.describe PrimesFFI.act
-  t9 <- runBench RBTreeFFI.describe RBTreeFFI.act
-  t10 <- runBench PolymorphismFFI.describe PolymorphismFFI.act
-  t11 <- runBench StateMonadFFI.describe StateMonadFFI.act
-  t12 <- runBench LazyEvaluationFFI.describe LazyEvaluationFFI.act
-  t13 <- runBench ArrayOpsFFI.describe ArrayOpsFFI.act
-  t14 <- runBench RowToListFFI.describe RowToListFFI.act
+  void $ runBench AstTreeFFI.describe AstTreeFFI.act
+  void $ runBench FibFFI.describe FibFFI.act
+  void $ runBench ListOpsFFI.describe ListOpsFFI.act
+  void $ runBench TCOFFI.describe TCOFFI.act
+  void $ runBench RecordsFFI.describe RecordsFFI.act
+  void $ runBench AckermannFFI.describe AckermannFFI.act
+  void $ runBench ChurchFFI.describe ChurchFFI.act
+  void $ runBench PrimesFFI.describe PrimesFFI.act
+  void $ runBench RBTreeFFI.describe RBTreeFFI.act
+  void $ runBench PolymorphismFFI.describe PolymorphismFFI.act
+  void $ runBench StateMonadFFI.describe StateMonadFFI.act
+  void $ runBench LazyEvaluationFFI.describe LazyEvaluationFFI.act
+  void $ runBench ArrayOpsFFI.describe ArrayOpsFFI.act
+  void $ runBench RowToListFFI.describe RowToListFFI.act
 
-  let totalMs = (t1 / 1000.0) + (t2 / 1000.0) + (t3 / 1000.0) + (t4 / 1000.0) + (t5 / 1000.0) + (t6 / 1000.0) + (t7 / 1000.0) + (t8 / 1000.0) + (t9 / 1000.0) + (t10 / 1000.0) + (t11 / 1000.0) + (t12 / 1000.0) + (t13 / 1000.0) + (t14 / 1000.0)
-  log $ "\n==================================================\n\nTotal exec time: " <> formatNumber totalMs <> " ms\n"
+  void $ runBench AstTreeFFICheatcode.describe AstTreeFFICheatcode.act
+  void $ runBench FibFFICheatcode.describe FibFFICheatcode.act
+  void $ runBench ListOpsFFICheatcode.describe ListOpsFFICheatcode.act
+  void $ runBench TCOFFICheatcode.describe TCOFFICheatcode.act
+  void $ runBench RecordsFFICheatcode.describe RecordsFFICheatcode.act
+  void $ runBench AckermannFFICheatcode.describe AckermannFFICheatcode.act
+  void $ runBench ChurchFFICheatcode.describe ChurchFFICheatcode.act
+  void $ runBench PrimesFFICheatcode.describe PrimesFFICheatcode.act
+  void $ runBench RBTreeFFICheatcode.describe RBTreeFFICheatcode.act
+  void $ runBench PolymorphismFFICheatcode.describe PolymorphismFFICheatcode.act
+  void $ runBench StateMonadFFICheatcode.describe StateMonadFFICheatcode.act
+  void $ runBench LazyEvaluationFFICheatcode.describe LazyEvaluationFFICheatcode.act
+  void $ runBench ArrayOpsFFICheatcode.describe ArrayOpsFFICheatcode.act
+  void $ runBench RowToListFFICheatcode.describe RowToListFFICheatcode.act

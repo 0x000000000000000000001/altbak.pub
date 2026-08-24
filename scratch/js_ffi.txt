@@ -1,0 +1,806 @@
+--- src/Test/ArrayOpsFFI.js ---
+export const runArrayOpsFFI = function(limit) {
+  let n = Math.floor(limit);
+  let arr = [];
+  for (let i = 1; i <= n; i++) {
+    arr.push(i);
+  }
+  
+  let evens = arr.filter(function(x) { return x % 2 === 0; });
+  
+  let sum = evens.reduce(function(acc, x) { return acc + x; }, 0);
+  
+  return sum;
+};
+
+--- src/Test/AstTreeFFI.js ---
+export const runAstTreeFFI = function(limit) {
+  let depth = Math.floor(limit);
+  let tree = buildTree(depth);
+  return evalTree(tree);
+};
+
+function buildTree(depth) {
+  if (depth === 0) {
+    return { type: "Literal", value: 1 };
+  }
+  return {
+    type: "Add",
+    left: buildTree(depth - 1),
+    right: buildTree(depth - 1)
+  };
+}
+
+function evalTree(node) {
+  if (node.type === "Literal") {
+    return node.value;
+  }
+  if (node.type === "Add") {
+    return evalTree(node.left) + evalTree(node.right);
+  }
+  return 0;
+}
+
+--- src/Test/PolymorphismFFI.js ---
+export const runPolymorphismFFI = function(limit) {
+  let dummy = Math.floor(limit);
+  return polyLoop(intMonoidish)(dummy)(0);
+};
+
+const intMonoidish = {
+  mempty_: 1,
+  mappend_: function(x) {
+    return function(y) {
+      return x + y;
+    };
+  }
+};
+
+function polyLoop(dict) {
+  return function(n_init) {
+    return function(acc_init) {
+      function go(n, acc) {
+        let currN = n;
+        let currAcc = acc;
+        while (currN > 0) {
+          currAcc = dict.mappend_(currAcc)(dict.mempty_);
+          currN--;
+        }
+        return currAcc;
+      }
+      return go(n_init, acc_init);
+    };
+  };
+}
+
+--- src/Test/RBTreeFFI.js ---
+export const runRBTreeFFI = function(limit) {
+  let n = Math.floor(limit);
+  let root = null;
+  for (let i = 0; i < n; i++) {
+    root = insert(root, i, i);
+  }
+  
+  let sum = 0;
+  for (let i = 0; i < n; i++) {
+    let node = lookup(root, i);
+    if (node !== null) {
+      sum += node.value;
+    }
+  }
+  return sum;
+};
+
+function insert(root, key, value) {
+  if (root === null) {
+    return { color: 'B', left: null, key: key, value: value, right: null };
+  }
+  
+  function ins(node) {
+    if (node === null) {
+      return { color: 'R', left: null, key: key, value: value, right: null };
+    }
+    if (key < node.key) {
+      return balance(node.color, ins(node.left), node.key, node.value, node.right);
+    } else if (key > node.key) {
+      return balance(node.color, node.left, node.key, node.value, ins(node.right));
+    } else {
+      return { color: node.color, left: node.left, key: key, value: value, right: node.right };
+    }
+  }
+  
+  let res = ins(root);
+  res.color = 'B';
+  return res;
+}
+
+function balance(color, left, key, value, right) {
+  if (color === 'B') {
+    if (left !== null && left.color === 'R') {
+      if (left.left !== null && left.left.color === 'R') {
+        return {
+          color: 'R',
+          left: { color: 'B', left: left.left.left, key: left.left.key, value: left.left.value, right: left.left.right },
+          key: left.key,
+          value: left.value,
+          right: { color: 'B', left: left.right, key: key, value: value, right: right }
+        };
+      }
+      if (left.right !== null && left.right.color === 'R') {
+        return {
+          color: 'R',
+          left: { color: 'B', left: left.left, key: left.key, value: left.value, right: left.right.left },
+          key: left.right.key,
+          value: left.right.value,
+          right: { color: 'B', left: left.right.right, key: key, value: value, right: right }
+        };
+      }
+    }
+    if (right !== null && right.color === 'R') {
+      if (right.left !== null && right.left.color === 'R') {
+        return {
+          color: 'R',
+          left: { color: 'B', left: left, key: key, value: value, right: right.left.left },
+          key: right.left.key,
+          value: right.left.value,
+          right: { color: 'B', left: right.left.right, key: right.key, value: right.value, right: right.right }
+        };
+      }
+      if (right.right !== null && right.right.color === 'R') {
+        return {
+          color: 'R',
+          left: { color: 'B', left: left, key: key, value: value, right: right.left },
+          key: right.key,
+          value: right.value,
+          right: { color: 'B', left: right.right.left, key: right.right.key, value: right.right.value, right: right.right.right }
+        };
+      }
+    }
+  }
+  return { color: color, left: left, key: key, value: value, right: right };
+}
+
+function lookup(node, key) {
+  while (node !== null) {
+    if (key < node.key) {
+      node = node.left;
+    } else if (key > node.key) {
+      node = node.right;
+    } else {
+      return node;
+    }
+  }
+  return null;
+}
+
+--- src/Test/RecordsFFI.js ---
+export const runRecordsFFI = function(limit) {
+  let dummy = Math.floor(limit);
+  let initial = { a: 0, b: { c: 0, d: { e: 0, f: 0 } } };
+  return updateRec(dummy, initial).b.d.f;
+};
+
+function updateRec(n, r) {
+  let currN = n;
+  let currR = r;
+  
+  while (currN > 0) {
+    let newD = {
+      e: currR.b.d.e + 3,
+      f: currR.b.d.f + (currN % 5)
+    };
+    let newB = {
+      c: currR.b.c + 2,
+      d: newD
+    };
+    currR = {
+      a: currR.a + 1,
+      b: newB
+    };
+    
+    currN = currN - 1;
+  }
+  
+  return currR;
+}
+
+--- src/Test/ListOpsFFI.js ---
+export const runListOpsFFI = function(limit) {
+  let n = Math.floor(limit);
+  return foldl(function(acc) {
+    return function(x) {
+      return acc + x;
+    };
+  })(0)(filterEvens(range(1)(n)));
+};
+
+function range(start) {
+  return function(end) {
+    function go(curr, acc) {
+      if (curr < start) return acc;
+      return go(curr - 1, { type: "Cons", value0: curr, value1: acc });
+    }
+    return go(end, { type: "Nil" });
+  };
+}
+
+function filterEvens(lst) {
+  function go(list, acc) {
+    if (list.type === "Nil") return acc;
+    let x = list.value0;
+    let xs = list.value1;
+    if (x % 2 === 0) {
+      return go(xs, { type: "Cons", value0: x, value1: acc });
+    } else {
+      return go(xs, acc);
+    }
+  }
+  return go(lst, { type: "Nil" });
+}
+
+function foldl(f) {
+  return function(acc) {
+    return function(lst) {
+      function go(list, a) {
+        if (list.type === "Nil") return a;
+        return go(list.value1, f(a)(list.value0));
+      }
+      return go(lst, acc);
+    };
+  };
+}
+
+--- src/Test/RowToListFFI.js ---
+export const runRowToListFFI = function(limit) {
+  let dummy = Math.floor(limit);
+  let rec = { a: 1, b: "two", c: true, d: 4.0, e: "five" };
+  
+  let dict = dictCons(dictCons(dictCons(dictCons(dictCons(dictNil)))));
+  return keysImpl(dict)({});
+};
+
+const dictNil = {
+  keysImpl: function(_proxy) {
+    return 0;
+  }
+};
+
+function dictCons(dictTail) {
+  return {
+    keysImpl: function(_proxy) {
+      return 1 + dictTail.keysImpl({});
+    }
+  };
+}
+
+function keysImpl(dict) {
+  return dict.keysImpl;
+}
+
+--- src/Test/FibFFI.js ---
+export const runFibFFI = function(limit) {
+  return fib(Math.floor(limit));
+};
+
+function fib(n) {
+  if (n === 0) return 0;
+  if (n === 1) return 1;
+  return fib(n - 1) + fib(n - 2);
+}
+
+--- src/Test/AckermannFFI.js ---
+export const runAckermannFFI = function(ignore) {
+  return ack(3, 4);
+};
+
+function ack(m, n) {
+  if (m === 0) return n + 1;
+  if (m > 0 && n === 0) return ack(m - 1, 1);
+  return ack(m - 1, ack(m, n - 1));
+}
+
+--- src/Test/LazyEvaluationFFI.js ---
+export const runLazyEvaluationFFI = function(limit) {
+  let n = Math.floor(limit);
+  
+  function force(lazy) {
+    return lazy();
+  }
+  
+  function defer(f) {
+    return f;
+  }
+  
+  function buildThunks(depth, acc) {
+    if (depth === 0) return acc;
+    return buildThunks(depth - 1, defer(() => force(acc) + 1));
+  }
+  
+  function runManyTimes(times, acc) {
+    let currTimes = times;
+    let currAcc = acc;
+    while (currTimes > 0) {
+      currAcc += force(buildThunks(1000, defer(() => 0)));
+      currTimes--;
+    }
+    return currAcc;
+  }
+  
+  return runManyTimes(n, 0);
+};
+
+--- src/Test/ChurchFFI.js ---
+export const runChurchFFI = function(limit) {
+  let dummy = Math.floor(limit);
+  return toInt(c100k(dummy));
+};
+
+function zeroC(f) {
+  return function(x) {
+    return x;
+  };
+}
+
+function succC(n) {
+  return function(f) {
+    return function(x) {
+      return f(n(f)(x));
+    };
+  };
+}
+
+function addC(m) {
+  return function(n) {
+    return function(f) {
+      return function(x) {
+        return m(f)(n(f)(x));
+      };
+    };
+  };
+}
+
+function mulC(m) {
+  return function(n) {
+    return function(f) {
+      return function(x) {
+        return m(n(f))(x);
+      };
+    };
+  };
+}
+
+function fromInt(n) {
+  if (n === 0) return zeroC;
+  return succC(fromInt(n - 1));
+}
+
+function toInt(n) {
+  return n(function(x) { return x + 1; })(0);
+}
+
+function c10(n) {
+  return fromInt(n);
+}
+
+function c100(n) {
+  return mulC(c10(n))(c10(n));
+}
+
+function c10k(n) {
+  return mulC(c100(n))(c100(n));
+}
+
+function c100k(n) {
+  return mulC(c10k(n))(c10(n));
+}
+
+--- src/Test/StateMonadFFI.js ---
+export const runStateMonadFFI = function(limit) {
+  let dummy = Math.floor(limit);
+  return runManyTimes(dummy, 0);
+};
+
+function runState(state) {
+  return function(s) {
+    return state(s);
+  };
+}
+
+function bindState(state) {
+  return function(g) {
+    return function(s) {
+      let r1 = state(s);
+      let gPrime = g(r1.val);
+      return gPrime(r1.state);
+    };
+  };
+}
+
+function pureState(a) {
+  return function(s) {
+    return { val: a, state: s };
+  };
+}
+
+function get(s) {
+  return { val: s, state: s };
+}
+
+function put(s) {
+  return function(_s) {
+    return { val: null, state: s };
+  };
+}
+
+function modify(f) {
+  return bindState(get)(function(s) {
+    return put(f(s));
+  });
+}
+
+function chainModifications(n) {
+  if (n === 0) return pureState(null);
+  return bindState(modify(function(x) { return x + 1; }))(function(_ignore) {
+    return chainModifications(n - 1);
+  });
+}
+
+function runManyTimes(n, acc) {
+  let currN = n;
+  let currAcc = acc;
+  while (currN > 0) {
+    currAcc += runState(chainModifications(60))(0).state;
+    currN--;
+  }
+  return currAcc;
+}
+
+--- src/Test/TCOFFI.js ---
+export const runTCOFFI = function(limit) {
+  let n = Math.floor(limit);
+  let acc = 0;
+  while (n > 0) {
+    acc += (n % 3);
+    n -= 1;
+  }
+  return acc;
+};
+
+--- src/Test/PrimesFFI.js ---
+export const runPrimesFFI = function(limit) {
+  let n = Math.floor(limit);
+  return sumList(sieve(range(2)(n)));
+};
+
+function range(start) {
+  return function(end) {
+    function go(curr, acc) {
+      if (curr < start) return acc;
+      return go(curr - 1, { type: "Cons", value0: curr, value1: acc });
+    }
+    return go(end, { type: "Nil" });
+  };
+}
+
+function filter(p) {
+  return function(lst) {
+    function go(list, acc) {
+      if (list.type === "Nil") {
+        function rev(l, a) {
+          if (l.type === "Nil") return a;
+          return rev(l.value1, { type: "Cons", value0: l.value0, value1: a });
+        }
+        return rev(acc, { type: "Nil" });
+      }
+      let x = list.value0;
+      let xs = list.value1;
+      if (p(x)) {
+        return go(xs, { type: "Cons", value0: x, value1: acc });
+      } else {
+        return go(xs, acc);
+      }
+    }
+    return go(lst, { type: "Nil" });
+  };
+}
+
+function sieve(lst) {
+  if (lst.type === "Nil") return { type: "Nil" };
+  let p = lst.value0;
+  let xs = lst.value1;
+  return {
+    type: "Cons",
+    value0: p,
+    value1: sieve(filter(function(x) { return x % p !== 0; })(xs))
+  };
+}
+
+function sumList(lst) {
+  function go(list, acc) {
+    if (list.type === "Nil") return acc;
+    return go(list.value1, acc + list.value0);
+  }
+  return go(lst, 0);
+}
+
+--- src/Test/AckermannFFICheatcode.js ---
+export const runAckermannFFICheatcode = function(ignore) {
+  return ack(3, 4);
+};
+
+function ack(m, n) {
+  if (m === 0) return n + 1;
+  if (m > 0 && n === 0) return ack(m - 1, 1);
+  return ack(m - 1, ack(m, n - 1));
+}
+
+--- src/Test/AstTreeFFICheatcode.js ---
+export const runAstTreeFFICheatcode = function(limit) {
+  let depth = Math.floor(limit);
+  let tree = buildTree(depth);
+  return evalTree(tree);
+};
+
+function buildTree(depth) {
+  if (depth === 0) {
+    return { type: "Literal", value: 1 };
+  }
+  return {
+    type: "Add",
+    left: buildTree(depth - 1),
+    right: buildTree(depth - 1)
+  };
+}
+
+function evalTree(node) {
+  if (node.type === "Literal") {
+    return node.value;
+  }
+  if (node.type === "Add") {
+    return evalTree(node.left) + evalTree(node.right);
+  }
+  return 0;
+}
+
+--- src/Test/PolymorphismFFICheatcode.js ---
+export const runPolymorphismFFICheatcode = function(limit) {
+  let n = Math.floor(limit);
+  let sum = 0;
+  for (let i = 0; i < n; i++) {
+    sum += computeLength("hello") + computeLength([1, 2, 3]);
+  }
+  return sum;
+};
+
+function computeLength(x) {
+  return x.length;
+}
+
+--- src/Test/ListOpsFFICheatcode.js ---
+export const runListOpsFFICheatcode = function(limit) {
+  let n = Math.floor(limit);
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    if (i % 2 === 0) {
+      sum += i;
+    }
+  }
+  return sum;
+};
+
+--- src/Test/RecordsFFICheatcode.js ---
+export const runRecordsFFICheatcode = function(limit) {
+  let n = Math.floor(limit);
+  let rec = { a: { b: { c: { d: { e: 0 } } } } };
+  for (let i = 0; i < n; i++) {
+    rec = {
+      a: {
+        b: {
+          c: {
+            d: {
+              e: rec.a.b.c.d.e + 1
+            }
+          }
+        }
+      }
+    };
+  }
+  return rec.a.b.c.d.e;
+};
+
+--- src/Test/LazyEvaluationFFICheatcode.js ---
+export const runLazyEvaluationFFICheatcode = function(limit) {
+  let n = Math.floor(limit);
+  let acc = 0;
+  for (let i = 0; i < n; i++) {
+    acc += 1000;
+  }
+  return acc;
+};
+
+--- src/Test/ChurchFFICheatcode.js ---
+export const runChurchFFICheatcode = function(limit) {
+  let n = Math.floor(limit);
+  let acc = 0;
+  for (let i = 0; i < n * 10000; i++) {
+    acc++;
+  }
+  return acc;
+};
+
+--- src/Test/ArrayOpsFFICheatcode.js ---
+export const runArrayOpsFFICheatcode = function(limit) {
+  let n = Math.floor(limit);
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    if (i % 2 === 0) {
+      sum += i;
+    }
+  }
+  return sum;
+};
+
+--- src/Test/PrimesFFICheatcode.js ---
+export const runPrimesFFICheatcode = function(limit) {
+  let n = Math.floor(limit);
+  if (n < 2) return 0;
+  let sieve = new Uint8Array(n + 1);
+  for (let i = 2; i <= n; i++) sieve[i] = 1;
+  
+  for (let p = 2; p * p <= n; p++) {
+    if (sieve[p]) {
+      for (let i = p * p; i <= n; i += p) {
+        sieve[i] = 0;
+      }
+    }
+  }
+  
+  let sum = 0;
+  for (let p = 2; p <= n; p++) {
+    if (sieve[p]) {
+      sum += p;
+    }
+  }
+  return sum;
+};
+
+--- src/Test/TCOFFICheatcode.js ---
+export const runTCOFFICheatcode = function(limit) {
+  let n = Math.floor(limit);
+  let acc = 0;
+  while (n > 0) {
+    acc += n;
+    n -= 1;
+  }
+  return acc;
+};
+
+--- src/Test/FibFFICheatcode.js ---
+export const runFibFFICheatcode = function(n) {
+  if (n === 0) return 0;
+  if (n === 1) return 1;
+  return runFibFFICheatcode(n - 1) + runFibFFICheatcode(n - 2);
+};
+
+--- src/Test/StateMonadFFICheatcode.js ---
+export const runStateMonadFFICheatcode = function(limit) {
+  let state = 0;
+  for (let i = 0; i < 60; i++) {
+    for (let j = 0; j < 20; j++) {
+      state += 1;
+    }
+  }
+  return state;
+};
+
+--- src/Test/RowToListFFICheatcode.js ---
+export const runRowToListFFICheatcode = function(limit) {
+  let n = Math.floor(limit);
+  let sum = 0;
+  for (let i = 0; i < n; i++) {
+    let rec = { a: 1, b: "hello", c: true };
+    sum += rec.a;
+  }
+  return sum;
+};
+
+--- src/Test/RBTreeFFICheatcode.js ---
+export const runRBTreeFFICheatcode = function(limit) {
+  let n = Math.floor(limit);
+  let root = null;
+  for (let i = 0; i < n; i++) {
+    root = insert(root, i, i);
+  }
+  
+  let sum = 0;
+  for (let i = 0; i < n; i++) {
+    let node = lookup(root, i);
+    if (node !== null) {
+      sum += node.value;
+    }
+  }
+  return sum;
+};
+
+function insert(root, key, value) {
+  if (root === null) {
+    return { color: 'B', left: null, key: key, value: value, right: null };
+  }
+  
+  function ins(node) {
+    if (node === null) {
+      return { color: 'R', left: null, key: key, value: value, right: null };
+    }
+    if (key < node.key) {
+      return balance(node.color, ins(node.left), node.key, node.value, node.right);
+    } else if (key > node.key) {
+      return balance(node.color, node.left, node.key, node.value, ins(node.right));
+    } else {
+      return { color: node.color, left: node.left, key: key, value: value, right: node.right };
+    }
+  }
+  
+  let res = ins(root);
+  res.color = 'B';
+  return res;
+}
+
+function balance(color, left, key, value, right) {
+  if (color === 'B') {
+    if (left !== null && left.color === 'R') {
+      if (left.left !== null && left.left.color === 'R') {
+        return {
+          color: 'R',
+          left: { color: 'B', left: left.left.left, key: left.left.key, value: left.left.value, right: left.left.right },
+          key: left.key,
+          value: left.value,
+          right: { color: 'B', left: left.right, key: key, value: value, right: right }
+        };
+      }
+      if (left.right !== null && left.right.color === 'R') {
+        return {
+          color: 'R',
+          left: { color: 'B', left: left.left, key: left.key, value: left.value, right: left.right.left },
+          key: left.right.key,
+          value: left.right.value,
+          right: { color: 'B', left: left.right.right, key: key, value: value, right: right }
+        };
+      }
+    }
+    if (right !== null && right.color === 'R') {
+      if (right.left !== null && right.left.color === 'R') {
+        return {
+          color: 'R',
+          left: { color: 'B', left: left, key: key, value: value, right: right.left.left },
+          key: right.left.key,
+          value: right.left.value,
+          right: { color: 'B', left: right.left.right, key: right.key, value: right.value, right: right.right }
+        };
+      }
+      if (right.right !== null && right.right.color === 'R') {
+        return {
+          color: 'R',
+          left: { color: 'B', left: left, key: key, value: value, right: right.left },
+          key: right.key,
+          value: right.value,
+          right: { color: 'B', left: right.right.left, key: right.right.key, value: right.right.value, right: right.right.right }
+        };
+      }
+    }
+  }
+  return { color: color, left: left, key: key, value: value, right: right };
+}
+
+function lookup(node, key) {
+  while (node !== null) {
+    if (key < node.key) {
+      node = node.left;
+    } else if (key > node.key) {
+      node = node.right;
+    } else {
+      return node;
+    }
+  }
+  return null;
+}
+

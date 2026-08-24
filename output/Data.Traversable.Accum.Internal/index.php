@@ -1,0 +1,312 @@
+<?php
+
+namespace Data\Traversable\Accum\Internal;
+
+// ALL IMPORTS: Control.Applicative, Control.Apply, Data.Functor, Data.Traversable.Accum, Data.Traversable.Accum.Internal, Prelude, Prim
+// TO REQUIRE: Control.Applicative, Control.Apply, Data.Functor, Data.Traversable.Accum, Data.Traversable.Accum.Internal, Prelude
+require_once __DIR__ . '/../Control.Applicative/index.php';
+require_once __DIR__ . '/../Control.Apply/index.php';
+require_once __DIR__ . '/../Data.Functor/index.php';
+require_once __DIR__ . '/../Data.Traversable.Accum/index.php';
+require_once __DIR__ . '/../Data.Traversable.Accum.Internal/index.php';
+require_once __DIR__ . '/../Prelude/index.php';
+
+if (!class_exists(__NAMESPACE__ . '\\Phpurs_Data0')) {
+  class Phpurs_Data0 { public $tag; public function __construct($t) { $this->tag = $t; } }
+  class Phpurs_Data1 { public $tag; public $value0; public function __construct($t, $value0) { $this->tag = $t; $this->value0 = $value0; } }
+  class Phpurs_Data2 { public $tag; public $value0, $value1; public function __construct($t, $value0, $value1) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; } }
+  class Phpurs_Data3 { public $tag; public $value0, $value1, $value2; public function __construct($t, $value0, $value1, $value2) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; } }
+  class Phpurs_Data4 { public $tag; public $value0, $value1, $value2, $value3; public function __construct($t, $value0, $value1, $value2, $value3) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; } }
+  class Phpurs_Data5 { public $tag; public $value0, $value1, $value2, $value3, $value4; public function __construct($t, $value0, $value1, $value2, $value3, $value4) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; } }
+  class Phpurs_Data6 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; } }
+  class Phpurs_Data7 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5, $value6; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5, $value6) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; $this->value6 = $value6; } }
+  class Phpurs_Data8 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; $this->value6 = $value6; $this->value7 = $value7; } }
+  class Phpurs_Data9 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; $this->value6 = $value6; $this->value7 = $value7; $this->value8 = $value8; } }
+  class Phpurs_Data10 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; $this->value6 = $value6; $this->value7 = $value7; $this->value8 = $value8; $this->value9 = $value9; } }
+  class Phpurs_Data11 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9, $value10; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9, $value10) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; $this->value6 = $value6; $this->value7 = $value7; $this->value8 = $value8; $this->value9 = $value9; $this->value10 = $value10; } }
+  class Phpurs_Data12 { public $tag; public $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9, $value10, $value11; public function __construct($t, $value0, $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9, $value10, $value11) { $this->tag = $t; $this->value0 = $value0; $this->value1 = $value1; $this->value2 = $value2; $this->value3 = $value3; $this->value4 = $value4; $this->value5 = $value5; $this->value6 = $value6; $this->value7 = $value7; $this->value8 = $value8; $this->value9 = $value9; $this->value10 = $value10; $this->value11 = $value11; } }
+}
+if (!\function_exists(__NAMESPACE__ . '\\phpurs_curry_fallback')) {
+  function phpurs_curry_fallback($fn, $args, $expected) {
+    $missing = $expected - \count($args);
+    if ($missing === 1) {
+      return function($a) use ($fn, $args, $expected) {
+        $num = \func_num_args();
+        if ($num > 1) {
+          $merged = \array_merge($args, \func_get_args());
+          $res = $fn(...\array_slice($merged, 0, $expected));
+          return $res(...\array_slice($merged, $expected));
+        }
+        $args[] = $a;
+        return $fn(...$args);
+      };
+    }
+    if ($missing === 2) {
+      return function($a, $b = null) use ($fn, $args, $expected) {
+        $num = \func_num_args();
+        if ($num === 1) { $args[] = $a; return phpurs_curry_fallback($fn, $args, $expected); }
+        if ($num > 2) {
+          $merged = \array_merge($args, \func_get_args());
+          $res = $fn(...\array_slice($merged, 0, $expected));
+          return $res(...\array_slice($merged, $expected));
+        }
+        $args[] = $a; $args[] = $b;
+        return $fn(...$args);
+      };
+    }
+    if ($missing === 3) {
+      return function($a, $b = null, $c = null) use ($fn, $args, $expected) {
+        $num = \func_num_args();
+        if ($num === 1) { $args[] = $a; return phpurs_curry_fallback($fn, $args, $expected); }
+        if ($num === 2) { $args[] = $a; $args[] = $b; return phpurs_curry_fallback($fn, $args, $expected); }
+        if ($num > 3) {
+          $merged = \array_merge($args, \func_get_args());
+          $res = $fn(...\array_slice($merged, 0, $expected));
+          return $res(...\array_slice($merged, $expected));
+        }
+        $args[] = $a; $args[] = $b; $args[] = $c;
+        return $fn(...$args);
+      };
+    }
+    if ($missing === 4) {
+      return function($a, $b = null, $c = null, $d = null) use ($fn, $args, $expected) {
+        $num = \func_num_args();
+        if ($num === 1) { $args[] = $a; return phpurs_curry_fallback($fn, $args, $expected); }
+        if ($num === 2) { $args[] = $a; $args[] = $b; return phpurs_curry_fallback($fn, $args, $expected); }
+        if ($num === 3) { $args[] = $a; $args[] = $b; $args[] = $c; return phpurs_curry_fallback($fn, $args, $expected); }
+        if ($num > 4) {
+          $merged = \array_merge($args, \func_get_args());
+          $res = $fn(...\array_slice($merged, 0, $expected));
+          return $res(...\array_slice($merged, $expected));
+        }
+        $args[] = $a; $args[] = $b; $args[] = $c; $args[] = $d;
+        return $fn(...$args);
+      };
+    }
+    return function(...$more) use ($fn, $args, $expected) {
+      $merged = \array_merge($args, $more);
+      if (\count($merged) >= $expected) {
+        $res = $fn(...\array_slice($merged, 0, $expected));
+        if (\count($merged) > $expected) {
+          return $res(...\array_slice($merged, $expected));
+        }
+        return $res;
+      }
+      return phpurs_curry_fallback($fn, $merged, $expected);
+    };
+  }
+}
+if (!\function_exists(__NAMESPACE__ . '\\phpurs_execute_effect')) {
+  function phpurs_execute_effect($val) {
+    if (\is_callable($val)) {
+      return $val($GLOBALS['Data_Unit_unit']);
+    }
+    return $val;
+  }
+}
+
+$GLOBALS['Prim_undefined'] = function() { throw new \Exception("undefined"); };
+
+
+
+
+// Data_Traversable_Accum_Internal_StateR
+function majData_majTraversable_majAccum_majInternal_majStatemajR($x_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTraversable_majAccum_majInternal_majStatemajR';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Traversable_Accum_Internal_StateR'] = __NAMESPACE__ . '\\majData_majTraversable_majAccum_majInternal_majStatemajR';
+
+// Data_Traversable_Accum_Internal_StateL
+function majData_majTraversable_majAccum_majInternal_majStatemajL($x_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTraversable_majAccum_majInternal_majStatemajL';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = $x_0;
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Traversable_Accum_Internal_StateL'] = __NAMESPACE__ . '\\majData_majTraversable_majAccum_majInternal_majStatemajL';
+
+// Data_Traversable_Accum_Internal_stateR
+function majData_majTraversable_majAccum_majInternal_statemajR($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTraversable_majAccum_majInternal_statemajR';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = $v_0;
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Traversable_Accum_Internal_stateR'] = __NAMESPACE__ . '\\majData_majTraversable_majAccum_majInternal_statemajR';
+
+// Data_Traversable_Accum_Internal_stateL
+function majData_majTraversable_majAccum_majInternal_statemajL($v_0) {
+  $__num = \func_num_args();
+  $__fn = __NAMESPACE__ . '\\' . 'majData_majTraversable_majAccum_majInternal_statemajL';
+  if ($__num < 1) {
+    return phpurs_curry_fallback($__fn, \func_get_args(), 1);
+  }
+  $__res = $v_0;
+  goto __end;;
+  __end:
+  return 1 < $__num ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}
+$GLOBALS['Data_Traversable_Accum_Internal_stateL'] = __NAMESPACE__ . '\\majData_majTraversable_majAccum_majInternal_statemajL';
+
+// Data_Traversable_Accum_Internal_functorStateR
+$GLOBALS['Data_Traversable_Accum_Internal_functorStateR'] = (object)["map" => function($f_0) {
+  $__num = \func_num_args();
+  $__res = function($k_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($s_2) use ($f_0, $k_1) {
+  $__num = \func_num_args();
+  $v_3_0 = ($k_1)($s_2);
+  $__res = (object)["accum" => ($v_3_0)->{'accum'}, "value" => ($f_0)(($v_3_0)->{'value'})];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+
+// Data_Traversable_Accum_Internal_functorStateL
+$GLOBALS['Data_Traversable_Accum_Internal_functorStateL'] = (object)["map" => function($f_0) {
+  $__num = \func_num_args();
+  $__res = function($k_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($s_2) use ($f_0, $k_1) {
+  $__num = \func_num_args();
+  $v_3_0 = ($k_1)($s_2);
+  $__res = (object)["accum" => ($v_3_0)->{'accum'}, "value" => ($f_0)(($v_3_0)->{'value'})];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+
+// Data_Traversable_Accum_Internal_applyStateR
+$GLOBALS['Data_Traversable_Accum_Internal_applyStateR'] = (object)["apply" => function($f_0) {
+  $__num = \func_num_args();
+  $__res = function($x_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($s_2) use ($f_0, $x_1) {
+  $__num = \func_num_args();
+  $v_3_0 = ($x_1)($s_2);
+  $v1_4_1 = ($f_0)(($v_3_0)->{'accum'});
+  $__res = (object)["accum" => ($v1_4_1)->{'accum'}, "value" => (($v1_4_1)->{'value'})(($v_3_0)->{'value'})];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar___unused_0) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Data_Traversable_Accum_Internal_functorStateR'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+
+// Data_Traversable_Accum_Internal_applyStateL
+$GLOBALS['Data_Traversable_Accum_Internal_applyStateL'] = (object)["apply" => function($f_0) {
+  $__num = \func_num_args();
+  $__res = function($x_1) use ($f_0) {
+  $__num = \func_num_args();
+  $__res = function($s_2) use ($f_0, $x_1) {
+  $__num = \func_num_args();
+  $v_3_0 = ($f_0)($s_2);
+  $v1_4_1 = ($x_1)(($v_3_0)->{'accum'});
+  $__res = (object)["accum" => ($v1_4_1)->{'accum'}, "value" => (($v_3_0)->{'value'})(($v1_4_1)->{'value'})];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Functor0" => function($_dollar___unused_0) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Data_Traversable_Accum_Internal_functorStateL'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+
+// Data_Traversable_Accum_Internal_applicativeStateR
+$GLOBALS['Data_Traversable_Accum_Internal_applicativeStateR'] = (object)["pure" => function($a_0) {
+  $__num = \func_num_args();
+  $__res = function($s_1) use ($a_0) {
+  $__num = \func_num_args();
+  $__res = (object)["accum" => $s_1, "value" => $a_0];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Apply0" => function($_dollar___unused_0) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Data_Traversable_Accum_Internal_applyStateR'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+
+// Data_Traversable_Accum_Internal_applicativeStateL
+$GLOBALS['Data_Traversable_Accum_Internal_applicativeStateL'] = (object)["pure" => function($a_0) {
+  $__num = \func_num_args();
+  $__res = function($s_1) use ($a_0) {
+  $__num = \func_num_args();
+  $__res = (object)["accum" => $s_1, "value" => $a_0];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+};
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}, "Apply0" => function($_dollar___unused_0) {
+  $__num = \func_num_args();
+  $__res = $GLOBALS['Data_Traversable_Accum_Internal_applyStateL'];
+  goto __end;;
+  __end:
+  return $__num > 1 ? $__res(...\array_slice(\func_get_args(), 1)) : $__res;
+}];
+
