@@ -82,7 +82,6 @@ Polymorphism            | ~ 17884 μs      |
 State Monad             | ~ 5 μs          | 
 Lazy Evaluation         | ~ 2868 μs       | 
 Array Processing        | ~ 13 μs         | 
------------------------ | ----------------| --------------------------- |
 **Total Execution Time**    | ~ 46.87 ms      | 
 
 Erlang Benchmark        | Compiled Erlang ([purerl](https://github.com/purerl/purerl)) | Native Erlang FFI | Native Erlang FFI Cheatcode |
@@ -100,7 +99,6 @@ Polymorphism            | ~ 92155 μs      |
 State Monad             | ~ 108 μs        | 
 Lazy Evaluation         | ~ 10325 μs      | 
 Array Processing        | ~ 5430 μs       | 
------------------------ | ----------------| --------------------------- |
 **Total Execution Time**    | ~ 131.04 ms     | 
 
 PHP Benchmark           | Compiled PHP ([phpurs](https://github.com/0x000000000000000000001/phpurs), WIP) | Native PHP FFI | Native PHP FFI Cheatcode |
