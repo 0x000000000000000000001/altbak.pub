@@ -48,7 +48,7 @@ RowToList               | -                      | -                  | ~ 58 μs
 **Total Execution Time**    | ~ 125.77 ms            | ~ 81.21 ms         | ~ 73.45 ms    | ~ 34.19 ms              |
 > *Read the IMPORTANT notice below!*
 
-Go Benchmark            | Compiled Go ([gopurs](https://github.com/0x000000000000000000001/gopurs), mature WIP) | Compiled Go [psgo](https://github.com/i-am-the-slime/purescript-native) | Native Go FFI | Native Go FFI Cheatcode |
+Go Benchmark            | Compiled Go ([gopurs](https://github.com/0x000000000000000000001/gopurs), mature WIP) | Compiled Go ([psgo](https://github.com/i-am-the-slime/purescript-native)) | Native Go FFI | Native Go FFI Cheatcode |
 ----------------------- | -------------------------------- | ------------------------------------- | ------------- | ----------------------- |
 AST Evaluation          | ~ 3 μs                           | ~ 296 μs                              | ~ 20 μs       | ~ 4 μs                  |
 Fibonacci               | ~ 1 μs                           | ~ 24 μs                               | ~ 2 μs        | ~ 1 μs                  |
