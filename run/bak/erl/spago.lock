@@ -8,6 +8,7 @@
             "arrays",
             "console",
             "effect",
+            "functions",
             "prelude",
             "refs"
           ]
@@ -1532,6 +1533,14 @@
         "orders",
         "prelude",
         "tuples"
+      ]
+    },
+    "functions": {
+      "type": "git",
+      "url": "https://github.com/purerl/purescript-functions.git",
+      "rev": "6f0854f056b5295835db2cc3d06bf8763c181536",
+      "dependencies": [
+        "prelude"
       ]
     },
     "functors": {

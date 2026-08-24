@@ -5,6 +5,7 @@ cd "$(dirname "$0")/../.."
 CLEAN=0
 MODE="pure"
 TEST_NAME=""
+ENTRY_POINT="App"
 
 while [[ $# -gt 0 ]]
 do
@@ -17,6 +18,14 @@ do
     MODE="test"
     TEST_NAME="$2"
     shift 2
+    ;;
+    --ffi)
+    ENTRY_POINT="AppFFI"
+    shift
+    ;;
+    --fficc)
+    ENTRY_POINT="AppFFICheatcode"
+    shift
     ;;
     --x)
     MODE="x"
@@ -39,7 +48,6 @@ ln -s run/bak/erl/spago.erl.yaml spago.yaml
 touch run/bak/erl/spago.lock && ln -s run/bak/erl/spago.lock spago.lock
 export PATH="$PWD/run/bak/js/node_modules/.bin:$PATH"
 
-ENTRY_POINT="App"
 
 if [ "$MODE" == "test" ]; then
   ENTRY_POINT="AppX"
@@ -80,6 +88,10 @@ erlc -o output/${ENTRY_POINT} output/*/*.erl > /dev/null 2>&1
 echo "=== Erlang BEAM ==="
 if [ "$ENTRY_POINT" == "AppX" ]; then
   ENTRY_LOWER="appX"
+elif [ "$ENTRY_POINT" == "AppFFI" ]; then
+  ENTRY_LOWER="appFFI"
+elif [ "$ENTRY_POINT" == "AppFFICheatcode" ]; then
+  ENTRY_LOWER="appFFICheatcode"
 else
   ENTRY_LOWER="app"
 fi
