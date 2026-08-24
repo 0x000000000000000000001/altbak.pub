@@ -155,7 +155,7 @@ RowToList               | ~ 2 μs                    | ~ 27 μs      | ~ 2 μs  
 
 #### Sharpurs (C# / F#)
 
-Sharpurs Benchmark      | Compiled C#/F# ([sharpurs](https://github.com/0x000000000000000000001/sharpurs), WIP) | Native C#/F# FFI | Native C#/F# FFI Cheatcode |
+F#/C# Benchmark      | Compiled C#/F# ([sharpurs](https://github.com/0x000000000000000000001/sharpurs), WIP) | Native C#/F# FFI | Native C#/F# FFI Cheatcode |
 ----------------------- | ------------------------- | --------------- | ------------------------- |
 AST Evaluation          | -                         | -               | -                         |
 Fibonacci               | -                         | -               | -                         |
