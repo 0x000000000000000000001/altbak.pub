@@ -128,8 +128,8 @@ Polymorphism            | ~ 10591 μs                | ~ 1169540 μs   | ~ 74555
 State Monad             | ~ 539 μs                  | ~ 358 μs       | ~ 86 μs                  |
 Lazy Evaluation         | ~ 95661 μs                | ~ 151601 μs    | ~ 368 μs                 |
 Array Processing        | ~ 1375 μs                 | ~ 448 μs       | ~ 249 μs                 |
-RowToList               | -                         | ~ 4 μs         | ~ 94 μs                  |
-**Total Execution Time**    | ~ 465.16 ms               | ~ 2067.91 ms   | ~ 200.45 ms              |
+RowToList               | ~ 7 μs                    | ~ 4 μs         | ~ 94 μs                  |
+**Total Execution Time**    | ~ 465.16 ms           | ~ 2067.91 ms   | ~ 200.45 ms              |
 > *Read the IMPORTANT notice below!*
 
 #### Rust
