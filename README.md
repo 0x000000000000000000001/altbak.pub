@@ -173,7 +173,7 @@ Command: `./bin/run --x` (Skips runtimes lacking necessary FFI bindings like Sch
 
 #### Extended Results
 
-Benchmark               | Compiled JS ([official](https://github.com/purescript/purescript)) | Compiled JS ([Arista](https://github.com/aristanetworks/purescript-backend-optimizer)) | Compiled Go ([gopurs](https://github.com/0x000000000000000000001/gopurs))
+Benchmark               | Compiled JS ([official](https://github.com/purescript/purescript)) | Compiled JS ([Arista](https://github.com/aristanetworks/purescript-backend-optimizer)) | Compiled Go ([gopurs](https://github.com/0x000000000000000000001/gopurs), mature WIP)
 ----------------------- | ------------- | -------------- | --------------- 
 AST Evaluation          | ~ 96 μs       | ~ 68 μs        | ~ 44 μs         
 Fibonacci               | ~ 49 μs       | ~ 38 μs        | ~ 2 μs          
