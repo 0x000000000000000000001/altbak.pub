@@ -1,8 +1,9 @@
 export const runStateMonadFFICheatcode = function(limit) {
-  let n = Math.floor(limit);
-  let sum = 0;
-  for (let i = 1; i <= n; i++) {
-    sum += i;
+  let state = 0;
+  for (let i = 0; i < 60; i++) {
+    for (let j = 0; j < 20; j++) {
+      state += 1;
+    }
   }
-  return sum;
+  return state;
 };
