@@ -22,6 +22,14 @@ do
     MODE="x"
     shift
     ;;
+    --ffi)
+    MODE="ffi"
+    shift
+    ;;
+    --fficc)
+    MODE="fficc"
+    shift
+    ;;
     *)
     shift
     ;;
@@ -38,7 +46,7 @@ ln -s run/bak/sharp/spago .spago
 ln -s run/bak/sharp/spago.sharp.yaml spago.yaml
 touch run/bak/sharp/spago.lock && ln -s run/bak/sharp/spago.lock spago.lock
 
-ENTRY_POINT="AppFFI"
+ENTRY_POINT="App"
 
 if [ "$MODE" == "test" ]; then
   ENTRY_POINT="AppX"
@@ -58,6 +66,10 @@ elif [ "$MODE" == "x" ]; then
   cp -r srx/Test/* src/Test/
   cp srx/AppX.purs src/
   trap "rm -rf src/Test/STArray.purs src/Test/AffOperations.purs src/Test/StringOps.purs src/Test/FileOps src/AppX.purs" EXIT
+elif [ "$MODE" == "ffi" ]; then
+  ENTRY_POINT="AppFFI"
+elif [ "$MODE" == "fficc" ]; then
+  ENTRY_POINT="AppFFICheatcode"
 fi
 
 export PATH="$PWD/run/bak/js/node_modules/.bin:$HOME/.dotnet:$PATH"
