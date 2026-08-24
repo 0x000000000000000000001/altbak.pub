@@ -89,6 +89,7 @@ State Monad             | ~ 5 μs | ~ 9 μs         | ~ 5 μs                   
 Lazy Evaluation         | ~ 2868 μs | ~ 1.954 ms       | ~ 3 μs                   |
 Array Processing        | ~ 13 μs | ~ 5 μs         | ~ 6 μs                   |
 **Total Execution Time**    | ~ 46.87 ms | ~ 27.10 ms       | ~ 20.43 ms                 |
+> *Read the IMPORTANT notice below!*
 
 #### Erlang
 
@@ -108,6 +109,7 @@ State Monad             | ~ 108 μs | ~ 335 μs         | ~ 342 μs             
 Lazy Evaluation         | ~ 10325 μs | ~ 337 μs         | ~ 353 μs                   |
 Array Processing        | ~ 5430 μs | ~ 187 μs         | ~ 316 μs                   |
 **Total Execution Time**    | ~ 131.04 ms | ~ 228.18 ms      | ~ 69.40 ms                 |
+> *Read the IMPORTANT notice below!*
 
 #### PHP
 
@@ -128,6 +130,7 @@ Lazy Evaluation         | ~ 95661 μs                | ~ 151601 μs    | ~ 368 �
 Array Processing        | ~ 1375 μs                 | ~ 448 μs       | ~ 249 μs                 |
 RowToList               | -                         | ~ 4 μs         | ~ 94 μs                  |
 **Total Execution Time**    | ~ 465.16 ms               | ~ 2067.91 ms   | ~ 200.45 ms              |
+> *Read the IMPORTANT notice below!*
 
 #### Rust
 
@@ -148,6 +151,7 @@ Lazy Evaluation         | ~ 324862 μs               | ~ 24919.00 μs   | ~ 3.00
 Array Processing        | ~ 35 μs                   | ~ 14.00 μs      | ~ 3.00 μs                 |
 RowToList               | ~ 2 μs                    | ~ 27.00 μs      | ~ 2.00 μs                 |
 **Total Execution Time**    | ~ 449.58 ms               | ~ 94.61 ms      | ~ 16.82 ms                |
+> *Read the IMPORTANT notice below!*
 
 > [!IMPORTANT]
 > **The 99/1 philosophy and the AOT compiler vs FFI vs cheatcode approach**
