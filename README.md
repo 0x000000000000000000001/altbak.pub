@@ -48,7 +48,7 @@ RowToList               | -                      | -                  | ~ 58 μs
 **Total Execution Time**    | ~ 125.77 ms            | ~ 81.21 ms         | ~ 73.45 ms    | ~ 34.19 ms              |
 > *Read the IMPORTANT notice below!*
 
-Go Benchmark            | Compiled Go (gopurs, mature WIP) | Compiled Go [psgo](https://github.com/i-am-the-slime/purescript-native) | Native Go FFI | Native Go FFI Cheatcode |
+Go Benchmark            | Compiled Go ([gopurs](https://github.com/0x000000000000000000001/gopurs), mature WIP) | Compiled Go [psgo](https://github.com/i-am-the-slime/purescript-native) | Native Go FFI | Native Go FFI Cheatcode |
 ----------------------- | -------------------------------- | ------------------------------------- | ------------- | ----------------------- |
 AST Evaluation          | ~ 3 μs                           | ~ 296 μs                              | ~ 20 μs       | ~ 4 μs                  |
 Fibonacci               | ~ 1 μs                           | ~ 24 μs                               | ~ 2 μs        | ~ 1 μs                  |
@@ -103,7 +103,7 @@ Array Processing        | ~ 5430 μs       |
 ----------------------- | ----------------| --------------------------- |
 **Total Execution Time**    | ~ 131.04 ms     | 
 
-PHP Benchmark           | Compiled PHP (normal WIP) | Native PHP FFI | Native PHP FFI Cheatcode |
+PHP Benchmark           | Compiled PHP ([phpurs](https://github.com/0x000000000000000000001/phpurs), normal WIP) | Native PHP FFI | Native PHP FFI Cheatcode |
 ----------------------- | ------------------------- | -------------- | ------------------------ |
 AST Evaluation          | ~ 18 μs                   | ~ 9 μs         | ~ 10 μs                  |
 Fibonacci               | ~ 354 μs                  | ~ 11 μs        | ~ 451 μs                 |
@@ -121,7 +121,7 @@ Array Processing        | ~ 1375 μs                 | ~ 448 μs       | ~ 249 �
 RowToList               | -                         | ~ 4 μs         | ~ 94 μs                  |
 **Total Execution Time**    | ~ 465.16 ms               | ~ 2067.91 ms   | ~ 200.45 ms              |
 
-Rust Benchmark          | Compiled Rust (young WIP) | Native Rust FFI | Native Rust FFI Cheatcode |
+Rust Benchmark          | Compiled Rust ([purust](https://github.com/0x000000000000000000001/purust), young WIP) | Native Rust FFI | Native Rust FFI Cheatcode |
 ----------------------- | ------------------------- | --------------- | ------------------------- |
 AST Evaluation          | ~ 48 μs                   | 
 Fibonacci               | ~ 5 μs                    | 
