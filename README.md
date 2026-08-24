@@ -75,20 +75,20 @@ RowToList               | ~ 1 μs                           | ~ 2 μs           
 
 Scheme Benchmark        | Compiled Scheme ([pscm](https://github.com/purescm/purescm)) | Native Scheme FFI | Native Scheme FFI Cheatcode |
 ----------------------- | ----------------| ----------------- | --------------------------- |
-AST Evaluation          | ~ 9 μs | -  | - |
-Fibonacci               | ~ 2 μs | -  | - |
-List Processing         | ~ 10 μs | -  | - |
-Tail Call Optimization  | ~ 326 μs | -  | - |
-Deep Record Updates     | ~ 260 μs | -  | - |
-Ackermann               | ~ 28 μs | -  | - |
-Church Numerals         | ~ 369 μs | -  | - |
-Prime Sieve             | ~ 76 μs | -  | - |
-Red-Black Tree          | ~ 25020 μs | -  | - |
-Polymorphism            | ~ 17884 μs | -  | - |
-State Monad             | ~ 5 μs | -  | - |
-Lazy Evaluation         | ~ 2868 μs | -  | - |
-Array Processing        | ~ 13 μs | -  | - |
-**Total Execution Time**    | ~ 46.87 ms | -  | - |
+AST Evaluation          | ~ 9 μs | ~ 12.0 μs        | ~ 4.0 μs                   |
+Fibonacci               | ~ 2 μs | ~ 2.0 μs         | ~ 2.0 μs                   |
+List Processing         | ~ 10 μs | ~ 7.0 μs         | ~ 4.0 μs                   |
+Tail Call Optimization  | ~ 326 μs | ~ 353.0 μs       | ~ 313.0 μs                 |
+Deep Record Updates     | ~ 260 μs | ~ 37.0 μs        | ~ 44.0 μs                  |
+Ackermann               | ~ 28 μs | ~ 10.0 μs        | ~ 11.0 μs                  |
+Church Numerals         | ~ 369 μs | ~ 80.0 μs        | ~ 87.0 μs                  |
+Prime Sieve             | ~ 76 μs | ~ 24.0 μs        | ~ 3.0 μs                   |
+Red-Black Tree          | ~ 25020 μs | ~ 36.041 ms   | ~ 84.390 ms             |
+Polymorphism            | ~ 17884 μs | ~ 7.072 ms    | ~ 6.785 ms              |
+State Monad             | ~ 5 μs | ~ 8.0 μs         | ~ 5.0 μs                   |
+Lazy Evaluation         | ~ 2868 μs | ~ 1.992 ms    | ~ 2.0 μs                   |
+Array Processing        | ~ 13 μs | ~ 5.0 μs         | ~ 5.0 μs                   |
+**Total Execution Time**    | ~ 46.87 ms | ~ 45.65 ms       | ~ 91.66 ms                 |
 
 #### Erlang
 
