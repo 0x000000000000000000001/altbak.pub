@@ -104,6 +104,8 @@ spago build
 echo 'Generating Go via psgo...'
 rm -f go.mod go.sum run/bak/psgo/go.mod run/bak/psgo/go.sum
 rm -f run/bak/psgo/output/Main/Main.go
+# Workaround: psgo sometimes crashes sporadically on the first run during generation.
+# Calling it with a fallback ensures successful code generation.
 (cd run/bak/psgo && (psgo --no-build || psgo --no-build || psgo --no-build))
 
 echo "=== psgo Go ==="
@@ -137,9 +139,13 @@ func init() {
 }
 EOF_FFI
 
-    # Point go-ffi to the local i-am-the-slime/go-ffi copy
+    # Note: For development, we point to a local clone of i-am-the-slime/go-ffi if it exists.
+    # If you are reproducing this benchmark and do not have go-ffi cloned locally,
+    # the replace directive is skipped and 'go get' will fetch the remote repository automatically.
     go mod edit -dropreplace github.com/purescript-native/go-ffi
-    go mod edit -replace github.com/i-am-the-slime/go-ffi=../../../../go-ffi
+    if [ -d "../../../../go-ffi" ]; then
+        go mod edit -replace github.com/i-am-the-slime/go-ffi=../../../../go-ffi
+    fi
 
     # Run go get to satisfy the local modules that psgo replaces but doesn't require
     go get project.localhost/purescript-native/ffi-loader

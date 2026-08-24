@@ -1,7 +1,5 @@
 github.com/dlclark/regexp2 v1.4.0 h1:F1rxgk7p4uKjwIQxBs9oAXe5CqrXlCduYEJvrF4u93E=
 github.com/dlclark/regexp2 v1.4.0/go.mod h1:2pZnwuY/m+8K6iRw6wQdMtk+rH5tNGR1i55kozfMjCc=
-github.com/i-am-the-slime/go-ffi v0.0.0-20260725162152-03a066021db8 h1:dxTrgUBbz1RT/1Jk1kS2jL75+0I8d1BU/1mIBxuWQ20=
-github.com/i-am-the-slime/go-ffi v0.0.0-20260725162152-03a066021db8/go.mod h1:RfisqkkbdSMGuaJ4HG7NUJtWO8tDOBkaG3D5JBSb6nQ=
 github.com/mattn/go-sqlite3 v1.14.32/go.mod h1:Uh1q+B4BYcTPb+yiD3kU8Ct7aC0hY9fxUwlHK0RXw+Y=
 github.com/purescript-native/go-ffi v0.0.0-20230328040617-764795a586f1 h1:ip7kafaBovzUNn8aDftULrQwNLhLpqypKr2HfQ98Iz8=
 github.com/purescript-native/go-ffi v0.0.0-20230328040617-764795a586f1/go.mod h1:1TvaJdjRUFHRmoLQ5QvpR1pnivyd7eBjNA+j1PuktBM=

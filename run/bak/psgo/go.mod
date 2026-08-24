@@ -6,6 +6,8 @@ replace project.localhost/purescript-native/ffi-loader => ./purescript-native
 
 replace project.localhost/purescript-native/output => ./output
 
+replace github.com/i-am-the-slime/go-ffi => ../../../../go-ffi
+
 require (
 	github.com/dlclark/regexp2 v1.4.0 // indirect
 	github.com/i-am-the-slime/go-ffi v0.0.0-20260725162152-03a066021db8 // indirect
@@ -14,5 +16,3 @@ require (
 	project.localhost/purescript-native/ffi-loader v0.0.0-00010101000000-000000000000 // indirect
 	project.localhost/purescript-native/output v0.0.0-00010101000000-000000000000 // indirect
 )
-
-replace github.com/i-am-the-slime/go-ffi => ../../../../go-ffi
