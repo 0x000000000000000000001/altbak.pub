@@ -94,20 +94,20 @@ Array Processing        | ~ 13 μs | ~ 5 μs         | ~ 6 μs                  
 
 Erlang Benchmark        | Compiled Erlang ([purerl](https://github.com/purerl/purerl)) | Native Erlang FFI | Native Erlang FFI Cheatcode |
 ----------------------- | ----------------| ----------------- | --------------------------- |
-AST Evaluation          | ~ 692 μs | ~ 685 μs         | ~ 1.03 ms                  |
-Fibonacci               | ~ 49 μs | ~ 271 μs         | ~ 218 μs                   |
-List Processing         | ~ 1212 μs | ~ 226 μs         | ~ 222 μs                   |
-Tail Call Optimization  | ~ 1478 μs | ~ 298 μs         | ~ 369 μs                   |
-Deep Record Updates     | ~ 778 μs | ~ 1.543 ms       | ~ 261 μs                   |
-Ackermann               | ~ 57 μs | ~ 237 μs         | ~ 343 μs                   |
-Church Numerals         | ~ 617 μs | ~ 1.507 ms       | ~ 205 μs                   |
-Prime Sieve             | ~ 232 μs | ~ 306 μs         | ~ 229 μs                   |
-Red-Black Tree          | ~ 17904 μs | ~ 56485.402 ms   | ~ 43.375 ms                |
-Polymorphism            | ~ 92155 μs | ~ 209.291 ms     | ~ 21.901 ms                |
-State Monad             | ~ 108 μs | ~ 407 μs         | ~ 342 μs                   |
-Lazy Evaluation         | ~ 10325 μs | ~ 526 μs         | ~ 353 μs                   |
-Array Processing        | ~ 5430 μs | ~ 302 μs         | ~ 316 μs                   |
-**Total Execution Time**    | ~ 131.04 ms | ~ 56701.29 ms    | ~ 69.40 ms                 |
+AST Evaluation          | ~ 692 μs | ~ 803 μs         | ~ 1.03 ms                  |
+Fibonacci               | ~ 49 μs | ~ 192 μs         | ~ 218 μs                   |
+List Processing         | ~ 1212 μs | ~ 249 μs         | ~ 222 μs                   |
+Tail Call Optimization  | ~ 1478 μs | ~ 318 μs         | ~ 369 μs                   |
+Deep Record Updates     | ~ 778 μs | ~ 1.601 ms       | ~ 261 μs                   |
+Ackermann               | ~ 57 μs | ~ 280 μs         | ~ 343 μs                   |
+Church Numerals         | ~ 617 μs | ~ 708 μs         | ~ 205 μs                   |
+Prime Sieve             | ~ 232 μs | ~ 356 μs         | ~ 229 μs                   |
+Red-Black Tree          | ~ 17904 μs | ~ 20.106 ms      | ~ 43.375 ms                |
+Polymorphism            | ~ 92155 μs | ~ 202.472 ms     | ~ 21.901 ms                |
+State Monad             | ~ 108 μs | ~ 335 μs         | ~ 342 μs                   |
+Lazy Evaluation         | ~ 10325 μs | ~ 337 μs         | ~ 353 μs                   |
+Array Processing        | ~ 5430 μs | ~ 187 μs         | ~ 316 μs                   |
+**Total Execution Time**    | ~ 131.04 ms | ~ 228.18 ms      | ~ 69.40 ms                 |
 
 #### PHP
 
