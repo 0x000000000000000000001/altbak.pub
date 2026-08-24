@@ -29,6 +29,8 @@ To ensure fair and executable comparisons across all backends, the test suite is
 
 Command: `./bin/run` (Runs on all 7 backends). New tests will gradually be added.
 
+#### JavaScript
+
 JS Benchmark            | Compiled JS ([official](https://github.com/purescript/purescript)) | Compiled JS ([Arista](https://github.com/aristanetworks/purescript-backend-optimizer)) | Native JS FFI | Native JS FFI Cheatcode |
 ----------------------- | ---------------------- | ------------------ | ------------- | ----------------------- |
 AST Evaluation          | ~ 93 μs                | ~ 74 μs            | ~ 75 μs       | ~ 99 μs                 |
@@ -47,6 +49,8 @@ Array Processing        | ~ 218 μs               | ~ 222 μs           | ~ 147 
 RowToList               | -                      | -                  | ~ 58 μs       | ~ 19 μs                 |
 **Total Execution Time**    | ~ 125.77 ms            | ~ 81.21 ms         | ~ 73.45 ms    | ~ 34.19 ms              |
 > *Read the IMPORTANT notice below!*
+
+#### Go
 
 Go Benchmark            | Compiled Go ([gopurs](https://github.com/0x000000000000000000001/gopurs), mature WIP) | Compiled Go ([psgo](https://github.com/i-am-the-slime/purescript-native)) | Native Go FFI | Native Go FFI Cheatcode |
 ----------------------- | -------------------------------- | ------------------------------------- | ------------- | ----------------------- |
@@ -67,6 +71,8 @@ RowToList               | ~ 1 μs                           | ~ 2 μs           
 **Total Execution Time**    | ~ 48.93 ms                       | ~ 1645.32 ms                          | ~ 102.04 ms   | ~ 27.44 ms              |
 > *Read the IMPORTANT notice below!*
 
+#### Scheme
+
 Scheme Benchmark        | Compiled Scheme ([pscm](https://github.com/purescm/purescm)) | Native Scheme FFI | Native Scheme FFI Cheatcode |
 ----------------------- | ----------------| ----------------- | --------------------------- |
 AST Evaluation          | ~ 9 μs          | 
@@ -83,6 +89,8 @@ State Monad             | ~ 5 μs          |
 Lazy Evaluation         | ~ 2868 μs       | 
 Array Processing        | ~ 13 μs         | 
 **Total Execution Time**    | ~ 46.87 ms      | 
+
+#### Erlang
 
 Erlang Benchmark        | Compiled Erlang ([purerl](https://github.com/purerl/purerl)) | Native Erlang FFI | Native Erlang FFI Cheatcode |
 ----------------------- | ----------------| ----------------- | --------------------------- |
@@ -101,6 +109,8 @@ Lazy Evaluation         | ~ 10325 μs      |
 Array Processing        | ~ 5430 μs       | 
 **Total Execution Time**    | ~ 131.04 ms     | 
 
+#### PHP
+
 PHP Benchmark           | Compiled PHP ([phpurs](https://github.com/0x000000000000000000001/phpurs), WIP) | Native PHP FFI | Native PHP FFI Cheatcode |
 ----------------------- | ------------------------- | -------------- | ------------------------ |
 AST Evaluation          | ~ 18 μs                   | ~ 9 μs         | ~ 10 μs                  |
@@ -118,6 +128,8 @@ Lazy Evaluation         | ~ 95661 μs                | ~ 151601 μs    | ~ 368 �
 Array Processing        | ~ 1375 μs                 | ~ 448 μs       | ~ 249 μs                 |
 RowToList               | -                         | ~ 4 μs         | ~ 94 μs                  |
 **Total Execution Time**    | ~ 465.16 ms               | ~ 2067.91 ms   | ~ 200.45 ms              |
+
+#### Rust
 
 Rust Benchmark          | Compiled Rust ([purust](https://github.com/0x000000000000000000001/purust), young WIP) | Native Rust FFI | Native Rust FFI Cheatcode |
 ----------------------- | ------------------------- | --------------- | ------------------------- |
@@ -158,6 +170,8 @@ RowToList               | ~ 2 μs                    |
 
 ### Extended benchmark results (I/O, mutability, async)
 Command: `./bin/run --x` (Skips runtimes lacking necessary FFI bindings like Scheme and Erlang)
+
+#### Extended Results
 
 Benchmark               | JS            | [Arista JS](https://github.com/aristanetworks/purescript-backend-optimizer) | Go              
 ----------------------- | ------------- | -------------- | --------------- 
