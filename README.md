@@ -29,7 +29,6 @@ To ensure fair and executable comparisons across all backends, the test suite is
 
 Command: `./bin/run` (Runs on all 7 backends). New tests will gradually be added.
 
-
 JS Benchmark            | Compiled JS   | Compiled Arista JS | Native JS FFI | Native JS FFI Cheatcode |
 ----------------------- | ------------- | ------------------ | ------------- | ----------------------- |
 AST Evaluation          | ~ 93 μs       | ~ 74 μs            | ~ 75 μs       | ~ 99 μs                 |
@@ -46,8 +45,7 @@ State Monad             | ~ 425 μs      | ~ 170 μs           | ~ 724 μs      
 Lazy Evaluation         | ~ 16372 μs    | ~ 13986 μs         | ~ 20562 μs    | ~ 744 μs                |
 Array Processing        | ~ 218 μs      | ~ 222 μs           | ~ 147 μs      | ~ 82 μs                 |
 RowToList               | -             | -                  | ~ 58 μs       | ~ 19 μs                 |
-**Total Execution Time**    | **~ 125.77 ms**   | **~ 81.21 ms**         | **~ 73.45 ms**    | **~ 34.19 ms**              |
-                        |
+**Total Execution Time**    | ~ 125.77 ms   | ~ 81.21 ms         | ~ 73.45 ms    | ~ 34.19 ms              |
 > *Read the IMPORTANT notice below!*
 
 Go Benchmark            | Compiled Go (gopurs, mature WIP) | Compiled Go [psgo](https://github.com/i-am-the-slime/purescript-native) | Native Go FFI | Native Go FFI Cheatcode |
@@ -66,8 +64,7 @@ State Monad             | ~ 234 μs                         | ~ 536 μs         
 Lazy Evaluation         | ~ 17599 μs                       | ~ 71586 μs                            | ~ 14816 μs    | ~ 1 μs                  |
 Array Processing        | ~ 34 μs                          | ~ 61 μs                               | ~ 7 μs        | ~ 1 μs                  |
 RowToList               | ~ 1 μs                           | ~ 2 μs                                | ~ 1 μs        | ~ 1 μs                  |
-**Total Execution Time**    | **~ 48.93 ms**                       | **~ 1645.32 ms**                          | **~ 102.04 ms**   | **~ 27.44 ms**              |
-                        |
+**Total Execution Time**    | ~ 48.93 ms                       | ~ 1645.32 ms                          | ~ 102.04 ms   | ~ 27.44 ms              |
 > *Read the IMPORTANT notice below!*
 
 Scheme Benchmark        | Compiled Scheme | Native Scheme FFI | Native Scheme FFI Cheatcode |
@@ -86,7 +83,7 @@ State Monad             | ~ 5 μs          |
 Lazy Evaluation         | ~ 2868 μs       | 
 Array Processing        | ~ 13 μs         | 
 ----------------------- | ----------------| --------------------------- |
-**Total Execution Time**    | **~ 46.87 ms**      | 
+**Total Execution Time**    | ~ 46.87 ms      | 
 
 Erlang Benchmark        | Compiled Erlang | Native Erlang FFI | Native Erlang FFI Cheatcode |
 ----------------------- | ----------------| ----------------- | --------------------------- |
@@ -104,7 +101,7 @@ State Monad             | ~ 108 μs        |
 Lazy Evaluation         | ~ 10325 μs      | 
 Array Processing        | ~ 5430 μs       | 
 ----------------------- | ----------------| --------------------------- |
-**Total Execution Time**    | **~ 131.04 ms**     | 
+**Total Execution Time**    | ~ 131.04 ms     | 
 
 PHP Benchmark           | Compiled PHP (normal WIP) | Native PHP FFI | Native PHP FFI Cheatcode |
 ----------------------- | ------------------------- | -------------- | ------------------------ |
@@ -122,7 +119,7 @@ State Monad             | ~ 539 μs                  | ~ 358 μs       | ~ 86 μ
 Lazy Evaluation         | ~ 95661 μs                | ~ 151601 μs    | ~ 368 μs                 |
 Array Processing        | ~ 1375 μs                 | ~ 448 μs       | ~ 249 μs                 |
 RowToList               | -                         | ~ 4 μs         | ~ 94 μs                  |
-**Total Execution Time**    | **~ 465.16 ms**               | **~ 2067.91 ms**   | **~ 200.45 ms**              |
+**Total Execution Time**    | ~ 465.16 ms               | ~ 2067.91 ms   | ~ 200.45 ms              |
 
 Rust Benchmark          | Compiled Rust (young WIP) | Native Rust FFI | Native Rust FFI Cheatcode |
 ----------------------- | ------------------------- | --------------- | ------------------------- |
@@ -140,9 +137,7 @@ State Monad             | ~ 419 μs                  |
 Lazy Evaluation         | ~ 324862 μs               | 
 Array Processing        | ~ 35 μs                   | 
 RowToList               | ~ 2 μs                    | 
-**Total Execution Time**    | **~ 449.58 ms**               | 
-
-> [
+**Total Execution Time**    | ~ 449.58 ms               | 
 
 > [!IMPORTANT]
 > **The 99/1 philosophy and the AOT compiler vs FFI vs cheatcode approach**
@@ -166,7 +161,6 @@ RowToList               | ~ 2 μs                    |
 ### Extended benchmark results (I/O, mutability, async)
 Command: `./bin/run --x` (Skips runtimes lacking necessary FFI bindings like Scheme and Erlang)
 
-
 Benchmark               | JS            | Arista JS      | Go              
 ----------------------- | ------------- | -------------- | --------------- 
 AST Evaluation          | ~ 96 μs       | ~ 68 μs        | ~ 44 μs         
@@ -187,8 +181,7 @@ STArray Operations      | ~ 3 μs        | ~ 3 μs         | ~ 0 μs
 String Operations       | ~ 2 μs        | ~ 2 μs         | ~ 1 μs          
 Aff Operations          | ~ 11482 μs    | ~ 11378 μs     | ~ 11030 μs      
 Parallelism             | ~ 15113637 μs | ~ 14690018 μs  | ~ 1255501 μs    
-**Total Execution Time**    | **~ 15682.46 ms** | **~ 15267.91 ms**  | **~ 1823.52 ms**    
-
+**Total Execution Time**    | ~ 15682.46 ms | ~ 15267.91 ms  | ~ 1823.52 ms    
 
 > [!NOTE]
 > **Hardware Context**
