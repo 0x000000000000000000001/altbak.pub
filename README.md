@@ -75,39 +75,39 @@ RowToList               | ~ 1 μs                           | ~ 2 μs           
 
 Scheme Benchmark        | Compiled Scheme ([pscm](https://github.com/purescm/purescm)) | Native Scheme FFI | Native Scheme FFI Cheatcode |
 ----------------------- | ----------------| ----------------- | --------------------------- |
-AST Evaluation          | ~ 9 μs          | 
-Fibonacci               | ~ 2 μs          | 
-List Processing         | ~ 10 μs         | 
-Tail Call Optimization  | ~ 326 μs        | 
-Deep Record Updates     | ~ 260 μs        | 
-Ackermann               | ~ 28 μs         | 
-Church Numerals         | ~ 369 μs        | 
-Prime Sieve             | ~ 76 μs         | 
-Red-Black Tree          | ~ 25020 μs      | 
-Polymorphism            | ~ 17884 μs      | 
-State Monad             | ~ 5 μs          | 
-Lazy Evaluation         | ~ 2868 μs       | 
-Array Processing        | ~ 13 μs         | 
-**Total Execution Time**    | ~ 46.87 ms      | 
+AST Evaluation          | ~ 9 μs | -  | - |
+Fibonacci               | ~ 2 μs | -  | - |
+List Processing         | ~ 10 μs | -  | - |
+Tail Call Optimization  | ~ 326 μs | -  | - |
+Deep Record Updates     | ~ 260 μs | -  | - |
+Ackermann               | ~ 28 μs | -  | - |
+Church Numerals         | ~ 369 μs | -  | - |
+Prime Sieve             | ~ 76 μs | -  | - |
+Red-Black Tree          | ~ 25020 μs | -  | - |
+Polymorphism            | ~ 17884 μs | -  | - |
+State Monad             | ~ 5 μs | -  | - |
+Lazy Evaluation         | ~ 2868 μs | -  | - |
+Array Processing        | ~ 13 μs | -  | - |
+**Total Execution Time**    | ~ 46.87 ms | -  | - |
 
 #### Erlang
 
 Erlang Benchmark        | Compiled Erlang ([purerl](https://github.com/purerl/purerl)) | Native Erlang FFI | Native Erlang FFI Cheatcode |
 ----------------------- | ----------------| ----------------- | --------------------------- |
-AST Evaluation          | ~ 692 μs        | 
-Fibonacci               | ~ 49 μs         | 
-List Processing         | ~ 1212 μs       | 
-Tail Call Optimization  | ~ 1478 μs       | 
-Deep Record Updates     | ~ 778 μs        | 
-Ackermann               | ~ 57 μs         | 
-Church Numerals         | ~ 617 μs        | 
-Prime Sieve             | ~ 232 μs        | 
-Red-Black Tree          | ~ 17904 μs      | 
-Polymorphism            | ~ 92155 μs      | 
-State Monad             | ~ 108 μs        | 
-Lazy Evaluation         | ~ 10325 μs      | 
-Array Processing        | ~ 5430 μs       | 
-**Total Execution Time**    | ~ 131.04 ms     | 
+AST Evaluation          | ~ 692 μs | -  | - |
+Fibonacci               | ~ 49 μs | -  | - |
+List Processing         | ~ 1212 μs | -  | - |
+Tail Call Optimization  | ~ 1478 μs | -  | - |
+Deep Record Updates     | ~ 778 μs | -  | - |
+Ackermann               | ~ 57 μs | -  | - |
+Church Numerals         | ~ 617 μs | -  | - |
+Prime Sieve             | ~ 232 μs | -  | - |
+Red-Black Tree          | ~ 17904 μs | -  | - |
+Polymorphism            | ~ 92155 μs | -  | - |
+State Monad             | ~ 108 μs | -  | - |
+Lazy Evaluation         | ~ 10325 μs | -  | - |
+Array Processing        | ~ 5430 μs | -  | - |
+**Total Execution Time**    | ~ 131.04 ms | -  | - |
 
 #### PHP
 
@@ -133,21 +133,21 @@ RowToList               | -                         | ~ 4 μs         | ~ 94 μs
 
 Rust Benchmark          | Compiled Rust ([purust](https://github.com/0x000000000000000000001/purust), young WIP) | Native Rust FFI | Native Rust FFI Cheatcode |
 ----------------------- | ------------------------- | --------------- | ------------------------- |
-AST Evaluation          | ~ 48 μs                   | 
-Fibonacci               | ~ 5 μs                    | 
-List Processing         | ~ 146 μs                  | 
-Tail Call Optimization  | ~ 762 μs                  | 
-Deep Record Updates     | ~ 2166 μs                 | 
-Ackermann               | ~ 26 μs                   | 
-Church Numerals         | ~ 16363 μs                | 
-Prime Sieve             | ~ 265 μs                  | 
-Red-Black Tree          | ~ 65765 μs                | 
-Polymorphism            | ~ 38713 μs                | 
-State Monad             | ~ 419 μs                  | 
-Lazy Evaluation         | ~ 324862 μs               | 
-Array Processing        | ~ 35 μs                   | 
-RowToList               | ~ 2 μs                    | 
-**Total Execution Time**    | ~ 449.58 ms               | 
+AST Evaluation          | ~ 48 μs                   | ~ 53 μs         | ~ 3 μs                    |
+Fibonacci               | ~ 5 μs                    | ~ 42 μs         | ~ 4 μs                    |
+List Processing         | ~ 146 μs                  | ~ 104 μs        | ~ 3 μs                    |
+Tail Call Optimization  | ~ 762 μs                  | ~ 6 μs          | ~ 2 μs                    |
+Deep Record Updates     | ~ 2166 μs                 | ~ 53 μs         | ~ 2 μs                    |
+Ackermann               | ~ 26 μs                   | ~ 5 μs          | ~ 1 μs                    |
+Church Numerals         | ~ 16363 μs                | ~ 631 μs        | ~ 2 μs                    |
+Prime Sieve             | ~ 265 μs                  | ~ 110 μs        | ~ 3 μs                    |
+Red-Black Tree          | ~ 65765 μs                | ~ 58162 μs      | ~ 7216 μs                 |
+Polymorphism            | ~ 38713 μs                | ~ 25479 μs      | ~ 32376 μs                |
+State Monad             | ~ 419 μs                  | ~ 4 μs          | ~ 3 μs                    |
+Lazy Evaluation         | ~ 324862 μs               | ~ 39 μs         | ~ 2 μs                    |
+Array Processing        | ~ 35 μs                   | ~ 10 μs         | ~ 2 μs                    |
+RowToList               | ~ 2 μs                    | ~ 15 μs         | ~ 2 μs                    |
+**Total Execution Time**    | ~ 449.58 ms               | ~ 84.71 ms      | ~ 39.62 ms                |
 
 > [!IMPORTANT]
 > **The 99/1 philosophy and the AOT compiler vs FFI vs cheatcode approach**
