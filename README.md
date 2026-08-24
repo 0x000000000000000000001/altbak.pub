@@ -75,19 +75,19 @@ RowToList               | ~ 1 μs                           | ~ 2 μs           
 
 Scheme Benchmark        | Compiled Scheme ([pscm](https://github.com/purescm/purescm)) | Native Scheme FFI | Native Scheme FFI Cheatcode |
 ----------------------- | ----------------| ----------------- | --------------------------- |
-AST Evaluation          | ~ 9 μs | ~ 15.0 μs        | ~ 4.0 μs                   |
-Fibonacci               | ~ 2 μs | ~ 3.0 μs         | ~ 2.0 μs                   |
-List Processing         | ~ 10 μs | ~ 8.0 μs         | ~ 5.0 μs                   |
-Tail Call Optimization  | ~ 326 μs | ~ 287.0 μs       | ~ 319.0 μs                 |
-Deep Record Updates     | ~ 260 μs | ~ 45.0 μs        | ~ 40.0 μs                  |
-Ackermann               | ~ 28 μs | ~ 13.0 μs        | ~ 11.0 μs                  |
-Church Numerals         | ~ 369 μs | ~ 73.0 μs        | ~ 68.0 μs                  |
-Prime Sieve             | ~ 76 μs | ~ 29.0 μs        | ~ 3.0 μs                   |
+AST Evaluation          | ~ 9 μs | ~ 15 μs        | ~ 4 μs                   |
+Fibonacci               | ~ 2 μs | ~ 3 μs         | ~ 2 μs                   |
+List Processing         | ~ 10 μs | ~ 8 μs         | ~ 5 μs                   |
+Tail Call Optimization  | ~ 326 μs | ~ 287 μs       | ~ 319 μs                 |
+Deep Record Updates     | ~ 260 μs | ~ 45 μs        | ~ 40 μs                  |
+Ackermann               | ~ 28 μs | ~ 13 μs        | ~ 11 μs                  |
+Church Numerals         | ~ 369 μs | ~ 73 μs        | ~ 68 μs                  |
+Prime Sieve             | ~ 76 μs | ~ 29 μs        | ~ 3 μs                   |
 Red-Black Tree          | ~ 25020 μs | ~ 18.061 ms      | ~ 12.228 ms                |
 Polymorphism            | ~ 17884 μs | ~ 6.596 ms       | ~ 7.737 ms                 |
-State Monad             | ~ 5 μs | ~ 9.0 μs         | ~ 5.0 μs                   |
-Lazy Evaluation         | ~ 2868 μs | ~ 1.954 ms       | ~ 3.0 μs                   |
-Array Processing        | ~ 13 μs | ~ 5.0 μs         | ~ 6.0 μs                   |
+State Monad             | ~ 5 μs | ~ 9 μs         | ~ 5 μs                   |
+Lazy Evaluation         | ~ 2868 μs | ~ 1.954 ms       | ~ 3 μs                   |
+Array Processing        | ~ 13 μs | ~ 5 μs         | ~ 6 μs                   |
 **Total Execution Time**    | ~ 46.87 ms | ~ 27.10 ms       | ~ 20.43 ms                 |
 
 #### Erlang
