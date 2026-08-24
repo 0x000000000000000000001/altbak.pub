@@ -16,8 +16,13 @@ function polyLoop(dict) {
   return function(n_init) {
     return function(acc_init) {
       function go(n, acc) {
-        if (n === 0) return acc;
-        return go(n - 1, dict.mappend_(acc)(dict.mempty_));
+        let currN = n;
+        let currAcc = acc;
+        while (currN > 0) {
+          currAcc = dict.mappend_(currAcc)(dict.mempty_);
+          currN--;
+        }
+        return currAcc;
       }
       return go(n_init, acc_init);
     };

@@ -15,8 +15,13 @@ export const runLazyEvaluationFFI = function(limit) {
   }
   
   function runManyTimes(times, acc) {
-    if (times === 0) return acc;
-    return runManyTimes(times - 1, acc + force(buildThunks(1000, defer(() => 0))));
+    let currTimes = times;
+    let currAcc = acc;
+    while (currTimes > 0) {
+      currAcc += force(buildThunks(1000, defer(() => 0)));
+      currTimes--;
+    }
+    return currAcc;
   }
   
   return runManyTimes(n, 0);

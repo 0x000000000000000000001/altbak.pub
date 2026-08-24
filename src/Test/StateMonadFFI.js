@@ -49,6 +49,11 @@ function chainModifications(n) {
 }
 
 function runManyTimes(n, acc) {
-  if (n === 0) return acc;
-  return runManyTimes(n - 1, acc + runState(chainModifications(60))(0).state);
+  let currN = n;
+  let currAcc = acc;
+  while (currN > 0) {
+    currAcc += runState(chainModifications(60))(0).state;
+    currN--;
+  }
+  return currAcc;
 }

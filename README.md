@@ -36,21 +36,22 @@ CORE STRESSTEST BENCHMARK RESULTS (Fibonacci, AST, tail calls, Church, primes, e
 
 Benchmark               | Compiled JS   | Compiled Arista JS | Native JS FFI | Native JS FFI Cheatcode |
 ----------------------- | ------------- | ------------------ | ------------- | ----------------------- |
-AST Evaluation          | ~ 93 μs       | ~ 74 μs            | ~ 119 μs      | 
-Fibonacci               | ~ 43 μs       | ~ 46 μs            | ~ 68 μs       |
-List Processing         | ~ 386 μs      | ~ 368 μs           | ~ 54 μs       |
-Tail Call Optimization  | ~ 1597 μs     | ~ 1550 μs          | ~ 635 μs      |
-Deep Record Updates     | ~ 433 μs      | ~ 562 μs           | ~ 606 μs      |
-Ackermann               | ~ 211 μs      | ~ 210 μs           | ~ 152 μs      |
-Church Numerals         | ~ 1662 μs     | ~ 1570 μs          | ~ 544 μs      |
-Prime Sieve             | ~ 725 μs      | ~ 689 μs           | ~ 188 μs      |
-Red-Black Tree          | ~ 94574 μs    | ~ 53648 μs         | ~ 33658 μs    |
-Polymorphism            | ~ 9029 μs     | ~ 8111 μs          | ~ 4246 μs     |
-State Monad             | ~ 425 μs      | ~ 170 μs           | ~ 36 μs       |
-Lazy Evaluation         | ~ 16372 μs    | ~ 13986 μs         | ~ 357 μs      |
-Array Processing        | ~ 218 μs      | ~ 222 μs           | ~ 33 μs       |
------------------------ | ------------- | ------------------ | ------------- |
-Total Execution Time    | ~ 125.77 ms   | ~ 81.21 ms         | ~ 40.72 ms    |
+AST Evaluation          | ~ 93 μs       | ~ 74 μs            | ~ 75 μs       | ~ 81 μs                 |
+Fibonacci               | ~ 43 μs       | ~ 46 μs            | ~ 43 μs       | ~ 45 μs                 |
+List Processing         | ~ 386 μs      | ~ 368 μs           | ~ 533 μs      | ~ 47 μs                 |
+Tail Call Optimization  | ~ 1597 μs     | ~ 1550 μs          | ~ 251 μs      | ~ 720 μs                |
+Deep Record Updates     | ~ 433 μs      | ~ 562 μs           | ~ 340 μs      | ~ 615 μs                |
+Ackermann               | ~ 211 μs      | ~ 210 μs           | ~ 156 μs      | ~ 174 μs                |
+Church Numerals         | ~ 1662 μs     | ~ 1570 μs          | ~ 2077 μs     | ~ 65 μs                 |
+Prime Sieve             | ~ 725 μs      | ~ 689 μs           | ~ 678 μs      | ~ 740 μs                |
+Red-Black Tree          | ~ 94574 μs    | ~ 53648 μs         | ~ 35485 μs    | ~ 35793 μs              |
+Polymorphism            | ~ 9029 μs     | ~ 8111 μs          | ~ 12321 μs    | ~ 5149 μs               |
+State Monad             | ~ 425 μs      | ~ 170 μs           | ~ 724 μs      | ~ 51 μs                 |
+Lazy Evaluation         | ~ 16372 μs    | ~ 13986 μs         | ~ 20562 μs    | ~ 40805 μs              |
+Array Processing        | ~ 218 μs      | ~ 222 μs           | ~ 147 μs      | ~ 108 μs                |
+RowToList               | -             | -                  | ~ 58 μs       | ~ 30 μs                 |
+----------------------- | ------------- | ------------------ | ------------- | ----------------------- |
+Total Execution Time    | ~ 125.77 ms   | ~ 81.21 ms         | ~ 73.45 ms    | ~ 84.42 ms              |
                         |
                         \----> Read the IMPORTANT notice below!
 
