@@ -55,24 +55,24 @@ Total Execution Time    | ~ 125.77 ms   | ~ 81.21 ms         | ~ 73.45 ms    | ~
                         |
                         \----> Read the IMPORTANT notice below!
 
-Go Benchmark            | Compiled Go (mature WIP) | Native Go FFI | Native Go FFI Cheatcode |
------------------------ | ------------------------ | ------------- | ----------------------- |
-AST Evaluation          | ~ 3 μs                   | ~ 20 μs       | ~ 4 μs                  |
-Fibonacci               | ~ 1 μs                   | ~ 2 μs        | ~ 1 μs                  |
-List Processing         | ~ 43 μs                  | ~ 121 μs      | ~ 1 μs                  |
-Tail Call Optimization  | ~ 720 μs                 | ~ 39 μs       | ~ 27 μs                 |
-Deep Record Updates     | ~ 259 μs                 | ~ 373 μs      | ~ 3 μs                  |
-Ackermann               | ~ 22 μs                  | ~ 23 μs       | ~ 32 μs                 |
-Church Numerals         | ~ 2277 μs                | ~ 1002 μs     | ~ 29 μs                 |
-Prime Sieve             | ~ 163 μs                 | ~ 134 μs      | ~ 4 μs                  |
-Red-Black Tree          | ~ 25320 μs               | ~ 26529 μs    | ~ 24856 μs              |
-Polymorphism            | ~ 2252 μs                | ~ 58848 μs    | ~ 2480 μs               |
-State Monad             | ~ 234 μs                 | ~ 127 μs      | ~ 1 μs                  |
-Lazy Evaluation         | ~ 17599 μs               | ~ 14816 μs    | ~ 1 μs                  |
-Array Processing        | ~ 34 μs                  | ~ 7 μs        | ~ 1 μs                  |
-RowToList               | ~ 1 μs                   | ~ 1 μs        | ~ 1 μs                  |
------------------------ | ------------------------ | ------------- | ----------------------- |
-Total Execution Time    | ~ 48.93 ms               | ~ 102.04 ms   | ~ 27.44 ms              |
+Go Benchmark            | Compiled Go (gopurs, mature WIP) | Compiled Go ([psgo](https://github.com/andyarvanitis/purescript-native)) | Native Go FFI | Native Go FFI Cheatcode |
+----------------------- | -------------------------------- | ------------------------------------------------------------------------ | ------------- | ----------------------- |
+AST Evaluation          | ~ 3 μs                           | ~ 296 μs                              | ~ 20 μs       | ~ 4 μs                  |
+Fibonacci               | ~ 1 μs                           | ~ 24 μs                               | ~ 2 μs        | ~ 1 μs                  |
+List Processing         | ~ 43 μs                          | ~ 586 μs                              | ~ 121 μs      | ~ 1 μs                  |
+Tail Call Optimization  | ~ 720 μs                         | ~ 13354 μs                            | ~ 39 μs       | ~ 27 μs                 |
+Deep Record Updates     | ~ 259 μs                         | ~ 9492 μs                             | ~ 373 μs      | ~ 3 μs                  |
+Ackermann               | ~ 22 μs                          | ~ 1267 μs                             | ~ 23 μs       | ~ 32 μs                 |
+Church Numerals         | ~ 2277 μs                        | ~ 5731 μs                             | ~ 1002 μs     | ~ 29 μs                 |
+Prime Sieve             | ~ 163 μs                         | ~ 2549 μs                             | ~ 134 μs      | ~ 4 μs                  |
+Red-Black Tree          | ~ 25320 μs                       | ~ 870034 μs                           | ~ 26529 μs    | ~ 24856 μs              |
+Polymorphism            | ~ 2252 μs                        | ~ 669801 μs                           | ~ 58848 μs    | ~ 2480 μs               |
+State Monad             | ~ 234 μs                         | ~ 536 μs                              | ~ 127 μs      | ~ 1 μs                  |
+Lazy Evaluation         | ~ 17599 μs                       | ~ 71586 μs                            | ~ 14816 μs    | ~ 1 μs                  |
+Array Processing        | ~ 34 μs                          | ~ 61 μs                               | ~ 7 μs        | ~ 1 μs                  |
+RowToList               | ~ 1 μs                           | ~ 2 μs                                | ~ 1 μs        | ~ 1 μs                  |
+----------------------- | -------------------------------- | ------------------------------------- | ------------- | ----------------------- |
+Total Execution Time    | ~ 48.93 ms                       | ~ 1645.32 ms                          | ~ 102.04 ms   | ~ 27.44 ms              |
                         |
                         \----> Read the IMPORTANT notice below!
 
