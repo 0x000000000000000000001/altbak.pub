@@ -1,4 +1,5 @@
 module Bench where
+
 import Prelude
 import Effect (Effect)
 import Effect.Console (log)
@@ -8,7 +9,6 @@ import Effect.Class (liftEffect)
 foreign import benchNow :: Effect Number
 foreign import opaque :: forall a. a -> Effect a
 foreign import formatNumber :: Number -> String
-
 
 runBench :: Effect Unit -> Effect Unit -> Effect Number
 runBench describe act = do
