@@ -153,9 +153,9 @@ RowToList               | ~ 2 μs                    | ~ 27 μs      | ~ 2 μs  
 **Total Execution Time**    | ~ 449.58 ms               | ~ 94.61 ms      | ~ 16.82 ms                |
 > *Read the IMPORTANT notice below!*
 
-#### F# / C#
+#### F#/C#
 
-F# / C# Benchmark       | Compiled C#/F# ([sharpurs](https://github.com/0x000000000000000000001/sharpurs), WIP) | Native C#/F# FFI | Native C#/F# FFI Cheatcode |
+F#/C# Benchmark         | Compiled F#/C# ([sharpurs](https://github.com/0x000000000000000000001/sharpurs), WIP) | Native F#/C# FFI | Native F#/C# FFI Cheatcode |
 ----------------------- | ------------------------- | --------------- | ------------------------- |
 AST Evaluation          | -                         | -               | -                         |
 Fibonacci               | -                         | -               | -                         |
