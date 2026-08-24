@@ -29,7 +29,7 @@ To ensure fair and executable comparisons across all backends, the test suite is
 
 Command: `./bin/run` (Runs on all 7 backends). New tests will gradually be added.
 
-JS Benchmark            | Compiled JS ([official](https://github.com/purescript/purescript)) | Compiled [Arista JS](https://github.com/aristanetworks/purescript-backend-optimizer) | Native JS FFI | Native JS FFI Cheatcode |
+JS Benchmark            | Compiled JS ([official](https://github.com/purescript/purescript)) | Compiled JS ([Arista](https://github.com/aristanetworks/purescript-backend-optimizer)) | Native JS FFI | Native JS FFI Cheatcode |
 ----------------------- | ---------------------- | ------------------ | ------------- | ----------------------- |
 AST Evaluation          | ~ 93 μs                | ~ 74 μs            | ~ 75 μs       | ~ 99 μs                 |
 Fibonacci               | ~ 43 μs                | ~ 46 μs            | ~ 43 μs       | ~ 41 μs                 |
