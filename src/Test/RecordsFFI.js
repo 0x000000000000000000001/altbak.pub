@@ -1,29 +1,18 @@
 export const runRecordsFFI = function(limit) {
-  let dummy = Math.floor(limit);
-  let initial = { a: 0, b: { c: 0, d: { e: 0, f: 0 } } };
-  return updateRec(dummy, initial).b.d.f;
-};
-
-function updateRec(n, r) {
-  let currN = n;
-  let currR = r;
-  
-  while (currN > 0) {
-    let newD = {
-      e: currR.b.d.e + 3,
-      f: currR.b.d.f + (currN % 5)
+  let n = Math.floor(limit);
+  let r = { a: 0, b: { c: 0, d: { e: 0, f: 0 } } };
+  while (n > 0) {
+    r = {
+      a: r.a + 1,
+      b: {
+        c: r.b.c + 2,
+        d: {
+          e: r.b.d.e + 3,
+          f: r.b.d.f + (n % 5)
+        }
+      }
     };
-    let newB = {
-      c: currR.b.c + 2,
-      d: newD
-    };
-    currR = {
-      a: currR.a + 1,
-      b: newB
-    };
-    
-    currN = currN - 1;
+    n--;
   }
-  
-  return currR;
-}
+  return r.b.d.f;
+};

@@ -1,8 +1,12 @@
 export const runRecordsFFICheatcode = function(limit) {
   let n = Math.floor(limit);
-  let obj = { a: 1, b: { c: 2, d: 3 } };
-  for (let i = 0; i < n; i++) {
-    obj.b.c += 1;
+  let r = { a: 0, b: { c: 0, d: { e: 0, f: 0 } } };
+  while (n > 0) {
+    r.a += 1;
+    r.b.c += 2;
+    r.b.d.e += 3;
+    r.b.d.f += (n % 5);
+    n--;
   }
-  return obj.b.c - 2;
+  return r.b.d.f;
 };

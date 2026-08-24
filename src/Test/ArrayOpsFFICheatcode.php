@@ -1,13 +1,9 @@
 <?php
 $exports['runArrayOpsFFICheatcode'] = function($limit) {
     $n = (int)$limit;
-    $arr = [];
-    for ($i = 1; $i <= $n; $i++) {
-        $arr[] = $i;
-    }
     $sum = 0;
-    foreach ($arr as $v) {
-        if ($v % 2 === 0) $sum += $v;
+    for ($i = 1; $i <= $n; $i++) {
+        if ($i % 2 === 0) $sum += $i;
     }
     return $sum;
 };

@@ -1,30 +1,28 @@
-use std::cell::RefCell;
 use std::rc::Rc;
 
-enum Lazy<T> {
-    Thunk(Box<dyn Fn() -> T>),
-    Value(T),
+type Lazy<'a> = Rc<dyn Fn() -> i64 + 'a>;
+
+fn force(l: &Lazy) -> i64 {
+    l()
 }
 
-fn force<T: Clone>(l: &Rc<RefCell<Lazy<T>>>) -> T {
-    let mut lazy = l.borrow_mut();
-    match &*lazy {
-        Lazy::Value(v) => v.clone(),
-        Lazy::Thunk(f) => {
-            let v = f();
-            *lazy = Lazy::Value(v.clone());
-            v
-        }
+fn defer<'a, F: Fn() -> i64 + 'a>(f: F) -> Lazy<'a> {
+    Rc::new(f)
+}
+
+fn build_thunks<'a>(depth: i64, acc: Lazy<'a>) -> Lazy<'a> {
+    if depth == 0 {
+        return acc;
     }
+    let prev = acc.clone();
+    build_thunks(depth - 1, defer(move || force(&prev) + 1))
 }
 
 pub fn Test_LazyEvaluationFFI_runLazyEvaluationFFI(mut limit: i64) -> i64 {
-    let mut lazy_val = Rc::new(RefCell::new(Lazy::Thunk(Box::new(|| 1))));
+    let mut acc = 0;
     for _ in 0..limit {
-        let prev = Rc::clone(&lazy_val);
-        lazy_val = Rc::new(RefCell::new(Lazy::Thunk(Box::new(move || {
-            force(&prev) + 1
-        }))));
+        let t = build_thunks(1000, defer(|| 0));
+        acc += force(&t);
     }
-    force(&lazy_val)
+    acc
 }

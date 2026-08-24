@@ -1,14 +1,14 @@
-
-class StrShowCheat { showLen() { return 5; } }
-class ArrShowCheat { showLen() { return 3; } }
-
+class Monoidish {
+  mempty_() { return 1; }
+  mappend_(x, y) { return x + y; }
+}
 export const runPolymorphismFFICheatcode = function(limit) {
   let n = Math.floor(limit);
-  let sum = 0;
-  let s1 = new StrShowCheat();
-  let s2 = new ArrShowCheat();
-  for (let i = 0; i < n; i++) {
-    sum += s1.showLen() + s2.showLen();
+  let acc = 0;
+  let m = new Monoidish();
+  while (n > 0) {
+    acc = m.mappend_(acc, m.mempty_());
+    n--;
   }
-  return sum;
+  return acc;
 };

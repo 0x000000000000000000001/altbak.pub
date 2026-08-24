@@ -1,9 +1,11 @@
 <?php
 $exports['runTCOFFI'] = function($limit) {
-    $go = function($n, $acc) use (&$go) {
-        if ($n <= 0) return $acc;
-        return $go($n - 1, $acc + $n);
-    };
-    return $go((int)$limit, 0);
+    $n = (int)$limit;
+    $acc = 0;
+    while ($n > 0) {
+        $acc += ($n % 3);
+        $n -= 1;
+    }
+    return $acc;
 };
 return $exports;

@@ -1,5 +1,4 @@
-
-pub fn Test_AckermannFFICheatcode_runAckermannFFICheatcode(mut limit: i64) -> i64 {
+pub fn Test_AckermannFFICheatcode_runAckermannFFICheatcode(limit: i64) -> i64 {
     fn ack(m: i64, n: i64) -> i64 {
         if m == 0 {
             n + 1
@@ -9,5 +8,5 @@ pub fn Test_AckermannFFICheatcode_runAckermannFFICheatcode(mut limit: i64) -> i6
             ack(m - 1, ack(m, n - 1))
         }
     }
-    ack(3, limit)
+    ack(3, 4)
 }

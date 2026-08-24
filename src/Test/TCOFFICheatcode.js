@@ -1,10 +1,9 @@
 export const runTCOFFICheatcode = function(limit) {
   let n = Math.floor(limit);
   let acc = 0;
-  let i = n;
-  while (i > 0) {
-    acc += i;
-    i--;
+  while (n > 0) {
+    acc += (n % 3);
+    n--;
   }
   return acc;
 };

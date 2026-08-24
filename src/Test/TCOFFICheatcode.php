@@ -2,10 +2,9 @@
 $exports['runTCOFFICheatcode'] = function($limit) {
     $n = (int)$limit;
     $acc = 0;
-    $i = $n;
-    while ($i > 0) {
-        $acc += $i;
-        $i--;
+    while ($n > 0) {
+        $acc += ($n % 3);
+        $n--;
     }
     return $acc;
 };

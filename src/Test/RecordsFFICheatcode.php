@@ -1,10 +1,14 @@
 <?php
 $exports['runRecordsFFICheatcode'] = function($limit) {
     $n = (int)$limit;
-    $obj = (object)['a' => 1, 'b' => (object)['c' => 2, 'd' => 3]];
-    for ($i = 0; $i < $n; $i++) {
-        $obj->b->c += 1;
+    $r = (object)["a" => 0, "b" => (object)["c" => 0, "d" => (object)["e" => 0, "f" => 0]]];
+    while ($n > 0) {
+        $r->a += 1;
+        $r->b->c += 2;
+        $r->b->d->e += 3;
+        $r->b->d->f += ($n % 5);
+        $n--;
     }
-    return $obj->b->c - 2;
+    return $r->b->d->f;
 };
 return $exports;

@@ -1,22 +1,20 @@
 <?php
-interface ShowableCheat {
-    public function showLen();
+interface Monoidish {
+    public function mempty_();
+    public function mappend_($x, $y);
 }
-class StrShowCheat implements ShowableCheat {
-    public function showLen() { return 5; }
+class IntMonoidish implements Monoidish {
+    public function mempty_() { return 1; }
+    public function mappend_($x, $y) { return $x + $y; }
 }
-class ArrShowCheat implements ShowableCheat {
-    public function showLen() { return 3; }
-}
-
 $exports['runPolymorphismFFICheatcode'] = function($limit) {
     $n = (int)$limit;
-    $sum = 0;
-    $s1 = new StrShowCheat();
-    $s2 = new ArrShowCheat();
-    for ($i = 0; $i < $n; $i++) {
-        $sum += $s1->showLen() + $s2->showLen();
+    $acc = 0;
+    $m = new IntMonoidish();
+    while ($n > 0) {
+        $acc = $m->mappend_($acc, $m->mempty_());
+        $n--;
     }
-    return $sum;
+    return $acc;
 };
 return $exports;

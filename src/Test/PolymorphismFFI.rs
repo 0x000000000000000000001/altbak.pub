@@ -1,24 +1,17 @@
-trait MyEq {
-    fn my_eq(&self, other: &Self) -> bool;
-}
-impl MyEq for i64 {
-    fn my_eq(&self, other: &Self) -> bool { self == other }
-}
-impl<T: MyEq> MyEq for Vec<T> {
-    fn my_eq(&self, other: &Self) -> bool {
-        if self.len() != other.len() { return false; }
-        for i in 0..self.len() {
-            if !self[i].my_eq(&other[i]) { return false; }
-        }
-        true
-    }
+struct Dict {
+    mempty_: i64,
+    mappend_: Box<dyn Fn(i64) -> Box<dyn Fn(i64) -> i64>>,
 }
 pub fn Test_PolymorphismFFI_runPolymorphismFFI(mut limit: i64) -> i64 {
-    let mut a = vec![vec![1, 2], vec![3, 4]];
-    let mut b = vec![vec![1, 2], vec![3, 4]];
-    let mut count = 0;
-    for _ in 0..limit {
-        if a.my_eq(&b) { count += 1; }
+    let dict = Dict {
+        mempty_: 1,
+        mappend_: Box::new(|x| Box::new(move |y| x + y)),
+    };
+    let mut acc = 0;
+    while limit > 0 {
+        let f = (dict.mappend_)(acc);
+        acc = f(dict.mempty_);
+        limit -= 1;
     }
-    count
+    acc
 }

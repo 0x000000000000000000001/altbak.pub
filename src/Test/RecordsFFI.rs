@@ -1,46 +1,30 @@
-
 #[derive(Clone)]
-struct Point {
-    x: i64,
-    y: i64,
-    z: i64,
-}
-
+struct DictD { e: i64, f: i64 }
 #[derive(Clone)]
-struct DeepRecord {
-    level1: Level1,
-}
-
+struct DictB { c: i64, d: Box<DictD> }
 #[derive(Clone)]
-struct Level1 {
-    level2: Level2,
-}
-
-#[derive(Clone)]
-struct Level2 {
-    level3: Point,
-}
+struct DictR { a: i64, b: Box<DictB> }
 
 pub fn Test_RecordsFFI_runRecordsFFI(mut limit: i64) -> i64 {
-    let mut rec = DeepRecord {
-        level1: Level1 {
-            level2: Level2 {
-                level3: Point { x: 0, y: 0, z: 0 },
-            },
-        },
-    };
-    for i in 0..limit {
-        rec = DeepRecord {
-            level1: Level1 {
-                level2: Level2 {
-                    level3: Point {
-                        x: rec.level1.level2.level3.x + 1,
-                        y: rec.level1.level2.level3.y + 2,
-                        z: rec.level1.level2.level3.z + 3,
-                    },
-                },
-            },
-        };
+    let mut rec = Box::new(DictR {
+        a: 0,
+        b: Box::new(DictB {
+            c: 0,
+            d: Box::new(DictD { e: 0, f: 0 }),
+        }),
+    });
+    while limit > 0 {
+        rec = Box::new(DictR {
+            a: rec.a + 1,
+            b: Box::new(DictB {
+                c: rec.b.c + 2,
+                d: Box::new(DictD {
+                    e: rec.b.d.e + 3,
+                    f: rec.b.d.f + (limit % 5),
+                }),
+            }),
+        });
+        limit -= 1;
     }
-    rec.level1.level2.level3.x + rec.level1.level2.level3.y + rec.level1.level2.level3.z
+    rec.b.d.f
 }

@@ -1,14 +1,12 @@
 <?php
 $exports['runRowToListFFI'] = function($limit) {
-    $n = (int)$limit;
-    $sum = 0;
-    for ($i = 0; $i < $n; $i++) {
-        $rec = (object)["a" => 1, "b" => "hello", "c" => true];
-        $countKeys = function($r) {
-            return count(get_object_vars($r));
-        };
-        $sum += $countKeys($rec) + ($rec->a * 2);
-    }
-    return $sum;
+    $dictNil = (object)["keysImpl" => function($_) { return 0; }];
+    $dictCons = function($tail) {
+        return (object)["keysImpl" => function($_) use ($tail) {
+            return 1 + ($tail->keysImpl)(null);
+        }];
+    };
+    $dict = $dictCons($dictCons($dictCons($dictCons($dictCons($dictNil)))));
+    return ($dict->keysImpl)(null);
 };
 return $exports;

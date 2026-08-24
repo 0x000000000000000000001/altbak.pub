@@ -1,91 +1,101 @@
-use std::rc::Rc;
-
-#[derive(Clone, Copy, PartialEq)]
-enum Color {
-    Red,
-    Black,
+#[derive(Clone)]
+struct Node {
+    color: u8,
+    left: Option<Box<Node>>,
+    value: i64,
+    right: Option<Box<Node>>,
 }
 
-enum Tree {
-    Leaf,
-    Node(Color, Rc<Tree>, i64, Rc<Tree>),
+impl Node {
+    fn new(color: u8, left: Option<Box<Node>>, value: i64, right: Option<Box<Node>>) -> Option<Box<Node>> {
+        Some(Box::new(Node { color, left, value, right }))
+    }
 }
 
-fn alloc(c: Color, l: Rc<Tree>, v: i64, r: Rc<Tree>) -> Rc<Tree> {
-    Rc::new(Tree::Node(c, l, v, r))
-}
-
-fn balance(c: Color, a: Rc<Tree>, x: i64, b: Rc<Tree>) -> Rc<Tree> {
-    if c == Color::Black {
-        if let Tree::Node(Color::Red, al, a_val, ar) = &*a {
-            if let Tree::Node(Color::Red, all, all_val, alr) = &**al {
-                return alloc(Color::Red, alloc(Color::Black, all.clone(), *all_val, alr.clone()), *a_val, alloc(Color::Black, ar.clone(), x, b.clone()));
-            }
-            if let Tree::Node(Color::Red, arl, arl_val, arr) = &**ar {
-                return alloc(Color::Red, alloc(Color::Black, al.clone(), *a_val, arl.clone()), *arl_val, alloc(Color::Black, arr.clone(), x, b.clone()));
+fn balance(c: u8, a: Option<Box<Node>>, x: i64, b: Option<Box<Node>>) -> Option<Box<Node>> {
+    if c == 1 { // black
+        if let Some(ref a_node) = a {
+            if a_node.color == 0 { // red
+                if let Some(ref al) = a_node.left {
+                    if al.color == 0 {
+                        return Node::new(0, 
+                            Node::new(1, al.left.clone(), al.value, al.right.clone()), 
+                            a_node.value, 
+                            Node::new(1, a_node.right.clone(), x, b)
+                        );
+                    }
+                }
+                if let Some(ref ar) = a_node.right {
+                    if ar.color == 0 {
+                        return Node::new(0, 
+                            Node::new(1, a_node.left.clone(), a_node.value, ar.left.clone()), 
+                            ar.value, 
+                            Node::new(1, ar.right.clone(), x, b)
+                        );
+                    }
+                }
             }
         }
-        if let Tree::Node(Color::Red, bl, b_val, br) = &*b {
-            if let Tree::Node(Color::Red, bll, bll_val, blr) = &**bl {
-                return alloc(Color::Red, alloc(Color::Black, a.clone(), x, bll.clone()), *bll_val, alloc(Color::Black, blr.clone(), *b_val, br.clone()));
-            }
-            if let Tree::Node(Color::Red, brl, brl_val, brr) = &**br {
-                return alloc(Color::Red, alloc(Color::Black, a.clone(), x, bl.clone()), *b_val, alloc(Color::Black, brl.clone(), *brl_val, brr.clone()));
+        if let Some(ref b_node) = b {
+            if b_node.color == 0 { // red
+                if let Some(ref bl) = b_node.left {
+                    if bl.color == 0 {
+                        return Node::new(0, 
+                            Node::new(1, a, x, bl.left.clone()), 
+                            bl.value, 
+                            Node::new(1, bl.right.clone(), b_node.value, b_node.right.clone())
+                        );
+                    }
+                }
+                if let Some(ref br) = b_node.right {
+                    if br.color == 0 {
+                        return Node::new(0, 
+                            Node::new(1, a, x, b_node.left.clone()), 
+                            b_node.value, 
+                            Node::new(1, br.left.clone(), br.value, br.right.clone())
+                        );
+                    }
+                }
             }
         }
     }
-    alloc(c, a, x, b)
+    Node::new(c, a, x, b)
 }
 
-fn ins(x: i64, t: &Rc<Tree>) -> Rc<Tree> {
-    match &**t {
-        Tree::Leaf => alloc(Color::Red, Rc::new(Tree::Leaf), x, Rc::new(Tree::Leaf)),
-        Tree::Node(c, l, y, r) => {
-            if x < *y {
-                balance(*c, ins(x, l), *y, r.clone())
-            } else if x > *y {
-                balance(*c, l.clone(), *y, ins(x, r))
+fn ins(x: i64, t: Option<Box<Node>>) -> Option<Box<Node>> {
+    match t {
+        None => Node::new(0, None, x, None),
+        Some(mut node) => {
+            if x < node.value {
+                balance(node.color, ins(x, node.left.take()), node.value, node.right.take())
+            } else if x > node.value {
+                balance(node.color, node.left.take(), node.value, ins(x, node.right.take()))
             } else {
-                t.clone()
+                Some(node)
             }
         }
     }
 }
 
-fn insert(x: i64, t: &Rc<Tree>) -> Rc<Tree> {
-    let res = ins(x, t);
-    if let Tree::Node(_, l, y, r) = &*res {
-        alloc(Color::Black, l.clone(), *y, r.clone())
-    } else {
-        Rc::new(Tree::Leaf)
+fn depth(t: Option<Box<Node>>) -> i64 {
+    match t {
+        None => 0,
+        Some(node) => {
+            let l = depth(node.left);
+            let r = depth(node.right);
+            1 + std::cmp::max(l, r)
+        }
     }
 }
 
-fn build_tree(n: i64, mut acc: Rc<Tree>) -> Rc<Tree> {
-    let mut i = n;
+pub fn Test_RBTreeFFI_runRBTreeFFI(limit: i64) -> i64 {
+    let mut acc = None;
+    let mut i = limit;
     while i > 0 {
-        acc = insert(i, &acc);
+        let mut res = ins(i, acc).unwrap();
+        res.color = 1; // root is always black
+        acc = Some(res);
         i -= 1;
     }
-    acc
-}
-
-fn depth(t: &Rc<Tree>) -> i64 {
-    match &**t {
-        Tree::Leaf => 0,
-        Tree::Node(_, l, _, r) => {
-            let ld = depth(l);
-            let rd = depth(r);
-            if ld > rd {
-                1 + ld
-            } else {
-                1 + rd
-            }
-        }
-    }
-}
-
-pub fn Test_RBTreeFFI_runRBTreeFFI(mut limit: i64) -> i64 {
-    let t = build_tree(limit, Rc::new(Tree::Leaf));
-    depth(&t)
+    depth(acc)
 }

@@ -1,23 +1,22 @@
 <?php
 $exports['runRecordsFFI'] = function($limit) {
     $n = (int)$limit;
-    $rec = (object)["a" => (object)["b" => (object)["c" => (object)["d" => (object)["e" => 0]]]]];
-    $go = function($i, $r) use (&$go, $n) {
-        if ($i >= $n) return $r;
+    $r = (object)["a" => 0, "b" => (object)["c" => 0, "d" => (object)["e" => 0, "f" => 0]]];
+    $go = function($i, $rec) use (&$go) {
+        if ($i === 0) return $rec;
         $newR = (object)[
-            "a" => (object)[
-                "b" => (object)[
-                    "c" => (object)[
-                        "d" => (object)[
-                            "e" => $r->a->b->c->d->e + 1
-                        ]
-                    ]
+            "a" => $rec->a + 1,
+            "b" => (object)[
+                "c" => $rec->b->c + 2,
+                "d" => (object)[
+                    "e" => $rec->b->d->e + 3,
+                    "f" => $rec->b->d->f + ($i % 5)
                 ]
             ]
         ];
-        return $go($i + 1, $newR);
+        return $go($i - 1, $newR);
     };
-    $finalRec = $go(0, $rec);
-    return $finalRec->a->b->c->d->e;
+    $finalRec = $go($n, $r);
+    return $finalRec->b->d->f;
 };
 return $exports;
