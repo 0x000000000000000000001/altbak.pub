@@ -83,32 +83,32 @@ Deep Record Updates     | ~ 260 μs | ~ 45 μs        | ~ 40 μs                
 Ackermann               | ~ 28 μs | ~ 13 μs        | ~ 11 μs                  |
 Church Numerals         | ~ 369 μs | ~ 73 μs        | ~ 68 μs                  |
 Prime Sieve             | ~ 76 μs | ~ 29 μs        | ~ 3 μs                   |
-Red-Black Tree          | ~ 25020 μs | ~ 18.061 ms      | ~ 12.228 ms                |
-Polymorphism            | ~ 17884 μs | ~ 6.596 ms       | ~ 7.737 ms                 |
+Red-Black Tree          | ~ 25020 μs | ~ 18061 μs      | ~ 12228 μs                |
+Polymorphism            | ~ 17884 μs | ~ 6596 μs       | ~ 7737 μs                 |
 State Monad             | ~ 5 μs | ~ 9 μs         | ~ 5 μs                   |
-Lazy Evaluation         | ~ 2868 μs | ~ 1.954 ms       | ~ 3 μs                   |
+Lazy Evaluation         | ~ 2868 μs | ~ 1954 μs       | ~ 3 μs                   |
 Array Processing        | ~ 13 μs | ~ 5 μs         | ~ 6 μs                   |
-**Total Execution Time**    | ~ 46.87 ms | ~ 27.10 ms       | ~ 20.43 ms                 |
+**Total Execution Time**    | ~ 46.87 ms | ~ 27.1 ms       | ~ 20.43 ms                 |
 > *Read the IMPORTANT notice below!*
 
 #### Erlang
 
 Erlang Benchmark        | Compiled Erlang ([purerl](https://github.com/purerl/purerl)) | Native Erlang FFI | Native Erlang FFI Cheatcode |
 ----------------------- | ----------------| ----------------- | --------------------------- |
-AST Evaluation          | ~ 692 μs | ~ 803 μs         | ~ 1.03 ms                  |
+AST Evaluation          | ~ 692 μs | ~ 803 μs         | ~ 1030 μs                  |
 Fibonacci               | ~ 49 μs | ~ 192 μs         | ~ 218 μs                   |
 List Processing         | ~ 1212 μs | ~ 249 μs         | ~ 222 μs                   |
 Tail Call Optimization  | ~ 1478 μs | ~ 318 μs         | ~ 369 μs                   |
-Deep Record Updates     | ~ 778 μs | ~ 1.601 ms       | ~ 261 μs                   |
+Deep Record Updates     | ~ 778 μs | ~ 1601 μs       | ~ 261 μs                   |
 Ackermann               | ~ 57 μs | ~ 280 μs         | ~ 343 μs                   |
 Church Numerals         | ~ 617 μs | ~ 708 μs         | ~ 205 μs                   |
 Prime Sieve             | ~ 232 μs | ~ 356 μs         | ~ 229 μs                   |
-Red-Black Tree          | ~ 17904 μs | ~ 20.106 ms      | ~ 43.375 ms                |
-Polymorphism            | ~ 92155 μs | ~ 202.472 ms     | ~ 21.901 ms                |
+Red-Black Tree          | ~ 17904 μs | ~ 20106 μs      | ~ 43375 μs                |
+Polymorphism            | ~ 92155 μs | ~ 202472 μs     | ~ 21901 μs                |
 State Monad             | ~ 108 μs | ~ 335 μs         | ~ 342 μs                   |
 Lazy Evaluation         | ~ 10325 μs | ~ 337 μs         | ~ 353 μs                   |
 Array Processing        | ~ 5430 μs | ~ 187 μs         | ~ 316 μs                   |
-**Total Execution Time**    | ~ 131.04 ms | ~ 228.18 ms      | ~ 69.40 ms                 |
+**Total Execution Time**    | ~ 131.04 ms | ~ 228.18 ms      | ~ 69.4 ms                 |
 > *Read the IMPORTANT notice below!*
 
 #### PHP
@@ -136,20 +136,20 @@ RowToList               | -                         | ~ 4 μs         | ~ 94 μs
 
 Rust Benchmark          | Compiled Rust ([purust](https://github.com/0x000000000000000000001/purust), young WIP) | Native Rust FFI | Native Rust FFI Cheatcode |
 ----------------------- | ------------------------- | --------------- | ------------------------- |
-AST Evaluation          | ~ 48 μs                   | ~ 38.00 μs      | ~ 4.00 μs                 |
-Fibonacci               | ~ 5 μs                    | ~ 27.00 μs      | ~ 4.00 μs                 |
-List Processing         | ~ 146 μs                  | ~ 76.00 μs      | ~ 4.00 μs                 |
-Tail Call Optimization  | ~ 762 μs                  | ~ 114.00 μs     | ~ 47.00 μs                |
-Deep Record Updates     | ~ 2166 μs                 | ~ 272.00 μs     | ~ 7.00 μs                 |
-Ackermann               | ~ 26 μs                   | ~ 38.00 μs      | ~ 29.00 μs                |
-Church Numerals         | ~ 16363 μs                | ~ 598.00 μs     | ~ 3.00 μs                 |
-Prime Sieve             | ~ 265 μs                  | ~ 221.00 μs     | ~ 4.00 μs                 |
-Red-Black Tree          | ~ 65765 μs                | ~ 59784.00 μs   | ~ 16700.00 μs             |
-Polymorphism            | ~ 38713 μs                | ~ 8342.00 μs    | ~ 4.00 μs                 |
-State Monad             | ~ 419 μs                  | ~ 145.00 μs     | ~ 3.00 μs                 |
-Lazy Evaluation         | ~ 324862 μs               | ~ 24919.00 μs   | ~ 3.00 μs                 |
-Array Processing        | ~ 35 μs                   | ~ 14.00 μs      | ~ 3.00 μs                 |
-RowToList               | ~ 2 μs                    | ~ 27.00 μs      | ~ 2.00 μs                 |
+AST Evaluation          | ~ 48 μs                   | ~ 38 μs      | ~ 4 μs                 |
+Fibonacci               | ~ 5 μs                    | ~ 27 μs      | ~ 4 μs                 |
+List Processing         | ~ 146 μs                  | ~ 76 μs      | ~ 4 μs                 |
+Tail Call Optimization  | ~ 762 μs                  | ~ 114 μs     | ~ 47 μs                |
+Deep Record Updates     | ~ 2166 μs                 | ~ 272 μs     | ~ 7 μs                 |
+Ackermann               | ~ 26 μs                   | ~ 38 μs      | ~ 29 μs                |
+Church Numerals         | ~ 16363 μs                | ~ 598 μs     | ~ 3 μs                 |
+Prime Sieve             | ~ 265 μs                  | ~ 221 μs     | ~ 4 μs                 |
+Red-Black Tree          | ~ 65765 μs                | ~ 59784 μs   | ~ 16700 μs             |
+Polymorphism            | ~ 38713 μs                | ~ 8342 μs    | ~ 4 μs                 |
+State Monad             | ~ 419 μs                  | ~ 145 μs     | ~ 3 μs                 |
+Lazy Evaluation         | ~ 324862 μs               | ~ 24919 μs   | ~ 3 μs                 |
+Array Processing        | ~ 35 μs                   | ~ 14 μs      | ~ 3 μs                 |
+RowToList               | ~ 2 μs                    | ~ 27 μs      | ~ 2 μs                 |
 **Total Execution Time**    | ~ 449.58 ms               | ~ 94.61 ms      | ~ 16.82 ms                |
 > *Read the IMPORTANT notice below!*
 
