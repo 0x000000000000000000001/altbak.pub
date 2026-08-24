@@ -55,7 +55,7 @@ Total Execution Time    | ~ 125.77 ms   | ~ 81.21 ms         | ~ 73.45 ms    | ~
                         |
                         \----> Read the IMPORTANT notice below!
 
-Go Benchmark            | Compiled Go (gopurs, mature WIP) | Compiled Go (<a href="https://github.com/i-am-the-slime/purescript-native">psgo</a>) | Native Go FFI | Native Go FFI Cheatcode |
+Go Benchmark            | Compiled Go (gopurs, mature WIP) | Compiled Go [psgo](https://github.com/i-am-the-slime/purescript-native) | Native Go FFI | Native Go FFI Cheatcode |
 ----------------------- | -------------------------------- | ------------------------------------------------------------------------------------ | ------------- | ----------------------- |
 AST Evaluation          | ~ 3 μs                           | ~ 296 μs                              | ~ 20 μs       | ~ 4 μs                  |
 Fibonacci               | ~ 1 μs                           | ~ 24 μs                               | ~ 2 μs        | ~ 1 μs                  |
