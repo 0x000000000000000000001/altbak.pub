@@ -137,5 +137,5 @@ else
   ./bin/gnomon/run $CLEAN || echo "=== Go (Gnomon) failed ==="
   
   echo ""
-  ./bin/sharp/run $CLEAN || echo "=== C# failed ==="
+  ./bin/sharp/run $CLEAN || echo "=== F#/C# failed ==="
 fi

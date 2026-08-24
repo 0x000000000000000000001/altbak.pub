@@ -73,7 +73,7 @@ spago build
 # Generate C# code
 node ../sharpurs/sharpurs/bin/sharpurs.js --main ${ENTRY_POINT} || exit 1
 
-echo "=== C# ==="
+echo "=== F#/C# ==="
 if [ -d "output/Main" ]; then
     cd output/Main
     dotnet run --project Program.fsproj -c Release

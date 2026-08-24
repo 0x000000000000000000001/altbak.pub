@@ -62,5 +62,11 @@ workspace:
       path: "../sharpurs/sharpurs-assert"
     lazy:
       path: "../sharpurs/sharpurs-lazy"
+    control:
+      path: "../sharpurs/sharpurs-control"
+    unfoldable:
+      path: "../sharpurs/sharpurs-unfoldable"
+    unfoldable1:
+      path: "../sharpurs/sharpurs-unfoldable"
   backend:
     cmd: "../sharpurs/sharpurs/bin/sharpurs"

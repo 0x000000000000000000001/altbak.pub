@@ -685,6 +685,9 @@
       "console": {
         "path": "../sharpurs/sharpurs-console"
       },
+      "control": {
+        "path": "../sharpurs/sharpurs-control"
+      },
       "datetime": {
         "path": "../sharpurs/sharpurs-datetime"
       },
@@ -735,6 +738,12 @@
       },
       "strings": {
         "path": "../sharpurs/sharpurs-strings"
+      },
+      "unfoldable": {
+        "path": "../sharpurs/sharpurs-unfoldable"
+      },
+      "unfoldable1": {
+        "path": "../sharpurs/sharpurs-unfoldable"
       },
       "unsafe-coerce": {
         "path": "../sharpurs/sharpurs-unsafe-coerce"
@@ -828,9 +837,8 @@
       ]
     },
     "control": {
-      "type": "registry",
-      "version": "6.0.0",
-      "integrity": "sha256-0vxyYh5FL+ilxgLo954w1LqCUC0RSIivNNlb9CaNUQg=",
+      "type": "local",
+      "path": "../sharpurs/sharpurs-control",
       "dependencies": [
         "newtype",
         "prelude"
@@ -1264,9 +1272,8 @@
       "dependencies": []
     },
     "unfoldable": {
-      "type": "registry",
-      "version": "6.0.0",
-      "integrity": "sha256-BK/6By1sKp/ztk+9CF3q43SV0QDTLVdsGqFerKHSmbg=",
+      "type": "local",
+      "path": "../sharpurs/sharpurs-unfoldable",
       "dependencies": [
         "foldable-traversable",
         "maybe",
