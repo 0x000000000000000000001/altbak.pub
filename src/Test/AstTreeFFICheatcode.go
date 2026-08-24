@@ -47,7 +47,7 @@ func buildTreeAst_cheatcode(n int) *expr_cheatcode {
 }
 
 // gopurs unboxes Int to float64 for FFICheatcode methods
-func RunAstTreeFFICheatcode(limit float64) float64 {
+func RunAstTreeFFICheatcode(limit int) int {
 	t := buildTreeAst_cheatcode(int(limit))
-	return float64(evalAst_cheatcode(t))
+	return (evalAst_cheatcode(t))
 }

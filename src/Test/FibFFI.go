@@ -11,6 +11,6 @@ func fib(n int) int {
 	return fib(n-1) + fib(n-2)
 }
 
-func RunFibFFI(limit float64) float64 {
-	return float64(fib(int(limit)))
+func RunFibFFI(limit int) int {
+	return (fib(int(limit)))
 }

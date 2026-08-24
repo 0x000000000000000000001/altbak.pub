@@ -37,9 +37,9 @@ func updateRec(n int, r dictR) dictR {
 	return updateRec(n - 1, newR)
 }
 
-func RunRecordsFFI(limit float64) float64 {
-	dummy := int(limit)
+func RunRecordsFFI(limit int) int {
+	dummy := limit
 	initial := dictR{a: 0, b: dictB{c: 0, d: dictD{e: 0, f: 0}}}
 	res := updateRec(dummy, initial)
-	return float64(res.b.d.f)
+	return (res.b.d.f)
 }

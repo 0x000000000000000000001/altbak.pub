@@ -60,7 +60,7 @@ func runManyTimes_StateMonad(n int, acc int) int {
 	return runManyTimes_StateMonad(n-1, acc+runState(chainModifications(60), 0).state)
 }
 
-func RunStateMonadFFI(limit float64) float64 {
-	dummy := int(limit)
-	return float64(runManyTimes_StateMonad(dummy, 0))
+func RunStateMonadFFI(limit int) int {
+	dummy := limit
+	return (runManyTimes_StateMonad(dummy, 0))
 }

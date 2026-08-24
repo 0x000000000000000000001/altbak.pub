@@ -1,7 +1,7 @@
 package Test_ArrayOpsFFI
 
 
-func RunArrayOpsFFI(limit float64) float64 {
+func RunArrayOpsFFI(limit int) int {
 	n := int(limit)
 	
 	arr := make([]int, 0, n)
@@ -21,5 +21,5 @@ func RunArrayOpsFFI(limit float64) float64 {
 		sum += x
 	}
 	
-	return float64(sum)
+	return (sum)
 }

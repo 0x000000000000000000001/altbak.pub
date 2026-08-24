@@ -17,9 +17,9 @@ func (d dictCons) keysImpl(_ interface{}) int {
 	return 1 + d.tail.keysImpl(nil)
 }
 
-func RunRowToListFFI(limit float64) float64 {
-	// dummy := int(limit)
+func RunRowToListFFI(limit int) int {
+	// dummy := limit
 	// rec is not even used in keysImpl, it's just for the type signature
 	dict := dictCons{tail: dictCons{tail: dictCons{tail: dictCons{tail: dictCons{tail: dictNil{}}}}}}
-	return float64(dict.keysImpl(nil))
+	return (dict.keysImpl(nil))
 }

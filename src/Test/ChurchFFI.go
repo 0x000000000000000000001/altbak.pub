@@ -62,7 +62,7 @@ func c100k(n int) Church {
 	return mulC(c10k(n), c10(n))
 }
 
-func RunChurchFFI(limit float64) float64 {
-	dummy := int(limit)
-	return float64(toInt(c100k(dummy)))
+func RunChurchFFI(limit int) int {
+	dummy := limit
+	return (toInt(c100k(dummy)))
 }

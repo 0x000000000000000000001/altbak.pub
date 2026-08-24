@@ -92,7 +92,7 @@ func sumList(lst List) int {
 	return goFunc(lst, 0)
 }
 
-func RunPrimesFFI(limit float64) float64 {
-	dummy := int(limit)
-	return float64(sumList(sieve(rangeList(2, dummy))))
+func RunPrimesFFI(limit int) int {
+	dummy := limit
+	return (sumList(sieve(rangeList(2, dummy))))
 }

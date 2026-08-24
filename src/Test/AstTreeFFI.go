@@ -47,7 +47,7 @@ func buildTreeAst(n int) *expr {
 }
 
 // gopurs unboxes Int to float64 for FFI methods
-func RunAstTreeFFI(limit float64) float64 {
+func RunAstTreeFFI(limit int) int {
 	t := buildTreeAst(int(limit))
-	return float64(evalAst(t))
+	return (evalAst(t))
 }

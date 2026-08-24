@@ -1,7 +1,7 @@
 package Test_ListOpsFFICheatcode
 
 
-func RunListOpsFFICheatcode(limit float64) float64 {
+func RunListOpsFFICheatcode(limit int) int {
 	n := int(limit)
 	sum := 0
 	for i := 1; i <= n; i++ {
@@ -9,6 +9,6 @@ func RunListOpsFFICheatcode(limit float64) float64 {
 			sum += i
 		}
 	}
-	return float64(sum)
+	return (sum)
 }
 

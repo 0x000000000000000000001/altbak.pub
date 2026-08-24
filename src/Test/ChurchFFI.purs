@@ -12,5 +12,5 @@ describe = log "Church Numerals FFI (100k Closure Applications):"
 
 act :: Effect Unit
 act = do
-  dummy <- Bench.opaque 100000
+  dummy <- Bench.opaque 10
   logShow $ runChurchFFI dummy

@@ -11,7 +11,7 @@ func ack(m, n int) int {
 	return ack(m-1, ack(m, n-1))
 }
 
-func RunAckermannFFI(limit float64) float64 {
-	return float64(ack(3, 4))
+func RunAckermannFFI(limit int) int {
+	return (ack(3, 4))
 }
 

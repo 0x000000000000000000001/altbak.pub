@@ -7,7 +7,7 @@ type Showable_cheatcode interface {
 type MyInt_cheatcode int
 func (m MyInt_cheatcode) Show() string { return "Int" }
 
-func RunPolymorphismFFICheatcode(limit float64) float64 {
+func RunPolymorphismFFICheatcode(limit int) int {
 	n := int(limit)
 	count := 0
 	var s Showable_cheatcode = MyInt_cheatcode(0)
@@ -16,6 +16,6 @@ func RunPolymorphismFFICheatcode(limit float64) float64 {
 			count++
 		}
 	}
-	return float64(count)
+	return (count)
 }
 

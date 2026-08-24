@@ -85,7 +85,7 @@ func depth_cheatcode(t *tree_cheatcode) int {
 	return 1 + rd
 }
 
-func RunRBTreeFFICheatcode(limit float64) float64 {
+func RunRBTreeFFICheatcode(limit int) int {
 	t := buildTree_cheatcode(int(limit), nil)
-	return float64(depth_cheatcode(t))
+	return (depth_cheatcode(t))
 }

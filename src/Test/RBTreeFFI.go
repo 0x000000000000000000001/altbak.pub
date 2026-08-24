@@ -76,7 +76,7 @@ func depth(t *tree) int {
 	return 1 + rd
 }
 
-func RunRBTreeFFI(limit float64) float64 {
+func RunRBTreeFFI(limit int) int {
 	t := buildTree(int(limit), nil)
-	return float64(depth(t))
+	return (depth(t))
 }

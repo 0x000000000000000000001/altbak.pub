@@ -57,12 +57,12 @@ func foldl(f func(int) func(int) int, acc int, lst ListOpsList) int {
 	return goFunc(lst, acc)
 }
 
-func RunListOpsFFI(limit float64) float64 {
+func RunListOpsFFI(limit int) int {
 	n := int(limit)
 	res := foldl(func(acc int) func(int) int {
 		return func(x int) int {
 			return acc + x
 		}
 	}, 0, filterEvens(rangeListOps(1, n)))
-	return float64(res)
+	return (res)
 }

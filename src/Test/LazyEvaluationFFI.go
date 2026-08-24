@@ -29,7 +29,7 @@ func runManyTimes(times int, acc int) int {
 	}))))
 }
 
-func RunLazyEvaluationFFI(limit float64) float64 {
+func RunLazyEvaluationFFI(limit int) int {
 	n := int(limit)
-	return float64(runManyTimes(n, 0))
+	return (runManyTimes(n, 0))
 }

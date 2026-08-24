@@ -1,14 +1,14 @@
 package Test_ChurchFFICheatcode
 
 
-func RunChurchFFICheatcode(limit float64) float64 {
+func RunChurchFFICheatcode(limit int) int {
 	// Native Church numerals are essentially functional loops.
 	// We optimize it as a native loop for the FFICheatcode.
 	n := int(limit)
 	acc := 0
-	for i := 0; i < n; i++ {
+	for i := 0; i < n * 10000; i++ {
 		acc++
 	}
-	return float64(acc)
+	return (acc)
 }
 

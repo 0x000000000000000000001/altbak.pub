@@ -1,7 +1,7 @@
 package Test_RowToListFFICheatcode
 
 
-func RunRowToListFFICheatcode(limit float64) float64 {
+func RunRowToListFFICheatcode(limit int) int {
 	return 5.0
 }
 

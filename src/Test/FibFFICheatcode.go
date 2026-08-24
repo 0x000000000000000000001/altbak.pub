@@ -11,7 +11,7 @@ func fib_cheatcode(n int) int {
 	return fib_cheatcode(n-1) + fib_cheatcode(n-2)
 }
 
-func RunFibFFICheatcode(limit float64) float64 {
-	dummy := int(limit)
-	return float64(fib_cheatcode(dummy))
+func RunFibFFICheatcode(limit int) int {
+	dummy := limit
+	return (fib_cheatcode(dummy))
 }

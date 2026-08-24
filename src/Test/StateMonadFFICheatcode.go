@@ -1,7 +1,7 @@
 package Test_StateMonadFFICheatcode
 
 
-func RunStateMonadFFICheatcode(limit float64) float64 {
+func RunStateMonadFFICheatcode(limit int) int {
 	// 60 depth x 20 nested binds = 1200 binds
 	state := 0
 	for i := 0; i < 60; i++ {
@@ -9,6 +9,6 @@ func RunStateMonadFFICheatcode(limit float64) float64 {
 			state += 1
 		}
 	}
-	return float64(state)
+	return (state)
 }
 
