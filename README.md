@@ -133,21 +133,21 @@ RowToList               | -                         | ~ 4 μs         | ~ 94 μs
 
 Rust Benchmark          | Compiled Rust ([purust](https://github.com/0x000000000000000000001/purust), young WIP) | Native Rust FFI | Native Rust FFI Cheatcode |
 ----------------------- | ------------------------- | --------------- | ------------------------- |
-AST Evaluation          | ~ 48 μs                   | ~ 65.00 μs      | ~ 4.00 μs                 |
-Fibonacci               | ~ 5 μs                    | ~ 67.00 μs      | ~ 4.00 μs                 |
-List Processing         | ~ 146 μs                  | ~ 136.00 μs     | ~ 4.00 μs                 |
-Tail Call Optimization  | ~ 762 μs                  | ~ 151.00 μs     | ~ 47.00 μs                |
-Deep Record Updates     | ~ 2166 μs                 | ~ 447.00 μs     | ~ 7.00 μs                 |
-Ackermann               | ~ 26 μs                   | ~ 55.00 μs      | ~ 29.00 μs                |
-Church Numerals         | ~ 16363 μs                | ~ 651.00 μs     | ~ 3.00 μs                 |
-Prime Sieve             | ~ 265 μs                  | ~ 11.00 μs      | ~ 4.00 μs                 |
-Red-Black Tree          | ~ 65765 μs                | ~ 58992.00 μs   | ~ 16700.00 μs             |
-Polymorphism            | ~ 38713 μs                | ~ 8125.00 μs    | ~ 4.00 μs                 |
-State Monad             | ~ 419 μs                  | ~ 4.00 μs       | ~ 3.00 μs                 |
-Lazy Evaluation         | ~ 324862 μs               | ~ 24668.00 μs   | ~ 3.00 μs                 |
-Array Processing        | ~ 35 μs                   | ~ 8.00 μs       | ~ 3.00 μs                 |
-RowToList               | ~ 2 μs                    | ~ 13.00 μs      | ~ 2.00 μs                 |
-**Total Execution Time**    | ~ 449.58 ms               | ~ 93.39 ms      | ~ 16.82 ms                |
+AST Evaluation          | ~ 48 μs                   | ~ 38.00 μs      | ~ 4.00 μs                 |
+Fibonacci               | ~ 5 μs                    | ~ 27.00 μs      | ~ 4.00 μs                 |
+List Processing         | ~ 146 μs                  | ~ 76.00 μs      | ~ 4.00 μs                 |
+Tail Call Optimization  | ~ 762 μs                  | ~ 114.00 μs     | ~ 47.00 μs                |
+Deep Record Updates     | ~ 2166 μs                 | ~ 272.00 μs     | ~ 7.00 μs                 |
+Ackermann               | ~ 26 μs                   | ~ 38.00 μs      | ~ 29.00 μs                |
+Church Numerals         | ~ 16363 μs                | ~ 598.00 μs     | ~ 3.00 μs                 |
+Prime Sieve             | ~ 265 μs                  | ~ 221.00 μs     | ~ 4.00 μs                 |
+Red-Black Tree          | ~ 65765 μs                | ~ 59784.00 μs   | ~ 16700.00 μs             |
+Polymorphism            | ~ 38713 μs                | ~ 8342.00 μs    | ~ 4.00 μs                 |
+State Monad             | ~ 419 μs                  | ~ 145.00 μs     | ~ 3.00 μs                 |
+Lazy Evaluation         | ~ 324862 μs               | ~ 24919.00 μs   | ~ 3.00 μs                 |
+Array Processing        | ~ 35 μs                   | ~ 14.00 μs      | ~ 3.00 μs                 |
+RowToList               | ~ 2 μs                    | ~ 27.00 μs      | ~ 2.00 μs                 |
+**Total Execution Time**    | ~ 449.58 ms               | ~ 94.61 ms      | ~ 16.82 ms                |
 
 > [!IMPORTANT]
 > **The 99/1 philosophy and the AOT compiler vs FFI vs cheatcode approach**
