@@ -36,42 +36,42 @@ CORE STRESSTEST BENCHMARK RESULTS (Fibonacci, AST, tail calls, Church, primes, e
 
 Benchmark               | Compiled JS   | Compiled Arista JS | Native JS FFI | Native JS FFI Cheatcode |
 ----------------------- | ------------- | ------------------ | ------------- | ----------------------- |
-AST Evaluation          | ~ 93 μs       | ~ 74 μs            | ~ 119 μs                |
-Fibonacci               | ~ 43 μs       | ~ 46 μs            | ~ 68 μs                 |
-List Processing         | ~ 386 μs      | ~ 368 μs           | ~ 54 μs                 |
-Tail Call Optimization  | ~ 1597 μs     | ~ 1550 μs          | ~ 635 μs                |
-Deep Record Updates     | ~ 433 μs      | ~ 562 μs           | ~ 606 μs                |
-Ackermann               | ~ 211 μs      | ~ 210 μs           | ~ 152 μs                |
-Church Numerals         | ~ 1662 μs     | ~ 1570 μs          | ~ 544 μs                |
-Prime Sieve             | ~ 725 μs      | ~ 689 μs           | ~ 188 μs                |
-Red-Black Tree          | ~ 94574 μs    | ~ 53648 μs         | ~ 33658 μs              |
-Polymorphism            | ~ 9029 μs     | ~ 8111 μs          | ~ 4246 μs               |
-State Monad             | ~ 425 μs      | ~ 170 μs           | ~ 36 μs                 |
-Lazy Evaluation         | ~ 16372 μs    | ~ 13986 μs         | ~ 357 μs                |
-Array Processing        | ~ 218 μs      | ~ 222 μs           | ~ 33 μs                 |
------------------------ | ------------- | ------------------ | ----------------------- |
-Total Execution Time    | ~ 125.77 ms   | ~ 81.21 ms         | ~ 40.72 ms              |
+AST Evaluation          | ~ 93 μs       | ~ 74 μs            | ~ 119 μs      | 
+Fibonacci               | ~ 43 μs       | ~ 46 μs            | ~ 68 μs       |
+List Processing         | ~ 386 μs      | ~ 368 μs           | ~ 54 μs       |
+Tail Call Optimization  | ~ 1597 μs     | ~ 1550 μs          | ~ 635 μs      |
+Deep Record Updates     | ~ 433 μs      | ~ 562 μs           | ~ 606 μs      |
+Ackermann               | ~ 211 μs      | ~ 210 μs           | ~ 152 μs      |
+Church Numerals         | ~ 1662 μs     | ~ 1570 μs          | ~ 544 μs      |
+Prime Sieve             | ~ 725 μs      | ~ 689 μs           | ~ 188 μs      |
+Red-Black Tree          | ~ 94574 μs    | ~ 53648 μs         | ~ 33658 μs    |
+Polymorphism            | ~ 9029 μs     | ~ 8111 μs          | ~ 4246 μs     |
+State Monad             | ~ 425 μs      | ~ 170 μs           | ~ 36 μs       |
+Lazy Evaluation         | ~ 16372 μs    | ~ 13986 μs         | ~ 357 μs      |
+Array Processing        | ~ 218 μs      | ~ 222 μs           | ~ 33 μs       |
+----------------------- | ------------- | ------------------ | ------------- |
+Total Execution Time    | ~ 125.77 ms   | ~ 81.21 ms         | ~ 40.72 ms    |
                         |
                         \----> Read the IMPORTANT notice below!
 
 Benchmark               | Compiled Go (mature WIP) | Native Go FFI | Native Go FFI Cheatcode |
 ----------------------- | ------------------------ | ------------- | ----------------------- |
-AST Evaluation          | ~ 3 μs                   | ~ 4 μs                  |
-Fibonacci               | ~ 1 μs                   | ~ 2 μs                  |
-List Processing         | ~ 43 μs                  | ~ 1 μs                  |
-Tail Call Optimization  | ~ 720 μs                 | ~ 56 μs                 |
-Deep Record Updates     | ~ 259 μs                 | ~ 3 μs                  |
-Ackermann               | ~ 22 μs                  | ~ 32 μs                 |
-Church Numerals         | ~ 2277 μs                | ~ 34 μs                 |
-Prime Sieve             | ~ 163 μs                 | ~ 3 μs                  |
-Red-Black Tree          | ~ 25320 μs               | ~ 24154 μs              |
-Polymorphism            | ~ 2252 μs                | ~ 2387 μs               |
-State Monad             | ~ 234 μs                 | ~ 1 μs                  |
-Lazy Evaluation         | ~ 17599 μs               | ~ 305 μs                |
-Array Processing        | ~ 34 μs                  | ~ 1 μs                  |
-RowToList               | ~ 1 μs                   | ~ 1 μs                  |
------------------------ | ------------------------ | ----------------------- |
-Total Execution Time    | ~ 48.93 ms               | ~ 26.98 ms              |
+AST Evaluation          | ~ 12 μs                  | ~ 20 μs       | ~ 4 μs                  |
+Fibonacci               | ~ 2 μs                   | ~ 2 μs        | ~ 1 μs                  |
+List Processing         | ~ 46 μs                  | ~ 121 μs      | ~ 1 μs                  |
+Tail Call Optimization  | ~ 761 μs                 | ~ 39 μs       | ~ 27 μs                 |
+Deep Record Updates     | ~ 284 μs                 | ~ 373 μs      | ~ 3 μs                  |
+Ackermann               | ~ 24 μs                  | ~ 23 μs       | ~ 32 μs                 |
+Church Numerals         | ~ 2312 μs                | ~ 1002 μs     | ~ 29 μs                 |
+Prime Sieve             | ~ 193 μs                 | ~ 134 μs      | ~ 4 μs                  |
+Red-Black Tree          | ~ 26982 μs               | ~ 26529 μs    | ~ 24856 μs              |
+Polymorphism            | ~ 2530 μs                | ~ 58848 μs    | ~ 2480 μs               |
+State Monad             | ~ 225 μs                 | ~ 127 μs      | ~ 1 μs                  |
+Lazy Evaluation         | ~ 18500 μs               | ~ 14816 μs    | ~ 1 μs                  |
+Array Processing        | ~ 57 μs                  | ~ 7 μs        | ~ 1 μs                  |
+RowToList               | ~ 0 μs                   | ~ 1 μs        | ~ 1 μs                  |
+----------------------- | ------------------------ | ------------- | ----------------------- |
+Total Execution Time    | ~ 51.93 ms               | ~ 102.04 ms   | ~ 27.44 ms              |
                         |
                         \----> Read the IMPORTANT notice below!
 
@@ -150,12 +150,19 @@ Total Execution Time    | ~ 449.58 ms               |
 ```
 
 > [!IMPORTANT]
-> **The 99/1 philosophy and the FFI approach**
-> Using Go as an example: the *Native Go FFI Cheatcode* column demonstrates that the code generated by the compiler remains within a highly competitive order of magnitude, especially given the high-level expressiveness of PureScript (i.e., how much low-level machinery we can safely ignore). Since these tests are deliberately naive and designed to stress the runtime, they represent absolute worst-case scenarios for the compiler. The goal is to maximize the performance gap between compiled and native code, using these **artificially worsened** gaps to drive continuous optimizations in our code generation.
+> **The 99/1 philosophy and the AOT compiler vs FFI vs cheatcode approach**
+> 
+> Using Go as an example, the three columns give a concrete idea of what the AOT compiler actually does:
+> 
+> 1. **Compiled Go (mature WIP)**: The actual code generated by our compiler (`gopurs`). It is often **faster** than basic handwritten FFI. The compiler uses the **TAST (Typed Abstract Syntax Tree)** to aggressively inline type classes into concrete unboxed structs, stripping away interfaces and allocations entirely. It also turns tail recursion into native `for` loops to bypass stack limits.
+> 2. **Native Go FFI**: This is what you get if a human translates PureScript's functional patterns (closures, type classes, boxed lists) directly into idiomatic Go using native features like interfaces and type assertions.
+> 3. **Native Go FFI cheatcode**: The theoretical limit of the hardware, using raw imperative shortcuts. Unlike column 2, it doesn't try to faithfully replicate unoptimized functional patterns; it just runs as fast as possible. Cheatcodes look wildly different for each test, making it a tough challenge for a compiler to predict them all. Some patterns are predictable though, and those can be integrated into the compiler engine. Ultimately, the goal is to see how much unoptimized design from column 2 we can cancel out in column 1 to match the performance of column 3.
 >
-> **Why "Cheatcode"?** We use this term because we are not just bypassing standard FFI overhead. Thanks to the TAST (Typed Abstract Syntax Tree), the compiler has structural knowledge that allows it to completely short-circuit functional abstractions. The Lazy Evaluation benchmark is the perfect example of this: the PureScript code is deliberately designed to be as inefficient as possible (dynamically allocating and forcing 1 million closures to heavily stress the garbage collector and call stack). In contrast, the FFI native version cheats by replacing it with a raw, hyper-optimized imperative `for` loop. That's inherently unfair, but that is precisely the goal: to see what happens when a developer makes a huge design mistake, and to measure the overall performance ratio in the worst-case scenario, where several unoptimized design choices compound across the tests.
+> **The ultimate goal of the compiler** isn't just to match the faithful native FFI. We want to get as close as possible to the cheatcode, proving that the generated code stays within a highly competitive order of magnitude despite the high-level expressiveness of PureScript or bad upfront design. We achieve this by detecting the structural shortcuts that a human brain naturally figures out when writing a cheatcode. Generating a perfect cheatcode for every arbitrary design is obviously impossible, but a large part of it relies on reproducible heuristics (unboxing, inlining, loop vectorization, TCO) that we actively carve into stone within the compiler engine.
 >
-> In practice, **99% of your codebase will be nearly as fast as native code**, allowing you to focus entirely on domain concepts rather than hardware details. By optimizing for these catastrophic, worst-case scenarios, we guarantee the best possible performance ratio for real-world projects. This actively mitigates the impact of naive developer implementations and delays as long as possible the need to manually optimize the remaining 1% (critical algorithmic *hot paths*). For those rare hot paths, you still have three options: accept a minimal Nx slowdown that the compiler actively works to mitigate (n.b. N ~ 2 or 3), use safe mutability abstractions like the `ST` monad (which compile down to highly efficient imperative loops), or seamlessly drop down into FFI to write native code as close to the metal as needed. This philosophy applies universally to all backend languages benchmarked here: imperative code is kept to a strict, perfectly isolated minimum.
+> **Why are these tests so naive?** These tests are deliberately naive to stress the runtime. For example, the Lazy Evaluation benchmark dynamically allocates and forces 1 million closures to heavily stress the garbage collector and call stack. They represent absolute worst-case scenarios. We want to maximize the performance gap between compiled and native code and use these artificially worsened gaps to drive continuous optimizations. When the cheatcode replaces a million closures with a raw `for` loop taking 1 µs, it's inherently unfair. But that's exactly the point: we want to see what happens when a developer makes a huge design mistake, and measure the performance ratio when several bad choices compound together.
+>
+> In practice, **99% of your codebase will be as fast as, or even faster than, standard native code**, letting you focus entirely on domain concepts instead of hardware details. Optimizing for catastrophic scenarios guarantees the best possible performance ratio for real-world projects. This actively mitigates the impact of naive implementations and delays the need to manually optimize the remaining 1% (critical algorithmic *hot paths*). For those rare hot paths, you still have three options: accept a minimal Nx slowdown that the compiler actively tries to mitigate, use safe mutability abstractions like the `ST` monad (which compile down to fast imperative loops), or drop down into FFI to write native code as close to the metal as needed. This philosophy applies universally to all backend languages benchmarked here: imperative code is kept to a strict, perfectly isolated minimum.
 
 > [!NOTE]
 > **Single-threaded benchmark**
