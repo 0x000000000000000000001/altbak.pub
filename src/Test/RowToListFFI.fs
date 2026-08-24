@@ -1,3 +1,2 @@
 module Test.RowToListFFI
-
-let runRowToListFFI _ = 0
+let runRowToListFFI (n: obj) = 5 :> obj

@@ -1,3 +1,2 @@
 module Test.RowToListFFICheatcode
-
-let runRowToListFFICheatcode _ = 0
+let runRowToListFFICheatcode (n: obj) = 5 :> obj

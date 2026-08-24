@@ -38,7 +38,7 @@ ln -s run/bak/sharp/spago .spago
 ln -s run/bak/sharp/spago.sharp.yaml spago.yaml
 touch run/bak/sharp/spago.lock && ln -s run/bak/sharp/spago.lock spago.lock
 
-ENTRY_POINT="App"
+ENTRY_POINT="AppFFI"
 
 if [ "$MODE" == "test" ]; then
   ENTRY_POINT="AppX"

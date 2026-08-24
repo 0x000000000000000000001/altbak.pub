@@ -1,3 +1,6 @@
 module Test.LazyEvaluationFFICheatcode
-
-let runLazyEvaluationFFICheatcode _ = 0
+let runLazyEvaluationFFICheatcode (n: obj) =
+    let n' = unbox<int> n
+    let mutable res = 0
+    for i in 1 .. n' do res <- res + 1
+    res :> obj
