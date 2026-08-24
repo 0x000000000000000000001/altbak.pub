@@ -67,7 +67,7 @@ RowToList               | ~ 1 μs                           | ~ 2 μs           
 **Total Execution Time**    | ~ 48.93 ms                       | ~ 1645.32 ms                          | ~ 102.04 ms   | ~ 27.44 ms              |
 > *Read the IMPORTANT notice below!*
 
-Scheme Benchmark        | Compiled [Scheme](https://github.com/purescm/purescm) | Native Scheme FFI | Native Scheme FFI Cheatcode |
+Scheme Benchmark        | Compiled Scheme ([pscm](https://github.com/purescm/purescm)) | Native Scheme FFI | Native Scheme FFI Cheatcode |
 ----------------------- | ----------------| ----------------- | --------------------------- |
 AST Evaluation          | ~ 9 μs          | 
 Fibonacci               | ~ 2 μs          | 
@@ -85,7 +85,7 @@ Array Processing        | ~ 13 μs         |
 ----------------------- | ----------------| --------------------------- |
 **Total Execution Time**    | ~ 46.87 ms      | 
 
-Erlang Benchmark        | Compiled [Erlang](https://github.com/purerl/purerl) | Native Erlang FFI | Native Erlang FFI Cheatcode |
+Erlang Benchmark        | Compiled Erlang ([purerl](https://github.com/purerl/purerl)) | Native Erlang FFI | Native Erlang FFI Cheatcode |
 ----------------------- | ----------------| ----------------- | --------------------------- |
 AST Evaluation          | ~ 692 μs        | 
 Fibonacci               | ~ 49 μs         | 
@@ -103,7 +103,7 @@ Array Processing        | ~ 5430 μs       |
 ----------------------- | ----------------| --------------------------- |
 **Total Execution Time**    | ~ 131.04 ms     | 
 
-PHP Benchmark           | Compiled PHP ([phpurs](https://github.com/0x000000000000000000001/phpurs), normal WIP) | Native PHP FFI | Native PHP FFI Cheatcode |
+PHP Benchmark           | Compiled PHP ([phpurs](https://github.com/0x000000000000000000001/phpurs), WIP) | Native PHP FFI | Native PHP FFI Cheatcode |
 ----------------------- | ------------------------- | -------------- | ------------------------ |
 AST Evaluation          | ~ 18 μs                   | ~ 9 μs         | ~ 10 μs                  |
 Fibonacci               | ~ 354 μs                  | ~ 11 μs        | ~ 451 μs                 |
