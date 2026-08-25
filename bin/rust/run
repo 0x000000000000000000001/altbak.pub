@@ -88,6 +88,13 @@ node ../purust/purust/bin/purust.js --main ${ENTRY_POINT} --source output --out 
 echo "=== Rust ==="
 if [ -d "output/purust_output" ]; then
     cd output/purust_output
+    start_time=$(date +%s)
+    for i in {1..50}; do
+        cargo run -q --release &>/dev/null
+        if [ $(($(date +%s) - start_time)) -ge 2 ]; then
+            break
+        fi
+    done
     cargo run -q --release
     cd ../..
 else

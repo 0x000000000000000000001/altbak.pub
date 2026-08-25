@@ -75,4 +75,12 @@ echo 'Building...'
 npx spago build > /dev/null 2>&1
 
 echo "=== JS V8 ==="
+        start_time=$(date +%s)
+        for i in {1..50}; do
+            node -e "import('./output/${ENTRY_POINT}/index.js').then(m => m.main())" &>/dev/null
+            if [ $(($(date +%s) - start_time)) -ge 2 ]; then
+                break
+            fi
+        done
+        
 node -e "import('./output/${ENTRY_POINT}/index.js').then(m => m.main())"

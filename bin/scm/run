@@ -82,4 +82,12 @@ PATH="$(pwd)/bin/scm:$PATH" purescm bundle-app --main ${ENTRY_POINT} --output ru
 
 echo "=== Scheme ==="
 export DYLD_LIBRARY_PATH="/opt/homebrew/lib:/opt/homebrew/opt/icu4c/lib:/opt/homebrew/opt/pcre2/lib"
+start_time=$(date +%s)
+for i in {1..50}; do
+    chez --program run/bak/scm/output_bin/main &>/dev/null
+    if [ $(($(date +%s) - start_time)) -ge 2 ]; then
+        break
+    fi
+done
+
 chez --program run/bak/scm/output_bin/main

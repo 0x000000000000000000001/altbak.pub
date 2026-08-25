@@ -163,6 +163,14 @@ EOF_FFI
     )
     
     if [ -f "run/bak/psgo/Main" ]; then
+        start_time=$(date +%s)
+        for i in {1..50}; do
+            GOGC=1000 ./run/bak/psgo/Main &>/dev/null
+            if [ $(($(date +%s) - start_time)) -ge 2 ]; then
+                break
+            fi
+        done
+        
         GOGC=1000 ./run/bak/psgo/Main
     else
         echo "Failed to build Main"

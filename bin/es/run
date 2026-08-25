@@ -72,4 +72,12 @@ find run/bak/es/output-purs -name "foreign.js" | while read -r f; do
 done
 
 echo "=== Arista ES V8 ==="
+        start_time=$(date +%s)
+        for i in {1..50}; do
+            node -e "import('./run/bak/es/output/' + '$ENTRY_POINT' + '/index.js').then(m => m.main())" &>/dev/null
+            if [ $(($(date +%s) - start_time)) -ge 2 ]; then
+                break
+            fi
+        done
+        
 node -e "import('./run/bak/es/output/' + '$ENTRY_POINT' + '/index.js').then(m => m.main())"

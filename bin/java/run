@@ -77,6 +77,13 @@ echo "=== Java ==="
 if [ -d "java_output" ] && [ -f "java_output/MainRun.java" ]; then
     cd java_output
     javac MainRun.java
+    start_time=$(date +%s)
+    for i in {1..50}; do
+        java -Xss100M MainRun &>/dev/null
+        if [ $(($(date +%s) - start_time)) -ge 2 ]; then
+            break
+        fi
+    done
     java -Xss100M MainRun
     cd ..
 else

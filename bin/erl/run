@@ -95,6 +95,14 @@ elif [ "$ENTRY_POINT" == "AppFFICheatcode" ]; then
 else
   ENTRY_LOWER="app"
 fi
+        start_time=$(date +%s)
+        for i in {1..50}; do
+            erl -noshell -pa output/${ENTRY_POINT} -eval "(${ENTRY_LOWER}@ps:main())(),halt()." &>/dev/null
+            if [ $(($(date +%s) - start_time)) -ge 2 ]; then
+                break
+            fi
+        done
+        
 erl -noshell -pa output/${ENTRY_POINT} -eval "
     (${ENTRY_LOWER}@ps:main())(),
     halt().
