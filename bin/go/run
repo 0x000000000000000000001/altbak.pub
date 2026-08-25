@@ -106,6 +106,15 @@ if [ -d "output/main" ]; then
     else
         go build -o go_app ./main
         cd ..
+
+        # Warm up. After 2 seconds, run the benchmark.
+        start_time=$(date +%s)
+        for i in {1..50}; do
+            GOGC=1000 ./output/go_app &>/dev/null
+            if [ $(($(date +%s) - start_time)) -ge 2 ]; then
+                break
+            fi
+        done
         
         GOGC=1000 ./output/go_app
     fi

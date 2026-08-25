@@ -56,19 +56,19 @@ Go Benchmark            | Compiled Go ([gopurs](https://github.com/0x00000000000
 ----------------------- | -------------------------------- | ------------------------------------- | ------------- | ----------------------- |
 AST Evaluation          | ~ 4 μs                           | ~ 296 μs                              | ~ 20 μs       | ~ 4 μs                  |
 Fibonacci               | ~ 1 μs                           | ~ 24 μs                               | ~ 2 μs        | ~ 1 μs                  |
-List Processing         | ~ 44 μs                          | ~ 586 μs                              | ~ 121 μs      | ~ 1 μs                  |
-Tail Call Optimization  | ~ 658 μs                         | ~ 13354 μs                            | ~ 39 μs       | ~ 27 μs                 |
-Deep Record Updates     | ~ 253 μs                         | ~ 9492 μs                             | ~ 373 μs      | ~ 3 μs                  |
-Ackermann               | ~ 24 μs                          | ~ 1267 μs                             | ~ 23 μs       | ~ 32 μs                 |
-Church Numerals         | ~ 2120 μs                        | ~ 5731 μs                             | ~ 1002 μs     | ~ 29 μs                 |
-Prime Sieve             | ~ 169 μs                         | ~ 2549 μs                             | ~ 134 μs      | ~ 4 μs                  |
-Red-Black Tree          | ~ 24755 μs                       | ~ 870034 μs                           | ~ 26529 μs    | ~ 24856 μs              |
-Polymorphism            | ~ 2252 μs                        | ~ 669801 μs                           | ~ 58848 μs    | ~ 2480 μs               |
-State Monad             | ~ 205 μs                         | ~ 536 μs                              | ~ 127 μs      | ~ 1 μs                  |
-Lazy Evaluation         | ~ 17166 μs                       | ~ 71586 μs                            | ~ 14816 μs    | ~ 1 μs                  |
-Array Processing        | ~ 43 μs                          | ~ 61 μs                               | ~ 7 μs        | ~ 1 μs                  |
+List Processing         | ~ 34 μs                          | ~ 586 μs                              | ~ 121 μs      | ~ 1 μs                  |
+Tail Call Optimization  | ~ 670 μs                         | ~ 13354 μs                            | ~ 39 μs       | ~ 27 μs                 |
+Deep Record Updates     | ~ 236 μs                         | ~ 9492 μs                             | ~ 373 μs      | ~ 3 μs                  |
+Ackermann               | ~ 25 μs                          | ~ 1267 μs                             | ~ 23 μs       | ~ 32 μs                 |
+Church Numerals         | ~ 2060 μs                        | ~ 5731 μs                             | ~ 1002 μs     | ~ 29 μs                 |
+Prime Sieve             | ~ 152 μs                         | ~ 2549 μs                             | ~ 134 μs      | ~ 4 μs                  |
+Red-Black Tree          | ~ 24013 μs                       | ~ 870034 μs                           | ~ 26529 μs    | ~ 24856 μs              |
+Polymorphism            | ~ 2348 μs                        | ~ 669801 μs                           | ~ 58848 μs    | ~ 2480 μs               |
+State Monad             | ~ 214 μs                         | ~ 536 μs                              | ~ 127 μs      | ~ 1 μs                  |
+Lazy Evaluation         | ~ 16480 μs                       | ~ 71586 μs                            | ~ 14816 μs    | ~ 1 μs                  |
+Array Processing        | ~ 36 μs                          | ~ 61 μs                               | ~ 7 μs        | ~ 1 μs                  |
 RowToList               | ~ 1 μs                           | ~ 2 μs                                | ~ 1 μs        | ~ 1 μs                  |
-**Total Execution Time**    | ~ 47.69 ms                       | ~ 1645.32 ms                          | ~ 102.04 ms   | ~ 27.44 ms              |
+**Total Execution Time**    | ~ 46.27 ms                       | ~ 1645.32 ms                          | ~ 102.04 ms   | ~ 27.44 ms              |
 > *Read the IMPORTANT notice below!*
 
 #### Scheme
