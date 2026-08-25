@@ -88,6 +88,7 @@ Polymorphism            | ~ 17884 μs | ~ 6596 μs       | ~ 7737 μs           
 State Monad             | ~ 5 μs | ~ 9 μs         | ~ 5 μs                   |
 Lazy Evaluation         | ~ 2868 μs | ~ 1954 μs       | ~ 3 μs                   |
 Array Processing        | ~ 13 μs | ~ 5 μs         | ~ 6 μs                   |
+RowToList               | ~ 1 μs | ~ 1 μs         | ~ 1 μs                   |
 **Total Execution Time**    | ~ 46.87 ms | ~ 27.1 ms       | ~ 20.43 ms                 |
 > *Read the IMPORTANT notice below!*
 
