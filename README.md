@@ -115,21 +115,21 @@ Array Processing        | ~ 5430 μs | ~ 187 μs         | ~ 316 μs            
 
 PHP Benchmark           | Compiled PHP ([phpurs](https://github.com/0x000000000000000000001/phpurs), WIP) | Native PHP FFI | Native PHP FFI Cheatcode |
 ----------------------- | ------------------------- | -------------- | ------------------------ |
-AST Evaluation          | ~ 18 μs                   | ~ 9 μs         | ~ 10 μs                  |
-Fibonacci               | ~ 354 μs                  | ~ 11 μs        | ~ 451 μs                 |
-List Processing         | ~ 2189 μs                 | ~ 4 μs         | ~ 166 μs                 |
-Tail Call Optimization  | ~ 23244 μs                | ~ 1937 μs      | ~ 109 μs                 |
-Deep Record Updates     | ~ 4943 μs                 | ~ 4016 μs      | ~ 199 μs                 |
-Ackermann               | ~ 418 μs                  | ~ 665 μs       | ~ 579 μs                 |
-Church Numerals         | ~ 17684 μs                | ~ 8922 μs      | ~ 105 μs                 |
-Prime Sieve             | ~ 7576 μs                 | ~ 7 μs         | ~ 386 μs                 |
-Red-Black Tree          | ~ 300566 μs               | ~ 730387 μs    | ~ 123096 μs              |
-Polymorphism            | ~ 10591 μs                | ~ 1169540 μs   | ~ 74555 μs               |
-State Monad             | ~ 539 μs                  | ~ 358 μs       | ~ 86 μs                  |
-Lazy Evaluation         | ~ 95661 μs                | ~ 151601 μs    | ~ 368 μs                 |
-Array Processing        | ~ 1375 μs                 | ~ 448 μs       | ~ 249 μs                 |
-RowToList               | ~ 7 μs                    | ~ 4 μs         | ~ 94 μs                  |
-**Total Execution Time**    | ~ 465.16 ms           | ~ 2067.91 ms   | ~ 200.45 ms              |
+AST Evaluation          | ~ 16 μs                   | ~ 9 μs         | ~ 10 μs                  |
+Fibonacci               | ~ 10 μs                   | ~ 11 μs        | ~ 451 μs                 |
+List Processing         | ~ 1036 μs                 | ~ 4 μs         | ~ 166 μs                 |
+Tail Call Optimization  | ~ 1699 μs                 | ~ 1937 μs      | ~ 109 μs                 |
+Deep Record Updates     | ~ 2237 μs                 | ~ 4016 μs      | ~ 199 μs                 |
+Ackermann               | ~ 417 μs                  | ~ 665 μs       | ~ 579 μs                 |
+Church Numerals         | ~ 12089 μs                | ~ 8922 μs      | ~ 105 μs                 |
+Prime Sieve             | ~ 2922 μs                 | ~ 7 μs         | ~ 386 μs                 |
+Red-Black Tree          | ~ 282019 μs               | ~ 730387 μs    | ~ 123096 μs              |
+Polymorphism            | ~ 8523 μs                 | ~ 1169540 μs   | ~ 74555 μs               |
+State Monad             | ~ 1469 μs                 | ~ 358 μs       | ~ 86 μs                  |
+Lazy Evaluation         | ~ 91243 μs                | ~ 151601 μs    | ~ 368 μs                 |
+Array Processing        | ~ 1064 μs                 | ~ 448 μs       | ~ 249 μs                 |
+RowToList               | ~ 4 μs                    | ~ 4 μs         | ~ 94 μs                  |
+**Total Execution Time**    | ~ 404.75 ms           | ~ 2067.91 ms   | ~ 200.45 ms              |
 > *Read the IMPORTANT notice below!*
 
 #### Rust
