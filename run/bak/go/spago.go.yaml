@@ -62,5 +62,4 @@ workspace:
       path: "../gopurs/gopurs-assert"
     lazy:
       path: "../gopurs/gopurs-lazy"
-  backend:
-    cmd: "../gopurs/gopurs/bin/gopurs"
+
