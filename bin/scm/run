@@ -45,7 +45,7 @@ ln -s run/bak/scm/output output
 ln -s run/bak/scm/spago .spago
 ln -s run/bak/scm/spago.scm.yaml spago.yaml
 touch run/bak/scm/spago.lock && ln -s run/bak/scm/spago.lock spago.lock
-export PATH="$PWD/run/bak/js/node_modules/.bin:$PATH"
+export PATH="$PWD/bin/purs-vanilla/node_modules/.bin:$PWD/run/bak/js/node_modules/.bin:$PATH"
 ENTRY_POINT="App"
 
 if [ "$MODE" == "test" ]; then
@@ -82,12 +82,5 @@ PATH="$(pwd)/bin/scm:$PATH" purescm bundle-app --main ${ENTRY_POINT} --output ru
 
 echo "=== Scheme ==="
 export DYLD_LIBRARY_PATH="/opt/homebrew/lib:/opt/homebrew/opt/icu4c/lib:/opt/homebrew/opt/pcre2/lib"
-start_time=$(date +%s)
-for i in {1..50}; do
-    chez --program run/bak/scm/output_bin/main &>/dev/null
-    if [ $(($(date +%s) - start_time)) -ge 2 ]; then
-        break
-    fi
-done
 
 chez --program run/bak/scm/output_bin/main

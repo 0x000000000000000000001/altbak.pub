@@ -82,13 +82,6 @@ echo "=== PHP ==="
 if [ -f "output/${ENTRY_POINT}/main.mod.php" ]; then
     php bin/php/composer.phar update --no-plugins -d run/bak/php
     mkdir -p /tmp/phpurs_opcache
-    start_time=$(date +%s)
-    for i in {1..50}; do
-        php -d xdebug.mode=off -d opcache.enable_cli=1 -d opcache.file_cache=/tmp/phpurs_opcache -d opcache.jit_buffer_size=128M -d opcache.jit=1255 output/${ENTRY_POINT}/main.mod.php &>/dev/null
-        if [ $(($(date +%s) - start_time)) -ge 2 ]; then
-            break
-        fi
-    done
     
     php -d xdebug.mode=off -d opcache.enable_cli=1 -d opcache.file_cache=/tmp/phpurs_opcache -d opcache.jit_buffer_size=128M -d opcache.jit=1255 output/${ENTRY_POINT}/main.mod.php
 else

@@ -88,13 +88,6 @@ node ../sharpurs/sharpurs/bin/sharpurs.js --main ${ENTRY_POINT} || exit 1
 echo "=== F#/C# ==="
 if [ -d "output/Main" ]; then
     cd output/Main
-    start_time=$(date +%s)
-    for i in {1..50}; do
-        dotnet run --project Program.fsproj -c Release &>/dev/null
-        if [ $(($(date +%s) - start_time)) -ge 2 ]; then
-            break
-        fi
-    done
     dotnet run --project Program.fsproj -c Release
     cd ../..
 else

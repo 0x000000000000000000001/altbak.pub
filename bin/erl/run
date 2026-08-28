@@ -46,7 +46,7 @@ ln -s run/bak/erl/output output
 ln -s run/bak/erl/spago .spago
 ln -s run/bak/erl/spago.erl.yaml spago.yaml
 touch run/bak/erl/spago.lock && ln -s run/bak/erl/spago.lock spago.lock
-export PATH="$PWD/run/bak/js/node_modules/.bin:$PATH"
+export PATH="$PWD/bin/purs-vanilla/node_modules/.bin:$PWD/run/bak/js/node_modules/.bin:$PATH"
 
 
 if [ "$MODE" == "test" ]; then
@@ -95,13 +95,6 @@ elif [ "$ENTRY_POINT" == "AppFFICheatcode" ]; then
 else
   ENTRY_LOWER="app"
 fi
-        start_time=$(date +%s)
-        for i in {1..50}; do
-            erl -noshell -pa output/${ENTRY_POINT} -eval "(${ENTRY_LOWER}@ps:main())(),halt()." &>/dev/null
-            if [ $(($(date +%s) - start_time)) -ge 2 ]; then
-                break
-            fi
-        done
         
 erl -noshell -pa output/${ENTRY_POINT} -eval "
     (${ENTRY_LOWER}@ps:main())(),
