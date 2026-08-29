@@ -3,7 +3,6 @@ import * as Bench from "../Bench/index.js";
 import * as Data_EuclideanRing from "../Data.EuclideanRing/index.js";
 import * as Data_Show from "../Data.Show/index.js";
 import * as Effect_Console from "../Effect.Console/index.js";
-var logShow = /* #__PURE__ */ Effect_Console.logShow(Data_Show.showInt);
 var describe = /* #__PURE__ */ Effect_Console.log("Tail Call Optimization (100k calls):");
 var deepTailRec = function ($copy_v) {
     return function ($copy_v1) {
@@ -27,7 +26,7 @@ var deepTailRec = function ($copy_v) {
 };
 var act = function __do() {
     var dummy = Bench.opaque(100000)();
-    return logShow(deepTailRec(dummy)(0))();
+    return Data_Show.show(Data_Show.showInt)(deepTailRec(dummy)(0));
 };
 export {
     deepTailRec,

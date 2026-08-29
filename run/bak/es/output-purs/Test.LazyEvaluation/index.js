@@ -3,7 +3,6 @@ import * as Bench from "../Bench/index.js";
 import * as Data_Show from "../Data.Show/index.js";
 import * as Data_Unit from "../Data.Unit/index.js";
 import * as Effect_Console from "../Effect.Console/index.js";
-var logShow = /* #__PURE__ */ Effect_Console.logShow(Data_Show.showInt);
 var Lazy = function (x) {
     return x;
 };
@@ -58,7 +57,7 @@ var runManyTimes = function ($copy_v) {
 };
 var act = function __do() {
     var dummy = Bench.opaque(1000)();
-    return logShow(runManyTimes(dummy)(0))();
+    return Data_Show.show(Data_Show.showInt)(runManyTimes(dummy)(0));
 };
 export {
     Lazy,

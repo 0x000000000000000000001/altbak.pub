@@ -45,7 +45,7 @@ var initial = {
 var describe = /* #__PURE__ */ Effect_Console.log("Deep Record Updates (10k iterations):");
 var act = function __do() {
     var dummy = Bench.opaque(10000)();
-    return Effect_Console.logShow(Data_Show.showInt)((updateRec(dummy)(initial)).b.d.f)();
+    return Data_Show.show(Data_Show.showInt)((updateRec(dummy)(initial)).b.d.f);
 };
 export {
     initial,

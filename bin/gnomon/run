@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Benchmark is not public for Gnomon, as I absolutely do not want to be disrespectful 
+# to its author, whom I respect, and their work is still a WIP.
 set -e
 cd "$(dirname "$0")/../.."
 
@@ -146,7 +148,7 @@ if [ ! -d "run/bak/gnomon/Gnomon" ]; then
 ' run/bak/gnomon/Gnomon/backend-go/src/PureScript/Backend/Optimizer/Codegen/Go.purs
 
   # Patch Builder.purs onSkipModule
-  sed -i '' 's|onSkipModule: \\_ \\_ -> pure unit|onSkipModule: \\_ \\_ -> pure Nothing|g' run/bak/gnomon/Gnomon/backend-go/src/PureScript/Backend/Optimizer/Codegen/Go/Builder.purs
+  sed -i '' 's|onSkipModule: \\_ \\_ -> pure unit|onSkipModule: \\_ \\_ -> pure Nothing, rewriteLimit: 100000|g' run/bak/gnomon/Gnomon/backend-go/src/PureScript/Backend/Optimizer/Codegen/Go/Builder.purs
   sed -i '' 's|Data.Maybe (Maybe, maybe)|Data.Maybe (Maybe(..), maybe)|g' run/bak/gnomon/Gnomon/backend-go/src/PureScript/Backend/Optimizer/Codegen/Go/Builder.purs
 
   echo "Building Gnomon backend-go..."

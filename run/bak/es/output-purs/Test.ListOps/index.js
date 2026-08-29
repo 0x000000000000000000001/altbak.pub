@@ -5,7 +5,6 @@ import * as Data_Semiring from "../Data.Semiring/index.js";
 import * as Data_Show from "../Data.Show/index.js";
 import * as Effect_Console from "../Effect.Console/index.js";
 var add = /* #__PURE__ */ Data_Semiring.add(Data_Semiring.semiringInt);
-var logShow = /* #__PURE__ */ Effect_Console.logShow(Data_Show.showInt);
 var Nil = /* #__PURE__ */ (function () {
     function Nil() {
 
@@ -33,8 +32,8 @@ var range = function (start) {
                 var $tco_done = false;
                 var $tco_result;
                 function $tco_loop(curr, acc) {
-                    var $7 = curr < start;
-                    if ($7) {
+                    var $6 = curr < start;
+                    if ($6) {
                         $tco_done = true;
                         return acc;
                     };
@@ -90,8 +89,8 @@ var filterEvens = function (lst) {
                     return v1;
                 };
                 if (v instanceof Cons) {
-                    var $15 = Data_EuclideanRing.mod(Data_EuclideanRing.euclideanRingInt)(v.value0)(2) === 0;
-                    if ($15) {
+                    var $14 = Data_EuclideanRing.mod(Data_EuclideanRing.euclideanRingInt)(v.value0)(2) === 0;
+                    if ($14) {
                         $tco_var_v = v.value1;
                         $copy_v1 = new Cons(v.value0, v1);
                         return;
@@ -116,7 +115,7 @@ var sumEvens = function (n) {
 var describe = /* #__PURE__ */ Effect_Console.log("List Processing (900 elements):");
 var act = function __do() {
     var dummy = Bench.opaque(900)();
-    return logShow(sumEvens(dummy))();
+    return Data_Show.show(Data_Show.showInt)(sumEvens(dummy));
 };
 export {
     Nil,

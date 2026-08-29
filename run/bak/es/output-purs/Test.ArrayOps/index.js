@@ -6,7 +6,6 @@ import * as Data_Semiring from "../Data.Semiring/index.js";
 import * as Data_Show from "../Data.Show/index.js";
 import * as Effect_Console from "../Effect.Console/index.js";
 var add = /* #__PURE__ */ Data_Semiring.add(Data_Semiring.semiringInt);
-var logShow = /* #__PURE__ */ Effect_Console.logShow(Data_Show.showInt);
 var range = function (start) {
     return function (end) {
         return Data_Array.range(start)(end);
@@ -23,7 +22,7 @@ var sumEvens = function (n) {
 var describe = /* #__PURE__ */ Effect_Console.log("Array Processing (900 elements):");
 var act = function __do() {
     var dummy = Bench.opaque(900)();
-    return logShow(sumEvens(dummy))();
+    return Data_Show.show(Data_Show.showInt)(sumEvens(dummy));
 };
 export {
     range,

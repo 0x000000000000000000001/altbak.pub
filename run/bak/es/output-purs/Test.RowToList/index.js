@@ -36,7 +36,7 @@ var act = function __do() {
         d: 4.0,
         e: "five"
     };
-    return Effect_Console.logShow(Data_Show.showInt)(keys()(keysCons1)(rec))();
+    return Data_Show.show(Data_Show.showInt)(keys()(keysCons1)(rec));
 };
 export {
     keysImpl,

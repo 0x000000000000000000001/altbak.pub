@@ -2,7 +2,6 @@
 import * as Bench from "../Bench/index.js";
 import * as Data_Show from "../Data.Show/index.js";
 import * as Effect_Console from "../Effect.Console/index.js";
-var logShow = /* #__PURE__ */ Effect_Console.logShow(Data_Show.showInt);
 var R = /* #__PURE__ */ (function () {
     function R() {
 
@@ -44,8 +43,8 @@ var T = /* #__PURE__ */ (function () {
 })();
 var max = function (x) {
     return function (y) {
-        var $11 = x > y;
-        if ($11) {
+        var $10 = x > y;
+        if ($10) {
             return x;
         };
         return y;
@@ -97,12 +96,12 @@ var ins = function (v) {
             return new T(R.value, E.value, v, E.value);
         };
         if (v1 instanceof T) {
-            var $60 = v < v1.value2;
-            if ($60) {
+            var $59 = v < v1.value2;
+            if ($59) {
                 return balance(v1.value0)(ins(v)(v1.value1))(v1.value2)(v1.value3);
             };
-            var $61 = v > v1.value2;
-            if ($61) {
+            var $60 = v > v1.value2;
+            if ($60) {
                 return balance(v1.value0)(v1.value1)(v1.value2)(ins(v)(v1.value3));
             };
             return new T(v1.value0, v1.value1, v1.value2, v1.value3);
@@ -137,7 +136,7 @@ var buildTree = function ($copy_v) {
 };
 var act = function __do() {
     var dummy = Bench.opaque(100000)();
-    return logShow(depth(buildTree(dummy)(E.value)))();
+    return Data_Show.show(Data_Show.showInt)(depth(buildTree(dummy)(E.value)));
 };
 export {
     R,

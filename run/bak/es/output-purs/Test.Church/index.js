@@ -2,7 +2,6 @@
 import * as Bench from "../Bench/index.js";
 import * as Data_Show from "../Data.Show/index.js";
 import * as Effect_Console from "../Effect.Console/index.js";
-var logShow = /* #__PURE__ */ Effect_Console.logShow(Data_Show.showInt);
 var zeroC = function (v) {
     return function (x) {
         return x;
@@ -59,7 +58,7 @@ var addC = function (m) {
 };
 var act = function __do() {
     var dummy = Bench.opaque(10)();
-    return logShow(toInt(c100k(dummy)))();
+    return Data_Show.show(Data_Show.showInt)(toInt(c100k(dummy)));
 };
 export {
     zeroC,

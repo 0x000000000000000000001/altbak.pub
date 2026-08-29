@@ -2,7 +2,6 @@
 import * as Bench from "../Bench/index.js";
 import * as Data_Show from "../Data.Show/index.js";
 import * as Effect_Console from "../Effect.Console/index.js";
-var logShow = /* #__PURE__ */ Effect_Console.logShow(Data_Show.showInt);
 var mempty_ = function (dict) {
     return dict.mempty_;
 };
@@ -47,7 +46,7 @@ var intMonoidish = {
 var describe = /* #__PURE__ */ Effect_Console.log("Polymorphism (10M Type Class Dict Lookups):");
 var act = function __do() {
     var dummy = Bench.opaque(10000000)();
-    return logShow(polyLoop(intMonoidish)(dummy)(0))();
+    return Data_Show.show(Data_Show.showInt)(polyLoop(intMonoidish)(dummy)(0));
 };
 export {
     mappend_,
