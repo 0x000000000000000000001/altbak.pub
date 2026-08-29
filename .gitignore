@@ -19,3 +19,4 @@ run/bak/*/output*/
 run/bak/*/spago/
 run/bak/*/.spago/
 *.gopurs-cache.json
+.purmeta
