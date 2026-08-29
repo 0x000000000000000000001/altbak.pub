@@ -2,7 +2,7 @@ module Test.Primes where
 
 import Prelude
 import Effect (Effect)
-import Effect.Console (logShow, log)
+import Effect.Console (log)
 import Bench as Bench
 
 -- Implementation of the Sieve of Eratosthenes using strict Lists.

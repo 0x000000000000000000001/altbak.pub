@@ -2,7 +2,7 @@ module Test.StateMonad where
 
 import Prelude
 import Effect (Effect)
-import Effect.Console (logShow, log)
+import Effect.Console (log)
 import Bench as Bench
 
 -- A pure, custom implementation of the State Monad.

@@ -2,7 +2,7 @@ module Test.PolymorphismFFICheatcode where
 
 import Prelude
 import Effect (Effect)
-import Effect.Console (logShow, log)
+import Effect.Console (log)
 import Bench as Bench
 
 foreign import runPolymorphismFFICheatcode :: Int -> Int

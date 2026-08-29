@@ -2,7 +2,7 @@ module Test.RowToListFFI where
 
 import Prelude
 import Effect (Effect)
-import Effect.Console (logShow, log)
+import Effect.Console (log)
 import Bench as Bench
 
 foreign import runRowToListFFI :: Int -> Int

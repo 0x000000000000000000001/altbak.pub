@@ -2,7 +2,7 @@ module Test.Ackermann where
 
 import Prelude
 import Effect (Effect)
-import Effect.Console (logShow, log)
+import Effect.Console (log)
 import Bench as Bench
 
 -- The Ackermann function is deeply recursive but NOT tail-recursive.

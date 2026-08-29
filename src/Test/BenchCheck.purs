@@ -1,7 +1,7 @@
 module Test.BenchCheck where
 import Prelude
 import Effect (Effect)
-import Effect.Console (log)
+
 import Bench (benchNow)
 
 act :: Effect String

@@ -4,7 +4,7 @@ import Prelude
 import Prim.RowList (class RowToList, RowList, Cons, Nil)
 import Type.Proxy (Proxy(..))
 import Effect (Effect)
-import Effect.Console (logShow, log)
+import Effect.Console (log)
 import Bench as Bench
 
 class RecordKeys (rl :: RowList Type) where

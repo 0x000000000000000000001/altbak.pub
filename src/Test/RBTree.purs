@@ -3,7 +3,7 @@ module Test.RBTree where
 import Prelude hiding (max)
 
 import Effect (Effect)
-import Effect.Console (logShow, log)
+import Effect.Console (log)
 import Bench as Bench
 
 -- The ultimate functional benchmark: Chris Okasaki's Red-Black Tree.
