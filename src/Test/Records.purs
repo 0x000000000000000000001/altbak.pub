@@ -29,7 +29,7 @@ updateRec n r = updateRec (n - 1)
 describe :: Effect Unit
 describe = log "Deep Record Updates (10k iterations):"
 
-act :: Effect Unit
+act :: Effect String
 act = do
   dummy <- Bench.opaque 10000
-  logShow (updateRec dummy initial).b.d.f
+  pure (show ((updateRec dummy initial).b.d.f))

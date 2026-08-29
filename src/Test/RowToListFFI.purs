@@ -10,7 +10,7 @@ foreign import runRowToListFFI :: Int -> Int
 describe :: Effect Unit
 describe = log "RowToList FFI (Keys Count):"
 
-act :: Effect Unit
+act :: Effect String
 act = do
   dummy <- Bench.opaque 0
-  logShow $ runRowToListFFI dummy
+  pure (show ( runRowToListFFI dummy))

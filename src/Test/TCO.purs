@@ -15,7 +15,7 @@ deepTailRec n acc = deepTailRec (n - 1) (acc + (n `mod` 3))
 describe :: Effect Unit
 describe = log "Tail Call Optimization (100k calls):"
 
-act :: Effect Unit
+act :: Effect String
 act = do
   dummy <- Bench.opaque 100000
-  logShow $ deepTailRec dummy 0
+  pure (show ( deepTailRec dummy 0))

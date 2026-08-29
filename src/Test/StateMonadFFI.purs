@@ -10,7 +10,7 @@ foreign import runStateMonadFFI :: Int -> Int
 describe :: Effect Unit
 describe = log "State Monad FFI (1.2k Binds, 60 Stack Depth):"
 
-act :: Effect Unit
+act :: Effect String
 act = do
   dummy <- Bench.opaque 60
-  logShow $ runStateMonadFFI dummy
+  pure (show ( runStateMonadFFI dummy))

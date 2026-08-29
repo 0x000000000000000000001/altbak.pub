@@ -32,7 +32,7 @@ sumEvens n = foldl (+) 0 (filterEvens (range 1 n))
 describe :: Effect Unit
 describe = log "List Processing (900 elements):"
 
-act :: Effect Unit
+act :: Effect String
 act = do
   dummy <- Bench.opaque 900
-  logShow $ sumEvens dummy
+  pure (show ( sumEvens dummy))

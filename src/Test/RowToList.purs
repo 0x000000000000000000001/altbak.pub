@@ -23,8 +23,8 @@ keys _ = keysImpl (Proxy :: Proxy rl)
 describe :: Effect Unit
 describe = log "RowToList (Keys Count):"
 
-act :: Effect Unit
+act :: Effect String
 act = do
   _ <- Bench.opaque 10000
   let rec = { a: 1, b: "two", c: true, d: 4.0, e: "five" }
-  logShow (keys rec)
+  pure (show ((keys rec)))

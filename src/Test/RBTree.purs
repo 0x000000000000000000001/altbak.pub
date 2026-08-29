@@ -50,7 +50,7 @@ max x y = if x > y then x else y
 describe :: Effect Unit
 describe = log "Red-Black Tree (100k Worst-Case Insertions):"
 
-act :: Effect Unit
+act :: Effect String
 act = do
   dummy <- Bench.opaque 100000
-  logShow $ depth (buildTree dummy E)
+  pure (show ( depth (buildTree dummy E)))

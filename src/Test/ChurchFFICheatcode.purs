@@ -10,7 +10,7 @@ foreign import runChurchFFICheatcode :: Int -> Int
 describe :: Effect Unit
 describe = log "Church Numerals FFICheatcode (100k Closure Applications):"
 
-act :: Effect Unit
+act :: Effect String
 act = do
   dummy <- Bench.opaque 10
-  logShow $ runChurchFFICheatcode dummy
+  pure (show ( runChurchFFICheatcode dummy))

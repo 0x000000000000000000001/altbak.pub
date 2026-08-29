@@ -13,7 +13,7 @@ fib n = fib (n - 1) + fib (n - 2)
 describe :: Effect Unit
 describe = log "Fibonacci:"
 
-act :: Effect Unit
+act :: Effect String
 act = do
   dummy <- Bench.opaque 10
-  logShow $ fib dummy
+  pure (show ( fib dummy))

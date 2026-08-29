@@ -10,7 +10,7 @@ foreign import runTCOFFI :: Int -> Int
 describe :: Effect Unit
 describe = log "Tail Call Optimization FFI (100k calls):"
 
-act :: Effect Unit
+act :: Effect String
 act = do
   dummy <- Bench.opaque 100000
-  logShow $ runTCOFFI dummy
+  pure (show ( runTCOFFI dummy))

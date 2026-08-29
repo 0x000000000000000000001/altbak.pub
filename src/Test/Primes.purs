@@ -53,7 +53,7 @@ sumList lst = go lst 0
 describe :: Effect Unit
 describe = log "Prime Sieve (sum primes up to 500):"
 
-act :: Effect Unit
+act :: Effect String
 act = do
   dummy <- Bench.opaque 500
-  logShow $ sumList (sieve (range 2 dummy))
+  pure (show ( sumList (sieve (range 2 dummy))))

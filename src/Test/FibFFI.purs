@@ -10,7 +10,7 @@ foreign import runFibFFI :: Int -> Int
 describe :: Effect Unit
 describe = log "Fibonacci FFI:"
 
-act :: Effect Unit
+act :: Effect String
 act = do
   dummy <- Bench.opaque 10
-  logShow $ runFibFFI dummy
+  pure (show ( runFibFFI dummy))

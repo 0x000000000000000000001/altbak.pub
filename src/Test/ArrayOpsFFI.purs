@@ -10,7 +10,7 @@ foreign import runArrayOpsFFI :: Int -> Int
 describe :: Effect Unit
 describe = log "Array Processing FFI (900 elements):"
 
-act :: Effect Unit
+act :: Effect String
 act = do
   dummy <- Bench.opaque 900
-  logShow $ runArrayOpsFFI dummy
+  pure (show ( runArrayOpsFFI dummy))

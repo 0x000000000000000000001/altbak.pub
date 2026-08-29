@@ -10,7 +10,7 @@ foreign import runArrayOpsFFICheatcode :: Int -> Int
 describe :: Effect Unit
 describe = log "Array Processing FFICheatcode (900 elements):"
 
-act :: Effect Unit
+act :: Effect String
 act = do
   dummy <- Bench.opaque 900
-  logShow $ runArrayOpsFFICheatcode dummy
+  pure (show ( runArrayOpsFFICheatcode dummy))

@@ -31,7 +31,7 @@ describe :: Effect Unit
 describe = log "Lazy Evaluation (1M Thunks Forced, 1k Depth):"
 
 -- The result should be 1000 * 1000 = 1000000
-act :: Effect Unit
+act :: Effect String
 act = do
   dummy <- Bench.opaque 1000
-  logShow $ runManyTimes dummy 0
+  pure (show ( runManyTimes dummy 0))

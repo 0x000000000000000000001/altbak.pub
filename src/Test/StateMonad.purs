@@ -48,7 +48,7 @@ describe :: Effect Unit
 describe = log "State Monad (1.2k Binds, 60 Stack Depth):"
 
 -- The result should be 20 * 60 = 1200
-act :: Effect Unit
+act :: Effect String
 act = do
   dummy <- Bench.opaque 20
-  logShow $ runManyTimes dummy 0
+  pure (show ( runManyTimes dummy 0))

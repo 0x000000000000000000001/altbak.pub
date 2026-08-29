@@ -44,7 +44,7 @@ c100k n = mulC (c10k n) (c10 n)
 describe :: Effect Unit
 describe = log "Church Numerals (100k Closure Applications):"
 
-act :: Effect Unit
+act :: Effect String
 act = do
   dummy <- Bench.opaque 10
-  logShow $ toInt (c100k dummy)
+  pure (show ( toInt (c100k dummy)))

@@ -10,7 +10,7 @@ foreign import runAstTreeFFICheatcode :: Int -> Int
 describe :: Effect Unit
 describe = log "AST Evaluation FFICheatcode:"
 
-act :: Effect Unit
+act :: Effect String
 act = do
   dummy <- Bench.opaque 3
-  logShow $ runAstTreeFFICheatcode dummy
+  pure (show ( runAstTreeFFICheatcode dummy))

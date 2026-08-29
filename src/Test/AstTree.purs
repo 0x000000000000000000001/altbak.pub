@@ -24,7 +24,7 @@ buildTree n = Add (Mul (Val n) (buildTree (n - 1))) (Sub (buildTree (n - 1)) (Va
 describe :: Effect Unit
 describe = log "AST Evaluation:"
 
-act :: Effect Unit
+act :: Effect String
 act = do
   dummy <- Bench.opaque 3
-  logShow $ eval (buildTree dummy)
+  pure (show ( eval (buildTree dummy)))
