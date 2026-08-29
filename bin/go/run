@@ -88,7 +88,7 @@ echo 'Building...'
 spago build
 
 # Generate Go code
-NODE_OPTIONS="--max-old-space-size=8192" node --stack-size=65536 ../gopurs/gopurs/bin/gopurs.js --main ${ENTRY_POINT} || echo "GOPURS FAILED" || exit 1
+../gopurs/gopurs/bin/gopurs --main ${ENTRY_POINT} || echo "GOPURS FAILED" || exit 1
 
 echo "=== Go ==="
 if [ -d "output/main" ]; then

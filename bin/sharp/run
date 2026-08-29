@@ -83,7 +83,7 @@ echo 'Building...'
 spago build
 
 # Generate C# code
-node ../sharpurs/sharpurs/bin/sharpurs.js --main ${ENTRY_POINT} || exit 1
+../sharpurs/sharpurs/bin/sharpurs --main ${ENTRY_POINT} || exit 1
 
 echo "=== F#/C# ==="
 if [ -d "output/Main" ]; then

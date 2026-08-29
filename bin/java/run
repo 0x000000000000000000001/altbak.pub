@@ -71,7 +71,7 @@ echo 'Building...'
 spago build
 
 # Generate Java code
-node ../javapurs/javapurs/bin/javapurs.js --main ${ENTRY_POINT} || { echo "JAVAPURS FAILED"; exit 1; }
+../javapurs/javapurs/bin/javapurs --main ${ENTRY_POINT} || { echo "JAVAPURS FAILED"; exit 1; }
 
 echo "=== Java ==="
 if [ -d "java_output" ] && [ -f "java_output/MainRun.java" ]; then
