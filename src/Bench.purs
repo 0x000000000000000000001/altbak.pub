@@ -75,6 +75,12 @@ runBench describe act = do
   -- (like `purust`) that might crash on unboxed array literals or fail 
   -- to parse the massive CoreFn dependency graph brought in by Foldable/Array.
   -- We stick to primitive nested `min` calls to maintain maximum compiler compatibility.
+  --
+  -- Why take the `min` instead of average or median?
+  -- In benchmarking, OS jitter, context switches, and background tasks only ever *add*
+  -- noise and execution time. The minimum time recorded across multiple warm iterations
+  -- represents the most accurate measurement of the algorithm's true baseline cost 
+  -- with the least amount of external OS interference.
   let best = min (min (min (min d1 d2) (min d3 d4)) (min (min d5 d6) (min d7 d8))) (min d9 d10)
 
   log ("\n(Execution time - best of 10)\n\n" <> formatNumber best <> " μs\n")
