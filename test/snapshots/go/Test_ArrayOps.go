@@ -15,18 +15,6 @@ func Get_Test_ArrayOps_add() gopurs_runtime.Value {
 	return cache_Test_ArrayOps_add
 }
 
-var cache_Test_ArrayOps_logShow gopurs_runtime.Value
-var once_Test_ArrayOps_logShow sync.Once
-
-func Get_Test_ArrayOps_logShow() gopurs_runtime.Value {
-	once_Test_ArrayOps_logShow.Do(func() {
-		cache_Test_ArrayOps_logShow = gopurs_runtime.Func(func(a_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-			return Call_Test_ArrayOps_logShow(a_0_box.IntVal)
-		})
-	})
-	return cache_Test_ArrayOps_logShow
-}
-
 var cache_Test_ArrayOps_go__range gopurs_runtime.Value
 var once_Test_ArrayOps_go__range sync.Once
 
@@ -100,20 +88,15 @@ var once_Test_ArrayOps_act sync.Once
 func Get_Test_ArrayOps_act() gopurs_runtime.Value {
 	once_Test_ArrayOps_act.Do(func() {
 		cache_Test_ArrayOps_act = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			// TAST (Let): __local_var_0_0 shape=App(Var) bindingType=Any
 			__local_var_0_0 := gopurs_runtime.Apply(Get_Bench_opaque(), gopurs_runtime.Int(900))
 			_ = __local_var_0_0
 			dummy_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
 			_ = dummy_1_1
-			return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(Call_Test_ArrayOps_sumEvens(dummy_1_1.IntVal))).StrVal())), gopurs_runtime.Value{})
+			return gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(Call_Test_ArrayOps_sumEvens(dummy_1_1.IntVal)))
 		})
 	})
 	return cache_Test_ArrayOps_act
-}
-
-func Call_Test_ArrayOps_logShow(a_0_loop int64) gopurs_runtime.Value {
-	var a_0 int64 = a_0_loop
-	_ = a_0
-	return gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(a_0)).StrVal()))
 }
 
 func Call_Test_ArrayOps_go__range(start_0_loop int64, end_1_loop int64) []int64 {

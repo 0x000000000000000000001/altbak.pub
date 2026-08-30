@@ -3,7 +3,6 @@ package purescript
 import (
 	gopurs_runtime "gopurs/output/gopurs_runtime"
 	sync "sync"
-	unsafe "unsafe"
 )
 
 var cache_Test_Records_updateRec gopurs_runtime.Value
@@ -44,11 +43,12 @@ var once_Test_Records_act sync.Once
 func Get_Test_Records_act() gopurs_runtime.Value {
 	once_Test_Records_act.Do(func() {
 		cache_Test_Records_act = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			// TAST (Let): __local_var_0_0 shape=App(Var) bindingType=Any
 			__local_var_0_0 := gopurs_runtime.Apply(Get_Bench_opaque(), gopurs_runtime.Int(10000))
 			_ = __local_var_0_0
 			dummy_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
 			_ = dummy_1_1
-			return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(Call_Test_Records_updateRec(dummy_1_1.IntVal, Get_Test_Records_initial()), "b"), "d"), "f").IntVal)).StrVal())), gopurs_runtime.Value{})
+			return gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(Call_Test_Records_updateRec(dummy_1_1.IntVal, Get_Test_Records_initial()), "b"), "d"), "f").IntVal))
 		})
 	})
 	return cache_Test_Records_act
@@ -75,16 +75,7 @@ updateRec:
 		}
 		{
 			v_0_loop = (v_0) - (1)
-			v1_1_loop = func() gopurs_runtime.Value {
-				origVal := v1_1
-				if origVal.Type != gopurs_runtime.TypeRecord2 {
-					return gopurs_runtime.RecordUpdateDict(origVal, []string{"a", "b"}, []gopurs_runtime.Value{gopurs_runtime.Int((gopurs_runtime.RecordGet(v1_1, "a").IntVal) + (1)), gopurs_runtime.RecordUpdate2(gopurs_runtime.RecordGet(v1_1, "b"), "c", gopurs_runtime.Int((gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "c").IntVal)+(2)), "d", gopurs_runtime.RecordUpdate2(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "e", gopurs_runtime.Int((gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "e").IntVal)+(3)), "f", gopurs_runtime.Int((gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "f").IntVal)+(gopurs_runtime.Apply2(Get_Data_EuclideanRing_intMod(), gopurs_runtime.Int(v_0), gopurs_runtime.Int(5)).IntVal))))})
-				}
-				clone := *((*gopurs_runtime.RecordData2)(origVal.UnsafePtr))
-				clone.V0 = gopurs_runtime.Int((gopurs_runtime.RecordGet(v1_1, "a").IntVal) + (1))
-				clone.V1 = gopurs_runtime.RecordUpdate2(gopurs_runtime.RecordGet(v1_1, "b"), "c", gopurs_runtime.Int((gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "c").IntVal)+(2)), "d", gopurs_runtime.RecordUpdate2(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "e", gopurs_runtime.Int((gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "e").IntVal)+(3)), "f", gopurs_runtime.Int((gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "f").IntVal)+(gopurs_runtime.Apply2(Get_Data_EuclideanRing_intMod(), gopurs_runtime.Int(v_0), gopurs_runtime.Int(5)).IntVal))))
-				return gopurs_runtime.Value{Type: gopurs_runtime.TypeRecord2, UnsafePtr: unsafe.Pointer(&clone)}
-			}()
+			v1_1_loop = gopurs_runtime.RecordUpdate2(v1_1, "a", gopurs_runtime.Int((gopurs_runtime.RecordGet(v1_1, "a").IntVal)+(1)), "b", gopurs_runtime.RecordUpdate2(gopurs_runtime.RecordGet(v1_1, "b"), "c", gopurs_runtime.Int((gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "c").IntVal)+(2)), "d", gopurs_runtime.RecordUpdate2(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "e", gopurs_runtime.Int((gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "e").IntVal)+(3)), "f", gopurs_runtime.Int((gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(gopurs_runtime.RecordGet(v1_1, "b"), "d"), "f").IntVal)+(gopurs_runtime.Apply2(Get_Data_EuclideanRing_intMod(), gopurs_runtime.Int(v_0), gopurs_runtime.Int(5)).IntVal)))))
 			continue updateRec
 			__t0 = gopurs_runtime.Value{}
 		}

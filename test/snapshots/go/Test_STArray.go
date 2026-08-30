@@ -23,13 +23,13 @@ func Get_Test_STArray_sumArray() gopurs_runtime.Value {
 				return gopurs_runtime.Array(boxed)
 			}(), arr_0_0)
 			_ = _dollar___unused_1_1
-			x_2_2 := gopurs_runtime.UncurriedApp3(Get_Data_Array_ST_popImpl(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just)(nil))}, arr_0_0)
+			x_2_2 := gopurs_runtime.UncurriedApp3(Get_Data_Array_ST_popImpl(), Get_Data_Maybe_Just(), gopurs_runtime.Value{Type: 9, IntVal: 930809136, UnsafePtr: unsafe.Pointer((*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(nil))}, arr_0_0)
 			_ = x_2_2
 			var __t3 gopurs_runtime.Value
 			{
 				if x_2_2.Type == 9 && x_2_2.IntVal == 930809136 && x_2_2.UnsafePtr != nil {
 					__t3 = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
-						return (*Constructor_Data_Maybe_Just)(x_2_2.UnsafePtr).V0
+						return (*Constructor_Data_Maybe_Just[gopurs_runtime.Value])(x_2_2.UnsafePtr).V0
 					})
 					goto end_branch_3
 				} else {

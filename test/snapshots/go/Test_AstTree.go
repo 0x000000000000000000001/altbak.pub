@@ -6,18 +6,6 @@ import (
 	unsafe "unsafe"
 )
 
-var cache_Test_AstTree_logShow gopurs_runtime.Value
-var once_Test_AstTree_logShow sync.Once
-
-func Get_Test_AstTree_logShow() gopurs_runtime.Value {
-	once_Test_AstTree_logShow.Do(func() {
-		cache_Test_AstTree_logShow = gopurs_runtime.Func(func(a_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-			return Call_Test_AstTree_logShow(a_0_box.IntVal)
-		})
-	})
-	return cache_Test_AstTree_logShow
-}
-
 var cache_Test_AstTree_Val gopurs_runtime.Value
 var once_Test_AstTree_Val sync.Once
 
@@ -112,11 +100,12 @@ var once_Test_AstTree_act sync.Once
 func Get_Test_AstTree_act() gopurs_runtime.Value {
 	once_Test_AstTree_act.Do(func() {
 		cache_Test_AstTree_act = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			// TAST (Let): __local_var_0_0 shape=App(Var) bindingType=Any
 			__local_var_0_0 := gopurs_runtime.Apply(Get_Bench_opaque(), gopurs_runtime.Int(3))
 			_ = __local_var_0_0
 			dummy_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
 			_ = dummy_1_1
-			return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(Call_Test_AstTree_eval(Call_Test_AstTree_buildTree(dummy_1_1.IntVal)))).StrVal())), gopurs_runtime.Value{})
+			return gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(Call_Test_AstTree_eval(Call_Test_AstTree_buildTree(dummy_1_1.IntVal))))
 		})
 	})
 	return cache_Test_AstTree_act
@@ -145,12 +134,6 @@ type Constructor_Test_AstTree_Sub struct {
 	V1 gopurs_runtime.Value
 }
 
-func Call_Test_AstTree_logShow(a_0_loop int64) gopurs_runtime.Value {
-	var a_0 int64 = a_0_loop
-	_ = a_0
-	return gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(a_0)).StrVal()))
-}
-
 func Call_Test_AstTree_eval(v_0_loop gopurs_runtime.Value) int64 {
 eval:
 	for {
@@ -159,10 +142,10 @@ eval:
 		}
 		var v_0 gopurs_runtime.Value = v_0_loop
 		_ = v_0
-		var __t0 int64
+		var __t0 gopurs_runtime.Value
 		{
 			if v_0.Type == 9 && v_0.IntVal == 245188743 {
-				__t0 = (*Constructor_Test_AstTree_Val)(v_0.UnsafePtr).V0
+				__t0 = gopurs_runtime.Int((*Constructor_Test_AstTree_Val)(v_0.UnsafePtr).V0)
 				goto end_branch_0
 			} else {
 
@@ -170,7 +153,7 @@ eval:
 		}
 		{
 			if v_0.Type == 9 && v_0.IntVal == 2937956733 {
-				__t0 = (Call_Test_AstTree_eval((*Constructor_Test_AstTree_Add)(v_0.UnsafePtr).V0)) + (Call_Test_AstTree_eval((*Constructor_Test_AstTree_Add)(v_0.UnsafePtr).V1))
+				__t0 = gopurs_runtime.Int((Call_Test_AstTree_eval((*Constructor_Test_AstTree_Add)(v_0.UnsafePtr).V0)) + (Call_Test_AstTree_eval((*Constructor_Test_AstTree_Add)(v_0.UnsafePtr).V1)))
 				goto end_branch_0
 			} else {
 
@@ -178,7 +161,7 @@ eval:
 		}
 		{
 			if v_0.Type == 9 && v_0.IntVal == 3406566728 {
-				__t0 = (Call_Test_AstTree_eval((*Constructor_Test_AstTree_Mul)(v_0.UnsafePtr).V0)) * (Call_Test_AstTree_eval((*Constructor_Test_AstTree_Mul)(v_0.UnsafePtr).V1))
+				__t0 = gopurs_runtime.Int((Call_Test_AstTree_eval((*Constructor_Test_AstTree_Mul)(v_0.UnsafePtr).V0)) * (Call_Test_AstTree_eval((*Constructor_Test_AstTree_Mul)(v_0.UnsafePtr).V1)))
 				goto end_branch_0
 			} else {
 
@@ -186,17 +169,17 @@ eval:
 		}
 		{
 			if v_0.Type == 9 && v_0.IntVal == 2029887576 {
-				__t0 = (Call_Test_AstTree_eval((*Constructor_Test_AstTree_Sub)(v_0.UnsafePtr).V0)) - (Call_Test_AstTree_eval((*Constructor_Test_AstTree_Sub)(v_0.UnsafePtr).V1))
+				__t0 = gopurs_runtime.Int((Call_Test_AstTree_eval((*Constructor_Test_AstTree_Sub)(v_0.UnsafePtr).V0)) - (Call_Test_AstTree_eval((*Constructor_Test_AstTree_Sub)(v_0.UnsafePtr).V1)))
 				goto end_branch_0
 			} else {
 
 			}
 		}
 		{
-			__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }().IntVal
+			__t0 = func() gopurs_runtime.Value { panic("Failed pattern match") }()
 		}
 	end_branch_0:
-		return __t0
+		return __t0.IntVal
 	}
 }
 

@@ -41,6 +41,7 @@ func Call_Test_FileOps_loopIO(n_0_loop int64) gopurs_runtime.Value {
 	var n_0 int64 = n_0_loop
 	_ = n_0
 	return gopurs_runtime.Apply2(Get_Test_FileOps_loopE(), gopurs_runtime.Int(n_0), gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+		// TAST (Let): __local_var_1_0 shape=App(Var) bindingType=Any
 		__local_var_1_0 := gopurs_runtime.Apply2(Get_Test_FileOps_writeFileSync(), gopurs_runtime.Str("var/iotest.txt"), gopurs_runtime.Str("Hello IO Benchmarks!"))
 		_ = __local_var_1_0
 		_dollar___unused_2_1 := gopurs_runtime.Apply(__local_var_1_0, gopurs_runtime.Value{})

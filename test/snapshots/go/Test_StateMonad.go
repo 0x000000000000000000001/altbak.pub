@@ -5,18 +5,6 @@ import (
 	sync "sync"
 )
 
-var cache_Test_StateMonad_logShow gopurs_runtime.Value
-var once_Test_StateMonad_logShow sync.Once
-
-func Get_Test_StateMonad_logShow() gopurs_runtime.Value {
-	once_Test_StateMonad_logShow.Do(func() {
-		cache_Test_StateMonad_logShow = gopurs_runtime.Func(func(a_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-			return Call_Test_StateMonad_logShow(a_0_box.IntVal)
-		})
-	})
-	return cache_Test_StateMonad_logShow
-}
-
 var cache_Test_StateMonad_State gopurs_runtime.Value
 var once_Test_StateMonad_State sync.Once
 
@@ -141,92 +129,15 @@ var once_Test_StateMonad_act sync.Once
 func Get_Test_StateMonad_act() gopurs_runtime.Value {
 	once_Test_StateMonad_act.Do(func() {
 		cache_Test_StateMonad_act = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			// TAST (Let): __local_var_0_0 shape=App(Var) bindingType=Any
 			__local_var_0_0 := gopurs_runtime.Apply(Get_Bench_opaque(), gopurs_runtime.Int(20))
 			_ = __local_var_0_0
 			dummy_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
 			_ = dummy_1_1
-			return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(Call_Test_StateMonad_runManyTimes(dummy_1_1.IntVal, 0))).StrVal())), gopurs_runtime.Value{})
+			return gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(Call_Test_StateMonad_runManyTimes(dummy_1_1.IntVal, 0)))
 		})
 	})
 	return cache_Test_StateMonad_act
-}
-
-var cache_Test_StateMonad_bindState__3267751411 gopurs_runtime.Value
-var once_Test_StateMonad_bindState__3267751411 sync.Once
-
-func Get_Test_StateMonad_bindState__3267751411() gopurs_runtime.Value {
-	once_Test_StateMonad_bindState__3267751411.Do(func() {
-		cache_Test_StateMonad_bindState__3267751411 = gopurs_runtime.Func3(func(v_0_box gopurs_runtime.Value, g_1_box gopurs_runtime.Value, s_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-			return Call_Test_StateMonad_bindState__3267751411(v_0_box, g_1_box, s_2_box)
-		})
-	})
-	return cache_Test_StateMonad_bindState__3267751411
-}
-
-var cache_Test_StateMonad_get__676984528 gopurs_runtime.Value
-var once_Test_StateMonad_get__676984528 sync.Once
-
-func Get_Test_StateMonad_get__676984528() gopurs_runtime.Value {
-	once_Test_StateMonad_get__676984528.Do(func() {
-		cache_Test_StateMonad_get__676984528 = gopurs_runtime.Func(func(s_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-			return Call_Test_StateMonad_get__676984528(s_0_box)
-		})
-	})
-	return cache_Test_StateMonad_get__676984528
-}
-
-var cache_Test_StateMonad_modify__3050914184 gopurs_runtime.Value
-var once_Test_StateMonad_modify__3050914184 sync.Once
-
-func Get_Test_StateMonad_modify__3050914184() gopurs_runtime.Value {
-	once_Test_StateMonad_modify__3050914184.Do(func() {
-		cache_Test_StateMonad_modify__3050914184 = gopurs_runtime.Func2(func(f_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-			return Call_Test_StateMonad_modify__3050914184(f_0_box, s_1_box)
-		})
-	})
-	return cache_Test_StateMonad_modify__3050914184
-}
-
-var cache_Test_StateMonad_pureState__1329830318 gopurs_runtime.Value
-var once_Test_StateMonad_pureState__1329830318 sync.Once
-
-func Get_Test_StateMonad_pureState__1329830318() gopurs_runtime.Value {
-	once_Test_StateMonad_pureState__1329830318.Do(func() {
-		cache_Test_StateMonad_pureState__1329830318 = gopurs_runtime.Func2(func(a_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-			return Call_Test_StateMonad_pureState__1329830318(a_0_box, s_1_box)
-		})
-	})
-	return cache_Test_StateMonad_pureState__1329830318
-}
-
-var cache_Test_StateMonad_put__3685210848 gopurs_runtime.Value
-var once_Test_StateMonad_put__3685210848 sync.Once
-
-func Get_Test_StateMonad_put__3685210848() gopurs_runtime.Value {
-	once_Test_StateMonad_put__3685210848.Do(func() {
-		cache_Test_StateMonad_put__3685210848 = gopurs_runtime.Func2(func(s_0_box gopurs_runtime.Value, v_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-			return Call_Test_StateMonad_put__3685210848(s_0_box, v_1_box)
-		})
-	})
-	return cache_Test_StateMonad_put__3685210848
-}
-
-var cache_Test_StateMonad_runState__3059282509 gopurs_runtime.Value
-var once_Test_StateMonad_runState__3059282509 sync.Once
-
-func Get_Test_StateMonad_runState__3059282509() gopurs_runtime.Value {
-	once_Test_StateMonad_runState__3059282509.Do(func() {
-		cache_Test_StateMonad_runState__3059282509 = gopurs_runtime.Func2(func(v_0_box gopurs_runtime.Value, s_1_box gopurs_runtime.Value) gopurs_runtime.Value {
-			return Call_Test_StateMonad_runState__3059282509(v_0_box, s_1_box)
-		})
-	})
-	return cache_Test_StateMonad_runState__3059282509
-}
-
-func Call_Test_StateMonad_logShow(a_0_loop int64) gopurs_runtime.Value {
-	var a_0 int64 = a_0_loop
-	_ = a_0
-	return gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(a_0)).StrVal()))
 }
 
 func Call_Test_StateMonad_State(x_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
@@ -272,6 +183,7 @@ func Call_Test_StateMonad_bindState(v_0_loop gopurs_runtime.Value, g_1_loop gopu
 	_ = g_1
 	var s_2 gopurs_runtime.Value = s_2_loop
 	_ = s_2
+	// TAST (Let): r1_3_0 shape=App(Other) bindingType=(Record (Row [val: (TypeVar a), state: (TypeVar s)] Any))
 	r1_3_0 := gopurs_runtime.Apply(v_0, s_2)
 	_ = r1_3_0
 	return gopurs_runtime.Apply2(g_1, gopurs_runtime.RecordGet(r1_3_0, "val"), gopurs_runtime.RecordGet(r1_3_0, "state"))
@@ -305,6 +217,7 @@ chainModifications:
 			}
 		}
 		{
+			// TAST (Let): __local_var_1_0 shape=App(Var) bindingType=Any
 			__local_var_1_0 := gopurs_runtime.Apply(Get_Test_StateMonad_modify(), gopurs_runtime.Func(func(x_1 gopurs_runtime.Value) gopurs_runtime.Value {
 				return gopurs_runtime.Int((x_1.IntVal) + (1))
 			}))
@@ -346,54 +259,4 @@ runManyTimes:
 	end_branch_0:
 		return __t0
 	}
-}
-
-func Call_Test_StateMonad_bindState__3267751411(v_0_loop gopurs_runtime.Value, g_1_loop gopurs_runtime.Value, s_2_loop gopurs_runtime.Value) gopurs_runtime.Value {
-	var v_0 gopurs_runtime.Value = v_0_loop
-	_ = v_0
-	var g_1 gopurs_runtime.Value = g_1_loop
-	_ = g_1
-	var s_2 gopurs_runtime.Value = s_2_loop
-	_ = s_2
-	r1_3_0 := gopurs_runtime.Apply(v_0, s_2)
-	_ = r1_3_0
-	return gopurs_runtime.Apply2(g_1, gopurs_runtime.RecordGet(r1_3_0, "val"), gopurs_runtime.RecordGet(r1_3_0, "state"))
-}
-
-func Call_Test_StateMonad_get__676984528(s_0_loop gopurs_runtime.Value) gopurs_runtime.Value {
-	var s_0 gopurs_runtime.Value = s_0_loop
-	_ = s_0
-	return gopurs_runtime.RecordDict2("state", "val", s_0, s_0)
-}
-
-func Call_Test_StateMonad_modify__3050914184(f_0_loop gopurs_runtime.Value, s_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-	var f_0 gopurs_runtime.Value = f_0_loop
-	_ = f_0
-	var s_1 gopurs_runtime.Value = s_1_loop
-	_ = s_1
-	return gopurs_runtime.RecordDict2("state", "val", gopurs_runtime.Apply(f_0, s_1), Get_Data_Unit_unit())
-}
-
-func Call_Test_StateMonad_pureState__1329830318(a_0_loop gopurs_runtime.Value, s_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-	var a_0 gopurs_runtime.Value = a_0_loop
-	_ = a_0
-	var s_1 gopurs_runtime.Value = s_1_loop
-	_ = s_1
-	return gopurs_runtime.RecordDict2("state", "val", s_1, a_0)
-}
-
-func Call_Test_StateMonad_put__3685210848(s_0_loop gopurs_runtime.Value, v_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-	var s_0 gopurs_runtime.Value = s_0_loop
-	_ = s_0
-	var v_1 gopurs_runtime.Value = v_1_loop
-	_ = v_1
-	return gopurs_runtime.RecordDict2("state", "val", s_0, Get_Data_Unit_unit())
-}
-
-func Call_Test_StateMonad_runState__3059282509(v_0_loop gopurs_runtime.Value, s_1_loop gopurs_runtime.Value) gopurs_runtime.Value {
-	var v_0 gopurs_runtime.Value = v_0_loop
-	_ = v_0
-	var s_1 gopurs_runtime.Value = s_1_loop
-	_ = s_1
-	return gopurs_runtime.Apply(v_0, s_1)
 }
