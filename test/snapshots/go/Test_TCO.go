@@ -5,18 +5,6 @@ import (
 	sync "sync"
 )
 
-var cache_Test_TCO_logShow gopurs_runtime.Value
-var once_Test_TCO_logShow sync.Once
-
-func Get_Test_TCO_logShow() gopurs_runtime.Value {
-	once_Test_TCO_logShow.Do(func() {
-		cache_Test_TCO_logShow = gopurs_runtime.Func(func(a_0_box gopurs_runtime.Value) gopurs_runtime.Value {
-			return Call_Test_TCO_logShow(a_0_box.IntVal)
-		})
-	})
-	return cache_Test_TCO_logShow
-}
-
 var cache_Test_TCO_describe gopurs_runtime.Value
 var once_Test_TCO_describe sync.Once
 
@@ -45,20 +33,15 @@ var once_Test_TCO_act sync.Once
 func Get_Test_TCO_act() gopurs_runtime.Value {
 	once_Test_TCO_act.Do(func() {
 		cache_Test_TCO_act = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value {
+			// TAST (Let): __local_var_0_0 shape=App(Var) bindingType=Any
 			__local_var_0_0 := gopurs_runtime.Apply(Get_Bench_opaque(), gopurs_runtime.Int(100000))
 			_ = __local_var_0_0
 			dummy_1_1 := gopurs_runtime.Apply(__local_var_0_0, gopurs_runtime.Value{})
 			_ = dummy_1_1
-			return gopurs_runtime.Apply(gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(Call_Test_TCO_deepTailRec(dummy_1_1.IntVal, 0))).StrVal())), gopurs_runtime.Value{})
+			return gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(Call_Test_TCO_deepTailRec(dummy_1_1.IntVal, 0)))
 		})
 	})
 	return cache_Test_TCO_act
-}
-
-func Call_Test_TCO_logShow(a_0_loop int64) gopurs_runtime.Value {
-	var a_0 int64 = a_0_loop
-	_ = a_0
-	return gopurs_runtime.Apply(Get_Effect_Console_log(), gopurs_runtime.Str(gopurs_runtime.Apply(Get_Data_Show_showIntImpl(), gopurs_runtime.Int(a_0)).StrVal()))
 }
 
 func Call_Test_TCO_deepTailRec(v_0_loop int64, v1_1_loop int64) int64 {
