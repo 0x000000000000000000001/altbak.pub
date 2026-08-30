@@ -5,6 +5,7 @@ cd "$(dirname "$0")/../.."
 CLEAN=0
 UPDATE_SNAPSHOTS=${UPDATE_SNAPSHOTS:-0}
 
+FILTER=""
 while [[ $# -gt 0 ]]
 do
   case "$1" in
@@ -13,6 +14,7 @@ do
     shift
     ;;
     *)
+    FILTER="$1"
     shift
     ;;
   esac
@@ -44,7 +46,9 @@ TEST_MODULES=()
 for f in $(find src/Test -name "*.purs"); do
   mod=$(grep -E '^module ' "$f" | awk '{print $2}')
   if [[ "$mod" == Test.* ]]; then
-    TEST_MODULES+=("$mod")
+    if [ -z "$FILTER" ] || [[ "$mod" == *"$FILTER"* ]]; then
+      TEST_MODULES+=("$mod")
+    fi
   fi
 done
 
@@ -90,7 +94,7 @@ EOF
 
   spago build -q || { echo -e "   \033[0;31m[FAILED]\033[0m spago build failed for $mod"; failed=$((failed+1)); continue; }
   
-  node ../gopurs/gopurs/bin/gopurs.js --main AppTest > /dev/null || { echo -e "   \033[0;31m[FAILED]\033[0m gopurs failed for $mod"; failed=$((failed+1)); continue; }
+  ../gopurs/gopurs/bin/gopurs --main AppTest > /dev/null || { echo -e "   \033[0;31m[FAILED]\033[0m gopurs failed for $mod"; failed=$((failed+1)); continue; }
   
   mod_file_name="${mod//./_}"
   generated_file="output/purescript/${mod_file_name}.go"
