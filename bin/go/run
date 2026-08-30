@@ -107,7 +107,7 @@ if [ -d "output/main" ]; then
         go build -o go_app ./main
         cd ..
 
-        GOGC=1000 ./output/go_app
+        GOGC=500 ./output/go_app
     fi
 else
     echo "No output/main/main.go generated."
