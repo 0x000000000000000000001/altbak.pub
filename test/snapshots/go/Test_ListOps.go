@@ -58,7 +58,7 @@ var once_Test_ListOps_foldl sync.Once
 func Get_Test_ListOps_foldl() gopurs_runtime.Value {
 	once_Test_ListOps_foldl.Do(func() {
 		cache_Test_ListOps_foldl = gopurs_runtime.Func3(func(v_0_box gopurs_runtime.Value, v1_1_box gopurs_runtime.Value, v2_2_box gopurs_runtime.Value) gopurs_runtime.Value {
-			return Call_Test_ListOps_foldl(v_0_box, v1_1_box, gopurs_runtime.CoerceToStruct[Constructor_Test_ListOps_Cons[gopurs_runtime.Value]](v2_2_box))
+			return Call_Test_ListOps_foldl[gopurs_runtime.Value, gopurs_runtime.Value](v_0_box, v1_1_box, gopurs_runtime.CoerceToStruct[Constructor_Test_ListOps_Cons[gopurs_runtime.Value]](v2_2_box))
 		})
 	})
 	return cache_Test_ListOps_foldl
@@ -171,7 +171,7 @@ func Call_Test_ListOps_go__range(start_0_loop int64, end_1_loop int64) *Construc
 	return gopurs_runtime.CoerceToStruct[Constructor_Test_ListOps_Cons[int64]](Call_local_Test_ListOps_go__go_2_0_0(end_1, (*Constructor_Test_ListOps_Cons[int64])(nil)))
 }
 
-func Call_Test_ListOps_foldl(v_0_loop gopurs_runtime.Value, v1_1_loop gopurs_runtime.Value, v2_2_loop *Constructor_Test_ListOps_Cons[gopurs_runtime.Value]) gopurs_runtime.Value {
+func Call_Test_ListOps_foldl[T_b any, T_a any](v_0_loop gopurs_runtime.Value, v1_1_loop gopurs_runtime.Value, v2_2_loop *Constructor_Test_ListOps_Cons[gopurs_runtime.Value]) gopurs_runtime.Value {
 foldl:
 	for {
 		if false {
@@ -321,5 +321,5 @@ func Call_Test_ListOps_sumEvens(n_0_loop int64) int64 {
 			return Call_local_Test_ListOps_go__go_1_0_2(curr_2_loop_val.IntVal, gopurs_runtime.CoerceToStruct[Constructor_Test_ListOps_Cons[int64]](acc_3_loop_val))
 		})
 	})
-	return Call_Test_ListOps_foldl(Get_Data_Semiring_intAdd(), gopurs_runtime.Int(0), gopurs_runtime.CoerceToStruct[Constructor_Test_ListOps_Cons[gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(Call_Test_ListOps_filterEvens(gopurs_runtime.CoerceToStruct[Constructor_Test_ListOps_Cons[int64]](Call_local_Test_ListOps_go__go_1_0_2(n_0, (*Constructor_Test_ListOps_Cons[int64])(nil)))))})).IntVal
+	return Call_Test_ListOps_foldl[gopurs_runtime.Value, gopurs_runtime.Value](Get_Data_Semiring_intAdd(), gopurs_runtime.Int(0), gopurs_runtime.CoerceToStruct[Constructor_Test_ListOps_Cons[gopurs_runtime.Value]](gopurs_runtime.Value{Type: 9, IntVal: 1127792131, UnsafePtr: unsafe.Pointer(Call_Test_ListOps_filterEvens(gopurs_runtime.CoerceToStruct[Constructor_Test_ListOps_Cons[int64]](Call_local_Test_ListOps_go__go_1_0_2(n_0, (*Constructor_Test_ListOps_Cons[int64])(nil)))))})).IntVal
 }
