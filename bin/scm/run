@@ -83,4 +83,4 @@ PATH="$(pwd)/bin/scm:$PATH" purescm bundle-app --main ${ENTRY_POINT} --output ru
 echo "=== Scheme ==="
 export DYLD_LIBRARY_PATH="/opt/homebrew/lib:/opt/homebrew/opt/icu4c/lib:/opt/homebrew/opt/pcre2/lib"
 
-chez --program run/bak/scm/output_bin/main
+chez --optimize-level 3 --program run/bak/scm/output_bin/main
