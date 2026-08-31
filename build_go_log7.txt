@@ -1,2 +1,0 @@
-TcoLetRec: ident=go__go_1_0_12 idStr=["v_2","v1_3"] pTypes keys=(fromFoldable ["v_2","v_5"]) v_2_type=(ADT ["Data","List","Types","List"] [(TypeVar a)])
-TcoLetRec: ident=go__go_1_0_12 idStr=["v_2"] pTypes keys=(fromFoldable ["v_2"]) v_2_type=(TypeVar a)
