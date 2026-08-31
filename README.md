@@ -57,18 +57,18 @@ Go Benchmark            | Compiled Go ([gopurs](https://github.com/0x00000000000
 AST Evaluation          | ~ 0 μs                           | ~ 296 μs                              | ~ 20 μs       | ~ 4 μs                  |
 Fibonacci               | ~ 0 μs                           | ~ 24 μs                               | ~ 2 μs        | ~ 1 μs                  |
 List Processing         | ~ 18 μs                          | ~ 586 μs                              | ~ 121 μs      | ~ 1 μs                  |
-Tail Call Optimization  | ~ 635 μs                         | ~ 13354 μs                            | ~ 39 μs       | ~ 27 μs                 |
-Deep Record Updates     | ~ 670 μs                         | ~ 9492 μs                             | ~ 373 μs      | ~ 3 μs                  |
-Ackermann               | ~ 16 μs                          | ~ 1267 μs                             | ~ 23 μs       | ~ 32 μs                 |
-Church Numerals         | ~ 1647 μs                        | ~ 5731 μs                             | ~ 1002 μs     | ~ 29 μs                 |
-Prime Sieve             | ~ 101 μs                         | ~ 2549 μs                             | ~ 134 μs      | ~ 4 μs                  |
-Red-Black Tree          | ~ 22858 μs                       | ~ 870034 μs                           | ~ 26529 μs    | ~ 24856 μs              |
-Polymorphism            | ~ 2219 μs                        | ~ 669801 μs                           | ~ 58848 μs    | ~ 2480 μs               |
+Tail Call Optimization  | ~ 674 μs                         | ~ 13354 μs                            | ~ 39 μs       | ~ 27 μs                 |
+Deep Record Updates     | ~ 685 μs                         | ~ 9492 μs                             | ~ 373 μs      | ~ 3 μs                  |
+Ackermann               | ~ 15 μs                          | ~ 1267 μs                             | ~ 23 μs       | ~ 32 μs                 |
+Church Numerals         | ~ 1596 μs                        | ~ 5731 μs                             | ~ 1002 μs     | ~ 29 μs                 |
+Prime Sieve             | ~ 96 μs                          | ~ 2549 μs                             | ~ 134 μs      | ~ 4 μs                  |
+Red-Black Tree          | ~ 22753 μs                       | ~ 870034 μs                           | ~ 26529 μs    | ~ 24856 μs              |
+Polymorphism            | ~ 2217 μs                        | ~ 669801 μs                           | ~ 58848 μs    | ~ 2480 μs               |
 State Monad             | ~ 41 μs                          | ~ 536 μs                              | ~ 127 μs      | ~ 1 μs                  |
-Lazy Evaluation         | ~ 16174 μs                       | ~ 71586 μs                            | ~ 14816 μs    | ~ 1 μs                  |
+Lazy Evaluation         | ~ 15945 μs                       | ~ 71586 μs                            | ~ 14816 μs    | ~ 1 μs                  |
 Array Processing        | ~ 19 μs                          | ~ 61 μs                               | ~ 7 μs        | ~ 1 μs                  |
 RowToList               | ~ 0 μs                           | ~ 2 μs                                | ~ 1 μs        | ~ 1 μs                  |
-**Total Execution Time**    | ~ 44.40 ms                       | ~ 1645.32 ms                          | ~ 102.04 ms   | ~ 27.44 ms              |
+**Total Execution Time**    | ~ 44.06 ms                       | ~ 1645.32 ms                          | ~ 102.04 ms   | ~ 27.44 ms              |
 > *Read the IMPORTANT notice below!*
 
 #### Scheme

@@ -8,6 +8,7 @@ import Test.Fib as Fib
 import Test.AstTree as AstTree
 import Test.ListOps as ListOps
 import Test.TCO as TCO
+import Test.TCOADT as TCOADT
 import Test.Records as Records
 import Test.Ackermann as Ackermann
 import Test.Church as Church
@@ -25,6 +26,7 @@ warmup = do
   void Fib.act
   void ListOps.act
   void TCO.act
+  void TCOADT.act
   void Records.act
   void Ackermann.act
   void Church.act
@@ -48,6 +50,7 @@ main = do
   t2 <- runBench Fib.describe Fib.act
   t3 <- runBench ListOps.describe ListOps.act
   t4 <- runBench TCO.describe TCO.act
+  t15 <- runBench TCOADT.describe TCOADT.act
   t5 <- runBench Records.describe Records.act
   t6 <- runBench Ackermann.describe Ackermann.act
   t7 <- runBench Church.describe Church.act
@@ -59,5 +62,5 @@ main = do
   t13 <- runBench ArrayOps.describe ArrayOps.act
   t14 <- runBench RowToList.describe RowToList.act
 
-  let totalMs = (t1 / 1000.0) + (t2 / 1000.0) + (t3 / 1000.0) + (t4 / 1000.0) + (t5 / 1000.0) + (t6 / 1000.0) + (t7 / 1000.0) + (t8 / 1000.0) + (t9 / 1000.0) + (t10 / 1000.0) + (t11 / 1000.0) + (t12 / 1000.0) + (t13 / 1000.0) + (t14 / 1000.0)
+  let totalMs = (t1 / 1000.0) + (t2 / 1000.0) + (t3 / 1000.0) + (t4 / 1000.0) + (t5 / 1000.0) + (t6 / 1000.0) + (t7 / 1000.0) + (t8 / 1000.0) + (t9 / 1000.0) + (t10 / 1000.0) + (t11 / 1000.0) + (t12 / 1000.0) + (t13 / 1000.0) + (t14 / 1000.0) + (t15 / 1000.0)
   log $ "\n==================================================\n\nTotal exec time: " <> formatNumber totalMs <> " ms\n"
