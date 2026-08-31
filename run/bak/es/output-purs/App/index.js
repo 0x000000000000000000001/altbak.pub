@@ -18,13 +18,11 @@ import * as Test_Records from "../Test.Records/index.js";
 import * as Test_RowToList from "../Test.RowToList/index.js";
 import * as Test_StateMonad from "../Test.StateMonad/index.js";
 import * as Test_TCO from "../Test.TCO/index.js";
-import * as Test_TCOADT from "../Test.TCOADT/index.js";
 var warmup = function __do() {
     Data_Functor["void"](Effect.functorEffect)(Test_AstTree.act)();
     Data_Functor["void"](Effect.functorEffect)(Test_Fib.act)();
     Data_Functor["void"](Effect.functorEffect)(Test_ListOps.act)();
     Data_Functor["void"](Effect.functorEffect)(Test_TCO.act)();
-    Data_Functor["void"](Effect.functorEffect)(Test_TCOADT.act)();
     Data_Functor["void"](Effect.functorEffect)(Test_Records.act)();
     Data_Functor["void"](Effect.functorEffect)(Test_Ackermann.act)();
     Data_Functor["void"](Effect.functorEffect)(Test_Church.act)();
@@ -46,7 +44,6 @@ var main = function __do() {
     var t2 = Bench.runBench(Test_Fib.describe)(Test_Fib.act)();
     var t3 = Bench.runBench(Test_ListOps.describe)(Test_ListOps.act)();
     var t4 = Bench.runBench(Test_TCO.describe)(Test_TCO.act)();
-    var t15 = Bench.runBench(Test_TCOADT.describe)(Test_TCOADT.act)();
     var t5 = Bench.runBench(Test_Records.describe)(Test_Records.act)();
     var t6 = Bench.runBench(Test_Ackermann.describe)(Test_Ackermann.act)();
     var t7 = Bench.runBench(Test_Church.describe)(Test_Church.act)();
@@ -57,7 +54,7 @@ var main = function __do() {
     var t12 = Bench.runBench(Test_LazyEvaluation.describe)(Test_LazyEvaluation.act)();
     var t13 = Bench.runBench(Test_ArrayOps.describe)(Test_ArrayOps.act)();
     var t14 = Bench.runBench(Test_RowToList.describe)(Test_RowToList.act)();
-    var totalMs = t1 / 1000.0 + t2 / 1000.0 + t3 / 1000.0 + t4 / 1000.0 + t5 / 1000.0 + t6 / 1000.0 + t7 / 1000.0 + t8 / 1000.0 + t9 / 1000.0 + t10 / 1000.0 + t11 / 1000.0 + t12 / 1000.0 + t13 / 1000.0 + t14 / 1000.0 + t15 / 1000.0;
+    var totalMs = t1 / 1000.0 + t2 / 1000.0 + t3 / 1000.0 + t4 / 1000.0 + t5 / 1000.0 + t6 / 1000.0 + t7 / 1000.0 + t8 / 1000.0 + t9 / 1000.0 + t10 / 1000.0 + t11 / 1000.0 + t12 / 1000.0 + t13 / 1000.0 + t14 / 1000.0;
     return Data_Function.apply(Effect_Console.log)("\x0a==================================================\x0a\x0aTotal exec time: " + (Bench.formatNumber(totalMs) + " ms\x0a"))();
 };
 export {
