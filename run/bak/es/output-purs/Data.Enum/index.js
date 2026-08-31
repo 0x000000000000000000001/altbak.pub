@@ -454,7 +454,7 @@ var defaultCardinality = function (dictBounded) {
                 return $tco_result;
             };
         };
-        return go(1)(bottom2);
+        return Data_Function.apply(Cardinality)(go(1)(bottom2));
     };
 };
 var charToEnum = function (v) {

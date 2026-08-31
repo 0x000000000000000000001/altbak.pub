@@ -104,7 +104,7 @@ var functorLazy = {
 var map = /* #__PURE__ */ Data_Functor.map(functorLazy);
 var functorWithIndexLazy = {
     mapWithIndex: function (f) {
-        return map(f(Data_Unit.unit));
+        return Data_Function.apply(map)(f(Data_Unit.unit));
     },
     Functor0: function () {
         return functorLazy;
@@ -141,15 +141,15 @@ var foldl = /* #__PURE__ */ Data_Foldable.foldl(foldableLazy);
 var foldMap = /* #__PURE__ */ Data_Foldable.foldMap(foldableLazy);
 var foldableWithIndexLazy = {
     foldrWithIndex: function (f) {
-        return foldr(f(Data_Unit.unit));
+        return Data_Function.apply(foldr)(f(Data_Unit.unit));
     },
     foldlWithIndex: function (f) {
-        return foldl(f(Data_Unit.unit));
+        return Data_Function.apply(foldl)(f(Data_Unit.unit));
     },
     foldMapWithIndex: function (dictMonoid) {
         var foldMap1 = foldMap(dictMonoid);
         return function (f) {
-            return foldMap1(f(Data_Unit.unit));
+            return Data_Function.apply(foldMap1)(f(Data_Unit.unit));
         };
     },
     Foldable0: function () {
@@ -187,7 +187,7 @@ var traversableWithIndexLazy = {
     traverseWithIndex: function (dictApplicative) {
         var traverse1 = traverse(dictApplicative);
         return function (f) {
-            return traverse1(f(Data_Unit.unit));
+            return Data_Function.apply(traverse1)(f(Data_Unit.unit));
         };
     },
     FunctorWithIndex0: function () {
@@ -367,7 +367,7 @@ var bindLazy = {
     bind: function (l) {
         return function (f) {
             return $foreign.defer(function (v) {
-                return $foreign.force(f($foreign.force(l)));
+                return Data_Function.apply($foreign.force)(f($foreign.force(l)));
             });
         };
     },

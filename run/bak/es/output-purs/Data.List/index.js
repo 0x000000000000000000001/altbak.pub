@@ -85,13 +85,13 @@ var stripPrefix = function (dictEq) {
             var go = function (prefix) {
                 return function (input) {
                     if (prefix instanceof Data_List_Types.Cons && (input instanceof Data_List_Types.Cons && Data_Eq.eq(dictEq)(prefix.value0)(input.value0))) {
-                        return new Data_Maybe.Just(new Control_Monad_Rec_Class.Loop({
+                        return Data_Function.apply(Data_Maybe.Just.create)(new Control_Monad_Rec_Class.Loop({
                             a: prefix.value1,
                             b: input.value1
                         }));
                     };
                     if (prefix instanceof Data_List_Types.Nil) {
-                        return new Data_Maybe.Just(new Control_Monad_Rec_Class.Done(input));
+                        return Data_Function.apply(Data_Maybe.Just.create)(new Control_Monad_Rec_Class.Done(input));
                     };
                     return Data_Maybe.Nothing.value;
                 };
@@ -219,7 +219,7 @@ var sortBy = function (cmp) {
                         return;
                     };
                     $tco_done2 = true;
-                    return new Data_List_Types.Cons(v1(singleton(v)), sequences(v2));
+                    return new Data_List_Types.Cons(Data_Function.apply(v1)(singleton(v)), sequences(v2));
                 };
                 while (!$tco_done2) {
                     $tco_result = $tco_loop($tco_var_v, $tco_var_v1, $copy_v2);
@@ -379,38 +379,23 @@ var unsnoc = function (lst) {
 var zipWith = function (f) {
     return function (xs) {
         return function (ys) {
-            var go = function ($copy_v) {
-                return function ($copy_v1) {
-                    return function ($copy_v2) {
-                        var $tco_var_v = $copy_v;
-                        var $tco_var_v1 = $copy_v1;
-                        var $tco_done = false;
-                        var $tco_result;
-                        function $tco_loop(v, v1, v2) {
-                            if (v instanceof Data_List_Types.Nil) {
-                                $tco_done = true;
-                                return v2;
-                            };
-                            if (v1 instanceof Data_List_Types.Nil) {
-                                $tco_done = true;
-                                return v2;
-                            };
-                            if (v instanceof Data_List_Types.Cons && v1 instanceof Data_List_Types.Cons) {
-                                $tco_var_v = v.value1;
-                                $tco_var_v1 = v1.value1;
-                                $copy_v2 = new Data_List_Types.Cons(f(v.value0)(v1.value0), v2);
-                                return;
-                            };
-                            throw new Error("Failed pattern match at Data.List (line 779, column 3 - line 779, column 21): " + [ v.constructor.name, v1.constructor.name, v2.constructor.name ]);
+            var go = function (v) {
+                return function (v1) {
+                    return function (v2) {
+                        if (v instanceof Data_List_Types.Nil) {
+                            return v2;
                         };
-                        while (!$tco_done) {
-                            $tco_result = $tco_loop($tco_var_v, $tco_var_v1, $copy_v2);
+                        if (v1 instanceof Data_List_Types.Nil) {
+                            return v2;
                         };
-                        return $tco_result;
+                        if (v instanceof Data_List_Types.Cons && v1 instanceof Data_List_Types.Cons) {
+                            return Data_Function.apply(go(v.value1)(v1.value1))(new Data_List_Types.Cons(f(v.value0)(v1.value0), v2));
+                        };
+                        throw new Error("Failed pattern match at Data.List (line 779, column 3 - line 779, column 21): " + [ v.constructor.name, v1.constructor.name, v2.constructor.name ]);
                     };
                 };
             };
-            return reverse(go(xs)(ys)(Data_List_Types.Nil.value));
+            return Data_Function.apply(reverse)(go(xs)(ys)(Data_List_Types.Nil.value));
         };
     };
 };
@@ -597,7 +582,7 @@ var manyRec = function (dictMonadRec) {
         return function (p) {
             var go = function (acc) {
                 return Control_Bind.bind(Bind1)(Control_Alt.alt(Alt0)(Data_Functor.map(Functor0)(Control_Monad_Rec_Class.Loop.create)(p))(Control_Applicative.pure(Applicative0)(new Control_Monad_Rec_Class.Done(Data_Unit.unit))))(function (aa) {
-                    return pure(Data_Bifunctor.bimap(Control_Monad_Rec_Class.bifunctorStep)(function (v) {
+                    return Data_Function.apply(pure)(Data_Bifunctor.bimap(Control_Monad_Rec_Class.bifunctorStep)(function (v) {
                         return new Data_List_Types.Cons(v, acc);
                     })(function (v) {
                         return reverse(acc);
@@ -1090,7 +1075,7 @@ var alterAt = function (v) {
     return function (v1) {
         return function (v2) {
             if (v === 0 && v2 instanceof Data_List_Types.Cons) {
-                return new Data_Maybe.Just((function () {
+                return Data_Function.apply(Data_Maybe.Just.create)((function () {
                     var v3 = v1(v2.value0);
                     if (v3 instanceof Data_Maybe.Nothing) {
                         return v2.value1;

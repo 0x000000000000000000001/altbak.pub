@@ -6,6 +6,7 @@ import * as Control_Bind from "../Control.Bind/index.js";
 import * as Control_Plus from "../Control.Plus/index.js";
 import * as Data_Distributive from "../Data.Distributive/index.js";
 import * as Data_Either from "../Data.Either/index.js";
+import * as Data_Function from "../Data.Function/index.js";
 import * as Data_Functor from "../Data.Functor/index.js";
 import * as Data_Functor_Invariant from "../Data.Functor.Invariant/index.js";
 import * as Data_Tuple from "../Data.Tuple/index.js";
@@ -144,24 +145,24 @@ var choiceStar = function (dictApplicative) {
     var profunctorStar1 = profunctorStar(Apply0.Functor0());
     return {
         left: function (v) {
-            return Data_Either.either((function () {
+            return Data_Function.apply(Star)(Data_Either.either((function () {
                 var $123 = Data_Functor.map(Functor0)(Data_Either.Left.create);
                 return function ($124) {
                     return $123(v($124));
                 };
             })())(function ($125) {
                 return pure(Data_Either.Right.create($125));
-            });
+            }));
         },
         right: function (v) {
-            return Data_Either.either(function ($126) {
+            return Data_Function.apply(Star)(Data_Either.either(function ($126) {
                 return pure1(Data_Either.Left.create($126));
             })((function () {
                 var $127 = Data_Functor.map(Functor0)(Data_Either.Right.create);
                 return function ($128) {
                     return $127(v($128));
                 };
-            })());
+            })()));
         },
         Profunctor0: function () {
             return profunctorStar1;

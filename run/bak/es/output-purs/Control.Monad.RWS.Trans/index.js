@@ -8,6 +8,7 @@ import * as Control_Monad_Rec_Class from "../Control.Monad.Rec.Class/index.js";
 import * as Control_Monad_ST_Class from "../Control.Monad.ST.Class/index.js";
 import * as Control_Monad_Trans_Class from "../Control.Monad.Trans.Class/index.js";
 import * as Control_Plus from "../Control.Plus/index.js";
+import * as Data_Function from "../Data.Function/index.js";
 import * as Data_Functor from "../Data.Functor/index.js";
 import * as Data_Monoid from "../Data.Monoid/index.js";
 import * as Data_Semigroup from "../Data.Semigroup/index.js";
@@ -58,7 +59,7 @@ var monadTransRWST = function (dictMonoid) {
                 return function (v) {
                     return function (s) {
                         return Control_Bind.bind(Bind1)(m)(function (a) {
-                            return pure(new RWSResult(s, a, Data_Monoid.mempty(dictMonoid)));
+                            return Data_Function.apply(pure)(new RWSResult(s, a, Data_Monoid.mempty(dictMonoid)));
                         });
                     };
                 };
@@ -199,7 +200,7 @@ var applicativeRWST = function (dictMonad) {
             pure: function (a) {
                 return function (v) {
                     return function (s) {
-                        return pure(new RWSResult(s, a, Data_Monoid.mempty(dictMonoid)));
+                        return Data_Function.apply(pure)(new RWSResult(s, a, Data_Monoid.mempty(dictMonoid)));
                     };
                 };
             },
@@ -233,7 +234,7 @@ var monadAskRWST = function (dictMonad) {
         return {
             ask: function (r) {
                 return function (s) {
-                    return pure(new RWSResult(s, r, Data_Monoid.mempty(dictMonoid)));
+                    return Data_Function.apply(pure)(new RWSResult(s, r, Data_Monoid.mempty(dictMonoid)));
                 };
             },
             Monad0: function () {
@@ -331,7 +332,7 @@ var monadStateRWST = function (dictMonad) {
                 return function (v) {
                     return function (s) {
                         var v1 = f(s);
-                        return pure(new RWSResult(v1.value1, v1.value0, Data_Monoid.mempty(dictMonoid)));
+                        return Data_Function.apply(pure)(new RWSResult(v1.value1, v1.value0, Data_Monoid.mempty(dictMonoid)));
                     };
                 };
             },
@@ -351,7 +352,7 @@ var monadTellRWST = function (dictMonad) {
             tell: function (w) {
                 return function (v) {
                     return function (s) {
-                        return pure(new RWSResult(s, Data_Unit.unit, w));
+                        return Data_Function.apply(pure)(new RWSResult(s, Data_Unit.unit, w));
                     };
                 };
             },
@@ -377,7 +378,7 @@ var monadWriterRWST = function (dictMonad) {
                 return function (r) {
                     return function (s) {
                         return Control_Bind.bind(Bind1)(m(r)(s))(function (v) {
-                            return pure(new RWSResult(v.value0, new Data_Tuple.Tuple(v.value1, v.value2), v.value2));
+                            return Data_Function.apply(pure)(new RWSResult(v.value0, new Data_Tuple.Tuple(v.value1, v.value2), v.value2));
                         });
                     };
                 };
@@ -386,7 +387,7 @@ var monadWriterRWST = function (dictMonad) {
                 return function (r) {
                     return function (s) {
                         return Control_Bind.bind(Bind1)(m(r)(s))(function (v) {
-                            return pure1(new RWSResult(v.value0, v.value1.value0, v.value1.value1(v.value2)));
+                            return Data_Function.apply(pure1)(new RWSResult(v.value0, v.value1.value0, v.value1.value1(v.value2)));
                         });
                     };
                 };
@@ -423,14 +424,14 @@ var monadErrorRWST = function (dictMonadError) {
         return {
             catchError: function (m) {
                 return function (h) {
-                    return function (r) {
+                    return Data_Function.apply(RWST)(function (r) {
                         return function (s) {
                             return Control_Monad_Error_Class.catchError(dictMonadError)(m(r)(s))(function (e) {
                                 var v = h(e);
                                 return v(r)(s);
                             });
                         };
-                    };
+                    });
                 };
             },
             MonadThrow0: function () {
@@ -480,11 +481,11 @@ var altRWST = function (dictAlt) {
     return {
         alt: function (v) {
             return function (v1) {
-                return function (r) {
+                return Data_Function.apply(RWST)(function (r) {
                     return function (s) {
                         return Control_Alt.alt(dictAlt)(v(r)(s))(v1(r)(s));
                     };
-                };
+                });
             };
         },
         Functor0: function () {

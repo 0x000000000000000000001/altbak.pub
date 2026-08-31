@@ -16,6 +16,18 @@ import * as Data_Ord from "../Data.Ord/index.js";
 import * as Data_Ordering from "../Data.Ordering/index.js";
 import * as Data_Show from "../Data.Show/index.js";
 import * as Data_Traversable from "../Data.Traversable/index.js";
+var $runtime_lazy = function (name, moduleName, init) {
+    var state = 0;
+    var val;
+    return function (lineNumber) {
+        if (state === 2) return val;
+        if (state === 1) throw new ReferenceError(name + " was needed before it finished initializing (module " + moduleName + ", line " + lineNumber + ")", moduleName, lineNumber);
+        state = 1;
+        val = init();
+        state = 2;
+        return val;
+    };
+};
 var showMaybe = /* #__PURE__ */ Data_Maybe.showMaybe(Data_Show.showInt);
 var eqMaybe = /* #__PURE__ */ Data_Maybe.eqMaybe(Data_Eq.eqInt);
 var ordMaybe = /* #__PURE__ */ Data_Maybe.ordMaybe(Data_Ord.ordInt);
@@ -118,51 +130,57 @@ var over = function (dictFunctor) {
 var interval = function (v) {
     return v.value1;
 };
-var foldableInterval = {
-    foldl: function (v) {
-        return function (v1) {
-            return function (v2) {
-                if (v2 instanceof StartEnd) {
-                    return v(v(v1)(v2.value0))(v2.value1);
+var $lazy_foldableInterval = /* #__PURE__ */ $runtime_lazy("foldableInterval", "Data.Interval", function () {
+    return {
+        foldl: function (v) {
+            return function (v1) {
+                return function (v2) {
+                    if (v2 instanceof StartEnd) {
+                        return v(v(v1)(v2.value0))(v2.value1);
+                    };
+                    if (v2 instanceof DurationEnd) {
+                        return v(v1)(v2.value1);
+                    };
+                    if (v2 instanceof StartDuration) {
+                        return v(v1)(v2.value0);
+                    };
+                    return v1;
                 };
-                if (v2 instanceof DurationEnd) {
-                    return v(v1)(v2.value1);
+            };
+        },
+        foldr: function (x) {
+            return Data_Foldable.foldrDefault($lazy_foldableInterval(0))(x);
+        },
+        foldMap: function (dictMonoid) {
+            return Data_Foldable.foldMapDefaultL($lazy_foldableInterval(0))(dictMonoid);
+        }
+    };
+});
+var foldableInterval = /* #__PURE__ */ $lazy_foldableInterval(81);
+var $lazy_foldableRecurringInterval = /* #__PURE__ */ $runtime_lazy("foldableRecurringInterval", "Data.Interval", function () {
+    return {
+        foldl: function (f) {
+            return function (i) {
+                var $275 = Data_Foldable.foldl(foldableInterval)(f)(i);
+                return function ($276) {
+                    return $275(interval($276));
                 };
-                if (v2 instanceof StartDuration) {
-                    return v(v1)(v2.value0);
+            };
+        },
+        foldr: function (f) {
+            return function (i) {
+                var $277 = Data_Foldable.foldr(foldableInterval)(f)(i);
+                return function ($278) {
+                    return $277(interval($278));
                 };
-                return v1;
             };
-        };
-    },
-    foldr: function (x) {
-        return Data_Foldable.foldrDefault(foldableInterval)(x);
-    },
-    foldMap: function (dictMonoid) {
-        return Data_Foldable.foldMapDefaultL(foldableInterval)(dictMonoid);
-    }
-};
-var foldableRecurringInterval = {
-    foldl: function (f) {
-        return function (i) {
-            var $275 = Data_Foldable.foldl(foldableInterval)(f)(i);
-            return function ($276) {
-                return $275(interval($276));
-            };
-        };
-    },
-    foldr: function (f) {
-        return function (i) {
-            var $277 = Data_Foldable.foldr(foldableInterval)(f)(i);
-            return function ($278) {
-                return $277(interval($278));
-            };
-        };
-    },
-    foldMap: function (dictMonoid) {
-        return Data_Foldable.foldMapDefaultL(foldableRecurringInterval)(dictMonoid);
-    }
-};
+        },
+        foldMap: function (dictMonoid) {
+            return Data_Foldable.foldMapDefaultL($lazy_foldableRecurringInterval(0))(dictMonoid);
+        }
+    };
+});
+var foldableRecurringInterval = /* #__PURE__ */ $lazy_foldableRecurringInterval(37);
 var eqInterval = function (dictEq) {
     return function (dictEq1) {
         return {
@@ -363,168 +381,186 @@ var extendRecurringInterval = {
         return functorRecurringInterval;
     }
 };
-var traversableInterval = {
-    traverse: function (dictApplicative) {
-        var Apply0 = dictApplicative.Apply0();
-        var Functor0 = (dictApplicative.Apply0()).Functor0();
-        return function (v) {
-            return function (v1) {
-                if (v1 instanceof StartEnd) {
-                    return Control_Apply.apply(Apply0)(Data_Functor.map(Functor0)(StartEnd.create)(v(v1.value0)))(v(v1.value1));
-                };
-                if (v1 instanceof DurationEnd) {
-                    return Data_Functor.mapFlipped(Functor0)(v(v1.value1))(DurationEnd.create(v1.value0));
-                };
-                if (v1 instanceof StartDuration) {
-                    return Data_Functor.mapFlipped(Functor0)(v(v1.value0))(function (v2) {
-                        return new StartDuration(v2, v1.value1);
-                    });
-                };
-                if (v1 instanceof DurationOnly) {
-                    return Control_Applicative.pure(dictApplicative)(new DurationOnly(v1.value0));
-                };
-                throw new Error("Failed pattern match at Data.Interval (line 97, column 1 - line 102, column 29): " + [ v.constructor.name, v1.constructor.name ]);
-            };
-        };
-    },
-    sequence: function (dictApplicative) {
-        return Data_Traversable.sequenceDefault(traversableInterval)(dictApplicative);
-    },
-    Functor0: function () {
-        return functorInterval;
-    },
-    Foldable1: function () {
-        return foldableInterval;
-    }
-};
-var traversableRecurringInterval = {
-    traverse: function (dictApplicative) {
-        var Functor0 = (dictApplicative.Apply0()).Functor0();
-        return function (f) {
-            return function (i) {
-                return over(Functor0)(Data_Traversable.traverse(traversableInterval)(dictApplicative)(f))(i);
-            };
-        };
-    },
-    sequence: function (dictApplicative) {
-        return Data_Traversable.sequenceDefault(traversableRecurringInterval)(dictApplicative);
-    },
-    Functor0: function () {
-        return functorRecurringInterval;
-    },
-    Foldable1: function () {
-        return foldableRecurringInterval;
-    }
-};
-var bifoldableInterval = {
-    bifoldl: function (v) {
-        return function (v1) {
-            return function (v2) {
-                return function (v3) {
-                    if (v3 instanceof StartEnd) {
-                        return v1(v1(v2)(v3.value0))(v3.value1);
+var $lazy_traversableInterval = /* #__PURE__ */ $runtime_lazy("traversableInterval", "Data.Interval", function () {
+    return {
+        traverse: function (dictApplicative) {
+            var Apply0 = dictApplicative.Apply0();
+            var Functor0 = (dictApplicative.Apply0()).Functor0();
+            return function (v) {
+                return function (v1) {
+                    if (v1 instanceof StartEnd) {
+                        return Control_Apply.apply(Apply0)(Data_Functor.map(Functor0)(StartEnd.create)(v(v1.value0)))(v(v1.value1));
                     };
-                    if (v3 instanceof DurationEnd) {
-                        return v1(v(v2)(v3.value0))(v3.value1);
+                    if (v1 instanceof DurationEnd) {
+                        return Data_Functor.mapFlipped(Functor0)(v(v1.value1))(DurationEnd.create(v1.value0));
                     };
-                    if (v3 instanceof StartDuration) {
-                        return v1(v(v2)(v3.value1))(v3.value0);
+                    if (v1 instanceof StartDuration) {
+                        return Data_Functor.mapFlipped(Functor0)(v(v1.value0))(function (v2) {
+                            return new StartDuration(v2, v1.value1);
+                        });
                     };
-                    if (v3 instanceof DurationOnly) {
-                        return v(v2)(v3.value0);
+                    if (v1 instanceof DurationOnly) {
+                        return Control_Applicative.pure(dictApplicative)(new DurationOnly(v1.value0));
                     };
-                    throw new Error("Failed pattern match at Data.Interval (line 89, column 1 - line 95, column 32): " + [ v.constructor.name, v1.constructor.name, v2.constructor.name, v3.constructor.name ]);
+                    throw new Error("Failed pattern match at Data.Interval (line 97, column 1 - line 102, column 29): " + [ v.constructor.name, v1.constructor.name ]);
                 };
             };
-        };
-    },
-    bifoldr: function (x) {
-        return Data_Bifoldable.bifoldrDefault(bifoldableInterval)(x);
-    },
-    bifoldMap: function (dictMonoid) {
-        return Data_Bifoldable.bifoldMapDefaultL(bifoldableInterval)(dictMonoid);
-    }
-};
-var bifoldableRecurringInterval = {
-    bifoldl: function (f) {
-        return function (g) {
-            return function (i) {
-                var $279 = Data_Bifoldable.bifoldl(bifoldableInterval)(f)(g)(i);
-                return function ($280) {
-                    return $279(interval($280));
+        },
+        sequence: function (dictApplicative) {
+            return Data_Traversable.sequenceDefault($lazy_traversableInterval(0))(dictApplicative);
+        },
+        Functor0: function () {
+            return functorInterval;
+        },
+        Foldable1: function () {
+            return foldableInterval;
+        }
+    };
+});
+var traversableInterval = /* #__PURE__ */ $lazy_traversableInterval(97);
+var $lazy_traversableRecurringInterval = /* #__PURE__ */ $runtime_lazy("traversableRecurringInterval", "Data.Interval", function () {
+    return {
+        traverse: function (dictApplicative) {
+            var Functor0 = (dictApplicative.Apply0()).Functor0();
+            return function (f) {
+                return function (i) {
+                    return over(Functor0)(Data_Traversable.traverse(traversableInterval)(dictApplicative)(f))(i);
                 };
             };
-        };
-    },
-    bifoldr: function (f) {
-        return function (g) {
-            return function (i) {
-                var $281 = Data_Bifoldable.bifoldr(bifoldableInterval)(f)(g)(i);
-                return function ($282) {
-                    return $281(interval($282));
-                };
-            };
-        };
-    },
-    bifoldMap: function (dictMonoid) {
-        return Data_Bifoldable.bifoldMapDefaultL(bifoldableRecurringInterval)(dictMonoid);
-    }
-};
-var bitraversableInterval = {
-    bitraverse: function (dictApplicative) {
-        var Apply0 = dictApplicative.Apply0();
-        var Functor0 = (dictApplicative.Apply0()).Functor0();
-        return function (v) {
+        },
+        sequence: function (dictApplicative) {
+            return Data_Traversable.sequenceDefault($lazy_traversableRecurringInterval(0))(dictApplicative);
+        },
+        Functor0: function () {
+            return functorRecurringInterval;
+        },
+        Foldable1: function () {
+            return foldableRecurringInterval;
+        }
+    };
+});
+var traversableRecurringInterval = /* #__PURE__ */ $lazy_traversableRecurringInterval(47);
+var $lazy_bifoldableInterval = /* #__PURE__ */ $runtime_lazy("bifoldableInterval", "Data.Interval", function () {
+    return {
+        bifoldl: function (v) {
             return function (v1) {
                 return function (v2) {
-                    if (v2 instanceof StartEnd) {
-                        return Control_Apply.apply(Apply0)(Data_Functor.map(Functor0)(StartEnd.create)(v1(v2.value0)))(v1(v2.value1));
+                    return function (v3) {
+                        if (v3 instanceof StartEnd) {
+                            return v1(v1(v2)(v3.value0))(v3.value1);
+                        };
+                        if (v3 instanceof DurationEnd) {
+                            return v1(v(v2)(v3.value0))(v3.value1);
+                        };
+                        if (v3 instanceof StartDuration) {
+                            return v1(v(v2)(v3.value1))(v3.value0);
+                        };
+                        if (v3 instanceof DurationOnly) {
+                            return v(v2)(v3.value0);
+                        };
+                        throw new Error("Failed pattern match at Data.Interval (line 89, column 1 - line 95, column 32): " + [ v.constructor.name, v1.constructor.name, v2.constructor.name, v3.constructor.name ]);
                     };
-                    if (v2 instanceof DurationEnd) {
-                        return Control_Apply.apply(Apply0)(Data_Functor.map(Functor0)(DurationEnd.create)(v(v2.value0)))(v1(v2.value1));
-                    };
-                    if (v2 instanceof StartDuration) {
-                        return Control_Apply.apply(Apply0)(Data_Functor.map(Functor0)(StartDuration.create)(v1(v2.value0)))(v(v2.value1));
-                    };
-                    if (v2 instanceof DurationOnly) {
-                        return Data_Functor.map(Functor0)(DurationOnly.create)(v(v2.value0));
-                    };
-                    throw new Error("Failed pattern match at Data.Interval (line 104, column 1 - line 109, column 33): " + [ v.constructor.name, v1.constructor.name, v2.constructor.name ]);
                 };
             };
-        };
-    },
-    bisequence: function (dictApplicative) {
-        return Data_Bitraversable.bisequenceDefault(bitraversableInterval)(dictApplicative);
-    },
-    Bifunctor0: function () {
-        return bifunctorInterval;
-    },
-    Bifoldable1: function () {
-        return bifoldableInterval;
-    }
-};
-var bitraversableRecurringInterval = {
-    bitraverse: function (dictApplicative) {
-        var Functor0 = (dictApplicative.Apply0()).Functor0();
-        return function (l) {
-            return function (r) {
+        },
+        bifoldr: function (x) {
+            return Data_Bifoldable.bifoldrDefault($lazy_bifoldableInterval(0))(x);
+        },
+        bifoldMap: function (dictMonoid) {
+            return Data_Bifoldable.bifoldMapDefaultL($lazy_bifoldableInterval(0))(dictMonoid);
+        }
+    };
+});
+var bifoldableInterval = /* #__PURE__ */ $lazy_bifoldableInterval(89);
+var $lazy_bifoldableRecurringInterval = /* #__PURE__ */ $runtime_lazy("bifoldableRecurringInterval", "Data.Interval", function () {
+    return {
+        bifoldl: function (f) {
+            return function (g) {
                 return function (i) {
-                    return over(Functor0)(Data_Bitraversable.bitraverse(bitraversableInterval)(dictApplicative)(l)(r))(i);
+                    var $279 = Data_Bifoldable.bifoldl(bifoldableInterval)(f)(g)(i);
+                    return function ($280) {
+                        return $279(interval($280));
+                    };
                 };
             };
-        };
-    },
-    bisequence: function (dictApplicative) {
-        return Data_Bitraversable.bisequenceDefault(bitraversableRecurringInterval)(dictApplicative);
-    },
-    Bifunctor0: function () {
-        return bifunctorRecurringInterval;
-    },
-    Bifoldable1: function () {
-        return bifoldableRecurringInterval;
-    }
-};
+        },
+        bifoldr: function (f) {
+            return function (g) {
+                return function (i) {
+                    var $281 = Data_Bifoldable.bifoldr(bifoldableInterval)(f)(g)(i);
+                    return function ($282) {
+                        return $281(interval($282));
+                    };
+                };
+            };
+        },
+        bifoldMap: function (dictMonoid) {
+            return Data_Bifoldable.bifoldMapDefaultL($lazy_bifoldableRecurringInterval(0))(dictMonoid);
+        }
+    };
+});
+var bifoldableRecurringInterval = /* #__PURE__ */ $lazy_bifoldableRecurringInterval(42);
+var $lazy_bitraversableInterval = /* #__PURE__ */ $runtime_lazy("bitraversableInterval", "Data.Interval", function () {
+    return {
+        bitraverse: function (dictApplicative) {
+            var Apply0 = dictApplicative.Apply0();
+            var Functor0 = (dictApplicative.Apply0()).Functor0();
+            return function (v) {
+                return function (v1) {
+                    return function (v2) {
+                        if (v2 instanceof StartEnd) {
+                            return Control_Apply.apply(Apply0)(Data_Functor.map(Functor0)(StartEnd.create)(v1(v2.value0)))(v1(v2.value1));
+                        };
+                        if (v2 instanceof DurationEnd) {
+                            return Control_Apply.apply(Apply0)(Data_Functor.map(Functor0)(DurationEnd.create)(v(v2.value0)))(v1(v2.value1));
+                        };
+                        if (v2 instanceof StartDuration) {
+                            return Control_Apply.apply(Apply0)(Data_Functor.map(Functor0)(StartDuration.create)(v1(v2.value0)))(v(v2.value1));
+                        };
+                        if (v2 instanceof DurationOnly) {
+                            return Data_Functor.map(Functor0)(DurationOnly.create)(v(v2.value0));
+                        };
+                        throw new Error("Failed pattern match at Data.Interval (line 104, column 1 - line 109, column 33): " + [ v.constructor.name, v1.constructor.name, v2.constructor.name ]);
+                    };
+                };
+            };
+        },
+        bisequence: function (dictApplicative) {
+            return Data_Bitraversable.bisequenceDefault($lazy_bitraversableInterval(0))(dictApplicative);
+        },
+        Bifunctor0: function () {
+            return bifunctorInterval;
+        },
+        Bifoldable1: function () {
+            return bifoldableInterval;
+        }
+    };
+});
+var bitraversableInterval = /* #__PURE__ */ $lazy_bitraversableInterval(104);
+var $lazy_bitraversableRecurringInterval = /* #__PURE__ */ $runtime_lazy("bitraversableRecurringInterval", "Data.Interval", function () {
+    return {
+        bitraverse: function (dictApplicative) {
+            var Functor0 = (dictApplicative.Apply0()).Functor0();
+            return function (l) {
+                return function (r) {
+                    return function (i) {
+                        return over(Functor0)(Data_Bitraversable.bitraverse(bitraversableInterval)(dictApplicative)(l)(r))(i);
+                    };
+                };
+            };
+        },
+        bisequence: function (dictApplicative) {
+            return Data_Bitraversable.bisequenceDefault($lazy_bitraversableRecurringInterval(0))(dictApplicative);
+        },
+        Bifunctor0: function () {
+            return bifunctorRecurringInterval;
+        },
+        Bifoldable1: function () {
+            return bifoldableRecurringInterval;
+        }
+    };
+});
+var bitraversableRecurringInterval = /* #__PURE__ */ $lazy_bitraversableRecurringInterval(51);
 export {
     StartEnd,
     DurationEnd,

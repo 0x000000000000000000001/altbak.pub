@@ -515,32 +515,34 @@ var boundedMonth = /* #__PURE__ */ (function () {
         }
     };
 })();
-var boundedEnumYear = {
-    cardinality: 547580,
-    toEnum: function (n) {
-        if (n >= (-271820 | 0) && n <= 275759) {
-            return new Data_Maybe.Just(n);
-        };
-        if (Data_Boolean.otherwise) {
-            return Data_Maybe.Nothing.value;
-        };
-        throw new Error("Failed pattern match at Data.Date.Component (line 35, column 1 - line 40, column 24): " + [ n.constructor.name ]);
-    },
-    fromEnum: function (v) {
-        return v;
-    },
-    Bounded0: function () {
-        return boundedYear;
-    },
-    Enum1: function () {
-        return $lazy_enumYear(0);
-    }
-};
+var $lazy_boundedEnumYear = /* #__PURE__ */ $runtime_lazy("boundedEnumYear", "Data.Date.Component", function () {
+    return {
+        cardinality: 547580,
+        toEnum: function (n) {
+            if (n >= (-271820 | 0) && n <= 275759) {
+                return new Data_Maybe.Just(n);
+            };
+            if (Data_Boolean.otherwise) {
+                return Data_Maybe.Nothing.value;
+            };
+            throw new Error("Failed pattern match at Data.Date.Component (line 35, column 1 - line 40, column 24): " + [ n.constructor.name ]);
+        },
+        fromEnum: function (v) {
+            return v;
+        },
+        Bounded0: function () {
+            return boundedYear;
+        },
+        Enum1: function () {
+            return $lazy_enumYear(0);
+        }
+    };
+});
 var $lazy_enumYear = /* #__PURE__ */ $runtime_lazy("enumYear", "Data.Date.Component", function () {
     return {
         succ: (function () {
-            var $46 = Data_Enum.toEnum(boundedEnumYear);
-            var $47 = Data_Enum.fromEnum(boundedEnumYear);
+            var $46 = Data_Enum.toEnum($lazy_boundedEnumYear(0));
+            var $47 = Data_Enum.fromEnum($lazy_boundedEnumYear(0));
             return function ($48) {
                 return $46((function (v) {
                     return v + 1 | 0;
@@ -548,8 +550,8 @@ var $lazy_enumYear = /* #__PURE__ */ $runtime_lazy("enumYear", "Data.Date.Compon
             };
         })(),
         pred: (function () {
-            var $49 = Data_Enum.toEnum(boundedEnumYear);
-            var $50 = Data_Enum.fromEnum(boundedEnumYear);
+            var $49 = Data_Enum.toEnum($lazy_boundedEnumYear(0));
+            var $50 = Data_Enum.fromEnum($lazy_boundedEnumYear(0));
             return function ($51) {
                 return $49((function (v) {
                     return v - 1 | 0;
@@ -561,69 +563,72 @@ var $lazy_enumYear = /* #__PURE__ */ $runtime_lazy("enumYear", "Data.Date.Compon
         }
     };
 });
+var boundedEnumYear = /* #__PURE__ */ $lazy_boundedEnumYear(35);
 var enumYear = /* #__PURE__ */ $lazy_enumYear(31);
-var boundedEnumWeekday = {
-    cardinality: 7,
-    toEnum: function (v) {
-        if (v === 1) {
-            return new Data_Maybe.Just(Monday.value);
-        };
-        if (v === 2) {
-            return new Data_Maybe.Just(Tuesday.value);
-        };
-        if (v === 3) {
-            return new Data_Maybe.Just(Wednesday.value);
-        };
-        if (v === 4) {
-            return new Data_Maybe.Just(Thursday.value);
-        };
-        if (v === 5) {
-            return new Data_Maybe.Just(Friday.value);
-        };
-        if (v === 6) {
-            return new Data_Maybe.Just(Saturday.value);
-        };
-        if (v === 7) {
-            return new Data_Maybe.Just(Sunday.value);
-        };
-        return Data_Maybe.Nothing.value;
-    },
-    fromEnum: function (v) {
-        if (v instanceof Monday) {
-            return 1;
-        };
-        if (v instanceof Tuesday) {
-            return 2;
-        };
-        if (v instanceof Wednesday) {
-            return 3;
-        };
-        if (v instanceof Thursday) {
-            return 4;
-        };
-        if (v instanceof Friday) {
-            return 5;
-        };
-        if (v instanceof Saturday) {
-            return 6;
-        };
-        if (v instanceof Sunday) {
-            return 7;
-        };
-        throw new Error("Failed pattern match at Data.Date.Component (line 175, column 14 - line 182, column 16): " + [ v.constructor.name ]);
-    },
-    Bounded0: function () {
-        return boundedWeekday;
-    },
-    Enum1: function () {
-        return $lazy_enumWeekday(0);
-    }
-};
+var $lazy_boundedEnumWeekday = /* #__PURE__ */ $runtime_lazy("boundedEnumWeekday", "Data.Date.Component", function () {
+    return {
+        cardinality: 7,
+        toEnum: function (v) {
+            if (v === 1) {
+                return new Data_Maybe.Just(Monday.value);
+            };
+            if (v === 2) {
+                return new Data_Maybe.Just(Tuesday.value);
+            };
+            if (v === 3) {
+                return new Data_Maybe.Just(Wednesday.value);
+            };
+            if (v === 4) {
+                return new Data_Maybe.Just(Thursday.value);
+            };
+            if (v === 5) {
+                return new Data_Maybe.Just(Friday.value);
+            };
+            if (v === 6) {
+                return new Data_Maybe.Just(Saturday.value);
+            };
+            if (v === 7) {
+                return new Data_Maybe.Just(Sunday.value);
+            };
+            return Data_Maybe.Nothing.value;
+        },
+        fromEnum: function (v) {
+            if (v instanceof Monday) {
+                return 1;
+            };
+            if (v instanceof Tuesday) {
+                return 2;
+            };
+            if (v instanceof Wednesday) {
+                return 3;
+            };
+            if (v instanceof Thursday) {
+                return 4;
+            };
+            if (v instanceof Friday) {
+                return 5;
+            };
+            if (v instanceof Saturday) {
+                return 6;
+            };
+            if (v instanceof Sunday) {
+                return 7;
+            };
+            throw new Error("Failed pattern match at Data.Date.Component (line 175, column 14 - line 182, column 16): " + [ v.constructor.name ]);
+        },
+        Bounded0: function () {
+            return boundedWeekday;
+        },
+        Enum1: function () {
+            return $lazy_enumWeekday(0);
+        }
+    };
+});
 var $lazy_enumWeekday = /* #__PURE__ */ $runtime_lazy("enumWeekday", "Data.Date.Component", function () {
     return {
         succ: (function () {
-            var $52 = Data_Enum.toEnum(boundedEnumWeekday);
-            var $53 = Data_Enum.fromEnum(boundedEnumWeekday);
+            var $52 = Data_Enum.toEnum($lazy_boundedEnumWeekday(0));
+            var $53 = Data_Enum.fromEnum($lazy_boundedEnumWeekday(0));
             return function ($54) {
                 return $52((function (v) {
                     return v + 1 | 0;
@@ -631,8 +636,8 @@ var $lazy_enumWeekday = /* #__PURE__ */ $runtime_lazy("enumWeekday", "Data.Date.
             };
         })(),
         pred: (function () {
-            var $55 = Data_Enum.toEnum(boundedEnumWeekday);
-            var $56 = Data_Enum.fromEnum(boundedEnumWeekday);
+            var $55 = Data_Enum.toEnum($lazy_boundedEnumWeekday(0));
+            var $56 = Data_Enum.fromEnum($lazy_boundedEnumWeekday(0));
             return function ($57) {
                 return $55((function (v) {
                     return v - 1 | 0;
@@ -644,99 +649,102 @@ var $lazy_enumWeekday = /* #__PURE__ */ $runtime_lazy("enumWeekday", "Data.Date.
         }
     };
 });
+var boundedEnumWeekday = /* #__PURE__ */ $lazy_boundedEnumWeekday(164);
 var enumWeekday = /* #__PURE__ */ $lazy_enumWeekday(160);
-var boundedEnumMonth = {
-    cardinality: 12,
-    toEnum: function (v) {
-        if (v === 1) {
-            return new Data_Maybe.Just(January.value);
-        };
-        if (v === 2) {
-            return new Data_Maybe.Just(February.value);
-        };
-        if (v === 3) {
-            return new Data_Maybe.Just(March.value);
-        };
-        if (v === 4) {
-            return new Data_Maybe.Just(April.value);
-        };
-        if (v === 5) {
-            return new Data_Maybe.Just(May.value);
-        };
-        if (v === 6) {
-            return new Data_Maybe.Just(June.value);
-        };
-        if (v === 7) {
-            return new Data_Maybe.Just(July.value);
-        };
-        if (v === 8) {
-            return new Data_Maybe.Just(August.value);
-        };
-        if (v === 9) {
-            return new Data_Maybe.Just(September.value);
-        };
-        if (v === 10) {
-            return new Data_Maybe.Just(October.value);
-        };
-        if (v === 11) {
-            return new Data_Maybe.Just(November.value);
-        };
-        if (v === 12) {
-            return new Data_Maybe.Just(December.value);
-        };
-        return Data_Maybe.Nothing.value;
-    },
-    fromEnum: function (v) {
-        if (v instanceof January) {
-            return 1;
-        };
-        if (v instanceof February) {
-            return 2;
-        };
-        if (v instanceof March) {
-            return 3;
-        };
-        if (v instanceof April) {
-            return 4;
-        };
-        if (v instanceof May) {
-            return 5;
-        };
-        if (v instanceof June) {
-            return 6;
-        };
-        if (v instanceof July) {
-            return 7;
-        };
-        if (v instanceof August) {
-            return 8;
-        };
-        if (v instanceof September) {
-            return 9;
-        };
-        if (v instanceof October) {
-            return 10;
-        };
-        if (v instanceof November) {
-            return 11;
-        };
-        if (v instanceof December) {
-            return 12;
-        };
-        throw new Error("Failed pattern match at Data.Date.Component (line 87, column 14 - line 99, column 19): " + [ v.constructor.name ]);
-    },
-    Bounded0: function () {
-        return boundedMonth;
-    },
-    Enum1: function () {
-        return $lazy_enumMonth(0);
-    }
-};
+var $lazy_boundedEnumMonth = /* #__PURE__ */ $runtime_lazy("boundedEnumMonth", "Data.Date.Component", function () {
+    return {
+        cardinality: 12,
+        toEnum: function (v) {
+            if (v === 1) {
+                return new Data_Maybe.Just(January.value);
+            };
+            if (v === 2) {
+                return new Data_Maybe.Just(February.value);
+            };
+            if (v === 3) {
+                return new Data_Maybe.Just(March.value);
+            };
+            if (v === 4) {
+                return new Data_Maybe.Just(April.value);
+            };
+            if (v === 5) {
+                return new Data_Maybe.Just(May.value);
+            };
+            if (v === 6) {
+                return new Data_Maybe.Just(June.value);
+            };
+            if (v === 7) {
+                return new Data_Maybe.Just(July.value);
+            };
+            if (v === 8) {
+                return new Data_Maybe.Just(August.value);
+            };
+            if (v === 9) {
+                return new Data_Maybe.Just(September.value);
+            };
+            if (v === 10) {
+                return new Data_Maybe.Just(October.value);
+            };
+            if (v === 11) {
+                return new Data_Maybe.Just(November.value);
+            };
+            if (v === 12) {
+                return new Data_Maybe.Just(December.value);
+            };
+            return Data_Maybe.Nothing.value;
+        },
+        fromEnum: function (v) {
+            if (v instanceof January) {
+                return 1;
+            };
+            if (v instanceof February) {
+                return 2;
+            };
+            if (v instanceof March) {
+                return 3;
+            };
+            if (v instanceof April) {
+                return 4;
+            };
+            if (v instanceof May) {
+                return 5;
+            };
+            if (v instanceof June) {
+                return 6;
+            };
+            if (v instanceof July) {
+                return 7;
+            };
+            if (v instanceof August) {
+                return 8;
+            };
+            if (v instanceof September) {
+                return 9;
+            };
+            if (v instanceof October) {
+                return 10;
+            };
+            if (v instanceof November) {
+                return 11;
+            };
+            if (v instanceof December) {
+                return 12;
+            };
+            throw new Error("Failed pattern match at Data.Date.Component (line 87, column 14 - line 99, column 19): " + [ v.constructor.name ]);
+        },
+        Bounded0: function () {
+            return boundedMonth;
+        },
+        Enum1: function () {
+            return $lazy_enumMonth(0);
+        }
+    };
+});
 var $lazy_enumMonth = /* #__PURE__ */ $runtime_lazy("enumMonth", "Data.Date.Component", function () {
     return {
         succ: (function () {
-            var $58 = Data_Enum.toEnum(boundedEnumMonth);
-            var $59 = Data_Enum.fromEnum(boundedEnumMonth);
+            var $58 = Data_Enum.toEnum($lazy_boundedEnumMonth(0));
+            var $59 = Data_Enum.fromEnum($lazy_boundedEnumMonth(0));
             return function ($60) {
                 return $58((function (v) {
                     return v + 1 | 0;
@@ -744,8 +752,8 @@ var $lazy_enumMonth = /* #__PURE__ */ $runtime_lazy("enumMonth", "Data.Date.Comp
             };
         })(),
         pred: (function () {
-            var $61 = Data_Enum.toEnum(boundedEnumMonth);
-            var $62 = Data_Enum.fromEnum(boundedEnumMonth);
+            var $61 = Data_Enum.toEnum($lazy_boundedEnumMonth(0));
+            var $62 = Data_Enum.fromEnum($lazy_boundedEnumMonth(0));
             return function ($63) {
                 return $61((function (v) {
                     return v - 1 | 0;
@@ -757,6 +765,7 @@ var $lazy_enumMonth = /* #__PURE__ */ $runtime_lazy("enumMonth", "Data.Date.Comp
         }
     };
 });
+var boundedEnumMonth = /* #__PURE__ */ $lazy_boundedEnumMonth(71);
 var enumMonth = /* #__PURE__ */ $lazy_enumMonth(67);
 var boundedDay = {
     bottom: 1,
@@ -765,32 +774,34 @@ var boundedDay = {
         return ordDay;
     }
 };
-var boundedEnumDay = {
-    cardinality: 31,
-    toEnum: function (n) {
-        if (n >= 1 && n <= 31) {
-            return new Data_Maybe.Just(n);
-        };
-        if (Data_Boolean.otherwise) {
-            return Data_Maybe.Nothing.value;
-        };
-        throw new Error("Failed pattern match at Data.Date.Component (line 133, column 1 - line 138, column 23): " + [ n.constructor.name ]);
-    },
-    fromEnum: function (v) {
-        return v;
-    },
-    Bounded0: function () {
-        return boundedDay;
-    },
-    Enum1: function () {
-        return $lazy_enumDay(0);
-    }
-};
+var $lazy_boundedEnumDay = /* #__PURE__ */ $runtime_lazy("boundedEnumDay", "Data.Date.Component", function () {
+    return {
+        cardinality: 31,
+        toEnum: function (n) {
+            if (n >= 1 && n <= 31) {
+                return new Data_Maybe.Just(n);
+            };
+            if (Data_Boolean.otherwise) {
+                return Data_Maybe.Nothing.value;
+            };
+            throw new Error("Failed pattern match at Data.Date.Component (line 133, column 1 - line 138, column 23): " + [ n.constructor.name ]);
+        },
+        fromEnum: function (v) {
+            return v;
+        },
+        Bounded0: function () {
+            return boundedDay;
+        },
+        Enum1: function () {
+            return $lazy_enumDay(0);
+        }
+    };
+});
 var $lazy_enumDay = /* #__PURE__ */ $runtime_lazy("enumDay", "Data.Date.Component", function () {
     return {
         succ: (function () {
-            var $64 = Data_Enum.toEnum(boundedEnumDay);
-            var $65 = Data_Enum.fromEnum(boundedEnumDay);
+            var $64 = Data_Enum.toEnum($lazy_boundedEnumDay(0));
+            var $65 = Data_Enum.fromEnum($lazy_boundedEnumDay(0));
             return function ($66) {
                 return $64((function (v) {
                     return v + 1 | 0;
@@ -798,8 +809,8 @@ var $lazy_enumDay = /* #__PURE__ */ $runtime_lazy("enumDay", "Data.Date.Componen
             };
         })(),
         pred: (function () {
-            var $67 = Data_Enum.toEnum(boundedEnumDay);
-            var $68 = Data_Enum.fromEnum(boundedEnumDay);
+            var $67 = Data_Enum.toEnum($lazy_boundedEnumDay(0));
+            var $68 = Data_Enum.fromEnum($lazy_boundedEnumDay(0));
             return function ($69) {
                 return $67((function (v) {
                     return v - 1 | 0;
@@ -811,6 +822,7 @@ var $lazy_enumDay = /* #__PURE__ */ $runtime_lazy("enumDay", "Data.Date.Componen
         }
     };
 });
+var boundedEnumDay = /* #__PURE__ */ $lazy_boundedEnumDay(133);
 var enumDay = /* #__PURE__ */ $lazy_enumDay(129);
 export {
     January,

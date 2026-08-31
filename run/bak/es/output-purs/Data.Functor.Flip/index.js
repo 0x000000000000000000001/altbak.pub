@@ -4,6 +4,7 @@ import * as Control_Biapply from "../Control.Biapply/index.js";
 import * as Control_Category from "../Control.Category/index.js";
 import * as Control_Semigroupoid from "../Control.Semigroupoid/index.js";
 import * as Data_Bifunctor from "../Data.Bifunctor/index.js";
+import * as Data_Function from "../Data.Function/index.js";
 import * as Data_Profunctor from "../Data.Profunctor/index.js";
 import * as Data_Show from "../Data.Show/index.js";
 var Flip = function (x) {
@@ -20,7 +21,7 @@ var semigroupoidFlip = function (dictSemigroupoid) {
     return {
         compose: function (v) {
             return function (v1) {
-                return Control_Semigroupoid.compose(dictSemigroupoid)(v1)(v);
+                return Data_Function.apply(Flip)(Control_Semigroupoid.compose(dictSemigroupoid)(v1)(v));
             };
         }
     };

@@ -4,6 +4,7 @@ import * as Control_Applicative from "../Control.Applicative/index.js";
 import * as Control_Apply from "../Control.Apply/index.js";
 import * as Control_Plus from "../Control.Plus/index.js";
 import * as Data_Eq from "../Data.Eq/index.js";
+import * as Data_Function from "../Data.Function/index.js";
 import * as Data_Functor from "../Data.Functor/index.js";
 import * as Data_Functor_App from "../Data.Functor.App/index.js";
 import * as Data_Ord from "../Data.Ord/index.js";
@@ -28,7 +29,7 @@ var functorCompose = function (dictFunctor) {
         return {
             map: function (f) {
                 return function (v) {
-                    return Data_Functor.map(dictFunctor)(Data_Functor.map(dictFunctor1)(f))(v);
+                    return Data_Function.apply(Compose)(Data_Functor.map(dictFunctor)(Data_Functor.map(dictFunctor1)(f))(v));
                 };
             }
         };
@@ -115,7 +116,7 @@ var applyCompose = function (dictApply) {
         return {
             apply: function (v) {
                 return function (v1) {
-                    return Control_Apply.apply(dictApply)(Data_Functor.map(Functor0)(apply)(v))(v1);
+                    return Data_Function.apply(Compose)(Control_Apply.apply(dictApply)(Data_Functor.map(Functor0)(apply)(v))(v1));
                 };
             },
             Functor0: function () {
@@ -149,7 +150,7 @@ var altCompose = function (dictAlt) {
         return {
             alt: function (v) {
                 return function (v1) {
-                    return Control_Alt.alt(dictAlt)(v)(v1);
+                    return Data_Function.apply(Compose)(Control_Alt.alt(dictAlt)(v)(v1));
                 };
             },
             Functor0: function () {

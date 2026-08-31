@@ -3,6 +3,7 @@ import * as Control_Applicative from "../Control.Applicative/index.js";
 import * as Control_Apply from "../Control.Apply/index.js";
 import * as Control_Bind from "../Control.Bind/index.js";
 import * as Data_Either from "../Data.Either/index.js";
+import * as Data_Function from "../Data.Function/index.js";
 import * as Data_Functor from "../Data.Functor/index.js";
 import * as Data_Newtype from "../Data.Newtype/index.js";
 import * as Data_Show from "../Data.Show/index.js";
@@ -56,10 +57,10 @@ var choiceJoker = function (dictFunctor) {
     var profunctorJoker1 = profunctorJoker(dictFunctor);
     return {
         left: function (v) {
-            return Data_Functor.map(dictFunctor)(Data_Either.Left.create)(v);
+            return Data_Function.apply(Joker)(Data_Functor.map(dictFunctor)(Data_Either.Left.create)(v));
         },
         right: function (v) {
-            return Data_Functor.map(dictFunctor)(Data_Either.Right.create)(v);
+            return Data_Function.apply(Joker)(Data_Functor.map(dictFunctor)(Data_Either.Right.create)(v));
         },
         Profunctor0: function () {
             return profunctorJoker1;
@@ -108,7 +109,7 @@ var applyJoker = function (dictApply) {
     return {
         apply: function (v) {
             return function (v1) {
-                return Control_Apply.apply(dictApply)(v)(v1);
+                return Data_Function.apply(Joker)(Control_Apply.apply(dictApply)(v)(v1));
             };
         },
         Functor0: function () {
@@ -121,12 +122,12 @@ var bindJoker = function (dictBind) {
     return {
         bind: function (v) {
             return function (amb) {
-                return Control_Bind.bind(dictBind)(v)((function () {
+                return Data_Function.apply(Joker)(Control_Bind.bind(dictBind)(v)((function () {
                     var $63 = Data_Newtype.un()(Joker);
                     return function ($64) {
                         return $63(amb($64));
                     };
-                })());
+                })()));
             };
         },
         Apply0: function () {

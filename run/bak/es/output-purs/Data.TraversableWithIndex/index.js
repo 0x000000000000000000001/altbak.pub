@@ -16,6 +16,18 @@ import * as Data_Traversable_Accum from "../Data.Traversable.Accum/index.js";
 import * as Data_Traversable_Accum_Internal from "../Data.Traversable.Accum.Internal/index.js";
 import * as Data_Tuple from "../Data.Tuple/index.js";
 import * as Data_Unit from "../Data.Unit/index.js";
+var $runtime_lazy = function (name, moduleName, init) {
+    var state = 0;
+    var val;
+    return function (lineNumber) {
+        if (state === 2) return val;
+        if (state === 1) throw new ReferenceError(name + " was needed before it finished initializing (module " + moduleName + ", line " + lineNumber + ")", moduleName, lineNumber);
+        state = 1;
+        val = init();
+        state = 2;
+        return val;
+    };
+};
 var traverse = /* #__PURE__ */ Data_Traversable.traverse(Data_Traversable.traversableMultiplicative);
 var traverse1 = /* #__PURE__ */ Data_Traversable.traverse(Data_Traversable.traversableMaybe);
 var traverse2 = /* #__PURE__ */ Data_Traversable.traverse(Data_Traversable.traversableLast);
@@ -103,7 +115,7 @@ var traversableWithIndexMultiplicative = {
     traverseWithIndex: function (dictApplicative) {
         var traverse8 = traverse(dictApplicative);
         return function (f) {
-            return traverse8(f(Data_Unit.unit));
+            return Data_Function.apply(traverse8)(f(Data_Unit.unit));
         };
     },
     FunctorWithIndex0: function () {
@@ -120,7 +132,7 @@ var traversableWithIndexMaybe = {
     traverseWithIndex: function (dictApplicative) {
         var traverse8 = traverse1(dictApplicative);
         return function (f) {
-            return traverse8(f(Data_Unit.unit));
+            return Data_Function.apply(traverse8)(f(Data_Unit.unit));
         };
     },
     FunctorWithIndex0: function () {
@@ -137,7 +149,7 @@ var traversableWithIndexLast = {
     traverseWithIndex: function (dictApplicative) {
         var traverse8 = traverse2(dictApplicative);
         return function (f) {
-            return traverse8(f(Data_Unit.unit));
+            return Data_Function.apply(traverse8)(f(Data_Unit.unit));
         };
     },
     FunctorWithIndex0: function () {
@@ -173,7 +185,7 @@ var traversableWithIndexFirst = {
     traverseWithIndex: function (dictApplicative) {
         var traverse8 = traverse3(dictApplicative);
         return function (f) {
-            return traverse8(f(Data_Unit.unit));
+            return Data_Function.apply(traverse8)(f(Data_Unit.unit));
         };
     },
     FunctorWithIndex0: function () {
@@ -215,7 +227,7 @@ var traversableWithIndexDual = {
     traverseWithIndex: function (dictApplicative) {
         var traverse8 = traverse4(dictApplicative);
         return function (f) {
-            return traverse8(f(Data_Unit.unit));
+            return Data_Function.apply(traverse8)(f(Data_Unit.unit));
         };
     },
     FunctorWithIndex0: function () {
@@ -232,7 +244,7 @@ var traversableWithIndexDisj = {
     traverseWithIndex: function (dictApplicative) {
         var traverse8 = traverse5(dictApplicative);
         return function (f) {
-            return traverse8(f(Data_Unit.unit));
+            return Data_Function.apply(traverse8)(f(Data_Unit.unit));
         };
     },
     FunctorWithIndex0: function () {
@@ -314,7 +326,7 @@ var traversableWithIndexConj = {
     traverseWithIndex: function (dictApplicative) {
         var traverse8 = traverse6(dictApplicative);
         return function (f) {
-            return traverse8(f(Data_Unit.unit));
+            return Data_Function.apply(traverse8)(f(Data_Unit.unit));
         };
     },
     FunctorWithIndex0: function () {
@@ -342,7 +354,7 @@ var traversableWithIndexCompose = function (dictTraversableWithIndex) {
                 var traverseWithIndex2 = traverseWithIndex1(dictApplicative);
                 return function (f) {
                     return function (v) {
-                        return Data_Functor.map(Functor0)(Data_Functor_Compose.Compose)(traverseWithIndex(dictTraversableWithIndex)(dictApplicative)((function () {
+                        return Data_Function.apply(Data_Functor.map(Functor0)(Data_Functor_Compose.Compose))(traverseWithIndex(dictTraversableWithIndex)(dictApplicative)((function () {
                             var $157 = Data_Tuple.curry(f);
                             return function ($158) {
                                 return traverseWithIndex2($157($158));
@@ -363,20 +375,23 @@ var traversableWithIndexCompose = function (dictTraversableWithIndex) {
         };
     };
 };
-var traversableWithIndexArray = {
-    traverseWithIndex: function (dictApplicative) {
-        return traverseWithIndexDefault(traversableWithIndexArray)(dictApplicative);
-    },
-    FunctorWithIndex0: function () {
-        return Data_FunctorWithIndex.functorWithIndexArray;
-    },
-    FoldableWithIndex1: function () {
-        return Data_FoldableWithIndex.foldableWithIndexArray;
-    },
-    Traversable2: function () {
-        return Data_Traversable.traversableArray;
-    }
-};
+var $lazy_traversableWithIndexArray = /* #__PURE__ */ $runtime_lazy("traversableWithIndexArray", "Data.TraversableWithIndex", function () {
+    return {
+        traverseWithIndex: function (dictApplicative) {
+            return traverseWithIndexDefault($lazy_traversableWithIndexArray(0))(dictApplicative);
+        },
+        FunctorWithIndex0: function () {
+            return Data_FunctorWithIndex.functorWithIndexArray;
+        },
+        FoldableWithIndex1: function () {
+            return Data_FoldableWithIndex.foldableWithIndexArray;
+        },
+        Traversable2: function () {
+            return Data_Traversable.traversableArray;
+        }
+    };
+});
+var traversableWithIndexArray = /* #__PURE__ */ $lazy_traversableWithIndexArray(68);
 var traversableWithIndexApp = function (dictTraversableWithIndex) {
     var functorWithIndexApp = Data_FunctorWithIndex.functorWithIndexApp(dictTraversableWithIndex.FunctorWithIndex0());
     var foldableWithIndexApp = Data_FoldableWithIndex.foldableWithIndexApp(dictTraversableWithIndex.FoldableWithIndex1());
@@ -405,7 +420,7 @@ var traversableWithIndexAdditive = {
     traverseWithIndex: function (dictApplicative) {
         var traverse8 = traverse7(dictApplicative);
         return function (f) {
-            return traverse8(f(Data_Unit.unit));
+            return Data_Function.apply(traverse8)(f(Data_Unit.unit));
         };
     },
     FunctorWithIndex0: function () {

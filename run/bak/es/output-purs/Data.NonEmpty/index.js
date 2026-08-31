@@ -6,6 +6,7 @@ import * as Control_Plus from "../Control.Plus/index.js";
 import * as Data_Eq from "../Data.Eq/index.js";
 import * as Data_Foldable from "../Data.Foldable/index.js";
 import * as Data_FoldableWithIndex from "../Data.FoldableWithIndex/index.js";
+import * as Data_Function from "../Data.Function/index.js";
 import * as Data_Functor from "../Data.Functor/index.js";
 import * as Data_FunctorWithIndex from "../Data.FunctorWithIndex/index.js";
 import * as Data_Maybe from "../Data.Maybe/index.js";
@@ -34,7 +35,7 @@ var unfoldable1NonEmpty = function (dictUnfoldable) {
     return {
         unfoldr1: function (f) {
             return function (b) {
-                return Data_Tuple.uncurry(NonEmpty.create)(Data_Functor.map(Data_Tuple.functorTuple)(Data_Unfoldable.unfoldr(dictUnfoldable)(Data_Functor.map(Data_Maybe.functorMaybe)(f)))(f(b)));
+                return Data_Function.apply(Data_Tuple.uncurry(NonEmpty.create))(Data_Functor.map(Data_Tuple.functorTuple)(Data_Unfoldable.unfoldr(dictUnfoldable)(Data_Functor.map(Data_Maybe.functorMaybe)(f)))(f(b)));
             };
         }
     };
@@ -240,7 +241,7 @@ var foldable1NonEmpty = function (dictFoldable) {
         },
         foldr1: function (f) {
             return function (v) {
-                return Data_Maybe.maybe(v.value0)(f(v.value0))(Data_Foldable.foldr(dictFoldable)(function (a1) {
+                return Data_Function.apply(Data_Maybe.maybe(v.value0)(f(v.value0)))(Data_Foldable.foldr(dictFoldable)(function (a1) {
                     var $208 = Data_Maybe.maybe(a1)(f(a1));
                     return function ($209) {
                         return Data_Maybe.Just.create($208($209));

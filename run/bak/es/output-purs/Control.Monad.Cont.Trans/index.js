@@ -55,7 +55,7 @@ var functorContT = function (dictFunctor) {
             return function (v) {
                 return function (k) {
                     return v(function (a) {
-                        return k(f(a));
+                        return Data_Function.apply(k)(f(a));
                     });
                 };
             };

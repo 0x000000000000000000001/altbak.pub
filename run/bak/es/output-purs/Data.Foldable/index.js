@@ -24,6 +24,18 @@ import * as Data_Ordering from "../Data.Ordering/index.js";
 import * as Data_Semigroup from "../Data.Semigroup/index.js";
 import * as Data_Semiring from "../Data.Semiring/index.js";
 import * as Data_Unit from "../Data.Unit/index.js";
+var $runtime_lazy = function (name, moduleName, init) {
+    var state = 0;
+    var val;
+    return function (lineNumber) {
+        if (state === 2) return val;
+        if (state === 1) throw new ReferenceError(name + " was needed before it finished initializing (module " + moduleName + ", line " + lineNumber + ")", moduleName, lineNumber);
+        state = 1;
+        val = init();
+        state = 2;
+        return val;
+    };
+};
 var identity = /* #__PURE__ */ Control_Category.identity(Control_Category.categoryFn);
 var monoidDual = /* #__PURE__ */ Data_Monoid_Dual.monoidDual(/* #__PURE__ */ Data_Monoid_Endo.monoidEndo(Control_Category.categoryFn));
 var monoidEndo = /* #__PURE__ */ Data_Monoid_Endo.monoidEndo(Control_Category.categoryFn);
@@ -528,13 +540,16 @@ var foldMapDefaultR = function (dictFoldable) {
         };
     };
 };
-var foldableArray = {
-    foldr: $foreign.foldrArray,
-    foldl: $foreign.foldlArray,
-    foldMap: function (dictMonoid) {
-        return foldMapDefaultR(foldableArray)(dictMonoid);
-    }
-};
+var $lazy_foldableArray = /* #__PURE__ */ $runtime_lazy("foldableArray", "Data.Foldable", function () {
+    return {
+        foldr: $foreign.foldrArray,
+        foldl: $foreign.foldlArray,
+        foldMap: function (dictMonoid) {
+            return foldMapDefaultR($lazy_foldableArray(0))(dictMonoid);
+        }
+    };
+});
+var foldableArray = /* #__PURE__ */ $lazy_foldableArray(130);
 var foldMapDefaultL = function (dictFoldable) {
     return function (dictMonoid) {
         var Semigroup0 = dictMonoid.Semigroup0();

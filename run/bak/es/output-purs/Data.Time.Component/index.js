@@ -85,32 +85,34 @@ var boundedHour = {
         return ordHour;
     }
 };
-var boundedEnumSecond = {
-    cardinality: 60,
-    toEnum: function (n) {
-        if (n >= 0 && n <= 59) {
-            return new Data_Maybe.Just(n);
-        };
-        if (Data_Boolean.otherwise) {
-            return Data_Maybe.Nothing.value;
-        };
-        throw new Error("Failed pattern match at Data.Time.Component (line 90, column 1 - line 95, column 26): " + [ n.constructor.name ]);
-    },
-    fromEnum: function (v) {
-        return v;
-    },
-    Bounded0: function () {
-        return boundedSecond;
-    },
-    Enum1: function () {
-        return $lazy_enumSecond(0);
-    }
-};
+var $lazy_boundedEnumSecond = /* #__PURE__ */ $runtime_lazy("boundedEnumSecond", "Data.Time.Component", function () {
+    return {
+        cardinality: 60,
+        toEnum: function (n) {
+            if (n >= 0 && n <= 59) {
+                return new Data_Maybe.Just(n);
+            };
+            if (Data_Boolean.otherwise) {
+                return Data_Maybe.Nothing.value;
+            };
+            throw new Error("Failed pattern match at Data.Time.Component (line 90, column 1 - line 95, column 26): " + [ n.constructor.name ]);
+        },
+        fromEnum: function (v) {
+            return v;
+        },
+        Bounded0: function () {
+            return boundedSecond;
+        },
+        Enum1: function () {
+            return $lazy_enumSecond(0);
+        }
+    };
+});
 var $lazy_enumSecond = /* #__PURE__ */ $runtime_lazy("enumSecond", "Data.Time.Component", function () {
     return {
         succ: (function () {
-            var $28 = Data_Enum.toEnum(boundedEnumSecond);
-            var $29 = Data_Enum.fromEnum(boundedEnumSecond);
+            var $28 = Data_Enum.toEnum($lazy_boundedEnumSecond(0));
+            var $29 = Data_Enum.fromEnum($lazy_boundedEnumSecond(0));
             return function ($30) {
                 return $28((function (v) {
                     return v + 1 | 0;
@@ -118,8 +120,8 @@ var $lazy_enumSecond = /* #__PURE__ */ $runtime_lazy("enumSecond", "Data.Time.Co
             };
         })(),
         pred: (function () {
-            var $31 = Data_Enum.toEnum(boundedEnumSecond);
-            var $32 = Data_Enum.fromEnum(boundedEnumSecond);
+            var $31 = Data_Enum.toEnum($lazy_boundedEnumSecond(0));
+            var $32 = Data_Enum.fromEnum($lazy_boundedEnumSecond(0));
             return function ($33) {
                 return $31((function (v) {
                     return v - 1 | 0;
@@ -131,33 +133,36 @@ var $lazy_enumSecond = /* #__PURE__ */ $runtime_lazy("enumSecond", "Data.Time.Co
         }
     };
 });
+var boundedEnumSecond = /* #__PURE__ */ $lazy_boundedEnumSecond(90);
 var enumSecond = /* #__PURE__ */ $lazy_enumSecond(86);
-var boundedEnumMinute = {
-    cardinality: 60,
-    toEnum: function (n) {
-        if (n >= 0 && n <= 59) {
-            return new Data_Maybe.Just(n);
-        };
-        if (Data_Boolean.otherwise) {
-            return Data_Maybe.Nothing.value;
-        };
-        throw new Error("Failed pattern match at Data.Time.Component (line 61, column 1 - line 66, column 26): " + [ n.constructor.name ]);
-    },
-    fromEnum: function (v) {
-        return v;
-    },
-    Bounded0: function () {
-        return boundedMinute;
-    },
-    Enum1: function () {
-        return $lazy_enumMinute(0);
-    }
-};
+var $lazy_boundedEnumMinute = /* #__PURE__ */ $runtime_lazy("boundedEnumMinute", "Data.Time.Component", function () {
+    return {
+        cardinality: 60,
+        toEnum: function (n) {
+            if (n >= 0 && n <= 59) {
+                return new Data_Maybe.Just(n);
+            };
+            if (Data_Boolean.otherwise) {
+                return Data_Maybe.Nothing.value;
+            };
+            throw new Error("Failed pattern match at Data.Time.Component (line 61, column 1 - line 66, column 26): " + [ n.constructor.name ]);
+        },
+        fromEnum: function (v) {
+            return v;
+        },
+        Bounded0: function () {
+            return boundedMinute;
+        },
+        Enum1: function () {
+            return $lazy_enumMinute(0);
+        }
+    };
+});
 var $lazy_enumMinute = /* #__PURE__ */ $runtime_lazy("enumMinute", "Data.Time.Component", function () {
     return {
         succ: (function () {
-            var $34 = Data_Enum.toEnum(boundedEnumMinute);
-            var $35 = Data_Enum.fromEnum(boundedEnumMinute);
+            var $34 = Data_Enum.toEnum($lazy_boundedEnumMinute(0));
+            var $35 = Data_Enum.fromEnum($lazy_boundedEnumMinute(0));
             return function ($36) {
                 return $34((function (v) {
                     return v + 1 | 0;
@@ -165,8 +170,8 @@ var $lazy_enumMinute = /* #__PURE__ */ $runtime_lazy("enumMinute", "Data.Time.Co
             };
         })(),
         pred: (function () {
-            var $37 = Data_Enum.toEnum(boundedEnumMinute);
-            var $38 = Data_Enum.fromEnum(boundedEnumMinute);
+            var $37 = Data_Enum.toEnum($lazy_boundedEnumMinute(0));
+            var $38 = Data_Enum.fromEnum($lazy_boundedEnumMinute(0));
             return function ($39) {
                 return $37((function (v) {
                     return v - 1 | 0;
@@ -178,33 +183,36 @@ var $lazy_enumMinute = /* #__PURE__ */ $runtime_lazy("enumMinute", "Data.Time.Co
         }
     };
 });
+var boundedEnumMinute = /* #__PURE__ */ $lazy_boundedEnumMinute(61);
 var enumMinute = /* #__PURE__ */ $lazy_enumMinute(57);
-var boundedEnumMillisecond = {
-    cardinality: 1000,
-    toEnum: function (n) {
-        if (n >= 0 && n <= 999) {
-            return new Data_Maybe.Just(n);
-        };
-        if (Data_Boolean.otherwise) {
-            return Data_Maybe.Nothing.value;
-        };
-        throw new Error("Failed pattern match at Data.Time.Component (line 120, column 1 - line 125, column 31): " + [ n.constructor.name ]);
-    },
-    fromEnum: function (v) {
-        return v;
-    },
-    Bounded0: function () {
-        return boundedMillisecond;
-    },
-    Enum1: function () {
-        return $lazy_enumMillisecond(0);
-    }
-};
+var $lazy_boundedEnumMillisecond = /* #__PURE__ */ $runtime_lazy("boundedEnumMillisecond", "Data.Time.Component", function () {
+    return {
+        cardinality: 1000,
+        toEnum: function (n) {
+            if (n >= 0 && n <= 999) {
+                return new Data_Maybe.Just(n);
+            };
+            if (Data_Boolean.otherwise) {
+                return Data_Maybe.Nothing.value;
+            };
+            throw new Error("Failed pattern match at Data.Time.Component (line 120, column 1 - line 125, column 31): " + [ n.constructor.name ]);
+        },
+        fromEnum: function (v) {
+            return v;
+        },
+        Bounded0: function () {
+            return boundedMillisecond;
+        },
+        Enum1: function () {
+            return $lazy_enumMillisecond(0);
+        }
+    };
+});
 var $lazy_enumMillisecond = /* #__PURE__ */ $runtime_lazy("enumMillisecond", "Data.Time.Component", function () {
     return {
         succ: (function () {
-            var $40 = Data_Enum.toEnum(boundedEnumMillisecond);
-            var $41 = Data_Enum.fromEnum(boundedEnumMillisecond);
+            var $40 = Data_Enum.toEnum($lazy_boundedEnumMillisecond(0));
+            var $41 = Data_Enum.fromEnum($lazy_boundedEnumMillisecond(0));
             return function ($42) {
                 return $40((function (v) {
                     return v + 1 | 0;
@@ -212,8 +220,8 @@ var $lazy_enumMillisecond = /* #__PURE__ */ $runtime_lazy("enumMillisecond", "Da
             };
         })(),
         pred: (function () {
-            var $43 = Data_Enum.toEnum(boundedEnumMillisecond);
-            var $44 = Data_Enum.fromEnum(boundedEnumMillisecond);
+            var $43 = Data_Enum.toEnum($lazy_boundedEnumMillisecond(0));
+            var $44 = Data_Enum.fromEnum($lazy_boundedEnumMillisecond(0));
             return function ($45) {
                 return $43((function (v) {
                     return v - 1 | 0;
@@ -225,33 +233,36 @@ var $lazy_enumMillisecond = /* #__PURE__ */ $runtime_lazy("enumMillisecond", "Da
         }
     };
 });
+var boundedEnumMillisecond = /* #__PURE__ */ $lazy_boundedEnumMillisecond(120);
 var enumMillisecond = /* #__PURE__ */ $lazy_enumMillisecond(116);
-var boundedEnumHour = {
-    cardinality: 24,
-    toEnum: function (n) {
-        if (n >= 0 && n <= 23) {
-            return new Data_Maybe.Just(n);
-        };
-        if (Data_Boolean.otherwise) {
-            return Data_Maybe.Nothing.value;
-        };
-        throw new Error("Failed pattern match at Data.Time.Component (line 32, column 1 - line 37, column 24): " + [ n.constructor.name ]);
-    },
-    fromEnum: function (v) {
-        return v;
-    },
-    Bounded0: function () {
-        return boundedHour;
-    },
-    Enum1: function () {
-        return $lazy_enumHour(0);
-    }
-};
+var $lazy_boundedEnumHour = /* #__PURE__ */ $runtime_lazy("boundedEnumHour", "Data.Time.Component", function () {
+    return {
+        cardinality: 24,
+        toEnum: function (n) {
+            if (n >= 0 && n <= 23) {
+                return new Data_Maybe.Just(n);
+            };
+            if (Data_Boolean.otherwise) {
+                return Data_Maybe.Nothing.value;
+            };
+            throw new Error("Failed pattern match at Data.Time.Component (line 32, column 1 - line 37, column 24): " + [ n.constructor.name ]);
+        },
+        fromEnum: function (v) {
+            return v;
+        },
+        Bounded0: function () {
+            return boundedHour;
+        },
+        Enum1: function () {
+            return $lazy_enumHour(0);
+        }
+    };
+});
 var $lazy_enumHour = /* #__PURE__ */ $runtime_lazy("enumHour", "Data.Time.Component", function () {
     return {
         succ: (function () {
-            var $46 = Data_Enum.toEnum(boundedEnumHour);
-            var $47 = Data_Enum.fromEnum(boundedEnumHour);
+            var $46 = Data_Enum.toEnum($lazy_boundedEnumHour(0));
+            var $47 = Data_Enum.fromEnum($lazy_boundedEnumHour(0));
             return function ($48) {
                 return $46((function (v) {
                     return v + 1 | 0;
@@ -259,8 +270,8 @@ var $lazy_enumHour = /* #__PURE__ */ $runtime_lazy("enumHour", "Data.Time.Compon
             };
         })(),
         pred: (function () {
-            var $49 = Data_Enum.toEnum(boundedEnumHour);
-            var $50 = Data_Enum.fromEnum(boundedEnumHour);
+            var $49 = Data_Enum.toEnum($lazy_boundedEnumHour(0));
+            var $50 = Data_Enum.fromEnum($lazy_boundedEnumHour(0));
             return function ($51) {
                 return $49((function (v) {
                     return v - 1 | 0;
@@ -272,6 +283,7 @@ var $lazy_enumHour = /* #__PURE__ */ $runtime_lazy("enumHour", "Data.Time.Compon
         }
     };
 });
+var boundedEnumHour = /* #__PURE__ */ $lazy_boundedEnumHour(32);
 var enumHour = /* #__PURE__ */ $lazy_enumHour(28);
 export {
     eqHour,

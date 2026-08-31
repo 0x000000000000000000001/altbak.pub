@@ -3,6 +3,7 @@ import * as Control_Comonad from "../Control.Comonad/index.js";
 import * as Control_Extend from "../Control.Extend/index.js";
 import * as Data_Foldable from "../Data.Foldable/index.js";
 import * as Data_FoldableWithIndex from "../Data.FoldableWithIndex/index.js";
+import * as Data_Function from "../Data.Function/index.js";
 import * as Data_Functor from "../Data.Functor/index.js";
 import * as Data_FunctorWithIndex from "../Data.FunctorWithIndex/index.js";
 import * as Data_Traversable from "../Data.Traversable/index.js";
@@ -13,7 +14,7 @@ var EnvT = function (x) {
 };
 var withEnvT = function (f) {
     return function (v) {
-        return new Data_Tuple.Tuple(f(v.value0), v.value1);
+        return Data_Function.apply(EnvT)(new Data_Tuple.Tuple(f(v.value0), v.value1));
     };
 };
 var runEnvT = function (v) {
@@ -26,14 +27,14 @@ var newtypeEnvT = {
 };
 var mapEnvT = function (f) {
     return function (v) {
-        return new Data_Tuple.Tuple(v.value0, f(v.value1));
+        return Data_Function.apply(EnvT)(new Data_Tuple.Tuple(v.value0, f(v.value1)));
     };
 };
 var functorEnvT = function (dictFunctor) {
     return {
         map: function (f) {
             return function (v) {
-                return new Data_Tuple.Tuple(v.value0, Data_Functor.map(dictFunctor)(f)(v.value1));
+                return Data_Function.apply(EnvT)(new Data_Tuple.Tuple(v.value0, Data_Functor.map(dictFunctor)(f)(v.value1)));
             };
         }
     };
@@ -43,7 +44,7 @@ var functorWithIndexEnvT = function (dictFunctorWithIndex) {
     return {
         mapWithIndex: function (f) {
             return function (v) {
-                return new Data_Tuple.Tuple(v.value0, Data_FunctorWithIndex.mapWithIndex(dictFunctorWithIndex)(f)(v.value1));
+                return Data_Function.apply(EnvT)(new Data_Tuple.Tuple(v.value0, Data_FunctorWithIndex.mapWithIndex(dictFunctorWithIndex)(f)(v.value1)));
             };
         },
         Functor0: function () {
@@ -161,12 +162,12 @@ var extendEnvT = function (dictExtend) {
     return {
         extend: function (f) {
             return function (v) {
-                return new Data_Tuple.Tuple(v.value0, Data_Functor.map(Functor0)(f)(Control_Extend.extend(dictExtend)((function () {
+                return Data_Function.apply(EnvT)(new Data_Tuple.Tuple(v.value0, Data_Functor.map(Functor0)(f)(Control_Extend.extend(dictExtend)((function () {
                     var $122 = Data_Tuple.Tuple.create(v.value0);
                     return function ($123) {
                         return EnvT($122($123));
                     };
-                })())(v.value1)));
+                })())(v.value1))));
             };
         },
         Functor0: function () {

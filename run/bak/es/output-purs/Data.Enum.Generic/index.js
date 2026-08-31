@@ -114,7 +114,7 @@ var genericEnumProduct = function (dictGenericEnum) {
                             "genericPred'": function (v) {
                                 var v1 = genericPred$prime(dictGenericEnum1)(v.value1);
                                 if (v1 instanceof Data_Maybe.Just) {
-                                    return new Data_Maybe.Just(new Data_Generic_Rep.Product(v.value0, v1.value0));
+                                    return Data_Function.apply(Data_Maybe.Just.create)(new Data_Generic_Rep.Product(v.value0, v1.value0));
                                 };
                                 if (v1 instanceof Data_Maybe.Nothing) {
                                     return Data_Functor.map(Data_Maybe.functorMaybe)(Data_Function.flip(Data_Generic_Rep.Product.create)(Data_Bounded_Generic["genericTop$prime"](dictGenericTop1)))(genericPred$prime(dictGenericEnum)(v.value0));
@@ -124,7 +124,7 @@ var genericEnumProduct = function (dictGenericEnum) {
                             "genericSucc'": function (v) {
                                 var v1 = genericSucc$prime(dictGenericEnum1)(v.value1);
                                 if (v1 instanceof Data_Maybe.Just) {
-                                    return new Data_Maybe.Just(new Data_Generic_Rep.Product(v.value0, v1.value0));
+                                    return Data_Function.apply(Data_Maybe.Just.create)(new Data_Generic_Rep.Product(v.value0, v1.value0));
                                 };
                                 if (v1 instanceof Data_Maybe.Nothing) {
                                     return Data_Functor.map(Data_Maybe.functorMaybe)(Data_Function.flip(Data_Generic_Rep.Product.create)(Data_Bounded_Generic["genericBottom$prime"](dictGenericBottom1)))(genericSucc$prime(dictGenericEnum)(v.value0));
@@ -178,7 +178,7 @@ var genericBoundedEnumSum = function (dictGenericBoundedEnum) {
     var genericCardinality$prime1 = genericCardinality$prime(dictGenericBoundedEnum);
     return function (dictGenericBoundedEnum1) {
         return {
-            "genericCardinality'": Data_Newtype.unwrap()(genericCardinality$prime1) + Data_Newtype.unwrap()(genericCardinality$prime(dictGenericBoundedEnum1)) | 0,
+            "genericCardinality'": Data_Function.apply(Data_Enum.Cardinality)(Data_Newtype.unwrap()(genericCardinality$prime1) + Data_Newtype.unwrap()(genericCardinality$prime(dictGenericBoundedEnum1)) | 0),
             "genericToEnum'": function (n) {
                 var to = function (v) {
                     if (n >= 0 && n < v) {
@@ -210,10 +210,10 @@ var genericBoundedEnumProduct = function (dictGenericBoundedEnum) {
         var genericCardinality$prime2 = genericCardinality$prime(dictGenericBoundedEnum1);
         var genericToEnum$prime2 = genericToEnum$prime(dictGenericBoundedEnum1);
         return {
-            "genericCardinality'": Data_Newtype.unwrap()(genericCardinality$prime1) * Data_Newtype.unwrap()(genericCardinality$prime2) | 0,
+            "genericCardinality'": Data_Function.apply(Data_Enum.Cardinality)(Data_Newtype.unwrap()(genericCardinality$prime1) * Data_Newtype.unwrap()(genericCardinality$prime2) | 0),
             "genericToEnum'": function (n) {
                 var to = function (v) {
-                    return Control_Apply.apply(Data_Maybe.applyMaybe)(Data_Functor.map(Data_Maybe.functorMaybe)(Data_Generic_Rep.Product.create)(genericToEnum$prime1(Data_EuclideanRing.div(Data_EuclideanRing.euclideanRingInt)(n)(v))))(genericToEnum$prime2(Data_EuclideanRing.mod(Data_EuclideanRing.euclideanRingInt)(n)(v)));
+                    return Control_Apply.apply(Data_Maybe.applyMaybe)(Data_Functor.map(Data_Maybe.functorMaybe)(Data_Generic_Rep.Product.create)(Data_Function.apply(genericToEnum$prime1)(Data_EuclideanRing.div(Data_EuclideanRing.euclideanRingInt)(n)(v))))(Data_Function.apply(genericToEnum$prime2)(Data_EuclideanRing.mod(Data_EuclideanRing.euclideanRingInt)(n)(v)));
                 };
                 return to(genericCardinality$prime2);
             },

@@ -2,6 +2,7 @@
 import * as Control_Bind from "../Control.Bind/index.js";
 import * as Control_Monad from "../Control.Monad/index.js";
 import * as Data_Either from "../Data.Either/index.js";
+import * as Data_Function from "../Data.Function/index.js";
 import * as Data_Functor from "../Data.Functor/index.js";
 import * as Data_Identity from "../Data.Identity/index.js";
 import * as Data_Maybe from "../Data.Maybe/index.js";
@@ -65,7 +66,7 @@ var tailRecM3 = function (dictMonadRec) {
 var untilJust = function (dictMonadRec) {
     var Functor0 = (((dictMonadRec.Monad0()).Bind1()).Apply0()).Functor0();
     return function (m) {
-        return tailRecM(dictMonadRec)(function (v) {
+        return Data_Function.applyFlipped(Data_Unit.unit)(tailRecM(dictMonadRec)(function (v) {
             return Data_Functor.mapFlipped(Functor0)(m)(function (v1) {
                 if (v1 instanceof Data_Maybe.Nothing) {
                     return new Loop(Data_Unit.unit);
@@ -75,7 +76,7 @@ var untilJust = function (dictMonadRec) {
                 };
                 throw new Error("Failed pattern match at Control.Monad.Rec.Class (line 179, column 43 - line 181, column 19): " + [ v1.constructor.name ]);
             });
-        })(Data_Unit.unit);
+        }));
     };
 };
 var whileJust = function (dictMonoid) {
@@ -83,17 +84,17 @@ var whileJust = function (dictMonoid) {
     return function (dictMonadRec) {
         var Functor0 = (((dictMonadRec.Monad0()).Bind1()).Apply0()).Functor0();
         return function (m) {
-            return tailRecM(dictMonadRec)(function (v) {
+            return Data_Function.applyFlipped(Data_Monoid.mempty(dictMonoid))(tailRecM(dictMonadRec)(function (v) {
                 return Data_Functor.mapFlipped(Functor0)(m)(function (v1) {
                     if (v1 instanceof Data_Maybe.Nothing) {
                         return new Done(v);
                     };
                     if (v1 instanceof Data_Maybe.Just) {
-                        return new Loop(Data_Semigroup.append(Semigroup0)(v)(v1.value0));
+                        return Data_Function.apply(Loop.create)(Data_Semigroup.append(Semigroup0)(v)(v1.value0));
                     };
                     throw new Error("Failed pattern match at Control.Monad.Rec.Class (line 172, column 45 - line 174, column 26): " + [ v1.constructor.name ]);
                 });
-            })(Data_Monoid.mempty(dictMonoid));
+            }));
         };
     };
 };

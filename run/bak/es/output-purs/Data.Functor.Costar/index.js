@@ -2,11 +2,24 @@
 import * as Control_Comonad from "../Control.Comonad/index.js";
 import * as Control_Extend from "../Control.Extend/index.js";
 import * as Data_Distributive from "../Data.Distributive/index.js";
+import * as Data_Function from "../Data.Function/index.js";
 import * as Data_Functor from "../Data.Functor/index.js";
 import * as Data_Functor_Contravariant from "../Data.Functor.Contravariant/index.js";
 import * as Data_Functor_Invariant from "../Data.Functor.Invariant/index.js";
 import * as Data_Profunctor from "../Data.Profunctor/index.js";
 import * as Data_Tuple from "../Data.Tuple/index.js";
+var $runtime_lazy = function (name, moduleName, init) {
+    var state = 0;
+    var val;
+    return function (lineNumber) {
+        if (state === 2) return val;
+        if (state === 1) throw new ReferenceError(name + " was needed before it finished initializing (module " + moduleName + ", line " + lineNumber + ")", moduleName, lineNumber);
+        state = 1;
+        val = init();
+        state = 2;
+        return val;
+    };
+};
 var Costar = function (x) {
     return x;
 };
@@ -75,29 +88,32 @@ var functorCostar = {
 var invariantCostar = {
     imap: /* #__PURE__ */ Data_Functor_Invariant.imapF(functorCostar)
 };
-var distributiveCostar = {
-    distribute: function (dictFunctor) {
-        return function (f) {
-            return function (a) {
-                return Data_Functor.map(dictFunctor)(function (v) {
-                    return v(a);
-                })(f);
+var $lazy_distributiveCostar = /* #__PURE__ */ $runtime_lazy("distributiveCostar", "Data.Functor.Costar", function () {
+    return {
+        distribute: function (dictFunctor) {
+            return function (f) {
+                return function (a) {
+                    return Data_Functor.map(dictFunctor)(function (v) {
+                        return v(a);
+                    })(f);
+                };
             };
-        };
-    },
-    collect: function (dictFunctor) {
-        return function (f) {
-            var $58 = Data_Distributive.distribute(distributiveCostar)(dictFunctor);
-            var $59 = Data_Functor.map(dictFunctor)(f);
-            return function ($60) {
-                return $58($59($60));
+        },
+        collect: function (dictFunctor) {
+            return function (f) {
+                var $58 = Data_Distributive.distribute($lazy_distributiveCostar(0))(dictFunctor);
+                var $59 = Data_Functor.map(dictFunctor)(f);
+                return function ($60) {
+                    return $58($59($60));
+                };
             };
-        };
-    },
-    Functor0: function () {
-        return functorCostar;
-    }
-};
+        },
+        Functor0: function () {
+            return functorCostar;
+        }
+    };
+});
+var distributiveCostar = /* #__PURE__ */ $lazy_distributiveCostar(48);
 var closedCostar = function (dictFunctor) {
     var profunctorCostar1 = profunctorCostar(dictFunctor);
     return {
@@ -105,7 +121,7 @@ var closedCostar = function (dictFunctor) {
             return function (g) {
                 return function (x) {
                     return v(Data_Functor.map(dictFunctor)(function (v1) {
-                        return v1(x);
+                        return Data_Function.apply(v1)(x);
                     })(g));
                 };
             };

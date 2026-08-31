@@ -13,6 +13,7 @@ import * as Control_Monad_State_Class from "../Control.Monad.State.Class/index.j
 import * as Control_Monad_Trans_Class from "../Control.Monad.Trans.Class/index.js";
 import * as Control_Monad_Writer_Class from "../Control.Monad.Writer.Class/index.js";
 import * as Data_Either from "../Data.Either/index.js";
+import * as Data_Function from "../Data.Function/index.js";
 import * as Data_Functor from "../Data.Functor/index.js";
 import * as Data_Monoid from "../Data.Monoid/index.js";
 import * as Data_Semigroup from "../Data.Semigroup/index.js";
@@ -35,7 +36,7 @@ var withExceptT = function (dictFunctor) {
                     throw new Error("Failed pattern match at Control.Monad.Except.Trans (line 43, column 3 - line 43, column 32): " + [ v1.constructor.name, v2.constructor.name ]);
                 };
             };
-            return Data_Functor.map(dictFunctor)(mapLeft(f))(v);
+            return Data_Function.apply(ExceptT)(Data_Functor.map(dictFunctor)(mapLeft(f))(v));
         };
     };
 };
@@ -53,7 +54,7 @@ var monadTransExceptT = {
         var pure = Control_Applicative.pure(dictMonad.Applicative0());
         return function (m) {
             return Control_Bind.bind(Bind1)(m)(function (a) {
-                return pure(new Data_Either.Right(a));
+                return Data_Function.apply(pure)(new Data_Either.Right(a));
             });
         };
     }
@@ -160,12 +161,12 @@ var monadContExceptT = function (dictMonadCont) {
     var monadExceptT1 = monadExceptT(dictMonadCont.Monad0());
     return {
         callCC: function (f) {
-            return Control_Monad_Cont_Class.callCC(dictMonadCont)(function (c) {
+            return Data_Function.apply(ExceptT)(Control_Monad_Cont_Class.callCC(dictMonadCont)(function (c) {
                 var v = f(function (a) {
-                    return c(new Data_Either.Right(a));
+                    return Data_Function.apply(ExceptT)(c(new Data_Either.Right(a)));
                 });
                 return v;
-            });
+            }));
         },
         Monad0: function () {
             return monadExceptT1;
@@ -264,7 +265,7 @@ var monadWriterExceptT = function (dictMonadWriter) {
     return {
         listen: mapExceptT(function (m) {
             return Control_Bind.bind(Bind1)(Control_Monad_Writer_Class.listen(dictMonadWriter)(m))(function (v) {
-                return pure(Data_Functor.map(Data_Either.functorEither)(function (r) {
+                return Data_Function.apply(pure)(Data_Functor.map(Data_Either.functorEither)(function (r) {
                     return new Data_Tuple.Tuple(r, v.value1);
                 })(v.value0));
             });

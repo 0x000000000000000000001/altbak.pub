@@ -2,6 +2,7 @@
 import * as Control_Category from "../Control.Category/index.js";
 import * as Control_Semigroupoid from "../Control.Semigroupoid/index.js";
 import * as Data_Either from "../Data.Either/index.js";
+import * as Data_Function from "../Data.Function/index.js";
 import * as Data_Functor from "../Data.Functor/index.js";
 import * as Data_Profunctor from "../Data.Profunctor/index.js";
 var identity = /* #__PURE__ */ Control_Category.identity(Control_Category.categoryFn);
@@ -34,7 +35,7 @@ var choiceFn = {
     left: function (v) {
         return function (v1) {
             if (v1 instanceof Data_Either.Left) {
-                return new Data_Either.Left(v(v1.value0));
+                return Data_Function.apply(Data_Either.Left.create)(v(v1.value0));
             };
             if (v1 instanceof Data_Either.Right) {
                 return new Data_Either.Right(v1.value0);

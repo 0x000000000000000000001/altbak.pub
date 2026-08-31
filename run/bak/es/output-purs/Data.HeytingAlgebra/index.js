@@ -4,6 +4,18 @@ import * as Data_Symbol from "../Data.Symbol/index.js";
 import * as Data_Unit from "../Data.Unit/index.js";
 import * as Record_Unsafe from "../Record.Unsafe/index.js";
 import * as Type_Proxy from "../Type.Proxy/index.js";
+var $runtime_lazy = function (name, moduleName, init) {
+    var state = 0;
+    var val;
+    return function (lineNumber) {
+        if (state === 2) return val;
+        if (state === 1) throw new ReferenceError(name + " was needed before it finished initializing (module " + moduleName + ", line " + lineNumber + ")", moduleName, lineNumber);
+        state = 1;
+        val = init();
+        state = 2;
+        return val;
+    };
+};
 var ttRecord = function (dict) {
     return dict.ttRecord;
 };
@@ -118,18 +130,21 @@ var disjRecord = function (dict) {
 var disj = function (dict) {
     return dict.disj;
 };
-var heytingAlgebraBoolean = {
-    ff: false,
-    tt: true,
-    implies: function (a) {
-        return function (b) {
-            return disj(heytingAlgebraBoolean)(not(heytingAlgebraBoolean)(a))(b);
-        };
-    },
-    conj: $foreign.boolConj,
-    disj: $foreign.boolDisj,
-    not: $foreign.boolNot
-};
+var $lazy_heytingAlgebraBoolean = /* #__PURE__ */ $runtime_lazy("heytingAlgebraBoolean", "Data.HeytingAlgebra", function () {
+    return {
+        ff: false,
+        tt: true,
+        implies: function (a) {
+            return function (b) {
+                return disj($lazy_heytingAlgebraBoolean(0))(not($lazy_heytingAlgebraBoolean(0))(a))(b);
+            };
+        },
+        conj: $foreign.boolConj,
+        disj: $foreign.boolDisj,
+        not: $foreign.boolNot
+    };
+});
+var heytingAlgebraBoolean = /* #__PURE__ */ $lazy_heytingAlgebraBoolean(63);
 var conjRecord = function (dict) {
     return dict.conjRecord;
 };

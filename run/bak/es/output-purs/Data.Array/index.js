@@ -24,8 +24,10 @@ import * as Data_Semigroup from "../Data.Semigroup/index.js";
 import * as Data_Traversable from "../Data.Traversable/index.js";
 import * as Data_Tuple from "../Data.Tuple/index.js";
 import * as Data_Unfoldable from "../Data.Unfoldable/index.js";
+import * as Partial_Unsafe from "../Partial.Unsafe/index.js";
 var intercalate1 = /* #__PURE__ */ Data_Foldable.intercalate(Data_Foldable.foldableArray);
 var $$void = /* #__PURE__ */ Data_Functor["void"](Control_Monad_ST_Internal.functorST);
+var pure = /* #__PURE__ */ Control_Applicative.pure(Control_Monad_ST_Internal.applicativeST);
 var fromJust = /* #__PURE__ */ Data_Maybe.fromJust();
 var foldMap1 = /* #__PURE__ */ Data_Foldable.foldMap(Data_Foldable.foldableArray);
 var fold1 = /* #__PURE__ */ Data_Foldable.fold(Data_Foldable.foldableArray);
@@ -301,13 +303,13 @@ var unzip = function (xs) {
         })();
         Data_Array_ST_Iterator.iterate(iter)(function (v) {
             return function __do() {
-                $$void(Data_Array_ST.push(v.value0)(fsts))();
-                return $$void(Data_Array_ST.push(v.value1)(snds))();
+                Data_Function.apply($$void)(Data_Array_ST.push(v.value0)(fsts))();
+                return Data_Function.apply($$void)(Data_Array_ST.push(v.value1)(snds))();
             };
         })();
         var fsts$prime = Data_Array_ST.unsafeFreeze(fsts)();
         var snds$prime = Data_Array_ST.unsafeFreeze(snds)();
-        return new Data_Tuple.Tuple(fsts$prime, snds$prime);
+        return Data_Function.apply(pure)(new Data_Tuple.Tuple(fsts$prime, snds$prime))();
     })();
 };
 var head = function (xs) {
@@ -325,8 +327,8 @@ var nubBy = function (comp) {
             return [  ];
         };
         if (v instanceof Data_Maybe.Just) {
-            return Data_Functor.map(Data_Functor.functorArray)(Data_Tuple.snd)(sortWith(Data_Ord.ordInt)(Data_Tuple.fst)((function __do() {
-                var result = Data_Array_ST.unsafeThaw(singleton(v.value0))();
+            return Data_Function.apply(Data_Functor.map(Data_Functor.functorArray)(Data_Tuple.snd))(Data_Function.apply(sortWith(Data_Ord.ordInt)(Data_Tuple.fst))((function __do() {
+                var result = Data_Function.apply(Data_Array_ST.unsafeThaw)(singleton(v.value0))();
                 Control_Monad_ST_Internal.foreach(indexedAndSorted)(function (v1) {
                     return function __do() {
                         var lst = Data_Functor.map(Control_Monad_ST_Internal.functorST)((function () {
@@ -337,7 +339,7 @@ var nubBy = function (comp) {
                                 return Data_Tuple.snd($137($138));
                             };
                         })())(Data_Array_ST.unsafeFreeze(result))();
-                        return Control_Applicative.when(Control_Monad_ST_Internal.applicativeST)(Data_Eq.notEq(Data_Ordering.eqOrdering)(comp(lst)(v1.value1))(Data_Ordering.EQ.value))($$void(Data_Array_ST.push(v1)(result)))();
+                        return Data_Function.apply(Control_Applicative.when(Control_Monad_ST_Internal.applicativeST)(Data_Eq.notEq(Data_Ordering.eqOrdering)(comp(lst)(v1.value1))(Data_Ordering.EQ.value)))(Data_Function.apply($$void)(Data_Array_ST.push(v1)(result)))();
                     };
                 })();
                 return Data_Array_ST.unsafeFreeze(result)();
@@ -396,13 +398,13 @@ var foldr = /* #__PURE__ */ Data_Foldable.foldr(Data_Foldable.foldableArray);
 var foldl = /* #__PURE__ */ Data_Foldable.foldl(Data_Foldable.foldableArray);
 var transpose = function (xs) {
     var buildNext = function (idx) {
-        return Data_Function.flip(foldl)(Data_Maybe.Nothing.value)(function (acc) {
+        return Data_Function.applyFlipped(xs)(Data_Function.flip(foldl)(Data_Maybe.Nothing.value)(function (acc) {
             return function (nextArr) {
-                return Data_Maybe.maybe(acc)(function (el) {
-                    return new Data_Maybe.Just(Data_Maybe.maybe([ el ])(Data_Function.flip(snoc)(el))(acc));
-                })(index(nextArr)(idx));
+                return Data_Function.apply(Data_Maybe.maybe(acc)(function (el) {
+                    return Data_Function.apply(Data_Maybe.Just.create)(Data_Maybe.maybe([ el ])(Data_Function.flip(snoc)(el))(acc));
+                }))(index(nextArr)(idx));
             };
-        })(xs);
+        }));
     };
     var go = function ($copy_idx) {
         return function ($copy_allArrays) {
@@ -540,14 +542,14 @@ var elemIndex = function (dictEq) {
 var notElem = function (dictEq) {
     return function (a) {
         return function (arr) {
-            return Data_Maybe.isNothing(elemIndex(dictEq)(a)(arr));
+            return Data_Function.apply(Data_Maybe.isNothing)(elemIndex(dictEq)(a)(arr));
         };
     };
 };
 var elem = function (dictEq) {
     return function (a) {
         return function (arr) {
-            return Data_Maybe.isJust(elemIndex(dictEq)(a)(arr));
+            return Data_Function.apply(Data_Maybe.isJust)(elemIndex(dictEq)(a)(arr));
         };
     };
 };
@@ -585,7 +587,9 @@ var deleteBy = function (v) {
                 return [  ];
             };
             return Data_Maybe.maybe(v2)(function (i) {
-                return Data_Maybe.fromJust()(deleteAt(i)(v2));
+                return Data_Function.apply(Partial_Unsafe.unsafePartial)(function () {
+                    return Data_Maybe.fromJust()(deleteAt(i)(v2));
+                });
             })(findIndex(v(v1))(v2));
         };
     };
@@ -663,7 +667,7 @@ var nubByEq = function (eq) {
                             return !$148($149);
                         };
                     })())(Data_Array_ST.unsafeFreeze(arr))();
-                    return Control_Applicative.when(Control_Monad_ST_Internal.applicativeST)(e)($$void(Data_Array_ST.push(x)(arr)))();
+                    return Data_Function.apply(Control_Applicative.when(Control_Monad_ST_Internal.applicativeST)(e))(Data_Function.apply($$void)(Data_Array_ST.push(x)(arr)))();
                 };
             })();
             return Data_Array_ST.unsafeFreeze(arr)();

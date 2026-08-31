@@ -124,7 +124,7 @@ var withResource = function (dictMonadError) {
         return function (release) {
             return function (kleisli) {
                 return Control_Bind.bind(Bind1)(acquire)(function (resource) {
-                    return Control_Bind.bind(Bind1)(try1(kleisli(resource)))(function (result) {
+                    return Control_Bind.bind(Bind1)(Data_Function.apply(try1)(kleisli(resource)))(function (result) {
                         return Control_Bind.discard(Control_Bind.discardUnit)(Bind1)(release(resource))(function () {
                             return Data_Either.either(throwError1)(pure)(result);
                         });

@@ -5,6 +5,7 @@ import * as Control_Comonad_Store_Trans from "../Control.Comonad.Store.Trans/ind
 import * as Control_Comonad_Traced_Trans from "../Control.Comonad.Traced.Trans/index.js";
 import * as Control_Comonad_Trans_Class from "../Control.Comonad.Trans.Class/index.js";
 import * as Control_Monad_Identity_Trans from "../Control.Monad.Identity.Trans/index.js";
+import * as Data_Function from "../Data.Function/index.js";
 import * as Data_Functor from "../Data.Functor/index.js";
 import * as Data_Tuple from "../Data.Tuple/index.js";
 var track = function (dict) {
@@ -14,7 +15,7 @@ var tracks = function (dictComonadTraced) {
     var Comonad0 = dictComonadTraced.Comonad0();
     return function (f) {
         return function (w) {
-            return track(dictComonadTraced)(f(Control_Comonad.extract(Comonad0)(w)))(w);
+            return track(dictComonadTraced)(Data_Function.apply(f)(Control_Comonad.extract(Comonad0)(w)))(w);
         };
     };
 };

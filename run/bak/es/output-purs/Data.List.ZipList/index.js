@@ -62,7 +62,7 @@ var applicativeZipList = {
 var altZipList = {
     alt: function (v) {
         return function (v1) {
-            return Data_Semigroup.append(Data_List_Lazy_Types.semigroupList)(v)(Data_List_Lazy.drop(Data_List_Lazy.length(v))(v1));
+            return Data_Function.apply(ZipList)(Data_Semigroup.append(Data_List_Lazy_Types.semigroupList)(v)(Data_List_Lazy.drop(Data_List_Lazy.length(v))(v1)));
         };
     },
     Functor0: function () {

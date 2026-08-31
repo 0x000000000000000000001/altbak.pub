@@ -5,6 +5,18 @@ import * as Data_Semigroup from "../Data.Semigroup/index.js";
 import * as Data_Show from "../Data.Show/index.js";
 import * as Data_Symbol from "../Data.Symbol/index.js";
 import * as Type_Proxy from "../Type.Proxy/index.js";
+var $runtime_lazy = function (name, moduleName, init) {
+    var state = 0;
+    var val;
+    return function (lineNumber) {
+        if (state === 2) return val;
+        if (state === 1) throw new ReferenceError(name + " was needed before it finished initializing (module " + moduleName + ", line " + lineNumber + ")", moduleName, lineNumber);
+        state = 1;
+        val = init();
+        state = 2;
+        return val;
+    };
+};
 var genericShowArgsNoArguments = {
     genericShowArgs: function (v) {
         return [  ];
@@ -46,11 +58,14 @@ var genericShowConstructor = function (dictGenericShowArgs) {
 var genericShow$prime = function (dict) {
     return dict["genericShow'"];
 };
-var genericShowNoConstructors = {
-    "genericShow'": function (a) {
-        return genericShow$prime(genericShowNoConstructors)(a);
-    }
-};
+var $lazy_genericShowNoConstructors = /* #__PURE__ */ $runtime_lazy("genericShowNoConstructors", "Data.Show.Generic", function () {
+    return {
+        "genericShow'": function (a) {
+            return genericShow$prime($lazy_genericShowNoConstructors(0))(a);
+        }
+    };
+});
+var genericShowNoConstructors = /* #__PURE__ */ $lazy_genericShowNoConstructors(20);
 var genericShowSum = function (dictGenericShow) {
     return function (dictGenericShow1) {
         return {

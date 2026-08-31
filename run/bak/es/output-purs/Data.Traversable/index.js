@@ -6,6 +6,7 @@ import * as Control_Category from "../Control.Category/index.js";
 import * as Data_Const from "../Data.Const/index.js";
 import * as Data_Either from "../Data.Either/index.js";
 import * as Data_Foldable from "../Data.Foldable/index.js";
+import * as Data_Function from "../Data.Function/index.js";
 import * as Data_Functor from "../Data.Functor/index.js";
 import * as Data_Functor_App from "../Data.Functor.App/index.js";
 import * as Data_Functor_Compose from "../Data.Functor.Compose/index.js";
@@ -23,6 +24,18 @@ import * as Data_Monoid_Multiplicative from "../Data.Monoid.Multiplicative/index
 import * as Data_Traversable_Accum from "../Data.Traversable.Accum/index.js";
 import * as Data_Traversable_Accum_Internal from "../Data.Traversable.Accum.Internal/index.js";
 import * as Data_Tuple from "../Data.Tuple/index.js";
+var $runtime_lazy = function (name, moduleName, init) {
+    var state = 0;
+    var val;
+    return function (lineNumber) {
+        if (state === 2) return val;
+        if (state === 1) throw new ReferenceError(name + " was needed before it finished initializing (module " + moduleName + ", line " + lineNumber + ")", moduleName, lineNumber);
+        state = 1;
+        val = init();
+        state = 2;
+        return val;
+    };
+};
 var identity = /* #__PURE__ */ Control_Category.identity(Control_Category.categoryFn);
 var traverse = function (dict) {
     return dict.traverse;
@@ -258,7 +271,7 @@ var traversableCompose = function (dictTraversable) {
                 var Functor0 = (dictApplicative.Apply0()).Functor0();
                 return function (f) {
                     return function (v) {
-                        return Data_Functor.map(Functor0)(Data_Functor_Compose.Compose)(traverse(dictTraversable)(dictApplicative)(traverse(dictTraversable1)(dictApplicative)(f))(v));
+                        return Data_Function.apply(Data_Functor.map(Functor0)(Data_Functor_Compose.Compose))(traverse(dictTraversable)(dictApplicative)(traverse(dictTraversable1)(dictApplicative)(f))(v));
                     };
                 };
             },
@@ -301,21 +314,24 @@ var sequenceDefault = function (dictTraversable) {
         return traverse(dictTraversable)(dictApplicative)(identity);
     };
 };
-var traversableArray = {
-    traverse: function (dictApplicative) {
-        var Apply0 = dictApplicative.Apply0();
-        return $foreign.traverseArrayImpl(Control_Apply.apply(Apply0))(Data_Functor.map(Apply0.Functor0()))(Control_Applicative.pure(dictApplicative));
-    },
-    sequence: function (dictApplicative) {
-        return sequenceDefault(traversableArray)(dictApplicative);
-    },
-    Functor0: function () {
-        return Data_Functor.functorArray;
-    },
-    Foldable1: function () {
-        return Data_Foldable.foldableArray;
-    }
-};
+var $lazy_traversableArray = /* #__PURE__ */ $runtime_lazy("traversableArray", "Data.Traversable", function () {
+    return {
+        traverse: function (dictApplicative) {
+            var Apply0 = dictApplicative.Apply0();
+            return $foreign.traverseArrayImpl(Control_Apply.apply(Apply0))(Data_Functor.map(Apply0.Functor0()))(Control_Applicative.pure(dictApplicative));
+        },
+        sequence: function (dictApplicative) {
+            return sequenceDefault($lazy_traversableArray(0))(dictApplicative);
+        },
+        Functor0: function () {
+            return Data_Functor.functorArray;
+        },
+        Foldable1: function () {
+            return Data_Foldable.foldableArray;
+        }
+    };
+});
+var traversableArray = /* #__PURE__ */ $lazy_traversableArray(102);
 var sequence = function (dict) {
     return dict.sequence;
 };

@@ -12,6 +12,7 @@ import * as Control_Monad_State_Class from "../Control.Monad.State.Class/index.j
 import * as Control_Monad_Trans_Class from "../Control.Monad.Trans.Class/index.js";
 import * as Control_Monad_Writer_Class from "../Control.Monad.Writer.Class/index.js";
 import * as Control_Plus from "../Control.Plus/index.js";
+import * as Data_Function from "../Data.Function/index.js";
 import * as Data_Functor from "../Data.Functor/index.js";
 import * as Data_Monoid from "../Data.Monoid/index.js";
 import * as Data_Semigroup from "../Data.Semigroup/index.js";
@@ -36,7 +37,7 @@ var monadTransWriterT = function (dictMonoid) {
             var pure = Control_Applicative.pure(dictMonad.Applicative0());
             return function (m) {
                 return Control_Bind.bind(Bind1)(m)(function (a) {
-                    return pure(new Data_Tuple.Tuple(a, Data_Monoid.mempty(dictMonoid)));
+                    return Data_Function.apply(pure)(new Data_Tuple.Tuple(a, Data_Monoid.mempty(dictMonoid)));
                 });
             };
         }
@@ -50,7 +51,7 @@ var mapWriterT = function (f) {
 var functorWriterT = function (dictFunctor) {
     return {
         map: function (f) {
-            return mapWriterT(Data_Functor.map(dictFunctor)(function (v) {
+            return Data_Function.apply(mapWriterT)(Data_Functor.map(dictFunctor)(function (v) {
                 return new Data_Tuple.Tuple(f(v.value0), v.value1);
             }));
         }
@@ -91,12 +92,12 @@ var bindWriterT = function (dictSemigroup) {
         return {
             bind: function (v) {
                 return function (k) {
-                    return Control_Bind.bind(dictBind)(v)(function (v1) {
+                    return Data_Function.apply(WriterT)(Control_Bind.bind(dictBind)(v)(function (v1) {
                         var v2 = k(v1.value0);
                         return Data_Functor.map(Functor0)(function (v3) {
                             return new Data_Tuple.Tuple(v3.value0, Data_Semigroup.append(dictSemigroup)(v1.value1)(v3.value1));
                         })(v2);
-                    });
+                    }));
                 };
             },
             Apply0: function () {
@@ -122,7 +123,7 @@ var applicativeWriterT = function (dictMonoid) {
         var applyWriterT2 = applyWriterT1(dictApplicative.Apply0());
         return {
             pure: function (a) {
-                return pure(new Data_Tuple.Tuple(a, Data_Monoid.mempty(dictMonoid)));
+                return Data_Function.apply(WriterT)(Data_Function.apply(pure)(new Data_Tuple.Tuple(a, Data_Monoid.mempty(dictMonoid))));
             },
             Apply0: function () {
                 return applyWriterT2;
@@ -179,12 +180,12 @@ var monadContWriterT = function (dictMonoid) {
         var monadWriterT2 = monadWriterT1(dictMonadCont.Monad0());
         return {
             callCC: function (f) {
-                return Control_Monad_Cont_Class.callCC(dictMonadCont)(function (c) {
+                return Data_Function.apply(WriterT)(Control_Monad_Cont_Class.callCC(dictMonadCont)(function (c) {
                     var v = f(function (a) {
-                        return c(new Data_Tuple.Tuple(a, Data_Monoid.mempty(dictMonoid)));
+                        return Data_Function.apply(WriterT)(c(new Data_Tuple.Tuple(a, Data_Monoid.mempty(dictMonoid))));
                     });
                     return v;
-                });
+                }));
             },
             Monad0: function () {
                 return monadWriterT2;
@@ -237,7 +238,7 @@ var monadRecWriterT = function (dictMonoid) {
                             })());
                         });
                     };
-                    return Control_Monad_Rec_Class.tailRecM(dictMonadRec)(f$prime)(new Data_Tuple.Tuple(a, Data_Monoid.mempty(dictMonoid)));
+                    return Data_Function.apply(WriterT)(Control_Monad_Rec_Class.tailRecM(dictMonadRec)(f$prime)(new Data_Tuple.Tuple(a, Data_Monoid.mempty(dictMonoid))));
                 };
             },
             Monad0: function () {
@@ -295,12 +296,12 @@ var monadWriterWriterT = function (dictMonoid) {
         return {
             listen: function (v) {
                 return Control_Bind.bind(Bind1)(v)(function (v1) {
-                    return pure(new Data_Tuple.Tuple(new Data_Tuple.Tuple(v1.value0, v1.value1), v1.value1));
+                    return Data_Function.apply(pure)(new Data_Tuple.Tuple(new Data_Tuple.Tuple(v1.value0, v1.value1), v1.value1));
                 });
             },
             pass: function (v) {
                 return Control_Bind.bind(Bind1)(v)(function (v1) {
-                    return pure1(new Data_Tuple.Tuple(v1.value0.value0, v1.value0.value1(v1.value1)));
+                    return Data_Function.apply(pure1)(new Data_Tuple.Tuple(v1.value0.value0, v1.value0.value1(v1.value1)));
                 });
             },
             Monoid0: function () {
@@ -335,10 +336,10 @@ var monadErrorWriterT = function (dictMonoid) {
         return {
             catchError: function (v) {
                 return function (h) {
-                    return Control_Monad_Error_Class.catchError(dictMonadError)(v)(function (e) {
+                    return Data_Function.apply(WriterT)(Control_Monad_Error_Class.catchError(dictMonadError)(v)(function (e) {
                         var v1 = h(e);
                         return v1;
-                    });
+                    }));
                 };
             },
             MonadThrow0: function () {

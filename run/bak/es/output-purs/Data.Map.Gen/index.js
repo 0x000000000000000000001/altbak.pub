@@ -21,7 +21,7 @@ var genMap = function (dictMonadRec) {
                 return function (genValue) {
                     return Control_Monad_Gen_Class.sized(dictMonadGen)(function (size) {
                         return Control_Bind.bind(Bind1)(Control_Monad_Gen_Class.chooseInt(dictMonadGen)(0)(size))(function (newSize) {
-                            return Control_Monad_Gen_Class.resize(dictMonadGen)(Data_Function["const"](newSize))(Data_Functor.map(Functor0)(fromFoldable)(Control_Monad_Gen.unfoldable(dictMonadRec)(dictMonadGen)(Data_List_Types.unfoldableList)(Control_Apply.apply(Apply0)(Data_Functor.map(Functor0)(Data_Tuple.Tuple.create)(genKey))(genValue))));
+                            return Data_Function.apply(Control_Monad_Gen_Class.resize(dictMonadGen)(Data_Function["const"](newSize)))(Data_Functor.map(Functor0)(fromFoldable)(Control_Monad_Gen.unfoldable(dictMonadRec)(dictMonadGen)(Data_List_Types.unfoldableList)(Control_Apply.apply(Apply0)(Data_Functor.map(Functor0)(Data_Tuple.Tuple.create)(genKey))(genValue))));
                         });
                     });
                 };

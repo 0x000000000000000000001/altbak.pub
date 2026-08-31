@@ -17,7 +17,7 @@ var peek = function (dict) {
 var peeks = function (dictComonadStore) {
     return function (f) {
         return function (x) {
-            return peek(dictComonadStore)(f(pos(dictComonadStore)(x)))(x);
+            return peek(dictComonadStore)(Data_Function.apply(f)(pos(dictComonadStore)(x)))(x);
         };
     };
 };

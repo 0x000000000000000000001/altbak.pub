@@ -133,35 +133,44 @@ var semigroupParAff = function (dictSemigroup) {
         append: Control_Apply.lift2(applyParAff)(Data_Semigroup.append(dictSemigroup))
     };
 };
-var monadAff = {
-    Applicative0: function () {
-        return applicativeAff;
-    },
-    Bind1: function () {
-        return bindAff;
-    }
-};
-var bindAff = {
-    bind: $foreign["_bind"],
-    Apply0: function () {
-        return $lazy_applyAff(0);
-    }
-};
-var applicativeAff = {
-    pure: $foreign["_pure"],
-    Apply0: function () {
-        return $lazy_applyAff(0);
-    }
-};
+var $lazy_applicativeAff = /* #__PURE__ */ $runtime_lazy("applicativeAff", "Effect.Aff", function () {
+    return {
+        pure: $foreign["_pure"],
+        Apply0: function () {
+            return $lazy_applyAff(0);
+        }
+    };
+});
 var $lazy_applyAff = /* #__PURE__ */ $runtime_lazy("applyAff", "Effect.Aff", function () {
     return {
-        apply: Control_Monad.ap(monadAff),
+        apply: Control_Monad.ap($lazy_monadAff(0)),
         Functor0: function () {
             return functorAff;
         }
     };
 });
+var $lazy_bindAff = /* #__PURE__ */ $runtime_lazy("bindAff", "Effect.Aff", function () {
+    return {
+        bind: $foreign["_bind"],
+        Apply0: function () {
+            return $lazy_applyAff(0);
+        }
+    };
+});
+var $lazy_monadAff = /* #__PURE__ */ $runtime_lazy("monadAff", "Effect.Aff", function () {
+    return {
+        Applicative0: function () {
+            return $lazy_applicativeAff(0);
+        },
+        Bind1: function () {
+            return $lazy_bindAff(0);
+        }
+    };
+});
+var applicativeAff = /* #__PURE__ */ $lazy_applicativeAff(76);
 var applyAff = /* #__PURE__ */ $lazy_applyAff(73);
+var bindAff = /* #__PURE__ */ $lazy_bindAff(79);
+var monadAff = /* #__PURE__ */ $lazy_monadAff(82);
 var pure = /* #__PURE__ */ Control_Applicative.pure(applicativeAff);
 var cancelWith = function (aff) {
     return function (v) {
@@ -278,7 +287,7 @@ var killFiber = function (e) {
     return function (v) {
         return Control_Bind.bind(bindAff)(Effect_Class.liftEffect(monadEffectAff)(v.isSuspended))(function (suspended) {
             if (suspended) {
-                return liftEffect(void1(v.kill(e, Data_Function["const"](Control_Applicative.pure(Effect.applicativeEffect)(Data_Unit.unit)))));
+                return Data_Function.apply(liftEffect)(Data_Function.apply(void1)(v.kill(e, Data_Function["const"](Control_Applicative.pure(Effect.applicativeEffect)(Data_Unit.unit)))));
             };
             return $foreign.makeAff(function (k) {
                 return Data_Functor.map(Effect.functorEffect)(effectCanceler)(v.kill(e, k));
@@ -347,19 +356,19 @@ var monadErrorAff = {
 var attempt = /* #__PURE__ */ Control_Monad_Error_Class["try"](monadErrorAff);
 var runAff = function (k) {
     return function (aff) {
-        return launchAff(Control_Bind.bindFlipped(bindAff)(function ($66) {
+        return Data_Function.apply(launchAff)(Control_Bind.bindFlipped(bindAff)(function ($66) {
             return liftEffect(k($66));
         })(Control_Monad_Error_Class["try"](monadErrorAff)(aff)));
     };
 };
 var runAff_ = function (k) {
     return function (aff) {
-        return $$void(runAff(k)(aff));
+        return Data_Function.apply($$void)(runAff(k)(aff));
     };
 };
 var runSuspendedAff = function (k) {
     return function (aff) {
-        return launchSuspendedAff(Control_Bind.bindFlipped(bindAff)(function ($67) {
+        return Data_Function.apply(launchSuspendedAff)(Control_Bind.bindFlipped(bindAff)(function ($67) {
             return liftEffect(k($67));
         })(Control_Monad_Error_Class["try"](monadErrorAff)(aff)));
     };

@@ -156,12 +156,12 @@ var stripPrefix = function (dictEq) {
                 return function (input) {
                     var v1 = Data_List_Lazy_Types.step(prefix);
                     if (v1 instanceof Data_List_Lazy_Types.Nil) {
-                        return new Data_Maybe.Just(new Control_Monad_Rec_Class.Done(input));
+                        return Data_Function.apply(Data_Maybe.Just.create)(new Control_Monad_Rec_Class.Done(input));
                     };
                     if (v1 instanceof Data_List_Lazy_Types.Cons) {
                         var v2 = Data_List_Lazy_Types.step(input);
                         if (v2 instanceof Data_List_Lazy_Types.Cons && Data_Eq.eq(dictEq)(v1.value0)(v2.value0)) {
-                            return new Data_Maybe.Just(new Control_Monad_Rec_Class.Loop({
+                            return Data_Function.apply(Data_Maybe.Just.create)(new Control_Monad_Rec_Class.Loop({
                                 a: v1.value1,
                                 b: v2.value1
                             }));
@@ -216,7 +216,7 @@ var scanlLazy = function (f) {
                 };
                 if (v instanceof Data_List_Lazy_Types.Cons) {
                     var acc$prime = f(acc)(v.value0);
-                    return new Data_List_Lazy_Types.Cons(acc$prime, scanlLazy(f)(acc$prime)(v.value1));
+                    return Data_Function.apply(Data_List_Lazy_Types.Cons.create(acc$prime))(scanlLazy(f)(acc$prime)(v.value1));
                 };
                 throw new Error("Failed pattern match at Data.List.Lazy (line 776, column 5 - line 776, column 27): " + [ v.constructor.name ]);
             };

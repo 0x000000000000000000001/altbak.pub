@@ -36,9 +36,9 @@ var semigroupJoinWith = function (dictSemigroup) {
     return {
         append: function (v) {
             return function (v1) {
-                return function (j) {
+                return Data_Function.apply(JoinWith)(function (j) {
                     return Data_Semigroup.append(dictSemigroup)(v(j))(Data_Semigroup.append(dictSemigroup)(j)(v1(j)));
-                };
+                });
             };
         }
     };

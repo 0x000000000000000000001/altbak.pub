@@ -40,7 +40,7 @@ var mapDefault = function (dictFunctorWithIndex) {
 };
 var functorWithIndexTuple = {
     mapWithIndex: function (f) {
-        return map(f(Data_Unit.unit));
+        return Data_Function.apply(map)(f(Data_Unit.unit));
     },
     Functor0: function () {
         return Data_Tuple.functorTuple;
@@ -68,7 +68,7 @@ var functorWithIndexProduct = function (dictFunctorWithIndex) {
 };
 var functorWithIndexMultiplicative = {
     mapWithIndex: function (f) {
-        return map1(f(Data_Unit.unit));
+        return Data_Function.apply(map1)(f(Data_Unit.unit));
     },
     Functor0: function () {
         return Data_Monoid_Multiplicative.functorMultiplicative;
@@ -76,7 +76,7 @@ var functorWithIndexMultiplicative = {
 };
 var functorWithIndexMaybe = {
     mapWithIndex: function (f) {
-        return map2(f(Data_Unit.unit));
+        return Data_Function.apply(map2)(f(Data_Unit.unit));
     },
     Functor0: function () {
         return Data_Maybe.functorMaybe;
@@ -84,7 +84,7 @@ var functorWithIndexMaybe = {
 };
 var functorWithIndexLast = {
     mapWithIndex: function (f) {
-        return map3(f(Data_Unit.unit));
+        return Data_Function.apply(map3)(f(Data_Unit.unit));
     },
     Functor0: function () {
         return Data_Maybe_Last.functorLast;
@@ -102,7 +102,7 @@ var functorWithIndexIdentity = {
 };
 var functorWithIndexFirst = {
     mapWithIndex: function (f) {
-        return map4(f(Data_Unit.unit));
+        return Data_Function.apply(map4)(f(Data_Unit.unit));
     },
     Functor0: function () {
         return Data_Maybe_First.functorFirst;
@@ -110,7 +110,7 @@ var functorWithIndexFirst = {
 };
 var functorWithIndexEither = {
     mapWithIndex: function (f) {
-        return map5(f(Data_Unit.unit));
+        return Data_Function.apply(map5)(f(Data_Unit.unit));
     },
     Functor0: function () {
         return Data_Either.functorEither;
@@ -118,7 +118,7 @@ var functorWithIndexEither = {
 };
 var functorWithIndexDual = {
     mapWithIndex: function (f) {
-        return map6(f(Data_Unit.unit));
+        return Data_Function.apply(map6)(f(Data_Unit.unit));
     },
     Functor0: function () {
         return Data_Monoid_Dual.functorDual;
@@ -126,7 +126,7 @@ var functorWithIndexDual = {
 };
 var functorWithIndexDisj = {
     mapWithIndex: function (f) {
-        return map7(f(Data_Unit.unit));
+        return Data_Function.apply(map7)(f(Data_Unit.unit));
     },
     Functor0: function () {
         return Data_Monoid_Disj.functorDisj;
@@ -164,7 +164,7 @@ var functorWithIndexConst = {
 };
 var functorWithIndexConj = {
     mapWithIndex: function (f) {
-        return map8(f(Data_Unit.unit));
+        return Data_Function.apply(map8)(f(Data_Unit.unit));
     },
     Functor0: function () {
         return Data_Monoid_Conj.functorConj;
@@ -178,12 +178,12 @@ var functorWithIndexCompose = function (dictFunctorWithIndex) {
         return {
             mapWithIndex: function (f) {
                 return function (v) {
-                    return mapWithIndex(dictFunctorWithIndex)((function () {
+                    return Data_Function.apply(Data_Functor_Compose.Compose)(mapWithIndex(dictFunctorWithIndex)((function () {
                         var $57 = Data_Tuple.curry(f);
                         return function ($58) {
                             return mapWithIndex1($57($58));
                         };
-                    })())(v);
+                    })())(v));
                 };
             },
             Functor0: function () {
@@ -203,7 +203,7 @@ var functorWithIndexApp = function (dictFunctorWithIndex) {
     return {
         mapWithIndex: function (f) {
             return function (v) {
-                return mapWithIndex(dictFunctorWithIndex)(f)(v);
+                return Data_Function.apply(Data_Functor_App.App)(mapWithIndex(dictFunctorWithIndex)(f)(v));
             };
         },
         Functor0: function () {
@@ -213,7 +213,7 @@ var functorWithIndexApp = function (dictFunctorWithIndex) {
 };
 var functorWithIndexAdditive = {
     mapWithIndex: function (f) {
-        return map9(f(Data_Unit.unit));
+        return Data_Function.apply(map9)(f(Data_Unit.unit));
     },
     Functor0: function () {
         return Data_Monoid_Additive.functorAdditive;

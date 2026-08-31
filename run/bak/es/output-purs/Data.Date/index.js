@@ -211,7 +211,7 @@ var diff = function (dictDuration) {
     var toDuration = Data_Time_Duration.toDuration(dictDuration);
     return function (v) {
         return function (v1) {
-            return toDuration($foreign.calcDiff(v.value0, Data_Enum.fromEnum(Data_Date_Component.boundedEnumMonth)(v.value1), v.value2, v1.value0, Data_Enum.fromEnum(Data_Date_Component.boundedEnumMonth)(v1.value1), v1.value2));
+            return Data_Function.apply(toDuration)($foreign.calcDiff(v.value0, Data_Enum.fromEnum(Data_Date_Component.boundedEnumMonth)(v.value1), v.value2, v1.value0, Data_Enum.fromEnum(Data_Date_Component.boundedEnumMonth)(v1.value1), v1.value2));
         };
     };
 };

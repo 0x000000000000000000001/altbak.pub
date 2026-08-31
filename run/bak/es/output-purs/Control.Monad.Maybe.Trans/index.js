@@ -12,6 +12,7 @@ import * as Control_Monad_ST_Class from "../Control.Monad.ST.Class/index.js";
 import * as Control_Monad_State_Class from "../Control.Monad.State.Class/index.js";
 import * as Control_Monad_Trans_Class from "../Control.Monad.Trans.Class/index.js";
 import * as Control_Monad_Writer_Class from "../Control.Monad.Writer.Class/index.js";
+import * as Data_Function from "../Data.Function/index.js";
 import * as Data_Functor from "../Data.Functor/index.js";
 import * as Data_Maybe from "../Data.Maybe/index.js";
 import * as Data_Monoid from "../Data.Monoid/index.js";
@@ -139,12 +140,12 @@ var monadContMaybeT = function (dictMonadCont) {
     var monadMaybeT1 = monadMaybeT(dictMonadCont.Monad0());
     return {
         callCC: function (f) {
-            return Control_Monad_Cont_Class.callCC(dictMonadCont)(function (c) {
+            return Data_Function.apply(MaybeT)(Control_Monad_Cont_Class.callCC(dictMonadCont)(function (c) {
                 var v = f(function (a) {
-                    return c(new Data_Maybe.Just(a));
+                    return Data_Function.apply(MaybeT)(Data_Function.apply(c)(new Data_Maybe.Just(a)));
                 });
                 return v;
-            });
+            }));
         },
         Monad0: function () {
             return monadMaybeT1;
@@ -243,7 +244,7 @@ var monadWriterMaybeT = function (dictMonadWriter) {
     return {
         listen: mapMaybeT(function (m) {
             return Control_Bind.bind(Bind1)(Control_Monad_Writer_Class.listen(dictMonadWriter)(m))(function (v) {
-                return pure(Data_Functor.map(Data_Maybe.functorMaybe)(function (r) {
+                return Data_Function.apply(pure)(Data_Functor.map(Data_Maybe.functorMaybe)(function (r) {
                     return new Data_Tuple.Tuple(r, v.value1);
                 })(v.value0));
             });
@@ -286,10 +287,10 @@ var monadErrorMaybeT = function (dictMonadError) {
     return {
         catchError: function (v) {
             return function (h) {
-                return Control_Monad_Error_Class.catchError(dictMonadError)(v)(function (a) {
+                return Data_Function.apply(MaybeT)(Control_Monad_Error_Class.catchError(dictMonadError)(v)(function (a) {
                     var v1 = h(a);
                     return v1;
-                });
+                }));
             };
         },
         MonadThrow0: function () {

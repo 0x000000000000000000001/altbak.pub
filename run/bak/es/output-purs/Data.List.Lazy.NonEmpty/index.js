@@ -38,9 +38,9 @@ var tail = function (v) {
 };
 var singleton = /* #__PURE__ */ Control_Applicative.pure(Data_List_Lazy_Types.applicativeNonEmptyList);
 var repeat = function (x) {
-    return Data_Lazy.defer(function (v) {
+    return Data_Function.apply(Data_List_Lazy_Types.NonEmptyList)(Data_Lazy.defer(function (v) {
         return new Data_NonEmpty.NonEmpty(x, Data_List_Lazy.repeat(x));
-    });
+    }));
 };
 var length = function (v) {
     var v1 = Data_Lazy.force(v);
@@ -52,9 +52,9 @@ var last = function (v) {
 };
 var iterate = function (f) {
     return function (x) {
-        return Data_Lazy.defer(function (v) {
+        return Data_Function.apply(Data_List_Lazy_Types.NonEmptyList)(Data_Lazy.defer(function (v) {
             return new Data_NonEmpty.NonEmpty(x, Data_List_Lazy.iterate(f)(f(x)));
-        });
+        }));
     };
 };
 var init = function (v) {

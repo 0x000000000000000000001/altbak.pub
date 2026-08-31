@@ -4,6 +4,7 @@ import * as Control_Monad_RWS_Trans from "../Control.Monad.RWS.Trans/index.js";
 import * as Control_Monad_Reader_Class from "../Control.Monad.Reader.Class/index.js";
 import * as Control_Monad_State_Class from "../Control.Monad.State.Class/index.js";
 import * as Control_Monad_Writer_Class from "../Control.Monad.Writer.Class/index.js";
+import * as Data_Function from "../Data.Function/index.js";
 import * as Data_Identity from "../Data.Identity/index.js";
 import * as Data_Newtype from "../Data.Newtype/index.js";
 var pure = /* #__PURE__ */ Control_Applicative.pure(Data_Identity.applicativeIdentity);
@@ -14,7 +15,7 @@ var withRWS = Control_Monad_RWS_Trans.withRWST;
 var rws = function (f) {
     return function (r) {
         return function (s) {
-            return pure(f(r)(s));
+            return Data_Function.apply(pure)(f(r)(s));
         };
     };
 };
@@ -34,14 +35,14 @@ var mapRWS = function (f) {
 var execRWS = function (m) {
     return function (r) {
         return function (s) {
-            return unwrap1(Control_Monad_RWS_Trans.execRWST(Data_Identity.monadIdentity)(m)(r)(s));
+            return Data_Function.apply(unwrap1)(Control_Monad_RWS_Trans.execRWST(Data_Identity.monadIdentity)(m)(r)(s));
         };
     };
 };
 var evalRWS = function (m) {
     return function (r) {
         return function (s) {
-            return unwrap2(Control_Monad_RWS_Trans.evalRWST(Data_Identity.monadIdentity)(m)(r)(s));
+            return Data_Function.apply(unwrap2)(Control_Monad_RWS_Trans.evalRWST(Data_Identity.monadIdentity)(m)(r)(s));
         };
     };
 };

@@ -2,6 +2,7 @@
 import * as Control_Lazy from "../Control.Lazy/index.js";
 import * as Data_Bounded from "../Data.Bounded/index.js";
 import * as Data_Eq from "../Data.Eq/index.js";
+import * as Data_Function from "../Data.Function/index.js";
 import * as Data_Functor_Invariant from "../Data.Functor.Invariant/index.js";
 import * as Data_Generic_Rep from "../Data.Generic.Rep/index.js";
 import * as Data_HeytingAlgebra from "../Data.HeytingAlgebra/index.js";
@@ -162,9 +163,9 @@ var lazyTuple = function (dictLazy) {
         var defer1 = Control_Lazy.defer(dictLazy1);
         return {
             defer: function (f) {
-                return new Tuple(defer(function (v) {
+                return new Tuple(Data_Function.apply(defer)(function (v) {
                     return fst(f(Data_Unit.unit));
-                }), defer1(function (v) {
+                }), Data_Function.apply(defer1)(function (v) {
                     return snd(f(Data_Unit.unit));
                 }));
             }

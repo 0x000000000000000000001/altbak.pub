@@ -49,14 +49,14 @@ var ListT = function (x) {
 };
 var wrapLazy = function (dictApplicative) {
     return function (v) {
-        return Control_Applicative.pure(dictApplicative)(new Skip(v));
+        return Data_Function.apply(ListT)(Control_Applicative.pure(dictApplicative)(new Skip(v)));
     };
 };
 var wrapEffect = function (dictFunctor) {
     return function (v) {
-        return Data_Functor.map(dictFunctor)(function ($279) {
+        return Data_Function.apply(ListT)(Data_Functor.map(dictFunctor)(function ($279) {
             return Skip.create(Data_Lazy.defer(Data_Function["const"]($279)));
-        })(v);
+        })(v));
     };
 };
 var unfold = function (dictMonad) {
@@ -74,7 +74,7 @@ var unfold = function (dictMonad) {
                 };
                 throw new Error("Failed pattern match at Control.Monad.List.Trans (line 130, column 3 - line 130, column 60): " + [ v.constructor.name ]);
             };
-            return Data_Functor.map(Functor0)(g)(f(z));
+            return Data_Function.apply(ListT)(Data_Functor.map(Functor0)(g)(f(z)));
         };
     };
 };
@@ -85,7 +85,7 @@ var uncons = function (dictMonad) {
     return function (v) {
         var g = function (v1) {
             if (v1 instanceof Yield) {
-                return pure(new Data_Maybe.Just(new Data_Tuple.Tuple(v1.value0, Data_Lazy.force(v1.value1))));
+                return Data_Function.apply(pure)(Data_Function.apply(Data_Maybe.Just.create)(new Data_Tuple.Tuple(v1.value0, Data_Lazy.force(v1.value1))));
             };
             if (v1 instanceof Skip) {
                 return uncons(dictMonad)(Data_Lazy.force(v1.value0));
@@ -107,7 +107,7 @@ var tail = function (dictMonad) {
 var stepMap = function (dictFunctor) {
     return function (f) {
         return function (v) {
-            return Data_Functor.map(dictFunctor)(f)(v);
+            return Data_Function.apply(ListT)(Data_Functor.map(dictFunctor)(f)(v));
         };
     };
 };
@@ -123,7 +123,7 @@ var takeWhile = function (dictApplicative) {
                 return Done.value;
             };
             if (v instanceof Skip) {
-                return new Skip(Data_Functor.map(Data_Lazy.functorLazy)(takeWhile(dictApplicative)(f))(v.value0));
+                return Data_Function.apply(Skip.create)(Data_Functor.map(Data_Lazy.functorLazy)(takeWhile(dictApplicative)(f))(v.value0));
             };
             if (v instanceof Done) {
                 return Done.value;
@@ -142,10 +142,10 @@ var scanl = function (dictMonad) {
                     var h = function (v1) {
                         if (v1 instanceof Yield) {
                             var b$prime$prime = f(v.value0)(v1.value0);
-                            return new Data_Maybe.Just(new Data_Tuple.Tuple(new Data_Tuple.Tuple(b$prime$prime, Data_Lazy.force(v1.value1)), v.value0));
+                            return Data_Function.apply(Data_Maybe.Just.create)(new Data_Tuple.Tuple(new Data_Tuple.Tuple(b$prime$prime, Data_Lazy.force(v1.value1)), v.value0));
                         };
                         if (v1 instanceof Skip) {
-                            return new Data_Maybe.Just(new Data_Tuple.Tuple(new Data_Tuple.Tuple(v.value0, Data_Lazy.force(v1.value0)), v.value0));
+                            return Data_Function.apply(Data_Maybe.Just.create)(new Data_Tuple.Tuple(new Data_Tuple.Tuple(v.value0, Data_Lazy.force(v1.value0)), v.value0));
                         };
                         if (v1 instanceof Done) {
                             return Data_Maybe.Nothing.value;
@@ -162,19 +162,19 @@ var scanl = function (dictMonad) {
 var prepend$prime = function (dictApplicative) {
     return function (h) {
         return function (t) {
-            return Control_Applicative.pure(dictApplicative)(new Yield(h, t));
+            return Data_Function.apply(ListT)(Control_Applicative.pure(dictApplicative)(new Yield(h, t)));
         };
     };
 };
 var prepend = function (dictApplicative) {
     return function (h) {
         return function (t) {
-            return prepend$prime(dictApplicative)(h)(Data_Lazy.defer(Data_Function["const"](t)));
+            return prepend$prime(dictApplicative)(h)(Data_Function.apply(Data_Lazy.defer)(Data_Function["const"](t)));
         };
     };
 };
 var nil = function (dictApplicative) {
-    return Control_Applicative.pure(dictApplicative)(Done.value);
+    return Data_Function.apply(ListT)(Control_Applicative.pure(dictApplicative)(Done.value));
 };
 var singleton = function (dictApplicative) {
     var nil1 = nil(dictApplicative);
@@ -245,7 +245,7 @@ var zipWith = function (dictMonad) {
     return function (f) {
         var g = function (a) {
             return function (b) {
-                return pure(f(a)(b));
+                return Data_Function.apply(pure)(f(a)(b));
             };
         };
         return zipWith$prime(dictMonad)(g);
@@ -263,7 +263,7 @@ var mapMaybe = function (dictFunctor) {
                 return Data_Maybe.fromMaybe(Skip.create)(Data_Functor.map(Data_Maybe.functorMaybe)(Yield.create)(f(v.value0)))(Data_Functor.map(Data_Lazy.functorLazy)(mapMaybe(dictFunctor)(f))(v.value1));
             };
             if (v instanceof Skip) {
-                return new Skip(Data_Functor.map(Data_Lazy.functorLazy)(mapMaybe(dictFunctor)(f))(v.value0));
+                return Data_Function.apply(Skip.create)(Data_Functor.map(Data_Lazy.functorLazy)(mapMaybe(dictFunctor)(f))(v.value0));
             };
             if (v instanceof Done) {
                 return Done.value;
@@ -278,7 +278,7 @@ var iterate = function (dictMonad) {
     return function (f) {
         return function (a) {
             var g = function (x) {
-                return pure(new Data_Maybe.Just(new Data_Tuple.Tuple(f(x), x)));
+                return Data_Function.apply(pure)(new Data_Maybe.Just(new Data_Tuple.Tuple(f(x), x)));
             };
             return unfold(dictMonad)(g)(a);
         };
@@ -315,9 +315,9 @@ var functorListT = function (dictFunctor) {
 var fromEffect = function (dictApplicative) {
     var Functor0 = (dictApplicative.Apply0()).Functor0();
     return function (fa) {
-        return Data_Functor.map(Functor0)(Data_Function.flip(Yield.create)(Data_Lazy.defer(function (v) {
+        return Data_Function.apply(ListT)(Data_Functor.map(Functor0)(Data_Function.flip(Yield.create)(Data_Function.apply(Data_Lazy.defer)(function (v) {
             return nil(dictApplicative);
-        })))(fa);
+        })))(fa));
     };
 };
 var monadTransListT = {
@@ -473,7 +473,7 @@ var dropWhile = function (dictApplicative) {
                 return new Yield(v.value0, v.value1);
             };
             if (v instanceof Skip) {
-                return new Skip(Data_Functor.map(Data_Lazy.functorLazy)(dropWhile(dictApplicative)(f))(v.value0));
+                return Data_Function.apply(Skip.create)(Data_Functor.map(Data_Lazy.functorLazy)(dropWhile(dictApplicative)(f))(v.value0));
             };
             if (v instanceof Done) {
                 return Done.value;
@@ -510,7 +510,7 @@ var cons = function (dictApplicative) {
     var pure = Control_Applicative.pure(dictApplicative);
     return function (lh) {
         return function (t) {
-            return pure(new Yield(Data_Lazy.force(lh), t));
+            return Data_Function.apply(ListT)(Data_Function.apply(pure)(new Yield(Data_Lazy.force(lh), t)));
         };
     };
 };
@@ -581,7 +581,7 @@ var concat = function (dictApplicative) {
                     })(v.value0));
                 };
                 if (v instanceof Done) {
-                    return new Skip(Data_Lazy.defer(Data_Function["const"](y)));
+                    return new Skip(Data_Function.apply(Data_Lazy.defer)(Data_Function["const"](y)));
                 };
                 throw new Error("Failed pattern match at Control.Monad.List.Trans (line 106, column 3 - line 106, column 43): " + [ v.constructor.name ]);
             };

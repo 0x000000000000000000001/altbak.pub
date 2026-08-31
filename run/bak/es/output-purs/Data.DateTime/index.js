@@ -99,7 +99,7 @@ var diff = function (dictDuration) {
     var toDuration = Data_Time_Duration.toDuration(dictDuration);
     return function (dt1) {
         return function (dt2) {
-            return toDuration($foreign.calcDiff(toRecord(dt1), toRecord(dt2)));
+            return Data_Function.apply(toDuration)($foreign.calcDiff(toRecord(dt1), toRecord(dt2)));
         };
     };
 };

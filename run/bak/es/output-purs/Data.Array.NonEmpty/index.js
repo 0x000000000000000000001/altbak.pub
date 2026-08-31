@@ -14,6 +14,7 @@ import * as Data_Semigroup from "../Data.Semigroup/index.js";
 import * as Data_Semigroup_Foldable from "../Data.Semigroup.Foldable/index.js";
 import * as Data_Tuple from "../Data.Tuple/index.js";
 import * as Data_Unfoldable1 from "../Data.Unfoldable1/index.js";
+import * as Partial_Unsafe from "../Partial.Unsafe/index.js";
 import * as Safe_Coerce from "../Safe.Coerce/index.js";
 import * as Unsafe_Coerce from "../Unsafe.Coerce/index.js";
 var intercalate1 = /* #__PURE__ */ Data_Semigroup_Foldable.intercalate(Data_Array_NonEmpty_Internal.foldable1NonEmptyArray);
@@ -71,13 +72,13 @@ var updateAt = function (i) {
 };
 var zip = function (xs) {
     return function (ys) {
-        return unsafeFromArray(Data_Array.zip(toArray(xs))(toArray(ys)));
+        return Data_Function.apply(unsafeFromArray)(Data_Array.zip(toArray(xs))(toArray(ys)));
     };
 };
 var zipWith = function (f) {
     return function (xs) {
         return function (ys) {
-            return unsafeFromArray(Data_Array.zipWith(f)(toArray(xs))(toArray(ys)));
+            return Data_Function.apply(unsafeFromArray)(Data_Array.zipWith(f)(toArray(xs))(toArray(ys)));
         };
     };
 };
@@ -85,14 +86,14 @@ var zipWithA = function (dictApplicative) {
     return function (f) {
         return function (xs) {
             return function (ys) {
-                return unsafeFromArrayF(Data_Array.zipWithA(dictApplicative)(f)(toArray(xs))(toArray(ys)));
+                return Data_Function.apply(unsafeFromArrayF)(Data_Array.zipWithA(dictApplicative)(f)(toArray(xs))(toArray(ys)));
             };
         };
     };
 };
 var splitAt = function (i) {
     return function (xs) {
-        return Data_Array.splitAt(i)(toArray(xs));
+        return Data_Function.apply(Data_Array.splitAt(i))(toArray(xs));
     };
 };
 var some = function (dictAlternative) {
@@ -106,12 +107,12 @@ var some = function (dictAlternative) {
 };
 var snoc$prime = function (xs) {
     return function (x) {
-        return unsafeFromArray(Data_Array.snoc(xs)(x));
+        return Data_Function.apply(unsafeFromArray)(Data_Array.snoc(xs)(x));
     };
 };
 var snoc = function (xs) {
     return function (x) {
-        return unsafeFromArray(Data_Array.snoc(toArray(xs))(x));
+        return Data_Function.apply(unsafeFromArray)(Data_Array.snoc(toArray(xs))(x));
     };
 };
 var singleton = function ($88) {
@@ -119,17 +120,17 @@ var singleton = function ($88) {
 };
 var replicate = function (i) {
     return function (x) {
-        return unsafeFromArray(Data_Array.replicate(Data_Ord.max(Data_Ord.ordInt)(1)(i))(x));
+        return Data_Function.apply(unsafeFromArray)(Data_Array.replicate(Data_Ord.max(Data_Ord.ordInt)(1)(i))(x));
     };
 };
 var range = function (x) {
     return function (y) {
-        return unsafeFromArray(Data_Array.range(x)(y));
+        return Data_Function.apply(unsafeFromArray)(Data_Array.range(x)(y));
     };
 };
 var prependArray = function (xs) {
     return function (ys) {
-        return unsafeFromArray(Data_Semigroup.append(Data_Semigroup.semigroupArray)(xs)(toArray(ys)));
+        return Data_Function.apply(unsafeFromArray)(Data_Semigroup.append(Data_Semigroup.semigroupArray)(xs)(toArray(ys)));
     };
 };
 var modifyAt = function (i) {
@@ -208,12 +209,12 @@ var fold1 = function (dictSemigroup) {
 var difference$prime = function (dictEq) {
     var difference1 = Data_Array.difference(dictEq);
     return function (xs) {
-        return difference1(toArray(xs));
+        return Data_Function.apply(difference1)(toArray(xs));
     };
 };
 var cons$prime = function (x) {
     return function (xs) {
-        return unsafeFromArray(Data_Array.cons(x)(xs));
+        return Data_Function.apply(unsafeFromArray)(Data_Array.cons(x)(xs));
     };
 };
 var fromNonEmpty = function (v) {
@@ -228,7 +229,7 @@ var concat = /* #__PURE__ */ (function () {
 })();
 var appendArray = function (xs) {
     return function (ys) {
-        return unsafeFromArray(Data_Semigroup.append(Data_Semigroup.semigroupArray)(toArray(xs))(ys));
+        return Data_Function.apply(unsafeFromArray)(Data_Semigroup.append(Data_Semigroup.semigroupArray)(toArray(xs))(ys));
     };
 };
 var alterAt = function (i) {
@@ -240,9 +241,11 @@ var alterAt = function (i) {
     };
 };
 var adaptMaybe = function (f) {
-    return function ($105) {
-        return fromJust(f(toArray($105)));
-    };
+    return Data_Function.apply(Partial_Unsafe.unsafePartial)(function () {
+        return function ($105) {
+            return fromJust(f(toArray($105)));
+        };
+    });
 };
 var head = /* #__PURE__ */ adaptMaybe(Data_Array.head);
 var init = /* #__PURE__ */ adaptMaybe(Data_Array.init);
@@ -261,117 +264,117 @@ var adaptAny = function (f) {
     };
 };
 var all = function (p) {
-    return adaptAny(Data_Array.all(p));
+    return Data_Function.apply(adaptAny)(Data_Array.all(p));
 };
 var any = function (p) {
-    return adaptAny(Data_Array.any(p));
+    return Data_Function.apply(adaptAny)(Data_Array.any(p));
 };
 var catMaybes = /* #__PURE__ */ adaptAny(Data_Array.catMaybes);
 var $$delete = function (dictEq) {
     return function (x) {
-        return adaptAny(Data_Array["delete"](dictEq)(x));
+        return Data_Function.apply(adaptAny)(Data_Array["delete"](dictEq)(x));
     };
 };
 var deleteAt = function (i) {
-    return adaptAny(Data_Array.deleteAt(i));
+    return Data_Function.apply(adaptAny)(Data_Array.deleteAt(i));
 };
 var deleteBy = function (f) {
     return function (x) {
-        return adaptAny(Data_Array.deleteBy(f)(x));
+        return Data_Function.apply(adaptAny)(Data_Array.deleteBy(f)(x));
     };
 };
 var difference = function (dictEq) {
     return function (xs) {
-        return adaptAny(difference$prime(dictEq)(xs));
+        return Data_Function.apply(adaptAny)(difference$prime(dictEq)(xs));
     };
 };
 var drop = function (i) {
-    return adaptAny(Data_Array.drop(i));
+    return Data_Function.apply(adaptAny)(Data_Array.drop(i));
 };
 var dropEnd = function (i) {
-    return adaptAny(Data_Array.dropEnd(i));
+    return Data_Function.apply(adaptAny)(Data_Array.dropEnd(i));
 };
 var dropWhile = function (f) {
-    return adaptAny(Data_Array.dropWhile(f));
+    return Data_Function.apply(adaptAny)(Data_Array.dropWhile(f));
 };
 var elem = function (dictEq) {
     return function (x) {
-        return adaptAny(Data_Array.elem(dictEq)(x));
+        return Data_Function.apply(adaptAny)(Data_Array.elem(dictEq)(x));
     };
 };
 var elemIndex = function (dictEq) {
     return function (x) {
-        return adaptAny(Data_Array.elemIndex(dictEq)(x));
+        return Data_Function.apply(adaptAny)(Data_Array.elemIndex(dictEq)(x));
     };
 };
 var elemLastIndex = function (dictEq) {
     return function (x) {
-        return adaptAny(Data_Array.elemLastIndex(dictEq)(x));
+        return Data_Function.apply(adaptAny)(Data_Array.elemLastIndex(dictEq)(x));
     };
 };
 var filter = function (f) {
-    return adaptAny(Data_Array.filter(f));
+    return Data_Function.apply(adaptAny)(Data_Array.filter(f));
 };
 var filterA = function (dictApplicative) {
     return function (f) {
-        return adaptAny(Data_Array.filterA(dictApplicative)(f));
+        return Data_Function.apply(adaptAny)(Data_Array.filterA(dictApplicative)(f));
     };
 };
 var find = function (p) {
-    return adaptAny(Data_Array.find(p));
+    return Data_Function.apply(adaptAny)(Data_Array.find(p));
 };
 var findIndex = function (p) {
-    return adaptAny(Data_Array.findIndex(p));
+    return Data_Function.apply(adaptAny)(Data_Array.findIndex(p));
 };
 var findLastIndex = function (x) {
-    return adaptAny(Data_Array.findLastIndex(x));
+    return Data_Function.apply(adaptAny)(Data_Array.findLastIndex(x));
 };
 var findMap = function (p) {
-    return adaptAny(Data_Array.findMap(p));
+    return Data_Function.apply(adaptAny)(Data_Array.findMap(p));
 };
 var foldM = function (dictMonad) {
     return function (f) {
         return function (acc) {
-            return adaptAny(Data_Array.foldM(dictMonad)(f)(acc));
+            return Data_Function.apply(adaptAny)(Data_Array.foldM(dictMonad)(f)(acc));
         };
     };
 };
 var foldRecM = function (dictMonadRec) {
     return function (f) {
         return function (acc) {
-            return adaptAny(Data_Array.foldRecM(dictMonadRec)(f)(acc));
+            return Data_Function.apply(adaptAny)(Data_Array.foldRecM(dictMonadRec)(f)(acc));
         };
     };
 };
 var index = /* #__PURE__ */ adaptAny(Data_Array.index);
 var length = /* #__PURE__ */ adaptAny(Data_Array.length);
 var mapMaybe = function (f) {
-    return adaptAny(Data_Array.mapMaybe(f));
+    return Data_Function.apply(adaptAny)(Data_Array.mapMaybe(f));
 };
 var notElem = function (dictEq) {
     return function (x) {
-        return adaptAny(Data_Array.notElem(dictEq)(x));
+        return Data_Function.apply(adaptAny)(Data_Array.notElem(dictEq)(x));
     };
 };
 var partition = function (f) {
-    return adaptAny(Data_Array.partition(f));
+    return Data_Function.apply(adaptAny)(Data_Array.partition(f));
 };
 var slice = function (start) {
     return function (end) {
-        return adaptAny(Data_Array.slice(start)(end));
+        return Data_Function.apply(adaptAny)(Data_Array.slice(start)(end));
     };
 };
 var span = function (f) {
-    return adaptAny(Data_Array.span(f));
+    return Data_Function.apply(adaptAny)(Data_Array.span(f));
 };
 var take = function (i) {
-    return adaptAny(Data_Array.take(i));
+    return Data_Function.apply(adaptAny)(Data_Array.take(i));
 };
 var takeEnd = function (i) {
-    return adaptAny(Data_Array.takeEnd(i));
+    return Data_Function.apply(adaptAny)(Data_Array.takeEnd(i));
 };
 var takeWhile = function (f) {
-    return adaptAny(Data_Array.takeWhile(f));
+    return Data_Function.apply(adaptAny)(Data_Array.takeWhile(f));
 };
 var toUnfoldable = function (dictUnfoldable) {
     return adaptAny(Data_Array.toUnfoldable(dictUnfoldable));
@@ -383,40 +386,40 @@ var unsafeAdapt = function (f) {
     };
 };
 var cons = function (x) {
-    return unsafeAdapt(Data_Array.cons(x));
+    return Data_Function.apply(unsafeAdapt)(Data_Array.cons(x));
 };
 var group = function (dictEq) {
-    return unsafeAdapt(Data_Array.group(dictEq));
+    return Data_Function.apply(unsafeAdapt)(Data_Array.group(dictEq));
 };
 var groupAllBy = function (op) {
-    return unsafeAdapt(Data_Array.groupAllBy(op));
+    return Data_Function.apply(unsafeAdapt)(Data_Array.groupAllBy(op));
 };
 var groupAll = function (dictOrd) {
     return groupAllBy(Data_Ord.compare(dictOrd));
 };
 var groupBy = function (op) {
-    return unsafeAdapt(Data_Array.groupBy(op));
+    return Data_Function.apply(unsafeAdapt)(Data_Array.groupBy(op));
 };
 var insert = function (dictOrd) {
     return function (x) {
-        return unsafeAdapt(Data_Array.insert(dictOrd)(x));
+        return Data_Function.apply(unsafeAdapt)(Data_Array.insert(dictOrd)(x));
     };
 };
 var insertBy = function (f) {
     return function (x) {
-        return unsafeAdapt(Data_Array.insertBy(f)(x));
+        return Data_Function.apply(unsafeAdapt)(Data_Array.insertBy(f)(x));
     };
 };
 var intersperse = function (x) {
-    return unsafeAdapt(Data_Array.intersperse(x));
+    return Data_Function.apply(unsafeAdapt)(Data_Array.intersperse(x));
 };
 var mapWithIndex = function (f) {
-    return unsafeAdapt(Data_Array.mapWithIndex(f));
+    return Data_Function.apply(unsafeAdapt)(Data_Array.mapWithIndex(f));
 };
 var modifyAtIndices = function (dictFoldable) {
     return function (is) {
         return function (f) {
-            return unsafeAdapt(Data_Array.modifyAtIndices(dictFoldable)(is)(f));
+            return Data_Function.apply(unsafeAdapt)(Data_Array.modifyAtIndices(dictFoldable)(is)(f));
         };
     };
 };
@@ -424,10 +427,10 @@ var nub = function (dictOrd) {
     return unsafeAdapt(Data_Array.nub(dictOrd));
 };
 var nubBy = function (f) {
-    return unsafeAdapt(Data_Array.nubBy(f));
+    return Data_Function.apply(unsafeAdapt)(Data_Array.nubBy(f));
 };
 var nubByEq = function (f) {
-    return unsafeAdapt(Data_Array.nubByEq(f));
+    return Data_Function.apply(unsafeAdapt)(Data_Array.nubByEq(f));
 };
 var nubEq = function (dictEq) {
     return unsafeAdapt(Data_Array.nubEq(dictEq));
@@ -435,28 +438,28 @@ var nubEq = function (dictEq) {
 var reverse = /* #__PURE__ */ unsafeAdapt(Data_Array.reverse);
 var scanl = function (f) {
     return function (x) {
-        return unsafeAdapt(Data_Array.scanl(f)(x));
+        return Data_Function.apply(unsafeAdapt)(Data_Array.scanl(f)(x));
     };
 };
 var scanr = function (f) {
     return function (x) {
-        return unsafeAdapt(Data_Array.scanr(f)(x));
+        return Data_Function.apply(unsafeAdapt)(Data_Array.scanr(f)(x));
     };
 };
 var sort = function (dictOrd) {
     return unsafeAdapt(Data_Array.sort(dictOrd));
 };
 var sortBy = function (f) {
-    return unsafeAdapt(Data_Array.sortBy(f));
+    return Data_Function.apply(unsafeAdapt)(Data_Array.sortBy(f));
 };
 var sortWith = function (dictOrd) {
     return function (f) {
-        return unsafeAdapt(Data_Array.sortWith(dictOrd)(f));
+        return Data_Function.apply(unsafeAdapt)(Data_Array.sortWith(dictOrd)(f));
     };
 };
 var updateAtIndices = function (dictFoldable) {
     return function (pairs) {
-        return unsafeAdapt(Data_Array.updateAtIndices(dictFoldable)(pairs));
+        return Data_Function.apply(unsafeAdapt)(Data_Array.updateAtIndices(dictFoldable)(pairs));
     };
 };
 var unsafeIndex = function () {
@@ -466,7 +469,7 @@ var toUnfoldable1 = function (dictUnfoldable1) {
     return function (xs) {
         var len = length(xs);
         var f = function (i) {
-            return new Data_Tuple.Tuple(unsafeIndex()(xs)(i), (function () {
+            return Data_Function.apply(Data_Tuple.Tuple.create(unsafeIndex()(xs)(i)))((function () {
                 var $74 = i < (len - 1 | 0);
                 if ($74) {
                     return new Data_Maybe.Just(i + 1 | 0);

@@ -289,7 +289,7 @@ var boundedCodePoint = {
         return ordCodePoint;
     }
 };
-var boundedEnumCodePoint = /* #__PURE__ */ (function () {
+var $lazy_boundedEnumCodePoint = /* #__PURE__ */ $runtime_lazy("boundedEnumCodePoint", "Data.String.CodePoints", function () {
     return {
         cardinality: 1114111 + 1 | 0,
         fromEnum: function (v) {
@@ -311,16 +311,17 @@ var boundedEnumCodePoint = /* #__PURE__ */ (function () {
             return $lazy_enumCodePoint(0);
         }
     };
-})();
+});
 var $lazy_enumCodePoint = /* #__PURE__ */ $runtime_lazy("enumCodePoint", "Data.String.CodePoints", function () {
     return {
-        succ: Data_Enum.defaultSucc(Data_Enum.toEnum(boundedEnumCodePoint))(Data_Enum.fromEnum(boundedEnumCodePoint)),
-        pred: Data_Enum.defaultPred(Data_Enum.toEnum(boundedEnumCodePoint))(Data_Enum.fromEnum(boundedEnumCodePoint)),
+        succ: Data_Enum.defaultSucc(Data_Enum.toEnum($lazy_boundedEnumCodePoint(0)))(Data_Enum.fromEnum($lazy_boundedEnumCodePoint(0))),
+        pred: Data_Enum.defaultPred(Data_Enum.toEnum($lazy_boundedEnumCodePoint(0)))(Data_Enum.fromEnum($lazy_boundedEnumCodePoint(0))),
         Ord0: function () {
             return ordCodePoint;
         }
     };
 });
+var boundedEnumCodePoint = /* #__PURE__ */ $lazy_boundedEnumCodePoint(63);
 var enumCodePoint = /* #__PURE__ */ $lazy_enumCodePoint(59);
 export {
     codePointFromChar,

@@ -5,6 +5,7 @@ import * as Control_Monad_Gen_Class from "../Control.Monad.Gen.Class/index.js";
 import * as Control_Monad_Rec_Class from "../Control.Monad.Rec.Class/index.js";
 import * as Data_Boolean from "../Data.Boolean/index.js";
 import * as Data_Foldable from "../Data.Foldable/index.js";
+import * as Data_Function from "../Data.Function/index.js";
 import * as Data_Functor from "../Data.Functor/index.js";
 import * as Data_Maybe from "../Data.Maybe/index.js";
 import * as Data_Monoid_Additive from "../Data.Monoid.Additive/index.js";
@@ -57,11 +58,11 @@ var unfoldable = function (dictMonadRec) {
                 };
                 var loopGen = function (v) {
                     if (v.value1 <= 0) {
-                        return pure(new Control_Monad_Rec_Class.Done(v.value0));
+                        return Data_Function.apply(pure)(new Control_Monad_Rec_Class.Done(v.value0));
                     };
                     if (Data_Boolean.otherwise) {
                         return Control_Bind.bind(Bind1)(gen)(function (x) {
-                            return pure(new Control_Monad_Rec_Class.Loop(new Data_Tuple.Tuple(new Cons(x, v.value0), v.value1 - 1 | 0)));
+                            return Data_Function.apply(pure)(new Control_Monad_Rec_Class.Loop(new Data_Tuple.Tuple(new Cons(x, v.value0), v.value1 - 1 | 0)));
                         });
                     };
                     throw new Error("Failed pattern match at Control.Monad.Gen (line 94, column 3 - line 94, column 68): " + [ v.constructor.name ]);
@@ -190,7 +191,7 @@ var suchThat = function (dictMonadRec) {
         var Functor0 = (((dictMonadGen.Monad0()).Bind1()).Apply0()).Functor0();
         return function (gen) {
             return function (pred) {
-                return filtered2(Data_Functor.mapFlipped(Functor0)(gen)(function (a) {
+                return Data_Function.apply(filtered2)(Data_Functor.mapFlipped(Functor0)(gen)(function (a) {
                     var $89 = pred(a);
                     if ($89) {
                         return new Data_Maybe.Just(a);
@@ -209,7 +210,7 @@ var elements = function (dictMonadGen) {
         var Foldable0 = dictFoldable1.Foldable0();
         return function (xs) {
             return Control_Bind.bind(Bind1)(Control_Monad_Gen_Class.chooseInt(dictMonadGen)(0)(Data_Foldable.length(Foldable0)(Data_Semiring.semiringInt)(xs) - 1 | 0))(function (n) {
-                return pure(fromIndex(dictFoldable1)(n)(xs));
+                return Data_Function.apply(pure)(fromIndex(dictFoldable1)(n)(xs));
             });
         };
     };

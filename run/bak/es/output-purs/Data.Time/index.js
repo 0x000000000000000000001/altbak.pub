@@ -3,6 +3,7 @@ import * as Control_Apply from "../Control.Apply/index.js";
 import * as Data_Bounded from "../Data.Bounded/index.js";
 import * as Data_Enum from "../Data.Enum/index.js";
 import * as Data_Eq from "../Data.Eq/index.js";
+import * as Data_Function from "../Data.Function/index.js";
 import * as Data_Functor from "../Data.Functor/index.js";
 import * as Data_Int from "../Data.Int/index.js";
 import * as Data_Maybe from "../Data.Maybe/index.js";
@@ -72,13 +73,13 @@ var millisToTime = function (v) {
     var minutes = Data_Number.floor((v - hours * 3600000.0) / 60000.0);
     var seconds = Data_Number.floor((v - (hours * 3600000.0 + minutes * 60000.0)) / 1000.0);
     var milliseconds = v - (hours * 3600000.0 + minutes * 60000.0 + seconds * 1000.0);
-    return Data_Maybe.fromJust()(Control_Apply.apply(Data_Maybe.applyMaybe)(Control_Apply.apply(Data_Maybe.applyMaybe)(Control_Apply.apply(Data_Maybe.applyMaybe)(Data_Functor.map(Data_Maybe.functorMaybe)(Time.create)(Data_Enum.toEnum(Data_Time_Component.boundedEnumHour)(Data_Int.floor(hours))))(Data_Enum.toEnum(Data_Time_Component.boundedEnumMinute)(Data_Int.floor(minutes))))(Data_Enum.toEnum(Data_Time_Component.boundedEnumSecond)(Data_Int.floor(seconds))))(Data_Enum.toEnum(Data_Time_Component.boundedEnumMillisecond)(Data_Int.floor(milliseconds))));
+    return Data_Function.apply(Data_Maybe.fromJust())(Control_Apply.apply(Data_Maybe.applyMaybe)(Control_Apply.apply(Data_Maybe.applyMaybe)(Control_Apply.apply(Data_Maybe.applyMaybe)(Data_Functor.map(Data_Maybe.functorMaybe)(Time.create)(Data_Enum.toEnum(Data_Time_Component.boundedEnumHour)(Data_Int.floor(hours))))(Data_Enum.toEnum(Data_Time_Component.boundedEnumMinute)(Data_Int.floor(minutes))))(Data_Enum.toEnum(Data_Time_Component.boundedEnumSecond)(Data_Int.floor(seconds))))(Data_Enum.toEnum(Data_Time_Component.boundedEnumMillisecond)(Data_Int.floor(milliseconds))));
 };
 var hour = function (v) {
     return v.value0;
 };
 var timeToMillis = function (t) {
-    return 3600000.0 * Data_Int.toNumber(Data_Enum.fromEnum(Data_Time_Component.boundedEnumHour)(hour(t))) + 60000.0 * Data_Int.toNumber(Data_Enum.fromEnum(Data_Time_Component.boundedEnumMinute)(minute(t))) + 1000.0 * Data_Int.toNumber(Data_Enum.fromEnum(Data_Time_Component.boundedEnumSecond)(second(t))) + Data_Int.toNumber(Data_Enum.fromEnum(Data_Time_Component.boundedEnumMillisecond)(millisecond(t)));
+    return Data_Function.apply(Data_Time_Duration.Milliseconds)(3600000.0 * Data_Int.toNumber(Data_Enum.fromEnum(Data_Time_Component.boundedEnumHour)(hour(t))) + 60000.0 * Data_Int.toNumber(Data_Enum.fromEnum(Data_Time_Component.boundedEnumMinute)(minute(t))) + 1000.0 * Data_Int.toNumber(Data_Enum.fromEnum(Data_Time_Component.boundedEnumSecond)(second(t))) + Data_Int.toNumber(Data_Enum.fromEnum(Data_Time_Component.boundedEnumMillisecond)(millisecond(t))));
 };
 var eqTime = {
     eq: function (x) {
@@ -141,7 +142,7 @@ var adjust = function (dictDuration) {
         return function (t) {
             var tLength = timeToMillis(t);
             var d$prime = Data_Time_Duration.fromDuration(dictDuration)(d);
-            var wholeDays = Data_Number.floor(Data_Newtype.unwrap()(d$prime) / 8.64e7);
+            var wholeDays = Data_Function.apply(Data_Time_Duration.Days)(Data_Number.floor(Data_Newtype.unwrap()(d$prime) / 8.64e7));
             var msAdjust = Data_Semigroup.append(Data_Time_Duration.semigroupMilliseconds)(d$prime)(Data_Time_Duration.negateDuration(Data_Time_Duration.durationMilliseconds)(Data_Time_Duration.fromDuration(Data_Time_Duration.durationDays)(wholeDays)));
             var msAdjusted = Data_Semigroup.append(Data_Time_Duration.semigroupMilliseconds)(tLength)(msAdjust);
             var wrap = (function () {

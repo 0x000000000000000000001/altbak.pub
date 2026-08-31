@@ -55,9 +55,6 @@ if [ "$MODE" == "test" ]; then
   ./bin/rust/run $CLEAN --test "$TEST_NAME" || echo "=== Rust (purust) failed ==="
   
   echo ""
-  ./bin/gnomon/run $CLEAN --test "$TEST_NAME" || echo "=== Go (Gnomon) failed ==="
-  
-  echo ""
   ./bin/sharp/run $CLEAN --test "$TEST_NAME" || echo "=== F#/C# failed ==="
   
   echo ""
@@ -132,9 +129,6 @@ else
   
   echo ""
   ./bin/rust/run $CLEAN || echo "=== Rust (purust) failed ==="
-  
-  echo ""
-  ./bin/gnomon/run $CLEAN || echo "=== Go (Gnomon) failed ==="
   
   echo ""
   ./bin/sharp/run $CLEAN || echo "=== F#/C# failed ==="

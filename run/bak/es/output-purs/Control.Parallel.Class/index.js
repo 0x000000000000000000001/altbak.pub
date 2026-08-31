@@ -7,6 +7,7 @@ import * as Control_Monad_Maybe_Trans from "../Control.Monad.Maybe.Trans/index.j
 import * as Control_Monad_Reader_Trans from "../Control.Monad.Reader.Trans/index.js";
 import * as Control_Monad_Writer_Trans from "../Control.Monad.Writer.Trans/index.js";
 import * as Data_Either from "../Data.Either/index.js";
+import * as Data_Function from "../Data.Function/index.js";
 import * as Data_Functor from "../Data.Functor/index.js";
 import * as Data_Functor_Compose from "../Data.Functor.Compose/index.js";
 import * as Data_Functor_Costar from "../Data.Functor.Costar/index.js";
@@ -53,14 +54,14 @@ var monadParStar = function (dictParallel) {
     var applyStar1 = Data_Profunctor_Star.applyStar(dictParallel.Apply1());
     return {
         parallel: function (v) {
-            return function ($108) {
+            return Data_Function.apply(Data_Profunctor_Star.Star)(function ($108) {
                 return parallel1(v($108));
-            };
+            });
         },
         sequential: function (v) {
-            return function ($109) {
+            return Data_Function.apply(Data_Profunctor_Star.Star)(function ($109) {
                 return sequential1(v($109));
-            };
+            });
         },
         Apply0: function () {
             return applyStar;
@@ -129,14 +130,14 @@ var monadParCostar = function (dictParallel) {
     var parallel1 = parallel(dictParallel);
     return {
         parallel: function (v) {
-            return function ($110) {
+            return Data_Function.apply(Data_Functor_Costar.Costar)(function ($110) {
                 return v(sequential1($110));
-            };
+            });
         },
         sequential: function (v) {
-            return function ($111) {
+            return Data_Function.apply(Data_Functor_Costar.Costar)(function ($111) {
                 return v(parallel1($111));
-            };
+            });
         },
         Apply0: function () {
             return Data_Functor_Costar.applyCostar;
@@ -179,7 +180,7 @@ var applyParCont = function (dictMonadEffect) {
     return {
         apply: function (v) {
             return function (v1) {
-                return function (k) {
+                return Data_Function.apply(ParCont)(function (k) {
                     return Control_Bind.bind(Bind1)(Effect_Class.liftEffect(dictMonadEffect)(Effect_Ref["new"](Data_Maybe.Nothing.value)))(function (ra) {
                         return Control_Bind.bind(Bind1)(Effect_Class.liftEffect(dictMonadEffect)(Effect_Ref["new"](Data_Maybe.Nothing.value)))(function (rb) {
                             return Control_Bind.discard(Control_Bind.discardUnit)(Bind1)(Control_Monad_Cont_Trans.runContT(v)(function (a) {
@@ -207,7 +208,7 @@ var applyParCont = function (dictMonadEffect) {
                             });
                         });
                     });
-                };
+                });
             };
         },
         Functor0: function () {
@@ -238,7 +239,7 @@ var altParCont = function (dictMonadEffect) {
     return {
         alt: function (v) {
             return function (v1) {
-                return function (k) {
+                return Data_Function.apply(ParCont)(function (k) {
                     return Control_Bind.bind(Bind1)(Effect_Class.liftEffect(dictMonadEffect)(Effect_Ref["new"](false)))(function (done) {
                         return Control_Bind.discard(Control_Bind.discardUnit)(Bind1)(Control_Monad_Cont_Trans.runContT(v)(function (a) {
                             return Control_Bind.bind(Bind1)(Effect_Class.liftEffect(dictMonadEffect)(Effect_Ref.read(done)))(function (b) {
@@ -262,7 +263,7 @@ var altParCont = function (dictMonadEffect) {
                             });
                         });
                     });
-                };
+                });
             };
         },
         Functor0: function () {
@@ -274,9 +275,9 @@ var plusParCont = function (dictMonadEffect) {
     var Applicative0 = (dictMonadEffect.Monad0()).Applicative0();
     var altParCont1 = altParCont(dictMonadEffect);
     return {
-        empty: function (v) {
+        empty: Data_Function.apply(ParCont)(function (v) {
             return Control_Applicative.pure(Applicative0)(Data_Unit.unit);
-        },
+        }),
         Alt0: function () {
             return altParCont1;
         }

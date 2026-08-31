@@ -2,6 +2,7 @@
 import * as Control_Category from "../Control.Category/index.js";
 import * as Data_Eq from "../Data.Eq/index.js";
 import * as Data_Foldable from "../Data.Foldable/index.js";
+import * as Data_Function from "../Data.Function/index.js";
 import * as Data_Functor from "../Data.Functor/index.js";
 import * as Data_List from "../Data.List/index.js";
 import * as Data_List_Types from "../Data.List.Types/index.js";
@@ -198,7 +199,7 @@ var difference = function (dictOrd) {
 var subset = function (dictOrd) {
     return function (s1) {
         return function (s2) {
-            return isEmpty(difference(dictOrd)(s1)(s2));
+            return Data_Function.apply(isEmpty)(difference(dictOrd)(s1)(s2));
         };
     };
 };

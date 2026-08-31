@@ -34,35 +34,44 @@ var modify = function (f) {
 var functorST = {
     map: $foreign.map_
 };
-var monadST = {
-    Applicative0: function () {
-        return applicativeST;
-    },
-    Bind1: function () {
-        return bindST;
-    }
-};
-var bindST = {
-    bind: $foreign.bind_,
-    Apply0: function () {
-        return $lazy_applyST(0);
-    }
-};
-var applicativeST = {
-    pure: $foreign.pure_,
-    Apply0: function () {
-        return $lazy_applyST(0);
-    }
-};
+var $lazy_applicativeST = /* #__PURE__ */ $runtime_lazy("applicativeST", "Control.Monad.ST.Internal", function () {
+    return {
+        pure: $foreign.pure_,
+        Apply0: function () {
+            return $lazy_applyST(0);
+        }
+    };
+});
 var $lazy_applyST = /* #__PURE__ */ $runtime_lazy("applyST", "Control.Monad.ST.Internal", function () {
     return {
-        apply: Control_Monad.ap(monadST),
+        apply: Control_Monad.ap($lazy_monadST(0)),
         Functor0: function () {
             return functorST;
         }
     };
 });
+var $lazy_bindST = /* #__PURE__ */ $runtime_lazy("bindST", "Control.Monad.ST.Internal", function () {
+    return {
+        bind: $foreign.bind_,
+        Apply0: function () {
+            return $lazy_applyST(0);
+        }
+    };
+});
+var $lazy_monadST = /* #__PURE__ */ $runtime_lazy("monadST", "Control.Monad.ST.Internal", function () {
+    return {
+        Applicative0: function () {
+            return $lazy_applicativeST(0);
+        },
+        Bind1: function () {
+            return $lazy_bindST(0);
+        }
+    };
+});
+var applicativeST = /* #__PURE__ */ $lazy_applicativeST(50);
 var applyST = /* #__PURE__ */ $lazy_applyST(47);
+var bindST = /* #__PURE__ */ $lazy_bindST(53);
+var monadST = /* #__PURE__ */ $lazy_monadST(56);
 var semigroupST = function (dictSemigroup) {
     return {
         append: Control_Apply.lift2(applyST)(Data_Semigroup.append(dictSemigroup))

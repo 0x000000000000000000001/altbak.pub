@@ -1121,39 +1121,42 @@ var keys = /* #__PURE__ */ (function () {
         };
     })(Data_List_Types.Nil.value);
 })();
-var traversableMap = {
-    traverse: function (dictApplicative) {
-        var Apply0 = dictApplicative.Apply0();
-        var Functor0 = (dictApplicative.Apply0()).Functor0();
-        return function (f) {
-            var go = function (v) {
-                if (v instanceof Leaf) {
-                    return Control_Applicative.pure(dictApplicative)(Leaf.value);
-                };
-                if (v instanceof Node) {
-                    return Control_Apply.apply(Apply0)(Control_Apply.apply(Apply0)(Data_Functor.map(Functor0)(function (l$prime) {
-                        return function (v$prime) {
-                            return function (r$prime) {
-                                return new Node(v.value0, v.value1, v.value2, v$prime, l$prime, r$prime);
+var $lazy_traversableMap = /* #__PURE__ */ $runtime_lazy("traversableMap", "Data.Map.Internal", function () {
+    return {
+        traverse: function (dictApplicative) {
+            var Apply0 = dictApplicative.Apply0();
+            var Functor0 = (dictApplicative.Apply0()).Functor0();
+            return function (f) {
+                var go = function (v) {
+                    if (v instanceof Leaf) {
+                        return Control_Applicative.pure(dictApplicative)(Leaf.value);
+                    };
+                    if (v instanceof Node) {
+                        return Control_Apply.apply(Apply0)(Control_Apply.apply(Apply0)(Data_Functor.map(Functor0)(function (l$prime) {
+                            return function (v$prime) {
+                                return function (r$prime) {
+                                    return new Node(v.value0, v.value1, v.value2, v$prime, l$prime, r$prime);
+                                };
                             };
-                        };
-                    })(go(v.value4)))(f(v.value3)))(go(v.value5));
+                        })(go(v.value4)))(f(v.value3)))(go(v.value5));
+                    };
+                    throw new Error("Failed pattern match at Data.Map.Internal (line 209, column 10 - line 215, column 19): " + [ v.constructor.name ]);
                 };
-                throw new Error("Failed pattern match at Data.Map.Internal (line 209, column 10 - line 215, column 19): " + [ v.constructor.name ]);
+                return go;
             };
-            return go;
-        };
-    },
-    sequence: function (dictApplicative) {
-        return Data_Traversable.traverse(traversableMap)(dictApplicative)(identity);
-    },
-    Functor0: function () {
-        return functorMap;
-    },
-    Foldable1: function () {
-        return foldableMap;
-    }
-};
+        },
+        sequence: function (dictApplicative) {
+            return Data_Traversable.traverse($lazy_traversableMap(0))(dictApplicative)(identity);
+        },
+        Functor0: function () {
+            return functorMap;
+        },
+        Foldable1: function () {
+            return foldableMap;
+        }
+    };
+});
+var traversableMap = /* #__PURE__ */ $lazy_traversableMap(206);
 var traversableWithIndexMap = {
     traverseWithIndex: function (dictApplicative) {
         var Apply0 = dictApplicative.Apply0();

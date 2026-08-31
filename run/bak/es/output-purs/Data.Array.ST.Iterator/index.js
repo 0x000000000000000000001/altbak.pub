@@ -45,9 +45,9 @@ var pushWhile = function (p) {
                         var mx = peek(iter)();
                         if (mx instanceof Data_Maybe.Just && p(mx.value0)) {
                             Data_Array_ST.push(mx.value0)(array)();
-                            return $$void(next(iter))();
+                            return Data_Function.apply($$void)(next(iter))();
                         };
-                        return void1(Control_Monad_ST_Internal.write(true)($$break))();
+                        return Data_Function.apply(void1)(Control_Monad_ST_Internal.write(true)($$break))();
                     })();
                 };
                 return {};
@@ -70,7 +70,7 @@ var iterate = function (iter) {
                         return f(mx.value0)();
                     };
                     if (mx instanceof Data_Maybe.Nothing) {
-                        return void1(Control_Monad_ST_Internal.write(true)($$break))();
+                        return Data_Function.apply(void1)(Control_Monad_ST_Internal.write(true)($$break))();
                     };
                     throw new Error("Failed pattern match at Data.Array.ST.Iterator (line 42, column 5 - line 44, column 47): " + [ mx.constructor.name ]);
                 })();

@@ -16,7 +16,7 @@ var genString = function (dictMonadRec) {
         return function (genChar) {
             return Control_Monad_Gen_Class.sized(dictMonadGen)(function (size) {
                 return Control_Bind.bind(Bind1)(Control_Monad_Gen_Class.chooseInt(dictMonadGen)(1)(Data_Ord.max(Data_Ord.ordInt)(1)(size)))(function (newSize) {
-                    return Control_Monad_Gen_Class.resize(dictMonadGen)(Data_Function["const"](newSize))(Data_Functor.map(Functor0)(Data_String_CodeUnits.fromCharArray)(Control_Monad_Gen.unfoldable(dictMonadRec)(dictMonadGen)(Data_Unfoldable.unfoldableArray)(genChar)));
+                    return Data_Function.apply(Control_Monad_Gen_Class.resize(dictMonadGen)(Data_Function["const"](newSize)))(Data_Functor.map(Functor0)(Data_String_CodeUnits.fromCharArray)(Control_Monad_Gen.unfoldable(dictMonadRec)(dictMonadGen)(Data_Unfoldable.unfoldableArray)(genChar)));
                 });
             });
         };

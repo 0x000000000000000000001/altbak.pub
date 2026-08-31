@@ -18,6 +18,18 @@ import * as Data_Newtype from "../Data.Newtype/index.js";
 import * as Data_Semigroup from "../Data.Semigroup/index.js";
 import * as Data_Tuple from "../Data.Tuple/index.js";
 import * as Data_Unit from "../Data.Unit/index.js";
+var $runtime_lazy = function (name, moduleName, init) {
+    var state = 0;
+    var val;
+    return function (lineNumber) {
+        if (state === 2) return val;
+        if (state === 1) throw new ReferenceError(name + " was needed before it finished initializing (module " + moduleName + ", line " + lineNumber + ")", moduleName, lineNumber);
+        state = 1;
+        val = init();
+        state = 2;
+        return val;
+    };
+};
 var foldr = /* #__PURE__ */ Data_Foldable.foldr(Data_Foldable.foldableMultiplicative);
 var foldl = /* #__PURE__ */ Data_Foldable.foldl(Data_Foldable.foldableMultiplicative);
 var foldMap = /* #__PURE__ */ Data_Foldable.foldMap(Data_Foldable.foldableMultiplicative);
@@ -109,15 +121,15 @@ var foldableWithIndexTuple = {
 };
 var foldableWithIndexMultiplicative = {
     foldrWithIndex: function (f) {
-        return foldr(f(Data_Unit.unit));
+        return Data_Function.apply(foldr)(f(Data_Unit.unit));
     },
     foldlWithIndex: function (f) {
-        return foldl(f(Data_Unit.unit));
+        return Data_Function.apply(foldl)(f(Data_Unit.unit));
     },
     foldMapWithIndex: function (dictMonoid) {
         var foldMap8 = foldMap(dictMonoid);
         return function (f) {
-            return foldMap8(f(Data_Unit.unit));
+            return Data_Function.apply(foldMap8)(f(Data_Unit.unit));
         };
     },
     Foldable0: function () {
@@ -126,15 +138,15 @@ var foldableWithIndexMultiplicative = {
 };
 var foldableWithIndexMaybe = {
     foldrWithIndex: function (f) {
-        return foldr1(f(Data_Unit.unit));
+        return Data_Function.apply(foldr1)(f(Data_Unit.unit));
     },
     foldlWithIndex: function (f) {
-        return foldl1(f(Data_Unit.unit));
+        return Data_Function.apply(foldl1)(f(Data_Unit.unit));
     },
     foldMapWithIndex: function (dictMonoid) {
         var foldMap8 = foldMap1(dictMonoid);
         return function (f) {
-            return foldMap8(f(Data_Unit.unit));
+            return Data_Function.apply(foldMap8)(f(Data_Unit.unit));
         };
     },
     Foldable0: function () {
@@ -143,15 +155,15 @@ var foldableWithIndexMaybe = {
 };
 var foldableWithIndexLast = {
     foldrWithIndex: function (f) {
-        return foldr2(f(Data_Unit.unit));
+        return Data_Function.apply(foldr2)(f(Data_Unit.unit));
     },
     foldlWithIndex: function (f) {
-        return foldl2(f(Data_Unit.unit));
+        return Data_Function.apply(foldl2)(f(Data_Unit.unit));
     },
     foldMapWithIndex: function (dictMonoid) {
         var foldMap8 = foldMap2(dictMonoid);
         return function (f) {
-            return foldMap8(f(Data_Unit.unit));
+            return Data_Function.apply(foldMap8)(f(Data_Unit.unit));
         };
     },
     Foldable0: function () {
@@ -186,15 +198,15 @@ var foldableWithIndexIdentity = {
 };
 var foldableWithIndexFirst = {
     foldrWithIndex: function (f) {
-        return foldr3(f(Data_Unit.unit));
+        return Data_Function.apply(foldr3)(f(Data_Unit.unit));
     },
     foldlWithIndex: function (f) {
-        return foldl3(f(Data_Unit.unit));
+        return Data_Function.apply(foldl3)(f(Data_Unit.unit));
     },
     foldMapWithIndex: function (dictMonoid) {
         var foldMap8 = foldMap3(dictMonoid);
         return function (f) {
-            return foldMap8(f(Data_Unit.unit));
+            return Data_Function.apply(foldMap8)(f(Data_Unit.unit));
         };
     },
     Foldable0: function () {
@@ -248,15 +260,15 @@ var foldableWithIndexEither = {
 };
 var foldableWithIndexDual = {
     foldrWithIndex: function (f) {
-        return foldr4(f(Data_Unit.unit));
+        return Data_Function.apply(foldr4)(f(Data_Unit.unit));
     },
     foldlWithIndex: function (f) {
-        return foldl4(f(Data_Unit.unit));
+        return Data_Function.apply(foldl4)(f(Data_Unit.unit));
     },
     foldMapWithIndex: function (dictMonoid) {
         var foldMap8 = foldMap4(dictMonoid);
         return function (f) {
-            return foldMap8(f(Data_Unit.unit));
+            return Data_Function.apply(foldMap8)(f(Data_Unit.unit));
         };
     },
     Foldable0: function () {
@@ -265,15 +277,15 @@ var foldableWithIndexDual = {
 };
 var foldableWithIndexDisj = {
     foldrWithIndex: function (f) {
-        return foldr5(f(Data_Unit.unit));
+        return Data_Function.apply(foldr5)(f(Data_Unit.unit));
     },
     foldlWithIndex: function (f) {
-        return foldl5(f(Data_Unit.unit));
+        return Data_Function.apply(foldl5)(f(Data_Unit.unit));
     },
     foldMapWithIndex: function (dictMonoid) {
         var foldMap8 = foldMap5(dictMonoid);
         return function (f) {
-            return foldMap8(f(Data_Unit.unit));
+            return Data_Function.apply(foldMap8)(f(Data_Unit.unit));
         };
     },
     Foldable0: function () {
@@ -309,15 +321,15 @@ var foldableWithIndexConst = {
 };
 var foldableWithIndexConj = {
     foldrWithIndex: function (f) {
-        return foldr6(f(Data_Unit.unit));
+        return Data_Function.apply(foldr6)(f(Data_Unit.unit));
     },
     foldlWithIndex: function (f) {
-        return foldl6(f(Data_Unit.unit));
+        return Data_Function.apply(foldl6)(f(Data_Unit.unit));
     },
     foldMapWithIndex: function (dictMonoid) {
         var foldMap8 = foldMap6(dictMonoid);
         return function (f) {
-            return foldMap8(f(Data_Unit.unit));
+            return Data_Function.apply(foldMap8)(f(Data_Unit.unit));
         };
     },
     Foldable0: function () {
@@ -326,15 +338,15 @@ var foldableWithIndexConj = {
 };
 var foldableWithIndexAdditive = {
     foldrWithIndex: function (f) {
-        return foldr7(f(Data_Unit.unit));
+        return Data_Function.apply(foldr7)(f(Data_Unit.unit));
     },
     foldlWithIndex: function (f) {
-        return foldl7(f(Data_Unit.unit));
+        return Data_Function.apply(foldl7)(f(Data_Unit.unit));
     },
     foldMapWithIndex: function (dictMonoid) {
         var foldMap8 = foldMap7(dictMonoid);
         return function (f) {
-            return foldMap8(f(Data_Unit.unit));
+            return Data_Function.apply(foldMap8)(f(Data_Unit.unit));
         };
     },
     Foldable0: function () {
@@ -373,40 +385,43 @@ var foldMapWithIndexDefaultR = function (dictFoldableWithIndex) {
         };
     };
 };
-var foldableWithIndexArray = {
-    foldrWithIndex: function (f) {
-        return function (z) {
-            var $237 = Data_Foldable.foldr(Data_Foldable.foldableArray)(function (v) {
-                return function (y) {
-                    return f(v.value0)(v.value1)(y);
+var $lazy_foldableWithIndexArray = /* #__PURE__ */ $runtime_lazy("foldableWithIndexArray", "Data.FoldableWithIndex", function () {
+    return {
+        foldrWithIndex: function (f) {
+            return function (z) {
+                var $237 = Data_Foldable.foldr(Data_Foldable.foldableArray)(function (v) {
+                    return function (y) {
+                        return f(v.value0)(v.value1)(y);
+                    };
+                })(z);
+                var $238 = Data_FunctorWithIndex.mapWithIndex(Data_FunctorWithIndex.functorWithIndexArray)(Data_Tuple.Tuple.create);
+                return function ($239) {
+                    return $237($238($239));
                 };
-            })(z);
-            var $238 = Data_FunctorWithIndex.mapWithIndex(Data_FunctorWithIndex.functorWithIndexArray)(Data_Tuple.Tuple.create);
-            return function ($239) {
-                return $237($238($239));
             };
-        };
-    },
-    foldlWithIndex: function (f) {
-        return function (z) {
-            var $240 = Data_Foldable.foldl(Data_Foldable.foldableArray)(function (y) {
-                return function (v) {
-                    return f(v.value0)(y)(v.value1);
+        },
+        foldlWithIndex: function (f) {
+            return function (z) {
+                var $240 = Data_Foldable.foldl(Data_Foldable.foldableArray)(function (y) {
+                    return function (v) {
+                        return f(v.value0)(y)(v.value1);
+                    };
+                })(z);
+                var $241 = Data_FunctorWithIndex.mapWithIndex(Data_FunctorWithIndex.functorWithIndexArray)(Data_Tuple.Tuple.create);
+                return function ($242) {
+                    return $240($241($242));
                 };
-            })(z);
-            var $241 = Data_FunctorWithIndex.mapWithIndex(Data_FunctorWithIndex.functorWithIndexArray)(Data_Tuple.Tuple.create);
-            return function ($242) {
-                return $240($241($242));
             };
-        };
-    },
-    foldMapWithIndex: function (dictMonoid) {
-        return foldMapWithIndexDefaultR(foldableWithIndexArray)(dictMonoid);
-    },
-    Foldable0: function () {
-        return Data_Foldable.foldableArray;
-    }
-};
+        },
+        foldMapWithIndex: function (dictMonoid) {
+            return foldMapWithIndexDefaultR($lazy_foldableWithIndexArray(0))(dictMonoid);
+        },
+        Foldable0: function () {
+            return Data_Foldable.foldableArray;
+        }
+    };
+});
+var foldableWithIndexArray = /* #__PURE__ */ $lazy_foldableWithIndexArray(119);
 var foldMapWithIndexDefaultL = function (dictFoldableWithIndex) {
     return function (dictMonoid) {
         var Semigroup0 = dictMonoid.Semigroup0();
