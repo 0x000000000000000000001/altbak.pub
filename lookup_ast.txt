@@ -1,0 +1,6 @@
+Abs "dictOrd" :: ConstrainedType([Data.Ord.Ord], Func([TypeVar(k), Adt(Data.Map.Internal.Map)], Adt(Data.Maybe.Maybe)))
+  Abs "k" :: Func([TypeVar(k), Adt(Data.Map.Internal.Map)], Adt(Data.Maybe.Maybe))
+    Let
+      Rec undefined
+    In
+      Var go :: Func([Adt(Data.Map.Internal.Map)], Adt(Data.Maybe.Maybe))
