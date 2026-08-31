@@ -1,0 +1,988 @@
+================================
+    Running pure backends...    
+================================
+
+Building...
+=== JS V8 ===
+Global warm-up in progress (this may take a moment)...
+
+Global warm-up complete. Starting benchmarks...
+
+--------------------------------------------------
+
+(Test)
+
+AST Evaluation:
+
+(Output & Warm-up)
+
+7
+
+(Execution time - best of 10)
+
+1.92 μs
+
+--------------------------------------------------
+
+(Test)
+
+Fibonacci:
+
+(Output & Warm-up)
+
+55
+
+(Execution time - best of 10)
+
+1.79 μs
+
+--------------------------------------------------
+
+(Test)
+
+List Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+41.79 μs
+
+--------------------------------------------------
+
+(Test)
+
+Tail Call Optimization (100k calls):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+169.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Deep Record Updates (10k iterations):
+
+(Output & Warm-up)
+
+20000
+
+(Execution time - best of 10)
+
+75.38 μs
+
+--------------------------------------------------
+
+(Test)
+
+Ackermann (3, 4):
+
+(Output & Warm-up)
+
+125
+
+(Execution time - best of 10)
+
+59.54 μs
+
+--------------------------------------------------
+
+(Test)
+
+Church Numerals (100k Closure Applications):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+1217.08 μs
+
+--------------------------------------------------
+
+(Test)
+
+Prime Sieve (sum primes up to 500):
+
+(Output & Warm-up)
+
+21536
+
+(Execution time - best of 10)
+
+107.71 μs
+
+--------------------------------------------------
+
+(Test)
+
+Red-Black Tree (100k Worst-Case Insertions):
+
+(Output & Warm-up)
+
+22
+
+(Execution time - best of 10)
+
+83514.17 μs
+
+--------------------------------------------------
+
+(Test)
+
+Polymorphism (10M Type Class Dict Lookups):
+
+(Output & Warm-up)
+
+10000000
+
+(Execution time - best of 10)
+
+11644.04 μs
+
+--------------------------------------------------
+
+(Test)
+
+State Monad (1.2k Binds, 60 Stack Depth):
+
+(Output & Warm-up)
+
+1200
+
+(Execution time - best of 10)
+
+61.79 μs
+
+--------------------------------------------------
+
+(Test)
+
+Lazy Evaluation (1M Thunks Forced, 1k Depth):
+
+(Output & Warm-up)
+
+1000000
+
+(Execution time - best of 10)
+
+14188.21 μs
+
+--------------------------------------------------
+
+(Test)
+
+Array Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+19.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+RowToList (Keys Count):
+
+(Output & Warm-up)
+
+5
+
+(Execution time - best of 10)
+
+0.38 μs
+
+
+==================================================
+
+Total exec time: 111.10 ms
+
+
+Building...
+=== ES failed ===
+
+Building...
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: ps-scheme-test
+
+Downloading dependencies...
+Building...
+[ERROR 1/5 ModuleNotFound] src/Test/AffOperations.purs:6:1
+
+  6  import Effect.Aff (Aff, delay, Milliseconds(..))
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Module Effect.Aff was not found.
+  Make sure the source file exists, and that it has been provided as an input to the compiler.
+
+[ERROR 2/5 ModuleNotFound] src/Test/Parallelism.purs:8:1
+
+  8  import Effect.Aff (Aff, delay, Milliseconds(..), forkAff, joinFiber)
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Module Effect.Aff was not found.
+  Make sure the source file exists, and that it has been provided as an input to the compiler.
+
+[ERROR 3/5 ModuleNotFound] src/Test/StringOps.purs:7:1
+
+  7  import Data.String as S
+     ^^^^^^^^^^^^^^^^^^^^^^^
+
+  Module Data.String was not found.
+  Make sure the source file exists, and that it has been provided as an input to the compiler.
+
+[ERROR 4/5 ModuleNotFound] src/Test/StringOps.purs:8:1
+
+  8  import Data.String.Regex as R
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Module Data.String.Regex was not found.
+  Make sure the source file exists, and that it has been provided as an input to the compiler.
+
+[ERROR 5/5 ModuleNotFound] src/Test/StringOps.purs:9:1
+
+  9  import Data.String.Regex.Flags (noFlags)
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Module Data.String.Regex.Flags was not found.
+  Make sure the source file exists, and that it has been provided as an input to the compiler.
+
+           Src   Lib   All
+Warnings     0     0     0
+Errors       5     0     5
+
+✘ Failed to build.
+
+=== Scheme failed ===
+
+Building...
+=== Erlang failed ===
+
+Building...
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: ps-php-test
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Compiling with backend "../phpurs/phpurs/bin/phpurs"
+Generating PHP code for Control.Semigroupoid (Total AST Nodes: 3)
+Generating PHP code for Control.Category (Total AST Nodes: 2)
+Generating PHP code for Data.Boolean (Total AST Nodes: 1)
+Generating PHP code for Type.Proxy (Total AST Nodes: 1)
+Generating PHP code for Data.Symbol (Total AST Nodes: 2)
+Generating PHP code for Data.Unit (Total AST Nodes: 0)
+Generating PHP code for Record.Unsafe (Total AST Nodes: 0)
+Generating PHP code for Data.HeytingAlgebra (Total AST Nodes: 19)
+Generating PHP code for Data.Void (Total AST Nodes: 1)
+Generating PHP code for Data.Eq (Total AST Nodes: 18)
+Generating PHP code for Data.Semigroup (Total AST Nodes: 11)
+Generating PHP code for Data.Show (Total AST Nodes: 15)
+Generating PHP code for Data.Ordering (Total AST Nodes: 7)
+Generating PHP code for Data.Semiring (Total AST Nodes: 16)
+Generating PHP code for Data.Ring (Total AST Nodes: 11)
+Generating PHP code for Data.Ord (Total AST Nodes: 28)
+Generating PHP code for Data.Function (Total AST Nodes: 6)
+Generating PHP code for Data.Functor (Total AST Nodes: 9)
+Generating PHP code for Control.Apply (Total AST Nodes: 10)
+Generating PHP code for Control.Applicative (Total AST Nodes: 7)
+Generating PHP code for Control.Bind (Total AST Nodes: 12)
+Generating PHP code for Control.Monad (Total AST Nodes: 7)
+Generating PHP code for Data.BooleanAlgebra (Total AST Nodes: 7)
+Generating PHP code for Data.CommutativeRing (Total AST Nodes: 8)
+Generating PHP code for Data.EuclideanRing (Total AST Nodes: 7)
+Generating PHP code for Data.Monoid (Total AST Nodes: 12)
+Generating PHP code for Data.Bounded (Total AST Nodes: 14)
+Generating PHP code for Data.DivisionRing (Total AST Nodes: 4)
+Generating PHP code for Data.Field (Total AST Nodes: 1)
+Generating PHP code for Data.NaturalTransformation (Total AST Nodes: 0)
+Generating PHP code for Prelude (Total AST Nodes: 0)
+Generating PHP code for Effect (Total AST Nodes: 7)
+Generating PHP code for Effect.Console (Total AST Nodes: 6)
+Generating PHP code for Bench (Total AST Nodes: 1)
+Generating PHP code for Test.Ackermann (Total AST Nodes: 3)
+Generating PHP code for Control.Alt (Total AST Nodes: 2)
+Generating PHP code for Control.Plus (Total AST Nodes: 2)
+Generating PHP code for Control.Alternative (Total AST Nodes: 2)
+Generating PHP code for Control.Lazy (Total AST Nodes: 4)
+Generating PHP code for Data.Monoid.Additive (Total AST Nodes: 15)
+Generating PHP code for Control.Extend (Total AST Nodes: 7)
+Generating PHP code for Control.Comonad (Total AST Nodes: 1)
+Generating PHP code for Data.Monoid.Conj (Total AST Nodes: 16)
+Generating PHP code for Data.Monoid.Disj (Total AST Nodes: 16)
+Generating PHP code for Data.Monoid.Dual (Total AST Nodes: 15)
+Generating PHP code for Data.Monoid.Endo (Total AST Nodes: 8)
+Generating PHP code for Data.Monoid.Multiplicative (Total AST Nodes: 15)
+Generating PHP code for Data.Semigroup.First (Total AST Nodes: 14)
+Generating PHP code for Data.Semigroup.Last (Total AST Nodes: 14)
+Generating PHP code for Unsafe.Coerce (Total AST Nodes: 0)
+Generating PHP code for Safe.Coerce (Total AST Nodes: 1)
+Generating PHP code for Data.Newtype (Total AST Nodes: 24)
+Generating PHP code for Data.Monoid.Alternate (Total AST Nodes: 21)
+Generating PHP code for Data.Functor.Invariant (Total AST Nodes: 11)
+Generating PHP code for Data.Const (Total AST Nodes: 22)
+Generating PHP code for Data.Generic.Rep (Total AST Nodes: 16)
+Generating PHP code for Data.Maybe (Total AST Nodes: 30)
+Generating PHP code for Data.Either (Total AST Nodes: 30)
+Generating PHP code for Data.Tuple (Total AST Nodes: 30)
+Generating PHP code for Data.Bifunctor (Total AST Nodes: 7)
+Generating PHP code for Data.Identity (Total AST Nodes: 27)
+Generating PHP code for Effect.Ref (Total AST Nodes: 4)
+Generating PHP code for Partial (Total AST Nodes: 2)
+Generating PHP code for Partial.Unsafe (Total AST Nodes: 2)
+Generating PHP code for Control.Monad.Rec.Class (Total AST Nodes: 20)
+Generating PHP code for Control.Monad.ST.Internal (Total AST Nodes: 10)
+Generating PHP code for Control.Monad.ST (Total AST Nodes: 0)
+Generating PHP code for Control.MonadPlus (Total AST Nodes: 1)
+Generating PHP code for Data.Functor.App (Total AST Nodes: 25)
+Generating PHP code for Data.Functor.Compose (Total AST Nodes: 15)
+Generating PHP code for Data.Functor.Coproduct (Total AST Nodes: 15)
+Generating PHP code for Data.Functor.Product (Total AST Nodes: 15)
+Generating PHP code for Data.Maybe.First (Total AST Nodes: 21)
+Generating PHP code for Data.Maybe.Last (Total AST Nodes: 21)
+Generating PHP code for Data.Foldable (Total AST Nodes: 59)
+Generating PHP code for Data.FunctorWithIndex (Total AST Nodes: 19)
+Generating PHP code for Data.FoldableWithIndex (Total AST Nodes: 35)
+Generating PHP code for Data.Function.Uncurried (Total AST Nodes: 2)
+Generating PHP code for Data.Ord.Max (Total AST Nodes: 8)
+Generating PHP code for Data.Ord.Min (Total AST Nodes: 8)
+Generating PHP code for Data.Semigroup.Foldable (Total AST Nodes: 26)
+Generating PHP code for Data.Traversable.Accum (Total AST Nodes: 0)
+Generating PHP code for Data.Traversable.Accum.Internal (Total AST Nodes: 12)
+Generating PHP code for Data.Traversable (Total AST Nodes: 26)
+Generating PHP code for Data.Semigroup.Traversable (Total AST Nodes: 8)
+Generating PHP code for Data.TraversableWithIndex (Total AST Nodes: 25)
+Generating PHP code for Data.Unfoldable1 (Total AST Nodes: 8)
+Generating PHP code for Data.Array.NonEmpty.Internal (Total AST Nodes: 22)
+Generating PHP code for Control.Monad.ST.Uncurried (Total AST Nodes: 0)
+Generating PHP code for Data.Array.ST (Total AST Nodes: 22)
+Generating PHP code for Control.Monad.ST.Ref (Total AST Nodes: 0)
+Generating PHP code for Data.Array.ST.Iterator (Total AST Nodes: 8)
+Generating PHP code for Data.Unfoldable (Total AST Nodes: 7)
+Generating PHP code for Data.Array (Total AST Nodes: 86)
+Generating PHP code for Test.ArrayOps (Total AST Nodes: 5)
+Generating PHP code for Test.AstTree (Total AST Nodes: 8)
+Generating PHP code for Test.Church (Total AST Nodes: 12)
+Generating PHP code for Test.Fib (Total AST Nodes: 3)
+Generating PHP code for Test.LazyEvaluation (Total AST Nodes: 8)
+Generating PHP code for Test.ListOps (Total AST Nodes: 8)
+Generating PHP code for Test.Polymorphism (Total AST Nodes: 6)
+Generating PHP code for Test.Primes (Total AST Nodes: 9)
+Generating PHP code for Test.RBTree (Total AST Nodes: 13)
+Generating PHP code for Test.Records (Total AST Nodes: 4)
+Generating PHP code for Test.RowToList (Total AST Nodes: 6)
+Generating PHP code for Test.StateMonad (Total AST Nodes: 12)
+Generating PHP code for Test.TCO (Total AST Nodes: 3)
+Generating PHP code for App (Total AST Nodes: 2)
+Generating PHP code for Test.AckermannFFI (Total AST Nodes: 2)
+Generating PHP code for Test.AckermannFFICheatcode (Total AST Nodes: 2)
+Generating PHP code for Test.ArrayOpsFFI (Total AST Nodes: 2)
+Generating PHP code for Test.ArrayOpsFFICheatcode (Total AST Nodes: 2)
+Generating PHP code for Test.AstTreeFFI (Total AST Nodes: 2)
+Generating PHP code for Test.AstTreeFFICheatcode (Total AST Nodes: 2)
+Generating PHP code for Test.ChurchFFI (Total AST Nodes: 2)
+Generating PHP code for Test.ChurchFFICheatcode (Total AST Nodes: 2)
+Generating PHP code for Test.FibFFI (Total AST Nodes: 2)
+Generating PHP code for Test.FibFFICheatcode (Total AST Nodes: 2)
+Generating PHP code for Test.LazyEvaluationFFI (Total AST Nodes: 2)
+Generating PHP code for Test.LazyEvaluationFFICheatcode (Total AST Nodes: 2)
+Generating PHP code for Test.ListOpsFFI (Total AST Nodes: 2)
+Generating PHP code for Test.ListOpsFFICheatcode (Total AST Nodes: 2)
+Generating PHP code for Test.PolymorphismFFI (Total AST Nodes: 2)
+Generating PHP code for Test.PolymorphismFFICheatcode (Total AST Nodes: 2)
+Generating PHP code for Test.PrimesFFI (Total AST Nodes: 2)
+Generating PHP code for Test.PrimesFFICheatcode (Total AST Nodes: 2)
+Generating PHP code for Test.RBTreeFFI (Total AST Nodes: 2)
+Generating PHP code for Test.RBTreeFFICheatcode (Total AST Nodes: 2)
+Generating PHP code for Test.RecordsFFI (Total AST Nodes: 2)
+Generating PHP code for Test.RecordsFFICheatcode (Total AST Nodes: 2)
+Generating PHP code for Test.RowToListFFI (Total AST Nodes: 2)
+Generating PHP code for Test.RowToListFFICheatcode (Total AST Nodes: 2)
+Generating PHP code for Test.StateMonadFFI (Total AST Nodes: 2)
+Generating PHP code for Test.StateMonadFFICheatcode (Total AST Nodes: 2)
+Generating PHP code for Test.TCOFFI (Total AST Nodes: 2)
+Generating PHP code for Test.TCOFFICheatcode (Total AST Nodes: 2)
+Generating PHP code for AppFFI (Total AST Nodes: 1)
+Generating PHP code for AppFFICheatcode (Total AST Nodes: 1)
+Generating PHP code for AppTest (Total AST Nodes: 1)
+Generating PHP code for AppX (Total AST Nodes: 1)
+Generating PHP code for Control.Biapply (Total AST Nodes: 6)
+Generating PHP code for Control.Biapplicative (Total AST Nodes: 2)
+Generating PHP code for Control.Monad.Cont.Class (Total AST Nodes: 1)
+Generating PHP code for Effect.Exception (Total AST Nodes: 4)
+Generating PHP code for Control.Monad.Error.Class (Total AST Nodes: 13)
+Generating PHP code for Control.Monad.Reader.Class (Total AST Nodes: 5)
+Generating PHP code for Control.Monad.ST.Global (Total AST Nodes: 1)
+Generating PHP code for Control.Monad.ST.Class (Total AST Nodes: 3)
+Generating PHP code for Control.Monad.State.Class (Total AST Nodes: 6)
+Generating PHP code for Control.Monad.Trans.Class (Total AST Nodes: 1)
+Generating PHP code for Control.Monad.Writer.Class (Total AST Nodes: 5)
+Generating PHP code for Effect.Class (Total AST Nodes: 2)
+Generating PHP code for Control.Monad.Identity.Trans (Total AST Nodes: 34)
+Generating PHP code for Control.Comonad.Trans.Class (Total AST Nodes: 2)
+Generating PHP code for Control.Comonad.Env.Trans (Total AST Nodes: 15)
+Generating PHP code for Control.Comonad.Store.Trans (Total AST Nodes: 8)
+Generating PHP code for Control.Comonad.Traced.Trans (Total AST Nodes: 8)
+Generating PHP code for Control.Comonad.Store.Class (Total AST Nodes: 9)
+Generating PHP code for Control.Comonad.Store (Total AST Nodes: 2)
+Generating PHP code for Control.Comonad.Env.Class (Total AST Nodes: 11)
+Generating PHP code for Control.Comonad.Env (Total AST Nodes: 4)
+Generating PHP code for Control.Comonad.Traced.Class (Total AST Nodes: 10)
+Generating PHP code for Control.Comonad.Traced (Total AST Nodes: 2)
+Generating PHP code for Control.Monad.Cont.Trans (Total AST Nodes: 20)
+Generating PHP code for Control.Monad.Cont (Total AST Nodes: 4)
+Generating PHP code for Control.Monad.Except.Trans (Total AST Nodes: 30)
+Generating PHP code for Control.Monad.Except (Total AST Nodes: 3)
+Generating PHP code for Control.Monad.Gen.Class (Total AST Nodes: 5)
+Generating PHP code for Control.Monad.Gen (Total AST Nodes: 12)
+Generating PHP code for Data.NonEmpty (Total AST Nodes: 21)
+Generating PHP code for Control.Monad.Gen.Common (Total AST Nodes: 7)
+Generating PHP code for Data.Lazy (Total AST Nodes: 30)
+Generating PHP code for Control.Monad.List.Trans (Total AST Nodes: 53)
+Generating PHP code for Control.Monad.Maybe.Trans (Total AST Nodes: 28)
+Generating PHP code for Control.Monad.RWS.Trans (Total AST Nodes: 31)
+Generating PHP code for Control.Monad.RWS (Total AST Nodes: 6)
+Generating PHP code for Type.Equality (Total AST Nodes: 4)
+Generating PHP code for Data.Distributive (Total AST Nodes: 8)
+Generating PHP code for Control.Monad.Reader.Trans (Total AST Nodes: 30)
+Generating PHP code for Control.Monad.Reader (Total AST Nodes: 3)
+Generating PHP code for Control.Monad.State.Trans (Total AST Nodes: 32)
+Generating PHP code for Control.Monad.State (Total AST Nodes: 5)
+Generating PHP code for Control.Monad.Writer.Trans (Total AST Nodes: 29)
+Generating PHP code for Control.Monad.Writer (Total AST Nodes: 4)
+Generating PHP code for Data.Functor.Contravariant (Total AST Nodes: 5)
+Generating PHP code for Data.Profunctor (Total AST Nodes: 7)
+Generating PHP code for Data.Profunctor.Closed (Total AST Nodes: 2)
+Generating PHP code for Data.Profunctor.Strong (Total AST Nodes: 5)
+Generating PHP code for Data.Functor.Costar (Total AST Nodes: 17)
+Generating PHP code for Data.Profunctor.Choice (Total AST Nodes: 5)
+Generating PHP code for Data.Profunctor.Star (Total AST Nodes: 21)
+Generating PHP code for Control.Parallel.Class (Total AST Nodes: 18)
+Generating PHP code for Control.Parallel (Total AST Nodes: 7)
+Generating PHP code for Data.Array.NonEmpty (Total AST Nodes: 104)
+Generating PHP code for Data.Array.Partial (Total AST Nodes: 4)
+Generating PHP code for Data.Array.ST.Partial (Total AST Nodes: 2)
+Generating PHP code for Data.Functor.Clown (Total AST Nodes: 12)
+Generating PHP code for Data.Functor.Flip (Total AST Nodes: 13)
+Generating PHP code for Data.Functor.Joker (Total AST Nodes: 17)
+Generating PHP code for Data.Functor.Product2 (Total AST Nodes: 9)
+Generating PHP code for Data.Bifoldable (Total AST Nodes: 20)
+Generating PHP code for Data.Bifunctor.Join (Total AST Nodes: 9)
+Generating PHP code for Data.Bitraversable (Total AST Nodes: 16)
+Generating PHP code for Data.Bounded.Generic (Total AST Nodes: 14)
+Generating PHP code for Data.Enum (Total AST Nodes: 36)
+Generating PHP code for Data.Char (Total AST Nodes: 2)
+Generating PHP code for Data.Char.Gen (Total AST Nodes: 7)
+Generating PHP code for Data.Comparison (Total AST Nodes: 7)
+Generating PHP code for Data.Date.Component (Total AST Nodes: 43)
+Generating PHP code for Data.Int.Bits (Total AST Nodes: 0)
+Generating PHP code for Data.Number (Total AST Nodes: 10)
+Generating PHP code for Data.Int (Total AST Nodes: 28)
+Generating PHP code for Data.Time.Duration (Total AST Nodes: 49)
+Generating PHP code for Data.Date (Total AST Nodes: 16)
+Generating PHP code for Data.Enum.Gen (Total AST Nodes: 1)
+Generating PHP code for Data.Date.Component.Gen (Total AST Nodes: 4)
+Generating PHP code for Data.Date.Gen (Total AST Nodes: 1)
+Generating PHP code for Data.Time.Component (Total AST Nodes: 24)
+Generating PHP code for Data.Time (Total AST Nodes: 19)
+Generating PHP code for Data.DateTime (Total AST Nodes: 14)
+Generating PHP code for Data.Time.Component.Gen (Total AST Nodes: 4)
+Generating PHP code for Data.Time.Gen (Total AST Nodes: 1)
+Generating PHP code for Data.DateTime.Gen (Total AST Nodes: 1)
+Generating PHP code for Data.DateTime.Instant (Total AST Nodes: 10)
+Generating PHP code for Data.Equivalence (Total AST Nodes: 8)
+Generating PHP code for Data.Op (Total AST Nodes: 8)
+Generating PHP code for Data.Predicate (Total AST Nodes: 6)
+Generating PHP code for Data.Divide (Total AST Nodes: 6)
+Generating PHP code for Data.Decide (Total AST Nodes: 6)
+Generating PHP code for Data.Divisible (Total AST Nodes: 5)
+Generating PHP code for Data.Decidable (Total AST Nodes: 6)
+Generating PHP code for Data.Either.Inject (Total AST Nodes: 5)
+Generating PHP code for Data.Either.Nested (Total AST Nodes: 30)
+Generating PHP code for Data.Enum.Generic (Total AST Nodes: 20)
+Generating PHP code for Data.Eq.Generic (Total AST Nodes: 8)
+Generating PHP code for Data.Exists (Total AST Nodes: 2)
+Generating PHP code for Data.Functor.Coproduct.Inject (Total AST Nodes: 5)
+Generating PHP code for Data.Functor.Coproduct.Nested (Total AST Nodes: 30)
+Generating PHP code for Data.Functor.Product.Nested (Total AST Nodes: 20)
+Generating PHP code for Data.HeytingAlgebra.Generic (Total AST Nodes: 16)
+Generating PHP code for Data.List.Types (Total AST Nodes: 54)
+Generating PHP code for Data.List.Internal (Total AST Nodes: 12)
+Generating PHP code for Data.List (Total AST Nodes: 75)
+Generating PHP code for Data.Map.Internal (Total AST Nodes: 94)
+Generating PHP code for Data.Set (Total AST Nodes: 34)
+Generating PHP code for Data.Map (Total AST Nodes: 21)
+Generating PHP code for Data.Interval.Duration (Total AST Nodes: 26)
+Generating PHP code for Data.Interval (Total AST Nodes: 28)
+Generating PHP code for Data.List.NonEmpty (Total AST Nodes: 60)
+Generating PHP code for Data.Interval.Duration.Iso (Total AST Nodes: 18)
+Generating PHP code for Data.List.Lazy.Types (Total AST Nodes: 60)
+Generating PHP code for Data.List.Lazy (Total AST Nodes: 74)
+Generating PHP code for Data.List.Lazy.NonEmpty (Total AST Nodes: 16)
+Generating PHP code for Data.List.Partial (Total AST Nodes: 4)
+Generating PHP code for Data.List.ZipList (Total AST Nodes: 17)
+Generating PHP code for Data.Map.Gen (Total AST Nodes: 1)
+Generating PHP code for Data.Monoid.Generic (Total AST Nodes: 6)
+Generating PHP code for Data.Number.Approximate (Total AST Nodes: 8)
+Generating PHP code for Data.Number.Format (Total AST Nodes: 7)
+Generating PHP code for Data.Ord.Down (Total AST Nodes: 7)
+Generating PHP code for Data.Ord.Generic (Total AST Nodes: 8)
+Generating PHP code for Data.Profunctor.Cochoice (Total AST Nodes: 2)
+Generating PHP code for Data.Profunctor.Costrong (Total AST Nodes: 2)
+Generating PHP code for Data.Profunctor.Join (Total AST Nodes: 9)
+Generating PHP code for Data.Profunctor.Split (Total AST Nodes: 8)
+Generating PHP code for Data.Reflectable (Total AST Nodes: 6)
+Generating PHP code for Data.Ring.Generic (Total AST Nodes: 6)
+Generating PHP code for Data.Semigroup.Generic (Total AST Nodes: 7)
+Generating PHP code for Data.Semiring.Generic (Total AST Nodes: 12)
+Generating PHP code for Data.Set.NonEmpty (Total AST Nodes: 30)
+Generating PHP code for Data.Show.Generic (Total AST Nodes: 9)
+Generating PHP code for Data.String.Pattern (Total AST Nodes: 12)
+Generating PHP code for Data.String.Unsafe (Total AST Nodes: 0)
+Generating PHP code for Data.String.CodeUnits (Total AST Nodes: 16)
+Generating PHP code for Data.String.Common (Total AST Nodes: 2)
+Generating PHP code for Data.String.CodePoints (Total AST Nodes: 33)
+Generating PHP code for Data.String (Total AST Nodes: 0)
+Generating PHP code for Data.String.CaseInsensitive (Total AST Nodes: 6)
+Generating PHP code for Data.String.Gen (Total AST Nodes: 8)
+Generating PHP code for Data.String.NonEmpty.Internal (Total AST Nodes: 35)
+Generating PHP code for Data.String.NonEmpty.CodePoints (Total AST Nodes: 24)
+Generating PHP code for Data.String.NonEmpty (Total AST Nodes: 0)
+Generating PHP code for Data.String.NonEmpty.CaseInsensitive (Total AST Nodes: 6)
+Generating PHP code for Data.String.NonEmpty.CodeUnits (Total AST Nodes: 27)
+Generating PHP code for Data.String.Regex.Flags (Total AST Nodes: 15)
+Generating PHP code for Data.String.Regex (Total AST Nodes: 8)
+Generating PHP code for Data.String.Regex.Unsafe (Total AST Nodes: 1)
+Generating PHP code for Data.Time.Duration.Gen (Total AST Nodes: 5)
+Generating PHP code for Data.Tuple.Nested (Total AST Nodes: 50)
+Generating PHP code for Effect.Unsafe (Total AST Nodes: 0)
+Generating PHP code for Effect.Aff (Total AST Nodes: 59)
+Generating PHP code for Effect.Aff.Class (Total AST Nodes: 10)
+Generating PHP code for Effect.Uncurried (Total AST Nodes: 20)
+Generating PHP code for Effect.Aff.Compat (Total AST Nodes: 5)
+Generating PHP code for Effect.Class.Console (Total AST Nodes: 18)
+Generating PHP code for Effect.Exception.Unsafe (Total AST Nodes: 2)
+Generating PHP code for Effect.Now (Total AST Nodes: 3)
+Generating PHP code for Main (Total AST Nodes: 1)
+Generating PHP code for Spago.Generated.BuildInfo (Total AST Nodes: 3)
+Generating PHP code for Test.AffOperations (Total AST Nodes: 2)
+Generating PHP code for Test.BenchCheck (Total AST Nodes: 1)
+Generating PHP code for Test.FileOps (Total AST Nodes: 3)
+Generating PHP code for Test.Implicit (Total AST Nodes: 2)
+Generating PHP code for Test.Main (Total AST Nodes: 1)
+Generating PHP code for Test.Parallelism (Total AST Nodes: 4)
+Generating PHP code for Test.STArray (Total AST Nodes: 3)
+Generating PHP code for Test.StringOps (Total AST Nodes: 4)
+Writing main.mod.php for App
+
+✓ Backend build succeeded.
+
+=== PHP ===
+Loading composer repositories with package information
+Updating dependencies
+Nothing to modify in lock file
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Nothing to install, update or remove
+Generating autoload files
+No security vulnerability advisories found.
+Global warm-up in progress (this may take a moment)...
+
+Global warm-up complete. Starting benchmarks...
+
+--------------------------------------------------
+
+(Test)
+
+AST Evaluation:
+
+(Output & Warm-up)
+
+7
+
+(Execution time - best of 10)
+
+2.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Fibonacci:
+
+(Output & Warm-up)
+
+55
+
+(Execution time - best of 10)
+
+1.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+List Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+152.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Tail Call Optimization (100k calls):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+1597.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Deep Record Updates (10k iterations):
+
+(Output & Warm-up)
+
+20000
+
+(Execution time - best of 10)
+
+1897.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Ackermann (3, 4):
+
+(Output & Warm-up)
+
+125
+
+(Execution time - best of 10)
+
+45.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Church Numerals (100k Closure Applications):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+9344.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Prime Sieve (sum primes up to 500):
+
+(Output & Warm-up)
+
+21536
+
+(Execution time - best of 10)
+
+531.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Red-Black Tree (100k Worst-Case Insertions):
+
+(Output & Warm-up)
+
+22
+
+(Execution time - best of 10)
+
+269740.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Polymorphism (10M Type Class Dict Lookups):
+
+(Output & Warm-up)
+
+10000000
+
+(Execution time - best of 10)
+
+6377.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+State Monad (1.2k Binds, 60 Stack Depth):
+
+(Output & Warm-up)
+
+1200
+
+(Execution time - best of 10)
+
+424.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Lazy Evaluation (1M Thunks Forced, 1k Depth):
+
+(Output & Warm-up)
+
+1000000
+
+(Execution time - best of 10)
+
+96424.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Array Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+110.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+RowToList (Keys Count):
+
+(Output & Warm-up)
+
+5
+
+(Execution time - best of 10)
+
+0.00 μs
+
+
+==================================================
+
+Total exec time: 386.64 ms
+
+
+Building...
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: ps-go-test
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+=== Go ===
+# gopurs/output/purescript
+purescript/Data_Eq.go:870:12: cannot convert __t_tag_3 (variable of type *Constructor_Data_Eq_Eq[uint32]) to type uint32
+purescript/Data_Eq.go:880:12: cannot convert __t_tag_5 (variable of type *Constructor_Data_Eq_Eq[uint32]) to type uint32
+purescript/Data_Eq.go:891:12: cannot convert __t_tag_0 (variable of type *Constructor_Data_Eq_Eq[uint32]) to type uint32
+purescript/Data_Map_Internal.go:3394:12: cannot convert __t_tag_2 (variable of type *Constructor_Data_Ord_Ord[uint32]) to type uint32
+purescript/Data_Map_Internal.go:3426:12: cannot convert __t_tag_6 (variable of type *Constructor_Data_Ord_Ord[uint32]) to type uint32
+purescript/Data_Map_Internal.go:3458:12: cannot convert __t_tag_10 (variable of type *Constructor_Data_Ord_Ord[uint32]) to type uint32
+purescript/Data_Map_Internal.go:3490:12: cannot convert __t_tag_14 (variable of type *Constructor_Data_Ord_Ord[uint32]) to type uint32
+purescript/Data_Map_Internal.go:3522:12: cannot convert __t_tag_18 (variable of type *Constructor_Data_Ord_Ord[uint32]) to type uint32
+purescript/Data_Map_Internal.go:3554:12: cannot convert __t_tag_22 (variable of type *Constructor_Data_Ord_Ord[uint32]) to type uint32
+purescript/Data_Map_Internal.go:3587:12: cannot convert __t_tag_26 (variable of type *Constructor_Data_Ord_Ord[uint32]) to type uint32
+purescript/Data_Map_Internal.go:3587:12: too many errors
+=== Go (gopurs) failed ===
+
+Building...
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: ps-rust-test
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+=== Rust ===
+error[E0618]: expected function, found `purust_core::Value`
+  --> Purs_Control_Semigroupoid/src/lib.rs:35:428
+   |
+35 | ...et _f = (/* Typed crate::UnknownType <- crate::UnknownType : App(Accessor(Local(...))) */((dictSemigroupoid).compose.clone())(/* Typed crate::UnknownType <- crate::UnknownType : Local(...) */g, /* Typed crate::UnknownType <- crate::UnknownType : Local(...) */f)).clone(); move |mut _a0: crate::UnknownType, mut _a1: crate::UnknownType| -> crate::UnknownType { _f(_a0, _a1) } ...
+   |       --                                                                                                                                                                                                                                                                                                                                                                   ^^----------
+   |       |                                                                                                                                                                                                                                                                                                                                                                    |
+   |       `_f` has type `purust_core::Value`                                                                                                                                                                                                                                                                                                                                   call expression requires function
+
+For more information about this error, try `rustc --explain E0618`.
+error: could not compile `Purs_Control_Semigroupoid` (lib) due to 1 previous error
+=== Rust (purust) failed ===
+
+Building...
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: ps-cs-test
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Compiling with backend "../sharpurs/sharpurs/bin/sharpurs"
+
+✓ Backend build succeeded.
+
+=== F#/C# ===
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Symbol.fs(9,95): error FS0039: The value or constructor 'Data_Symbol_unsafeCoerce' is not defined. Maybe you want one of the following:   Data_Symbol_IsSymbolusd_Dict   Data_Boolean_otherwise [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.HeytingAlgebra.fs(23,157): error FS0039: The value or constructor 'Data_Unit_unit' is not defined. Maybe you want one of the following:   Data [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.HeytingAlgebra.fs(23,200): error FS0039: The value or constructor 'Data_Unit_unit' is not defined. Maybe you want one of the following:   Data [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.HeytingAlgebra.fs(23,293): error FS0039: The value or constructor 'Data_Unit_unit' is not defined. Maybe you want one of the following:   Data [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.HeytingAlgebra.fs(23,387): error FS0039: The value or constructor 'Data_Unit_unit' is not defined. Maybe you want one of the following:   Data [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.HeytingAlgebra.fs(23,481): error FS0039: The value or constructor 'Data_Unit_unit' is not defined. Maybe you want one of the following:   Data [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.HeytingAlgebra.fs(23,551): error FS0039: The value or constructor 'Data_Unit_unit' is not defined. Maybe you want one of the following:   Data [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.HeytingAlgebra.fs(37,652): error FS0039: The value or constructor 'Data_HeytingAlgebra_boolConj' is not defined. Maybe you want one of the following:   Data_HeytingAlgebra_notRecord   Data_HeytingAlgebra_ttRecord   Data_HeytingAlgebra_not   Data_HeytingAlgebra_disjRecord   Data_HeytingAlgebra_ffRecord [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.HeytingAlgebra.fs(37,711): error FS0039: The value or constructor 'Data_HeytingAlgebra_boolDisj' is not defined. Maybe you want one of the following:   Data_HeytingAlgebra_not   Data_HeytingAlgebra_disj   Data_HeytingAlgebra_disjRecord   Data_HeytingAlgebra_implies   Data_HeytingAlgebra_notRecord [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.HeytingAlgebra.fs(37,769): error FS0039: The value or constructor 'Data_HeytingAlgebra_boolNot' is not defined. Maybe you want one of the following:   Data_HeytingAlgebra_not   Data_HeytingAlgebra_notRecord   Data_HeytingAlgebra_ttRecord   Data_HeytingAlgebra_tt   Data_HeytingAlgebra_ffRecord [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.HeytingAlgebra.fs(48,1055): error FS0039: The value or constructor 'Record_Unsafe_unsafeSet' is not defined. [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.HeytingAlgebra.fs(48,1141): error FS0039: The value or constructor 'Record_Unsafe_unsafeGet' is not defined. [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.HeytingAlgebra.fs(48,2109): error FS0039: The value or constructor 'Record_Unsafe_unsafeSet' is not defined. [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.HeytingAlgebra.fs(48,2195): error FS0039: The value or constructor 'Record_Unsafe_unsafeGet' is not defined. [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.HeytingAlgebra.fs(48,3169): error FS0039: The value or constructor 'Record_Unsafe_unsafeSet' is not defined. [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.HeytingAlgebra.fs(48,3255): error FS0039: The value or constructor 'Record_Unsafe_unsafeGet' is not defined. [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.HeytingAlgebra.fs(48,4159): error FS0039: The value or constructor 'Record_Unsafe_unsafeSet' is not defined. [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.HeytingAlgebra.fs(48,4811): error FS0039: The value or constructor 'Record_Unsafe_unsafeSet' is not defined. [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.HeytingAlgebra.fs(48,4897): error FS0039: The value or constructor 'Record_Unsafe_unsafeGet' is not defined. [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.HeytingAlgebra.fs(48,5711): error FS0039: The value or constructor 'Record_Unsafe_unsafeSet' is not defined. [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Eq.fs(17,111): error FS0039: The value or constructor 'Data_Eq_eqStringImpl' is not defined. Maybe you want one of the following:   Data_Eq_eqUnit   Data_Eq_eqVoid   Data_Eq_Equsd_Dict   Data_Eq_Eq1usd_Dict   Data_Eq_EqRecordusd_Dict [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Eq.fs(27,111): error FS0039: The value or constructor 'Data_Eq_eqNumberImpl' is not defined. Maybe you want one of the following:   Data_Eq_eqUnit   Data_Eq_eqRec   Data_Eq_eqProxy   Data_Eq_eqRowNil   Data_Eq_eqString [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Eq.fs(29,108): error FS0039: The value or constructor 'Data_Eq_eqIntImpl' is not defined. Maybe you want one of the following:   Data_Eq_eqUnit   Data_Eq_eqString   Data_Eq_eqNumber   Data_Eq_eqVoid   Data_Eq_eqProxy [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Eq.fs(31,109): error FS0039: The value or constructor 'Data_Eq_eqCharImpl' is not defined. Maybe you want one of the following:   Data_Eq_eqRec   Data_Eq_eqInt   Data_Eq_eqRowNil   Data_Eq_eqString   Data_Eq_eqUnit [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Eq.fs(33,112): error FS0039: The value or constructor 'Data_Eq_eqBooleanImpl' is not defined. Maybe you want one of the following:   Data_Eq_eqInt   Data_Eq_eqVoid   Data_Eq_eqNumber   Data_Eq_eqRowNil   Data_Eq_eqRec [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Eq.fs(39,159): error FS0039: The value or constructor 'Data_Eq_eqArrayImpl' is not defined. Maybe you want one of the following:   Data_Eq_eqRec   Data_Eq_eq1   Data_Eq_eq   Data_Eq_eqProxy   Data_Eq_eqChar [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Eq.fs(43,748): error FS0039: The value or constructor 'Record_Unsafe_unsafeGet' is not defined. [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Semigroup.fs(13,186): error FS0039: The value or constructor 'Data_Unit_unit' is not defined. Maybe you want one of the following:   Data_Eq_eqUnit   Data   Data_Eq_eqInt [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Semigroup.fs(15,143): error FS0039: The value or constructor 'Data_Semigroup_concatString' is not defined. Maybe you want one of the following:   Data_Semigroup_semigroupUnit   Data_Semigroup_Semigroupusd_Dict   Data_Semigroup_semigroupVoid   Data_Semigroup_SemigroupRecordusd_Dict   DataMisalignedException [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Semigroup.fs(21,142): error FS0039: The value or constructor 'Data_Semigroup_concatArray' is not defined. Maybe you want one of the following:   Data_Semigroup_semigroupUnit   Data_Semigroup_semigroupRecordNil   Data_Semigroup_semigroupString   Data_Semigroup_semigroupProxy   Data_Semigroup_Semigroupusd_Dict [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Semigroup.fs(31,818): error FS0039: The value or constructor 'Record_Unsafe_unsafeSet' is not defined. [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Semigroup.fs(31,904): error FS0039: The value or constructor 'Record_Unsafe_unsafeGet' is not defined. [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Show.fs(15,121): error FS0039: The value or constructor 'Data_Show_showStringImpl' is not defined. Maybe you want one of the following:   Data_Show_showUnit   Data_Show_showVoid   Data_Show_Showusd_Dict   Data_Semigroup_semigroupString   Data_Semigroup_semigroupUnit [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Show.fs(25,121): error FS0039: The value or constructor 'Data_Show_showNumberImpl' is not defined. Maybe you want one of the following:   Data_Show_showUnit   Data_Show_showString   Data_Show_showProxy   Data_Show_showRecord   Data_Show_showVoid [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Show.fs(27,118): error FS0039: The value or constructor 'Data_Show_showIntImpl' is not defined. Maybe you want one of the following:   Data_Show_showString   Data_Show_showUnit   Data_Show_showVoid   Data_Show_showNumber   Data_Show_Showusd_Dict [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Show.fs(29,119): error FS0039: The value or constructor 'Data_Show_showCharImpl' is not defined. Maybe you want one of the following:   Data_Show_showProxy   Data_Show_showString   Data_Show_showVoid   Data_Show_showRecord   Data_Show_showInt [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Show.fs(35,171): error FS0039: The value or constructor 'Data_Show_showArrayImpl' is not defined. Maybe you want one of the following:   Data_Show_showProxy   Data_Show_showChar   Data_Show_showString   Data_Show_show   Data_Show_showInt [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Show.fs(37,742): error FS0039: The value or constructor 'Record_Unsafe_unsafeGet' is not defined. Maybe you want one of the following:   record [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Show.fs(39,487): error FS0039: The value or constructor 'Record_Unsafe_unsafeGet' is not defined. Maybe you want one of the following:   record [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Semiring.fs(15,179): error FS0039: The value or constructor 'Data_Unit_unit' is not defined. Maybe you want one of the following:   Data_Eq_eqUnit   Data_Ordering_invert   Data   Data_Eq_eqInt [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Semiring.fs(15,228): error FS0039: The value or constructor 'Data_Unit_unit' is not defined. Maybe you want one of the following:   Data_Eq_eqUnit   Data_Ordering_invert   Data   Data_Eq_eqInt [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Semiring.fs(15,317): error FS0039: The value or constructor 'Data_Unit_unit' is not defined. Maybe you want one of the following:   Data_Eq_eqUnit   Data_Ordering_invert   Data   Data_Eq_eqInt [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Semiring.fs(15,365): error FS0039: The value or constructor 'Data_Unit_unit' is not defined. Maybe you want one of the following:   Data_Eq_eqUnit   Data_Ordering_invert   Data   Data_Eq_eqInt [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Semiring.fs(21,136): error FS0039: The value or constructor 'Data_Semiring_numAdd' is not defined. Maybe you want one of the following:   Data_Semiring_zero   Data_Semiring_semiringUnit   Data_Semiring_Semiringusd_Dict   Data_Semiring_zeroRecord   Data_Semiring_semiringProxy [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Semiring.fs(21,220): error FS0039: The value or constructor 'Data_Semiring_numMul' is not defined. Maybe you want one of the following:   Data_Semiring_semiringUnit   Data_Semiring_zero   Data_Semiring_Semiringusd_Dict   Data_Semiring_semiringProxy   Data_Semiring_zeroRecord [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Semiring.fs(23,133): error FS0039: The value or constructor 'Data_Semiring_intAdd' is not defined. Maybe you want one of the following:   Data_Semiring_zero   Data_Semiring_semiringUnit   Data_Semiring_zeroRecord   Data_Semiring_Semiringusd_Dict   Data_Semiring_semiringProxy [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Semiring.fs(23,215): error FS0039: The value or constructor 'Data_Semiring_intMul' is not defined. Maybe you want one of the following:   Data_Semiring_semiringUnit   Data_Semiring_zero   Data_Semiring_semiringNumber   Data_Semiring_semiringProxy   Data_Semiring_Semiringusd_Dict [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Semiring.fs(41,987): error FS0039: The value or constructor 'Record_Unsafe_unsafeSet' is not defined. [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Semiring.fs(41,1073): error FS0039: The value or constructor 'Record_Unsafe_unsafeGet' is not defined. [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Semiring.fs(41,2014): error FS0039: The value or constructor 'Record_Unsafe_unsafeSet' is not defined. [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Semiring.fs(41,2100): error FS0039: The value or constructor 'Record_Unsafe_unsafeGet' is not defined. [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Semiring.fs(41,2998): error FS0039: The value or constructor 'Record_Unsafe_unsafeSet' is not defined. [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Semiring.fs(41,3661): error FS0039: The value or constructor 'Record_Unsafe_unsafeSet' is not defined. [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Ring.fs(17,163): error FS0039: The value or constructor 'Data_Unit_unit' is not defined. Maybe you want one of the following:   Data_Ring_sub   Data_Semiring_mul   Data_Eq_eqUnit   Data_Semiring_one   Data_Ordering_invert [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Ring.fs(21,1375): error FS0039: The value or constructor 'Record_Unsafe_unsafeSet' is not defined. [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Ring.fs(21,1461): error FS0039: The value or constructor 'Record_Unsafe_unsafeGet' is not defined. [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Ring.fs(27,120): error FS0039: The value or constructor 'Data_Ring_numSub' is not defined. Maybe you want one of the following:   Data_Ring_sub   Data_Semiring_mul   Data_Ring_subRecord   Data_Ring_ringUnit   Data_Ring_Ringusd_Dict [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Ring.fs(29,117): error FS0039: The value or constructor 'Data_Ring_intSub' is not defined. Maybe you want one of the following:   Data_Ring_sub   Data_Ring_ringUnit   Data_Ring_subRecord   Data_Ring_ringNumber   Data_Ring_Ringusd_Dict [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Ord.fs(19,186): error FS0039: The value or constructor 'Data_Ord_ordStringImpl' is not defined. Maybe you want one of the following:   Data_Ord_Ordusd_Dict   Data_Ord_Ord1usd_Dict   Data_Ord_ordUnit   Data_Ord_ordVoid   Data_Ring_ringInt [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Ord.fs(27,186): error FS0039: The value or constructor 'Data_Ord_ordNumberImpl' is not defined. Maybe you want one of the following:   Data_Ord_ordUnit   Data_Ord_ordVoid   Data_Ord_ordOrdering   Data_Ord_ordRecordNil   Data_Ord_ordString [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Ord.fs(29,183): error FS0039: The value or constructor 'Data_Ord_ordIntImpl' is not defined. Maybe you want one of the following:   Data_Ord_ordString   Data_Ord_ordUnit   Data_Ord_ordVoid   Data_Ord_ordNumber   Data_Ord_ordOrdering [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Ord.fs(31,184): error FS0039: The value or constructor 'Data_Ord_ordCharImpl' is not defined. Maybe you want one of the following:   Data_Ord_ordVoid   Data_Ord_ordInt   Data_Ord_ordString   Data_Ord_ordProxy   Data_Ord_ordUnit [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Ord.fs(33,187): error FS0039: The value or constructor 'Data_Ord_ordBooleanImpl' is not defined. Maybe you want one of the following:   Data_Ord_ordNumber   Data_Ord_ordOrdering   Data_Ord_ordInt   Data_Ord_ordRecordNil   Data_Ord_ordVoid [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Ord.fs(59,1091): error FS0039: The value or constructor 'Data_Ord_ordArrayImpl' is not defined. Maybe you want one of the following:   Data_Ord_ordProxy   Data_Ord_compare   Data_Ord_comparing   Data_Ord_ordBoolean   Data_Ord_ordChar [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Ord.fs(63,883): error FS0039: The value or constructor 'Record_Unsafe_unsafeGet' is not defined. [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Functor.fs(13,223): error FS0039: The value or constructor 'Data_Unit_unit' is not defined. Maybe you want one of the following:   Data_Function_on   Data_Ring_sub   Data_Function_const   Data_Function_flip   Data_Ring_ringInt [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Functor.fs(23,131): error FS0039: The value or constructor 'Data_Functor_arrayMap' is not defined. Maybe you want one of the following:   Data_Functor_map   Data_Functor_mapFlipped   Data_Function_apply   Data_Functor_functorFn   Data_Functor_functorProxy [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Control.Apply.fs(13,131): error FS0039: The value or constructor 'Control_Apply_arrayApply' is not defined. Maybe you want one of the following:   Control_Apply_applyProxy   Control_Apply_applyFn   Control_Apply_Applyusd_Dict   Control [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Control.Applicative.fs(11,355): error FS0039: The value or constructor 'Data_Unit_unit' is not defined. Maybe you want one of the following:   Data_Function_on   Data_Ring_sub   Data_Function_const   Data_Function_flip   Data_Functor_functorFn [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Control.Applicative.fs(13,353): error FS0039: The value or constructor 'Data_Unit_unit' is not defined. Maybe you want one of the following:   Data_Function_on   Data_Ring_sub   Data_Function_const   Data_Function_flip   Data_Functor_functorFn [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Control.Bind.fs(19,126): error FS0039: The value or constructor 'Control_Bind_arrayBind' is not defined. Maybe you want one of the following:   Control_Bind_discard   Control_Bind_bindFn   Control_Bind_bindProxy   Control_Bind_identity   Control_Bind_Discardusd_Dict [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.EuclideanRing.fs(15,214): error FS0039: The value or constructor 'Data_EuclideanRing_numDiv' is not defined. Maybe you want one of the following:   Data_EuclideanRing_gcd   Data_EuclideanRing_mod   Data_EuclideanRing_gcd_tco   Data_EuclideanRing_EuclideanRingusd_Dict   Data_Ring_Ringusd_Dict [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.EuclideanRing.fs(17,156): error FS0039: The value or constructor 'Data_EuclideanRing_intDegree' is not defined. Maybe you want one of the following:   Data_EuclideanRing_gcd_tco   Data_EuclideanRing_gcd   Data_EuclideanRing_mod   Data_EuclideanRing_euclideanRingNumber   Data_EuclideanRing_EuclideanRingusd_Dict [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.EuclideanRing.fs(17,214): error FS0039: The value or constructor 'Data_EuclideanRing_intDiv' is not defined. Maybe you want one of the following:   Data_EuclideanRing_gcd_tco   Data_EuclideanRing_gcd   Data_EuclideanRing_mod   Data_EuclideanRing_euclideanRingNumber   Data_EuclideanRing_EuclideanRingusd_Dict [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.EuclideanRing.fs(17,269): error FS0039: The value or constructor 'Data_EuclideanRing_intMod' is not defined. Maybe you want one of the following:   Data_EuclideanRing_mod   Data_EuclideanRing_gcd_tco   Data_EuclideanRing_gcd   Data_EuclideanRing_euclideanRingNumber   Data_Semiring_mulRecord [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Monoid.fs(13,129): error FS0039: The value or constructor 'Data_Unit_unit' is not defined. Maybe you want one of the following:   Data_Function_on   Data_Ring_sub   Data_Function_const   Data_Function_flip   Data_Functor_functorFn [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Monoid.fs(31,1352): error FS0039: The value or constructor 'Record_Unsafe_unsafeSet' is not defined. [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Bounded.fs(17,130): error FS0039: The value or constructor 'Data_Unit_unit' is not defined. Maybe you want one of the following:   Data_Function_on   Data_Ring_sub   Data_Function_const   Data_Function_flip   Data_Functor_functorFn [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Bounded.fs(17,177): error FS0039: The value or constructor 'Data_Unit_unit' is not defined. Maybe you want one of the following:   Data_Function_on   Data_Ring_sub   Data_Function_const   Data_Function_flip   Data_Functor_functorFn [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Bounded.fs(25,132): error FS0039: The value or constructor 'Data_Bounded_topNumber' is not defined. Maybe you want one of the following:   Data_Bounded_top   Data_Bounded_topRecord   Data_Bounded_boundedProxy   Data_Bounded_boundedUnit   Data_Bounded_boundedOrdering [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Bounded.fs(25,187): error FS0039: The value or constructor 'Data_Bounded_bottomNumber' is not defined. Maybe you want one of the following:   Data_Bounded_boundedUnit   Data_Bounded_boundedOrdering   Data_Bounded_top   Data_Bounded_boundedProxy   Data_Bounded_Boundedusd_Dict [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Bounded.fs(27,129): error FS0039: The value or constructor 'Data_Bounded_topInt' is not defined. Maybe you want one of the following:   Data_Bounded_top   Data_Bounded_topRecord   Data_Bounded_boundedUnit   Data_Bounded_boundedProxy   Data_Bounded_ordRecord [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Bounded.fs(27,181): error FS0039: The value or constructor 'Data_Bounded_bottomInt' is not defined. Maybe you want one of the following:   Data_Bounded_boundedUnit   Data_Bounded_top   Data_Bounded_boundedNumber   Data_Bounded_Boundedusd_Dict   Data_Bounded_boundedProxy [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Bounded.fs(29,130): error FS0039: The value or constructor 'Data_Bounded_topChar' is not defined. Maybe you want one of the following:   Data_Bounded_top   Data_Bounded_topRecord   Data_Bounded_ordRecord   Data_Bounded_boundedInt   Data_Bounded_boundedProxy [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Bounded.fs(29,183): error FS0039: The value or constructor 'Data_Bounded_bottomChar' is not defined. Maybe you want one of the following:   Data_Bounded_top   Data_Bounded_topRecord   Data_Bounded_boundedInt   Data_Bounded_ordRecord   Data_Bounded_boundedUnit [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Bounded.fs(39,1456): error FS0039: The value or constructor 'Record_Unsafe_unsafeSet' is not defined. [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Data.Bounded.fs(39,2111): error FS0039: The value or constructor 'Record_Unsafe_unsafeSet' is not defined. [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Effect.fs(8,128): error FS0039: The value or constructor 'Effect_bindE' is not defined. Maybe you want one of the following:   Effect_bindEffect   Effect   Effect_monadEffect [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Effect.fs(10,149): error FS0039: The value or constructor 'Effect_pureE' is not defined. Maybe you want one of the following:   Effect   Effect_functorEffect   Effect_applyEffect   Effect_bindEffect   Effect_monadEffect [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Effect.fs(16,391): error FS0039: The value or constructor 'Effect_pureE' is not defined. Maybe you want one of the following:   Effect   Effect_functorEffect   Effect_applyEffect   Effect_semigroupEffect   Effect_bindEffect [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Effect.Console.fs(7,110): error FS0039: The value or constructor 'Effect_Console_warn' is not defined. Maybe you want one of the following:   Effect_monadEffect   Effect   Effect_functorEffect   Effect_monoidEffect   Effect_applyEffect [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Effect.Console.fs(9,109): error FS0039: The value or constructor 'Effect_Console_log' is not defined. Maybe you want one of the following:   Effect_Console_warnShow   Effect   Effect_functorEffect   Effect_monadEffect [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Effect.Console.fs(11,110): error FS0039: The value or constructor 'Effect_Console_info' is not defined. Maybe you want one of the following:   Effect_Console_logShow   Effect_Console_warnShow   Effect_monoidEffect   Effect_bindEffect   Effect_functorEffect [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Effect.Console.fs(13,309): error FS0039: The value or constructor 'Effect_Console_group' is not defined. Maybe you want one of the following:   Effect_Console_logShow   Effect_Console_warnShow   Effect_Console_infoShow   Effect_functorEffect   Effect_semigroupEffect [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Effect.Console.fs(13,784): error FS0039: The value or constructor 'Effect_Console_groupEnd' is not defined. Maybe you want one of the following:   Effect_Console_warnShow   Effect_Console_logShow   Effect_Console_infoShow   Effect_functorEffect   Effect_semigroupEffect [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Effect.Console.fs(15,111): error FS0039: The value or constructor 'Effect_Console_error' is not defined. Maybe you want one of the following:   Effect_Console_warnShow   Effect_Console_grouped   Effect_Console_logShow   Effect_Console_infoShow   Effect_functorEffect [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Effect.Console.fs(17,111): error FS0039: The value or constructor 'Effect_Console_debug' is not defined. Maybe you want one of the following:   Effect_Console_grouped   Effect_Console_logShow   Effect_Console_infoShow   Effect_Console_warnShow   Effect_Console_errorShow [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Bench.fs(28,303): error FS0039: The value or constructor 'Effect_Console_log' is not defined. Maybe you want one of the following:   Effect_Console_logShow   Effect_Console_grouped   Effect_Console_infoShow   Effect_Console_warnShow   Effect_Console_errorShow [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Bench.fs(28,933): error FS0039: The value or constructor 'Effect_Console_log' is not defined. Maybe you want one of the following:   Effect_Console_logShow   Effect_Console_grouped   Effect_Console_infoShow   Effect_Console_warnShow   Effect_Console_errorShow [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Bench.fs(28,1443): error FS0039: The value or constructor 'Effect_Console_log' is not defined. Maybe you want one of the following:   Effect_Console_logShow   Effect_Console_grouped   Effect_Console_infoShow   Effect_Console_warnShow   Effect_Console_errorShow [/Users/0x1/Documents/htdocs/altbak.pub/run/bak/go/output/Main/Program.fsproj]
+
+The build failed. Fix the build errors and run again.
+=== F#/C# failed ===
