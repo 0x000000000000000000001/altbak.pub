@@ -1,17 +1,38 @@
 const fs = require('fs');
-const data = JSON.parse(fs.readFileSync('output/Data.Map.Internal/corefn.json'));
-const types = data.typeTable;
-const printType = (id) => {
-  if (id === null || id === undefined) return "Any";
-  const t = types[id];
-  if (!t) return "Unknown";
-  if (t.type === "Func") return `Func([${t.args.map(printType).join(", ")}], ${printType(t.ret)})`;
-  if (t.type === "ConstrainedType") return `ConstrainedType([${t.constraints.map(c => c.fqn.join(".")).join(", ")}], ${printType(t.body)})`;
-  if (t.type === "ForAll") return `ForAll([${t.vars.join(", ")}], ${printType(t.body)})`;
-  if (t.type === "TypeApp") return `TypeApp(${printType(t.constructor)}, ${t.args.map(printType).join(", ")})`;
-  if (t.type === "TypeVar") return `TypeVar(${t.name})`;
-  if (t.type === "Adt") return `Adt(${t.fqn.join(".")})`;
-  return JSON.stringify(t);
-};
-const lookupDecl = data.decls.find(d => d.identifier === "lookup");
-console.log(printType(lookupDecl.expression.annotation.type));
+const ast = JSON.parse(fs.readFileSync('./ast.json'));
+function find(node) {
+  if (!node) return;
+  if (node.type === "Var") {
+    console.log("VAR:", node.value.identifier, node.value.moduleName);
+  } else if (node.type === "App") {
+    find(node.abstraction);
+    find(node.argument);
+  } else if (node.type === "Abs") {
+    find(node.argument);
+  } else if (node.type === "Case") {
+    node.caseExpressions.forEach(find);
+    node.caseAlternatives.forEach(a => {
+      let cg = a.caseGuarded;
+      if (cg.expression) { // Unconditional
+        find(cg.expression);
+      } else { // Guarded
+        cg.forEach(g => {
+          find(g.guard);
+          find(g.expression);
+        });
+      }
+    });
+  } else if (node.type === "Let") {
+    node.binds.forEach(b => {
+      if (b.bindType === "NonRec") find(b.expression);
+      else b.binds.forEach(bb => find(bb.expression));
+    });
+    find(node.expression);
+  } else if (node.type === "Constructor") {
+    // nothing
+  } else if (node.type === "Literal") {
+    if (Array.isArray(node.value)) node.value.forEach(find);
+    else if (node.value && typeof node.value === 'object' && node.value.type) find(node.value);
+  }
+}
+find(ast);

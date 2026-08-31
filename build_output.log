@@ -1,0 +1,3434 @@
+=== Rebuilding gopurs backend ===
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: gopurs
+
+Downloading dependencies...
+Building...
+[1 of 3] Compiling PureScript.Backend.Optimizer.Monomorphize
+[2 of 3] Compiling Gopurs.CodeGen
+[3 of 3] Compiling Main
+[WARNING 1/90 UnusedExplicitImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:31:1
+
+  31  import Data.Maybe (Maybe(..), fromMaybe, maybe, isJust)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module Data.Maybe contains the following unused references:
+    isJust
+  It could be replaced with:
+    import Data.Maybe (Maybe(..), fromMaybe, maybe)
+
+[WARNING 2/90 UnusedImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:32:1
+
+  32  import Debug (trace)
+      ^^^^^^^^^^^^^^^^^^^^
+
+  The import of Debug is redundant
+
+[WARNING 3/90 DuplicateImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:36:1
+
+  36  import Data.String as String
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Data.String as String
+
+[WARNING 4/90 UnusedImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:38:1
+
+  38  import Debug (trace)
+      ^^^^^^^^^^^^^^^^^^^^
+
+  The import of Debug is redundant
+
+[WARNING 5/90 DuplicateImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:38:1
+
+  38  import Debug (trace)
+      ^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Debug (trace)
+
+[WARNING 6/90 UnusedImport] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:43:1
+
+  43  import Node.Encoding (Encoding(..))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Node.Encoding is redundant
+
+[WARNING 7/90 UnusedName] ../../purescript-backend-optimizer/src/PureScript/Backend/Optimizer/Monomorphize.purs:798:29
+
+  798                              substFn t = stripStaticConstraints info.dictArgs (substituteExprType info.subst (stripForAlls t))
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name substFn was introduced but not used.
+  in value declaration transitiveCollect
+
+[WARNING 8/90 UnusedFFIImplementations] src/Gopurs/CodeGen.purs:1:1
+
+        v
+     1  module Gopurs.CodeGen where
+     2  
+     3  import Prelude
+        ...
+  3014            "var " <> exportName <> " = gopurs_runtime.Func(func(_ gopurs_runtime.Value) gopurs_runtime.Value { panic(\"FFI not implemented: " <> pursName <> "\"); return gopurs_runtime.Value{} })"
+  3015          Just d ->
+  3016            "var " <> exportName <> " = " <> generateWrapperFunc dataDecls d mbTast
+                                                                                        ^
+
+  The following definitions in the foreign module for module Gopurs.CodeGen are unused:
+    gopursTrace
+
+[WARNING 9/90 UnusedExplicitImport] src/Gopurs/CodeGen.purs:4:1
+
+  4  import PureScript.Backend.Optimizer.Syntax (BackendSyntax(Var, Local, Lit, App, Abs, UncurriedApp, UncurriedAbs, UncurriedEffectApp, UncurriedEffectAbs, Accessor, Update, CtorSaturated, CtorDef, LetRec, Let, EffectBind, EffectPure, EffectDefer, Branch, PrimOp, PrimEffect, PrimUndefined, Fail, Typed), BackendAccessor(..), Pair(..), Level(..), BackendOperator(..), BackendOperator1(..), BackendOperator2(..), BackendOperatorOrd(..), BackendOperatorNum(..), BackendEffect(..))
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.Syntax contains the following unused references:
+    Level
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.Syntax (BackendAccessor(..), BackendEffect(..), BackendOperator(..), BackendOperator1(..), BackendOperator2(..), BackendOperatorNum(..), BackendOperatorOrd(..), BackendSyntax(PrimEffect, PrimOp, Fail, Branch, UncurriedAbs, Abs, CtorSaturated, CtorDef, Update, Accessor, LetRec, Let, EffectDefer, EffectPure, EffectBind, UncurriedEffectAbs, UncurriedEffectApp, Var, Local, Typed, UncurriedApp, App, Lit), Pair(..))
+
+[WARNING 10/90 UnusedDctorExplicitImport] src/Gopurs/CodeGen.purs:4:1
+
+  4  import PureScript.Backend.Optimizer.Syntax (BackendSyntax(Var, Local, Lit, App, Abs, UncurriedApp, UncurriedAbs, UncurriedEffectApp, UncurriedEffectAbs, Accessor, Update, CtorSaturated, CtorDef, LetRec, Let, EffectBind, EffectPure, EffectDefer, Branch, PrimOp, PrimEffect, PrimUndefined, Fail, Typed), BackendAccessor(..), Pair(..), Level(..), BackendOperator(..), BackendOperator1(..), BackendOperator2(..), BackendOperatorOrd(..), BackendOperatorNum(..), BackendEffect(..))
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of type BackendSyntax from module PureScript.Backend.Optimizer.Syntax includes the following unused data constructors:
+    PrimUndefined
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.Syntax (BackendAccessor(..), BackendEffect(..), BackendOperator(..), BackendOperator1(..), BackendOperator2(..), BackendOperatorNum(..), BackendOperatorOrd(..), BackendSyntax(PrimEffect, PrimOp, Fail, Branch, UncurriedAbs, Abs, CtorSaturated, CtorDef, Update, Accessor, LetRec, Let, EffectDefer, EffectPure, EffectBind, UncurriedEffectAbs, UncurriedEffectApp, Var, Local, Typed, UncurriedApp, App, Lit), Pair(..))
+
+[WARNING 11/90 UnusedImport] src/Gopurs/CodeGen.purs:6:1
+
+  6  import PureScript.Backend.Optimizer.Semantics (NeutralExpr(..))
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of PureScript.Backend.Optimizer.Semantics is redundant
+
+[WARNING 12/90 UnusedExplicitImport] src/Gopurs/CodeGen.purs:7:1
+
+  7  import PureScript.Backend.Optimizer.Convert (BackendModule, BackendBindingGroup)
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.Convert contains the following unused references:
+    BackendBindingGroup
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.Convert (BackendModule)
+
+[WARNING 13/90 UnusedExplicitImport] src/Gopurs/CodeGen.purs:10:1
+
+  10  import Data.Maybe (Maybe(..), fromMaybe, isJust)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module Data.Maybe contains the following unused references:
+    isJust
+  It could be replaced with:
+    import Data.Maybe (Maybe(..), fromMaybe)
+
+[WARNING 14/90 UnusedExplicitImport] src/Gopurs/CodeGen.purs:12:1
+
+  12  import PureScript.Backend.Optimizer.CoreFn (Ann(..), Bind(..), Binder(..), Binding(..), CaseAlternative(..), CaseGuard(..), Comment, ConstructorType(..), DataConstructor, DataDecl, Expr(..), ExprType(..), Guard(..), Ident(..), Import(..), Literal(..), Meta(..), Module(..), ModuleName(..), Prop(..), ProperName(..), Qualified(..), ReExport, exprAnn, findProp, propKey, propValue, qualifiedModuleName, unQualified)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.CoreFn contains the following unused references:
+    Ann
+    Bind
+    Binder
+    Binding
+    CaseAlternative
+    CaseGuard
+    Comment
+    ConstructorType
+    DataConstructor
+    Expr
+    Guard
+    Import
+    Meta
+    Module
+    ProperName
+    ReExport
+    exprAnn
+    findProp
+    propKey
+    propValue
+    qualifiedModuleName
+    unQualified
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.CoreFn (DataDecl, ExprType(..), Ident(..), Literal(..), ModuleName(..), Prop(..), Qualified(..))
+
+[WARNING 15/90 UnusedImport] src/Gopurs/CodeGen.purs:14:1
+
+  14  import Data.Array.NonEmpty as NonEmptyArray
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Data.Array.NonEmpty as NonEmptyArray is redundant
+
+[WARNING 16/90 UnusedExplicitImport] src/Gopurs/CodeGen.purs:15:1
+
+  15  import Data.Array.NonEmpty (NonEmptyArray, fromArray, toArray)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module Data.Array.NonEmpty contains the following unused references:
+    NonEmptyArray
+  It could be replaced with:
+    import Data.Array.NonEmpty (fromArray, toArray)
+
+[WARNING 17/90 UnusedImport] src/Gopurs/CodeGen.purs:20:1
+
+  20  import Partial.Unsafe (unsafePartial)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of Partial.Unsafe is redundant
+
+[WARNING 18/90 DuplicateImport] src/Gopurs/CodeGen.purs:29:1
+
+  29  import Data.Set as Set
+      ^^^^^^^^^^^^^^^^^^^^^^
+
+  Duplicate import of Data.Set as Set
+
+[WARNING 19/90 UnusedImport] src/Gopurs/CodeGen.purs:36:1
+
+  36  import PureScript.Backend.Optimizer.Substitute (unify, substituteExprType, mapTcoExprTypes, substituteAst)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of PureScript.Backend.Optimizer.Substitute is redundant
+
+[WARNING 20/90 UnusedExplicitImport] src/Gopurs/CodeGen.purs:37:1
+
+  37  import Gopurs.GoAst (GoFile, GoDecl, GoExpr(..), GoType(..), goTypeToStr, sanitizeName, goRecordStructName)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module Gopurs.GoAst contains the following unused references:
+    GoFile
+    goRecordStructName
+  It could be replaced with:
+    import Gopurs.GoAst (GoDecl, GoExpr(..), GoType(..), goTypeToStr, sanitizeName)
+
+[WARNING 21/90 UnusedExplicitImport] src/Gopurs/CodeGen.purs:41:1
+
+  41  import PureScript.Backend.Optimizer.Codegen.Tco (TcoExpr(..), tcoAnalysisOf)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The import of module PureScript.Backend.Optimizer.Codegen.Tco contains the following unused references:
+    tcoAnalysisOf
+  It could be replaced with:
+    import PureScript.Backend.Optimizer.Codegen.Tco (TcoExpr(..))
+
+[WARNING 22/90 UnusedImport] src/Gopurs/CodeGen.purs:43:1
+
+  43  import Node.Path as Path
+      ^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Node.Path as Path is redundant
+
+[WARNING 23/90 UnusedImport] src/Gopurs/CodeGen.purs:44:1
+
+  44  import Node.FS.Sync as FS
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  The qualified import of Node.FS.Sync as FS is redundant
+
+[WARNING 24/90 DuplicateSelectiveImport] src/Gopurs/CodeGen.purs:45:1
+
+  45  import Data.Tuple (Tuple(..), fst)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  There is an existing import of Data.Tuple, consider merging the import lists
+
+[WARNING 25/90 DuplicateSelectiveImport] src/Gopurs/CodeGen.purs:48:1
+
+  48  import Data.Maybe (fromMaybe)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  There is an existing import of Data.Maybe, consider merging the import lists
+
+[WARNING 26/90 UnusedName] src/Gopurs/CodeGen.purs:57:41
+
+  57  coerceGoExpr expr (TypeStructPointer b1 f1 s1 a1) (TypeStructPointer b2 f2 s2 a2) | b1 == b2 && s1 == s2 && a1 == a2 = expr
+                                              ^^
+
+  Name f1 was introduced but not used.
+  in value declaration coerceGoExpr
+
+[WARNING 27/90 UnusedName] src/Gopurs/CodeGen.purs:57:73
+
+  57  coerceGoExpr expr (TypeStructPointer b1 f1 s1 a1) (TypeStructPointer b2 f2 s2 a2) | b1 == b2 && s1 == s2 && a1 == a2 = expr
+                                                                              ^^
+
+  Name f2 was introduced but not used.
+  in value declaration coerceGoExpr
+
+[WARNING 28/90 UnusedName] src/Gopurs/CodeGen.purs:94:5
+
+  94      cleanType = String.replaceAll (Pattern " ") (Replacement "_") typeStrSafe6
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name cleanType was introduced but not used.
+  in value declaration mangleType
+
+[WARNING 29/90 UnusedName] src/Gopurs/CodeGen.purs:106:18
+
+  106  exprTypeToGoType ptrPaths enumAdts elided modNameStr (Record _) = TypeValue
+                        ^^^^^^^^
+
+  Name ptrPaths was introduced but not used.
+  in value declaration exprTypeToGoType
+
+[WARNING 30/90 UnusedName] src/Gopurs/CodeGen.purs:106:27
+
+  106  exprTypeToGoType ptrPaths enumAdts elided modNameStr (Record _) = TypeValue
+                                 ^^^^^^^^
+
+  Name enumAdts was introduced but not used.
+  in value declaration exprTypeToGoType
+
+[WARNING 31/90 UnusedName] src/Gopurs/CodeGen.purs:106:36
+
+  106  exprTypeToGoType ptrPaths enumAdts elided modNameStr (Record _) = TypeValue
+                                          ^^^^^^
+
+  Name elided was introduced but not used.
+  in value declaration exprTypeToGoType
+
+[WARNING 32/90 UnusedName] src/Gopurs/CodeGen.purs:106:43
+
+  106  exprTypeToGoType ptrPaths enumAdts elided modNameStr (Record _) = TypeValue
+                                                 ^^^^^^^^^^
+
+  Name modNameStr was introduced but not used.
+  in value declaration exprTypeToGoType
+
+[WARNING 33/90 UnusedName] src/Gopurs/CodeGen.purs:142:35
+
+  142  exprTypeToGoType _ _ _ _ (TypeVar v) = TypeValue
+                                         ^
+
+  Name v was introduced but not used.
+  in value declaration exprTypeToGoType
+
+[WARNING 34/90 UnusedName] src/Gopurs/CodeGen.purs:172:26
+
+  172  instantiateGenericGoType env t = t
+                                ^^^
+
+  Name env was introduced but not used.
+  in value declaration instantiateGenericGoType
+
+[WARNING 35/90 UserDefinedWarning] src/Gopurs/CodeGen.purs:174:1
+
+  174  unboxGoExpr :: GoExpr -> GoType -> GoType -> GoExpr
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A custom warning occurred while solving type class constraints:
+    Debug function usage
+  in binding group unboxGoExpr
+
+[WARNING 36/90 UnusedName] src/Gopurs/CodeGen.purs:252:21
+
+  252  extractUncurriedAbs tcoExpr@(TcoExpr _ syntax) = case syntax of
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name tcoExpr was introduced but not used.
+  in value declaration extractUncurriedAbs
+
+[WARNING 37/90 UnusedName] src/Gopurs/CodeGen.purs:308:79
+
+  308  translate enumAdts enumCtors pointerAdtPaths pointerAdtNodes pointerAdtLeaves adtTypes elidedCtors ctorTypes globalTypes rawInstantiations classDeclsMap classDeclsFields importsArray mod =
+                                                                                     ^^^^^^^^
+
+  Name adtTypes was introduced but not used.
+  in value declaration translate
+
+[WARNING 38/90 UnusedName] src/Gopurs/CodeGen.purs:308:140
+
+  308  translate enumAdts enumCtors pointerAdtPaths pointerAdtNodes pointerAdtLeaves adtTypes elidedCtors ctorTypes globalTypes rawInstantiations classDeclsMap classDeclsFields importsArray mod =
+                                                                                                                                                  ^^^^^^^^^^^^^
+
+  Name classDeclsMap was introduced but not used.
+  in value declaration translate
+
+[WARNING 39/90 ShadowedName] src/Gopurs/CodeGen.purs:321:26
+
+  321          checkSafe (ADT _ parts args) =
+                                ^^^^^
+
+  Name parts was shadowed.
+  in value declaration translate
+
+[WARNING 40/90 UnusedName] src/Gopurs/CodeGen.purs:346:5
+
+           v
+  346      instantiations = Map.mapMaybe
+  347        ( \typeMap ->
+  348            let
+       ...
+  352              if Set.isEmpty safeSet then Nothing else Just safeSet
+  353        )
+  354        rawInstantiations
+                             ^
+
+  Name instantiations was introduced but not used.
+  in value declaration translate
+
+[WARNING 41/90 UnusedName] src/Gopurs/CodeGen.purs:411:21
+
+  411                      nameStr = unwrap id
+                           ^^^^^^^^^^^^^^^^^^^
+
+  Name nameStr was introduced but not used.
+  in value declaration translate
+
+[WARNING 42/90 ShadowedName] src/Gopurs/CodeGen.purs:423:5
+
+  423      getExprType (TcoExpr _ (Typed ty _)) = ty
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name getExprType was shadowed.
+  in value declaration translate
+
+[WARNING 43/90 ShadowedName] src/Gopurs/CodeGen.purs:424:5
+
+  424      getExprType _ = Any -- fallback
+           ^^^^^^^^^^^^^^^^^^^
+
+  Name getExprType was shadowed.
+  in value declaration translate
+
+[WARNING 44/90 UnusedName] src/Gopurs/CodeGen.purs:427:5
+
+  427      setTcoExprType ty (TcoExpr a (Typed _ inner)) = TcoExpr a (Typed ty inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name setTcoExprType was introduced but not used.
+  in value declaration translate
+
+[WARNING 45/90 UnusedName] src/Gopurs/CodeGen.purs:428:5
+
+  428      setTcoExprType _ expr = expr
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name setTcoExprType was introduced but not used.
+  in value declaration translate
+
+[WARNING 46/90 UnusedName] src/Gopurs/CodeGen.purs:437:28
+
+  437                Just { args, body } ->
+                                  ^^^^
+
+  Name body was introduced but not used.
+  in value declaration translate
+
+[WARNING 47/90 UnusedName] src/Gopurs/CodeGen.purs:484:43
+
+  484                  processBindingGroup binds isRec =
+                                                 ^^^^^
+
+  Name isRec was introduced but not used.
+  in value declaration translate
+
+[WARNING 48/90 UnusedName] src/Gopurs/CodeGen.purs:491:27
+
+  491                            loopCtxs = map (\fn -> { ident: fn.ident, params: fn.args, loopParams: map (\p -> p <> "_loop") fn.args }) fns
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name loopCtxs was introduced but not used.
+  in value declaration translate
+
+[WARNING 49/90 UnusedName] src/Gopurs/CodeGen.purs:507:35
+
+  507                                    loopParams = map (\(Tuple idStr _) -> idStr <> "_loop") paramsWithTypes
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name loopParams was introduced but not used.
+  in value declaration translate
+
+[WARNING 50/90 UnusedName] src/Gopurs/CodeGen.purs:513:44
+
+  513                                      Just { fRet, fArgs } | arity < Array.length fArgs -> TypeValue
+                                                  ^^^^
+
+  Name fRet was introduced but not used.
+  in value declaration translate
+
+[WARNING 51/90 UnusedName] src/Gopurs/CodeGen.purs:678:7
+
+  678    Let ident lvl val body -> "Let(" <> printTcoExprShape body <> ")"
+             ^^^^^
+
+  Name ident was introduced but not used.
+  in value declaration printTcoExprShape
+
+[WARNING 52/90 UnusedName] src/Gopurs/CodeGen.purs:678:13
+
+  678    Let ident lvl val body -> "Let(" <> printTcoExprShape body <> ")"
+                   ^^^
+
+  Name lvl was introduced but not used.
+  in value declaration printTcoExprShape
+
+[WARNING 53/90 UnusedName] src/Gopurs/CodeGen.purs:678:17
+
+  678    Let ident lvl val body -> "Let(" <> printTcoExprShape body <> ")"
+                       ^^^
+
+  Name val was introduced but not used.
+  in value declaration printTcoExprShape
+
+[WARNING 54/90 UnusedName] src/Gopurs/CodeGen.purs:679:7
+
+  679    Abs ident body -> "Abs(" <> printTcoExprShape body <> ")"
+             ^^^^^
+
+  Name ident was introduced but not used.
+  in value declaration printTcoExprShape
+
+[WARNING 55/90 UnusedName] src/Gopurs/CodeGen.purs:680:10
+
+  680    App fn arg -> "App(" <> printTcoExprShape fn <> ")"
+                ^^^
+
+  Name arg was introduced but not used.
+  in value declaration printTcoExprShape
+
+[WARNING 56/90 UnusedName] src/Gopurs/CodeGen.purs:693:19
+
+  693    UncurriedApp fn args -> "UncurriedApp(" <> printTcoExprShape fn <> ")"
+                         ^^^^
+
+  Name args was introduced but not used.
+  in value declaration printTcoExprShape
+
+[WARNING 57/90 UnusedName] src/Gopurs/CodeGen.purs:694:25
+
+  694    UncurriedEffectApp fn args -> "UncurriedEffectApp(" <> printTcoExprShape fn <> ")"
+                               ^^^^
+
+  Name args was introduced but not used.
+  in value declaration printTcoExprShape
+
+[WARNING 58/90 UserDefinedWarning] src/Gopurs/CodeGen.purs:776:1
+
+  776  translateExprImpl__ :: Ref { decls :: Array GoDecl, rawDecls :: Array String, elidedCtors :: Set.Set String, ctorTypes :: Map String { vars :: Array String, fields :: Array ExprType }, pointerAdtPaths :: Map String { ctorName :: String, arity :: Int }, pointerAdtNodes :: Set String, pointerAdtLeaves :: Map String { nodeBaseStruct :: String, nodeCtor :: String }, enumAdts :: Set.Set String, enumCtors :: Set.Set String, globalTypes :: Map.Map String ExprType, classDeclsFields :: Map String { vars :: Array String, fields :: Array { name :: String, "type" :: ExprType } }, globalId :: Int } -> Int -> String -> Array String -> Map String { fullName :: String, fArgs :: Array GoType, fRet :: GoType, arity :: Int } -> Map String { name :: String, goType :: GoType } -> Maybe String -> Array { ident :: String, params :: Array String, loopParams :: Array String, goTypes :: Array GoType } -> Boolean -> Boolean -> Maybe ExprType -> Int -> TcoExpr -> { stmts :: StmtTree, expr :: GoExpr, exprType :: GoType, nextId :: Int }
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A custom warning occurred while solving type class constraints:
+    Debug function usage
+  in binding group translateExprImpl__, translateExprImpl_
+
+[WARNING 59/90 UnusedName] src/Gopurs/CodeGen.purs:793:25
+
+  793            Syn.TypeApp a ty ->
+                               ^^
+
+  Name ty was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 60/90 UnusedName] src/Gopurs/CodeGen.purs:803:91
+
+  803                  Lit (LitRecord props), TypeStructPointer baseStructName fullName fullPath tArgs ->
+                                                                                                 ^^^^^
+
+  Name tArgs was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 61/90 ShadowedName] src/Gopurs/CodeGen.purs:809:31
+
+  809                            ADT fullName _ tArgs ->
+                                     ^^^^^^^^
+
+  Name fullName was shadowed.
+  in value declaration translateExprImpl__
+
+[WARNING 62/90 ShadowedName] src/Gopurs/CodeGen.purs:809:42
+
+  809                            ADT fullName _ tArgs ->
+                                                ^^^^^
+
+  Name tArgs was shadowed.
+  in value declaration translateExprImpl__
+
+[WARNING 63/90 ShadowedName] src/Gopurs/CodeGen.purs:937:15
+
+                     v
+  937                expr =
+  938                  if n == 0.0 && 1.0 / n < 0.0 then GoCall (GoSelector (GoVar "gopurs_runtime") "NegativeZero") []
+  939                  else if nStr == "Infinity" then GoCall (GoSelector (GoVar "math") "Inf") [ GoInt 1 ]
+  940                  else if nStr == "-Infinity" then GoCall (GoSelector (GoVar "math") "Inf") [ GoInt (-1) ]
+  941                  else if nStr == "NaN" then GoCall (GoSelector (GoVar "math") "NaN") []
+  942                  else GoRaw nStr
+                                     ^
+
+  Name expr was shadowed.
+  in value declaration translateExprImpl__
+
+[WARNING 64/90 ShadowedName] src/Gopurs/CodeGen.purs:985:50
+
+  985                      boxedExprs = Array.zipWith (\expr ty -> boxGoExpr expr ty) accXs.exprs accXs.exprTypes
+                                                        ^^^^
+
+  Name expr was shadowed.
+  in value declaration translateExprImpl__
+
+[WARNING 65/90 UnusedName] src/Gopurs/CodeGen.purs:1033:15
+
+  1033            App fn args ->
+                      ^^
+
+  Name fn was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 66/90 UnusedName] src/Gopurs/CodeGen.purs:1035:15
+
+  1035                argsArr = toArray args
+                      ^^^^^^^^^^^^^^^^^^^^^^
+
+  Name argsArr was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 67/90 UnusedName] src/Gopurs/CodeGen.purs:1045:34
+
+  1045                    Var (Qualified mbMod (Ident name)) ->
+                                         ^^^^^
+
+  Name mbMod was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 68/90 UnusedName] src/Gopurs/CodeGen.purs:1304:50
+
+  1304                                    TypeFunc fArgs fRet | Array.length fArgs == Array.length flatArgs ->
+                                                         ^^^^
+
+  Name fRet was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 69/90 UnusedName] src/Gopurs/CodeGen.purs:1590:40
+
+  1590                          Var (Qualified mbMod (Ident name)) ->
+                                               ^^^^^
+
+  Name mbMod was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 70/90 UnusedName] src/Gopurs/CodeGen.purs:1822:55
+
+  1822                      funcExpr = Array.foldr (\(Tuple p goT) acc -> GoCall (GoSelector (GoVar "gopurs_runtime") "Func") [ GoRaw ("func(" <> p <> "_loop_val gopurs_runtime.Value) gopurs_runtime.Value {\nreturn " <> printGoExpr acc <> "\n}") ]) nativeCallExpr paramsWithTypes
+                                                              ^^^
+
+  Name goT was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 71/90 UnusedName] src/Gopurs/CodeGen.purs:1891:21
+
+  1891                      combinedLoopCtx = loopCtxs <> loopCtx
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name combinedLoopCtx was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 72/90 UnusedName] src/Gopurs/CodeGen.purs:1914:29
+
+  1914                              loopParams = map (\(Tuple idStr _) -> idStr <> "_loop") paramsWithTypes
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Name loopParams was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 73/90 UnusedName] src/Gopurs/CodeGen.purs:1923:63
+
+  1923                              funcExpr = Array.foldr (\(Tuple p goT) acc -> GoCall (GoSelector (GoVar "gopurs_runtime") "Func") [ GoRaw ("func(" <> p <> "_loop_val gopurs_runtime.Value) gopurs_runtime.Value {\nreturn " <> printGoExpr acc <> "\n}") ]) nativeCallExpr paramsWithTypes
+                                                                      ^^^
+
+  Name goT was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 74/90 UnusedName] src/Gopurs/CodeGen.purs:1937:51
+
+  1937                        ( \acc (Tuple (Tuple (Ident ident) val) alloc) ->
+                                                          ^^^^^
+
+  Name ident was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 75/90 ShadowedName] src/Gopurs/CodeGen.purs:2114:21
+
+  2114                  ADT fullName _ tArgs ->
+                            ^^^^^^^^
+
+  Name fullName was shadowed.
+  in value declaration translateExprImpl__
+
+[WARNING 76/90 UnusedName] src/Gopurs/CodeGen.purs:2122:25
+
+  2122                  TypeApp fn arg ->
+                                ^^
+
+  Name fn was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 77/90 UnusedName] src/Gopurs/CodeGen.purs:2122:28
+
+  2122                  TypeApp fn arg ->
+                                   ^^^
+
+  Name arg was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 78/90 UnusedName] src/Gopurs/CodeGen.purs:2128:34
+
+  2128                        Tuple (ADT fnName _ tArgs) allArgs ->
+                                         ^^^^^^
+
+  Name fnName was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 79/90 UnusedName] src/Gopurs/CodeGen.purs:2140:23
+
+                              v
+  2140                        expectedExprType = case Array.index fields' i of
+  2141                          Just ty -> ty
+  2142                          Nothing -> Any
+                                             ^
+
+  Name expectedExprType was introduced but not used.
+  in value declaration translateExprImpl__
+
+[WARNING 80/90 ShadowedName] src/Gopurs/CodeGen.purs:2234:21
+
+  2234                  ADT fullName _ tArgs ->
+                            ^^^^^^^^
+
+  Name fullName was shadowed.
+  in value declaration translateExprImpl__
+
+[WARNING 81/90 ShadowedName] src/Gopurs/CodeGen.purs:2289:21
+
+  2289                  ADT fullName _ tArgs ->
+                            ^^^^^^^^
+
+  Name fullName was shadowed.
+  in value declaration translateExprImpl__
+
+[WARNING 82/90 ShadowedName] src/Gopurs/CodeGen.purs:2298:24
+
+  2298                    Just ctorInfo -> map (const TypeValue) ctorInfo.vars
+                               ^^^^^^^^
+
+  Name ctorInfo was shadowed.
+  in value declaration translateExprImpl__
+
+[WARNING 83/90 ShadowedName] src/Gopurs/CodeGen.purs:2306:26
+
+  2306                      Just expr -> { expr: boxGoExpr expr (fromMaybe TypeValue (map (exprTypeToGoType (unsafePerformEffect (Ref.read helpersRef)).pointerAdtPaths (unsafePerformEffect (Ref.read helpersRef)).enumAdts (unsafePerformEffect (Ref.read helpersRef)).elidedCtors modNameStr) (Array.index fields 0))), exprType: TypeValue }
+                                 ^^^^
+
+  Name expr was shadowed.
+  in value declaration translateExprImpl__
+
+[WARNING 84/90 UnusedName] src/Gopurs/CodeGen.purs:2746:10
+
+  2746        ( \i (Tuple fK fT) ->
+                 ^
+
+  Name i was introduced but not used.
+  in value declaration wrapReturn
+
+[WARNING 85/90 UnusedName] src/Gopurs/CodeGen.purs:2771:16
+
+  2771              ( \i (Tuple fK fT) ->
+                       ^
+
+  Name i was introduced but not used.
+  in value declaration wrapReturn
+
+[WARNING 86/90 UnusedName] src/Gopurs/CodeGen.purs:2843:19
+
+  2843    ConstrainedType constraints body -> "(ConstrainedType " <> printExprType body <> ")"
+                          ^^^^^^^^^^^
+
+  Name constraints was introduced but not used.
+  in value declaration printExprType
+
+[WARNING 87/90 UnusedName] src/Gopurs/CodeGen.purs:2844:7
+
+  2844    ADT fullName path args -> "(ADT " <> show path <> " [" <> String.joinWith ", " (map printExprType args) <> "])"
+              ^^^^^^^^
+
+  Name fullName was introduced but not used.
+  in value declaration printExprType
+
+[WARNING 88/90 UnusedName] src/Gopurs/CodeGen.purs:2866:14
+
+  2866          Just r -> retStr == "any" || retStr == "interface{}" || retStr == "gopurs_runtime.Value"
+                     ^
+
+  Name r was introduced but not used.
+  in value declaration isStandardPursFunc
+
+[WARNING 89/90 UnusedName] src/Gopurs/CodeGen.purs:2895:11
+
+                  v
+  2895            substituteGeneric t =
+  2896              let
+  2897                s = printTypeNode t
+  2898                res = Array.foldl (\acc tp -> String.replaceAll (Pattern ("\\b" <> tp <> "\\b")) (Replacement "gopurs_runtime.Value") acc) s d.typeParams
+  2899              in
+  2900                TUnknown res
+                                 ^
+
+  Name substituteGeneric was introduced but not used.
+  in value declaration generateWrapperFunc
+
+[WARNING 90/90 UnusedName] src/Gopurs/CodeGen.purs:2902:11
+
+  2902            newLines = []
+                  ^^^^^^^^^^^^^
+
+  Name newLines was introduced but not used.
+  in value declaration generateWrapperFunc
+
+           Src   Lib   All
+Warnings    83     7    90
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: gopurs
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Bundling...
+
+  bin/gopurs.js  1.4mb ⚠️
+
+⚡ Done in 28ms
+
+✓ Bundle succeeded.
+
+Building...
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: ps-go-test
+
+Downloading dependencies...
+Building...
+[  1 of 308] Compiling Unsafe.Coerce
+[  2 of 308] Compiling Test.Implicit
+[  3 of 308] Compiling Type.Equality
+[  4 of 308] Compiling Type.Proxy
+[  5 of 308] Compiling Data.Void
+[  6 of 308] Compiling Record.Unsafe
+[  7 of 308] Compiling Partial
+[  8 of 308] Compiling Spago.Generated.BuildInfo
+[  9 of 308] Compiling Data.NaturalTransformation
+[ 10 of 308] Compiling Data.Int.Bits
+[ 11 of 308] Compiling Data.Traversable.Accum
+[ 12 of 308] Compiling Data.Unit
+[ 13 of 308] Compiling Data.Boolean
+[ 14 of 308] Compiling Control.Semigroupoid
+[ 15 of 308] Compiling Data.String.Unsafe
+[ 16 of 308] Compiling Data.Symbol
+[ 17 of 308] Compiling Safe.Coerce
+[ 18 of 308] Compiling Control.Lazy
+[ 19 of 308] Compiling Data.Exists
+[ 20 of 308] Compiling Data.Function.Uncurried
+[ 21 of 308] Compiling Control.Category
+[ 22 of 308] Compiling Partial.Unsafe
+[ 24 of 308] Compiling Data.Semigroup
+[ 23 of 308] Compiling Data.Semiring
+[ 25 of 308] Compiling Data.HeytingAlgebra
+[ 26 of 308] Compiling Data.Show
+[ 27 of 308] Compiling Data.Ring
+[ 28 of 308] Compiling Data.Generic.Rep
+[ 29 of 308] Compiling Data.BooleanAlgebra
+[ 30 of 308] Compiling Data.Eq
+[ 31 of 308] Compiling Data.CommutativeRing
+[ 32 of 308] Compiling Data.Ordering
+[ 33 of 308] Compiling Data.EuclideanRing
+[ 34 of 308] Compiling Data.Ord
+[ 35 of 308] Compiling Data.DivisionRing
+[ 36 of 308] Compiling Data.Field
+[ 37 of 308] Compiling Data.Reflectable
+[ 39 of 308] Compiling Data.Bounded
+[ 38 of 308] Compiling Data.Function
+[ 40 of 308] Compiling Data.Monoid
+[ 41 of 308] Compiling Data.Functor
+[ 42 of 308] Compiling Control.Alt
+[ 44 of 308] Compiling Control.Extend
+[ 43 of 308] Compiling Control.Apply
+[ 45 of 308] Compiling Data.Bounded.Generic
+[ 46 of 308] Compiling Data.Monoid.Generic
+[ 47 of 308] Compiling Control.Plus
+[ 48 of 308] Compiling Control.Comonad
+[ 49 of 308] Compiling Control.Applicative
+[ 50 of 308] Compiling Control.Alternative
+[ 51 of 308] Compiling Control.Bind
+[ 52 of 308] Compiling Control.Monad
+[ 53 of 308] Compiling Control.MonadPlus
+[ 54 of 308] Compiling Prelude
+[ 56 of 308] Compiling Data.Semigroup.Last
+[ 55 of 308] Compiling Data.HeytingAlgebra.Generic
+[ 57 of 308] Compiling Data.Show.Generic
+[ 58 of 308] Compiling Data.Monoid.Multiplicative
+[ 59 of 308] Compiling Effect
+[ 60 of 308] Compiling Data.Monoid.Dual
+[ 61 of 308] Compiling Data.Semigroup.Generic
+[ 62 of 308] Compiling Data.Eq.Generic
+[ 63 of 308] Compiling Data.Monoid.Additive
+[ 64 of 308] Compiling Data.Monoid.Conj
+[ 65 of 308] Compiling Control.Monad.Cont.Class
+[ 67 of 308] Compiling Data.Semigroup.First
+[ 66 of 308] Compiling Data.Traversable.Accum.Internal
+[ 68 of 308] Compiling Data.Monoid.Endo
+[ 71 of 308] Compiling Control.Monad.Trans.Class
+[ 72 of 308] Compiling Data.Monoid.Disj
+[ 70 of 308] Compiling Data.Semiring.Generic
+[ 73 of 308] Compiling Control.Monad.Gen.Class
+[ 69 of 308] Compiling Data.Ord.Generic
+[ 74 of 308] Compiling Data.Ring.Generic
+[ 75 of 308] Compiling Data.Number.Format
+[ 76 of 308] Compiling Control.Monad.Reader.Class
+[ 78 of 308] Compiling Effect.Uncurried
+[ 80 of 308] Compiling Effect.Unsafe
+[ 79 of 308] Compiling Effect.Console
+[ 77 of 308] Compiling Effect.Class
+[ 81 of 308] Compiling Test.Main
+[ 82 of 308] Compiling Effect.Ref
+[ 85 of 308] Compiling Test.FileOps
+[ 86 of 308] Compiling Bench
+[ 84 of 308] Compiling Effect.Class.Console
+[ 83 of 308] Compiling Data.Newtype
+[ 87 of 308] Compiling Data.Monoid.Alternate
+[ 88 of 308] Compiling Data.String.Pattern
+[ 89 of 308] Compiling Data.Time.Duration
+[ 90 of 308] Compiling Data.Ord.Max
+[ 91 of 308] Compiling Data.Ord.Down
+[ 92 of 308] Compiling Data.Functor.App
+[ 93 of 308] Compiling Data.Ord.Min
+[ 94 of 308] Compiling Data.Profunctor
+[ 96 of 308] Compiling Test.RecordsFFI
+[ 95 of 308] Compiling Test.AckermannFFI
+[ 98 of 308] Compiling Test.AstTreeFFI
+[ 97 of 308] Compiling Test.StateMonad
+[ 99 of 308] Compiling Test.Primes
+[101 of 308] Compiling Test.RecordsFFICheatcode
+[102 of 308] Compiling Test.AstTreeFFICheatcode
+[103 of 308] Compiling Test.Polymorphism
+[104 of 308] Compiling Test.PrimesFFICheatcode
+[105 of 308] Compiling Test.PolymorphismFFICheatcode
+[100 of 308] Compiling Test.ListOps
+[106 of 308] Compiling Test.StateMonadFFICheatcode
+[108 of 308] Compiling Test.ArrayOpsFFICheatcode
+[110 of 308] Compiling Test.RowToListFFICheatcode
+[111 of 308] Compiling Test.LazyEvaluationFFICheatcode
+[107 of 308] Compiling Test.RBTreeFFI
+[109 of 308] Compiling Test.StateMonadFFI
+[112 of 308] Compiling Test.Church
+[113 of 308] Compiling Test.Ackermann
+[114 of 308] Compiling Test.RBTree
+[115 of 308] Compiling Test.AstTree
+[116 of 308] Compiling Test.ChurchFFI
+[117 of 308] Compiling Test.RowToList
+[119 of 308] Compiling Test.ListOpsFFI
+[118 of 308] Compiling Test.TCOFFI
+[120 of 308] Compiling Test.TCO
+[122 of 308] Compiling Test.RBTreeFFICheatcode
+[123 of 308] Compiling Test.RowToListFFI
+[121 of 308] Compiling Test.ListOpsFFICheatcode
+[124 of 308] Compiling Test.AckermannFFICheatcode
+[125 of 308] Compiling Test.Records
+[126 of 308] Compiling Test.PolymorphismFFI
+[127 of 308] Compiling Test.LazyEvaluation
+[128 of 308] Compiling Test.TCOADT
+[129 of 308] Compiling Test.FibFFI
+[131 of 308] Compiling Test.ArrayOpsFFI
+[130 of 308] Compiling Test.Fib
+[132 of 308] Compiling Test.LazyEvaluationFFI
+[133 of 308] Compiling Test.BenchCheck
+[134 of 308] Compiling Test.FibFFICheatcode
+[135 of 308] Compiling Test.ChurchFFICheatcode
+[137 of 308] Compiling Test.TCOFFICheatcode
+[136 of 308] Compiling Test.PrimesFFI
+[138 of 308] Compiling Data.Profunctor.Closed
+[139 of 308] Compiling Data.String.Common
+[140 of 308] Compiling Data.Functor.Compose
+[141 of 308] Compiling Data.Functor.Invariant
+[142 of 308] Compiling AppX
+[143 of 308] Compiling AppTest
+[144 of 308] Compiling AppFFI
+[145 of 308] Compiling AppFFICheatcode
+[147 of 308] Compiling Data.Profunctor.Join
+[146 of 308] Compiling Data.Tuple
+[148 of 308] Compiling Data.Maybe
+[149 of 308] Compiling Data.Identity
+[150 of 308] Compiling Data.Const
+[151 of 308] Compiling Data.Profunctor.Split
+[152 of 308] Compiling Data.Functor.Contravariant
+[153 of 308] Compiling Data.Predicate
+[155 of 308] Compiling Data.Op
+[154 of 308] Compiling Data.Comparison
+[156 of 308] Compiling Data.Equivalence
+[158 of 308] Compiling Data.Maybe.Last
+[157 of 308] Compiling Data.String.CodeUnits
+[159 of 308] Compiling Data.Maybe.First
+[161 of 308] Compiling Data.Number
+[160 of 308] Compiling Data.Either
+[163 of 308] Compiling Data.Number.Approximate
+[162 of 308] Compiling Data.Int
+[164 of 308] Compiling Data.Divide
+[165 of 308] Compiling Data.Distributive
+[167 of 308] Compiling Control.Monad.Writer.Class
+[168 of 308] Compiling Control.Monad.State.Class
+[169 of 308] Compiling Data.Profunctor.Costrong
+[166 of 308] Compiling Data.Tuple.Nested
+[170 of 308] Compiling Data.Profunctor.Strong
+[171 of 308] Compiling Data.Divisible
+[172 of 308] Compiling Data.Decide
+[173 of 308] Compiling Data.Bifunctor
+[174 of 308] Compiling Data.Either.Inject
+[176 of 308] Compiling Data.Profunctor.Choice
+[177 of 308] Compiling Data.Profunctor.Cochoice
+[178 of 308] Compiling Effect.Exception
+[175 of 308] Compiling Data.Either.Nested
+[179 of 308] Compiling Effect.Exception.Unsafe
+[180 of 308] Compiling Control.Monad.Error.Class
+[181 of 308] Compiling Data.Profunctor.Star
+[182 of 308] Compiling Control.Monad.Rec.Class
+[184 of 308] Compiling Data.Functor.Costar
+[183 of 308] Compiling Control.Biapply
+[185 of 308] Compiling Data.Functor.Product
+[186 of 308] Compiling Data.Functor.Coproduct
+[187 of 308] Compiling Data.Decidable
+[188 of 308] Compiling Control.Biapplicative
+[189 of 308] Compiling Data.Bifunctor.Join
+[190 of 308] Compiling Data.Functor.Joker
+[191 of 308] Compiling Data.Functor.Flip
+[192 of 308] Compiling Data.Functor.Clown
+[193 of 308] Compiling Data.Functor.Product2
+[194 of 308] Compiling Data.Functor.Product.Nested
+[197 of 308] Compiling Data.FunctorWithIndex
+[196 of 308] Compiling Data.Foldable
+[195 of 308] Compiling Data.Functor.Coproduct.Nested
+[198 of 308] Compiling Data.Functor.Coproduct.Inject
+[199 of 308] Compiling Control.Monad.ST.Internal
+[200 of 308] Compiling Control.Monad.ST.Ref
+[201 of 308] Compiling Control.Monad.ST
+[202 of 308] Compiling Control.Monad.ST.Uncurried
+[203 of 308] Compiling Control.Monad.ST.Global
+[204 of 308] Compiling Control.Monad.ST.Class
+[205 of 308] Compiling Control.Monad.Maybe.Trans
+[206 of 308] Compiling Control.Monad.RWS.Trans
+[209 of 308] Compiling Control.Monad.Writer.Trans
+[210 of 308] Compiling Control.Monad.Cont.Trans
+[208 of 308] Compiling Control.Monad.Reader.Trans
+[207 of 308] Compiling Control.Monad.State.Trans
+[211 of 308] Compiling Data.Array.ST
+[212 of 308] Compiling Control.Monad.Except.Trans
+[213 of 308] Compiling Test.STArray
+[214 of 308] Compiling Data.Array.ST.Iterator
+[215 of 308] Compiling Data.Array.ST.Partial
+[216 of 308] Compiling Control.Monad.Cont
+[217 of 308] Compiling Control.Monad.Reader
+[218 of 308] Compiling Control.Monad.Writer
+[219 of 308] Compiling Control.Parallel.Class
+[221 of 308] Compiling Control.Monad.Except
+[220 of 308] Compiling Control.Monad.State
+[222 of 308] Compiling Control.Monad.RWS
+[223 of 308] Compiling Data.Bifoldable
+[224 of 308] Compiling Data.Semigroup.Foldable
+[226 of 308] Compiling Data.Traversable
+[225 of 308] Compiling Data.FoldableWithIndex
+[227 of 308] Compiling Data.Bitraversable
+[228 of 308] Compiling Data.Semigroup.Traversable
+[229 of 308] Compiling Control.Parallel
+[230 of 308] Compiling Control.Monad.Identity.Trans
+[231 of 308] Compiling Effect.Aff
+[232 of 308] Compiling Data.Unfoldable1
+[233 of 308] Compiling Control.Comonad.Trans.Class
+[234 of 308] Compiling Data.TraversableWithIndex
+[235 of 308] Compiling Control.Comonad.Store.Trans
+[236 of 308] Compiling Control.Comonad.Traced.Trans
+[237 of 308] Compiling Data.Unfoldable
+[239 of 308] Compiling Control.Monad.Gen
+[238 of 308] Compiling Data.Enum
+[240 of 308] Compiling Data.Time.Duration.Gen
+[241 of 308] Compiling Data.NonEmpty
+[242 of 308] Compiling Data.Lazy
+[244 of 308] Compiling Data.Array.NonEmpty.Internal
+[243 of 308] Compiling Control.Comonad.Env.Trans
+[245 of 308] Compiling Test.AffOperations
+[246 of 308] Compiling Effect.Aff.Compat
+[247 of 308] Compiling Data.Array
+[248 of 308] Compiling Data.Time.Component
+[249 of 308] Compiling Data.Date.Component
+[250 of 308] Compiling Data.Char
+[251 of 308] Compiling Data.Enum.Generic
+[252 of 308] Compiling Control.Comonad.Store.Class
+[253 of 308] Compiling Control.Monad.List.Trans
+[254 of 308] Compiling Data.Enum.Gen
+[255 of 308] Compiling Data.List.Lazy.Types
+[256 of 308] Compiling Control.Monad.Gen.Common
+[257 of 308] Compiling Data.List.Types
+[258 of 308] Compiling Data.Char.Gen
+[259 of 308] Compiling Control.Comonad.Store
+[260 of 308] Compiling Control.Comonad.Env.Class
+[261 of 308] Compiling Data.String.Gen
+[262 of 308] Compiling Data.Time.Component.Gen
+[263 of 308] Compiling Data.Time
+[264 of 308] Compiling Control.Comonad.Env
+[265 of 308] Compiling Control.Comonad.Traced.Class
+[266 of 308] Compiling Data.Date.Component.Gen
+[267 of 308] Compiling Data.Date
+[268 of 308] Compiling Control.Comonad.Traced
+[269 of 308] Compiling Data.Time.Gen
+[270 of 308] Compiling Data.Date.Gen
+[271 of 308] Compiling Data.DateTime
+[273 of 308] Compiling Test.Parallelism
+[272 of 308] Compiling Data.String.CodePoints
+[274 of 308] Compiling Test.ArrayOps
+[275 of 308] Compiling Data.Array.Partial
+[276 of 308] Compiling Data.Array.NonEmpty
+[277 of 308] Compiling App
+[278 of 308] Compiling Data.List.Internal
+[279 of 308] Compiling Effect.Aff.Class
+[280 of 308] Compiling Data.DateTime.Instant
+[281 of 308] Compiling Main
+[282 of 308] Compiling Data.DateTime.Gen
+[283 of 308] Compiling Effect.Now
+[284 of 308] Compiling Data.String
+[286 of 308] Compiling Data.String.CaseInsensitive
+[285 of 308] Compiling Data.String.NonEmpty.Internal
+[287 of 308] Compiling Data.String.Regex.Flags
+[288 of 308] Compiling Data.List
+[289 of 308] Compiling Data.List.Lazy
+[290 of 308] Compiling Data.String.NonEmpty.CodeUnits
+[291 of 308] Compiling Data.String.Regex
+[292 of 308] Compiling Data.String.NonEmpty.CodePoints
+[293 of 308] Compiling Data.String.Regex.Unsafe
+[294 of 308] Compiling Test.StringOps
+[295 of 308] Compiling Data.String.NonEmpty
+[296 of 308] Compiling Data.String.NonEmpty.CaseInsensitive
+[297 of 308] Compiling Data.List.ZipList
+[298 of 308] Compiling Data.List.Lazy.NonEmpty
+[301 of 308] Compiling Data.List.Partial
+[300 of 308] Compiling Data.List.NonEmpty
+[299 of 308] Compiling Data.Map.Internal
+[302 of 308] Compiling Data.Set
+[303 of 308] Compiling Data.Map
+[304 of 308] Compiling Data.Set.NonEmpty
+[306 of 308] Compiling Data.Map.Gen
+[305 of 308] Compiling Data.Interval.Duration
+[307 of 308] Compiling Data.Interval
+[308 of 308] Compiling Data.Interval.Duration.Iso
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.FoldableWithIndex.foldl1 IN SUBST: 
+NOT REWRITTEN Data.Bifoldable.bifoldl IN SUBST: 
+NOT REWRITTEN Data.Lazy.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.FoldableWithIndex.foldlWithIndex IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Array.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.TCOADT.foldlMy IN SUBST: 
+NOT REWRITTEN Test.TCOADT.foldlMy IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.FoldableWithIndex.foldl1 IN SUBST: 
+NOT REWRITTEN Data.Bifoldable.bifoldl IN SUBST: 
+NOT REWRITTEN Data.Lazy.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.FoldableWithIndex.foldlWithIndex IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Array.foldl IN SUBST: 
+NOT REWRITTEN Data.Array.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.TCOADT.foldlMy IN SUBST: 
+NOT REWRITTEN Test.TCOADT.foldlMy IN SUBST: 
+NOT REWRITTEN Test.TCOADT.foldlMy IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.FoldableWithIndex.foldl1 IN SUBST: 
+NOT REWRITTEN Data.Bifoldable.bifoldl IN SUBST: 
+NOT REWRITTEN Data.Lazy.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.FoldableWithIndex.foldlWithIndex IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Array.foldl IN SUBST: 
+NOT REWRITTEN Data.Array.foldl IN SUBST: 
+NOT REWRITTEN Data.Array.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.TCOADT.foldlMy IN SUBST: 
+NOT REWRITTEN Test.TCOADT.foldlMy IN SUBST: 
+NOT REWRITTEN Test.TCOADT.foldlMy IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.FoldableWithIndex.foldl1 IN SUBST: 
+NOT REWRITTEN Data.Bifoldable.bifoldl IN SUBST: 
+NOT REWRITTEN Data.Lazy.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.FoldableWithIndex.foldlWithIndex IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Array.foldl IN SUBST: 
+NOT REWRITTEN Data.Array.foldl IN SUBST: 
+NOT REWRITTEN Data.Array.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.TCOADT.foldlMy IN SUBST: 
+NOT REWRITTEN Test.TCOADT.foldlMy IN SUBST: 
+NOT REWRITTEN Test.TCOADT.foldlMy IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.FoldableWithIndex.foldl1 IN SUBST: 
+NOT REWRITTEN Data.Bifoldable.bifoldl IN SUBST: 
+NOT REWRITTEN Data.Lazy.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.FoldableWithIndex.foldlWithIndex IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Array.foldl IN SUBST: 
+NOT REWRITTEN Data.Array.foldl IN SUBST: 
+NOT REWRITTEN Data.Array.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.TCOADT.foldlMy IN SUBST: 
+NOT REWRITTEN Test.TCOADT.foldlMy IN SUBST: 
+NOT REWRITTEN Test.TCOADT.foldlMy IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.FoldableWithIndex.foldl1 IN SUBST: 
+NOT REWRITTEN Data.Bifoldable.bifoldl IN SUBST: 
+NOT REWRITTEN Data.Lazy.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.FoldableWithIndex.foldlWithIndex IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Array.foldl IN SUBST: 
+NOT REWRITTEN Data.Array.foldl IN SUBST: 
+NOT REWRITTEN Data.Array.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.TCOADT.foldlMy IN SUBST: 
+NOT REWRITTEN Test.TCOADT.foldlMy IN SUBST: 
+NOT REWRITTEN Test.TCOADT.foldlMy IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.FoldableWithIndex.foldl1 IN SUBST: 
+NOT REWRITTEN Data.Bifoldable.bifoldl IN SUBST: 
+NOT REWRITTEN Data.Lazy.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.FoldableWithIndex.foldlWithIndex IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Array.foldl IN SUBST: 
+NOT REWRITTEN Data.Array.foldl IN SUBST: 
+NOT REWRITTEN Data.Array.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.TCOADT.foldlMy IN SUBST: 
+NOT REWRITTEN Test.TCOADT.foldlMy IN SUBST: 
+NOT REWRITTEN Test.TCOADT.foldlMy IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.FoldableWithIndex.foldl1 IN SUBST: 
+NOT REWRITTEN Data.Bifoldable.bifoldl IN SUBST: 
+NOT REWRITTEN Data.Lazy.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.FoldableWithIndex.foldlWithIndex IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Array.foldl IN SUBST: 
+NOT REWRITTEN Data.Array.foldl IN SUBST: 
+NOT REWRITTEN Data.Array.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.TCOADT.foldlMy IN SUBST: 
+NOT REWRITTEN Test.TCOADT.foldlMy IN SUBST: 
+NOT REWRITTEN Test.TCOADT.foldlMy IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldlArray IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.FoldableWithIndex.foldl1 IN SUBST: 
+NOT REWRITTEN Data.Bifoldable.bifoldl IN SUBST: 
+NOT REWRITTEN Data.Lazy.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.FoldableWithIndex.foldlWithIndex IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: 
+NOT REWRITTEN Data.Array.foldl IN SUBST: 
+NOT REWRITTEN Data.Array.foldl IN SUBST: 
+NOT REWRITTEN Data.Array.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.ListOps.foldl IN SUBST: 
+NOT REWRITTEN Test.TCOADT.foldlMy IN SUBST: 
+NOT REWRITTEN Test.TCOADT.foldlMy IN SUBST: 
+NOT REWRITTEN Test.TCOADT.foldlMy IN SUBST: 
+
+--- AFTER REWRITE (Test.Implicit.foo) EXPR VARS ---
+x
+------------------
+
+
+--- AFTER REWRITE (Effect.Aff.makeAff) EXPR VARS ---
+Effect.Aff._makeAffImpl, build, either, err, onError, onSuccess, val
+------------------
+
+
+--- AFTER REWRITE (Data.String.NonEmpty.CodeUnits.liftS) EXPR VARS ---
+f, f1, s, v
+------------------
+
+
+--- AFTER REWRITE (Data.String.NonEmpty.CodeUnits.liftS) EXPR VARS ---
+f, f1, s, v
+------------------
+
+
+--- AFTER REWRITE (Data.String.NonEmpty.CodeUnits.liftS) EXPR VARS ---
+f, f1, s, v
+------------------
+
+
+--- AFTER REWRITE (Data.String.NonEmpty.CodeUnits.liftS) EXPR VARS ---
+f, f1, s, v
+------------------
+
+
+--- AFTER REWRITE (Data.String.NonEmpty.Internal.liftS) EXPR VARS ---
+f, f1, s, v
+------------------
+
+
+--- AFTER REWRITE (Data.String.NonEmpty.Internal.liftS) EXPR VARS ---
+f, f1, s, v
+------------------
+
+
+--- AFTER REWRITE (Data.String.NonEmpty.CodePoints.liftS) EXPR VARS ---
+f, f1, s, v
+------------------
+
+
+--- AFTER REWRITE (Data.String.NonEmpty.CodePoints.liftS) EXPR VARS ---
+f, f1, s, v
+------------------
+
+
+--- AFTER REWRITE (Data.String.NonEmpty.CodePoints.liftS) EXPR VARS ---
+f, f1, s, v
+------------------
+
+
+--- AFTER REWRITE (Data.Show.Generic.genericShow') EXPR VARS ---
+Data.Show.Generic.genericShowNoConstructors, v
+------------------
+
+
+--- AFTER REWRITE (Data.List.NonEmpty.fromList) EXPR VARS ---
+Data.List.Types.NonEmptyList, Data.Maybe.Just, Data.Maybe.Nothing, Data.NonEmpty.NonEmpty, v, x, xs
+------------------
+
+
+--- AFTER REWRITE (Data.List.singleton) EXPR VARS ---
+Data.List.Types.Cons, Data.List.Types.Nil, a
+------------------
+
+
+--- AFTER REWRITE (Data.List.reverse) EXPR VARS ---
+Data.List.Types.Cons, Data.List.Types.Nil, acc, go, v, v1, x, xs
+------------------
+
+
+--- AFTER REWRITE (Data.List.null) EXPR VARS ---
+v
+------------------
+
+
+--- AFTER REWRITE (Data.Map.Internal.toMapIter) EXPR VARS ---
+Data.Function.flip, Data.Map.Internal.IterLeaf, Data.Map.Internal.IterNode
+------------------
+
+
+--- AFTER REWRITE (Data.Map.Internal.size) EXPR VARS ---
+s, v
+------------------
+
+
+--- AFTER REWRITE (Data.Map.Internal.singleton) EXPR VARS ---
+Data.Map.Internal.Leaf, Data.Map.Internal.Node, k, v
+------------------
+
+
+--- AFTER REWRITE (Data.Map.Internal.unsafeUnionWith) EXPR VARS ---
+Data.Function.Uncurried.mkFn4, Data.Function.Uncurried.runFn3, Data.Function.Uncurried.runFn4, Data.Map.Internal.unsafeBalancedNode, Data.Map.Internal.unsafeSplit, Data.Map.Internal.unsafeUnionWith__3421363785, app, comp, l, l', ll, lr, lv, lv', r, r', rk, rl, rr, rv, v
+------------------
+
+
+--- AFTER REWRITE (Data.Map.Internal.unionWith) EXPR VARS ---
+Data.Function.Uncurried.runFn4, Data.Interval.Duration.ordDurationComponent, Data.Map.Internal.unsafeUnionWith, Data.Ord.compare, app, compare, m1, m2
+------------------
+
+
+--- AFTER REWRITE (Data.Map.Internal.lookup) EXPR VARS ---
+Data.Interval.Duration.ordDurationComponent, Data.Maybe.Just, Data.Maybe.Nothing, Data.Ord.compare, go, k, mk, ml, mr, mv, v, v1
+------------------
+
+
+--- AFTER REWRITE (Data.Map.Internal.stepUnfoldr) EXPR VARS ---
+Data.Function.Uncurried.mkFn3, Data.Map.Internal.stepAscCps, Data.Maybe.Just, Data.Maybe.Nothing, Data.Tuple.Tuple, k, next, step, v
+------------------
+
+
+--- AFTER REWRITE (Data.Map.Internal.toUnfoldable) EXPR VARS ---
+Control.Semigroupoid.compose, Control.Semigroupoid.semigroupoidFn, Data.List.Types.unfoldableList, Data.Map.Internal.stepUnfoldr, Data.Map.Internal.toMapIter, Data.Unfoldable.unfoldr
+------------------
+
+
+--- AFTER REWRITE (Data.Map.Internal.empty) EXPR VARS ---
+Data.Map.Internal.Leaf
+------------------
+
+
+--- AFTER REWRITE (Data.Time.Duration.fromDuration) EXPR VARS ---
+Data.Time.Duration.durationDays, v
+------------------
+
+
+--- AFTER REWRITE (Data.Time.Duration.negateDuration) EXPR VARS ---
+Control.Semigroupoid.compose, Control.Semigroupoid.semigroupoidFn, Data.Newtype.over__2178287515, Data.Time.Duration.Milliseconds, Data.Time.Duration.durationMilliseconds, Data.Time.Duration.fromDuration, Data.Time.Duration.negate, Data.Time.Duration.toDuration
+------------------
+
+
+--- AFTER REWRITE (Data.Enum.toEnum) EXPR VARS ---
+Data.Date.Component.boundedEnumDay, v
+------------------
+
+
+--- AFTER REWRITE (Data.Enum.toEnum) EXPR VARS ---
+Data.Date.Component.boundedEnumMonth, v
+------------------
+
+
+--- AFTER REWRITE (Data.Enum.toEnum) EXPR VARS ---
+Data.Date.Component.boundedEnumWeekday, v
+------------------
+
+
+--- AFTER REWRITE (Data.Enum.toEnum) EXPR VARS ---
+dict, v
+------------------
+
+
+--- AFTER REWRITE (Data.Enum.succ) EXPR VARS ---
+Data.Date.Component.enumDay, v
+------------------
+
+
+--- AFTER REWRITE (Data.Enum.succ) EXPR VARS ---
+Data.Date.Component.enumMonth, v
+------------------
+
+
+--- AFTER REWRITE (Data.Enum.succ) EXPR VARS ---
+Data.Date.enumDate, v
+------------------
+
+
+--- AFTER REWRITE (Data.Enum.pred) EXPR VARS ---
+Data.Date.Component.enumDay, v
+------------------
+
+
+--- AFTER REWRITE (Data.Enum.pred) EXPR VARS ---
+Data.Date.Component.enumMonth, v
+------------------
+
+
+--- AFTER REWRITE (Data.Enum.fromEnum) EXPR VARS ---
+Data.Date.Component.boundedEnumYear, v
+------------------
+
+
+--- AFTER REWRITE (Data.Enum.fromEnum) EXPR VARS ---
+Data.Enum.boundedEnumChar, v
+------------------
+
+
+--- AFTER REWRITE (Data.Enum.fromEnum) EXPR VARS ---
+Data.Date.Component.boundedEnumMonth, v
+------------------
+
+
+--- AFTER REWRITE (Data.Enum.fromEnum) EXPR VARS ---
+dict, v
+------------------
+
+
+--- AFTER REWRITE (Data.Enum.toEnumWithDefaults) EXPR VARS ---
+Data.Bounded.bottom, Data.Enum.boundedEnumChar, Data.Enum.fromEnum, Data.Enum.toEnum, Data.Ord.lessThan__216557088, Prim.undefined, bottom2, enum, high, low, v, x
+------------------
+
+
+--- AFTER REWRITE (Data.Enum.defaultSucc) EXPR VARS ---
+Data.Semiring.add__467072791, a, fromEnum', toEnum'
+------------------
+
+
+--- AFTER REWRITE (Data.Enum.defaultSucc) EXPR VARS ---
+Data.Semiring.add__467072791, a, fromEnum', toEnum'
+------------------
+
+
+--- AFTER REWRITE (Data.Enum.defaultPred) EXPR VARS ---
+Data.Ring.sub__467072791, a, fromEnum', toEnum'
+------------------
+
+
+--- AFTER REWRITE (Data.Enum.defaultPred) EXPR VARS ---
+Data.Ring.sub__467072791, a, fromEnum', toEnum'
+------------------
+
+
+--- AFTER REWRITE (Control.Parallel.parSequence_) EXPR VARS ---
+Control.Parallel.identity, Control.Parallel.parTraverse_, Data.Foldable.foldableArray, Effect.Aff.applicativeParAff, Effect.Aff.parallelAff
+------------------
+
+
+--- AFTER REWRITE (Data.Array.NonEmpty.unsafeFromArray) EXPR VARS ---
+Data.Array.NonEmpty.Internal.NonEmptyArray
+------------------
+
+
+--- AFTER REWRITE (Data.Array.NonEmpty.toArray) EXPR VARS ---
+v, xs
+------------------
+
+
+--- AFTER REWRITE (Data.Array.NonEmpty.toArray) EXPR VARS ---
+v, xs
+------------------
+
+
+--- AFTER REWRITE (Data.Array.NonEmpty.fromArray) EXPR VARS ---
+Data.Array.NonEmpty.unsafeFromArray, Data.Array.length, Data.Boolean.otherwise, Data.Maybe.Just, Data.Maybe.Nothing, Data.Ord.greaterThan__216557088, xs, xs1
+------------------
+
+
+--- AFTER REWRITE (Data.Array.NonEmpty.fromArray) EXPR VARS ---
+Data.Array.NonEmpty.unsafeFromArray, Data.Array.length, Data.Boolean.otherwise, Data.Maybe.Just, Data.Maybe.Nothing, Data.Ord.greaterThan__216557088, xs, xs1
+------------------
+
+
+--- AFTER REWRITE (Effect.Class.liftEffect) EXPR VARS ---
+Effect.Aff.monadEffectAff, v
+------------------
+
+
+--- AFTER REWRITE (Effect.Class.liftEffect) EXPR VARS ---
+Effect.Aff.monadEffectAff, v
+------------------
+
+REWRITTEN Test.TCOADT.foldlMy
+
+--- AFTER REWRITE (Test.TCOADT.foldlMy) EXPR VARS ---
+Test.TCOADT.foldlMy__3245757186, acc, f, v, v1, v2, x, xs
+------------------
+
+REWRITTEN Test.ListOps.foldl
+
+--- AFTER REWRITE (Test.ListOps.foldl) EXPR VARS ---
+Test.ListOps.foldl__4076879281, acc, f, v, v1, v2, x, xs
+------------------
+
+
+--- AFTER REWRITE (Test.Polymorphism.mempty_) EXPR VARS ---
+dict, v
+------------------
+
+
+--- AFTER REWRITE (Test.Polymorphism.mappend_) EXPR VARS ---
+dict, v
+------------------
+
+
+--- AFTER REWRITE (Test.Polymorphism.polyLoop) EXPR VARS ---
+Data.Ring.sub__467072791, Test.Polymorphism.intMonoidish, Test.Polymorphism.mappend_, Test.Polymorphism.mempty_, acc, acc_init, go, n, n_init, v, v1
+------------------
+
+
+--- AFTER REWRITE (Test.Primes.reverse) EXPR VARS ---
+Test.Primes.Cons, Test.Primes.Nil, acc, go, lst, v, v1, x, xs
+------------------
+
+
+--- AFTER REWRITE (Test.Primes.filter) EXPR VARS ---
+Test.Primes.Cons, Test.Primes.Nil, Test.Primes.reverse, acc, go, lst, p, v, v1, x, xs
+------------------
+
+
+--- AFTER REWRITE (Test.Church.zeroC) EXPR VARS ---
+x
+------------------
+
+
+--- AFTER REWRITE (Test.Church.succC) EXPR VARS ---
+f, n, x
+------------------
+
+
+--- AFTER REWRITE (Test.Church.mulC) EXPR VARS ---
+f, m, n, x
+------------------
+
+
+--- AFTER REWRITE (Test.LazyEvaluation.force) EXPR VARS ---
+Data.Unit.unit, f, v
+------------------
+
+
+--- AFTER REWRITE (Test.LazyEvaluation.defer) EXPR VARS ---
+Test.LazyEvaluation.Lazy
+------------------
+
+
+--- AFTER REWRITE (Data.Array.replicate) EXPR VARS ---
+Data.Array.replicateImpl, Data.Function.Uncurried.runFn2
+------------------
+
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: Data.Array.foldl,foldl
+
+--- AFTER REWRITE (Data.Array.foldl) EXPR VARS ---
+Data.Foldable.foldableArray, Data.Foldable.foldl
+------------------
+
+
+--- AFTER REWRITE (Data.Array.filter) EXPR VARS ---
+Data.Array.filterImpl, Data.Function.Uncurried.runFn2
+------------------
+
+
+--- AFTER REWRITE (Data.Unfoldable.unfoldr) EXPR VARS ---
+Data.Unfoldable.unfoldableArray, v
+------------------
+
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: Data.Foldable.intercalate,intercalate
+
+--- AFTER REWRITE (Data.Foldable.intercalate) EXPR VARS ---
+Data.Foldable.foldl, Data.List.Types.foldableList, Data.Monoid.mempty, Data.Monoid.monoidString, Data.Semigroup.append, Prim.undefined, Semigroup0, acc, go, mempty, sep, v, v1, x, xs
+------------------
+
+NOT REWRITTEN Data.Foldable.foldl IN SUBST: Data.Foldable.sum,sum
+
+--- AFTER REWRITE (Data.Foldable.sum) EXPR VARS ---
+Data.Foldable.foldableArray, Data.Foldable.foldl, Data.Semiring.add, Data.Semiring.semiringInt, Data.Semiring.zero
+------------------
+
+
+--- AFTER REWRITE (Data.Foldable.foldMap) EXPR VARS ---
+Data.Interval.Duration.Iso.monoidAdditive, Data.List.Types.foldableList, v
+------------------
+
+
+--- AFTER REWRITE (Partial.Unsafe.unsafePartial) EXPR VARS ---
+Partial.Unsafe._unsafePartial
+------------------
+
+
+--- AFTER REWRITE (Partial.Unsafe.unsafePartial) EXPR VARS ---
+Partial.Unsafe._unsafePartial
+------------------
+
+
+--- AFTER REWRITE (Partial.Unsafe.unsafePartial) EXPR VARS ---
+Partial.Unsafe._unsafePartial
+------------------
+
+
+--- AFTER REWRITE (Partial.Unsafe.unsafePartial) EXPR VARS ---
+Partial.Unsafe._unsafePartial
+------------------
+
+
+--- AFTER REWRITE (Partial.Unsafe.unsafePartial) EXPR VARS ---
+Partial.Unsafe._unsafePartial
+------------------
+
+
+--- AFTER REWRITE (Partial.Unsafe.unsafePartial) EXPR VARS ---
+Partial.Unsafe._unsafePartial
+------------------
+
+
+--- AFTER REWRITE (Partial.Unsafe.unsafePartial) EXPR VARS ---
+Partial.Unsafe._unsafePartial
+------------------
+
+
+--- AFTER REWRITE (Partial.Unsafe.unsafePartial) EXPR VARS ---
+Partial.Unsafe._unsafePartial
+------------------
+
+
+--- AFTER REWRITE (Partial.Unsafe.unsafePartial) EXPR VARS ---
+Partial.Unsafe._unsafePartial
+------------------
+
+
+--- AFTER REWRITE (Partial.Unsafe.unsafePartial) EXPR VARS ---
+Partial.Unsafe._unsafePartial
+------------------
+
+
+--- AFTER REWRITE (Partial.Unsafe.unsafeCrashWith) EXPR VARS ---
+Partial.Unsafe.unsafePartial, Partial.crashWith, Prim.undefined, msg
+------------------
+
+
+--- AFTER REWRITE (Effect.Ref.new) EXPR VARS ---
+Effect.Ref._new
+------------------
+
+
+--- AFTER REWRITE (Data.Either.either) EXPR VARS ---
+a, b, f, g, v, v1, v2
+------------------
+
+
+--- AFTER REWRITE (Data.Either.applicativeEither) EXPR VARS ---
+Control.Applicative.Applicative$Dict, Data.Either.Right, Data.Either.applyEither
+------------------
+
+
+--- AFTER REWRITE (Data.Tuple.snd) EXPR VARS ---
+b, v
+------------------
+
+
+--- AFTER REWRITE (Data.Maybe.maybe) EXPR VARS ---
+a, b, f, v, v1, v2
+------------------
+
+
+--- AFTER REWRITE (Data.Maybe.maybe) EXPR VARS ---
+a, b, f, v, v1, v2
+------------------
+
+
+--- AFTER REWRITE (Data.Maybe.isNothing) EXPR VARS ---
+Data.Function.const, Data.Maybe.maybe
+------------------
+
+
+--- AFTER REWRITE (Data.Maybe.isNothing) EXPR VARS ---
+Data.Function.const, Data.Maybe.maybe
+------------------
+
+
+--- AFTER REWRITE (Data.Maybe.isJust) EXPR VARS ---
+Data.Function.const, Data.Maybe.maybe
+------------------
+
+
+--- AFTER REWRITE (Data.Maybe.isJust) EXPR VARS ---
+Data.Function.const, Data.Maybe.maybe
+------------------
+
+
+--- AFTER REWRITE (Data.Maybe.isJust) EXPR VARS ---
+Data.Function.const, Data.Maybe.maybe
+------------------
+
+
+--- AFTER REWRITE (Data.Maybe.fromMaybe) EXPR VARS ---
+Data.Maybe.identity, Data.Maybe.maybe, a
+------------------
+
+
+--- AFTER REWRITE (Data.Maybe.fromMaybe) EXPR VARS ---
+Data.Maybe.identity, Data.Maybe.maybe, a
+------------------
+
+
+--- AFTER REWRITE (Data.Maybe.fromJust) EXPR VARS ---
+Prim.undefined, v, x
+------------------
+
+
+--- AFTER REWRITE (Data.Maybe.fromJust) EXPR VARS ---
+Prim.undefined, v, x
+------------------
+
+
+--- AFTER REWRITE (Data.Maybe.fromJust) EXPR VARS ---
+Prim.undefined, v, x
+------------------
+
+
+--- AFTER REWRITE (Data.Maybe.fromJust) EXPR VARS ---
+Prim.undefined, v, x
+------------------
+
+
+--- AFTER REWRITE (Data.Maybe.fromJust) EXPR VARS ---
+Prim.undefined, v, x
+------------------
+
+
+--- AFTER REWRITE (Data.Maybe.fromJust) EXPR VARS ---
+Prim.undefined, v, x
+------------------
+
+
+--- AFTER REWRITE (Data.Maybe.fromJust) EXPR VARS ---
+Prim.undefined, v, x
+------------------
+
+
+--- AFTER REWRITE (Data.Maybe.fromJust) EXPR VARS ---
+Prim.undefined, v, x
+------------------
+
+
+--- AFTER REWRITE (Data.Newtype.unwrap) EXPR VARS ---
+Data.Newtype.coerce1
+------------------
+
+
+--- AFTER REWRITE (Data.Newtype.over) EXPR VARS ---
+Data.Newtype.coerce10
+------------------
+
+
+--- AFTER REWRITE (Control.Plus.empty) EXPR VARS ---
+Data.List.Types.plusList, v
+------------------
+
+
+--- AFTER REWRITE (Control.Alternative.guard) EXPR VARS ---
+Applicative0, Control.Applicative.pure, Control.Plus.empty, Data.Maybe.alternativeMaybe, Data.Unit.unit, Prim.undefined, empty, v
+------------------
+
+
+--- AFTER REWRITE (Control.Alternative.guard) EXPR VARS ---
+Applicative0, Control.Alternative.alternativeArray, Control.Applicative.pure, Control.Plus.empty, Data.Unit.unit, Prim.undefined, empty, v
+------------------
+
+
+--- AFTER REWRITE (Data.EuclideanRing.mod) EXPR VARS ---
+Data.EuclideanRing.euclideanRingInt, v
+------------------
+
+
+--- AFTER REWRITE (Data.EuclideanRing.div) EXPR VARS ---
+Data.EuclideanRing.euclideanRingInt, v
+------------------
+
+
+--- AFTER REWRITE (Data.EuclideanRing.div) EXPR VARS ---
+Data.EuclideanRing.euclideanRingNumber, v
+------------------
+
+
+--- AFTER REWRITE (Data.Monoid.mempty) EXPR VARS ---
+Effect.Aff.monoidCanceler, v
+------------------
+
+
+--- AFTER REWRITE (Data.Bounded.top) EXPR VARS ---
+Data.Bounded.boundedInt, v
+------------------
+
+
+--- AFTER REWRITE (Data.Bounded.top) EXPR VARS ---
+Data.Bounded.boundedChar, v
+------------------
+
+
+--- AFTER REWRITE (Data.Bounded.bottom) EXPR VARS ---
+Data.Bounded.boundedChar, v
+------------------
+
+
+--- AFTER REWRITE (Control.Apply.apply) EXPR VARS ---
+Data.Maybe.applyMaybe, v
+------------------
+
+
+--- AFTER REWRITE (Control.Apply.apply) EXPR VARS ---
+Data.Maybe.applyMaybe, v
+------------------
+
+
+--- AFTER REWRITE (Control.Apply.apply) EXPR VARS ---
+Data.Maybe.applyMaybe, v
+------------------
+
+
+--- AFTER REWRITE (Control.Apply.apply) EXPR VARS ---
+Data.Maybe.applyMaybe, v
+------------------
+
+
+--- AFTER REWRITE (Control.Apply.apply) EXPR VARS ---
+Data.Maybe.applyMaybe, v
+------------------
+
+
+--- AFTER REWRITE (Control.Apply.apply) EXPR VARS ---
+Data.Maybe.applyMaybe, v
+------------------
+
+
+--- AFTER REWRITE (Control.Apply.apply) EXPR VARS ---
+Data.Maybe.applyMaybe, v
+------------------
+
+
+--- AFTER REWRITE (Control.Apply.apply) EXPR VARS ---
+Data.Maybe.applyMaybe, v
+------------------
+
+
+--- AFTER REWRITE (Control.Applicative.pure) EXPR VARS ---
+Data.Maybe.applicativeMaybe, v
+------------------
+
+
+--- AFTER REWRITE (Control.Applicative.pure) EXPR VARS ---
+Effect.Aff.applicativeAff, v
+------------------
+
+
+--- AFTER REWRITE (Control.Applicative.pure) EXPR VARS ---
+Effect.applicativeEffect, v
+------------------
+
+
+--- AFTER REWRITE (Control.Applicative.pure) EXPR VARS ---
+Effect.applicativeEffect, v
+------------------
+
+
+--- AFTER REWRITE (Control.Applicative.pure) EXPR VARS ---
+Effect.applicativeEffect, v
+------------------
+
+
+--- AFTER REWRITE (Control.Applicative.pure) EXPR VARS ---
+Data.Either.applicativeEither, v
+------------------
+
+
+--- AFTER REWRITE (Control.Applicative.pure) EXPR VARS ---
+Effect.Aff.applicativeAff, v
+------------------
+
+
+--- AFTER REWRITE (Control.Applicative.pure) EXPR VARS ---
+Effect.applicativeEffect, v
+------------------
+
+
+--- AFTER REWRITE (Control.Applicative.pure) EXPR VARS ---
+Data.Maybe.applicativeMaybe, v
+------------------
+
+
+--- AFTER REWRITE (Control.Applicative.pure) EXPR VARS ---
+Data.List.Types.applicativeList, v
+------------------
+
+
+--- AFTER REWRITE (Control.Applicative.pure) EXPR VARS ---
+Effect.applicativeEffect, v
+------------------
+
+
+--- AFTER REWRITE (Control.Bind.discard) EXPR VARS ---
+Control.Bind.discardUnit, Effect.bindEffect, v
+------------------
+
+
+--- AFTER REWRITE (Control.Bind.discard) EXPR VARS ---
+Control.Bind.discardUnit, Effect.bindEffect, v
+------------------
+
+
+--- AFTER REWRITE (Control.Bind.discard) EXPR VARS ---
+Control.Bind.discardUnit, Effect.bindEffect, v
+------------------
+
+
+--- AFTER REWRITE (Control.Bind.bind) EXPR VARS ---
+Data.Maybe.bindMaybe, v
+------------------
+
+
+--- AFTER REWRITE (Control.Bind.bind) EXPR VARS ---
+Data.Maybe.bindMaybe, v
+------------------
+
+
+--- AFTER REWRITE (Control.Bind.bind) EXPR VARS ---
+Effect.Aff.bindAff, v
+------------------
+
+
+--- AFTER REWRITE (Control.Bind.bind) EXPR VARS ---
+Effect.Aff.bindAff, v
+------------------
+
+
+--- AFTER REWRITE (Control.Bind.bind) EXPR VARS ---
+Effect.Aff.bindAff, v
+------------------
+
+
+--- AFTER REWRITE (Control.Bind.bind) EXPR VARS ---
+Effect.Aff.bindAff, v
+------------------
+
+
+--- AFTER REWRITE (Control.Bind.bind) EXPR VARS ---
+Effect.bindEffect, v
+------------------
+
+
+--- AFTER REWRITE (Control.Bind.bind) EXPR VARS ---
+Effect.bindEffect, v
+------------------
+
+
+--- AFTER REWRITE (Control.Bind.bind) EXPR VARS ---
+Effect.bindEffect, v
+------------------
+
+
+--- AFTER REWRITE (Control.Bind.bind) EXPR VARS ---
+Effect.bindEffect, v
+------------------
+
+
+--- AFTER REWRITE (Control.Bind.bind) EXPR VARS ---
+Effect.bindEffect, v
+------------------
+
+
+--- AFTER REWRITE (Control.Bind.bind) EXPR VARS ---
+Effect.bindEffect, v
+------------------
+
+
+--- AFTER REWRITE (Control.Bind.bind) EXPR VARS ---
+Effect.bindEffect, v
+------------------
+
+
+--- AFTER REWRITE (Control.Bind.bindFlipped) EXPR VARS ---
+Control.Bind.bind, Data.Function.flip, Data.Maybe.bindMaybe
+------------------
+
+
+--- AFTER REWRITE (Control.Bind.bindFlipped) EXPR VARS ---
+Control.Bind.bind, Data.Function.flip, dictBind
+------------------
+
+
+--- AFTER REWRITE (Control.Bind.composeKleisliFlipped) EXPR VARS ---
+Control.Bind.bindFlipped, Data.Maybe.bindMaybe, a, f, g
+------------------
+
+
+--- AFTER REWRITE (Control.Bind.join) EXPR VARS ---
+Control.Bind.bind, Control.Bind.identity, Data.Maybe.bindMaybe, m
+------------------
+
+
+--- AFTER REWRITE (Data.Ord.compare) EXPR VARS ---
+Data.Ord.ordInt, v
+------------------
+
+
+--- AFTER REWRITE (Data.Ord.compare) EXPR VARS ---
+Data.Ord.ordString, v
+------------------
+
+
+--- AFTER REWRITE (Data.Ord.compare) EXPR VARS ---
+Data.Date.Component.ordMonth, v
+------------------
+
+
+--- AFTER REWRITE (Data.Ord.compare) EXPR VARS ---
+Data.Date.ordDate, v
+------------------
+
+
+--- AFTER REWRITE (Data.Ord.compare) EXPR VARS ---
+Data.Interval.Duration.ordDurationComponent, v
+------------------
+
+
+--- AFTER REWRITE (Data.Ord.compare) EXPR VARS ---
+Data.Interval.Duration.ordMap, v
+------------------
+
+
+--- AFTER REWRITE (Data.Ord.compare) EXPR VARS ---
+Data.Interval.ordMaybe, v
+------------------
+
+
+--- AFTER REWRITE (Data.Ord.compare) EXPR VARS ---
+Data.Time.ordTime, v
+------------------
+
+
+--- AFTER REWRITE (Data.Ord.compare) EXPR VARS ---
+dict, v
+------------------
+
+
+--- AFTER REWRITE (Data.Ord.compare) EXPR VARS ---
+dict, v
+------------------
+
+
+--- AFTER REWRITE (Data.Ord.compare) EXPR VARS ---
+dict, v
+------------------
+
+
+--- AFTER REWRITE (Data.Ord.greaterThan) EXPR VARS ---
+Data.Ord.compare, Data.Ord.ordInt, a1, a2, v
+------------------
+
+
+--- AFTER REWRITE (Data.Ord.greaterThan) EXPR VARS ---
+Data.Ord.compare, Data.Time.Duration.ordMilliseconds, a1, a2, v
+------------------
+
+
+--- AFTER REWRITE (Data.Ord.greaterThan) EXPR VARS ---
+Data.Date.ordMaybe, Data.Ord.compare, a1, a2, v
+------------------
+
+
+--- AFTER REWRITE (Data.Ord.greaterThanOrEq) EXPR VARS ---
+Data.Ord.compare, Data.Ord.ordInt, a1, a2, v
+------------------
+
+
+--- AFTER REWRITE (Data.Ord.greaterThanOrEq) EXPR VARS ---
+Data.Ord.compare, Data.Ord.ordNumber, a1, a2, v
+------------------
+
+
+--- AFTER REWRITE (Data.Ord.greaterThanOrEq) EXPR VARS ---
+Data.Ord.compare, a1, a2, dictOrd, v
+------------------
+
+
+--- AFTER REWRITE (Data.Ord.lessThan) EXPR VARS ---
+Data.Ord.compare, Data.Ord.ordInt, a1, a2, v
+------------------
+
+
+--- AFTER REWRITE (Data.Ord.lessThan) EXPR VARS ---
+Data.Ord.compare, Data.Ord.ordNumber, a1, a2, v
+------------------
+
+
+--- AFTER REWRITE (Data.Ord.lessThan) EXPR VARS ---
+Data.Ord.compare, a1, a2, dictOrd, v
+------------------
+
+
+--- AFTER REWRITE (Data.Ord.lessThanOrEq) EXPR VARS ---
+Data.Ord.compare, Data.Ord.ordInt, a1, a2, v
+------------------
+
+
+--- AFTER REWRITE (Data.Ord.lessThanOrEq) EXPR VARS ---
+Data.Ord.compare, Data.Ord.ordNumber, a1, a2, v
+------------------
+
+
+--- AFTER REWRITE (Data.Ord.max) EXPR VARS ---
+Data.Ord.compare, Data.Ord.ordInt, v, x, y
+------------------
+
+
+--- AFTER REWRITE (Data.Ord.max) EXPR VARS ---
+Data.Ord.compare, dictOrd, v, x, y
+------------------
+
+
+--- AFTER REWRITE (Data.Ord.min) EXPR VARS ---
+Data.Ord.compare, Data.Ord.ordNumber, v, x, y
+------------------
+
+
+--- AFTER REWRITE (Data.Ord.min) EXPR VARS ---
+Data.Ord.compare, dictOrd, v, x, y
+------------------
+
+
+--- AFTER REWRITE (Data.Ord.clamp) EXPR VARS ---
+Data.Ord.max, Data.Ord.min, Data.Ord.ordInt, hi, low, x
+------------------
+
+
+--- AFTER REWRITE (Data.Ord.abs) EXPR VARS ---
+Data.Ord.greaterThanOrEq, Data.Ord.ordInt, Data.Ring.negate, Data.Ring.ringInt, Data.Semiring.zero, Prim.undefined, x, zero
+------------------
+
+
+--- AFTER REWRITE (Data.Function.flip) EXPR VARS ---
+a, b, f
+------------------
+
+
+--- AFTER REWRITE (Data.Function.flip) EXPR VARS ---
+a, b, f
+------------------
+
+
+--- AFTER REWRITE (Data.Function.flip) EXPR VARS ---
+a, b, f
+------------------
+
+
+--- AFTER REWRITE (Data.Function.const) EXPR VARS ---
+a
+------------------
+
+
+--- AFTER REWRITE (Data.Function.const) EXPR VARS ---
+a
+------------------
+
+
+--- AFTER REWRITE (Data.Function.const) EXPR VARS ---
+a
+------------------
+
+
+--- AFTER REWRITE (Data.Function.const) EXPR VARS ---
+a
+------------------
+
+
+--- AFTER REWRITE (Data.Function.const) EXPR VARS ---
+a
+------------------
+
+
+--- AFTER REWRITE (Data.Function.const) EXPR VARS ---
+a
+------------------
+
+
+--- AFTER REWRITE (Data.Function.const) EXPR VARS ---
+a
+------------------
+
+
+--- AFTER REWRITE (Data.Function.const) EXPR VARS ---
+a
+------------------
+
+
+--- AFTER REWRITE (Data.Function.const) EXPR VARS ---
+a
+------------------
+
+
+--- AFTER REWRITE (Data.Function.apply) EXPR VARS ---
+f, x
+------------------
+
+
+--- AFTER REWRITE (Data.Function.apply) EXPR VARS ---
+f, x
+------------------
+
+
+--- AFTER REWRITE (Data.Function.apply) EXPR VARS ---
+f, x
+------------------
+
+
+--- AFTER REWRITE (Data.Function.apply) EXPR VARS ---
+f, x
+------------------
+
+
+--- AFTER REWRITE (Data.Function.apply) EXPR VARS ---
+f, x
+------------------
+
+
+--- AFTER REWRITE (Data.Function.apply) EXPR VARS ---
+f, x
+------------------
+
+
+--- AFTER REWRITE (Data.Function.apply) EXPR VARS ---
+f, x
+------------------
+
+
+--- AFTER REWRITE (Data.Function.apply) EXPR VARS ---
+f, x
+------------------
+
+
+--- AFTER REWRITE (Data.Function.apply) EXPR VARS ---
+f, x
+------------------
+
+
+--- AFTER REWRITE (Data.Function.apply) EXPR VARS ---
+f, x
+------------------
+
+
+--- AFTER REWRITE (Data.Function.apply) EXPR VARS ---
+f, x
+------------------
+
+
+--- AFTER REWRITE (Data.Function.apply) EXPR VARS ---
+f, x
+------------------
+
+
+--- AFTER REWRITE (Data.Function.apply) EXPR VARS ---
+f, x
+------------------
+
+
+--- AFTER REWRITE (Data.Functor.map) EXPR VARS ---
+Data.Maybe.functorMaybe, v
+------------------
+
+
+--- AFTER REWRITE (Data.Functor.map) EXPR VARS ---
+Data.Maybe.functorMaybe, v
+------------------
+
+
+--- AFTER REWRITE (Data.Functor.map) EXPR VARS ---
+Data.Maybe.functorMaybe, v
+------------------
+
+
+--- AFTER REWRITE (Data.Functor.map) EXPR VARS ---
+Data.Maybe.functorMaybe, v
+------------------
+
+
+--- AFTER REWRITE (Data.Functor.map) EXPR VARS ---
+Data.Maybe.functorMaybe, v
+------------------
+
+
+--- AFTER REWRITE (Data.Functor.map) EXPR VARS ---
+Effect.functorEffect, v
+------------------
+
+
+--- AFTER REWRITE (Data.Functor.map) EXPR VARS ---
+Effect.functorEffect, v
+------------------
+
+
+--- AFTER REWRITE (Data.Functor.map) EXPR VARS ---
+Effect.functorEffect, v
+------------------
+
+
+--- AFTER REWRITE (Data.Functor.map) EXPR VARS ---
+Data.Maybe.functorMaybe, v
+------------------
+
+
+--- AFTER REWRITE (Data.Functor.map) EXPR VARS ---
+Effect.functorEffect, v
+------------------
+
+
+--- AFTER REWRITE (Data.Functor.map) EXPR VARS ---
+dict, v
+------------------
+
+
+--- AFTER REWRITE (Data.Functor.void) EXPR VARS ---
+Data.Function.const, Data.Functor.map, Data.Unit.unit, Effect.functorEffect
+------------------
+
+
+--- AFTER REWRITE (Data.Functor.voidLeft) EXPR VARS ---
+Data.Function.const, Data.Functor.functorArray, Data.Functor.map, f, x
+------------------
+
+
+--- AFTER REWRITE (Data.Semiring.zero) EXPR VARS ---
+dict, v
+------------------
+
+
+--- AFTER REWRITE (Data.Semiring.zero) EXPR VARS ---
+dict, v
+------------------
+
+
+--- AFTER REWRITE (Data.Semiring.mul) EXPR VARS ---
+Data.Semiring.semiringInt, v
+------------------
+
+
+--- AFTER REWRITE (Data.Semiring.mul) EXPR VARS ---
+Data.Semiring.semiringNumber, v
+------------------
+
+
+--- AFTER REWRITE (Data.Semiring.add) EXPR VARS ---
+Data.Semiring.semiringInt, v
+------------------
+
+
+--- AFTER REWRITE (Data.Semiring.add) EXPR VARS ---
+Data.Semiring.semiringNumber, v
+------------------
+
+
+--- AFTER REWRITE (Data.Semiring.add) EXPR VARS ---
+dict, v
+------------------
+
+
+--- AFTER REWRITE (Data.Semiring.add) EXPR VARS ---
+dict, v
+------------------
+
+
+--- AFTER REWRITE (Data.Ring.sub) EXPR VARS ---
+Data.Ring.ringInt, v
+------------------
+
+
+--- AFTER REWRITE (Data.Ring.sub) EXPR VARS ---
+Data.Ring.ringNumber, v
+------------------
+
+
+--- AFTER REWRITE (Data.Ring.sub) EXPR VARS ---
+dict, v
+------------------
+
+
+--- AFTER REWRITE (Data.Ring.sub) EXPR VARS ---
+dict, v
+------------------
+
+
+--- AFTER REWRITE (Data.Ring.sub) EXPR VARS ---
+dict, v
+------------------
+
+
+--- AFTER REWRITE (Data.Ring.negate) EXPR VARS ---
+Data.Ring.ringInt, Data.Ring.sub, Data.Semiring.zero, Prim.undefined, Semiring0, a
+------------------
+
+
+--- AFTER REWRITE (Data.Ring.negate) EXPR VARS ---
+Data.Ring.ringNumber, Data.Ring.sub, Data.Semiring.zero, Prim.undefined, Semiring0, a
+------------------
+
+
+--- AFTER REWRITE (Data.Ring.negate) EXPR VARS ---
+Data.Ring.sub, Data.Semiring.zero, Prim.undefined, Semiring0, a, dictRing
+------------------
+
+
+--- AFTER REWRITE (Data.Eq.eq) EXPR VARS ---
+Data.Eq.eqInt, v
+------------------
+
+
+--- AFTER REWRITE (Data.Eq.eq) EXPR VARS ---
+Data.Eq.eqString, v
+------------------
+
+
+--- AFTER REWRITE (Data.Eq.eq) EXPR VARS ---
+Data.Eq.eqBoolean, v
+------------------
+
+
+--- AFTER REWRITE (Data.Eq.eq) EXPR VARS ---
+Data.String.Regex.Flags.eqArray, v
+------------------
+
+
+--- AFTER REWRITE (Data.Eq.eq) EXPR VARS ---
+Data.Date.Component.eqMonth, v
+------------------
+
+
+--- AFTER REWRITE (Data.Eq.eq) EXPR VARS ---
+Data.Date.eqDate, v
+------------------
+
+
+--- AFTER REWRITE (Data.Eq.eq) EXPR VARS ---
+Data.Int.eqParity, v
+------------------
+
+
+--- AFTER REWRITE (Data.Eq.eq) EXPR VARS ---
+Data.Interval.Duration.eqDurationComponent, v
+------------------
+
+
+--- AFTER REWRITE (Data.Eq.eq) EXPR VARS ---
+Data.Interval.Duration.eqMap, v
+------------------
+
+
+--- AFTER REWRITE (Data.Eq.eq) EXPR VARS ---
+Data.Interval.eqMaybe, v
+------------------
+
+
+--- AFTER REWRITE (Data.Eq.eq) EXPR VARS ---
+Data.Ordering.eqOrdering, v
+------------------
+
+
+--- AFTER REWRITE (Data.Eq.eq) EXPR VARS ---
+Data.Time.eqTime, v
+------------------
+
+
+--- AFTER REWRITE (Data.Eq.eq) EXPR VARS ---
+dict, v
+------------------
+
+
+--- AFTER REWRITE (Data.Eq.eq) EXPR VARS ---
+dict, v
+------------------
+
+
+--- AFTER REWRITE (Data.Eq.eq) EXPR VARS ---
+dict, v
+------------------
+
+
+--- AFTER REWRITE (Data.Eq.notEq) EXPR VARS ---
+Data.Eq.eq, Data.Eq.eqInt, Data.Eq.eq__215247136, x, y
+------------------
+
+
+--- AFTER REWRITE (Data.Eq.notEq) EXPR VARS ---
+Data.Eq.eq, Data.Eq.eqNumber, Data.Eq.eq__215247136, x, y
+------------------
+
+
+--- AFTER REWRITE (Data.Eq.notEq) EXPR VARS ---
+Data.Eq.eq, Data.Eq.eq__215247136, Data.Ordering.eqOrdering, x, y
+------------------
+
+
+--- AFTER REWRITE (Data.Semigroup.semigroupArray) EXPR VARS ---
+Data.Semigroup.Semigroup$Dict, Data.Semigroup.concatArray
+------------------
+
+
+--- AFTER REWRITE (Data.Semigroup.append) EXPR VARS ---
+Data.Time.Duration.semigroupMilliseconds, v
+------------------
+
+
+--- AFTER REWRITE (Data.Semigroup.append) EXPR VARS ---
+Data.Semigroup.semigroupString, v
+------------------
+
+
+--- AFTER REWRITE (Data.Semigroup.append) EXPR VARS ---
+Data.Semigroup.semigroupArray, v
+------------------
+
+
+--- AFTER REWRITE (Data.Semigroup.append) EXPR VARS ---
+Data.Ordering.semigroupOrdering, v
+------------------
+
+
+--- AFTER REWRITE (Data.Show.show) EXPR VARS ---
+Data.Show.showInt, v
+------------------
+
+
+--- AFTER REWRITE (Data.Show.show) EXPR VARS ---
+Data.Show.showNumber, v
+------------------
+
+
+--- AFTER REWRITE (Data.Show.show) EXPR VARS ---
+Data.Show.showString, v
+------------------
+
+
+--- AFTER REWRITE (Data.Show.show) EXPR VARS ---
+Data.Date.Component.showMonth, v
+------------------
+
+
+--- AFTER REWRITE (Data.Show.show) EXPR VARS ---
+Data.Date.showDate, v
+------------------
+
+
+--- AFTER REWRITE (Data.Show.show) EXPR VARS ---
+Data.Interval.Duration.showDurationComponent, v
+------------------
+
+
+--- AFTER REWRITE (Data.Show.show) EXPR VARS ---
+Data.Interval.Duration.showMap, v
+------------------
+
+
+--- AFTER REWRITE (Data.Show.show) EXPR VARS ---
+Data.Interval.showMaybe, v
+------------------
+
+
+--- AFTER REWRITE (Data.Show.show) EXPR VARS ---
+Data.Time.showTime, v
+------------------
+
+
+--- AFTER REWRITE (Data.HeytingAlgebra.not) EXPR VARS ---
+Data.HeytingAlgebra.heytingAlgebraBoolean, v
+------------------
+
+
+--- AFTER REWRITE (Data.HeytingAlgebra.not) EXPR VARS ---
+Data.Interval.Duration.Iso.heytingAlgebraFunction, v
+------------------
+
+
+--- AFTER REWRITE (Data.HeytingAlgebra.disj) EXPR VARS ---
+Data.HeytingAlgebra.heytingAlgebraBoolean, v
+------------------
+
+
+--- AFTER REWRITE (Data.HeytingAlgebra.conj) EXPR VARS ---
+Data.HeytingAlgebra.heytingAlgebraBoolean, v
+------------------
+
+
+--- AFTER REWRITE (Data.Void.absurd) EXPR VARS ---
+a, b, spin, v
+------------------
+
+
+--- AFTER REWRITE (Data.Void.absurd) EXPR VARS ---
+a, b, spin, v
+------------------
+
+
+--- AFTER REWRITE (Data.Void.absurd) EXPR VARS ---
+a, b, spin, v
+------------------
+
+
+--- AFTER REWRITE (Data.Void.absurd) EXPR VARS ---
+a, b, spin, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+Control.Semigroupoid.semigroupoidFn, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+dict, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+dict, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+dict, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.compose) EXPR VARS ---
+dict, v
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.composeFlipped) EXPR VARS ---
+Control.Semigroupoid.compose, Control.Semigroupoid.semigroupoidFn, f, g
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.composeFlipped) EXPR VARS ---
+Control.Semigroupoid.compose, Control.Semigroupoid.semigroupoidFn, f, g
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.composeFlipped) EXPR VARS ---
+Control.Semigroupoid.compose, Control.Semigroupoid.semigroupoidFn, f, g
+------------------
+
+
+--- AFTER REWRITE (Control.Semigroupoid.composeFlipped) EXPR VARS ---
+Control.Semigroupoid.compose, Control.Semigroupoid.semigroupoidFn, f, g
+------------------
+
+lookup fn.args: ["dictFoldable_0","dictEq_1","a_2"] expectedExprType: (ConstrainedType (Func [(TypeVar a), (TypeApp (TypeVar f) [(ADT ["Data","Tuple","Tuple"] [(TypeVar a), (TypeVar b)])])] (ADT ["Data","Maybe","Maybe"] [(TypeVar b)])))
+lookup fn.args: ["dictOrd_0","k_1"] expectedExprType: (ConstrainedType (Func [(TypeVar k), (ADT ["Data","Map","Internal","Map"] [(TypeVar k), (TypeVar v)])] (ADT ["Data","Maybe","Maybe"] [(Record (Row [key: (TypeVar k), value: (TypeVar v)] Any))])))
+lookup fn.args: ["dictOrd_0","k_1"] expectedExprType: (ConstrainedType (Func [(TypeVar k), (ADT ["Data","Map","Internal","Map"] [(TypeVar k), (TypeVar v)])] (ADT ["Data","Maybe","Maybe"] [(Record (Row [key: (TypeVar k), value: (TypeVar v)] Any))])))
+lookup fn.args: ["dictOrd_0","k_1"] expectedExprType: (ConstrainedType (Func [(TypeVar k), (ADT ["Data","Map","Internal","Map"] [(TypeVar k), (TypeVar v)])] (ADT ["Data","Maybe","Maybe"] [(TypeVar v)])))
+lookup fn.args: ["k_0"] expectedExprType: (Func [(ADT ["Data","Interval","Duration","DurationComponent"] []), (ADT ["Data","Map","Internal","Map"] [(ADT ["Data","Interval","Duration","DurationComponent"] []), Number])] (ADT ["Data","Maybe","Maybe"] [Number]))
+lookup fn.args: ["dictOrd_0","k_1"] expectedExprType: (ConstrainedType (Func [(TypeVar k), (ADT ["Data","Map","Internal","Map"] [(TypeVar k), (TypeVar v)])] (ADT ["Data","Maybe","Maybe"] [(Record (Row [key: (TypeVar k), value: (TypeVar v)] Any))])))
+lookup fn.args: ["dictOrd_0","k_1"] expectedExprType: (ConstrainedType (Func [(TypeVar k), (ADT ["Data","Map","Internal","Map"] [(TypeVar k), (TypeVar v)])] (ADT ["Data","Maybe","Maybe"] [(Record (Row [key: (TypeVar k), value: (TypeVar v)] Any))])))
+=== Go ===
+Global warm-up in progress (this may take a moment)...
+
+Global warm-up complete. Starting benchmarks...
+
+--------------------------------------------------
+
+(Test)
+
+AST Evaluation:
+
+(Output & Warm-up)
+
+7
+
+(Execution time - best of 10)
+
+0.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Fibonacci:
+
+(Output & Warm-up)
+
+55
+
+(Execution time - best of 10)
+
+0.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+List Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+16.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Tail Call Optimization (100k calls):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+37.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Tail Call Optimization on ADT (100k calls):
+
+(Output & Warm-up)
+
+5000050000
+
+(Execution time - best of 10)
+
+2098.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Deep Record Updates (10k iterations):
+
+(Output & Warm-up)
+
+20000
+
+(Execution time - best of 10)
+
+688.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Ackermann (3, 4):
+
+(Output & Warm-up)
+
+125
+
+(Execution time - best of 10)
+
+16.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Church Numerals (100k Closure Applications):
+
+(Output & Warm-up)
+
+100000
+
+(Execution time - best of 10)
+
+1607.75 μs
+
+--------------------------------------------------
+
+(Test)
+
+Prime Sieve (sum primes up to 500):
+
+(Output & Warm-up)
+
+21536
+
+(Execution time - best of 10)
+
+71.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Red-Black Tree (100k Worst-Case Insertions):
+
+(Output & Warm-up)
+
+22
+
+(Execution time - best of 10)
+
+23022.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Polymorphism (10M Type Class Dict Lookups):
+
+(Output & Warm-up)
+
+10000000
+
+(Execution time - best of 10)
+
+2218.25 μs
+
+--------------------------------------------------
+
+(Test)
+
+State Monad (1.2k Binds, 60 Stack Depth):
+
+(Output & Warm-up)
+
+1200
+
+(Execution time - best of 10)
+
+46.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Lazy Evaluation (1M Thunks Forced, 1k Depth):
+
+(Output & Warm-up)
+
+1000000
+
+(Execution time - best of 10)
+
+16843.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+Array Processing (900 elements):
+
+(Output & Warm-up)
+
+202950
+
+(Execution time - best of 10)
+
+13.00 μs
+
+--------------------------------------------------
+
+(Test)
+
+RowToList (Keys Count):
+
+(Output & Warm-up)
+
+5
+
+(Execution time - best of 10)
+
+0.00 μs
+
+
+==================================================
+
+Total exec time: 46.68 ms
+

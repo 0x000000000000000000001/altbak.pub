@@ -1,0 +1,178 @@
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: ps-scheme-test
+
+Downloading dependencies...
+Building...
+[ERROR 1/5 ModuleNotFound] src/Test/AffOperations.purs:6:1
+
+  6  import Effect.Aff (Aff, delay, Milliseconds(..))
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Module Effect.Aff was not found.
+  Make sure the source file exists, and that it has been provided as an input to the compiler.
+
+[ERROR 2/5 ModuleNotFound] src/Test/Parallelism.purs:8:1
+
+  8  import Effect.Aff (Aff, delay, Milliseconds(..), forkAff, joinFiber)
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Module Effect.Aff was not found.
+  Make sure the source file exists, and that it has been provided as an input to the compiler.
+
+[ERROR 3/5 ModuleNotFound] src/Test/StringOps.purs:7:1
+
+  7  import Data.String as S
+     ^^^^^^^^^^^^^^^^^^^^^^^
+
+  Module Data.String was not found.
+  Make sure the source file exists, and that it has been provided as an input to the compiler.
+
+[ERROR 4/5 ModuleNotFound] src/Test/StringOps.purs:8:1
+
+  8  import Data.String.Regex as R
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Module Data.String.Regex was not found.
+  Make sure the source file exists, and that it has been provided as an input to the compiler.
+
+[ERROR 5/5 ModuleNotFound] src/Test/StringOps.purs:9:1
+
+  9  import Data.String.Regex.Flags (noFlags)
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Module Data.String.Regex.Flags was not found.
+  Make sure the source file exists, and that it has been provided as an input to the compiler.
+
+           Src   Lib   All
+Warnings     0     0     0
+Errors       5     0     5
+
+✘ Failed to build.
+
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: ps-php-test
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Compiling with backend "../phpurs/phpurs/bin/phpurs"
+
+✓ Backend build succeeded.
+
+Loading composer repositories with package information
+Updating dependencies
+Nothing to modify in lock file
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Nothing to install, update or remove
+Generating autoload files
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: ps-go-test
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: ps-rust-test
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+error[E0618]: expected function, found `purust_core::Value`
+  --> Purs_Control_Semigroupoid/src/lib.rs:35:428
+   |
+35 | ...et _f = (/* Typed crate::UnknownType <- crate::UnknownType : App(Accessor(Local(...))) */((dictSemigroupoid).compose.clone())(/* Typed crate::UnknownType <- crate::UnknownType : Local(...) */g, /* Typed crate::UnknownType <- crate::UnknownType : Local(...) */f)).clone(); move |mut _a0: crate::UnknownType, mut _a1: crate::UnknownType| -> crate::UnknownType { _f(_a0, _a1) } ...
+   |       --                                                                                                                                                                                                                                                                                                                                                                   ^^----------
+   |       |                                                                                                                                                                                                                                                                                                                                                                    |
+   |       `_f` has type `purust_core::Value`                                                                                                                                                                                                                                                                                                                                   call expression requires function
+
+For more information about this error, try `rustc --explain E0618`.
+error: could not compile `Purs_Control_Semigroupoid` (lib) due to 1 previous error
+error[E0308]: mismatched types
+  --> Purs_Partial_Unsafe/src/lib.rs:13:411
+   |
+13 | ... { _f(crate::Value::Func1(purust_core::Func1::Shared(std::rc::Rc::new({ let _f = (_a0).clone(); move |mut _a0: crate::UnknownType| -> crate::UnknownType { _f(_a0) } })))) }...
+   |       -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `Func1<Value, _>`, found `Value`
+   |       |
+   |       arguments to this function are incorrect
+   |
+   = note: expected enum `purust_core::Func1<purust_core::Value, _>`
+              found enum `purust_core::Value`
+
+For more information about this error, try `rustc --explain E0308`.
+error: could not compile `Purs_Partial_Unsafe` (lib) due to 1 previous error
+error[E0599]: no method named `unwrap_class` found for struct `Rc<Purs_Type_Proxy::Proxy>` in the current scope
+   --> Purs_Data_HeytingAlgebra/src/lib.rs:138:163
+    |
+138 | ...(Purs_Type_Proxy::Proxy::Proxy)).unwrap_class::<std::rc::Rc<Purs_Type_Proxy::Proxy>>().clone()
+    |                                     ^^^^^^^^^^^^ method not found in `Rc<Purs_Type_Proxy::Proxy>`
+
+error[E0599]: no method named `unwrap_class` found for struct `Rc<Purs_Type_Proxy::Proxy>` in the current scope
+   --> Purs_Data_HeytingAlgebra/src/lib.rs:142:163
+    |
+142 | ...(Purs_Type_Proxy::Proxy::Proxy)).unwrap_class::<std::rc::Rc<Purs_Type_Proxy::Proxy>>().clone()
+    |                                     ^^^^^^^^^^^^ method not found in `Rc<Purs_Type_Proxy::Proxy>`
+
+error[E0599]: no method named `unwrap_class` found for struct `Rc<Purs_Type_Proxy::Proxy>` in the current scope
+   --> Purs_Data_HeytingAlgebra/src/lib.rs:146:163
+    |
+146 | ...(Purs_Type_Proxy::Proxy::Proxy)).unwrap_class::<std::rc::Rc<Purs_Type_Proxy::Proxy>>().clone()
+    |                                     ^^^^^^^^^^^^ method not found in `Rc<Purs_Type_Proxy::Proxy>`
+
+error[E0599]: no method named `unwrap_class` found for struct `Rc<Purs_Type_Proxy::Proxy>` in the current scope
+   --> Purs_Data_HeytingAlgebra/src/lib.rs:147:607
+    |
+147 | ...(Purs_Type_Proxy::Proxy::Proxy)).unwrap_class::<std::rc::Rc<Purs_Type_Proxy::Proxy>>().clone())), not: purust_core::Func1::Share...
+    |                                     ^^^^^^^^^^^^ method not found in `Rc<Purs_Type_Proxy::Proxy>`
+
+error[E0599]: no method named `unwrap_class` found for struct `Rc<Purs_Type_Proxy::Proxy>` in the current scope
+   --> Purs_Data_HeytingAlgebra/src/lib.rs:149:163
+    |
+149 | ...(Purs_Type_Proxy::Proxy::Proxy)).unwrap_class::<std::rc::Rc<Purs_Type_Proxy::Proxy>>().clone()
+    |                                     ^^^^^^^^^^^^ method not found in `Rc<Purs_Type_Proxy::Proxy>`
+
+error[E0599]: no method named `unwrap_class` found for struct `Rc<Purs_Type_Proxy::Proxy>` in the current scope
+   --> Purs_Data_HeytingAlgebra/src/lib.rs:150:472
+    |
+150 | ...(Purs_Type_Proxy::Proxy::Proxy)).unwrap_class::<std::rc::Rc<Purs_Type_Proxy::Proxy>>().clone())) })
+    |                                     ^^^^^^^^^^^^ method not found in `Rc<Purs_Type_Proxy::Proxy>`
+
+For more information about this error, try `rustc --explain E0599`.
+error: could not compile `Purs_Data_HeytingAlgebra` (lib) due to 6 previous errors
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: ps-cs-test
+
+Downloading dependencies...
+Building...
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+Compiling with backend "../sharpurs/sharpurs/bin/sharpurs"
+
+✓ Backend build succeeded.
+
+
+The build failed. Fix the build errors and run again.
